@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85b3b97fa9dc219012727b01a0d8013e0481a85c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 58dd67c03b3df116914c4f03cbb336136b251e3f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>複寫監視器介面概觀
   「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」採用兩個窗格的格式，呈現所有複寫活動以「發行者」或「散發者」為焦點的檢視。 您可將發行者加入監視器的左窗格中，監視器的右窗格便會顯示關於發行者及其發行集、這些發行集的訂閱，以及各種複寫代理程式的資訊。 除了呈現複寫拓撲的資訊外，「複寫監視器」還可讓您執行一些工作，例如啟動和停止代理程式，以及驗證資料。  
@@ -197,7 +195,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="viewing-information-and-performing-tasks-related-to-subscriptions"></a>檢視與訂閱相關的資訊並執行工作  
  「複寫監視器」會在一些不同的索引標籤上顯示與訂閱相關的資訊。 按兩下「複寫監視器」中的訂閱，可在詳細資料視窗中存取這些索引標籤。 所有索引標籤都可協助回答「代理程式為何不在執行中？」的問題。 可用的錯誤訊息提供代理程式為何不在執行中的詳細資訊，並提供與訂閱相關聯的代理程式問題之疑難排解起點。  
   
--   **All Subscriptions tab** and **Subscription Watch List tab.**  
+-   **[所有訂閱]** 及 **[訂閱監看清單]**  
   
      這些索引標籤在本主題前文中說明。  
   
@@ -242,4 +240,3 @@ ms.lasthandoff: 06/22/2017
  [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
-

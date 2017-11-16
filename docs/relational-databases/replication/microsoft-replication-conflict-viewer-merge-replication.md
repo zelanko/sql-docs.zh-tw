@@ -5,23 +5,21 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.replconflictviewer.cvmerge.f1
+f1_keywords: sql13.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7eb7232103562f5196c7f3f5b83017b8060fdaf4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d2f4a72c3792d2274a4bad98d5ad8914549ad242
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 複寫衝突檢視器 (合併式複寫)
   複寫衝突檢視器可以讓您檢視在複寫同步處理過程中發生的任何衝突。 如果在兩個不同的伺服器端 (例如，在發行者端和訂閱者端，或在兩個不同的訂閱者端) 修改相同的資料，就會發生衝突。 複寫會使用建立發行項時選取的 Conflict Resolver 以自動解決衝突。 不過，複寫衝突檢視器可讓您在必要時選擇衝突的不同解決方案。 會發生下列衝突：  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], memory usage
 - server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b69c5082567467771189cb7f9e781d850680bd34
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8af7b8805f3237a88174405606362a896d730fed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-memory-usage"></a>監視記憶體使用量
   定期監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，以確認記憶體使用量是在正常範圍內。  
@@ -85,4 +83,3 @@ FROM sys.dm_os_process_memory;
 ```  
   
   
-

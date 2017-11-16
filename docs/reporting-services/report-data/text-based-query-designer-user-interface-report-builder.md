@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10010"
-helpviewer_keywords:
-- query designers, text-based
+f1_keywords: "10010"
+helpviewer_keywords: query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1640b0536b6e206afbd2aff5ea8dd11349277f12
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e9baa6389cd217cbd32950b1c2855878db82e214
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>以文字為基礎的查詢設計工具使用者介面 (報表產生器)
   使用以文字為基礎的查詢設計工具，可透過資料來源支援的查詢語言來指定查詢、執行查詢，並在設計階段檢視結果。 您可以指定多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、自訂資料處理延伸模組的查詢或命令語法，以及指定為運算式的查詢。 以文字為基礎的查詢設計工具不會前置處理查詢，而且可以容納各種查詢語法，所以這是許多資料來源類型的預設查詢設計工具。  
@@ -91,7 +88,7 @@ SELECT Name FROM Person.ContactType
 uspGetWhereUsedProductID  
 ```  
   
- 按一下 [執行]\(**!**) 按鈕。 提示輸入查詢參數時，請使用下表來輸入值。  
+ 按一下 [執行] (**!**) 按鈕。 提示輸入查詢參數時，請使用下表來輸入值。  
   
 |||  
 |-|-|  
@@ -110,9 +107,8 @@ uspGetWhereUsedProductID
   
  當您輸入資料表名稱 Person.ContactType 時，就等於建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 `SELECT * FROM Person.ContactType`。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [關聯式查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)   
  [查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   
-

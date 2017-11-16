@@ -10,19 +10,18 @@ ms.technology:
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Local Audit
+helpviewer_keywords: Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: d6274b8a4a335482b24ab3e5df2ab9baeac61188
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: a768e5237b997e5f9b05e9476c907ea66f886c7b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用意見收集的本機稽核
 ## <a name="introduction"></a>簡介
@@ -65,7 +64,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 3. 以滑鼠右鍵按一下服務並選擇 [屬性]。 
 
-4. 按一下 [登入] 索引標籤。 登入帳戶列在 [這個帳戶]。 
+4. 按一下 [登入] 索引標籤。登入帳戶列在 [這個帳戶]。 
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>設定本機稽核檔案的新資料夾。    
 
@@ -389,5 +388,4 @@ WHERE queryIdentifier = 'DatabaseProperties.001'
 
 ## <a name="see-also"></a>另請參閱
 [SSMS 使用意見收集的本機稽核](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)
-
 

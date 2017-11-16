@@ -5,29 +5,27 @@ ms.date: 12/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f4fda63a6cf7dae045a247eb26163d0e041841b8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e4e4674d6f354d7df300dde4e29e0d46cc62d3ad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrating-computed-columns"></a>移轉計算資料行
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 記憶體最佳化資料表中不支援計算資料行。 但是，您可以模擬計算資料行。
 
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，記憶體最佳化的資料表和索引支援計算資料行。
 
 當您將以磁碟為基礎的資料表移轉至記憶體最佳化資料表時，必須考慮保存計算資料行的需求。 記憶體最佳化資料表和原生編譯預存程序之間的不同效能特性可能會消除保存資料行的需求。  
@@ -99,4 +97,3 @@ GO
  [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
-

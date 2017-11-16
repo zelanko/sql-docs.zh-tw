@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Degree of Parallelism event class
+helpviewer_keywords: Degree of Parallelism event class
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58892a606e417bc95b2744fcd3abc1e58ee1ff84
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 95729129949c05a1432930f370f97303400671cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) 事件類別
   每當 **執行 SELECT、INSERT、UPDATE 或 DELETE 陳述式時，即會發生** Degree of Parallelism (7.0 Insert) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件類別。  

@@ -5,22 +5,20 @@ ms.date: 08/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 157aabe87bbfb678cb7a115a0875ad27234e0b99
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a005345fe51f1b1b1479f854c636464b728429f7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接到 Database Engine
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +77,7 @@ ms.lasthandoff: 09/27/2017
  -  
  -1.  在 [已註冊的伺服器] 中，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱旁邊有一個綠點和白色箭頭，表示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在執行中，不需要進一步動作。  
  -  
- -2.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體的名稱旁邊有一個紅點和白色方塊，表示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 已停止。 以滑鼠右鍵按一下 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的名稱，並按一下 **「服務控制」**，然後按一下 **「啟動」**。 在確認對話方塊之後，[!INCLUDE[ssDE](../includes/ssde-md.md)] 應該已經啟動，而且圓圈會變成帶有白色箭頭的綠色圖示。  
+ -2.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體的名稱旁邊有一個紅點和白色方塊，表示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 已停止。 以滑鼠右鍵按一下 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的名稱，並按一下 [服務控制]，然後按一下 [啟動]。 在確認對話方塊之後，[!INCLUDE[ssDE](../includes/ssde-md.md)] 應該已經啟動，而且圓圈會變成帶有白色箭頭的綠色圖示。  
  -  
  -##### 連線至資料庫引擎  
  -
@@ -135,5 +133,4 @@ ms.lasthandoff: 09/27/2017
  -[第 2 課：從另一部電腦連線](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   
   
-
 

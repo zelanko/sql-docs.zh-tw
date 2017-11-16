@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Broker:Remote Message Ack event class
+helpviewer_keywords: Broker:Remote Message Ack event class
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 747d421d4a9e6a86295ce843aa6c2b943bf006cf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1a0733f3ec4a8b13a698bf07251f109fcd346392
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **傳送或接收訊息收條時，會產生** Broker:Remote Message Ack [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。  
@@ -57,4 +54,3 @@ ms.lasthandoff: 06/22/2017
 |**TransactionID**|**bigint**|系統指派的交易識別碼。|4|否|  
   
   
-

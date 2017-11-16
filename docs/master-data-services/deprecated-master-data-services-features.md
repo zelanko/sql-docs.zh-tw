@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: smartysanthosh
 ms.author: nagavo
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 58d965e8b90bc7a47fd2e26d9002b7e41aff82cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 37ba9531f4b4a2ba9b5831f5d7e8e121f5d3ad7d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deprecated-master-data-services-features"></a>取代的 Master Data Services 功能
   本主題描述 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中仍然可用但已被取代的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/07/2017
  [已停止的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
   
   
-

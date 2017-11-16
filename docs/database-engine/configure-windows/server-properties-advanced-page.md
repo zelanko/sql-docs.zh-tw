@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.advanced.f1
+f1_keywords: sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 75f872cc60f59224bf874e9821348efa4bd22729
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38ea8eca9d8d71269f0e6095a949e1aa027ec484
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-properties---advanced-page"></a>伺服器屬性 - 進階頁面
   使用此頁面來檢視或修改進階的伺服器設定。  
@@ -129,7 +127,7 @@ ms.lasthandoff: 08/02/2017
  限制平行計畫執行期間要使用的處理器數目 (最大值為 64)。 預設值是 0，亦即使用所有可以使用的處理器。 將值設定為 1，就會抑制平行計畫的產生。 大於 1 的數目，就會限制單一查詢執行可用的最大處理器數目。 如果指定的數值大於可用的處理器數目，就會使用可用處理器的實際數目。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
  **查詢等候**  
- 指定查詢在逾時之前，要等候資源的時間 (以秒為單位，從 0 到 2147483647)。 如果使用預設值 -1，逾時值就會以估計之查詢成本的 25 倍計算。 如需詳細資訊，請參閱 [設定 query wait 伺服器組態選項](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。  
+ 指定查詢在逾時之前，要等候資源的時間 (以秒為單位，從 0 到 2147483647)。如果使用預設值 -1，逾時值就會以估計之查詢成本的 25 倍計算。 如需詳細資訊，請參閱 [設定 query wait 伺服器組態選項](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  

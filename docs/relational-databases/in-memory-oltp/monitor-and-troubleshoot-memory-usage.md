@@ -5,21 +5,20 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5b936bf52653ea81c579c345d09f4f2d0e76339
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: e08358859b04559b2ed2f010887fd4166ebc6196
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>監視與疑難排解記憶體使用量
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 耗用記憶體的模式與磁碟資料表不同。 您可以使用針對記憶體和記憶體回收子系統提供的 DMV 或效能計數器，監視資料庫中記憶體最佳化資料表和索引所配置和使用的記憶體數量。  如此就能讓您同時深入查看系統和資料庫層級，並且讓您防止因記憶體耗盡而發生問題。  

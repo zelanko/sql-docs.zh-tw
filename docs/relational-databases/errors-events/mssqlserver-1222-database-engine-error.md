@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 1222 (Database Engine error)
+helpviewer_keywords: 1222 (Database Engine error)
 ms.assetid: c5b1c2f4-f591-4cc1-aa17-204636a27f29
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 88e274efe280363b51f7abfbcea02d54b0d66148
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 423f504ba458968c98d0bad3da1e78bf0ed01e84
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver1222"></a>MSSQLSERVER_1222
   
@@ -51,4 +48,3 @@ ms.lasthandoff: 06/22/2017
   
 如果這項錯誤經常發生，請變更鎖定逾時期限，或請修改造成問題的交易，以縮短這些交易鎖定資源的時間。  
   
-

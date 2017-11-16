@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SP:Recompile event class
+helpviewer_keywords: SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6cab2f6fc0007ea591ab2fc11ce231519fa71bb9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 534879ddcc283e600d44c4d248375edd56c0944f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile 事件類別
   SP:Recompile 事件類別表示有某個預存程序、觸發程序或使用者自訂函數已重新編譯。 這個事件類別報告的重新編譯會在陳述式層級發生。  

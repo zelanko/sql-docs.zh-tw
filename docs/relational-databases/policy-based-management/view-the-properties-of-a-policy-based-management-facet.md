@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Policy-Based Management, view facet properties
+helpviewer_keywords: Policy-Based Management, view facet properties
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 673586c308ec38088788112ec3e0c9a5730fff9e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 81e98ea271fbe0404e3f633515d98185514f2f6b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>檢視原則式管理 Facet 的屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中檢視原則式管理 Facet 的屬性。  
@@ -61,4 +58,3 @@ ms.lasthandoff: 06/22/2017
 6.  完成後，請按一下 **[關閉]**。  
   
   
-

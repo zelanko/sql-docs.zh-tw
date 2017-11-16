@@ -14,16 +14,16 @@ helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 923b012345d18abb393479744a65b4572cb20a08
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 837f8cd22465d0fb8fdf8b5ff1d6e9388f5014f9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="extended-events-tools"></a>擴充事件工具
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -97,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [針對擴充事件使用 PowerShell 提供者](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
   
   
-

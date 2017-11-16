@@ -5,25 +5,23 @@ ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d21efb4495f786b6000fe0b8675fa042b4d2ca6e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 70359d3c8b34fabec496ad9fbc165bcc7d1707c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="determining-effective-database-engine-permissions"></a>判斷有效的 Database Engine 權限
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -162,5 +160,4 @@ REVERT;
 
 [Database Engine 權限使用者入門](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
 [教學課程：Database Engine 使用者入門](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
-
 

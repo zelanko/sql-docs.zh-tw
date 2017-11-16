@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
+ms.openlocfilehash: e1a93b4289204390fbf269e10ad2f49f0af353d8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 512d13d8349be9370bb222e1513f5166f2cabeee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[tsql](../../../includes/tsql-md.md)]執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 此加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 **master** 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。  
@@ -311,4 +309,3 @@ ms.lasthandoff: 08/28/2017
  [Azure SQL Database 的透明資料加密](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   
-

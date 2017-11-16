@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - errors [SQL Server], severity
 - TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5b2b6fbe1d6d46c045452430067a542a99623bd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "21"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: On Demand
+ms.openlocfilehash: ac34636ce0b0d4dff468218d9883f5f225b3940c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-error-severities"></a>Database Engine 錯誤嚴重性
   當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]產生錯誤時，錯誤的嚴重性會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所發生的問題類型。  

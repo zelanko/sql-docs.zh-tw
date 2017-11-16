@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLServer:Batch Resp Statistics
+helpviewer_keywords: SQLServer:Batch Resp Statistics
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc35f5f03d3b395fc09765fa8ac5ef8158ad8c51
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7e7dd5d90f7e7b59e6d685f1e2dd4e4c1cdb319e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server 的 Batch Resp Statistics 物件
 **SQLServer:Batch Resp Statistics** 效能物件提供計數器來追蹤 SQL Server 批次回應時間。
@@ -48,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 |**Batches >=010000ms & \<020000ms**|回應時間大於或等於 10,000 毫秒但小於 20,000 毫秒的 SQL 批次數目|
 |**Batches >=020000ms & \<050000ms**|回應時間大於或等於 20,000 毫秒但小於 50,000 毫秒的 SQL 批次數目|
 |**Batches >=050000ms & \<100000ms**|回應時間大於或等於 50,000 毫秒但小於 100,000 毫秒的 SQL 批次數目| 
-|**Batches &gt;=100000ms**|回應時間大於或等於 100,000 毫秒的 SQL 批次數目| 
+|**Batches >=100000ms**|回應時間大於或等於 100,000 毫秒的 SQL 批次數目| 
 
 物件中的每個計數器均包含下列執行個體：  
   
@@ -62,4 +59,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另請參閱
 [SQL Server 的 Plan Cache 物件](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [監視資源使用狀況 (系統監視器)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-

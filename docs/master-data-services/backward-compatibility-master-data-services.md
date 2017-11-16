@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 91d5aef21dc6ce29d4c52a735b49908493e7b8d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: e255634ad8e28c1fd8bec597f58df30a6ee6a260
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="backward-compatibility-master-data-services"></a>回溯相容性 (Master Data Services)
   本節描述 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]版本之間的變更。 它涵蓋不能再使用或已排程在未來版本中移除的功能。 此外，也描述的是產品的變更，已知這些變更會中斷或變更包含 Integration Services 功能現有應用程式的行為。  
@@ -32,4 +30,3 @@ ms.lasthandoff: 09/07/2017
 -   [已停止的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: efc87d23faa17dca299560764b0e26bdbb05ff9a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ebc24ef97d0dc3bce65b4f9e9e0dd419d7ffa524
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-2---configure-a-server-to-run-the-off-by-default-policy"></a>第 1-2 課：將伺服器設定為執行 Off By Default 原則
 現在，您有一個名為 Off By Default 的原則。 在這項工作中，您將檢查伺服器是否符合這個原則的需求。  
@@ -54,4 +51,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

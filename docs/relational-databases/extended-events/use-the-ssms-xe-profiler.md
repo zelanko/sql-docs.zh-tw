@@ -20,12 +20,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7d76bcf75112533bce6d74fda23dc43d983cf555
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 3794c4ee749902e6d453053405cc155bc1bbac1a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>使用 SSMS XEvent 分析工具
 XEvent 分析工具是一項 SQL Server Management Studio (SSMS) 功能，其可顯示擴充事件的即時檢視器視窗。 本概觀將說明使用此分析工具的理由、重要功能，並會提供檢視擴充事件的入門指示。
@@ -60,4 +59,3 @@ XEvent 分析工具不同於 SQL Profiler，其可直接整合到 SSMS，並以 
 [擴充事件工具](../../relational-databases/extended-events/extended-events-tools.md)  
   
   
-

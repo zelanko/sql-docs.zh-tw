@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - modifying replication properties, Distributors
 - Distributors [SQL Server replication], properties
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: dbc553f4f6e7013eb613f7bc2c89fc020c947801
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b0c9adb0d7fa110c08f280706d17706f4af07b07
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>檢視及修改散發者和發行者屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視及修改「散發者」和「發行者」屬性。  
@@ -211,4 +210,3 @@ ms.lasthandoff: 08/03/2017
  [檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
   
   
-

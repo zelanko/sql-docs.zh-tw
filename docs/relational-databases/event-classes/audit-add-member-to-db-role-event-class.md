@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Add Member to DB Role event class
+helpviewer_keywords: Audit Add Member to DB Role event class
 ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db2c58f9158cbaef5e2f5625c696d6783021765d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c5b200100d9a53087a4329883054e9b549e1561f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role 事件類別
   當登入加入到資料庫角色或從其中移除時，就會發生 **Audit Add Member to DB Role** 事件類別。 這個事件類別是與 **sp_addrolemember**、 **sp_changegroup**及 **sp_droprolemember** 預存程序搭配使用。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 使用者名稱。|6|是|  
 |**ObjectName**|**nvarchar**|正在參考之物件的名稱。|34|是|  
-|**ObjectType**|**整數**|代表參與事件之物件類型的值。 這個值會對應到 **sys.objects** 目錄檢視中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](../../relational-databases/event-classes/objecttype-trace-event-column.md)。|28|是|  
+|**ObjectType**|**int**|代表參與事件之物件類型的值。 這個值會對應到 **sys.objects** 目錄檢視中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](../../relational-databases/event-classes/objecttype-trace-event-column.md)。|28|是|  
 |**OwnerName**|**nvarchar**|物件擁有者的資料庫使用者名稱。|37|是|  
 |**RequestID**|**int**|包含陳述式之要求的識別碼。|49|是|  
 |**RoleName**|**nvarchar**|啟用的應用程式角色的名稱。|38|是|  
@@ -53,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 |**SessionLoginName**|**Nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|**成功**|**整數**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
+|**成功**|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
 |**TargetUserName**|**nvarchar**|其角色成員資格遭修改的使用者名稱。|39|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  

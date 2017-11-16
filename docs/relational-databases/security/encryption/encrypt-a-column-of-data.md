@@ -5,8 +5,7 @@ ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
+ms.openlocfilehash: 1a232d1749c6eebbb4d6ae7160c94cfc6d22686a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
-ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="encrypt-a-column-of-data"></a>加密資料行
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ ms.lasthandoff: 07/31/2017
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
-一律備份您的資料庫主要金鑰。 如需資料庫主要金鑰的詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)。
+一律備份您的資料庫主要金鑰。 如需建立資料庫主要金鑰的詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)。
 
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>若要使用簡單的對稱加密來加密資料行  
   
@@ -190,4 +188,3 @@ PASSWORD = '<some strong password>';
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
   
   
-

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL:StmtCompleted event class
+helpviewer_keywords: SQL:StmtCompleted event class
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 99a9d763386ecea12b12e9ddd6d597f00ff6b172
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7e748f3fa3ec93660084f2bed127a832ca70832a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted 事件類別
   SQL:StmtCompleted 事件類別指出已完成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 |NestLevel|**int**|如果陳述式是在預存程序內執行時的預存程序巢狀層級。|29|是|  
 |NTDomainName|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |NTUserName|**nvarchar**|Windows 使用者名稱。|6|是|  
-|Offset|**整數**|預存程序或批次內之陳述式的起始位移。|61|是|  
+|Offset|**int**|預存程序或批次內之陳述式的起始位移。|61|是|  
 |Reads|**bigint**|SQL 陳述式發出的頁面讀取數目。|16|是|  
 |RequestID|**int**|包含陳述式之要求的識別碼。|49|是|  
 |RowCounts|**bigint**|事件所影響的資料列數目。|48|是|  

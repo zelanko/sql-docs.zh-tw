@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- HierarchyID
+applies_to: SQL Server 2016
+helpviewer_keywords: HierarchyID
 ms.assetid: 0d1f361f-336c-4571-99d1-f4813b2d9fc4
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d3671dcea0c0825ba2624bc84a13ee9e2073a25f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3565aed920e28bf9424a41b72c872e9cb648aafc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-1---creating-a-table-using-the-hierarchyid-data-type"></a>第 2-1 課：使用 hierarchyid 資料類型建立資料表
 以下範例會建立名稱為 EmployeeOrg 的資料表，其中同時包含員工資料及其回報的階層。 這個範例會在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中建立資料表，但是這是選擇性的。 為了要維持此範例的簡單性，此資料表僅包含五個資料行：  
@@ -72,4 +68,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

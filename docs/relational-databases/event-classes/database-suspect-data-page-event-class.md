@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 - Database Suspect Data Page event class
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 404b8a88ae9523573df9eab15f27357a0a494027
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2984420c1a3106b88187af17a9d9babbc106b44b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 事件類別
   **Database Suspect Data Page** 事件類別指出何時要將頁面加入 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 中的 [suspect_pages](../../relational-databases/databases/msdb-database.md)資料表。 請在監視可疑頁面出現的追蹤中包含此事件類別。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 |**EventSequence**|**整數**|批次中的事件類別順序。|51|否|  
 |**SPID**|**int**|遇到可疑頁面之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件發生的時間。|14|是|  
-|**Exchange Spill**|**int**|包含可疑頁面之資料庫檔案的識別碼。 這和 **suspect_pages** 資料表的 **file_id** 資料行相同。|22|是|  
+|**ObjectID**|**int**|包含可疑頁面之資料庫檔案的識別碼。 這和 **suspect_pages** 資料表的 **file_id** 資料行相同。|22|是|  
 |**ObjectID2**|**int**|檔案內可疑頁面的識別碼。 這和 **suspect_pages** 資料表的 **page_id** 資料行相同。|56|是|  
 |**錯誤**|**int**|發生的錯誤類型。 這個值與 **suspect_pages** 資料表中頁面的 **event_type** 值相同。|31|是|  
   

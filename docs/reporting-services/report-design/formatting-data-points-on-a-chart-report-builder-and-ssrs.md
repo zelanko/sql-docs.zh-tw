@@ -14,17 +14,16 @@ f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d1514b7ec2a5f1d7d2d5abd3513db47a208a2e24
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bf3c5c3a2a9603f996a2a66e51367b56669b12ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的資料點 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中，資料點是圖表上最小的個別實體。 在非形狀圖上，資料點的表示取決於其圖表類型。 例如，線條數列由一個或多個已連接的資料點所組成。 在形狀圖上，資料點會以加入到整個圖表的個別配量或區段表示。 例如，在圓形圖上，每一塊都是一個資料點。 如需詳細資訊，請參閱 [圖表類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
@@ -101,7 +100,7 @@ ms.lasthandoff: 08/09/2017
   
  [在圓形圖上顯示百分比值 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
@@ -111,4 +110,3 @@ ms.lasthandoff: 08/09/2017
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

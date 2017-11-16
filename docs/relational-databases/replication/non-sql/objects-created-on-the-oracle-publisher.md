@@ -5,26 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Oracle publishing [SQL Server replication], objects created
+helpviewer_keywords: Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 97a45c8f524f81d01dceda7a616932b18e799d82
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 308ed6419bdda59b9b97ae0093634646d5972a7b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>在 Oracle 發行者端建立的物件
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication installs database objects on the Oracle Publisher to enable change tracking and forwarding ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not install any binary files on the Oracle Publisher). 下表列出當「Oracle 發行者」在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端上識別為「發行者」時，在該「Oracle 發行者」端上建立的物件。 提供的物件描述僅供參考之用。 不應對這些物件進行修改。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫會在 Oracle 發行者端安裝資料庫物件，以啟用變更追蹤和轉送 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會在 Oracle 發行者端安裝任何二進位檔案)。 下表列出當「Oracle 發行者」在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端上識別為「發行者」時，在該「Oracle 發行者」端上建立的物件。 提供的物件描述僅供參考之用。 不應對這些物件進行修改。  
   
 |Object Name|物件類型|描述|  
 |-----------------|-----------------|-----------------|  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 635969e907f5c99a34b3b3f076c95602be6510b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-iis-for-web-synchronization"></a>針對 Web 同步處理設定 IIS
   本主題中的程序，會構成設定合併式複寫之 Web 同步處理時所採取的第二個步驟。 請在啟用 Web 同步處理的發行集之後執行這個步驟。 如需組態處理序的概觀，請參閱＜ [[設定 Web 同步處理]](../../relational-databases/replication/configure-web-synchronization.md)＞。 完成本主題中的程序之後，請繼續執行第三個步驟，即設定訂閱來使用 Web 同步處理。 第三個步驟在下列主題中描述：  
@@ -366,4 +364,3 @@ ms.lasthandoff: 06/22/2017
  [[設定 Web 同步處理]](../../relational-databases/replication/configure-web-synchronization.md)  
   
   
-

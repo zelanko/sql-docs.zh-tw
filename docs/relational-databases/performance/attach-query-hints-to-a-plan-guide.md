@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e6d6f9200e590a2f9a9fdaf63536d884aa186175
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cd35ba37fceeee68531e23b2ee2caabae4e81cfc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>將查詢提示附加至計畫指南
   在計畫指南中所使用的有效查詢提示組合。 當計畫指南能配合查詢時，系統會先將計畫指南之提示子句中指定的 OPTION 子句加入查詢中，然後再編譯和最佳化查詢。 如果配合計畫指南的查詢已經有 OPTION 子句，在計畫指南中所指定的查詢提示將會取代查詢中的提示。 不過，若要讓計畫指南配合已經有 OPTION 子句的查詢，您必須在指定查詢文字以符合 sp_create_plan_guide 陳述式時，包含查詢的 OPTION 子句。 如果您要將計畫指南中所指定的提示加入查詢中已存在的提示，您不應該取代它們，而是必須在計畫指南的 OPTION 子句中同時指定原始提示和其他提示。  
@@ -34,4 +32,3 @@ ms.lasthandoff: 06/22/2017
  此外，您可以指定 INDEX、FORCESCAN 和 FORCESEEK 資料表提示做為查詢提示。 將這些提示指定為查詢提示時，其行為模式就與內嵌資料表或檢視提示相同。 INDEX 提示會強制查詢最佳化工具只使用指定的索引來存取參考之資料表或檢視內的資料。 FORCESEEK 提示會強制最佳化工具只使用索引搜尋作業，以存取參考之資料表或檢視內的資料。 這些提示提供額外的計畫指南功能，並讓您對於使用此計畫指南的查詢最佳化有更大的影響。  
   
   
-

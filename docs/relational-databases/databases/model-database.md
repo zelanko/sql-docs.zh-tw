@@ -5,8 +5,7 @@ ms.date: 03/04/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8a4023cf2ac4d0176d421a262f13b9a4603fcc5a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a05d89ba953bf683a992a087be8e3c87777ae9c4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="model-database"></a>Model 資料庫
   **model** 資料庫可做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上建立之所有資料庫的範本。 因為每次 **啟動時，都會建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，所以 **model** 資料庫一定要存在於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統中。 **model** 資料庫的完整內容 (包括資料庫選項) 都會複製到新的資料庫。 在啟動期間， **model** 的某些設定也會用於建立新的 **tempdb** ，所以 **model** 資料庫必須一直存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統上。  
@@ -127,4 +125,3 @@ ms.lasthandoff: 08/03/2017
  [移動資料庫檔案](../../relational-databases/databases/move-database-files.md)  
   
   
-

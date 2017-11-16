@@ -5,8 +5,7 @@ ms.date: 06/06/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - service account [SQL Server], file system permissions
 - permissions [SQL Server], file system
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: e3c785cf6ee2c27cf0817659008aa1d293221fd5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc98fccf34dcc15cb255698502bf4ea4d0986249
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>設定 Database Engine 對檔案系統的存取權限
   本主題描述如何授與 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]對資料庫檔案儲存位置的檔案系統存取權。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務必須具有 Windows 檔案系統權限，才能存取資料庫檔案儲存所在的檔案資料夾。 其對於預設位置的權限，在安裝期間即已設定妥。 如果您將資料庫檔案放在不同的位置，可能就必須依照下列步驟授與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 對該位置的完整控制權限。  
@@ -52,4 +50,3 @@ ms.lasthandoff: 08/02/2017
  [移動使用者資料庫](../../relational-databases/databases/move-user-databases.md)  
   
   
-

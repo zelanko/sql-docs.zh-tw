@@ -5,25 +5,23 @@ ms.date: 08/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - skipping columns when importing
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 02dff7296690e0ecf3bfd76f9e7be1808885b2f5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: d933bccabc8db140dd3807741cdb044f8a1f87ff
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)
   本主題將說明格式檔案。 當欄位不存在於資料檔案中時，您就可以使用格式檔案來略過資料表資料行的匯入。 只有在略過的資料行可為 Null 和/或有預設值時，資料檔案所包含的欄位才可以少於資料表中的資料行數目。  
@@ -217,4 +215,3 @@ GO
  [使用格式檔案大量匯入資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)  
   
   
-

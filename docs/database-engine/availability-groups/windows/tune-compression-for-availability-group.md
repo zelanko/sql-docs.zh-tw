@@ -5,22 +5,20 @@ ms.date: 06/22/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f3710e208a767a2291da6f27f9266f0729a5c239
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d7eed64649188267eafb4a555fa811d8c9d27f0e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tune-compression-for-availability-group"></a>微調可用性群組的壓縮
 
@@ -53,4 +51,3 @@ ms.lasthandoff: 09/27/2017
 [自動植入](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
 
 [AlwaysOn 必要條件](prereqs-restrictions-recommendations-always-on-availability.md) 
-

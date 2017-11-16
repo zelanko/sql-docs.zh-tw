@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 6dd36fb8359a26f887ccda3821cb8a1b93b8a4f2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>升級為不同的 SQL Server 版本 (安裝程式)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援各種不同 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 版本之間的版本升級。 如需支援版本升級方式的詳細資訊，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。 在您起始 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體的版本升級之前，請檢閱以下主題：  
@@ -87,4 +85,3 @@ ms.lasthandoff: 08/02/2017
  [回溯相容性_已刪除](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   
-

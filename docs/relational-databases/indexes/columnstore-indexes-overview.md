@@ -1,13 +1,11 @@
 ---
 title: "資料行存放區索引 - 概觀 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 33a0dbca3c96a38466c560487965c8825ff5328d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 8c7238da1e8c0ad3fa46805c73f57bc2ae8e4c1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columnstore-indexes---overview"></a>資料行存放區索引 - 概觀
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -183,7 +181,6 @@ ms.lasthandoff: 06/22/2017
  [資料行存放區索引重組](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-
 
 
 

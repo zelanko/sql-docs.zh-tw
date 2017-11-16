@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 - BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 72ca7cf7a7de06c1b0da728fa1c8541bae1f0e8a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6a681d03ae06573a4837ff6b545475980633e3ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>偵錯商務邏輯處理常式 (複寫程式設計)
   使用商務邏輯處理常式，以便在同步處理合併訂閱期間叫用自訂商務邏輯。 如需詳細資訊，請參閱[在合併同步處理期間執行商務邏輯](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  在以程式設計方式同步啟動合併代理程式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 中，建立 Replication Management Objects (RMO) 專案。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
-4.  在商務邏輯處理常式程式碼中設定中斷點 (在所偵錯的方法中或是類別建構函式中)。 如需可以在商務邏輯處理常式中實作之方法的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主題。  
+4.  在商務邏輯處理常式程式碼中設定中斷點 (在所偵錯的方法中或是類別建構函式中)。 如需有關可以在商務邏輯處理常式中實作之方法的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主題。  
   
 5.  在偵錯模式下建立此商務邏輯處理常式，並在步驟 1 註冊的位置中部署此組件和偵錯符號檔 (.pdb)。  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  建立及註冊商務邏輯處理常式。 如需相關資訊，請參閱 [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。  
   
-3.  在商務邏輯處理常式程式碼中設定中斷點 (在所偵錯的方法中或是類別建構函式中)。 如需可以在商務邏輯處理常式中實作之方法的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主題。  
+3.  在商務邏輯處理常式程式碼中設定中斷點 (在所偵錯的方法中或是類別建構函式中)。 如需有關可以在商務邏輯處理常式中實作之方法的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主題。  
   
 4.  在偵錯模式下建立此商務邏輯處理常式，並在步驟 1 註冊的位置中，於 Web 伺服器上部署此組件和偵錯符號檔 (.pdb)。  
   
@@ -90,4 +88,3 @@ ms.lasthandoff: 06/22/2017
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   
-

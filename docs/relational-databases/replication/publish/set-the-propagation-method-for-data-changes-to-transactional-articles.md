@@ -5,24 +5,23 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, propagation methods
 - propagating data changes [SQL Server replication]
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2abba76ac65025fe1f2c2d23a9d5b094eafb8980
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b79b21cea8d1edfbb3c1aecf5bbaf2f4fa86624a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>設定對交易式發行項之資料變更的傳播方法
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，針對 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中交易式發行項的資料變更設定傳播方法。  

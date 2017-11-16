@@ -24,17 +24,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b8b9672e89d5bd0dc1d570aa30d214cda63dbf61
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
   使用精靈將地圖或地圖圖層加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表之後，您可能會想要變更地圖在報表中的外觀。 您可以考慮下列構想來進行改善：  
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/09/2017
   
 -   若要提供更多細節，您可以在每個圖層上加入地圖元素的連結，使用者按一下這些連結，便可開啟相關的報表。  
   
- 如需改善報表的更多意見，請參閱[規劃報表 &#40;報表產生器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
+ 如需改善報表的更多想法，請參閱[規劃報表 &#40;報表產生器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
   
  顯示選項會影響檢視報表時地圖或部分地圖顯示的方式。 有些選項可控制地圖的外觀，例如，框線和字型，或是在地圖上表示的區域。 有些選項則控制每個圖層的內容，例如，泡泡地圖大小、標記類型、標籤或工具提示。  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 08/09/2017
   
 -   若要變更圖例內容或圖例內容的格式，請針對圖層的對應規則變更圖例選項。  
   
- 如需詳細資訊，請參閱[變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
 ##  <a name="Layer"></a> 變更圖層的選項  
  若要顯示地圖的圖層，按一下該地圖來選取它。 [地圖] 窗格隨即出現。 若要變更圖層的選項，以滑鼠右鍵按一下圖層，然後使用快速鍵功能表。  
@@ -118,14 +117,14 @@ ms.lasthandoff: 08/09/2017
   
 -   圖層繪製順序。 您看到圖層在 [地圖] 窗格中列出的順序，就是圖層的反向繪製順序。 系統會先繪製清單中的最後一個圖層。 例如，如果您希望點圖層上的點出現在多邊形圖層中的多邊形上方，點圖層應該是第一個，而多邊形圖層則是第二個。  
   
--   圖層可見性，包括透明度。 若要讓某個圖層透過另一個圖層顯示，請將透明度設定為高於 0 的值。 值為 100% 時，表示看不到圖層。 若要處理個別的圖層，您可以使用 [地圖] 窗格中的 [可見性] 圖示，輕鬆地個別顯示或隱藏每個圖層。 您也可以設定縮放層級選項來指定根據縮放層級顯示或隱藏圖層上之地圖元素的時機。  
+-   圖層可見性，包括透明度。 若要讓某個圖層透過另一個圖層顯示，請將透明度設定為高於 0 的值。 值為 100% 時，表示看不到圖層。 若要處理個別的圖層，您可以使用 [地圖] 窗格中的 [可見度] 圖示，輕鬆地個別顯示或隱藏每個圖層。 您也可以設定縮放層級選項來指定根據縮放層級顯示或隱藏圖層上之地圖元素的時機。  
   
 -   針對目前的檢視區置中與縮放層級加入 Bing 地圖底圖圖層。 您不需要為圖格圖層指定地理座標。 當座標系統為 [地理]、投射為 [Mercator]、Bing Map 伺服器可以使用，而且已經將報表伺服器設定為支援此功能時，系統會自動載入圖格以符合檢視區。 您可以針對每個報告指定是否要使用安全連線來擷取圖格。  
   
  如需圖層的詳細資訊，請參閱[加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
 ##  <a name="DataGrouping"></a> 變更圖層的資料群組  
- 您可以自訂形狀空間資料的彙總方式。 若要設定圖層的群組屬性，請選取 [地圖] 窗格中的圖層，在圖層的 [屬性] 窗格中，按一下 [群組]，然後按一下省略符號 (...) 開啟 [群組屬性]。 在這個對話方塊中，您可以指定群組運算式、建立群組變數，以及篩選用於群組的資料。  
+ 您可以自訂形狀空間資料的彙總方式。 若要設定圖層的群組屬性，請選取 [地圖] 窗格中的圖層，在圖層的 [屬性] 窗格中按一下 [群組]，然後按一下省略符號 (...) 開啟 [群組屬性]。 在這個對話方塊中，您可以指定群組運算式、建立群組變數，以及篩選用於群組的資料。  
   
  群組運算式會指定與空間資料具有關聯性的分析資料如何針對圖層上的每個地圖元素進行彙總。 根據預設，群組運算式是針對空間資料與分析資料之間的關聯性指定的一組符合欄位組。 例如，對於顯示國家或地區之城市位置和人口數多寡的泡泡地圖，符合欄位包含城市名稱 [City] 和地區名稱 [Region]，因為可能會有多個城市擁有相同的名稱。 對應的群組運算式包含兩個欄位：[City] 和 [Region]。  
   
@@ -165,11 +164,10 @@ ms.lasthandoff: 08/09/2017
   
 -   圖層上個別內嵌點、線條或多邊形的覆寫選項。 您所做的變更是永久的。 若要還原這些變更，您必須重新載入圖層的資料。  
   
- 如需詳細資訊，請參閱[使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
+ 如需詳細資訊，請參閱 [使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [地圖精靈和地圖圖層精靈 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
- [對應 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+ [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   
-

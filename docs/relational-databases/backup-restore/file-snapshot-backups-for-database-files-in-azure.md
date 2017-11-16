@@ -7,22 +7,20 @@ ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 51364693e9385333392ea96258e547b2c8fbea96
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 509c4b512bc1f0aeafcd82eb896b9291af450aff
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中資料庫檔案的檔案快照集備份
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份使用 Azure 快照集為使用 Azure Blob 儲存體服務儲存的資料庫檔案，提供近乎即時的備份及更快速的還原。 這個功能可讓您簡化備份和還原原則。 如需即時的示範，請參閱 [File-Snapshot Backups Demo (檔案快照集備份示範)](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。 如需使用 Azure Blog 儲存體服務排序資料庫檔案的詳細資訊，請參閱 [Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。  
@@ -188,4 +186,3 @@ GO
  [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
-

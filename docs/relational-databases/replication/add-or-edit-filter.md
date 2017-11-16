@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.addeditfilter.f1
+f1_keywords: sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7647baaaf9e567ada31eb468b6c48844676659f2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b488f571aee2fcbe68a228489e078ccdc32e9ba2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-edit-filter"></a>加入或編輯篩選
   **[加入篩選]** 和 **[編輯篩選]** 對話方塊可讓您加入和編輯靜態資料列篩選與參數化資料列篩選器。  

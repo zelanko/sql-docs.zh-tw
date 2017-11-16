@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], foreign key constraints
 - INSERT statement [SQL Server], foreign key constraints
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a72cfad873d2fe891c9f10c3c5f8c0ede3a68ff2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4c66f91fee027e635338dec3e39c22384b3586ba
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -90,4 +88,3 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。  
   
 ###  <a name="TsqlExample"></a>  
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - logical record-level conflict tracking [SQL Server replication]
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 50605b8e66ddf484aae391d7dedaf66b6dcd7c0a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be8f8a4e1df903cc70191dc582ce2aef19e7e7aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>進階合併式複寫 - 衝突偵測與解決方法
   發行者與訂閱者連接並進行同步處理時，合併代理程式會偵測是否有任何衝突。 如果偵測到衝突，「合併代理程式」會使用衝突解析程式 (在發行項加入發行集時指定)，決定要接受及傳播至其他站台的資料。  
@@ -140,4 +138,3 @@ ms.lasthandoff: 08/03/2017
  [同步處理資料](../../../relational-databases/replication/synchronize-data.md)  
   
   
-

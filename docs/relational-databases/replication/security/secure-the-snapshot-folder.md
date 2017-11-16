@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- snapshots [SQL Server replication], security
+helpviewer_keywords: snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 190f5cb081710100927ef837a09699cfc6c78f11
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 43c9603e1f3a30ed558d264edb81d81c6d4c1297
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-the-snapshot-folder"></a>保護快照集資料夾
   快照集資料夾是儲存快照集檔案的目錄；建議您將此目錄專用於快照集儲存。 授與「快照集代理程式」對資料夾的寫入權限，並確定僅授與 Windows 帳戶讀取權限，「合併代理程式」或「散發代理程式」使用該帳戶來存取此資料夾。 與代理程式相關聯的 Windows 帳戶必須為網域帳戶，這樣才能存取位於遠端電腦上的快照集資料夾。  

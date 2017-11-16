@@ -1,27 +1,24 @@
 ---
 title: "商務規則延伸模組 (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 51125c09ec99fc6eddc532bf2fe576dece66aa4d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: e83f09094cde9a2643913fceae32d1f6a07a7c09
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="business-rules-extension-master-data-services"></a>商務規則延伸模組 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以套用使用者定義的 SQL 指令碼，以做為預先定義之條件與動作的擴充功能。  
@@ -122,4 +119,3 @@ CREATE PROCEDURE [usr].[YourAction]
  [商務規則動作 &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
   
-

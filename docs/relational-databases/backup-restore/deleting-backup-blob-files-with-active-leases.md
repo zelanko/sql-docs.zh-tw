@@ -5,22 +5,20 @@ ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ae43fad64b94bbafe034ed8b67f8b062d110a4f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: f2b63d34ff5c06d82b6514d7447762546fe2c9e1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>刪除擁有使用中租用的備份 Blob 檔案
   備份至 Microsoft Azure 儲存體或從中還原時，SQL Server 會取得無限期租用，以鎖定 Blob 的獨佔存取權。 當備份或還原程序順利完成時，就會釋放租用。 如果備份或還原失敗，備份程序會嘗試清除任何無效的 Blob。 不過，如果由於過長或持續性網路連線失敗而無法備份，備份程序可能無法存取 Blob，而該 Blob 可能仍然是被遺棄狀態。 這表示在釋放租用之前，無法寫入或刪除 Blob。 本主題描述如何釋放 (中斷) 租用及刪除 Blob。 
@@ -164,4 +162,3 @@ if($lockedBlobs.Count -gt 0)
  [SQL Server 備份至 URL 的最佳作法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - filters [SQL Server replication], parameterized
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8cc71572d7cc5b68293a288af4715634b615cb39
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>參數化篩選 - 參數化資料列篩選
   參數化資料列篩選允許將不同的資料分割傳送到不同的訂閱者，而不需要建立多個發行集 (參數化篩選在舊版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中稱為動態篩選)。 資料分割是資料表中資料列的子集；根據建立參數化資料列篩選時選取的設定，已發行資料表中的每個資料列可僅屬於一個資料分割 (產生不重疊資料分割)，也可屬於兩個或兩個以上的資料分割 (產生重疊資料分割)。  
@@ -38,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  參數化篩選用於單一資料表，通常與聯結篩選組合以將篩選擴充到相關資料表。 如需詳細資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
- 若要定義或修改參數化資料列篩選，請參閱＜ [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。  
+ 若要定義或修改參數化資料列篩選，請參閱＜ [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。  
   
 ## <a name="how-parameterized-filters-work"></a>參數化篩選如何運作  
  參數化資料列篩選器使用 WHERE 子句選取要發行的適當資料。 您可以指定 SUSER_SNAME() 與 HOST_NAME() 系統函數中的其中之一或兩者，而不要在子句中指定常值 (如同對靜態資料列篩選那樣)。 也可以使用使用者定義函數，但它們必須在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，或者評估這些系統函數的其中之一 (例如 `MyUDF(SUSER_SNAME()`)。 如果使用者定義函數在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，則您將無法將參數傳遞到該函數。  

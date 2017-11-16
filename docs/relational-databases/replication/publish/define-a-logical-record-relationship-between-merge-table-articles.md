@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3630c769c33d4888f384d00ec341503fc47c89cd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b22b667a679c2dee3a87b0348170c793af0c9e1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定義合併資料表發行項之間的邏輯記錄關聯性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義合併資料表發行項之間的邏輯記錄關聯性。  
@@ -170,9 +169,9 @@ ms.lasthandoff: 06/22/2017
   
 5.  如果組成此邏輯記錄的發行項不存在，請建立 <xref:Microsoft.SqlServer.Replication.MergeArticle> 類別的執行個體，並設定以下屬性：  
   
-    -   為 <xref:Microsoft.SqlServer.Replication.Article.Name%2A> 設定發行項的名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>設定為發行項名稱。  
   
-    -   為 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A> 設定發行集名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>設定為發行集名稱。  
   
     -   (選擇性) 如果以水平方式篩選此發行項，請為 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 屬性指定資料列篩選子句。 使用此屬性可指定靜態或參數化資料列篩選器。 如需詳細資訊，請參閱 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
@@ -184,17 +183,17 @@ ms.lasthandoff: 06/22/2017
   
 8.  建立 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 類別的執行個體，以定義發行項之間的邏輯記錄關聯性。 然後，設定下列屬性：  
   
-    -   為 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.ArticleName%2A> 屬性設定邏輯記錄關聯性中的子發行項名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.ArticleName%2A> 屬性設定為邏輯記錄關聯性中的子發行項名稱。  
   
-    -   為 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinArticleName%2A> 屬性設定邏輯記錄關聯性中的現有父發行項名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinArticleName%2A> 屬性設定為邏輯記錄關聯性中的現有父發行項名稱。  
   
-    -   為 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterName%2A> 屬性設定邏輯記錄關聯性的名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterName%2A> 屬性設定為邏輯記錄關聯性的名稱。  
   
-    -   為 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A> 屬性設定定義此關聯性的運算式。  
+    -   將 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A> 屬性設定為定義此關聯性的運算式。  
   
-    -   為 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> 屬性設定 <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> 的值。 如果邏輯記錄關聯性也是聯結篩選，請針對這個屬性指定 <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> 的值。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
+    -   將 <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> 屬性設定為 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> 的值。 如果邏輯記錄關聯性也是聯結篩選，請針對這個屬性指定 <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> 的值。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
-9. 在表示關聯性子發行項的物件上呼叫 <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> 方法。 傳遞步驟 8 中的 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 物件來定義關聯性。  
+9. 在代表關聯性中子發行項的物件上，呼叫 <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> 方法。 傳遞步驟 8 中的 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 物件來定義關聯性。  
   
 10. 針對發行集中每一個剩餘的邏輯記錄關聯性重複步驟 8 和 9。  
   

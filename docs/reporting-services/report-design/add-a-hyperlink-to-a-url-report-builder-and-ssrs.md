@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 5dd771760822004cf75dfb602882bb739b2e396d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)
 了解如何將文字方塊、影像、圖表和量測計的超連結動作加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  分頁報表。 這些連結可以移至其他報表、移至報表中的書籤，或是移至靜態或動態 URL。 
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在報表設計檢視中，以滑鼠右鍵按一下要加入連結的文字方塊、影像或圖表，然後按一下 **[屬性]**。  
   
-2.  在 [屬性] 對話方塊中，按一下 [動作] 索引標籤。 請繼續閱讀以了解可用選項的相關資訊。  
+2.  在 [屬性] 對話方塊中，按一下 [動作] 索引標籤。請繼續閱讀以了解可用選項的相關資訊。  
 
 ## <a name="-add-drillthrough-to-another-report"></a>... 加入其他報表的鑽研
 
@@ -92,9 +92,8 @@ ms.lasthandoff: 08/09/2017
   
 7.  若要測試連結，請按一下 **[執行]** 預覽報表，然後按一下這個連結設定所在的報表項目。  
   
-## <a name="see-also"></a>請參閱＜  
- [互動式排序、 文件引導模式及連結 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [建立文件引導模式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [建立文件引導模式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
   
   
-

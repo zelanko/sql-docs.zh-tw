@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Best Practices [Database Engine]
+helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8e343ee942845bda5c874a3a238a4450ec391aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 324915644f60d6ca9d5fe15dfce5aa1ab79056a7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用原則式管理來監視和強制最佳做法
   原則式管理可讓您監視 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的最佳做法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供一組原則檔讓您當作最佳做法原則匯入，然後為包含執行個體、執行個體物件、資料庫或資料庫物件的目標集評估原則。 您可以手動評估原則、設定原則來根據排程評估目標集，或是設定原則來根據事件評估目標集。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
@@ -75,4 +72,3 @@ ms.lasthandoff: 06/22/2017
  [使用原則式管理 Facet](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   
-

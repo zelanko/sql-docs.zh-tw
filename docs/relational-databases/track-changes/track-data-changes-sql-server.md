@@ -5,8 +5,7 @@ ms.date: 08/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 43a09d1469e62f83b699ca1f4062f0cc2d556427
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 6b0846e43315062143d462a82e2c588db00b1169
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="track-data-changes-sql-server"></a>追蹤資料變更 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供兩個追蹤資料庫資料變更的功能： [異動資料擷取](#Capture) 和 [變更追蹤](#Tracking)。 這些功能可協助應用程式判斷對資料庫中使用者資料表所做的 DML 變更 (插入、更新和刪除作業)。 可在同一個資料庫上啟用異動資料擷取和變更追蹤；無需特殊考量。 如需支援異動資料擷取和變更追蹤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]支援變更追蹤。
@@ -181,5 +180,4 @@ ms.lasthandoff: 06/22/2017
  [異動資料擷取相關的動態管理檢視 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
-
 

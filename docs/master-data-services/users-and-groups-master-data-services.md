@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - users [Master Data Services], about users
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 50539aba8f6bb6b4a207d3c03a3a1bf6df6a7b62
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: e7ce67245871cff2682bec6e314a21fdca31a954
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="users-and-groups-master-data-services"></a>使用者和群組 (Master Data Services)
   若要存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式，使用者必須擁有 Windows 網域帳戶或安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 之伺服器電腦上的帳戶。 若要授與 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 存取權，您可以執行下列其中一項作業：  
@@ -53,4 +51,3 @@ ms.lasthandoff: 09/07/2017
  [測試使用者的權限 &#40;Master Data Services&#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   
-

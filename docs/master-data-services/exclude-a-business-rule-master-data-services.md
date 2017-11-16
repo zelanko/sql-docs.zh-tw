@@ -1,29 +1,25 @@
 ---
 title: "排除商務規則 (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- business rules [Master Data Services], excluding
+helpviewer_keywords: business rules [Master Data Services], excluding
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 825c3df3a57b9618ad5ac69f91931c901fe995e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 6d6ae880dffcf2bf01e9a1f3444c9cc775994216
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>排除商務規則 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您不想要永久刪除商務規則，但是也不想使用它來驗證資料時，可排除此商務規則。  
@@ -63,4 +59,3 @@ ms.lasthandoff: 09/07/2017
  [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   
-

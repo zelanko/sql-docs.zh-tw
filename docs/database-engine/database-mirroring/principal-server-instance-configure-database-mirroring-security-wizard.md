@@ -5,24 +5,21 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.configdbmsecurwiz.principalsrvr.f1
+f1_keywords: sql13.swb.configdbmsecurwiz.principalsrvr.f1
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 80f5c385f6544345259413b56ac90932c67058ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7a053755d64b0a00ab46967a8da75d596d250113
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>主體伺服器執行個體 (設定資料庫鏡像安全性精靈)
   使用此頁面來指定有關主體資料庫之伺服器執行個體的資訊。 主體資料庫是開始鏡像工作階段的資料庫副本。 工作階段開始之後，主體資料庫是接受使用者變更的資料庫副本。 (發生容錯移轉時，主體與鏡像角色會交換，所以初始的主體資料庫可能不再是主體資料庫)。  
@@ -63,4 +60,3 @@ ms.lasthandoff: 08/02/2017
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   
-

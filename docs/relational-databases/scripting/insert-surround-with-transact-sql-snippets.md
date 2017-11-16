@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 852836ea43accda6af057b014abbc987f4f14299
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 23dc1addf677c549e53d69c1fa8f8c15af32c3dd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>插入範圍陳述式 Transact-SQL 程式碼片段
   範圍陳述式片段是可讓您在 BEGIN、IF 或 WHILE 區塊中封入一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時當做起點使用的範本。  
@@ -52,4 +50,3 @@ ms.lasthandoff: 06/22/2017
  [插入 Transact-SQL 程式碼片段](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
   
   
-

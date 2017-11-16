@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Deprecation Final Support event class
 - deprecation [SQL Server], events final support
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a73d33e3e6ace9f1ac3d1b7ab02888f2ef6ca0f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 17095ce06acb9ed65e30c38bd71bb966fe6bc76d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support 事件類別
   當您使用將從 **的下一個主要版本移除的功能時，就會發生** Deprecation Final Support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件類別。 為了使應用程式的使用壽命達到最久，請勿使用會造成 **Deprecation Final Support** 事件類別或 **Deprecation Announcement** 事件類別的功能。 請盡快修改使用最終取代功能的應用程式。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 |LoginSid|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 **sys.server_principals** 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |NTDomainName|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |NTUserName|**nvarchar**|Windows 使用者名稱。|6|是|  
-|Offset|**整數**|預存程序或批次內之陳述式的起始位移。|61|是|  
+|Offset|**int**|預存程序或批次內之陳述式的起始位移。|61|是|  
 |ObjectID|**int**|已被取代功能的識別碼。|22|是|  
 |ObjectName|**nvarchar**|已被取代功能的名稱。|34|是|  
 |RequestID|**int**|包含陳述式之要求的識別碼。|49|是|  

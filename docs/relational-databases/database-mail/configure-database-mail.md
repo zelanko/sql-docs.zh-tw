@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -39,16 +38,16 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74432814fa4cc99c8ef8ec8c3c63f37ec8b8b25a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: e6ae8ba71d1e424c4e295655d76ddfc0084a1a18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
   本主題說明如何使用 Database Mail 組態精靈來啟用及設定 Database Mail，並使用範本建立 Database Mail 組態指令碼。  
@@ -157,7 +156,7 @@ ms.lasthandoff: 06/22/2017
  鍵入將用來回覆給由這個帳戶傳送之電子郵件訊息的電子郵件地址。 回覆電子郵件是選擇性的。 例如，回覆給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 帳戶的郵件，可能會傳送給資料庫管理員 danw@Adventure-Works.com。  
   
  **伺服器名稱**  
- 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 一般而言，此格式類似於 **smtp.<貴公司>****.com**。 如需相關說明，請洽詢您的郵件管理員。  
+ 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 一般而言，此格式類似於 **smtp.<貴公司>****.com**。如需相關說明，請洽詢您的郵件管理員。  
   
  **通訊埠編號**  
  輸入此帳戶之 SMTP 伺服器的通訊埠編號。 多數的 SMTP 伺服器使用通訊埠 25。  
@@ -207,7 +206,7 @@ ms.lasthandoff: 06/22/2017
  檢視或更新電子郵件地址，這將用於回覆給由這個帳戶傳送的電子郵件訊息。 回覆電子郵件是選擇性的。 例如，回覆給 SQL Server Agent 帳戶的郵件，可能會傳送給資料庫管理員 **danw@Adventure-Works.com**之電腦上的使用者。  
   
  **伺服器名稱**  
- 檢視或更新帳戶用來傳送電子郵件的 SMTP 伺服器名稱。 一般而言，此格式類似於 **smtp.<貴公司>.com**。 如需相關說明，請洽詢您的郵件管理員。  
+ 檢視或更新帳戶用來傳送電子郵件的 SMTP 伺服器名稱。 一般而言，此格式類似於 **smtp.<貴公司>.com**。如需相關說明，請洽詢您的郵件管理員。  
   
  **通訊埠編號**  
  檢視或更新此帳戶的 SMTP 伺服器的通訊埠編號。 多數的 SMTP 伺服器使用通訊埠 25。  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], filtering published data
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b789fc6033b70608ca30cfa3895442be44ce1e40
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8dccb06209dc9f938254fe2b1e86dc490ed00ab0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filter-published-data"></a>篩選發行的資料
   篩選資料表發行項可讓您建立即將發行的資料分割。 利用篩選發行的資料，您可以：  
@@ -140,4 +138,3 @@ ms.lasthandoff: 06/22/2017
  [發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   
-

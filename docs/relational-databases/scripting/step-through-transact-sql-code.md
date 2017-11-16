@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Transact-SQL debugger, step out
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 68bc53fbfbe4db76e44042936642ad8541784b36
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: eae8d3d85744058fef34a6bfb97460f531c6c2be
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="step-through-transact-sql-code"></a>逐步執行 Transact-SQL 程式碼
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可讓您控制哪些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式要在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中執行。 您可以在個別的陳述式上暫停偵錯工具，然後在該點檢視程式碼項目的狀態。  
@@ -66,4 +64,3 @@ ms.lasthandoff: 06/22/2017
  [Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   
-

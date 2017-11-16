@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stored-Procs
+ms.technology: dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - output parameters [SQL Server]
 - input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3b2bf91392ea6142dc0bb9ea624437069425a556
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: e1b3e7db23ce9435b5d57156f2dcfd920d4d3e11
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-parameters"></a>指定參數
   藉由指定程序參數，呼叫端程式就能夠將值傳入程序的主體。 這些值在程序執行期間可用於各種用途。 如果程序參數標示為 OUTPUT 參數，程序參數也可以將值傳回給呼叫端程式。  
@@ -211,4 +209,3 @@ These items can be purchased for less than $700.00.
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
-

@@ -1,28 +1,27 @@
 ---
-title: "使用精靈部署模型部署封裝 |Microsoft 文件"
+title: "使用精靈部署模型部署套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deployment packages [Master Data Services], deploying
 - models [Master Data Services], deploying a package
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
-caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ba982c9e81e5f3ff0c6e5997806cc3d00f16fce4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+caps.latest.revision: "16"
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c990f1d988bec107c2be8f05fface0da7b021a04
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用精靈部署模型部署封裝
   若要部署只包含模型物件的套件，請使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署精靈。 如果您需要部署包含資料的套件，請參閱 [使用 MDSModelDeploy 部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
@@ -81,6 +80,6 @@ ms.lasthandoff: 09/01/2017
 -   [指派模型物件權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [部署模型 &#40;Master Data services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+ [部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

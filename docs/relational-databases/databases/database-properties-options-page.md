@@ -1,29 +1,25 @@
 ---
 title: "資料庫屬性 (選項頁面) | Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.options.f1
+f1_keywords: sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c942ccd77f3fe5a0f35cc19eacad343d9b5c29cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 24561dd19ef8992aba1d5e48ceadd49a68f18c1f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-properties-options-page"></a>資料庫屬性 (選項頁面)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -138,10 +134,10 @@ ms.lasthandoff: 09/27/2017
  針對在 **CREATE TABLE** 或 **ALTER TABLE** 陳述式期間未明確定義為 **NOT NULL** 的所有使用者定義資料類型或資料行，允許 Null 值 (預設狀態)。 如需詳細資訊，請參閱 [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) 和 [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)。  
   
  **ANSI NULLS 已啟用**  
- 使用 Null 值時，指定等於 (`=`) 和不等於 (`<>`) 比較運算子的行為。 可能的值為 [True] \(開啟) 與 [False] \(關閉)。 若為 [True]，所有與 Null 值的比較都會評估為 UNKNOWN。 若為 [False]，非 UNICODE 值與 Null 值都為 NULL 時，其比較會評估為 [True]。 如需詳細資訊，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。  
+ 使用 Null 值時，指定等於 (`=`) 和不等於 (`<>`) 比較運算子的行為。 可能的值為 [True] (開啟) 與 [False] (關閉)。 若為 [True]，所有與 Null 值的比較都會評估為 UNKNOWN。 若為 [False]，非 UNICODE 值與 Null 值都為 NULL 時，其比較會評估為 [True]。 如需詳細資訊，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。  
   
  **ANSI 填補已啟用**  
- 指定開啟或關閉 ANSI 填補。 允許的值為 [True]\ (開啟) 與 [False]\ (關閉)。 如需詳細資訊，請參閱 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
+ 指定開啟或關閉 ANSI 填補。 允許的值為 [True] (開啟) 與 [False] (關閉)。 如需詳細資訊，請參閱 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
   
  **ANSI 警告已啟用**  
  針對數個錯誤狀況指定 ISO 標準行為。 若為 [True]，Null 值出現在彙總函數 (例如 SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP 或 COUNT) 時，就會產生警告訊息。 若為 [False]，則不會發出警告。 如需詳細資訊，請參閱 [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)。  
@@ -244,4 +240,3 @@ ms.lasthandoff: 09/27/2017
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
-

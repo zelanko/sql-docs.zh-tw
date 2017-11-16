@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc36427330033bac793e8f62658b62b93c18dbf6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4b89d5f459f68a0a69c8f8aeb1f8d053efadaf0c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>範例：指定 ID 和 IDREF 指示詞
   此範例幾乎與＜ [指定 ELEMENTXSINIL 指示詞](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) ＞範例相同。 唯一的差異在於查詢會指定 **ID** 和 **IDREF** 指示詞。 這些指示詞會覆寫 <`OrderHeader`> 和 <`OrderDetail`> 元素中的 **SalesPersonID** 屬性類型。 這會形成內部文件連結。 您需要結構描述，才能查看被覆寫的類型。 因此，查詢會在 FOR XML 子句中指定 **XMLDATA** 選項，以擷取結構描述。  
@@ -114,4 +112,3 @@ FOR XML EXPLICIT, XMLDATA
  [搭配 FOR XML 使用 EXPLICIT 模式](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-

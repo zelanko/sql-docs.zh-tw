@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], push
 - push subscriptions [SQL Server replication], synchronizing
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7c21b9e046bd2f5571816c21ad05ae2b67f92183
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 07f67a81de136cadb4b95bb0b71dc690f430e84d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="synchronize-a-push-subscription"></a>同步處理發送訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]複寫代理程式 [或 Replication Management Objects (RMO) 來同步處理](../../relational-databases/replication/agents/replication-agents-overview.md)中的發送訂閱。  
@@ -210,7 +209,7 @@ REM -- The following command must be supplied without line breaks.
  您可以使用 Replication Management Objects (RMO) 和對複寫代理程式功能的 Managed 程式碼存取，以程式設計的方式同步處理發送訂閱。 用於同步處理發送訂閱的類別依該訂閱所屬的發行集類型而定。  
   
 > [!NOTE]  
->  如果您要啟動自發執行的同步處理而不影響應用程式，請非同步啟動代理程式。 不過，如果要監視同步處理的結果並在同步處理期間從代理程式接收回撥 (例如，如果要顯示進度列)，您就應該同步啟動代理程式。 For [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] Subscribers, you must start the agent synchronously.  
+>  如果您要啟動自發執行的同步處理而不影響應用程式，請非同步啟動代理程式。 不過，如果要監視同步處理的結果並在同步處理期間從代理程式接收回撥 (例如，如果要顯示進度列)，您就應該同步啟動代理程式。 對於 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 訂閱者，您必須同步啟動代理程式。  
   
 #### <a name="to-synchronize-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>若要同步處理快照式或交易式發行集的發送訂閱  
   
@@ -218,23 +217,23 @@ REM -- The following command must be supplied without line breaks.
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.TransSubscription> 類別的執行個體，並設定下列屬性：  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> 的發行集資料庫名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>設為發行集資料庫名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A> 的訂閱所屬發行集名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>設為訂閱所屬發行集的名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 的訂閱資料庫名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>設為訂閱資料庫的名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> 的訂閱者名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>設為「訂閱者」的名稱。  
   
-    -   在步驟 1 中建立的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 連線。  
+    -   將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>設為步驟 1 中建立的連接。  
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得剩餘的訂閱屬性。 如果此方法傳回 **false**，請確認該訂閱存在。  
   
 4.  以下列其中一種方式啟動「散發者」上的「散發代理程式」：  
   
-    -   從步驟 2 的 <xref:Microsoft.SqlServer.Replication.TransSubscription> 執行個體上呼叫 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> 方法。 此方法會以非同步方式啟動散發代理程式，並且控制項會在代理程式作業執行時立即傳回至應用程式。 如果訂閱是以 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 的 **false** 值所建立，則您無法呼叫此方法。  
+    -   從步驟 2 的 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> 執行個體上呼叫 <xref:Microsoft.SqlServer.Replication.TransSubscription> 方法。 此方法會以非同步方式啟動散發代理程式，並且控制項會在代理程式作業執行時立即傳回至應用程式。 如果訂閱是以 **false** for <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>＞。  
   
-    -   從 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizationAgent%2A> 屬性取得 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 類別的執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> 方法。 此方法會同步啟動代理程式，而控制項仍會停留於正在執行的代理程式作業。 在同步執行期間，您可以在代理程式執行時處理 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> 事件。  
+    -   從 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 屬性取得 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizationAgent%2A> 類別的執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> 方法。 此方法會同步啟動代理程式，而控制項仍會停留於正在執行的代理程式作業。 在同步執行期間，您可以在代理程式執行時處理 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> 事件。  
   
 #### <a name="to-synchronize-a-push-subscription-to-a-merge-publication"></a>若要同步處理合併式發行集的發送訂閱  
   
@@ -242,23 +241,23 @@ REM -- The following command must be supplied without line breaks.
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 類別的執行個體，並設定下列屬性：  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> 的發行集資料庫名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>設為發行集資料庫名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A> 的訂閱所屬發行集名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>設為訂閱所屬發行集的名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 的訂閱資料庫名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>設為訂閱資料庫的名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> 的訂閱者名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>設為「訂閱者」的名稱。  
   
-    -   在步驟 1 中建立的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 連線。  
+    -   將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>設為步驟 1 中建立的連接。  
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得剩餘的訂閱屬性。 如果此方法傳回 **false**，請確認該訂閱存在。  
   
 4.  以下列其中一種方式啟動「散發者」上的「合併代理程式」：  
   
-    -   從步驟 2 的 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 執行個體上呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> 方法。 此方法會以非同步方式啟動合併代理程式，並且控制項會在代理程式作業執行時立即傳回至應用程式。 如果訂閱是以 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 的 **false** 值所建立，則您無法呼叫此方法。  
+    -   從步驟 2 的 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> 執行個體上呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 方法。 此方法會以非同步方式啟動合併代理程式，並且控制項會在代理程式作業執行時立即傳回至應用程式。 如果訂閱是以 **false** for <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>＞。  
   
-    -   從 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> 屬性取得 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 類別的執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> 方法。 此方法會同步啟動「合併代理程式」，而控制項仍會停留於正在執行的代理程式作業。 在同步執行期間，您可以在代理程式執行時處理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> 事件。  
+    -   從 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 屬性取得 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> 類別的執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> 方法。 此方法會同步啟動「合併代理程式」，而控制項仍會停留於正在執行的代理程式作業。 在同步執行期間，您可以在代理程式執行時處理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> 事件。  
   
 ###  <a name="PShellExample"></a> 範例 (RMO)  
  此範例同步處理交易式發行集的發送訂閱，其中代理程式會使用代理程式作業非同步啟動。  

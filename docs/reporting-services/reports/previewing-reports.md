@@ -16,17 +16,16 @@ helpviewer_keywords:
 - printing previews
 - test servers [Reporting Services]
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 45df97d21abc1ac494592c98e69964a38d7f4d21
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c4d8cd078dd674ddb0d8bbf1db5a28f794e093df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="previewing-reports"></a>預覽報表
   設計     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表時，在尚未發行至實際環境之前，您可能會想要先檢視該報表。 您可以利用數種方式進行檢視：在報表設計師中切換到 [預覽] 模式、使用報表設計師中的預覽視窗，以及在測試環境中將報表發行至報表伺服器。  
@@ -63,4 +62,3 @@ ms.lasthandoff: 08/09/2017
  [將自訂組件與報表搭配使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   
-

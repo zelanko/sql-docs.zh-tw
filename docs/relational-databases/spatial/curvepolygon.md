@@ -5,21 +5,20 @@ ms.date: 03/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-spatial
+ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: df25fb5e1dd8ddcd426559e1410f32e68575a32b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 65ca3c0fd622dd691424b555972dfde42903d07b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   **CurvePolygon** 是由一個外部週框環形以及零或多個內部環形所定義的拓撲封閉介面。  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
+ms.openlocfilehash: 33c468cb6c8f2a8437e9922203afb14ae513f2c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 632fec019b757d782e7bd54f6854e815ccd2afcf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="extensible-key-management-ekm"></a>可延伸金鑰管理 (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會針對加密和金鑰產生使用「Microsoft 密碼編譯 API」(MSCAPI) 提供者，藉以提供加密功能以及「可延伸金鑰管理」(EKM)。 用於資料和金鑰加密的加密金鑰會建立於暫時性金鑰容器中，而且您必須先從提供者中匯出這些金鑰，然後再將它們儲存於資料庫中。 這個方法會讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]處理金鑰管理 (包括加密金鑰階層和金鑰備份)。  
@@ -174,4 +172,3 @@ DECRYPTION BY EKM_AKey1
  [在兩部伺服器上建立相同的對稱金鑰](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-

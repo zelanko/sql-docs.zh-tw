@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9a3c108e0a9c66daa6a6cde799694ac8491e796
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 810fabaeed3a7144b969ccae9e2b7745079f996f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-and-manage-filters-for-search"></a>設定及管理搜尋的篩選
   編製 **varbinary**、 **varbinary(max)**、 **image**或 **xml** 資料類型資料行中文件的索引需要進行額外處理。 這項處理必須由篩選執行。 篩選會從文件中擷取文字資訊 (移除格式)。 然後，篩選會將文字傳送至與資料表資料行相關聯之語言的斷詞工具元件。  

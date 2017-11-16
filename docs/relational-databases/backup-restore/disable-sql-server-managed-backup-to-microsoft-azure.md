@@ -5,22 +5,20 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: caf1e311db9cc0844294417dfd06e4a384265a4b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9f446cc29eb3ec4da06b9cc3a5924a574b44e5fb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>停用 SQL Server Managed Backup to Microsoft Azure
   本主題說明如何在資料庫和執行個體層級停用或暫停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
@@ -169,4 +167,3 @@ GO
  [啟用 SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)  
   
   
-

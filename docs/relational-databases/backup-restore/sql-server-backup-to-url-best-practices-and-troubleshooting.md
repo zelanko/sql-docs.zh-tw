@@ -5,22 +5,20 @@ ms.date: 08/09/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 304dc5042b632622dc6ee3ca41f0cc3b101d0143
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: b76a0f262fd12e53797c0ad86c991a6e4423927a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳作法和疑難排解
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -165,4 +163,3 @@ ms.lasthandoff: 07/31/2017
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
   
-

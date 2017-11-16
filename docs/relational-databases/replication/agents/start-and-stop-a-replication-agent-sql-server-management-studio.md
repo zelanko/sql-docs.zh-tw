@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - agents [SQL Server replication], stopping
 - agents [SQL Server replication], starting
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6af13f3427ae5787e1c1e4872c8f75f247e8c6b1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: d281ab71b74f9c7ba977ebd3da13aaebdd73b3ac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>啟動及停止複寫代理程式 (SQL Server Management Studio)
   從  中的 **[作業]** 資料夾和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from [作業] Monitor. 啟動和停止下列代理程式和作業：  

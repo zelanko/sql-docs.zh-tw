@@ -5,25 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - log files [SQL Server], changing default location
 - data files [SQL Server], changing default location
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: e1afb149a8b3348660e4e21c879598436eaaedfa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7e206ce6bf55a2180d19878797f79502ced3a3d4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files"></a>檢視或變更資料及記錄檔的預設位置
   
@@ -45,4 +43,3 @@ ms.lasthandoff: 08/02/2017
  [建立資料庫](../../relational-databases/databases/create-a-database.md)  
   
   
-

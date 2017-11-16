@@ -5,8 +5,7 @@ ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], execution plans
 - tuning queries [SQL Server]
 ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 947925cf1f0970fcc543ee577763dab17e4ed964
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: 3eb1056b561e2fea455c29c2d5f72736564c1ffd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/22/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-and-save-execution-plans"></a>顯示並儲存執行計畫
   本節將說明如何顯示執行計畫，以及如何使用 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]將執行計畫儲存到 XML 格式的檔案中。  
@@ -49,4 +47,3 @@ ms.lasthandoff: 08/22/2017
 -   [以 XML 格式儲存執行計畫](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   
-

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-views
+ms.technology: dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.viewproperties.general.f1
+f1_keywords: sql13.swb.viewproperties.general.f1
 helpviewer_keywords:
 - views [SQL Server], status information
 - metadata [SQL Server], views
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - status information [SQL Server], views
 - view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2a981d28720713387dd5b593f037662b9b6b654
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 70db6677328cfb978c7cdda663d56c8fa7332fea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-information-about-a-view"></a>取得檢視的資訊
   您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視定義或屬性的資訊。 您可能需要查看檢視的定義才能了解如何從來源資料表衍生出資料；或是查看檢視所定義的資料。  
@@ -240,4 +237,3 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱 [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 和 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。  
   
   
-

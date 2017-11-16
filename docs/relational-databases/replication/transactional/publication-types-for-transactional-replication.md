@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transactional replication, publications
+helpviewer_keywords: transactional replication, publications
 ms.assetid: ad66aa34-3e37-401e-a6a1-fc1514eb6d50
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3bfa3cae7f71edbae561b3d2ab1eb7784a433df6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 600d56835d5b80513a7bd1ce5098acda22c1ed26
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-types-for-transactional-replication"></a>異動複寫的發行集類型
   異動複寫提供三種發行集類型：  
@@ -36,4 +33,3 @@ ms.lasthandoff: 06/22/2017
  [異動複寫](../../../relational-databases/replication/transactional/transactional-replication.md)  
   
   
-

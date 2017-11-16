@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8290d7fe8b7900291d4afe3c944564d8f2aef608
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 44746f3bdfb42e58addf3841e3cfb826aeec31c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generate-an-inline-xsd-schema"></a>產生內嵌 XSD 結構描述
   在 FOR XML 子句中，您可以要求您的查詢將內嵌結構描述連同查詢結果一起傳回。 如果您要的是 XDR 結構描述，請在 FOR XML 子句中使用 XMLDATA 關鍵字。 而如果您要的是 XSD 結構描述，則請使用 XMLSCHEMA 關鍵字。  
@@ -474,4 +472,3 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
 -   在結果中，<`Col`> 元素的每一個執行個體是使用 `xsi:type` 屬性來參考其執行個體類型。  
   
   
-

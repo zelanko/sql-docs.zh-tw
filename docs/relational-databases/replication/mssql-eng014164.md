@@ -5,24 +5,21 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSSQL_ENG014164 error
+helpviewer_keywords: MSSQL_ENG014164 error
 ms.assetid: cd81b601-2ec3-4358-ad58-c2655496e6a1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c52686b7bf59eeab5b9c87eb6b6f3f7d2a58caf5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fb49153b45f7495bd4d5f9be1e2a117e2bf63a05
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqleng014164"></a>MSSQL_ENG014164
     
@@ -35,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |符號名稱||  
-|訊息文字|已設定臨界值 [%s:%s]\(針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
+|訊息文字|已設定臨界值 [%s:%s] (針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
   
 ## <a name="explanation"></a>說明  
  複寫可讓您啟用多個條件的警告。 這包括在同步處理合併發行者與訂閱者之間的變更時，無法處理足夠數量的資料列的情況。 您可以為 LAN 連接和撥號連接指定不同的時間。  
@@ -53,4 +50,3 @@ ms.lasthandoff: 06/22/2017
  [錯誤和事件參考 &#40;複寫&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   
-

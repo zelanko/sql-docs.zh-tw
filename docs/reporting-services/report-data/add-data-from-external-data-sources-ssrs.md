@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 76e09d1f90d7eb2f3d91aef60e4ce2a9c671ab13
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 1506234bc04698bc613f38570e19f5184e54c887
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>從外部資料來源加入資料 (SSRS)
   若要從外部資料來源擷取資料，可以使用資料連接。 資料連接資訊通常是由外部資料來源的擁有者提供，此擁有者負責授與權限和指定要使用的認證類型。 資料連接資訊會儲存為報表資料來源。 資料來源類型會指定要用來擷取資料的資料延伸模組。  
@@ -117,4 +116,3 @@ ms.lasthandoff: 09/28/2017
  [查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 09/12/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 87d088b2c7b86afd4541f54efa8df0332e75b90d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: ecc4752f5bf52931df9c7af62b5828b92f8f0123
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>針對 Web 同步處理設定 IIS 7
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -329,4 +327,3 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
  [設定 Web 同步處理](../../relational-databases/replication/configure-web-synchronization.md)  
   
   
-

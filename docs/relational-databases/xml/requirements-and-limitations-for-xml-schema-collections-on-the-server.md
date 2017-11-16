@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,16 +23,16 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-caps.latest.revision: 84
+caps.latest.revision: "84"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1cf19211d774242d0f4b88bc089fb8ece06b511
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a168e76435ae4e88f716c6fccca1d39432283c86
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>伺服器上 XML 結構描述集合的需求與限制
   XML 結構描述定義語言 (XSD) 驗證對於使用 **xml** 資料類型的 SQL 資料行具有某些相關限制。 下表提供這些限制的詳細資料以及修改 XSD 結構描述以便讓它可以搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的指導方針。 本章節的主題提供有關特定限制的其他資訊，以及處理這些限制的指導方針。  

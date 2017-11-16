@@ -5,8 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b9923a93650c564621e13d0e088b99d78a62a1ec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 訂閱者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      字串中的大多數選項都是您設定之 DB2 伺服器的專用選項，但 `Process Binary as Character` 和 `Derive Parameters` 選項應一律設定為 `False`。 需要為 `Initial Catalog` 選項指定值，以便識別訂閱資料庫。 在您建立訂閱時，將在「新增訂閱精靈」中輸入連接字串。  
   
-3.  建立快照集或交易式發行集，並為非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者啟用，然後再為訂閱者建立發送訂閱。 如需相關資訊，請參閱 [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
+3.  建立快照集或交易式發行集，並為非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者啟用，然後再為訂閱者建立發送訂閱。 如需相關資訊，請參閱 [為非 SQL Server 訂閱者建立訂閱](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
   
 4.  可以選擇為一或多個發行項指定自訂建立指令碼。 發行資料表時，將為該資料表建立一個 `CREATE TABLE` 指令碼。 對於非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者，指令碼將以 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 用語建立，然後在套用到訂閱者端之前，透過散發代理程式將其翻譯為比較一般的 SQL 用語。 若要指定自訂的建立指令碼，請修改現有的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼或建立使用 DB2 SQL 用語的完整指令碼；如果已建立 DB2 指令碼，請使用 **bypass_translation** 指示詞，好讓散發代理程式無需進行翻譯便可在訂閱者端套用指令碼。  
   
@@ -176,4 +175,3 @@ ms.lasthandoff: 06/22/2017
  [訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

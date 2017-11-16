@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- TransactionLog event class
+helpviewer_keywords: TransactionLog event class
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10d15b8736b871175db262d9c2a4d940b9489771
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 372113aa92be61fb807f351ff79cf9c1b6a8ec86
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog 事件類別
   使用 TransactionLog 事件類別，可在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體中，監視交易記錄檔內的活動。  

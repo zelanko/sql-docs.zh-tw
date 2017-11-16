@@ -5,23 +5,21 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-dml
+ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- triggers [SQL Server], security
+helpviewer_keywords: triggers [SQL Server], security
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d86813b142cbd85527fb1e4e1c11d87884258ecf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: edc234ca0770cd639ab3fc5d0bf7ca65f3cb0ed2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-trigger-security"></a>管理觸發程序安全性
   依預設，DML 與 DDL 觸發程序會在呼叫觸發程序的該使用者之環境下執行。 觸發程序的呼叫者是執行陳述式而引發觸發程序執行的使用者。 例如，如果使用者 **Mary** 執行 DELETE 陳述式而引發 DML 觸發程序 **DML_trigMary** 執行，就會在 **Mary** 使用者權限的環境下執行 **DML_trigMary**內的程式碼。 此預設行為有可能遭到居心不良的使用者加以利用，成為在資料庫或伺服器執行個體中導入惡意程式碼的漏洞。 例如，下列 DDL 觸發程序是由使用者 `JohnDoe`建立的：  

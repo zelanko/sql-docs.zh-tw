@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-views
+ms.technology: dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- views [SQL Server], about views
+helpviewer_keywords: views [SQL Server], about views
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ca3c02162484ebf4f12a8b98b1cad2b1aea89c22
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: d0a9d167f8ec344a9ce393d387a956c24c994d8f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="views"></a>檢視
   檢視表是一種虛擬資料表，是由查詢定義其內容。 與資料表類似，檢視表是由一組具名資料行和資料列所組成。 除了索引檢視以外，檢視在資料庫中並沒有儲存的資料值集。 資料的資料列與資料行是從定義檢視的查詢所參考的資料表而來，而且在參考檢視時不會動態產生。  

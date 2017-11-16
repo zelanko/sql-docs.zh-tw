@@ -5,24 +5,22 @@ ms.date: 03/04/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - master database [SQL Server], about
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="master-database"></a>master 資料庫
   **master** 資料庫會記錄 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統的所有系統層級資訊。 這包括了整個執行個體範圍的中繼資料，例如登入帳戶、端點、連結的伺服器，以及系統組態設定。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，系統物件不再儲存於 **master** 資料庫，而是儲存於 [Resource 資料庫](../../relational-databases/databases/resource-database.md)。 **master** 資料庫也會記錄所有其他資料庫的存在與這些資料庫檔案的所在位置，並記錄 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的初始化資訊。 因此，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **資料庫無法使用，** 也會無法啟動。  
@@ -146,4 +144,3 @@ ms.lasthandoff: 06/22/2017
  [移動資料庫檔案](../../relational-databases/databases/move-database-files.md)  
   
   
-

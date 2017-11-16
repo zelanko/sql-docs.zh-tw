@@ -5,23 +5,21 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.publicationinfo.tracertokens.f1
+f1_keywords: sql13.rep.monitor.publicationinfo.tracertokens.f1
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9302b3bcfea0b63fe4eefdc2c7c03716eaaefa09
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f1ce3e9daad991b8e6e9f70c3b120012dd4a3dea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>發行集資訊、追蹤 Token (SQL Server 2005 和更新版本)
   **[追蹤 Token]** 索引標籤，可讓您驗證連接並測量使用異動複寫之系統的延遲。 Token (即少量的資料) 會寫入發行集資料庫的交易記錄，會標示為典型的已複寫交易並且會透過系統傳送，它可允許計算：  

@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: d6ba2f29d8c6c21a6f96c575dbebc354e0885f8d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
 您可以在 Server Core 安裝上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。   
@@ -339,5 +337,4 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 
   
   
-
 

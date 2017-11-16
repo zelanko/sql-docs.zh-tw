@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0430b88308cb3ebc07b1addfb2e34575150fa41e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 4f31923e866b45951e3758d3f1e35aa542117ad2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="management-data-warehouse"></a>管理資料倉儲
   管理資料倉儲是一種關聯式資料庫，其中包含從伺服器 (它是資料收集目標) 收集而來的資料。 這項資料是用來產生系統資料收集組的報表，而且也可用來建立自訂報表。  

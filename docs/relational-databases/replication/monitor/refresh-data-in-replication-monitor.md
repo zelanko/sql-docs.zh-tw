@@ -5,24 +5,21 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- refreshing data
+helpviewer_keywords: refreshing data
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7b58ebcc0ce0f46fd2818ae87f8093da1c3bb086
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d4e33a56ef2012f82d4578e4327bcfd985c00524
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="refresh-data-in-replication-monitor"></a>在複寫監視器中重新整理資料
   在「複寫監視器」中，主視窗與詳細資料視窗 (這些視窗可從主視窗中啟動) 可自動或手動重新整理。 若要手動重新整理視窗，請按 F5。 依預設，主視窗將每隔五秒鐘自動重新整理；可以為每個「發行者」自訂重新整理速率。  
@@ -53,4 +50,3 @@ ms.lasthandoff: 06/22/2017
  [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
-

@@ -9,22 +9,19 @@ manager: cguyer
 editor: 
 ms.assetid: 
 ms.service: sql-database
-ms.custom:
-- security
+ms.custom: security
 ms.workload: Inactive
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
+ms.openlocfilehash: 35e51899bda60ccb5b176de0a3d7fabcc86faad7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
-ms.openlocfilehash: 2950cf2e403cd0afd337c1578d7bbe656f2a6e53
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/16/2017
-
---- 
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
+---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰支援
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -159,4 +156,3 @@ ms.lasthandoff: 10/16/2017
 - 開始使用攜帶您自己的金鑰支援 TDE：[使用 PowerShell 從 Key Vault 開啟使用自己金鑰的 TDE](transparent-data-encryption-byok-azure-sql-configure.md)。
 - 了解如何輪替伺服器的 TDE 保護裝置，以符合安全性需求：[使用 PowerShell 輪替透明資料加密保護裝置](transparent-data-encryption-byok-azure-sql-key-rotation.md)。
 - 發生安全性風險時，了解如何移除可能遭盜用的 TDE 保護裝置：[移除可能遭盜用的金鑰](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)。 
-

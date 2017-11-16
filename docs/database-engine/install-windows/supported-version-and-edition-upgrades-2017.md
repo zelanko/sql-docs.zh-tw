@@ -5,8 +5,7 @@ ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 148
+caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 4fdcc353e4dc1d29a2411b5ec846f2d8e415a849
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>支援的版本與版本升級 - SQL Server 2017
   您可以從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 升級。 本主題列出這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的支援升級路徑，以及可以升級至 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 的支援版本。  
@@ -114,7 +112,7 @@ ms.lasthandoff: 08/02/2017
  \* Microsoft 對於從候選版軟體升級的支援是專門針對參與 Technology Adoption Program (TAP) 的客戶。 
 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 支援 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+###  <a name="SupportFor2005"></a> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
  本節將討論 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的支援。 在 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 中，您將能夠進行下列作業：  
   
 -   將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫 (mdf/ldf 檔案) 附加到 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 的 Database Engine 執行個體。  
@@ -189,4 +187,3 @@ ms.lasthandoff: 08/02/2017
  [升級 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   
-

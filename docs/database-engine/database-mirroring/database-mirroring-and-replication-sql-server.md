@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - replication [SQL Server], database mirroring and
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ff0a3a8086a9bd54aedcc8e10ef5254a28ada307
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9b6d919300b8ebecd844beec0ba21f01a8757151
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>資料庫鏡像和複寫 (SQL Server)
   資料庫鏡像可以和複寫一起使用，以改進發行集資料庫的可用性。 資料庫鏡像是指單一資料庫的兩份副本，而且通常位在不同的電腦上。 在任何時間內，目前的用戶端都只能使用其中一份資料庫副本， 此份資料庫稱為主體資料庫。 用戶端對主體資料庫所做的更新會套用到其他份資料庫，也稱為鏡像資料庫。 鏡像作業涵蓋了針對主體資料庫上所進行的每個插入、更新或刪除動作，將其交易記錄套用至鏡像資料庫。  
@@ -170,4 +168,3 @@ ms.lasthandoff: 08/02/2017
  [記錄傳送和複寫 &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
   
-

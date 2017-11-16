@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 310aa99b485cedf79237f993a8ffbdcffe9d2a46
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e530ca4c5ebfc751fc760e22055b07af065545e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>管理完成索引標籤 (SQL Server PowerShell)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元引進三個變數 (**$SqlServerMaximumTabCompletion**、 **$SqlServerMaximumChildItems**及 **$SqlServerIncludeSystemObjects**) 以控制 Windows PowerShell TAB 鍵自動完成功能。 Tab-Completion 透過傳回其名稱開頭為所輸入字串的項目表，來減少必須輸入的資料量。  
@@ -33,10 +31,10 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 嵌入式管理單元引進三個系統變數，可用來控制 TAB 鍵自動完成功能和 **Get-ChildItem**所呈現的資訊量。  
   
  **$SqlServerMaximumTabCompletion =** *n*  
- 指定 Tab-Completion 清單中要包含的最大物件數目。 如果您在有 *n* 個物件以上的路徑節點上選取 Tab 鍵，TAB 鍵自動完成清單就會在 *n*處截斷。 *n* 為整數。 預設值為 0，表示列出的物件數沒有限制。  
+ 指定 Tab-Completion 清單中要包含的最大物件數目。 如果您在有 *n* 個物件以上的路徑節點上選取 Tab 鍵，TAB 鍵自動完成清單就會在 *n*所呈現的資訊量。 *n* 為整數。 預設值為 0，表示列出的物件數沒有限制。  
   
  **$SqlServerMaximumChildItems =** *n*  
- 指定 **Get-ChildItem**所顯示的最大物件數。 如果 **Get-ChildItem** 在具有 *n* 個物件以上的路徑節點上執行，此清單會在 *n*處截斷。 *n* 為整數。 預設值為 0，表示列出的物件數沒有限制。  
+ 指定 **Get-ChildItem**所顯示的最大物件數。 如果 **Get-ChildItem** 在具有 *n* 個物件以上的路徑節點上執行，此清單會在 *n*所呈現的資訊量。 *n* 為整數。 預設值為 0，表示列出的物件數沒有限制。  
   
  **$SqlServerIncludeSystemObjects =** { **$True** | **$False** }  
  如果設定為 **$True**，表示系統物件是透過 TAB 鍵自動完成功能和 **Get-ChildItem**所顯示。 如果設定為 **$False**，表示未顯示任何系統物件。 預設值為 **$False**。  
@@ -58,4 +56,3 @@ dir variable:sqlserver*
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   
-

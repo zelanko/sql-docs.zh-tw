@@ -5,22 +5,20 @@ ms.date: 01/01/2012
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eacf688d4ea67d06d3244f7aab2e51bf3ba72bfe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 225ee23d618225d1424cd81e1acf5974153f0726
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
   本主題將提供知識管理、資料品質專案和資料品質管理中 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 概念的簡短摘要。  
@@ -82,7 +80,7 @@ ms.lasthandoff: 09/09/2017
   
 -   設定參考資料服務設定。 如需詳細資訊，請參閱 [Configure DQS to Use Reference Data](../data-quality-services/configure-dqs-to-use-reference-data.md)。  
   
--   設定清理與比對活動的臨界值。 如需詳細資訊，請參閱 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
+-   設定清理與比對活動的臨界值。 如需詳細資訊，請參閱 [設定清理和比對的臨界值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
 -   啟用/停用分析通知。 如需詳細資訊，請參閱[啟用或停用 DQS 中的分析通知](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)。  
   
@@ -98,4 +96,3 @@ ms.lasthandoff: 09/09/2017
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   
-

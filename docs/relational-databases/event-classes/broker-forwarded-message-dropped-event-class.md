@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Broker:Forwarded Message Dropped event class
+helpviewer_keywords: Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d63f05d5f476dcb03398872759b92e21d04c99c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7ee4d1edd96ee99a8d2ce93513b7d1423811d5b2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 Service Broker 卸除計畫轉寄的訊息時，會產生 Broker:Forwarded Message Dropped 事件。  
@@ -69,4 +66,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - inbound connections
 - database mirroring [SQL Server], security
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 61fe26cc94ad77bf0842c6254ec26d9fea5e2526
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 131de819519099335c6fd187677c6e96bd89bb74
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>資料庫鏡像 - 使用傳入連接的憑證
   此主題描述設定伺服器執行個體，以使用憑證來驗證資料庫鏡像之傳入連接的步驟。 在設定傳入連接之前，您必須先在每一個伺服器執行個體上設定傳出連接。 如需詳細資訊，請參閱[允許資料庫鏡像端點使用傳出連接的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
@@ -175,4 +173,3 @@ GO
  [為資料庫鏡像組態疑難排解 &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
-

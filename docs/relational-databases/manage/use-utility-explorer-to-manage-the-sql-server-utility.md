@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c14be83d174694f31f5a8cc42fea054b250daf10
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd65300d9d3c79ea0604d6ea83c1c9377b7982cc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用公用程式總管來管理 SQL Server 公用程式
   公用程式總管是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的元件，它會連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，以便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內提供所有物件的樹狀檢視。 [公用程式總管] 內容窗格會提供幾個方法來檢視摘要與詳細資料，並提供與 SQL Server 受管理的執行個體健全狀態相關的資料。 [公用程式總管] 也會提供用於檢視及管理原則定義的使用者介面。 公用程式總管的功能會因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內的物件而有些微的不同，但是一般來說都會包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所管理的物件、資料和原則。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 08/03/2017
  [物件總管](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
   
   
-

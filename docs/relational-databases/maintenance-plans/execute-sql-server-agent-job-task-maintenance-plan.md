@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.maint.executejob.f1
-helpviewer_keywords:
-- Execute SQL Server Agent Job Task dialog box
+f1_keywords: sql13.swb.maint.executejob.f1
+helpviewer_keywords: Execute SQL Server Agent Job Task dialog box
 ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 39bb4179c7869d9a9fe0cbbb26263f9e3a91f1ec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 808ee88c211233ece8ae25f23925e71524774dfd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>執行 SQL Server Agent 作業工作 (維護計畫)
   使用 [執行 SQL Server Agent 作業工作] 對話方塊，即可在維護計畫內執行 Microsoft SQL Server Agent 作業。 如果選取的連接上沒有 SQL Server Agent 作業，將無法使用此選項。  

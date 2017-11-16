@@ -5,27 +5,24 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.SWB.POINTINTIMERESTORE.F1
 - sql13.swb.backuptimeline.f1
-helpviewer_keywords:
-- Backup Timeline
+helpviewer_keywords: Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2acfacf611c712047591716da85a3e9f06d5630d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b4d67a3f93d492888ee5e42318d7c352abe9c17c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="backup-timeline"></a>備份時刻表
   使用 [備份時間表] 對話方塊，尋找及指定將資料庫還原至某個時間點的備份。 透過按一下 [還原資料庫] 窗格 ([一般] 頁面) 上的 [時間表] 上，即可存取 [備份時間表] 對話方塊。 這個對話方塊可讓您檢視資料庫上所執行之還原作業的時間軸。  
@@ -65,4 +62,3 @@ ms.lasthandoff: 06/22/2017
  [還原資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
   
-

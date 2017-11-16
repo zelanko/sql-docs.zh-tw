@@ -1,13 +1,11 @@
 ---
 title: "建立連結的伺服器 (SQL Server Database Engine) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 11/20/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,20 +13,18 @@ f1_keywords:
 - sql13.swb.linkedserver.properties.security.f1
 - sql13.swb.linkedserver.properties.provider.f1
 - sql13.swb.linkedserver.properties.options.f1
-helpviewer_keywords:
-- linked servers [SQL Server], creating
+helpviewer_keywords: linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 2d897f66e7a1faa5d628442d3dd1153c32825d48
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: ccd682b0f193628b900ca2b2baf32691582d993c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
 
@@ -261,4 +257,3 @@ ms.lasthandoff: 08/03/2017
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
   
   
-

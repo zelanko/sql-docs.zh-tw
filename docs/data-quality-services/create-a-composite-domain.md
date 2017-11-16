@@ -5,25 +5,23 @@ ms.date: 11/22/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c69c58ed516b9977e8b8ea43a6a5f69a1e57f2e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-composite-domain"></a>建立複合定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立複合定義域。 複合定義域是由套用至單一資料欄位的一個或多個單一定義域所組成。 如需複合定義域的詳細資訊，請參閱[管理複合定義域](../data-quality-services/managing-a-composite-domain.md)。  
@@ -54,7 +52,7 @@ ms.lasthandoff: 09/09/2017
   
 5.  在 **[對應]** 資料表中，從空白資料列之 **[來源資料行]** 資料行的下拉式清單中選取來源資料行。 請確定來源資料行包含由兩個現有單一定義域所定址的複合定義域。 如果沒有對應的單一定義域存在，請按一下 **[建立定義域]** 圖示。  
   
-6.  在 **[對應]** 資料表中，從空白資料列之 **[來源資料行]** 資料行的下拉式清單中選取來源資料行。 請確定來源資料行包含由兩個現有單一定義域所定址的複合定義域部分。 如果沒有對應的單一定義域存在，請按一下 **[建立定義域]** 圖示加以建立。 如需詳細資訊，請參閱 [Create a Domain](../data-quality-services/create-a-domain.md)。  
+6.  在 **[對應]** 資料表中，從空白資料列之 **[來源資料行]** 資料行的下拉式清單中選取來源資料行。 請確定來源資料行包含由兩個現有單一定義域所定址的複合定義域部分。 如果沒有對應的單一定義域存在，請按一下 **[建立定義域]** 圖示加以建立。 如需相關資訊，請參閱 [建立定義域](../data-quality-services/create-a-domain.md)。  
   
 7.  按一下 **[建立複合定義域]** 圖示。  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 09/09/2017
   
 2.  選取 **[定義域管理]** 當做活動，然後按一下 **[建立]** 建立新的知識庫，或按一下 **[開啟]** 開啟現有的知識庫。  
   
-3.  確定複合定義域所需的兩個或多個單一定義域確實存在。 如果不存在，請按一下 **[建立定義域]** 圖示，並加以建立。 如需詳細資訊，請參閱 [Create a Domain](../data-quality-services/create-a-domain.md)。  
+3.  確定複合定義域所需的兩個或多個單一定義域確實存在。 如果不存在，請按一下 **[建立定義域]** 圖示，並加以建立。 如需相關資訊，請參閱 [建立定義域](../data-quality-services/create-a-domain.md)。  
   
 4.  在 **[定義域管理]** 頁面上，按一下定義域清單上方的 **[建立複合定義域]** 圖示。  
   
@@ -107,4 +105,3 @@ ms.lasthandoff: 09/09/2017
  當您使用以知識為基礎的剖析，而且來源資料中的值少於複合定義域中的定義域時，DQS 會在遺漏的定義域中放置 null。 當來源資料中的值多於複合定義域中的定義域時，DQS 會將額外的資料加入至其中一個資料行。 如果有兩個或多個定義域包含相同的值，則資料來源將會剖析為第一個相符的定義域。  
   
   
-

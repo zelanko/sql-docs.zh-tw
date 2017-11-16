@@ -5,28 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- OpenSqlFilestream
-apilocation:
-- sqlncli11.dll
+apiname: OpenSqlFilestream
+apilocation: sqlncli11.dll
 apitype: DLLExport
-helpviewer_keywords:
-- OpenSqlFilestream
+helpviewer_keywords: OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ce631c94bbc15ab1df2450a089c773a960b1401
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 79b38894d27f78edf353dd251549c3c6fee6cbf8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>使用 OpenSqlFilestream 存取 FILESTREAM 資料
   OpenSqlFilestream API 會為儲存在檔案系統中的 FILESTREAM 二進位大型物件 (BLOB)，取得與 Win32 相容的檔案控制代碼。 此控制代碼可傳遞給下列任何 Win32 API： [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)。 如果您將此控制代碼傳遞給其他任何 Win32 API，將會傳回錯誤 ERROR_ACCESS_DENIED。 在認可或回復交易之前，必須將此控制代碼傳遞給 Win32 的 [CloseHandle API](http://go.microsoft.com/fwlink/?LinkId=86428) 來關閉此控制代碼。 如果無法關閉此控制代碼，將會導致伺服器端資源洩露。  
@@ -94,11 +90,11 @@ HANDLE OpenSqlFilestream (
 ## <a name="examples"></a>範例  
  下列範例將示範如何使用 `OpenSqlFilestream` API 來取得 Win32 控制代碼。  
   
- [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBlob](../../relational-databases/blob/codesnippet/csharp/access-filestream-data-w_0_1.cs)]  
+ [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/access-filestream-data-w_0_1.cs)]  
   
- [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBlob](../../relational-databases/blob/codesnippet/visualbasic/access-filestream-data-w_0_2.vb)]  
+ [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/visualbasic/access-filestream-data-w_0_2.vb)]  
   
- [!code-cpp[FILESTREAM#FS_CPP_WriteBlob](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
+ [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
   
 ## <a name="remarks"></a>備註  
  必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，才能使用此 API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端工具一起安裝。 如需詳細資訊，請參閱 [安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  

@@ -5,22 +5,20 @@ ms.date: 10/01/2012
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92358483a663f8c9941a42612faccc8486579af3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 201f30b4b5fd5ff6de06274a83fa62967498db2e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
   參考資料指的是一組精確且完整的相關或已分類的全域資料 (在企業界限範圍之外)，這些資料是在可靠的公用網域或是由優質商業內容提供者所提供。  
@@ -79,4 +77,3 @@ ms.lasthandoff: 09/09/2017
 |描述如何使用參考資料服務清理資料。|[使用參考資料 &#40;外部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - transactional replication, Oracle publishing
 - Oracle publishing [SQL Server replication], about Oracle publishing
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc60029a1bf059b121cf4e721e700462525fb1fb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 5574123253385152cc04e879439b8ea8b26b3b27
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="oracle-publishing-overview"></a>Oracle 發行概觀  
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/29/2017
   
 -   將資料從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的訂閱者  
 
--   若要在 Oracle 之間發行資料，具有如下限制：  
+-   在 Oracle 之間發行資料的限制如下：  
   | |2016 或更早版本 |2017 或更新版本 |
   |-------|-------|--------|
   |從 Oracle 複寫 |只支援 Oracle 10g 或更早版本 |只支援 Oracle 10g 或更早版本 |
@@ -61,4 +59,3 @@ ms.lasthandoff: 08/29/2017
  [異質資料庫複寫](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57fcddb2d5f87d0b03ab1ed504e07072dc41d367
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ae6040d1ba9e14a4e77135a1f1f99ebf350aa33d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-code-formatting"></a>管理程式碼格式設定
   當使用編輯器時，您可以利用縮排、隱藏文字、URL...等，來建立程式碼的格式。 您也可以利用智慧型縮排 (Smart Indenting) 功能，在輸入程式碼的同時，自動建立程式碼的格式。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
     -   [區塊]。 游標會對齊上下行。  
   
-    -   [智慧型]\(預設)。 語言服務會決定要使用的適當縮排樣式。  
+    -   [智慧型] (預設)。 語言服務會決定要使用的適當縮排樣式。  
   
     > [!NOTE]  
     >  有些語言並未完整提供這三個縮排選項。  
@@ -154,4 +152,3 @@ ms.lasthandoff: 06/22/2017
 4.  選取 [啟用按一下方式的 URL 導覽]。  
   
   
-

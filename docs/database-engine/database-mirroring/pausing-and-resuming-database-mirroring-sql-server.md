@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], resuming
 - pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 285a9cf5c006787b371411c1eb2e1bd5c07ff050
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ce0495d6bc7b670cade489806e27aa651a89239e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>暫停與繼續資料庫鏡像 (SQL Server)
   資料庫擁有者隨時都可以先暫停資料庫鏡像工作階段，稍後再繼續。 暫停會保留工作階段狀態，同時暫停鏡像。 發生瓶頸時，暫停可能會對改進主體伺服器的效能有所幫助。  
@@ -78,4 +76,3 @@ ms.lasthandoff: 08/02/2017
  [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  
   
   
-

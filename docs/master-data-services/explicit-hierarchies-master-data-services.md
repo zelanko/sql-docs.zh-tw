@@ -1,12 +1,11 @@
 ---
-title: "明確階層 (Master Data Services) |Microsoft 文件"
+title: "明確階層 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +13,19 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4680ca90441beb57266656b85461697f95eb19d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+caps.latest.revision: "10"
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: cab8d24ba8b634850f700dd15e71a81c006c8562
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明確階層 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，明確階層可以您指定的任何方式組織來自單一實體的成員。 衍生階層可以是不完全的，而且明確階層不像衍生階層，前者不是以網域屬性關聯性為基礎。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，明確階層可以您指定的任何方式組織來自單一實體的成員。 衍生階層可以是不完全的，而且明確階層不像衍生階層，前者不是以網域屬性關聯性為基礎。  
   
 > [!NOTE]  
 >  明確階層已被取代。  
@@ -80,7 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  若要摘要列出在特定合併點上的分葉成員，您可以在 Product 實體中建立合併成員。 在階層樹狀結構中，於您想要摘要列出分葉成員的層級上插入合併成員。 您可以插入合併成員的位置並沒有任何限制，但是每一個成員 (分葉或合併成員) 只能使用一次。  
   
- ![Mountain Bike 明確階層範例](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Mountain Bike 明確階層範例")  
+ ![越野車明確階層範例](../master-data-services/media/mds-conc-explicit-hierarchy.gif "越野車明確階層範例")  
   
  合併成員可在任何層級用來分組成員，而且分葉成員和合併成員會依照您決定的順序來排序。  
   
@@ -88,16 +87,15 @@ ms.lasthandoff: 09/01/2017
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立新的明確階層。|[建立明確階層 &#40;Master Data services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|變更現有明確階層的名稱。|[變更明確階層名稱 &#40;Master Data services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|刪除現有明確階層。|[刪除明確階層 &#40;Master Data services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|建立新的明確階層。|[建立明確階層 &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|變更現有明確階層的名稱。|[變更明確階層名稱 &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|刪除現有明確階層。|[刪除明確階層 &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>相關內容  
   
--   [衍生的階層 &#40;Master Data services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [集合 &#40;Master Data services&#41;](../master-data-services/collections-master-data-services.md)  
+-   [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   
-

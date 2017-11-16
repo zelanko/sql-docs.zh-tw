@@ -5,8 +5,7 @@ ms.date: 07/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - data-tier application [SQL Server], extract
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: faeab1963609f5563f31e13b2ee965fdac8a43b8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a25c49cf828566501c9220bbf8c4c6637e5130e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="extract-a-dac-from-a-database"></a>從資料庫中擷取 DAC
   您可以使用 [擷取資料層應用程式精靈] 或 Windows PowerShell 指令碼，從現有的 SQL Server 資料庫中擷取資料層應用程式 (DAC) 封裝。 此擷取程序會建立 DAC 封裝檔案，其中包含資料庫物件及其相關執行個體層級元素的定義。 例如，DAC 封裝檔案會包含資料庫資料表、預存程序、檢視表、使用者以及對應至資料庫使用者的登入。  
@@ -170,4 +168,3 @@ $extractionunit.Extract($dacpacPath)
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
-

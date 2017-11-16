@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 21871 (Database Engine error)
+helpviewer_keywords: 21871 (Database Engine error)
 ms.assetid: d3215378-9282-444f-a18b-00b96fd0133d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1538eba494fcad374dd0454ed519777466317b0f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ab801b4bf9ba771686f89f627f51228800dc1c9f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver21871"></a>MSSQLSERVER_21871
   
@@ -43,4 +40,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="user-action"></a>使用者動作  
 **sp_validate_replica_hosts_as_publishers** 只與重新導向的發行者有關。 如果發行者資料庫是可用性群組的成員，請使用 **sp_redirect_publisher** 預存程序，將發行者和發行者資料庫與可用性群組的可用性群組接聽程式名稱建立關聯。  
   
-

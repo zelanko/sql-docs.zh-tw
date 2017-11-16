@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], restoring files and filegroups
 - restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0bc8f28aa966b39b9b5c78d681458d6bf25f84f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 273602c0894d0cefe7bedc2dbadbd4ae6528e3f7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>還原檔案和檔案群組 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在 (若是 FROM DATABASE_SNAPSHOT 選項，資料庫一律存在)，預設會將 RESTORE 權限授與 **sysadmin** 和 **dbcreator** 固定伺服器角色的成員，以及資料庫的擁有者 (**dbo**)。  
+ 如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，RESTORE 權限預設為 **系統管理員 (sysadmin)** 和 **資料庫建立者 (dbcreator)** 固定伺服器角色的成員以及資料庫的擁有者 (**dbo**) (對 FROM DATABASE_SNAPSHOT 選項而言，資料庫一律存在)。  
   
  RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此，因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
   

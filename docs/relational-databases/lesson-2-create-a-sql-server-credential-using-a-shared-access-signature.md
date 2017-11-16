@@ -1,29 +1,25 @@
 ---
 title: "第 2 課︰使用共用存取簽章建立 SQL Server 認證 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 02/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f6e88b211fc2a053ffeadb038298a28179a94d88
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c919694f95f5a0e248f814bff523d9d7aab6981c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>第 2 課︰使用共用存取簽章建立 SQL Server 認證
 在本課程中，您將建立用來儲存安全性資訊的認證，這些資訊可供 SQL Server 用來寫入及讀取您在 [第 1 課︰在 Azure 容器上建立預存存取原則和共用存取簽章](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)所建立之 Azure 容器中的內容。  
@@ -75,5 +71,4 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
-
 

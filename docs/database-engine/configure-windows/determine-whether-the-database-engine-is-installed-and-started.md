@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - viewing Database Engine installation
 - installed Database Engine verification [SQL Server]
 ms.assetid: babb02e4-3521-4b75-b5df-e09205594375
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7c44c520498ca4e542739bdee87712a18c0f3ce9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93b3736aa15a7e4fc7e7a1df829b96a0efa5ba19
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="determine-whether-the-database-engine-is-installed-and-started"></a>判斷是否已安裝及啟動 Database Engine
   只要成功安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，就會將檔案安裝至檔案系統、在登錄中建立項目並安裝許多工具。 此主題描述如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態管理員，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否已安裝並啟動。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
      如果您在 [開始] 功能表上找不到這些項目，就表示未正確安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請執行安裝程式來安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。  
   
-2.  在 [SQL Server 組態管理員] 中，按一下左窗格中的 [SQL Server 服務]。 右窗格會列出與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相關的許多服務。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已安裝，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務就會列為 [SQL Server (MSSQLSERVER)]\(如果它是預設執行個體的話) 或 [SQL Server (\<*執行個體名稱*>)]\(如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安裝成具名執行個體的話)。 除非執行個體名稱已變更，否則 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝為 **SQLEXPRESS** 名稱的具名執行個體。 綠色的三角形圖示是表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在執行。 紅色的正方形圖示則表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已停止。  
+2.  在 [SQL Server 組態管理員] 中，按一下左窗格中的 [SQL Server 服務]。 右窗格會列出與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相關的許多服務。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已安裝，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務就會列為 [SQL Server (MSSQLSERVER)] (如果它是預設執行個體的話) 或 [SQL Server (\<*執行個體名稱*>)] (如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安裝成具名執行個體的話)。 除非執行個體名稱已變更，否則 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝為 **SQLEXPRESS** 名稱的具名執行個體。 綠色的三角形圖示是表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在執行。 紅色的正方形圖示則表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已停止。  
   
 3.  若要啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，請以滑鼠右鍵按一下右窗格中的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，然後按一下 [啟動]。  
   
@@ -46,4 +44,3 @@ ms.lasthandoff: 08/02/2017
 >  在安裝過程中，使用者可以選取要用來安裝程式檔案和資料庫檔案的位置。 如果使用者接受預設位置，這些檔案就會安裝至 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] 和 C:\Program Files\Microsoft SQL Server\MSSQL.*x*，其中 *x* 是數字。  
   
   
-

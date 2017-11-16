@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-partition
+ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b55aa8c92aaf469aa2ef7945a84068301124641
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f802feafcd209656d53224c62d2aa6a55addf460
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="modify-a-partition-function"></a>修改資料分割函數
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在資料分割資料表或索引的資料分割函數中，加上或減去指定的資料分割數 (遞增為 1)，藉以變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]中資料表或索引的資料分割方式。 若要加入資料分割，可以將現有資料分割「拆解」為兩個資料分割，並重新定義新資料分割的界限。 若要卸除資料分割，可以將兩個資料分割的界限「合併」成為一個。 最後這個動作會重新擴展一個資料分割，並使另一個資料分割成為未指派。  
@@ -144,4 +142,3 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱 [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)。  
   
   
-

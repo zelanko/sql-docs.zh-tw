@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7cc75ed2f7ab28f5ad1498f9a6dfa8d6ad8b770
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 860458ebec0954d872b31bceb4443450bf96ad21
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>降低生產伺服器的微調負載
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會仰賴查詢最佳化工具來分析工作負載以及提出微調建議。 針對實際伺服器執行這項分析會增加伺服器負載，而且可能會在微調工作階段期間減損伺服器效能。 除了實際伺服器以外，您可以使用測試伺服器來減少微調工作階段期間對伺服器負載造成的影響。  

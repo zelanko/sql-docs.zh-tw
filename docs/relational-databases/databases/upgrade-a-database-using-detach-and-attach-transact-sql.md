@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - detaching databases [SQL Server]
 - attaching databases [SQL Server]
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d99342c070c23962b70592f3607bc17832815cdc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4a6e2f8514fea8a4815cd46d3603e3a8f62ea4c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加來升級資料庫 (Transact-SQL)
   本主題描述如何使用卸離和附加作業升級 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的資料庫。 附加至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫可立即使用並自動進行升級。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
      [使用卸離和附加作業](#SSMSProcedure)  
   
--   **Follow Up:**  [After Upgrading a SQL Server Database](#FollowUp)  
+-   **待處理**  [升級 SQL Server 資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -122,4 +120,3 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本會使用 AES 加密演算法來保護服務主要金鑰 (SMK) 及資料庫主要金鑰 (DMK)。 與舊版中使用的 3DES 相比，AES 是一種較新的加密演算法。 當資料庫第一次連接或還原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，資料庫主要金鑰複本 (由服務主要金鑰加密) 尚未儲存在伺服器中。 您必須利用 **OPEN MASTER KEY** 陳述式來解密資料庫主要金鑰 (DMK)。 DMK 解密之後，您便可以選擇利用 **ALTER MASTER KEY REGENERATE** 陳述式來提供服務主要金鑰 (SMK) 所加密的 DMK 複本給伺服器，以在未來啟用自動解密。 當資料庫從舊版升級時，應該會重新產生 DMK 以使用較新的 AES 演算法。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新產生 DMK 金鑰以升級至 AES 所需的時間是取決於 DMK 所保護的物件數目而定。 重新產生 DMK 金鑰以升級至 AES 只需執行一次，且不會影響金鑰循環策略中後續的重新產生。  
   
   
-

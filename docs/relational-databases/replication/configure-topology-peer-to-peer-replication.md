@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.p2pwizard.peers.f1
+f1_keywords: sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a41d0a93fcee491dad6bc2b310720e65f9ee607
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3ac55f8620b7be677223f34d3d14d23007e49d2e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>設定拓撲 (點對點複寫)
   您可以使用 **[設定拓撲]** 頁面來執行一些常見的組態設定工作，例如加入新的節點、刪除節點，以及在現有節點之間加入新連接。 您在此精靈之 **[發行集]** 頁面上選取的節點會顯示在設計介面上。 若要指定組態選項，請以滑鼠右鍵按一下節點、連接或設計介面。  

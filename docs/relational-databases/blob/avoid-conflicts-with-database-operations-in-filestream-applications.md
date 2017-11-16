@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
+helpviewer_keywords: FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 663627abeb04c63073b43337bfe795ba9bc9cd4d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e1ec5dc72e6d3cb3f81a7db32584ca71c92e3638
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>避免與 FILESTREAM 應用程式中的資料庫作業相衝突
   使用 SqlOpenFilestream() 來開啟 Win32 檔案控制代碼以便讀取或寫入 FILESTREAM BLOB 資料的應用程式可能會與在一般交易中管理的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式發生衝突錯誤。 這包括需要很長時間才能執行完成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 MARS 查詢。 若要有效避免這些衝突類型，您必須仔細地設計應用程式。  

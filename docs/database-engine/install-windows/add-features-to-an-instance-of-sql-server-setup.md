@@ -7,8 +7,7 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - SQL Server, features
 - adding features to SQL Server
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
 ms.openlocfilehash: eb201c27f255ac57c667c3a727c2b4c1551f37fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/12/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>將功能新增至 SQL Server 的執行個體 (安裝程式)
   本主題提供將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體的逐步程序。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件或服務是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所特有， 也可感知執行個體。 這些元件或服務也會與裝載它們的執行個體共用相同的版本，並專門用於該執行個體。 如果還未安裝感知執行個體元件及其共用元件，可以將其加入執行個體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 的版本及支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 09/12/2017
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 setup.exe。 若要從網路共用進行安裝，請導覽至共用上的根資料夾，然後按兩下 setup.exe。 如果出現 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式] 對話方塊，請[!INCLUDE[clickOK](../../includes/clickok-md.md)] 安裝必要條件，然後按一下 [取消] 以結束 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝。  
   
-2.  安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要將功能加入現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，請在左側導覽區域中，按一下 **「安裝」**，然後按一下 **新增 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「 獨立安裝或將功能加入至現有安裝」**。  
+2.  安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要將功能加入現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，請在左側導覽區域中，按一下 [安裝]，然後按一下 [新增 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝或將功能加入至現有安裝]。  
   
 3.  系統組態檢查將會在電腦上執行探索作業。 若要檢視驗證詳細資料，請按一下 [檢視詳細資料]。 若要繼續，請[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
@@ -158,4 +156,3 @@ ms.lasthandoff: 09/12/2017
  [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
-

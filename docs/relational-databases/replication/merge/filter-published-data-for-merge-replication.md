@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - merge replication [SQL Server replication], filtering published data
 - replication [SQL Server], filtering published data
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c63e2459ddca9a4265b00a458c820ebee088811
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f49fb64688a3e739cf6d0c80f41d01ca10425995
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filter-published-data-for-merge-replication"></a>篩選合併式複寫之發行的資料
   除了可以使用其他複寫類型定義的靜態資料列篩選和資料行篩選之外，合併式複寫還提供了參數化資料列篩選器和聯結篩選。 如需靜態資料列篩選和資料行篩選的詳細資訊，請參閱[篩選發行的資料](../../../relational-databases/replication/publish/filter-published-data.md)。  
@@ -40,4 +38,3 @@ ms.lasthandoff: 06/22/2017
  [發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   
-

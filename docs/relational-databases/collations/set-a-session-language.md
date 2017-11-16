@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - messages [SQL Server], international considerations
 - server-side session language
 ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 21c986a0f7e0341826697bb50eb26fb93a1031df
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 451c5703624cc9268b7d0fe14a5ba534363ac869
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-a-session-language"></a>設定工作階段語言
   工作階段語言可根據語言和文化喜好設定，用來設定在伺服器顯示下列元素的方式：  
@@ -60,4 +58,3 @@ ms.lasthandoff: 06/22/2017
  如果是 ADO.NET，請使用 **ConnectionString** 物件的 **Current Language** 參數。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access Components (MDAC) 軟體開發套件 (SDK) 文件集。  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c9b4e97b5da12b98fc6d1a4ee362a4a7cb00e70b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d043699e20a674009268ee168b457322fd0591ee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>資料庫鏡像和記錄傳送 (SQL Server)
   給定的資料庫可以進行鏡像或記錄傳送；它也可以同時進行鏡像和記錄傳送。 選擇使用的方式時，請考慮下列事項：  
@@ -112,4 +110,3 @@ ms.lasthandoff: 08/02/2017
 7.  執行另一個手動容錯移轉作業，在錯誤後回復至原始主體資料庫。  
   
   
-

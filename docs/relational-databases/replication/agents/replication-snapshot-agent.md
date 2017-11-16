@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b57f94d20f03f7d6d9ec0b71bba122548808c24
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6e9a2e3f6ddba5ab3e6250d09b8f814eed1d2aad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
   「複寫快照集代理程式」是一個可執行檔，它會準備包含已發行資料表與資料庫物件之結構描述及資料的快照集檔案、將這些檔案儲存在快照集資料夾內，然後記錄散發資料庫中的同步處理作業。  
@@ -129,7 +128,7 @@ snapshot [ -?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  這是建立連接時，快照集代理程式所使用的安全通訊端層 (SSL) 加密層級。  
   
-|EncryptionLevel 值|說明|  
+|EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
@@ -143,7 +142,7 @@ snapshot [ -?]
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  指定在快照集作業期間記錄的記錄量。 您可以透過選取 **1**，盡量減少記錄作業對效能造成的影響。  
   
-|HistoryVerboseLevel 值|說明|  
+|HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
 |**0**|進度訊息會寫入主控台或輸出檔中。 但是，記錄不會記錄在散發資料庫中。|  
 |**1**|一律更新相同狀態的上一個記錄訊息 (啟動、進度、成功等等)。 如果沒有任何具有相同狀態的上一筆記錄存在，便插入新的記錄。|  
@@ -172,7 +171,7 @@ snapshot [ -?]
  這是將「正在等候後端訊息」記錄至 [MSsnapshot_history](../../../relational-databases/system-tables/mssnapshot-history-transact-sql.md) 資料表之前，快照集代理程式等候的時間量 (以秒為單位)。 預設值為 300 秒。  
   
  **-LoginTimeOut** *login_time_out_seconds*  
- 這是登入逾時之前的秒數。  預設值為 15 秒。  
+ 這是登入逾時之前的秒數。 預設值為 15 秒。  
   
  **-MaxBcpThreads** *number_of_threads*  
  指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 **0** 的值而且沒有硬式編碼的上限。 預設值為 **1**。  
@@ -229,7 +228,7 @@ snapshot [ -?]
  指定發行者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  
   
  **-QueryTimeOut** *query_time_out_seconds*  
- 這是查詢逾時之前的秒數。 預設值是 1800 秒。  
+ 這是查詢逾時之前的秒數。預設值是 1800 秒。  
   
  **-ReplicationType** [ **1**| **2**]  
  指定複寫的類型。 值為 **1** 表示異動複寫，而值為 **2** 則表示合併式複寫。  

@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.userdefineddatatype.general.f1
 - sql13.swb.new.datatype.properties.general.f1
-helpviewer_keywords:
-- alias data types [SQL Server], creating
+helpviewer_keywords: alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a51db116a1ca0ffe5d408e79dcd3dc16ed4c1e58
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: 77a4561aa148a98a593d0279f217a354d01c7b31
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/29/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>建立使用者定義資料類型別名
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立新的使用者定義資料類型別名。  
@@ -59,7 +56,7 @@ ms.lasthandoff: 09/29/2017
   
 #### <a name="to-create-a-user-defined-data-type"></a>若要建立使用者自訂的資料類型  
   
-1.  在物件總管中，依序展開 資料庫、某個資料庫、可程式性 和 類型，並以滑鼠右鍵按一下 使用者定義資料類型，然後按一下新增使用者定義資料類型。  
+1.  在物件總管中，依序展開 [資料庫]、某個資料庫、[可程式性] 和 [類型]，並以滑鼠右鍵按一下 [使用者定義資料類型]，然後按一下 [新增使用者定義資料類型]。  
   
      **允許 NULL**  
      指定使用者定義資料類型是否可接受 NULL 值。 無法編輯現有使用者定義資料類型的 Null 屬性。  
@@ -133,4 +130,3 @@ FROM varchar(11) NOT NULL ;
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   
   
-

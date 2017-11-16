@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], LSN boundaries
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d46d8364dafb218035e3e9c7d828833f9c604375
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5352e093cf531e4bbacdfb284966b8c9739abf4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-change-data-sql-server"></a>使用變更資料 (SQL Server)
   異動資料擷取取用者會透過資料表值函式 (TVF) 取得變更資料。 這些函數的所有查詢都需要使用兩個參數來定義開發傳回的結果集時適合用於考量的記錄序號 (LSN) 範圍。 限制間隔的上下 LSN 值會被視為包含在間隔內部。  
@@ -139,4 +137,3 @@ ms.lasthandoff: 08/03/2017
  [管理和監視異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   
-

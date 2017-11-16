@@ -5,28 +5,25 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.AG.MAINTPLAN.LEGACY.F1
+f1_keywords: sql13.AG.MAINTPLAN.LEGACY.F1
 helpviewer_keywords:
 - maintenance plans [SQL Server], about database maintenance plans
 - maintenance plans [SQL Server], database compatibility level displayed in designer
 - maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b739e1421507dd0794b732dfc910e5ec3671c235
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: abd4882c905f18643da40892c4cbf200091d5363
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maintenance-plans"></a>維護計畫
   維護計畫會建立必要的工作流程，確保資料庫已最佳化、定期備份，而且沒有任何不一致性。 「維護計畫精靈」也會建立核心維護計畫，但手動建立計畫能提供更大的彈性。  
@@ -75,4 +72,3 @@ ms.lasthandoff: 06/22/2017
 |記載 [物件總管] 中可用的維護計畫功能。|[維護計畫節點 &#40;物件總管&#41;](../../relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md)|  
   
   
-

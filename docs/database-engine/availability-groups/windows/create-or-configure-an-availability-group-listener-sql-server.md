@@ -5,27 +5,24 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroup.newaglistener.general.f1
+f1_keywords: sql13.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Active
+ms.openlocfilehash: dd3e88c98ebdcd07f0fd84031ccc1b4be4123319
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 85130cfb53873de6e378c26b68b9b4d601695614
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>建立或設定可用性群組接聽程式 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，建立或設定 AlwaysOn 可用性群組的單一「可用性群組接聽程式」(Availability Group Listener)。  
@@ -384,4 +381,3 @@ Start-ClusterResource yourListenerName
  [SQL Server 多重子網路叢集 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   
   
-

@@ -5,29 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ErrorList
-dev_langs:
-- TSQL
+f1_keywords: VS.ErrorList
+dev_langs: TSQL
 helpviewer_keywords:
 - error list window
 - SQL Server Management Studio [SQL Server], error list window
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aa7ebae3445240303352026f7cdb99a06b2d61ca
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 639b50be753f5f9650601dc66a65102aa5ab0e19
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 偵錯工具 - 錯誤清單視窗
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [錯誤清單] 會顯示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中從 IntelliSense 程式碼產生的語法和語意錯誤。  
@@ -96,4 +92,3 @@ ms.lasthandoff: 06/22/2017
  顯示包含指令碼檔案的專案名稱。  
   
   
-

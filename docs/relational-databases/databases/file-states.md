@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - displaying filegroup states
 - defunct file state
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 732487dba37c2ee7eae56b920ce245f77489ff66
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a63a9e927ce2768a3ce7a5b96d29e58bf39a5034
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="file-states"></a>檔案狀態
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，資料庫檔案的狀態是與資料庫的狀態分開維護。 檔案永遠處於特定狀態，例如 ONLINE 或 OFFLINE。 若要檢視檔案目前的狀態，請使用 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目錄檢視。 如果資料庫是離線的，就可以從 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 目錄檢視來檢視檔案的狀態。  
@@ -69,4 +67,3 @@ ms.lasthandoff: 06/22/2017
  [資料庫檔案與檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   
-

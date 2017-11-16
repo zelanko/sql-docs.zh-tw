@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8c831e54b5a0c6115c0f0890d4720d099387d8da
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: df43c7db71a2d289948b9ee432b96d4d38ad8c66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring-connection-event-class"></a>資料庫鏡像連接事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **資料庫鏡像連接** 事件，以報告資料庫鏡像所管理的傳輸連線狀態。  
@@ -51,4 +49,3 @@ ms.lasthandoff: 06/22/2017
 |**TransactionID**|**bigint**|系統指派的交易識別碼。|4|否|  
   
   
-

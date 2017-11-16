@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Addlogin event class
+helpviewer_keywords: Audit Addlogin event class
 ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: defdcbd68e38e097908dbded5dd28448f09f17fd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: cc3d44794da0bd73739c168e1d4e340773141ffc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin 事件類別
   當新增或移除  登入時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is added or removed.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 |**SessionLoginName**|**Nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|**成功**|**整數**|1 = 成功。 0 = 失敗。 例如，值為 1 表示權限檢查成功，值為 0 表示該檢查失敗。|23|是|  
+|**成功**|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 表示權限檢查成功，值為 0 表示該檢查失敗。|23|是|  
 |**TargetLoginName**|**nvarchar**|要加入或卸除的登入名稱。|42|是|  
 |**TargetLoginSid**|**image**|目標登入的安全性識別碼 (SID) (若以參數傳遞的話)。|43|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  

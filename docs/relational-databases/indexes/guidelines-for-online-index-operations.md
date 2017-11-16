@@ -15,20 +15,19 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.component: indexes
 ms.workload: On Demand
+ms.openlocfilehash: 2cf2c877207a3dfaf5c3c6ff3aa2cca0da2d9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 07/31/2017
 -   當資料表包含 LOB 資料類型，但這些資料行並未在索引定義中當做索引鍵或非索引鍵 (內含) 資料行使用時，您可以在線上建立非唯一的非叢集索引。  
   
 -   您無法在線上建立、重建或卸除本機暫存資料表的索引。 此限制不適用於全域暫存資料表上的索引。
-- 可以從非預期的失敗、資料庫容錯移轉或 **PAUSE** 命令之後的停止處繼續索引。 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 針對 SQL Server 2017 和 Azure SQL Database，此功能正處於公開預覽。
+- 可以從非預期的失敗、資料庫容錯移轉或 **PAUSE** 命令之後的停止處繼續索引。 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 
 
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -95,7 +94,7 @@ ms.lasthandoff: 07/31/2017
 ## <a name="resumable-index-rebuild-considerations"></a>可繼續索引重建考量
 
 > [!NOTE]
-> 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 針對 SQL Server 2017 和 Azure SQL Database，此功能正處於公開預覽。
+> 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 
 >
 
 當您執行可繼續的線上索引重建時，將適用下列指導方針：
@@ -126,4 +125,3 @@ ms.lasthandoff: 07/31/2017
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
-

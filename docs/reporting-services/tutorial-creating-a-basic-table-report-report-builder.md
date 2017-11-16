@@ -5,23 +5,21 @@ ms.date: 06/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 2e4cb3264e001fb07119e4c16a274dd38d80887c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 (報表產生器)
 本教學課程將教導您根據範例銷售資料建立基本資料表報表。 下圖顯示您將建立的報表。  
@@ -72,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
     由於您將使用包含資料的查詢，而不是從資料庫擷取資料，因此連接字串不會包含資料庫名稱。 如需詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-6.  按一下 [認證] 索引標籤。 輸入您存取外部資料來源所需的認證。  
+6.  按一下 [認證] 索引標籤。輸入您存取外部資料來源所需的認證。  
   
 7. 再按一次 [一般] 索引標籤。 若要確認您能夠連接至資料來源，請按一下 **[測試連接]**。  
   
@@ -365,5 +363,4 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

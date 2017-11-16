@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Bitmap Warning event class
+helpviewer_keywords: Bitmap Warning event class
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac451108447cd57642deed94ea2f18bfbeaa293b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1e7272051a221476822c4d3d92c2f7b4ceaaeaa2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="bitmap-warning-event-class"></a>點陣圖警告事件類別
   **點陣圖警告** 事件類別可用來監視查詢中的點陣圖篩選使用情況。 此事件子類別可用來報告何時已經在查詢中停用點陣圖篩選。  
@@ -44,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 **sys.server_principals** 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 使用者名稱。|6|是|  
-|**Exchange Spill**|**int**|在重新分割中，雜湊群根節點的節點識別碼。 與執行程序表中的節點識別碼相對應。|22|是|  
+|**ObjectID**|**int**|在重新分割中，雜湊群根節點的節點識別碼。 與執行程序表中的節點識別碼相對應。|22|是|  
 |**RequestID**|**int**|包含陳述式之要求的識別碼。|49|是|  
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |**SessionLoginName**|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
@@ -54,4 +51,3 @@ ms.lasthandoff: 06/22/2017
 |**XactSequence**|**bigint**|描述目前交易的 Token。|50|是|  
   
   
-

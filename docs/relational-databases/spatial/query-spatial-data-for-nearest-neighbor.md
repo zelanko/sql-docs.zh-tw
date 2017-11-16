@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-spatial
+ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8cac116f89d0cf1fde83a00dfd42c02e1fc5e2f0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d2cb970b15ae4d310f5fb835da67886a0200108a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>查詢最接近像素的空間資料
   最接近像素查詢是搭配空間資料使用的常見查詢。 最接近像素查詢是用來尋找最接近特定空間物件的空間物件。 例如，網站的商店定位器通常必須尋找最接近客戶位置的商店位置。  
@@ -112,4 +110,3 @@ ORDER BY SpatialLocation.STDistance(@g);
  [空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
-

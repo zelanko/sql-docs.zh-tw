@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Background Job Error event class
+helpviewer_keywords: Background Job Error event class
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bae056c3dd2b646bf7e4ec88e7c5d2e8d11bc7f8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 5a1a955752ffac7e153065ccd8a5e2f4dc01dd3d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 事件類別
   當背景作業異常中止時，就會發生 **Background Job Error** 事件類別。 這種狀況可能需要系統管理員注意。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |**IndexID**|**int**|事件所影響之物件的索引識別碼。 若要確定物件的索引識別碼，請使用 **sysindexes** 系統資料表的 **indid** 資料行。|24|是|  
 |**IntegerData**|**int**|作業所嘗試的次數 (只限**EventSubClass** 1)。|25|是|  
 |**IntegerData2**|**int**|作業序號。|55|是|  
-|**Exchange Spill**|**int**|系統指派給物件的識別碼。|22|是|  
+|**ObjectID**|**int**|系統指派給物件的識別碼。|22|是|  
 |**SessionLoginName**|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 這個資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入。|64|是|  
 |**Severity**|**int**|上次嘗試時所發生錯誤的嚴重性層級 (只限**EventSubClass** 1)。|20|是|  
 |**StartTime**|**datetime**|建立作業的時間。|14|是|  

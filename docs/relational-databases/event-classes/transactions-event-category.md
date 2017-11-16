@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - event classes [SQL Server], Transactions event category
 - Transactions event category [SQL Server]
 ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc949d839cce6ff2c0ede3ec8a88b9384cfe19d9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 43cd4421a9e8b0d677c21df05785b541b33a80f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transactions-event-category"></a>Transaction 事件類別目錄
   **Transactions** 事件類別可以用來監視交易狀態。 以 **TM:** 作為前置詞的事件類別名稱是用來追蹤與交易相關的作業，這些作業是透過交易管理介面來傳送。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 06/22/2017
 |[TransactionLog 事件類別](../../relational-databases/event-classes/transactionlog-event-class.md)|追蹤交易何時寫入資料庫交易記錄檔。|  
   
   
-

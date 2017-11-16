@@ -1,30 +1,27 @@
 ---
 title: "刪除模型 (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deleting models [Master Data Services]
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bf7fddf9294e260a2e75f2f0b6a7f2c97d17079a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f1ac3250d2d1f852ec43bf88fb206b2009fc0430
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-a-model-master-data-services"></a>刪除模型 (Master Data Services)
   刪除模型，從 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]移除模型及其所有資料。  
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/07/2017
  [建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  
   
   
-

@@ -1,13 +1,11 @@
 ---
 title: "軟體 NUMA (SQL Server) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 11/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - non-uniform memory access
 - soft-NUMA
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7516d8a10fc121bfa05661eb94084fa148fce0ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2f57a1d59210a002ebd03b04be4158e514e725cd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="soft-numa-sql-server"></a>軟體 NUMA (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +94,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 ```  
   
 ### <a name="map-soft-numa-nodes-to-cpus"></a>將軟體 NUMA 節點對應到 CPU  
- 使用 [登錄編輯程式]\(regedit.exe)，加入下列登錄機碼，以便將軟體 NUMA 節點 0 對應到 CPU 0 和 1、將軟體 NUMA 節點 1 對應到 CPU 2 和 3，並且將軟體 NUMA 節點 2 對應到 CPU 4、 5、6 和 7。  
+ 使用 [登錄編輯程式] (regedit.exe)，加入下列登錄機碼，以便將軟體 NUMA 節點 0 對應到 CPU 0 和 1、將軟體 NUMA 節點 1 對應到 CPU 2 和 3，並且將軟體 NUMA 節點 2 對應到 CPU 4、 5、6 和 7。  
   
 > [!TIP]
 > 若要指定 CPU 60 到 63，請使用 QWORD 值 F000000000000000 或 BINARY 值 1111000000000000000000000000000000000000000000000000000000000000。  
@@ -149,5 +146,4 @@ SET PROCESS AFFINITY CPU=4 TO 7;
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
-
 

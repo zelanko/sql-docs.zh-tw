@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 902ad2ddd95a26f36ff9519e55d7af77ca7e2d8a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6df945737348bf0f8e158b375d6af1ebcbfb6784
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>將 SQL Server 2014 管理的備份設定移轉到 SQL Server 2016
   本主題涵蓋當從 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 時， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]的移轉考量。  
@@ -59,4 +57,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
-

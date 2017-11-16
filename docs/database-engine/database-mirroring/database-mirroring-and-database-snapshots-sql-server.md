@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - snapshots [SQL Server database snapshots], database mirroring
 - database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c2f343a2399b6d486d735e175a7c2685b159a18b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 32381132f193eae0c3ecae20247d36dcefb8f658
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>資料庫鏡像和資料庫快照集 (SQL Server)
   您可以利用為了提供可用性而維護的鏡像資料庫卸載報表。 若要對報表使用鏡像資料庫，請在鏡像資料庫上建立資料庫快照集，然後將用戶端連接要求導向最近一次的快照集。 資料庫快照集是其來源資料庫的一個靜態、唯讀、交易一致的快照集，存在於快照集建立時。 若要在鏡像資料庫上建立資料庫快照集，資料庫必須處於同步處理的鏡像狀態。  
@@ -88,4 +86,3 @@ ms.lasthandoff: 08/02/2017
  [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   
-

@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newsubwizard.subproperties.publisher.f1
-helpviewer_keywords:
-- Subscription Properties dialog box
+f1_keywords: sql13.rep.newsubwizard.subproperties.publisher.f1
+helpviewer_keywords: Subscription Properties dialog box
 ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1feca41a568b00fc093ed6f03ecf87803ad6ef31
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 5e23aa71ea138af1689a60a44f00424a4158906c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subscription-properties---publisher"></a>訂閱屬性 - 發行者
   在發行者端的 **[訂閱屬性]** 對話方塊，可以讓您檢視和設定發送訂閱的屬性。 您也可以檢視提取訂閱的某些屬性，但在訂閱者端的 **[訂閱屬性]** 對話方塊，會顯示其他屬性並允許修改屬性。  

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.connections.f1
+f1_keywords: sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 906e8e7e92d847e8e440303188197dfcf3942d31
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73d0b32c2688c912c282c7c4acab0bd9ecb5633f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-properties---connections-page"></a>伺服器屬性 - 連接頁面
   使用此頁面來檢視或修改您的連接選項。  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/02/2017
  從遠端伺服器執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體，控制預存程序的執行。 選取這個核取方塊的效果與將 **sp_configureremote access** 選項設為 1 相同。 清除該核取方塊可避免從遠端伺服器執行預存程序。  
   
  **遠端查詢逾時 (以秒為單位，0 = 不會逾時)**  
- 指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 逾時之前，遠端作業可以執行多久 (以秒為單位)。 預設值是 600 秒，也就是允許等候十分鐘。  
+ 指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 逾時之前，遠端作業可以執行多久 (以秒為單位)。預設值是 600 秒，也就是允許等候十分鐘。  
   
  **需要伺服器對伺服器通訊的分散式交易**  
  透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易，保護伺服器對伺服器程序的動作。 如需詳細資訊，請參閱 [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)。  

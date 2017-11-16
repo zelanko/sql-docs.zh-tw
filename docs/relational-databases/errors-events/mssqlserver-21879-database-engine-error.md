@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 21879 (Database Engine error)
+helpviewer_keywords: 21879 (Database Engine error)
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4850aeaa925fa4aa74659d9a242c1972e7dbb0de
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d43de4ee2bee33eea9c7a88fc3db3d521e4ad9ed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver21879"></a>MSSQLSERVER_21879
   
@@ -63,4 +60,3 @@ ms.lasthandoff: 06/22/2017
   
 -   在合併代理程式命令列上指定命令列參數 *BypassPublisherValidation*，以便在散發者端呼叫 **sp_get_redirected_publisher** 時略過驗證。  
   
-

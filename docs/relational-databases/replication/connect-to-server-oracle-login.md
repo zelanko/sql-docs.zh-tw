@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.oracleconnection.login.f1
-helpviewer_keywords:
-- Connect to Server dialog box, replication
+f1_keywords: sql13.rep.oracleconnection.login.f1
+helpviewer_keywords: Connect to Server dialog box, replication
 ms.assetid: 86ed91a1-a07c-46f2-a913-67317ef2255e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 180122568df0cdffe7e9f011194ac54d7bf01dc4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dc17af08a2e6ecbdbcb1a6ec1d5b0ec056fd7b55
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-server-oracle-login"></a>連接到伺服器 (Oracle)，登入
   使用 **[連接到伺服器]** 對話方塊的 **[登入]** 索引標籤，即可指定從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者連接到 Oracle 發行者的帳戶。 您必須使用在發行者組態期間，為複寫管理的使用者結構描述指定之相同帳戶。 如需詳細資訊，請參閱[設定 Oracle 發行者](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
@@ -47,4 +43,3 @@ ms.lasthandoff: 06/22/2017
  [Glossary of Terms for Oracle Publishing](../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)  
   
   
-

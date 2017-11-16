@@ -5,8 +5,7 @@ ms.date: 09/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +14,17 @@ helpviewer_keywords:
 - audits [SQL Server], writing to Security Log
 - security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
+ms.openlocfilehash: 7c0cedbe24800db112822e05046a60364a679903
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
-
----  
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
+---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔  
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
 
@@ -61,7 +58,7 @@ ms.lasthandoff: 09/21/2017
   
 1.  以系統管理權限開啟命令提示字元。  
   
-    1.  在 開始 功能表上，依序指向 所有程式 和 附屬應用程式、以滑鼠右鍵按一下 命令提示字元，然後按一下以系統管理員身分執行。  
+    1.  在 [開始] 功能表上，依序指向 [所有程式] 和 [附屬應用程式]、以滑鼠右鍵按一下 [命令提示字元]，然後按一下 [以系統管理員身分執行]。  
   
     2.  如果開啟 **[使用者帳戶控制]** 對話方塊，請按一下 **[繼續]**。  
   
@@ -113,4 +110,3 @@ ms.lasthandoff: 09/21/2017
  [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
-

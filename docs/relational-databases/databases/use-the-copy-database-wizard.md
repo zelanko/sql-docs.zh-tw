@@ -5,8 +5,7 @@ ms.date: 07/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +24,16 @@ helpviewer_keywords:
 - Copy Database Wizard
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 26b3c7967d7549f6f192afcac64888dcb68d6c7c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 7e53c91fb8462fb26fd5a94e20c7a6ba7e2f54d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
 [複製資料庫精靈] 可讓您輕鬆地將資料庫和特定伺服器物件，從某個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體移動或複製到另一個執行個體，而不需要讓伺服器停機。 使用此精靈可以執行下列作業： 
@@ -303,7 +302,7 @@ ms.lasthandoff: 06/22/2017
 
 1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.  展開 [資料庫]，以滑鼠右鍵按一下所需的資料庫，指向 [工作]，然後按一下 [複製資料庫...]****
+2.  展開 [資料庫]，以滑鼠右鍵按一下所需的資料庫，指向 [工作]，然後按一下 [複製資料庫...]
 
 3.  如果出現 [歡迎使用複製資料庫精靈] 開頭顯示頁面，請按一下 [下一步]。
 
@@ -404,5 +403,4 @@ ms.lasthandoff: 06/22/2017
  [建立 SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)  
   
   
-
 

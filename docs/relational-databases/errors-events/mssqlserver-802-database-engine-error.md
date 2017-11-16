@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 802 (Database Engine error)
+helpviewer_keywords: 802 (Database Engine error)
 ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 83a4a02b0977f3a1b9feec0ad720aef6728cb906
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6f77f62eea2dac69a4d9d9b4b0ce3beb78136214
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver802---database-engine-error"></a>MSSQLSERVER_802 - Database Engine 錯誤
   
@@ -77,4 +74,3 @@ ms.lasthandoff: 06/22/2017
   
 如果仍繼續發生該問題，您必須進一步研究，而且可能必須降低工作負載。  
   
-

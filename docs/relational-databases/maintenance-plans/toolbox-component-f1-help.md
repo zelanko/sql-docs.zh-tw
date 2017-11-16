@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vs.toolbox
-helpviewer_keywords:
-- Toolbox [SQL Server Management Studio]
+f1_keywords: vs.toolbox
+helpviewer_keywords: Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c90dcc58ef2f84d6a2611cda85ef6580df8e174
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e6ee1d17314517b3115f594d36f781bd778585e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱元件 F1 說明
   **[工具箱]** 會顯示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案中所使用的各種項目。 您可以從 **[檢視]** 功能表中開啟 **[工具箱]** ，然後將此視窗停駐在您希望的位置。 停駐之後，可以將 **[工具箱]** 固定開啟，或在不使用時將其設定為 **[自動隱藏]** 。  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - tuning databases [SQL Server], resource usage
 - server performance [SQL Server], resource usage
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b7236d0073d38537724d54534729a2f380b892dd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d5039ba1303b5840566be3dfd6efab2e83a467b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>監視資源使用狀況 (系統監視器)
   如果您正在執行 Microsoft Windows 伺服器作業系統，請使用系統監視器圖形工具，測量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的效能。 您可以檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件、效能計數器及其他物件 (如處理器、記憶體、快取、執行緒和處理序) 的行為。 這些物件每一個都有一組關聯的計數器，可測量裝置的使用狀況 (Usage)、佇列長度 (Queue Length)、延遲 (Delay) 和產能 (Throughput) 及內部壅塞的其他指示器。  
@@ -94,4 +92,3 @@ ms.lasthandoff: 06/22/2017
 |列出系統監視器用以監視記憶體中 OLTP 活動的物件與計數器。|[SQL Server XTP &#40;記憶體內部 OLTP&#41; 效能計數器](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)|  
   
   
-

@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 96107ad180951172dca4f61bae8b5668c8806f9c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 4c7a300985f088b45c6a2bc698a336b6f5c3b617
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>版本管理功能區域 (主資料管理員)
   在 [版本管理] 功能區域中，管理員可以驗證資料、檢閱及反轉交易、建立已建立版本的資料複本，以及標示訂閱系統的資料版本。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/07/2017
  [主資料管理員 Web 應用程式](../master-data-services/master-data-manager-web-application.md)  
   
   
-

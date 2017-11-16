@@ -5,24 +5,21 @@ ms.date: 01/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dta.general.f1
+f1_keywords: sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4f0b031b0c98dd9f7708aebd13984f22403f3de1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ec52b09547ab5a97d96709c20d8f125956d3c941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Database Engine Tuning Advisor (DTA) 會分析資料庫，並提出可用來最佳化查詢效能的建議。 Database Engine Tuning Advisor 在您尚未深入了解資料庫結構或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本質內容之前，就能夠選取及建立一組最佳的索引、索引檢視或資料表資料分割。 您可以使用 DTA 來執行下列工作。  
@@ -130,4 +127,3 @@ ms.lasthandoff: 06/22/2017
 |檢視資料庫微調作業的結果。<br /><br /> 選取及實作微調建議。<br /><br /> 執行工作負載的假設探勘分析。<br /><br /> 檢閱現有的微調工作階段、根據現有微調工作階段來複製工作階段 <br />或是編輯現有微調建議，以進一步評估或實作。<br /><br /> 檢視 Database Engine Tuning Advisor 使用者介面選項的描述。|[檢視及處理 Database Engine Tuning Advisor 的輸出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
   
   
-

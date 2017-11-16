@@ -5,8 +5,7 @@ ms.date: 06/06/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - rebuilding databases, master
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 116b8352b27400cf9d57d01e4d1c0a0f8a3a89d0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 69f9e085f5eb6acb749c64a7fb370deabb975e6a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rebuild-system-databases"></a>重建系統資料庫
   您必須重建系統資料庫，才能在 [master](../../relational-databases/databases/master-database.md)、 [model](../../relational-databases/databases/model-database.md)、 [msdb](../../relational-databases/databases/msdb-database.md)或 [resource](../../relational-databases/databases/resource-database.md) 系統資料庫中修正損毀問題，或修改預設的伺服器層級定序。 本主題將提供在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中重建系統資料庫的逐步指示。  
@@ -207,4 +205,3 @@ ms.lasthandoff: 06/22/2017
  [系統資料庫](../../relational-databases/databases/system-databases.md)  
   
   
-

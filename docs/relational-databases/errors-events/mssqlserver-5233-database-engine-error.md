@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 5233 (Database Engine error)
+helpviewer_keywords: 5233 (Database Engine error)
 ms.assetid: 7a855afa-2d3b-49b7-adef-197b99fc98b1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d0f4dfb13941ed8966d2c22c47b3935ed6377b9d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cdeee71d4659d73537cc77ca7061a7eb22473da4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver5233"></a>MSSQLSERVER_5233
   
@@ -53,4 +50,3 @@ ms.lasthandoff: 06/22/2017
 ### <a name="run-dbcc-checkdb"></a>執行 DBCC CHECKDB  
 不適用。 此錯誤無法修復。 如果無法從備份還原資料庫，請連絡 Microsoft 客戶服務及支援中心 (CSS)。  
   
-

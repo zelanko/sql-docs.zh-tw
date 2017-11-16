@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 72f8dcb0e0426d8e37ae7284163f841caa478570
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 82edddf024831f41ce82ce8ec5d3f212513d89f7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
   建立全文檢索索引時，您必須針對索引資料行指定資料行層級語言。 此資料行的全文檢索查詢將會使用指定之語言的 [斷詞工具與詞幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 。 在建立全文檢索索引並選擇資料行語言時，必須考慮一些事項。 這些考量與文字如何 Token 化，然後如何由全文檢索引擎編製索引有關。  

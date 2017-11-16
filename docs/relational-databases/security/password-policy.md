@@ -1,13 +1,11 @@
 ---
 title: "密碼原則 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 09/25/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,17 +31,16 @@ helpviewer_keywords:
 - passwords [SQL Server], complexity
 - characters [SQL Server], password policies
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1843956926a6eb59efbc4dc14dc50f1dd3403d07
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8c5aa63908366cf263593470a2e58152e14b6255
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="password-policy"></a>密碼原則
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Windows 密碼原則機制。 密碼原則適用於使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入，以及適用於具有密碼的自主資料庫使用者。  
@@ -126,4 +123,3 @@ ms.lasthandoff: 06/22/2017
  [增強式密碼](../../relational-databases/security/strong-passwords.md)  
   
   
-

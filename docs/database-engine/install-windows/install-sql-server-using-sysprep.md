@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
 ms.openlocfilehash: 1f13a80130626df2fe09ff37d566395d23e3b952
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/12/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安裝 SQL Server
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相關的安裝動作可以透過安裝中心來存取。 **[安裝中心]** 的 **[進階]** 頁面包含兩個選項 - 準備 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 及 完成備妥的 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**。 [準備](#prepare) 和 [完成](#complete) 章節會詳細說明安裝程序。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)＞。 
@@ -312,4 +310,3 @@ ms.lasthandoff: 09/12/2017
  [Windows SysPrep 的運作方式](http://go.microsoft.com/fwlink/?LinkId=143547)  
   
   
-

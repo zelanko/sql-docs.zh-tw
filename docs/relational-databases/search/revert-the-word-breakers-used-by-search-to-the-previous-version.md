@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4380c25d02f6fd6d05f41c030691738f3715d6e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>將搜索所使用的斷詞工具還原為舊版
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 對於全文檢索搜尋支援的所有語言 (韓文除外)，都會安裝並啟用特定版本的斷詞工具和字幹分析器。 本主題描述的是如何從此版本的元件切換成舊版，或從舊版切換回新版。  
   
  本主題不討論以下語言：  
   
--   **英文**。 若要還原英文元件，請參閱＜ [變更用於美式英文與英式英文的斷詞工具](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)＞  
+-   **英文**。 若要還原英文元件，請參閱＜ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)＞。  
   
 -   **丹麥文、波蘭文和土耳其文**： 舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附之丹麥文、波蘭文及土耳其文的協力廠商斷詞工具已取代為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 元件。  
   
@@ -382,8 +380,7 @@ ms.lasthandoff: 09/01/2017
 |目前檔案名稱|MsWb70804.dll|  
   
 ## <a name="see-also"></a>另請參閱  
- [變更用於美式英文與英式英文的斷詞工具](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [全文檢索搜尋的行為變更](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b208d088e0d4efb8fd447a3d0e63afd993183e44
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a63efdc2a7d0501bcc64f3f2281e0389d013bbaa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 開發人員文件
   尋找有關如何撰寫程式碼以自訂您和您的使用者與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 互動之方式的資訊。 了解如何：  
@@ -64,4 +61,3 @@ ms.lasthandoff: 09/07/2017
 |<xref:Microsoft.MasterDataServices.Services.ServiceContracts>|包含的介面可定義可以透過 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服務呼叫的作業。|  
   
   
-

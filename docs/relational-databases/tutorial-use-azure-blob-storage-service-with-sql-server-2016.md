@@ -1,29 +1,25 @@
 ---
 title: "教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016 | Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 01/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ae1e9aef727303d55c79463d822c4f62d3cdae0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3ee451e1af1df985f99281008c6e5fbf4147e11b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 歡迎使用在 Microsoft Azure Blob 儲存體服務教學課程中使用 SQL Server 2016。 本教學課程可協助您了解如何將 Microsoft Azure Blob 儲存體服務用於 SQL Server 資料檔案和 SQL Server 備份。  
@@ -83,5 +79,4 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
   
   
   
-
 

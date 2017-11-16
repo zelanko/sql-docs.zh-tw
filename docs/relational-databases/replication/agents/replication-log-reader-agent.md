@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - agents [SQL Server replication], Log Reader Agent
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3107bcd2f7490c9583c0c8e9355ecc9ff9e20bd7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 1d78b8bd802b407d6bc4dc75a63ed06a9e00c7ab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-log-reader-agent"></a>複寫記錄讀取器代理程式
   「複寫記錄讀取器代理程式」是一個可執行檔，它會監視針對異動複寫所設定之每個資料庫的交易記錄，並將標示要複寫的交易從交易記錄複製到散發資料庫中。  
@@ -73,7 +72,7 @@ logread [-?]
  顯示使用方式資訊。  
   
  **-Publisher** *server_name*[**\\***instance_name*]  
- 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 *server_name*。 請針對該伺服器上 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 <伺服器名稱>。 請針對該伺服器上 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
  **-PublisherDB** *publisher_database*  
  這是發行者資料庫的名稱。  
@@ -99,7 +98,7 @@ logread [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  這是建立連接時，記錄讀取器代理程式所使用的安全通訊端層 (SSL) 加密層級。  
   
-|EncryptionLevel 值|說明|  
+|EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
@@ -113,7 +112,7 @@ logread [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  指定在記錄讀取器作業期間記錄的記錄量。 您可以透過選取 1，盡量減少記錄作業的效能影響。  
   
-|HistoryVerboseLevel 值|說明|  
+|HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
 |**0**||  
 |**1**|預設值。 一律更新相同狀態的上一個記錄訊息 (啟動、進度、成功等等)。 如果沒有任何具有相同狀態的上一筆記錄存在，便插入新的記錄。|  
@@ -123,7 +122,7 @@ logread [-?]
  這是記錄執行緒檢查是否有任何現有的連接正在等候伺服器回應之前的秒數。 執行長時間執行的批次時，您可以減少這個值，避免檢查代理程式將記錄讀取器代理程式標示為有疑問。 預設值是 300 秒。  
   
  **-LoginTimeOut** *login_time_out_seconds*  
- 這是登入逾時之前的秒數。 預設為 15 秒。  
+ 這是登入逾時之前的秒數。預設為 15 秒。  
   
  **-LogScanThreshold** *scan_threshold*  
  僅供內部使用。  
@@ -177,7 +176,7 @@ logread [-?]
  這是發行者密碼。  
   
  **-QueryTimeOut** *query_time_out_seconds*  
- 這是查詢逾時之前的秒數。 預設值是 1800 秒。  
+ 這是查詢逾時之前的秒數。預設值是 1800 秒。  
   
  **-ReadBatchSize** *number_of_transactions*  
  這是每個處理循環中從發行資料庫之交易記錄讀取出的最大交易數目，預設值為 500。 代理程式將繼續以批次方式讀取交易，直到從記錄中讀取所有交易為止。 這個參數不支援 Oracle 發行者。  

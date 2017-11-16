@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- full-text indexes [SQL Server], about
+helpviewer_keywords: full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 33ac4c4c97735b494db016df17405eaff9b848c6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 468a8c1d4b2b528b612684a93d571fca374db6cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
 本主題描述如何建立、填入和管理 SQL Server 中的全文檢索索引。
@@ -205,4 +202,3 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 3.  出現提示要您確認是否要刪除全文檢索索引時，按一下 [確定]。  
   
   
-

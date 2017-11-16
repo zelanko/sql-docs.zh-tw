@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], viewing conflicts
 - sp_helpmergeconflictrows
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 - sp_helpmergearticleconflicts
 ms.assetid: 4907fe35-10ee-4f81-b924-fc419b1864d2
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e4ea6a407b8e79e0263c1d78ad2a192ea7253e06
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4e8e3ed4b6ba6fbcf47f2ea9b75ac571b5da8139
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-conflict-information-for-merge-publications"></a>檢視合併式發行集的衝突資訊
   在合併式複寫中解決衝突時，遺失之資料列的資料會寫入衝突資料表。 可以使用複寫預存程序來以程式設計的方式檢視此衝突資料。 如需詳細資訊，請參閱 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
@@ -80,7 +77,6 @@ ms.lasthandoff: 06/22/2017
     -   在訂閱資料庫的訂閱者上，執行 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)。 針對 **@source_object**。 (選擇性) 指定 **@publication** 的值，將傳回的衝突資訊限制為特定的發行集。 這樣會傳回儲存在訂閱者上的刪除衝突資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [進階合併式複寫衝突偵測與解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   
-

@@ -5,23 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.addreplicawizard.azurereplica.f1
+f1_keywords: sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 7aa33a5adbf14beb92175e030df68fad5227d09b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 24b3e9ec3cded630a18fef353ccaad3b5a2912b1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用加入 Azure 複本精靈 (SQL Server)
   使用 [加入 Azure 複本精靈] 可以協助您在混合式 IT 中建立新的 Windows Azure VM，並且將它設定為全新或現有 AlwaysOn 可用性群組的次要複本。  
@@ -67,7 +65,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  首先，下載您的 Windows Azure 訂用帳戶的管理憑證。 按一下 [下載] 開啟登入頁面。  
   
-2.  使用您的 Microsoft 帳戶或您的組織帳戶登入 Microsoft Azure。 您的 Microsoft 或組織帳戶是電子郵件地址格式，例如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 如需 Azure 認證的詳細資訊，請參閱 [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) (組織的 Microsoft 帳戶常見問題集) 和 [疑難排解使用您的組織帳戶登入的問題](https://support.microsoft.com/kb/2756852)。  
+2.  使用您的 Microsoft 帳戶或您的組織帳戶登入 Microsoft Azure。 您的 Microsoft 或組織帳戶是電子郵件地址格式，例如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。如需 Azure 認證的詳細資訊，請參閱 [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) (組織的 Microsoft 帳戶常見問題集) 和 [疑難排解使用您的組織帳戶登入的問題](https://support.microsoft.com/kb/2756852)。  
   
 3.  接著，按一下 **[連接]**，連接到您的訂用帳戶。 一旦您連接之後，下拉式清單就會填入您的 Windows Azure 參數，例如 **[虛擬網路]** 和 **[虛擬網路子網路]**。  
   
@@ -119,4 +117,3 @@ ms.lasthandoff: 08/02/2017
  [將次要複本加入可用性群組中 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   
-

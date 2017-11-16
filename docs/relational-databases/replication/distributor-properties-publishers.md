@@ -5,31 +5,28 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.configdistwizard.distproperties.publishers.f1
-helpviewer_keywords:
-- Distributor Properties dialog box
+f1_keywords: sql13.rep.configdistwizard.distproperties.publishers.f1
+helpviewer_keywords: Distributor Properties dialog box
 ms.assetid: 31c81898-11ca-4d2f-afea-2fbc71e19ce4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93e8e7f09e6aa75b0ad1b9248a7a0c004695cfeb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 610b3b1baabfa6aee0df956c44f834298cf6b6ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="distributor-properties-publishers"></a>散發者屬性，發行者
   **[散發者屬性]** 對話方塊的 **[發行者]** 頁面可讓您啟用發行者，以使用此散發者。 您也可以設定與這些發行者相關聯的屬性。 請注意，讓發行者可以使用這個伺服器作為它的遠端散發者，並不會使該伺服器成為發行者。 您必須連接到發行者，設定其發行，並選擇此伺服器為散發者。 您可以透過新增發行集精靈來設定發行者和選擇散發者。  
   
 ## <a name="options"></a>選項  
- **[散發者屬性]**  
+ **發行者**  
  選取可使用這個散發者的伺服器。 按一下發行者旁的 [屬性] 按鈕 **(...)** ，以檢視和設定其他屬性。  
   
  **加入**  

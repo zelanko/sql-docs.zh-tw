@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2e96e6aec792115c5a756b5d682ddffa5b2bf97a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: ac5d258c4c59154bbf03528cd81ac53a6901f15f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>重新整理資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您想要從 MDS 存放庫取得最新資訊，而不開啟新的工作表時，請重新整理資料。 您可以重新整理所有資料格或資料格的選取範圍。 當您已經插入含有自訂公式或不在 MDS 中管理之資料的資料行，而且想要加以保留時，這樣做可能很有用。  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/07/2017
 -   [適用於 Microsoft Excel 的 Master Data Services 增益集](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
   
-

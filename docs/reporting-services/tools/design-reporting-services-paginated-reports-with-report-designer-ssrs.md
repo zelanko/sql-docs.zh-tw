@@ -10,21 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Designer [Reporting Services], report creation
+helpviewer_keywords: Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 02e1eb6504ae66ba6e48cedc0c511c4cd9505fb2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: aefabb7036b92d9350f42e6a1727e6e836d356fb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Reporting Services 分頁的報表與報表設計工具 (SSRS) 的設計
 
 使用報表設計師建立完整功能的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表和報表方案。 報表設計師提供一個圖形介面，您可以在此介面中定義資料來源、資料集與查詢、資料區域與欄位的報表配置位置，以及定義互動式功能，例如搭配使用的參數和報表集。  
@@ -107,11 +105,11 @@ ms.lasthandoff: 08/09/2017
  使用 **[預覽]** 確認報表資料和配置設計。 預覽報表時，報表處理器會驗證報表定義和運算式語法，並列出 [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 視窗中的問題。  
   
 > [!NOTE]  
->  預覽報表時，報表的資料會快取至本機電腦上的檔案。 當您再次預覽同一份報表時 (使用相同的查詢、參數和認證)，報表設計師會擷取快取複本，而非重新執行查詢。 資料檔案儲存為 *\<reportname >*。.rdl.data 與報表定義檔案相同的目錄中。 您關閉報表設計師時，不會刪除此檔案。  
+>  預覽報表時，報表的資料會快取至本機電腦上的檔案。 當您再次預覽同一份報表時 (使用相同的查詢、參數和認證)，報表設計師會擷取快取複本，而非重新執行查詢。 資料檔案儲存為 *\<reportname>*.rdl.data 與報表定義檔案相同的目錄中。 您關閉報表設計師時，不會刪除此檔案。  
   
  您可以利用下列方式預覽報表。  
   
--   **預覽檢視。** 按一下 **預覽** 索引標籤。 這會在本機執行報表，使用與報表伺服器相同的報表處理與轉譯功能。 顯示的報表是互動式影像；您可以選取參數、按一下連結、檢視文件引導模式，以及展開和摺疊報表的隱藏區域。 您也可以將報表匯出至任何已安裝的轉譯格式。  
+-   **預覽檢視。** 按一下 **預覽** 索引標籤。這會在本機執行報表，使用與報表伺服器相同的報表處理與轉譯功能。 顯示的報表是互動式影像；您可以選取參數、按一下連結、檢視文件引導模式，以及展開和摺疊報表的隱藏區域。 您也可以將報表匯出至任何已安裝的轉譯格式。  
   
 -   **獨立預覽。** 在瀏覽器中執行本機報表。 透過使用偵錯組態，您也可以使用此模式以偵錯所撰寫的自訂組件。 有三種方法可在偵錯模式中執行專案：  
   

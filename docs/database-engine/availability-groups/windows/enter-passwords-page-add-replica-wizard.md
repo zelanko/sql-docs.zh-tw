@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.addreplicawizard.enterpasswords.f1
+f1_keywords: sql13.swb.addreplicawizard.enterpasswords.f1
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 56e26d95c0a9ba246240a22972937e913952a389
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0e89f1cedff6ee8b3a18e78ce08d5090331a5694
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enter-passwords-page-add-replica-wizard"></a>輸入密碼頁面 (加入複本精靈)
   本說明主題描述 [輸入密碼] 頁面的選項。 本主題適用於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]。  
@@ -57,4 +54,3 @@ ms.lasthandoff: 08/02/2017
  [Always On 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
-

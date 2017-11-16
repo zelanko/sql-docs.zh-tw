@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - disk space [SQL Server], transaction logs
 - space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a1d06fd19479d11e1705e6c21ed7e1698a89896a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 79660939000858a97f6af5fa9c69ce041a010878
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>索引作業的交易記錄磁碟空間
   大規模的索引作業會產生大量資料載入，而造成交易記錄檔迅速填滿。 為了確保索引作業可以回復，在索引作業完成之前，交易記錄檔不得遭到截斷；不過，在索引作業期間可以備份記錄檔。 因此，交易記錄檔必須有足夠空間來儲存索引作業交易，以及索引作業期間的任何並行使用者交易。 不管是離線或線上索引作業都是如此。 因為在離線索引作業期間無法存取基礎資料表，所以使用者交易不多，記錄檔應該不會成長太快。 線上索引作業並不禁止並行使用者活動，因此大規模的線上索引作業若再結合大量的並行使用者交易，會造成交易記錄檔持續成長，同時又無法截斷記錄檔。  
@@ -51,4 +49,3 @@ ms.lasthandoff: 06/22/2017
  [索引磁碟空間範例](../../relational-databases/indexes/index-disk-space-example.md)  
   
   
-

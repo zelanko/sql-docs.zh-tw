@@ -1,30 +1,27 @@
 ---
 title: "根據商務規則驗證特定成員 (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - applying business rules [Master Data Services]
 - business rules [Master Data Services], applying to select members
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 69010f902b98ebdcb3fe1ad0f503e276ed64c08f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 293a1a5f1614df67cd1a28d88a432cc55a3927b7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>根據商務規則驗證特定成員 (Master Data Services)
   如果您想要更新或依照商務規則驗證成員子集，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中選擇性地套用商務規則。  
@@ -56,4 +53,3 @@ ms.lasthandoff: 09/07/2017
  [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   
-

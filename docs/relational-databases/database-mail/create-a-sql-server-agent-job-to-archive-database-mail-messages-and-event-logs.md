@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,24 +14,23 @@ helpviewer_keywords:
 - Database Mail [SQL Server], archiving
 - saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfba800ce9266e7a27c6e27e8e3ea9dfc2f2b08e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cace8601462fd2469d7cdbfb4cce168111d42d07
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔
   Database Mail 訊息的副本及其附件會隨著 Database Mail 事件記錄檔一起保留在 **msdb** 資料表。 您可能需要定期減少資料表的大小，並封存不再需要的訊息和事件。 下列程序可建立 SQL Server Agent 作業以便自動執行程序。  
   
 -   **開始之前**  ： [必要條件](#Prerequisites)、 [建議](#Recommendations)、 [權限](#Permissions)  
   
--   **To Archive Database Mail messages and logs using :**  [SQL Server Agent](#Process_Overview)  
+-   **使用下列項目，封存 Database Mail 訊息和記錄檔**  [SQL Server Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -221,4 +219,3 @@ ms.lasthandoff: 06/22/2017
  [概觀](#Process_Overview)  
   
   
-

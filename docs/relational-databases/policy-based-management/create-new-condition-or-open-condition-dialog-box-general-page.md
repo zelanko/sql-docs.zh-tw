@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.condition.f1
+f1_keywords: sql13.swb.dmf.condition.f1
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b90436634729185cf2703cc012aae3a4f0338cdb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 462f69731988e6813c021ad62117879e80625ddd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>建立新條件或開啟條件對話方塊，一般頁面
   使用此對話方塊可建立或變更以原則為基礎的管理條件。 條件是一種布林運算式，可指定以原則為基礎之管理 Managed 目標所允許的一組狀態 (與 Facet 有關)。 可以在 [運算式/欄位] 方塊中選取的屬性需視所使用的 Facet 而定。 如需條件如何與 Facet 和原則相關的詳細資訊，請參閱[使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
@@ -57,4 +54,3 @@ ms.lasthandoff: 06/22/2017
  [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

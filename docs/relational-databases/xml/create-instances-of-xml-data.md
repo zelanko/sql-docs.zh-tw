@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d02273b721b1b75b7bd134c8cd50c94ed2e9848d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 289962e12bcff765908e1fa088ad8caa867a636d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-instances-of-xml-data"></a>建立 XML 資料的執行個體
   這個主題描述如何產生 XML 執行個體。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 -   使用大量載入。  
   
 ## <a name="type-casting-string-and-binary-instances"></a>類型轉換字串和二進位執行個體  
- 您可以將字串轉換 (CAST 或 CONVERT) 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml**資料類型，以便將任何**字串資料類型 (例如 [**n**][**var**] **char**、 **[n]text**、 **varbinary**及 **image** ) 剖析至 **xml** 資料類型。 將會檢查不具類型的 XML 以確認它的格式正確。 如果有與 **xml** 類型相關聯的結構描述，也會執行驗證。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
+ 您可以將字串轉換 (CAST 或 CONVERT) 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml**n**字串資料類型 (例如 [**n**][**var** **char** **[n]text**、 **varbinary**及 **image** ) 剖析至 **image** 資料類型。 將會檢查不具類型的 XML 以確認它的格式正確。 如果有與 **xml** 類型相關聯的結構描述，也會執行驗證。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
  XML 文件可以使用不同的編碼 (例如，UTF-8、UTF-16、windows-1252) 加以編碼。 以下是字串與二進位來源類型如何與 XML 文件編碼互動以及剖析器作用方式的規則。  
   

@@ -2,12 +2,10 @@
 title: "設定可用性群組的唯讀路由 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/14/2017
-ms.prod:
-- sql-server-2016
+ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
 ms.openlocfilehash: bd8372397bb6e33250456a8a617aa4f8e4cf45be
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/15/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>設定可用性群組的唯讀路由 (SQL Server)
   若要在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中將 AlwaysOn 可用性群組設定為支援唯讀路由，可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell。 「唯讀路由」是指 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將合格的唯讀連接要求路由至可用之 AlwaysOn [可讀取的次要複本](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) (亦即在以次要角色執行時，設定為允許唯讀工作負載的複本) 的功能。 若要支援唯讀路由，可用性群組必須具有[可用性群組接聽程式](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。 唯讀用戶端必須將其連接要求導向至此接聽程式，且用戶端的連接字串必須將應用程式的意圖指定為「唯讀」。 換句話說必須是 *「讀取意圖的連接要求」*(Read-Intent Connection Request)。  
@@ -299,4 +296,3 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 - [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-

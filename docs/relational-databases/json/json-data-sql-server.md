@@ -1,29 +1,27 @@
 ---
 title: "JSON 資料 (SQL Server) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 01/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 3c6b9e4b98863b230c46304c7c8026230c0372ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: fed02f20beb9bd84dfd5ac2add3c66daf207e07c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="json-data-sql-server"></a>JSON 資料 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -199,7 +197,7 @@ WHERE ProductID = 1
 FOR JSON AUTO  
 ```  
   
-此查詢的輸出是完全符合 OData 規格的 JSON 文字。 格式設定和逸出是由 SQL Server 處理。 SQL Server 也可以將查詢結果格式化為任何格式，例如 OData JSON 或 GeoJSON - 如需詳細資訊，請參閱 [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1) (以 GeoJSON 格式傳回空間資料)。  
+此查詢的輸出是完全符合 OData 規格的 JSON 文字。格式設定和逸出是由 SQL Server 處理。 SQL Server 也可以將查詢結果格式化為任何格式，例如 OData JSON 或 GeoJSON - 如需詳細資訊，請參閱 [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1) (以 GeoJSON 格式傳回空間資料)。  
   
 ## <a name="analyze-json-data-with-sql-queries"></a>使用 SQL 查詢分析 JSON 資料  
  如果您基於報告目的而必須篩選或彙總 JSON 資料，您可以使用 **OPENJSON**，將 JSON 轉換為關聯式格式。 然後使用標準的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和內建函數來準備報告。  
@@ -321,7 +319,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### <a name="microsoft-blog-posts"></a>Microsoft 部落格文章  
   
--   如需更多特定的解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。  
+-   對於大量的特定解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。  
   
 ### <a name="reference-topics"></a>參考主題  
   
@@ -340,4 +338,3 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
     -   [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md)  
   
   
-

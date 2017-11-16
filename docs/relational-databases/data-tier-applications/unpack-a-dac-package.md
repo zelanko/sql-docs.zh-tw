@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - How to [DAC], unpack
 - unpack DAC
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 417a725dfab59a77714f44bee0be19c544a6e284
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: dc4498e01b9f72d8ef2cd9f13b137c67f48d63ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="unpack-a-dac-package"></a>解除封裝 DAC 封裝
   使用 [解除封裝資料層應用程式] 對話方塊可從資料層應用程式 (DAC) 封裝解壓縮指令碼和檔案。 這些指令碼和檔案會放置在某個資料夾中，使用此封裝來將 DAC 部署到實際執行系統之前便可以進行檢閱。 DAC 的內容也可以與解除封裝到另一個資料夾的另一個封裝內容相比較。  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - administering SQL Server, services
 - SQL Server services
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d37d9c4769544d597c3fa63bc488a99c5a1b5fd8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f3aa60ecd19dc22669cc98915fb853d4480d1fa5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-the-database-engine-services"></a>管理 Database Engine Services
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在作業系統上作為服務執行。 服務是在系統背景中執行的應用程式類型， 通常可以提供核心作業系統功能，例如 Web 服務、事件記錄或檔案服務。 服務不需在電腦桌面上顯示使用者介面，即可直接執行。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 和數種其他的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，都會以服務的形式來執行。 這些服務通常在啟動作業系統時就會跟著啟動， 這需視安裝期間的指定項目而定；有些服務預設不會啟動。 本節描述各種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的管理方式。 開始登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體之前，您必須知道如何啟動、停止、暫停、繼續和重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 登入之後，您可以執行諸如管理伺服器或查詢資料庫的工作。  
@@ -79,4 +77,3 @@ ms.lasthandoff: 08/02/2017
  [登入 SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   
   
-

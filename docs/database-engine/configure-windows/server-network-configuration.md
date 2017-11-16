@@ -5,8 +5,7 @@ ms.date: 07/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ports [SQL Server], changing
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c4ed91e4fd96fde43f87f25d351597b875df4550
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 45fe0d96d38f91d8515422380f06a0a661cce0c4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-network-configuration"></a>伺服器網路組態
   伺服器網路組態工作包括啟用通訊協定、修改通訊協定使用的通訊埠或管道、設定加密選項、設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務、在網路上公開或隱藏 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以及註冊伺服器主體名稱。 大部分的情況下，您不需要變更伺服器網路組態。 除非有特殊的網路需求時，才需要重新設定伺服器網路通訊協定。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 08/02/2017
  [管理 Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   
   
-

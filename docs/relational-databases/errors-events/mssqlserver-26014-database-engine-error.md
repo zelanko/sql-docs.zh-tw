@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 26014 (Database Engine error)
+helpviewer_keywords: 26014 (Database Engine error)
 ms.assetid: e2b0dfc7-0681-4e5d-8875-1d5f63534086
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a71f672ec2210c212e6e66221164224376ee4c89
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4474d47ff8587985e2260f4a8bd73c13e6eee28e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver26014"></a>MSSQLSERVER_26014
   
@@ -51,4 +48,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="user-action"></a>使用者動作  
 請確定在訊息中指定的憑證存在系統上、可以存取，而且可供使用。  
   
-

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SP:StmtCompleted event class
+helpviewer_keywords: SP:StmtCompleted event class
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0ff9f91227c08c932e33afb97c47a2019e1cd0f0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: dd823a1bb566458d1c158ab6cfc121808e0c6ae3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted 事件類別
   SP:StmtCompleted 事件類別指出已完成預存程序內的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 |ObjectID|**int**|系統指派給物件的識別碼。|22|是|  
 |ObjectName|**nvarchar**|正在參考之物件的名稱。|34|是|  
 |ObjectType|**int**|代表參與事件之物件類型的值。 這個值會對應到 sys.objects 目錄檢視中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](../../relational-databases/event-classes/objecttype-trace-event-column.md)。|28|是|  
-|Offset|**整數**|預存程序或批次內之陳述式的起始位移。|61|是|  
+|Offset|**int**|預存程序或批次內之陳述式的起始位移。|61|是|  
 |Reads|**bigint**|伺服器代表事件執行的邏輯磁碟讀取數。|16|是|  
 |RequestID|**int**|包含陳述式之要求的識別碼。|49|是|  
 |RowCounts|**bigint**|受到事件影響的資料列數目。|48|是|  

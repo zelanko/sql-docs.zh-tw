@@ -5,8 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - mirror database [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9d9696eeee6d9fcf3ccf0538de5d3c6ab7abe9e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7b99c620aeb148558c5db6cfb15fefd2878ca180
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>設定鏡像資料庫可使用 Trustworthy 屬性 (Transact-SQL)
   備份資料庫時，TRUSTWORTHY 資料庫屬性將設為 OFF。 因此，新鏡像資料庫上的 TRUSTWORTHY 一律為 OFF。 您必須在鏡像開始之後執行額外的設定步驟，以確保資料庫在容錯移轉之後的可信度。  
@@ -87,4 +85,3 @@ ms.lasthandoff: 08/02/2017
  [設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
   
-

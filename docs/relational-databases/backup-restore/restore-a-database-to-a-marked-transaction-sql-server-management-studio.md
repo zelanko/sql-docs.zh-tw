@@ -5,27 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.restoretlog.markedtransaction.f1
+f1_keywords: sql13.swb.restoretlog.markedtransaction.f1
 helpviewer_keywords:
 - database restores [SQL Server], marked transactions
 - restoring databases [SQL Server], marked transactions
 - marked transactions [SQL Server], restoring
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 48529229420d7c2dafad334f3104e01add1a6746
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7753a99c8e02a66b95509fd8124976a484490c48
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>還原資料庫至標示的異動 (SQL Server Management Studio)
   當資料庫處於還原中狀態時，您可以利用 [還原交易記錄] 對話方塊，將資料庫還原成可用記錄備份中標示的交易。  
@@ -53,10 +51,10 @@ ms.lasthandoff: 06/22/2017
     |------------|-----------|  
     |\<空白>|顯示選取標示的核取方塊。|  
     |**交易標示**|在認可交易時，由使用者所指定之標示交易的名稱。|  
-    |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中的記錄所顯示，而非依照用戶端電腦的日期和時間。|  
+    |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
     |**描述**|在認可交易時，由使用者所指定之標示交易的描述 (如果有的話)。|  
     |**LSN**|標示之交易的記錄序號。|  
-    |**資料庫**|認可標示的交易之資料庫的名稱。|  
+    |**[資料庫備份]**|認可標示的交易之資料庫的名稱。|  
     |**使用者名稱**|認可標示的交易之資料庫使用者的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  

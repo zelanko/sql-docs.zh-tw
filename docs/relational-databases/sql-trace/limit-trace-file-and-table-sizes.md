@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - file rollover option [SQL Server]
 - size [SQL Server], files
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 88ac44b6c82349c1c0294a512a24ffacd6002ad3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d9827287ecea08ca547c2b371c8e0696e37c7d02
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>限制追蹤檔案和資料表的大小
   「SQL 追蹤」結果的大小視追蹤所包含的事件類別和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的使用方式而定。 如果您追蹤經常發生的事件類別，可設定檔案大小上限或最大資料列數目，將追蹤收集的資料量降到最低。 透過指定檔案大小上限或最大資料列數目，您就可以確保追蹤檔或資料表不會擴展超過指定的限制。  
@@ -62,4 +60,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: 95
+caps.latest.revision: "95"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
+ms.openlocfilehash: 6fa71b2a2dfa009bae1614942873d45309348223
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b9bfcbc289a42960fdcb47db43a09014c37ddd4b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>將用戶端連接至資料庫鏡像工作階段 (SQL Server)
   若要連接至資料庫鏡像工作階段，用戶端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 針對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫設定之後，這兩個資料存取提供者就會完全支援資料庫鏡像。 如需使用鏡像資料庫之程式設計考量的詳細資訊，請參閱＜ [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)＞。 此外，目前的主體伺服器執行個體必須可以使用，而且必須在此伺服器執行個體上建立用戶端的登入。 如需詳細資訊，請參閱[孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 資料庫鏡像工作階段的用戶端連接不會涉及見證伺服器執行個體 (如果此執行個體存在的話)。  
@@ -163,7 +162,7 @@ Server=123.34.45.56,4724;
 > [!NOTE]  
 >  開啟連接所用的時間可能會由於外部因素而超過重試時間，這些因素包括 DNS 查閱速度很慢、網域控制站/Kerberos 金鑰發佈中心 (KDC) 速度很慢、連絡 SQL Server Browser 所用的時間以及網路壅塞等。 這些外部因素可能會讓用戶端無法連接至鏡像資料庫。 此外，外部因素也會導致開啟連接所用的時間比分配的重試時間要長。 如需有關針對初始夥伴的連接嘗試略過 DNS 和 SQL Server Browser 的詳細資訊，請參閱本主題稍早的 [建立資料庫鏡像工作階段的初始連接](#InitialConnection)。  
   
- 如果連接嘗試失敗或在成功之前重試時間過期，資料存取提供者就會嘗試其他夥伴。 如果在此時間點以前未開啟連接，提供者就會輪流嘗試初始和容錯移轉夥伴名稱，直到開啟連接或登入期限逾時為止。 預設登入逾時期限是 15 秒。 我們建議登入逾時期限至少應該設定為 5 秒。 指定更小的逾時期限可能會讓所有連接嘗試無法成功。  
+ 如果連接嘗試失敗或在成功之前重試時間過期，資料存取提供者就會嘗試其他夥伴。 如果在此時間點以前未開啟連接，提供者就會輪流嘗試初始和容錯移轉夥伴名稱，直到開啟連接或登入期限逾時為止。預設登入逾時期限是 15 秒。 我們建議登入逾時期限至少應該設定為 5 秒。 指定更小的逾時期限可能會讓所有連接嘗試無法成功。  
   
  重試時間是登入期限的百分比。 連接嘗試的重試時間在每個後續的重試回合都會更長。 在第一個重試回合中，兩次嘗試的重試時間都是總登入期限的百分之 8。 在每個後續的重試回合中，重試演算法會以相同的時間量，增加最大重試時間。 因此，前八個連接嘗試的重試時間如下：  
   
@@ -188,7 +187,7 @@ Server=123.34.45.56,4724;
   
  ![15 秒登入逾時的最大重試延遲](../../database-engine/database-mirroring/media/dbm-retry-algorithm.gif "15 秒登入逾時的最大重試延遲")  
   
- 就預設的登入逾時期限而言，分配給連接嘗試之前三個重試回合的最大時間是 14.4 秒。 如果每次嘗試都使用所有分配的時間，在登入期限逾時之前，只會剩餘 0.6 秒的時間。 在該情況下，第四個重試回合會縮短，僅允許使用初始夥伴名稱來進行最後一次快速連接嘗試。 不過，在少於分配之重試時間的情況下，連接嘗試可能會失敗，尤其是後面的重試回合。 例如，收到網路錯誤可能會導致嘗試在重試時間過期之前結束。 如果之前的嘗試由於網路錯誤而失敗，就會有額外的時間可供第四個重試回合使用，甚至供其他重試回合使用。  
+ 就預設的登入逾時期限而言，分配給連接嘗試之前三個重試回合的最大時間是 14.4 秒。 如果每次嘗試都使用所有分配的時間，在登入期限逾時之前，只會剩餘 0.6 秒的時間。在該情況下，第四個重試回合會縮短，僅允許使用初始夥伴名稱來進行最後一次快速連接嘗試。 不過，在少於分配之重試時間的情況下，連接嘗試可能會失敗，尤其是後面的重試回合。 例如，收到網路錯誤可能會導致嘗試在重試時間過期之前結束。 如果之前的嘗試由於網路錯誤而失敗，就會有額外的時間可供第四個重試回合使用，甚至供其他重試回合使用。  
   
  另一個導致嘗試失敗的原因是非使用中的伺服器執行個體，而這會在伺服器執行個體正在進行資料庫的容錯移轉時發生。 在此情況下，會加上重試延遲，以防止用戶端進行快速且連續的連接嘗試而導致夥伴超過負載。  
   
@@ -197,7 +196,7 @@ Server=123.34.45.56,4724;
   
   
 ### <a name="retry-delays-during-failover"></a>在容錯移轉期間的重試延遲  
- 如果用戶端嘗試連接至正在容錯移轉的夥伴，此夥伴就會立即回應，表示它目前非使用中。 在此情況下，每個連接嘗試的重試回合都會比分配的重試時間要短。 這表示連接嘗試的許多重試回合可以在登入期限逾時之前進行。 為了避免在容錯移轉期間因快速且連續的連接嘗試而導致夥伴超過負載，資料存取提供者會在每個重試循環後面加入一個短暫的重試延遲。 指定重試延遲的長度是由重試延遲演算法決定的。 在第一個重試回合之後，延遲是 100 毫秒。 在後面三個回合之後，重試延遲便加倍至 200、400 和 800。 在所有後續的重試回合中，重試延遲是 1 秒，直到連接嘗試成功或逾時為止。  
+ 如果用戶端嘗試連接至正在容錯移轉的夥伴，此夥伴就會立即回應，表示它目前非使用中。 在此情況下，每個連接嘗試的重試回合都會比分配的重試時間要短。 這表示連接嘗試的許多重試回合可以在登入期限逾時之前進行。為了避免在容錯移轉期間因快速且連續的連接嘗試而導致夥伴超過負載，資料存取提供者會在每個重試循環後面加入一個短暫的重試延遲。 指定重試延遲的長度是由重試延遲演算法決定的。 在第一個重試回合之後，延遲是 100 毫秒。 在後面三個回合之後，重試延遲便加倍至 200、400 和 800。 在所有後續的重試回合中，重試延遲是 1 秒，直到連接嘗試成功或逾時為止。  
   
 > [!NOTE]  
 >  如果伺服器執行個體停止，連接要求就會立即失敗。  

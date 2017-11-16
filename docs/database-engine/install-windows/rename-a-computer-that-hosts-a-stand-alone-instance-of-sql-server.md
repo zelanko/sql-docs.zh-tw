@@ -7,8 +7,7 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,16 +20,15 @@ helpviewer_keywords:
 - deleting remote logins
 - dropping remote logins
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
 ms.openlocfilehash: 3409cf7906f37569763ac2277ea82fe1d0fe4c82
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/12/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重新命名主控 SQL Server 獨立式執行個體的電腦
 當您變更了執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦名稱之後，便會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動期間辨識這個新名稱。 您不必重新執行安裝程式，即可重設電腦名稱。 請改用下列步驟來更新儲存在 sys.servers 中而且由系統函式 @@SERVERNAME 所報告的系統中繼資料。 您可以更新系統中繼資料，以便反映使用 @@SERVERNAME 或從 sys.servers 中查詢伺服器名稱之遠端連接和應用程式的電腦名稱變更。  
@@ -82,7 +80,7 @@ ms.lasthandoff: 09/12/2017
   
 ## <a name="verify-renaming-operation"></a>確認重新命名作業  
   
--   從 @@SERVERNAME 或 sys.servers 中選取資訊。 @@SERVERNAME 函式會傳回新名稱，而且 sys.servers 資料表會顯示新名稱。 下列範例示範如何使用 @@SERVERNAME。   
+-   從 @@SERVERNAME 或 sys.servers 中選取資訊。 @@SERVERNAME 函式會傳回新名稱，而且 sys.servers 資料表會顯示新名稱。 下列範例示範如何使用 @@SERVERNAME。  
   
     ```  
     SELECT @@SERVERNAME AS 'Server Name';  

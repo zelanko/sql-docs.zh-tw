@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - designing databases [SQL Server], estimating size
 - calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ecae889b68740652ab237201bfad2cde58dd39b5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: c750d3887f36b5f8d4a0dd826d6cc1b5e990bf3f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>估計叢集索引的大小
   您可以使用下列步驟，估計在叢集索引中儲存資料所需的空間量：  

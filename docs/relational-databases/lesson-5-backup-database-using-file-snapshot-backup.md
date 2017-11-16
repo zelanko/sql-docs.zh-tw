@@ -1,29 +1,25 @@
 ---
 title: "第 5 課：使用檔案快照集備份來備份資料庫 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd3226cf6bf52151c94853d87b4de28e54b5d2df
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3b5e0888f00f34fc3d85f6727cc98903c66c2239
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>第 5 課：使用檔案快照集備份來備份資料庫
 在這一課，您將使用檔案快照集備份，在 Azure 虛擬機器中備份 AdventureWorks2014 資料庫，以透過 Azure 快照集執行幾乎即時的備份。 如需檔案快照集備份的詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
@@ -85,4 +81,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

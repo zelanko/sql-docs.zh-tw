@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Broker:Conversation event class
+helpviewer_keywords: Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6e7161ab04ec24504b6ba0a5f6e7cd304166b7b1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7bff456fa490952d5c86cf80a76022114178da5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生 **Broker:Conversation** 事件以報告 Service Broker 交談的進度。  
@@ -83,4 +80,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
-

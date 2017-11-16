@@ -5,26 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- HierarchyID
+applies_to: SQL Server 2016
+helpviewer_keywords: HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4569fb3f5bc56d04624756eb3fccba8da1d4ad2f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 49f9580f99974d4453a7633c6640f8b5ca418e35
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>第 1-2 課：使用現有的階層式資料填入資料表
 此工作會建立一個新的資料表，並以 **EmployeeDemo** 資料表中的資料填入該資料表。 此工作的步驟如下：  
@@ -174,4 +170,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

@@ -1,13 +1,11 @@
 ---
 title: "即時查詢統計資料 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 10/28/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - debugging [SQL Server], live query stats
 - statistics [SQL Server], live query statistics
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5381ceb39baa1e81001d9d80c9171545038a09b2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: 32ce19a31e38ce457ae8b3ea37fa863a74a8902b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="live-query-statistics"></a>即時查詢統計資料
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可供檢視作用中查詢的即時執行計畫。 這個即時查詢計畫會隨著控制項在查詢計畫運算子之間流動，提供查詢執行程序的即時深入資訊。 即時查詢計畫會顯示整體的查詢進度，以及運算子層級的執行階段執行統計資料，如產生的資料列數目、耗用時間、運算子進度等等。因為這份資料是即時提供，不需要等待查詢完成，所以這些執行統計資料在偵錯查詢效能問題方面非常有用。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 開始即提供這項功能，但它也可以搭配 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用。  
@@ -88,4 +85,3 @@ ms.lasthandoff: 10/21/2017
  [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)   
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)   
  [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-

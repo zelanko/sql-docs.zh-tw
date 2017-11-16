@@ -52,17 +52,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.chartproperties.border.f1
 - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc669d43fc5331a1ce161b0c1c2098a38c5224fb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: afa676627cd7d6364d45bcbe07102f5ad5bf637e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>格式化圖表 (報表產生器及 SSRS)
   在定義了圖表的資料且資料也以所要的方式顯示之後，您就可以加入格式設定，以改善整體外觀並強調關鍵的資料點。 您可以從 [屬性] 對話方塊修改最常見的格式設定選項，當您以滑鼠右鍵按一下圖表元素以顯示其快速鍵功能表時，此對話方塊就會顯示。 每個圖表元素都有它自己的對話方塊。 如需圖表元素的詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
@@ -93,11 +92,10 @@ ms.lasthandoff: 08/09/2017
  [將邊框加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)  
  說明如何將邊框加入至圖表。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [將邊框新增至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)   
  [使用調色盤定義圖表的色彩 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [將斜面、浮凸與紋理樣式新增至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   
-

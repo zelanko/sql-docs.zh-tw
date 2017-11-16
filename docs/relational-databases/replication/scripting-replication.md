@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - scripts [SQL Server replication]
 - transactional replication, scripting
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9889d43aeed7cf80f5b28b427787519ab06bd84
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 572e3be190b2743cdbb28893796a89c3b4bdac32
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="scripting-replication"></a>編寫複寫指令碼
   拓撲中的所有複寫元件都應作為損毀復原計畫的一部份來編寫指令碼，而指令碼也可以用於自動執行重複性工作。 指令碼包含實作已編寫指令碼之複寫元件所必要的 Transact-SQL 系統預存程序，例如，發行集或訂閱。 指令碼可以在精靈中建立 (如新增發行集精靈)，或者可以在建立元件之後，於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立。 您可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**，檢視、修改和執行指令碼。 指令碼可以和備份檔案一起儲存，萬一必須重新設定複寫拓撲時即可使用。  
@@ -110,4 +108,3 @@ ms.lasthandoff: 06/22/2017
 6.  按一下 **[確定]** ，然後按一下 **[關閉]**。  
   
   
-

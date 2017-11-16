@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
+helpviewer_keywords: Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d5409025fee4cb80a8f7b64e8946f058635e7551
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 偵錯工具
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可協助您透過調查 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的執行階段行為，找出程式碼中的錯誤。 在您將 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗設定成偵錯模式之後，就可以在特定的程式碼行上暫停執行作業，然後檢查這些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所使用或傳回的資訊和資料。  
@@ -74,4 +71,3 @@ ms.lasthandoff: 06/22/2017
  [查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   
-

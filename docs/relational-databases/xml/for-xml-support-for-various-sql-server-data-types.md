@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, data type support
 - data types [SQL Server], FOR XML clause
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ef7a1e703ffb9d874f81c5540e1da7810ea5e2e6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7bd68e023944367ebd6f169b37f6b8f2eac5adfc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>各個 SQL Server 資料類型的 FOR XML 支援
   本章節的主題將描述對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中資料類型的 FOR XML 支援。  
@@ -38,4 +36,3 @@ ms.lasthandoff: 06/22/2017
 |[Timestamp 資料類型的 FOR XML 支援](../../relational-databases/xml/for-xml-support-for-the-timestamp-data-type.md)|描述 FOR XML 如何與 **timestamp** 資料類型一起運作。|  
   
   
-

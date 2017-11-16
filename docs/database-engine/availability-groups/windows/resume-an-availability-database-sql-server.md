@@ -5,29 +5,26 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroup.resumedatamove.f1
+f1_keywords: sql13.swb.availabilitygroup.resumedatamove.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], resuming a database
 - secondary databases [SQL Server], in availability group
 - primary databases [SQL Server], in availability group
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b7a4af01a6b999655a038f02375b7bb0b8bc8a19
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6fb24ab051691dc582c3b2e454fe60478d074b9d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="resume-an-availability-database-sql-server"></a>繼續可用性資料庫 (SQL Server)
   您可以使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中繼續暫停的可用性資料庫。 繼續暫停的資料庫會使資料庫處於 SYNCHRONIZING 狀態。 繼續主要資料庫也會繼續因為暫停主要資料庫而暫停的任何次要資料庫。 如果在本機 (從裝載次要複本的伺服器執行個體) 暫停任何次要資料庫，該次要資料庫必須在本機繼續。 給定的次要資料庫與對應的主要資料庫都處於 SYNCHRONIZING 狀態之後，資料同步處理就會在次要資料庫上繼續。  
@@ -125,4 +122,3 @@ ms.lasthandoff: 08/02/2017
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

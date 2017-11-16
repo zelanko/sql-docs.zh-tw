@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- plan guides [SQL Server], deleting
+helpviewer_keywords: plan guides [SQL Server], deleting
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08b43f5dd7f042bc559cede3b6043d737fb71a11
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5baf98bc13a9319d95a7a715feb5a52bc593b7b4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-a-plan-guide"></a>刪除計畫指南
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除 (卸除) 計畫指南。 您也可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]來刪除資料庫中的所有計畫指南。  
@@ -119,4 +116,3 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱 [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)。  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ELEMENT directive
 - entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d2ddb67aee711a217bd9f75b62ef14067e4aac55
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a386d65bc4a0c6b807f8e8b072bc48b1c50bd689
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>範例：指定 ELEMENT 指示詞及實體編碼
   此範例說明 **ELEMENT** 與 **XML** 指示詞之間的相異處。 **ELEMENT** 指示詞會將資料實體化，但 **XML** 指示詞則否。 已將 \<摘要> 項目指派給查詢中的 XML `<Summary>This is summary description</Summary>`。  
@@ -101,4 +99,3 @@ FOR XML EXPLICIT
  [搭配 FOR XML 使用 EXPLICIT 模式](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-

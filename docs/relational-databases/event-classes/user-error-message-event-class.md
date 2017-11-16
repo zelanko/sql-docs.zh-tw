@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- User Error Message event class
+helpviewer_keywords: User Error Message event class
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 54afb306687cc2d6a6b503a7543a3eee59a5d4f4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1e0d31b41e2188f4a9eea84f428ed995370e4d4d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-error-message-event-class"></a>User Error Message 事件類別
   User Error Message 事件類別顯示發生錯誤或例外狀況時，使用者看見的錯誤訊息。 錯誤訊息文字會顯示在 TextData 欄位。  
@@ -60,4 +57,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

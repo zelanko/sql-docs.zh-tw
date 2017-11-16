@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ad1ef04caea4fc15cc53fced05ab5861d54ad7eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 09e14b3302594f7829a72786dc1f13b42fcb2c51
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-1---create-the-off-by-default-policy"></a>第 1-1 課：建立 Off By Default 原則
 這項工作會建立名為 Mail Off 並且以介面區組態 Facet 為基礎的條件。 然後，它會建立名為 Off By Default 的原則。  
@@ -70,4 +67,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

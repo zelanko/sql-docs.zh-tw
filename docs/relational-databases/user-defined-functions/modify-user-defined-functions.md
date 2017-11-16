@@ -5,22 +5,20 @@ ms.date: 03/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-udf
+ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7ab838367ccbe310bbb57220fdec695a46fd849c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b17a09c7ddf1edd113cc352a0d6ca1f5b1c72dc8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="modify-user-defined-functions"></a>修改使用者定義函數
   您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的使用者定義函數。 如下述修改使用者定義函數不會變更函數的權限，也不會影響任何相依函數、預存程序或觸發程序。  
@@ -165,4 +163,3 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱 [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)。  
   
   
-

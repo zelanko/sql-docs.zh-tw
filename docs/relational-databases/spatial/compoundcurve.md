@@ -5,21 +5,20 @@ ms.date: 06/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-spatial
+ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab465ac3e7c5fb74aade48aeca91379a86711522
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 00541c3148c16abb1db9af3f9fdb63bdaa317894
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   **CompoundCurve** 是零個或多個屬於 geometry 或 geography 類型之連續 **CircularString** 或 **LineString** 執行個體的集合。  
@@ -200,4 +199,3 @@ Circle Two12.566370…
  [空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [點](../../relational-databases/spatial/point.md)  
   
-

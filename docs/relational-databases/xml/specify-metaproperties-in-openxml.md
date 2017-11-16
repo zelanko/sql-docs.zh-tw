@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6bc6d9b3e482869bd82daa13c167d0221639a95f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d0d2eed1cb054c76e7f6e4d816ec98ce60c36f0c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定中繼屬性
   XML 文件的中繼屬性 (Metaproperty) 之屬性 (Attribute)，是描述 XML 項目 (例如元素、屬性或任何其他 DOM 節點) 屬性 (Property) 的屬性 (Attribute)。 這些屬性實際上不存在於 XML 文件文字中。 不過，OPENXML 會提供這些中繼屬性給所有的 XML 項目。 這些中繼屬性可讓您擷取 XML 節點的資訊，例如本機定位和命名空間資訊。 此資訊可提供您所呈現文字以外更詳細的資料。  

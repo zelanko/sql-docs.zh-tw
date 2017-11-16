@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - restoring [SQL Server replication], actions requiring a backup
 - backups [SQL Server replication], actions requiring a backup
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8784d006b175b3b6471464f401ad460080a273a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: dbf016e3d13b4a60022fe8b1f36c7e92128b428e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>需要更新之備份的常見動作
   如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果您未執行記錄備份，請在修改複寫結構描述或拓撲之後執行發行、散發、訂閱、 **msdb**和 **master** 資料庫的備份。  

@@ -14,17 +14,16 @@ f1_keywords:
 - "10121"
 - sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab2138bdee0abc064ae1fabb06ef04ed3c490170
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a87f586dfc1846f3224d2e24f566a5575e35965f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>將互動式排序加入至資料表或矩陣 (報表產生器及 SSRS)
   加入互動式排序按鈕，讓使用者變更資料表和矩陣中資料列和資料行的排序次序。 系統僅能以支援使用者互動的轉譯格式支援此功能，例如 HTML。  
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>若要將互動式排序按鈕加入到資料行標頭以便依值排序資料表  
   
-1.  在報表設計檢視中，針對沒有群組的資料表，以滑鼠右鍵按一下資料行標頭中您要加入互動式排序按鈕的文字方塊，然後按一下 [文字方塊屬性]。  
+1.  在報表設計檢視中，在沒有群組的資料表，以滑鼠右鍵按一下資料行標題中要新增互動式排序按鈕的文字方塊，然後按一下 [文字方塊屬性]。  
   
 2.  按一下 **[互動式排序]**。  
   
@@ -75,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>若要將互動式排序按鈕加入到資料行標頭以便排序群組  
   
-1.  在報表設計檢視的資料表或矩陣中，以滑鼠右鍵按一下資料行標頭中您要加入互動式排序按鈕之群組的文字方塊，然後按一下 [文字方塊屬性]。  
+1.  在報表設計檢視的資料表或矩陣中，以滑鼠右鍵按一下資料行標題中要新增互動式排序按鈕的群組文字方塊，然後按一下 [文字方塊屬性]。  
   
 2.  按一下 **[互動式排序]**。  
   
@@ -86,7 +85,7 @@ ms.lasthandoff: 08/09/2017
 5.  從下拉式清單中，選取您要排序之群組的名稱。 針對以單一群組運算式為基礎的群組， **[排序依據]** 值會以群組運算式擴展。  
   
     > [!NOTE]  
-    >  針對複雜的群組運算式，將 [排序依據] 運算式手動設定為與群組運算式相同的值。  
+    >  如需複雜的群組運算式，請手動將 [排序依據] 運算式設定為群組運算式的相同值。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -99,7 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>若要將互動式排序按鈕加入到群組資料列標頭中的文字方塊以便排序子群組或詳細資料列  
   
-1.  在報表設計檢視中，以滑鼠右鍵按一下群組標頭資料列中您要加入互動式排序按鈕的文字方塊，然後按一下 [文字方塊屬性]。  
+1.  在報表設計檢視中，以滑鼠右鍵按一下群組標題資料列中要新增互動式排序按鈕的文字方塊，然後按一下 [文字方塊屬性]。  
   
 2.  按一下 **[互動式排序]**。  
   
@@ -120,7 +119,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="SortingMultipleRowGroups"></a> 根據複雜的群組運算式排序資料列  
  將互動式排序按鈕加入到資料行標頭，讓使用者按一下資料行標頭，並排序合併的父群組和子群組。 為達到此效果，您必須將群組運算式變更為兩個群組的複合。 例如，假設矩陣會針對同時依色彩和大小分組的項目，顯示商店的存貨總數。 若要根據色彩和大小的組合 (而不是個別針對色彩群組和大小群組) 排序資料列，您可以根據色彩和大小的組合定義群組。 如需定義群組運算式的詳細資訊，請參閱[群組運算式範例 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
   
- 在下列程序中，這些條件會指定 Tablix 資料區域。 如需詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
+ 在下列程序中，這些條件會指定 Tablix 資料區域。 如需詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
  當您根據多個群組排序資料列時，不管資料行群組為何，您通常會想要查看已排序資料列的總數。 在這個程序，不會使用任何資料行群組。 您可以加入矩陣並移除預設的資料行群組來開始。 或者，您可以加入資料表並移除詳細資料群組來開始。  
   
@@ -146,7 +145,7 @@ ms.lasthandoff: 08/09/2017
   
      現在您已定義群組。 下一步，拖曳欄位以顯示矩陣的 Tablix 主體區域。 將您在步驟 7 中選擇之分組依據的欄位加入到 Tablix 主體區域中，而且每個欄位都要加入到自己的資料行中。  
   
-     針對這個狀況，不需要 Tablix 資料列群組區域中的第一個資料行。 若要刪除資料行，以滑鼠右鍵按一下資料行標頭，然後按一下 [刪除資料行]。 此時會出現一個對話方塊，詢問是否要刪除相關聯的群組。 按一下 **[否]**。 資料列群組區域隨即刪除，而且只會保留 Tablix 主體區域。  
+     針對這個狀況，不需要 Tablix 資料列群組區域中的第一個資料行。 若要刪除資料行，以滑鼠右鍵按一下資料行標題，然後按一下 [刪除資料行]。 此時會出現一個對話方塊，詢問是否要刪除相關聯的群組。 按一下 **[否]**。 資料列群組區域隨即刪除，而且只會保留 Tablix 主體區域。  
   
      下一步，您將移除預設的資料行群組。  
   
@@ -168,7 +167,7 @@ ms.lasthandoff: 08/09/2017
   
      您已經將排序按鈕加入到文字方塊中。  
   
-16. (選擇性) 您可以在資料行中，隱藏顯示群組值的重複值。 在報表設計介面上，按一下顯示您要隱藏重複值之值的文字方塊。 在 [屬性] 窗格中，捲動至 [HideDuplicates]，然後從下拉式清單中選取連結至此矩陣之資料集的名稱。  
+16. (選擇性) 您可以在資料行中，隱藏顯示群組值的重複值。 在報表設計介面上，按一下顯示您要隱藏重複值之值的文字方塊。 在 [屬性] 窗格中，捲動至 [HideDuplicates]，然後從下拉式清單中選取連結至此矩陣的資料集名稱。  
   
  若要驗證排序動作，請按一下 **[執行]** 預覽報表，然後按一下互動式排序按鈕。 即使每個個別值都會顯示在其自己的資料行中，矩陣還是會依群組運算式的合計值排序。  
   
@@ -205,7 +204,7 @@ ms.lasthandoff: 08/09/2017
   
 11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-12. 在矩陣中，以滑鼠右鍵按一下資料行標頭中您要加入互動式排序按鈕的文字方塊，然後按一下 [文字方塊屬性]。  
+12. 在矩陣中，以滑鼠右鍵按一下資料行標題中要新增互動式排序按鈕的文字方塊，然後按一下 [文字方塊屬性]。  
   
 13. 按一下 **[互動式排序]**。  
   
@@ -213,7 +212,7 @@ ms.lasthandoff: 08/09/2017
   
 15. 在 **[選擇排序依據]**中，按一下 **[群組]**。  
   
-16. 從 [群組] 底下的下拉式清單中，選取您要排序之群組的名稱。 此群組的群組運算式會針對 **[排序依據]** 值自動設定。  
+16. 從 [群組] 底下的下拉式清單中，選取您要排序的群組名稱。 此群組的群組運算式會針對 **[排序依據]** 值自動設定。  
   
 17. 選取 **[同時套用此排序至下列範圍內的其他群組及資料區域]**。 在文字方塊中，輸入資料集的名稱，例如 "SalesData"。  
   
@@ -224,10 +223,9 @@ ms.lasthandoff: 08/09/2017
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選、 群組和排序資料 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [互動式排序 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
- [在 資料區域和 &#40; 中排序資料報表產生器和 SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [探索 Tablix 資料區 &#40; 的彈性報表產生器及 SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [篩選、分組和排序資料 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [互動式排序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
+ [在資料區中排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [探索 Tablix 資料區的彈性 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
   
   
-

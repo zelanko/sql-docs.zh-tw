@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- 'Progress Report: Online Index Operation event class [SQL Server]'
+helpviewer_keywords: 'Progress Report: Online Index Operation event class [SQL Server]'
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74cab49e651efabd8862e4d6ddf78a8fbdf739b8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fe46c6a2cf8a0ef4702c539a9384222bdfa55b26
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>進度報表：線上索引作業事件類別
   Progress Report: Online Index Operation 事件類別指出在執行建立程序時，線上索引建立作業的進度。  
@@ -64,4 +61,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

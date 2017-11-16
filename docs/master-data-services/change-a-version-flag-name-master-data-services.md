@@ -1,30 +1,28 @@
 ---
-title: "變更版本旗標名稱 (Master Data Services) |Microsoft 文件"
+title: "變更版本旗標名稱 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- version flags [Master Data Services], changing name
+helpviewer_keywords: version flags [Master Data Services], changing name
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
-caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f652d292b6b013ad9d5e07007c7544b6528aee75
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+caps.latest.revision: "8"
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4d6967b7ecd9afa78fb98e65226ac5cc9e03655a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>變更版本旗標名稱 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可以變更版本旗標的名稱。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更版本旗標的名稱。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
@@ -50,7 +48,7 @@ ms.lasthandoff: 09/01/2017
 6.  按 ENTER 鍵。  
   
 ## <a name="see-also"></a>另請參閱  
- [版本 &#40;Master Data services&#41;](../master-data-services/versions-master-data-services.md)   
- [將旗標指派給版本 &#40;Master Data services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+ [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
+ [將旗標指派給版本 &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
   

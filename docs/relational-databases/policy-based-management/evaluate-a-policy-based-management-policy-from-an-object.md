@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Policy-Based Management, evaluate policy
+helpviewer_keywords: Policy-Based Management, evaluate policy
 ms.assetid: b9e9d646-4894-4dee-a02a-0c71a8dc020e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f875e9b7858937d69a1106e8a08d139aefe6e445
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2486fd646fd87c36aa012e5622aced55c2094026
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-an-object"></a>根據物件評估原則式管理原則
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中根據伺服器執行個體、資料庫或資料庫物件評估原則。  
@@ -63,4 +60,3 @@ ms.lasthandoff: 06/22/2017
 3.  完成後，請按一下 **[關閉]**。  
   
   
-

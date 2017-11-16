@@ -5,8 +5,7 @@ ms.date: 07/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - backups [SQL Server], backup sets
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9961dc03ba9e6e98abb63136cfc4accce8caca4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0b3e7aa7ca8af93ed67134fffb79bb59193a0aec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>媒體集、媒體家族與備份組 (SQL Server)
   **本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的基本備份媒體詞彙，適合供初次使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的使用者閱讀。** 
@@ -308,4 +306,3 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

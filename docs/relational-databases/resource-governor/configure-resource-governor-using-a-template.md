@@ -5,30 +5,28 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Resource Governor, templates
+helpviewer_keywords: Resource Governor, templates
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 37a30ac49e0b7af05e0c7fb8e2ac1a32824186f6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: bb31cc4264a29160ce392d2056ff6f01918c2742
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-resource-governor-using-a-template"></a>使用範本來設定資源管理員
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]所提供的範本來設定資源管理員。  
   
--   **Before you begin:**  [Permissions](#Permissions)  
+-   **開始之前：**  [Permissions](#Permissions)  
   
--   **To create a workload group, using:**  [a template](#ConfRGTemplate)  
+-   **若要建立工作負載群組，請使用：**  [範本](#ConfRGTemplate)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  使用下列步驟即可開啟和修改建立資源集區與集區之工作負載群組的範本。 此外，這個範本可讓您建立使用者定義的分類函數，以便將新的連接路由傳送至預設群組或您所建立的工作負載群組。  

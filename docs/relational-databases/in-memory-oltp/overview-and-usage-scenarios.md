@@ -5,22 +5,20 @@ ms.date: 04/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 33804f220a760d2959f5e3feb1a629b07d1b0296
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -235,4 +233,3 @@ ETL 工作流程通常包含將資料載入暫存資料表、轉換資料，然�
 [在 SQL 資料庫中使用記憶體內部技術最佳化效能](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
 - [系統版本設定時態表與記憶體最佳化資料表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [記憶體內部 OLTP - 一般工作負載模式和移轉考量](http://msdn.microsoft.com/library/dn673538.aspx)。 
-

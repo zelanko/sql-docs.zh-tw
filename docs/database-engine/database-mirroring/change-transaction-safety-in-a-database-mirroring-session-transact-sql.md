@@ -5,24 +5,21 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transaction safety [SQL Server database mirroring]
+helpviewer_keywords: transaction safety [SQL Server database mirroring]
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6726de19f7adaa7d56e272cdbe4cba29263652a7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9cf22d160c37c4d8904830d363e6358cb5b40aea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>變更資料庫鏡像工作階段中的異動安全性 (Transact-SQL)
   交易安全性是控制工作階段作業模式的屬性。 不過，資料庫擁有者可隨時變更交易安全性。 依預設，交易安全性的等級會設定為 FULL (同步作業模式)。  
@@ -58,4 +55,3 @@ ms.lasthandoff: 08/02/2017
  [資料庫鏡像作業模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
-

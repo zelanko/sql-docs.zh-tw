@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deprecation [SQL Server], events announced stage
 - Deprecation Announcement event class
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f937e252123265ac28d215a751fc6419b5fe8dcc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2ab108ddb69d1de2859d80ba0c158d11c9ddb991
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement 事件類別
   當您使用的功能將從 **未來版本中移除，但不會從下一個主要版本中移除時，就會發生** Deprecation Announcement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件類別。 為了使應用程式的使用壽命達到最久，請避免使用會造成 **Deprecation Announcement** 事件類別或 **Deprecation Final Support** 事件類別的功能。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 |NTUserName|**nvarchar**|Windows 使用者名稱。|6|是|  
 |ObjectID|**int**|已被取代功能的識別碼。|22|是|  
 |ObjectName|**nvarchar**|已被取代功能的名稱。|34|是|  
-|Offset|**整數**|預存程序或批次內之陳述式的起始位移。|61|是|  
+|Offset|**int**|預存程序或批次內之陳述式的起始位移。|61|是|  
 |RequestID|**int**|包含陳述式之要求的識別碼。|49|是|  
 |ServerName|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName**  將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  

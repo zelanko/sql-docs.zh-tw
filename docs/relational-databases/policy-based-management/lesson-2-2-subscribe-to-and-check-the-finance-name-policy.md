@@ -5,24 +5,21 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c8ead370baae4066fecdc6545636668958991adf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e2b9e0e0b25d4764d1c4f0f51f082c0a882c31b1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-2---subscribe-to-and-check-the-finance-name-policy"></a>第 2-2 課：訂閱和檢查 Finance Name 原則
 在這項工作中，您會將 Finance 資料庫設定為訂閱 Finance 原則類別目錄。 然後，您將測試 Finance Name 原則。  
@@ -84,4 +81,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

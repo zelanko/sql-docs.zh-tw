@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 93aa4c5421406067d6ff97bc148ca5970d40bb4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6bab5e3ddb4473a949b12f0ce001a947262966c7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
   此主題描述如何備份及還原 DQS 資料庫。  
@@ -81,4 +79,3 @@ ms.lasthandoff: 09/09/2017
  [管理 DQS 資料庫](../data-quality-services/manage-dqs-databases.md)  
   
   
-

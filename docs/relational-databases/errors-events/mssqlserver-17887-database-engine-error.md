@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 17887 (Database Engine error)
+helpviewer_keywords: 17887 (Database Engine error)
 ms.assetid: ad0806e6-3296-4c32-b103-fccf0f8a8d3d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6aef26c0ef39217ea990f433e84751d87ca31345
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3fce6828cbb09c0677d3beaf76f4441a2fbf1334
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver17887"></a>MSSQLSERVER_17887
   
@@ -43,4 +40,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="user-action"></a>使用者動作  
 請連絡 Microsoft 客戶支援服務 (CSS)。  
   
-

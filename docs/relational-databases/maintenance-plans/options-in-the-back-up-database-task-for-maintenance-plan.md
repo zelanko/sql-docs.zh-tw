@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.logbackup.f1
 - sql13.swb.maint.backup.f1
-helpviewer_keywords:
-- Back Up Database Task dialog box
+helpviewer_keywords: Back Up Database Task dialog box
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 190b77647ebce66f7cf7af006f3b817605969bae
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5cd325a83874a12581143e7bf634c3b7348c28ce
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>維護計畫之備份資料庫工作中的選項
   使用 [備份資料庫工作] 對話方塊，即可將備份工作加入維護計畫中。 萬一因為發生系統或硬體失敗 (或使用者錯誤) 而導致資料庫在某方面發生損毀，因此需要還原已備份副本時，備份資料庫就相當重要。 此工作讓您能夠執行完整、差異、檔案和檔案群組，以及交易記錄的備份。  
@@ -142,4 +139,3 @@ ms.lasthandoff: 06/22/2017
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
   
-

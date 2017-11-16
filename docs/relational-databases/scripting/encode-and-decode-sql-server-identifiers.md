@@ -5,28 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e5499ddf0c36d277068cb222a5c438c720a4c3a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d78eacf5eda2259084bec49f79fd4e46877fb03b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>編碼及解碼 SQL Server 識別碼
   SQL Server 分隔識別碼有時會包含 Windows PowerShell 路徑中不支援的字元。 編碼這些字元的十六進位值，就可以指定這些字元。  
   
-1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
+1.  **開始之前：**  [限制事項](#LimitationsRestrictions)  
   
-2.  **To process special characters:**  [Encoding an Identifier](#EncodeIdent), [Decoding an Identifier](#DecodeIdent)  
+2.  **處理特殊字元：**  [編碼識別碼](#EncodeIdent)、 [解碼識別碼](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>開始之前  
  Windows PowerShell 路徑名稱中不支援的字元可以表示或編碼為 "%" 字元，後面緊接著代表此字元之位元模式的十六進位值，就像是 "**%**xx"。 編碼一定可以用來處理 Windows PowerShell 路徑中不支援的字元。  

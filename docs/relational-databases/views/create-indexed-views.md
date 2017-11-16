@@ -5,8 +5,7 @@ ms.date: 05/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-views
+ms.technology: dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24b4e22249ec7a175dc3ae239dea329c4d18208f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 89123d1083729da9ec8f23f5ed34eb2b10c2f9d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立索引檢視表。 對檢視建立的第一個索引必須是唯一的叢集索引。 建好唯一的叢集索引後，才可以建立其他非叢集索引。 為檢視表建立唯一的叢集索引，可以提升查詢效能，因為檢視表儲存在資料庫中的方式與包含叢集索引之資料表的儲存方式一樣。 查詢最佳化工具可以利用索引檢視表來加快查詢執行的速度。 不必在查詢中參考此檢視表，最佳化工具仍會考慮以該檢視表做為替代方式。  
@@ -226,4 +225,3 @@ ms.lasthandoff: 06/22/2017
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 08/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: 71
+caps.latest.revision: "71"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 1d66683d848709cb100454909ee2e99e755315f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 23023f6f4d8fe277bfee15c467be88aaa04a5723
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>將資料庫還原到新位置 (SQL Server)
   此主題描述如何使用 SQL Server Management Studio (SSMS) 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫還原至新位置，並選擇性地重新命名資料庫。 您可以將資料庫移至新目錄路徑，或是在相同的伺服器執行個體或不同的伺服器執行個體上建立資料庫的複本。  
@@ -208,4 +206,3 @@ GO
  [使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 04/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 9d383bdc6916d9089a713fe652bb7c1c764bafd2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
-ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-columns-from-a-table"></a>從資料表中刪除資料行
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -104,4 +102,3 @@ ms.lasthandoff: 07/31/2017
  如需其他範例，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。  
   
 ##  <a name="FollowUp"></a>  
-

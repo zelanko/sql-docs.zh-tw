@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], scripts
 - scripts [SQL Server replication]
 ms.assetid: 9a6872c2-9bed-477f-9d2f-332d640edcf2
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4631b5ce272afe782307031e946d9b89210ad434
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c9bc1f84cf007de680f8f2da80668aebe62f7d8e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="execute-scripts-before-and-after-the-snapshot-is-applied"></a>在套用快照集之前及之後執行指令碼
   您可以指定在套用快照集之前或之後在「訂閱者」端執行指令碼。 指令碼在很多情況下都會用到，例如在各「訂閱者」端建立登入和結構描述 (物件擁有者) 時。  
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/03/2017
  [快照集選項](../../relational-databases/replication/snapshot-options.md)  
   
   
-

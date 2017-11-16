@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dbmmonitor.status.f1
+f1_keywords: sql13.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 58634269a34ed091c99954435d93df892fa4d7df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: faa2f672bccc678270d6a7387d27b40e73688425
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring-monitor-status-page"></a>資料庫鏡像監視器 (狀態頁面)
   這個唯讀頁面會針對目前在導覽樹狀目錄中選取的資料庫，顯示其主體和鏡像伺服器執行個體的最新鏡像狀態。 如果有關某個執行個體的資訊目前無法使用，則 [狀態] 方格中與該執行個體對應的某些資料格就會呈現灰色並顯示 [未知]。  
@@ -108,4 +105,3 @@ ms.lasthandoff: 08/02/2017
  [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   
-

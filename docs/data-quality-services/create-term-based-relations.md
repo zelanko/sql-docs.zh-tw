@@ -5,24 +5,21 @@ ms.date: 11/08/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.kbtermsbased.f1
+f1_keywords: sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bdb1f4375ca80534e5b574d9b298fe053f2d4ec2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93965e0267bb988b2b833701c9f193385220ff90
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-term-based-relations"></a>建立以詞彙為主的關聯
   此主題描述如何針對 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的定義域建立以詞彙為主的關聯。 以詞彙為主的關聯 (TBR) 可讓您針對屬於定義域值的詞彙進行更正。 它會啟用多個值，這些值除了被視為相同同義字的共同部分拼字以外，都是相同的。 例如，您可以設定某個以詞彙為主的關聯，將 “Inc.” 詞彙變更為 “Incorporated”。 每當在定義域中遇到 “Inc.” 詞彙時，都會加以變更。 出現 “Contoso, Inc.” 的地方將會變更為 “Contoso, Incorporated”，而且這兩個值會被視為完全相符的同義字。  
@@ -69,12 +66,12 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 或 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [建立知識庫](../data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  定義域管理會在 Data Quality Services 用戶端的頁面上執行，該頁面包含個別定義域管理作業所適用的五個索引標籤。 這不是精靈驅動的程序，任何管理作業都可以個別執行。  
   
-3.  從 **[定義域管理]** 頁面的 **[定義域清單]** 中，選取您想要建立定義域規則的定義域，或是建立新的定義域。 如果您必須建立新的定義域，請參閱＜ [Create a Domain](../data-quality-services/create-a-domain.md)＞。  
+3.  從 **[定義域管理]** 頁面的 **[定義域清單]** 中，選取您想要建立定義域規則的定義域，或是建立新的定義域。 如果您必須建立新的定義域，請參閱＜ [建立定義域](../data-quality-services/create-a-domain.md)＞。  
   
 4.  按一下 **[以詞彙為主的關聯]** 索引標籤。  
   
@@ -108,4 +105,3 @@ ms.lasthandoff: 09/09/2017
  在您建立以詞彙為主的關聯之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
   
   
-

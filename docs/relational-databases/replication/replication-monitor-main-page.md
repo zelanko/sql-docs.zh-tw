@@ -5,23 +5,21 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.main.f1
+f1_keywords: sql13.rep.monitor.main.f1
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 07be2b5aea20d71430179d475d9bbc6babc7862e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7ea7953ff3052c4880564ab566b549336d542345
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-monitor-main-page"></a>複寫監視器，主要頁面
   複寫監視器可讓您跨複寫拓撲，追蹤發行集和訂閱的狀態與效能。 下列主題提供詳細資訊：  

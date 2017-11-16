@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.newsystemrole.f1
+f1_keywords: sql13.swb.reportserver.newsystemrole.f1
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f4917fea7fbaa0f652287a08e0a3a5727feaad9e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e23fd1bf9227866d2bfe2421279a2dd052debbb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-system-role-management-studio"></a>新增系統角色 (Management Studio)
   使用此頁面，即可建立系統層級角色定義。 系統角色定義會指定一組整個套用至報表伺服器的系統層級工作。  
@@ -48,9 +46,8 @@ ms.lasthandoff: 08/09/2017
  **工作描述**  
  顯示工作的描述，其中列舉出工作能夠支援的作業或權限。  
   
-## <a name="see-also"></a>請參閱＜  
- [Report Server in Management Studio F1 說明](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+## <a name="see-also"></a>另請參閱  
+ [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [角色定義](../../reporting-services/security/role-definitions.md)  
   
   
-

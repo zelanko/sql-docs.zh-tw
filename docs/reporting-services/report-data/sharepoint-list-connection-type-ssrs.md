@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 清單連接類型 (SSRS) |Microsoft 文件"
+title: "SharePoint 清單連線類型 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 23799f3c292e7a64ca859d06b570bd8f4657953a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 00525d6020ece647a6a7dbd7630e20422aa94223
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 清單連接類型 (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-若要在報表中包含來自 Microsoft SharePoint 清單的資料，您必須加入或建立以 Microsoft SharePoint 清單類型之報表資料來源為基礎的資料集。 這是以 Microsoft SQL Server Reporting Services SharePoint 清單資料延伸模組為基礎的內建資料來源類型。 若要連接並擷取清單資料，從 SharePoint 2013 和更新版本中使用此資料來源類型。
+若要在報表中包含來自 Microsoft SharePoint 清單的資料，您必須加入或建立以 Microsoft SharePoint 清單類型之報表資料來源為基礎的資料集。 這是以 Microsoft SQL Server Reporting Services SharePoint 清單資料延伸模組為基礎的內建資料來源類型。 使用此資料來源類型可連線至 SharePoint 2013 和更新版，並從中擷取清單資料。
 
-您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)類型之報表資料來源為基礎的資料集。  
+您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
 
 ##  <a name="Connection"></a> 連接字串  
  SharePoint 清單的連接字串是 SharePoint 網站或子網站的 URL，例如 `http://MySharePointWeb/MySharePointSite` 或 `http://MySharePointWeb/MySharePointSite/Subsite`。  
@@ -72,7 +71,7 @@ ms.lasthandoff: 08/09/2017
 
  若 SharePoint 技術設為搭配「Windows 整合式」模式的報表伺服器使用，此選項會套用至目前的 Windows 使用者和目前的 SharePoint 使用者。
  
- 若 SharePoint 技術設為不搭配報表伺服器使用 (本機模式)，則不支援此選項。 如需本機模式的詳細資訊，請參閱[本機模式與連接模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)。  
+ 若 SharePoint 技術設為不搭配報表伺服器使用 (本機模式)，則不支援此選項。 如需本機模式的詳細資訊，請參閱[本機模式與本機模式與連接模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)。  
   
  **不需要認證 (請勿使用認證)：**  
  若要使用這個選項，您必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
@@ -96,9 +95,9 @@ ms.lasthandoff: 08/09/2017
   
 -   **隱藏** ：欄位是否顯示在 SharePoint 清單檢視中。  
   
- 不支援從多個清單中選取欄位。 您可為每個清單建立資料集，然後從每個資料集選取欄位。 若清單具有一般欄位，可以使用繫結到某個資料集的 Tablix 資料區中之 Lookup 函數，從未繫結到資料區的其他資料集中擷取值。 如需詳細資訊，請參閱 [Lookup 函數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。  
+ 不支援從多個清單中選取欄位。 您可為每個清單建立資料集，然後從每個資料集選取欄位。 若清單具有一般欄位，可以使用繫結到某個資料集的 Tablix 資料區中之 Lookup 函數，從未繫結到資料區的其他資料集中擷取值。 如需詳細資訊，請參閱[查閱函數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。  
   
--   **選取的欄位**  ：顯示您已經選取的欄位。 在此窗格中，欄位的名稱為 SharePoint 使用者已經指定的易記名稱。 當您關閉查詢設計工具時，您會在 [報表資料] 窗格的資料集欄位集合中看到這些名稱。 [資料集屬性對話方塊、欄位 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 頁面有唯一名稱和易記名稱之間的關聯性。  
+-   **選取的欄位**  ：顯示您已經選取的欄位。 在此窗格中，欄位的名稱為 SharePoint 使用者已經指定的易記名稱。 當您關閉查詢設計工具時，您會在 [報表資料] 窗格的資料集欄位集合中看到這些名稱。 [資料集屬性對話方塊、欄位 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 頁面有唯一名稱和易記名稱之間的關聯性。  
   
 -   **套用的篩選**  ：在資料傳回報表前，限制從 SharePoint 清單傳回的資料。 選取欄位名稱、運算子及值，用來限制在清單中擷取的資料。 這些運算子會隨著您選取之值的資料類型而有所不同。  
   
@@ -106,7 +105,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **查詢結果**  ：顯示查詢執行時所傳回的範例資料列。 如果 SharePoint 網站上的 SharePoint 清單值經常變更，您在查詢結果窗格中看到的值可能會與您在報表中看到的值不同。  
   
--   **選取的欄位**  ：顯示您已經選取的欄位。 在此窗格中，欄位的名稱為 SharePoint 使用者已經指定的易記名稱。 當您關閉查詢設計工具時，您會在 [報表資料] 窗格的資料集欄位集合中看到這些名稱。 [資料集屬性對話方塊、欄位 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 頁面有唯一名稱和易記名稱之間的關聯性。  
+-   **選取的欄位**  ：顯示您已經選取的欄位。 在此窗格中，欄位的名稱為 SharePoint 使用者已經指定的易記名稱。 當您關閉查詢設計工具時，您會在 [報表資料] 窗格的資料集欄位集合中看到這些名稱。 [資料集屬性對話方塊、欄位 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 頁面有唯一名稱和易記名稱之間的關聯性。  
   
 -   **套用的篩選**  ：在資料傳回報表前，限制從 SharePoint 清單傳回的資料。 選取欄位名稱、運算子及值，用來限制在清單中擷取的資料。 這些運算子會隨著您選取之值的資料類型而有所不同。  
   
@@ -192,8 +191,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另請參閱
 
 [報表參數](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
-[篩選、 分組和排序資料](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+[篩選、分組和排序資料](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

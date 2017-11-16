@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,19 @@ helpviewer_keywords:
 - Replication Monitor, thresholds and warnings
 - monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b47d0b4565cc187ae0746fa7a6c9b5b1f864c3e7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8f7ff9819526f700afc3b466b26ff32277a3c8b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在複寫監視器中設定臨界值和警告
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions. 依預設，複寫監視器只針對未初始化的訂閱顯示警告，但您可以啟用於其他條件下發出警告。 建議您啟用拓撲警告，這樣您才能收到即時的狀態和效能資訊。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器會顯示發行集和訂閱的狀態資訊。 依預設，複寫監視器只針對未初始化的訂閱顯示警告，但您可以啟用於其他條件下發出警告。 建議您啟用拓撲警告，這樣您才能收到即時的狀態和效能資訊。  
   
  在您啟用警告時，必須指定臨界值。 達到或超過臨界值時，會顯示警告 (除非有更高優先順序的問題需要顯示)。 除了在複寫監視器顯示警告外，達到臨界值也會觸發警示。 您可啟用滿足下列條件時的警告：  
   
@@ -63,7 +62,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在左窗格中展開發行者群組，展開發行者，然後按一下發行集。  
   
-2.  按一下 **[警告]** 索引標籤。 若要檢視此索引標籤上選項的詳細資訊，請按一下功能表列上的 **[說明]** 。  
+2.  按一下 **[警告]** 索引標籤。若要檢視此索引標籤上選項的詳細資訊，請按一下功能表列上的 **[說明]** 。  
   
 3.  透過選取適當的核取方塊啟用警告： **[若訂閱將在臨界值內過期，就發出警告]** 或 **[若延遲超過臨界值，就發出警告]**。  
   
@@ -95,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在左窗格中展開發行者群組，展開發行者，然後按一下發行集。  
   
-2.  按一下 **[警告]** 索引標籤。 若要檢視有關這個索引標籤之選項的詳細資訊，請按一下功能表列上的 **[說明]** 。  
+2.  按一下 **[警告]** 索引標籤。若要檢視有關這個索引標籤之選項的詳細資訊，請按一下功能表列上的 **[說明]** 。  
   
 3.  透過選取適當的核取方塊啟用警告：  
   
@@ -137,7 +136,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在左窗格中展開發行者群組，展開發行者，然後按一下發行集。  
   
-2.  按一下 **[警告]** 索引標籤。 若要檢視此索引標籤上選項的詳細資訊，請按一下上方功能表上的 **[說明]** 。  
+2.  按一下 **[警告]** 索引標籤。若要檢視此索引標籤上選項的詳細資訊，請按一下上方功能表上的 **[說明]** 。  
   
 3.  透過選取 **[若訂閱將在臨界值內過期，就發出警告]**核取方塊啟用警告。  
   

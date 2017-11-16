@@ -5,22 +5,20 @@ ms.date: 04/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 39f35a44ed05d820352f1b699363c5dddb9cec84
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 5f74f31531f0b3c966235396d91ce12b00428d5c
-ms.openlocfilehash: 922e6a4a0df86f82012670874d49b65e1338b53c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>資料表和預存程序的原生編譯
 
@@ -218,4 +216,3 @@ native_sp 的 DLL 可直接與 t1 的 DLL 以及記憶體中 OLTP 儲存引擎�
 [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
 [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
-

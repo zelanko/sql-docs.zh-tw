@@ -5,8 +5,7 @@ ms.date: 07/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - backups [SQL Server], about
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
-caps.latest.revision: 84
+caps.latest.revision: "84"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6839d0474f1062f5dc0e247e9bb1fdbbf492c9c9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 4889445404ebce0a1d3ac74a4e8f49d9fe73f980
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份元件。 備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫對於保護資料非常重要。 此討論涵蓋備份類型和備份限制。 本主題同時介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份裝置和備份媒體。  
@@ -129,7 +128,7 @@ ms.lasthandoff: 06/22/2017
   
 -   如果在備份作業進行當中試圖建立或刪除資料庫檔案，建立或刪除作業會失敗。  
   
- 如果備份作業與檔案管理或壓縮作業重疊，便會發生衝突。 不論哪一個衝突的作業先開始，第二項作業都會等候第一項作業設定的鎖定逾時 (逾時期間由工作階段逾時設定控制)。如果在逾時期間解除鎖定，第二項作業就會繼續下去。 如果鎖定逾時，第二項作業就會失敗。  
+ 如果備份作業與檔案管理或壓縮作業重疊，便會發生衝突。 不論哪一個衝突的作業先開始，第二項作業都會等候第一項作業設定的鎖定逾時(逾時期間由工作階段逾時設定控制)。如果在逾時期間解除鎖定，第二項作業就會繼續下去。 如果鎖定逾時，第二項作業就會失敗。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **備份裝置和備份媒體**  
@@ -185,4 +184,3 @@ ms.lasthandoff: 06/22/2017
  [復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
-

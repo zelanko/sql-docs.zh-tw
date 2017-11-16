@@ -1,13 +1,11 @@
 ---
 title: "選擇加密演算法 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 01/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
+ms.openlocfilehash: 5d54be210c6a9d791bc27afbad436c2ea5f69fee
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 77cee9391335f384c94aa0fa3cf71808baf36056
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-an-encryption-algorithm"></a>選擇加密演算法
   加密是全面防禦中的一環，可提供給想要維護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體安全的管理員使用。  
@@ -82,4 +79,3 @@ ms.lasthandoff: 08/28/2017
  [加密階層](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

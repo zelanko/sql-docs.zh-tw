@@ -5,8 +5,7 @@ ms.date: 08/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - change tracking [SQL Server], configuring
 - data [SQL Server], changing
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 156e5514169d9b4ca9f8cca9e5f06a46187211aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 3e308642f2b1443bfe08ace24064c104662037c7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>啟用和停用變更追蹤 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料庫屬性 &#40;變更追蹤頁面&#41; [資料庫屬性 &#40;變更追蹤頁面&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 中的變更追蹤。  
+ 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料庫屬性 &#40;變更追蹤頁面&#41; [資料庫屬性 &amp;#40;變更追蹤頁面&amp;#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 中的變更追蹤。  
   
  當您啟用變更追蹤時，可以指定 CHANGE_RETENTION 和 AUTO_CLEANUP 選項，而且您可以在啟用變更追蹤之後的任何時間變更這些值。  
   
@@ -67,7 +66,7 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
- 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料庫屬性 &#40;變更追蹤頁面&#41; [資料庫屬性 &#40;變更追蹤頁面&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 中的變更追蹤。  
+ 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料庫屬性 &#40;變更追蹤頁面&#41; [資料庫屬性 &amp;#40;變更追蹤頁面&amp;#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 中的變更追蹤。  
   
  當 TRACK_COLUMNS_UPDATED 選項設定為 ON 時， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將哪些資料行已更新的相關額外資訊儲存到內部變更追蹤資料表。 資料行追蹤只能讓應用程式同步處理已經更新的那些資料行。 這樣可以改善效率與效能。 但是，由於維護資料行追蹤資訊會增加額外的儲存負擔，所以此選項預設為 OFF。  
   
@@ -99,4 +98,3 @@ DISABLE CHANGE_TRACKING;
  [管理變更追蹤 &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)  
   
   
-

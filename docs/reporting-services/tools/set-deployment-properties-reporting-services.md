@@ -16,17 +16,16 @@ helpviewer_keywords:
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 555497ecba823a6c13babbbfd1958bf293bd1f9b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-deployment-properties-reporting-services"></a>設定部署屬性 (Reporting Services)
   在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您必須為報表及共用資料來源指定報表伺服器和資料夾 (選擇性)，讓您可以將報表伺服器專案中的項目發行至報表伺服器。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 需要建立、預覽部署報表的屬性和值都儲存在報表伺服器專案的專案組態中。 您可以為這些專案屬性建立多個命名集，讓您可以在屬性集之間方便地切換。 每一組屬性都是一個組態。 例如，您可以擁有一個組態將報表發行到測試伺服器，並有另一個組態將報表發行到實際伺服器。  
@@ -95,4 +94,3 @@ ms.lasthandoff: 08/09/2017
  [將報表發行至報表伺服器](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
   
   
-

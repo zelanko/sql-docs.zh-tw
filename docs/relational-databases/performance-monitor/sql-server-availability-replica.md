@@ -5,8 +5,7 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - SQLServer:Availability Replica
 - Availability Groups [SQL Server], performance counters
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f02d1bce1c2c66520e382334cedd00e292c524e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 297fce0c33230efa45c159807bed0a577cef804e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server、可用性複本
   **SQLServer:Availability Replica** 效能物件含有效能計數器，會報告有關 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中 AlwaysOn 可用性群組內可用性複本的資訊。 所有可用性複本效能計數器皆適用於主要複本和次要複本，並附有可以反映本機複本的傳送/接收計數器。 在大部分情況下，主要複本會傳送大部分資料，而次要複本會接收資料。 但次要複本會將 ACK 及一些其他背景流量傳送至主要複本。 請注意，在給定可用性複本上，有些計數器會顯示零值，這取決於本機複本目前的角色 (主要或次要) 而定。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/27/2017
  [AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
-

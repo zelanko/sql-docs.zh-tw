@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - statistical semantic search [SQL Server]
 - statistical semantic search [SQL Server], overview
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ca60c4ada6bd908d5401784db74a9b8b0c93396b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f9313ac6faefab348cd329394d5022fffbfbd96a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="semantic-search-sql-server"></a>語意搜尋 (SQL Server)
 統計語意搜尋會擷取統計上相關的「主要片語」並建立其索引，藉以深入解析儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的非結構化文件。 接著使用這些主要片語來識別「相似或相關文件」，並建立其索引。  
@@ -73,7 +71,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> 尋找讓文件相似或相關的主要片語  
+###  <a name="find3"></a> Find the key phrases that make documents similar or related  
  下列查詢會取得讓兩份範例文件相似或相關的主要片語。 它會依照排列每個主要片語之加權次序的分數，以遞減順序呈現結果。
  
  此查詢會呼叫 [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) 函式。  
@@ -120,4 +118,3 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  列出加入或變更以支援統計語意搜尋的 Transact-SQL 陳述式和 SQL Server 資料庫物件。  
   
   
-

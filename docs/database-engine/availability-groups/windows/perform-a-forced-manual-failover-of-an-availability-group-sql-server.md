@@ -5,27 +5,24 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroup.forcefailover.f1
+f1_keywords: sql13.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a6365667a087ddd408925dddbdd712cb26df3d96
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4bc7044919ec275a95801088d35efe2bc88bf7a0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組的強制手動容錯移轉 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，在 AlwaysOn 可用性群組上執行強制容錯移轉 (可能會遺失資料)。 強制容錯移轉是一種手動容錯移轉形式，嚴格限於 [已規劃的手動容錯移轉](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 不可行時用來進行災難復原。 如果您強制容錯移轉至非同步的次要複本，有些資料可能會遺失。 因此，強烈建議您只有在主要複本不再執行、而且您願意承擔遺失資料的風險以還原可用性群組中對資料庫的存取時，才進行強制容錯移轉。  
@@ -297,7 +294,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [讓可用性群組恢復其原始拓撲](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> 回應主要資料中心的重大錯誤  
+###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  下圖說明為了回應主要資料中心的重大錯誤，在遠端資料中心執行的一系列動作。  
   
  ![回應主要資料中心失敗的步驟](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "回應主要資料中心失敗的步驟")  
@@ -373,4 +370,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

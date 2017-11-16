@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.pubproperties.publicationaccesslist.f1
+f1_keywords: sql13.rep.newpubwizard.pubproperties.publicationaccesslist.f1
 ms.assetid: 9587bb9e-c66c-4e70-8171-09b943ec2d50
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d088078d9f36e1ca6fc0bc49cb324f95dd2f1db2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b677f40c1da11850799eee35c12f9a7ff5b60f1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-properties-publication-access-list"></a>發行集屬性，發行集存取清單
   **[發行集屬性]** 對話方塊的 **[發行集存取清單]** 頁面，可以讓您從發行集存取清單 (PAL) 加入與移除登入、帳戶和群組。 PAL 是保護發行者安全的主要機制。 建立發行集之後，複寫便會建立此發行集的 PAL。 PAL 的功能與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 存取控制清單相似，其中包含被授與存取發行集的登入、帳戶和群組之清單。  

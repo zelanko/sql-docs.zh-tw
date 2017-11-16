@@ -5,8 +5,7 @@ ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - fast file initialization (SQL Server)
 - file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 5d1ed7065cdbf710888c6b455fc1a059ecaebbfe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
-ms.openlocfilehash: 8535e2dd63e3842d249c3cc4a90654a3648f51b3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-instant-file-initialization"></a>資料庫立即檔案初始化
   系統會將資料和記錄檔初始化，以覆寫磁碟上先前刪除之檔案中所遺留的任何現有資料。 資料檔和記錄檔初始化的方式是先在您執行下列作業之一時，在檔案中填入 0：  
@@ -78,4 +76,3 @@ ms.lasthandoff: 08/16/2017
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
-

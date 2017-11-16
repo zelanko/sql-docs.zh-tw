@@ -5,24 +5,21 @@ ms.date: 12/04/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RPC:Completed event class
+helpviewer_keywords: RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b7fe53e7186d8b3408c2ecf838d1e1c11c96097f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2ec79d204274c0323e9622005a4235c3c4db62f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed 事件類別
   RPC:Completed 事件類別表示已經完成遠端程序呼叫。  
@@ -66,4 +63,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

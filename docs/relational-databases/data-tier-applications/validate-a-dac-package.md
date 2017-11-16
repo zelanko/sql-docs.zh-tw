@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data-tier application [SQL Server], view
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2b4bf32f3b4b39bbb4437fc61922e4c7ae1e552a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: b821b7c7aa037467bfe2607267faa6aed0a47859
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
   最好先檢閱 DAC 封裝的內容，再將它部署至實際執行環境，以及先驗證升級動作，再升級現有 DAC。 當您部署的封裝之前不是在組織內開發時，特別會是這個情況。  
@@ -141,7 +139,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>檢視升級動作範例 (PowerShell)  
  **檢視升級動作範例 (PowerShell)**  
   
- 下列範例報告一些 Transact-SQL 陳述式，若要將名為 MyApplicaiton 的 DAC 升級至 MyApplication2017.dacpac 檔案中所定義的結構描述，可執行這些陳述式。  
+ 下列範例報告 Transact-SQL 陳述式，可執行以將 DAC (名稱為 MyApplicaiton) 升級至 MyApplication2017.dacpac 檔案中所定義的結構描述。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -181,4 +179,3 @@ $fileStream.Close()
  [升級資料層應用程式](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
   
   
-

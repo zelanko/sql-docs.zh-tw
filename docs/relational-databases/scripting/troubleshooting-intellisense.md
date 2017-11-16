@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], unavailable options
 - troubleshooting [IntelliSense]
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d5926bbe8569ed88f2697d17cd754cf0fd081f05
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8e71773ba2cb7e49c9d76a52dbdfc96d671e9cf2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshooting-intellisense"></a>針對 IntelliSense 進行疑難排解
   在某些情況下，IntelliSense 選項的運作可能會不符合您的預期。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 06/22/2017
 -   如果您喪失與 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的連接，完成清單可能會停止運作。 請重新連接到該執行個體。  
   
   
-

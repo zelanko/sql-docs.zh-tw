@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Policy-Based Management, delete policy conditions
+helpviewer_keywords: Policy-Based Management, delete policy conditions
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4760109e6bd360e008dc962639880091d916ec3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b7daa5eb7882fd805680fc3cd58bf21fc7c2ced9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-a-policy-based-management-condition"></a>刪除原則式管理條件
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中刪除原則式管理條件。  
@@ -61,4 +58,3 @@ ms.lasthandoff: 06/22/2017
 6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的條件，然後按一下 **[確定]**。  
   
   
-

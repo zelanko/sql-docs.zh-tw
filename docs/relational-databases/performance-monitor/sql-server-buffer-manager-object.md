@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Buffer Manager object
 - SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 29b1764e30fe28153f6f86731f5b6fc520dc9027
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: af96b6c77c41c0e39a487218f14f4632f090ac8f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server 的 Buffer Manager 物件
   **Buffer Manager** 物件提供了可監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用情形的計數器：  

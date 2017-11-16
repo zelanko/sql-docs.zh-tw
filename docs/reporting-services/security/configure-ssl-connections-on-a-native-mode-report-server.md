@@ -10,19 +10,17 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Secure Sockets Layer (SSL)
+helpviewer_keywords: Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4f973faa65ed34695804de0815331f562b7a24f4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>在原生模式報表伺服器上設定 SSL 連接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式會使用 HTTP SSL (安全通訊端層) 服務來建立與報表伺服器的加密連接。 如果您在報表伺服器電腦的本機憑證存放區內有安裝憑證 (.cer) 檔案，您可以將此憑證繫結到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留項目，以便透過加密通道支援報表伺服器連接。  
@@ -91,7 +89,7 @@ ms.lasthandoff: 08/09/2017
   
  如果您使用 Reporting Services 組態管理員移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SSL 繫結，SSL 可能無法再於執行 Internet Information Services (IIS) 的伺服器或另一部 HTTP.SYS 伺服器的網站上運作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會移除下列登錄機碼。 移除此登錄機碼時，IIS 的 SSL 繫結也會移除。 若沒有此繫結，就不會對 HTTPS 通訊協定提供 SSL。 若要診斷此問題，請使用 IIS 管理員或 HTTPCFG.exe 命令列公用程式。若要解決此問題，請使用 IIS 管理員還原網站的 SSL 繫結。若要避免未來發生此問題，請使用 IIS 管理員移除 SSL 繫結，然後使用 IIS 管理員還原所需網站的繫結。 如需詳細資訊，請參閱知識庫文章： [SSL no longer works after you remove an SSL binding (移除 SSL 繫結之後 SSL 便不再有用) (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   
  [設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

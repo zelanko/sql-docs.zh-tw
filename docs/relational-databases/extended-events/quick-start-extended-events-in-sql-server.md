@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 54b7cc1dc7cbd96f17a9c39e1b0e1f8a812df145
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>快速入門︰SQL Server 中的擴充事件
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ SSMS UI 經年累月的調整結果，可能會造成文字和支援的螢幕擷
 
     ![[新增工作階段] > [事件] > [設定] > [篩選 (述詞)] > [欄位]](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. 按一下 [篩選 (述詞)] 索引標籤。 接著，按一下 [請按這裡加入子句]，以擷取具有 HAVING 子句的所有 SQL SELECT 陳述式。
+7. 按一下 [篩選 (述詞)] 索引標籤。接著，按一下 [請按這裡加入子句]，以擷取具有 HAVING 子句的所有 SQL SELECT 陳述式。
 
 8. 在 [欄位] 下拉式清單中，選擇 **sqlserver.sql_text**。
    - 針對 [運算子]，選擇 LIKE 運算子。
@@ -661,6 +661,5 @@ SELECT HAS_PERMS_BY_NAME(
 
 
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
-
 
 

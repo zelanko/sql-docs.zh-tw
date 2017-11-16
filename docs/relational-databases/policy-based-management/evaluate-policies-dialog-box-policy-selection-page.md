@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.runnow.f1
+f1_keywords: sql13.swb.dmf.runnow.f1
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 54f93115b0663a033fda00e85a2128a58a3db063
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a20a0491a0c5aa08b9c8688b3cbc20d94340f7d2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>評估原則對話方塊，原則選取頁面
   使用此對話方塊可評估以原則為基礎的管理原則。 您可以藉由選取 **[評估結果]** 頁面，將原則套用到目標集內不符合原則的項目。  
@@ -31,7 +29,7 @@ ms.lasthandoff: 06/22/2017
  指定原則的來源。 若要變更來源，請按一下 [瀏覽]\( **...** ) 按鈕，開啟 **[選取來源]** 對話方塊。  
   
  **檔案**  
- 輸入包含以原則為基礎之管理原則的檔案路徑，或是使用 [瀏覽]\( **...** ) 按鈕來選取檔案。  
+ 輸入包含以原則為基礎之管理原則的檔案路徑，或是使用 [瀏覽] (**...**) 按鈕來選取檔案。  
   
  **Server**  
  選取此選項可連接包含您想要之原則的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。  

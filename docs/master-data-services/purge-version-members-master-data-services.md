@@ -1,27 +1,24 @@
 ---
 title: "清除版本成員 (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3df9f832b7e19c394cd8bcbb1c6c2e8903e2deaa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 56cccc3f368f17118dece215275fbe23822e9040
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="purge-version-members-master-data-services"></a>清除版本成員 [Master Data Services]
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除成員只會停用或虛刪除該名成員。 資料仍然位於資料庫中。 本主題說明如何清除 (永久刪除) 模型版本中所有已虛刪除的成員。  
@@ -51,4 +48,3 @@ ms.lasthandoff: 09/07/2017
  如需詳細資訊，請參閱[分葉成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
   
-

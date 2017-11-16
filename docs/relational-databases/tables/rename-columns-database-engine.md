@@ -5,8 +5,7 @@ ms.date: 08/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - renaming columns
 - column names [SQL Server]
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e02a5d26a0a04d5afa1c4ddfcc9c06c503b6bd2c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 43a6fc74c8d89b91619017d9b5bc0fd3a6b470c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rename-columns-database-engine"></a>重新命名資料行 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.lasthandoff: 06/22/2017
 3.  在 [檔案]  功能表上，按一下 [儲存] *table name*。  
   
 > [!NOTE]  
->  您也可以在 **[資料行屬性]** 索引標籤中變更資料行的名稱。 請選取您要變更名稱的資料行，並輸入新的 **[名稱]**值。  
+>  您也可以在 **[資料行屬性]** 索引標籤中變更資料行的名稱。請選取您要變更名稱的資料行，並輸入新的 **[名稱]**值。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要重新命名資料行**  

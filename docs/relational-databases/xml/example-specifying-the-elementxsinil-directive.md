@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ELEMENTXSINIL directive
+helpviewer_keywords: ELEMENTXSINIL directive
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 42f40e0a22457f365e27a6f1560bd2f496366294
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dc7da5b0e66592b6d7c8f2f7318cc79483188571
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>範例：指定 ELEMENTXSINIL 指示詞
   當您指定 ELEMENT 指示詞來擷取元素中心的 XML 時，如果資料行有 NULL 值，EXPLICIT 模式就不會產生與其對應的元素。 您可以在 **xsi:nil** 屬性設為值 TRUE 之處，選擇性地指定 ELEMENTXSINIL 指示詞，要求產生 NULL 值的元素。  
@@ -86,4 +83,3 @@ FOR XML EXPLICIT;
  [搭配 FOR XML 使用 EXPLICIT 模式](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-

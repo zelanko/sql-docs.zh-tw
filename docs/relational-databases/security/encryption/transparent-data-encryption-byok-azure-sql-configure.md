@@ -16,15 +16,12 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
+ms.openlocfilehash: 122dfa3b81f526ac5433b3c88dc27637007464df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: cf8f46ab01c08e68fa22f65a4f86f4ff16f16ba3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
-
 # <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell：使用您自己的 Azure Key Vault 金鑰來啟用透明資料加密
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -193,6 +190,5 @@ ms.lasthandoff: 09/05/2017
 
 - 了解如何輪替伺服器的 TDE 保護裝置，以符合安全性需求：[使用 PowerShell 輪替透明資料加密保護裝置](transparent-data-encryption-byok-azure-sql-key-rotation.md)。
 - 萬一發生安全性風險時，了解如何移除可能被盜用的 TDE 保護裝置：[移除可能被盜用的金鑰](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)。 
-
 
 

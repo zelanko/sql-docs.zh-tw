@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CursorRecompile event class
+helpviewer_keywords: CursorRecompile event class
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb8545540abe4396d76f35d9c029f7b4afb3732e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 42c861d46916e0991388d3580877fb2b01ac22af
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile 事件類別
   **CursorRecompile** 事件類別描述在應用程式開發介面 (API) 資料指標中發生的資料指標重新編譯事件。 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 因為結構描述已變更而需重新編譯 Transact-SQL 資料指標時，就會發生資料指標重新編譯事件。  

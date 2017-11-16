@@ -5,21 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 6030bbac7cced5ed1ee60a2a34d505074a4a5f04
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e38a8b7a03c79a596d2c795b3ee992e974f604cb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>將自訂地圖加入 Reporting Services 行動報表
 自訂地圖需要兩個檔案︰  
@@ -59,4 +58,3 @@ ms.lasthandoff: 08/09/2017
   
   
   
-

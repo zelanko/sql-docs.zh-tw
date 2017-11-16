@@ -5,24 +5,21 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSSQL_ENG014161 error
+helpviewer_keywords: MSSQL_ENG014161 error
 ms.assetid: 4b983e76-bb77-43c5-b44b-19919d3da619
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b091848e626d3d27976906db1158769193bcccb0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8aa7877dfac934ba221146c252599ac26dfcd1cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqleng014161"></a>MSSQL_ENG014161
     
@@ -35,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |符號名稱||  
-|訊息文字|已設定臨界值 [%s:%s] \(針對發行集 [%s])。 請確定記錄讀取器和散發代理程式正在執行，而且符合延遲需求。|  
+|訊息文字|已設定臨界值 [%s:%s] (針對發行集 [%s])。 請確定記錄讀取器和散發代理程式正在執行，而且符合延遲需求。|  
   
 ## <a name="explanation"></a>說明  
  複寫可讓您啟用多個條件的警告。 這包括超過指定的交易式訂閱延遲。 延遲是指，資料變更受發行者認可與對應變更受訂閱者認可之間所經過的時間。  
@@ -55,4 +52,3 @@ ms.lasthandoff: 06/22/2017
  [錯誤和事件參考 &#40;複寫&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   
-

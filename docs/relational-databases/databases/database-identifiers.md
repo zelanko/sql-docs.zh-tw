@@ -5,12 +5,10 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - regular identifiers [SQL Server]
 - identifiers [SQL Server]
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - Transact-SQL identifiers
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6ec8d756aa5aa0c728ba5a3456a30809b4a0484
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 714352c240043c4ebfd2dd29ba82a8a87236c814
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-identifiers"></a>資料庫識別碼
   資料庫物件名稱又稱為識別碼。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每一個物件都具有識別碼。 伺服器、資料庫與資料庫物件 (如資料表、檢視、資料行、索引、觸發程序、程序、條件約束、規則) 都可以有識別碼。 大多數物件都需要識別碼，但對部分物件如條件約束，則是選擇性的需求。  

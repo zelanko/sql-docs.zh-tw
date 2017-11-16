@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Exchange Spill event class
+helpviewer_keywords: Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5920469e3f0ff312ac155011300034b8d8f8de50
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3fcde620a2badc249d1f6105548ca4e816e4fdb4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 事件類別
   **Exchange Spill** 事件類別指出平行查詢計劃中的通訊緩衝區，已暫時寫入 **tempdb** 資料庫。 這種情況並不常見，只有在查詢計畫有多重範圍掃描時才會發生。  
@@ -67,7 +65,7 @@ ms.lasthandoff: 06/22/2017
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 **master** 資料庫的 **syslogins** 資料表中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 使用者名稱。|6|是|  
-|**Exchange Spill**|**int**|系統指派給物件的識別碼。 與顯示計畫中的節點識別碼相對應。|22|是|  
+|**ObjectID**|**int**|系統指派給物件的識別碼。 與顯示計畫中的節點識別碼相對應。|22|是|  
 |**RequestID**|**int**|包含陳述式之要求的識別碼。|49|是|  
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |**SessionLoginName**|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
@@ -82,4 +80,3 @@ ms.lasthandoff: 06/22/2017
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
-

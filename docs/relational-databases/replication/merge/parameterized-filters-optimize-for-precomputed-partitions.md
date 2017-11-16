@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - merge replication precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 36f6331a6196e7c7c4bd9e476ae98c56418fad4f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 59067f9e47c7bff8a41326da8e095e2d8d9fe94a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>參數化篩選 - 針對預先計算的資料分割最佳化
   預先計算的資料分割是可用於篩選合併式發行集的效能最佳化。 預先計算的資料分割也是在篩選發行集上使用邏輯記錄的需求。 如需邏輯記錄的詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 06/22/2017
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   
-

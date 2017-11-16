@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.maint.cleanup.f1
-helpviewer_keywords:
-- Maintenance Cleanup Task dialog box
+f1_keywords: sql13.swb.maint.cleanup.f1
+helpviewer_keywords: Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 47b569e7d8c486de044d9784af2cb6adbab50b4f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3934b29a7067cda0cd74656c2f6fa38f0748e658
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>維護清除工作 (維護計畫)
   使用 **[維護清除工作]** ，即可移除與維護計畫相關的舊檔案 (包括維護計畫和資料庫備份檔案所建立的文字報表)。  
@@ -101,7 +97,6 @@ ms.lasthandoff: 06/22/2017
  提供驗證時要使用的密碼。 無法使用此選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [中 [物件總管] 之](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   
-

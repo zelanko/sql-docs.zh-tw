@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Mount Tape event class
+helpviewer_keywords: Mount Tape event class
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bdfe11491fd0850d1255b560cc394a8e82446ce
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d3d00f865e7beee1248ba43fd4008c1d32685e8b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 事件類別
   收到磁帶掛載要求時，就會發生 Mount Tape 事件類別。 使用此事件類別來監視磁帶掛載要求，以及要求的成功或失敗。  

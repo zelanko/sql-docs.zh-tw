@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:General Statistics
 - General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e179c0523d8d406f9413f98a0a5a7acbc7e714a1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cd44f59d6fe693dbf8695830240ba1a16453d123
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server 的 General Statistics 物件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 **SQLServer:General Statistics** 物件提供計數器來監視整個伺服器範圍的一般活動，例如目前的連接數目，以及每秒與執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦連接與中斷連接的使用者數目。 當您處理大型線上交易處理 (OLTP) 類型的系統時，這類系統中有許多用戶端會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體連接與中斷連接，這時就會相當有用。  
@@ -61,4 +59,3 @@ ms.lasthandoff: 06/22/2017
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

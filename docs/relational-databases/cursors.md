@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - requesting cursors
 - cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 305a84696e0677ef3058b89e83ba73e96188607a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cursors"></a>資料指標
   關聯式資料庫中的作業會針對完整的資料列集運作。 例如，由 SELECT 陳述式所傳回的資料列集包括所有滿足陳述式 WHERE 子句之條件的資料列。 由陳述式傳回的完整資料列稱為結果集。 應用程式 (尤其是互動式線上應用程式) 不一定能夠以一個單位有效地運用整個結果集。 這些應用程式需要一個機制，一次運用一個資料列或小型資料列區塊。 資料指標就是一種結果集的擴充，提供此種機制。  
@@ -117,7 +115,7 @@ ms.lasthandoff: 06/22/2017
 5.  關閉資料指標。  
   
 ## <a name="related-content"></a>相關內容  
- [Cursor Behaviors](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [How Cursors Are Implemented](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
+ [資料指標行為](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [如何實作資料指標](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../t-sql/language-elements/declare-cursor-transact-sql.md)   
