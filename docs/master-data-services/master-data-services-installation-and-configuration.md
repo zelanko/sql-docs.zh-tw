@@ -1,27 +1,24 @@
 ---
 title: "Master Data Services 安裝和組態 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 51f41c33e4fc71a626a4182c0be21c958936a7da
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 1993aee7d27d51a3788df44288a014374fcf430c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
   本文說明如何在 Windows Server 2012 R2 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 、設定 MDS 資料庫與網站，以及部署範例模型和資料。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 可讓您的組織管理受信任的資料版本。   
@@ -147,7 +144,7 @@ ms.lasthandoff: 09/27/2017
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_AdminPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-adminpage.png)  
   
-6.  按一下 **「下一步」** 檢視 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的設定摘要，然後按一下 **「下一步」** 建立資料庫。 [進度和完成] 頁面隨即出現。
+6.  按一下 [下一步] 檢視 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的設定摘要，然後按一下 [下一步] 建立資料庫。 [進度和完成] 頁面隨即出現。
 
 7. 建立和設定資料庫時，請按一下 [完成]。  
   
@@ -155,7 +152,7 @@ ms.lasthandoff: 09/27/2017
   
 7.  在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 的 [資料庫組態] 頁面上，按一下 [選取資料庫]。  
   
-8.  按一下 **「連接」**，並選取您在步驟 7 中建立的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，然後按一下 **「確定」**。 
+8.  按一下 [連接]，並選取您在步驟 7 中建立的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，然後按一下 [確定]。 
 
     ![mds_2016ConfigManager_SelectDatabaseButton_ConnectToDatabaseDialog](../master-data-services/media/mds-2016configmanager-selectdatabasebutton-connecttodatabasedialog.png)  
   
@@ -188,7 +185,7 @@ ms.lasthandoff: 09/27/2017
   
 12. 在 [Web 組態] 頁面的 [Web 應用程式] 方塊中，按一下您已建立的應用程式，然後按一下 [將應用程式與資料庫產生關聯] 區段中的 [選取]。  
   
-13. 按一下 **「連接」**，並選取您想要與 Web 應用程式產生關聯的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，然後按一下 **「確定」**。  
+13. 按一下 [連接]，並選取您想要與 Web 應用程式產生關聯的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，然後按一下 [確定]。  
   
      您已完成網站的設定程序。 現在，[Web 組態] 頁面即會顯示您所選的網站、所建立的 Web 應用程式以及資料庫的相關聯 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 應用程式。  
 
@@ -294,4 +291,3 @@ ms.lasthandoff: 09/27/2017
  [Master Data Services &#40;MDS&#41; 的新功能](../master-data-services/what-s-new-in-master-data-services-mds.md)  
   
   
-

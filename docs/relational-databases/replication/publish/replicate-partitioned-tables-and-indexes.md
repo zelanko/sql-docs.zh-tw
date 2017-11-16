@@ -5,8 +5,7 @@ ms.date: 09/10/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - publishing [SQL Server replication], partitioned tables
 - transactional replication, partitioned tables
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ca19ef9e234653e490e8c9b92bcf221b2175a341
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: af0684fed880dabb06c989e9735b266b059f12b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>複寫資料分割資料表及索引
   分割大型資料表或索引將更易於管理，因為分割可讓您快速並有效率地管理及存取資料子集，同時又可維護資料收集的完整性。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。 複寫可支援資料分割，其方式是提供一組屬性來指定應該如何處理資料分割資料表和索引。  
@@ -85,4 +83,3 @@ ms.lasthandoff: 06/22/2017
  [發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   
-

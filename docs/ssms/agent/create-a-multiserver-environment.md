@@ -5,8 +5,7 @@ ms.date: 01/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - target servers [SQL Server], about target servers
 - multiserver environments [SQL Server]
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cd9eee1cd80634bd3472bcf4e948658eed3a60f2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 502763ce7527a31ade9e35cffeaad67e6fae9590
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-multiserver-environment"></a>建立多伺服器環境
 多伺服器管理會要求您設定一部主要伺服器 (MSX) 以及一或多部目標伺服器 (TSX)。 將在所有目標伺服器上處理的作業會先在主要伺服器上定義，然後再下載至目標伺服器。  
@@ -60,10 +58,9 @@ ms.lasthandoff: 06/22/2017
 |描述如何建立目標伺服器。|[設為目標伺服器](../../ssms/agent/make-a-target-server.md)|  
 |描述如何將目標伺服器編列到主要伺服器中。|[將目標伺服器編列至主要伺服器](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
 |描述如何使目標伺服器脫離主要伺服器，|[使目標伺服器脫離主要伺服器](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
-|描述如何使多個目標伺服器脫離主要伺服器。|[使多個目標伺服器脫離主要伺服器](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
+|描述如何從主要伺服器脫離多部目標伺服器。|[從主要伺服器脫離多個目標伺服器](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
 |描述如何檢查目標伺服器的狀態。|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/en-us/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/en-us/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   
 ## <a name="see-also"></a>另請參閱  
 [為使用 Proxy 的多伺服器作業疑難排解](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  
   
-

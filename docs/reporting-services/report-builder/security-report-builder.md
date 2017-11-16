@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7e6f09ff050246777e307f73280c764dd6da3ad7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 927607181f78077fdaf9a02f959b2c37d7ed9c51
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="security-report-builder"></a>安全性 (報表產生器)
   報表產生器是一種報表撰寫用戶端應用程式，專為搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器使用而設計。 該報表伺服器可以設定為以獨立伺服器的原生模式運作，或者以 SharePoint 整合模式運作以支援 SharePoint 網站上的報表。  
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
      若要在報表伺服器上檢視或發行項目，套用到報表相關項目與作業的多組使用權限會根據角色分組。 報表伺服器管理員會將您指派為一個或多個角色。 例外，預先定義的角色 [瀏覽者] 可以讓您檢視報表、資料夾、模型與資源。  
   
-     如果您無法連接或瀏覽至報表伺服器，請連絡報表伺服器管理員。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)》 中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件集的 [Reporting Services 安全性與保護](../../reporting-services/security/reporting-services-security-and-protection.md)。  
+     如果您無法連接或瀏覽至報表伺服器，請連絡報表伺服器管理員。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312) 中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件集的 [Reporting Services 安全性與保護](../../reporting-services/security/reporting-services-security-and-protection.md)。  
   
 -   以 SharePoint 整合模式設定的報表伺服器  
   
@@ -116,9 +115,9 @@ ms.lasthandoff: 08/09/2017
   
 -   除非您會提供有效的值，否則請不要使用依據查詢參數以及屬於 **[文字]** 類型的參數。 可用的值清單有助於使用者只選擇有效的值。 如果沒有有效的值清單，則您將無法限制使用者可以輸入的值。  
   
--   請不要使用全域 [&UserID] 來維護私用資料的安全性。 這個值做為報表參數時，可以利用 URL 存取語法在報表 URL 中指定它。 在共用資料集的運算式中使用這個值，會讓資料集無法被快取。 如需詳細資訊，請參閱《 [URL 存取參數參考](../../reporting-services/url-access-parameter-reference.md) 線上叢書》 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   請不要使用全域 [&UserID] 來維護私用資料的安全性。 這個值做為報表參數時，可以利用 URL 存取語法在報表 URL 中指定它。 在共用資料集的運算式中使用這個值，會讓資料集無法被快取。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312) 中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件集的 [URL 存取參數參考](../../reporting-services/url-access-parameter-reference.md)。  
   
- 項目發行到報表伺服器後，報表伺服器管理員可以指定以角色為基礎的安全性或資料夾與項目層級安全性，藉此維護這些項目的安全。 如需詳細資訊，請參閱《 [保護報表和資源](../../reporting-services/security/secure-reports-and-resources.md) 線上叢書》 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ 項目發行到報表伺服器後，報表伺服器管理員可以指定以角色為基礎的安全性或資料夾與項目層級安全性，藉此維護這些項目的安全。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312) 中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件集的[保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)。  
   
   
 ## <a name="see-also"></a>另請參閱  
@@ -126,4 +125,3 @@ ms.lasthandoff: 08/09/2017
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

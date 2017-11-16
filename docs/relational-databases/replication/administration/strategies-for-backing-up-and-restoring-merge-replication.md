@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - restoring [SQL Server replication], merge replication
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c5c183c029afd8eb87a6df90e09d39b4d8c755bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>備份與還原合併式複寫的策略
   對於合併式複寫，請定期備份下列資料庫：  
@@ -65,16 +64,16 @@ ms.lasthandoff: 06/22/2017
   
  如果同步處理的「訂閱者」執行的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本早於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，則訂閱不可是匿名的，而必須是客訂閱或主訂閱 (在之前的版本中稱為本機訂閱與全域訂閱)。  
   
- 若要同步處理訂閱，請參閱＜ [同步處理發送訂閱](../../../relational-databases/replication/synchronize-a-push-subscription.md) ＞和＜ [同步處理提取訂閱](../../../relational-databases/replication/synchronize-a-pull-subscription.md) ＞。  
+ 若要同步處理訂閱，請參閱＜ [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) ＞和＜ [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)＞。  
   
 ### <a name="reinitializing-all-subscriptions"></a>重新初始化所有訂閱  
  重新初始化所有訂閱可確保所有「訂閱者」的狀態均與還原的發行集資料庫保持一致。 若要將整個拓撲返回到給定發行集資料庫備份表示的之前狀態，則應使用此方法。 例如，如果您要將發行集資料庫還原到更早的時間點，即作為一種從錯誤執行的批次作業復原的機制，則您可能要重新初始化所有訂閱。  
   
  如果選擇此選項，應在復原發行集資料庫之後，立即產生新的快照集以傳遞給重新初始化的「訂閱者」。  
   
- 若要重新初始化訂閱，請參閱＜ [重新初始化訂閱](../../../relational-databases/replication/reinitialize-a-subscription.md)＞。  
+ 若要重新初始化訂閱，請參閱＜ [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)＞。  
   
- 若要建立並套用快照集，請參閱＜ [建立和套用初始快照集](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) ＞和＜ [使用參數化篩選建立合併式發行集的快照集](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
+ 若要建立並套用快照集，請參閱＜ [Create ＞和＜ Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) ＞和＜ [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>備份與還原散發資料庫  
  對於合併式複寫，散發資料庫應定期備份，並且只要使用的備份不晚於使用「散發者」之所有發行集的最短保留期限，無需任何特殊考量即可還原。 例如，如果有三個保留期間分別為 10、20 及 30 天的發行集，則用來還原資料庫的備份不應晚於 10 天。 散發資料庫在合併式複寫中擁有有限的角色：它不儲存變更追蹤中使用的任何資料，也不提供要轉送到訂閱資料庫之合併式複寫變更的暫時儲存 (與它在異動複寫中一樣)。  

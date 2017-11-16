@@ -4,8 +4,7 @@ ms.date: 06/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,17 +32,16 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 64d2ad2fb4f75d69244ffad6e76c3cef6274309d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
-ms.openlocfilehash: 29245ecd82ef8f4401869008bcdb883880eec0bd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用維護計畫精靈
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的維護計畫精靈，建立單一或多部伺服器的維護計畫。 維護計畫精靈會建立可讓 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 定期執行的維護計畫。 這樣可讓您依指定間隔執行各種資料庫管理工作，包括備份、資料庫完整性檢查，或資料庫統計資料更新。  
@@ -317,7 +315,7 @@ ms.lasthandoff: 09/01/2017
      這個記錄可以幫助您疑難排解失敗的維護計畫作業，或判斷資料庫動作為何發生。  
   
      **移除早於下列時限的記錄資料**  
-     指定您想要刪除的項目之存在時間。 您可以指定 [小時]、[天]、[週] \(預設)、[月] 或 [年]  
+     指定您想要刪除的項目之存在時間。 您可以指定 [小時]、[天]、[週] (預設)、[月] 或 [年]  
   
 #### <a name="define-the-execute-agent-job-task"></a>定義執行代理程式作業工作  
   
@@ -325,7 +323,7 @@ ms.lasthandoff: 09/01/2017
   
 #### <a name="define-backup-tasks"></a>定義備份工作  
   
-1.  在 [Define Backup Database (Full) Task] \(定義備份資料庫 (完整) 工作) 頁面上，選取要執行完整備份的資料庫。 此工作會使用 `BACKUP DATABASE` 陳述式。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。 完成後，請按 **[下一步]**。  
+1.  在 [Define Backup Database (Full) Task] (定義備份資料庫 (完整) 工作) 頁面上，選取要執行完整備份的資料庫。 此工作會使用 `BACKUP DATABASE` 陳述式。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。 完成後，請按 **[下一步]**。  
   
      此頁面提供下列選項。  
   
@@ -416,7 +414,7 @@ ms.lasthandoff: 09/01/2017
   
      以位元組為單位，指定要用於 SQL Server 和備份媒體之間的最大傳送單位。  
   
-     [設定備份壓縮] 清單  
+     **[設定備份壓縮]** 清單  
      在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (或更新的版本) 中，選取下列其中一個 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md) 值：  
   
     |||  
@@ -527,5 +525,4 @@ ms.lasthandoff: 09/01/2017
      將精靈進度報表的結果複製到電子郵件。  
   
   
-
 
