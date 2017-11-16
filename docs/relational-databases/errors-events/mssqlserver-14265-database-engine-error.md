@@ -2,26 +2,33 @@
 title: MSSQLSERVER_14265 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 14265 (Database Engine error)
+helpviewer_keywords:
+- 14265 (Database Engine error)
 ms.assetid: ab91b9c4-a967-414f-b5d7-7a2a9f73cdc4
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 3c195c57ff388b6a8e93b2856b03fe85e066862e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ae216bc9a47bcd15d0782f90150c5d3aadd63526
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver14265"></a>MSSQLSERVER_14265
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
   
@@ -40,3 +47,4 @@ SQL Server 服務意外結束。
 ## <a name="user-action"></a>使用者動作  
 檢查錯誤記錄檔，以便了解導致 SQL Server 服務結束的原因。  
   
+

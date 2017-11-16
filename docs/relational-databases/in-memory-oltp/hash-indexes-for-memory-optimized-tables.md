@@ -1,13 +1,13 @@
 ---
 title: "記憶體最佳化資料表的雜湊索引 | Microsoft Docs"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
-ms.suite: 
+ms.component: in-memory-oltp
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
@@ -26,7 +26,7 @@ ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>記憶體最佳化資料表的雜湊索引
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 本文說明適用於記憶體最佳化資料表的「雜湊」索引類型。 本文：  

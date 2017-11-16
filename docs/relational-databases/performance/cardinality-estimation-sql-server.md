@@ -2,10 +2,14 @@
 title: "基數估計 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7fc8688959d0ca4c58052b47f2af79c6dd95ee25
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/05/2017
+
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 本文描述如何評估及選擇最適合您的 SQL 系統的基數估計 (CE) 組態。 大多數系統皆可從最新的 CE 中受益，因為它的精確度最高。 CE 會預測您的查詢可能傳回的資料列數目。 查詢最佳化工具使用基數預測，來產生最佳查詢計劃。 由於估計較精確，因此查詢最佳化工具通常較有機會產生較佳的查詢計劃。  
@@ -162,7 +167,7 @@ go
   
 6.  在結果窗格的 [結果] 索引標籤上，按兩下包含 XML 格式統計資料的資料格。 圖形查詢計劃隨即顯示。  
   
-7.  以滑鼠右鍵按一下圖形查詢計劃中的第一個方塊，然後按一下 [屬性]。  
+7.  以滑鼠右鍵按一下圖形查詢計劃中的第一個方塊，然後按一下屬性。  
   
 8.  為了在稍後比較不同的組態，請記下下列屬性的值：  
   
@@ -218,7 +223,7 @@ go
   
 - 執行 **sp_query_store_force_plan**。  
   
-- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展開您的 [查詢存放區] 節點，以滑鼠右鍵按一下 [Top Resource Consuming Nodes] (資源耗用量排名在前的節點)，然後按一下 [View Top Resource Consuming Nodes] (檢視資源耗用量排名在前的節點)。 這會顯示標示為 **[強制執行計畫]** 和 **[取消強制執行計畫]** 的按鈕。  
+- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展開您的 [查詢存放區] 節點，以滑鼠右鍵按一下 [Top Resource Consuming Nodes] (資源耗用量排名在前的節點)，然後按一下 「View Top Resource Consuming Nodes」 (檢視資源耗用量排名在前的節點)。 這會顯示標示為 **[強制執行計畫]** 和 **[取消強制執行計畫]** 的按鈕。  
   
  如需查詢存放區的詳細資訊，請參閱 [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。  
   
@@ -272,3 +277,4 @@ SELECT s.ticket, s.customer, r.store
  [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)  
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)
+

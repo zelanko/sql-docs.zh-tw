@@ -2,27 +2,35 @@
 title: MSSQLSERVER_2 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: "2"
-helpviewer_keywords: 2 (Database Engine error)
+f1_keywords:
+- "2"
+helpviewer_keywords:
+- 2 (Database Engine error)
 ms.assetid: 567fb571-7cda-4ce8-a702-cdff2df5d419
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: ce7e96fa9ef256a1b193d5a4979f7902646859ba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a8fe9aa05a8e8f7b5c9c179ff6528e53890e6be7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver2"></a>MSSQLSERVER_2
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
   
@@ -49,3 +57,4 @@ ms.lasthandoff: 11/09/2017
 [設定用戶端通訊協定](~/database-engine/configure-windows/configure-client-protocols.md)  
 [啟用或停用伺服器網路通訊協定](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
+

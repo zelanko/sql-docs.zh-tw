@@ -2,10 +2,14 @@
 title: "使用 SSMS 還原資料庫備份 | Microsoft 文件"
 ms.custom: 
 ms.date: 11/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-caps.latest.revision: "79"
+caps.latest.revision: 79
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 93c159f4c145ae50ebc1b8696fb419d4a112291f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4557b2183cf0043050cbf240b837b53796150653
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題說明如何使用 SQL Server Management Studio 還原完整資料庫備份。    
        
@@ -207,7 +212,7 @@ ms.lasthandoff: 11/09/2017
 6.  在 [目的地] 區段中，按一下 [時間表] 存取 [備份時間表] 對話方塊，手動選取停止復原動作的時間點。
 
 7.  選取 [特定的日期與時間]。
-8.  將 [時間表間隔] 變更為下拉式方塊中的 [小時] (選擇性)。
+8.  將 [時間表間隔] 變更為下拉式方塊中的 [小時] \(選擇性)。
 9.  將滑桿移至想要的時間。
 
 10. 按一下 [確定] 回到 [一般] 頁面。
@@ -284,3 +289,4 @@ ms.lasthandoff: 11/09/2017
  [還原資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)    
     
   
+

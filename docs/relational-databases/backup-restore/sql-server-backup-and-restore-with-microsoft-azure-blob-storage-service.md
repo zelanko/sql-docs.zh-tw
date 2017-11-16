@@ -2,26 +2,31 @@
 title: "使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 531ce97e4da5b580139a6c0de557b3c99becc170
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2ca66cdb80dd12a242b2c9e8130cf3236e47371c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![備份至 Azure Blob 圖形](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "備份至 Azure Blob 圖形")  
   
@@ -55,7 +60,7 @@ ms.lasthandoff: 11/09/2017
   
 -   成本效益：只有使用的服務才要付費。 成為符合成本效益的異地與備份封存選項。 如需詳細資訊和連結，請參閱 [Microsoft Azure 計費考量](#Billing) 一節。  
   
-##  <a name="Billing"></a> Microsoft Azure 計費考量：  
+##  <a name="Billing"></a> Microsoft Azure Billing Considerations:  
  了解 Microsoft Azure 儲存體成本可讓您預測在 Microsoft Azure 中建立和儲存備份的成本。  
   
  [Microsoft Azure 定價計算機](http://go.microsoft.com/fwlink/?LinkId=277060) 可以協助您預估成本。  
@@ -75,3 +80,4 @@ ms.lasthandoff: 11/09/2017
 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   
+

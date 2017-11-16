@@ -2,9 +2,12 @@
 title: "使用查詢存放區的工作負載調整資料庫 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>使用查詢存放區的工作負載調整資料庫
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 SQL Server 中的[查詢存放區](../../relational-databases/performance/how-query-store-collects-data.md)功能可自動擷取查詢、計畫和執行階段統計資料的記錄，並將這項資訊保存在資料庫中。 [Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) 支援新選項，可使用查詢存放區自動選取適當的工作負載以進行調整。 對於許多使用者而言，這可消除明確收集工作負載進行調整的需要。 只有已開啟「查詢存放區」功能的資料庫才能使用這項功能。 

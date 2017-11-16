@@ -2,27 +2,35 @@
 title: MSSQLSERVER_10060 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: "10060"
-helpviewer_keywords: 10060 (Database Engine error)
+f1_keywords:
+- "10060"
+helpviewer_keywords:
+- 10060 (Database Engine error)
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 63a2bb26d931d324bdde4137eda780b4fb46dcf9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ecb82ea855bac3ba6f85b1c4f881b72ff741f7e2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver10060"></a>MSSQLSERVER_10060
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
   
@@ -53,3 +61,4 @@ ms.lasthandoff: 11/09/2017
 [設定用戶端通訊協定](~/database-engine/configure-windows/configure-client-protocols.md)  
 [啟用或停用伺服器網路通訊協定](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
+

@@ -3,28 +3,33 @@ title: "SQL Server 指南 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: server-general
+ms.suite: sql
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide
 - guide, list
 ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 013fcd76c379762803be7ef0910c26327c68e5fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
+ms.openlocfilehash: f854bc49f1543782f0e92067635c77cf53d0cdd2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="sql-server-guides"></a>SQL Server 指南
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 下列是可用的指南。 它們會討論一般概念，而且除非在個別的指南中另有說明，否則適用於所有 SQL Server 版本。 
 
@@ -37,3 +42,4 @@ ms.lasthandoff: 11/09/2017
 [SQL Server 交易鎖定與資料列版本設定指南](https://msdn.microsoft.com/library/jj856598)  
 [SQL Server 交易記錄架構與管理指南](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
 [執行緒和工作架構指南](../relational-databases/thread-and-task-architecture-guide.md)
+
