@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce827e3df11e103bced1b62afb2329db9c81e0f4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: fb34918a06fe49195766fbcdd22e8f762c9e4faf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>檢視及處理 Database Engine Tuning Advisor 的輸出
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  開始 Database Engine Tuning Advisor GUI。 如需詳細資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要檢視現有微調工作階段的微調摘要與報告，請按兩下 [工作階段監視器] 視窗中的工作階段名稱來開啟。  
   
-3.  在新的微調工作階段完成之後，或在工具已經載入現有的工作階段後，請按一下 **[進度]** 索引標籤。 **[微調記錄]** 窗格會顯示記錄的內容。 此記錄包含 Database Engine Tuning Advisor 無法分析的工作負載事件之相關資訊。  
+3.  在新的微調工作階段完成之後，或在工具已經載入現有的工作階段後，請按一下 **[進度]** 索引標籤。**[微調記錄]** 窗格會顯示記錄的內容。 此記錄包含 Database Engine Tuning Advisor 無法分析的工作負載事件之相關資訊。  
   
      如果 Database Engine Tuning Advisor 已經分析過微調工作階段中的所有事件，則會顯示訊息指出該工作階段的微調記錄是空的。 若當初執行微調工作階段時並未勾選 **[一般]** 索引標籤上的 **[儲存微調記錄]** ，系統會顯示訊息指出此問題。  
   
@@ -214,7 +213,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  按一下 **[進度]** 索引標籤來檢查微調記錄，其中包含 Database Engine Tuning Advisor 無法微調之工作負載中任何事件的相關錯誤資訊。 此資訊可協助您評估工作負載的效能。  
   
-3.  若要進一步檢閱此工作階段的微調結果，請按一下 **[報表]** 索引標籤。 在該索引標籤中，您可以檢視微調摘要，或從 **[選取報表]** 清單中選擇微調報表。  
+3.  若要進一步檢閱此工作階段的微調結果，請按一下 **[報表]** 索引標籤。在該索引標籤中，您可以檢視微調摘要，或從 **[選取報表]** 清單中選擇微調報表。  
   
 4.  按一下 **[建議]** 索引標籤以檢視微調建議。  
   

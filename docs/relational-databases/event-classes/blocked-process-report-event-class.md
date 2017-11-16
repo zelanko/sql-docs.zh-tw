@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Blocked Process Report event class
+helpviewer_keywords: Blocked Process Report event class
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5820b84962025063d1e33fba5954a76ec909ed58
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ea1519e09402020d9ee6daccfbe34b3de5dffe67
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件類別
   **Blocked Process Report** 事件類別指出封鎖工作的時間已超過指定的時間量。 這個事件類別不包含系統工作，或在無法偵測死結的資源上等候的工作。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 |**IsSystem**|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 此事件一律由系統執行緒報告。 IsSystem = 1；SID = sa。|41|是|  
 |**模式**|**int**|事件已接收或正在要求的狀態。<br /><br /> 0=NULL<br /><br /> 1=Sch-S<br /><br /> 2=Sch-M<br /><br /> 3=S<br /><br /> 4=U<br /><br /> 5=X<br /><br /> 6=IS<br /><br /> 7=IU<br /><br /> 8=IX<br /><br /> 9=SIU<br /><br /> 10=SIX<br /><br /> 11=UIX<br /><br /> 12=BU<br /><br /> 13=RangeS-S<br /><br /> 14=RangeS-U<br /><br /> 15=RangeI-N<br /><br /> 16=RangeI-S<br /><br /> 17=RangeI-U<br /><br /> 18=RangeI-X<br /><br /> 19=RangeX-S<br /><br /> 20=RangeX-U<br /><br /> 21=RangeX-X|32|是|  
-|**Exchange Spill**|**int**|取得鎖定所在之物件的系統指派識別碼，如果可用且適用的話。|22|是|  
+|**ObjectID**|**int**|取得鎖定所在之物件的系統指派識別碼，如果可用且適用的話。|22|是|  
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26||  
 |**SessionLoginName**|**nvarchar**|最先建立工作階段的使用者的登入名稱。 例如，如果您使用 Login1 連接到 SQL Server，並以 Login2 執行陳述式，則 **SessionLoginName** 會顯示 Login1；而 **LoginName** 會顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**TextData**|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  

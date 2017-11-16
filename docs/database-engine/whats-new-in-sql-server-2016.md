@@ -7,25 +7,23 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
-caps.latest.revision: 431
+caps.latest.revision: "431"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 211d0d1d59ac9875fd3c66efb0fc88a453a8deb4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>資料庫引擎的新功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -417,7 +415,7 @@ SQL Server 2016 Standard Edition 現在支援 AlwaysOn 基本可用性群組。 
 
 現在有一組唯讀複本支援讀取意圖的連接要求負載平衡。 先前的行為一律將連接導向路由清單中第一個可用的唯讀複本。 如需詳細資訊，請參閱[設定唯讀複本之間的負載平衡](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。
 
- 支援自動容錯移轉的複本數目已從 2 增加到 3。
+ 支援自動容錯移轉的複本數目已從&2; 增加到&3;。
 
  AlwaysOn 容錯移轉叢集現在支援群組受管理的服務帳戶。 如需相關資訊，請參閱 [群組受管理的服務帳戶](https://technet.microsoft.com/library/hh831782.aspx)。 在 Windows Server 2012 R2 中，需有一項更新來避免在密碼變更後發生暫時停機。 若要取得此更新，請參閱 [gMSA-based services can't log on after a password change in a Windows Server 2012 R2 domain](https://support.microsoft.com/kb/2998082/)(在 Windows Server 2012 R2 網域中變更密碼後，以 gMSA 為基礎的服務就無法登入)。
 
@@ -459,7 +457,6 @@ SQL Server 2016 Upgrade Advisor Preview 是獨立的工具，可讓舊版使用�
 [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md) 
  
 [安裝 SQL Server 管理工具與 SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
-
 
 
 

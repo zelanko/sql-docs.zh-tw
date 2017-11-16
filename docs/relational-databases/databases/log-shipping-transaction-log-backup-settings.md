@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.logshipping.settings.tlogback.f1
+f1_keywords: sql13.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 50dfac45fd735de24fe432be2b5b833869c34b87
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b1d6d243bad0d7c6e7fe79983b4e46864f13df6c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>記錄傳送交易記錄備份設定
   使用此對話方塊來設定和修改記錄傳送組態的交易記錄備份設定。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 06/22/2017
  顯示用來建立記錄傳送之交易記錄備份的 SQL Server Agent 作業的名稱。 首次建立作業時，您可以在此方塊中輸入名稱來修改其名稱。  
   
  **排程**  
- 顯示備份主要資料庫之交易記錄的目前排程。 建立備份作業之前，按一下 [排程...] 即可修改此排程。 建立備份作業之後，按一下 [編輯作業...] 即可修改此排程。  
+ 顯示備份主要資料庫之交易記錄的目前排程。 建立備份作業之前，按一下 [排程...] 即可修改此排程。建立備份作業之後，按一下 [編輯作業...] 即可修改此排程。  
   
 ### <a name="backup-job"></a>備份作業  
  **排程...**  

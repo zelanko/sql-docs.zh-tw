@@ -5,23 +5,21 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSSQL_ENG020554 error
+helpviewer_keywords: MSSQL_ENG020554 error
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3c5e6ae34945bda4ec27846f242a5c4bfd73daa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c3cd330495a1956a925bbd37d2b3e841c773d297
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
     
@@ -68,7 +66,7 @@ ms.lasthandoff: 06/22/2017
   
 -   如果代理程式無法登入拓撲中的某台電腦：  
   
-     建議將 **-LoginTimeOut** 值設定為小於複寫代理程式檢查作業執行的時間間隔。 在某些情況下， **-LoginTimeOut** 的值之所以設定得高，是因為會導致登入逾時的網路問題。 如果 **-LoginTimeOut** 設定得較低，則複寫會報告其他特定的問題，讓您可以對由權限、網路問題或其他問題導致的登入問題進行疑難排解。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+     建議將 **-LoginTimeOut** 值設定為小於複寫代理程式檢查作業執行的時間間隔。 在某些情況下， **-LoginTimeOut** 的值之所以設定得高，是因為會導致登入逾時的網路問題。如果 **-LoginTimeOut** 設定得較低，則複寫會報告其他特定的問題，讓您可以對由權限、網路問題或其他問題導致的登入問題進行疑難排解。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
   
     -   [處理複寫代理程式設定檔](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

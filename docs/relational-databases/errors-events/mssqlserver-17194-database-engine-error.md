@@ -5,25 +5,22 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- "17194"
-helpviewer_keywords:
-- 17194 (Database Engine error)
+f1_keywords: "17194"
+helpviewer_keywords: 17194 (Database Engine error)
 ms.assetid: 0d03eb20-28a7-4ceb-8903-7f9420a620f7
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f33e6e16d4f62e7b39afe3b5cd9b57ce13d15a1a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "11"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Inactive
+ms.openlocfilehash: 437a7afe75e2e87a35deee36b3662efa47d2e339
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver17194"></a>MSSQLSERVER_17194
   
@@ -42,11 +39,10 @@ ms.lasthandoff: 06/22/2017
 這個錯誤表示用戶端已經關閉連接。 發生這個錯誤是因為連接逾時期限已到。 錯誤訊息中顯示的值來自作業系統，提供基礎問題的說明。  
   
 ## <a name="user-action"></a>使用者動作  
-如果訊息中的錯誤碼是 0x2746 (十進位值 10054)，即表示用戶端已經重設連接，通常是因為逾時之故。 若要解決錯誤，請增加用戶端或呼叫端程式的連接逾時值。  
+如果訊息中的錯誤碼是 0x2746 (十進位值 10054)，即表示用戶端已經重設連接，通常是因為逾時之故。若要解決錯誤，請增加用戶端或呼叫端程式的連接逾時值。  
   
 如需得知其他錯誤訊息值可行的解決方案，請使用作業系統命令 **net helpmsg** 並指定錯誤碼的十進位值。  
   
 如需如何連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的詳細資訊，請參閱[伺服器網路組態](~/database-engine/configure-windows/server-network-configuration.md)和[用戶端網路組態](~/database-engine/configure-windows/client-network-configuration.md)。  
   
 ## <a name="internal-only"></a>僅供內部使用  
-

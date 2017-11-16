@@ -5,28 +5,27 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 39b5b945994c9531deb3d545dbb438657b1914fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: cbd6691bf8fab45e58b41ad8e78166dd425ba605
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-the-sqlps-module"></a>匯入 SQLPS 模組
   從 PowerShell 管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的建議方式是將 **sqlps** 模組匯入 Windows PowerShell 環境中。 此模組會載入及註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 嵌入式管理單元和管理能力組件。  從 Windows PowerShell 3.0 開始，模組會在命令中使用模組中的任何 Cmdlet 或函數時自動匯入。 這項功能適用於包含在 PSModulePath 環境變數值的目錄中的任何模組。  如需詳細資訊，請參閱 [匯入 PowerShell 模組](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
   
-1.  **Before You Begin:**  [Security](#Security)  
+1.  **開始之前**  [安全性](#Security)  
   
-2.  **To load the module:**  [Load the sqlps Module](#LoadSqlps)  
+2.  **載入模組**  [載入 sqlps 模組](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>開始之前  
  將 **sqlps** 模組匯入 Windows PowerShell 之後，即可：  
@@ -78,4 +77,3 @@ Get-Module -ListAvailable -Name Sqlps;
  [Import-Module](https://technet.microsoft.com/library/hh849725.aspx)
   
   
-

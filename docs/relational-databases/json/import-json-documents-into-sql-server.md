@@ -5,22 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: dfd93090f4cec421d57ab993fc4e0d6f587ab426
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 95489b4e72f1321f7e1139f06040eb81a5956b15
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-json-documents-into-sql-server"></a>將 JSON 文件匯入 SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +37,7 @@ SELECT BulkColumn
 
 OPENJSON(BULK) 會讀取檔案的內容，並將它傳回至 `BulkColumn`。
 
-您也可以將檔案內容載入區域變數或資料表中，如下列範例所示：
+您也可以將檔案內容載入至區域變數或資料表，如下列範例所示：
 
 ```sql
 -- Load file contents into a variable
@@ -55,7 +53,7 @@ SELECT BulkColumn
 在載入 JSON 檔案的內容之後，您可以將 JSON 文字儲存在資料表中。
 
 ## <a name="import-multiple-json-documents"></a>匯入多個 JSON 文件
-您可以使用相同的方式，將一組 JSON 檔案從檔案系統載入區域變數中 (一次一個)。 假設檔案命名為 `book<index>.json`。
+您可以使用相同的方式，將一組 JSON 檔案從檔案系統載入至區域變數 (一次一個)。 假設檔案命名為 `book<index>.json`。
   
 ```sql
 DECLARE @i INT = 1
@@ -106,7 +104,7 @@ END
 
 ## <a name="import-json-documents-from-azure-blob-storage"></a>從 Azure Blob 儲存體匯入 JSON 文件
 
-您可以使用 T-SQL BULK INSERT 命令或 OPENROWSET 函數，將檔案直接從 Azure Blob 儲存體載入 Azure SQL Database 中。
+您可以使用 T-SQL BULK INSERT 命令或 OPENROWSET 函數，將檔案直接從 Azure Blob 儲存體載入至 Azure SQL Database。
 
 請先建立外部資料來源，如下列範例所示。
 
@@ -125,10 +123,10 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-如需詳細資訊和使用 OPENROWSET 的範例，請參閱[將檔案從 Azure Blob 儲存體載入 Azure SQL Database 中](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/)。
+如需詳細資訊和使用 OPENROWSET 的範例，請參閱[將檔案從 Azure Blob 儲存體載入至 Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/)。
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>將 JSON 文件剖析成資料列和資料行
-建議您剖析 JSON 檔案，並在資料列和資料行中傳回檔案中的書本及其屬性，而不要將整個檔案視為單一值來讀取。 下列範例使用的 JSON 檔案來自[此網站](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)，其中包含書籍清單。
+您可能想要剖析 JSON 檔案，並傳回檔案中的書籍以及其資料列和資料行中的屬性，而不是讀取整個 JSON 檔案作為單一值。 下列範例使用的 JSON 檔案來自[此網站](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)，其中包含書籍清單。
 
 ### <a name="example-1"></a>範例 1
 最簡單的範例是您只要從檔案載入整個清單即可。 
@@ -173,9 +171,8 @@ SELECT book.*
 現在，您可以將此資料表傳回給使用者，或將資料載入至另一張資料表。
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解 SQL Server 中的內建 JSON 支援  
-如需更多特定的解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
+對於大量的特定解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
   
 ## <a name="see-also"></a>另請參閱
 [使用 OPENJSON 將 JSON 資料轉換成資料列和資料行](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
-
 

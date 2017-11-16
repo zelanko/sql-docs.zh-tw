@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1bf73031c7e2e302d6174e6f21a005c3106f4cb2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9f103708c1720d7a08e2e9690e298701102c17f7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>產生指令碼 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供兩種產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的機制。 您可以使用 [產生和發佈指令碼精靈] 來建立多個物件的指令碼。 您也可以使用**物件總管**中的 [編寫組件的指令碼為] 功能表，為個別物件或多個物件產生指令碼。  
   
 1.  **選擇方法**：[[產生和發佈指令碼精靈]](#GenPubScriptWiz)、[物件總管的 [編寫組件的指令碼為] 功能表](#OEScriptAsMenu)  
   
-2.  **To use the Script As menu:**  [Script a Single Object](#ScriptSingleObject), [Script Two Objects Using Object Explorer](#ScriptTwoObjectsOE), [Script Two Objects Using Object Explorer Details](#ScriptTwoObjectsOED)  
+2.  **使用 [編寫組件的指令碼為] 功能表**  [編寫單一物件的指令碼](#ScriptSingleObject)、 [使用物件總管編寫兩個物件的指令碼](#ScriptTwoObjectsOE)、 [使用物件總管詳細資料編寫兩個物件的指令碼](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>開始之前  
  選擇最符合您需求的機制。  
@@ -90,4 +88,3 @@ ms.lasthandoff: 06/22/2017
 7.  以滑鼠右鍵按一下其中一個選取的物件，然後選取 [產生 \<物件類型> 的指令碼為]。  
   
   
-

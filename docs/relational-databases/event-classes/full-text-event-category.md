@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Full Text event category [SQL Server]
 - SQL Server event classes, Full Text event category
 ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b04c690823152b67cffb835a2056c3d9c645bcc8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 31233389da395b6c6e39f6f87e1921b12772179c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="full-text-event-category"></a>Full Text 事件類別目錄
   **Full Text** 事件類別目錄包含一般的全文檢索事件。  
@@ -38,4 +36,3 @@ ms.lasthandoff: 06/22/2017
 |[FT:Crawl Stopped 事件類別](../../relational-databases/event-classes/ft-crawl-stopped-event-class.md)|指出全文檢索搜耙已停止。|  
   
   
-

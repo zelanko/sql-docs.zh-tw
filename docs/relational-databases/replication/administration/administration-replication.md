@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 - merge replication [SQL Server replication], administering
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6fce305f204c339fbace4eaf79a5bd9342686a9c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 47107da4379ff36923d9bf8987501203d3830175
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="administration-replication"></a>管理 (複寫)
   本節包含管理複寫拓撲的相關資訊。 建議您先閱讀最佳做法主題，然後遵循該主題中的連結，取得本節及其他章節的詳細資訊。  
@@ -54,4 +52,3 @@ ms.lasthandoff: 06/22/2017
  [監視 &#40;複寫&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   
-

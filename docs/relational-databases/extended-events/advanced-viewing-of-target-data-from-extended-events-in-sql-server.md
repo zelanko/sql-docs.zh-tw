@@ -5,21 +5,19 @@ ms.date: 10/04/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- xevents
+ms.technology: xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 643d3b6f21d5ff42c1117df009f4e08e83793898
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>進階檢視 SQL Server 中擴充事件的目標資料
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -113,7 +111,7 @@ SSMS 可以顯示任何目標的資料。 但是，各種目標的顯示畫面�
   - 這類其他目標包括 event_counter、histogram 和 pair_matching。
 
 
-- *etw_classic_sync_target*：SSMS 無法顯示目標類型 etw_classic_sync_target 的資料。
+- *etw_classic_sync_target* ：SSMS 無法顯示目標類型 etw_classic_sync_target 的資料。
 
 
 
@@ -301,7 +299,7 @@ SSMS 顯示篩選如下︰
 #### <a name="d42-aggregation"></a>D.4.2 彙總
 
 
-群組顯示的資料之後，即可繼續彙總其他資料行中的資料。  下一個螢幕擷取畫面顯示群組資料是透過 *count* 進行彙總。
+群組顯示的資料之後，即可繼續彙總其他資料行中的資料。  下一個螢幕擷取畫面顯示群組資料是透過 *count*進行彙總。
 
 ![[工具列] > [彙總] 按鈕，然後是 [彙總] 對話方塊](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 
@@ -314,10 +312,9 @@ SSMS 顯示篩選如下︰
 ### <a name="d5-view-run-time-query-plan"></a>D.5 檢視執行階段查詢計劃
 
 
-**query_post_execution_showplan** 事件可讓您在 SSMS UI 中查看實際查詢計劃。 顯示 [詳細資料] 窗格時，您可以在 [查詢計劃] 索引標籤上看到查詢計劃圖形。 將滑鼠游標停留在查詢計劃的節點上方，即可看到節點之屬性名稱和其值的清單。
+**query_post_execution_showplan** 事件可讓您在 SSMS UI 中查看實際查詢計劃。 顯示 [詳細資料] 窗格時，您可以在 [查詢計劃] 索引標籤上看到查詢計劃圖形。將滑鼠游標停留在查詢計劃的節點上方，即可看到節點之屬性名稱和其值的清單。
 
 
 ![查詢計劃，具有一個節點的屬性清單](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
-
 
 

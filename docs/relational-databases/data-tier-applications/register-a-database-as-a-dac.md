@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,24 +19,23 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af264d24411b3d384abea2723df465dd926232c6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9b6f99676e0fbb0a8b883593e88eb8a0e9ccf258
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
   您可以使用 [註冊資料層應用程式精靈] 或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有資料庫中的物件，並在 **msdb** 系統資料庫 (在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中為 **master**) 中註冊 DAC 定義。  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **使用下列項目，升級 DAC**  [註冊資料層應用程式精靈](#UsingRegisterDACWizard)、 [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>開始之前  
  註冊程序會建立 DAC 定義，以定義資料庫中的物件。 DAC 定義和資料庫的組合會形成 DAC 執行個體。 如果將資料庫註冊為 Database Engine 之受管理的執行個體上的 DAC，下次從執行個體將公用程式收集組傳送到公用程式控制點時，註冊的 DAC 將會合併到 SQL Server 公用程式中。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
@@ -114,7 +112,7 @@ ms.lasthandoff: 06/22/2017
  [使用註冊資料層應用程式精靈](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>驗證物件  
- **Checking**  *SchemaName* **.** *ObjectName* **.** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 *SchemaName***.***ObjectName* 識別目前正在驗證哪一個物件。  
+ **正在檢查**  *SchemaName* **＞。** *ObjectName* **＞。** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 *SchemaName***.***ObjectName* 識別目前正在驗證哪一個物件。  
   
  **< 上一步** - 回到 [設定屬性] 頁面來變更輸入。  
   
@@ -185,4 +183,3 @@ $registerunit.Register()
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
-

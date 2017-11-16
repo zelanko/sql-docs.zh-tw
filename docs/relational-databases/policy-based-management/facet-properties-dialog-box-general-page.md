@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.facet.f1
+f1_keywords: sql13.swb.dmf.facet.f1
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4f24b841c847197059229eebc521037f03c1e582
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 315e059b0d90b1aa47eb998b3559dd675e4b5b4e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Facet 屬性對話方塊、一般頁面
   使用此對話方塊可檢視以原則為基礎之管理 Facet 的屬性。 每一個 Facet 都可以套用到一或多個目標類型，例如：伺服器、資料庫或資料表。 使用此頁面可檢視哪些目標類型與這個 Facet 有關。 建立 Facet 時會定義 Facet 的屬性，而且不能使用這個頁面加以變更。  
@@ -41,4 +38,3 @@ ms.lasthandoff: 06/22/2017
  [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

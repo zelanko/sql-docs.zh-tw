@@ -10,27 +10,25 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.userroleproperties.f1
+f1_keywords: sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76bd80e1fc470d9cdb998d23834d0a3473d411fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8c75a610f60ff8eca7e64b7fd01d36d0a63344a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-role-properties-management-studio"></a>使用者角色屬性 (Management Studio)
   您可以使用這個頁面來檢視項目層級角色定義中包含的工作。 您也可以使用這個頁面來變更工作清單或修改角色描述。  
   
  項目層級角色定義是指使用者針對特定項目 (亦即，資料夾、報表或資源或共用資料來源) 所執行之工作的具名集合。 角色定義會指派給使用者或群組，以便在報表管理員中建立角色指派。 角色定義中的工作會描述使用者或群組可執行的工作。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]包含數個預先定義的項目層級角色定義可搭配使用。 您可以透過變更每個角色定義的工作清單，修改角色定義。 編輯角色定義將影響包含該角色定義的所有角色指派。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含許多您可以使用之預先定義的項目層級角色定義。 您可以透過變更每個角色定義的工作清單，修改角色定義。 編輯角色定義將影響包含該角色定義的所有角色指派。  
   
 > [!NOTE]  
 >  使用者角色指派只會用於以原生模式執行的報表伺服器。 如果報表伺服器是針對 SharePoint 整合所設定，這個頁面就會顯示有關 SharePoint 網站上所定義之角色和權限等級的唯讀資訊。  
@@ -48,12 +46,11 @@ ms.lasthandoff: 08/09/2017
  **工作描述**  
  提供每個工作的相關資訊。 您不能修改工作描述。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [項目層級工作](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
  [角色定義](../../reporting-services/security/role-definitions.md)   
- [Report Server in Management Studio F1 說明](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [工作和權限](../../reporting-services/security/tasks-and-permissions.md)   
  [預先定義的角色](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   
-

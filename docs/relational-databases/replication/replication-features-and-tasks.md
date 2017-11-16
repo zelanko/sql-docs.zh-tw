@@ -5,8 +5,7 @@ ms.date: 07/11/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - replication [SQL Server], development
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bf60a2e249063cee1669fd4f87a41818847372a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 1b4ef422b369e65855321be32b171522337441e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-features-and-tasks"></a>複寫功能及工作
   尋找任何人 (設計人員、開發人員、分析師或管理員) 設計及實作複寫解決方案所需的資訊。  
@@ -67,4 +66,3 @@ ms.lasthandoff: 06/22/2017
  [技術參考 &#40;複寫&#41;](../../relational-databases/replication/technical-reference-replication.md)  
   
   
-

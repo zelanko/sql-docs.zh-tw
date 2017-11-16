@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e446499e51168614859e77beb312c468167c1e3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 40c9434ae693dfe71e97a389ac4c8b500154112a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>第 1 課：建立和套用 Off By Default 原則
 您可以使用以原則為基礎的管理原則來管理一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體、一個或多個執行個體物件、伺服器執行個體、一個或多個資料庫或一個或多個資料庫物件。 身為資料庫管理員，您想要確保特定伺服器沒有啟用 Database Mail。 在這一課，您將建立一個條件，以及設定這個伺服器選項的原則。 您將會測試伺服器，以便查看它是否符合此原則。 然後，您將會使用此原則來重新設定伺服器，以便讓伺服器符合。  
@@ -41,4 +38,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

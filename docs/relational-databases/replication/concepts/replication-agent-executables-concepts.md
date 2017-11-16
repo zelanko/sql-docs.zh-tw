@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming interfaces [SQL Server replication]
 - programming [SQL Server replication], agents
@@ -18,24 +16,23 @@ helpviewer_keywords:
 - agents [SQL Server replication], executables
 - command prompt [SQL Server replication]
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 096156484b2378713485e1177eb9b0cfd6faa5d8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 297a1a4070e82ce17c648308902b20648d4fbf9b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-agent-executables-concepts"></a>複寫代理程式可執行檔概念
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   複寫代理程式可以用下列方式以程式設計方式來控制：  
   
--   在 <xref:Microsoft.SqlServer.Replication> 命名空間中使用 Managed 代理程式的程式設計介面。  
+-   在 <xref:Microsoft.SqlServer.Replication> 命名空間中使用 Managed 代理程式來程式設計介面。  
   
 -   從命令提示字元以一組提供的參數來叫用代理程式可執行檔。  
   
@@ -119,4 +116,3 @@ REM -- The following command must be supplied without line breaks.
 ```  
   
   
-

@@ -5,24 +5,23 @@ ms.date: 10/21/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d00e5c97e6c27f3fe40b2066b5e194b8011f6b1e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: db2d067b9daaf0ca015e8069c9e01cab783cfeb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +55,7 @@ ms.lasthandoff: 06/22/2017
 <sup>1</sup> 從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]開始不提供 32 位元版本。  
 <sup>2</sup> /3gb 是作業系統開機參數。 如需詳細資訊，請瀏覽 MSDN Library。  
 <sup>3</sup> WOW64 (Windows 64 上的 Windows) 是 32 位元的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 64 位元作業系統上執行的模式。  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition 支援作業系統最大值的上限。  
+<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition 最多支援 128 GB。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition 支援作業系統最大值的上限。  
 <sup>5</sup> 請注意，sp_configure awe enabled 選項會出現在 64 位元的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上，但會遭到忽略。    
 <sup>6</sup> 如果(在具有 AWE 支援的 32 位元上或是本身的 64 位元上) 授與鎖定記憶體中的分頁權限 (LPIM)，我們建議另外設定最大伺服器記憶體。
 
@@ -181,5 +180,4 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會感知非統
 ## <a name="see-also"></a>另請參閱
 [讀取分頁](../relational-databases/reading-pages.md)   
  [寫入分頁](../relational-databases/writing-pages.md)
-
 

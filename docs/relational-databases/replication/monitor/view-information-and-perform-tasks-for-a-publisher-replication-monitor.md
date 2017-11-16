@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - viewing Publisher information
 - Publishers [SQL Server replication], viewing information
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4d592cc39ec10a3f56275e177edd0b3e12b8b5d9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d48572a51365d913beec4951787e4058877a9eed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-information-and-perform-tasks-for-a-publisher-replication-monitor"></a>檢視發行者的資訊並執行工作 (複寫監視器)
   「複寫監視器」提供下列顯示所選取「發行者」之資訊的索引標籤：  
@@ -48,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  若要檢視所有發行集的資訊，請按一下 **[發行集]** 索引標籤。  
   
-3.  若要檢視有關訂閱的資訊，請按一下 **[訂閱監看清單]** 索引標籤。 也可以從此索引標籤存取詳細資訊，並執行工作：  
+3.  若要檢視有關訂閱的資訊，請按一下 **[訂閱監看清單]** 索引標籤。也可以從此索引標籤存取詳細資訊，並執行工作：  
   
     -   若要檢視有關與訂閱相關聯之代理程式的詳細資訊，請以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
     -   若要重新初始化訂閱，請以滑鼠右鍵按一下訂閱，然後按一下 **[重新初始化訂閱]**。  
   
-4.  若要檢視有關代理程式的詳細資訊，請按一下 **[代理程式]** 索引標籤。 您也可以在這個索引標籤上存取更詳細的資訊及執行工作：  
+4.  若要檢視有關代理程式的詳細資訊，請按一下 **[代理程式]** 索引標籤。您也可以在這個索引標籤上存取更詳細的資訊及執行工作：  
   
     -   若要檢視代理程式的資訊 (例如提示訊息及任何錯誤訊息)，請以滑鼠右鍵按一下該代理程式，然後按一下 **[檢視詳細資料]**。  
   

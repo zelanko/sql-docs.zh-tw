@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - hard errors
 - failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
+ms.openlocfilehash: fbc7cc9abcbfb1e0608104000bab04e56b5ea86d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c97371185c1fe7bdd38c7ed172d5a49ae27b58c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="possible-failures-during-database-mirroring"></a>資料庫鏡像期間可能發生的失敗
   實體、作業系統或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 問題都可能會在資料庫鏡像工作階段中導致失敗。 資料庫鏡像不會為了確認 Sqlservr.exe 所依賴的元件是正常運作或已失敗，而定期檢查這些元件。 不過，針對某些類型的錯誤，受影響的元件會對 Sqlservr.exe 報告錯誤。 由其他元件所報告的錯誤稱為「重大錯誤」(Hard Error)。 為了偵測其他沒有通知的失敗，資料庫鏡像會實作其本身的逾時機制。 當鏡像逾時發生時，資料庫鏡像會假設失敗已經發生，並宣告「軟性錯誤」。 但是，某些發生在 SQL Server 執行個體層級的失敗並不會造成鏡像逾時，而且可能無法偵測到。  
@@ -94,7 +93,7 @@ ms.lasthandoff: 08/02/2017
   
  若要將連接保持為開啟狀態，伺服器執行個體必須於定義的逾時期限加上傳送另一個 Ping 所需的時間內，在該連接上收到 Ping。 在逾時期限接收到 Ping，表示連接仍為開啟狀態，且伺服器執行個體是透過它進行通訊。 接收到 Ping 時，伺服器執行個體會重設它在該連接上的逾時計數器。  
   
- 如果逾時期限在連接上未接收到 Ping，則伺服器執行個體會將該連接視為逾時。 伺服器執行個體會關閉逾時連接，並根據工作階段的狀態和作業模式來處理逾時事件。  
+ 如果逾時期限在連接上未接收到 Ping，則伺服器執行個體會將該連接視為逾時。伺服器執行個體會關閉逾時連接，並根據工作階段的狀態和作業模式來處理逾時事件。  
   
  即使其他伺服器實際上運作正常，仍會將逾時視為失敗。 如果工作階段的逾時值太短，來不及收到對方的正常回應，則可能發生假性失敗。 當某個伺服器執行個體順利連絡另一個回應時間很慢的執行個體時，由於在逾時期限到期前未收到 Ping，所以會發生假性失敗。  
   

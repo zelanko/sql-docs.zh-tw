@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Missing Column Statistics event class
+helpviewer_keywords: Missing Column Statistics event class
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 97da5fae65a4a81f3d5dc4ee2ba3c04e21918bf1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d31c6b69090ad482c129cd10d00badabfde2c98f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics 事件類別
   Missing Column Statistics 事件類別指出無法取得原本對最佳化工具非常有用的資料行統計資料。  

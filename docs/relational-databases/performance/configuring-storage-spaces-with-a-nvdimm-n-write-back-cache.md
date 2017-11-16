@@ -5,21 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a0a115eba3fbd1afe52c211fe0f93362a989fc2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 311887e58067a4f8ba62973a5df757dde0ef7bb1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>設定具有 NVDIMM-N 回寫式快取的儲存空間
   Windows Server 2016 支援 NVDIMM-N 裝置，以大幅加快輸入/輸出 (I/O) 作業的速度。 這類裝置一個吸引人的用法是作為回寫式快取，以取得低寫入延遲。 本主題討論如何設定具有鏡像 NVDIMM N 回寫式快取的鏡像儲存空間，以作為虛擬磁碟機，來儲存 SQL Server 交易記錄。 如果您也想使用它來儲存資料表或其他資料，您可以將更多磁碟加入存放集區，或建立多個集區 (若隔離很重要)。  

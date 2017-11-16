@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Broker:Conversation Group event class
+helpviewer_keywords: Broker:Conversation Group event class
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9208fcec2046feb785e2cedfd0b3a66a851cc7d6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 91ef8c1e01a0e7cb730e81be1b8d9406b31b94cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **Broker:Conversation Group** 事件。  
@@ -49,4 +46,3 @@ ms.lasthandoff: 06/22/2017
 |**TransactionID**|**bigint**|系統指派的交易識別碼。|4|否|  
   
   
-

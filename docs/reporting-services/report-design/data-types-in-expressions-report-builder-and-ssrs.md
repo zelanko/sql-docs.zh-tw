@@ -1,5 +1,5 @@
 ---
-title: "Data Types in Expressions （報表產生器及 SSRS） |Microsoft 文件"
+title: "運算式中的資料類型 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ae8de6c7f599e9e6e3414a5f0296213e0dbc89e7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: efd0b42180aa54a60c572c6c149aa53bd9ee852c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>運算式中的資料類型 (報表產生器及 SSRS)
   資料類型代表不同種類的資料，以便讓系統能夠有效率地儲存和處理資料。 一般資料類型包括文字 (也稱為字串)、含與不含小數位數的數字、日期和時間，以及影像。 報表中的值必須是報表定義語言 (RDL) 資料類型。 當您在報表中顯示值時，可以根據您的喜好設定來格式化值。 例如，代表貨幣的欄位會當做浮點數儲存在報表定義中，但是可能會根據您選擇的格式屬性，以各種格式顯示此欄位。  
@@ -69,9 +68,9 @@ ms.lasthandoff: 08/09/2017
   
 -   修改資料集查詢，以便加入含有已轉換資料的新查詢欄位。 若為關聯式或多維度資料來源，這項作業會使用資料來源資源來執行轉換。  
   
--   透過撰寫將某個結果集資料行中所有資料轉換成含有不同資料類型之新資料行的運算式，根據現有的報表資料集欄位建立導出欄位。 例如，下列運算式會將欄位 Year 從整數值轉換成字串值：`=CStr(Fields!Year.Value)`。 如需詳細資訊，請參閱[加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
+-   透過撰寫將某個結果集資料行中所有資料轉換成含有不同資料類型之新資料行的運算式，根據現有的報表資料集欄位建立導出欄位。 例如，下列運算式會將欄位 Year 從整數值轉換成字串值： `=CStr(Fields!Year.Value)`。 如需詳細資訊，請參閱[加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   
--   檢查您所使用的資料處理延伸模組是否包含擷取預先格式化資料的中繼資料。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查詢會針對處理 Cube 時已經格式化的 Cube 值包含 FORMATTED_VALUE 擴充屬性。 如需詳細資訊，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
+-   檢查您所使用的資料處理延伸模組是否包含擷取預先格式化資料的中繼資料。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查詢會針對處理 Cube 時已經格式化的 Cube 值包含 FORMATTED_VALUE 擴充屬性。 如需詳細資訊，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
 ## <a name="understanding-parameter-data-types"></a>了解參數資料類型  
  報表參數必須屬於下列其中一種資料類型：Boolean、DateTime、Integer、Float 或 Text (也稱為 String)。 當資料集查詢包含查詢參數時，系統就會自動建立報表參數並將它們連結至查詢參數。 報表參數的預設資料類型為 String。 若要變更報表參數的預設資料類型，請在 [報表參數屬性] 對話方塊的 [一般] 頁面上，從 [資料類型] 下拉式清單中選取正確的值。  
@@ -101,9 +100,9 @@ ms.lasthandoff: 08/09/2017
  當您連接至某個資料來源，但是所使用的資料提供者並未提供該資料來源之所有資料類型的轉換支援時，不支援之資料來源類型的預設資料類型就是 String。 下列範例會提供當做字串傳回之特定資料類型的解決方案。  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>串連 String 和 CLR DateTimeOffset 資料類型  
- CLR 會針對大部分資料類型提供預設轉換，讓您能夠使用 & 運算子，將不同資料類型的值串連成單一字串。 例如，下列運算式會串連文字 "The date and time are: " 與資料集欄位 StartDate (它是 <xref:System.DateTime> 值)：`="The date and time are: " & Fields!StartDate.Value`。  
+ CLR 會針對大部分資料類型提供預設轉換，讓您能夠使用 & 運算子，將不同資料類型的值串連成單一字串。 例如，下列運算式會串連文字 "The date and time are: " 與資料集欄位 StartDate (它是 <xref:System.DateTime> 值)： `="The date and time are: " & Fields!StartDate.Value`。  
   
- 若為某些資料類型，您可能就必須加入 ToString 函數。 例如，下列運算式會顯示使用 CLR 資料類型的相同範例<xref:System.DateTimeOffset>，包括日期、 時間和時區位移相對於 UTC 時區為準： `="The time is: " & Fields!StartDate.Value.ToString()`。  
+ 若為某些資料類型，您可能就必須加入 ToString 函數。 例如，下列運算式會使用 CLR 資料類型 <xref:System.DateTimeOffset>來顯示相同的範例，其中包含日期、時間和相對於 UTC 時區的時區時差： `="The time is: " & Fields!StartDate.Value.ToString()`。  
   
 ### <a name="converting-a-string-data-type-to-a-clr-datetime-data-type"></a>將 String 資料類型轉換成 CLR DateTime 資料類型  
  如果資料處理延伸模組不支援針對資料來源所定義的所有資料類型，系統可能會將資料擷取成文字。 例如， **datetimeoffset(7)** 資料類型值可能會擷取成 String 資料類型。 在澳大利亞的伯斯省，代表 2008 年 7 月 1 日上午 6:05:07.9999999 的字串值 會類似下列內容：  
@@ -144,12 +143,11 @@ ms.lasthandoff: 08/09/2017
   
      `2008-07-01 06:05:07             2008                   480`  
   
- 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料類型的詳細資訊，請參閱《[SQL Server 線上叢書](http://go.microsoft.com/fwlink/?linkid=120955)》中的[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)和[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料類型的詳細資訊，請參閱 [SQL Server 線上叢書](http://go.microsoft.com/fwlink/?linkid=120955)中的[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) 及[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
- 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料類型的詳細資訊，請參閱《[SQL Server 線上叢書](http://go.microsoft.com/fwlink/?linkid=120955)》中的 [Analysis Services 中的資料類型](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md)。  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料類型的詳細資訊，請參閱《 [SQL Server 線上叢書](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) 》中的 [SQL Server Books Onl》中的e](http://go.microsoft.com/fwlink/?linkid=120955)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   
-

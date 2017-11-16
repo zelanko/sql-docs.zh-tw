@@ -5,8 +5,7 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,26 +13,25 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - public profiles [Database Mail]
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3dfeb39ffa1bba82e4f5782ef30621c8e57529de
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a006eb212a0d53a726397e8591ac99a7c6395a51
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-database-mail-profile"></a>建立 Database Mail 設定檔
   您可以使用 [Database Mail 組態精靈] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，建立 Database Mail 公用和私人設定檔。 如需郵件設定檔的詳細資訊，請參閱 [Database Mail 設定檔](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2)。
   
--   **Before you Begin:** [Prerequisites](#Prerequisites), , [Security](#Security)  
+-   **開始之前** [必要條件](#Prerequisites)、 [安全性](#Security)  
   
--   **To Create a Database Mail private profile using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **使用下列項目建立 Database Mail 私人設定檔**  [Database Mail 組態精靈](#SSMSProcedure)、 [Transact-SQL](#PrivateProfile)  
   
--   **To Create a Database Mail public profile using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **使用下列項目建立 Database Mail 公用設定檔**  [Database Mail 組態精靈](#SSMSProcedure)、 [Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -230,4 +228,3 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ```  
   
   
-

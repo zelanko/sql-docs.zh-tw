@@ -5,25 +5,23 @@ ms.date: 08/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Database Mail [SQL Server], SQL Server Agent Mail
 - SQL Server Agent Mail
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 15fafd5b18011c54aee21daeaf9bc4ae295ea205
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fd14545a30d307845af1ce55be28334d4d8a25cc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>設定 SQL Server Agent Mail 使用 Database Mail
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中將 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Agent 設定為使用 Database Mail 來傳送通知和警示。  如需如何啟用及設定 Database Mail 的相關資訊，請參閱 [設定 Database Mail](../../relational-databases/database-mail/configure-database-mail.md)。  如需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的範例，請參閱 [建立 Database Mail 設定檔](../../relational-databases/database-mail/create-a-database-mail-profile.md)。
@@ -84,4 +82,3 @@ ms.lasthandoff: 08/03/2017
      操作員是可接收電子通知之人員或群組使用的別名  
   
   
-

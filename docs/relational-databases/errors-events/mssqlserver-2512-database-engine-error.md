@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 2512 (Database Engine error)
+helpviewer_keywords: 2512 (Database Engine error)
 ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1010301cae338b1f6d1544f48541ea5237297381
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e6086dd0464cc7937a4e48a383fcba26bbc5831a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver2512"></a>MSSQLSERVER_2512
   
@@ -63,4 +60,3 @@ ms.lasthandoff: 06/22/2017
 ### <a name="results-of-running-repair-options"></a>執行 REPAIR 選項的結果  
 如果記錄是準刪除項目或者索引不是唯一項目，DBCC 就可以透過重建索引的方式來修復這個問題。 否則，REPAIR 便會在必要時刪除 *P_ID2* 頁面上的 *SLOT2* 位置，或將該位置標示為準刪除項目。  
   
-

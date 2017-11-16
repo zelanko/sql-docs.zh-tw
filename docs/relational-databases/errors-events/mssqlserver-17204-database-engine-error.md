@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 17204 (Database Engine error)
+helpviewer_keywords: 17204 (Database Engine error)
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 282af6b3e7c620f4937baf811b5fb300edf9e8f7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c8aaa148bd866ef8a420048a320ec33ce524891f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver17204"></a>MSSQLSERVER_17204
   
@@ -43,4 +40,3 @@ SQL Server 無法開啟指定的檔案，因為發生指定的錯誤。
 ## <a name="user-action"></a>使用者動作  
 診斷並更正作業系統，然後重試此作業。  
   
-

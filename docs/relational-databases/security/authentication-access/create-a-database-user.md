@@ -5,8 +5,7 @@ ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,18 +22,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
----   
-
+caps.latest.revision: "31"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Active
+ms.openlocfilehash: 3459cbe5b6e141af32ba7e8f29f0da6e3a34819d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
+---
 # <a name="create-a-database-user"></a>建立資料庫使用者
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
@@ -43,14 +41,14 @@ ms.lasthandoff: 06/22/2017
  您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]來建立資料庫使用者。  
   
 ##  <a name="Understanding"></a> 了解使用者的類型  
- 建立資料庫使用者時，[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 會顯示 6 個選項。 下圖在綠色方塊中顯示 6 個選項，並指出它們代表的意義。  
+ [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 會顯示 6 個選項。 下圖在綠色方塊中顯示 6 個選項，並指出它們代表的意義。  
   
  ![使用者類型](../../../relational-databases/security/authentication-access/media/typesofusers.png "使用者類型")  
   
 ### <a name="selecting-the-type-of-user"></a>選取使用者的類型  
  **登入或未對應到登入的使用者**  
   
- 如果您不熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，就很難判斷您要建立的使用者類型。 先問問自己，需要存取資料庫的個人或群組是否有登入？ Master 資料庫中的登入通常是管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的人員，以及需要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的執行個體上存取許多或所有資料庫的人員。 針對此情況，您將建立 **有登入的 SQL 使用者**。 連接到資料庫時，資料庫使用者是登入的識別。 資料庫使用者可以使用相同的名稱做為登入，但是並非必要。 本主題假設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中已有登入存在。 如需如何建立登入的相關資訊，請參閱[建立登入](../../../relational-databases/security/authentication-access/create-a-login.md)。  
+ 如果您不熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，就很難判斷您要建立的使用者類型。 先問問自己，需要存取資料庫的個人或群組是否有登入？ Master 資料庫中的登入通常是管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的人員，以及需要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的執行個體上存取許多或所有資料庫的人員。 針對此情況，您將建立 **有登入的 SQL 使用者**。 連接到資料庫時，資料庫使用者是登入的識別。 資料庫使用者可以使用相同的名稱做為登入，但是並非必要。 本主題假設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中已有登入存在。 如需如何建立登入的相關資訊，請參閱 [建立登入](../../../relational-databases/security/authentication-access/create-a-login.md)。  
   
  如果需要存取資料庫的個人或群組沒有登入，以及如果他們只需要存取一個或數個資料庫，請建立 **Windows 使用者** 或 **有密碼的 SQL 使用者**。 也稱為自主資料庫使用者，它不會與 master 資料庫中的登入相關聯。 當您想要能夠輕鬆地在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體之間移動資料庫時，這是很好的選擇。 若要在 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]上使用此選項，系統管理員必須先針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]啟用自主資料庫，以及針對內含項目啟用資料庫。 如需詳細資訊，請參閱 [自主資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 06/22/2017
      **預設語言**  
      輸入使用者的預設語言。  
   
-     **預設結構描述**  
+     **預設的結構描述**  
      輸入將擁有此使用者建立之物件的結構描述。 或者，按一下省略符號 (...)，開啟 [選取結構描述] 對話方塊。 如果您從**[使用者類型]** 清單中選取 **[有登入的 SQL 使用者]**, **[沒有登入的 SQL 使用者]**或 **[Windows 使用者]** ， **[預設結構描述]** 就是可用的。  
   
      **憑證名稱**  
@@ -171,4 +169,3 @@ ms.lasthandoff: 06/22/2017
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
-

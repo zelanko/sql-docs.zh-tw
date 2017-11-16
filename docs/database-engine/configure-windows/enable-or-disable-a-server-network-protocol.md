@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +19,18 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d83a336ea3d35d22ea14d6a4a66698f99890650d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: e6716392a65ce797e2f0bae543f50899b9fbeb2d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# 啟用或停用伺服器網路通訊協定
+# <a name="enable-or-disable-a-server-network-protocol"></a>啟用或停用伺服器網路通訊協定
   所有網路通訊協定都是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所安裝，但是有些會啟用，有些不會啟用。 本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 組態管理員或 PowerShell，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中啟用或停用伺服器網路通訊協定。 必須停止並重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，才能讓變更生效。  
   
 > [!IMPORTANT]  
@@ -51,21 +49,21 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
-#### 若要啟用伺服器網路通訊協定  
+#### <a name="to-enable-a-server-network-protocol"></a>若要啟用伺服器網路通訊協定  
   
 1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的主控台窗格中，展開 **[SQL Server 網路組態]**。  
   
 2.  在主控台窗格中，按一下 [\<執行個體名稱> 的通訊協定]。  
   
-3.  在詳細資料窗格中，以滑鼠右鍵按一下要變更的通訊協定，然後按一下啟用 或 停用。  
+3.  在詳細資料窗格中，以滑鼠右鍵按一下要變更的通訊協定，然後按一下 [啟用] 或 [停用]。  
   
 4.  在主控台窗格中，按一下 **[SQL Server 服務]**。  
   
-5.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]，然後按一下重新啟動，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
+5.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]，然後按一下 [重新啟動]，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
   
-#### 若要使用 PowerShell 來啟用伺服器網路通訊協定  
+#### <a name="to-enable-a-server-network-protocol-using-powershell"></a>若要使用 PowerShell 來啟用伺服器網路通訊協定  
   
 1.  使用管理員權限來開啟命令提示字元。  
   
@@ -99,7 +97,7 @@ ms.lasthandoff: 10/04/2017
     $Np  
     ```  
   
-#### 若要設定本機電腦的通訊協定  
+#### <a name="to-configure-the-protocols-for-the-local-computer"></a>若要設定本機電腦的通訊協定  
   
 -   在本機執行此指令碼並且設定本機電腦時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 可能會用動態方式決定本機電腦名稱，讓指令碼更具彈性。 若要擷取本機電腦名稱，請將設定 `$uri` 變數的程式碼行取代成下列程式碼行：  
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 10/04/2017
     $uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
     ```  
   
-#### 若要使用 SQL Server PowerShell 來重新啟動 Database Engine  
+#### <a name="to-restart-the-database-engine-by-using-sql-server-powershell"></a>若要使用 SQL Server PowerShell 來重新啟動 Database Engine  
   
 -   啟用或停用通訊協定之後，您必須停止並重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，才能讓變更生效。 您可以執行下列陳述式，利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 來停止並啟用預設執行個體。 若要停止並啟動具名執行個體，請將 `'MSSQLSERVER'` 取代成 `'MSSQL$<instance_name>'`。  
   
@@ -134,4 +132,3 @@ ms.lasthandoff: 10/04/2017
     ```  
   
   
-

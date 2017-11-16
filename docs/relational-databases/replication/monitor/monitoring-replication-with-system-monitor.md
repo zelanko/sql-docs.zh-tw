@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - System Monitor [SQL Server], replication
 - performance counters [SQL Server replication]
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 54dd40c16f8ee720f32b6775c54e7245eb5ed978
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fc9b09e9e089f9282ab60eb6e727e65ed7988f93
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>使用系統監視器監視複寫
   「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 系統監視器」可讓您使用圖形、圖表和報告來量測電腦的效率、識別和排除可能的問題 (例如不平衡的資源用量、硬體不足或不良的程式設計)，以及規劃其他硬體需求。 如需詳細資訊，請參閱[監視資源使用狀況 &#40;系統監視器&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 |代理程式|效能物件|計數器|描述|  
 |-----------|------------------------|-------------|-----------------|  
-|所有代理程式|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Agents|執行中|目前正在執行的複寫代理程式數。|  
+|所有代理程式|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫代理程式|執行中|目前正在執行的複寫代理程式數。|  
 |快照集代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫快照|Snapshot:Delivered Cmds/sec|每秒傳送到散發者的命令數。|  
 |快照集代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫快照|Snapshot:Delivered Trans/sec|每秒傳送到散發者的交易數。|  
 |記錄讀取器代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫 Logreader|Logreader:Delivered Cmds/sec|每秒傳送到散發者的命令數。|  
@@ -50,4 +48,3 @@ ms.lasthandoff: 06/22/2017
  [監視 &#40;複寫&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   
-

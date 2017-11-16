@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b6ddedabeb826caf903701327b6b103666b2abb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c0bd256010111e00e31b50776a0034e0066d53b0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +216,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
     ### <a name="create-a-new-key"></a>建立新的金鑰
 
     ##### <a name="example"></a>範例  
-    如果您想要，可以直接在 Azure 金鑰保存庫中建立新的加密金鑰，並以軟體或 HSM 保護它。 在此範例中，我們會使用 `Add-AzureKeyVaultKey cmdlet` 建立受軟體保護金鑰：  
+    如果您想要，可以直接在 Azure 金鑰保存庫中建立新的加密金鑰，並以軟體或 HSM 保護它。 在此範例中，我們會使用 `Add-AzureKeyVaultKey cmdlet`建立受軟體保護金鑰：  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -365,4 +363,3 @@ SQL Server 版本  |可轉散發套件的安裝連結
 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   
-

@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5a59c184fc5229797ad83d5334fbb03169b64374
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ec8b6a2fd8328f1b81234fd153886e828d4ed883
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-and-configure-semantic-search"></a>安裝及設定語意搜尋
   描述統計語意搜尋的必要元件以及如何安裝或檢查這些必要元件。  
@@ -114,7 +113,7 @@ GO
   
 -   語意語言統計資料庫是唯讀的。 您不能自訂這個資料庫。 如果您以任何方式改變資料庫的內容，則未來語意索引的結果就不具決定性。 若要還原這項資料的原始狀態，您可以卸除已改變的資料庫，然後下載並附加全新且尚未改變的資料庫複本。  
   
--   您可以卸離或卸除語意語言統計資料庫。 如果任何使用中索引作業具有資料庫的讀取鎖定，則卸離或卸除作業將會失敗或逾時。 這與現有的行為一致。 移除資料庫之後，語意索引作業將會失敗。  
+-   您可以卸離或卸除語意語言統計資料庫。 如果任何使用中索引作業具有資料庫的讀取鎖定，則卸離或卸除作業將會失敗或逾時。這與現有的行為一致。 移除資料庫之後，語意索引作業將會失敗。  
  
 ##  <a name="HowToUnregister"></a> 移除語意語言統計資料庫  
 

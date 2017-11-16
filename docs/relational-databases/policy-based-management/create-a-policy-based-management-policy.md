@@ -5,23 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Policy-Based Management, creating policies
+helpviewer_keywords: Policy-Based Management, creating policies
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28d614d27647f0466abd5a6715244b6334ec56be
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b3dc0ccf72ed30ddadca4521783d3f9882484a02
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-policy-based-management-policy"></a>建立原則式管理原則
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立原則式管理原則。  
@@ -59,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  如果您想要在建立原則時立即啟用原則，請選取 **[已啟用]** 核取方塊。 如果評估模式為 **[視需要]**，就無法使用 **[已啟用]** 核取方塊。  
   
-7.  在 **[檢查條件]** 清單中，選取其中一個現有的條件，或選取 **[新增條件]**。 若要編輯條件，請選取該條件，然後按一下省略符號 (...)。 如需詳細資訊，請參閱[建立新的原則式管理條件](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)或[檢視或修改原則式管理條件的屬性](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)。  
+7.  在 **[檢查條件]** 清單中，選取其中一個現有的條件，或選取 **[新增條件]**。 若要編輯條件，請選取該條件，然後按一下省略符號 (...)。如需詳細資訊，請參閱[建立新的原則式管理條件](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)或[檢視或修改原則式管理條件的屬性](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)。  
   
 8.  在 **[針對目標]** 方塊中，針對此原則選取一個或多個目標類型。 某些條件和 Facet 只能套用至特定目標類型。 可用的目標集會顯示在相關聯的方塊中。 展開 **[全部]** ，針對某些目標類型選取篩選條件。 如果此方塊中沒有出現任何目標，這表示檢查條件的範圍設定為伺服器層級。  
   
@@ -69,7 +67,7 @@ ms.lasthandoff: 06/22/2017
   
 11. 若要將此原則限制為目標類型的子集，請在 **[伺服器限制]** 方塊中，選取限制條件或建立新的條件。  
   
-     如需有關 **[建立新原則]** 對話方塊可用之選項的詳細資訊，請參閱＜ [建立新原則或開啟原則對話方塊，一般頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) ＞或＜ [建立新原則或開啟原則對話方塊，描述頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)＞。  
+     如需有關 **[建立新原則]** 對話方塊可用之選項的詳細資訊，請參閱＜ [Create New Policy or Open Policy Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) ＞或＜ [Create New Policy or Open Policy Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)＞。  
   
 12. 完成後，請按一下 **[確定]**。  
   

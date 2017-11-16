@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - adding articles
 - articles [SQL Server replication], adding
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a5f9fb102add84a33b08c439cd27cab29c210939
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: b317a0e902d6da830afa6fc17d2c4aa47cca1d37
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-publication"></a>建立發行集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的發行集。  
@@ -164,20 +163,20 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>建立快照式或交易式發行集  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別以建立連線至發行者。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連接。  
   
 2.  為發行集資料庫建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體、將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 傳回 **false**，請確認此資料庫確實存在。  
   
-3.  如果 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> 屬性為 **false**，請將它設定為 **true**。  
+3.  如果 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> 屬性為 **false**，請將它設定為 **true**＞。  
   
 4.  如果是交易式發行集，請檢查 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> 屬性的值。 如果這個屬性為 **true**，則表示記錄讀取器代理程式作業已存在此資料庫中。 如果這個屬性為 **false**，請執行下列動作：  
   
-    -   設定 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 欄位，以提供執行記錄讀取器代理程式所使用之 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 帳戶的認證。  
+    -   設定 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 以及 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 或 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 欄位，以提供執行記錄讀取器代理程式所使用之 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 帳戶的認證。  
   
         > [!NOTE]  
-        >  當發行集是由 **sysadmin** 固定伺服器角色的成員所建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        >  當發行集是由 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 固定伺服器角色的成員所建立時，不需要設定 **P:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity** 。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
-    -   (選擇性) 使用「SQL Server 驗證」連線至發行者時，請設定 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 欄位。  
+    -   (選擇性) 在使用「SQL Server 驗證」連接到「發行者」時，設定 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (或 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> ) 欄位。  
   
     -   呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.CreateLogReaderAgent%2A> 方法來為資料庫建立記錄讀取器代理程式作業。  
   
@@ -185,22 +184,22 @@ ms.lasthandoff: 06/22/2017
   
     -   將 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 設定為步驟 1 中的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 的發行資料庫名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>設為發行的資料庫名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 的發行集名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>設定為發行集名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationType.Transactional> 或 <xref:Microsoft.SqlServer.Replication.PublicationType.Snapshot> 的 <xref:Microsoft.SqlServer.Replication.PublicationType>。  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationType> 或 <xref:Microsoft.SqlServer.Replication.PublicationType.Transactional> 的 <xref:Microsoft.SqlServer.Replication.PublicationType.Snapshot>。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 欄位，以提供執行快照集代理程式所使用之 Windows 帳戶的認證。 當快照集代理程式要連接本機散發者及進行任何遠端連接 (使用 Windows 驗證) 時，也會使用此帳戶。  
+    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 欄位，可提供執行快照集代理程式所使用之 Windows 帳戶的認證。 當快照集代理程式要連接本機散發者及進行任何遠端連接 (使用 Windows 驗證) 時，也會使用此帳戶。  
   
         > [!NOTE]  
-        >  當發行集是由 **sysadmin** 固定伺服器角色的成員所建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        >  當發行集是由 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定伺服器角色的成員所建立時，不需要設定 **P:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity** 。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
-    -   (選擇性) 使用「SQL Server 驗證」連線至發行者時，<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 欄位。  
+    -   (選擇性) 在使用「SQL Server 驗證」連接到發行者時，請設定 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (或 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> ) 欄位。  
   
-    -   (選擇性) 使用內含邏輯 OR 運算子 (Visual C# 中的 **|** 和 Visual Basic 中的 **Or**)，並使用排除邏輯 OR 運算子 (Visual C# 中的 **^** 和 Visual Basic 中的 **Xor**)，為 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 屬性設定 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 值。  
+    -   (選擇性) 使用包含的邏輯 OR 運算子 (Visual C# 中的**|** 和 Visual Basic 中的 **Or** )，並使用排除的邏輯 OR 運算子 (Visual C# 中的**^** 和 Visual Basic 中的 **Xor** )，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性設定 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 屬性的值。  
   
-    -   (選擇性) 當發行者為非 SQL Server 發行者時，<xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A> 的發行者名稱。  
+    -   (選擇性) 當散發者為非 SQL Server 散發者時，將 <xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A> 設定為散發者的名稱。  
   
 6.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 方法來建立發行集。  
   
@@ -211,26 +210,26 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-create-a-merge-publication"></a>建立合併式發行集  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別以建立連線至發行者。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連接。  
   
 2.  為發行集資料庫建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體、將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 傳回 **false**，請確認此資料庫確實存在。  
   
-3.  若 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 屬性為 **false**，請將它設定 **true**，並呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>。  
+3.  如果 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> Property is **false**，請將它設定為 **true**然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>＞。  
   
 4.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體，並為此物件設定下列屬性：  
   
     -   將 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 設定為步驟 1 中的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 的發行資料庫名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>設為發行的資料庫名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 的發行集名稱。  
+    -   將 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>設定為發行集名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 欄位，以提供執行快照集代理程式所使用之 Windows 帳戶的認證。 當快照集代理程式要連接本機散發者及進行任何遠端連接 (使用 Windows 驗證) 時，也會使用此帳戶。  
+    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 欄位，可提供執行快照集代理程式所使用之 Windows 帳戶的認證。 當快照集代理程式要連接本機散發者及進行任何遠端連接 (使用 Windows 驗證) 時，也會使用此帳戶。  
   
         > [!NOTE]  
-        >  當發行集是由 **sysadmin** 固定伺服器角色的成員所建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>。 如需詳細資訊，請參閱 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        >  當發行集是由 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定伺服器角色的成員所建立時，不需要設定 **P:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity** 。 如需詳細資訊，請參閱 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
-    -   (選擇性) 使用內含邏輯 OR 運算子 (Visual C# 中的 **|** 和 Visual Basic 中的 **Or**)，並使用排除邏輯 OR 運算子 (Visual C# 中的 **^** 和 Visual Basic 中的 **Xor**)，為 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 屬性設定 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 值。  
+    -   (選擇性) 使用包含的邏輯 OR 運算子 (Visual C# 中的**|** 和 Visual Basic 中的 **Or** )，並使用排除的邏輯 OR 運算子 (Visual C# 中的**^** 和 Visual Basic 中的 **Xor** )，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性設定 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 屬性的值。  
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 方法來建立發行集。  
   
@@ -263,4 +262,3 @@ ms.lasthandoff: 06/22/2017
  [保護發行者](../../../relational-databases/replication/security/secure-the-publisher.md)  
   
   
-

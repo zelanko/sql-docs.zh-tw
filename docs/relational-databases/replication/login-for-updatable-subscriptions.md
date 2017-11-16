@@ -5,24 +5,21 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
+f1_keywords: sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 906d464c7e3f345c21034cffcd51e1494c0724c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8ec5dd80718de624c3e45ac81eceedc7dfaed2ad
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新訂閱的登入
   如果您在此精靈的 [可更新的訂閱] 頁面上選取 [複寫]，就必須以訂閱者端指定帳戶，並使用此帳戶建立發行者的連接，以進行立即更新。 
@@ -61,4 +58,3 @@ ms.lasthandoff: 09/27/2017
  [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

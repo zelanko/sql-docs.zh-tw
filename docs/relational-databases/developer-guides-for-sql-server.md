@@ -4,24 +4,21 @@ ms.date: 10/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.portal.DevRef.f1
+f1_keywords: sql13.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: cae0c9873a900fc5a5cb180a01e912b9f4dd61cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cf076244d1a73b543f1907400c26ef0c27695ff9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="developer-guides-for-sql-server"></a>適用於 SQL Server 的開發人員指南
   透過使用程式設計模型和介面的自訂程式碼，整合幾乎所有的 SQL Server 功能。 每個功能區域都會包括用於資料收集、資料存取、伺服器管理或資料視覺化的原生和受管理 API。  
@@ -54,4 +51,3 @@ ms.lasthandoff: 09/27/2017
  [SQL Server 技術文件](../sql-server/sql-server-technical-documentation.md)   
  [SQL Server 教學課程](../sql-server/tutorials-for-sql-server-2016.md)  
   
-

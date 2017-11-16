@@ -5,8 +5,7 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - distribution configuration [SQL Server replication]
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd4ea4d94bb9986127e4d5ffd2b8801f73528b93
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: cd7a911a8828bf4738df967c8af14a0ee52d2272
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-publishing-and-distribution"></a>設定發行和散發
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定發行和散發。  
@@ -95,41 +94,41 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-configure-publishing-and-distribution-on-a-single-server"></a>在單一伺服器上設定發行和散發  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與伺服器的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與伺服器的連接。  
   
-2.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 3.  建立 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 類別的執行個體。  
   
-4.  將 <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 屬性設為資料庫名稱，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+4.  將 <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 屬性設定為資料庫名稱，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法來安裝散發者。 傳遞步驟 3 的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 物件。  
   
 6.  建立 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 類別的執行個體。  
   
-7.  設定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 的以下屬性：  
+7.  設定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher>的以下屬性：  
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - 發行者的名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 步驟 5 中建立的資料庫名稱。  
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 用於存取快照集檔案的共用。  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 連接至發行者時所使用的安全性模式。 建議使用 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 當連接到發行者時，所使用的安全性模式。 建議使用<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 。  
   
 8.  呼叫 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> 方法。  
   
 #### <a name="to-configure-publishing-and-distribution-using-a-remote-distributor"></a>使用遠端散發者設定發行和散發  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與遠端散發者伺服器的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與遠端散發者伺服器的連接。  
   
-2.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 3.  建立 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 類別的執行個體。  
   
-4.  將 <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 屬性設為資料庫名稱，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+4.  將 <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 屬性設定為資料庫名稱，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法來安裝散發者。 指定安全密碼 (連接到遠端散發者時由發行者使用) 及步驟 3 中的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 物件。 如需詳細資訊，請參閱[保護散發者](../../relational-databases/replication/security/secure-the-distributor.md)。  
   
@@ -137,23 +136,23 @@ ms.lasthandoff: 06/22/2017
   
 6.  建立 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 類別的執行個體。  
   
-7.  設定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 的以下屬性：  
+7.  設定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher>的以下屬性：  
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - 本機發行者伺服器的名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 步驟 5 中建立的資料庫名稱。  
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 用於存取快照集檔案的共用。  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 連接至發行者時所使用的安全性模式。 建議使用 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 當連接到發行者時，所使用的安全性模式。 建議使用<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 。  
   
 8.  呼叫 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> 方法。  
   
-9. 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與本機發行者伺服器的連線。  
+9. 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與本機發行者伺服器的連接。  
   
-10. 建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 9 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+10. 建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 9 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 11. 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法。 傳遞遠端散發者的名稱以及步驟 5 中指定之遠端散發者的密碼。  
   
@@ -174,4 +173,3 @@ ms.lasthandoff: 06/22/2017
  [設定 AlwaysOn 可用性群組的複寫 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
   
-

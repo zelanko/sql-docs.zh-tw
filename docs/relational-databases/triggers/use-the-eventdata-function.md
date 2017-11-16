@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-ddl
+ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5cb1a29cd7638f5ec9a4248f615381fe6da721b9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f657cb2a52bb4871baba4c2fa6c8b846590ab111
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函數
   使用 EVENTDATA 函數擷取引發 DDL 觸發程序之事件的相關資訊。 此函數會傳回 **xml** 值。 XML 結構描述包括有關下列項目的資訊：  
@@ -129,7 +128,7 @@ GO
 ```  
   
 > [!NOTE]  
->  若要傳回事件資料，建議您使用 **query()** 方法的 XQuery **value()** 方法。 **query()** 方法會在輸出中傳回 XML 和 & 符號逸出歸位字元及換行字元 (CRLF) 執行個體， **value()** 方法則會將 CRLF 執行個體轉譯成在輸出中不可見。  
+>  若要傳回事件資料，建議您使用 **query()** 方法的 XQuery **value()** 方法。 **query()** 方法會在輸出中傳回 XML 和 &amp; 符號逸出歸位字元及換行字元 (CRLF) 執行個體， **value()** 方法則會將 CRLF 執行個體轉譯成在輸出中不可見。  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中則提供了相似的 DDL 觸發程序範例。 若要取得此範例，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來尋找 [Database Triggers] 資料夾。 這個資料夾位在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 [可程式性] 資料夾下。 以滑鼠右鍵按一下 [ddlDatabseTriggerLog]，然後選取 [編寫資料庫觸發程序的指令碼為]。 依預設，會停用 DDL 觸發程序 **ddlDatabseTriggerLog**。  
   

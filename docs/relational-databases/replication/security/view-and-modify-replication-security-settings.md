@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - viewing replication security settings
 - security [SQL Server replication], modifying settings
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e4e8eb9804660085223e0845adeb093511871316
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 673d8fdcdda983dd111b6c2297f2303882b8bd66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-modify-replication-security-settings"></a>檢視及修改複寫安全性設定
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中檢視及修改複寫安全性設定。 例如，您可能要將「記錄讀取器代理程式」到「發行者」的連接從 SQL Server 驗證變更為 Windows 整合式驗證，或者在 Windows 帳戶密碼變更後，可能需要變更用來執行代理程式作業的認證。 如需各代理程式需要的權限資訊，請參閱[複寫代理程式安全性模型](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
@@ -423,13 +422,13 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-change-all-instances-of-a-password-stored-on-a-replication-server"></a>變更複寫伺服器上儲存的所有密碼執行個體  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與複寫伺服器的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與複寫伺服器的連接。  
   
-2.  使用步驟 1 中的連線建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。  
+2.  使用步驟 1 中的連接建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。  
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeReplicationServerPasswords%2A> 方法。 指定下列參數：  
   
-    -   *security_mode* - <xref:Microsoft.SqlServer.Replication.ReplicationSecurityMode> 值，指定所變更密碼的所有執行個體的驗證類型。  
+    -   *security_mode* - <xref:Microsoft.SqlServer.Replication.ReplicationSecurityMode> 值，可指定變更所有密碼執行個體所針對的驗證類型。  
   
     -   *login* - 變更所有密碼執行個體所針對的登入。  
   
@@ -445,113 +444,113 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription-to-a-transactional-publication"></a>針對交易式發行集的發送訂閱變更散發代理程式的安全性設定  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連接。  
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.TransSubscription> 類別的執行個體。  
   
-3.  針對訂閱設定 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> 和 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 屬性，並針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連線。  
+3.  針對訂閱設定 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>和 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 屬性，並針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連接。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 3 中的訂閱屬性定義不正確，或者此訂閱不存在。  
   
-5.  在 <xref:Microsoft.SqlServer.Replication.TransSubscription> 的執行個體上設定以下其中一或多個安全性屬性：  
+5.  在 <xref:Microsoft.SqlServer.Replication.TransSubscription>的執行個體上設定以下其中一個或多個安全性屬性：  
   
-    -   若要變更代理程式執行所使用之 Windows 帳戶的認證，請設定 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 欄位。  
+    -   若要變更代理程式執行所使用之 Windows 帳戶的認證，請設定 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>欄位。  
   
-    -   若要指定「Windows 整合式驗證」作為代理程式連接到訂閱者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定為 **true**。  
+    -   若要指定「Windows 整合式驗證」當做代理程式連接到訂閱者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 欄位設定為 **true**＞。  
   
-    -   若要指定「SQL Server 驗證」作為代理程式連接到訂閱者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定為 **false**，並針對 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 欄位指定訂閱者登入認證。  
+    -   若要指定「SQL Server 驗證」當做代理程式連接到訂閱者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 欄位設定為 **false**，並針對 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> ＞與＜ <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 欄位指定訂閱者登入認證。  
   
         > [!NOTE]  
-        >  與散發者的代理程式連線一律使用 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
+        >  與散發者的代理程式連接一律使用 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
   
-6.  (選擇性) 若您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 **true** 值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 **false** 值 (預設值)，則會立即將變更傳送到伺服器。  
+6.  (選擇性) 如果您已針對 **true** 或 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 **false** 或 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值 (預設值)，則會立即將變更傳送到伺服器。  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription-to-a-transactional-publication"></a>針對交易式發行集的提取訂閱變更散發代理程式的安全性設定  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與訂閱者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與「訂閱者」的連接。  
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 類別的執行個體。  
   
-3.  針對訂閱設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A> 和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 屬性，並針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連線。  
+3.  針對訂閱設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 屬性，並針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連接。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 3 中的訂閱屬性定義不正確，或者此訂閱不存在。  
   
-5.  在 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 的執行個體上設定以下其中一或多個安全性屬性：  
+5.  在 <xref:Microsoft.SqlServer.Replication.TransPullSubscription>的執行個體上設定以下其中一個或多個安全性屬性：  
   
-    -   若要變更代理程式執行所使用之 Windows 帳戶的認證，請設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 欄位。  
+    -   若要變更代理程式執行所使用之 Windows 帳戶的認證，請設定 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>欄位。  
   
-    -   若要指定「Windows 整合式驗證」作為代理程式連接到散發者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定為 **true**。  
+    -   若要指定「Windows 整合式驗證」當做代理程式連接到散發者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 欄位設定為 **true**＞。  
   
-    -   若要指定「SQL Server 驗證」作為代理程式連接到散發者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定為 **false**，並針對 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 欄位指定散發者登入認證。  
+    -   若要指定「SQL Server 驗證」當做代理程式連接到散發者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 欄位設定為 **false**，並針對 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> ＞與＜ <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 欄位指定訂閱者登入認證。  
   
         > [!NOTE]  
-        >  與訂閱者的代理程式連線一律使用 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
+        >  與訂閱者的代理程式連接一律使用 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
   
-6.  (選擇性) 若您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 **true** 值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 **false** 值 (預設值)，則會立即將變更傳送到伺服器。  
+6.  (選擇性) 如果您已針對 **true** 或 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 **false** 或 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值 (預設值)，則會立即將變更傳送到伺服器。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription-to-a-merge-publication"></a>針對合併式發行集的提取訂閱變更合併代理程式的安全性設定  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與訂閱者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與「訂閱者」的連接。  
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 類別的執行個體。  
   
-3.  針對訂閱設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A> 和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 屬性，並針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連線。  
+3.  針對訂閱設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 屬性，並針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連接。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 3 中的訂閱屬性定義不正確，或者此訂閱不存在。  
   
-5.  在 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 的執行個體上設定以下其中一或多個安全性屬性：  
+5.  在 <xref:Microsoft.SqlServer.Replication.MergePullSubscription>的執行個體上設定以下其中一個或多個安全性屬性：  
   
-    -   若要變更代理程式執行所使用之 Windows 帳戶的認證，請設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 欄位。  
+    -   若要變更代理程式執行所使用之 Windows 帳戶的認證，請設定 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>欄位。  
   
-    -   若要指定「Windows 整合式驗證」作為代理程式連接到散發者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定為 **true**。  
+    -   若要指定「Windows 整合式驗證」當做代理程式連接到散發者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 欄位設定為 **true**＞。  
   
-    -   若要指定「SQL Server 驗證」作為代理程式連接到散發者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定為 **false**，並針對 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 欄位指定散發者登入認證。  
+    -   若要指定「SQL Server 驗證」當做代理程式連接到散發者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 欄位設定為 **false**，並針對 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> ＞與＜ <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 欄位指定訂閱者登入認證。  
   
-    -   若要指定「Windows 整合式驗證」作為代理程式連接到發行者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定為 **true**。  
+    -   若要指定「Windows 整合式驗證」當做代理程式連接到發行者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 欄位設定為 **true**＞。  
   
-    -   若要指定「SQL Server 驗證」作為代理程式連接到發行者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定為 **false**，並針對 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 欄位指定發行者登入認證。  
+    -   若要指定「SQL Server 驗證」當做代理程式連接到發行者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 欄位設定為 **false**，並針對 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> ＞與＜ <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 欄位指定訂閱者登入認證。  
   
         > [!NOTE]  
-        >  與訂閱者的代理程式連線一律使用 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
+        >  與訂閱者的代理程式連接一律使用 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
   
-6.  (選擇性) 若您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 **true** 值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 **false** 值 (預設值)，則會立即將變更傳送到伺服器。  
+6.  (選擇性) 如果您已針對 **true** 或 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 **false** 或 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值 (預設值)，則會立即將變更傳送到伺服器。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription-to-a-merge-publication"></a>針對合併式發行集的發送訂閱變更合併代理程式的安全性設定  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連接。  
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 類別的執行個體。  
   
-3.  針對訂閱設定 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> 和 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 屬性，並針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連線。  
+3.  針對訂閱設定 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>和 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 屬性，並針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連接。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 3 中的訂閱屬性定義不正確，或者此訂閱不存在。  
   
-5.  在 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 的執行個體上設定以下其中一或多個安全性屬性：  
+5.  在 <xref:Microsoft.SqlServer.Replication.MergeSubscription>的執行個體上設定以下其中一個或多個安全性屬性：  
   
-    -   若要變更代理程式執行所使用之 Windows 帳戶的認證，請設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 欄位。  
+    -   若要變更代理程式執行所使用之 Windows 帳戶的認證，請設定 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>欄位。  
   
-    -   若要指定「Windows 整合式驗證」作為代理程式連接到訂閱者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定為 **true**。  
+    -   若要指定「Windows 整合式驗證」當做代理程式連接到訂閱者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 欄位設定為 **true**＞。  
   
-    -   若要指定「SQL Server 驗證」作為代理程式連接到訂閱者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定為 **false**，並針對 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 欄位指定訂閱者登入認證。  
+    -   若要指定「SQL Server 驗證」當做代理程式連接到訂閱者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 欄位設定為 **false**，並針對 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> ＞與＜ <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 欄位指定訂閱者登入認證。  
   
-    -   若要指定「Windows 整合式驗證」作為代理程式連接到發行者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定為 **true**。  
+    -   若要指定「Windows 整合式驗證」當做代理程式連接到發行者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> 欄位設定為 **true**＞。  
   
-    -   若要指定「SQL Server 驗證」作為代理程式連接到發行者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 欄位設定為 **false**，並針對 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> 欄位指定發行者登入認證。  
+    -   若要指定「SQL Server 驗證」當做代理程式連接到發行者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> 欄位設定為 **false**，並針對 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> ＞與＜ <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> 欄位指定訂閱者登入認證。  
   
         > [!NOTE]  
-        >  與散發者的代理程式連線一律使用 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
+        >  與散發者的代理程式連接一律使用 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
   
-6.  (選擇性) 若您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 **true** 值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 **false** 值 (預設值)，則會立即將變更傳送到伺服器。  
+6.  (選擇性) 如果您已針對 **true** 或 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 **false** 或 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值 (預設值)，則會立即將變更傳送到伺服器。  
   
 #### <a name="to-change-the-login-information-used-by-an-immediate-updating-subscriber-when-it-connects-to-the-transactional-publisher"></a>變更立即更新訂閱者連接到交易式發行者時所用的登入資訊  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與訂閱者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與「訂閱者」的連接。  
   
-2.  為訂閱資料庫建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體。 針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 指定步驟 1 中的 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> 和 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+2.  為訂閱資料庫建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體。 指定 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> 並針對 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 指定步驟 1 中的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 2 中的資料庫屬性定義不正確，或者此訂閱資料庫不存在。  
   
-4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> 方法，並傳遞下列參數：  
+4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> 方法，傳遞以下參數：  
   
     -   *Publisher* - 發行者的名稱。  
   
@@ -561,7 +560,7 @@ ms.lasthandoff: 06/22/2017
   
     -   *Distributor* - 散發者的名稱。  
   
-    -   *PublisherSecurity* - <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> 物件，可在連接到發行者和連線的登入認證時，指定立即更新訂閱者所使用之安全性模式的類型。  
+    -   *PublisherSecurity* - A <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> 物件，可在連接到發行者和連接的登入認證時，指定立即更新訂閱者所使用之安全性模式的類型。  
   
 ###  <a name="PShellExample"></a> 範例 (RMO)  
  這個範例會檢查提供的登入值，並針對提供的 Windows 登入或 SQL Server 登入 (在伺服器上由複寫儲存) 變更其所有密碼。  

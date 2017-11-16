@@ -5,8 +5,7 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], backward compatibility
 - compatibility [SQL Server replication]
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ee90e038146d4e313d1efefa8b08bf67649d60c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 92770f531048f6697e2904f1399c74f88022be53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-backward-compatibility"></a>複寫回溯相容性
   「回溯相容性」一節中的主題描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫版本之間行為上的變更。 如果您要升級，或是複寫拓撲中有不只一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，則一定要了解回溯相容性。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 06/22/2017
  [升級複寫的資料庫](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   
-

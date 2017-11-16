@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 2576 (Database Engine error)
+helpviewer_keywords: 2576 (Database Engine error)
 ms.assetid: b727cc2f-c76c-46f8-bbbe-5e7a05a6eabf
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b96de1b2a8056f4b88ba6df9259607e0d94aa427
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0cf4979d79f22608259a5e71a88db8786cf8f0e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver2576"></a>MSSQLSERVER_2576
   
@@ -66,4 +63,3 @@ REPAIR 將會嘗試重建包含 *P_ID2* 頁面的 IAM 鏈結。 重建此鏈結�
 > [!CAUTION]  
 > 此修復可能會導致資料遺失。  
   
-
