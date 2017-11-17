@@ -3,8 +3,11 @@ title: "建立服務 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   建立新的服務。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務是一項特定工作或一組工作的名稱。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會利用服務的名稱路由傳送訊息，將訊息傳遞至資料庫內的正確佇列，以及強制使用合約進行交談。  
   

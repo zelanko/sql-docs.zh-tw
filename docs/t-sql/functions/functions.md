@@ -3,8 +3,11 @@ title: "Microsoft SQL 資料庫函式有哪些？ | Microsoft Docs"
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 資料庫函式有哪些？
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
 深入了解您可以使用 SQL 資料庫的內建函式類別。 您可以使用內建函數，或建立您自己的使用者定義函數。
   

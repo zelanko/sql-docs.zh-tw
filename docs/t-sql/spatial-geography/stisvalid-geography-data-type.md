@@ -3,8 +3,11 @@ title: "STIsValid (geography 資料類型) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stisvalid-geography-data-type"></a>STIsValid (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   傳回 true，否則**geography**執行個體是格式正確而且辨識為有效的地理位置物件根據它的開放式地理空間協會 (OGC) 類型。 傳回 false 如果**geography**執行個體不是語式正確。 這個方法是精確的。  
   

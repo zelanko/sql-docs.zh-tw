@@ -3,8 +3,11 @@ title: "RESTORE REWINDONLY (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 陳述式-REWINDONLY (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   倒轉和關閉設定 NOREWIND 選項來執行的 BACKUP 或 RESTORE 陳述式保留了其開啟狀態的指定磁帶裝置。 這個命令只適用於磁帶裝置。  
   

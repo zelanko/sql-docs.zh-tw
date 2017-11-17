@@ -3,8 +3,11 @@ title: "建立路由 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   將新的路由加入目前資料庫的路由表中。 如果是外寄郵件，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會檢查本機資料庫中的路由表來判斷路由。 針對肇因於另一個執行個體所引發之交談的訊息，包括要轉送的訊息[!INCLUDE[ssSB](../../includes/sssb-md.md)]簽入路由**msdb**。  
   

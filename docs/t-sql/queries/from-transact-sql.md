@@ -1,11 +1,13 @@
 ---
 title: "從 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -47,7 +49,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定 DELETE、SELECT 和 UPDATE 陳述式中使用的資料表、檢視表、衍生資料表及聯結資料表。 在 SELECT 陳述式中，除非選取清單只包含常數、變數及算術運算式 (無資料行名稱)，否則都需要 FROM 子句。  
   

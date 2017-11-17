@@ -3,8 +3,11 @@ title: "CUME_DIST (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 計算 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之值群組內某值的累加分配。 亦即，CUME_DIST 會計算值群組中某值的相對位置。 資料列*r*，此時是假設遞增排序的 CUME_DIST *r*是值的資料列數目，小於或等於值*r*，除以資料列數目評估資料分割或查詢結果集內。 CUME_DIST 與 PERCENT_RANK 函數類似。
   

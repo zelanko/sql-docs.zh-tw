@@ -1,11 +1,13 @@
 ---
 title: "建立資料行主要金鑰 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   在資料庫中建立的資料行主要金鑰中繼資料物件。 代表索引鍵，資料行主要金鑰中繼資料項目儲存在外部金鑰存放區，可用來保護 （加密） 資料行加密金鑰時使用[永遠加密 &#40; Database engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能。 進行金鑰輪替，允許多個資料行主要金鑰定期變更金鑰來加強安全性。 您也可以使用 [物件總管] 中的金鑰存放區和其對應的中繼資料物件在資料庫中建立資料行主要金鑰[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell。 如需詳細資訊，請參閱[的金鑰管理概觀的一律加密](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。  
   

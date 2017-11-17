@@ -3,9 +3,11 @@ title: "DBCC PDW_SHOWEXECUTIONPLAN (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|database-console-commands
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +27,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 顯示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行在特定的查詢執行計畫[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]計算節點或控制節點。 使用此運算節點和控制節點上執行查詢時，進行查詢效能問題的疑難排解。
   

@@ -3,9 +3,11 @@ title: "建立 TABLE AS SELECT （Azure SQL 資料倉儲） |Microsoft 文件"
 ms.custom: 
 ms.date: 10/07/2016
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>建立 TABLE AS SELECT （Azure SQL 資料倉儲）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 建立資料表 AS 選取 (CTAS) 是其中一項最重要的 T-SQL 功能。 這是建立新的資料表根據 SELECT 陳述式的輸出完全平行化的作業。 CTAS 是建立一份資料表最簡單且最快的方法。   
  

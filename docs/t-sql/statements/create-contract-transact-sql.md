@@ -3,8 +3,11 @@ title: "建立合約 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   建立新的合約。 合約會定義 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談中所用的訊息類型，並決定交談的哪一端可以傳送該類型的訊息。 每一個交談都遵照一個合約。 交談開始時，起始服務會指定交談的合約。 目標服務則會指定目標服務接受交談的合約。  
   

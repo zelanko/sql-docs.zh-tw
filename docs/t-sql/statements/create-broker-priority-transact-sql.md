@@ -3,8 +3,11 @@ title: "建立 BROKER 優先權 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   定義優先權等級以及用來判斷哪一個 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談要指派給此優先權等級的準則集。 優先權等級指派給任何交談端點會使用相同的合約和服務的交談優先權中指定的組合。 優先權的範圍值是從 1 (低) 到 10 (高)。 預設為 5。  
   

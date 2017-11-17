@@ -3,8 +3,11 @@ title: "DBCC OPENTRAN (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 DBCC OPENTRAN 有助於識別可能阻礙記錄截斷的使用中交易。 DBCC OPENTRAN 顯示在指定之資料庫的交易記錄內，最舊的使用中交易以及最舊的分散式和非分散式複寫交易 (如果有的話) 的相關資訊。 只有在記錄內有使用中的交易或資料庫包含複寫資訊時，才會顯示結果。 如果記錄內沒有使用中的交易，就會顯示參考用訊息。
   

@@ -3,8 +3,11 @@ title: "&lt;&gt;（不等於）(TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="not-equal-to-transact-sql---traditional"></a>不等於 (Transact SQL)-傳統
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   比較兩個運算式 (比較運算子)。 當您在比較非 Null 運算式時，如果左運算元不等於右運算元，則結果為 TRUE，否則結果就是 FALSE。 如果任一個或兩個運算元都是 NULL，請參閱主題[SET ANSI_NULLS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   

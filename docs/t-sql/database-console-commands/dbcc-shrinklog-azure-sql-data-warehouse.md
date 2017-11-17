@@ -3,8 +3,11 @@ title: "DBCC SHRINKLOG （Azure SQL 資料倉儲） |Microsoft 文件"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,7 +27,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG （Azure SQL 資料倉儲）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 減少交易記錄檔的大小*跨設備*目前[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫。 資料是以壓縮交易記錄檔磁碟重組。 經過一段時間，在資料庫交易記錄可能會變得分散和效率不佳。 使用 DBCC SHRINKLOG 來減少片段化並減少記錄檔大小。
   

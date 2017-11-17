@@ -3,8 +3,11 @@ title: "（除 EQUALS）(TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="divide-equals-transact-sql"></a>（除 EQUALS）(TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   由一個數字除以另一個數字，再將值設定為運算結果。 例如，如果變數@x等於 34，然後`@x /= 2`採用的原始值@x、 除以 2，然後設定@x為該新值 (17)。  
   

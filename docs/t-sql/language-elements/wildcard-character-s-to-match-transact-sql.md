@@ -3,8 +3,11 @@ title: "（萬用字元-相符的字元）(TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="wildcard---characters-to-match-transact-sql"></a>（萬用字元-相符的字元）(TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   符合指定的範圍或指定括號之間集內的任何單一字元`[ ]`。 這些萬用字元可用於模式比對，例如牽涉到的字串比較`LIKE`和`PATINDEX`。  
   

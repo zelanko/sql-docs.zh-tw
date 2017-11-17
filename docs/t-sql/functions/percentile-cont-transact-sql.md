@@ -3,8 +3,11 @@ title: "PERCENTILE_CONT (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料行值連續分佈計算百分位數。 其結果會以內插值取代，可能不會等於資料行中的任何特定值。  
   

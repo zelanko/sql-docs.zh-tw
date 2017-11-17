@@ -2,27 +2,33 @@
 title: "資料行屬性 (一般頁面) | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.columnproperties.general.f1
+f1_keywords:
+- sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a8be15f81cbe532c638e219fa221770114d7c67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 478dc0e10767f9e4e10c5c3ede74aec5ddaddef4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="column-properties-general-page"></a>資料行屬性 (一般頁面)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   使用此頁面來檢視選取之資料行的屬性。  
   
@@ -111,3 +117,4 @@ ms.lasthandoff: 11/09/2017
  指出資料行是否可以複寫。 可能的值為 **True** 和 **False**。  
   
   
+

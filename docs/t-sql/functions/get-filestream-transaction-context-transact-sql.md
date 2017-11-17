@@ -3,8 +3,11 @@ title: "GET_FILESTREAM_TRANSACTION_CONTEXT (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回代表工作階段之目前交易內容的 Token。 應用程式會使用此 Token 將 FILESTREAM 檔案系統資料流作業繫結至此交易。 如需 FILESTREAM 主題的清單，請參閱[二進位大型物件 &#40;Blob &#41;資料 &#40;SQL Server &#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   

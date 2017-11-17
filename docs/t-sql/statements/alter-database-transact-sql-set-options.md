@@ -1,12 +1,14 @@
 ---
 title: "ALTER DATABASE SET 選項 (TRANSACT-SQL) |Microsoft 文件"
 description: "深入了解如何設定資料庫選項，例如自動微調，加密，SQL Server 和 Azure SQL Database 中的查詢存放區"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +42,7 @@ ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   本主題包含與設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中資料庫選項有關的 ALTER DATABASE 語法。 如需其他 ALTER DATABASE 語法，請參閱下列主題。  
   

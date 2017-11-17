@@ -3,8 +3,11 @@ title: "在 XML 資料的關聯式資料繫結 |Microsoft 文件"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>在 XML 資料中繫結關聯式資料
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   您可以指定[xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)針對**xml**資料類型變數或資料行。 例如，[查詢 &#40; &#41;方法 &#40; xml 資料類型 &#41;](../../t-sql/xml/query-method-xml-data-type.md)會針對 XML 執行個體指定的 XQuery。 當您以這種方式來建構 XML 時，可能會想要引用非 XML 類型資料行或 Transact-SQL 變數中的值。 此程序就稱為：在 XML 資料中繫結關聯式資料。  
   

@@ -3,8 +3,11 @@ title: "IDENTITY （屬性） (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-table-transact-sql-identity-property"></a>建立資料表 (TRANSACT-SQL) IDENTITY （屬性）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   建立資料表中的識別欄位。 這個屬性會搭配 CREATE TABLE 和 ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式使用。  
   

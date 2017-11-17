@@ -3,8 +3,11 @@ title: "資料類型 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 9/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -27,9 +30,8 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/27/2017
 
 ---
-
 # <a name="data-types-transact-sql"></a>資料類型 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，每個資料行、區域變數、運算式和參數都有相關的資料類型。 資料類型是指定物件所能保留之資料類型的屬性，這些資料類型包括整數資料、字元資料、貨幣資料、日期和時間資料、二進位字串等。
   

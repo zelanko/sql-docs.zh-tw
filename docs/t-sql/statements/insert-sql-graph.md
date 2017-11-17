@@ -2,9 +2,13 @@
 title: "插入 （SQL 圖形） |Microsoft 文件"
 description: "插入 SQL 圖形節點或邊緣資料表的語法。"
 ms.date: 05/12/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,9 +31,8 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/01/2017
 
 ---
-
 # <a name="insert-sql-graph"></a>插入 （SQL 圖形）
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   將一個或多個資料列`node`或`edge`資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 
 

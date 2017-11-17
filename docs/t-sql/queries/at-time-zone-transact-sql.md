@@ -2,8 +2,12 @@
 title: "時區 (TRANSACT-SQL) |Microsoft 文件"
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="at-time-zone-transact-sql"></a>時區 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   將轉換*inputdate*對應*datetimeoffset*目標時區中的值。 如果*inputdate*提供不含時差的資訊函式適用於假設的時區位移*inputdate*目標時區中提供值。 如果*inputdate*依現狀*datetimeoffset*值，比**AT TIME ZONE**子句將其轉換成使用時區轉換規則的目標時區。  
   

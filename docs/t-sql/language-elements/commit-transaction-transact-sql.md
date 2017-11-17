@@ -3,8 +3,11 @@ title: "認可交易 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 09/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   標示順利完成的隱含或明確的交易結束。 如果 @@TRANCOUNT為 1，COMMIT TRANSACTION 會執行所有資料修改，因為交易在資料庫中，永久的一部分的開頭會釋出的交易，而 @ 遞減所持有的資源@TRANCOUNT設為 0。 如果 @@TRANCOUNT大於 1，COMMIT TRANSACTION 會遞減 @@TRANCOUNT只能由 1，而且交易會維持作用中。  
   

@@ -3,8 +3,11 @@ title: "TRUNCATE TABLE (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   移除所有資料列的資料表或指定的分割區資料表，而不記錄個別資料列刪除。 TRUNCATE TABLE 類似於不含 WHERE 子句的 DELETE 陳述式；不過，TRUNCATE TABLE 比較快，使用的系統資源和交易記錄資源也比較少。  
   

@@ -3,9 +3,11 @@ title: "建立遠端 TABLE AS SELECT (Parallel Data Warehouse) |Microsoft 文件
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
+ms.prod_service: pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>建立遠端 TABLE AS SELECT (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   選取的資料從[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫，並將該資料複製到新的資料表中的 SMP[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遠端伺服器上的資料庫。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]應用裝置中，會使用 MPP 查詢處理，以選取的遠端副本資料的所有優點。 使用這項功能需要的案例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能。  
   

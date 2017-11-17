@@ -3,8 +3,11 @@ title: "建立類型 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的目前資料庫中建立別名資料類型或使用者定義型別。 別名資料類型的實作是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生系統類型為基礎。 使用者定義型別透過組件中的類別來實作[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]通用語言執行平台 (CLR)。 若要將使用者定義型別繫結到它的實作，包含型別實作的 CLR 組件必須先註冊在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)。  
   

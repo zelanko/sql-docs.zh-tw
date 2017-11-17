@@ -3,8 +3,11 @@ title: "執行 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="execute-transact-sql"></a>執行 Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 執行命令字串或字元字串內[!INCLUDE[tsql](../../includes/tsql-md.md)]批次或其中一個下列模組： 系統預存程序、 使用者定義預存程序、 CLR 預存程序、 純量值使用者定義函數或擴充預存程序。 EXECUTE 陳述式可用來將傳遞命令傳送到連結伺服器。 另外，執行字串或命令所在的內容也可以明確設定。 結果集的中繼資料可透過 WITH RESULT SETS 來定義。
   

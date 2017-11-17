@@ -3,8 +3,11 @@ title: "STGeometryN (geography 資料類型) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回指定**geography**中的項目**GeometryCollection**或其中一個及其子型別。 子類型上使用 STGeometryN() 時**GeometryCollection**，例如**MultiPoint**或**MultiLineString**，這個方法會傳回**地理位置**如果使用 N = 1 呼叫執行個體。  
   

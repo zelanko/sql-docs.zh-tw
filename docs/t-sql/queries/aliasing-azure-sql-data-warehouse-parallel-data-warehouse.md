@@ -3,8 +3,11 @@ title: "別名 （Azure SQL 資料倉儲、 Parallel Data Warehouse） |Microsof
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>別名 （Azure SQL 資料倉儲、 Parallel Data Warehouse）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   別名可讓採取短暫且容易記住的字串來取代資料表或資料行名稱中的暫存替代[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]查詢。 資料表別名通常是聯結查詢中使用，因為聯結語法的參考資料行時，需要完整限定的物件名稱。  
   

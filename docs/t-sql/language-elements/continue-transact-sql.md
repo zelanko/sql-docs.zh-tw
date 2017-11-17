@@ -3,8 +3,11 @@ title: "繼續 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="continue-transact-sql"></a>CONTINUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   重新啟動 WHILE 迴圈。 CONTINUE 關鍵字之後的任何陳述式都會被忽略。 CONTINUE 經常是由 IF 測試來開啟，但並非一律如此。 如需詳細資訊，請參閱[時 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/while-transact-sql.md)和[流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md).  
   

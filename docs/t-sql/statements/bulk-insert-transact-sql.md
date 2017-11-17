@@ -3,8 +3,11 @@ title: "BULK INSERT (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 01/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   依照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用者指定的格式，將資料檔案匯入資料庫資料表或檢視表中  
   

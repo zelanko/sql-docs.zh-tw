@@ -3,8 +3,11 @@ title: "RESTORE VERIFYONLY (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE 陳述式-VERIFYONLY (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   驗證備份，但不還原它，同時也會檢查備份組是否已完成，整個備份是否可讀取。 不過，RESTORE VERIFYONLY 並不會嘗試驗證備份磁碟區所包含之資料的結構。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，已增強 RESTORE VERIFYONLY 可執行額外檢查資料，以提升偵測到錯誤的機率。 目標是盡可能接近實際的還原作業。 如需詳細資訊，請參閱＜備註＞一節。  
   

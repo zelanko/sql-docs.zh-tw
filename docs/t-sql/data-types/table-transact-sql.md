@@ -3,8 +3,11 @@ title: "資料表 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-transact-sql"></a>資料表 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 一種特殊的資料類型，可用於儲存結果集以供後續處理。 **資料表**主要用於暫時儲存當做資料表值函式的結果集傳回的資料列集。 函式和變數可以宣告為類型**資料表**。 **資料表**變數可以用於函式、 預存程序和批次。 若要宣告類型的變數**資料表**，使用[DECLARE @local_variable ](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。
   

@@ -3,8 +3,11 @@ title: "SET QUOTED_IDENTIFIER (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 02/03/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遵照有關分隔識別碼和常值字串之引號的 ISO 規則。 用雙引號定界的識別碼可以是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留關鍵字，也可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的識別碼語法規則通常不接受的字元。  
   

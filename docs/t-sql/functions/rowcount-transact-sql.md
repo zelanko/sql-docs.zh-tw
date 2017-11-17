@@ -3,8 +3,11 @@ title: "@@ROWCOUNT (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="x40x40rowcount-transact-sql"></a>（& s) #x 40; & #x 40。ROWCOUNT (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回受到前一個陳述式所影響的資料列數。 如果資料列數目超過 2 億，請使用[ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md)。  
   

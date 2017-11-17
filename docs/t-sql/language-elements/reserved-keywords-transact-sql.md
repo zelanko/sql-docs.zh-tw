@@ -3,8 +3,11 @@ title: "保留的關鍵字 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留的關鍵字 Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用保留的關鍵字來定義、操作和存取資料庫。 保留的關鍵字是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用來剖析及了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式和批次之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言文法的一部分。 雖然在語意上可以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留關鍵字做為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中的識別碼及物件名稱，但您必須分隔這些識別碼。  
   

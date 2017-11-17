@@ -3,8 +3,11 @@ title: "TOP (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，將查詢結果集中所傳回的資料列數限制為指定數目的資料列或是資料列的百分比。 當 TOP 與 ORDER BY 子句一起使用時，結果集是限制為前*N*個已排序資料列，否則會傳回前*N*未定義順序中的資料列數字。 使用這個子句以指定 SELECT 陳述式所傳回的資料列數目或受到 INSERT、UPDATE、MERGE 或 DELETE 陳述式所影響的資料列數目。  
   

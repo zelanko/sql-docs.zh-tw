@@ -3,8 +3,11 @@ title: "TRY_PARSE (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   將會傳回運算式的結果，並轉譯為所要求的資料類型。若在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中轉換失敗，則傳回 Null。 TRY_PARSE 僅適用於從字串轉換到日期/時間及數字類型。  
   

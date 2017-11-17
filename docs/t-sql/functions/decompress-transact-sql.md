@@ -1,11 +1,13 @@
 ---
 title: "解壓縮 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/30/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="decompress-transact-sql"></a>解壓縮 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   解壓縮使用 GZIP 演算法的輸入的運算式。 壓縮的結果是位元組陣列 （varbinary （max） 類型）。  
   

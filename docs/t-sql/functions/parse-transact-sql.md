@@ -3,8 +3,11 @@ title: "剖析 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 07/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 

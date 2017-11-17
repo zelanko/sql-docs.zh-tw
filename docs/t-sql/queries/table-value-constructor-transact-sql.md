@@ -3,8 +3,11 @@ title: "資料表值建構函式 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-value-constructor-transact-sql"></a>資料表值建構函式 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   指定要建構到資料表中的一組資料列值運算式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值建構函式允許在單一 DML 陳述式中指定多個資料列。 資料表值建構函式中使用的 INSERT 陳述式的 VALUES 子句中只能指定\<來源資料表 > 子句的 MERGE 陳述式和 FROM 子句中的衍生資料表定義中。  
   

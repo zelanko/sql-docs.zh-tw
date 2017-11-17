@@ -3,8 +3,11 @@ title: "建立資料分割函數 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在目前資料庫中建立一個函數，根據指定資料行的各個值，將資料表或索引的資料列對應到資料分割中。 使用 CREATE PARTITION FUNCTION 是建立資料分割資料表或索引的第一步。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，一個資料表或索引最多可以有 15,000 個資料分割。  
   

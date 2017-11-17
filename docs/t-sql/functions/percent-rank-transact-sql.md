@@ -3,8 +3,11 @@ title: "PERCENT_RANK (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="percentrank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   計算 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料列群組中之資料列的相關次序。 使用 PERCENT_RANK 評估查詢結果集或分割區中某值的相對位置。 PERCENT_RANK 與 CUME_DIST 函數類似。  
   

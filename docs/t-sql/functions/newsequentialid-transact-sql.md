@@ -3,8 +3,11 @@ title: "NEWSEQUENTIALID (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/08/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   建立一個 GUID，該 GUID 會大於這個函數先前在指定的電腦啟動 Windows 後所產生的任何 GUID。 重新啟動 Windows 後，GUID 可以從較低的範圍再次啟動，但仍是全域唯一的。 將 GUID 資料行當做資料列識別碼使用時，使用 NEWSEQUENTIALID 可能比使用 NEWID 函數更快。 這是因為 NEWID 函數會造成隨機活動，因此會使用較少的快取資料頁面。 使用 NEWSEQUENTIALID 也有助於完全填滿資料與索引頁面。  
   

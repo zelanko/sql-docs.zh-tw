@@ -1,11 +1,13 @@
 ---
 title: "建立資料行存放區索引 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,9 +43,8 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/27/2017
 
 ---
-
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 將資料列存放區資料表轉換成叢集資料行存放區索引，或建立非叢集資料行存放區索引。 有效率地對 OLTP 工作負載執行即時作業分析，或是改善資料倉儲工作負載的資料壓縮和查詢效能，請使用資料行存放區索引。  
   

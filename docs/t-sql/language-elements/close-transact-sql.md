@@ -3,8 +3,11 @@ title: "關閉 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   釋出目前結果集，再釋放對資料指標所在的資料列所保留的任何資料指標鎖定，來關閉開啟的資料指標。 CLOSE 會保留資料結構仍可重新開啟的狀態，但在重新開啟資料指標之前，不允許提取和定位更新。 必須對開啟的資料指標發出 CLOSE；對於只是宣告過或已關閉的資料指標，不允許發出 CLOSE。  
   

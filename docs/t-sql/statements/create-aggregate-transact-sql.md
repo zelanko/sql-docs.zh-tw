@@ -3,8 +3,11 @@ title: "建立彙總 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   建立使用者定義的彙總函式 (其實作定義在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的組件類別中)。 若要使 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將彙總函式繫結到它的實作，您必須先利用 CREATE ASSEMBLY 陳述式，將包含這項實作的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件上傳到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中。  
   

@@ -3,8 +3,11 @@ title: "聯集 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-operators---union-transact-sql"></a>設定運算子為等位 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   將兩個或更多查詢的結果結合成單一結果集，其中包括屬於聯集中之所有查詢的所有資料列。 UNION 作業不同於利用聯結來結合兩份資料表的資料行。  
   

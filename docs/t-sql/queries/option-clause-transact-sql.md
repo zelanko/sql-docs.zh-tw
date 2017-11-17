@@ -3,8 +3,11 @@ title: "OPTION 子句 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 子句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定所指出的查詢提示應該用於整個查詢。 雖然可以有多個查詢提示，不過每個查詢提示只能指定一次。 只有一個 OPTION 子句可以利用陳述式加以指定。  
   

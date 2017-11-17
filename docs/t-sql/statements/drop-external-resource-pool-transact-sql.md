@@ -2,9 +2,12 @@
 title: "卸除的外部資源集區 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>卸除的外部資源集區 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   刪除資源管理員外部的資源集區用來定義外部處理序的資源。 針對 R 服務外部集區管理`rterm.exe`， `BxlServer.exe`，及其所衍生的其他處理序。 外部資源集區會建立使用[CREATE EXTERNAL RESOURCE POOL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)使用和修改[ALTER EXTERNAL RESOURCE POOL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md).  
   

@@ -3,8 +3,11 @@ title: "授與拒絕撤銷 Perms Azure SQL 資料與平行資料倉儲 |Microsof
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限： GRANT、 DENY、 REVOKE （Azure SQL 資料倉儲，Parallel Data Warehouse）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   使用[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **GRANT**和**拒絕**授與或拒絕權限的陳述式 (例如**更新**) 上的安全性實體 （例如資料庫、 資料表、 檢視等。)使用安全性主體 （登入、 資料庫使用者或資料庫角色）。 使用**撤銷**移除授與或拒絕的權限。  
   

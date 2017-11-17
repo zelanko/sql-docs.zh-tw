@@ -3,8 +3,11 @@ title: "CREATE FULLTEXT INDEX (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 04/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的某份資料表或索引檢視表建立全文檢索索引。 每個資料表或索引檢視表只允許有一個全文檢索索引，而且每個全文檢索索引都會套用至單一資料表或索引檢視表。 全文檢索索引最多可包含 1024 個資料行。  
   

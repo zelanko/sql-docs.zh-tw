@@ -3,8 +3,11 @@ title: "ROWCOUNT_BIG (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="rowcountbig-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回上次執行之陳述式所影響的資料列數。 此函式運作方式與[@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)，只是 rowcount_big 的傳回型別是**bigint**。  
   

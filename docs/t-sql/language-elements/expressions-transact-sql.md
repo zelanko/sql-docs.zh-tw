@@ -3,8 +3,11 @@ title: "運算式 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="expressions-transact-sql"></a>運算式 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   這是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 進行評估以取得單一資料值的符號和運算子組合。 簡單運算式可以是單一常數、變數、資料行或純量函數。 運算子可用來將兩個或更多簡單運算式聯結成複雜運算式。  
   

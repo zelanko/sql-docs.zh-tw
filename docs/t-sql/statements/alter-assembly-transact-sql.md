@@ -3,8 +3,11 @@ title: "ALTER ASSEMBLY (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   修改組件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄屬性來改變組件。 ALTER ASSEMBLY 會重新整理它的最新複本[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]保留其實作及加入或移除檔案與其相關聯的模組。 組件會建立使用[CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)。  
 

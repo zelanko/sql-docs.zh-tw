@@ -1,11 +1,13 @@
 ---
 title: "OPENJSON (TRANSACT-SQL) |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -31,7 +33,7 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 **OPENJSON**是資料表值函式會剖析 JSON 文字，然後從 JSON 輸入傳回物件和屬性，做為資料列和資料行。 換句話說， **OPENJSON**提供的 JSON 文件上的資料列集檢視。 您可以在資料列集和用來擴展的資料行的 JSON 屬性路徑中明確指定資料行。 因為**OPENJSON**傳回一組資料列，您可以使用**OPENJSON**中`FROM`子句[!INCLUDE[tsql](../../includes/tsql-md.md)]就像您可以使用任何其他資料表、 檢視或資料表值函式的陳述式。  
   

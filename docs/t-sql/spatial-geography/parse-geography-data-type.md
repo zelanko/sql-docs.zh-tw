@@ -3,8 +3,11 @@ title: "剖析 (geography 資料類型) |Microsoft 文件"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="parse-geography-data-type"></a>Parse (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 傳回**geography**從開放式地理空間協會 (OGC) 已知文字 (well-known text，WKT) 表示法的執行個體。 Parse() 相當於[STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)，只不過它會採用空間參考識別碼 (SRID) 4326 當做參數。 輸入可能會夾帶選擇性 Z (高度) 和 M (測量) 值。
   

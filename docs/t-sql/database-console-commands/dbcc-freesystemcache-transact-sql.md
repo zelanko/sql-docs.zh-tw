@@ -3,8 +3,11 @@ title: "DBCC FREESYSTEMCACHE (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 釋出所有快取中所有未使用的快取項目。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會主動在背景清除未使用的快取項目，讓記憶體存放目前的項目。 不過，您可以使用這個命令，以手動方式從所有快取或是指定的資源管理員集區快取中移除未使用的項目。
   

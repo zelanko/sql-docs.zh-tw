@@ -3,8 +3,11 @@ title: "OVER 子句 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="select---over-clause-transact-sql"></a>選取的 OVER 子句 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   在套用相關的視窗函數之前，決定資料列集的資料分割和排序。 也就是說，OVER 子句會定義查詢結果集內的視窗或使用者指定的資料列集。 然後視窗函數會針對視窗中的每個資料列來計算值。 您可以搭配函數使用 OVER 子句，以便計算彙總值，例如移動平均值、累計彙總、累加值或是每組前 N 個結果。  
   

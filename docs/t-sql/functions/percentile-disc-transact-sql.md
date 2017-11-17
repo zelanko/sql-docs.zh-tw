@@ -3,8 +3,11 @@ title: "PERCENTILE_DISC (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中計算整個資料列集或資料列集中特定分割區的特定排序值百分位數。 對於給定的百分位數值*P*，PERCENTILE_DISC 會排序 ORDER BY 子句中運算式的值，然後傳回具有最小 CUME_DIST 值 （相同排序規格） 大於值或等於*P*。例如，PERCENTILE_DISC (0.5) 會計算運算式的第 50 個百分位數 (亦即中間值)。 PERCENTILE_DISC 會依據資料行值的離散分佈計算百分位數，其結果會等於資料行中的某個特定值。  
   

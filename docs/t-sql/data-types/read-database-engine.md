@@ -3,8 +3,11 @@ title: "讀取 (Database Engine) |Microsoft 文件"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="read-database-engine"></a>Read (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 讀取可讀取的二進位表示法**SqlHierarchyId**從傳入的**BinaryReader**並設定**SqlHierarchyId**該值的物件。 無法藉由呼叫讀取[!INCLUDE[tsql](../../includes/tsql-md.md)]。 請改用 CAST 或 CONVERT。
   

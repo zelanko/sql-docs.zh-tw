@@ -3,8 +3,11 @@ title: "ODBC 純量函數 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -64,7 +67,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 純量函數 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   您可以使用[ODBC 純量函數](http://go.microsoft.com/fwlink/?LinkID=88579)中[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。 這些陳述式會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行解譯。 它們可用於預存程序和使用者自訂函數中。 這些項目包括字串、數值、時間、日期、間隔和系統函數。  
   

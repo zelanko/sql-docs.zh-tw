@@ -1,13 +1,13 @@
 ---
 title: "ALTER DATABASE (Azure SQL Database) |Microsoft 文件"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 09/25/2017
 ms.prod: 
+ms.prod_service: sql-database
 ms.reviewer: 
 ms.service: sql-database
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,7 +26,7 @@ ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   修改[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 變更資料庫的版本和服務的目標資料庫，聯結彈性集區，並設定資料庫選項的名稱。  
   

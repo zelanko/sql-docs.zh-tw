@@ -3,8 +3,11 @@ title: "OUTPUT 子句 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -43,7 +46,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   從 INSERT、UPDATE、DELETE 或 MERGE 陳述式所影響的每個資料列傳回資訊，或傳回以 INSERT、UPDATE、DELETE 或 MERGE 陳述式所影響的每個資料列為基礎的運算式。 這些結果可以傳回給負責處理的應用程式，以便用在確認訊息、封存或其他這類應用程式需求等用途上。 這些結果也可以插入資料表或資料表變數中。 此外，您也可以在巢狀 INSERT、UPDATE、DELETE 或 MERGE 陳述式中擷取 OUTPUT 子句的結果，並將這些結果插入目標資料表或檢視中。  
   

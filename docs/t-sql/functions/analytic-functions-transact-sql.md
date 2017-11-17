@@ -3,8 +3,11 @@ title: "分析函數 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="analytic-functions-transact-sql"></a>分析函數 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 SQL Server 支援下列分析函數。 分析函數會根據資料列群組計算出彙總值。 但不同於彙總函式，其可以傳回每個群組的多個資料列。 您可以使用分析函數計算群組中的移動平均、最新總數、百分比或前 N 個結果。
   

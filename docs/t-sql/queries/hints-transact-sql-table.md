@@ -3,8 +3,11 @@ title: "資料表提示 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -49,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---table"></a>提示 (TRANSACT-SQL)-資料表
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   資料表提示會在資料操作語言 (DML) 陳述式持續時間覆寫查詢最佳化工具的預設行為，其方式是指定鎖定方法、一個或多個索引、查詢處理作業 (例如資料表掃描或索引搜尋) 或是其他選項。 資料表提示會在 DML 陳述式的 FROM 子句中指定，並只會影響該子句中參考的資料表或檢視表。  
   

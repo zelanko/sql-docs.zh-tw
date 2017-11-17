@@ -1,12 +1,13 @@
 ---
 title: "DBCC FLUSHAUTHCACHE (TRANSACT-SQL) |Microsoft 文件"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 包含登入與目前使用者資料庫中的防火牆規則的相關資訊的資料庫驗證快取會清空[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 本聲明不適用於的邏輯 master 資料庫，因為 master 資料庫中包含登入和防火牆規則的相關資訊的實體儲存體。 執行陳述式的使用者和其他目前連接的使用者保持連接。 (如目前不支援 DBCC FLUSHAUTHCACHE [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。)
  

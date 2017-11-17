@@ -3,8 +3,11 @@ title: "建立組件 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 8/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   建立一個 Managed 應用程式模組，其中所包含的類別中繼資料和 Managed 程式碼是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的一個物件。 您可以參考這個模組，在資料庫中建立 Common Language Runtime (CLR) 函數、預存程序、觸發程序、使用者定義彙總以及使用者定義型別。  
   

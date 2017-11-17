@@ -3,8 +3,11 @@ title: "建立認證 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   建立伺服器層級的認證。 認證是包含所要連接到 SQL Server 外部資源的驗證資訊的記錄。 大部分認證都包含 Windows 使用者和密碼。 例如，將資料庫備份儲存位置，可能需要提供特殊的認證，才能存取該位置的 SQL Server。 如需詳細資訊，請參閱[認證 (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
   

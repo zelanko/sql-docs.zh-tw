@@ -3,8 +3,11 @@ title: "RECONFIGURE (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 05/20/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   更新目前設定的值 ( **config_value**中的資料行**sp_configure**結果集) 的組態選項，以變更**sp_configure**系統預存程序。 因為某些設定選項需要伺服器停止再重新啟動才能更新目前執行中的值，RECONFIGURE 永遠不會更新目前執行中的值 ( **run_value**中的資料行**sp_configure**結果集) 已變更的組態值。    
     

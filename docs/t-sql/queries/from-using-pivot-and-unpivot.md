@@ -3,8 +3,11 @@ title: "使用 PIVOT 和 UNPIVOT |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="from---using-pivot-and-unpivot"></a>從-使用 PIVOT 和 UNPIVOT
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   您可以使用`PIVOT`和`UNPIVOT`關聯式運算子，以變更到另一個資料表的資料表值運算式。 `PIVOT`旋轉資料表值的運算式從一個資料行的唯一值轉成在輸出中，多個資料行運算式中，執行必要的任何最後輸出的其餘資料行值上的彙總。 `UNPIVOT`旋轉成資料行值的資料表值運算式的資料行來執行相反的樞紐作業。  
   

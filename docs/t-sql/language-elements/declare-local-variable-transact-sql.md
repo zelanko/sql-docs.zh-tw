@@ -3,8 +3,11 @@ title: "宣告@local_variable(TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="declare-localvariable-transact-sql"></a>宣告@local_variable(TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   變數是利用 DECLARE 陳述式宣告在批次或程序的主體中，並利用 SET 或 SELECT 陳述式來指派值。 資料指標變數可以是利用這個陳述式來宣告，且可以搭配其他與資料指標相關的陳述式來使用。 在宣告之後，所有變數都會初始化成 NULL，除非在宣告中有提供值。  
   

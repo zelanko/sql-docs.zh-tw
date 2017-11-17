@@ -3,8 +3,11 @@ title: "ALTER DATABASE SET HADR (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (TRANSACT-SQL) SET HADR 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本主題包含設定的 ALTER DATABASE 語法[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]次要資料庫的選項。 只有一個 SET HADR 選項會允許每個 ALTER DATABASE 陳述式。 只有在次要複本上才支援這些選項。  
   

@@ -3,8 +3,11 @@ title: "modify （) 方法 (xml 資料類型) |Microsoft 文件"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="modify-method-xml-data-type"></a>modify() 方法 (xml 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   修改 XML 文件的內容。 若要修改的內容中使用這個方法**xml**類型變數或資料行。 此方法採用 XML DML 陳述式來插入、更新或刪除 XML 資料的節點。 **Modify （)**方法**xml**資料類型僅能在 UPDATE 陳述式的 SET 子句中。  
   

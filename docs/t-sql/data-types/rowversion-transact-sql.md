@@ -3,8 +3,11 @@ title: "rowversion (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此資料類型會公開在資料庫中自動產生的唯一二進位數字。 **rowversion**通常用來做為版本戳記資料表資料列的機制。 儲存體大小是 8 位元組。 **Rowversion**資料類型是只會遞增的數字，而且不會保留日期或時間。 若要記錄的日期或時間，請使用**datetime2**資料型別。
   

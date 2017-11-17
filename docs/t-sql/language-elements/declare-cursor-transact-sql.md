@@ -3,8 +3,11 @@ title: "宣告資料指標 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標的屬性，例如其捲動行為以及用來建立資料指標運作所在之結果集的查詢。 DECLARE CURSOR 可接受 ISO 標準語法，以及使用一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 延伸模組的語法。  
   

@@ -3,8 +3,11 @@ title: "備份資料庫 (Parallel Data Warehouse) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>備份資料庫 (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   建立的備份[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫，並將關閉應用裝置的備份儲存在使用者指定的網路位置。 使用此陳述式與[還原資料庫 &#40;平行資料倉儲 &#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)災害復原，或將資料庫複製到另一個應用裝置。  
   

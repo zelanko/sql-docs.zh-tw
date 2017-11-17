@@ -3,8 +3,11 @@ title: "建立函式 （SQL 資料倉儲） |Microsoft 文件"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-function-sql-data-warehouse"></a>建立函式 （SQL 資料倉儲）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中建立使用者定義函數。 使用者定義函式是[!INCLUDE[tsql](../../includes/tsql-md.md)]常式，它會接受參數、 執行動作，例如複雜計算，並傳回該動作所得值的結果。 傳回值必須是純量 （單一） 值。 您可以使用這個陳述式來建立可用下列方式使用的可重複使用常式：  
   

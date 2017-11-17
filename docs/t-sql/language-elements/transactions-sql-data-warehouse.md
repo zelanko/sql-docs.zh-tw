@@ -3,8 +3,11 @@ title: "交易 （SQL 資料倉儲） |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="transactions-sql-data-warehouse"></a>交易 （SQL 資料倉儲）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   交易是一組一個或多個資料庫陳述式完整地被認可或全部回復。 每一筆交易是不可部分完成、 一致、 隔離且持久 (ACID)。 如果交易成功，就無法認可中的所有陳述式。 如果交易失敗，這至少其中一個群組中的陳述式失敗，則會回復整個群組。  
   

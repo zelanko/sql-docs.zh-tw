@@ -3,8 +3,11 @@ title: "DBCC SHRINKFILE (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -42,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 壓縮目前資料庫之指定資料或記錄檔的大小，或藉由將資料從指定檔案移到同一檔案群組中的其他檔案的方式來清除檔案 (讓檔案可以從資料庫中移除)。 檔案可以壓縮成小於當初建立時所指定的大小。 這會將檔案大小下限重設為新值。
   

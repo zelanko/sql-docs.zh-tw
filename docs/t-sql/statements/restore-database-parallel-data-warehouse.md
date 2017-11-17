@@ -3,8 +3,11 @@ title: "還原資料庫 (Parallel Data Warehouse) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>還原資料庫 (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   還原[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]使用者資料庫從資料庫備份至[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]應用裝置。 從先前所建立的備份還原資料庫[!INCLUDE[ssPDW](../../includes/sspdw-md.md)][備份資料庫 &#40;平行資料倉儲 &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)命令。 使用備份和還原作業來建立災害復原方案，或將資料庫從一個裝置移到另一個。  
   

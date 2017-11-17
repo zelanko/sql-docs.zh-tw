@@ -3,8 +3,11 @@ title: "RAISERROR (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR Transact SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   產生錯誤訊息並起始工作階段的錯誤處理。 RAISERROR 可以參考使用者定義的訊息儲存在 sys.messages 目錄檢視，或動態建立訊息。 訊息以伺服器錯誤訊息傳回給呼叫的應用程式或傳回給 TRY…CATCH 建構的關聯 CATCH 區塊。 新的應用程式應該使用[擲回](../../t-sql/language-elements/throw-transact-sql.md)改為。  
   

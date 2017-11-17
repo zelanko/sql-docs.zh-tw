@@ -3,8 +3,11 @@ title: "建立資料庫 (Parallel Data Warehouse) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-database-parallel-data-warehouse"></a>建立資料庫 (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   建立新的資料庫上[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]應用裝置。 若要建立的應用裝置資料庫相關聯的所有檔案，並設定最大的大小和資料庫資料表和交易記錄檔自動成長選項，請使用此陳述式。  
   

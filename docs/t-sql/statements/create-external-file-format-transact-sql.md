@@ -3,8 +3,11 @@ title: "建立外部檔案格式 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-external-file-format-transact-sql"></a>建立外部檔案格式 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   建立 PolyBase 外部檔案格式定義為外部資料儲存在 Hadoop、 Azure blob 儲存體或 Azure 資料湖存放區。 建立外部檔案格式是建立 PolyBase 的外部資料表的必要元件。 藉由建立外部檔案格式，您可以指定將外部資料表所參考的資料的實際配置。  
   

@@ -3,8 +3,11 @@ title: "建立分割區配置 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在目前資料庫建立一項配置，將資料分割資料表或索引的資料分割，對應至檔案群組。 資料分割資料表或索引的資料分割數目和網域，由資料分割函數來決定。 資料分割函式必須先建立在[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)陳述式後再建立資料分割配置。  
   
