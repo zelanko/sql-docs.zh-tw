@@ -2,27 +2,33 @@
 title: "Database Engine 權限使用者入門 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords: permissions [SQL Server], getting started
+helpviewer_keywords:
+- permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.openlocfilehash: 21d6f4a4434b90561216edc72fb25d5f305fa43d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/11/2017
+
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>資料庫引擎權限使用者入門
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   透過登入與伺服器角色的伺服器等級，以及資料庫使用者與資料庫角色的資料庫等級，管理 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中的權限。 適用於 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的模型會在每個資料庫中公開同個系統，但不提供伺服器等級權限。 本主題會檢閱一些基本的安全性概念，並接著說明典型的權限實作資訊。  
   
@@ -244,3 +250,4 @@ JOIN sys.database_principals AS dRole
  [判斷有效的 Database Engine 權限](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   
+

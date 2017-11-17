@@ -1,32 +1,38 @@
 ---
 title: "Always Encrypted 精靈 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.alwaysencryptedwizard.encryption.f1
 - sql13.swb.alwaysencryptedwizard.f1
 - sql.swb.alwaysencryptedwizard.masterkey.f1
-helpviewer_keywords: Wizard, Always Encrypted
+helpviewer_keywords:
+- Wizard, Always Encrypted
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.openlocfilehash: f9f696acc4ab64025e76d1a2c6ac23c30afecf33
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8322346347568b8bb3bc56b56f363ceb7d6f5cfa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="always-encrypted-wizard"></a>永遠加密精靈
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 <a name="use-the-always-encrypted-wizard-to-help-protect-sensitive-data--stored-in-a-sql-server-database-always-encrypted-allows-clients-to-encrypt-sensitive-data-inside-client-applications-and-never-reveal-the-encryption-keys-to-sql-server-as-a-result-always-encrypted-provides-a-separation-between-those-who-own-the-data-and-can-view-it-and-those-who-manage-the-data-but-should-have-no-access--for-a-full-description-of-the-feature-see-always-encrypted-40database-engine41relational-databasessecurityencryptionalways-encrypted-database-enginemd"></a>使用 [永遠加密精靈]  ，協助保護儲存在 SQL Server 資料庫中的機密資料。 一律加密可讓用戶端將用戶端應用程式內的機密資料進行加密，且永遠不會顯示 SQL Server 的加密金鑰。 如此一來，「永遠加密」功能即可區隔擁有資料 (且可以檢視資料) 的使用者和管理資料 (但不應具備存取權) 的使用者。  如需此功能的完整描述，請參閱 [永遠加密 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)。  
  -  
@@ -40,7 +46,7 @@ ms.lasthandoff: 11/09/2017
  -  
  -1.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的物件總管元件，連接到您的 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
  -  
- -2.  以滑鼠右鍵按一下您的資料庫，指向 [工作]，然後按一下 [加密資料行]。  
+ -2.  以滑鼠右鍵按一下您的資料庫，指向 工作，然後按一下加密資料行。  
  -  
  -## 資料行選取頁面  
  - 找出資料表與資料行，然後針對所選資料行選取加密類型 (確定性或隨機) 和加密金鑰。 若要解密目前加密的資料行，請選取 [純文字] 。 若要旋轉資料行加密金鑰，請選取不同的加密金鑰，精靈即會解密資料行，並以新的金鑰重新加密該資料行。 (雖然 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援加密時態表和記憶體中的資料表，但精靈無法對此進行設定。)  
@@ -75,3 +81,4 @@ ms.lasthandoff: 11/09/2017
  -## 另請參閱  
  - [永遠加密 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+

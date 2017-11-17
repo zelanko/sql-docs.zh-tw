@@ -2,10 +2,14 @@
 title: "非 SQL Server 訂閱者 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +23,20 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
-caps.latest.revision: "55"
+caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7647af1800b5f615d36910e76f2f93c7afe528ec
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 05497c347c94b42bb22488560c89b7f9a7783a4d
+ms.openlocfilehash: feeb6962b9505dd33594f423fff08ca7ca1ff61f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/30/2017
+
 ---
 # <a name="non-sql-server-subscribers"></a>非 SQL Server 訂閱者  
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 下列非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」可以使用發送訂閱來訂閱快照式和交易式發行集。 使用已列 OLE DB 提供者的最新版本，列出的每個資料庫之兩個最新版本可支援訂閱。  
   
@@ -50,7 +55,7 @@ Oracle 版本資訊：
   
 -   將資料從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的訂閱者  
 
--   在 Oracle 之間發行資料的限制如下：  
+-   若要在 Oracle 之間發行資料，具有如下限制：  
   | |2016 或更早版本 |2017 或更新版本 |
   |-------|-------|--------|
   |從 Oracle 複寫 |只支援 Oracle 10g 或更早版本 |只支援 Oracle 10g 或更早版本 |
@@ -72,7 +77,7 @@ Oracle 版本資訊：
   
 -   如果發行集擁有「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」和「非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」，則必須先為「非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」啟用發行集，之後再建立「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」的任何訂閱。  
   
--   根據預設，由「快照集代理程式」為「非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」產生的指令碼會在 `CREATE TABLE` 語法中使用未加引號的識別碼。 因此，名稱為 test 的已發行資料表會複寫為 TEST。 若要使用與發行集資料庫中資料表相同的大小寫，請使用「散發代理程式」的 **-QuotedIdentifier** 參數。 如果發行的物件名稱 (如資料表、資料行或條件約束) 包含空格或非「 **訂閱者」端之資料庫版本中的保留字，則還必須使用** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 參數。 如需有關此參數的詳細資訊，請參閱＜ [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)＞。  
+-   根據預設，由「快照集代理程式」為「非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」產生的指令碼會在 `CREATE TABLE` 語法中使用未加引號的識別碼。 因此，名稱為 test 的已發行資料表會複寫為 TEST。 若要使用與發行集資料庫中資料表相同的大小寫，請使用「散發代理程式」的 **-QuotedIdentifier** 參數。 如果發行的物件名稱 (如資料表、資料行或條件約束) 包含空格或非「 **訂閱者」端之資料庫版本中的保留字，則還必須使用** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 參數。 如需有關此參數的詳細資訊，請參閱＜ [複寫散發代理程式](../../../relational-databases/replication/agents/replication-distribution-agent.md)＞。  
   
 -   「散發代理程式」執行時所用的帳戶必須具有 OLE DB 提供者安裝目錄的讀取權限。  
   
@@ -92,7 +97,7 @@ Oracle 版本資訊：
   
 -   不同資料庫以不同方式處理值 NULL，這會影響空白值、空字串和 NULL 的表示方式。 進而會影響插入到定義了唯一條件約束的資料行之值的行為。 例如，Oracle 在視為唯一的資料行中允許有多個 NULL 值，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在唯一的資料行中只允許有一個 NULL 值。  
   
-     另一個因素是，當資料行定義為 NOT NULL 時，如何處理 NULL 值、空字串和空白值。 如需為「Oracle 訂閱者」解決此問題的詳細資訊，請參閱＜ [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md)＞。  
+     另一個因素是，當資料行定義為 NOT NULL 時，如何處理 NULL 值、空字串和空白值。 如需為「Oracle 訂閱者」解決此問題的詳細資訊，請參閱＜ [Oracle 訂閱者](../../../relational-databases/replication/non-sql/oracle-subscribers.md)＞。  
   
 -   移除訂閱時，與複寫相關的中繼資料 (交易序號資料表) 不會從非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者刪除。  
   
@@ -119,3 +124,4 @@ Oracle 版本資訊：
  [訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
+

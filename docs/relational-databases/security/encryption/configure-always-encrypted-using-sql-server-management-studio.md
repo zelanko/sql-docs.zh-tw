@@ -2,31 +2,37 @@
 title: "使用 SQL Server Management Studio 設定 Always Encrypted | Microsoft Docs"
 ms.custom: 
 ms.date: 11/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.COLUMNMASTERKEY.PAGE.F1
 - SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1
 - SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1
-helpviewer_keywords: Always Encrypted, configure with SSMS
+helpviewer_keywords:
+- Always Encrypted, configure with SSMS
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 08f7778ecba3cf55a8bc47d492e410de9e480146
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定永遠加密
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 本文所說明的工作是有關設定永遠加密以及管理搭配使用永遠加密與 [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) 的資料庫。
 
@@ -359,12 +365,12 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 > 如果包含輪替中金鑰所加密之資料行的資料表很大，則輪替資料行加密金鑰可能需要很長的時間。 正在重新加密資料時，您的應用程式無法寫入受影響的資料表中。 因此，您的組織需要非常仔細地規劃資料行加密金鑰輪替。
 若要輪替資料行加密金鑰，請使用 [永遠加密精靈]。
 
-1.  開啟資料庫的精靈：以滑鼠右鍵按一下資料庫，並指向 [工作] ，然後按一下 [加密資料行] 。
-2.  檢閱[簡介]  頁面，然後按一下 [下一步] 。
+1.  開啟資料庫的精靈：以滑鼠右鍵按一下資料庫，並指向 工作 ，然後按一下加密資料行 。
+2.  檢閱簡介  頁面，然後按一下下一步 。
 3.  在 [資料行選取]  頁面上，展開資料表，然後找出舊資料行加密金鑰目前所加密且您想要取代的所有資料行。
 4.  對於舊資料行加密金鑰所加密的每個資料行，將 [加密金鑰]  設定為新的自動產生金鑰。 **注意：** 或者，您可以先建立新的資料行加密金鑰，再執行精靈 – 請參閱上述的＜佈建資料行加密金鑰＞  一節。
-5.  在 [主要金鑰組態]  頁面上，選取要儲存新金鑰的位置，並選取主要金鑰來源，然後按一下 [下一步] 。 **注意：** 如果您使用的是現有資料行加密金鑰，而非自動產生的資料行加密金鑰，則不需要在這個頁面上執行任何動作。
-6.  在 [驗證] 頁面上，選擇是否要立即執行指令碼或建立 PowerShell 指令碼，然後按一下 [下一步] 。
+5.  在 主要金鑰組態  頁面上，選取要儲存新金鑰的位置，並選取主要金鑰來源，然後按一下下一步 。 **注意：** 如果您使用的是現有資料行加密金鑰，而非自動產生的資料行加密金鑰，則不需要在這個頁面上執行任何動作。
+6.  在 驗證 頁面上，選擇是否要立即執行指令碼或建立 PowerShell 指令碼，然後按一下下一步 。
 7.  在 [摘要]  頁面上，檢閱您已選取的選項，並按一下 [完成]  ，然後在完成時關閉精靈。
 8.  使用物件總管 ，巡覽至 [安全性]/[永遠加密金鑰]/[資料行加密金鑰]  資料夾，然後找出要從資料庫移除的舊資料行加密金鑰。 以滑鼠右鍵按一下金鑰，然後選取 [刪除] 。
 
@@ -472,6 +478,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 - [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
 - [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)
 - [使用 PowerShell 設定 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+
 
 
 

@@ -3,28 +3,33 @@ title: "保護 SQL Server 智慧財產權 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - protecting intellectual property
 - intellectual property
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 363fa4744ca429f19e2c8dd2375146e616e85f85
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/28/2017
+
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>保護 SQL Server 智慧財產權
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 軟體開發人員通常會問，要如何將其 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 資料應用程式散發給客戶，同時防止客戶分析和解構其應用程式。 這裡的重要原則在於保護智慧財產權、本身為法律問題，而且透過授權合約進行保護。 在其他人所管理的電腦上安裝 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 時，原本就會遺失一些控制權。 
 
@@ -44,4 +49,5 @@ ms.lasthandoff: 11/09/2017
 
 [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [保護 SQL Server 的安全](../../relational-databases/security/securing-sql-server.md)  
+
 
