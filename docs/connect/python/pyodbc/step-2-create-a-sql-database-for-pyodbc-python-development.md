@@ -3,8 +3,11 @@ title: "步驟 2： 建立 SQL database 的 pyodbc Python 開發 |Microsoft 文�
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: python
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

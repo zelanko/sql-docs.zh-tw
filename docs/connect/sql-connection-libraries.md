@@ -3,9 +3,12 @@ title: "Microsoft SQL 資料庫的連線庫 |Microsoft 文件"
 description: "提供的模組可讓連接到 Microsoft SQL Server 和 Azure SQL Database 中，從各種不同的程式設計語言的用戶端下載的連結。"
 author: MightyPen
 ms.service: 
-ms.prod: sql-server
+ms.component: connect
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
-ms.custom: develop apps
+ms.custom: 
 ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017

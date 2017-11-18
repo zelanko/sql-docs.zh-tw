@@ -3,8 +3,11 @@ title: "setAutoCommit 方法 (SQLServerConnection) |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,27 +30,27 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/09/2017
 
 ---
-# setAutoCommit 方法 (SQLServerConnection)
+# <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   設定這個自動認可模式[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)處於指定狀態的物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 public void setAutoCommit(boolean value)  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *value*  
   
  **true**若要啟用自動認可模式進行連接， **false**停用此功能。  
   
-## 例外狀況  
+## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## 備註  
+## <a name="remarks"></a>備註  
  這個 setAutoCommit 方法是由 java.sql.Connection 介面中的 setAutoCommit 方法指定。  
   
  如果連接處於自動認可模式，則它的所有 SQL 陳述式都會當做個別交易來執行及認可。 否則，其 SQL 陳述式的分組呼叫結束的交易[認可](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)方法或[復原](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)方法。 根據預設，新的連接會處於自動認可模式。  
@@ -59,7 +62,7 @@ public void setAutoCommit(boolean value)
 > [!NOTE]  
 >  如果在交易期間呼叫這個方法，便會認可交易。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

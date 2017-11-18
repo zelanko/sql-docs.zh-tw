@@ -3,8 +3,11 @@ title: "JDBC 驅動程式搭配使用一律加密 |Microsoft 文件"
 ms.custom: 
 ms.date: 12/30/2016
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

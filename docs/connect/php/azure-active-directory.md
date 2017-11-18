@@ -2,6 +2,11 @@
 title: "Azure Active Directory |Microsoft 文件"
 ms.date: 07/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - drivers
 ms.topic: article

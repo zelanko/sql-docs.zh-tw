@@ -3,8 +3,11 @@ title: "連接 URL 範例 |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -92,3 +95,4 @@ public class connectURL {
  [連接及擷取資料](../../../connect/jdbc/connecting-and-retrieving-data.md)  
   
   
+

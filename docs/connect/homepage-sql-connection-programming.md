@@ -4,6 +4,11 @@ description: "註解式連結來下載和文件的語言和作業系統，連線
 author: MightyPen
 ms.date: 09/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: connect
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - drivers
 ms.topic: article

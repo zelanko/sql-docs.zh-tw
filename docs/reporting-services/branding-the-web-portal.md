@@ -1,7 +1,7 @@
 ---
 title: "商標 web 入口網站 |Microsoft 文件"
 ms.custom: 
-ms.date: 07/02/2017
+ms.date: 11/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -9,11 +9,9 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 6dac97f7-02a6-4711-81a3-e850a6b40bf1
-caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
@@ -31,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## <a name="creating-the-brand-package"></a>建立品牌封裝  
+## <a name="creating-the-brand-package"></a>建立品牌封裝
   
 Reporting Services 的品牌封裝包含三個項目且會封裝為 zip 檔案。   
   
@@ -41,7 +39,7 @@ Reporting Services 的品牌封裝包含三個項目且會封裝為 zip 檔案�
   
 檔案必須具備上述的名稱。 不過您可以隨意命名 zip 檔案。  
   
-### <a name="metadataxml"></a>metadata.xml  
+### <a name="metadataxml"></a>metadata.xml
   
 Metadata.xml 檔案可讓您設定品牌封裝的名稱，並擁有對 colors.json 和 logo.png 檔案的參考項目。  
   
@@ -64,7 +62,7 @@ Metadata.xml 檔案可讓您設定品牌封裝的名稱，並擁有對 colors.js
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### <a name="colorsjson"></a>Colors.json  
+### <a name="colorsjson"></a>Colors.json
   
 上傳品牌封裝時，伺服器會從 colors.json 檔案擷取適當的名稱/值組，並將它們與主要的 LESS 樣式表合併 (brand.less)。 系統接著會處理這個 LESS 檔案，並將產生的 CSS 檔案提供給用戶端。 樣式表中的所有色彩都會遵循色彩的六個字元的十六進位表示法。  
   
@@ -115,13 +113,13 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 接著可針對您建立的任何行動報表使用該佈景主題，即使它們不在您已部署該佈景主題的同一部伺服器上。   
   
-### <a name="using-a-logo"></a>使用標誌  
+### <a name="using-a-logo"></a>使用標誌
   
 如果您在品牌封裝中包含標誌，則它會出現在入口網站中，來取代您在 [站台設定] 功能表中針對入口網站所設定的名稱。  
   
 您針對標誌所納入的檔案必須使用 PNG 檔案格式。 檔案維度會在上傳至伺服器之後加以調整。 它應該會調整為大約 290px x 60px。  
    
-## <a name="applying-the-brand-package-to-the-web-portal"></a>將品牌封裝套用至入口網站  
+## <a name="applying-the-brand-package-to-the-web-portal"></a>將品牌封裝套用至入口網站
   
 若要加入、下載或移除品牌封裝，您可以執行下列動作。  
   
@@ -141,9 +139,9 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 您也可以 **下載** 或 **移除** 封裝。 移除封裝會立即將入口網站重設為預設品牌。  
   
-## <a name="metadataxml-example"></a>metadata.xml 範例  
+## <a name="metadataxml-example"></a>metadata.xml 範例
   
-    \<?xml version="1.0" encoding="utf-8"?>  
+    <?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
         type="UniversalBrand"  
         version="2.0.2"  
@@ -155,7 +153,7 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
         </Contents>  
     </SystemResourcePackage>  
    
-## <a name="colorsjson-example"></a>colors.json 範例  
+## <a name="colorsjson-example"></a>colors.json 範例
   
     {  
         "name":"Multicolored example brand",  

@@ -3,8 +3,11 @@ title: "範例 JDBC 驅動程式應用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -45,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  [JDBC 驅動程式概觀](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

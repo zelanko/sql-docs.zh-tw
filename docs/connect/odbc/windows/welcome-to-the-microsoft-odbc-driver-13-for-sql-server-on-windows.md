@@ -1,12 +1,15 @@
 ---
 title: "歡迎使用 Microsoft ODBC Driver 13 for SQL Server on Windows |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a017f91b-7f07-4a81-aa38-b287f22369e8

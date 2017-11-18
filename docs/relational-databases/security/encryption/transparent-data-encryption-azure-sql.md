@@ -16,15 +16,15 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: ac3ea91dc2db3d1cfb22dca2fdc341650c74b95b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 35c94a39989fda76ea023588b2d7a3aa4e463262
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/05/2017
+
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>SQL Database 和資料倉儲的透明資料加密
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 透明資料加密 (Transparent Data Encryption, TDE) 可即時執行資料庫、相關聯備份及交易記錄檔的即時加密與解密，完全無須變更應用程式，就能協助保護 Azure SQL Database 和資料倉儲免受惡意活動所造成的威脅。
 
@@ -135,3 +135,4 @@ TDE 的主要金鑰是設在伺服器層級，也稱為「TDE 保護裝置」。
 - 若要開始使用支援 BYOK 的 TDE，請瀏覽[使用 PowerShell 開啟透明資料加密，並自行管理 Key Vault 金鑰](transparent-data-encryption-byok-azure-sql-configure.md)使用說明指南。
 
 - 如需 Key Vault 的詳細資訊，請參閱 [Key Vault 文件頁面](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)。
+

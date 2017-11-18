@@ -3,8 +3,11 @@ title: "陳述式的備妥的陳述式執行 PDO_SQLSRV 驅動程式的直接 |M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
