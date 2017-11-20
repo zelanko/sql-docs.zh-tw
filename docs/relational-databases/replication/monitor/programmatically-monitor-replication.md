@@ -33,7 +33,7 @@ manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 5ab76000d3986678af0be8b85303a6b2df89ea34
 ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/09/2017
 ---
@@ -126,13 +126,13 @@ ms.lasthandoff: 11/09/2017
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetLastSessionSummaryDataRow%2A> - 傳回 <xref:System.Data.DataRow> 物件，提供最後一個「合併代理程式」工作階段的相關資訊。 請記下此工作階段的 **Session_id** 資料行值。  
   
-4.  (選擇性) 呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> ，以重新整理以 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 所傳遞之 *T:Microsoft.SqlServer.Replication.MergeSessionSummary* 物件的資料，或呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> ，以重新整理以 <xref:System.Data.DataRow> 所傳遞之 *T:System.Data.DataRow*。  
+4.  (選擇性) 呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> ，以重新整理以 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 所傳遞之 *mss,* 物件的資料，或呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> ，以重新整理以 <xref:System.Data.DataRow> 所傳遞之 *drRefresh*。  
   
 5.  使用步驟 3 中取得的工作階段識別碼，呼叫下列其中一個方法來傳回有關特定工作階段詳細資料的資訊。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> - 傳回 <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> ，傳回 *T:Microsoft.SqlServer.Replication.MergeSessionDetail*。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> - 傳回 <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> ，傳回 *SessionId*。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> - 傳回 <xref:System.Data.DataSet> 物件，提供指定之 *T:Microsoft.SqlServer.Replication.MergeSessionDetail*。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> - 傳回 <xref:System.Data.DataSet> 物件，提供指定之 *SessionId*。  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>若要監視在散發者端所有發行集的複寫屬性  
   
@@ -270,7 +270,7 @@ ms.lasthandoff: 11/09/2017
   
         |值|說明|  
         |-----------|-----------------|  
-        |@shouldalert|**expiration** - 監視交易式發行集的訂閱是否即將到期。|  
+        |1|**expiration** - 監視交易式發行集的訂閱是否即將到期。|  
         |2|**latency** - 監視交易式發行集的訂閱效能。|  
         |4|**mergeexpiration** - 監視合併式發行集的訂閱是否即將到期。|  
         |5|**mergeslowrunduration** - 監視透過低頻寬 (撥號) 連接進行合併同步處理的持續時間。|  
