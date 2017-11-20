@@ -2,9 +2,12 @@
 title: "載入和執行遠端封裝，以程式設計的方式 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: run-manage-packages-programmatically
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 

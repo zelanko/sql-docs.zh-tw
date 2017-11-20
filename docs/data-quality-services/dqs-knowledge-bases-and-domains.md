@@ -2,23 +2,28 @@
 title: "DQS 知識庫與定義域 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bf47d5d1e22dc6d7c057010508fe0206b430299f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d4cb9317da6bda1e0620a7a98299416999a8394
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知識庫與定義域
   本主題描述 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫定義。 若要清理資料，您必須有關於資料的知識。 若要準備資料品質專案的知識，您要建置並維護一個 DQS 可以用來識別不正確或無效資料的知識庫 (KB)。 DQS 可讓您同時使用電腦輔助和互動式程序來建立、建置和更新知識庫。 知識庫中的知識是在定義域中維護，其中每個定義域都專屬於某個資料欄位。 知識庫是有關資料的知識儲存機制，可讓您了解資料及維護資料的完整性。  
@@ -156,3 +161,4 @@ ms.lasthandoff: 11/09/2017
 |使用內建到 DQS 中的預設 DQS 資料知識庫|[使用 DQS 預設知識庫](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   
+

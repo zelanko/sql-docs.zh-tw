@@ -1,30 +1,35 @@
 ---
 title: "備份已啟用延展功能的資料庫(Stretch Database) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/14/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, backing up
 - backups (Stretch Database)
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3f36d8798e162c2a855c04c01653f6fec33be07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 75460a6396a410f7f61623e2273465a8e138f773
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/29/2017
+
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>備份已啟用延展功能的資料庫(Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  資料庫備份可協助您從許多失敗、錯誤和損毀類型中復原。  
   
@@ -71,3 +76,4 @@ Azure 資料庫備份儲存在異地備援的 Azure 儲存體 (RA-GRS) 中，因
    
   
   
+

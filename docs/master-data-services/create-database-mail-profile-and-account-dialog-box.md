@@ -2,24 +2,30 @@
 title: "建立 Database Mail 設定檔和帳戶對話方塊 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.mds.configmanager.dbmailprofileacct.f1
+f1_keywords:
+- sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90062c4533d12f95c0770bf18825f646633eded0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 240967b3909a2b3796534cb29c42dfa5838be692
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>建立 Database Mail 設定檔和帳戶對話方塊
   使用 [建立 Database Mail 設定檔和帳戶] 對話方塊，即可建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 Database Mail 設定檔和 Database Mail 帳戶。 當商務規則驗證失敗時，將會使用這個設定檔來透過電子郵件通知使用者和群組。  
@@ -63,3 +69,4 @@ ms.lasthandoff: 11/09/2017
 [Master Data Services 安裝和組態](../master-data-services/master-data-services-installation-and-configuration.md)
   
   
+

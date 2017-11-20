@@ -1,11 +1,15 @@
 ---
 title: "管理 Stretch Database 並對其進行疑難排解 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/27/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - managing Stretch Database
 - troubleshooting Stretch Database
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76d9aefd96ff80838491d42467e004a5c7512efa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: afc8d1aa2ae45c901e3fc3d4050f25e02911af51
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/11/2017
+
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>管理 Stretch Database 並對其進行疑難排解
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   若要管理 Stretch Database 並對其進行疑難排解，請使用本主題所述的工具和方法。  
 ## <a name="manage-local-data"></a>管理本機資料  
@@ -138,3 +143,4 @@ GO
 [還原已啟用延展功能的資料庫 &#40;Stretch Database&#41;](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
   
+

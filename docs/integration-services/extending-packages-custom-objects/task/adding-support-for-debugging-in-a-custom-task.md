@@ -2,9 +2,12 @@
 title: "加入自訂工作中偵錯支援 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 

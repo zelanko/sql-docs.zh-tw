@@ -2,26 +2,31 @@
 title: "集合 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b613d751fd68818fbee4720254199a701cfb03ba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: de78b7945e376f115e92778981fea709d9b612ed
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
   集合是一組來自單一實體的分葉成員和合併成員。 當您不需要完整的階層，而且想要檢視成員的不同群組進行報告或分析時，或當您不需要建立分類時，請使用集合。  
@@ -57,3 +62,4 @@ ms.lasthandoff: 11/09/2017
 -   [概觀：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
   
   
+

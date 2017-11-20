@@ -1,27 +1,32 @@
 ---
 title: "要求屬性值 (Master Data Services) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], requiring attribute values
 - attributes [Master Data Services], requiring values
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1694a0e12adbf980d213798c59f4156154faa1d4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c80f990580f849dcee4038ec0ca45ea1c18ffff5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="require-attribute-values-master-data-services"></a>要求屬性值 (Master Data Services)
   當您想要確保主要資料完整時，在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中要求屬性值。  
@@ -54,13 +59,13 @@ ms.lasthandoff: 11/09/2017
   
 8.  (選擇性) 在 [描述]  欄位中，輸入商務規則描述。  
   
-9. 在 [Then] (則)  區塊下，按一下 [加入] 。 面板隨即顯示。  
+9. 在 [Then]\(則)  區塊下，按一下 [加入] 。 面板隨即顯示。  
   
-10. 從 [運算子]  下拉式清單中，選取 [required action] (必要動作) 。  
+10. 從 [運算子]  下拉式清單中，選取 [required action]\(必要動作) 。  
   
 11. 從 [屬性]  下拉式清單中，選取屬性。  
   
-12. 按一下 **[儲存]**。 新的資料列就會加入 [Then] (則)  方格中。  
+12. 按一下 **[儲存]**。 新的資料列就會加入 [Then]\(則)  方格中。  
   
 13. 按一下 **[儲存]**。  
   
@@ -81,3 +86,4 @@ ms.lasthandoff: 11/09/2017
  [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
+

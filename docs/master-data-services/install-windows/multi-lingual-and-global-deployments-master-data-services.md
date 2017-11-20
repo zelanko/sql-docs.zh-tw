@@ -2,23 +2,28 @@
 title: "多語言及全域部署 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e250f5818a65d60ef9de326d144003f72c0e569
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5390f83dc72ef7c5113589735706d8a9e3340661
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>多語言及全域部署 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 可部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援之所有語言的元件和工具。 如需相關資訊，請參閱 [Local Language Versions in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md)。  
@@ -37,3 +42,4 @@ ms.lasthandoff: 11/09/2017
  [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
+

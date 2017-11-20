@@ -2,9 +2,12 @@
 title: "&lt;（小於）(DMX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,7 +32,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="lt-less-than-dmx"></a>&lt;（小於）(DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   執行比較作業，判斷某個資料採礦延伸模組 (DMX) 運算式的值是否小於另一個 DMX 運算式的值。  
   

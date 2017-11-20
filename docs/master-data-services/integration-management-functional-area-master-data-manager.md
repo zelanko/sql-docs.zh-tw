@@ -2,23 +2,28 @@
 title: "整合管理功能區域 (主資料管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67dbfddf6209f0c717b83836e63a72b1ea3b4ad7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e13e255b24d69ae54561fa9ac6fcd88524615c40
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>整合管理功能區域 (主資料管理員)
   在 [整合管理] 功能區域中，管理員可以從暫存資料表匯入資料，並建立要用於訂閱系統的訂閱檢視。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
@@ -41,3 +46,4 @@ ms.lasthandoff: 11/09/2017
  [主資料管理員 Web 應用程式](../master-data-services/master-data-manager-web-application.md)  
   
   
+

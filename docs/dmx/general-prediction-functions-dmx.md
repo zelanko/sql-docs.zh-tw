@@ -2,9 +2,12 @@
 title: "一般預測函數 (DMX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="general-prediction-functions-dmx"></a>一般預測函數 (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   您可以使用**選取**陳述式中的資料採礦延伸模組 (DMX) 建立不同類型的查詢。 查詢可用來傳回有關採礦模型本身的資訊、進行新預測，或藉由使用新資料定型模型來改變模型 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供各種特定函數的查詢中傳回的資訊類型。 藉由將這些函數加入至 DMX 查詢，您可以擷取其他的統計資料或資料行。 不過，每種查詢類型和模型類型都僅支援特定的函數。  
   

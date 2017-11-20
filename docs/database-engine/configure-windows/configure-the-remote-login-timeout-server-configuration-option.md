@@ -2,27 +2,33 @@
 title: "設定 remote login timeout 伺服器組態選項 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: remote login timeout option
+helpviewer_keywords:
+- remote login timeout option
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eb2db797ebf5918c7d406ef7b0861698bd8e9bf2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9581ea300b05cd811cfddd73d04e24e9cac65bf4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>設定 remote login timeout 伺服器組態選項
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote login timeout [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **remote login timeout** 選項指定登入遠端伺服器的嘗試在傳回失敗前等候的秒數。 例如，如果您嘗試登入遠端伺服器，而該伺服器已關機， **remote login timeout** 有助於確保在您的電腦停止嘗試登入前，您不必無限期等下去。 這個選項的預設值是 10 秒。 將值設定為 0 即可無限期等候。  
   
@@ -99,3 +105,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

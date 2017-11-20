@@ -2,23 +2,28 @@
 title: "自動產生 Code 以外的屬性值 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6aa55fc191d595ce8e5f8896c0cd981d1919163
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2709d8389e92b9688e18fba0a055263fa67e33e7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>自動產生 Code 以外的屬性值 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您希望每次套用商務規則時，自動將整數指派為值，請自動為實體的屬性自動產生值。  
@@ -80,3 +85,4 @@ ms.lasthandoff: 11/09/2017
  [驗證 &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
   
+

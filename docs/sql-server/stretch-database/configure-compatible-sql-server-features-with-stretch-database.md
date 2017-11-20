@@ -2,26 +2,31 @@
 title: "使用 Stretch Database 設定相容的 SQL Server 功能 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91b1b8854e56ab3fad15eb11cdc132788e0709b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
+ms.openlocfilehash: 8b3ee682de6e27014f403be32849478f9d076c84
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/30/2017
+
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>使用 Stretch Database 設定相容的 SQL Server 功能
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 採取簡單的步驟即可設定下列的 SQL Server 功能，以便使用 Stretch Database。
 -   Always On
@@ -51,3 +56,4 @@ ms.lasthandoff: 11/09/2017
 -   如需搭配使用時態表與 Stretch Database 的指引，請參閱 [管理系統設定版本之時態表中的歷程記錄資料保留](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)。
 -   若要使用滑動視窗篩選要從歷程記錄資料表移轉的資料列，請參閱 [使用篩選函數選取要移轉的資料列](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。
 -   如果時態性記錄資料表已經過記憶體最佳化，您就無法在該處啟用 Stretch Database。 記憶體最佳化資料表未受支援。
+

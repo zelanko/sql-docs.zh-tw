@@ -1,11 +1,15 @@
 ---
 title: "使用篩選函數選取要移轉的資料列 (Stretch Database) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/27/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 290d0a17271d7099904eb7f4f50ffd8280fe2264
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 097d613e8732823d91d660f6e8a0c1f6d749fb39
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/11/2017
+
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用篩選函數選取要移轉的資料列 (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   若您將原始資料儲存在其他資料表中，您可以設定 Stretch Database 以移轉整個資料表。 若您的資料表同時包含作用及原始資料，則可以指定篩選器述詞，以選取要移轉的資料列。 篩選器述詞是內嵌資料表值函數。 本主題說明如何撰寫內嵌資料表值函數，以選取要遷移的資料列。  
   
@@ -618,3 +623,4 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
+

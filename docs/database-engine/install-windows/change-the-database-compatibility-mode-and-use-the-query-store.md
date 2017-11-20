@@ -2,12 +2,14 @@
 title: "變更資料庫相容性模式並使用查詢存放區 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/21/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,20 @@ helpviewer_keywords:
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 514fe566dd9a26d4a6244e8fb067f97678d2dbc7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 514fe566dd9a26d4a6244e8fb067f97678d2dbc7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>變更資料庫相容性模式並使用查詢存放區
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 在 SQL Server 2016 和 SQL Server 2017 中，某些變更只有在變更資料庫的 DATABASE_COMPATIBILITY 層級之後才會啟用。 有數種原因可以完成這項作業：  
   
 - 因為升級是單向作業 (不可能降級檔案格式)，所以可以將啟用新功能區隔到資料庫內的個別作業。  可以將設定還原為先前的 DATABASE_COMPATIBILITY 層級。  新的模型可減少必須在中斷期間發生的事項數目。  
@@ -62,3 +67,4 @@ ms.lasthandoff: 11/09/2017
  [檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
   
   
+

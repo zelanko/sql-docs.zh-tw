@@ -2,26 +2,31 @@
 title: "合併成員暫存資料表 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database [Master Data Services], attributes staging table
 - attributes staging table [Master Data Services]
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bd89eff9205c76796295139eaf019dd0211d0c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 85205881ceb730739152ea60f886723d3f3827ce
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>合併成員暫存資料表 (Master Data Services)
   使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的合併成員暫存資料表 (stg.name_Consolidated) 建立、更新、停用以及刪除合併成員。 您也可以用它來更新合併成員的屬性值。  
@@ -49,3 +54,4 @@ ms.lasthandoff: 11/09/2017
  [暫存處理序錯誤 &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
   
+

@@ -2,23 +2,28 @@
 title: "資料比對 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f6902b25f18905ce55dbd30e12917a4af858c139
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="data-matching"></a>資料比對
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 資料比對程序可讓您減少資料重複，並提高資料來源中的資料精確度。 比對會分析單一資料來源之所有記錄中的重複程度，傳回每一組比較之記錄之間相符的加權機率。 然後您可以決定哪些記錄相符，並針對來源資料採取適當的動作。  
@@ -80,3 +85,4 @@ ms.lasthandoff: 11/09/2017
 |在資料品質專案中執行比對|[執行比對專案](../data-quality-services/run-a-matching-project.md)|  
   
   
+

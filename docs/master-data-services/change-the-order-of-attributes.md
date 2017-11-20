@@ -1,24 +1,29 @@
 ---
 title: "變更屬性的順序 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09ebbdb35575c7ebe75aa4ae76c0b5f727833f0b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 706bb911a55ff319cf8fdceb9ac31fed419ef960
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="change-the-order-of-attributes"></a>變更屬性的順序
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更屬性的順序。  
@@ -59,3 +64,4 @@ ms.lasthandoff: 11/09/2017
  [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   
+

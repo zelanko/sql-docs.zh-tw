@@ -2,9 +2,12 @@
 title: "註解 (DMX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -39,7 +42,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="comments-dmx"></a>註解 (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   註解中的資料採礦延伸模組 (DMX) 是文字字串在程式中的程式碼的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]不會執行。 註解也稱為備註。 您可以使用註解提供程式碼說明，或者在診斷程式碼時，暫時停用部份 DMX 陳述式或指令碼。  
   

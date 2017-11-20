@@ -2,23 +2,28 @@
 title: "資料品質專案 (DQS) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9e93b98fa1a121d6f183d0b08205c8c117bc817f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 97f98fe5190f03e1d9ac8e78d5832d3b55c5835f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="data-quality-projects-dqs"></a>資料品質專案 (DQS)
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的資料品質專案是使用知識庫改善來源資料品質的一種工具，其方式是執行 *資料清理* 和 *資料比對* 活動，然後將產生的資料匯出到 SQL Server 資料庫或 .csv 檔案。 您可以建立資料品質專案當做清理專案或比對專案，以執行各自的活動。 清理專案和比對專案可以使用相同的知識庫執行，因為用於資料清理和比對的知識可以內建到相同的知識庫中。  
@@ -66,3 +71,4 @@ ms.lasthandoff: 11/09/2017
  [DQS 知識庫與網域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   
+

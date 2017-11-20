@@ -2,26 +2,31 @@
 title: "Stretch Database 的擴充事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/14/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3bbba100106a64a3d448b8ef06180e834a80d4b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dad6f8bb729bb16121648f01ec046bffc33443ad
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="extended-events-for-stretch-database"></a>Stretch Database 的擴充事件
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Stretch Database 提供一組疑難排解用的擴充事件。  
   
@@ -86,4 +91,5 @@ stretch_unprovision_table_start|回報伸展資料表解除佈建的開始處
   
 ## <a name="see-also"></a>另請參閱  
 [管理 Stretch Database 並對其進行疑難排解](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+
 

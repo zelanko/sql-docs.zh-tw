@@ -2,10 +2,14 @@
 title: "使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/06/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 524b80a46a12738928b757e249c01f6d852b86d4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 184067cec6269692f38b92b71cfc208bfab8256d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用中次要功能包含對一個或多個次要複本進行唯讀存取的支援 (*「可讀取的次要複本」*(Readable Secondary Replicas))。 可讀取的次要複本允許對其所有次要資料庫進行唯讀存取。 但可讀取的次要資料庫並不會設定為唯讀。 這些資料庫是動態的。 隨著對應主要資料庫變更而衍生的給定次要資料庫變更，會套用至次要資料庫。 對於一般次要複本而言，次要資料庫中的資料 (包含持久記憶體最佳化資料表) 幾近即時。 此外，全文檢索索引會與次要資料庫進行同步處理。 在許多情況下，主要資料庫和對應次要資料庫之間的資料延遲只在幾秒鐘內。  
   
@@ -264,3 +269,4 @@ GO
  [統計資料](../../../relational-databases/statistics/statistics.md)  
   
   
+

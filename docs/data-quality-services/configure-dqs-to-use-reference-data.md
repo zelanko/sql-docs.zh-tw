@@ -2,10 +2,14 @@
 title: "設定 DQS 使用參考資料 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,16 +17,17 @@ f1_keywords:
 - sql13.dqs.administration.configuration.createDirectRDS.f1
 - sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94d1e0f0871a85b0e8ea27472cef52f77251727f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: db1e4d797fa5794c24569f18e300bc4ab64c725c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>設定 DQS 使用參考資料
   此主題描述如何設定 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 來使用參考資料清理您的資料。 您可以使用 Windows Azure Marketplace 所提供的參考資料，以及直接線上協力廠商參考資料提供者所提供的參考資料。  
@@ -83,3 +88,4 @@ ms.lasthandoff: 11/09/2017
  您現在必須將必要的知識庫定義域對應到您剛才設定的資料提供者所提供的參考資料。 若要如此做，請參閱[將定義域或複合定義域附加至參考資料](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
   
   
+

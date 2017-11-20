@@ -2,9 +2,12 @@
 title: "SELECT FROM&lt;模型&gt;。案例 (DMX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -33,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM&lt;模型&gt;。案例 (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   支援鑽研，並傳回用於培訓模型的案例。 如果已經在採礦結構和採礦模型上啟用鑽研，而且有適當的權限，您也可以傳回不包含在模型中的結構資料行。  
   

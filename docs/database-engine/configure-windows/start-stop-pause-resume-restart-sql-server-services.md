@@ -1,11 +1,15 @@
 ---
 title: "啟動、停止、暫停、繼續、重新啟動 SQL Server 服務 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -39,19 +43,20 @@ helpviewer_keywords:
 - administering SQL Server, starting and stopping services
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 615db091e0e81bab78154ec9ceaf81c5b94d54bf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 40dd0c1438bb9102cfbc8d9daa9206f49b17b973
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>啟動、停止、暫停、繼續、重新啟動 SQL Server 服務
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > 如需舊版 SQL Server 的相關內容，請參閱[啟動、停止、暫停、繼續、重新啟動資料庫引擎、SQL Server Agent 或 SQL Server Browser 服務](https://msdn.microsoft.com/en-US/library/hh403394(SQL.120).aspx)。
 
   本主題說明如何啟動、停止、暫停、繼續或重新啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務，方法是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員、  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、命令提示字元中的 **net** 命令、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell。  
@@ -365,4 +370,5 @@ ms.lasthandoff: 11/09/2017
  [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
+
 

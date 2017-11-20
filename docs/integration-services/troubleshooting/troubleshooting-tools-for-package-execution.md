@@ -1,11 +1,13 @@
 ---
 title: "疑難排解封裝執行的工具 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 

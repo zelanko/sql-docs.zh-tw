@@ -2,10 +2,14 @@
 title: "傳輸安全性 - 資料庫鏡像 - AlwaysOn 可用性 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - transport security
 - database mirroring [SQL Server], security
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
-caps.latest.revision: "59"
+caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 829b0ffe8dd8d58b96cb3ab768e0d94497c0c284
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 367ed2873b0f1fff6dcd852d84b4c53104cb9696
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>傳輸安全性 - 資料庫鏡像 - AlwaysOn 可用性
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   傳輸安全性牽涉到驗證，以及對資料庫間交換的訊息進行加密 (選擇性)。 對於資料庫鏡像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]而言，驗證與加密是針對資料庫鏡像端點所設定。 如需資料庫鏡像端點的簡介，請參閱 [資料庫鏡像端點 &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。  
   
@@ -114,3 +119,4 @@ ms.lasthandoff: 11/09/2017
  [為 AlwaysOn 可用性群組組態進行疑難排解 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   
+

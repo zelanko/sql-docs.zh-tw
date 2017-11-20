@@ -2,10 +2,14 @@
 title: "設定 user connections 伺服器組態選項 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - maximum number of simultaneous user connections
 - connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 387b06afcbdf9058f140a547c5faa35f9c0dd8d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 64d4e5e4e8cf6a2c278c9c7dc51443a28eaeedcf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>設定 user connections 伺服器組態選項
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user connections [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **user connections** 選項會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上可同時連接的使用者數目上限。 實際允許的使用者連接數也取決於您所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，以及應用程式的限制或應用程式和硬體的限制而定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最多允許 32,767 個使用者連接。 因為 **user connections** 是動態的 (自我設定的) 選項，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會視需要自動調整最大使用者連接數，最多調整到允許的最大值。 例如，如果只有 10 個使用者登入，就配置 10 個使用者連線物件。 在大部分情況下，不需要變更這個選項的值。 預設值為 0，表示允許最大量 (32,767) 的使用者連接數。  
   
@@ -112,3 +117,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

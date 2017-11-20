@@ -1,11 +1,15 @@
 ---
 title: "SQL Server 2016 的版本及支援功能 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: server-general
+ms.suite: sql
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,20 +36,20 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
-caps.latest.revision: "121"
+caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bbe79db32cbf00e83c2cc74efb8c91884e201770
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: da8692d3cf786157c5e573e18df51e27c41c19c2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的版本及支援功能
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 本主題提供 SQL Server 版本所支援功能的詳細資料。  此時 SQL Server 2017 各版本所支援的功能沒有任何變更。  
   
@@ -384,3 +388,4 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
  
   
   
+

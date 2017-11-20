@@ -2,9 +2,12 @@
 title: "函式 (DMX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -33,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="functions-dmx"></a>函數 (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   當您使用資料採礦延伸模組 (DMX) 中的查詢物件[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，您可以使用函式中的資料採礦模型或輸入資料集的資料行中傳回比只值的詳細資訊。 例如，您可以使用 DMX 查詢傳回資料行的預測值之外，還可以傳回預測正確的機率。 您不只能使用 DMX 函數，也可以使用 Microsoft Visual Basic for Applications (VBA)、Microsoft Excel 與預存程序的函數。  
   

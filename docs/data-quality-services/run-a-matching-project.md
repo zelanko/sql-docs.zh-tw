@@ -2,10 +2,14 @@
 title: "執行比對專案 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,16 +17,17 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c15245cf026a3746660a1f82394240a3f5aaa6a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6dd319ab3fabac9cecd2aa7ed8091b51fd190573
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="run-a-matching-project"></a>執行比對專案
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中執行資料比對。 比對程序會根據比對原則中的比對規則來識別比對記錄叢集、根據存活規則將每一個叢集中的一筆記錄指定為存活者，然後匯出結果。 DQS 會在電腦輔助的程序中執行比對程序 (也稱為刪除重複作業)，但是您可以互動方式建立比對規則，而且您會從數個選擇中選取存活規則，好讓您控制比對程序。  
@@ -240,3 +245,4 @@ ms.lasthandoff: 11/09/2017
 -   叢集中最多的重複項目數  
   
   
+

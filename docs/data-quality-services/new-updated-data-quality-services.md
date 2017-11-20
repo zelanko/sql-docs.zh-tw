@@ -6,20 +6,25 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.service: 
+ms.component: data-quality-services
+ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: 
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/27/2017
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
 ms.author: genemi
 ms.workload: data-quality-services
-ms.openlocfilehash: 153edd4079a3baa18a590771dc407314d0cd267e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 153edd4079a3baa18a590771dc407314d0cd267e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/02/2017
+
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>新增和最近更新：Data Quality Services for SQL Server
 
@@ -122,5 +127,6 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 - [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
+
 
 

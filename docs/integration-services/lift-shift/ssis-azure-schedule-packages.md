@@ -2,7 +2,12 @@
 title: "排程在 Azure 上的 SSIS 封裝執行 |Microsoft 文件"
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: lift-shift
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - integration-services
 author: douglaslMS

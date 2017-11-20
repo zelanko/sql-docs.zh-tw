@@ -2,24 +2,30 @@
 title: "建立資料庫精靈 (Master Data Services 組態管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.mds.configmanager.createdbwiz.f1
+f1_keywords:
+- sql13.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e6ad0f1c8113e8b31ba7a94b56f7289772b46a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6676657dba08f5d24b7b60c6f4150effecf12119
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>建立資料庫精靈 (Master Data Services 組態管理員)
   使用 [建立資料庫精靈] 可建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。  
@@ -61,3 +67,4 @@ ms.lasthandoff: 11/09/2017
 [Master Data Services 安裝和組態](../master-data-services/master-data-services-installation-and-configuration.md) [資料庫需求 &#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   
   
+

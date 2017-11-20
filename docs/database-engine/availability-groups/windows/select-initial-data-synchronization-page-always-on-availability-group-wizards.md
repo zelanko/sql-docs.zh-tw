@@ -2,10 +2,14 @@
 title: "選取初始資料同步頁面 (AlwaysOn 可用性群組精靈) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,19 +17,20 @@ f1_keywords:
 - sql13.swb.newagwizard.selectinitialdatasync.f1
 - sql13.swb.addreplicawizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3e674096166140b32bb70ea8cab327eb4305d4f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bae5aa51a2a72e7f056bba56516ed357c61e4b8d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>選取初始資料同步頁面 (Always On 可用性群組精靈)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   使用 AlwaysOn [選取初始資料同步處理] 頁面，指定新次要資料庫之初始資料同步處理的喜好設定。 此頁面由三個精靈所共用： [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  
   
@@ -133,3 +138,4 @@ ms.lasthandoff: 11/09/2017
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

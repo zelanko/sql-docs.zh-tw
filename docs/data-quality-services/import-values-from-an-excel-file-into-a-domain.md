@@ -2,10 +2,14 @@
 title: "將 Excel 檔案中的值匯入定義域 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,16 +17,17 @@ f1_keywords:
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbcc4849ca7ec56d73940a5e7b41322ff4ea0078
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c007da5bb365b81cd3a8bdd570c139077e44afbd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>將 Excel 檔案中的值匯入定義域中
   本主題描述如何將 Excel 檔案中的值匯入 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的定義域中。 使用 Excel 檔案將定義域值匯入 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式可簡化知識產生程序，進而節省時間與精力。 此程序可讓在 Excel 檔案或文字檔案中擁有有效資料值清單的人，將這些值匯入定義域中。 透過 Excel 檔案，您可以將定義域值匯入定義域或將定義域匯入知識庫中 (如需將定義域匯入知識庫的詳細資訊，請參閱[在知識探索中匯入 Excel 檔案中的定義域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)。)匯出至 Excel 檔案不受支援。  
@@ -129,3 +134,4 @@ ms.lasthandoff: 11/09/2017
 -   如果 Excel 檔案的格式不正確或是已損毀，則匯入作業會產生錯誤。  
   
   
+

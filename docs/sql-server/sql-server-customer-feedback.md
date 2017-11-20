@@ -6,17 +6,24 @@ ms.author: anshrest
 manager: jhubbard
 ms.date: 07/12/2017
 ms.topic: article
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 0b7f3946674d16066526f52684c2e98de8a5c8c1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>設定 SQL Server 以將意見反應傳送給 Microsoft
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ## <a name="summary"></a>摘要
 根據預設，Microsoft SQL Server 會收集客戶如何使用應用程式的相關資訊。 具體來說，SQL Server 會收集有關安裝體驗、使用情況和效能的相關資訊。 這些資訊可協助 Microsoft 改善產品，以進一步滿足客戶需求。 例如，Microsoft 會收集客戶所遇到之錯誤代碼的相關資訊，以便修正相關錯誤、改善如何使用 SQL Server 的相關文件，以及判斷是否應將功能加入到產品中以滿足客戶。
@@ -164,3 +171,4 @@ SSMS 不會收集自己的損毀傾印。 與 SSMS 相關的任何損毀傾印�
 您可以將服務設定為不傳送使用量資料，如＜在伺服器上設定登錄子機碼＞一節中所述。 不過，這麼做並不會移除該服務帳戶。 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

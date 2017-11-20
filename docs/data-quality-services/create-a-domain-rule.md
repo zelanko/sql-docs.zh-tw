@@ -2,26 +2,31 @@
 title: "建立定義域規則 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: edc83accaccc4eeee09c73ca8535a758fd9cd98e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="create-a-domain-rule"></a>建立定義域規則
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立定義域規則。 定義域規則是用來驗證、更正並標準化定義域值的條件。 定義域規則必須在定義域中成立，才能讓定義域值被視為正確且符合商務需求。 定義域規則所包含的驗證規則可用來驗證定義域值，但是無法用來更正資料品質專案中的資料。 此外，規則也包含針對有效資料套用以及用於資料更正的標準化規則。  
@@ -40,12 +45,12 @@ ms.lasthandoff: 11/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [建立知識庫](../data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 或 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  定義域管理會在 Data Quality Services 用戶端的頁面上執行，該頁面包含個別定義域管理作業所適用的五個索引標籤。 這不是精靈驅動的程序，任何管理作業都可以個別執行。  
   
-3.  從 **[定義域管理]** 頁面的 **[定義域清單]** 中，選取您想要建立定義域規則的定義域，或是建立新的定義域。 如果您必須建立新的定義域，請參閱＜ [建立定義域](../data-quality-services/create-a-domain.md)＞。  
+3.  從 **[定義域管理]** 頁面的 **[定義域清單]** 中，選取您想要建立定義域規則的定義域，或是建立新的定義域。 如果您必須建立新的定義域，請參閱＜ [Create a Domain](../data-quality-services/create-a-domain.md)＞。  
   
 4.  按一下 **[定義域規則]** 索引標籤。  
   
@@ -135,3 +140,4 @@ ms.lasthandoff: 11/09/2017
 |值不符合規則運算式|只有不符合運算元中之規則運算式的值才會被視為有效。|範例運算元：[1-5]+ (字串不得只包含介於 1 到 5 之間的數字)<br /><br /> 有效值：456、ABC<br /><br /> 無效值：123、123456、14352|  
   
   
+

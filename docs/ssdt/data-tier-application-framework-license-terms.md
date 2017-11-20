@@ -2,25 +2,31 @@
 title: "資料層應用程式架構 - 授權條款 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: ssdt
+ms.prod_service: sql-non-specified
+ms.service: ssdt
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssdt
+ms.suite: sql
+ms.technology:
+- tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68b76541-ab99-436a-982b-f18c46bc6fe3
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df64e3cbb943839e24d0ceef9d0ce97a094806a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 20cd5814a6855e7a576642d23d83166c48603a8a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="data-tier-application-framework---license-terms"></a>資料層應用程式架構 - 授權條款
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ## <a name="microsoft-software-license-terms"></a>MICROSOFT 軟體授權條款  
   
 **MICROSOFT SQL SERVER DATA-TIER APPLICATION FRAMEWORK**  
@@ -36,11 +42,11 @@ ms.lasthandoff: 11/09/2017
   
 但若上述項目另附有其他條款， 則其他條款優先適用。  
   
-**軟體一經使用，即表示　貴用戶同意接受這些授權條款。若貴用戶不同意這些授權條款，請不要使用軟體。**  
+**軟體一經使用，即表示　貴用戶同意接受這些授權條款。若　貴用戶不同意這些授權條款，請不要使用軟體。**  
   
 ---  
   
-**若貴用戶遵守本授權條款，則貴用戶得享有以下各項權利。**  
+**若　貴用戶遵守本授權條款，則　貴用戶得享有以下各項權利。**  
   
 1.  **安裝與使用權利。** 　貴用戶可在裝置上安裝及使用任何數量之軟體拷貝，以設計、開發和測試您的程式。  
 2.  **其他授權要件及/或使用權利。**  
@@ -50,7 +56,7 @@ ms.lasthandoff: 11/09/2017
     - 貴用戶得於所開發的程式中以目的碼形式複製與散布軟體 (以下稱「可散布程式碼」)； 以及  
     - 貴用戶得同意程式經銷商將「可散布程式碼」視為　貴用戶之程式的一部分，進行複製與散布。  
   
-    &nbsp;ii.   **散布要件。針對貴用戶散發的任何「可散發程式碼」，貴用戶必須**  
+    &nbsp;ii.   **散布要件。針對　貴用戶散布的任何「可散布程式碼」，　貴用戶必須**  
   
     - 在　貴用戶的程式中加入重要的主要功能；  
     - 針對任何副檔名為 .lib 的「可散布程式碼」，僅得散布透過 貴用戶程式之連結器執行這類「可散布程式碼」所產生的結果；  
@@ -129,3 +135,4 @@ B.  **美國境外。** 若　貴用戶在美國以外的國家/地區取得軟�
 Elle s’applique également même si Microsoft connaissait l'éventualité d'un tel dommage. La limitation ou exclusion ci-dessus peut également ne pas vous être applicable, car votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit.  
   
   
+

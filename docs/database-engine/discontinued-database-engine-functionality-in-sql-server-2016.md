@@ -1,11 +1,15 @@
 ---
 title: "SQL Server 2016 中已停止的資料庫引擎功能 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,19 +36,20 @@ helpviewer_keywords:
 - FASTFIRSTROW hint
 - SET DISABLE_DEF_CNST_CHK
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
-caps.latest.revision: "100"
+caps.latest.revision: 100
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fc51235e48c52d21555f1a9555049e88620259ab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 36ac9e8ad8a2eac7291ff87ce5c691ac79a0ea79
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>SQL Server 2016 中已停止的 Database Engine 功能
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
   
@@ -69,3 +74,4 @@ ms.lasthandoff: 11/09/2017
  [SQL Server 複寫中已被取代的功能](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
   
  
+

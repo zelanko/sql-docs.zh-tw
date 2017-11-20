@@ -1,11 +1,15 @@
 ---
 title: "暫停和繼續資料移轉 (Stretch Database) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/14/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - pausing Stretch Database
 - resuming Stretch Database
 ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c02cc2fbc7e06abd1b083c88eda29f6250417979
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0fef9c7f912cb824b3f1fcf8653a82fa99a35561
+ms.openlocfilehash: a291fd543d572fc621e7b59e968e7ca69d79552e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/11/2017
+
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>暫停和繼續資料移轉 (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   若要暫停或繼續將資料移轉至 Azure，請在 SQL Server Management Studio 中的資料表選取 [延展]，然後選取 [暫停] 以暫停資料移轉，或選取 [繼續] 以繼續資料移轉。 您也可以使用 Transact-SQL 來暫停或繼續資料移轉。  
   
@@ -81,3 +86,4 @@ ALTER TABLE <Stretch-enabled table name>
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [監視及疑難排解資料移轉](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 
   
+

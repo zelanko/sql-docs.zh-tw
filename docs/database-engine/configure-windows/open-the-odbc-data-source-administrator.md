@@ -2,29 +2,34 @@
 title: "開啟 ODBC 資料來源管理員 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC Data Source Administrator
 - opening ODBC Data Source Administrator
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 50d6aacdc264d01a5c7b38410b0cf6609bcb256b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1fd0e266e1b233d23f299aa5248fc015d98efb8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>開啟 ODBC 資料來源管理員
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何開啟 ODBC 資料來源管理員。 「ODBC 資料來源管理員」是 Windows 元件。 使用「ODBC 資料來源管理員」來建立及管理 ODBC 資料來源。  
   
@@ -56,3 +61,4 @@ ms.lasthandoff: 11/09/2017
  [檢查 ODBC SQL Server 驅動程式版本 &#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
   
   
+

@@ -2,23 +2,28 @@
 title: "適用於 Excel 的 MDS 增益集中的資料品質比對 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: microsoft-excel-add-in
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d5199f59455d85e72e0de874421bd74fee3b2ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a5f4a058d7cfeca6eefa83b40d1c90abc5ae61b3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>適用於 Excel 的 MDS 增益集中的資料品質比對
   經過一段時間後，您需要將更多的資料加入至 MDS 儲存機制。 在加入資料之前，比較新資料與已在 MDS 中管理的資料，有助於確保不會加入重複或不精準的資料。  
@@ -61,3 +66,4 @@ ms.lasthandoff: 11/09/2017
 -   [Data Matching](../../data-quality-services/data-matching.md)  
   
   
+

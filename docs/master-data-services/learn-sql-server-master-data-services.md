@@ -2,24 +2,30 @@
 title: "學習 SQL Server Master Data Services | Microsoft Docs"
 ms.custom: 
 ms.date: 02/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-keywords: "學習 SQL"
+keywords:
+- "學習 SQL"
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f181afa6131ca2f15fb82b62bbb1cfe55181f8ba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 9139c9faeb4d38fe43300d6b97c019ae845567ec
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="learn-sql-server-master-data-services"></a>學習 SQL Server Master Data Services
   
@@ -57,4 +63,5 @@ ms.lasthandoff: 11/09/2017
   
   
   
+
 

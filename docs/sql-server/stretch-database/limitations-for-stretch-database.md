@@ -1,11 +1,15 @@
 ---
 title: "Stretch Database 的限制 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/14/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - limitations (Stretch Database)
 - blocking issues (Stretch Database)
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59d43fb73d8e9a4faa76fbe9be70fc7ac417e375
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 1ca180fe8f74a0b64f341087c324792f8ab0de3d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/29/2017
+
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database 的限制
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   了解已啟用 Stretch 之資料表的限制，以及目前讓您無法為資料表啟用 Stretch 的限制。  
   
@@ -96,3 +101,4 @@ ms.lasthandoff: 11/09/2017
  [為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
+

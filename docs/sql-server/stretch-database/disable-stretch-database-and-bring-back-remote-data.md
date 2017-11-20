@@ -1,30 +1,35 @@
 ---
 title: "停用 Stretch Database 並帶回遠端資料 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, disabling
 - disabling Stretch Database
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ccd3c873472786e3abad633d535551f3f0b5b8a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: dc5f97519cc9c2916f164b4905e164a273ef2d58
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/29/2017
+
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>停用 Stretch Database 並帶回遠端資料
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   若要停用資料表的 Stretch Database，請在 SQL Server Management Studio 中針對資料表選取 [延展]  。 然後選取下列其中一個選項。  
   
@@ -120,3 +125,4 @@ GO
  [暫停和繼續資料移轉 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
   
+

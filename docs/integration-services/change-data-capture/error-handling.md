@@ -2,9 +2,12 @@
 title: "錯誤處理 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -121,3 +124,4 @@ ms.lasthandoff: 09/28/2017
  [Oracle CDC 執行個體](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   
+

@@ -2,9 +2,12 @@
 title: "Excel 檔案，並使用 「 Foreach 迴圈 」 容器的資料表執行迴圈 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 

@@ -2,23 +2,28 @@
 title: "管理複合定義域 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bc4472242f4a38a8f21c69b3819ebf4a2e072891
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 32a0bb0592614c496a3ceff5a3cfa82f73032d9f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="managing-a-composite-domain"></a>管理複合定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用複合定義域。 有時單一定義域無法滿意地表示欄位中的資料，您只能透過群組單一定義域來表示該資料。 若要這樣做，請建立複合定義域。 複合定義域是由兩個或多個單一定義域所組成，而且會對應至由多個相關詞彙所組成的資料欄位，這些詞彙未經過剖析，但是包含在單一複合值中。 此值中的每一個詞彙將由不同的單一定義域表示。 一旦您將單一定義域併入複合定義域，然後將複合定義域對應至資料欄位之後，您就可以藉由在單一定義域中建立知識，於知識庫中建立有關該欄位中之資料的知識。 複合定義域就像單一定義域一樣，都是單一資料欄位中資料的語意表示法。  
@@ -47,3 +52,4 @@ ms.lasthandoff: 11/09/2017
 |建立單一定義域，並將知識加入至定義域。|[管理網域](../data-quality-services/managing-a-domain.md)|  
   
   
+

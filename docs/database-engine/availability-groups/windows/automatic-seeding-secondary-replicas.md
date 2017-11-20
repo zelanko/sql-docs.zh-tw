@@ -4,29 +4,32 @@ description: "使用自動植入來初始化次要複本。"
 services: data-lake-analytics
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 8c1fc9f84428fc60283d6d53bab21a90b5c4049d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8c1fc9f84428fc60283d6d53bab21a90b5c4049d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>自動植入次要複本
-
-[!INCLUDE [tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在 SQL Server 2012 和 2014 中，初始化 SQL Server AlwaysOn 可用性群組次要複本的唯一方式是使用備份、複製和還原。 SQL Server 2016 引進的新功能是初始化次要複本 –「自動植入」。 自動植入使用記錄資料流傳輸，將使用 VDI 的備份串流到使用已設定端點的可用性群組的每個資料庫次要複本。 初始建立可用性群組期間，或將資料庫新增至某個可用性群組時，可以使用這項新功能。 所有支援 AlwaysOn 可用性群組的 SQL Server 版本都有自動植入功能，可以搭配傳統的可用性群組和[分散式可用性群組](distributed-availability-groups.md)使用。
 
@@ -277,3 +280,4 @@ GO
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png
 [2]: ./media/auto-seed-sql-server-log.png
+

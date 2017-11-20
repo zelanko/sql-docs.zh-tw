@@ -2,23 +2,28 @@
 title: "存取用於 DQS 作業的資料 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5d260cfeab9cc45f2c6aba66a0cc4046b1e850ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a03861b1706667657461ecf95196fc6cb3501d2f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
 # <a name="access-data-for-the-dqs-operations"></a>存取用於 DQS 作業的資料
   若要使用您的來源資料進行 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 作業，並匯出已處理的資料，您可以執行下列任一項操作：  
@@ -60,3 +65,4 @@ ms.lasthandoff: 11/09/2017
  [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   
+

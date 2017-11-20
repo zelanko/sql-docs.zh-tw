@@ -6,20 +6,25 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: stevestein
-ms.service: na
+ms.service: 
+ms.component: powershell
+ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: 
 ms.workload: powershell
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/27/2017
+ms.prod: sql-non-specified
+ms.prod_service: powershell
 ms.author: genemi
+ms.translationtype: HT
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: d447009539b1091aa88beac48ca2d2e5ae222ddc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/02/2017
+
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>新文章和最近更新的文章：PowerShell 文件
 
@@ -122,5 +127,6 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 - [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
+
 
 

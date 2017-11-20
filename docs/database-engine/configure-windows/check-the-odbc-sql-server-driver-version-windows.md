@@ -2,29 +2,34 @@
 title: "檢查 ODBC SQL Server 驅動程式版本 (Windows) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - driver version number [ODBC]
 - ODBC drivers, version number
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 18feb04d932c92618136823a9c6c020126786354
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc0d054304aadb3f5c8df795dca4ad327090e5c1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>檢查 ODBC SQL Server 驅動程式版本 (Windows)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   您的電腦可能包含來自 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和其他公司的各種 ODBC 驅動程式。 此主題描述如何使用 Windows 的 **[ODBC 資料來源管理員]** 來檢查所安裝的 ODBC 驅動程式版本。  
   
@@ -45,3 +50,4 @@ ms.lasthandoff: 11/09/2017
  [開啟 ODBC 資料來源管理員](../../database-engine/configure-windows/open-the-odbc-data-source-administrator.md)  
   
   
+

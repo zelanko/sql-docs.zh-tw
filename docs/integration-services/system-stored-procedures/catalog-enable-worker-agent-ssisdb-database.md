@@ -3,8 +3,11 @@ title: "catalog.enable_worker_agent （SSISDB 資料庫） |Microsoft 文件"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent （SSISDB 資料庫）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 針對標尺出 Master，與此工作啟用標尺出背景工作[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]類別目錄。
 

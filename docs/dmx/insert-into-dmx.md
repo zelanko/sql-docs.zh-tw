@@ -2,9 +2,12 @@
 title: "插入 (DMX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -40,7 +43,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   處理指定的資料採礦物件。 如需有關處理採礦模型與採礦結構的詳細資訊，請參閱[處理需求及考量 &#40; 資料採礦 &#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
   

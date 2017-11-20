@@ -3,8 +3,11 @@ title: "安裝程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

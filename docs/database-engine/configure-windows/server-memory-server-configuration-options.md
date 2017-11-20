@@ -2,10 +2,14 @@
 title: "伺服器記憶體伺服器組態選項 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +24,20 @@ helpviewer_keywords:
 - manual memory options [SQL Server]
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-caps.latest.revision: "78"
+caps.latest.revision: 78
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f6e39e3275e64d5f6df2621385ff834f2dd5856d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3e94744eab69b635feb00ed9f5f8eb01b196c3b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="server-memory-server-configuration-options"></a>伺服器記憶體伺服器組態選項
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   您可以使用 [最小伺服器記憶體] 和 [最大伺服器記憶體] 這兩個伺服器記憶體選項，針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的 SQL Server 處理序重新設定 SQL Server Memory Manager 所管理的記憶體數量 (以 MB 為單位)。  
   
@@ -85,7 +90,7 @@ ms.lasthandoff: 11/09/2017
 3.  如果已選取 [網路應用程式的資料輸送量最大化]，請選擇其他任何選項，按一下 [確定]，然後關閉其餘的對話方塊。  
   
 ## <a name="lock-pages-in-memory"></a>鎖定記憶體分頁  
- 此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。 將記憶體分頁到磁碟時，鎖定記憶體分頁可能會讓伺服器保持回應狀態。 已將具有 sqlservr.exe 執行權限的帳戶授與 Windows [Locked Pages in Memory (已鎖定記憶體中的分頁)] (LPIM) 使用者權限時，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition 及更新版本中，SQL Server [鎖定記憶體中的分頁] 選項會設定為 ON。  
+ 此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。 將記憶體分頁到磁碟時，鎖定記憶體分頁可能會讓伺服器保持回應狀態。 已將具有 sqlservr.exe 執行權限的帳戶授與 Windows [Locked Pages in Memory (已鎖定記憶體中的分頁)]\(LPIM) 使用者權限時，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition 及更新版本中，SQL Server [鎖定記憶體中的分頁] 選項會設定為 ON。  
   
  若要停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [鎖定記憶體中的分頁] 選項，請移除 SQL Server 啟動帳戶的 [Locked Pages in Memory (已鎖定記憶體中的分頁)] 使用者權限。  
   
@@ -169,3 +174,4 @@ FROM sys.dm_os_process_memory;
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

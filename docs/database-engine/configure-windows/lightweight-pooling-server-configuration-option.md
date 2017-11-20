@@ -2,10 +2,14 @@
 title: "輕量型共用伺服器組態選項 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +23,20 @@ helpviewer_keywords:
 - reducing overhead
 - overhead [SQL Server]
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c4eb376a84ec18252e9e37bb25a4d7fad891ef9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c82f1c64430cd45299b9378f86c6670841de2707
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>輕量型共用伺服器組態選項
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   在對稱式多處理 (SMP) 環境中，有時候會出現內容切換過多的現象，[輕量型共用] 選項可用來減少這種現象對系統所造成的額外負擔。 發生內容切換過多的現象時，輕量型共用可以執行內容切換內嵌，藉此幫助減少使用者/核心的環狀轉換，而提供較佳的效能。  
   
@@ -54,3 +59,4 @@ ms.lasthandoff: 11/09/2017
  [CLR 已啟用伺服器組態選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)  
   
   
+

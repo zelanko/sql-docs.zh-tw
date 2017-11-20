@@ -2,23 +2,28 @@
 title: "建置知識庫 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d72a65cd051ca0ebd273c66fd2ce957b32d97a5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8fe15c5c9313fee10edbd7a9ebc3fd282dafa5f8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="building-a-knowledge-base"></a>建立知識庫
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫是有關資料的知識儲存機制，可讓您了解資料及維護資料的完整性。 知識庫是由定義域所組成，每一個定義域都代表資料欄位中的資料。 DQS 會使用知識庫來執行資料庫的資料清理及刪除重複。 若要準備知識庫進行資料清理，您可以執行資料取樣的電腦輔助分析，並以互動方式管理定義域中的值。 DQS 可讓您匯入知識、建立規則和關聯性、直接變更資料值，並充分利用預設資料庫。  
@@ -43,3 +48,4 @@ ms.lasthandoff: 11/09/2017
 |建立複合定義域，並將知識加入至定義域。|[管理複合網域](../data-quality-services/managing-a-composite-domain.md)|  
   
   
+

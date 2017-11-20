@@ -2,9 +2,12 @@
 title: "改變採礦結構 (DMX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   建立以現有採礦結構為基礎的新採礦模型。  當您使用**ALTER MINING STRUCTURE**陳述式來建立新的採礦模型，此結構必須已經存在。 相反地，當您使用這個陳述式， [CREATE MINING MODEL &#40; DMX &#41;](../dmx/create-mining-model-dmx.md)，您建立模型，並自動產生其基礎採礦結構在相同的時間。  
   

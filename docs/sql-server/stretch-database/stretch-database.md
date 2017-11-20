@@ -1,28 +1,34 @@
 ---
 title: Stretch Database | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/27/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Stretch Database
+helpviewer_keywords:
+- Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4f4b92e22ff418924950871820b2c43640821bd0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3dab64f6d7c2067eea1c2e5249fc3a7089eda6bc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/11/2017
+
 ---
 # <a name="stretch-database"></a>Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Stretch Database 以透明且安全的方式，將您的原始資料遷移到 Microsoft Azure 雲端。  
   
@@ -82,3 +88,4 @@ ms.lasthandoff: 11/09/2017
  **識別屬於 Stretch Database 對象的資料庫和資料表。** 下載 SQL Server 2016 升級建議程式，並執行 Stretch Database Advisor，識別屬於 Stretch Database 對象的資料庫和資料表。 Stretch Database Advisor 也可以識別封鎖問題。 如需詳細資訊，請參閱 [執行 Stretch Database Advisor 以識別 Stretch Database 的資料庫和資料表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。  
   
   
+

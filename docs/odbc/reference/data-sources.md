@@ -3,8 +3,11 @@ title: "資料來源 |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -38,3 +41,4 @@ A*資料來源*是資料的來源。 它可以是檔案時，DBMS 或甚至即�
 -   [使用資料來源](../../odbc/reference/using-data-sources.md)  
   
 -   [資料來源範例](../../odbc/reference/data-source-example.md)
+

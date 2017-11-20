@@ -2,24 +2,30 @@
 title: "建立連結的定義域 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dqs.kb.linkeddomain.f1
+f1_keywords:
+- sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68a7e937e1c1f0f753779f267cf1fffa16fc3b8d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立連結的定義域。 連結的定義域是從另一個定義域 (之前已經存在的定義域) 建立而來，而且會從它連結的定義域繼承所有值、規則和屬性，除了名稱和描述以外。 您可以將一組連結的定義域當做一個定義域來管理。 藉由連結一個定義域與另一個定義域，您所建立的定義域就會從另一個定義域繼承其內容。  
@@ -49,7 +55,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [建立知識庫](../data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 或 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
 3.  從 **[定義域管理]** 頁面的 **[定義域清單]** 中，以滑鼠右鍵按一下您想要與新的定義域連結的定義域，然後按一下 **[建立連結的定義域]**。  
   
@@ -82,7 +88,7 @@ ms.lasthandoff: 11/09/2017
   
 -   您可以變更連結的定義域的名稱和描述。  
   
--   若要針對 **[資料類型]**、 **[使用前置值]**或 **[設定輸出格式為]** 屬性變更定義域屬性，請選取您連結到的定義域，並在 **[定義域屬性]** 索引標籤中針對該定義域變更這些設定。 您不能在連結的定義域的屬性中變更這些設定。 如需相關資訊，請參閱 [建立定義域](../data-quality-services/create-a-domain.md)。  
+-   若要針對 **[資料類型]**、 **[使用前置值]**或 **[設定輸出格式為]** 屬性變更定義域屬性，請選取您連結到的定義域，並在 **[定義域屬性]** 索引標籤中針對該定義域變更這些設定。 您不能在連結的定義域的屬性中變更這些設定。 如需詳細資訊，請參閱 [Create a Domain](../data-quality-services/create-a-domain.md)。  
   
 -   [定義域管理] 頁面上 **[參考資料]**、 **[定義域規則]**、 **[定義域值]**和 **[以詞彙為主的關聯]** 索引標籤中的設定可以針對連結的定義域或是連結到的定義域來變更，而且另一個定義域將會繼承變更。  
   
@@ -101,3 +107,4 @@ ms.lasthandoff: 11/09/2017
 -   當您在任何 [定義域管理] 索引標籤中按兩下連結的定義域時，將會開啟此定義域進行編輯，而且在名稱字串中會指示它是連結的定義域。  
   
   
+

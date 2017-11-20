@@ -2,10 +2,14 @@
 title: "建立版本旗標 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +17,17 @@ helpviewer_keywords:
 - version flags [Master Data Services], creating
 - versions [Master Data Services], creating flags
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3b02372fcf7e6ef3bc6af2f185d046342d76c12
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 039f5c71946946bc6093dcfcd432da21d75ec2ad
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="create-a-version-flag-master-data-services"></a>建立版本旗標 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立要指派給版本的版本旗標。 此旗標可以指出使用者或訂閱系統應該使用的版本。  
@@ -63,3 +68,4 @@ ms.lasthandoff: 11/09/2017
  [變更版本旗標名稱 &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   
   
+

@@ -2,23 +2,28 @@
 title: "資料清理 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0c17b3a503a1ab2f7149c9b5a1ad425e57b2aae3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7b606256ca38ee3dab0754904b365120de6a236
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="data-cleansing"></a>資料清理
   資料清理是分析資料來源中的資料品質、手動核准/拒絕系統的建議，藉以對資料進行變更的程序。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的資料清理包含電腦輔助的程序，以分析資料符合知識庫中知識的方式，同時也包含一個互動式程序，讓資料管理人檢閱並修改電腦輔助的程序結果，以確保資料清理完全符合其希望的執行方式。  
@@ -57,9 +62,9 @@ ms.lasthandoff: 11/09/2017
   
  電腦輔助的程序會在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中顯示資料品質資訊，供互動式清理程序使用。 除了遵循語法錯誤規則之外，DQS 也使用參考資料和進階演算法，透過 *「信賴等級」*(Confidence Level) 將資料分類。 信賴等級表示 DQS 對更正或建議的確定程度。 信賴等級以下列臨界值為基礎：  
   
--   *自動更正臨界值* ，高於此值 DQS 會建議變更，除非資料管理人拒絕否則進行變更。 您可以在 **[組態]** 畫面的 **[一般設定]** 索引標籤中，指定自動更正臨界值。 如需詳細資訊，請參閱 [設定清理和比對的臨界值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
+-   *自動更正臨界值* ，高於此值 DQS 會建議變更，除非資料管理人拒絕否則進行變更。 您可以在 **[組態]** 畫面的 **[一般設定]** 索引標籤中，指定自動更正臨界值。 如需詳細資訊，請參閱＜ [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)＞。  
   
--   *自動建議臨界值* (低於自動更正臨界值)，高於此值 DQS 會建議變更，如果資料管理人核准則進行變更。 您可以在 **[組態]** 畫面的 **[一般設定]** 索引標籤中，指定自動建議臨界值。 如需詳細資訊，請參閱 [設定清理和比對的臨界值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
+-   *自動建議臨界值* (低於自動更正臨界值)，高於此值 DQS 會建議變更，如果資料管理人核准則進行變更。 您可以在 **[組態]** 畫面的 **[一般設定]** 索引標籤中，指定自動建議臨界值。 如需詳細資訊，請參閱＜ [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)＞。  
   
  DQS 會將信賴等級低於自動建議臨界值的任何值保持原狀 (除非資料管理人指定變更)。  
   
@@ -111,3 +116,4 @@ ms.lasthandoff: 11/09/2017
  [資料比對](../data-quality-services/data-matching.md)  
   
   
+

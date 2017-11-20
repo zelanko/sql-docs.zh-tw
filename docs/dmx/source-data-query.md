@@ -2,9 +2,12 @@
 title: "&lt;來源資料查詢&gt;|Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="ltsource-data-querygt"></a>&lt;來源資料查詢&gt;
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   若要培訓資料採礦模型，並從採礦模型建立預測，您必須存取外部資料[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫。 您使用\<來源資料查詢 > 子句中的資料採礦延伸模組 (DMX) 來定義這個外部的資料。 [INSERT INTO &#40; DMX &#41;](../dmx/insert-into-dmx.md)， [SELECT FROM &#60; 模式 &#62;預測聯結 &#40; DMX &#41;](../dmx/select-from-model-prediction-join-dmx.md)，和[SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)所有陳述式使用**\<來源資料查詢 >**。  
   

@@ -2,9 +2,12 @@
 title: "使用資料流程中的資料類型 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 

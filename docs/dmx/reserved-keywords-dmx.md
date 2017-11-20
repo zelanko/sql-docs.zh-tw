@@ -2,9 +2,12 @@
 title: "保留的關鍵字 (DMX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="reserved-keywords-dmx"></a>保留關鍵字 (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]保留為專用的特定關鍵字。 這些關鍵字只能用於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在資料採礦延伸模組 (DMX) 語言參考中定義的位置，不能用於 DMX 陳述式中其他任何地方。 這些限制 DMX 關鍵字包括下列成員：  
   

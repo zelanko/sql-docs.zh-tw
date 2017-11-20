@@ -2,10 +2,14 @@
 title: "啟用資料庫引擎的加密連接 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +23,20 @@ helpviewer_keywords:
 - installing certificates
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5454f7228a8003e04ef30be68f228c47c9f3f551
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: a00e09f47685eba578296b8e390d3c7d15fc6953
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
+
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>啟用資料庫引擎的加密連接
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 組態管理員指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的憑證，以啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的加密連接。 伺服器電腦必須提供憑證，且用戶端機器必須設定為信任該憑證的根授權單位。 提供是安裝憑證的處理序，方法是將它匯入 Windows。  
   
@@ -67,13 +72,13 @@ ms.lasthandoff: 11/09/2017
   
 8.  在 [憑證] 嵌入式管理單元中，展開 [憑證] 後再展開 [個人]，然後以滑鼠右鍵按一下 [憑證]，接著指向 [所有工作]，再按 [匯入]。  
 
-9. 以滑鼠右鍵按一下匯入的憑證，並指向 [所有工作]，然後按一下 [管理私密金鑰]。 在 [安全性] 對話方塊中，新增 SQL Server 服務帳戶所使用之使用者帳戶的讀取權限。  
+9. 以滑鼠右鍵按一下匯入的憑證，並指向 所有工作，然後按一下管理私密金鑰。 在 [安全性] 對話方塊中，新增 SQL Server 服務帳戶所使用之使用者帳戶的讀取權限。  
   
 10. 完成 **[憑證匯入精靈]**以加入憑證至電腦中，然後關閉 MMC 主控台。 如需新增憑證至電腦的詳細資訊，請參閱 Windows 文件集。  
   
 ##  <a name="Export"></a> 若要匯出伺服器憑證  
   
-1.  從 [憑證] 嵌入式管理單元的 [憑證] / [個人] 資料夾中找到憑證，以滑鼠右鍵按一下 [憑證]，並指向 [所有工作]，然後按一下 [匯出]。  
+1.  從 憑證 嵌入式管理單元的 憑證 / 個人 資料夾中找到憑證，以滑鼠右鍵按一下 憑證，並指向 所有工作，然後按一下匯出。  
   
 2.  完成 **[憑證匯出精靈]**，並將憑證檔儲存在方便取得的位置。  
   
@@ -81,7 +86,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  在 [SQL Server 組態管理員] 中，展開 [SQL Server 網路組態]，並以滑鼠右鍵按一下 [\<伺服器執行個體> 的通訊協定]，然後選取 [屬性]。  
   
-2.  在 [\<執行個體名稱> 屬性的通訊協定] 對話方塊的 [憑證] 索引標籤上，從 [憑證] 方塊的下拉式清單中選取所需的憑證，然後按一下 [確定]。  
+2.  在 \<執行個體名稱> 屬性的通訊協定 對話方塊的 憑證 索引標籤上，從 憑證 方塊的下拉式清單中選取所需的憑證，然後按一下確定。  
   
 3.  在 **[旗標]** 索引標籤的 **[ForceEncryption]** 方塊中選取 **[是]**，然後按一下 **[確定]** 以關閉對話方塊。  
   
@@ -98,7 +103,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  在用戶端電腦上，使用 [憑證] 嵌入式管理單元安裝根憑證或匯出的憑證檔。  
   
-3.  在主控台窗格中，以滑鼠右鍵按一下 [SQL Server Native Client 組態]，然後按一下 [屬性]。  
+3.  在主控台窗格中，以滑鼠右鍵按一下 SQL Server Native Client 組態，然後按一下屬性。  
   
 4.  在 **[旗標]** 頁面的 **[強制通訊協定加密]** 方塊中，按一下 **[是]**。  
   
@@ -113,4 +118,5 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>另請參閱
 
 [Microsoft SQL Server 的 TLS 1.2 支援](https://support.microsoft.com/kb/3135244)  
+
 

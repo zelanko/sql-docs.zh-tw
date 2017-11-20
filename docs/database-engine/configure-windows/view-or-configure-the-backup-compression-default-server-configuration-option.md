@@ -2,29 +2,34 @@
 title: "檢視或設定 backup compression default 伺服器組態選項 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], backup compression default option
 - backup compression [SQL Server], backup compression default Option
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5294d5059d60c2f22a4d66b391a17812f764792a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a6cbf2bc726dce79d1076ff7b2c1f2606c9b951e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>檢視或設定 backup compression default 伺服器組態選項
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視或設定 [備份壓縮預設] 伺服器組態選項。 **backup compression default** 選項決定伺服器執行個體根據預設是否會建立壓縮備份。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時， **ssCurrent** 選項已關閉。  
   
@@ -125,4 +130,5 @@ GO
  [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   
+
 

@@ -2,27 +2,33 @@
 title: "設定 nested triggers 伺服器組態選項 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: nested triggers option
+helpviewer_keywords:
+- nested triggers option
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cf9bc72ef7b24bcaf35855afef06d627b07a70a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 28dc19f9d28cc2556ac948c857298dfc29eebb1b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>設定 nested triggers 伺服器組態選項
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nested triggers [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **nested triggers** 選項控制 AFTER 觸發程序是否可以重疊顯示。 亦即，執行起始另一個觸發程序的動作，後者再起始另一個觸發程序等。 **nested triggers** 設定為 0 時，AFTER 觸發程序不能重疊顯示。 **nested triggers** 設定為 1 (預設值) 時，AFTER 觸發程序最多可以重疊顯示 32 層。 不論這個選項的設定為何，INSTEAD OF 觸發程序都可以巢狀。  
   
@@ -53,7 +59,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
-2.  在 [進階] 頁面上，將 [允許觸發程序引發其他觸發程序] 選項設定為 [True] (預設值) 或 [False]。  
+2.  在 **[進階]** 頁面上，將 **[允許觸發程序引發其他觸發程序]** 選項設定為 **[True]** (預設值) 或 **[False]**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -91,3 +97,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

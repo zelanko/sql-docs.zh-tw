@@ -1,11 +1,15 @@
 ---
 title: "衍生階層 (Master Data Services) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +17,17 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], derived hierarchies
 - derived hierarchies, about derived hierarchies
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88b0abaef115f5138beac5947af464384621e480
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3c29bf064f8f7c07d7b053dc08f71b443dc75dc4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="derived-hierarchies-master-data-services"></a>衍生階層 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 衍生階層衍生自已存在於模型中實體之間的網域屬性關聯性。  
@@ -95,3 +100,4 @@ ms.lasthandoff: 11/09/2017
 -   [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   
+

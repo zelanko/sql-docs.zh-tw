@@ -2,23 +2,28 @@
 title: "建立 Master Data Services 資料庫與 Web 應用程式的關聯 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc9a70a5b0a2d57ba6a77d5750367c383451c411
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 31a1db8384143ead4a5d8adc81a8b905129d6b4e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>建立 Master Data Services 資料庫與 Web 應用程式的關聯
   將 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫產生關聯，以指定要用於 Web 作業的資料庫。  
@@ -60,3 +65,4 @@ ms.lasthandoff: 11/09/2017
  [Web 組態頁面 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   
+

@@ -2,23 +2,28 @@
 title: "在 .NET Framework 更新之後升級 SQLCLR 組件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6db39bd532f38aea27f8e2860757a5f174f481d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8930c3779fdc34535a9543268a5a728b78a2d269
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>在 .NET Framework 更新之後升級 SQLCLR 組件
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是參考 Microsoft .NET Framework 4 組件的 SQL Common Language Runtime (SQLCR) 常式集合。 如果您在電腦上安裝任何會影響這類參考 .NET Framework 組件的 .NET Framework 更新，則會導致全域組件快取 (GAC) 中組件的模組版本 ID (MVID) 發生變更。 這樣會造成 GAC 中所參考組件的 MVID 與 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中組件的 MVID 不相符。  
@@ -60,3 +65,4 @@ A new version of .NET was installed on this machine. In order to continue to wor
  [在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
   
   
+

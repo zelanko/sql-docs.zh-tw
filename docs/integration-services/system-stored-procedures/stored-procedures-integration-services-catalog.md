@@ -3,8 +3,11 @@ title: "預存程序 （Integration Services 目錄） |Microsoft 文件"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>預存程序 (Integration Services 目錄)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本節描述可用來管理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 專案 (已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的執行個體) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序。  
   

@@ -6,13 +6,17 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.service: 
+ms.component: 
+ms.suite: pro-bi
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: 
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/27/2017
+ms.prod: analysis-services
+ms.prod_service: analysis-services
 ms.author: genemi
 ms.workload: dmx-data-mining-extensions
 ms.translationtype: MT
@@ -23,7 +27,7 @@ ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-data-mining-extensions-dmx-for-sql-server"></a>新增和更新最近： 適用於 SQL Server 資料採礦延伸模組 (DMX)
-
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 
 Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.com/) 文件網站上更新一些現有文章。 本文會顯示最近更新文章的摘錄。 可能也會列出新文章的連結。

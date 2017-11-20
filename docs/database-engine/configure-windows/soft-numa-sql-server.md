@@ -1,11 +1,15 @@
 ---
 title: "軟體 NUMA (SQL Server) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - non-uniform memory access
 - soft-NUMA
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7516d8a10fc121bfa05661eb94084fa148fce0ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 2f57a1d59210a002ebd03b04be4158e514e725cd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="soft-numa-sql-server"></a>軟體 NUMA (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   現代處理器在每個插槽有許多核心。 每個插槽通常代表單一 NUMA 節點。 SQL Server 資料庫引擎資料分割將每個 NUMA 節點分為內部結構和資料分割服務執行緒。  只要有了在每個插槽都含有 10 個或更多核心的處理器，使用軟體 NUMA 分割硬體 NUMA 節點通常會增加延展性和效能。 在 SQL Server 2014 SP2 之前，以軟體為基礎的 NUMA (軟體式 NUMA) 會要求您編輯登錄來加入節點組態親和性遮罩，並且是從每一部電腦進行設定，而不是從每個執行個體設定。  只要有了 SQL Server 2014 SP2 和 SQL Server 2016，當 SQL Server 服務啟動時，軟體式 NUMA 會自動設定為資料庫執行個體層級。  
   
@@ -94,7 +99,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 ```  
   
 ### <a name="map-soft-numa-nodes-to-cpus"></a>將軟體 NUMA 節點對應到 CPU  
- 使用 [登錄編輯程式] (regedit.exe)，加入下列登錄機碼，以便將軟體 NUMA 節點 0 對應到 CPU 0 和 1、將軟體 NUMA 節點 1 對應到 CPU 2 和 3，並且將軟體 NUMA 節點 2 對應到 CPU 4、 5、6 和 7。  
+ 使用 [登錄編輯程式]\(regedit.exe)，加入下列登錄機碼，以便將軟體 NUMA 節點 0 對應到 CPU 0 和 1、將軟體 NUMA 節點 1 對應到 CPU 2 和 3，並且將軟體 NUMA 節點 2 對應到 CPU 4、 5、6 和 7。  
   
 > [!TIP]
 > 若要指定 CPU 60 到 63，請使用 QWORD 值 F000000000000000 或 BINARY 值 1111000000000000000000000000000000000000000000000000000000000000。  
@@ -146,4 +151,5 @@ SET PROCESS AFFINITY CPU=4 TO 7;
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+
 

@@ -2,9 +2,12 @@
 title: "資料採礦延伸模組 (DMX) 函數參考 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>資料採礦延伸模組 (DMX) 函數參考
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援資料採礦延伸模組 (DMX) 語言中的數個函數。 函數會展開預測查詢的結果，以包含更深入描述預測的資訊。 函數也提供如何傳回預測結果的更多控制。 下表提供資源的連結，以協助您了解如何在 DMX 中使用函數。  
   

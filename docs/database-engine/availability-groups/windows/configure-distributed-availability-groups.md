@@ -2,25 +2,30 @@
 title: "設定分散式的可用性群組 (Alwayson 可用性群組) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 335077eef51f479d55526ae47fe9b7bff3144f4e
-ms.sourcegitcommit: 284a64817d5641b5245bc70ddebef2dc51d2e558
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2017
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/20/2017
+
 ---
 # <a name="configure-distributed-availability-group"></a>設定分散式的可用性群組  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 若要建立分散式的可用性群組，您必須在每個 Windows Server 容錯移轉叢集 (WSFC) 上建立可用性群組與接聽程式。 隨後您再將這些可用性群組合併成分散式的可用性群組。 下列步驟提供 TRANSACT-SQL 中的基本範例。 本範例未涵蓋關於建立可用性群組與接聽程式的所有詳細資料，而僅著重探討與其相關的重要需求。 
 
@@ -342,3 +347,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

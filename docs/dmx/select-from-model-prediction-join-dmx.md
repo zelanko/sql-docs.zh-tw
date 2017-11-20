@@ -2,9 +2,12 @@
 title: "SELECT FROM&lt;模型&gt;預測 JOIN (DMX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -40,7 +43,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM&lt;模型&gt;預測 JOIN (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   使用採礦模型預測外部資料來源中的資料行狀態。 **PREDICTION JOIN**陳述式符合來源查詢中每個案例的模型。  
   

@@ -2,24 +2,30 @@
 title: "Data Quality Services 簡介 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/05/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Domains
+helpviewer_keywords:
+- Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 396ce09be4ec6cf853d79c4ab1798476d04f097c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aabc21d3007d55d293fdafe5cc0469f7b815e118
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 簡介
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 提供的資料品質方案可讓資料管理人或 IT 專業人員維護其資料的品質，並確保資料適合其商業用途。 DQS 是知識驅動方案，可同時提供電腦輔助和互動式方法來管理資料來源的完整性和品質。 DQS 可讓您探索、建立以及管理資料的相關知識。 然後您可以使用該知識執行資料清理、比對和分析。 您也可以在 DQS 資料品質專案中使用參考資料提供者的雲端式服務。  
@@ -88,3 +94,4 @@ ms.lasthandoff: 11/09/2017
  Data Quality Services 功能已被整合到 Master Data Services (MDS)，因此您可以在 Microsoft Excel 的 Microsoft SQL Server 2014 Master Data Services 增益集中，針對來源資料和主要資料執行刪除重複作業。 若要執行比對，請將 MDS 管理的資料載入 Excel 工作表中、將該資料與非 MDS 管理的資料結合，然後在 Excel 內執行比對。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 元件必須使用 MDS 安裝。 如需詳細資訊，請參閱  [適用於 Excel 的 MDS 增益集中的資料品質比對](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)。  
   
   
+

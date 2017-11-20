@@ -2,27 +2,33 @@
 title: "建立資料品質專案 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dqs.dqproject.newdqproject.f1
+f1_keywords:
+- sql13.dqs.dqproject.newdqproject.f1
 helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7caaa11e604c015a414979abe01904122a8a142e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14dd208db2469021918b696d9a66121a708d3a9c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="create-a-data-quality-project"></a>建立資料品質專案
   本主題描述如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]來建立資料品質專案。 資料品質專案是用來在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中執行清理或比對活動。  
@@ -63,3 +69,4 @@ ms.lasthandoff: 11/09/2017
  建立資料品質專案之後，系統會顯示可用來執行選取活動的精靈：清理或比對。 如需清理和比對活動的詳細資訊，請參閱[資料清理](../data-quality-services/data-cleansing.md)和[資料比對](../data-quality-services/data-matching.md)。  
   
   
+
