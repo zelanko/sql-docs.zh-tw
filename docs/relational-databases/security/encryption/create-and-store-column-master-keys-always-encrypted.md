@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0aaccaa65855630a7b08cdae1af41fdfeeba62a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>建立及儲存資料行主要金鑰 (永遠加密)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,7 +111,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 5.  在 [憑證嵌入式管理單元] 對話方塊中，按一下 [電腦帳戶]，然後按 [完成]。
 6.  在 [新增獨立嵌入式管理單元] 對話方塊中，按一下 [關閉]。
 7.  在 [新增/移除嵌入式管理單元] 對話方塊中，按一下 [確定]。
-8.  從 憑證 嵌入式管理單元的 憑證 > 個人 資料夾中找到憑證，以滑鼠右鍵按一下 憑證，再指向 所有工作，然後按一下管理私密金鑰。
+8.  從 [憑證] 嵌入式管理單元的 [憑證] > [個人] 資料夾中找到憑證，以滑鼠右鍵按一下 [憑證]，再指向 [所有工作]，然後按一下 [管理私密金鑰]。
 9.  在 [安全性] 對話方塊方塊中，視需要新增使用者帳戶的讀取權限。
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>在 Azure 金鑰保存庫中建立資料行主要金鑰
@@ -248,5 +246,4 @@ Windows 包含下列以軟體為基礎 (不受 HSM 支援 HSM) 的 CSP，它們�
 - [搭配 .NET Framework Data Provider for SQL Server 使用永遠加密來開發應用程式](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [永遠加密部落格](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
     
-
 

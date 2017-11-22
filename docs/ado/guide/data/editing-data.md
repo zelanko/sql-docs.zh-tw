@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a7328007b213817e0d306fe3329e434304dedfa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 76a5921185f6643f328559e3bc73dfac46bfee0c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="editing-data"></a>編輯資料
 我們解釋如何使用 ADO 連接到資料來源、 執行命令，取得結果**資料錄集**物件，並在瀏覽**資料錄集**。 本節著重於下一個基本的 ADO 作業： 編輯資料。  
@@ -91,13 +89,12 @@ End Function
   
  此章節包含下列主題。  
   
--   [編輯現有的資料錄](../../../ado/guide/data/editing-existing-records.md)  
+-   [編輯現有的記錄](../../../ado/guide/data/editing-existing-records.md)  
   
--   [加入資料錄](../../../ado/guide/data/adding-records.md)  
+-   [新增記錄](../../../ado/guide/data/adding-records.md)  
   
 -   [判斷支援的項目](../../../ado/guide/data/determining-what-is-supported.md)  
   
 -   [使用 Delete 方法刪除記錄](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [替代方案： 使用 SQL 陳述式](../../../ado/guide/data/alternatives-using-sql-statements.md)
-
+-   [替代方案：使用 SQL 陳述式](../../../ado/guide/data/alternatives-using-sql-statements.md)

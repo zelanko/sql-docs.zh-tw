@@ -5,24 +5,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Licensing SSMA
+helpviewer_keywords: Licensing SSMA
 ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: b8673a22cb3c26beeb4fe118bdc403ac62464fa8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95df7aa997168b8bb5ad15987cfba27ca33dbbb2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>安裝的 SSMA for Oracle 用戶端 (OracleToSQL)
 SSMA 用戶端包含的程式檔案，執行下列工作：  
@@ -39,7 +36,7 @@ SSMA 用戶端包含的程式檔案，執行下列工作：
   
 本主題提供的安裝必要條件和安裝 SSMA 的指示。  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>必要條件  
 SSMA 設計成使用 Oracle 9 或更新版本以及所有版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 SSMA 安裝之前，請確定電腦符合下列需求：  
@@ -84,8 +81,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
   
 SSMA 程式除了檔案之外，您也必須安裝 SSMA for Oracle 延伸模組組件上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如需詳細資訊，請參閱[安裝 SQL Server &#40; OracleToSQL &#41; 的 SSMA 元件](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [SSMA 元件安裝 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
 [將 Oracle 資料庫移轉至 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

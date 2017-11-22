@@ -8,8 +8,7 @@ ms.service:
 ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -18,16 +17,12 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2caabcb53e4386927b4103764c8abce34ccdefcd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f5cebe2ba32765cc5f4bddc974ee62b3ed3b8915
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-
-
-
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和災害復原
 
 **摘要︰** 這篇文章說明 AlwaysOn 可用性群組設定上所裝載 Master Data Service (MDS) 的解決方案。 這篇文章說明如何在 SQL 2016 AlwaysOn 可用性群組 (AG) 上安裝及設定 SQL 2016 Master Data Services。 此解決方案的主要目的為提升 SQL Server 資料庫所裝載 MDS 後端資料的高可用性及災害復原。
@@ -410,5 +405,4 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 這份技術白皮書對您是否有幫助？ 請按一下文章頂端的 [意見] 提供您的意見反應。 
 
 您的意見反應將協助我們改善未來發行的技術白皮書品質。 
-
 

@@ -1,26 +1,24 @@
 ---
 title: "R 服務-結果和資源的效能 |Microsoft 文件"
 ms.custom: 
-ms.date: 07/15/2017
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9c3aba17a6f70f581ded64f25d171d46570667c8
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f14e3d744a6d65891f6162bf63e69d682d08a971
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R 服務的效能： 結果和資源
 
@@ -31,7 +29,7 @@ ms.lasthandoff: 09/01/2017
 + 第一個案例研究、 R 服務開發小組所要搜尋來測量特定的最佳化技術的影響
 + 第二個案例研究，資料科學家小組所實驗多個方法來判斷特定的大量的計分案例最理想的最佳化。
 
-本主題列出第一個案例研究的詳細的的結果。 第二個案例研究，摘要描述的整體結果。 在本主題的結尾，您會看到所有的指令碼和範例資料，以及原始作者所使用的資源的連結。
+本主題列出第一個案例研究的詳細的的結果。 第二個案例研究，摘要描述的整體結果。 在本主題的結尾都是所有的指令碼和範例資料，以及原始作者所使用的資源的連結。
 
 ## <a name="performance-case-study-airline-dataset"></a>效能案例研究： Airline 資料集
 
@@ -280,13 +278,13 @@ Cube 參數引數使用清楚可以改善效能。
 
 從資料表中載入已定型的模型，顯然是更快的方法進行預測。 我們建議您避免建立模型，以及執行評分所有在相同的指令碼。
 
-## <a name="case-study-optimization-for-resume-matching-task"></a>案例研究： 繼續比對工作的最佳化
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>案例研究： 繼續比對工作的最佳化
 
-繼續比對的模型是 Microsoft 資料科學家 Ke Huang 測試 SQL Server 中的 R 程式碼的效能並啟用以支援可擴充的企業級解決方案的資料科學家所開發。
+繼續比對模型所開發的 Microsoft 資料科學家 Ke Huang 測試 SQL Server 中的 R 程式碼的效能和執行動作，說明資料科學家建立可擴充、 企業級解決方案。
 
 ### <a name="methods"></a>方法
 
-RevoScaleR 和 MicrosoftML 封裝用來定型中複雜的 R 解決方案，牽涉到大型資料集的預測模型。 SQL 查詢和 R 程式碼完全相同。 所有測試所安裝的 SQL server 在單一 Azure VM 上都進行。 作者然後比較計分的時間，而不需要 SQL Server 提供的這些最佳化：
+RevoScaleR 和 MicrosoftML 封裝用來定型中複雜的 R 解決方案，牽涉到大型資料集的預測模型。 SQL 查詢和 R 程式碼是相同的所有測試。 測試已安裝的 SQL server 在單一 Azure VM 上進行。 作者然後比較計分的時間，而不需要 SQL Server 提供下列最佳化：
 
 - 記憶體中資料表
 - ssNoVersion
@@ -328,12 +326,9 @@ CPU 分配已強制在繼續比對案例中，以評估 R 作業的影響。 四
 
 -   R 工作階段所使用的最大記憶體 = 70%
 
-繼續比對模型中，外部指令碼的用途是大量且沒有任何其他資料庫引擎服務執行。 因此，配置給外部指令碼的資源已增加到 70%，此為指令碼效能的最佳組態。
+繼續比對模型中，外部指令碼的用途是大量且沒有任何其他資料庫引擎服務執行。 因此，配置給外部指令碼的資源都增加到 70%，證實該指令碼效能的最佳組態。
 
-此設定已抵達藉由試驗不同的值。 如果您使用不同的硬體或不同的方案，最佳的設定可能會不同。
-
-> [!IMPORTANT]
-> 體驗來尋找您案例的最佳組態 ！
+此設定已抵達藉由試驗不同的值。 如果您使用不同的硬體或不同的方案，最佳的設定可能會不同。 一律體驗來尋找您案例的最佳組態 ！
 
 在最佳化解決方案中，在 20 核心電腦上的 8.5 秒內計分 1.1 百萬個資料列 （具有 100 個功能） 的資料。 最佳化會大幅提升效能計分的時間。
 
@@ -342,6 +337,16 @@ CPU 分配已強制在繼續比對案例中，以評估 R 作業的影響。 四
 我們建議您先閱讀此部落格文章及隨附的教學課程的詳細討論。
 
 -   [最佳化秘訣和訣竅 SQL Server 中的機器學習服務](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+
+許多使用者必須注意的一點是小型暫停 R （或 Python） 執行階段載入第一次。 基於這個理由，這些測試中所述的第一次的執行時間是通常測量，但稍後捨棄。 後續快取可能會造成顯著的效能差異第一個和第二個執行。 另外還有一些額外負荷當資料移動 SQL Server 之間的外部執行階段，特別是當資料會透過網路，而不是直接從 SQL Server 正在載入。
+
+基於這些理由，沒有任何單一方案減輕這個初始載入時間，因為根據工作大幅的效能影響。 例如，執行快取的單一資料列批次; 計分因此，後續的計分作業更快，模型和 R 執行階段都不會重新載入。 您也可以使用[原生計分](../sql-native-scoring.md)以避免完全載入的 R 執行階段。
+
+對於定型大型模型，或以大型批次計分，則負擔可能會最小相較於從避免資料移動，或從資料流處理和平行處理的提升。 請參閱這些新的部落格和其他效能指引的範例：
+
++ [使用 SQL Server 2016 R Services 的貸款分類](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
++ [早期的客戶經驗與 R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
++ [使用 R 偵測詐騙等等，在每秒的 1 百萬個交易](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>資源
 
@@ -407,4 +412,3 @@ CPU 分配已強制在繼續比對案例中，以評估 R 作業的影響。 四
 [效能調整的 R-R 程式碼和資料最佳化](r-and-data-optimization-r-services.md)
 
 [效能微調-案例研究結果](performance-case-study-r-services.md)
-

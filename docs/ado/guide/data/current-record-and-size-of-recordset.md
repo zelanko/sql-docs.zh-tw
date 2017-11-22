@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6e1da6abaf639a691c647168f51dfa6130da12f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb50826230e46cc71106a2b17d01914eae024f47
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="current-record-and-size-of-recordset"></a>目前的記錄和資料錄集的大小
 本章節描述如何在範例中尋找目前的游標位置**資料錄集**中[JScript 程式碼範例，以傳回一個資料錄集](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)。  
@@ -56,4 +54,3 @@ oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText
  本章節包含下列主題。  
   
  [資料錄集的界限](../../../ado/guide/data/boundaries-of-a-recordset.md)
-

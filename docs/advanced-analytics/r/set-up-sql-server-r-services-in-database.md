@@ -1,115 +1,173 @@
 ---
 title: "設定 SQL Server 機器學習服務 （資料庫） |Microsoft 文件"
 ms.custom: 
-ms.date: 09/28/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
 - "安裝 SQL Server R 服務"
+- "安裝 SQL Server 機器學習服務"
+- "設定 R 服務"
+- "安裝 SQL 機器學習服務"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
+ms.openlocfilehash: 3a32560422e8fc5f1a2e4284702d2cb28562f01f
+ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
 ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: 9b3449e8c1f19ee69b36107f3530eac80fae0227
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/29/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>設定 SQL Server 機器學習服務 （資料庫）
 
-本主題描述如何使用 SQL Server 中的機器學習服務設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈。
+本主題描述如何安裝及設定下列機器學習支援 SQL Server 資料庫中的分析功能：
 
-**適用於：** SQL Server 2016 R 服務 （唯讀），SQL Server 2017 機器學習服務 （R 和 Python）
++ **SQL Server 2016 R 服務 （資料庫）**。 如果您有 SQL Server 2016 時，安裝此功能以啟用 SQL Server 中的 R 程式碼執行。 需要資料庫引擎。
 
-## <a name="machine-learning-options-in-sql-server-setup"></a>機器學習中 SQL Server 安裝程式選項
+    [設定 SQL Server 2016 中的機器學習服務](#bkmk_2016top)
 
-SQL Server 安裝程式會提供安裝機器學習的下列選項：
++ **SQL Server 2017 機器學習服務 （資料庫）**。 如果您有 SQL Server 2017，安裝 SQL Server 中執行 R （或 Python） 的程式碼。 需要資料庫引擎。 
 
-* 安裝機器學習服務與 SQL Server 資料庫
+    [設定機器學習中 SQL Server 2017](#bkmk_2017top)
 
-  此選項可讓您可以使用預存程序中執行 R 或 Python 指令碼。 您也可以使用遠端計算內容的 SQL Server 電腦的外部連線從執行的 R 或 Python 指令碼。
++ 使用 server 的機器學習**沒有**SQL Server
 
-  若要安裝此選項：
-  
-  * 在 SQL Server 2016 中，選取**R 服務 （資料庫）**。
-  * 在 SQL Server 2017，選取**機器學習服務 （資料庫）**。
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式也會包含安裝的機器學習元件不需要資料庫引擎，而且不會執行 SQL Server 中的 「 獨立 」 版本的選項。  我們通常會建議您安裝在裝載 SQL Server 的電腦不同的電腦上的這個選項。
+    
+    [設定獨立機器學習伺服器](create-a-standalone-r-server.md)。
 
+本文說明的安裝程式會使用處理序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈。 命令列安裝，或下載安裝程式在離線的伺服器使用，請參閱下列文章：
 
-* 安裝獨立的機器學習伺服器
++ [從命令列安裝 SQL Server R](unattended-installs-of-sql-server-r-services.md)
++ [從命令列安裝 SQL Server 的 Python](../python/unattended-installs-of-sql-server-python-services.md)
++ [從命令列安裝獨立的機器學習伺服器](install-microsoft-r-server-from-the-command-line.md)
++ [安裝沒有網際網路 ace 的伺服器上的機器學習服務元件](installing-ml-components-without-internet-access.md)
 
-  此選項會建立用於機器學習解決方案，不需要或使用 SQL Server 的開發環境。 因此，我們通常建議您安裝一個主控的 SQL Server 不同的電腦上的這個選項。 如需有關這個選項的詳細資訊，請參閱[建立獨立 R 伺服器](../r/create-a-standalone-r-server.md)。
+**適用於：** SQL Server 2016、 SQL Server 2017
 
-安裝程序需要多個步驟，其中有些是選擇性。 選擇性的方面取決於兩者計劃如何使用機器學習和安全性環境的狀態。 
+## <a name="bkmk_prereqs"></a>預先安裝檢查清單
 
-## <a name="bkmk_prereqs"></a>必要條件
++ 機器學習中資料庫需要 SQL Server 2016 或更新版本。 
 
-*  請避免同時安裝 R Server 和 R 服務。 一般來說，您會安裝 R Server （獨立） 建立環境的資料科學家或開發人員用來連接到 SQL Server 和部署 R 解決方案。 因此，不需要在相同的電腦上同時安裝 R Server 和 R Services。
++ 支援的語言： 
 
-* 如果您使用任何舊版的 Revolution Analytics 開發環境或 RevoScaleR 封裝，或是如果您已安裝 SQL Server 2016 的任何發行前版本，您就必須將它們解除安裝。 不支援的並存安裝。 正在移除舊版的說明，請參閱[升級及安裝常見問題集，SQL Server R services](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
+    + SQL Server 2016 僅支援 R。 
 
-* 您無法在容錯移轉叢集上安裝機器學習服務。 原因是，用於隔離外部指令碼處理序的安全性機制不相容於 Windows Server 容錯移轉叢集環境。 因應措施，您可以執行下列其中一項：
-    * 您可以使用複寫，將必要資料表複製到與 R Services 的獨立 SQL Server 執行個體。
-    * 安裝[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，使用 AlwaysOn 可用性群組的一部分，而且在獨立電腦上。
+    + R 也可作為預覽功能在 Azure SQL Database，但有一些限制。 如需詳細資訊，請參閱[使用 Azure SQL Database 中的 R](using-r-in-azure-sql-database.md)
 
-> [!IMPORTANT]
-> 安裝程式完成之後，一些額外的步驟啟用所需機器學習功能。 您可能也需要特定的資料庫使用者權限授與變更或設定帳戶，或設定的遠端資料科學用戶端。
+    + 若要使用 Python 需要 2017年或更新版本的 SQL Server。
 
-##  <a name="bkmk_installExt"></a>步驟 1： 安裝的擴充性功能，然後選擇的機器學習語言
++ 如果您使用任何舊版的 Revolution Analytics 開發環境或 RevoScaleR 封裝，或是如果您已安裝 SQL Server 2016 的任何發行前版本，您就必須將它們解除安裝。 不支援的並存安裝。 正在移除舊版的說明，請參閱[升級及安裝常見問題集，SQL Server 機器學習服務](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
 
-若要使用機器學習服務，您必須安裝 SQL Server 2016 或更新版本。 若要使用[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，無須資料庫引擎的至少一個執行個體。 您可以使用預設或具名執行個體。
++ 您無法在網域控制站上安裝 SQL Server 2016 R Services 或 SQL Server 2017 機器學習服務。 安裝的 R 服務或機器學習服務部分將會失敗。
 
-1. 執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。
-  
-    如需如何執行自動的安裝資訊，請參閱[自動安裝的 SQL Server R Services](../r/unattended-installs-of-sql-server-r-services.md)。
-  
++ 您無法安裝的機器學習的容錯移轉叢集功能。 用於隔離外部指令碼處理序的安全性機制與不相容的 Windows Server 容錯移轉叢集環境。 因應措施，您可以執行下列其中一項：
+    * 您可以使用複寫，與啟用的機器學習服務，將必要資料表複製到 SQL Server 執行個體。
+    * 安裝機器學習服務，使用 AlwaysOn 可用性群組的一部分，而且在獨立電腦上。
+
++ 在安裝完成之後，機器學習架構需要其他組態。 確切步驟取決於組織和安全性原則、 伺服器組態和使用者。 我們建議您檢閱所有步驟，並判斷您的環境中可能需要的其他組態。
+
+## <a name="bkmk2016top"></a>安裝 SQL Server 2016 R Services （資料庫）
+
+> [!div class="checklist"]
+> * 安裝 database engine 和機器學習功能
+> * 需要後續安裝步驟： 啟用 machine learning 中，然後重新啟動
+> * 選擇性的後續安裝步驟： 加入防火牆規則，將使用者加入、 變更或設定服務帳戶設定的遠端資料科學用戶端
+
+**使用 SQL Server 2016 安裝程式精靈**
+
+1. 執行 SQL Server 安裝精靈。
+
 2. 在**安裝**索引標籤上，選取**新的 SQL Server 獨立安裝或將功能加入現有安裝**。
-   
-3. 在**特徵選取**頁面上，若要安裝 R 所使用的資料庫服務作業，並且安裝的擴充功能支援外部指令碼和處理序中，選取下列選項：
-   
-   **SQL Server 2016**
-   - 選取**Database Engine Services**。
-   - 選取**R 服務 （資料庫）**。
 
-   **SQL Server 2017**
-   - 選取**Database Engine Services**。
-   - 選取**機器學習服務 （資料庫）**。
-   - 選取至少一部機器學習若要啟用的語言。 您可以選取只 R，或者您可以加入 R 和 Python。
+    
+     ![安裝 R 服務 （資料庫）](media/2016-setup-installation-rsvcs.png "與 R Services 啟動 database engine 安裝")
    
-   > [!NOTE]
-   > 如果您未選取 [R] 或 [Python 語言選項，安裝精靈正在安裝只能擴充性架構，其中包括 SQL Server 受信任的啟動列]，但不會安裝任何語言特有的元件。 這個選項適用於繫結 SQL Server 執行個體 R 或 Python Microsoft 現代生命週期原則的一部分。 如需詳細資訊，請參閱[升級 R Services 的執行個體使用 SqlBindR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+3. 在**特徵選取**頁面上，選取下列選項：
 
-4.  在**同意安裝 Microsoft R Open**頁面上，選取**接受**。
+   - 選取**Database Engine Services**。 需要資料庫引擎使用機器學習的每個執行個體。
+   - 選取**R 服務 （資料庫）**。 安裝 r 的資料庫中使用的支援
+    
+     ![R 服務特徵選取](media/2016setup-rsvcs-features.png "選取這些功能的 R 服務資料庫")
+
+    > [!IMPORTANT]
+    > 請勿安裝 R Server 和 R 服務的方法，在相同的時間。 一般來說，您會安裝 R Server （獨立） 建立環境的資料科學家或開發人員用來連接到 SQL Server 和部署 R 解決方案。 因此，不需要在相同的電腦上同時安裝 R Server 和 R Services。
+
+4.  在**同意安裝 Microsoft R Open**頁面上，按一下**接受**。
   
-     此授權合約，才能下載 Microsoft R Open，其中包含開放原始碼 R 基底套件與工具，以及增強的 R 封裝和連線提供者，從 Microsoft R 開發小組的散佈。
+    此授權合約，才能下載 Microsoft R Open，其中包含開放原始碼 R 基底套件與工具，以及增強的 R 封裝和連線提供者，從 Microsoft R 開發小組的散佈。
   
-    > [!NOTE]
-    >  如果您使用的電腦沒有網際網路存取，您可以暫停安裝程式此時下載安裝程式分別中所述[安裝 R 元件沒有網際網路存取](installing-ml-components-without-internet-access.md)。
+    如果您使用的電腦沒有網際網路存取，您可以暫停安裝程式此時下載安裝程式分別中所述[安裝 R 元件沒有網際網路存取](installing-ml-components-without-internet-access.md)。
   
-5. 選取 **[下一步]**。
+5. 您接受授權合約之後，會短暫的暫停時，安裝程式已準備就緒。 按一下**下一步**當按鈕會變成可用。
 
 6. 在**安裝準備就緒**頁面上，確認下列項目都包含在內，然後選取**安裝**。
 
-   **SQL Server 2017**
+   + Database Engine 服務
+   + R 服務 (資料庫內)
+
+7. 安裝完成時，重新啟動電腦。
+
+
+## <a name="bkmk2017top"></a>安裝 SQL Server 2017 機器學習服務 （資料庫）
+
+> [!div class="checklist"]
+> * 安裝 database engine 和機器學習功能
+> * 需要後續安裝步驟： 啟用 machine learning 中，然後重新啟動
+> * 選擇性的後續安裝步驟： 加入防火牆規則，將使用者加入、 變更或設定服務帳戶設定的遠端資料科學用戶端。
+
+**開始使用**
+
+1. 執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。
+  
+2. 在**安裝**索引標籤上，選取**新的 SQL Server 獨立安裝或將功能加入現有安裝**。
+
+     ![安裝機器學習服務 （資料庫）](media/2017setup-installation-page-mlsvcs.png "開始安裝資料庫引擎使用機器學習服務")
+
+3. 在**特徵選取**頁面上，選取下列選項：
+   
+    + 選取**Database Engine Services**。 需要資料庫引擎使用機器學習的每個執行個體。
+
+    + 選取**機器學習服務 （資料庫）**。 此選項會安裝支援的資料庫中使用。選取此選項之後，您可以選取的機器學習語言。 您可以選取只 R，或者您可以加入 R 和 Python。
+   
+    ![機器學習服務特徵選取](media/2017setup-features-page-mls-rpy.png "選取這些功能的 R 服務資料庫")
+
+    如果您未選取 [R] 或 [Python 語言選項，安裝精靈正在安裝只能擴充性架構，其中包含 SQL Server 受信任的啟動列]，並不會安裝任何語言特有的元件。  通常我們建議您開始安裝至少一種語言。 不過，您可能會使用此選項，如果您想要立即升級機器學習元件使用的繫結程序。 如需詳細資訊，請參閱[升級 R Services 的執行個體使用 SqlBindR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+
+    我們建議您**不**在相同的電腦上安裝的獨立和資料庫中的功能，並永遠不會安裝它們在相同的時間。 機器學習伺服器 （獨立），以建立環境的資料科學家或開發人員用來連接通常會安裝 SQL Server 部署方案時。 因此，不需要在相同的電腦上同時安裝 R Server 和 R Services。
+
+4.  授權合約的機器學習： 根據您要安裝的語言，您必須接受授權合約，如 R、 Python 或兩者。
+
+    + 授權條款的： 此授權合約涵蓋 Microsoft R Open，其中包含開放原始碼 R 基底套件與工具，以及增強的 R 封裝和連線提供者來自 Microsoft 開發小組的散佈。
+  
+    + Python 的授權條款。 Anaconda 和相關的工具，再加上 Microsoft 開發小組的一些新的 Python 程式庫，另外也涵蓋了 Python 開放原始碼授權合約。
+
+    按一下**接受**表示您的合約。 會出現短暫暫停時元件是否準備就緒，則**下一步**按鈕會變成可用。
+
+    如果您使用的電腦沒有網際網路存取，您可以暫停安裝程式此時下載安裝程式，如下所述：[安裝沒有網際網路存取的機器學習元件](installing-ml-components-without-internet-access.md)。
+
+6. 在**安裝準備就緒**頁面上，確認下列項目都包含在內，然後選取**安裝**。
+
    - Database Engine 服務
    - Machine Learning 服務 (資料庫內)
    - R、 Python 或兩者
 
-   **SQL Server 2016**
-   - Database Engine 服務
-   - R 服務 (資料庫內)
+7. 安裝完成時，記下的安裝程式記錄檔位置，然後重新啟動電腦。
 
-7. 安裝完成時，重新啟動電腦。
+###  <a name="bkmk_enableFeature"></a>必要的安裝後步驟
 
-##  <a name="bkmk_enableFeature"></a>步驟 2： 啟用外部指令碼服務
+基於安全性理由，機器學習功能未啟用預設即使已安裝的功能。 伺服器系統管理員必須啟用此功能，並重新啟動執行個體。 
+
+本章節描述如何重新設定機器學習的執行個體。 組態設定外部服務帳戶，以及啟動 [啟動列] 服務。
 
 1. 開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果未安裝，您可以重新執行 SQL Server 安裝精靈以開啟下載連結並安裝它。
   
@@ -119,7 +177,7 @@ SQL Server 安裝程式會提供安裝機器學習的下列選項：
    sp_configure
    ```
 
-    值**啟用外部指令碼**屬性現在應該**0**。 這是因為若要減少介面區，預設關閉的功能，而且必須由系統管理員明確地啟用。
+    尋找值**啟用外部指令碼**屬性，它應該**0**。 這是因為為了減少介面區的預設關閉的功能。
      
 3. 若要啟用外部指令碼處理功能，請執行下列陳述式：
   
@@ -132,21 +190,21 @@ SQL Server 安裝程式會提供安裝機器學習的下列選項：
 
     您可以藉由重新啟動服務**服務**面板控制台 中，或使用 SQL Server 組態管理員。
 
-## <a name="bkmk_TestScript"></a>步驟 3： 確認指令碼執行本機運作
-
-確認已啟用外部指令碼執行服務。
-
-1. 在 SQL Server Management Studio，開啟 新**查詢**視窗，然後執行下列命令：
+5. 若要確認外部指令碼執行服務已啟用，在 SQL Server Management Studio，開啟 新**查詢**視窗，然後執行下列命令：
   
     ```SQL
     EXEC sp_configure  'external scripts enabled'
     ```
     **run_value** 現在應該設定為 1。
     
-2. 開啟**服務**面板，並確認您的執行個體的啟動控制板服務正在執行。 如果您安裝多個執行個體，每個執行個體都有它自己的 Launchpad 服務。
-   
-3. 開啟新**查詢**視窗[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，然後執行簡單的 R 指令碼，如下所示：
-  
+6. 開啟**服務**面板，並確認您的執行個體的啟動控制板服務正在執行。 如果您安裝多個執行個體，每個執行個體都有它自己的 Launchpad 服務。
+
+7. 最好執行簡單的指令碼，以確認外部指令碼的執行階段可以使用 SQL Server 進行通訊。 
+
+    開啟新**查詢**視窗[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，然後執行指令碼，如下所示：
+    
+    + R
+    
     ```SQL
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
@@ -156,29 +214,49 @@ SQL Server 安裝程式會提供安裝機器學習的下列選項：
     WITH RESULT SETS (([hello] int not null));
     GO
     ```
-  
-    **結果**
-  
-    *hello* *1*
-  
-   如果命令執行時沒有發生錯誤，請移至下一個步驟。 如果您收到錯誤，取得一份一些常見的問題，請參閱[升級及安裝常見問題集](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
 
-## <a name="bkmk_FollowUp"></a>步驟 4： 其他組態
+    + Python
+    
+    ```SQL
+    EXEC sp_execute_external_script  @language =N'Python',
+    @script=N'
+    OutputDataSet = InputDataSet;
+    ',
+    @input_data_1 =N'SELECT 1 AS hello'
+    WITH RESULT SETS (([hello] int not null));
+    GO
+    ```
 
-根據 R 或 Python 您使用案例，您可能需要進行其他變更伺服器、 防火牆、 服務或資料庫權限所用的帳戶。 您必須進行的變更會因大小寫。
+    若要執行，第一次載入外部指令碼執行階段時，可能有點需要指令碼。 結果應該類似這樣：
+
+    | hello |
+    |----|
+    | 1|
+
+
+8. 如果發生任何錯誤，繼續描述其他選擇性變更，您可能需要進行後安裝已完成，或請參閱疑難排解指南 》 的章節：
+
+    + [選擇性的後續安裝步驟： 設定服務與權限](#bkmk_FollowUp) 
+    + [疑難排解 SQL Server 中的機器學習服務](upgrade-and-installation-faq-sql-server-r-services.md)
+
+## <a name="bkmk_FollowUp"></a>選擇性的後續安裝步驟
+
+機器學習您使用案例，根據您可能需要進行其他變更伺服器、 防火牆、 服務或資料庫權限所用的帳戶。 您必須進行的變更會因大小寫。
 
 常見的案例，需要進行其他變更包括：
 
 * 變更防火牆規則以允許 SQL Server 的傳入的連接。
 * 啟用額外的網路通訊協定。
 * 確定伺服器支援遠端連線。
-* 啟用*隱含的驗證*，如果使用者從遠端的 R 開發終端機的 SQL Server 資料存取和使用 RODBC 封裝或其他 Microsoft 開放式資料庫連接 (ODBC) 提供者執行 R 程式碼。
-* 賦予使用者有權執行 R 指令碼或使用資料庫。
+* 啟用*隱含的驗證*，如果使用者從遠端資料科學用戶端存取 SQL Server 資料，並使用 RODBC 封裝或其他 ODBC 提供者執行的程式碼。
+* 讓使用者在存取個別資料庫。
 * 修正導致無法與 Launchpad 服務通訊的安全性問題。
-* 確保使用者可以執行 R 程式碼，或安裝封裝的權限。
+* 確定使用者已安裝封裝或執行程式碼的權限。
 
 > [!NOTE]
 > 並非所有列出的變更可能需要。 不過，我們建議您先檢閱以查看它們是否適合您案例的所有項目。
+
+可以在這裡找到其他疑難排解提示：[升級及安裝常見問題集](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 ### <a name="bkmk_configureAccounts"></a>啟用 [啟動列] 帳戶群組的隱含的驗證
 
@@ -205,7 +283,7 @@ SQL Server 安裝程式會提供安裝機器學習的下列選項：
 > [!NOTE]
 > 如果您使用 SQL 登入 SQL Server 計算內容中執行 R 指令碼時，就不需要此步驟。
 
-如果您已安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和您自己的執行個體中執行 R 指令碼，您通常會執行指令碼，身為管理員，或至少是資料庫擁有者，因此會有不同的作業、 資料庫和功能中的所有資料的隱含權限若要安裝新的 R 封裝做為所需。
+如果您已安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在您自己的執行個體，通常執行指令碼身為管理員，或至少是資料庫擁有者，因此會有不同的作業、 在資料庫中，並且能夠安裝新的封裝中的所有資料的隱含權限視需要。
 
 不過，在企業案例中，大部分的使用者，包括使用 SQL 登入、 存取資料庫的使用者沒有這類較高的權限。 因此，每個使用者執行 R 或 Python 指令碼，您必須授與使用者權限來執行指令碼中每個資料庫將使用外部指令碼的位置。
 
@@ -216,7 +294,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 ```
 
 > [!TIP]
-> 需要安裝協助嗎？ 不確定是否執行了所有步驟嗎？ 請使用這些自訂報表檢查 R Services 的安裝狀態。 如需詳細資訊，請參閱 [使用自訂報表監視 R Services](monitor-r-services-using-custom-reports-in-management-studio.md)。
+> 需要安裝協助嗎？ 不確定是否執行了所有步驟嗎？ 使用這些自訂報表來檢查安裝狀態，並執行其他步驟。 
+> 
+> [監視使用自訂報表的機器學習服務](monitor-r-services-using-custom-reports-in-management-studio.md)。
 
 ### <a name="ensure-that-the-sql-server-computer-supports-remote-connections"></a>請確認 SQL Server 電腦支援遠端連線
 
@@ -226,9 +306,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 
 ### <a name="give-your-users-read-write-or-ddl-permissions-to-the-database"></a>提供您的使用者讀取、 寫入或 DDL 資料庫的權限
 
-執行 R 指令碼，使用者帳戶或 SQL 登入可能需要從其他資料庫，讀取資料建立新的資料表來儲存結果，和寫入資料到資料表。
-
-每個使用者帳戶或執行 R 指令碼的 SQL 登入，請務必確認帳戶或登入具有適當的權限在資料庫上： *db_datareader*， *db_datawriter*，或*db_ddladmin*。
+用來執行 R 或 Python 的使用者帳戶可能需要從其他資料庫，讀取資料建立新的資料表來儲存結果，和寫入資料至資料表。 因此，每個使用者執行 R 或 Python 指令碼，請確定使用者有適當的權限，在資料庫上： *db_datareader*， *db_datawriter*，或*db_ddladmin*。
 
 例如，下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式提供 SQL 登入 *MySQLLogin* 在 *RSamples* 資料庫中執行 T-SQL 查詢的權限。 SQL 登入必須存在於伺服器的安全性內容中，才能執行此陳述式。
 
@@ -254,15 +332,13 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ## <a name="next-steps"></a>後續的步驟
 
-SQL Server 中的指令碼執行功能，適用於在您確認之後，您可以執行 R 和 Python 命令從 SQL Server Management Studio、 Visual Studio 程式碼或任何其他用戶端，可以將 T-SQL 陳述式傳送到伺服器。
+SQL Server 中的指令碼執行功能，適用於在您確認之後，您可以執行 R 和 Python 命令從 SQL Server Management Studio、 Visual Studio 程式碼或任何其他用戶端，可以將 T-SQL 陳述式傳送到伺服器。 在進行之前，您可以進行一些變更系統設定中，以支援大量使用機器學習服務，或將新的 R 封裝。
 
-不過，您可能想要進行一些變更系統設定中，以支援大量使用機器學習服務，或將新的 R 封裝。
-
-本節列出一些常見的修改，您可以對支援機器學習。
+本節列出一些常見的最佳化和機器學習的學習活動。
 
 ### <a name="add-more-worker-accounts"></a>新增更多背景工作帳戶
 
-如果您認為您可能會有很大，使用 R，或者您預期許多使用者會同時為執行指令碼，您可以增加背景工作帳戶指派給 Launchpad 服務數目。 如需詳細資訊，請參閱[修改使用者帳戶集區的 SQL Server R Services](modify-the-user-account-pool-for-sql-server-r-services.md)。
+如果您認為您可能會有很大，使用 R，或者您預期許多使用者會同時為執行指令碼，您可以增加背景工作帳戶指派給 Launchpad 服務數目。 如需詳細資訊，請參閱[修改使用者帳戶集區的 SQL Server 機器學習服務](modify-the-user-account-pool-for-sql-server-r-services.md)。
 
 ### <a name="bkmk_optimize"></a>最佳化執行外部指令碼伺服器
 
@@ -282,32 +358,28 @@ SQL Server 中的指令碼執行功能，適用於在您確認之後，您可以
 
 花點時間安裝任何其他的 R 封裝，您將會使用。
 
-您想要從 SQL Server 使用的套件，必須安裝在執行個體所使用的預設程式庫中。 如果您已經在電腦上個別安裝的 R，或者封裝安裝到使用者程式庫，您將無法使用 T-SQL 從這些封裝。 如需詳細資訊，請參閱[SQL Server 上安裝其他的 R 封裝](../../advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md)。
+您想要從 SQL Server 使用的套件，必須安裝在執行個體所使用的預設程式庫中。 如果您已經在電腦上個別安裝的 R，或者封裝安裝到使用者程式庫，您將無法使用 T-SQL 從這些封裝。
 
-您也可以設定使用者群組共用每個資料庫層級上的封裝，或設定資料庫角色，才能讓使用者安裝自己的封裝。 如需詳細資訊，請參閱[封裝管理](r-package-management-for-sql-server-r-services.md)。
+安裝和管理的 R 封裝的程序是在 SQL Server 2016 和 SQL Server 2017 不同。 比方說，在 SQL Server 2017，您可以共用封裝每個資料庫層級上的設定使用者群組，或設定資料庫角色，才能讓使用者安裝自己的封裝。 如需詳細資訊，請參閱[封裝管理](r-package-management-for-sql-server-r-services.md)。
+
+在 SQL Server 2016 中，資料庫管理員必須安裝 R 封裝，使用者需要。
+
+也需要安裝其他的 Python 封裝執行個體文件庫中的系統管理存取。
 
 ### <a name="upgrade-the-machine-learning-components"></a>升級的機器學習服務元件
 
-當您安裝使用 SQL Server 2016 的 R 服務時，您會取得的 R 元件版本時已發行版本或 service pack 的最新狀態。 每次您更新或升級伺服器、 機器學習元件也會升級。
+當您在 SQL Server 安裝的機器學習功能時，您會取得 R 或 Python 的元件時已發行版本或 service pack 的最新的版本。 每次您更新或升級伺服器、 機器學習元件也會升級。
 
-不過，您可以升級的機器學習服務元件快排程超過支援的 SQL Server 版本中，安裝 Microsoft R Server，並繫結執行個體。 當您升級時，您也可以取得下列的新功能，支援的 Microsoft R Server 的最新版本中：
+不過，您可以升級的機器學習服務元件快排程超過支援的 SQL Server 版本中，使用程序稱為_繫結_。 當您繫結的 SQL Server 執行個體時，您同時升級 R 或 Python 版本，並將變更為支援較頻繁的升級不同的支援原則。 
 
-* 新的 R 封裝，包括[sqlrutils](https://docs.microsoft.com/r-server/r-reference/sqlrutils/sqlrutils)， [olapR](https://docs.microsoft.com/r-server/r-reference/olapr/olapr)，和[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)。
+這類升級可能包括：
+
+* 新的 R 封裝
++ Microsoft 的全新 Api 套件[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)。
 * [預先定型模型](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models)影像分類和文字分析。
 
-如需如何升級的 SQL Server 2016 執行個體資訊，請參閱[升級 R 元件，透過繫結](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+如需如何升級的 SQL Server 執行個體資訊，請參閱[升級透過繫結的機器學習元件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
-如果您不確定的 R 版本是執行個體相關聯，您可以執行下列命令：
-
-```SQL
-EXEC sp_execute_external_script  @language =N'R',
-@script=N'
-myvar <- version$version.string
-OutputDataSet <- as.data.frame(myvar);'
-```
-
-> [!NOTE]
-> 會針對 SQL Server 2017 也支援透過繫結程序的升級。 不過，目前升級僅支援 SQL Server 2016 執行個體。
 
 ### <a name="tutorials"></a>教學課程
 
@@ -323,5 +395,4 @@ OutputDataSet <- as.data.frame(myvar);'
 
 若要檢查執行個體的安裝狀態，並修正常見的問題，請嘗試這些自訂報表。
 
-* [SQL Server R services 的自訂報表](monitor-r-services-using-custom-reports-in-management-studio.md)
-
+* [SQL Server R services 的自訂報表](\r\monitor-r-services-using-custom-reports-in-management-studio.md)

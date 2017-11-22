@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c27c5db00165b0664e9d3d42fbfe104264cde147
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b6533ce1774dec4967c9d43ea27902281d5bf756
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>專案設定 （同步處理） (SybaseToSQL)
 同步處理頁面**專案設定**對話方塊包含自訂如何 SSMA 載入資料庫物件，例如資料表和預存程序，設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
@@ -67,4 +65,3 @@ ms.lasthandoff: 08/02/2017
 如果您選取**略過**，SSMA 將不會執行重新整理的任何動作。   
 設定預設選項是**從資料庫重新整理**。  
   
-

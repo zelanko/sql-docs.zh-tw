@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- errors [ADO]
+helpviewer_keywords: errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 73f1b516ebc7f133219764506b340bbf428f8207
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 54a44c69afd01647c5dca1cab97993f890d81c21
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-run-time-errors"></a>ADO 執行階段錯誤
 ADO 錯誤會回報到您的程式，為執行階段錯誤。 您可以使用您的程式語言的錯誤截取機制來攔截和處理它們。 例如，在 Visual Basic 中使用**On Error**陳述式。 在 Visual c + + 中，它會取決於您用來存取 ADO 文件庫的方法。 使用 #import， **try catch**區塊。 否則，c + + 程式設計人員必須明確地擷取物件時發生錯誤，藉由呼叫**GetErrorInfo**。 下列 Visual Basic sub 程序示範設限 ADO 錯誤：
@@ -106,4 +103,3 @@ Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
  下列主題提供有關 ADO 錯誤的詳細資訊。
 
 -   [ADO 錯誤參考](../../../ado/guide/data/ado-error-reference.md)
-

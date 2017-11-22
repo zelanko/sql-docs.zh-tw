@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 363ec5c1b2f1d73ec4278a3e6b0386a5610a4ec5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f8b01b8cd08c46f641fbd713f4acbdeca53db5c6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Fabricating 階層式資料錄集
 下列範例示範如何使用資料的形式來定義資料行的父系、 子群組和孫系文法由此沒有基礎資料來源的階層式資料錄集**資料錄集**。  
@@ -62,10 +60,9 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
   
  只要**資料錄集**已傳遞，它可以是填入、 操作，或保存至檔案。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [存取資料列中的階層式資料錄集](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [型式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [提供者所需的資料成形](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [圖形 APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
- [在一般的圖形命令](../../../ado/guide/data/shape-commands-in-general.md)
-
+ [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

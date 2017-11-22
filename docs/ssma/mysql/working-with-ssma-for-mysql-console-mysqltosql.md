@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 77eab5b93bdbf5de9866f16de49267db1490d6dd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6212ff417a112687332129597b2a442f87d46da1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>使用 SSMA for MySQL 主控台 (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]現在可透過在命令列主控台應用程式存取移轉小幫手 (SSMA) 的 MySQL。 指令碼檔案會形成執行命令的應用程式的輸入。 是主控台應用程式，SSMA 啟用指令碼層級互動、 減少移轉循環和縮放移轉作業。  
@@ -46,7 +44,6 @@ ms.lasthandoff: 08/02/2017
 |[產生報表 &#40;MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|列出要產生報表的命令。|  
 |[疑難排解 &#40;MySQLToSQL &#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|提供有關修正移轉問題的簡短資訊。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [開始使用 SSMA for MySQL 主控台](http://msdn.microsoft.com/en-us/218d502c-059f-4d48-9aea-61e553d74303)  
   
-

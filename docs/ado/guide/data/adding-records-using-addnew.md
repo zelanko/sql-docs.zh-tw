@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3bb2828935872cc4759608b0041db71ce8c24d6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92bbc404985ebbb49c4e654efd5a7f54198d35ab
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adding-records-using-addnew-method"></a>加入資料錄使用 AddNew 方法
 這是基本語法**AddNew**方法：
@@ -57,4 +55,3 @@ End If
 
 ## <a name="remarks"></a>備註
  因為此程式碼會使用已中斷連線**資料錄集**與批次模式是用戶端資料指標，您必須重新連線**資料錄集**新的資料來源**連接**物件之前，您可以呼叫**UpdateBatch**張貼到資料庫變更的方法。 這輕鬆地透過新的函式**GetNewConnection**。
-
