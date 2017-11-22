@@ -5,27 +5,25 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 160d4784-d108-4705-932d-763558912804
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: f01bfe2d06f8dcbf6ea20d7037a109509860bc34
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a09dd49a6178aef1762c889bfbd00d4ccef07b76
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-oracletosql"></a>使用者介面參考 (OracleToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) for Oracle。  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>本節內容  
 下表列出 SSMA 對話方塊：  
   
 |||  
@@ -53,8 +51,7 @@ ms.lasthandoff: 08/02/2017
 |[重新整理從資料庫 &#40; OracleToSQL &#41;](../../ssma/oracle/refresh-from-database-oracletosql.md)|使用**從資料庫重新整理**對話方塊來選取要從 Oracle 資料庫重新整理的物件。|  
 |[儲存中繼資料 &#40; OracleToSQL &#41;](../../ssma/oracle/save-metadata-oracletosql.md)|**儲存中繼資料**儲存遺失中繼資料的專案時，對話方塊隨即出現。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [開始使用 SSMA for Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
 [將 Oracle 資料庫移轉至 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

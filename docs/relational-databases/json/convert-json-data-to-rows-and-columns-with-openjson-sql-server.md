@@ -8,8 +8,7 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - JSON, importing
 - importing JSON
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: b40959b38860bc9e31bf093d7498c4391be19fce
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 6e4a7b49bb01bd4254fad855daedd3981b2fa6a8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>使用 OPENJSON 將 JSON 資料轉換成資料列和資料行 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -148,10 +146,9 @@ WITH (
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解 SQL Server 中的內建 JSON 支援  
-如需更多特定的解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
+對於大量的特定解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
   
 ## <a name="see-also"></a>另請參閱  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
   
   
-

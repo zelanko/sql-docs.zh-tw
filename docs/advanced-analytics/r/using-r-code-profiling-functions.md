@@ -5,22 +5,20 @@ ms.date: 11/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 745133739eed6e7ca08ffd55e51f479304566ec9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1fe4b8a4299570f07b858962bb665e37fc980e44
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-r-code-profiling-functions"></a>使用 R 程式碼剖析函式
 除了使用 SQL Server 資源和工具來監視 R 指令碼執行之外，您還可以使用由其他 R 套件提供的效能工具，來取得內部函式呼叫的相關詳細資訊。 本主題提供一些基本資源的清單，以協助您開始。 如需專家指導，建議您閱讀由 Hadley Wickham 所著的《進階 R》一書中的[效能 (英文)](http://adv-r.had.co.nz/Performance.html) 章節。
@@ -77,7 +75,6 @@ Microsoft R Open 的文件 (預設會安裝) 包含開發適用於 R 語言之�
 ### <a name="location-of-r-help-files"></a>R 說明檔的位置
 
 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual
-
 
 
 

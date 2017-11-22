@@ -5,8 +5,7 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,23 +13,21 @@ f1_keywords:
 - CREATE SUBCUBE
 - CREATE
 - SUBCUBE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - subcubes [MDX]
 - CREATE SUBCUBE statement
 ms.assetid: 15b6ac4c-b68a-4f9f-b33c-f5f7c4a74535
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 5fd57d53dd07238781c452730f00e526fb6c2fff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b7a444247915755ca1e9d002acf868a7d6eecc4f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 資料定義-建立 SUBCUBE
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -144,11 +141,10 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  [All Products] 和 [All Resellers] 的資料行與資料列個別包含所有成員的總計，而不只是可見成員的總計。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX &#40; 中的重要概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX 指令碼陳述式 &#40;MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP SUBCUBE 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT 陳述式 &#40;MDX &#41;](../mdx/mdx-data-manipulation-select.md)  
   
   
-

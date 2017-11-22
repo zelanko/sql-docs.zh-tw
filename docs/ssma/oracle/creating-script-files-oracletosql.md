@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,22 +13,21 @@ helpviewer_keywords:
 - Script File Creation, Non-Configurable option
 - Script File Creation, Script File Validation
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 29a445d0392c77b0773f612636eeca08597c47c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7fb3f2390d27d89877ed57b50da5e40da95e2c3b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-script-files-oracletosql"></a>建立指令碼檔案 (OracleToSQL)
 第一個步驟之前啟動 SSMA 主控台應用程式。 若要建立指令碼檔案，並在必要時建立的變數值的檔案和伺服器連接檔案。  
   
-指令碼檔案可以分成三個區段，viz..,:  
+指令碼檔案可以分成三個區段，viz。。，：  
   
 1.  **config:**可讓使用者設定的主控台應用程式的組態參數。  
   
@@ -404,7 +402,6 @@ ms.lasthandoff: 08/02/2017
 ## <a name="next-step"></a>下一個步驟  
 在操作主控台的下一個步驟是[建立變數值的檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [建立變數值的檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   
-

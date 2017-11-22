@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 701 (Database Engine error)
+helpviewer_keywords: 701 (Database Engine error)
 ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0923e3d8078d720775ecbb8a321348e9b3bf4d89
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 530d1c42d83d2390d67906f601d0a255b0db1a78
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver701"></a>MSSQLSERVER_701
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,4 +84,3 @@ ms.lasthandoff: 06/22/2017
   
 如果仍繼續發生該問題，您必須進一步研究，而且可能必須降低工作負載。  
   
-

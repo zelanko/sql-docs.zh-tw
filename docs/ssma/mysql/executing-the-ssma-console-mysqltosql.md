@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5536ace7511bbbb778b9ca5c3732ff78c986afd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d3524ac9d8aac255fdf87bedbe6cf3badad963bd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>執行 SSMA 主控台 (MySQLToSQL)
 Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活動。  
@@ -679,7 +677,7 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
   
 8.  `write-summary-report-to`指定產生的摘要報告所在的路徑。 如果只提及的資料夾路徑，然後檔案名稱**ConvertSQLReport.XML**建立。 （選擇性的屬性）  
   
-    報表建立了 2 子類別，取得進一步的 viz..,:  
+    報表建立了 2 子類別，取得進一步的 viz。。，：  
   
     -   報告錯誤 （="true/false"，預設值為"false"（選擇性的屬性））。  
   
@@ -770,4 +768,3 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
   
 3.  如需疑難排解主控台中的問題，請參閱[疑難排解 &#40;MySQLToSQL &#41;](../../ssma/mysql/troubleshooting-mysqltosql.md).  
   
-

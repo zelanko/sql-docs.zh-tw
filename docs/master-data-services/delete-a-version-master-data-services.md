@@ -8,25 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - versions [Master Data Services], deleting
 - deleting versions [Master Data Services]
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7922e4d3240a6fae7e9a6f608a0631c7b7435953
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: fa6979d6ce1aadbbf6c7f1ac1929a5579cc862bc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="delete-a-version-master-data-services"></a>刪除版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您確定不再需要與某個版本有關的主要資料時，可刪除此版本。 當您刪除版本之後，就無法擷取關聯的主要資料。  
@@ -65,4 +63,3 @@ ms.lasthandoff: 09/07/2017
  [複製版本 &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
   
-

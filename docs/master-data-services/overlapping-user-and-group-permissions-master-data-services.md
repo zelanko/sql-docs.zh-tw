@@ -8,8 +8,7 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 803fdbbcc2b7bc83306c3f6a3135860059819840
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 1dcefd134dccc0ae8a7039758dcd987e09b90813
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重疊的使用者和群組的權限 (Master Data Services)
   使用者的權限是根據以下條件：  
@@ -91,4 +89,3 @@ ms.lasthandoff: 09/07/2017
  [重疊的模型和成員的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   
-

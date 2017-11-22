@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 9955 (Database Engine error)
+helpviewer_keywords: 9955 (Database Engine error)
 ms.assetid: 77f30570-7790-4747-b372-eac71c036e19
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8c4d27af44152bb9b9816dbcdb0af7c75ea2f4db
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b5ac734473c592a347c8c954d7815b43869d3b9c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver9955"></a>MSSQLSERVER_9955
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,4 +49,3 @@ ms.lasthandoff: 06/22/2017
 [設定全文檢索篩選背景程式啟動器的服務帳戶](~/relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
 [全文檢索搜尋](~/relational-databases/search/full-text-search.md)  
   
-

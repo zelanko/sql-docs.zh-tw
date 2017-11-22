@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 20adad3287a409a0d9dc05ea58397da32226f00b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 644180448474d2c07b1f53b570e25ac39074edfb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="address-book-data-binding-object"></a>通訊錄資料繫結物件
 通訊錄應用程式會使用[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)繫結至資料的 SQL Server 資料庫 （在這個情況下，DHTML 資料表） 的視覺物件在應用程式的用戶端 HTML 網頁中的物件。 事件驅動的 VBScript 程式邏輯會使用[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)至：  
@@ -72,8 +70,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |[連接](../../../ado/reference/rds-api/connect-property-rds.md)|會提供必要的連接資訊給**.RDSDataControl**連接到 SQL Server。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|設定或傳回用來擷取查詢字串[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [通訊錄命令按鈕](../../../ado/guide/remote-data-service/address-book-command-buttons.md)
-
 
 

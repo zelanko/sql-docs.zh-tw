@@ -19,12 +19,11 @@ ms.date: 09/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: powershell
 ms.author: genemi
+ms.openlocfilehash: 71111642b588c5123b53c58d495fb404e6acb4b7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: d447009539b1091aa88beac48ca2d2e5ae222ddc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>新文章和最近更新的文章：PowerShell 文件
 
@@ -127,6 +126,5 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 - [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
-
 
 

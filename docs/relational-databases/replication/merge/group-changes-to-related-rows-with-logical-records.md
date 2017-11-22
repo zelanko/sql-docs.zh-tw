@@ -8,8 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b52630036d499deb0c125a9c6d8512a2edc48a4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 026199b68479b9219984123bcc5958b037474986
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>使用邏輯記錄分組相關資料列的變更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,4 +151,3 @@ ms.lasthandoff: 06/22/2017
  [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
   
-

@@ -5,24 +5,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Selection of Objects to Test,Parameter Comparison Settings
+helpviewer_keywords: Selection of Objects to Test,Parameter Comparison Settings
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: d33e430c5ecb7957e3886bf05c4fdb9d30b7614a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3b12a1b9ec20f736072d57039d247be13be57e69
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>選取和設定測試 (OracleToSQL) 的物件
 在這個步驟中選取測試，並設定設定值比較程序和函式的輸出參數，以及函式的傳回值的物件。  
@@ -87,7 +84,6 @@ ms.lasthandoff: 08/02/2017
 ## <a name="next-step"></a>下一個步驟  
 [選取並設定受影響物件 &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [測試移轉的資料庫物件 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

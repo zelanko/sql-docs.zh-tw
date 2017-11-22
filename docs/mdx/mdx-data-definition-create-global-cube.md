@@ -5,8 +5,7 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +15,21 @@ f1_keywords:
 - CREATE
 - CREATE GLOBAL
 - CREATE GLOBAL CUBE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - statements [MDX], CREATE GLOBAL CUBE
 - CREATE GLOBAL CUBE
 ms.assetid: b46f3c98-a4f1-4ebb-915f-a3333f4054dc
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: ec645e2e9d97abe96d95bc6d1118fce180355029
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b9a80a053d9666ca2e8c63eb6037dddf3cf4a7a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 資料定義-建立全域 CUBE
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -215,9 +212,8 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 資料定義陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [建立工作階段 CUBE 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   
-

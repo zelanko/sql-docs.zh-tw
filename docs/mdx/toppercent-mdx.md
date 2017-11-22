@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- TOPPERCENT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- TopPercent function
+f1_keywords: TOPPERCENT
+dev_langs: kbMDX
+helpviewer_keywords: TopPercent function
 ms.assetid: a40cfbb8-5bf4-4ae2-8686-df9a07206d56
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 51c53300f57a27c85f35788af9d707ed6779078c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6053f4c720e30aa74a356e1b4aeb7cde276e2881
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -139,8 +134,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

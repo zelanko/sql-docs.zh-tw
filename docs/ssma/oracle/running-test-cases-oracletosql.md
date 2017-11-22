@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: ff5baf3dadeee06d33f5d75f0c62a1ee339ba2b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d810cee8f3d8b521350aa99a83ca6f7148cd5064
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="running-test-cases-oracletosql"></a>執行測試案例 (OracleToSQL)
 當 SSMA 軟體測試人員執行測試案例時，它會執行測試所選取的物件，並建立驗證結果的相關報表。 如果兩個平台上相同的結果，測試成功。 Oracle 之間的物件的對應關係和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]取決於目前的 SSMA 專案的結構描述對應設定。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="test-case-execution-steps"></a>測試案例執行步驟  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>必要條件  
 SSMA 軟體測試人員會檢查測試在測試執行開始之前是否符合所有必要條件。 如果未滿足一些條件，便會出現錯誤訊息。  
   
 ### <a name="initialization"></a>初始化  
@@ -85,9 +83,8 @@ SSMA 軟體測試人員會檢查測試在測試執行開始之前是否符合所
 ## <a name="next-step"></a>下一個步驟  
 [檢視測試案例報表 &#40; OracleToSQL &#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [選取和設定物件測試 &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
 [選取並設定受影響物件 &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
 [測試移轉的資料庫物件 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

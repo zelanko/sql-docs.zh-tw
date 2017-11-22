@@ -1,10 +1,13 @@
 ---
 title: "停止系統設定版本時態表上的系統版本設定功能 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/11/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5bdcdcdd9a14ac4a35db8f4b9c52d7fa49478127
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d28ca8dcaae23e9e7c6548dd0c6bc0dcc05d06ac
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>停止系統版本設定時態表上的系統版本設定功能
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   您可能想要暫時或永久停止在時態表上的版本設定。   
 您可以藉由將 **SYSTEM_VERSIONING** 子句設定為 **OFF**來完成。  

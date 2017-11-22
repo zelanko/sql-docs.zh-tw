@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 459c0bdf90ad05d43317ae2af3383ac53573a122
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be9bff1b71a3f60e27e89436a8b2e1aa20711f42
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>SQL 全文檢索篩選背景程式啟動器 (登入索引標籤)
   從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索搜尋就會使用 SQL 全文檢索篩選背景程式啟動器 (FDHOST 啟動器) 服務。 如果您使用全文檢索搜尋，這個服務就必須執行。 如需有關篩選背景程式主機處理序的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜全文檢索搜尋架構＞。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 08/02/2017
 >   
 >  如需有關選取帳戶以執行服務的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜設定 Windows 服務帳戶＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **內建帳戶**  
  **本機系統**  
  指定本機系統帳戶。 這個帳戶不需要密碼。 但是，根據授與帳戶的權限，本機系統帳戶可能會禁止服務與其他伺服器互動。  
@@ -68,4 +66,3 @@ ms.lasthandoff: 08/02/2017
  繼續已暫停的服務。  
   
   
-

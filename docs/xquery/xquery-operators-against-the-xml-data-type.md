@@ -5,30 +5,26 @@ ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - XQuery, operators
 - operators [XQuery]
 - xml data type [SQL Server], XQuery
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2de9c1d30c8c247a04764ba94321eae28934bae5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 70084cbe4e9fce9388e3c5c51de37412240b3d0e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>針對 xml 資料類型的 XQuery 運算子
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -100,10 +96,9 @@ where ProductModelID=19
   
  因為兩個運算元**eq**運算子不可部份完成值，在查詢中使用值運算子。 您可以使用一般比較運算子撰寫相同的查詢 (  **=**  )。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   
-

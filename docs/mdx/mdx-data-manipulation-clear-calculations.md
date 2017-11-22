@@ -5,16 +5,14 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CLEAR CALCULATIONS
 - clalculations
 - clear
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - clearing calculations
 - CLEAR CALCULATIONS statement
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - calculations [Analysis Services], clearing
 - cubes [Analysis Services], calculations
 ms.assetid: aebec9a1-1d1d-4697-aa3f-cc2449625603
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 12302161e25d184e3fcffb2ee9d32636208d13a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 042c7b9bedc396d63aa70d23926728b015527a99
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>MDX 資料操作 CLEAR CALCULATIONS
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +54,7 @@ CLEAR CALCULATIONS [FROMCube_Expression]
 > [!NOTE]  
 >  伺服器或資料庫管理員，或可存取 Cube 來源資料的角色成員 (即 ReadSourceData=true) 才能執行這個陳述式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 資料操作陳述式 &#40;MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   
-

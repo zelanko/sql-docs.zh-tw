@@ -2,9 +2,12 @@
 title: "建立叢集索引 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c14c73cc6bc0e672245874c8c115bc929cf17f19
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ec406af911a0ea95910eba4a7bf35b68544418cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-clustered-indexes"></a>建立叢集索引
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在資料表上建立叢集索引。 除了極少數的例外狀況之外，每個資料表都應該要有叢集索引。 除了可以改善查詢效能以外，叢集索引還能夠視需要加以重建或重新組織，以便控制資料表分散程度。 檢視上也可以建立叢集索引。 (叢集索引是在 [叢集與非叢集索引說明](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)主題中進行定義。)  
   

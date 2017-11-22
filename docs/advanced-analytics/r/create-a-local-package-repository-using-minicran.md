@@ -5,22 +5,20 @@ ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27f2a1ce-316f-4347-b206-8a1b9eebe90b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7cc7c216cb95d10c4158a3ac0998d458cec3d7b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 1dd7e8f1a0054818849b3b9672a5df6286bdabce
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-local-package-repository-using-minicran"></a>建立使用 miniCRAN 本機封裝儲存機制
 
@@ -91,8 +89,8 @@ ms.lasthandoff: 10/10/2017
 
     ```R
     pkgs_needed <- c("zoo", "forecast")
-
-2. Optionally, plot the dependency graph, which can be informative and looks cool.
+    ```
+2. （選擇性） 繪製相依性圖形，很有幫助，並且看起來很酷。
     
     ```R
     plot(makeDepGraph(pkgs_needed))
@@ -199,4 +197,3 @@ ms.lasthandoff: 10/10/2017
 > 當您使用 R 工具來安裝封裝時，它們會安裝執行個體的整體。 
 > 
 > 如果您想要將封裝安裝到資料庫，而且使用資料庫角色的使用者與共用封裝，您必須上傳使用建立外部程式庫陳述式的程式庫。 請參閱[安裝 SQL Server 中的其他 R 封裝](install-additional-r-packages-on-sql-server.md)
-

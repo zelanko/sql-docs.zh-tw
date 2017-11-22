@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 847 (Database Engine error)
+helpviewer_keywords: 847 (Database Engine error)
 ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 16faf8a17c540e25650ce35b298895dc5704e45f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2af96fe14720f04c290f9eaff339d714b8b93ba9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver847"></a>MSSQLSERVER_847
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,4 +71,3 @@ ms.lasthandoff: 06/22/2017
   
 -   確定 FILEGROWTH 選項的設定值夠大，以免遞增次數過於頻繁。 請排程作業於離峰時段檢查資料庫中可用的空間量，再據以增加資料庫大小。  
   
-

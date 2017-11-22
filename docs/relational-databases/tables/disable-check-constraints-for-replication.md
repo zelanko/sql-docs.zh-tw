@@ -8,8 +8,7 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - disabling constraints
 - constraints [SQL Server], check
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f8ff552993defe940576ea5cf0a35943a417b1b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b07d0651a5f0223e66783c906e5e2ddcf827377f
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="disable-check-constraints-for-replication"></a>停用複寫的檢查條件約束
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -87,4 +85,3 @@ ms.lasthandoff: 06/22/2017
  [指定結構描述選項](../../relational-databases/replication/publish/specify-schema-options.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,17 +16,16 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 284e081f53fe047a257d22020d0792897c8623ed
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6dd319ab3fabac9cecd2aa7ed8091b51fd190573
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-a-matching-project"></a>執行比對專案
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中執行資料比對。 比對程序會根據比對原則中的比對規則來識別比對記錄叢集、根據存活規則將每一個叢集中的一筆記錄指定為存活者，然後匯出結果。 DQS 會在電腦輔助的程序中執行比對程序 (也稱為刪除重複作業)，但是您可以互動方式建立比對規則，而且您會從數個選擇中選取存活規則，好讓您控制比對程序。  
@@ -245,4 +243,3 @@ ms.lasthandoff: 09/09/2017
 -   叢集中最多的重複項目數  
   
   
-

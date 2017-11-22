@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bbf4124c957394d692976eef60d62742741bd949
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0abbf1d371f7fb97547b7e52331c150c7c003ae
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
   **sqlservr** 應用程式會在命令提示字元之下，啟動、停止、暫停和繼續執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。  
@@ -66,7 +64,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  啟動只含最小組態的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 如果組態值設定 (如過度調配記憶體) 造成伺服器無法啟動，這就很有用。  
   
  **-e** *error_log_path*  
- 指出錯誤記錄檔的完整路徑。 如果未指定，預設位置是*\<磁碟機 >*: \Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog 預設執行個體和*\<磁碟機 >*: \Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog 具名執行個體。 **-e** 和 *error_log_path* 之間沒有空格。  
+ 指出錯誤記錄檔的完整路徑。 如果未指定，預設位置是*\<磁碟機 >*: \Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog 預設執行個體和*\<磁碟機 >*: \Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog 具名執行個體。 **-e** 和 *error_log_path*之間沒有空格。  
   
  **-l** *master_log_path*  
  指出 **master** 資料庫交易記錄檔的完整路徑。 **-l** 和 *master_log_path*之間沒有空格。  
@@ -75,7 +73,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  指出要啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的單一使用者模式。 啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的單一使用者模式時，只能連接單一使用者。 不會啟動「保證從磁碟快取中，將已完成的交易定期寫入資料庫裝置」的 CHECKPOINT 機制。 (一般而言，如果系統資料庫發生需要修復的問題，便會使用這個選項。)這個選項會啟用 **sp_configure allow updates** 選項。 預設會停用 **allow updates** 。  
   
  **-n**  
- 可讓您啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體。 如果沒有設定 **-s** 參數，就會嘗試啟動預設執行個體。 您必須先在命令提示字元處切換至該執行個體的適當 BINN 目錄，才能啟動 **sqlservr.exe**。 例如，如果 Instance1 原先為二進位編碼檔案使用 \mssql$Instance1，使用者就必須位於 \mssql$Instance1\binn 目錄中，才能啟動 **sqlservr.exe -s instance1**。 如果您啟動的執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]與 **-n** 選項時，建議您最好使用**-e**選項，或[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不會記錄事件。  
+ 可讓您啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的具名執行個體。 如果沒有設定 **-s** 參數，就會嘗試啟動預設執行個體。 您必須先在命令提示字元處切換至該執行個體的適當 BINN 目錄，才能啟動 **sqlservr.exe**。 例如，如果 Instance1 原先為二進位編碼檔案使用 \mssql$Instance1，使用者就必須位於 \mssql$Instance1\binn 目錄中，才能啟動 **sqlservr.exe -s instance1**。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **-n** 的執行個體，建議您也要使用 **-e** 選項，否則不會記錄 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。  
   
  **-T** *trace#*  
  指出啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，應該已啟用指定的追蹤旗標 (*trace#*)。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需詳細資訊，請參閱[追蹤旗標&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
@@ -94,11 +92,11 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
  使用這個選項可能有助於微調記憶體配置，不過，實體記憶體必須已超出作業系統在應用程式能夠使用的虛擬記憶體上所設定的限制。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的記憶體使用需求不合規則且 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序的虛擬位址空間全部都在使用的大型記憶體組態中，可能適合使用這個選項。 使用此選項不正確時，可能會造成無法啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的狀況，也可能會發生執行階段錯誤。  
   
- 除非您在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 錯誤記錄檔中見到下列任何警告，否則，請使用 **-g** 參數的預設值：  
+ 除非您在 **錯誤記錄檔中見到下列任何警告，否則，請使用** -g [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 參數的預設值：  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE\<大小 >"  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<大小>"  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT\<大小 >"  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<大小>"  
   
  這些訊息可能表示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 正在嘗試釋出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體集區的可用部分，以便找出擴充預存程序 .dll 檔或自動化物件等項目的空間。 在這種情況下，可考慮加大 **-g**`` 參數所保留的記憶體數量。  
   
@@ -114,4 +112,3 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  [Database Engine 服務啟動選項](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   
-

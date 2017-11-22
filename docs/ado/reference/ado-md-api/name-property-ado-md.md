@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -22,20 +21,18 @@ f1_keywords:
 - Name
 - Axis::Name
 - Hierarchy::Name
-helpviewer_keywords:
-- Name property [ADO MD]
+helpviewer_keywords: Name property [ADO MD]
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a26f37e1a3911658229258857676868af179133
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d898b2e478b9a5dfccb431d0d29088c9e8d9286
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="name-property-ado-md"></a>Name 屬性 (ADO MD)
 表示物件的名稱。  
@@ -50,13 +47,12 @@ ms.lasthandoff: 09/09/2017
   
 ||||  
 |-|-|-|  
-|[軸物件 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|[目錄物件 (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[CubeDef 物件 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|  
-|[維度物件 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy 物件 (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|[層級物件 (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|  
-|[成員物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|||  
+|[Axis 物件 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|[Catalog 物件 (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[CubeDef 物件 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|  
+|[Dimension 物件 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy 物件 (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|[Level 物件 (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|  
+|[Member 物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|||  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [目錄 (VB) 範例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Caption 屬性 (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
  [Description 屬性 (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
  [UniqueName 屬性 (ADO MD)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)
-

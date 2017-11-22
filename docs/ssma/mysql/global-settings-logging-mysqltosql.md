@@ -5,32 +5,30 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0b443a3a01f7937bd032b801a86682292a4dd99a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1ccedf7874c9d4e8a3729e31dbea6f00a08426c9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-logging--mysqltosql"></a>全域設定 （記錄） (MySQLToSQL)
 使用**通用設定**對話方塊來指定 SSMA 的記錄設定。 一般而言，您需要在使用產品支援時，才變更這些設定。  
   
 若要存取此對話方塊，請在**工具**功能表上，選取**通用設定**，然後按一下 **記錄**在左窗格底部的按鈕。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **訊息層級**  
 底下的下列選項可用**訊息層級**:  
   
@@ -67,4 +65,3 @@ ms.lasthandoff: 08/02/2017
 **記錄檔的總數**  
 當一個記錄檔填滿時，SSMA 會重新命名記錄檔，並啟動新。 使用此設定，指定要保留的記錄檔的數目上限。 最小值為 2。  
   
-

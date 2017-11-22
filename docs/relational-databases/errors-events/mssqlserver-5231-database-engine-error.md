@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 5231 (Database Engine error)
+helpviewer_keywords: 5231 (Database Engine error)
 ms.assetid: 6954ae84-ed0b-4f4c-9d0a-e73f3d71476c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2f56a076832476227aac8cfcb3b44feb0558843a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a9776a1055598f10e17470bb13eb713173441221
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver5231"></a>MSSQLSERVER_5231
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,4 +44,3 @@ DBCC 嘗試鎖定物件時發生死結，並已選擇 DBCC 做為死結犧牲者
 ## <a name="user-action"></a>使用者動作  
 無  
   
-

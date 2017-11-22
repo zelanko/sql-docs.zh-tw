@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -32,17 +31,16 @@ helpviewer_keywords:
 - scanning for database files
 - searching for database files
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: db0c8970cb9a4cd47da5982d0ecc8c1e81a5ccbc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 24d93c5851e2d4192a32e0684a53b7939cc4c371
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>加入和移除 Access 資料庫檔案 (AccessToSQL)
 若要存取將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您必須加入一個或多個 Access 資料庫的 SSMA 專案。 這些資料庫必須 Access 97 或更新版本。 如果您的資料庫從舊版的存取權，您必須將資料庫轉換為較新版本。 您這麼做，開啟並儲存資料庫 Access 97 或更新版本中，您將它們加入 SSMA 之前。  
@@ -139,8 +137,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[連接到 SQL Server](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [建立及管理專案](http://msdn.microsoft.com/en-us/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
   
-

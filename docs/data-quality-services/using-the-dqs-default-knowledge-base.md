@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b7ae8a2dfc3d36da671ff848eb8ab0d5a7f2a7bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbd80ca8bdeb9412646409eb08ba1955b31b75c4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>使用 DQS 預設知識庫
   本主題說明隨著 **(DQS) 一併安裝的預設知識庫**DQS [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 資料。 這是包含下列定義域之預先建立的預設知識庫：  
@@ -59,4 +57,3 @@ ms.lasthandoff: 09/09/2017
  [DQS 知識庫與網域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   
-

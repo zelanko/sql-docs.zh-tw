@@ -8,22 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9d269cd8caad4c07fd8e1676dac36f9436db037a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85fb184a0c084c0cd13467161c49506a2a56c2ec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述
   在之前設定的 DQS 執行個體上安裝 SQL Server 更新 (修補、Hotfix 或累計更新) 之後，您可能必須使用 **upgrade** 命令列參數執行 DQSInstaller.exe 檔案來升級 DQS 資料庫結構描述。 否則，當您嘗試使用 Data Quality Client 連接至資料品質伺服器時，您可能會收到以下錯誤：  
@@ -75,4 +73,3 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  [在 .NET Framework 更新之後升級 SQLCLR 組件](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)  
   
   
-

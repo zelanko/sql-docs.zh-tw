@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e3e63f9389016dcd7e198d7d09099f94299bd19
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a0f909233d29c84e1c64ca19f100fdd1eabf4d61
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-with-scripting-languages"></a>使用 ADO 搭配指令碼語言
 在指令碼環境中，ADO 可讓您公開資料透過伺服器端指令碼。 在此案例中，ADO 中，基礎 OLE DB 提供者，它使用，而且參考指定的資料存放區所需的其他元件安裝在執行網際網路資訊服務 (IIS) 的伺服器。 ADO 使用 Active Server Pages (ASP)，是可以產生 HTML，例如指令碼中參考的元件。 這個 HTML 內容可以透過 HTTP 傳遞至用戶端 Web 瀏覽器。 使用指令碼，網頁就可以將動作傳送回伺服器端指令碼，可讓您以更新、 周遊，或檢視特定資料。  
@@ -73,8 +71,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [JScript ADO 程式設計](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [使用 ADO 搭配 Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [使用 ADO 搭配 Microsoft Visual c + +](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
-
+ [搭配使用 ADO 與 Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

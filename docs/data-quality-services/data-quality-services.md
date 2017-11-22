@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1cd79492a145f17a4602c96159d2e64a4fc28f2e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b168499c8d7707dbd7798ef7aa8111aa0ff0a9a9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) 是一個知識驅動的資料品質專案。 DQS 可讓您建立知識庫，然後使用該知識庫執行各種重要的資料品質工作，包括更正、充實、標準化及刪除重複資料。 DQS 可讓您使用參考資料提供者所提供的雲端式 Reference Data Services，執行資料清理。 DQS 也提供您整合到其資料品質工作的分析功能，讓您分析資料的完整性。  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  [SQL Server 資源中心](http://go.microsoft.com/fwlink/?linkID=219676)  
   
   
-

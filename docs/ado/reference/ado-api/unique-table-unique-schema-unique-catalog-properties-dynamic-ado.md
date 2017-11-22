@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Unique Schema property [ADO]
 - Unique Catalog property [ADO]
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29120a3012b74196e9184384fc740b7c18363e98
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da2f70b0f3d6f1ae3983e44f26191e13cc26f5a2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>唯一資料表、 唯一的結構描述，唯一目錄屬性動態 (ADO)
 可讓您以緊密控制特定的基底資料表中的修改[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，而形成多個基底資料表的聯結作業。  
@@ -56,8 +54,7 @@ ms.lasthandoff: 09/09/2017
  這些動態屬性會附加至**資料錄集**物件[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合時[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**。  
   
 ## <a name="applies-to"></a>適用於  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

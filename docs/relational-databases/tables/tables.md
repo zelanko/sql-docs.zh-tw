@@ -2,9 +2,12 @@
 title: "資料表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 370473bbbace616bde5ebbf1b1994a38e394c62e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 30ba1f01b556fcbb58007b771bb648847ecae8a6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables"></a>資料表
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   資料表是資料庫物件，其中包含資料庫內所有的資料。 在資料表中，會以邏輯的方式將資料整理成資料列與資料行格式，這與試算表相似。 每個資料列都代表唯一的記錄，而每個資料行則代表記錄中的一個欄位。 例如，包含公司員工資料的資料表可能會包含每個員工的資料列，並以資料行來顯示員工資訊 (例如，員工編號、姓名、地址、工作職稱和住家電話號碼)。  
   

@@ -5,30 +5,26 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- CALL
-dev_langs:
-- kbMDX
+f1_keywords: CALL
+dev_langs: kbMDX
 helpviewer_keywords:
 - voids [MDX]
 - stored procedures [MDX]
 - CALL statement
 ms.assetid: b534a20b-924c-43b8-832d-24e57d50425c
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: bc48a8e036e5a2385a1df6b1be9f8662f8fa4cb9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3d5bc0d9875d602135fd92722b73c07176a1df59
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX 資料操作呼叫
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +60,8 @@ CALL SP_Name
 > [!NOTE]  
 >  如果預存程序未登錄在用戶端，**呼叫**陳述式嘗試呼叫預存程序的執行個體從[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 資料操作陳述式 &#40;MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [使用預存程序 &#40;MDX &#41;](../mdx/using-stored-procedures-mdx.md)  
   
   
-

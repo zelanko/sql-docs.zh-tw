@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - SET_HADR_TSQL
 - HADR_TSQL
 - HADR
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ALTER DATABASE statement, AlwaysOn Availability Group
 - ALTER DATABASE statement, SET HADR options
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Transact-SQL statements
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a06e868a26e0da160e70e7f2923496e73f136ff7
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3799bc24ab3cfa9f0d65c961f69b72210c6cccef
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (TRANSACT-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -149,11 +146,10 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 > [!NOTE]  
 >  若要查看內容中使用的這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，請參閱 [建立可用性群組和 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [AlwaysOn 可用性群組 &#40; 的概觀SQL Server &#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [疑難排解 AlwaysOn 可用性群組組態 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   
-

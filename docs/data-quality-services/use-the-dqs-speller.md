@@ -2,9 +2,12 @@
 title: "使用 DQS 拼字檢查 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a01e31bf6965cb1d7ac6bbcf183e1ce0c98fc38e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9389568b31c445d66713b68efea8c312f5df9dec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼字檢查
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 拼字檢查會檢查定義域中字串值的語法、拼字和句子結構。 拼字檢查是一種獨立的用戶端功能，它並未與伺服器端引擎整合，也不涉及目前的流程或狀態。 拼字檢查會識別它視為潛在錯誤的字串值，然後在您對定義域值進行其他手動變更的相同位置中，以紅色底線標示這些值。 這些位置包括：  

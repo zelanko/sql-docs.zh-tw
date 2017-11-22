@@ -8,28 +8,26 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 881cdb2e9fc9d7faf8423574efa944c4149ded22
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="temporal-table-usage-scenarios"></a>時態表使用案例
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   時態表在需要追蹤資料變更歷程記錄的案例中通常很有用。    
-建議您在下列使用案例中考慮使用時態表，以獲得卓越的生產力優勢。  
+建議您在下列使用案例中考慮使用時態表，以獲得主要生產力優勢。  
   
 ## <a name="data-audit"></a>資料稽核  
  在您儲存重要資訊，並隨時需要追蹤變更內容和變更時間，以及執行資料鑑識調查的資料表上使用暫時性系統版本設定。    
@@ -598,4 +596,3 @@ UPDATE Employee
  [暫存資料表中繼資料檢視和函數](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

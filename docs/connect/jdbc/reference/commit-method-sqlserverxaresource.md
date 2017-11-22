@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerXAResource.commit
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerXAResource.commit
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1d0f8612-fb4a-4eca-bc37-8342e1419fd4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: edea58c9bbd5f83a9a9ff9d1d3a7f5d60c72b6f2
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6d8de59badb88825b112bfb2558748190a7ba8ec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="commit-method-sqlserverxaresource"></a>commit 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,10 +54,9 @@ public void commit(javax.transaction.xa.Xid xid,
 ## <a name="remarks"></a>備註  
  這個 commit 方法是由 javax.transaction.xa.XAResource 介面中的認可方法指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerXAResource 方法](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource 成員](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource 類別](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   
-

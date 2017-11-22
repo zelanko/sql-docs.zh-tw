@@ -8,25 +8,23 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a4ee27d7a15dcd93fbeffc60ff8f6f67309efb2a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
-ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="thread-and-task-architecture-guide"></a>執行緒和工作架構指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,6 +131,5 @@ SQL Server 不會在新增 CPU 之後自動開始使用這些 CPU。 這樣可�
 |SQL Server Agent   |Sqlagent.exe   |否 |  
 |Transact-SQL   |Ssms.exe   |否 |  
 |SQL Server 安裝程式   |Setup.exe  |否 |  
-
 
 

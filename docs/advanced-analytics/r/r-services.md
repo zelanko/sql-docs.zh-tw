@@ -1,27 +1,23 @@
 ---
 title: "Microsoft 的機器學習服務 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/12/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9735d257ce81e5b84ea19eeb70be8bef21127c13
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: ddc9b3f17afe1f9d4c811e4a5871f48a3a08de7f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="microsoft-machine-learning-services"></a>Microsoft 機器學習服務
 
@@ -30,7 +26,7 @@ Microsoft 機器學習服務的目標是提供可延伸性並可擴充的平台�
 主要優點包括：
 
 + 可擴充的分析
-+ 多個平台和 「 寫入一次，部署隨處 」 解決方案的計算內容
++ 多個平台和 「 程式碼一次，部署隨處 」 解決方案的計算內容
 + 會使分析資料，就能避免資料移動和資料的風險
 + 資料科學家可以選擇他們自己的工具和語言
 + 與 Microsoft 的企業功能整合開放原始碼的最佳的功能
@@ -47,15 +43,15 @@ Microsoft 機器學習服務的目標是提供可延伸性並可擴充的平台�
 在 SQL Server 2017，名稱已變更以反映受歡迎的 Python 語言的支援。
 
 + **SQL Server 機器學習服務 （資料庫）**針對資料庫中的分析支援 R 和 Python。
-+ **Microsoft Machine Learning 伺服器**Windows 伺服器上，與其他支援的平台晚期 2017年計劃的擴充支援 R，並將 Python 的部署。
++ **Microsoft Machine Learning 伺服器**Windows、 Linux 與 HDInsight Spark 及 Hadoop 叢集上支援 R，並將 Python 的部署。
 
 ### <a name="benefits"></a>優點
 
-Microsoft 機器學習服務將藉由使用資料庫的同一部電腦上執行的 R 整合到資料的計算。 它包含受信任的啟動控制板服務外部執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]處理，並與 R 或 Python 執行階段安全地通訊。
+Microsoft 機器學習服務將藉由使用資料庫的同一部電腦上執行的 R 整合到資料的計算。 它包含外部執行的啟動控制板服務[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]處理，並與 R 或 Python 執行階段安全地通訊。
 
-使用 SQL Server 機器學習服務，您可以定型的模型、 產生繪圖、 執行計分，以及輕鬆之間移動資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Python 或 R。
+使用 SQL Server 機器學習服務，您可以定型的模型、 產生繪圖、 執行計分，和安全地之間移動資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Python 或 R。
 
-資料科學家測試和開發解決方案可以從遠端的開發電腦以安全地在伺服器上，執行程式碼傳送指令碼，或他們也可以內嵌 SQL 預存程序中的機器學習程式碼至 SQL Server 部署完成的解決方案。
+資料科學家測試和開發解決方案可以從遠端的開發電腦傳送指令碼，並在伺服器上執行其程式碼，而不移動資料。 開發人員可以將完成的解決方案部署到 SQL Server，內嵌 SQL 預存程序中的機器學習程式碼。
 
 當您安裝 SQL Server 的機器學習服務時，您會取得的開放原始碼 R 或 Python 語言，以及可調整 R 和 Python 程式庫由 Microsoft 提供的分佈。 SQL Server 資料庫引擎也會包含增強的連線，並確保更快、 更安全的通訊，例如 R 或 Python 外部語言設計的新元件。
 
@@ -72,7 +68,7 @@ Microsoft 機器學習服務將藉由使用資料庫的同一部電腦上執行�
 
 ## <a name="machine-learning-server-standalone-and-microsoft-r-server-standalone"></a>機器學習服務伺服器 （獨立） 與 Microsoft R Server （獨立）
 
-此獨立伺服器系統支援多種平台和使用多種企業資料來源，例如 Linux 和 HD Insight 上的分散式、 可調整的 R 解決方案。 如果您不需要整合與 SQL Server，您可以安裝 R 伺服器，以啟用快速開發、 部署與實施機器學習的解決方案。 您也可以使用 R Server 安裝程式來升級 SQL Server 執行個體相關聯的 R 元件，並取得最新版的。
+此獨立伺服器系統支援多種平台和使用多種企業資料來源，例如 Linux 和 HDInsight 上的分散式、 可調整的 R 解決方案。 如果您不需要整合與 SQL Server，您可以安裝 R 伺服器，以啟用快速開發、 部署與實施機器學習的解決方案。 您也可以使用 R Server 安裝程式來升級 SQL Server 執行個體相關聯的 R 元件，並取得最新版的。
 
 如果您安裝 Microsoft Machine Learning 伺服器使用 SQL Server 2017 安裝程式，但您也會部署，並使用 Python 應用程式。
 
@@ -95,31 +91,30 @@ Visual Studio 也會有極佳的 Python 開發環境。 沒有任何簡單的方
 
 ### <a name="azure-machine-learning"></a>Azure Machine Learning
 
-當您在 Azure Machine Learning Studio 中建立您自己工作區時，您必須存取超過 400 種已預先載入的 R 封裝。 您也可以選擇當您建立的實驗使用 R 來部署 R 使用標準 CRAN R 散發，或 Microsoft R Open。 您甚至可以建立您自己的 R 封裝並上傳到 Azure，以執行做為自訂的模組。
-
-如需詳細資訊，請參閱下列資源：
-
-+ [透過 R 擴展您的經驗](https://docs.microsoft.com/azure/machine-learning/machine-learning-extend-your-experiment-with-r)
-+ [Azure Machine Learning 中撰寫自訂 R 模組](https://docs.microsoft.com/azure/machine-learning/machine-learning-custom-r-modules)
+當您在 Azure Machine Learning Studio 中建立您自己工作區時，即可存取超過 400 種已預先載入的 R 封裝。 您也可以選擇當您建立的實驗使用 R 來部署 R 使用標準 CRAN R 散發，或 Microsoft R Open。 您甚至可以建立您自己的 R 封裝並上傳到 Azure，以執行做為自訂的模組。
 
 許多 Azure ML 中提供的演算法現在會包含在 Microsoft 機器學習服務，做為 MicrosoftML 封裝的一部分。 如需詳細資訊，請參閱[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)。
 
 Azure Machine Learning 為資料科學家和開發人員建立、 定型和使用 Web 服務的模型部署至另一個方便的平台。 您可以將解決方案發佈至[Machine Learning Marketplace](http://datamarket.azure.com/browse/data?category=machine-learning)。
 
+如需有關在 Azure 機器學習服務中，令人興奮變更以支援專業人員的資料科學家，請參閱這些資源：
+
++ [什麼是 Azure Machine Learning？](https://docs.microsoft.com/azure/machine-learning/preview/overview-what-is-azure-ml)
++ [模型管理功能](https://docs.microsoft.com/azure/machine-learning/preview/model-management-overview)
+
 ### <a name="data-science-virtual-machines"></a>資料科學虛擬機器
 
 您可以在 Microsoft Azure 部署預先安裝或預先設定版本的 [!INCLUDE[rsql_platform](../../includes/rsql-platform-md.md)] ，以便更輕鬆開始使用資料探索，並且立即在雲端建立模型，而不需在內部部署設定已完整設定的系統。
 
-Azure Marketplace 包含數部支援資料科學的虛擬機器︰
+Azure Marketplace 中包含數個支援資料科學的虛擬機器。
 
-+ **Microsoft 資料科學虛擬機器** 設定使用 Microsoft R Server，以及 Python (Anaconda 發佈版本)、Jupyter 筆記本伺服器、Visual Studio Community 版、Power BI Desktop、Azure SDK 以及 SQL Server Express 版。
++ **Microsoft Data Science 虛擬機器**設有 Python （Anaconda 發佈）、 Jupyter 筆記本伺服器、 Visual Studio Community 版本、 Power BI Desktop、 Azure SDK，而且 SQL Server 機器學習，伺服器。
 
-+ **Microsoft R Server 2016 for Linux** 包含最新版的 R Server (9.0.1 版)。 不同 Vm 可供 CentOS 版本 7.2 和 Ubuntu 16.04 版本。
+    新[資料科學 VM 的 Windows Server 2016](http://aka.ms/dsvm/win2016)提供常用的深入學習架構，例如 CNTK GPU 版本。 預先安裝的工具包括 GPU NVIDIA 驅動程式、 CUDA Toolkit 8.0 和 GPU 工作負載的 NVIDIA cuDNN 程式庫。 在只是分鐘，您可以擁有完整的環境來建立可以在 CPU 或 CPU 和 GPU 執行的深入學習模型。
 
-+ **R 伺服器只有 SQL Server 2016 Enterprise**虛擬機器包含 R 伺服器 9.0.1 支援新的現代化軟體生命週期授權模型的獨立安裝程式。
++ R 伺服器或機器學習伺服器，我們建議 Microsoft 機器學習伺服器 2017年適用於 Linux 或 Windows 2016 伺服器。
 
-> [!TIP]
-> 新[資料科學 VM 的 Windows Server 2016](http://aka.ms/dsvm/win2016)提供常用的深入學習架構，例如 CNTK GPU 版本。 預先安裝的工具包括 GPU NVIDIA 驅動程式、 CUDA Toolkit 8.0 和 GPU 工作負載的 NVIDIA cuDNN 程式庫。 在只是分鐘，您可以擁有完整的環境來建立可以在 CPU 或 CPU 和 GPU 執行的深入學習模型。
++ 若要取得 SQL Server 機器學習的 Azure 映像，我們建議的虛擬機器供應項目包含任何**SQL Server 2017**。 當您選取的映像時，請遵循有關層和服務層級，以確保 VM 可支援機器學習工作負載的其他建議。
 
 ## <a name="next-steps"></a>後續的步驟
 
@@ -128,4 +123,3 @@ Azure Marketplace 包含數部支援資料科學的虛擬機器︰
 [機器學習 Server 入門](getting-started-with-microsoft-r-server-standalone.md)
 
 [安裝 SQL Server database engine](../../database-engine/install-windows/install-sql-server-database-engine.md)
-

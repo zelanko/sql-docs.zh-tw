@@ -8,25 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - attribute groups [Master Data Services]
 - attribute groups [Master Data Services], about attribute groups
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2a40acdb2ec04840eedec357b6dbc202be37ff0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 3762e429085613760b82709bd772313ed6ae667b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="attribute-groups-master-data-services"></a>屬性群組 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，屬性群組有助於組織實體中的屬性。 當實體包含多個屬性時，屬性群組可改善實體在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中顯示的方式。  
@@ -65,4 +63,3 @@ ms.lasthandoff: 09/07/2017
 -   [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   
-

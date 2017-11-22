@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- EventString element
+dev_langs: XML
+helpviewer_keywords: EventString element
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e76b650d9f7cf59d58cc32ff124c41091c64fbc2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85e5c89f87a0a6eda0173511f818e047fc0c51c9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
   在 XML 輸入檔中，直接指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作負載。  
@@ -58,14 +54,13 @@ ms.lasthandoff: 08/02/2017
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[Workload 元素 &#40; Dta& &#41;](../../tools/dta/workload-element-dta.md)|  
+|**父元素**|[Workload 元素 &#40;DTA&#41;](../../tools/dta/workload-element-dta.md)|  
 |**子元素**|無。|  
   
 ## <a name="example"></a>範例  
  此元素的使用方式範例，請參閱 [XML Input File Sample with Inline Workload &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md) (內嵌工作負載的 XML 輸入檔範例 (DTA))。  
   
-## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>請參閱＜  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

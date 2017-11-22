@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a66318e837094f3558cceba29755dff913f3cb3a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d5b8e44c007766354e5c03058d16a41cbb72ad0e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>適用於 JDBC 驅動程式的 JDBC 4.1 相容性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/27/2017
 |PreparedStatement.setObject() 和 PreparedStatement.setNull() 方法現在支援新的資料類型對應。|1.新的 Java JDBC 類型對應<br /><br /> (a) 從 java.math.BigInteger 到 JDBC BIGINT<br /><br /> (b) 從 java.util.Date 和 java.util.Calendar 到 JDBC TIMESTAMP<br /><br /> 2.新的資料類型轉換：<br /><br /> (a) 從 java.math.BigInteger 到 CHAR、VARCHAR、LONGVARCHAR 和 BIGINT<br /><br /> (b) 從 java.util.Date 和 java.util.Calendar 到 CHAR、VARCHAR、LONGVARCHAR、DATE、TIME 和 TIMESTAMP<br /><br /> 如需詳細資訊，請參閱 JDBC 4.1 規格。|  
   
   
-

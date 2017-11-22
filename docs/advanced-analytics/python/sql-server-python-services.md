@@ -1,27 +1,23 @@
 ---
-title: SQL Server R Services | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 06/22/2017
-ms.prod: sql-server-2016
+title: "機器學習服務使用 Python |Microsoft 文件"
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: af81754d0e6b87546432ea864098da4615522670
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 140885b86f0f6fa1a56119246c859f143f596726
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="machine-learning-services-with-python"></a>使用 Python 的機器學習服務
 
@@ -33,11 +29,11 @@ Python 是機器的一種語言，提供了相當大的彈性而且各種不同�
 
 您可以安裝您要開始使用 Python 透過 SQL Server 2017 安裝程式的所有項目：
 
-+ **機器學習服務 （資料庫）：**安裝這項功能，以及 SQL Server database engine，安全地執行 R 指令碼，以便[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]電腦。
++ **機器學習服務 （資料庫）：**安裝這項功能，以及 SQL Server 資料庫引擎，以啟用安全執行 Python 指令碼上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]電腦。
   
      當您選取這項功能，擴充功能會安裝在資料庫引擎可支援執行 Python 指令碼，並建立新的服務時，[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]來管理 Python 執行階段之間的通訊和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。
 
-+ **機器學習伺服器 （獨立）：**如果您不需要 SQL Server 整合，安裝 Microsoft R Server 中取得的 Python 支援這項功能。 這可讓您實施 Python 解決方案使用**mrsdeploy**。
++ **機器學習伺服器 （獨立）：**如果您不需要 SQL Server 整合，安裝才能取得分散式的機器學習的 Python 和 R 支援這項功能。 您也可以部署為 web 服務 Python 方案，使用**mrsdeploy**。
   
      請勿執行 SQL Server 機器學習服務在相同電腦上安裝此功能。
 
@@ -47,4 +43,3 @@ Python 是機器的一種語言，提供了相當大的彈性而且各種不同�
 [設定 Python 機器學習服務資料庫](setup-python-machine-learning-services.md)
 
 [Python 教學課程](../tutorials/sql-server-python-tutorials.md)
-

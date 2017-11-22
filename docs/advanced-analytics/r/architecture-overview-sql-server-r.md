@@ -5,22 +5,20 @@ ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2fb02e5c71ae74afb4dd48e6a02e36a1c7dce9b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 346dd5d2153a9a318e7bc68d73283278b3a13512
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>SQL Server 中 R 的架構概觀
 
@@ -58,9 +56,8 @@ SQL Server 會攔截所有的工作要求、 工作和使用 Windows 工作物�
 
 ## <a name="next-steps"></a>後續的步驟
 
-[支援的 R 整合的元件](new-components-in-sql-server-to-support-r.md)
+[支援 R 整合的元件](new-components-in-sql-server-to-support-r.md)
 
 [R 互通性](r-interoperability-in-sql-server.md)
 
 [安全性概觀](security-overview-sql-server-r.md)
-

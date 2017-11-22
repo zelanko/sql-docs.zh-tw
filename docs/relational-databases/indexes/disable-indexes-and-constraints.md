@@ -8,12 +8,10 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.disableindexes.f1
+f1_keywords: sql13.swb.disableindexes.f1
 helpviewer_keywords:
 - disabled indexes [SQL Server], index operations
 - nonclustered indexes [SQL Server], disabling
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - index disabling [SQL Server]
 - indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02ec61b5f3342ba8c5abd6e5044cd9f6863f6145
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f32d91eea1ea94b345691aa136645d88effa25ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="disable-indexes-and-constraints"></a>停用索引和條件約束
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,4 +204,3 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
   
-

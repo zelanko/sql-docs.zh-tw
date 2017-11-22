@@ -2,9 +2,12 @@
 title: "針對擴充事件使用 PowerShell 提供者 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -20,14 +23,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9ab01ceaa7208e742d2833a2c368df334f7578fe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 16073b8a0827364a823cf6ca9a9b150083e2abf2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>針對擴充事件使用 PowerShell 提供者
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件。 XEvent 子資料夾位於 SQLSERVER 磁碟機底下。 您可以使用下列其中一種方法來存取這個資料夾：  
   

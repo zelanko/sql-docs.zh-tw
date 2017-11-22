@@ -8,8 +8,7 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 38835ec5dd79b28f009c4471f5723ea3e2cae7a3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 903701b43e16fb36637d778dd468b553fd9357e0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>資料夾和檔案的權限 (Master Data Services)
   當您安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]時，資料夾和檔案會安裝在檔案系統中針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共用功能所指定的安裝路徑。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共用功能的預設安裝路徑， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的安裝路徑為 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services。 雖然您可以變更共用功能的安裝路徑，但請注意繼承自父資料夾的權限以及為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]明確設定的權限。  
@@ -73,4 +71,3 @@ ms.lasthandoff: 09/07/2017
  [安裝 Master Data Services](../master-data-services/install-windows/install-master-data-services.md)  
   
   
-

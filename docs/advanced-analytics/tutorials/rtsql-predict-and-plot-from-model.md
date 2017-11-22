@@ -5,25 +5,23 @@ ms.date: 08/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 - SQL
 ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0200ade3d3968357841f70ebcb27979fbdb9089a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a84e702b364da8614dd21b8f6adb57e4f2bac487
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>預測及繪圖從模型 (SQL 快速入門中的 R)
 
@@ -184,4 +182,3 @@ R 與 SQL Server 的整合，讓您能夠更輕鬆地大規模部署 R 方案，
 + [開始使用 MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
     深入了解快速且可擴充的機器學習來自 Microsoft 研究的演算法。
-

@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STEquals_TSQL
 - STEquals (geography Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STEquals method
+dev_langs: TSQL
+helpviewer_keywords: STEquals method
 ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bb603148358b44a60d51afedabaff3e78752c3f5
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cf506f0aa69fe5d50845276a170d6658612d433
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stequals-geography-data-type"></a>STEquals (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -67,8 +63,7 @@ SET @h = geography::STGeomFromText('POLYGON((-122.368 47.658, -122.338 47.649, -
 SELECT @g.STEquals(@h);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Geography 執行個體上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+## <a name="see-also"></a>請參閱＜  
+ [地理例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

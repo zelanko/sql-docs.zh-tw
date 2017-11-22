@@ -8,26 +8,22 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.agdashboard.drp1notsuspended.issues.f1
-helpviewer_keywords:
-- Availability Groups [SQL Server], policies
+f1_keywords: sql13.swb.agdashboard.drp1notsuspended.issues.f1
+helpviewer_keywords: Availability Groups [SQL Server], policies
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2dd38283eb4d6c4af9a3b984e31092dbaae84cb9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3f2040ca390a66809806e7e5123c24272c4470e2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-database-is-suspended"></a>可用性資料庫已暫停
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,4 +58,3 @@ ms.lasthandoff: 08/02/2017
  [使用 Always On 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
-

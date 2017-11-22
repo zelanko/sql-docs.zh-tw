@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,17 +26,16 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/11/2017
-
+ms.openlocfilehash: 1b132be5de44e4bb669ce0c1aa014b89aec07a63
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師是可以用於建立及維護 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的圖形工具。 [!INCLUDE[ssIS](../includes/ssis-md.md)][!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的設計師是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的一部分。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 10/11/2017
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含用來在封裝中加入功能的其他對話方塊和視窗， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 則提供用於設定開發環境及使用封裝的視窗和對話方塊。 如需詳細資訊，請參閱 [Integration Services User Interface](../integration-services/integration-services-user-interface.md)(Integration Services 使用者介面)。  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師不具有對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務 (管理和監視封裝的服務) 的相依性，且不需要執行該服務即可在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中建立或修改封裝。 不過，如果在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師處於開啟狀態時停止該服務，則將無法再開啟 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師所提供的對話方塊，同時您可能會接收到「RPC 伺服器無法使用」這樣的錯誤訊息。 若要重設 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師並繼續使用封裝，必須關閉設計師，結束 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後重新開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案和封裝。  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師不具有對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務 (管理和監視封裝的服務) 的相依性，且不需要執行該服務即可在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中建立或修改封裝。 不過，如果在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師處於開啟狀態時停止該服務，則將無法再開啟 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師所提供的對話方塊，同時您可能會接收到「RPC 伺服器無法使用」這樣的錯誤訊息。 若要重設 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師並繼續使用封裝，必須關閉設計師，結束 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後重新開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]( [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案) 和封裝。  
   
 ## <a name="undo-and-redo"></a>復原和取消復原  
  您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中復原和取消復原最多可達 20 個動作。 針對封裝，[控制流程]、[資料流程]、[事件處理常式] 及 [參數] 索引標籤，以及 [變數] 視窗中可以進行復原/取消復原。 針對專案，則可以在 [專案參數] 視窗中進行復原/取消復原。  
@@ -196,4 +194,3 @@ ms.lasthandoff: 10/11/2017
  [Integration Services User Interface](../integration-services/integration-services-user-interface.md)  
   
   
-

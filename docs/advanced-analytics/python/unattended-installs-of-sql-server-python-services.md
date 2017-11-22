@@ -5,22 +5,20 @@ ms.date: 07/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6d7cba7c74eaef9e627b75972d3b6dd34ee5a6f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>自動的安裝的 Python 機器學習服務 （資料庫）
 
@@ -74,4 +72,3 @@ ms.lasthandoff: 09/01/2017
 3.  重新啟動 SQL Server 服務重新設定的執行個體。 這樣會自動重新啟動相關[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]以及服務。
 
 3. 如果您有自訂安全性設定，或您將使用 SQL Server 支援遠端計算內容，則可能需要額外的步驟。 如需詳細資訊，請參閱[疑難排解機器學習安裝](../machine-learning-troubleshooting-faq.md)。
-

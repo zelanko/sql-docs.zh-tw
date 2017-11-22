@@ -8,8 +8,7 @@ ms.service:
 ms.component: database-engine
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 215
+caps.latest.revision: "215"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ea0efb1cf326d03a2b45ff6a6f2566c93afc500b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0dff466c24cebd9c4045b6cf99530cf5eec8d7d4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中已被取代的 Database Engine 功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |資料庫物件|從觸發程序傳回結果集的能力|無|從觸發程序傳回結果|12|  
 |加密|使用 RC4 或 RC4_128 的加密已被取代，並預計在下一版移除。 解密 RC4 和 RC4_128 的功能未被取代。|請使用其他加密演算法，例如 AES。|已被取代的加密演算法|253|  
 |遠端伺服器|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|使用連結的伺服器取代遠端伺服器。 sp_addserver 只能搭配本機選項使用。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|遠端伺服器|@@remserver |使用連結的伺服器取代遠端伺服器。|無|無|  
+|遠端伺服器|@@remserver|使用連結的伺服器取代遠端伺服器。|無|無|  
 |遠端伺服器|SET REMOTE_PROC_TRANSACTIONS|使用連結的伺服器取代遠端伺服器。|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Set 選項|用於**SET ROWCOUNT** 、 **INSERT**, **UPDATE**陳述式的 **DELETE** |TOP 關鍵字|SET ROWCOUNT|109|  
 |資料表提示|沒有括號的 HOLDLOCK 資料表提示。|請使用有括號的 HOLDLOCK。|沒有括號的 HOLDLOCK 資料表提示。|167|  
@@ -159,7 +157,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|當做 DML 陳述式中之資料行名稱的 ROWGUIDCOL。|使用 $rowguid。|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|當做 DML 陳述式中之資料行名稱的 IDENTITYCOL。|使用 $identity。|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|使用 # 和 ## 當做暫存資料表和暫存預存程序名稱。|請至少使用一個其他字元。|做為暫存資料表和預存程序名稱的 '#' 和 '##'。|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|使用 @、@@ 或 @@ 當做 [!INCLUDE[tsql](../includes/tsql-md.md)] 識別碼。|請勿使用 @ 或 @@ 或是以 @@ 當做識別碼開頭的名稱。|' @ ' 以及以 ' @@ ' 當做 [!INCLUDE[tsql](../includes/tsql-md.md)] 識別碼開頭的名稱|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|使用 @、@@ 或 @@ 當做 [!INCLUDE[tsql](../includes/tsql-md.md)] 識別碼。|請勿使用 @ 或 @@ 或是以 @@ 當做識別碼開頭的名稱。|'@' 以及以 '@@' 當做 [!INCLUDE[tsql](../includes/tsql-md.md)] 識別碼開頭的名稱|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|使用 DEFAULT 關鍵字當做預設值。|請勿使用 DEFAULT 字當做預設值。|當做預設值的 DEFAULT 關鍵字|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|使用空格當做資料表提示之間的分隔符號。|使用逗號來分隔資料表提示。|沒有逗號的多個資料表提示|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|在 90 相容性模式中，彙總索引檢視表的 SELECT 清單必須包含 COUNT_BIG (*)。|請使用 COUNT_BIG (*)。|沒有 COUNT_BIG(*) 的索引檢視表 SELECT 清單|2|  
@@ -178,5 +176,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [SQL Server 2016 中已停止的 Database Engine 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
-
 

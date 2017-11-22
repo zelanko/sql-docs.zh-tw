@@ -5,30 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e749491aea64728e8e58aa4bb041e28a3cbc20fd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bd746a4a3eeb4876ad061aed817f03c01d45506e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-sybasetosql"></a>使用者介面參考 (SybaseToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) 的 Sybase。  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|Description|  
 |---------|---------------|  
@@ -54,8 +52,7 @@ ms.lasthandoff: 08/02/2017
 |[專案設定 &#40;型別對應 &#41;&#40;SybaseToSQL &#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)|使用的型別對應頁面**專案設定**對話方塊來指定所有資料庫和資料庫物件的預設型別對應的 SSMA for Sybase 專案中。|  
 |[儲存中繼資料 &#40;SybaseToSQL &#41;](../../ssma/sybase/save-metadata-sybasetosql.md)|**儲存中繼資料**儲存遺失中繼資料的專案時，對話方塊隨即出現。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [開始使用 SSMA for Sybase &#40;SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
 [Sybase ASE 將資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

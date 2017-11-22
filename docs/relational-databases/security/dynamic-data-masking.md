@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: bcd7c5ce901bf1083aa48ee2e1236226b13ce5ae
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 6ea14b40f988028a714323bc4e35fcd7a357e27c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dynamic-data-masking"></a>動態資料遮罩
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,4 +205,3 @@ ALTER COLUMN LastName DROP MASKED;
  [開始使用 SQL 資料庫動態資料遮罩 (Azure Preview 入口網站)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 32926b4251dbe8d01c1e0b4835b09ca141ff80da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: bb35a5255b35b93cd42e83bd17d9efdcf751bc84
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>使用記憶體內部 OLTP 最佳化 JSON 處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -170,5 +168,4 @@ END
 ```
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解 SQL Server 中的內建 JSON 支援  
-針對特定的解決方案，大量使用案例和建議，請參閱[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)Microsoft 經理專案 jovan popovic 的 Azure SQL Database 和 SQL Server 中。
-
+如需更多特定的解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。

@@ -8,8 +8,7 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 404e929c7fd184162df6d68d2dceb0dceb532ff6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70426dcb9e6ca23d3e8de717fe7b9430155c7243
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查詢運算式和統一的資源名稱
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件 (SMO) 模型和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元會使用與 XPath 運算式類似的兩種運算式字串類型。 查詢運算式是字串，其中指定一組用來列舉物件模型階層中之一個或多個物件的準則。 統一資源名稱 (URN) 是可唯一識別單一物件的特定查詢運算式字串類型。  
@@ -173,4 +171,3 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
  [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
-

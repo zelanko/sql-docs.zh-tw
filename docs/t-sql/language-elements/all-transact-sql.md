@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -18,23 +17,21 @@ applies_to:
 f1_keywords:
 - ALL_TSQL
 - ALL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b6ea6be0d745ca5ce61a540e9a1e299671d8c7fd
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1fd1b250a30b83a3b014384aafee6c40ff4f1a5a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,7 +113,7 @@ EXECUTE DaysToBuild 49080, 1 ;
   
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [案例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
@@ -127,4 +124,3 @@ EXECUTE DaysToBuild 49080, 1 ;
  [在 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- _Stream::Position
-helpviewer_keywords:
-- Position property [ADO]
+f1_keywords: _Stream::Position
+helpviewer_keywords: Position property [ADO]
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34f95df4ee5e4ab4ac5c4ce3934ceabe4dacc64f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 76a3d94b97fa32e372cd6cc67367450d2f62530b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="position-property-ado"></a>Position 屬性 (ADO)
 指出目前的位置內[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
@@ -49,8 +45,7 @@ ms.lasthandoff: 09/09/2017
 >  針對唯讀**資料流**物件，ADO 會傳回錯誤，如果**位置**設定的值大於**大小**的**資料流**。 這不會變更大小**資料流**，或改變**資料流**以任何方式的內容。 不過，執行此動作應避免，因為它會產生無意義**位置**值。  
   
 ## <a name="applies-to"></a>適用於  
- [資料流物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
- [字元集屬性 (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Charset 屬性 (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)

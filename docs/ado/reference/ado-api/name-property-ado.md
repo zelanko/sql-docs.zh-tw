@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Parameter::Name
 - Field20::Name
-helpviewer_keywords:
-- Name property [ADO]
+helpviewer_keywords: Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 03bf1761c5544323a5239eac03dba4c731f22e15
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c2bf66589dc841e7f543b166b432f39a0869b3f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="name-property-ado"></a>Name 屬性 (ADO)
 表示物件的名稱。  
@@ -52,10 +49,9 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Field 物件](../../../ado/reference/ado-api/field-object.md)|  
-|[參數物件](../../../ado/reference/ado-api/parameter-object.md)|[屬性物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Field 物件](../../../ado/reference/ado-api/field-object.md)|  
+|[Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)|[Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性和名稱屬性範例 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [屬性和名稱屬性的範例 （VC + +）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
-

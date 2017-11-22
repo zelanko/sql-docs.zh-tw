@@ -8,25 +8,23 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - index design guide
 - guide, index design
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b56ebb9f804f575c6f1f83cb4e9e192bd4f10e15
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 3f01a5120c0787afad67a3da51a6305bf54558dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 索引設計指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -597,5 +595,4 @@ WHERE b = CONVERT(Varbinary(4), 1);
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
-
 

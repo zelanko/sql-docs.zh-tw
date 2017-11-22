@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ddc87dfeed3317ecd21bd96497e95be06658ab65
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 665a5978f516520c397bdbfe01be84ab93df028c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="member-revision-history-master-data-services"></a>成員修訂歷程記錄 (Master Data Services)
   如果實體交易記錄類型是成員，則每次成員有所變更時，系統都會記錄成員修訂歷程記錄。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 09/07/2017
   
 5.  按一下資料行標頭可排序資料。  
   
-6.  如果您有更新的權限，按一下 [Revert Member]  \(還原成員) 即可回復到選取的版本。  
+6.  如果您有更新的權限，按一下 [Revert Member]  (還原成員) 即可回復到選取的版本。  
   
 ## <a name="view-and-manage-revision-history-by-member"></a>依成員檢視及管理修訂歷程記錄  
  如果您擁有成員的讀取權限，即可在 Explorer 功能區域中，檢視實體中成員的修訂。 如果您有更新的權限，即可將成員復原回先前的修訂版本或加入修訂註解。  
@@ -67,7 +65,7 @@ ms.lasthandoff: 09/07/2017
 4.  按一下右窗格中的 [檢視歷程記錄]  。  
   
 ## <a name="log-retention-setting"></a>記錄保留設定  
- 您可以設定 **資料庫系統設定中的 [Log retention in Days]**[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] (記錄保留天數) 屬性，以及在建立或編輯模型時設定 [Log Retention Days]  \(記錄保留天數)，以設定歷程記錄資料保留的時間長度。  
+ 您可以設定 **資料庫系統設定中的 [Log retention in Days]**[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] (記錄保留天數) 屬性，以及在建立或編輯模型時設定 [Log Retention Days]  (記錄保留天數)，以設定歷程記錄資料保留的時間長度。  
   
 ## <a name="related-task"></a>相關工作  
   
@@ -80,4 +78,3 @@ ms.lasthandoff: 09/07/2017
  [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   
   
-

@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 19e0a4e308d0ac4414bdab9c03389947d9dde28b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 20c2dcbf26307c99830909447eb23679ffd3ac96
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-tester-oracletosql"></a>全域設定 （測試人員） (OracleToSQL)
 使用的測試人員頁面**通用設定**對話方塊來指定設定 SSMA 軟體測試人員。  
@@ -68,7 +66,6 @@ ms.lasthandoff: 08/02/2017
   
 2.  否  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [完成測試案例準備 &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-

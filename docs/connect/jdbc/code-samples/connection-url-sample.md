@@ -8,21 +8,19 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 96fabc42-59d1-4cc0-93c5-db00cbe55e95
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: faf1226122383aeae01bf70d5fb6792ffc3b3969
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bbb062925c0c0ee1c14c0f2190101c8967d0c65
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connection-url-sample"></a>連接 URL 範例
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -91,8 +89,7 @@ public class connectURL {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [連接及擷取資料](../../../connect/jdbc/connecting-and-retrieving-data.md)  
   
   
-

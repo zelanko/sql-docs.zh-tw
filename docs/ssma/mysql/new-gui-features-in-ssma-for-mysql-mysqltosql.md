@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8fbb87c5be27ba3778b061f63c2cb9409c9e4615
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ac62e3e7a77ad3e4941f8a8da143eba8e0b253fd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL (MySQLToSQL) 中的新 GUI 功能
 本章節描述 SSMA 使用者介面的新功能  
@@ -132,4 +130,3 @@ GUI 物件記錄可讓您下列好處導覽物件時：
 ### <a name="advanced-search"></a>進階搜尋  
 若要開啟進階搜尋] 對話方塊的 [編輯] 功能表點尋找，然後按一下 [進階搜尋。 在對話方塊中您可以尋找使用模式的任何物件。 您可以選擇在對話方塊頂端搜尋區域和物件的類別。  
   
-

@@ -3,10 +3,12 @@ title: "DBCC DBREINDEX (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,28 +16,26 @@ f1_keywords:
 - DBREINDEX_TSQL
 - DBREINDEX
 - DBCC_DBREINDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - index rebuilding [SQL Server]
 - rebuilding indexes
 - dynamic index rebuilding [SQL Server]
 - DBCC DBREINDEX statement
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ec9cbe9b5b8d7757c63b5dcca3b9011245ec0fd3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 16f1fb5a028efe879c1059f079b3d611b26616e4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]重建指定的資料庫中資料表的一個或多個索引。
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]重建指定的資料庫中資料表的一個或多個索引。
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]使用[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)改為。  
@@ -116,7 +116,7 @@ DBCC DBREINDEX ('HumanResources.Employee', ' ', 70);
 GO  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
@@ -125,5 +125,4 @@ GO
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
-
 

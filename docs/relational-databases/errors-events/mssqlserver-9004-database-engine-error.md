@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 9004 (Database Engine error)
+helpviewer_keywords: 9004 (Database Engine error)
 ms.assetid: b528bb49-340c-4a81-9c8d-cefce6562f16
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6d2d5cefa8aa83b92f589d939f1c7c53b23b3f1f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b768a61049580db483ba51a725c585d74638d416
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver9004"></a>MSSQLSERVER_9004
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,4 +50,3 @@ ms.lasthandoff: 06/22/2017
   
 此外，請檢查系統事件和錯誤記錄檔，以找出可能造成問題的系統內部問題。  
   
-

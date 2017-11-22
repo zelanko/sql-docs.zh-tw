@@ -2,9 +2,12 @@
 title: "SQL Server 擴充的事件套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -19,14 +22,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe31b927961dc8b8eca065066bf0323ec2cf0157
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f7c63ec7ac4a85c43606941f61990eb8cc19c9c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 擴充的事件封裝
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   封裝是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件物件的容器。 有三種擴充事件封裝，包括以下項目：  
   

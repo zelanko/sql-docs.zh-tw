@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - pipes [SQL Server], listening on pipes
 - Named Pipes [SQL Server], listening on pipes
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a2540a9078fe729f6f4715ea24215223467d7031
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5e2f9b67c74a5eea97209bb812ee2e385c9c41a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="named-pipes-properties"></a>具名管道屬性
   使用具名管道通訊協定時，可使用 [具名管道內容] 對話方塊上的 [通訊協定] 頁面，來檢視或變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接聽的具名管道。  
@@ -47,10 +45,9 @@ ms.lasthandoff: 09/28/2017
   
  輸入 **\\\\.\pipe\acct** 以接聽 **acct** 管道。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [選擇網路通訊協定](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
  [使用具名管道建立有效的連接字串](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   
-

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f8aeaaf23c409135fa677f9d942d1a62baeb8858
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ae6cf2c4ed63515930098546c02c429ab253cbe4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-logging-db2tosql"></a>全域設定 （記錄） (DB2ToSQL)
 使用**通用設定**對話方塊來指定 SSMA 的記錄設定。 一般而言，您需要在使用產品支援時，才變更這些設定。  
@@ -68,4 +66,3 @@ ms.lasthandoff: 08/02/2017
 **記錄檔的總數**  
 當一個記錄檔填滿時，SSMA 會重新命名記錄檔，並啟動新。 使用此設定，指定要保留的記錄檔的數目上限。 最小值為 2。  
   
-

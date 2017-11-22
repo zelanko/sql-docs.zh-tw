@@ -5,8 +5,7 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,23 +13,21 @@ f1_keywords:
 - CREATE SET
 - CREATE_SET
 - CREATE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - named sets [MDX]
 - CREATE SET statement
 ms.assetid: eff51eeb-5e7e-4706-b861-c57b6f3f89f0
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6684e5b5d8edd630e623e5210d977c70903b01c5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 12462e2b5a81c34e53332fa9749d698fecca36a8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 資料定義-建立設定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +71,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
   
  指定目前連接之 Cube 以外的 Cube 會導致發生錯誤。 因此，您應該使用 CURRENTCUBE 取代 Cube 名稱，來代表目前的 Cube。  
   
-## <a name="scope"></a>범위  
+## <a name="scope"></a>範圍。  
  使用者自訂集合可發生在下表列出的其中一個範圍內。  
   
  查詢範圍  
@@ -116,9 +113,8 @@ SELECT [Core Products] ON 0
 |CAPTION|用戶端應用程式當做集合標題使用的字串。|  
 |DISPLAY_FOLDER|識別用戶端應用程式用於顯示集合之顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 工具和用戶端所提供的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜線 (\\) 為層級分隔符號。 若要針對已定義的集合提供多個顯示資料夾，請使用分號 (;) 來分隔資料夾。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DROP SET 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-set.md)   
  [MDX 資料定義陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

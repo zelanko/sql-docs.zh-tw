@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 284a672a725e5627d0b9be61c12f0c95d565ae09
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f24280f155fd5ec6bd86b8486b0f8f77338d8eb6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、 CALC 函式和 NEW 關鍵字
 資料成形支援下列函數。 要處理指派章節包含的資料行的名稱是*章別名*。  
@@ -75,13 +73,12 @@ ms.lasthandoff: 09/09/2017
 |DBTYPE_DBTIME|adDBTime|  
 |DBTYPE_DBTIMESTAMP|adDBTimeStamp|  
 |DBTYPE_VARNUMERIC|adVarNumeric|  
-|DBTYPE_FILETIME|adFileTime|  
+|DBTYPE_FILETIME|AdFileTime|  
 |DBTYPE_ERROR|adError|  
   
  當新欄位的型別 decimal （OLE db DBTYPE_DECIMAL，或在 ADO 中，adDecimal） 時，您必須指定有效位數和小數位數的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
  [型式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [在一般的圖形命令](../../../ado/guide/data/shape-commands-in-general.md)
-
+ [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

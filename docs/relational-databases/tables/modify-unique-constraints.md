@@ -8,8 +8,7 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - constraints [SQL Server], modifying
 - constraints [SQL Server], unique
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2eb829d6362e39096134906442d6c4c0adf44f2a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 743c959030ad1dcb029c5e739324d5f429b0d485
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modify-unique-constraints"></a>修改唯一的條件約束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -80,4 +78,3 @@ ms.lasthandoff: 06/22/2017
  若要使用 Transact-SQL 來修改 UNIQUE 條件約束，您必須先刪除現有的 UNIQUE 條件約束，然後使用新的定義來重新建立。 如需相關資訊，請參閱 [Delete Unique Constraints](../../relational-databases/tables/delete-unique-constraints.md) 及 [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)。  
   
 ###  <a name="TsqlExample"></a>  
-

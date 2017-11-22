@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 845 (Database Engine error)
+helpviewer_keywords: 845 (Database Engine error)
 ms.assetid: 8fff6ad4-234c-44be-b123-e25d5e1cd63e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af69d51ddee516b52eeb5f30585ea87228023d1f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d9615f970ef6a58e461c9fc35d1bd5cc325f2d37
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver845"></a>MSSQLSERVER_845
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,4 +54,3 @@ ms.lasthandoff: 06/22/2017
   
 如果持續發生錯誤，請連絡 Microsoft 客戶服務及支援中心。  
   
-

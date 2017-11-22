@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b3753748a9e76d24dc968983fa358b5d0050f41
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概觀
 ADO 或 RDS 程式設計人員，理想的世界中就是每個資料來源會公開 OLE DB 介面，可讓 ADO 無法呼叫直接將資料來源。 雖然越來越多個資料庫廠商實作的 OLE DB 介面，但某些資料來源不是尚未公開這種方式。 不過，現今使用的大部分 DBMS 系統可以透過 ODBC 存取。
@@ -438,6 +436,5 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  如需有關特定實作和有關 Microsoft OLE DB Provider for ODBC 的功能資訊的詳細資訊，請參閱[OLE DB 程式設計人員參考](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)或瀏覽 MSDN 上的 「 資料存取及儲存開發人員中心網站。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
  [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [CommandText 屬性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [ConnectionString 屬性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [執行方法 （ADO 命令中）](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open 方法 （ADO 資料錄集）](../../../ado/reference/ado-api/open-method-ado-recordset.md) [參數集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [提供者屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [支援方法](../../../ado/reference/ado-api/supports-method.md)
-

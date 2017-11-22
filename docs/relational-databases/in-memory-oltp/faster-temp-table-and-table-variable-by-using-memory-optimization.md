@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 72f4daeb47e7c023e14cdd5a87a51e5dcbee2436
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
-ms.openlocfilehash: 2c44f6288c4e58caa45748e6e832465f43145b83
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/19/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>使用記憶體最佳化加快暫存資料表與資料表變數的速度
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -438,4 +436,3 @@ ms.lasthandoff: 10/19/2017
 - [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [為記憶體最佳化的物件定義持久性](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
-

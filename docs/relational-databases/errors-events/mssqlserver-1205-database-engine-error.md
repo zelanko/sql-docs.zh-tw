@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 1205 (Database Engine error)
+helpviewer_keywords: 1205 (Database Engine error)
 ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: afbc0f15e52f470d88514a4e3cf865447a4a64fd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7c9351a3040a2e4f362b00d647a72989a8877973
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver1205"></a>MSSQLSERVER_1205
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,4 +56,3 @@ ms.lasthandoff: 06/22/2017
   
 若要防止或避免發生死結，請考慮讓所有的交易都以相同的順序來存取資料列 (先存取 **Table1**，然後存取 **Table2**)；如此，雖然可能會發生封鎖，但是不會發生死結。  
   
-

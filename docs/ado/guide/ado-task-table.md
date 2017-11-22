@@ -15,17 +15,16 @@ helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 23ba1090608287b5ce397a160cc103c0b06f8932
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f6c8bb37a6fcf52d6fbdcaba02e21cd7013ae18
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-programming-task-table"></a>ADO 程式設計工作表
 下表列出中所包含的程式設計工作*ADO 程式設計人員指南*並提供每個工作的參考。 這些參考可以是文字內容或程式碼範例，您可以在其中找到 ADO 功能之工作的相關資訊。
@@ -39,8 +38,8 @@ ms.lasthandoff: 09/09/2017
 |移至特定的記錄|[瀏覽資料](../../ado/guide/data/navigating-through-data.md)|
 |存取資料行值|[Fields 集合](../../ado/guide/data/the-fields-collection.md)|
 |搜尋資料|[使用資料錄集](../../ado/guide/data/working-with-recordsets.md)|
-|修改資料與變更值|[編輯現有的資料錄](../../ado/guide/data/editing-existing-records.md)|
-|加入新資料|[加入資料錄](../../ado/guide/data/adding-records.md)|
+|修改資料與變更值|[編輯現有的記錄](../../ado/guide/data/editing-existing-records.md)|
+|加入新資料|[新增記錄](../../ado/guide/data/adding-records.md)|
 |刪除或移除資料|[使用 Delete 方法刪除記錄](../../ado/guide/data/deleting-records-using-the-delete-method.md)|
 |將變更公佈到資料來源|[更新資料](../../ado/guide/data/updating-data.md)|
 |開始、 認可，並回復交易|[交易處理](../../ado/guide/data/transaction-processing.md)|
@@ -52,6 +51,5 @@ ms.lasthandoff: 09/09/2017
 |傳回相關的記錄**資料錄集**|[用來形成摘要資料](../../ado/guide/data/data-shaping-overview.md)|
 |存取半結構化的資料|[記錄和資料流](../../ado/guide/data/records-and-streams.md)|
 |使用 XML 的查詢或命令輸入|[命令資料流](../../ado/guide/data/command-streams.md)|
-|從提供者傳回的 XML 資料|[擷取結果集資料流](../../ado/guide/data/retrieving-resultsets-into-streams.md)|
-|發行至 IIS|[使用 ADO 的網際網路發行](../../ado/guide/data/using-ado-for-internet-publishing.md)|
-
+|從提供者傳回的 XML 資料|[將結果集擷取為資料流](../../ado/guide/data/retrieving-resultsets-into-streams.md)|
+|發行至 IIS|[使用 ADO 進行網際網路發佈](../../ado/guide/data/using-ado-for-internet-publishing.md)|

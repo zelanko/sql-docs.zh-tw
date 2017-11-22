@@ -2,9 +2,12 @@
 title: "針對全文檢索索引進行疑難排解 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,13 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4bfb66adb0537edcb173e4b741db058369b0003
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6e273a9963b26f5c6361cf459bba54010ad58d56
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshoot-full-text-indexing"></a>疑難排解全文檢索索引
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
      
 ##  <a name="failure"></a> 疑難排解全文檢索索引失敗  
  擴展或維護全文檢索索引時，全文檢索索引子可能會因為下面所描述的原因而無法對一個或多個資料列進行檢索。 這些資料列層級錯誤不會讓母體擴展無法完成。 索引子會略過這些資料列，而這表示您無法查詢這些資料列中所含的內容。  

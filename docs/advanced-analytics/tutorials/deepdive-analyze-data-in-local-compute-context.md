@@ -5,26 +5,22 @@ ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 787bb526-4a13-40fa-9343-75d3bf5ba6a2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 514cc855af010347006054ad30fc5e5c36b16322
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1efbf5b6d3835759ccce74c820ea2829e6fa41dc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="analyze-data-in-local-compute-context-data-science-deep-dive"></a>分析本機計算內容 （資料科學深入探討） 中的資料
 
@@ -68,6 +64,5 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-step"></a>上一個步驟
 
 [執行區塊使用 rxDataStep 分析](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
-
 
 

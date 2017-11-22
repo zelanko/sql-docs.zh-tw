@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STAsText_TSQL
 - STAsText (geometry Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STAsText (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STAsText (geometry Data Type)
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: aac75544ff6e47c5cdabde89e3b051ef6cd26811
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 127e64908ad9cb768d31e3c1ec42988962289246
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stastext-geometry-data-type"></a>STAsText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,9 +54,8 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

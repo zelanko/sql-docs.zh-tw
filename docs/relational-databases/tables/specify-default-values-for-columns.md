@@ -8,25 +8,23 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - columns [SQL Server], defaults
 - default values
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 956e23e61cb97d5d1adecf4a06f40f734da42948
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0fcb6518d5655e86182203d2789b1e87c4c8ea81
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-default-values-for-columns"></a>指定資料行的預設值
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -108,4 +106,3 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。  
   
 ###  <a name="TsqlExample"></a>  
-

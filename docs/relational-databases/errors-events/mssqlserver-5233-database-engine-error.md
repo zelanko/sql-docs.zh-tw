@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 5233 (Database Engine error)
+helpviewer_keywords: 5233 (Database Engine error)
 ms.assetid: 7a855afa-2d3b-49b7-adef-197b99fc98b1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d0f4dfb13941ed8966d2c22c47b3935ed6377b9d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3e55f81a3f83eee098f0cc2e05ae6fbb3b722a6b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver5233"></a>MSSQLSERVER_5233
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,4 +54,3 @@ ms.lasthandoff: 06/22/2017
 ### <a name="run-dbcc-checkdb"></a>執行 DBCC CHECKDB  
 不適用。 此錯誤無法修復。 如果無法從備份還原資料庫，請連絡 Microsoft 客戶服務及支援中心 (CSS)。  
   
-

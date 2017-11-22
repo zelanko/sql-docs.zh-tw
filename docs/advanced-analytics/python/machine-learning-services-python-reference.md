@@ -5,20 +5,18 @@ ms.date: 04/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 136e4b1c7a7f82b416c8e4b6bfceda3e399ddd36
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9c1d945831fc77bd003ac17e94d4969164bbe04d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="python"></a>Python
 
@@ -36,6 +34,5 @@ ms.lasthandoff: 09/01/2017
 + [從 T-SQL 執行 Python](../tutorials/run-python-using-t-sql.md)
 + [發佈和取用 Python 模型](publish-consume-python-code.md)
 + [若要建立的模型使用 revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md)
-
 
 

@@ -8,25 +8,23 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, indexing JSON data
 - indexing JSON data
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5d89fd1ad109ab0017b49dd9993aa3cafec85d15
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 2d618b486f61f2e25a221517eb0efdaed70f582d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="index-json-data"></a>索引 JSON 資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 07/31/2017
 資料庫索引可改善篩選和排序作業的效能。 若不使用索引，則 SQL Server 在您每次查詢資料時必須執行完整的資料表掃描。  
   
 ## <a name="index-json-properties-by-using-computed-columns"></a>使用計算資料行的索引 JSON 屬性  
-將 JSON 資料儲存於 SQL Server 時，通常都要依 JSON 文件的一或多個「屬性」來篩選或排序查詢結果。  
+您將 JSON 資料儲存於 SQL Server 時，通常會想要依 JSON 文件的一或多個「屬性」來篩選或排序查詢結果。  
 
 ### <a name="example"></a>範例 
 在此範例中，假設 AdventureWorks `SalesOrderHeader` 資料表含有 `Info` 資料行，其中包含關於銷售訂單的各種資訊 (JSON 格式)。 例如，它包含客戶、銷售人員、收件和帳單地址等相關資訊。 而您要使用資料行 `Info` 的值來篩選客戶的銷售訂單。
@@ -55,7 +53,7 @@ WHERE JSON_VALUE(Info, '$.Customer.Name') = N'Aaron Campbell'
 ### <a name="example-index"></a>範例索引
 若您想要針對 JSON 文件中的屬性加速篩選或 `ORDER BY` 子句處理，則可使用與其他資料行所用相同的索引。 不過，您無法「直接」參考 JSON 文件中的屬性。
     
-1.  首先必須建立「虛擬資料行」來傳回要用於篩選的值。
+1.  首先您必須建立「虛擬資料行」，傳回您想要用於篩選的值。
 2.  然後您必須在該虛擬資料行建立索引。  
   
 下列範例會建立可用於索引的計算資料行，然後在該資料行上建立索引。 然後它會在新的計算資料行上建立索引。 此範例會建立公開客戶名稱的資料行，其儲存於 JSON 文件中的 `$.Customer.Name` 路徑。 
@@ -157,4 +155,3 @@ ORDER BY JSON_VALUE(json,'$.name')
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解 SQL Server 中的內建 JSON 支援  
 如需更多特定的解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
-

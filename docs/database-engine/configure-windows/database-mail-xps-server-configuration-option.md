@@ -8,25 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Database Mail XPs option
 - Database Mail [SQL Server], enabling
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8df8a57c3e96b9c5cc21bd5c5d6c58520eff594f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 989df51eeeb19f45e1c515637cce16783e5227a1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XP 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,4 +61,3 @@ GO
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   
-

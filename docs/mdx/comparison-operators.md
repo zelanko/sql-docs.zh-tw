@@ -5,26 +5,22 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- comparison operators [MDX]
+dev_langs: kbMDX
+helpviewer_keywords: comparison operators [MDX]
 ms.assetid: 4a4bbc76-c6a2-4b19-ae75-6ac3ac14df01
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 295c21b7af5c4c3d1d6b25db84e58f313f1bcc00
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5c022d67e874ebd333d8634e642d17a14d0b577f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="comparison-operators"></a>比較運算子
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +35,15 @@ ms.lasthandoff: 08/02/2017
   
 |運算子|Description|  
 |--------------|-----------------|  
-|[= （等於）](../mdx/equal-to-mdx.md)|對於非 Null 引數，如果左邊的引數等於右邊的引數，就會傳回 TRUE；否則會傳回 FALSE。<br /><br /> 如果這兩個引數其中之一或全部都評估為 Null 值，運算子就會傳回 Null 值，除非進行比較 `0=null`，而這種情況下的布林值會包含 TRUE。|  
-|[<> （不等於）](../mdx/not-equal-to-mdx.md)|對於非 Null 引數，如果左邊的引數不等於右邊的引數，就會傳回 TRUE；否則會傳回 FALSE。<br /><br /> 如果任一個引數或兩個引數都評估為 Null 值，則運算子會傳回 Null 值。|  
-|[> （大於）](../mdx/greater-than-mdx.md)|對於非 Null 引數，如果左邊的引數值大於右邊的引數值，就會傳回 TRUE；否則會傳回 FALSE。<br /><br /> 如果任一個引數或兩個引數都評估為 Null 值，則運算子會傳回 Null 值。|  
-|[> = (大於或等於)](../mdx/greater-than-or-equal-to-mdx.md)|對於非 Null 引數，如果左邊的引數值大於或等於右邊的引數值，就會傳回 TRUE；否則會傳回 FALSE。<br /><br /> 如果任一個引數或兩個引數都評估為 Null 值，則運算子會傳回 Null 值。|  
-|[< （小於）](../mdx/less-than-mdx.md)|對於非 Null 引數，如果左邊的引數值小於右邊的引數值，就會傳回 TRUE；否則會傳回 FALSE。<br /><br /> 如果任一個引數或兩個引數都評估為 Null 值，則運算子會傳回 Null 值。|  
-|[< = （小於或等於）](../mdx/less-than-or-equal-to-mdx.md)|對於非 Null 引數，如果左邊的引數值小於或等於右邊的引數值，就會傳回 TRUE；否則會傳回 FALSE。<br /><br /> 如果任一個引數或兩個引數都評估為 Null 值，則運算子會傳回 Null 值。|  
+|[= (等於)](../mdx/equal-to-mdx.md)|對於非 Null 引數，如果左邊的引數等於右邊的引數，就會傳回 TRUE；否則會傳回 FALSE。<br /><br /> 如果這兩個引數其中之一或全部都評估為 Null 值，運算子就會傳回 Null 值，除非進行比較 `0=null`，而這種情況下的布林值會包含 TRUE。|  
+|[<> (不等於)](../mdx/not-equal-to-mdx.md)|對於非 Null 引數，如果左邊的引數不等於右邊的引數，就會傳回 TRUE；否則會傳回 FALSE。<br /><br /> 如果任一個引數或兩個引數都評估為 Null 值，則運算子會傳回 Null 值。|  
+|[> (大於)](../mdx/greater-than-mdx.md)|對於非 Null 引數，如果左邊的引數值大於右邊的引數值，就會傳回 TRUE；否則會傳回 FALSE。<br /><br /> 如果任一個引數或兩個引數都評估為 Null 值，則運算子會傳回 Null 值。|  
+|[>= (大於或等於)](../mdx/greater-than-or-equal-to-mdx.md)|對於非 Null 引數，如果左邊的引數值大於或等於右邊的引數值，就會傳回 TRUE；否則會傳回 FALSE。<br /><br /> 如果任一個引數或兩個引數都評估為 Null 值，則運算子會傳回 Null 值。|  
+|[< (小於)](../mdx/less-than-mdx.md)|對於非 Null 引數，如果左邊的引數值小於右邊的引數值，就會傳回 TRUE；否則會傳回 FALSE。<br /><br /> 如果任一個引數或兩個引數都評估為 Null 值，則運算子會傳回 Null 值。|  
+|[<= (小於或等於)](../mdx/less-than-or-equal-to-mdx.md)|對於非 Null 引數，如果左邊的引數值小於或等於右邊的引數值，就會傳回 TRUE；否則會傳回 FALSE。<br /><br /> 如果任一個引數或兩個引數都評估為 Null 值，則運算子會傳回 Null 值。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
  [運算子 &#40;MDX 語法 &#41;](../mdx/operators-mdx-syntax.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 05cafd9f2025ea2f0d3691696b758c9c8c498cf3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 90105b448604f3b99fefc2598fa375677f0bbdb4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="creating-a-connection-string"></a>建立連接字串
 連接字串包含以分號分隔的引數/值組 （也就是 「 參數 」） 清單。 例如：  
@@ -64,4 +62,3 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  
              "Database=Northwind;Integrated Security='SSPI';"  
 ```
-

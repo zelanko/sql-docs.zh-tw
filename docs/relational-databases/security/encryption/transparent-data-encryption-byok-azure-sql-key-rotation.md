@@ -16,15 +16,14 @@ ms.devlang: na
 ms.topic: hero-article
 ms.date: 08/07/2017
 ms.author: ryzhang26
-ms.openlocfilehash: c0751b8bfca5bbcae4a4802fecb3cf06e8182d05
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b682c9059d9a6365beebeff549d4c2840c04d477
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>使用 PowerShell 輪替透明資料加密 (TDE) 保護裝置 
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 本＜如何＞指南說明使用 Azure Key Vault 之 TDE 保護裝置的 Azure SQL 伺服器金鑰輪替。 輪替 Azure SQL 伺服器的 TDE 保護裝置，表示切換到保護伺服器資料庫的新非對稱金鑰。 金鑰輪替是一項線上作業，應該只需要幾秒鐘即可完成，因為這只是解密和重新加密資料庫的資料加密金鑰，不是整個資料庫。
 

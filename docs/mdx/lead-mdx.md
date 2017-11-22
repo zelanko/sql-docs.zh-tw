@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LEAD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Lead function
+f1_keywords: LEAD
+dev_langs: kbMDX
+helpviewer_keywords: Lead function
 ms.assetid: f3250092-7b98-40b5-8dca-77e3b50734a0
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 34d8989d5c1084171dc908bf8bded3f89f77a356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 127c84f38fe85453fa3da7ae2b1c9752b05b6ba7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +39,7 @@ Member_Expression.Lead( Index )
  *Member_Expression*  
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
- *索引*  
+ *Index*  
  指定成員位置數目的有效數值運算式。  
   
 ## <a name="remarks"></a>備註  
@@ -75,8 +70,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

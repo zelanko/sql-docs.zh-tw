@@ -5,22 +5,20 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 196b8e8e49ceae58054eae3d1b74480a9f438b75
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 753380839f10fc25c4bafa4ea045c301831361a0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函數
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +27,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 函數參考  
   
-|函數名稱|Supported|注意|  
+|函數名稱|支援|注意|  
 |-------------------|---------------|-----------|  
 |[Abs](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007544&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX、MDX||  
 |[陣列](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007545&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支援||  
@@ -95,7 +93,7 @@ ms.lasthandoff: 08/02/2017
 |[InputBox](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007592&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支援||  
 |[InStr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007593&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|僅限 MDX||  
 |[InStrRev](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007594&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支援||  
-|[整數](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007595&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX、MDX||  
+|[Int](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007595&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX、MDX||  
 |[IPmt](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007596&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|僅限 MDX||  
 |[IRR](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007597&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|僅限 MDX||  
 |[IsArray](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007598&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|僅限 MDX||  
@@ -109,7 +107,7 @@ ms.lasthandoff: 08/02/2017
 |[聯結](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007606&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支援||  
 |[LBound](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007607&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支援||  
 |[LCase](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007608&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|僅限 MDX||  
-|[左邊](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007609&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX、MDX||  
+|[左](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007609&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX、MDX||  
 |[Len](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007610&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX、MDX||  
 |[Loc](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007611&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支援||  
 |[LOF](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007612&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支援||  
@@ -173,4 +171,3 @@ ms.lasthandoff: 08/02/2017
 |[年份](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007670&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX、MDX||  
   
   
-

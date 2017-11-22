@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,24 +16,22 @@ f1_keywords:
 - FOR CLAUSE
 - FOR_TSQL
 - FOR_CLAUSE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - XML option [SQL Server]
 - BROWSE option
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0cb4b3936aa78f22958c28351d2dad523a6d9932
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f092e78608e8fa2b44061056ef4e5b9e7e1649a7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select---for-clause-transact-sql"></a>選取-FOR 子句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -183,7 +180,7 @@ JSON
   
 ## <a name="for-xml"></a>FOR XML  
  XML  
- 指定查詢結果要以 XML 文件來傳回。 您必須指定下列 XML 模式之一：RAW、AUTO、EXPLICIT。 如需有關 XML 資料和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[FOR XML & #40;SQL Server & #41;](../../relational-databases/xml/for-xml-sql-server.md).  
+ 指定查詢結果要以 XML 文件來傳回。 您必須指定下列 XML 模式之一：RAW、AUTO、EXPLICIT。 如需有關 XML 資料和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[FOR XML &#40;SQL Server &#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
  原始 [ **('***ElementName***')** ]  
  使用查詢結果，並將結果集的泛用識別碼的 XML 項目每個資料列轉換\<資料列 / > 作為元素標記。 您可以選擇性地指定資料列元素的名稱。 所產生的 XML 輸出利用指定*ElementName*作為產生每個資料列的資料列元素。 如需詳細資訊，請參閱[搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)和[搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)。  
@@ -224,7 +221,7 @@ JSON
  根 [ **('***RootName***')** ]  
  指定將單一最上層元素加入產生的 XML 中。 您可以選擇性地指定要產生的根元素名稱。 如果未指定選擇性的根名稱，預設值\<根目錄 > 加入項目。  
   
- 如需詳細資訊，請參閱[FOR XML & #40;SQL Server & #41;](../../relational-databases/xml/for-xml-sql-server.md).  
+ 如需詳細資訊，請參閱[FOR XML &#40;SQL Server &#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
  **XML 範例**  
   
@@ -243,7 +240,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
 ## <a name="for-json"></a>FOR JSON  
  JSON  
- 指定 FOR JSON，將傳回的查詢結果格式化為 JSON 文字。 您也必須指定下列 JSON 模式之一： 自動或路徑。 如需有關**FOR JSON**子句，請參閱[查詢結果格式化為 JSON 與 FOR JSON & #40;SQL Server & #41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
+ 指定 FOR JSON，將傳回的查詢結果格式化為 JSON 文字。 您也必須指定下列 JSON 模式之一： 自動或路徑。 如需有關**FOR JSON**子句，請參閱[查詢結果格式化為 JSON 與 FOR JSON &#40;SQL Server &#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
  AUTO  
  格式的 JSON 輸出會自動根據的結構**選取**陳述式  
@@ -254,18 +251,17 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
             **FOR JSON PATH**。 **PATH** 模式讓您建立包裝函式物件和巢狀複雜屬性。 如需詳細資訊和範例，請參閱[以 PATH 模式格式化巢狀的 JSON 輸出 &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)。  
   
  INCLUDE_NULL_VALUES  
- 在 JSON 輸出中包含 null 值，藉由指定**INCLUDE_NULL_VALUES**選項與**FOR JSON**子句。 如果您未指定此選項，輸出不會在查詢結果中包含 null 值的 JSON 屬性。 如需詳細資訊和範例，請參閱[使用 INCLUDE_NULL_VALUES 選項 & #40; JSON 輸出中包含 Null 值SQL Server & #41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  
+ 在 JSON 輸出中包含 null 值，藉由指定**INCLUDE_NULL_VALUES**選項與**FOR JSON**子句。 如果您未指定此選項，輸出不會在查詢結果中包含 null 值的 JSON 屬性。 如需詳細資訊和範例，請參閱[使用 INCLUDE_NULL_VALUES 選項 &#40; JSON 輸出中包含 Null 值SQL Server &#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  
   
  根 [ **('***RootName***')** ]  
- 指定將單一最上層元素新增至 JSON 輸出**根**選項與**FOR JSON**子句。 如果您未指定 **ROOT** 選項，則 JSON 輸出不會有根項目。 如需詳細資訊和範例，請參閱[新增根節點與根選項 & #40; JSON 輸出SQL Server & #41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
+ 指定將單一最上層元素新增至 JSON 輸出**根**選項與**FOR JSON**子句。 如果您未指定 **ROOT** 選項，則 JSON 輸出不會有根項目。 如需詳細資訊和範例，請參閱[新增根節點與根選項 &#40; JSON 輸出SQL Server &#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
  WITHOUT_ARRAY_WRAPPER  
  移除來指定預設括住的 JSON 輸出的方括弧**WITHOUT_ARRAY_WRAPPER**選項與**FOR JSON**子句。 如果您未指定此選項，JSON 輸出會以方括弧括住。 使用**WITHOUT_ARRAY_WRAPPER**選項，以產生單一 JSON 物件做為輸出。  如需詳細資訊，請參閱 [使用 WITHOUT_ARRAY_WRAPPER 選項從 JSON 輸出移除方括弧 &#40;SQL Server&#41;](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md)。  
   
  如需詳細資訊，請參閱[使用 FOR JSON 將查詢結果格式化為 JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   
-

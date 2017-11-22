@@ -3,17 +3,18 @@ title: "FREETEXT (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FREETEXT
 - FREETEXT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], meaning matches
 - meaning matches [full-text search]
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - words in predicate [full-text search]
 - column searches [full-text search]
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9c7475e73cbd5022bf5c243fbd4e7a35dc115cf0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 48c7ce4788a0c5da0b22e80ab1dc366091c25f97
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   是用於述詞[!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 子句](../../t-sql/queries/where-transact-sql.md)的[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT 陳述式來執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文檢索搜尋的全文檢索索引資料行包含以字元為基礎的資料類型。 這個述詞會搜尋意義與搜尋條件的文字符合但用字不完全相同的值。 使用 FREETEXT 時，全文檢索查詢引擎內部會執行下列動作上*freetext_string*，每個詞彙指派加權，然後尋找相符項目：  
   
@@ -76,7 +76,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  不允許使用 WEIGHT、FORMSOF、萬用字元、NEAR 和其他語法。 *freetext_string*是這裡，詞幹分析和同義字傳遞。  
   
- *freetext_string*是**nvarchar**。 當使用另一個字元資料類型當做輸入時，會發生隱含轉換。 在下列範例中，定義為 `@SearchWord` 的 `varchar(30)` 變數會造成 `FREETEXT` 述詞中的隱含轉換。  
+ *freetext_string*是**nvarchar**。 當使用另一個字元資料類型當做輸入時，會發生隱含轉換。 不能使用大型的字串資料類型 nvarchar （max） 和 varchar （max）。 在下列範例中，定義為 `@SearchWord` 的 `varchar(30)` 變數會造成 `FREETEXT` 述詞中的隱含轉換。  
   
 ```  
   
@@ -161,7 +161,7 @@ WHERE FREETEXT(Description, @SearchWord);
 GO  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [全文檢索搜尋使用者入門](../../relational-databases/search/get-started-with-full-text-search.md)   
  [建立及管理全文檢索目錄](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
  [建立全文檢索目錄 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
@@ -176,4 +176,3 @@ GO
  [其中 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

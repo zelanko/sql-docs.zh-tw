@@ -8,8 +8,7 @@ ms.service: database-engine
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - pausing Stretch Database
 - resuming Stretch Database
 ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0fef9c7f912cb824b3f1fcf8653a82fa99a35561
-ms.openlocfilehash: a291fd543d572fc621e7b59e968e7ca69d79552e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: c3ed865c017f7a9e74e1411379fa82d4fdf383b9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>暫停和繼續資料移轉 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -86,4 +84,3 @@ ALTER TABLE <Stretch-enabled table name>
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [監視及疑難排解資料移轉](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 
   
-

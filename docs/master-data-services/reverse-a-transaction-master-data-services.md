@@ -8,24 +8,21 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transactions [Master Data Services], reversing
+helpviewer_keywords: transactions [Master Data Services], reversing
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3b070c2452fa453a1017080abf4876f817cf3fd4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 7bfd5c364d0805f32ea738585794d3b3ec47107d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>反轉交易 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，系統管理員可以在需要復原動作時，反轉交易。 交易的範例包括屬性值變更、階層移動或成員刪除。 本主題只適用於交易記錄類型為「屬性」之實體的交易。 請前往實體總管頁面，以檢視交易記錄類型為「成員」之實體的交易記錄。  
@@ -58,4 +55,3 @@ ms.lasthandoff: 09/07/2017
  [復原成員修訂歷程記錄](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   
-

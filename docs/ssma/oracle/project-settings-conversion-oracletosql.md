@@ -5,24 +5,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: e603c7126e4f8e94d040e2ba34fb4180b01c4287
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: afd652370653f4642162fb596bdab88313366354
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-conversion-oracletosql"></a>專案設定 （轉換） (OracleToSQL)
 [轉換] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何轉換 Oracle 語法來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]語法。  
@@ -90,7 +87,6 @@ ms.lasthandoff: 08/02/2017
 |**轉換順序產生器**|在 Oracle 中，您可以使用順序，產生唯一的識別碼。<br /><br />SSMA 可以轉換成以下的順序。<br /><br />使用 SQL Server 序列產生器 （此選項時才可用轉換為 SQL Server 2012 和 SQL Server 2014）。<br /><br />使用 SSMA 順序產生器。<br /><br />使用資料行的識別。<br /><br />轉換成 SQL Server 2012 或 SQL Server 2014 時的預設選項是使用 SQL Server 序列產生器。 不過，SQL Server 2012 和 SQL Server 2014 不支援取得目前的順序值 （例如，Oracle 序列 currval 方法）。 請參閱移轉 Oracle 序列 currval 方法上的指引 SSMA 團隊部落格網站。<br /><br />SSMA 還提供用以將 Oracle 序列轉換成 SSMA 順序模擬器選項。 這是預設選項，當您轉換成 SQL Server 2012 之前<br /><br />最後，您也可以轉換指派給 SQL Server 的識別值的資料表中的資料行的順序。 您必須指定 Oracle identity 資料行序列之間的對應**資料表** 索引標籤|  
 |**轉換 CURRVAL 外部觸發程序**|設為轉換順序產生器時，才會顯示**使用資料行識別**。 Oracle 序列是與資料表不同的物件，因為使用順序的多個資料表使用觸發程序產生並插入新的序列值。 SSMA 註解化這些陳述式，或將其標示為錯誤，當超出註解會產生錯誤。<br /><br />如果您選取**是**，SSMA 會將標示為外部觸發程序上的轉換後排序 CURRVAL 警告的所有參考。<br /><br />如果您選取**否**，SSMA 會將標示為外部觸發程序上的轉換後排序 CURRVAL 並產生錯誤的所有參考。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [使用者介面參考 &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 74f49f68baa64324adf12cf6866ff5b233571aeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 9814c347b8a0f63fd63625149b55098b1df3896c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="merge-conflicts-mds-add-in-for-excel"></a>合併衝突 (適用於 Excel 的 MDS 增益集)
   在適用於 Excel 的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 增益集中，如果資料已由另一位使用者在伺服器上變更的話，則該發行將會失敗並會出現衝突錯誤。 若要解決此錯誤，可以執行合併衝突，然後重新發佈所做的變更。  
@@ -59,4 +57,3 @@ ms.lasthandoff: 09/07/2017
  [概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   
-

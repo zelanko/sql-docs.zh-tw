@@ -5,24 +5,21 @@ ms.date: 10/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
+dev_langs: R
 ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d53965dd5e931eb4290031ed2023cdb78ee74283
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: e0c6725ff2c0c541e2546858dc02f1021812bbc5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="r-package-management-for-sql-server"></a>SQL Server 的 R 封裝管理
 
@@ -199,4 +196,3 @@ SQL Server 2017，我們建議您使用建立外部程式庫並管理使用者�
 ## <a name="next-steps"></a>後續的步驟
 
 [如何啟用或停用的 R 封裝管理](../r/r-package-how-to-enable-or-disable.md)
-

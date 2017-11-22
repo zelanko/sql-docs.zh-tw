@@ -8,25 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - creating collections [Master Data Services]
 - collections [Master Data Services], creating
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9e6acdeb39c0401e7f4f54f99b38a14b25a66c43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 5341c7500a472a8a0f1c24f1e4b82219a0a38e64
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-a-collection-master-data-services"></a>建立集合 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要建立分頁成員和合併成員的一般清單時，請建立集合。 集合不必包含實體的所有成員。  
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/07/2017
  [建立明確階層 &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   
-

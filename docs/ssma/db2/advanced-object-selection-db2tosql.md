@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5f229e73487aab0be1f118c535f9d43851b44c7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 13fa0beac02abb6f606757bc44a63163e1cf07de
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-object-selection-db2tosql"></a>進階的物件選取項目 (DB2ToSQL)
 **進階物件部分**對話方塊可讓您篩選資料庫物件，使用字串和子字串中的物件名稱，然後選取或取消選取這些物件。 SSMA 會執行轉換並移轉作業選取的物件。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 08/02/2017
   
 使用此對話方塊之前，您可以強制 SSMA 載入轉換結構描述，或儲存專案的所有中繼資料。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **請檢查所有的項目**  
 將所有項目旁的核取記號。 在 [中繼資料總管] 會立即選取這些項目。  
   
@@ -58,4 +56,3 @@ ms.lasthandoff: 08/02/2017
 **清除篩選**  
 清除**篩選**方塊。  
   
-

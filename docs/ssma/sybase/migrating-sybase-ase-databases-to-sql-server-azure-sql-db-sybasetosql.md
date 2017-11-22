@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bc6d8b076588b53d83e6af9e88be5dff14f08f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 63dc9188d93def41a5116386f93bf29e3b744e8e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrating-sybase-ase-databases-to-sql-server---azure-sql-db-sybasetosql"></a>Sybase ASE 將資料庫移轉至 SQL Server-Azure SQL DB (SybaseToSQL)
 SQL Server 移轉小幫手 (SSMA) for Sybase 是完整的環境，可協助您快速 Sybase Adaptive Server Enterprise (ASE) 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 利用 SSMA for Sybase，檢閱資料庫物件和資料，評估要移轉的資料庫，資料庫將物件移轉為[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB、，然後將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
@@ -53,8 +51,7 @@ SQL Server 移轉小幫手 (SSMA) for Sybase 是完整的環境，可協助您�
   
 9. 必要時，更新您的資料庫應用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [安裝 SSMA for Sybase &#40;SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
 [開始使用 SSMA for Sybase &#40;SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   
-

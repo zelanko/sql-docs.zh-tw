@@ -2,9 +2,12 @@
 title: "使用變更追蹤 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: faa2c1baefe2d745944ef42239675f1766d0e6e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3f0d5a22242be81f68c218cb5f89f36d4853641f
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用變更追蹤 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   使用變更追蹤的應用程式必須能夠取得追蹤變更、將這些變更套用至另一個資料存放區，以及更新來源資料庫。 此主題描述如何執行這些工作，以及在進行容錯移轉而且必須從備份還原資料庫時，變更追蹤所扮演的角色。  
   

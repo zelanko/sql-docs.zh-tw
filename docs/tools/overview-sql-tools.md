@@ -1,54 +1,54 @@
 ---
-title: "SQL 工具和公用程式 SQL Server、 Azure SQL Database 和 SQL 資料倉儲 |Microsoft 文件"
+title: "SQL 工具和公用程式 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲 |Microsoft 文件"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 11/15/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0ad2c6a833d064d7e70da281e1fdc36ae9c235e1
+ms.sourcegitcommit: c31ab3a0c47644560fd125decee4f8630da5ebdb
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: eccbe54c561e009858f6192126abc57e3399082c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="tools-and-utilities-for-azure-sql-database-sql-server-and-sql-data-warehouse"></a>工具和公用程式，Azure SQL Database、 SQL Server 和 SQL 資料倉儲
+# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 工具和公用程式 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲
 
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-![](../includes/media/sql-database-tools.png)本文章會提供一份可用的工具，使用 SQL Server、 Azure SQL Database、 SQL 資料倉儲和 SQL Server 為基礎的應用程式。 
 
-如果您想要跳中的權限和建立資料表，開始執行的查詢時，基本上設計和管理您的資料庫，然後[ **SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md)最有可能是您移至的工具。 SSMS 是免費的並在 Windows 上執行。
+## <a name="tools-to-run-queries-and-manage-databases"></a>執行查詢及管理資料庫的工具  
 
-如果您執行 Linux 或 macOS，請嘗試[Visual Studio Code](https://code.visualstudio.com/)與[ **Visual Studio 程式碼的 mssql** ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)延伸模組。 這些工具的一組豐富的功能，以開發 Microsoft SQL Server、 Azure SQL Database 和 SQL 資料倉儲，還有可用。 請參閱[使用 Visual Studio 程式碼來建立和執行 SQL Server 的 TRANSACT-SQL 指令碼](../linux/sql-server-linux-develop-use-vscode.md)。
-
-
-## <a name="sql-tools"></a>SQL 工具 
- 
 | 工具 | Description |
 |:--|:--|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | 您可以使用 SQL Server Management Studio (SSMS) 來查詢、 設計和管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲。 |
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 開啟 Visual Studio 強大的開發環境中 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲。 |
-| [Visual Studio 程式碼](https://code.visualstudio.com/)| Visual Studio 程式碼適用於 Linux、 macOS 和 Windows。 安裝 Visual Studio 程式碼之後, 安裝[mssql 延伸](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)開發 Microsoft SQL Server、 Azure SQL Database 和 SQL 資料倉儲。 |
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]是免費的輕量型工具，管理資料庫，只要它們正在執行。 此預覽版本提供的資料庫管理功能，包括擴充的 TRANSACT-SQL 編輯器和可自訂的深入剖析您資料庫的操作狀態。 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]在 Windows、 macOS 和 Linux 上執行**。|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | 您可以使用 SQL Server Management Studio (SSMS) 來查詢、 設計和管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲。 **在 Windows 上執行 SSMS**。|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 開啟 Visual Studio 強大的開發環境中 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲。 **在 Windows 上執行 SSDT**。|
+| [Visual Studio 程式碼](https://code.visualstudio.com/)| 安裝 Visual Studio 程式碼之後, 安裝[mssql 延伸](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)開發 Microsoft SQL Server、 Azure SQL Database 和 SQL 資料倉儲。 **在 Windows、 macOS 和 Linux 上執行 visual Studio Code**。|
+
+
+
+## <a name="additional-tools"></a>其他工具
+
+| 工具 | Description |
+|:--|:--|
 | [組態管理員](../tools/configuration-manager/sql-server-configuration-manager-help.md) | 使用 SQL Server 組態管理員來設定 SQL Server 服務和設定網路連接性。|
 | [SQL Server 移轉小幫手](../ssma/sql-server-migration-assistant.md) | 使用 SQL Server 移轉小幫手來自動化資料庫移轉至 SQL Server 從 Microsoft Access、 DB2、 MySQL、 Oracle 和 Sybase。|
-| [Distributed 的 Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | 使用 Distributed Replay 功能可協助您評估未來的 SQL Server 升級的影響。 也可以使用 Distributed Replay 協助評估硬體和作業系統升級與 SQL Server 微調的影響。 |
+| [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | 使用 Distributed Replay 功能可協助您評估未來的 SQL Server 升級的影響。 也可以使用 Distributed Replay 協助評估硬體和作業系統升級與 SQL Server 微調的影響。 |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Ssbdiagnose 公用程式會報告 Service Broker 交談中的 Service Broker 服務之組態的問題。 |
 
 
-## <a name="sql-command-prompt-utilities"></a>SQL 命令提示字元公用程式
+## <a name="command-line-utilities"></a>命令列公用程式
 
-  命令提示字元公用程式可編寫 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作業指令碼。 下表列出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]隨附的命令提示字元公用程式清單。  
+  命令列公用程式可讓您要編寫指令碼[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]作業。 下表列出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]隨附的命令提示字元公用程式清單。  
   
 |**公用程式**|**描述**|**安裝位置**|  
 |-----------------|---------------------|----------------------|  
@@ -82,6 +82,5 @@ ms.lasthandoff: 08/28/2017
 |`monospace`|命令和程式碼範例。|  
 |*斜體*|使用者提供的參數。|  
 |**粗體字**|必須完全依照顯示狀況來輸入的命令、參數和其他語法。|  
-
 
 

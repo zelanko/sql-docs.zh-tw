@@ -8,25 +8,23 @@ ms.service: database-engine
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f210ed6defa86d000820f23e2385f91ed2f32a27
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 18ca9bfffcc53e715668634e0a59e33775c9f2c2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -144,4 +142,3 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
   
   
-

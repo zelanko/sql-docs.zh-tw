@@ -8,26 +8,22 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- AsBinaryZM geometry
+dev_langs: TSQL
+helpviewer_keywords: AsBinaryZM geometry
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a509d7e6297081816cfdd146ea10afc90be7e60
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e2b778d41e6a3d4f7701140584fd3c833a726948
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -60,11 +56,10 @@ SELECT @g1.AsBinaryZM();
 --Returns: 0x01B90B0000000000000000F03F000000000000F03F00000000000000400000000000000840  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [M &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
  [Z &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
-
 

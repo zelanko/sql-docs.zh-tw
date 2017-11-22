@@ -5,24 +5,21 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- traces [SQL Server], creating
+helpviewer_keywords: traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: adc6db788d4245009d2f70b8af01b84730cb7bb7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>建立追蹤 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立追蹤。  
@@ -64,4 +61,3 @@ ms.lasthandoff: 10/24/2017
  [使追蹤與 Windows 效能記錄資料相互關聯 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- staging process [Master Data Services], error messages
+helpviewer_keywords: staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 60d930bbdd618e5a99450735bdfe290d8f1a9e59
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a870a044e3687e4d75b3a48ea44ed11119b3b5e2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="staging-process-errors-master-data-services"></a>暫存處理序錯誤 (Master Data Services)
   當暫存處理序完成時，接移資料表中的所有處理記錄都有 ErrorCode 資料行的值。 這些值會列在下表中。  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/07/2017
  [概觀：從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   
-
