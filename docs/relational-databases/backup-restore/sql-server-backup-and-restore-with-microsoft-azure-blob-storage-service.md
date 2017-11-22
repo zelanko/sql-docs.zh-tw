@@ -8,22 +8,20 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2ca66cdb80dd12a242b2c9e8130cf3236e47371c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5d39865f0c5bf683e83cea2f85fb365f0fc9da2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   成本效益：只有使用的服務才要付費。 成為符合成本效益的異地與備份封存選項。 如需詳細資訊和連結，請參閱 [Microsoft Azure 計費考量](#Billing) 一節。  
   
-##  <a name="Billing"></a> Microsoft Azure Billing Considerations:  
+##  <a name="Billing"></a> Microsoft Azure 計費考量：  
  了解 Microsoft Azure 儲存體成本可讓您預測在 Microsoft Azure 中建立和儲存備份的成本。  
   
  [Microsoft Azure 定價計算機](http://go.microsoft.com/fwlink/?LinkId=277060) 可以協助您預估成本。  
@@ -80,4 +78,3 @@ ms.lasthandoff: 06/22/2017
 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   
-

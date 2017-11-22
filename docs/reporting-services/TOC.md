@@ -3,6 +3,7 @@
 # 概觀
 ## [Reporting Services 的新功能](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [新的與最近更新的文件](new-updated-reporting-services.md)
+## [變更記錄檔](change-log-sql-server-reporting-services.md)
 ## [Reporting Services 概念 (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services 功能及工作](reporting-services-features-and-tasks-ssrs.md)   
 ## [回溯相容性](reporting-services-backward-compatibility.md)  
@@ -87,7 +88,8 @@
 ### [CSV 裝置資訊設定](csv-device-information-settings.md)  
 ### [Excel 裝置資訊設定](excel-device-information-settings.md)  
 ### [HTML 裝置資訊設定](html-device-information-settings.md)  
-### [影像裝置資訊設定](image-device-information-settings.md)  ### [MHTML 裝置資訊設定](mhtml-device-information-settings.md)  
+### [影像裝置資訊設定](image-device-information-settings.md)  
+### [MHTML 裝置資訊設定](mhtml-device-information-settings.md)  
 ### [PDF 裝置資訊設定](pdf-device-information-settings.md)  
 ### [PPTX 裝置資訊設定](pptx-device-information-settings.md)  
 ### [XML 裝置資訊設定](xml-device-information-settings.md)  

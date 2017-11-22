@@ -7,6 +7,6 @@
 
 # [資料指標行為](cursor-behaviors.md)
 # [資料指標類型](cursor-types.md)
-# [定位的更新 (ODBC)](positioned-updates-odbc.md)
-# [捲動和提取資料列集建立書籤在 ODBC 中的資料列](scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)
-# [捲動和提取資料列](scrolling-and-fetching-rows.md)
+# [定位更新 (ODBC)](positioned-updates-odbc.md)
+# [捲動和擷取資料列 - ODBC 中的書籤資料列](scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)
+# [捲動與擷取資料列](scrolling-and-fetching-rows.md)

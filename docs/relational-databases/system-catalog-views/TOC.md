@@ -1,19 +1,19 @@
 # [概觀](catalog-views-transact-sql.md)
 
-# [查詢 SQL Server 系統目錄 FAQ](querying-the-sql-server-system-catalog-faq.md)  
-# [結構描述-sys.schemas](schemas-catalog-views-sys-schemas.md)  
-# [訊息 （錯誤）-sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
-# [延伸內容-sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
+# [查詢 SQL Server 系統目錄常見問題集](querying-the-sql-server-system-catalog-faq.md)  
+# [結構描述 - sys.schemas](schemas-catalog-views-sys-schemas.md)  
+# [訊息 (適用於錯誤) - sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
+# [擴充屬性 - sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
 
 # 變更追蹤
 ## [sys.change_tracking_databases](change-tracking-catalog-views-sys-change-tracking-databases.md)  
 ## [sys.change_tracking_tables](change-tracking-catalog-views-sys-change-tracking-tables.md)  
 
 # 資料庫鏡像
-## [資料庫鏡像見證-sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
+## [資料庫鏡像見證 - sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
 
 # 資料層應用程式
-## [資料層應用程式檢視-dbo.sysdac_instance](data-tier-application-views-dbo-sysdac-instances.md)  
+## [資料層應用程式檢視 - dbo.sysdac_instance](data-tier-application-views-dbo-sysdac-instances.md)  
 
 # [可用性群組](always-on-availability-groups-catalog-views-transact-sql.md)  
 ## [監視可用性資料庫](sys-availability-databases-cluster-transact-sql.md)  
@@ -69,7 +69,7 @@
 ## [sysmail_unsentitems](sysmail-unsentitems-transact-sql.md)  
 
 # [資料庫和檔案](databases-and-files-catalog-views-transact-sql.md)  
-## [只有當 sys.backup_devices](sys-backup-devices-transact-sql.md)  
+## [sys.backup_devices](sys-backup-devices-transact-sql.md)  
 ## [sys.databases](sys-databases-transact-sql.md)  
 ## [sys.database_files](sys-database-files-transact-sql.md)  
 ## [sys.database_mirroring](sys-database-mirroring-transact-sql.md)  
@@ -103,12 +103,12 @@
 ## [sys.external_data_sources](sys-external-data-sources-transact-sql.md)  
 ## [sys.external_file_formats](sys-external-file-formats-transact-sql.md)  
 
-# [Filestream 和 FileTable](filestream-and-filetable-catalog-views-transact-sql.md)  
+# [檔案資料流與 FileTable](filestream-and-filetable-catalog-views-transact-sql.md)  
 ## [sys.database_filestream_options](sys-database-filestream-options-transact-sql.md)  
 ## [sys.filetable_system_defined_objects](sys-filetable-system-defined-objects-transact-sql.md)  
 ## [sys.filetables](sys-filetables-transact-sql.md)  
 
-# [全文檢索搜尋和語意搜尋](full-text-search-and-semantic-search-catalog-views-transact-sql.md)  
+# [全文檢索搜尋及語意搜尋](full-text-search-and-semantic-search-catalog-views-transact-sql.md)  
 ## [sys.fulltext_catalogs](sys-fulltext-catalogs-transact-sql.md)  
 ## [sys.fulltext_document_types](sys-fulltext-document-types-transact-sql.md)  
 ## [sys.fulltext_index_catalog_usages](sys-fulltext-index-catalog-usages-transact-sql.md)  
@@ -202,7 +202,7 @@
 ## [sys.partition_parameters](sys-partition-parameters-transact-sql.md)  
 ## [sys.partition_range_values](sys-partition-range-values-transact-sql.md)  
 
-# [以原則為基礎的管理檢視](policy-based-management-views-transact-sql.md)  
+# [原則式管理檢視](policy-based-management-views-transact-sql.md)  
 ## [syspolicy_conditions](syspolicy-conditions-transact-sql.md)  
 ## [syspolicy_policies](syspolicy-policies-transact-sql.md)  
 ## [syspolicy_policy_execution_history](syspolicy-policy-execution-history-transact-sql.md)  
@@ -237,7 +237,7 @@
 # [安全性](security-catalog-views-transact-sql.md)  
 ## [sys.asymmetric_keys](sys-asymmetric-keys-transact-sql.md)  
 ## [sys.certificates](sys-certificates-transact-sql.md)  
-## [sys.column_encryption_keys](sys-column-encryption-keys-transact-sql.md)  
+## [sys.column_encryption_keys ](sys-column-encryption-keys-transact-sql.md)  
 ## [sys.column_encryption_key_values](sys-column-encryption-key-values-transact-sql.md)  
 ## [sys.column_master_keys](sys-column-master-keys-transact-sql.md)  
 ## [sys.credentials](sys-credentials-transact-sql.md)  
@@ -271,7 +271,7 @@
 
 # [Service Broker](service-broker-catalog-views-transact-sql.md)  
 ## [sys.conversation_endpoints](sys-conversation-endpoints-transact-sql.md)  
-## [sys.conversation_endpoints](sys-conversation-groups-transact-sql.md)  
+## [sys.conversation_groups](sys-conversation-groups-transact-sql.md)  
 ## [sys.conversation_priorities](sys-conversation-priorities-transact-sql.md)  
 ## [sys.message_type_xml_schema_collection_usages](sys-message-type-xml-schema-collection-usages-transact-sql.md)  
 ## [sys.remote_service_bindings](sys-remote-service-bindings-transact-sql.md)  
@@ -285,7 +285,7 @@
 ## [sys.services](sys-services-transact-sql.md)  
 ## [sys.transmission_queue](sys-transmission-queue-transact-sql.md)  
 
-# [整個伺服器組態](server-wide-configuration-catalog-views-transact-sql.md)  
+# [全伺服器設定](server-wide-configuration-catalog-views-transact-sql.md)  
 ## [sys.configurations](sys-configurations-transact-sql.md)  
 ## [sys.time_zone_info](sys-time-zone-info-transact-sql.md)  
 ## [sys.traces](sys-traces-transact-sql.md)  
@@ -333,7 +333,7 @@
 ## [sys.remote_data_archive_tables](stretch-database-catalog-views-sys-remote-data-archive-tables.md)
 
 
-# [XML 結構描述 （XML 類型系統）](xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+# [XML 結構描述 (XML 類型系統)](xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
 ## [sys.column_xml_schema_collection_usages](sys-column-xml-schema-collection-usages-transact-sql.md)  
 ## [sys.parameter_xml_schema_collection_usages](sys-parameter-xml-schema-collection-usages-transact-sql.md)  
 ## [sys.selective_xml_index_paths](sys-selective-xml-index-paths-transact-sql.md)  
@@ -345,7 +345,7 @@
 ## [sys.xml_indexes](sys-xml-indexes-transact-sql.md)  
 ## [sys.xml_schema_model_groups](sys-xml-schema-model-groups-transact-sql.md)  
 ## [sys.xml_schema_collections](sys-xml-schema-collections-transact-sql.md)  
-## [sys.xml_schema_namespaces:](sys-xml-schema-namespaces-transact-sql.md)  
+## [sys.xml_schema_namespaces](sys-xml-schema-namespaces-transact-sql.md)  
 ## [sys.xml_schema_types](sys-xml-schema-types-transact-sql.md)  
 ## [sys.xml_schema_wildcard_namespaces](sys-xml-schema-wildcard-namespaces-transact-sql.md)  
 ## [sys.xml_schema_wildcards](sys-xml-schema-wildcards-transact-sql.md)  

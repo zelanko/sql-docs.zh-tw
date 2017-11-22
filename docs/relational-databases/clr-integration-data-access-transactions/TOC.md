@@ -1,5 +1,5 @@
 # [CLR 整合和交易](clr-integration-and-transactions.md)
-# [存取目前的交易](accessing-the-current-transaction.md)
+# [存取目前交易](accessing-the-current-transaction.md)
 # [交易存留期間](transaction-lifetimes.md)
 # [交易升級](transaction-promotion.md)
 # [使用 System.Transactions](using-system-transactions.md)

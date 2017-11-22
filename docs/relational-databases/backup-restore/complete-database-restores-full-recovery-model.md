@@ -8,8 +8,7 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - full recovery model [SQL Server], performing restores
 - log backups [SQL Server[
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8e5b4883efe038bb4ed9f3e0b0310d4b484c04a2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b2fe04099e9ec76ea157b1428fa0a4896ad8e78
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>完整的資料庫還原 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +83,7 @@ ms.lasthandoff: 07/31/2017
 ###  <a name="TsqlSyntax"></a> 基本 Transact-SQL RESTORE 語法  
  上圖中還原順序的基本 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 語法如下：  
   
-1.  RESTORE DATABASE *&amp;lt;database&amp;gt;* FROM *full database backup* WITH NORECOVERY;  
+1.  RESTORE DATABASE *&lt;database&gt;* FROM *full database backup* WITH NORECOVERY;  
   
 2.  RESTORE DATABASE *database* FROM *full_differential_backup* WITH NORECOVERY;  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 07/31/2017
   
      針對其他每個記錄備份重複此還原記錄步驟。  
   
-4.  RESTORE DATABASE *&amp;lt;database&amp;gt;* WITH RECOVERY;  
+4.  RESTORE DATABASE *&lt;database&gt;* WITH RECOVERY;  
   
 ###  <a name="ExampleToPoFTsql"></a> 範例：復原到失敗點 (Transact-SQL)  
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例顯示將資料庫還原到失敗點之還原順序中的基本選項。 此範例會建立資料庫的結尾記錄備份。 接下來，此範例會還原完整的資料庫備份和記錄備份，然後還原結尾記錄備份。 此範例會在一個不同的最後步驟中復原資料庫。  
@@ -196,4 +194,3 @@ GO
  [還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL) | Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3b254dd4fa4b664a0787898a61cc94ca050a097
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   根據預設，使用壓縮來備份會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，如果發生 CPU 爭用的情況，您可能會想要在[資源管理員](../../relational-databases/resource-governor/resource-governor.md) 限制 CPU 使用量的工作階段中，建立低優先權的壓縮備份。 這個主題所展示的狀況會將特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的工作階段對應至在這類情況中限制 CPU 使用量的資源管理員工作負載群組，藉以分類這些工作階段。  
   

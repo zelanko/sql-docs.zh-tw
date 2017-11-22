@@ -4,6 +4,6 @@
 # [資料存取交易 +](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)
 
 # [內容連接](context-connection.md)
-# [內容連接和正常連接的限制](context-connections-and-regular-connections-restrictions.md)
-# [內容連線與一般連接](context-connections-vs-regular-connections.md)
+# [內容連接和正常連接 - 限制](context-connections-and-regular-connections-restrictions.md)
+# [內容連接與正常連接](context-connections-vs-regular-connections.md)
 # [連接的模擬和認證](impersonation-and-credentials-for-connections.md)

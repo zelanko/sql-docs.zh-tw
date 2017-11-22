@@ -1,6 +1,6 @@
 # [CLR 使用者定義函式](clr-user-defined-functions.md)
 # [CLR 純量值函式](clr-scalar-valued-functions.md)
 # [CLR 資料表值函式](clr-table-valued-functions.md)
-# [CLR 使用者定義彙總-叫用函式](clr-user-defined-aggregate-invoking-functions.md)
-# [CLR 使用者定義彙總的需求](clr-user-defined-aggregates-requirements.md)
+# [CLR 使用者定義彙總 - 叫用函式](clr-user-defined-aggregate-invoking-functions.md)
+# [CLR 使用者定義彙總 - 需求](clr-user-defined-aggregates-requirements.md)
 # [CLR 使用者定義彙總](clr-user-defined-aggregates.md)

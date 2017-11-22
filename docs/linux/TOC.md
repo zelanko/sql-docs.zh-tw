@@ -12,6 +12,7 @@
 ## [安裝與連線 - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [執行與連線 - Docker](quickstart-install-connect-docker.md)
 ## [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+## [執行與連線 - 雲端](quickstart-install-connect-clouds.md)
 
 # 教學課程
 ## [1_從 Windows 移轉](sql-server-linux-migrate-restore-database.md)
@@ -77,7 +78,7 @@
 ##### [在 SUSE 上設定](sql-server-linux-availability-group-cluster-sles.md)
 ##### [在 Ubuntu 上設定](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [操作](sql-server-linux-availability-group-failover-ha.md)
-#### [為唯讀向外延展建立]()
+#### [僅供讀取級別的建立作業]()
 ##### [設定 AG](sql-server-linux-availability-group-configure-rs.md)
 
 ## [安全性](sql-server-linux-security-overview.md)
