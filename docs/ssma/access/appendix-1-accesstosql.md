@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34834eb1fb04890361c906a03dd059bad7ccd707
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4885ae2592285cdd1e948810de7c1e786afb9134
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="appendix---1-accesstosql"></a>附錄-1 (AccessToSQL)
 快速檢視 SSMA 主控台命令列選項：  
@@ -39,7 +37,6 @@ ms.lasthandoff: 08/02/2017
 |7|-p/securepassword|否|-a/加入 {< server_id > [，...n] &#124; 所有} – c &#124; serverconnection < 伺服器的連接-檔案 > [-v &#124; 變數 < 變數-值-檔案 >] [-o/覆寫]<br /><br />或<br /><br />-a/加入 {< server_id > [，… n] &#124; 所有} – s &#124; 指令碼 < 指令碼檔案 > [-v &#124; 變數 < 變數-值-檔案 >] [-覆寫 o /]<br /><br />– r/移除 {< server_id > [，… n] &#124; 所有}<br /><br />-l/清單<br /><br />– e/匯出 {< 伺服器識別碼 > [，… n] &#124; 所有} < 加密密碼-檔案 ><br /><br />– i / 匯入 {< 伺服器識別碼 > [，… n] &#124; 所有} < 加密密碼的檔案 >|如果指定，這個選項必須不與其他任何選項結合。<br /><br />伺服器識別碼: {string} 的伺服器提供的唯一識別碼<br /><br />伺服器連接檔案： 伺服器定義檔 （serverconnectionfile 或指令碼檔案）。<br /><br />變數值檔案： 它是變數定義檔案，並在伺服器連接檔案中使用。<br /><br />加密密碼 – 檔案： 它是使用使用者指定的複雜密碼加密的伺服器密碼檔案。|  
 |8|-?|否|不適用|不適用|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [執行 SSMA 主控台 (Access)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
-

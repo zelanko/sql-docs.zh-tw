@@ -1,24 +1,22 @@
 ---
 title: "開始使用 SQL Server 中的機器學習 |Microsoft 文件"
 ms.custom: 
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: b61de3dcbe239ec1bffdabc734e8e5d624519df6
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09d6e887a8c64c98a1c3f68c78b07c26da6ffb76
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>開始使用 SQL Server 中的機器學習服務
 
@@ -33,9 +31,9 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 
 + SQL Server 2017
 
-  從 SQL Server 2017 CTP 2.0 中，支援已加入 Python，且名稱已變更至機器學習服務 （資料庫） 以反映支援廣泛的機器學習解決方案。 現在您可以使用 SQL 工具來執行 R 或 Python 程式碼來自動化機器學習工作。 或者，使用 SQL Server 電腦，做為_計算內容_從遠端的開發環境中啟動的工作。
+  從 SQL Server 2017 開始，您現在可以使用 Python 程式碼中 SQL Server。 若要反映更廣泛的支援方案中多個語言 （敬請期待 ！），並在名稱已變更為[!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]。 現在您可以使用 SQL 工具來執行 R 或 Python 程式碼來自動化機器學習工作。 或者，使用 SQL Server 電腦，做為_計算內容_從遠端的開發環境中啟動的工作。
 
-    + [SQL Server 中的 python 架構概觀](python/architecture-overview-sql-server-python.md)
+    + [SQL Server 中的 python 架構概觀](/python/architecture-overview-sql-server-python.md)
     + [設定 SQL Server R 服務或機器學習服務](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016
@@ -49,20 +47,20 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 
 ## <a name="microsoft-machine-learning-server-microsoft-r-server"></a>Microsoft 的機器學習伺服器 (Microsoft R Server)
 
-若要支援企業客戶想要執行分散式、 可調整的機器學習工作，但不需要使用 SQL Server 資料庫引擎，例如要使用整合的 SQL Server 2017 中提供安裝 Microsoft 機器學習伺服器選項SQL 的計算內容。
+若要安裝的選項[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]所提供的 SQL Server 2017 支援企業客戶想要執行分散式、 可調整的機器學習工作，但不需要使用 SQL Server 資料庫引擎，例如要使用 SQL 計算的整合內容。
 
-在 SQL Server 2016 中，使用選項來安裝 Microsoft R Server。
+在 SQL Server 2016 中，使用選項來安裝[!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)]。
   
-  + [Microsoft R Server 簡介 (英文)](https://msdn.microsoft.com/microsoft-r/rserver)
+  + [歡迎使用機器學習伺服器](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
   
-您也可以透過特定平台安裝程式可從 MSDN 安裝 R Server:
+您也可以安裝[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]或[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]透過特定平台安裝程式：
 
-  + [R Server for Windows (英文)](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
-  + [適用於 Linux 的 R 伺服器](https://msdn.microsoft.com/microsoft-r/rserver-install-linux-server)
-  + [Hadoop 的 R 伺服器](https://msdn.microsoft.com/microsoft-r/rserver-install-hadoop)
+  + [在 Windows 上安裝](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+  + [Linux 上安裝](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-linux-install)
+  + [在 Hadoop 上安裝](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-hadoop-install)
 
 > [!IMPORTANT]
-> 如果您想要執行 Python 使用 R 伺服器，請確定安裝最新版本中， **Server 機器學習**，只能透過 SQL Server 2017 安裝程式所提供：
+> 如果您想要執行 Python 使用 R 伺服器，請確定安裝最新版本中， [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]，這是只能透過[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]安裝程式：
 > 
 >    + [設定 Microsoft R Server 或 Server 機器學習](../advanced-analytics/r/create-a-standalone-r-server.md)
 
@@ -82,7 +80,7 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 
 + [機器學習教學課程](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  從這裡開始了解使用 SQL Server 2017 和 SQL Server 2017 的機器學習解決方案找不到的所有資源清單。
+  從這裡開始了解使用機器學習解決方案中找到的所有資源清單[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]或[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]。
 
 ### <a name="r-tutorials"></a>R 教學課程
 
@@ -100,7 +98,7 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 
 + [SQL Server Python 教學課程](../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
-  了解如何在 SQL Server 中執行 Python。 使用 Python 建置模型，並使用它來評分 SQL Server 資料。
+  了解如何在中執行 Python [!INCLUDE[ssnoversion](../includes/ssnoversion.md)]。 使用 Python 建置模型，並使用它來評分 SQL Server 資料。
 
    SQL 開發人員的端對端解決方案提供您要從 SQL Server Management Studio 中執行 Python 程式碼。
 
@@ -127,4 +125,3 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 [開始使用 SQL Server 機器學習服務](../advanced-analytics/r/getting-started-with-sql-server-r-services.md)
 
 [開始使用 Microsoft 機器學習服務伺服器](../advanced-analytics/r/getting-started-with-microsoft-r-server-standalone.md)
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO], preventing
 - preventing errors [ADO]
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72dc8972826c149430203b95c14e6b5153620527
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="anticipating-errors"></a>預期的錯誤
 錯誤預防為至少和錯誤處理一樣重要。 這最後一節包含您的應用程式可以為了讓比較不可能發生的錯誤採取預防措施的簡短清單。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  請確定**資料錄集**物件不超過界限**資料錄集**嘗試移動的記錄指標。 如果您嘗試**MoveNext**時**EOF**為 True 或**MovePrev**時**BOF**為 True 時，會發生錯誤。 如果您執行的任何**移動**方法時同時**EOF**和**BOF**為 True，會產生錯誤。  
   
  也會發生錯誤如果您嘗試執行作業，例如**搜尋**和**尋找**上空**資料錄集**。
-

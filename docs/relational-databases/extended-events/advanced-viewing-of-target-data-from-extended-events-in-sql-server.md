@@ -3,8 +3,11 @@ title: "進階檢視 SQL Server 中擴充事件的目標資料 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/04/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: xevents
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,14 +16,14 @@ caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: 643d3b6f21d5ff42c1117df009f4e08e83793898
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1733064f1503f9a8a0e082835b58f91ff195cd9e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>進階檢視 SQL Server 中擴充事件的目標資料
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 本文說明如何使用 SQL Server Management Studio (SSMS.exe) 的進階功能來檢視豐富詳細資料中擴充事件的目標資料。 本文說明如何︰

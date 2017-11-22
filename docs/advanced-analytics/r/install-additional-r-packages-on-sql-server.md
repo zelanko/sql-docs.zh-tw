@@ -1,27 +1,25 @@
 ---
 title: "SQL Server 上安裝其他的 R 封裝 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/02/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 8c8e95bf2f0715684bb656d2b2de4dd94aea14f8
+ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: a7afdf4230bd27505afff271a6b4782214eedfb3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>SQL Server 上安裝其他的 R 封裝
 
@@ -30,7 +28,8 @@ ms.lasthandoff: 10/10/2017
 > [!IMPORTANT]
 > 加入新封裝的程序需視您正在執行，SQL Server 和工具版本而有所不同。 
 
-**適用於：** SQL Server 2016 R Services、 SQL Server 2017 機器學習服務
+**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="overview-of-package-installation-process"></a>封裝的安裝程序概觀
 
@@ -40,7 +39,9 @@ ms.lasthandoff: 10/10/2017
 
     請務必檢查封裝的相依性，並取得任何可能需要在安裝期間的相關的封裝。 若要準備封裝及其相依性的集合，我們建議[miniCRAN 封裝](#bkmk_packageDependencies)。
 
-3.  封裝安裝方法的相同取決於是否伺服器具有網際網路存取權，並在您的 SQL Server 版本上。 建議的程序如下所示：
+    如果您下載或安裝時發生錯誤，請嘗試不同的鏡像網站。
+
+3.  安裝封裝的方式取決於是否伺服器具有網際網路存取權，您的 SQL Server 版本上。 建議的程序如下所示：
 
     **封裝安裝 SQL Server 2016**
     
@@ -62,13 +63,13 @@ ms.lasthandoff: 10/10/2017
 
 ## <a name="install-new-packages"></a>安裝新的封裝
 
-本節提供下列金鑰封裝安裝案例的詳細程序。 您可以使用的最佳方法取決於這些 factores:
+本節提供金鑰封裝安裝案例的詳細程序。 選擇最佳的方法，取決於：
 
 - 您使用 SQL Server 的版本
 
-- 您是唯一的擁有者的執行個體，或嘗試使用資料庫角色的多個人員 mamaneg 封裝。
+- 無論您是唯一的擁有者的執行個體，或嘗試管理多人使用資料庫角色的封裝。
 
-- 是否安裝一個封裝或多個封裝相依性
+- 是否安裝封裝時或多個封裝相依性
 
 **使用 SQL Server 封裝管理**
 
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/10/2017
 
     [安裝多個封裝從 miniCRAN 儲存機制](#bkmk_minicran)
 
-**使用傳統的 R rools**
+**使用傳統的 R 工具**
 
 如果您使用舊版的 SQL Server R 服務，遵循這些指示使用傳統的 R 工具安裝封裝。 （選擇性） 使用 miniCRAN 準備安裝之封裝的集合。
 
@@ -106,13 +107,13 @@ ms.lasthandoff: 10/10/2017
 
 2. 連接到伺服器使用已安裝新的封裝，使用其中一個支援的資料庫角色，本主題中所述的權限的帳戶： [for SQL Server 的 R 封裝管理](r-package-management-for-sql-server-r-services.md)
 
-3.  將 zip 的檔案包含您想要安裝至伺服器電腦上的資料夾，例如的 R 封裝複製您**使用者**或**文件**資料夾。 從網路磁碟機或用戶端電腦上的資料夾，您無法加入封裝。 如果您已建立的封裝儲存機制使用 miniCRAN，封裝儲存機制的整個複製到伺服器上任何本機資料夾： 亦即，不在網路磁碟機上。
+3.  將 zip 的檔案包含您想要安裝至伺服器電腦上的資料夾，例如的 R 封裝複製您**使用者**或**文件**資料夾。 從網路磁碟機或用戶端電腦上的資料夾，您無法加入封裝。 如果您已建立的封裝儲存機制使用 miniCRAN，封裝儲存機制的整個複製到伺服器上任何本機資料夾： 也就是不在網路磁碟機上。
 
     如果您沒有存取任何伺服器上的資料夾，您可以傳遞的套件內容以二進位格式。 請參閱[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)的範例。
 
 4.  從資料庫，您要使用的封裝，執行[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)陳述式。
 
-    此範例中，我們會假設您的帳戶具有將新的封裝上傳至伺服器，並將它們安裝到資料庫中的共用範圍的權限。
+    此範例中，我們假設您的帳戶具有權限，將新的封裝上傳至伺服器，並安裝他們**共用**資料庫中的範圍。
 
     下列陳述式加入的發行版本[zoo](https://cran.r-project.org/web/packages/zoo/index.html)封裝到目前資料庫內容中，從本機檔案共用。
 
@@ -136,7 +137,7 @@ ms.lasthandoff: 10/10/2017
     library(zoo)'
     ```
 
-    如果成功的話，**訊息**視窗應該報告一則訊息，例如 「 已成功解壓縮封裝 'zoo' 和 MD5 總和檢查 」。 如果已安裝必要的套件，安裝程序就會附加並載入所需的套件。
+    如果成功的話，**訊息**視窗應該報告一則訊息，例如 「 已成功解壓縮封裝 'zoo' 和 MD5 總和檢查 」。 如果已安裝必要的套件，安裝程序然後附加並載入所需的套件。
 
     > [!NOTE]
     > 如果找不到必要的套件，會傳回錯誤: 「 沒有呼叫封裝\<required_package\>"。 
@@ -149,7 +150,7 @@ ms.lasthandoff: 10/10/2017
 
 1. 開始之前，請確定符合這些條件：
 
-    + R 用戶端有 RevoScale 的最新版本。 發行前版本不包含某些封裝管理功能。
+    + 使用最新版的 Microsoft R 用戶端，以包含 RevoScale 的更新。
     + 封裝管理的執行個體和資料庫已啟用。
     + 您有下列其中一個資料庫管理角色的權限。
 
@@ -219,7 +220,7 @@ ms.lasthandoff: 10/10/2017
 
     當系統要求您的鏡像網站，選取對您位置而言方便的任何網站。
 
-    如果目標封裝相依於其他封裝，R 安裝程式就會自動下載相依性，並為您安裝它們。
+    如果目標封裝相依於其他封裝，R 安裝程式會自動下載相依性，並讓您將進行安裝。
 
     **沒有網際網路存取手動或的電腦上安裝套件**
 
@@ -235,7 +236,7 @@ ms.lasthandoff: 10/10/2017
 
 ### <a name="bkmk_minicran"></a>安裝多個封裝從 miniCRAN 儲存機制
 
-如果您要從 miniCRAN 儲存機制安裝套件，整個程序是非常類似於單一 zip 檔案安裝的套件。 不過，而不是上傳 zip 格式在個別的封裝，miniCRAN 儲存機制包含目標套件，以及任何相關的必要的封裝。
+從 miniCRAN 儲存機制安裝套件的整體程序是類似的單一 zip 檔案從安裝套件。 不過，而不是上傳 zip 格式在個別的封裝，miniCRAN 儲存機制包含目標套件，以及任何相關的必要的封裝。
 
 1.  準備 miniCRAN 儲存機制，然後將 zip 壓縮的檔案複製到伺服器上的本機資料夾。
 
@@ -259,7 +260,7 @@ ms.lasthandoff: 10/10/2017
     library(randomForest)'
     ```
 
-    如果成功的話，**訊息**視窗應該報告一則訊息，例如 「 封裝已成功解壓縮 ' randomForest' 和 MD5 總和檢查 」，而且也 「 已完成串連執行 」。
+    如果成功的話，**訊息**視窗應該報告訊息，例如 「 封裝已成功解壓縮 ' randomForest' 和 MD5 總和檢查 」 和 「 已完成串連執行 」。
 
 ## <a name="package-installation-tips"></a>封裝安裝秘訣
 
@@ -267,11 +268,11 @@ ms.lasthandoff: 10/10/2017
 
 ###  <a name="packageVersion"></a>取得正確的封裝版本和格式
 
-有多個來源可取得 R 封裝，中其最廣為人知的是 CRAN 和 Bioconductor。 R 語言的官方網站 (<https://www.r-project.org/>) 會列出許多這些資源。 許多封裝也會發佈到 GitHub，您可以在這裡取得原始程式碼。 不過，可能提供您已由公司中的某人所開發的 R 封裝。
+有多個來源可取得 R 封裝，中其最廣為人知的是 CRAN 和 Bioconductor。 R 語言的官方網站 (<https://www.r-project.org/>) 會列出許多這些資源。 許多封裝會發佈到 GitHub，您可以在這裡取得原始程式碼。 不過，您可能會提供已由公司中的某人所開發的 R 封裝。
 
 不論來源為何，您必須確定您想要安裝的封裝具有二進位格式，以便在 Windows 平台。 否則下載的封裝無法執行 SQL Server 環境中。
 
-您也應該判斷封裝是否與執行 SQL Server 中的 R 版本相容。
+在下載之前，您也應該檢查封裝是否與執行 SQL Server 中的 R 版本相容。
 
 ### <a name="bkmk_zipPreparation"></a>下載為 zip 檔案的套件
 
@@ -287,7 +288,7 @@ ms.lasthandoff: 10/10/2017
 
 此程序會建立套件的本機複本。 然後，您可以安裝套件，或將壓縮的封裝複製到沒有網際網路存取的伺服器。
 
-如需有關壓縮檔格式的內容，以及如何建立 R 套件的詳細資訊，建議您參考此教學課程，您可以從 R 專案網站下載 PDF 格式：[Freidrich Leisch：建立 R 套件 (英文)](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)。
+Zip 檔案格式，以及如何建立 R 封裝的內容的相關詳細資訊，我們建議您可以從 R 專案網站的 PDF 格式下載本教學課程：[建立 R 封裝](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)。
 
 ### <a name="bkmk_packageDependencies"></a>取得封裝的相依性
 
@@ -365,4 +366,3 @@ R 封裝經常會相依於其他的多個封裝，其中有些可能無法使用
 > 僅供 Microsoft R Server R_SERVER 程式庫安裝套件，並無法透過 SQL Server 存取。
 > 
 > 務必使用`R_SERVICES`安裝您想要使用 SQL Server 中的封裝時，程式庫。
-

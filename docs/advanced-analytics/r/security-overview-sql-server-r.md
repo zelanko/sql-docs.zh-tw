@@ -1,39 +1,38 @@
 ---
-title: "安全性概觀 (SQL Server R Services) | Microsoft Docs"
+title: "SQL Server 機器學習和 R 安全性 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/10/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f694cca3286b5f1a9f738a08919f4fe8214fa770
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8388d7c9d22a49a49a1a45a6fa6b479107f9ccae
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="security-overview-sql-server-r-services"></a>安全性概觀 (SQL Server R Services)
+# <a name="security-for-sql-server-machine-learning-and-r"></a>SQL Server 機器學習和 R 的安全性
 
-本主題描述用於將 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 資料庫引擎和相關元件連接到 R 執行階段的整體安全性架構。 以下提供兩個將 R 用於企業環境之常見案例的安全性程序範例：
+本文說明用來連接的整體安全性架構[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]資料庫引擎和 R 執行階段的相關的元件。 在企業環境中使用 R 的這些常見的案例提供的安全性程序的範例：
 
 + 從資料科學用戶端在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 中執行 RevoScaleR 函數
 + 使用預存程序從 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 直接執行 R
 
 ## <a name="security-overview"></a>安全性概觀
 
-A[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]登入或 Windows 使用者帳戶，才能執行 R 指令碼，使用 SQL Server 資料或透過 SQL Server 當成計算內容執行的。 這個需求同時適用於[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]和 SQL Server 2017 機器學習服務。 
+A[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]登入或 Windows 使用者帳戶，才能執行 R 指令碼，使用 SQL Server 資料或透過 SQL Server 當成計算內容執行的。 這個需求同時適用於[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]和 SQL Server 2017 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]。
 
 登入或使用者帳戶識別*安全性主體*，可能需要多個層級的存取權，視 R 指令碼需求而定：
+
 + 其中 R 啟用的資料庫的存取權限
 + 若要從受保護的物件，例如資料表讀取資料的權限
 + 資料表，例如模型，或計分結果寫入新資料的能力
@@ -56,7 +55,7 @@ A[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]登入或 Windows �
 
 因此，從遠端用戶端起始的所有 R 工作必須登入或使用者資訊指定為連接字串的一部分。
 
-## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安全性與 LaunchPad 安全性的互動
+## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>之間的互動[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]安全性和啟動列的安全性
 
 當 R 指令碼是在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 電腦的內容中執行時，[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務會從針對外部處理序所建立的背景工作帳戶集區，取得可用的背景工作帳戶 (本機使用者帳戶)，並使用該背景工作帳戶來執行相關工作。 
 
@@ -66,21 +65,25 @@ A[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]登入或 Windows �
 
 當所有 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 作業都完成之後，系統會將使用者背景工作帳戶標示為可用並返回到集區。
 
-如需 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 的詳細資訊，請參閱 [SQL Server 中支援 R 整合的新元件](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md)。
+如需有關[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]，請參閱[中支援的 R 整合的 SQL Server 元件](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)。
 
-> [!NOTE]
-為了讓 Launchpad 管理背景工作帳戶並執行 R 作業，包含背景工作帳戶的群組 (SQLRUserGroup) 必須有「允許本機登入」權限，否則 R Services 可能無法運作。 根據預設，系統會為所有新的本機使用者授與此權限，但某些組織中可能執行更嚴格的群組原則，而使背景工作帳戶無法連線到 SQL Server 執行 R 作業。  
+### <a name="implied-authentication"></a>隱含驗證
+
+**隱含的驗證**是一詞用於程序的 SQL Server 取得的使用者認證，然後執行 代表使用者，並假設使用者在資料庫中具有正確的權限的所有外部指令碼工作。 隱含的驗證是特別重要，如果 R 指令碼需要 SQL Server 資料庫外部的 ODBC 呼叫。 例如，程式碼可能會從試算表或其他來源擷取的因素較短的清單。
+
+對這類回送的呼叫成功，群組包含的背景工作帳戶，SQLRUserGroup 必須要有 「 允許本機登入 」 權限。 根據預設，此權限提供給所有新的本機使用者，但是在某些組織可能會強制執行更嚴格的群組原則。
+
+![R 的隱含的驗證](media/implied-auth-rsql.png)
 
 ## <a name="security-of-worker-accounts"></a>背景工作帳戶的安全性
 
-外部的 Windows 使用者或背景工作帳戶的有效 SQL 登入的對應無效，只會針對執行 R 指令碼的 SQL 查詢的存留期的存留期。 
+外部的 Windows 使用者或背景工作帳戶的有效 SQL 登入的對應無效，只會針對執行 R 指令碼的 SQL 查詢的存留期的存留期。
 
 來自相同登入的平行查詢會對應到相同的使用者背景工作帳戶。
 
 處理序所使用的目錄是由 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 使用 RLauncher 來管理，且目錄的存取權有所限制。 背景工作帳戶無法存取自身資料夾上層的任何檔案，但它可以讀取、寫入或刪除針對使用 R 指令碼之 SQL 查詢所建立的工作階段工作資料夾下的子項目。
 
-如需變更背景工作帳戶的數目、帳戶名稱或帳戶密碼的詳細資訊，請參閱[修改 SQL Server R Services 的使用者帳戶集區](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md)。
-
+如需如何變更的背景工作帳戶，帳戶名稱或帳戶的密碼數目的詳細資訊，請參閱[修改使用者帳戶集區，SQL Server 機器學習](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)。
 
 ## <a name="security-isolation-for-multiple-external-scripts"></a>多個外部指令碼的安全性隔離
 
@@ -91,5 +94,5 @@ A[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]登入或 Windows �
 如果您是該電腦上的系統管理員，您可以檢視針對每個處理序所建立的目錄。 每個目錄是以其工作階段 GUID 來識別。
 
 ## <a name="see-also"></a>另請參閱
-[架構概觀](../../advanced-analytics/r-services/architecture-overview-sql-server-r.md)
 
+[SQL Server 機器學習架構概觀](../../advanced-analytics/r/architecture-overview-sql-server-r.md)

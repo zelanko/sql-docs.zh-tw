@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc9012023093ad4f2acdf02e66a42d41581469da
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7cc8dbd9eaf1f0cce54d142f775076d58528c4fc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-migration-db2tosql"></a>專案設定 （移轉） (DB2ToSQL)
 [移轉] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何從 DB2 來移轉資料的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -68,4 +66,3 @@ ms.lasthandoff: 08/02/2017
 > [!IMPORTANT]  
 > 當**平行的資料移轉模式**選項設定為**自訂**、 新的專案設定選項**執行緒計數**隨即出現。 它會指定用於資料移轉的執行緒數目。  
   
-

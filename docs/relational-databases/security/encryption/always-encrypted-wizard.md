@@ -8,28 +8,25 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.alwaysencryptedwizard.encryption.f1
 - sql13.swb.alwaysencryptedwizard.f1
 - sql.swb.alwaysencryptedwizard.masterkey.f1
-helpviewer_keywords:
-- Wizard, Always Encrypted
+helpviewer_keywords: Wizard, Always Encrypted
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8d07fe91f365bd274d835d77b22efb8830d09b70
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8322346347568b8bb3bc56b56f363ceb7d6f5cfa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="always-encrypted-wizard"></a>永遠加密精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ ms.lasthandoff: 09/27/2017
  -  
  -1.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的物件總管元件，連接到您的 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
  -  
- -2.  以滑鼠右鍵按一下您的資料庫，指向 工作，然後按一下加密資料行。  
+ -2.  以滑鼠右鍵按一下您的資料庫，指向 [工作]，然後按一下 [加密資料行]。  
  -  
  -## 資料行選取頁面  
  - 找出資料表與資料行，然後針對所選資料行選取加密類型 (確定性或隨機) 和加密金鑰。 若要解密目前加密的資料行，請選取 [純文字] 。 若要旋轉資料行加密金鑰，請選取不同的加密金鑰，精靈即會解密資料行，並以新的金鑰重新加密該資料行。 (雖然 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援加密時態表和記憶體中的資料表，但精靈無法對此進行設定。)  
@@ -81,4 +78,3 @@ ms.lasthandoff: 09/27/2017
  -## 另請參閱  
  - [永遠加密 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
-

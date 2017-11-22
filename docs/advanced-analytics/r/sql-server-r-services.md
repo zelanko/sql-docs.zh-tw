@@ -1,27 +1,23 @@
 ---
 title: "SQL Server 機器學習服務 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
+ms.openlocfilehash: fb770b52f2cacfc527f6bb89955acfbda243c18a
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8c384b7fba553175767aaf7c439207771b31e6b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server 機器學習服務
 
@@ -39,7 +35,7 @@ SQL Server 支援的開放原始碼 R 語言與一組完整的工具和技術，
   
     當您選取這項功能時，擴充功能會安裝 database engine 來支援 R 或 Python 中撰寫的程式碼的執行中。 建立新的服務時，[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]來管理外部執行階段之間的通訊和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。
   
-+ 安裝**Microsoft Machine Learning 伺服器 （獨立）**如果您不需要使用 SQL Server 計算內容作為另一部電腦上。 機器學習伺服器包含相同的機器學習的元件，再加上 mrsdeploy 執行的封裝可延展、 分散式的機器學習工作做為 web 服務。
++ 安裝**Microsoft Machine Learning 伺服器 （獨立）**如果您不需要使用 SQL Server 計算內容作為另一部電腦上。 機器學習伺服器包含相同的機器學習服務元件，加上執行做為 web 服務的可擴充、 分散式的機器學習工作的能力。
   
 +    安裝[Microsoft R 用戶端](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)開發解決方案，其中可以部署到 SQL Server，或在 Windows、 Linux 或是 Hadoop 上電腦學習伺服器的遠端電腦上。
 
@@ -49,7 +45,7 @@ SQL Server 支援的開放原始碼 R 語言與一組完整的工具和技術，
   
     當您選取這項功能時，您會取得執行 R 指令碼當成計算內容中，使用 SQL Server，或是在預存程序中執行 R 指令碼。
   
-+   安裝**Microsoft R Server （獨立）**從 SQL Server 2016 安裝程式來設定您用於 developin R 解決方案的不同電腦上的 R 元件。
++   安裝**Microsoft R Server （獨立）**從 SQL Server 2016 安裝程式，讓您開發或部署 R 解決方案，您可以使用一部電腦上安裝的 R 元件。
 
 
 ## <a name="which-type-of-machine-learning-service-do-i-need"></a>我需要哪些類型的機器學習服務？
@@ -75,4 +71,3 @@ SQL Server 支援的開放原始碼 R 語言與一組完整的工具和技術，
 + [SQL Server R 教學課程](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
     了解如何使用 R 程式碼建立 SQL Server 資料來源，以及如何使用遠端計算內容。 其他以 SQL 開發人員為對象的教學課程會示範如何在 SQL Server 中定型及部署 R 模型。
-

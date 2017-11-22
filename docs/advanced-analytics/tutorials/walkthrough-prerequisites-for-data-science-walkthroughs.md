@@ -1,31 +1,25 @@
 ---
 title: "SQL Server R 的資料科學逐步解說的必要條件 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/23/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 0b0582b8-8843-4787-94a8-2e28bdc04fb2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 127957f5a2838efb9d2dfa2829cb33909c490571
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9d3a579f023a7e6d9805b934edc3f0e9e5ad5e8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>SQL Server R 的資料科學逐步解說的必要條件
 
@@ -35,7 +29,7 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="install-machine-learning-for-sql-server"></a>安裝 SQL Server 的機器學習服務
 
-您必須能夠存取 SQL Server 的執行個體，可以支援 R 安裝，請使用下列其中一項：
+您必須具備支援的 R 安裝的 SQL Server 執行個體的存取。 本逐步解說原來是針對 SQL erver 2016 開發和測試 2017，因此您應該要能使用下列的 SQL Server 版本。 （有一些小差異 RevoScaleR 函數中的版本之間。）
 
 + 機器學習服務 （資料庫） for SQL Server 2017
 + SQL Server 2016 R Services
@@ -43,21 +37,21 @@ ms.lasthandoff: 09/01/2017
 如需詳細資訊，請參閱[設定 SQL Server R 服務 (資料庫內](../r/set-up-sql-server-r-services-in-database.md)。
 
 > [!IMPORTANT]
-> 請務必使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或更新版本。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援 R 整合。不過，您可以使用 SQL 資料庫做為 ODBC 資料來源。
+> SQL Server 版本早於 2016年不支援與 r 整合不過，您可以使用舊版的 SQL 資料庫做為 ODBC 資料來源。
 
 ## <a name="install-an-r-development-environment"></a>安裝 R 開發環境
 
 這個逐步解說中，我們建議您使用 R 開發環境。 以下是一些建議：
 
-- **Visual Studio 的 R 工具**(RTVS) 是一套免費提供 Intellisense、 偵錯，並支援 Microsoft。 您可以使用它與 R Server 和 SQL Server 機器學習服務的外掛程式。 若要下載，請參閱 [適用於 Visual Studio 的 R 工具](https://www.visualstudio.com/features/rtvs-vs.aspx)。
+- **Visual Studio 的 R 工具**(RTVS) 是一套免費提供 Intellisense、 偵錯，並支援 Microsoft。 您可以使用它與 R Server 和 SQL Server 機器學習服務的外掛程式。 若要下載，請參閱 [適用於 Visual Studio 的 R 工具](https://www.visualstudio.com/vs/rtvs/)。
 
-- **Microsoft R Client** 是輕量級開發工具，可支援在 R 中使用 ScaleR 封裝進行開發。 若要取得它，請參閱 [開始使用 Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-get-started)。
+- **Microsoft R 用戶端**是一種輕量型開發工具，支援開發 R 使用 RevoScaleR 封裝中。 若要取得它，請參閱 [開始使用 Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)。
 
 - **RStudio** 是其中一個比較常見的 R 開發環境。 如需詳細資訊，請參閱 [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)。
 
     您無法完成本教學課程中使用的一般安裝 RStudio 或其他環境。您也必須安裝 R 封裝和連線程式庫的 Microsoft R Open。 如需詳細資訊，請參閱 [Set Up a Data Science Client](../r/set-up-a-data-science-client.md)(設定資料科學用戶端)。
 
-- 當您安裝基本的 R 工具 (R.exe，RTerm.exe，RScripts.exe) 也會依預設安裝[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]。 如果您不想要安裝的 IDE，您可以使用這些工具。
+- 當您在 SQL Server 或 R 用戶端安裝 R，預設也會安裝基本的 R 工具 (R.exe，RTerm.exe，RScripts.exe)。 如果您不想要安裝的 IDE，您可以使用這些工具。
 
 ## <a name="get-permissions-on-the-sql-server-instance-and-database"></a>取得 SQL Server 執行個體和資料庫上的權限
 
@@ -78,4 +72,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-lesson"></a>下一課
 
 [準備要使用 PowerShell 的資料](/walkthrough-prepare-the-data.md)
-

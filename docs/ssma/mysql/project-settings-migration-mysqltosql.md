@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e46fb86489ca7e2a1fed33e85f638f99e47770eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ab9b6365d527d2cbd804ab0095021c2f2d9dc2b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-migration-mysqltosql"></a>專案設定 （移轉） (MySQLToSQL)
 [移轉] 頁面的**專案設定**對話方塊包含自訂如何 SSMA 移轉從 MySQL 至 SQL Server 資料的設定。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 08/02/2017
   
 -   若要指定目前的專案中，設定**工具**功能表上，選取**專案設定**，按一下 **一般**左的窗格中，然後再按一下底部**移轉**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ### <a name="bulk-copy"></a>大量複製  
   
@@ -91,4 +89,3 @@ ms.lasthandoff: 08/02/2017
 |**處理錯誤**|指定如何處理移轉的空間資料類型的值中的錯誤。 如果指定了 '取代 NULL'，導致錯誤的所有空間值會取代 NULL。 否則完成沒有替代項目。<br /><br />**預設模式**： 產生錯誤<br /><br />**開放式模式**： 產生錯誤<br /><br />**完整模式**： 產生錯誤|  
 |**值，驗證**|指定如何處理無效的空間值。 如果未指定 ' 再試一次進行有效 '，正在嘗試修改，使其有效的無效值。<br /><br />**預設模式**： 請有效<br /><br />**開放式模式**： 不會變更<br /><br />**完整模式**： 請有效|  
   
-
