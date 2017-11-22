@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 081772fe0e2101a50f1e6f66780a3ac790e9fbcc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 76f31cffc8f947449d6825a6659b1bb22e0c0b1d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>執行 SSMA 主控台 (AccessToSQL)
 Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以執行及控制 SSMA 活動。 這可確保各節詳細說明相同。  
@@ -733,4 +731,3 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
   
 -   如需疑難排解主控台中的問題，請參閱[疑難排解 &#40;AccessToSQL &#41;](../../ssma/access/troubleshooting-accesstosql.md).  
   
-

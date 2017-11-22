@@ -8,26 +8,22 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- "-2"
-helpviewer_keywords:
-- -2 (Database Engine error)
+f1_keywords: "-2"
+helpviewer_keywords: -2 (Database Engine error)
 ms.assetid: f37a7b7d-26e1-4b9e-bcb4-57f7805393d2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b6b67d08a3f8beb88d44499c4b3975d88038feb4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ec2ffdbfa957e281f389a0f4f2d08b03303cbdc7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver-2"></a>MSSQLSERVER_-2
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,4 +54,3 @@ ms.lasthandoff: 06/22/2017
 [設定用戶端通訊協定](~/database-engine/configure-windows/configure-client-protocols.md)  
 [啟用或停用伺服器網路通訊協定](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
-

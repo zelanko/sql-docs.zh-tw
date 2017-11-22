@@ -1,30 +1,26 @@
 ---
 title: "ReadyState 屬性範例 (VBScript) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- ReadyState property [ADO], VBScript example
+dev_langs: VB
+helpviewer_keywords: ReadyState property [ADO], VBScript example
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a3cc3f3ecd687b0a00054e8fd82c24e83d9f7ea6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db0e4d0c450f358f704709bc81a744fd5c092deb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState 屬性範例 (VBScript)
 > [!IMPORTANT]
@@ -114,9 +110,8 @@ body {
 <!-- EndReadyStateVBS -->  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [ReadyState 屬性 (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)
-
 
 

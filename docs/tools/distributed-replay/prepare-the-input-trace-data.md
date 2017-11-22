@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b71de5782de713c1c672c527b0c4f495aa865674
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c56107c8558e61e62a98d670ad7e0e2ede9316aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="prepare-the-input-trace-data"></a>準備輸入追蹤資料
   您必須先從 Distributed Replay 管理工具起始前置處理階段，準備輸入追蹤資料，才能透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  
@@ -63,10 +61,9 @@ ms.lasthandoff: 08/02/2017
 3.  在前置處理階段完成之後，中繼檔案會儲存在控制器工作目錄中。 若要起始事件重新執行階段，您必須以 **replay** 選項執行管理工具。 如需詳細資訊，請參閱 [重新執行追蹤資料](../../tools/distributed-replay/replay-trace-data.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Distributed 的 Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed 的 Replay 需求](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理工具命令列選項 &#40; Distributed 的 Replay 公用程式 &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [設定 Distributed 的 Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
-

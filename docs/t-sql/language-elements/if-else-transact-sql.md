@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IF_TSQL
 - IF
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - IF...ELSE keyword
 - ELSE (IF...ELSE) keyword
 - ELSE keyword
 - IF keyword
 ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 3eca1a794ea4676b8f3922840802ca44791e100d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5ea7d020bc637ff2dda4ba0540de8385e99170cd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +95,7 @@ ELSE
     FROM DimProduct WHERE ProductKey = @productKey);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [開始...結束 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [結束 &#40;開始...結束 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
@@ -107,7 +104,6 @@ ELSE
  [流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; 如果...其他 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
   
   
-
 
 
 

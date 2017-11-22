@@ -1,26 +1,24 @@
 ---
 title: "Distributed Replay 需求 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 11/08/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.workload: Inactive
+ms.workload: ondemand
+ms.openlocfilehash: 68f5121e66e0f91c9c6626dbbc80e9ba6aaaf80e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a014a2de0f3f8540845eb703910890458bc99eca
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay 需求
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能之前，請先考慮本主題所列的各項產品需求。  
@@ -31,16 +29,12 @@ ms.lasthandoff: 08/02/2017
 ### <a name="input-trace-versions"></a>輸入追蹤版本  
  Distributed Replay 支援從下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本收集而來的輸入追蹤資料：  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
-  
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]累計更新 1 及更新版本。 請參閱- [SQL Server 2017 累計更新](http://aka.ms/sql2017cu)。
+-   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
-  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
 -   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
-  
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
-  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]    
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
 ### <a name="input-trace-formats"></a>輸入追蹤格式  
@@ -171,4 +165,3 @@ ms.lasthandoff: 08/02/2017
  [安裝 Distributed Replay - 概觀](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   
-

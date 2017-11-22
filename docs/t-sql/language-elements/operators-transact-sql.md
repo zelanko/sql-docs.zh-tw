@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], about operators
 - operators [Transact-SQL]
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: efd91c897801292e4daf235e47fd91f2452cf476
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 565444ca9c738dfd7ceaff3e3c7be036264d28e5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="operators-transact-sql"></a>運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +40,7 @@ ms.lasthandoff: 09/01/2017
 |[比較運算子](../../t-sql/language-elements/comparison-operators-transact-sql.md)|[字串串連運算子](../../t-sql/language-elements/string-operators-transact-sql.md)|  
 |[複合運算子](../../t-sql/language-elements/compound-operators-transact-sql.md)|[一元運算子](http://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [運算子優先順序 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   
-

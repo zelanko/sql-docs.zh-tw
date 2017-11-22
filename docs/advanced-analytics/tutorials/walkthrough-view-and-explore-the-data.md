@@ -5,26 +5,22 @@ ms.date: 07/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: d3835d6d-e68b-486d-81a0-81b717cc6134
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6b8ca39a05d77a41f5c04f58459bf26cf01daf59
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 3508b4ac9188906a85a272918ae5cabf4628a3eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>檢視及瀏覽的資料，使用 SQL （逐步解說）
 
@@ -75,4 +71,3 @@ ms.lasthandoff: 10/04/2017
 ## <a name="previous-lesson"></a>上一課
 
 [準備要使用 PowerShell 的資料](walkthrough-prepare-the-data.md)
-

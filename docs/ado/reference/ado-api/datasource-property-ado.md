@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset20::DataSource
-helpviewer_keywords:
-- DataSource property [ADO]
+f1_keywords: Recordset20::DataSource
+helpviewer_keywords: DataSource property [ADO]
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c5ce0f95b5d6d874c2ba396a2ec4453184566aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b6003f19993835b937828948658e29cfb271cada
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datasource-property-ado"></a>資料來源屬性 (ADO)
 表示物件，包含表示為資料[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -49,8 +45,7 @@ Set rs.DataSource = myDE      'Name of the object containing an IRowset.
 ```  
   
 ## <a name="applies-to"></a>適用於  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DataMember 屬性](../../../ado/reference/ado-api/datamember-property.md)
-

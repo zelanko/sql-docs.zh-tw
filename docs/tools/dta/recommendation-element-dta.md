@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Recommendation element
+dev_langs: XML
+helpviewer_keywords: Recommendation element
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 88ee6ad381638147b1b19a515fb3c55cdf0a7447
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2d3402eb2554aa2342335b2901206dac1fbcf7a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 元素 (DTA)
   包含屬於使用者指定組態之一部份的假設性索引的相關資訊。  
@@ -54,7 +50,7 @@ ms.lasthandoff: 08/02/2017
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[Table 元素的結構描述 &#40; Dta& &#41;](../../tools/dta/table-element-for-schema-dta.md)|  
+|**父元素**|[結構描述的 Table 元素 &#40;DTA&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
 |**子元素**|[Create 元素 &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 元素。 如需詳細資訊，請參閱＜ [Database Engine Tuning Advisor XML 結構描述](http://go.microsoft.com/fwlink/?linkid=43100)＞。|  
   
 ## <a name="remarks"></a>備註  
@@ -63,8 +59,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>請參閱＜  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

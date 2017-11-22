@@ -8,25 +8,23 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 558113fb68c3868d1a5e09dbe1a6bc9b9a8f29eb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,7 +112,7 @@ ms.lasthandoff: 08/03/2017
   
 **使用 UI 命令產生移轉檢查清單**  
   
-1.  在**物件總管**中，以滑鼠右鍵按一下非系統資料庫的資料庫，按一下 工作，然後按一下產生記憶體內 OLTP 移轉檢查清單。  
+1.  在**物件總管**中，以滑鼠右鍵按一下非系統資料庫的資料庫，按一下 [工作]，然後按一下 [產生記憶體內 OLTP 移轉檢查清單]。  
   
 2.  在 [產生記憶體內 OLTP 移轉檢查清單] 對話方塊中，按一下 [下一步] 巡覽至 [設定檢查清單產生選項] 頁面。 在頁面上執行下列動作。  
   
@@ -183,4 +181,3 @@ ms.lasthandoff: 08/03/2017
  [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
-

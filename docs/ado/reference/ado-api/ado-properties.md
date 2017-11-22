@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 686684010ff1e72f61b971c2504d5634ee28f269
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-properties"></a>ADO 屬性
 |||  
@@ -62,7 +60,7 @@ ms.lasthandoff: 09/09/2017
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|指出目前的位置是否位於資料流結尾。|  
 |[篩選](../../../ado/reference/ado-api/filter-property.md)|指出資料中的篩選**資料錄集**。|  
 |[HelpContext 和說明檔](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|表示說明檔和相關聯的主題**錯誤**物件。<br /><br /> **文字串**傳回的內容識別碼，做為**長**的說明檔主題的值。<br /><br /> **HelpFile**傳回**字串**評估為完全解決的說明檔路徑的值。|  
-|[索引](../../../ado/reference/ado-api/index-property.md)|表示索引的目前作用中的名稱**資料錄集**物件。|  
+|[Index](../../../ado/reference/ado-api/index-property.md)|表示索引的目前作用中的名稱**資料錄集**物件。|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|表示層級的隔離**連接**物件。|  
 |[項目](../../../ado/reference/ado-api/item-property-ado.md)|依名稱或序數數字，指出特定集合的成員。|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|表示為文字行分隔符號使用的二進位字元**資料流**物件。|  
@@ -96,14 +94,14 @@ ms.lasthandoff: 09/09/2017
 |[狀態 （ADO 欄位）](../../../ado/reference/ado-api/status-property-ado-field.md)|表示狀態**欄位**物件。|  
 |[狀態 （ADO 資料錄集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)|指出目前記錄關於批次更新或其他的大量作業的狀態。|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|表示以階層式**資料錄集**物件是否基礎的子記錄的參考 (也就是*章*) 變更，當父資料列變更時。|  
-|[資料流內容](../../../ado/reference/ado-api/stream-property.md)|取得或設定 OLE DB**資料流**物件上從 / **ADOStreamConstruction**物件。|  
+|[Stream 屬性](../../../ado/reference/ado-api/stream-property.md)|取得或設定 OLE DB**資料流**物件上從 / **ADOStreamConstruction**物件。|  
 |[型別](../../../ado/reference/ado-api/type-property-ado.md)|表示作業的類型或資料類型的**參數**，**欄位**，或**屬性**物件。|  
 |[型別 （ADO 資料流）](../../../ado/reference/ado-api/type-property-ado-stream.md)|指示中所包含的資料類型**資料流**（二進位或文字）。|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|指出目前的資料庫中的值**欄位**物件。|  
 |[值](../../../ado/reference/ado-api/value-property-ado.md)|指派給的值會指出**欄位**，**參數**，或**屬性**物件。|  
 |[版本](../../../ado/reference/ado-api/version-property-ado.md)|指示 ADO 版本號碼。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
@@ -112,5 +110,4 @@ ms.lasthandoff: 09/09/2017
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 方法](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)   
- [ADO 物件與介面](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)
-
+ [ADO 物件和介面](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)

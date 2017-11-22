@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Record::raw_GetChildren
 - _Record::GetChildren
-helpviewer_keywords:
-- GetChildren method [ADO]
+helpviewer_keywords: GetChildren method [ADO]
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46f9af9b4cb1b4648acc75389f7d75cccdc46b96
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 84f146c110b50cc3c73329dd72feb26f1ebf3858
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getchildren-method-ado"></a>GetChildren 方法 (ADO)
 傳回[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)其資料列代表集合的子系[記錄](../../../ado/reference/ado-api/record-object-ado.md)。  
@@ -51,5 +48,4 @@ Set recordset = record.GetChildren
   
 |||  
 |-|-|  
-|[記錄物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|
-
+|[Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|

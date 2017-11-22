@@ -8,22 +8,19 @@ ms.service:
 ms.component: import-export
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.importflatfile.f1
+f1_keywords: sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d27099048dc1d89d94489898a501ebec4d39ff36
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 3180456162da02ecef897fd340663500792d4785
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>將一般檔案匯入 SQL 精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +41,7 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 
 1. 開啟 [SQL Server Management Studio]。
 2. 連線至 SQL Server 資料庫引擎或 localhost 的執行個體。
-3. 展開 資料庫，在資料庫上按一下滑鼠右鍵 (下方範例中的測試)，指向 工作，然後按一下匯入資料 上方的 匯入一般檔案。
+3. 展開 [資料庫]，在資料庫上按一下滑鼠右鍵 (下方範例中的測試)，指向 [工作]，然後按一下 [匯入資料] 上方的 [匯入一般檔案]。
 
 ![精靈功能表](media/import-flat-file-wizard/importffmenu.png)
 
@@ -98,5 +95,4 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 - **深入了解匯入其他來源。** 若想要匯入一般檔案之外的項目，請參閱 [ SQL Server 匯入及匯出精靈](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 - **深入了解連線至一般檔案來源。** 若想要尋找連線至一般檔案來源的詳細資訊，請參閱[連線至一般檔案資料來源](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard)。
 - **深入了解 PROSE。** 若想尋找此精靈使用之智慧型架構的概觀，請參閱 [PROSE SDK](https://microsoft.github.io/prose/)。
-
 

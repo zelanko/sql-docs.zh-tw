@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STPolyFromWKB_TSQL
 - STPolyFromWKB (geometry Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STPolyFromWKB (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STPolyFromWKB (geometry Data Type)
 ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 35c12adb3d1505dc0d1201f0432b6352d2bb6531
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 30351047adfb97874a48c12f7d7d6221ff301d66
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,9 +66,8 @@ SET @g = geometry::STPolyFromWKB(0x010300000001000000040000000000000000001440000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [OGC 靜態幾何方法](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
-
 

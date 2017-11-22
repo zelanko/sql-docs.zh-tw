@@ -5,32 +5,30 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 165728c1100ce98d166a2ae73ee092baae9f0417
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 588c2840a7a15c730be9880dc5aea020a6de6e11
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-metadata--sybasetosql"></a>儲存中繼資料 (SybaseToSQL)
 **儲存中繼資料**對話方塊會提示您儲存之前，先載入 SSMA 專案的中繼資料。 這樣，您有完整的專案檔，您可以離線使用，並傳送給其他人，例如技術支援人員。  
   
 若要存取**儲存中繼資料**對話方塊中的，儲存專案。 如果遺漏任何中繼資料，將會顯示 SSMA**儲存中繼資料** 對話方塊。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **名稱**  
 在專案中的每個資料庫的名稱。  
   
@@ -48,7 +46,6 @@ SSMA 會將視專案載入中繼資料。 當您瀏覽中繼資料，並將結�
 **儲存**  
 儲存專案，並載入選取的資料庫有遺失的中繼資料的中繼資料。  
   
-**[取消]**  
+**取消**  
 取消儲存作業。 遺漏中繼資料不會載入專案。  
   
-

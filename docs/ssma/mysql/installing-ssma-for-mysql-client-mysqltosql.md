@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Installing client,Licensing
+helpviewer_keywords: Installing client,Licensing
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2ceca393e8c7dc37d181364129d64d5f69bf0791
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eafef1f4a4f16f704b76b31aa77d3c93f84d5821
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>安裝的 SSMA for MySQL 用戶端 (MySQLToSQL)
 SSMA for MySQL 用戶端包含的程式檔案，執行下列工作：  
@@ -42,7 +39,7 @@ SSMA for MySQL 用戶端包含的程式檔案，執行下列工作：
   
 本主題提供的安裝必要條件和安裝 SSMA for MySQL 用戶端的指示。  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>必要條件  
 SSMA for MySQL 被為了搭配 MySQL 4.1 或更新版本以及所有版本的 SQL Server 2005、 SQL Server 2008、 SQL Server 2012、 SQL Server 2014、 SQL Server 2016 和 Azure SQL DB。  
   
 SSMA 安裝之前，請確定電腦符合下列需求：  
@@ -87,7 +84,6 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
   
 64 位元 Windows 電腦上已在 C:\Microsoft SQL Server 移轉小幫手的 MySQL 安裝產品。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deleting subscription views [Master Data Services]
 - subscription views [Master Data Services], deleting
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a58292478c1e3f2ba07c83f08c837753908baa0f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: c20248b853839aab73fb1fcb098531579ebf0d99
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>刪除訂閱檢視 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除不再需要的訂閱檢視。 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中刪除訂閱檢視會從 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中移除該檢視。 您也可以編輯訂閱檢視。  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/07/2017
  [概觀：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
   
   
-

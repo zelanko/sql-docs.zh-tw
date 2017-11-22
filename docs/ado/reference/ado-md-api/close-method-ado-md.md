@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Close
 - Cellset::Close
-helpviewer_keywords:
-- Close method [ADO MD]
+helpviewer_keywords: Close method [ADO MD]
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 187d525cf0795457c87c540d68b62c03661e56b8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 55e17b5446e881c1671068c99f8ea03f13dcf82f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="close-method-ado-md"></a>Close 方法 (ADO MD)
 關閉開啟的資料格集。  
@@ -47,13 +44,12 @@ Cellset.Close
  您可以稍後呼叫[開啟](../../../ado/reference/ado-md-api/open-method-ado-md.md)方法，以重新開啟**資料格集**使用相同或不同來源字串。 雖然**資料格集**物件已關閉，擷取任何屬性或呼叫參考的基礎資料的任何方法或中繼資料會產生錯誤。  
   
 ## <a name="applies-to"></a>適用於  
- [資料格集物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [Cellset 物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [軸物件 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [資料格物件 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [成員物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)   
  [Open 方法 (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)   
  [位置物件 (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)   
  [State 屬性 (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)
-

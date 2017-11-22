@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - WORK_TSQL
 - WORK
 - COMMIT WORK
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ending transactions [SQL Server]
 - transactions [SQL Server], ending
 - marking end of transactions [SQL Server]
 - COMMIT WORK statement
 ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2301ba70dbe7ee92a8eb7eac2c3aefed0471e909
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5f3bdf224b83f93f655ae1d324bbb654debf498e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="commit-work-transact-sql"></a>COMMIT WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ COMMIT [ WORK ]
 ## <a name="remarks"></a>備註  
  這個陳述式的功能與 COMMIT TRANSACTION 相同，不過 COMMIT TRANSACTION 接受使用者自訂的交易名稱。 這個 COMMIT 語法無論指定或不指定選擇性的關鍵字 WORK，皆與 SQL-92 相容。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
@@ -65,4 +62,3 @@ COMMIT [ WORK ]
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   
-

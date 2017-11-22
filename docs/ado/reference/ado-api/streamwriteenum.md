@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- StreamWriteEnum
-helpviewer_keywords:
-- StreamWriteEnum enumeration [ADO]
+f1_keywords: StreamWriteEnum
+helpviewer_keywords: StreamWriteEnum enumeration [ADO]
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2a392db272931e62e1f24c1e1f07a9310891e65
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 586920fc4f7673f9c5e25c92f252013920acaa8d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 指定是否要將分行符號附加至字串寫入[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
@@ -43,4 +39,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>適用於  
  [WriteText 方法](../../../ado/reference/ado-api/writetext-method.md)
-

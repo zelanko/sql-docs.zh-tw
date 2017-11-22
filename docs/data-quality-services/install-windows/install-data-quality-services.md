@@ -8,21 +8,19 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.openlocfilehash: a9b01209583c35c9ee6be01193f78c9577c20bac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 6162b52153b29fbe1069f62361fa89eac234dc1c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-data-quality-services"></a>安裝 Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) 包含以下兩個元件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**。  
@@ -106,7 +104,7 @@ ms.lasthandoff: 09/12/2017
   
     -   **dqs_kb_operator**  
   
-     根據預設，如果您的使用者帳戶是系統管理員 (sysadmin) 固定伺服器角色的成員，即使沒有將任何 DQS 角色授與您的使用者帳戶，還是可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登入 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS 安全](../../data-quality-services/dqs-security.md)＞。  
+     根據預設，如果您的使用者帳戶是系統管理員 (sysadmin) 固定伺服器角色的成員，即使沒有將任何 DQS 角色授與您的使用者帳戶，還是可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登入 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS Security](../../data-quality-services/dqs-security.md)＞。  
   
      如需詳細資訊，請參閱 [對使用者授與 DQS 角色](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md)。  
   
@@ -130,4 +128,3 @@ ms.lasthandoff: 09/12/2017
  [針對 DQS 中的安裝和組態問題進行疑難排解](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   
-

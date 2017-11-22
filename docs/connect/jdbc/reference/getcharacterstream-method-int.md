@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getCharacterStream (int)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getCharacterStream (int)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4f9f230d-be4c-469a-b3dc-f24531429aae
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f345dc0fe0c52b4c70d280fbbd6c893095dbf36c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5eb24756136f5bf78097cbe21ebe03fe909014a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcharacterstream-method-int"></a>getCharacterStream 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,10 +54,9 @@ public java.io.Reader getCharacterStream(int columnIndex)
   
  這個方法只會讀取[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Unicode 字元資料類型，例如 nchar、 nvarchar、 nvarchar （max） 和 ntext。 所有其他資料型別 (包括 ASCII 字元型別) 將擲回例外狀況。 若要讀取 ASCII 資料型別，使用[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [getCharacterStream 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

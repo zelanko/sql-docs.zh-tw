@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6953025addea83b247e8f1c03fef4bdd24d27147
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1145e4168e41f2014b95e7315a17dd00d764c386
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL 及 SQL Server 字元對應設定 (MySQLToSQL)
 字元集 (Charset) 可以指定之 MySQL 字元資料類型、 運算式和常值。  
@@ -143,4 +141,3 @@ ms.lasthandoff: 08/02/2017
 > -   在字元集對應 MySQL 資料庫與資料庫、 類別和物件節點層級上的目標資料庫中的預設值在每個資料行的根目錄以外的層級上的特定字元集**目標資料型別**應該 '繼承'。  
 > -   在方格中，值**繼承**後置字元為 '(CHAR/VARCHAR)' 或 '(NCHAR/NVARCHAR)' 根據哪個值繼承自父系由這個特定的字元集。  
   
-

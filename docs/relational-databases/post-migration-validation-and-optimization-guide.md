@@ -8,25 +8,23 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - post-migration validation and optimization
 - guide, post-migration validation and optimization
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: pelopes
 ms.author: harinid
 manager: 
 ms.workload: Inactive
+ms.openlocfilehash: 09020e8a41d4d378bf8f2f8aadc7a0c1f4996f01
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -173,4 +171,3 @@ ms.lasthandoff: 08/03/2017
 [資料表變數和資料列估計 - 第 1 部分](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
 [資料表變數和資料列估計 - 第 2 部分](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
 [執行計畫快取與重複使用](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)
-

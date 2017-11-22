@@ -5,28 +5,25 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - reserved words [MDX]
 - Multidimensional Expressions [Analysis Services], reserved words
 - MDX [Analysis Services], reserved words
 ms.assetid: 8d059a8c-d578-4713-a615-2404d94ce32d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 5f25b4718ec55d6e7d41c626cc6f0f499cf49d4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8bec4b29379b4ad31c8da4074786e95dc058ad10
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-reserved-words"></a>MDX 保留字
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,9 +72,9 @@ ms.lasthandoff: 08/02/2017
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|COUNT|INDEX|PROPERTY|VALUE|  
+|COUNT|INDEX|PROPERTY|Value|  
 |COUSIN|INTERSECT|QTD|VAR|  
-|COVARIANCE|IS|RANK|VARIANCE|  
+|COVARIANCE|IS|RANK|variance|  
 |COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
 |CREATE|ISEMPTY|RELATIVE|VARP|  
 |CREATEPROPERTYSET|ISGENERATION|ROLLUPCHILDREN|VISUAL|  
@@ -90,9 +87,8 @@ ms.lasthandoff: 08/02/2017
 |DEFAULT_MEMBER|LASTSIBLING|SELF_AND_AFTER||  
 |DEFAULTMEMBER|LEAD|SELF_AND_BEFORE||  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [保留的關鍵字 &#40;MDX 語法 &#41;](../mdx/reserved-keywords-mdx-syntax.md)   
  [MDX 語言參考 &#40;MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
-

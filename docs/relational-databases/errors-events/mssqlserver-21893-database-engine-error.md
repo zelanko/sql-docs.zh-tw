@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 21893 (Database Engine error)
+helpviewer_keywords: 21893 (Database Engine error)
 ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c4bd7053dc90563f163b2e53ee96d8bb72aa1b46
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 048170f35458690fae297ed6ced66c1d913411ab
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver21893"></a>MSSQLSERVER_21893
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,4 +46,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="user-action"></a>使用者動作  
 請在每個識別訂閱者的重新導向發行者上執行 **sp_addlinkedserver**，將它們新增為遠端伺服器。 然後，請執行 **sp_serveroption** 以設定伺服器的訂閱者位元。  
   
-

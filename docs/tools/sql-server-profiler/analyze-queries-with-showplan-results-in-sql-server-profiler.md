@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Showplan results
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 0f43310dfd52210d23bae3a34f22b52845a41706
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢
   您可以將 Showplan 事件類別加入至追蹤定義中，讓 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 蒐集查詢計畫資訊並顯示在追蹤中。 您也可以從追蹤所收集的其他事件中擷取顯示計畫事件，並將這些顯示計畫事件儲存在個別的 XML 檔案中。  
@@ -56,4 +54,3 @@ ms.lasthandoff: 10/24/2017
  [Performance 事件類別目錄](../../relational-databases/event-classes/performance-event-category.md)  
   
   
-

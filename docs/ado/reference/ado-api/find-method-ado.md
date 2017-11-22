@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
 - Recordset15::Find
-helpviewer_keywords:
-- Find method [ADO]
+helpviewer_keywords: Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ee7c7feb630040fce10311335f414213bba4ada
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜尋[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)符合指定之準則的資料列。 （選擇性） 您可以指定搜尋開始的資料列及從起始的資料列位移的方向。 如果符合條件時，所找到的記錄; 上設定目前資料列位置否則，會結束 （或開始） 的設定位置**資料錄集**。  
@@ -72,11 +69,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 >  如果您呼叫**尋找**資料錄集和目前資料錄集中的位置上的方法是在最後一筆記錄或檔案結尾 (EOF)，您將找不到任何項目。 您需要呼叫**MoveFirst**方法，以加入資料錄集的開頭設定目前的位置/資料指標。  
   
 ## <a name="applies-to"></a>適用於  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [尋找方法範例 (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Index 屬性](../../../ado/reference/ado-api/index-property.md)   
  [最佳化屬性動態 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [搜尋方法](../../../ado/reference/ado-api/seek-method.md)
-
+ [Seek 方法](../../../ado/reference/ado-api/seek-method.md)

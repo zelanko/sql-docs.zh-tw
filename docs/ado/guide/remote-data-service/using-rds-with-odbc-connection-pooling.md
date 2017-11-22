@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connection pooling in RDS [ADO]
+helpviewer_keywords: connection pooling in RDS [ADO]
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e06c138bc3eec4c9ece503f98b0d4951ffdaea6a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26342c07b2efe10a98a1cef4ff258d7fe5715094
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS 使用 ODBC 連接共用
 如果您使用 ODBC 資料來源，您可以使用連接共用選項在網際網路資訊服務 (IIS) 以達到高效能處理的用戶端負載。 連接共用是資源管理員的連線，維護常用的連接上開啟的狀態。  
@@ -131,9 +128,8 @@ ms.lasthandoff: 09/09/2017
   
 5.  按一下 [確定]，然後確定要結束此公用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 
 

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 86c0c5ac8c417a68ecde02805a7c724166c2e8a6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4e4d8d23a4f9ffb09ca7f2048ec429752502da8b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和模式屬性範例 （VC + +）
 這個範例會使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性可開啟的獨佔連接，而[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)屬性可開啟所執行的交易中的其他交易隔離。  
@@ -251,7 +248,6 @@ void PrintComError(_com_error &e) {
 **Onions、 Leeks 和大蒜： 烹飪 trad_cook 地中海-機密**  
 **Buckingham 明這些 trad_cook 五十個年份**  
 **壽司，任何人？-trad_cook**   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [IsolationLevel 屬性](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [模式屬性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
-
+ [Mode 屬性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

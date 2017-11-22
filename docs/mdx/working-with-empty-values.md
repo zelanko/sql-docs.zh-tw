@@ -5,27 +5,24 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - expressions [MDX], empty values
 - empty values [MDX]
 ms.assetid: 6338fb85-f513-4c3e-a774-4fd7c6986a91
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 977f5378647d306ce14bc01709b6229bead48929
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: aef26d6b575ca340111054824fe024e81c6f7115
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-empty-values"></a>使用空白值
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 -   [IsEmpty](../mdx/isempty-mdx.md)函式會傳回**TRUE**如果且只有在函式中指定的 tuple 所識別的資料格是空的。 否則，函數會傳回**FALSE**。  
   
     > [!NOTE]  
-    >  **IsEmpty** 函式無法判斷成員運算式是否會傳回 null 值。 若要判斷是否要從運算式傳回 null 成員，請使用[IS](../mdx/is-mdx.md)運算子。  
+    >  **IsEmpty**函式無法判斷成員運算式是否會傳回 null 值。 若要判斷是否要從運算式傳回 null 成員，請使用[IS](../mdx/is-mdx.md)運算子。  
   
 -   當空白資料格值是任一個數值運算子 (+、-、*、/) 的運算元時，如果其他運算元不是空值，就會將空白資料格值視為零。 如果兩個運算元都是空的，則數值運算子會傳回空白資料格值。  
   
@@ -154,10 +151,9 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |EMPTY|EMPTY|  
 |FALSE|TRUE|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
  [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
  [運算式 &#40;MDX &#41;](../mdx/expressions-mdx.md)  
   
   
-

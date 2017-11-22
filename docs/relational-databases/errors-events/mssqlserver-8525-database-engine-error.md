@@ -8,26 +8,22 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- "8525"
-helpviewer_keywords:
-- 8525 (Database Engine error)
+f1_keywords: "8525"
+helpviewer_keywords: 8525 (Database Engine error)
 ms.assetid: 297867c1-691e-4d6b-a3be-a7575015ecfa
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3b465c4e4c7a7484413f93aa2bb547e9685297bd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9a573b27b2d0a86a2e6a5d6634005f463b888c59
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver8525"></a>MSSQLSERVER_8525
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,4 +57,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="user-action"></a>使用者動作  
 在應用程式編列到分散式交易之後，應用程式必須明確脫離該分散式交易或編列到另一個分散式交易。 這個動作會隱含脫離先前編列的交易。 如需脫離或編列到分散式交易的正確語法，請參閱應用程式的程式設計介面手冊。  
   
-

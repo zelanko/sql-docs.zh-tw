@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -18,22 +17,21 @@ helpviewer_keywords:
 - Sybase Console,Script File Validation
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da140d71612c135152befbf2527f016903a2d97a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ef30f1ff45422bbe034c1fe815753ebb7e2543df
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-script-files-sybasetosql"></a>建立指令碼檔案 (SybaseToSQL)
 第一個步驟之前啟動 SSMA 主控台應用程式。 若要建立指令碼檔案，並在必要時建立的變數值的檔案和伺服器連接檔案。  
   
-指令碼檔案可以分成三個區段，viz..,:  
+指令碼檔案可以分成三個區段，viz。。，：  
   
 1.  **config:**可讓使用者設定的主控台應用程式的組態參數。  
   
@@ -75,7 +73,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <…All commands…>  
@@ -112,7 +110,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <migrate-data>  
@@ -145,7 +143,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <!-- Connect to target database -->  
@@ -178,7 +176,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <!--synchronization-->  
@@ -189,7 +187,7 @@ ms.lasthandoff: 08/02/2017
   
     </synchronize-target>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <!--data migration-->  
@@ -224,7 +222,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -277,7 +275,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <…All commands…>  
@@ -319,7 +317,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <…All commands…>  
@@ -408,7 +406,6 @@ Sybase 資料庫中特定資料表的一般資料移轉，例如，如下的階�
 ## <a name="next-step"></a>下一個步驟  
 在操作主控台的下一個步驟是[建立變數值的檔案 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [建立變數值的檔案 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   
-

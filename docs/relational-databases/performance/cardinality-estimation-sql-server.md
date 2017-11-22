@@ -8,8 +8,7 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b1c53b09fe118de3a90c78bd1393da90a915385b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -167,7 +165,7 @@ go
   
 6.  在結果窗格的 [結果] 索引標籤上，按兩下包含 XML 格式統計資料的資料格。 圖形查詢計劃隨即顯示。  
   
-7.  以滑鼠右鍵按一下圖形查詢計劃中的第一個方塊，然後按一下屬性。  
+7.  以滑鼠右鍵按一下圖形查詢計劃中的第一個方塊，然後按一下 [屬性]。  
   
 8.  為了在稍後比較不同的組態，請記下下列屬性的值：  
   
@@ -223,7 +221,7 @@ go
   
 - 執行 **sp_query_store_force_plan**。  
   
-- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展開您的 [查詢存放區] 節點，以滑鼠右鍵按一下 [Top Resource Consuming Nodes] (資源耗用量排名在前的節點)，然後按一下 「View Top Resource Consuming Nodes」 (檢視資源耗用量排名在前的節點)。 這會顯示標示為 **[強制執行計畫]** 和 **[取消強制執行計畫]** 的按鈕。  
+- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展開您的 [查詢存放區] 節點，以滑鼠右鍵按一下 [Top Resource Consuming Nodes] (資源耗用量排名在前的節點)，然後按一下 [View Top Resource Consuming Nodes] (檢視資源耗用量排名在前的節點)。 這會顯示標示為 **[強制執行計畫]** 和 **[取消強制執行計畫]** 的按鈕。  
   
  如需查詢存放區的詳細資訊，請參閱 [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。  
   
@@ -277,4 +275,3 @@ SELECT s.ticket, s.customer, r.store
  [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)  
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)
-

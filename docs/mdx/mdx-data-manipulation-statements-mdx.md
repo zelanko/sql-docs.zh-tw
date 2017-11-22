@@ -5,28 +5,25 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - MDX [Analysis Services], data manipulation
 - data manipulation [MDX]
 - Multidimensional Expressions [Analysis Services], data manipulation
 ms.assetid: 320fbb16-f502-4ff8-a768-20851764a66d
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 81d4e10f24ef6a7b10f011b6f545b46dde5facf2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ff5233d3d31ec27bcb49aa702efc591c99d4333
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX 資料操作陳述式 (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +40,9 @@ ms.lasthandoff: 08/02/2017
 |[SELECT 陳述式 &#40;MDX &#41;](../mdx/mdx-data-manipulation-select.md)|擷取指定 Cube 的資料。|  
 |[UPDATE CUBE 陳述式 &#40;MDX &#41;](../mdx/mdx-data-manipulation-update-cube.md)|更新 Cube 內指定的分葉或非分葉資料格的值，選擇性地跨相依分葉資料格，配置指定的非分葉頁資料格的值。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 陳述式參考 &#40;MDX &#41;](../mdx/mdx-statement-reference-mdx.md)   
  [MDX 資料定義陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [MDX 指令碼陳述式 &#40;MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   
-

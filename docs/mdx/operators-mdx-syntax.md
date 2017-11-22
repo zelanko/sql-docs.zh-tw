@@ -5,29 +5,26 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], operators
 - operators [MDX]
 - precedence [MDX]
 - MDX [Analysis Services], operators
 ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: fd52d724dc1b51943019339bacdc56ea334492cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e931d63ae6e46b1828e940535434f5f5a10b0481
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="operators-mdx-syntax"></a>運算子 (MDX 語法)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.lasthandoff: 08/02/2017
 |測試條件的真實性，例如 AND、OR、NOT 或 XOR。|[位元運算子](../mdx/bitwise-operators.md)|  
 |針對另一個值或運算式來比較某值。|[比較運算子](../mdx/comparison-operators.md)|  
 |永久或暫時將兩個字串結合成一個字串。|[串連運算子](../mdx/concatenation-operators.md)|  
-|永久或暫時將兩個集合運算式結合成單一集合。|[設定運算子](../mdx/set-operators.md)|  
+|永久或暫時將兩個集合運算式結合成單一集合。|[集合運算子](../mdx/set-operators.md)|  
 |在一個運算元上執行運算。|[一元運算子](../mdx/unary-operators.md)|  
   
 > [!NOTE]  
@@ -111,9 +108,8 @@ ms.lasthandoff: 08/02/2017
 |Tuple|成員|\<tuple >.item(0)|  
 |Tuple|純量|\<tuple >.value|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
  [MDX 語法元素 &#40;MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
-

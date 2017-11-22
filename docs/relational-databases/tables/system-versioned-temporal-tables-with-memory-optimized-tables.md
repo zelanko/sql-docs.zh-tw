@@ -1,10 +1,13 @@
 ---
 title: "系統版本設定時態表與記憶體最佳化資料表 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 321212aae6e3438a24903293a6b0ab923eb1d456
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 55972445fa42c914b9b01fcb05d059caa5a562dd
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系統版本設定時態表與記憶體最佳化資料表
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 之系統版本設定時態表的設計，是為了在利用記憶體內部 OLTP 工作負載所收集的最上層資料需要 [資料稽核與時間點分析](http://msdn.microsoft.com/library/mt631669.aspx) 時，提供符合成本效益的解決方案。 它們提供高交易處理能力、無鎖定同時並行處理，儲存大量歷程記錄資料並可輕鬆查詢的功能。  
   

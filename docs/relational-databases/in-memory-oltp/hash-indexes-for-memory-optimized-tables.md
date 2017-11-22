@@ -8,22 +8,20 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e9fc5c574cc4fee841cfc6598623ec20ae26c504
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b1acbcd97dfabfa5d23fa82e55d4eb01101233aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>記憶體最佳化資料表的雜湊索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -440,4 +438,3 @@ OLTP 工作負載專注於個別的資料列。 完整的資料表掃描通常�
 雜湊索引需要 WHERE 子句來指定索引鍵中每個資料行的等號比較測試。 否則雜湊索引對最佳化工具沒有助益。  
   
 如果 WHERE 子句只指定索引鍵的第二個資料行，則兩種索引類型皆無用。  
-

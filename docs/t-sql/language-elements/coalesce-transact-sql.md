@@ -3,37 +3,37 @@ title: "聯合 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COALESCE
 - COALESCE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - expressions [SQL Server], nonnull
 - COALESCE function
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f9cb11cb46ab14ab7b1efee597371799882f0e55
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d597c347b0b608b69c5d435fbf58b2779d462a32
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 評估順序的引數，並傳回一開始未評估的第一個運算式的目前值`NULL`。 例如，`SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');`傳回第三個值，因為第三個值不是 null 的第一個值。 
   
@@ -69,7 +69,7 @@ COALESCE ( expression [ ,...n ] )
   
  這表示輸入的值 (*expression1*， *expression2*， *expressionN*等等) 而評估多次。 此外，為了符合 SQL 標準，包含子查詢的值運算式會視為不具決定性，且會評估子查詢兩次。 不論是哪一種情況，第一次評估和後續評估之間都可能傳回不同的結果。  
   
- 例如，執行程式碼 `COALESCE((subquery), 1)` 時，會評估子查詢兩次。 因此，您會根據查詢的隔離等級取得不同的結果。 例如，程式碼可以傳回`NULL`下`READ COMMITTED`多使用者環境中的隔離等級。 若要確保傳回的結果穩定，請使用`SNAPSHOT ISOLATION`隔離層級或取代`COALESE`與`ISNULL`函式。 或者，您可以撰寫查詢，以將子查詢推入子選擇，如下列範例所示：  
+ 例如，執行程式碼 `COALESCE((subquery), 1)` 時，會評估子查詢兩次。 因此，您會根據查詢的隔離等級取得不同的結果。 例如，程式碼可以傳回`NULL`下`READ COMMITTED`多使用者環境中的隔離等級。 若要確保傳回的結果穩定，請使用`SNAPSHOT ISOLATION`隔離層級或取代`COALESCE`與`ISNULL`函式。 或者，您可以撰寫查詢，以將子查詢推入子選擇，如下列範例所示：  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -297,9 +297,8 @@ ORDER BY TotalSalary;
  120000.00
  ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ISNULL &#40;TRANSACT-SQL &#41;](../../t-sql/functions/isnull-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-

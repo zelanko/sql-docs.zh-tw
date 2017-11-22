@@ -2,9 +2,12 @@
 title: "SQL Server 使用意見收集的本機稽核 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - dbe-security
@@ -17,13 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d6274b8a4a335482b24ab3e5df2ab9baeac61188
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 48de69218e71bb9688e6d7a3d0669b43baefe150
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用意見收集的本機稽核
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 ## <a name="introduction"></a>簡介
 
 Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能可能會收集　電腦或裝置的相關資訊 (「標準電腦資訊」) 並將此資訊傳送至 Microsoft。 [SQL Server 使用意見收集](http://support.microsoft.com/kb/3153756) 的本機稽核元件會將服務收集的資料寫入至指定的資料夾，代表將傳送給 Microsoft 的資料 (記錄)。 本機稽核的目的是要讓客戶看到 Microsoft 以此功能收集的所有資料，以用於相容性、法規或隱私權驗證的理由。  

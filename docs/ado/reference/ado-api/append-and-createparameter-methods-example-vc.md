@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CreateParameter method [ADO], VC++ example
 - Append method [ADO], VC++ example
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3b1ec823387e26a900ecfaaff620f11f3a3caf1e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13623de4d33c81db9a392ba739f9352bca17ff1d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>附加和 CreateParameter 方法範例 （VC + +）
 這個範例會使用[附加](../../../ado/reference/ado-api/append-method-ado.md)和[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)執行預存程序的輸入參數的方法。  
@@ -210,7 +207,6 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)
-

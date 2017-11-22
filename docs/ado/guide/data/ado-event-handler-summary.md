@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e7a241c21719e2181f8dbbce11742a273d8552d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0cd8bf7593fb1e8c770edde83e697f5b5be1d1d3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 連接和資料錄集的事件
 兩個 ADO 物件可以引發事件：[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件和[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 **ConnectionEvent**系列相關作業上**連接**物件，而**RecordsetEvent**系列相關作業上**資料錄集**物件。
@@ -52,6 +50,5 @@ ms.lasthandoff: 09/09/2017
 |[WillChangeRecord RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**資料列變更管理**— 這項目中目前資料列的通知**資料錄集**將會變更，或已變更。|
 |[WillChangeRecordset RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**資料錄集變更管理**— 也就是在目前的通知**資料錄集**將會變更，或已變更。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
  [ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO 事件](../../../ado/reference/ado-api/ado-events.md)[事件參數](../../../ado/guide/data/event-parameters.md)[事件處理常式如何一起運作](../../../ado/guide/data/how-event-handlers-work-together.md)[的事件類型](../../../ado/guide/data/types-of-events.md)
-

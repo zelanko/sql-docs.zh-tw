@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5f24dc8d6d08e69e144a41a96dcff1c7c81b0299
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 2cf28fa3c0dec8010e1e021150deb11869583164
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>使用者及群組的權限功能區域 (主資料管理員)
   在 [使用者及群組的權限] 功能區域中，管理員可以將權限授與功能區域、屬性 (在 [模型] 索引標籤上) 及成員 (在 [階層成員] 索引標籤上)， 並可以解決重疊的權限，以決定使用者對每個個別屬性值的權限。  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/07/2017
  [主資料管理員 Web 應用程式](../master-data-services/master-data-manager-web-application.md)  
   
   
-

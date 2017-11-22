@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5c5dba74939ac94e9ce87477ec0952e56c4439c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eb5ded86bf30a942aaece3f7d1404df781c24112
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>連接到 MySQL (MySQLToSQL)
 使用**連接到 MySQL**對話方塊連接到您想要移轉的 MySQL 資料庫。  
@@ -78,4 +76,3 @@ ms.lasthandoff: 08/02/2017
 > -   **確定**按鈕已啟用時未提供必要的資訊。 如果任一檔案路徑無效，將會維持停用 [確定] 按鈕。  
 > -   **取消**按鈕關閉對話方塊和**關閉**SSL 選項，從主要的連線表單。  
   
-

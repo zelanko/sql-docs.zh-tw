@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="osql-utility"></a>osql 公用程式
   **osql** 公用程式可讓您輸入 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式、系統程序和指令碼檔案。 這個公用程式利用 ODBC 來與伺服器通訊。  
@@ -194,7 +192,7 @@ osql -E -q "select name, object_id from %table%"
  它也會將預設的 DOS ERRORLEVEL 值設為 -1。  
   
 > [!NOTE]  
->   **-n** ， **-O**和**-D**不再支援的選項**osql**。  
+>  **-n** ， **-O**和**-D**不再支援的選項**osql**。  
   
 ## <a name="remarks"></a>備註  
  **osql** 公用程式會在已設定此處所列之區分大小寫選項的情況下，直接從作業系統中啟動。 啟動 **osql**後，其會接受 SQL 陳述式並以互動方式傳送至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 結果會格式化，顯示在畫面中 (**stdout**)。 使用 QUIT 或 EXIT 來結束 **osql**。  
@@ -346,4 +344,3 @@ GO
  [RAISERROR &#40;TRANSACT-SQL &#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Error
-helpviewer_keywords:
-- error object [ADO]
+f1_keywords: Error
+helpviewer_keywords: error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c866f3df4ca51d935fee22327a6196f88635a4ea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a283d7d40140e46668dc704196316a4a52c1fdbf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-object"></a>Error 物件
 包含關於涉及提供者的單一作業相關的資料存取錯誤的詳細資料。  
@@ -62,12 +58,11 @@ ms.lasthandoff: 09/09/2017
   
  本章節包含下列主題。  
   
--   [錯誤物件屬性、 方法和事件](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
+-   [Error 物件屬性、方法和事件](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [描述、 HelpContext、 說明檔案、 NativeError、 數字、 來源和 SQLState 屬性範例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [描述、 HelpContext、 說明檔案、 NativeError、 數字、 來源和 SQLState 屬性範例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [錯誤集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

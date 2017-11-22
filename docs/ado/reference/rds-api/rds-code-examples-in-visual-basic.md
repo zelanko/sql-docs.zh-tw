@@ -1,31 +1,28 @@
 ---
 title: "RDS 程式碼在 Visual Basic 中的範例 |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Visual Basic RDS examples [ADO]
 - RDS samples [ADO], Visual Basic
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e2a9da3a0c458b36fc679d6bb300f7f30a189763
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6cb09dac252035372f67aafaf72768c3aa32bdf0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>RDS 在 Visual Basic 中的程式碼範例
 > [!IMPORTANT]
@@ -41,6 +38,5 @@ ms.lasthandoff: 09/09/2017
 -   [處理常式屬性範例](../../../ado/reference/rds-api/handler-property-example-vb.md)  
   
 -   [InternetTimeout 屬性範例](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)
-
 
 

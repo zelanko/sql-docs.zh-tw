@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainlist.f1
+f1_keywords: sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f77595ccf1426d3b1d076f3d6cb7a8b456827ee4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="domain-management-domain-list"></a>定義域管理：定義域清單
   此主題描述 **(DQS) 中** [定義域管理] [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 頁面上定義域清單中的控制項。 使用此窗格可選取執行管理作業所在的定義域。 相同的窗格會用於 **[定義域管理]** 頁面上的所有索引標籤式頁面。  
@@ -63,4 +60,3 @@ ms.lasthandoff: 09/09/2017
  將定義域匯出成 .dqs 檔案。 此命令會顯示 **[匯出到資料檔]** 對話方塊。 若要使用此命令，請按一下頁面上方功能表列中的 **[匯出]** 功能表，或是以滑鼠右鍵按一下定義域清單窗格。 如需相關資訊，請參閱 [將定義域匯出成 .dqs 檔案](../data-quality-services/export-a-domain-to-a-dqs-file.md)。  
   
   
-

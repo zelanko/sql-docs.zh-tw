@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fea86b408c80a0165ddfae0899df4fa072839163
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6d969ae607f15876c21271d2721ed3f33c6949f3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 的遠端服務提供者概觀
 Microsoft OLE DB 遠端服務提供者可讓用戶端電腦上的本機使用者叫用遠端電腦上的資料提供者。 如果您在遠端電腦上的本機使用者一樣，請指定遠端電腦的資料提供者參數。 然後指定遠端服務提供者用來存取遠端電腦的參數。 然後，您可以如同是本機使用者存取遠端電腦。
@@ -98,6 +96,5 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
  [OLE DB 的遠端服務提供者的概觀](http://msdn.microsoft.com/en-us/4083b72f-68c4-4252-b366-abb70db5ca2b)
-

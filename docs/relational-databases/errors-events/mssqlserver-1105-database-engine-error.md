@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 1105 (Database Engine error)
+helpviewer_keywords: 1105 (Database Engine error)
 ms.assetid: e7f4ad02-8c7f-4bb9-9781-2c86253f2138
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6351998ecebd4a63c6fff509cb535f6107247513
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 28cb37ebdca0e3bb0078c591a78ff099ac44c5a7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver1105"></a>MSSQLSERVER_1105
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,4 +55,3 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 > 當索引位於數個檔案時，則當其中一個檔案已滿時，**ALTER INDEX REORGANIZE** 會傳回錯誤 1105。 當程序嘗試將列移至已滿的檔案時，會封鎖此重組的程序。 若要解決此限制，請執行 **ALTER INDEX REBUILD** 而不是 **ALTER INDEX REORGANIZE**，或是為已滿的檔案增加檔案成長限制。  
   
-

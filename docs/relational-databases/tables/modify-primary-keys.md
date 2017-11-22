@@ -8,25 +8,23 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - modifying primary keys
 - primary keys [SQL Server], modifying
 ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e3c601f497bd6abf4a27a6ce8dd5f0762687526
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ee0f0825c66c10ba5412a2b5d8ffc3db23077970
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modify-primary-keys"></a>修改主索引鍵
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -77,4 +75,3 @@ ms.lasthandoff: 06/22/2017
  若要使用 Transact-SQL 來修改 PRIMARY KEY 條件約束，您必須先刪除現有的 PRIMARY KEY 條件約束，然後以新的定義來重新建立。 如需相關資訊，請參閱 [Delete Primary Keys](../../relational-databases/tables/delete-primary-keys.md) 及 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)。  
   
 ###  <a name="TsqlExample"></a>  
-

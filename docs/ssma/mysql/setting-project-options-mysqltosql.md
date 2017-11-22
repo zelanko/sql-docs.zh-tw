@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Setting project options,configuration options
+helpviewer_keywords: Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4b5c32983e341aa831de0a1752c744fa29252528
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 005889e4a4fc813819f6133d7a5a7b2a5223b861
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-project-options-mysqltosql"></a>設定專案選項 (MySQLToSQL)
 每個 SSMA 專案，您可以設定專案層級的選項。 這些選項會指定物件的轉換方式、 如何移轉資料和來源資料類型如何對應至目標資料類型。  您將物件轉換成 SQL Server 或 SQL Azure，或將資料移轉至 SQL Server 或 SQL Azure 之前，請確認組態選項都適用於專案。  
@@ -51,7 +48,7 @@ SSMA 會有五種專案設定：
   
 -   開放式  
   
--   [完整]  
+-   完整  
   
 -   Custom  
   
@@ -86,7 +83,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     3.  若要指定自訂設定，請選取或輸入新的設定或值。  
   
-3.  按一下  **確定** 儲存設定。  
+3.  按一下**確定**儲存設定。  
   
 您也可以自訂目前專案的設定。 取得目前的專案檔儲存設定。  
   
@@ -100,7 +97,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     2.  若要指定自訂的模式，請選取**自訂**從**模式**下拉式清單方塊。 然後選取適當的專案設定。  
   
-3.  按一下  **確定** 儲存設定。  
+3.  按一下**確定**儲存設定。  
   
 ## <a name="next-step"></a>下一個步驟  
 移轉的下一個步驟取決於您專案的需求：  
@@ -109,7 +106,6 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
 -   否則，您可以將 MySQL 資料庫物件定義轉換成 SQL Server 或 SQL Azure 物件定義。 如需詳細資訊，請參閱[轉換 MySQL 資料庫 &#40;MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [對應 MySQL 及 SQL Server 資料類型 &#40;MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
-

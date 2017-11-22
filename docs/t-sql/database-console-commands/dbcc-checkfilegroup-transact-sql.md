@@ -1,13 +1,14 @@
 ---
 title: "DBCC CHECKFILEGROUP (TRANSACT-SQL) |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/16/2017
+ms.custom: 
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKFILEGROUP_TSQL
 - DBCC CHECKFILEGROUP
 - CHECKFILEGROUP
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - DBCC CHECKFILEGROUP statement
 - database objects [SQL Server], checking
@@ -26,20 +26,19 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3ee32ac764afd0e350fe094eb8e18a24589026e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c6e5335bd6685e1c547361d931938134becaac84
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]檢查配置和結構完整性的所有資料表和索引檢視表中指定的檔案群組的目前資料庫。
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]檢查配置和結構完整性的所有資料表和索引檢視表中指定的檔案群組的目前資料庫。
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
@@ -230,7 +229,7 @@ DBCC CHECKFILEGROUP (1)
 WITH ESTIMATEONLY;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [FILEGROUP_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/filegroup-id-transact-sql.md)  
 [sp_helpfile &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)  
@@ -241,4 +240,3 @@ WITH ESTIMATEONLY;
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)
   
   
-

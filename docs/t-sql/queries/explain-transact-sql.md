@@ -8,22 +8,20 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: af61ec5c670bdc48a3f661080983fac3e7263014
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="explain-transact-sql"></a>說明 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -125,7 +123,7 @@ GO
   
 1.  使用中輸出出現**說明**SSDT 中，索引標籤上**工具**功能表上，選取**選項**。  
   
-2.  展開**文字編輯器**區段中，展開**XML**，然後按一下**一般**。  
+2.  展開**文字編輯器**區段中，展開**XML**，然後按一下 **一般**。  
   
 3.  在**顯示**區域中，核取**行號**。  
   
@@ -310,5 +308,4 @@ GO
 -   行 136 啟動作業 9。 行 137 至 140： 所有節點上，卸除暫存資料表**TEMP_ID_16894**。  
   
   
-
 

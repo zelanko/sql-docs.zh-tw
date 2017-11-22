@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Dimensions
 - CubeDef::Dimensions
-helpviewer_keywords:
-- Dimensions collection [ADO MD]
+helpviewer_keywords: Dimensions collection [ADO MD]
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a9cf53e6f085ccf336cabf502c55fe9db8beea1d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e8ed53180b29f3983db76b529d999fc865626cd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensions-collection-ado-md"></a>維度集合 (ADO MD)
 包含[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)構成 cube 物件。  
@@ -47,8 +44,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/dimensions-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [目錄 (VB) 範例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [CubeDef 物件 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
- [維度物件 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)
-
+ [Dimension 物件 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - NumericScale property [ADO], VC++ example
 - Precision property [ADO], VC++ example
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 56b6c51dba3bb8c02f90c1d0af485fd8d150049b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 791fac2fa238cd7e6e9b0d07f5dc5b3e1734d5c1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 和有效位數屬性範例 （VC + +）
 這個範例會使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[精確度](../../../ado/reference/ado-api/precision-property-ado.md)要顯示的數值小數位數和有效位數中的欄位屬性***折扣***資料表***Pubs***資料庫。  
@@ -141,7 +138,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [NumericScale 屬性 (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [有效位數屬性 (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
-
+ [Precision 屬性 (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

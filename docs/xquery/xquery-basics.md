@@ -5,28 +5,23 @@ ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
-helpviewer_keywords:
-- XQuery, about XQuery
+applies_to: SQL Server
+dev_langs: XML
+helpviewer_keywords: XQuery, about XQuery
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e391180ff27492ae72ab8a73c1aa8b7d090c69c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c8e6d9adeadc648dbfe1019fe270d13f26b2e40
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xquery-basics"></a>XQuery 基本概念
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +53,7 @@ ms.lasthandoff: 09/01/2017
  [XQuery 與靜態類型](../xquery/xquery-and-static-typing.md)  
  描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中做為靜態類型語言的 XQuery  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   
-

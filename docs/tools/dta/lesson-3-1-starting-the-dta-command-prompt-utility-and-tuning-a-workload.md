@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 02d4e4276953d0e9ff54ac49fda434cb2509e7f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f18a532488aaa0b40ec976ae01c96a4405d3b26f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>課程 3-1-啟動 dta 命令提示字元公用程式和微調工作負載
 這項工作會帶您逐步啟動 **dta** 公用程式、檢視它的說明，再從命令提示字元之下，利用它來微調工作負載。 它會使用您在 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) 的 [微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)練習中所建立的 MyScript.sql 工作負載。  
@@ -76,4 +72,3 @@ ms.lasthandoff: 08/02/2017
   
   
   
-

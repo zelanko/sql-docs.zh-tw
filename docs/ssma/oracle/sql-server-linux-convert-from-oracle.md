@@ -9,12 +9,11 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 95ac209f19c58f959156c127bede8263af079984
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: d49a98dd9268a2ea532b0b960bb0740580ccee69
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>將 Oracle 結構描述移轉至 SQL Server 2017 on Linux 與 SQL Server 移轉小幫手
 
@@ -138,4 +137,3 @@ SSMA for Oracle 不使用預設的 Oracle 範例結構描述。 若要啟用 HR 
 
 > [!div class="nextstepaction"]
 >[SQL Server 移轉小幫手的文件](../sql-server-migration-assistant.md)
-

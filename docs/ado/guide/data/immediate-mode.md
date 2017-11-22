@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 714cbcae65121a92f8a38bbcf93fbb472ada5573
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 072e6f71aca74f4690f26b90887d475a955e3041
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="immediate-mode"></a>即時模式
 即時模式就是作用中時**LockType**屬性設定為**Adlockreadonly**或**Locktype**。 在即時模式中，記錄的變更會傳播到資料來源為您宣告工作的資料列上完成藉由呼叫**更新**方法。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
  如果您要加入新的資料列，當您呼叫**CancelUpdate**方法中，目前的資料列變成資料列之前的目前**AddNew**呼叫。  
   
  如果您有不變更目前的資料列，或加入新的資料列，則呼叫**CancelUpdate**方法會產生錯誤。
-

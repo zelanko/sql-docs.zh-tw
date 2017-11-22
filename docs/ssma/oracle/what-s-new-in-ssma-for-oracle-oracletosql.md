@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
 ms.openlocfilehash: 9e1b0d59ec958bdd5abc254ce289df88ea80e04f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) 中最新消息
 本主題列出每個版本中的 Oracle 變更 SSMA。  
@@ -206,4 +204,3 @@ SSMA for Oracle 的 2010 年 7 月發行版本包含下列變更：
   
 ## <a name="april-2007"></a>2007 年 4 月  
 2007 年 4 月版的 SSMA for Oracle 是最早的版本。
-

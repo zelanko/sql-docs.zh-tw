@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 802 (Database Engine error)
+helpviewer_keywords: 802 (Database Engine error)
 ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 83a4a02b0977f3a1b9feec0ad720aef6728cb906
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 229bf928d06e606bb91332968f313202ab54d92b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver802---database-engine-error"></a>MSSQLSERVER_802 - Database Engine 錯誤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,4 +78,3 @@ ms.lasthandoff: 06/22/2017
   
 如果仍繼續發生該問題，您必須進一步研究，而且可能必須降低工作負載。  
   
-
