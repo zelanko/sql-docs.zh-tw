@@ -42,7 +42,7 @@
 ## [sys.dm_db_uncontained_entities](sys-dm-db-uncontained-entities-transact-sql.md)  
 ## [sys.dm_db_wait_stats (Azure SQL Database)](sys-dm-db-wait-stats-azure-sql-database.md)  
 ## [sys.dm_operation_status (Azure SQL Database)](sys-dm-operation-status-azure-sql-database.md)  
-## [sys.dm_database_copies （SQL Azure 資料庫）](sys-dm-database-copies-azure-sql-database.md)  
+## [sys.dm_database_copies (Azure SQL Database)](sys-dm-database-copies-azure-sql-database.md)  
 ## [sys.dm_db_resource_stats (Azure SQL Database)](sys-dm-db-resource-stats-azure-sql-database.md)  
 
 # 資料庫鏡像
@@ -84,7 +84,7 @@
 ## [sys.dm_exec_requests](sys-dm-exec-requests-transact-sql.md)  
 ## [sys.dm_exec_session_wait_stats](sys-dm-exec-session-wait-stats-transact-sql.md)  
 ## [sys.dm_exec_sessions](sys-dm-exec-sessions-transact-sql.md)  
-## [sys.dm_exec_sql_text (）](sys-dm-exec-sql-text-transact-sql.md)  
+## [sys.dm_exec_sql_text](sys-dm-exec-sql-text-transact-sql.md)  
 ## [sys.dm_exec_text_query_plan](sys-dm-exec-text-query-plan-transact-sql.md)  
 ## [sys.dm_exec_trigger_stats](sys-dm-exec-trigger-stats-transact-sql.md)  
 ## [sys.dm_exec_valid_use_hints](sys-dm-exec-valid-use-hints-transact-sql.md)  
@@ -93,7 +93,7 @@
 ## [sys.dm_external_script_requests](sys-dm-external-script-requests.md)
 
 # [擴充事件](extended-events-dynamic-management-views.md)  
-## [sys.dm_xe_database_sessions，以查看 (Azure SQL Database)](sys-dm-xe-database-sessions-azure-sql-database.md)  
+## [sys.dm_xe_database_sessions (Azure SQL Database)](sys-dm-xe-database-sessions-azure-sql-database.md)  
 ## [sys.dm_xe_database_session_targets (Azure SQL Database)](sys-dm-xe-database-session-targets-azure-sql-database.md)  
 ## [sys.dm_xe_database_session_object_columns (Azure SQL Database)](sys-dm-xe-database-session-object-columns-azure-sql-database.md)  
 ## [sys.dm_xe_database_session_events (Azure SQL Database)](sys-dm-xe-database-session-events-azure-sql-database.md)  
@@ -108,13 +108,13 @@
 ## [sys.dm_xe_session_targets](sys-dm-xe-session-targets-transact-sql.md)  
 ## [sys.dm_xe_sessions](sys-dm-xe-sessions-transact-sql.md)  
 
-# [Filestream 和 FileTable](filestream-and-filetable-dynamic-management-views-transact-sql.md)  
+# [檔案資料流與 FileTable](filestream-and-filetable-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_filestream_file_io_handles](sys-dm-filestream-file-io-handles-transact-sql.md)  
 ## [sys.dm_filestream_file_io_requests](sys-dm-filestream-file-io-requests-transact-sql.md)  
 ## [sys.dm_filestream_non_transacted_handles](sys-dm-filestream-non-transacted-handles-transact-sql.md)  
 
-# [全文檢索搜尋和語意搜尋](full-text-and-semantic-search-dynamic-management-views-functions.md)  
-## [遇到了 sys.dm_fts_active_catalogs](sys-dm-fts-active-catalogs-transact-sql.md)  
+# [全文檢索搜尋及語意搜尋](full-text-and-semantic-search-dynamic-management-views-functions.md)  
+## [sys.dm_fts_active_catalogs](sys-dm-fts-active-catalogs-transact-sql.md)  
 ## [sys.dm_fts_fdhosts](sys-dm-fts-fdhosts-transact-sql.md)  
 ## [sys.dm_fts_index_keywords](sys-dm-fts-index-keywords-transact-sql.md)  
 ## [sys.dm_fts_index_keywords_by_document](sys-dm-fts-index-keywords-by-document-transact-sql.md)  
@@ -128,7 +128,7 @@
 ## [sys.dm_fts_population_ranges](sys-dm-fts-population-ranges-transact-sql.md)  
 ## [sys.dm_fts_semantic_similarity_population](sys-dm-fts-semantic-similarity-population-transact-sql.md)  
 
-# [地理複寫 (Azure SQL Database)](geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+# [異地複寫 (Azure SQL Database)](geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
 ## [sys.geo_replication_links (Azure SQL Database)](sys-geo-replication-links-azure-sql-database.md)  
 ## [sys.dm_geo_replication_link_status (Azure SQL Database)](sys-dm-geo-replication-link-status-azure-sql-database.md)  
 ## [sys.dm_continuous_copy_status (Azure SQL Database)](sys-dm-continuous-copy-status-azure-sql-database.md)  
@@ -145,7 +145,7 @@
 ## [sys.dm_db_missing_index_groups](sys-dm-db-missing-index-groups-transact-sql.md)  
 ## [sys.dm_db_missing_index_group_stats](sys-dm-db-missing-index-group-stats-transact-sql.md)
 
-# [我 O](i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
+# [I O](i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
 ## [sys.dm_io_backup_tapes](sys-dm-io-backup-tapes-transact-sql.md)  
 ## [sys.dm_io_cluster_shared_drives](sys-dm-io-cluster-shared-drives-transact-sql.md)  
 ## [sys.dm_io_pending_io_requests](sys-dm-io-pending-io-requests-transact-sql.md)  
@@ -193,7 +193,7 @@
 ## [sys.dm_resource_governor_resource_pool_volumes](sys-dm-resource-governor-resource-pool-volumes-transact-sql.md)  
 ## [sys.dm_resource_governor_workload_groups](sys-dm-resource-governor-workload-groups-transact-sql.md)  
 
-# [安全性相關](security-related-dynamic-management-views-and-functions-transact-sql.md)  
+# [與安全性相關](security-related-dynamic-management-views-and-functions-transact-sql.md)  
 ## [sys.dm_audit_actions](sys-dm-audit-actions-transact-sql.md)  
 ## [sys.dm_audit_class_type_map](sys-dm-audit-class-type-map-transact-sql.md)  
 ## [sys.dm_cryptographic_provider_algorithms](sys-dm-cryptographic-provider-algorithms-transact-sql.md)  
@@ -216,7 +216,7 @@
 
 # 空間資料
 ## [sys.dm_db_objects_disabled_on_compatibility_level_change](spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md)  
-# [SQL 資料倉儲和 Parallel Data Warehouse](sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+# [SQL 資料倉儲與平行處理資料倉儲](sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 ## [sys.dm_pdw_component_health_active_alerts](sys-dm-pdw-component-health-active-alerts-transact-sql.md)  
 ## [sys.dm_pdw_component_health_alerts](sys-dm-pdw-component-health-alerts-transact-sql.md)  
 ## [sys.dm_pdw_component_health_status](sys-dm-pdw-component-health-status-transact-sql.md)  
@@ -254,7 +254,7 @@
 ## [sys.dm_os_cluster_properties](sys-dm-os-cluster-properties-transact-sql.md)  
 ## [sys.dm_os_dispatcher_pools](sys-dm-os-dispatcher-pools-transact-sql.md)  
 ## [sys.dm_os_host_info](sys-dm-os-host-info-transact-sql.md)  
-## [s](sys-dm-os-hosts-transact-sql.md)  
+## [sys.dm_os_hosts](sys-dm-os-hosts-transact-sql.md)  
 ## [sys.dm_os_latch_stats](sys-dm-os-latch-stats-transact-sql.md)  
 ## [sys.dm_os_loaded_modules](sys-dm-os-loaded-modules-transact-sql.md)  
 ## [sys.dm_os_memory_brokers](sys-dm-os-memory-brokers-transact-sql.md)  

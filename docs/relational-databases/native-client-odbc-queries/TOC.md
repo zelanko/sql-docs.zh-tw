@@ -4,7 +4,7 @@
 
 # [配置陳述式控制代碼](allocating-a-statement-handle.md)
 # [建構 SQL 陳述式 (ODBC)](constructing-an-sql-statement-odbc.md)
-# [資料指標建構 SQL 陳述式](constructing-sql-statements-for-cursors.md)
+# [建構資料指標的 SQL 陳述式](constructing-sql-statements-for-cursors.md)
 # [釋放陳述式控制代碼](freeing-a-statement-handle.md)
-# [使用陳述式參數的繫結參數](using-statement-parameters-binding-parameters.md)
+# [使用陳述式參數 - 繫結參數](using-statement-parameters-binding-parameters.md)
 # [使用陳述式參數](using-statement-parameters.md)

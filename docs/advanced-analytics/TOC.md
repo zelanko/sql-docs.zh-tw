@@ -153,12 +153,11 @@
 ### [Machine Learning 服務的進階組態選項](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [SQL Server 中 R 執行階段的安全性考量](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [修改 SQL Server Machine Learning 服務的使用者帳戶集區](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [設定及管理機器學習服務延伸模組](r/configure-and-manage-advanced-analytics-extensions.md)
 
 ### [使用 Web 服務部署及取用模型](operationalization-with-mrsdeploy.md)
 ### [管理及監視機器學習服務方案](r/managing-and-monitoring-r-solutions.md)
 ### [Machine Learning 服務的資源管理](r/resource-governance-for-r-services.md)
-### [建立 R 的資源集區](r/how-to-create-a-resource-pool-for-r.md)
+### [建立機器學習的資源集區](r/how-to-create-a-resource-pool-for-r.md)
 ### [Machine Learning 服務的擴充事件](r/extended-events-for-sql-server-r-services.md)
 
 ### [Machine Learning 服務的 DMV](r/dmvs-for-sql-server-r-services.md)
@@ -180,7 +179,7 @@
 ### [將 R 新增至現有的 Azure 虛擬機器](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [使用 sqlBindR.exe 升級執行個體](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [從命令列安裝 R Server](r/install-microsoft-r-server-from-the-command-line.md)
-### [佈建資料科學虛擬機器](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [佈建企業資料科學虛擬機器](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [設定資料科學工具](r/setup-or-configure-r-tools.md)
 ### [設定資料科學用戶端](r/set-up-a-data-science-client.md)
 

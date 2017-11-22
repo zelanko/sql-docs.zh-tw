@@ -3,4 +3,4 @@
 # [建立資料來源的連接](establishing-a-connection-to-a-data-source.md)
 # [執行命令](executing-a-command.md)
 # [處理結果](processing-results.md)
-# [使用 OUTPUT 子句，以在 SQL Server Native Client OLE DB](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)
+# [在 SQL Server Native Client 中使用 OUTPUT 子句搭配 OLE DB](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)

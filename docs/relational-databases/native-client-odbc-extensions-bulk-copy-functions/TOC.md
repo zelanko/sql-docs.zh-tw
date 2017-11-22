@@ -1,4 +1,4 @@
-# [SQL Server 驅動程式延伸模組-大量複製函數](sql-server-driver-extensions-bulk-copy-functions.md)
+# [SQL Server 驅動程式延伸模組 - 大量複製函式](sql-server-driver-extensions-bulk-copy-functions.md)
 
 # [bcp_batch](bcp-batch.md)
 # [bcp_bind](bcp-bind.md)

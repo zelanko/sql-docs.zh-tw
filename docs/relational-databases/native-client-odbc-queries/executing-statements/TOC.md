@@ -1,6 +1,6 @@
 # [執行陳述式 (ODBC)](executing-statements-odbc.md)
-# [批次的陳述式](batches-of-statements.md)
+# [陳述式的批次](batches-of-statements.md)
 # [直接執行](direct-execution.md)
-# [ISO 選項的效果](effects-of-iso-options.md)
+# [ISO 選項的作用](effects-of-iso-options.md)
 # [備妥的執行](prepared-execution.md)
 # [程序](procedures.md)

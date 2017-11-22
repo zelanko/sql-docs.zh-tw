@@ -1,5 +1,5 @@
 
-# [SQL Server Native Client OLE DB 提供者中的錯誤](errors.md)
+# [SQL Server Native Client OLE DB 提供者的錯誤](errors.md)
 
 # [錯誤介面中的資訊](information-in-error-interfaces.md)
 # [擷取錯誤資訊](retrieving-error-information.md)

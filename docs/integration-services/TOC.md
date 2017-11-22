@@ -28,6 +28,8 @@
 ## [連線到 Azure 上的 SSIS 目錄](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [在 Azure 上排程套件執行](lift-shift/ssis-azure-schedule-packages.md)
 ## [使用 Windows 驗證連線到資料來源](lift-shift/ssis-azure-connect-with-windows-auth.md)
+## [連接到檔案及檔案共用](lift-shift/ssis-azure-files-file-shares.md)
+
 # [安裝或升級](../integration-services/install-windows/install-integration-services.md)
 
 # [開發與管理工具](integration-services-ssis-development-and-management-tools.md)
@@ -169,3 +171,13 @@
 #### [課程 3-1 - 複製部署套件組合](lesson-3-1-copying-the-deployment-bundle.md)
 #### [課程 3-2 - 執行套件安裝精靈](lesson-3-2-running-the-package-installation-wizard.md)
 #### [課程 3-3 - 測試部署的套件](lesson-3-3-testing-the-deployed-packages.md)
+
+# 資源
+## 追蹤部落格
+### [SSIS 小組部落格](https://blogs.msdn.microsoft.com/ssis/)
+## 取得說明
+### [MSDN 上的 SSIS 論壇](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [Stack Overflow 上的 SSIS 標記](http://stackoverflow.com/questions/tagged/ssis)  
+## 提供意見
+### [Microsoft Connect (英文)](https://connect.microsoft.com/SQLServer/Feedback)  
+## [在您的電腦上取得文件](../sql-server/sql-server-help-installation.md)
