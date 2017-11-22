@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Password Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Password Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Password element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Password element
 ms.assetid: ee756b01-fb08-4a9a-8c2a-7c04af0f8658
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8f52ccd25125e8c469fb38528270083e53803197
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d83c0cccfaf1c4a50b2c10efead1f923012e6e0d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="password-element-assl"></a>Password 元素 (ASSL)
   包含的使用者帳戶的密碼[ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md)項目。  
@@ -69,9 +64,8 @@ ms.lasthandoff: 09/01/2017
   
  只有伺服器管理員角色的成員[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體可以提供空白值**密碼**項目  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DataSourceImpersonationInfo 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

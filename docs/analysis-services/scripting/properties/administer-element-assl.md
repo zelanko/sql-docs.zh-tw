@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Administer Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Administer Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Administer
-helpviewer_keywords:
-- Administer element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Administer
+helpviewer_keywords: Administer element
 ms.assetid: 52924cd6-6176-47c8-ab17-4ee0e0ce42b1
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: de42ea2bc2782f03aa31b875f8a6a6c3758dcb12
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38f477ef873f841698755561f14740433b6e9cfa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administer-element-assl"></a>Administer 元素 (ASSL)
   指出相關聯的權限是否包含管理權[資料庫](../../../analysis-services/scripting/objects/database-element-assl.md)項目。  
@@ -71,10 +65,9 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**管理**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DatabasePermission>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Permission 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)   
  [Role 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

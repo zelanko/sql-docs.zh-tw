@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Connection15::CursorLocation
 - Recordset15::CursorLocation
-helpviewer_keywords:
-- CursorLocation property [ADO]
+helpviewer_keywords: CursorLocation property [ADO]
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dd17fab34b0534e87eb63de88bee6a113563ebbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6679a7a8a83f954039587776e5e668bd5ed05365
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 屬性 (ADO)
 指出資料指標服務的位置。  
@@ -53,8 +50,7 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
+|[Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>另請參閱  
- [附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

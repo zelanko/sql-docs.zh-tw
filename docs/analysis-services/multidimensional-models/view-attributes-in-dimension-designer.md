@@ -20,17 +20,16 @@ helpviewer_keywords:
 - formats [Analysis Services], Attribute pane
 - modifying Attribute pane format
 ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 978317c821433458c129a8e9580cc881a8be2889
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17dc52daa9a1644dec6b26e42857d308932add66
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-attributes-in-dimension-designer"></a>在維度設計師中檢視屬性
   此程序會描述如何變更維度設計師中顯示屬性的方式。  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
 4.  指向 [顯示屬性於]，然後按一下 [樹狀結構]、[方格] 或者 [清單]。  
   
   
-

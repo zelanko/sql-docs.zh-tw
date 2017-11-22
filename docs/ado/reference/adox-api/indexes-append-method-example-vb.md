@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Append method [ADOX]
+dev_langs: VB
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a5a4c20fca94bec63f945d003fcc4876d8f59f14
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dd9ee66d7ccfae9a0eed5cbb66da2033fd5bd3ff
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="indexes-append-method-example-vb"></a>索引附加方法範例 (VB)
 下列程式碼會示範如何建立新的索引。 索引是在資料表中的兩個資料行。  
@@ -88,8 +84,7 @@ End Sub
 ' EndCreateIndexVB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Append 方法 （ADOX 索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
  [索引物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [索引集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)
-
+ [Indexes 集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

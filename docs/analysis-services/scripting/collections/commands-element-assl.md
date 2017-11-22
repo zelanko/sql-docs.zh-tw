@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Commands Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Commands Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Commands
-helpviewer_keywords:
-- Commands element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Commands
+helpviewer_keywords: Commands element
 ms.assetid: c9f69fe8-2221-469b-b5b0-08563aaa01dc
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f5061f5508e878905408d5b0c210e6513ab4ff37
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 691eb2c615280be68b31cecb62ad86534b145331
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="commands-element-assl"></a>Commands 元素 (ASSL)
   包含與 [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) 元素相關聯之 [Command](../../../analysis-services/scripting/objects/command-element-assl.md) 元素的集合。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.CommandCollection>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [集合 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

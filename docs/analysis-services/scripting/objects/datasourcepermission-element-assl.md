@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DataSourcePermission Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DataSourcePermission Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DataSourcePermission element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DataSourcePermission element
 ms.assetid: 6dc6fb13-034e-479a-902e-27f3fb78c33f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 98e1742be14d8d7e16bc967e3d5202e046d894d6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fd41a100589e86a889698253bbb5f256b3bc788b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datasourcepermission-element-assl"></a>DataSourcePermission 元素 (ASSL)
   定義中的預設權限[DataSource](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md)特定的資料型別[角色](../../../analysis-services/scripting/objects/role-element-assl.md)項目。  
@@ -67,9 +62,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  **DataSourcePermission** 物件只能針對資料庫所擁有的角色存在，而且任何角色都只能存在一個 **DataSourcePermission** 物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Role 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

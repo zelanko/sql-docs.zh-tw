@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.importfromppt.f1
+f1_keywords: sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ddea709433a76faae800615c0a974ad14d153c8c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b85ae04b00034decd7390f86db1ee7e00c496434
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-from-power-pivot-ssas-tabular"></a>從 Power Pivot 匯入 (SSAS 表格式)
   本主題描述如何使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的 [從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 匯入] 專案範本，從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]活頁簿匯入中繼資料和資料，以建立新的表格式模型專案。  
@@ -56,9 +54,8 @@ ms.lasthandoff: 09/01/2017
   
 4.  在 [開啟] 對話方塊中，選取包含您要匯入之模型中繼資料和資料的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 檔案，然後按一下 [開啟]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [工作空間資料庫 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
  [複製並貼上資料 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
   
   
-

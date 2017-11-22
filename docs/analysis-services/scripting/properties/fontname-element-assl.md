@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- FontName Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: FontName Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- FontName
-helpviewer_keywords:
-- FontName element
+applies_to: SQL Server 2016 Preview
+f1_keywords: FontName
+helpviewer_keywords: FontName element
 ms.assetid: 5560a852-9745-4abb-93d8-9cebe8a9897c
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7aad7d3dca0d1153bdc7a5235160c348a95354a2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ae6a5ecb2e3f89aaed4eb1f3e769975c5697c38
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="fontname-element-assl"></a>FontName 元素 (ASSL)
   描述字型相關顯示特性[CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)或[量值](../../../analysis-services/scripting/objects/measure-element-assl.md)父項目。  
@@ -71,11 +65,10 @@ ms.lasthandoff: 09/01/2017
   
  對應至父系的項目**FontName**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Measure>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CalculationProperties 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/calculationproperties-element-assl.md)   
  [MdxScript 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)   
  [MdxScripts 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

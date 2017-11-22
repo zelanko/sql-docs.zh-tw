@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DisplayInfo Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DisplayInfo Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.displayinfo
 - http://schemas.microsoft.com/analysisservices/2003/engine#DisplayInfo
 - urn:schemas-microsoft-com:xml-analysis#DisplayInfo
-helpviewer_keywords:
-- DisplayInfo element
+helpviewer_keywords: DisplayInfo element
 ms.assetid: 059ce038-38de-4c7d-a72f-4f919cfc7c4a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9b9539d20fa1d6f6f27f5277d665717d826c15d6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ddac5eba2004076d5c7a2b47c490b6ced181bf25
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="displayinfo-element-xmla"></a>DisplayInfo 元素 (XMLA)
   包含父代的顯示資訊[HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md)或[成員](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)項目。  
@@ -71,8 +66,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  **DisplayInfo**元素包含可協助用戶端應用程式呈現父代資訊的各種項目**HierarchyInfo**或**成員**項目。 此值相當於針對 OLE DB for OLAP 規格中軸資料列集定義的 DISPLAY_INFO 屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

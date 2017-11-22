@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c121ddf9e271f4dfb67490d77a719267cfa11a3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be54505545b80211ec34216a67596c32ca8ce2b2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="registering-a-custom-business-object"></a>註冊自訂的商務物件
 若要成功地透過 Web 伺服器啟動自訂的商務物件 （.dll 或.exe），商務物件的 ProgID 必須輸入登錄到此程序中所述。 此 RDS 功能會執行可執行檔保障只能用來保護 Web 伺服器的安全性。  
@@ -49,6 +47,5 @@ ms.lasthandoff: 09/09/2017
 4.  選取**ADCLaunch**索引鍵，然後從**編輯**功能表上，指向**新增**按一下**金鑰**。  
   
 5.  輸入您的自訂商務物件的 ProgID，然後按一下**Enter**。 保留**值**空白項目。
-
 
 

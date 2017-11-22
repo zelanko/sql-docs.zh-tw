@@ -5,22 +5,20 @@ ms.date: 11/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffbdb114-e7a5-4145-bb8f-2eb97720ea96
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c717473de44124ae8ea1736de371069a155c6b0a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 17622e2c8f2d08fffd694761e04332997a26b3ae
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-r-services"></a>監視 R Services
   本節提供使用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 時的這些常見監視工作相關資訊：  
@@ -53,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  [R Services 的資源管理](../../advanced-analytics/r-services/resource-governance-for-r-services.md)  
   
   
-

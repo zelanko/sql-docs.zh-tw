@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- SolveOrder Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: SolveOrder Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- SolveOrder
-helpviewer_keywords:
-- SolveOrder element
+applies_to: SQL Server 2016 Preview
+f1_keywords: SolveOrder
+helpviewer_keywords: SolveOrder element
 ms.assetid: ec43e055-97dd-4f2a-9a7c-2df2e1119e56
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 18ce2495ce3f150e008a1e2506e8a9cb50dee84b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b16d2ca5c5bbef046b1332a62c7023300ee5f78a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="solveorder-element-assl"></a>SolveOrder 元素 (ASSL)
   指出求解順序[CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)元素套用至導出的成員或導出資料格定義。  
@@ -71,11 +65,10 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**SolveOrder**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.CalculationProperty>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CalculationProperties 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/calculationproperties-element-assl.md)   
  [MdxScript 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)   
  [MdxScripts 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

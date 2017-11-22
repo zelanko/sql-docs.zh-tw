@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- PartitionID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: PartitionID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#PartitionID
 - urn:schemas-microsoft-com:xml-analysis#PartitionID
 - microsoft.xml.analysis.partitionid
-helpviewer_keywords:
-- PartitionID element
+helpviewer_keywords: PartitionID element
 ms.assetid: 19f06454-9719-488e-aeb6-3fc879313351
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 872deb1589af7022c4661eba72e1d0cd6ab84668
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 849b49c76f26b8631fc328da55826936a96d4c77
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitionid-element-xmla"></a>PartitionID 元素 (XMLA)
   識別父元素中包含物件參考的資料分割。  
@@ -75,8 +70,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>請參閱＜  
+ [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

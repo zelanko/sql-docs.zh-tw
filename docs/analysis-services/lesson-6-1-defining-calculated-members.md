@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: e77732f0ad13e3373e073038587e819ed2617eb1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52b7fc07496a7b3890b323bc63ce488194b3538b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>課程 6-1-定義導出成員
 導出成員是根據 Cube 資料、算術運算子、數字和函數組合所定義的維度成員或量值群組成員。 例如，您可以建立一個導出成員，計算 Cube 中兩個實體量值的總和。 導出成員定義是儲存在 Cube 中，但其值是在查詢時計算。  
@@ -306,4 +303,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

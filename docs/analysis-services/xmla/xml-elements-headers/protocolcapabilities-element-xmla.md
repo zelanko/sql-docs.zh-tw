@@ -13,38 +13,33 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProtocolCapabilities Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProtocolCapabilities Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.protocolcapabilities
 - http://schemas.microsoft.com/analysisservices/2003/engine#ProtocolCapabilities
 - urn:schemas-microsoft-com:xml-analysis#ProtocolCapabilities
-helpviewer_keywords:
-- ProtocolCapabilities element
+helpviewer_keywords: ProtocolCapabilities element
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 42ff93dce6b71f7cfd69ed85d92c4c4f7912faee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5d2ff72b1fdc3a3e3a4b09a046933d3ead88fc78
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
-# ProtocolCapabilities 元素 (XMLA)
+# <a name="protocolcapabilities-element-xmla"></a>ProtocolCapabilities 元素 (XMLA)
   在 SOAP 要求訊息中使用 SOAP 標頭，以識別執行個體之間的通訊協定功能[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]和用戶端應用程式。  
   
  **命名空間**`http://schemas.microsoft.com/analysisservices/2003/engine`  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```xml  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 </soap:Envelope>  
 ```  
   
-## 元素特性  
+## <a name="element-characteristics"></a>元素特性  
   
 |特性|說明|  
 |--------------------|-----------------|  
@@ -70,14 +65,14 @@ ms.lasthandoff: 09/01/2017
 |預設值|無|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
-## 元素關聯性  
+## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
 |子元素|[功能](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
-## 備註  
+## <a name="remarks"></a>備註  
  **ProtocolCapabilities**項目可讓用戶端應用程式與交涉通訊協定的功能，例如二進位 XML 或壓縮支援[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在任何時間的執行個體。 通訊協定交涉包含下列步驟：  
   
 1.  用戶端應用程式透過傳送包含 **ProtocolCapabilities** 元素當做 SOAP 標頭一部分的 SOAP 要求，識別其通訊協定功能。  
@@ -94,9 +89,8 @@ ms.lasthandoff: 09/01/2017
   
  通訊協定功能不需要明確交涉。 也就是說，用戶端應用程式不需要在 SOAP 要求中包含 **ProtocolCapabilities** 元素。 如果 SOAP 要求不包含**ProtocolCapabilities**項目，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體使用相同的格式與 SOAP 要求的回應。  
   
-## 另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [管理連接和工作階段 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [標頭 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   
-

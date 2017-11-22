@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ErrorConfiguration Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ErrorConfiguration Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#ErrorConfiguration
 - urn:schemas-microsoft-com:xml-analysis#ErrorConfiguration
 - microsoft.xml.analysis.errorconfiguration
-helpviewer_keywords:
-- ErrorConfiguration element
+helpviewer_keywords: ErrorConfiguration element
 ms.assetid: 5e350f5f-3a14-49b4-80c0-208c61f336d5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 562e80a617f2a09da5f6eb3b1b85670ef906140c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03107ab82e9190ae1e6860af8d13da589c05766e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="errorconfiguration-element-xmla"></a>ErrorConfiguration 元素 (XMLA)
   指定期間可能發生的錯誤處理設定[批次](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)或[程序](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)作業。  
@@ -80,8 +75,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  這個項目之結構是相同的結構**ErrorConfiguration**項目在 Analysis Services 指令碼語言 (ASSL)。 如需有關**ErrorConfiguration**項目，請參閱[ErrorConfiguration 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

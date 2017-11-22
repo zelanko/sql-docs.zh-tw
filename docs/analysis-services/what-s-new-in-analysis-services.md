@@ -8,22 +8,20 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: 97
+caps.latest.revision: "97"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 212fbb3618bbccc58ea077d59f15dca3c31ca71f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services 的新功能
 SQL Server 2016 Analysis Services 包含許多新的增強功能提供更佳的效能、 更容易撰寫的方案、 自動化的資料庫管理，增強的關聯性具有雙向交叉篩選，平行資料分割處理和執行更多。 此版本中的大多數增強功能的核心是針對表格式模型資料庫新增的相容性層級 1200。     
@@ -212,5 +210,4 @@ Visual Studio 2015 中的 [程式碼檢視] 現在會針對表格式 1200 模型
 [Analysis Services 團隊部落格](http://blogs.msdn.microsoft.com/analysisservices/)    
 [SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)    
      
-
 

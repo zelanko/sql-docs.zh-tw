@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- aggregate functions [Analysis Services]
+helpviewer_keywords: aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 407e0f9d3c7c0d6c3a8a3c2734a53fbab8aca240
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62fb5170cb4d1ea3b33e5bb080f56860d610a531
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-aggregate-functions"></a>使用彙總函式
   當維度用於配量量值時，量值會與該維度所含的階層一起彙總。 而總和行為則視指定給量值的彙總函式而定 對於大多數包含數值資料的量值而言，彙總函式是 **Sum**。 量值的值會依據所使用的階層層級而加總為不同的數量。  
@@ -76,10 +74,9 @@ ms.lasthandoff: 09/01/2017
   
  計算成員的相異計數量值是以事實資料表中的外部索引鍵資料行為根據  (也就是說，此量值的**來源資料行**屬性會識別此資料行。)這個資料行會聯結可識別相異計數量值所計算之成員的維度資料表資料行。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [量值和量值群組](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
  [MDX 函數參考 &#40;MDX &#41;](../../mdx/mdx-function-reference-mdx.md)   
  [定義局部加總行為](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   
-

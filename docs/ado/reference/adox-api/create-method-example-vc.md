@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Create method [ADOX], VC++ example
+dev_langs: C++
+helpviewer_keywords: Create method [ADOX], VC++ example
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dba2645f8975d6ada15c85eba9a97743826a7edf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ecbbc0188c71a696e08be138b4ce2d901f0d7634
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-method-example-vc"></a>建立方法的範例 （VC + +）
 下列程式碼示範如何建立新的 Microsoft Jet 資料庫與[建立](../../../ado/reference/adox-api/create-method-adox.md)方法。  
@@ -83,6 +79,5 @@ void CreateDatabaseX() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [建立方法 (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Create 方法 (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

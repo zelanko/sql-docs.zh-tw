@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-object-tmsl"></a>模型物件 (TMSL)
 
@@ -44,10 +43,10 @@ ms.lasthandoff: 09/01/2017
  所有物件都具有一組常用的屬性，包括名稱、 類型、 描述、 屬性集合，以及註解。 **模型**物件也有下列屬性。  
   
  storageLocation  
- 將模型的磁碟上的位置。  
+ 磁碟上放置模型的位置。  
   
  defaultMode  
- 讓資料分割中，您可以使用預設方法。  
+ 讓資料可在分割區中使用的預設方法。  
   
  defaultDataView  
  針對在 DirectQuery 模式的模型，這個屬性會決定哪些資料分割會用來對模型執行查詢。  有效值包括完整和範例。  
@@ -101,9 +100,8 @@ ms.lasthandoff: 09/01/2017
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_CALC_DEPENDENCIES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0926c2eef3b0b733d9d334a5ed59a96a24826c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 86f0ed45ced35aba884f05284f886334d250694d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 資料列集
   報告計算之間的相依性和這些計算中所參考的物件。 您可以在用戶端應用程式中使用此資訊，針對複雜公式的問題進行報告，或在相關物件遭到刪除或修改時發出警告。 您還可以使用資料列集來擷取量值或導出資料行中使用的 DAX 運算式。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 |**資料庫名稱**|**DBTYPE_WSTR**|是|指定包含要求其相依性分析之物件的資料庫名稱。 如果省略，就會使用目前的資料庫。<br /><br /> **DISCOVER_DEPENDENCY_CALC** 資料列集可以使用此資料行加以限制。|  
 |**OBJECT_TYPE**|**DBTYPE_WSTR**|是|表示要求其相依性分析之物件的類型。 物件必須是下列其中一種類型：<br /><br /> **ACTIVE_RELATIONSHIP**：作用中的關聯性<br /><br /> **CALC_COLUMN**：導出資料行<br /><br /> **HIERARCHY**：階層<br /><br /> **MEASURE**：量值<br /><br /> **RELATIONSHIP**：關聯性<br /><br /> **KPI**：KPI (關鍵效能指標)<br /><br /> <br /><br /> 請注意， **DISCOVER_DEPENDENCY_CALC**資料列集可能會限制使用此資料行。|  
 |**查詢**|**DBTYPE_WSTR**|是|如果是在 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 中建立的表格式模型，您可以包含 DAX 查詢或運算式，以顯示該查詢或運算式的相依性圖表。 QUERY 限制會提供用戶端應用程式一個方式來判斷 DAX 查詢使用哪些物件。<br /><br /> **QUERY** 限制可以在 XMLA 或 DMV 查詢的 WHERE 子句中指定。 如需詳細資訊，請參閱＜範例＞一節。|  
-|**資料表**|**DBTYPE_WSTR**||包含產生其相依性資訊之物件的資料表名稱。|  
+|**TABLE**|**DBTYPE_WSTR**||包含產生其相依性資訊之物件的資料表名稱。|  
 |**物件**|**DBTYPE_WSTR**||產生其相依性資訊之物件的名稱。 如果物件是量值或導出資料行，請使用量值的名稱。 如果物件是關聯性，則是包含參與關聯性之資料行的資料表 (或 Cube 維度) 名稱。|  
 |**運算式**|**DBTYPE_WSTR**||包含尋找其相依性之物件的公式。|  
 |**REFERENCED_OBJECT_TYPE**|**DBTYPE_WSTR**||傳回與所參考物件具有相依性之物件的類型。 傳回的物件可以是下列其中一種類型：<br /><br /> **CALC_COLUMN**：導出資料行<br /><br /> **COLUMN**：資料的資料行<br /><br /> **MEASURE**：量值<br /><br /> **RELATIONSHIP**：關聯性<br /><br /> **KPI**：KPI (關鍵效能指標)|  
@@ -134,9 +131,8 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
 |GUID|a07ccd46-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|DependencyGraph|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 結構描述資料列集](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
  [使用動態管理檢視 &#40; Dmv &#41;監視 Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   
-

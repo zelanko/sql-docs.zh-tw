@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AttributeHierarchyOptimizedState Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AttributeHierarchyOptimizedState Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AttributeHierarchyOptimizedState
-helpviewer_keywords:
-- AttributeHierarchyOptimizedState element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AttributeHierarchyOptimizedState
+helpviewer_keywords: AttributeHierarchyOptimizedState element
 ms.assetid: d87148c8-2011-45ae-94c3-851f48babc5f
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0277cb002eee99f738bfcdb0b54570fa10a3daea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 79b7f84f96c9921a0d1fafce4bc0c8604b5fd582
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributehierarchyoptimizedstate-element-assl"></a>AttributeHierarchyOptimizedState 元素 (ASSL)
   決定套用至屬性階層的最佳化層級。  
@@ -77,8 +71,7 @@ ms.lasthandoff: 09/01/2017
   
  列舉型別對應至允許的值**AttributeHierarchyOptimizedState**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.OptimizationType>。 對應至父系的項目**AttributeHierarchyOptimizedState**在 AMO 物件模型中<xref:Microsoft.AnalysisServices.CubeAttribute>和<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

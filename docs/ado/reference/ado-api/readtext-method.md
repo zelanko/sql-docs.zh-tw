@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_ReadText
 - _Stream::ReadText
-helpviewer_keywords:
-- ReadText method [ADO]
+helpviewer_keywords: ReadText method [ADO]
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d3628847bc62ad45781442f227e709e87f52c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b134e064cc3d1dfa06c5d948d74e49f643756bd1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="readtext-method"></a>ReadText 方法
 讀取指定文字的字元數[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
@@ -57,8 +54,7 @@ String = Stream.ReadText ( NumChars)
  查詢，導致大量的 XML 資料，傳回透過**ReadText** ActiveX Data Object (ADO) 資料流物件的方法可能需要大量時間來執行; 如果這是從叫用 COM + 元件ASP 網頁在使用者工作階段可能會逾時。ADO 將從 Unicode，utf-8 編碼方式轉換資料流物件資料參與的這類數量龐大的資料轉換次記憶體頻繁的重新配置是很耗時。 若要解決，請重複的呼叫**ReadText**方法之 ADO 命令物件，並指定較少的字元。 測試顯示值等於 128k (131,072) 是最佳的。 回應時間減少這個值會減少。 如需詳細資訊，請參閱知識庫文章 280067，"PRB： 使用 ADO 資料流物件 ReadText 方法來擷取從 SQL Server 2000 的非常大型的 XML 文件可能會很慢 」，Microsoft 知識庫中在 http://support.microsoft.com。  
   
 ## <a name="applies-to"></a>適用於  
- [資料流物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Read 方法](../../../ado/reference/ado-api/read-method.md)
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c1fe1572b2ef44ad8fe672b51d5b353ea8182f1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7a1f8568b633417196c6c9dda3e8a3615146603
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Microsoft 資料指標服務的 OLE DB 概觀
 OLE DB 的資料指標審查補充資料提供者的資料指標支援函數。 如此一來，使用者會感知相當一致的功能，從所有資料提供者。
@@ -98,4 +96,3 @@ rs.Properties("Optimize") = True
 
 ## <a name="method-behavior"></a>方法的行為
  OLE DB 資料指標服務啟用，或會影響行為[欄位](../../../ado/reference/ado-api/field-object.md)物件的[附加](../../../ado/reference/ado-api/append-method-ado.md)方法; 而**資料錄集**物件的[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)，[重新同步處理](../../../ado/reference/ado-api/resync-method.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，和[儲存](../../../ado/reference/ado-api/save-method.md)方法。
-

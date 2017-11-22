@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::GetRows
 - Recordset15::raw_GetRows
-helpviewer_keywords:
-- Getrows method [ADO]
+helpviewer_keywords: Getrows method [ADO]
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8a80f8619d636c13b8c76b4f867e7cbe6333a742
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1c76e506432e4aeeaae552ea67803bf4723c85fa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getrows-method-ado"></a>GetRows 方法 (ADO)
 擷取的多筆記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件陣列。  
@@ -66,9 +63,8 @@ array = recordset.GetRows(Rows, Start, Fields )
  在您呼叫後**GetRows**下, 一個未閱讀的記錄會變成目前的記錄，或[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性設定為**True**如果沒有更多的記錄。  
   
 ## <a name="applies-to"></a>適用於  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [GetRows 方法範例 (VB)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
- [GetRows 方法範例 （VC + +）](../../../ado/reference/ado-api/getrows-method-example-vc.md)   
-
+ [GetRows 方法範例 (VC++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   

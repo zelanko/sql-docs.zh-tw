@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - RDS objects [ADO], object model summary
 - RDS object model [ADO]
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b68f17999d9b6c74155463525ca04d6c000cd23f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1c89ea8ccd9875368ea0d279c54a1153bc0cfd3d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rds-object-model-summary"></a>RDS 物件模型摘要
 > [!IMPORTANT]
@@ -38,11 +36,10 @@ ms.lasthandoff: 09/09/2017
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|這個物件代表的預設伺服器程式。 它會執行預設 RDS 資料擷取和更新行為。<br /><br /> **DataFactory**物件不是安全的。|  
 |[RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|這個物件可以自動叫用**.RDSDataSpace**和**RDSServer.DataFactory**物件。<br /><br /> 使用此物件來叫用預設 RDS 資料擷取或更新的行為。<br /><br /> 這個物件也會提供的方式來存取傳回的視覺控制項**資料錄集**物件。<br /><br /> **DataControl**物件而言是安全的指令碼。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [RDS 的基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 

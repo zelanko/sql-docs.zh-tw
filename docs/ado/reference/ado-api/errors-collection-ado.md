@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Connection15::Errors
 - Connection15::get_Errors
 - Connection15::GetErrors
-helpviewer_keywords:
-- Errors collection [ADO]
+helpviewer_keywords: Errors collection [ADO]
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b3fffa48412387178006c66a97a0cbd6a9f3a93a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 27ca46528314f34b769d505269ade0c73fb1b051
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="errors-collection-ado"></a>錯誤集合 (ADO)
 包含所有[錯誤](../../../ado/reference/ado-api/error-object.md)為了回應單一提供者相關的失敗所建立的物件。  
@@ -53,7 +50,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [錯誤集合屬性、 方法和事件](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Error 物件](../../../ado/reference/ado-api/error-object.md)   
- [附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

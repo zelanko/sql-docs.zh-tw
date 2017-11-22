@@ -5,25 +5,21 @@ ms.date: 08/22/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R 和 SQL Server 的端對端資料科學逐步解說
 
@@ -45,8 +41,8 @@ ms.lasthandoff: 09/01/2017
 |主題清單|預估時間|
 |-|------------------------------|
 |[準備 R 逐步解說資料](../tutorials/walkthrough-prepare-the-data.md) <br /><br />取得用於建置模型的資料。 下載公用資料集並將它載入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中。|30 分鐘|
-|[瀏覽使用 SQL 資料](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />了解您使用 SQL 工具和摘要的資料。|10 分鐘|
-|[摘述使用 R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />使用 R 來探索資料並產生摘要。|10 分鐘|
+|[使用 SQL 瀏覽資料](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />了解您使用 SQL 工具和摘要的資料。|10 分鐘|
+|[使用 R 摘要資料](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />使用 R 來探索資料並產生摘要。|10 分鐘|
 |[建立 SQL Server 中使用 R 的繪圖](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />混合使用 R 與 SQL，在本機和遠端計算內容中建立繪圖。|10 分鐘|
 |[建立使用 R 和 T-SQL 資料功能）](../tutorials/walkthrough-create-data-features.md) <br /><br />在 R 和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中使用自訂函式來執行特徵工程。 比較 R 和 T-SQL 在功能化工作方面的效能。 |10 分鐘|
 |[建立 R 模型，並將它儲存在 SQL Server](../tutorials/walkthrough-build-and-save-the-model.md) <br /><br />訓練及微調預測模型。 評估模型效能。 此逐步解說會建立一個分類模型。 使用 R 來策畫模型的精確度。|15 分鐘|
@@ -71,4 +67,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-lesson"></a>下一課
 
 [準備 R 逐步解說資料](../tutorials/walkthrough-prepare-the-data.md)
-

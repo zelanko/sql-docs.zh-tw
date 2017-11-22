@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d0adb4ce534d0e70a309bf99b6e6a16479c931f3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>報表設計的 CSDLBI 屬性
 
@@ -70,7 +68,7 @@ ms.lasthandoff: 09/01/2017
 |**Hidden**|布林|表示是否應顯示欄位。 預設值是**false**，這表示欄位會顯示。|  
 |**DisplayFolder**|Text|在其中顯示此欄位的資料夾的名稱 (完整路徑)。 如果省略，則在模型根中顯示欄位。|  
 |**ContextualNameRule**|Enum|值，表示是否應該根據使用內容來修改屬性名稱及其修改方式。 可能的值為：**無**，**角色**，**合併**。|  
-|**對齊方式**|Enum|值，表示在表格式簡報中對齊欄位值的方式。 可能的值為**預設**， **Center**，**左**，**右邊**。 如果省略，預設會根據欄位的資料類型來決定對齊方式。|  
+|**對齊**|Enum|值，表示在表格式簡報中對齊欄位值的方式。 可能的值為**預設**， **Center**，**左**，**右邊**。 如果省略，預設會根據欄位的資料類型來決定對齊方式。|  
 |**FormatString**|Text|.NET 格式字串，表示欄位值的預設格式。 如果省略，則採用下列格式：<br /><br /> 日期時間欄位： 地區的簡短日期或"d"<br /><br /> -浮點數的欄位和整數欄位，預設值彙總函式： 區域數字或"n"<br /><br /> 為沒有預設值整數彙總函式： 區域的十進位數字或"d"<br /><br /> 如果是所有其他類型的欄位，則不套用任何格式字串。|  
 |**單位**|Text|套用至欄位值以表示單位的符號。 如果省略，則假設單位為未知。|  
 |**寬度**|Integer|應該保留以供表格式簡報中顯示欄位值的慣用寬度 (以字元為單位)。 如果省略，預設寬度就是根據欄位的資料類型。|  
@@ -83,4 +81,3 @@ ms.lasthandoff: 09/01/2017
 |**Kpi**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|Subelement|表示量值元素要做為 KPI。 KPI 子元素使用 KpiGoal 和 KpiStauts 元素以定義相關的顯示影像和目標範圍。|  
   
   
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Cube Element (OlapInfo)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Cube Element (OlapInfo)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.cube
 - urn:schemas-microsoft-com:xml-analysis#Cube
 - http://schemas.microsoft.com/analysisservices/2003/engine#Cube
-helpviewer_keywords:
-- Cube element
+helpviewer_keywords: Cube element
 ms.assetid: c2b6fe41-6ad4-4181-98a9-3a2517f0b7cc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7be9f0e7dbcdddc853debf2536d97ac9de0c25ce
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 491d6143a67e84fb1ef2af7b0e08fb7e63352875
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cube-element-olapinfo-xmla"></a>Cube 元素 (OlapInfo) (XMLA)
   包含父 cube 資訊[CubeInfo](../../../analysis-services/xmla/xml-elements-properties/cubeinfo-element-xmla.md)項目。  
@@ -73,8 +68,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

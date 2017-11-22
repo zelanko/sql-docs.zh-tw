@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - _Stream::Type
 - _Stream::get_Type
 - _Stream::put_Type
-helpviewer_keywords:
-- Type property [ADO Stream]
+helpviewer_keywords: Type property [ADO Stream]
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 326dfd1e359d28188a41d45c0054a082a9a69515
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2b16d683d9e5460e5aba904a8bc4ccc7362b2287
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-ado-stream"></a>型別屬性 （ADO 資料流）
 表示包含的資料類型[資料流](../../../ado/reference/ado-api/stream-object-ado.md)（二進位或文字）。  
@@ -44,9 +41,8 @@ ms.lasthandoff: 09/09/2017
  **類型**屬性會決定哪些方法應用於讀取和寫入**資料流**。 文字**資料流**，使用[ReadText](../../../ado/reference/ado-api/readtext-method.md)和[WriteText](../../../ado/reference/ado-api/writetext-method.md)。 二進位**資料流**，使用[讀取](../../../ado/reference/ado-api/read-method.md)和[寫入](../../../ado/reference/ado-api/write-method.md)。  
   
 ## <a name="applies-to"></a>適用於  
- [資料流物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [RecordType 屬性 (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
- [型別屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
-
+ [Type 屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

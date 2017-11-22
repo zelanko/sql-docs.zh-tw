@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- many-to-many relationships [Analysis Services]
+helpviewer_keywords: many-to-many relationships [Analysis Services]
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ad2f336f3197d7746ef250b942d48b5d17740d20
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 164dd337f413200dc0cec3371551aa2b4317ec41
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定義多對多關聯性及多對多關聯性屬性
   本主題說明 Analysis Services 中的多對多維度，包括何時使用這些維度以及如何建立這些維度。  
@@ -57,7 +55,7 @@ ms.lasthandoff: 09/01/2017
   
  請按一下此按鈕來開啟 [定義關聯性] 對話方塊，以確認關聯性類型為多對多並且檢視關聯性中會使用哪一個中繼量值群組。  
   
- ![定義關聯性中維度使用方式] 按鈕](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "維度使用方式中的 [定義關聯性] 按鈕")  
+ ![定義關聯性中維度使用方式 按鈕](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "維度使用方式中的 [定義關聯性] 按鈕")  
   
  在後續的章節中，您將會學習如何設定多對多維度及測試模型的行為。 如果您想要先檢閱其他資訊或是先嘗試教學課程，請參閱本文結尾的 **深入了解** 。  
   
@@ -141,7 +139,7 @@ ms.lasthandoff: 09/01/2017
   
      您可以看到這個對話方塊是用來指定多對多關聯性。 如果您改為新增具有一般關聯性的維度，您會使用這個對話方塊將它變更為多對多關聯性。  
   
-     ![定義關聯性中維度使用方式] 按鈕](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "維度使用方式中的 [定義關聯性] 按鈕")  
+     ![定義關聯性中維度使用方式 按鈕](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "維度使用方式中的 [定義關聯性] 按鈕")  
   
 3.  將專案部署到 Analysis Services 多維度執行個體。 在下一個步驟，您將會瀏覽 Excel 中的 Cube 來驗證其行為。  
   
@@ -196,8 +194,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>請參閱＜  
  [維度關聯性](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [安裝 Analysis services 多維度模型化教學課程的範例資料和專案](../../analysis-services/install-sample-data-and-projects.md)   
- [部署 Analysis Services 專案 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [部署 Analysis Services 專案 &#40;SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [多維度模型中的檢視方塊](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   
-

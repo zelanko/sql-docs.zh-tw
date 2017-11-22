@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- ConnectModeEnum
-helpviewer_keywords:
-- ConnectModeEnum enumeration [ADO]
+f1_keywords: ConnectModeEnum
+helpviewer_keywords: ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fd3a2912bdc0e204bfbbe1c16a878302f181679c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bc9a29f1f46ab56a87b318761b4b0809fd76e6fd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 指定在修改資料的可用權限[連接](../../../ado/reference/ado-api/connection-object-ado.md)、 開啟[記錄](../../../ado/reference/ado-api/record-object-ado.md)，或指定的值[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性**記錄**和[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
@@ -64,6 +60,5 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[模式屬性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open 方法 （ADO 資料錄）](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Open 方法 （ADO 資料流）](../../../ado/reference/ado-api/open-method-ado-stream.md)|[資料流物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
-
+|[Mode 屬性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open 方法 (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
+|[Open 方法 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|

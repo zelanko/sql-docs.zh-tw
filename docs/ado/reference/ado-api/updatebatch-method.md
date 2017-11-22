@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::UpdateBatch
 - Recordset15::raw_UpdateBatch
-helpviewer_keywords:
-- UpdateBatch method [ADO]
+helpviewer_keywords: UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1522f6165e08a2a45cbd35e0b66d996ad93c1c4c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 57c85b6ed83792e2e489eb91dab59bd0da598939
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updatebatch-method"></a>UpdateBatch 方法
 寫入磁碟中的所有暫止的批次更新。  
@@ -65,13 +62,12 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  資料來源所執行之批次的個別更新的順序不一定是在本機所執行的順序相同**資料錄集**。 更新的順序是取決於提供者。 撰寫程式碼會彼此相關，例如外部索引鍵條件約束 insert 或 update 的更新時，請考慮這點。  
   
 ## <a name="applies-to"></a>適用於  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [UpdateBatch 和 CancelBatch 方法範例 (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [UpdateBatch 和 CancelBatch 方法範例 （VC + +）](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [CancelBatch 方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Clear 方法 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [LockType 屬性 (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [Update 方法](../../../ado/reference/ado-api/update-method.md)
-

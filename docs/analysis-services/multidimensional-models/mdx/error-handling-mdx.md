@@ -18,17 +18,16 @@ helpviewer_keywords:
 - scripts [MDX], exceptions
 - exceptions [MDX]
 ms.assetid: bc6ff0af-9fe6-44d6-bc3c-801d71ea41a9
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8679c6d912e6dab8fa89f4f67ddfa9070c04460f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbd604d132fa204da606b44d72551f198661c81a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-handling-mdx"></a>錯誤處理 (MDX)
   每個 Cube 都可以控制多維度運算式 (MDX) 指令碼內錯誤的處理方式。 透過 **ScriptErrorHandlingMode** 列舉值便可完成錯誤處理。 此列舉值可能出現的值如下：  
@@ -43,4 +42,3 @@ ms.lasthandoff: 09/01/2017
  <xref:Microsoft.AnalysisServices.Cube.ScriptErrorHandlingMode%2A>  
   
   
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Object Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Object Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Object
 - urn:schemas-microsoft-com:xml-analysis#Object
 - microsoft.xml.analysis.object
-helpviewer_keywords:
-- Object element
+helpviewer_keywords: Object element
 ms.assetid: 99470537-2c4a-4072-9613-940c41c12487
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 406b0807d592dfcef82d5d9afc8bef5c153b68f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ea187bdeebdfeeb64eb2ff379181f1a03783afa8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="object-element-xmla"></a>Object 元素 (XMLA)
   包含父元素所使用的物件參考。  
@@ -80,8 +75,7 @@ ms.lasthandoff: 09/01/2017
   
  如**Alter**項目、 執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]如果當做預設物件**物件**未指定項目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-
