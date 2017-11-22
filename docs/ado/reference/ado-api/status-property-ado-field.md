@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Field::Status
 - Field::get_Status
 - Field::GetStatus
-helpviewer_keywords:
-- Status property [ADO Field]
+helpviewer_keywords: Status property [ADO Field]
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b6db998d81ce756eb68633fb5778c4e8f3633c05
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65acf492f0364b26fa6a12240fbbd49c7d1dfed3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="status-property-ado-field"></a>Status 屬性 （ADO 欄位）
 表示狀態[欄位](../../../ado/reference/ado-api/field-object.md)物件。  
@@ -55,7 +52,6 @@ ms.lasthandoff: 09/09/2017
 ## <a name="applies-to"></a>適用於  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [狀態屬性範例 （欄位） (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
- [狀態屬性範例 （VC + +）](../../../ado/reference/ado-api/status-property-example-vc.md)   
-
+ [Status 屬性範例 (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

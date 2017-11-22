@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Format Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Format Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Format
-helpviewer_keywords:
-- Format element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Format
+helpviewer_keywords: Format element
 ms.assetid: 881ea707-52a7-46f7-ba16-ac2ec44eca22
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f9a32f4b8b982273da8b44aea9e7de5f6f242fbb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb34b3f3f32492abb36a9f1bb6d645596493bfbc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="format-element-assl"></a>Format 元素 (ASSL)
   包含所需的格式[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)項目。  
@@ -81,8 +75,7 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**格式**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DataItem>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

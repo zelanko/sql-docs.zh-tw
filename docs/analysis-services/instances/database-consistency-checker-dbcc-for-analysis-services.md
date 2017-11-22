@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9dee0f68a2d9b4dd1bdae90435de3c02eddfeba2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e8ecc3c51619c7f1ebbe5b109f0710500184a27
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 的 database Consistency Checker (DBCC)
   DBCC 提供適用於 Analysis Services 執行個體上之多維度和表格式資料庫的隨選驗證。 您可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查詢視窗中執行 DBCC，並在 SSMS 的 SQL Server Profiler 或 xEvent 工作階段中追蹤 DBCC 輸出。  
@@ -314,4 +313,3 @@ Execution complete
  [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   
-

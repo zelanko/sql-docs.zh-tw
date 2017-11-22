@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Slice Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Slice Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Slice
-helpviewer_keywords:
-- Slice element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Slice
+helpviewer_keywords: Slice element
 ms.assetid: 2c8c4107-c641-4724-bfa5-0c47e0ec8888
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d15321ca78240bd820ec5e3c625c558986d64f2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ee0b8e31f102cee6e8a73ccd608feec054df6744
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="slice-element-assl"></a>Slice 元素 (ASSL)
   包含定義資料分割中包含之配量的多維度運算式 (MDX) 運算式。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**配量**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Partition>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

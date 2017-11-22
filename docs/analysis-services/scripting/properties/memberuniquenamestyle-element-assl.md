@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MemberUniqueNameStyle Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MemberUniqueNameStyle Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MemberUniqueNameStyle element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MemberUniqueNameStyle element
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a166f1ffdf623cbc809bd090b1babf95983b2c31
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94e0ed38f78c485e3c0178ac4dcc02cd318d065b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>MemberUniqueNameStyle 元素 (ASSL)
   決定如何唯一名稱內所包含的階層成員產生[CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)項目。  
@@ -75,10 +70,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**MemberUniqueNameStyle**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.CubeDimension>。  
   
-## <a name="see-also"></a>另請參閱  
- [Cube 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
- [Dimension 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [CubeDimension 資料類型 & #40;ASSL & #41;](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)  
+## <a name="see-also"></a>請參閱＜  
+ [Cube 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
+ [Dimension 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [CubeDimension 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)  
   
   
-

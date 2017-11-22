@@ -1,8 +1,7 @@
 ---
 title: "RDS 方法 |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ helpviewer_keywords:
 - RDS methods [ADO]
 - methods [ADO], RDS
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0e2a034ccdd85f3c05d3438cd8a589ac47d1aabd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 623b1f814d23ab8a23e87634ba1fe16b647907d0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rds-methods"></a>RDS 方法
 > [!IMPORTANT]
@@ -44,8 +42,7 @@ ms.lasthandoff: 09/09/2017
 |[重新整理 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|重新查詢中指定的資料來源**連接**屬性和更新的查詢結果。|  
 |[重設 (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|用戶端上執行排序或篩選**資料錄集**，根據指定的排序和篩選屬性。|  
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|提交暫止的變更在本機快取和可更新的**資料錄集**中指定的資料來源**連接**屬性。|  
-|[同步處理方法 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|（適用於 ADO 2.5 和更新版本） 的連接字串所指定的資料庫，同步處理指定的資料錄集。|  
+|[Synchronize 方法 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|（適用於 ADO 2.5 和更新版本） 的連接字串所指定的資料庫，同步處理指定的資料錄集。|  
 |[Synchronize21 方法 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|（適用於 ADO 2.1） 的連接字串所指定的資料庫，同步處理指定的資料錄集。|
-
 
 

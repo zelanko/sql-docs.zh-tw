@@ -20,17 +20,16 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3d58cb5bf4be5eddaa40cc13efa88b3ade9f49dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-relational-mining-structure"></a>建立關聯式採礦結構
   大多數的資料採礦模型都是根據關聯式資料來源。 建立關聯式資料採礦模型的優點如下：您可以組合隨選資料及定型和更新模型，而不需要經歷建立 Cube 的複雜程序。  
@@ -133,12 +132,11 @@ ms.lasthandoff: 09/01/2017
 > [!WARNING]  
 >  若要使用鑽研，當您建立採礦結構時必須啟用鑽研。 您之後可以在模型上設定屬性，於模型上啟用鑽研，但是採礦結構要求一開始就應該設定這個選項。 如需詳細資訊，請參閱[鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦設計師](../../analysis-services/data-mining/data-mining-designer.md)   
  [資料採礦精靈 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [採礦模型屬性](../../analysis-services/data-mining/mining-model-properties.md)   
  [採礦結構和結構資料行的屬性](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
- [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [採礦結構工作和操作說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

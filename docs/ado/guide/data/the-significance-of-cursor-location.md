@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 541b0195abbe4a37c3a2090add0b0cf5dbbeb568
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-significance-of-cursor-location"></a>資料指標位置的精確度倍數
 每個資料指標使用的暫存資源，來保留資料。 這些資源可以是記憶體、 磁碟分頁檔中，暫存磁碟檔案或甚至暫時儲存在資料庫中。 資料指標稱為*用戶端*時這些資源位於用戶端電腦上的資料指標。 資料指標稱為*伺服器端*時這些資源位於伺服器上的資料指標。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
  不過，請務必指出伺服器端資料指標是 — 至少暫時如此 — 針對每個作用中的用戶端耗用寶貴的伺服器資源。 您必須據此規劃以確保您的伺服器硬體能夠管理所有作用中用戶端所要求的伺服器端資料指標。 此外，因為它提供只有單一資料列存取伺服器端資料指標可能會很慢，沒有可用的批次資料指標。  
   
  伺服器端資料指標是當插入、 更新或刪除資料錄時很有用。 與伺服器端資料指標，在相同的連接上可以有多個作用中陳述式。
-

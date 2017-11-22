@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 0b71248949c16481dca0649fa86722477a46f231
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c351e2be7d1faf77542b68079b4f413e554e54f1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>表格式模型專案 (SSAS 表格式)
   若要建立新的表格式模型，您必須先在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立新的表格式模型專案。 當您安裝 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]時，會提供三種商業智慧專案範本，供您建立表格式模型專案。 每個專案範本都提供一個架構，以便開始撰寫模型。 本節中的主題描述如何使用專案範本，建立新的表格式模型。  
@@ -39,4 +38,3 @@ ms.lasthandoff: 09/01/2017
 |[從 Power Pivot 匯入 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|此主題描述如何擷取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 檔案 (.xlsx) 中的中繼資料與資料，以建立新的表格式模型專案。|  
   
   
-

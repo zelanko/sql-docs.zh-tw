@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Delete method [ADOX]
+dev_langs: VB
+helpviewer_keywords: Delete method [ADOX]
 ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 68a731495fdbf6a71d121b84f322e1d5df68342f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d8990c77ac61b8c85ffe4d6d48cfcc80cdab77f6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="views-delete-method-example-vb"></a>檢視刪除方法的範例 (VB)
 下列程式碼示範如何使用[刪除](../../../ado/reference/adox-api/delete-method-adox-collections.md)從類別目錄中刪除檢視的方法。  
@@ -61,7 +57,6 @@ End Sub
 ' EndDeleteViewVB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Delete 方法 （ADOX 集合）](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
- [檢視集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-
+ [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

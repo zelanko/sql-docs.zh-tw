@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Tuple Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Tuple Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.tuple
 - urn:schemas-microsoft-com:xml-analysis#Tuple
 - http://schemas.microsoft.com/analysisservices/2003/engine#Tuple
-helpviewer_keywords:
-- Tuple element
+helpviewer_keywords: Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 976d47573aa44ffe73878475e5ece552639428bf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11a9d3b633e680154787615c04ee1f08b65b8139
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tuple-element-xmla"></a>Tuple 元素 (XMLA)
   包含 [Tuples](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md) 父元素所包含之 [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) 元素的集合。  
@@ -120,8 +115,7 @@ ms.lasthandoff: 09/01/2017
 </Axes>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

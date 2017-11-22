@@ -18,17 +18,16 @@ helpviewer_keywords:
 - permissions [Analysis Services], full control
 - full control permissions [Analysis Services]
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ae21903694c80a5f919374e4e367dc82b4cec09e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c58a338f700785bb338703c72e3b435a7aa22b94
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-database-permissions-analysis-services"></a>授與資料庫權限 (Analysis Services)
   如果您具備關聯式資料庫的背景並正在嘗試接觸 Analysis Services 資料庫管理，您需要了解的第一件事是，就資料存取而言，資料庫不是 Analysis Services 中主要的安全物件。  
@@ -87,9 +86,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="read-definition"></a>讀取定義  
  就像 [處理資料庫] 一樣，在資料庫層級設定 [讀取定義] 權限也會對資料庫內的其他物件產生串聯效果。 如果您想要在更細微的層級上設定 [讀取定義] 權限，您必須清除在 [一般] 窗格中以資料庫屬性方式顯示的 [讀取定義]。 如需詳細資訊，請參閱[授與物件中繼資料的讀取定義權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [將伺服器管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [授與處理權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ADO, events
 - event handlers [ADO]
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 43d07faf4f544ef22c2afcf9013528fd65225be6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a451023d3e3501ac60cd2724349337f30c46b689
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handling-ado-events"></a>處理 ADO 事件
 ADO 事件模型支援發出特定同步和非同步 ADO 作業*事件*，或在作業開始之前或之後完成的通知。 事件是實際的事件處理常式常式，在您的應用程式中定義的呼叫。  
@@ -45,18 +43,17 @@ ADO 事件模型支援發出特定同步和非同步 ADO 作業*事件*，或在
   
 -   [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)  
   
--   [事件類型](../../../ado/guide/data/types-of-events.md)  
+-   [事件的類型](../../../ado/guide/data/types-of-events.md)  
   
 -   [事件參數](../../../ado/guide/data/event-parameters.md)  
   
--   [事件處理常式一起運作的方式](../../../ado/guide/data/how-event-handlers-work-together.md)  
+-   [事件處理常式如何協同運作](../../../ado/guide/data/how-event-handlers-work-together.md)  
   
--   [ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
+-   [ADO 事件具現化 (依語言)](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [事件參數](../../../ado/guide/data/event-parameters.md)   
- [事件類型](../../../ado/guide/data/types-of-events.md)
-
+ [事件的類型](../../../ado/guide/data/types-of-events.md)

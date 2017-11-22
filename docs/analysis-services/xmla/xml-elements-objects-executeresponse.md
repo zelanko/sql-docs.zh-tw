@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ExecuteResponse Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ExecuteResponse Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#ExecuteResponse
 - http://schemas.microsoft.com/analysisservices/2003/engine#ExecuteResponse
 - microsoft.xml.analysis.executeresponse
-helpviewer_keywords:
-- ExecuteResponse element
+helpviewer_keywords: ExecuteResponse element
 ms.assetid: 6edb1b82-da4c-4cd9-9385-bea04032f0eb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1ce67e186ba1de23fda714359f4fcdc7a78b51fa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d90ec4cac02bf3429603d095cb91c3bef77cc00d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-elements---objects---executeresponse"></a>XML 項目物件-ExecuteResponse
   包含執行個體所傳回的資訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]回應[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫。  
@@ -71,9 +66,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  **ExecuteResponse**項目是最上層的項目之 SOAP 回應的主體內**Execute**方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DiscoverResponse 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)   
  [物件 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-objects.md)  
   
   
-

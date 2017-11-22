@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Column object [ADOX], members
+helpviewer_keywords: Column object [ADOX], members
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2742ce29bf11f501f65c7dc0a0954f1899214b3d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ad684cebbf2cca74856fb6c06ae1718dceac1444
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="column-object-properties-methods-and-events"></a>資料行物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>/ 屬性的集合  
@@ -55,6 +52,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>事件  
  無。  
   
-## <a name="see-also"></a>另請參閱  
- [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

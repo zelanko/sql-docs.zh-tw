@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ecda57863abf45f1256f192d933c99bfb09a67dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f9862fc9f45674d3995b857eec222d8f560870a6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="persisting-data"></a>保存資料
 可攜式電腦 （例如，使用膝上型電腦） 已產生可以在連線或中斷連線狀態中執行的應用程式的需求。 ADO 已新增對此支援，讓開發人員能夠儲存用戶端資料指標**資料錄集**至磁碟，並稍後重新載入它。  
@@ -123,9 +121,8 @@ Destination, PersistFormat
 ## <a name="remarks"></a>備註  
  此章節包含下列主題。  
   
--   [深入了解資料錄集持續性](../../../ado/guide/data/more-about-recordset-persistence.md)  
+-   [深入了解資料錄集的保存](../../../ado/guide/data/more-about-recordset-persistence.md)  
   
--   [保存篩選與階層式資料錄集](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)  
+-   [保存篩選過的階層式資料錄集](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)  
   
 -   [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Time Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Time Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.time
 - urn:schemas-microsoft-com:xml-analysis#Time
 - http://schemas.microsoft.com/analysisservices/2003/engine#Time
-helpviewer_keywords:
-- Time element
+helpviewer_keywords: Time element
 ms.assetid: b74ba333-19e5-407d-92ab-3c429d4b3f45
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5a87e973d8c42f2bf62b8c728ed511ec4bc875f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 46be126be6fbfdbab06875f86468b01e6f653b16
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="time-element-xmla"></a>Time 元素 (XMLA)
   指定所使用的時間限制[DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md)命令來設計彙總。  
@@ -70,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

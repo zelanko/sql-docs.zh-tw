@@ -8,22 +8,20 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 82a302c5d7ef97038ae7d15e8478a9551189e416
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 017d6c078c2370dcc8eb62e22e03323cc3c315f2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services 功能及工作
   Analysis Services 基本文件是依照模型類型和伺服器模式組織，因此您可以將焦點只放在已安裝之模式所提供的工具、工作和功能。 您可以在執行個體管理中找到跨越多個模式的伺服器管理工作。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 的新功能](../analysis-services/what-s-new-in-analysis-services.md)  
   
   
-

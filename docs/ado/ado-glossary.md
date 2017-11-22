@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, glossary
+helpviewer_keywords: ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddc7cab1de929354827a316770f373c0792828e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da1566fc59ac51e0923392a3cc0bee6d24dd3bfa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-glossary-terms"></a>ADO 詞彙
 本主題定義適用於 ADO 的詞彙。
@@ -222,4 +219,3 @@ ms.lasthandoff: 09/09/2017
  樹狀結構，代表項目 （節點） 之間的階層式關聯性。 沒有最上層 （根） 樹狀結構的一個節點。 下方根目錄中，可以有多個子系。 每個子系又可能是其他子系，因此類似樹分支的父代。 包含文件及其他資料夾的資料夾是樹狀結構的典型範例。 另請參閱階層、 節點、 根、 子系、 父系。
 
  此電腦可提供 Web 服務和內部網路和網際網路使用者頁面的 web 伺服器。
-

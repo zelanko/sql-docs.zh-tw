@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5d77d1cc5f03ac2d6894cefa6458f9096b47b3a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b44bf68cba02b03faad632d4b93fe3cca361e62f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>管理部署的表格式模型資料庫
   表格式模型資料庫是指您使用 Analysis Services 表格式模型專案範本在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中建立的 Analysis Services 資料庫，其中資料表和關聯性是用於表示資料的主要結構。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
  [連接到表格式模型資料庫](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
- [從 PowerPivot 還原](../../analysis-services/tabular-models/restore-from-power-pivot.md)  
+ [從 Power Pivot 還原](../../analysis-services/tabular-models/restore-from-power-pivot.md)  
   
 
     
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
   
  [附加和卸離 Analysis Services 資料庫](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
-

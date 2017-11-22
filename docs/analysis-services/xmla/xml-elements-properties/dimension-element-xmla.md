@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Dimension Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Dimension Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Dimension
 - urn:schemas-microsoft-com:xml-analysis#Dimension
 - microsoft.xml.analysis.dimension
-helpviewer_keywords:
-- Dimension element
+helpviewer_keywords: Dimension element
 ms.assetid: 85093468-e971-4b8e-9ee4-7b264ad01711
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 312aaf4cee438179b25a2958cc24d771dd9309b6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eb5f7e0e5c8cb8032074396d43a24efb0429bfe4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimension-element-xmla"></a>Dimension 元素 (XMLA)
   識別父代所代表之 cube 維度[物件](../../../analysis-services/xmla/xml-elements-properties/object-element-dimension-xmla.md)項目。  
@@ -71,10 +66,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  **維度**元素是物件識別碼，其中包含所代表之 cube 維度名稱**物件**項目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Database 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)   
  [Dimension 元素 (XMLA)](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)   
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

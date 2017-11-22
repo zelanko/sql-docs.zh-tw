@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AllowBrowsing Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AllowBrowsing Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AllowBrowsing
-helpviewer_keywords:
-- AllowBrowsing element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AllowBrowsing
+helpviewer_keywords: AllowBrowsing element
 ms.assetid: e5d09f8c-080b-4013-8c6a-0c9775e6ab25
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7ebda445faff984d5d5f95abb3d72504492c132d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1aacc5fb23f84120033d44805301c5e6737d60b6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="allowbrowsing-element-assl"></a>AllowBrowsing 元素 (ASSL)
   定義是否屬於[角色](../../../analysis-services/scripting/objects/role-element-assl.md)元素擁有瀏覽權限[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)項目。  
@@ -69,8 +63,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**AllowBrowsing**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MiningModelPermission>。  
   
-## <a name="see-also"></a>另請參閱  
- [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>請參閱＜  
+ [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

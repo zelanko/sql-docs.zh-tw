@@ -5,22 +5,20 @@ ms.date: 10/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46ed619271b56d59085b131839e65cd02e27d8fe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 5a1990a7612eab44029c36129e73050854337930
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>監視使用 Management Studio 中自訂報告的機器學習服務
 
@@ -120,4 +118,3 @@ Management Studio 中報表的一般簡介，請參閱[在 Management Studio 中
 [監視 R Services](../../advanced-analytics/r-services/monitoring-r-services.md)
 
 [R Services 的擴充事件](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
-

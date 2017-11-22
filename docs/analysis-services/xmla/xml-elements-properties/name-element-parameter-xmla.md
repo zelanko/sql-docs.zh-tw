@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Name Element (Parameter)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Name Element (Parameter)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Name
 - urn:schemas-microsoft-com:xml-analysis#Name
 - microsoft.xml.analysis.name
-helpviewer_keywords:
-- Name element
+helpviewer_keywords: Name element
 ms.assetid: 180e3b4d-058e-4deb-843d-ec60949edab0
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 29d4c451e078708af2339112f90d3eef4d7ce3ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5586ab712e5ee360c3029166bb5e4f04a6cfdc32
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="name-element-parameter-xmla"></a>Name 元素 (Parameter) (XMLA)
   包含所代表之參數的名稱[參數](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)項目。  
@@ -70,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

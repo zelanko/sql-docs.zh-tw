@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5fbdacd6a82296b08d0f395502df71f0a9e65eb8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 78144684dfeab222e031ce1151401fae77ab4350
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>課程 5-4-量值群組內定義維度資料粒度
 使用者希望維度事實資料基於不同的用途有不同的資料粒度或具體性。 例如可能記錄每一天轉售商的銷售資料或網際網路銷售，但銷售配額資訊可能只有當月或當季才有。 在這些案例中，使用者希望時間維度對每一個不同的事實資料表有不同的資料粒度或詳細層級。 雖然您能夠以這種不同的資料粒度將新資料庫維度定義為時間維度，但有更容易的方法，就是使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
@@ -128,7 +125,7 @@ ms.lasthandoff: 09/01/2017
   
 1.  針對 [員工] 維度開啟 [維度設計師]，以滑鼠右鍵按一下 [資料來源檢視] 窗格中的 [SalesTerritoryKey]，然後按一下 [從資料行新增屬性]。  
   
-2.  在 [屬性]\(attribute) 窗格中，選取 [SalesTerritoryKey]，然後在 [屬性]\(property) 視窗中，將 [AttributeHierarchyVisible] 屬性 (property) 設定為 [False]、將 [AttributeHierarchyOptimizedState] 屬性 (property) 設定為 [NotOptimized]，並且將 [AttributeHierarchyOrdered] 屬性 (property) 設定為 [False]。  
+2.  在 [屬性] (attribute) 窗格中，選取 [SalesTerritoryKey]，然後在 [屬性] (property) 視窗中，將 [AttributeHierarchyVisible] 屬性 (property) 設定為 [False]、將 [AttributeHierarchyOptimizedState] 屬性 (property) 設定為 [NotOptimized]，並且將 [AttributeHierarchyOrdered] 屬性 (property) 設定為 [False]。  
   
     這是要將 [銷售領域] 維度連結至 [銷售配額] 和 [銷售配額 1] 量值群組成為參考維度時必要的屬性。  
   
@@ -239,4 +236,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

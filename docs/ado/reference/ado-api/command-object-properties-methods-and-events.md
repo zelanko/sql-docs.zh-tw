@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Command object [ADO], members
+helpviewer_keywords: Command object [ADO], members
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2ae4cbf75c02e4cd0b0d4bcf689415809b5311af
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 60ae16f855b8b626fdc54a94094d2d718e8ed427
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="command-object-properties-methods-and-events"></a>命令物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>/ 屬性的集合  
@@ -39,7 +36,7 @@ ms.lasthandoff: 09/09/2017
   
  [CommandType 屬性](../../../ado/reference/ado-api/commandtype-property-ado.md)  
   
- [方言屬性](../../../ado/reference/ado-api/dialect-property.md)  
+ [Dialect 屬性](../../../ado/reference/ado-api/dialect-property.md)  
   
  [Name 屬性](../../../ado/reference/ado-api/name-property-ado.md)  
   
@@ -58,11 +55,10 @@ ms.lasthandoff: 09/09/2017
   
  [CreateParameter 方法](../../../ado/reference/ado-api/createparameter-method-ado.md)  
   
- [Execute 方法 （ADO 命令中）](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+ [Execute 方法 (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
   
 ## <a name="events"></a>事件  
  無。  
   
-## <a name="see-also"></a>另請參閱  
- [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

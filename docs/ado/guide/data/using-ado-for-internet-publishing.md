@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1cf73843e742254e9fcbc71299fa1494a669164
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9b26261c83932005ba0852b67e4f246cea47b8e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-for-internet-publishing"></a>使用 ADO 的網際網路發行
 [OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)顯示存取使用 ADO 的異質資料的特定範例。 雖然本節中的範例將會是適用於使用網際網路發行的提供者，示範的原則類似時應該使用 ADO 與其他異質資料，例如提供者的電子郵件存放區提供者。  
@@ -52,16 +50,15 @@ ms.lasthandoff: 09/09/2017
   
  此章節包含下列主題。  
   
--   [OLE DB Provider for Internet 發行](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
+-   [適用於網際網路發佈的 OLE DB 提供者](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
   
 -   [網際網路發佈案例](../../../ado/guide/data/internet-publishing-scenario.md)  
   
--   [絕對和相對 Url](../../../ado/guide/data/absolute-and-relative-urls.md)  
+-   [絕對和相對 URL](../../../ado/guide/data/absolute-and-relative-urls.md)  
   
 -   [記錄和提供者提供的欄位](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [記錄物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [資料流物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [ADO 記錄](../../../ado/guide/ado-history.md)
-
+ [ADO 歷程記錄](../../../ado/guide/ado-history.md)

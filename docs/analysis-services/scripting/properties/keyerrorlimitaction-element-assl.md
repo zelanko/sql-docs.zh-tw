@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- KeyErrorLimitAction Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: KeyErrorLimitAction Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- KeyErrorLimitAction
-helpviewer_keywords:
-- KeyErrorLimitAction element
+applies_to: SQL Server 2016 Preview
+f1_keywords: KeyErrorLimitAction
+helpviewer_keywords: KeyErrorLimitAction element
 ms.assetid: a2a01aae-0571-499f-9025-b61c741f3ddb
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a41842fe6ffbf2df18b9ecf4ef234f78d16f887b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 81672daca181843e47a3d26c214763cc1b371267
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="keyerrorlimitaction-element-assl"></a>KeyErrorLimitAction 元素 (ASSL)
   指定的動作[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中指定的索引鍵錯誤計數時[KeyErrorLimit](../../../analysis-services/scripting/properties/keyerrorlimit-element-assl.md)到達項目。  
@@ -76,8 +70,7 @@ ms.lasthandoff: 09/01/2017
   
  列舉型別對應至允許的值**KeyErrorLimitAction**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.KeyErrorLimitAction>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

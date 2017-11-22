@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Schema Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Schema Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Schema
-helpviewer_keywords:
-- Schema element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Schema
+helpviewer_keywords: Schema element
 ms.assetid: 4b6375fb-7ad8-4d5f-88b1-abd3da2654db
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a39f50d6c91a8f4a321c62943e8894777c376faf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 51fd142bad60a7c8e64d27952509dfa5b2b6c28f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schema-element-assl"></a>Schema 元素 (ASSL)
   包含資料來源檢視的結構描述。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**結構描述**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DataSourceView>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

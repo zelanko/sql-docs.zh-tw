@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_SetEOS
 - _Stream::SetEOS
-helpviewer_keywords:
-- SetEOS method [ADO]
+helpviewer_keywords: SetEOS method [ADO]
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3400be98c29b676235ddf38fcd73d7e2f1693a7a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 40e2cc70b9505ba99a9ac17ebfd54f8d2cf8b401
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="seteos-method"></a>SetEOS 方法
 設定為資料流結尾的位置。  
@@ -50,5 +47,4 @@ Stream.SetEOS
 >  如果您設定**EOS**到實際的資料流結尾之前的位置，您將會遺失所有資料之後新**EOS**位置。  
   
 ## <a name="applies-to"></a>適用於  
- [資料流物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

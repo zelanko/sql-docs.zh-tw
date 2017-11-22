@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data feeds [Analysis Services with SharePoint]
+helpviewer_keywords: data feeds [Analysis Services with SharePoint]
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6b345b289e396d62565f9fee76a72c0cf9cb9d04
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 31457f6abb88dff525bd19609b8dd552adadfeb8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>使用資料摘要庫共用資料摘要 (Power Pivot for SharePoint)
   資料摘要是從以 Atom 電傳格式公開資料之服務或應用程式產生的 XML 資料流， 現在越來越常用在應用程式之間傳輸資料，以及傳輸資料至用戶端檢視器。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署中，使用資料摘要以 Atom 感知應用程式或服務的資料擴展 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源。  
@@ -122,8 +120,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="usedsdoc"></a> 下一步：使用資料服務文件  
  若要使用您在 SharePoint 文件庫中建立的資料服務文件，可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源中使用 [從資料摘要] 匯入選項。 如需指示，請參閱[使用資料摘要 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Power Pivot 資料摘要](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   
-

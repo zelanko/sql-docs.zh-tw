@@ -22,17 +22,16 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 38a9c9d9a1fc035d652525b9ec0564977ac691bf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52470e4818d24aeb2288d41f60114f040e669cd6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>資料庫維度-建立日期類型維度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，時間維度是其屬性代表時間週期的維度類型，例如年、學期、季、月和日。 時間維度中的週期，會為分析和報表提供時間層級的資料粒度。 屬性會組織在階層中，而時間維度的資料粒度多半取決於記錄資料的商務和報表需求。 例如，商業智慧應用程式中的大部份財務和商務資料，都使用每月或每季的資料粒度。  
@@ -83,4 +82,3 @@ ms.lasthandoff: 09/01/2017
  [維度類型](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   
-

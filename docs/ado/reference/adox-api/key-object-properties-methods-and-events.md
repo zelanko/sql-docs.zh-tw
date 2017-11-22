@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Key object [ADOX], members
+helpviewer_keywords: Key object [ADOX], members
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72b2dc968b7b7cdced300fbf79ccdb7a8761edbf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 25d182cc90460580c02b4d44fa99c2a95153edbf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="key-object-properties-methods-and-events"></a>索引鍵的物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>/ 屬性的集合  
@@ -47,6 +44,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>事件  
  無。  
   
-## <a name="see-also"></a>另請參閱  
- [索引鍵的物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Key 物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

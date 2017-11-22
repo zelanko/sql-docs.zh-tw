@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f658ef13ff4bcc9dd96011f3645272ff32cc4b7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 62aab281804991cb4951403876d358ac2c2abf12
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables-representation-tabular"></a>資料表表示法 (表格式)
   在表格式模型中，資料表是資料的基本表示法。  
@@ -274,4 +272,3 @@ private Boolean CreateTable(
 >  上述程式碼片段在失敗時並沒有錯誤檢查或清除程序。  
   
   
-

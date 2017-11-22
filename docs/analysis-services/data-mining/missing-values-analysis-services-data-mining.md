@@ -21,17 +21,16 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b1c2b1b598989965af2be43ad62c02ae4017fd42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d71fe57dc5fcd59453d470f92b3dd900d5bde544
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>遺漏值 (Analysis Services - 資料採礦)
   正確地處理  *「遺漏值」* (Missing value) 是有效模型中很重要的一部分。 本節描述何謂遺漏值，以及您在建立資料採礦結構及採礦模型時，可用來處理遺漏值的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 功能。  
@@ -127,4 +126,3 @@ ms.lasthandoff: 09/01/2017
  [模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   
-

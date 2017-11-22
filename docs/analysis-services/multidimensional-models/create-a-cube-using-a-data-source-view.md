@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bdd918ba24a9704d17753ccf39176c96ec03586d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>使用資料來源檢視建立 Cube
   如果您想使用現有的資料來源檢視，請使用此建立新 Cube 的方法。 透過此方法，您可以指定資料來源檢視，並選取要用於資料來源檢視的事實和維度資料表。 然後，您可以選擇要包含在 Cube 中的維度和量值。  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  在精靈的 [正在完成精靈] 頁面上，您可以檢視新 Cube 中的量值群組、量值及維度。 在 [Cube 名稱] 方塊中，輸入 Cube 的名稱。 然後在您滿意 Cube 時，按一下 [完成]。 按一下 [上一步] 返回精靈的任何頁面並進行變更。  
   
   
-

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - classification accuracy [data mining]
 - accuracy testing [data mining]
 ms.assetid: bd24dd4a-624f-478a-9c94-b1361e857680
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f440a7cd7770f1412480e19304af4efcf17b1fba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b6e4e67306c225af2ba3d2cd418ceaed2d2541
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>選擇精確度圖表類型及設定圖表選項
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多種方法來判斷採礦模型的有效性。 您可以為每一個模型或結構建立之精確度圖表的類型取決於以下因素：  
@@ -69,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  所有模型類型的交叉驗證報表格式都相同，且無法設定。 但是，報表的內容會因您分析的模型類型以及可預測屬性的資料類型而異。 您也可以將報表的結果複製到剪貼簿，然後在 Excel 中處理資料。  
   
   
-

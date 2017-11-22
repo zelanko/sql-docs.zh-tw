@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 71a89ccaf6d6c8ce7022d2441814b2a6284d1993
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4d0b2c896be1059d999418d1f88053225c5d44a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 物件與介面
 以表示這些物件之間的關聯性[ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 09/09/2017
 |[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)|代表一組記錄的基底資料表或執行的命令的結果。 在任何時候，**資料錄集**物件是指單一資料錄和目前的記錄集內。<br /><br /> **資料錄集**物件而言是安全的指令碼。|  
 |[資料流](../../../ado/reference/ado-api/stream-object-ado.md)|代表二進位資料流的資料。<br /><br /> **資料流**物件而言是安全的指令碼。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/09/2017
  [ADO 方法](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO 屬性](../../../ado/reference/ado-api/ado-properties.md)
-

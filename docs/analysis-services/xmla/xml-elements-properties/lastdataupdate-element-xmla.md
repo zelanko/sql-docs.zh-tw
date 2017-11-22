@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- LastDataUpdate Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: LastDataUpdate Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.lastdataupdate
 - http://schemas.microsoft.com/analysisservices/2003/engine#LastDataUpdate
 - urn:schemas-microsoft-com:xml-analysis#LastDataUpdate
-helpviewer_keywords:
-- LastDataUpdate element
+helpviewer_keywords: LastDataUpdate element
 ms.assetid: 66e43b17-844f-4ec2-bd1d-35608e7b6524
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3eae9bd312c427f0d7f66498681c6ad94d2e1fed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 160e0792348cc47ebea64a8b19d0b9e8464900f8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lastdataupdate-element-xmla"></a>LastDataUpdate 元素 (XMLA)
   包含父系所代表的資料 cube 的時間與日期[Cube](../../../analysis-services/xmla/xml-elements-properties/cube-element-olapinfo-xmla.md)上次更新項目。  
@@ -70,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

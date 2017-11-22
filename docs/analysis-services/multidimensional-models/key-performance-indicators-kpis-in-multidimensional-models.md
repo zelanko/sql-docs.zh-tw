@@ -24,17 +24,16 @@ helpviewer_keywords:
 - parent KPIs [Analysis Services]
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 326f2bd9d1ca70ff025e0b9cdf27ce167474d7be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2fb3d1fa6ae92ba6dd23f9295428d696834ee8d4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多維度模型中的關鍵效能指標 (KPI)
   在商務用語中，關鍵效能指標 (KPI) 是量測商務成就的可量化度量。  
@@ -81,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  您可以使用 MDX 函數來擷取 MDX 的個別區段，例如值或目標，以使用於 MDX 運算式、陳述式和指令碼。  
   
   
-

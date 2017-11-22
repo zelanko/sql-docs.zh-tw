@@ -20,17 +20,16 @@ helpviewer_keywords:
 - partitions [Analysis Services], write-enabled
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3f1f8ef13a4b05c5f5be5553b601e019b68aa100
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 45057f5e164c473b588df70f5b8a8617f74390d2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-partition-writeback"></a>設定分割區回寫
   如果您啟用量值群組的寫入功能，使用者可以在瀏覽 Cube 資料時進行變更，系統會將變更儲存到另一個資料表 (稱為回寫資料表)，而不是在 Cube 資料或來源資料中儲存變更。 瀏覽可寫入分割區的使用者，會看到所有變更在分割區的回寫資料表中產生的結果。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [啟用及設定安全性與 Analysis Services 回寫資料輸入](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   
-

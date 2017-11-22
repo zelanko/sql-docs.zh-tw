@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- RootMemberIf Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: RootMemberIf Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- RootMemberIf
-helpviewer_keywords:
-- RootMemberIf element
+applies_to: SQL Server 2016 Preview
+f1_keywords: RootMemberIf
+helpviewer_keywords: RootMemberIf element
 ms.assetid: b695e271-c748-4abc-a09f-acb1014f768f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e86d428d97eaffedc7e628b1b8bff9dfd4394d90
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9c312a638544071697a59bf1a7ddfb44ce9c5746
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rootmemberif-element-assl"></a>RootMemberIf 元素 (ASSL)
   決定如何識別父屬性的根成員。  
@@ -80,8 +74,7 @@ ms.lasthandoff: 09/01/2017
   
  列舉型別對應至允許的值**RootMemberIf**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.RootIfValue>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

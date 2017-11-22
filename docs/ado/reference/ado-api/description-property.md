@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Error::Description
 - Error::GetDescription
 - Error::get_Description
-helpviewer_keywords:
-- Description property
+helpviewer_keywords: Description property
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc23f481c709c0901eb6a2020b51629a16f659eb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5fe6e991baea65a345a6e3a070165dfa568982c4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="description-property"></a>Description 屬性
 描述[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  
@@ -46,10 +43,9 @@ ms.lasthandoff: 09/09/2017
 ## <a name="applies-to"></a>適用於  
  [Error 物件](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [描述、 HelpContext、 說明檔案、 NativeError、 數字、 來源和 SQLState 屬性範例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [描述、 HelpContext、 說明檔案、 NativeError、 數字、 來源和 SQLState 屬性範例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [HelpContext，HelpFile 屬性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Number 屬性 (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [來源屬性 （ADO 錯誤）](../../../ado/reference/ado-api/source-property-ado-error.md)
-
+ [Source 屬性 (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)

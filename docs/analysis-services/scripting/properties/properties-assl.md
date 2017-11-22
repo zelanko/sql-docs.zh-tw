@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - properties [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, properties
 - ASSL, properties
 ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ff1e43f8fd1242b8ac314b49268ec8c86e7cb907
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fee88a17655823ed00bbcb864dabcf1980663724
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="properties-assl"></a>屬性 (ASSL)
   這個參考章節包含在「Analysis Services 指令碼語言」(ASSL) 結構描述中當做物件屬性之每個元素的語法和使用方式資訊。  
@@ -289,8 +287,7 @@ ms.lasthandoff: 09/01/2017
 |[寫入項目 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/write-element-assl.md)|判斷是否可寫入資料或中繼資料的指定**CubeDimensionPermission**或**權限**項目。|  
 |[WriteEnabled 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/writeenabled-element-assl.md)|指出是否可以使用維度回寫 (受限於安全性權限)。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 元素階層 &#40;ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   
-

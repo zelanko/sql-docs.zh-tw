@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.renametableorcolumn.f1
+f1_keywords: sql13.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: edfd1fe4e353f74f9729325b40865905a1907dc2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a560b70416ed73945db053249a51508635b50ac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>重新命名資料表或資料行 (SSAS 表格式)
   您可以在匯入程序期間，於 **[資料表匯入精靈]** 的 **[選取資料表和檢視表]** 頁面中輸入 **[易記名稱]**來變更資料表的名稱。 如果在 **[資料表匯入精靈]** 的 **[指定 SQL 查詢]**頁面上指定查詢來匯入資料，也可以變更資料表和資料行名稱。  
@@ -65,10 +63,9 @@ ms.lasthandoff: 09/01/2017
   
  也必須更新任何計算使用重新命名的資料表，或是使用重新命名之資料表的資料行，而且必須從這些計算衍生的資料重新整理及重新計算。 根據受到影響之資料表和計算的數目而定，完成這個程序可能需要一點時間。 因此，重新命名資料表的最佳時機是匯入期間，或是在您開始建立複雜關聯性和計算之前。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料表和資料行](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [從 Power Pivot 匯入](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
  [從 Analysis Services 匯入](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)  
   
   
-

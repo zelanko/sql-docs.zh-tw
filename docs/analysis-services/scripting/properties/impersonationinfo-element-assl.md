@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ImpersonationInfo Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ImpersonationInfo Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ImpersonationInfo element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ImpersonationInfo element
 ms.assetid: d4b9c372-1023-43f7-97e9-b0a90f544fbb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 91bc024cd8d42bc77f4df1b431d4df25c053a133
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 08fc304b8adf0f83217da36073c6f3e30eb6258f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="impersonationinfo-element-assl"></a>ImpersonationInfo 元素 (ASSL)
   包含在存取或執行組件時，用來決定模擬行為的資訊。  
@@ -66,8 +61,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-
