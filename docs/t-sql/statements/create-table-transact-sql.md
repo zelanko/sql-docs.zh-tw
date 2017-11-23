@@ -1,13 +1,14 @@
 ---
 title: "建立資料表 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,8 +20,7 @@ f1_keywords:
 - TABLE_TSQL
 - FILESTREAM_ON
 - FILESTREAM_ON_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CHECK constraints
 - global temporary tables [SQL Server]
@@ -47,20 +47,19 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
+caps.latest.revision: "256"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0978041b1c2683f6af3f6c531ddc10edc6b9bcbf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   建立新的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
@@ -1020,7 +1019,7 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
 CREATE PROCEDURE dbo.Test2  
 AS  
-    CREATE TABLE #t(x INT PRIMARY KEY);  
+n    CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (2);  
     SELECT Test2Col = x FROM #t;  
 GO  
@@ -1030,7 +1029,7 @@ AS
     CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (1);  
     SELECT Test1Col = x FROM #t;  
-EXEC Test2;  
+ EXEC Test2;  
 GO  
   
 CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1069,7 +1068,7 @@ Azure SQL Database 支援全域暫存資料表也儲存在 tempdb 中，而且�
 Azure SQL 資料庫的全域暫存資料表遵循相同的語法和語意，SQL Server 用於暫存資料表。  同樣地，全域的暫存預存程序也範圍為資料庫層級，在 Azure SQL DB。 本機暫存資料表 （使用 # 資料表名稱起始） 也支援 Azure SQL Database，並遵循相同的語法和語意，SQL Server 使用。  請參閱上一節[暫存資料表](#temporary-tables)。  
 
 > [!IMPORTANT]
-> 這項功能處於公開預覽狀態，供 Azure SQL Database。
+> 這項功能僅適用於 Azure SQL Database。
 >
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>疑難排解 Azure SQL 資料庫的全域暫存資料表 
@@ -1640,7 +1639,7 @@ GO
  ```
  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [COLUMNPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
@@ -1660,6 +1659,5 @@ GO
  [sp_spaceused &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
-
 
 

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e027eb6b5c5afdf361854892a22ad5dd69a9d646
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-specific-connection-information"></a>驅動程式特有的連接資訊
 **SQLConnect**假設資料來源名稱、 使用者識別碼和密碼是足以連接至資料來源，而所有其他連接資訊，可以儲存在系統上。 這通常不是大小寫。 例如，驅動程式可能需要一位使用者 ID 和密碼登入伺服器以及不同的使用者識別碼和密碼來登入 DBMS。 因為**SQLConnect**接受單一使用者識別碼和密碼，這表示，其他使用者識別碼和密碼必須儲存在系統上的資料來源資訊如果**SQLConnect**使用。 這是潛在的安全性漏洞，而且應該避免使用，除非密碼加密。  
@@ -50,4 +48,3 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  中的關鍵字-值配對**SQLDriverConnect**必須遵循特定的語法規則。 這些關鍵字，而且其值不應該包含**[] {} （)，;？\*= ！ @**字元。 值**DSN**關鍵字不能只包含空格，且不能包含前置的空白。 因為登錄文法中，關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。 關鍵字-值配對中的等號前後不能有空格。  
   
  **FILEDSN**關鍵字可用於呼叫**SQLDriverConnect**來指定包含資料來源資訊的檔案名稱 (請參閱[連接使用的檔案資料來源](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)，本主題稍後)。 **SAVEFILE**關鍵字可用來指定的連線成功的關鍵字-值配對所做的.dsn 檔案名稱中的呼叫所**SQLDriverConnect**將會儲存。 如需檔案資料來源的詳細資訊，請參閱[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函式描述。
-

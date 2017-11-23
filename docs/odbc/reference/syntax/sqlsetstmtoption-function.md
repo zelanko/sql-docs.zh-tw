@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetStmtOption
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetStmtOption
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetStmtOption
-helpviewer_keywords:
-- SQLSetStmtOption function [ODBC]
+f1_keywords: SQLSetStmtOption
+helpviewer_keywords: SQLSetStmtOption function [ODBC]
 ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72b56f5618ebe4a6635d0d60a1cfb256b08438c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da76666e825bf0112536487bc3757026b15de81f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetstmtoption-function"></a>SQLSetStmtOption 函式
 **一致性**  
@@ -47,7 +41,6 @@ ms.lasthandoff: 09/09/2017
 ## <a name="remarks"></a>備註  
  請參閱[ODBC 64 位元資訊](../../../odbc/reference/odbc-64-bit-information.md)，如果您的應用程式將在 64 位元作業系統上執行。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)
-

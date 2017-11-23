@@ -3,17 +3,18 @@ title: "USER_NAME (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - USER_NAME
 - USER_NAME_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - usernames [SQL Server]
 - IDs [SQL Server], databases
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - identification numbers [SQL Server], databases
 - database usernames [SQL Server]
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "37"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 74040ef26d016301cb861c1f1b8e395fe897196d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回指定識別碼的資料庫使用者名稱。  
   
@@ -56,7 +56,7 @@ USER_NAME ( [ id ] )
  **nvarchar(256)**  
   
 ## <a name="remarks"></a>備註  
- 當*識別碼*已省略，則會假設目前內容中目前的使用者。 如果參數包含 NULL 會傳回 NULL 這個字。當呼叫 USER_NAME 時沒有指定*識別碼*之後 EXECUTE AS 陳述式，USER_NAME 會傳回模擬使用者的名稱。 如果 Windows 主體利用群組中的成員資格來存取資料庫，則 USER_NAME 會傳回 Windows 主體名稱而非群組。  
+ 當*識別碼*已省略，則會假設目前內容中目前的使用者。 如果參數包含 NULL 一詞，就會傳回 NULL。 當呼叫 USER_NAME 時沒有指定*識別碼*之後 EXECUTE AS 陳述式，USER_NAME 會傳回模擬使用者的名稱。 如果 Windows 主體利用群組中的成員資格來存取資料庫，則 USER_NAME 會傳回 Windows 主體名稱而非群組。  
   
 ## <a name="examples"></a>範例  
   
@@ -158,7 +158,7 @@ name
 User7                              
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CURRENT_TIMESTAMP &#40;TRANSACT-SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
@@ -168,5 +168,4 @@ User7
  [SYSTEM_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
   
-
 

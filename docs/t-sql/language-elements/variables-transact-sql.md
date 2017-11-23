@@ -8,24 +8,21 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7e113be00cbfdaf0dd1e0164623aec3516327a23
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c77c323f8e9dbb2abc010c3fbc9e6d2b349c8ae1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="variables-transact-sql"></a>變數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -183,12 +180,11 @@ SELECT @EmpIDVariable;
 GO
 ```
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [宣告@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-  
  [SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
+ [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
+ [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
- [選取@local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
   
-  
-

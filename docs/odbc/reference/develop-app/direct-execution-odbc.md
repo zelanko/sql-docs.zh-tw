@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - direct execution [ODBC]
 - SQL statements [ODBC], executing
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: abce5a1c9f4fceb38420c15159cf89a2430025dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="direct-execution-odbc"></a>直接執行 ODBC
 直接執行是最簡單的方式執行的陳述式。 當提交陳述式執行時，資料來源會將它編譯成存取計劃，，然後執行該存取方案。  
@@ -61,4 +59,3 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   將和已轉換的參數值的陳述式傳送至資料來源，以便執行中。  
   
     -   傳回的任何錯誤。 其中包括排序或狀態診斷，例如 SQLSTATE 24000 （無效的資料指標狀態）、 語法錯誤，例如 SQLSTATE 42000 （語法錯誤或存取違規），以及語意錯誤，例如 SQLSTATE 42S02 （基底資料表或檢視表，找不到）。
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6cb8bb35eb0e53415465b3ea003341d74e248bda
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-is-metadata-used"></a>方式是使用中繼資料？
 應用程式需要大部分結果集作業的中繼資料。 例如，應用程式會使用資料行的資料類型來決定要繫結到該資料行的變數種類。 它會使用字元資料行的位元組長度來判斷多少空間，以便顯示該資料行的資料。 應用程式決定資料行之中繼資料的方式取決於應用程式的類型。  
@@ -38,4 +36,3 @@ ms.lasthandoff: 09/09/2017
  泛型應用程式，特別是那些支援臨機操作查詢，幾乎不會知道他們建立的結果集的中繼資料。 因此，它們必須探索中繼資料，在執行階段函式的使用**SQLNumResultCols**， **SQLDescribeCol**，和**SQLColAttribute**，即中描述下一節[SQLDescribeCol 和 SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md)。  
   
  所有的應用程式，不論其類型可以目錄函數所傳回的結果集的硬式編碼中繼資料。 本手冊的參考章節中定義這些結果集。
-

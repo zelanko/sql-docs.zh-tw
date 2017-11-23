@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - SQL statements [ODBC]
 - ODBC [ODBC], SQL
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 147d3a17b4041caf3a83ec819d65dc43af32312f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="processing-a-sql-statement"></a>處理 SQL 陳述式
 之前討論的技術以程式設計方式使用 SQL 時，就必須討論 SQL 陳述式的處理方式。 所需的步驟通用於所有三種技術，雖然每個技術執行它們在不同的時間。 下圖顯示的步驟涉及在處理 SQL 陳述式，在這個章節的其餘部分將會討論。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 5.  DBMS 執行存取計畫來執行陳述式。  
   
  用來處理 SQL 陳述式的步驟會有所不同數量它們需要資料庫存取權，則會接受的時間量。 剖析 SQL 陳述式時，不需要資料庫的存取權，而且可以非常快速地完成。 最佳化，相反地，是非常耗用 CPU 處理和需要系統目錄的存取。 為複雜、 多重資料表的查詢，最佳化工具可能會探索數千個不同的方式執行相同的查詢。 不過，通常是過高的最佳化所花費的時間超過重新取得增加的查詢的執行速度無效率地執行查詢的成本。 這是若可以重複使用相同的最佳的存取計畫，來執行重複查詢更重要。
-

@@ -1,31 +1,33 @@
 ---
 title: "機器學習功能的 SQL Server 版本之間的差異 |Microsoft 文件"
 ms.custom: 
-ms.date: 08/22/2017
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b33a3e2-04d3-4bad-9335-9568ae09db0b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: bd59eae3617b81d3368703eba7c25a615e6a52f1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9b520b7fc7e97498f4b46a43ad991558025123a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
-
 # <a name="differences-in-machine-learning-features-between-editions-of-sql-server"></a>機器學習功能的 SQL Server 版本之間的差異
  
- 機器學習支援下列版本的 SQL Server 2016 和 SQL Server 2017 有：
+ 使用 SQL Server 2016 和 SQL Server 2017 機器學習的支援。 本文列出支援功能的版本、 說明套用在特定的版本中的其他限制，並列出功能僅適用於特定版本。
+
+ > [!NOTE]
+ > 一般情況下，並不包含 SQL Server 機器學習[實施](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)Microsoft R Server 或 Server 機器學習中所包含的功能。
+ > 
+ > 如果您需要這些功能，您可以安裝 Microsoft R Server 機器學習分開，以支援的預測模型的部署為 web 服務。 
 
 ## <a name="summary-of-differences"></a>差異的摘要
 
@@ -35,11 +37,11 @@ ms.lasthandoff: 09/01/2017
      
      SQL Server 2017 包括 Microsoft Machine Learning 伺服器 （獨立）。 SQL Server 2016 包含 Microsoft R Server （獨立）。 此功能支援實施機器學習服務不需要使用 SQL Server 做為運算環境。
 
-     沒有任何限制於這些功能在企業版，提供最佳化的效能和延展性，透過平行處理和串流。 這個版本也最大化平台支援用於串流處理和平行執行。
+     沒有任何限制於這些功能在企業版，提供最佳化的效能和延展性，透過平行處理和串流。 這個版本也最大化平台支援用於串流處理和平行執行。 這表示，不同於 Standard Edition 中，輸入資料不需要放入記憶體，但是可以資料流處理。
      
      使用 SQL Server 資料庫中分析支援支援資源監管，外部指令碼，以自訂的伺服器資源使用狀況。
      
-     較新版本的 Microsoft R Server 包括實施引擎，可支援快速、 安全部署的改良的版本，且共用的 R 方案。 如需詳細資訊，請參閱[mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)。
+     較新版本的 Microsoft R Server 和機器學習伺服器包括實施引擎，可支援快速、 安全部署的改良的版本，且共用的 R 方案。 如需詳細資訊，請參閱[實施 analytics 使用機器學習 Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)。
 
 -   **Developer Edition**
 
@@ -47,20 +49,19 @@ ms.lasthandoff: 09/01/2017
   
 -   **Standard Edition**
 
-     已分析資料庫中的所有功能都包含使用 Enterprise 版時，除了資源控管。 效能和延展性也是有限： 可以處理的資料必須符合伺服器記憶體，且處理僅限於單一計算執行緒，即使是使用**RevoScaleR**函式。
+     已分析資料庫中的所有功能都包含使用 Enterprise 版時，除了資源控管。 效能和延展性也會受到限制： 可以處理的資料必須符合伺服器記憶體，且處理僅限於單一計算執行緒，即使是使用**RevoScaleR**函式。
   
 -   **Express 和 Web 版本**
   
-     只有 Express Edition with Advanced Services 包含機器學習功能。 效能限制與 Standard Edition 類似。 Web edition 不適合工作，例如建立機器學習模型。不過，您可以使用預測函數來執行計分其他地方使用定型的模型。
+     只有 Express Edition with Advanced Services 包含機器學習功能。 效能限制與 Standard Edition 類似。 
+     
+     Web Edition 不適合工作，例如建立機器學習模型。 不過，您可以使用預測函數來執行計分其他地方使用定型的模型。
 
 -   **Azure SQL Database**
   
-     在 Azure SQL Database 目前不支援機器學習功能，例如 R，並將 Python 指令碼。
-     
-     如需詳細資訊和相關當此功能即將，公告，請參閱 SQL Server 部落格： [Python 中 SQL Server 2017： 增強式資料庫中的機器學習服務](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
+     初始的測試版本發行後 R 服務目前是**不**Azure SQL Database 中，提供暫止的進一步開發之用。 
 
-
-### <a name="languages-supported-in-all-editions"></a>所有版本中支援的語言
+### <a name="external-script-languages-supported"></a>支援的外部指令碼語言
 
 所有版本都支援下列機器學習語言：
 
@@ -85,15 +86,19 @@ Microsoft R Client 可以搭配所有版本運作。
 
 ## <a name="machine-learning-in-developer-edition"></a>機器學習中 Developer Edition
 
-Developer Edition 提供與 Enterprise Edition 相等的效能，不過並不支援在實際執行環境中使用 Developer Edition。
+Developer Edition 提供相當於 Enterprise Edition 的效能。
+
+使用 Developer Edition 不支援實際執行環境。
 
 ## <a name="machine-learning-in-standard-edition"></a>機器學習中 Standard Edition
 
 在使用相同硬體組態的情況下，與標準 R 封裝相比，Standard Edition 應該可以提供一些效能優點。
 
-Standard Edition 不支援資源管理員。 使用資源管理機制是以自訂伺服器資源用來支援不同的工作負載，例如模型定型和計分的最佳方式。
+Standard Edition 不支援資源管理員。 標準版也提供有限的效能和延展性，相較於 Enterprise 和 Developer edition。
 
-與 Enterprise Edition 和 Developer Edition 相比，Standard Edition 也只能提供受限制的效能和延展性。 所有**RevoScaleR**函式和封裝已包括 Standard Edition，但它可以使用的處理序數目有限的服務會啟動，並管理 R 指令碼。 此外，由程式碼所處理的資料必須能納入記憶體中。  相同的限制適用於將使用的方案**revoscalepy**。
+所有**RevoScaleR**函式和封裝已包括 Standard Edition，但它可以使用的處理序數目有限的服務會啟動，並管理 R 指令碼。 此外，由程式碼所處理的資料必須能納入記憶體中。
+
+相同的限制適用於將使用的方案**revoscalepy**。
 
 ## <a name="machine-learning-in-express-edition-with-advanced-services"></a>機器學習 Express edition with Advanced Services
 
@@ -101,7 +106,7 @@ Express Edition 具有和 Standard Edition 相同的限制。
 
 ## <a name="machine-learning-in-web-edition"></a>機器學習中 Web Edition
 
-Web edition 不支援執行 R 或 Python 指令碼。 不過，您可以使用預測函數來執行[原生計分](../sql-native-scoring.md)定型不同的 SQL Server 或 R Server 執行個體上，則儲存在所需的二進位格式的模型上。
+Web edition 不支援執行 R 或 Python 指令碼。 不過，您可以使用[預測](../../t-sql/queries/predict-transact-sql.md)函式來執行[原生計分](../sql-native-scoring.md)定型不同的 SQL Server 或 R Server 執行個體上，則儲存在所需的二進位格式的模型上。
 
 ## <a name="next-steps"></a>後續的步驟
 
@@ -112,7 +117,6 @@ Web edition 不支援執行 R 或 Python 指令碼。 不過，您可以使用�
 
 如需有關 SQL Server 中的其他功能的詳細資訊，請參閱：
 
-+ [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
++ [版本和支援的 SQL Server 2016 功能](../../sql-server/editions-and-components-of-sql-server-2016.md) 
 
-如需 Microsoft R 功能及如何最佳化您的方案大型資料集的詳細資訊，請參閱[Microsoft R Server](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips)文件。
-
+如需有關如何最佳化您的方案大型資料集的詳細資訊，請參閱[計算大型的資料，在 R 的秘訣](https://docs.microsoft.com/machine-learning-server/r/tutorial-large-data-tips)文件。

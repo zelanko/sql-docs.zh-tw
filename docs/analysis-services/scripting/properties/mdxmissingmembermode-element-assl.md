@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MdxMissingMemberMode Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MdxMissingMemberMode Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MdxMissingMemberMode element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MdxMissingMemberMode element
 ms.assetid: aca6130b-5fb8-4fa1-af8b-8e1ef361926f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c36d08b4c29cc6a6990bb611c5adfa6f2aee573c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b938068f6e9f55f5d9d94ea5c65a01b5281152f2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdxmissingmembermode-element-assl"></a>MdxMissingMemberMode 元素 (ASSL)
   決定如何處理多維度運算式 (MDX) 陳述式的遺漏成員。  
@@ -75,9 +70,8 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**MdxMissingMemberMode**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Dimension>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [多維度運算式 &#40;MDX &#41;參考](../../../mdx/multidimensional-expressions-mdx-reference.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

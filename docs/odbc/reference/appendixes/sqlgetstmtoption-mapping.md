@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLGetStmtOption
 ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 478c7c00205a161d366a1052b52604047f9755dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 503af3ea0dbac61cee506b932f79eccab5dedcf8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption 對應
 當應用程式呼叫**SQLGetStmtOption** ODBC 3*.x*不支援呼叫它的驅動程式  
@@ -62,4 +60,3 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
  SQL_GET_BOOKMARK 陳述式選項已被取代，在 ODBC 3*.x*。 ODBC 3*.x*驅動程式，才能使用 ODBC 2。*x*使用 SQL_GET_BOOKMARK，應用程式，就必須支援 SQL_GET_BOOKMARK。 ODBC 3*.x*驅動程式，才能使用 ODBC 2。*x*應用程式，就必須支援 SQL_USE_BOOKMARKS 設 SQL_UB_ON 和應該公開 （expose） 的固定長度的書籤。 如果 ODBC 3*.x*驅動程式支援只可變長度的書籤，不會在固定長度的書籤，它必須傳回 SQLSTATE HYC00 （未實作的選擇性功能） 如果 ODBC 2。*x* SQL_USE_BOOKMARKS 設 SQL_UB_ON 嘗試應用程式。  
   
  ODBC 3*.x*驅動程式，驅動程式管理員不會再檢查以查看是否*選項*之間 SQL_STMT_OPT_MIN 和 SQL_STMT_OPT_MAX，或大於 SQL_CONNECT_OPT_DRVR_START。 驅動程式必須檢查。
-

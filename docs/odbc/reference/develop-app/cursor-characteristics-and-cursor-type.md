@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45a3003ac39e806dbd012b79b974160f3530fc32
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19a9e44523e1dc550b593bc83589177c03d8a842
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>資料指標的特性以及資料指標類型
 應用程式可以指定資料指標，而不是指定資料指標類型 （順向、 靜態、 索引鍵集驅動或動態） 的特性。 若要這樣做，應用程式 （藉由設定 SQL_ATTR_CURSOR_SCROLLABLE 陳述式屬性） 的資料指標的可捲動性和敏感度 （藉由設定 SQL_ATTR_CURSOR_SENSITIVITY 陳述式屬性） 之前先選取開啟資料指標的陳述式上控制代碼。 驅動程式再選擇最有效率的方式，提供特性的資料指標類型要求之應用程式。  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_CURSOR_FORWARD_ONLY 的 SQL_ATTR_CURSOR_TYPE|為 SQL_NONSCROLLABLE SQL_ATTR_CURSOR_SCROLLABLE。|  
 |SQL_CURSOR_KEYSET_DRIVEN 的 SQL_ATTR_CURSOR_TYPE|為 SQL_SCROLLABLE SQL_ATTR_SCROLLABLE。<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED 或 SQL_SENSITIVE （根據驅動程式所定義的條件，如果 SQL_ATTR_CONCURRENCY 不 SQL_CONCUR_READ_ONLY）。|  
 |SQL_CURSOR_STATIC 的 SQL_ATTR_CURSOR_TYPE|為 SQL_SCROLLABLE SQL_ATTR_SCROLLABLE。<br /><br /> SQL_ATTR_SENSITIVITY 為 SQL_INSENSITIVE （如果 sql_attr_concurrency 設定為 SQL_CONCUR_READ_ONLY）。<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED 或 SQL_SENSITIVE （如果 SQL_ATTR_CONCURRENCY 不 SQL_CONCUR_READ_ONLY）。|
-

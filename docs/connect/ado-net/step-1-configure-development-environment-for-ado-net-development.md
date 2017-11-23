@@ -8,22 +8,20 @@ ms.service:
 ms.component: ado-net
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ee138401f61663fbfc078f893ed542503d30be77
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3d33660b662ea3e89d10d04266425261a6eb9f6e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>步驟 1： 設定 ADO.NET 開發的開發環境
 
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 連結下載.NET Core，各種不同的作業系統中，位於：
 
 - ![下載 DownArrow Circled](../../ssdt/media/download.png)[下載及安裝.NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
-

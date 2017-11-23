@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - argument value checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5269d810e91187b8c57ce6b2fbd1043d1df3a89d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="argument-value-checks"></a>引數的值檢查
 驅動程式管理員會檢查下列類型的引數。 除非另有註明，否則驅動程式管理員會傳回 SQL_ERROR 引數的值中的錯誤。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   資料行和參數的數字必須大於 0 或大於或等於 0，視函數而定。 驅動程式必須檢查這些根據目前結果集或 SQL 陳述式的引數值的數目上限。  
   
 -   長度/指標引數和資料緩衝區的長度引數必須包含適當的值。 例如，指定中的資料表名稱的長度的引數**SQLColumns** (*NameLength3*) 必須是 SQL_NTS 或是值大於 0;*Columnsize*中**SQLDescribeCol**必須大於或等於 0。 驅動程式可能也需要檢查這些引數。 例如，它可能會檢查*NameLength3*小於或等於資料來源中的資料表名稱的最大長度。
-

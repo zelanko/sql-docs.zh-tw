@@ -14,14 +14,12 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: d6fb9839ee1ba7f583eca9445599422469212083
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 18d40800ee74783b0ce3df4d9d4e0458fbb72ebb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>效能最佳作法和 Linux 上的 SQL Server 2017 的設定指導方針
 
 本主題會提供最佳做法和建議將用於連接到 SQL Server on Linux 的資料庫應用程式的效能最大化。 這些建議專屬於 Linux 平台上執行。 所有標準 SQL Server，例如索引設計仍適用於建議。
@@ -118,4 +116,3 @@ sysctl -w vm.max_map_count 262144
 若要深入了解 SQL Server 功能可改善效能，請參閱[開始使用的效能功能](sql-server-linux-performance-get-started.md)。
 
 如需有關 SQL Server on Linux，請參閱[概觀的 SQL Server on Linux](sql-server-linux-overview.md)。
-

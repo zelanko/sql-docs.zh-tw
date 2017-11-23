@@ -3,17 +3,18 @@ title: "ALTER INDEX (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,20 +44,19 @@ helpviewer_keywords:
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   藉由停用、重建或重新組織索引或設定索引選項，修改現有的資料表或檢視表索引 (關聯式或 XML)。  
   
@@ -191,7 +191,7 @@ ALTER INDEX { index_name | ALL }
 |重新組織資料分割 = |未分割索引、XML 索引、空間索引或停用的索引|  
 |IGNORE_DUP_KEY = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用於：** (SQL Server 2012 起） 的 SQL Server 和 Azure SQL Database。|  
 |ONLINE = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用於：** (SQL Server 2012 起） 的 SQL Server 和 Azure SQL Database。|
-| 可繼續 = ON  | 不支援可繼續索引**所有**關鍵字。 <br /><br /> **適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態） |   
+| 可繼續 = ON  | 不支援可繼續索引**所有**關鍵字。 <br /><br /> **適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database |   
   
 > [!WARNING]
 >  如需詳細資訊，可以在線上執行索引作業，請參閱[線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。
@@ -436,7 +436,7 @@ PAD_INDEX = { ON | OFF }
 
 可繼續 **=**  {ON |**OFF**}
 
-**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態）  
+**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database   
 
  指定的線上索引作業是否為可繼續。
 
@@ -446,7 +446,7 @@ PAD_INDEX = { ON | OFF }
 
 MAX_DURATION  **=**  *時間*[**分鐘**] 搭配使用**可繼續 = ON** (需要**ONLINE = ON**).
  
-**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態）  
+**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database 
 
 表示時間 （以分鐘為單位的整數值） 可繼續線上索引作業之前在暫停執行。 
 
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**適用於**： 開頭為 SQL Server 2017 （功能處於公開預覽狀態）
+**適用於**： 開頭為 SQL Server 2017  
 
 繼續已暫停，以手動方式或因失敗而索引作業。
 
 MAX_DURATION 搭配**可繼續 = ON**
 
  
-**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態）
+**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database
 
 時間 （以分鐘為單位的整數值），可繼續線上索引作業執行之後繼續。 一旦已逾期，如果仍在執行已暫停，可繼續作業。
 
 搭配使用 WAIT_AT_LOW_PRIORITY**可繼續 = ON**和**ONLINE = ON**。  
   
-**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態）
+**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database 
   
  等候這個資料表的封鎖作業已暫停之後繼續線上索引重建。 **WAIT_AT_LOW_PRIORITY**表示線上索引重建作業將會等候低優先權鎖定，讓其他作業，線上索引建立作業等候時繼續進行。 省略**WAIT AT LOW PRIORITY**選項相當於`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 如需詳細資訊，請參閱[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)。 
 
 
 PAUSE
  
-**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態）
+**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database 
   
 暫停擱置的線上索引重建作業。
 
 中止
 
-**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態）   
+**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database   
 
 中止已宣告為可繼續在執行中或暫停索引作業。 您必須明確地執行**中止**命令終止擱置的索引重建作業。 失敗或暫停繼續索引作業不會終止其執行。相反地，它會使操作無限期暫停狀態。
   
@@ -712,7 +712,7 @@ PAUSE
 
 ### <a name="resumable-index-operations"></a>可繼續索引作業
 
-**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態）
+**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database 
 
 線上索引重建指定為可繼續使用可繼續 = ON 選項。 
 -  可繼續選項在指定索引的中繼資料不會保留且只適用於目前的 DDL 陳述式的持續時間。 因此，可繼續 = ON 子句必須明確指定要啟用 resumability。
@@ -786,7 +786,7 @@ PAUSE
   
 -   無法使用 SQL Server 2012 之前資料行存放區索引。 
 
--  可繼續索引作業會從 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽） |   
+-  可繼續索引作業會從 SQL Server 2017 和 Azure SQL Database   
   
 ## <a name="basic-syntax-example"></a>基本語法範例：   
   
@@ -1135,7 +1135,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. 擱置的線上索引重建
 
-**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態）    
+**適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database   
 
  下列範例會示範如何使用擱置的線上索引重建。 
 
@@ -1175,7 +1175,7 @@ GO
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [建立空間索引 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [建立 XML 索引 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
@@ -1188,6 +1188,5 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 
 

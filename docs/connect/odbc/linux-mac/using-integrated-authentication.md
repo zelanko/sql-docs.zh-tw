@@ -8,24 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- integrated authentication
+helpviewer_keywords: integrated authentication
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 162b94d551ea8625b6b22fafec61e19038dc2051
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e2c2a07d94fce76b37970cc998ae6a0959a0080
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-integrated-authentication"></a>使用整合式驗證
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -135,10 +132,9 @@ Linux 或 macOS 電腦上的時間和 Kerberos 金鑰發佈中心 (KDC) 上的�
 
 如需驗證與 Active Directory 的 Linux 或 macOS 電腦的詳細資訊，請參閱[與 Active Directory 驗證 Linux 用戶端](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)和[與 Active Directory整合OSX的最佳作法](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). 如需有關設定 Kerberos 的詳細資訊，請參閱[MIT Kerberos 文件](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
 [版本資訊](../../../connect/odbc/linux-mac/release-notes.md)
 
 [使用 Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
-

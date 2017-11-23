@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,22 +16,19 @@ f1_keywords:
 - ALTER SECURITY POLICY
 - ALTER_SECURITY_TSQL
 - ALTER SECURITY
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- ALTER SECURITY POLICY statement
+dev_langs: TSQL
+helpviewer_keywords: ALTER SECURITY POLICY statement
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0b420b7b73af8f32d2de9dac39cc4f57b41680c7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7babf1f7769d800f18a17ee21b87a0ba2b997fb6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-security-policy-transact-sql"></a>變更安全性原則 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -162,7 +158,7 @@ ALTER SECURITY POLICY rls.SecPol
     ON dbo.Sales AFTER INSERT;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料列層級安全性](../../relational-databases/security/row-level-security.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
@@ -170,4 +166,3 @@ ALTER SECURITY POLICY rls.SecPol
  [sys.security_predicates &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - core-level interface conformance levels [ODBC]
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07c5896fc179f8224914d0af8b4aa9defa94b9bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c535d6756ba2fa5eaa20d6dec9ca3ad7ae3c85b4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="core-interface-conformance"></a>核心介面一致性
 所有的 ODBC 驅動程式必須呈現出至少核心層級介面一致性。 因為核心層級中的功能所需的大部分的泛型互通的應用程式，此驅動程式可以使用這類應用程式。 核心層級中的功能也會對應至 ISO CLI 規格中定義的功能和 nonoptional 開啟群組 CLI 規格中定義的功能。 核心層級介面標準 ODBC 驅動程式可讓應用程式執行下列各項：  
@@ -76,4 +74,3 @@ ms.lasthandoff: 09/09/2017
   
     > [!IMPORTANT]  
     >  ODBC 驅動程式必須實作函式中的核心介面一致性層級。
-

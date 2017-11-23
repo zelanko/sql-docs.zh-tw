@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], database features
+helpviewer_keywords: interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 30b073e6bca1fee5b98ed835bcc72f127c9ad40c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="considering-database-features-to-use"></a>考慮要使用的資料庫功能
 已知的互通性的基本層級之後，您必須考量應用程式所使用的資料庫功能。 例如，哪些 SQL 陳述式將應用程式執行？ 應用程式會使用可捲動資料指標？ 交易嗎？ 程序？ Long 資料嗎？ 如需所有 Dbms 可能不都支援哪些功能的想法，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，和[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函式描述，以及[附錄 c: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 應用程式所需的功能可能會排除某些 Dbms 從目標 Dbms 的清單。 它們也可能會顯示應用程式可以輕鬆地目標許多 Dbms。  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 -   **只有當驅動程式會支援多個查詢。** 連接到驅動程式之後，應用程式檢查作用中陳述式數目。 應用程式可讓使用者啟動新的陳述式時其中一個已在使用中，只有當驅動程式支援多個作用中陳述式。 應用程式有較高的功能和互通性，但較難實作。  
   
 -   **一律支援多個查詢，並模擬它們在必要時。** 連接到驅動程式之後，應用程式檢查作用中陳述式數目。 應用程式永遠可讓使用者啟動新的陳述式時其中一個已在使用中。 如果驅動程式支援只有一個使用中陳述式，應用程式就會開啟該驅動程式的其他連接，並在該連接上執行新的陳述式。 應用程式有完整的功能和高互通性，但較難實作。
-

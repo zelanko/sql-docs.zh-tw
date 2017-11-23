@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
+f1_keywords: sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 97c2f9950f050c1e737eebfd0f684ad8cd1e5850
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87f826e36a3fb58cfb1adba2b30a1375e3b84e71
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>多維度模型中的翻譯 (Analysis Services)
   您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中定義翻譯，方法是針對要翻譯的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件使用適當的設計師。 定義翻譯會建立 **Translation** 物件，並與適當的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件相關聯，其中會以指定的語言和指定的明確常值，來設定相關聯之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的屬性。  
@@ -134,4 +132,3 @@ ms.lasthandoff: 09/01/2017
  [語言和定序 &#40;Analysis Services &#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   
-

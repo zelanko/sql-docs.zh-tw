@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e201fb8bfe84fe44c0efb969274dae14478ed651
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 014a79813f5755e422b5e854b98f737d59a280a6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="descriptor-fields"></a>描述項欄位
 項目中包含*標頭*和*記錄*完整地描述資料行或參數的欄位。  
@@ -76,9 +74,8 @@ ms.lasthandoff: 09/09/2017
   
 -   [記錄計數](../../../odbc/reference/develop-app/record-count.md)  
   
--   [繫結描述元記錄](../../../odbc/reference/develop-app/bound-descriptor-records.md)  
+-   [繫結描述項記錄](../../../odbc/reference/develop-app/bound-descriptor-records.md)  
   
--   [延後的欄位](../../../odbc/reference/develop-app/deferred-fields.md)  
+-   [延遲的欄位](../../../odbc/reference/develop-app/deferred-fields.md)  
   
 -   [一致性檢查](../../../odbc/reference/develop-app/consistency-check.md)
-

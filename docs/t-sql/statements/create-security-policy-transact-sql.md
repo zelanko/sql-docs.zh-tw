@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,24 +20,22 @@ f1_keywords:
 - SECURITY POLICY
 - SECURITY_TSQL
 - CREATE SECURITY POLICY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - RLS
 - CREATE SECURITY POLICY statement
 - Row-Level Security
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 205a09efdef9e59736fa20238455b4327dced330
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 53292dc3f9f5cbd36913276496084d4648f13520
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-security-policy-transact-sql"></a>建立安全性原則 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -147,7 +144,7 @@ CREATE SECURITY POLICY rls.SecPol
     ADD BLOCK PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales AFTER INSERT;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料列層級安全性](../../relational-databases/security/row-level-security.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
@@ -155,5 +152,4 @@ CREATE SECURITY POLICY rls.SecPol
  [sys.security_predicates &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   
-
 

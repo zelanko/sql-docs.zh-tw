@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29b8b6708c4ebf01cc16130b08bb2892f2d1ec6e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7c636345439175c516b647a2951ac3bfa8824b06
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlxml-interface"></a>SQLXML 介面
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,8 +53,7 @@ ms.lasthandoff: 09/09/2017
   
  SQLXML 物件就無法寫入或讀取應用程式會呼叫任何下列的 setter 方法時： setResult setCharacterStream、 setBinaryStream、 和 setString。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)  
   
   
-

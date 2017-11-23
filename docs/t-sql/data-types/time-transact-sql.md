@@ -3,17 +3,18 @@ title: "時間 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 6/7/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - time_TSQL
 - time
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - time [SQL Server], data types
 - time [SQL Server]
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="time-transact-sql"></a>時間 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   定義一天的時間。 這個時間不含時區感知，而且是以 24 小時制為基礎。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 10/05/2017
 |語法|**時間**[(*小數的第二個小數位數*)]|  
 |使用方式|宣告@MyTime **time （7)**<br /><br /> 建立資料表 Table1 (Column1 **time （7)** )|  
 |*小數秒小數位數*|指定秒鐘小數部分的位數。<br /><br /> 這可以是介於 0 至 7 之間的整數。 Informatica，這可以介於 0 到 3 的整數。<br /><br /> 預設小小數位數為 7 (100ns)。|  
-|預設的字串常值格式<br /><br /> (用於下層用戶端)|ss [.nnnnnnn] (如 Informatica ss [.nnn])<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
+|預設的字串常值格式<br /><br /> (用於下層用戶端)|Informatica 如 ss [.nnnnnnn])<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
 |範圍|00:00:00.0000000 透過 23:59:59.9999999 (透過 Informatica 的 23:59:59.999 00:00:00.000)|  
 |元素範圍|hh 是代表小時的兩位數，範圍介於 0 至 23 之間。<br /><br /> mm 是代表分鐘的兩位數，範圍介於 0 至 59 之間。<br /><br /> ss 是代表秒鐘的兩位數，範圍介於 0 至 59 之間。<br /><br /> n\*為零至七位數，範圍從 0 至 9999999 之間，代表小數秒數。 Informatica，for n\*是零到三位數，範圍從 0 到 999。|  
 |字元長度|最小 8 個 hh: mm （:） 到最大 16 個 (ss.nnnnnnn)。 Informatica，針對最大值為 12 (hh:mm:ss.nnn)。|  
@@ -273,8 +273,7 @@ SELECT
 |'12:12:12.1234567'|**datetime2(7)**|1900-01-01 12:12:12.1234567|如果小數秒數有效位數超過針對資料行所指定的值，字串就會被截斷，但不會發生錯誤。|  
 |'12:12:12.1234567'|**datetimeoffset(7)**|1900-01-01 12:12:12.1234567 +00:00|如果小數秒數有效位數超過針對資料行所指定的值，字串就會被截斷，但不會發生錯誤。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

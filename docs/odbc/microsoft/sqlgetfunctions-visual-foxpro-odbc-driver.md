@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9e4f5b152bf1234c59783f52c64c5bbb06cb2903
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0552f93e5318e5a282b92c88fe12345e6883670d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions （Visual FoxPro ODBC 驅動程式）
 > [!NOTE]  
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_API_SQLTABLEPRIVILEGES|否|  
   
  如需詳細資訊，請參閱[SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md)中*ODBC 程式設計人員參考*。
-

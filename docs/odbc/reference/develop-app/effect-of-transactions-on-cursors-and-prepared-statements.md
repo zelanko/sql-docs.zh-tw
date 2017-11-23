@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - prepared statements [ODBC]
 - transactions [ODBC], cursors
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b9a66541f3bfa4d51560cfa16f5ab9fc0aaa0f54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>對資料指標和已備妥的陳述式的交易影響
 認可或回復的交易具有下列資料指標和存取計劃作用：  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/09/2017
  應用程式，尤其是螢幕型應用程式在使用者捲動的結果集和更新或刪除資料列，必須非常小心略過這個問題的程式碼。  
   
  若要判斷認可或回復交易時，資料來源的行為方式，應用程式呼叫**SQLGetInfo**與 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 選項。
-

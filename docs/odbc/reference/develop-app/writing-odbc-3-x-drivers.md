@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5ea639a8bde008d657cff558183220d7e68fe568
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-odbc-3x-drivers"></a>寫入 ODBC 3.x 驅動程式
 下表會顯示在 ODBC 3 函式支援。*x*驅動程式和 ODBC 應用程式，以及對應函式的呼叫針對 ODBC 3 時，請執行驅動程式管理員。*x*驅動程式。  
@@ -124,4 +122,3 @@ ms.lasthandoff: 09/09/2017
  [5] 在某些情況下，驅動程式可能需要支援此函式。 如需詳細資訊，請參閱函式的參考頁面。  
   
  [6] 的驅動程式可以選擇支援**SQLGetFunctions**如果驅動程式所支援的函式的組合不盡相同連接的連接。
-

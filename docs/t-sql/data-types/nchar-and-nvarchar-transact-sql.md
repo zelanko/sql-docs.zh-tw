@@ -3,32 +3,32 @@ title: "nchar 和 nvarchar (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc7de3b64519f3d0fd1f2e9557ccf7196e3f07a8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 和 nvarchar (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 字元資料類型都是固定長度， **nchar**，或是可變長度**nvarchar**，Unicode 資料，且使用 UNICODE ucs-2 字元集。
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 固定長度的 Unicode 字串資料。 *n*定義字串長度，而且必須是 1 到 4,000 的值。 儲存體大小是兩次 *n* 位元組。 當定序字碼頁使用雙位元組字元時，儲存體大小仍 *n* 位元組。 根據字串的儲存體大小 *n* 位元組可以為指定的值小於 *n* 。 ISO 同義字**nchar**是**國家 （地區) 的 char**和**國家字元集**...
   
 **nvarchar** [(n |**max** )]  
-長度可變的 Unicode 字串資料。 *n*定義字串長度，而且可以是 1 到 4,000 的值。 **最大**表示最大儲存體大小是 2 ^31-1 位元組 (2 GB)。 儲存體大小 (以位元組為單位) 是輸入資料之實際長度的兩倍 + 2 位元組。 ISO 同義字**nvarchar**是**國家 （地區) 的 char varying**和**不同的國家字元集**。
+長度可變的 Unicode 字串資料。 *n*定義字串長度，而且可以是 1 到 4,000 的值。 **最大**表示最大儲存體大小是 2 ^31-1 個字元 (2 GB)。 儲存體大小 (以位元組為單位) 是輸入資料之實際長度的兩倍 + 2 位元組。 ISO 同義字**nvarchar**是**國家 （地區) 的 char varying**和**不同的國家字元集**。
   
 ## <a name="remarks"></a>備註  
 當 *n* 中未指定資料定義或變數宣告陳述式中，預設長度為 1。 當 *n* 未利用 CAST 函數，則預設長度為 30。
@@ -103,4 +103,3 @@ Test data       More test data
 [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)
   
   
-

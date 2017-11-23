@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - functions [ODBC], catalog functions
 - catalog functions [ODBC], using catalog data
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c77be1b431a7f7e2cf8c040df7ceb9a9feaf321a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61a112f126eb83d40e350c5cc275f28438f15383
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="uses-of-catalog-data"></a>目錄資料的使用
 應用程式會使用各種方式的類別目錄資料。 以下是一些常見用法：  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
      也可以使用這類環境**SQLTables**和**SQLColumns**建立程式設計人員無法從中進行選擇的清單。 也可能會使用這些環境**SQLPrimaryKeys**和**SQLForeignKeys**自動判斷，顯示選定的資料表之間的關聯性，並使用**SQLStatistics**判斷，並讓程式設計人員可以建立有效率的查詢，將索引的欄位反白顯示。  
   
 -   **建構資料指標。** 應用程式、 驅動程式或中介軟體提供可捲動資料指標引擎，可以使用**SQLSpecialColumns**來判斷哪些資料行或資料行可唯一識別資料列。 程式無法建立*索引鍵集*包含每個資料列已經提取這些資料行的值。 當應用程式將捲動回資料列時，它會擷取最新的資料列，然後使用這些值。 如需可捲動資料指標和索引鍵集的詳細資訊，請參閱[可捲動資料指標](../../../odbc/reference/develop-app/scrollable-cursors.md)。
-

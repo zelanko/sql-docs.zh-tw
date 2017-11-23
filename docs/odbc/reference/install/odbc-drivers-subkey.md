@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - registry entries for components [ODBC], drivers subkey
 - drivers subkey [ODBC]
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 756f1f145d7e9a8ea5698366af920cce13041dd2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 21b151256f93d77cd0efecedfa8eef2ddcd6482b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-drivers-subkey"></a>ODBC 驅動程式的子機碼
 ODBC 驅動程式的子機碼下的值會列出已安裝的驅動程式。 下表顯示這些值的格式。  
@@ -44,4 +42,3 @@ ODBC 驅動程式的子機碼下的值會列出已安裝的驅動程式。 下�
 Text : REG_SZ : Installed  
 SQL Server : REG_SZ : Installed  
 ```
-

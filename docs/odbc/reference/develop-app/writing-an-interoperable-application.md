@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ec3f9821b729c593fac8cb280f8596eaf0dbed1d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bab5be84b66571f7ca361a3b158921330c00007f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-an-interoperable-application"></a>撰寫可互通的應用程式
 每當應用程式使用多個驅動程式針對相同的程式碼，該程式碼必須在這些驅動程式之間的互通。 在大部分情況下，這是容易的工作。 例如，擷取使用順向資料指標的資料列的程式碼也適用於所有的驅動程式。 在某些情況下，這可能會比較困難。 例如，建構 SQL 陳述式中使用的識別項的程式碼需要考慮識別碼案例中，用引號括住，和一段、 兩部分和三部分命名慣例。  
@@ -43,7 +41,6 @@ ms.lasthandoff: 09/09/2017
   
  此章節包含下列主題。  
   
--   [檢查功能的支援和變化](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
+-   [檢查功能支援和變化性](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
   
--   [監看式的功能](../../../odbc/reference/develop-app/features-to-watch-for.md)
-
+-   [功能](../../../odbc/reference/develop-app/features-to-watch-for.md)

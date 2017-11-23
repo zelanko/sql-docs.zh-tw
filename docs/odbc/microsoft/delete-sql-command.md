@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DELETE [ODBC]
+helpviewer_keywords: DELETE [ODBC]
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c302282bb88761b4e24d4e3efcd51b22ffe31c8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8effde0f80a219f11af460bdc941a9b6d9681455
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="delete---sql-command"></a>刪除 SQL 命令
 將標示為刪除的記錄。  
@@ -59,6 +56,5 @@ DELETE FROM [DatabaseName!]TableName
 ## <a name="driver-remarks"></a>驅動程式註解  
  當您的應用程式傳送至資料來源的 ODBC SQL 陳述式刪除時，Visual FoxPro ODBC 驅動程式會將命令轉換到 Visual FoxPro 刪除命令，而不需轉譯。  
   
-## <a name="see-also"></a>另請參閱  
- [SET 刪除命令](../../odbc/microsoft/set-deleted-command.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [SET DELETED 命令](../../odbc/microsoft/set-deleted-command.md)

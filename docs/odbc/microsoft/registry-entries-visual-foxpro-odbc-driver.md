@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 83c2d0752cc8b786a9de84d1a5005a8bc0c5b5f5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6a975ff73eb4b2ef48af05ccfdf595ae9c3233f0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>登錄項目 （Visual FoxPro ODBC 驅動程式）
 當您安裝 Visual FoxPro ODBC 驅動程式時，安裝程式會更新您的系統登錄中，登錄機碼 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini，若要加入新的金鑰，呼叫 Microsoft Visual FoxPro 驅動程式中。 下該機碼，會使用下表中描述的值。  
@@ -65,4 +63,3 @@ ms.lasthandoff: 09/09/2017
  您不應該直接; 存取這項資訊新增、 修改或刪除資料來源時，任何系統管理登錄處理由 ODBC 系統管理員。  
   
  您可以使用這些關鍵字與值的某些中當做參數[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API 函式。
-

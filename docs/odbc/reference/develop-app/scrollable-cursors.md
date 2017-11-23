@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f926f312b1696b3fcc3433e6234dc0f44005b7cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07e868f5798e759a9b84e9c28d2c1fa82bb34c4f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrollable-cursors"></a>可捲動資料指標
 在現代螢幕應用程式中，使用者捲動向前和向後的資料。 這類應用程式中，返回先前擷取的資料列是一個問題。 一個可能的原因是關閉並重新開啟游標然後提取資料列，直到游標達到所需的資料列。 另一個可能性是讀取結果集、 快取在本機，並實作應用程式中捲動。 這兩種可能性也僅適用於小型結果集，和第二個可能的原因是難以實作。 更好的解決方案是使用*可捲動資料指標，*其可以向後移動，並在結果集中轉寄。  
@@ -43,11 +41,10 @@ ms.lasthandoff: 09/09/2017
   
  此章節包含下列主題。  
   
--   [可捲動資料指標類型](../../../odbc/reference/develop-app/scrollable-cursor-types.md)  
+-   [可捲動的資料指標類型](../../../odbc/reference/develop-app/scrollable-cursor-types.md)  
   
--   [使用可捲動資料指標](../../../odbc/reference/develop-app/using-scrollable-cursors.md)  
+-   [使用可捲動的資料指標](../../../odbc/reference/develop-app/using-scrollable-cursors.md)  
   
--   [相對與絕對捲動](../../../odbc/reference/develop-app/relative-and-absolute-scrolling.md)  
+-   [相對與絕對的捲動](../../../odbc/reference/develop-app/relative-and-absolute-scrolling.md)  
   
 -   [書籤](../../../odbc/reference/develop-app/bookmarks-odbc.md)
-

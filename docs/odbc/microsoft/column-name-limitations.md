@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 06726f6d0d7b5b49cd9f6a89402db80a4d2543b2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5e2fb7cf9f54177ce357058e51e541b6a442379
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-name-limitations"></a>資料行名稱限制
 資料行名稱可以包含任何有效的字元 （例如，空格）。 如果資料行名稱可以包含字母、 數字和底線以外的任何字元，名稱必須括在後引號 （'） 分隔。  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  縱線字元 (&#124;) 不能在資料行名稱是否或不以回復括住名稱。  
   
  使用文字驅動程式時，驅動程式會提供預設名稱，如果未指定資料行名稱。 例如，驅動程式會呼叫第一個資料行 F1、 F2，第二個資料行等等。
-

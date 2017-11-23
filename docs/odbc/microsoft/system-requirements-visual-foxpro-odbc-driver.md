@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 842f31d5444513a6acde47f3a502806578b9baeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93432e89688b9028686350f87182ef1b674c8383
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>系統需求 （Visual FoxPro ODBC 驅動程式）
 安裝的系統需求提供的最小作業系統和已成功安裝驅動程式所需的磁碟空間。 安裝驅動程式之後，您可以選取您想要存取 Visual FoxPro 資料使用的特定應用程式軟體。  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro ODBC 驅動程式支援雙位元組字元集 (DBCS)。 如需詳細資訊，請參閱[多語系支援](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)。  
   
  驅動程式不支援 16 位元 Microsoft Windows 3.1 應用程式。
-

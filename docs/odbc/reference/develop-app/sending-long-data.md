@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6fdd0c7da1074a5f6a1d86a941fd29330145f07c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sending-long-data"></a>傳送長資料
 Dbms 定義*long 資料*為任何字元或二進位資料超過特定大小，例如 254 個字元。 它不可能儲存在記憶體中，例如當項目所表示的長文字文件或點陣圖的長資料的整個項目。 因為這類資料無法儲存在單一緩衝區中，資料來源傳送到使用組件中的驅動程式**SQLPutData**陳述式執行時。 這在執行階段傳送的資料參數稱為*資料在執行中參數*。  
@@ -53,4 +51,3 @@ Dbms 定義*long 資料*為任何字元或二進位資料超過特定大小，�
  之後**SQLExecute**或**SQLExecDirect**傳回 SQL_NEED_DATA 和陳述式的最後一個資料執行參數已完全傳送資料之前，是在需要的資料狀態。 陳述式需要資料的狀態時，應用程式可以呼叫只**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函式會傳回 SQLSTATE HY010 （函數順序錯誤）。 呼叫**SQLCancel**取消執行陳述式並傳回其先前的狀態。 如需詳細資訊，請參閱[附錄 b: ODBC 狀態轉換表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
  如需在執行階段傳送資料的範例，請參閱[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)函式描述。
-

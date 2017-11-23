@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], DBasedriver
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 98f265fb759e2ec3c479eff7be7a555975e94003
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f0a09a7af11cf2f8d446906b9c093d5cb1cab57
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="other-dbase-driver-programming-details"></a>其他 dBASE 驅動程式程式設計詳細資料
 > [!NOTE]  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQLTransact (dBASE 驅動程式)](../../odbc/microsoft/sqltransact-dbase-driver.md)  
   
 -   [dBASE 索引 (dBASE 驅動程式)](../../odbc/microsoft/dbase-indexes.md)
-

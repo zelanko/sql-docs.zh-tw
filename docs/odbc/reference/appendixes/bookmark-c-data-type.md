@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - bookmark C data type [ODBC]
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 698e450fbb816c5fb7e3caf3786f4b8d469af50c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1013d3307b1fea0d5460c2dce1caf10556804233
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="bookmark-c-data-type"></a>書籤 C 資料類型
 書籤 C 資料類型可讓應用程式擷取書籤。 書籤 C 類型只能用於擷取書籤的值可以是可變長度。它們不應該轉換成其他資料型別。 應用程式擷取從資料行 0 的結果集的書籤**SQLBulkOperations** （與 SQL_ADD 的作業）， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。 如需詳細資訊，請參閱[書籤](../../../odbc/reference/develop-app/bookmarks-odbc.md)。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |-----------------------|--------------------|------------|  
 |SQL_C_BOOKMARK<br />(已被取代)|書籤|不帶正負號的 long int|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|不帶正負號 char *|
-

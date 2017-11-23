@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - SET_STATISTICS_PROFILE_TSQL
 - PROFILE_TSQL
 - SET STATISTICS PROFILE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - profiles [SQL Server], displaying
 - statements [SQL Server], profile information
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - STATISTICS PROFILE option
 - statistical information [SQL Server], profiles
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 35de8ba2d942859c9442838813c98fa34fa5419a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 69ceaedf2cfe62b20217b4e218568cec1bc2a933
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-statistics-profile-transact-sql"></a>SET STATISTICS PROFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,11 +68,10 @@ SET STATISTICS PROFILE { ON | OFF }
   
  如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式不會產生 STATISTICS PROFILE 結果集，就只需要執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的適當權限。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會產生 STATISTICS PROFILE 結果集，檢查 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式執行權限和 SHOWPLAN 權限都必須成功，否則，便會中止執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，且不會產生任何顯示計畫資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET SHOWPLAN_ALL &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
  [設定 STATISTICS TIME &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)   
  [SET STATISTICS IO &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   
-

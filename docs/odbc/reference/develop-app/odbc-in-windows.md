@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b37d94a487ae792f8f54d5d8c3626436afe6ac01
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ccc0e89f3e60b8a9ecc3def91c983bd9d9083c11
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-in-windows"></a>在 Windows 中的 ODBC
 下列項目僅適用於 Microsoft® NT/Windows 2000年和 Microsoft Windows® 95/98 作業系統中執行的 ODBC。  
@@ -36,5 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 -   [ODBC 函數傳遞 CString 物件](../../../odbc/reference/develop-app/cstring-class.md)  
   
--   [建立及結束執行緒](../../../odbc/reference/develop-app/creating-and-terminating-threads.md)
-
+-   [建立及終止執行緒](../../../odbc/reference/develop-app/creating-and-terminating-threads.md)

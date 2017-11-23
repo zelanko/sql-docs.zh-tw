@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - TRIM
 - TRIM_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- TRIM function
+dev_langs: TSQL
+helpviewer_keywords: TRIM function
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 54a39a38050589ba4e842253e192b820c2f1c0ea
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64cef84a613d71e65b33bed1c1e740dc59eeed9d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="trim-transact-sql"></a>TRIM (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -80,9 +76,8 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 `#     test`
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 [字串函數 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 [LTRIM (TRANSACT-SQL)](../../t-sql/functions/ltrim-transact-sql.md)   
 [RTRIM (TRANSACT-SQL)](../../t-sql/functions/rtrim-transact-sql.md)   
 [取代 (TRANSACT-SQL)](../../t-sql/functions/replace-transact-sql.md)   
-

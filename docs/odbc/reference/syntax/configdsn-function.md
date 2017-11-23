@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ConfigDSN
-apilocation:
-- sqlsrv32.dll
+apiname: ConfigDSN
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- ConfigDSN
-helpviewer_keywords:
-- ConfigDSN [ODBC]
+f1_keywords: ConfigDSN
+helpviewer_keywords: ConfigDSN [ODBC]
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9e512d53474f2eea34ca6b54bf9b6ebd239c4b19
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 491396da26d75d6710e708b840c9407b4a976bb9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configdsn-function"></a>ConfigDSN 函式
 **一致性**  
@@ -134,4 +128,3 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
 |移除資料來源名稱從 Odbc.ini （或登錄）|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
 |將資料來源名稱加入至 Odbc.ini （或登錄）|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|  
 |寫入的 Odbc.ini 檔案或登錄值|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|
-

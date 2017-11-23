@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetParam
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetParam
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetParam
-helpviewer_keywords:
-- SQLSetParam function [ODBC]
+f1_keywords: SQLSetParam
+helpviewer_keywords: SQLSetParam function [ODBC]
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5e1e02cf4048b78759463f8dc63e8a19b017e7e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6992fc54d15bb49dd9d12486f6016cf23bab7b38
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetparam-function"></a>SQLSetParam 函式
 **一致性**  
@@ -47,7 +41,6 @@ ms.lasthandoff: 09/09/2017
 ## <a name="remarks"></a>備註  
  請參閱[ODBC 64 位元資訊](../../../odbc/reference/odbc-64-bit-information.md)，如果您的應用程式將在 64 位元作業系統上執行。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)
-

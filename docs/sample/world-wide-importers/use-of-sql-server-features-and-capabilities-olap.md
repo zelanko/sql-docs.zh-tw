@@ -1,30 +1,31 @@
 ---
 title: "使用 SQL Server 特性與功能 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7cbfb4ef-1e61-4e65-9fe0-ed5adfb43415
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 1f879ed08d00acf0556c364a94162719b8906434
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 66fe9487c8b7d2189d69917fc81226a4f698af7c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW 使用的 SQL Server 特性與功能
-WideWorldImportersDW 被為了展現許多適用於資料倉儲和分析 SQL Server 的主要功能。 以下是一份 SQL Server 功能和功能，以及在 WideWorldImportersDW 的使用方式的描述。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW 被為了展現許多適用於資料倉儲和分析 SQL Server 的主要功能。 以下是一份 SQL Server 功能和功能，以及在 WideWorldImportersDW 的使用方式的描述。
 
 ## <a name="polybase"></a>PolyBase
 
@@ -117,4 +118,3 @@ PolyBase 用來與公用的資料集的相關人口統計資料，以了解哪�
 WideWorldImportersDW 使用 SCHEMA_ONLY 記憶體最佳化資料表的臨時資料表。 所有`Integration.` * `_Staging`資料表是 SCHEMA_ONLY 記憶體最佳化資料表。
 
 SCHEMA_ONLY 資料表的優點是它們不會記錄，而且不需要任何磁碟存取。 這可改善效能的 ETL 程序。 因為不會記錄這些資料表，其內容失敗時都會遺失。 不過，資料來源是仍然可用，因此 ETL 程序可以只是重新啟動發生失敗時。
-

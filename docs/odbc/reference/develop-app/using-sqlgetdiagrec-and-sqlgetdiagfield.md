@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f8a6df52b7dfdcc2fb4e47bb6d19afefe1fb4655
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: abd9c6e0b7d4a56f55e854dda6c61fe216a84ad5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>使用 SQLGetDiagRec 和 SQLGetDiagField
 應用程式呼叫**SQLGetDiagRec**或**SQLGetDiagField**擷取診斷資訊。 這些函式接受環境、 連接、 陳述式或描述元的控制代碼，並從上一次使用該控制代碼的函式傳回診斷。 新的函式呼叫使用該控制代碼時，會捨棄登入特定的控制代碼的診斷。 如果函式傳回多個診斷記錄，應用程式呼叫這些函式多次。狀態記錄的總數藉由呼叫擷取**SQLGetDiagField** SQL_DIAG_NUMBER 選項使用的標頭記錄 （記錄 0）。  
@@ -66,4 +64,3 @@ if ((rc1 == SQL_SUCCESS) || (rc1 == SQL_SUCCESS_WITH_INFO)) {
    // Process statement results, if any.  
 }  
 ```
-

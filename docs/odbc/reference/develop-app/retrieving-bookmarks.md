@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - result sets [ODBC], bookmarks
 - bookmarks [ODBC]
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 04e89e941162869b1bb3f1418f5d6e73622fe4cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7233ad9ab2915c174d545cb08d4abcdeedb99d7b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-bookmarks"></a>擷取書籤
 如果應用程式會使用書籤，它必須設 SQL_UB_VARIABLE 之前準備或執行陳述式來 SQL_ATTR_USE_BOOKMARKS 陳述式屬性。 這是必要的因為它們使用的建置與維護的書籤可以昂貴的作業，因此應用程式可以進行良好時，才應該啟用書籤。  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
 -   呼叫**SQLSetPos**來定位到資料列集中的資料列，接著呼叫**SQLGetData**資料行 0。 如果驅動程式支援書籤，它必須一律支援能夠呼叫**SQLGetData**資料行 0，即使不允許應用程式呼叫**SQLGetData**上次繫結之前，其他資料行資料行。  
   
 -   呼叫**SQLBulkOperations**與*作業*設 SQL_ADD，引數和繫結資料行 0。 資料指標插入資料列，並傳回資料列的書籤中的繫結的緩衝區。
-

@@ -1,39 +1,39 @@
 ---
 title: "UPDATE STATISTICS (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE STATISTICS
 - UPDATE_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - updating statistics
 - query optimization statistics [SQL Server], updating
 - UPDATE STATISTICS statement
 - statistical information [SQL Server], updating
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
-caps.latest.revision: 74
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "74"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 96ace864a1cff7724451b521db4b184323db6d8e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a1b053ddc09876717f0fbf34b2d7c294988162f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   針對資料表或索引檢視表更新查詢最佳化統計資料。 根據預設，查詢最佳化工具已經更新統計資料來改善查詢計劃; 視在某些情況下您可以使用 UPDATE STATISTICS 或預存程序來改善查詢效能[sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)更新統計資料更新頻率高於預設更新頻率。  
   
@@ -131,7 +131,7 @@ PERSIST_SAMPLE_PERCENT = {ON |OFF}
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)和[sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)公開選取統計資料的持續性的範例百分比值。
  
- **適用於**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4。  
+ **適用於**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)](開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。  
  
  ON PARTITIONS ({ \<> |\<範圍 >}[，… n])] 會強制重新計算，並然後合併以建立全域統計 ON PARTITIONS 子句中指定之分割區區的分葉層級統計資料。 由於無法將使用不同取樣率建立的分割區區統計資料合併在一起，因此需要 WITH RESAMPLE。  
   
@@ -284,7 +284,7 @@ UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;
 UPDATE STATISTICS Customer;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [統計資料](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
@@ -293,10 +293,8 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)
+ [sys.dm_db_stats_properties &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
-  
-
 
 
 

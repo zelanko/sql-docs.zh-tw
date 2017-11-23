@@ -13,13 +13,10 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Analysis Services Scripting Language XML Element Hierarchy
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Analysis Services Scripting Language XML Element Hierarchy
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Services Scripting Language, elements
 - elements [Analysis Services Scripting Language]
@@ -27,17 +24,16 @@ helpviewer_keywords:
 - objects [Analysis Services Scripting Language]
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: 343dbab9-4c2c-49b9-8f35-efc65f2216f1
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a72432a72f05f5f1036c2ea53b816e9787306f27
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6b9ad010f8836723c2c1d30b24b908cb19a44ada
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-scripting-language-xml-element-hierarchy-assl"></a>Analysis Services 指令碼語言 XML 元素階層 (ASSL)
   下表顯示「Analysis Services 指令碼語言」(ASSL) 中物件的階層。  
@@ -1944,10 +1940,9 @@ ms.lasthandoff: 09/01/2017
 </Server>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 元素 &#40;ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-elements-assl.md)   
  [Analysis Services 指令碼語言 XML 資料類型階層 &#40;ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)   
  [Analysis Services 指令碼語言 &#40;ASSL XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 814d148b6e542e94254ddd13eebfc7974c4a3ac2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7a0bb497044e9800461b60021fc9a6c8db4e9cca
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="arrays-of-parameter-values"></a>參數值的陣列
 通常會很有用的應用程式，以傳遞的參數陣列。 例如，使用參數和參數化的陣列**插入**陳述式中，應用程式可以一次插入的資料列數目。 有數個優點，以使用陣列。 首先，因為在單一封包中傳送多個陳述式的資料 （如果資料來源原生支援的參數陣列） 可以降低網路流量。 第二，某些資料來源可執行速度比執行相同數目的不同的 SQL 陳述式使用陣列的 SQL 陳述式。 最後，當資料儲存在陣列中，通常都是螢幕資料的情況時，應用程式可以繫結所有資料列的單一呼叫之特定資料行中**SQLBindParameter**並執行單一陳述式來加以更新。  
@@ -38,4 +36,3 @@ ms.lasthandoff: 09/09/2017
 -   [繫結參數陣列](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)  
   
 -   [使用參數陣列](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)
-

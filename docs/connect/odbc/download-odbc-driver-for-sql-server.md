@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 102f9ca281486b6669e68395398679889c4a0a5e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91bc3b9570b367986f4c439e4d3864cdf2351dfa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下載 ODBC Driver for SQL Server
 
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/09/2017
 - **Red Hat Enterprise Linux 5 及 6 （64 位元）** - [下載 Microsoft ODBC Driver 11 for SQL Server-Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)
 
 - **SUSE Linux Enterprise 11 Service Pack 2 （64 位元）** - [下載 SQL Server-SUSE Linux 的 Microsoft ODBC Driver 11 預覽](http://go.microsoft.com/fwlink/?LinkId=264916)
-

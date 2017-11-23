@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ae57bdc2a1f385e06248ab9486b7ef5fc07f7932
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 96e61c207316b216a1706834188a4f6f235cb52e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-asdatabase-cmdlet"></a>Restore-ASDatabase 指令程式
 
@@ -204,4 +202,3 @@ PS SQLSERVER:\SQLAS\localhost\default> restore-asdatabase –restorefile “\\my
   
  這個命令會在遠端 Analysis Services 預設執行個體上，還原遠端備份資料夾中的加密 Analysis Services 備份檔案 (testdb.abf)。 -StorageLocation 參數是用來將資料庫檔案放在非預設位置 (在本例中，名為 restoreDBfiles 的檔案共用)。  
   
-

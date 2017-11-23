@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetDescRec
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetDescRec
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetDescRec
-helpviewer_keywords:
-- SQLSetDescRec function [ODBC]
+f1_keywords: SQLSetDescRec
+helpviewer_keywords: SQLSetDescRec function [ODBC]
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dda8ecdee1830805c51b5e795f91ff4025218260
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b0702448c1252db57d47dfaf265c2f0b83192b3d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 函數
 **一致性**  
@@ -167,7 +161,6 @@ SQLRETURN SQLSetDescRec(
 |取得多個描述項欄位|[SQLGetDescRec 函式](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |設定單一描述項欄位|[SQLSetDescField 函式](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)
-

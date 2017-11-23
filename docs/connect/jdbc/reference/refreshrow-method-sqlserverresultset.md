@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.refreshRow
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.refreshRow
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 048fe245-157f-4fd8-be75-ce54b83e02b3
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f1a7c8a4a5381291d21f35adba178f05bc83f3f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 89452f34778b07f9e34b074beaf2b1e92f7be135
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="refreshrow-method-sqlserverresultset"></a>refreshRow 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,9 +50,8 @@ public void refreshRow()
   
  所有的值都會根據交易隔離等級和游標靈敏度進行重新提取。 如果之後呼叫 updater 方法，但會在呼叫之前呼叫這個方法[updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)方法，對資料列的更新都會遺失。 經常呼叫這個方法可能會使效率變慢。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

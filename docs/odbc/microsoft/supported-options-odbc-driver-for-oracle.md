@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC driver for Oracle [ODBC], supported options
+helpviewer_keywords: ODBC driver for Oracle [ODBC], supported options
 ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2782d61d3a9e48f53232b8d2abfe287229e62e3d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a95efee589a8570527305bd8aef8226cfc1eb3bd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>支援的選項 （oracle 的 ODBC 驅動程式）
 > [!IMPORTANT]  
@@ -62,4 +59,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQL_MAX_ROWS](../../odbc/microsoft/statement-options.md)  
   
 -   [SQL_ROWSET_SIZE](../../odbc/microsoft/statement-options.md)
-

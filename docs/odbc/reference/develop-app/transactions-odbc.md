@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e6e18576f4898b6902d15ab20cc5ebfcb336835
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d11b681fa324c2c0b514bfb43aa67d51ce19a1ba
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transactions-odbc"></a>ODBC 異動
 A*交易*是工作的單位以單一、 不可部分完成的作業完成; 也就是說，作業成功，或整個失敗。 例如，請考慮將從銀行帳戶的金錢傳送到另一個。 這牽涉到兩個步驟： 從第一個帳戶提款金額和存款中第二個。 很重要，這兩個步驟就會成功。不是可接受的一個步驟，才會成功，而另一個則失敗。 支援交易的資料庫就能確保這項目。  
@@ -46,4 +44,3 @@ A*交易*是工作的單位以單一、 不可部分完成的作業完成; 也�
 -   [交易隔離](../../../odbc/reference/develop-app/transaction-isolation.md)  
   
 -   [並行控制](../../../odbc/reference/develop-app/concurrency-control.md)
-

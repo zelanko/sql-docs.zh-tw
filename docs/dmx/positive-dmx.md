@@ -13,23 +13,21 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - + (positive operator)
 - positive operator (+)
 ms.assetid: 81259ec0-8e12-4a55-a4e5-5a9118d8488f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a15074d362694de981a3cfbf6a6bb8edcbf3b83c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a2335f1b4161f6fc8fc033cacd4ae2fae2610148
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="-positive-dmx"></a>+ (正) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,10 +48,9 @@ ms.lasthandoff: 08/02/2017
 ## <a name="return-value"></a>傳回值  
  具有指定參數之資料類型的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦延伸模組 &#40; DMX &#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [運算子 &#40; DMX &#41;](../dmx/operators-dmx.md)   
  [一元運算子 &#40; DMX &#41;](../dmx/operators-unary.md)  
   
   
-

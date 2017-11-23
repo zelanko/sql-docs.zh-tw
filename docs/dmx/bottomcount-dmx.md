@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- BOTTOMCOUNT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- BottomCount function
+f1_keywords: BOTTOMCOUNT
+dev_langs: DMX
+helpviewer_keywords: BottomCount function
 ms.assetid: bbe2f1d6-c8b5-49ce-ae13-337114a50aee
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 3b75e2846d0cbafa798281b276f3bfac768473f8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c9713edf665aa2eabf726ee65f07baedd42ca8a9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -115,7 +111,7 @@ NATURAL PREDICTION JOIN
   
  **請注意**只是為了說明使用 BottomCount 提供這個範例。 根據資料集的大小而定，此查詢可能會花上很長的一段執行時間。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)   
@@ -123,4 +119,3 @@ NATURAL PREDICTION JOIN
  [TopCount &#40; DMX &#41;](../dmx/topcount-dmx.md)  
   
   
-

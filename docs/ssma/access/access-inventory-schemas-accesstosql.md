@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -40,17 +39,16 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b399910612848033ea927aa8c4d3adc86d048ae0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cd7d907f2c78125a477737299f6aaee28b5ccc7f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>存取清查結構描述 (AccessToSQL)
 下列章節將說明當您匯出要存取結構描述時所建立的 SSMA 資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -105,7 +103,7 @@ ms.lasthandoff: 08/02/2017
 |**IsNullable**|**bit**|指定是否資料行可以包含 null 值。 如果值為 1，資料行可以包含 null 值。 如果值為 0，資料行不能包含 null 值。 請注意，驗證規則也可用來避免 null 值。|  
 |**DataType**|**nvarchar(4000)**|存取資料類型的資料行，例如**文字**或**長**。|  
 |**IsAutoIncrement**|**bit**|指定是否資料行就會自動遞增的整數值。 如果值為 1，會自動遞增的整數。|  
-|**序數**|**smallint**|在資料表中，從零開始的資料行的順序。|  
+|**Ordinal**|**smallint**|在資料表中，從零開始的資料行的順序。|  
 |**預設值**|**nvarchar(4000)**|資料行的預設值。|  
 |**驗證規則**|**nvarchar(4000)**|用來驗證資料的規則新增至或更新資料行中。|  
   
@@ -188,7 +186,6 @@ ms.lasthandoff: 08/02/2017
 |**ModuleId**|**int**|遞增整數可識別模組。 此資料行是資料表的主索引鍵。|  
 |**模組名稱**|**nvarchar(4000)**|模組的名稱。|  
   
-## <a name="see-also"></a>另請參閱  
-[匯出存取清查](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
+## <a name="see-also"></a>請參閱＜  
+[匯出 Access 清查](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
   
-

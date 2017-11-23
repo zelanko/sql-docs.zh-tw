@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLTransact
-apilocation:
-- sqlsrv32.dll
+apiname: SQLTransact
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLTransact
-helpviewer_keywords:
-- SQLTransact function [ODBC]
+f1_keywords: SQLTransact
+helpviewer_keywords: SQLTransact function [ODBC]
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e293ad391bee9698941b8681a852ed75bf0717e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1af98fb53aadf7ea6bb2253041c951481a019027
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqltransact-function"></a>SQLTransact 函式
 **一致性**  
@@ -44,7 +38,6 @@ ms.lasthandoff: 09/09/2017
 > [!NOTE]  
 >  不支援屬性 SQL_ASYNC_DBC_FUNCTION_ENABLE 所導入 ODBC 3.8， **SQLTransact**。 使用連接控制代碼上的非同步作業的應用程式必須使用**SQLEndTran**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)
-

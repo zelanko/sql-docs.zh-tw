@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_PROVIDER_TYPES
+apiname: DBSCHEMA_PROVIDER_TYPES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_PROVIDER_TYPES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3de186cec4b3299bbdc43cf2fe63c806c228cb66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6906aec1d1c1dd53b8c833d59483aa0453cf284b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>DBSCHEMA_PROVIDER_TYPES 資料列集
   識別資料提供者所支援的 (基底) 資料類型。  
@@ -58,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |**MAXIMUM_SCALE**|**DBTYPE_I2**|如果類型指標為允許在小數點右邊的位數上限**DBTYPE_VARNUMERIC**， **DBTYPE_DECIMAL**，或**DBTYPE_NUMERIC**，否則為，N**U**LL。|  
 |**GUID**|**DBTYPE_GUID**|（供日後使用）**GUID**型別，如果此類型的描述類型程式庫中。 否則， **NULL**。|  
 |**型別程式庫**|**DBTYPE_WSTR**|(供日後使用) 如果類型程式庫中有此類型的描述，則為包含該類型描述的類型程式庫； 否則為 NULL。|  
-|**版本**|**DBTYPE_WSTR**|(供日後使用) 類型定義的版本。 提供者可能會想要對類型定義進行版本控制。 不同的提供者會使用不同的版本控制配置，例如時間戳記或數字 (整數或浮點數)。 **NULL**不受支援。|  
+|**VERSION**|**DBTYPE_WSTR**|(供日後使用) 類型定義的版本。 提供者可能會想要對類型定義進行版本控制。 不同的提供者會使用不同的版本控制配置，例如時間戳記或數字 (整數或浮點數)。 **NULL**不受支援。|  
 |**IS_LONG**|**DBTYPE_BOOL**|布林值，指出資料類型是否為二進位大型物件 (BLOB) 且具有很長的資料。<br /><br /> **VARIANT_TRUE**指出資料類型為**BLOB**包含很長的資料; 很長資料的定義是特定提供者。<br /><br /> **VARIANT_FALSE**指出資料類型為**BLOB** ，不會包含很長的資料，或者不是**BLOB**。<br /><br /> 這個值會決定的設定**DBCOLUMNFLAGS_ISLONG**所傳回的旗標**GetColumnInfo**中**IColumnsInfo**和**GetParameterInfo**中**ICommandWithParameters**。|  
 |**BEST_MATCH**|**DBTYPE_BOOL**|布林值，指出資料類型是否為最符合項目。<br /><br /> **VARIANT_TRUE**表示資料型別是資料存放區中的所有資料型別中的值所指定的 OLE DB 資料類型之間的最佳比對**DATA_TYPE**資料行。<br /><br /> **VARIANT_FALSE**表示資料型別不是最符合項目。<br /><br /> 針對每個資料列集的值**DATA_TYPE**資料行是相同的**BEST_MATCH**資料行設為**VARIANT_TRUE**中只有一個資料列。|  
 |**IS_FIXEDLENGTH**|**DBTYPE_BOOL**|布林植，指出資料行的長度是否固定。<br /><br /> **VARIANT_TRUE**表示資料定義語言 (DDL) 所建立此類型的資料行，將會是固定長度。<br /><br /> **VARIANT_FALSE**指出 DDL 建立此類型的資料行所可變長度。<br /><br /> 如果欄位是**NULL**，不知道提供者是否會將此欄位為固定長度或可變長度資料行的對應。|  
@@ -73,8 +69,7 @@ ms.lasthandoff: 09/01/2017
 |**DATA_TYPE**|**DBTYPE_UI2**|  
 |**BEST_MATCH**|**DBTYPE_BOOL**|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [OLE DB 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

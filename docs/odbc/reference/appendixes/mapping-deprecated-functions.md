@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0bf9d6ecc7971d8047dff4a808e1fe84a6261b71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61d05017039673989e1477501feb17b3da6d7220
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mapping-deprecated-functions"></a>對應已被取代的函式
 本章節描述如何已被取代的函式會對應由 ODBC 3*.x*驅動程式管理員，以保證與舊版相容的 ODBC 3*.x*搭配 ODBC 2 的驅動程式。*x*應用程式。 驅動程式管理員會執行此應用程式的版本不限的對應。 因為每個 ODBC 2。*x*下列清單中的函式會對應至對應的 ODBC 3*.x*函式呼叫在 ODBC 3 時*.x*驅動程式，而 ODBC 3*.x*驅動程式不需要實作 ODBC 2。*x*函式。  
@@ -100,4 +98,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQLSetStmtOption 對應](../../../odbc/reference/appendixes/sqlsetstmtoption-mapping.md)  
   
 -   [SQLTransact 對應](../../../odbc/reference/appendixes/sqltransact-mapping.md)
-

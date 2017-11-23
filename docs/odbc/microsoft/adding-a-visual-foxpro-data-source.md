@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro data source [ODBC], adding
 - adding data sources [ODBC], Visual FoxPro ODBC driver
 ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5e60681b7a3f30a83c2a1227c466b663b1b4d8a7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d158cf38e5755e0e443d6cb47e4053bd05d45287
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>加入 Visual FoxPro 資料來源
 若要存取 Visual FoxPro 資料從您的應用程式，您必須使用資料來源。 您可以建立資料來源，如下所示：  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
      新的資料來源名稱會顯示在 [使用者資料來源清單中的 ODBC 資料來源管理員] 對話方塊的 [使用者 DSN] 索引標籤。  
   
 6.  按一下 [確定] 以儲存新的資料來源並關閉 [ODBC 資料來源管理員] 對話方塊。
-

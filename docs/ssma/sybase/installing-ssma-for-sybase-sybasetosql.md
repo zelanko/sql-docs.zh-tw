@@ -5,25 +5,23 @@ ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 41931c08813cb4836b799b97f2fba0fbbc645a8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
-ms.openlocfilehash: 7b2c96006c5495c89486c8a86e1b60b64f2dd22c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>安裝的 SSMA for SAP ASE (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]組成用戶端應用程式，您用來從 SAP Adaptive Server Enterprise (ASE) 來執行移轉的移轉小幫手 (SSMA) 的 SAP ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。 它也包含支援資料移轉和 ASE 系統函式的使用在您移轉之資料庫中的延伸模組組件。  
@@ -45,4 +43,3 @@ ms.lasthandoff: 10/03/2017
   
 ## <a name="see-also"></a>另請參閱  
 [SAP ASE 將資料庫移轉至 SQL Server-Azure SQL Database &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-

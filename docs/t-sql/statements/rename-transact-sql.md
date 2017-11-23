@@ -1,29 +1,27 @@
 ---
 title: "重新命名 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 11/20/2017
 ms.prod: 
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ee5395145b72108b63256a7e3742eca6a9289e06
+ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d58470957ab58085ddd6a733cf30dbc77ce7439a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rename-transact-sql"></a>重新命名 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +29,7 @@ ms.lasthandoff: 09/01/2017
   重新命名的使用者建立的資料表中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 使用者建立的資料表或資料庫中的重新命名[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
   
 > [!NOTE]  
->  若要重新命名資料庫，以在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或[!INCLUDE[ssSDS](../../includes/sssds-md.md)]使用預存程序[sp_renamedb &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).  
+>  若要重新命名資料庫，以在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，使用預存程序[sp_renamedb &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). 若要重新命名資料庫，以在 Azure SQL Database 中的，使用[ALTER DATABASE (Azure SQL Database)](/statements/alter-database-azure-sql-database.md)陳述式。 
   
 ## <a name="syntax"></a>語法  
   
@@ -112,7 +110,7 @@ RENAME DATABASE [::] database_name TO new_database_name
 ## <a name="examples"></a>範例  
   
 ### <a name="a-rename-a-database"></a>A. 重新命名資料庫  
- **適用於：** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]只    
+ **適用於：** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]只  
   
  此範例中重新命名使用者定義資料庫 AdWorks AdWorks2。  
   
@@ -164,4 +162,3 @@ KILL 'SID1234';
 ```  
   
   
-

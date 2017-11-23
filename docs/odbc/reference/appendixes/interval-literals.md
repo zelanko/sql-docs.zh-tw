@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - interval data type [ODBC], literals
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b291abb4869256575b5d915e509107a1c46e2267
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-literals"></a>間隔常值
 ODBC 需要所有的驅動程式支援所有 C 間隔資料型別 SQL_CHAR 或 SQL_VARCHAR 資料類型的轉換。 如果基礎資料來源不支援間隔資料類型，不過，驅動程式必須知道為了支援這些轉換的正確格式 SQL_CHAR 欄位中的值。 同樣地，ODBC 需要應該有任何的 ODBC C 類型可轉換成 SQL_CHAR 或 SQL_VARCHAR，讓驅動程式必須知道何種格式字元的欄位中儲存的間隔。 本章節描述間隔常值，用以驗證 SQL_CHAR 欄位，或從 C 間隔資料類型轉換期間需要的驅動程式寫入器的語法。  
@@ -102,4 +100,3 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{間隔 '223.16' 第二個}<br /><br /> {間隔 '223' YEAR}|因為未指定的開頭有效位數，則預設為 2，這是保留指定的常值太小。|  
 |{間隔 '22.1234567' 第二個}|秒數有效位數是未指定，因此它會預設為 6。 常值的小數點後具有 7 個位數。|  
 |{間隔 ' 163-13' 月份的 YEAR(3)}<br /><br /> {INTERVAL ' 163} 65' DAY(3) 小時的時間<br /><br /> {間隔為分鐘 '163 62:39' DAY(3)}<br /><br /> {間隔至 SECOND(3) '163 12:125:59.163' DAY(3)}<br /><br /> {間隔 '163:144' 分鐘 HOUR(3)}<br /><br /> {間隔 '163:567:234.163' SECOND(4) 的 HOUR(3)}<br /><br /> {間隔 '163:591.163' SECOND(5) 的 MINUTE(3)}|尾端欄位並未遵循西曆的規則。|
-

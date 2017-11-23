@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - dates [SQL Server]
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 05ce8f3240590e1be28722ded5a526ad2dd2d6df
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 7ce3baac7ec87ff3cad771234ab1196fb0a3855e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日期和時間資料類型與函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,9 +91,9 @@ ms.lasthandoff: 09/06/2017
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* ，*日期*)|傳回代表指定之字元字串*datepart*的指定日期。|**nvarchar**|不具決定性|  
 |[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* ，*日期*)|傳回一個整數，代表指定*datepart*指定*日期*。|**int**|不具決定性|  
-|[一天](../../t-sql/functions/day-transact-sql.md)|日 (*日期*)|傳回一個整數，表示指定的日期部分*日期*。|**int**|具決定性|  
-|[月份](../../t-sql/functions/month-transact-sql.md)|月 (*日期*)|傳回一個整數，表示指定的月份部分*日期*。|**int**|具決定性|  
-|[年份](../../t-sql/functions/year-transact-sql.md)|年份 (*日期*)|傳回一個整數，表示指定的年部分*日期*。|**int**|具決定性|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|日 (*日期*)|傳回一個整數，表示指定的日期部分*日期*。|**int**|具決定性|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|月 (*日期*)|傳回一個整數，表示指定的月份部分*日期*。|**int**|具決定性|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|年份 (*日期*)|傳回一個整數，表示指定的年部分*日期*。|**int**|具決定性|  
   
 ###  <a name="fromParts"></a>從各自部分取得日期和時間值的函式
   
@@ -129,10 +126,10 @@ ms.lasthandoff: 09/06/2017
   
 |函數|語法|傳回值|傳回資料類型|決定性|  
 |---|---|---|---|---|
-|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|傳回 SET DATEFIRST 之工作階段的目前值。|**tinyint**|不具決定性|  
+|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST |傳回 SET DATEFIRST 之工作階段的目前值。|**tinyint**|不具決定性|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST {*數目*&#124; **@**  *number_var* }|將一週的第一天設為 1-7 其中一個數字。|不適用|不適用|  
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT {*格式*&#124; **@**  *format_var* }|輸入設定的日期部分 （月/日/年） 順序**datetime**或**smalldatetime**資料。|不適用|不適用|  
-|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|傳回目前所用語言的名稱。 @@LANGUAGE不是日期或時間的函式。 不過，語言設定可能會影響日期函數的輸出。|不適用|不適用|  
+|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE |傳回目前所用語言的名稱。 @@LANGUAGE不是日期或時間的函式。 不過，語言設定可能會影響日期函數的輸出。|不適用|不適用|  
 |[設定語言](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE {[N] **'***語言***'** &#124; **@**  *language_var* }|設定工作階段和系統訊息的語言環境。 SET LANGUAGE 不是日期或時間函數。 不過，語言設定會影響日期函數的輸出。|不適用|不適用|  
 |[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [[  **@language =** ] **'***語言***'** ]|傳回所有支援語言之日期格式的詳細資訊。 **sp_helplanguage**不是日期或時間預存程序。 不過，語言設定會影響日期函數的輸出。|不適用|不適用|  
   
@@ -149,11 +146,10 @@ ms.lasthandoff: 09/06/2017
 |[CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|提供將日期和時間值在字串常值與其他日期和時間格式之間來回轉換的相關資訊。|  
 |[撰寫國際通用的 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)|提供的指導方針可攜性的資料庫和資料庫應用程式使用[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式從一種語言到另一個，或可支援多種語言。|  
 |[ODBC 純量函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/odbc-scalar-functions-transact-sql.md)|提供可用於 ODBC 純量函數的相關資訊[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。 這包括 ODBC 日期和時間函數。|  
-|[TIME ZONE &AMP; #40;TRANSACT-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|提供時區轉換。|  
+|[TIME ZONE &AMP;#40;TRANSACT-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|提供時區轉換。|  
   
 ## <a name="see-also"></a>另請參閱
 [函數](../../t-sql/functions/functions.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   
-

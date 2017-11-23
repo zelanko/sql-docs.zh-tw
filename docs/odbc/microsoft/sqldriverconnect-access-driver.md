@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], Access Driver
 ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a43805d014324e068943d61c000461e3f64c2ebf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0041199b1168bdd639f88d4c13663b73cb54efd7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect （存取驅動程式）
 > [!NOTE]  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 |驅動程式|所需的關鍵字|範例|  
 |------------|-----------------------|--------------|  
 |Microsoft Access|驅動程式 DBQ|Driver = {Microsoft Access 驅動程式 (.mdb)};DBQ = c:\\\temp\\\sample.mdb|
-

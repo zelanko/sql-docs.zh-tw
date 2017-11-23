@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data sources [ODBC], result sets
 - empty result sets [ODBC]
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54a310e3e2f13431c0963f513fb9d5c4ec4e226b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05a58b18fab1fe40220b20e8b18849acc4de11a9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-results-basic"></a>擷取結果 （基本）
 A*結果集*是一組符合特定準則的資料來源上的資料列。 它是概念性的資料表，從查詢結果，且應用程式可使用以表格形式。 **選取**陳述式、 目錄函數和一些程序建立結果集。 在下列範例中，第一個 SQL 陳述式會建立包含所有資料列和 「 訂單 」 資料表中的所有資料行的結果集和第二個 SQL 陳述式會建立包含訂單、 銷售人員，以及狀態資料行 Orders 資料表中資料列的結果集中的狀態為開啟：  
@@ -49,7 +47,7 @@ SELECT * FROM Orders WHERE 1 = 2
   
  此章節包含下列主題。  
   
--   [已將結果集建立嗎？](../../../odbc/reference/develop-app/was-a-result-set-created.md)  
+-   [已建立結果集了嗎？](../../../odbc/reference/develop-app/was-a-result-set-created.md)  
   
 -   [結果集中繼資料](../../../odbc/reference/develop-app/result-set-metadata.md)  
   
@@ -58,4 +56,3 @@ SELECT * FROM Orders WHERE 1 = 2
 -   [擷取資料](../../../odbc/reference/develop-app/fetching-data.md)  
   
 -   [關閉資料指標](../../../odbc/reference/develop-app/closing-the-cursor.md)
-
