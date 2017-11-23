@@ -5,25 +5,23 @@ ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a4cc7553ec5936efeafdde72f87b19c9656a699e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
-ms.openlocfilehash: aafb1156f2036e09fa4f610380a5a1d24a5dbdad
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SSMA for 入門 SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) 的 SAP ASE 可讓您快速 SAP Adaptive Server Enterprise (ASE) 資料庫將結構描述轉換至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database 的結構描述上傳到產生的結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database，並將資料從若要 SAP ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 10/03/2017
 ## <a name="installing-and-licensing-ssma"></a>安裝與授權 SSMA  
 若要使用 SSMA，您先必須安裝 SSMA 用戶端程式的來源執行個體的 SAP ASE 和目標執行個體都可以存取的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。 若要使用伺服器端資料移轉，您必須安裝延伸模組組件和至少一個 SAP ASE 提供者 （OLE DB 或 ADO.NET） 正在執行的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 這些元件支援的資料移轉和 SAP ASE 系統函數的模擬。 如需安裝指示，請參閱[安裝 SSMA for SAP ASE &#40;SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md).  
   
-若要啟動 SSMA，按一下**啟動**，指向**所有程式**，指向 **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 for Sybase**，，然後選取  **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 for Sybase**。 第一次您啟動 SSMA，授權的對話方塊隨即出現。 您必須使用 Windows Live ID，才能使用 SSMA 授權 SSMA。 授權的指示是使用中的安裝指示[安裝 SSMA for Sybase 用戶端 &#40;SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)主題。  
+若要啟動 SSMA，按一下 **啟動** ，指向**所有程式**，指向 **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 for Sybase**，，然後選取 **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 for Sybase**。 第一次您啟動 SSMA，授權的對話方塊隨即出現。 您必須使用 Windows Live ID，才能使用 SSMA 授權 SSMA。 授權的指示是使用中的安裝指示[安裝 SSMA for Sybase 用戶端 &#40;SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)主題。  
   
 ## <a name="ssma-for-sap-ase-user-interface"></a>SSMA for SAP ASE 使用者介面  
 SSMA 會安裝並授權之後，您可以將 SAP ASE 資料庫移轉至使用 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。 它有助於熟悉 SSMA 使用者介面在開始之前。 下圖顯示 SSMA，包括中繼資料瀏覽器、 中繼資料、 工具列、 輸出窗格中，以及錯誤清單 窗格的使用者介面：  
@@ -120,4 +118,3 @@ SSMA 會包含下列功能表：
 ## <a name="see-also"></a>另請參閱  
 [SAP ASE 將資料庫移轉至 SQL Server-Azure SQL Database &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [使用者介面參考 &#40;SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
-

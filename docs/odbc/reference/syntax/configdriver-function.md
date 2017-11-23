@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ConfigDriver
-apilocation:
-- sqlsrv32.dll
+apiname: ConfigDriver
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- ConfigDriver
-helpviewer_keywords:
-- ConfigDriver [ODBC]
+f1_keywords: ConfigDriver
+helpviewer_keywords: ConfigDriver [ODBC]
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d52e818312a12397328854971cdf065f1ef9eb3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 037d4ffcbe7d81c6e4a9c1a524f5f4977621f277
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configdriver-function"></a>ConfigDriver 函式
 **一致性**  
@@ -69,7 +63,7 @@ BOOL ConfigDriver(
  此選項也可以是特定驅動程式在此情況下*常見*第一個選項的引數必須從 ODBC_CONFIG_DRIVER_MAX + 1 開始。 *常見*從大於 ODBC_CONFIG_DRIVER_MAX + 1 的值也必須啟動任何其他選項的引數。  
   
  *lpszDriver*  
- [輸入]在系統資訊的 Odbcinst.ini 索引鍵中註冊的驅動程式名稱。  
+ [輸入]在 系統資訊的 Odbcinst.ini 索引鍵中註冊的驅動程式名稱。  
   
  *lpszArgs*  
  [輸入]Null 結束的字串，包含特定驅動程式的引數*常見*。  
@@ -106,4 +100,3 @@ BOOL ConfigDriver(
   
 ### <a name="messages"></a>訊息  
  驅動程式安裝常式可以將文字訊息傳送至應用程式中的 null 終止字串*lpszMsg*緩衝區。 訊息會被截斷為*cbMsgMax*減的 null 終止字元**ConfigDriver**函式是否大於或等於*cbMsgMax*字元。
-

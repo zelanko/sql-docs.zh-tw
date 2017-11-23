@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 445f69a6c78293f74dfea35f40ea99c380108e72
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 269c901b4242ae199f6d83fc7f678c29be39e5e5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>專案設定 （型別對應） (MySQLToSQL)
 型別對應的專案設定可讓您設定的 SSMA 專案的預設型別對應。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 08/02/2017
 ##### <a name="target-type"></a>目標類型  
 目標資料庫資料類型指定的 MySQL 資料型別。  
   
-##### <a name="add"></a>[加入]  
+##### <a name="add"></a>加入  
 按一下以新增的資料類型對應清單。  
   
 ##### <a name="edit"></a>編輯  
@@ -177,7 +175,7 @@ ms.lasthandoff: 08/02/2017
 |不帶正負號固定 [*..65][\*..30]|數字 [*] [\*]|  
 |不帶正負號的浮點數|float [24]|  
 |不帶正負號的浮點數 [*..255][\*..30]|數字 [*] [\*]|  
-|不帶正負號的浮點數 [*]53]|float [53]|  
+|不帶正負號的浮點數 [*..53]|float [53]|  
 |不帶正負號的整數|bigint|  
 |不帶正負號的 int [*..255]|bigint|  
 |不帶正負號的整數|bigint|  
@@ -203,7 +201,7 @@ ms.lasthandoff: 08/02/2017
 |年 [2..2]|smallint|  
 |年 [4..4]|smallint|  
   
-##### <a name="add"></a>[加入]  
+##### <a name="add"></a>加入  
 按一下以新增的資料類型對應清單。  
   
 ##### <a name="edit"></a>編輯  
@@ -215,4 +213,3 @@ ms.lasthandoff: 08/02/2017
 ##### <a name="reset-to-default"></a>重設為預設值  
 按一下以重設 SSMA 的所有資料類型對應。  
   
-

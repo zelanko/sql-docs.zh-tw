@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: f387bee9f8e83568bb463ae0e07c4f614a725b15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4cefe036943dd986cbc6b1cd9cab2b44c9e0f9fd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>專案設定 （型別對應） (OracleToSQL)
 類型對應 頁面**專案設定**對話方塊包含自訂 SSMA 如何轉換到 Oracle 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 08/02/2017
   
 若要指定目前的物件或物件類別的設定，請使用**類型對應**主要 SSMA 視窗索引標籤中的。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 下表顯示**類型對應**索引標籤上選項：  
   
 **來源類型**  
@@ -64,7 +62,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
   
 |Oracle 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型|  
 |--------------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|int|  
@@ -92,24 +90,24 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |不同的國家字元集<sup>**</sup>|nvarchar(max)|  
 |不同的國家字元集<sup>*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
 |未經處理的|varbinary(max)|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
-|signtype|smallint|  
+|Rowid|uniqueidentifier|  
+|Signtype|smallint|  
 |smallint|smallint|  
 |string|varchar(max)|  
 |timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |時區的時間戳記|datetimeoffset|  
-|urowid|uniqueidentifier|  
+|Urowid|uniqueidentifier|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
-|xmltype|xml|  
+|Xmltype|xml|  
   
 <sup>*</sup>傳回值類型對應只會套用。  
   
@@ -120,7 +118,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
   
 |Oracle 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型|  
 |--------------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |blob|varbinary(max)|  
@@ -159,7 +157,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |國家字元集 [*..\*]|nchar [*]|  
 |nchar|nchar|  
 |nchar [*]|nchar [*]|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |數字 [*..\*]|數字 [*]|  
 |數字 [*..\*][\*..\*]|數字 [*] [\*]|  
@@ -169,7 +167,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |nvarchar2 [*..\*]|nvarchar [*]|  
 |原始 [*..\*]|varbinary [*]|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
+|Rowid|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
@@ -216,7 +214,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |Float|float [53]|  
 |float [*..53]|float [*]|  
 |float [54..*]|float [53]|  
-|整數|int|  
+|int|int|  
 |Integer|int|  
 |整數 [*..\*]|數字 [*] [0]|  
 |長整數|varchar(max)|  
@@ -241,10 +239,10 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |Nclob|nvarchar(max)|  
 |Number|float [53]|  
 |數字 [*..\*]|數字 [*]|  
-|數字 [*..\*][\*..\*]|數字 [*] [\*]|  
+|數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |數值|數字 [38] [0]|  
 |數字 [*..\*]|數字 [*]|  
-|數字 [*..\*][\*..\*]|數字 [*] [\*]|  
+|數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |nvarchar2 [*..4000]|nvarchar [*]|  
 |nvarchar2 [4001..*]|nvarchar(max)|  
 |pls_integer|int|  
@@ -270,7 +268,6 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |varchar2 [8001..*]|varcha(max)|  
 |Xmltype|xml|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [使用者介面參考 &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   
-
