@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7db96c719d22b3f6dd47a02eac2ef7724c0b6040
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 709df0de2e0191c0f03026afdad7b8e9b8480cae
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 檔 （文字檔案驅動程式）
 使用文字驅動程式時，文字檔案的格式取決於使用結構描述資訊檔案。 是一律名為 Schema.ini 的結構描述資訊的檔案，並永遠保持在相同的目錄做為文字資料來源中。 結構描述資訊檔案提供 IISAM 有關的一般格式的檔案、 資料行名稱和資料型別資訊，以及數個其他資料特性的資訊。 Schema.ini 檔所需存取固定長度的資料。 當文字資料表包含的日期時間、 貨幣或十進位資料或每次您要更充分掌控資料表中資料的處理時，您應該使用 Schema.ini 檔案。  
@@ -136,4 +134,3 @@ CharacterSet=ANSI
   
 > [!NOTE]  
 >  如果您省略某個項目時，會使用控制台中的 Windows 中的預設值。
-

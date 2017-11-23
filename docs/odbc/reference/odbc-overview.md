@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 607e516c8654631ab032dfc6159a8990d464a023
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20767544a83219c6583eaf03a78e240e15e19be2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-overview"></a>ODBC 概觀
 開放式資料庫連接 (ODBC) 是資料庫存取廣為接受的應用程式開發介面 (API)。 它的 Open Group 和 ISO/IEC 從資料庫 Api 的呼叫層級介面 (CLI) 規格為基礎，並為其資料庫存取語言中使用結構化查詢語言 (SQL)。  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 -   [什麼是 ODBC？](../../odbc/reference/what-is-odbc.md)  
   
 -   [ODBC 和標準 CLI](../../odbc/reference/odbc-and-the-standard-cli.md)
-

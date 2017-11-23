@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], positioned update or delete
 - cursor library [ODBC], statement processing
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9061ad8221537eaa00eb40fab56fa10d3357198d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>處理定位 Update 和 Delete 陳述式
 > [!IMPORTANT]  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 -   如果驅動程式支援只有一個使用中陳述式，資料指標程式庫擷取結果的其他設定，然後 refetches 從其快取的目前資料列集之前，它會執行定位更新或 delete 陳述式。 如果應用程式接著會呼叫函式傳回結果集內的中繼資料 (例如， **SQLNumResultCols**或**SQLDescribeCol**)，資料指標程式庫會傳回錯誤。  
   
 -   如果時間戳記資料行是如果資料表包含每次執行更新時自動更新的時間戳記資料行的資料行上執行定位的更新或刪除陳述式，所有後續的定位的更新或刪除陳述式將會失敗繫結。 這是因為搜尋更新或刪除資料指標程式庫建立陳述式不會精確地識別要更新的資料列。 搜尋的陳述式的時間戳記資料行中的值將不符合時間戳記資料行的自動更新的值。
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - CREATE USER
 - ALLOW_ENCRYPTED_VALUE_MODIFICATIONS
 - ALLOW_ENCRYPTED_VALUE_MODIFICATIONS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - adding users
 - WITHOUT LOGIN [SQL Server]
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 111
+caps.latest.revision: "111"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: cc1b66f561ce413016e154bc329384566a8384b8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 47004dfe9ec810fec68a63849755021690f98fdb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -452,7 +449,7 @@ WITH
 一旦建立使用者時，請考慮將使用者加入至資料庫角色使用[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)陳述式。  
 您可能也要[GRANT 物件權限](../../t-sql/statements/grant-object-permissions-transact-sql.md)至角色，讓他們可以存取的資料表。 如需 SQL Server 安全性模型的一般資訊，請參閱[權限](../../relational-databases/security/permissions-database-engine.md)。   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [建立資料庫使用者](../../relational-databases/security/authentication-access/create-a-database-user.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
@@ -464,6 +461,5 @@ WITH
  [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   
   
-
 
 

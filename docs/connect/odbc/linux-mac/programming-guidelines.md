@@ -8,20 +8,18 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
-ms.openlocfilehash: 85ba8b35fa698769bd390837855729f3edbc7291
-ms.contentlocale: zh-tw
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
@@ -34,12 +32,12 @@ ODBC 應用程式可以使用 Multiple Active Result Sets (MARS) 和其他[!INCL
 ## <a name="available-features"></a>可用的功能  
 下面各節從[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client ODBC 的文件 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) 時使用 macOS 和 Linux 上的 ODBC 驅動程式都是有效：  
 
--   [與 SQL Server (ODBC) 通訊](http://msdn.microsoft.com/library/ms131692.aspx)  
+-   [與 SQL Server 進行通訊 (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
 -   [連接和查詢逾時支援](http://msdn.microsoft.com/library/ms130822.aspx)  
 -   [資料指標](http://msdn.microsoft.com/library/ms130794(SQL.110).aspx)  
 -   [日期/時間改善 (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
 -   [執行查詢 (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
--   [處理錯誤和訊息](http://msdn.microsoft.com/library/ms131289.aspx)  
+-   [處理錯誤與訊息](http://msdn.microsoft.com/library/ms131289.aspx)  
 -   [Kerberos 驗證](http://msdn.microsoft.com/library/cc280459.aspx)  
 -   [大型 CLR 使用者定義型別 (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [執行交易 (ODBC) （分散式交易除外）](http://msdn.microsoft.com/library/ms131706.aspx)  
@@ -49,7 +47,7 @@ ODBC 應用程式可以使用 Multiple Active Result Sets (MARS) 和其他[!INCL
 -   [SSL 加密](http://msdn.microsoft.com/library/ms131691.aspx)
 -   [資料表值的參數](https://docs.microsoft.com/en-us/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [Utf-8 和 utf-16 命令和資料 api](http://msdn.microsoft.com/library/ff878241.aspx)
--   [使用目錄函數](http://msdn.microsoft.com/library/ms131490.aspx)  
+-   [使用目錄函式](http://msdn.microsoft.com/library/ms131490.aspx)  
 
 ## <a name="unsupported-features"></a>不支援的功能
 
@@ -112,10 +110,9 @@ SQLCHAR 資料必須是其中一個支援的字元集。 SQLWCHAR 資料必須�
     
 2.  如果陳述式屬性是透過 SQLSetConnectAttr 來傳遞的，則 UnixODBC 驅動程式對於所有的陳述式屬性都會傳回「無效的屬性/選項識別碼」。 在 Windows 中，當 SQLSetConnectAttr 接收陳述式的屬性值會導致驅動程式，也就是連接控制代碼的子系的所有作用中陳述式上設定該值。  
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [常見問題集](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 
 [此驅動程式版本的已知問題](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [版本資訊](../../../connect/odbc/linux-mac/release-notes.md)
-

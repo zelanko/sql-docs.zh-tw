@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- header files [ODBC]
+helpviewer_keywords: header files [ODBC]
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d56c0096350b5f8d1d217a2cea85a770ecde6e14
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8cec0dc5105addb28606a12c99dd2d77b0a48a64
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="header-files"></a>標頭檔
 標頭檔 Sql.h 包含原型函式和核心 ODBC 介面一致性層級中的功能。 Sqlext.h 標頭檔包含原型函式和中的層級 1 和層級 2 API 的一致性層級的功能。 Sqltypes.h 標頭檔包含類型定義與 SQL 資料類型的指標。  
@@ -57,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_OJ_CAPABILITIES|SQL_OUTER_JOIN_CAPABILITIES|  
 |SQL_TXN_CAPABLE|SQL_TRANSACTION_CAPABLE|  
 |SQL_TXN_ISOLATION_OPTION|SQL_TRANSACTION_ISOLATION_OPTION|
-

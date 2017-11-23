@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], Text File Driver
 - text file driver [ODBC], SQLSetConnectOption
 ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 77b676687e28d98807d8d83ecde0fe97f4eb5c41
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 431d17a0bbcf22649bb8278dc7a5af32622eda1f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetconnectoption-text-file-driver"></a>SQLSetConnectOption （文字檔案驅動程式）
 > [!NOTE]  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_TRANSLATE_DLL|不支援。|  
 |SQL_TRANSLATION_OPTION|不支援。|  
 |SQL_TXN_ISOLATION|不支援。|
-

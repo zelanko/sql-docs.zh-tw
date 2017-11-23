@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQLGetDiagRec function [ODBC], diagnostic handling rules
 - diagnostic information [ODBC], SqlGetDiagRec
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 154261b999911bcc02050634901b199d0ae49be1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-handling-rules"></a>診斷的處理規則
 下列規則可控制中的診斷處理**SQLGetDiagRec**和**SQLGetDiagField**。  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/09/2017
  一個 ODBC 元件以外，驅動程式管理員：  
   
 -   必須設定根據原生錯誤的 SQLSTATE。 以檔案為基礎的驅動程式和 DBMS 架構驅動程式不使用閘道，驅動程式必須設定 SQLSTATE。 DBMS 架構驅動程式所使用的閘道，驅動程式或支援 ODBC 的閘道可能設定 SQLSTATE。
-

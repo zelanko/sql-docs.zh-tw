@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], behavioral changes
 - compatibility [ODBC], behavioral changes
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7a5bcfea240af2477b3522f2baa849a6a5a6876
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5bd1ce6560e8c93d22cac8f99f2eee53be1b953
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>行為變更和 ODBC 3.x 驅動程式
 環境屬性 SQL_ATTR_ODBC_VERSION 會指出驅動程式是否需要至展現 ODBC 2。*x*行為或 ODBC 3*.x*行為。 SQL_ATTR_ODBC_VERSION 環境屬性設定的方式取決於應用程式。 ODBC 3*.x*應用程式必須呼叫**SQLSetEnvAttr**來設定這個屬性之後它們呼叫**SQLAllocHandle**配置環境控制代碼，以及它們呼叫之前**SQLAllocHandle**配置連接控制代碼。 如果他們若要這樣做，驅動程式管理員會傳回 SQLSTATE HY010 （函數順序錯誤） 在第二個呼叫**SQLAllocHandle**。  
@@ -43,17 +41,16 @@ ms.lasthandoff: 09/09/2017
   
  此章節包含下列主題。  
   
--   [Datetime 資料類型](../../../odbc/reference/appendixes/datetime-data-types.md)  
+-   [日期時間資料類型](../../../odbc/reference/appendixes/datetime-data-types.md)  
   
--   [回溯相容性的 C 資料類型](../../../odbc/reference/appendixes/backward-compatibility-of-c-data-types.md)  
+-   [C 資料類型的回溯相容性](../../../odbc/reference/appendixes/backward-compatibility-of-c-data-types.md)  
   
--   [固定長度的書籤](../../../odbc/reference/appendixes/fixed-length-bookmarks.md)  
+-   [固定長度書籤](../../../odbc/reference/appendixes/fixed-length-bookmarks.md)  
   
 -   [SQLGetInfo 支援](../../../odbc/reference/appendixes/sqlgetinfo-support.md)  
   
--   [傳回 sql_no_data 為止](../../../odbc/reference/appendixes/returning-sql-no-data.md)  
+-   [傳回 SQL_NO_DATA](../../../odbc/reference/appendixes/returning-sql-no-data.md)  
   
--   [呼叫 SQLSetPos 插入資料](../../../odbc/reference/appendixes/calling-sqlsetpos-to-insert-data.md)  
+-   [呼叫 SQLSetPos 以插入資料](../../../odbc/reference/appendixes/calling-sqlsetpos-to-insert-data.md)  
   
 -   [依序數載入](../../../odbc/reference/appendixes/loading-by-ordinal.md)
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - CREATE SEQUENCE
 - SEQUENCE_TSQL
 - CREATE_SEQUENCE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CREATE SEQUENCE statement
 - sequence number object, creating
 - sequence object
 - number, sequence
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: ab2f4258d60f1653a102f5f9cc51d4263fcafc93
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 89a96d101c17f528b9ff14ca523e5dc41ada2f4c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -183,7 +180,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
  如果順序使用使用者定義的資料類型，順序的建立者必須擁有類型的 REFERENCES 權限。  
   
 ### <a name="audit"></a>稽核  
- 若要稽核**CREATE SEQUENCE**，監視**SEQUENCE&LT;**。  
+ 若要稽核**CREATE SEQUENCE**，監視**SEQUENCE<**。  
   
 ## <a name="examples"></a>範例  
  如需建立順序和使用的範例**NEXT VALUE FOR**函數產生序號，請參閱[序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
@@ -303,11 +300,10 @@ FROM sys.sequences
 WHERE name = 'DecSeq' ;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ALTER SEQUENCE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [卸除順序 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
  [下一個值 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   
-

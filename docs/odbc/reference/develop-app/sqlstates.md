@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], sqlstates
 - SQLSTATE [ODBC]
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c45bbcbf03c4377e8ff162c3cd28ddf7128810b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlstates"></a>SQLSTATE
 Sqlstate 會提供警告或錯誤的原因的詳細的資訊。 雖然使用 IM 啟動這些 Sqlstate 特有 ODBC Sqlstate 本手冊中取決於 ISO/IEF CLI 規格中。  
@@ -56,4 +54,3 @@ Sqlstate 會提供警告或錯誤的原因的詳細的資訊。 雖然使用 IM 
  SQLSTATE HYC00 （未實作的選擇性功能） 是特別重要，因為它是在其中應用程式可以判斷驅動程式是否支援特定的陳述式或連接屬性的唯一方式。  
   
  Sqlstate 和哪些函式會傳回它們的完整清單，請參閱[附錄 a: ODBC 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。 在每個函式可能會傳回特定的 SQLSTATE 的條件的詳細說明，請參閱該函式。
-

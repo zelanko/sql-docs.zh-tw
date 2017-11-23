@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eb3cd6b0bcb1d159e3c32a672b8b9f1038057b51
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d829e53d2ab774ce248d0c89ef6267111c66334
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="reserved-keywords"></a>保留關鍵字
 以下是 ODBC 函數呼叫所用的保留字。 這些字並不會限制最小的 SQL 文法;不過，為了確保與支援核心 SQL 文法的驅動程式的相容性，應用程式應該避免使用這些關鍵字。 #**定義**值 SQL_ODBC_KEYWORDS 包含這些關鍵字的逗號分隔清單。  
@@ -151,4 +149,3 @@ ms.lasthandoff: 09/09/2017
 |INTERSECT|YEAR|  
 |INTERVAL|ZONE|  
 |INTO||
-

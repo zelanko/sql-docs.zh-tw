@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], examples
 - data conversions from C to SQL types [ODBC], examples
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d900ac7b21b75a5cecbb92f41a95dc9cbb836423
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46c1a95015858fbec4ff1e1b5f10bb9b409c9482
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>SQL 資料轉換範例 C
 下列範例說明如何驅動程式將 C 資料轉換成 SQL 資料：  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
  [這份清單中的 c] 的數字為 SQL_DATE_STRUCT 結構的欄位中儲存的數字。  
   
  [這份清單中 a] 的數字為 SQL_TIMESTAMP_STRUCT 結構的欄位中儲存的數字。
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - DBase driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], dBASE Driver
 ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9e803735344ec855c37c546554c1412e78205cc7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 923a8b48c93de3456a1f3cbc002ca73753c8535e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption (dBASE 驅動程式)
 > [!NOTE]  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_TRANSLATE_DLL|不支援。|  
 |SQL_TRANSLATION_OPTION|不支援。|  
 |SQL_TXN_ISOLATION|不支援。|
-

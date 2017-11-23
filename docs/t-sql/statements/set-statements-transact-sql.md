@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SET
 - SET_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ISO SET statements
 - queries [SQL Server], executing
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - statistical information [SQL Server], SET statements
 - locking [SQL Server], SET statements
 ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 3832a2be6952354122c999d3c88c7ad1610b623d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0426730b33f0b70fda11a8cb07242a365d10fae
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-statements-transact-sql"></a>SET 陳述式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,4 +91,3 @@ ms.lasthandoff: 09/01/2017
      如果任何這些選項未設成所需要的值，在索引檢視或含計算資料行索引的資料表上執行 INSERT、UPDATE、DELETE、DBCC CHECKDB 和 DBCC CHECKTABLE 動作都會失敗。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生一個錯誤，列出所有設定不正確的選項。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會依照計算資料行或檢視的索引並不存在的方式，來處理這些資料表或索引檢視的 SELECT 陳述式。  
   
   
-

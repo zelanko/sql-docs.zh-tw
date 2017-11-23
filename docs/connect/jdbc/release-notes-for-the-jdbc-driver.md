@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
+caps.latest.revision: "206"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 827840a7aa7e221edaad60060fb51972460808ed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd65725237fd625c40f8755e636bb4f6fa2c55ea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC 驅動程式的版本資訊
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -133,11 +131,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  支援 AlwaysOn 可用性群組的高可用性、 災害復原連接[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]。 請參閱[JDBC 驅動程式支援的高可用性、 災害復原](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)如需詳細資訊。  
   
- **使用 Kerberos 整合式的驗證連接到 SQL Server**  
+ **使用 Kerberos 整合式驗證連接到 SQL Server**  
   
  類型 4 Kerberos 整合式驗證來連接的應用程式的支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。 如需詳細資訊，請參閱[使用 Kerberos 整合式驗證來連接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 (類型 2 Kerberos 整合式的驗證位於[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]4.0 之前的版本。)  
   
- **存取擴充的事件記錄檔中的診斷資訊**  
+ **存取擴充事件記錄檔中的診斷資訊**  
   
  您可以存取伺服器擴充事件記錄檔中的資訊，以了解連接失敗的情況。 如需詳細資訊，請參閱[存取擴充事件記錄檔中的診斷資訊](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
@@ -153,8 +151,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  Microsoft JDBC Drivers 6.0、 4.2、 4.1 和 4.0 for SQL Server 應用程式不支援在 Itanium 電腦上執行。  
   
-## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

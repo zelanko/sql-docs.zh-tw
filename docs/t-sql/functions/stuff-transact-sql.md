@@ -1,19 +1,20 @@
 ---
 title: "STUFF (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 11/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STUFF
 - STUFF_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - deleting characters
 - STUFF function
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - characters [SQL Server], replacing
 - inserting data
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: db5876abd95b4eb9b21d91deeeb6bc0f1a242303
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: df9a3d019f22ec8a0ba610f2dd694e45a8bd9da3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   STUFF 函數會將字串插入另一個字串。 它會在第一個字串的開始位置刪除指定長度的字元，然後將第二個字串插入第一個字串的開始位置。  
   
@@ -53,11 +53,11 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)字元資料。 *character_expression*可以是常數、 變數或資料行的字元或二進位資料。  
   
  *啟動*  
- 這是一個開始刪除和插入之位置的整數值。 如果*啟動*或*長度*是負數，會傳回 null 字串。 如果*啟動*超過第一個*character_expression*，會傳回空字串。 *啟動*可以屬於型別**bigint**。  
+ 這是一個開始刪除和插入之位置的整數值。 如果*啟動*是負值或零，則傳回 null 字串。 如果*啟動*超過第一個*character_expression*，會傳回空字串。 *啟動*可以屬於型別**bigint**。  
   
  *length*  
- 這是一個整數，指定要刪除的字元數。 如果*長度*超過第一個*character_expression*，就會刪除到最後一個到最後一個字元*character_expression*。 *長度*可以屬於型別**bigint**。  
-  
+ 這是一個整數，指定要刪除的字元數。 如果*長度*是負數，會傳回 null 字串。 如果*長度*超過第一個*character_expression*，就會刪除到最後一個到最後一個字元*character_expression*。  如果*長度*為零，插入字串中的第一個字元之前，就會發生。 *長度*可以屬於型別**bigint**。
+
  *replaceWith_expression*  
  是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)字元資料。 *character_expression*可以是常數、 變數或資料行的字元或二進位資料。 這個運算式會取代*長度*字元*character_expression*開始*啟動*。 提供`NULL`為*replaceWith_expression*，而不需要插入任何項目移除的字元。   
   
@@ -89,7 +89,6 @@ aijklmnef
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - serialization [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 24abc4dee066853da7b201f19839063aa437d854
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 81d23b5bc94f2982becca5e76ab28269d6c233c1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="serializability"></a>可序列化能力
 在理想情況下，應該是交易*序列化*。 交易都稱為是否同時執行交易的結果相同的循序執行這些結果可序列化 — 也就是一個接著一個。 它並不重要交易第一次，執行只有該結果並不會反映任何混用的交易。  
@@ -38,4 +36,3 @@ ms.lasthandoff: 09/09/2017
  為何，所以可序列化能力需要這樣做？ 換句話說，它為何如此重要，它會顯示該一筆交易完成之前啟動下一個交易嗎？ 請考慮下列問題。 拜訪客戶順序在同一時間 clerk 送出帳單輸入訂單。 假設拜訪客戶順序輸入訂單從公司 X，但不是會認可它。業務員仍向該代表從公司 X。Clerk 要求的所有開啟的訂單清單和探索 X 公司的順序，並將它們傳送帳單。 現在該代表從 X 公司決定他們想要變更其順序，因此拜訪客戶順序則會認可交易之前變更它。 X 公司取得不正確的帳單。  
   
  如果序列化拜訪客戶順序的和 clerk 的交易，永遠不可能發生這個問題。 Clerk 的交易開始，在此情況下您會有 clerk 送出正確的帳單之前, 會完成拜訪客戶順序的交易或交易的 clerk 會完成在此情況下拜訪客戶順序的交易開始之前clerk 就不具有傳送帳單到 X 公司完全。
-

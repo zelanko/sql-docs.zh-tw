@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 224a4c7f7c2540d78c69dc7c1ed61267db564261
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="defining-text-format-text-file-driver"></a>定義文字格式 （文字檔案驅動程式）
 使用文字驅動程式時，您可以使用**定義文字格式**對話方塊，即可在選取的檔案中定義的資料行的格式。 此對話方塊可讓您指定每個資料表的結構描述。 這項資訊會寫入 Schema.ini 檔中的資料來源目錄。 每個文字資料來源目錄建立個別的 Schema.ini 檔案。  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |**要掃描的資料列**|安裝程式或驅動程式會掃描設定資料行與現有的資料為基礎的資料行資料類型的資料列數目。<br /><br /> 您可以輸入的數字 1 到 32767 之間之掃描的資料列數目。 預設值為 25 如果在選取之項目的格式**資料表**清單尚未先前定義的這個對話方塊。 （限制以外的數字會傳回錯誤）。|  
 |**資料表**|包含清單中選取的目錄中的所有檔案的**文字安裝**符合指定的擴充功能清單中的對話方塊。<br /><br /> 當\<預設 > 已選取下列其中一項是 true 時，資料表中的屬性值和**資料表**Schema.ini (touched Schema.ini 中的沒有其他項目) 寫入群組：<br /><br /> -沒有 Schema.ini 中指定的目錄。<br />-Schema.ini 檔案存在，但是 Schema.ini 的其中一個目錄中 （具有指定之副檔名） 文字檔案中沒有區段。<br />-[文字檔] 區段存在於 Schema.ini，但是主體是空的。<br /><br /> 當\<預設 > 已選取**資料行**群組為停用。|  
 |**寬度**|CHAR 或 LONGCHAR 資料行可以變更資料行的寬度。 寬度的預設值為 1，否則在選取之項目的格式**資料表**清單尚未先前定義的這個對話方塊。<br /><br /> 對於其他資料類型，寬度控制項已停用，並會顯示任何值。|
-

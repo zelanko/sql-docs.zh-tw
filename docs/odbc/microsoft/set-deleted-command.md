@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET DELETED command [ODBC]
+helpviewer_keywords: SET DELETED command [ODBC]
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34bcce12665dd3e0bcaa49e4c6e1ff93a807f514
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f3bf1ec522bee6fda19349a71c894ebd98bd75b9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-deleted-command"></a>SET 刪除命令
 指定是否標示為刪除的記錄會被處理，以及是否可用於其他命令。  
@@ -50,6 +47,5 @@ SET DELETED ON | OFF
 > [!IMPORTANT]  
 >  如果命令的預設範圍是目前的記錄，或包含單一記錄的範圍，則會忽略設定刪除。 索引一律會忽略設定刪除，並將索引資料表中的所有記錄。  
   
-## <a name="see-also"></a>另請參閱  
- [刪除 SQL 命令](../../odbc/microsoft/delete-sql-command.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [DELETE - SQL 命令](../../odbc/microsoft/delete-sql-command.md)

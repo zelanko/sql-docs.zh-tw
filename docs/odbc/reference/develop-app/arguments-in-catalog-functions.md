@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], about arguments
 - functions [ODBC], catalog functions
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: db8463f643763f4dbaa621b5e26549c5523197ec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f8939b2e1ae81c3eb171e78753e7fc3b6cc17ae
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="arguments-in-catalog-functions"></a>目錄函數中的引數
 所有類別目錄函式接受引數與應用程式可以限制傳回的資料範圍。 例如，第一個和第二個呼叫**SQLTables**在下列程式碼會傳回包含所有的資料表的相關資訊，而第三個呼叫會傳回 Orders 資料表的相關資訊的結果集：  
@@ -60,7 +58,6 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
   
 -   [模式值引數](../../../odbc/reference/develop-app/pattern-value-arguments.md)  
   
--   [識別項引數](../../../odbc/reference/develop-app/identifier-arguments.md)  
+-   [識別碼引數](../../../odbc/reference/develop-app/identifier-arguments.md)  
   
 -   [值清單引數](../../../odbc/reference/develop-app/value-list-arguments.md)
-

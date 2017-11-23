@@ -1,5 +1,5 @@
 ---
-title: "-= （減 EQUALS） (TRANSACT-SQL) |Microsoft 文件"
+title: "-= （減法指派） (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,33 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - -=
 - -=_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - compound operators, -=
+- assignment operators, -=
+- augmented operators, -=
 - -= (subtract equals)
+- -= (subtraction assignment)
 ms.assetid: 2a2056b5-1dfa-4ea8-8cfc-6331a2f94da9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 81731fdfdebf160fd2ab9de2848f58d47865979e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d90b7030c76bae406ec2d764bf19c96202be9d86
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="--subtract-equals-transact-sql"></a>-= (減 EQUALS) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="--subtraction-assignment-transact-sql"></a>-= （減法指派） (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   兩數相減，再將值設定為運算結果。 例如，如果變數@x等於 35，然後@x-= 2 會的原始值@x、 減去 2，然後@x為該新值 (33)。  
   
@@ -52,12 +52,11 @@ expression -= expression
  傳回優先順序較高之引數的資料類型。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
 ## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[-&#40;減去 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/subtract-transact-sql.md).  
+ 如需詳細資訊，請參閱[-&#40;減法 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/subtract-transact-sql.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

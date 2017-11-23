@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - functions [ODBC], string parameters
 - string parameters [ODBC]
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a9b8cf337d9ef004ae2ec95025123b70d4f5adcc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bb438fa14f5367579d96c2640705f82589e71636
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="functions-accepting-string-parameters"></a>接受字串參數的函式
 所有採用字串參數的函式會轉換成 Unicode。 （將匯出的函式"W"形式）。位元組計數會轉換成適用於 ODBC Api 的計數的字元。 這適用於下列函數：  
@@ -75,4 +73,3 @@ ms.lasthandoff: 09/09/2017
 -   **ConfigDSNEx**  
   
 -   **ConfigDSN**
-

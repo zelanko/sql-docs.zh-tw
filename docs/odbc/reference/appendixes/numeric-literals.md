@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 11fa70b4ebbb46745590d17ae7188b88f59a28b8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91f9b1fe25772c464877fff38b0eb4fc73155828
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="numeric-literals"></a>數值常值
 數值資料值會儲存在字元字串時，會使用數值常值。 為 SQL_C_CHAR 字串，數值 SQL 資料的轉換或轉換的數字的 C 資料設為 SQL_CHAR 或 SQL_VARCHAR 字串，數值常值的語法用來指定目標中儲存的內容。 轉換的數字儲存為 SQL_C_CHAR 字串為數值的 SQL 資料或儲存為 SQL_CHAR 字串至數值的 C 資料數值，此語法用來驗證來源中儲存的內容。  
@@ -39,5 +37,4 @@ ms.lasthandoff: 09/09/2017
   
 -   [轉換規則](../../../odbc/reference/appendixes/rules-for-conversions.md)  
   
--   [覆寫預設有效位數和小數位數值資料類型](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)
-
+-   [覆寫數值資料類型的預設精確度和小數位數](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)

@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetData function [ODBC], Cursor Library
+helpviewer_keywords: SQLGetData function [ODBC], Cursor Library
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2024b9943f11877b38773cecaa59027867a31d1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19aa94323ee9ad9655e374bd3fe466fcb78f3c48
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData （資料指標程式庫）
 > [!IMPORTANT]  
@@ -47,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetData**符合下列條件時，才可以呼叫：**選取**陳述式產生結果集;**選取**陳述式未包含聯結， **等位**子句，或**GROUP BY**子句; 和選取清單中使用的別名或運算式的任何資料行未繫結與**SQLBindCol**。  
   
 -   如果驅動程式支援只有一個使用中陳述式，資料指標程式庫會提取結果集之前執行的 rest**選取**陳述式，並呼叫**SQLGetData**。
-

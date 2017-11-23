@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: 0425818c-9469-493f-9e3c-fc03d9411c5c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7694a2646f8cb62824991d37a01cd49f5291033
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2b97769aebb017ab60de531f4242ed2421b76835
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-data"></a>資料行資料
 > [!IMPORTANT]  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 >  如果資料指標程式庫不會更新其快取資料行 **StrLen_or_IndPtr*對應的資料列集的緩衝區是 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 巨集的結果。  
   
  當更新資料行、 資料來源空白填補的固定長度的字元資料和零填補視固定長度二進位資料。 例如，資料來源會儲存"Smith"char （10） 資料行中為"Smith"。 資料指標程式庫時它將此資料複製到快取上執行定位的 update 陳述式之後，請執行未填補的空白或零填補的資料列集的緩衝區中的資料。 因此，如果應用程式需要的資料指標程式庫的快取中的值空白填補或填補零，則它必須空白填補或零填補的資料列集的緩衝區中的值執行定位的 update 陳述式之前。
-

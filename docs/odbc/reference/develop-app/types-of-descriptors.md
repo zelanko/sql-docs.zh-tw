@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- descriptors [ODBC], types
+helpviewer_keywords: descriptors [ODBC], types
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7092b59719850ed514ce792c17eea32ae290b932
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="types-of-descriptors"></a>類型的描述元
 描述元用來描述下列其中一項：  
@@ -58,4 +55,3 @@ ms.lasthandoff: 09/09/2017
  描述元可以執行不同的角色。 不同的陳述式可以共用應用程式明確配置任何描述項。 在單一陳述式的資料列描述項可做為另一個陳述式中的參數描述元。  
   
  一律得知給定的描述元是否為應用程式描述項或實作描述項，即使描述元尚未使用的資料庫作業中。 實作會實作隱含地配置描述元，針對記錄預先定義的資料列，相對於陳述式控制代碼。 藉由呼叫的應用程式會配置任何描述項**SQLAllocHandle**是應用程式描述項。
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7cefe667b6a4e6cc373173cdb931c0cc181fe3a5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f0e802f24066a85b0acde624ed1baa202d2be266
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="implementation-notes"></a>實作注意事項
 > [!IMPORTANT]  
@@ -37,5 +35,4 @@ ms.lasthandoff: 09/09/2017
   
 -   [處理 SQL 陳述式](../../../odbc/reference/appendixes/processing-sql-statements.md)  
   
--   [ODBC 函數和資料指標程式庫](../../../odbc/reference/appendixes/odbc-functions-and-the-cursor-library.md)
-
+-   [ODBC 函式和資料指標程式庫](../../../odbc/reference/appendixes/odbc-functions-and-the-cursor-library.md)

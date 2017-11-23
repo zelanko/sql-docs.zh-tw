@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - result sets [ODBC], block cursors
 - rowset status [ODBC]
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f4451ccb74ca19a02c352c2e7361d0ec8e84c87d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="row-status-array"></a>資料列狀態陣列
 除了資料之外， **SQLFetch**和**SQLFetchScroll**可以傳回資料列集中提供的每個資料列狀態的陣列。 此陣列是透過將 sql_attr_row_status_ptr 設定陳述式屬性指定。 此陣列由應用程式所配置，而且必須具有 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性所指定的元素。 陣列中的值由設定**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，和**SQLSetPos。** 這些值描述的資料列，以及上一次提取之後，該狀態是否已經變更的狀態。  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_DELETED|資料列已經刪除，因為上一次提取。|  
 |SQL_ROW_ADDED|資料列插入**SQLBulkOperations**。 如果再次擷取或重新整理的資料列**SQLSetPos**，其狀態是 SQL_ROW_SUCCESS。<br /><br /> 此值不由設定**SQLFetch**或**SQLFetchScroll**。|  
 |SQL_ROW_NOROW|重疊的資料列集結果集的結尾，並傳回沒有資料列，對應到資料列狀態陣列的這個項目。|
-

@@ -5,25 +5,23 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 - SQL
 ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bf9c1aec8ef4f065ac56e4439cbfbf0c2248727a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 73d957b05c9bc964a3da1c7e177d9413e0c73aa9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>建立預測模型 (SQL 快速入門中的 R)
 
@@ -159,7 +157,6 @@ VALUES (' latest model', @model)
 
 既然您已有模型，您將了解如何從該模型產生預測並繪製結果。
 
-[預測及繪圖從模型](../tutorials/rtsql-predict-and-plot-from-model.md)
-
+[從模型預測並繪製](../tutorials/rtsql-predict-and-plot-from-model.md)
 
 

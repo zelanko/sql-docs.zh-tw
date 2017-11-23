@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84b8e31821e1571da8272806c5fcd7f5563a4182
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>提取資料列與 SQLBulkOperations
 資料可以使用書籤的資料列集到 refetched 呼叫**SQLBulkOperations。** 要讀取的資料列會識別繫結的書籤資料行中的書籤。 不會擷取具有 SQL_COLUMN_IGNORE 值的資料行。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 4.  呼叫**SQLBulkOperations**與*作業*引數設定為 SQL_FETCH_BY_BOOKMARK。  
   
  沒有要使用的資料列作業陣列，以避免作業的應用程式需要在特定資料行上執行。 應用程式選取要繫結的書籤陣列中複製這些資料列的書籤提取資料的列。
-

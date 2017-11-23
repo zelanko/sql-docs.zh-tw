@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ODBC function calls
 - keywords [SQL Server], reserved
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 000b5c3177db29b173ee836df9c194c2af322d39
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: efaa21099f422ae812168561351a359fc89f8e0d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="reserved-keywords-transact-sql"></a>保留的關鍵字 Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="reserved-keywords-transact-sql"></a>保留關鍵字 (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用保留的關鍵字來定義、操作和存取資料庫。 保留的關鍵字是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用來剖析及了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式和批次之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言文法的一部分。 雖然在語意上可以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留關鍵字做為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中的識別碼及物件名稱，但您必須分隔這些識別碼。  
   
@@ -120,38 +117,38 @@ ms.lasthandoff: 09/01/2017
 |-|-|-|  
 |**絕對**|**EXEC**|**重疊**|  
 |**動作**|**EXECUTE**|**填補**|  
-|**與 ADA**|**存在**|**部分**|  
+|**與 ADA**|**EXISTS**|**部分**|  
 |**新增**|**EXTERNAL**|**依照 PASCAL 命名法**|  
 |**ALL**|**擷取**|**位置**|  
 |**配置**|**FALSE**|**有效位數**|  
-|**ALTER**|**擷取**|**準備**|  
+|**ALTER**|**FETCH**|**準備**|  
 |**AND**|**第一個**|**保留**|  
-|**任何**|**浮點數**|**PRIMARY**|  
+|**ANY**|**浮點數**|**PRIMARY**|  
 |**是**|**針對**|**之前**|  
 |**AS**|**外部索引**|**權限**|  
-|**ASC**|**FORTRAN**|**程序**|  
+|**ASC**|**FORTRAN**|**PROCEDURE**|  
 |**判斷提示**|**找到**|**公用**|  
 |**在**|**FROM**|**讀取**|  
-|**授權**|**FULL**|**實數**|  
+|**AUTHORIZATION**|**FULL**|**實數**|  
 |**AVG**|**取得**|**參考**|  
 |**BEGIN**|**全域**|**相對**|  
-|**BETWEEN**|**移至**|**限制**|  
-|**位元**|**移至**|**REVOKE**|  
+|**BETWEEN**|**GO**|**限制**|  
+|**位元**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
 |**兩者**|**群組**|**復原**|  
 |**由**|**具有**|**資料列**|  
-|**重疊顯示**|**小時**|**結構描述**|  
+|**重疊顯示**|**小時**|**SCHEMA**|  
 |**重疊顯示**|**身分識別**|**捲軸**|  
-|**案例**|**即時運算**|**第二個**|  
+|**CASE**|**即時運算**|**第二個**|  
 |**轉型**|**IN**|**區段**|  
 |**類別目錄**|**包含**|**SELECT**|  
-|**CHAR**|**索引**|**工作階段**|  
+|**CHAR**|**INDEX**|**工作階段**|  
 |**CHAR_LENGTH**|**指標**|**SESSION_USER**|  
 |**字元**|**一開始**|**設定**|  
 |**CHARACTER_LENGTH**|**內部**|**大小**|  
 |**核取**|**輸入**|**SMALLINT**|  
-|**關閉**|**不區分大小寫**|**某些**|  
-|**聯合**|**INSERT**|**空間**|  
+|**CLOSE**|**不區分大小寫**|**某些**|  
+|**COALESCE**|**INSERT**|**SPACE**|  
 |**自動分頁**|**INT**|**SQL**|  
 |**定序**|**整數**|**SQLCA**|  
 |**資料行**|**INTERSECT**|**SQLCODE**|  
@@ -159,42 +156,42 @@ ms.lasthandoff: 09/01/2017
 |**連接**|**到**|**SQLSTATE**|  
 |**連線**|**IS**|**SQLWARNING**|  
 |**條件約束**|**隔離**|**SUBSTRING**|  
-|**條件約束**|**聯結**|**總和**|  
-|**繼續**|**索引鍵**|**SYSTEM_USER**|  
-|**轉換**|**LANGUAGE**|**資料表**|  
+|**條件約束**|**聯結**|**SUM**|  
+|**CONTINUE**|**索引鍵**|**SYSTEM_USER**|  
+|**轉換**|**LANGUAGE**|**TABLE**|  
 |**對應**|**最後一個**|**暫存**|  
-|**計數**|**開頭**|**然後**|  
+|**COUNT**|**開頭**|**然後**|  
 |**建立**|**LEFT**|**時間**|  
 |**跨**|**層級**|**時間戳記**|  
 |**目前的**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**本機**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**較低**|**若要**|  
+|**CURRENT_TIME**|**LOWER**|**若要**|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**後端**|  
-|**CURRENT_USER**|**最大值**|**交易**|  
-|**資料指標**|**最小值**|**翻譯**|  
+|**CURRENT_USER**|**MAX**|**交易**|  
+|**資料指標**|**MIN**|**TRANSLATE**|  
 |**日期**|**分鐘**|**轉譯**|  
-|**一天**|**模組**|**空白位置修剪**|  
-|**解除配置**|**月份**|**為 TRUE**|  
+|**DAY**|**模組**|**TRIM**|  
+|**DEALLOCATE**|**MONTH**|**為 TRUE**|  
 |**DEC**|**名稱**|**等位**|  
 |**小數點**|**國家 （地區)**|**唯一**|  
 |**宣告**|**自然**|**未知**|  
-|**預設值**|**NCHAR**|**UPDATE**|  
-|**可以延後**|**下一步**|**上限**|  
+|**DEFAULT**|**NCHAR**|**UPDATE**|  
+|**可以延後**|**下一步**|**UPPER**|  
 |**延遲**|**否**|**使用方式**|  
-|**DELETE**|**NONE**|**使用者**|  
+|**DELETE**|**NONE**|**USER**|  
 |**DESC**|**NOT**|**使用**|  
 |**描述**|**NULL**|**VALUE**|  
 |**描述元**|**NULLIF**|**值**|  
 |**診斷**|**數值**|**VARCHAR**|  
 |**中斷連線**|**OCTET_LENGTH**|**不同的**|  
-|**相異**|**的**|**檢視**|  
+|**相異**|**的**|**VIEW**|  
 |**網域**|**ON**|**當**|  
 |**DOUBLE**|**只有**|**每當**|  
-|**卸除**|**開啟**|**WHERE**|  
+|**卸除**|**OPEN**|**WHERE**|  
 |**其他**|**選項**|**與**|  
 |**END**|**OR**|**工作**|  
 |**結束 EXEC**|**順序**|**寫入**|  
-|**逸出**|**外部**|**年份**|  
+|**逸出**|**外部**|**YEAR**|  
 |**除了**|**輸出**|**區域**|  
 |**例外狀況**|||  
   
@@ -295,9 +292,8 @@ ms.lasthandoff: 09/01/2017
 |GROUPING|REGR_SXY|YEAR|  
 |HOLD|REGR_SYY|ZONE|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SET QUOTED_IDENTIFIER &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   
-

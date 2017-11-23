@@ -1,8 +1,7 @@
 ---
 title: "RDS 物件 |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ helpviewer_keywords:
 - objects [ADO], RDS
 - RDS objects [ADO]
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 217fb3282f843c2bba6963a48b6a50212e7da7dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7d4353fa5c82bc979d87393680d75033feef43c8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rds-objects"></a>RDS 物件
 > [!IMPORTANT]
@@ -36,8 +34,7 @@ ms.lasthandoff: 09/09/2017
 |[資料空間 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|建立自訂商務物件位於中介層上的用戶端 proxy。<br /><br /> **DataSpace**物件而言是安全的指令碼。|  
 |[IRDSService 介面 (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|公開[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)方法，用來傳回所要求介面的指標上更適用的版本的物件。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [RDS API 參考](../../../ado/reference/rds-api/rds-api-reference.md)
-
 
 

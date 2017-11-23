@@ -1,8 +1,7 @@
 ---
 title: "RDS 屬性 |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9f0544b13f222307bb2914a1d54970c2398d2029
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2909975ad790702f24ee6536a1ddca2ac13447cf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rds-properties"></a>RDS 屬性
 > [!IMPORTANT]
@@ -46,7 +44,6 @@ ms.lasthandoff: 09/09/2017
 |[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|表示排序順序為遞增或遞減。|  
 |[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|表示用來擷取查詢字串**資料錄集**。|  
 |[URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|表示字串，包含相對或絕對的 URL。|
-
 
 
 

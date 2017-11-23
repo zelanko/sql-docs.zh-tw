@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetInstalledDrivers
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetInstalledDrivers
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetInstalledDrivers
-helpviewer_keywords:
-- SQLGetInstalledDrivers function [ODBC]
+f1_keywords: SQLGetInstalledDrivers
+helpviewer_keywords: SQLGetInstalledDrivers function [ODBC]
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c198136c6ded3f0e9e7184a34bf3814d7e061810
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d2cd00f7306c7c9b6d60ff71d051b4709d7b3889
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers 函式
 **一致性**  
@@ -82,4 +76,3 @@ BOOL SQLGetInstalledDrivers(
 |如需詳細資訊|請參閱|  
 |---------------------------|---------|  
 |傳回的驅動程式描述和屬性|[SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|
-

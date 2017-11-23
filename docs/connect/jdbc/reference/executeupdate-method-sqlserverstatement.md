@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerStatement.executeUpdate
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerStatement.executeUpdate
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 10ae662a-ce3c-4b24-875c-5c2df319d93b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8c0c1f5238ece3adb72f108061742034b3df159f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 09479ee3af274d06564427c4ca60f3cc15f36644
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="executeupdate-method-sqlserverstatement"></a>executeUpdate 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,9 +40,8 @@ ms.lasthandoff: 09/09/2017
 |[executeUpdate (java.lang.String，int &#91; &#93;)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string.md)|執行給定的 SQL 陳述式，並向 JDBC Driver 發出信號，通知必須提供在給定陣列中所指出的自動產生索引鍵以進行擷取。|  
 |[executeUpdate (java.lang.String，java.lang.String &#91; &#93;)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-java-lang-string.md)|執行給定的 SQL 陳述式，並向 JDBC Driver 發出信號，通知必須提供在給定陣列中所指出的自動產生索引鍵以進行擷取。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   
-

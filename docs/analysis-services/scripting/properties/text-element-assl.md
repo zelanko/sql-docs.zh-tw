@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Text Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Text Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- text
-helpviewer_keywords:
-- Text element
+applies_to: SQL Server 2016 Preview
+f1_keywords: text
+helpviewer_keywords: Text element
 ms.assetid: 0edece73-236f-4661-8102-3fcc29326bf4
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a3a33c603168a8a6858e2381220dbc1f5b4c4de9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f4244c3aa0adee03261064c40565ecd817803839
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="text-element-assl"></a>Text 元素 (ASSL)
   包含文字的[命令](../../../analysis-services/scripting/objects/command-element-assl.md)項目。  
@@ -67,9 +61,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**文字**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Command>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Commands 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/commands-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

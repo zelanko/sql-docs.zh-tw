@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - field data types [ODBC]
 - Visual FoxPro ODBC driver [ODBC], data types
 ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2b4dbb88985b114e0e2f89c4a3f57d8dae4c9210
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7c1ae849d91962cb7d11ca8bac755665217fe1a2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="visual-foxpro-field-data-types"></a>Visual FoxPro 欄位資料類型
 下表列出的值*FieldType* ALTER TABLE 和 CREATE TABLE 中的引數，並指出是否*nFieldWidth*和*nPrecision*引數必要項。  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 |N|N|d|數值欄位的寬度 *n* 與*d*小數位數|  
 |T|-|-|DateTime|  
 |Y|-|-|貨幣|
-

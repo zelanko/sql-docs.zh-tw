@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], static
 - static cursors [ODBC]
 ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b8073bd935f010a91c9dde8863e1731ab3032a7e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aaddef08bfea9e1a1820727743e5212557d823d4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-static-cursors"></a>ODBC 靜態游標
 靜態資料指標是其中一個結果集似乎是靜態。 它通常無法偵測到的成員資格、 順序或值之結果集資料指標開啟後所做的變更。 例如，假設在靜態資料指標提取的資料列，而另一個應用程式，然後再更新該資料列。 如果靜態資料指標 refetches 資料列，它會看到的值是不變，即使其他應用程式所做的變更。  
@@ -36,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  將 sql_attr_row_status_ptr 設定陳述式屬性所指定之資料列狀態陣列可以包含 SQL_ROW_SUCCESS、 SQL_ROW_SUCCESS_WITH_INFO 或 SQL_ROW_ERROR 的任何資料列。 它會傳回 SQL_ROW_UPDATED、 SQL_ROW_DELETED 或 SQL_ROW_ADDED 更新、 刪除或插入游標處，假設資料指標可以偵測到這類變更的資料列。  
   
  通常實作以鎖定的結果集的資料列，或藉由複製，或快照集，結果集的靜態資料指標。 雖然鎖定資料列是相當容易，但是它有大幅降低並行的缺點。 建立複本允許更大的並行存取可讓資料指標來追蹤它自己的更新、 刪除和插入所修改該複本。 不過，複本是成本更高時進行，並依照該資料會變更其他人可以分離的基礎資料中。
-

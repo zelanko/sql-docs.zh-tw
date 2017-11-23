@@ -75,7 +75,7 @@ sudo systemctl restart mssql-server
 
 當您針對可用性群組進行疑難排解時，您可以選擇性地啟用 AlwaysOn 可用性群組擴充事件來協助診斷根本原因。 在每個 SQL Server 執行個體上執行下列命令。 
 
-```Transact-SQL
+```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
@@ -86,7 +86,7 @@ GO
 
 下列 Transact-SQL 指令碼會建立名為 `dbm_login` 的登入，以及名為 `dbm_user` 的使用者。 請以強式密碼更新指令碼。 在所有 SQL Server 執行個體上執行下列命令，以建立資料庫鏡像端點使用者。
 
-```Transact-SQL
+```SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
 CREATE USER dbm_user FOR LOGIN dbm_login;
 ```
@@ -97,7 +97,7 @@ Linux 上的 SQL Server 服務使用憑證來驗證鏡像端點之間的通訊�
 
 下列 Transact-SQL 指令碼會建立主要金鑰和憑證。 然後它會備份憑證，並使用私密金鑰保護檔案。 請以強式密碼更新指令碼。 連線到主要 SQL Server 執行個體，然後執行下列 Transact-SQL 來建立憑證：
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
@@ -128,7 +128,7 @@ chown mssql:mssql dbm_certificate.*
 
 下列 Transact-SQL 指令碼會從您在 SQL Server 主要複本上建立的備份來建立主要金鑰和憑證。 此命令也會授權使用者存取憑證。 請以強式密碼更新指令碼。 解密密碼與您在上一個步驟中用來建立 .pvk 檔案的密碼相同。 請在所有次要伺服器上執行下列指令碼來建立憑證。
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
@@ -141,16 +141,13 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>在所有複本上建立資料庫鏡像端點
 
-資料庫鏡像端點使用「傳輸控制通訊協定」(TCP)，在參與資料庫鏡像工作階段或裝載可用性複本的伺服器執行個體之間傳送和接收訊息。 資料庫鏡像端點會在唯一的 TCP 通訊埠編號上接聽。 
+資料庫鏡像端點使用「傳輸控制通訊協定」(TCP)，在參與資料庫鏡像工作階段或裝載可用性複本的伺服器執行個體之間傳送和接收訊息。 資料庫鏡像端點會在唯一的 TCP 通訊埠編號上接聽。 TCP 接聽程式需要一個接聽程式 IP 位址。 接聽程式 IP 位址必須是 IPv4 位址。 您也可以使用`0.0.0.0`。 
 
 下列 Transact-SQL 會為可用性群組建立名為 `Hadr_endpoint` 的接聽端點。 它會啟動端點，並授與您建立的使用者連線權限。 執行指令碼之前，請取代 `**< ... >**` 之間的值。
 
->[!NOTE]
->在此版本中，請勿對接聽程式 IP 使用不同的 IP 位址。 我們正在解決這個問題，但目前唯一可接受的值是 '0.0.0.0'。
+更新下列 TRANSACT-SQL 為您所有的 SQL Server 執行個體上的環境： 
 
-請在所有 SQL Server 執行個體上更新您環境的下列 Transact-SQL： 
-
-```Transact-SQL
+```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
@@ -162,10 +159,25 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
->[!IMPORTANT]
->防火牆上的 TCP 連接埠必須開啟以作為接聽程式連接埠。
+>[!NOTE]
+>如果您使用 SQL Server Express Edition 其中一個節點上裝載組態的唯一複本，角色的唯一有效的值是`WITNESS`。 SQL Server Express Edition 上執行下列指令碼。
+>```SQL
+CREATE ENDPOINT [Hadr_endpoint]
+    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    FOR DATA_MIRRORING (
+        ROLE = WITNESS,
+        AUTHENTICATION = CERTIFICATE dbm_certificate,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+        );
+ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
+GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
+```
+
+The TCP port on the firewall needs to be open for the listener port.
+
+
 
 >[!IMPORTANT]
->在 SQL Server 2017 版中，資料庫鏡像端點唯一支援的驗證方法是 `CERTIFICATE`。 未來的版本將啟用 `WINDOWS` 選項。
+>For SQL Server 2017 release, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` option will be enabled in a future release.
 
-如需完整資訊，請參閱[資料庫鏡像端點 (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)。
+For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
