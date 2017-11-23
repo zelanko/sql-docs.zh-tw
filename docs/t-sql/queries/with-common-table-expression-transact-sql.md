@@ -3,10 +3,12 @@ title: "與 common_table_expression (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - WITH_TSQL
 - WITH
 - common table expression
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - WITH common_table_expression clause
 - CTEs
@@ -26,20 +27,19 @@ helpviewer_keywords:
 - MAXRECURSION hint
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: a45cb91754fdff2aaafb90d33b7d89a70702dfb2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a065ef1f5c21d0fb5a458d55108acd8a9fd0678e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定稱為通用資料表運算式 (CTE) 的暫存具名結果集。 這是從簡單查詢衍生而來，定義在單一 SELECT、INSERT、UPDATE 或 DELETE 陳述式的執行範圍內。 您也可以在 CREATE VIEW 陳述式中使用這個子句，作為用來定義 SELECT 陳述式的一部分。 通用資料表運算式可以包括指向本身的參考。 這稱為遞迴通用資料表運算式。  
   
@@ -601,48 +601,7 @@ Lvl  N
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-creating-a-simple-common-table-expression"></a>L. 建立簡單的通用資料表運算式  
- 下列範例顯示在 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 中每個業務人員每年的銷售訂單總數。  
-  
-```  
--- Uses AdventureWorks  
-  
--- Define the CTE expression name and column list.  
-WITH Sales_CTE (SalesPersonID, SalesOrderID, SalesYear)  
-AS  
--- Define the CTE query.  
-(  
-    SELECT SalesPersonID, SalesOrderID, YEAR(OrderDate) AS SalesYear  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-)  
--- Define the outer query referencing the CTE name.  
-SELECT SalesPersonID, COUNT(SalesOrderID) AS TotalSales, SalesYear  
-FROM Sales_CTE  
-GROUP BY SalesYear, SalesPersonID  
-ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
-```  
-  
-### <a name="m-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>M. 利用通用資料表運算式來限制計數和報告平均值  
- 下列範例顯示業務人員所有年度的平均銷售訂單數目。  
-  
-```  
-WITH Sales_CTE (SalesPersonID, NumberOfOrders)  
-AS  
-(  
-    SELECT SalesPersonID, COUNT(*)  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-    GROUP BY SalesPersonID  
-)  
-SELECT AVG(NumberOfOrders) AS "Average Sales Per Person"  
-FROM Sales_CTE;  
-GO  
-```  
-  
-### <a name="n-using-a-common-table-expression-within-a-ctas-statement"></a>N. 利用通用資料表運算式內的 CTAS 陳述式  
+### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. 利用通用資料表運算式內的 CTAS 陳述式  
  下列範例會建立新的資料表包含每個銷售代表在每年的銷售訂單總數[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]。  
   
 ```  
@@ -671,7 +630,7 @@ AS
 GO  
 ```  
   
-### <a name="o-using-a-common-table-expression-within-a-cetas-statement"></a>O. 利用通用資料表運算式內 CETAS 陳述式  
+### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. 利用通用資料表運算式內 CETAS 陳述式  
  下列範例會建立新的外部資料表包含每個銷售代表在每年的銷售訂單總數[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]。  
   
 ```  
@@ -701,7 +660,7 @@ AS
 GO  
 ```  
   
-### <a name="p-using-multiple-comma-separated-ctes-in-a-statement"></a>P. 使用多個以逗號分隔 Cte 的陳述式中  
+### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. 使用多個以逗號分隔 Cte 的陳述式中  
  下列範例會示範在單一陳述式中包含兩個 Cte。 Cte 不可以是巢狀 （沒有遞迴）。  
   
 ```  
@@ -719,7 +678,7 @@ UNION ALL
 SELECT TableName, TotalAvg FROM CountCustomer;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [除了及 INTERSECT &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
@@ -728,4 +687,3 @@ SELECT TableName, TotalAvg FROM CountCustomer;
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   
-
