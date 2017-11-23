@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Users collection [ADOX], members
+helpviewer_keywords: Users collection [ADOX], members
 ms.assetid: 1b89a12f-96bc-48b3-a88d-4da74780ea40
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e01a7e07d2d9b07f01914b6d46417f7503a968fa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bb31def2f0cbf4d7d9bf2c2a899937994fb62c2d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="users-collection-properties-methods-and-events"></a>使用者集合的屬性、 方法和事件
 ## <a name="properties"></a>屬性  
@@ -43,6 +40,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>事件  
  無。  
   
-## <a name="see-also"></a>另請參閱  
- [使用者集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Users 集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

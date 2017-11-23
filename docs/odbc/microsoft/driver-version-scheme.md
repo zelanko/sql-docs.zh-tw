@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC driver for Oracle [ODBC], versions
+helpviewer_keywords: ODBC driver for Oracle [ODBC], versions
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 35ee21329cabca4e160112887f8c746ad8f44b82
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e3a8132d535b764818fb9dcab72b3cba8bb48154
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-version-scheme"></a>驅動程式版本配置
 > [!IMPORTANT]  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  與發行版本 2.573.2973，導致一些混淆 2.573 是 2.73，比先前的版本，但每個區段的組建編號應該視為個別的命名慣例。 數字 573 大於 73，所以較新版本。 此外，「 2.5"表示驅動程式的版本號碼。
-

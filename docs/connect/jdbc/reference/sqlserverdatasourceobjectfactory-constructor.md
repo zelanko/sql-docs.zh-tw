@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDataSourceObjectFactory
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDataSourceObjectFactory
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7c2bd899-0d79-47ed-bb8d-60941594ee0d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8c03269a6d7132e58830ce7b7919d9e659c91f62
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 771ac238b202abbc242cd3ea34e7a2f2b487b39e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlserverdatasourceobjectfactory-constructor-"></a>SQLServerDataSourceObjectFactory 建構函式 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,10 +38,9 @@ ms.lasthandoff: 09/09/2017
 public SQLServerDataSourceObjectFactory()  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerDataSourceObjectFactory 建構函式](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructors.md)   
  [SQLServerDataSourceObjectFactory 成員](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   
  [SQLServerDataSourceObjectFactory 類別](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: tabular-models
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -17,12 +16,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1b4d0672b30747729d324386e1f761a377e15ad2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
-ms.openlocfilehash: 8888951d9fca0013015105998200b3ee9364855d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/11/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-data-by-using-a-native-query"></a>使用原生查詢匯入資料
 
@@ -39,7 +37,7 @@ ms.lasthandoff: 10/11/2017
 ## <a name="create-a-datasource-connection"></a>建立資料來源的連接
 如果您還沒有連接到您的資料來源，您需要建立一個。
 
-1. 在 Visual Studio 中 >**表格式模型總管**，以滑鼠右鍵按一下**資料來源**，然後按一下**新的資料來源**。
+1. 在 Visual Studio 中 >**表格式模型總管**，以滑鼠右鍵按一下**資料來源**，然後按一下 **新的資料來源**。
 2. 在**取得資料**，選取您的資料來源類型，然後按一下**連接**。 請依照下列任何額外的步驟，才能連接至您的資料來源。
 
 
@@ -72,4 +70,3 @@ ms.lasthandoff: 10/11/2017
  [模擬](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
 
   
-

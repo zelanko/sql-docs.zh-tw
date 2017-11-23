@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Excel Driver
 - Excel driver [ODBC], SQLGetTypeInfo
 ms.assetid: 708845be-e6a1-4677-8113-c52819a43fa4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: db1eff513778d3c6df834bf42c4cf6c288380510
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cbcc75d7a527104ced19727797e282b63af2a6ae
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgettypeinfo-excel-driver"></a>SQLGetTypeInfo （Excel 驅動程式）
 > [!NOTE]  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  SQL_ALL_EXCEPT_LIKE 將會傳回可搜尋的資料行中的位元組、 計數器、 Double、 單一、 長時間和 Short 資料類型。 （LIKE 功能可藉由將值轉換成字元，使用 ODBC 標準轉換函式，然後執行比較。）  
   
  使用 Microsoft Excel 驅動程式時，所傳回的 TYPE_NAME 資料行中傳回 ODBC 型別名稱**SQLGetTypeInfo**。
-

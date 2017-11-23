@@ -4,17 +4,22 @@ description: "本快速入門教學課程會示範如何使用 Docker 執行 SQL
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/12/2017
+ms.date: 10/31/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
+ms.workload: Active
+ms.openlocfilehash: acd47bd1e2104027610f7ee38c9b135a785429e5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 99d9395898c4a3ff55bb34278749ec0ea2fae77b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>執行 SQL Server 2017 容器映像使用 Docker
 
@@ -25,7 +30,7 @@ ms.lasthandoff: 10/14/2017
 此映像包含根據 Ubuntu 16.04 Linux 上執行的 SQL Server。 它可以用 Docker 引擎 1.8 + Docker 或 Linux 上的 Mac/windows。
 
 > [!NOTE]
-> 本快速入門特別著重在使用 mssql-伺服器-linux 映像。 未涵蓋的 Windows 映像，但您可以深入了解上[mssql 伺服器 windows Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows/)。
+> 本快速入門特別著重於使用 mssql-server-**linux**映像。 未涵蓋的 Windows 映像，但您可以深入了解上[mssql server-windows developer Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)。
 
 ## <a id="requirements"></a> 必要條件
 
@@ -61,23 +66,27 @@ ms.lasthandoff: 10/14/2017
 1. 從 Docker Hub 提取 SQL Server 2017 Linux 容器映像。
 
    ```bash
-   docker pull microsoft/mssql-server-linux:2017-latest
-   ```
-
-   > [!TIP]
-   > 適用於 Linux，根據您的系統和使用者設定，您可能需要的前面上每個`docker`命令搭配`sudo`。
-
-   > [!NOTE]
-   > 上述命令中提取最新的 SQL Server 2017 容器映像。 如果您想要提取的特定映像，您加上冒號和標記名稱 (例如， `microsoft/mssql-server-linux:2017-GA`)。 若要查看所有可用的映像，請參閱[mssql-伺服器-linux Docker 中樞頁面](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
-
-1. 若要執行 Docker 容器映像，您可以使用下列命令從 bash 殼層 (Linux/macOS) 或提高權限的 PowerShell 命令提示字元。 唯一的差異在於單引號與雙引號引號。
-
-   ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
+   sudo docker pull microsoft/mssql-server-linux:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
+   docker pull microsoft/mssql-server-linux:2017-latest
+   ```
+
+   前一個命令中提取最新的 SQL Server 2017 容器映像。 如果您想要提取的特定映像，您加上冒號和標記名稱 (例如， `microsoft/mssql-server-linux:2017-GA`)。 若要查看所有可用的映像，請參閱[mssql-伺服器-linux Docker 中樞頁面](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
+
+1. 若要執行 Docker 容器映像，您可以使用下列命令從 bash 殼層 (Linux/macOS) 或提高權限的 PowerShell 命令提示字元。
+
+   ```bash
+   sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+      -p 1401:1433 --name sql1 \
+      -d microsoft/mssql-server-linux:2017-latest
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+      -p 1401:1433 --name sql1 `
+      -d microsoft/mssql-server-linux:2017-latest
    ```
 
    > [!NOTE]
@@ -96,6 +105,10 @@ ms.lasthandoff: 10/14/2017
 1. 若要檢視您的 Docker 容器，請使用`docker ps`命令。
 
    ```bash
+   sudo docker ps -a
+   ```
+
+   ```PowerShell
    docker ps -a
    ```
 
@@ -127,6 +140,10 @@ SELECT @@SERVERNAME,
 1. 使用`docker exec -it`命令來啟動的互動式 bash 殼層內執行的容器。 在下列範例中`sql1`名稱所指定`--name`參數建立容器時。
 
    ```bash
+   sudo docker exec -it sql1 "bash"
+   ```
+
+   ```PowerShell
    docker exec -it sql1 "bash"
    ```
 
@@ -246,9 +263,25 @@ SELECT @@SERVERNAME,
 - [Visual Studio 程式碼](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) Windows 上](sql-server-linux-develop-use-ssms.md)
 
+## <a name="remove-your-container"></a>移除您的容器
+
+如果您想要移除此教學課程中使用的 SQL Server 容器，請執行下列命令：
+
+```bash
+sudo docker stop sql1
+sudo docker rm sql1
+```
+
+```PowerShell
+docker stop sql1
+docker rm sql1
+```
+
+> [!WARNING]
+> 停止並移除容器，永久刪除容器中的任何 SQL Server 資料。 如果您要保留您的資料，[建立，並將容器之外的備份檔案複製](tutorial-restore-backup-in-sql-server-container.md)或使用[容器資料持續性技術](sql-server-linux-configure-docker.md#persist)。
+
 ## <a name="next-steps"></a>後續的步驟
 
-若要瀏覽其他案例中的，執行多個容器，例如資料持續性和疑難排解，請參閱[設定 SQL Server 2017 容器映像 docker](sql-server-linux-configure-docker.md)。
+如需如何將資料庫備份檔案還原到容器的教學課程，請參閱[Linux Docker 容器中的 SQL Server 資料庫還原](tutorial-restore-backup-in-sql-server-container.md)。 若要瀏覽其他案例中的，執行多個容器，例如資料持續性和疑難排解，請參閱[設定 SQL Server 2017 容器映像 docker](sql-server-linux-configure-docker.md)。
 
 此外，請參閱[mssql docker GitHub 儲存機制](https://github.com/Microsoft/mssql-docker)資源、 意見反應，和已知的問題。
-

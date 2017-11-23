@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ef9aaa80dba9212e9fb22af7a1701bb6b3f17eb5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 170b1c7aceb4a642343f00faa6dc6ffbb3f6cbbb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>將資料行加入至資料表 (SSAS 表格式)
   本主題描述如何將資料行加入現有資料表。  
@@ -76,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [變更資料表、資料行或資料列篩選對應 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   
-

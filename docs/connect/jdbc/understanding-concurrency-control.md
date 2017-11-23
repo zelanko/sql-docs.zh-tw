@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d56f2e4266bdae1a51325bc540fe38af5908721
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52c954cb3acc87753f9ede5a0fc786bd9ed9b755
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-concurrency-control"></a>瞭解並行控制
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -53,8 +51,7 @@ ms.lasthandoff: 09/09/2017
 |使用 TYPE_SCROLL_INSENSITIVE 建立陳述式|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]建立靜態快照集資料指標。 這會與基礎資料表資料列中斷連接，以防資料指標遭到其他使用者更新資料列。|搭配 CONCUR_UPDATABLE 使用 TYPE_SCROLL_SENSITIVE、TYPE_SS_SCROLL_KEYSET、TYPE_SS_SCROLL_DYNAMIC 或 TYPE_FORWARD_ONLY 以防建立靜態資料指標。|  
 |資料表設計會避開 KEYSET 或 DYNAMIC 資料指標|基礎資料表沒有唯一索引鍵，讓[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]來唯一識別資料列。|將唯一的索引鍵加入到資料表中即可提供每個資料列的唯一識別。|  
   
-## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式管理結果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [使用 JDBC Driver 管理結果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   
-

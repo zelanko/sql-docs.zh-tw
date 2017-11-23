@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 25a9ec485980223d9464bc3283c77c101e225bcd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c225ab76f4c67938590bd19f21bfafafa20742d8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-minimum-grammar"></a>SQL 最小文法
 本節描述 ODBC 驅動程式必須支援的最小 SQL 語法。 這一節所述的語法是以 sql-92 的項目層級語法的子集。  
@@ -91,11 +89,10 @@ ms.lasthandoff: 09/09/2017
   
  此章節包含下列主題。  
   
--   [使用 SQL 陳述式中的項目](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)  
+-   [SQL 陳述式中使用的項目](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)  
   
 -   [資料類型支援](../../../odbc/reference/appendixes/data-type-support.md)  
   
 -   [參數資料類型](../../../odbc/reference/appendixes/parameter-data-types.md)  
   
 -   [參數標記](../../../odbc/reference/appendixes/parameter-markers.md)
-

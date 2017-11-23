@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: 
 ms.workload: On Demand
+ms.openlocfilehash: 41d3647796306cb1a9b89f5af47c75416de79c01
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 06dc93bec060f2ceb435fcf17817df9e7a8daee9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>匯出和匯入與 SSMS 或在 Windows 上的 SqlPackage.exe Linux 上的資料庫
 
@@ -88,4 +87,3 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 
 ## <a name="see-also"></a>另請參閱
 如需有關如何使用 SSMS 的詳細資訊，請參閱[使用 SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx)。 如需有關 SqlPackage.exe 的詳細資訊，請參閱[SqlPackage 參考文件](https://msdn.microsoft.com/library/hh550080.aspx)。
-

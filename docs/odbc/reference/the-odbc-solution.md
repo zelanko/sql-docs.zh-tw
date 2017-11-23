@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC], using ODBC
 ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 806bc94a3807dbdd658cf710c0d22e2b6116d27b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7288fcb9fad7b2567f7fec16cf0f407b2f6b2e4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-odbc-solution"></a>ODBC 方案
 這個問題，然後是 ODBC 方式標準化資料庫存取權？ 有兩個架構的需求：  
@@ -64,4 +62,3 @@ ms.lasthandoff: 09/09/2017
      ODBC 應用程式就可以判斷哪些功能的驅動程式和 DBMS 支援，以便提供兩個函式 (**SQLGetInfo**和**SQLGetFunctions**) 會在傳回的驅動程式和 DBMS 的一般資訊功能和函數的清單的驅動程式支援。 ODBC 也定義應用程式開發介面和 SQL 文法一致性層級，其指定的驅動程式支援的功能有廣泛的範圍。 如需詳細資訊，請參閱[一致性層級](../../odbc/reference/develop-app/conformance-levels.md)。  
   
      請務必記得 ODBC 定義的所有功能，它會公開的通用介面。 因為這個緣故，應用程式包含特定功能的程式碼，不 DBMS 專屬的程式碼，並可以使用任何這些公開功能的驅動程式。 這其中一個優點是應用程式不需要更新時增強 DBMS 所支援的功能;相反地，安裝更新的驅動程式時，應用程式會自動使用功能因為其程式碼特定功能、 不特定驅動程式或 DBMS 專屬。
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - offsets of parameters [ODBC]
 - binding offsets of parameters [ODBC]
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a604c64f16e63e326b9973129b502450869b797
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5b3fea1397710c5a65a03b3f829972f04cc63f5a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parameter-binding-offsets"></a>參數繫結位移
 應用程式可以指定位移，加入繫結參數緩衝區位址和對應的長度/指標緩衝區位址時**SQLExecDirect**或**SQLExecute**呼叫。 這些加入作業的結果判斷這些作業中使用的位址。  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  ODBC 2 不支援繫結的位移。*x*驅動程式。
-

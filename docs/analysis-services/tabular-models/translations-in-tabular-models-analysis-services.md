@@ -8,22 +8,20 @@ ms.service:
 ms.component: tabular-models
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 28ff4ea7472597ae86b426ec0a15de399f56d14f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>表格式模型 (Analysis Services) 中的翻譯
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]新增翻譯字串支援表格式模型。 模型中的單一物件可具有多個名稱或描述翻譯，因此可在模型定義中支援多語言版本。  
@@ -123,4 +121,3 @@ ms.lasthandoff: 09/01/2017
  [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   
-

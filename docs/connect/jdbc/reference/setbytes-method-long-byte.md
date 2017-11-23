@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerBlob.setBytes (long.byte[])
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerBlob.setBytes (long.byte[])
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: ffb8f107-0f9d-4410-957f-62b718e1e872
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e554122e5435a42f3c35c9a94904c6a329b23e82
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 75886137dd2d8ac768dff35d3cf6bb9a7100efeb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setbytes-method-long-byte"></a>setBytes 方法 （long，位元組）
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -63,11 +59,10 @@ public int setBytes(long pos,
   
  資料會從指定的位置開始覆寫，而且可以超過 BLOB 的初始長度。 指定位置 + 1 的值將會附加位元組。 傳遞位置 + 2 或更大 (或是零或零以下) 的值將會擲回位置錯誤。 傳遞長度為零**位元組**陣列會傳回零，因為未不寫入任何位元組。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [setBytes 方法 &#40;SQLServerBlob &#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [SQLServerBlob 方法](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob 成員](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob 類別](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   
-

@@ -15,14 +15,12 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 36c5b7ccd0cc8c3a56dca700469fb4fd05fa2871
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 229c6a989a4707921eae3046e3c9707b05bb0306
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>容錯移轉叢集執行個體的 SQL Server on Linux
 
 本文說明有關 SQL Server 容錯移轉叢集執行個體 (FCI) 在 Linux 上的概念。 
@@ -92,4 +90,3 @@ Pacemaker 叢集只能有最多 16 個節點包含 Corosync，因此單一 FCI �
 - [設定容錯移轉叢集執行個體-iSCSI-SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 - [設定容錯移轉叢集執行個體-NFS-SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 - [設定容錯移轉叢集執行個體-SMB-SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
-

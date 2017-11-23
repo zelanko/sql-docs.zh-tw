@@ -13,10 +13,8 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictTimeSeries
-dev_langs:
-- DMX
+f1_keywords: PredictTimeSeries
+dev_langs: DMX
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - REPLACE_MODEL_CASES parameter
 - PredictTimeSeries function
 ms.assetid: 85c596be-a7f4-499b-8d36-7e67c2647b6c
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: eba719cb9cc1463b83e6e8aeda8b489d05fba53a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d6770961f4e48ca2f6d96aecb4d51e679af396d0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -272,10 +269,9 @@ OR [Model Region] = 'M200 North America'
 > [!NOTE]  
 >  此範例使用 FLATTENED 關鍵字，讓結果更容易呈現在資料表中，不過，如果您的提供者支援階層式資料列集，可以省略 FLATTENED 關鍵字。 如果您省略 FLATTENED 關鍵字，查詢會傳回兩個資料行：第一個資料行包含識別 `[Model Region]` 資料數列的值，而第二個資料行則包含統計資料的巢狀資料表。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [時間序列模型查詢範例](../analysis-services/data-mining/time-series-model-query-examples.md)   
  [預測 &#40; DMX &#41;](../dmx/predict-dmx.md)  
   
   
-

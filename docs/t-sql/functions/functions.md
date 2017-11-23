@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - built-in functions [SQL Server]
 - function [SQL Server] See functions [SQL Server]
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fa55a0b066db617ef0d6f2f0471ad6866cac2d73
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 53a2a1be1099b2224b14f8c8d856b7ae07d42ac6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 資料庫函式有哪些？
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -85,10 +82,9 @@ ms.lasthandoff: 09/01/2017
   
  採取多重字元字串輸入、傳回單一字元字串的函數，會利用定序優先順序的規則來設定輸出字串的定序。 如需詳細資訊，請參閱[定序優先順序 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [決定性與非決定性的函式](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [使用預存程序 &#40;MDX &#41;](../../mdx/using-stored-procedures-mdx.md)  
   
   
-

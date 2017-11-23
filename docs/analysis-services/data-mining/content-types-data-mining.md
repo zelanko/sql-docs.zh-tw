@@ -30,17 +30,16 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2e3cf974c1b3cc1b8cecbc441da3ab2514c8f512
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bdf7e955c5c4dd36d604bffa5dce1602f93788d2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="content-types-data-mining"></a>內容類型 (資料採礦)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以同時定義採礦結構中資料行的實體資料類型，以及用於模型內之資料行的邏輯內容類型。  
@@ -120,7 +119,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="classified"></a>Classified  
  除了前述常用於所有模型的內容類型之外，您可以使用分類資料行來定義某些資料類型的內容類型。 如需分類資料行的詳細資訊，請參閱[分類資料行 &#40;資料採礦&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [內容類型 &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
  [資料類型 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [資料類型 &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
@@ -128,4 +127,3 @@ ms.lasthandoff: 09/01/2017
  [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,25 +12,23 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - 'syntax indexes [ADO], ADO for Visual C++ syntax with #import'
 - 'collections [ADO], ADO for Visual C++ syntax with #import'
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5d88dfcfe9d05d5f78f4f8e61ee32a23a67048d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 093e3933796d490f2dc40d8af493dc639fdb19a3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>集合 （Visual c + + 語法索引與 #import）
 它是很有幫助集合繼承某些常用的方法和屬性。  
@@ -104,9 +101,8 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [錯誤集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [參數集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getUnicodeStream
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getUnicodeStream
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0dd61865-663b-47e2-b417-e9df418894cc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8872a24a7f9f41e0c75a584e2afc534fa41aa5f6
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e82e4ca3d7ac82aec1e8675befa8aac3188209eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getunicodestream-method-sqlserverresultset"></a>getUnicodeStream 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,9 +41,8 @@ ms.lasthandoff: 09/09/2017
 |[getUnicodeStream 方法 &#40; int &#41;](../../../connect/jdbc/reference/getunicodestream-method-int.md)|擷取值，這個目前的資料列內指定之資料行索引的[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件做為 Unicode 字元資料流。|  
 |[getUnicodeStream 方法 #40;java.lang.String &#41;](../../../connect/jdbc/reference/getunicodestream-method-java-lang-string.md)|擷取值，這個目前的資料列內指定之資料行名稱的[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件做為 Unicode 字元資料流。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

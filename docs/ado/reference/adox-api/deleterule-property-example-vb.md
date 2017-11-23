@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- DeleteRule property [ADOX], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: DeleteRule property [ADOX], Visual Basic example
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 865aeacf705b220c54c372d60f8e6c3ba92c958b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7080e1d2bb3fe208fa9f3f7311438c94c41429e4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule 屬性範例 (VB)
 這個範例會示範[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)屬性[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件。 程式碼會將附加新[資料表](../../../ado/reference/adox-api/table-object-adox.md)然後定義新的主要金鑰，設定**DeleteRule**至**adRICascade**。  
@@ -92,7 +88,6 @@ End Sub
 ' EndDeleteRuleVB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DeleteRule 屬性 (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
- [索引鍵的物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
-
+ [Key 物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

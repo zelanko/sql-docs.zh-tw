@@ -8,43 +8,40 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2cb1af941d23ae7ea03bac265642bd9cbbb152d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce7fa26983200ba8857c44e6d085410e337e8df8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="programming-considerations"></a>程式設計考量
 本節簡短討論與撰寫 ODBC 應用程式和驅動程式相關的主題數目。  
   
  此章節包含下列主題。  
   
--   [多執行緒處理](../../../odbc/reference/develop-app/multithreading.md)  
+-   [多執行緒](../../../odbc/reference/develop-app/multithreading.md)  
   
--   [對齊方式](../../../odbc/reference/develop-app/alignment.md)  
+-   [對齊](../../../odbc/reference/develop-app/alignment.md)  
   
 -   [Unicode](../../../odbc/reference/develop-app/unicode.md)  
   
--   [轉譯 Dll](../../../odbc/reference/develop-app/translation-dlls.md)  
+-   [轉譯 DLL](../../../odbc/reference/develop-app/translation-dlls.md)  
   
 -   [診斷工具](../../../odbc/reference/develop-app/diagnostic-tools.md)  
   
--   [Visual Studio 分析器](../../../odbc/reference/develop-app/visual-studio-analyzer.md)  
+-   [Visual Studio Analyzer](../../../odbc/reference/develop-app/visual-studio-analyzer.md)  
   
--   [驅動程式特定資料類型、 描述元類型、 資訊類型、 診斷的型別和屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)  
+-   [特定驅動程式的資料類型、描述項類型、資訊類型、診斷類型與屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)  
   
 -   [回溯相容性和標準相容性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)  
   
--   [在 Windows 中的 ODBC](../../../odbc/reference/develop-app/odbc-in-windows.md)
-
+-   [Windows 中的 ODBC](../../../odbc/reference/develop-app/odbc-in-windows.md)

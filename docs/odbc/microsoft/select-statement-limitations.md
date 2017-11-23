@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC SQL grammar, SELECT statement limitations
 - SELECT statement limitations [ODBC]
 ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3015e9f3a0a39d72ed5add2337ac028f6cb61386
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 53b3e18a07e14e6059a9d193d8659a09b87e6c65
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-statement-limitations"></a>SELECT 陳述式的限制
 無法混合的彙總函式的資料行具有非彙總資料行中的 SELECT 陳述式。  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  如果輸入了不正確的資料行名稱是 SELECT 陳述式，將 SQLSTATE 07001，「 錯誤數目的參數，"會傳回錯誤而 SQLSTATE S0022 錯誤，「 資料行找不到。 」  
   
  使用 Microsoft Excel 驅動程式時，如果空字串插入資料行，則為空字串會轉換成 null 值;搜尋 SELECT 陳述式執行時以空字串的 WHERE 子句中該資料行上，將會失敗。
-

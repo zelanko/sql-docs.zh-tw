@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 16596d3ffa943f382e6c3a9ec2aa9c2e2e14432f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93b97bce2562604a01c564a376bd093abb9b1b7c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="records-and-provider-supplied-fields"></a>記錄和提供者提供的欄位
 當[記錄](../../../ado/reference/ado-api/record-object-ado.md)開啟物件，其來源可以是目前已開啟的資料列[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，絕對 URL 或相對 URL 開啟搭配[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件.  
@@ -73,7 +71,7 @@ ms.lasthandoff: 09/09/2017
 |RESOURCE_CONTENTTYPE|AdVarWChar|表示文件可能使用 — 例如，lawyer 的簡短。 這可能會對應至 Office 範本用來建立文件。|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|指出 MIME 類型的文件，表示的格式，例如"`text/html`"。|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|表示用來儲存內容的語言。|  
-|RESOURCE_CREATIONTIME|adFileTime|唯讀。 指出 FILETIME 結構，其中包含已建立資源的時間。 被報告的時間，格式為 Coordinated Universal Time (UTC)。|  
+|RESOURCE_CREATIONTIME|AdFileTime|唯讀。 指出 FILETIME 結構，其中包含已建立資源的時間。 被報告的時間，格式為 Coordinated Universal Time (UTC)。|  
 |RESOURCE_LASTACCESSTIME|AdFileTime|唯讀。 指出 FILETIME 結構，其中包含資源的上次存取時間。 時間是以 UTC 格式。 FILETIME 成員都是零，如果提供者不支援這個時間成員。|  
 |RESOURCE_LASTWRITETIME|AdFileTime|唯讀。 指出 FILETIME 結構，其中包含資源的上次寫入時間。 時間是以 UTC 格式。 FILETIME 成員都是零，如果提供者不支援這個時間成員。|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|唯讀。 表示資源的預設資料流，以位元組為單位的大小。|  
@@ -84,7 +82,6 @@ ms.lasthandoff: 09/09/2017
 |RESOURCE_DISPLAYNAME|AdVarWChar|唯讀。 表示資源的顯示名稱。|  
 |RESOURCE_ISROOT|AdBoolean|唯讀。 如果資源是集合或結構化文件的根，則為 true。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [記錄物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

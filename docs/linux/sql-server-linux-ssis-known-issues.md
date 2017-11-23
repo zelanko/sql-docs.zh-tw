@@ -15,12 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 70b13a0deae8f12715488d81b44fb660f76decd0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: eec45efe8fb49afefab418130d05d7a2b82bddd3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>限制與已知的問題適用於 Linux 上的 SSIS
 
@@ -130,5 +129,4 @@ SQL Server 記錄提供者僅支援 SQL 驗證。不支援 Windows 驗證。
 文字檔、 XML 檔案和 SQL Server Profiler 的 SSIS 記錄提供者會將其輸出寫入您指定的檔案。 下列考量適用於檔案路徑：
 -   如果您沒有提供路徑，記錄提供者會寫入目前的目錄中的主機。 如果目前使用者沒有主應用程式的目前目錄的寫入權限，記錄提供者會引發錯誤。
 -   您無法使用環境變數中的檔案路徑。 如果您指定的環境變數，您指定的常值文字會出現在檔案路徑。 例如，如果您指定`%TMP%/log.txt`，記錄提供者會將常值的文字附加`/%TMP%/log.txt`為目前的主機目錄。
-
 

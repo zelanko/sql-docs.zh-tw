@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CurrentTimeMember Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CurrentTimeMember Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CurrentTimeMember
-helpviewer_keywords:
-- CurrentTimeMember element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CurrentTimeMember
+helpviewer_keywords: CurrentTimeMember element
 ms.assetid: 2e73009c-9f2b-441c-bdf0-ca19b160da4f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bd972a0c5af394cd2e573b5d6111fd5fff2bf3cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2125dede89be3610e0f9e795cbf1b52436194e6a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="currenttimemember-element-assl"></a>CurrentTimeMember 元素 (ASSL)
   定義的時間維度相關聯的目前成員[Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md)項目。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**CurrentTimeMember**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Kpi>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 61fe4d56d73a3d2d7822308af2fb0eb377647ced
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1b830be937d31e763fbbf517ef07a3c2b8c729d3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo 存取傳回值
 下表列出 C 語言 #defines *fInfoType*引數和傳回對應值**SQLGetInfo**。 這項資訊可以擷取傳遞列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需有關所傳回的值**SQLGetInfo**，請參閱*ODBC 程式設計人員參考*。  
@@ -176,4 +174,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION_OPTION|SQL_TXN_READ_COMMITTED|  
 |SQL_UNION|多個值|  
 |SQL_USER_NAME|"ADMIN"|
-

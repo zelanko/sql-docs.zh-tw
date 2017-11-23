@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLColAttributes
 - SQLColAttribute function [ODBC], mapping
 ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b342337838ced8fd4cb7976f703d9c4e85f985d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d21d1a9a9565ad2c0accbebb716d0b24f18f854d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcolattributes-mapping"></a>SQLColAttributes 對應
 當應用程式呼叫**SQLColAttributes**透過 ODBC 3*.x*驅動程式，會呼叫**SQLColAttributes**對應至**SQLColAttribute** ，如下所示：  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  ODBC 3*.x*驅動程式必須支援所有 ODBC 3*.x* *FieldIdentifiers*列出**SQLColAttribute**。  
   
  ODBC 3*.x*驅動程式必須支援 SQL_COLUMN_PRECISION 和 SQL_DESC_PRECISION、 SQL_COLUMN_SCALE 和 SQL_DESC_SCALE，和 SQL_COLUMN_LENGTH 和 SQL_DESC_LENGTH。 這些值會不同，因為有效位數、 小數位數和長度會定義以不同的方式在 ODBC 3*.x*比 ODBC 2。*x*。 如需詳細資訊，請參閱[資料行大小、 十進位數字、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d： 資料型別中。
-

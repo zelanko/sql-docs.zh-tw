@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f28dbea0aed74639a72e923f5558b31b9777d3dc
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b391f522b3edbc51a9651037976f357d3717db27
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sample-jdbc-driver-applications"></a>範例 JDBC 驅動程式應用程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,8 +43,7 @@ ms.lasthandoff: 09/09/2017
 |[使用結果集](../../connect/jdbc/working-with-result-sets.md)|這些範例應用程式示範如何使用結果集來處理資料中包含[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
 |[使用大型資料](../../connect/jdbc/working-with-large-data.md)|這些範例應用程式示範如何使用適應性緩衝來擷取大數值資料，從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫而沒有伺服器資料指標的負擔。|  
   
-## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

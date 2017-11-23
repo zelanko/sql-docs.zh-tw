@@ -21,17 +21,16 @@ helpviewer_keywords:
 - connections [Analysis Services]
 - SSAS, data sources
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 69f1519d6b3c03294469707a7e1485955f864a2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 173ba9ef24e1f05dcd3500ad8fecbad0dba98241
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>支援的資料來源 (SSAS - 多維度)
   此主題描述可用於多維度模型的資料來源類型。  
@@ -64,4 +63,3 @@ ms.lasthandoff: 09/01/2017
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

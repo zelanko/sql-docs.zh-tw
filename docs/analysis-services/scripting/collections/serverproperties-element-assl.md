@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ServerProperties Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ServerProperties Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ServerProperties
-helpviewer_keywords:
-- ServerProperties element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ServerProperties
+helpviewer_keywords: ServerProperties element
 ms.assetid: 8ccbef3f-1388-4fa3-b0a4-c89b89f09056
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ab839c124a555d0b7310dcdaa3517a87326329b6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 19cb54012e1c78afc87095f1e7b221c66edac4e1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="serverproperties-element-assl"></a>ServerProperties 元素 (ASSL)
   包含集合[ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)與相關聯的項目[伺服器](../../../analysis-services/scripting/objects/server-element-assl.md)項目。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.ServerPropertyCollection>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [集合 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

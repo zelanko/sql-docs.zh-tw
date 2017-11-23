@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 48c902ba8427101083d1f9e6d012fb15a86d9491
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41cfa6b2ca110803ca4b63abf683edf7d508c027
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>Power Pivot BI 語意模型連接 (.bism)
   BI 語意模型連接 (.bism) 是可攜式連接，可將 Excel 或 Power View 報表連接到 Analysis Services 表格式模型資料庫或多維度模式下的 Analysis Services 執行個體。 如果您熟悉 Office 資料連接 (.odc) 檔案，您會注意到定義和使用 .bism 連接檔案之方式的相似性。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_prereq"></a> 支援的資料庫  
  BI 語意模型連接指向表格式模型資料庫。 這個資料有三個來源：  
   
--   在表格式伺服器模式中於獨立 Analysis Services 執行個體上執行的表格式模型資料庫。 獨立 Analysis Services 執行個體的部署來自伺服陣列外部。 存取伺服陣列外部的資料來源需要額外的權限，您可以在這個主題中閱讀詳細資訊：＜ [建立與表格式模型資料庫的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)＞。  
+-   在表格式伺服器模式中於獨立 Analysis Services 執行個體上執行的表格式模型資料庫。 獨立 Analysis Services 執行個體的部署來自伺服陣列外部。 存取伺服陣列外部的資料來源需要額外的權限，您可以在這個主題中閱讀詳細資訊：＜ [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)＞。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿。 Excel 活頁簿內部的內嵌 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫相當於在獨立 Analysis Services 表格式模式伺服器上執行的表格式模型資料庫。 如果您已經使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，可以在 SharePoint 文件庫中定義指向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的 BI 語意模型連接，並使用現有的 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 資料建立 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 報表。  您可以使用在 SQL Server 2008 R2 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中建立的活頁簿。  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 09/01/2017
   
  [建立與 Power Pivot 活頁簿的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [C建立與表格式模型資料庫的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [建立與表格式模型資料庫的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [在 Excel 或 Reporting Services 使用 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
@@ -92,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

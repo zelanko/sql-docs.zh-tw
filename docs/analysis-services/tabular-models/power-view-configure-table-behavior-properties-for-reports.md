@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.tablebehavior.f1
+f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 95a50d5ed10e8714b50e33ac4e182ff208c4c840
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-設定報表的資料表行為屬性
   如果您要將表格式模型當作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的資料模型使用，可以設定資料表行為屬性，在更細微的層級公開詳細資料列。 設定資料表行為屬性會變更詳細資料列的群組行為，並讓識別資訊 (例如姓名、相片識別碼或標誌影像) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
@@ -147,4 +145,3 @@ ms.lasthandoff: 09/01/2017
  在評估模型中的資料表，並對包含永遠應該顯示為個別項目之詳細資料列的資料表設定資料表行為屬性之後，您可以進一步透過其他屬性或設定來最佳化模型。  
   
   
-

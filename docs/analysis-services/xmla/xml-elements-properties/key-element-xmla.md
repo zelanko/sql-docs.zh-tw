@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Key Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Key Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Key
 - urn:schemas-microsoft-com:xml-analysis#Key
 - microsoft.xml.analysis.key
-helpviewer_keywords:
-- Key element
+helpviewer_keywords: Key element
 ms.assetid: 09d3cd48-49f7-4b58-b8bb-ca75b81bb02f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 960d1ffbb3ddf466b2f1147545144c450c68533e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 00c7e159e919afe608a9d55c70485592c4b7003d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="key-element-xmla"></a>Key 元素 (XMLA)
   包含屬性成員的成員索引鍵值。  
@@ -71,7 +66,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  這個元素所使用的資料類型應該與指定屬性之適當索引鍵資料行的資料類型相符。 如果**金鑰**項目未指定父**屬性**項目， **AttributeName**和**名稱**中指定項目父**屬性**項目會用來識別要修改之屬性成員。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Attribute 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)   
  [AttributeName 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)   
  [卸除元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
@@ -82,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

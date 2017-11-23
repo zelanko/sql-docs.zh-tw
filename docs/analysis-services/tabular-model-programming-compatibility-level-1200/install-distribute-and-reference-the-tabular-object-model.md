@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e51769f7-aac7-4835-a5ae-91aac04aa476
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a2ba71ce1ac7dcc0787e84edba3ea436bd33e25f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9688a692d25d484b05bca88e0779d2812944f3af
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>安裝、 散佈及參考表格式物件模型
 
@@ -127,4 +126,3 @@ Json<br/>Microsoft.AnalysisServices.Tabular.Json.dll | 協助程式 DLL 包裝 N
 轉散發的 AMO 和 TOM 是透過**sql_as_amo.msi**安裝套件。 如果您要建立安裝程式在用戶端應用程式呼叫到 AMO 或 TOM，新增**sql_as_amo.msi**您可執行檔。 這是轉散發的 AMO 和 TOM 用戶端程式庫的唯一支援的機制。  
   
 套件是獨立的並提供所有組件所需的程式碼中呼叫 AMO 和 TOM。 其他封裝，例如 SQL_AS_OLEDB.msi 或 SQL_AS_ADOMD.msi，並不特別需要 TOM 程式設計案例。
-

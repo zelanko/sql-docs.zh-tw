@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- attribute relationships [Analysis Services]
+helpviewer_keywords: attribute relationships [Analysis Services]
 ms.assetid: 9f8e3809-507c-496b-b96d-1fa4e028fe1a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 84b4ffab1a59bd155557b53f0c5a16040096b2da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b42070c64e1e96268ac73fece5bb8d246eb45e21
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-relationships---arrange-shapes-in-the-diagram"></a>屬性關聯性-在圖表中排列形狀
   您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中維度設計師之 [維度結構] 檢視的 [屬性關聯性] 索引標籤中，變更形狀的配置。  
@@ -40,9 +38,8 @@ ms.lasthandoff: 09/01/2017
   
      此外，您也可以按一下 [排列形狀]，以便根據維度設計師所使用的配置演算法來自動排列所有形狀。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [中，使用 [維度設計師] 的](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [定義屬性關聯性](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   
-

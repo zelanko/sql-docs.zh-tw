@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Data Mining Designer
 - mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 39ff7c19d4bb069149e56ae2d4939225d57a8223
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 198dd7792a24f0090aec82593704f0f2165b0d43
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="moving-data-mining-objects"></a>移動資料採礦物件
   移動資料採礦物件的最常見情形是將模型從測試或分析環境部署到實際執行環境，或者與其他使用者共用模型。  
@@ -95,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [資料採礦方案與物件的管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   
-

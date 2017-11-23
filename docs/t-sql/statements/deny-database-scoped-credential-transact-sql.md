@@ -8,30 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - DENY DATABASE SCOPED CREDENTIAL
 - DENY_DATABASE_SCOPED_CREDENTIAL_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - DENY statement, database scoped credentials
 - denying permissions [SQL Server], database scoped credential
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: adcbe36f2ffabfc63521fe905933295402178977
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dcb2ee7f32cea0c848850dc504a91067611b743e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>拒絕資料庫範圍認證 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -114,7 +111,7 @@ DENY permission  [ ,...n ]
 ## <a name="permissions"></a>Permissions  
  需要 CONTROL 權限的資料庫範圍認證。 如果使用 AS 子句，指定的主體必須擁有資料庫範圍認證。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [授與資料庫範圍認證 (TRANSACT-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
  [REVOKE 資料庫範圍認證 (TRANSACT-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
@@ -123,4 +120,3 @@ DENY permission  [ ,...n ]
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

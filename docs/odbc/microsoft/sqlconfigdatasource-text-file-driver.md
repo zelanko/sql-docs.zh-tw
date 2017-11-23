@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text file driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], Text File Driver
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 22cbd006c0c499988b5552fb3057e4ce7af67c44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e781871cc8507d10617e1a147fa6d5a7c06ac756
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource （文字檔案驅動程式）
 > [!NOTE]  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 |FORMAT|文字驅動程式，可以是 FIXEDLENGTH、 TABDELIMITED、 CSVDELIMITED （以逗號分隔） 或 DELIMITED() （藉由指定的括號中的特殊字元）。 特殊字元是一個字元的長度，而且可以是字元、 十進位或十六進位格式。|  
 |於 MAXSCANROWS|設定現有的資料為基礎的資料行的資料類型時，要掃描的資料列數目。<br /><br /> 文字驅動程式，您可以輸入的數字 1 到 32767 之間的掃描; 的資料列數目不過，值一律會預設為 25。 （限制以外的數字會傳回錯誤）。<br /><br /> 這會設定為相同的選項**要掃描的資料列**安裝程式 對話方塊中。|  
 |READONLY|True 表示要使檔案成為唯讀的。若要讓檔案不是唯讀，則為 FALSE。<br /><br /> 這會設定為相同的選項**Read Only**安裝程式 對話方塊中。|
-

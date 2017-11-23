@@ -21,17 +21,16 @@ helpviewer_keywords:
 - deleting dimensions
 - removing dimensions
 ms.assetid: be52b351-f376-42ee-adba-2dcaa0c0f69c
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 36a2a8434122e4d3bf649de2358abc2186ea30d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b6505f48c397e021c29eb3dba454cc0575e2d94f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>資料庫維度的修改或刪除資料庫維度，在 方案總管
   您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中使用維度設計師修改或刪除維度。 修改維度時，必須等到您處理維度之後，使用者才可以使用變更後的維度。 如需詳細資訊，請參閱[處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
@@ -48,8 +47,7 @@ ms.lasthandoff: 09/01/2017
   
 -   在方案總管中，以滑鼠右鍵按一下您要刪除的維度，然後按一下 [刪除]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [多維度模型中的維度](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   
-

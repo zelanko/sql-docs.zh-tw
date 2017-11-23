@@ -18,17 +18,16 @@ helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e7c951e3abb2fffc3882869e31570342e7647bd6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a253d7cc22d90a06369a914b7aec8b4a8ec315f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>編輯或刪除分割區 (Analysis Services - 多維度)
   若要修改 Cube 資料分割，可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中使用 Cube 設計師的 [資料分割] 索引標籤。 [資料分割] 索引標籤會列出 Cube 中所有量值群組的資料分割。 它也會列出已啟用回寫功能的回寫分割區。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/01/2017
   
  ![分割區 窗格中的來源資料行](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "分割區 窗格中的來源資料行")  
   
- 如果分割區是以查詢為基礎，請按一下 [瀏覽]\(**...**) 按鈕以編輯查詢。 這樣可以編輯分割區的 **Source** 屬性。 如需詳細資訊，請參閱 [變更資料分割來源以使用不同的事實資料表](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md)。  
+ 如果分割區是以查詢為基礎，請按一下 [瀏覽] (**...**) 按鈕以編輯查詢。 這樣可以編輯分割區的 **Source** 屬性。 如需詳細資訊，請參閱 [變更資料分割來源以使用不同的事實資料表](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md)。  
   
  您可以在具有與原始來源資料表 (在從其擷取資料的外部資料來源中) 相同結構的資料來源檢視中，指定資料表。 來源可以在 Cube 資料庫的任何資料來源或資料來源檢視中。  
   
@@ -56,10 +55,9 @@ ms.lasthandoff: 09/01/2017
   
  可以針對 Cube 中之每一個量值群組的每一個分割區進行個別設定儲存。 您也可以針對 Cube 或量值群組進行預設儲存設定。 儲存是在 Cube 精靈的 [資料分割] 索引標籤上設定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [建立及管理本機資料分割 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
  [設計彙總 &#40;Analysis Services-多維度 &#41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
  [在 Analysis Services 中合併分割區 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   
-

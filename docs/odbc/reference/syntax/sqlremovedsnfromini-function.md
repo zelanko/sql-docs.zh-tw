@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLRemoveDSNFromIni
-apilocation:
-- sqlsrv32.dll
+apiname: SQLRemoveDSNFromIni
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLRemoveDSNFromIni
-helpviewer_keywords:
-- SQLRemoveDSNFromIni function [ODBC]
+f1_keywords: SQLRemoveDSNFromIni
+helpviewer_keywords: SQLRemoveDSNFromIni function [ODBC]
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a665635d371b53fe90bca72393afd986881edad6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83c51c7363cd031aefa60c71270e3fa5e9f779ed
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni 函式
 **一致性**  
@@ -79,4 +73,3 @@ BOOL SQLRemoveDSNFromIni(
 |新增、 修改或移除資料來源|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |移除預設的資料來源|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|  
 |加入系統資訊的資料來源名稱|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
-

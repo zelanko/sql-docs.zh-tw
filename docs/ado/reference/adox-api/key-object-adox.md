@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Key
-helpviewer_keywords:
-- Key object [ADOX]
+f1_keywords: Key
+helpviewer_keywords: Key object [ADOX]
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3845e59be9896c9520b77341d2d9d4e880b918a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7d05a52614694bc9464c609ab4f4ed0965f3b81e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="key-object-adox"></a>索引鍵的物件 (ADOX)
 代表資料庫資料表中的主要、 外部索引鍵，或唯一索引鍵欄位。  
@@ -54,10 +50,9 @@ Dim obj As New Key
   
  本章節包含下列主題。  
   
--   [索引鍵的物件屬性、 方法和事件](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
+-   [Key 物件屬性、方法和事件](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [索引鍵附加方法、 金鑰類型、 RelatedColumn、 RelatedTable 和 UpdateRule 屬性範例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [資料行集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [索引鍵集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)
-
+ [Keys 集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

@@ -15,12 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
+ms.openlocfilehash: d265d1c4fa25f10c58e321cef06cf293fdce5ac5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: cd81ffd71eb78a553703fc31650a0e60a8c513aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上安裝 SQL Server Integration Services (SSIS)
 
@@ -136,4 +135,3 @@ dtexec /F <package name> /DE <protection password>
 ## <a name="next-steps"></a>後續的步驟
 
 如需如何在 Linux 上使用 SSIS 來擷取、 轉換和載入資料的詳細資訊，請參閱[擷取、 轉換和載入資料的 SQL Server on Linux 與 SSIS](sql-server-linux-migrate-ssis.md)。
-

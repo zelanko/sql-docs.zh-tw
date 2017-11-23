@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CellPermission Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CellPermission Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CellPermission
-helpviewer_keywords:
-- CellPermission element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CellPermission
+helpviewer_keywords: CellPermission element
 ms.assetid: 54a6afc0-1fcb-4b24-851a-6d81e1fe0efc
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a96c177ed5ada769d469120d970cc27325bc1ed1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7411e1c6b991ef3d4996d50341a52dac2b46f3a0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cellpermission-element-assl"></a>CellPermission 元素 (ASSL)
   描述的權限的成員[角色](../../../analysis-services/scripting/objects/role-element-assl.md)元素內部個別資料格有[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)項目。  
@@ -72,8 +66,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.CellPermission>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

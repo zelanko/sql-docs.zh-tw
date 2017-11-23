@@ -8,25 +8,23 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cursor types
 - scrollable cursors
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 58d383edd525cfe0f642b5e61250bce736f4e048
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 734f0775010366f863ed2c316b8223b0b08632ba
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>指定資料指標類型及選取資料列
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另請參閱  
 [擷取資料](../../connect/php/retrieving-data.md)  
   
-

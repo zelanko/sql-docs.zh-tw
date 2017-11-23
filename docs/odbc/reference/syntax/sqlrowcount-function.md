@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLRowCount
-apilocation:
-- sqlsrv32.dll
+apiname: SQLRowCount
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLRowCount
-helpviewer_keywords:
-- SQLRowCount function [ODBC]
+f1_keywords: SQLRowCount
+helpviewer_keywords: SQLRowCount function [ODBC]
 ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c46515b464ea694cfa6184072efb95e2459b1d00
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9456f94a1a74ed5a4f70ef1de49eba3f9bd52598
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount 函數
 **一致性**  
@@ -91,7 +85,6 @@ SQLRETURN SQLRowCount(
 |執行 SQL 陳述式|[SQLExecDirect 函式](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |執行已備妥的 SQL 陳述式|[SQLExecute 函式](../../../odbc/reference/syntax/sqlexecute-function.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)
-

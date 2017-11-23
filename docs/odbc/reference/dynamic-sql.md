@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fb717a151e6917d49e164cfeba9b3df3507d46e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dynamic-sql"></a>動態 SQL
 靜態 SQL 都適用於許多情況下，雖然還有無法事先判斷資料存取的應用程式類別。 例如，假設試算表可讓使用者輸入的查詢，試算表然後傳送給 DBMS 來擷取資料。 此查詢的內容很明顯地不知道程式設計人員寫入試算表程式時。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 3.  程式可以在 EXECUTE 陳述式重複使用，每次執行時動態的陳述式提供不同的參數值。  
   
  備妥的執行仍未與靜態 SQL 相同。 在靜態 SQL 中，處理 SQL 陳述式的前四個步驟發生在編譯時間。 在已備妥的執行中，這些步驟仍然會在執行階段，但一次; 執行執行計畫在呼叫 EXECUTE 時，才會發生。 這有助於減少動態 SQL 的架構中原本的效能缺點。 下圖顯示靜態 SQL、 立即執行，與動態 SQL 和動態 SQL 搭配備妥的執行之間的差異。
-

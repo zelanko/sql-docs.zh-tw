@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], about ODBC
+helpviewer_keywords: ODBC [ODBC], about ODBC
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 544f4aa32119b0fde5971f76e46a382b92dbd3ef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what-is-odbc"></a>什麼是 ODBC？
 關於 ODBC 許多多疑存在於電腦的世界。 給使用者，它是 Microsoft® Windows® 控制台 中的圖示。 應用程式的程式設計人員，它是包含資料存取常式的程式庫。 許多其他人，所以曾經想像的所有資料庫的存取問題的答案。  
@@ -41,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  請務必了解 ODBC 設計來公開資料庫功能，不補充它們。 因此，應用程式寫入器不應預期，使用 ODBC 會將突然轉換為簡單資料庫的完整功能的關聯式資料庫引擎。 也不驅動程式寫入器應該實作基礎資料庫中找不到的功能。 這個例外狀況是開發人員撰寫直接存取檔案資料 （例如 Xbase 檔案中的資料） 的驅動程式所需撰寫支援至少要有最小 SQL 功能的資料庫引擎。 另一個例外狀況是 Windows SDK，先前包含在 Microsoft Data Access Components (MDAC) SDK 的 ODBC 元件，可提供模擬的驅動程式實作特定層級的功能，可捲動資料指標的資料指標程式庫。  
   
  使用 ODBC 的應用程式必須負責任何跨資料庫的功能。 例如，ODBC 不是異質性聯結引擎，也不是分散式的交易處理器。 不過，因為它是 DBMS 無關，它可以用來建置這類的跨資料庫工具。
-

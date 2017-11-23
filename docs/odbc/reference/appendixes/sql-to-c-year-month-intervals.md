@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - intervals [ODBC], converting
 - year-month intervals [ODBC]
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4acd46374597b19849abfaa7cb547c8b6af23bd9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 991dd021935617a9c0bfbe87ecf7be35d35938c9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL 到 c： 年度月份間隔
 年-月間隔 ODBC SQL 資料類型的識別項是：  
@@ -54,4 +52,3 @@ _C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元�
  [b] 如果間隔有效位數是單一欄位 （其中一個年份或月份），SQL 類型的間隔可以轉換成任何 （SQL_C_STINYINT、 SQL_C_UTINYINT、 SQL_C_USHORT、 SQL_C_SHORT、 SQL_C_SLONG、 SQL_C_ULONG、 或 SQL_C_NUMERIC） 的精確數值。  
   
  SQL 類型的間隔預設值轉換為對應 C 間隔資料型別。 應用程式再將繫結資料行或參數 （或設定 SQL_DESC_DATA_PTR 欄位 ARD 適當記錄中） 以指向初始化 SQL_INTERVAL_STRUCT 結構 (或將指標傳遞至SQL_INTERVAL_STRUCT結構*TargetValuePtr*呼叫中的引數**SQLGetData**)。
-

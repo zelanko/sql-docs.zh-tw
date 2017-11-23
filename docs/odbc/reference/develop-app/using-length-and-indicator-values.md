@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5497ef9b94a57442fd675db6729147d0432ece56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-length-and-indicator-values"></a>使用長度與指標值
 長度/指標緩衝區用來傳遞資料緩衝區或例如 SQL_NULL_DATA 表示資料為 NULL 的特殊指標中資料的位元組長度。 根據函式，會使用它，是 SQLINTEGER 或 SQLSMALLINT 定義長度/指標緩衝區。 因此，需要單一引數來描述它。 如果資料緩衝區 nondeferred 輸入的緩衝區，這個引數包含資料本身的位元組長度或指標值。 它通常會命名為*StrLen_or_Ind*或類似的名稱。 例如，下列程式碼呼叫**SQLPutData**傳遞緩衝區的資料; 位元組長度 (*ValueLen*) 因為直接傳遞資料緩衝區 (*ValuePtr*) 是輸入的緩衝區中。  
@@ -79,4 +77,3 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM。 程序是使用輸入參數的預設值，而不是對應的資料緩衝區中值的程序中。  
   
 -   SQL_COLUMN_IGNORE。 **SQLBulkOperations**或**SQLSetPos**是要略過的資料緩衝區中的值。 呼叫更新資料列時**SQLBulkOperations**或**SQLSetPos**不會變更資料行值。 插入新的資料列呼叫時**SQLBulkOperations**，資料行值設定為其預設值或資料行沒有預設值為 NULL。
-

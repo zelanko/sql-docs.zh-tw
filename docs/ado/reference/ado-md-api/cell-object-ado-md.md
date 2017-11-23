@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Cell
-helpviewer_keywords:
-- Cell object [ADO MD]
+f1_keywords: Cell
+helpviewer_keywords: Cell object [ADO MD]
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e35b30a2474f43ee1d46e23ae4a4323cca47f16b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d6ef6e4e3cf888b60050bfd297863568d8112a57
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cell-object-ado-md"></a>資料格物件 (ADO MD)
 表示資料格集中所包含的軸座標交集處的資料。  
@@ -63,9 +59,8 @@ ms.lasthandoff: 09/09/2017
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [軸範例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [資料格集物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [位置集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
- [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

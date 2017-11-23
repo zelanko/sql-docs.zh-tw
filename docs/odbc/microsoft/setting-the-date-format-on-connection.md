@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - date formats [ODBC]
 - ODBC driver for Oracle [ODBC], date formats
 ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c4392b9e30e7558748670d729a685480cf5f4196
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 36011b0a1ea6fbb753c2e091a1e74edce498a31b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-the-date-format-on-connection"></a>在連接上設定的日期格式
 > [!IMPORTANT]  
@@ -41,4 +39,3 @@ conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "
 sSql = "INSERT INTO DATETEST VALUES (24,'1988-12-01 10:23:03')"  
 conn.Execute sSql  
 ```
-

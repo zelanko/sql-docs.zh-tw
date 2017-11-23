@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - SQL grammar [ODBC], create index
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6737ad2bdde9516291863214d3da5dd6087e3ec2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0f6e7525059640e7ffdadd79ec26a62229eabae9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-index-statement"></a>CREATE INDEX 陳述式
 CREATE INDEX 陳述式的語法為：  
@@ -40,4 +38,3 @@ CREATE INDEX 陳述式的語法為：
  使用 Paradox 驅動程式時，CREATE INDEX 陳述式會建立 Paradox 主要金鑰檔案，然後次要檔案。  
   
  這個陳述式不支援的 Microsoft Excel 或文字的驅動程式。
-

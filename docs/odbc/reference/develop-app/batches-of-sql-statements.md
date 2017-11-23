@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - batches [ODBC], about batches
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7966552f130ce8ab4825c77929c5fd4599fd6209
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 70649ee51ec7b5c2ef3926706f802da8189fc3b2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="batches-of-sql-statements"></a>批次的 SQL 陳述式
 SQL 陳述式的批次是一組兩個或多個 SQL 陳述式或單一的 SQL 陳述式有兩個或多個 SQL 陳述式群組相同的效果。 在某些實作中，整個批次陳述式才可供任何結果。 這通常會較有效率比個別提交陳述式，因為通常可以降低網路流量，而且資料來源有時可以最佳化的 SQL 陳述式批次的執行。 在其他實作中呼叫**SQLMoreResults**觸發批次中的下一個陳述式執行。 ODBC 支援下列類型的批次：  
@@ -71,9 +69,8 @@ SQL 陳述式的批次是一組兩個或多個 SQL 陳述式或單一的 SQL 陳
   
  此章節包含下列主題。  
   
--   [結果產生和無結果的陳述式](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)  
+-   [會產生結果和不會產生結果的陳述式](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)  
   
 -   [執行批次](../../../odbc/reference/develop-app/executing-batches.md)  
   
 -   [錯誤和批次](../../../odbc/reference/develop-app/errors-and-batches.md)
-

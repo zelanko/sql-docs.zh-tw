@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1136751fc7ec479cd3538814369cafed8ca45abf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fetching-a-row-of-data"></a>提取資料列
 若要擷取的資料列，應用程式呼叫**SQLFetch**。 **SQLFetch**可以使用任何一種資料指標，呼叫，但它只會以順向方向移動資料列集資料指標。 **SQLFetch**游標前進到下一個資料列，並傳回已繫結呼叫的任何資料行的資料**SQLBindCol**。 設定資料指標時達到結果的結尾， **SQLFetch**傳回 sql_no_data 為止。 如需呼叫的範例**SQLFetch**，請參閱[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
  字元資料必須先以 null 結束的驅動程式傳回至應用程式，即使它已被截斷。 Null 結束的字元不會包含在傳回的位元組長度，但需要繫結緩衝區的空間。 例如，假設應用程式使用 ASCII 字元集中的字元資料所組成的字串、 驅動程式有 50 個字元的要傳回的資料和應用程式的緩衝區是長度為 25 個位元組。 在應用程式的緩衝區，驅動程式會傳回後面 null 結束字元的第一次 24 個字元。 在長度/指標緩衝區，它會傳回位元組長度為 50。  
   
  應用程式可以限制結果集之前執行的陳述式，建立結果集，設定 SQL_ATTR_MAX_ROWS 陳述式屬性中的資料列數目。 例如，應用程式用來格式化報表中的預覽模式需要只資料不足，無法顯示報表的第一頁。 藉由限制結果集的大小，此類功能就會執行更快。 此陳述式屬性為了降低網路流量，並可能不支援所有的驅動程式。
-

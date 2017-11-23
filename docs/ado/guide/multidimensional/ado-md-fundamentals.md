@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO MD, fundamentals
+helpviewer_keywords: ADO MD, fundamentals
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e98b845d993ba3e3d6a3ddc459f9c50aa24e6309
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 623350b00e7a855a2d394a0e29dc3618ab327f6f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD 基本概念
 Microsoft® ActiveX® Data Objects （多維度） (ADO MD) 提供簡易存取多維度資料的語言 Microsoft Visual Basic®，例如從 microsoft。 ADO MD 擴充 Microsoft ActiveX® Data Objects (ADO) 要包含物件的特定多維度資料，例如[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)和[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)物件。 使用 ADO MD 中，您可以瀏覽多維度結構描述、 查詢 cube 中，並擷取結果。  
@@ -44,7 +41,7 @@ Microsoft® ActiveX® Data Objects （多維度） (ADO MD) 提供簡易存取�
   
 -   [使用 ADO MD 進行程式設計](../../../ado/guide/multidimensional/programming-with-ado-md.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO MD 物件模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO 程式設計人員指南](../../../ado/guide/ado-programmer-s-guide.md)   
  [ADO 的擴充功能資料定義語言和安全性 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)   
@@ -52,4 +49,3 @@ Microsoft® ActiveX® Data Objects （多維度） (ADO MD) 提供簡易存取�
  [使用 ADO MD 程式設計](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [使用 ADO 搭配 ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [使用多維度資料](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
-

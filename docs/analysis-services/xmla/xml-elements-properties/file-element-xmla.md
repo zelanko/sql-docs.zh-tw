@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- File Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: File Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.file
 - http://schemas.microsoft.com/analysisservices/2003/engine#File
 - urn:schemas-microsoft-com:xml-analysis#File
-helpviewer_keywords:
-- File element
+helpviewer_keywords: File element
 ms.assetid: 3dfd0e9b-746b-4ce5-8a95-610d2e573739
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d098aa61edb8d51b7a3868b21b768b7ab286e48c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e5bd3025744fa7796bc1f10111c8a12d87d5374d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="file-element-xmla"></a>File 元素 (XMLA)
   識別要父系所使用的檔案[備份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)或[還原](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)命令，或父系[位置](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)項目。  
@@ -77,9 +72,8 @@ ms.lasthandoff: 09/01/2017
   
  如**位置**項目，**檔案**元素描述遠端備份檔案[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]包含遠端資料分割的執行個體。 如需有關備份和還原遠端資料分割的詳細資訊，請參閱[備份、 還原，並同步處理資料庫 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [AllowOverwrite 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

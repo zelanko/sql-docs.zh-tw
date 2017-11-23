@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getRef (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getRef (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 83c60c5d-7a69-498b-be9c-bbdbfafec157
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 51be409ac39094fb9950844ccd4aa5168c4fe93b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4ee562fdd5a38c04027914b7e6a150b0b6f6fe4f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getref-method-javalangstring-sqlserverresultset"></a>getRef 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,10 +52,9 @@ public java.sql.Ref getRef(java.lang.String colName)
 ## <a name="remarks"></a>備註  
  GetRef 方法 java.sql.ResultSet 介面中所指定此 getRef 方法。  
   
-## <a name="see-also"></a>另請參閱  
- [getRef 方法 & #40;SQLServerResultSet & #41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
+## <a name="see-also"></a>請參閱＜  
+ [getRef 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

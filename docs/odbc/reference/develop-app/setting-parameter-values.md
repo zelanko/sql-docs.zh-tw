@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- parameter values [ODBC]
+helpviewer_keywords: parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c89f68450a7d4ffe65f5d7bc0e8697b5ac2cb1b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-parameter-values"></a>設定參數值
 若要設定參數的值，應用程式只會設定繫結至參數之變數的值。 它並不重要時設定此值，只要執行陳述式之前，它會設定。 應用程式可以設定的值之前或之後繫結變數，並可能會變更的值，它想要的次數。 當執行陳述式時，驅動程式只會擷取變數的目前值。 一次以上。 執行已備妥的陳述式時，這會特別有用應用程式會設定新值的部分或所有變數的每次執行陳述式時。 這個範例，請參閱[已備妥執行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)稍早在本章節中。  
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/09/2017
  [d] 的驅動程式必須一律會檢查此值，以查看其是否為特殊值，例如 SQL_NULL_DATA。  
   
  驅動程式未使用的參數值在執行階段會驅動程式而異。 必要時，驅動程式將值從繫結變數的 C 資料類型與位元組長度 SQL 資料類型、 有效位數和小數位數參數。 在大部分情況下，驅動程式再將值傳送至資料來源。 在某些情況下，它會格式化為文字值，並將它插入之前的陳述式傳送到資料來源的 SQL 陳述式。
-

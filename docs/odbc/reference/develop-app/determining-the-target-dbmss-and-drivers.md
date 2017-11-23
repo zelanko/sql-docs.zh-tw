@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - target DBMSs and drivers in interoperability [ODBC]
 - interoperability [ODBC], target dbmss and drivers
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 76daa1e2753c91df7a016d4801ddea48bc285eb5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6be642b6c64da8193ba97de9df8b21ecb9e5a27c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>判斷目標 Dbms 和驅動程式
 考慮下一個問題是，為何，應用程式的目標 Dbms 哪些驅動程式是否可用，以及支援那些 Dbms？ 泛型應用程式通常是具備高度互通性，因為目標 Dbms 的問題，最適合用於自訂和垂直應用程式使用。 不過，目標驅動程式的問題適用於所有應用程式，因為驅動程式相當廣泛的速度、 品質、 功能支援和可用性。 此外，如果驅動程式與應用程式轉散發，則成本和可用性的授權計劃需要考量。  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  伺服器的資料庫，例如 Oracle、 DB2 和 SQL Server 提供完整的交易支援，支援許多並行使用者，而且包含豐富的 SQL。 它們更為昂貴，而且有較小的大小已安裝基底。 相反地，軟體價格通常會比較高，有些位移較小的潛在市場。  
   
  因此，您可以目標有時 Dbms 選為根據的應用程式和應用程式的目標市場所需的功能。 例如，訂單輸入系統的大型企業可能不目標桌面資料庫因為這些缺少足夠的交易支援。 適用於小型企業所設計的類似系統可能會排除大部分的伺服器資料庫，以成本為基礎。 與泛型應用程式的開發人員可能會同時為目標，但請避免使用伺服器資料庫中的進階的功能。
-

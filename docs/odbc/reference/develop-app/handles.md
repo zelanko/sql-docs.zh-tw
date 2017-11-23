@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - driver manager [ODBC], handles
 - handles [ODBC], about handles
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 499f62ecd8e053ef0776873dcdf4fe20cac1fa96
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05788f48f4a3fdb695fc3064023e52c2a3750c2e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="handles"></a>處理
 控制代碼是不透明，32 位元值，識別特定的項目。在 ODBC 中，這個項目可以是環境、 連接、 陳述式或描述元。 當應用程式呼叫**SQLAllocHandle**、 驅動程式管理員或驅動程式會建立指定類型的新項目和其控制代碼傳回至應用程式。 更新版本的應用程式會使用控制代碼，以便識別該項目時呼叫 ODBC 函數。 驅動程式與驅動程式管理員使用控點來尋找相關項目資訊。  
@@ -100,4 +98,3 @@ SQLCloseCursor(hstmtOrder);
 -   [描述項控制代碼](../../../odbc/reference/develop-app/descriptor-handles.md)  
   
 -   [狀態轉換](../../../odbc/reference/develop-app/state-transitions.md)
-

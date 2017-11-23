@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerStatement.execute (javal.lang.String.int[])
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerStatement.execute (javal.lang.String.int[])
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3fa9cc8796aeb415a58b8c4d65c2f346f57febb0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 50cb9686b883ac0a4d682e7ea28f1dba40257c7e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="execute-method-javalangstring-int"></a>execute 方法 (java.lang.String, int[])
 
@@ -60,11 +56,10 @@ A**字串**，其中包含 SQL 陳述式。
 ## <a name="remarks"></a>備註
 這個 execute 方法是由 java.sql.Statement 介面中的 execute 方法中指定。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 
 [執行方法 &#40;SQLServerStatement &#41;](./execute-method-sqlserverstatement.md)
 
 [SQLServerStatement 成員](./sqlserverstatement-members.md)
 
 [SQLServerStatement 類別](./sqlserverstatement-class.md)
-

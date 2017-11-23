@@ -19,12 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 097c3ab1c0827b9dd64bdb13a3c88a33cb0411e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a904cc21ff035388a15b9f985b81ec006aead7e6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-samples"></a>Analysis Services 範例
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 09/01/2017
   這裡使用的資訊來尋找範例資料庫和可協助您了解和測試您的 Analysis Services 方案的專案。
   
 
-## <a name="samples-on-github"></a>GitHub 上的範例
+## <a name="samples-on-github"></a>GitHub 範例
 
 [Analysis Services 的 Git 儲存機制](https://github.com/Microsoft/Analysis-Services)包含程式碼範例和社群專案。
 
@@ -51,4 +50,3 @@ ms.lasthandoff: 09/01/2017
 
   
   
-

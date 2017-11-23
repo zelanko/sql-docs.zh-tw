@@ -6,15 +6,20 @@ ms.author: anshrest
 manager: jhubbard
 ms.date: 05/08/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
+ms.workload: On Demand
+ms.openlocfilehash: 74d1111cab0b0e59ff13644e86ed33323a0185dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>疑難排解 SQL Server on Linux
 
@@ -119,6 +124,37 @@ ms.lasthandoff: 10/02/2017
 SQL 傾印 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
+   ```
+   
+## <a name="start-sql-server-in-minimal-configuration-or-in-single-user-mode"></a>最基本的組態，或在單一使用者模式啟動 SQL Server
+
+### <a name="start-sql-server-in-minimal-configuration-mode"></a>以最低組態模式啟動 SQL Server
+如果組態值設定 (如過度調配記憶體) 造成伺服器無法啟動，這就很有用。
+  
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -f
+   ```
+
+### <a name="start-sql-server-in-single-user-mode"></a>以單一使用者模式啟動 SQL Server
+在某些情況下，您可能要以單一使用者模式啟動 SQL Server 執行個體使用啟動選項-m。 例如，您可能想要變更伺服器組態選項，或復原損毀的 master 資料庫或其他系統資料庫。 例如，您可能想要變更伺服器組態選項或復原損毀的 master 資料庫或其他系統資料庫   
+
+以單一使用者模式啟動 SQL Server
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m
+   ```
+
+使用 SQLCMD 的單一使用者模式啟動 SQL Server
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
+   ```
+  
+> [!WARNING]  
+>  啟動 SQL Server on Linux，與 「 mssql 」 使用者若要避免未來啟動問題。 範例"sudo-u mssql /opt/mssql/bin/sqlservr [開機選項]" 
+
+如果您不小心與其他使用者啟動 SQL Server，您必須將 SQL Server 資料庫檔案的擁有權變更回之前啟動 SQL Server 與 systemd 'mssql' 使用者。 例如，若要變更 'mssql' 使用者 /var/opt/mssql 底下的所有資料庫檔案的擁有權，執行下列命令
+
+   ```bash
+   chown -R mssql:mssql /var/opt/mssql/
    ```
 
 ## <a name="common-issues"></a>常見的問題

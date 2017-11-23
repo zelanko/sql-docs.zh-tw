@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - data types [ODBC], transfer octet length
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e9a6655bde245348b3b70c3d29631be1b9caa60b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-octet-length"></a>傳輸八位元長度
 傳輸八位元長度的資料行是資料轉送到其預設 C 資料類型時，應用程式傳回的位元組數目上限。 字元資料傳輸八位元長度不包含 null 結束字元的空間。 資料行的傳輸八位元長度可能不同於資料儲存在資料來源上所需的位元組數目。  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_GUID|16 （使用 GUID 結構的大小）。|  
   
  [a] 如果驅動程式無法判斷變數類型的資料行或參數的長度，則會傳回 SQL_NO_TOTAL。
-

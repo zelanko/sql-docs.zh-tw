@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- asynchronous execution [ODBC]
+helpviewer_keywords: asynchronous execution [ODBC]
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 67943839b7e7425d22ab32251fd1993faf9552eb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1d4237eddad4847840d16440fbd4cb0940a61d40
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同步執行 （輪詢方法）
 ODBC 3.8 和 Windows 7 SDK 之前, 才被允許陳述式的函式的非同步作業。 如需詳細資訊，請參閱**非同步執行陳述式作業**稍後在本主題中。  
@@ -302,6 +299,5 @@ BOOL AsyncCommit ()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [執行 ODBC 陳述式](../../../odbc/reference/develop-app/executing-statements-odbc.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [執行陳述式 ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)

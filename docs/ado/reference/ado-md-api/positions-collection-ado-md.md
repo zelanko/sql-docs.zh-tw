@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Axis::Positions
 - Cell::Positions
 - Positions
-helpviewer_keywords:
-- Positions collection [ADO MD]
+helpviewer_keywords: Positions collection [ADO MD]
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e812608f75e885ce933c0aaf252b50e1c9735dcc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 934b68032c6bede8499d331e869edceff958f7f4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="positions-collection-ado-md"></a>位置集合 (ADO MD)
 包含[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)軸，定義某個點的物件。  
@@ -48,9 +45,8 @@ ms.lasthandoff: 09/09/2017
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料格集範例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [軸物件 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [資料格物件 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [位置物件 (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
-
+ [Position 物件 (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)

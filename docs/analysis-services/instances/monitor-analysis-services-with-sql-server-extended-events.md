@@ -21,17 +21,16 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7857edc132bbf7e82b749b752fafa72c78e9e890
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cec6da660c202dfde5a1169dd34397fca5c51207
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>使用 SQL Server 擴充事件監視 Analysis Services
   擴充事件 (*xEvent*) 是輕量型追蹤和效能監視系統，其使用的系統資源非常少，因此可成為在生產與測試伺服器上用來診斷問題的理想工具。 它也具備高擴充性且可設定，而且在 SQL Server 2016 中，可以更輕鬆地透過新的內建工具支援來使用。 在 SQL Server Management Studio 中與 Analysis Services 執行個體的連接上，您可以設定、執行和監視即時追蹤，類似於使用 SQL Server Profiler。 增加更好的工具應該能夠讓 xEvents 更合理地成為 SQL Server Profiler 的取代項目，並且在診斷資料庫引擎和 Analysis Services 工作負載的問題方式中建立更多的對稱。  
@@ -174,8 +173,7 @@ ms.lasthandoff: 09/01/2017
 |-|  
 |![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容](#bkmk_top)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  
   
   
-

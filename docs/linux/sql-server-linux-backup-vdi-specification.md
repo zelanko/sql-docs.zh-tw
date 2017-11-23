@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
+ms.openlocfilehash: a57fee5d37032e54ac13f57ee3cb7d9a20fad6c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b0fec674c130732a159598797ce332070dd6242e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI 用戶端 SDK 規格上的 SQL Server
 
@@ -114,7 +113,7 @@ ms.lasthandoff: 08/02/2017
 | | **逾時** | 這是以毫秒為單位的逾時。 若要避免逾時，使用無限值或任何負數的整數。
 | | **cfg** | 成功執行後，這包含選取之伺服器的組態。 如需詳細資訊，請參閱本文件稍後的 < 組態 >。
 
-| 傳回值 | 引數 | 설명
+| 傳回值 | 引數 | 說明
 | ----- | ----- | ------ |
 | |**NOERROR** | 傳回組態。
 | |**VD_E_ABORT** |SignalAbort 叫用。
@@ -164,7 +163,7 @@ ms.lasthandoff: 08/02/2017
    );
    ```
 
-| 參數 | 引數 | 설명
+| 參數 | 引數 | 說明
 | ----- | ----- | ------ |
 | |**逾時** |這是等候，以毫秒為單位的時間。 使用 INFINTE 無限期地等待。 使用 0 輪詢命令。 如果目前使用任何命令，會傳回 VD_E_TIMEOUT。 如果發生逾時，用戶端會決定下一個動作。
 | |**逾時** |這是等候，以毫秒為單位的時間。 使用 INFINTE 或負數值無限期地等待。 使用 0 輪詢命令。 如果沒有使用命令的逾時到期前，會傳回 VD_E_TIMEOUT。 如果發生逾時，用戶端會決定下一個動作。
@@ -195,14 +194,14 @@ ms.lasthandoff: 08/02/2017
    );
    ```
 
-| 參數 | 引數 | 설명
+| 參數 | 引數 | 說明
 | ----- | ----- | ------ |
 | |**pCmd** |這是所傳回 ClientVirtualDevice::GetCommand 命令的位址。
 | |**completionCode** |這是狀態碼表示的完成狀態。 這個參數就必須傳回所有命令。 傳回的程式碼應該就適用於正在執行的命令。 ERROR_SUCCESS 在所有情況下用於表示已成功執行的命令。 可能的程式碼的完整清單，請參閱該檔案，vdierror.h。 每個命令的一般狀態碼清單會出現在 「 命令 」 中，在本文件稍後。
 | |**bytesTransferred** |這是成功傳送的位元組數目。 這會傳回只命令讀取和寫入的資料傳輸。
-| |**position** |這是只有 GetPosition 命令的回應。
+| |**位置** |這是只有 GetPosition 命令的回應。
         
-| 傳回值 | 引數 | 설명
+| 傳回值 | 引數 | 說明
 | ----- | ----- | ------ |
 | |**NOERROR** |完成正確註明。
 | |**VD_E_INVALID** |pCmd 未作用中的命令。
@@ -245,7 +244,7 @@ ms.lasthandoff: 08/02/2017
 | ----- | ----- | ------ |
 | |無 |不適用
         
-| 傳回值 | 引數 | 설명
+| 傳回值 | 引數 | 說明
 | ----- | ----- | ------ |
 | |**NOERROR** |已成功關閉虛擬裝置設定時，都會傳回這個項目。
 | |**VD_E_PROTOCOL** |未不採取任何動作，因為無法開啟虛擬裝置設定。
@@ -293,12 +292,12 @@ ms.lasthandoff: 08/02/2017
    );
    ```
 
-| 參數 | 引數 | 설명
+| 參數 | 引數 | 說明
 | ----- | ----- | ------ |
 | |**pBuffer** |這是取自讀取或寫入命令緩衝區的位址。
 | |**BufferHandle** |會傳回緩衝區的唯一識別碼。
 
-| 傳回值 | 引數 | 설명
+| 傳回值 | 引數 | 說明
 | ----- | ----- | ------ |
 | |**NOERROR** |此函數已成功。
 | |**VD_E_PROTOCOL** |虛擬裝置設定不是目前開啟的。
@@ -330,6 +329,5 @@ ms.lasthandoff: 08/02/2017
 | |**VD_E_INVALID** |PpBuffer 是無效的控制代碼。
 
 **註解**必須特別小心正確通訊控點。 控制代碼是單一的虛擬裝置設定的本機。 共用的控制代碼的夥伴處理程序必須確保該控制代碼可用只能在原先取得緩衝區已設定的虛擬裝置的範圍內的緩衝區。
-
 
 

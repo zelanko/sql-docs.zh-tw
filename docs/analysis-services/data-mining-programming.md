@@ -14,22 +14,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data mining [Analysis Services], developer's guide
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: data mining [Analysis Services], developer's guide
 ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 93e263ee6ed7e8b3eb5bdf0f6596f5ddf636f199
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf88386fe9846ba1fee17f840a11ab635c050d01
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-programming"></a>資料採礦程式設計
   如果您發現 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的內建工具和檢視器不符合需求，就可以透過編碼自己的延伸模組，擴充 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的功能。 在這種方法中，您有兩種選擇：  
@@ -76,9 +73,8 @@ ms.lasthandoff: 09/01/2017
  [開發使用 Analysis Services 指令碼語言 &#40;ASSL &#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  介紹 XML for Analysis (XMLA) 和它的延伸模組。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 開發人員文件](../analysis-services/analysis-services-developer-documentation.md)   
  [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
-

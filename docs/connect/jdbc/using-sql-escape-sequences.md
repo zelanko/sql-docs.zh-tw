@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: df370e44bf2af1a41d926866ea0c2427cccffe59
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56610f09ea40942988e88202ac09ec6a3a5e48e0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-sql-escape-sequences"></a>使用 SQL 逸出序列
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -169,8 +167,7 @@ LIMIT <rows> [OFFSET <row offset>]
   
  逸出語法有兩個部分： \<*列*> 是必要項，指定要傳回的資料列數目。 位移和\<*資料列位移*> 為選擇性，指定開始傳回資料列之前要略過的資料列數目。 JDBC 驅動程式只支援必要的部分，方法是轉換查詢為使用 TOP，而非 LIMIT。 SQL Server 不支援 LIMIT 子句。 **JDBC 驅動程式不支援選擇性\<資料列位移 > 和驅動程式將會擲回例外狀況，則該值為使用**。  
   
-## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式搭配使用陳述式](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [搭配使用陳述式與 JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
-

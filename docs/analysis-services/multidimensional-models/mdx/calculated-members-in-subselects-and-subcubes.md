@@ -15,23 +15,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2a2dc70e91783283b2b57fe6737c558375bb47f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a06ba2933b415a28d53266e4c02f3768e5044866
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>子選擇和 Subcube 中的導出成員
   導出成員是值在執行階段從運算式計算而來的維度成員，它能用在子選擇和 Subcube 中以更精確地定義查詢的 Cubespace。  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>啟用子空間中的導出成員  
- **子查詢**中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROPMSMDSUBQUERIES**屬性[支援 XMLA 屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)定義的行為或允許使用導出的成員或導出的集合在子選擇或 subcube。 在本文的內容中，除非另有說明，否則子選擇同時指子選擇和 Subcube。  
+ **子查詢**中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROPMSMDSUBQUERIES**屬性[支援 XMLA 屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)定義的行為或允許使用導出的成員或導出的集合在子選擇或 subcube。 在本文的內容中，除非另有說明，否則子選擇同時指子選擇和 Subcube。  
   
  SubQueries 屬性允許下列值。  
   
@@ -135,7 +134,6 @@ Where [Measures].[Reseller Sales Amount]
 ## <a name="see-also"></a>請參閱＜  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [在查詢中的子選擇](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [支援的 XMLA 屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [支援的 XMLA 屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   
-

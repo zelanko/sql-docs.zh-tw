@@ -8,30 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SEQUENCE_TSQL
 - ALTER SEQUENCE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - sequence number object, altering
 - ALTER SEQUENCE statement
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 66960ed0ae27cb7ecbe2d39d0e30d1ec12dcc3cb
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: de7fd182be8fd79574c098a499a40a34d38aaf21
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -105,7 +102,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
  順序物件的擁有權可以傳送使用**ALTER AUTHORIZATION**陳述式。  
   
 ### <a name="audit"></a>稽核  
- 若要稽核**ALTER SEQUENCE**，監視**SEQUENCE&LT;**。  
+ 若要稽核**ALTER SEQUENCE**，監視**SEQUENCE<**。  
   
 ## <a name="examples"></a>範例  
  如需建立順序和使用的範例**NEXT VALUE FOR**函數產生序號，請參閱[序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
@@ -185,7 +182,7 @@ ALTER SEQUENCE Test.CountBy1
   
  擁有者發現**bigint**資料型別就會使用 8 個位元組，每次使用時。 **Int**使用 4 個位元組的資料類型已足夠。 但是順序物件的資料類型無法改變。 若要變更為**int**資料類型，擁有者必須卸除順序物件並重新建立具有正確的資料類型的物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [建立順序 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
  [卸除順序 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
  [下一個值 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
@@ -193,4 +190,3 @@ ALTER SEQUENCE Test.CountBy1
  [sp_sequence_get_range &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   
-

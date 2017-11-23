@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0d78c97adc2ee17c4da6d3f1224313360a798e3b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="getting-long-data"></a>取得長資料
 Dbms 定義*long 資料*為任何字元或二進位資料超過特定大小，例如 255 個字元。 這些資料可能會不夠小，儲存在單一緩衝區中，例如有數個數千個字元的部分描述。 不過，它可能太長，無法儲存在記憶體中，例如長文字文件或點陣圖。 因為這類資料無法儲存在單一緩衝區中，它會從使用組件中的驅動程式**SQLGetData**已經提取資料列中的其他資料之後。  
@@ -93,4 +91,3 @@ SQLCloseCursor(hstmt);
  有些驅動程式不會強制這些限制。 互通的應用程式應該是假設存在，或判斷哪一個限制不會強制執行藉由呼叫**SQLGetInfo** SQL_GETDATA_EXTENSIONS 選項。  
   
  如果應用程式不需要在字元或二進位資料行中的所有資料，它可以減少網路流量以 DBMS 架構驅動程式執行陳述式前，先設定 SQL_ATTR_MAX_LENGTH 陳述式屬性。 這會限制的任何字元或二進位資料行就會傳回的資料位元組數。 例如，假設資料行包含長文字文件。 瀏覽包含此資料行資料表的應用程式可能需要顯示每份文件的第一頁。 雖然這個陳述式屬性可以在模擬驅動程式中，沒有理由要執行這項操作。 特別是，如果應用程式想要截斷字元或二進位資料，它應該繫結小型緩衝區的資料行**SQLBindCol** ，讓驅動程式會截斷資料。
-

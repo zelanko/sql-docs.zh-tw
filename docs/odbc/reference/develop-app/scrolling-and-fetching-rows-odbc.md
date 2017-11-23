@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - scrolling rows [ODBC]
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9bf6624c5c5a814c1b290fec1d4f717e66dd5e46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5b5a9aefccf51cc4b3aac1aeba02c7878c6dceed
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>捲動和提取資料列 (ODBC)
 當使用可捲動資料指標時，應用程式呼叫**SQLFetchScroll**來定位資料指標與提取資料列。 **SQLFetchScroll**支援相對捲動 (下一步、 前，而相對 *n* 資料列)，絕對捲動 (first、 last、 與資料列 *n* )，以及定位的書籤。 *Sqlfetchscroll*和*FetchOffset*中的引數**SQLFetchScroll**指定哪些資料列集來擷取下, 圖所示。  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  ODBC 2 支援捲動。*x*驅動程式**SQLExtendedFetch**。 如需詳細資訊，請參閱[區塊資料指標，可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)中附錄 g： 驅動程式的指導方針回溯相容性。
-

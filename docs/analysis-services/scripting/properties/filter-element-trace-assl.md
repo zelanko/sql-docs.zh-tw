@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Filter Element (Trace)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Filter Element (Trace)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- filter
-helpviewer_keywords:
-- Filter element
+applies_to: SQL Server 2016 Preview
+f1_keywords: filter
+helpviewer_keywords: Filter element
 ms.assetid: 411a598e-3bb1-487b-9f37-cce4b57a67b4
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4c9782c112a6c46f6a6203ad186e792d68f55fcb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c9cfa3d6facaeb8ebfe371ed6c8e6b1ac2f62f6e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filter-element-trace-assl"></a>Filter 元素 (Trace) (ASSL)
   包含描述的 XML 文件片段[追蹤](../../../analysis-services/scripting/objects/trace-element-assl.md)篩選器。  
@@ -69,9 +63,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**篩選**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Trace>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [Traces 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/traces-element-assl.md)  
   
   
-

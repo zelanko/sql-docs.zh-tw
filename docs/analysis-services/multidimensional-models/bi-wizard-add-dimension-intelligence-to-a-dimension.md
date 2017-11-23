@@ -20,17 +20,16 @@ helpviewer_keywords:
 - dimension intelligence [Analysis Services]
 - Type property
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: da03582649052d24d22bbced266fbfcbc3f74cba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d1d167da0ab38819f016dd4a0c18c2e65ef42da1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI 精靈-將維度智慧加入維度中
   將維度智慧增強功能加入至 Cube 或維度，以指定維度的標準商務類型。 此增強功能同時也會指定維度屬性的對應類型。 用戶端應用程式在分析資料時可以使用這些類型規格。  
@@ -50,8 +49,7 @@ ms.lasthandoff: 09/01/2017
   
  例如，您要將維度智慧加入至帳戶維度。 在 [維度屬性] 中，選取 [帳戶]。 然後，如果維度有 [帳戶類型] 和 [帳戶描述] 屬性，請在 [包含] 資料行中，選取 [帳戶名稱] 和 [帳戶類型] 帳戶類型的核取方塊。 在 [維度屬性] 資料行中，將這些帳戶類型分別與維度內的 [帳戶描述] 和 [帳戶類型] 屬性產生關聯。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [使用商業智慧精靈定義時間智慧計算](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   
-

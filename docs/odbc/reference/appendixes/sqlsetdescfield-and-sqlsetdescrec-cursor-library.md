@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
 ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0589474986fcd4014a7856d5233e3e0eb35c6f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ba3d5db821bbbfa287efb811db0ca616b01df244
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField 和 SQLSetDescRec （資料指標程式庫）
 > [!IMPORTANT]  
@@ -73,4 +71,3 @@ ms.lasthandoff: 09/09/2017
  資料指標程式庫不支援資料指標開啟時，變更在 APD 或 ARD SQL_DESC_BIND_TYPE 欄位。 只會關閉資料指標之後，新的資料指標開啟之前，可以變更 SQL_DESC_BIND_TYPE 欄位。 資料指標程式庫支援的資料指標開啟時變更的唯一描述項欄位是 SQL_DESC_ARRAY_STATUS_PTR、 SQL_DESC_BIND_OFFSET_PTR、 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR、 SQL_DESC_OCTET_LENGTH_PTR 和 SQL_DESC_ROWS_PROCESSED_PTR。  
   
  資料指標程式庫不支援修改之後 ARD SQL_DESC_COUNT 欄位**SQLExtendedFetch**或**SQLFetchScroll**已經呼叫，並在關閉資料指標之前。
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7b9056b21f5f2b74956c4a94878a0b326bbd1335
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3673b168743e169ba7dd4a711ae5aa7224224201
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC 資料來源管理員
 Microsoft® ODBC 資料來源管理員會管理資料庫驅動程式和資料來源。 此應用程式位於 Windows 控制台中下**系統管理工具**。 Windows 8 中從開始，圖示名為**ODBC 資料來源**，而且在 64 位元作業系統上沒有 32 位元和 64 位元版本。  
@@ -37,7 +35,7 @@ Microsoft® ODBC 資料來源管理員會管理資料庫驅動程式和資料來
   
  此章節包含下列主題。  
   
--   [關於驅動程式與資料來源](../../odbc/admin/about-drivers-and-data-sources.md)  
+-   [關於驅動程式和資料來源](../../odbc/admin/about-drivers-and-data-sources.md)  
   
 -   [管理資料來源](../../odbc/admin/managing-data-sources.md)  
   
@@ -46,4 +44,3 @@ Microsoft® ODBC 資料來源管理員會管理資料庫驅動程式和資料來
 -   [設定 ODBC 連接共用選項](../../odbc/admin/setting-odbc-connection-pooling-options.md)  
   
 -   [檢視驅動程式](../../odbc/admin/viewing-drivers.md)
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access driver [ODBC], SQLProcedureColumns
 - SQLProcedureColumns function [ODBC], Access Driver
 ms.assetid: 34fee995-5848-4ecb-bda0-fc362a77b2d9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1eb6158d8d70aae635b00bcd78d844f4d1443b75
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9faec06a2337e7b3a2e93769486f40e006d9d7c8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlprocedurecolumns-access-driver"></a>SQLProcedureColumns （存取驅動程式）
 > [!NOTE]  
@@ -38,4 +36,3 @@ ms.lasthandoff: 09/09/2017
 |------------|--------------|  
 |COLUMN_TYPE|SQL_PARAM_INPUT 或 SQL_RESULT_COL|  
 |序數|這是傳回的結果集結尾的驅動程式專用資料行。 資料行的 SQL 類型是整數。|
-

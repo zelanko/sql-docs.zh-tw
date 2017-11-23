@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::CacheSize
-helpviewer_keywords:
-- CacheSize property [ADO]
+f1_keywords: Recordset15::CacheSize
+helpviewer_keywords: CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 57ac5e367e3dd9181dcdbde260b04917d30453ee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 29d5a36905a4de936dcac630adf97688d2b40855
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cachesize-property-ado"></a>CacheSize 屬性 (ADO)
 表示記錄數目[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)本機快取在記憶體中的物件。  
@@ -53,10 +49,9 @@ ms.lasthandoff: 09/09/2017
  如果**CacheSize**設為值大於一的巡覽方法 ([移動](../../../ado/reference/ado-api/move-method-ado.md)， [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) 可能會導致巡覽至刪除記錄，如果記錄已擷取之後，就會刪除。 之後的初始項提取，後續的刪除動作將不會反映在您的資料快取直到您嘗試存取的資料值從已刪除的資料列。 不過，設定**CacheSize**其中一個排除這個問題因為無法擷取已刪除的資料列。  
   
 ## <a name="applies-to"></a>適用於  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CacheSize 屬性範例 (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
  [CacheSize 屬性範例 （VC + +）](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
  [CacheSize 屬性範例 (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
-

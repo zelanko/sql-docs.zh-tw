@@ -27,17 +27,16 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a5b34600d0037fc0d2f5eaac20251718ae4ff217
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 53869c8e03d3b4c289872351e59579d49aa193e2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft 類神經網路演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法是機器學習服務之熱門且可調整的類神經網路架構實作。  此演算法的運作方式是，針對可預測屬性的每種可能狀態測試輸入屬性的每種可能狀態，並根據定型資料計算每種組合的機率。 您可以使用這些機率來進行分類或迴歸工作，依據一些輸入屬性預測結果。 類神經網路也可以用於關聯分析。  
@@ -104,4 +103,3 @@ ms.lasthandoff: 09/01/2017
  [Microsoft 羅吉斯迴歸演算法](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   
   
-

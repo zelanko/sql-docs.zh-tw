@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Table
-helpviewer_keywords:
-- Table object [ADOX]
+f1_keywords: Table
+helpviewer_keywords: Table object [ADOX]
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7d4e461d9f63180f1965a5bfdd3034c0dc9ba2d4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 198b59d624b2daa2e2451b8dbb61ae5868f7eb7d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="table-object-adox"></a>Table 物件 (ADOX)
 代表資料庫資料表中的資料行、 索引和索引鍵。  
@@ -65,9 +61,9 @@ Dim obj As New Table
   
  本章節包含下列主題。  
   
--   [資料表物件屬性、 方法和事件](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
+-   [Table 物件屬性、方法和事件](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [目錄 ActiveConnection 屬性範例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [資料行和資料表附加名稱屬性範例 (VB) 方法](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [連接關閉方法，資料表類型屬性範例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
@@ -77,5 +73,4 @@ Dim obj As New Table
  [索引集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
  [索引鍵集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [資料表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
-
+ [Tables 集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
