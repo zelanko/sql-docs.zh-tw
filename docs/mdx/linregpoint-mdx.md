@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LINREGPOINT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LinRegPoint function
+f1_keywords: LINREGPOINT
+dev_langs: kbMDX
+helpviewer_keywords: LinRegPoint function
 ms.assetid: 28298d7c-2b8a-4423-ae52-9c2d6f0f0064
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d16da44758873659145058f9e5dab30fae8ff05c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3a95fced157905334b80e2422fad82d3d96ec2ec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="linregpoint-mdx"></a>LinRegPoint (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,8 +67,7 @@ LinRegPoint(Slice_Expression_x, Set_Expression, Numeric_Expression_y [ ,Numeric_
 LinRegPoint([Measures].[Unit Sales],LastPeriods(10),[Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

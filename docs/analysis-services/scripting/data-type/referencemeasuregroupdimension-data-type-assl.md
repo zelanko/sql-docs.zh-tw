@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ReferenceMeasureGroupDimension Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ReferenceMeasureGroupDimension Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ReferenceMeasureGroupDimension
-helpviewer_keywords:
-- ReferenceMeasureGroupDimension data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: ReferenceMeasureGroupDimension
+helpviewer_keywords: ReferenceMeasureGroupDimension data type
 ms.assetid: 81f7b83e-71a3-4eab-b291-0500d05903dc
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8c14e0750b4f012a9229ee938b033a059070a2e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 202f688efbb94d7c3b3f72e5cce19cdc397c2099
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>ReferenceMeasureGroupDimension 資料類型 (ASSL)
   定義代表透過中繼維度與事實資料表間接相關之維度的衍生資料類型  (例如，Sales 量值群組可以參考透過 Customer 維度相關的 Geography 維度)。  
@@ -70,8 +64,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

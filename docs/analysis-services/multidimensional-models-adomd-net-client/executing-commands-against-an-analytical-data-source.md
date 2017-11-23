@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - AdomdCommand object
 - commands [ADOMD.NET]
 - ADOMD.NET, commands
 ms.assetid: 1a958e5f-fc18-480b-9706-fc44e3b1d534
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 450d3553509ee3358711705bbc3f5e8a10874820
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: fb114c28985fa0891b7b174c146b1a50730c7866
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="executing-commands-against-an-analytical-data-source"></a>針對分析資料來源執行命令
   建立分析資料來源的連接後，您可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 物件，針對該資料來源執行命令並從中傳回結果。 這些命令可以透過使用多維度運算式 (MDX)、資料採礦延伸模組 (DMX) 甚或是有限的 SQL 語法，來擷取資料。 此外，您可以使用 Analysis Services 指令碼語言 (ASSL) 命令修改基礎資料庫。  
@@ -60,4 +58,3 @@ ms.lasthandoff: 10/24/2017
  [!code-cs[Adomd.NetClient#ExecuteXMLAProcessCommand](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/executing-commands-again_1.cs)]  
   
   
-

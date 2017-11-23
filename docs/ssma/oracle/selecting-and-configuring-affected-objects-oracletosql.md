@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 8679e3f18c8352b1a10f110354af6dafc0c7e81c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 75fd62bd569709733c1915357057d9b8a88556e6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>選取並設定受影響的物件 (OracleToSQL)
 在此頁面中，您可以選取資料表和外部索引鍵，在其中變更應該比較當 SSMA 確認上一個步驟中所選擇的物件執行的結果。 此外，您可以自訂的驗證參數。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="sql"></a>Sql  
 SQL 索引標籤包含 「 建立資料表 」 選取的資料表的 SQL。  
   
-## <a name="data"></a>資料  
+## <a name="data"></a>data  
 資料索引標籤會顯示選取的資料表中存在的資料。  
   
 ## <a name="properties"></a>屬性  
@@ -114,9 +112,8 @@ SQL 索引標籤包含 「 建立資料表 」 選取的資料表的 SQL。
 ## <a name="next-step"></a>下一個步驟  
 [自訂呼叫順序 &#40; OracleToSQL &#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [完成測試案例準備 &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
 [執行測試案例 &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [測試移轉的資料庫物件 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

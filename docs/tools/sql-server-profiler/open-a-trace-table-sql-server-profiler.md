@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- opening trace tables
+helpviewer_keywords: opening trace tables
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92f5308ad7278bd29a04ad3c701fd083d506b6c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 22347d1a08d90be44526e390b31112e798a68352
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>開啟追蹤資料表 (SQL Server Profiler)
   此主題描述如何利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來開啟現有的追蹤資料表。  
@@ -38,9 +35,8 @@ ms.lasthandoff: 08/02/2017
 4.  從 **[資料表]** 清單中，選取資料表名稱。 按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視和分析使用 SQL Server Profiler 追蹤](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)   
+ [使用 SQL Server Profiler 檢視和分析追蹤](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)   
  [儲存追蹤及追蹤範本](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

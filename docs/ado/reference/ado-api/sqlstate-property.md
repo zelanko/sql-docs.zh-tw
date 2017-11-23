@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Error::GetSQLState
 - Error::SQLState
 - Error::get_SQLState
-helpviewer_keywords:
-- SQLState property
+helpviewer_keywords: SQLState property
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e6709e1e538db77b1aed5b281ffd826d90448daf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f65624cc9393a1ce676530102d41eb1655bcf79b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sqlstate-property"></a>SQLState 屬性
 表示 SQL 狀態給定[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  
@@ -44,7 +41,6 @@ ms.lasthandoff: 09/09/2017
 ## <a name="applies-to"></a>適用於  
  [Error 物件](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [描述、 HelpContext、 說明檔案、 NativeError、 數字、 來源和 SQLState 屬性範例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [描述、 HelpContext、 說明檔案、 NativeError、 數字、 來源和 SQLState 屬性範例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
-

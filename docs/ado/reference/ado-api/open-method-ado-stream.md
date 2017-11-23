@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_Open
 - _Stream::Open
-helpviewer_keywords:
-- Open method [ADO]
+helpviewer_keywords: Open method [ADO]
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2da6a07f58ab3cceb9ca9d661703603146c3e5f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dba50c39ff8c31154e52f8575a93acdf829df442
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-method-ado-stream"></a>Open 方法 （ADO 資料流）
 開啟[資料流](../../../ado/reference/ado-api/stream-object-ado.md)來操作二進位或文字資料流的物件。  
@@ -67,12 +64,11 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  我們已經討論過較舊版本，未指定的選項除了*來源*，您可以建立的執行個體**資料流**而不將它與基礎來源關聯的記憶體中的物件。 您可以動態地將資料加入資料流寫入二進位或文字資料**資料流**與[寫入](../../../ado/reference/ado-api/write-method.md)或[WriteText](../../../ado/reference/ado-api/writetext-method.md)，或藉由使用從檔案載入資料[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)。  
   
 ## <a name="applies-to"></a>適用於  
- [資料流物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Open 方法 （ADO 連接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open 方法 （ADO 資料錄）](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open 方法 （ADO 資料錄集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [OpenSchema 方法](../../../ado/reference/ado-api/openschema-method.md)   
  [SaveToFile 方法](../../../ado/reference/ado-api/savetofile-method.md)
-

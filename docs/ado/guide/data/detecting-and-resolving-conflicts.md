@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ac1ca3e4cd6e9047f6a3f47e8067efc6143ba5a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 00a768c70b1945bc573aaca6c48841e665780081
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="detecting-and-resolving-conflicts"></a>偵測並解決衝突
 如果您正在處理您的資料錄集即時模式中，會有更少的並行存取問題發生的機率。 相反地，如果您的應用程式會使用批次模式更新，可能有更佳可能發生在儲存編輯同一筆記錄的另一位使用者所做的變更之前，一位使用者將變更的記錄。 在這種情況下，您將會正常處理衝突的應用程式。 它可能是您要將更新傳送至伺服器的最後一個人員中 「 獲勝。 」 的希望 或者，您可能想要讓最新的使用者決定哪些更新應該優先藉由向他提供兩個衝突的值之間的選擇。  
@@ -123,6 +121,5 @@ ms.lasthandoff: 09/09/2017
   
  如需錯誤處理的詳細資訊，請參閱[錯誤處理](../../../ado/guide/data/error-handling.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [批次模式](../../../ado/guide/data/batch-mode.md)
-

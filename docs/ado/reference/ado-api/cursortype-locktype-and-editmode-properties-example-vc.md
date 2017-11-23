@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - LockType property [ADO], VC++ example
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2df2b16a42fa10058ee66ea978a3046b23f8bbc1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ac9f781cb1625b2dcf48fa0be8eb2e15b3759d58
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、 LockType 和 EditMode 屬性範例 （VC + +）
 此範例示範設定[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性之前開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它也會顯示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)在各種情況下的屬性。 若要執行此程序需要 EditModeOutput 函式。  
@@ -169,9 +166,8 @@ void PrintComError(_com_error &e) {
  **EditMode = adEditNone**  
 **之後編輯：**   
  **EditMode = adEditInProgress**   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CursorType 屬性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [EditMode 屬性](../../../ado/reference/ado-api/editmode-property.md)   
  [LockType 屬性 (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

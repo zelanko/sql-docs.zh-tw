@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - aggregations [Analysis Services], about aggregations
 - storage [Analysis Services], aggregations
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - storing data [Analysis Services], aggregations
 - aggregations [Analysis Services]
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: db3dce8f47d784b62a03524361edc9308dad68fc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8554ed91ce593803fe1043823aa0e97aa890043b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregations-and-aggregation-designs"></a>彙總和彙總設計
   <xref:Microsoft.AnalysisServices.AggregationDesign> 物件會定義可在多個資料分割之間共用的一組彙總定義。  
@@ -58,8 +56,7 @@ ms.lasthandoff: 09/01/2017
   
  雖然彙總是使用精靈所設計，但是除非已處理好所設計之彙總的資料分割，否則不會實際計算彙總。 建立彙總之後，如果 Cube 的結構變更，或是在 Cube 的來源資料表中加入或變更資料，則通常會需要檢閱 Cube 的彙總並再次處理該 Cube。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料分割儲存模式及處理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
   
   
-

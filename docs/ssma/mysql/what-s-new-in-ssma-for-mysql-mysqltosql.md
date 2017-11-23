@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 09/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
 ms.openlocfilehash: f895aee684d353451c263b136547c2c6ed7d976d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL (MySQLToSql) 中最新消息
 本主題列出每個版本中的 MySQL 變更 SSMA。 
@@ -183,4 +181,3 @@ SSMA for MySQL 的 2016 年版本包含下列變更:。
 -   已新增的支援同時移轉內部部署 SQL Server 和 Azure SQL。  
   
 -   **功能的快照集：**結構描述和資料移轉的 MySQL 資料表/索引/條件約束。
-

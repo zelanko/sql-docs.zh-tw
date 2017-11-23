@@ -5,25 +5,23 @@ ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
 ms.openlocfilehash: 79f9f01b8811f67f252c68192825d17084467da1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE (SybaseToSQL) 中最新消息
 本主題列出每個版本中的 SAP ASE (先前稱為 SSMA for Sybase) 變更 SSMA。 
@@ -206,6 +204,5 @@ May 2007 版的 SSMA for Sybase 包含下列變更：
 ## <a name="july-2006"></a>2006 年 7 月  
 2006 年 7 月版的 SSMA for Sybase 是最早的版本。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [開始使用 SSMA for Sybase &#40;SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
-

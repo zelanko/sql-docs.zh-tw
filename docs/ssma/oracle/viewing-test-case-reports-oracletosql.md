@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 4aa50b871b50988ecfbfa6c1defa8cc96bcdaa40
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 99ee650698adb2536ebdcadf480ae0ccefda2628
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>檢視測試案例報表 (OracleToSQL)
 測試案例報表會顯示測試驗證結果和一般測試的資訊。 如果測試失敗，也會顯示任何不相符的資料已經過驗證的物件的相關資訊。  
@@ -48,8 +46,7 @@ ms.lasthandoff: 08/02/2017
 **最終處理**  
 顯示做為執行狀態**成功**或**失敗**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [執行測試案例 &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [測試移轉的資料庫物件 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

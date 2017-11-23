@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - dimensions [Analysis Services], about dimensions
 - storage [Analysis Services], dimensions
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - storing data [Analysis Services], dimensions
 - storage [Analysis Services]
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: bb0acf4e658ca1184cfb7a019454b89e72221e46
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9320eebfc25964e5e751e2d93ffc8cb7503861e5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensions---introduction"></a>維度-簡介
   所有的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]維度都是根據資料表或檢視中的資料來源檢視中的資料行的屬性群組。 維度的存在與 Cube 無關，也可以用於多個 Cube 中、在單一 Cube 中使用多次，也可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之間連結。 存在與 Cube 無關的維度稱為資料庫維度，而 Cube 中的資料庫維度執行個體則稱為 Cube 維度。  
@@ -66,10 +64,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="security"></a>安全性  
  維度的所有從屬物件，包括階層、層級和成員，都是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的角色來保護。 維度安全性可套用至資料庫中使用該維度的所有 Cube，或只套用至特定 Cube。 如需有關維度安全性的詳細資訊，請參閱[授與權限維度 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [維度儲存](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
  [維度翻譯](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [可寫入維度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

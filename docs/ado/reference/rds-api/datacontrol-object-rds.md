@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - DataControl
 - RDS.DataControl
-helpviewer_keywords:
-- DataControl object [ADO]
+helpviewer_keywords: DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1cf3ffe486c22f7e0fce7bec243e182c459aedc0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 32e23b9cbd8cb74a43c6de48e006d4931835bcec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 物件 (RDS)
 將繫結的資料查詢[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)至一或多個控制項 （例如，文字方塊中，方格控制項或下拉式方塊） 顯示**資料錄集**網頁上的資料。  
@@ -114,11 +111,10 @@ ms.lasthandoff: 09/09/2017
   
  本章節包含下列主題。  
   
--   [DataControl 物件 (RDS) 屬性、 方法和事件](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
+-   [DataControl 物件 (RDS) 屬性、方法和事件](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DataControl 物件範例 (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
-
 
 
 

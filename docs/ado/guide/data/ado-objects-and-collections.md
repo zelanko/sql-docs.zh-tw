@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, objects and collections
+helpviewer_keywords: ADO, objects and collections
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a6796b6511c81dc2a4f9100f656478bef3711b1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ec860c8e4d3766b983e38589418637c1d4eb3cc9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-objects-and-collections"></a>ADO 物件和集合
 ADO 是由下列九個物件和四個集合所組成。  
@@ -46,6 +43,5 @@ ADO 是由下列九個物件和四個集合所組成。
 |**參數**集合|包含所有**參數**物件**命令**物件。|  
 |**錯誤**集合|包含所有**錯誤**為了回應單一提供者相關的失敗所建立的物件。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)
-

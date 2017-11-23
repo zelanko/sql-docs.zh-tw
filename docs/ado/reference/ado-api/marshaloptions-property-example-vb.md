@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- MarshalOptions property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: MarshalOptions property [ADO], Visual Basic example
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b45e39c0b12ecb961278604bdf56592d9bb651ad
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b07cbdba152dc4ebfa59ff9b4a8425e0a670ed0f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions 屬性範例 (VB)
 這個範例會使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)屬性來指定哪些資料列會傳送至伺服器，所有資料列或只修改資料列。  
@@ -139,7 +135,6 @@ End Sub
 'EndMarshalOptionsVB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MarshalOptions 屬性 (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)
-

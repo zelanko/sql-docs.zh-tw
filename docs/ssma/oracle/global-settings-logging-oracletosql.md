@@ -5,29 +5,27 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: d1e9cd8ed1c7014ccaaee5ee477f40d81c66a631
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: df359be112e86522d35e27d8cf49a4515d8745d6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-logging-oracletosql"></a>全域設定 （記錄） (OracleToSQL)
 使用**通用設定**對話方塊來指定 SSMA 的記錄設定。 一般而言，您需要在使用產品支援時，才變更這些設定。  
   
 若要存取此對話方塊，請在**工具**功能表上，選取**通用設定**，然後按一下 **記錄**在左窗格底部的按鈕。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **訊息層級**  
 底下的下列選項可用**訊息層級**:  
   
@@ -65,4 +63,3 @@ ms.lasthandoff: 08/02/2017
 **記錄檔的總數**  
 當一個記錄檔填滿時，SSMA 會重新命名記錄檔，並啟動新。 使用此設定，指定要保留的記錄檔的數目上限。 最小值為 2。  
   
-

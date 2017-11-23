@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS programming model [ADO]
+helpviewer_keywords: RDS programming model [ADO]
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b78670ca568ef3c2cf8df89e8ed7bbfdbeccdcc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d99d092b91ed150a3ad9163f2c4f7e513554e9f4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="basic-rds-programming-model"></a>基本 RDS 程式設計模型
 > [!IMPORTANT]
@@ -51,12 +48,11 @@ ms.lasthandoff: 09/09/2017
   
  最後，如果您需要的地方之間，ADO 現在支援自訂的預設伺服器程式的行為。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [在詳細資料的 RDS 程式設計模型](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
  [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 

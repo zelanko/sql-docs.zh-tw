@@ -8,26 +8,22 @@ ms.service:
 ms.component: data-mining
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- data mining [Analysis Services], designing
+applies_to: SQL Server 2016
+helpviewer_keywords: data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d97b1f305fe41cc1bf67113cdad38fbe14f7f15a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>資料採礦教學課程 (Analysis Services)
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可讓您使用精靈和整合式的視覺效果，輕鬆地建立資料採礦方案。 特別是當您不熟悉機器學習服務時， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的工具可以輕鬆地設計、定型和瀏覽資料採礦模型。 模型中的資料可以儲存在 Cube、關聯式資料庫或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援的任何其他來源。 建立模型之後，您可以將它放到實際執行環境，方法是存取模型以使用預測多個用戶端建立預測，包括 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 ASP.NET。  
@@ -50,5 +46,4 @@ ms.lasthandoff: 09/01/2017
   
   
   
-
 

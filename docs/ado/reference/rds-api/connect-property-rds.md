@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Connect property [ADO]
+helpviewer_keywords: Connect property [ADO]
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bb6a9a33267b70f83eb9a3c559ec24e5e1427af7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46668b0b90099994724e39dc5f9d911431e6fd85
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connect-property-rds"></a>屬性 (RDS) 連接
 表示要從中執行的查詢和更新作業的資料庫名稱。  
@@ -57,11 +54,10 @@ Run time: DataControl.Connect = "ConnectionString"
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [連接屬性的範例 (VBScript)](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
  [查詢方法 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [重新整理方法 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
  [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
 
 

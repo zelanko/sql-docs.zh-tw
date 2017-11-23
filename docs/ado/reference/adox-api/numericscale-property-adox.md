@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - _Column::NumericScale
 - _Column::put_NumericScale
 - _Column::get_NumericScale
-helpviewer_keywords:
-- NumericScale property [ADOX]
+helpviewer_keywords: NumericScale property [ADOX]
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 719c0164cd33f3d88f07c77414f7105e17b2477d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5f943223be304de56e52f54510bd6d27bac6d15
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="numericscale-property-adox"></a>NumericScale 屬性 (ADOX)
 指出資料行中的數字值的小數位數。  
@@ -46,9 +43,8 @@ ms.lasthandoff: 09/09/2017
  **NumericScale**是唯讀的[資料行](../../../ado/reference/adox-api/column-object-adox.md)物件已經附加至集合。  
   
 ## <a name="applies-to"></a>適用於  
- [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADOX 程式碼範例： NumericScale 和有效位數屬性範例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
- [型別屬性 （資料行） (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
-
+ [Type 屬性 (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

@@ -5,27 +5,25 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
+ms.openlocfilehash: 575d81b6ccde860ba03cafa1a511f9db692ce362
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b1d338f18a6394370d66df9b457af742215b456d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-migration-report--oracletosql"></a>資料移轉報告 (OracleToSQL)
 **資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **狀態**  
 顯示來源的資料移轉到目標資料庫的狀態。  
   
@@ -50,4 +48,3 @@ ms.lasthandoff: 08/02/2017
 **儲存報表**  
 將儲存至報表。CSV （逗號分隔值） 檔案，可以使用 Microsoft Excel 中檢查。  
   
-

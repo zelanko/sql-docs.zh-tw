@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- CALCULATIONPASSVALUE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CalculationPassValue function
+f1_keywords: CALCULATIONPASSVALUE
+dev_langs: kbMDX
+helpviewer_keywords: CalculationPassValue function
 ms.assetid: 1b4012cb-c8c7-441a-bb9c-59430703b189
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 749d3329c4036616c937158f80e818c90a09c3ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2eb9e6cf8f043427238c150b03ce2c58defb1904
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,10 +67,9 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 > [!NOTE]  
 >  只有系統管理員可以使用**CalculationPassValue** MDX 指令碼內的函式。 如果在不具有系統管理員權限的角色內容中，執行包含此函數的 MDX 指令碼，就會發生錯誤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CalculationCurrentPass &#40;MDX &#41;](../mdx/calculationcurrentpass-mdx.md)   
  [IIf &#40;MDX &#41;](../mdx/iif-mdx.md)   
  [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

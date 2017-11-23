@@ -20,17 +20,16 @@ helpviewer_keywords:
 - data source views [Analysis Services], schema updates
 - data sources [Analysis Services], schema updates
 ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9d7e5aebbe0777d35918c8c68cd23767a8f02c0c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b1913d392467f4ba78976d9ab73919e7ac06051
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>管理對資料來源檢視及資料來源所做的變更
   當結構描述產生精靈重新執行時，會重新使用它在原始產生所使用的相同資料來源和資料來源檢視。 如果您加入資料來源或資料來源檢視，精靈不會使用它。 如果您在初始產生之後刪除原始資料來源或資料來源檢視，您必須從頭開始執行精靈。 精靈中所有先前的設定也會被刪除。 下次您執行結構描述產生精靈時，對於基礎資料庫中任何繫結到已刪除之資料來源或資料來源檢視的現有物件，將視同使用者建立的物件來處理。  
@@ -43,4 +42,3 @@ ms.lasthandoff: 09/01/2017
  [了解累加式產生](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)  
   
   
-

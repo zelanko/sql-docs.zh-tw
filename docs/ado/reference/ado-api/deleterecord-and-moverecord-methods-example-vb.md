@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 681e7990c2b93364e9792937cb68e0847de6f303
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d8bc240a84112df29e3b7fe85d16f721c0da5a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord 和 MoveRecord 方法範例 (VB)
 此範例示範如何複製、 移動、 編輯和刪除發行到 Web 資料夾之文字檔的內容。 其他使用屬性和方法包含[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)， [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)，[來源](../../../ado/reference/ado-api/source-property-ado-record.md)，和[排清](../../../ado/reference/ado-api/flush-method-ado.md)。  
@@ -156,11 +153,10 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DeleteRecord 方法 (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
  [Flush 方法 (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [GetChildren 方法 (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
  [MoveRecord 方法 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [ParentURL 屬性 (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
- [來源屬性 （ADO 資料錄）](../../../ado/reference/ado-api/source-property-ado-record.md)
-
+ [Source 屬性 (ADO 記錄)](../../../ado/reference/ado-api/source-property-ado-record.md)

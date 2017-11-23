@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - connection strings [Database Engine], TCP/IP
 - aliases [SQL Server], TCP/IP
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2490a7bd74e31b317c30b14835153f255dcad992
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8611848c01d854e373e3e945e9d7c6d69df0c2ce
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>使用 TCP IP 建立有效的連接字串
   若要使用 TCP/IP 建立有效的連接字串，您必須：  
@@ -173,10 +171,9 @@ Server             .\<instancename>
 > [!NOTE]  
 >  如需指定網路通訊協定作為 **sqlcmd** 參數的資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：使用 sqlcmd.exe 連接到 Database Engine＞。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [使用共用記憶體通訊協定建立有效的連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [建立有效的連接字串使用具名的管道](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
  [選擇網路通訊協定](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   
-

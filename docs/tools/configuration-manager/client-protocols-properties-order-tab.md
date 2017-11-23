@@ -5,26 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- client protocols [SQL Server]
+helpviewer_keywords: client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2c3e253853ebcaec3217634605e573d9a96bd063
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e92bac20c6f709964dabf08710c2b18b5db0c1e4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# 用戶端通訊協定屬性 (順序索引標籤)
+# <a name="client-protocols-properties-order-tab"></a>用戶端通訊協定屬性 (順序索引標籤)
   您可以使用 [用戶端通訊協定內容] 對話方塊上的 [順序] 頁面來檢視與啟用用戶端通訊協定。  
   
  按一下通訊協定，然後按一下 [啟用] 或 [停用]，將選取的通訊協定移到 [停用通訊協定] 或 [啟用通訊協定] 清單中。  
@@ -34,7 +31,7 @@ ms.lasthandoff: 09/28/2017
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient 不會使用這些設定。 .NET SqlClient 的通訊協定順序最先是 TCP，接著是具名管道，您無法變更此順序。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **停用的通訊協定**  
  列出已安裝但目前未使用的通訊協定。  
   
@@ -59,8 +56,7 @@ ms.lasthandoff: 09/28/2017
 > [!NOTE]  
 >  若通訊協定是以前置詞或連接字串的一部份來指定，則只會嘗試使用指定的通訊協定。  
   
-## 另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [選擇網路通訊協定](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   
-

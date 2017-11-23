@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- power-view
+ms.technology: power-view
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: abdb6547c70842f0aa223aee2d35755a2a22e69b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 901098e2a656d178932b9b706b70d559bef4f215
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>設定 Power Pivot 及部署方案 (SharePoint 2013)
   本主題將描述如何部署和設定 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 功能的中介層增強功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資源庫、排程資料重新整理、管理儀表板和資料提供者。 請執行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具** 以完成下列作業：  
@@ -151,4 +149,3 @@ ms.lasthandoff: 09/01/2017
  如需組態工具的詳細資訊，請參閱 [PowerPivot 組態工具](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   
   
-

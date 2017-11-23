@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- SaveOptionsEnum
-helpviewer_keywords:
-- SaveOptionsEnum enumeration [ADO]
+f1_keywords: SaveOptionsEnum
+helpviewer_keywords: SaveOptionsEnum enumeration [ADO]
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f3d5a20bf9fbee275d55b01a8738b3b18a093cdb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 97f3d76d9fed33de5ba79d84a062891316c70ae0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 指定檔案是否要建立或覆寫時從儲存[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。 值可以是**adSaveCreateNotExist**或**adSaveCreateOverWrite**...  
@@ -43,4 +39,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>適用於  
  [SaveToFile 方法](../../../ado/reference/ado-api/savetofile-method.md)
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Index
-helpviewer_keywords:
-- Index object [ADOX]
+f1_keywords: Index
+helpviewer_keywords: Index object [ADOX]
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 584ab3c0bb5bb4616df21598d36da1b6e729d9fa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2fe0916836a44ecb61d1d606a9c894ac22342d57
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="index-object-adox"></a>索引物件 (ADOX)
 代表資料庫資料表中的索引。  
@@ -67,14 +63,13 @@ Dim obj As New Index
   
  本章節包含下列主題。  
   
--   [索引物件的屬性、 方法和事件](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
+-   [Index 物件屬性、方法和事件](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [索引附加方法範例 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [IndexNulls 屬性範例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)   
  [PrimaryKey 和獨有的內容範例 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [SortOrder 屬性範例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [資料行集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [索引集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
- [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

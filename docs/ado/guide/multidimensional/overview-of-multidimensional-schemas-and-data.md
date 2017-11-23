@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- multidimensional schemas and data
+helpviewer_keywords: multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 49c9f724fcd82de499ecb88a464c4c5ea3980b2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf3e8d6bebd5860df9f52236eecf4d1f287a8f9d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多維度結構描述和資料的概觀
 ## <a name="understanding-multidimensional-schemas"></a>了解多維度結構描述  
@@ -91,10 +88,9 @@ Hamburg, Munich, Stuttgart}
   
  此範例也會說明其他特性： 週的階層層級年週的某些成員不會出現在年度季階層的任何層級。 因此，階層不需要包含維度的所有成員。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO MD 物件模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO （多維度） (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [使用 ADO MD 程式設計](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [使用 ADO 搭配 ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [使用多維度資料](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
-

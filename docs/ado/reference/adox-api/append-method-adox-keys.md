@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Keys::Append
 - Keys::raw_Append
-helpviewer_keywords:
-- Append method [ADOX]
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eead7a8702c927e13b11cb75f2a5a3881a2065fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5821bdda7ae3276d8da83267de45ba46ad6bfbb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-adox-keys"></a>Append 方法 （ADOX 索引鍵）
 將新[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件[金鑰](../../../ado/reference/adox-api/keys-collection-adox.md)集合。  
@@ -61,9 +58,9 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  *資料行*參數可以採用資料行的名稱或資料行名稱的陣列。  
   
 ## <a name="applies-to"></a>適用於  
- [索引鍵集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Keys 集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [索引鍵附加方法、 金鑰類型、 RelatedColumn、 RelatedTable 和 UpdateRule 屬性範例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Append 方法 （ADOX 資料行）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 方法 （ADOX 群組）](../../../ado/reference/adox-api/append-method-adox-groups.md)   
@@ -71,5 +68,4 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  [Append 方法 （ADOX 程序）](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append 方法 （ADOX 資料表）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append 方法 （ADOX 使用者）](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append 方法 （ADOX 檢視）](../../../ado/reference/adox-api/append-method-adox-views.md)
-
+ [Append 方法 (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)

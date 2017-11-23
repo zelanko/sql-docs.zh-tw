@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f554b4d330054076042e94948ee8851ae1ecc90b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8745b8f4711c245cfab83329f897b8fef0d8610b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 中的新 GUI 功能 (DB2ToSQL)
 本章節描述 SSMA 使用者介面的新功能。  
@@ -132,4 +130,3 @@ GUI 物件記錄可讓您下列好處導覽物件時：
 ### <a name="advanced-search"></a>進階搜尋  
 若要開啟進階搜尋] 對話方塊的 [編輯] 功能表點尋找，然後按一下 [進階搜尋。 在對話方塊中您可以尋找使用模式的任何物件。 您可以選擇在對話方塊頂端搜尋區域和物件的類別。  
   
-

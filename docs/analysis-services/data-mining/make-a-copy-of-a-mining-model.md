@@ -19,17 +19,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
 - copying mining models
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ef19138a03ca98b74cfb53703219f6db15875dec
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aaa773a470cb0c2fea7929e3e6b331cfb0e7ed31
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>建立採礦模型的複本
   當您想要快速建立數個以相同資料為基礎的採礦模型時，建立採礦模型的複本很有用。 複製模型之後，可以藉由變更參數或新增篩選來編輯新複本。  
@@ -66,10 +65,9 @@ ms.lasthandoff: 09/01/2017
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [從採礦模型刪除篩選](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
+ [從採礦模型中刪除篩選](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   
-

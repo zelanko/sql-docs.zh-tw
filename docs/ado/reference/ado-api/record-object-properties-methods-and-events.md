@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Record object [ADO], members
+helpviewer_keywords: Record object [ADO], members
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3afc96d74999659ef6539930bf4c676a3cb525d6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 087b6ad1620ae26d8651159125774ad4dafb41e5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="record-object-properties-methods-and-events"></a>記錄物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>/ 屬性的集合  
@@ -41,7 +38,7 @@ ms.lasthandoff: 09/09/2017
   
  [RecordType 屬性](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
- [來源屬性 （ADO 資料錄）](../../../ado/reference/ado-api/source-property-ado-record.md)  
+ [Source 屬性 (ADO 記錄)](../../../ado/reference/ado-api/source-property-ado-record.md)  
   
  [State 屬性](../../../ado/reference/ado-api/state-property-ado.md)  
   
@@ -58,11 +55,10 @@ ms.lasthandoff: 09/09/2017
   
  [MoveRecord 方法](../../../ado/reference/ado-api/moverecord-method-ado.md)  
   
- [Open 方法 （ADO 資料錄）](../../../ado/reference/ado-api/open-method-ado-record.md)  
+ [Open 方法 (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
 ## <a name="events"></a>事件  
  無。  
   
-## <a name="see-also"></a>另請參閱  
- [記錄物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

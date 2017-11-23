@@ -32,17 +32,16 @@ helpviewer_keywords:
 - coding [Data Mining]
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 46dc639d30a60ef8f332c340e3ffd685c8f4f72f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d29618af2bb8ffe0a7e809388f32ed5987b67aea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路使用「多層認知」(Multilayer Perceptron) 網路，亦稱為「倒傳播差異規則」(Back-Propagated Delta Rule) 網路，它包含最多 3 層神經 (Neuron) 或「認知器」(Perceptron)。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  
@@ -212,7 +211,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>請參閱＜  
  [Microsoft 類神經網路演算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [類神經網路模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [類神經網路模型查詢範例](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 53dd8aa711b2d9ba4a565f86ee66572e523fa78a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d0d90aea6725bd45cded022791699cf910b7bdd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>為 Analysis Services 執行個體註冊 SPN
   使用 Kerberos 相互驗證用戶端和服務識別時，服務主要名稱 (SPN) 可唯一識別在 Active Directory 網域中的服務執行個體。 SPN 與服務執行個體的執行登入帳戶有關。  
@@ -186,4 +185,3 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  [設定 Kerberos 驗證適用於 SharePoint 2010 產品 （白皮書）](http://technet.microsoft.com/library/ff829837.aspx)  
   
   
-

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d76e30b140438b09b49cfe43e5b7781c078f5eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4a48daba17ddb4695f362414037615789ce8509b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 主控台 (DB2ToSQL) 中的命令列選項
 Microsoft 為您提供執行及控制 SSMA 活動組強固命令列選項。 這可確保各節詳細說明相同。  
@@ -179,4 +177,3 @@ SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40; DB2To
   
 3.  如需疑難排解主控台中的問題，請參閱[疑難排解 &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md)。  
   
-

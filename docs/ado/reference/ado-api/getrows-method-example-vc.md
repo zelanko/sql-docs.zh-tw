@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Getrows method [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Getrows method [ADO], VC++ example
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d3349fd15c62e500a4ed7bd2add37202985c529
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fe0d02643552e29f2fde5b0a85b4aaceeb2bbed8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getrows-method-example-vc"></a>GetRows 方法範例 （VC + +）
 這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法來擷取指定的數目的資料列從[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，並使用產生的資料填入陣列。 **GetRows**方法會傳回所需的資料列數少於兩個案例中： 如果任一個[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已達到，或如果**GetRows**嘗試擷取記錄其他使用者刪除。 此函數會傳回**False**第二種情況發生時，才。 若要執行此程序需要 GetRowsOK 函式。  
@@ -251,8 +247,7 @@ Paolo Accorti, 8/27/1992
 Pedro Afonso, 12/24/1990  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [BOF，EOF 屬性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

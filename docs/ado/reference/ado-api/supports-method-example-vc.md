@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Supports method [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Supports method [ADO], VC++ example
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bc6fd5a18070a92669d2db00cabbabc01f106e05
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b6390788e04763fe684dbee801e01024b3c559f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supports-method-example-vc"></a>支援的方法範例 （VC + +）
 這個範例會使用[支援](../../../ado/reference/ado-api/supports-method.md)開啟具有不同的資料指標類型的方法，以顯示一個資料錄集所支援的選項。 若要執行這個範例需要 DisplaySupport 函式。  
@@ -233,7 +229,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [支援方法](../../../ado/reference/ado-api/supports-method.md)
-
+ [Supports 方法](../../../ado/reference/ado-api/supports-method.md)

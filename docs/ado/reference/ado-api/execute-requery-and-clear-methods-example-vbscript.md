@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Execute method [ADO], VBScript example
 - Clear method [ADO], VBScript example
 - Requery method [ADO], VBScript example
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 24e117e7ef566283f867f8e49e06b085e03882bc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 600deafb40aefc016f4f3e028321302be0ad4219
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>執行，請重新查詢，並清除方法範例 (VBScript)
 這個範例會示範**Execute**方法執行時同時從[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 它也會使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法來擷取目前資料中的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，而[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法，以清除的內容[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 ExecuteCommand 和 PrintOutput 程序不需要執行這個程序。  
@@ -185,7 +182,7 @@ BODY {
 <!-- EndExecuteVBS -->  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Clear 方法 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
@@ -195,4 +192,3 @@ BODY {
  [Execute 方法 （ADO 連接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Requery 方法](../../../ado/reference/ado-api/requery-method.md)
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5bce98fd15ac82cf9492b4f4454dba36146dd46f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65f8a1caba2f709e4583613ced4d6aa03b2d6bf1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="operation-of-parameterized-commands"></a>參數化命令的作業
 如果您正在使用大量子**資料錄集**，特別是相較於父代的大小**資料錄集**，但是需要存取只有少數子章節，可能會發現使用更有效率參數化的命令。  
@@ -96,8 +94,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 > [!NOTE]
 >  當使用 WHERE 子句，參數可以不使用 SQL 資料類型為 text、 ntext 和 image 或會導致錯誤，包含以下的描述： `Invalid operator for data type`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
  [型式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [在一般的圖形命令](../../../ado/guide/data/shape-commands-in-general.md)
-
+ [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

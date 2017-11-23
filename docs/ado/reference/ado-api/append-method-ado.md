@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- _DynaCollection::Append
-helpviewer_keywords:
-- Append method [ADO]
+f1_keywords: _DynaCollection::Append
+helpviewer_keywords: Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 87c05e88325d3e00061ee57af80be65d9a7508ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db5dc5c8b6d40873ce333aa2987d04c046c222b1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 將物件附加至集合。 如果集合是[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)，新[欄位](../../../ado/reference/ado-api/field-object.md)可以先建立物件，會附加至集合。  
@@ -95,10 +91,10 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
 ## <a name="applies-to"></a>適用於  
   
-- [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
-- [參數集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+- [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+- [Parameters 集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [附加和 CreateParameter 方法範例 (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [附加和 CreateParameter 方法範例 （VC + +）](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
@@ -106,4 +102,3 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  [Delete 方法 （ADO 參數集合）](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Delete 方法 （ADO 資料錄集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Update 方法](../../../ado/reference/ado-api/update-method.md)
-

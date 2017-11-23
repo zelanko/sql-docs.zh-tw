@@ -25,17 +25,16 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 1c4d0c9166a850d9860e2844403bb7da925f8193
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ae50c18dab1894b42e209d2a37762e0fa9e0d57
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="feature-selection-data-mining"></a>特徵選取 (資料採礦)
   *特徵選取* 是機器學習中很重要的一部分。 特徵選取指的是減少處理序和分析的輸入，或尋找最有意義之輸入的過程。 相關詞彙： *特徵工程設計* (或 *功能擷取*)，指的是從現有資料擷取實用資訊或功能的過程。  
@@ -140,8 +139,7 @@ ms.lasthandoff: 09/01/2017
   
  除了這些特徵選取方法之外，您也可以透過在模型上設定「模型旗標」，或透過在結構上設定「散發旗標」，來改進演算法識別或提升有意義屬性的能力。 如需這些概念的詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md) 和[資料行散發 &#40;資料採礦&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [自訂採礦模型和結構](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   
-

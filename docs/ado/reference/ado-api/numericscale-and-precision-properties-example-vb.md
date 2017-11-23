@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - NumericScale property [ADO], Visual Basic example
 - Precision property [ADO], Visual Basic example
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e2c60b7301ea2b6bf96b2624c4ad62299157c87c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 51c7b958564503382a89c13b39545d4b6e3d0821
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale 和有效位數屬性範例 (VB)
 這個範例會使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[精確度](../../../ado/reference/ado-api/precision-property-ado.md)要顯示的數值小數位數和有效位數中的欄位屬性***折扣***資料表***Pubs***資料庫。  
@@ -81,9 +78,8 @@ End Sub
 'EndNumericScaleVB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
  [NumericScale 屬性 (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [參數物件](../../../ado/reference/ado-api/parameter-object.md)   
- [有效位數屬性 (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
-
+ [Precision 屬性 (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

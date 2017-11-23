@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 86e65d3db90f2cf30f8fe4ae7288819ac4745e54
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3d7e13fb81b3c59d348f9ccb8e4933683cf96f0b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支援的驗證方法
   從用戶端應用程式到 Analysis Services 執行個體的連接需要 Windows 驗證 (整合式)。 您可以使用下列任何一種方法來提供 Windows 使用者識別：  
@@ -88,7 +87,7 @@ ms.lasthandoff: 09/01/2017
   
  如需預存認證的詳細資訊，請參閱[建立、修改及刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [Use Excel Services with Secure Store Service in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869) (在 SharePoint Server 2013 中使用 Excel Services 搭配 Secure Store Service)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [使用模擬搭配傳輸安全性](http://go.microsoft.com/fwlink/?LinkId=311727)   
  [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [設定 Analysis Services 進行 Kerberos 限制委派](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
@@ -96,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

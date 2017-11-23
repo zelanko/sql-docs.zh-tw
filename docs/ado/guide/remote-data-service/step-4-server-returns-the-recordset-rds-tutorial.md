@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS tutorial [ADO], server returns Recordset
+helpviewer_keywords: RDS tutorial [ADO], server returns Recordset
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b607faa566bf584e1a18acb2ed6970f2e45d4404
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1cc20f813b87432ede6f0ecf98cd1dd41bd526fd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>步驟 4： 伺服器傳回的資料錄集 （RDS 教學課程）
 > [!IMPORTANT]
@@ -45,7 +42,6 @@ Sub RDSTutorial4()
 ...  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [步驟 5: DataControl 已進行使用 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
  [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

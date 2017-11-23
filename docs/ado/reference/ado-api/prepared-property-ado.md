@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Command15::Prepared
-helpviewer_keywords:
-- Prepared property [ADO]
+f1_keywords: Command15::Prepared
+helpviewer_keywords: Prepared property [ADO]
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 62f01b807c56065c61e5cf8650c15f7210df6b7a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f47836c824401e5ca49edd5eac33c2f6f6393993
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prepared-property-ado"></a>已備妥的屬性 (ADO)
 指出是否要儲存已編譯的版本[命令](../../../ado/reference/ado-api/command-object-ado.md)之前執行。  
@@ -44,9 +40,8 @@ ms.lasthandoff: 09/09/2017
  如果提供者不支援命令準備，它就可能會傳回錯誤，當這個屬性設定為**True**。 如果提供者不會傳回錯誤，它只會忽略準備的命令並將設定要求**已準備**屬性**False**。  
   
 ## <a name="applies-to"></a>適用於  
- [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [已備妥的屬性範例 (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
- [已備妥的屬性範例 （VC + +）](../../../ado/reference/ado-api/prepared-property-example-vc.md)   
-
+ [Prepared 屬性範例 (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

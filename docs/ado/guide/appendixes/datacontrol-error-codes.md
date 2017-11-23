@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - errors [ADO], DataControl
 - DataControl errors [ADO]
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54dcd3721781ccb2889d88c2545d8bb3630cb7bc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa52b8ec38ce23c8916bb885714d45b0fe6c374e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 物件錯誤代碼
 下表列出[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件錯誤代碼。 正數低的兩個位元組十進位轉譯，就會顯示完整的錯誤程式碼和十六進位值負的十進位轉譯。
@@ -54,6 +52,5 @@ ms.lasthandoff: 09/09/2017
 |**IDS_UpdatesFailed**|4098-2146824190 0x800A1002|無法更新資料庫。|
 |**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|DataControl **URL**屬性需要系統檔案 Urlmon.dll，找不到。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-

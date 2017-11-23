@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Type property [field] [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Type property [field] [ADO], Visual Basic example
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d52947b4401e7344af7b3edceea65b0b483a06ab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7499b482e01272d0307de4d5daf6f785946b525
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-example-field-vb"></a>型別屬性範例 （欄位） (VB)
 這個範例會示範[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性所顯示的值之常數的對應名稱[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性的所有[欄位](../../../ado/reference/ado-api/field-object.md)中的物件***員工***資料表。 FieldType 函式，才能執行這個程序。  
@@ -113,7 +109,6 @@ End Sub
 Attribute VB_Name = "TypeField"  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [型別屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
-
+ [Type 屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

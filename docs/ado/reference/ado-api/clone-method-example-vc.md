@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Clone method [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Clone method [ADO], VC++ example
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1b7bf5a9cc285c3ef59fedb63c2ca9378b5cf37e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c04c76709c61596e87e704a4ea6ce58df8b96c79
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clone-method-example-vc"></a>再製方法範例 （VC + +）
 這個範例會使用[複製](../../../ado/reference/ado-api/clone-method-ado.md)方法建立的複本[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)然後讓每個複本的記錄指標放在個別的使用者。  
@@ -227,6 +223,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

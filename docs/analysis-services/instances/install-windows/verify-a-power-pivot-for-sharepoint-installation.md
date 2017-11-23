@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4ab5b1730f6244f81fc9e59c7565080eb72fba66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>驗證 PowerPivot for SharePoint 安裝
   您在 SharePoint 伺服器陣列中安裝的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 執行個體是透過 SharePoint 管理中心進行管理。 您至少可以檢查管理中心和 SharePoint 網站上的頁面，以驗證 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器元件和功能可用。 但為了完整驗證安裝，您必須擁有可以發行至 SharePoint 並從文件庫存取的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿。 如需進行測試，您可發行已經包含 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料的範例活頁簿，並用其確認 SharePoint 整合已正確設定。  
@@ -109,4 +107,3 @@ ms.lasthandoff: 09/01/2017
 11. 在電腦檔案系統上，檢查下列資料夾來決定檔案是否要快取到磁碟。 快取檔案的存在會進一步驗證您的部署是否可以運作。 若要檢視檔案快取，請移至 [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]MSAS13.POWERPIVOT\OLAP\Backup\Sandboxes\Default [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式資料夾。 每個快取的資料庫都會使用以 GUID 為基礎的命名慣例，儲存在自己的資料夾中，以確保名稱是唯一的。  
   
   
-

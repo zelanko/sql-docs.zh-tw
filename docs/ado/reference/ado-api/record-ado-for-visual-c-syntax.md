@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
-helpviewer_keywords:
-- Record collection [ADO], ADO for Visual C++ syntax
+dev_langs: C++
+helpviewer_keywords: Record collection [ADO], ADO for Visual C++ syntax
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d20df65d17822cb901c256a9eda503dddb39e38b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 78d7fa73b57df0076458791a3205b6cd4a50a6ac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="record-ado-for-visual-c-syntax"></a>記錄 (針對 Visual c + + 語法的 ADO)
 ## <a name="methods"></a>方法  
@@ -60,6 +56,5 @@ putref_Source(IDispatch *Source)
 get_State(ObjectStateEnum *pState)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [記錄物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

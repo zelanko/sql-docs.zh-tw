@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a6de6ca5b3eba19675376131ef338a2759e1dc09
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 820ed13c81d13d0b80450d9ad8bd08359c8c0d3d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="refresh-from-database-accesstosql"></a>從資料庫 (AccessToSQL) 重新整理
 **從資料庫重新整理** 對話方塊可讓您選取要從 Access 資料庫重新整理的物件。 在對話方塊中的資料列會以色彩標示在中繼資料的狀態：  
@@ -40,4 +38,3 @@ ms.lasthandoff: 08/02/2017
   
 若要存取**從資料庫重新整理**對話方塊方塊中，以滑鼠右鍵按一下任何**資料庫**存取中繼資料總管 中按一下節點**從資料庫重新整理**。  
   
-

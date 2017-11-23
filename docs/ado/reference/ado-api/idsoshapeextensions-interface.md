@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- IDSOShapeExtensions interface [ADO]
+helpviewer_keywords: IDSOShapeExtensions interface [ADO]
 ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 417ad7c3006df37577d457ee8e86c646e749f623
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5168df904df1cfc8f764fe628f8e83382eb86f81
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions 介面
 SHAPE 提供者取得基礎 OLE DB 資料來源物件。  
@@ -54,4 +51,3 @@ public:
  **程式庫：** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4
-

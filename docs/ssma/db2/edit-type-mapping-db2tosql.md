@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92bc671abed684b7653a44229f5732d71ac7f271
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: abe35043a599a0a8969431d9f5188cc7751049fc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-type-mapping-db2tosql"></a>編輯類型對應 (DB2ToSQL)
 **編輯類型對應** 對話方塊可讓您指定來源和目的地的資料庫物件之間如何對應型別。  
@@ -56,4 +54,3 @@ ms.lasthandoff: 08/02/2017
 **Replace with**  
 指定針對此對應的目標長度。 例如，對於**nvarchar**資料類型，您可以輸入 20 指定指定之來源資料類型應該對應至**nvarchar （20)**。  
   
-

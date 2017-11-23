@@ -5,8 +5,7 @@ ms.date: 7/7/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 3ad9d4d4762a085ee63ce142c6998af07b3c018c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9ce18e13fa735921846ea7f564ff53983d0c2dca
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="run-sql-server-profiler"></a>執行 SQL Server Profiler
   您可以執行[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]數種不同方式，以支援收集追蹤輸出中的各種案例。 您可以啟動[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]從 Windows 10**啟動**功能表上，從**工具**功能表中的[!INCLUDE[ssDE](../../includes/ssde-md.md)]Tuning Advisor，並從數個位置中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
@@ -63,4 +61,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="next-steps"></a>後續的步驟  
  [SQL Server Profiler 概觀](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [使用 SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data section [ADO]
+helpviewer_keywords: data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fae3df37c9a83bdf97a7ae2a53bc76777b318546
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62eb026fac4588cc159afec1714a6aa51903aa8a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-section"></a>資料區段
 資料區段定義以及任何暫止的更新、 插入或刪除資料列集的資料。 資料區段可以包含零或多個資料列。 它只能包含一個資料列集結構描述所定義的資料列所在的資料。 此外，如之前所述，就可以省略資料行沒有任何資料。 如果屬性或子元素用於資料區段中，而且尚未在結構描述 」 一節中定義該建構，則會以無訊息模式忽略。  
@@ -92,6 +89,5 @@ ms.lasthandoff: 09/09/2017
   
  更新一律包含後面接著已變更的資料列資料的整個原始資料列資料。 已變更的資料列可能包含的所有資料行或已實際變更這些資料行。 在上述範例中，託運商 2 的資料列不會變更，且 Phone 資料行已變更的託運商 3 的值，所以包含在已變更的資料列的唯一資料行。 貨運公司 12、 13 和 14 的插入資料列是批次在一起的下一個 rs： 插入標記。 請注意，刪除的資料列也批次處理，雖然這不會顯示在上述範例中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

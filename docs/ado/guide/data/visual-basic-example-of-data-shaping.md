@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Visual Basic example of data shaping[ADO], about data shaping
+dev_langs: VB
+helpviewer_keywords: Visual Basic example of data shaping[ADO], about data shaping
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f10023ccb02e239ceb00a585599c2a38a6115ba7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7b2716ffe745fcbb9359c34c33317e61ac82602
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Visual Basic 範例資料成形
 ```  
@@ -111,4 +107,3 @@ End Function
 5.  複製上述的程式碼，並將它貼入**程式碼**取代任何現有的程式碼的頁面。  
   
 6.  選取**啟動**從**執行**執行應用程式的功能表。
-

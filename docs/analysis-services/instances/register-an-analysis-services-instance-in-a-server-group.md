@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 648fca1de8f4c98bce4e778a2d4d26fb44246267
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>註冊伺服器群組中的 Analysis Services 執行個體
   如果您有大量 Analysis Services 伺服器執行個體，可以在 Management Studio 建立伺服器群組，讓伺服器管理變得更輕鬆。 伺服器群組的目的是在管理工作空間內提供一組相關伺服器之間的接近性。 例如，假設您負責管理十個不同的 Analysis Services 執行個體。 依伺服器模式、開機時間準則，或依部門或地區的伺服器群組方式，可讓檢視及連接到共用相同特性的執行個體更輕鬆。 您還可以加入有助於記住伺服器用法的描述性資訊。  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/01/2017
 3.  以滑鼠右鍵按一下伺服器群組，然後選取 [新增伺服器註冊]。 如果伺服器安裝為具名執行個體，請輸入本機或遠端伺服器的網路名稱，包括執行個體名稱。 或者，您也可以提供出現在 [已註冊的伺服器] 中的已註冊伺服器名稱。 此名稱只在 [已註冊的伺服器] 中使用。 您不能使用它來重新命名伺服器，也不能在連接字串中使用它。 已註冊的伺服器名稱可以比實際伺服器名稱更具描述性，或包含有助於區別伺服器的識別特性。  
   
   
-

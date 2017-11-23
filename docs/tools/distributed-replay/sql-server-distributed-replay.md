@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 319e14792033ea15f4bcfc8b295a0b62f37f87c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fb2346d3d23d313288d86f98d85dca5a42275cb3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能可協助您評估未來 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級的影響。 您也可以使用它來協助評估硬體和作業系統升級以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 微調的影響。  
@@ -78,8 +76,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Distributed Replay 論壇](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [使用 Distributed Replay 對您的 SQL Server 進行負載測試 – 第 2 部分](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [使用 Distributed Replay 對您的 SQL Server 進行負載測試 – 第 1 部分](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [使用 Distributed Replay 對您的 SQL Server – 第 2 部分進行負載測試](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [使用 Distributed Replay 對您的 SQL Server-第 1 部分進行負載測試](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   
-

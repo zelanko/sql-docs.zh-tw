@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Axis
-helpviewer_keywords:
-- Axis object [ADO MD]
+f1_keywords: Axis
+helpviewer_keywords: Axis object [ADO MD]
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4164cd36a128de91f42f141db4c04aa7d9a2110c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7d563e9359853c109605c2f87438e2e7b2c795c4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="axis-object-ado-md"></a>軸物件 (ADO MD)
 表示位置或包含一或多個維度的成員可選取的資料格集的篩選座標軸。  
@@ -50,9 +46,8 @@ ms.lasthandoff: 09/09/2017
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [軸範例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Axes 集合 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [位置集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
- [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

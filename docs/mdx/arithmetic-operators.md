@@ -5,26 +5,22 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- arithmetic operators
+dev_langs: kbMDX
+helpviewer_keywords: arithmetic operators
 ms.assetid: 1dff3e20-fe9d-4155-bf06-27d6458188e9
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7d32b5c9c7dba58abd456847b77836a5f4a9028b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc3adf599f92a74dd996a0ef090f6f42ab1fba0d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="arithmetic-operators"></a>算術運算子
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,10 +31,10 @@ ms.lasthandoff: 08/02/2017
   
 |運算子|Description|  
 |--------------|-----------------|  
-|[+ （加）](../mdx/add-mdx.md)|兩個數字相加。|  
+|[+ (加)](../mdx/add-mdx.md)|兩個數字相加。|  
 |[/ （除法）](../mdx/divide-mdx-operator-reference.md)|以一個數目除以另一個數目。|  
-|[* （乘）](../mdx/multiply-mdx.md)|兩個數目相乘。|  
-|[-（減）](../mdx/subtract-mdx.md)|兩個數字相減。|  
+|[* (乘)](../mdx/multiply-mdx.md)|兩個數目相乘。|  
+|[- (減)](../mdx/subtract-mdx.md)|兩個數字相減。|  
 |^ (乘冪)|計算某一個數字的次方數。|  
   
 > [!NOTE]  
@@ -53,9 +49,8 @@ ms.lasthandoff: 08/02/2017
   
 -   先計算括號中的運算式，再計算其他所有運算。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
  [運算子 &#40;MDX 語法 &#41;](../mdx/operators-mdx-syntax.md)  
   
   
-

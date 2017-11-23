@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Getting started, SQL Server or SQL Azure metadata explorer
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: dd175faf728f44c4d29c1097d876b52210aec992
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 38ce5c0e27703094e4d7ff2415d0bc91d501d1b4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>開始使用 SSMA for MySQL (MySQLToSQL)
 SQL Server 移轉小幫手 (SSMA) 的 MySQL 可讓您快速將 MySQL 資料庫結構描述轉換成 SQL Server 或 Azure SQL DB 結構描述，將產生的結構描述上傳到 SQL Server 或 Azure SQL DB、 和資料從 MySQL 移轉至 SQL Server 或 Azure SQL DB。  
@@ -130,8 +128,7 @@ SSMA 會有兩個工具列： 專案工具列和移轉工具列。
   
 -   [錯誤清單] 窗格會顯示錯誤、 警告和參考用訊息可排序清單中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [使用者介面參考 &#40;MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
 [將 MySQL 資料移轉到 SQL Server-Azure SQL DB &#40;MySQLToSQL &#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
-

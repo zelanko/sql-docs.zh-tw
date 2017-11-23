@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Management Objects, security
 - security [AMO]
 - AMO, security
 ms.assetid: e3d5012a-8121-40de-9244-1fc824228693
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 44cbeb7f8f64c67e60b0416bc116a379f7af4247
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b61917a7e0191e1645dedef69a311a8f901d12b9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-security-classes"></a>AMO 安全性類別
   本主題包含下列幾節：  
@@ -61,7 +59,7 @@ ms.lasthandoff: 09/01/2017
   
  如需有關可用方法和屬性的詳細資訊，請參閱 <xref:Microsoft.AnalysisServices.Permission> 中的 <xref:Microsoft.AnalysisServices>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  <xref:Microsoft.AnalysisServices>   
  [程式設計 AMO 安全性物件](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-security-objects.md)   
  [權限和存取權限 &#40;Analysis Services-多維度資料 &#41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
@@ -70,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [資料庫物件 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

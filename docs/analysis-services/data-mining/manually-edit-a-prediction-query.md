@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], modifying prediction queries
 - manual prediction query modification [Analysis Services]
 ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ab8bb78ceb4bfe411030cf160c84751b6176682a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57f892500d2ef26dc2227b4c0710c4d039dcb34e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manually-edit-a-prediction-query"></a>手動編輯預測查詢
   在使用預測查詢產生器設計查詢之後，您可以切換到資料採礦設計師的 [採礦模型預測] 索引標籤上的 [查詢文字] 檢視來修改查詢。 文字編輯器會出現在畫面底端，以顯示查詢產生器建立的查詢。  
@@ -51,10 +50,9 @@ ms.lasthandoff: 09/01/2017
     > [!NOTE]  
     >  如果您建立的查詢無效，則 [結果] 視窗不會顯示錯誤，也不會顯示任何結果。 按一下 [設計] 按鈕或從 [採礦模型] 功能表選取 [設計] 或 [查詢] 以修正問題，並再次執行查詢。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [預測查詢產生器 &#40; 資料採礦 &#41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
  [第 6 課：建立及處理預測 &#40;基本資料採礦教學課程&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
   
   
-

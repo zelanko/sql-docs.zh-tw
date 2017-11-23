@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- GetString method [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: GetString method [ADO], Visual Basic example
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: beaff0b2775dc0de9c0f2f1a334139f5cc92830d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 36bfdcdf3e5300bfd3686b73d6439e11e8d7cf86
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getstring-method-example-vb"></a>GetString 方法範例 (VB)
 這個範例會示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
@@ -109,7 +105,6 @@ End Sub
 'EndGetStringVB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [GetString 方法 (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8a1b994b316606409ce4d41857aec574477ede49
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac155a67f472ad7cf7dcee0f8c5650bb43b21732
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>SQL Server Agent 屬性 (服務索引標籤)
   這項服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 淺灰色的屬性值不得以此應用程式加以變更。  
@@ -60,4 +58,3 @@ ms.lasthandoff: 08/02/2017
  表示這項服務為執行中、已停止或已停用。 "" 表示狀態變更已暫止。  
   
   
-

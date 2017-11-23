@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 20d339e2-f47f-437f-94d5-5b00b400356a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fbb28e83139c6318d235b3876b64e95e949cb4b1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0863c2f263cc13ff9673063ab1f49535cd2407a3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverpartitionstat-rowset"></a>DISCOVER_PARTITION_STAT 資料列集
   傳回特定資料分割中彙總的相關統計資料。  
@@ -57,8 +55,7 @@ ms.lasthandoff: 09/01/2017
 |GUID|a07ccd8f-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionStat|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

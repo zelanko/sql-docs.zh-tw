@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- filters [Analysis Services]
+helpviewer_keywords: filters [Analysis Services]
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 36eec0622aa30b2ece9eac7ff3ee3b4e6403d252
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0830b6585e3859cf307ebe2fa4ea493cd8072546
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>從採礦模型刪除篩選
   當您建立採礦模型的篩選時，您可以在資料來源檢視中的資料子集上建立模型。 篩選對於測試原始資料子集上之模型的精確度也非常實用。  
@@ -73,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   
-

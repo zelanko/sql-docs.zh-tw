@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - MoveComplete event [ADO]
 - WillMove event [ADO]
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b4cf136ccd49b461578f7a34941465a54c4e4183
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5a7fc2b4872a309bb93d249cda407c030f61be90
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove 和 MoveComplete 事件 (ADO)
 **WillMove**事件被呼叫之前暫止的作業變更的目前位置[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **MoveComplete**事件中的目前位置之後呼叫**資料錄集**變更。  
@@ -71,8 +69,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
   
  您必須設定*adStatus*參數**adStatusUnwantedEvent**每個可能的*adReason*值，以便完全停止的任何事件的事件通知，包含*adReason*參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

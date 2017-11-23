@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9eb2a8ddce4813a0738fc73dd4f54d6b015d30c9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6abb3fe852de5158f68df086768f776da3efd5c1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-fundamentals"></a>ADO 基本概念
 ADO 提供開發人員一種功能強大的邏輯物件模型以程式設計方式存取、 編輯和更新資料，從各種不同的資料來源透過 OLE DB 系統介面。 ADO 最常見的使用是查詢關聯式資料庫中資料表或資料表，請擷取和結果顯示在應用程式，並可能讓使用者進行變更和儲存的資料。 其他的工作包括下列各項：  
@@ -66,9 +64,8 @@ ADO 提供開發人員一種功能強大的邏輯物件模型以程式設計方�
   
 -   [ADO 物件和集合](../../../ado/guide/data/ado-objects-and-collections.md)  
   
--   [HelloData： 簡單的 ADO 應用程式](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData：簡易 ADO 應用程式](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
   
 -   [OLE DB 提供者](../../../ado/guide/data/ole-db-providers-ado.md)  
   
 -   [錯誤](../../../ado/guide/data/errors-ado.md)
-

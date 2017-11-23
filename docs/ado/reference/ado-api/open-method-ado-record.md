@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Record::raw_Open
 - _Record::Open
-helpviewer_keywords:
-- Open method [ADO]
+helpviewer_keywords: Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc5b12e87123af4abc3b92535b87668b7c983f4c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7e7f1c5e35ced700818954056b380a44c75570c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-method-ado-record"></a>Open 方法 （ADO 資料錄）
 開啟現有的[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件，或建立新的項目所代表**記錄**，例如檔案或目錄。  
@@ -82,11 +79,10 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 >  使用 http 配置 Url 將會自動叫用[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 如需詳細資訊，請參閱[絕對和相對 Url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
 ## <a name="applies-to"></a>適用於  
- [記錄物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Open 方法 （ADO 連接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open 方法 （ADO 資料錄集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open 方法 （ADO 資料流）](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [OpenSchema 方法](../../../ado/reference/ado-api/openschema-method.md)
-

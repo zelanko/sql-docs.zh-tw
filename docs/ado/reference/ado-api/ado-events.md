@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - events [ADO]
 - ADO, events
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e72b2c9afb9453ffec0b9371b9dad1effbda0b1b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 59492bb63fd11aa1c60b3c45daed5a7431475cd9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-events"></a>ADO 事件
 |||  
@@ -52,7 +50,7 @@ ms.lasthandoff: 09/09/2017
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|暫止命令此連接上執行，並提供使用者有機會檢查和修改暫止執行參數之前呼叫。|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|**WillMove**事件呼叫*之前*暫止的作業變更的目前位置**資料錄集**。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/09/2017
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO 物件與介面](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [ADO 屬性](../../../ado/reference/ado-api/ado-properties.md)
-

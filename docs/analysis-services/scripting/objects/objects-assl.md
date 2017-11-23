@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, objects
 - objects [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, objects
 ms.assetid: 0f672b93-c317-47e5-b44d-ecea9b587c98
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 678eabca49558ed4ff9a933433a97f5ed308dcb3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 749c363a814590705b61d0821f1fee44ea93d488
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="objects-assl"></a>物件 (ASSL)
   這個參考章節包含在「Analysis Services 指令碼語言」(ASSL) 結構描述中當做物件之每個元素的語法和使用方式資訊。  
@@ -116,8 +114,7 @@ ms.lasthandoff: 09/01/2017
 |[UnknownMemberTranslation 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/unknownmembertranslation-element-assl.md)|包含標題的翻譯[UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md)元素[維度](../../../analysis-services/scripting/objects/dimension-element-assl.md)項目。|  
 |[ValueColumn 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/valuecolumn-element-assl.md)|識別提供父元素之值的資料行。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 元素階層 &#40;ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   
-

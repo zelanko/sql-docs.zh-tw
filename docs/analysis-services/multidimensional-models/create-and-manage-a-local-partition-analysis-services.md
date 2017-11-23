@@ -19,17 +19,16 @@ helpviewer_keywords:
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b2e5047564e2001f87691d622a736c9ad28b87c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ebc3093a0e030aca329338359be2a6f256c24fe7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>建立及管理本機分割區 (Analysis Services)
   您可以建立其他分割區，讓量值群組能夠改善處理效能。 擁有多個分割區可讓您在本機和遠端伺服器上，跨對應數目的實體資料檔案以配置事實資料。 在 Analysis Services 中，分割區可以獨立及平行處理，讓您在伺服器上處理工作負載時，能夠有更強的控制力。  
@@ -137,4 +136,3 @@ ms.lasthandoff: 09/01/2017
  [在 Analysis Services 中合併分割區 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   
-

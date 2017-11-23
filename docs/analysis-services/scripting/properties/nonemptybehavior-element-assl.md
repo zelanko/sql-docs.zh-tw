@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- NonEmptyBehavior Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: NonEmptyBehavior Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- NonEmptyBehavior
-helpviewer_keywords:
-- NonEmptyBehavior element
+applies_to: SQL Server 2016 Preview
+f1_keywords: NonEmptyBehavior
+helpviewer_keywords: NonEmptyBehavior element
 ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7cfa1c3e23d5868c936947fe0ef6b30ae3a5fcdc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bafd21bcaf9fc7ebfb06f6f37dbf87a0598cf31f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nonemptybehavior-element-assl"></a>NonEmptyBehavior 元素 (ASSL)
   決定父代相關聯的非空白行為[CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)項目。  
@@ -71,11 +65,10 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**NonEmptyBehavior**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.CalculationProperty>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CalculationProperties 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/calculationproperties-element-assl.md)   
  [MdxScript 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)   
  [MdxScripts 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

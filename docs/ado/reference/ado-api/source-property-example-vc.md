@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Source property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Source property [ADO], VC++ example
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fd94b8150058a3420920dc424e001290abef73a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 74443425eea8cdb45f598307db844c2c279b6b56
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="source-property-example-vc"></a>來源屬性範例 （VC + +）
 這個範例會示範[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)開啟三個屬性[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)不同的資料來源為基礎的物件。  
@@ -164,7 +160,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [來源屬性 （ADO 資料錄集）](../../../ado/reference/ado-api/source-property-ado-recordset.md)
-
+ [Source 屬性 (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

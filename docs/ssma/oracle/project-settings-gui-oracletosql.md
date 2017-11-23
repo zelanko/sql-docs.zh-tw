@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: be37883101e95c60a792689d8ec5cf35896b8ac6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f787114033217f4821fa209e7bcaf72d7b28c67
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-gui-oracletosql"></a>專案設定 (GUI) (OracleToSQL)
 GUI 專案設定可讓您設定資料上顯示的方式**資料** 索引標籤，以及是否要顯示轉換後的評估報告，或不。  
@@ -31,7 +29,7 @@ GUI 窗格位於**專案設定**和**預設專案設定**對話方塊。
   
 -   使用**預設專案設定**對話方塊來設定所有專案的使用者介面選項。 若要存取 GUI 設定，在**工具**功能表上，選取**預設專案設定**，選取移轉專案類型，不需要檢視或變更設定**移轉的目標版本**下拉式清單，，然後按一下  **GUI**在左窗格的底部。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **來源的最大資料列數目**  
 設定上顯示的資料列數目**資料**所選的來源資料表的索引標籤。  
   
@@ -47,4 +45,3 @@ GUI 窗格位於**專案設定**和**預設專案設定**對話方塊。
   
 **預設**: False  
   
-

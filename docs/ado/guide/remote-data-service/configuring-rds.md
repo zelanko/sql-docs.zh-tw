@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS configuration [ADO]
+helpviewer_keywords: RDS configuration [ADO]
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6fcd1b697b6e82e56cae839df4237c5234ef7eea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b286453eff33e6e3c61ee73bfe4907189da1ed16
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configuring-rds"></a>設定 RDS
 > [!IMPORTANT]
@@ -51,10 +48,9 @@ ms.lasthandoff: 09/09/2017
   
 -   [為安全或不受限制模式設定 DataFactory](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [使用 RDS 的相關的技術](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [為 RDS 疑難排解](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
-
 
 

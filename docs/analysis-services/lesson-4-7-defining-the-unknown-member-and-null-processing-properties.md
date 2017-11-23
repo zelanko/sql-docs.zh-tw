@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 85b07e5b292632403a719ef6deee92acffce658c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6a5d1d6dd514d346f4a24783307b27b86e777be1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>課程 4-7-定義未知的成員和 Null 處理屬性
 當 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 處理維度時，資料來源檢視中之資料表或檢視內基礎資料行的所有相異值會在維度中擴展屬性。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在處理期間發現 Null 值，它預設會將這個 Null 轉換成零 (若為數值資料行) 或空字串 (若為字串資料行)。 您可以在基礎關聯式資料倉儲的擷取、轉換和載入過程中，修改這些預設值或轉換 Null 值 (如果有的話)。 此外，您也可以設定下列三個屬性，藉以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 將 Null 值轉換成指定的值：維度的 [UnknownMember] 和 [UnknownMemberName] 屬性 (property)，以及維度索引鍵屬性 (attribute) 的 [NullProcessing] 屬性 (property)。  
@@ -192,4 +189,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

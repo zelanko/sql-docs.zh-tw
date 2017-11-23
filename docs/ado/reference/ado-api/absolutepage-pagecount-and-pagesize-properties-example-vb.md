@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - PageCount property [ADO], Visual Basic example
 - AbsolutePage property [ADO], Visual Basic example
 - PageSize property [ADO], Visual Basic example
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 32f03c2e8df04d341f734ac738dfb17d03620f55
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d74fd93f16571db81cbe5d4c6495260303989395
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage、 PageCount 和 PageSize 屬性範例 (VB)
 ```  
@@ -108,9 +105,8 @@ End Sub
 'EndAbsolutePageVB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [AbsolutePage 屬性 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount 屬性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize 屬性 (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

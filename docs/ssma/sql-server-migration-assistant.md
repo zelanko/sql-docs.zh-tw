@@ -5,25 +5,23 @@ ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 8c431da24d6449ce7d7ec8a5125d207828ff0b6c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 7a199b65ceb8fdd1692b37e307dd544c52ad618b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
 Microsoft SQL Server 移轉小幫手 (SSMA) 是要從 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 自動化 SQL Server 資料庫移轉所設計的工具。  
@@ -106,4 +104,3 @@ SQL Server 文件集中的內容均經過充分測試才發佈。 《SQL Server 
   
 對於利用及使用未記載之進入點的應用程式或資料庫，則不保證能夠升級至 SQL Server 未來版本的伺服器或資料庫。 SQL Server 功能的用途不得超出 Microsoft SQL Server 文件集所含內容。 如果某功能未記載於 Microsoft SQL Server 文件集，即屬於 SQL Server 不支援的部分。  
   
-

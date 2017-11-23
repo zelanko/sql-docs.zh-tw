@@ -14,22 +14,19 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- EXISTING
-helpviewer_keywords:
-- Existing keyword
+f1_keywords: EXISTING
+helpviewer_keywords: Existing keyword
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c8542b33d91ff7a228eb2f8b2be29b6b6748c4c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5078aa14be3c476e8b89545ed1541f12b7686f4e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query---existing-keyword"></a>MDX 查詢-EXISTING 關鍵字
   強制在目前內容內評估指定的集合。  
@@ -97,4 +94,3 @@ WHERE
  [MDX 函數參考 &#40;MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   
-

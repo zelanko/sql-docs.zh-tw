@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e9584786347e107e166dfcb4c6a51b2057d0b9cf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 66f501e406ff428ee6c901e122b3ec222124a345
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverperformancecounters-rowset"></a>DISCOVER_PERFORMANCE_COUNTERS 資料列集
   傳回一個或多個效能計數器的值。 它不支援隨著時間傳回使用量相關資訊的計數器 (例如每秒磁碟讀取次數以及 CPU 使用量的百分比)。  
@@ -53,8 +51,7 @@ ms.lasthandoff: 09/01/2017
 |GUID|a07ccd2e-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PerformanceCounters|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

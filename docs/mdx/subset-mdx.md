@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- subset
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Subset function
+f1_keywords: subset
+dev_langs: kbMDX
+helpviewer_keywords: Subset function
 ms.assetid: 49a7cd28-cd6f-4ae7-8c91-94a8652a97a5
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 86014760cec4a433b43c93e8e2186b8018cf49da
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0496a6481cebf95e67a6f41a95ed37c522e44a13
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +42,7 @@ Subset(Set_Expression, Start [ ,Count ] )
  *啟動*  
  有效的數值運算式，會指定要傳回之第一個 Tuple 的位置。  
   
- *Count*  
+ *計數*  
  有效的數值運算式，會指定要傳回的 Tuple 數目。  
   
 ## <a name="remarks"></a>備註  
@@ -71,8 +66,7 @@ SELECT Subset
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

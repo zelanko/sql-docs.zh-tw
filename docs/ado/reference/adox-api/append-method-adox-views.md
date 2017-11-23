@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Views::raw_Append
 - Views::Append
-helpviewer_keywords:
-- Append method [ADOX]
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a30ccf01370b89572697917c4fbbbbf3df11a0e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 535f25f475f6357d467e2f7ac19a96ed6eea1605
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-adox-views"></a>Append 方法 （ADOX 檢視）
 建立新[檢視](../../../ado/reference/adox-api/view-object-adox.md)物件，並將它附加[檢視](../../../ado/reference/adox-api/views-collection-adox.md)集合。  
@@ -57,9 +54,9 @@ Views.Append Name, Command
 >  使用 Microsoft Jet OLE DB 提供者時**檢視**集合**附加**方法將允許您指定**程序**而不是**檢視**中*命令*參數。 **程序**會加入至資料來源，就會加入至**檢視**集合。 之後**附加**，如果**程序**和**檢視**重新整理集合時，**程序**將不再處於**檢視**集合會出現在**程序**集合。  
   
 ## <a name="applies-to"></a>適用於  
- [檢視集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [檢視附加方法範例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Append 方法 （ADOX 資料行）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 方法 （ADOX 群組）](../../../ado/reference/adox-api/append-method-adox-groups.md)   
@@ -67,5 +64,4 @@ Views.Append Name, Command
  [Append 方法 （ADOX 索引鍵）](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append 方法 （ADOX 程序）](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append 方法 （ADOX 資料表）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append 方法 （ADOX 使用者）](../../../ado/reference/adox-api/append-method-adox-users.md)
-
+ [Append 方法 (ADOX Users)](../../../ado/reference/adox-api/append-method-adox-users.md)

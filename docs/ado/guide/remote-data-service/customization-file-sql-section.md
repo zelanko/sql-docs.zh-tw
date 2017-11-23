@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0e596d2c1ae90e86931e5656ac7ccdbdeb95e4d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 766e734626f650bccca3a48a5f2dcf7942612053
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="customization-file-sql-section"></a>自訂檔案 SQL > 一節
 **Sql**區段只能包含新的 SQL 字串，取代用戶端的命令字串。 如果沒有 SQL 字串的區段中，將會忽略 > 一節。  
@@ -58,7 +56,7 @@ SQL = " "
 |**SQL**|常值字串，表示這是 SQL 區段項目。|  
 |***sqlString***|SQL 字串，取代用戶端的字串。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自訂檔案記錄檔 > 一節](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自訂檔案 UserList > 一節](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
@@ -66,6 +64,5 @@ SQL = " "
  [必要的用戶端設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [了解自訂檔](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [撰寫您自己的自訂處理常式](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

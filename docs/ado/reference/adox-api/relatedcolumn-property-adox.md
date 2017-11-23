@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - _Column::RelatedColumn
 - _Column::put_RelatedColumn
 - _Column::get_RelatedColumn
-helpviewer_keywords:
-- RelatedColumn property [ADOX]
+helpviewer_keywords: RelatedColumn property [ADOX]
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2df38af84332c98320187a4a90dc77b45195dac4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb09cdefcb35afdc86f7e296d4a809329a7e4e4b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn 屬性 (ADOX)
 表示將相關名稱[資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)相關資料表 （只有索引鍵資料行） 中。  
@@ -46,9 +43,8 @@ ms.lasthandoff: 09/09/2017
  這個屬性是唯讀的[資料行](../../../ado/reference/adox-api/column-object-adox.md)物件已經附加至集合。  
   
 ## <a name="applies-to"></a>適用於  
- [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [索引鍵附加方法、 金鑰類型、 RelatedColumn、 RelatedTable 和 UpdateRule 屬性範例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [索引鍵的物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
-
+ [Key 物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

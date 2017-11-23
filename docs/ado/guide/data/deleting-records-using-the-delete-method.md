@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d0a12e1d6d7e94d2f4feb69f51bb43b1e0edbb5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6975a45ddf15f1a42709fe7c4ab069ba0aa37bea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deleting-records-using-the-delete-method"></a>使用 Delete 方法刪除記錄
 使用**刪除**方法會標示為目前的記錄或群組中的記錄**資料錄集**為要刪除的物件。 如果**資料錄集**物件不允許刪除記錄，就會發生錯誤。 如果您是在立即更新模式中，刪除資料庫中會立即發生。 如果無法成功 （因為資料庫完整性違規，如範例） 刪除記錄，記錄之後，仍處於編輯模式下呼叫**更新。** 這表示您必須取消更新使用[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)再移離目前的記錄 (例如，使用[關閉](../../../ado/reference/ado-api/close-method-ado.md)，[移動](../../../ado/reference/ado-api/move-method-ado.md)，或[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md))。  
@@ -77,4 +75,3 @@ ms.lasthandoff: 09/09/2017
     End With  
 'EndDeleteGroup  
 ```
-

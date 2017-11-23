@@ -5,29 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - fn:id function
 - id function
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 636c10d21d84932fc4e8924bab9be3904fb347ad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 963e5eb2c2b0ddaec5674f2f7c5f930ed6c34806
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="functions-on-sequences---id"></a>函式上順序-識別碼
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -187,8 +183,7 @@ select @x.query('declare namespace CustOrders="Customers";
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]需要的引數類型**id （)**是 xs: idref * 的子類型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [序列的相關函數](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   
-

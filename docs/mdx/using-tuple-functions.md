@@ -5,26 +5,22 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- tuple functions
+dev_langs: kbMDX
+helpviewer_keywords: tuple functions
 ms.assetid: fe41e3e5-a675-4169-a966-b42c18e8d741
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 4fdb557918f60f19eef47b79796e6f1f49ff1316
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b92f048f50f26d6ba5c98e28193a44a68e3ceb39
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-tuple-functions"></a>使用 Tuple 函數
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,10 +53,9 @@ ms.lasthandoff: 08/02/2017
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [函式 &#40;MDX 語法 &#41;](../mdx/functions-mdx-syntax.md)   
  [使用成員函式](../mdx/using-member-functions.md)   
- [使用 Set 函式](../mdx/using-set-functions.md)  
+ [使用集合函式](../mdx/using-set-functions.md)  
   
   
-

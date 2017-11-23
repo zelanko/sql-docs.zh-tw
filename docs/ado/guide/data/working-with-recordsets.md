@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset object [ADO]
+helpviewer_keywords: Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cf54089c037d972649d3acc872a38eed21d02507
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="working-with-recordsets"></a>使用資料錄集
 **資料錄集**物件具有內建功能，可讓您重新整理結果集中資料的順序，來搜尋特定的記錄，根據您提供的準則，並且甚至最佳化使用索引搜尋作業。 這些功能是否可供使用取決於提供者，以及在某些情況下，例如的[索引](../../../ado/reference/ado-api/index-property.md)屬性 — 資料來源本身的結構。  
@@ -174,4 +171,3 @@ Loop
  關閉原始**資料錄集**不會關閉它的複本，也不會關閉複本關閉原始或任何其他複本。  
   
  您可以複製**資料錄集**物件它是否支援書籤。 書籤值是可互換。也就是從某個書籤參考**資料錄集**物件參照到任何其複製品中的相同記錄。
-

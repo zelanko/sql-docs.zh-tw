@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Create method [ADOX], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Create method [ADOX], Visual Basic example
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c74713ec876df04d7f36a0bf27a8ea6f7545bfef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5211692bd7bcaf7d2fc008e1c801d8346f5ea432
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-method-example-vb"></a>Create 方法範例 (VB)
 下列程式碼示範如何建立新的 Microsoft Jet 資料庫與[建立](../../../ado/reference/adox-api/create-method-adox.md)方法。  
@@ -57,7 +53,6 @@ End Sub
 ' EndCreateDatabaseVB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [建立方法 (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
-
+ [Create 方法 (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

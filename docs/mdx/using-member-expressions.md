@@ -5,27 +5,24 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - members [MDX], expressions
 - expressions [MDX], members
 ms.assetid: 63c7af49-8bea-47c5-9566-a961f77d2a3d
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a7483fbc5174fd94f70d1e95c701615df12b5344
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 62e206fa7c32a077089f328d55f0358b86ff3021
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-member-expressions"></a>使用成員運算式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,8 +70,7 @@ Dimension_Name
 > [!NOTE]  
 >  如需有關成員名稱及成員索引鍵的詳細資訊，請參閱[使用成員、 Tuple 及集合 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [運算式 &#40;MDX &#41;](../mdx/expressions-mdx.md)  
   
   
-

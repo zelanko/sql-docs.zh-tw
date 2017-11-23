@@ -19,17 +19,16 @@ helpviewer_keywords:
 - attributes [Analysis Services], viewing
 - viewing attributes
 ms.assetid: 855bef07-b72d-4ce3-bf02-de77abeee71a
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec4596584aafb35d54506d244855447b0ce67c7f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e73cba395d806e834dc03e7f7cd79d030eb5c36e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---view-attributes-in-dimension-designer"></a>屬性的內容位在維度設計師中檢視屬性
   屬性是在維度物件上建立的。 您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的維度設計師，檢視和設定屬性。 維度設計師之 [維度結構] 索引標籤的 [屬性] 窗格，會列出維度中的屬性。 使用此窗格，即可加入、移除或設定屬性。 您也可以選取屬性，以用來做為新階層中的層級，或者加入做為現有階層的層級。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/01/2017
   
 2.  顯示屬性於 [樹狀] 中。 以樹狀格式顯示屬性，且維度是樹狀中的最上層節點。 執行下列動作，即可展開屬性來檢視其屬性關聯性，或是建立新的屬性關聯性：  
   
-    -   按一下維度、屬性 (Attribute) 或成員屬性 (Property)，即可在 [屬性] \(Property) 視窗中檢視其屬性 (Property)。  
+    -   按一下維度、屬性 (Attribute) 或成員屬性 (Property)，即可在 [屬性] (Property) 視窗中檢視其屬性 (Property)。  
   
     -   以滑鼠右鍵按一下屬性 (Attribute) 或成員屬性 (Property)，即可從清單刪除屬性、將屬性重新命名，或者變更屬性的使用方式。  
   
@@ -74,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [維度屬性 (Attribute) 屬性 (Property) 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
-

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - rules [Data Mining]
 - associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec958a3d197bec1574d1264ff78c886cf746d3a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 259335815674dfd8c9d59b1fe6bde7c170d096b6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>關聯模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題說明使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法的模型專用的採礦模型內容。 如需與適用於所有模型類型採礦模型內容相關的一般及統計詞彙說明，請參閱 [採礦模型內容 &amp;#40;Analysis Services - 資料採礦&amp;#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
@@ -207,4 +206,3 @@ ms.lasthandoff: 09/01/2017
  [關聯模型查詢範例](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   
-

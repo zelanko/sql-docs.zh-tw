@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - predefined templates [SQL Server Profiler]
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 85ae94af96a6908af67f0a334203b0025d26fe94
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e99e38422da3d3d6acafd3e6a1cbbfa49bd3741d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 範本
   您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 建立範本，用來定義追蹤中要包含的事件類別和資料行。 定義並儲存範本之後，即可執行追蹤，記錄您選取的每一個事件類別的資料。 您可將範本用在許多追蹤上；範本本身並不會執行。  
@@ -64,11 +62,10 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  預設範本是特定伺服器類型專用的範本。 變更一種伺服器類型的預設範本，並不會影響其他伺服器類型的預設範本。 如需針對特定伺服器來設定預設範本的詳細資訊，請參閱[設定追蹤定義預設值 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [建立追蹤範本 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+## <a name="see-also"></a>請參閱＜  
+ [建立追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [修改追蹤範本 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
  [匯出追蹤範本 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [匯入追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   
-

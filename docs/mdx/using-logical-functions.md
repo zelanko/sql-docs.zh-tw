@@ -5,26 +5,22 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- logical functions [MDX]
+dev_langs: kbMDX
+helpviewer_keywords: logical functions [MDX]
 ms.assetid: 0cb34d53-9146-4924-9c9b-607afcb7a2be
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: ecfb449175242454c1f643d8179e3eb6863df5fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 913191018448c88cb7abc3ac4ef21d585a282a24
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-logical-functions"></a>使用邏輯函數
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +47,7 @@ ms.lasthandoff: 08/02/2017
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [函式 &#40;MDX 語法 &#41;](../mdx/functions-mdx-syntax.md)  
   
   
-

@@ -5,29 +5,25 @@ ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - fn:namespace-uri function
 - namespace-uri function
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 205d90178c2738c22bfe1ba884063ebc3b595b28
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 89c8cf916143a1041c340aeea48642c87c1d17cd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>節點的命名空間 uri 相關函數
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -112,9 +108,8 @@ WHERE ProductModelID=19
   
 -   **Namespace-uri （)**函式傳回類型 xs: string，而不是 xs: anyuri 的執行個體。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [在節點上的函式](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [本機名稱函式 &#40;XQuery &#41;](../xquery/functions-on-nodes-local-name.md)  
   
   
-

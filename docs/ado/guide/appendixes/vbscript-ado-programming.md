@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - ADO, VBScript
 - VBScript [ADO]
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bc6c05e67582f623b73d9f19882feba36032913f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bc40ecab95aa419ac81ada509133de6dd108a823
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 程式設計
 ## <a name="creating-an-ado-project"></a>建立 ADO 專案  
@@ -92,4 +89,3 @@ Response.Write("Success!")
 -   您無法使用**上錯誤 goto\<標籤 >** VBScript 內。  
   
 -   VBScript 支援某些內建的 Visual Basic 函式例如**Msgbox**，**日期**，和**IsNumeric**。 不過，因為 VBScript 是 Visual Basic 的子集，並非所有的內建函式支援。 例如，不支援 VBScript**格式**函式和檔案 I/O 函式。
-

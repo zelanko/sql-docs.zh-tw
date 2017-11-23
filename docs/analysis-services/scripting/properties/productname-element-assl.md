@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProductName Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProductName Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ProductName
-helpviewer_keywords:
-- ProductName element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ProductName
+helpviewer_keywords: ProductName element
 ms.assetid: f8129bb2-55c9-44e1-8857-82dc01c04a7f
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8d94d8ee62503a0f00fd3d1a6316334e81d7c37d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0cad2a68b23da684ea86e51497426d4b0224da5f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="productname-element-assl"></a>ProductName 元素 (ASSL)
   包含執行個體的唯讀產品名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]相關聯[伺服器](../../../analysis-services/scripting/objects/server-element-assl.md)項目。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**ProductName**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Server>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

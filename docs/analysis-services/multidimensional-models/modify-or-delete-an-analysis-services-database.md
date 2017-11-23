@@ -22,17 +22,16 @@ helpviewer_keywords:
 - databases [Analysis Services], deleting
 - modifying databases
 ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 65f53460a5a967744e23895b965bda0c9501f8cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58ba47239da28dfa023bb59a1bbb6ed77e11d425
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>修改或刪除 Analysis Services 資料庫
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的部署之前和在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署之後，您可以變更 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]資料庫的名稱和描述。 您也可以調整 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的其他設定，視環境而定。  
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [記錄和編寫 Analysis Services 資料庫的指令碼](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
   
   
-

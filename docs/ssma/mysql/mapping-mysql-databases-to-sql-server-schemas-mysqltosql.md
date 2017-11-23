@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Mapping, Modifying target database and schema
 - Mapping, reverting to default database and schema
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 98cdf5f72a4c4767ac468b5c2c062e4d3b23d68b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6f6472656dbfd31ca64348d066cca19f303b4a5f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>將 MySQL 資料庫對應至 SQL Server 結構描述 (MySQLToSQL)
 根據預設，SSMA for MySQL 移轉至 MySQL 結構描述中的所有物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫命名的結構描述。 不過，您可以自訂 MySQL 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫。  
@@ -77,10 +75,9 @@ SSMA，在您可以將 MySQL 結構描述對應到任何可用[!INCLUDE[ssNoVers
 ## <a name="next-steps"></a>後續步驟  
 如果您想要分析的 MySQL 物件轉換成 SQL Server 或 SQL Azure 的物件，您可以[建立轉換報告](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec)否則您可以[轉換 MySQL 資料庫物件定義](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7)至 SQL Server 或 SQL Azure 的結構描述  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [專案設定 &#40;轉換 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
 [連接到 Azure SQL DB &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
 [將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [連接到 SQL Server &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-

@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Working with SSMA projects, Open project
 - Working with SSMA projects, Save project
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 94cb62f1a2c1088ce8666f3e58722016330badd9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 44d7c381e4cc0599e24f5df1024b31b75b1598f7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>使用 SSMA 專案 (MySQLToSQL)
 若要移轉至 SQL Server 或 SQL Azure 的 MySQL 資料庫，您必須先建立的 SSMA 專案。 專案是檔案，包含下列資訊：  
@@ -140,10 +138,9 @@ SSMA 會剖析 MySQL 結構描述，並將中繼資料儲存到專案檔。
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[連接到 MySQL &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [連接到 MySQL &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
 [將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [連接到 SQL Server &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
 [連接到 Azure SQL DB &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   
-

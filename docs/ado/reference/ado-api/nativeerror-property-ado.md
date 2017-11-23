@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Error::GetNativeError
 - Error::get_NativeError
 - Error::NativeError
-helpviewer_keywords:
-- NativeError property [ADO]
+helpviewer_keywords: NativeError property [ADO]
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e6d98280027ac307ca04a988052b189cf3365f8e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 94a6b8f28a80202f293008c16f40c0eed0730996
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nativeerror-property-ado"></a>NativeError 屬性 (ADO)
 指出提供者特有的錯誤程式碼給定[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  
@@ -44,7 +41,6 @@ ms.lasthandoff: 09/09/2017
 ## <a name="applies-to"></a>適用於  
  [Error 物件](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [描述、 HelpContext、 說明檔案、 NativeError、 數字、 來源和 SQLState 屬性範例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [描述、 HelpContext、 說明檔案、 NativeError、 數字、 來源和 SQLState 屬性範例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, using with ADO MD
+helpviewer_keywords: ADO, using with ADO MD
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e762bf200d81596f99cd20352f8da381bffe9255
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38df55c27ced6e0a7b32c321e2b3968bedb73aa1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-with-ado-md"></a>使用 ADO 搭配 ADO MD
 ADO 和 ADO MD 個相關但不同的物件模型。 ADO 提供物件連接到資料來源、 執行命令、 擷取表格式資料和結構描述中繼資料，以表格格式，以及檢視提供者資訊時發生錯誤。 ADO MD 可用於擷取多維度資料和多維度結構描述中繼資料檢視的物件。  
@@ -52,10 +49,9 @@ ADO 和 ADO MD 個相關但不同的物件模型。 ADO 提供物件連接到資
   
  如需 ADO 物件和方法的詳細資訊，請參閱[ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO MD 物件模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO （多維度） (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [多維度結構描述和資料的概觀](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [使用 ADO MD 程式設計](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [使用多維度資料](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
-

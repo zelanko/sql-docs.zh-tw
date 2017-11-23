@@ -1,24 +1,22 @@
 ---
 title: "如何執行即時計分或 SQL Server 中的原生計分 |Microsoft 文件"
 ms.custom: 
-ms.date: 10/16/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: e036310aa348437047be4f4270764b9f4c002afa
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>如何執行即時計分或 SQL Server 中的原生計分
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 10/17/2017
 > 在 SQL Server 2017，建議使用預測函數。
 > 若要使用預存程序\_rxPredict 需要啟用 SQLCLR 整合。 啟用此選項之前，請考慮的安全性含意。
 
-正在準備模型，並接著分數的整體程序是非常類似：
+正在準備模型，並接著分數的整體程序如下：
 
 1. 建立使用支援的演算法的模型。
 2. 序列化使用特殊的二進位格式的模型。
@@ -54,7 +52,7 @@ ms.lasthandoff: 10/17/2017
 
 ### <a name="serialization-and-storage"></a>序列化和儲存體
 
-若要使用快速計分選項的其中一個模型，必須先儲存模型特殊的序列化格式，這已經過最佳化的大小和計分的效率。
+若要使用快速計分選項的其中一個模型，儲存模型使用特殊的序列化的格式，這已經過最佳化，針對大小和計分效率。
 
 + 呼叫`rxSerializeModel`撰寫模型來支援**原始**格式。
 + 呼叫`rxUnserializeModel`deserialization 其他 R 程式碼中使用的模型或檢視模式。
@@ -75,13 +73,13 @@ ms.lasthandoff: 10/17/2017
 
   `rxWriteObject()`函式可以擷取像是 SQL Server ODBC 資料來源中的 R 物件或物件寫入 SQL Server。 API 非常簡單的索引鍵-值存放區的模式。
   
-  如果您使用此函式，請務必將第一次使用新的序列化函式的模型序列化。 然後，設定*序列化*加上旗標`rxWriteObject`設為 FALSE，以避免重複序列化步驟。
+  如果您使用此函式，請務必將第一次使用新的序列化函式的模型序列化。 然後，設定*序列化*引數中的`rxWriteObject`設為 FALSE，以避免重複序列化步驟。
 
 + 您可以也將模型儲存至檔案的原始格式，然後從檔案讀取至 SQL Server。 如果您要移動或複製環境之間的模型，此選項可能會很有用。
 
 ## <a name="native-scoring-with-predict"></a>原生與預測計分
 
-在此範例中，建立模型，然後呼叫 T-SQL 即時預測函數。
+在此範例中，您建立模型時，，然後呼叫 T-SQL 即時預測函數。
 
 ### <a name="step-1-prepare-and-save-the-model"></a>步驟 1： 準備並儲存模型
 
@@ -125,7 +123,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-下列程式碼會建立模型，根據**光圈**資料集，並將它儲存至模型資料表。
+下列程式碼會建立模型，根據**光圈**資料集並將它儲存至資料表名為**模型**。
 
 ```SQL
 DECLARE @model varbinary(max);
@@ -143,7 +141,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE] 
-> 您必須使用[rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)從儲存模型的 RevoScaleR 函式。 標準 R`serialize`函式無法產生所需的格式。
+> 務必使用[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)從儲存模型的 RevoScaleR 函式。 標準 R`serialize`函式無法產生所需的格式。
 
 您可以執行下列命令來檢視預存的模型，以二進位格式等陳述式：
 
@@ -182,7 +180,7 @@ go
 您必須啟用每個資料庫，您想要用於計分這項的功能。 伺服器系統管理員應該執行的命令列公用程式，RegisterRExt.exe 隨附 RevoScaleR 封裝。
 
 > [!NOTE]
-> 為了讓即時計分工作，SQL CLR 功能，才能啟用執行個體中，資料庫必須標示為值得信任。 當您執行指令碼時，讓您執行這些動作。 不過，您應該考慮的額外的安全性含意。
+> 為了讓即時計分工作，SQL CLR 功能必須啟用在執行個體。此外，資料庫必須標示為值得信任。 當您執行指令碼時，讓您執行這些動作。 不過，考量其他安全性隱含執行此操作之前 ！
 
 1. 開啟提升權限的命令提示字元並瀏覽至 RegisterRExt.exe 所在的資料夾。 在預設安裝中可用的下列路徑：
     
@@ -208,11 +206,11 @@ go
 
 > [!NOTE]
 > 
-> 在 SQL Server 2017，其他安全性量值都位於來防止 CLR 整合的問題。 這些量值會使用這個預存程序以及其他限制。
+> 在 SQL Server 2017，其他安全性量值都位於來防止 CLR 整合的問題。 這些量值會使用這個預存程序以及其他限制。 
 
 ### <a name="step-2-prepare-and-save-the-model"></a>步驟 2： 準備並儲存模型
 
-預存程序所需的二進位格式\_rxPredict 是相同的預測。 因此，在 R 程式碼中包含對[rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)，而且一定要指定_realtimeScoringOnly_ = TRUE，如此範例所示：
+預存程序所需的二進位格式\_rxPredict 是使用預測函數所需的格式相同。 因此，在 R 程式碼中包含對[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)，而且一定要指定`realtimeScoringOnly = TRUE`，如這個範例所示：
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -227,7 +225,8 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```SQL
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
-WHERE model_name = 'iris.dtree.model' AND model_version = 'v1''
+WHERE model_name = 'iris.dtree' 
+AND model_version = 'v1''
 
 EXEC sp_rxPredict
 @model = @irismodel,
@@ -255,4 +254,3 @@ EXEC sp_rxPredict
 + [Python 模型部署為 web 服務與 azureml 模型-管理 sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [將 R 程式碼區塊或即時模型發行為新的 web 服務](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [R 的 mrsdeploy 封裝](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
-

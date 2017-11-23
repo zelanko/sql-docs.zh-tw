@@ -22,17 +22,16 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0f0fcdbb9bb97d895572ac37332b7af9bf5c9fae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 51a8ea188eb54adf0ac208225dd7c5fda417178c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中建立 DMX 查詢
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一組功能，可幫助您針對採礦模型和採礦結構建立預測查詢、內容查詢和資料定義查詢。  
@@ -98,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   
-

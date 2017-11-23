@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 750def3dc0a8f2938bcdf7adb6c3a8935da5dda1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ae7ee638c8489795df8894be23ef80e63b26f07
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="event-parameters"></a>事件參數
 每個事件處理常式具有控制事件處理常式的狀態參數。 完成事件，這個參數也用來表示成功或失敗的作業產生事件。 最完整的事件也具有錯誤參數，以提供可能會發生任何錯誤和參考用來執行作業的 ADO 物件的一或多個物件參數的資訊。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件包含物件的參數**命令**，**資料錄集**，和**連接**物件與事件相關聯。 在下列的 Microsoft® Visual Basic® 範例中，您可以看到 pCommand、 pRecordset 和 pConnection 物件代表**命令**，**資料錄集**，和**連接**物件所使用的**Execute**方法。  
@@ -94,9 +92,8 @@ End Sub
   
  相反地，您需要設定*adStatus*至**adStatusUnwantedEvent**一次要求的事件處理常式，而不**adReason**參數停止接收事件通知。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [事件處理常式一起運作的方式](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [事件類型](../../../ado/guide/data/types-of-events.md)
-
+ [事件的類型](../../../ado/guide/data/types-of-events.md)

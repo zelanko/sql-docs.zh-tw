@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
-helpviewer_keywords:
-- ActiveCommand property [ADO], JScript example
+dev_langs: JScript
+helpviewer_keywords: ActiveCommand property [ADO], JScript example
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 42f17064d474d53090dd1dcf4edb1759a2116aaf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bf140097455dd436fe02618eceb4a4c4f744ab20
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand 屬性範例 (JScript)
 這個範例會示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。 剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**ActiveCommandJS.asp**。  
@@ -133,8 +129,7 @@ if (strName.length > 0)
 <!-- EndActiveCommandJS -->  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ActiveCommand 屬性 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

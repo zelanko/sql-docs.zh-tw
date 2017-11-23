@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- MaxRecords property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: MaxRecords property [ADO], Visual Basic example
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 03462c15b0a47f0c71c11ba61a4d644a24adf6bf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6bc345e6b09ba099c8b34c74cdd0e57248ac3756
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords 屬性範例 (VB)
 這個範例會使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)屬性可開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)包含中成本最高的 10 個標題***標題***資料表。  
@@ -95,7 +91,6 @@ End Sub
 'EndMaxRecordsVB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MaxRecords 屬性 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

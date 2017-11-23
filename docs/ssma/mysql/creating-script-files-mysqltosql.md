@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -18,22 +17,21 @@ helpviewer_keywords:
 - Creating script files, script file validation
 - Creating script files, server connection parameters
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 632afd838c11fc74730d031811c2c21f1a2c2ea9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4615763a634b408a523004df2bc674227c5e327
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-script-files-mysqltosql"></a>建立指令碼檔案 (MySQLToSQL)
 第一個步驟之前啟動 SSMA 主控台應用程式。 若要建立指令碼檔案，並在必要時建立的變數值的檔案和伺服器連接檔案。  
   
-指令碼檔案可以分成三個區段，viz..,:  
+指令碼檔案可以分成三個區段，viz。。，：  
   
 1.  **config:**可讓使用者設定的主控台應用程式的組態參數。  
   
@@ -75,7 +73,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <…All commands…>  
@@ -112,7 +110,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <migrate-data>  
@@ -145,7 +143,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <!-- Connect to target database -->  
@@ -178,7 +176,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <!--synchronization-->  
@@ -189,7 +187,7 @@ ms.lasthandoff: 08/02/2017
   
     </synchronize-target>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <!--data migration-->  
@@ -224,7 +222,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -277,7 +275,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <…All commands…>  
@@ -319,7 +317,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <…All commands…>  
@@ -408,7 +406,6 @@ ms.lasthandoff: 08/02/2017
 ## <a name="next-step"></a>下一個步驟  
 在操作主控台的下一個步驟是[建立變數值的檔案 &#40;MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [建立變數值的檔案 &#40;MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   
-

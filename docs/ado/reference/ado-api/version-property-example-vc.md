@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Version property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 96ec6f8b7a30831b9150cdc63d7a21fb9eac8b8b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a2200db6931d9cd37513e0b216c1d3545e6d09cd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="version-property-example-vc"></a>版本屬性的範例 （VC + +）
 這個範例會使用[版本](../../../ado/reference/ado-api/version-property-ado.md)屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，以顯示目前的 ADO 版本。 它也會使用數個動態屬性顯示：  
@@ -142,7 +138,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version 屬性 (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
-

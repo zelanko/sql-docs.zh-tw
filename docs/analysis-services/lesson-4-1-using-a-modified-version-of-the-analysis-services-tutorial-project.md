@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bd789a871d90169a726cbb1709e5de1f9275fa16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 10cb63369b23a19ecb126ee210de2a90ed114fc4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>課程 4-1-使用 Analysis Services 教學課程專案的修改的版本
 本教學課程的其餘課程是依據您在前面三課所完成之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案的增強型版本。 更多的資料表和具名計算已新增至 **Adventure Works DW 2012** 資料來源檢視、更多的維度已新增至專案，而且這些新維度已新增至 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。 此外，已加入第二個量值群組，它包含第二個事實資料表的量值。 這個增強型專案可讓您繼續學習如何在商業智慧應用程式中加入功能，而不必重複已學過的技巧。  
@@ -129,4 +126,3 @@ Geography 維度是依據 **Adventure Works DW 2012** 資料來源檢視中的 *
 ## <a name="see-also"></a>另請參閱  
 [部署 Analysis Services 專案](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   
-

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Cancel method [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Cancel method [ADO], VC++ example
 ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a990c9fadbab695968dee2ac08c175a0b6598772
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b67d77d5df503a385f2e96ca52e0c8cafa43090
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cancel-method-example-vc"></a>取消方法的範例 （VC + +）
 這個範例會使用[取消](../../../ado/reference/ado-api/cancel-method-ado.md)方法來取消命令執行[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件連線是否忙碌中。  
@@ -148,7 +144,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Cancel 方法 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+ [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

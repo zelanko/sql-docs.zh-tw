@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MeasureGroupAttributeBinding Data Type (out-of-line)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MeasureGroupAttributeBinding Data Type (out-of-line)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MeasureGroupAttributeBinding data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MeasureGroupAttributeBinding data type
 ms.assetid: bfe09a95-4e04-4f93-9389-7dd0b4c8f5e4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 472d395f4c075da9c73a97bc09137e25a5bf3f6e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b6e2d9f373bd371b19bbedda669cd2e56352ec3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measuregroupattributebinding-data-type-out-of-line-assl"></a>MeasureGroupAttributeBinding 資料類型 (out-of-line) (ASSL)
   定義衍生資料類型，它代表量值群組中包含之維度內某個屬性的非正規 (out-of-line) 繫結。  
@@ -70,8 +65,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  單行繫結的詳細資訊，請參閱[資料來源和繫結 &#40;SSAS 多維度 &#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

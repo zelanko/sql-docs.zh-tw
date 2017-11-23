@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 35ac97b27348e930bdf69a7aaf0d15c3f2728de6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9536b3a2d178e7dea79bf7d9cf3482e423c078ed
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解適用於多維度模型的 Power View
   本文描述 SQL Server 中的 [多維度模型的 Power View] 功能，並為想要在組織中實作 Power View 的 BI 專業人員和系統管理員提供重要資訊。  
@@ -245,4 +244,3 @@ ms.lasthandoff: 09/01/2017
  [使用 Power View 探索 Adventure Works 多維度模型](http://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   
   
-

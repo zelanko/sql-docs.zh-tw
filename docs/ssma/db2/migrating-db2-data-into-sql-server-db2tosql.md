@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45039e39cc04c75f0d2f92de8cf3ad95b55d8e0a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 392deeac6aeb1791322723367def8f2e3e6464e8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>將 DB2 資料移轉至 SQL Server (DB2ToSQL)
 已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以將資料移轉至 DB2 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -106,7 +104,6 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 > SQL Express edition 做為目標資料庫使用時，允許只有用戶端端資料移轉，且不支援伺服器端資料移轉。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [將 DB2 資料移轉到 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   
-

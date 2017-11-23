@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::EditMode
-helpviewer_keywords:
-- EditMode property
+f1_keywords: Recordset15::EditMode
+helpviewer_keywords: EditMode property
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 078c1b9979339fc31f3b9e064094892caef0d6c6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be4670f359212f1079044341285ec2b0aff6c559
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="editmode-property"></a>EditMode 屬性
 指出目前記錄的編輯狀態。  
@@ -47,13 +43,12 @@ ms.lasthandoff: 09/09/2017
 >  **EditMode**可以傳回有效的值，只有當目前的記錄。 **EditMode**會傳回錯誤，如果[BOF 或 EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)為 true，或如果目前的記錄已被刪除。  
   
 ## <a name="applies-to"></a>適用於  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CursorType、 LockType 和 EditMode 屬性範例 (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [CursorType、 LockType 和 EditMode 屬性範例 （VC + +）](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [AddNew 方法 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Delete 方法 （ADO 資料錄集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [CancelUpdate 方法 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Update 方法](../../../ado/reference/ado-api/update-method.md)
-

@@ -32,17 +32,16 @@ helpviewer_keywords:
 - CRISP-DM
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 38ef15322528bfae0dbd1b134d80fb7d1a56a734
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f796cc3a84537df09060cd578a7ed1eb3a9649ed
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="testing-and-validation-data-mining"></a>測試和驗證 (資料採礦)
   驗證是評估採礦模型對實際資料的執行效能有多好的處理程序。 在部署採礦模型至生產環境之前，先了解其品質和特性以驗證採礦模型是很重要的。  
@@ -105,4 +104,3 @@ ms.lasthandoff: 09/01/2017
  [測試及驗證工作與操作方法 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   
-

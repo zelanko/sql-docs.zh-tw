@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9844f9422444a2abb8b13649f793a25f0485bc62
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6ef92cbf72ad8a8aa3a8076be7ccaf3761f51ab0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>步驟 3： 擴展欄位的清單方塊
 若要填入欄位 清單方塊中，插入下列程式碼的 Click 事件處理常式`lstMain`:  
@@ -64,8 +62,7 @@ End Sub
   
  如果資源是結構化文件，被不實作任何程式碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [網際網路發佈案例](../../../ado/guide/data/internet-publishing-scenario.md)   
  [步驟 2： 初始化主清單方塊](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
- [步驟 4： 填入 [詳細資料] 文字方塊中](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
-
+ [步驟 4：填入 [詳細資料] 文字方塊](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

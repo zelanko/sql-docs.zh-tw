@@ -22,17 +22,16 @@ helpviewer_keywords:
 - databases [Analysis Services], documenting
 - databases [Analysis Services], scripts
 ms.assetid: 125044e2-8d36-4733-8743-8bb68ff9aa4e
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bf7f3de5da4b7477ba27fd3f46a8627ac94aedb2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be00d2f69b130ff3787167062e97926ae141a869
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="document-and-script-an-analysis-services-database"></a>記錄和編寫 Analysis Services 資料庫的指令碼
   部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫之後，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來輸出資料庫或資料庫所含之物件的中繼資料，作為 XML for Analysis (XMLA) 指令碼。 您可以將此指令碼輸出到新的 **[XMLA 查詢編輯器]** 視窗、到檔案或到剪貼簿。 如需 XMLA 的詳細資訊，請參閱 [Analysis Services 指令碼語言 &#40;ASSL&#41; 參考 ](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)。  
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  [建立元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)  
   
   
-

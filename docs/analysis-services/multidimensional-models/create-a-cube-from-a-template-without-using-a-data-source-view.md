@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>從範本建立 Cube，而不使用資料來源檢視
   在 [Cube 精靈] 的第一頁上，選取 [Build the cube without using a data source (不使用資料來源而建立 Cube)] 建立 Cube，而不使用資料來源檢視。 稍後，您可以使用 [結構描述產生精靈]，根據 Cube 及其他可能的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件結構，來產生資料來源檢視的關聯式結構描述。 如需產生結構描述的詳細資訊，請參閱[結構描述產生精靈 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
@@ -107,4 +106,3 @@ ms.lasthandoff: 09/01/2017
  在 [正在完成精靈] 頁面上，檢閱新 Cube 的結構，然後在 [Cube 名稱] 方塊中輸入名稱。 或者，選取 [立即產生結構描述] 核取方塊以啟動 [結構描述產生精靈]。 在大多數情況下，如果您計畫建立其他物件，則不應選取此核取方塊。 您也可以使用 Cube 設計師稍後再產生結構描述。  
   
   
-

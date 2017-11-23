@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 546e28af279bd62018f54a7f1bff33c6e27b8883
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e23d96e675fba4ed740b8adbb8402d3ae7fd06e2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的記錄作業
   Analysis Services 執行個體會將伺服器通知、錯誤和警告記錄至 msmdsrv.log 檔案 – 所安裝的各執行個體都有一個。 管理員可以參考此記錄檔，獲得例行和異常等事件的深入見解。 最新版本的記錄功能已經過增強，可以加入更多資訊。 記錄檔記錄現在包含產品版本和版本資訊，以及處理器、記憶體、連接及封鎖事件。 您可以在 [記錄改進](http://support.microsoft.com/kb/2965035)檢閱整個變更清單。  
@@ -189,10 +188,9 @@ ms.lasthandoff: 09/01/2017
   
 -   若要找出查詢 Cube 的對象，請使用 ASTrace2012，而不是查詢記錄。 查詢記錄通常用來對使用方式的最佳化精靈提供輸入，其擷取的資料並不易閱讀或解譯。 ASTrace2012 是廣泛使用的社群工具，可擷取查詢作業。 請參閱 [Microsoft SQL Server 社群範例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 執行個體管理](../../analysis-services/instances/analysis-services-instance-management.md)   
  [監視 Analysis Services with SQL Server Profiler 簡介](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   
-

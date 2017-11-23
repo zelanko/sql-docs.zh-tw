@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- NONEMPTYCROSSJOIN
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- NonEmptyCrossjoin function
+f1_keywords: NONEMPTYCROSSJOIN
+dev_langs: kbMDX
+helpviewer_keywords: NonEmptyCrossjoin function
 ms.assetid: 3dc9522d-9126-4f7a-b587-216fa7a06c62
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: dcc37d637de69f912fd3a9c6e51c3e0a55e01a1a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 54ea9a17d94b73d5423384023d49e4c86771f072
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +42,7 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *Set_Expression2*  
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
- *Count*  
+ *計數*  
  有效的數值運算式，會指定要傳回的集合數目。  
   
 ## <a name="remarks"></a>備註  
@@ -58,8 +53,7 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
 > [!IMPORTANT]  
 >  這個函數已被取代，您不應該使用它；僅供回溯相容性予以保留。 相反地，您應該使用[Exists (MDX)](../mdx/exists-mdx.md)與量值群組名稱引數的函式或[NonEmpty (MDX)](../mdx/nonempty-mdx.md)函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e44543e26d7e1ba9ec190334babe6e2c8a992281
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: da90bcdea225f4a27fdd28339bdeb127943ea15a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。 請務必記住，Microsoft 決策樹演算法是一種混合式演算法，可以建立功能非常不同的模型：決策樹可以代表關聯、規則，甚至線性迴歸。 樹狀結構基本上相同，但是您解譯資訊的方式將取決於建立模型的目的。  
@@ -302,11 +301,10 @@ ms.lasthandoff: 09/01/2017
   
  如需迴歸節點的詳細資訊，請參閱[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 決策樹演算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   
-

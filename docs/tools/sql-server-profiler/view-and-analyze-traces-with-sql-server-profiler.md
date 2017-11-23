@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], troubleshooting
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 961e3ea99f4c6f8d801528ab20b3c9ed99465e81
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 026f6f0422de3345be3dc5d44c17bf9dfcdc1137
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 檢視和分析追蹤
   可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來檢視追蹤中擷取的事件資料。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會根據定義的追蹤屬性來顯示資料。 分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的方法之一，是將資料複製到另一個程式，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如果追蹤內包含 **Text** 資料行，則 Tuning Advisor 可以使用包含了 SQL 批次和遠端程序呼叫 (RPC) 事件的追蹤檔案。 為了確保能擷取正確的事件和資料行，以便用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]隨附的預先定義「微調」範本。  
@@ -95,4 +93,3 @@ AND     CPU < (Duration * 1000)
  [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
   
-

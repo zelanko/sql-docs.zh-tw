@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa0bd590b7eeea51fa12627488215067cb46ecf6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c2534d88a10602dcabb594e5a18925ce2547194
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot 可用性和災害復原
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的可用性和災害復原計畫主要取決於您的 SharePoint 伺服器陣列的設計、不同元件可接受的停機時間以及針對 SharePoint 可用性所實作的工具和最佳作法。 本主題將摘要說明相關技術，並包含為 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署規劃可用性和災害復原時所要考量的範例拓撲圖表。  
@@ -117,4 +116,3 @@ ms.lasthandoff: 09/01/2017
   
 -   [在 SharePoint 2013 上管理服務執行個體](http://www.petri.co.il/manage-service-instances-sharepoint-2013.htm)  
   
-

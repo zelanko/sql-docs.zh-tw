@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8330ed3cc913042b7cf9f6e6b92a8318f78a3765
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 84737c6b747174f993765a6d86081759cfedd4bb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>專案 （載入物件） 的設定 (AccessToSQL)
 載入物件的專案設定可讓您設定如何存取資料庫物件同步處理與 SQL Server 資料庫物件。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 08/02/2017
   
 -   若要指定目前的專案中，設定**工具**功能表上，按一下**專案設定**，然後按一下 **載入物件**在左窗格底部。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ##### <a name="misc"></a>其他  
   
@@ -83,4 +81,3 @@ SSMA 物件發生變更時，同步處理 對話方塊中指定的預設設定�
   
 -   如果您選取**略過**，SSMA 將不會執行重新整理的任何動作。  
   
-

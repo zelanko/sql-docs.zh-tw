@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - CopyRecord method [ADO], Visual Basic example
 - SaveToFile method [ADO], Visual Basic example
 - CopyTo method [ADO], Visual Basic example
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8cd9135930d2cd4f3cfaf60bb6fcaf7548ba0a77
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f7e0bdba854ce12456b80a7f42b29f0b6889e9d2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、 CopyTo 和 SaveToFile 方法範例 (VB)
 這個範例示範如何建立複製的檔案，使用[資料流](../../../ado/reference/ado-api/stream-object-ado.md)或[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。 一個複本進行，以供網際網路發行的 Web 資料夾。 其他屬性和方法，顯示包含[資料流類型](../../../ado/reference/ado-api/type-property-ado-stream.md)，**開啟**， [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)，和[記錄開啟](../../../ado/reference/ado-api/open-method-ado-record.md)。  
@@ -132,7 +129,7 @@ End Sub
 'EndCopyRecordVB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CopyRecord 方法 (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
  [CopyTo 方法 (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
  [LoadFromFile 方法 (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
@@ -141,5 +138,4 @@ End Sub
  [記錄物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [SaveToFile 方法](../../../ado/reference/ado-api/savetofile-method.md)   
  [資料流物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [型別屬性 （ADO 資料流）](../../../ado/reference/ado-api/type-property-ado-stream.md)
-
+ [Type 屬性 (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)

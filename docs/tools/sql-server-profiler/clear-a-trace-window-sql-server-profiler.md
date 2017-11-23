@@ -5,28 +5,26 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - trace window [SQL Server]
 - clearing trace window
 ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7797bcad954b22e7fd2f089bf081c1b024b7cc2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f79af0999691de3936d5b3eaa1771148bf9073d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>清除追蹤視窗 (SQL Server Profiler)
-  此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 對執行中的追蹤清除追蹤視窗。  
+  此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]對執行中的追蹤清除追蹤視窗。  
   
 ### <a name="to-clear-a-trace-window"></a>若要清除追蹤視窗  
   
@@ -40,4 +38,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

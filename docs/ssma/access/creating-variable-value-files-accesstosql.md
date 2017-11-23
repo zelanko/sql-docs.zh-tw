@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a04787fdf99c804a7ec304ae4f022583a192508f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b7ccb1d92b39d41ec3fa961b03b33c229a274af0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>建立變數值檔案 (AccessToSQL)
 變數的值，檔案是 XML 檔案中所包含的參數值經常變更整個伺服器移轉的命令 （例如來源或目的地伺服器名稱）。 大量的資料庫移轉發生時，建立並與主要指令碼檔案中參考多個變數的檔案，以儲存每個來源伺服器的值**– v**在命令列參數。 這個行為有助於維護幾個指令碼檔案中的多個變數的檔案中的變數值的靜態值。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 08/17/2017
 > -  The escape character for **$** is **$$**. 如果變數或靜態值的參數值包含 **$**  （美元） 符號，然後 **$$** 必須指定以將其視為一個字元，而不是變數。  
 > -  為了可維護性，變數可以宣告內`‘variable-group’`邏輯隔離的使用者定義變數的項目。  使用這個項目不是強制性。  
   
-**範例:**  
+**範例：**  
   
 **範例 1:**  
   
@@ -105,4 +103,3 @@ ms.lasthandoff: 08/17/2017
 ## <a name="see-also"></a>另請參閱  
 [建立伺服器連接檔案 (Access)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   
-

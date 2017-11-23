@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - utilities [SQL Server], command prompt
 - command prompt [SQL Server], utilities
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
-caps.latest.revision: 90
+caps.latest.revision: "90"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 347b5128bb87f455b662bdd5266422948a316af6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 4ef7f8faaebd237d498744554b44283142e2b01e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL 命令提示字元公用程式 (Database Engine)
   命令提示字元公用程式可編寫 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作業指令碼。 下表列出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]隨附的命令提示字元公用程式清單。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 08/28/2017
  [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   
-

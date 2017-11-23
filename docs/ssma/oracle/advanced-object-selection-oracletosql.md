@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
+ms.openlocfilehash: bbf9dc74633ba55b4f73fe9146d8a26374440240
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 350b223034355afa675d0a18300028841edeee71
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-object-selection--oracletosql"></a>進階的物件選取項目 (OracleToSQL)
 **進階物件部分**對話方塊可讓您篩選資料庫物件，使用字串和子字串中的物件名稱，然後選取或取消選取這些物件。 SSMA 會執行轉換並移轉作業選取的物件。  
@@ -55,4 +53,3 @@ ms.lasthandoff: 08/02/2017
 **清除篩選**  
 清除**篩選**方塊。  
   
-

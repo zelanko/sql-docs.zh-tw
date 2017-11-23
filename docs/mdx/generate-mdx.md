@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- GENERATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Generate function
+f1_keywords: GENERATE
+dev_langs: kbMDX
+helpviewer_keywords: Generate function
 ms.assetid: 696a229d-c2f1-47b7-9dca-7b0a6b547d9b
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b64e0aca29625cf83021666c29b6306192e8b877
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc8cf66afbfd56a6d58f360f4c5d17b12f42e19f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -139,8 +134,7 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  這種形式的**產生**函式有助於進行偵錯計算，因為它可讓您傳回一個字串來顯示集合中所有成員的名稱。 這可能是一組的嚴格 MDX 表示比閱讀， [SetToStr &#40;MDX &#41;](../mdx/settostr-mdx.md)函式會傳回。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

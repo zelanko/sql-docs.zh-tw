@@ -1,35 +1,29 @@
 ---
 title: "建立圖形和繪圖使用 SQL 與 R （逐步解說） |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/03/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: e720755146e8d29ddf06ccdecdd2d744c1885013
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e81411ea3e59276739425e2527aca93ea1ebb0ad
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>建立圖形和繪圖使用 SQL 與 R （逐步解說）
 
-在這個部分的逐步解說中，您將學習技術產生繪圖和使用 R 與 SQL Server 資料的對應。 您將建立簡單的長條圖做為練習，接著再開發更複雜的地圖繪圖。
+在這部分的逐步解說中，您會學習技巧產生繪圖和使用 R 與 SQL Server 資料的對應。 建立簡單的長條圖，以取得一些練習，，然後開發更複雜的對應圖。
 
 ### <a name="create-a-histogram"></a>建立長條圖
 
@@ -56,8 +50,6 @@ ms.lasthandoff: 09/01/2017
 ### <a name="create-a-map-plot"></a>建立對應圖
 
 一般而言，資料庫伺服器封鎖網際網路存取。 使用需要下載對應或其他影像，以便產生繪圖的 R 封裝時，這可以是很不方便。 不過，沒有可能有幫助開發自己的應用程式時的因應措施。 基本上，您產生地圖表示法，在用戶端，並接著在地圖上重疊的點會儲存為 SQL Server 資料表中的屬性。
-
-我們將引導您完成它在這一課。
 
 1. 定義來建立 R 繪圖物件的函式。 自訂函式*mapPlot*建立散佈圖的使用計程車收取位置，並繪製了開始的每個位置的數目。 它會使用應該已安裝並載入的 **ggplot2** 和  **ggmap** 套件。
 
@@ -117,4 +109,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-lesson"></a>上一課
 
 [使用 R 的資料摘要](/walkthrough-view-and-summarize-data-using-r.md)
-

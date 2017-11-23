@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, what's new
+helpviewer_keywords: ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 594152a9dd7e6d4fdb4d00668692239d09bdf373
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ace4237c41b4a92b62e958970ebb49dcf2156d0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-features-for-each-release"></a>每個版本的 ADO 功能
 本主題列出每個版本的 ADO、 ADO MD 和 ADOX 所引進的新功能。
@@ -51,17 +49,17 @@ ms.lasthandoff: 09/09/2017
  *64 位元平台支援*ADO 2.7 引進了適用於 64 位元處理器的支援。
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***方法*從 ADO 2.6 開始，ADO MD 物件可以擷取使用所指定唯一的名稱， [UniqueName 屬性 (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)。   父物件的名稱不需要為已知，而且不需要父集合擷取結構描述物件填入。 請參閱[GetSchemaObject 方法 (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)。
+ **CubDef.GetSchemaObject***方法*從 ADO 2.6 開始，ADO MD 物件可以擷取使用所指定唯一的名稱， [UniqueName 屬性 (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)。 父物件的名稱不需要為已知，而且不需要父集合擷取結構描述物件填入。 請參閱[GetSchemaObject 方法 (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)。
 
  *命令資料流***命令**物件做為使用替代資料流格式支援命令**CommandText**屬性。 [CommandStream 屬性 (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md)可用來指定 XML 範本或 updategram 為**命令**輸入搭配 Microsoft OLE DB Provider for SQL Server。
 
- **方言***屬性*[方言](../../ado/reference/ado-api/dialect-property.md)是新的屬性，定義的語法和一般規則提供者會使用來剖析字串或資料流。  
+ **方言***屬性*[方言](../../ado/reference/ado-api/dialect-property.md)是新的屬性，定義的語法和一般規則提供者會使用來剖析字串或資料流。
 
- **Command.Execute***方法* [Execute 方法](../../ado/reference/ado-api/execute-method-ado-command.md)的 ADO**命令**物件具有已增強為可使用的輸入和輸出資料流。  
+ **Command.Execute***方法* [Execute 方法](../../ado/reference/ado-api/execute-method-ado-command.md)的 ADO**命令**物件具有已增強為可使用的輸入和輸出資料流。
 
  *欄位 statusvalues*如果修改時，使用者發生 DB_E_ERRORSOCCURRED 錯誤**欄位**的**資料錄集**，現在將會填滿 ADO **Field.Status**適當的狀態資訊的屬性，讓使用者將有何者發生錯誤的詳細資訊。 請參閱[Status 屬性 （ADO 欄位）](../../ado/reference/ado-api/status-property-ado-field.md)。
 
- **NamedParameters***屬性* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)是新的屬性**命令**物件，表示提供者應該使用名為參數。  
+ **NamedParameters***屬性* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)是新的屬性**命令**物件，表示提供者應該使用名為參數。
 
  *資料流中的結果集*ADO 可以從資料來源中傳回結果集**資料流**，而非**資料錄集**物件。 使用最新版的 Microsoft OLE DB Provider for SQL Server，您可以取得 XML 結果的提供者執行的"XML"查詢。 A**資料流**接收結果集可以使用做為來源的"XML"命令來開啟。 請參閱[擷取結果集資料流](../../ado/guide/data/retrieving-resultsets-into-streams.md)。
 
@@ -75,4 +73,3 @@ ms.lasthandoff: 09/09/2017
  *URL 繫結*ADO 2.5 導入了 URL，做為連接字串和命令文字，來命名資料存放區物件的替代方案。 URL 可以使用與現有**連接**和**資料錄集**物件也與新**記錄**和**資料流**物件。
 
  *支援 URL 繫結的資料提供者*ADO 2.5 支援 OLE DB 提供者所辨識的 URL 配置。 這包括 OLE DB Provider for Internet Publishing，存取 Windows 2000 檔案系統，且可辨識的現有 HTTP 配置。
-

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f31253851c76e9f41fa14a8f6a150b67704280d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 95ea01c8cfb495ce104e60cbb3e24110fac98116
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>連接關閉方法，資料表類型屬性範例 (VB)
 設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性**Nothing**應該關閉類別目錄的連接。 相關聯的集合將是空的。 從目錄中的結構描述物件所建立的任何物件會被遺棄。 已快取的物件上的任何屬性仍可使用，但嘗試讀取內容所需的提供者的呼叫將會失敗。  
@@ -80,12 +77,11 @@ End Sub
 Attribute VB_Name = "Connection"  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ActiveConnection 屬性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [資料行集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [資料表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [型別屬性 （資料表） (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
-
+ [Type 屬性 (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

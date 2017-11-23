@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 73a6a2986bd06354ccb1443424ce2aaa31715a72
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 31c115688a0c29b61ce6eb3a9daf783b1fe9e248
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-modeling-ssas"></a>多維度模型化 (SSAS)
   Analysis Services 多維度方案會使用 Cube 結構來分析跨多個維度的商務資料。 多維度模式為 Analysis Services 的預設伺服器模式。 它包含 OLAP 資料查詢及計算引擎，其 MOLAP、ROLAP 和 HOLAP 儲存模式可平衡效能與可擴充的資料需求。 Analysis Services OLAP 引擎是領先業界的 OLAP 伺服器，可與眾多 BI 工具搭配使用。 大部分 Analysis Services 部署都是安裝為傳統 OLAP 伺服器。  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [多維度模型組件管理](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   
-

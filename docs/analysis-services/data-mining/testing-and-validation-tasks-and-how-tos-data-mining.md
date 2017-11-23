@@ -21,17 +21,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], predictive modeling
 - predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4dff2bccc2c56f35152c2959ee4b9699eaf9821b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e74a79b18f526878981d21e36134ff82d5c862b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>測試及驗證工作與操作方法 (資料採礦)
   您可以在 **中使用資料採礦設計師的** [採礦精確度圖表] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 索引標籤，比較採礦結構中之採礦模型的預測精確度。  
@@ -67,4 +66,3 @@ ms.lasthandoff: 09/01/2017
 -   [使用巢狀資料表當做精確度圖表的輸入](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
   
   
-

@@ -17,17 +17,16 @@ helpviewer_keywords:
 - singleton queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cd960d2d0f0628e2c8a8c568cf7e5bb065caa2a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dfbb55881c274dee8560cbba14319bcc831b38c2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在資料採礦設計師中建立單一查詢
   如果您想要針對單一案例建立預測，單一查詢便很有用。 如需單一查詢的詳細資訊，請參閱[資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)。  
@@ -88,8 +87,7 @@ AS [t]
   
      這時會開啟新的畫面，以顯示查詢的結果。 若要檢視您剛建立的 DMX 陳述式，請按一下 [SQL]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [預測查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   
-

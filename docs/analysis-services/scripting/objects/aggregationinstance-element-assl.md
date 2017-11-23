@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AggregationInstance Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AggregationInstance Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- AggregationInstance element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: AggregationInstance element
 ms.assetid: 2e77e9e1-9f2c-4df4-9aa6-5b7b911016a3
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9627febfef1a7fba543c86dd8fdb34ed9935f48f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f9a3840c481d63b06357fa8c76b9f3fc7c2ae6bc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregationinstance-element-assl"></a>AggregationInstance 元素 (ASSL)
   定義資料分割的彙總執行個體。  
@@ -74,8 +69,7 @@ ms.lasthandoff: 09/01/2017
   
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AggregationInstance>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

@@ -21,17 +21,16 @@ helpviewer_keywords:
 - performance [Analysis Services], SQL Server Profiler
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a02f7cf6e59a39e79810819d59bfa42c60dde748
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e5b4073390d14a50948ad7cf023a394c3f1ef683
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>使用 SQL Server Profiler 監視 Analysis Services 簡介
   您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來監視由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體產生的事件。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以執行下列動作：  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [建立 Profiler 追蹤以重新執行 &#40;Analysis Services&#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   
   
-

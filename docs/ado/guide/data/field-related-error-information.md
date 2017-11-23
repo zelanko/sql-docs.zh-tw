@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - field-related errors [ADO]
 - errors [ADO], field-related
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d37d91f2b35cf211044f2ac1f2bf8705bbc1ef16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3a7609b4c4a0d67f1bade86c2e6ec3bb66b07553
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="field-related-error-information"></a>欄位相關的錯誤資訊
 如果錯誤直接相關的欄位 — 比方說，如果資料遺漏，或者它是欄位的錯誤類型 — 您可以擷取問題的原因的詳細資訊，藉由檢查**欄位**物件的**狀態**屬性。 這個屬性已經過增強，以提供特定問題的相關資訊。 所以舉例來說，當呼叫**UpdateBatch**失敗，問題的原因可以檢查來判斷**狀態**屬性**欄位**中每個受影響的功能記錄。 此屬性包含值的其中一個**FieldStatusEnum**常數。 下表包含發生錯誤時，會特別感興趣的那些值。  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 |**adFieldIntegrityViolation**|10|表示無法修改的欄位，因為它是導出或衍生的實體。|  
 |**adFieldIsNull**|3|指出提供者傳回了 null 值。|  
 |**adFieldOutOfSpace**|22|表示提供者無法取得足夠的儲存空間可完成移動或複製作業。|
-

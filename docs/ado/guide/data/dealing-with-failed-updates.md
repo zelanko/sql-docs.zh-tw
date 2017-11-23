@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- updates [ADO], dealing with failed updates
+helpviewer_keywords: updates [ADO], dealing with failed updates
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e2be023b954040c1c539063c1e1a3d1cf67931ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dc8facd3f93f0c752739c20d61352d8c4ab2f63f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dealing-with-failed-updates"></a>處理失敗的更新
 更新已結束但發生錯誤，當您解決錯誤的方式取決於本質和錯誤的嚴重性和應用程式的邏輯。 不過，如果資料庫與其他使用者共用，常見的錯誤將會有其他人修改欄位，然後再進行。 這種類型的錯誤稱為衝突。 ADO 會偵測這種情況，並報告錯誤。  
@@ -44,6 +41,5 @@ Do While Not objRst.EOF
 Loop  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [批次模式](../../../ado/guide/data/batch-mode.md)
-

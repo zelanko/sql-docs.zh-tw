@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 08/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -26,22 +25,21 @@ helpviewer_keywords:
 - uninstalling SSMA
 - upgrading SSMA
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ade7040ed4736ea0ee451154c3eed19582adcce8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: e93611af32e1317096fc2ea95f8b4d2147a88bcc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安裝 SQL Server 移轉小幫手存取 (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) 的存取使用 Windows Installer 為基礎的精靈來安裝。 本主題會提供通往 SSMA，最新版本的安裝必要條件的相關資訊和安裝、 授權、 解除安裝與升級 SSMA 的指示。  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>必要條件  
 SSMA 安裝之前，請確定您的系統符合下列需求：  
   
 -   Windows 7 或更新版本，或 Windows Server 2008 或更新版本。  
@@ -101,4 +99,3 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
 [將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [連結到 SQL Server 存取應用程式](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  
   
-

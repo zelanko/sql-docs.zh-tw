@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 202ece8496decb7ada7300cbfca79158bd7d2338
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2604f09ecffab3e0f5519731acffa00111af9677
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-errors"></a>ADO 錯誤
 **ErrorValueEnum**常數描述 ADO 錯誤值。 如需完整清單，這些列舉的常數，包括值，請參閱[附錄 b: ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本章節將會檢查一些更有趣的錯誤，並說明某些特定情況下，或若要修正此問題的解決方案，可引發。 這兩個**ErrorValueEnum**列出常數和短正數的十進位數字。
@@ -88,4 +86,3 @@ ms.lasthandoff: 09/09/2017
 |**3749**|**adErrFieldsUpdateFailed**|欄位更新失敗。 如需詳細資訊，請檢查**狀態**個別欄位物件的屬性。 兩種情況可能會發生此錯誤： 變更時**欄位**物件的值進行變更或新增一筆記錄，到資料庫; 以及變更的屬性時**欄位**物件本身。<br /><br /> **記錄**或**資料錄集**更新失敗，因為目前的記錄中欄位的其中一個問題。 列舉**欄位**集合，並檢查**狀態**屬性的每個欄位，以判斷問題的原因。|
 |**3750**|**adErrDenyNotSupported**|提供者不支援共用限制。 嘗試將檔案共用，您的提供者不支援這個概念。|
 |**3751**|**adErrDenyTypeNotSupported**|提供者不支援共用限制的要求的的類型。 嘗試建立特定類型的檔案共用您的提供者不支援的限制。 請參閱提供者的文件，以判斷支援哪些檔案共用限制。|
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - _Table::get_DateModified
 - _Table::DateModified
 - _Table::GetDateModified
-helpviewer_keywords:
-- DateModified property [ADOX]
+helpviewer_keywords: DateModified property [ADOX]
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7d4c35300d67bb689ce2479bbcb8c61c40ac9731
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f76f2f250ae7a40cdb2184ce29c5e20772f7ccaf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datemodified-property-adox"></a>DateModified 屬性 (ADOX)
 指出上次修改物件的日期。  
@@ -45,9 +42,8 @@ ms.lasthandoff: 09/09/2017
   
 ||||  
 |-|-|-|  
-|[程序物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[檢視物件 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
+|[Procedure 物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[View 物件 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DateCreated 和 DateModified 屬性範例 (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [DateCreated 屬性 (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)
-

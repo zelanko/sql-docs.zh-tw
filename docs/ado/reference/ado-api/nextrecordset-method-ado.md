@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - NextRecordset
 - Recordset15::NextRecordset
 - Recordset15::raw_NextRecordset
-helpviewer_keywords:
-- NextRecordset method [ADO]
+helpviewer_keywords: NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 524957fe66debad97fc9c1512cc9e3c70153d216
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e7650cb3516311f3eb93e93304ba9d20ec874466
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 方法 (ADO)
 清除目前[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，並傳回下一個**資料錄集**往前移透過一系列的命令。  
@@ -68,9 +65,8 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
  但是，其他提供者可能會執行下一個命令陳述式中呼叫 NextRecordset 之後，才。 對於這些提供者，如果您明確地關閉**資料錄集**ADO 絕不會執行其餘的命令之前逐步整個命令陳述式的物件。  
   
 ## <a name="applies-to"></a>適用於  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [NextRecordset 方法範例 (VB)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
- [NextRecordset 方法範例 （VC + +）](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   
-
+ [NextRecordset 方法範例 (VC++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   

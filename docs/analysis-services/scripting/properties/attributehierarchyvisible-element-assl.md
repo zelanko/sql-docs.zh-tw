@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AttributeHierarchyVisible Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AttributeHierarchyVisible Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AttributeHierarchyVisible
-helpviewer_keywords:
-- AttributeHierarchyVisible element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AttributeHierarchyVisible
+helpviewer_keywords: AttributeHierarchyVisible element
 ms.assetid: a3289a9a-dbd6-43e8-a7ca-ee8a1da92a32
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: caa12bfde94251db1c6b3640cf17b4afc0c2ac65
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5e79ef9a4a3d248f9641bc6aae44c50acb83b56b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributehierarchyvisible-element-assl"></a>AttributeHierarchyVisible 元素 (ASSL)
   決定用戶端應用程式是否可看到屬性階層。  
@@ -71,9 +65,8 @@ ms.lasthandoff: 09/01/2017
   
  對應至父系的項目**AttributeHierarchyVisible**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CubeAttribute>， <xref:Microsoft.AnalysisServices.DimensionAttribute>，和<xref:Microsoft.AnalysisServices.PerspectiveAttribute>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [AttributeHierarchyEnabled 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/attributehierarchyenabled-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

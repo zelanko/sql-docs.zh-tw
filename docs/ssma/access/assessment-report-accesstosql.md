@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Assessment Report dialog box
 - Conversion Report dialog box
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 40f8d07490e74a87c4b505277a523e23349543cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 204daf3086827fad67866a17d226bcc18338db32
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="assessment-report-accesstosql"></a>評估報表 (AccessToSQL)
 評估報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，並且也可幫助您評估複雜度及成本的移轉專案。  
@@ -45,7 +43,6 @@ ms.lasthandoff: 08/02/2017
   
 若要檢視訊息詳細資料，請按一下**錯誤**，**警告**，或**訊息**，然後展開 訊息。 SSMA 會顯示具有這項錯誤的物件清單。 按一下以顯示物件所有轉換的詳細資料物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [使用者介面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

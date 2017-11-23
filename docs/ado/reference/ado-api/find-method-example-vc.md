@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Find method [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4476fd0c8a0657d1b72176e68aae0f9184a9c3f2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa68bfc51fa7305ec97d8aacbb5a0c95ed409fa3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-method-example-vc"></a>尋找方法範例 （VC + +）
 這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法找出和商務標題中的次數**Pubs**資料庫。 此範例假設基礎提供者不支援類似的功能。  
@@ -162,7 +158,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Partitioning element
+dev_langs: XML
+helpviewer_keywords: Partitioning element
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5c84705492db53c29b2f430d6e105a239e4393de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1937f32556c442460ee0ed051ae5aed7b14b13b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="partitioning-element-dta"></a>Partitioning 元素 (DTA)
   包含在分析期間，Database Engine Tuning Advisor 所要使用的資料分割配置。  
@@ -52,14 +48,13 @@ ms.lasthandoff: 08/02/2017
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素 &#40; Dta& &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**父元素**|[TuningOptions 元素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**子元素**|無。|  
   
 ## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱[簡單 XML 輸入檔範例 &#40;DTA&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>請參閱＜  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

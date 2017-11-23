@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - SQL, assessing
 - syntax, assessing
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4930467d9753005a0f11faaa4397d7ae455bd5eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 61e0ad607f242d6d96f81326621f46df9602c023
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>轉換 (AccessToSQL) 評估來存取資料庫物件
 在您載入的物件，並將資料移轉至之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您應該先判斷多少的移轉將會成功，並轉換可能會花多少時間。 SSMA 可以建立顯示之物件的成功轉換為百分比的評估報告[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 的語法和時間估計執行移轉。 SSMA 也可讓您檢視造成轉換失敗的特定問題。  
@@ -66,9 +64,8 @@ SSMA 當它建立的評估報告時，將轉換至的選取的存取資料庫物
 再次執行評估報表或將結構描述轉換之前，您應該修正錯誤。 若要尋找錯誤，請按一下**錯誤**按鈕訊息 窗格中，然後展開每個錯誤，若要檢視的物件發生錯誤的清單。 如果您按一下 [訊息] 窗格中的物件時，所有錯誤和警告，該物件會都出現在 [詳細資料] 窗格中。  
   
 ## <a name="next-step"></a>下一個步驟  
-[轉換來存取資料庫物件](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+[轉換 Access 資料庫物件](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

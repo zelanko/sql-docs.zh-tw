@@ -5,31 +5,27 @@ ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - XQuery, static typing
 - static typing
 - checking static types
 - inference [XQuery]
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 473b3e2fc020778b1d91f75935a46f50f0e886de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4ecd8ad6c497ba796feeccc195cb0b6ebe76332c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 與靜態類型
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -95,8 +91,7 @@ ms.lasthandoff: 09/01/2017
 ### <a name="example-operator-over-union-type"></a>範例：聯集類型的運算子  
  加法運算 ('+') 需要精確的運算元類型。 因此，運算式 `(//r)[1] + 1` 會傳回靜態錯誤，其中含有前述之元素 <`r`> 的類型定義。 有一種解決方法，就是將它改寫成 `(//r)[1] cast as xs:int? +1`，其中 "?" 表示出現次數 0 或 1。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要 "cast as" 含有 "?"，因為任何轉換都可能會因執行階段錯誤，而造成空的序列。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   
-

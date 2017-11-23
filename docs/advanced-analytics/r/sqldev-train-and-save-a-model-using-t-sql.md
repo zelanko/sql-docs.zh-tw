@@ -5,27 +5,24 @@ ms.date: 07/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 3282e8ed-b515-4ed5-8543-fcef68629a92
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d33b81b0472562a9eca148c50eae50f2e280b370
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 785e4dc3db234447c806ddc349682d08a8447923
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>第 5 課： 定型和儲存模型，使用 T-SQL
 
@@ -118,5 +115,4 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-lesson"></a>上一課
 
 [第 4 課： 建立使用 T-SQL 資料功能](..//tutorials/sqldev-create-data-features-using-t-sql.md)
-
 

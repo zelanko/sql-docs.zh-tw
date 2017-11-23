@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f1151f0b20e0da5fbdacc6ea0a025245430405ec
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 759522b9708946298a7266f06359fe07a0dcdfb1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>刪除 Power Pivot 資料摘要庫
   您必須是網站擁有者，才能刪除資料摘要庫。 如果摘要庫中包含項目，就會連同摘要庫一起刪除。  
@@ -44,8 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 5.  在 [權限與管理] 之下，按一下 [刪除此文件庫]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Power Pivot 資料摘要](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   
-

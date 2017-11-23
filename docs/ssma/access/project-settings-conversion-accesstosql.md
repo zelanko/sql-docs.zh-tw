@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - conversion, options described
 - Project Settings dialog box, Conversion
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6b634d67ca4136f36f57f1f7dd5aa94af8744346
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c9a9c7fb027bfd8f90d5310bb096eaef706aa353
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-conversion-accesstosql"></a>專案設定 （轉換） (AccessToSQL)
 轉換專案設定可讓您設定如何將物件轉換到存取資料庫物件從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫物件。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/02/2017
   
 -   使用**預設專案設定**對話方塊來設定所有專案的組態選項。 若要存取轉換設定在**工具**功能表上，選取**預設專案設定**，選取移轉專案類型設定為需要從變更 / 檢視**移轉的目標版本**下拉式清單中，按一下 **一般**底部的左的窗格，然後選取**轉換**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **新增主索引鍵**  
 建立新的主要金鑰中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料表，如果 Access 資料表沒有主索引鍵或唯一索引。  
   
@@ -119,7 +117,6 @@ ms.lasthandoff: 08/02/2017
   
 -   **完整模式**: True  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [使用者介面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

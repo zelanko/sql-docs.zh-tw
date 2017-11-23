@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Workload element
+dev_langs: XML
+helpviewer_keywords: Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a2ff19d6a4044a6a3e29cb59592cdd7dd653e79
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4cacc7a628f0682938b7db6821e08106a3eeaac3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="workload-element-dta"></a>Workload 元素 (DTA)
   指定微調工作階段所用的工作負載。  
@@ -52,7 +48,7 @@ ms.lasthandoff: 08/02/2017
 |關聯性|元素|  
 |------------------|--------------|  
 |**父元素**|[啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**子元素**|[File 元素 &#40; Dta& &#41;](../../tools/dta/file-element-dta.md)<br /><br /> [工作負載 &#40; Dta& &#41; 的 database 元素](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 元素 &#40; Dta& &#41;](../../tools/dta/eventstring-element-dta.md)|  
+|**子元素**|[File 元素 &#40;DTA&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [工作負載的 Database 元素 &#40;DTA&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 元素 &#40;DTA&#41;](../../tools/dta/eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>備註  
  工作負載是針對需要微調的一或多個資料庫來執行的一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 Database Engine Tuning Advisor 可以利用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、追蹤檔和追蹤資料表來作為工作負載。  
@@ -87,7 +83,6 @@ ms.lasthandoff: 08/02/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

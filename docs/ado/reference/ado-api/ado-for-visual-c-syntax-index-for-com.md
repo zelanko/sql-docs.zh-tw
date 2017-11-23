@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,23 +12,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e25f69205b217399242e1e3ff94935deed4536f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ace385c89003d7b528643c5047337eb32ed0847e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>Visual c + + 語法索引 com ADO
 此索引是根據 Microsoft Visual c + + ADO 語言參考的交互參照。  
@@ -58,7 +55,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [資料流物件](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Visual c + + 語法索引 #import ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
-

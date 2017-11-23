@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Collation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Collation Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Collation
-helpviewer_keywords:
-- Collation element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Collation
+helpviewer_keywords: Collation element
 ms.assetid: 9b6dbe19-543e-43e6-abe9-1e8b4dfaa275
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cd94e59c5dc20f2a0fa8d1a280a0cf60f671e3a3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d6d76943f405e883ec361868f9492fc1485f9222
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="collation-element-assl"></a>Collation 元素 (ASSL)
   決定父元素所使用的定序。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
  對應至父系的項目**定序**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Cube>， <xref:Microsoft.AnalysisServices.Database>， <xref:Microsoft.AnalysisServices.DataItem>， <xref:Microsoft.AnalysisServices.Dimension>， <xref:Microsoft.AnalysisServices.MiningModel>，和<xref:Microsoft.AnalysisServices.MiningStructure>.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

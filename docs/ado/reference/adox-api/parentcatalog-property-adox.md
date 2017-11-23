@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -40,20 +39,18 @@ f1_keywords:
 - _User::PutRefParentCatalog
 - _Group::GetParentCatalog
 - _Group::PutRefParentCatalog
-helpviewer_keywords:
-- ParentCatalog property [ADOX]
+helpviewer_keywords: ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 27181ddda63e190f1aa6e451c4fd5eeca1a25c12
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f5229c37299494ca2b3b31e3ca3e0d091c93d96a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 屬性 (ADOX)
 指定的父目錄的資料表、 使用者或資料行的物件，來提供存取提供者特有的屬性。  
@@ -70,9 +67,8 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
-|[使用者物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
+|[Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
+|[User 物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ParentCatalog 屬性範例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
-

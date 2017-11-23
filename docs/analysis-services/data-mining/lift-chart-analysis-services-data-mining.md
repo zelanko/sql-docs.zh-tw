@@ -21,17 +21,16 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: bc351c7439eac3a6714181b05257bef284915f95
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b939d468a964160cd84dbdb60fcae97d4f2ee6a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>增益圖 (Analysis Services - 資料採礦)
   「增益圖」以圖形表示與隨機猜測相較下採礦模型所提供的改進，並測量「增益」分數的相關變更。 藉由比較不同模型的增益分數，您可以判斷哪一個模型是最佳選擇。 您也可以判斷模型的預測在哪個點變得較沒有用。 例如，藉由檢閱增益圖，您了解到促銷活動可能只對 30% 的客戶有效，並使用該圖來限制行銷活動的範圍。  
@@ -134,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

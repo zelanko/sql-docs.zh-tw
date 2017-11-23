@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Prediction Query Builder
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 85305fce0f348bca26bb5b2381a87bd204e4679c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1994ebc359ca23eee9ae76112d9ceebd1970debb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-queries"></a>資料採礦查詢
   資料採礦查詢有許多實用的用途。 您可以：  
@@ -180,4 +179,3 @@ ms.lasthandoff: 09/01/2017
  [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   
-

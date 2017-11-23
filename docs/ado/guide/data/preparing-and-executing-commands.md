@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Command object [ADO], preparing and executing commands
+helpviewer_keywords: Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc77ab26c705aaaaed4a7171f8c9349be8ac7f0b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f566d3fb0c639e5f7cb7214d8cf467312ae7f28d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="preparing-and-executing-commands"></a>準備和執行命令
 命令會指示發行給提供者執行某些作業，對基礎資料來源。 SQL 陳述式，比方說，是 Microsoft SQL 資料提供者的命令。 在 ADO 中，命令通常由**命令**物件，不過也可以透過發出簡單命令**連接**或**資料錄集**物件。  
@@ -39,17 +36,16 @@ ms.lasthandoff: 09/09/2017
   
  此章節包含下列主題。  
   
--   [命令物件概觀](../../../ado/guide/data/command-object-overview.md)  
+-   [Command 物件概觀](../../../ado/guide/data/command-object-overview.md)  
   
 -   [建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
--   [命令物件參數](../../../ado/guide/data/command-object-parameters.md)  
+-   [Command 物件參數](../../../ado/guide/data/command-object-parameters.md)  
   
--   [呼叫預存程序使用的命令](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
+-   [使用命令呼叫預存程序](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
   
 -   [為連線物件上的方法呼叫的預存程序](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   
--   [具名的命令](../../../ado/guide/data/named-commands.md)  
+-   [具名命令](../../../ado/guide/data/named-commands.md)  
   
--   [將參數傳遞至具名的命令](../../../ado/guide/data/passing-parameters-to-a-named-command.md)
-
+-   [傳遞參數給具名命令](../../../ado/guide/data/passing-parameters-to-a-named-command.md)

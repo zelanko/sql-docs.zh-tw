@@ -22,17 +22,16 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15b23f5cbe20fd7833a02cb6cff276680c30c9fb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-query-tools"></a>資料採礦查詢工具
   所有資料採礦查詢都使用資料採礦延伸模組 (DMX) 語言。 DMX 可以用來建立各種機器學習工作的模型，包括分類、風險分析、產生建議及線性迴歸。 您也可以撰寫 DMX 查詢，來取得在處理模型時所產生之模式和統計資料的相關資訊。  
@@ -84,7 +83,7 @@ ms.lasthandoff: 09/01/2017
   
 -   若要擷取**模型內容**和**模型中繼資料** (例如叢集數、決策樹中所使用的屬性、模型上次處理的日期及建立模型時所使用的演算法參數)，您可以使用 [Discover 方法 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) 方法，並在 [RequestType 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 標頭中指定其中一個資料採礦結構描述資料列集。 若要縮小查詢範圍，請輸入準則作為 [RestrictionList 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md) 元素內的限制。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)   
  [了解 DMX Select 陳述式](../../dmx/understanding-the-dmx-select-statement.md)   
@@ -93,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  [在 SQL Server Management Studio 中建立 DMX 查詢](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   
-

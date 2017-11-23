@@ -25,17 +25,16 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9d796c274172d6fdc8402c5965b6d281cc8c4e89
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0145d9d7cd222d24294d7aaab389aa5a4bdc28cb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>採礦結構 (Analysis Services - 資料採礦)
   採礦結構定義從中建立採礦模型的資料：此結構會指定來源資料檢視、資料行的數目和類型，並將選用的資料分割指定為定型集和測試集。 單一採礦結構可支援共用相同網域的多個採礦模型。 下列圖表說明資料採礦結構與資料來源及其所構成資料採礦模型間的關聯性。  
@@ -134,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [採礦模型 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   
-

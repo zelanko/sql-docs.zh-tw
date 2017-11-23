@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Seek method [ADO], VC++ example
 - index property [ADO]
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 821fea690e32fc489e9d1de4c56a032240bf4689
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c47cd5616a5a8d093eaeb9d72b74377a4adb23a1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>搜尋方法和索引屬性的範例 （VC + +）
 這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[搜尋](../../../ado/reference/ado-api/seek-method.md)方法和[索引](../../../ado/reference/ado-api/index-property.md)屬性搭配給定***員工識別碼***，以找出中的員工的姓名***員工***Nwind.mdb 資料庫資料表。  
@@ -233,8 +230,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Index 屬性](../../../ado/reference/ado-api/index-property.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [搜尋方法](../../../ado/reference/ado-api/seek-method.md)
-
+ [Seek 方法](../../../ado/reference/ado-api/seek-method.md)

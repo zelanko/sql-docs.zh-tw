@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a7aedabc-6af9-4698-a7a4-98f894001476
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 63ce2b423f04ef4199bbb32b5349c26c25fe2199
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd6aa812228cce132b4180a8537ba853f3ea92a2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-analysis-services-data-providers-amo-adomdnet-msolap"></a>安裝 Analysis Services 資料提供者 (AMO、ADOMD.NET、MSOLAP)
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 是 Analysis Services 資料提供者 (包含 ADOMD.Net、AMO 和 MSOLAP) 的版本更新。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/01/2017
 3.  按一下 [版本]  確認您有最新的組建。  
   
   
-

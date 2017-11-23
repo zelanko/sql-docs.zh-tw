@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset21::Seek
 - Recordset21::raw_Seek
-helpviewer_keywords:
-- Seek method [ADO]
+helpviewer_keywords: Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2e6e7d303e8cf1bad6edc21b22832ab76df5244
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d401bca51d735b2d0d633716cee732ad2ab9a086
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="seek-method"></a>搜尋方法
 搜尋的索引[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)來快速找出符合指定的值，並變更該資料列目前資料列位置的資料列。  
@@ -58,11 +55,10 @@ recordset.Seek KeyValues, SeekOption
  這個方法僅能使用的時機**資料錄集**物件已經開啟與[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值**adCmdTableDirect**。  
   
 ## <a name="applies-to"></a>適用於  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [搜尋方法和索引屬性範例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [搜尋方法和索引屬性的範例 （VC + +）](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
  [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Index 屬性](../../../ado/reference/ado-api/index-property.md)
-
