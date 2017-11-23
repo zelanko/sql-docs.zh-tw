@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC [ODBC], application development
 - application development [ODBC], about application development
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a2e38d349a45bece0fa9c637d18ee6a3c41a5f4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e64c33ea666d3df06b220a8c31f67e3606df7ffa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-applications"></a>開發應用程式
 本節包含有關開發使用 ODBC 介面和實作該類別的驅動程式的應用程式的資訊。  
@@ -36,23 +34,23 @@ ms.lasthandoff: 09/09/2017
   
 -   [ODBC 基本概念](../../../odbc/reference/develop-app/odbc-fundamentals.md)  
   
--   [基本的 ODBC 應用程式的步驟](../../../odbc/reference/develop-app/basic-odbc-application-steps.md)  
+-   [基本的 ODBC 應用程式步驟](../../../odbc/reference/develop-app/basic-odbc-application-steps.md)  
   
--   [連接到資料來源或驅動程式](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)  
+-   [連接至資料來源或驅動程式](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)  
   
--   [目錄函數](../../../odbc/reference/develop-app/catalog-functions.md)  
+-   [目錄函式](../../../odbc/reference/develop-app/catalog-functions.md)  
   
 -   [SQL 陳述式](../../../odbc/reference/develop-app/sql-statements.md)  
   
 -   [執行陳述式](../../../odbc/reference/develop-app/executing-statements-odbc.md)  
   
--   [擷取結果 （基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)  
+-   [擷取結果 (基本)](../../../odbc/reference/develop-app/retrieving-results-basic.md)  
   
--   [擷取結果 （進階）](../../../odbc/reference/develop-app/retrieving-results-advanced.md)  
+-   [擷取結果 (進階)](../../../odbc/reference/develop-app/retrieving-results-advanced.md)  
   
 -   [更新資料概觀](../../../odbc/reference/develop-app/updating-data-overview.md)  
   
--   [描述元](../../../odbc/reference/develop-app/descriptors.md)  
+-   [描述項](../../../odbc/reference/develop-app/descriptors.md)  
   
 -   [Transactions](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
@@ -62,6 +60,5 @@ ms.lasthandoff: 09/09/2017
   
 -   [程式設計考量](../../../odbc/reference/develop-app/programming-considerations.md)  
   
-## <a name="see-also"></a>另請參閱  
- [ODBC Programmer's Reference (ODBC 程式設計人員參考)](../../../odbc/reference/odbc-programmer-s-reference.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [ODBC 程式設計人員參考](../../../odbc/reference/odbc-programmer-s-reference.md)

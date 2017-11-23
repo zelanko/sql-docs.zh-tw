@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - result sets [ODBC], multiple results
 - SQLGetInfo function [ODBC], multiple results
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6e9f4cb753a7849e87c8b4725e7e0fad0e953ca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="multiple-results"></a>多個結果
 A*結果*項目之後，傳回資料來源所執行的陳述式。 ODBC 有兩種類型的結果： 結果集和資料列計數。 *資料列計數*會更新，受影響資料列數目 delete 或 insert 陳述式。 批次中所述[批次的 SQL 陳述式](../../../odbc/reference/develop-app/batches-of-sql-statements.md)，可以產生多個結果。  
@@ -61,4 +59,3 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  它是特定驅動程式是否整個批次陳述式才可供任何結果。 在某些實作中，是這種情況。在其他呼叫**SQLMoreResults**觸發批次中的下一個陳述式執行。  
   
  如果其中一個批次中陳述式失敗， **SQLMoreResults**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO。 如果陳述式失敗，或失敗的陳述式是批次中的最後一個陳述式時，批次已中止**SQLMoreResults**將會傳回 SQL_ERROR。 如果陳述式失敗後失敗的陳述式不是批次中的最後一個陳述式批次未中止**SQLMoreResults**將會傳回 SQL_SUCCESS_WITH_INFO。 SQL_SUCCESS_WITH_INFO，表示已產生至少一個結果集或計數，而且未中止批次。
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7dc04aac6bf9ec53b72705322ebe7f056caf8bfb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e5c3b945652c04cbbe75563d853703b5676b43f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>使用含有輸出參數的預存程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -103,8 +101,7 @@ public static void executeStoredProcedure(Connection con) {
   
  預存程序可以傳回更新計數和多個結果集。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]遵循 JDBC 3.0 規格，其中說明，多個結果集和更新計數應該擷取之前擷取 OUT 參數。 也就是應用程式應該擷取所有結果集物件，並更新計數，然後再使用 CallableStatement.getter 方法擷取 OUT 參數。 否則，當擷取 OUT 參數不已擷取的更新計數與結果集物件將會遺失。 如需更新計數的詳細資訊和多個結果集，請參閱[使用更新計數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)和[使用多個結果集](../../connect/jdbc/using-multiple-result-sets.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [使用預存程序的陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md)  
+## <a name="see-also"></a>請參閱＜  
+ [搭配使用陳述式與預存程序](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   
-

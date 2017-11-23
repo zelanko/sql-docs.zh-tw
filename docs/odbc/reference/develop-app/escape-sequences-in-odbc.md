@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a1981e538d5ea3a8730547544f99bcbf96d0e9c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92fd9745bccacad3d7487c3ed9f1bee58eeb4411
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="escape-sequences-in-odbc"></a>在 ODBC 中的逸出序列
 數字的語言功能，例如外部聯結和純量函式呼叫，通常是由 Dbms 實作。 不過，這些功能的語法通常 DBMS 專屬的即使標準語法定義各種標準組織所。 因為這個緣故，ODBC 會定義包含下列語言功能的標準語法的逸出序列：  
@@ -66,13 +64,12 @@ ms.lasthandoff: 09/09/2017
   
  此章節包含下列主題。  
   
--   [日期、 時間和時間戳記常值](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
+-   [日期、時間和時間戳記常值](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
   
 -   [純量函式呼叫](../../../odbc/reference/develop-app/scalar-function-calls.md)  
   
--   [像述詞的逸出字元](../../../odbc/reference/develop-app/like-predicate-escape-character.md)  
+-   [LIKE 述詞逸出字元](../../../odbc/reference/develop-app/like-predicate-escape-character.md)  
   
 -   [外部聯結](../../../odbc/reference/develop-app/outer-joins.md)  
   
 -   [程序呼叫](../../../odbc/reference/develop-app/procedure-calls.md)
-

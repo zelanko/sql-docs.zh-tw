@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6599312aa6c25275e6b7a642c6764591d1bf4cba
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b1ceff7c271688fcabf3206c4ba1fe0147e2afe4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -340,8 +338,7 @@ class XidImpl implements Xid {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [使用 JDBC 驅動程式執行異動](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [使用 JDBC Driver 執行交易](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
   
   
-

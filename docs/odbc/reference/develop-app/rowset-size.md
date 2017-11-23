@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e693a799c737baf8a11064c5bd50c2618cd1e29a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rowset-size"></a>資料列集大小
 若要使用哪一個資料列集大小取決於應用程式。 螢幕型應用程式通常會遵循兩種策略的其中一個。 第一個方法是將資料列集大小設定為顯示在畫面上的資料列數目如果使用者調整螢幕，應用程式據以變更資料列集大小。 第二個是資料列集大小設定為較大數目，例如 100，這會減少呼叫到資料來源數目。 應用程式會集中的資料列時可能在本機捲動，然後只在它捲動外部資料列集時，才會擷取新資料列。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   **SQLSetPos**使用為準，呼叫就是作用中的資料列集大小**SQLFetch**或**SQLFetchScroll**，因為**SQLSetPos**上運作如果資料列集已經設定。 **SQLSetPos**也將會挑選新的資料列集大小如果**SQLBulkOperations**已呼叫之後的資料列集大小已變更。  
   
 -   **SQLBulkOperations**會使用資料列集大小作用中時呼叫，因為它會執行獨立於任何已擷取的資料列集資料表上的作業。
-

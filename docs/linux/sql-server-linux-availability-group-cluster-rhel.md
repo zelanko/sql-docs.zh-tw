@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
+ms.openlocfilehash: c8e22f070a97dcc0a0f84b55e6f35cda02806637
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7930fd8cee6f6fabe00a711f9109573e42550563
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 RHEL 叢集
 
@@ -211,4 +210,3 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 ## <a name="next-steps"></a>後續的步驟
 
 [操作 HA 可用性群組](sql-server-linux-availability-group-failover-ha.md)
-

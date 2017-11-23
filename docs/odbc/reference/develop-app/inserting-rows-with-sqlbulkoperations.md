@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 854db50773ce22ec96641cbb6848fe8884b0c61c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>插入 SQLBulkOperations 具有資料列
 使用插入資料**SQLBulkOperations**類似於更新具有資料**SQLBulkOperations**因為它會使用資料繫結應用程式緩衝區。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 3.  呼叫**SQLBulkOperations**與*作業*引數設定為 SQL_ADD。  
   
  之後**SQLBulkOperations**傳回目前的資料列不會變更。 如果書籤資料行 （資料行 0） 會繫結， **SQLBulkOperations**傳回資料列集的緩衝區中插入的資料列的書籤繫結至該資料行。
-

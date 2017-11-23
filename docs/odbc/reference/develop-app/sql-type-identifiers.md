@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d0565ddfffb5b74344aaa41a1d0dfd243c590850
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2ec2f197029fab2467c7dced5f1cb720cf88f598
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-type-identifiers"></a>SQL 類型識別碼
 每個資料來源定義自己的 SQL 資料類型。 ODBC 定義類型的識別項，並描述可能會對應至每個類型識別項的 SQL 資料類型的一般特性。 它是驅動程式專用的基礎資料來源中的每個資料類型如何對應至 ODBC SQL 類型識別碼。  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  ODBC 定義各種不同的 SQL 類型識別項。 不過，驅動程式不需要使用所有這些識別項。 相反地，它使用基礎資料來源必須支援的 SQL 資料類型會公開這些識別項。 如果基礎資料來源支援的 SQL 資料類型轉換成對應的任何型別識別碼，驅動程式可以定義其他的型別識別項。 如需詳細資訊，請參閱[驅動程式特定資料類型，描述元類型、 資訊類型、 診斷的型別，以及屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
  SQL 類型識別碼的完整說明，請參閱[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d： 資料型別中。
-

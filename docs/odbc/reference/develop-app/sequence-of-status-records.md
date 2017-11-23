@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29c8fb3232abfc81eb41e9e3ec67ceb7e96de7ea
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b0e11fdd0d5d560cfcacd034745f7ed32cf8fca8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sequence-of-status-records"></a>狀態記錄的序列
 如果傳回兩個或多個狀態記錄，在驅動程式管理員和驅動程式進行排名，根據下列規則。 具有最高等級的記錄是第一筆記錄。 資料錄 （驅動程式管理員、 驅動程式、 閘道和等等） 的來源不會被視為時排序記錄。  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
 -   **警告**描述警告 （類別 01） 的狀態記錄具有最低順位。 如果兩個或多個記錄描述警告 Sqlstate 開啟群組 CLI 規格所定義的相同警告條件 outrank ODBC 定義及驅動程式定義的 Sqlstate。  
   
  如果沒有具有最高等級的兩個或多個記錄，它是未定義的記錄是第一筆記錄。 未定義的所有其他的記錄順序。 特別是之前的錯誤,，可能會出現警告，因為應用程式時應檢查所有的狀態記錄函式會傳回 SQL_SUCCESS 以外的值。
-

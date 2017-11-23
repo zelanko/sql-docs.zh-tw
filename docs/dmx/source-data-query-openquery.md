@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- OPENQUERY
-dev_langs:
-- DMX
-helpviewer_keywords:
-- OPENQUERY statement
+f1_keywords: OPENQUERY
+dev_langs: DMX
+helpviewer_keywords: OPENQUERY statement
 ms.assetid: fe57f3a3-a8e6-402c-995e-bd2fe28a7a7c
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 2348e0caf4eee97a6fae2e566ca534e65c70ae72
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: edfae84521fae05a34448cf0f8ea3ace01e31ed4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;來源資料查詢&gt;-OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,10 +63,9 @@ OPENQUERY(<named datasource>, <query syntax>)
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [&#60; 來源資料查詢 &#62;](../dmx/source-data-query.md)   
  [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

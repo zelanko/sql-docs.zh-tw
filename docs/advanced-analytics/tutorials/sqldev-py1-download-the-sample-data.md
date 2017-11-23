@@ -5,26 +5,23 @@ ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2017
+applies_to: SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: b2ac1eeb53ba9f9a0dcbf86ee772db9c8b2d3553
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/18/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="step-1-download-the-sample-data"></a>步驟 1： 下載範例資料
 
@@ -78,9 +75,8 @@ Github 上共用資料，此教學課程中的指令碼。 在此步驟中，您
 
 [資料庫內 Python 分析 SQL 開發人員](sqldev-in-database-python-for-sql-developers.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 
 [使用 Python 的機器學習服務](../python/sql-server-python-services.md)
-
 
 

@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerConnection.getWarnings
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerConnection.getWarnings
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 15af39bf-6285-44cc-a021-7341e7a055c4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5682bfd9773e4f02b591d033307946e5c20d4336
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d27fe9507001a4a01ef3f5dce6ed8e2bb21d29e0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getwarnings-method-sqlserverconnection"></a>getWarnings 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,9 +49,8 @@ public java.sql.SQLWarning getWarnings()
   
  後續的警告會鏈結到第一個 SQLWarning 和使用 getNextWarning 方法呼叫。 如果在關閉的連接上呼叫，將擲回例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
-

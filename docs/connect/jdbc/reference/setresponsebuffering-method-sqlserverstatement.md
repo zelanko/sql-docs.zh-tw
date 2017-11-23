@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerStatement.setResponseBuffering(String responseBufferingValue)
-apilocation:
-- SQLServerStatement.setResponseBuffering(String responseBufferingValue)
+apiname: SQLServerStatement.setResponseBuffering(String responseBufferingValue)
+apilocation: SQLServerStatement.setResponseBuffering(String responseBufferingValue)
 apitype: Assembly
 ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7a8a3eb698ac0de46e3ffe88b36222bc5d618659
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c5af0e179ea15fc4d5a30604b606f5ff45c79a1b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>setResponseBuffering 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,10 +57,9 @@ public final void setResponseBuffering(java.lang.String value)
   
  如果應用程式指定了無效的參數值來[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法， [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)就會擲回。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)   
  [使用適應性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)  
   
   
-

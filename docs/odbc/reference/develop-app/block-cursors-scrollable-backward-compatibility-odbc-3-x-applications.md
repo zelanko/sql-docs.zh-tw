@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - cursors [ODBC], compatibility issues
 - SQLFetchScroll function [ODBC], block cursors
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bc3b2fa0e72329300f4fb6aa52c274a0ce0f9b83
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>區塊資料指標，可捲動資料指標，ODBC 3.x 應用程式的回溯相容性
 兩者的存在**SQLFetchScroll**和**SQLExtendedFetch**代表分割 ODBC 之間應用程式設計介面 (API)，這是集合的函式中的第一個清除應用程式呼叫和服務提供者介面 (SPI)，這是集合的函式的驅動程式實作。 這種分割，才能在 ODBC 3 需求之間取得平衡。*x*，它會使用**SQLFetchScroll**，以與標準，並使其相容於 ODBC 2。*x*，它會使用**SQLExtendedFetch**。  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  ODBC 3。*x*應用程式不應該使用**SQLExtendedFetch**或 SQL_ROWSET_SIZE 陳述式屬性。 相反地，它們應該使用**SQLFetchScroll**和 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性。 ODBC 3。*x*應用程式不應該使用**SQLSetPos**與*作業*的 SQL_ADD 但是應該使用**SQLBulkOperations**與*作業*SQL_ADD。
-

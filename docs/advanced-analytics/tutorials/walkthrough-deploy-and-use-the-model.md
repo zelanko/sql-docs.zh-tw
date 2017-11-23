@@ -5,26 +5,22 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2749f0bfb3ab330a6a82fac824db245c005a819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>部署 R 模型，並將它用於 SQL
 
@@ -72,7 +68,7 @@ ms.lasthandoff: 10/07/2017
 
     + 您可以使用 SELECT 陳述式來呼叫預存的模型，從 SQL 資料表。 模型會從資料表擷取**varbinary （max)** SQL 變數中儲存的資料 _@lmodel2_ ，並做為參數傳遞*mod*儲存系統程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-    + 當做輸入使用的計分做為 SQL 查詢定義及儲存 SQL 變數以字串形式的資料 _@input_ 。 從資料庫擷取資料時，它會儲存在資料框架稱為*InputDataSet*，這是預設名稱的輸入資料與[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)程序，您可以定義如果需要使用參數的其他變數名稱 _@input\_資料\_1\_名稱_。
+    + 當做輸入使用的計分做為 SQL 查詢定義及儲存 SQL 變數以字串形式的資料 _@input_ 。 從資料庫擷取資料時，它會儲存在資料框架稱為*InputDataSet*，這是預設名稱的輸入資料與[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)程序，您可以定義如果需要使用參數的其他變數名稱  *_@input_data_1_name_*  。
 
     + 預存程序會從 `rxPredict` RevoScaleR **程式庫呼叫** 函數以產生分數。
 
@@ -229,4 +225,3 @@ ms.lasthandoff: 10/07/2017
 [SQL Server R 教學課程](sql-server-r-tutorials.md)
 
 [如何建立預存程序中使用 sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
-

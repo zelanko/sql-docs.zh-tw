@@ -8,28 +8,25 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], bitwise
 - bitwise operators
 - bit manipulations
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f9441cf26142e70340e23212991665f67fb7bf62
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 5d04924a82578040f801864bb68905feebc53e94
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="bitwise-operators-transact-sql"></a>位元運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,13 +44,13 @@ ms.lasthandoff: 09/08/2017
 |NOT  <br> 反轉每位元位置的位元值。 |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 請參閱下列主題：   
-* [& (位元 AND)](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
-* [& = (位元 AND EQUALS)](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
-* [&#124;(位元 OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
-* [&#124; = (位元 OR EQUALS)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
-* [^ (位元互斥 OR)](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
-* [^ = (位元互斥 OR EQUALS)](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
-* [~ (位元 NOT)](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
+* [& &#40;位元 AND &#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
+* [& = &#40;位元 AND 指派 &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+* [&#124;&#40;位元 OR &#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
+* [&#124; = &#40;位元 OR 指派 &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+* [^ &#40;位元互斥 OR &#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
+* [^ = &#40;位元互斥 OR 指派 &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
+* [~ &#40;位元 NOT &#41;](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
  位元運算子的運算元可以是任何一種資料類型的整數或二進位字串資料類型類別目錄 (除了**映像**資料型別)，但這兩個運算元不能是任何一種資料類型的二進位字串資料類型類別目錄。 下表顯示支援的運算元資料類型。  
   
@@ -66,9 +63,8 @@ ms.lasthandoff: 09/08/2017
 |[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**， **smallint**， **tinyint**，**二進位**，或**varbinary**|  
 |[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**， **smallint**，或**tinyint**|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
+ [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
+ [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
-  
-

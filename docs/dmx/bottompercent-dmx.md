@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- BOTTOMPERCENT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- BottomPercent function
+f1_keywords: BOTTOMPERCENT
+dev_langs: DMX
+helpviewer_keywords: BottomPercent function
 ms.assetid: 984eb18a-c55c-49f3-81fa-918dfc983174
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: c9b24144fe00212f70edeb0f3804da6eb942625a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cdc60cbc61d0c84953f2e80a5896dbd8465bdb8a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -129,9 +125,8 @@ NATURAL PREDICTION JOIN
 > [!WARNING]  
 >  當用來計算百分比的值包含負數時，TOPPERCENT 和 BOTTOMPERCENT 的 MDX 函數會產生非預期的結果。 這種行為並不影響 DMX 函數。 如需詳細資訊，請參閱[BottomPercent &#40;MDX &#41;](../mdx/bottompercent-mdx.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)  
   
   
-

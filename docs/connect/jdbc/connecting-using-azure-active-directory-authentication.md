@@ -9,21 +9,19 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3dde204d199935b25f492ed23fadb3c2d4e70a99
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83d5ad3bae131b58dd344c3f5f9bfc7f5d0c4f5a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證連線
 本文章提供有關如何開發使用 SQL Server 的 Microsoft JDBC Driver 6.0 （或更高） 的 Azure Active Directory 驗證功能的 Java 應用程式的資訊。
@@ -237,4 +235,3 @@ public class TokenBasedExample {
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    
 ``` 
-

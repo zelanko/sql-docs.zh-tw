@@ -3,28 +3,29 @@ title: "資料產生 |Microsoft 文件"
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.technology:
-- " database-engine "
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: cb816c1d41f0f5b77aa1dd6434cf912a6fbf4592
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 資料產生
-WideWorldImporters 和 WideWorldImportersDW 資料庫的發行的版本包含啟動年 1 月 1 日 2013，最多天這些資料庫所產生的資料。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters 和 WideWorldImportersDW 資料庫的發行的版本包含啟動年 1 月 1 日 2013，最多天這些資料庫所產生的資料。
 
 如果範例資料庫可用來在日後用於示範或圖例的用途，可能很有幫助包含資料庫中的較新的範例資料。
 
@@ -85,4 +86,3 @@ WideWorldImportersDW 能夠以任意增加資料大小，為了測試，例如�
 大約所需的資料列數目會插入到`Fact.Sale`2012 年中的資料表。 程序以人為方式限制為 50000 每天的資料列數目。 這可能會變更，但要避免 accidential overinflations 的資料表已存在。
 
 此外，此程序適用於叢集資料行存放區索引，如果它已不套用。
-

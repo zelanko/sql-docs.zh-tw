@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLTables
-apilocation:
-- sqlsrv32.dll
+apiname: SQLTables
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLTables
-helpviewer_keywords:
-- SQLTables function [ODBC]
+f1_keywords: SQLTables
+helpviewer_keywords: SQLTables function [ODBC]
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: be1a2ce0aea9d34ee1fcb8c1f26c5b5147105819
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd6e505ee08d7162ef820c7c7c75195b3616e585
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqltables-function"></a>SQLTables 函數
 **一致性**  
@@ -254,7 +248,6 @@ int main() {
 |傳回資料表的統計資料和索引|[SQLStatistics 函式](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
 |傳回針對資料表或資料表的權限|[SQLTablePrivileges 函式](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)
-

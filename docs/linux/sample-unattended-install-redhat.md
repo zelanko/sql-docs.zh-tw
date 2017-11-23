@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: f8b30f6fcef4a0091871a5a1c4639143671197cc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 50f3e867f17987c36a15810eaace668d59b738f2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux 的範例： 無人看管的 SQL Server 安裝指令碼
 
@@ -225,4 +224,3 @@ export SQL_INSTALL_AGENT='y'
 ```
 
 如需有關 SQL Server on Linux，請參閱[SQL Server on Linux 概觀](sql-server-linux-overview.md)。
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - allocated state [ODBC]
 - connection state [ODBC]
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0483bc53e02fa645c48200323ed4573105d37dd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 42aedfe48871b04b311fb5de31fb9866e0e2468c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="state-transitions"></a>狀態轉換
 ODBC 定義離散*狀態*每個環境中，每個連接，和每個陳述式。 例如，環境有三種可能狀態： 未配置的 （在其任何環境配置），已配置 （所在環境配置，但沒有連線配置），並連接 （所在的環境和一個或多個連接都是已配置）。 連接具有七個可能的狀態。陳述式有 13 的可能狀態。  
@@ -45,4 +43,3 @@ ODBC 定義離散*狀態*每個環境中，每個連接，和每個陳述式。 
  從應用程式的觀點來看，狀態轉換會使用通常直接： 合法的狀態轉換傾向於移手中手動編寫完善的應用程式的流程。 狀態轉換是更複雜的驅動程式管理員及驅動程式，因為它們必須追蹤狀態的環境、 每個連接及每個陳述式。 大部分的這項工作是由驅動程式管理員。陳述式具有擱置的結果也會發生的大部分工作，必須由驅動程式。  
   
  本手冊的部分 1 和 2 (< ODBC 簡介"和"開發應用程式和驅動程式 」) 較不明確指定狀態轉換。 相反地，它們會描述函式必須呼叫的順序。 例如，「 執行陳述式 」 狀態陳述式，必須備妥與**SQLPrepare**可以使用執行前**SQLExecute**。 如需完整的狀態和狀態轉換，包括轉換會檢查驅動程式管理員，且其必須檢查驅動程式，說明請參閱[附錄 b: ODBC 狀態轉換表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。
-

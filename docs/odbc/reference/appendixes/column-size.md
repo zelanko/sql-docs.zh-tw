@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - column size of data types [ODBC]
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7c760c40bfdde79f13285270be5038d67096c09
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13a50475602b7f71a7da33ebaaecb4c09eeaf534
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-size"></a>資料行大小
 數值資料類型的資料行 （或參數） 的大小被定義為資料行或參數的資料類型或資料的精確度所使用的最大位數。 字元類型，這是以字元為單位的資料; 長度二進位資料類型資料行大小被定義為資料的長度以位元組為單位。 針對時間、 時間戳記和所有間隔資料型別，這是中的這項資料的字元表示法的字元數。 下表顯示每個簡潔的 SQL 資料類型所定義的資料行大小。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 09/09/2017
 |所有數字類型|PRECISION|  
 |所有日期時間和間隔類型|LENGTH|  
 |SQL_BIT|LENGTH|
-

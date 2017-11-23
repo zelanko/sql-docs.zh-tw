@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - Data Mining Extensions [Analysis Services], identifiers
 - delimited identifiers [DMX]
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - regular identifiers [DMX]
 - names [DMX]
 ms.assetid: fbb487a7-1b89-482a-977e-f079379d44fc
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: ed3110b29e79ea71af00853a63c4c30a9e024cd8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a782514c378c3a8395596bf667f8964caaa6dce1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifiers-dmx"></a>識別碼 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -115,7 +113,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
 ### <a name="delimiting-identifiers-with-multiple-parts"></a>分隔含多個部份的識別碼  
  使用限定的物件名稱時，您可能必須分隔構成物件名稱的多個識別碼。 您必須個別分隔每個識別碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -127,4 +125,3 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

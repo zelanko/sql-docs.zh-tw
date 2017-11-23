@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Visual Studio Analyzer [ODBC], enabling
+helpviewer_keywords: Visual Studio Analyzer [ODBC], enabling
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a3aeb96b361386eee3de4365ec9c7d9fe2512af5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 85007fd6365312db8da6f408dfc5b5332ceea239
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enabling-visual-studio-analyzer"></a>啟用 Visual Studio 分析器
 > [!IMPORTANT]  
@@ -48,4 +45,3 @@ ms.lasthandoff: 09/09/2017
  本章節包含下列主題。  
   
 -   [ODBC 驅動程式管理員所產生的事件](../../../odbc/reference/develop-app/events-generated-by-the-odbc-driver-manager.md)
-

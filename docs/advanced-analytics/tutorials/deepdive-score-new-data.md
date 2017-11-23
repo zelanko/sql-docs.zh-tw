@@ -5,26 +5,22 @@ ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 87056467-f67f-4d72-a83c-ac052736d85d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 752f4722906d580c7b1da208ac9bd641d0bae1c5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 70c63f62647ce614e83414dbf923ba9bc4cc2c29
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="score-new-data"></a>為新資料評分
 
@@ -165,6 +161,5 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-step"></a>上一個步驟
 
 [建立模型](../../advanced-analytics/tutorials/deepdive-create-models.md)
-
 
 

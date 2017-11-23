@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerConnection.SQLServerClob (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerConnection.SQLServerClob (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7058f4f7-ef3e-4d62-90d1-79299708b1eb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 948dac80976fa606a17720432f45b9f8440dee2f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 028d7d4803ff53f518067d869fa192512209d723
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlserverclob-constructor-sqlserverconnection-javalangstring"></a>SQLServerClob 建構函式 (SQLServerConnection, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,10 +52,9 @@ public SQLServerClob(SQLServerConnection connection,
   
  CLOB 資料。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerClob 建構函式](../../../connect/jdbc/reference/sqlserverclob-constructors.md)   
  [SQLServerClob 成員](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob 類別](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLConfigDataSource function [ODBC], ODBC driver for Oracle
+helpviewer_keywords: SQLConfigDataSource function [ODBC], ODBC driver for Oracle
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 17d7cfdacb91ff3963a1bf77343c171e8f9d3fec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa32db53ef43da7f01200dcf057f9855a4f5707e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>使用 Oracle 的 ODBC 驅動程式 SQLConfigDatasource
 > [!IMPORTANT]  
@@ -61,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 |TranslationOption|33|""|A/N|轉譯選項。|  
 |TxnCap|2|""|A/N|交易支援。 如果為 0，此驅動程式會報告不支援交易。 如果是 1，驅動程式會報告它能夠執行的交易。|  
 |UID|30|""|A/N|使用者名稱。|
-

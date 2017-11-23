@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5cf61ff8794270ca5706284118c41c224bd5518f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e17e39f8a83313a60b269fed82631b80f07ffed5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>使用 JDBC 驅動程式管理結果集
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,8 +44,7 @@ ms.lasthandoff: 09/09/2017
 |[瞭解並行控制](../../connect/jdbc/understanding-concurrency-control.md)|描述 JDBC Driver 支援並行控制的方式。|  
 |[了解資料列鎖定](../../connect/jdbc/understanding-row-locking.md)|描述 JDBC 驅動程式支援資料列鎖定的方式。|  
   
-## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

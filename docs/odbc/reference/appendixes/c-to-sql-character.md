@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], character
 - converting data from c to SQL types [ODBC], character
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21c35898f3fb80309f1dfb4ef3c4eb749def1d42
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8d6ab676fc351afd7819c1fe60d59a58bfe7207
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-character"></a>SQL 到 C： 字元
 ODBC C 資料類型之字元的識別項是：  
@@ -72,4 +70,3 @@ ODBC C 資料類型之字元的識別項是：
   
 > [!NOTE]  
 >  應用程式開發人員都建議您不要從字元 C 資料繫結至二進位的 SQL 資料類型。 此轉換通常是緩慢又沒有效率。
-

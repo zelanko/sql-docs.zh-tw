@@ -8,29 +8,26 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- sqlsrv_begin_transaction
+apiname: sqlsrv_begin_transaction
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_begin_transaction
 - transaction support
 - API Reference, sqlsrv_begin_transaction
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a2bb23cb9c521c8bfea2022197724c154a3638d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b28185f3e858f30a9ff67c73381b0b9c4f07a028
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -131,9 +128,8 @@ sqlsrv_close( $conn);
 > [!NOTE]  
 > 請勿使用內嵌的 Transact-SQL 來執行交易。 例如，請勿執行以 "BEGIN TRANSACTION" 作為 Transact-SQL 查詢的陳述式，進而開始交易。 使用內嵌的 Transact-SQL 來執行交易時，無法保證預期的交易行為。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
 [如何：執行交易](../../connect/php/how-to-perform-transactions.md)  
 [PHP SQL 驅動程式概觀](../../connect/php/overview-of-the-php-sql-driver.md) 
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- set collate command [ODBC]
+helpviewer_keywords: set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 73bf988f0ab1b181a75c7569c8b279b36a9b76d8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dfd2225157c048840cd20bd140ed74ae31384b8a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-collate-command"></a>SET COLLATE 命令
 指定字元欄位的定序順序中後續索引和排序作業。  
@@ -81,6 +78,5 @@ SET COLLATE TO cSequenceName
   
  例如，如果索引建立設定定序設定為一般的設定自動分頁稍後在變更設定為西班牙文，索引會保留一般的定序序列。  
   
-## <a name="see-also"></a>另請參閱  
- [ODBC Visual FoxPro 安裝程式 對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [ODBC Visual FoxPro 設定對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

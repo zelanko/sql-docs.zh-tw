@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.custom: 
 ms.workload: On Demand
+ms.openlocfilehash: ed4f34bf3e08897ab13cae24f47fc74292ce38bc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: c83b105706916c193cb1a0bbf966ff64fb7bac05
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何開始開發 SQL Server on Linux 應用程式
 
@@ -83,4 +82,3 @@ ms.lasthandoff: 10/02/2017
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
 - [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
 - [執行 docker](quickstart-install-connect-ubuntu.md)
-

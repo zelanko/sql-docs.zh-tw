@@ -8,20 +8,18 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 895280e7c7c8924ec2ec5eea55049f87d9206c4f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 84bb78e184f1bca9e683aeebf46b178e3a7dd61f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Microsoft ODBC Driver for SQL Server on Linux 及 macOS 的版本資訊
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,4 +55,3 @@ ODBC driver on Linux 支援[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。
 ODBC Driver on Linux 支援對 Microsoft Azure SQL Database 的連接。 如需詳細資訊，請參閱 [如何：使用 ODBC 連接到 Windows Azure SQL Database](http://msdn.microsoft.com/library/hh974312.aspx)。  
 
 `-l`選項 （登入逾時） 已新增到`bcp`。 如需詳細資訊，請參閱[連接**bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。
-

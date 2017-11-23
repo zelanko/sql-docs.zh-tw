@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7e26574a8a11256136b376546e1f52533a986711
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
-ms.openlocfilehash: 097978fa39709dc3c5cd1b8ef150ce4f4c189b17
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="securing-jdbc-driver-applications"></a>保護 JDBC Driver 應用程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,8 +40,7 @@ ms.lasthandoff: 10/12/2017
 |[使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)|描述如何建立使用安全通訊通道[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫使用安全通訊端層 (SSL)。|  
 |[FIPS 模式](../../connect/jdbc/fips-mode.md)|描述如何在 FIPS 相容模式中使用 JDBC 驅動程式。| 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

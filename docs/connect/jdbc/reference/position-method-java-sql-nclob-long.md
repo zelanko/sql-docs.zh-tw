@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4a4007d3e734210f8a60a56884898dfb48c7a970
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0be71ad3437edf9febc776f83b26953593f294f7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="position-method-javasqlnclob-long"></a>position 方法 (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,11 +54,10 @@ long position(java.sql.NClob searchstr,
 ## <a name="remarks"></a>備註  
  此位置方法是由所指定位置中的方法 java.sql.NClob 介面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [將方法 &#40;SQLServerNClob &#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob 成員](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob 類別](../../../connect/jdbc/reference/sqlservernclob-class.md)  
   
   
-

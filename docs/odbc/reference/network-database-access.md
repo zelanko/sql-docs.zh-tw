@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - network database access [ODBC]
 - standardizing database access [ODBC], network
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 920de8b36ee55357eebde9ad844bfe569773f74e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5220da346aea15e2dc56224001b0d803c90e0047
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="network-database-access"></a>網路資料庫存取權
 透過網路存取資料庫需要多個元件，其中每一個都是獨立的和位於下方的程式設計介面。 下列圖例顯示這些元件。  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 -   **處理序間通訊機制**的處理序間通訊 (IPC) 機制，是由其中一個處理序通訊與另一個程序。 範例包括具名的管道、 TCP/IP 通訊端和 DECnet 通訊端。 IPC 機制的選擇是由作業系統和所使用的網路限制。  
   
 -   **網路通訊協定**網路通訊協定用來透過網路傳輸資料流。 它可以視為支援的 IPC 機制，用來實作資料流通訊協定，以及支援基本的網路作業，例如檔案傳輸及列印共用的配管。 網路通訊協定包括 NetBEUI、 TCP/IP、 DECnet 和 SPX/IPX，以及專屬於每個網路。
-

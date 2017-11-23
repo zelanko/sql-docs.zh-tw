@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
+ms.openlocfilehash: cc6eee565499d696c4f634d6eedc562547bc8253
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7aa90eb3fd0a0ea66ea4b4fa09bd17d3e6887d7e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/02/2017
    sudo apt-get install pacemaker pcs fence-agents resource-agents
    ```
 
-2. 設定安裝 Pacemaker 和 Corosync 套件時建立的預設使用者密碼。 在所有節點上使用相同的密碼。 
+2. 設定安裝 Pacemaker 和 Corosync 封裝時建立的預設使用者密碼。 在所有節點上使用相同的密碼。 
 
    ```bash
    sudo passwd hacluster
@@ -104,7 +103,7 @@ sudo systemctl enable pacemaker
 
    執行 'sudo apt get 安裝電腦' 同時安裝 pacemaker、 corosync 和電腦，並開始執行所有 3 個服務。  啟動 corosync 產生範本 ' / etc/cluster/corosync.conf' 檔案。  若要具有此檔案會成功的下一個步驟應該不存在 – 所以因應措施是停止 pacemaker / corosync 和刪除 ' / etc/cluster/corosync.conf'，然後下一個步驟將會順利完成。 '電腦叢集 destroy' 進行相同的工作，以及您可以將它當做一個時間最初的叢集安裝步驟。
    
-   下列命令會移除任何現有的叢集組態檔，並停止所有的叢集服務。 這會永久終結叢集。 預先生產環境中的第一個步驟中執行它。 請注意，'電腦叢集 destroy' 已停用 pacemaker 服務和可重新啟用的需求。 所有節點上執行下列命令。
+   下列命令會移除任何現有的叢集組態檔，並停止所有的叢集服務。 這會永久終結叢集。 預先生產環境中的第一個步驟中執行它。 請注意，'電腦叢集 destroy' 已停用 pacemaker 服務和可重新啟用的需求。 在所有節點上執行下列命令。
    
    >[!WARNING]
    >此命令將會損毀的任何現有的叢集資源。
@@ -124,7 +123,7 @@ sudo systemctl enable pacemaker
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-下列命令會建立三個節點叢集。 執行指令碼之前，請將之間的值取代`**< ... >**`。 在主要節點上執行下列命令。 
+下列命令會建立三個節點叢集。 執行指令碼之前，請取代 `**< ... >**` 之間的值。 在主要節點上執行下列命令。 
 
    ```bash
    sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
@@ -165,7 +164,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>使用 Pacemaker 安裝 SQL Server 資源的代理程式進行整合
 
-所有節點上執行下列命令。 
+在所有節點上執行下列命令。 
 
 ```bash
 sudo apt-get install mssql-server-ha
@@ -234,5 +233,4 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 ## <a name="next-steps"></a>後續的步驟
 
 [操作 HA 可用性群組](sql-server-linux-availability-group-failover-ha.md)
-
 

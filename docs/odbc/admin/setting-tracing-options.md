@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], tracing options
 - tracing options [ODBC], ODBC data source administrator
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1a62a03d3bb9e9876ed152bb4ac2cb8fb56ce66
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-tracing-options"></a>設定追蹤選項
 **追蹤** 索引標籤**ODBC 資料來源管理員** 對話方塊可讓您設定追蹤 ODBC 函數呼叫的方法。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/09/2017
 >  Visual Studio Analyzer 的支援已移除開頭 （Visual Studio Analyzer 只包含在舊版的 Visual Studio）。 Windows 8 中。 如需疑難排解機制的替代方法，使用 BID 追蹤。  
   
  Visual Studio® 分析器追蹤會提供效能和 ODBC 層的偵錯資訊。 所有傳出事件將引發在最上層的介面，以呈現為精確圖片儘可能花費在 ODBC 元件有關的時間。 Visual Studio Analyzer 追蹤需要註冊設定來源時的任何事件來源。 如需有關這種追蹤的詳細資訊，請參閱 Visual Studio 文件。
-

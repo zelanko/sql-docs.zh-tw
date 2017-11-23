@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 673b0a0ca903e5607822f78363c300f40a2df0ac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rules-for-conversions"></a>轉換規則
 本節中的規則適用於包含數值常值轉換。 這些規則的目的，會定義下列詞彙：  
@@ -110,4 +108,3 @@ ms.lasthandoff: 09/09/2017
          （2） 驅動程式將四捨五入 Y 中的字串，以適當的規模 （這也可以是零），並將結果寫入至 CT.  
   
          （3） 驅動程式都不會截斷也不會四捨五入，但只會將 Y 的第一個 LT 字元複製到 CT.
-

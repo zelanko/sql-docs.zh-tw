@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - registry entries for data sources [ODBC], data source specification subkeys
 - subkeys [ODBC], data source specification subkeys
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f5a33c92d5762702f7e309d70ef48f076ecc0b2b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61b485f55be504e894754f74c4ab779b9ebbaf5a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-source-specification-subkeys"></a>資料來源規格子機碼
 ODBC 資料來源的子機碼中所列每個資料來源都有自己的子機碼。 這個子機碼有同名的 ODBC 資料來源的子機碼下的對應值。 這個子機碼下的值必須列出驅動程式 DLL，而且可能會列出資料來源的描述。 如果驅動程式支援的轉譯器，這些值可能會列出預設轉譯程式預設轉譯 DLL 及預設轉譯選項的名稱。 值可能也會列出其他驅動程式連接到資料來源所需的資訊。 例如，驅動程式可能需要伺服器名稱、 資料庫名稱或結構描述名稱。  
@@ -54,4 +52,3 @@ TranslationDLL : REG_SZ : C:\WINDOWS\SYSTEM32\MSCPXL32.DLL
 TranslationName : REG_SZ : MS Code Page Translator  
 TranslationOption : REG_SZ : 12500850  
 ```
-

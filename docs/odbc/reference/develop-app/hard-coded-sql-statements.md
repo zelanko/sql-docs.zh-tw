@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - hard-coded SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1980f593f8f2279a56c9bb53645aaada7679062c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 60f0ad180a334c1d4ad08f49057bb5598df22f59
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hard-coded-sql-statements"></a>硬式編碼的 SQL 陳述式
 通常執行固定的工作的應用程式會包含硬式編碼的 SQL 陳述式。 例如，訂單輸入系統可能會使用清單開啟銷售訂單的下列呼叫：  
@@ -138,4 +136,3 @@ while (GetNewValues(&PartID, Desc, &Price))
 ```  
   
  如需參數、 已備妥的陳述式，以及程序的詳細資訊，請參閱[執行陳述式](../../../odbc/reference/develop-app/executing-a-statement.md)。
-

@@ -1,5 +1,5 @@
 ---
-title: "+ = （字串串連） (TRANSACT-SQL) |Microsoft 文件"
+title: "+ = （字串串連及指派） (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 12/07/2016
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - concatenate strings
 - string concatenation
 - += (concatenate operator)
 ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6c1716e014de1c99e4b3560d55674f0d82797c03
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c557bcc1d3c2f314ce57e93701b11833f5a6fc6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="string-concatenation---equal-transact-sql"></a>字串串連-等於 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-string-concatenation-assignment-transact-sql"></a>+ = （字串串連指派） (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   串連兩個字串，並將該字串設定為運算結果。 例如，如果變數@x等於 'Adventure'，然後@x+ = 'Works' 會採用的原始值@x、 將 'Works' 加入到字串，並設定@x為該新值 'AdventureWorks'。  
   
@@ -130,10 +127,9 @@ GO
  (1 row(s) affected)
   ```   
    
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+ = &#40;新增等於 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [+ = &#40;新增指派 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
  [+ &#40;字串串連 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
   
-

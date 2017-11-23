@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], prepared execution
 - SQL statements [ODBC], executing
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bde6eb0d06e99a9a7e08aeb4d4179bcbb9a5bff2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d6b2437d1958e2583dabb75c0a4c26a2ed472975
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="prepared-execution-odbc"></a>備妥的執行 ODBC
 備妥的執行是有效的方式執行的陳述式一次以上。 第一次編譯的陳述式，或*備妥，*成存取計畫。 就執行一或多次於稍後存取計劃。 如需存取計劃的詳細資訊，請參閱[處理 SQL 陳述式](../../../odbc/reference/processing-a-sql-statement.md)。  
@@ -100,4 +98,3 @@ while (GetPrice(&PartID, &Price)) {
  如果驅動程式無法模擬準備陳述式，則會儲存在陳述式時**SQLPrepare**呼叫，並將它提交執行時**SQLExecute**呼叫。  
   
  因為模擬的陳述式準備並不完美， **SQLExecute**可以傳回任何錯誤，通常由**SQLPrepare**。
-

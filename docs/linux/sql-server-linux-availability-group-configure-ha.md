@@ -6,23 +6,28 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 06/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
+ms.workload: On Demand
+ms.openlocfilehash: de348a584333eb113cca2e5eb052b21bbc3d1c54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>設定 Alwayson 可用性群組的 SQL Server on Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本文說明如何建立 SQL Server Always on Linux 的高可用性的可用性群組上。 有兩個可用性群組的組態類型。 A*高可用性*組態會使用 「 叢集管理員提供業務續航力。 這項設定也可以包含唯讀的相應放大複本。 本文件說明如何建立可用性群組的高可用性組態。
+本文說明如何建立 SQL Server Always on Linux 的高可用性的可用性群組上。 有兩個可用性群組的組態類型。 A*高可用性*組態會使用 「 叢集管理員提供業務續航力。 這項設定也可以包含向外延展讀取的複本。 本文件說明如何建立可用性群組的高可用性組態。
 
-您也可以建立*讀取的向外延展*沒有叢集管理員的可用性群組。 這項設定只會提供向外延展效能的唯讀複本。它不提供高可用性。 若要建立唯讀的向外延展可用性群組時，請參閱[設定讀取到向外延展可用性群組的 SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)。
+您也可以建立*向外延展讀取*沒有叢集管理員的可用性群組。 這項設定只會提供向外延展效能的唯讀複本。它不提供高可用性。 若要建立向外延展讀取可用性群組時，請參閱[設定向外延展讀取可用性群組的 SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)。
 
 保證高可用性與資料保護的設定，都需要兩個或三個同步認可複本。 包含三個同步複本的可用性群組可以自動修復即使如果一部伺服器無法使用。 如需詳細資訊，請參閱[的可用性群組組態的高可用性與資料保護](sql-server-linux-availability-group-ha.md)。 
 
@@ -81,13 +86,19 @@ ms.lasthandoff: 08/28/2017
 * 設定主要和次要複本`FAILOVER_MODE = EXTERNAL`。 
    指定複本互動外部叢集管理員 中，例如 Pacemaker。 
 
-下列的 TRANSACT-SQL 指令碼會建立名為高可用性的可用性群組`ag1`。 指令碼會設定可用性群組複本隨著`SEEDING_MODE = AUTOMATIC`。 此設定會自動在每個次要伺服器上建立資料庫的 SQL Server。 更新您的環境中的下列指令碼。 取代`**<node1>**`，和`**<node2>**`裝載複本的 SQL Server 執行個體名稱的值。 取代`**<5022>**`您設定與連接埠鏡像端點的資料。 若要建立可用性群組，請在裝載主要複本的 SQL Server 執行個體上執行下列 TRANSACT-SQL。
+下列的 TRANSACT-SQL 指令碼會建立名為高可用性的可用性群組`ag1`。 指令碼會設定可用性群組複本隨著`SEEDING_MODE = AUTOMATIC`。 此設定會自動在每個次要伺服器上建立資料庫的 SQL Server。 更新您的環境中的下列指令碼。 取代`**<node1>**`， `**<node2>**`，或`**<node3>**`裝載複本的 SQL Server 執行個體名稱的值。 取代`**<5022>**`您設定與連接埠鏡像端點的資料。 若要建立可用性群組，請在裝載主要複本的 SQL Server 執行個體上執行下列 TRANSACT-SQL。
 
 執行**只有一個**下列指令碼： 
 
-- 建立包含三個同步複本的可用性群組。
+- [建立包含三個同步複本的可用性群組](#threeSynch)。
+- [具有兩個同步複本及設定複本建立可用性群組](#configOnly)
+- [建立包含三個同步複本的可用性群組](#readScale)。
 
-   ```Transact-SQL
+<a name="threeSynch"></a>
+
+- 建立包含三個同步複本的可用性群組
+
+   ```SQL
    CREATE AVAILABILITY GROUP [ag1]
        WITH (DB_FAILOVER = ON, CLUSTER_TYPE = EXTERNAL)
        FOR REPLICA ON
@@ -119,6 +130,33 @@ ms.lasthandoff: 08/28/2017
    >[!IMPORTANT]
    >執行上述指令碼，以建立包含三個的同步複本的可用性群組之後，無法執行下列指令碼：
 
+- 具有兩個同步複本及設定複本建立可用性群組：
+
+   >[!IMPORTANT]
+   >此架構可讓任何版本的 SQL Server 以裝載第三個複本。 例如，第三個複本可以裝載於 SQL Server Enterprise Edition。 在 Enterprise 版本中，唯一有效的端點類型是`WITNESS`。 
+
+   ```SQL
+   CREATE AVAILABILITY GROUP [ag1] 
+      WITH (CLUSTER_TYPE = EXTERNAL) 
+      FOR REPLICA ON 
+       N'**<node1>**' WITH ( 
+          ENDPOINT_URL = N'tcp://**<node1>**:**<5022>**', 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+          FAILOVER_MODE = EXTERNAL, 
+          SEEDING_MODE = AUTOMATIC 
+          ), 
+       N'**<node2>**' WITH (  
+          ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**',  
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+          FAILOVER_MODE = EXTERNAL, 
+          SEEDING_MODE = AUTOMATIC 
+          ), 
+       N'**<node3>**' WITH ( 
+          ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+          AVAILABILITY_MODE = CONFIGURATION_ONLY  
+          );
+   ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
+   ```
 <a name="readScale"></a>
 
 - 建立包含兩個同步複本的可用性群組
@@ -128,7 +166,7 @@ ms.lasthandoff: 08/28/2017
    >[!IMPORTANT]
    >只能執行下列指令碼包含兩個同步複本建立可用性群組。 如果您執行上述指令碼無法執行下列指令碼。 
 
-   ```Transact-SQL
+   ```SQL
    CREATE AVAILABILITY GROUP [ag1]
       WITH (CLUSTER_TYPE = EXTERNAL)
       FOR REPLICA ON
@@ -164,9 +202,9 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->建立可用性群組之後，您必須設定整合與叢集技術，例如 Pacemaker 高可用性。 使用可用性群組、 開頭為讀取向外延展組態[!INCLUDE [SQL Server 版本](..\includes\sssqlv14-md.md)]，叢集就不需要設定。
+>建立可用性群組之後，您必須設定整合與叢集技術，例如 Pacemaker 高可用性。 使用可用性群組、 開頭為向外延展讀取組態[!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)]，叢集就不需要設定。
 
-如果您遵循本文件中的步驟，您有尚未進行叢集的可用性群組。 將叢集新增為下一個步驟。 此設定是有效的讀取與小數位數超出/負載平衡的情況下，不是完整高可用性。 高可用性，您要新增為叢集資源的可用性群組。 請參閱[後續步驟](#next-steps)如需相關指示。 
+如果您遵循本文件中的步驟，您有尚未進行叢集的可用性群組。 將叢集新增為下一個步驟。 這項設定適用於讀取比例/負載平衡的情況下，不是完整高可用性。 高可用性，您要新增為叢集資源的可用性群組。 請參閱[後續步驟](#next-steps)如需相關指示。 
 
 ## <a name="notes"></a>注意
 
@@ -184,4 +222,3 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [設定 SQL Server 可用性群組的叢集資源的 SUSE Linux Enterprise Server 叢集](sql-server-linux-availability-group-cluster-sles.md)
 
 [Ubuntu Server 可用性群組的叢集資源的叢集設定](sql-server-linux-availability-group-cluster-ubuntu.md)
-

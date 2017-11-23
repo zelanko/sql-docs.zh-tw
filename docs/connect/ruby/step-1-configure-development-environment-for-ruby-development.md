@@ -8,22 +8,20 @@ ms.service:
 ms.component: ruby
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1f50042c6ae0233b5bc39ce2879391d1d5340741
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d722d1eed21162d5e076f5dfdfc3a2f18787f42e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>步驟 1： 設定適用於拼音開發的開發環境
 您必須設定開發環境的必要條件，才能開發使用 SQL Server 的 Ruby 驅動程式的應用程式。    
@@ -116,4 +114,3 @@ c. 按一下 [確定]，並接著 「 擷取 」，請將檔案解壓縮。
 ```  
 > gem install tiny_tds  
 ```
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - LIKE predicate [ODBC]
 - escape sequences [ODBC], LIKE predicate
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f807bd12056f3c6a8e7a38efee56f0a6b6727066
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 132359972cebd3dded36fb911a2ee8e561e5ca64
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="like-predicate-escape-character"></a>像述詞的逸出字元
 在**像**述詞，百分比符號 （%） 比對零個或多個任意字元和底線 (_) 符合任何一個字元。 符合實際的百分比符號或底線中**像**述詞，逸出字元必須放在之前的百分比符號或底線。 定義的逸出序列**像**述詞的逸出字元是：  
@@ -46,4 +44,3 @@ SELECT Name FROM Customers WHERE Name LIKE '[%]AAA%'
 ```  
   
  若要判斷是否**像**述詞的逸出字元支援的資料來源，應用程式呼叫**SQLGetInfo** SQL_LIKE_ESCAPE_CLAUSE 選項。
-

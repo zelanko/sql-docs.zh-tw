@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8d6b3eb0a520d4c5c83e043f57076d164503f6c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7747f421fe4a7356086cf27ecf62739f34acdd17
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="block-cursors"></a>區塊資料指標
 許多應用程式花費大量時間將資料匯聚在網路上。 此時間部分所花費的實際將資料匯聚透過網路，以及它的組件所花費網路額外負荷，例如驅動程式對要求的資料列的呼叫。 如果應用程式會有效率地使用，就可以降低後者的時間*區塊，*或*fat、* *資料指標，*可以一次傳回多個資料列。  
@@ -44,9 +42,8 @@ ms.lasthandoff: 09/09/2017
   
  此章節包含下列主題。  
   
--   [繫結區塊資料指標搭配使用的資料行](../../../odbc/reference/develop-app/binding-columns-for-use-with-block-cursors.md)  
+-   [繫結資料行以搭配使用區塊資料指標](../../../odbc/reference/develop-app/binding-columns-for-use-with-block-cursors.md)  
   
 -   [使用區塊資料指標](../../../odbc/reference/develop-app/using-block-cursors.md)  
   
 -   [資料列狀態陣列](../../../odbc/reference/develop-app/row-status-array.md)
-

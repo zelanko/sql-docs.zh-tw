@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], technical reference
 - FoxPro ODBC driver [ODBC], technical reference
 ms.assetid: 00d722d4-ce99-4dbe-a503-1ab27cb6fe0a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 475d6c33d0a03db996fa40caf947b44aafb67f0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 637439dfbf7d9d787253d95734996923739df023
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Visual FoxPro ODBC 驅動程式的程式設計 &#39; s 參考
 Visual FoxPro ODBC 驅動程式文件的這一節包含下列主題：  
@@ -58,4 +56,3 @@ Visual FoxPro ODBC 驅動程式文件的這一節包含下列主題：
 -   [錯誤訊息](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md)  
   
 -   [疑難排解](../../odbc/microsoft/troubleshooting-visual-foxpro-odbc-driver.md)
-

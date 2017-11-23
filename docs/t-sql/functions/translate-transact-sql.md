@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - TRANSLATE
 - TRANSLATE_TSQL
-helpviewer_keywords:
-- TRANSLATE function
+helpviewer_keywords: TRANSLATE function
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: fda4f4793f0692b77ba8a606c904612674e29721
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 583c414206a0acc79d1abdfff34728c38711a855
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="translate-transact-sql"></a>翻譯 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -93,9 +90,8 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 (137.4  72.3) |[137.4,72.3] |
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 
 [字串函數 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 [取代 (TRANSACT-SQL)](../../t-sql/functions/replace-transact-sql.md)   
-
 

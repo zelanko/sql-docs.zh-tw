@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f908db305a92399ccb5ca9e4930460db249fff46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="keyset-driven-cursors"></a>索引鍵集驅動資料指標
 索引鍵集驅動資料指標的介於靜態和動態資料指標偵測變更的能力。 類似靜態資料指標，它不一定偵測的變更的成員資格和順序的結果集。 動態資料指標，例如它沒有結果集 （受限於由 SQL_ATTR_TXN_ISOLATION 連接屬性設定的交易隔離等級） 來偵測變更的資料列的值。  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  索引鍵集驅動資料指標通常會實作所建立的暫存資料表，其中包含在結果集中的每個資料列的索引鍵。 資料指標也必須決定是否已更新資料列，因為此資料表也通常會包含具有資料列版本設定資訊的資料行。  
   
  若要捲動原始結果集，索引鍵集驅動資料指標會開啟靜態資料指標放在暫存表格。 若要擷取的原始結果集中的資料列，資料指標從暫存資料表會先擷取適當的索引鍵，並接著會擷取資料列的目前值。 如果使用區塊資料指標時，游標必須擷取多個索引鍵和資料列。
-

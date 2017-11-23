@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - text file data types [ODBC]
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d3ac713de27efa4ddc41ec52285231dde7518402
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="text-file-data-types"></a>文字檔案資料類型
 下表顯示如何將文字資料型別對應至 ODBC SQL 資料類型。 請注意，並非所有的 ODBC SQL 資料類型都受到 ODBC 文字驅動程式。  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 |LONGCHAR|理論上限制在 LONGCHAR 資料行的寬度固定長度或分隔的資料表是 65500 K。 文字 ISAM 很容易提供可靠的支援，最多約 32k。|  
   
  資料類型的多個限制可以在[資料型別限制](../../odbc/microsoft/data-type-limitations.md)。
-

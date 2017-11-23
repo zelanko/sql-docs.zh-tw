@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d69e085ace58008eab92bbe8422180b9b8eeab07
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="when-to-use-procedures"></a>當使用程序
 有使用程序的優點，所有基礎的使用程序的 SQL 陳述式從移到資料來源的應用程式。 應用程式中不會變是互通的程序呼叫。 這些優點包括：  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
  第二個缺點是，有許多 Dbms 不支援程序。 同樣地，這是最可能是設計成以數字的 Dbms 執行垂直應用程式的問題。 若要判斷是否支援程序，應用程式呼叫**SQLGetInfo** SQL_PROCEDURES 選項。  
   
  第三個缺點則是特別適用於應用程式開發環境，是 ODBC 不會定義標準文法建立程序。 也就是說，雖然應用程式可以 interoperably 呼叫程序，他們無法建立它們 interoperably。
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], performance
 - Jet-based ODBC drivers [ODBC], performance
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: beb888ab7920bdac942c60d26980a71a34a54800
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1bcedc8266132bf617fe35e78d3a73de10f7876
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-driver-performance-issues"></a>桌面資料庫驅動程式的效能問題
 若要確保相容性與現有的 ANSI 應用程式，SQL_WCHAR、 SQL_WVARCHAR 和 SQL_WLONGVARCHAR 資料類型會公開為 SQL_CHAR、 SQL_VARCHAR 和 SQL_LONGVARCHAR Microsoft 存取 4.0 或更高的資料來源。 資料來源不會傳回寬 CHAR 資料類型，但仍然必須傳送資料至 Jet 寬字元格式。 請務必了解是否 SQL_CHAR 資料型別 ANSI 應用程式中繫結 SQL_C_CHAR 參數或結果資料行轉換將會發生。  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  當應用程式使用 Microsoft ODBC 桌面資料庫驅動程式透過 Jet 3.5 資料庫升級為 4.0 版時，則可能會發生一些效能降低以及增加的工作集大小。 這是因為當第 3 版。*x*使用新的 4.0 版驅動程式來開啟資料庫，它會載入 Jet 4.0。 當 Jet 4.0 開啟該資料庫，而會看到資料庫是 3。*x*版本，載入就相當於載入 Jet 3.5 引擎也可安裝的 ISAM 驅動程式。 若要移除的效能和大小負面影響，Jet 3。*x*應該插入 Jet 4.0 格式資料庫壓縮資料庫。 這將會消除載入兩個 Jet 引擎，並減少資料的程式碼路徑。  
   
  此外，Jet 4.0 引擎是 Unicode 引擎。 會儲存所有字串，且在 Unicode 中操作。 當 ANSI 應用程式存取 Jet 3。*x*為 Unicode，回到 ANSI，透過 Jet 4.0 引擎，資料的資料庫會從 ANSI 轉換。 如果資料庫更新至 4.0 版格式時，字串會轉換成 Unicode，移除一個層級的字串轉換，以及透過只有一個 Jet 引擎降到最低的資料的程式碼路徑。
-

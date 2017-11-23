@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetConnectAttr function [ODBC], Cursor Library
+helpviewer_keywords: SQLSetConnectAttr function [ODBC], Cursor Library
 ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21c6d5d6b754f7d78c65bde2edb115809a2d73ef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bf6a14b8215f981e5e0e9c0ca6e9b2e1a2269f65
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr （資料指標程式庫）
 > [!IMPORTANT]  
@@ -38,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  應用程式必須呼叫**SQLSetConnectAttr**之後，它會呼叫指定的資料指標程式庫使用量**SQLAllocHandle**與*HandleType*配置利用 SQL_HANDLE_DBC 的連接和才能連線到資料來源。 如果應用程式呼叫**SQLSetConnectAttr** SQL_ATTR_ODBC_CURSORS 屬性連接時仍在作用中，資料指標程式庫會傳回錯誤。  
   
  若要設定與連接相關聯的所有陳述式的資料指標程式庫所支援的陳述式屬性，應用程式必須呼叫**SQLSetConnectAttr**連線至資料來源，以及之前後，該陳述式屬性開啟資料指標。 如果應用程式呼叫**SQLSetConnectAttr**與陳述式屬性和資料指標開啟時與連接相關聯的陳述式，陳述式屬性將不會套用到該陳述式直到關閉資料指標和重新開啟。
-

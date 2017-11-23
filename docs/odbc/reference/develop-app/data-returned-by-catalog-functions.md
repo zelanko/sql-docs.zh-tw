@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], result sets
 - functions [ODBC], catalog functions
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46b8a628b6b8e6ad9a2eb3164e6935f3f3401ec8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-returned-by-catalog-functions"></a>目錄函數所傳回的資料
 每個類別目錄函數會傳回資料當作結果集。 此結果集並無不同的任何其他結果集。 通常是由預先定義參數化**選取**是硬式編碼驅動程式中或預存程序中的資料來源的陳述式。 如需如何從結果集擷取資料資訊，請參閱[已設定建立結果？](../../../odbc/reference/develop-app/was-a-result-set-created.md)。  
@@ -46,4 +44,3 @@ SELECT "Customer Name" FROM "Accounts Payable"
  目錄函數會根據類似 SQL 的授權模型中建立連線時根據使用者名稱和密碼，並傳回使用者有權限的資料。 個別檔案的密碼保護它不符合此模型，為驅動程式定義。  
   
  目錄函數所傳回的結果集可以幾乎永遠不會更新，以及應用程式不應預期要能夠藉由變更這些結果集內的資料變更資料庫的結構。
-

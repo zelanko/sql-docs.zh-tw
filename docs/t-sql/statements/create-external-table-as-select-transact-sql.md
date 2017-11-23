@@ -8,8 +8,7 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 716c0fdaa701865e8d35154cd19068051e0ab017
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>建立外部 TABLE AS SELECT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -186,7 +184,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   外部的資料分割移動  
   
- **適用於：**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]建立外部資料表的必要元件，為應用裝置系統管理員必須設定 hadoop 連接性。   如需詳細資訊，請參閱 < 設定連線到外部資料 (Analytics Platform System) 您可以從下載的 APS 文件中[這裡](http://www.microsoft.com/download/details.aspx?id=48241)。  
+ **適用於：**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]建立外部資料表的必要元件，為應用裝置系統管理員必須設定 hadoop 連接性。 如需詳細資訊，請參閱 < 設定連線到外部資料 (Analytics Platform System) 您可以從下載的 APS 文件中[這裡](http://www.microsoft.com/download/details.aspx?id=48241)。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  因為此外部資料表資料位於外部的資料庫備份和還原作業將只會儲存在資料庫中的資料上操作。 這表示將備份和還原的中繼資料。  
@@ -256,7 +254,7 @@ ON ( T1.CustomerKey = T2.CustomerKey )
 OPTION ( HASH JOIN );  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
@@ -266,6 +264,5 @@ OPTION ( HASH JOIN );
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-
 
 

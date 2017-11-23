@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f9b1be55-6c2b-4568-a768-5294675ae35f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: edb976ece9c97e9316cfa392889f8a0439c05ebd
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 738d64ed5b8af5de0ce25f2bf1ad13e17299f4cc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlserversavepoint-constructors"></a>SQLServerSavepoint 建構函式
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,4 +29,3 @@ ms.lasthandoff: 09/09/2017
   如需有關成員的資訊[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)，請參閱[SQLServerSavepoint 成員](../../../connect/jdbc/reference/sqlserversavepoint-members.md)。  
   
   
-

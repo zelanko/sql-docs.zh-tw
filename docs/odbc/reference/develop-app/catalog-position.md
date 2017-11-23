@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], catalog position
 - catalog position [ODBC]
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4b219fe2f008c6e7f0e289211665a1dcf6f1bd1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dd67618a952e189a1ce7b3596f68dddd16977ae3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalog-position"></a>目錄位置
 識別項和分隔識別碼的其他方式中的目錄名稱位置到資料來源不同資料來源。 比方說，Xbase 資料來源中的目錄名稱是一個目錄，在 Microsoft® Windows®，資料表名稱 （這是檔案名稱） 來隔開反斜線 (\\)。 下圖示範這種狀況。  
@@ -57,4 +55,3 @@ SELECT * FROM "Corporate"."Parts"@"Sales"
 ```  
   
  引號識別項的相關資訊，請參閱下節中，[引號識別項](../../../odbc/reference/develop-app/quoted-identifiers.md)。
-

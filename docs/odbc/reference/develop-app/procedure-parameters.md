@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- procedure parameters [ODBC]
+helpviewer_keywords: procedure parameters [ODBC]
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: faafa85cf85fd538fbc8efa92ba18a520d7562d7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4cf4aa29c376ac600842804eb4b7e3b935fb049b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="procedure-parameters"></a>程序參數
 程序呼叫中的參數可以輸入、 輸入/輸出或輸出參數。 這是從所有其他 SQL 陳述式中，永遠是輸入的參數的參數不同。  
@@ -61,4 +58,3 @@ ms.lasthandoff: 09/09/2017
  在執行陳述式之後，驅動程式中繫結至這些參數的變數會儲存傳回的值的輸入/輸出和輸出參數。 這些傳回之後已經提取的程序傳回的所有結果，直到設定，則不保證值和**SQLMoreResults**傳回 sql_no_data 為止。 如果執行陳述式會導致錯誤，則緩衝區輸入/輸出參數或輸出參數緩衝區的內容會是未定義。  
   
  應用程式呼叫**SQLProcedure**判斷程序是否有傳回值。 它會呼叫**SQLProcedureColumns**來判斷每個程序參數的型別 （傳回值、 輸入、 輸入/輸出或輸出）。
-

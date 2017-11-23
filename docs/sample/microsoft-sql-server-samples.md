@@ -3,33 +3,36 @@ title: "Microsoft SQL Server 範例 |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
+ms.prod: sample
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
 ms.technology: 
 ms.topic: article
 ms.assetid: d67e31d0-49fb-40d3-b340-95c1fe00957f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
+ms.openlocfilehash: a8aa94cd3d28fe8516588b0c7c25811319cb4c50
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b6c0bbe97c8638f3a669f3c651d66bbdeac2f60f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-sql-server-samples"></a>Microsoft SQL Server 範例
-這個圖庫包含範例資料庫和其他範例，包括 SQL Server 和 Azure SQL Database 的 Microsoft SQL 產品。   
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]這個圖庫包含範例資料庫和其他範例，包括 SQL Server 和 Azure SQL Database 的 Microsoft SQL 產品。   
 
 ## <a name="new-wide-world-importers-sample-database"></a>新!! Wide World Importers 範例資料庫
 
 我們很高興功能稱為寬 World Importers （生平），開發使用目前的功能、 工具和設計技巧 showcase 資料庫設計的新範例資料庫。 這些範例包括 OLTP 與 OLAP 資料庫是內建至執行 SQL Server 2016 和更新版本。 
 
 ## <a name="documentation"></a>文件集
-[生平文件](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)MSDN 上。   
+[生平文件](./world-wide-importers/wide-world-importers-documentation.md)位於 Microsoft 文件。   
   
 
 ## <a name="sql-server-samples-repository"></a>SQL Server 範例儲存機制

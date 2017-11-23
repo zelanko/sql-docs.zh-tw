@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLWriteDSNToIni
-apilocation:
-- sqlsrv32.dll
+apiname: SQLWriteDSNToIni
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLWriteDSNToIni
-helpviewer_keywords:
-- SQLWriteDSNToIni [ODBC]
+f1_keywords: SQLWriteDSNToIni
+helpviewer_keywords: SQLWriteDSNToIni [ODBC]
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 81fb191b3087d6eb9a6b25712229627388f3a676
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 230accf6ae34f7b6bbced597e6e8bf2991bc8544
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 函式
 **一致性**  
@@ -87,4 +81,3 @@ BOOL SQLWriteDSNToIni(
 |新增、 修改或移除資料來源|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)（在安裝程式 DLL 中）|  
 |新增、 修改或移除資料來源|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |移除系統資訊的資料來源名稱|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - cursors [ODBC], key-set driven
 - cursors [ODBC], mixed
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 638cd5288073fa374f81a73273ed999a4697c8b2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 16369d96931bd2b01d644756ab7e1e22fd325a85
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mixed-cursors"></a>混合的資料指標
 混合的資料指標為索引鍵集驅動資料指標和動態資料指標的組合。 它用於結果集是太大，無法適當地儲存整個結果集的金鑰。 混合的資料指標是藉由建立小於整個結果集，但大於資料列集索引鍵集實作。  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  現在，假設另一個應用程式刪除資料列 11 和 101。 如果資料指標會嘗試擷取資料列 11，它就會發生漏洞，因為它有這個資料列的索引鍵，但沒有資料列存在，這是索引鍵集導向的行為。 如果資料指標會嘗試擷取資料列 101，資料指標不會偵測到的資料列已遺失，因為它並沒有資料列的索引鍵。 相反地，它會擷取功能先前資料列 102。 這是動態資料指標行為。  
   
  混合的資料指標相當於索引鍵集驅動資料指標時的結果集大小的索引鍵集大小相當。 索引鍵集大小等於 1 時，混合的資料指標就相當於動態資料指標。
-
