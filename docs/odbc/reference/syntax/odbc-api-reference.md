@@ -8,23 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 348b9a8bead318f99f0ab85f0f961e64a56770f5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: abb5aebcd58c79c6351d7c47a7b98be5a040ef46
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-api-reference"></a>ODBC 應用程式開發介面參考
 本節中的主題會描述每個 ODBC 函數，依字母順序。 每個函式定義為 C 程式設計語言的函式。 描述包含下列各項：  
@@ -213,4 +211,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQLTables 函式](../../../odbc/reference/syntax/sqltables-function.md)  
   
 -   [SQLTransact 函式](../../../odbc/reference/syntax/sqltransact-function.md)
-

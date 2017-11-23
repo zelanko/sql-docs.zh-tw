@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2291b951c0df4f365b76f80ebab3572a39375d1
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: e861bc52621e520a27e930dd22f1a1eb9613cc76
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="data-source-wizard-screen-2"></a>資料來源精靈螢幕 2
 
@@ -72,5 +70,4 @@ ms.lasthandoff: 10/06/2017
 [資料來源精靈 畫面 1](../../../connect/odbc/windows/dsn-wizard-1.md)
 
 [資料來源精靈畫面 3](../../../connect/odbc/windows/dsn-wizard-3.md)
-
 

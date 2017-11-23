@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], SQL grammar
 - SQL grammar [ODBC], selecting
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b7d30a5a79391025b1be0312ca2020de47c2db5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-an-sql-grammar"></a>選擇 SQL 文法
 當建構 SQL 陳述式的第一個決策是要使用的文法。 除了可從各種標準內文，例如 Open Group、 ANSI 和 ISO 文法幾乎 DBMS 廠商定義自己的文法，其中每個稍有不同於標準。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  因此，其實文法的要使用的兩個選擇： sql-92 文法 （和 ODBC 逸出序列） 和特定 DBMS 的文法。 兩個 SQL 92 文法是互通性最佳、，因此所有互通的應用程式應該使用這個方法。 並不互通的應用程式可以使用 sql-92 文法或特定 DBMS 的文法。 DBMS 專屬文法中有兩個優點： 其可以利用任何 sql-92，未涵蓋的功能，而且它們投資速度會因為驅動程式不需要加以修改。 後者的功能可以藉由設定 SQL_ATTR_NOSCAN 陳述式屬性，它會阻止驅動程式搜尋和取代逸出序列部分強制執行。  
   
  如果使用 sql-92 文法時，應用程式可以探索如何修改驅動程式透過呼叫**SQLNativeSql**。 偵錯應用程式時，這是很有用。 **SQLNativeSql**接受 SQL 陳述式並傳回它之後，驅動程式已修改過它。 此函式是核心介面的一致性層級中，因為它支援所有的驅動程式。
-

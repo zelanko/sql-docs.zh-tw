@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a81844609833db4953102f72d2eb6d0939cfc78
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifier-arguments"></a>識別項引數
 如果已加上引號的字串識別項引數中，驅動程式會移除開頭和尾端空白，並將常值引號內的字串。 如果字串不加上引號，驅動程式會移除尾端的空白和摺疊成大寫的字串。 設定識別項引數為 null 指標會傳回 SQL_ERROR 並 SQLSTATE HY009 （使用無效的 null 指標），除非引數是目錄名稱，而且不支援類別目錄。  
@@ -44,4 +42,3 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  引號的識別碼用來區別相同的名稱，例如 ROWID 在 Oracle 中的虛擬資料行，則為 true 的資料行名稱。 如果 「 ROWID"傳入目錄函數的引數，函式將使用 ROWID 虛擬資料行若有的話。 虛擬資料行不存在，如果函式會使用"ROWID 」 資料行。 如果 ROWID 傳入目錄函數的引數，函式會使用 ROWID 資料行。  
   
  如需引號識別項的詳細資訊，請參閱[引號識別項](../../../odbc/reference/develop-app/quoted-identifiers.md)。
-

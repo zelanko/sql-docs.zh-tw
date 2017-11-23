@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 449aeb2cf24cc03df6b76c84079c88badc7b1ff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-a-data-source-or-driver"></a>選擇資料來源或驅動程式
 資料來源或應用程式所使用的驅動程式是有時候硬式編碼應用程式中。 比方說，自訂撰寫的應用程式所要傳送 MIS 部門會包含這些資料來源的名稱，到另一個資料來源資料，應用程式只會無法搭配任何其他資料來源。 另一個範例是垂直應用程式，例如其中一個用於訂單項目。 這類應用程式一律使用相同的資料來源，具有預先定義的結構描述的應用程式知道。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 -   **存取特定 DBMS 一次。** 例如，可能包含擷取資料，藉由呼叫 ODBC 函數的試算表**驅動程式**關鍵字來識別特定的驅動程式。 驅動程式名稱會有該驅動程式之任何使用者有意義，因為這些使用者之間傳遞試算表。 如果試算表包含資料來源名稱，每位使用者必須建立使用試算表相同的資料來源。  
   
 -   **瀏覽到特定的驅動程式可存取的所有資料庫的系統。** 如需詳細資訊，請參閱[連接 SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)稍後在本章節中。
-

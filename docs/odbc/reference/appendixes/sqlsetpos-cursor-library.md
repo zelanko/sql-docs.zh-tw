@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetPos function [ODBC], Cursor Library
+helpviewer_keywords: SQLSetPos function [ODBC], Cursor Library
 ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ef34ee5a34df9252c7ec03e12cfa5b1ddee8f72c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b195ca1dbb138b21fcf107150832288df8317196
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetpos-cursor-library"></a>SQLSetPos （資料指標程式庫）
 > [!IMPORTANT]  
@@ -40,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  資料指標程式庫不支援的 SQL_UPDATE 和 SQL_DELETE 作業的呼叫中**SQLSetPos**。 定位更新或刪除 SQL 陳述式，藉由建立搜尋時，資料指標程式庫實作更新，或刪除陳述式搭配 WHERE 子句會列舉其每個繫結資料行的快取中儲存的值。 如需詳細資訊，請參閱[處理定位的更新和刪除陳述式](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md)。  
   
  資料指標程式庫的應用程式的驅動程式不支援靜態資料指標，如果應該呼叫**SQLSetPos**只有在所提取的資料列集上**SQLExtendedFetch**或**SQLFetchScroll**、 不是由**SQLFetch**。 資料指標程式庫實作**SQLExtendedFetch**和**SQLFetchScroll**藉由重複的呼叫的**SQLFetch** （與資料列集大小為 1） 驅動程式中。 資料指標程式庫會傳遞至呼叫**SQLFetch**、 在其他交給，透過驅動程式。 如果**SQLSetPos**所提取的多重資料列資料列集上呼叫**SQLFetch**時驅動程式不支援靜態資料指標，呼叫會失敗，因為**SQLSetPos**無法運作以順向資料指標。 即使應用程式已成功呼叫，這會發生**SQLSetStmtAttr** SQL_ATTR_CURSOR_TYPE 設 SQL_CURSOR_STATIC，資料指標程式庫支援即使驅動程式不支援靜態資料指標。
-

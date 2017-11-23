@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bcf939f68dd338e9672dfc4bc716b3d92ebda272
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e152abc34c459d82f451c5ded02d30f5fb76b23
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +64,7 @@ select @x.exist('true()');
  下列範例顯示如何指定**exist （)**方法。  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>範例：針對 xml 類型變數指定 exist() 方法  
- 在下列範例中， @x 是 **xml** 類型變數 (不具類型 xml) 和 @f 是整數類型變數，可儲存所傳回的值 **exist （)** 方法。 **Exist （)**方法會傳回 True (1) 如果儲存 XML 執行個體中的日期值是`2002-01-01`。  
+ 在下列範例中，@x是**xml**類型變數 (不具類型 xml) 和@f是整數類型變數，可儲存所傳回的值**exist （)**方法。 **Exist （)**方法會傳回 True (1) 如果儲存 XML 執行個體中的日期值是`2002-01-01`。  
   
 ```  
 declare @x xml;  
@@ -161,7 +158,7 @@ WHERE CatalogDescription.exist('
     ) = 1;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [使用 WITH XMLNAMESPACES 將命名空間加入至查詢](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)   
@@ -169,4 +166,3 @@ WHERE CatalogDescription.exist('
  [XML 資料修改語言 &#40;XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

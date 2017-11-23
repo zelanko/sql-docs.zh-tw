@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLTablePrivileges
-apilocation:
-- sqlsrv32.dll
+apiname: SQLTablePrivileges
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLTablePrivileges
-helpviewer_keywords:
-- SQLTablePrivileges function [ODBC]
+f1_keywords: SQLTablePrivileges
+helpviewer_keywords: SQLTablePrivileges function [ODBC]
 ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 926b2a00a545ca368409b138c8355cfddab64e50
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fbd57115dfcb65a1ee0057a4cd091ed208ddefd5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges 函數
 **一致性**  
@@ -156,7 +150,6 @@ SQLRETURN SQLTablePrivileges(
 |傳回資料表的統計資料和索引|[SQLStatistics 函式](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
 |傳回一份資料表中的資料來源|[SQLTables 函式](../../../odbc/reference/syntax/sqltables-function.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)
-

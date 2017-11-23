@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 154
+caps.latest.revision: "154"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 387e808d57395db8978611b311f54df441eabc91
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 8a5997cc7692e7cce1459dc64401397cc3b07eaf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 陳述式的引數 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +127,7 @@ PAGE
   
  \<備份裝置 > [ **，**... *n*  ] 指定要用於還原作業的邏輯或實體備份裝置。  
   
- **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)， [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)， [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  \<備份裝置 >:: =，如下所示備份作業中，使用指定的邏輯或實體備份裝置：  
   
@@ -253,7 +250,7 @@ LOADHISTORY
  如需詳細資訊，請參閱 [使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
 CREDENTIAL  
- **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
 **適用於**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -283,7 +280,7 @@ RESTART
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該重新啟動已中斷的還原作業。 RESTART 會在中斷點上，重新啟動還原作業。  
   
 RESTRICTED_USER  
- **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)。    
+ **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
  將新還原資料庫的存取權限制成員的**db_owner**， **dbcreator**，或**sysadmin**角色。  RESTRICTED_USER 會取代 DBO_ONLY 選項。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 已停止 DBO_ONLY。  
   
@@ -293,7 +290,7 @@ RESTRICTED_USER
  這些選項會在包含要還原之備份的備份組上運作。  
   
 檔案 **=** { *backup_set_file_number* | **@***backup_set_file_number* }  
- **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  識別要還原的備份組。 例如， *backup_set_file_number* 為 **1** ，表示備份媒體的第一個備份組； *backup_set_file_number* 為 **2** ，表示第二個備份組。 您可以使用 *RESTORE HEADERONLY* 陳述式來取得備份組的 [backup_set_file_number](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 。  
   
@@ -303,7 +300,7 @@ RESTRICTED_USER
 >  這個 FILE 選項來指定資料庫檔案，檔案的 FILE 選項無關 **=**  { *logical_file_name_in_backup*  |   **@** *logical_file_name_in_backup_var* }。  
   
  密碼 **=**  {*密碼* | **@***password_variable* }  
- **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  提供備份組的密碼。 備份組密碼是一個字元字串。  
   
@@ -319,7 +316,7 @@ RESTRICTED_USER
  這些選項會處理整個媒體集。  
   
  MEDIANAME  **=**  { *media_name* | **@***media_name_variable*}  
- **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  指定媒體的名稱。 如果提供的話，媒體名稱必須符合備份磁碟區中的媒體名稱；否則，還原作業會終止。 如果 RESTORE 陳述式中沒有媒體名稱，就不會檢查備份磁碟區中的相符媒體名稱。  
   
@@ -327,7 +324,7 @@ RESTRICTED_USER
 >  在備份和還原作業中使用一致的媒體名稱，可以為還原作業所選的媒體提供額外的安全檢查。  
   
  MEDIAPASSWORD  **=**  { *mediapassword* | **@***mediapassword_variable* }  
- **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  提供媒體集的密碼。 媒體集密碼是一個字元字串。  
   
@@ -370,7 +367,7 @@ RESTRICTED_USER
  這些選項可讓您判斷的還原作業中是否啟用備份總和檢查碼，以及作業是否會停止在發生錯誤。    
   
  { CHECKSUM | NO_CHECKSUM }  
- **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  預設行為是，如果有總和檢查碼，便驗證總和檢查碼，如果沒有，就不檢查，繼續作業。  
   
@@ -388,7 +385,7 @@ RESTRICTED_USER
  明確停用還原作業的總和檢查碼驗證。  
   
  {**指定 STOP_ON_ERROR** |CONTINUE_AFTER_ERROR}  
- **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  STOP_ON_ERROR  
  指定在發生第一個錯誤之後，便停止還原作業。 這是 RESTORE 的預設行為，但預設值是 CONTINUE_AFTER_ERROR 的 VERIFYONLY 除外。  
@@ -423,7 +420,7 @@ RESTRICTED_USER
  這些選項僅適用於「磁帶」裝置。 如果所使用的不是磁帶裝置，將忽略這些選項。  
   
  REWIND  
- **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將釋放和倒轉磁帶。 REWIND 是預設值。  
   
@@ -440,7 +437,7 @@ RESTRICTED_USER
 >  如果您使用 NOREWIND，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體會保有磁帶機的擁有權，直到在相同處理序中執行的 BACKUP 或 RESTORE 陳述式使用 REWIND 或 UNLOAD 選項，或是伺服器執行個體關閉為止。 保留磁帶的開啟狀態可以防止其他處理序存取這個磁帶。 如需如何顯示開啟的磁帶清單及關閉開啟的磁帶資訊，請參閱[備份裝置 &#40;SQL Server &#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
  {**卸載**|NOUNLOAD}  
- **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)， [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支援：**[還原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)， [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  這些選項僅適用於「磁帶」裝置。 如果所使用的不是磁帶裝置，將忽略這些選項。  
   
@@ -493,7 +490,7 @@ RESTRICTED_USER
  指定資料庫應該被指派新的 Service Broker 識別碼。 由於資料庫會被視為新的 Service Broker，因此系統會立即移除資料庫中所有現有的交談，而不會產生結束對話訊息。 您必須使用新的識別碼來重新建立參考舊 Service Broker 識別碼的任何路由。  
   
 #### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options >  
- **支援：**[RESTORE {DATABASE |記錄}](../../t-sql/statements/restore-statements-transact-sql.md)而且只適用於完整或大量記錄復原模式。    
+ **支援：**[RESTORE {DATABASE |記錄}](../../t-sql/statements/restore-statements-transact-sql.md)而且只適用於完整或大量記錄復原模式。  
   
  您可以在 STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句中指定目標復原點，藉以將資料庫還原至特定時間點或交易。 指定的時間或交易一律是從記錄備份中還原。 在還原順序的每個 RESTORE LOG 陳述式中，您必須在相同的 STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句中指定目標時間或交易。  
   
@@ -631,7 +628,7 @@ RESTRICTED_USER
   
 -   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
@@ -643,5 +640,4 @@ RESTRICTED_USER
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   
   
-
 

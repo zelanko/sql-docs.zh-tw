@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDataSource.setURL
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDataSource.setURL
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 222948f40537e84e0c294f05fd8d953b61f53f65
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dd1f100fcf00678741675c113512eb95a3484368
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="seturl-method-sqlserverdatasource"></a>setURL 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,9 +49,8 @@ public void setURL(java.lang.String url)
 > [!NOTE]  
 >  如果未呼叫 setURL 方法呼叫之前[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatasource.md)方法，getURL 會傳回預設值"sqlserver: / /"。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data types [ODBC], decimal digits
 - SQL data types [ODBC], column characteristics
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bb5222837dab705701e4a137c00f3b10867ae2a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4593b1faacfc235ce0ee5c54bc9ca70416444f5e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="decimal-digits"></a>十進位數字
 *十進位數字*的 decimal 和 numeric 資料型別定義為小數點右邊的，或資料的小數位數的數字的數目上限。 近似浮點數的數字資料行或參數，因為不固定的小數點右邊的位數，未定義小數位數。 包含秒數元件的日期時間或間隔的資料，對於十進位數字定義為資料的秒數元件中的小數點右邊的位數。  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 |所有的日期時間類型|PRECISION|  
 |所有的間隔類型，以秒數元件|PRECISION|  
 |所有的間隔類型，具有沒有秒數元件|n/a|
-

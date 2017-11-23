@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a1b1a7320feef3cff6d63ce5ca6a22be6329169
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f1e19ac3f7c14326524ab7cbaa60f499c5d81e91
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-data-types"></a>Interval 資料類型
 間隔會定義為兩個日期和時間之間的差異。 間隔被以兩種不同方式的其中一個。 其中一個是*年-月*表示根據年份和月份的整數間隔的間隔。 另一個則*天時間*表達方面天、 分和秒的時間間隔的間隔。 這兩種類型的間隔相異，且不能混用，因為月份中可以擁有不同數字的天數。  
@@ -69,11 +67,10 @@ ms.lasthandoff: 09/09/2017
   
 -   [C 間隔結構](../../../odbc/reference/appendixes/c-interval-structure.md)  
   
--   [間隔資料類型有效位數](../../../odbc/reference/appendixes/interval-data-type-precision.md)  
+-   [間隔資料類型精確度](../../../odbc/reference/appendixes/interval-data-type-precision.md)  
   
 -   [間隔資料類型長度](../../../odbc/reference/appendixes/interval-data-type-length.md)  
   
 -   [間隔常值](../../../odbc/reference/appendixes/interval-literals.md)  
   
--   [覆寫間隔資料類型的預設前置和秒數有效位數](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)
-
+-   [覆寫間隔資料類型的預設前置和秒精確度](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)

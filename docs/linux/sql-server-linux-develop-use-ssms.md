@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
+ms.openlocfilehash: 9f774a7fde6a67bd5be6cd1bd395131c3c6ee0ba
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: b4e70106782541d771a2539d025a0a6dd75c34d9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 SQL Server Management Studio (SSMS) 來管理 SQL Server on Linux
 
@@ -90,4 +89,3 @@ ms.lasthandoff: 10/02/2017
 如果您還不熟悉 T-SQL，請參閱[教學課程： 撰寫 TRANSACT-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)和[TRANSACT-SQL 參考 (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx)。
 
 如需有關如何使用 SSMS 的詳細資訊，請參閱[使用 SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx)。
-

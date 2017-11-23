@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
+caps.latest.revision: "3"
 ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
+ms.openlocfilehash: 4e56c987938aa3cb8645dc9bef94f2f97b8c0649
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d28b647de71c5064dfbe0d49f399119f6a9ac283
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>搭配使用一律加密 with the ODBC Driver 13.1 for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -554,9 +552,8 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD （2 個位元組）|0|當 0 （預設值）： 決策，來加密此參數由加密中繼資料的可用性。<br><br>當為非零： 如果加密中繼資料可供此參數，它會加密。 否則，要求會失敗，錯誤 [CE300] [Microsoft] [ODBC Driver 13 for SQL Server] 強制加密已指定參數，但伺服器未提供任何加密中繼資料。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 
 - [一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [永遠加密部落格](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-
 

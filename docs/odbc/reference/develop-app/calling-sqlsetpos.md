@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SqlSetPos
 - application upgrades [ODBC], SQLSetPos
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cec632458d406fa0dedeea10a1285b1b521cb197
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 434031a496faae19ee37b8273341cc0ede6d0313
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="calling-sqlsetpos"></a>呼叫 SQLSetPos
 在 ODBC 2。*x*，資料列狀態陣列的指標是以引數**SQLExtendedFetch**。 呼叫更新版本已更新資料列狀態陣列**SQLSetPos**。 有些驅動程式有依賴這個陣列不會變更之間的事實**SQLExtendedFetch**和**SQLSetPos**。 在 ODBC 3。*x*狀態陣列的指標是描述項欄位，因此應用程式可以輕鬆地將它變更為指向不同的陣列。 這可以是 ODBC 3 時的問題。*x*應用程式使用 ODBC 2。*x*驅動程式，但呼叫**SQLSetStmtAttr**陣列狀態指標設定，然後會呼叫**SQLFetchScroll**來提取資料。 驅動程式管理員將它對應為一連串的呼叫**SQLExtendedFetch**。 下列程式碼，就通常會引發錯誤時，驅動程式管理員會將對應第二個**SQLSetStmtAttr**使用 ODBC 2 時呼叫*.x*驅動程式：  
@@ -50,4 +48,3 @@ SQLSetPos(hstmt, iRow, fOption, fLock);
 3.  當應用程式呼叫**SQLSetStmtAttr**將 sql_attr_row_status_ptr 設定，來設定驅動程式管理員*fSetPosError* toTRUE 相等。  
   
 4.  當應用程式呼叫**SQLSetPos**，與*fSetPosError*等於 TRUE，則驅動程式管理員會產生 sql_error，其中包含 SQLSTATE HY011 （屬性現在無法設定），表示應用程式嘗試呼叫**SQLSetPos**之後變更資料列狀態指標，但在呼叫前**SQLFetchScroll**。
-

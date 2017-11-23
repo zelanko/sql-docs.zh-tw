@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: 
 ms.workload: On Demand
+ms.openlocfilehash: d3e551d02c6a4b62dbe30949c81d15fcb16e93ea
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 4b39b8dce2a9d6b940936a6d7072fc41c2b67e8f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>設定 SQL Server 2017 容器映像 docker
 
@@ -435,4 +434,3 @@ cat errorlog
 開始使用 docker 的 SQL Server 2017 容器映像進行[快速入門教學課程](quickstart-install-connect-docker.md)。
 
 此外，請參閱[mssql docker GitHub 儲存機制](https://github.com/Microsoft/mssql-docker)資源、 意見反應，和已知的問題。
-

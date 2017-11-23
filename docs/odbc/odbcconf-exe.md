@@ -8,24 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- odbcconf.exe
+helpviewer_keywords: odbcconf.exe
 ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2f22cf640a790f120701eda8424fb4c19edc7c49
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db8ff09a2b77f51c97ab73d6d994e1e1b4dce2a1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbcconfexe"></a>ODBCCONF。EXE
 ODBCCONF.exe 是命令列工具，可讓您設定 ODBC 驅動程式和資料來源的名稱。  
@@ -73,6 +70,5 @@ ODBCCONF [switches] action
 |REGSVR *dll*|註冊 DLL。<br /><br /> 相當於 regsvr32.exe。<br /><br /> 例如：<br /><br /> {REGSVR c:\my.dll} / A|  
 |SETFILEDSNDIR|當 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC。INI\ODBC 檔案 DSN\DefaultDSNDir 不存在，SETFILEDSNDIR 動作會建立它並將它指派 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir，加上 \ODBC\Data 來源處的值。<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC 處的值。INI\ODBC 檔案 DSN\DefaultDSNDir 指定建立的檔案為基礎的資料來源時使用的 ODBC 資料來源管理員 」 中的預設位置。<br /><br /> 例如：<br /><br /> {SETFILEDSNDIR} / A|  
   
-## <a name="see-also"></a>另請參閱  
- [Microsoft 開啟資料庫連接 (ODBC)](../odbc/microsoft-open-database-connectivity-odbc.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Microsoft 開放式資料庫連接 (ODBC)](../odbc/microsoft-open-database-connectivity-odbc.md)

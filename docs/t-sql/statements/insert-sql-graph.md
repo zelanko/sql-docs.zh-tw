@@ -9,27 +9,24 @@ ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - INSERT statement [SQL Server], SQL graph
 - SQL graph, INSERT statement
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: shkale-msft
 ms.author: shkale
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8089e82d6e6bb04c8e25af3603c4522a820a7a83
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e694d89efef130d2abcd5cd6424e2be576ef09de
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="insert-sql-graph"></a>插入 （SQL 圖形）
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -168,9 +165,8 @@ INSERT
  ```
 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [插入資料表 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [處理與 SQL Server 2017 圖形](../../relational-databases/graphs/sql-graph-overview.md)  
-
 
 

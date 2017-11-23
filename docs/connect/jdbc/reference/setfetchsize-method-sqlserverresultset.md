@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.setFetchSize
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.setFetchSize
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a143006cbd2a5482bd919b4e2cd648d91290291d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed3f37d12253c03ae192b03db27caf4d180e568d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>setFetchSize 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,9 +53,8 @@ public void setFetchSize(int rows)
   
  這個方法會變更伺服器資料指標的區塊提取大小，並在下一次 JDBC 驅動程式需要呼叫 sp_cursorfetch 時生效。 將提取大小設定為零會還原目前使用中之資料指標類型的預設提取大小。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

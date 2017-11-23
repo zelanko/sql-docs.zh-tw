@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - result-free statements [ODBC]
 ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ac7d08e9ca59738686baa079d87af8c158bca35a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a99ea01cbd5a00ea4aa12e4b1461ca7f1ce9afa5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="result-generating-and-result-free-statements"></a>結果產生和無結果的陳述式
 SQL 陳述式可以鬆散分為下列五個類別：  
@@ -45,4 +43,3 @@ SQL 陳述式可以鬆散分為下列五個類別：
 -   **系統管理的陳述式**這些是用來在資料庫中的系統管理目的 SQL 陳述式。 例如， **GRANT**和**撤銷**。  
   
  SQL 陳述式中的前兩個類別統稱為*結果產生的陳述式*。 SQL 陳述式，後者的三個類別統稱為*結果釋放陳述式*。 ODBC 定義的包含僅結果產生的陳述式的批次的語意。 這些語意差異非常大，因此資料來源專用。 例如，SQL Server 驅動程式不支援卸除物件再參考或重新建立相同的批次中相同的物件。 因此，一詞*批次*會用在此手冊只適用於批次結果產生的陳述式。
-

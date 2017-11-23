@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Excel driver [ODBC], SQLTables
 - SQLTables function [ODBC], Excel Driver
 ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 68c0c6f2ad3e4cac7eb6f708998777c17bea5a7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9aad9b74b9813c0526df87437999b66f27e95414
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqltables-excel-driver"></a>SQLTables （Excel 驅動程式）
 > [!NOTE]  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/09/2017
 |*szTableOwner*|唯一有效的引數，如*szTableOwner*是 NULL，因為沒有驅動程式支援擁有者名稱。 與*szTableOwner*設為 NULL，會傳回所有資料表。 TABLE_OWNER 資料行就會傳回 NULL。|  
 |*szTableQualifier*|Microsoft Excel 3.0 或 4.0 版的驅動程式使用時，如果您呼叫**SQLTables**使用值為*szTableQualifier* ，不是現有資料表的名稱，此驅動程式會建立具有該名稱的資料表。<br /><br /> TABLE_QUALIFIER 資料行中**SQLTables**會傳回路徑的目錄。|  
 |*SzTableType*|Microsoft Excel 3.0 或 4.0，「 資料表 」 是唯一支援的資料表類型。<br /><br /> 對於新版的 Microsoft Excel 檔案中，工作表名稱 （以"$"結尾上的資料表），就會傳回 「 系統資料表 」 和 「 資料表 」 會傳回工作表內的資料表。|
-

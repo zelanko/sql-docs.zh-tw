@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 38917d4e3a7cbd53be9a638d0d4dc3f5b2c2b179
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 939847cee3b9fb9f8051d98e5def53abf787f148
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 桌面資料庫驅動程式
 ODBC 是應用程式開發介面使用結構化查詢語言 (SQL) 資料庫存取語言。 您可以存取各種資料庫管理系統 (Dbms) 具有相同 ODBC 來源的程式碼直接併入應用程式的原始程式碼。 Microsoft ODBC 桌面資料庫驅動程式，可以開啟，查詢中，並更新透過 ODBC 介面的桌面資料庫啟用 ODBC 的應用程式的使用者。  
@@ -56,21 +54,21 @@ ODBC 是應用程式開發介面使用結構化查詢語言 (SQL) 資料庫存�
   
 -   [桌面資料庫驅動程式架構](../../odbc/microsoft/desktop-database-drivers-architecture.md)  
   
--   [桌面資料庫驅動程式的歷程記錄](../../odbc/microsoft/history-of-the-desktop-database-drivers.md)  
+-   [桌面資料庫驅動程式歷程記錄](../../odbc/microsoft/history-of-the-desktop-database-drivers.md)  
   
 -   [產品支援](../../odbc/microsoft/product-support.md)  
   
 -   [實作桌面資料庫驅動程式](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
   
--   [Microsoft Access 驅動程式的程式設計考量](../../odbc/microsoft/microsoft-access-driver-programming-considerations.md)  
+-   [Microsoft Access 驅動程式設計考量](../../odbc/microsoft/microsoft-access-driver-programming-considerations.md)  
   
--   [Microsoft Excel 驅動程式的程式設計考量](../../odbc/microsoft/microsoft-excel-driver-programming-considerations.md)  
+-   [Microsoft Excel 驅動程式設計考量](../../odbc/microsoft/microsoft-excel-driver-programming-considerations.md)  
   
--   [Paradox 驅動程式的程式設計考量](../../odbc/microsoft/paradox-driver-programming-considerations.md)  
+-   [Paradox 驅動程式設計考量](../../odbc/microsoft/paradox-driver-programming-considerations.md)  
   
--   [dBASE 驅動程式的程式設計考量](../../odbc/microsoft/dbase-driver-programming-considerations.md)  
+-   [dBASE 驅動程式設計考量](../../odbc/microsoft/dbase-driver-programming-considerations.md)  
   
--   [文字檔案驅動程式的程式設計考量](../../odbc/microsoft/text-file-driver-programming-considerations.md)  
+-   [文字檔驅動程式設計考量](../../odbc/microsoft/text-file-driver-programming-considerations.md)  
   
 -   [其他支援的 ODBC SQL 文法](../../odbc/microsoft/additional-supported-odbc-sql-grammar.md)  
   
@@ -79,4 +77,3 @@ ODBC 是應用程式開發介面使用結構化查詢語言 (SQL) 資料庫存�
 -   [ODBC 錯誤](../../odbc/microsoft/odbc-errors.md)  
   
 -   [支援的 ODBC API 函式](../../odbc/microsoft/supported-odbc-api-functions.md)
-

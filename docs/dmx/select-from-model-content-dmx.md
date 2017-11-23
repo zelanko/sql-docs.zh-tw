@@ -17,23 +17,21 @@ f1_keywords:
 - SELECT
 - FROM
 - Content
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
 - SELECT FROM <model>.CONTENT statement
 ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7eaccd559a0898e489bf7befead782c7d3387245
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4a5f64e297e59d612be82f99e14f89df081be12
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;模型&gt;。內容 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -81,7 +79,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|對應至節點之屬性的名稱。|  
 |NODE_NAME|節點的名稱。|  
 |NODE_UNIQUE_NAME|模型內節點的唯一名稱。|  
-|NODE_TYPE|代表節點類型的整數。 。|  
+|NODE_TYPE|代表節點類型的整數。 執行個體時提供 SQL Server 登入。|  
 |NODE_GUID|節點 GUID。 如果沒有 GUID，則為 NULL。|  
 |NODE_CAPTION|與節點相關聯的標籤或標題。 主要用於顯示用途。 如果標題不存在，就會傳回 NODE_NAME。|  
 |CHILDREN_CARDINALITY|節點擁有的子系數目。|  
@@ -162,10 +160,9 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|0|6556|  
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

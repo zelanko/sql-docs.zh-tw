@@ -13,22 +13,19 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- logical operators [SQL Server], DMX
+dev_langs: DMX
+helpviewer_keywords: logical operators [SQL Server], DMX
 ms.assetid: c57f9ec8-ca24-4d26-b011-7fca382dc4a1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 0187908792a7304977ab10b0d2387422310f3691
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f5c2ea5da5834166f74319dc60cca3b0e43f8824
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operators---logical"></a>Operators-邏輯
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +40,7 @@ ms.lasthandoff: 08/02/2017
 |[不 &#40; DMX &#41;](../dmx/not-dmx.md)|在數值運算式上執行邏輯否定。|  
 |[或者 &#40; DMX &#41;](../dmx/or-dmx.md)|在兩個數值運算式上執行邏輯分離。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -57,4 +54,3 @@ ms.lasthandoff: 08/02/2017
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], cursor library
 - cursor library [ODBC], statement processing
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7a04615b8aa37ffc4563f931a9e1e5ed1ff6f4ac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3613775e14453c2ed14e70cf122bd527217b2cd7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="processing-sql-statements"></a>處理 SQL 陳述式
 > [!IMPORTANT]  
@@ -45,11 +43,10 @@ ms.lasthandoff: 09/09/2017
   
  此章節包含下列主題。  
   
--   [處理定位 Update 和 Delete 陳述式](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md)  
+-   [處理定位的 Update 和 Delete 陳述式](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md)  
   
--   [處理 UPDATE 陳述式的選取](../../../odbc/reference/appendixes/processing-select-for-update-statements.md)  
+-   [處理 SELECT FOR UPDATE 陳述式](../../../odbc/reference/appendixes/processing-select-for-update-statements.md)  
   
--   [處理批次的 SQL 陳述式](../../../odbc/reference/appendixes/processing-batches-of-sql-statements.md)  
+-   [SQL 陳述式的處理批次](../../../odbc/reference/appendixes/processing-batches-of-sql-statements.md)  
   
--   [建構搜尋陳述式](../../../odbc/reference/appendixes/constructing-searched-statements.md)
-
+-   [建構搜尋的陳述式](../../../odbc/reference/appendixes/constructing-searched-statements.md)

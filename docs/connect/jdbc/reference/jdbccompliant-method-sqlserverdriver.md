@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDriver.jdbcCompliant
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDriver.jdbcCompliant
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6b62cb134084dec4a9f3029ec647b09910df974
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b56890ad7b3c88388eae12de798e633108aca76a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>jdbcCompliant 方法 (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,10 +44,9 @@ public boolean jdbcCompliant()
 ## <a name="remarks"></a>備註  
  這個 jdbcCompliant 方法是由 java.sql.Driver 介面中 jdbcCompliant 方法指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerDriver 方法](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
  [SQLServerDriver 成員](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
  [SQLServerDriver 類別](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   
-

@@ -5,27 +5,24 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 7fe670f3-5e62-43ef-97eb-b9af54df9128
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a2d9d9f53cae6c19e446c544ca65552c04b4fe1d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db0b4def85eb08c193ece45b89e3773419b4feda
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>第 3 課： 探索和視覺化資料
 
@@ -295,4 +292,3 @@ R 通常會使用 R 裝置建立影像，以進行圖形輸出。 您可以擷�
 ## <a name="previous-lesson"></a>上一課
 
 [第 2 課： 將資料匯入 SQL Server 使用 PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
-

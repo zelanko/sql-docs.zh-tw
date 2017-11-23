@@ -1,27 +1,24 @@
 ---
-title: "架構和概觀 |Microsoft 文件"
+title: "SQL Server 機器學習服務的架構概觀 |Microsoft 文件"
 ms.custom: 
-ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: c81f114f97dee97a37832201637ac5e17fe08794
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7549b59d4edc00dd620deeb515f6cd7143a62db7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="architecture-and-overview-of-machine-learning-services"></a>架構和機器學習服務概觀
+# <a name="architecture-overview-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的架構概觀 
 
 本主題說明支援的 Python 和 R 指令碼的執行 SQL Server 中的擴充性架構的目標。
 
@@ -70,7 +67,6 @@ ms.lasthandoff: 09/01/2017
 
   效能最佳化依賴兩個層面同樣功能強大的平台： 資源控管和平行處理使用 SQL Server 和分散式運算演算法中所提供**RevoScaleR**和**revoscalepy**。
 
-
 ## <a name="solution-development-and-deployment"></a>開發及部署方案
 
 除了擴充平台的這些核心目標，SQL Server 中的機器學習服務用以提供強式整合資料庫引擎和 BI 堆疊，與這些優點：
@@ -93,7 +89,7 @@ ms.lasthandoff: 09/01/2017
 
 不確定哪一部機器學習解決方案符合您的需求？ 除了 SQL Server 2016 和 SQL Server 2017 中內嵌的分析，Microsoft 會提供下列機器學習平台和服務：
 
-+ [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)
++ [Microsoft R Server 和機器學習伺服器](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
 
   多平台環境的開發、 發佈和管理機器學習服務工作
 + [資料科學虛擬機器](https://docs.microsoft.com/azure/machine-learning/machine-learning-data-science-virtual-machine-overview)
@@ -101,6 +97,7 @@ ms.lasthandoff: 09/01/2017
   您需要的機器學習，預先安裝的所有工具。 使用 Jupyter 筆記本、 Python 或。
   
   試用新[Windows 2016 預覽版本](http://aka.ms/dsvm/win2016)，其中包括常用的深入學習架構，例如 CNTK 和 mxNet，以及支援 Windows 容器的 GPU 版本 ！
+
 + [認知的 azure 服務](https://azure.microsoft.com/services/cognitive-services/)
 
   各種不同的雲端服務到您的應用程式，包括視訊、 臉部辨識索引自然語言新增 AI 和 ML 情緒偵測與文字分析機器轉譯，以及執行許多更
@@ -108,7 +105,6 @@ ms.lasthandoff: 09/01/2017
 
   雲端為基礎的拖放介面設計機器學習服務工作流程，結合了可自動化及整合與透過 web 服務和 PowerShell 的應用程式
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 
-[R 伺服器獨立](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)
-
+[比較 Server 機器學習和 Microsoft R 產品](https://docs.microsoft.com/machine-learning-server/what-is-r-server-interoperability)

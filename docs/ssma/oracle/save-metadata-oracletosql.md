@@ -5,29 +5,27 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
+ms.openlocfilehash: a05d0fe7b8e458e5e4eaa2af7963dc4ae89c44e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 87e9060c8ca4de1b10d0522ce172581a8bcd88cf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-metadata--oracletosql"></a>儲存中繼資料 (OracleToSQL)
 **儲存中繼資料**對話方塊會提示您儲存之前，先載入 SSMA 專案的中繼資料。 這樣，您有完整的專案檔，您可以離線使用，並傳送給其他人，例如技術支援人員。  
   
 若要存取**儲存中繼資料**對話方塊中的，儲存專案。 如果遺漏任何中繼資料，將會顯示 SSMA**儲存中繼資料** 對話方塊。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **名稱**  
 在專案中的每個資料庫的名稱。  
   
@@ -45,7 +43,6 @@ SSMA 會將視專案載入中繼資料。 當您瀏覽中繼資料，並將結�
 **儲存**  
 儲存專案，並載入選取的資料庫有遺失的中繼資料的中繼資料。  
   
-**[取消]**  
+**取消**  
 取消儲存作業。 遺漏中繼資料不會載入專案。  
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - translator specification subkeys [ODBC]
 - subkeys [ODBC], translator specification subkeys
 ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ec8f2b705ca226f94f2fcea9cf79aa8a7cdc31c4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62bfe54f5bd5117fee5d9ba063f1882be47ccbc4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="translator-specification-subkeys"></a>轉譯器規格子機碼
 ODBC 轉譯子機碼中所列每個轉譯器都有自己的子機碼。 這個子機碼具有 ODBC 轉譯子機碼下的對應值相同的名稱。 這個子機碼下的值清單之轉譯器轉譯程式安裝 Dll 並使用計數的完整路徑。 值的格式是下表所示。  
@@ -50,4 +48,3 @@ Translator : REG_SZ : C:\WINDOWS\SYSTEM32\MSCPXL32.DLL
 Setup : REG_SZ : C:\WINDOWS\SYSTEM32\MSCPXL32.DLL  
 UsageCount : REG_DWORD : 0x3  
 ```
-

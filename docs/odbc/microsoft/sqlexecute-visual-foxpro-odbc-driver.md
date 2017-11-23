@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLExecute function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLExecute function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9a5e6c896295bfb9ea7573d94dd14596af967274
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 97cdd3b4d205548dd0b35d0aae44e418b7ca9638
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlexecute-visual-foxpro-odbc-driver"></a>SQLExecute （Visual FoxPro ODBC 驅動程式）
 > [!NOTE]  
@@ -38,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  執行已備妥的 SQL 陳述式 (已備妥的陳述式[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md))。 如果陳述式中存在的任何參數，驅動程式會使用目前的參數標記變數值。  
   
  如需詳細資訊，請參閱[SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md)中*ODBC 程式設計人員參考*。
-

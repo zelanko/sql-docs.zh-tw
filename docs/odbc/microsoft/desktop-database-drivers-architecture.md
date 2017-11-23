@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e4da82298313f27adc74f8712895b1777db5078f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-drivers-architecture"></a>桌面資料庫驅動程式架構
 這些驅動程式專為使用 Microsoft Windows 95 上或更新版本中，或 Windows NT 4.0 和 Windows 2000。 只有 32 位元應用程式支援 Windows 95 或更新版本。16 位元和 32 位元應用程式都支援 Windows NT 4.0 和 Windows 2000。  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  Odbcjt32.dll 實作 Microsoft Jet API 之上的 ODBC 函數。 但是 ODBC 和 Microsoft Jet 函式之間沒有直接對應。 許多因素，例如資料指標模型和 SQL 對應，避免直接的相互關聯的函式。  
   
  ODBC 驅動程式位於 Microsoft Jet 引擎和 ODBC 驅動程式管理員之間。 在應用程式呼叫某些 ODBC 函數處理由驅動程式管理員和未傳遞至驅動程式。 這些函式中，Microsoft Jet 永遠看不到函式呼叫，因為它並沒有直接連線到驅動程式管理員。
-

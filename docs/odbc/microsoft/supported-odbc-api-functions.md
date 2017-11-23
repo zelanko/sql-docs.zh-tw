@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC, API functions
 - ODBC SQL grammar, API functions mapped to driver (table) [ODBC]
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: abf3068ec65fdcca39a88f6ce18d750294f865bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 01b64e71e67aa9839d858d919d3cfbdcc8f2ec75
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-odbc-api-functions"></a>支援的 ODBC API 函式
 調節的目的是通知哪些可用功能，從驅動程式的應用程式。 Microsoft ODBC 桌面資料庫驅動程式支援所有的核心和層級 1 函式。  
@@ -63,23 +61,22 @@ Transact] (.../ Topic/SQLTransact%20Function.md)|[存取](../../odbc/microsoft/s
   
  下列主題提供有關 ODBC 函數的 < 備註 >。 這些註解適用於所有的 ODBC 桌面資料庫驅動程式。  
   
--   [SQLGetData （桌面資料庫驅動程式）](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
+-   [SQLGetData (桌面資料庫驅動程式)](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
   
 -   [SQLGetStmtOption （桌面資料庫驅動程式）](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)  
   
--   [SQLMoreResults （桌面資料庫驅動程式）](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
+-   [SQLMoreResults (桌面資料庫驅動程式)](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
   
--   [SQLPrepare （桌面資料庫驅動程式）](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)  
+-   [SQLPrepare (桌面資料庫驅動程式)](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)  
   
--   [SQLProcedures （桌面資料庫驅動程式）](../../odbc/microsoft/sqlprocedures-desktop-database-drivers.md)  
+-   [SQLProcedures (桌面資料庫驅動程式)](../../odbc/microsoft/sqlprocedures-desktop-database-drivers.md)  
   
--   [SQLSetCursorName （桌面資料庫驅動程式）](../../odbc/microsoft/sqlsetcursorname-desktop-database-drivers.md)  
+-   [SQLSetCursorName (桌面資料庫驅動程式)](../../odbc/microsoft/sqlsetcursorname-desktop-database-drivers.md)  
   
--   [SQLSetPos （桌面資料庫驅動程式）](../../odbc/microsoft/sqlsetpos-desktop-database-drivers.md)  
+-   [SQLSetPos (桌面資料庫驅動程式)](../../odbc/microsoft/sqlsetpos-desktop-database-drivers.md)  
   
--   [SQLSetScrollOptions （桌面資料庫驅動程式）](../../odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers.md)  
+-   [SQLSetScrollOptions (桌面資料庫驅動程式)](../../odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers.md)  
   
--   [SQLSetStmtOption （桌面資料庫驅動程式）](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
+-   [SQLSetStmtOption (桌面資料庫驅動程式)](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
   
--   [SQLSpecialColumns （桌面資料庫驅動程式）](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)
-
+-   [SQLSpecialColumns (桌面資料庫驅動程式)](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)

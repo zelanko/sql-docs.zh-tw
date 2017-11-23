@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a5732f-a246-4483-bcfb-169f25917467
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 88fb9014a8e0fe5c33e07b9fea49faf2b5a28847
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 974935a17896daacc72b9b66c93588b4c341673b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="free-method-sqlserverblob"></a>free 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,10 +41,9 @@ public void free()
 ## <a name="remarks"></a>備註  
  這個免費的方法是由 java.sql.Blob 介面中的可用方法所指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerBlob 方法](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob 成員](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob 類別](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   
-

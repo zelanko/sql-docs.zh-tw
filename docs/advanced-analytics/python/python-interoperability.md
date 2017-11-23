@@ -1,31 +1,26 @@
 ---
-title: "Python 互通性 |Microsoft 文件"
+title: "Python 互通性與 SQL Server |Microsoft 文件"
 ms.custom: 
-ms.date: 04/18/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ee7187d490c8da80c66fb27156b2726e71782238
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 32762183ff5273998848978238788cc830319b91
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="python-interoperability"></a>Python 互通性
+# <a name="python-interoperability-with-sql-server"></a>Python 與 SQL Server 的互通性
 
 本主題說明如果您啟用此功能會安裝 Python 元件**機器學習服務 （資料庫）**並選取 Python 語言。
-
-> [!NOTE]
-> Python 支援是發行前版本功能，而且仍在開發。
 
 ## <a name="python-components"></a>Python 元件
 
@@ -35,11 +30,11 @@ ms.lasthandoff: 09/01/2017
 
 例如，如果您使用預設執行個體上的 [Python] 選項安裝機器學習服務，查看底下：
 
-`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER`
+`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 安裝 SQL Server 2017 機器學習服務加入 Python Anaconda 的發佈。 具體來說，會使用 Anaconda 3 安裝程式，根據 Anaconda 4.3 分支。 SQL Server 2017 預期的 Python 層級是 Python 3.5。
 
-## <a name="new-in-this-release"></a>此版本的新功能
+## <a name="new-python-packages-in-this-release"></a>在此版本中新的 Python 封裝
 
 支援 Anaconda 發佈的封裝清單，請參閱 Continuum analytics 網站： [Anaconda 封裝清單](https://docs.continuum.io/anaconda/pkg-docs)
 
@@ -47,9 +42,9 @@ ms.lasthandoff: 09/01/2017
 
 此程式庫提供同等的功能**RevoScaleR**封裝成 Microsoft。換句話說，它支援建立遠端計算內容，以及各種的可調整的機器學習模型，例如**rxLinMod**。 如需 RevoScaleR 的詳細資訊，請參閱[分散式和平行計算與 ScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing)。
 
-因為支援 Python 是發行前版本功能和仍在開發， **revoscalepy**程式庫目前包括 RevoScaleR 功能的子集。 
+[Python microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) Python 加入您的安裝時，將會安裝為 SQL Server 機器學習服務一部分的封裝。 此套件包含許多機器學習演算法，已經過最佳化的速度和精確度，以及內嵌文字和影像所使用的轉換。 如需詳細資訊，請參閱[搭配 SQL Server 使用 MicrosoftML 封裝](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package)。
 
-未來的新增項目可能包括[Microsoft 認知 Toolkit](https://www.microsoft.com/research/product/cognitive-toolkit/)。 之前稱為 CNTK，此程式庫支援各種不同的類神經網路模型，包括 convolutional 網路 （可以使用）、 循環的網路 (RNN)，與長簡短的詞彙記憶體網路 (LSTM)。
+緊密結合 Microsoftml 和 revoscalepy;microsoftml 中使用資料來源定義為 revoscalepy 物件。 計算 microsoftml revoscalepy 傳輸的內容限制。 也就是所有功能都都可供本機作業，但遠端計算內容切換，需要 RxInSqlServer。
 
 ## <a name="using-python-in-sql-server"></a>SQL Server 中使用 Python
 
@@ -74,7 +69,6 @@ Python 的輸入的資料必須是表格式。 必須的形式傳回所有 Pytho
 
 使用 Python 的機器學習服務安裝的一部分，您必須同意 GNU Public License 中的條款。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 
 [Python 程式庫和資料類型](python-libraries-and-data-types.md)
-

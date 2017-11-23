@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - GROUP_TSQL
 - CUBE_TSQL
 - ROLLUP_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - GROUP BY clause, about GROUP BY clause
 - dividing tables into groups
@@ -34,17 +32,16 @@ helpviewer_keywords:
 - groups [SQL Server], tables divided into groups
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 49b572a8ce91287faa4c162efa8de8e7f0113235
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 01e2c02cade5b84f3560fe5cb415cece4f815abf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select---group-by--transact-sql"></a>選取的群組 BY Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -470,14 +467,13 @@ HAVING OrderDateKey > 20040000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [GROUPING_ID &#40;TRANSACT-SQL &#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
  [群組 &#40;TRANSACT-SQL &#41;](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
  [SELECT 子句 &#40;TRANSACT-SQL &#41;](~/t-sql/queries/select-clause-transact-sql.md)  
   
   
-
 
 
 

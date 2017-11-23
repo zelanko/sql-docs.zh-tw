@@ -8,28 +8,25 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - permissions [SQL Server], asymmetric keys
 - asymmetric keys [SQL Server], permissions
 - REVOKE statement, asymmetric keys
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ae298d40c75f35df8ed93c850ecadd797155656b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d4f9f08fda905261e188bb90f8d85fd0a48b2f2c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>REVOKE 非對稱金鑰權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,7 +117,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 ## <a name="permissions"></a>Permissions  
  需要非對稱金鑰的 CONTROL 權限。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
@@ -130,4 +127,3 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

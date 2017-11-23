@@ -5,19 +5,17 @@ ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="introducing-revoscalepy"></a>介紹 revoscalepy
 
@@ -125,7 +123,7 @@ Python MicrosoftML 也包括各種不同的轉換和 helper 函式，例如：
 
 當在本機執行，您通常從命令列中，或 Python 開發環境中，執行 Python 指令碼，並指定使用其中一種 SQL Server 計算內容**revoscalepy**函式。 您可以使用遠端計算內容的整個程式碼，或個別的函式。 例如，您可能要卸載至伺服器，以使用最新的資料，以避免資料移動的模型定型。
 
-如果您想要將完整的 Python 指令碼預存程序， [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，我們建議您在單一函數清楚地定義輸入和輸出為重寫程式碼。 必須是輸入和輸出**熊**資料框架。 完成此動作後，您可以從任何用戶端可支援 T-SQL 呼叫預存程序、 輕鬆地傳遞 SQL 查詢做為輸入，以及將結果儲存至 SQL 資料表。 如需範例，請參閱[L 開發人員的資料庫中 Python 分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)。
+如果您想要將完整的 Python 指令碼預存程序， [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，我們建議您在單一函數清楚地定義輸入和輸出為重寫程式碼。 必須是輸入和輸出**熊**資料框架。 完成此動作後，您可以從任何用戶端可支援 T-SQL 呼叫預存程序、 輕鬆地傳遞 SQL 查詢做為輸入，以及將結果儲存至 SQL 資料表。 如需範例，請參閱[資料庫中的 SQL 開發人員的 Python 分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)。
 
 ### <a name="using-remote-compute-contexts"></a>使用遠端計算內容
 
@@ -169,6 +167,6 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 
 如果您使用 Python Tools for Visual Studio 時，您可以使用 IntelliSense，取得語法和引數的說明。 如需詳細資訊，請參閱[Python 支援 Visual Studio 中](http://docs.microsoft.com/visualstudio/python/installation)，並下載符合您的 Visual Studio 版本的擴充功能。 您可以使用 Visual Studio 2015 和 2017，具有 Python 或更早版本。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 
 [Python 教學課程](../tutorials/sql-server-python-tutorials.md)

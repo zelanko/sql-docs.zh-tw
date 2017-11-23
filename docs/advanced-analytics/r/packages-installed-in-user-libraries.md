@@ -1,26 +1,24 @@
 ---
 title: "避免安裝在使用者程式庫中的 R 封裝上的錯誤 |Microsoft 文件"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 11/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: f7e5a9e69d98a3e39a66c48b1a7add5a3f0b0e69
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 0de06ebee16d903b4b00c9d8e4673bf450c485d1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>避免安裝在使用者程式庫中的 R 封裝上的錯誤
 
@@ -35,7 +33,7 @@ R 開發人員需要安裝新的 R 封裝習慣安裝套件在和使用私用的
 例如，在一般的 R 開發環境，使用者會將封裝的位置 R 環境變數`libPath`，或參考完整的封裝路徑，就像這樣：
 
 ```R
-library("c:/Users/<username>/R/win-library/packagename")  
+library("c:/Users/<username>/R/win-library/packagename")
 ```
 
 不過，這可以永遠不會運作，SQL Server 中執行 R 解決方案時因為安裝 R 封裝，至特定的預設文件庫的執行個體相關聯。
@@ -68,7 +66,6 @@ SQL Server 提供功能，可協助您管理多個封裝版本，並提供使用
 
     + 編輯程式碼，以確保封裝會從預設程式庫，不是從特定的目錄或使用者程式庫載入。
 
-+ 避免臨機操作的套件安裝做為方案的一部分。 請檢查您的程式碼，以確保沒有解除安裝的封裝，或使用動態地將封裝安裝的程式碼呼叫。 如果您沒有權限，程式碼會失敗，且如果您沒有權限，您應該安裝封裝分開從其他您想要執行的程式碼。
++ 避免臨機操作的套件安裝做為方案的一部分。 請檢查您的程式碼，以確保沒有解除安裝的封裝，或使用動態地將封裝安裝的程式碼呼叫。 如果您沒有權限才能安裝封裝，程式碼將會失敗。 即使您沒有權限才能安裝封裝，您應該做因此分別從您想要執行其他程式碼。
 
-+ 修改 R 封裝程式庫的任何直接路徑。 如果已將封裝安裝於預設程式庫中，R 執行階段將從預設程式庫載入封裝，即使已在 R 程式碼中指定不同的程式庫也一樣。
-
++ 更新您的程式碼，以便移除直接參考的 R 封裝或 R 程式庫路徑。 如果已將封裝安裝於預設程式庫中，R 執行階段將從預設程式庫載入封裝，即使已在 R 程式碼中指定不同的程式庫也一樣。

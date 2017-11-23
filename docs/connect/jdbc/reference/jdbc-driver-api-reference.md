@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c1b58f4cd68ecafeec1c92ce42c92bfb5f29961a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c19740d1247fa1fd7fe8036fa2aa557e01e74c82
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC Driver API 參考
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -91,8 +89,7 @@ ms.lasthandoff: 09/09/2017
 |[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)|表示 factory [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)為內部使用的物件。|  
 |[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)|XAResource 代表 xa 分散式交易管理。|  
   
-## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式概觀](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [JDBC Driver 概觀](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

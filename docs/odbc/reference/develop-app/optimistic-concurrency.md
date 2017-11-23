@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - concurrency control [ODBC]
 - optimistic concurrency [ODBC]
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 422f16155f79b61a7cc46516d8a4e7deb2fe19f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3ae017de17892595dac94a0dd4bbb843d6d5f658
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="optimistic-concurrency"></a>開放式並行存取
 *開放式並行存取*是它的名稱衍生自在開放式假設，很少會發生交易之間發生衝突，衝突稱為時發生另一個交易中更新或刪除資料列之間的時間會在讀取的資料它是由目前的交易和時間來更新或刪除。 它是相反的*封閉式並行存取，*鎖定，或在其應用程式開發人員認為這類衝突很常見。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
  如果應用程式本身會實作開放式並行存取，將陳述式屬性 SQL_ATTR_CONCURRENCY 設 SQL_CONCUR_READ_ONLY 讀取資料列。 它會比較資料列版本，而不知道資料列版本資料行，它會呼叫**SQLSpecialColumns** SQL_ROWVER 選項，以判斷此資料行的名稱。  
   
  應用程式更新或刪除資料列，藉由增加並行模式設為 SQL_CONCUR_LOCK （若要取得資料列的寫入權限） 並執行**更新**或**刪除**陳述式搭配**位置**子句所指定的版本，或值的資料列時發生應用程式可以讀取它。 如果資料列已變更從那時起，陳述式會失敗。 如果**其中**子句並未識別唯一資料列、 陳述式也可能會更新或刪除其他資料列; 資料列版本一定唯一識別資料列，但資料列值唯一識別資料列，只有當它們包含的主索引鍵。
-

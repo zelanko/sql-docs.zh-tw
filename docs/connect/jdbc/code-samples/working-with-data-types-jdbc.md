@@ -8,21 +8,19 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: 669ce17e79da30344a33e8c44b4e548099c4bae1
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 90071bd6010de6a5fa149187d50a86e166e3ef5f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="working-with-data-types-jdbc"></a>使用資料類型 (JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,8 +41,7 @@ ms.lasthandoff: 09/09/2017
 |[基本資料類型範例](../../../connect/jdbc/basic-data-types-sample.md)|描述如何使用結果集 getter 方法擷取基本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料類型值，以及如何使用結果集 update 方法更新那些值。|  
 |[SQLXML 資料類型範例](../../../connect/jdbc/sqlxml-data-type-sample.md)|描述如何在關聯式資料庫中儲存 XML 資料、 如何從資料庫擷取 XML 資料以及如何剖析具有 XML 資料**SQLXML** Java 資料類型。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [範例 JDBC 驅動程式應用程式](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   
-

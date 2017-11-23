@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access driver [ODBC], SQLGetTypeInfo
 - SQLGetTypeInfo function [ODBC], Access Driver
 ms.assetid: a28b16eb-ca36-4297-9297-ecd7c107a84e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84e2b54725c427d8d3fed56797396d589ea43edd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7f652b5e95fc9c2bf85643aa3633a6e30e6087bb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgettypeinfo-access-driver"></a>SQLGetTypeInfo （存取驅動程式）
 > [!NOTE]  
@@ -35,4 +33,3 @@ ms.lasthandoff: 09/09/2017
  傳回所產生之資料表中的型別 (TYPE_NAME) 名稱**SQLGetTypeInfo**會是最常用的資料來源的名稱。  
   
  SQL_ALL_EXCEPT_LIKE 將會傳回可搜尋的資料行中的位元組、 計數器、 Double、 單一、 長時間和 Short 資料類型。 （LIKE 功能可藉由將值轉換成字元，使用 ODBC 標準轉換函式，然後執行比較。）
-

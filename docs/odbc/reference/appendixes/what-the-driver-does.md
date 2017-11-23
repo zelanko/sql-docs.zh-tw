@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursors
 - block cursors [ODBC]
 ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 352c4adb445b670f0a236e16954e6dd85a63de7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07e94046370f8140fdacec2cf708de0a62311a27
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what-the-driver-does"></a>驅動程式的用途
 下表摘要說明哪些函式和陳述式屬性 ODBC 3*.x*驅動程式應該實作區塊和可捲動資料指標。  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLFetch**|傳回下一個資料列集。 以下是實作詳細資料：<br /><br /> -驅動程式會從 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性的值中擷取資料列集大小。<br />-驅動程式會從 SQL_ATTR_ROW_STATUS_PTR 陳述式屬性擷取資料列狀態陣列的位址。<br />-驅動程式會擷取從 SQL_ATTR_ROWS_FETCHED_PTR 陳述式屬性擷取緩衝區的資料列的位址。<br />-應用程式可以混合之間的呼叫**SQLFetchScroll**和**SQLFetch**。<br />-   **SQLFetch**傳回書籤，如果繫結資料行 0。<br />-   **SQLFetch**可以呼叫以傳回多個資料列。<br />-驅動程式不會傳回 SQLSTATE 01S01 （資料列中的錯誤），表示呼叫提取資料列時發生錯誤**SQLFetch**。|  
 |**SQLFetchScroll**|傳回指定的資料列集。 以下是實作詳細資料：<br /><br /> -驅動程式會從 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性擷取的資料列集大小。<br />-驅動程式會從 SQL_ATTR_ROW_STATUS_PTR 陳述式屬性擷取資料列狀態陣列的位址。<br />-驅動程式會擷取從 SQL_ATTR_ROWS_FETCHED_PTR 陳述式屬性擷取緩衝區的資料列的位址。<br />-應用程式可以混合之間的呼叫**SQLFetchScroll**和**SQLFetch**。<br />-驅動程式不會傳回 SQLSTATE 01S01 （資料列中的錯誤），表示呼叫提取資料列時發生錯誤**SQLFetchScroll**。|  
 |**SQLSetPos**|執行各種定位的作業。 以下是實作詳細資料：<br /><br /> -這可以在陳述式狀態 S6 或 S7 呼叫。 如需詳細資訊，請參閱[陳述式轉換](../../../odbc/reference/appendixes/statement-transitions.md)附錄 b: ODBC 狀態轉換表中。<br />-如果這呼叫陳述式狀態 S5 或 S6，驅動程式會擷取資料列集大小從 SQL_ATTR_ROWS_FETCHED_PTR 陳述式屬性和資料列狀態陣列，從 SQL_ATTR_ROW_STATUS_PTR 陳述式屬性的位址。<br />-如果這呼叫陳述式狀態 S7，驅動程式擷取資料列集大小 SQL_ROWSET_SIZE 陳述式屬性和資料列狀態陣列，從位址*RowStatusArray*引數的**SQLExtendedFetch**。<br />-驅動程式會傳回 SQLSTATE 01S01 （資料列中的錯誤） 要指出呼叫提取資料列時發生錯誤**SQLSetPos**處於 S7 呼叫此函式時執行大量作業。 若要保留回溯相容性，如果 SQLSTATE 01S01 （資料列中的錯誤） 由**SQLSetPos**，驅動程式管理員不會排序在序列的狀態 記錄中所述的規則錯誤佇列中的狀態記錄區段[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)。<br />-如果驅動程式應該使用 ODBC 2。*x*呼叫的應用程式**SQLSetPos**與*作業*SQL_ADD 引數，此驅動程式必須支援**SQLSetPos** 與*作業*SQL_ADD 引數。|
-

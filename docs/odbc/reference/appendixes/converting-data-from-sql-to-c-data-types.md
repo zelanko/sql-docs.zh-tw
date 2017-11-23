@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
 - C data types [ODBC], converting from SQL types
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0fef5a663ecbb3ec1f162dcf453691f04183d732
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8fae054b572cb0d61299781d67adc0038afa9a97
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>將資料從 SQL 轉換成 C 資料類型
 當應用程式呼叫**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**，驅動程式會從資料來源擷取資料。 如果有需要，它會將資料轉換中的驅動程式擷取它所指定之資料類型的資料型別*TargetType*引數中的**SQLBindCol**或**SQLGetData。** 最後，它將資料儲存在所指位置*TargetValuePtr*引數中的**SQLBindCol**或**SQLGetData** （和 ARD 的 SQL_DESC_DATA_PTR 欄位）。  
@@ -60,25 +58,24 @@ ms.lasthandoff: 09/09/2017
   
  此章節包含下列主題。  
   
--   [SQL 到 c： 字元](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [SQL 到 C：字元](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [SQL 到 c： 數字](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [SQL 到 C：數值](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [SQL 到 c： 位元](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [SQL 到 C：位元](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [SQL 到 c： 二進位](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [SQL 到 C：二進位](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [SQL 到 c： 日期](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [SQL 到 C：日期](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
--   [SQL 到 c: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
+-   [SQL 到 C：GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [SQL 到 c： 時間](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [SQL 到 C：時間](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [SQL 到 c： 時間戳記](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [SQL 到 C：時間戳記](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [SQL 到 c： 年度月份間隔](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [SQL 到 C：年月間隔](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [SQL 到 c： 日期時間間隔](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [SQL 到 C：日期時間間隔](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [SQL 到 C 資料轉換範例](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)
-

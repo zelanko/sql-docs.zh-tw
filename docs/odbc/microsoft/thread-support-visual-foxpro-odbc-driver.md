@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], thread support
 - multithreaded applications [ODBC]
 ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 691ff249f971a7c7baa16a8409786cde455d58a5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cd540c727f1e8a77dbb6d8201715c213ff688909
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>執行緒支援 （Visual FoxPro ODBC 驅動程式）
 Visual FoxPro ODBC 驅動程式是安全執行緒。 存取權的環境控制代碼 (*匣*)，連接控制代碼 (*hdbc*)，和陳述式控制代碼 (*hstmt*) 會包裝在適當的號誌，以防止其他處理程序從存取，可能會改變驅動程式的內部資料結構。  
@@ -38,4 +36,3 @@ Visual FoxPro ODBC 驅動程式是安全執行緒。 存取權的環境控制代
  驅動程式會使用個別執行緒，當您使用漸進式提取時擷取資料。 若要使用漸進式擷取的資料來源，請選取**提取資料，在背景中的** 核取方塊[ODBC Visual FoxPro 安裝程式對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)或 BackgroundFetch 屬性關鍵字用於您的連線字串。 避免多執行緒應用程式呼叫驅動程式時，使用背景擷取。 連接字串屬性關鍵字的詳細資訊，請參閱[使用連接字串](../../odbc/microsoft/using-connection-strings.md)。  
   
  如需執行緒的詳細資訊和**SQLCancel**，請參閱[SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md)中*ODBC 程式設計人員參考*。
-

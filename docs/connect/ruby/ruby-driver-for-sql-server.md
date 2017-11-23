@@ -8,22 +8,20 @@ ms.service:
 ms.component: ruby
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ba675eba2fd72e35e37f71bf9afff0eba34d73af
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1cb783b7024c23c4e656288c3ba5a5d555f877b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="ruby-driver-for-sql-server"></a>拼音 Driver for SQL Server
 
@@ -32,9 +30,9 @@ ms.lasthandoff: 09/09/2017
 您可以連接到在 Windows、 Linux 或 mac 上使用 Ruby SQL 資料庫   
   
 ## <a name="getting-started"></a>快速入門  
-* [步驟 1： 設定適用於拼音開發的開發環境](step-1-configure-development-environment-for-ruby-development.md)  
-* [步驟 2： 建立 SQL database 的拼音開發](step-2-create-a-sql-database-for-ruby-development.md)  
-* [步驟 3： 連接到使用 Ruby SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
+* [步驟 1︰設定 Ruby 開發的開發環境](step-1-configure-development-environment-for-ruby-development.md)  
+* [步驟 2︰建立 Ruby 開發的 SQL 資料庫](step-2-create-a-sql-database-for-ruby-development.md)  
+* [步驟 3︰使用 Ruby 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
   
 ## <a name="documentation"></a>文件集  
 [文件，網址 ruby lang.org](https://www.ruby-lang.org/en/documentation/)  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 * [開始使用 Ruby macOS](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
 * [在 Ubuntu 上 Ruby 使用者入門](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
 * [Red Hat Enterprise Linux (RHEL) 上的 Ruby 使用者入門](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)
-

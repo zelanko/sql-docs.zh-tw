@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7cfa7bcaf6c193a7abde71020d563a095ace3f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-arrays-of-parameters"></a>使用參數陣列
 若要使用的應用程式會呼叫的參數陣列**SQLSetStmtAttr**與*屬性*則 sql_attr_paramset_size 會以指定的參數集數目的引數。 它會呼叫**SQLSetStmtAttr**與*屬性*SQL_ATTR_PARAMS_PROCESSED_PTR 以指定的位址變數中的驅動程式可以傳回的處理，參數的集合數目的引數包括錯誤設定。 它會呼叫**SQLSetStmtAttr**與*屬性*SQL_ATTR_PARAM_STATUS_PTR 指向用來傳回每個資料列的參數值的狀態資訊的陣列的引數。 驅動程式會將這些位址儲存在它所維護的陳述式的結構。  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/09/2017
 -   驅動程式不會解譯中的值因為*ParameterValuePtr*引數的**SQLBindParameter**資料在執行中參數，如果應用程式提供的指標陣列，如**SQLParamData**不擷取，這個陣列的項目並返回應用程式。 相反地，它會傳回純量值的應用程式有提供。 這表示所傳回的值**SQLParamData**足夠的參數指定的應用程式需要將資料傳送; 應用程式也需要考慮目前的資料列數目。  
   
      當只有一些參數陣列的項目資料在執行中參數，應用程式必須傳遞陣列中的位址*ParameterValuePtr* ，其中包含所有參數的項目。 這個陣列會被解譯通常不是資料在執行中參數的參數。 資料在執行參數值的**SQLParamData**提供給應用程式，通常無法用來識別驅動程式會要求在這個下的資料，一律為陣列的位址。
-

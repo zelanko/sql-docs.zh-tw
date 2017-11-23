@@ -8,14 +8,11 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- sql13.TSQLExpandPortal.f1
-dev_langs:
-- TSQL
+f1_keywords: sql13.TSQLExpandPortal.f1
+dev_langs: TSQL
 helpviewer_keywords:
 - conventions [SQL Server]
 - Applies to section in Transact-SQL topics
@@ -30,20 +27,19 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 12291b23c9204aaf030c3a8f093fe05bf4712721
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9a1c60d865d1b18eae1cd89ea226e91e8e7b5b9e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="transact-sql-syntax-conventions-transact-sql"></a>TRANSACT-SQL 語法慣例 Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 語法慣例 (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   下表列出和描述 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參考中之語法圖所用的慣例。  
   
@@ -126,10 +122,9 @@ ms.lasthandoff: 09/01/2017
   
  在某些情況下，某產品或許適用於一般主題主旨，但所有的引數卻都無法使用。 例如自主資料庫使用者於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE USER**陳述式可用於任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產品，但是**WITH PASSWORD**語法無法用於較舊版本。 在此情況下，額外**適用於**區段插入適當的引數中的說明主題的主體。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Transact-SQL 參考 &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
   
   
-
 
 
