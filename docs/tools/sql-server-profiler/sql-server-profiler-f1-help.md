@@ -5,8 +5,7 @@ ms.date: 07/07/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -41,17 +40,16 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c48b3eca23a83669e33c7d31ddb7495176944813
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6075e08d0fd6d5a62c9de00b5f34576459b0ffdc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 對話方塊
 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一種會從伺服器擷取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的工具。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。 以下是中命令和設定可用之對話方塊的[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
@@ -89,7 +87,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一�
 
 ## <a name="trace-template-properties"></a>追蹤範本屬性 
 ### <a name="new-general-tab"></a>新 （一般索引標籤）
-使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**檔案**功能表上，指向**範本**，然後按一下**新增**。
+使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**檔案**功能表上，指向**範本**，然後按一下 **新增**。
 |項目|Description
 |---|---
 |**選取伺服器類型**|指定將要使用此範本的伺服器類型。  
@@ -196,7 +194,7 @@ Microsoft SQL Server Profiler 和 Tuning Advisor 使用此對話方塊來選取�
 
 |項目|Description
 |---|---
-|**SQL Server**|指定目前連接的 SQL Server 執行個體。 此欄位會自動擴展且無法更新。  
+|**[SQL Server]**|指定目前連接的 SQL Server 執行個體。 此欄位會自動擴展且無法更新。  
 |**資料庫**|指定追蹤資料表所在的資料庫。  
 |**擁有者**|指定追蹤資料表的擁有者。 此欄位會自動擴展為 **dbo**。  
 |**Table**|指定從中讀取追蹤的追蹤資料表名稱。  
@@ -204,7 +202,7 @@ Microsoft SQL Server Profiler 和 Tuning Advisor 使用此對話方塊來選取�
 使用 **[目的地資料表]** 對話方塊，來指定您要儲存追蹤的資料表。  
 |項目|Description
 |---|---
-|**SQL Server**|指定目前連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 此欄位會自動擴展且無法更新。 若要變更伺服器，請按一下 **[取消]** ，並連接到您要儲存追蹤資料表之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
+|**[SQL Server]**|指定目前連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 此欄位會自動擴展且無法更新。 若要變更伺服器，請按一下 **[取消]** ，並連接到您要儲存追蹤資料表之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
 |**資料庫**|指定您要儲存追蹤資料表的資料庫。  
 |**擁有者**|指定追蹤資料表的擁有者。 此欄位會自動擴展為 **dbo**。  
 |**Table**|指定您要儲存追蹤的資料表名稱。  
@@ -216,15 +214,15 @@ Microsoft SQL Server Profiler 和 Tuning Advisor 使用此對話方塊來選取�
 |---|---
 |**重新執行伺服器**|顯示要連接以重新執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
 |**變更...**|啟動 [連接到伺服器] 對話方塊，以連接到另一部伺服器。  
-|**儲存至檔案** |將重新執行結果儲存至檔案。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]顯示標準檔案對話方塊中，您可以在其中指定要儲存檔案的位置。  
+|**儲存至檔案** |將重新執行結果儲存至檔案。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會顯示標準檔案對話方塊，您可以在此指定檔案的儲存位置。  
 |**儲存至資料表**|將重新執行結果儲存至資料表。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會顯示資料表選取項目對話方塊，您可以在此指定資料表的儲存位置。  
 |**重新執行執行緒的數目**|指定要同時使用的重新執行執行緒的數目。 較高的數目會在重新執行期間消耗較多資源，但是重新執行速度較快而且更並行。  
 |**依照追蹤的順序重新執行事件**|循序重新執行事件。 如果您正在重新執行追蹤以偵錯，請使用此選項。  
 |**使用多執行緒重新執行事件** |並行重新執行事件。 此選項比循序重新執行事件還快，但是會停用偵錯。 事件會依其系統處理序識別碼 (SPID) 來排序。  
-|**顯示重新執行結果**|在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中顯示重新執行結果。 
+|**顯示重新執行結果**|在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中顯示重新執行結果。 
 ### <a name="advanced-replay-options"></a>進階重新執行選項
 在 [重新執行組態] 對話方塊中，使用 [進階重新執行選項] 索引標籤來指定如何重新執行追蹤檔案。  
-若要檢視這個視窗，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 開啟包含用以重新執行的適當事件之追蹤檔案或資料表。 如需詳細資訊，請參閱 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。 在追蹤檔案或資料表開啟期間，請在 重新執行 功能表上按一下 啟動，連接到想要重新執行追蹤之 SQL Server 的執行個體，然後按一下進階重新執行選項 索引標籤。  
+若要檢視這個視窗，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 開啟包含用以重新執行的適當事件之追蹤檔案或資料表。 如需詳細資訊，請參閱 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。 在追蹤檔案或資料表開啟期間，請在 [重新執行] 功能表上按一下 [啟動]，連接到想要重新執行追蹤之 SQL Server 的執行個體，然後按一下 [進階重新執行選項] 索引標籤。  
 |項目|Description
 |---|---
 |**重新執行系統 SPID**|指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是否重新執行系統處理序識別碼 (SPID)。  
@@ -281,4 +279,3 @@ Microsoft SQL Server Profiler 和 Tuning Advisor 使用此對話方塊來選取�
 [伺服器效能與活動監視](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
-

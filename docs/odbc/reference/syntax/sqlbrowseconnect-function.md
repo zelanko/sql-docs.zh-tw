@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBrowseConnect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBrowseConnect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBrowseConnect
-helpviewer_keywords:
-- SQLBrowseConnect function [ODBC]
+f1_keywords: SQLBrowseConnect
+helpviewer_keywords: SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 839cf9ec1e802d0bce8da8cc0134bf89b0646bb2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f8117cc5238576f840cdb98f5ffaded38aed0d6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 函數
 **一致性**  
@@ -119,7 +113,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString 引數  
  瀏覽要求的連接字串的語法如下：  
   
- *連接字串*:: =*屬性*[;] &#124;*屬性*;*連接 stringattribute* :: =*屬性關鍵字*=*屬性值*&#124;驅動程式 = [{}]*屬性值 [*}]*屬性關鍵字*:: = DSN &#124;UID &#124;PWD &#124;*驅動程式-定義-屬性-keywordattribute-值*:: =*字元-stringdriver-定義-屬性-關鍵字*:: =*識別碼*  
+ *連接字串*:: =*屬性*[;] &#124;*屬性*;*連接 stringattribute* :: =*屬性關鍵字*=*屬性值*&#124;驅動程式 = [{]*屬性值 [*}]*屬性關鍵字*:: = DSN &#124;UID &#124;PWD &#124;*驅動程式-定義-屬性-keywordattribute-值*:: =*字元-stringdriver-定義-屬性-關鍵字*:: =*識別碼*  
   
  其中*字元字串*有零個或多個字元。*識別碼*有一或多個字元。*屬性關鍵字*不區分大小寫。*屬性值*可能會區分大小寫，以及值**DSN**關鍵字並沒有包含單獨的空白個數。 因為連接字串和初始設定檔案文法、 關鍵字和屬性值包含字元**[] {} （)，;？\*= ！ @**應該予以避免。 在 系統資訊的文法，因為關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。 ODBC 2。*x*驅動程式，驅動程式關鍵字的屬性值前後需要加括號。  
   
@@ -292,7 +286,6 @@ int main() {
 |傳回的驅動程式描述和屬性|[SQLDrivers 函式](../../../odbc/reference/syntax/sqldrivers-function.md)|  
 |釋放連接控制代碼|[SQLFreeHandle 函式](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2d286657c8264cc0b1fa82b87a2978cd60387506
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5b9e63d4c7cdc57814b04b2e96e52bda17a25f5a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services 中使用的工具和應用程式
   尋找工具和應用程式所需的建立 Analysis Services 模型和管理部署資料庫。  
@@ -58,9 +57,8 @@ ms.lasthandoff: 09/27/2017
 ### <a name="community-and-third-party-tools"></a>社群與協力廠商工具  
  如需社群程式碼範例，請造訪 [Analysis Services codeplex 頁面](http://sqlsrvanalysissrvcs.codeplex.com/) 。 當您在尋找支援 Analysis Services 之協力廠商工具的建議時，[論壇](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) 是相當實用的資源。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [多維度資料庫的相容性層級](../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [相容性層級的表格式模型](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

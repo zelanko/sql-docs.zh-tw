@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLConfigDriver
-apilocation:
-- sqlsrv32.dll
+apiname: SQLConfigDriver
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLConfigDriver
-helpviewer_keywords:
-- SQLConfigDriver function [ODBC]
+f1_keywords: SQLConfigDriver
+helpviewer_keywords: SQLConfigDriver function [ODBC]
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ad15d5e7d61d9ef4b85ae347376f01b0bdb6ec67
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9dd30a466fefda6f8b100fdd9595e9ab65e4d85f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 函式
 **一致性**  
@@ -73,7 +67,7 @@ BOOL SQLConfigDriver(
  此選項也可以是特定驅動程式在此情況下*常見*的第一個選項必須從 ODBC_CONFIG_DRIVER_MAX + 1 開始。 *常見*的任何其他選項也必須啟動從大於 ODBC_CONFIG_DRIVER_MAX + 1 的值。  
   
  *lpszDriver*  
- [輸入]在系統資訊中註冊的驅動程式名稱。  
+ [輸入]在 系統資訊中註冊的驅動程式名稱。  
   
  *lpszArgs*  
  [輸入]包含特定驅動程式的引數的 null 終止字串*常見*。  
@@ -125,4 +119,3 @@ BOOL SQLConfigDriver(
 |---------------------------|---------|  
 |新增、 修改或移除驅動程式|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)（在安裝程式 DLL 中）|  
 |移除預設的資料來源|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|
-

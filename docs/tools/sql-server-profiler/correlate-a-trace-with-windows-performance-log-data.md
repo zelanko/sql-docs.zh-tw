@@ -5,8 +5,7 @@ ms.date: 07/12/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - traces [SQL Server], logs
 - SQL Server Profiler, correlating trace with log data
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0e76ba8035c6bfd6bb21a46ef2471c9ab20ccf66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a29d6820a6ff53ef449aef545b2194ab6fa517c0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>使追蹤與 Windows 效能記錄資料相互關聯
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以開啟 Microsoft Windows 效能記錄，選擇要與追蹤相互關連的計數器，而且在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 圖形化使用者介面中，讓選取的效能計數器顯示在追蹤的旁邊。 選取追蹤視窗中的事件後，[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的 [系統監視器] 資料窗格中的紅色直條，表示與選取的追蹤事件相互關聯的效能記錄資料。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，開啟儲存的追蹤檔案或追蹤資料表。 您無法與仍在收集事件資料的執行中追蹤產生相互關聯。 為了與系統監視器資料保持正確的相互關聯，追蹤必須同時包含 [StartTime] 與 [EndTime] 資料行。  
   
-2.  在[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**檔案**功能表上，按一下**匯入效能資料**。  
+2.  在[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**檔案**功能表上，按一下 **匯入效能資料**。  
   
 3.  在 [開啟] 對話方塊中，選取含有效能記錄的檔案。 擷取效能記錄資料的期間必須與擷取追蹤資料的期間相同。  
   
@@ -70,4 +68,3 @@ ms.lasthandoff: 08/02/2017
 10. 在 [排程] 索引標籤上，指定監視排程。  
   
 11. 按一下 [確定] 建立效能記錄。  
-

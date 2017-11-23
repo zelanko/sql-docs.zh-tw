@@ -8,12 +8,10 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.restorepage.general.f1
+f1_keywords: sql13.swb.restorepage.general.f1
 helpviewer_keywords:
 - restoring pages [SQL Server]
 - pages [SQL Server], restoring
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5de0a22e84a354096a5e595b39f8ba60154bdd87
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-pages-sql-server"></a>還原頁面 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +123,7 @@ ms.lasthandoff: 08/03/2017
 3.  以滑鼠右鍵按一下資料庫，指向 [工作] ，再指向 [還原] ，然後按一下 [頁面] ，這樣會開啟 [還原頁面]  對話方塊。  
   
      **Restore**  
-     此區段與 **還原資料庫 (一般頁面)** 上的 [還原至] [](../../relational-databases/backup-restore/restore-database-general-page.md)執行相同功能。  
+     此區段與 **還原資料庫 (一般頁面)** 上的 [[還原至]](../../relational-databases/backup-restore/restore-database-general-page.md)執行相同功能。  
   
      **資料庫**  
      指定要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選取現有的資料庫。  清單包含伺服器上的所有資料庫，但不含系統資料庫 **master**和 tempdb。  
@@ -234,4 +231,3 @@ GO
  [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   
-

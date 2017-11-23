@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 267d3e30f61539da24ed22d54c4355945da21999
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0b9bc26477c4b43e47588280e2cce74096b810c5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>專案設定 （型別對應） (DB2ToSQL)
 類型對應 頁面**專案設定**對話方塊包含自訂 SSMA 如何轉換成的 DB2 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 08/02/2017
   
 若要指定目前的物件或物件類別的設定，請使用**類型對應**主要 SSMA 視窗索引標籤中的。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 下表顯示**類型對應**索引標籤上選項：  
   
 **來源類型**  
@@ -67,7 +65,7 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
   
 |DB2 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型|  
 |-----------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|int|  
@@ -95,24 +93,24 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |不同的國家字元集<sup>**</sup>|nvarchar(max)|  
 |不同的國家字元集<sup>*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
 |未經處理的|varbinary(max)|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
-|signtype|smallint|  
+|Rowid|uniqueidentifier|  
+|Signtype|smallint|  
 |smallint|smallint|  
 |string|varchar(max)|  
 |timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |時區的時間戳記|datetimeoffset|  
-|urowid|uniqueidentifier|  
+|Urowid|uniqueidentifier|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
-|xmltype|xml|  
+|Xmltype|xml|  
   
 <sup>*</sup>傳回值類型對應只會套用。  
   
@@ -123,7 +121,7 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
   
 |DB2 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型|  
 |-----------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |blob|varbinary(max)|  
@@ -136,7 +134,7 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |Clob|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|dec [38] [0]|  
-|dec [*..\*]|dec [*] [0]|  
+|dec [*..\*]|dec [*][0]|  
 |dec [*..\*][\*..\*]|dec[*][\*]|  
 |decimal|decimal [38] [0]|  
 |小數 [*..\*]|decimal [*] [0]|  
@@ -162,24 +160,24 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |國家字元集 [*..\*]|nchar [*]|  
 |nchar|nchar|  
 |nchar [*]|nchar [*]|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |數字 [*..\*]|數字 [*]|  
 |數字 [*..\*][\*..\*]|數字 [*] [\*]|  
 |numeric|numeric|  
 |數字 [*..\*]|數字 [*]|  
 |數字 [*..\*][\*..\*]|數字 [*] [\*]|  
-|nvarchar2 [*.\*]|nvarchar [*]|  
+|nvarchar2 [*..\*]|nvarchar [*]|  
 |原始 [*..\*]|varbinary [*]|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
+|Rowid|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |使用本地時區的時間戳記 [*..\*]|datetimeoffset [*]|  
 |時區的時間戳記|datetimeoffset|  
 |時區的時間戳記 [*..\*]|datetimeoffset [*]|  
-|時間戳記 [*.\*]|datetime2 [*]|  
+|時間戳記 [*..\*]|datetime2 [*]|  
 |Urowid|uniqueidentifier|  
 |urowid [*..\*]|uniqueidentifier|  
 |varchar [*..\*]|varchar [*]|  
@@ -219,7 +217,7 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |Float|float [53]|  
 |float [*..53]|float [*]|  
 |float [54..*]|float [53]|  
-|整數|int|  
+|int|int|  
 |Integer|int|  
 |整數 [*..\*]|數字 [*] [0]|  
 |長整數|varchar(max)|  
@@ -273,7 +271,6 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |varchar2 [8001..*]|varcha(max)|  
 |Xmltype|xml|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [使用者介面參考 &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
-

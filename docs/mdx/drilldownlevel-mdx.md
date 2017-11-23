@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNLEVEL
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownLevel function
+f1_keywords: DRILLDOWNLEVEL
+dev_langs: kbMDX
+helpviewer_keywords: DrilldownLevel function
 ms.assetid: 47531ce5-1ac0-4aa9-a85c-824fb5d21e7c
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 1728b5db38b97209768a69450780588c3d226e95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d6f90b918cbb817154e699ac8e25bdcaf4119875
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +43,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Level_Expression*  
  (選擇性)。 MDX 運算式，明確地識別要向下鑽研的層級。 若指定了層級運算式，請略過下列索引引數。  
   
- *索引*  
+ *Index*  
  (選擇性)。 指定集合內向下鑽研階層編號的有效數值運算式。 您可以使用索引層級而不是 Level_Expression，以明確識別要向下鑽研的層級。  
   
  *Include_Calc_Members*  
@@ -95,7 +90,7 @@ FROM [Adventure Works]
   
  下一個範例示範如何使用層級運算式。 假設某個集合代表某個階層結構，則使用層級運算式可讓您選擇階層中要開始向下鑽研的層級。  
   
- 在此範例中，向下鑽研的層級會從 [City]，做為第二個引數**DrilldownLevel**函式。 當您執行此查詢時，會針對華盛頓州和奧勒岡州從 [City] 層級開始向下鑽研。 每個**DrilldownLevel**函式，結果集也包含在下一步] 層級 [Postal codes] 下的成員。  
+ 在此範例中，向下鑽研的層級會從 [City]，做為第二個引數**DrilldownLevel**函式。 當您執行此查詢時，會針對華盛頓州和奧勒岡州從 [City] 層級開始向下鑽研。 每個**DrilldownLevel**函式，結果集也包含在下一步 層級 [Postal codes] 下的成員。  
   
 ```  
 SELECT [Measures].[Internet Sales Amount] ON COLUMNS,  
@@ -129,8 +124,7 @@ FROM [Adventure Works]
   
  若您只移除旗標，然後重新執行查詢，則會獲得相同的結果，但結果中不包含導出成員 [West Coast]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

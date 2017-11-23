@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4dc989158ec30ff4e168acdc9023ad543c7363d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f74e15c261041ae0a68152417955a81ed96994f8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>載入已轉換成 SQL Server (DB2ToSQL) 資料庫物件
 DB2 結構描述，以轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以載入到產生的資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以讓 SSMA 建立物件，或您可以編寫物件指令碼，並自行執行指令碼。 此外，SSMA 可讓您更新目標中繼資料的實際內容[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。  
@@ -81,7 +79,7 @@ DB2 結構描述，以轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 **若要修改指令碼**  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下**檔案**。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
   
 2.  在**開啟**對話方塊，並選取您的指令碼檔案，然後按一下 [確定]。
   
@@ -96,7 +94,7 @@ DB2 結構描述，以轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 **執行指令碼**  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下**檔案**。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
   
 2.  在**開啟**對話方塊方塊中，選取您的指令碼檔案，然後按一下[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
@@ -114,7 +112,6 @@ DB2 結構描述，以轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnovers
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[移轉至 SQL Server 的 DB2 資料](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [將 DB2 資料移轉到 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   
-

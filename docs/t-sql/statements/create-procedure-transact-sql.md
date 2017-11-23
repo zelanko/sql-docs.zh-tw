@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - CREATE PROC
 - PROC_TSQL
 - CREATE_PROCEDURE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - parameters [SQL Server], stored procedures
 - table-valued parameters
@@ -48,17 +46,16 @@ helpviewer_keywords:
 - automatic stored procedure execution
 - creating stored procedures
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
-caps.latest.revision: 180
+caps.latest.revision: "180"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 086151e2916335ae0d7cda3eef11a79363d3ce53
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa
-ms.openlocfilehash: 23460288040b37ec6a09293bc02a46e4f9af94fa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -995,7 +992,7 @@ END
 EXEC Get10TopResellers;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
  [資料指標](../../relational-databases/cursors.md)   
@@ -1021,7 +1018,6 @@ EXEC Get10TopResellers;
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
   
-
 
 
 

@@ -23,17 +23,16 @@ helpviewer_keywords:
 - data sources [Analysis Services], creating
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8fbcb252ca94f94eef82cbb2b19a3c15dcf7a38f
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 715f23cb80c0de16697b3aa66a4fb07669ad169e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>建立資料來源 (SSAS 多維度)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度模型中，資料來源物件代表資料來源的連接，您會從其中處理 (或匯入) 資料。 多維度模型至少必須包含一個資料來源物件，不過您可以加入更多資料來源物件，以便結合數個資料倉儲的資料。 使用本主題中的說明為您的模型建立資料來源物件。 如需設定這個物件之屬性的詳細資訊，請參閱[設定資料來源屬性 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)。  
@@ -181,9 +180,8 @@ ms.lasthandoff: 09/01/2017
   
 5.  尋找並選取您加入的資料表。 以滑鼠右鍵按一下資料表，然後選取 [新增關聯性]。 選擇包含相符資料的來源和目的地資料行。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [支援的資料來源 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-
