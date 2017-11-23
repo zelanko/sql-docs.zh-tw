@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- FiscalFirstDayOfMonth Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: FiscalFirstDayOfMonth Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- FiscalFirstDayOfMonth
-helpviewer_keywords:
-- FiscalFirstDayOfMonth element
+applies_to: SQL Server 2016 Preview
+f1_keywords: FiscalFirstDayOfMonth
+helpviewer_keywords: FiscalFirstDayOfMonth element
 ms.assetid: f793e93f-62de-4c3b-90b0-a46bd3cadae5
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: debabdd851bf74a423590786d9ce604c2170ea1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6fece15df5499d98722bd2af1760c3da6233e928
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="fiscalfirstdayofmonth-element-assl"></a>FiscalFirstDayOfMonth 元素 (ASSL)
   定義之會計月份的第一天[TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md)項目。  
@@ -69,8 +63,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**FiscalFirstDayOfMonth**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.TimeBinding>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

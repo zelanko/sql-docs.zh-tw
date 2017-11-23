@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - subkeys [ODBC], translator subkey
 - registry entries for components [ODBC], translator subkey
 ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 547790398258ef250cca0331e468b8834218890e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dfc34daa6236fa7187c27a204ee16cc47a0de7b0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-translators-subkey"></a>ODBC 轉譯器的子機碼
 ODBC 轉譯子機碼下的值清單的已安裝的轉譯器。 下表顯示這些值的格式。  
@@ -44,4 +42,3 @@ ODBC 轉譯子機碼下的值清單的已安裝的轉譯器。 下表顯示這�
 MS Code Page Translator: REG_SZ : Installed  
 ASCII to EBCDIC: REG_SZ : Installed.  
 ```
-

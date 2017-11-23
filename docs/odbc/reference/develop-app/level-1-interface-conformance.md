@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34c9b63a4abda3b510ab2b9549f90251996ec9e9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-interface-conformance"></a>層級 1 介面一致性
 層級 1 介面一致性層級包含核心介面一致性層級功能，以及其他功能，例如 OLTP 關聯式 DBMS 中通常可用的交易。 層級 1 介面標準驅動程式可讓應用程式執行下列作業，除了核心介面的一致性層級中的功能：  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |107|執行某些資料庫作業，而不是 SQL 陳述式使用 ODBC 函數： **SQLSetPos** SQL_POSITION 與 SQL_REFRESH。|  
 |108|取得存取權的批次和預存程序，藉由呼叫產生多個結果集內容**SQLMoreResults**。|  
 |109|分隔跨越數個 ODBC 函數，則為 true 的不可部份完成性與能夠指定 SQL_ROLLBACK 中的交易**SQLEndTran**。|
-

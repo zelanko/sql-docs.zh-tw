@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 306dbd7c423a167806b01d0e3f00d1eafbd1a140
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 48ed4bc9b52b6a905972e566870e7e2f86fc4734
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="function-conformance"></a>函式一致性
 下表指出這是妥善定義的每個 ODBC 函式中，一致性層級。  
@@ -99,4 +97,3 @@ ms.lasthandoff: 09/09/2017
  [1] 一些重要的功能，此函式可用只能在較高的一致性層級。  
   
  [2] 將某些屬性設定為非預設值取決於一致性層級。 如需詳細資訊，請參閱下節中，[屬性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)。
-

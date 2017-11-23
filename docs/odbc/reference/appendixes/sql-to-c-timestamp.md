@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 70bef5a2817b0a7bbdd24b01ca07f357b9c5237d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a551d51a434d17162a5f5bcf0091e593d25f283a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-timestamp"></a>SQL 到 c： 時間戳記
 時間戳記 ODBC SQL 資料類型的識別項是：  
@@ -58,4 +56,3 @@ _C_TYPE_TIMESTAMP|不會截斷小數秒數部分的時間戳記，[a]<br /><br /
  [f] 這是對應的 C 資料類型的大小。  
   
  當時間戳記 SQL 資料轉換成 C 字元資料時，產生的字串就會處於 「*yyyy*-*公釐*-*dd* *hh*:*公釐*:*ss*[。*f...*]"格式，其中使用高達九位數，小數秒數。 此格式不受 Windows® 國家/地區設定。 （除了小數點和小數秒數，整個格式必須使用，不論時間戳記 SQL 資料類型的有效位數。）
-

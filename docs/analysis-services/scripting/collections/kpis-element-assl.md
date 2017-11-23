@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Kpis Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Kpis Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Kpis
-helpviewer_keywords:
-- Kpis element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Kpis
+helpviewer_keywords: Kpis element
 ms.assetid: da4e32a0-1416-4d32-8b7f-7d74be23c9d4
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: da94da546a9d86e5a8a1876c932c0498adcf2d40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2d00f3a4c3ebb85c1ff50d13a9a2aa3bf7622343
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="kpis-element-assl"></a>Kpis 元素 (ASSL)
   包含集合的關鍵效能指標 ([Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md)項目) 與父元素相關聯。  
@@ -77,8 +71,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.KpiCollection>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [集合 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

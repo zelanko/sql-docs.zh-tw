@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], writing interoperable applications
+helpviewer_keywords: interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97d25a4d641e63dd081f16601f78e48d0ec8e17b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 89e348d084f150bdcb2d74f4d4dd561816fc351f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="features-to-watch-for"></a>監看式的功能
 本章節描述一些應用程式開發人員通常需要，授與的功能。 事實上，這些功能相當廣泛的支援和 Dbms; 之間的支援方式無法為它們的程式碼是可能會導致在互通的應用程式中的問題。  
@@ -36,17 +33,16 @@ ms.lasthandoff: 09/09/2017
   
 -   [版本號碼](../../../odbc/reference/develop-app/version-number.md)  
   
--   [多個作用中陳述式和連線](../../../odbc/reference/develop-app/multiple-active-statements-and-connections.md)  
+-   [多個作用中陳述式和連接](../../../odbc/reference/develop-app/multiple-active-statements-and-connections.md)  
   
--   [Dbms 中的交易支援](../../../odbc/reference/develop-app/transaction-support-in-dbmss.md)  
+-   [DBMS 中的交易支援](../../../odbc/reference/develop-app/transaction-support-in-dbmss.md)  
   
 -   [認可和回復行為](../../../odbc/reference/develop-app/commit-and-rollback-behavior.md)  
   
--   [未在 CREATE TABLE 陳述式中的 NULL](../../../odbc/reference/develop-app/not-null-in-create-table-statements.md)  
+-   [CREATE TABLE 陳述式中的 NOT NULL](../../../odbc/reference/develop-app/not-null-in-create-table-statements.md)  
   
 -   [支援的資料類型](../../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
 -   [ODBC SQL 文法](../../../odbc/reference/develop-app/odbc-sql-grammar.md)  
   
 -   [批次處理](../../../odbc/reference/develop-app/batch-processing.md)
-

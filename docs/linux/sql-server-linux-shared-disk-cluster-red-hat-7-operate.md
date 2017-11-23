@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
+ms.openlocfilehash: ed87490e0aedfd0953c8c77715ddc7e843aefd2c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5ad4620cf4972aa060844dfc8477e3e9c022ebf2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>適用於 SQL Server 運作 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -84,7 +83,7 @@ sudo crm_mon
    ip addr show
    ```
 
-3. 在新的節點必須為 15 個字元的唯一名稱或更少。 根據預設，在 Red Hat Linux 電腦名稱是`localhost.localdomain`。 這個預設名稱可能不是唯一的而且太長。 將新的節點設定的電腦名稱。 將電腦名稱，將它加入至`/etc/hosts`。 下列指令碼可讓您編輯`/etc/hosts`與`vi`。 
+3. 在新的節點必須為 15 個字元的唯一名稱或更少。 根據預設，在 Red Hat Linux 電腦名稱是`localhost.localdomain`。 這個預設名稱可能不是唯一的而且太長。 將新的節點設定的電腦名稱。 將電腦名稱，將它加入至`/etc/hosts`。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hosts`。 
 
    ```bash
    sudo vi /etc/hosts
@@ -281,5 +280,4 @@ pacemaker: active/enabled
 ## <a name="next-steps"></a>後續的步驟
 
 [設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
-
 

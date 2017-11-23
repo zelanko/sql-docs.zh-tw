@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alignment issues [ODBC]
+helpviewer_keywords: alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 506a496cb09e2a874e7d2dc19f06e250715db6f1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alignment"></a>Alignment
 ODBC 應用程式中的對齊問題通常與並無不同它們位於其他任何應用程式。 也就是說，大部分的 ODBC 應用程式有少數或沒有對齊問題。 未將對齊位址罰款因為硬體和作業系統而不同，而且可能效能稍微降低做為次要或成嚴重執行階段錯誤。 因此，ODBC 應用程式和可攜式的 ODBC 應用程式特別的是，應該小心正確對齊的資料。  
@@ -55,4 +52,3 @@ ODBC 應用程式中的對齊問題通常與並無不同它們位於其他任何
  ![繫結的最大的對齊界限](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  雖然這個解決方案可讓更大的漏洞，來實作它的程式碼是相對較簡單且快速。 在大部分情況下，此位移付費未使用記憶體中的負面影響。 如需使用這個方法的範例，請參閱[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。
-

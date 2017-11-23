@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Group::Users
 - Users
 - Catalog::Users
-helpviewer_keywords:
-- Users collection [ADOX]
+helpviewer_keywords: Users collection [ADOX]
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ab2952445a0e73b090ab963945f5c3560f6ed2cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b9c19df96e66927c6dc5092cd0584f071a3d3b40
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="users-collection-adox"></a>使用者集合 (ADOX)
 包含所有儲存[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)或[群組](../../../ado/reference/adox-api/group-object-adox.md)。  
@@ -57,10 +54,9 @@ ms.lasthandoff: 09/09/2017
   
  本章節包含下列主題。  
   
--   [使用者集合的屬性、 方法和事件](../../../ado/reference/adox-api/users-collection-properties-methods-and-events.md)  
+-   [Users 集合屬性、方法和事件](../../../ado/reference/adox-api/users-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [GetPermissions 和 SetPermissions 方法範例 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [使用者物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)
-
+ [User 物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)

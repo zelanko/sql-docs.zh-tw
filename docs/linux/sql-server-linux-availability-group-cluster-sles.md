@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
+ms.openlocfilehash: d8ebecb0d6ff5892bdee8cf4cf98287f1ace33e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 50a2633790b9878a8be2a9a3c417fc877a37633d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/02/2017
 
 5. [新增可用性群組為叢集中資源](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)。 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 若要完成以下的端對端案例中，您需要將三個節點叢集部署的三部機器。 下列步驟概述如何設定這些伺服器。
 
@@ -313,4 +312,3 @@ crm crm configure \
 ## <a name="next-steps"></a>後續的步驟
 
 [操作 HA 可用性群組](sql-server-linux-availability-group-failover-ha.md)
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - updating data [ODBC], long data
 - SQLBulkOperations function [ODBC], long data
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 51662d6540fb8db0eed5456e918313a71ccbccc8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 308e1ad6f2d99a0a6b7e73d8a82ac62362fea9a2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long 資料和 SQLSetPos SQLBulkOperations
 更新資料列時，使用 SQL 陳述式中的參數案例一樣，可以傳送長資料**SQLBulkOperations**或**SQLSetPos**或插入資料列時**SQLBulkOperations**. 資料會使用多個呼叫的組件，以傳送**SQLPutData**。 在執行階段資料會傳送的資料行稱為*資料在執行中資料行*。  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 6.  呼叫**SQLParamData**再次以表示它已傳送所有資料行的資料。 如果有任何資料在執行中資料行的資料尚未傳送，驅動程式會傳回 SQL_NEED_DATA 和下一步 的資料在執行資料行; 的唯一值應用程式會傳回至步驟 5。 如果資料已傳送的所有資料在執行資料行，資料列的資料會傳送至資料來源。 **SQLParamData**傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，而且可以傳回任何 SQLSTATE，則**SQLBulkOperations**或**SQLSetPos**可以傳回。  
   
  之後**SQLBulkOperations**或**SQLSetPos**傳回 SQL_NEED_DATA 和最後一個資料執行資料行已完全傳送資料之前，陳述式是在需要的資料狀態。 在這個狀態下，應用程式只可以呼叫**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函式會傳回 SQLSTATE HY010 （函數順序錯誤）。 呼叫**SQLCancel**取消執行陳述式並傳回其先前的狀態。 如需詳細資訊，請參閱[附錄 b: ODBC 狀態轉換表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。
-

@@ -13,24 +13,22 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - DMX [Analysis Services], functions
 - functions [DMX]
 - Data Mining Extensions [Analysis Services], functions
 ms.assetid: fadd105b-9c8e-4118-a1f7-c0518b9ad970
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f459409c538db56df0664c86022bff36b6250eeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a1871de9ebb81ef5bd88063a3a26067e86b32ad3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>資料採礦延伸模組 (DMX) 函數參考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 |函數|Description|  
 |--------------|-----------------|  
 |[一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)|列出可以搭配所有模型類型使用的函數，並提供關於如何查詢特定採礦模型類型之詳細資訊的連結。|  
-|[結構和使用方式的 DMX 預測查詢](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|提供關於如何使用 DMX 建構預測查詢的概觀。|  
+|[DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|提供關於如何使用 DMX 建構預測查詢的概觀。|  
 |[BottomCount &#40; DMX &#41;](../dmx/bottomcount-dmx.md)|依據次序運算式，以遞增次序順序傳回資料表，其中包含指定數目的最底部資料列。|  
   
  下表列出 DMX 支援的函數。  
@@ -78,7 +76,7 @@ ms.lasthandoff: 08/02/2017
 |[TopPercent &#40; DMX &#41;](../dmx/toppercent-dmx.md)|依據次序運算式，以遞減次序順序傳回資料表，其中包含符合指定百分比運算式之最小數目的最頂部資料列。|  
 |[TopSum &#40; DMX &#41;](../dmx/topsum-dmx.md)|依據次序運算式，以遞減次序順序傳回資料表，其中包含符合指定總和運算式之最小數目的最頂部資料列。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦延伸模組 &#40; DMX &#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
  [資料採礦延伸模組 &#40; DMX &#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
@@ -88,4 +86,3 @@ ms.lasthandoff: 08/02/2017
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

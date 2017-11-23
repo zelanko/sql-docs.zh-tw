@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], executing
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f952e8d2fbc1eb41d65cd4d30fa2f13c991d264
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fa215150c483776f9188ed16044b59500cb257e7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="executing-procedures"></a>執行程序
 ODBC 定義的標準逸出序列執行程序。 如需此順序和使用它的程式碼範例的語法，請參閱[程序呼叫](../../../odbc/reference/develop-app/procedure-calls.md)。  
@@ -44,4 +42,3 @@ ODBC 定義的標準逸出序列執行程序。 如需此順序和使用它的�
     -   呼叫資料來源中的程序，並將它傳送的已轉換的參數值。 驅動程式呼叫程序的方式是驅動程式專屬功能。 例如，它可能會修改 SQL 陳述式來使用資料來源的 SQL 文法和提交此陳述式執行，或它可能會呼叫程序中直接使用 DBMS 的資料流通訊協定中定義的遠端程序呼叫 (RPC) 機制。  
   
     -   傳回任何輸出或輸出參數的值或程序的傳回值，假設此程序成功。 處理所有其他結果 （資料列計數和結果集） 產生程序之後，可能無法後才可以使用這些值。 如果程序失敗，驅動程式會傳回任何錯誤。
-

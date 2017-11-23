@@ -8,20 +8,18 @@ ms.component: misc
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5ae75be33450531d510463281ef182121797e79a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 14ce5d9110f49ce155e89a96e1f72618f2879661
-ms.openlocfilehash: 68410430d97a0e3033e17deb7d03a0ba8fecd436
-ms.contentlocale: zh-tw
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services 中最新消息
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -255,4 +253,3 @@ Filtered Sales:=CALCULATE (
 ## <a name="see-also"></a>另請參閱
 [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)   
 [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)
-

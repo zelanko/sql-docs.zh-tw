@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 78f943033febb1f60ebfe420a10748af1f4260b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aff4448df5ec42e29da6c49fe0ace7f0334a1174
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="outer-joins"></a>外部聯結
 ODBC 支援以 sql-92 左、 右方和完整外部聯結語法。 外部聯結的逸出序列是  
@@ -54,4 +52,3 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ```  
   
  若要判斷資料來源和驅動程式支援的外部聯結的類型，應用程式呼叫**SQLGetInfo** SQL_OJ_CAPABILITIES 具有旗標。 可能支援的外部聯結的類型左、 右、 完整或巢狀外部聯結。外部聯結中的資料行名稱中**ON**子句不會有個別的資料表名稱中的順序相同**OUTER JOIN**子句; 搭配外部聯結; 以及使用外部聯結的內部聯結任何 ODBC 的比較運算子。 如果 SQL_OJ_CAPABILITIES 資訊類型會傳回 0，則不支援任何外部聯結子句。
-

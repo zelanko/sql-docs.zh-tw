@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResource
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResource
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: e9761462-b580-41cc-b326-a47ff78e6965
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 038d5e5ea6f04e0c045d6670064bbd193fbcea4d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 44f496a41759d6390a607bf242bfcbceba952e9d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlserverresource-constructor-"></a>SQLServerResource 建構函式 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,10 +38,9 @@ ms.lasthandoff: 09/09/2017
 public SQLServerResource()  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerResource 建構函式](../../../connect/jdbc/reference/sqlserverresource-constructors.md)   
  [SQLServerResource 成員](../../../connect/jdbc/reference/sqlserverresource-members.md)   
  [SQLServerResource 類別](../../../connect/jdbc/reference/sqlserverresource-class.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 797d3439b378cb5caef62af019352ff6797fdb43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 32a6629892ad9667b7d56a6bb6752c68001dddc9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>驅動程式管理員 &#39; s 角色在連線程序
 請記住，應用程式不驅動程式函式會直接呼叫。 相反地，它們呼叫驅動程式管理員函式具有相同名稱和驅動程式管理員呼叫驅動程式函式。 通常，這是幾乎立即。 例如，應用程式呼叫**SQLExecute**驅動程式管理員在驅動程式管理員及完成後一些錯誤檢查，呼叫**SQLExecute**驅動程式中。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  驅動程式管理員將會在鎖定環境控制代碼 (*henv*) 之前呼叫的驅動程式**SQLAllocHandle**和**SQLFreeHandle**時*HandleType*設**利用 SQL_HANDLE_DBC**。  
   
  當應用程式呼叫**SQLDisconnect**，驅動程式管理員呼叫**SQLDisconnect**驅動程式中。 不過，它會保留以防應用程式重新連線到驅動程式載入的驅動程式。 當應用程式呼叫**SQLFreeHandle**利用 SQL_HANDLE_DBC 選項時，驅動程式管理員呼叫**SQLFreeHandle**驅動程式中。 如果驅動程式不是由任何其他連接，驅動程式管理員會呼叫**SQLFreeHandle** SQL_HANDLE_ENV 與驅動程式選項和卸載驅動程式。
-

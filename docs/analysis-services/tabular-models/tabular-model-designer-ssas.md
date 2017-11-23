@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 388c20c5fffdd584b2923341db13c7bf634f289b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
-ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/20/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-designer-ssas"></a>表格式模型設計師 (SSAS)
 此表格式模型設計師是與 Microsoft [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]整合之 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的一部分，具有特別用來開發專業表格式模型方案的額外專案類型範本。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 可從 Web 免費下載安裝。 如需詳細資訊，請參閱[下載 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。    
@@ -80,7 +78,7 @@ ms.lasthandoff: 10/20/2017
 ### <a name="tabular-model-explorer"></a>表格式模型總管
   第一個可用在 2016 年 8 月版本 (14.0.60812.0) 的[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)，表格式模型總管可以幫助您瀏覽表格式模型中的中繼資料物件。
 
- 若要顯示表格式模型總管，請按一下 檢視 > 其他視窗，然後按一下Tabular Model Explorer (表格式模型總管)。
+ 若要顯示表格式模型總管，請按一下 [檢視] > [其他視窗]，然後按一下 [Tabular Model Explorer (表格式模型總管)]。
    
   ![表格式模型總管](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
@@ -101,11 +99,11 @@ ms.lasthandoff: 10/20/2017
   
 -   [量值]  
   
- [專案屬性] 僅會顯示 [屬性] 視窗中的專案名稱和專案資料夾。 專案也具有您可以使用強制回應屬性對話方塊設定的其他部署選項和部署伺服器設定。 若要檢視這些屬性，請以滑鼠右鍵按一下方案總管中的專案，然後按一下屬性。  
+ [專案屬性] 僅會顯示 [屬性] 視窗中的專案名稱和專案資料夾。 專案也具有您可以使用強制回應屬性對話方塊設定的其他部署選項和部署伺服器設定。 若要檢視這些屬性，請以滑鼠右鍵按一下方案總管中的專案，然後按一下 [屬性]。  
   
  [屬性] 視窗中的欄位包含內嵌控制項，當您按一下欄位時，即會開啟這些控制項。 編輯控制項的類型會隨著特定屬性而不同。 這些控制項包含編輯方塊、下拉式清單和自訂對話方塊的連結。 呈暗灰色的屬性是唯讀的。  
   
- 若要檢視 屬性 視窗，請按一下 檢視 功能表，然後按一下屬性視窗。  
+ 若要檢視 [屬性] 視窗，請按一下 [檢視] 功能表，然後按一下 [屬性視窗]。  
   
 ### <a name="error-list"></a>錯誤清單  
  [錯誤清單] 視窗包含模型狀態的訊息：  
@@ -118,10 +116,10 @@ ms.lasthandoff: 10/20/2017
   
 -   DirectQuery 驗證錯誤。  
   
- 依預設，除非傳回錯誤，否則不會顯示 [錯誤清單]。 但是，您可以隨時檢視 [錯誤清單] 視窗。 若要檢視 錯誤清單 視窗，請按一下 檢視 功能表，然後按一下錯誤清單。  
+ 依預設，除非傳回錯誤，否則不會顯示 [錯誤清單]。 但是，您可以隨時檢視 [錯誤清單] 視窗。 若要檢視 [錯誤清單] 視窗，請按一下 [檢視] 功能表，然後按一下 [錯誤清單]。  
   
 ### <a name="output"></a>輸出  
- 建置和部署資訊會顯示在 [輸出] 視窗中 (以及模型進度對話方塊)。 若要檢視 輸出 視窗，請按一下 檢視 功能表，然後按一下輸出。  
+ 建置和部署資訊會顯示在 [輸出] 視窗中 (以及模型進度對話方塊)。 若要檢視 [輸出] 視窗，請按一下 [檢視] 功能表，然後按一下 [輸出]。  
   
 ### <a name="menu-items"></a>功能表項目  
  當您安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]時，特別用來撰寫表格式模型的額外功能表項目會加入至 Visual Studio 功能表列。 [模型] 功能表可用來啟動資料匯入精靈、檢視現有連接、處理工作空間資料，以及在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 中瀏覽模型工作空間。 [資料表] 功能表用來建立及管理資料表之間的關聯性、建立及管理量值、指定資料表設定、指定計算選項，以及指定其他資料表屬性。 您可以使用 [資料行] 功能表在資料表中加入及刪除資料行、隱藏及取消隱藏資料行，以及指定其他資料行屬性，例如資料類型和篩選。 您可以在 [建立] 功能表上建立及部署表格式模型方案。 複製/貼上功能包含在 [編輯] 功能表中。  
@@ -146,4 +144,3 @@ ms.lasthandoff: 10/20/2017
  [屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
-

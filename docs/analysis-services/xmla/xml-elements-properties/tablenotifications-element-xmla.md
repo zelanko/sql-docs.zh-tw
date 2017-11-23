@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- TableNotifications Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: TableNotifications Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#TableNotifications
 - microsoft.xml.analysis.tablenotifications
 - http://schemas.microsoft.com/analysisservices/2003/engine#TableNotifications
-helpviewer_keywords:
-- TableNotifications element
+helpviewer_keywords: TableNotifications element
 ms.assetid: 650f307d-1f11-47ce-9d0e-19cf3b1835b7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: de3178b102b0605070462e66468201cb6752664e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 29c30984ad6e151976d50b0768dd0eda937d289f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tablenotifications-element-xmla"></a>TableNotifications 元素 (XMLA)
   包含集合[TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md)元素所使用[NotifyTableChange](../../../analysis-services/xmla/xml-elements-commands/notifytablechange-element-xmla.md)命令。  
@@ -72,8 +67,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

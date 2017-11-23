@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReadWriteMode command
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReadWriteMode command
 ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d55928ce65b1b40710b662c6d3f5b55b798368a9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3075b7834f7e24004811ce3802dd5fcb55b56f6c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 元素
   **ReadWriteMode**資料庫屬性會指定資料庫是否位在**ReadWrite**模式或**ReadOnly**模式。 此屬性只有這兩種可能的值。  
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/01/2017
 |*ReadOnly*|您就無法將任何變更或更新套用至該資料庫。|  
 |*ReadWrite*|您可以將變更或更新套用至該資料庫。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Attach 元素](../../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [附加和卸離 Analysis Services 資料庫](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [移動 Analysis Services 資料庫](../../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
@@ -77,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [切換 ReadOnly 和 ReadWrite 模式之間的 Analysis Services 資料庫](../../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
   
-

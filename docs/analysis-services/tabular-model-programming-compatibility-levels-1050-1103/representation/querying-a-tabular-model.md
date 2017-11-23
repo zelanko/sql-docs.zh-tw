@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6bf0f912ecc01127cc8cf1f6f347141440792911
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1968b025d87d76cf8e1cf2417e13dd6027a252d3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="querying-a-tabular-model"></a>查詢表格式模型
   身為開發人員，查詢表格式模型表示會從表格式資料庫擷取資料；若要完成這個目標，您有兩個選項：在 DAX 中使用資料表查詢，或是使用 MDX 並擷取資料，就像是 Cube 中的資料一樣。 但是，根據您的表格式模型的基礎模式而定，您可能會受限於只能使用 DAX 資料表查詢；DirectQuery 模式需要使用 DAX 資料表查詢。  
@@ -119,4 +117,3 @@ DEFINE
 |2|2|Components||$  11,799,076.66|  
   
   
-

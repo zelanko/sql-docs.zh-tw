@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQL [ODBC], CLI
 - call-level interface [ODBC], using call-level interface
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 051a94e77b5a53d2a87b3310048da9f8d67260fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e22537b5ce7b2b1ecfdf579e78859812895671c2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="call-level-interfaces"></a>呼叫層級介面
 將 SQL 陳述式傳送至 DBMS 的最後一個技巧是透過呼叫層級介面 (CLI)。 呼叫層級介面提供的應用程式可以呼叫的 DBMS 函式的程式庫。 因此，而不是嘗試另一種程式設計語言與混合 SQL，則呼叫層級介面便是類似於大部分的程式設計人員會習慣使用，例如字串、 I/O 或 C.便箋支援內嵌式的 SQL 的 Dbms 中的數學程式庫常式的程式庫已經呼叫層級介面，先行編譯器所產生的呼叫。 不過，這些呼叫都未記載並可能有所變更，恕不另行通知。  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 3.  如果陳述式的 SELECT 陳述式，則應用程式會呼叫 CLI 函式傳回結果的應用程式緩衝區中。 一般而言，此函式會傳回一個資料列或一個資料行一次。  
   
 4.  應用程式呼叫中斷 DBMS CLI 函式。
-

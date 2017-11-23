@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS security [ADO]
+helpviewer_keywords: RDS security [ADO]
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a84a52dc353d11a391ff79c5f0975d71540cd08a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 72a46915beed5bb65953788b2b1b7283d90cb8e5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="securing-rds-applications"></a>保護 RDS 應用程式
 本主題提供.rds 的安全性資訊  
@@ -50,6 +47,5 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="password-authentication"></a>密碼驗證  
  RDS 可以與任何一種三種密碼驗證模式執行的 IIS Web 伺服器進行通訊： 匿名、 基本、 或 NT Challenge/Response 驗證 （Windows 2000 中稱為整合式 Windows 驗證）。 這些設定會定義如何將 Web 伺服器控制項存取透過它，例如要求用戶端電腦在 NT Web 伺服器上有明確的存取權限。
-
 
 

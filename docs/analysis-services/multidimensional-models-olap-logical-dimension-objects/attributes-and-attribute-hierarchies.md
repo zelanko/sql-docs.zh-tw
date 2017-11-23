@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - regular attributes [Analysis Services]
 - parent attributes [Analysis Services]
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - attributes [Analysis Services]
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a86eb2f15fe0109a2e5b2492a61ca7102e662e7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1f51cefdbc4e81a1bfbc59014ebf6ce34afefb72
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>屬性和屬性階層
   維度是屬性的集合，這些屬性會繫結至資料來源檢視中資料表或檢視內的一或多個資料行。  
@@ -57,10 +55,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>屬性關聯性、星狀結構描述和雪花式結構描述  
  依預設，星狀結構描述中的所有屬性都與索引鍵屬性直接相關，如此可讓使用者根據維度中的任何屬性階層在 Cube 中瀏覽事實。 在雪花式結構描述中，如果其基礎資料表直接連結到事實資料表，則屬性就會直接連結到索引鍵屬性；否則會透過繫結到基礎資料表內索引鍵的屬性間接進行連結，將雪花資料表連結到直接連結的資料表。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [建立使用者定義階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [定義屬性關聯性](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
- [維度屬性 (Attribute) 屬性 (Property) 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [維度屬性內容參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
-

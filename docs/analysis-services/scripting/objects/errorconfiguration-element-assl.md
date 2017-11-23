@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ErrorConfiguration Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ErrorConfiguration Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ErrorConfiguration
-helpviewer_keywords:
-- ErrorConfiguration element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ErrorConfiguration
+helpviewer_keywords: ErrorConfiguration element
 ms.assetid: e8363ec2-fbbf-48f6-a55d-01793afa759c
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f0e9d89f0d7bec19ac05d86a098d44185b6ccca9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d70307b772b3220752754c63ed2b02afcbd5d126
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="errorconfiguration-element-assl"></a>ErrorConfiguration 元素 (ASSL)
   指定在處理父元素時可能會發生之錯誤的處理設定。  
@@ -78,8 +72,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.ErrorConfiguration>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

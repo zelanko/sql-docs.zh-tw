@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7c63f5ceb89e975cf320d9e84419d34a5fe4ecfc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 086bcee8a9512b74e0f0c81e73400d8fcc20ad3c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-new-tabular-model-project-analysis-services"></a>建立新的表格式模型專案 (Analysis Services)
   此主題描述如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立一個新的空白表格式模型專案。 建立新的模型專案之後，您可以從資料來源匯入資料，以便開始撰寫模型專案。  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/01/2017
  [模型屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
   
   
-

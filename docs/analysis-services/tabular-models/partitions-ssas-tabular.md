@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ceaff43e4f0f5d2b1901c98b026d37af9ba89383
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 729c24cf80e99f6f0e2596c51bfbc8bdf2490d0d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions"></a>資料分割
   分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 在模型製作期間使用分割區 對話方塊，在 SSDT 中的建立分割區套用至模型工作空間資料庫。 部署模型之後，為模型工作空間資料庫定義的分割區，會複製到已部署的模型資料庫中。 此外，您可以建立，使用分割區 對話方塊，在 SSMS 中的管理已部署的模型資料庫的資料分割。  本主題提供資訊說明使用 [資料分割管理員] 對話方塊在 SSDT 中的模型撰寫期間建立的資料分割。 如需建立和管理已部署模型的分割區資訊，請參閱[建立及管理表格式模型資料分割](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
@@ -52,7 +51,7 @@ ms.lasthandoff: 09/01/2017
   
 |主題|Description|  
 |-----------|-----------------|  
-|[建立及管理工作空間資料庫中的資料分割](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|描述如何建立及管理模型工作空間資料庫中的資料分割在 SSDT 中使用資料分割管理員。|  
+|[在工作空間資料庫中建立及管理資料分割](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|描述如何建立及管理模型工作空間資料庫中的資料分割在 SSDT 中使用資料分割管理員。|  
 |[在工作空間資料庫中處理資料分割](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|描述如何在模型工作空間資料庫中處理 (重新整理) 分割區。|  
   
 ## <a name="see-also"></a>另請參閱  
@@ -60,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  [處理資料](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   
   
-

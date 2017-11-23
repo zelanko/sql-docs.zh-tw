@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - bit data type [ODBC]
 - data conversions from SQL to C types [ODBC], bit
 ms.assetid: 0eeaab8b-ad82-4a36-b464-9a1211d5f72c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8ecb9ef6c13ccf4c1a61fd323c266cc03c526b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5432e5f4a47dde5b3ad64059a8f2eb1de9ba1691
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-bit"></a>SQL 到 c： 位元
 位元 ODBC SQL 資料類型的識別項是：  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  [b] 這是對應的 C 資料類型的大小。  
   
  當位元的 SQL 資料轉換成 C 字元資料時，可能的值為"0"和"1"。
-

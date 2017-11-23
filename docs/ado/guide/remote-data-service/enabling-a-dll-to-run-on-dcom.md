@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - DCOM in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 338956898cd000448d547d23f18b649ee36cfe7f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2d67a595c97547934b04794f036d58445e8c282
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>啟用在 DCOM 上執行的 DLL
 > [!IMPORTANT]
@@ -50,6 +48,5 @@ ms.lasthandoff: 09/09/2017
      若要讓此.dll 檔可透過 DCOM 和 IIS 在相同電腦上存取，您必須 [元件服務] MMC 嵌入式管理單元中設定元件的啟動屬性。 將屬性設定為之後**建立者的程序中**，您會注意到**Inproc**已加入伺服器登錄機碼指向元件服務 surrogate.dll。  
   
  如需有關元件服務 （或 Microsoft 交易服務，如果您使用 Windows NT），以及如何執行這些步驟，請瀏覽 Microsoft 交易 Server 網站。
-
 
 

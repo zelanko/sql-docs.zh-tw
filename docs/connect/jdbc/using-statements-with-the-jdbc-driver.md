@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a900a32cbaca2337930f7bb84aafcb634dcb508e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5e4cbbfc9d2b73d0a7c79ebc2791f588a7c8f862
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>搭配 JDBC Driver 使用陳述式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,16 +42,15 @@ ms.lasthandoff: 09/09/2017
   
 |主題|Description|  
 |-----------|-----------------|  
-|[使用 SQL 陳述式](../../connect/jdbc/using-statements-with-sql.md)|描述如何使用 JDBC 驅動程式的 SQL 陳述式，使用中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
-|[使用預存程序的陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md)|描述如何使用 JDBC 驅動程式的預存程序使用中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
+|[搭配使用陳述式與 SQL](../../connect/jdbc/using-statements-with-sql.md)|描述如何使用 JDBC 驅動程式的 SQL 陳述式，使用中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
+|[搭配使用陳述式與預存程序](../../connect/jdbc/using-statements-with-stored-procedures.md)|描述如何使用 JDBC 驅動程式的預存程序使用中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
 |[使用多個結果集](../../connect/jdbc/using-multiple-result-sets.md)|描述如何使用 JDBC 驅動程式來擷取多個結果集的資料。|  
 |[使用 SQL 逸出序列](../../connect/jdbc/using-sql-escape-sequences.md)|描述如何使用 SQL 逸出序列，例如日期和時間常值及函數。|  
-|[使用自動產生的索引鍵](../../connect/jdbc/using-auto-generated-keys.md)|描述如何使用自動產生的金鑰。|  
+|[使用自動產生的金鑰](../../connect/jdbc/using-auto-generated-keys.md)|描述如何使用自動產生的金鑰。|  
 |[執行批次作業](../../connect/jdbc/performing-batch-operations.md)|描述如何使用 JDBC 驅動程式來執行批次作業。|  
 |[處理複雜陳述式](../../connect/jdbc/handling-complex-statements.md)|描述如何使用 JDBC 驅動程式來執行複雜陳述式，這類陳述式可執行各種不同的工作，並可能傳回不同類型的資料。|  
   
-## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

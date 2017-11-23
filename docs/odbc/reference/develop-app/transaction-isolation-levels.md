@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - repeatable reads [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f0b5499af07c7bbb5309ff87037f7c3825872dab
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13997d3c8d4bb3c4ea5ff47ec6e8d4c95b303d21
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transaction-isolation-levels"></a>交易隔離等級
 *交易隔離等級*是交易成功隔離程度的量值。 特別是，交易隔離等級的定義方式下列現象存在：  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |可序列化|交易等待其他交易寫入鎖定的資料列就會解除鎖定。這樣會避免讀取任何 「 有所變更 」 的資料。<br /><br /> 交易 （如果它只會讀取資料列），請保留讀取的鎖定或寫入鎖定 （如果它可以更新或刪除資料列） 範圍的資料列就會影響。 比方說，如果交易包含 SQL 陳述式**選取\*從訂單**，範圍是整個 Orders 資料表，則交易讀取鎖定資料表，而且不允許插入到它的任何新資料列。 如果交易包含 SQL 陳述式**刪除從訂單，狀態 = 'CLOSED'**，範圍是"CLOSED"的所有資料列狀態，交易寫入鎖定在訂單中的所有資料列資料表且狀態為 「 已關閉 」，而且不會不允許任何資料列插入或更新，使產生的資料列都有狀態為"CLOSED"。<br /><br /> 因為其他交易無法更新或刪除資料列範圍中的，目前的交易可避免任何不可重複讀取。 因為其他交易無法插入任何資料列範圍中，目前的交易可避免任何虛設項目。 認可或回復時，交易就會釋放其鎖定。|  
   
  請務必注意的交易隔離等級不會影響交易的能力，以查看它自己的變更;交易可以永遠看到他們所做的任何變更。 例如，交易可能會包含兩個**更新**陳述式，其中第一個引發百分之 10 的所有員工的付款和第二個超過該數量的一些最大量設定任何員工的付款。 這個動作成功視為單一交易只是因為第二個**更新**陳述式可以檢視測試的第一個結果。
-

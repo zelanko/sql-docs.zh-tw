@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Value Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Value Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.value
 - urn:schemas-microsoft-com:xml-analysis#Value
 - http://schemas.microsoft.com/analysisservices/2003/engine#Value
-helpviewer_keywords:
-- Value element
+helpviewer_keywords: Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d0e3954de89983d545df118398398128568eff3f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 61a5fa276918a176eb60340fce44e5dfdae0d4da
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="value-element-xmla"></a>Value 元素 (XMLA)
   包含所需的值的[屬性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)要新增的項目[插入](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)命令，或[儲存格](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)更新的項目[UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)命令。  
@@ -77,11 +72,10 @@ ms.lasthandoff: 09/01/2017
   
  如需更新資料格的詳細資訊，請參閱[更新資料格 &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CellOrdinal 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/cellordinal-element-xmla.md)   
  [插入項目 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [UpdateCells 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)   
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

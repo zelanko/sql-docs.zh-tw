@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - DBMS-based drivers [ODBC]
 - ODBC architecture [ODBC], drivers
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7b806f4c887af3f1ba80ee3321820e97dd336fad
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 09265543685ea8fd573ee20bea90093f920b6e49
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dbms-based-drivers"></a>DBMS 架構驅動程式
 DBMS 架構驅動程式會搭配如 Oracle 或 SQL Server 提供驅動程式使用的獨立資料庫引擎的資料來源。 這些驅動程式透過獨立的引擎; 存取實體的資料也就是它們提交 SQL 陳述式，並從引擎中擷取結果。  
@@ -39,4 +37,3 @@ DBMS 架構驅動程式會搭配如 Oracle 或 SQL Server 提供驅動程式使�
  下圖顯示三個不同的組態，DBMS 架構驅動程式。 在第一個組態，驅動程式和資料來源位於同一部電腦上。 在第二個，驅動程式和資料來源位於不同的電腦上。 在第三個，驅動程式和資料來源位於不同機器上，閘道位於其間，位於另一個的電腦上。  
   
  ![三種 DBMS 的設定 &#45; 根據的 drivers](../../odbc/reference/media/pr07.gif "pr07")
-

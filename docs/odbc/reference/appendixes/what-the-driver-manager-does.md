@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC driver manager [ODBC]
 - backward compatibility [ODBC], driver manager
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d662370f1e782edfc5f932ad26cdbc38643bcda7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64c6fb04fe5c5c693da4982e1c12194bc7e42f98
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what-the-driver-manager-does"></a>驅動程式管理員的功用為何
 下表摘要說明如何 ODBC 3*.x*驅動程式管理員將呼叫對應至 ODBC 2。*x*而 ODBC 3.<placeholder>x<*.x*驅動程式。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLFetchScroll**|傳回指定的資料列集。 以下是實作詳細資料：<br /><br /> -當應用程式呼叫**SQLFetchScroll** ODBC 2。*x*驅動程式，而 ODBC 3*.x*驅動程式管理員將它對應到**SQLExtendedFetch**。 它會使用快取的 SQL_ATTR_ROW_STATUS_PTR 陳述式屬性的值*RowStatusArray*引數和 SQL_ATTR_ROWS_FETCHED_PTR 陳述式屬性的快取的值*RowCountPtr*引數。 如果*Sqlfetchscroll*引數中的**SQLFetchScroll**是要使用 SQL_FETCH_BOOKMARK，它會使用快取的 SQL_ATTR_FETCH_BOOKMARK_PTR 陳述式屬性的值*FetchOffset*引數，並傳回錯誤，如果*FetchOffset*引數的**SQLFetchScroll**是不是 0。<br />-當應用程式會呼叫在 ODBC 3*.x*驅動程式，而 ODBC 3*.x*驅動程式管理員會傳遞至驅動程式呼叫。|  
 |**SQLSetPos**|執行各種定位的作業。 ODBC 3*.x*驅動程式管理員會傳遞至呼叫**SQLSetPos**驅動程式，不論哪個版本的驅動程式。|  
 |**SQLSetScrollOptions**|當驅動程式管理員會將對應**SQLSetScrollOptions**應用程式使用 ODBC 3*.x*不支援的驅動程式**SQLSetScrollOptions**，驅動程式管理員設定 SQL_ROWSET_SIZE 陳述式選項，而不將 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性， *RowsetSize*引數中的**SQLSetScrollOption**。 如此一來， **SQLSetScrollOptions**不可由應用程式在呼叫提取多個資料列時， **SQLFetch**或**SQLFetchScroll**。 它可以用於擷取多個資料列呼叫時，只有**SQLExtendedFetch**。|
-

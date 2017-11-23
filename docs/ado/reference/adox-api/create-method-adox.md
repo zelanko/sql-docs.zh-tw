@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Catalog::raw_Create
 - _Catalog::Create
-helpviewer_keywords:
-- Create method [ADOX]
+helpviewer_keywords: Create method [ADOX]
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8b31df006624acdfd66a55c467be5a59dfc6afd1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0bfad8159575c9439846ed2cf407e1b6e407418c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-method-adox"></a>建立方法 (ADOX)
 建立新的目錄。  
@@ -51,9 +48,8 @@ Catalog.Create ConnectString
  如果提供者不支援建立新的目錄，就會發生錯誤。  
   
 ## <a name="applies-to"></a>適用於  
- [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Create 方法範例 (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
  [ActiveConnection 屬性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
-

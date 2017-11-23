@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0f818532f51fa5fbbec6b6688709173849eae063
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 25b142831c6b4cb1dd1afaa25734f0b0435de18c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>在模型中指定當做迴歸輸入變數使用的資料行
   線性迴歸模型會把可預測屬性的值表示為公式的結果，此公式結合輸入的方式會使資料盡可能地貼近預估迴歸線。 這種演算法只接受數值當做輸入，而且會自動偵測提供最佳解的輸入。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 09/01/2017
   
 4.  針對演算法選取 [Microsoft 線性迴歸]。 輸入「撥接中心迴歸」當作名稱。  
   
-5.  按照下列指示，在 [採礦模型] 索引標籤中變更資料行的使用方式。 未列於下列清單的所有資料行都應該設定為 [忽略] \(若尚未設定)。  
+5.  按照下列指示，在 [採礦模型] 索引標籤中變更資料行的使用方式。 未列於下列清單的所有資料行都應該設定為 [忽略] (若尚未設定)。  
   
      FactCallCenterID**Key**  
   
@@ -68,11 +67,10 @@ ms.lasthandoff: 09/01/2017
   
      在檢視器中，模型會以包含迴歸公式的單一節點來表示。 您可以在 [採礦圖例] 中檢視公式，或者也可以藉由使用查詢來擷取公式的係數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Microsoft 線性迴歸演算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 線性迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   
-

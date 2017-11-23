@@ -13,33 +13,28 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Execute Method
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Execute Method
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - EXECUTE
 - urn:schemas-microsoft-com:xml-analysis#
 - http://schemas.microsoft.com/analysisservices/2003/engine#
 - microsoft.xml.analysis.execute
 - urn:schemas-microsoft-com:xml-analysis#Execute
-helpviewer_keywords:
-- Execute method
+helpviewer_keywords: Execute method
 ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a2743ccdbe0f2186db5721479c812f61adfcfe92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 22bf60ae16e6b4e5f30bf694505e77857b6c0600
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-elements---methods---execute"></a>XML 項目-方法-執行
   將 XML for Analysis (XMLA) 命令傳送到的執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 這包括涉及資料傳輸的要求，例如擷取或更新伺服器資料的要求。  
@@ -98,7 +93,7 @@ ms.lasthandoff: 09/01/2017
 </Execute>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML 資料類型 &#40;XMLA &#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [探索方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods.md)   
@@ -106,4 +101,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 結構描述資料列集](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

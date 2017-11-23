@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DefaultScript Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DefaultScript Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DefaultScript
-helpviewer_keywords:
-- DefaultScript element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DefaultScript
+helpviewer_keywords: DefaultScript element
 ms.assetid: 60716e63-2d64-4774-9ac9-253efe612fa5
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 72a8171e9dedf77983c685d3081a0525a1d4015c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 163c57ea60a832547a69d9e4c5ec1e6e21bb2f51
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="defaultscript-element-assl"></a>DefaultScript 元素 (ASSL)
   識別預設[MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)中的項目[MdxScripts](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)集合。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**DefaultScript**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MdxScript>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

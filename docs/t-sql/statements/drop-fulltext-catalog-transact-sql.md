@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_FULLTEXT_CATALOG_TSQL
 - DROP FULLTEXT CATALOG
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dropping full-text catalogs
 - removing full-text catalogs
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - deleting full-text catalogs
 - DROP FULLTEXT CATALOG statement
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 770a38dc26a4f0d5a01741997308e1df9f78817c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 32445ba8410673168ffe8e7da61cdd1b37d71afe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-fulltext-catalog-transact-sql"></a>DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,11 +54,10 @@ DROP FULLTEXT CATALOG catalog_name
 ## <a name="permissions"></a>Permissions  
  使用者必須有全文檢索目錄的 DROP 權，或必須屬於**db_owner**，或**db_ddladmin**固定資料庫角色。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [sys.fulltext_catalogs &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [建立全文檢索目錄 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)  
   
   
-

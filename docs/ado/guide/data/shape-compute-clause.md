@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d2fad39eb54af49b9f25b7f5b62073df44afc814
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="shape-compute-clause"></a>圖形 COMPUTE 子句
 圖形 COMPUTE 子句產生父代**資料錄集**，其資料行所組成之子系的參考**資料錄集**; 選擇性資料行內容的章節中，新的、 或導出資料行，或子系上執行彙總函式的結果**資料錄集**或先前形狀**資料錄集**; 以及從子系的任何資料行**資料錄集**中所列選擇性的 BY 子句。  
@@ -140,7 +138,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |OR|Portland|400,000|  
 |OR|Corvallis|300,000|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [存取資料列中的階層式資料錄集](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [資料成形概觀](../../../ado/guide/data/data-shaping-overview.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
@@ -150,5 +148,4 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
  [圖形 APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
  [在一般的圖形命令](../../../ado/guide/data/shape-commands-in-general.md)   
  [Value 屬性 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
- [Visual Basic 應用程式函式](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-
+ [Visual Basic for Applications 函式](../../../ado/guide/data/visual-basic-for-applications-functions.md)

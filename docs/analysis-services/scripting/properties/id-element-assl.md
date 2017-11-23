@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ID
-helpviewer_keywords:
-- ID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ID
+helpviewer_keywords: ID element
 ms.assetid: ea3ce0f4-9084-45d0-8150-73afb7005af2
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e0f489f02475053495704cdf82c30d5253abf949
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e18410dd661afc19e42ba735f30728cad8f49bfc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="id-element-assl"></a>ID 元素 (ASSL)
   包含父元素的唯一識別碼 (ID)。  
@@ -98,9 +92,8 @@ ms.lasthandoff: 09/01/2017
 |[層級](../../../analysis-services/scripting/objects/level-element-assl.md)，[屬性項目](../../../analysis-services/scripting/objects/attribute-element-assl.md)|.,;'`:/\\*&#124;?"&%$!+=[]{}<>|  
 |所有其他的父元素。|.,;'`:/\\*&#124;?"&%$!+=()[]{}<>|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Name 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/name-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

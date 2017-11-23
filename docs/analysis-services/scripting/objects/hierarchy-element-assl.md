@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Hierarchy Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Hierarchy Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Hierarchy
-helpviewer_keywords:
-- Hierarchy element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Hierarchy
+helpviewer_keywords: Hierarchy element
 ms.assetid: ac54d74a-5e6c-4c24-83bf-766440478f6c
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 49265caaf75b32c5ebf7c69fb84e7a7dab69fc57
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1eef6b645acfb29827e9d72332a1c5d7224ca52f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchy-element-assl"></a>Hierarchy 元素 (ASSL)
   定義維度中的階層。  
@@ -80,8 +74,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  在「分析管理物件」(AMO) 物件模型中對應的元素是 <xref:Microsoft.AnalysisServices.Hierarchy>、<xref:Microsoft.AnalysisServices.CubeHierarchy> 和 <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Cellset
-helpviewer_keywords:
-- Cellset object [ADO MD]
+f1_keywords: Cellset
+helpviewer_keywords: Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c860f9b84514cc84c73c52e10978ad76365cc6ed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f53e9ec68a4375a9c8d07dc3937750c2e7ba3d46
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cellset-object-ado-md"></a>資料格集物件 (ADO MD)
 代表多維度查詢的結果。 它是從 cube 或其他資料格集中選取的儲存格的集合。  
@@ -67,10 +63,9 @@ cst.Axes(0).Positions(0).Members(0).Caption
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料格集範例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Axes 集合 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [資料格物件 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

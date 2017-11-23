@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 80944d5ebb5ec8c9f6ba98d9c520b10a0c4ade30
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-adaptive-buffering"></a>使用適應性緩衝
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   **此查詢會產生非常龐大的結果集：**應用程式可以執行產生比應用程式可以儲存在記憶體中的資料列的 SELECT 陳述式。 在舊版中，應用程式必須使用伺服器資料指標，以避免 OutOfMemoryError。 適應性緩衝可以針對任意大的結果集進行順向唯讀行程，而不需要伺服器資料指標。  
   
--   **此查詢會產生非常大**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**資料行或**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT 參數值：**應用程式可以擷取單一值 (資料行或 OUT 參數) 太大而無法完整納入應用程式的記憶體。         適應性緩衝可讓用戶端應用程式使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法擷取資料流，這類值。 應用程式擷取的值從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]從資料流讀取。  
+-   **此查詢會產生非常大**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**資料行或**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT 參數值：**應用程式可以擷取單一值 (資料行或 OUT 參數) 太大而無法完整納入應用程式的記憶體。 適應性緩衝可讓用戶端應用程式使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法擷取資料流，這類值。 應用程式擷取的值從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]從資料流讀取。  
   
 > [!NOTE]  
 >  透過適應性緩衝，JDBC Driver 只會緩衝處理它所需的資料量。 此驅動程式不會提供任何公用方法來控制或限制緩衝區的大小。  
@@ -95,8 +93,7 @@ ms.lasthandoff: 09/09/2017
   
 -   順向可更新的結果集，通常提取資料列的區塊驅動程式會讀入記憶體中所指定的資料列數目時[getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)物件，即使當已啟用適應性緩衝連接上。 如果呼叫[下一步](../../connect/jdbc/reference/next-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)物件 OutOfMemoryError 導致，您可以減少藉由呼叫提取的資料列數目[setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)方法的[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)將提取大小為較少的資料列，即使至 1 個資料列，如有必要的物件。 您也可以強制驅動程式不要緩衝處理任何資料列，藉由呼叫[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)物件具有"**適應性**"之前的參數執行陳述式。 因為結果集並非可捲動的如果應用程式存取的大型資料行值使用其中一種 get\<類型 > 的資料流的方法，驅動程式就會捨棄值只要在應用程式讀取它，就如同針對順向的唯讀狀態結果集。  
   
-## <a name="see-also"></a>另請參閱  
- [提升效能和可靠性，JDBC 驅動程式](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [善 JDBC Driver 的效能與可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   
-

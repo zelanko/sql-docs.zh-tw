@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5fe29e8cd03ded1ee2125d2729ede4c66f196838
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6405c2a0890b9a5b43c420960f1b823b39ad9e60
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 函數和資料指標程式庫
 > [!IMPORTANT]  
@@ -33,53 +31,52 @@ ms.lasthandoff: 09/09/2017
   
  此章節包含下列主題。  
   
--   [資料指標程式庫所執行的 ODBC 函數](../../../odbc/reference/appendixes/odbc-functions-executed-by-the-cursor-library.md)  
+-   [資料指標程式庫所執行的 ODBC 函式](../../../odbc/reference/appendixes/odbc-functions-executed-by-the-cursor-library.md)  
   
--   [不會執行資料指標程式庫的 ODBC 函數](../../../odbc/reference/appendixes/odbc-functions-not-executed-by-the-cursor-library.md)  
+-   [資料指標程式庫未執行的 ODBC 函式](../../../odbc/reference/appendixes/odbc-functions-not-executed-by-the-cursor-library.md)  
   
--   [SQLBindCol （資料指標程式庫）](../../../odbc/reference/appendixes/sqlbindcol-cursor-library.md)  
+-   [SQLBindCol (資料指標程式庫)](../../../odbc/reference/appendixes/sqlbindcol-cursor-library.md)  
   
--   [SQLBindParameter （資料指標程式庫）](../../../odbc/reference/appendixes/sqlbindparameter-cursor-library.md)  
+-   [SQLBindParameter (資料指標程式庫)](../../../odbc/reference/appendixes/sqlbindparameter-cursor-library.md)  
   
 -   [SQLBulkOperations （資料指標程式庫）](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
   
 -   [SQLCloseCursor （資料指標程式庫）](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
   
--   [SQLEndTran （資料指標程式庫）](../../../odbc/reference/appendixes/sqlendtran-cursor-library.md)  
+-   [SQLEndTran (資料指標程式庫)](../../../odbc/reference/appendixes/sqlendtran-cursor-library.md)  
   
--   [SQLExtendedFetch （資料指標程式庫）](../../../odbc/reference/appendixes/sqlextendedfetch-cursor-library.md)  
+-   [SQLExtendedFetch (資料指標程式庫)](../../../odbc/reference/appendixes/sqlextendedfetch-cursor-library.md)  
   
--   [SQLFetch （資料指標程式庫）](../../../odbc/reference/appendixes/sqlfetch-cursor-library.md)  
+-   [SQLFetch (資料指標程式庫)](../../../odbc/reference/appendixes/sqlfetch-cursor-library.md)  
   
--   [SQLFetchScroll （資料指標程式庫）](../../../odbc/reference/appendixes/sqlfetchscroll-cursor-library.md)  
+-   [SQLFetchScroll (資料指標程式庫)](../../../odbc/reference/appendixes/sqlfetchscroll-cursor-library.md)  
   
--   [SQLFreeStmt （資料指標程式庫）](../../../odbc/reference/appendixes/sqlfreestmt-cursor-library.md)  
+-   [SQLFreeStmt (資料指標程式庫)](../../../odbc/reference/appendixes/sqlfreestmt-cursor-library.md)  
   
--   [SQLGetData （資料指標程式庫）](../../../odbc/reference/appendixes/sqlgetdata-cursor-library.md)  
+-   [SQLGetData (資料指標程式庫)](../../../odbc/reference/appendixes/sqlgetdata-cursor-library.md)  
   
--   [SQLGetDescField 和 SQLGetDescRec （資料指標程式庫）](../../../odbc/reference/appendixes/sqlgetdescfield-and-sqlgetdescrec-cursor-library.md)  
+-   [SQLGetDescField 和 SQLGetDescRec (資料指標程式庫)](../../../odbc/reference/appendixes/sqlgetdescfield-and-sqlgetdescrec-cursor-library.md)  
   
--   [SQLGetFunctions （資料指標程式庫）](../../../odbc/reference/appendixes/sqlgetfunctions-cursor-library.md)  
+-   [SQLGetFunctions (資料指標程式庫)](../../../odbc/reference/appendixes/sqlgetfunctions-cursor-library.md)  
   
--   [SQLGetInfo （資料指標程式庫）](../../../odbc/reference/appendixes/sqlgetinfo-cursor-library.md)  
+-   [SQLGetInfo (資料指標程式庫)](../../../odbc/reference/appendixes/sqlgetinfo-cursor-library.md)  
   
--   [SQLGetStmtAttr （資料指標程式庫）](../../../odbc/reference/appendixes/sqlgetstmtattr-cursor-library.md)  
+-   [SQLGetStmtAttr (資料指標程式庫)](../../../odbc/reference/appendixes/sqlgetstmtattr-cursor-library.md)  
   
--   [SQLGetStmtOption （資料指標程式庫）](../../../odbc/reference/appendixes/sqlgetstmtoption-cursor-library.md)  
+-   [SQLGetStmtOption (資料指標程式庫)](../../../odbc/reference/appendixes/sqlgetstmtoption-cursor-library.md)  
   
--   [SQLNativeSql （資料指標程式庫）](../../../odbc/reference/appendixes/sqlnativesql-cursor-library.md)  
+-   [SQLNativeSql (資料指標程式庫)](../../../odbc/reference/appendixes/sqlnativesql-cursor-library.md)  
   
--   [SQLRowCount （資料指標程式庫）](../../../odbc/reference/appendixes/sqlrowcount-cursor-library.md)  
+-   [SQLRowCount (資料指標程式庫)](../../../odbc/reference/appendixes/sqlrowcount-cursor-library.md)  
   
--   [SQLSetConnectAttr （資料指標程式庫）](../../../odbc/reference/appendixes/sqlsetconnectattr-cursor-library.md)  
+-   [SQLSetConnectAttr (資料指標程式庫)](../../../odbc/reference/appendixes/sqlsetconnectattr-cursor-library.md)  
   
--   [SQLSetDescField 和 SQLSetDescRec （資料指標程式庫）](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
+-   [SQLSetDescField 和 SQLSetDescRec (資料指標程式庫)](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
   
 -   [SQLSetEnvAttr （資料指標程式庫）](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
   
--   [SQLSetPos （資料指標程式庫）](../../../odbc/reference/appendixes/sqlsetpos-cursor-library.md)  
+-   [SQLSetPos (資料指標程式庫)](../../../odbc/reference/appendixes/sqlsetpos-cursor-library.md)  
   
--   [SQLSetScrollOptions （資料指標程式庫）](../../../odbc/reference/appendixes/sqlsetscrolloptions-cursor-library.md)  
+-   [SQLSetScrollOptions (資料指標程式庫)](../../../odbc/reference/appendixes/sqlsetscrolloptions-cursor-library.md)  
   
--   [SQLSetStmtAttr （資料指標程式庫）](../../../odbc/reference/appendixes/sqlsetstmtattr-cursor-library.md)
-
+-   [SQLSetStmtAttr (資料指標程式庫)](../../../odbc/reference/appendixes/sqlsetstmtattr-cursor-library.md)

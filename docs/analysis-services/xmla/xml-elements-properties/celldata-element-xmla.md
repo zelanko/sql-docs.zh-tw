@@ -13,32 +13,27 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CellData Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CellData Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - CellData
 - http://schemas.microsoft.com/analysisservices/2003/engine#CellData
 - urn:schemas-microsoft-com:xml-analysis#CellData
 - microsoft.xml.analysis.celldata
-helpviewer_keywords:
-- CellData element
+helpviewer_keywords: CellData element
 ms.assetid: 0ebfb5e1-a674-4b9b-bd8c-c529da105f61
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ca30896c998b10fd948cc3dccb1a07132d579fb9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a515382d8fc43e29e5f79e19887868a286aee415
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="celldata-element-xmla"></a>CellData 元素 (XMLA)
   包含 Cell 元素的集合，代表所包含的資料格資料[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)項目，會使用[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)資料型別。  
@@ -73,8 +68,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  在父根元素，**座標軸**元素後面**CellData**元素中，集合**儲存格**包含每個資料格的資料格屬性值的項目傳回多維度資料集內。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

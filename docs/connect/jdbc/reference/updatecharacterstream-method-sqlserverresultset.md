@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.updateCharacterStream
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.updateCharacterStream
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 78f39ec7-e27c-4534-bb19-fae806afd08c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0b78180d69433abeea60e90869cb27644d576392
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5bc695cdd01a8337196aa14b43c2d9de8b7d073d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="updatecharacterstream-method-sqlserverresultset"></a>updateCharacterStream 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,9 +42,8 @@ ms.lasthandoff: 09/09/2017
 |[updateCharacterStream （java.lang.String，java.io.Reader，int）](../../../connect/jdbc/reference/updatecharacterstream-method-java-lang-string-java-io-reader-int.md)|使用字元資料流值來更新指定的資料行，該值將包含指定的字元數目。|  
 |[updateCharacterStream 方法 #40;java.lang.String，java.io.Reader，long &#41;](../../../connect/jdbc/reference/updatecharacterstream-method-java-lang-string-java-io-reader-long.md)|使用字元資料流值來更新指定的資料行，該值將包含指定的字元數目。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

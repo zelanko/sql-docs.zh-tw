@@ -8,8 +8,7 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2020ce16f722354b49a7e35e4a3f1e1706b6a2d5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 508fcb62b7cf9ccd78c04b869add7acccb14f258
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connection-string-keywords-and-data-source-names-dsns"></a>連接字串關鍵字和資料來源名稱 (DSN)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -114,7 +112,6 @@ SSL 會使用 OpenSSL 程式庫。 下表顯示 OpenSSL 的最低支援版本，
   
 您也可以指定加密連接字串使用`Encrypt`選項使用時**SQLDriverConnect**連接。
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [安裝的 Microsoft ODBC Driver for SQL Server on Linux 及 macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  
 [程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)
-

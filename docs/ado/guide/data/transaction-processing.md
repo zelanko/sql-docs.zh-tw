@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a2afb43e83ebc2ed765c04fa15f070597009457
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transaction-processing"></a>交易處理
 A*交易*分隔的開頭和結尾的一系列在連線之間執行資料存取作業。 資料來源時，交易式功能而定**連接**物件也可讓您建立及管理交易。 例如，使用 Microsoft OLE DB Provider for SQL Server 存取 Microsoft SQL Server 上的資料庫，您就可以建立多個巢狀的交易，您所執行的命令。  
@@ -53,4 +51,3 @@ A*交易*分隔的開頭和結尾的一系列在連線之間執行資料存取�
   
 ## <a name="nested-transactions"></a>巢狀的交易  
  提供者支援巢狀的交易，呼叫**BeginTrans**開啟的交易內的方法會啟動新的巢狀交易。 傳回值會指出的巢狀層級:"1"的傳回值會指出您已開啟最上層的交易 （也就是交易不巢狀另一個交易內），"2"表示您已開啟第二個層級的交易 (交易巢狀最上層的交易），依此類推。 呼叫**CommitTrans**或**RollbackTrans**影響最最近開啟的交易，則您必須關閉，或復原目前交易之前可以解決任何較高層級的交易。
-

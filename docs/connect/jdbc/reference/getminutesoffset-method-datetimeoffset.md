@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18ba844a-ea36-42de-87da-bbc222082efe
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9adb82758a3833da60e22c55b61274a255f0a5cc
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be5a740afafcfd232ed770411f1b35c678257cdc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getminutesoffset-method-datetimeoffset"></a>getMinutesOffset 方法 (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,9 +41,8 @@ public int getMinutesOffset()
 ## <a name="remarks"></a>備註  
  DateTimeOffset 物件，表示 8 2010 年 3 月 11:35:48-0800，getMinutesOffset 傳回 480 這個值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset 成員](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   
   
-

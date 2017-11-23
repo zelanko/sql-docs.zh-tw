@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- statement parameters [ODBC]
+helpviewer_keywords: statement parameters [ODBC]
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7039a3830f24f29260b41ad244799be677fc817b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5e56b61d47581f98f37560875de920c45029c2e9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-parameters"></a>陳述式參數
 A*參數*是 SQL 陳述式中的變數。 例如，假設零件資料表中具有名為 PartID、 描述和價格的資料行。 若要將組件不含參數需要建構 SQL 陳述式，例如：  
@@ -60,5 +57,4 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [程序參數](../../../odbc/reference/develop-app/procedure-parameters.md)  
   
--   [參數值的陣列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)
-
+-   [參數值陣列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)

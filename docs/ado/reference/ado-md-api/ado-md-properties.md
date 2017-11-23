@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 48c27fa950a31a0121bb5253fe9b94ba5893bae3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83aeba7f67a49fb6ef149ad6f5723dd7cf3d74ef
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-md-properties"></a>ADO MD 屬性
 |||  
@@ -57,7 +55,7 @@ ms.lasthandoff: 09/09/2017
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|表示目前物件的模稜兩可的名稱。|  
 |[值](../../../ado/reference/ado-md-api/value-property-ado-md.md)|指出目前的儲存格的值。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO MD 應用程式開發介面參考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD 程式碼範例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD 集合](../../../ado/reference/ado-md-api/ado-md-collections.md)   
@@ -65,4 +63,3 @@ ms.lasthandoff: 09/09/2017
  [ADO MD 方法](../../../ado/reference/ado-md-api/ado-md-methods.md)   
  [ADO MD 物件模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO MD 物件](../../../ado/reference/ado-md-api/ado-md-objects.md)
-

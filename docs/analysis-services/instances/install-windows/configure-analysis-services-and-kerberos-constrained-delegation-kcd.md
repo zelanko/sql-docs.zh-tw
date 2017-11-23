@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 95a002a015a94f0b6ad69bc2331403604717d778
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4c13b9095224d1c33e09c9513121e46483da05c0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>設定 Analysis Services 及 Kerberos 限制委派 (KCD)
   Kerberos 限制委派 (KCD) 是驗證通訊協定，您可使用 Windows 驗證對其進行設定，在整個環境的服務間委派用戶端認證。 KCD 需要其他基礎結構 (例如網域控制站)，以及您環境的其他組態。 某些在 SharePoint 2016 使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料的案例會需要 KCD。 在 SharePoint 2016 中，Excel Services 已從 SharePoint 伺服器陣列外移到不同的新伺服器： **Office Online Server**。 因為 Office Online Server 是獨立的，所以對於在典型雙躍點案例中委派用戶端認證的方法，其需求漸增。  
@@ -229,4 +227,3 @@ ms.lasthandoff: 09/01/2017
  [Microsoft® Kerberos Configuration Manager for Microsoft SQL Server®](http://www.microsoft.com/en-us/download/details.aspx?id=39046)  
   
   
-

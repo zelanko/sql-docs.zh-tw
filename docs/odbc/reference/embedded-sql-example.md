@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ae3b2c60025f82d3153166a887fea12453443450
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="embedded-sql-example"></a>內嵌的 SQL 範例
 下列程式碼是簡單內嵌的 SQL 撰寫的程式，在 c 中。程式會說明許多，但不是所有的內嵌 SQL 技術。 程式會提示使用者輸入訂單號碼、 擷取客戶編號、 銷售人員，以及狀態的順序，以及在螢幕上顯示所擷取的資訊。  
@@ -81,4 +79,3 @@ bad_number:
 -   **錯誤處理**DBMS 報告應用程式，透過 SQL 通訊區域中或 SQLCA 的執行階段錯誤。 在上述程式碼範例中，第一個內嵌的 SQL 陳述式會是包含 SQLCA。 這會告訴程式中包含 SQLCA 結構先行編譯器。 這是必要的每當程式會處理由 DBMS 傳回的錯誤。 WHENEVER...GOTO 陳述式會告知先行編譯器產生分支到特定的標記錯誤時，就會發生的錯誤處理程式碼。  
   
 -   **單一選取**用來傳回資料的陳述式是單一 SELECT 陳述式; 也就是說，它會傳回單一資料列的資料。 因此，程式碼範例不宣告或使用資料指標。
-

@@ -26,17 +26,16 @@ helpviewer_keywords:
 - cubes [Analysis Services], calculations
 - solve orders [Analysis Services]
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96b296189200416c2c5234597cf8f4e45618b6d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculations-in-multidimensional-models"></a>多維度模型中的計算
   使用 [Cube 設計師] 的 [計算] 索引標籤來建立導出成員、命名集，和其他多維度運算式 (MDX) 計算。  
@@ -71,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  若要刪除現有的計算，請在 [計算] 索引標籤上，於 [指令碼組合管理] 窗格中，選取要刪除的計算，然後在 [編輯] 功能表上按一下 [刪除]，或在工具列上按一下**刪除**圖示。 您也可以在 [指令碼組合管理] 窗格中以滑鼠右鍵按一下計算，然後從快速鍵功能表中選取 [刪除]。  
   
   
-

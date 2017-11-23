@@ -6,15 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
+ms.workload: On Demand
+ms.openlocfilehash: 1417e02a0a0c2ef56171a5dd99782cdbb4abe0e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -108,7 +113,10 @@ ms.lasthandoff: 10/24/2017
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>設定共用存放裝置，並移動資料庫檔案 
 
-有各式各樣的解決方案，提供共用存放裝置。 本逐步解說示範如何使用 NFS 設定共用存放裝置。 我們建議您遵循最佳作法，並使用 Kerberos 來保護 NFS 的安全 (請見這裡提供範例： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)。 如果不這麼做，然後可以存取您的網路和詐騙 SQL 節點的 IP 位址的任何人都將能夠存取您的資料檔案。 如往常，請確定您的威脅模型系統在生產環境中使用它之前。 另一個儲存體選項是使用 SMB 檔案共用。
+有各式各樣的解決方案，提供共用存放裝置。 本逐步解說示範如何使用 NFS 設定共用存放裝置。 我們建議您遵循最佳作法，並使用 Kerberos 來保護 NFS 的安全 (請見這裡提供範例： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)。 
+
+>[!Warning]
+>如果您未保護 NFS，然後可以存取您的網路和詐騙 SQL 節點的 IP 位址的任何人都將能夠存取您的資料檔案。 如往常，請確定您的威脅模型系統在生產環境中使用它之前。 另一個儲存體選項是使用 SMB 檔案共用。
 
 ### <a name="configure-shared-storage-with-nfs"></a>使用 NFS 設定共用存放裝置
 
@@ -391,4 +399,3 @@ NFS 伺服器上執行下列作業：
 ## <a name="next-steps"></a>後續的步驟
 
 [Red Hat Enterprise Linux 共用的磁碟叢集上操作 SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-

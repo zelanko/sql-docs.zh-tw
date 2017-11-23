@@ -1,30 +1,31 @@
 ---
 title: "ETL 工作流程 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 3b81a6494458f7d9f2e89b120119e402786e21ea
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 85898dfc3a12ee195910bf965f0099b35f95b239
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流程
-ETL 封裝 WWI_Integration 用來將資料從 WideWorldImporters 資料庫移轉到 WideWorldImportersDW 資料庫，當資料變更。 封裝會定期執行 （通常每日）。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]ETL 封裝 WWI_Integration 用來將資料從 WideWorldImporters 資料庫移轉到 WideWorldImportersDW 資料庫，當資料變更。 封裝會定期執行 （通常每日）。
 
 ## <a name="overview"></a>概觀
 
@@ -42,7 +43,7 @@ ETL 封裝 WWI_Integration 用來將資料從 WideWorldImporters 資料庫移轉
 
 在此之後，一系列的資料流程工作會載入每個維度，則每一個事實。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 - SQL Server 2016 （或更新版本） 與 WideWorldImporters 和 WideWorldImportersDW 資料庫。 這些可以在相同或不同 SQL Server 執行個體上。
 - SQL Server Management Studio (SSMS)
@@ -80,4 +81,3 @@ SSIS 封裝檔案下載**每日 ETL.ispac**。
    - 按一下 [確定] 來建立作業。
 
 3. 執行或排程作業。
-

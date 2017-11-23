@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
+ms.openlocfilehash: 8d97ba08eae758a22195250521935268aadb770e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 130da2409070f0acfda0bf78fcf2c4326bbeec92
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd 和 bcp 的 SQL Server 命令列工具 Linux 上安裝
 
@@ -207,7 +206,7 @@ brew install --no-sandbox mssql-tools
 
 下表提供最新工具封裝的位置：
 
-| 工具套件 | 版本 | 下載 |
+| 工具套件 | Version | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 工具套件 | 14.0.5.0-1 | [mssql 工具 RPM 套件](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | SLES RPM 工具套件 | 14.0.5.0-1 | [mssql 工具 RPM 套件](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -216,7 +215,7 @@ brew install --no-sandbox mssql-tools
 
 這些封裝相依於**msodbcsql**，而且必須先安裝。 **Msodbcsql**套件也具有相依性  **unixODBC 對內**(RPM) 或**unixodbc dev** (Debian)。 位置**msodbcsql**下表列出封裝：
 
-| msodbcsql 封裝 | 版本 | 下載 |
+| msodbcsql 封裝 | Version | 下載 |
 |-----|-----|-----|
 | Red Hat RPM msodbcsql 封裝 | 13.1.6.0-1 | [msodbcsql RPM 套件](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | SLES RPM msodbcsql 封裝 | 13.1.6.0-1 | [msodbcsql RPM 套件](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
@@ -270,4 +269,3 @@ brew install --no-sandbox mssql-tools
 - [執行 docker](quickstart-install-connect-ubuntu.md)
 
 如需如何使用的範例**bcp**大量匯入和匯出資料，請參閱[大量複製資料到 SQL Server on Linux](sql-server-linux-migrate-bcp.md)。
-

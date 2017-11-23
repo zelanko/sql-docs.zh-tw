@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerConnection.prepareStatement
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerConnection.prepareStatement
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: bd4e4085-f704-4a73-b6a7-7d443d564728
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 11c06d905ac86287b49ac9b9fcf85fe141ab94f8
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 04101a76262df6b2f263c4a6bbcea1ad748ff4d9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="preparestatement-method-sqlserverconnection"></a>prepareStatement 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,9 +42,8 @@ ms.lasthandoff: 09/09/2017
 |[prepareStatement （java.lang.String，int，int，int）](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int-int-int.md)|建立[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)物件，可產生[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件與指定的型別、 並行和保留性。|  
 |[prepareStatement (java.lang.String，java.lang.String &#91; &#93;)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-java-lang-string.md)|建立[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)物件以傳送參數化資料庫的 SQL 陳述式。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
-

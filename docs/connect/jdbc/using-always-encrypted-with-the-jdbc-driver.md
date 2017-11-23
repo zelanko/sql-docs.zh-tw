@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ec20c538020cd9d81e8df262dca3f5b171dbc7a7
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
-ms.openlocfilehash: cee7f5dbcf66a5357ae68192703d841ae1601a35
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/19/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用一律加密與 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -631,8 +629,7 @@ connection.close();
  
 注意： 這可能會導致這些資料庫損毀，因為 Microsoft JDBC Driver for SQL Server 不會檢查資料確實加密，或是正確加密使用相同的加密，請指定 AllowEncryptedValueModifications 時，請使用警告類型、 演算法和金鑰設成目標資料行。
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
-

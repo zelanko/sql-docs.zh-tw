@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 624a6874931cb8af32bb69ea3ac0f8b395ef8915
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ebc9542e5683eb58c198745892916893f284822
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>使用 JDBC 驅動程式連接到 SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,18 +40,17 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
   
 |主題|Description|  
 |-----------|-----------------|  
-|[建立連接 URL](../../connect/jdbc/building-the-connection-url.md)|描述如何產生連接 URL 以連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。 也會說明連接到具名執行個體的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
+|[建置連接 URL](../../connect/jdbc/building-the-connection-url.md)|描述如何產生連接 URL 以連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。 也會說明連接到具名執行個體的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
 |[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)|描述各種連接屬性以及如何它們可以用於當您連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
 |[設定資料來源屬性](../../connect/jdbc/setting-the-data-source-properties.md)|描述如何在 Java Platform Enterprise Edition (Java EE) 環境中使用資料來源。|  
 |[使用連接](../../connect/jdbc/working-with-a-connection.md)|描述要在其中建立連接到執行個體的各種方式[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
 |[使用連接共用](../../connect/jdbc/using-connection-pooling.md)|說明 JDBC 驅動程式如何支援使用連接共用。|  
 |[使用資料庫鏡像 &#40;JDBC &#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|說明 JDBC 驅動程式如何支援使用資料庫鏡像。|  
-|[JDBC 驅動程式支援的高可用性、 災害復原](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|描述如何開發將連接到 AlwaysOn 可用性群組的應用程式。|  
-|[使用 Kerberos 整合式的驗證連接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|討論其 Java 實作應用程式連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫使用 Kerberos 整合式的驗證。|  
-|[連接到 Azure SQL database](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|討論 SQL Azure 上資料庫的連接問題。|  
+|[高可用性與災害復原的 JDBC Driver 支援](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|描述如何開發將連接到 AlwaysOn 可用性群組的應用程式。|  
+|[使用 Kerberos 整合式驗證連接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|討論其 Java 實作應用程式連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫使用 Kerberos 整合式的驗證。|  
+|[連接到 Azure SQL Database](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|討論 SQL Azure 上資料庫的連接問題。|  
   
-## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

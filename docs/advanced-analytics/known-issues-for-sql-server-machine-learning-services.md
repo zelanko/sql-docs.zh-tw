@@ -1,33 +1,31 @@
 ---
 title: "機器學習服務中的已知問題 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/18/2017
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: d5835b1c79ec1ce26e200b02fa9ba6e03378187b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 63ad249e32f259eca850d5b872d940faa313750c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="known-issues-in-machine-learning-services"></a>機器學習服務中的已知的問題
 
 本文說明已知的問題或限制使用機器學習中 SQL Server 2016 和 SQL Server 2017 的選項中提供的元件。
 
-這裡的資訊適用於所有的下列程式碼，除非特別指出：
+這裡的資訊適用於所有的下列程式碼，除非：
 
 * SQL Server 2016
 
@@ -44,13 +42,17 @@ ms.lasthandoff: 10/24/2017
 
 如需處理程序和初始安裝和設定相關的常見問題的說明，請參閱[升級及安裝常見問題集](r/upgrade-and-installation-faq-sql-server-r-services.md)。 它包含升級、-並存安裝及安裝新的 R 或 Python 元件的相關資訊。
 
-### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>無法將 Python 元件安裝在離線安裝的 SQL Server 2017 CTP 2.0 或更新版本
+### <a name="unable-to-install-sql-server-machine-learning-features-on-a-domain-controller"></a>無法在網域控制站上安裝 SQL Server 的機器學習功能
 
-如果您沒有網際網路存取的電腦上安裝發行前版本的 SQL Server 2017，安裝程式可能無法顯示頁面，提示下載 Python 元件的位置。 在這種情況下，您可以安裝的機器學習服務功能，而非 Python 元件。
+如果您嘗試在網域控制站上安裝 SQL Server 2016 R Services 或 SQL Server 2017 機器學習服務，則安裝程式會失敗，發生下列錯誤：
 
-發行版本中修正此問題。 如果您遇到此問題，以解決這個問題，您可以暫時啟用網際網路存取，安裝程式的持續時間。 這項限制不適用於。
+>*「 錯誤發生之功能的安裝程序期間 」。*
+> 
+>*「 找不到群組識別...」*
+> 
+>*「 元件錯誤程式碼： 0x80131509"*
 
-**適用於：** SQL Server 2017 使用 Python
+因為網域控制站上的服務無法建立 20 個的本機帳戶執行機器學習所需，就會發生故障。 一般情況下，我們不建議在網域控制站上安裝 SQL Server。 如需詳細資訊，請參閱[支援公告 2032911](https://support.microsoft.com/en-us/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont)。
 
 ### <a name="install-the-latest-service-release-to-ensure-compatibility-with-microsoft-r-client"></a>安裝最新的版本更新服務以確保與 Microsoft R 用戶端的相容性
 
@@ -68,7 +70,13 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 
 **適用於：** SQL Server 2016 R Services 中，使用 R Server 9.0.0 版本或更早版本
 
-### <a name="bkmk_sqlbindr"></a>當您從連線到較舊版本的 SQL Server R Services 用戶端使用的不相容的版本警告[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>無法將 Python 元件安裝在離線安裝的 SQL Server 2017 CTP 2.0 或更新版本
+
+如果您沒有網際網路存取的電腦上安裝發行前版本的 SQL Server 2017，安裝程式可能無法顯示頁面，提示下載 Python 元件的位置。 在這種情況下，您可以安裝的機器學習服務功能，而非 Python 元件。
+
+發行版本中修正此問題。 如果您遇到此問題，以解決這個問題，您可以暫時啟用網際網路存取，安裝程式的持續時間。 這項限制不適用於。
+
+**適用於：**與 Python # # # 的 SQL Server 2017 <a name="bkmk_sqlbindr"> </a>警告的版本不相容，當您從連線到較舊版本的 SQL Server R Services 用戶端使用[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 當您在 SQL Server 2016 計算內容中，執行 R 程式碼，下列兩個陳述式為 true，您可能會看到類似下面的錯誤：
 * 用戶端電腦上安裝 R Server （獨立） 使用的安裝精靈[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]。
@@ -120,18 +128,16 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 
 **適用於：** SQL Server 2016 R Services Express Edition
 
-### <a name="performance-limits-when-r-libraries-are-called-from-other-r-tools"></a>從其他的 R 工具呼叫 R 程式庫時的效能限制
+### <a name="performance-limits-when-libraries-used-by-sql-server-are-called-from-other-tools"></a>SQL Server 所使用的程式庫呼叫的其他工具時的效能限制
 
-您可呼叫的 R 工具和程式庫從 RGui 之類的外部 R 應用程式安裝的 SQL Server。 當您安裝新的封裝，或當您執行臨機操作測試在非常短的程式碼範例，這個呼叫可能會很方便。
+您可呼叫機器學習從外部應用程式，例如 RGui for SQL Server 安裝的程式庫。 如此一來，可能是最方便的方式來完成特定工作，例如安裝新的封裝，或在非常短的程式碼範例執行臨機操作測試。 不過，SQL Server 外部的效能可能會有所限制。 
 
-不過，請注意，SQL Server 外部的效能可能會有所限制。 比方說，即使您已購買 SQL Server 的 Enterprise Edition，R 以單一執行緒模式執行時使用外部工具執行 R 程式碼。 效能應該是如果您初始化 SQL Server 連線，並使用執行 R 程式碼更佳[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，為您呼叫 R 程式庫。
+比方說，即使您使用 SQL Server 的 Enterprise Edition，R 以單一執行緒模式執行時使用外部工具執行 R 程式碼。 若要在 SQL Server 中取得的效能優點，啟動 SQL Server 連線，並使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)呼叫外部指令碼執行階段。
 
-* 避免呼叫 R 程式庫所使用的 SQL Server 上，從外部的 R 工具。
-* 如果您需要 SQL Server 電腦上執行大量的 R 程式碼，而不使用 SQL Server 安裝 R，例如 Microsoft R 用戶端，個別執行個體，然後確定您的 R 開發工具會指向新的程式庫。
++ 一般情況下，避免呼叫機器學習所使用的 SQL Server 上，從外部工具的程式庫。
++ 如果您需要偵錯 R 或 Python 程式碼，則通常更容易，若要這樣做的 SQL Server 外部。 若要取得 SQL Server 中的相同程式庫，您可以安裝 Microsoft R 用戶端或[Server 機器學習](r/create-a-standalone-r-server.md)。
 
-如需詳細資訊，請參閱 [建立獨立式 R Server](r/create-a-standalone-r-server.md)。
-
-### <a name="the-r-script-is-throttled-due-to-resource-governance-default-values"></a>R 指令碼已節流，因為資源控管的預設值
+### <a name="external-script-execution-is-throttled-due-to-resource-governance-default-values"></a>執行外部指令碼已節流，因為資源控管的預設值
 
 在 Enterprise Edition 中，您可以使用資源集區來管理外部指令碼程序。 在某些早期發行的組建，無法配置給 R 處理序的最大記憶體為 20%。 因此，如果伺服器有 32GB 的 RAM，R 可執行檔 （RTerm.exe 和 BxlServer.exe） 無法使用最多 6.4 單一要求中。
 
@@ -139,11 +145,11 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 
 **適用於：** SQL Server 2016 R 服務、 企業版
 
-## <a name="r-code-execution-and-package-or-function-issues"></a>執行 R 程式碼和封裝或函式的問題
+## <a name="r-issues"></a>R 問題
 
 本節包含專屬於 SQL Server 上執行 R 的已知的問題，以及相關的 R 程式庫和工具 Microsoft，包括 RevoScaleR 所發行的一些問題。
 
-如需其他可能會影響 R 解決方案的已知問題，請移至[Microsoft R Server 網站](https://msdn.microsoft.com/microsoft-r/rserver-known-issues)。
+如需其他可能會影響 R 解決方案的已知問題，請移至[Microsoft R Server 網站](https://docs.microsoft.com/machine-learning-server/resources-known-issues)。
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>R 作業處理器相似性的限制
 
@@ -175,12 +181,15 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 
 如果您需要使用更大的模型，下列因應措施是使用：
 
-+ 使用[memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress)中降低模型的大小，再將它傳遞至 SQL Server 的基底 R 函數。 當模型很接近 2 GB 的限制，最好使用此選項。
-+ 對於較大的模型，而不使用 varbinary 資料行來儲存模型，您可以使用[FileTable](..\relational-databases\blob\filetables-sql-server.md) SQL Server 中提供的功能。
++ 採取步驟來縮小您的模型。 某些開放原始碼 R 封裝中的模型物件，包含大量的資訊和大部分的這項資訊可以部署中移除。 
++ 您可以使用 特徵選取來移除不必要的資料行。
++ 如果您使用的開放原始碼演算法，請考慮使用 MicrosoftML 或 RevoScaleR 中對應的演算法的相似實作。 這些封裝已經過最佳化部署案例。
++ 如果模型已被合理化的大小縮減使用先前的步驟後，請參閱 < [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress)在基底 R 函數可用來降低模型的大小，再將它傳遞至 SQL Server。 當模型很接近 2 GB 的限制，最好使用此選項。
++ 對於較大的模型，您可以使用 SQL Server [FileTable](..\relational-databases\blob\filetables-sql-server.md)功能來儲存模型，而不是使用 varbinary 資料行。
 
     若要使用 Filetable，您必須加入防火牆例外狀況，因為在 Filetable 中儲存的資料由 SQL Server 中的 Filestream 檔案系統驅動程式所管理，而預設的防火牆規則封鎖網路檔案的存取。 如需詳細資訊，請參閱[啟用 FileTable 的必要條件](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)。 
 
-    啟用 FileTable 之後，撰寫模型，您 SQL 使用 FileTable 的 API，從取得的路徑，然後撰寫模型對該位置從您的 R 程式碼。 當您需要讀取模型時，您會從 SQL 取得的路徑，，然後呼叫模型使用從 R 指令碼的路徑。 如需詳細資訊，請參閱[存取 Filetable 與檔案輸入輸出 Api](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)。
+    啟用 FileTable 之後，撰寫模型，您 SQL 使用 FileTable 的 API，從取得的路徑，然後撰寫模型對該位置從您的程式碼。 當您需要讀取模型時，您會從 SQL 取得的路徑，，然後呼叫模型使用從您的指令碼的路徑。 如需詳細資訊，請參閱[使用檔案輸入輸出 Api 存取 Filetable](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)。
 
 ### <a name="avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>避免在執行中的 R 程式碼時，清除工作區[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計算內容
 
@@ -205,6 +214,16 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
   
      若您需要在 R 指令碼中使用遮罩的資料，一項可行的因應措施是在暫存資料表中製作資料複本，並改用該資料。
 
+### <a name="use-of-strings-as-factors-can-lead-to-performance-degradation"></a>做為字串的因素可能會導致效能降低
+
+當因素可以大幅增加的 R 作業所使用的記憶體數量，請使用字串類型變數。 一般情況下，這是 R 的已知的問題，並在主體上有許多篇文章。 例如，請參閱[因素不是在 R 中，John 掛接，r-bloggers 中的首要)](https://www.r-bloggers.com/factors-are-not-first-class-citizens-in-r/)或[stringsAsFactors： 未經授權的自傳，由 Roger Peng](https://simplystatistics.org/2015/07/24/stringsasfactors-an-unauthorized-biography/)。 
+
+雖然並非 SQL Server 特定的問題，但它可能會大幅影響執行 SQl Server 中的 R 程式碼的效能。 字串通常會儲存為 varchar 或 nvarchar，以及如果字串資料行有許多唯一值，在內部轉換為整數，再回到字串 R 的這些程序甚至可能導致記憶體配置錯誤。
+
+如果您不絕對需要字串資料類型的其他作業，將字串值對應至數字 （整數） 資料類型的資料準備過程中會很有幫助效能與延展性的觀點。
+
+如需此問題和其他提示的討論，請參閱[R Services-資料最佳化的效能](r/r-and-data-optimization-r-services.md)。
+
 ### <a name="arguments-varstokeep-and-varstodrop-are-not-supported-for-sql-server-data-sources"></a>引數*varsToKeep*和*varsToDrop*不支援 SQL Server 資料來源
 
 當您使用 rxDataStep 函式將結果寫入至資料表時，使用*varsToKeep*和*varsToDrop*是很方便的方式來指定要包含或排除作業的資料行。 不過，這些引數不支援的 SQL Server 資料來源。
@@ -227,7 +246,7 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 
 當二進位資料類型 (R**原始**資料類型) 會傳回從 R，則必須將值傳送的輸出資料框架中。
 
-具有資料類型以外**原始**，您可以將參數值與預存程序的結果一起傳回只要加上 OUTPUT 關鍵字。 如需詳細資訊，請參閱[使用輸出參數傳回資料](https://technet.microsoft.com/library/ms187004.aspx)。
+具有資料類型以外**原始**，您可以藉由加入輸出關鍵字傳回參數值，以及預存程序的結果。 如需詳細資訊，請參閱[參數](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters)。
 
 如果您想要使用包含的類型值的多個輸出集**原始**，其中一個可能的解決方法，是要進行多次呼叫預存程序，或傳送結果集傳回[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 ODBC。
 
@@ -248,20 +267,20 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 例如：
 
 ```r
-f <- function(x) { 2*x * 3 }  
-g <- function(y) {   
-              a <- 10 * y  
-               f(a)  
+f <- function(x) { 2*x * 3 }
+g <- function(y) {
+              a <- 10 * y
+               f(a)
 }
 ```
 
 若要避免此錯誤，請重寫的定義，如下所示：
 
 ```r
-g <- function(y){  
-              f <- function(x) { 2*x +3}  
-              a <- 10 * y  
-              f(a)  
+g <- function(y){
+              f <- function(x) { 2*x +3}
+              a <- 10 * y
+              f(a)
 }
 ```
 
@@ -301,6 +320,46 @@ RevoIDE.exe /RCommandLine --max-ppsize=500000
 
 要求的因數會被視為與所有 RevoScaleR 分析函數中的因數相同，除了 `rxDTree`以外。
 
+## <a name="python-code-execution-or-python-package-issues"></a>Python 程式碼執行，或是 Python 封裝問題
+
+本節包含專屬於 SQL Server，以及 Microsoft 所發行的 Python 封裝相關的問題上執行 Python 的已知的問題包括[revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)和[microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
+
+### <a name="call-to-pretrained-model-fails-if-path-to-model-is-too-long"></a>預先定型的模型的呼叫失敗，則模型路徑太長
+
+如果您在預設安裝中，視您的電腦名稱和執行個體名稱安裝預先定型的模型定型的模型檔案產生的完整路徑可能會對讀取 Python 而言太長。 這項限制會在服務即將發行版本中修正。
+
+有數個可能的因應措施： 
+
++ 當您安裝的預先定型的模型時，請選擇 自訂位置。
++ 可能的話，請安裝自訂安裝路徑，例如 C:\SQL\MSSQL14 下的 SQL Server 執行個體。MSSQLSERVER。
++ 使用 Windows 公用程式[Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx)建立永久連結的來源，將模型檔案對應到較短的路徑。 
+
+### <a name="failure-to-initialize-a-varbinary-variable-causes-an-error-in-bxlserver"></a>無法初始化 varbinary 變數 BxlServer 會導致錯誤
+
+如果您執行 Python 程式碼中使用 SQL Server `sp_execute_external_script`，而且程式碼具有輸出類型 varbinary （max）、 varchar （max） 或類似類型的變數，變數必須初始化，或您的指令碼中設定。 否則，資料 exchange 元件 BxlServer，會引發錯誤並停止運作。
+
+這項限制會在服務即將發行版本中修正。 因應措施，請確定變數會初始化 Python 指令碼內。 可以使用任何有效的值，如下列範例所示：
+
+```sql
+declare @b varbinary(max);
+exec sp_execute_external_script
+  @language = N'Python'
+  , @script = N'b = 0x0'
+  , @params = N'@b varbinary(max) OUTPUT'
+  , @b = @b OUTPUT;
+go
+```
+
+```sql
+declare @b varchar(30);
+exec sp_execute_external_script
+  @language = N'Python'
+  , @script = N' b = ""  '
+  , @params = N'@b varchar(30) OUTPUT'
+  , @b = @b OUTPUT;
+go
+```
+
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise 和 Microsoft R Open
 
 此區段會列出 R 連線能力、 開發和 Revolution Analytics 所提供的效能工具的特定問題。 這些工具提供的發行前版本中[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。
@@ -323,14 +382,9 @@ RevoIDE.exe /RCommandLine --max-ppsize=500000
 
 SQLite ODBC 驅動程式的修訂 0.92 是與 RevoScaleR 不相容。 修訂 0.88-0.91 和 0.93 及更新版本則已知相容性。
 
-## <a name="python-code-execution-or-python-package-issues"></a>Python 程式碼執行，或是 Python 封裝問題
-
-本節包含專屬於 SQL Server，以及 Microsoft 所發行的 Python 封裝相關的問題上執行 Python 的已知的問題包括[revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)和[microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
-
 
 ## <a name="see-also"></a>另請參閱
 
 [SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)
 
 [疑難排解 SQL Server 中的機器學習服務](machine-learning-troubleshooting-faq.md)
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 390d9801346f904e77647c1784d810672b45b6cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bf5c6405d4492a4cf559c3a62f53f69eb8a3fdeb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-aware-connection-pooling"></a>可感知驅動程式的連接共用
 驅動程式可感知連接共用是 Windows 8 中的驅動程式管理員的新功能。 驅動程式可感知連接共用允許驅動程式撰寫者自訂連接共用其 ODBC 驅動程式中的行為。  
@@ -45,6 +43,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="how-to-enable-driver-aware-connection-pooling"></a>如何啟用可感知驅動程式的連接共用  
  應用程式可以使用驅動程式的連接共用感知的 SQL_ATTR_CONNECTION_POOLING 屬性設為與 SQL_CP_DRIVER_AWARE [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)。 如果驅動程式不支援連接集區感知，驅動程式管理員連接共用將會使用 （如同 SQL_CP_ONE_PER_HENV 如同已指定，而不是 SQL_CP_DRIVER_AWARE 相同）。 ODBC 2.x 及 3.x 應用程式可以啟用這項功能。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
-

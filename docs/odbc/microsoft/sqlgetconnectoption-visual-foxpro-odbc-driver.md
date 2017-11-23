@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetConnectOption function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLGetConnectOption function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5703eb39-f3b2-4f3a-8676-a5625ae29a41
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6c7bf27ea28a302e85a119993f62ee5a068685ff
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd94e03f54eda8af1c7199bcf6d716e20af70a5b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetconnectoption-visual-foxpro-odbc-driver"></a>SQLGetConnectOption （Visual FoxPro ODBC 驅動程式）
 > [!NOTE]  
@@ -49,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|驅動程式可讓您僅 SQL_TXN_READ_COMMITTED。<br /><br /> 下列*vParam*s 不支援：<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE 的情況下|  
   
  如需詳細資訊，請參閱[SQLGetConnectOption](../../odbc/reference/syntax/sqlgetconnectoption-function.md)中*ODBC 程式設計人員參考*。
-

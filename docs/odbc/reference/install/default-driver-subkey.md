@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - subkeys [ODBC], default subkey
 - drivers subkey [ODBC]
 ms.assetid: 9e58b24f-ebfc-4286-a272-0843b4d6f2d5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6abe4c5b5b07ea59b18c1bd298225ca33db2a65b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5c269705f5e4c0c855b5b7f929b1a76ee9523bd7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="default-driver-subkey"></a>預設驅動程式的子機碼
 預設子機碼包含描述的預設資料來源所使用的驅動程式的單一值。 下表顯示此值的格式。  
@@ -47,4 +45,3 @@ Driver : REG_SZ : SQL Server
   
 > [!NOTE]  
 >  預設子機碼中包含的預設驅動程式可以參考的預設使用者 DSN 或預設的系統 DSN。 如果預設使用者 DSN 與預設系統 DSN 尚未建立，預設的驅動程式取決於 DSN 建立最後，因此它可能不會先建立資料來源名稱的有效項目。
-

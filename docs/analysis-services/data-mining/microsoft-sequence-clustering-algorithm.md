@@ -19,17 +19,16 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c64eddbe78782344e4cd3f3f6afdd48884362808
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09d9c1909f093547dedd79823a06d9647f0bd6a8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 時序群集演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是結合時序分析和叢集的獨特演算法。 您可以使用此演算法來瀏覽資料，其中包含可在 [時序] 中連結的事件。 此演算法會尋找最常見的時序，並執行叢集以尋找類似的時序。 下列範例描述您可能擷取作為機器學習資料的時序類型，以深入了解常見的問題或商務案例：  
@@ -92,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [使用 Microsoft 時序叢集檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   
-

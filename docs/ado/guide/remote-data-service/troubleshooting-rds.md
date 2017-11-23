@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- troubleshooting RDS [ADO]
+helpviewer_keywords: troubleshooting RDS [ADO]
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 255f3ad49d72da92b8ba0bc8091110fac92749a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 961b010d2dc2ecf2e22e36346420f110c4dff8f8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshooting-rds"></a>疑難排解 RDS
 > [!IMPORTANT]
@@ -45,8 +42,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [將記錄檔空間使用量降到最低](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 
