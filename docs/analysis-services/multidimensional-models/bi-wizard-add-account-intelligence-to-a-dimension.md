@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9507044c972401407aadf80dddfe164ec4a3617c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: defce52a3e89858c08eff6626601392066996891
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI 精靈-將帳戶智慧加入維度中
   將帳戶智慧增強功能加入至 Cube 或維度中，以便將標準會計科目分類 (例如收益與費用) 指派給帳戶屬性的成員。 此增強功能也會識別科目類型 (例如資產和負債)，並對每一個科目類型指派適當的彙總。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可使用分類隨時間彙總科目。  
@@ -78,4 +77,3 @@ ms.lasthandoff: 09/01/2017
 4.  在 **[彙總函式]** 下拉式清單方塊中，變更這個帳戶類型的預設彙總函式。  
   
   
-

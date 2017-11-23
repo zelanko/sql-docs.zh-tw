@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- relational schema [Analysis Services]
+helpviewer_keywords: relational schema [Analysis Services]
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f4c43ae5e0b38aab494f21237986b958286d7b9b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 789106378805f50a4a27dbb02ace2e8e0943daed
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>結構描述產生精靈 (Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 支援在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫內定義 OLAP 物件時，使用關聯式結構描述的兩個方法。 一般來說，您會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫內資料來源檢視中所建構的邏輯資料模型來定義 OLAP 物件。 這個資料來源檢視是根據一個或多個關聯式資料來源中的結構描述元素所定義，如資料來源檢視中所自訂的方式一樣。  
@@ -59,4 +57,3 @@ ms.lasthandoff: 09/01/2017
  [支援的資料來源 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   
-

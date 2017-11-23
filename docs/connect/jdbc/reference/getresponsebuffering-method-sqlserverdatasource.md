@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDataSource.getResponseBuffering()
-apilocation:
-- SQLServerDataSource.getResponseBuffering()
+apiname: SQLServerDataSource.getResponseBuffering()
+apilocation: SQLServerDataSource.getResponseBuffering()
 apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b11609d9b29bbd76a65c3db3dff12a94d4d96767
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0c278b31f870286f55d51a04dda2db4b43464ce4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>getResponseBuffering 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,10 +48,9 @@ public java.lang.String getResponseBuffering()
   
  如需使用回應緩衝模式的詳細資訊，請參閱[使用適應性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [setResponseBuffering 方法 &#40;SQLServerDataSource &#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)   
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
-

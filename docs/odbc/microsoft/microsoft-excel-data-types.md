@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], data types
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ecd939c775b18efd2f08d4d34b7ee393c6146ccb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eeb2bc72ce34141eb3dbdca3f952dca0c476c2dd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel 資料類型
 下表顯示如何將 Microsoft Excel 驅動程式資料類型對應至 ODBC SQL 資料類型。 Microsoft Excel 驅動程式會將這些資料類型指派給資料行中的資料為基礎的 Microsoft Excel 資料表中資料行。  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
 |TEXT|當資料行的資料列包含一個以上的 Microsoft Excel 資料類型時，ODBC Microsoft Excel 驅動程式會指派給資料行的 SQL_VARCHAR 資料類型。 沒有一個例外狀況： 如果資料行包含只有兩個或三個日期時間資料型別 （日期、 時間和日期時間），ODBC Microsoft Excel 驅動程式會將 SQL_TIMESTAMP 資料類型指派給資料行。<br /><br /> 建立文字資料行的零或未指定的長度實際上會傳回 255 個位元組的資料行。<br /><br /> 字元字串常值可以包含任何的 ANSI 字元 （1-255 個十進位）。 您可以使用兩個連續單引號 （'） 來表示一個單引號 （'）。<br /><br /> SQL_VARCHAR 資料類型，將插入的資料行的 null 值會變更為 SQL_VARCHAR 資料行的資料類型。|  
   
  資料類型的多個限制可以在[資料型別限制](../../odbc/microsoft/data-type-limitations.md)。
-

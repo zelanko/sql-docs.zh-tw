@@ -1,33 +1,28 @@
 ---
 title: "建立資料庫 （Azure SQL 資料倉儲） |Microsoft 文件"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
-ms.date: 03/14/2017
+ms.custom: 
+ms.date: 10/16/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse
 ms.reviewer: 
-ms.service: sql-warehouse
-ms.suite: 
-ms.technology:
-- database-engine
+ms.service: sql-data-warehouse
+ms.component: t-sql|statements
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-ms.assetid: 42819b93-b757-4b2c-8179-d4be3c512c19
-caps.latest.revision: 20
+dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a178756610f0d0e463c21a2a62a287ada6c863a1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>建立資料庫 （Azure SQL 資料倉儲）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 建立新資料庫。  
   
@@ -36,9 +31,19 @@ ms.lasthandoff: 09/01/2017
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 (  
-    [ MAXSIZE = { 250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 | 153600 | 204800 | 245760 } GB ,]  
+    [ MAXSIZE = { 
+          250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 
+        | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 
+        | 153600 | 204800 | 245760 
+      } GB ,
+    ]  
     EDITION = 'datawarehouse',  
-    SERVICE_OBJECTIVE = { 'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' }  
+    SERVICE_OBJECTIVE = { 
+         'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
+        | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
+        | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
+    }  
 )  
 [;]  
 ```  
@@ -56,10 +61,18 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 指定資料庫的服務層。 如[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]使用 'datawarehouse'。  
   
 *MAXSIZE*  
-資料庫的最大可以增長至。 設定此值可防止大小設定超過資料庫大小的成長。 預設值*MAXSIZE*時未指定為 10240 GB (10 TB)。  其他可能的值範圍從 250 GB 最多 240 TB。  
+預設值為 10240 GB (10 TB)。  
+
+**適用於：**彈性效能層針對最佳化
+
+資料庫的允許大小上限。 資料庫無法增長超過 MAXSIZE。 
+
+**適用於：**針對計算效能層最佳化
+
+在資料庫中的資料列存放區資料的可允許大小上限。 資料儲存在資料列存放區資料表、 資料行存放區索引的差異存放區或非叢集資料行存放區索引的非叢集索引不得成長超過 MAXSIZE。  壓縮成資料行存放區格式的資料不受限於 MAXSIZE，就不需要的大小限制。
   
 SERVICE_OBJECTIVE  
-指定效能等級。 如需服務目標[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，請參閱[SQL 資料倉儲上的小數位數效能](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-performance-scale/)。  
+指定效能等級。 如需服務目標[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，請參閱[效能層](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
   
 ## <a name="general-remarks"></a>一般備註  
 使用[DATABASEPROPERTYEX &#40;TRANSACT-SQL &#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)以查看資料庫屬性。  
@@ -103,10 +116,9 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 (MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000');  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [ALTER DATABASE &#40;Azure SQL 資料倉儲 &#40;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) 
 [建立資料表 &#40;Azure SQL 資料倉儲 &#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)  
 [卸除資料庫 &#40;TRANSACT-SQL &#40;](../../t-sql/statements/drop-database-transact-sql.md) 
   
-
 

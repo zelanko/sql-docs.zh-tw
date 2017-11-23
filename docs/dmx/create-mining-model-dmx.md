@@ -2,9 +2,12 @@
 title: "建立採礦模型 (DMX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -14,8 +17,7 @@ f1_keywords:
 - CREATE MINING MODEL
 - CREATE
 - CREATE_MINING_MODEL
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - RELATED TO column
 - mining models [Analysis Services], creating
@@ -24,19 +26,19 @@ helpviewer_keywords:
 - SESSION clause
 - CREATE MINING MODEL statement
 ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 279d4750f6264cbffb07e26a0d75317a1457cb56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a8cdeac4e5da9e232959777278e5b5d0c45d7ac7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   在資料庫中建立新採礦模型與採礦結構。 您可以在陳述式中定義新模型，或者使用預測模型標記語言 (PMML)，來建立模型。 第二個選項只供進階使用者使用。  
   
@@ -75,7 +77,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *XML 字串*  
  (僅限進階使用)。XML 編碼的模型 (PMML)。 字串必須使用單引號 (') 括住。  
   
- **工作階段**子句可讓您建立的採礦模型，會在連接關閉或是工作階段的逾時自動從伺服器移除。 **工作階段**採礦模型非常實用，因為它們不需要使用者必須為資料庫管理員，而且它們只會使用磁碟空間，只要連接為開啟。  
+ **工作階段**子句可讓您建立的採礦模型，會在連接關閉或是工作階段的逾時自動從伺服器移除。**工作階段**採礦模型非常實用，因為它們不需要使用者必須為資料庫管理員，而且它們只會使用磁碟空間，只要連接為開啟。  
   
  **WITH DRILLTHROUGH**子句能夠鑽研新採礦模型。 唯有您建立模型時，才能啟用鑽研。 對於某些模型類型而言，需要鑽研才能夠在自訂檢視器中瀏覽此模型。 預測或是使用 Microsoft 一般內容樹狀檢視器來瀏覽此模型時，並不需要鑽研。  
   
@@ -131,7 +133,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 |\<預測 > 子句|Description|  
 |---------------------------|-----------------|  
-|**預測**|這個資料行可以依模型預測，也可以在輸入案例中提供以預測其他可預測資料行的值。|  
+|**PREDICT**|這個資料行可以依模型預測，也可以在輸入案例中提供以預測其他可預測資料行的值。|  
 |**PREDICT_ONLY**|這個資料行可以依模型預測，但是其值不能用於輸入案例中以預測其他可預測資料行的值。|  
   
 ### <a name="parameter-definition-list"></a>參數定義清單  
@@ -206,10 +208,9 @@ CREATE MINING MODEL SalesForecast (
 USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP')  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦延伸模組 &#40; DMX &#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

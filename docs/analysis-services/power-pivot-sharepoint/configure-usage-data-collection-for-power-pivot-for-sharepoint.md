@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d074eb99de5c97bb9df38d6f2305fb906370f64a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>設定使用量資料收集的對象 (PowerPivot for SharePoint
   使用量資料收集是伺服陣列層級的 SharePoint 功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會使用並擴充此系統來支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的報表，以便顯示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料與服務的使用方式。 根據您安裝 SharePoint 的方式而定，可能會關閉伺服陣列的使用量資料收集。 伺服器陣列管理員必須啟用使用量記錄，以建立會顯示在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的使用量資料。  
@@ -201,7 +200,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [組態設定參考 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [PowerPivot 使用量資料收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
+ [Power Pivot 使用量資料收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
   
-

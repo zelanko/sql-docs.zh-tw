@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a440ee58a5c59237ee31186beb19d1847e814637
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>SQLGetTypeInfo 與擷取的資料類型資訊
 ODBC 從基礎 SQL 資料類型對應，以 ODBC 類型識別項是近似值，因為提供的函式 (**SQLGetTypeInfo**) 透過其驅動程式可以完整地描述每個資料來源中的 SQL 資料類型。 此函數會傳回結果集，其中每個資料列描述單一資料類型，例如名稱、 型別識別項、 有效位數、 小數位數和 null 屬性的特性。  
@@ -42,4 +40,3 @@ ODBC 從基礎 SQL 資料類型對應，以 ODBC 類型識別項是近似值，�
 -   ODBC 不會定義資料型別名稱，以用於**CREATE TABLE**和**ALTER TABLE**陳述式。 應用程式應該改用所傳回的結果集之 TYPE_NAME 資料行中傳回的名稱**SQLGetTypeInfo**。 這麼做的原因是，雖然大部分的 SQL 不不同大部分 Dbms 之間，資料型別名稱不同極大的差異。 而不是強迫驅動程式來剖析 SQL 陳述式和標準的資料型別名稱取代 DBMS 專屬資料型別名稱，ODBC 會需要應用程式在第一次使用特定 DBMS 的名稱。  
   
  請注意， **SQLGetTypeInfo**不一定會描述所有的應用程式可能會遇到的資料類型。 特別是，結果集可能包含不直接支援的資料來源的資料類型。 比方說，目錄函數所傳回的結果集裡的資料行的資料類型會由 ODBC，這些資料類型可能不支援資料來源。 若要判斷結果集中的資料類型的特性，應用程式呼叫**SQLColAttribute**。
-

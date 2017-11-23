@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e672add8738558615d01d6d402bec5cbe34dc295
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5cba782d32a60b2bbdcf61276db6a1989f82c50b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 陳述式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,13 +39,12 @@ ms.lasthandoff: 09/09/2017
   
 |主題|Description|  
 |-----------|-----------------|  
-|[使用不含任何參數的 SQL 陳述式](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)|說明如何使用沒有包含任何參數的 SQL 陳述式。|  
-|[搭配參數使用 SQL 陳述式](../../connect/jdbc/using-an-sql-statement-with-parameters.md)|說明如何使用包含參數的 SQL 陳述式。|  
-|[使用 SQL 陳述式來修改資料庫物件](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md)|說明如何使用 SQL 陳述式以修改資料庫物件。|  
-|[使用 SQL 陳述式來修改資料](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)|說明如何使用 SQL 陳述式以修改資料庫中的資料。|  
+|[使用不含參數的 SQL 陳述式](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)|說明如何使用沒有包含任何參數的 SQL 陳述式。|  
+|[搭配使用 SQL 陳述式與參數](../../connect/jdbc/using-an-sql-statement-with-parameters.md)|說明如何使用包含參數的 SQL 陳述式。|  
+|[使用 SQL 陳述式修改資料庫物件](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md)|說明如何使用 SQL 陳述式以修改資料庫物件。|  
+|[使用 SQL 陳述式修改資料](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)|說明如何使用 SQL 陳述式以修改資料庫中的資料。|  
   
-## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式搭配使用陳述式](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [搭配使用陳述式與 JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
-

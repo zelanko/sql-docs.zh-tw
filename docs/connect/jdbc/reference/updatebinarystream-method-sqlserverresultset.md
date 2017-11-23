@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.updateBinaryStream
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.updateBinaryStream
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1af26ac2-76e5-4a26-a600-9919211333ba
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0574e4fa5d7f55c7addb2698ba97a5b5574b2a92
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a3848461559afd1d1474818db8d1e1cf8116731a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="updatebinarystream-method-sqlserverresultset"></a>updateBinaryStream 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,9 +42,8 @@ ms.lasthandoff: 09/09/2017
 |[updateBinaryStream （java.lang.String，java.io.InputStream，int）](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-int.md)|使用二進位資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
 |[updateBinaryStream （java.lang.String，java.io.InputStream，long）](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-long.md)|使用二進位資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

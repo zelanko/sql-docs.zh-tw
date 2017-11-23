@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, reference
 - XMLA, reference
 ms.assetid: 88045e05-ce47-4e28-999b-7f9c74af9faf
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 826536d6f28df078b3ca0899176303cbe1a06865
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c85218c4cf2bdbd20db1f45b46efe9dd677dfea4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-for-analysis--xmla-reference"></a>XML for Analysis (XMLA) 參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用 XML for Analysis (XMLA) 通訊協定來處理用戶端應用程式和 Analysis Services 執行個體之間的通訊。 在最基本的層級上，其他用戶端程式庫 (例如 ADOMD.NET 和 AMO) 會以 XMLA 建構要求及解碼回應，當做 Analysis Services 執行個體 (以獨佔方式使用 XMLA) 的中繼。  
@@ -55,8 +53,7 @@ ms.lasthandoff: 09/01/2017
   
  [使用分析管理物件 &#40;AMO&#41; 來開發](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [了解 Microsoft OLAP 架構](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
   
-

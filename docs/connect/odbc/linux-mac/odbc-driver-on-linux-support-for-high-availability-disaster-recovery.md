@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53553cc88d771aeb7ef7d537309583fb49e1aaa6
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7b6c72d350b718a7676bffd72c261b7cfa72667
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>在 Linux 和 macOS 高可用性和災害復原的支援上的 ODBC 驅動程式
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -124,11 +122,10 @@ ODBC 應用程式使用[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]可以�
 |[SQLConnect 函式](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect**同時支援**ApplicationIntent**和**MultiSubnetFailover**透過資料來源名稱 (DSN) 或連接屬性。|  
 |[SQLDriverConnect 函式](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect**支援**ApplicationIntent**和**MultiSubnetFailover**透過 DSN、 連接字串關鍵字或連接屬性。|
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 
 [連接字串關鍵字和資料來源名稱 (DSN)](../../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 
 [程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
 [版本資訊](../../../connect/odbc/linux-mac/release-notes.md)  
-

@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.partitionmgr.f1
+f1_keywords: sql13.asvs.bidtoolset.partitionmgr.f1
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 13beb940c74b269a15fcae447e144a4767288848
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 737b5220666edbbb481f0e50671b65e5a55a1de5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>在工作空間資料庫中建立及管理資料分割 (SSAS 表格式)
   分割區會將一個資料表分割成多個邏輯部分。 每個資料分割可以不受其他資料分割的影響，單獨處理 (重新整理) 或平行處理。 資料分割可以改善大型資料庫的可調適性和管理能力。 依預設，每個資料表都包含一個資料分割，其中包含所有資料行。 本主題中的工作說明如何使用 **中的** [資料分割管理員] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
@@ -83,4 +81,3 @@ ms.lasthandoff: 09/01/2017
  [在工作空間資料庫中處理資料分割 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
   
   
-

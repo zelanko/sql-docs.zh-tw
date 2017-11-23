@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_FUNCTIONS
+apiname: MDSCHEMA_FUNCTIONS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_FUNCTIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_FUNCTIONS rowset
 ms.assetid: 5253fa8c-b1ce-4504-aff6-a246b5e675c7
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 446f89e34824cbb4ebde3d49bb3ceb686b4adafd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e0ce2d79d149e1cf3ba6fbbe0cbe14ed8dffa14
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemafunctions-rowset"></a>MDSCHEMA_FUNCTIONS 資料列集
   描述可用於與資料庫相連接的用戶端應用程式的函數。  
@@ -66,8 +62,7 @@ ms.lasthandoff: 09/01/2017
 |**FUNCTION_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**來源**|**DBTYPE_I4**|選擇性。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

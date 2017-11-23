@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 430ecbc0ed6814d2a626f67c3e36ab49cc930262
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52b7a92280566258321a46ecfb2c489e81267965
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-representationtabular"></a>資料庫表示法 (表格式)
   在表格式模式中，資料庫是在表格式模型中的所有物件的容器。  
@@ -100,4 +98,3 @@ catch (Exception createDBxc)
  實際了解如何使用 AMO 建立及操作資料庫表示法，請參閱 「 表格式 AMO 2012 範例; 在原始碼特別要檢查以下的原始程式檔： Database.cs。 您可以在 Codeplex 上取得範例。 提供此範例程式碼的用意只是為了支援這裡所說明的邏輯概念，您不應將其用於生產環境。  
   
   
-

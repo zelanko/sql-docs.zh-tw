@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- drillthrough [Analysis Services]
+helpviewer_keywords: drillthrough [Analysis Services]
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e7b636ccf4c39f90a356e8b7289453afb61bbac7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 849c244bdfb40770d8038a78a430faa7ff26b6b8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>鑽研採礦模型的案例資料
   如果採礦模型已經設定為讓您鑽研模型案例，當您瀏覽此模型時，可以擷取有關用來建立模型之案例的詳細資訊。 此外，如果基礎採礦結構已經設定為允許鑽研結構案例，而且您擁有適當的權限，就可以從採礦結構傳回資訊。 這可能包括沒有包含在採礦模型中的資料行。  
@@ -65,8 +63,7 @@ ms.lasthandoff: 09/01/2017
   
 6.  若要將資料複製到剪貼簿，請以滑鼠右鍵按一下資料表中的任何資料列，然後選取 [全部複製]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   
-

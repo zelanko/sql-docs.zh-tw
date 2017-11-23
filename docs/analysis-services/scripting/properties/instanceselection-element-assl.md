@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- InstanceSelection Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: InstanceSelection Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- InstanceSelection element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: InstanceSelection element
 ms.assetid: 908a2da9-274c-40d2-87dc-4641cb8d77e6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bd380986bf21d773dc9726b17eff816bf45af0ec
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4587536131aa3484846bc241a08be866a30d1da6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="instanceselection-element-assl"></a>InstanceSelection 元素 (ASSL)
   提供一個提示給用戶端應用程式，以便根據清單中的預期項目數目來建議應該如何顯示項目清單。  
@@ -77,8 +72,7 @@ ms.lasthandoff: 09/01/2017
   
  列舉型別對應至允許的值**InstanceSelection**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.InstanceSelection>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

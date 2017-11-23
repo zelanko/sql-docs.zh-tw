@@ -1,5 +1,5 @@
 ---
-title: "&amp;= (位元 AND EQUALS) (TRANSACT-SQL) |Microsoft 文件"
+title: "&amp;= （位元 AND 指派） (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,33 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '&='
 - '&=_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - compound operators, &=
+- assignment operators, &=
+- augmented operators, &=
 - '&= (bitwise AND equals)'
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2abeab8180dcc59db7abc07a379355941a414e2d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f5c52444f3ba653db65c5ad700dd8d11704466c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="amp-bitwise-and-equals-transact-sql"></a>&amp;= (位元 AND EQUALS) (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="amp-bitwise-and-assignment-transact-sql"></a>&amp;= （位元 AND 指派） (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
 
   在兩個整數值之間執行位元邏輯 AND 運算，再將值設定為運算結果。  
   
@@ -56,11 +56,10 @@ expression &= expression
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[& &#40;位元 AND &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [位元運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-

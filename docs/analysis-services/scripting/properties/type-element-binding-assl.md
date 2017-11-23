@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Type Element (Binding)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Type Element (Binding)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- TYPE
-helpviewer_keywords:
-- Type element
+applies_to: SQL Server 2016 Preview
+f1_keywords: TYPE
+helpviewer_keywords: Type element
 ms.assetid: b5f5c485-dc83-4d66-a8d2-e96e96d068f9
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8e90c53373c0f73a286157be247796866baff3f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 978a5ce423cfa50bbe958046ff7f5da77314cd83
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-element-binding-assl"></a>Type 元素 (Binding) (ASSL)
   包含屬性繫結的類型。  
@@ -83,9 +77,8 @@ ms.lasthandoff: 09/01/2017
   
  對應至父系的項目**類型**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.AttributeBinding>和<xref:Microsoft.AnalysisServices.CubeAttributeBinding>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [繫結資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

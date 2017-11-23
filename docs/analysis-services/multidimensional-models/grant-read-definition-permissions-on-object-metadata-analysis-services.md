@@ -19,17 +19,16 @@ helpviewer_keywords:
 - permissions [Analysis Services], read metadata
 - read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 54ecfb3c65f3ab31caf318f6760c653db16ecb78
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55c4e6d43ffedd933e968e8fc2355871c698d290
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>授與物件中繼資料的讀取定義權限 (Analysis Services)
   讀取所選物件上的物件定義或中繼資料的權限，可讓管理員授與檢視物件資訊的權限，而不必同時授與修改物件定義、修改物件結構或檢視物件實際資料的權限。 [讀取定義] 權限可以在資料庫、資料來源、維度、採礦結構和採礦模型層級上授與。 如果您要求 Cube 的 [讀取定義] 權限，就必須針對資料庫啟用 [讀取定義]。請記住，權限是加總的。 例如，某個角色會授與讀取 Cube 之中繼資料的權限，而第二個角色則會授與讀取維度之中繼資料的相同使用者權限。 兩個不同角色的權限結合之後，使用者就會同時擁有讀取該資料庫內 Cube 之中繼資料和維度之中繼資料的權限。  
@@ -68,9 +67,8 @@ ms.lasthandoff: 09/01/2017
   
 5.  按一下 [確定]，完成角色的建立。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [授與資料庫權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
  [授與處理權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   
-

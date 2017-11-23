@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- geography
-dev_langs:
-- TSQL
+f1_keywords: geography
+dev_langs: TSQL
 helpviewer_keywords:
 - geography data type [SQL Server], Transact-SQL
 - spatial data types [SQL Server]
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: e13e451fefafe8f213bd63da41c22ede4c0f1b5b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3525cc718e5e0efddd6cef2e3f2cff57247058c2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="spatial-types---geography"></a>空間類型的地理位置
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,9 +95,8 @@ CREATE TABLE SpatialTable
 )  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
 
   
   
-

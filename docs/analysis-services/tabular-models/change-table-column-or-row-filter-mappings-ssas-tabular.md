@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a88238ef377de669f3100852272c9cdbee8987c1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b80323e5aaf1dd6c469ddffefb5d92542e9d3a19
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>變更資料表、資料行或資料列篩選對應 (SSAS 表格式)
   本主題描述如何在 **中使用** [編輯資料表屬性] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]對話方塊來變更資料表、資料行或資料列篩選對應。  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
  [編輯資料表屬性對話方塊 &#40;SSAS&#41;](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)  
   
   
-

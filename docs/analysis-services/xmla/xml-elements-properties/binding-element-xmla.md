@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Binding Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Binding Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.binding
 - http://schemas.microsoft.com/analysisservices/2003/engine#Binding
 - urn:schemas-microsoft-com:xml-analysis#Binding
-helpviewer_keywords:
-- Binding element
+helpviewer_keywords: Binding element
 ms.assetid: d5acd8d4-8551-449a-ae30-d0ba828cc02d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c3fb4afd47111911ba067e6f4488b749179cd3ab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fc27d3a74abd4dbeb19113bde191fa969f7cd7bd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="binding-element-xmla"></a>Binding 元素 (XMLA)
   定義為單行繫結[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件，例如在維度中，屬性為[繫結](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md)集合[批次](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)或[處理序](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)命令。  
@@ -75,8 +70,7 @@ ms.lasthandoff: 09/01/2017
   
  單行繫結的詳細資訊，請參閱[資料來源和繫結 &#40;SSAS 多維度 &#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STNumCurves
 - STNumCurves_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STNumCurves method (geography)
+dev_langs: TSQL
+helpviewer_keywords: STNumCurves method (geography)
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ca3fb9f80ac8404359d759920057f082167ced55
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c92c6dec90faf08d69ed49de506ba8c4371141ba
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -76,9 +72,8 @@ ms.lasthandoff: 09/01/2017
  SELECT @g.STNumCurves();
  ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)   
- [Geography 執行個體上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [地理例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

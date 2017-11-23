@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerCallableStatement.setObject (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerCallableStatement.setObject (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 14b84409-5510-4642-a83b-732d8511c5b1
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d8c6d664616a000acfb628ebcb15ba1eb917f059
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 572d4b53bca44d51f4e6c9f41c6d16be40aeaeea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setobject-method-javalangstring-javalangobject"></a>setObject 方法 (java.lang.String, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -64,10 +60,9 @@ public void setObject(java.lang.String sCol,
   
  如需詳細資訊，請參閱[如何設定 java.sql.Time 值傳送給伺服器](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [setObject 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
-

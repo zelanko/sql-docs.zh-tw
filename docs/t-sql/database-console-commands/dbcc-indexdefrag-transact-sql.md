@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - DBCC INDEXDEFRAG
 - DBCC_INDEXDEFRAG_TSQL
 - INDEXDEFRAG_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - defragmenting indexes
 - DBCC INDEXDEFRAG statement
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f2444d6510e680d2ca3ab9938df92b839a7d04ac
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 79750bc5f94a7a2b459d0b3e3266ea7ee91bc4dc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -235,7 +232,7 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
@@ -243,5 +240,4 @@ GO
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
   
   
-
 

@@ -8,29 +8,26 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- sqlsrv_fetch_object
+apiname: sqlsrv_fetch_object
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch_object
 - API Reference, sqlsrv_fetch_object
 - retrieving data, as an object
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 68c6e32e4aa090dc76d80e176f7653815c80335b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0c2caedf7b6bb6e0e4a996c885144b219798ab1d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -249,9 +246,8 @@ SELECT SCOPE_IDENTITY()</pre>
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [擷取資料](../../connect/php/retrieving-data.md)  
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
   
-

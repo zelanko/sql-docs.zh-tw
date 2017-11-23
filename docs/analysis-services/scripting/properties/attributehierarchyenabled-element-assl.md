@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AttributeHierarchyEnabled Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AttributeHierarchyEnabled Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AttributeHierarchyEnabled
-helpviewer_keywords:
-- AttributeHierarchyEnabled element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AttributeHierarchyEnabled
+helpviewer_keywords: AttributeHierarchyEnabled element
 ms.assetid: 1e95307f-530e-4e98-a0e1-2b0462d330a3
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5581a7b280eb2ba93144afbabad6e5e9e181d7d9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cddc7cbc87e9644667d5012803ad52a80a572ce7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributehierarchyenabled-element-assl"></a>AttributeHierarchyEnabled 元素 (ASSL)
   決定是否針對此屬性啟用屬性階層。  
@@ -71,9 +65,8 @@ ms.lasthandoff: 09/01/2017
   
  對應至父系的項目**AttributeHierarchyEnabled**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CubeAttribute>和<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [AttributeHierarchyVisible 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/attributehierarchyvisible-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

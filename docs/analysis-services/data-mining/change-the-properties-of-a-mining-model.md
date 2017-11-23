@@ -17,17 +17,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a0b40837b81326e63821e4f46f360f79b5940280
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d4319c2394df0e2edae0e037c14305dae09968fb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>變更採礦模型的屬性
   有些採礦模型屬性可套用至整個模型，有些模型屬性只套用至個別資料行。 例如， **Drillthrough** 屬性可套用至整個模型，它指定案例資料是否應該可用於查詢， **Description** 屬性也是這類屬性。 套用至資料行的屬性包含 **Usage** 和 **ModelingFlags**，它們控制資料行中的資料在模型內的使用方式。  
@@ -63,4 +62,3 @@ ms.lasthandoff: 09/01/2017
  [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   
-

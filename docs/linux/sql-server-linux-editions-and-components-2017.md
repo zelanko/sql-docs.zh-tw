@@ -31,16 +31,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 58503277d586394e329c6232ab097a2d9d9d69cd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0011a3f43860b353867852e944a0c2ab8a48f9f4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>版本和支援的功能的 SQL Server 2017 on Linux
 
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/25/2017
 安裝需求根據應用程式的需要而異。 不同的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本可配合組織和個人的獨特效能、執行階段和價格需求。 安裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件也將取決於您的特定需求。 下列章節幫助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的可用版本和元件之間做出最好的選擇。  
 
 如需最新版本資訊和新功能資訊，請參閱下列項目：
-- [SQL Server 上的 Linux 版本資訊](sql-server-linux-release-notes.md)
+- [Linux 上的 SQL Server 版本資訊](sql-server-linux-release-notes.md)
 - [新功能 SQL Server on Linux](sql-server-linux-whats-new.md)
 
 如需在 Linux 上無法使用的 SQL Server 功能的清單，請參閱[不支援的功能和服務](sql-server-linux-release-notes.md#Unsupported)。
@@ -121,11 +120,11 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |加密的備份|是|是|否|否|
 |混合式備份至 Windows Azure (備份至 URL)|是|是|否|否|
   
-<sup>1</sup> Enterprise edition 上的節點數目是作業系統最大值。 在 Standard edition 上沒有兩個節點的支援。 
+<sup>1</sup> Enterprise edition 上的節點數目是作業系統最大值。 Standard Edition 支援兩個節點。 
 
 <sup>2</sup>在 Enterprise 版本中，提供最多 8 個次要複本-包括 2 個同步次要複本的支援。 
 
-<sup>3</sup> standard edition 支援基本可用性群組。 基本可用性群組支援兩個複本，與某一個資料庫。 如需基本可用性群組的詳細資訊，請參閱[基本可用性群組](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。    
+<sup>3</sup> standard edition 支援基本可用性群組。 基本可用性群組支援兩個複本，使用一個資料庫。 如需基本可用性群組的詳細資訊，請參閱[基本可用性群組](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。    
 
 ##  <a name="RDBMSSP"></a> RDBMS 延展性和效能  
   
@@ -229,4 +228,3 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 
   
   
-

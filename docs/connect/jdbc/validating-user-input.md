@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a00eafc9f72910f05c1850b25bba5e91a4e276a6
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f46806c35bffcc9cacd77483f6a4cfe01153d5a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="validating-user-input"></a>驗證使用者輸入
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,8 +32,7 @@ ms.lasthandoff: 09/09/2017
   
  多個 SQL 資料隱碼以及如何避免這樣的詳細資訊，請參閱 < SQL 資料隱碼 」 中,[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。 如需有關驗證預存程序參數的詳細資訊，請參閱 「 預存程序 ([!INCLUDE[ssDE](../../includes/ssde_md.md)]) 」 以及從屬主題中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
   
-## <a name="see-also"></a>另請參閱  
- [保護 JDBC 驅動程式應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+## <a name="see-also"></a>請參閱＜  
+ [保護 JDBC Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
-

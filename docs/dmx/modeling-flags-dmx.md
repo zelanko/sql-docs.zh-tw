@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - REGRESSOR flag
 - DMX [Analysis Services], modeling flags
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - flags [DMX]
 - NOT NULL flag
 ms.assetid: 498d25f7-9597-47ae-8717-61ddd1d2fd15
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8db8cd9de8d614c3b44bb2012dfbc5b33448807c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ce032085f10db22608aee69b886724309e83506b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="modeling-flags-dmx"></a>模型旗標 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,10 +41,10 @@ ms.lasthandoff: 08/02/2017
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列模型旗標：  
   
- **不是 NULL**  
+ **NOT NULL**  
  屬性資料行的值絕對不能包含 Null 值。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在模型培訓處理過程中遇到這個屬性資料行的 Null 值，將會產生錯誤。 這個旗標是在採礦結構資料行定義。  
   
- **迴歸輸入變數**  
+ **REGRESSOR**  
  指示演算法可以在迴歸演算法的迴歸公式中使用指定的資料行。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 線性迴歸與 [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法支援這個旗標，而這個旗標是在採礦模型資料行定義。  
   
  **MODEL_EXISTENCE_ONLY**  
@@ -71,7 +69,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
   
  如需有關使用採礦模型資料行的詳細資訊，請參閱[採礦模型資料行](../analysis-services/data-mining/mining-model-columns.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
@@ -84,4 +82,3 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

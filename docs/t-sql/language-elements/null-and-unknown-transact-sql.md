@@ -8,24 +8,21 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d0523877d572bd644fa772713f3c7edb82d645f2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bdac1899707b3caa4f4c515324511a47830f2722
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL 和不明 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -60,11 +57,10 @@ ms.lasthandoff: 09/01/2017
 |NULL|NULL|UNKNOWN|  
 |FALSE|NULL|UNKNOWN|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [和 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/and-transact-sql.md)   
  [或者 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/or-transact-sql.md)   
  [不 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/not-transact-sql.md)   
  [為 NULL &#40;TRANSACT-SQL &#41;](../../t-sql/queries/is-null-transact-sql.md)  
   
   
-

@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerClob.getSubString
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerClob.getSubString
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7492c21386b833d335cc898d997afdb3e04f3b97
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0030ce1e83feaa1a619fa9ead2bac3dfec4ccf6d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>getSubString 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -63,10 +59,9 @@ public java.lang.String getSubString(long pos,
   
  嘗試從 null 或零長度 CLOB 中取得零個字元時，將會傳回空字串。 嘗試在零長度 CLOB 中的位置 1 以外之任何位置取得任何長度的字元時，將會擲回位置例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerClob 方法](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob 成員](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob 類別](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   
-

@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e5328a9c360fa4465e0bcf53bd0f017447c7c113
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: abb371783474c7a0580d5694e7ad2afeabce3a4c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer 元素 (CSDLBI)
   EntityContainer 元素是以 CSDL 類型 EntityContainer 為基礎的複雜類型，會定義單一資料模型中實體的集合。 在商業智慧應用程式中，EntityContainer 所代表的資料模型可能包含多個以關聯性連結資料行的資料表，以及計算、量值和 KPI。 它在概念上與資料庫或資料來源類似。  
@@ -120,8 +118,7 @@ ms.lasthandoff: 09/01/2017
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [EntitySet 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)  
   
   
-

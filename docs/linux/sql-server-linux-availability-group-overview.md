@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
+ms.openlocfilehash: 950a02b20e2a99565c235e6be477827a580b142f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c5c7e602ac1beedb028072b4c82578e9948af43d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-groups-for-sql-server-on-linux"></a>SQL Server on Linux 的可用性群組
 
@@ -63,7 +62,7 @@ SQL Server 可用性群組，SQL Server 2012 中首度引進，並經過改進�
  次要資料庫  
  可用性資料庫的唯讀複本。  
   
- 可用性複本  
+ 「可用性複本」  
  具現化的 SQL server 的特定執行個體所裝載的可用性群組會維護屬於可用性群組每個可用性資料庫的本機副本。 有兩種類型的可用性複本存在：單一 *「主要複本」* 以及一到八個 *「次要複本」*。  
   
  「主要複本」  
@@ -107,4 +106,3 @@ Use `required_synchronized_secondaries_to_commit`with `CREATE AVAILABILITY GROUP
 [SLES 上加入可用性群組叢集資源](sql-server-linux-availability-group-cluster-sles.md)
 
 [在 Ubuntu 上加入可用性群組叢集資源](sql-server-linux-availability-group-cluster-ubuntu.md)
-

@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerCallableStatement.getDate (int, java.util.Calendar)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerCallableStatement.getDate (int, java.util.Calendar)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 38ce7b75-2623-4eff-bc18-8cf7193adec8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4aeaade0f605e2450ed689af5bae41e1ef4b1315
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b070b5f39a062135e6a0f19546b0265a18d4c86
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getdate-method-int-javautilcalendar"></a>getDate 方法 (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -63,10 +59,9 @@ public java.sql.Date getDate(int index,
   
  這個方法會傳回有效日期部分[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime**或**smalldatetime**資料型別，而時間部分是設定成 Java 時間基準 00:00 （午夜）。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [getDate 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
-

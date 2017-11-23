@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerClob.getAsciiStream
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerClob.getAsciiStream
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 134abe5e-5add-4d27-b333-b4b0f4d94c31
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6cbaa7a53b77cfaaaa1ebbe19a88da0c8576a553
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4025d8814415e0889168bba781254a736d504260
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getasciistream-method-sqlserverclob"></a>getAsciiStream 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,10 +49,9 @@ public java.io.InputStream getAsciiStream()
   
  一定會傳回位元組的資料流，並假設 CLOB 中的資料為 ASCII 格式，因為無法得知它是否為 Unicode 或是其他任何多位元組字碼頁。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerClob 方法](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob 成員](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob 類別](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   
-

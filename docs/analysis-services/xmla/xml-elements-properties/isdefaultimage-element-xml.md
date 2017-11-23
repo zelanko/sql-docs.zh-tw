@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: e29cd137-af82-4753-a681-0d3e705513f3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 57419279e470e9ae5e3bf22a1527e4a889ae79be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed09bbccf5bb5aa399fbab0c9e6a58c7f58c7ecd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="isdefaultimage-element-xml"></a>IsDefaultImage 元素 (XML)
   表示可以透過此關聯性導覽至另一個資料表以及提取具有屬性 IsDefaultImage 的成員，取得此實體的預設影像。  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  如**RelationshipEndVisualizationProperties**項目， **IsDefaultImage**項目指示瀏覽至這個另一端，可以取得此實體的預設影像關聯性。 預設值**false**表示不沒有要取得任何預設影像。  
   
   
-

@@ -22,17 +22,16 @@ helpviewer_keywords:
 - cubes [Analysis Services], calculations
 - Multidimensional Expressions [Analysis Services], scripts
 ms.assetid: fdecb3ce-7c87-4bab-8000-532ba7a29f96
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bf34d952a7a52b3993a3ddaec02caf34e93fb76d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 11d9dd08521f271284c13a3d93e37fe32d8850b5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-scripting-fundamentals-analysis-services"></a>MDX 指令碼基礎觀念 (Analysis Services)
   在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，多維度運算式 (MDX) 指令碼是由一或多個 MDX 運算式或陳述式構成，利用計算擴展 Cube。  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
  [MDX 語言參考 &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)  
   
   
-

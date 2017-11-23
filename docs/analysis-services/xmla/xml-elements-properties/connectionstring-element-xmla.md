@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ConnectionString Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ConnectionString Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.connectionstring
 - urn:schemas-microsoft-com:xml-analysis#ConnectionString
 - http://schemas.microsoft.com/analysisservices/2003/engine#ConnectionString
-helpviewer_keywords:
-- ConnectionString element
+helpviewer_keywords: ConnectionString element
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 435d5d141652c4f043043fd26c85b9cb9a29f040
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b6c6227db17c74b4c33d07abfcd809ae01bc3a9a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connectionstring-element-xmla"></a>ConnectionString 元素 (XMLA)
   包含父系所使用的連接字串[位置](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)或[來源](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)項目。  
@@ -80,10 +75,9 @@ ms.lasthandoff: 09/01/2017
   
  如需有關備份和還原物件的詳細資訊，請參閱[備份、 還原，並同步處理資料庫 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Restore 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
  [同步處理項目 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

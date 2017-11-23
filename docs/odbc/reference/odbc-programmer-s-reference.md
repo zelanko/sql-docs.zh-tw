@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], reference
+helpviewer_keywords: ODBC [ODBC], reference
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3fc868b66f6322d9769176671c8df2913d58150e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3c5440b6cfc25665156986a0aed99a1fa05e16be
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 程式設計人員 &#39; s 參考
 *ODBC 程式設計人員參考*包含下列各節。  
@@ -130,4 +127,3 @@ ms.lasthandoff: 09/09/2017
 -   是，Keith:*使用 ODBC 2* （佇列，1994年）。  
   
 -   Whiting 帳單：*教導您自己 ODBC 21 天內*(Howard 工時 Sam & 公司，1994年)。
-

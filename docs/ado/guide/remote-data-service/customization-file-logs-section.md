@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - logs section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: be0416bacdc32c272b5c88139b06e5e133e6a43a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 99d22cd98548548463f1cbd5516d26faaf4b9bf1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="customization-file-logs-section"></a>自訂檔案記錄檔 > 一節
 **記錄**區段包含指定名稱的作業期間會將錯誤記錄檔的記錄檔項目**DataFactory**。  
@@ -53,7 +51,7 @@ FileName
   
  記錄檔會包含使用者名稱、 HRESULT、 日期和時間的每個錯誤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自訂檔案 SQL > 一節](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [自訂檔案 UserList > 一節](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
@@ -61,6 +59,5 @@ FileName
  [必要的用戶端設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [了解自訂檔](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [撰寫您自己的自訂處理常式](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

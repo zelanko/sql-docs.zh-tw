@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: b606cd63-755c-4ac0-b19b-95b5363afbdf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a1478d3a38081dffefef764ffe15c4cd13b09b0b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8a0509c571af328e4f5a459dbcbc68e1672d00f4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables---partition-representation"></a>資料表的資料分割表示法
   您可以基於作業目的，將資料表分割成不同的資料列子集 (結合在一起時就會構成資料表)。其中每個子集都是資料表的資料分割。  
@@ -106,4 +104,3 @@ private void AddPartition(
  不過，若要了解如何使用 AMO 建立及操作資料分割表示法，請參閱「AMO 對表格式」範例的原始程式碼。 您可以在 Codeplex 上取得範例。 有關此程式碼的重要注意事項：此程式碼的提供目的只是為了支援這裡所說明的邏輯概念，不應該用於實際執行環境，也不應該用於教學以外的其他用途。  
   
   
-

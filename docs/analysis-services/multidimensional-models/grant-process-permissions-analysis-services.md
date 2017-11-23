@@ -18,17 +18,16 @@ helpviewer_keywords:
 - permissions [Analysis Services], process
 - process permissions [Analysis Services]
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 33582b08bd8579d7c2c3318594dcbf877c186757
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f1542d477a10e6a77e67e24d607b7086da1bb55
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授與處理權限 (Analysis Services)
   身為管理員，您可以建立專用於 Analysis Services 處理作業的角色，讓您能夠將該特殊工作委派給其他使用者，或委派給用於自動排程處理的應用程式。 處理權限可在資料庫、Cube、維度和採礦結構層級上授與。 除非您正在使用一個非常大的 Cube 或表格式資料庫，否則建議在資料層級授與處理權限，內含所有物件，包含彼此間具有相依性的物件。  
@@ -99,11 +98,10 @@ ms.lasthandoff: 09/01/2017
   
 5.  按一下 [確定] 以完成角色定義。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [處理資料庫、資料表或資料分割 &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [授與資料庫權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
  [授與物件中繼資料的讀取定義權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   
-

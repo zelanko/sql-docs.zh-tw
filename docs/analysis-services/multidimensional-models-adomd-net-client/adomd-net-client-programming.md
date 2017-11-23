@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ad5dc8c4f260156ef8fec7d52197f2a9137894de
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8a7debab516c8f48b4184c66028c42f44d5bdd2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 用戶端程式設計
   ADOMD.NET 用戶端元件位**Microsoft.AnalysisServices.AdomdClient**命名空間 （在 microsoft.analysisservices.adomdclient.dll 中)。 這些用戶端元件提供用戶端的功能與中介層應用程式輕鬆地查詢資料和中繼資料的分析資料存放區中，從這類[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 |----------|-----------------|  
 |[在 ADOMD.NET 中建立連接](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)|在 ADOMD.NET 中，您使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 物件建立與分析資料來源之間的連接，例如 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。 您可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 物件來執行命令、擷取資料以及從分析資料來源擷取中繼資料。|  
 |[從分析資料來源擷取中繼資料](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)|在建立連接之後，您可以使用各種廣泛的物件擷取有關基礎資料來源的資訊。 這個功能可讓應用程式適應它們已連接的資料來源。|  
-|[對分析資料來源執行命令](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 物件針對基礎分析資料來源執行命令提供所需的介面。|  
+|[針對分析資料來源執行命令](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 物件針對基礎分析資料來源執行命令提供所需的介面。|  
 |[從分析資料來源擷取資料](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)|執行命令之後，無法擷取及剖析使用資料<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>， <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>，或**System.XmlReader**物件。|  
 |[在 ADOMD.NET 中執行交易](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions.md)|所有列在這個資料表上一列中的動作，都可能在讀取認可交易中發生，在這個交易中，會在讀取資料時保持共用鎖定，以避免中途讀取 (Dirty Read)。 資料仍然可以在交易結束之前變更，不過這將造成不可重複的讀取或是虛設項目資料。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> 物件提供 ADOMD.NET 中的交易功能。|  
   
@@ -57,9 +55,8 @@ ms.lasthandoff: 09/01/2017
 |擷取有關 Cube 的中繼資料，例如可用的維度、量值、命名集等等。|<xref:Microsoft.AnalysisServices.AdomdClient.CubeDef><br /> <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> 代表有關 Cube 的中繼資料。 您無法從 <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> 參考 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>。|  
 |擷取使用資料**System.Data.IDbDataAdapter**介面|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataAdapter><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataAdapter> 為現有的 .NET Framework 用戶端應用程式提供唯讀支援。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADOMD.NET 伺服器程式設計](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)   
  [使用 ADOMD.NET 來開發](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
   
-

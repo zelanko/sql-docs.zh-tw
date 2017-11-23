@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 835e9cb8-5fd5-4a05-aa47-59ae3ed1ae6d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2b1c587d38961a2ad4bd97117473b04c3c3b2803
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fc5fb68d1c29bd51174dc659c9253925d2801a63
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcharacterstream-method-sqlservernclob"></a>getCharacterStream 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,10 +35,9 @@ ms.lasthandoff: 09/09/2017
 |[getCharacterStream 方法 &#40; &#41;&#40;SQLServerNClob &#41;](../../../connect/jdbc/reference/getcharacterstream-method-braces-sqlservernclob.md)|擷取**NCLOB**資料做為**讀取器**物件或資料流的字元。|  
 |[getCharacterStream 方法 &#40; 長時間，長時間 &#41;&#40;SQLServerNClob &#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long-sqlservernclob.md)|擷取**NCLOB**資料做為**讀取器**物件或字元的指定的位置和長度的資料流。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob 成員](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob 類別](../../../connect/jdbc/reference/sqlservernclob-class.md)  
   
   
-

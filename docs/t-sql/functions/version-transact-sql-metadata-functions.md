@@ -8,24 +8,21 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aa9dec84a07189eb3b2c6c9c3d9342db4eac1df6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1905ef3b0f31e91d6cec00c0314770b7686e8c51
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="version---transact-sql-metadata-functions"></a>版本-Transact SQL 中繼資料函數
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -53,9 +50,8 @@ VERSION ( )
 SELECT VERSION();  
 ```  
   
-## <a name="see-also"></a>另請參閱 
+## <a name="see-also"></a>請參閱＜ 
 [SESSION_ID (TRANSACT-SQL)](../../t-sql/functions/session-id-transact-sql.md)  
 [DB_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/db-name-transact-sql.md)  
   
   
-

@@ -8,21 +8,19 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: 6b7d1725d60ca59cdfb153e9448a146023f7ac66
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bcaa287ee77cbceb9dd2ff0be1aaafcd2898c252
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes"></a>版本資訊
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/09/2017
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>新功能的[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Windows 上  
  ODBC Driver 11 for SQL Server 包含新[功能](./features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)以及 SQL Server 2012 Native Client 中 ODBC 隨附的所有功能。  
-

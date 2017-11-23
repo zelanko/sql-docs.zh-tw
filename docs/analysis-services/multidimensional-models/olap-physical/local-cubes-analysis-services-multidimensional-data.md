@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- cubes [Analysis Services], local
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: cubes [Analysis Services], local
 ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5872bd5a1efda8d8add71bc1ce0e089785352e11
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 849f17d47b443e992bd314d6ce2d2a04ec080cd6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本機 Cube (Analysis Services - 多維度資料)
   若要建立、更新或刪除本機 Cube，您必須撰寫及執行 ASSL 指令碼或 AMO 程式。  
@@ -84,10 +81,9 @@ ms.lasthandoff: 09/01/2017
   
  使用伺服器 Cube 等角色時，本機 Cube 不會受到保護。 擁有本機 Cube 檔案之檔案層級存取權的任何人都可以查詢其中的 Cube。 您可以使用**加密密碼**本機 cube 檔案在本機 cube 檔案上設定密碼的連接屬性。 如果設定本機 Cube 檔案的密碼，就會要求本機 Cube 檔案的所有未來連接都要使用此密碼，才能查詢檔案。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [建立 GLOBAL CUBE 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
  [開發使用 Analysis Services 指令碼語言 &#40;ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [重新整理 CUBE 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
   
   
-

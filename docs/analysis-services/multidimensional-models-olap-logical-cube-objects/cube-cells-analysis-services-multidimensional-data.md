@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - storing data [Analysis Services], cells
 - hierarchies [Analysis Services], cells
@@ -32,17 +31,16 @@ helpviewer_keywords:
 - leaf members
 - leaf cells
 ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96d7b596c1434dce62dfd9013f277b182f5ff4c1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7da5c513675b85a209e76da5787828eb31be24f8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>Cube 資料格 (Analysis Services - 多維度資料)
   Cube 是由資料格所組成，而依據量值群組和維度來進行組織。 資料格代表 Cube 內每個維度之某個成員於 Cube 內的唯一邏輯交集。 例如，下圖所描述的 Cube 包含一個具有兩個量值的量值群組，並依 Source、Route 和 Time 這三個維度來進行組織。  
@@ -92,9 +90,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="security"></a>安全性  
  資料格資料的存取是在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的角色層級中進行管理，且可使用 MDX 運算式進行細微的控制。 如需詳細資訊，請參閱[授與自訂存取維度資料 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)，和[授與自訂資料 &#40; 的儲存格的存取Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Cube 儲存體 &#40;Analysis Services-多維度資料 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
  [彙總和彙總設計](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   
-

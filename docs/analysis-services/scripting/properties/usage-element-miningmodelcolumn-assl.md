@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Usage Element (MiningModelColumn)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Usage Element (MiningModelColumn)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Usage
-helpviewer_keywords:
-- Usage element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Usage
+helpviewer_keywords: Usage element
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0e463c7b1c4410cdf134509d3afb2b3410f652db
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eb454a49ae0035cedca3a8ef322f5f9d13c7625e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Usage 元素 (MiningModelColumn) (ASSL)
   描述如何與父系相關聯的資料行[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)用。  
@@ -79,8 +73,7 @@ ms.lasthandoff: 09/01/2017
   
  列舉型別對應至允許的值**使用量**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MiningModelColumnUsages>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

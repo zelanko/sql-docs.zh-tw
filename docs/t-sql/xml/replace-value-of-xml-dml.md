@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - XML DML [SQL Server]
 - update keyword
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - updating node values
 - replace value of XML DML statement
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2ac4a0a7f1e2dc5d5f268c306c0e1a92316c99da
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7b559d81e2cca495885f740092ac182a4554a012
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -200,11 +197,10 @@ from T
   
  請注意使用**轉換**取代 LotSize 值時。 當該值必須是特定類型時就需要使用它。 在此範例中，如果值為 500，就不一定需要明確轉換。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)   
  [XML 資料修改語言 &#40;XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

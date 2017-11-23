@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STNumInteriorRing_TSQL
 - STNumInteriorRing (geometry Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STNumInteriorRing (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STNumInteriorRing (geometry Data Type)
 ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 87d76bd510e5651fedf662ccd8c1446155f46629
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c424d1804897062be3eefc6c8240c9973bb1d92d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,9 +57,8 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STNumInteriorRing();  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

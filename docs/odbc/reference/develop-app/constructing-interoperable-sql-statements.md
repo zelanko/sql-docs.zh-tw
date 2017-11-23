@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f3ce3621c9a6cd709dc008f436fe89fbba14ef3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 070b42e5350471ec86fbc256f2005dd7c0385002
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="constructing-interoperable-sql-statements"></a>建構可互通的 SQL 陳述式
 如先前章節中所述，互通的應用程式應使用 ODBC SQL 文法。 不過，超過使用此文法，產生了一些額外的問題正面臨互通的應用程式。 例如，應用程式的作用為何想要使用的功能，例如外部聯結中，不支援的所有資料來源？  
@@ -37,19 +35,18 @@ ms.lasthandoff: 09/09/2017
   
  此章節包含下列主題。  
   
--   [類別目錄和結構描述的使用方式](../../../odbc/reference/develop-app/catalog-and-schema-usage.md)  
+-   [目錄和結構描述的使用方式](../../../odbc/reference/develop-app/catalog-and-schema-usage.md)  
   
 -   [目錄位置](../../../odbc/reference/develop-app/catalog-position.md)  
   
--   [引號的識別碼](../../../odbc/reference/develop-app/quoted-identifiers.md)  
+-   [引號識別碼](../../../odbc/reference/develop-app/quoted-identifiers.md)  
   
--   [識別項大小寫](../../../odbc/reference/develop-app/identifier-case.md)  
+-   [識別碼大小寫](../../../odbc/reference/develop-app/identifier-case.md)  
   
 -   [逸出序列](../../../odbc/reference/develop-app/escape-sequences.md)  
   
--   [常值前置詞和尾碼](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)  
+-   [常值首碼及尾碼](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)  
   
 -   [程序呼叫中的參數標記](../../../odbc/reference/develop-app/parameter-markers-in-procedure-calls.md)  
   
 -   [DDL 陳述式](../../../odbc/reference/develop-app/ddl-statements.md)
-

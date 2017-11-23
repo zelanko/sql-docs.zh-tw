@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DataSource Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DataSource Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DataSource data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DataSource data type
 ms.assetid: 05e8de8d-452d-4128-98a6-4437df227fec
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4b6a05e042c6a3e76cbfe3943eaf184fc529f411
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07e642876743b47abd18f87313416613ed5d22b2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datasource-data-type-assl"></a>DataSource 資料類型 (ASSL)
   定義表示中的資料來源的抽象基本資料類型[資料庫](../../../analysis-services/scripting/objects/database-element-assl.md)項目。  
@@ -82,8 +77,7 @@ ms.lasthandoff: 09/01/2017
   
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DataSource>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

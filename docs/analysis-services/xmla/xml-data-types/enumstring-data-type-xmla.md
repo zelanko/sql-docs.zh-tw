@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- EnumString Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: EnumString Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - EnumString
 - urn:schemas-microsoft-com:xml-analysis#EnumString
 - http://schemas.microsoft.com/analysisservices/2003/engine#EnumString
-helpviewer_keywords:
-- EnumString data type
+helpviewer_keywords: EnumString data type
 ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7f3365cbe5ad69fb81ab1231b2d09fd593ada3ac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3209c6fd1546a4b1596eaaf6f4a19049bfc1fa92
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString 資料類型 (XMLA)
   定義代表給定列舉值之具名常數集合的衍生資料類型。  
@@ -81,8 +76,7 @@ ms.lasthandoff: 09/01/2017
 |ResultsetContents|支援 XMLA 屬性，**內容**，以決定是否傳回中繼資料中**根**項目。<br /><br /> 如需有關**內容**，請參閱[支援 XMLA 屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
 |MDXSupportLevel|支援 XMLA 屬性， **MDXSupport**，指出上可用的多維度運算式 (MDX) 支援的層級[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。<br /><br /> 如需有關**MDXSupport**，請參閱[支援 XMLA 屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML 資料類型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   
-

@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MimeType Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MimeType Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MimeType element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MimeType element
 ms.assetid: 710e2519-6892-4ce8-a10f-a4edf7077e18
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fbc14b7822a33cf3b214aeff7275df07419bb42d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 30f1ee67dca0939a61bbb8ac243b29e07afb8569
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mimetype-element-assl"></a>MimeType 元素 (ASSL)
   包含的多用途網際網路郵件延伸標準 (MIME) 類型，如果適用的話，所代表之資料的[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)項目。  
@@ -66,8 +61,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DataItem 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)  
   
   
-

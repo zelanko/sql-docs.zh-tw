@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _User25::raw_ChangePassword
 - _User25::ChangePassword
-helpviewer_keywords:
-- ChangePassword method [ADOX]
+helpviewer_keywords: ChangePassword method [ADOX]
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 33f2bfdc111277ef035aa8e3cde36f019a97f5b4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 18dd53bc701cf6a4b77c8e77f5b1851aff57f2ba
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword 方法 (ADOX)
 變更密碼[使用者](../../../ado/reference/adox-api/user-object-adox.md)帳戶。  
@@ -54,8 +51,7 @@ User.ChangePassword OldPassword, NewPassword
  如果提供者不支援信任項目屬性的系統管理工作，會發生錯誤。  
   
 ## <a name="applies-to"></a>適用於  
- [使用者物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+ [User 物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
   
-## <a name="see-also"></a>另請參閱  
- [群組和使用者附加、 ChangePassword 方法範例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Groups 和 Users Append、ChangePassword 方法範例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)

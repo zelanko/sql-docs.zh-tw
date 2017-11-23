@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDriver.connect
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDriver.connect
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eec8430c7378b03789fd43137a6176b4cc78b9a3
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07b4331ee938c2eb8b86a263e0fb4bd6f17a241f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connect-method-sqlserverdriver"></a>connect 方法 (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,10 +57,9 @@ public java.sql.Connection connect(java.lang.String Url,
 ## <a name="remarks"></a>備註  
  這個連接的方法是由 java.sql.Driver 介面中的 connect 方法指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerDriver 方法](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
  [SQLServerDriver 成員](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
  [SQLServerDriver 類別](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   
-

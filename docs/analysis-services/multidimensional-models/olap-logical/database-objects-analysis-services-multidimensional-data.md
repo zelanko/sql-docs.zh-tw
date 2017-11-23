@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Services], about objects
 - SQL Server Analysis Services, objects
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Analysis Services objects
 - objects [Analysis Services]
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a08640468d5c510ede73de29d1a0248278f70192
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 32024dc0799fcc7324fd30349a65e741773db66b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>資料庫物件 (Analysis Services - 多維度資料)
   A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體包含資料庫物件和組件搭配線上分析處理 (OLAP) 和資料採礦。  
@@ -77,10 +75,9 @@ ms.lasthandoff: 09/01/2017
 |[安全性角色 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)|描述角色，也就是在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中控制存取物件權限的安全性機制。|  
 |[多維度模型組件管理](../../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)|描述 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的組件，也就是用來擴充 MDX 和 DMX 語言之使用者自訂函數的集合。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [支援的資料來源 &#40;SSAS-多維度 &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [多維度模型方案 &#40;Ssas&#41;](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [資料採礦方案](../../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
-

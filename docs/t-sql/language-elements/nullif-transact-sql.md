@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - NULLIF
 - NULLIF_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - null values [SQL Server], equivalent expressions
 - expressions [SQL Server], null values
 - NULLIF function
 - equivalent expressions [SQL Server]
 ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 108be73af345304f1927f203f6c74fbdb0301235
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fe8e4663688ce510d9600ebeba9d3c30703ee3aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,11 +148,10 @@ FROM budgets;
  5      null
  ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [案例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [decimal 和 numeric &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
  [系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
-
 

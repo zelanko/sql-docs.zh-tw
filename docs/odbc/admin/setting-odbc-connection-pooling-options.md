@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], connection pooling options
 - ODBC data source administrator [ODBC], performance monitoring
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d44325018516574641ccb938a8d7acbefb121cd4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>設定 ODBC 連接共用選項
 連接共用可讓應用程式不需要重新建立每次使用的連接集區使用的連接。 您可以使用**連接共用** 索引標籤**ODBC 資料來源管理員**啟用和停用效能監視 對話方塊。 按兩下要設定連接逾時期限的驅動程式名稱。  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 |建立集區|作用中，包括使用中和已移除集區的集區數目。 此計數器是在 Windows 8 中，管理連接集區中的連線的驅動程式新增至。 如需詳細資訊，請參閱[感知驅動程式的連接共用](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)。|  
   
  您必須指定監視的參數。 效能監視的範例已包含在此版本的 ODBC。
-

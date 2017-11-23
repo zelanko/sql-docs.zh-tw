@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: be59e3cb669c9ac62b11901cc548a8223dd9e2f4
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9b422c085307db5630cb1b70a47cafd935877dcd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -68,9 +66,8 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  如果記錄連接識別碼的擴充事件已啟用，您就可以在擴充事件記錄檔中找出連接識別碼，以便查看失敗是否位於伺服器。 您也可以在連接信號緩衝區中找到的連接識別碼 ([連接 SQL Server 2008 中與連接信號緩衝區疑難排解](http://go.microsoft.com/fwlink/?LinkId=207752)) 針對特定連接錯誤。 如果連接識別碼不在連接信號緩衝區中，您就可以假設發生網路錯誤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
-

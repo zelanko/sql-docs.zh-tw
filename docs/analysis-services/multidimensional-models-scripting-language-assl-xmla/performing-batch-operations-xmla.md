@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - multiple projects
 - XML for Analysis, batches
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - batches [XML for Analysis]
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 509554d21fc56088d5be341cd828b8b8ed8e3d60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e2673091cfba456834da77049036591e4591891
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="performing-batch-operations-xmla"></a>執行批次作業 (XMLA)
   您可以使用[批次](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)XML for Analysis (XMLA) 執行多個 XMLA 命令使用的單一 XMLA 命令[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)方法。 您可以執行多個命令中包含**批次**命令視為單一交易或個別的交易，每個命令中、 以序列或是平行。 您也可以指定-單行繫結和其他內容**批次**命令處理多個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件。  
@@ -130,11 +128,10 @@ ms.lasthandoff: 09/01/2017
     > [!IMPORTANT]  
     >  A**程序**命令不能包含**繫結**， **DataSource**， **DataSourceView**，或**ErrorConfiguration**屬性，如果**程序**命令包含在**批次**命令。 如果您必須指定這些屬性**程序**命令，提供必要的資訊中的對應屬性**批次**命令，以包含**程序**命令。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [批次元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
  [Process 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [使用 Analysis Services 中的 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

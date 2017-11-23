@@ -8,24 +8,21 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Security Audit event category [SQL Server]
+helpviewer_keywords: Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6de10129a1255e400819f57d802969d8856d0883
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 77d887822dd132c6e4d3e356e49279fa92d32541
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-audit-data-columns"></a>安全性稽核資料行
   安全性稽核事件類別目錄有下列的事件類別：  
@@ -143,4 +140,3 @@ ms.lasthandoff: 09/01/2017
  [安全性稽核事件類別目錄](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   
-

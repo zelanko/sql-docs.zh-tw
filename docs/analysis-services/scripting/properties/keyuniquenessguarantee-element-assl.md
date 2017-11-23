@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- KeyUniquenessGuarantee Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: KeyUniquenessGuarantee Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- KeyUniquenessGuarantee
-helpviewer_keywords:
-- KeyUniquenessGuarantee element
+applies_to: SQL Server 2016 Preview
+f1_keywords: KeyUniquenessGuarantee
+helpviewer_keywords: KeyUniquenessGuarantee element
 ms.assetid: 6e0cf107-dd02-4bbd-94f5-c26d96438d4b
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ebeb77c0b03dadc5ab08e69eefed438d3467b910
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5dfd8f3b8efe7650bfb32f103794b80ba1f7350b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="keyuniquenessguarantee-element-assl"></a>KeyUniquenessGuarantee 元素 (ASSL)
   指出屬性索引鍵與其名稱之間的關聯性以及相關屬性的關聯性是否保證有效。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**KeyUniquenessGuarantee**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

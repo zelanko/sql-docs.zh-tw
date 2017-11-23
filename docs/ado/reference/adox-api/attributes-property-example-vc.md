@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Attributes property [ADOX], VC++ example
+dev_langs: C++
+helpviewer_keywords: Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 69ec8dcfecac32da4d963198298cf94f58edba1c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 555f4545d7d54ce5b7ee37b19aa049461f00c969
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-property-example-vc"></a>屬性的屬性範例 （VC + +）
 這個範例會示範[屬性](../../../ado/reference/adox-api/attributes-property-adox.md)屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)。 將它設定為**adColNullable**可讓使用者設定的值[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)[欄位](../../../ado/reference/ado-api/field-object.md)為空字串。 在此情況下，使用者可以區分資料未知的記錄資料不會套用記錄。  
@@ -210,7 +206,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性的內容 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
-
+ [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

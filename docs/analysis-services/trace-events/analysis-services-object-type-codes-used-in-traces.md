@@ -8,22 +8,20 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e6daef93ce07609173a3595adbb409c4b13607e2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bd50f15603440953dc2f9c52ae669e5fcbd3108
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>用於追蹤內的 Analysis Services 物件類型代碼
   此頁面會列出 Analysis Services 資料模型中，每個物件的物件類型 (六位數數字)。 追蹤記錄檔中會出現這些程式碼，可用於識別與特定鎖定相關聯的物件類型。 例如，資料庫上的鎖定逾時會指出物件類型 100002 (也就是資料庫物件類型)。  
@@ -130,4 +128,3 @@ ms.lasthandoff: 09/01/2017
 |100155|PerspectiveCollection|  
   
   
-

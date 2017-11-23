@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 523cf3d7-9df0-4f9d-8486-9109de8d3cca
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1246b698fc9f7943ef4e1fbe5b41307d12a72813
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b7ec461cb8fea748a6bd6ad9521082e8c3c66547
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="isdefaultmeasure-element-xml"></a>IsDefaultMeasure 元素 (XML)
   表示可以透過此關聯性導覽至另一個資料表以及提取具有屬性 DefaultMeasure 的成員，取得此實體的預設量值。  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  如**RelationshipEndVisualizationProperties**項目， **IsDefaultMeasure**項目指示可以瀏覽至另一端，以取得此實體的預設量值此關聯性。 預設值**false**表示沒有要取得的預設量值。  
   
   
-

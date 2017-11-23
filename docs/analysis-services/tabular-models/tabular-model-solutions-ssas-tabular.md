@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 27d4523d7d0e23fbc0043c0ef4b8909285703e31
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 31c6a32198c4a9aa417ec65fcf85a5455ea53c4a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="creating-tabular-models"></a>建立表格式模型
   本節中的主題提供如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的表格式模型設計師來撰寫表格式模型的資訊。  
@@ -67,9 +66,8 @@ ms.lasthandoff: 09/27/2017
   
  [表格式模型方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [下載 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)   
  [工具和 Analysis Services 中使用的應用程式](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
   
-

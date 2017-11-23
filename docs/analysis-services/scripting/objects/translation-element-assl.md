@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Translation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Translation Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Translation
-helpviewer_keywords:
-- Translation element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Translation
+helpviewer_keywords: Translation element
 ms.assetid: fe715bab-050d-49e6-8ba6-801d0fa379a4
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3e6fcc8ea3983b1b5f9e83aa9483af743d2d95f1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8f6dd8a6620cc87f50eeb8be7fe17963fa8548b1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="translation-element-assl"></a>Translation 元素 (ASSL)
   提供當地語系化的翻譯給父代[翻譯](../../../analysis-services/scripting/collections/translations-element-assl.md)集合。  
@@ -69,8 +63,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Translation>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

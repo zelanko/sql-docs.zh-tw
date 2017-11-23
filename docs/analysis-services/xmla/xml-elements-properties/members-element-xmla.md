@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Members Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Members Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Members
 - urn:schemas-microsoft-com:xml-analysis#Members
 - microsoft.xml.analysis.members
-helpviewer_keywords:
-- Members element
+helpviewer_keywords: Members element
 ms.assetid: 55f9ec3a-5a41-4b3a-acd6-c07598868c46
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2d2b4f8a9c466fa85bdd1131a58c2c11fc232967
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 46944cc7653a603451703b016495395f8197bc82
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="members-element-xmla"></a>Members 元素 (XMLA)
   包含集合[成員](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)父元素所包含[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)項目。  
@@ -131,8 +126,7 @@ ms.lasthandoff: 09/01/2017
 </Axes>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

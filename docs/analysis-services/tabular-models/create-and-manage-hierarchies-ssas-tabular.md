@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 813d48fcb964fc82c3dd9b1b72a70d0f1385f35c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 63c10ca6e8486e67db96d7fe4d1e6afe76133ef8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>建立及管理階層 (SSAS 表格式)
   您可以在 [圖表檢視] 中，透過模型設計師建立及管理階層。 若要在 [圖表檢視] 中檢視模型設計師，請按一下 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [模型] 功能表，然後指向 [模型檢視]，再按一下 [圖表檢視]。  
@@ -105,8 +104,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [表格式模型設計師 &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [階層 & #40;SSAS 表格式 & #41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [階層 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [量值 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   
-

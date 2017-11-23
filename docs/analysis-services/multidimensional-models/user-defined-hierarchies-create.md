@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- user-defined hierarchies [Analysis Services]
+helpviewer_keywords: user-defined hierarchies [Analysis Services]
 ms.assetid: 16715b85-0630-4a8e-99b0-c0d213cade26
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 28210f8ed93af087c1eb4bdf20c54fbdf842139e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 51e4bcb074da0b11587d8783008fd250fa8867fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-defined-hierarchies---create"></a>建立使用者定義階層-
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可讓您建立使用者定義階層。 階層是以屬性為基礎的一組層級。 例如，時間階層可能包含年、季、月、週和日等層級。 在某些階層中，每個成員屬性都會唯一隱含上面的成員屬性。 這種階層有時稱為自然階層。 使用者可以使用階層來瀏覽 Cube 資料。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，使用 [維度設計師] 中的 [階層] 窗格來定義階層。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/01/2017
  [父子式維度](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
   
   
-

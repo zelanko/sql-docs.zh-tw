@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - removing data sources [ODBC], ODBC data source administrator
 - ODBC data source administrator [ODBC], data source management
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8d5a80fc70b3a41c05a85fa23fb44a11f1d2e860
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d80594ac41f27d28051fc64f489b5cad59335c00
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="managing-data-sources"></a>管理資料來源
 您已安裝 ODBC 驅動程式從驅動程式的安裝程式之後，您可以為它定義一個或多個資料來源。 資料來源名稱 (DSN) 應該提供資料; 的唯一描述例如，*薪資*或*Accounts Payable*。 所有目前已安裝的驅動程式所定義使用者和系統資料來源會列在**使用者 DSN**或**系統 DSN**索引標籤的**ODBC 資料來源管理員** 對話方塊。 檔案資料來源，在指定的目錄中所述**檔案 DSN**索引標籤，以輸入要顯示的目錄是**查看**方塊中**檔案 DSN**  索引標籤。  
@@ -55,6 +53,5 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  如需檔案資料來源的詳細資訊，請參閱[連接使用的檔案資料來源](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)或[SQLDriverConnect 函數](../../odbc/reference/syntax/sqldriverconnect-function.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)
-

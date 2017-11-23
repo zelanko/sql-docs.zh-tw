@@ -23,17 +23,16 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, databases [Analysis Services]
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: dae9c7f18acbf630b7b8780498e06465085822b1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b9b4fa79c4ef7a37158c1fbeea32a80c56effa2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多維度模型資料庫 (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫是資料來源、資料來源檢視、Cube、維度及角色的集合。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫也可以包含資料採礦結構，以及提供您方法將使用者定義函數加入至資料庫的自訂組件。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [使用 MDX 查詢多維度資料](../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
   
-

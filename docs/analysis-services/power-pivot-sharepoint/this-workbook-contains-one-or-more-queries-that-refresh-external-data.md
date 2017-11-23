@@ -8,22 +8,20 @@ ms.service:
 ms.component: power-pivot-sharepoint
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 882a0dca2f6c2c443507bc5b4d54820711e55ae7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f400a5513fcd16ea5344157e451d06b8fe103796
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>此活頁簿包含一或多個重新整理外部資料的查詢
   對於包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 活頁簿，Excel Services 會在偵測到連接資訊時顯示這個警告，然後提示您啟用或停用此活頁簿的查詢。  
@@ -62,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  或者，您可以針對包含 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 活頁簿的網站建立新的信任位置，然後只針對該網站修改組態設定。 如需詳細資訊，請參閱 [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
   
-

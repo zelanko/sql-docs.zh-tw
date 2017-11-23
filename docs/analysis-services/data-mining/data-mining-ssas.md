@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], about data mining
+helpviewer_keywords: data mining [Analysis Services], about data mining
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 08014cb37823ce3f2bbdec7d89647d685f6a7684
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 23048ed60a625a573d4820435f4ba87c0375e013
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-ssas"></a>資料採礦 (SSAS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自 2000 版本後，藉由提供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的資料採礦，已是預測分析中的佼佼者。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦的結合，針對包含資料清理和準備、預測分析機器學習和報表提供整合平台。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦包括多個標準演算法，包括 EM 和 k-means 叢集模型，類神經網路、羅吉斯迴歸與線性迴歸、決策樹和貝氏機率分類分類器。 所有模型已都整合視覺效果以協助您開發、改善及評估模型。  將資料採礦整合至商業智慧方案，可協助您對複雜問題做出明智的決策。  
@@ -82,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [SQL Server R 服務](../../advanced-analytics/r-services/sql-server-r-services.md)  
   
   
-

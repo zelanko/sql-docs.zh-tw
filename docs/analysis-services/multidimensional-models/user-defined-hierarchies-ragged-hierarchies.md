@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ragged hierarchies [Analysis Services]
+helpviewer_keywords: ragged hierarchies [Analysis Services]
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: df06dbfc368310427d1359f78de557c910b94af9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b8bbadff8fa6d3679ad96976a3fe021b5085988a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>使用者定義階層-不完全階層
   不完全階層是所含層級數目不平均的使用者定義階層。 常見範例包括組織圖 (高階主管同時擁有部門主管級和非主管級直屬員工)，或由國家/地區-區域-城市組成的地理階層 (其中部分城市缺少父州或省，例如華盛頓特區、梵蒂岡或新德里)。  
@@ -87,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [連接字串屬性 &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Lock Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Lock Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Lock
 - microsoft.xml.analysis.lock
 - http://schemas.microsoft.com/analysisservices/2003/engine#Lock
-helpviewer_keywords:
-- Lock command
+helpviewer_keywords: Lock command
 ms.assetid: a819e805-4793-43bb-8af3-16a19f8bdab3
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8e3a174682bd6e2c84f48dbf75462fadecf2a573
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df377150443acf63e4f67cd4f8f4952f36277a32
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lock-element-xmla"></a>Lock 元素 (XMLA)
   鎖定指定的物件上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
@@ -79,9 +74,8 @@ ms.lasthandoff: 09/01/2017
   
  所有鎖定都會保存在目前交易的內容中。 當目前的交易經過認可或回復時，就會自動釋放在交易內部定義的所有鎖定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [解除鎖定元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)   
  [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

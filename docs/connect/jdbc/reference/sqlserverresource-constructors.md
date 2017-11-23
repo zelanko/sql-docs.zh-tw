@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d13d934-542c-4aaa-8fe2-1bcb36c8cc4c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 05736db1458056bbc28810c2bce9a4ca57614851
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8984adbc33b1d8b2cad8080b536ce116369b2a2e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlserverresource-constructors"></a>SQLServerResource 建構函式
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,4 +29,3 @@ ms.lasthandoff: 09/09/2017
   如需有關成員的資訊[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)，請參閱[SQLServerResource 成員](../../../connect/jdbc/reference/sqlserverresource-members.md)。  
   
   
-

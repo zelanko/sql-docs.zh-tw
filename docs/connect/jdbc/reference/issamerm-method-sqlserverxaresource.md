@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerXAResource.isSameRM
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerXAResource.isSameRM
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: bfa24c46-b7cf-470a-afa1-52301847a448
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0aef53ccff818ea71c180e7c4700d80fd3c6bc28
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 27cc769b71dffcb47c1575c73c778fbd43e73656
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="issamerm-method-sqlserverxaresource"></a>isSameRM 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,10 +52,9 @@ public boolean isSameRM(javax.transaction.xa.XAResource xares)
 ## <a name="remarks"></a>備註  
  這個 commit 方法是由 javax.transaction.xa.XAResource 介面中的認可方法指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerXAResource 方法](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource 成員](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource 類別](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   
-

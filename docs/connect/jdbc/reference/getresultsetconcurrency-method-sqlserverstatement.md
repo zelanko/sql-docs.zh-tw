@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerStatement.getResultSetConcurrency
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerStatement.getResultSetConcurrency
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 47ef6547-5ec7-4cf5-a4d4-e34cbeec72eb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bf280b34ed771d4d92e41e4689eb3343a6aa994e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 461001d8c584503b428414355eed14fc65e58791
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getresultsetconcurrency-method-sqlserverstatement"></a>getResultSetConcurrency 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,9 +47,8 @@ public final int getResultSetConcurrency()
 ## <a name="remarks"></a>備註  
  這個 getResultSetConcurrency 方法是由 java.sql.Statement 介面中的 getResultSetConcurrency 方法指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 88606f2a53f3f276529feb6b780279fdd3c96323
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1508d70610c47116a4aaf58063b0f4196459d3e4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -101,9 +99,8 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |SS_XML_SCHEMACOLLECTION_NAME|**字串**|包含使用者定義型別 (UDT) 的結構描述名稱。|  
 |SS_DATA_TYPE|**tinyint**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料型別，由擴充預存程序。<br /><br /> **請注意**如需有關所傳回的資料型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，請參閱中的 < 資料類型 (TRANSACT-SQL) >[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerDatabaseMetaData 成員](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 類別](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

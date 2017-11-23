@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d681a36710cdc096739f2c4e5f6f13afeb3ac8cc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94e61c3077b748c7a2a33f1bcef8ac8b7ebae9e0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables-object-tmsl"></a>Tables 物件 (TMSL)
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/01/2017
   
  isHidden  
  布林值，指出資料表是否會視為由用戶端視覺效果工具為隱藏。  
-如果資料表會被視為 true 隱藏;否則為 false。  
+若資料表會被視為隱藏，則為 true；否則為 false。  
   
  資料行  
  代表資料表中的資料行。 它是 Table 物件的子節點。 每個資料行的定義會影響屬性如何用戶端應用程式，將資料視覺化的資料行中的數的字。  
@@ -821,8 +820,7 @@ ms.lasthandoff: 09/01/2017
         }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

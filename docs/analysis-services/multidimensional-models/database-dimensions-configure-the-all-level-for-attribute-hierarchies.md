@@ -24,17 +24,16 @@ helpviewer_keywords:
 - members [Analysis Services], All
 - AllMemberName property
 ms.assetid: 0cb35e6f-b10f-483d-b893-78f6ca3979fd
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f86a46abd96db5c329e66d0848c51d3609d55e5c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2378dafcda0d9eca8786fb81cadfd44b22d0998b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---configure-the-all-level-for-attribute-hierarchies"></a>資料庫維度-設定屬性階層的 （全部） 層級
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，(全部) 層級是系統產生的選擇性層級。 它只包含一個成員，而這個成員的值是直屬層級中所有成員的值彙總。 此成員叫作全部成員。 它是系統產生的成員，不包含在維度資料表中。 因為 (全部) 層級中的成員是在階層頂端，所以該成員值是此階層中所有成員值的合併彙總。 全部成員通常是做為階層的預設成員。  
@@ -51,4 +50,3 @@ ms.lasthandoff: 09/01/2017
  [定義預設成員](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
   
   
-

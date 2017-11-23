@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerXAResource.recover
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerXAResource.recover
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 73f341196b8dd86a098031afc8c556ceb7f26a2c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07f102ffb57051bfd55638a18e8eff2a80025057
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="recover-method-sqlserverxaresource"></a>recover 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,10 +54,9 @@ public javax.transaction.xa.Xid[] recover(int flags)
   
  如果參數**旗標**不 XAResource.TMSTARTRSCAN |XAResource.TMENDRSCAN，則表示復原掃描必須正在進行中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerXAResource 方法](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource 成員](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource 類別](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   
-

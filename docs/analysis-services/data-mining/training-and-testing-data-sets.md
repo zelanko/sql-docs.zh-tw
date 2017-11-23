@@ -19,17 +19,16 @@ helpviewer_keywords:
 - testing data mining models
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 880f294f82a0aaa34904d78191d41217fecc78c9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9465d0eda4b15827cf20c4b9579a5eff672ce1d1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="training-and-testing-data-sets"></a>定型和測試資料集
   將資料分成定型集和測試集是評估資料採礦模型中的一個重要部分。 一般來說，當您將資料集分成定型集和測試集時，大多數的資料會用於定型，小部分的資料會用於測試。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會隨機取樣資料，以確保測試集和定型集類似。 您可以透過針對定型和測試使用相同的資料，盡可能減少資料不一致的影響並有效了解模型的特性。  
@@ -123,4 +122,3 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
  [測試及驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

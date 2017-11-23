@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Source Element (Measure)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Source Element (Measure)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Source
-helpviewer_keywords:
-- Source element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Source
+helpviewer_keywords: Source element
 ms.assetid: 9bae7ba4-3065-4623-b3e0-d54cebea7503
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 914ba64de0926229443f95d53e98e22f5a5ccc64
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1725f505303e822c828976f9cf19af1bb82c19b0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="source-element-measure-assl"></a>Source 元素 (Measure) (ASSL)
   包含詳細資料包含的值之來源的[量值](../../../analysis-services/scripting/objects/measure-element-assl.md)項目。  
@@ -73,8 +67,7 @@ ms.lasthandoff: 09/01/2017
   
  對應至父系的項目**來源**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Measure>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

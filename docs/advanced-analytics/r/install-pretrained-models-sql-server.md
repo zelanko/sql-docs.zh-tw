@@ -1,47 +1,41 @@
 ---
 title: "SQL Server 上安裝預先定型的機器學習模型 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/18/2017
+ms.date: 11/16/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ed5616b66ffdad10f0e2794eb5ab0109a0979d2e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 8f4a145700d12f31a868cc3fc20a9dbdbe6f45ea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>安裝預先定型的機器學習模型 SQL Server 上
 
 本文說明如何將預先定型的模型加入至 SQL Server 執行個體在具有 R 服務或機器學習服務安裝。
 
-預先定型的模型做為選項提供安裝 Microsoft R Server，或是使用獨立安裝程式的機器學習服務伺服器。 您可以使用此安裝程式取得只預先定型的模型，或您可以使用它來升級機器學習中的 SQL Server 2016 或 SQl Server 2017 執行個體的元件。
+Microsoft R Server 或 Server 機器學習中用於個別的 Windows 安裝程式時，使用選項來安裝預先定型的模型。 您可以使用此安裝程式取得只預先定型的模型，或您可以用它來[升級機器學習元件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)中 SQL Server 2016 或 SQL Server 2017 的執行個體。
 
 執行安裝程式下載預先定型的模型之後，有一些額外的步驟來設定模型以供 SQL server。 本文說明處理程序。
 
-如需詳細資訊，請參閱下列文章：
+如需如何使用 SQL Server 資料的預先定型的模型的範例，請參閱 SQL Server 機器學習小組的這篇部落格： 
 
-+ [預先定型的機器學習模型情緒分析及映像偵測](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
-
-+ [升級 R 服務執行個體中的 R 元件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
++ [使用 SQL Server 機器學習服務中的 Python 情緒分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
 ## <a name="benefits-of-using-pretrained-models"></a>使用 預先定型的模型的優點
 
-為了協助客戶，需要執行工作，例如情緒分析或映像功能，其潛在，但並沒有取得大型資料集或複雜的模型定型的資源，這些預先定型的模型所建立。 使用預先定型的模型，可讓您開始文字和最有效率的方式處理映像。
+為了協助的客戶需要以執行工作，例如情緒分析或映像功能，其潛在，但沒有取得大型資料集或複雜的模型定型的資源，這些預先定型的模型所建立。 使用預先定型的模型，可讓您開始文字和影像有效率地處理。
 
-目前可用的模型是情緒分析和影像分類的深度類神經網路 (DNN) 模型。 所有預先定型的模型已定型使用 Microsoft 的[計算網路 Toolkit](https://cntk.ai/Features/Index.html)，或**CNTK**。 
+目前可用的模型是情緒分析和影像分類的深度類神經網路 (DNN) 模型。 所有預先定型的模型已定型使用 Microsoft 的[計算網路 Toolkit](https://cntk.ai/Features/Index.html)，或**CNTK**。
 
 每個網路的設定根據下列參考實作：
 
@@ -49,6 +43,8 @@ ms.lasthandoff: 10/24/2017
 + ResNet 50
 + ResNet 101
 + AlexNet
+
+如需有關這些模型的詳細資訊，請參閱[預先定型的機器學習模型情緒分析及映像偵測](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
 
 如需深入了解網路及使用 CNTK 其實作的詳細資訊，請參閱下列文章：
 
@@ -69,17 +65,17 @@ ms.lasthandoff: 10/24/2017
 
     + 若要同時升級 R 或 Python 元件，選取您想要更新的語言 （R，或 Python，或兩者） 和選取 預先定型的模型。 選取要套用這些變更的一或多個執行個體。
 
-    + 如果您之前安裝 Server 機器學習並更新 R 或 Python 元件使用的繫結選項，保留所有先前的選取項目**現狀**，然後選取 預先定型的模型選項。 無法取消選取任何先前選取的選項，或將會移除。
+    + 如果您之前安裝 Server 機器學習並更新 R 或 Python 元件使用的繫結選項，保留所有先前的選取項目**現狀**，然後選取 預先定型的模型選項。 無法取消選取任何先前選取的選項。如果您這樣做時，安裝程式會移除元件。
 
 3. 安裝完成時，開啟 Windows 命令提示字元**以系統管理員身分**，並瀏覽至安裝程式啟動載入器資料夾，針對 SQL Server，其中也包含 Microsoft R 安裝程式。 在 SQL Server 2017 的預設執行個體，將為資料夾：
     
     `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017\x64\`
 
-4. 指定要安裝的元件、 版本和包含模型的來源檔案，使用 RSetup.exe，引數，這些範例所示的資料夾：
+4. 執行 RSetup.exe，表示要安裝的元件、 版本，以及包含模型的來源檔案，使用這些範例所示的命令列引數的資料夾：
 
-  + 若要使用模型與**R_SERVICES**，使用下列語法和路徑：
+    + 若要使用模型與**R_SERVICES**:
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     例如，若要允許使用預先定型的模型的最新版本的 SQL Server 2017 的預設執行個體中的 R，您會執行此陳述式：
 
@@ -89,19 +85,35 @@ ms.lasthandoff: 10/24/2017
 
     `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-  + 若要使用模型與**PYTHON_SERVICES**，使用下列語法和路徑：
+    + 若要使用預先定型的模型與 R 伺服器 （獨立） 或機器學習伺服器 （獨立）：
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "~\R_SERVER\library\MicrosoftML\mxLibs\x64"`
+
+    比方說，若要啟用用於預先定型的模型的最新版本的 R、 R Server 與 SQL Server 2016 中，預設安裝中，您會執行此陳述式：
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir ‘C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
+    
+    + 若要使用預先定型的模型與**PYTHON_SERVICES**:
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     比方說，若要允許使用 Python，SQL Server 2017 的預設執行個體中的最新版的預先定型的模型，您會執行此陳述式：
 
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     具名執行個體，命令看起來會像下面這樣：
 
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-5. 版本參數，支援下列值：
+    + 若要使用 Python 預先定型模型使用機器學習 Server （獨立）：
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<sql_folder>\PYTHON_SERVER\site-packages\microsoftml\mxLibs"`
+
+    例如，假設使用 SQL Server 2017 安裝程式的預設安裝的機器學習伺服器 （獨立），執行此陳述式：
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER\Lib\site-packages\microsoftml\mxLibs"`
+
+5. 版本參數支援下列值：
 
     + 發行候選版本 0: **9.1.0.0**
     + 候選版 1: **9.2.0.22**
@@ -116,6 +128,11 @@ ms.lasthandoff: 10/24/2017
     - ResNet\_101\_Updated.model
     - ResNet\_18\_Updated.model
     - ResNet\_50\_Updated.model
+
+
+> [!NOTE]
+> 
+> 如果模型檔案的路徑太長，您可能會發生錯誤時從 Python 程式碼呼叫的模型檔案。 這是因為在目前的 Python 實作限制。 在服務即將發行版本中，將會修正此問題。
 
 ## <a name="examples"></a>範例
 
@@ -149,10 +166,8 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 > 不可能讀取或修改預先定型的模型，因為它們會壓縮使用原生格式，來改善效能。
 
-
 ### <a name="text-analysis-example"></a>文字分析範例
 
 請參閱下列範例示範如何使用預先定型的文字如何模型文字分類：
 
 [使用文字 Featurizer 情緒分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Create Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Create Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Create
 - urn:schemas-microsoft-com:xml-analysis#Create
 - microsoft.xml.analysis.create
-helpviewer_keywords:
-- Create command (XMLA)
+helpviewer_keywords: Create command (XMLA)
 ms.assetid: a623d362-a1ac-40e4-8816-65fac89cb391
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e3b4a1197d023e38b9fdbee2c9d895452cd97d30
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a5420a85c65a29a09da519207206d3406c4cd384
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-element-xmla"></a>Create 元素 (XMLA)
   包含所使用的 Analysis Services 指令碼語言 (ASSL) 元素**Execute**上建立物件的方法[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
@@ -94,8 +89,7 @@ ms.lasthandoff: 09/01/2017
 </Create>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

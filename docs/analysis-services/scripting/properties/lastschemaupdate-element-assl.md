@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- LastSchemaUpdate Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: LastSchemaUpdate Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- LastSchemaUpdate
-helpviewer_keywords:
-- LastSchemaUpdate element
+applies_to: SQL Server 2016 Preview
+f1_keywords: LastSchemaUpdate
+helpviewer_keywords: LastSchemaUpdate element
 ms.assetid: 0634c105-91cc-4882-87be-97ca29a251a6
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2c27710b5b6cb7f0f902569404a1cd4bc83f5fac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b8143f69641362875b08e6af5522cf8ab95b73a6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lastschemaupdate-element-assl"></a>LastSchemaUpdate 元素 (ASSL)
   包含父元素的唯讀中繼資料更新時間戳記。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
  對應至父系的項目**LastSchemaUpdate**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Assembly>， <xref:Microsoft.AnalysisServices.Cube>， <xref:Microsoft.AnalysisServices.Database>， <xref:Microsoft.AnalysisServices.DataSource>， <xref:Microsoft.AnalysisServices.DataSourceView>， <xref:Microsoft.AnalysisServices.Dimension>， <xref:Microsoft.AnalysisServices.MdxScript>， <xref:Microsoft.AnalysisServices.MeasureGroup>， <xref:Microsoft.AnalysisServices.MiningModel>， <xref:Microsoft.AnalysisServices.MiningStructure>， <xref:Microsoft.AnalysisServices.Partition>， <xref:Microsoft.AnalysisServices.Permission>，和<xref:Microsoft.AnalysisServices.Perspective>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

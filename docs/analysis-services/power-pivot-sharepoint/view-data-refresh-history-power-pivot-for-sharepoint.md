@@ -20,17 +20,16 @@ helpviewer_keywords:
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 43dce2aa27cfda6251eeca52eba4f74f722f4ced
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bad4593c84946a2957b6b433de359d4857f116ad
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>檢視資料重新整理記錄 (Power Pivot for SharePoint)
   資料重新整理記錄是 Excel 活頁簿中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料之所有資料重新整理活動的記錄。 資料重新整理作業會依您提供的排程，在 SharePoint 伺服器陣列中 Analysis Services 伺服器執行個體上執行。 根據預設，資料重新整理記錄會保留一年。 但是，伺服器陣列管理員可以為使用量和事件記錄指定不同的保留原則，用來決定資料重新整理記錄的保存時間。  
@@ -87,4 +86,3 @@ ms.lasthandoff: 09/01/2017
  [Power Pivot 資料重新整理](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   
-

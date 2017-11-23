@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerConnection.setCatalog
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerConnection.setCatalog
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 44420fcaa6ecc0ab97dcb44344688b0cf92c9645
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b766c76132bad3f66de98b431ee09d39753c40ab
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>setCatalog 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,9 +51,8 @@ public void setCatalog(java.lang.String catalog)
   
  *目錄*引數會由逸出[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]自動。 使用此方法會設定連接物件的 catalog 屬性。 它不會以任何其他方式進行隱含設定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
-

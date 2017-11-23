@@ -21,17 +21,16 @@ helpviewer_keywords:
 - unary operators
 - custom aggregations [Analysis Services]
 ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 63ad6f1d9e72fae70997c87aca194f7437c62d07
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 548b9695bba6377fcea91b1a1c78578a141e1ba0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI 精靈-將自訂彙總加入維度中
   將自訂彙總增強功能加入至 Cube 或維度中，以不同的一元運算子取代與維度成員相關聯的預設彙總。 此增強功能指定維度資料表中的一元運算子資料行，它定義父子式階層中的成員積存。 一元運算子是在父子式階層的父屬性上作用。  
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  在 **[來源資料行]**中，您可以選取包含一元運算子的字串資料行。 (此選取項目設定父屬性上的 **UnaryOperatorColumn** 屬性)。維度資料表也應該有指定一元積存運算子的字串資料行。 此資料行的字串值應包含有效彙總運算子。 如果資料列空白，會正常計算相對應的成員。 如果資料行中的公式無效，當擷取使用該成員的資料格值時，會發生執行階段錯誤。 如需詳細資訊，請參閱 [父子式維度中的一元運算子](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)。  
   
   
-

@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DBCC
 - DBCC_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - transactional consistency
 - Database Console Command statements
@@ -39,17 +37,16 @@ helpviewer_keywords:
 - progress reporting [DBCC statements]
 - informational statements [SQL Server]
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: dc78b7c08447ecaa8e5ad01f46c0a88e70f83094
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8e8750f4b44ec206bb5a26586acd6b567f7dac37
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -154,4 +151,3 @@ DBCC 命令有輸入參數和傳回值。 所有 DBCC 命令參數都可以接�
 |[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](https://support.microsoft.com/en-us/kb/3177838) <br /><br /> **適用於**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2。|  
   
   
-

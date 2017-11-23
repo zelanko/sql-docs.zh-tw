@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_JOBS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_JOBS rowset
 ms.assetid: b4d83bb6-aed3-4513-b516-cefadf95dad2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: edf0125dff1f193106f5738aef99b8c830c29236
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7dc22595beb3870d58aea4e0b98cdb51af92327b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverjobs-rowset"></a>DISCOVER_JOBS 資料列集
   提供在伺服器上執行之作用中作業的相關資訊。 作業是代表該命令執行特定工作之命令的一部分。  
@@ -60,8 +57,7 @@ ms.lasthandoff: 09/01/2017
 |JOB_THREADPOOL_ID|DBTYPE_I4|選擇性。|  
 |JOB_MIN TOTAL_TIME_MS|DBTYPE_I8|選擇性。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

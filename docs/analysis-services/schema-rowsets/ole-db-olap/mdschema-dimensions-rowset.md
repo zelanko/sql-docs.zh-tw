@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_DIMENSIONS
+apiname: MDSCHEMA_DIMENSIONS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_DIMENSIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_DIMENSIONS rowset
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d6e6179a6d3538282dbbc125f8e8865ad3c560a6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d27f85dafc44caaeb4cf4f0f3b0ba613e717b962
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemadimensions-rowset"></a>MDSCHEMA_DIMENSIONS 資料列集
   描述資料庫內的共用和私人維度。  
@@ -74,8 +70,7 @@ ms.lasthandoff: 09/01/2017
 |**CUBE_SOURCE**|**DBTYPE_UI2**|（選擇性）預設限制為 1 的值。 點陣圖，下列有效的值之一：<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION (維度)|  
 |**DIMENSION_VISIBILITY**|**DBTYPE_UI2**|（選擇性）預設限制為 1 的值。 點陣圖，下列有效的值之一：<br /><br /> 1 可見<br /><br /> 2 不可見|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

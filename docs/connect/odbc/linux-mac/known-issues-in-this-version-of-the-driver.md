@@ -8,23 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- known issues
-caps.latest.revision: 30
+helpviewer_keywords: known issues
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cd6fedeed8955634abfab002bab887c230731707
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
-ms.openlocfilehash: 62fd9dd8bf2e11fe39ffaa2e893ded55b214b09c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>此驅動程式版本的已知問題
 
@@ -42,8 +39,7 @@ ms.lasthandoff: 11/08/2017
 
 例如，如果您的編碼是 utf-8，且您指定 1 兩個*Columnsize*和*ColumnSize*中**SQLBindParameter**的 out 參數，然後再嘗試擷取儲存在上述字元`char(1)`資料行在伺服器上 （使用 cp-1252），驅動程式會嘗試將它轉換成 3 個位元組 utf-8 編碼方式，但不能配合結果至 1 個位元組的緩衝區。 另一方向，它會比較*ColumnSize*與*Columnsize*中**SQLBindParameter**上執行不同的字碼頁之間的轉換之前用戶端和伺服器。 由於 *ColumnSize* 1 小於 *BufferLength* 3 (舉例來說)，因此驅動程式會產生錯誤。 若要避免這個錯誤，請確認資料的長度轉換符合指定的緩衝區或資料行之後。 請注意， *ColumnSize*不可大於 8000`varchar(n)`型別。
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)  
 [版本資訊](../../../connect/odbc/linux-mac/release-notes.md)  
-
 

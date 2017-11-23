@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerStatement.setCursorName
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerStatement.setCursorName
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3f3ec4f2-103a-4e16-9206-c5bd8639f946
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6b0e86545f58b67d5a8552c6de8f77faa35c087e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 501440dec2f47c4f3f272ebde7f6cbd01642e377
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setcursorname-method-sqlserverstatement"></a>setCursorName 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,9 +52,8 @@ public final void setCursorName(java.lang.String name)
 ## <a name="remarks"></a>備註  
  這個 setCursorName 方法是由 java.sql.Statement 介面中的 setCursorName 方法指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   
-

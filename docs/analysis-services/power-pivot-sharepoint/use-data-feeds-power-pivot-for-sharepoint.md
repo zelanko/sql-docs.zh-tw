@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 78239c159da9213ca3cbc3e14ac5367e9846aa8c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eb5bc547eead5e8dc2d765f56861dacbd8af64e6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>使用資料摘要 (Power Pivot for SharePoint)
   資料摘要是從線上資料來源產生，並串流至目的地文件或應用程式的一個或多個資料流。 如果您使用的是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
@@ -103,4 +102,3 @@ ms.lasthandoff: 09/01/2017
  [使用資料摘要庫共用資料摘要 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   
-

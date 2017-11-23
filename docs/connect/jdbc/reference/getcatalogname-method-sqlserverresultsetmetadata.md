@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSetMetaData.getCatalogName
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSetMetaData.getCatalogName
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 64f62569-5d8e-411f-a98d-ddc52798391e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72a03ba3b2b3d4631b25d1ade86cb6f7e959c2cb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3e366dbeedd32ee558b2a1b65fc440d74cf52221
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcatalogname-method-sqlserverresultsetmetadata"></a>getCatalogName 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,10 +52,9 @@ public java.lang.String getCatalogName(int column)
 ## <a name="remarks"></a>備註  
  這個 getCatalogName 方法是由 java.sql.ResultSetMetaData 介面中 getCatalogName 方法指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerResultSetMetaData 方法](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [SQLServerResultSetMetaData 成員](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData 類別](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   
-

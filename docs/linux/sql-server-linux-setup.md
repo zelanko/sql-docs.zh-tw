@@ -4,17 +4,22 @@ description: "安裝、 更新及解除安裝 SQL Server on Linux。 本主題�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
+ms.workload: Active
+ms.openlocfilehash: 8d61ba8334d81c46643d15b38173b6b2dd2e1a93
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 的安裝指南
 
@@ -94,31 +99,82 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 > [!NOTE]
 > 只支援降級至相同的主要版本，例如 SQL Server 2017 內的版本。
 
-> [!IMPORTANT]
-> RTM、 RC2 和 RC1 之間此時只支援降級。
+## <a id="versioncheck"></a>檢查已安裝的 SQL Server 版本
+
+若要確認您目前版本和版本的 SQL Server on Linux，請使用下列程序：
+
+1. 如果尚未安裝，請安裝[SQL Server 命令列工具](sql-server-linux-setup-tools.md)。
+
+1. 使用**sqlcmd**執行 TRANSACT-SQL 命令，以顯示您的 SQL Server 版本與版別。
+
+   ```bash
+   sqlcmd -S localhost -U SA -Q 'select @@VERSION'
+   ```
+
+## <a id="uninstall"></a>解除安裝 SQL Server
+
+若要移除**mssql 伺服器**Linux 上的套件，請使用其中一個基礎平台上的下列命令：
+
+| 平台 | 封裝移除命令 |
+|-----|-----|
+| RHEL | `sudo yum remove mssql-server` |
+| SLES | `sudo zypper remove mssql-server` |
+| Ubuntu | `sudo apt-get remove mssql-server` |
+
+移除封裝並不會刪除產生的資料庫檔案。 如果您想要刪除資料庫檔案，請使用下列命令：
+
+```bash
+sudo rm -rf /var/opt/mssql/
+```
 
 ## <a id="repositories"></a>設定來源儲存機制
 
-當您安裝或升級 SQL Server 時，您收到最新版本的 SQL Server 設定的 Microsoft 儲存機制。 請務必注意，有兩種類型的儲存機制的每個散發：
+當您安裝或升級 SQL Server 時，您收到最新版本的 SQL Server 設定的 Microsoft 儲存機制。
+
+### <a name="repository-options"></a>儲存機制選項
+
+有兩種類型的每個散發的儲存機制：
 
 - **累計更新 (CU)**: 累計更新 (CU) 儲存機制自該版本包含基底的 SQL Server 版本和 bug 修正或改進的封裝。 累計更新的發行版本，例如 SQL Server 2017 特有。 它們會以一般的步調發行。
 
 - **GDR**: GDR 儲存機制 含有該發行以來的基底的 SQL Server 版本和僅重大修正程式和安全性更新的封裝。 這些更新也會新增到下一個 CU 版本。
 
-每個 CU 和 GDR 版本包含完整的 SQL Server 封裝和所有先前的更新，該儲存機制。 從 GDR 發行更新至目前的版本支援適用於 SQL Server 變更設定的儲存機制。 您也可以[降級](#rollback)至您的主要版本內任何發佈 (例如： 2017年)。
+每個 CU 和 GDR 版本包含完整的 SQL Server 封裝和所有先前的更新，該儲存機制。 從 GDR 發行更新至目前的版本支援適用於 SQL Server 變更設定的儲存機制。 您也可以[降級](#rollback)至您的主要版本內任何發佈 (例如： 2017年)。 更新不支援從 CU GDR 發行的版本。
 
-> [!NOTE]
-> 更新不支援從 CU GDR 發行的版本。
+### <a name="check-your-configured-repository"></a>請檢查設定的儲存機制
+
+如果您想要確認哪些儲存機制已設定，請使用下列平台相關技術。
+
+| 平台 | 程序 |
+|-----|-----|
+| RHEL | 1.檢視中的檔案**/etc/yum.repos.d**目錄：`sudo ls /etc/yum.repos.d`<br/>2.尋找檔案，以設定 SQL Server 目錄，例如**mssql server.repo**。<br/>3.列印檔案的內容：`sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4.**名稱**屬性是設定的儲存機制。|
+| SLES | 1.執行下列命令：`sudo zypper info mssql-server`<br/>2.**儲存機制**屬性是設定的儲存機制。 |
+| Ubuntu | 1.執行下列命令：`sudo cat /etc/apt/sources.list`<br/>2.檢查 mssql 伺服器的套件 URL。 |
+
+儲存機制 URL 的結尾會確認儲存機制類型：
+
+- **mssql 伺服器**： 預覽儲存機制。
+- **mssql-伺服器-2017年**: CU 儲存機制。
+- **mssql 伺服器-2017 gdr**: GDR 儲存機制。
+
+### <a name="change-the-source-repository"></a>變更來源儲存機制
 
 若要設定 CU 或 GDR 儲存機制，請使用下列步驟：
 
+> [!NOTE]
+> [快速入門教學課程](#platforms)設定 CU 儲存機制。 如果您遵循這些教學課程，您不需要使用下列步驟以繼續使用目前的儲存機制。 下列步驟才需要變更設定的儲存機制。
+
 1. 如有必要，移除先前設定的儲存機制。
 
-   | 平台 | 儲存機制移除命令 |
-   |-----|-----|
-   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+   | 平台 | Repository | 儲存機制移除命令 |
+   |---|---|---|
+   | RHEL | **全部** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES | **CTP** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+   | | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+   | Ubuntu | **CTP** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
+   | | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+   | | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 1. 如**Ubuntu 只**，匯入公用儲存機制 GPG 索引鍵。
 
@@ -137,26 +193,10 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
    | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
    | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
-1. [安裝](#platforms)或[更新](#upgrade)從新的儲存機制的 SQL Server。
+1. [安裝](#platforms)或[更新](#upgrade)SQL Server 和任何相關封裝從新的儲存機制。
 
    > [!IMPORTANT]
-   > 此時，如果您選擇執行完整安裝使用[快速入門教學課程](#platforms)，請記住您剛才設定的目標儲存機制。 教學課程中不重複該步驟。 特別是如果您設定的 GDR 儲存機制，因為快速入門教學課程會使用目前的儲存機制。
-
-## <a id="uninstall"></a>解除安裝 SQL Server
-
-若要移除**mssql 伺服器**Linux 上的套件，請使用其中一個基礎平台上的下列命令：
-
-| 平台 | 封裝移除命令 |
-|-----|-----|
-| RHEL | `sudo yum remove mssql-server` |
-| SLES | `sudo zypper remove mssql-server` |
-| Ubuntu | `sudo apt-get remove mssql-server` |
-
-移除封裝並不會刪除產生的資料庫檔案。 如果您想要刪除資料庫檔案，請使用下列命令：
-
-```bash
-sudo rm -rf /var/opt/mssql/
-```
+   > 此時，如果您選擇使用其中一個安裝教學課程中，例如[快速入門教學課程](#platforms)，請記住您剛才設定的目標儲存機制。 教學課程中不重複該步驟。 特別是如果您設定的 GDR 儲存機制，因為快速入門教學課程會使用目前的儲存機制。
 
 ## <a id="unattended"></a>自動的安裝
 
@@ -232,4 +272,3 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
 - [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
 - [執行 docker](quickstart-install-connect-ubuntu.md)
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f65d4d8d094f300c3f0f3b26a6e50e63bcc9de35
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 82440c6d3ffe0ee0f2c2b9080328c0fed302cb31
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-ssl-support"></a>了解 SSL 支援
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -86,9 +84,8 @@ ms.lasthandoff: 09/09/2017
   
 -   DNS 名稱可包含萬用字元。 但[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]不支援萬用字元比對。 也就是說，abc.com 不會符合 *.com 但是\*.com 會比對\*。 com。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)   
- [保護 JDBC 驅動程式應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ [保護 JDBC Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
-

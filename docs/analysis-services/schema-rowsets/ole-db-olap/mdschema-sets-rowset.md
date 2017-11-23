@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_SETS
+apiname: MDSCHEMA_SETS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_SETS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_SETS rowset
 ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1e197a9d26eb5839425166fde987de22637603f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4820c18992da2aab0ac8e0550a5cadd75ca193bc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS 資料列集
   描述目前定義於資料庫中的任何集合，包括工作階段範圍集。  
@@ -68,8 +64,7 @@ ms.lasthandoff: 09/01/2017
 |**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|選擇性。<br /><br /> 注意： 只有一個階層可以包含在內，而且命名集只會傳回其階層完全符合限制。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

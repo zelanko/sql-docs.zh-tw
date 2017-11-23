@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerBlob.getBytes
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerBlob.getBytes
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: bea1b810-b5c1-466d-bdc4-561468214632
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6125a23f0c66e7e24533cacf1ce77d829003ce8
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8f1139f0deb886265da6c7c56e682372155a0e3b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getbytes-method-sqlserverblob"></a>getBytes 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,10 +61,9 @@ public byte[] getBytes(long pos,
   
  如果您擁有長度為 null 或零的 BLOB，而且嘗試在位置 1 以外的位置取得任何位元組長度，則會擲回位置例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerBlob 方法](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob 成員](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob 類別](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   
-

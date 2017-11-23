@@ -18,17 +18,16 @@ helpviewer_keywords:
 - security [Analysis Services], about security
 - security [Analysis Services - multidimensional data], about security
 ms.assetid: bb885447-868b-4686-853c-8241f63d4370
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c9205b1908bbb4be6678d752fa0808cb2676d5f1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2981ab6e8c529fa24fc2256c93dc903dc58857d7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="roles-and-permissions-analysis-services"></a>角色與權限 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供以角色為基礎的授權模型，授與作業、物件和資料的存取權。 所有存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體或資料庫的使用者都必須在角色的內容中進行存取。  
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [建立及管理角色 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  
   
   
-

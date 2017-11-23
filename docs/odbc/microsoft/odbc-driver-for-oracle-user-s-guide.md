@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
+helpviewer_keywords: ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 18afa7157bf3afc9d9ed1a1988b8c1fd0881ddc7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8a54f500c0f6fe15360fdcdb72ce01460bb66ef4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC Driver for Oracle 使用者 &#39; s 指南
 > [!IMPORTANT]  
@@ -39,17 +36,16 @@ ms.lasthandoff: 09/09/2017
   
 -   [安裝軟體](../../odbc/microsoft/installing-the-software-odbc.md)  
   
--   [Oracle 軟體修補程式](../../odbc/microsoft/oracle-software-patches.md)  
+-   [Oracle 軟體修補](../../odbc/microsoft/oracle-software-patches.md)  
   
--   [加入和修改資料來源使用安裝程式](../../odbc/microsoft/adding-and-modifying-data-sources-using-setup.md)  
+-   [使用安裝程式新增和修改資料來源](../../odbc/microsoft/adding-and-modifying-data-sources-using-setup.md)  
   
 -   [測試 ODBC 連接](../../odbc/microsoft/testing-the-odbc-connection.md)  
   
--   [設定 oracle 的 ODBC 驅動程式](../../odbc/microsoft/configuring-the-odbc-driver-for-oracle.md)  
+-   [設定 ODBC Driver for Oracle](../../odbc/microsoft/configuring-the-odbc-driver-for-oracle.md)  
   
 -   [連接到資料來源](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
   
 -   [判斷已安裝的 Oracle 元件](../../odbc/microsoft/determining-installed-oracle-components.md)  
   
--   [在連接上設定的日期格式](../../odbc/microsoft/setting-the-date-format-on-connection.md)
-
+-   [設定連接的日期格式](../../odbc/microsoft/setting-the-date-format-on-connection.md)

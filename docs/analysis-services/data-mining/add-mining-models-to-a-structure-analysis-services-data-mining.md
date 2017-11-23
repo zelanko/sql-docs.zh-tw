@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], creating
 - mining models [Analysis Services], modifying
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c31f4f263238b4aff38d00923ef921cb829e5c7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30fab0ce534bc76456f6876c1432feeb3de2de03
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>將採礦模型加入至結構 (Analysis Services - 資料採礦)
   採礦結構是為了支援多個採礦模型。 因此在您完成此精靈之後，您可以開啟此結構，並加入新的採礦模型。 每當您建立模型時，您都可以使用不同的演算法、變更參數，或是將篩選套用到不同的資料子集。  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)  
   
   
-

@@ -15,12 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
+ms.openlocfilehash: 71e082bf6c2f7c5bad518f7c521767172e6265bd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 04b294aafb8019a44d2bb7fa05a4e6092a9a490f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>擷取、 轉換和載入與 SSIS Linux 上的資料
 
@@ -88,4 +87,3 @@ SSIS 包含下列功能：
 - [深入了解 SQL Server Integration Services](../integration-services/sql-server-integration-services.md)
 - [SQL Server Integration Services (SSIS) 開發和管理工具](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [SQL Server Integration Services 教學課程](../integration-services/integration-services-tutorials.md)
-

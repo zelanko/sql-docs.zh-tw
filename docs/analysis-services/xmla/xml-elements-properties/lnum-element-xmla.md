@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- LNum Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: LNum Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.lnum
 - urn:schemas-microsoft-com:xml-analysis#LNum
 - http://schemas.microsoft.com/analysisservices/2003/engine#LNum
-helpviewer_keywords:
-- LNum element
+helpviewer_keywords: LNum element
 ms.assetid: 7b9cc143-0c5e-4a8c-a288-8921bfcfd103
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 92c25621cf0f67598f99bc451df37e01f6cd5a2c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e020166ca3b3d1d2923e64ebfaaa6cba14a27edf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lnum-element-xmla"></a>LNum 元素 (XMLA)
   包含父層級序數位置的相關資訊[HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md)或[成員](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)項目。  
@@ -73,8 +68,7 @@ ms.lasthandoff: 09/01/2017
   
  如**成員**項目， **LNum**元素包含以零為起始的序數位置，從根層級，階層的父代所代表之成員[成員](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)項目。 值為零代表階層的根層級。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

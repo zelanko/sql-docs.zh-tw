@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa14e2c53a35ba1d8abe32766c6378d637a665ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fbd3fcbe7aa757ac95f225f7da01d7d54116e10b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>設定磁碟空間使用量 (PowerPivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署會使用主機電腦的磁碟空間來快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫，讓重新載入更快速。 在記憶體中載入的每個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫都會先快取至磁碟中，因此稍後可以快速重新載入該資料庫來服務新的要求。 依預設， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會使用所有可用磁碟空間來快取其資料庫，但是您可以藉由設定限制磁碟空間使用量的屬性來修改這個行為。  
@@ -107,4 +106,3 @@ ms.lasthandoff: 09/01/2017
  [管理中心的 PowerPivot 伺服器管理和組態](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   
-

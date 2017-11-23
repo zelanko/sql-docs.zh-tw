@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 64af89226e917b05c28f0c85500281fa84bc676c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: 54a471846953e7afffa74fe910ae7376731e517b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="time-date-and-interval-functions"></a>時間、日期和間隔函數
 下表列出 ODBC 純量函式集合中包含的日期和時間函式。 應用程式就可以判斷驅動程式支援的日期和時間函式呼叫**SQLGetInfo**與*資訊類型*SQL_TIMEDATE_FUNCTIONS。  
@@ -66,4 +64,3 @@ ms.lasthandoff: 10/05/2017
 |**TIMESTAMPDIFF (** *間隔*， *timestamp_exp1*， *timestamp_exp2* **)** (ODBC 2.0)|傳回型別的間隔的整數數目*間隔*藉以*timestamp_exp2*大於*timestamp_exp1*。 有效的值*間隔*下列關鍵字：<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> 其中的小數秒數是以表示十億分之一秒。 例如，下列 SQL 陳述式會傳回每位員工和採用他或她的年數的名稱：<br /><br /> `SELECT NAME, {fn  TIMESTAMPDIFF(SQL_TSI_YEAR, {fn CURDATE()}, HIRE_DATE)} FROM EMPLOYEES`<br /><br /> 如果時間戳記的任一個運算式為時間值和*間隔*指定日、 週、 月、 季或年來，該時間戳記的日期部分設定為目前的日期，然後才計算時間戳記之間的差異。<br /><br /> 如果時間戳記的任一個運算式是日期值和*間隔*指定小數秒數、 秒、 分鐘或小時的時間戳記的時間部分設定為 0 之前計算時間戳記之間的差異。<br /><br /> 應用程式會決定哪些資料來源支援藉由呼叫的間隔**SQLGetInfo** SQL_TIMEDATE_DIFF_INTERVALS 選項。|  
 |**週 (** *date_exp* **)** (ODBC 1.0)|傳回一週中的週欄位為基礎的*date_exp*成為整數值範圍內的 1 – 53。|  
 |**年份 (** *date_exp* **)** (ODBC 1.0)|傳回根據 [year] 欄位中的年份*date_exp*成為整數值。 範圍是資料來源而定。|
-

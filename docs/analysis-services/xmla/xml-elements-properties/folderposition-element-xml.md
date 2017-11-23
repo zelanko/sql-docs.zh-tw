@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 8cccef2b-bdd0-415a-bb53-bda14165d1e4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f00bc626476aaf6be77feb1fe825e7766271d8b9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 35467656ca049a2d81e0322dd4f938f09ccea943
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="folderposition-element-xml"></a>FolderPosition 元素 (XML)
   包含有關元素在元素集合中的位置資訊。  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  如**RelationshipEndVisualizationProperties**項目， **FolderPosition**元素包含預設資料夾元素的集合中的資料夾位置。 預設值**false**表示沒有要使用的預設資料夾。  
   
   
-

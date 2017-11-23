@@ -5,29 +5,25 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - relational data [XQuery]
 - XQuery, relational data
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7a14ed2b176f65b379f9e09a7f920094a16b2f0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7765f20211ebd1278136f198b6957d674c52871c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xqueries-handling-relational-data"></a>XQueries 處理關聯式資料
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +42,9 @@ ms.lasthandoff: 09/01/2017
   
  如需詳細資訊，請參閱[: column （） 函數 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)和[: variable （） 函數 (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XML 建構 &#40;XQuery &#41;](../xquery/xml-construction-xquery.md)  
   
   
-

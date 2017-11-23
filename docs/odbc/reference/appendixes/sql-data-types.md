@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], about SQL data types
 - data types [ODBC], SQL data types
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1b5ebc2779d005a31f9b93a1cf6ca8fb6e35b346
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9594ce3aa76af66cccc69936677cf2d9aa682a6f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-data-types"></a>SQL 資料類型
 每個 DBMS 定義自己的 SQL 型別。 每個 ODBC 驅動程式會顯示只有這些 SQL 資料型別相關聯的 DBMS 所定義。 ODBC 定義的 SQL 類型識別項類型的資訊關於如何將驅動程式對應 DBMS SQL 和驅動程式將 DBMS SQL 類型對應至它自己的驅動程式專屬 SQL 類型識別項的方式透過呼叫傳回**SQLGetTypeInfo**。 驅動程式也會傳回 SQL 資料類型描述的資料行及透過呼叫參數的資料型別時**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，和**SQLSpecialColumns**。  
@@ -104,4 +102,3 @@ _INTERVAL_MINUTE_TO_SECOND [7]|INTERVAL MINUTE (*p*) 第二個 (*q*)|分鐘/之�
  本節提供下列的範例。  
   
 -   [範例 SQLGetTypeInfo 結果集](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)
-

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - custom member properties [MDX]
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a2b5133c23454a8281e028a848403e18f5d89eae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa1200dd746dcb1ffc7ae7372b0d85a3d60d49f2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>MDX 資料操作 RollupChildren 函數
   多維度運算式 (MDX) [RollupChildren](../../../mdx/rollupchildren-mdx.md) 函數可積存成員的子系，將不同的一元運算子套用至每個子系，然後將此積存的值以數字傳回。 一元運算子可由與子成員相關的成員屬性提供，或者可能是字串運算式直接將運算子提供給函數。  
@@ -86,4 +85,3 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  [操作資料 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLNumParams
-apilocation:
-- sqlsrv32.dll
+apiname: SQLNumParams
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLNumParams
-helpviewer_keywords:
-- SQLNumParams function [ODBC]
+f1_keywords: SQLNumParams
+helpviewer_keywords: SQLNumParams function [ODBC]
 ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4349a7ee454b9a320d1035903ec56ee9236edcf5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be2f145fdc92e263565610d552755b1f737cd8b3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlnumparams-function"></a>SQLNumParams 函數
 **一致性**  
@@ -94,7 +88,6 @@ SQLRETURN SQLNumParams(
 |繫結至參數的緩衝區|[SQLBindParameter 函式](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |陳述式中傳回參數的相關資訊|[SQLDescribeParam 函式](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)
-

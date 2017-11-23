@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getDriverVersion
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getDriverVersion
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3be84d65-af61-4c34-b052-74a5d488eaa9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6d7038bf185f7e2d40ce561b0591eb4482eced5f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c8398a9fe3e685757f6e03121b722a3384c4074
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getdriverversion-method-sqlserverdatabasemetadata"></a>getDriverVersion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,10 +47,9 @@ public java.lang.String getDriverVersion()
 ## <a name="remarks"></a>備註  
  這個 getDriverVersion 方法是由 java.sql.DatabaseMetaData 介面中 getDriverVersion 方法指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 成員](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 類別](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

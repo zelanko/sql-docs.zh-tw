@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- IsInNode
-dev_langs:
-- DMX
-helpviewer_keywords:
-- IsInNode function
+f1_keywords: IsInNode
+dev_langs: DMX
+helpviewer_keywords: IsInNode function
 ms.assetid: 47b2114f-9ad6-45cc-9498-193ad6fa5288
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 895fe529a2fc67528d37b19202575aa0b9c14116
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d10cc8b335fa47eee2932da7805f97fb42ed6711
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,10 +54,9 @@ Select * from [TM Decision Tree].Cases
 WHERE IsInNode('0')  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

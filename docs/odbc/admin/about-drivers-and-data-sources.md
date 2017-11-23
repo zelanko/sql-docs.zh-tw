@@ -8,24 +8,21 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC data source administrator [ODBC], concepts
+helpviewer_keywords: ODBC data source administrator [ODBC], concepts
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1f62308694c54a62d2cc83669e49e9983bcec4a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79ae9e95ce31df371366e9073cb36f88c5bd9ece
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="about-drivers-and-data-sources"></a>關於驅動程式與資料來源
 *驅動程式*是可處理 ODBC 要求，以及將資料傳回給應用程式的元件。 必要時，驅動程式會修改成格式以了解資料來源的應用程式的要求。 您必須新增或刪除從您的電腦的驅動程式使用驅動程式的安裝程式。  
@@ -41,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  使用者和系統資料來源統稱為*機器*資料來源，因為它們是本機電腦。  
   
  每一個資料來源中有一個索引標籤**ODBC 資料來源管理員** 對話方塊。 如需資料來源的詳細資訊，請參閱 [資料來源](../../odbc/reference/data-sources.md)。
-

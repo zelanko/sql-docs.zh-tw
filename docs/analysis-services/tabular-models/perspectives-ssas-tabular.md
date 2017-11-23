@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 36e28c1211017a46a66ce7c7ef519eb887248c8f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a9c1ad93e5c4af1736721436f4ce5116ac279934
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspectives"></a>檢視方塊
   表格式模型中的檢視方塊會定義可檢視之模型子集，以提供具體的特定商務或應用程式模型視點。  
@@ -48,9 +47,8 @@ ms.lasthandoff: 09/01/2017
 |-----------|-----------------|  
 |[建立及管理檢視方塊](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)|描述如何使用模型設計師中的 [檢視方塊] 對話方塊，以建立及管理檢視方塊。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [階層](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e68c34ad2b9e444b39bf3ce8a5cfa33ad2dcd00c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 508f8526ed13af3f7f92aa500b182e077f5bb23d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>常見問題集 (FAQ) 的 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -119,4 +117,3 @@ JDBC 驅動程式是開放原始碼和原始程式碼位於[GitHub](https://gith
 **可以使用 FIPS 驗證演算法通訊驅動程式嗎？** Microsoft JDBC Driver 不含任何密碼編譯演算法。 若客戶使用作業系統、應用程式及聯邦資訊處理標準 (FIPS) 可接受的 JVM 演算法，並將驅動程式設定成使用這些演算法，則此驅動程式將只會使用指定的演算法進行通訊。  
   
   
-

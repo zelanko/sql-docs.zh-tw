@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.relative
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.relative
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8c6d936c5e44996a56ac6d9c653cc25ba7176aa4
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 36db05ec89818195c4b710591f1d0db71e091fe0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="relative-method-sqlserverresultset"></a>relative 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,9 +56,8 @@ public boolean relative(int nRows)
   
  呼叫方法`relative(1)`等同於呼叫[下一步](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)方法。 呼叫方法`relative(-1)`等同於呼叫[先前](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

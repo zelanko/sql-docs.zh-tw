@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetConfigMode
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetConfigMode
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetConfigMode
-helpviewer_keywords:
-- SQLSetConfigMode function [ODBC]
+f1_keywords: SQLSetConfigMode
+helpviewer_keywords: SQLSetConfigMode function [ODBC]
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 96ffac2d3329aa9e9b69be122dfd7becc37acd57
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8919f758c486e6569b9620fcaa7bcf76f4dac0f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode 函式
 **一致性**  
@@ -86,4 +80,3 @@ BOOL SQLSetConfigMode(
 |建立資料來源|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
 |連接到資料來源使用的連接字串或對話方塊方塊|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |擷取組態模式|[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|
-

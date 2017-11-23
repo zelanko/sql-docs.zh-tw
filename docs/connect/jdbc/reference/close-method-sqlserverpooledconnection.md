@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerPooledConnection.close
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerPooledConnection.close
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8de23939-aa84-47a1-aeb9-b03c69c090dc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 149719869ba63a4ce6c7b239fde4756d5056b60e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a0142dc4045a7ee1e647c87b17772d5b16e3e92b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="close-method-sqlserverpooledconnection"></a>close 方法 (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,10 +44,9 @@ public void close()
 ## <a name="remarks"></a>備註  
  此 close 方法是由 javax.sql.PooledConnection 介面中關閉的方法指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerPooledConnection 方法](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   
  [SQLServerPooledConnection 成員](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   
  [SQLServerPooledConnection 類別](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
   
   
-

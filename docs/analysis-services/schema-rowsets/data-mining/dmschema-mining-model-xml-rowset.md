@@ -13,25 +13,21 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODEL_XML
+apiname: DMSCHEMA_MINING_MODEL_XML
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODEL_XML rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_MODEL_XML rowset
 ms.assetid: f58b00e9-3f72-4cff-b448-21a9fb529772
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a2a767a3673926346086c29fa43cf98025db276c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0d508a1bc916d75ff33e5aba19c6306a547af8fb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dmschemaminingmodelxml-rowset"></a>DMSCHEMA_MINING_MODEL_XML 資料列集
   傳回採礦模型的 XML 結構。 XML 字串的格式是遵循預測模型標記語言 (PMML 2.1) 標準。  
@@ -62,8 +58,7 @@ ms.lasthandoff: 09/01/2017
 |**MODEL_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**MODEL_TYPE**|**DBTYPE_WSTR**|選擇性。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦結構描述資料列集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

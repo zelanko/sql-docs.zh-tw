@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ReportingFirstMonth Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ReportingFirstMonth Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ReportingFirstMonth
-helpviewer_keywords:
-- ReportingFirstMonth element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ReportingFirstMonth
+helpviewer_keywords: ReportingFirstMonth element
 ms.assetid: cdce83ab-ac22-4f4a-b8f2-1739883be8dd
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cf5fee1c33a509a6e23b5cc04098ca221c4c7804
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 57c09a79033cbedb0a0797d55e7afc5995f016da
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reportingfirstmonth-element-assl"></a>ReportingFirstMonth 元素 (ASSL)
   定義的第一個報表月份[TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md)項目。  
@@ -69,8 +63,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**ReportingFirstMonth**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.TimeBinding>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

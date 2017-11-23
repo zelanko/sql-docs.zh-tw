@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MinDbCompatibilityLevel
 - MinDbCompatibilityLevel_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- MinDbCompatibilityLevel method (geography)
+dev_langs: TSQL
+helpviewer_keywords: MinDbCompatibilityLevel method (geography)
 ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aa8b842de5183b234501a577a11bbe4e917fdace
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6c95aafc0278834c6108b99dd67908958fb47b17
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -97,9 +93,8 @@ END
   
  第一個 SELECT 陳述式傳回 110，第二個 SELECT 陳述式則傳回 100。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
  [SQL Server Database Engine 回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   
-

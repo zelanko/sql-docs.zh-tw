@@ -8,24 +8,21 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Command Events event category
+helpviewer_keywords: Command Events event category
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 56c47bd0dc279176ee56a31a6ee06ae3c6f1ca82
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 39022629aeda9951a01e79ebf45ec099bd5d7205
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="command-events-data-columns"></a>命令事件資料行
   下表列出 [命令事件] 事件類別目錄中，每種事件類別的資料行。  
@@ -84,4 +81,3 @@ ms.lasthandoff: 09/01/2017
  [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
   
   
-

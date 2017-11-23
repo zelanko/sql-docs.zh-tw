@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - compatibility [ODBC], new features in release
 - ODBC [ODBC], new features
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 016c2cefd6280a7b2cc21e4b5e290468d8271973
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e2b48097b6c398772e14d2594a583d89e6825e0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-features"></a>新功能
 在 ODBC 3 已經導入下列新功能。*x*。 ODBC 3。*x*應用程式使用 ODBC 2*.x*驅動程式不能使用這項功能。 ODBC 3。*x*驅動程式管理員不會對應這些功能時使用的 ODBC 2*.x*驅動程式。  
@@ -116,5 +114,4 @@ ms.lasthandoff: 09/09/2017
   
  本章節包含下列主題。  
   
--   [區塊資料指標，可捲動資料指標，ODBC 3.x 應用程式的回溯相容性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)
-
+-   [適用於 ODBC 3.x 應用程式的區塊資料指標、可捲動的資料指標和回溯相容性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)

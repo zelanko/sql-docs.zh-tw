@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 04e09370-fdfe-4051-9998-4a6859ce8c54
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d1f259270e917978d7fe63a04515292ebadc12ed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4629f3fda5e70d9876adc54d5c8b0d3a00a49196
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationshipendtranslation-element-assl"></a>RelationshipEndTranslation 元素 (ASSL)
   定義代表當地語系化的翻譯的基本資料類型[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)項目。  
@@ -62,8 +60,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Translation>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

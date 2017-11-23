@@ -24,17 +24,16 @@ helpviewer_keywords:
 - EQUAL_AREAS method
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3e9dcfdfb3fa3edb5691c04d8887d4dfe1be99f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ed262fff96572408e85067eb1e760c3ae11373e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discretization-methods-data-mining"></a>分隔方法 (資料採礦)
   有些用於在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立資料採礦模型的演算法需要特定內容類型，才能正確運作。 例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法無法使用連續資料行做為輸入，也無法預測連續值。 另外，有些資料行可能包含太多值，使得演算法不容易識別資料中的模式來建立模型。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [資料行分佈 &#40;資料採礦&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)  
   
   
-

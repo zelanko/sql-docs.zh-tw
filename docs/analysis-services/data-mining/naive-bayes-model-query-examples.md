@@ -18,17 +18,16 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 - content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 622eaa381d4507cb75d66a93916743af40e73932
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6935ffd8851a9454a1a2e53655be814a4eda3af1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="naive-bayes-model-query-examples"></a>貝式機率分類模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 您也可以針對資料採礦結構描述資料列集使用查詢，藉以擷取有關模型的中繼資料。 本節說明如何針對以 Microsoft 貝氏機率分類演算法為基礎的模型來建立這些查詢。  
@@ -263,10 +262,9 @@ AS t
   
  若要查看特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Microsoft 貝氏機率分類演算法技術參考](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
  [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   
-

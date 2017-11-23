@@ -26,17 +26,16 @@ helpviewer_keywords:
 - process clear structure option [Analysis Services]
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 9ca6239dc157d5c6d7f4ac8afd24ff161b57992a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4540adcf485554cff6c909dedf4d53585336ae6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>處理選項和設定 (Analysis Services)
   當您在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中處理物件時，您可以選取處理選項來控制每個物件發生的處理類型。 每一個物件可用的處理類型各不相同，且會依據因上次處理之後物件所發生的變更來決定。 如果您讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自動選取處理方法，它將使用的方法是能夠使物件在最短時間內回到完整處理狀態。  
@@ -75,8 +74,7 @@ ms.lasthandoff: 09/01/2017
 ||**處理錯誤限制**。 選取其中一個選項來控制處理的錯誤數目：|**忽略錯誤計數**。 這個選項將使處理不管錯誤數目有多少都能繼續進行。<br /><br /> **發生錯誤時停止**。 使用這個選項，您可以控制其他兩個設定。 [錯誤數目] 可讓您將處理發生的錯誤限制在特定錯誤數目之內。 [發生錯誤時的動作] 可讓您決定到達 [錯誤數目] 時所要採取的動作。 您可以選取 [停止處理]，讓處理作業失敗並回復任何變更，也可以選取 [停止記錄]，讓處理能夠繼續進行而不記錄錯誤。 [發生錯誤時停止] 是在 [錯誤數目] 設定為 **0**，且 [發生錯誤時的動作] 設定為 [停止處理] 時的預設值。|  
 ||在下列錯誤情況中， 您可以設定選項值，來控制特定的錯誤處理行為。<br /><br /> 當您選取 [使用預設錯誤組態] 時，Analysis Services 會使用為各個正在處理的物件而設定的錯誤組態。 如果物件設定為使用預設組態設定，Analysis Services 會使用為各個選項列出的預設值。|**找不到索引鍵**。 在索引鍵值存在於分割區中，但不存在於對應維度時發生。 預設設定為 [報告並繼續]。 其他設定為 [忽略錯誤] 和 [報告並停止]。<br /><br /> **重複的索引鍵**。 當維度中存在一個以上的索引鍵值時發生。 預設設定為 [忽略錯誤]。 其他設定為 [報告並繼續] 和 [報告並停止]。<br /><br /> **Null 索引鍵已轉換為未知**。 當索引鍵值為 Null，且 [索引鍵錯誤動作] 設定為 [轉換為未知] 時發生。 預設設定為 [忽略錯誤]。 其他設定為 [報告並繼續] 和 [報告並停止]。<br /><br /> **不允許 Null 索引鍵**。 當 [索引鍵錯誤動作] 設定為 [捨棄記錄] 時發生。 預設設定為 [報告並繼續]。 其他設定為 [忽略錯誤] 和 [報告並停止]。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

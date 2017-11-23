@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -21,20 +20,18 @@ f1_keywords:
 - Recordset15::GetSource
 - Recordset15::PutRefSource
 - Recordset15::put_Source
-helpviewer_keywords:
-- Source property [ADO Recordset]
+helpviewer_keywords: Source property [ADO Recordset]
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 36180bafb53d72985c2dc671d80147c8ffaa8588
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ea45eae107fa55355adeb195e7e4fc5cf0a3c762
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="source-property-ado-recordset"></a>來源屬性 （ADO 資料錄集）
 指出資料來源[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -52,10 +49,9 @@ ms.lasthandoff: 09/09/2017
  **來源**屬性是讀/寫關閉**資料錄集**物件或唯讀狀態開啟**資料錄集**物件。  
   
 ## <a name="applies-to"></a>適用於  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [來源屬性範例 (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [來源屬性 （ADO 錯誤）](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [來源屬性 （ADO 資料錄）](../../../ado/reference/ado-api/source-property-ado-record.md)
-
+ [Source 屬性 (ADO 記錄)](../../../ado/reference/ado-api/source-property-ado-record.md)

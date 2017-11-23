@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d5fbb9282e35ff9d6c4a2e18b155f5a884a8f538
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3dcbb314e1816757562f93290d95a3f9e345460b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 資料列集
   傳回伺服器所配置之各種物件的 DISCOVER_MEMORYUSAGE 統計資料。  
@@ -69,8 +67,7 @@ ms.lasthandoff: 09/01/2017
 |GUID|A07CCD21-8148-11D0-87BB-00C04FC33942|  
 |ADOMDNAME|MemoryUsage|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

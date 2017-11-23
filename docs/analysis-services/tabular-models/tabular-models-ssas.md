@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 1d770b114a708301f884de76d7c6a4cc39227195
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f1f324d1ba1b4ba9299c4d29e565d09d1f71fb2c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-modeling-ssas"></a>表格式模型化 (SSAS)
   表格式模型是一種 Analysis Services 資料庫，其會在記憶體內部或以 DirectQuery 模式執行，並直接從後端的關聯式資料來源存取資料。  
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

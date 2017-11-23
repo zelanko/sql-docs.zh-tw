@@ -22,17 +22,16 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - usage property [data mining]
 ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7d248c8c2e0394a73ff815730ced125176a23893
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2691f87c4ded8d2e9f00e4390681c936591bc83
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-columns"></a>採礦模型資料行
   資料採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。 與採礦結構相同，採礦模型也會包含資料行。 採礦模型包含在採礦結構內，且繼承採礦結構所定義的所有屬性值。 此模型可以使用採礦結構包含的所有資料行或資料行子集。  
@@ -61,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

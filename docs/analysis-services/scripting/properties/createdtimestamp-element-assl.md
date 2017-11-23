@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CreatedTimestamp Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CreatedTimestamp Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CreatedTimestamp
-helpviewer_keywords:
-- CreatedTimestamp element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CreatedTimestamp
+helpviewer_keywords: CreatedTimestamp element
 ms.assetid: 35f5dd33-ea82-4be3-a117-69136aa9d1a4
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f6e722dba2f6483f5314c7513e00d175cea1e88c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1c17436e60809006e7204ed149d128eab4c0338
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="createdtimestamp-element-assl"></a>CreatedTimestamp 元素 (ASSL)
   包含父元素的唯讀建立時間戳記。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
  對應至父系的項目**CreatedTimestamp**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Assembly>， <xref:Microsoft.AnalysisServices.Cube>， <xref:Microsoft.AnalysisServices.Database>， <xref:Microsoft.AnalysisServices.DataSource>， <xref:Microsoft.AnalysisServices.DataSourceView>， <xref:Microsoft.AnalysisServices.Dimension>， <xref:Microsoft.AnalysisServices.MdxScript>， <xref:Microsoft.AnalysisServices.MeasureGroup>， <xref:Microsoft.AnalysisServices.MiningModel>， <xref:Microsoft.AnalysisServices.MiningStructure>， <xref:Microsoft.AnalysisServices.Partition>， <xref:Microsoft.AnalysisServices.Permission>，和<xref:Microsoft.AnalysisServices.Perspective>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

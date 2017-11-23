@@ -19,17 +19,16 @@ helpviewer_keywords:
 - relationships [Analysis Services], data source views
 - data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a255b5449ec7abc9ff8d78ce376a8f456053ceff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08ca218747186a14224809c574a6dc524296cb1a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義邏輯關聯性 (Analysis Services)
   [資料來源檢視精靈] 和資料來源檢視設計工具會根據基礎資料庫關聯性，或是根據您所指定的名稱比對準則，自動定義加入到資料來源檢視 (DSV) 之資料表之間的關聯性。  
@@ -94,8 +93,7 @@ ms.lasthandoff: 09/01/2017
   
 3.  以滑鼠右鍵按一下您要修改的關聯性，然後按一下 [編輯關聯性]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

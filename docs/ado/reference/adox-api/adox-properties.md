@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 592fe4aad9025258bda7687a37f641dcc56630b2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28a29504793d2b4144fa6c01f2f80e486d0f2b90
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-properties"></a>ADOX 屬性
 |||  
@@ -56,7 +54,6 @@ ms.lasthandoff: 09/09/2017
 |[唯一](../../../ado/reference/adox-api/unique-property-adox.md)|表示索引鍵是否必須是唯一的。|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|表示主索引鍵更新時執行的動作。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADOX API 參考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [資料定義語言和安全性的 ADO 延伸模組 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

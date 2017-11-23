@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerStatement.executeUpdate (java.lang.String, int[])
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerStatement.executeUpdate (java.lang.String, int[])
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7b3d5b60-4285-4047-b13e-106754ca0d98
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7f821cb347157e7f6eb400ed8f530035ba81d494
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 60e6995abe98bb45c682f251189a6a307334d87b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 方法 (java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -63,10 +59,9 @@ public final int executeUpdate(java.lang.String sql,
   
  如果執行預存程序會導致更新計數大於一，或是產生多個結果集，使用[執行](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)方法才能執行預存程序。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [executeUpdate 方法 &#40;SQLServerStatement &#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   
-

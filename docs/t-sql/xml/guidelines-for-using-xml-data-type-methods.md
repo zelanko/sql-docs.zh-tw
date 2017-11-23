@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f22c3535c66663979009d1e760ecf8c2164bc765
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e02d385d699c1c26d44f2e7383584416c2d9dd5c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>使用 xml 資料類型方法的指導方針
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -111,8 +108,7 @@ FROM   T
   
  此查詢會傳回每個 XML 執行個體中第一個 `<last-name>` 元素的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)  
   
   
-

@@ -8,29 +8,26 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], precedence
 - operator precedence [Transact-SQL]
 - order of operator execution [Transact-SQL]
 - precedence [SQL Server], operators
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c534653bb383fbbfcd069cb98bb72519d3d02987
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db0c7bd10a7d53f4de8fb5aedbe6f1cf3c9be42b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="operator-precedence-transact-sql"></a>運算子優先順序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,8 +39,8 @@ ms.lasthandoff: 09/01/2017
 |Level|操作員|  
 |-----------|---------------|  
 |1|~ (位元 NOT)|  
-|2|* (乘法)、/ (除法), % (模數)|  
-|3|+ （正）、-（否定），+ （加） （+ 串連）、-（減） （& s) (位元 AND)、 ^ (位元互斥 OR)，&#124;(位元 OR)|  
+|2|* （乘號） / （除法），%（模數）|  
+|3|+ （正）、-（否定），+ （加號）、 （+ 串連），-（減號）、 （& s) (位元 AND)、 ^ (位元互斥 OR)，&#124;(位元 OR)|  
 |4|=，>， \<，> =、 < =、 <>，！ =、 ！ >，！ < （比較運算子）|  
 |5|NOT|  
 |6|與|  
@@ -89,10 +86,9 @@ SET @MyNumber = 2 * (4 + (5 - 3) );
 SELECT @MyNumber;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [邏輯運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
-

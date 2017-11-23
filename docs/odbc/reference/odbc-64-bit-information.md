@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 027c953dd10145318e764959a42911fb0b413d03
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e19cb2defa4e2e0e17f94b32af8f94606759f2ab
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位元資訊
 從 Windows Server 2003 開始，Microsoft 作業系統必須支援 64 位元 ODBC 程式庫。 ODBC 標頭和程式庫最初隨附於 MDAC 2.7 SDK 包含讓程式設計人員輕鬆地撰寫新的 64 位元平台程式碼的變更。 透過確定您的程式碼會使用下面所列的 ODBC 定義類型，您可以編譯相同 64 位元和 32 位元平台為基礎的原始程式碼**_WIN64**或**WIN32**巨集。  
@@ -504,6 +502,5 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ROWSET_SIZE  
   
-## <a name="see-also"></a>另請參閱  
- [ODBC 的簡介](../../odbc/reference/introduction-to-odbc.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [ODBC 簡介](../../odbc/reference/introduction-to-odbc.md)

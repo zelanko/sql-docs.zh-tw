@@ -22,17 +22,16 @@ helpviewer_keywords:
 - synchronization [Analysis Services]
 - deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6abe08512e8ff66299a7d50e0fcc90b7355a54ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d56f2cdd207e7d50584b08b5ebcae77bd9057b36
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>將資料採礦方案部署到舊版的 SQL Server
   本章節描述當您嘗試將 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 執行個體內建立的資料採礦模型或資料採礦結構部署到使用 SQL Server 2005 Analysis Services 的資料庫，或是當您將 SQL Server 2005 中建立的模型部署到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體時，可能發生的相容性問題。  
@@ -90,4 +89,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   
-

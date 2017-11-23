@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DegenerateMeasureGroupDimension Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DegenerateMeasureGroupDimension Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DegenerateMeasureGroupDimension
-helpviewer_keywords:
-- DegenerateMeasureGroupDimension data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: DegenerateMeasureGroupDimension
+helpviewer_keywords: DegenerateMeasureGroupDimension data type
 ms.assetid: a64fe908-154d-4fea-b435-afb6ee37a6fa
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 97075971104b9f277d17aaaf8f8944e3fd0d8d82
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b40aa4385a78f54e4c01b637849678777036ee66
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="degeneratemeasuregroupdimension-data-type-assl"></a>DegenerateMeasureGroupDimension 資料類型 (ASSL)
   定義代表變質維度 (亦即，事實維度) 與量值群組之間關聯性的衍生資料類型。  
@@ -69,8 +63,7 @@ ms.lasthandoff: 09/01/2017
   
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DegenerateMeasureGroupDimension>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

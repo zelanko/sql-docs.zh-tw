@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Tuples Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Tuples Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Tuples
 - microsoft.xml.analysis.tuples
 - urn:schemas-microsoft-com:xml-analysis#Tuples
-helpviewer_keywords:
-- Tuples element
+helpviewer_keywords: Tuples element
 ms.assetid: 5494bbaa-c1aa-43fa-b3e0-83befb2bccdd
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96ae916c249be7fddbf3c66e25a7b213740cbd6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3542b734b03a31de03cac5269bf98ac70663b0c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tuples-element-xmla"></a>Tuples 元素 (XMLA)
   包含一組[Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)物件[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)項目，會使用[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)所傳回的資料類型[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
@@ -121,8 +116,7 @@ ms.lasthandoff: 09/01/2017
 </Axes>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

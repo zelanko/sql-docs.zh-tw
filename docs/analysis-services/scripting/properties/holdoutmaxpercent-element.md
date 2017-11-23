@@ -14,24 +14,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- HoldoutMaxPercent
-helpviewer_keywords:
-- HoldoutMaxPercent element
+applies_to: SQL Server 2016 Preview
+f1_keywords: HoldoutMaxPercent
+helpviewer_keywords: HoldoutMaxPercent element
 ms.assetid: e375cc51-5f9d-4252-98a1-326ca0dbbf83
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4edfc8e9942dbbfd8408949ed03ee3de366c32dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1d032bc80b0b96b693c2abee89a87a4747eb234e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="holdoutmaxpercent-element"></a>HoldoutMaxPercent 元素
   指定將用於鑑效組資料分割，其中包含的測試集的資料來源中之案例的最大百分比[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)項目。 其餘案例將用於培訓。 值為 0 表示可當做測試集的案例數目沒有任何限制。  
@@ -74,11 +70,10 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**HoldoutMaxPercent**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MiningStructure>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [HoldoutMaxCases 元素](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)   
  [HoldoutSeed 元素](../../../analysis-services/scripting/properties/holdoutseed-element.md)   
  [HoldoutActualSize 元素](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)  
   
   
-

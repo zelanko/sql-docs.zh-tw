@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: da1a6f30d5a94efd5aaf9a5fecc5bd4435a49bfd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09a30dc2e51e07a9720e0796666c3a89534acdbe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>健全狀況規則參考 (Power Pivot for SharePoint)
   本參考主題描述 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 安裝所加入的 SharePoint 健全狀況規則。 這些規則是用來報告伺服器健全狀況、可用性或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務應用程式組態或是其相關 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的問題。  
@@ -65,4 +64,3 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]：ADOMD.NET 不是安裝在為管理中心所設定的獨立 WFE 上。|否|否|SharePoint 2013<br /><br /> SharePoint 2010|ADOMD.NET 是支援連接至 Analysis Services 資料庫的 Analysis Services 用戶端程式庫。 在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 部署中，ADOMD.NET 可從管理中心的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板存取內建報表。 內建報表實際上是包含內嵌 Analysis Services 資料的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 活頁簿。 管理儀表板使用 ADOMD.NET 將連接要求傳送至伺服器，以載入活頁簿中包含的資料。<br /><br /> 在其管理中心於獨立 Web 前端伺服器上執行的拓撲中，若要在管理儀表板中檢視這些報表，您必須手動安裝 ADOMD.NET。 如需詳細資訊，請參閱 [在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)。|  
   
   
-

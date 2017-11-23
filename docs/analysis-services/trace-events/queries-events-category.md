@@ -8,8 +8,7 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - query events [Analysis Services]
 - event classes [Analysis Services], queries events
 ms.assetid: 99e1d1d6-f03f-4dd0-b467-ea915aea7667
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c9480f5e532ed71681b765b9585ac8ccf96e022f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 33e463c8a03877997616fc419651023eeebd4782
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="queries-events-category"></a>查詢事件類別目錄
   查詢事件的事件類別目錄具有下表所描述的事件類別。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 追蹤事件](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   
-

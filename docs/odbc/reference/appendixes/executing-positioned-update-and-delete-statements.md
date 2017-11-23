@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursor library [ODBC], positioned update or delete
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 757def8025702d5ca7c867b2d8009c7a1d5cb9a2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 78bdb77c8aa4d9351e040b97d9690bb09374856d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>執行定位的 Update 和 Delete 陳述式
 > [!IMPORTANT]  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/09/2017
 |定位的 delete|SQL_ROW_DELETED|舊的值|舊的值|  
   
  [1] 的應用程式必須執行定位的 update 陳述式; 之前更新的資料列集的緩衝區中的值在執行之後定位的 update 陳述式，資料指標程式庫會複製值到快取資料列集緩衝區中。
-

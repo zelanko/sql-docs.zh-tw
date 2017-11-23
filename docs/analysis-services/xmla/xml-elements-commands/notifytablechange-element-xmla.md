@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- NotifyTableChange Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: NotifyTableChange Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#NotifyTableChange
 - http://schemas.microsoft.com/analysisservices/2003/engine#NotifyTableChange
 - microsoft.xml.analysis.notifytablechange
-helpviewer_keywords:
-- NotifyTableChange command
+helpviewer_keywords: NotifyTableChange command
 ms.assetid: b76898eb-20d3-48c8-9eb8-1fd5df638bcc
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8ebf0f33fb259395bef09e292aa13aae65699c98
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 45e156076d7d97164fcb43674e3975daf6944e1e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="notifytablechange-element-xmla"></a>NotifyTableChange 元素 (XMLA)
   通知的執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，已經變更指定的資料來源中的資料表。  
@@ -78,8 +73,7 @@ ms.lasthandoff: 09/01/2017
   
  如需主動式快取的詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

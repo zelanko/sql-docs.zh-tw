@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42c896ee-e5ee-4017-b66e-31d1fe66d369
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9d211455f1b7ee27071f166485b41764253734cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93a6893146a2367719ad7b4bed23a76b7d43e589
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>使用 DMX 建立鑽研查詢
   對於支援鑽研的所有模型，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或支援 DMX 的任何其他用戶端中建立 DMX 查詢，藉以擷取案例資料和結構資料。  
@@ -57,4 +56,3 @@ WHERE [Model Region] = 'M200 Pacific'
  [採礦結構的鑽研](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   
-

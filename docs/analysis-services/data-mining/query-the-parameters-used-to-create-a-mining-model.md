@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- content queries [DMX]
+helpviewer_keywords: content queries [DMX]
 ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 701f440bb015f1de1fbe20dbf60cd09d21343527
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9aa2f7973099f5cf05710206469eb4254293cca3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>查詢用於建立採礦模型的參數
   採礦模型的構成不僅受到定型案例的影響，還會受到在建立模型時所設定參數的影響。 因此，擷取現有模型的參數設定以更加了解模型行為，可能會很有用。 擷取參數在記錄該模型的特定版本時也很有用。  
@@ -80,4 +78,3 @@ WHERE MODEL_NAME = 'TM Clustering'
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

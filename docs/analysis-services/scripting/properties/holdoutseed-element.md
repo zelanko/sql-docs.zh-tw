@@ -14,24 +14,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- HoldoutSeed
-helpviewer_keywords:
-- HoldoutSeed element
+applies_to: SQL Server 2016 Preview
+f1_keywords: HoldoutSeed
+helpviewer_keywords: HoldoutSeed element
 ms.assetid: 6b608bb3-c075-4744-9722-f5fb9fa1cc7e
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 751e18d05897651d0996232f8b4c5c590985a5b0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e97148f9630a125dbe6e93754c532a825de96c84
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="holdoutseed-element"></a>HoldoutSeed 元素
   指定包含測試集的可重複鑑效組資料分割的種子[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)項目。 這個種子可確保模型內容在重新處理期間會保持不變。 如果未指定或設為 0，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]建立的採礦結構名稱使用雜湊演算法的種子。  
@@ -73,11 +69,10 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**HoldoutSeed**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MiningStructure>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [HoldoutActualSize 元素](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)   
  [HoldoutMaxPercent 元素](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)   
  [HoldoutMaxCases 元素](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)  
   
   
-

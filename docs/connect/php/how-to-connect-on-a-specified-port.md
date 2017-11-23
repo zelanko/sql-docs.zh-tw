@@ -8,24 +8,21 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connecting to the server, specifying a port
+helpviewer_keywords: connecting to the server, specifying a port
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8f5fcabd257f602c9ceba97806b031e95142a76
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 88115d77c56cafed731aa2a9cf6c39afcd191618
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>如何：在指定的通訊埠上連接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,11 +48,10 @@ ms.lasthandoff: 09/09/2017
     $conn = new PDO( "sqlsrv:server=$serverName;Database=$database", "", "");  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [連接到伺服器](../../connect/php/connecting-to-the-server.md)  
 [PHP SQL 驅動程式程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 [PHP SQL 驅動程式快速入門](../../connect/php/getting-started-with-the-php-sql-driver.md) 
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
 [PDO_SQLSRV 驅動程式參考](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Group Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Group Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- GROUP
-helpviewer_keywords:
-- Group element
+applies_to: SQL Server 2016 Preview
+f1_keywords: GROUP
+helpviewer_keywords: Group element
 ms.assetid: 7df4ba90-b39f-4d8a-8db1-b73639a522a6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6cf72e2c4acc936037b51a197820325aa690b9e2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e7c61ecf3f826a048445a39ef6407982e35cfe6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="group-element-assl"></a>Group 元素 (ASSL)
   定義繫結至屬性的成員群組。  
@@ -70,9 +64,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Group>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [UserDefinedGroupBinding 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/userdefinedgroupbinding-data-type-assl.md)   
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

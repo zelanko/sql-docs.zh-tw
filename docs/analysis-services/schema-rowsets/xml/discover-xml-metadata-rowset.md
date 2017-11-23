@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DISCOVER_XML_METADATA
+apiname: DISCOVER_XML_METADATA
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_XML_METADATA rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_XML_METADATA rowset
 ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8b53ac5b9c24da68c50fa06644e80389ac53f509
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d0f2a0a63ff4d08a3a273f303a956b49f4932a21
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverxmlmetadata-rowset"></a>DISCOVER_XML_METADATA 資料列集
   傳回描述所要求物件的 XML 文件。 傳回的資料列集永遠都是由一個資料列與一個資料行所組成。  
@@ -87,8 +83,7 @@ ms.lasthandoff: 09/01/2017
 |**ExpandObject**|與相同*ObjectProperties*，但也會傳回名稱、 識別碼和包含的主要物件的時間戳記。|  
 |**ExpandFull**|以遞迴方式將要求的物件完全展開至每個所含物件的底端。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DataAggregation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DataAggregation Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DataAggregation element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DataAggregation element
 ms.assetid: baf6d2c9-54f6-4a6d-95f7-e1e758be458d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 176c3c035f0ac4b185008b6fa1c4e7be1218a4a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 92556b6af8a3d56f647fcbea8b34e197fb8ce663
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dataaggregation-element-assl"></a>DataAggregation 元素 (ASSL)
   決定執行個體是否可彙總保存的資料或快取的資料[MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)。  
@@ -76,10 +71,9 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**DataAggregation**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MeasureGroup>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Cube 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
  [Dimension 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-
