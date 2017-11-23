@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getURL (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getURL (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 105a5319-0f4c-4d08-964b-cc52f8e28ec1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da21a4fcb8845f6790a9cc9b0642b37b131eeb36
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28cd8739ee112557bcbeed80eaf00befd7a02c0b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="geturl-method-javalangstring-sqlserverresultset"></a>getURL 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,10 +52,9 @@ public java.net.URL getURL(java.lang.String sColumn)
 ## <a name="remarks"></a>備註  
  GetURL 方法 java.sql.ResultSet 介面中所指定此 getURL 方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [getURL 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/geturl-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

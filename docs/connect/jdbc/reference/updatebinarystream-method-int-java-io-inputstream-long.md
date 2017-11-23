@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f84cfbe6-ebab-4357-8770-f1db34ecb04f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 425b6b9c364de4b5a69330c968663a5d532952f3
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 50994e5ae027d4f30aab183cdcac54e9dceee6d5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream-long"></a>updateBinaryStream 方法 (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -64,10 +62,9 @@ public void updateBinaryStream(int columnIndex,
   
  如果資料流長度未知，*長度*參數可能會設定為-1，指出驅動程式應該接受資料流，無論其長度為何。 針對 sqljdbc4.jar，我們建議您使用 JDBC 4.0 方法[updateBinaryStream 方法 &#40; int，java.io.InputStream &#41;](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream.md)應用程式要從長度未知的資料流的資料行的更新。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [updateBinaryStream 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

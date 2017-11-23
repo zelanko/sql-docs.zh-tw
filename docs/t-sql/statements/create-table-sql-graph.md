@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -24,8 +23,7 @@ f1_keywords:
 - EDGE_TSQL
 - AS_EDGE
 - AS_EDGE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - graph
 - SQL graph
@@ -34,17 +32,16 @@ helpviewer_keywords:
 - EDGE
 - SQL graph, CREATE TABLE statement
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: shkale-msft
 ms.author: shkale
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 92a586a3612934a4f66e5a616d969454afc87eac
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c32a8c4f683f20c4384089c1d2552614090f9b3d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-table-sql-graph"></a>建立資料表 （SQL 圖形）
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -126,9 +123,8 @@ Stretch database 不支援的節點或邊緣資料表。
 ```
 
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [插入 （SQL 圖形）](../../t-sql/statements/insert-sql-graph.md)]  
  [處理與 SQL Server 2017 圖形](../../relational-databases/graphs/sql-graph-overview.md)
-
 

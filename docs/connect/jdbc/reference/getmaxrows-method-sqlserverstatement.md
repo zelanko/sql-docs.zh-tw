@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerStatement.getMaxRows
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerStatement.getMaxRows
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8211894887356f993067bc214e101f171f1d490e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d9f64d60a08727f239ca3eee4354fc094e06107a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,9 +49,8 @@ public final int getMaxRows()
   
  這個 getMaxRows 方法一律會傳回 0 代表動態的可捲動資料指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   
-

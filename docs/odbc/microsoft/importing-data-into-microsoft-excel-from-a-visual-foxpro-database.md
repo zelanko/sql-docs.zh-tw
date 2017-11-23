@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], importing
 - Visual FoxPro ODBC driver [ODBC], Excel
 ms.assetid: 3085bc4c-00a7-40e5-bffb-c3962cd3d509
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 615b08600c0658ba751341e1039af880d24988e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3cd82106bf81b5885f74adf6c1759883110ea913
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>Visual FoxPro 資料庫中的 Microsoft Excel 將資料匯入
 如果您已經為它定義的資料來源，您可以 Visual FoxPro 資料匯入您的 Microsoft Excel 工作表。 建立 Visual FoxPro 資料來源的相關資訊，請參閱[從 Microsoft Excel 中存取 Visual FoxPro 資料來源](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 5.  選取查詢的欄位拖曳到資料表中較低的設計工具 的下半部。  
   
 6.  關閉 Microsoft 查詢。 您選取的資料匯入 Microsoft Excel 試算表。
-

@@ -8,16 +8,14 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
 - RAISERROR_TSQL
 - RAISEERROR_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - sysmessages system table
 - errors [SQL Server], RAISERROR statement
@@ -31,20 +29,19 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: eaebe21d731916e0ed6906e7d916df4c8cac2d90
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 4fe1477de1f1aa087d622d687249ee4a10ad2524
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="raiserror-transact-sql"></a>RAISERROR Transact SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   產生錯誤訊息並起始工作階段的錯誤處理。 RAISERROR 可以參考使用者定義的訊息儲存在 sys.messages 目錄檢視，或動態建立訊息。 訊息以伺服器錯誤訊息傳回給呼叫的應用程式或傳回給 TRY…CATCH 建構的關聯 CATCH 區塊。 新的應用程式應該使用[擲回](../../t-sql/language-elements/throw-transact-sql.md)改為。  
   
@@ -288,8 +285,9 @@ RAISERROR (@StringVariable, -- Message text.
 GO  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [宣告@local_variable(TRANSACT-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md) [內建函數 &#40;TRANSACT-SQL &#41;](~/t-sql/functions/functions.md)   
+## <a name="see-also"></a>請參閱＜  
+ [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
+ [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [sp_addmessage &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_dropmessage &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
@@ -305,5 +303,4 @@ GO
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
   
   
-
 

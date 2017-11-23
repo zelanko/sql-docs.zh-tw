@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe3088b5a750bd47f4d9a2c8288a1cedbd87be4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a543430479a33953e087fd50c91f7f2a307fc204
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-d-data-types"></a>附錄 d： 資料類型
 ODBC 定義兩組資料類型： SQL 資料類型和 C 資料類型。 SQL 資料類型表示資料儲存在資料來源的資料類型。 C 資料類型表示資料儲存在應用程式緩衝區中的資料類型。  
@@ -50,21 +48,20 @@ ODBC 定義兩組資料類型： SQL 資料類型和 C 資料類型。 SQL 資�
   
 -   [C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)  
   
--   [資料類型識別碼和描述元](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)  
+-   [資料類型識別碼和描述項](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)  
   
--   [虛擬型別識別項](../../../odbc/reference/appendixes/pseudo-type-identifiers.md)  
+-   [虛擬類型識別碼](../../../odbc/reference/appendixes/pseudo-type-identifiers.md)  
   
--   [將二進位格式的資料傳輸](../../../odbc/reference/appendixes/transferring-data-in-its-binary-form.md)  
+-   [以二進位形式傳輸資料](../../../odbc/reference/appendixes/transferring-data-in-its-binary-form.md)  
   
 -   [間隔和數值資料類型的方針](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)  
   
--   [西曆的條件約束](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)  
+-   [西曆條件約束](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)  
   
--   [資料行大小、 十進位數字、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)  
+-   [資料行大小、小數位數、傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)  
   
 -   [將資料從 SQL 轉換成 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)  
   
 -   [將資料從 C 轉換成 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
  如需 ODBC 資料類型的說明，請參閱[ODBC 中的資料型別](../../../odbc/reference/develop-app/data-types-in-odbc.md)。 如需驅動程式特有的 SQL 資料類型資訊，請參閱驅動程式的文件。
-

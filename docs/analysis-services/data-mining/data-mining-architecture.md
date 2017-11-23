@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 637caf3c237da1bcd032ec81ddcd626e94b56dbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c220da116fb0294ad463d8a0e9c1e4ade6ce652
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-architecture"></a>資料採礦架構
   本節描述在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體內裝載的資料採礦方案架構。 本節的主題描述可支援資料採礦之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的邏輯和實體架構，也提供有關用戶端、提供者和通訊協定的資訊，該通訊協定可用來與資料採礦伺服器通訊以及在本機或遠端搭配資料採礦物件使用。  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
  [資料採礦程式設計](../../analysis-services/data-mining-programming.md)  
   
   
-

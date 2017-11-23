@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CalculationType Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CalculationType Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CalculationType
-helpviewer_keywords:
-- CalculationType element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CalculationType
+helpviewer_keywords: CalculationType element
 ms.assetid: b974b3d3-fbf7-4d77-8f6e-4e05a258fe84
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: baadc42d8d38f8d81314265064870e7216d9b017
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 35ef2ca152038a71474a62d2ae7a5b23678f1997
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculationtype-element-assl"></a>CalculationType 元素 (ASSL)
   描述中相關聯定義的計算類型[CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)項目。  
@@ -77,11 +71,10 @@ ms.lasthandoff: 09/01/2017
   
  列舉型別對應至允許的值**CalculationType**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.CalculationType>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CalculationProperties 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/calculationproperties-element-assl.md)   
  [MdxScript 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)   
  [MdxScripts 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

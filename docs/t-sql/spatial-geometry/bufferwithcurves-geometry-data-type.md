@@ -8,26 +8,22 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- BufferWithCurves method (geometry)
+dev_langs: TSQL
+helpviewer_keywords: BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d68384a06978c598754d96752cfa26449549cc93
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a88ea4010ec1cfd48661b34e990634fe371141f3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -163,7 +159,6 @@ SQL Server 傳回類型：**幾何**
   
  前兩個**選取**陳述式會傳回`GeometryCollection`執行個體，因為參數*距離*小於或等於 1/2 的距離兩個點 (1 1) 和 (1 4)。 第三個**選取**陳述式會傳回`CurvePolygon`執行個體，因為緩衝的執行個體的兩個點 (1 1) 和 (1 4) 重疊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  
-

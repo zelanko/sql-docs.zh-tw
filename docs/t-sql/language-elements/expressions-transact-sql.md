@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Boolean expressions
 - expressions [SQL Server], about expressions
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: bc14512bf2ab1eaa2eaa6b51891361f26189314d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 826d1ab9f4a0a68d692551ae58a529ab8b7ebfae
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="expressions-transact-sql"></a>運算式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -136,8 +133,8 @@ GO
   
  在結果集的每個資料列中，`1+2` 運算式都會評估得出 `3`。 雖然 `ProductID` 運算式會在每個結果集資料列中產生唯一值，但每個資料列都只有 `ProductID` 的一個值。  
   
-## <a name="see-also"></a>另請參閱  
- [TIME ZONE &AMP; #40;TRANSACT-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
+## <a name="see-also"></a>請參閱＜  
+ [TIME ZONE &AMP;#40;TRANSACT-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [案例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [聯合 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
@@ -151,4 +148,3 @@ GO
  [其中 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

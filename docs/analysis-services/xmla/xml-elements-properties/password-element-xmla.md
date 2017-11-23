@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Password Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Password Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Password
 - urn:schemas-microsoft-com:xml-analysis#Password
 - microsoft.xml.analysis.password
-helpviewer_keywords:
-- Password element
+helpviewer_keywords: Password element
 ms.assetid: 8a0603bd-f6a1-4b86-84f1-c83d0b03951b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0e7d330f5cb2b92223ca897034130a908007afdc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 56090d82d7d91ea7319c7bbe2cf59087de8f6ef0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="password-element-xmla"></a>Password 元素 (XMLA)
   決定要父系所使用的密碼[備份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)或[還原](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)命令用於加密或解密備份檔案。  
@@ -75,9 +70,8 @@ ms.lasthandoff: 09/01/2017
   
  如果**位置**元素包含在**備份**或**還原**命令時，相同**密碼**項目用於這兩種備份與遠端備份檔案。 如需有關遠端備份檔案的詳細資訊，請參閱[備份、 還原，並同步處理資料庫 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Location 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)   
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

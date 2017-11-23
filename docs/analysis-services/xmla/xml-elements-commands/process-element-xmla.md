@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Process Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Process Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Process
 - http://schemas.microsoft.com/analysisservices/2003/engine#Process
 - microsoft.xml.analysis.process
-helpviewer_keywords:
-- Process command
+helpviewer_keywords: Process command
 ms.assetid: 886fd480-c0e6-4c9b-b65e-da47f874d938
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 99607a95f8d3cb23c9a634afc362eb63960d1d57
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f43c4c74e23df3b5a81c5497ef356401e70b8479
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="process-element-xmla"></a>Process 元素 (XMLA)
   在處理物件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
@@ -77,8 +72,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  如需有關處理物件的詳細資訊，請參閱[處理物件 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

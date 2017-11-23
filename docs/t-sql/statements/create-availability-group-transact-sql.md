@@ -1,12 +1,14 @@
 ---
 title: "建立可用性群組 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 10/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +18,26 @@ f1_keywords:
 - CREATE AVAILABILITY GROUP
 - CREATE AVAILABILITY
 - AVAILABILITY_GROUP_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - CREATE AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 196
+caps.latest.revision: "196"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 35ccffcfbdce2c10b20c8459e59a1c2d41962088
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cebeb43402be1762021738096b9a0e959082d986
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟用了 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能，則會建立新的可用性群組。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>語法  
   
-```  
+```SQL  
   
 CREATE AVAILABILITY GROUP group_name  
    WITH (<with_option_spec> [ ,...n ] )  
@@ -73,8 +73,8 @@ CREATE AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
-       FAILOVER_MODE = { AUTOMATIC | MANUAL }  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
+       FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
        [ , <add_replica_option> [ ,...n ] ]  
     )   
   
@@ -188,10 +188,10 @@ CREATE AVAILABILITY GROUP group_name
  用來建立分散式的可用性群組。 此選項搭配 AVAILABILITY GROUP ON 參數用於連接兩個不同的 Windows Server 容錯移轉叢集的可用性群組。  如需詳細資訊，請參閱[分散式可用性群組 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)。 分散式的可用性群組支援從[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- SQL Server 2017 CTP 2.2 中導入。 用來設定主要認可交易之前認可所需的同步次要複本的最小數目。 可保證 SQL Server 交易等候直到更新次要複本的最小數目上的交易記錄檔。 預設值為 0 可讓 SQL Server 2016 相同的行為。 最小值為 0。 最大值是減 1 的複本數目。 此選項與在同步認可模式下的複本。 當複本在同步認可模式，主要複本上的寫入等候同步次要複本上的寫入會認可到複本資料庫的交易記錄檔。 如果裝載次要複本的 SQL Server 停止回應，裝載主要複本的 SQL Server 會標示該次要複本未同步處理，並繼續進行。 沒有回應的資料庫回到線上時它處於 「 未同步處理 」 狀態，並將複本標示為狀況不良，直到主要可讓您同步一次。 此設定可確保主要複本會等候直到複本的最小數目已認可的每個交易。 如果無法使用之複本的最小數目主要的認可失敗。 此設定適用於可用性群組的叢集類型`WSFC`和`EXTERNAL`。 叢集類型`EXTERNAL`可用性群組新增到叢集資源時，變更設定。 請參閱[的可用性群組組態的高可用性與資料保護](../../linux/sql-server-linux-availability-group-ha.md)。
+ SQL Server 2017 中導入。 用來設定主要認可交易之前認可所需的同步次要複本的最小數目。 可保證 SQL Server 交易等候直到更新次要複本的最小數目上的交易記錄檔。 預設值為 0 可讓 SQL Server 2016 相同的行為。 最小值為 0。 最大值是減 1 的複本數目。 此選項與在同步認可模式下的複本。 當複本在同步認可模式，主要複本上的寫入等候同步次要複本上的寫入會認可到複本資料庫的交易記錄檔。 如果裝載次要複本的 SQL Server 停止回應，裝載主要複本的 SQL Server 會標示該次要複本未同步處理，並繼續進行。 沒有回應的資料庫回到線上時它處於 「 未同步處理 」 狀態，並將複本標示為狀況不良，直到主要可讓您同步一次。 此設定可確保主要複本會等候直到複本的最小數目已認可的每個交易。 如果無法使用之複本的最小數目主要的認可失敗。 叢集類型`EXTERNAL`可用性群組新增到叢集資源時，變更設定。 請參閱[的可用性群組組態的高可用性與資料保護](../../linux/sql-server-linux-availability-group-ha.md)。
 
  CLUSTER_TYPE  
- SQL Server 2017 CTP 2.2 中導入。 用來識別可用性群組是否在 Windows Server 容錯移轉叢集 (WSFC)。  設定至 WSFC 可用性群組容錯移轉叢集執行個體的 Windows Server 容錯移轉叢集時。 叢集由不像 Linux Pacemaker Windows Server 容錯移轉叢集的叢集管理員所管理時設為外部。 當可用性群組不使用 WSFC 叢集一起使用時，將會設定為 NONE。 例如，當可用性群組包含 Linux 伺服器。 
+ SQL Server 2017 中導入。 用來識別可用性群組是否在 Windows Server 容錯移轉叢集 (WSFC)。  設定至 WSFC 可用性群組容錯移轉叢集執行個體的 Windows Server 容錯移轉叢集時。 叢集由不像 Linux Pacemaker Windows Server 容錯移轉叢集的叢集管理員所管理時設為外部。 當可用性群組不使用 WSFC 叢集一起使用時，將會設定為 NONE。 例如，當可用性群組包含 Linux 伺服器與任何叢集管理員。 
 
  資料庫*database_name*  
  指定本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (也就是建立可用性群組的伺服器執行個體) 上一個或多個使用者資料庫的清單。 您可以為可用性群組指定多個資料庫，但每個資料庫只能屬於一個可用性群組。 如需可用性群組可支援的資料庫類型資訊，請參閱[必要條件、 限制和建議的 Alwayson 可用性群組 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). 若要了解哪些本機資料庫已屬於可用性群組，請參閱**replica_id**中的資料行[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目錄檢視。  
@@ -245,14 +245,23 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  這是與夥伴伺服器執行個體之鏡像端點相關聯的通訊埠編號 (針對 ENDPOINT_URL 選項)，或伺服器執行個體之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 所使用的通訊埠編號 (針對 READ_ONLY_ROUTING_URL 選項)。  
   
- AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT |ASYNCHRONOUS_COMMIT}  
- SYNCHRONOUS_COMMIT 或 ASYNCHRONOUS_COMMIT 指定主要複本是否等待認可至磁碟之前的主要複本可以認可給定主要上的交易記錄檔記錄強化 （寫入） 的次要複本資料庫。 相同主要複本上不同資料庫的交易可以獨立認可。
+ AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT |ASYNCHRONOUS_COMMIT |CONFIGURATION_ONLY}  
+ SYNCHRONOUS_COMMIT 或 ASYNCHRONOUS_COMMIT 指定主要複本是否等待認可至磁碟之前的主要複本可以認可給定主要上的交易記錄檔記錄強化 （寫入） 的次要複本資料庫。 相同主要複本上不同資料庫的交易可以獨立認可。 SQL Server 2017 CU 1 導入了 CONFIGURATION_ONLY。 CONFIGURATION_ONLY 複本只適用於可用性群組與 CLUSTER_TYPE = 外部或 CLUSTER_TYPE = 無。 
   
  SYNCHRONOUS_COMMIT  
  指定的主要複本會等候認可的交易，直到已強化這個次要複本 （同步認可模式）。 您最多可以為三個複本指定 SYNCHRONOUS_COMMIT，包括主要複本在內。  
   
  ASYNCHRONOUS_COMMIT  
  指定主要複本會認可交易，而不等候這個次要複本強化記錄 (同步-認可可用性模式)。 您最多可以為五個可用性複本指定 ASYNCHRONOUS_COMMIT，包括主要複本在內。  
+
+ CONFIGURATION_ONLY 指定主要複本，以同步方式認可至 master 資料庫，在這個複本上可用性群組組態中繼資料。 複本不會包含使用者資料。 此選項：
+
+- 可裝載於任何版本的 SQL Server，包括 Express Edition。
+- 需要資料庫鏡像端點的型別 CONFIGURATION_ONLY 複本`WITNESS`。
+- 無法改變。
+- 不正確時`CLUSTER_TYPE = WSFC`。 
+
+   如需詳細資訊，請參閱[組態的唯一複本](../../linux/sql-server-linux-availability-group-ha.md)。
   
  AVAILABILITY_MODE 子句是必要的。 如需詳細資訊，請參閱 [可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
   
@@ -380,7 +389,7 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  為可用性群組的鏡像端點相關聯的通訊埠編號。 請注意，這不是接聽程式的連接埠。  
   
- AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT |ASYNCHRONOUS_COMMIT}  
+ AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT |ASYNCHRONOUS_COMMIT |CONFIGURATION_ONLY}  
  指定的主要複本是否等待認可至磁碟之前的主要複本可以認可給定主要資料庫上的交易的記錄檔記錄強化 （寫入） 的次要可用性群組。  
   
  SYNCHRONOUS_COMMIT  
@@ -498,7 +507,7 @@ CREATE AVAILABILITY GROUP group_name
   
  最後，此範例會指定選用的 LISTENER 子句，以建立新可用性群組的可用性群組接聽程式。 系統會針對此接聽程式指定唯一的 DNS 名稱 `MyAgListenerIvP6`。 兩個複本位於不同的子網路上，因此接聽程式必須使用靜態 IP 位址。 針對這兩個可用性複本，WITH IP 子句都會指定使用 IPv6 格式的靜態 IP 位址 `2001:4898:f0:f00f::cf3c` 及 `2001:4898:e0:f213::4ce2`。 此範例也會指定使用選用的 PORT 引數指定通訊埠 `60173` 做為接聽程式通訊埠。  
   
-```  
+```SQL
 CREATE AVAILABILITY GROUP MyAg   
    WITH (  
       AUTOMATED_BACKUP_PREFERENCE = SECONDARY,  
@@ -563,7 +572,7 @@ GO
   
 -   [使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [卸除可用性群組 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
@@ -572,5 +581,4 @@ GO
  [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-
 

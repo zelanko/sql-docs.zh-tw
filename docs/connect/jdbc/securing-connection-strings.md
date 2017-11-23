@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 588166b41e7a66a442b1b5b49fbdcaf0d6d13320
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7a69727d252d2e8d51d462a691f65379432096eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="securing-connection-strings"></a>保護連接字串的安全
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,8 +34,7 @@ ms.lasthandoff: 09/09/2017
   
  如果會從外部來源取得連接字串資訊 (例如由使用者提供使用者識別碼和密碼)，您必須驗證該來源的任何輸入，以確定這些輸入遵從正確的格式並且不含會影響連接的其他參數。  
   
-## <a name="see-also"></a>另請參閱  
- [保護 JDBC 驅動程式應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+## <a name="see-also"></a>請參閱＜  
+ [保護 JDBC Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
-

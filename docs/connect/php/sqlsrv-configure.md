@@ -8,28 +8,25 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- sqlsrv_configure
+apiname: sqlsrv_configure
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_configure
 - API Reference, sqlsrv_configure
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 68ed443c80b2eff8405bb5419da132edf49a6807
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ee3da7943b4bba95335de991e38d45b6261f96e3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlsrvconfigure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,8 +62,7 @@ sqlsrv_configure( string $setting, mixed $value )
   
 （3） 如需有關設定錯誤和警告處理的詳細資訊，請參閱[How to： 設定錯誤和警告處理使用 SQLSRV 驅動程式](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
 [PHP SQL 驅動程式程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md) 
   
-

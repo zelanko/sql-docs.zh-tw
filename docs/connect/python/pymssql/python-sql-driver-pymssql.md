@@ -8,22 +8,20 @@ ms.service:
 ms.component: python
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34edf89e-4335-4ef6-827a-54b7af9cc9fd
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 53176b1db43ade2db690bf5e635531fdf7946fe8
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 751084b2b925c43f74b7733e67946661684e3fe0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="python-sql-driver---pymssql"></a>Python SQL 驅動程式-pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -36,4 +34,3 @@ ms.lasthandoff: 09/09/2017
 
 ## <a name="documentation"></a>文件集
 * [pymssql 文件](http://pymssql.org)  
-

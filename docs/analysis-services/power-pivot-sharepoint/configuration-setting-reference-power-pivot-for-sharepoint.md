@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 267128105fe02befb5fa42053fdaa77c581dd361
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4f3b5a6b1a90d22889c4cd935abaf94f5172cfd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>組態設定參考 (PowerPivot for SharePoint)
   本主題提供 SharePoint 伺服器陣列中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式所使用的組態設定參考文件。 如果您使用 PowerShell 指令碼來設定伺服器，或者，如果想查閱特定設定的資訊，本主題中的資訊提供詳細的說明。  
@@ -110,4 +109,3 @@ ms.lasthandoff: 09/01/2017
  [Power Pivot 管理儀表板和使用量資料](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
   
-

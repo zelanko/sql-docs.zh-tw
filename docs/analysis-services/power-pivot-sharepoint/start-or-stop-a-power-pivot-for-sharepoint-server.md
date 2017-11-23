@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a262f8ac21748942f36a74773eab898ee321ae57
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f512a256765bbba4b1f641fb9752bd09fae4696
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>啟動或停止 Power Pivot for SharePoint Server
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務和 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體會在相同的本機應用程式伺服器上一起運作，以支援 SharePoint 伺服陣列中協調的要求和資料處理。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [設定 Power Pivot 服務帳戶](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   
-

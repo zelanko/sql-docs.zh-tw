@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Read Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Read Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Read element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Read element
 ms.assetid: 2e2c1173-72ca-4e8a-a6cd-fd348ef96d78
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d03601b2544740e8b93515dae38368ea0d144505
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aff524460850c6e875f5e703f5bbc065fc5ad50a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="read-element-assl"></a>Read 元素 (ASSL)
   判斷是否可讀取資料或中繼資料的指定[CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md)或[權限](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)項目。  
@@ -75,7 +70,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  對應至父系的項目**讀取**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CubeDimensionPermission>和<xref:Microsoft.AnalysisServices.Permission>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Cube 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
  [Dimension 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
  [CubePermission 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/cubepermission-element-assl.md)   
@@ -83,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

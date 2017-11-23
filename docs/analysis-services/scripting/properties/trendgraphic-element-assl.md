@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- TrendGraphic Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: TrendGraphic Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- TrendGraphic
-helpviewer_keywords:
-- TrendGraphic element
+applies_to: SQL Server 2016 Preview
+f1_keywords: TrendGraphic
+helpviewer_keywords: TrendGraphic element
 ms.assetid: 7448fd80-3072-4d85-b3a0-6606d1d20885
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 307e3418e86e2f078e5c18ab33cb7f19401ed242
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c209d484e004deddd1c9ba2e169511c07658e13d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="trendgraphic-element-assl"></a>TrendGraphic 元素 (ASSL)
   包含之趨勢的建議圖形表示[Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md)項目。  
@@ -78,8 +72,7 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**TrendGraphic**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Kpi>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

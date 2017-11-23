@@ -1,33 +1,30 @@
 ---
 title: "ALTER DATABASE （Azure SQL 資料倉儲） |Microsoft 文件"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse
 ms.reviewer: 
-ms.service: sql-warehouse
-ms.suite: 
-ms.technology:
-- database-engine
+ms.service: sql-data-warehouse
+ms.component: t-sql|statements
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.openlocfilehash: 758f303efd228d806db53075f92cc8dd4664d40b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b5e328da952c853409437f7c3a4993f17022de22
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE （Azure SQL 資料倉儲）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 修改名稱、 大小上限或資料庫的服務目標。  
   
@@ -42,8 +39,18 @@ ALTER DATABASE database_name
 | MODIFY ( <edition_option> [, ... n] )  
   
 <edition_option> ::=   
-      MAXSIZE = { 250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 | 153600 | 204800 | 245760 } GB  
-    | SERVICE_OBJECTIVE = { 'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000'}  
+      MAXSIZE = { 
+            250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 
+          | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 
+          | 92160 | 102400 | 153600 | 204800 | 245760 
+      } GB  
+      | SERVICE_OBJECTIVE = { 
+            'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' 
+          | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' 
+          | 'DW3000' | 'DW6000' | 'DW1000c' | 'DW1500c' | 'DW2000c' 
+          | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c' 
+          | 'DW10000c' | 'DW15000c' | 'DW30000c'
+      }  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -54,10 +61,18 @@ MODIFY NAME = *new_database_name*
 重新命名資料庫名稱指定為*new_database_name*。  
   
 MAXSIZE  
-資料庫的最大可以增長至。 設定此值可防止大小設定超過資料庫大小的成長。 預設值*MAXSIZE*時未指定為 10240 GB (10 TB)。 其他可能的值範圍從 250 GB 最多 240 TB。  
+預設值為 10240 GB (10 TB)。  
+
+**適用於：**彈性效能層針對最佳化
+
+資料庫的允許大小上限。 資料庫無法增長超過 MAXSIZE。 
+
+**適用於：**針對計算效能層最佳化
+
+在資料庫中的資料列存放區資料的可允許大小上限。 資料儲存在資料列存放區資料表、 資料行存放區索引的差異存放區或非叢集資料行存放區索引的非叢集索引不得成長超過 MAXSIZE。  壓縮成資料行存放區格式的資料不受限於 MAXSIZE，就不需要的大小限制。 
   
 SERVICE_OBJECTIVE  
-指定效能等級。 如需服務目標[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，請參閱[SQL 資料倉儲上的小數位數效能](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-manage-compute-overview/)。  
+指定效能等級。 如需服務目標[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，請參閱[效能層](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
   
 ## <a name="permissions"></a>Permissions  
 需要這些權限：  
@@ -112,7 +127,7 @@ ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [CREATE DATABASE （Azure SQL 資料倉儲）](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 [SQL 資料倉儲清單的參考主題](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
   

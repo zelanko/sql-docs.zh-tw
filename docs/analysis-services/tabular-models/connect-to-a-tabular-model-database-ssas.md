@@ -15,23 +15,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 69878a319fb5b061e712bcf96e094356b558553e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85963e947dbed1fc2d1574a537d0e42f61fbba35
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>連接到表格式模型資料庫 (SSAS)
   建置表格式模型，並將其部署到 Analysis Services 表格式模式伺服器之後，您需要設定權限，使其可供用戶端應用程式使用。 此主題說明如何設定權限和如何從用戶端應用程式連接到資料庫。  
   
 > [!NOTE]  
->  根據預設，在設定防火牆之前，無法使用 Analysis Services 的遠端連接。 如果您要為用戶端連接設定具名或預設的執行個體，請確認您已經開放適當的連接埠。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+>  根據預設，在設定防火牆之前，無法使用 Analysis Services 的遠端連接。 如果您要為用戶端連接設定具名或預設的執行個體，請確認您已經開放適當的連接埠。 如需詳細資訊，請參閱 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
  本主題包含下列幾節：  
   
@@ -97,7 +96,7 @@ ms.lasthandoff: 09/01/2017
   
 4.  對於登入認證，如果您有資料庫的讀取權限，請選擇 [使用 Windows 驗證]。 否則，請選擇 [使用下列的使用者名稱和密碼]，然後輸入具有資料庫權限之 Windows 帳戶的使用者名稱和密碼。 按一下 **[下一步]**。  
   
-5.  選取資料庫。 有效的選項將會針對資料庫顯示一個 [模型] Cube。 按一下 下一步，然後按一下完成。  
+5.  選取資料庫。 有效的選項將會針對資料庫顯示一個 [模型] Cube。 按一下 [下一步]，然後按一下 [完成]。  
   
  建立連接之後，您可以使用資料來建立樞紐分析表或樞紐分析圖。 如需詳細資訊，請參閱本主題稍後的 [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)中的 [角色管理員] 對話方塊來定義角色的表格式模型作者。  
   
@@ -121,10 +120,9 @@ ms.lasthandoff: 09/01/2017
   
  **嘗試建立與活頁簿中所使用之外部資料來源間的連接時，發生錯誤。**  
   
- 在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤的發生，是因為使用者在活頁簿上沒有足夠的 SharePoint 權限。 使用者必須具有 [讀取]\(含) 以上的權限。 [僅供檢視] 權限不足以進行資料存取。  
+ 在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤的發生，是因為使用者在活頁簿上沒有足夠的 SharePoint 權限。 使用者必須具有 [讀取] (含) 以上的權限。 [僅供檢視] 權限不足以進行資料存取。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [表格式模型方案部署 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
-

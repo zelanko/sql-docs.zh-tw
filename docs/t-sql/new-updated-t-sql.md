@@ -19,12 +19,11 @@ ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.author: genemi
 ms.workload: t-sql
+ms.openlocfilehash: 0f5d3cb833a9434429d094048e77e86dccd54fd2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 4d48c7df783ebe50f7b5d7fe3e72bef91559006e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>新的與最近的更新： TRANSACT-SQL 文件
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +37,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 
-- *日期範圍的更新：* &nbsp; **2017年-09-11** &nbsp; -到- &nbsp; **2017年-09-27**
+- *更新的日期範圍：* &nbsp; **2017-09-11** &nbsp; 到 &nbsp; **2017-09-27**
 - *主旨區域：* &nbsp; **T-SQL**。
 
 
@@ -158,20 +157,20 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
 
-- [新 + 更新 (0 + 1): **Advanced Analytics sql**文件](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新 + 更新 (0 + 1): **sql Analysis Services**文件](../analysis-services/new-updated-analysis-services.md)
-- [新 + 更新 (4 + 1): **sql 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
-- [新 + 更新 (17 + 0): **sql Integration Services**文件](../integration-services/new-updated-integration-services.md)
-- [新 + 更新 (3 + 0): **sql Linux**文件](../linux/new-updated-linux.md)
-- [新 + 更新 (1 + 1):**關聯式資料庫供 SQL**文件](../relational-databases/new-updated-relational-databases.md)
-- [新 + 更新 (2 + 0): **Reporting Services SQL**文件](../reporting-services/new-updated-reporting-services.md)
-- [新 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)**文件](../ssms/new-updated-ssms.md)
-- [新 + 更新 (0 + 1): **TRANSACT-SQL**文件](../t-sql/new-updated-t-sql.md)
+- [新文章 + 更新文章 (0+1)：**SQL 的進階分析**文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章 + 更新文章 (0+1)：**SQL 的 Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (4+1)：**SQL 的資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新文章 + 更新文章 (17+0)：**SQL 的 Integration Services** 文件](../integration-services/new-updated-integration-services.md)
+- [新文章 + 更新文章 (3+0)：**SQL 適用的 Linux** 文件](../linux/new-updated-linux.md)
+- [新文章 + 更新文章 (1+1)：**SQL 的關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
+- [新文章 + 更新文章 (2+0)：**SQL 的 Reporting Services** 文件](../reporting-services/new-updated-reporting-services.md)
+- [新文章 + 更新文章 (0+1)：**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
+- [新文章 + 更新文章 (0+1)：**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
 - [新文章 + 更新文章 (0+0)：**ActiveX Data Objects (ADO) for SQL** 文件](../ado/new-updated-ado.md)
-- [新 + 更新 (0 + 0):**連接到 SQL**文件](../connect/new-updated-connect.md)
+- [新文章 + 更新文章 (0+0)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
 - [新文章 + 更新文章 (0+0)：**Data Quality Services for SQL** 文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 資料採礦延伸模組 (DMX)** 文件](../dmx/new-updated-dmx.md)
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
@@ -179,11 +178,10 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 - [新文章 + 更新文章 (0+0)：**SQL ODBC (開放式資料庫連接)** 文件](../odbc/new-updated-odbc.md)
 - [新文章 + 更新文章 (0+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
 - [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../sample/new-updated-sample.md)
-- [新 + 更新 (0 + 0): **Microsoft SQL Server**文件](../sql-server/new-updated-sql-server.md)
+- [新文章 + 更新文章 (0+0)：**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
 - [新文章 + 更新文章 (0+0)：**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
 - [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
-- [新 + 更新 (0 + 0): **Tools for SQL**文件](../tools/new-updated-tools.md)
+- [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
-
 
 

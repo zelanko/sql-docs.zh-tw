@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 1d53dda1-f2c8-4a9b-8ec7-78f43ca1d7db
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 843a0f870ad9b30ad4746bbe9913de845bfc30e3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6483e1e3fe0e616c3c870183fcb265f1d2d252ec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables---hierarchy-representation"></a>資料表的階層表示法
   在表格式模型中，階層是根據使用者選取的值從一個屬性到另一個屬性的導覽路徑。  
@@ -111,4 +109,3 @@ private void addHierarchy(
 ```  
   
   
-

@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_OBJECT_ACTIVITY rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_OBJECT_ACTIVITY rowset
 ms.assetid: 100f7de1-ad5c-4973-b863-3c10df1245c4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b3ec98be8fe8e1779364d845a78a8e610734ddab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f42115f46be220580d42d54f5cab62c7c12492ec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverobjectactivity-rowset"></a>DISCOVER_OBJECT_ACTIVITY 資料列集
   提供每個物件自從服務啟動之後的資源使用量資訊。  
@@ -64,8 +61,7 @@ ms.lasthandoff: 09/01/2017
 |OBJECT_PARENT_PATH|DBTYPE_WSTR|選擇性。|  
 |OBJECT_ID|DBTYPE_WSTR|選擇性。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

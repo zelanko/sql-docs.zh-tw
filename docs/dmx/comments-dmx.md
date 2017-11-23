@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - comments [DMX]
 - Data Mining Extensions [Analysis Services], comments
@@ -29,17 +28,16 @@ helpviewer_keywords:
 - // (comment)
 - -- (comment character)
 ms.assetid: 64d10eb5-4fe8-42c6-b387-eff336315e56
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d393e3b0b9c98252722bb5cf0fc72454f3f7212c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 012feb6b830b18151708a85259a0d52ba195788f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="comments-dmx"></a>註解 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **/\*...\*/ （正斜線-星號字元配對）。** 使用這些註解字元在要執行之程式碼的同一行撰寫註解，或者單獨一行撰寫註解，甚至在可執行程式碼中撰寫註解。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]評估所有內容都將開啟註解配對 (/ *) 到關閉註解配對 (\*/) 做為註解的一部分。 若要建立多行註解，開始註解的註解字元配對 (/\*)，且結尾註解與關閉註解字元配對 (\*/)。 任一行註解中不應包含其他任何註解字元。 如需有關這個註解字元的詳細資訊，請參閱[斜線星狀 &#40;註解 &#41;&#40; DMX &#41;](../dmx/slash-star-comment-dmx.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -74,4 +72,3 @@ ms.lasthandoff: 08/02/2017
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

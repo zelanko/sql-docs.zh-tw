@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- State Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: State Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- State
-helpviewer_keywords:
-- State element
+applies_to: SQL Server 2016 Preview
+f1_keywords: State
+helpviewer_keywords: State element
 ms.assetid: b6ee1144-89f7-4ced-bc87-c2e33ca25f73
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 24cd06cd906eca3d40cb0eb0b06f10cf7e870a66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a80fc4d340e8d0dfceea814c8147d1d17737cfac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="state-element-assl"></a>State 元素 (ASSL)
   包含描述父元素之目前處理狀態的唯讀值。  
@@ -79,8 +73,7 @@ ms.lasthandoff: 09/01/2017
   
  對應至父系的項目**狀態**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Cube>， <xref:Microsoft.AnalysisServices.Dimension>， <xref:Microsoft.AnalysisServices.MeasureGroup>， <xref:Microsoft.AnalysisServices.MiningModel>， <xref:Microsoft.AnalysisServices.MiningStructure>，和<xref:Microsoft.AnalysisServices.Partition>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

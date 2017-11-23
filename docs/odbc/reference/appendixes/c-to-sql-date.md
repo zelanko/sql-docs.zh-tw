@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - converting data from c to SQL types [ODBC], date
 - data conversions from C to SQL types [ODBC], date
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7a1efdeb745856ea7460a6719b386143d1a03819
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e5806fe1dcdbabbc27e25c0387f2d06ea25f64ee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-date"></a>SQL 到 C： 日期
 日期 ODBC C 資料類型的識別項是：  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
  當日期 C 資料轉換成字元的 SQL 資料時，產生的字元資料就會處於 「*yyyy*-*公釐*-*dd*」 格式。  
   
  驅動程式會忽略日期 C 資料類型轉換資料的長度/指標值，並假設資料緩衝區的大小是日期 C 資料類型的大小。 長度/指標值傳遞*StrLen_or_Ind*引數中的**SQLPutData**並使用指定的緩衝區中*StrLen_or_IndPtr*引數中**SQLBindParameter**。 使用指定的資料緩衝區*DataPtr*引數中的**SQLPutData**和*ParameterValuePtr*引數中的**SQLBindParameter**.
-

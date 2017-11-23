@@ -20,17 +20,16 @@ helpviewer_keywords:
 - member properties [MDX]
 - members [MDX], properties
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e4a587ba090f15293bed42bff0d37afa874c7223
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1c3f560f0be83b17b31db8cfd46bc0b7939ee05d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-member-properties"></a>MDX 成員屬性
   成員屬性包含每個 Tuple 中每個成員的基本資訊。 此基本資訊包括成員名稱、父層級、子系數目等等。 指定層級上的所有成員都能使用成員屬性。 就組織而言，會將成員屬性視為儲存在單一維度上，且以維度方式組織的資料。  
@@ -83,8 +82,7 @@ SELECT [<axis_specification>
   
 -   使用者自訂成員屬性應該在前面加上所屬層級的名稱。 如需如何使用 **PROPERTIES** 關鍵字搭配使用者定義成員屬性的詳細資訊，請參閱[使用者自訂成員屬性 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [建立和使用屬性值 &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)  
   
   
-

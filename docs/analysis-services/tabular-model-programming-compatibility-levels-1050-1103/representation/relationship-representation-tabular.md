@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 948614ea176ef4cb4cc506272daed33ac7435ded
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c11ae09c8c6bef956333c8a9cbee62f43992f91b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationship-representation-tabular"></a>關聯性表示法 (表格式)
   關聯性是指兩個資料表之間的連接。 關聯性會建立兩個資料表中的資料相互關聯的方式。  
@@ -236,4 +234,3 @@ private void setPKColumn(AMO.Database tabularDb, string PKTableName, string PKCo
  不過，若要了解如何使用 AMO 建立及操作關聯性表示法，請參閱「AMO 對表格式」範例的原始程式碼。 您可以在 Codeplex 上取得範例。 有關此程式碼的重要注意事項：此程式碼的提供目的只是為了支援這裡所說明的邏輯概念，不應該用於實際執行環境，也不應該用於教學以外的其他用途。  
   
   
-

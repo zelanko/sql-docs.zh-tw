@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - table name limitations [ODBC]
 - Excel driver [ODBC], table name limitations
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4a9c803701e377bd345ea35b8ba528692eee98f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 690b6242b9e8d38b6a1f26ddbd823215030e2b15
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="table-name-limitations"></a>資料表名稱限制
 資料表名稱可以包含任何有效的字元 （例如，空格）。 如果資料表名稱可以包含字母、 數字和底線以外的任何字元，名稱必須括在後引號 （'） 分隔。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  使用 Microsoft Access 驅動程式時，資料表名稱會僅限於 64 個字元。  
   
  使用 dBASE，Microsoft Excel 3.0 或 4.0，Paradox 或文字驅動程式時，特殊 MS-DOS 關鍵字 CON、 AUX、 LPT1、 和 LPT2 不應做為資料表名稱。
-

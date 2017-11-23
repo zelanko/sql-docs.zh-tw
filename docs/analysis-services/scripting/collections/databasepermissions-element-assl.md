@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DatabasePermissions Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DatabasePermissions Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DatabasePermissions
-helpviewer_keywords:
-- DatabasePermissions element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DatabasePermissions
+helpviewer_keywords: DatabasePermissions element
 ms.assetid: c4ce0da3-f7ba-4f11-8cd8-236c32992aaf
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c8d6bce09b1a9fa48161f746557f0b1cb94416b1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2fe4aeb00e4daed509e4a1d5daa24f65c7ac2b26
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="databasepermissions-element-assl"></a>DatabasePermissions 元素 (ASSL)
   包含集合[DatabasePermission](../../../analysis-services/scripting/objects/databasepermission-element-assl.md)與相關聯的項目[資料庫](../../../analysis-services/scripting/objects/database-element-assl.md)項目。  
@@ -71,9 +65,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DatabasePermissionCollection>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Permission 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)   
  [集合 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

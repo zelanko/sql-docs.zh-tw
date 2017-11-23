@@ -8,34 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - /
 - /_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - / (divide)
 - division [SQL Server]
 - divide operator (/)
 ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a352cb9e3996a1199fd4a4c05f7ece7972cce1ee
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e3e8a94a92ca592ce6a2deb5d13915606f04f984
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="divide-transact-sql"></a>（除法）(TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-division-transact-sql"></a>/ （除法） (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   將一個數字除以另一個數字 (算術除法運算子)。  
   
@@ -100,16 +97,15 @@ FROM DimEmployee;
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [其中 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [&#40; 除 EQUALS &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [/ = &#40; 除法指派 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
  [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

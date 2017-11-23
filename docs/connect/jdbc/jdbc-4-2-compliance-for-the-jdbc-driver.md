@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 01a193158158bcc4d86c090acc302984b015bc7d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3dbb9bbf584caeca1f6d8db034323e6695512f6a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>適用於 JDBC 驅動程式的 JDBC 4.2 相容性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -80,4 +78,3 @@ ms.lasthandoff: 09/09/2017
 |**在 Java 8 中的新 Java 類別：**<br /><br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **新的 JDBC 型別：**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|在 SQL Server 中不支援 REF_CURSOR。 如果使用了此類型，則驅動程式會擲回 SQLFeatureNotSupportedException 例外狀況。 該驅動程式支援所有其他新的 Java 和 JDBC 類型對應，如 JDBC 4.2 規格中所指定。|  
   
   
-

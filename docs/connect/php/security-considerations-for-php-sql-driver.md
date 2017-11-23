@@ -8,24 +8,21 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- security considerations
+helpviewer_keywords: security considerations
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e60c87b9ec5f327460cdbc781ed40cb4a75edb0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2a7423bcfcfd28073840ad7f8c9ee2e7424507bc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="security-considerations-for-php-sql-driver"></a>PHP SQL 驅動程式的安全性考量
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -63,4 +60,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另請參閱  
 [PHP SQL 驅動程式程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
   
-

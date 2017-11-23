@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - CREATE ASSEMBLY
 - CREATE_ASSEMBLY_TSQL
 - ASSEMBLY_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - assemblies [CLR integration], validating
 - validating assemblies
 - CREATE ASSEMBLY statement
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
-caps.latest.revision: 94
+caps.latest.revision: "94"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4e7587bfb20c110dd28e6b59bba0fde1e937cb6e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 845175405b8acc810044c0acc1f54060b81280d4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -195,7 +192,7 @@ CREATE ASSEMBLY HelloWorld
 WITH PERMISSION_SET = SAFE;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ALTER ASSEMBLY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [卸除組件 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
@@ -207,4 +204,3 @@ WITH PERMISSION_SET = SAFE;
  [使用案例和範例的 Common Language Runtime &#40;CLR &#41;整合](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
   
   
-

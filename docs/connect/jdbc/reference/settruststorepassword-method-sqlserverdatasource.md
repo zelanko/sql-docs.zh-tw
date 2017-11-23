@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- setTrustStorePassword Method (SQLServerDataSource)
-apilocation:
-- setTrustStorePassword Method (SQLServerDataSource)
+apiname: setTrustStorePassword Method (SQLServerDataSource)
+apilocation: setTrustStorePassword Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2d4fe85b3875374e6a0dfc526998635dc38af0b2
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d42539e3a0979500c28539d256226624ac6997eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="settruststorepassword-method-sqlserverdatasource"></a>setTrustStorePassword 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,9 +56,8 @@ public void setTrustStorePassword(java.lang.String trustStorePassword)
   
  從 JDBC Driver 3.0 開始，如果您在繫結資料來源屬性之前設定 SQLServerDataSource.setTrustStorePassword，您必須先呼叫 SQLServerDataSource.setTrustStorePassword 才能取得連接。 如需詳細資訊，請參閱[SQLServerDataSource.getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
-

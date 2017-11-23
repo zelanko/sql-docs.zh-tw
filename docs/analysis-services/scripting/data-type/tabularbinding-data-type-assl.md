@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- TabularBinding Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: TabularBinding Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- TabularBinding
-helpviewer_keywords:
-- TabularBinding data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: TabularBinding
+helpviewer_keywords: TabularBinding data type
 ms.assetid: 24587e34-20be-4693-81d8-038a6fc4e8ee
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 03a430bab078154d65fc69d85dcf178fe4496909
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 17e162327cef0a057d424dfca302316b9307ec92
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabularbinding-data-type-assl"></a>TabularBinding 資料類型 (ASSL)
   定義代表表格式項目 (例如資料表或 Cube 維度) 之繫結的抽象衍生資料類型。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.TabularBinding>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

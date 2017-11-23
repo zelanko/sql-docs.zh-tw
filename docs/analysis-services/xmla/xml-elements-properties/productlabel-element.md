@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 95e0cf59-6581-4a0a-8e77-17664debf7af
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 046a45736a2459884a08d14ea2c25e85ceba2938
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3fd49aa1d7cd791226cf5d29b352c8110393f8dd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="productlabel-element"></a>ProductLabel 元素
   決定產品層級。  
@@ -59,8 +57,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Server](../../../analysis-services/scripting/objects/server-element-assl.md)  
   
   
-

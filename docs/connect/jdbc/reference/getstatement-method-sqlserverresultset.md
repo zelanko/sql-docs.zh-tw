@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getStatement
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getStatement
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7dea981b-b4fd-4f8d-954f-e686124627e2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f92bc576db1b5f175ba6586b762349f1a39ea153
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 129fcea59f7ff9555203fe7ced9b51fabade1d83
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getstatement-method-sqlserverresultset"></a>getStatement 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,9 +49,8 @@ public java.sql.Statement getStatement()
   
  如果結果集由產生的其他方式，例如[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)方法，這個方法會傳回 null。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b54b8749604cd8a5a17ee219326d814dc76131c4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 260788cabb01d26215a51f0853b1b8dffc8163d5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationships-object-tmsl"></a>關聯性物件 (TMSL)
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/01/2017
  所有物件都具有一組常用的屬性，包括名稱、 類型、 描述、 屬性集合，以及註解。 **關聯性**物件也有下列屬性。  
   
  isActive  
- 布林值，指出是否要將關聯性標記為作用中] 或 [非使用。 使用中的關聯性會自動用於篩選的資料表之間。 非使用中的關聯性可供明確使用 USERELATIONSHIP 函數的 DAX 計算。  
+ 布林值，指出是否要將關聯性標記為作用中] 或 [非使用。 使用中的關聯性會自動用於資料表之間的篩選。 非使用中關聯性可搭配 USERELATIONSHIP 函式用於 DAX 計算。  
   
  crossFilteringBehavior  
  表示關聯性如何影響資料的篩選。 請參閱[雙向交叉篩選的 SQL Server 2016 Analysis Services 表格式模型](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)如需詳細資訊。 下列是有效值：  
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 -   DatePartOnly (2)-當聯結兩個日期時間資料行，聯結只有日期部分。  
   
  relyOnReferentialIntegrity  
- 未使用。保留供未來使用。  
+ 未使用。保留供日後使用。  
   
  securityFilteringBehavior  
  列舉，指出關聯性如何影響資料的篩選評估資料列層級安全性運算式時。 下列是有效值：  
@@ -174,9 +173,8 @@ ms.lasthandoff: 09/01/2017
         }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [建立關聯性](../../integration-services/data-flow/transformations/create-relationships.md)  
   
   
-

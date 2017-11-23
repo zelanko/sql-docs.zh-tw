@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 4cb9fea5-1616-467b-a539-d051e5833aea
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b304daec0bdd0e96666d0ee64c9a3d21651bf56c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6493000843f72fbc6b7f63f5ec169a55e97b8584
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables---calculated-measure-representation"></a>資料表的導出量值表示法
   導出量值是每次使用時都會進行評估的具名 DAX 運算式。  
@@ -115,4 +113,3 @@ private void addCalculatedMeasure(
 ```  
   
   
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c700d7f8-7e01-4052-a9ad-8200dd4009f2
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 02d8617161c4d2a023ea5b91e5e4fc2074c6c07d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 875dd29a77a341e3d40502002488fc0189947c9d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>表格式模型指令碼語言 (TMSL) 參考
 
@@ -82,10 +81,9 @@ ms.lasthandoff: 09/01/2017
 |SQL Server 2012|ASSL|ASSL|NA|NA|  
 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 中表格式模型的相容性層級](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services 指令碼語言 &#40;ASSL XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
-

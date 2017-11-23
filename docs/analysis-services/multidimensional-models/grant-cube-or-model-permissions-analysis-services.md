@@ -14,25 +14,23 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.cubes.f1
+f1_keywords: sql13.asvs.roledesignerdialog.cubes.f1
 helpviewer_keywords:
 - user access rights [Analysis Services], cubes
 - cubes [Analysis Services], security
 - read/write permissions
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b57c8f78162dbfcfe414ed8bc4fcdcedd04c85d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbde1e75c0ff22e0d2c426c04f2f4e3756536923
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>授與 Cube 或模型權限 (Analysis Services)
   Cube 或表格式模型是 Analysis Services 資料模型中的主要查詢物件。 從 Excel 連線到多維度或表格式資料以進行特定資料瀏覽時，使用者一開始通常會選取特定 Cube 或表格式模型做為樞紐分析報表物件後面的資料結構。 這個主題說明如何授與存取 Cube 或表格式資料的必要權限。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 09/01/2017
   
 #### <a name="step-3-set-cube-permissions"></a>步驟 3：設定 Cube 權限  
   
-1.  在 Cube 窗格中，選取 Cube，然後按一下讀取 或 讀取/寫入 存取權。  
+1.  在 [Cube] 窗格中，選取 Cube，然後按一下 [讀取] 或 [讀取/寫入] 存取權。  
   
      [讀取] 存取權就足以執行大部分作業。 [讀取/寫入] 僅適用於回寫，不適用於處理。 如需此功能的詳細資訊，請參閱[設定分割區回寫](../../analysis-services/multidimensional-models/set-partition-writeback.md)。  
   
@@ -110,10 +108,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-step"></a>下一步  
  您可以精簡 Cube 權限來將存取權限制在資料格或維度資料。 如需詳細資訊，請參閱[授與維度資料的自訂存取權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) 和[授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 支援的驗證方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [授與權限的資料採礦結構和模型 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [授與資料來源物件的權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   
-

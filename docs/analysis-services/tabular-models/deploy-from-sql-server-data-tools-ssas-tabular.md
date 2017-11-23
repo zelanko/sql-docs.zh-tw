@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.deploystatus.f1
+f1_keywords: sql13.asvs.bidtoolset.deploystatus.f1
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c8fb6f353bfe4cb3d116da7fa9cab5edaad3d4f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: adb50d35f60359d6bd1e18cacff6e80722665d59
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>從 SQL Server 資料工具部署
   使用本主題中的工作，若要使用 [部署] 命令在 SSDT 中部署表格式模型方案。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 09/01/2017
     > [!NOTE]  
     >  您無法在 DirectQuery 模式下指定模型的 [模擬設定]。  
   
-3.  在 [部署伺服器] 中，指定 [伺服器] \(名稱)、[版本]、[資料庫] \(名稱) 及 [Cube 名稱] 屬性設定 (如果與預設設定不同)，然後按一下 [確定]。  
+3.  在 [部署伺服器] 中，指定 [伺服器] (名稱)、[版本]、[資料庫] (名稱) 及 [Cube 名稱] 屬性設定 (如果與預設設定不同)，然後按一下 [確定]。  
   
 > [!NOTE]  
 >  您也可以指定 [預設部署伺服器] 屬性設定，自動將您建立的任何新專案部署至指定的伺服器。 如需詳細資訊，請參閱[設定預設資料模型化和部署屬性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
@@ -72,9 +70,8 @@ ms.lasthandoff: 09/01/2017
  **停止部署**  
  按一下可停止部署作業。 如果部署作業耗費時間過長，或者如果有太多錯誤，這個選項會很有用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [表格式模型方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)   
- [設定預設的資料模型和部署屬性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+ [設定預設的資料模型化和部署屬性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
   
   
-

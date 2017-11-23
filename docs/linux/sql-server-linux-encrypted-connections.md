@@ -14,15 +14,13 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
-helpviewer_keywords:
-- Linux, encrypted connections
+helpviewer_keywords: Linux, encrypted connections
 ms.workload: Inactive
+ms.openlocfilehash: f2f0792202d3af6be0e24ff8b24532598c8d0c84
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: d6beb6350c0d48d35cb3153c2df8eebaec0e4f34
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密連接到 SQL Server on Linux
 
@@ -138,4 +136,3 @@ TLS 用來加密從用戶端應用程式的連線[!INCLUDE[ssNoVersion](../inclu
 |目標主體名稱不正確。  |請確定 SQL 伺服器的憑證上的 [一般名稱] 欄位符合用戶端的連接字串中指定的伺服器名稱。 |  
 |遠端主機已強制關閉現有的連接。 |當用戶端不支援所需的 SQL Server 的 TLS 通訊協定版本，就會發生此錯誤。 例如，如果[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]已設定為需要 TLS 1.2，請確定您的用戶端也支援 TLS 1.2 通訊協定。 |
 | | |   
-

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bdf21e47900f66d564ff209261fb0b3533f2d9cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7786d6273c7941863b413f384ea8eb86bbbe84e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>貝氏機率分類模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝式機率分類演算法之模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
@@ -296,11 +295,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  **遺漏** 值 (VALUE_TYPE = 1) 會加入到每個輸入和輸出屬性，以代表不在定型資料中的可能值。 您必須仔細區別字串「遺漏」和預設的**遺漏**值。 如需詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 貝氏機率分類演算法](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  
   
   
-

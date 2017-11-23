@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f21be61a9e91f3c3bbe0f5ab82c81435b57ef29e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2249704a4f5cf87694d1acb01ff46a119a4be7e8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="working-with-large-data"></a>使用大型資料
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,8 +42,7 @@ ms.lasthandoff: 09/09/2017
 |[使用預存程序讀取大型資料範例](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)|描述如何擷取大型 CallableStatement OUT 參數值。|  
 |[更新大型資料範例](../../connect/jdbc/updating-large-data-sample.md)|描述如何更新資料庫中的大數值資料。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [範例 JDBC 驅動程式應用程式](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   
-

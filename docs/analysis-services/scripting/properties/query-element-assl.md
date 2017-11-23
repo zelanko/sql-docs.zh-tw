@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Query Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Query Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Query element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Query element
 ms.assetid: 832c3337-de6d-43b2-8f1c-75bdba76539b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 03370b495578b0b4bb219e726dd81b5afc1c095e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d61494c22eda620a17ccf56fa6a8be74193fedb5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-element-assl"></a>Query 元素 (ASSL)
   包含要針對通知執行之查詢的文字。  
@@ -65,9 +60,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**查詢**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.QueryNotification>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ProactiveCachingQueryBinding 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/proactivecachingquerybinding-data-type-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

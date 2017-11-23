@@ -8,22 +8,20 @@ ms.service:
 ms.component: server-properties
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: aa928dc5-d00d-4f8a-80b9-7e6973d2196c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: HeidiSteen
 ms.author: heidist
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a48b3f89da00437cec8781e1ea35b6ea87f0c300
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 225c4aea79b880fd85f118d89bae1339e370aa40
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dax-properties"></a>DAX 屬性
    msmdsrv.ini 的 DAX 區段包含可用來控制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中之特定查詢行為的設定，例如 DAX 查詢結果集中所傳回的資料列數目上限。 
@@ -56,4 +54,3 @@ MaxIntermediateRowsetSize | 1000000 | DAX 查詢中所傳回的最大資料列�
 PredicateCheckSpoolCardinalityThreshold| 5000 | 此為進階屬性，除非在 Microsoft 支援人員的指導之下，否則不應隨意變更。
 
 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。 
-

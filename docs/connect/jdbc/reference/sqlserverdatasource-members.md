@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6feb87ad1bb5054b800a001a30af6b94679e977a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eb9919441a3e20fdb02753258e134ba7bedb0ce0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlserverdatasource-members"></a>SQLServerDataSource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -115,8 +113,7 @@ ms.lasthandoff: 09/09/2017
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
-

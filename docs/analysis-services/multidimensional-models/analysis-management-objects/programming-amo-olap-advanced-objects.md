@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b58d475dfab97de8076bf058bfdd1171ddb37f35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dedfe7e17d6f8fd0be0bb769b9891880a83b2eba
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>設計 AMO OLAP 進階物件的程式
   本主題說明 OLAP 進階物件的分析管理物件 (AMO) 程式設計詳細資料。 本主題包含下列幾節：  
@@ -492,7 +490,7 @@ static public void CreateTranslations(Database db)
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO OLAP 類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
@@ -502,4 +500,3 @@ static public void CreateTranslations(Database db)
  [安裝 Analysis services 多維度模型化教學課程的範例資料和專案](../../../analysis-services/install-sample-data-and-projects.md)  
   
   
-

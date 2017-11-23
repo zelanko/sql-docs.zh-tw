@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CrossProduct Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CrossProduct Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#CrossProduct
 - microsoft.xml.analysis.crossproduct
 - urn:schemas-microsoft-com:xml-analysis#CrossProduct
-helpviewer_keywords:
-- CrossProduct element
+helpviewer_keywords: CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 64a757149c8c42474492f6c2675ffe10d7d99718
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9a407c545fb4cc09b19a7b11c9e24a12c7f77c8b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="crossproduct-element-xmla"></a>CrossProduct 元素 (XMLA)
   包含每個階層的成員已排序集合之間的交叉乘積[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)項目，會使用[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)所傳回的資料類型[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
@@ -132,8 +127,7 @@ ms.lasthandoff: 09/01/2017
 </Axes>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

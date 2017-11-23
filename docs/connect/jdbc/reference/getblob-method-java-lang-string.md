@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerCallableStatement.getBlob (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerCallableStatement.getBlob (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3fe74b50-9ccd-4973-a93a-6da2c20a4154
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2990c8a277cb8f6c0dd96af061303e296d0ca9f5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 920664ef12bbd45f312c32ce69b35cd568531240
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getblob-method-javalangstring"></a>getBlob 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,10 +52,9 @@ public java.sql.Blob getBlob(java.lang.String sCol)
 ## <a name="remarks"></a>備註  
  GetBlob 方法 java.sql.CallableStatement 介面中所指定此 getBlob 方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [getBlob 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
-

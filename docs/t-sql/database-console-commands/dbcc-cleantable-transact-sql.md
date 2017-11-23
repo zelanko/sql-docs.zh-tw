@@ -1,12 +1,14 @@
 ---
 title: "DBCC CLEANTABLE (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - DBCC_CLEANTABLE_TSQL
 - DBCC CLEANTABLE
 - CLEANTABLE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - disk space [SQL Server], reclaiming
 - reclaiming space
@@ -26,20 +27,19 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: af5d7e7dab04bf6999b8c8085a4f154a4192d96c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7152b7241d97953fdeddf343dbeea60ed8d7ff5f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]回收空間，以從資料表或索引檢視表中已卸除的可變長度資料行。
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]回收空間，以從資料表或索引檢視表中已卸除的可變長度資料行。
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
@@ -163,9 +163,8 @@ FROM sys.dm_db_index_physical_stats(@db_id, @object_id, NULL, NULL , 'Detailed')
 GO  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
  [sys.allocation_units &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
   
   
-

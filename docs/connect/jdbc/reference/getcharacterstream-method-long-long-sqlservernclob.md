@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ee42e6ef541b8f3c8298d467b6eb72237016efb4
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e4777f2a081678a61ed8f00abbcd30f53a583cab
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>getCharacterStream 方法 (long, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,11 +54,10 @@ public java.io.Reader getCharacterStream(long pos,
 ## <a name="remarks"></a>備註  
  GetCharacterStream 方法 java.sql.NClob 介面中所指定這個 getCharacterStream 方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [getCharacterStream 方法 &#40;SQLServerNClob &#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob 成員](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob 類別](../../../connect/jdbc/reference/sqlservernclob-class.md)  
   
   
-

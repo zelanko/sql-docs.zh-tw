@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_MEASUREGROUPS
+apiname: MDSCHEMA_MEASUREGROUPS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_MEASUREGROUPS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_MEASUREGROUPS rowset
 ms.assetid: bab1bbd0-421b-4fad-9aee-e6511e0e1f1b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 736b43b50abe0bcff7aef25fd9791dcf27458e4e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d39a7ce85ec5c4781d69d5a0bcd2fb468dd701bc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemameasuregroups-rowset"></a>MDSCHEMA_MEASUREGROUPS 資料列集
   描述資料庫內的量值群組。  
@@ -61,8 +57,7 @@ ms.lasthandoff: 09/01/2017
 |**CUBE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|選擇性。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

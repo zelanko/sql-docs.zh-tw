@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - errors [XML for Analysis]
 - inline errors [XMLA]
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - warnings [XML for Analysis]
 - inline warnings [XMLA]
 ms.assetid: ab895282-098d-468e-9460-032598961f45
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: febb20820f7ca8be5c0994ae8bbee8070be559d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b1268714f696f852d999a833cf59e69be8c44bb3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>處理錯誤和警告 (XMLA)
   當 XML for Analysis (XMLA) 時，就需要錯誤處理[探索](../../analysis-services/xmla/xml-elements-methods-discover.md)或[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫不會執行、 成功執行但產生錯誤或警告，或是成功執行但傳回的結果包含錯誤。  
@@ -136,8 +134,7 @@ HelpFile="" />
 </return>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [使用 Analysis Services 中的 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+## <a name="see-also"></a>請參閱＜  
+ [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

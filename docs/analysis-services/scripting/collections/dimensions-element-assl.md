@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Dimensions Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Dimensions Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Dimensions
-helpviewer_keywords:
-- Dimensions element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Dimensions
+helpviewer_keywords: Dimensions element
 ms.assetid: 104e3154-92e9-4c6b-9cf3-e3f3fc712b28
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0cfbf39bb0b7f6875a9d5c7c2f640b410e756c22
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4859da457949e343d00c8fc534089de4d194a102
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensions-element-assl"></a>Dimensions 元素 (ASSL)
   包含與父元素相關聯之維度的集合。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DimensionCollection>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [集合 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

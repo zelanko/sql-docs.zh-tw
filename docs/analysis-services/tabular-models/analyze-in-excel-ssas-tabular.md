@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 937b51884cd5a4b4bc06d990c65a5247822c85c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6450a75762b35816055efce444513c87e24eb3c4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analyze-in-excel"></a>在 Excel 中分析
   在 SSDT 中，[Excel] 功能中的進行分析表格式模型製作者提供快速分析模型專案，在開發期間的方式。 [在 Excel 中進行分析] 功能可開啟 Microsoft Excel、建立模型工作空間資料庫的資料來源連接，以及自動將樞紐分析表加入工作表。 工作空間資料庫物件 (資料表、資料行及量值) 會包含在樞紐分析表欄位清單中做為欄位。 接著，即可在有效使用者或角色及檢視方塊的內容中檢視物件及資料。  
@@ -54,12 +53,11 @@ ms.lasthandoff: 09/01/2017
   
 |**主題**|**說明**|  
 |---------------|---------------------|  
-|[分析在 Excel 中的表格式模型](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|此主題描述如何使用模型設計師的 [在 Excel 中進行分析] 功能來開啟 Excel、建立模型工作空間資料庫的資料來源連接，以及將樞紐分析表加入工作表。|  
+|[在 Excel 中分析表格式模型](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|此主題描述如何使用模型設計師的 [在 Excel 中進行分析] 功能來開啟 Excel、建立模型工作空間資料庫的資料來源連接，以及將樞紐分析表加入工作表。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [分析在 Excel 中的表格式模型](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
  [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
-

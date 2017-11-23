@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8b0125330ff44030e354423b105710fc6806f337
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47a65bf1c9ce6afdedd1f68c0431912af4aea402
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-connection-pooling"></a>使用連接共用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,8 +44,7 @@ ms.lasthandoff: 09/09/2017
 > [!NOTE]  
 >  JDBC 驅動程式將連接傳回集區時，目前不會呼叫 sp_reset_connection 預存程序； 而是會依靠協力廠商的 Java 應用程式伺服器，讓連接回到原始的狀態。  
   
-## <a name="see-also"></a>另請參閱  
- [連接到 SQL Server JDBC 驅動程式](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
-

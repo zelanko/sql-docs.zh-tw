@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- KeyColumn Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: KeyColumn Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- KeyColumn
-helpviewer_keywords:
-- KeyColumn element
+applies_to: SQL Server 2016 Preview
+f1_keywords: KeyColumn
+helpviewer_keywords: KeyColumn element
 ms.assetid: 7b03eeb3-d478-4c38-822e-8cdfcc485039
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 87333935a62f8aa056278ec50f01f8a45a968b91
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 58cb42e1d57ed2b18e05aad50bf6ab04403f5ad3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="keycolumn-element-assl"></a>KeyColumn 元素 (ASSL)
   包含屬於屬性索引鍵或其中一部分之資料行的定義。  
@@ -69,7 +63,7 @@ ms.lasthandoff: 09/01/2017
   
  對應至父系的項目**KeyColumns**分析管理物件 (AMO) 物件模型中的集合是<xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>， <xref:Microsoft.AnalysisServices.DimensionAttribute>， <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>，和<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [AggregationInstanceAttribute 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/aggregationinstanceattribute-data-type-assl.md)   
  [AggregationInstanceCubeDimension 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/aggregationinstancecubedimension-data-type-assl.md)   
  [DimensionAttribute 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)   
@@ -78,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

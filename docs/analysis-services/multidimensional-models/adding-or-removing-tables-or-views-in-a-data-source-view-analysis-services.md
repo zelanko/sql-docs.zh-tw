@@ -14,8 +14,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dsvdesigner.tablespane.f1
+f1_keywords: sql13.asvs.dsvdesigner.tablespane.f1
 helpviewer_keywords:
 - deleting tables
 - tables [Analysis Services]
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - data source views [Analysis Services], tables
 - tables [Analysis Services], data source views
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 39dfc372488cd6657ff02cf24e78c02b3dd135ea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b2f865766530f174cc3affe410679f1880e9813
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>在資料來源檢視中加入或移除資料表或檢視 (Analysis Services)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立資料來源檢視 (DSV) 之後，即可在資料來源檢視設計工具中，透過加入或移除資料表和資料行 (包括其他資料來源中的資料表和資料行) 來進行修改。  
@@ -59,4 +57,3 @@ ms.lasthandoff: 09/01/2017
  [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   
-

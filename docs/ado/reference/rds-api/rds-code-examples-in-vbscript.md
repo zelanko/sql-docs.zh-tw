@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - RDS samples [ADO], VBScript
 - VBScript RDS examples [ADO]
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f5cefa117ddfff60518d0fbb73b847e27f8adcd9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bcf513c375007c36458a733e3511a8e12046a95a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rds-code-examples-in-vbscript"></a>RDS VBScript 中的程式碼範例
 > [!IMPORTANT]
@@ -84,6 +81,5 @@ ms.lasthandoff: 09/09/2017
 -   [SQL 屬性範例](../../../ado/reference/rds-api/sql-property-example-vbscript.md)  
   
 -   [URL 屬性範例](../../../ado/reference/rds-api/url-property-example-vbscript.md)
-
 
 

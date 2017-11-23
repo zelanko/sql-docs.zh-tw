@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CubePermission Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CubePermission Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CubePermission
-helpviewer_keywords:
-- CubePermission element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CubePermission
+helpviewer_keywords: CubePermission element
 ms.assetid: b144b623-ff20-4ead-91ad-4c718f3b140b
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1d91b2d7aa82ccc9e6158d592b6fa1e428f109b6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6db733a91b405ef5eed6a6dd5a5a7f977aa33266
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubepermission-element-assl"></a>CubePermission 元素 (ASSL)
   定義特定成員的權限[角色](../../../analysis-services/scripting/objects/role-element-assl.md)元素中特殊[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)項目。  
@@ -72,9 +66,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.CubePermission>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Cube 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

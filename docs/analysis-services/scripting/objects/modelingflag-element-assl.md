@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ModelingFlag Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ModelingFlag Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ModelingFlag
-helpviewer_keywords:
-- ModelingFlag element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ModelingFlag
+helpviewer_keywords: ModelingFlag element
 ms.assetid: c9af1b9a-506f-4cc1-acd7-e57698cb672c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dac2667ffaef9eb231148fa8be8d83b5b1e573ee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5b87b9f1bfb882ba7c1bb408e5d0717a8f1b8429
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modelingflag-element-assl"></a>ModelingFlag 元素 (ASSL)
   包含採礦結構或採礦模型中某個資料行的模型旗標。  
@@ -67,10 +61,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  在「分析管理物件」(AMO) 物件模型中緊密相關的元素是 <xref:Microsoft.AnalysisServices.MiningModelingFlags>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MiningModel 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)   
  [MiningStructure 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)   
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

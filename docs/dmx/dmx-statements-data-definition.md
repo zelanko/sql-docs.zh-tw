@@ -13,24 +13,22 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - statements [DMX], data definition statements
 - data definition statements [DMX]
 - DDL
 ms.assetid: a215bbe9-0fc6-4256-b5a1-7ef03493bb3f
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d9c4709219dcfc15ff671474deebfebef19f68b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ce131b2d4dc067764d5a5b034a5f0b8cf3a078f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dmx-statements---data-definition"></a>DMX 陳述式的資料定義 
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,9 +46,8 @@ ms.lasthandoff: 08/02/2017
 |[匯入 &#40; DMX &#41;](../dmx/import-dmx.md)|從 .abf 檔案匯入採礦模型或採礦結構與相關聯的物件。|  
 |[SELECT INTO &#40; DMX &#41;](../dmx/select-into-dmx.md)|建立現有採礦模型的副本。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

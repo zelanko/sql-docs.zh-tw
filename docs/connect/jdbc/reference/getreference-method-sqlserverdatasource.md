@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDataSource.getReference
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDataSource.getReference
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0d24fa8c02c24c8d35a031bf0e7b49c35b12424
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 035149aed809ffd295ab53b4acf0f7fc41c59f7a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>getReference 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -66,9 +62,8 @@ ds2.setTrustStorePassword("XXXXX");   // reset the truststore password
 con = ds2.getConnection("user", "XXXXXX");   // provide userid and password again  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
-

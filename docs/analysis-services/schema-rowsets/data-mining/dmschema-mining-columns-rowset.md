@@ -13,25 +13,21 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_COLUMNS
+apiname: DMSCHEMA_MINING_COLUMNS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_COLUMNS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_COLUMNS rowset
 ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 62c211c66076a48261abb39599dfcc47499f6f38
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa9ee7c66193eb84f883ba0500a8617421f2228e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>DMSCHEMA_MINING_COLUMNS 資料列集
   描述中的所有資料採礦模型的個別資料行[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 這個資料列集會限定為目前的目錄。  
@@ -93,8 +89,7 @@ ms.lasthandoff: 09/01/2017
 |**MODEL_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**COLUMN_NAME**|**DBTYPE_WSTR**|選擇性。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦結構描述資料列集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

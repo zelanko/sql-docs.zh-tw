@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Analysis Services deployments, configuration settings
 - deploying [Analysis Services], configuration settings
 ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 01012bd3fe63789ed1a6d6f12c6d734884559333
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 24861b3e40c12d28c0bdbf25772fabad9f6c1107
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deployment-script-files---solution-deployment-config-settings"></a>部署指令碼檔案的解決方案部署組態設定
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈讀取資料分割和角色部署選項，您用於部署指令碼從\<*專案名稱*> placeholder>>.configsettings 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會在您建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時建立此檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用目前專案的組態設定來建立\<*專案名稱*> placeholder>>.configsettings 檔案。  
@@ -69,10 +68,9 @@ ms.lasthandoff: 09/01/2017
   
 -   修改\<*專案名稱*> placeholder>>.configsettings 檔案使用任何文字編輯器。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [指定安裝目標](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   
  [指定資料分割和角色部署選項](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)   
  [指定處理選項](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  
   
   
-

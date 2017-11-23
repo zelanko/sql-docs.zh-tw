@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerCallableStatement.getShort (int)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerCallableStatement.getShort (int)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: cd9773c1-b598-4adb-aaf6-0c0f589cbef5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e074b62c3685d852bcf817f0a9a3acf61fa7b09c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d695ec99eff61ec25ada91273eec6e723463a45f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getshort-method-int"></a>getShort 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,10 +54,9 @@ public short getShort(int index)
   
  這個方法僅支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料型別，可以安全傳回整數值，例如**smallint**， **tinyint**，和**元**。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [getShort 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
-

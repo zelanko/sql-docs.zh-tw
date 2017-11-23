@@ -13,24 +13,22 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - operators [DMX]
 - DMX [Analysis Services], operators
 - Data Mining Extensions [Analysis Services], operators
 ms.assetid: e453e570-1ad1-4604-892f-6130308936ac
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 9c4d34f78d57ec6a62630e94b4485a5b831097c0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 238b90116aadae4e56328995ac48624a67390fa6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operators-dmx"></a>運算子 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +54,7 @@ ms.lasthandoff: 08/02/2017
   
  您結合簡單運算式以形成複雜運算式的時候，會結合運算子的規則與資料類型優先順序的規則來決定產生之運算式的資料類型。 如果結果是字元或 Unicode 值，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會結合運算子的規則與定序優先順序的規則，決定結果的定序。 另外也有一些規則，根據簡單運算式的有效位數、小數位數與長度，決定結果的有效位數、小數位數與長度。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
@@ -67,4 +65,3 @@ ms.lasthandoff: 08/02/2017
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

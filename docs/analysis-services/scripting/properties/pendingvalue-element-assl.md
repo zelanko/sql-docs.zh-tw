@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- PendingValue Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: PendingValue Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- PendingValue
-helpviewer_keywords:
-- PendingValue element
+applies_to: SQL Server 2016 Preview
+f1_keywords: PendingValue
+helpviewer_keywords: PendingValue element
 ms.assetid: 386b2ec6-3d83-42d2-b83a-83e375fbdcbd
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ca08dac97b473cea4841b4ce510a73e25431a554
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5f52fd24820bf616cf82fb6e322329a9bdeb5bea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="pendingvalue-element-assl"></a>PendingValue 元素 (ASSL)
   包含的唯讀暫止值相關聯的[ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)項目。  
@@ -71,10 +65,9 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**PendingValue**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ServerProperty>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ServerProperties 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/serverproperties-element-assl.md)   
  [Server 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/server-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

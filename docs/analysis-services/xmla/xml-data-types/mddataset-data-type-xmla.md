@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDDataSet Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MDDataSet Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#MDDataSet
 - MDDataSet
 - urn:schemas-microsoft-com:xml-analysis#MDDataSet
-helpviewer_keywords:
-- MDDataSet data type
+helpviewer_keywords: MDDataSet data type
 ms.assetid: 1a7e0092-f9f0-4ae5-ba27-ad1d8ebe8cb9
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d6daeb5202c0f1078eabd1a5b820514b25de712c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ed0c285f34f55f89b571cf671cf6601e5a81490
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mddataset-data-type-xmla"></a>MDDataSet 資料類型 (XMLA)
   定義代表多維度資料所傳回的衍生的資料類型[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
@@ -77,8 +72,7 @@ ms.lasthandoff: 09/01/2017
   
  如需有關 OLE DB for OLAP 資料集結構的基本資訊，請參閱 XML for Analysis 1.1 規格中的＜對應至 OLE DB 的 MDDataSet 資料類型＞。 針對完整的 XML 結構描述定義語言 (XSD) 範例**MDDataSet**資料類型，請參閱 「 附錄 D:mddataset 範例 > 的 XML for Analysis 1.1 規格。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML 資料類型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   
-

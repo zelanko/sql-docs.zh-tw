@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CalculationProperties Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CalculationProperties Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CalculationProperties
-helpviewer_keywords:
-- CalculationProperties element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CalculationProperties
+helpviewer_keywords: CalculationProperties element
 ms.assetid: dccfe036-0b1b-4877-8bdd-4b128ccb55c9
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a8258a225109044f8941306ef37de6ca9d084c12
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1b11af2030c255683b39de4d84fde901ad4ffd64
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculationproperties-element-assl"></a>CalculationProperties 元素 (ASSL)
   包含集合[CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)與相關聯的項目[MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)項目。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.CalculationPropertyCollection>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [集合 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

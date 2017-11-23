@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.asvs.bidtoolset.depservconfig.f1
 - sql13.asvs.bidtoolset.semmodelprojprop.f1
 ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 66a5bfd14d877229f51a257c4775cf9873b854db
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f87694c9f464aee76eec4fe34e5888e5e6e4ef02
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="project-properties-ssas-tabular"></a>專案屬性 (SSAS 表格式)
   本主題描述模型專案屬性。 每個表格式模型專案都含有部署選項與部署伺服器選項，可指定專案及模型的部署方式。 例如，模型要部署至的伺服器及部署的模型資料庫名稱。 這些設定不同於模型屬性，後者會影響模型工作空間資料庫。 此處所述的專案屬性位於強制回應屬性對話方塊中，與用於顯示其他屬性類型的屬性視窗不同。 若要在顯示強制回應專案屬性，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 方案總管 中，以滑鼠右鍵按一下專案，然後按一下 [屬性]。  
@@ -76,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [表格式模型方案部署 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
-

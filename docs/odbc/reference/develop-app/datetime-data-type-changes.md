@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - timestamp data type [ODBC]
 - compatibility [ODBC], datetime data types
 ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 40d432cd25752c88b6c82209269c1d37a6bf5f63
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="datetime-data-type-changes"></a>Datetime 資料類型變更
 在 ODBC 3。*x*、 識別項的日期、 時間和時間戳記 SQL 資料類型已從 SQL_DATE、 SQL_TIME 和 SQL_TIMESTAMP (的執行個體**#define** 9、 10 和 11 的標頭檔中) 以 SQL_TYPE_DATE，SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP (的執行個體**#define** 92 和 93 91 的標頭檔中)，分別。 對應的 C 類型識別碼已從 SQL_C_DATE、 SQL_C_TIME 和 SQL_C_TIMESTAMP SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，和 SQL_C_TYPE_TIMESTAMP，分別。  
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/09/2017
  [1] 的此項，ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式可以使用目錄函數所傳回之結果集內所傳回的日期、 時間戳記碼。  
   
  [2] 的此項，ODBC 3。*x*應用程式使用 ODBC 3。*x*驅動程式可以使用目錄函數所傳回之結果集內所傳回的日期、 時間戳記碼。
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 3314afb5a5351b541e29d403ac4a41d98ec27263
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19c19be451a22fef66b98ac71355b4963240767a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>建立及管理量值 (SSAS 表格式)
   量值是為了在報表或 Excel 樞紐分析表 (或樞紐分析圖) 中使用而建立的公式。 量值可以用標準彙總函式 (例如 COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 此主題中的工作描述如何使用資料表的量值方格建立及管理量值。  
@@ -69,10 +68,9 @@ ms.lasthandoff: 09/01/2017
   
 -   在量值方格的量值上按一下滑鼠右鍵，然後按一下 [刪除]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [量值 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [KPI &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [導出資料行 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   
-

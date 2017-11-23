@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 28be70a8fe43d1c22ba3e7787d507c694b09750a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 857540f661aa8eaecd42d98a648c03c043d06e2a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server Agent 排程 SSAS 管理工作
   您可以使用 SQL Server Agent 服務來為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理工作排程，以便按照所需的順序和時間執行工作。 為工作排程可協助您將處理自動化，以便定期或依照可預測的週期執行。 您可以排程管理工作 (例如 Cube 處理) 在商務活動較少的時間執行。 此外，您也可以在 SQL Server Agent 作業內建立作業步驟，決定工作執行的順序。 例如，您可以先處理 Cube，然後再執行 Cube 的備份。  
@@ -231,8 +230,7 @@ ms.lasthandoff: 09/01/2017
   
 16. 當作業完成時，請按一下 **[關閉]**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [處理選項和設定 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
   
   
-

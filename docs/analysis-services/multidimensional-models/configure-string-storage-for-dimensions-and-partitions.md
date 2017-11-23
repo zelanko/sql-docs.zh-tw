@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b16b14e2fb2fd703905245f9e779fd83b7f35cb4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd8d940628f843407c7c841b73b1322096fda615
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>設定維度及分割區的字串存放區
   您可以重新設定字串存放區，在超出字串存放區之 4 GB 檔案大小限制的維度屬性或分割區中容納非常大的字串。 如果您的維度或資料分割包含此大小的字串存放區，您可以在維度或資料分割層級，變更本機及連結 (本機或遠端) 物件的 **StringStoresCompatibilityLevel** 屬性來解決檔案大小限制。  
@@ -103,4 +102,3 @@ ms.lasthandoff: 09/01/2017
  [維度儲存](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- CreateObject method [ADO]
+helpviewer_keywords: CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 587ea0590dbf2a6bed3f8733c2a1c1f4a90adb58
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8697a45869d503a2c21dc61b2defed182b02b559
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 建立目標商務物件的 proxy，並傳回的指標。 要與商務物件的通訊會透過網際網路傳送要求和資料的伺服器端 stub proxy 封裝和把資料。 同處理序元件物件，會使用任何 proxy，只是物件的指標會提供。  
@@ -61,12 +58,11 @@ ms.lasthandoff: 09/09/2017
  *HTTP 通訊協定*是標準的 Web 通訊協定。*HTTPS*是安全的 Web 通訊協定。 使用*DCOM 通訊協定*執行時沒有 HTTP 的區域網路。 *同處理序*通訊協定是本機的動態連結程式庫 (DLL)，則不會使用網路。  
   
 ## <a name="applies-to"></a>適用於  
- [資料空間物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [DataSpace 物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DataFactory 物件、 查詢方法和 CreateObject 方法範例 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
  [資料空間物件和 CreateObject 方法範例 (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
  [CreateRecordset 方法 (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
 
 

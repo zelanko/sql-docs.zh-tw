@@ -8,22 +8,20 @@ ms.service:
 ms.component: power-pivot-sharepoint
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bbc70ccf710772ba1b32abe5b65858d95ef2b38e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 226842eb86c8eb7d5981407c805e18495dfb2579
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection"></a>嘗試建立連接期間發生錯誤
   如果您在沒有安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的伺服器上查詢 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料，就會發生此錯誤。 如果 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 服務停止，或者您嘗試從舊版檢視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料，也會發生此錯誤。  
@@ -49,8 +47,7 @@ ms.lasthandoff: 09/01/2017
   
  若是在 SQL Server 2008 R2 版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中建立的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，您必須安裝 SQL Server 2008 R2 版的 Analysis Services OLE DB 提供者。 如果安裝了此提供者，但沒有註冊 Microsoft.AnalysisServices.ChannelTransport.dll 檔案，就會發生此錯誤。 如需檔案註冊的詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。  
   
-## <a name="see-also"></a>另請參閱  
- [資料連接是使用 Windows 驗證，而且無法委派使用者認證。下列連接無法重新整理： Power Pivot 資料](../../analysis-services/power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md)  
+## <a name="see-also"></a>請參閱＜  
+ [資料連接使用 Windows 驗證，而無法委派使用者認證。下列連接無法重新整理：Power Pivot 資料](../../analysis-services/power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fdeed91effe8c6619121f6ed392237f710a785d8
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 24e796670985c803b1a6f8a067ed6e8a548379e9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -60,8 +58,7 @@ ms.lasthandoff: 09/09/2017
   
  `tar –xf sqljdbc_<version>_<language>.tar`  
   
-## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

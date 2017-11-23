@@ -14,25 +14,23 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensions.f1
+f1_keywords: sql13.asvs.roledesignerdialog.dimensions.f1
 helpviewer_keywords:
 - dimensions [Analysis Services], security
 - read/write permissions
 - user access rights [Analysis Services], dimensions
 - permissions [Analysis Services], dimensions
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 415bb6a484edafc091f091c2e572a05155a561fa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 72ea5d3842b0fbf2f568606004b2de7a7e66825f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>授與維度的權限 (Analysis Services)
   維度安全性是用來設定維度物件的權限，而不是設定它的資料。 通常，允許或拒絕存取處理作業是在設定維度權限時的主要目標。  
@@ -77,7 +75,7 @@ ms.lasthandoff: 09/01/2017
 > [!IMPORTANT]  
 >  如果您使用分析管理物件 (AMO) 來設定資料庫角色權限，則任何參考 Cube 之 DimensionPermission 屬性的 Cube 維度，就會切斷資料庫的 DimensionPermission 屬性的權限繼承。 如需 AMO 的詳細資訊，請參閱[使用分析管理物件 &#40;AMO&#41; 來開發](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [角色與權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
  [授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [授與權限的資料採礦結構和模型 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
@@ -85,4 +83,3 @@ ms.lasthandoff: 09/01/2017
  [授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   
-

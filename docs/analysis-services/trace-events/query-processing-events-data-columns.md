@@ -8,22 +8,20 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3ed86f526dddfa50587407a8f77b167d0fed207c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0fafade22e12b14c1e11aab4a44ce65433d2a158
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-processing-events-data-columns"></a>查詢處理事件資料行
   查詢處理事件類別目錄具有下列事件類別：  
@@ -553,4 +551,3 @@ ms.lasthandoff: 09/01/2017
  [查詢處理事件類別目錄](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   
-

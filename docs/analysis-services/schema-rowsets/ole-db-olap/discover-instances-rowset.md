@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DISCOVER_INSTANCES
+apiname: DISCOVER_INSTANCES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_INSTANCES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_INSTANCES rowset
 ms.assetid: e0842e63-089d-468d-869f-634da343d9fb
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4f5bcf5b090b1fb011ce4676b320291515044fd7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fbed6de71f83da959591003039fe5910a1a4c53d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverinstances-rowset"></a>DISCOVER_INSTANCES 資料列集
   描述伺服器上的執行個體。  
@@ -54,8 +50,7 @@ ms.lasthandoff: 09/01/2017
 |-----------------|--------------------|-----------------------|  
 |**執行個體名稱**|**DBTYPE_WSTR**|選擇性。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

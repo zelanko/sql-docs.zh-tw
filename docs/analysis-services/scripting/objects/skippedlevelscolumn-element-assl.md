@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- SkippedLevelsColumn Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: SkippedLevelsColumn Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- SkippedLevelsColumn
-helpviewer_keywords:
-- SkippedLevelsColumn element
+applies_to: SQL Server 2016 Preview
+f1_keywords: SkippedLevelsColumn
+helpviewer_keywords: SkippedLevelsColumn element
 ms.assetid: 6b00a288-99c1-4735-9e6b-cd13ed4fa346
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: af0de4f281a6fd6734c8ecc456b4e80c20780a93
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 181e93110f5e482a04940ee5fe66bbba99b6c073
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="skippedlevelscolumn-element-assl"></a>SkippedLevelsColumn 元素 (ASSL)
     
@@ -77,10 +71,9 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**SkippedLevelsColumn**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Attributes 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
  [Dimension 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CustomRollupProperties Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CustomRollupProperties Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.customrollupproperties
 - urn:schemas-microsoft-com:xml-analysis#CustomRollupProperties
 - http://schemas.microsoft.com/analysisservices/2003/engine#CustomRollupProperties
-helpviewer_keywords:
-- CustomRollupProperties element
+helpviewer_keywords: CustomRollupProperties element
 ms.assetid: 4abf0129-e529-4355-b8d5-6f4e6a88e796
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 582310c692be695531e698396ab583a38130fb6c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d32c50734b63cf6fd9452cd40f169e81fff86506
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="customrollupproperties-element-xmla"></a>CustomRollupProperties 元素 (XMLA)
   包含父代所代表之屬性成員的自訂積存屬性[屬性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)項目。  
@@ -73,10 +68,9 @@ ms.lasthandoff: 09/01/2017
   
  如需有關 MDX 運算式的詳細資訊，請參閱[運算式 &#40;MDX &#41;](../../../mdx/expressions-mdx.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [插入項目 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Update 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

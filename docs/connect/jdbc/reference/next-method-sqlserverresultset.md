@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.next
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.next
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 60248447-6908-4036-a779-a501453cd553
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 162902318cbc078ce214568b18e752fdd99559b1
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5fe62919bd765d83e2d3a38a9cdda33d88312e29
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="next-method-sqlserverresultset"></a>next 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,9 +51,8 @@ public boolean next()
   
  如果輸入資料流已開啟的目前資料列下, 一個方法的呼叫會以隱含方式關閉它。 警告鏈結[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)讀取新的資料列時，會清除物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

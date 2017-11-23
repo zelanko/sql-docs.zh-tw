@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerConnection.createStatement
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerConnection.createStatement
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6d043ba9-b8ec-41d3-bb22-ad2c4aebda6f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 036f248b2a4027c06560e87ac2a8d4b3dae49296
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9e48545cd36f6c6c95a7bb95e090f2523ab35bff
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="createstatement-method-sqlserverconnection"></a>createStatement 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,9 +39,8 @@ ms.lasthandoff: 09/09/2017
 |[createStatement （int，int）](../../../connect/jdbc/reference/createstatement-method-int-int.md)|建立 SQLServerStatement 物件，它會產生具有給定型別和並行的 SQLServerResultSet 物件。|  
 |[createStatement （int，int，int）](../../../connect/jdbc/reference/createstatement-method-int-int-int.md)|建立 SQLServerStatement 物件，它會產生具有給定型別、並行和保留性的 SQLServerResultSet 物件。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
-

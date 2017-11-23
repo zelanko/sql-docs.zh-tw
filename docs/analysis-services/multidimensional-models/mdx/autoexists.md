@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d7f38c656ff153989d16844fccf13e6598c69008
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="autoexists"></a>自動存在
   「自動存在」的概念是將 Cube 空間限制為實際存在於 Cube 中的資料格，相對因建立相同階層中的所有屬性階層成員組合而可能存在的資料格。 這是因為某個屬性階層的成員不能與相同維度中另一個屬性階層的成員同時存在。 在 SELECT 陳述式中使用相同維度的兩個以上屬性階層時，Analysis Services 會評估屬性的運算式來確認這些屬性的成員有受到正確的限制以符合所有其他屬性的準則。  
@@ -320,7 +319,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  「 自動存在 」 行為可以修改使用 AUTOEXISTS = [1 | 2 | 3] 參數中的連接字串。請參閱[支援 XMLA 屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>參數用法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 的關鍵概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tuple](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
@@ -330,4 +329,3 @@ WHERE (Measures.[Internet Sales Amount],
  [多維度運算式 &#40;MDX&#41 參考](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

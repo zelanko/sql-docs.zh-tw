@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bc78a70ee7c3d6443126a190ce9bd80fe03105e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e73d970163aba564c6ed199a2024511db7579a89
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 屬性範例 （VC + +）
 這個範例會示範[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)和[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)期間顯示訊息，如果某筆記錄的基礎資料的屬性變更[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)批次更新。  
@@ -227,8 +224,7 @@ void PrintComError(_com_error &e) {
 **目前的值： self_help**   
 **原始值： 心理**   
 **第一個值： 社會**    
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [OriginalValue 屬性 (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue 屬性](../../../ado/reference/ado-api/underlyingvalue-property.md)
-

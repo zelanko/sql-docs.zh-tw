@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- HideMemberIf Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: HideMemberIf Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- HideMemberIf
-helpviewer_keywords:
-- HideMemberIf element
+applies_to: SQL Server 2016 Preview
+f1_keywords: HideMemberIf
+helpviewer_keywords: HideMemberIf element
 ms.assetid: ff0e6b19-6216-43ac-ba76-1628da8c333b
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eefed5009773186d939401a508785abe4f956125
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 63e9386cbeb679bef13c87857df9b95a10863099
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hidememberif-element-assl"></a>HideMemberIf 元素 (ASSL)
   指出是否應向用戶端應用程式隱藏層級中的成員，以及何時隱藏。  
@@ -80,8 +74,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  列舉型別對應至允許的值**HideMemberIf**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.HideIfValue>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

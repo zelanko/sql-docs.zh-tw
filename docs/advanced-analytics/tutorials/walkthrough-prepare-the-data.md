@@ -1,30 +1,26 @@
 ---
 title: "準備資料使用 PowerShell （逐步解說） |Microsoft 文件"
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 048419d5838a5e7f667f80ccd5fccb5dfa101d0f
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1d85684da36ef69caf9dfa39f155a320def37b5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>準備要使用 PowerShell （逐步解說） 的資料
 
@@ -111,7 +107,7 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - 這個範例會使用 R grep 函數來搜尋可用路徑的向量，並在 “Program Files” 中尋找路徑。 如需詳細資訊，請參閱 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)。
+    - 這個範例會使用 R grep 函式，來搜尋可用的路徑的向量，並尋找包含"Program Files"路徑。 如需詳細資訊，請參閱 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)。
 
     - 如果您認為已安裝的封裝，請檢查已安裝的封裝清單執行`installed.packages()`。
 
@@ -129,7 +125,7 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
 
 - 重寫 R 指令碼檔案中的引數，以使用您所指定的資料庫名稱。
 
-您應該執行此指令碼的電腦上建置方案的位置： 例如，膝上型電腦開發和測試您的 R 程式碼的位置。 這部電腦 (我們稱為資料科學用戶端) 必須能夠使用「具名管道」通訊協定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦。
+您用來建置此方案的電腦上執行此指令碼： 例如，膝上型電腦開發和測試您的 R 程式碼的位置。 這部電腦 (我們稱為資料科學用戶端) 必須能夠使用「具名管道」通訊協定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦。
 
 1. 開啟 PowerShell 命令列**以系統管理員身分**。
   
@@ -156,7 +152,7 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
       > [!WARNING]
       > 當您使用 PowerShell 指令碼中的提示來提供認證時，密碼會寫入至更新的指令碼檔案，以純文字。 在您建立所需的 R 物件之後，請立即編輯檔案以移除認證。
       
-    **csv 檔案的路徑**：提供資料檔案的完整路徑。 預設的路徑和檔案名稱為 `C:\tempR\nyctaxi1pct.csv1`。
+    **csv 檔案的路徑**：提供資料檔案的完整路徑。 預設的路徑和檔案名稱為 `C:\tempR\nyctaxi1pct.csv`。
   
 4.  按 ENTER 執行指令碼。
 
@@ -260,7 +256,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 如果資料庫包含現有資料表的相同名稱和相同的結構描述， **bcp**插入新的資料，而非覆寫現有的資料複本。
 
-若要避免重複的資料，請截斷任何現有的資料表，然後重新執行指令碼。
+若要避免重複的資料，請再次執行指令碼之前截斷任何現有的資料表。
 
 ## <a name="whats-included-in-the-sample"></a>在此範例中包含的內容
 
@@ -274,7 +270,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 ### <a name="bkmk_data"></a>定型和計分的資料
 
-資料是包含 2013 年超過 173,000,000 筆個別車程記錄的紐約市計程車資料集的代表性取樣 (包含針對每個車程所付的費用和小費金額)。 為了讓您輕鬆地使用資料，Microsoft 資料科學小組已執行縮小取樣，只取得 1% 的資料。  這項資料已共用於 Azure 中的公用 Blob 儲存容器，格式為 .CSV。 來源資料是未壓縮檔案，低於 350 MB。
+資料是包含 2013 年超過 173,000,000 筆個別車程記錄的紐約市計程車資料集的代表性取樣 (包含針對每個車程所付的費用和小費金額)。 為了讓您輕鬆地使用資料，Microsoft 資料科學小組已執行縮小取樣，只取得 1% 的資料。  這項資料已共用於 Azure 中的公用 Blob 儲存容器，格式為 .CSV。 來源資料是壓縮的檔，只在 350 MB。
 
 + 公用資料集: [NYC 計程車和 Limousine 佣金] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
@@ -294,7 +290,7 @@ PowerShell 指令碼會執行多個[!INCLUDE[tsql](../../includes/tsql-md.md)]SQ
 
 |SQL 指令碼檔案名稱|Description|
 |------------------------|----------------|
-|create-db-tb-upload-data.sql|建立資料庫和兩個資料表：<br /><br /> *nyctaxi_sample*：儲存定型資料的資料表，1% 的 NYC 計程車資料集樣本。 叢集資料行存放區索引會新增至資料表，以提高儲存和查詢效能。<br /><br /> *nyc_taxi_models*：稍後將用來儲存所定型分類模型的空白資料表。|
+|create-db-tb-upload-data.sql|建立資料庫和兩個資料表：<br /><br /> *nyctaxi_sample*：儲存定型資料的資料表，1% 的 NYC 計程車資料集樣本。 叢集資料行存放區索引會新增至資料表，以提高儲存和查詢效能。<br /><br /> *nyc_taxi_models*： 用來儲存已定型的模型，以二進位格式的資料表。|
 |PredictTipBatchMode.sql|建立預存程序，以呼叫所定型的模型來預測新觀測的標籤。 它會接受查詢作為其輸入參數。|
 |PredictTipSingleMode.sql|建立預存程序，以呼叫所定型的分類模型來預測新觀測的標籤。 新觀測的變數會傳入為內嵌參數。|
 |PersistModel.sql|建立預存程序，以協助將分類模型的二進位表示法儲存在資料庫的資料表中。|
@@ -315,4 +311,3 @@ PowerShell 指令碼會執行多個[!INCLUDE[tsql](../../includes/tsql-md.md)]SQ
 [R 和 SQL Server 的端對端資料科學逐步解說](/walkthrough-data-science-end-to-end-walkthrough.md)
 
 [資料科學逐步解說的必要條件](walkthrough-prerequisites-for-data-science-walkthroughs.md)
-

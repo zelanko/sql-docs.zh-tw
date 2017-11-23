@@ -13,32 +13,27 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Command Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Command Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.command
 - Command
 - urn:schemas-microsoft-com:xml-analysis#Command
 - http://schemas.microsoft.com/analysisservices/2003/engine#Command
-helpviewer_keywords:
-- Command element
+helpviewer_keywords: Command element
 ms.assetid: 9abc14df-7cbe-46bc-ba0f-f0691c19afad
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9dad2fd03f81522873b5e40bb09c709fad4e2fbf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 496d96ef9057658fec36b8b5b2ccd0ecd73b5508
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="command-element-xmla"></a>Command 元素 (XMLA)
   包含要執行之命令[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
@@ -122,9 +117,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  **命令**所使用項目**Execute**命令轉送至資料來源的方法。 雖然 XML for Analysis (XMLA) 1.1 規格僅支援**陳述式**命令， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援許多新的 XMLA 命令。 如需有關所支援之 XMLA 命令[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，請參閱[命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML 資料類型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

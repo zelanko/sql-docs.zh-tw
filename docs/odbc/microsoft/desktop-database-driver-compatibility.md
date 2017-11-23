@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Unicode
 - Jet-based ODBC drivers [ODBC], Unicode
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5c8d888771c1173d93d5ca44cdab28c10645bb60
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34b9221b117819988e44196cee0f04578e85d436
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-driver-compatibility"></a>桌面資料庫驅動程式相容性
 Unicode 是軟體的字元編碼的方法會將所有的字元視為具有兩個位元組的固定的寬度。 這個方法用做為 Windows ANSI 字元編碼、 替代其，因為它代表一個位元組中的字元限制為 256 個字元。 Unicode 可表示 65000 的字元，因為它可容納許多語言的字元都不會出現在 ANSI 編碼方式。  
@@ -42,4 +40,3 @@ Unicode 是軟體的字元編碼的方法會將所有的字元視為具有兩個
  當 ANSI 應用程式使用 ODBC 桌面資料庫驅動程式 4.0，並存取 Microsoft 存取 4.0 或更新版本中，驅動程式公開的資料類型為 SQL_CHAR、 SQL_VARCHAR 或 SQL_LONGVARCHAR 即使 Jet 4.0 支援廣泛的版本。 SQL_WCHAR、 SQL_WVARCHAR 和 SQL_WLONGVARCHAR 不支援較舊的 Jet 版本。 這項限制也適用於舊的格式會使用與 Jet 4.0 資料庫引擎的情況下。  
   
  關於 ODBC Unicode 問題的詳細資訊，請參閱[Unicode](../../odbc/reference/develop-app/unicode.md)程式設計考量中。
-

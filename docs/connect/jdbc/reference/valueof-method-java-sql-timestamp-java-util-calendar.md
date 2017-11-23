@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 138a53f22791390600ed21e535a7c26597f46321
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b77f9ce80c54980a8a55d23b90667e2c07672caa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>valueOf 方法 (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,9 +51,8 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
 ## <a name="remarks"></a>備註  
  這個方法也會設定為點 java.util.Calendar 物件 java.sql.Timestamp 物件所提供的時間。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset 成員](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   
   
-

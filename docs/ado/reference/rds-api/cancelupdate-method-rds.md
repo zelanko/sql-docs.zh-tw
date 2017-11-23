@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- CancelUpdate method [RDS]
+helpviewer_keywords: CancelUpdate method [RDS]
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e6e93f532dc65c5c0d7d146569a21bbfd6118c28
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9b8e41e0cd963b87b73fc65b3f149f22f3a67b76
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate 方法 (RDS)
 取消目前的或新的資料列的任何變更[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -51,7 +48,7 @@ DataControl.CancelUpdate
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CancelUpdate 方法範例 (VBScript)](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)   
  [地址通訊錄命令按鈕](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Cancel 方法 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
@@ -60,6 +57,5 @@ DataControl.CancelUpdate
  [CancelUpdate 方法 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [重新整理方法 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
  [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
 
 

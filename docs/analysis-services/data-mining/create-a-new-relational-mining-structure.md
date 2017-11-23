@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining structures [Analysis Services], creating
 - relational mining models [Analysis Services]
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ea2feced212b0af6a9cf67a2eccc0445b9bee74f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6784d7ab5e13d5e842794041589db515a6fd2a30
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-new-relational-mining-structure"></a>建立新的關聯式採礦結構
   使用 [資料採礦精靈] 建立新的採礦結構 (利用關聯式資料庫或其他來源中的資料)，然後將此結構和任何相關模型儲存到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
@@ -68,8 +67,7 @@ ms.lasthandoff: 09/01/2017
   
 11. 在 [正在完成精靈] 頁面上，提供採礦結構的名稱和要建立的相關初始採礦模型，然後按一下 [完成]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_DB_CONNECTIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_DB_CONNECTIONS rowset
 ms.assetid: 12a51a4e-5f3d-4449-9d94-7836fea1bc8b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f6c6fbeac76e14dd410ed8dafcb739e5797cc270
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a592cffbf5d8fe19d37fc48989d9c2776df81a4e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverdbconnections-rowset"></a>DISCOVER_DB_CONNECTIONS 資料列集
   提供有關目前從伺服器到資料庫之間已開啟之連接的資源使用量與活動資訊。  
@@ -65,8 +62,7 @@ ms.lasthandoff: 09/01/2017
 |CONNECTION_CATALOG_NAME|DBTYPE_WSTR|必要。|  
 |CONNECTION_SPID|DBTYPE_I4|選擇性。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

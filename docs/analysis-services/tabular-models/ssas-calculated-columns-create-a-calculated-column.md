@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.as.daxref.CreataCalculatedColumn.f1
+f1_keywords: sql13.as.daxref.CreataCalculatedColumn.f1
 ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 98b426c49d86a3bb54a5fdaa1736c2c92990ad29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 512b3ae1512c48d1d502d763505ee0609fd90608
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-calculated-column"></a>建立導出資料行
   導出資料行可讓您將新資料加入至模型。 您可以建立定義資料行之資料列層級值的 DAX 公式，而不是將值貼上或匯入至資料行中。 當您建立有效的公式，然後按一下 ENTER 時，即會計算並填入導出資料行之每個資料列中的值。 然後導出資料行就可以像是其他任何資料行，加入至報表應用程式或分析應用程式。 此主題描述如何在模型設計師中使用 DAX 公式列，來建立新的導出資料行。  
@@ -55,9 +53,8 @@ ms.lasthandoff: 09/01/2017
 > [!TIP]  
 >  您可以透過巢狀函數，在現有的公式中間使用 DAX 公式自動完成。 插入點前方的文字用於顯示下拉式清單中的值，而在插入點之後的所有文字則維持不變。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [導出資料行](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   
-

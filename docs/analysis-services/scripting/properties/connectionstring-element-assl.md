@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ConnectionString Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ConnectionString Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ConnectionString
-helpviewer_keywords:
-- ConnectionString element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ConnectionString
+helpviewer_keywords: ConnectionString element
 ms.assetid: f74181c4-7df7-4fbd-94dd-e4ad03dffe14
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 63718c37abacd50deba6dfefa2128d9dfbf0ff1a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dc85faaf914bbcec9b7ff810fa950a74a146bb97
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connectionstring-element-assl"></a>ConnectionString 元素 (ASSL)
   包含加密的連接字串[DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md)項目。  
@@ -69,8 +63,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**ConnectionString**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DataSource>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

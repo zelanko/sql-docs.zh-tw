@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DimensionAttribute Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DimensionAttribute Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DimensionAttribute
-helpviewer_keywords:
-- DimensionAttribute data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: DimensionAttribute
+helpviewer_keywords: DimensionAttribute data type
 ms.assetid: 94349a87-b284-49d1-ac72-888f0375ceb8
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4070c34393b5704950431921646607d5c86f33fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ea4cdde9cf38c673b5894849097c2cc3c6c43309
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensionattribute-data-type-assl"></a>DimensionAttribute 資料類型 (ASSL)
   定義代表維度中某個屬性的基本資料類型。  
@@ -152,8 +146,7 @@ ms.lasthandoff: 09/01/2017
   
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

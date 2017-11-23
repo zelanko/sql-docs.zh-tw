@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_XML_SCHEMA_COLLECTION_TSQL
 - ALTER XML SCHEMA COLLECTION
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - schema collections [SQL Server], altering
 - xml_schema_namespace function
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - schema collections [SQL Server], modifying
 - multiple schema namespaces
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 004d015a6a9dbaf3af565b6c0f02192180c1a001
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1f4d5a54d304aba3da37be9d73159060aaf2e794
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -269,7 +266,7 @@ ON     sys.xml_schema_collections.xml_collection_id =
 WHERE  sys.xml_schema_namespaces.name='';  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [建立 XML 結構描述集合 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [卸除 XML 結構描述集合 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
@@ -277,4 +274,3 @@ WHERE  sys.xml_schema_namespaces.name='';
  [伺服器上 XML 結構描述集合的需求與限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   
-

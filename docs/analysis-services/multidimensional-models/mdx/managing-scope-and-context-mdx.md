@@ -22,17 +22,16 @@ helpviewer_keywords:
 - SCOPE statement
 - scripts [MDX], scope
 ms.assetid: 631e7c20-8be9-4c35-8609-76516aef19d1
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 388156b160cbc63c2a101bf9f7c7e39f8f6baa36
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a7878c4c2420a4f49d14e1a3f2121009fc1d5b3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="managing-scope-and-context-mdx"></a>管理範圍及內容 (MDX)
   在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，多維度運算式 (MDX) 指令碼可於指令碼執行內的特定點套用至整個 Cube 或特定的 Cube 部分。 MDX 指令碼會透過使用計算行程，對 Cube 內的計算採用分層方法。  
@@ -123,10 +122,9 @@ END SCOPE;
   
  如需 SCOPE 陳述式語法的詳細資訊，請參閱 [SCOPE 陳述式 &#40;MDX&#41;](../../../mdx/mdx-scripting-scope.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 語言參考 &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
  [基本 MDX 指令碼 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
  [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

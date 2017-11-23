@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MoveWithDescendants Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MoveWithDescendants Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.movewithdescendants
 - http://schemas.microsoft.com/analysisservices/2003/engine#MoveWithDescendants
 - urn:schemas-microsoft-com:xml-analysis#MoveWithDescendants
-helpviewer_keywords:
-- MoveWithDescendants element
+helpviewer_keywords: MoveWithDescendants element
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 61514f1cd5cb7371f92f5f763d3f1236fc955e0d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bdbacbaa6de4d175d5a1c0223a12a89911ba557a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="movewithdescendants-element-xmla"></a>MoveWithDescendants 元素 (XMLA)
   指出是否屬性成員的下階也會更新它的父系[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)命令。  
@@ -76,8 +71,7 @@ ms.lasthandoff: 09/01/2017
   
  如需有關更新成員的詳細資訊，請參閱[插入、 更新及卸除成員 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

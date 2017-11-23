@@ -8,22 +8,20 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bf4b5eee7fbeb00aa477e7769ca9ebaaa84e7d4c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34050b68416ddd9c4ead37cf9d398420e96639f9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getting-started-with-the-php-sql-driver"></a>PHP SQL 驅動程式快速入門
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
 [PHP SQL 驅動程式程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
   
-

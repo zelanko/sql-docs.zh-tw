@@ -19,17 +19,16 @@ helpviewer_keywords:
 - renaming attributes
 - attributes [Analysis Services], renaming
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4f19e7ee6c46ff06cbfc8005252bab2ec1115eb3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 341d41fd9930562173fe56c343d3edeb7041b89a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>屬性內容-屬性繫結至索引鍵資料行
   此程序描述如何在維度中，變更屬性 (attribute) 的 **Name** 屬性 (property) 設定。  
@@ -48,4 +47,3 @@ ms.lasthandoff: 09/01/2017
     >  您也可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，設定選定屬性 (attribute) 的 **Name** 屬性 (property)。  
   
   
-

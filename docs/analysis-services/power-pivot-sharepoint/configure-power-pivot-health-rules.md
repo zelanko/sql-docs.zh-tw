@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 09a92c74c31247541767258e30b9d61d62cd567d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 42cc598c702a0e88063896717926e280171d0371
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-power-pivot-health-rules"></a>設定 PowerPivot 健全狀況規則
 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 包含的 SharePoint 健全狀況規則可幫助您監控及修復伺服器可用性與組態問題。 套用至 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 的健全狀況規則會出現在 [檢閱規則定義] 頁面中。  
@@ -137,9 +136,8 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      此組態設定會對應到 [檢閱問題與方案] 頁面上的以下規則定義：[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 使用量資料並未以預期的頻率更新]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [設定磁碟空間使用量 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)   
  [Power Pivot 管理儀表板和使用量資料](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
   
-

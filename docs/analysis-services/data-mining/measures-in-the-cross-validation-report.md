@@ -20,17 +20,16 @@ helpviewer_keywords:
 - log score [data mining]
 - likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 306a2c189f4c53a388572d64df7a07c733baca3d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f046ddaa3152318bfb3fe01d055bf213fdfdec41
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measures-in-the-cross-validation-report"></a>交叉驗證報表中的量值
   在交叉驗證期間， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將採礦結構中的資料分割成多個交叉區段，然後反覆地測試結構及任何相關聯的採礦模型。 根據這項分析，結果會輸出有關結構及每個模型的一組標準精確度量值。  
@@ -67,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

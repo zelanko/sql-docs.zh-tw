@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9c3c91a755b50ffc1dc51d305589f17322584854
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f4755d0271523b65073b72c6b06f6dec8cfcb90a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="kpis"></a>KPI
   表格式模型中的「關鍵效能指標」(KPI) 可用來針對由量值或絕對值定義的「目標」值，量測由「基底」量值定義之值的績效。 本主題為表格式模型作者提供對於表格式模型中 KPI 的基本了解。  
@@ -83,11 +82,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |主題|Description|  
 |-----------|-----------------|  
-|[建立及管理 Kpi](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|描述如何使用基底量值、目標量值及狀態臨界值建立 KPI。|  
+|[建立及管理 KPI](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|描述如何使用基底量值、目標量值及狀態臨界值建立 KPI。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
-

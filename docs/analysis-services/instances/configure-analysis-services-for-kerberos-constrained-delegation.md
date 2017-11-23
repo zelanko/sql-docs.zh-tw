@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 60e56d6d5643afee56cf5d30a548a90ebd5ff7f1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6158c7263fcd620f1ac577522b09f8ac4b9e08d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>設定 Analysis Services 進行 Kerberos 限制委派
   將 Analysis Services 設定為 Kerberos 驗證時，若能獲致下列其中一項或兩項結果，對您來說可能最有用處：讓 Analysis Services 在查詢資料時模擬使用者識別，或是由 Analysis Services 將使用者識別委派給下層服務。 每一種情況的組態需求略有不同。 這兩種情況都需要驗證以確保組態設定正確。  
@@ -129,4 +128,3 @@ ms.lasthandoff: 09/01/2017
  [連接字串屬性 &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   
-

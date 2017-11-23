@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2baeb4233fc9c8c8121e468c7d9111a52a66ba7d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a14deecac6f597c9f09f9659ed165345ef5faceb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-power-pivot-gallery"></a>使用 Power Pivot 圖庫
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一種特殊的 SharePoint 文件庫，針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。  
@@ -169,11 +168,10 @@ ms.lasthandoff: 09/01/2017
   
  [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫文件] 內容類型不會自動加入至文件庫。除非您手動啟用不支援的內容類型，否則不會發生這個問題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [刪除 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
  [建立及自訂 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [排定資料重新整理 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   
-

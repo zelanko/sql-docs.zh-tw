@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MakeValid
 - MakeValid_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- MakeValid (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: MakeValid (geometry Data Type)
 ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fd3f338dba1020d2424b69a5794fe27f3e151775
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cbb400b17584ef349609d876b2e700b8257ca4a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="makevalid-geometry-data-type"></a>MakeValid (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -87,10 +83,9 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 1 1, 1 1)';
 SELECT @g.MakeValid().ToString();  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [STIsValid &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
-
 

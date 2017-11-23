@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CubeAttribute Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CubeAttribute Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CubeAttribute
-helpviewer_keywords:
-- CubeAttribute data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: CubeAttribute
+helpviewer_keywords: CubeAttribute data type
 ms.assetid: 114ffb44-460b-4971-b31b-dd844e960b81
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 004ae803e654a8267b89bf5b5ab813052f7b3eda
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c04b5602de94ac46b736ebfc878760174ced5a8d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubeattribute-data-type-assl"></a>CubeAttribute 資料類型 (ASSL)
   定義代表屬性相關聯的基本資料類型[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)項目。  
@@ -80,8 +74,7 @@ ms.lasthandoff: 09/01/2017
   
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.CubeAttribute>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

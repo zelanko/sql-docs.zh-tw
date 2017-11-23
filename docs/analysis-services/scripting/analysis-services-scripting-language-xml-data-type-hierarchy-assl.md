@@ -13,13 +13,10 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Analysis Services Scripting Language XML Data Type Hierarchy
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Analysis Services Scripting Language XML Data Type Hierarchy
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, data types
 - Analysis Services Scripting Language, data types
@@ -27,17 +24,16 @@ helpviewer_keywords:
 - inheritance [Analysis Services Scripting Language]
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: f143c9f8-225d-495d-ac8e-ac2d2a7b4c07
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: acb889d2779380951f6a99913d2026af437226f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d95434e118735dca90480933a1d7e04c18307fe6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-scripting-language-xml-data-type-hierarchy-assl"></a>Analysis Services 指令碼語言 XML 資料類型階層 (ASSL)
   下表顯示「Analysis Services 指令碼語言」(ASSL) 中資料類型的繼承階層。  
@@ -122,10 +118,9 @@ ScalarMiningStructureColumn
 TableMiningStructureColumn  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)   
  [Analysis Services 指令碼語言 XML 元素階層 &#40;ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
  [Analysis Services 指令碼語言 &#40;ASSL XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

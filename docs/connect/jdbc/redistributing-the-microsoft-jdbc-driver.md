@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 625d64d3-6e7c-41c2-912a-38fdf6695922
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e994ffd275bc4cedb93c059b527173cb77aff417
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e021bf7824568d1171a6812e09010488f91ea9e0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="redistributing-the-microsoft-jdbc-driver"></a>轉散發 Microsoft JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="redistribute-the-microsoft-jdbc-41-42-and-60-driver"></a>轉散發 Microsoft JDBC 4.1、 4.2 與 6.0 驅動程式
 請檢閱 4.1、 4.2、 6.0 與 6.2 版本的驅動程式的授權合約中的 「 可散布程式碼 」 子句。
   
-

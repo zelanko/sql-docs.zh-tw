@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Algorithm Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Algorithm Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Algorithm
-helpviewer_keywords:
-- Algorithm element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Algorithm
+helpviewer_keywords: Algorithm element
 ms.assetid: 188bf7ce-c5c9-406a-af75-5a026c92a569
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a530e338e039ae4373f6565f46c55f5e9e7b90c4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1fe1a9caffdff1de0dc62c4ddd696e1ec8b829bd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="algorithm-element-assl"></a>Algorithm 元素 (ASSL)
   定義所使用的演算法[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)項目。  
@@ -71,10 +65,9 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**演算法**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MiningModel>。 在 AMO 物件模型中緊密相關的元素是 <xref:Microsoft.AnalysisServices.MiningModelAlgorithms>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [AlgorithmParameter 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md)   
  [AlgorithmParameters 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/algorithmparameters-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

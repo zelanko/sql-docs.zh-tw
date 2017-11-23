@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 995c0c6426f3014e58d49d61aad9a379ad5bc65e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 564e6236a13c7def4201058c443dbb802e685715
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>瀏覽 Cube 中的資料和中繼資料
   使用 Cube 設計師的 [瀏覽器] 索引標籤瀏覽 Cube 資料。 您可以使用此檢視檢查 Cube 的結構，並檢查資料庫物件的資料、計算、格式及安全性。 您可以像是使用者在報表工具或其他用戶端應用程式檢視 Cube 一樣，快速檢查 Cube。 當您瀏覽 Cube 資料時，您可以檢視不同的維度、向下鑽研至成員，以及配量維度。  
@@ -116,4 +115,3 @@ ms.lasthandoff: 09/01/2017
  您可以在 [資料] 窗格中的任何位置按一下滑鼠右鍵，然後按一下 [顯示空的資料格]，以隱藏資料格中的空資料格。  
   
   
-

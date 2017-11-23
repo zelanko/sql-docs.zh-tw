@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2483225abebeb66fe691ee11e33f1322a3f10dc0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b69a5fd295ac6107f5469966cb0b4d7329018eee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multiplicity-element-assl"></a>Multiplicity 元素 (ASSL)
   指出 RelationshipEnd 中的屬性位於關聯性的「一」端還是「多」端。  
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  列舉型別對應至允許的值**角色**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Multiplicity>。  
   
   
-

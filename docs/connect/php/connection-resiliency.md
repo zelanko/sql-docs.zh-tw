@@ -7,19 +7,17 @@ ms.service:
 ms.component: php
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.topic: article
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.workload: Inactive
+ms.openlocfilehash: 6c36086404c8767ea30c85b2ebd77340d11732ab
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38d51492d488db404786a60b8ab73576d0a1acb4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="idle-connection-resiliency"></a>閒置連接恢復功能
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -135,6 +133,5 @@ Statement 2 successful.
 16 rows in result set.
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 [Windows ODBC 驅動程式中的連接恢復功能](https://docs.microsoft.com/en-us/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
-

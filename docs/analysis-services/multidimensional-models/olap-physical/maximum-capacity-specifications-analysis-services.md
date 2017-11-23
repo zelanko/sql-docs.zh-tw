@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Services], maximum number
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 39c69ad1c26b30eda9244d192e6199903249ff40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cb411a22638d709e633504675bd91dbcfa835810
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量規格 (Analysis Services)
   下表指定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 元件中的不同伺服器部署模式下，所定義之各種物件的大小和數目上限。  
@@ -112,4 +110,3 @@ ms.lasthandoff: 09/01/2017
  [一般屬性](../../../analysis-services/server-properties/general-properties.md)  
   
   
-

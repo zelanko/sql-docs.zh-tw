@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b8f6397f70727173345a41e92704a4277de32ddd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 692de4d83bfef7a61b11079fb31bb395da8771aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>將資料來源加入至表格式模型 (Analysis Services AMO-TOM)
 
@@ -142,4 +141,3 @@ namespace TOMSamples
 ## <a name="next-step"></a>下一步 
 
 在模型中，您必須設定資料來源中的來源資料行對應至模型中的目的地資料行的資料繫結。 您也必須定義資料分割，至少有一個每個資料表，儲存資料。 以下連結為您示範如何：[建立資料表、 資料分割和資料行](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-tables-partitions-and-columns-in-a-tabular-model.md) 
-

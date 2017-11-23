@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,19 +16,16 @@ f1_keywords:
 - CREATE_EXTERNAL_LIBRARY_TSQL
 - EXTERNAL LIBRARY
 - EXTERNAL_LIBRARY_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- CREATE EXTERNAL LIBRARY
+dev_langs: TSQL
+helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.openlocfilehash: 8d0f700ba30b77e892b37e98c43996d6e654e7ea
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 8066d267790f346a22a649fb0c873a3d454489a8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-library-transact-sql"></a>建立外部程式庫 (TRANSACT-SQL)  
 
@@ -199,4 +195,3 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 [卸除的外部程式庫 (TRANSACT-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
-

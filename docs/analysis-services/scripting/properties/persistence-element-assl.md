@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Persistence Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Persistence Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Persistence
-helpviewer_keywords:
-- Persistence element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Persistence
+helpviewer_keywords: Persistence element
 ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f49d7a5eabaeaec3ba9d75bcfec92adda6c0e196
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fd24f62070693d74949bd9ff328c87f66567929f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="persistence-element-assl"></a>Persistence 元素 (ASSL)
   決定繫結的來源資料中哪些部分是動態的而且會檢查是否有使用所指定的頻率更新[RefreshPolicy](../../../analysis-services/scripting/properties/refreshpolicy-element-assl.md)項目。  
@@ -77,8 +71,7 @@ ms.lasthandoff: 09/01/2017
   
  列舉型別對應至允許的值**持續性**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.PersistenceType>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

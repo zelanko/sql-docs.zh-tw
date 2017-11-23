@@ -8,21 +8,19 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: 8f606a7e86c4424932d470b94d558239ba566488
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 25042ab3719067654e801ca936d99af1a49a1e47
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="reading-large-data-sample"></a>讀取大型資料範例
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,8 +48,7 @@ ms.lasthandoff: 09/09/2017
   
  [!code[JDBC#UsingAdaptiveBuffering1](../../../connect/jdbc/codesnippet/Java/reading-large-data-sample_1.java)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [使用大型資料](../../../connect/jdbc/working-with-large-data.md)  
   
   
-

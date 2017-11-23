@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerPreparedStatement.executeUpdate (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerPreparedStatement.executeUpdate (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7a78fe10c14c54b5e2bea1cc4030a4f5d8d83fa1
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 264ccb901e544eb0990f39ed53d112c7f8e9220f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate 方法 (java.lang.String)
 
@@ -56,11 +52,10 @@ A**字串**，其中包含 SQL 陳述式。
 
 呼叫這個方法會導致例外狀況，因為在建立物件時指定 SQLServerPreparedStatement 物件的 SQL 陳述式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 
 [executeUpdate 方法 &#40;SQLServerPreparedStatement &#41;](./executeupdate-method-sqlserverpreparedstatement.md)
 
 [SQLServerPreparedStatement 成員](./sqlserverpreparedstatement-members.md)
 
 [SQLServerPreparedStatement 類別](./sqlserverpreparedstatement-class.md)
-

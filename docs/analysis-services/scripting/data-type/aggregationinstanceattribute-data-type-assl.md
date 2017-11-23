@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AggregationInstanceAttribute Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AggregationInstanceAttribute Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- AggregationInstanceAttribute data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: AggregationInstanceAttribute data type
 ms.assetid: fc5a98bf-7c3c-4faf-b9f8-16eb073d7dc7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b6a9f69ee53a764fb0bfd758c0c205c0c063ce80
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0c2568ad5d3766fd1508ef7b6dbbbd47584796c9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregationinstanceattribute-data-type-assl"></a>AggregationInstanceAttribute 資料類型 (ASSL)
   定義代表彙總執行個體所使用之屬性相關資訊的基本資料類型。  
@@ -66,8 +61,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

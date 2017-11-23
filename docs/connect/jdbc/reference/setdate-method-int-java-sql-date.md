@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerPreparedStatement.setDate (int, java.sql.Date)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerPreparedStatement.setDate (int, java.sql.Date)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 12e5a4cc-45a2-4779-bbfc-e4da66829588
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1f6011bc3a9bbf0e2b75a6137ba954605bcff3d8
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2b1ebded8c928a6d86da5a6ee58a345e1f67270b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setdate-method-int-javasqldate"></a>setDate 方法 (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,10 +54,9 @@ public final void setDate(int n,
 ## <a name="remarks"></a>備註  
  SetDate 方法 java.sql.PreparedStatement 介面中所指定此 setDate 方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [setDate 方法 &#40;SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement 類別](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   
-

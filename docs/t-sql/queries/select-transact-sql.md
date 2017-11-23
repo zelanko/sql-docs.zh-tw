@@ -1,19 +1,20 @@
 ---
 title: "選取 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT_TSQL
 - SELECT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - retrieving rows
 - SELECT statement [SQL Server]
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cebbb09ffbc437ebdb4c0d0f5fdc5cf5a59adea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   從資料庫擷取資料列，並可讓您選取一個或多個資料列或從一個或多個資料表中的資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 SELECT 陳述式的完整語法很複雜，但主要子句可摘要如下：  
   
@@ -138,7 +138,12 @@ SELECT <select_criteria>
 9. DISTINCT  
 10. ORDER BY  
 11. 頂端  
-  
+
+> [!WARNING]
+> 以上順序，通常會情況。 不過，有一些不常見的情況下的順序可能不同之處。
+>
+> 例如，假設您有叢集的索引的檢視，並檢視排除某些資料表資料列和檢視的選取資料行清單使用變更的資料類型的轉換*varchar*至*整數*。 在此情況下，可能會轉換執行之前執行的 WHERE 子句。 常見確實。 通常是可以修改您的檢視，以避免不同的序列，如果它在您的案例中很重要。 
+
 ## <a name="permissions"></a>Permissions  
  選取資料需要資料表或檢視的 **SELECT** 權限；此權限可從較高的範圍繼承而來，例如結構描述的 **SELECT** 權限或資料表的 **CONTROL** 權限。 需要的成員資格或**db_datareader**或**db_owner**固定資料庫角色或**sysadmin**固定的伺服器角色。 建立新的資料表使用**SELECTINTO**也需要**CREATETABLE**權限，而**ALTERSCHEMA**擁有新資料表的結構描述權限。  
   
@@ -262,9 +267,8 @@ HAVING OrderDateKey > 20010000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [精選的範例 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
   
-
 

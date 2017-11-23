@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e68713965ff5c985244e992bed5f3dd0bfb8eef7
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91777796843557cf6c5e6f7667994d7743b608a0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-table-valued-parameters"></a>使用資料表值參數
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -309,8 +307,7 @@ pStmt.execute();
 |公用最終的 void setStructured 字串 paratemeterName、 字串 tvpName (ResultSet tvpResultSet）|會填入資料表值參數傳遞至預存程序，與另一個資料表中擷取結果集。 paratemeterName 是參數的名稱、 tvpName 是 TVP，型別的名稱和 tvpResultSet 是來源結果集物件。|  
 |公用最終的 void setStructured 字串 paratemeterName、 字串 tvpName (ISQLServerDataRecord tvpDataRecord）|會填入資料表值參數傳遞至具有 ISQLServerDataRecord 物件的預存程序。 ISQLServerDataRecord 用於串流資料，而使用者決定如何使用它。 paratemeterName 是參數的名稱、 tvpName 是 TVP，型別的名稱和 tvpDataRecord 是 ISQLServerDataRecord 物件。|  
   
-## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>請參閱＜  
+ [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

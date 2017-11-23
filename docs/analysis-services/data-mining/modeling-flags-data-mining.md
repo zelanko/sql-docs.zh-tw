@@ -26,17 +26,16 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 90ce08e6cf57aa2ca49aea8834b96a69aa69362e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modeling-flags-data-mining"></a>模型旗標 (資料採礦)
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的模型旗標，為資料採礦演算法提供案例資料表中所定義資料的其他資訊。 演算法可以使用此一資訊建立更精確的資料採礦模型。  
@@ -123,4 +122,3 @@ WHERE MODEL_NAME = '<model name>'
 |了解如何管理模型和結構以及設定使用屬性|[移動資料採礦物件](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   
-

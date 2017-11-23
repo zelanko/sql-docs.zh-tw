@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - denying permissions [Service Broker]
 - routes [Service Broker], permissions
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c63c3d62d0104642953545da75b0f7fa1b988eb0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed0ab0e375ecddbf9086647adce744a8ef4cb53d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -165,11 +162,10 @@ CASCADE
 ## <a name="permissions"></a>Permissions  
  需要 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約、訊息類型、遠端服務繫結、路由或服務的 CONTROL 權限。 如果使用 AS 子句，指定的主體必須擁有要拒絕其權限的類型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [REVOKE Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [權限 &#40; Database engine&#41;](../../relational-databases/security/permissions-database-engine.md)  
   
   
-

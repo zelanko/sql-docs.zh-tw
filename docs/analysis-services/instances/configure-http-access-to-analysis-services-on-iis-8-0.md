@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 02c1e956d40ed9a4b69e0606f5a273ecab814e83
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bfb3bdd7224a72849e35bd1433e59267b559f0f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>設定 IIS 8.0 上 Analysis services 的 HTTP 存取
   本文說明如何設定 HTTP 端點來存取 Analysis Services 執行個體。 您可以設定 MSMDPUMP.dll (這是在 Internet Information Services (IIS) 中執行的一個 ISAPI 擴充程式，可以在用戶端應用程式與 Analysis Services 伺服器之間來回提取資料) 來啟用 HTTP 存取。 此方法會在您的 BI 方案需要下列功能時，提供連接至 Analysis Services 的替代方式。  
@@ -249,7 +248,7 @@ ms.lasthandoff: 09/01/2017
   
  如果您要為其設定 HTTP 存取的 Analysis Services 執行個體位於本機電腦，而且當做預設執行個體安裝，則不需要變更此設定。 否則，您必須指定伺服器名稱 (例如， \<ServerName > v 01 SRV01\</ServerName >)。 安裝成具名執行個體的伺服器，請務必附加執行個體名稱 (例如， \<ServerName > v 01 SRV01\Tabular\</ServerName >)。  
   
- 根據預設，Analysis Services 會接聽 TCP/IP 通訊埠 2383。 如果您安裝 Analysis Services 的預設執行個體時，您不需要指定任何連接埠中的\<ServerName > 因為 Analysis Services 知道如何自動接聽通訊埠 2383年。 不過，您需要在 Windows 防火牆中，允許該通訊埠的傳入連接。 如需詳細資訊，請參閱 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+ 根據預設，Analysis Services 會接聽 TCP/IP 通訊埠 2383。 如果您安裝 Analysis Services 的預設執行個體時，您不需要指定任何連接埠中的\<ServerName > 因為 Analysis Services 知道如何自動接聽通訊埠 2383年。 不過，您需要在 Windows 防火牆中，允許該通訊埠的傳入連接。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
  如果您設定具名或預設為接聽固定通訊埠的 Analysis Services 執行個體，您必須將通訊埠編號加入的伺服器名稱 (例如， \<ServerName > AW-SRV01:55555\</ServerName >)，您必須允許輸入在 Windows 防火牆中該通訊埠的連接。  
   
@@ -327,4 +326,3 @@ ms.lasthandoff: 09/01/2017
  [如何在 IIS 7 上的 SSL 設定](http://go.microsoft.com/fwlink/?LinkId=207562)  
   
   
-

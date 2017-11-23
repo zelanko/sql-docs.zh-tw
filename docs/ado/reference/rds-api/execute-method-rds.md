@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Execute method [ADO]
+helpviewer_keywords: Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9b42de5e1548cc7fd68c7b71182034df7e9f97f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 68796c4fa28d3ee553ccf7c44e9bbd9850f32fb7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execute-method-rds"></a>Execute 方法 (RDS)
 執行要求，並在 ADO 中建立用於 ADO 資料錄集，2.5 和更新版本。  
@@ -90,6 +87,5 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
   
 ## <a name="applies-to"></a>適用於  
  [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

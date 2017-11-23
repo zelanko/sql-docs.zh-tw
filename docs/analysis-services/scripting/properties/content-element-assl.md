@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Content Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Content Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Content
-helpviewer_keywords:
-- Content element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Content
+helpviewer_keywords: Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 98f996bf7b1b274afed0313ef326596f3e88d5f2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c42c6d4af398dd08021b8b9e308155f2d23b11cb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="content-element-assl"></a>Content 元素 (ASSL)
   說明內容中的資料行的[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)項目。  
@@ -97,9 +91,8 @@ ms.lasthandoff: 09/01/2017
   
  列舉型別對應至允許的值**內容**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ClassifiedColumns 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/classifiedcolumns-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

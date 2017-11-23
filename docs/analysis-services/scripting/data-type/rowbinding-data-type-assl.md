@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- RowBinding Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: RowBinding Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- RowBinding
-helpviewer_keywords:
-- RowBinding data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: RowBinding
+helpviewer_keywords: RowBinding data type
 ms.assetid: 5a49a6e3-25f3-43c8-8529-bcf245b02415
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5bed109c81e253e2124478c7de6c7cb411695c76
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2900dc441d7ce296962faf1cd96bf823b597d35b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rowbinding-data-type-assl"></a>RowBinding 資料類型 (ASSL)
   定義代表資料表中的資料列繫結的衍生的資料類型[DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md)項目。  
@@ -72,8 +66,7 @@ ms.lasthandoff: 09/01/2017
   
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.RowBinding>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

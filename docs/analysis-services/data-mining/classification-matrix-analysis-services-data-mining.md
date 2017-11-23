@@ -22,17 +22,16 @@ helpviewer_keywords:
 - classification matrix [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8882fb1235b4d8beeb819833c76c872f1a4df76f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ccf1a17862dd132865111d6ab7c6c5175bf86c0d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分類矩陣 (Analysis Services - 資料採礦)
   「分類矩陣」會透過判斷預測值是否符合實際值，將模型中的所有案例分類到不同的類別目錄。 每個類別目錄中的所有案例都會計算在內，而且總數會顯示在矩陣中。 分類矩陣是統計模型評估的標準工具，有時稱為「混淆矩陣」。  
@@ -96,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

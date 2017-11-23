@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: bf4eecc1e72f1eadcb0feeab5ca046e75155a66d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: a0d6ff0a983f1d1d1ad8fdcc7de37d9a06032025
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>變更 GA 儲存機制預覽儲存機制從儲存機制
 
@@ -78,4 +77,3 @@ ms.lasthandoff: 10/06/2017
 ## <a name="next-steps"></a>後續的步驟
 
 如需有關如何在 Linux 上安裝 SQL Server 2017 的詳細資訊，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
-

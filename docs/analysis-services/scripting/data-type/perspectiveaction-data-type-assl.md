@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- PerspectiveAction Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: PerspectiveAction Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- PerspectiveAction
-helpviewer_keywords:
-- PerspectiveAction data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: PerspectiveAction
+helpviewer_keywords: PerspectiveAction data type
 ms.assetid: a0e4a545-688c-4d4e-b05f-0008d3503349
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9a01dec71914a33419c68888f06ff363e2d99b96
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8d99af801d5fa1a5d01454dc6577b1ba3684da24
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspectiveaction-data-type-assl"></a>PerspectiveAction 資料類型 (ASSL)
   定義代表中動作的相關資訊的基本資料類型[觀點來看](../../../analysis-services/scripting/objects/perspective-element-assl.md)項目。  
@@ -68,8 +62,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveAction>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

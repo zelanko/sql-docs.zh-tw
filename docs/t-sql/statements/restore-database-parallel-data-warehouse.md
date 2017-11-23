@@ -8,22 +8,20 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4cd72d13f4c953f9b15963655d437709bfc71fa7
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 001813cf0e7d00e089046d8580108eb10ef4cba0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>還原資料庫 (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -184,8 +182,7 @@ RESTORE HEADERONLY
   
  若要檢查的備份時，內容，或請確定目標還原應用裝置，與來源備份裝置相容，再嘗試還原備份，您可以使用的標頭資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [備份資料庫 &#40;平行資料倉儲 &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
   
   
-

@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerParameterMetaData.getPrecision
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerParameterMetaData.getPrecision
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 24ae94a05a20750fbfb8b80a9ab905753070ecbb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c80beecc510fb5f2d4190839e8bc4ca1c95602c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getprecision-method-sqlserverparametermetadata"></a>getPrecision 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,10 +54,9 @@ public int getPrecision(int param)
   
  如果是數字型別，這個方法會取得小數位數。 如果是字元型別，它會取得以字元為單位的最大長度。 如果是二進位型別，它會取得以位元組為單位的最大長度。 當位數未知時，這個方法會傳回 "0"。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerParameterMetaData 方法](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
  [SQLServerParameterMetaData 成員](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
  [SQLServerParameterMetaData 類別](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  
   
   
-

@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c7c280b4b4a996d68bb403ea6210322604452e5d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 595b68b37eacf09f6cb4d327190f012207eb4286
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>從分析資料來源擷取中繼資料
   中繼資料對於擷取和使用分析資料的應用程式很重要。 當從關聯式資料來源擷取資料時，這種資料的維度性是可預測的，甚至是具有巢狀資料集的。 關聯式資料庫的結果集在結構上通常是二維或是純量。 不過，從分析資料來源擷取的資料有可能是可變的維度性、有組織且可能有很深的階層。  
@@ -106,10 +104,9 @@ ms.lasthandoff: 09/01/2017
 |<xref:Microsoft.AnalysisServices.AdomdClient.AdomdSchemaGuid.XmlaProperties>|[DISCOVER_PROPERTIES 資料列集](../../analysis-services/schema-rowsets/xml/discover-properties-rowset.md)||  
 |<xref:Microsoft.AnalysisServices.AdomdClient.AdomdSchemaGuid.XmlMetadata>|[DISCOVER_XML_METADATA 資料列集](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md)||  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADOMD.NET 用戶端程式設計](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)   
  [ADOMD.NET 用戶端程式設計](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)   
  [Analysis Services 結構描述資料列集](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

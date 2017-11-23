@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MiningStructureColumn Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MiningStructureColumn Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MiningStructureColumn
-helpviewer_keywords:
-- MiningStructureColumn data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: MiningStructureColumn
+helpviewer_keywords: MiningStructureColumn data type
 ms.assetid: b6d6e7a5-9c48-40c4-b147-8fcd5e429ae3
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7e72e005add03ab6e7136fab540de5bd4b435d45
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ebd94bb266ae4cf9c918e1e8cabd801ddd4d631c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="miningstructurecolumn-data-type-assl"></a>MiningStructureColumn 資料類型 (ASSL)
   定義代表資料行中的相關資訊的抽象基本資料類型[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)項目。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.MiningStructureColumn>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

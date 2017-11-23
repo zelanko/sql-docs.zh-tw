@@ -8,24 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Driver Manager, installing
+helpviewer_keywords: Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0a866499618569023ba6839148dd73844d0ddaed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ca46eb4fbb6203191a7aace3946daad8361b224
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="installing-the-driver-manager"></a>安裝驅動程式管理員
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -91,10 +88,9 @@ ms.lasthandoff: 09/09/2017
 
 您現在已可開始安裝驅動程式。 請參閱[安裝的 Microsoft ODBC Driver for SQL Server on Linux 及 macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)如需詳細資訊。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 [安裝的 Microsoft ODBC Driver for SQL Server on Linux 及 macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [此驅動程式版本的已知問題](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [版本資訊](../../../connect/odbc/linux-mac/release-notes.md)
-

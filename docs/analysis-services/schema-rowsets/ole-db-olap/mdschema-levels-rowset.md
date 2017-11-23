@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_LEVELS
+apiname: MDSCHEMA_LEVELS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_LEVELS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_LEVELS rowset
 ms.assetid: 4313e268-33f4-4e99-96d7-2ec26775c580
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1c0497713e1a115a0c82b7eb957affb82dd060db
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8d9a56387365489615b6b7665dedb3edc7f367f6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemalevels-rowset"></a>MDSCHEMA_LEVELS 資料列集
   描述特定階層內的每個層級。  
@@ -85,8 +81,7 @@ ms.lasthandoff: 09/01/2017
 |**CUBE_SOURCE**|**DBTYPE_UI2**|（選擇性）預設限制為 1 的值。 點陣圖，下列有效的值之一：<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION (維度)|  
 |**LEVEL_VISIBILITY**|**DBTYPE_UI2**|（選擇性）預設限制為 1 的值。 使用下列值之一的點陣圖：<br /><br /> 1 可見<br /><br /> 2 不可見|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

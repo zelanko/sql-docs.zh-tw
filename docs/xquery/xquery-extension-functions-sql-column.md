@@ -5,29 +5,25 @@ ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - sql:column function
 - sql:column() function
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 332119a40a2bb06c2d71982fd00580fe80772e3b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: abb8cf32f67af58fdb54e6605c844c6245fc545d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 擴充函數-: column （）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +132,7 @@ And P.ProductModelID = 19
 select @x  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQL Server XQuery 擴充函數](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [比較具類型的 XML 與不具類型的 XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
@@ -145,4 +141,3 @@ select @x
  [XML 資料修改語言 &#40;XML DML &#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

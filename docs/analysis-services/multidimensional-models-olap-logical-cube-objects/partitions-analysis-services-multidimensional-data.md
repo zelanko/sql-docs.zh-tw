@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - incremental updates [Analysis Services]
@@ -29,17 +28,16 @@ helpviewer_keywords:
 - remote partitions [Analysis Services]
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: eeeec758905021bfb1b352fb325810f096e3292d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98538876d36c252b75173510e2724abe7377c5a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>資料分割 (Analysis Services - 多維度資料)
   資料分割是量值群組資料之一部分的容器。 無法從 MDX 查詢看到資料分割；所有的查詢都會反映量值群組的完整內容，不論針對此量值群組定義了多少個資料分割。 資料分割的資料內容是由資料分割的查詢繫結及分割運算式所定義。  
@@ -75,9 +73,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="incremental-updates"></a>累加式更新  
  當您在多資料分割量值群組中建立和管理資料分割時，必須採取特別注意事項以確保 Cube 資料正確。 雖然這些注意事項通常都不會套用到單一資料分割量值群組，但是當您以累加方式更新資料分割時則會予以套用。 當您以累加方式更新資料分割時，會建立新的暫存資料分割，而這個資料分割的結構與來源資料分割的結構相同。 這時會處理暫存資料分割，再與來源資料分割合併。 因此，您必須確定擴展暫存資料分割的處理查詢不會複製已經存在於現有資料分割中的任何資料。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [設定量值屬性](../../analysis-services/multidimensional-models/configure-measure-properties.md)   
  [多維度模型中的 Cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   
-

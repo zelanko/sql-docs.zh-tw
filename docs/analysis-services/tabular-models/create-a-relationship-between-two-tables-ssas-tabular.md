@@ -17,17 +17,16 @@ f1_keywords:
 - sql13.asvs.bidtoolset.createrelatdb.f1
 - sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7580e80413bc84d67ae6cc65c9a6c3d86f3f1603
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9bc0373c1b0e018430106530da93107c600bbdee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>建立兩個資料表之間的關聯性 (SSAS 表格式)
   如果您資料來源中的資料表並沒有關聯性存在，或如果您要新增資料表，則可以使用模型設計師中的工具來建立新的關聯性。 如需如何在表格式模型中使用關聯性的資訊，請參閱 [關聯性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
@@ -83,4 +82,3 @@ ms.lasthandoff: 09/01/2017
  [關聯性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   
   
-

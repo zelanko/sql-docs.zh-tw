@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d30d7746cb49609154a9b5e82ec7a85b1a1480e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-the-transaction-isolation-level"></a>設定交易隔離層級
 若要設定交易隔離等級，應用程式會使用 SQL_ATTR_TXN_ISOLATION 連接屬性。 如果資料來源不支援要求的隔離等級，驅動程式或資料來源就可以設定較高的層級。 若要判斷何種交易隔離層級的資料來源支援並預設隔離等級時，應用程式呼叫**SQLGetInfo**與 SQL_TXN_ISOLATION_OPTION 和 SQL_DEFAULT_TXN_ISOLATION 選項，分別。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
 -   如果速度是更為重要精確度及任何錯誤，可能會變小。 例如，假設公司可讓許多小型銷售和大型的業績很少。 估計的所有開啟的銷售量的總計值的交易可能會安全地使用 Read Uncommitted 隔離等級。 雖然交易會包含訂單，開啟或關閉而且後續會回復，這些會通常相互抵銷，而且交易會更快，因為每次它發現這類訂單，並不會封鎖它。  
   
  如需詳細資訊，請參閱[開放式並行存取](../../../odbc/reference/develop-app/optimistic-concurrency.md)。
-

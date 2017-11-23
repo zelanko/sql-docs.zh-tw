@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AttributeHierarchyDisplayFolder Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AttributeHierarchyDisplayFolder Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AttributeHierarchyDisplayFolder
-helpviewer_keywords:
-- AttributeHierarchyDisplayFolder element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AttributeHierarchyDisplayFolder
+helpviewer_keywords: AttributeHierarchyDisplayFolder element
 ms.assetid: d4a3aff7-553e-416c-9c42-819a96ae264d
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4c747bf1b381790ab55d8a1ddd259117b18685ac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e6420f52f62d03287c5129b31487d7abe6584d81
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributehierarchydisplayfolder-element-assl"></a>AttributeHierarchyDisplayFolder 元素 (ASSL)
   識別要在其中顯示相關聯屬性階層的資料夾。  
@@ -70,8 +64,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**AttributeHierarchyDisplayFolder**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

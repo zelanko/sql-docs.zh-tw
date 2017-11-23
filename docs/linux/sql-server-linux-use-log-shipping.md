@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 443330a48628e17f7dfa9688e57bb58b118605b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dc8c8094c6701af90aa9f645dc24fff8a70394b9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>開始使用 Linux 上的記錄傳送
 
@@ -37,7 +36,7 @@ SQL Server 記錄傳送是 HA 組態資料庫從主要伺服器複寫到一個�
 - 將交易記錄備份檔案透過網路複製到一或多個次要 SQL Server 執行個體
 - 還原交易記錄備份檔案，第二個 SQL Server 執行個體
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 - [Linux 上安裝 SQL Server 代理程式](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>安裝了網路共用，記錄傳送使用 CIFS 
@@ -315,6 +314,5 @@ SQL Server 記錄傳送是 HA 組態資料庫從主要伺服器複寫到一個�
     GO  
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
-
 
 

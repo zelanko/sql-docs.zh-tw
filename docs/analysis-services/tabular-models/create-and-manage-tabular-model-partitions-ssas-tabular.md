@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dcf049205f00cf10f4c8dda308911b202c3a3728
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09a6acec0d1ee91c553d748a334733faff36bc08
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>建立及管理表格式模型資料分割
 
@@ -69,9 +68,8 @@ ms.lasthandoff: 09/01/2017
   
 -   在 [資料分割] 對話方塊的 [資料分割] 清單中，選取您要刪除的資料分割，然後按一下 [刪除] 按鈕。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [表格式模型資料分割](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
  [處理表格式模型資料分割](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
   
   
-

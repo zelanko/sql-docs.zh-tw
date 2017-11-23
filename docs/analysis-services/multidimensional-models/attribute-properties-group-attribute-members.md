@@ -27,17 +27,16 @@ helpviewer_keywords:
 - members [Analysis Services], groups
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6779eda5faf42a64a6d6f87494f57ac0166ab31c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dd9947d01b6f916d19c1115e767c4b2eb5bdb807
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---group-attribute-members"></a>屬性內容-群組屬性成員
   成員群組是系統產生之連續維度成員的集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以透過稱為分隔的處理序，將屬性的成員分組成許多成員群組。 階層中的層級包含成員群組或成員，但不會同時包含兩者。 商務使用者瀏覽含有成員群組的層級時，他們會看到成員群組的名稱和資料格值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生以支援成員群組的成員稱為群組成員，看起來就像一般成員。  
@@ -123,4 +122,3 @@ ms.lasthandoff: 09/01/2017
  [屬性和屬性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   
-

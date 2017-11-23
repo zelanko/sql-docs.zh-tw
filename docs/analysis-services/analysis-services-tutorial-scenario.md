@@ -8,24 +8,21 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: deb268dde13782f6ffe6d3481e004d6b8cae17b5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 933a07504d0237d67becb2d98e1f5271548cb14a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services 教學課程案例
 這個教學課程是以一家虛構的公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]為基礎。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司，專門生產及批發金屬和合成器材自行車給北美、歐洲和亞洲的商場。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的總公司在華盛頓 Bothell，該公司雇用 500 位員工。 另外， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 它的市場還雇用了一些地區銷售團隊。  
@@ -77,4 +74,3 @@ Analysis Services 教學課程中的課程提供建立符合這些所有目標�
   
   
   
-

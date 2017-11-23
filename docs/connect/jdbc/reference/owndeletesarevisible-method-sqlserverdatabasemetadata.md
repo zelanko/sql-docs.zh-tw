@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.ownDeletesAreVisible
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.ownDeletesAreVisible
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 61644a52ba7e7c6e9b0eb15ac97295ec681e234e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2ec3f4e2d9facb5b82e1189636d0a20d499aedf5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="owndeletesarevisible-method-sqlserverdatabasemetadata"></a>ownDeletesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -74,10 +70,9 @@ public boolean ownDeletesAreVisible(int type)
 ## <a name="remarks"></a>備註  
  這個 ownDeletesAreVisible 方法是由 java.sql.DatabaseMetaData 介面中 ownDeletesAreVisible 方法指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 成員](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 類別](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

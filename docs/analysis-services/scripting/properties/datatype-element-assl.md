@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DataType Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DataType Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DataType
-helpviewer_keywords:
-- DataType element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DataType
+helpviewer_keywords: DataType element
 ms.assetid: efe6f717-8288-4ca2-85ed-9b63d27c02d8
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0e0f2ccfcda05eb554dcd20a9c419edb74377bc0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1e1cdd832a006148a8d72c8e7931ae4d662bce00
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datatype-element-assl"></a>DataType 元素 (ASSL)
   定義相關聯元素的資料類型。  
@@ -86,8 +80,7 @@ ms.lasthandoff: 09/01/2017
 |*WChar*|Unicode 字元的以 Null 結束資料流。 此資料類型會對應至**字串**.NET Framework 和 OLE DB 中的 DBTYPE_WSTR 資料類型中的資料型別。|  
 |*繼承*|資料型別**DataItem**中包含[來源](../../../analysis-services/scripting/properties/source-element-measure-assl.md)元素**量值**項目。<br /><br /> 注意： 僅適用於**量值**項目。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

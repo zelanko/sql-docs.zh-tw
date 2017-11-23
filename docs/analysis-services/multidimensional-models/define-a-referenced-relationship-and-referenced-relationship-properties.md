@@ -18,17 +18,16 @@ helpviewer_keywords:
 - referenced dimension relationship
 - relationships [Analysis Services], referenced dimensions
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 82aefe81ab4b5229034cb88e0e4648f998373209
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3213d88fd8f1119ffbb4bb71ab8658e0750f98c6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>定義參考的關聯性及參考的關聯性屬性
   參考維度關聯性是在 Cube 設計師的 [維度使用方式] 索引標籤上定義的。 透過指定下列項目即可定義參考維度關聯性：  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  在參考維度中，識別在參考維度與對應到維度之主資料表的量值群組之間定義關聯性的屬性，即可指定資料粒度。 當多個參考維度鏈結在一起時，參考是定義從最外層維度到量值群組的關聯性。  
   
   
-

@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Transactions
 - Transactions_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - transactions [SQL Server]
 - transactions [SQL Server], about transactions
 - UOW [SQL Server]
 - unit of work [SQL Server]
 ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: afd593c02535ec51932bb2c036e34c3406d8a87d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
-ms.openlocfilehash: c09104746dff6c34d94192217b8f2635cb0adc67
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transactions-transact-sql"></a>交易 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,9 +64,8 @@ ms.lasthandoff: 09/26/2017
 |[COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
 |[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [SET IMPLICIT_TRANSACTIONS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- row Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: row Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#row
 - microsoft.xml.analysis.row
 - http://schemas.microsoft.com/analysisservices/2003/engine#row
-helpviewer_keywords:
-- row element
+helpviewer_keywords: row element
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2b38517cea700ac5fab6cdccbef77aaeea0dc969
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52bc6d400340375163fd9ae8b285c071249a88f7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="row-element-xmla"></a>row 元素 (XMLA)
   包含單一資料列之資料的[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)包含所傳回的表格式資料的項目[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)或[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫。  
@@ -106,8 +101,7 @@ ms.lasthandoff: 09/01/2017
   
  如需有關命名資料行的資訊和表格式資料的結構描述資訊，請參閱[資料列集資料類型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

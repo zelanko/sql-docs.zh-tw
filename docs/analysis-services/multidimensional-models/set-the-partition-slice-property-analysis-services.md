@@ -18,17 +18,16 @@ helpviewer_keywords:
 - partitions [Analysis Services], data slices
 - data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 265163014794d57fd663472206798aa24f224e8e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0dc6d3620e26186c57a78ddb88e44548384c7b7d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>設定 Partition Slice 屬性 (Analysis Services)
   資料配量是協助將查詢導向到適當之分割區資料的重要最佳化功能。 明確設定 Slice 屬性可提升查詢效能，方法是覆寫 MOLAP and HOLAP 分割區所產生的預設配量。 此外，Slice 屬性可在處理分割區時，提供額外的驗證檢查。  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [建立及管理本機資料分割 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   
-

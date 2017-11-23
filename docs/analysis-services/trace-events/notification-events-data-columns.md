@@ -8,24 +8,21 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Notification Events event category
+helpviewer_keywords: Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 29b3b8561d260e17adb78bb944ee32a20b26406b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f671eb89295049c09da1f037fdb4544db84b7280
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="notification-events-data-columns"></a>通知事件資料行
   通知事件不是由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用者直接造成的事件。 例如，通知是因為使用者更新主動式快取的基礎資料表而發生。  
@@ -88,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   
-

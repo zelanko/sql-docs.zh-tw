@@ -8,22 +8,20 @@ ms.service:
 ms.component: ado-net
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7a9acd4b6c074e3059b2fed27095ccee1618b65c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56d2e54994d4ec1d292e49266e4919341af3eb7f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步驟 3： 使用 ADO.NET 的 sql 連接的概念證明
 
@@ -251,4 +249,3 @@ SqlCommand.ExecuteReader 方法：
     Press any key to finish...  
     ****/  
 ```
-

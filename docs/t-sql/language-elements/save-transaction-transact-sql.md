@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - SAVE_TSQL
 - SAVE_TRANSACTION_TSQL
 - SAVE TRANSACTION
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - rolling back transactions, SAVE TRANSACTION
 - SAVE TRANSACTION statement
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - marked transactions [SQL Server], SAVE TRANSACTION statement
 - duplicate savepoints
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a3a252fced11410718d1bcdbc82d9bb199585745
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 47e4c74c0f7e060d5f133e6941487df5923f41ef
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +60,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
  這是包含有效儲存點名稱之使用者自訂變數的名稱。 變數必須宣告與**char**， **varchar**， **nchar**，或**nvarchar**資料型別。 您可以將超出 32 個字元傳給變數，但只會使用前 32 個字元。  
   
 ## <a name="remarks"></a>備註  
- 使用者可以在交易內設定儲存點或標記。 儲存點定義在有條件地取消交易的一部份時，交易所能返回的位置。 如果交易回復到某個儲存點，它必須繼續完成多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (必要的話) 和 COMMIT TRANSACTION 陳述式，否則，您必須將交易回復到它的起點，徹底取消交易。 若要取消整個交易，請使用 [表單 ROLLBACK TRANSACTION *transaction_name*。 這會恢復交易的所有陳述式或程序。  
+ 使用者可以在交易內設定儲存點或標記。 儲存點定義在有條件地取消交易的一部份時，交易所能返回的位置。 如果交易回復到某個儲存點，它必須繼續完成多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (必要的話) 和 COMMIT TRANSACTION 陳述式，否則，您必須將交易回復到它的起點，徹底取消交易。 若要取消整個交易，請使用 表單 ROLLBACK TRANSACTION *transaction_name*。 這會恢復交易的所有陳述式或程序。  
   
  交易中可以有重複的儲存點，但指定儲存點名稱的 ROLLBACK TRANSACTION 陳述式，只會將交易回復到最近一個使用這個名稱的 SAVE TRANSACTION。  
   
@@ -168,21 +165,20 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [認可工作 & #40;TRANSACT-SQL & #41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [認可工作 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE & #40;TRANSACT-SQL & #41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [ROLLBACK WORK & #40;TRANSACT-SQL & #41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
- [XACT_STATE & #40;TRANSACT-SQL & #41;](../../t-sql/functions/xact-state-transact-sql.md)  
+ [XACT_STATE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md)  
   
   
-

@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_COMMAND_OBJECTS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 130ebbaa5453b61e0c473edea40c97eb0b65b0f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cae36b0ff5492555137952c2ad9b19f609c53948
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS 資料列集
   提供參考命令使用中之物件的資源使用量與活動的有關資訊。  
@@ -70,8 +67,7 @@ ms.lasthandoff: 09/01/2017
 |GUID|a07ccd35-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|CommandObjects|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-
