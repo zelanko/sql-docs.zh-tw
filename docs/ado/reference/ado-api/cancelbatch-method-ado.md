@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_CancelBatch
 - Recordset15::CancelBatch
-helpviewer_keywords:
-- CancelBatch method [ADO]
+helpviewer_keywords: CancelBatch method [ADO]
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b5dc5cc6d3047c7dc0804c42c7e8efcc80b64054
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2eced52fb03d47d8f79838d07a45c1d8dde31cf9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch 方法 (ADO)
 取消暫止的批次更新。  
@@ -55,9 +52,9 @@ recordset.CancelBatchAffectRecords
  如果嘗試取消擱置中的更新失敗，因為與基礎資料 （例如，若已由其他使用者刪除記錄） 衝突，提供者所傳回的警告，[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合但不會中止執行程式。 只有當要求的所有記錄中都有衝突，就會發生執行階段錯誤。 使用[篩選](../../../ado/reference/ado-api/filter-property.md)屬性 (**adFilterAffectedRecords**) 和[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性找出具有衝突的記錄。  
   
 ## <a name="applies-to"></a>適用於  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [UpdateBatch 和 CancelBatch 方法範例 (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [UpdateBatch 和 CancelBatch 方法範例 （VC + +）](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [Cancel 方法 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
@@ -67,4 +64,3 @@ recordset.CancelBatchAffectRecords
  [Clear 方法 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [LockType 屬性 (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)
-

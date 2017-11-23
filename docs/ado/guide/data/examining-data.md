@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4f05ca08a88951de138f094fbcac1dd9a31bfdfb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 462f8ea10fc0d4c489de40ddcf0174cb2a82435b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="examining-data"></a>檢查資料
 [擷取資料](../../../ado/guide/data/getting-data.md)> 一節說明如何從資料來源擷取資料，做為一或多個**資料錄集**物件。 本節將討論**資料錄集**的詳細資料，包括如何瀏覽**資料錄集**並檢視其資料。  
@@ -39,11 +37,10 @@ ms.lasthandoff: 09/09/2017
   
 -   [目前的記錄和資料錄集的大小](../../../ado/guide/data/current-record-and-size-of-recordset.md)  
   
--   [瀏覽資料](../../../ado/guide/data/navigating-through-data.md)  
+-   [巡覽資料](../../../ado/guide/data/navigating-through-data.md)  
   
 -   [了解資料錄集的結構](../../../ado/guide/data/understanding-recordset-structure.md)  
   
--   [檢查資料的範例資料錄集](../../../ado/guide/data/sample-recordset-for-examining-data.md)  
+-   [用於檢查資料的範例資料錄集](../../../ado/guide/data/sample-recordset-for-examining-data.md)  
   
 -   [資料錄集的界限](../../../ado/guide/data/boundaries-of-a-recordset.md)
-

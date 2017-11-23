@@ -5,24 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f006e161323a8f86147a63e2dde9ae4eebbcbb5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0cde3e326704f5c2818952817f480d1164c2ff25
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# MSSQLSERVER 的通訊協定內容 (進階索引標籤)
+# <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 的通訊協定內容 (進階索引標籤)
   您可以使用 [MSSQLSERVER 的通訊協定內容] 對話方塊的 [進階] 索引標籤來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [驗證擴充保護]。 [擴充保護] 是作業系統實作的網路元件功能。 [擴充保護] 可在 Windows 7 和 Windows Server 2008 R2 中使用，而且會包含在舊版作業系統的 Service Pack 中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在使用 **擴充保護**進行連接時較安全。 [擴充保護] 的某些優點需要在 [旗標] 索引標籤上選取 [強制加密]。  
   
 > [!IMPORTANT]  
@@ -32,7 +30,7 @@ ms.lasthandoff: 08/02/2017
   
  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始，[擴充保護] 就受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的完整支援。 目前不支援其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端提供者的 [擴充保護] 支援。  
   
-## 選項  
+## <a name="options"></a>選項。  
  **擴充保護**  
  有三個可能的值：  
   
@@ -45,8 +43,7 @@ ms.lasthandoff: 08/02/2017
  **接受的 NTLM SPN**  
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體由一個以上的 NTLM 服務主要名稱 (SPN) 所識別時，將 SPN 列在這裡當做一系列由分號分隔的字串。 例如， **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com**值表示允許用戶端嘗試連接名為 **MSSQLSvc/HOST1.Contoso.com** 和 **MSSQLSvc/HOST2.Contoso.com** 的 SPN。 此變數的最大長度為 2048,048 個字元。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [含有 Reporting Services 的驗證擴充保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   
-

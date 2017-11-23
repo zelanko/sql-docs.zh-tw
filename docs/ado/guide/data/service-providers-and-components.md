@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ADO, OLE DB providers
 - service providers [ADO]
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 61232bd2d028c9beb1b5471bb6db0b1c28b7b7e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8f574b00b5c53caef2184d2923e79746d3ef56c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="service-providers-and-components"></a>服務提供者和元件
 服務提供者是藉由實作擴充的介面不會原生支援的資料存放區擴充的資料提供者功能的元件。  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  例如，資料指標引擎，例如[OLE DB 的資料指標服務](http://msdn.microsoft.com/en-us/57638feb-4ecd-4051-becb-8f828d21cf44)，是一種服務元件，可使用循序的順向的資料存放區，以產生可捲動的資料的資料。 通常由 ADO 使用其他服務提供者包括[Microsoft OLE DB 持續性提供者 （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) （適用於將資料儲存至檔案）， [Microsoft Data Shaping Service 的 OLE DB （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (如階層式**資料錄集**)，而[Microsoft OLE DB 遠端服務提供者 （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) （適用於叫用遠端電腦上的資料提供者）。  
   
  如需有關服務和資料提供者的詳細資訊，請參閱[附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)。
-

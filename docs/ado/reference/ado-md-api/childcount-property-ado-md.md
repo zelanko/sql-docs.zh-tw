@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - ChildCount
 - Member::ChildCount
-helpviewer_keywords:
-- ChildCount property [ADO MD]
+helpviewer_keywords: ChildCount property [ADO MD]
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5976605c9bfb96a7dc53895eaa4cbc511fb321a2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6ca8ee6c01299c3db45977a8e64c4f2afd46c7d3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount 屬性 (ADO MD)
 指出為其成員數目前[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件是階層中的父系。  
@@ -45,10 +42,9 @@ ms.lasthandoff: 09/09/2017
  如**成員**物件從[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)物件，請使用 ADO 集合[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性**子系**來判斷集合子系的確實數目。 決定子系的確實數目可能較慢，如果在集合中的子系數目很大。  
   
 ## <a name="applies-to"></a>適用於  
- [成員物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+ [Member 物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [子系屬性 (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Count 屬性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
- [成員集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)
-
+ [Members 集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

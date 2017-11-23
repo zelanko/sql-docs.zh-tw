@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- ADCPROP_UPDATERESYNC_ENUM
-helpviewer_keywords:
-- ADCPROP_UPDATERESYNC_ENUM [ADO]
+f1_keywords: ADCPROP_UPDATERESYNC_ENUM
+helpviewer_keywords: ADCPROP_UPDATERESYNC_ENUM [ADO]
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 998868819c0e0b56783598ea3f2af5a3d799f82c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e5c25ab6802b6a99902c9e52990be80ff14ed6d5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
 指定是否[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法後面的隱含[重新同步處理](../../../ado/reference/ado-api/resync-method.md)方法作業而且如果是，該作業的範圍。  
@@ -43,5 +39,4 @@ ms.lasthandoff: 09/09/2017
 |**adResyncUpdates**|4|叫用**重新同步處理**所有已成功更新資料列。|  
   
 ## <a name="applies-to"></a>適用於  
- [更新的重新同步處理屬性動態 (ADO)](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)
-
+ [更新重新同步動態屬性 (ADO)](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 09/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
 ms.openlocfilehash: 8ff312fceaee24d32f23ff8135bcc18e09601ddf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 中最新消息 (DB2ToSQL)
 本主題列出每個版本中的 DB2 變更 SSMA。  
@@ -111,4 +109,3 @@ SSMA for Access 的 7.1 版發行版本包含下列變更：
   
 ## <a name="november-2014"></a>2014 年 11 月  
 2014 年 11 月版的 SSMA for DB2 是早的版本。
-

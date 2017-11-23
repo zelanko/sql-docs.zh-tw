@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - hybrid OLAP
 - partitions [Analysis Services], proactive caching
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - ROLAP
 - cache [Analysis Services]
 ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9b6a653ac28762dc391c0999a4ac179dd0ad2095
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94eea82e5a1f82cc0a7dc480da7baf03c04424ab
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions---proactive-caching"></a>資料分割-主動式快取
   主動式快取會提供自動 MOLAP 快取建立及 OLAP 物件的管理。 Cube 會根據從資料庫接收而來的通知，立即併入對資料庫資料所做的變更。 主動式快取的目標是要提供傳統 MOLAP 的效能，同時保持 ROLAP 所提供的立即性與便於管理性。  
@@ -53,9 +51,8 @@ ms.lasthandoff: 09/01/2017
 ### <a name="maximizing-performance"></a>將效能最大化  
  為了要將效能提升到最高，同時也減少延遲，也可以在不卸除目前 MOLAP 物件的情況下使用快取。 於是，查詢會繼續針對 MOLAP 物件提出，但資料則讀入新的快取中加以處理。 此方法提供更好的效能，但會導致在建立新快取時，查詢仍傳回舊資料。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [維度儲存](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
  [設定分割區儲存 &#40;Analysis Services - 多維度&#41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   
-

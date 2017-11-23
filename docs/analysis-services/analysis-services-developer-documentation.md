@@ -17,17 +17,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4694fd3def6dea209929f99559fcc61fe833972a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services Developer 文件
 在 Analysis Services 中，幾乎每個物件和工作負載可程式化，而且通常沒有可從中選擇的多個方法。  選項包括撰寫 managed 程式碼、 指令碼，或使用 XMLA 和 MSOLAP 開放標準，如果方案需求致使使用.NET framework。
@@ -82,7 +81,6 @@ Analysis Services 提供許多方式可以自訂的解決方案，透過程式�
 
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md)用於系統管理功能，加上一般用途的 cmdlet 文件**Invoke-ascmd**指令程式可接受任何指令碼或做為輸入的查詢。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 [技術參考 &#40;Ssas&#41;](../analysis-services/powershell/technical-reference-ssas.md) 
 [查詢及運算式語言參考 &#40;Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
-

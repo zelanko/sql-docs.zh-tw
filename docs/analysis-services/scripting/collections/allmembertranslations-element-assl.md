@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AllMemberTranslations Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AllMemberTranslations Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AllMemberTranslations
-helpviewer_keywords:
-- AllMemberTranslations element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AllMemberTranslations
+helpviewer_keywords: AllMemberTranslations element
 ms.assetid: 982ee2bf-c88d-4da5-a679-7a6b08a48a0d
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 63eb22e9012da8043a57956bada680f0c30dfbf7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe2ce64e1ec9b9af2e79ee29ca8aeb050da2d392
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="allmembertranslations-element-assl"></a>AllMemberTranslations 元素 (ASSL)
   包含集合[轉譯](../../../analysis-services/scripting/objects/translation-element-assl.md)元素之 All 成員標題[階層](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)項目。  
@@ -72,9 +66,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  對應至父系的項目**AllMemberTranslations**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Hierarchy>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Translation 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/translation-element-assl.md)   
  [集合 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

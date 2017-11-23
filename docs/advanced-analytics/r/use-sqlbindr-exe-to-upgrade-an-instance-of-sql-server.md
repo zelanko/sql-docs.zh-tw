@@ -1,35 +1,34 @@
 ---
 title: "升級 SQL Server 執行個體中的機器學習元件 |Microsoft 文件"
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
+applies_to: SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: ea0784bc94dd3d3f4b7d11d83e92235591385396
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 9b2d59d860d72207b196ac60a1db66f09baa1228
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>升級 SQL Server 執行個體中的機器學習元件
 
-本文說明的程序_繫結_，可用來升級機器學習 SQL Server 中所使用的元件。 更新頻率，根據機器學習伺服器，而不是 SQL Server 版本的繫結程序鎖定的伺服器。
+本文說明的程序_繫結_，可用來升級機器學習 SQL Server 中所使用的元件。 更新頻率，根據機器學習伺服器版本的繫結程序鎖定伺服器，而不是使用 SQL Server 版本和更新排程。
 
 > [!IMPORTANT]
-> 您不需要使用此升級程序，如果您想要取得升級為 SQL Server 更新的一部分。 每當您安裝新的 service pack 或版本更新服務時，機器學習元件會一律會自動升級為最新版本。 如果您想要升級的速度更快比提供了 SQL Server 服務版本的元件，請使用此程序。
+> 您不需要使用此升級程序，如果您想要取得升級為 SQL Server 更新的一部分。 每當您安裝新的 service pack 或版本更新服務時，機器學習元件會一律會自動升級為最新版本。 只使用_繫結_如果您想要更快的速度比 SQL Server 服務版本會提供在元件的升級程序。
 
 如果您必須在您想要停止的機器學習伺服器排程上的 升級任何時間，_解除繫結_中所述的執行個體[本節](#bkmk_Unbind)，解除安裝機器學習服務伺服器。
 
@@ -39,22 +38,22 @@ ms.lasthandoff: 10/13/2017
 
 升級的機器學習服務元件的程序指**繫結**，因為它會變更為使用新的現代化軟體生命週期原則的 SQL Server 機器學習元件支援模型。 
 
-一般情況下，切換到新的授權模式可確保資料科學家可以一律使用最新版本的 R 或 Python。 如需現代的生命週期原則的術語的詳細資訊，請參閱[Microsoft R Server 的支援時間表](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support)。
+一般情況下，切換到新的授權模式可確保資料科學家可以一律使用最新版本的 R 或 Python。 如需現代的生命週期原則的術語的詳細資訊，請參閱[Microsoft R Server 的支援時間表](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)。
 
 > [!NOTE]
 > 升級不會變更的 SQL Server 資料庫的支援模型並不會變更的 SQL Server 版本。
 
-當您繫結執行個體時，會發生幾件事，其中可包含升級至機器學習元件：
+當您繫結執行個體時，會發生幾件事：
 
 + 支援模型會變更。 而不要依賴 SQL Server 服務版本，支援根據新的現代化生命週期原則。
 + 每個版本中，在鎖定步驟是在新的現代化生命週期原則的最新的版本中，會自動升級執行個體相關聯的機器學習服務元件。 
-+ 可能會加入新的 R 或 Python 封裝。 例如，從 Microsoft R Server 先前的更新加入新的 R 封裝，例如[MicrosoftML](../using-the-microsoftml-package.md)， [olapR](../r/how-to-create-mdx-queries-using-olapr.md)，和[sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)。
++ 可能會加入新的 R 或 Python 封裝。 例如，根據 Microsoft R Server 9.1 先前的更新加入新的 R 封裝，例如[MicrosoftML](../using-the-microsoftml-package.md)， [olapR](../r/how-to-create-mdx-queries-using-olapr.md)，和[sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)。
 + 執行個體不再以手動方式更新，除非是加入新套件。
-+ 您可以新增由 Microsoft 提供的預先定型的模型的選項。
++ 您會安裝由 Microsoft 提供的預先定型的模型的選項。
 
 ## <a name="bkmk_prereqs"></a>Prerequisites
 
-由識別候選項目以進行升級的執行個體開始。 如果您執行安裝程式，並選取的繫結選項，它會傳回一份相容進行升級的執行個體。 
+由識別候選項目以進行升級的執行個體開始。 如果您執行安裝程式，並選取的繫結選項，它會傳回一份相容進行升級的執行個體。
 
 請參閱下表針對支援的升級和需求的清單。
 
@@ -65,7 +64,7 @@ ms.lasthandoff: 10/13/2017
 
 ## <a name="bind-or-upgrade-an-instance"></a>繫結，或升級執行個體
 
-Microsoft 機器學習 Server for Windows 包含一個工具，您可以使用升級機器學習語言和工具的 SQL Server 執行個體相關聯。 有兩個版本的工具： 精靈和命令列公用程式。
+機器學習 Server for Windows 包含一個工具，您可以使用升級機器學習語言和工具的 SQL Server 執行個體相關聯。 有兩個版本的工具： 精靈和命令列公用程式。
 
 您可以執行精靈或命令列工具之前，您必須下載最新版的機器學習服務元件的獨立安裝程式。
 
@@ -89,13 +88,13 @@ Microsoft 機器學習 Server for Windows 包含一個工具，您可以使用�
 
 4. 在後續頁面中，提供額外的授權條款，選取，例如 Microsoft R Open 或 Python Anaconda 發佈任何開放原始碼元件的同意。
 
-5. 在**幾乎那里**頁面上，記下的安裝資料夾。 預設資料夾是`~\Program Files\Microsoft\ML Server`。 
+5. 在**幾乎那里**頁面上，記下的安裝資料夾。 預設資料夾是`~\Program Files\Microsoft\ML Server`。
 
-    如果您想要變更安裝資料夾，按一下**進階**返回精靈的第一頁。 不過，您必須重複先前的所有選項。 
+    如果您想要變更安裝資料夾，按一下**進階**返回精靈的第一頁。 不過，您必須重複先前的所有選項。
 
 6. 如果您要安裝的元件離線，您可能會提示需要的機器學習元件，例如 Microsoft R Open、 Python 伺服器和 Python 開啟的位置。
-    
-在安裝期間，會取代任何 SQL Server 所使用的 R 或 Python 程式庫，並啟動控制板會更新以使用較新的元件。 也就是執行個體之前會使用預設 R_SERVICES 資料夾中的程式庫，升級之後移除這些程式庫，並為 Launchpad 服務的屬性已變更，您所指定的位置中使用程式庫。
+
+在安裝過程中，會取代任何 SQL Server 所使用的 R 或 Python 程式庫，並啟動控制板會更新以使用較新的元件。 如此一來，執行個體之前會使用預設 R_SERVICES 資料夾中的程式庫，升級之後移除這些程式庫，並變更為 Launchpad 服務的屬性，以使用新的位置中的程式庫。
 
 ### <a name="bkmk_BindCmd"></a>使用命令列升級
 
@@ -219,4 +218,3 @@ Microsoft 機器學習 Server for Windows 包含一個工具，您可以使用�
 + [從舊版的 R 伺服器的功能通知](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 
 + [已過時、 已停止或已變更的功能](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)
-

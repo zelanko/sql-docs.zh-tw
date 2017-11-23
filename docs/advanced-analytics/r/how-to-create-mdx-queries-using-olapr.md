@@ -10,20 +10,18 @@ ms.technology:
 - r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
+dev_langs: R
 ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 04dc669f1ca6e472bf66b3795cf3096e9fa77f0d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: adcc1c80fdd04cfa3f49b550e5ea5fd8cc34003a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>如何使用 olapR 建立 MDX 查詢
 ## <a name="how-to-build-an-mdx-query-from-r"></a>如何從 R 建置 MDX 查詢
@@ -188,4 +186,3 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 ## <a name="see-also"></a>另請參閱
 
 [在 R 中使用 OLAP Cube 的資料](../../advanced-analytics/r-services/using-data-from-olap-cubes-in-r.md)
-

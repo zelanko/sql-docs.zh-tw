@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dbcf08606316614f18bbc69beef54eea0a7569ee
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f5b71db23d56150fbc6a2f7990ba9960d83d2d1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-project-options-db2tosql"></a>設定專案選項 (DB2ToSQL)
 針對每個 SSMA 專案中，您可以設定專案層級選項。 這些選項會指定物件轉換、 載入物件、 使用者介面和資料移轉的設定。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或移轉將資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，確認組態選項都適用於專案。  
@@ -49,7 +47,7 @@ SSMA 會有五種專案設定：
   
 -   開放式  
   
--   [完整]  
+-   完整  
   
 -   Custom  
   
@@ -82,7 +80,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     -   若要指定自訂設定，請選取或輸入新的設定或值。  
   
-3.  按一下  **確定** 儲存設定。  
+3.  按一下**確定**儲存設定。  
   
 您也可以自訂設定目前的專案。 這些設定會儲存到目前的專案檔。  
   
@@ -96,7 +94,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     -   若要指定自訂模式，在**模式**方塊中，選取**自訂**，然後選取適當的專案設定。  
   
-3.  按一下  **確定** 儲存設定。  
+3.  按一下**確定**儲存設定。  
   
 ## <a name="next-steps"></a>後續步驟  
 移轉的下一個步驟取決於您專案的需求：  
@@ -105,7 +103,6 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
 -   否則，您可以將轉換成的 DB2 資料庫物件定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件定義。 如需詳細資訊，請參閱[轉換 DB2 結構描述 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [對應 DB2 與 SQL Server 資料類型 &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
   
-

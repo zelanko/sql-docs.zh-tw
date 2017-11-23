@@ -5,32 +5,30 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ecdb36c546d04421f30573bd4b34ae60467e7f64
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 733fae47c5c74eb120b7f8719dd53675eb5b7e36
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-db2-db2tosql"></a>連接至 DB2 (DB2ToSQL)
 使用**連接到 DB2**對話方塊連接到您想要移轉的 DB2 資料庫。  
   
 若要存取此對話方塊，請在**檔案**功能表上，選取**連接到 DB2**。 如果您之前已連線，則命令是**重新連接至 DB2**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **提供者**  
 選取連接至 DB2 資料庫的資料存取提供者。 可用的提供者是 DB2 用戶端提供者和 OLE DB 提供者。 預設值是 DB2 用戶端提供者。  
   
@@ -82,4 +80,3 @@ ms.lasthandoff: 08/02/2017
   
 SSMA 的連接字串，請一定要包含的提供者參數。 此外，請確定當您連接至 DB2 時，包含連接埠參數。  
   
-

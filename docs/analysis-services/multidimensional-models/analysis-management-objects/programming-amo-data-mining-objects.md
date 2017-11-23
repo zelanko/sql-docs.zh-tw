@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ef18607c859ee7894bd61305a47299836774dec9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c4c398dbda7bc898d62ea16122ccfba02ea7d5b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-amo-data-mining-objects"></a>設計 AMO 資料採礦物件的程式
   使用 AMO 來設計資料採礦物件是簡單且直接的。 第一個步驟是建立資料結構模型以支援採礦專案。 接著建立足以支援您要使用之採礦演算法的資料採礦模型，這是為了預測或是尋找隱藏在資料之下無法察覺的關係。 採礦專案建立完成後 (包括結構與演算法)，您就可以處理採礦模型並取得定型模型，以便稍後在從用戶端應用程式查詢和預測時可以使用。  
@@ -147,7 +145,7 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  <xref:Microsoft.AnalysisServices>   
  [AMO 基礎類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
@@ -156,4 +154,3 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
  [資料庫物件 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

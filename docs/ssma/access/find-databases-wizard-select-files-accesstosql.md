@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Find Databases Wizard
+helpviewer_keywords: Find Databases Wizard
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9f9283dddd98208c1eb25990fa228e2287793615
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f8739c82562e02b9741448c0892a1c03fcfe8aeb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>尋找資料庫精靈 （選取檔案） (AccessToSQL)
 [尋找資料庫精靈] 的 [選取檔案] 頁面上會列出在搜尋中找到的檔案。 若要選取要加入至 SSMA 檔案，請選取包含檔案名稱的資料列。 當您完成選取的檔案，請按一下**下一步**若要檢視 [確認選取] 頁面。  
@@ -44,7 +41,7 @@ ms.lasthandoff: 08/02/2017
 **檔案名稱**  
 顯示將加入 SSMA Access 資料庫檔案的名稱。  
   
-**擁有者**  
+**[擁有者]**  
 顯示檔案的擁有者。  
   
 **檔案路徑**  
@@ -59,7 +56,6 @@ ms.lasthandoff: 08/02/2017
 **修改日期**  
 日期和時間，上次更新資料庫中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [使用者介面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

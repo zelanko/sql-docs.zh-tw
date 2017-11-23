@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset::ExecuteComplete
 - ExecuteComplete
-helpviewer_keywords:
-- FetchComplete event [ADO]
+helpviewer_keywords: FetchComplete event [ADO]
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1754cb26eb381e056ba818958593cda40722c7c8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 466c87d4a849da070f67a80b44bc43c7581c7f41
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 事件 (ADO)
 **FetchComplete**冗長的非同步作業中的所有記錄到都擷取之後，呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -56,7 +53,6 @@ FetchComplete pError, adStatus, pRecordset
 ## <a name="remarks"></a>備註  
  若要使用**FetchComplete**搭配 Microsoft Visual Basic 中，Visual Basic 6.0 或更新版本為必要。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)
-

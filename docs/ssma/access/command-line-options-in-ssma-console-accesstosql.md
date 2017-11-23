@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
+ms.openlocfilehash: af93a39eb16c45de0e848bc7b41cdf2758bd1ae0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 827257d90042aa1655545edd9fc20d114952f426
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 主控台 (AccessToSQL) 中的命令列選項
 Microsoft 提供一組強固的執行及控制 SSMA 活動的命令列選項。 後續章節將提供其他詳細資料。  
@@ -183,4 +181,3 @@ SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;Access
   
 3.  如需疑難排解主控台中的問題，請參閱[疑難排解 &#40;AccessToSQL &#41;](../../ssma/access/troubleshooting-accesstosql.md).  
   
-

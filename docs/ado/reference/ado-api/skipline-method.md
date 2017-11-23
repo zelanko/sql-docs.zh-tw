@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_SkipLine
 - _Stream::SkipLine
-helpviewer_keywords:
-- Skipline method [ADO]
+helpviewer_keywords: Skipline method [ADO]
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07117c7f55c8447ad1078b8a270938d5b4295838
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eb9e478439c7156786a2e37856cd79ab7b9201bc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="skipline-method"></a>SkipLine 方法
 讀取文字時，會略過整個一行[資料流](../../../ado/reference/ado-api/stream-object-ado.md)。  
@@ -47,5 +44,4 @@ Stream.SkipLine
  **SkipLine**方法配合文字資料流 ([類型](../../../ado/reference/ado-api/type-property-ado-stream.md)是**adTypeText**)。  
   
 ## <a name="applies-to"></a>適用於  
- [資料流物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

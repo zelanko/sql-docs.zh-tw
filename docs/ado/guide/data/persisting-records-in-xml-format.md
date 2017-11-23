@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 719d6d0575f90f3460de6e8b1285b6a59cf7f791
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a45c434bdcf551e97eb97f85997ab73c883b599c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="persisting-records-in-xml-format"></a>以 XML 格式保存記錄
 ADTG 格式，例如**資料錄集**持續性 XML 格式使用 Microsoft OLE DB 持續性提供者實作。 此提供者會從已儲存的 XML 檔案或資料流，包含 ADO 所產生的結構描述資訊產生的順向、 唯讀資料列集。 同樣地，可能需要 ADO**資料錄集**、 產生的 XML，並將它儲存到檔案或任何物件實作 COM **IStream**介面。 (事實上，檔案是支援的物件只是另一個範例**IStream**。)版本 2.5 和更新版本中，針對 ADO 會依賴上 Microsoft XML Parser (MSXML) 來將 XML 載入**資料錄集**; 因此 msxml.dll 是必要。  
@@ -78,17 +76,17 @@ rs.Save "btitles.sav", adPersistXML
   
  此章節包含下列主題。  
   
--   [XML 持續性格式](../../../ado/guide/data/xml-persistence-format.md)  
+-   [XML 保存格式](../../../ado/guide/data/xml-persistence-format.md)  
   
 -   [命名空間](../../../ado/guide/data/namespaces.md)  
   
--   [結構描述 > 一節](../../../ado/guide/data/schema-section.md)  
+-   [結構描述區段](../../../ado/guide/data/schema-section.md)  
   
 -   [資料區段](../../../ado/guide/data/data-section.md)  
   
--   [在 XML 中的階層式資料錄集](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
+-   [XML 中的階層式資料錄集](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
   
--   [在 XML 中的資料錄集的動態內容](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
+-   [XML 中的資料錄集動態屬性](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
   
 -   [XSLT 轉換](../../../ado/guide/data/xslt-transformations.md)  
   
@@ -96,5 +94,4 @@ rs.Save "btitles.sav", adPersistXML
   
 -   [XML 安全性考量](../../../ado/guide/data/xml-security-considerations.md)  
   
--   [持續性案例中 XML 資料錄集](../../../ado/guide/data/xml-recordset-persistence-scenario.md)
-
+-   [XML 資料錄集保存案例](../../../ado/guide/data/xml-recordset-persistence-scenario.md)

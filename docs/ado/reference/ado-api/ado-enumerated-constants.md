@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- enumerated constants [ADO]
+helpviewer_keywords: enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fb606a366746b09d7ba6303b0cb11bb1b96f6164
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93011b8b30d552e5bf3852c9e4d483161d90fc55
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-enumerated-constants"></a>ADO 列舉常數
 若要協助偵錯，ADO 列舉會列出每個常數的值。 不過，這個值只是單純地建議，並從 ADO 發行版本可能會變更為另。 您的程式碼應該僅相依於名稱，而不是實際值，每個列舉常數。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 09/09/2017
 |[ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md)|指定 ADO 執行階段錯誤的類型。|  
 |[EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)|指定造成事件發生的原因。|  
 |[EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)|指定的事件執行的目前狀態。|  
-|[執行方式](../../../ado/reference/ado-api/executeoptionenum.md)|指定提供者如何執行命令。|  
+|[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)|指定提供者如何執行命令。|  
 |[FieldEnum](../../../ado/reference/ado-api/fieldenum.md)|指定特殊欄位中參考**欄位**集合**記錄**物件。|  
 |[FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)|指定一或多個屬性**欄位**物件。|  
 |[FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md)|指定的狀態**欄位**物件。|  
@@ -85,7 +82,7 @@ ms.lasthandoff: 09/09/2017
 |[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)|指定的格式，擷取時**資料錄集**做為字串。 指定的交易屬性**連接**物件。|  
 |[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)|指定的交易屬性**連接**物件。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
@@ -95,4 +92,3 @@ ms.lasthandoff: 09/09/2017
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO 物件與介面](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [ADO 屬性](../../../ado/reference/ado-api/ado-properties.md)
-

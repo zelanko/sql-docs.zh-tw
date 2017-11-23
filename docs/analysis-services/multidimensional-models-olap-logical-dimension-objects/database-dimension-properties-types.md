@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - quantitative dimensions [Analysis Services]
@@ -33,17 +32,16 @@ helpviewer_keywords:
 - customers dimensions [Analysis Services]
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5fa77532b4c674c4b5035cf6b591b973008ae6e5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimension-properties---types"></a>資料庫維度屬性類型
   **類型**屬性設定會提供給伺服器和用戶端應用程式的維度內容的相關資訊。 在某些情況下，**類型**設定只提供用戶端應用程式的指引，而且是選擇性。 在其他情況下，例如**帳戶**或**時間**維度**類型**維度和其屬性的屬性設定可決定特定的伺服器型行為而可能需要在 cube 中實作的特定行為。 例如，**類型**維度的屬性可以設定為**帳戶**用戶端應用程式指出標準維度包含帳戶屬性。 如需有關時間、 帳戶和貨幣維度的詳細資訊，請參閱[建立日期類型維度](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[建立父子式類型維度的財務帳戶](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[建立貨幣輸入維度](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
@@ -71,9 +69,8 @@ ms.lasthandoff: 09/01/2017
 |通路|此維度的屬性代表通道資訊。|  
 |促銷|此維度的屬性代表行銷促銷資訊。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [使用現有的資料表建立維度](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [維度 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   
-

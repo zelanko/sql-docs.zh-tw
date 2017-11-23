@@ -5,29 +5,25 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - fn:round function
 - round function [XQuery]
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a579433be42dbd22db3467cbf72a9bb4de623a51
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 84815a954021f755173fefd60ef174e7a0acdcf1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="numeric-values-functions---round"></a>四捨五入數字值函式-
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +68,8 @@ fn:round ( $arg as numeric?) as numeric?
   
 -   **Round （)**介於-0.5 e 0 和-0e0 xs: double 和 xs: float 值的函式會對應到 0e0 而不是-0e0。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [floor 函式 &#40;XQuery &#41;](../xquery/numeric-values-functions-floor.md)   
  [ceiling 函數 &#40;XQuery &#41;](../xquery/numeric-values-functions-ceiling.md)  
   
   
-

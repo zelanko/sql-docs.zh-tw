@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - Migration Wizard, New Project
 - Migration Wizard, Selecting objects to migrate
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea7152bb5022be8f998bf0e2c48a9381ee56536c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e6b2024b8ba34bd4f71abc6030ae86dcc03faebd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migration-wizard-accesstosql"></a>移轉精靈 (AccessToSQL)
 移轉精靈引導您完成移轉的一個或多個資料庫的存取權從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 使用精靈，您會建立專案、 將資料庫加入至專案，請選取要移轉，並連接到的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您也將轉換、 載入及移轉存取結構描述和資料。 （選擇性） 您可以 Access 資料表連結至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 的資料表。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [尋找資料庫精靈 （選取檔案）](http://msdn.microsoft.com/en-us/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)  
   
--   [尋找資料庫精靈 （確認選取項目）](http://msdn.microsoft.com/en-us/62e20e03-50cc-4ac8-8072-524d194d2ec3)  
+-   [尋找資料庫精靈 (驗證選取項目)](http://msdn.microsoft.com/en-us/62e20e03-50cc-4ac8-8072-524d194d2ec3)  
   
 ## <a name="select-objects-to-migrate-page"></a>選取要移轉的頁面物件  
 在 [移轉] 頁面來選取物件，選取要轉換的物件。 您可以選取所有物件的物件或個別物件的群組。  
@@ -106,9 +104,8 @@ ms.lasthandoff: 08/02/2017
   
 如需此頁面的詳細資訊，請參閱[轉換、 載入和移轉](http://msdn.microsoft.com/en-us/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [入門存取 &#40; SQL Server 移轉小幫手AccessToSQL &#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [使用者介面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

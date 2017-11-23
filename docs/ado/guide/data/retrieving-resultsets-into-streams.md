@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ed2d2412cf8314875f9469689677c22ae4e60e7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9aadb2a81cc93effa0c280f5f74e6403c7403756
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="retrieving-resultsets-into-streams"></a>擷取結果集資料流
 而不是在傳統收到結果**資料錄集**物件、 ADO 可以改成資料流擷取查詢結果。 ADO**資料流**物件 (或其他物件，支援 COM **IStream**介面，例如 ASP**要求**和**回應**物件) 可用來包含這些結果。 這項功能的一個用法是擷取 XML 格式的結果。 與 SQL Server，例如 XML 結果可以傳回以多種方式，例如 SQL SELECT 查詢中使用 FOR XML 子句，或使用 XPath 查詢。  
@@ -188,4 +186,3 @@ Response.write "</XML>"
   
 ### <a name="remarks"></a>備註  
  此時，已經傳送串流到用戶端瀏覽器的 XML，而且準備好可以顯示。 這是經由使用用戶端 VBScript 繫結至 DOM 和迴圈每個子節點，以建立 HTML 中的產品清單的執行個體的 XML 文件。
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Member Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Member Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Member
-helpviewer_keywords:
-- Member element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Member
+helpviewer_keywords: Member element
 ms.assetid: 03b4cfcb-ce87-452f-9e25-8745c0423f56
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dac6db8ea51fd20187c96b34a3670224ac41e8e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fbb9e95ecb65dd5d065bdfa8ca30b26ddb906df2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="member-element-assl"></a>Member 元素 (ASSL)
   包含的成員名稱[群組](../../../analysis-services/scripting/objects/group-element-assl.md)項目或[角色](../../../analysis-services/scripting/objects/role-element-assl.md)項目。  
@@ -69,8 +63,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  對應至父系的項目**成員**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Group>和<xref:Microsoft.AnalysisServices.Role>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

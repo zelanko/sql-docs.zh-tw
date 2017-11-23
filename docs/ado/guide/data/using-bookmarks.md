@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a1cfde267a31b3e11f1c869ac96b652b9db5af16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-bookmarks"></a>使用書籤
 通常會很有用後需要移動直接到特定的記錄傳回**資料錄集**而不需要捲動每一筆記錄，並比較值。 例如，如果您嘗試使用記錄搜尋**尋找**方法，但搜尋會傳回任何記錄，您會自動放置的任一端**資料錄集**。 如果您的提供者支援，可以使用書籤來標示程式的位置之前使用**尋找**方法，使您可以回到您的位置。 書籤是**Variant**輸入可唯一識別中的記錄值**資料錄集**物件。  
@@ -56,5 +54,4 @@ End If
   
  [支援](../../../ado/reference/ado-api/supports-method.md)稍後涵蓋詳細方法。  
   
- 除了 [大小寫的複製**資料錄集**，書籤特有**資料錄集**中建立這些，即使使用相同的命令。 這表示您無法使用**書籤**取自一個**資料錄集**移至相同的記錄，第二個**資料錄集**開啟與相同的命令。
-
+ 除了 大小寫的複製**資料錄集**，書籤特有**資料錄集**中建立這些，即使使用相同的命令。 這表示您無法使用**書籤**取自一個**資料錄集**移至相同的記錄，第二個**資料錄集**開啟與相同的命令。

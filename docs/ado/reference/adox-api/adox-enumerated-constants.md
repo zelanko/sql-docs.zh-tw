@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- enumerated constants [ADOX]
+helpviewer_keywords: enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2ec43e5030e6bb335e7089af38be9ba6b5effb55
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a43048c4ea1dff730c6be4d1f755bfa96bec34dd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列舉常數
 若要協助偵錯，ADOX 列舉常數會列出每個常數的值。 不過，這個值是單純諮詢，，而且可能會從一個版本 ADOX 變更到另一個。 您的程式碼應該僅相依於名稱，而不是實際值、 列舉常數。  
@@ -45,7 +42,6 @@ ms.lasthandoff: 09/09/2017
 |[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|指定的規則時遵循**金鑰**被刪除。|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|指定索引的資料行的排序順序。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADOX API 參考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [資料定義語言和安全性的 ADO 延伸模組 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

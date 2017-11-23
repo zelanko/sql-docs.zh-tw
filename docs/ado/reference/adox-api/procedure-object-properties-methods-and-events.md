@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Procedure object [ADOX], members
+helpviewer_keywords: Procedure object [ADOX], members
 ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c53b338d6d8c9079fde6dd8541393442feeb5d50
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8b2b80ebcb4fa089194d3e20d76462dbea7a7f57
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="procedure-object-properties-methods-and-events"></a>程序物件屬性、 方法和事件
 ## <a name="properties"></a>屬性  
@@ -43,6 +40,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>事件  
  無。  
   
-## <a name="see-also"></a>另請參閱  
- [程序物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Procedure 物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)

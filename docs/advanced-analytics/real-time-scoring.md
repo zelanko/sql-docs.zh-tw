@@ -1,26 +1,23 @@
 ---
 title: "即時計分 |Microsoft 文件"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea8977d555bc30f661817b72fbf90f9198cf3088
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c4d15a7f605f130ff4f93c7da66ca9a103195c17
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="realtime-scoring"></a>即時計分
 
 本主題說明在 SQL Server 2016 和 SQL Server 2017 支援 幾近即時的機器學習模型中的 計分中提供的功能。
@@ -54,56 +51,56 @@ ms.lasthandoff: 09/01/2017
 
 即時計分支援在這些平台：
 
-+ SQL Server 2017 機器學習服務 （包括 Microsoft R Server 9.1.0）
++ SQL Server 2017 Machine Learning 服務
 + SQL Server R Services 2016 中，與 Microsoft R server 9.1.0 R 服務執行個體的升級或更新版本
-+ Microsoft 的機器學習伺服器 （獨立）
++ Machine Learning 伺服器 (獨立式)
 
 SQL Server 上，您必須啟用即時事先計分功能。 這是因為此功能需要以 CLR 為基礎的程式庫安裝到 SQL Server。
 
-如需有關即時資訊計分在分散式環境中根據 Microsoft R Server，請參閱[publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice)函式用於[mrsDeploy 封裝](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy)，支援發行為新計分 R 伺服器上執行的 web 服務的即時的模型。
+如需有關即時資訊計分在分散式環境中根據 Microsoft R Server，請參閱[publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)函式用於[mrsDeploy 封裝](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)，支援發行為新計分 R 伺服器上執行的 web 服務的即時的模型。
 
 ### <a name="restrictions"></a>限制
 
-+ 在此模型必須事先使用其中一個支援定型**rx**演算法。 如需詳細資訊，請參閱[支援演算法](#bkmk_rt_supported_algos)。 計分 sp_rxPredict 與即時支援 RevoScaleR 和 MicrosoftML 演算法。
++ 在此模型必須事先使用其中一個支援定型**rx**演算法。 如需詳細資訊，請參閱[支援演算法](#bkmk_rt_supported_algos)。 即時與計分`sp_rxPredict`支援 RevoScaleR 和 MicrosoftML 演算法。
 
-+ 使用 Microsoft R Server 9.1.0 中提供新的序列化函式必須儲存模型。 序列化方法已最佳化，可支援快速計分。
++ 必須使用新的序列化函式儲存模型： [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)和[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) python。 這些序列化函式已經過最佳化，支援快速計分。
 
-+ 即時計分，不會使用 R 解譯器。因此，任何可能需要 R 解譯器的功能不支援在計分的步驟。  這些情況可能包括：
++ 即時計分，不會使用解譯器解譯器。因此，任何可能需要解譯器的功能不支援在計分的步驟。  這些情況可能包括：
 
   + 模型使用`rxGlm`或`rxNaiveBayes`目前不支援的演算法
 
   + 使用 R 轉換函式中或包含一個轉換，例如公式的 RevoScaleR 模型<code>A ~ log(B)</code>不支援即時計分。 若要使用此類型的模型，我們建議您在上執行轉換輸入資料，再將資料傳遞至即時計分。
 
-+ 即時計分目前已針對較小的資料集，範圍從幾個資料列的資料列千上百部快速預測最佳化。 在極大型資料集，計分 R 使用 rxPredict 中可能會比較快。
++ 即時計分目前已針對較小的資料集，範圍從幾個資料列的資料列千上百部快速預測最佳化。 在極大型資料集，使用[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)可能會比較快。
 
 ### <a name="a-namebkmkrtsupportedalgosalgorithms-that-support-realtime-scoring"></a><a name="bkmk_rt_supported_algos">支援即時計分的演算法
 
 + RevoScaleR 模型
 
-  + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)\*
-  + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)\*
-  + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)\*
-  + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)\*
-  + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)\*
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)\*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)\*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)\*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)\*
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)\*
   
   模型標示\*也支援使用預測函數的原生計分。
 
 + MicrosoftML 模型
 
-  + [rxFastTrees](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastforest)
-  + [rxLogisticRegression](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxlogisticregression)
-  + [rxOneClassSvm](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxoneclasssvm)
-  + [rxNeuralNet](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxneuralnet)
-  + [rxFastLinear](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastlinear)
+  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
 + MicrosoftML 所提供的轉換
 
-  + [featurizeText](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](https://docs.microsoft.com/r-server/r-reference/microsoftml/concat)
-  + [類別](https://docs.microsoft.com/r-server/r-reference/microsoftml/categorical)
-  + [categoricalHash](https://docs.microsoft.com/r-server/r-reference/microsoftml/categoricalHash)
-  + [selectFeatures](https://docs.microsoft.com/r-server/r-reference/microsoftml/selectFeatures)
+  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [類別](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
 ### <a name="unsupported-model-types"></a>不支援的模型型別
 
@@ -122,4 +119,3 @@ SQL Server 上，您必須啟用即時事先計分功能。 這是因為此功�
 ## <a name="next-steps"></a>後續的步驟
 
 [如何執行即時計分](r/how-to-do-realtime-scoring.md)
-

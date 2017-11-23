@@ -5,32 +5,30 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0bb6df050cb73edb9de9b898fe4d8e5458981c67
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1a7de1095387d52d2d7675f1d8b04cc739121636
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="assessment-report-sybasetosql"></a>評估報表 (SybaseToSQL)
 評估報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，並且也可幫助您評估複雜度及成本的移轉專案。  
   
 若要存取評估的報表，在來源中繼資料總管，轉換選取的物件上按一下滑鼠右鍵**資料庫**，然後選取**建立報表**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **轉換統計資料**  
 顯示依陳述式類型的轉換統計資料。 這個窗格會顯示時，才是群組物件，例如結構描述，或沒有程式碼的物件已選取左窗格中。  
   
@@ -53,4 +51,3 @@ ms.lasthandoff: 08/02/2017
 **訊息窗格**  
 顯示錯誤、 警告和資訊訊息建立評估報表時，所產生。 訊息會依數字分組。 若要檢視造成此錯誤的程式碼，請按一下**錯誤**，**警告**，或**資訊**，展開圖形的訊息、 分類，然後按一下 訊息。  
   
-

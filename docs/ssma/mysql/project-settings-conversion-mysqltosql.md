@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 19c450dbb2f30c4cb7dd571305c25084e964d02f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 68b16e7263c08c4941f6ad7c1f037de5a4fc0f30
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>專案設定 （轉換） (MySQLToSQL)
 [轉換] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何將 MySQL 語法轉換為 SQL Server 或 SQL Azure 的語法的設定。  
@@ -40,14 +38,14 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**詞彙**|**[定義]**|  
+|**詞彙**|**定義**|  
 |**明確的 COLLATE 子句轉換**|明確的 COLLATE 子句轉換選項會指定如何將轉換明確 MySQL 程式碼中的 COLLATE 子句。 可能的選項： 忽略和警告標記/會產生錯誤<br /><br />**預設模式**： 忽略和警告標記<br /><br />**開放式模式**： 忽略和警告標記<br /><br />**完整模式**： 忽略和警告標記|  
   
 ### <a name="column-constraints"></a>資料行條件約束  
   
 |||  
 |-|-|  
-|**詞彙**|**[定義]**|  
+|**詞彙**|**定義**|  
 |**列舉資料類型的資料行產生條件約束**|如果不存在於 MySQL 資料表中，請在 SQL Server 或 SQL Azure 資料表中，產生列舉資料類型的資料行的條件約束。 如果是，會隨著一起出現在列舉資料型別的所有轉換的資料行包含控制之值的檢查條件約束。<br /><br />**預設模式**： 否<br /><br />**開放式模式**： 否<br /><br />**完整模式**： 是|  
 |**設定資料類型的資料行產生條件約束**|如果不存在於 MySQL 資料表中，請在 SQL Server 或 SQL Azure 資料表中，產生組資料類型的資料行的條件約束。 如果是，轉換後的所有資料行集資料類型會附上控制之值的檢查條件約束。<br /><br />**預設模式**： 否<br /><br />**開放式模式**： 否<br /><br />**完整模式**： 是|  
 |**產生的不帶正負號的數值資料類型資料行的資料行的條件約束**|非負數的值加入核取的不帶正負號的數值資料類型資料行。<br /><br />**預設模式**： 否<br /><br />**開放式模式**： 否<br /><br />**完整模式**： 是|  
@@ -57,7 +55,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**詞彙**|**[定義]**|  
+|**詞彙**|**定義**|  
 |**列舉資料型別轉換**|指定 MySQL 列舉資料型別應該如何轉換為 NVARCHAR 的轉換或轉換成數值<br /><br />**預設模式**： 將轉換為 NVARCHAR<br /><br />**開放式模式**： 將轉換為 NVARCHAR<br /><br />**完整模式**： 將轉換為 NVARCHAR|  
 |**設定資料類型轉換**|指定應如何設定 MySQL 資料類型轉換，轉換至 NVARCHAR (L) 轉換成 BINARY(L) /<br /><br />**預設模式**: NVARCHAR(L) 轉換成<br /><br />**開放式模式**: NVARCHAR(L) 轉換成<br /><br />**完整模式**: NVARCHAR(L) 轉換成|  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**詞彙**|**[定義]**|  
+|**詞彙**|**定義**|  
 |**資料行沒有預設值，在插入和取代**|如果 [是]，則參考資料表使用預存的引擎 MyISAM 和 InnoDb 以外的所有陳述式應標記為使用轉換的警告訊息。<br /><br />**預設模式**： 加入資料行清單<br /><br />**開放式模式**： 加入資料行清單<br /><br />**完整模式**： 加入資料行清單|  
 |**會產生除以零的轉換**|指定要模擬 MySQL 無 ERROR_FOR_DIVISION_BY_ZERO 行為。<br /><br />**預設模式**： 錯誤<br /><br />**開放式模式**： 錯誤<br /><br />**完整模式**: NULL|  
 |**IN 運算子**|指定如何將 MySQL IN 運算子的轉換。<br /><br />**預設模式**： 永遠將轉換成 IN<br /><br />**開放式模式**： 永遠將轉換成 IN<br /><br />**完整模式**： 視需要展開|  
@@ -78,14 +76,14 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**詞彙**|**[定義]**|  
+|**詞彙**|**定義**|  
 |**預設結構描述對應**|指定如何將 MySQL 資料庫對應至 SQL Server 結構描述。<br /><br />**預設模式**： 資料庫<br /><br />**開放式模式**： 資料庫<br /><br />**完整模式**： 資料庫|  
   
 ### <a name="procedures-and-functions"></a>程序及函數  
   
 |||  
 |-|-|  
-|**詞彙**|**[定義]**|  
+|**詞彙**|**定義**|  
 |**預設函式轉換**|指定是否函式應該依預設會轉換 T-SQL 函式或預存程序。<br /><br />**預設模式**： 將轉換成函式<br /><br />**開放式模式**： 將轉換成函式<br /><br />**完整模式**： 將轉換成函式|  
 |**產生 SET XACT_ABORT 上**|指定要加入至轉換後的程序或觸發程序的開頭需要 SET XACT_ABORT ON。<br /><br />**預設模式**： 是<br /><br />**開放式模式**： 是<br /><br />**完整模式**： 是|  
 |**產生 SET NOCOUNT 上**|指定需要轉換程序或觸發程序的開頭加入 SET NOCOUNT ON。<br /><br />**預設模式**： 是<br /><br />**開放式模式**： 是<br /><br />**完整模式**： 是|  
@@ -94,7 +92,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**詞彙**|**[定義]**|  
+|**詞彙**|**定義**|  
 |**預設值 {XMAX &#124; 週框方塊XMIN &#124;YMAX &#124;YMIN} 空間索引**|定義預設值為 {XMAX &#124;XMIN &#124;YMAX &#124;週框方塊用於空間索引 YMIN} 參數。<br /><br />**預設模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**開放式模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**完整模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**預設為空間索引的的方格密度**|為 LEVEL_1、 LEVEL_2、 LEVEL_3，以及用於空間索引的方格密度的 LEVEL_4 定義預設值。<br /><br />**預設模式**<br /><br />LEVEL_1： 預設值<br /><br />LEVEL_2： 預設值<br /><br />LEVEL_3： 預設值<br /><br />LEVEL_4： 預設值<br /><br />**開放式模式**<br /><br />LEVEL_1： 預設值<br /><br />LEVEL_2： 預設值<br /><br />LEVEL_3： 預設值<br /><br />LEVEL_4： 預設值<br /><br />**完整模式**<br /><br />LEVEL_1： 預設值<br /><br />LEVEL_2： 預設值<br /><br />LEVEL_3： 預設值<br /><br />LEVEL_4： 預設值|  
   
@@ -102,7 +100,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**詞彙**|**[定義]**|  
+|**詞彙**|**定義**|  
 |**非交易式的資料表**|指定所有資料表的參考，不支援的交易應該標記都為使用轉換的警告訊息。<br /><br />**預設模式**： 否<br /><br />**開放式模式**： 否<br /><br />**完整模式**： 是|  
 |**交易隔離等級**|指定新的交易應該使用何種交易隔離等級。<br /><br />**預設模式**： 預設值<br /><br />**開放式模式**： 預設值<br /><br />**完整模式**： 可重複讀取|  
   
@@ -110,7 +108,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**詞彙**|**[定義]**|  
+|**詞彙**|**定義**|  
 |**數值轉換成字元**|指定如何處理隱含和明確從字元資料類型轉換成數值資料類型。<br /><br />**預設模式**： 開放式<br /><br />**開放式模式**： 開放式<br /><br />**完整模式**： 精確|  
 |**控制不帶正負號的數字值**|控制將值指派至不帶正負號的數值變數和參數。<br /><br />**預設模式**： 否<br /><br />**開放式模式**： 否<br /><br />**完整模式**： 是|  
 |**控制項不帶正負號的減法**|修改插入至資料表資料行的不帶正負號的資料類型的負值。<br /><br />**預設模式**： 轉換 ' 做為-是 '<br /><br />**開放式模式**： 轉換 ' 做為-是 '<br /><br />**完整模式**： 警告標記|  
@@ -119,7 +117,6 @@ ms.lasthandoff: 08/02/2017
 |**具有超過 38 的有效位數的數值常值**|指定如何將數值常值轉換成具有有效位數超過 38。<br /><br />**預設模式**： 盡可能四捨五入<br /><br />**開放式模式**： 盡可能四捨五入<br /><br />**完整模式**： 盡可能四捨五入|  
 |**NOT NULL 資料行中的零日期**|指定如何處理指派至 NOT NULL 資料行的零日期零中日期或無效的日期/時間值。<br /><br />**預設模式**: getdate （)<br /><br />**開放式模式**: getdate （)<br /><br />**完整模式**: getdate （)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [使用者介面參考 &#40;MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   
-

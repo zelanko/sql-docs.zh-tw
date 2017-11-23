@@ -1,24 +1,22 @@
 ---
 title: "Python 與 SQL Server 的整合元件 |Microsoft 文件"
 ms.custom: 
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: a23acdc0c39e0325f31050b299b883616912be71
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>若要支援 Python 整合 SQL Server 中的元件
 
@@ -104,7 +102,7 @@ SQL 附屬項目使用自訂的資料格式之間的快速資料傳輸的最佳�
   + 寫入資料至資料表： 例如，當儲存結果儲存至資料表
   + 建立資料庫物件： 例如，如果將外部指令碼儲存為新的預存程序的一部分。
 
-  當[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]是當成計算內容從遠端用戶端，執行 Python 指令碼和 Python 可執行檔必須從外部來源擷取資料，ODBC 會使用回寫。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]將遠端命令發出至目前的執行個體上的使用者身分識別的使用者的身分識別對應，並執行 ODBC 命令使用該使用者的認證。 執行此 ODBC 呼叫所需的連接字串可從用戶端程式碼取得。
+  當[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]是當成計算內容從遠端用戶端，執行 Python 指令碼和 Python 可執行檔必須從外部來源擷取資料，ODBC 會使用回寫。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]對應至目前的執行個體上的使用者身分識別發出遠端命令的使用者身分識別，並執行 ODBC 命令使用該使用者的認證。 執行此 ODBC 呼叫所需的連接字串可從用戶端程式碼取得。
 
 ## <a name="interaction-of-components"></a>元件的互動
 
@@ -116,9 +114,9 @@ SQL 附屬項目使用自訂的資料格式之間的快速資料傳輸的最佳�
 
 指令碼包含已內嵌在預存程序之後，可以進行呼叫的預存程序的任何應用程式可以初始化執行 Python 程式碼。  此後[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]管理程式碼執行，在下圖將摘要說明。
 
-![指令碼中 db python](../../advanced-analytics/python/media/script-in-db-python.png)
+![指令碼中 db python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
-1. Python 執行階段的要求會以參數 _@language= 'Python'_傳遞至預存程序。 SQL Server Launchpad 服務来傳送此要求。
+1. Python 執行階段的要求會以參數`@language='Python'`傳遞至預存程序。 SQL Server Launchpad 服務来傳送此要求。
 2. Launchpad 服務啟動適當的啟動器。在此情況下，PythonLauncher。
 3. PythonLauncher 啟動外部 Python35 程序。
 4. BxlServer 協調 Python 執行階段管理交換資料，與工作結果的儲存體。
@@ -131,11 +129,11 @@ SQL 附屬項目使用自訂的資料格式之間的快速資料傳輸的最佳�
 您可以從遠端電腦，例如膝上型電腦，執行 Python 指令碼，並將它們的 SQl Server 電腦的內容中執行，如果符合這些條件：
 
 + 您適當地設計指令碼
-+ 遠端電腦已安裝的擴充程式庫所使用的機器學習服務
++ 遠端電腦已安裝的擴充程式庫所使用的機器學習服務。 [Revoscalepy](what-is-revoscalepy.md)封裝，才能使用遠端計算內容。
 
 從遠端電腦傳送指令碼時下, 圖摘要說明整體的工作流程。
 
-![遠端-sqlcc-從-python](../../advanced-analytics/python/media/remote-sqlcc-from-python2.png)
+![遠端-sqlcc-從-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. 中支援的函式**revoscalepy**，Python 執行階段呼叫連結的函式，也就會呼叫 BxlServer。
 2. BxlServer 隨附機器學習服務 （資料庫），並且會在個別的處理序中執行來自 Python 執行階段。
@@ -150,4 +148,3 @@ SQL 附屬項目使用自訂的資料格式之間的快速資料傳輸的最佳�
 ## <a name="next-steps"></a>後續的步驟
 
 [SQL Server 中的 python 架構概觀](architecture-overview-sql-server-python.md)
-

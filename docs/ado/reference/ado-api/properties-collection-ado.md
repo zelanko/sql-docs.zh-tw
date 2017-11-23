@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - _ADO::get_Properties
 - _ADO::Properties
 - _ADO::GetProperties
-helpviewer_keywords:
-- Properties collection [ADO]
+helpviewer_keywords: Properties collection [ADO]
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d955faa0e8e13b73957dbda5ea6723dfd407c94e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 59671deed9a94192f333401c9d66987f75e4a3cb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="properties-collection-ado"></a>屬性集合 (ADO)
 包含所有[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件的特定執行個體的物件。  
@@ -47,7 +44,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [屬性集合的屬性、 方法和事件](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

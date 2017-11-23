@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - maximum file size for traces
 - size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7373a20063a25c679afa2a82f5931fd4893d6ecd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fd660e6fde56cc13e709a0fea4500f84fbc087a2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>設定追蹤檔案的檔案大小上限 (SQL Server Profiler)
   使用下列程序，可設定追蹤檔案的檔案大小上限。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  選取 [儲存至檔案]，然後指定要儲存追蹤資訊的檔案。  
   
-5.  在 [設定最大檔案大小] 核取方塊中，指定追蹤的檔案大小上限。 當檔案的大小到達此上限時，此檔案中便不再記錄追蹤事件。 如果選取 [啟用檔案換用]\ (預設會選取)，將發生下列情況：  
+5.  在 [設定最大檔案大小] 核取方塊中，指定追蹤的檔案大小上限。 當檔案的大小到達此上限時，此檔案中便不再記錄追蹤事件。 如果選取 [啟用檔案換用] (預設會選取)，將發生下列情況：  
   
      檔案換用選項會使得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在達到最大檔案大小時，關閉目前的檔案並建立新的檔案。 新檔與前一個檔案同名，但是名稱後會加上一個整數，以指出其順序；例如，如果原始追蹤檔案名為 filename_1.trc，則下一個追蹤檔案名為 filename_2.trc，依此類推。 如果指派給新換用檔案的名稱已為現有檔案所用，除非現有檔案是唯讀，否則會覆寫現有的檔案。 將追蹤資料儲存至檔案時，會預設啟用檔案復原選項。  
   
@@ -56,4 +54,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

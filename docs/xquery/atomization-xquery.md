@@ -5,27 +5,24 @@ ms.date: 08/01/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- XML
+dev_langs: XML
 helpviewer_keywords:
 - XQuery, atomization
 - atomization [XQuery]
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b6be2574663ce5b8f2cb51161033799543f4ca2e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5251917c137d6a37b18a47659e66ed3ea9154e36
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="atomization-xquery"></a>自動化 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 另一個隱含自動化的範例是當您使用算術運算子時。  **+** 運算子需要不可部份完成值，和**data （)**隱含地套用至擷取 LaborHours 屬性不可部份完成值。 查詢針對 Instructions 資料行指定**xml** ProductModel 資料表中的類型。 下列查詢會傳回 LaborHours 屬性三次。 在查詢中，請注意下列項目：  
+ 另一個隱含自動化的範例是當您使用算術運算子時。 **+** 運算子需要不可部份完成值，和**data （)**隱含地套用至擷取 LaborHours 屬性不可部份完成值。 查詢針對 Instructions 資料行指定**xml** ProductModel 資料表中的類型。 下列查詢會傳回 LaborHours 屬性三次。 在查詢中，請注意下列項目：  
   
 -   在建構 OrignialLaborHours 屬性時，自動化會隱含套用至 (`$WC/@LaborHours`) 所傳回的單一序列。 LaborHours 屬性具類型的值會指派給 OrignialLaborHours。  
   
@@ -81,10 +78,9 @@ where ProductModelID=7
   
  不可部分完成，也會發生在比較運算式參數傳遞至函式，傳回值的函式， **cast （)**運算式和子句所傳遞的順序排序的運算式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XQuery 基本概念](../xquery/xquery-basics.md)   
  [比較運算式 &#40;XQuery &#41;](../xquery/comparison-expressions-xquery.md)   
  [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
-

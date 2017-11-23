@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - reference exceptions [Analysis Services Scripting Language]
 - ASSL, objects
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - Analysis Services Scripting Language, objects
 - expansion [Analysis Services Scripting Language]
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 97b2e9528199410108abb021522df89af0225fbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 54c1e299952f042587389631e3220eb241ea598e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 物件和物件特性
   Analysis Services 指令碼語言 (ASSL) 中的物件會遵循有關物件群組、繼承、命名、擴展和處理的特定指導方針。  
@@ -112,4 +110,3 @@ ms.lasthandoff: 09/01/2017
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 也會忽略不適當或是不相關的屬性，而不會引發驗證錯誤。 例如，X 元素應該只有在 Y 元素具有特定值時才出現。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體會忽略 X 元素，而不會針對 Y 元素值來驗證該元素。  
   
   
-

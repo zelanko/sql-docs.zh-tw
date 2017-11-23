@@ -11,20 +11,18 @@ ms.component: ado
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, about
+helpviewer_keywords: ADO, about
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0d9da4cba3b4d90d82b3ac66ffec68a0e961ec40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28fa2c279cfd7964d8516514a3caed129e335692
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -72,6 +70,5 @@ ADO 用於 c + + 程式中，以連接到 SQL Server。 當然，它也可連接
  免費協助 ADO 解決問題，再試一次張貼到 ADO 公用新聞群組。 此新聞群組會監視 Microsoft 產品支援服務 (PSS) 支援專業人員涵蓋 ADO 中，以及其他有經驗的 ADO 開發人員。  
   
  支援選項的進一步資訊可以找到 「 Microsoft 說明及支援網站上。
-
 
 

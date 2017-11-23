@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e0eca9ac410156f891f4bd383a7100342c69662c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 21d9575ef237a01b97f4d272abb96e85fd5786f6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="named-commands"></a>具名的命令
 [建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)示範一種方法執行命令。 還有另一個方法： 您可以讓一個具名的命令，然後呼叫這個具名命令直接依據**連接**物件 (指派給**ActiveConnection**屬性**命令**物件)。 將名稱指派給命名命令表示**名稱**屬性**命令**物件。 例如，  
@@ -97,6 +95,5 @@ ErrHandler:
 'EndNamedCmd  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+## <a name="see-also"></a>請參閱＜  
+ [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

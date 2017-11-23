@@ -13,12 +13,9 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Analysis Services Scripting Language Reference
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-applies_to:
-- SQL Server 2016 Preview
+apiname: Analysis Services Scripting Language Reference
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, reference
 - scripting languages [Analysis Services]
@@ -28,17 +25,16 @@ helpviewer_keywords:
 - scripts [Analysis Services Scripting Language]
 - object definition language [Analysis Services Scripting Language]
 ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 334cf0d3a09ed7313f8e1b51a7c8023c5b5d2349
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e4bacdb40a8155135ced379f0ccef84b2fd717cc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-scripting-language-assl-for-xmla"></a>Analysis Services 指令碼語言 (ASSL xmla)
   應用程式與通訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用 XML 命令和物件的描述。 「Analysis Services 指令碼語言」(ASSL) 代表這個 XML 方言的物件定義語言部分。  
@@ -56,9 +52,8 @@ ms.lasthandoff: 09/01/2017
 |[Analysis Services 指令碼語言 XML 元素 &#40;ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-elements-assl.md)|ASSL 結構描述中每個元素的語法參考。|  
 |[Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)|ASSL 結構描述中每個資料類型的語法參考。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [開發使用 Analysis Services 指令碼語言 &#40;ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [使用分析管理物件 &#40;AMO&#41; 來開發](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
   
-

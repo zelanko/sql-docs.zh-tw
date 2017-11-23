@@ -5,28 +5,25 @@ ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- XML
+dev_langs: XML
 helpviewer_keywords:
 - sequence [XQuery]
 - expressions [XQuery], sequence
 - filtering sequences [XQuery]
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fff2568f6793efe8c21d6d37dd92851fe9bece89
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 99e7d41d829f9ef651b51306fc34754ef2e161c9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sequence-expressions-xquery"></a>序列運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -247,8 +244,7 @@ SELECT @x.query('
   
 -   不支援使用 UNION、INTERSECT 或 EXCEPT 運算子結合的節點順序。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [XQuery 運算式](../xquery/xquery-expressions.md)  
   
   
-

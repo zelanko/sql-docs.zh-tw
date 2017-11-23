@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- namespaces in ADO
+helpviewer_keywords: namespaces in ADO
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d32b2d51454f48d4ef164058abbf08d06859a281
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2d9dd5aab887a7df42fd1f6661c276be6cc73d6a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="namespaces"></a>命名空間
 在 ADO 中的 XML 持續性格式會使用下列四個命名空間。  
@@ -53,6 +50,5 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
   
  使用者可以定義為任何名稱，只要整個 XML 文件便固定使用此名稱。 ADO 永遠會寫出"s，""rs 」，「 dt 」，"z，"但這些前置詞名稱不是硬式編碼成載入元件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

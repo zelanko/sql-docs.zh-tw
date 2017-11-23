@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - provider property [ADO], VC++ example
 - DefaultDatabase property [ADO], VC++ example
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 42993cc9fdaa5deaad46fae2f7c61f8beb776489
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 75bef2df222023fe54ec5c890b3321677f2a7a40
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>提供者和 DefaultDatabase 屬性範例 （VC + +）
 這個範例會示範[提供者](../../../ado/reference/ado-api/provider-property-ado.md)開啟三個屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，使用不同的提供者。 它也會使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)屬性來設定的預設資料庫的 Microsoft ODBC 提供者。  
@@ -141,8 +138,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase 屬性](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [提供者屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
-
+ [Provider 屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

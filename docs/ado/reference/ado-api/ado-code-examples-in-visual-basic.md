@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- ADO code examples, Visual Basic
+dev_langs: VB
+helpviewer_keywords: ADO code examples, Visual Basic
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 753b12d32c1772db5eea33ecda12a960f97316a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c62113096ccc6737acd04b444d307658f3bf08f2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>在 Visual Basic 中的 ADO 程式碼範例
 若要了解如何使用 ADO 方法、 屬性和事件時寫入在 Visual Basic 中使用下列程式碼範例。  
@@ -163,8 +159,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [版本屬性範例](../../../ado/reference/ado-api/version-property-example-vb.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO 程式碼範例的 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Visual c + + 中的 ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [附錄 d: ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
-
+ [附錄 D：ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - AbsolutePage property [ADO]
 - PageCount property [ADO]
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 00394ba3e6a7e07e36ab28d0899c5ea1e6ff32ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34361d01b914d68cba1ff1e0e0f9378baf035be5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-pages"></a>使用頁面
 使用**PageCount**屬性來判斷多少頁的資料是在**資料錄集**物件。 *頁面*是群組的記錄，其大小等於**PageSize**屬性設定。 即使最後一頁不完整，因為有較少的記錄比**PageSize**值，它會計算為一個額外的頁面中**PageCount**值。 如果**資料錄集**物件不支援這個屬性， **PageCount**是-1 表示**PageCount**不確定。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  使用**AbsolutePage**屬性來識別目前的記錄所在的頁碼。 同樣地，提供者必須支援這個屬性才能使用適當的功能。  
   
  **AbsolutePage**是以 1 為基礎，並且等於 1，目前的記錄時的第一個記錄**資料錄集**。 設定這個屬性，以移至特定頁面的第一個記錄。 取得從總頁數**PageCount**屬性。
-

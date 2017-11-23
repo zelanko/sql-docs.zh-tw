@@ -5,22 +5,20 @@ ms.date: 07/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 536d493ba199ff4cdc808c5463cb260926f106f5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server 中 R 的效能微調
 
@@ -92,7 +90,7 @@ SQL server，以支援執行 R 指令碼的 SQL Server 2016 中引進 R 服務�
 
 + [SQL Server-硬體中的 R 的效能微調](..\r\sql-server-configuration-r-services.md)
 
-    提供指導方針設定硬體， [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] 已安裝，而且可用於設定 SQL Server 執行個體，可更妥善支援外部指令碼。 它特別適用於**資料庫管理員**。
+    提供指導方針設定硬體， [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)]已安裝，而且可用於設定 SQL Server 執行個體，可更妥善支援外部指令碼。 它特別適用於**資料庫管理員**。
 
 + [SQL Server-程式碼和資料中的 R 的效能微調最佳化](..\r\r-and-data-optimization-r-services.md)
 
@@ -104,4 +102,3 @@ SQL server，以支援執行 R 指令碼的 SQL Server 2016 中引進 R 服務�
 + [SQL Server-方法和結果中的 R 的效能微調](..\r\performance-case-study-r-services.md)
 
     摘要說明哪些資料是使用兩個案例研究、 如何已測試的效能，以及如何最佳化會影響結果。
-

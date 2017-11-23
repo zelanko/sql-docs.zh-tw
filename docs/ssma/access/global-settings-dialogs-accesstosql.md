@@ -5,32 +5,30 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e3942fe2dcc423e673d05892d41ba30f45838a7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e2e86cfce8a8a963a283422ce334c8c2472b8720
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>全域設定 （對話方塊） (AccessToSQL)
 使用的對話方塊頁面**通用設定**對話方塊來指定的預設使用者動作和 SSMA 的警告設定。  
   
 若要存取對話方塊設定在**工具**功能表上，選取**通用設定**，按一下  **GUI**底部的左的窗格，然後選取**對話方塊**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **啟動時顯示移轉精靈**  
 SSMA for Access，在中，您可以選擇啟用或停用**移轉精靈**SSMA 應用程式啟動時。 這個選項是預設**True**。  
   
@@ -56,4 +54,3 @@ SSMA 會將物件轉換成 SQL Server 中，當部分物件可能已存在於專
   
 -   如果您選取**False**，SSMA 不會覆寫物件中繼資料轉換期間。  
   
-

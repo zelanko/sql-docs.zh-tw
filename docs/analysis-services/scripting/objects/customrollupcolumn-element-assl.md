@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CustomRollupColumn Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CustomRollupColumn Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CustomRollupColumn
-helpviewer_keywords:
-- CustomRollupColumn element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CustomRollupColumn
+helpviewer_keywords: CustomRollupColumn element
 ms.assetid: 8c825f16-0d17-4ff8-bc18-b52cf11edba7
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f0febb09919de73ca291c3cb85d5ba50ec6f37e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ea4002401c38957c6e1f739f7460c6923afd1af3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="customrollupcolumn-element-assl"></a>CustomRollupColumn 元素 (ASSL)
   定義提供自訂積存公式之資料行的詳細資料。  
@@ -71,8 +65,7 @@ ms.lasthandoff: 09/01/2017
   
  對應目的父代的項目**CustomRollupColumn**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

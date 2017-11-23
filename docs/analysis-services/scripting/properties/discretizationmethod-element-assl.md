@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DiscretizationMethod Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DiscretizationMethod Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DiscretizationMethod
-helpviewer_keywords:
-- DiscretizationMethod element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DiscretizationMethod
+helpviewer_keywords: DiscretizationMethod element
 ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0b084caccf3b44cc6b43021551f227f61c0de0e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e2bbf548ba16ccc81d1536c5c64a22e9c69d96d1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discretizationmethod-element-assl"></a>DiscretizationMethod 元素 (ASSL)
   定義用於進行離散化的方法。  
@@ -81,8 +75,7 @@ ms.lasthandoff: 09/01/2017
   
  列舉型別對應至允許的值**DiscretizationMethod**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DiscretizationMethod>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

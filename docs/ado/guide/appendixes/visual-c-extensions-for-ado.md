@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions for ADO
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a51272e2fba20b4c336cf4a21cce0cf4a83f4726
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fbc17b15d552f9b7afeeb4841febdd7d08e54808
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 擴充功能
 程式設計 Visual c + + 的 ADO 的慣用的方法使用**#import**指示詞中所述[Microsoft Visual c + + ADO Programming](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 不過，舊版的 ADO 隨附的 Visual c + + 的程式設計替代方法： Visual c + + 擴充功能。 本章節記載這項功能的人員必須維護 Visual c + + 擴充功能的程式碼，但新的 ADO 程式碼應該使用 # 來撰寫**匯入**。
@@ -43,10 +40,9 @@ ms.lasthandoff: 09/09/2017
 
 -   [針對 ADO 使用 Visual c + + 擴充功能](../../../ado/guide/appendixes/using-visual-c-extensions.md)
 
--   [Visual c + + 擴充功能的標頭](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+-   [Visual C++ Extensions 標題](../../../ado/guide/appendixes/visual-c-extensions-header.md)
 
 -   [ADO 使用 Visual c + + 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
  [Visual c + + 語法索引 com ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual c + + 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)[使用 Visual c + + 擴充功能](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual c + + 擴充功能的標頭](../../../ado/guide/appendixes/visual-c-extensions-header.md)
-

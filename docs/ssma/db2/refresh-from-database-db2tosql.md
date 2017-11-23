@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a1d5da102b2d357b20e08bbb25269ae7ec7ca78c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5c0d2d3ad83249c4e438e01a31a41d9e8e226ce8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="refresh-from-database-db2tosql"></a>從資料庫 (DB2ToSQL) 重新整理
 **從資料庫重新整理** 對話方塊可讓您選取要重新整理從 DB2 資料庫的物件。 在對話方塊中的資料列會以色彩標示在中繼資料的狀態：  
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/02/2017
   
 若要存取**從資料庫重新整理**對話方塊中，以滑鼠右鍵按一下物件，在 DB2 中繼資料總管 按一下**從資料庫重新整理**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **摺疊 （-）**  
 摺疊以隱藏個別物件的所有物件群組。  
   
@@ -61,4 +59,3 @@ ms.lasthandoff: 08/02/2017
   
 要保留**圖例**對話方塊頂端的**從資料庫重新整理**對話方塊中，選取**顯示在最上層**核取方塊。  
   
-

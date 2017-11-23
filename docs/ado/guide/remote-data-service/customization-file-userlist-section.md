@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 882b50778567fd82367bcbac376363e9e93eaaed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5521648ed1c4d125168d3f9afb7a4c884854d9b4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="customization-file-userlist-section"></a>自訂檔案 UserList > 一節
 **Userlist**區段屬於**連接**區段中具有相同的區段*識別碼*參數。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 09/09/2017
 |*使用者名稱*|*使用者名*採用此連接的人員。 有效的使用者名稱使用 IIS 建立**Service Manager**對話方塊。|  
 |***accessRights***|其中一個的下列存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** — 使用者可以讀取的資料來源。<br />-   **ReadWrite** — 使用者可讀取或寫入至資料來源。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自訂檔案記錄檔 > 一節](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自訂檔案 SQL > 一節](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
@@ -55,6 +53,5 @@ ms.lasthandoff: 09/09/2017
  [必要的用戶端設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [了解自訂檔](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [撰寫您自己的自訂處理常式](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

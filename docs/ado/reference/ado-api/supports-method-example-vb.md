@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Supports method [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 09f47061d9b99569b13ee3d5c57c713c4d0f56a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9be77a25c92ac849b8481d3c880d01831fe715e5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supports-method-example-vb"></a>支援的方法範例 (VB)
 這個範例會使用[支援](../../../ado/reference/ado-api/supports-method.md)開啟具有不同的資料指標類型的方法，以顯示一個資料錄集所支援的選項。 若要執行此程序需要 DisplaySupport 程序。  
@@ -169,7 +165,6 @@ End Sub
 'EndSupports2VB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [支援方法](../../../ado/reference/ado-api/supports-method.md)
-
+ [Supports 方法](../../../ado/reference/ado-api/supports-method.md)

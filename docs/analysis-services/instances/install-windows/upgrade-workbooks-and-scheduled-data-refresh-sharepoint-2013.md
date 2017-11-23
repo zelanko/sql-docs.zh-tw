@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ffec3fb3ec6abd9d6fd1779ae8e8f434894e68b9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09907013b8a83b70fae3f0bf91f68f49a08290df
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升級活頁簿和排程的資料重新整理 (SharePoint 2013)
   本主題將說明在先前 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 環境中建立之活頁簿的使用者體驗，以及如何升級 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿，以便讓您運用這個版本所導入的新功能。 若要深入了解新功能，請參閱 [What’s New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917)(PowerPivot 的新功能)。  
@@ -184,4 +182,3 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
  [檢視資料重新整理記錄 &#40;Power Pivot for sharepoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   
-

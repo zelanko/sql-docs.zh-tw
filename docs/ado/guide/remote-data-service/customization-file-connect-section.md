@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe0012f287536d015e1086d02833a0f6651194f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d6ec65ea217935e007427a087f2a05162649f226
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="customization-file-connect-section"></a>自訂檔案連接 > 一節
 此處理常式的預設行為是拒絕所有連線。 **連接**區段會指定該行為的例外狀況。 例如，如果所有**連接**區段已不存在或空的則預設無法建立任何連線。  
@@ -70,7 +68,7 @@ connectionString
   
  如果您想要允許任何連線 （效果，請停用預設處理常式的行為），設定存取項目**連接預設**區段`Access=ReadWrite`，並刪除或標記為註解的任何其他**連接***識別碼*> 一節。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [自訂檔案記錄檔 > 一節](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自訂檔案 SQL > 一節](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [自訂檔案 UserList > 一節](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
@@ -78,7 +76,6 @@ connectionString
  [必要的用戶端設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [了解自訂檔](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [撰寫您自己的自訂處理常式](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 
 

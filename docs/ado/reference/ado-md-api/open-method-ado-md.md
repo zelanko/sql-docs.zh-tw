@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Open
 - Cellset::Open
-helpviewer_keywords:
-- Open method [ADO MD]
+helpviewer_keywords: Open method [ADO MD]
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1b80a0a92956315d7d19db5d17a535b6fe2204b6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 35faf0a1217f5b558c9781644cb9ea115e602584
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-method-ado-md"></a>Open 方法 (ADO MD)
 擷取多維度查詢的結果，並傳回結果[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  
@@ -52,13 +49,12 @@ Cellset.Open Source, ActiveConnection
  **開啟**方法會產生錯誤，如果省略了其中一個它的參數，且其對應的屬性值未設定之前嘗試開啟**資料格集**。  
   
 ## <a name="applies-to"></a>適用於  
- [資料格集物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [Cellset 物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [資料格集範例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [ActiveConnection 屬性 (ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
  [Close 方法 (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [來源屬性 (ADO MD)](../../../ado/reference/ado-md-api/source-property-ado-md.md)   
  [State 屬性 (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)
-

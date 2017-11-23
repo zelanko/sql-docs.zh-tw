@@ -5,28 +5,25 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - MDX [Analysis Services], scripts
 - scripts [MDX], statements
 - Multidimensional Expressions [Analysis Services], scripts
 ms.assetid: a4e5f377-6f06-4888-9663-91105b205ac1
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 76d57e87a24f034ee1898b0c610b23b3479c48b1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9aee6950e5892644b7cc53fc21b751b0b9d5bdaa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX 指令碼陳述式 (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +41,10 @@ ms.lasthandoff: 08/02/2017
 |[如果陳述式 &#40;MDX &#41;](../mdx/mdx-scripting-if.md)|條件為 True 時執行陳述式。|  
 |[SCOPE 陳述式 &#40;MDX &#41;](../mdx/mdx-scripting-scope.md)|將指定的 MDX 陳述式的範圍限制為指定的 Subcube。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MDX 陳述式參考 &#40;MDX &#41;](../mdx/mdx-statement-reference-mdx.md)   
  [MDX 資料定義陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [MDX 資料操作陳述式 &#40;MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [MDX 指令碼基礎觀念 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   
-

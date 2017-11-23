@@ -5,27 +5,25 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
+ms.openlocfilehash: 0f1ce3070cbefa63323e109a10c7a262616c2cb3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a5f84178bc2f70dfd04239ec130735e51d117e3c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>連接到 SQL Server (OracleToSQL)
 使用**連接到 SQL Server**對話方塊連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]您想要移轉到。 若要存取**連接到 SQL Server**對話方塊**檔案**功能表上，按一下 **連接到 SQL Server**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **伺服器名稱**  
 輸入或選取要連接到 SQL Server 執行個體。 根據預設，會顯示您連接到最近的執行個體。  
   
@@ -59,4 +57,3 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 > 若要啟用**信任伺服器憑證**，「 加密 」 必須設為**True**。  
   
-

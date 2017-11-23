@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Block Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Block Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Block
-helpviewer_keywords:
-- Block element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Block
+helpviewer_keywords: Block element
 ms.assetid: f45c32ae-e4e0-465a-9564-9ccfb10a858f
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4bed0f3c9cf2a519731cb5103f44070e5f13e6c0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b024e6c27b2fddf8b318b937bec47afc3d584780
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="block-element-assl"></a>Block 元素 (ASSL)
   包含所有或部分二進位內容的[ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md)項目。  
@@ -64,7 +58,7 @@ ms.lasthandoff: 09/01/2017
 |父元素|[區塊](../../../analysis-services/scripting/collections/blocks-element-assl.md)|  
 |子元素|無|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [組件元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/assembly-element-assl.md)   
  [ClrAssembly 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)   
  [Files 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/files-element-assl.md)   
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

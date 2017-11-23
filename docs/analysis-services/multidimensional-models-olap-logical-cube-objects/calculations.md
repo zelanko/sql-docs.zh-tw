@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - calculations [Analysis Services]
 - OLAP objects [Analysis Services], calculations
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - calculations [Analysis Services], about calculations
 - cubes [Analysis Services], calculations
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0771e03eaa12e37cce685309fa776fe7f7c31443
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6fa38369b12c07a47a2501bc906535b0263db2e5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculations"></a>計算
   計算是多維度運算式 (MDX) 運算式或指令碼，用來定義 cube 中的導出的成員、 命名的集或範圍的指派[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 計算可讓您加入的物件不是由 Cube 之資料所定義，而是由參考 Cube 之其他部分、其他 Cube 甚至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫外部之資訊的運算式所定義。 計算可讓您擴充 Cube 的功能，以在商業智慧應用程式中加入彈性和強大功能。 如需指令碼計算的詳細資訊，請參閱[簡介 Microsoft SQL Server 2005 中 MDX 指令碼](http://go.microsoft.com/fwlink/?LinkId=81892)。 如需有關 MDX 查詢和計算相關效能問題的詳細資訊，請參閱[SQL Server 2005 Analysis Services 效能指南](http://go.microsoft.com/fwlink/?LinkId=81621)。  
@@ -65,8 +63,7 @@ ms.lasthandoff: 09/01/2017
   
  例如，您可以使用指令碼命令，依據之前時間週期的銷售的加權值，將銷售配額配置給跨越時間和銷售地區的員工。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Calculations in Multidimensional Models](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   
-

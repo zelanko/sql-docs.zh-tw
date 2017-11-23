@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da6cd44f389b059a897ec464e1848cd9660b6c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 90ef5f49740a7e9e750ade714f0571f2642f0d47
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 擴充功能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 介面
@@ -153,6 +150,5 @@ Update(CADORecordBinding *binding)
 |**adFldBadStatus**|12|在更新時，無效的狀態參數。|
 |**adFldDefault**|13|更新時，使用預設值。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
  [Visual c + + 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual c + + 擴充功能的標頭](../../../ado/guide/appendixes/visual-c-extensions-header.md)
-

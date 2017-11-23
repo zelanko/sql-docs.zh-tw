@@ -1,59 +1,128 @@
 ---
-title: "設定資料科學用戶端 | Microsoft Docs"
+title: "設定用於 SQL Server 的資料科學用戶端 |Microsoft 文件"
 ms.custom: 
-ms.date: 02/10/2017
+ms.date: 10/31/2017
 ms.prod: r-server
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d15ee956-918f-40e0-b986-2bf929ef303a
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 791a27f78442cd1ca191a042238769368c7da228
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0661b2fcf9b23d3c81cb0d80f0424d87dbde7ef8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="set-up--a-data-science-client"></a>設定資料科學用戶端
-  在藉由安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] R Services (資料庫內) **以設定**執行個體之後，您會想要為遠端執行和部署設定能夠連接到伺服器的 R 開發環境。 
+# <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>設定用於 SQL Server 的資料科學用戶端
+
+您已設定的執行個體之後[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支援機器學習服務，您應該設定能夠連線到遠端執行和部署伺服器的開發環境。
+
+本文說明某些一般用戶端案例，包括免費的 Visual Studio Community 版本 SQL Server 中執行 R 程式碼的組態。
+
+## <a name="install-r-libraries-on-the-client"></a>在用戶端安裝 R 程式庫
+
+用戶端環境必須包含 Microsoft R Open，以及支援在 SQL Server 上分散式執行 R 的其他 RevoScaleR 套件。 R 的標準分佈不需要支援遠端計算內容或平行執行 R 工作的封裝。
+
+若要取得這些程式庫，請安裝下列其中一項：
   
-  此環境必須包含 ScaleR 套件，且可以選擇性地包含用戶端開發環境。
-  
- ## <a name="where-to-get-scaler"></a>何處可以取得 ScaleR 
-  
-  用戶端環境必須包含 Microsoft R Open，以及支援在 SQL Server 上分散式執行 R 的其他 RevoScaleR 套件。  您有數種方式可以安裝這些套件︰
-  
-+ 安裝 [Microsoft R Client](http://aka.ms/rclient/download)。 這裡提供其他安裝指示：[開始使用 Microsoft R 用戶端 (英文)](https://msdn.microsoft.com/microsoft-r/r-client-get-started)
-+ 安裝 Microsoft R Server。 您可從 SQL Server 安裝程式或使用新的 Windows 獨立安裝程式，取得 Microsoft R Server。 如需詳細資訊，請參閱[建立獨立的 R Server](../../advanced-analytics/r-services/create-a-standalone-r-server.md) 和 [R Server 簡介 (英文)](https://msdn.microsoft.com/microsoft-r/rserver)。
++ [Microsoft R Client](http://aka.ms/rclient/download)
 
-如果您擁有 R Server 授權合約，我們建議您使用 Microsoft R Server (獨立)，以避免 R 處理執行序和記憶體內資料的限制。
++ Microsoft R Server （適用於 SQL Server 2016)
 
+    - 若要從 SQL Server 安裝程式安裝，請參閱[建立獨立 R 伺服器](../../advanced-analytics/r/create-a-standalone-r-server.md)
 
-## <a name="how-to-set-up-the-r-development-environment"></a>如何設定 R 開發環境
+    - 若要使用個別的 windows 安裝程式，請參閱[安裝機器學習 Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
-您可以選擇使用任何與 Windows 相容的 R 開發環境。 
++ 機器學習伺服器 （適用於 SQL Server 2017)
 
-+ 適用於 Visual Studio 的 R Tools 支援與 Microsoft R Open 整合
-+ RStudio 是受歡迎的免費環境  
+    - 若要從 SQL Server 安裝程式安裝，請參閱[建立獨立 R 伺服器](../../advanced-analytics/r/create-a-standalone-r-server.md)
 
-安裝之後，您會需要重新設定您的環境，以使用預設的 Microsoft R Open 程式庫，否則您無法存取 ScaleR 函數庫。 如需詳細資訊，請參閱[開始使用 Microsoft R 用戶端 (英文)](http://msdn.microsoft.com/microsoft-r/r-client-get-started)。
+    - 若要使用個別的 windows 安裝程式，請參閱[適用於 Windows 安裝 R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
+
+## <a name="install-a-development-environment"></a>安裝開發環境
+
+如果您還沒有慣用的 R 開發環境，我們建議下列其中一項：
+
++ 適用於 Visual Studio 的 R 工具
+
+    適用於 Visual Studio 2015。
+
+    安裝程式的資訊，請參閱[如何安裝 R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation)。
  
-## <a name="more-resources"></a>其他資源
-  
- 如需如何連接到遠端執行 R 程式碼之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的詳細逐步解說，請參閱本教學課程︰ [資料科學深入探討︰使用 RevoScaleR 套件](../../advanced-analytics/r-services/data-science-deep-dive-using-the-revoscaler-packages.md)。  
+    若要設定 RTVS 以使用 Microsoft R 的用戶端程式庫，請參閱[有關 Microsoft R 用戶端](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
+
++ Visual Studio 2017
+
+    即使免費的 Community Edition 包含資料科學工作負載，安裝適用於 R、 Python 和 F # 專案範本。
+
+    下載 Visual Studio 從[此站台](https://www.visualstudio.com/vs/)。 
+
++ RStudio
+
+    如果您偏好使用 RStudio，需要一些額外步驟才能使用 RevoScaleR 程式庫︰
+
+    - 安裝 Microsoft R 用戶端，以取得需要的套件和程式庫。
+    - 更新您的 R 路徑，以便使用 Microsoft R 執行階段。
+
+    如需詳細資訊，請參閱[R 用戶端-設定您的 IDE](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client#step-2-configure-your-ide)。
+
+## <a name="configure-your-ide"></a>設定您的 IDE
+
++ 適用於 Visual Studio 的 R 工具
+
+    請參閱[此站台](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)如需如何建置和偵錯 R 的一些範例專案中使用 R Tools for Visual Studio。 
+
++ Visual Studio 2017
+
+    如果您安裝 Microsoft R 用戶端或 R 伺服器**之前**您安裝 Visual Studio、 「 R 伺服器程式庫會自動偵測與用於程式庫路徑。 如果您尚未安裝 RevoScaleR 程式庫中，從**R 工具**功能表上，選取**安裝 R 用戶端**。
+
+## <a name="run-r-in-sql-server"></a>SQL Server 中執行 R
+
+這個範例會使用 Visual Studio 2017 Community Edition 中，以安裝資料科學工作負載。
+
+1. 從**檔案**功能表上，選取**新增**，然後選取 **專案**。
+
+2. -手形窗格包含預先安裝的範本清單。 按一下**R**，然後選取**R 專案**。 在**名稱**方塊中，輸入`dbtest`按一下**確定**。
+
+3. Visual Studio 會建立新的專案資料夾和預設指令碼檔案， `Script.R`。 
+
+4. 型別`.libPaths()`指令碼的第一行上檔案，然後再按 CTRL + ENTER。
+
+5. 目前的 R 程式庫路徑應該會顯示在**R 互動式**視窗。 
+
+6. 按一下**R 工具**功能表，然後選取**Windows** ，查看您可以在您的工作區中顯示其他 R 特定視窗的清單。
  
+    + 檢視目前的文件庫中的封裝上的 [說明]，按下 CTRL + 3。
+    + 請參閱 R 變數中的**變數總管**，按下 CTRL + 8。
 
-若要開始 SQL Server 使用 Microsoft R 用戶端和 ScaleR 套件，請參閱[開始使用 ScaleR (英文)](https://msdn.microsoft.com/microsoft-r/scaler-getting-started#)。  
-  
-## <a name="see-also"></a>另請參閱  
- [設定 SQL Server R Services &#40;資料庫內&#41;](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)  
-  
-  
+7. 建立 SQL Server 執行個體的連接字串和 RxInSqlServer 建構函式中使用的連接字串，若要建立 SQL Server 資料來源物件。 
 
+    ```r
+    connStr <- "Driver=SQL Server;Server=MyServer;Database=MyTestDB;Uid=;Pwd="
+    sqlShareDir <- paste("C:\\AllShare\\", Sys.getenv("USERNAME"), sep = "")
+    sqlWait <- TRUE
+    sqlConsoleOutput <- FALSE
+    cc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
+    sampleDataQuery <- "SELECT TOP 100 * from [dbo].[MyTestTable]"
+    inDataSource <- RxSqlServerData(sqlQuery = sampleDataQuery, connectionString = connStr, rowsPerRead = 500)
+    ```
+
+    > [!TIP]
+    > 若要執行批次中，選取您想要執行，並按下 CTRL + ENTER。
+
+8. 將計算內容到伺服器，然後再執行一些簡單的 R 程式碼的資料。
+
+    ```r
+    rxSetComputeContext(cc)
+    rxGetVarInfo(data = inDataSource)
+    ```
+
+    結果會傳回**R 互動式**視窗。
+    
+    如果您想要確保您自己的 SQL Server 執行個體上執行的程式碼，您可以使用程式碼剖析工具來建立追蹤。

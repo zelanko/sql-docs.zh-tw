@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec99b8511d512c068130ed7bc521f447b57d20d9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>New-PowerPivotServiceApplication 指令程式
 
@@ -115,4 +113,3 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  這個範例會建立新的服務應用程式。 服務應用程式資料庫是在安裝為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體的 AdvWorks-SRV01 資料庫伺服器上所建立，這是許多 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝所通用的組態。 您必須有 SQL Server 執行個體的 dbcreator 權限，才能建立資料庫。 您必須是 SharePoint 組態資料庫的 db_owner。 因為這是伺服器陣列中的第一個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式，所以它必須是預設 Proxy 群組的成員。  
   
   
-

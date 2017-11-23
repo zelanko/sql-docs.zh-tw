@@ -17,17 +17,16 @@ helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 41239f58ecdcea9f5d60e1ebdd83bc010b2c3bdd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4154a0e542ed8e2bc6799dbc3f3c9ecb25ad5f4e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>資料採礦方案與物件的管理
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用於管理現有採礦結構和採礦模型的用戶端工具。 本節說明可以利用每種環境執行的管理作業。  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Developer 文件](../../analysis-services/analysis-services-developer-documentation.md)  
   
   
-

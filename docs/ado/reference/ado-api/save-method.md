@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Recordset::Save
 - _Recordset::raw_Save
-helpviewer_keywords:
-- Save method [ADO]
+helpviewer_keywords: Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6bd594fb077c3a8b6eca9e3496c857dbbc0249c7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: edefe1c8d25abd84d5a5f82d7dde8035d82022ee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="save-method"></a>Save 方法
 將儲存[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)檔案中或[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
@@ -99,12 +96,11 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
   
 |||  
 |-|-|  
-|[資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[資料流物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
+|[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [儲存並開啟方法的範例 (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [儲存並開啟方法的範例 （VC + +）](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
  [Open 方法 （ADO 資料錄集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open 方法 （ADO 資料流）](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [SaveToFile 方法](../../../ado/reference/ado-api/savetofile-method.md)
-

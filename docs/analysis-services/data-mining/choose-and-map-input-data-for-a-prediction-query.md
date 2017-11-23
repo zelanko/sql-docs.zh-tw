@@ -17,17 +17,16 @@ helpviewer_keywords:
 - tables [Analysis Services], prediction queries
 - Mining Model Prediction [Analysis Services], input tables
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e055a4ef5a23e08a7b8147cfd746c48b304aa3b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b95fd2fc60fa252e8ad9de34768c12846a45e322
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>為預測查詢選擇和對應輸入資料
   從採礦模型建立預測時，通常是透過饋送新資料至模型  (時間序列模型是例外，它只能根據歷程記錄資料進行預測)。若要提供新資料給模型，您必須確保資料是做為資料來源檢視的一部分提供。 如果您事先知道哪些資料要用於預測，可以將資料包含在用於建立模型的資料來源檢視中。 否則，您可能需要建立新的資料來源檢視。 如需詳細資訊，請參閱 [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)(多維度模型中的資料來源檢視)。  
@@ -130,4 +129,3 @@ ms.lasthandoff: 09/01/2017
  [預測查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Catalog::raw_GetObjectOwner
 - _Catalog::GetObjectOwner
-helpviewer_keywords:
-- GetObjectOwner method [ADOX]
+helpviewer_keywords: GetObjectOwner method [ADOX]
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eb2c0957c4bda61387986eb1d05c4483954045ff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c3c6f6aa4401646f43dd303988cc151d1ed43d21
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner 方法 (ADOX)
 傳回物件的擁有者[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)。  
@@ -58,9 +55,8 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  如果提供者不支援傳回的物件擁有者，就會發生錯誤。  
   
 ## <a name="applies-to"></a>適用於  
- [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [GetObjectOwner 和 SetObjectOwner 方法範例 (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
  [SetObjectOwner 方法](../../../ado/reference/adox-api/setobjectowner-method.md)
-

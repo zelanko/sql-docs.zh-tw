@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services, projects
+helpviewer_keywords: Analysis Services, projects
 ms.assetid: c589097f-ad29-4b97-8c7e-b8a910909c1a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec62b7e30c7060a92b4ccfb36a8e5bfa2a0e6520
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 027e9cfb4f69cbdb89d776b80916afa8ac89eb69
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="work-with-analysis-services-projects-and-databases-in-production"></a>使用 Analysis Services 專案和生產環境中的資料庫
   當您已經從 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫開發並部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之後，您必須決定要如何變更已部署之資料庫中的物件。 某些變更 (例如，與安全性角色、資料分割和儲存設定有關的變更) 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來進行， 其他變更則只能在專案模式或線上模式中，使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來進行 (例如，加入屬性或使用者自訂階層)。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/01/2017
 -   方法 3：在線上模式中使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，僅針對 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 資料庫的實際執行版本進行變更。 因為這兩個工具只能與相同的線上伺服器一起運作，所以不可能會有未同步的不同版本。  
   
   
-

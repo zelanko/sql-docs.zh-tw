@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc2498f80dfc5a057eff9350ed1949ee02ee5f4f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 16bba12bdcf95e8e71cab6dcb8404b7b3b1916e7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sort-property"></a>排序內容
 表示在其上的一個或多個欄位名稱[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)已排序，以及每個欄位是否以遞增或遞減順序排序。  
@@ -58,12 +56,11 @@ ms.lasthandoff: 09/09/2017
  沒有欄位可以命名為"ASC"或"DESC"因為這些名稱衝突和關鍵字**ASC**和**DESC**。 您也可以使用具有衝突的名稱建立欄位的別名**AS**關鍵字，查詢中傳回**資料錄集**。  
   
 ## <a name="applies-to"></a>適用於  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [排序屬性範例 (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
  [排序屬性範例 （VC + +）](../../../ado/reference/ado-api/sort-property-example-vc.md)   
  [最佳化屬性動態 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [SortColumn 屬性 (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [SortDirection 屬性 (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-

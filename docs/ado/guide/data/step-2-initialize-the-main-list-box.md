@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e84bc73bd63d90b43b4192208690fe3bca272de6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c291da043764d9599311704af86952eec47578b6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>步驟 2： 初始化主清單方塊
 若要宣告全域記錄和資料錄集物件，將下列程式碼插入 （一般） （宣告） form1:  
@@ -57,8 +55,7 @@ End Sub
   
  資料錄集物件， `grs`，開啟資料錄的子系`grec`。 然後`lstMain`會填入已發行的 url 資源的檔案名稱。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [網際網路發佈案例](../../../ado/guide/data/internet-publishing-scenario.md)   
  [步驟 1： 設定 Visual Basic 專案](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
- [步驟 3： 擴展欄位的清單方塊](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
-
+ [步驟 3：填入 [欄位] 清單方塊](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

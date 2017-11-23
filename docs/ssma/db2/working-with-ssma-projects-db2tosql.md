@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e82224e43147b5812a570f909f9a5a33c5585a6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 548e434c6f14c789c38ac041dd4e6d28369da087
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>使用 SSMA 專案 (DB2ToSQL)
 若要將 DB2 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您先建立 SSMA 專案。 專案是檔案，包含下列資訊：  
@@ -104,7 +102,7 @@ SSMA 包含數項設定將轉換和載入資料庫物件、 移轉資料，並�
   
         儲存中繼資料，可能需要幾分鐘的時間。 如果您不想儲存中繼資料，但是不選取任何核取方塊。  
   
-    2.  按一下 [ **儲存** ] 按鈕。  
+    2.  按一下**儲存** 按鈕。  
   
         SSMA 會剖析 DB2 結構描述，並將中繼資料儲存到專案檔。  
   
@@ -126,9 +124,8 @@ SSMA 包含數項設定將轉換和載入資料庫物件、 移轉資料，並�
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[連接到 DB2 資料庫](http://msdn.microsoft.com/en-us/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [DB2 資料庫移轉至 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [連接到 DB2 資料庫 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
 [連接到 SQL Server &#40; DB2eToSQL &#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
   
-

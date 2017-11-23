@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0ff03aeddf8e8072d479ef13a14c68080d5d3df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4023e504dfee0b0655a78e773771d3ae16b4a2fb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 屬性 (進階索引標籤)
   下列屬性預設會出現在 **[進階]** 索引標籤。 如果定義了自訂屬性，這些屬性與其值也會在這個索引標籤上顯示。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 08/02/2017
  當**安裝在叢集伺服器時的** 虛擬伺服器名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
   
-

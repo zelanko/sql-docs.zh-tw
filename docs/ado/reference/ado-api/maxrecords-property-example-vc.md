@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- MaxRecords property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e69d3f3ec9b90e01593951b908441ff106bb6d4e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 77ab4e80cb319aa95f7a566462e648ccbb9bbadb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 屬性範例 （VC + +）
 這個範例會使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)屬性可開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)包含中成本最高的 10 個標題***標題***資料表。  
@@ -184,7 +180,6 @@ void PrintComError(_com_error &e) {
 **長時間的資料 Deprivation： 的四個案例研究---而 19.99**  
 **壽司，任何人？---14.99**  
 **Buckingham 明這些---11.95 五十個年份**   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [MaxRecords 屬性 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

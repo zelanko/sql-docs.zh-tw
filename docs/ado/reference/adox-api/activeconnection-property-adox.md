@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -21,20 +20,18 @@ f1_keywords:
 - _Catalog::putref_ActiveConnection
 - _Catalog::ActiveConnection
 - _Catalog::GetActiveConnection
-helpviewer_keywords:
-- ActiveConnection property [ADOX]
+helpviewer_keywords: ActiveConnection property [ADOX]
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d0e3fe0c51bb9e21cdb4cf3ef27fee3785b871c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b827ec332b89767a030e1925320345a2b78baee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection 屬性 (ADOX)
 指出 ADO[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)所屬。  
@@ -46,9 +43,9 @@ ms.lasthandoff: 09/09/2017
  預設值是 null 物件的參考。  
   
 ## <a name="applies-to"></a>適用於  
- [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [目錄 ActiveConnection 屬性範例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [命令和 CommandText 屬性範例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [連接關閉方法，資料表類型屬性範例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
@@ -60,5 +57,4 @@ ms.lasthandoff: 09/09/2017
  [檢視附加方法範例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [檢視集合，CommandText 屬性範例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [檢視重新整理方法範例 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
- [建立方法 (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
-
+ [Create 方法 (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

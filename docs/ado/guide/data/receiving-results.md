@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - receiving results [ADO]
 - Recordset object [ADO], receiving results
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4803dcc8225400232e52890a2ce55edc80af5e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5768404342f76eb8c5999678e6c1a4aa4a3bcd42
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="receiving-results"></a>接收的結果
 在 ADO 的大部分命令會傳回呼叫端的一些資訊。 傳回資料列集的命令，在收到結果**資料錄集**物件，這是可能最常使用的 ADO 物件。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  若要接收多個結果集表示您會需要進行數往返透過網路，其中每個資料集封裝在**資料錄集**物件。 慢或壅塞網路減少往返次數可能有助於改善應用程式的效能。 因此，有些提供者會提供支援，以接收多個**資料錄集**s 至單一反覆存取。 這是將討論下列主題：  
   
 -   [接收多個資料錄集](../../../ado/guide/data/receiving-multiple-recordsets.md)
-

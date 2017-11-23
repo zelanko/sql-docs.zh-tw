@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- cursors [ADO], about cursors
+helpviewer_keywords: cursors [ADO], about cursors
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 61fb503b5b183f1147e2297a76045876c254a8e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what-is-a-cursor"></a>什麼是資料指標？
 關聯式資料庫中的作業會針對完整的資料列集運作。 由 SELECT 陳述式所傳回的資料列集包括所有滿足陳述式 WHERE 子句之條件的資料列。 由陳述式傳回的完整資料列稱為結果集。 應用程式，尤其是互動式且在線上，不一定有效地運用整個結果集做為一個單位。 這些應用程式需要一個機制，一次運用一個資料列或小型資料列區塊。 資料指標就是一種結果集的擴充，提供此種機制。  
@@ -80,4 +77,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="scrollability"></a>可捲動性  
  您的應用程式所採用的資料指標的類型也會影響的功能向前及向後移動的資料列結果集;這有時候稱為可捲動性。 向前移動的能力*和*回溯透過結果集增加的資料指標，複雜性，因此實作成本更高。 基於這個理由，您應該使用這項功能只在必要時要求資料指標。
-

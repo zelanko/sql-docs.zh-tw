@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- hierarchical Recordsets [ADO], in XML
+helpviewer_keywords: hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eb5fb67b0572ea7edea1259ac1314706cc883cd8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c5d4a03801d4f126185ba63fe3fb6409947219bf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>在 XML 中的階層式資料錄集
 ADO 允許為 XML 持續性的階層式資料錄集物件。 使用階層式資料錄集物件，在父資料錄集欄位的值會是另一個資料錄集。 這類欄位會表示為 XML 資料流，而不是屬性中的子項目。  
@@ -132,6 +129,5 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 -   如果子記錄中有一個以上的父記錄的參考，然後在重新開啟資料錄集時，子資料錄集可能包含重複的記錄。 不過，這些重複項目才會顯示如果使用者直接使用基礎的子資料列集。 如果章用於巡覽資料錄集 （亦即透過 ADO 來瀏覽的唯一方式） 的子系，請重複的項目不會顯示。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

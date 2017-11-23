@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b6bc8649cca88a6a132db440a3294989dfdcadb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 633ae5b4a31c6b305aada1b6b3984b85caa8a1da
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-collections"></a>ADO 集合
 以表示這些集合與 ADO 物件之間的關聯性[ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 09/09/2017
 |[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)|包含所有**參數**物件**命令**物件。|  
 |[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)|包含所有**屬性**物件的特定執行個體的物件。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO 列舉常數](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO 物件與介面](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [ADO 屬性](../../../ado/reference/ado-api/ado-properties.md)
-

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - fact tables [Analysis Services]
 - partitions [Analysis Services], fact tables
 ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 068c4899199881270a153e866b719c15a8296f7f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e9e6cf4d28935289d84849129d600a797df15c5b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>變更分割區來源以使用不同的事實資料表
   當您建立 Cube 的分割區時，您可以選擇要使用不同的事實資料表。 不同資料表可能來自單一資料來源檢視、來自不同資料來源檢視或來自不同資料來源。 資料來源檢視也可能包含來自一個以上之資料來源的不同資料表。  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/01/2017
  [建立及管理本機資料分割 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   
-

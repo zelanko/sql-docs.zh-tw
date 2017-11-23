@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- RecordCreateOptionsEnum
-helpviewer_keywords:
-- RecordCreateOptionsEnum enumeration [ADO]
+f1_keywords: RecordCreateOptionsEnum
+helpviewer_keywords: RecordCreateOptionsEnum enumeration [ADO]
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 32d0349d5a37f73e03670d1e34a509530e9153fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f108d977c278d9f86ca47853e07c7960ee574b8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 指定是否將現有**記錄**應該開啟或新**記錄**建立[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件[開啟](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 值可以與 AND 運算子結合。  
@@ -46,5 +42,4 @@ ms.lasthandoff: 09/09/2017
  這些常數沒有 ADO/WFC 對等項目。  
   
 ## <a name="applies-to"></a>適用於  
- [Open 方法 （ADO 資料錄）](../../../ado/reference/ado-api/open-method-ado-record.md)
-
+ [Open 方法 (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)

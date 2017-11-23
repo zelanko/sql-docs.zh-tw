@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c90c411842da3033b0be46330a2d9f2cb421c90b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc6946f6944cf37f85759847f2c8db852d120461
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory 服務
 Active Directory 服務介面 (ADSI) 提供者可讓 ADO 連接到透過 ADSI 異質目錄服務。 這可讓 ADO 應用程式對唯讀存取 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目錄服務，除了任何 LDAP 相容目錄服務和 Novell 目錄服務。 ADSI 本身為基礎的提供者模型，使新的提供者提供存取至另一個目錄時，ADO 應用程式將能夠順暢地存取它。 ADSI 提供者是無限制執行緒，啟用 Unicode。  
@@ -147,11 +145,10 @@ objectClass='user' AND objectCategory='Person'"
   
  如需 ADSI 與提供者的細節的詳細資訊，請參閱 Active Directory 服務介面文件或瀏覽 ADSI 網頁。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [CommandType 屬性 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [ConnectionString 屬性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [提供者屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [支援方法](../../../ado/reference/ado-api/supports-method.md)
-
+ [Supports 方法](../../../ado/reference/ado-api/supports-method.md)

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Version property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Version property [ADO], Visual Basic example
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 143f2dd7021cb3ee1100fe04e93d3058e07c14f2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d9eff4d790e78fc96cd9922b29cbcd6248f81e44
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="version-property-example-vb"></a>版本屬性範例 (VB)
 這個範例會使用[版本](../../../ado/reference/ado-api/version-property-ado.md)屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，以顯示目前的 ADO 版本。 它也會使用數個動態屬性顯示：  
@@ -85,7 +81,6 @@ End Sub
 'EndVersionVB  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version 屬性 (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
-

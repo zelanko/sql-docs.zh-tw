@@ -5,32 +5,30 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4f7d19d050a0c6c0c6656c6a297780e1ae9bfdf7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 76a29a448dfbbba4b8fc0771edf352545d361cf9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>連接到 Azure SQL DB (SybaseToSQL)
 使用 [連線到 Azure SQL DB] 對話方塊中，連接到您想要移轉的 Azure SQL DB 資料庫。  
   
 若要存取此對話方塊，請在**檔案**功能表上，選取**連接到 Azure SQL DB**。 如果您之前已連線，則命令是**重新連接到 Azure SQL DB。**  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **伺服器名稱**  
   
 選取或輸入伺服器名稱連接到 Azure SQL DB。  
@@ -73,4 +71,3 @@ SSMA 會建議加密的連接到 Azure SQL DB。
   
     2.  **資料庫大小：**選取您要在 Azure SQL DB 帳戶中建立的資料庫大小。  
   
-

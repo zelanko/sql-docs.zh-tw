@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- FieldStatusEnum
-helpviewer_keywords:
-- FieldStatusEnum enumeration [ADO]
+f1_keywords: FieldStatusEnum
+helpviewer_keywords: FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a47097ccce07c5eeb5ee859b74919e36c01f6750
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 33ea3379808e818b1afd723ce9223858896ea709
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定[狀態](../../../ado/reference/ado-api/status-property-ado-field.md)的[欄位物件](../../../ado/reference/ado-api/field-object.md)。  
@@ -72,5 +68,4 @@ ms.lasthandoff: 09/09/2017
  這些常數沒有 ADO/WFC 對等項目。  
   
 ## <a name="applies-to"></a>適用於  
- [Status 屬性 （ADO 欄位）](../../../ado/reference/ado-api/status-property-ado-field.md)
-
+ [Status 屬性 (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)

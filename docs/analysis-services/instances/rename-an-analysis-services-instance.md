@@ -20,17 +20,16 @@ helpviewer_keywords:
 - names [Analysis Services], renaming instances
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 45ccdebbfaa2ca30bd6d5cd6c02bb7f869aa6496
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rename-an-analysis-services-instance"></a>重新命名 Analysis Services 執行個體
   您可以重新命名現有的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，方法是使用與 Management Studio (Web 安裝) 一起安裝的 **Instance Rename** Tool。  
@@ -86,4 +85,3 @@ ms.lasthandoff: 09/01/2017
      如您所見，先前授與 “NT Service\ MSOLAP$TABULAR” 的資料庫和檔案權限不再有效。 為確保服務所執行的工作和作業如以往般執行，您現在需要授與新資料庫和檔案權限給 “NT Service\ MSOLAP$TAB2”。  
   
   
-

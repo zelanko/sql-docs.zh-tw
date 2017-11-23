@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 125bf372621875c92a316751246d22e61554ee6b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8b84d83b0f72d1a8130792532b191639f521225e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>開始使用 SSMA for DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) for DB2 可讓您快速 DB2 資料庫將結構描述轉換至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]結構描述上, 傳到產生的結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]並將資料從 DB2 移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -101,7 +99,7 @@ SSMA 會有兩個工具列： 專案工具列和移轉工具列。
 |----|-----------|  
 |**檔案**|包含用來處理專案、 連接至 DB2，以及連接到命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |**編輯**|包含用來尋找及處理的詳細資料頁面中，例如，將複製的文字命令[!INCLUDE[tsql](../../includes/tsql_md.md)]從 [SQL 詳細資料] 窗格。 也包含**管理書籤**選項，您可以在此處看到一份現有書籤。 您可以使用對話方塊右側的按鈕，來管理這些書籤。|  
-|**檢視**|包含**同步處理中繼資料瀏覽器**命令。 同步處理之間 DB2 中繼資料總管 物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**來管理配置。|  
+|**[檢視]**|包含**同步處理中繼資料瀏覽器**命令。 同步處理之間 DB2 中繼資料總管 物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**來管理配置。|  
 |**工具**|包含命令來建立報表，並將物件和資料移轉。 也提供存取**通用設定**和**專案設定**對話方塊。|  
 |**說明**|提供存取至 SSMA 協助和**有關** 對話方塊。|  
   
@@ -112,8 +110,7 @@ SSMA 會有兩個工具列： 專案工具列和移轉工具列。
   
 -   [錯誤清單] 窗格會顯示錯誤、 警告和參考用訊息可排序清單中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [將 DB2 資料移轉到 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
 [使用者介面參考 &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
-

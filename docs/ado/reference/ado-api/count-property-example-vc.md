@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Count property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Count property [ADO], VC++ example
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 09a9152a29e096dc97fed3ee3b9ff2aeef9ae45b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b24990112d2854ad8674b41972db7d2ceea85fc2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="count-property-example-vc"></a>計數屬性範例 （VC + +）
 這個範例會示範[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性中的兩個集合與***員工***資料庫。 此屬性會取得中的每個集合的物件數目，並設定列舉這些集合的迴圈的上限。  
@@ -138,6 +134,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Count 屬性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)
-

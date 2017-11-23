@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b630c95516370e4c0352e18d1259f05649c106d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 669901a865788be20096ddedb05d15f4448a2a4b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-mysqltosql"></a>使用者介面參考 (MySQLToSQL)
 此章節包含 [說明] 主題的 SQL Server 移轉小幫手 (SSMA) MySQL。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/02/2017
 |[編輯類型對應 &#40;MySQLToSQL &#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|使用**編輯類型對應**對話方塊來建立或修改的來源和目標資料庫與資料庫物件之間的資料類型對應。|  
 |[全域設定 &#40;編輯器 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|使用的編輯器頁面**通用設定**對話方塊來設定程式碼編輯器的選項。|  
 |[全域設定 &#40; 對話方塊 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|使用的對話方塊頁面**通用設定**對話方塊來設定預設對話方塊，警告設定。|  
-|[全域設定 （記錄）](http://msdn.microsoft.com/en-us/0d033492-5ec3-473a-8de1-821894ec9518)|使用 [記錄] 頁面的**通用設定**對話方塊來設定記錄。|  
+|[全域設定 (記錄)](http://msdn.microsoft.com/en-us/0d033492-5ec3-473a-8de1-821894ec9518)|使用 [記錄] 頁面的**通用設定**對話方塊來設定記錄。|  
 |[全域設定 &#40; 輸出視窗 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/global-settings-output-window-mysqltosql.md)|使用**通用設定**設定 SSMA for MySQL 使用者介面的偏好設定 對話方塊。|  
 |[新的專案 &#40;SSMA &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/new-project-ssma-mysqltosql.md)|使用**新專案**對話方塊來建立新的 SSMA for MySQL 專案。|  
 |[專案設定 &#40;轉換 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|使用 [轉換] 頁面的**專案設定**對話方塊來指定如何 SSMA for MySQL 轉換函式和全域變數。|  
@@ -57,8 +55,7 @@ ms.lasthandoff: 08/02/2017
 |[從資料庫 &#40; 重新整理MySQLToSQL &#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|使用**從資料庫重新整理**對話方塊來選取要重新整理從 MySQL 資料庫。|  
 |[儲存中繼資料 &#40;MySQLToSQL &#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|**儲存中繼資料**儲存遺失中繼資料的專案時，對話方塊隨即出現。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [開始使用 SSMA for MySQL &#40;MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-
