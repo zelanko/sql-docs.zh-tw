@@ -3,10 +3,12 @@ title: "DBCC SHOW_STATISTICS (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - DBCC SHOW_STATISTICS
 - SHOW_STATISTICS
 - DBCC_SHOW_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], densities
 - histograms [SQL Server]
@@ -32,20 +33,19 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 777deb8a6e479b388d0dc980b58f7b757eed1b73
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 38abfb552f1bb969c132d5086ca007d36541a76c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DBCC SHOW_STATISTICS 會針對資料表或索引檢視表顯示目前的查詢最佳化統計資料。 查詢最佳化工具會使用統計資料來預估基數或查詢結果中的資料列數，如此可讓查詢最佳化工具建立高品質的查詢計畫。 例如，查詢最佳化工具可使用基數預估來選擇查詢計畫中的索引搜尋運算子，而不是索引掃描運算子，避免發生資源密集的索引掃描來提高查詢效能。
   
@@ -149,7 +149,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 查詢最佳化工具會根據長條圖步驟的統計重要性來定義長條圖步驟。 它會使用最大值差異演算法，讓長條圖中的步驟數減至最少，同時讓界限值之間的差異最大化。 步驟數的最大值為 200。 長條圖步驟的數目可以少於相異值數目，即使包含了少於 200 個界限點的資料行也是如此。 例如，包含 100 個相異值的資料行可以擁有少於 100 個界限點的長條圖。
   
 ## <a name="density-vector"></a>密度向量  
-查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 密度向量針對統計資料物件中資料行的每個前置詞各包含一個密度。 例如，如果統計資料物件具有 CustomerId、ItemId、Price 等索引鍵資料行，就會根據下列每一個資料行前置詞來計算密度。
+查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 密度向量針對統計資料物件中資料行的每個前置詞各包含一個密度。 例如，如果統計資料物件包含索引鍵資料行`CustomerId`，`ItemId`和`Price`，在每一個下列資料行前置詞來計算密度。
   
 |資料行前置詞|計算密度的依據|  
 |---|---|
@@ -163,7 +163,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 才能檢視統計資料物件，使用者必須擁有資料表，或者使用者必須是成員`sysadmin`固定伺服器角色、`db_owner`固定資料庫角色或`db_ddladmin`固定的資料庫角色。
   
-SQL Server 2012 SP1 修改了權限限制，允許具有 SELECT 權限的使用者使用此命令。 請注意，必須先符合下列需求，足夠的 SELECT 權限才能執行此命令：
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 會修改權限限制，並允許具有 SELECT 權限，才能使用這個命令的使用者。 請注意，必須先符合下列需求，足夠的 SELECT 權限才能執行此命令：
 -   使用者必須有統計資料物件的所有資料行的權限  
 -   使用者必須有篩選條件 (如果有) 的所有資料行的權限  
 -   資料表不能有資料列層級安全性原則。  
@@ -216,7 +216,7 @@ GO
   
 ![DBCC SHOW_STATISTICS 結果](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "DBCC SHOW_STATISTICS 結果")
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 [統計資料](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
@@ -227,4 +227,3 @@ GO
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
 [sys.dm_db_stats_properties (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [sys.dm_db_stats_histogram (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
-
