@@ -123,7 +123,7 @@ ms.lasthandoff: 11/17/2017
 3.  以滑鼠右鍵按一下資料庫，指向 [工作] ，再指向 [還原] ，然後按一下 [頁面] ，這樣會開啟 [還原頁面]  對話方塊。  
   
      **Restore**  
-     此區段與 **還原資料庫 (一般頁面)** 上的 [[還原至]](../../relational-databases/backup-restore/restore-database-general-page.md)執行相同功能。  
+     此區段與 [還原資料庫 (一般頁面)](../../relational-databases/backup-restore/restore-database-general-page.md) 上的 **[還原至]**執行相同功能。  
   
      **資料庫**  
      指定要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選取現有的資料庫。  清單包含伺服器上的所有資料庫，但不含系統資料庫 **master**和 tempdb。  
