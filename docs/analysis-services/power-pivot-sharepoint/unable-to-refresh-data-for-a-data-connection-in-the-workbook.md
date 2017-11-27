@@ -66,7 +66,7 @@ ms.lasthandoff: 11/22/2017
   
  若要解決此問題，請將電腦加入至與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器相同的網域，或在本機電腦上安裝網域控制站。 第二個解決方案「安裝網域控制站」將需要您為所有服務和使用者建立本機網域帳戶。 您將需要為您定義的帳戶設定服務帳戶和 SharePoint 權限。  
   
- 如果您的目標是在離線狀態下使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，在電腦上安裝網域控制站相當實用。 如需如何離線使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的詳細指示，請參閱 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] http://www.powerpivotgeek.com [上的＜讓您的](http://go.microsoft.com/fwlink/?LinkId=184241)伺服器離線＞ 部落格內容。  
+ 如果您的目標是在離線狀態下使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，在電腦上安裝網域控制站相當實用。 如需如何離線使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的詳細指示，請參閱 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241) 上的＜讓您的伺服器離線＞ 部落格內容。  
   
  **案例 4：伺服器不穩定**  
   
