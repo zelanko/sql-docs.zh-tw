@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_addtype"></a> 將內容類型加入至文件庫  
  您必須至少有「管理清單」權限，才能加入並設定內容類型。 此權限內建在「設計」權限等級以上 (含)。  
   
- 包含文件庫的網站必須啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的功能。 如需詳細資訊，請參閱 [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)。  
+ 包含文件庫的網站必須啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的功能。 如需詳細資訊，請參閱 [在管理中心為網站集合啟用 Power Pivot 功能整合](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)。  
   
 1.  開啟要啟用 BI 語意模型連接內容類型的文件庫。  
   
