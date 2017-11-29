@@ -27,6 +27,7 @@
 ## [教學課程 - 部署、執行和監視 Azure 上的套件](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
 ## [連線到 Azure 上的 SSIS 目錄](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [在 Azure 上排程套件執行](lift-shift/ssis-azure-schedule-packages.md)
+## [驗證部署到 Azure 的套件](lift-shift/ssis-azure-validate-packages.md)
 ## [使用 Windows 驗證連線到資料來源](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [連接到檔案及檔案共用](lift-shift/ssis-azure-files-file-shares.md)
 
