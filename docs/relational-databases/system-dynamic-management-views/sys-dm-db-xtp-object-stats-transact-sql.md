@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b07eb152c42c2f9c991d99ff6e3256b62d1cef8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fdb57b1f90044605dc67fd3a41892df4bed8716c
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -43,10 +43,6 @@ ms.lasthandoff: 11/17/2017
   
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
-  
 |資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|物件的識別碼。|  
@@ -60,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="permissions"></a>Permissions  
  需要目前資料庫的 VIEW DATABASE STATE 權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [記憶體最佳化的資料表動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

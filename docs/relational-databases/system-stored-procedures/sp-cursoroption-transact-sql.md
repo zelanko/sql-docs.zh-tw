@@ -22,20 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 247ab6fe3be339baca756d55c953021fe07683b7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b0fcd7b9c009d0af70e48982f9630f783bce057d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   設定資料指標選項或傳回 sp_cursoropen 預存程序所建立的資料指標資訊。 sp_cursoroption 的叫用方式指定 ID = 8，在表格式資料流 (TDS) 封包中的。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -94,7 +90,7 @@ sp_cursoroption cursor, code, value
 |0x0002|SCROLL_LOCKS|  
 |0x0004 或 0x0008|OPTIMISTIC|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cursor &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [sp_cursoropen &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  

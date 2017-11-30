@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d7d349b85fa00e6bdb6801485acf3fa255ab9424
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5c9b5a5269025f6ed9c3bed493b71a6be557dc25
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +39,6 @@ ms.lasthandoff: 11/17/2017
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]我們建議您改用 sys.sql_modules。 如需詳細資訊，請參閱[sys.sql_modules &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -57,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |**壓縮**|**bit**|永遠傳回 0。 這表示程序已經壓縮。|  
 |**text**|**nvarchar(4000)**|SQL 定義陳述式的實際文字。<br /><br /> 已解碼運算式的語意相當於原始文字，但是不能保證語法相同。 例如，空白字元會從已解碼的運算式移除。<br /><br /> 這[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-相容檢視會從目前取得資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構，並可傳回多個下列字元**nvarchar （4000)**定義。 **sp_help**傳回**nvarchar （4000)**做為文字資料行資料類型。 當使用**syscomments**請考慮使用**nvarchar （max)**。 新的開發工作，請勿使用**syscomments**。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [將系統資料表對應至系統檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

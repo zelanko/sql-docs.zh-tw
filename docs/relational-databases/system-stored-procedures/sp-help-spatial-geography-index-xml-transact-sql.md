@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47f5b0043338691ce02bc567c8a9d5e1d4943050
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ffc4f49e8087189e9fd7d364d4d9ee3cc668573a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,6 @@ ms.lasthandoff: 11/21/2017
   名稱和指定的屬性集的值會傳回有關**geography**空間索引。 您可以選擇傳回核心屬性集或索引的所有屬性。  
   
  結果會以 XML 片段傳回，該片段會顯示所選取屬性的名稱和值。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,7 +79,7 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
 ## <a name="requirements"></a>需求  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [空間索引預存程序](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)   

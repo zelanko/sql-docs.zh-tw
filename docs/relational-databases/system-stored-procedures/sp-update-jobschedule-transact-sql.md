@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7af3408d791d25020d090620cc2eea1330a5444f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 20487d3c9983fffc2cb15f3ef2df7944fd647f39
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,6 @@ ms.lasthandoff: 11/17/2017
   
 > [!IMPORTANT]  
 >  如需舊版的 Microsoft SQL Server 中使用的語法的詳細資訊，請參閱 TRANSACT-SQL Referencefor Microsoft SQL Server 2000*。*  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
 ## <a name="remarks"></a>備註  
  現在，您可以在作業之外，獨立管理作業排程。 若要更新的排程，使用**sp_update_schedule**。  
@@ -58,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  只有成員**sysadmin**可以使用這個預存程序來更新其他使用者所擁有的作業排程。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SQL Server Agent 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_update_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
   

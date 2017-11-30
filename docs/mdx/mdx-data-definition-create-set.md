@@ -2,9 +2,12 @@
 title: "CREATE SET 陳述式 (MDX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -23,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6684e5b5d8edd630e623e5210d977c70903b01c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 46ad325e1ca6e983b3ecfa550c6f7192bb17242f
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 資料定義-建立設定
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   使用目前 Cube 的工作階段範圍來建立命名集。  
   
@@ -113,7 +116,7 @@ SELECT [Core Products] ON 0
 |CAPTION|用戶端應用程式當做集合標題使用的字串。|  
 |DISPLAY_FOLDER|識別用戶端應用程式用於顯示集合之顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 工具和用戶端所提供的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜線 (\\) 為層級分隔符號。 若要針對已定義的集合提供多個顯示資料夾，請使用分號 (;) 來分隔資料夾。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [DROP SET 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-set.md)   
  [MDX 資料定義陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   

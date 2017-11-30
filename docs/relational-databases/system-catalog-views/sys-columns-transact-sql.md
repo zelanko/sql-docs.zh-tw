@@ -1,7 +1,7 @@
 ---
 title: "sys.columns (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 09/08/2016
+ms.date: 11/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ddf0a9cf5aabd35bd02b11a3b270e8e1c8100cb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: baf6cff936e446dce22a3d6c7fe7431f09272d58
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,8 +76,8 @@ ms.lasthandoff: 11/21/2017
 |rule_object_id|**int**|獨立規則的識別碼，這個規則是利用 sys.sp_bindrule 與資料行繫結。<br /><br /> 0 = 沒有獨立規則。 資料行層級 CHECK 條件約束，請參閱[sys.check_constraints &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
 |is_sparse|**bit**|1 = 資料行是疏鬆資料行。 如需詳細資訊，請參閱 [使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。|  
 |is_column_set|**bit**|1 = 資料行是資料行集。 如需詳細資訊，請參閱 [使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。|  
-|將 generated_always_type|**tinyint**|**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 表示資料行類型的數值 （值一律為 0 表示系統資料表中的資料行）：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 如需永遠加密的詳細資訊，請參閱[永遠加密 &#40; Database engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。|  
-|generated_always_type_desc|**nvarchar （60)**|**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 資料行類型的文字描述 （值會針對系統資料表中的資料行是 NOT_APPLICABLE）：<br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|將 generated_always_type|**tinyint**|**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 識別產生的資料行值時 （將會永遠是 0，系統資料表中的資料行）：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 如需詳細資訊，請參閱[時態表 &#40;關聯式資料庫 &#41;](../../relational-databases/tables/temporal-tables.md).|  
+|generated_always_type_desc|**nvarchar （60)**|**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 文字描述`generated_always_type`的值 (一律 NOT_APPLICABLE 系統資料表中的資料行) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
 |encryption_type|**int**|**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密類型：<br /><br /> 1 = 決定性加密<br /><br /> 2 = 隨機化加密|  
 |encryption_type_desc|**nvarchar （64)**|**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密類型的描述：<br /><br /> 隨機<br /><br /> DETERMINISTIC|  
 |encryption_algorithm_name|**sysname**|**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密演算法的名稱。<br /><br /> 支援只 AEAD_AES_256_CBC_HMAC_SHA_512。|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [系統檢視 &#40;TRANSACT-SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [物件目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

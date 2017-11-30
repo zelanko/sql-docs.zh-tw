@@ -22,20 +22,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6004cb054dc1d14e9535edfb716d659b56757c12
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fae8f7a99a01260eeee820fd85b4c3c7c61d6975
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   將 Database Mail 帳戶加入 Database Mail 設定檔中。 執行**sysmail_add_profileaccount_sp**使用建立資料庫帳戶之後[sysmail_add_account_sp &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)，並建立資料庫的設定檔[sysmail_add_profile_sp &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md).  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -91,7 +87,7 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
     @sequence_number = 1 ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail 組態物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

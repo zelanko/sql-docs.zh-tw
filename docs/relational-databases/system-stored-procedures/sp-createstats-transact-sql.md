@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b9811ca7824426900f77fc625bfa50732d7ba69
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7c89f3aed714fba775e2271425fb86949e3f26ac
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/21/2017
  當查詢執行時間很重要而且無法等候查詢最佳化工具產生單一資料行統計資料時，sp_createstats 對於效能評定等應用程式會很有用。 在大部分情況下，則不需要使用 sp_createstats。查詢最佳化工具產生單一資料行統計資料，以便改善查詢計劃時**AUTO_CREATE_STATISTICS**選項是否開啟。  
   
  如需有關統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。 如需有關產生單一資料行統計資料的詳細資訊，請參閱**AUTO_CREATE_STATISTICS**選項[ALTER DATABASE SET 選項 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,10 +62,6 @@ sp_createstats
   
  [  **@incremental=** ] **「 累加 」**  
  使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**INCREMENTAL = ON**選項。 **累加**是**char(12)**。  預設值是 NO。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -103,7 +95,7 @@ EXEC sp_createstats 'indexonly';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [統計資料](../../relational-databases/statistics/statistics.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   

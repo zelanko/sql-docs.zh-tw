@@ -1,7 +1,7 @@
 ---
 title: "建立外部資料表 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 802122cb7c0902c731b0fcc7d8522901ad7ea044
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="create-external-table-transact-sql"></a>建立外部資料表 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,8 +142,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  資料行定義，包括資料類型和資料行數目必須符合的外部檔案中的資料。 如果不相符，查詢的實際資料時，將會拒絕檔案的資料列。  
   
- 參考外部資料來源中的檔案外部資料表的資料行和類型定義必須對應到外部檔案的確切的結構描述。 定義參考的資料儲存在 Hadoop/登錄區中的資料類型，當使用 SQL 和 Hive 資料類型之間的下列對應，並從中選取時，轉換成 SQL 資料類型的型別。 除非指定，否則類型會包含登錄區的所有版本。  
-  
+ 參考外部資料來源中的檔案外部資料表的資料行和類型定義必須對應到外部檔案的確切的結構描述。 定義參考的資料儲存在 Hadoop/登錄區中的資料類型，當使用 SQL 和 Hive 資料類型之間的下列對應，並從中選取時，轉換成 SQL 資料類型的型別。 除非指定，否則類型會包含登錄區的所有版本。
+
+> [!NOTE]  
+>  SQL Server 不支援 Hive_無限大_任何轉換作業中的資料值。 PolyBase 會因資料類型轉換錯誤。
+
+
 |SQL 資料類型|.NET 資料類型|登錄區的資料類型|Hadoop/Java 資料類型|註解|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|只有不帶正負號數字。|  
@@ -554,7 +558,7 @@ FROM ClickStream
 ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [常見的中繼資料的查詢範例 (SQL Server PDW)](http://msdn.microsoft.com/en-us/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   

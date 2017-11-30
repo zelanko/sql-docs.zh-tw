@@ -2,9 +2,12 @@
 title: "MDX 和 DAX 中的 VBA 函數 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -14,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 196b8e8e49ceae58054eae3d1b74480a9f438b75
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e56f0c499f16242d3dc6332ee62824c3542d9dd1
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函數
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   本文件包含之所有 VBA 函數中可用的交互的參考[Microsoft Visual Basic for Applications 語言參考適用於 Office 2010](https://msdn.microsoft.com/library/gg264383(v=office.14).aspx) MDX 支援; 此外，此清單包含附註和 DAX 語言的功能等價時。  
   

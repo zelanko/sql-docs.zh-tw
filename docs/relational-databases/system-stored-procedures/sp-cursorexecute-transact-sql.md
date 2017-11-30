@@ -22,20 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a84f385e37a1b7a6af10beb891c1317523eb482
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6dc0a358e0d62fa8a0319ab6d2ad586315f30e24
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   根據 sp_cursorprepare 所建立的執行計畫來建立及擴展資料指標。 此程序，結合 sp_cursorprepare，具有相同的函數 sp_cursoropen，但是會分成兩個階段。 sp_cursorexecute 的叫用方式指定 ID = 4 在表格式資料流 (TDS) 封包中的。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -105,7 +101,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="rpc-and-tds-considerations"></a>RPC 和 TDS 考量  
  RPC RETURN_METADATA 輸入旗標可以設定為 1，要求在 TDS 資料流中傳回資料指標選取清單中繼資料。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [sp_cursoropen &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

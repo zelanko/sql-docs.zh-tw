@@ -2,9 +2,12 @@
 title: "LinkMember (MDX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b9122e0ae4aec51fe2e554f4e5d667fb9225e4d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a6fafec6febad45fe226bb9b96abd8c1ad3bd6da
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="linkmember-mdx"></a>LinkMember (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   傳回相當於指定階層架構中的指定成員的成員  
   
@@ -59,7 +62,7 @@ SELECT  Hierarchize
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Hierarchize &#40;MDX &#41;](../mdx/hierarchize-mdx.md)   
  [上階 &#40;MDX &#41;](../mdx/ascendants-mdx.md)   
  [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  

@@ -2,9 +2,12 @@
 title: "Sum (MDX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7a921a664db1dddb265e1cba632e8d688c7847d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c6b8c218e6c4c4d8c5981afdf24b61a0b066ae10
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   針對指定的集合進行評估之後，傳回數值運算式的總合。  
   
@@ -100,7 +103,7 @@ FROM [Adventure Works]
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

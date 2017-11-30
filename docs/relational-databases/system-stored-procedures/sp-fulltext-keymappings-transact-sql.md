@@ -25,20 +25,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 33d2cc30ca46ab172e1a9db4fceb639709e06779
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a0f99180f5b55808bc1bb7602d7dec7800febe68
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   傳回文件識別碼 (DocId) 和全文檢索索引鍵值之間的對應。 DocId 資料行包含值**bigint**整數會對應到全文檢索索引資料表中的特定全文檢索關鍵值。 滿足搜尋條件的 DocId 值會從全文檢索引擎傳送至 Database Engine，在此處會將這些值對應到正在查詢之基底資料表中的全文檢索索引鍵值。 全文檢索索引鍵資料行是資料表單一資料行上需要的唯一索引。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -146,7 +142,7 @@ GO
 ||`docid`|`key`|  
 |`4`|`4`|`4`|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [全文檢索搜尋和語意搜尋預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

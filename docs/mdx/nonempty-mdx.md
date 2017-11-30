@@ -2,9 +2,12 @@
 title: "NonEmpty (MDX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -16,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: df0650ada514d4b5bf33202b572d0e1a316120da
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2065ad390583027bb0d05e05d374283c18038850
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   根據指定集合與第二個集合的交叉乘積，從指定集合傳回非空的 Tuple 集合。  
   
@@ -93,7 +96,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [DefaultMember &#40;MDX &#41;](../mdx/defaultmember-mdx.md)   
  [篩選 &#40;MDX &#41;](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX &#41;](../mdx/isempty-mdx.md)   

@@ -26,20 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1b6b77613f01605d693d9e2c3961c3278f8d26b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 08224c1f35e0115ba3bb97f88b0a2a51f5e05a6a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   定義的本機執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 當電腦裝載[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是重新命名，使用**sp_addserver**通知的執行個體[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]新電腦名稱。 此程序必須在電腦上裝載的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上執行。 執行個體名稱[!INCLUDE[ssDE](../../includes/ssde-md.md)]無法變更。 若要變更具名執行個體的執行個體名稱，請安裝具有所需名稱的新執行個體、從舊的執行個體卸離資料庫檔案、將資料庫附加到新的執行個體，和卸除舊的執行個體。 或者，您可以在用戶端電腦上建立用戶端別名名稱，將連接重新導向至不同的伺服器和執行個體名稱或 **伺服器：連接埠** 的組合，而不需要變更伺服器電腦上的執行個體名稱。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -88,7 +84,7 @@ sp_addserver [ @server = ] 'server' ,
 sp_addserver 'ACCOUNTS', 'local';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [重新命名主控 SQL Server 獨立執行個體的電腦](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_dropserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   

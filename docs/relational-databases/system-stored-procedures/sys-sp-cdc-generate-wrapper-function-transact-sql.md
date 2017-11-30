@@ -26,20 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbadba2128bad803f56d3b1665332c48eb999beb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b32fc0848943814052a72e4b3f91eb4f5556a4bc
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用的異動資料擷取查詢函數產生可建立包裝函數的指令碼。 產生之包裝函數所支援的 API 可讓您將查詢間隔指定為日期時間間隔。 這樣可讓此函數方便用於許多倉儲應用程式中，包括由使用異動資料擷取技術來判斷累加式載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝設計師所開發的應用程式。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -112,7 +108,7 @@ CLOSE #hfunctions;
 DEALLOCATE #hfunctions;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [異動資料擷取預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [異動資料擷取 &#40;SSIS &#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   

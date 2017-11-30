@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0092bd724345f8e70faa9c84636d56206ecdcc8b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: eb402624e8b25f43a1969a91df85cfe5fa85d9af
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,10 +39,6 @@ ms.lasthandoff: 11/21/2017
   
 > [!CAUTION]  
 >  變更物件名稱的任何部分，可能破壞指令碼和預存程序。 我們建議您不要使用陳述式來重新命名預存程序、觸發程序、使用者定義函數或檢視；相反地，請卸除物件，再利用新名稱來重新建立它。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -202,10 +198,6 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ### <a name="f-renaming-statistics"></a>F. 重新命名統計資料  
  下列範例會建立名為 contactMail1 統計資料物件，然後會重新命名統計資料為 NewContact 使用 sp_rename。 當重新命名統計資料時，必須以 schema.table.statistics_name 格式指定物件。  
   
-||  
-|-|  
-|**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。|  
-  
 ```  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
@@ -215,7 +207,7 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

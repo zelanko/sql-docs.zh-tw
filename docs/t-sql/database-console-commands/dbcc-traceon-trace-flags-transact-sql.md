@@ -1,7 +1,7 @@
 ---
 title: "追蹤旗標 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 44c2252590b6fdb9ffdbe895830eb49328c28e6a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e0315da3d42331296f78cf977c7fd36cdff32853
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-追蹤旗標 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,10 @@ ms.lasthandoff: 11/17/2017
 |**692**|停用快速插入大量資料載入堆積或叢集的索引時。 啟動[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，利用最低限度記錄，資料庫處於簡單或大量記錄的復原模式，來最佳化記錄插入至新頁面插入效能時的預設會啟用快速的插入。 快速插入，每個大量載入批次會擷取新 extent(s) 略過具有可用空間，以將插入的效能最佳化的現有範圍配置查閱。<br /><br /> 快速插入，大量載入小批次大小可能會導致增加物件因此最好是使用每個批次大 batchsize 完全填滿範圍所耗用的未使用空間。 如果增加 batchsize 不可行，這個 traceflag，有助於減少未使用的空間保留，但會犧牲效能。 <br /><br />**注意：**這個追蹤旗標適用於[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]RTM 和更高版本的組建。<br /><br />**範圍**： 全域或工作階段|
 |**715**|可讓具有非叢集索引的堆積內的大量載入作業的資料表鎖定。 當啟用這個追蹤旗標時，大量載入作業會取得大量複製資料到資料表時，大量更新 (BU) 鎖定。 大量更新 (BU) 鎖定允許多個執行緒將資料同時大量載入到相同資料表中，同時防止未大量載入資料存取資料表的其他處理序。<br /><br />此行為是類似當使用者明確地指定 TABLOCK 提示時執行大量載入，或當 sp_tableoption 資料表鎖定大量載入指定的資料表已啟用。 不過，當啟用這個追蹤旗標時，這個行為會變得不需要變更任何查詢或資料庫的預設值。<br /><br />**範圍：**全域或工作階段|
 |**834**|使用 Microsoft Windows 大型分頁配置之緩衝集區。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/3210239)。<br /><br />**注意：**如果您使用的資料行存放區索引功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，我們不建議開啟追蹤旗標 834。<br /><br />**範圍**： 全域只|
+|**845**|啟用鎖定頁面的標準 Sku 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時的服務帳戶、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有鎖定頁面中啟用記憶體特殊權限。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/970070)和文件頁面上的[伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]預設會啟用此行為的標準 Sku 和追蹤旗標 845 不可用。<br /><br />**範圍**： 全域只|
 |**902**|安裝累計更新或 Service Pack 時，會略過執行資料庫升級指令碼。 如果您在指令碼升級模式時發生錯誤，建議的進一步指引，請連絡 Microsoft SQL 客戶服務及支援 (CSS)。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2163980)。<br /><br />**警告：**這個追蹤旗標用來在指令碼升級模式下，疑難排解失敗的更新並不支援在生產環境中連續執行。 資料庫升級指令碼順利執行完整安裝累計更新和 Service Pack 的需求。 不這樣可能會導致未預期的問題與您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。<br /><br />**範圍**： 全域只|
-|**1117**|檔案群組中的檔案已到達的自動成長臨界值時的檔案群組中的所有檔案會都成長。<br /><br />**注意：**開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]這種行為由 ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 選項所控制，所以追蹤旗標 1117年沒有任何作用。 如需詳細資訊，請參閱[ALTER DATABASE 檔案及檔案群組選項 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).<br /><br />**範圍：**全域只|
-|**1118**|移除伺服器上大部分的單一頁面配置，以減少 SGAM 頁面的競爭情況。 建立新的物件時，根據預設前, 八個分頁被配置不同的範圍 （混合範圍）。 之後若需要更多頁面時，將會從相同的範圍 (統一範圍) 加以配置。 SGAM 頁面可用以追蹤這些混合範圍，因此若出現多個混合頁面配置，它會很快地成為瓶頸。 這個追蹤旗標會在建立新物件時，從相同的範圍配置所有八個頁面，進而將掃描 SGAM 頁面的需求降到最低。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/328551)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]這種行為由 ALTER DATABASE 的 SET MIXED_PAGE_ALLOCATION 選項所控制，所以追蹤旗標 1118年沒有任何作用。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。<br /><br />**範圍：**全域只|  
+|**1117**|檔案群組中的檔案已到達的自動成長臨界值時的檔案群組中的所有檔案會都成長。<br /><br />**注意：**開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]這種行為由 ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 選項和追蹤旗標 1117年沒有任何作用。 如需詳細資訊，請參閱[ALTER DATABASE 檔案及檔案群組選項 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).<br /><br />**範圍：**全域只|
+|**1118**|移除伺服器上大部分的單一頁面配置，以減少 SGAM 頁面的競爭情況。 建立新的物件時，根據預設前, 八個分頁被配置不同的範圍 （混合範圍）。 之後若需要更多頁面時，將會從相同的範圍 (統一範圍) 加以配置。 SGAM 頁面可用以追蹤這些混合範圍，因此若出現多個混合頁面配置，它會很快地成為瓶頸。 這個追蹤旗標會在建立新物件時，從相同的範圍配置所有八個頁面，進而將掃描 SGAM 頁面的需求降到最低。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/328551)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]這種行為由 ALTER DATABASE 的 SET MIXED_PAGE_ALLOCATION 選項和追蹤旗標 1118年沒有任何作用。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。<br /><br />**範圍：**全域只|  
 |**1204**|傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/832524)。<br /><br />**範圍：**全域只|  
 |**1211**|停用以記憶體壓力或鎖定個數為基礎的鎖定擴大。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 不會將資料列或頁面鎖定擴大到資料表鎖定。<br /><br />使用這個追蹤旗標可能產生大量鎖定。 這可能會降低 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的效能，或因記憶體不足而造成 1204 錯誤 (無法配置鎖定資源)。<br /><br />如果同時設定了追蹤旗標 1211 和 1224，將會優先採用 1211。 但是，由於追蹤旗標 1211 會在每一個情況下防止鎖定擴大 (即使是在記憶體壓力下)，所以建議您最好使用 1224。 如此可避免在使用許多鎖定時，發生「鎖定不足」錯誤。<br /><br />**範圍**： 全域或工作階段|  
 |**1222**|以不符合任何 XSD 結構描述的 XML 格式來傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。<br /><br />**範圍**： 全域只|  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 |**2312**|可讓您將查詢最佳化工具基數估計模型設定為[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本而定，資料庫的相容性層級。 如需詳細資訊，請參閱[Microsoft 支援文章](http://support.microsoft.com/kb/2801413)。<br /><br />從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，才能完成這項作業在查詢層級中，加入 USE 提示 'FORCE_DEFAULT_CARDINALITY_ESTIMATION'[查詢提示](../../t-sql/queries/hints-transact-sql-query.md)而不是使用這個追蹤旗標。<br /><br />**範圍**： 全域或工作階段或查詢| 
 |**2335**|會導致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]假設在查詢最佳化期間是使用固定的記憶體數量。 它不會限制記憶體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]授與執行查詢。 設定的記憶體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]仍然會依資料快取、 執行查詢和其他取用者使用。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2413549)。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**範圍**： 全域或工作階段或查詢|
 |**2340**|會導致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不想使用排序作業 （批次排序） 時產生計劃，最佳化巢狀的迴圈聯結。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2009160)。<br /><br />從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，才能完成這項作業在查詢層級中，加入 USE 提示 'DISABLE_OPTIMIZED_NESTED_LOOP'[查詢提示](../../t-sql/queries/hints-transact-sql-query.md)而不是使用這個追蹤旗標。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**範圍**： 全域或工作階段或查詢|
-|**2371**|將固定的自動更新統計資料閾值變更為動態的自動更新統計資料的臨界值。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2754171)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]這種行為由引擎和追蹤旗標 2371年沒有任何作用。<br /><br />**範圍**： 全域只|
+|**2371**|將固定的自動更新統計資料閾值變更為動態的自動更新統計資料的臨界值。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2754171)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]下方和 [資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)130，此行為由引擎所控制，追蹤旗標 2371年沒有作用。<br /><br />**範圍**： 全域只|
 |**2389**|啟用自動產生遞增索引鍵 （長條圖修正） 快速統計的資料。 如果設定追蹤旗標 2389年，前端統計資料資料行標示為遞增，將會在查詢編譯時間調整用來預估基數的長條圖。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**注意：** CE 120 版或更新將不會套用這個追蹤旗標。 請改用追蹤旗標 4139。<br /><br />**範圍**： 全域或工作階段或查詢|
 |**2390**|啟用自動產生的快速統計資料，以遞增或未知的機碼 （長條圖修正）。 如果設定追蹤旗標 2390年，前端統計資料資料行標示為遞增或不明，將會在查詢編譯時間調整用來預估基數的長條圖。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**注意：** CE 120 版或更新將不會套用這個追蹤旗標。 請改用追蹤旗標 4139。<br /><br />**範圍**： 全域或工作階段或查詢|
 |**2453**|可讓資料表變數，以足夠的資料列的數目變更時觸發重新編譯。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2952444)。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**範圍**： 全域或工作階段或查詢|
@@ -174,7 +175,7 @@ DBCC TRACEON (3205,-1);
 SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137)
 ``` 
  
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)  
 [DBCC OUTPUTBUFFER &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md)  

@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4fb609f5e74c0c9639eb8295ed4e28f1ea67a70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2b14cffaa6984e45345bd5435ea8af29a8c0f77b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="systracesubclassvalues-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,6 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用擴充事件目錄檢視。  
   
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
-  
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|追蹤事件的識別碼。 這個參數也是**sys.trace_events**目錄檢視。|  
@@ -54,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [物件目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.traces &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
  [sys.trace_categories &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   

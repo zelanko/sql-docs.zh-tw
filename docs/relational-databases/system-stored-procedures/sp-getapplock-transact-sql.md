@@ -24,20 +24,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4cd7d4f4b6ff4550a65e8dca31516b44bc38cc4e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c7b65a7330a1b87e7ee81a4f76a715038cd3d6d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   設定應用程式資源的鎖定。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -171,7 +167,7 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [APPLOCK_MODE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;TRANSACT-SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_releaseapplock &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
