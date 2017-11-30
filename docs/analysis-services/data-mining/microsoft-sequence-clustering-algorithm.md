@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
  這個演算法在許多方面與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法很相似。 不過， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法會尋找時序中路徑相似的案例群集，而非包含相似屬性的案例群集。  
   
 ## <a name="example"></a>範例  
- [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] web site collects information about what pages site users visit, and about the order in which the pages are visited. 因為該公司提供線上訂購，客戶必須登入站台。 這樣為公司提供每一個客戶設定檔的點選資訊。 在此資料上使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法，公司可以找出具有類似點選模式或時序的客戶群組或群集。 然後，公司可以使用這些群集來分析使用者在整個網站的移動情形、識別哪些頁面與某項特定產品最有關係，並預測下次最可能再造訪哪些頁面。  
+ [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 網站會對使用者造訪的網頁及造訪順序收集相關資訊。 因為該公司提供線上訂購，客戶必須登入站台。 這樣為公司提供每一個客戶設定檔的點選資訊。 在此資料上使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法，公司可以找出具有類似點選模式或時序的客戶群組或群集。 然後，公司可以使用這些群集來分析使用者在整個網站的移動情形、識別哪些頁面與某項特定產品最有關係，並預測下次最可能再造訪哪些頁面。  
   
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是一種混合式演算法，它結合了群集技術與 Markov 鏈結分析，可識別群集及其時序。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法的其中一項特徵就是它會使用時序資料。 這項資料通常代表資料集內的一系列事件或各狀態之間的轉換，例如特定使用者的一系列產品採購或網頁點選。 此演算法會檢查所有轉換的機率並測量資料集內所有可能時序之間的差異或距離，以便判斷哪些時序最適合當做群集的輸入使用。 在此演算法已經建立候選時序的清單之後，它就會使用此時序資訊當做使用 EM (Expectation Maximization) 之叢集的輸入。  

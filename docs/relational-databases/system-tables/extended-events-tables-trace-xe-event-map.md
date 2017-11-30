@@ -24,20 +24,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 194c5ac43bc24361b608b85b9aa68cc8f64b2461
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 53de5be9963850d073e2b223058085805928e360
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="extended-events-tables---tracexeeventmap"></a>擴充事件目錄資料表-trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對對應至 SQL 追蹤事件類別的每個「擴充事件」事件包含一個資料列。 此資料表會儲存在 master 資料庫的 sys 結構描述中。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
@@ -68,7 +64,7 @@ WHERE xe.trace_event_id IS NULL
   
  在先前查詢中，傳回的事件類別大部分都是稽核相關的。 我們建議您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 進行稽核。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 會使用擴充事件來協助建立稽核。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)  
   
   

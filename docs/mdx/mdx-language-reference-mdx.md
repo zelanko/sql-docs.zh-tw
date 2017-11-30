@@ -2,9 +2,12 @@
 title: "MDX 語言參考 (MDX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -18,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b6e6fdd3bad6d9a52a6ee8aac8b44a69ef65b374
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1bae9b4caca24e385f632e66040c7ed8b2a56934
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-language-reference-mdx"></a>MDX 語言參考 (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   多維度運算式 (MDX) 的參考文件集分成多個章節，如下表所述：  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
 |[MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)|描述 MDX 語言中可用的函數。|  
 |[MDX 保留字](../mdx/mdx-reserved-words.md)|提供由 MDX 語言使用的保留字清單 。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [多維度運算式 &#40;MDX &#41;參考](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
