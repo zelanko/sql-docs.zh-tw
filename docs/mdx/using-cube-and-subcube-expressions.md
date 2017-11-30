@@ -2,9 +2,12 @@
 title: "使用 Cube 及 Subcube 運算式 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -21,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6194e0cc053c66fc194d7f8ab0724ed75a8f61f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e8e4ee0d95aa58acb6c26c325b31303059b19818
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="using-cube-and-subcube-expressions"></a>使用 Cube 及 Subcube 運算式
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   您會以多維度運算式 (MDX) 陳述式使用 Cube 及 Subcube 運算式，以定義、操作或擷取 Cube 或 Subcube 的資料。  
   
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/09/2017
   
  Subcube 識別碼會顯示為*Subcube_Name*。 的形式出現在 MDX 陳述式的標記法描述內。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [基本 MDX 查詢 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
  [在 MDX &#40; 中建立 SubcubeMDX &#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
  [建立 SUBCUBE 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-create-subcube.md)   

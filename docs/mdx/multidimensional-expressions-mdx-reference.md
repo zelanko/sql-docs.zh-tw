@@ -2,9 +2,12 @@
 title: "多維度運算式 (MDX) 參考 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -22,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a7fbf376b5fd02bf0e8fc690377411a7c05cce86
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aa471c4f2896cacd319cd4f6c1dd8a3bf6d2518a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>多維度運算式 (MDX) 參考
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
     
 ## <a name="in-this-section"></a>本節內容  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
 |[MDX 語法元素 &#40;MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)|描述 MDX 語言中 MDX 運算式、陳述式及指令碼可用的不同語法元素。|  
 |[MDX 語言參考 &#40;MDX &#41;](../mdx/mdx-language-reference-mdx.md)|描述定義 MDX 語言的陳述式、運算子及函數。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [使用 MDX 查詢多維度資料](../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)   
  [Analysis Services 指令碼語言 &#40;ASSL XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [從分析資料來源擷取資料](../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
