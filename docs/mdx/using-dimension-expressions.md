@@ -2,9 +2,12 @@
 title: "使用維度運算式 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -18,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c48cf34963f4fb496537cf1573cd4974949a672e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c3cf58e4955cf91df96ee220b1eda9d5b9ecb69d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="using-dimension-expressions"></a>使用維度運算式
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   當您在多維度運算式 (MDX) 中傳遞參數給函數時，您通常會使用維度和階層運算式來傳回階層中的成員、集合或 tuple。  
   
@@ -69,7 +72,7 @@ ms.lasthandoff: 11/09/2017
   
  階層識別碼會以*Dimension_Name**。**Hierarchy_Name*中用來描述 MDX 陳述式的 BNF 標記法。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [運算式 &#40;MDX &#41;](../mdx/expressions-mdx.md)  
   
   

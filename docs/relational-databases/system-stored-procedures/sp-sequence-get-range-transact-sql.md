@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2b2dc833e0d80aecc82e4d2382b33f1b93df193
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2af750abc8715d2bcf2240ef08f765c6d2d7bff3
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/21/2017
   從順序物件傳回順序值的範圍。 順序物件會產生及發出要求的值數目，並將範圍相關的中繼資料提供給應用程式。  
   
  有關序號的詳細資訊，請參閱[序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -196,7 +192,7 @@ Console.WriteLine(firstValueInRange.Value);
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立順序 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
  [ALTER SEQUENCE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [卸除順序 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   

@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5762af5115dd65b819bc74c3585cfc8275a516b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ab4c14769dc51c6d5b97a6ad2fe6f0cb06fad4e0
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -107,10 +107,13 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>範例  
   
 ### <a name="example-1"></a>範例 1  
- 下列範例會使用 JSON 屬性的值`town`和`state`查詢結果中。 因為**JSON_VALUE**來源，結果的排序次序的定序取決於定序會保留`jsonInfo`資料行。  
+ 下列範例會使用 JSON 屬性的值`town`和`state`查詢結果中。 因為**JSON_VALUE**來源，結果的排序次序的定序取決於定序會保留`jsonInfo`資料行。 
+
+> [!NOTE]
+> (這個範例假設資料表名為`Person.Person`包含`jsonInfo`JSON 文字資料行及此資料行的先前在討論 lax 模式和 strict 模式中顯示的結構。 在 AdventureWorks 範例資料庫中，`Person`資料表實際上不包含`jsonInfo`資料行。)
   
 ```sql  
-SELECT FirstName,LastName,
+SELECT FirstName, LastName,
  JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
 FROM Person.Person
 WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'
@@ -143,7 +146,7 @@ CREATE TABLE dbo.Store
  )
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [JSON 路徑運算式 &#40;SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON 資料 &#40;SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
   

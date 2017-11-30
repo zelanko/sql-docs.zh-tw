@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b6a0b15ff483647a3c102d481d8300ff460ce8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3920b0bc483dffb115211a0fe8837bd1bdb0d11e
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,6 @@ ms.lasthandoff: 11/21/2017
   將對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的資料庫使用者移轉為具有密碼之自主資料庫使用者。 在自主資料庫中，使用這個程序來移除已安裝資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的相依性。 **sp_migrate_user_to_contained**會分隔使用者與原始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入，以便設定，例如密碼和預設語言可以分別管理自主的資料庫。 **sp_migrate_user_to_contained**之前將自主的資料庫移到另一個執行個體，可以使用[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]消除相依性，在目前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的登入。  
   
  **請注意**此程序僅用於自主資料庫。 如需相關資訊，請參閱 [自主資料庫](../../relational-databases/databases/contained-databases.md)。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
 ## <a name="syntax"></a>語法  
   
@@ -123,7 +119,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [自主資料庫](../../relational-databases/databases/contained-databases.md)  
   

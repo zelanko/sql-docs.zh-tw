@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ede97a8012bf4dbdbd312f7ae5179bb794378c1e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cb5c73dafd26f9ddd4da885b77c8649df13c3d2d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/17/2017
   針對與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Common Language Runtime (CLR) 整合 (包括主控 CLR 的版本和狀態) 相關的每個屬性各傳回一個資料列。 藉由執行初始化主控的 CLR [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)， [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)，或[DROP ASSEMBLY](../../t-sql/statements/drop-assembly-transact-sql.md)陳述式，或藉由執行任何 CLR 常式、 類型或觸發程序。 **Sys.dm_clr_properties**檢視不會指定是否已在伺服器上啟用使用者 CLR 程式碼的執行。 啟用使用者 CLR 程式碼的執行是利用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)預存程序與[clr 已啟用](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)選項設定為 1。  
   
  **Sys.dm_clr_properties**檢視包含**名稱**和**值**資料行。 這個檢視的每個資料列提供了有關主控 CLR 屬性的詳細資料。 請使用此檢視來收集有關主控 CLR 的資訊，例如 CLR 安裝目錄、CLR 版本，以及主控 CLR 目前的狀態。 此檢視可以幫助您判斷 CLR 整合程式碼是否因為伺服器電腦的 CLR 安裝發生問題而無法運作。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
@@ -91,7 +87,7 @@ SELECT name, value
 FROM sys.dm_clr_properties;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Common Language Runtime 相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   

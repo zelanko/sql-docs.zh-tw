@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4bf58c072369f3c91e721bcefd3d3af9b5dbc06b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2786493aeb75402eae5d7e91458e97436f3435a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/17/2017
   顯示資料庫中使用的任何未自主物件。 未自主物件為跨越自主資料庫中之資料庫界限的物件。 這個檢視可從自主資料庫以及非自主資料庫存取。 Sys.dm_db_uncontained_entities 是空的如果您的資料庫不使用任何未自主的實體。  
   
  如果模組多次跨越資料庫界限，只會回報其第一次已發現的跨越。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
 ||||  
 |-|-|-|  
@@ -94,7 +90,7 @@ LEFT JOIN sys.objects AS SO
     ON UE.major_id = SO.object_id;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [自主資料庫](../../relational-databases/databases/contained-databases.md)  
   
   

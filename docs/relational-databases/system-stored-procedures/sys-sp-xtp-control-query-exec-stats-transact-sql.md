@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2bf5afe622a5d21d5b3bacc1be819f0b120719b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f4bcc1bb453783a38c4b23e6526de1a804bde8f1
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +36,6 @@ ms.lasthandoff: 11/17/2017
  啟用統計資料收集時，效能會降低。 如果您只需要對一個或少數幾個原生編譯的預存程序進行疑難排解，可以只針對這幾個原生編譯的預存程序啟用統計資料收集。  
   
  若要啟用統計資料集合程序層級的所有原生編譯的預存程序，請參閱[sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
-  
-|**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[新版](http://go.microsoft.com/fwlink/p/?LinkId=299658))。 |  
   
 ## <a name="syntax"></a>語法  
   
@@ -88,7 +86,7 @@ EXEC sp_xtp_control_query_exec_stats @database_id = 5,
 SELECT @c AS 'collection status';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

@@ -2,9 +2,12 @@
 title: "使用字串函數 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -16,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5838cb18091adab8ee4e8b2c0a43042001c530dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a1602c44dfb2effa8e6ccc42e128da4dd4e424f2
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="using-string-functions"></a>使用字串函數
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   多維度運算式 (MDX) 中每個物件幾乎都可以使用字串函數。 在預存程序中，字串函數主要用來將物件轉換為字串表示法。 您也可以使用字串函數在物件上評估字串運算式，以傳回一個值。  
   
@@ -107,7 +110,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  **StrToMember**和**StrToSet**函式應該謹慎使用。 因為如果在計算定義內使用它們，可能會產生極差的查詢效能。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [產生 &#40;MDX &#41;](../mdx/generate-mdx.md)   
  [名稱為 &#40;MDX &#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX &#41;](../mdx/uniquename-mdx.md)   

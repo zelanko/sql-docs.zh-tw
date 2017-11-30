@@ -38,11 +38,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5efcf8fb5b5169bbf03390b02ddc068bf6a30d25
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: be9da8f4e10f299844f5ea6895f189c5c4fe4c3c
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +52,6 @@ ms.lasthandoff: 11/17/2017
  CONTAINSTABLE 會用於相同類型的相符項目做為[CONTAINS 述詞](../../t-sql/queries/contains-transact-sql.md)，並為包含使用相同的搜尋條件。  
   
  和 CONTAINS 不同的是，使用 CONTAINSTABLE 的查詢會傳回每個資料列的相關次序值 (RANK) 和全文檢索索引鍵 (KEY)。  如需所支援的全文檢索搜尋形式的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)。  
-  
-||  
-|-|  
-|**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[新版](http://go.microsoft.com/fwlink/p/?LinkId=299658))， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([某些區域處於預覽](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -288,7 +284,7 @@ GO
 > [!NOTE]  
 >  語言*language_term* argumentis 不需要使用*top_n_by_rank。*  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [限制 RANK 的搜索結果](../../relational-databases/search/limit-search-results-with-rank.md)   
  [使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)   
  [建立全文檢索搜尋查詢 &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   

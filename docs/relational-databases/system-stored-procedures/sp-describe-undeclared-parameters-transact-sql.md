@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9168e7a06ce377c6c1d47456197f8e513b2b58fb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bae5aebe0afe1861251628bd0eb447ab97b226dd
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -34,10 +34,6 @@ ms.lasthandoff: 11/21/2017
   傳回結果集，其中包含有關中未宣告之參數的中繼資料[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 會考量用於每個參數 **@tsql** 批次，但未在宣告 **@params** 。 傳回的結果集中，針對每一個這類參數包含一個資料列，內含該參數的推算類型資訊。 程序會傳回空的結果集如果 **@tsql** 輸入批次沒有任何參數，除了中所宣告 **@params** 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](http://msdn.microsoft.com/library/bb500435.aspx))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
   
 ## <a name="syntax"></a>語法  
   
@@ -280,7 +276,7 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [sp_describe_first_result_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

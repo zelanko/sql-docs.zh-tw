@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a7147621db09dfc1c29077f82cc3eadb39b3c5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85b7db39b03913b735ebde53571675fd9235a7e8
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,6 @@ ms.lasthandoff: 11/17/2017
  若要查看等候傳送的訊息數和其於郵件佇列中停留的時間，請使用這份檢視。 通常數目**未傳送**訊息將會很低。 在正常作業期間進行基準測試，可判斷作業之訊息佇列中的合理訊息數。  
   
  若要查看 Database Mail 處理的所有訊息，請使用[sysmail_allitems &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). 若要查看只失敗狀態訊息，請使用[sysmail_faileditems &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). 若要查看已傳送的訊息，請使用[sysmail_sentitems &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  

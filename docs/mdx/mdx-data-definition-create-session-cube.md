@@ -2,9 +2,12 @@
 title: "CREATE SESSION CUBE 陳述式 (MDX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -26,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7d6874baf083252b258e367887f0c696a1f02ba7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ab4dc73881d8c29586b4f70a2b89f68a00263abd
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX 資料定義-建立工作階段 CUBE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   根據現有的伺服器 Cube，建立並擴展工作階段 Cube。 工作階段 Cube 只有在目前工作階段中才可見，您無法從其他任何工作階段瀏覽或查詢。 關閉工作階段時就會隱含刪除工作階段 Cube。  
   
@@ -215,7 +218,7 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
    )  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [MDX 資料定義陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [建立 GLOBAL CUBE 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   

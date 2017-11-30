@@ -22,20 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7619be5f36b1086609d4950ad0dad365d60a5a95
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dcd807fca603c8ecb47a8333f2dcc27b52302bad
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="xpsprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   將字串輸出參數中的一系列字元和值加以格式化並且儲存。 每一個格式引數都會取代成對應的引數。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +50,7 @@ xp_sprintf { string OUTPUT , format }
  OUTPUT  
  當指定這個引數時，它會將變數值放在輸出參數中。  
   
- *格式*  
+ *<格式>*  
  格式字元字串，其中含有預留位置*引數*值，類似於 C 語言支援的**sprintf**函式。 目前只支援 %s 格式引數。  
   
  *引數*  
@@ -74,7 +70,7 @@ xp_sprintf { string OUTPUT , format }
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [一般擴充預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sscanf &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  

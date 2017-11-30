@@ -4,7 +4,7 @@ description: "本主題包含的版本資訊，並支援在 Linux 上執行的 S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/25/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: e7fb6ac444679477c6cbc0b66c59b7ea1c9775f1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
-ms.translationtype: MT
+ms.openlocfilehash: f625cbf53c25dd097efb6619a47069be7873320f
+ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
 
@@ -51,14 +51,11 @@ ms.lasthandoff: 11/20/2017
 
 | 版本 | Version | 發行日期 |
 |-----|-----|-----|
+| [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <A id="CU1"></a>累計更新 1 (第 2017 年 10 月)
-
-這是 SQL Server 2017 的累計更新 1 (CU1) 版本。 此版本的 SQL Server 引擎版本是 14.0.3006.16。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634)。
-
-### <a name="installation"></a>安裝
+## <a name="how-to-install-cumulative-updates"></a>如何安裝累計更新
 
 如果您已設定的累計更新儲存機制，您會收到 SQL Server 封裝的最新累積更新時執行的新安裝。 累計更新儲存機制是所有 SQL Server on Linux 的封裝安裝發行項的預設值。 如需儲存機制設定的詳細資訊，請參閱[來源儲存機制](sql-server-linux-setup.md#repositories)。
 
@@ -68,6 +65,24 @@ ms.lasthandoff: 11/20/2017
 - [安裝全文檢索搜尋的套件](sql-server-linux-setup-full-text-search.md)
 - [安裝 SQL Server 代理程式套件](sql-server-linux-setup-sql-agent.md)
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
+
+## <A id="CU2"></a>累計更新 2 (第 2017 年 11 月)
+
+這是 SQL Server 2017 的累計更新 2 (CU2) 版本。 此版本的 SQL Server 引擎版本是 14.0.3008.27。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)。
+
+### <a name="package-details"></a>封裝詳細資料
+
+手動或離線的封裝安裝，您可以下載 RPM 和 Debian 封裝與下表中的資訊：
+
+| 封裝 | 封裝版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.3008.27-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm)</br>[SSIS 封裝](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.3008.27-1 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 封裝 | 14.0.3008.27-1 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[SQL Server Agent Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[SSIS 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <A id="CU1"></a>累計更新 1 (第 2017 年 10 月)
+
+這是 SQL Server 2017 的累計更新 1 (CU1) 版本。 此版本的 SQL Server 引擎版本是 14.0.3006.16。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634)。
 
 ### <a name="package-details"></a>封裝詳細資料
 

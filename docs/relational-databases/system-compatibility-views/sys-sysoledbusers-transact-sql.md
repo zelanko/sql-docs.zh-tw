@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cddf1bce487b79892d2efcc0478f3f6c6d00c398
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b711395050bca928f018215eefd953f35389060f
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,6 @@ ms.lasthandoff: 11/17/2017
   
  針對指定連結伺服器的每個使用者和密碼對應，各包含一個資料列。 **sysoledbusers**會儲存在**主要**資料庫。  
   
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
-  
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|伺服器的安全性識別碼 (SID)。|  
@@ -54,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |**status**|**smallint**|如果是 1，則對應應該使用使用者的認證。|  
 |**changedate**|**datetime**|上次變更對應資訊的日期。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

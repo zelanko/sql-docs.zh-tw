@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95933929fa649826db77771cba137499f1df52b3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,6 @@ ms.lasthandoff: 11/17/2017
  CLR 整合 Managed 資料庫物件有多種類型。 如需這些物件的一般資訊，請參閱[利用 Common Language Runtime (CLR) 整合建置資料庫物件](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)。 執行這些物件時，每當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立**AppDomain** ，供其可以載入並執行必要的程式碼。 隔離等級**AppDomain**是其中一個**AppDomain**每個資料庫每個擁有者。 也就是使用者所擁有的所有 CLR 物件一律會都執行在同一個**AppDomain**每個資料庫 （如果使用者在不同資料庫中，CLR 資料庫物件會在不同的應用程式定義域中執行註冊 CLR 資料庫物件）。 **AppDomain**並不會終結，程式碼完成執行之後。 而會將它快取到記憶體中，以供日後執行使用。 這可改善效能。  
   
  如需詳細資訊，請參閱[應用程式定義域](http://go.microsoft.com/fwlink/p/?LinkId=299658)。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299659))。|  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
@@ -117,7 +113,7 @@ from sys.dm_clr_appdomains
 where appdomain_id = 15);  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [sys.dm_clr_loaded_assemblies &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Common Language Runtime 相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   

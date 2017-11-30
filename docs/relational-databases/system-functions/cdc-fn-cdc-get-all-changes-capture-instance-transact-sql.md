@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 523d6a9be5164ad77b32b9c012aefa7b1038217d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 111fab345e7679745e72ebe874dabcca3bed62fb
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,6 @@ ms.lasthandoff: 11/17/2017
   針對在指定之記錄序號 (LSN) 範圍內套用至來源資料表的每個變更，各傳回一個資料列。 如果來源資料列在間隔期間具有多個變更，就會在傳回的結果集中表示每個變更。 除了傳回變更資料以外，四個中繼資料資料行會提供讓您將變更套用至其他資料來源所需的資訊。 資料列篩選選項會管理結果集中傳回的中繼資料資料行以及資料列內容。 當您指定了 'all' 資料列篩選選項時，每個變更都剛好具有一個資料列來識別變更。 當您指定了 'all update old' 選項時，更新作業會表示成兩個資料列：其中一個資料列包含更新之前擷取資料行的值，而另一個資料列則包含更新之後擷取資料行的值。  
   
  當來源資料表啟用異動資料擷取時，就會建立此列舉函數。 函式名稱衍生自並採用格式**cdc.fn_cdc_get_all_changes_***capture_instance*其中*capture_instance*是擷取指定的值當來源資料表啟用異動資料擷取執行個體。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -114,7 +110,7 @@ SELECT * FROM cdc.fn_cdc_get_all_changes_HR_Department
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [cdc.fn_cdc_get_net_changes_&#60; capture_instance& &#62;&#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
  [sys.fn_cdc_map_time_to_lsn &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
  [sys.sp_cdc_get_ddl_history &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   

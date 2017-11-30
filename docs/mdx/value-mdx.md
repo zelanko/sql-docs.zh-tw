@@ -2,9 +2,12 @@
 title: "值 (MDX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ac0f17b4afd4205c2173ff756c736e44d8d0d3d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef31d83ce25ffe4cb8a8e6e6b9d1f156da897d2c
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="value-mdx"></a>Value (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   傳回查詢內容中與屬性階層目前成員交集之 Measures 維度的目前成員值。  
   
@@ -60,7 +63,7 @@ SELECT {[Date].[Calendar].[July 1, 2001]} ON 0
 from [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [MemberValue &#40;MDX &#41;](../mdx/membervalue-mdx.md)   
  [屬性 &#40;MDX &#41;](../mdx/properties-mdx.md)   
  [名稱為 &#40;MDX &#41;](../mdx/name-mdx.md)   

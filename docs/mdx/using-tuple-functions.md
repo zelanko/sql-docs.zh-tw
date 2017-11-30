@@ -2,9 +2,12 @@
 title: "使用 Tuple 函數 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -16,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4fdb557918f60f19eef47b79796e6f1f49ff1316
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6131dbf1be847ca738b896fee36f56cd438f4715
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="using-tuple-functions"></a>使用 Tuple 函數
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Tuple 函數可以擷取集合的 Tuple，或是解析 Tuple 的字串表示法來擷取 Tuple。  
   
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/09/2017
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [函式 &#40;MDX 語法 &#41;](../mdx/functions-mdx-syntax.md)   
  [使用成員函式](../mdx/using-member-functions.md)   
  [使用集合函式](../mdx/using-set-functions.md)  

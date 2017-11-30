@@ -22,20 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0327f7434458667490c0557a8a254accfcfe3bb6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 227cd0de3f89c7cbde4c5cb401edb60294a19940
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回包含資訊中包括的參數資料列集[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 **sp_batch_params**只會剖析指定的批次，並傳回內嵌的參數值的相關資訊。 它不會執行批次或修改執行環境。  
-  
-||  
-|-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -86,7 +82,7 @@ SET @SQLString =
 EXECUTE sp_batch_params @SQLString;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [執行預存程序](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [執行預存程序的如何主題 &#40; ODBC &#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
  [執行預存程序 &#40; OLE DB &#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
