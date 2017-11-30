@@ -1,5 +1,5 @@
 ---
-title: "圓形圖 （報表產生器及 SSRS） |Microsoft 文件"
+title: "圓形圖 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dfa24b2135c34e95dae65e0a6fee4bf5da6b3d16
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b7f623c58e745f8509f27adc21076c1b15d36f53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>圓形圖 (報表產生器及 SSRS)
-  圓形圖和環圈圖會將資料顯示為整體所佔的百分比。 圓形圖最常用於在群組之間進行比較。 圓形圖和環圈圖以及金字塔圖和漏斗圖是由一組所謂形狀圖的圖表所組成。 形狀圖沒有軸。 在形狀圖上放置數值欄位時，圖表會計算出每個值佔整體的百分比。 如需有關形狀圖的詳細資訊，請參閱[形狀圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
+  圓形圖和環圈圖會將資料顯示為整體所佔的百分比。 圓形圖最常用於在群組之間進行比較。 圓形圖和環圈圖以及金字塔圖和漏斗圖是由一組所謂形狀圖的圖表所組成。 形狀圖沒有軸。 在形狀圖上放置數值欄位時，圖表會計算出每個值佔整體的百分比。 如需形狀圖的詳細資訊，請參閱[形狀圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)。  
   
  下圖顯示的是包含百分比格式之資料標籤的立體圓形圖。  圖例會位於中間靠右。  
   
@@ -66,12 +65,12 @@ ms.lasthandoff: 08/09/2017
   
  ![圓形圖繪製樣式](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "圓形圖繪製樣式")  
   
- 如需詳細資訊，請參閱[將斜面、浮凸與紋理樣式加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
+ 如需詳細資訊，請參閱[將斜面、浮凸與紋理樣式加入圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>在圓形圖上顯示百分比值  
  圓形圖就像其他形狀圖一樣，可以表示整體的比例。 因此，將圓形圖標籤的格式設定為百分比相當常見。 為與其他圖表類型保持一致，圓形圖預設不顯示百分比標籤。 如需如何以百分比在圖表上顯示值的詳細資訊，請參閱 [在圓形圖上顯示百分比值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)。 如需如何在報表中將數字格式設定為百分比的詳細資訊，請參閱[格式化數字和日期 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
- ![圓形圖資料點標籤，以百分比](../../reporting-services/report-design/media/rs-piechartpercentages.gif "的圓形圖資料點標籤，以百分比表示")  
+ ![以資料點標籤來表示百分比的圓形圖](../../reporting-services/report-design/media/rs-piechartpercentages.gif "以資料點標籤來表示百分比的圓形圖")  
   
 ## <a name="preventing-overlapped-labels-on-a-pie-chart"></a>防止圓形圖上的標籤重疊  
  如果圓形圖上有許多資料點，資料標籤將會重疊。 有一些方式可以防止標籤重疊：  
@@ -91,14 +90,13 @@ ms.lasthandoff: 08/09/2017
   
 -   將小配量收集成補充的圓形圖。 第二個圓形圖不會顯示在設計工具中。 但是在報表處理期間，圖表會根據資料點的值，計算是否需要顯示另一個圓形圖。 如果需要，這些值會加入到另一個圓形圖中。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [在圓形圖外部顯示資料點標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [將小扇區收集圓形圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [圓形圖 &#40; 上顯示百分比值報表產生器及 SSRS &#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [在圓形圖上顯示百分比值 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [圖表 &#40; 上格式化圖例報表產生器及 SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [空白和 Null 資料點中圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   
   
-

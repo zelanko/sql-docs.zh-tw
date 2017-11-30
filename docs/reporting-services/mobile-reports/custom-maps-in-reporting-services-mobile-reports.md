@@ -1,31 +1,29 @@
 ---
-title: "Reporting Services 行動報表中的自訂地圖 |Microsoft 文件"
+title: "Reporting Services 行動報表中的自訂地圖 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 580594ae5766b31bb18cdefc5682bda8e3a5ee15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Reporting Services 行動報表中的自訂地圖
-SQL Server 行動報表發行工具中的地理對應定義格式，稱為*ESRI 形狀檔*。  
+SQL Server 行動報表發行工具的地理對應定義格式，稱為「ESRI 形狀檔」。  
   
-最初由私人公司設計，這是現在大部分 GIS 應用程式廣泛使用的半開放式格式。 配合這種格式，行動報表發行工具需要定義對應時，必須提供兩個檔案：  
+最初由私人公司設計，這是現在大部分 GIS 應用程式廣泛使用的半開放式格式。 為配合這種格式，在定義對應時，行動報表發行工具需要有下列兩個檔案：  
   
 - 用於圖形幾何的 .SHP 檔案  
 - 用於中繼資料的 .DBF 檔案  
@@ -39,7 +37,7 @@ SQL Server 行動報表發行工具中的地理對應定義格式，稱為*ESRI 
 ## <a name="technical-information"></a>技術資訊  
   
 - 官方規格︰ [http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
-- Wikipedia 形狀檔：[http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
+- Wikipedia 形狀檔： [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
   
 ## <a name="creating--editing-map-geometry"></a>建立及編輯對應幾何  
   
@@ -63,4 +61,3 @@ SQL Server 行動報表發行工具中的地理對應定義格式，稱為*ESRI 
   
   
   
-

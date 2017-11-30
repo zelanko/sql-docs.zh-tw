@@ -1,26 +1,24 @@
 ---
 title: "原生編譯的 T-SQL 模組支援的功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/12/2017
+ms.date: 10/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 09744996c2fddd8ca88570922a06783e5d9b04a9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>原生編譯的 T-SQL 模組支援的功能
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -195,8 +193,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   位元運算子 ~、&、| 和 ^  
 
 -   APPLY 運算子
-    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
-      從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，原生編譯模組支援 APPLY 運算子。
+    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
+      從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，原生編譯模組支援 APPLY 運算子。
 
 ##  <a name="bfncsp"></a> 原生編譯模組中的內建函數  
  記憶體最佳化資料表條件約束和原生編譯 T-SQL 模組支援下列函數。  
@@ -206,8 +204,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   日期函數：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
 
 -   字串函數：LEN、LTRIM、RTRIM 和 SUBSTRING。  
-    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
-      從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，也支援下列內建函數︰TRIM、TRANSLATE 及 CONCAT_WS。  
+    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
+      從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，也支援下列內建函式︰TRIM、TRANSLATE 及 CONCAT_WS。  
 
 -   Identity 函數：SCOPE_IDENTITY  
 
@@ -216,8 +214,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Uniqueidentifier 函數：NEWID 和 NEWSEQUENTIALID  
 
 -   JSON 函數  
-    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
-      從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，原生編譯模組支援 JSON 函數。
+    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
+      從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，原生編譯模組支援 JSON 函式。
 
 -   錯誤函數：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
 
@@ -307,6 +305,5 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [原生編譯預存程序的移轉問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
 
 

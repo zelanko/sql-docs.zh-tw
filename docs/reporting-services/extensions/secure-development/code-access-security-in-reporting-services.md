@@ -1,5 +1,5 @@
 ---
-title: "程式碼存取安全性 Reporting Services |Microsoft 文件"
+title: "Reporting Services 中的程式碼存取安全性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - code access security [Reporting Services]
@@ -20,23 +19,23 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: a815c0942c8d99d6747e0ffe9a83ea24551c6248
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: d34c2136e148bcd5297160f1776b13b86c343a7f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services 中的程式碼存取安全性
-  程式碼存取安全性是以下列核心概念為主：辨識項、程式碼群組與具名使用權限集合。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，報表管理員、報表設計師和報表伺服器元件都各自具有一個原則檔，其中針對自訂組件以及資料、傳遞、轉譯和安全性延伸模組設定了程式碼存取安全性。 下列各節將提供程式碼存取安全性的概觀。 如需詳細資訊涵蓋在本節的主題，請參閱 < 安全性原則模型 > [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文件。  
+  程式碼存取安全性是以下列核心概念為主：辨識項、程式碼群組與具名使用權限集合。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，報表管理員、報表設計師和報表伺服器元件都各自具有一個原則檔，其中針對自訂組件以及資料、傳遞、轉譯和安全性延伸模組設定了程式碼存取安全性。 下列各節將提供程式碼存取安全性的概觀。 如需本節中涵蓋之主題的詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文件中的＜安全性原則模型＞。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用程式碼存取安全性的原因是，雖然報表伺服器是以 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 技術為基礎，但是一般 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式與報表伺服器之間仍有大幅差異。 一般 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式不會執行使用者程式碼。 相反地，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]使用開放且可延伸的架構，可讓使用者使用的報表定義檔案進行程式設計**程式碼**的報表定義語言和開發專用的功能，以便用於報表的自訂組件的項目。 此外，開發人員可以設計和開發功能強大的延伸模組，以便強化報表伺服器的功能。 由於這項強大功能與彈性，因此產生了盡可能提供保護與安全性的需求。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用程式碼存取安全性的原因是，雖然報表伺服器是以 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 技術為基礎，但是一般 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式與報表伺服器之間仍有大幅差異。 一般 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式不會執行使用者程式碼。 反之，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用開放且可延伸的架構，允許使用者使用報表定義語言的 **Code** 項目針對報表定義檔案進行程式設計，以及在自訂組件中開發專用功能，以便用於報表中。 此外，開發人員可以設計和開發功能強大的延伸模組，以便強化報表伺服器的功能。 由於這項強大功能與彈性，因此產生了盡可能提供保護與安全性的需求。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 開發人員可以在報表中使用任何 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組件，而且能以原生方式呼叫所有部署至全域組件快取之組件的功能。 報表伺服器唯一可控制的事項就是要針對報表運算式和載入的自訂組件提供哪些權限。 在[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，自訂組件會獲得**Execute**-預設的權限。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 開發人員可以在報表中使用任何 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組件，而且能以原生方式呼叫所有部署至全域組件快取之組件的功能。 報表伺服器唯一可控制的事項就是要針對報表運算式和載入的自訂組件提供哪些權限。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，自訂組件預設會收到僅限**執行**的權限。  
   
 ## <a name="evidence"></a>辨識項  
  辨識項是指 Common Language Runtime (CLR) 用來決定程式碼組件之安全性原則的資訊。 辨識項會向執行階段指出程式碼具有特定特性。 常見的辨識項形式包括數位簽章和組件的位置。 不過，您也可以自行設計辨識項，以便表示對應用程式有意義的其他資訊。  
@@ -64,10 +63,10 @@ ms.lasthandoff: 08/12/2017
  您應該與系統管理員或應用程式部署專家一起判斷自訂組件或 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 延伸模組所需的程式碼存取安全性和程式碼群組類型。  
   
 ## <a name="named-permission-sets"></a>具名使用權限集合  
- 具名使用權限集合是指系統管理員可用來與程式碼群組建立關聯的權限集合。 大部分具名使用權限集合都至少包含一個權限、名稱和權限集合的描述。 系統管理員可以使用具名使用權限集合來建立或修改程式碼群組的安全性原則。 相同的具名使用權限集合可以與多個程式碼群組產生關聯。 CLR 會提供內建的具名使用權限集合。包括**Nothing**，**執行**，**網際網路**， **LocalIntranet**，**一切**，和**FullTrust**。  
+ 具名使用權限集合是指系統管理員可用來與程式碼群組建立關聯的權限集合。 大部分具名使用權限集合都至少包含一個權限、名稱和權限集合的描述。 系統管理員可以使用具名使用權限集合來建立或修改程式碼群組的安全性原則。 相同的具名使用權限集合可以與多個程式碼群組產生關聯。 CLR 提供了一些內建的具名使用權限集合，包括 **Nothing**、**Execution**、**Internet**、**LocalIntranet**、**Everything** 和 **FullTrust**。  
   
 > [!NOTE]  
->  中的自訂資料、 傳遞、 轉譯和安全性延伸模組[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]必須執行**FullTrust**權限集合。 請與系統管理員一起針對 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 延伸模組加入適當的程式碼群組和成員資格條件。  
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的自訂資料、傳遞、轉譯和安全性延伸模組必須在 **FullTrust** 權限集合底下執行。 請與系統管理員一起針對 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 延伸模組加入適當的程式碼群組和成員資格條件。  
   
  您可以將自己使用之自訂組件的自訂權限等級與報表產生關聯。 例如，如果您想要允許組件存取特定檔案，就可以建立具有特定檔案 I/O 存取權的具名使用權限集合，然後將該權限集合指派給程式碼群組。 下列權限集合會授與 MyFile.xml 檔的唯讀存取權：  
   
@@ -100,6 +99,6 @@ ms.lasthandoff: 08/12/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [安全開發 &#40;Reporting Services &#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+ [安全開發 &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "報表組件 （報表產生器及 SSRS） |Microsoft 文件"
+title: "報表組件 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10543"
+f1_keywords: "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 817f519ef87ae764f41634f467a554cbae04baed
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4b2b6d82d897af5f41163257bd129df1ef538ecd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>報表組件 (報表產生器及 SSRS)
   資料表、矩陣、圖表和影像等報表項目都可以當做 *「報表組件」*(Report Part) 發行。 報表組件是指已經個別發行至報表伺服器，而且可以在其他分頁報表中重複使用的分頁報表項目。 報表組件的副檔名為 .rsc。  
@@ -100,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="what-comes-with-a-report-part"></a>報表組件隨附的內容  
  當您將報表組件加入到報表時，您也會加入此組件運作所必須擁有的所有項目。 例如，顯示資料的任何物件都取決於資料集，也就是資料來源的查詢和連接。 它也有一個或多個參數。 相依的所有項目都是它的 *「相依性」*(Dependency)，而且當您將報表組件加入至報表時，所有相依性或其指標都隨附在報表組件中。 資料集和參數會列在您報表的 [報表資料] 窗格中。  
   
- 報表組件的資料集可能會內嵌在報表組件中，或者，它可能是報表組件所指向的個別、共用資料集。 如果資料集內嵌在報表組件中，您可以修改它。 如果是共用資料集，則它是您需要權限的個別物件。 如需詳細資訊大約共用和內嵌資料集，請參閱[報表資料集 &#40;SSRS &#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
+ 報表組件的資料集可能會內嵌在報表組件中，或者，它可能是報表組件所指向的個別、共用資料集。 如果資料集內嵌在報表組件中，您可以修改它。 如果是共用資料集，則它是您需要權限的個別物件。 如需共用和內嵌資料集的詳細資訊，請參閱[報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)。  
   
 ### <a name="resolving-naming-conflicts"></a>解決命名衝突  
  當您加入報表組件時，報表產生器會修正所有名稱衝突。 例如，如果您的報表中已經有一個 Chart1，然後又加入一個稱為 Chart1 的報表組件，報表產生器就會自動將新的報表組件重新命名為 Chart2。 如果您的報表中已經有一個 Dataset1，然後您又加入一個參考不同資料集 (也稱為 Dataset1) 的報表組件，報表產生器會將新的資料集重新命名為 Dataset2，並更新參考。  
@@ -146,10 +144,9 @@ ms.lasthandoff: 08/09/2017
   
  [檢查更新或關閉更新 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [疑難排解報表組件 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [管理報表組件](../../reporting-services/report-design/managing-report-parts.md)  
   
   
-

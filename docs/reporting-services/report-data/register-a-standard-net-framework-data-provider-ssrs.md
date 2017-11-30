@@ -1,5 +1,5 @@
 ---
-title: "註冊標準的.NET Framework Data Provider (SSRS) |Microsoft 文件"
+title: "註冊標準的 .NET Framework Data Provider (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/18/2017
 ms.prod: sql-server-2016
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - data retrieval [Reporting Services]
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 765da01c8f05b276e5f6e5cc4af55eb96fb5374c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a868e10ae26c69711a7ce3852e0f9ffe56dc3ae8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>註冊標準的 .NET Framework Data Provider (SSRS)
   若要使用協力廠商的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者來擷取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表資料集的資料，您必須在兩個位置部署並註冊 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者組件：報表撰寫用戶端與報表伺服器。 在報表撰寫用戶端上，您必須註冊資料提供者做為資料來源類型，並將其與查詢設計工具產生關聯。 然後您可以在建立報表資料集時，選取此資料提供者做為資料來源的類型。 相關聯的查詢設計工具便會開啟，協助您建立此資料來源類型的查詢。 在報表伺服器上，您必須註冊資料提供者，做為資料來源類型。 然後您可以處理使用此資料提供者，從資料來源擷取資料的已發行報表。  
   
- 協力廠商的資料提供者不一定會提供適用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組的所有功能。 如需詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。 若要了解擴充的功能。[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者，請參閱 [實作資料處理延伸模組](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)。  
+ 協力廠商的資料提供者不一定會提供適用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組的所有功能。 如需詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。 若要了解有關擴充 .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者，請參閱 [實作資料處理延伸模組](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)。  
   
  您需要管理員認證才能安裝與註冊資料提供者。  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>在報表伺服器上安裝資料提供者組件  
   
-1.  在您要使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的報表伺服器上，巡覽至 bin 目錄的預設位置。 報表伺服器 bin 目錄的預設位置是*\<磁碟機 >*: \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin。  
+1.  在您要使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的報表伺服器上，巡覽至 bin 目錄的預設位置。 報表伺服器 bin 目錄的預設位置是 \<磁碟機>:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin。  
   
 2.  將組件從您的臨時位置複製到報表伺服器的 bin 目錄。 或者，您可以將組件載入至全域組件快取 (GAC)。 如需詳細資訊，請參閱 MSDN [SDK 文件集中的＜](http://go.microsoft.com/fwlink/?linkid=63912) 使用組件和全域組件快取 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ＞。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在 bin 的 ReportServer 上層目錄中，製作 RSReportServer.config 檔的備份。  
   
-2.  開啟 RSReportServer.config。 您可以利用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或簡單的文字編輯器 (如 [記事本]) 開啟組態檔。  
+2.  開啟 RSReportServer.config。您可以利用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或簡單的文字編輯器 (如 [記事本]) 開啟組態檔。  
   
 3.  在 RSReportServer.config 檔中，找出 **Data** 元素。 在下列位置應該就會建立一個 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的項目：  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在 bin 的 ReportServer 上層目錄中，製作 rssrvpolicy.config 檔的備份副本。  
   
-2.  開啟 rssrvpolicy.config。 您可以利用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或簡單的文字編輯器 (如 [記事本]) 開啟組態檔。  
+2.  開啟 rssrvpolicy.config。您可以利用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或簡單的文字編輯器 (如 [記事本]) 開啟組態檔。  
   
 3.  在 rssrvpolicy.config 檔中，找出 **CodeGroup** 元素。  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>在報表設計師用戶端上安裝資料提供者組件  
   
-1.  在您要使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的報表設計師用戶端上，巡覽至 PrivateAssemblies 目錄的預設位置。 在 PrivateAssemblies 目錄的預設位置是*\<磁碟機 >*: \Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
+1.  在您要使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的報表設計師用戶端上，巡覽至 PrivateAssemblies 目錄的預設位置。 PrivateAssemblies 目錄的預設位置為 \<磁碟機>:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
   
 2.  將組件從您的臨時位置複製到報表設計師用戶端的 PrivateAssemblies 目錄。 或者，您可以將組件載入至全域組件快取 (GAC)。 如需詳細資訊，請參閱 MSDN [SDK 文件集中的＜](http://go.microsoft.com/fwlink/?linkid=63912) 使用組件和全域組件快取 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ＞。  
   
@@ -201,12 +201,12 @@ ms.lasthandoff: 08/09/2017
 ## <a name="platform-considerations"></a>平台考量  
  在 64 位元 (x64) 平台上， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會以 32 位元 WOW 模式執行。 當您在 x64 平台上撰寫報表時，您需要將 32 位元資料提供者安裝在報表撰寫用戶端上，才能預覽您的報表。 如果您在相同的系統上發行報表，您需要 x64 資料提供者，才能使用報表管理員檢視報表。  
   
- 對於以 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 為基礎的平台，不支援 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不支援以 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]為基礎的平台。  
   
  與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 一起安裝的資料處理延伸模組原始就必須針對每個平台編譯，而且必須安裝在正確的位置。 如果您要註冊自訂的資料提供者或標準的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者，則原始就需要針對適當的平台編譯，而且需要安裝在適當的位置。 如果您是在 32 位元平台上執行，資料提供者必須針對 32 位元平台編譯。 如果您是在 64 位元平台上執行，資料提供者則必須針對 64 位元平台編譯。 您無法在 64 位元平台上，使用以 64 位元介面包裝的 32 位元資料提供者。 如需有關資料提供者是否可以在已安裝的平台上運作的詳細資訊，請查閱您的協力廠商軟體。 如需資料提供者與平台支援的詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定和管理報表伺服器 &#40;SSRS 原生模式 &#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
+ [設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [實作資料處理延伸模組](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Reporting Services 中的程式碼存取安全性](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  

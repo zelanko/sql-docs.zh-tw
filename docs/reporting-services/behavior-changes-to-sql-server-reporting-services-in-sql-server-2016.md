@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Reporting Services SQL Server 2016 中的行為變更 |Microsoft 文件"
+title: "SQL Server 2016 中的 SQL Server Reporting Services 行為變更 | Microsoft Docs"
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -23,35 +23,32 @@ helpviewer_keywords:
 - initializing installations [Reporting Services]
 - behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: b97215eceda641e7478edb659e61298e43b00859
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b6b571ac0d96c2221e41234fb3134ddcc6380b08
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server Reporting Services SQL Server 2016 中的行為變更
+# <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 中的 SQL Server Reporting Services 行為變更
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-本主題描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的行為變更。 行為變更會影響功能的運作或互動 SQL Server 2016 中，相較於舊版的 SQL Server。  
+本主題描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的行為變更。 行為變更會影響 SQL Server 2016 中功能的運作或互動方式 (相較於舊版的 SQL Server)。  
 
 行為沒有任何變更。
 
 ## <a name="next-steps"></a>後續的步驟
 
-[Reporting Services 中最新消息](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
+[Reporting Services 的新功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
 [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
-[SQL Server Reporting Services SQL Server 2016 中已停止的功能](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
-[SQL Server Reporting Services SQL Server 2016 中的重大變更](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
+[SQL Server 2016 中 SQL Server Reporting Services 已停止的功能](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
+[SQL Server 2016 中的 SQL Server Reporting Services 重大變更](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

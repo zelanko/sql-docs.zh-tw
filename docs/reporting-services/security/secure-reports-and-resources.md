@@ -1,5 +1,5 @@
 ---
-title: "保護報表和資源 |Microsoft 文件"
+title: "保護報表和資源的安全 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f94e761021f97653e77eaf18a3825db869f8133e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-reports-and-resources"></a>保護報表和資源的安全
   您可以設定個別報表以及資源的安全性，來控制使用者必須對這些項目擁有的存取權程度。 依預設，只有屬於 **管理員** 內建群組成員的使用者才可以執行報表、檢視資源、修改屬性及刪除項目。 其他所有使用者都必須具有針對他們所建立的角色指派，好讓他們存取報表或資源。  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  報表會發行到報表伺服器或者提供給人使用，好讓報表參數值可以從網頁的 URL 加以控制。  
   
-3.  攻擊者建立的連結 web 網頁或報表伺服器在表單中指定參數的值"javascript:\<惡意指令碼 > 」 和傳送該連結給引誘攻擊中的其他人。  
+3.  攻擊者會建立與網頁或報表伺服器的連結，指定「javascript:\<這裡是惡意指令碼>」形式的參數值，並傳送該連結給引誘攻擊的某個人。  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>減少已發行之報表或文件中的超連結內指令碼資料隱碼攻擊  
  報表可以在報表項目或是部分報表項目的 Action 屬性值中包含內嵌超連結。 當處理報表時，超連結可以繫結至取自外部資料來源的資料。 當惡意使用者修改基礎資料時，超連結可能會遇到指令碼遭人利用的風險。 如果使用者在發行或匯出的報表中按一下連結，惡意指令碼就可能會執行。  
@@ -79,12 +78,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="securing-confidential-reports"></a>保護機密報表的安全  
  包含機密資訊的報表應該在資料存取層級受到保護，方法是要求使用者提供存取敏感性資料的認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 您也可以保護資料夾的安全，讓未經授權的使用者無法使用它。 如需詳細資訊，請參閱 [保護資料夾的安全](../../reporting-services/security/secure-folders.md)。  
   
-## <a name="see-also"></a>請參閱＜  
- [建立及管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [設定報表產生器存取](../../reporting-services/report-server/configure-report-builder-access.md)   
- [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [安全的共用的資料來源項目](../../reporting-services/security/secure-shared-data-source-items.md)   
- [將認證儲存在 Reporting Services 資料來源](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+## <a name="see-also"></a>另請參閱  
+ [建立和管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [設定報表產生器的存取](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [保護共用資料來源項目的安全](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [在 Reporting Services 資料來源中儲存認證](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

@@ -1,13 +1,11 @@
 ---
-title: "Power BI 報表伺服器整合 （組態管理員） |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "Power BI 報表伺服器整合 (設定管理員) | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,14 +16,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: c6f8c9440a6229726c655dae42ea7ab955e35f54
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 6a99f3051cb4f4cae12c525204387906fbf3d8b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 報表伺服器整合 (組態管理員)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -48,7 +44,7 @@ ms.lasthandoff: 10/06/2017
 
         PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
 
-如需有關如何儲存認證，請參閱 > 一節 「 設定預存認證的報表特定資料來源 」 中[Reporting Services 資料來源中儲存的認證](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)。
+如需如何儲存認證的詳細資訊，請參閱[在 Reporting Services 資料來源中儲存認證](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)中的＜為報表特定的資料來源設定預存認證＞一節。
 
 系統管理員可以檢閱  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 記錄檔以取得詳細資訊。  其會看到與下列文字類似的訊息。 將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power Query 用於檔案是檢閱及監視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 記錄檔的好方法。  如需詳細資訊和短片，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。
 
@@ -58,7 +54,7 @@ ms.lasthandoff: 10/06/2017
 
 ##  <a name="bkmk_steps2integrate"></a> 整合並註冊報表伺服器
 
-從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員完成下列步驟。 如需詳細資訊，請參閱[Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
+從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員完成下列步驟。 如需詳細資訊，請參閱 [Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
 
 1. 選取 [ [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 整合] 頁面。
 
@@ -66,7 +62,7 @@ ms.lasthandoff: 10/06/2017
 
 3. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 登入對話方塊中，輸入您用來登入 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]的認證。
 
-4. 註冊完成之後， **Power BI 註冊詳細資料**區段將記下 Azure 租用戶識別碼和重新導向 URL。  在 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板登入和通訊過程中會使用這些 URL，來向後與已註冊的報表伺服器通訊。
+4. 註冊完成之後，[Power BI 註冊詳細資料] 區段將記下 Azure 租用戶識別碼和重新導向 URL。  在 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板登入和通訊過程中會使用這些 URL，來向後與已註冊的報表伺服器通訊。
 
 5. 在 [結果] 視窗中選取 [複製] 按鈕，將註冊詳細資料複製到 Windows 剪貼簿，以便您加以儲存供日後參考。
 
@@ -74,7 +70,7 @@ ms.lasthandoff: 10/06/2017
 
 **取消註冊︰** 從報表伺服器取消註冊 Azure Active Directory 會導致下列情形：
 
-- **我的設定**連結將不再顯示於 web 入口網站功能表列。
+- [我的設定] 連結將不再顯示於入口網站功能表列。
 
 - 已釘選的報表項目仍會釘選在儀表板上，不過儀表板上的磚將不再更新。
 
@@ -88,11 +84,11 @@ ms.lasthandoff: 10/06/2017
 
 若報表伺服器的組態已變更，則使用 [更新註冊]  。 例如，若您想要新增或移除使用者用來瀏覽至 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]的 URL。
 
-- 在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員中，選取**入口網站 URL**
+- 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定管理員中，選取 [入口網站 URL]
 
-     選取**進階**。
+     選取 [進階]。
 
-- 選取**新增**要加入新的 HTTP 識別[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]，然後選取 **確定**。
+- 選取 [新增] 為 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 新增新的 HTTP 識別，然後選取 [確定]。
 
      [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 圖示會變更，指出已變更伺服器設定。  ![ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "ssrs_powebi_icon_warning")
 
@@ -112,9 +108,9 @@ ms.lasthandoff: 10/06/2017
 
 3. Azure Active Directory 內的受管理租用戶是 Power BI 用戶端應用程式的建立位置。
 
-4. 註冊包含使用者從報表伺服器登入時會使用的重新導向 URL。  應用程式識別碼和 URL 會儲存至 ReportServer 資料庫。 在對 Azure 進行驗證呼叫期間會使用重新導向 URL，以便呼叫可傳回至報表伺服器。 例如，當使用者登入或將項目釘選到儀表板。
+4. 註冊包含使用者從報表伺服器登入時會使用的重新導向 URL。  應用程式識別碼和 URL 會儲存至 ReportServer 資料庫。 在對 Azure 進行驗證呼叫期間會使用重新導向 URL，以便呼叫可傳回至報表伺服器。 例如，使用者登入或將項目釘選到儀表板時。
 
-5. 應用程式識別碼和 URL 會顯示在 Configuration Manager 中。
+5. 在設定管理員中會顯示應用程式識別碼和 URL。
 
  ![ssrs_pbiflow_integration](../../reporting-services/install-windows/media/ssrs-pbiflow-integration.png "ssrs_pbiflow_integration")
 
@@ -134,7 +130,7 @@ ms.lasthandoff: 10/06/2017
 
 7. 建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂用帳戶，以管理儀表板磚上報表項目排定的重新整理。 訂閱會採用使用者登入時所建立的安全性權杖。
 
-     權杖的期限為**90 天**之後哪些使用者需要登入一次，以建立新的使用者權杖。 權杖到期時，已釘選的磚仍會顯示在儀表板上，但資料不會再重新整理。  為釘選的項目所使用的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱會發生錯誤，直到建立新的使用者權杖為止。 請參閱[我的設定，Power BI 整合 &#40; 入口網站 &#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。 以取得詳細資訊。
+     權杖的期限為 **90 天**，使用者需在該期限過後再次登入以建立新的使用者權杖。 權杖到期時，已釘選的磚仍會顯示在儀表板上，但資料不會再重新整理。  為釘選的項目所使用的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱會發生錯誤，直到建立新的使用者權杖為止。 請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。 以取得詳細資訊。
 
 使用者再次釘選項目時，會略過步驟 1-4，改為從 ReportServer 資料庫中擷取應用程式識別碼與 URL，然後接續執行步驟 5。
 
@@ -163,4 +159,3 @@ ms.lasthandoff: 10/06/2017
 [Power BI 的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

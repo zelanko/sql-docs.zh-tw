@@ -1,27 +1,25 @@
 ---
 title: "完成資料庫引擎升級 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/21/2017
+ms.date: 10/23/2017
 ms.prod:
 - sql-server-2016
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: cc6225d648e774f8c2c09b02dc27d547c3f887a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 581e8cd7a43dd1e4c878cc56b49644e51d7a3a79
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="complete-the-database-engine-upgrade"></a>完成資料庫引擎升級
 
@@ -31,7 +29,7 @@ ms.lasthandoff: 08/02/2017
   
 - **備份資料庫**︰為每個資料庫執行完整備份。  
 
-- **啟用新功能**︰在 SQL Server 2016 和 SQL Server 2017 中，某些變更只有在資料庫的 DATABASE_COMPATIBILITY 層級變更為 130 或更大值之後才會啟用。  如需詳細資訊及建議的工作流程，請參閱 [變更資料庫相容性模式並使用查詢存放區](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。  
+- **啟用新功能**︰在 SQL Server 2016 和 SQL Server 2017 中，某些變更只有在資料庫的 DATABASE_COMPATIBILITY 層級變更為 130 或更大值之後才會啟用。  如需詳細資訊及建議的工作流程，請參閱 [變更資料庫相容性模式並使用查詢存放區](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 如果您的資料庫具有在 SQL Server 2014 中建立的記憶體最佳化資料表，請檢閱[記憶體最佳化資料表的統計資料](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)。
   
 - **Integration Services：**  
   
@@ -45,4 +43,3 @@ ms.lasthandoff: 08/02/2017
   
 - **全文檢索搜尋：** 重新擴展全文檢索目錄以確保查詢結果中語意的一致性。 如需詳細資訊，請參閱 [擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。  
   
-

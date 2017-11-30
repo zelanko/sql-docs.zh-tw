@@ -1,5 +1,5 @@
 ---
-title: "建立、 修改及刪除共用排程 |Microsoft 文件"
+title: "建立、修改和刪除共用排程 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/01/2016
 ms.prod: sql-server-2016
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 86ca460b5fe669e9fe9e9c0130c883325f988b50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-schedules"></a>建立、修改和刪除共用排程
   使用本主題可讓您了解如何建立、修改和刪除 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 共用排程。  若要管理原生模式的共用排程，請使用 Web 入口網站中的 [排程] 頁面或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的 [共用排程] 資料夾。 如果是 SharePoint 模式，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。  
@@ -56,7 +55,7 @@ ms.lasthandoff: 08/09/2017
  刪除排程與造成它過期是不相同的。 到期日是用來停止排程，但不會刪除它。 因為排程是用來自動化大量功能，所以永遠不會自動刪除。 過期的排程會提供證據給報表伺服器管理員，以說明自動化處理序突然停止的原因。 如果沒有顯示過期排程，報表伺服器管理員就會誤判問題，或花不必要的時間嘗試解決功能正常的處理序。  
  
  ## <a name="when-you-delete-a-report-specific--schedule"></a>刪除報表特定排程時  
-當您刪除報表或訂閱，或者選擇不同的方法來執行報表或訂閱時，系統就會刪除報表和訂閱特有的排程。 例如，選擇**永遠以最新的資料執行此報表**將會刪除您建立用來執行報表以報表執行快照集的報表特定排程。  
+當您刪除報表或訂閱，或者選擇不同的方法來執行報表或訂閱時，系統就會刪除報表和訂閱特有的排程。 例如，選擇 [永遠以最新的資料執行此報表] 將會刪除您建立為以報表執行快照集的方式執行報表的報表特有排程。  
 
 已經過期的報表特定排程會繼續附加至報表。 您可以檢查排程的結束日期，判斷它是否過期。 過期的共用排程會保留在 [共用排程] 清單中。 [狀態] 欄位會指示排程是否已過期。 您可以延長結束日期來恢復排程，或者，若您不再需要排程參考時，可以移除它。  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
  如果您修改共用排程，就可以在進行變更之前暫停它。 當您繼續排程時，變更便會生效。  
 
-1.  在入口網站中，按一下**設定** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)工具列中。 **注意：**如果**站台設定**是無法使用，您沒有存取站台設定的權限。
+1.  在 Web 入口網站中，按一下工具列中的 [設定] ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)。 **注意：**如果無法使用 [網站設定]，您就沒有存取網站設定的權限。
 2.  click **[站台設定]**。  
 3.  按一下 **[排程]**。  
 4.  按一下 **[新增排程]**。 若要修改現有的排程，請按一下排程的名稱。  
@@ -79,7 +78,7 @@ ms.lasthandoff: 08/09/2017
 
 ### <a name="to-delete-a-shared-schedule-web-portal"></a>刪除共用排程 (Web 入口網站)  
   
-1.  在入口網站中，按一下**站台設定**全域工具列上。     
+1.  在 Web 入口網站中，按一下全域工具列上的 [網站設定]。     
 2.  在頁面上的 **[其他]** 區段中，按一下 **[管理共用排程]**。  
 3.  選取要刪除之排程旁邊的核取方塊，然後按一下 **[刪除]**。  
   
@@ -92,26 +91,26 @@ ms.lasthandoff: 08/09/2017
   
 1.  啟動 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 並連接至報表伺服器執行個體。  
 2.  在 [物件總管] 中，展開報表伺服器節點。  
-3.  以滑鼠右鍵按一下**共用排程**資料夾，然後再按一下**新排程**。 就會顯示 **[新增共用排程]** 對話方塊的 [一般] 頁面。  
+3.  以滑鼠右鍵按一下 [共用排程] 資料夾，然後按一下 [新增排程]。 就會顯示 **[新增共用排程]** 對話方塊的 [一般] 頁面。  
   
-     若要修改現有的共用的排程，請展開 共用排程 資料夾，以滑鼠右鍵按一下您想要修改，然後按一下 的排程**屬性**。  
+     若要修改現有的共用排程，請展開 [共用排程] 資料夾、以滑鼠右鍵按一下您要修改的排程，然後按一下 [屬性]。  
   
 4.  輸入排程的描述性名稱。  
 5.  選擇性地選取排程的開始日期。 預設值是目前的日期。  
 6.  選擇性地選取排程的結束日期。 排程會在此日期停止執行，但不會遭到刪除。  
 7.  若要設定重複執行排程，請選取 **[小時]**、 **[天]**、 **[週]**或 **[月]**。 就會顯示其他選項。 請根據您偏好的小時、天、週或月，使用這些選項來設定排程頻率。  
   
-     或者，若要指定單次 （非週期性） 的排程，選取**一次**，然後指定**開始時間**。  
+     若要指定單次 (非重複執行) 排程，請選取 [一次]，然後指定 [開始時間]。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##### <a name="to-delete-a-shared-schedule-management-studio"></a>若要刪除共用排程 (Management Studio)  
   
 1.  在 [物件總管] 中，展開報表伺服器節點。  
-2.  若要確認報表目前未使用的共用的排程，依序展開 共用排程 資料夾，以滑鼠右鍵按一下 排程，按一下**屬性**。
-3. 按一下**報表**索引標籤來檢視目前正在使用排程的報表清單。
-按一下**取消**
-4.  展開 共用排程 資料夾，以滑鼠右鍵按一下您想要刪除，然後按一下 的排程**刪除**。 **[刪除目錄項目]** 對話方塊隨即顯示。  
+2.  若要確認報表目前未使用共用排程，請展開 [共用排程] 資料夾，並以滑鼠右鍵按一下排程，然後按一下 [屬性]。
+3. 按一下 [報表] 索引標籤來檢視目前正在使用排程的報表清單。
+按一下 [取消]。
+4.  展開 [共用排程] 資料夾，以滑鼠右鍵按一下您要刪除的排程，然後按一下 [刪除]。 **[刪除目錄項目]** 對話方塊隨即顯示。  
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  如果您刪除了多個報表和訂閱所使用的共用排程，報表伺服器將會針對先前使用此共用排程的每個報表和訂閱建立個別的排程。 每個新的個別排程將包含共用排程中原本指定的日期、時間和循環模式。
@@ -130,7 +129,7 @@ ms.lasthandoff: 08/09/2017
 3.  在 [Reporting Services] 區段中，按一下 **[管理共用排程]**。  
 4.  按一下 **[加入排程]** ，開啟 [排程屬性] 頁面。  
 5.  輸入排程的描述性名稱。 在用來處理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表的應用程式頁面上，這個名稱會出現在整個網站中排程定義頁面的下拉清單方塊中。 避免使用難讀的冗長名稱。 務必按照命名慣例，在名稱開頭放入最多描述資訊。  
-6.  選擇頻率。 根據頻率您選擇，會出現在頁面的排程選項可能會變更以支援該頻率 (例如，如果您選擇**月份**，每個月份的名稱會出現在頁面上)。  
+6.  選擇頻率。 依據您所選擇的頻率而定，出現在頁面上的排程選項可能會改變以支援該頻率 (例如，如果您選擇 [月]，各月份的名稱將會出現在頁面上)。  
 7.  定義排程。 單一排程無法支援所有的排程組合。  
 8.  設定開始和結束日期。  
 9. 按一下 **[確定]**。  
@@ -144,11 +143,10 @@ ms.lasthandoff: 08/09/2017
 4.  選取排程，然後按一下 **[刪除]**。  
  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [暫停及繼續共用排程](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [快取報表 &#40;報表管理員 &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [加入至報表記錄 &#40; 的快照集報表管理員 &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [快取報表 &#40;報表管理員&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [將快照集新增至報表記錄 &#40;報表管理員&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
-

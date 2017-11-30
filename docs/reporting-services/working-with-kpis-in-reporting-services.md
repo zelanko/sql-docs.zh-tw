@@ -1,27 +1,24 @@
 ---
-title: "使用 Reporting Services 中的 Kpi |Microsoft 文件"
+title: "使用 Reporting Services 中的 KPI | Microsoft Docs"
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 099142ae9ac45dae0a207fe896f496dc8d4afa6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -47,7 +44,7 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
   
 ## <a name="adding-a-kpi"></a>加入 KPI  
   
-決定您的 KPI 的位置之後，請移至該資料夾，然後從上方功能表選取 [新增] > [KPI]。  
+決定您 KPI 的位置之後，請移至該資料夾，然後從上方功能表選取 [新增] > [KPI]。  
   
 ![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
   
@@ -75,7 +72,7 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  選取**省略符號 （...）**資料 方塊中。 這將會顯示 [挑選資料集] 畫面。  
+2.  選取資料方塊中的**省略符號 (...)**。 這將會顯示 [挑選資料集] 畫面。  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -97,7 +94,7 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
   
 若要移除 KPI，您可以執行下列動作。  
   
-1.  選取**省略符號 （...）**您想要移除的 kpi。 選取 [管理]。  
+1.  選取您想要移除之 KPI 的**省略符號 (...)**。 選取 [管理]。  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -107,12 +104,11 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
   
 ## <a name="refreshing-a-kpi"></a>重新整理 KPI  
   
-若要重新整理 KPI，您必須設定快取共用資料集。 如需有關快取重新整理計劃，請參閱[處理共用資料集](../reporting-services/work-with-shared-datasets-web-portal.md)。  
+若要重新整理 KPI，您必須設定共用資料集的快取。 如需快取重新整理計劃的詳細資訊，請參閱[使用共用資料集](../reporting-services/work-with-shared-datasets-web-portal.md)。  
   
 ## <a name="next-steps"></a>後續的步驟
   
-[Web 入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
+[入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
 [使用共用資料集](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

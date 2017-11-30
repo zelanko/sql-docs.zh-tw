@@ -1,5 +1,5 @@
 ---
-title: "管理 Reporting Services SharePoint 服務應用程式 |Microsoft 文件"
+title: "管理 Reporting Services SharePoint 服務應用程式 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 22270e6f1aa209ef9a6938b92d0252678c2ad7e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服務應用程式
 
@@ -27,10 +26,10 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]從 SharePoint 管理中心內管理服務應用程式。 [管理] 和 [屬性] 頁面可讓您更新服務應用程式的組態以及常見的管理工作。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式是從 SharePoint 管理中心進行管理。 [管理] 和 [屬性] 頁面可讓您更新服務應用程式的組態以及常見的管理工作。  
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
 ## <a name="open-service-application-properties-page"></a>開啟服務應用程式屬性頁面
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 10/06/2017
   
 3.  您也可以在名稱附近按一下，或按一下服務應用程式的 **[類型]** 資料行選取整個資料列，然後按一下 SharePoint 功能區中的 **[管理]** 。  
   
-## <a name="system-settings-page"></a>系統設定 頁面
+## <a name="system-settings-page"></a>系統設定頁面
 
  系統設定頁面可讓您設定服務應用程式的行為和使用者體驗，包括各種逾時。
   
@@ -98,7 +97,7 @@ ms.lasthandoff: 10/06/2017
 |設定|註解|  
 |-------------|--------------|  
 |啟用報表產生器下載|預設值是 TRUE。<br /><br /> 指定用戶端是否能夠看到下載報表產生器應用程式的按鈕。|  
-|報表產生器啟動 URL|當報表伺服器不使用預設的報表產生器 URL 時，指定自訂 URL。 這個設定是選擇性的。 如果您沒有指定值，將會使用預設 URL，這樣會啟動報表產生器。 要啟動報表產生器 3.0 為-一旦應用程式中，輸入下列值： http://\<電腦名稱 > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
+|報表產生器啟動 URL|當報表伺服器不使用預設的報表產生器 URL 時，指定自訂 URL。 這個設定是選擇性的。 如果您沒有指定值，將會使用預設 URL，這樣會啟動報表產生器。 若要啟動報表產生器 3.0 當作 Click-Once 應用程式，請輸入下列值：http://\<電腦名稱>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
 |啟用用戶端列印|預設值是 TRUE。<br /><br /> 指定使用者是否可以下載提供列印選項的用戶端控制項。|  
 |編輯工作階段逾時|預設值是 7200 秒。|  
 |編輯工作階段快取限制|預設值為 5。|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 10/06/2017
 
  您可以檢視和刪除執行中的作業，例如報表訂閱及資料驅動訂閱所建立的作業。 此頁面並非用來管理訂閱，而是管理訂閱所觸發的作業。 例如，排程為每小時執行一次的訂閱將會每小時產生作業，該作業會出現在 **[管理作業]** 頁面上。  
   
- ![管理正在執行的作業](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "管理執行中的工作")  
+ ![管理正在執行的作業](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "管理正在執行的作業")  
   
 ## <a name="key-management"></a>金鑰管理
  下表摘要說明 [金鑰管理] 頁面  
@@ -117,8 +116,8 @@ ms.lasthandoff: 10/06/2017
   
 |頁面|說明|  
 |----------|-----------------|  
-|備份加密金鑰|1） 中輸入密碼以**密碼：**和**確認密碼：**方塊，然後按一下**匯出**。 如果您輸入的密碼不符合網域原則的複雜性需求，則會顯示警告。<br /><br /> 2) 系統會提示您提供儲存金鑰檔的檔案位置。 您應考慮將金鑰檔儲存到與執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 預設檔案名稱與服務應用程式的名稱相同。|  
-|還原加密金鑰|1） 輸入或瀏覽至金鑰檔中**檔案位置**方塊<br /><br /> 2） 在**密碼**方塊中，輸入用來備份加密檔案的密碼。<br /><br /> 3） 按一下**[確定]**|  
+|備份加密金鑰|1) 在 [密碼:] 與 [確認密碼:] 方塊中鍵入密碼，然後按一下 [匯出]。 如果您輸入的密碼不符合網域原則的複雜性需求，則會顯示警告。<br /><br /> 2) 系統會提示您提供儲存金鑰檔的檔案位置。 您應考慮將金鑰檔儲存到與執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 預設檔案名稱與服務應用程式的名稱相同。|  
+|還原加密金鑰|1) 在 [檔案位置] 方塊中鍵入或瀏覽至金鑰檔。<br /><br /> 2) 在 [密碼] 方塊中，鍵入要用來備份加密檔案的密碼。<br /><br /> 3) 按一下 [確定]。|  
 |變更加密金鑰|這項作業將建立新的金鑰，並且重新加密已加密的內容。 如果您擁有許多內容，這項作業可能需要數小時才能完成。<br /><br /> 變更加密金鑰作業完成時，建議您製作新金鑰的備份。|  
 |刪除加密的內容|刪除的內容無法復原。<br /><br /> **\*\* 重要事項 \*\*** 刪除和重新建立對稱金鑰的動作無法反轉或恢復。 刪除或重新建立金鑰可能會對您目前的安裝造成重大的影響。 如果您刪除金鑰，將會一併刪除對稱金鑰所加密的任何現有資料。 刪除的資料包括外部報表資料來源的連接字串、預存連接字串和一些訂閱資訊。|  
 
@@ -152,7 +151,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  選取此項目來指定帳戶。  
   
  **帳戶**  
- 輸入 Windows 網域使用者帳戶。 使用此格式： *\<網域 >\\< 使用者帳戶\>*。  
+ 輸入 Windows 網域使用者帳戶。 請使用此格式：\<網域\\<使用者帳戶\>。  
   
  **密碼**  
  輸入密碼。  
@@ -175,7 +174,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  **來源位址**  
  指定用於所產生電子郵件之 [從:] 欄位中的電子郵件地址。 您必須指定有權從 SMTP 伺服器傳送郵件的使用者帳戶。  
 
-## <a name="provision-subscriptions-and-alerts"></a>佈建訂閱及警示
+## <a name="provision-subscriptions-and-alerts"></a>提供訂閱和警示
 
  使用此頁面驗證 SQL Server Agent 是否正在執行，並且提供存取權讓報表服務能夠使用 SQL Server Agent。 SQL Server Agent 為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱、排程和資料警示所需。 [SSRS 服務應用程式的佈建訂閱及警示](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
 
@@ -194,4 +193,3 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 5.  核取您的 Proxy 的方塊，然後按一下 **[確定]**。  
   
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

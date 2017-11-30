@@ -1,34 +1,34 @@
 ---
 title: "SQL Server 2017 的新功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
-caps.latest.revision: 71
+caps.latest.revision: "71"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: 9abddcd8544221c5d6dff0eeb12dc441df632933
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
-ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
-SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基礎的 Docker 容器和 Windows 中，是讓 SQL Server 成為可選擇開發語言、資料類型、內部部署或雲端以及作業系統之平台的重要一步。 本主題摘要說明特定功能區的新功能，並包含其他詳細資料的連結。
+SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基礎的 Docker 容器和 Windows 中，是讓 SQL Server 成為可選擇開發語言、資料類型、內部部署或雲端以及作業系統之平台的重要一步。 本主題摘要說明特定功能區的新功能，並包含其他詳細資料的連結。 如需 Linux 上之 SQL Server 的詳細資訊，請參閱 [Linux 上的 SQL Server](https://docs.microsoft.com/sql/linux/) 文件
 
 [![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **試用看看：** [下載 SQL Server 2017 版 - 2017 年 10月：](http://go.microsoft.com/fwlink/?LinkID=829477)。
 
->**在 Linux 上執行 SQL Server！** 如需詳細資訊，請參閱 [Linux 上的 SQL Server 文件](https://docs.microsoft.com/sql/linux/)。
+> [!NOTE]
+> 除了下列變更，在正式發行版本之後還會定期發行累積更新。 這些累積更新提供許多改善和修正程式。 如需最新 CU 版本的資訊，請參閱 [SQL Server 2017 累積更新](http://aka.ms/sql2017cu)。
 
-## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 Database Engine
+## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 資料庫引擎
 
 SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效能提升。 
 - **CLR 組件**現在可以新增至白名單，以解決 CTP 2.0 中所述的 `clr strict security` 問題。 新增了 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支援信任組件的白名單 (RC1)。  
@@ -95,9 +95,10 @@ SQL Server Analysis Services 2017 為表格式模型引進許多增強功能。 
 如需詳細資訊，請參閱 [SQL Server Analysis Services 2017 的新功能](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)。
 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
-自 CTP 2.1 起，無法再透過 SQL Server 安裝程式安裝 SSRS。 請移至 Microsoft 下載中心以[下載 Microsoft SQL Server 2017 Reporting Services 候選版](https://www.microsoft.com/download/details.aspx?id=55252)。 
-- 報表現在提供留言功能，可新增觀點並與其他人共同作業。 您也可以在留言內包含附件。 (CTP 2.1)
+無法再透過 SQL Server 安裝程式安裝 SQL Server Reporting Services。 請前往 Microsoft 下載中心以[下載 Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252)。 
+- 報表現在提供留言功能，可新增觀點並與其他人共同作業。 您也可以在留言內包含附件。
 - 在最新版的報表產生器和 SQL Server Data Tools 中，您可以藉由在查詢設計工具中拖放所需的欄位，來對支援的 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 請參閱 [Reporting Services 部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
+- 為了進行現代化應用程式的開發和自訂，SSRS 現在支援完全符合 OpenAPI 的 RESTful API。 您現在可以在 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0) 上找到完整的 API 規格和文件。
 
 如需詳細資訊，請參閱 [SQL Server Reporting Services (SSRS) 的新功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
 
@@ -125,3 +126,4 @@ SQL Server 開發人員現在能夠存取廣大的 Python ML 及 AI 程式庫，
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

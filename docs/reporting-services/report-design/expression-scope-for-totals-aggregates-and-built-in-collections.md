@@ -1,5 +1,5 @@
 ---
-title: "Expression Scope for Totals，Aggregates，and Built-in Collections |Microsoft 文件"
+title: "總計、彙總與內建集合的運算式範圍 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 238c0537821da0ab64a6eb27121a9f98d29ad9bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d713c0c3cf84bb17e0a2bd318a2b59179fa5edf9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>總計、彙總與內建集合的運算式範圍
   撰寫運算式時，您會發現 *「範圍」* (Scope) 一詞用於多個內容。 範圍可以指定要用於評估運算式的資料、轉譯頁面上的文字方塊集合、可以根據切換顯示或隱藏之報表項目的集合。 您將會在與運算式評估、彙總函式語法、條件式可用性相關的主題中，以及與這些領域相關的錯誤訊息中看 *「範圍」* (Scope) 一詞。 使用下列描述來協助區分 *「範圍」* (Scope) 適用的意義：  
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **具名範圍** ：位於運算式範圍中之資料集、資料區或資料區群組的名稱。 若是彙總計算，您可以指定一個包含的範圍。 您無法在單一運算式中同時指定資料列群組和資料行群組的具名範圍。 除非運算式是供彙總使用，否則您無法指定被包含的範圍。  
   
-     下列運算式會產生 SellStartDate 與 LastReceiptDate 之間的間隔年數。 這些欄位位於兩個不同的資料集：DataSet1 和 DataSet2 中。 [第一個函式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-first-function.md)，這是彙總函式，會傳回 DataSet1 和 DataSet2 中 LastReceiptDate 的第一個值中 SellStartDate 的第一個值。  
+     下列運算式會產生 SellStartDate 與 LastReceiptDate 之間的間隔年數。 這些欄位位於兩個不同的資料集：DataSet1 和 DataSet2 中。 [First 函式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) 為彙總函式，它會傳回 DataSet1 中 SellStartDate 的第一個值，以及 DataSet2 中 LastReceiptDate 的第一個值。  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  在某些報表位置，您必須指定一個範圍。 例如，若是設計介面上的文字方塊，您必須指定要使用的資料集名稱： `=Max(Fields!Sales.Value,"Dataset1")`。 在某些位置，則有一個隱含的預設範圍。 例如，如果您沒有在群組範圍中指定文字方塊的彙總，則會先使用預設彙總。  
   
- 每個彙總函式主題都會列出適用於其用途的範圍。 如需詳細資訊，請參閱[彙總函式參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 每個彙總函式主題都會列出適用於其用途的範圍。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ##  <a name="Examples"></a> 資料表資料區的彙總運算式範例  
  撰寫指定非預設範圍的運算式需要一些練習。 為協助您了解不同範圍，請使用下列圖表與資料表。 此圖表會在銷售資訊資料表中標示每個資料格，依年度和季度以及銷售領域顯示銷售的項目數量。 請注意顯示資料列與資料行群組結構之資料列控制代碼和資料行控制代碼上，表示巢狀群組的視覺提示。 資料表的結構如下：  
@@ -121,7 +121,7 @@ ms.lasthandoff: 08/09/2017
 |C14|內部資料列群組 "Subcat"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
 |C15|內部資料列群組 "Subcat" 和資料行群組 "Territory"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
   
- 如需解譯 Tablix 資料區之視覺提示的詳細資訊，請參閱 [Tablix 資料區域資料格、資料列及資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。 如需有關 tablix 資料區的詳細資訊，請參閱[Tablix 資料區域資料格、 資料列和資料行 &#40;報表產生器 &#41;和 SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。 如需運算式和彙總的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 和[彙總函式參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 如需解譯 Tablix 資料區之視覺提示的詳細資訊，請參閱 [Tablix 資料區域資料格、資料列及資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。 如需 Tablix 資料區的詳細資訊，請參閱 [Tablix 資料區域資料格、資料列及資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。 如需運算式和彙總的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 和[彙總函式參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
   
 ##  <a name="Sparklines"></a> 同步處理走勢圖的縮放比例  
@@ -157,18 +157,18 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Sort"></a> 指定要同步處理排序次序的排序運算式  
  當您將互動式排序按鈕加入至資料表資料行時，您可以針對擁有通用包含範圍的多個項目，同步處理排序。 例如，您可以將排序按鈕加入至矩陣中的資料行標頭，然後指定包含的範圍做為繫結至矩陣之資料集的名稱。 當使用者按一下排序按鈕時，除了會排序矩陣資料列之外，也會排序繫結至相同資料集之圖表的圖表數列群組。 利用這個方式，與該資料集相依的所有資料區都可以進行同步處理，以顯示相同的排序次序。  
   
- 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
   
   
 ##  <a name="Nulls"></a> 在資料格中隱藏 Null 或零值  
  對於許多報表而言，群組範圍的計算可能會建立許多值為零 (0) 或 Null 的資料格。 為減少報表中混亂的情形，加入一個運算式，以便在彙總值為 0 時，傳回空白。 如需詳細資訊，請參閱 [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)。  
   
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [群組運算式範例 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [建立遞迴階層群組 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [資料表、 矩陣和清單 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [格式化文字和預留位置 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [群組運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

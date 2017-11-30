@@ -1,5 +1,5 @@
 ---
-title: "驗證報表執行 |Microsoft 文件"
+title: "驗證報表執行 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - report processing [Reporting Services], verifying execution
 - checking report execution
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 97015ca82fd8a58c3c5cd351b2f7379711d65aa1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 05712a9ff9fe3f80b5fcdbafa772a4024c941860
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="verifying-a-report-run"></a>驗證報表執行
   若要檢視有關報表處理的狀態資訊，您可以使用記錄檔或參考報表管理員中與報表同時顯示的狀態資訊。  
@@ -46,14 +45,13 @@ ms.lasthandoff: 08/09/2017
   
 |報表類型|日期和時間資訊的記錄位置|若要檢視資訊，請執行下列步驟|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|以報表快照集形式執行的報表。|在 [內容] 頁面上。 如需詳細資訊，請參閱[內容頁面 &#40;報表管理員 &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) 尋找包含報表的資料夾。<br /><br /> 2) 在 [詳細資料] 檢視中設定資料夾。<br /><br /> 3） 請注意日期和時間在**時執行**資料行。|  
-|報表記錄中的快照集。|在 [記錄屬性] 頁面上。 如需詳細資訊，請參閱[快照集選項屬性頁面 &#40;報表管理員 &#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) 開啟報表。<br /><br /> 2） 按一下**屬性**頁面。<br /><br /> 3） 按一下**記錄** 索引標籤。<br /><br /> 4） 請注意日期和時間在**時執行**資料行。|  
-|快取報表。|在用於建立與重新整理快取報表的排程中。|1) 開啟報表。<br /><br /> 2） 按一下**屬性**頁面。<br /><br /> 3） 按一下**執行** 索引標籤。<br /><br /> 4) 開啟排程。|  
+|以報表快照集形式執行的報表。|在 [內容] 頁面上。 如需詳細資訊，請參閱[內容頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)。|1) 尋找包含報表的資料夾。<br /><br /> 2) 在 [詳細資料] 檢視中設定資料夾。<br /><br /> 3) 記下 [執行時] 資料行中的日期和時間。|  
+|報表記錄中的快照集。|在 [記錄屬性] 頁面上。 如需詳細資訊，請參閱[快照集選項屬性頁 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)。|1) 開啟報表。<br /><br /> 2) 按一下 [屬性] 頁面。<br /><br /> 3) 按一下 [記錄] 索引標籤。<br /><br /> 4) 記下 [執行時] 資料行中的日期和時間。|  
+|快取報表。|在用於建立與重新整理快取報表的排程中。|1) 開啟報表。<br /><br /> 2) 按一下 [屬性] 頁面。<br /><br /> 3) 按一下 [執行] 索引標籤。<br /><br /> 4) 開啟排程。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
- [報表管理員 &#40;SSRS 原生模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   
-

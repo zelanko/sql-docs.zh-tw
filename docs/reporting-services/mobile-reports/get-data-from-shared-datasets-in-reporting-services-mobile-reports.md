@@ -1,32 +1,29 @@
 ---
-title: "從 Reporting Services 行動報表中的共用資料集取得資料 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "從 Reporting Services 行動報表中的共用資料集取得資料 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c081588c29dddd792d0b92e6cd9573beeb09fa4f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f021de7ca981504a180b555b338e056342eafcf4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>從 Reporting Services 行動報表中的共用資料集取得資料
-除了[從 Excel 檔案載入資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)，SQL Server 行動報表發行工具也可以從幾乎任何來源存取資料。 存取資料需要共用的資料來源，Reporting Services 入口網站上設定。 深入了解 [建立共用資料來源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [建立共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)。  
+除了[載入 Excel 檔案資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)，SQL Server 行動報表發行工具也可以存取幾乎所有來源的資料。 存取資料需有共用的資料來源，在 Reporting Services 入口網站設定。 深入了解 [建立共用資料來源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [建立共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)。  
   
-共用資料來源和共用之後 Reporting Services 伺服器上所設定的資料集，而您在建立行動報表中使用它們[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。   
+在 Reporting Services 伺服器上設定共用的資料來源和共用的資料集之後，您可以將它們用在以 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 建立的行動報表中。   
   
 從 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 連接到 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]伺服器之後，即可直接將行動報表連接到共用資料集。   
   
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  如果這是第一次連接到伺服器，請填入伺服器名稱以及您的名稱和密碼。 在 [伺服器位址] 方塊中放入伺服器名稱，其格式如下：  
   
-    \<"servername"> /reports/  
+    \<"伺服器名稱">/reports/  
   
     在此範例中：  
        
@@ -53,9 +50,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="add-edit-or-remove-a-report-server"></a>加入、編輯或移除報表伺服器  
   
-如果您已連接到報表伺服器，當您選取 [資料] 索引標籤中的 [加入資料] 時，您不會看到加入其他報表伺服器的選項。 請改為遵循下列步驟。  
+如果您已連線到報表伺服器，當您選取 [資料] 索引標籤中的 [新增資料] 時，您不會看到新增其他報表伺服器的選項。 請改為遵循下列步驟。  
   
-1. 選取左上角的 [連接]。  
+1. 選取左上角的 [連線]。  
   
    ![SSMRP_AddConnectionIcon](../../reporting-services/mobile-reports/media/ssmrp-addconnectionicon.png)  
      
@@ -67,12 +64,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="see-also"></a>另請參閱  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  [Web 入口網站 （SSRS 原生模式）](../../reporting-services/web-portal-ssrs-native-mode.md)  
+-  [入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)  
 -  在 [iPad app 中檢視 SQL Server 行動報表和 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
 -  請參閱 [在 iPhone 應用程式中檢視 SQL Server 行動報表和 KPI (iOS 版 Power BI)](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (iOS 版 Power BI)  
   
   
   
   
-
 

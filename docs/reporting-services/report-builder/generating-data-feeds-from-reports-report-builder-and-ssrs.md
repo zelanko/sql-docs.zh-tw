@@ -1,5 +1,5 @@
 ---
-title: "產生資料摘要的報表 （報表產生器及 SSRS） |Microsoft 文件"
+title: "從多個報表產生資料摘要 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 190c45d5ec0deeff6d71ce06e4c66872ca3253d2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9e11ab920d6af6f09aa911f237ecf3a7c234b016
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>從多個報表產生資料摘要 (報表產生器及 SSRS)
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 轉譯延伸模組會產生 Atom 服務文件，其中會列出可從分頁報表取得的資料摘要，以及來自報表中之資料區的資料摘要。 您可以使用此延伸模組產生符合 Atom 的資料摘要，這些資料摘要可以使用可取用報表產生之資料摘要的應用程式讀取與交換。 例如，您可以使用 Atom 轉譯延伸模組，您可以接著使用 Power Pivot 或 Power BI 中產生的資料摘要。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 轉譯延伸模組會產生 Atom 服務文件，其中會列出可從分頁報表取得的資料摘要，以及來自報表中之資料區的資料摘要。 您可以使用此延伸模組產生符合 Atom 的資料摘要，這些資料摘要可以使用可取用報表產生之資料摘要的應用程式讀取與交換。 例如，您可以使用 Atom 轉譯延伸模組產生您之後可用於 Power Pivot 或 Power BI 的資料摘要。  
   
  Atom 服務文件在報表中，每個資料區至少會列出一個資料摘要。 根據資料區的類型以及該資料區顯示的資料， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可能會產生來自某個資料區的多個資料摘要。 例如，矩陣或圖表可以提供多個資料摘要。 當 Atom 轉譯延伸模組建立 Atom 服務文件時，系統會針對每個資料摘要建立一個唯一的識別碼，而您會在 URL 中使用該識別碼來存取資料摘要的內容。  
   
@@ -85,13 +83,13 @@ ms.lasthandoff: 08/09/2017
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>資料區段  
- 資料區段的資料摘要包含一個\<**項目**> 扁平化的資料列集產生的 Atom 轉譯延伸模組中的每個資料列的項目。  
+ 資料摘要的資料區段在 Atom 轉譯延伸模組產生之扁平化資料列集的每個資料列中包含一個 \<**entry**> 項目。  
   
  下列圖表顯示使用群組和總計的報表。  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 下列 XML 會說明\<**項目**> 項目從資料摘要中該報表。 請注意， \<**項目**> 元素包含總計之銷售量與訂單群組和總計銷售量與訂單的所有群組。 \<**項目**> 項目包含在報表上的所有值。  
+ 下列 XML 顯示來自資料摘要中該報表的 \<**entry**> 項目。 請注意，\<**entry**> 項目包含群組之銷售量與訂單的總計，以及所有群組之銷售量與訂單的總計。 \<**entry**> 項目包含報表上所有的值。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -120,11 +118,11 @@ ms.lasthandoff: 08/09/2017
   
  巢狀資料區的資料列通常很寬，特別是巢狀資料表和矩陣包含群組和總計時更是如此。 將報表匯出至資料摘要，以及檢視資料摘要以確認產生的資料就是預期的資料時，您可能會發現這個功能相當實用。  
   
- 當 Atom 轉譯延伸模組建立 Atom 服務文件時，系統會針對資料摘要建立一個唯一的識別碼，而您會在 URL 中使用該識別碼來檢視資料摘要的內容。 範例 Atom 服務文件，如上所示，包含 URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`。 此 URL 會識別報表 (Product Sales Summary)、Atom 轉譯延伸模組 (ATOM)，以及資料摘要的名稱 (xAx0x1)。  
+ 當 Atom 轉譯延伸模組建立 Atom 服務文件時，系統會針對資料摘要建立一個唯一的識別碼，而您會在 URL 中使用該識別碼來檢視資料摘要的內容。 以上所顯示的範例 Atom 服務文件包含 URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`。 此 URL 會識別報表 (Product Sales Summary)、Atom 轉譯延伸模組 (ATOM)，以及資料摘要的名稱 (xAx0x1)。  
   
  報表項目名稱預設為報表項目的報表定義語言 (RDL) 元素名稱，而且這些名稱通常不容易了解或是不容易記住。 例如，置於報表中之第一個矩陣的預設名稱為 Tablix 1。 資料摘要會使用這些名稱。  
   
- 若要讓資料摘要更容易處理，您可以使用資料區的 DataElementName 屬性來提供易記的名稱。 如果您提供 DataElementName 值的資料摘要子元素\< **d**> 會使用為它而不是預設的資料區域名稱。 例如，如果資料區的預設名稱為 Tablix1 而 DataElementName 設定 SalesByTerritoryYear 則\< **d**> 在資料摘要會使用 SalesByTerritoryYear。 如果資料區有兩個資料摘要，如上述的矩陣報表，則在資料摘要中使用的名稱為 SalesByTerritoryYear _Territory 和 SalesByTerritoryYear _Year。  
+ 若要讓資料摘要更容易處理，您可以使用資料區的 DataElementName 屬性來提供易記的名稱。 如果您提供 DataElementName 的值，資料摘要子項目 \<**d**> 將會使用它來取代預設的資料區名稱。 例如，如果資料區的預設名稱為 Tablix1 而 DataElementName 設定 SalesByTerritoryYear，則資料摘要中的 \<**d**> 會使用 SalesByTerritoryYear。 如果資料區有兩個資料摘要，如上述的矩陣報表，則在資料摘要中使用的名稱為 SalesByTerritoryYear _Territory 和 SalesByTerritoryYear _Year。  
   
  如果您比較顯示在報表上的資料與資料摘要中的資料，可能會發現部分差異。 報表通常會顯示格式化的數值和時間/日期資料，而資料摘要則包含未格式化的摘要。  
   
@@ -199,4 +197,3 @@ ms.lasthandoff: 08/09/2017
 [匯出報表](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

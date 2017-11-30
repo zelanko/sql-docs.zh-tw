@@ -1,5 +1,5 @@
 ---
-title: "報表產生器中 SQL Server 2016 |Microsoft 文件"
+title: "SQL Server 2016 的報表產生器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-f1_keywords:
-- "10428"
+f1_keywords: "10428"
 helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bc8ac3d0ed00a6fda642ab09bf2a28e705a6b419
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 的報表產生器
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 是撰寫分頁報表的工具，適合喜歡在獨立的環境中工作，而不是使用 Visual Studio 報表設計師的商務使用者。  當您設計分頁報表時，您建立的報表定義會指定資料的取得位置、要取得的資料，以及資料的顯示方式。 當您執行報表時，報表處理器會採用已指定的報表定義、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 中預覽報表，然後將報表發行至原生模式或 SharePoint 整合模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器，讓其他人執行報表。  
@@ -74,7 +72,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  報表伺服器管理員會在報表伺服器或處於 SharePoint 整合模式的報表伺服器上管理已發行的報表。 報表伺服器管理員可以定義安全性、設定屬性以及排程作業，例如報表記錄和電子郵件報表傳遞。 他們可以建立共用排程和共用資料來源，讓它們可供一般使用。 管理員也會管理所有報表伺服器資料夾。 執行管理工作的能力需視使用者權限而定。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
   [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)  
   
   [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md)
@@ -99,5 +97,4 @@ ms.lasthandoff: 08/09/2017
  [鍵盤快速鍵 &#40;報表產生器&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  概述 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中可用於導覽及設計報表的快速鍵。  
   
-
 

@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- names [SQL Server], columns with
+helpviewer_keywords: names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: b4b9a8774565dd0e31caf940cf3e8254b0987205
 ms.openlocfilehash: 3a2651e6e67cceb648049f99ab9588a44b7f3fb0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columns-with-a-name"></a>有名稱的資料行
   以下是具有名稱的資料列集資料行，以區分大小寫的方式對應至產生之 XML 的特定條件：  
@@ -38,7 +35,7 @@ ms.lasthandoff: 11/08/2017
 -   一個資料行具有不同的名稱。  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>資料行名稱以 @ 符號開頭  
- 如果資料行名稱開頭 at 符號 (@)，而且不包含斜線 （/）、 屬性`row`建立具有對應的資料行值的項目。 例如，下列查詢會傳回兩個資料行 (@PmId、Name) 的資料列集。 在產生的 XML， **PmId**屬性新增至對應`row`項目並將 ProductModelID 值指派給它。  
+ 如果資料行名稱是以 @ 符號開頭且不包含斜線 (/)，就會建立具有對應資料行值的 `row` 項目之屬性。 例如，下列查詢會傳回兩個資料行 (@PmId、Name) 的資料列集。 在產生的 XML 中，**PmId** 屬性會新增至對應的 `row` 項目，並會將 ProductModelID 值指派給該項目。  
   
 ```  
   
@@ -71,9 +68,9 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>資料行名稱不是以 @ 符號開頭  
- 如果資料行名稱開頭不 at 符號 (@)、 不是其中一個 XPath 節點測試中，而且不包含斜線 （/），資料列元素的子元素的 XML 項目`row`預設情況下，會建立。  
+ 如果資料行名稱不是以 @ 符號開頭、不是其中一個 XPath 節點測試，而且不包含斜線 (/)，預設會建立資料列項目 `row` 的子項目之 XML 項目。  
   
- 下列查詢指定資料行名稱，也就是結果。 因此，`result`項目子系加入至`row`項目。  
+ 下列查詢指定資料行名稱，也就是結果。 因此，`result` 子項目會新增至 `row` 項目。  
   
 ```  
 SELECT 2+2 as result  
@@ -88,7 +85,7 @@ for xml PATH
 </row>  
 ```  
   
- 下列查詢會針對 **xml** 類型的 Instructions 資料行指定之 XQuery 所傳回的 XML，指定資料行名稱 ManuWorkCenterInformation。 因此，`ManuWorkCenterInformation`項目新增為子系`row`項目。  
+ 下列查詢會針對 **xml** 類型的 Instructions 資料行指定之 XQuery 所傳回的 XML，指定資料行名稱 ManuWorkCenterInformation。 因此，`ManuWorkCenterInformation` 項目會新增為 `row` 項目的子項目。  
   
 ```  
 SELECT   
@@ -133,7 +130,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- 該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱的開頭 '\@'。因此，屬性**EmpID**，加入至`row`項目。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 將會有`EmpName`歲孩童`row`項目，而`EmpName`會有子`First`，`Middle`和`Last`元素子系。  
+ 該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱是以 '\@' 開頭，因此會將 **EmpID** 屬性新增至 `row` 項目。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 在 `row` 項目底下將有 `EmpName` 子項目，而且 `EmpName` 子項目將有 `First`、`Middle` 和 `Last` 子項目。  
   
 ```  
 <row EmpID="1">  
@@ -172,7 +169,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  根據預設，PATH 模式會產生元素中心的 XML。 因此，在 PATH 模式查詢中指定 ELEMENTS 指示詞將不會有任何作用。 然而，如上述範例所示，ELEMENTS 指示詞加上 XSINIL 就可以為 Null 值產生元素。  
   
- 除了識別碼與名稱之外，下列查詢還會擷取員工地址。 根據地址資料行，資料行名稱中的路徑`Address`項目子系加入至`row`項目和地址詳細資料會加入做為項目子系的`Address`項目。  
+ 除了識別碼與名稱之外，下列查詢還會擷取員工地址。 根據地址資料行之資料行名稱中的路徑，會將 `Address` 子項目新增至 `row` 項目，而地址詳細資料則會新增為 `Address` 項目的子項目。  
   
 ```  
 SELECT EmployeeID   "@EmpID",   
@@ -205,7 +202,7 @@ FOR XML PATH
 ```  
   
 ## <a name="several-columns-share-the-same-path-prefix"></a>數個資料行共用相同的路徑前置詞  
- 如果數個後續的資料行共用相同的路徑前置詞，則會在相同的名稱下將它們群組在一起。 即使不同的命名空間前置詞是與相同的命名空間繫結，但仍使用了它們，就會將路徑視為不同。 在上述查詢中，FirstName、 MiddleName 及 LastName 資料行共用相同的 EmpName 前置詞。因此，它們會加入做為子系的`EmpName`項目。 這也是您所建立時的情況下`Address`前一個範例中的項目。  
+ 如果數個後續的資料行共用相同的路徑前置詞，則會在相同的名稱下將它們群組在一起。 即使不同的命名空間前置詞是與相同的命名空間繫結，但仍使用了它們，就會將路徑視為不同。 在上述查詢中，FirstName、MiddleName 及 LastName 資料行是共用相同的 EmpName 前置詞。因此，會將它們新增為 `EmpName` 項目的子項目。 當您在上述範例中建立 `Address` 項目時也是如此。  
   
 ## <a name="one-column-has-a-different-name"></a>一個資料行具有不同的名稱  
  如果具有不同名稱的資料行出現在其間，它將會拆散群組，如下列修改的查詢所示。 查詢會在 FirstName 與 MiddleName 資料行之間加入地址資料行，以拆散上述查詢所指定的 FirstName、MiddleName 及 LastName 的群組。  
@@ -225,7 +222,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- 如此一來，查詢會建立兩個`EmpName`項目。 第一個`EmpName`項目具有`FirstName`，第二個項目子系`EmpName`項目具有`MiddleName`和`LastName`元素子系。  
+ 因此，此查詢會建立兩個 `EmpName` 項目。 第一個 `EmpName` 項目具有 `FirstName` 子項目，而第二個 `EmpName` 項目則具有 `MiddleName` 及 `LastName` 子項目。  
   
  以下是結果：  
   
@@ -248,4 +245,3 @@ FOR XML PATH
  [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   
-

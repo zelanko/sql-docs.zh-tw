@@ -1,5 +1,5 @@
 ---
-title: "將報表伺服器資料庫移到另一部電腦 （SSRS 原生模式） |Microsoft 文件"
+title: "將報表伺服器資料庫移至其他電腦 (SSRS 原生模式) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90dc9bb5624c19c282d34782909fb5e168b4a695
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>將報表伺服器資料庫移至其他電腦 (SSRS 原生模式)
 
   您可以將安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中所使用的報表伺服器資料庫，移至不同電腦上的執行個體。 但是，您必須一起移動或複製 reportserver 和 reportservertempdb 資料庫。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝需要這兩個資料庫。reportservertempdb 資料庫的名稱必須與所移動的主要 reportserver 資料庫相關。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式  
   
  移動資料庫不會影響目前已針對報表伺服器項目所定義的排程作業。  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/09/2017
 >  如果您對現有安裝所做的唯一變更是重新放置報表伺服器資料庫，就適用本主題中所提供的這些步驟。 移轉整個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝 (亦即，移動資料庫，並變更使用資料庫之報表伺服器 Windows 服務的識別) 需要重新設定連接和重設加密金鑰。  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>卸離及附加報表伺服器資料庫  
- 如果您可以將報表伺服器設定為離線狀態，就可以卸離資料庫，並將資料庫移動到您要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 這種方式可以保留資料庫中的權限。 如果您使用 SQL Server 資料庫，您必須將它移到另一個 SQL Server 執行個體。 移動資料庫之後，您必須重新設定報表伺服器與報表伺服器資料庫間的連接。 如果執行的是向外延伸部署，您必須重新設定部署中每個報表伺服器的報表伺服器資料庫連接。  
+ 如果您可以將報表伺服器設定為離線狀態，就可以卸離資料庫，並將資料庫移動到您要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 這種方式可以保留資料庫中的權限。 如果您要使用 SQL Server 資料庫，就必須將它移至另一個 SQL Server 執行個體。 移動資料庫之後，您必須重新設定報表伺服器與報表伺服器資料庫間的連接。 如果執行的是向外延伸部署，您必須重新設定部署中每個報表伺服器的報表伺服器資料庫連接。  
   
  請使用下列步驟來移動資料庫：  
   
@@ -228,12 +226,11 @@ GO
 
 [建立 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
 [啟動與停止 Report Server 服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
-[設定報表伺服器資料庫連接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[設定自動的執行帳戶](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+[設定報表伺服器資料庫連線](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[設定自動執行帳戶](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
 [Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [rsconfig 公用程式](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
 [設定和管理加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [報表伺服器資料庫](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

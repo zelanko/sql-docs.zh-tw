@@ -1,28 +1,25 @@
 ---
-title: "使用分頁報表 （入口網站） |Microsoft 文件"
+title: "使用分頁報表 (Web 入口網站) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 62c2bbf3279d4c9f6303a394cc83c95e6418005c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-paginated-reports-web-portal"></a>使用分頁報表 (Web 入口網站)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -41,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  將會啟動 [報表產生器]，或提示您下載它。  
   
-4.  建置您的報表，然後選取左上方的 [儲存] 圖示來將分頁報表儲存回報表伺服器。  
+4.  建置您的報表，然後選取左上方的**儲存**圖示來將分頁報表儲存回報表伺服器。  
   
 ## <a name="manage-an-existing-paginated-report"></a>管理現有的分頁報表  
   
@@ -50,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]
 > 如果您在資料夾中看不到分頁報表，請確定您正在檢視分頁報表。 您可以從入口網站右上角的功能表列選取 [檢視]。 請確定已核取 [編頁報表]。  
   
-1.  選取**省略符號 （...）**您想要管理的資料集。  
+1.  針對您要管理的資料庫選取**省略符號 (...)**。  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -87,7 +84,7 @@ ms.lasthandoff: 08/09/2017
   
     data source=(a SQL Server instance);initial catalog=MyData  
   
-連接字串可設定為運算式，以便於執行階段指定資料來源。 資料來源運算式是在報表設計師的報表中定義的。 Web 入口網站中無法定義、檢視及修改資料來源運算式。 不過，您可以按一下 [覆寫預設值] 以輸入靜態連接字串來取代資料來源運算式。 如果您想要切換回運算式，請按一下 [還原為預設值]。 報表伺服器會儲存原始的連接字串，您需要時即可還原。 若要使用資料來源運算式，您必須使用原本在報表中發行的資料來源連接資訊。 共用資料來源不支援在連接字串中使用運算式。  
+連接字串可設定為運算式，以便於執行階段指定資料來源。 資料來源運算式是在報表設計師的報表中定義的。 Web 入口網站中無法定義、檢視及修改資料來源運算式。 不過，您可以按一下 **[覆寫預設值]** 以輸入靜態連接字串來取代資料來源運算式。 如果您想要切換回運算式，請按一下 [還原為預設值]。 報表伺服器會儲存原始的連接字串，您需要時即可還原。 若要使用資料來源運算式，您必須使用原本在報表中發行的資料來源連接資訊。 共用資料來源不支援在連接字串中使用運算式。  
   
 **認證**  
   
@@ -127,14 +124,14 @@ ms.lasthandoff: 08/09/2017
 若要使用這個選項，您先前必須已針對報表伺服器設定自動執行帳戶。 當認證的其他進程無法使用時，自動執行帳戶就會用來連接至外部資料來源。 如果您指定了這個選項，但是沒有設定帳戶，報表資料來源的連接將會失敗，而且報表處理將不會進行。 如需此帳戶的詳細資訊，請參閱 [設定自動執行帳戶 (SSRS 組態管理員)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="subscriptions"></a>訂閱  
-Reporting Services 訂閱是在特定時間，或是為了回應某個事件時，以您指定的檔案格式所傳遞之報表組態。 例如，在每個星期三將 MonthlySales.rdl 報表以 Microsoft Word 文件儲存至檔案共用。 訂閱可用於排程及自動化報表的傳遞，並可搭配一組特定的報表參數值。 如需詳細資訊，請參閱[訂用帳戶使用](working-with-subscriptions-web-portal.md)。
+Reporting Services 訂閱是在特定時間，或是為了回應某個事件時，以您指定的檔案格式所傳遞之報表組態。 例如，在每個星期三將 MonthlySales.rdl 報表以 Microsoft Word 文件儲存至檔案共用。 訂閱可用於排程及自動化報表的傳遞，並可搭配一組特定的報表參數值。 如需詳細資訊，請參閱[使用訂用帳戶](working-with-subscriptions-web-portal.md)。
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>相依項目  
-使用 [相依項目] 頁面即可檢視參考此報表的項目清單。 每個項目類型的圖示都會表示其用途。 然後您可以選取**省略符號 （...）**每個項目來管理這些項目上進一步。  
+使用 [相依項目] 頁面即可檢視參考此報表的項目清單。 每個項目類型的圖示都會表示其用途。 您接著可以選取每個項目上的**省略符號 (...)**，進一步管理這些項目。  
   
-## <a name="caching"></a>Caching  
+## <a name="caching"></a>快取  
 您有幾個選項可以快取分頁報表的資料。 先從簡單的選取步驟開始。  
   
 1.  [永遠以最新的資料執行此報表] 會在每次執行報表時針對資料來源進行查詢。 這會讓依需求報表包含最新的資料。 每次開啟包含新查詢結果的報表時，都會建立報表的新執行個體。 使用此方法時，如果十位使用者同時開啟報表，則會傳送十個查詢至資料來源進行處理。  
@@ -173,7 +170,7 @@ Reporting Services 訂閱是在特定時間，或是為了回應某個事件時�
 ![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
 > [!NOTE]
-> SQL Server Agent 必須正在執行，才能建立快取重新整理計劃。  
+> 必須正在執行 SQL Server Agent 才能建立快取重新整理計劃。  
   
 您接著可以 [編輯] 或 [刪除] 列出的計劃。 當只有選取一個快取重新整理計劃時，才會啟用 [從現有的新增] 選項。 這個選項會建立從原始計劃複製的新重新整理計劃。 [快取重新整理計劃] 頁面開啟時會預先填入所選取計劃的詳細資料。 接著，您就可以修改重新整理計劃選項，然後使用新的描述儲存該計劃。  
   
@@ -198,8 +195,7 @@ Reporting Services 訂閱是在特定時間，或是為了回應某個事件時�
 
 ## <a name="next-steps"></a>後續的步驟
 
-[Web 入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
+[入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
 [使用共用資料集](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

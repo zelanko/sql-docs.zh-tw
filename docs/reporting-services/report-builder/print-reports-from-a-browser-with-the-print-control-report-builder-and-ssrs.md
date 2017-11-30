@@ -1,5 +1,5 @@
 ---
-title: "從列印控制項 （報表產生器及 SSRS） 與瀏覽器列印報表 |Microsoft 文件"
+title: "使用列印控制項從瀏覽器列印報表 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3674bb697d86ac79906aa4ee5172ad24030a22fc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 99405d9622cc89a1605c6aa9ee821f15844bc9ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>使用列印控制項從瀏覽器列印報表 (報表產生器及 SSRS)
   雖然瀏覽器是最常用來檢視報表的用戶端應用程式，但瀏覽器的列印功能在列印報表時並不理想。 瀏覽器的列印功能是為了列印網頁而設計的。 通常，您從瀏覽器列印的頁面會包括網頁上的所有視覺化元素，以及識別網頁或網站的頁首和頁尾資訊。 從瀏覽器列印時會列印現行視窗的內容。 若為多頁報表．瀏覽器最多只會列印第一頁，如果報表頁面延伸到列印頁面範圍之外，則列印出來的可能更少。  
@@ -43,11 +42,10 @@ ms.lasthandoff: 08/09/2017
  若要在 **[列印]** 對話方塊中預覽報表，請按一下 **[預覽]** 按鈕。 按一下預覽會以個別的預覽視窗，來開啟報表的第一頁。 其他的頁面在報表於報表伺服器上完成轉譯之後即可使用。 預覽的報表會轉譯成 EMF 格式。 您可以導覽至上一頁或下一頁，直到出現最後一頁為止，此時 **[下一頁]** 按鈕就會停用。  
   
 ### <a name="adjusting-print-margins"></a>調整列印邊界  
- 您可以在列印轉譯的 EMF 報表之前，先在該報表中修改列印邊界。 若要這樣做，請在 **[列印]** 對話方塊中，按一下 **[預覽]** 按鈕。 在預覽頁面頂端，按一下 **[邊界]** 按鈕。 [邊界] 對話方塊隨即顯示。 請設定您要的上、下、左、右邊界。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]關閉對話方塊並儲存設定，以供轉譯預覽和列印。  
+ 您可以在列印轉譯的 EMF 報表之前，先在該報表中修改列印邊界。 若要這樣做，請在 **[列印]** 對話方塊中，按一下 **[預覽]** 按鈕。 在預覽頁面頂端，按一下 **[邊界]** 按鈕。 [邊界] 對話方塊隨即顯示。 請設定您要的上、下、左、右邊界。 [!INCLUDE[clickOK](../../includes/clickok-md.md)] 對話方塊會關閉並儲存設定，以供轉譯預覽和列印使用。  
   
-## <a name="see-also"></a>請參閱＜  
- [列印報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [列印報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
   
   
-

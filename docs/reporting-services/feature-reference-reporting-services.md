@@ -1,5 +1,5 @@
 ---
-title: "功能參考 (Reporting Services) |Microsoft 文件"
+title: "功能參考 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e9a913cf74cb021d59ed5099483b2b1b04af554e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 67cc326b272c5a223cb7bb42f450ce6397342d6d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="feature-reference-reporting-services"></a>功能參考 (Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]包含數個工具和應用程式，可用來建立、 管理及檢視報表。 此章節提供描述這些工具和應用程式之對話方塊、網頁以及精靈的特定主題。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可用於建立、管理及檢視報表的數個工具和應用程式。 此章節提供描述這些工具和應用程式之對話方塊、網頁以及精靈的特定主題。  
   
  若要在工具或應用程式執行時存取使用者介面主題，請在開啟對話方塊、網頁或精靈之後，按下 F1 或是按一下 **[說明]** 。 如需啟動 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 工具的詳細資訊，請參閱[教學課程：如何尋找及啟動 Reporting Services 工具 &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)。  
   
@@ -43,18 +42,17 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services 組態管理員說明主題](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  提供用於部署及管理報表伺服器執行個體之 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 組態工具的說明。  
   
- [Report Server in Management Studio F1 說明](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [Management Studio F1 說明中的報表伺服器](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  提供用於在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中管理報表和報表伺服器之對話方塊的說明。  
   
  [HTML 檢視器和報表工具列](../reporting-services/html-viewer-and-the-report-toolbar.md)  
  提供用於在網頁瀏覽器中檢視報表之 HTML 檢視器元件的說明。  
   
-## <a name="see-also"></a>請參閱＜  
- [Reporting Services 概念 &#40;SSRS &#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
- [Reporting Services 報表 &#40;SSRS &#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
+## <a name="see-also"></a>另請參閱  
+ [Reporting Services 概念 &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Reporting Services 報表 &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
  [開始使用報表產生器](http://www.microsoft.com/download/en/details.aspx?id=29072)   
  [使用報表產生器 1.0 來設計和實作報表](http://go.microsoft.com/fwlink/?LinkId=142601)  
   
   
-

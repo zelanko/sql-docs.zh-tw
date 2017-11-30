@@ -1,5 +1,5 @@
 ---
-title: "驗證擴充保護與 Reporting Services |Microsoft 文件"
+title: "Reporting Services 的驗證擴充保護 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,35 +11,33 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>含有 Reporting Services 的驗證擴充保護
 
   「擴充保護」是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統最新版本的一組增強功能。 擴充保護會增強認證與驗證受到應用程式保護的方式。 此功能本身並不會針對認證轉送之類的特定攻擊直接提供保護，但是它會為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之類的應用程式提供基礎結構，以增強驗證擴充保護。  
   
  屬於擴充保護一部分的主要驗證增強功能為服務繫結與通道繫結。 通道繫結使用通道繫結 Token (CBT) 驗證兩點端點之間建立的通道是否未受到危害。 服務繫結使用服務主要名稱 (SPN) 驗證預期的驗證 Token 目的地。 如需擴充保護的詳細背景資訊，請參閱 [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)(具有擴充保護的整合式 Windows 驗證)。  
   
-SQL Server Reporting Services (SSRS) 支援並強制執行延伸的保護，已在作業系統中啟用和設定在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 依預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會接受指定交涉或 NTLM 驗證的要求，因此可以在作業系統與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 擴充保護功能中獲得擴充保護支援。  
+SQL Server Reporting Services (SSRS) 會支援並強制執行已在作業系統中啟用，且在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中設定的擴充保護。 依預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會接受指定交涉或 NTLM 驗證的要求，因此可以在作業系統與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 擴充保護功能中獲得擴充保護支援。  
   
 > [!IMPORTANT]  
 >  Windows 預設不會啟用 [擴充保護]。 如需如何在 Windows 中啟用 [擴充保護] 的資訊，請參閱 [驗證延伸保護](http://go.microsoft.com/fwlink/?LinkID=178431)。 作業系統與用戶端驗證堆疊必須同時支援擴充保護，驗證才會成功。 對於舊版作業系統，您可能需要針對完整具備擴充保護的電腦安裝多個更新。 如需擴充保護之最近開發狀況的詳細資訊，請參閱 [擴充保護的更新資訊](http://go.microsoft.com/fwlink/?LinkId=183362)。  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Reporting Services 擴充保護概觀
 
-SSRS 支援，並強制執行已在作業系統中啟用的擴充的保護。 如果作業系統不支援擴充保護，或者尚未啟用作業系統中的功能， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 擴充保護功能將會無法驗證。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 擴充保護也需要 SSL 憑證。 如需詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
+SSRS 支援並強制執行已在作業系統中啟用的擴充保護。 如果作業系統不支援擴充保護，或者尚未啟用作業系統中的功能， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 擴充保護功能將會無法驗證。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 擴充保護也需要 SSL 憑證。 如需詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設為不會啟用 [擴充保護]。 修改 **rsreportserver.config** 組態檔或使用 WMI API 更新組態檔，即可啟用該功能。 SSRS 未提供使用者介面，以修改或檢視擴充保護設定。 如需詳細資訊，請參閱本主題中的 [組態設定](#ConfigurationSettings) 一節。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設為不會啟用 [擴充保護]。 修改 **rsreportserver.config** 組態檔或使用 WMI API 更新組態檔，即可啟用該功能。 SSRS 未提供可修改或檢視擴充保護設定的使用者介面。 如需詳細資訊，請參閱本主題中的 [組態設定](#ConfigurationSettings) 一節。  
   
  因為擴充保護設定變更或進行之設定錯誤所造成的常見問題，不會以明顯的錯誤訊息或對話方塊視窗公開。 與擴充保護組態和相容性相關的問題會導致驗證失敗，並將錯誤記錄在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 追蹤記錄中。  
   
@@ -53,7 +51,7 @@ SSRS 支援，並強制執行已在作業系統中啟用的擴充的保護。 �
   
 ### <a name="upgrade"></a>升級  
   
--   升級[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]至 SQL Server 2016 的伺服器會新增組態設定和預設值， **rsreportserver.config**檔案。 如果設定已經存在，SQL Server 2016 安裝會將它們保留在**rsreportserver.config**檔案。  
+-   將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器升級至 SQL Server 2016 時，會將具有預設值的組態設定新增至 **rsreportserver.config** 檔案。 如果這些設定已經存在，SQL Server 2016 安裝會將它們保留在 **rsreportserver.config** 檔案中。  
   
 -   當組態設定加入至 **rsreportserver.config** 組態檔時，預設行為是讓 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 擴充保護功能關閉，因此您必須按照本主題中的描述，啟用該功能。 如需詳細資訊，請參閱本主題中的 [組態設定](#ConfigurationSettings) 一節。  
   

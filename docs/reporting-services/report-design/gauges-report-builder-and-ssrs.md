@@ -1,5 +1,5 @@
 ---
-title: "量測計 （報表產生器及 SSRS） |Microsoft 文件"
+title: "量測計 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -159,17 +159,16 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c0b12e57fd5917ee91a4191d87c3e354248928a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>量測計 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，量測計資料區域會顯示資料集中的單一值。 個別量測計一定會放在量測計面板內，您可在其中加入子量測計或相鄰的量測計。 您可以在單一量測計面板內，建立多個量測計來共用篩選、群組或排序等常用功能。  
@@ -184,7 +183,7 @@ ms.lasthandoff: 08/09/2017
   
  量測計類型有兩種：星形和線性。 下圖顯示量測計面板中單一星形量測計的基本元素。  
   
- ![量測計元素圖表](../../reporting-services/report-design/media/gauge-elements-diagram.gif "量測計元素圖表")  
+ ![量測計項目圖](../../reporting-services/report-design/media/gauge-elements-diagram.gif "量測計項目圖")  
   
  如需使用量測計作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
@@ -198,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
  線性量測計是矩形，水平或垂直方向，類似於尺規。 量測計指標通常是溫度計，但可以是標記或橫條。 此量測計類型由於其形狀的緣故，在整合到資料表或矩陣資料區以顯示進度資料時很有用。  
   
- 除了這些差異之外，這兩個量測計類型可以互換。 不過，如果您必須在報表中使用簡單的量測計，應該考慮使用指標而不是量測計。 如需詳細資訊，請參閱[指標 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ 除了這些差異之外，這兩個量測計類型可以互換。 不過，如果您必須在報表中使用簡單的量測計，應該考慮使用指標而不是量測計。 如需詳細資訊，請參閱[指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
  下列圖例顯示星形與線性量測計。 星形量測計是圓的，而且使用指針指標。 線性量測計是水平的，而且使用溫度計指標。  
   
@@ -254,7 +253,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="defining-a-group-on-a-gauge"></a>定義量測計上的群組  
  將欄位加入到量測計之後，您可以加入一個資料群組。 量測計與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的其他所有資料區域不同，前者可以在一個資料區域顯示多個群組。 當您透過在量測計上定義群組運算式來加入群組時，與您在 Tablix 資料區域上加入資料列群組時一樣。 不過，加入群組時，只有最後一個群組的值會顯示為量測值上的指標值。 例如，如果您在 Year 上加入群組運算式，指標將會指向資料集中，代表前一個年度之彙總銷售值的值。 如需群組的詳細資訊，請參閱 [了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
- 您可以在量測值上加入群組，例如，當您要在資料表或清單中顯示多個量測計，而且您想要顯示依群組彙總的資料時。 如需詳細資訊，請參閱[在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
+ 您可以在量測值上加入群組，例如，當您要在資料表或清單中顯示多個量測計，而且您想要顯示依群組彙總的資料時。 如需詳細資訊，請參閱 [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
 ##  <a name="PositioningData"></a> 將元素放置在量測計中  
  量測計面板是最上層的容器，其中保存一個或多個量測計。 您只要按一下量測計的外部，就可以檢視 **[量測計面板屬性]** 對話方塊。 每個量測計都會依序包含數個量測計項目：量測計標尺、量測計範圍，以及量測計指標。 當您要使用量測計時，需要了解如何在量測計面板中測量項目，以修改這些項目的大小與位置。  
@@ -304,12 +303,11 @@ ms.lasthandoff: 08/09/2017
 |[格式化量測計上的指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之指標的一般資訊，以及有關格式化星形與線性量測計上可用指標樣式之選項的詳細資訊。|  
 |[格式化量測計上的範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計之範圍以表示量測計上值的重要子區段，或以視覺化的方式表示指標值靠近特定值範圍之時間的資訊。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [篩選、 群組和排序資料 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [報表參數 &#40;報表產生器和報表設計工具 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [資料表、 矩陣和清單 &#40;報表產生器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

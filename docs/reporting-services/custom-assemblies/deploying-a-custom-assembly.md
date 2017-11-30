@@ -1,5 +1,5 @@
 ---
-title: "部署自訂組件 |Microsoft 文件"
+title: "部署自訂組件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,31 +10,29 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - deploying custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], deploying
 - custom assemblies [Reporting Services], updating
 - updating custom assemblies
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 44b3944bcef88371e19d01c0e22e5522d62ef645
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 96df35b9463c6138a817a24686422eadfba40864
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploying-a-custom-assembly"></a>部署自訂組件
-  若要部署自訂組件中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，報表設計師和報表伺服器應用程式資料夾中放置組件。 根據預設，會授與自訂組件**執行**中的權限[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 若要授與自訂組件之外的 Execute 權限的權限，您必須編輯 rssrvpolicy.config 組態檔，為報表伺服器和報表設計師預覽視窗的 rspreviewpolicy.config 組態檔。 或者，您可以在全域組件快取 (GAC) 中安裝自訂組件。  
+  若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中部署自訂組件，請在報表設計師與報表伺服器的應用程式資料夾中放置組件。 根據預設，會授與自訂組件在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 **Execution** 權限。 若要授與執行權限以外的自訂組件權限，您必須編輯報表伺服器的 rssrvpolicy.config 設定檔，以及報表設計師預覽視窗的 rspreviewpolicy.config 設定檔。 或者，您可以在全域組件快取 (GAC) 中安裝自訂組件。  
   
 > [!NOTE]  
->  有兩個報表設計師預覽模式: [預覽] 索引標籤和快顯預覽視窗中啟動報表專案時，會啟動**DebugLocal**模式。 [預覽] 索引標籤執行使用的所有報表運算式**FullTrust**權限設定，但不適用於安全性原則設定。 快顯預覽視窗是用以模擬報表伺服器功能，因此具有原則組態檔，而且您或系統管理員必須修改該檔案，才能在報表設計師中使用自訂組件。 此快顯預覽也會鎖定自訂組件。 因此，您需要關閉預覽視窗，才能修改或是更新自訂組件程式碼。  
+>  報表設計師有兩個預覽模式：當在 **DebugLocal** 模式中啟動報表專案時，會啟動 [預覽] 索引標籤與快顯預覽視窗。 [預覽] 索引標籤會使用 **FullTrust** 權限集合來執行所有的報表運算式，而且不會套用安全性原則設定。 快顯預覽視窗是用以模擬報表伺服器功能，因此具有原則組態檔，而且您或系統管理員必須修改該檔案，才能在報表設計師中使用自訂組件。 此快顯預覽也會鎖定自訂組件。 因此，您需要關閉預覽視窗，才能修改或是更新自訂組件程式碼。  
   
 ###### <a name="to-deploy-a-custom-assembly-in-reporting-services"></a>在 Reporting Services 中部署自訂組件  
   
@@ -46,10 +44,10 @@ ms.lasthandoff: 08/12/2017
   
 2.  開啟適當的組態檔。 rssrvpolicy.config 的預設位置是 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer。 rspreviewpolicy.config 的預設位置是 %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
   
-3.  為您的自訂組件加入程式碼群組。 如需詳細資訊，請參閱[Development &#40;Reporting Services &#41;](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
+3.  為您的自訂組件加入程式碼群組。 如需詳細資訊，請參閱[安全開發 &#40;Reporting Services&#41;](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)。  
   
 ## <a name="updating-custom-assemblies"></a>更新自訂組件  
- 在某些時候，您可能需要更新一些已發行報表目前已參考的自訂組件版本。 如果在報表伺服器或是報表設計師的 bin 目錄中已經有該組件，而且已遞增或是在某些方面已變更該組件的版本號碼，則目前發行的報表將無法再正常運作。 您必須更新的版本中所參考的組件**CodeModules**報表定義的項目並重新發行報表。 如果您知道會經常更新自訂組件，而且目前發行的報表需要參考新組件，則可能會考慮在特定組件的所有更新之間使用相同的版本號碼。  
+ 在某些時候，您可能需要更新一些已發行報表目前已參考的自訂組件版本。 如果在報表伺服器或是報表設計師的 bin 目錄中已經有該組件，而且已遞增或是在某些方面已變更該組件的版本號碼，則目前發行的報表將無法再正常運作。 您將需要更新報表定義的 **CodeModules** 項目中所參考的組件版本，並重新發行報表。 如果您知道會經常更新自訂組件，而且目前發行的報表需要參考新組件，則可能會考慮在特定組件的所有更新之間使用相同的版本號碼。  
   
  如果您不需要目前發行的報表參考組件的新版本，可以將自訂組件部署到全域組件快取。 全域組件快取可以維護相同組件的多個版本，因此您目前的報表可以參考舊版的組件，而且新發行的報表可以參考更新的組件。 但是另一項方法將會設定報表伺服器的繫結重新導向，以強制將舊組件的所有要求重新導向至新組件。 您將需要修改報表伺服器 Web.config 檔以及報表伺服器 ReportService.exe.config 檔。 項目可能如下所示：  
   
@@ -70,8 +68,7 @@ ms.lasthandoff: 08/12/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [報表中使用自訂組件](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [將自訂組件與報表搭配使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [使用組件和全域組件快取](http://go.microsoft.com/fwlink/?LinkId=63912)  
   
   
-

@@ -1,27 +1,25 @@
 ---
-title: "第 9 課： 建置並執行應用程式 |Microsoft 文件"
+title: "第 9 課：建置並執行應用程式 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: cc78414cb237f2be394106274628cca2e00ad95f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c3e9d3ca3b3b708105bf428508ff52c021bd5dd0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
 建立資料表的資料篩選後，下一步是要建置和執行網站應用程式。  
@@ -36,13 +34,12 @@ ms.lasthandoff: 08/09/2017
   
 2.  將滑鼠停留在 **[名稱]** 資料行底下的任何資料列上方。 滑鼠游標會顯示手掌符號。  
   
-3.  中選取一個值**名稱**資料行。 子報表隨即顯示，並且包含對應的篩選資料。  
+3.  按一下 [名稱] 資料行中的值。 子報表隨即顯示，並且包含對應的篩選資料。  
   
-4.  選取的圖示，**返回父報表**，請在**ReportViewer**向後巡覽至工具列**父**報表。  
+4.  選取 [ReportViewer] 工具列中的**返回父報表**圖示，向後巡覽回**父**報表。  
   
 5.  關閉瀏覽器即可結束。  
   
   
   
-
 

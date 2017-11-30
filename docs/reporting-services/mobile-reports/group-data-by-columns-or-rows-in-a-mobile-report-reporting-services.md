@@ -1,25 +1,24 @@
 ---
-title: "依資料行或行動報表中的資料列群組資料 |Reporting Services |Microsoft 文件"
+title: "依行動報表中的資料行或資料列群組資料 | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: de6eddf3b9338ac15f5036c2065df2f82f0c9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>依行動報表中的資料行或資料列群組資料 | Reporting Services
 您可以在許多圖表類型中，使用 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]依資料行或資料列來組織資料。 請遵循下列逐步指示。
@@ -30,19 +29,19 @@ ms.lasthandoff: 08/09/2017
 
 下列步驟在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 中使用內含模擬資料的比較總計資料表，來描述在圖表中依資料列結構化資料與依資料行結構化資料之間的差異。  
 
-1. 拖曳**比較總計圖表**從**配置**索引標籤加入設計介面並放大。
+1. 將 [比較總計圖表] 從 [配置] 索引標籤拖曳至設計介面，並放大圖表。
 
-2. 選取**資料** 索引標籤。 您會看到 SimulatedTable 資料表包含一系列的資料行 **Metric1** 至 **Metric5** ，以及 **Comparison1** 至 **Comparison5**。 
+2. 選取 [資料] 索引標籤。您會看到 SimulatedTable 資料表包含一系列的資料行 **Metric1** 至 **Metric5**，以及 **Comparison1** 至 **Comparison5**。 
 
    ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
-3. 在**資料屬性** 窗格中，**主要數列**是**SimulatedTable**。 在方塊中選取箭號，旁邊**主要數列**，而且您會看到**Metric1**透過**Metric5**選取。
+3. 在 [資料屬性] 窗格中，[主要數列] 是 **SimulatedTable**。 選取 [主要數列] 旁邊方塊中的箭頭，您會看到 **Metric1** 至 **Metric5** 處於選取狀態。
 
    ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
-   同樣的**比較數列** -- **Comparison1**透過**Comparison5**已選取。
+   同樣地，您會看到 [比較數列] -- **Comparison1** 至 **Comparison5** 處於選取狀態。
    
-4. 選取**預覽**。
+4. 選取 [預覽]。
 
    ![mobile-report-chart-by-columns](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
 
@@ -50,17 +49,17 @@ ms.lasthandoff: 08/09/2017
 
 5. 選取左上角的上一頁箭頭，即可離開預覽模式。
 
-6. 上**配置**索引標籤的**視覺屬性**窗格變更**資料結構**從**依資料行**至**資料列所**。  
+6. 在 [配置] 索引標籤的 [視覺屬性] 窗格中，將 [資料結構] 從 [循資料行] 變更為 [循資料列]。  
 
-7. 選取**資料** 索引標籤。 現在 SimulatedTable 資料表有**類別**連同資料行**度量**和**比較**資料行，類別 A 到 e 
+7. 選取 [資料] 索引標籤。現在 SimulatedTable 資料表會包含 [類別目錄]、[矩陣] 和 [比較] 資料行，以及類別目錄 A 至 E。 
 
    ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 
-8.  在**資料屬性** 窗格中，現在是類別資料行的方塊，它會列出類別資料行從 SimulatedTable。 在 [主要數列] 中，您可以挑選使用哪些資料行來顯示值。 根據預設， [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 會選取 Metric1 至 Metric5 作為主要數列，並選取 Comparison1 至 Comparison5 作為比較數列。 
+8.  在 [資料屬性] 窗格中，現在會有 [類別目錄資料行] 方塊，其中列出 SimulatedTable 中的 [類別目錄] 資料行。 在 [主要數列] 中，您可以挑選使用哪些資料行來顯示值。 根據預設， [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 會選取 Metric1 至 Metric5 作為主要數列，並選取 Comparison1 至 Comparison5 作為比較數列。 
 
     ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
-9. 選取**預覽**。
+9. 選取 [預覽]。
 
    ![mobile-report-chart-by-rows](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
 

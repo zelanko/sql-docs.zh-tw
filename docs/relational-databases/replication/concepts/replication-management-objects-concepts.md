@@ -1,16 +1,17 @@
 ---
 title: "複寫管理物件概念 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/08/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - Replication Management Objects
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: c39d933b13d2ab43432d850c0233c2d0e8916142
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e940ba8880aa2d1c4e4677c779b6984b2e6d4dde
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Replication Management Objects (RMO) 是一種 Managed 程式碼組件，用以封裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的複寫功能。 RMO 是由 <xref:Microsoft.SqlServer.Replication> 命名空間實作。  
   
@@ -187,7 +188,10 @@ ms.lasthandoff: 08/03/2017
   
 > [!IMPORTANT]  
 >  雖然 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別支援在設定屬性時宣告明確的交易，不過，這樣的交易可能會平擾內部複寫交易、可能會產生非預期的結果，而且不應該與 RMO 搭配使用。  
-  
+
+### <a name="enabling-tls-12-support-for-rmo-components"></a>啟用 RMO 元件的 TLS 1.2 支援 
+ 您可以安裝更新 [KB 3140245](http://support.microsoft.com/help/3140245)，並如本文中所述建立登錄機碼，來啟用 Windows 2012 和更低版本上之 RMO 元件的 TLS 1.2 支援。 在 Windows 2012 R2 和更新版本上，只需要建立上文所述的登錄機碼。
+ 
 ## <a name="example"></a>範例  
  這個範例會示範屬性變更的快取。 會快取對於交易式發行集屬性所做的變更，直到將它們明確地傳送到伺服器為止。  
   

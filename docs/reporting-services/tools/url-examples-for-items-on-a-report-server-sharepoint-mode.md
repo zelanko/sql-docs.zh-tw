@@ -1,5 +1,5 @@
 ---
-title: "在報表伺服器的 SharePoint 模式的項目的 URL 範例 |Microsoft 文件"
+title: "報表伺服器上的項目 URL 範例 - SharePoint 模式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d2dc3f1680651e6bcd0f4e4b714f567d1347e0c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>在報表伺服器的 SharePoint 模式的項目的 URL 範例
+# <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>報表伺服器上的項目 URL 範例 - SharePoint 模式
   若要將報表和相關項目發行至 SharePoint 文件庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 撰寫工具 (例如報表設計師) 來發行內容，也可以使用 SharePoint 網站動作來上傳內容。  
   
  SharePoint 網站在原生模式下，會使用不同於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的 Web 位址。 SharePoint 網站的 Web 階層包含 SharePoint Web 應用程式、一個頂層網站、選用的子網站，以及文件庫。 您必須知道如何建立 URL 位址，該位址會指定 SharePoint 伺服器以及在 SharePoint 網站階層中的位址，讓您可以在其中發行報表或相關項目。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 |物件|說明|  
 |------------|-----------------|  
-|SharePoint Web 應用程式|SharePoint Web 應用程式可以當做獨立的伺服器安裝，或安裝在包含虛擬伺服器集合的伺服器陣列下。 Web 應用程式具有一個 URL (例如， `http:*//servername*`)，而且可以包含多個站台。|  
+|SharePoint Web 應用程式|SharePoint Web 應用程式可以當做獨立的伺服器安裝，或安裝在包含虛擬伺服器集合的伺服器陣列下。 Web 應用程式具有一個 URL (例如 `http:*//servername*`)，並可包含多個網站。|  
 |網站|網站可能是 Web 應用程式的上層網站或子網站。|  
 |SharePoint 文件庫|文件庫包含文件或資料夾。 文件庫或文件庫中的資料夾是可以儲存報表、報表模型、共用資料來源與外部影像的唯一站台物件。|  
 |項目|您可以在 URL 中參考的報表伺服器項目包括報表或子報表的報表定義、報表模型、共用資料來源或外部影像。|  
@@ -50,26 +49,26 @@ ms.lasthandoff: 08/09/2017
 ### <a name="url-for-a-sharepoint-server"></a>SharePoint 伺服器的 URL  
  當您將「報表伺服器」或「報表模型」專案從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 部署至報表伺服器時，您必須使用指向 SharePoint 伺服器的 URL。  
   
- 若要尋找欲使用之伺服器的名稱，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 伺服器名稱會顯示通訊協定前置詞的後面，例如`http:*//servername*`。  
+ 若要尋找欲使用之伺服器的名稱，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 伺服器名稱會出現在通訊協定前置詞的後面，例如 `http:*//servername*`。  
   
- 不支援使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL Proxy 端點。 Proxy 端點包含通訊埠編號，例如`http:*//servername:8080/reportserver*`。  
+ 不支援使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL Proxy 端點。 Proxy 端點包含通訊埠編號，例如 `http:*//servername:8080/reportserver*`。  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 伺服器網站或子網站的 URL  
- 當您部署報表或報表資料來源時，您必須使用指向 SharePoint 網站或子網站的 URL (如果有的話)。 在 URL 中，網站名稱會出現在後面伺服器名稱，例如`http://*servername/site*`或`http://*servername/site/subsite*`。  
+ 當您部署報表或報表資料來源時，您必須使用指向 SharePoint 網站或子網站的 URL (如果有的話)。 在 URL 中，網站名稱會出現在伺服器名稱的後面，例如 `http://*servername/site*` 或 `http://*servername/site/subsite*`。  
   
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 應用程式上，網站和子網站通常會對應到主要網站上的索引標籤。 若要尋找網站名稱或子網站名稱，按一下 [主資料夾]，然後按一下 [所有網站內容]。 捲動至底部，然後尋找 [網站與工作區]。 網站清單便會出現在此區段中。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 文件庫的 URL  
  當您將報表或相關項目部署至 SharePoint 文件庫時，您必須使用指向 SharePoint 文件庫的 URL。 要用於文件庫的 URL 會視您所使用的 SharePoint 版本而有所不同。  
   
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]，程式庫會出現在伺服器名稱後面，例如`http://*servername/*Shared Documents`。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]，文件庫會出現在伺服器名稱後面，例如 `http://*servername/*Shared Documents`。  
   
- 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 上，文件庫會出現在網站和子網站後面。 例如， `http://*servername/site/*Documents`。  
+ 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]上，文件庫會出現在網站和子網站後面。 例如， `http://*servername/site/*Documents`。  
   
  若要尋找新 SharePoint 文件庫或不熟悉之網站的路徑資訊，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 如果文件庫是空的，上傳任何檔案。 以滑鼠右鍵按一下檔案，然後選取 [屬性]，以開啟 [屬性] 視窗。 檔案的位址包含發行作業所需的 URL 值。  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>SharePoint 網站上之項目的完整 URL  
- 儲存在 SharePoint 文件庫中的項目一定會透過從 Web 應用程式開始的完整 URL 定址 (`http://*server*`) 當做根節點，並於結尾提供所參考之檔案的名稱。  
+ 儲存在 SharePoint 文件庫中的項目一定會透過完整的 URL 定址，該 URL 會以 Web 應用程式開始 (`http://*server*`) 當作根節點，然後以您要參考的檔案名稱結尾。  
   
  在 URL 中的檔案名稱包含副檔名。  
   
@@ -81,7 +80,7 @@ ms.lasthandoff: 08/09/2017
  報表定義可以包含當做外部檔案儲存的影像檔。 您可以設定指向影像檔的完整 URL，在報表定義中參考該檔案。 它可以儲存在 SharePoint 網站或遠端電腦上。  
   
 > [!IMPORTANT]  
->  如果外部 URL 代表 SharePoint 網站上的影像，則當您在報表產生器中預覽報表時，會出現不完整的影像圖示。 當您將報表上傳至 SharePoint 網站，並連接模式中轉譯報表時，會出現不完整的影像圖示，如果您只有**檢視項目**權限。  
+>  如果外部 URL 代表 SharePoint 網站上的影像，則當您在報表產生器中預覽報表時，會出現不完整的影像圖示。 當您將報表上傳至 SharePoint 網站，並且以連線模式轉譯報表時，如果您僅具有 [檢視項目] 權限，則會出現不完整的影像圖示。  
   
  不管報表伺服器的模式為何，在報表中的外部影像檔參考必須是完整的 URL。 同時，參考外部影像檔通常需要您設定自動報表處理帳戶。  
   
@@ -140,10 +139,9 @@ ms.lasthandoff: 08/09/2017
   
  當報表伺服器以 SharePoint 整合模式執行時，資源概念的定義則比較窄化。 報表伺服器會保留資源的概念，以儲存參考外部影像的報表。 如果報表是快照集或保留給內部使用的副本，則也適用這個概念。  
   
-## <a name="see-also"></a>請參閱＜  
- [將報表發行至 SharePoint 文件庫](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [將共用的資料來源發行至 SharePoint 文件庫](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+## <a name="see-also"></a>另請參閱  
+ [將報表發行到 SharePoint 文件庫](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+ [將共用資料來源發行至 SharePoint 文件庫](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [專案屬性頁對話方塊](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   
-

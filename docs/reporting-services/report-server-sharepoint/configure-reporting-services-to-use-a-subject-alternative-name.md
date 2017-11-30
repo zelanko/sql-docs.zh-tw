@@ -1,5 +1,5 @@
 ---
-title: "設定 Reporting Services 使用主體替代名稱 |Microsoft 文件"
+title: "設定 Reporting Services 來使用主體別名 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,26 +14,25 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 73f48b2978055481f1ee93952fb3a35eb84ec416
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: f1ead2884fe5826814d79e869c4c345cbf3d5b6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>設定 Reporting Services 使用主體替代名稱
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>設定 Reporting Services 來使用主體別名
 
-本主題說明如何設定 Reporting Services (SSRS) 使用主體替代名稱 (SAN) 修改 rsreportserver.config 檔，並使用 Netsh.exe 工具。
+此主題說明如何透過修改 rsreportserver.config 檔案和使用 Netsh.exe 工具來設定 Reporting Services (SSRS)，以使用主體別名 (SAN)。
 
 這些指示適用於 Reporting Service URL 和 Web 服務 URL。
 
 如果要使用 SAN，必須在伺服器上註冊 SSL 憑證、必須簽署 SSL 憑證，且 SSL 憑證需有私密金鑰。 您不能使用自我簽署憑證。  
   
- Reporting Services 中的 Url 可以設定為使用 SSL 憑證。 憑證通常只有一個主體名稱，因此一個 SSL (安全通訊端層) 工作階段只允許一個 URL。 SAN 是憑證，可讓 SSL 服務接聽對許多 Url，並與其他應用程式共用 SSL 連接埠中的其他欄位。 SAN 看起來像`www.s2.com`。  
+ Reporting Services 中的 URL 可設定使用 SSL 憑證。 憑證通常只有一個主體名稱，因此一個 SSL (安全通訊端層) 工作階段只允許一個 URL。 SAN 是憑證中的一個額外欄位，它可以允許 SSL 服務接聽許多 URL，並可和其他應用程式共用 SSL 連線埠。 SAN 看起來像 `www.s2.com`。  
   
- 如需有關 Reporting Services 的 SSL 設定的詳細資訊，請參閱[原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 如需 Reporting Services 之 SSL 設定的詳細資訊，請參閱[在原生模式報表伺服器上設定 SSL 連線](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
-## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>設定 SSRS 使用主體替代名稱的 web 服務 URL
+## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>設定 SSRS 以針對 Web 服務 URL 使用主體別名
   
 1.  啟動 Reporting Services 組態管理員。  
   
@@ -41,13 +40,13 @@ ms.lasthandoff: 10/06/2017
   
 2.  在 [Web 服務 URL] 頁面中，選取 SSL 連接埠和 SSL 憑證。  
   
-     ![Reporting Services 組態管理員](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 組態管理員")  
+     ![Reporting Services 設定管理員](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 設定管理員")  
   
      組態管理員會針對通訊埠註冊 SSL 憑證。  
   
 3.  開啟 rsreportserver.config 檔案。  
   
-     SSRS 原生模式中，此檔案位於預設會在下列資料夾：  
+     對於 SSRS 原生模式，檔案的預設位置是下列資料夾：  
   
     ```  
     \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
@@ -55,7 +54,7 @@ ms.lasthandoff: 10/06/2017
   
 4.  複製報表伺服器 Web 服務應用程式的 URL 區段。  
   
-     例如，下列原始的 URL 區段是：  
+     例如，下列是原始的 URL 區段：  
   
     ```  
         <URL>  
@@ -66,7 +65,7 @@ ms.lasthandoff: 10/06/2017
   
     ```  
   
-     下列修改過的 URL 區段是：
+     下列是修改後的 URL 區段：
   
     ```  
     <URL>  
@@ -96,7 +95,7 @@ ms.lasthandoff: 10/06/2017
     Netsh>http  
     ```  
   
-8.  顯示現有的 urlacls 輸入下列命令：
+8.  鍵入下列命令以顯示現有的 urlacls：
   
     ```  
     Netsh http>show urlacl  
@@ -122,14 +121,13 @@ ms.lasthandoff: 10/06/2017
   
     ```  
   
-10. 在**報表伺服器狀態**頁面的 Reporting Services 組態管理員，按一下**停止**，然後按一下**啟動**重新啟動報表伺服器。  
+10. 在 Reporting Services 設定管理員的 [報表伺服器狀態] 頁面中，按一下 [停止]，然後按一下 [啟動] 以重新啟動報表伺服器。  
   
 ## <a name="see-also"></a>另請參閱
 
- [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [修改 Reporting Services 組態檔](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [設定報表伺服器 Url](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [RsReportServer.config 設定檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Reporting Services 設定管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [修改 Reporting Services 設定檔](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [設定報表伺服器 URL](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

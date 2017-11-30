@@ -1,37 +1,35 @@
 ---
-title: "建立 Reporting Services 行動報表 |Microsoft 文件"
+title: "建立 Reporting Services 行動報表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 800aa539255c937b089c13999d57f64bf0ec6558
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>建立 Reporting Services 行動報表
-使用 SQL Server 行動報表發行，您可以快速建立縮放至任何螢幕大小、 可調整格線列和資料行和有彈性的行動報表元素的設計介面上的 SQL Server 2016 Reporting Services 行動報表。  
+您可以使用 SQL Server 行動報表發行工具，在可調整格線列和格線欄且具有彈性行動報表項目的設計介面上，快速建立針對任何螢幕大小適當調整大小的 SQL Server 2016 Reporting Services 行動報表。  
   
-第一次建立行動報表，您可以在本機電腦上從 Reporting Services 入口網站上安裝 SQL Server 行動報表發行。 您可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=733527)進行安裝。 之後，您就可以從入口網站或本機啟動。   
+第一次建立行動報表時，您可以從 Reporting Services 入口網站，將 SQL Server 行動報表發行工具安裝在本機電腦上。 您可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=733527)進行安裝。 之後，您就可以從入口網站或本機啟動。   
     
-1. 在 Reporting Services 入口網站的頂端列，選取 **新增** > **行動報表**。  
+1. 在 Reporting Services 入口網站的頂端列中，選取 [新增] > [行動報表]。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. 在**配置**行動報表發行工具中索引標籤上選取 導覽器、 量測計、 圖表、 地圖或資料格，將它拖曳到設計格線。  
+2. 在行動報表發行工具的 [配置] 索引標籤中，選取導覽器、量測計、圖表、地圖或資料格，然後將其拖曳到設計格線。  
   
 3. 按住元素的右下角，將其拖曳成您想要的大小。  
   
@@ -39,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
    這是 **主要** 設計格線，您可以在此建立報表中要出現的元素。 稍後，您可以 [為平板電腦或手機進行配置](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)。     
      
-   在設計格線下方的**視覺屬性**中，請注意您可以設定的各種屬性。  
+   在設計格線下方的 **視覺屬性** 中，請注意您可以設定的各種屬性。  
      
 4. 選取左上角的 [資料] 索引標籤，即可看到其中已經有相關模擬資料的圖表。   
   
@@ -69,7 +67,7 @@ ms.lasthandoff: 08/09/2017
   
 11. 是時候儲存報表了。 選取左上方的儲存圖示，然後選取 [儲存至本機] 或 [儲存至伺服器]。  
   
-   若要將它儲存到伺服器，您會需要 SQL Server 2016 Reporting Services 報表伺服器的存取權。  
+   您需要有 SQL Server 2016 Reporting Services 報表伺服器的存取權，才能將其儲存至伺服器。  
      
    ### <a name="see-also"></a>另請參閱  
      
@@ -77,4 +75,3 @@ ms.lasthandoff: 08/09/2017
 -   [為手機或平板電腦配置 Reporting Services 行動報表](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  
   
    
-

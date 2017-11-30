@@ -1,5 +1,5 @@
 ---
-title: "匯出至 PDF 檔案 （報表產生器及 SSRS） |Microsoft 文件"
+title: "匯出至 PDF 檔案 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-server-2016
@@ -11,21 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: eac7c54b7b0c610af123a0822de11ddcc931a854
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 69c8be9ba7c2994928a992325e565f1af802b852
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>匯出至 PDF 檔案 (報表產生器及 SSRS)
   PDF 轉譯延伸模組會將 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表轉譯成可在 Adobe Acrobat 與支援 PDF 1.3 之其他協力廠商 PDF 檢視器中開啟的檔案。 雖然 PDF 1.3 與 Adobe Acrobat 4.0 和更新版本相容，但是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 只支援 Adobe Acrobat 11.0 或更新版本。 轉譯延伸模組不需要 Adobe 軟體就能轉譯報表。 但是，若要檢視或列印 PDF 格式的報表，則需要 PDF 檢視器 (例如 Adobe Acrobat)。  
   
- PDF 轉譯延伸模組支援 ANSI 字元，而且可以從日文、韓文、繁體中文、簡體中文、斯拉夫文、希伯來文和阿拉伯文，轉譯 Unicode 字元 (有特定限制)。 如需有關限制的詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ PDF 轉譯延伸模組支援 ANSI 字元，而且可以從日文、韓文、繁體中文、簡體中文、斯拉夫文、希伯來文和阿拉伯文，轉譯 Unicode 字元 (有特定限制)。 如需限制的詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
   
  PDF 轉譯器是一種實體頁面轉譯器，因此，其分頁行為與 HTML 和 Excel 之類的其他轉譯器不同。 本主題提供 PDF 轉譯器的特定資訊並描述規則的例外狀況。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="document-map"></a>文件引導模式  
  如果報表中有任何文件引導模式標籤，就會在 PDF 檔案中加入文件大綱。 每個文件引導模式標籤都會以該標籤在報表中出現的順序，顯示為文件大綱中的一個項目。 在 Acrobat 中，只有在轉譯目標書籤所在頁面時，才會將該書籤加入到文件大綱中。  
   
- 如果只轉譯單一頁面，則不會加入任何文件大綱。 系統會以階層的方式排列文件引導模式，來反映報表中的巢狀層級。 您可以在 Acrobat 的 [書籤] 索引標籤下存取文件大綱。 按一下文件大綱內的項目時，會讓文件移至加上書籤的位置。  
+ 如果只轉譯單一頁面，則不會加入任何文件大綱。 系統會以階層的方式排列文件引導模式，來反映報表中的巢狀層級。 您可以在 Acrobat 的 [書籤] 索引標籤下存取文件大綱。按一下文件大綱內的項目時，會讓文件移至加上書籤的位置。  
   
 ### <a name="bookmarks"></a>書籤  
  在 PDF 轉譯中不支援書籤。  
@@ -108,12 +108,11 @@ ms.lasthandoff: 08/09/2017
  您可以透過變更裝置資訊設定，變更此轉譯器的某些預設設定。 如需詳細資訊，請參閱 [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md)。  
   
   
-## <a name="see-also"></a>請參閱＜  
- [Reporting Services &#40; 中的分頁報表產生器及 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [轉譯行為 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組 &#40; 的互動式功能報表產生器及 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [轉譯報表項目 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [資料表、 矩陣和清單 &#40;報表產生器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

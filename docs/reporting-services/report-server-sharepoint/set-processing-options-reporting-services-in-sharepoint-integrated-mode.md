@@ -1,5 +1,5 @@
 ---
-title: "設定處理選項 (SharePoint 整合模式的 Reporting Services) |Microsoft 文件"
+title: "設定處理選項 (SharePoint 整合模式的 Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 645e4258f9185f748af496aa37aff13af08ce2a7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: be09d11f5a9fcdddc49a092c37be720dad0581c0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>設定處理選項 (SharePoint 整合模式的 Reporting Services)
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  您可以設定上的 Reporting Services 報表的處理選項，以決定何時進行資料處理。 您還可以設定報表處理的逾時值，以及決定是否要啟用目前報表之報表記錄的選項。  
+  您可以對 Reporting Services 報表設定處理選項，以指定資料開始處理的時間。 您還可以設定報表處理的逾時值，以及決定是否要啟用目前報表之報表記錄的選項。  
   
 -   您可以將報表以報表快照集的形式執行，以避免在任意時間 (例如，在排程備份期間) 執行報表。 報表快照集一般會按照排程建立和後續重新整理，讓您可以設定報表以及資料處理進行的正確時間。 如果報表所依據的，是要花很長時間執行的查詢，或者使用您希望在幾個小時內沒有人能存取之資料來源中之資料的查詢，您應將報表當成快照集執行。  
   
@@ -35,12 +34,12 @@ ms.lasthandoff: 10/06/2017
   
 -   報表記錄是之前所執行之報表副本的集合。 您可以使用報表記錄，以維護報表經過一段時間的記錄。 報表記錄不適用於包含機密或個人資料的報表。 因此，報表記錄只能包括使用一組認證 (預存認證或用於自動執行報表的認證) 來查詢資料來源的報表，此種認證是所有執行報表的使用者皆可使用的。  
 
-    Reporting Services 與 SharePoint 整合的簽出和簽入的 SharePoint，Reporting Services 內容類型中儲存更新的內容管理功能。 這包括建立報表快照集。 因此，如果您已經在文件庫上啟用版本控制，您將看到新報表記錄快照集建立時更新的報表版本。 這是更新快照集的副作用。 當快照集更新時，它會使報表的 LastExecution 屬性變更，因此造成報表版本變更。  
+    Reporting Services 整合 SharePoint 使用 SharePoint 的簽出和簽入內容管理功能來儲存 Reporting Services 內容類型的更新。 這包括建立報表快照集。 因此，如果您已經在文件庫上啟用版本控制，您將看到新報表記錄快照集建立時更新的報表版本。 這是更新快照集的副作用。 當快照集更新時，它會使報表的 LastExecution 屬性變更，因此造成報表版本變更。  
 
 -   您可以指定逾時值，以便設定系統資源的使用限制。  
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
 ## <a name="set-data-refresh-options"></a>設定資料重新整理選項
   
@@ -80,7 +79,7 @@ ms.lasthandoff: 10/06/2017
   
 2.  按一下向下箭頭，然後選取 **[管理處理選項]**。  
   
-3.  在**處理逾時**，選取**使用站台預設值**如果您想要使用報表伺服器層級指定的值。 否則，請選取 [報表處理不會逾時] 或 [限制報表處理的秒數]，使用無逾時或其他逾時值覆寫該值。  
+3.  如果您要使用在報表伺服器層級指定的值，請在 [處理逾時] 中選取 [使用網站預設值]。 否則，請選取 [報表處理不會逾時] 或 [限制報表處理的秒數]，使用無逾時或其他逾時值覆寫該值。  
   
 ## <a name="set-report-history-options-and-limits"></a>設定報表記錄選項和限制
   
@@ -100,7 +99,6 @@ ms.lasthandoff: 10/06/2017
 
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
  [快取報表](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [設定報表和共用資料集處理逾時值](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [設定報表和共用資料集處理的逾時值](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

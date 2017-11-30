@@ -5,23 +5,21 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FileTables [SQL Server], accessing files with file APIs
+helpviewer_keywords: FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6e9485840cba88623f686d33899475f0f572babe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用檔案輸入輸出 API 存取 FileTable
   描述檔案系統 I/O 如何在 FileTable 上運作。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="delete"></a> 刪除 FileTable 中的檔案和目錄  
  當您刪除檔案或目錄時會強制執行所有 Windows 檔案 I/O API 語意。  
   
--   如果目錄中包含任何檔案的子目錄，將無法刪除目錄。  
+-   如果目錄中包含任何檔案或子目錄，將無法刪除目錄。  
   
 -   刪除檔案或目錄將會從 FileTable 中移除對應的資料列。 這相當於透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業刪除該資料列。  
   
@@ -136,4 +134,3 @@ ms.lasthandoff: 06/22/2017
  [FileTable DDL、函數、預存程序及檢視](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
-

@@ -1,7 +1,6 @@
 ---
-title: "URL 存取參數參考 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "URL 存取參數參考 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/09/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c66dbaaaadcfc00cf52520f19f341ab7cd3b3c2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="url-access-parameter-reference"></a>URL 存取參數參考
   您可以使用下列參數當做 URL 的一部分，以設定 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]報表的外觀及操作。 本章節中將列出最常用的參數。 參數會區分大小寫，而且如果是導向至報表伺服器，則以參數前置字元 *rs:* 開頭，如果是導向至 HTML 檢視器，則以 *rc:* 開頭。 您也可以指定裝置或轉譯延伸模組特定的參數。 如需裝置特定參數的詳細資訊，請參閱 [在 URL 中指定裝置資訊設定](../reporting-services/specify-device-information-settings-in-a-url.md)。  
@@ -233,7 +231,7 @@ ms.lasthandoff: 08/09/2017
   
      預設值是 **HTML5**秒。 如需詳細資訊，請參閱 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)。  
   
-     如需完整清單，請參閱**\<呈現 >**延伸區段，報表伺服器的 rsreportserver.config 檔案。  如需如何尋找檔案的資訊，請參閱 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
+     如需完整清單，請參閱報表伺服器 rsreportserver.config 檔案的 **\<轉譯>** 延伸模組區段。  如需如何尋找檔案的資訊，請參閱 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
   
      例如，直接從 **Native** 模式報表伺服器取得報表的 PDF 副本：  
   
@@ -379,9 +377,8 @@ ms.lasthandoff: 08/09/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [URL 存取 &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [匯出的報表是使用 URL 存取](../reporting-services/export-a-report-using-url-access.md)  
+ [使用 URL 存取匯出報表](../reporting-services/export-a-report-using-url-access.md)  
   
   
-

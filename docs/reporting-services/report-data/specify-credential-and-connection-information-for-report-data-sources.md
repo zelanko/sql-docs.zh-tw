@@ -1,5 +1,5 @@
 ---
-title: "指定認證和報表資料來源的連接資訊 |Microsoft 文件"
+title: "指定報表資料來源的認證及連線資訊 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: b16e0b6c380cfe47f2bc82ea0328d9386ada294c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c1c30915d5b9e78b9e8c33b33a2c66b91f47512
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>指定報表資料來源的認證及連接資訊
   報表伺服器使用認證以連接到外部資料來源，其中提供內容給報表或提供收件者資訊給資料驅動訂閱。 您可以指定認證來使用 Windows 驗證、資料庫驗證、無驗證或自訂驗證。 透過網路傳送連接要求時，報表伺服器會模擬使用者帳戶或自動執行帳戶。 如需安全性內容 (連接要求會在其底下進行) 的詳細資訊，請參閱本主題之後的 [資料來源組態和網路連接](#DataSourceConfigurationConnections) 。  
@@ -51,21 +51,21 @@ ms.lasthandoff: 08/09/2017
 ## <a name="when-credentials-are-used-in-report-builder"></a>在報表產生器中使用認證時  
  在報表產生器中，認證經常在您連接至報表伺服器時使用，或是用於資料相關工作，例如建立內嵌的資料來源、執行資料集查詢，或是預覽報表。 認證不會儲存在報表中。 認證會在報表伺服器或本機用戶端上另行管理。 下列清單說明您可能需要提供的認證類型、認證儲存的位置，以及使用認證的方式：  
   
--   您輸入中的報表伺服器認證[Reporting Services 登入對話方塊 &#40;報表產生器 &#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md).  
+-   您在 [Reporting Services 登入對話方塊 &#40;報表產生器&#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md) 中輸入的報表伺服器認證。  
   
      當您初次儲存、發佈或瀏覽至報表伺服器或 SharePoint 網站時，可能需要輸入您的認證。 您輸入的認證會持續使用到報表產生器工作階段結束為止。 如果您選擇儲存認證，這些認證會在電腦上與使用者設定安全地儲存在一起。 在後續報表產生器工作階段中，儲存的認證會用來連接至相同的報表伺服器或 SharePoint 網站。 報表伺服器管理員或 SharePoint 管理員會指定要使用的認證類型。  
   
--   資料來源中輸入的認證[資料來源屬性對話方塊、 認證 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99)的內嵌的資料來源 頁面。  
+-   您在[資料來源屬性對話方塊、認證 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) 頁面中針對內嵌資料來源輸入的資料來源認證。  
   
      報表伺服器會使用這些認證建立與外部資料來源的資料連接。 針對部分類型的資料來源，其認證可以安全地儲存在報表伺服器上。 這些認證可讓其他使用者執行報表，而不需提供基礎資料連接的認證。  
   
--   資料來源中輸入的認證[輸入資料來源認證對話方塊 &#40;報表產生器 &#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md)時執行資料集查詢、 重新整理資料集欄位或預覽報表。  
+-   您執行資料集查詢、重新整理資料集欄位或預覽報表時，在[輸入資料來源認證對話方塊 &#40;報表產生器&#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) 中輸入的資料來源認證。  
   
      這些認證會用來建立報表產生器與外部資料來源之間的資料連接，或是預覽設定為提示認證的報表。 您在此對話方塊中輸入的認證不會儲存在報表伺服器上，也無法供其他使用者使用。 報表產生器會在報表編輯工作階段中快取認證，因此您不必在每次執行查詢或預覽報表時輸入認證。  
   
      如果是共用資料來源，請使用 **[儲存我的密碼]** 選項將認證與使用者設定一起儲存在本機電腦上。 報表產生器會在每次連接對應的外部資料來源時，使用儲存的認證。  
   
- 如需詳細資訊，請參閱[資料來源屬性對話方塊、 一般 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)和[在報表產生器中預覽報表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
+ 如需詳細資訊，請參閱[資料來源屬性對話方塊、一般 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) 和[在報表產生器中預覽報表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
   
 ## <a name="using-remote-data-sources"></a>使用遠端資料來源  
  如果報表會從遠端資料庫伺服器擷取資料，請確認下列項目：  
@@ -96,10 +96,10 @@ ms.lasthandoff: 08/09/2017
 -   使用預存認證或提示認證，即可查詢報表資料的外部資料來源。 認證可以是 Windows 網域帳戶或資料庫登入。  
   
 ### <a name="prompted-credentials"></a>提示認證  
- 當您將報表資料來源連接設定為使用提示認證時，存取此報表的每位使用者都必須輸入使用者名稱和密碼，才能擷取資料。 此方法建議用於包含機密資料的報表。 提示認證只能用於視需要執行的報表上。 提示認證可以是 Windows 帳戶或資料庫登入。 若要使用 Windows 驗證，您必須選取**連接到資料來源時作為 Windows 認證**。 否則，報表伺服器會將認證傳遞至資料庫伺服器以供使用者驗證。 如果資料庫伺服器無法驗證您所提供的認證，連接將會失敗。  
+ 當您將報表資料來源連接設定為使用提示認證時，存取此報表的每位使用者都必須輸入使用者名稱和密碼，才能擷取資料。 此方法建議用於包含機密資料的報表。 提示認證只能用於視需要執行的報表上。 提示認證可以是 Windows 帳戶或資料庫登入。 若要使用 Windows 驗證，必須選取 [連線到資料來源時作為 Windows 認證]。 否則，報表伺服器會將認證傳遞至資料庫伺服器以供使用者驗證。 如果資料庫伺服器無法驗證您所提供的認證，連接將會失敗。  
   
 ### <a name="windows-integrated-security"></a>Windows 整合式安全性  
- 當您使用**Windows 整合式安全性**選項時，報表伺服器會傳遞之使用者存取報表伺服器主控外部資料來源的安全性權杖。 在此情況下，不會提示使用者輸入使用者名稱或密碼。 如果模擬和委派功能已啟用，建議您使用此方法。 如果這些功能未啟用，只有當所有您想要存取的伺服器都位於相同電腦上時，才應該使用此方法。  
+ 當您使用 [Windows 整合式安全性] 選項時，報表伺服器會將存取報表之使用者的安全性權杖，傳遞至主控外部資料來源的伺服器。 在此情況下，不會提示使用者輸入使用者名稱或密碼。 如果模擬和委派功能已啟用，建議您使用此方法。 如果這些功能未啟用，只有當所有您想要存取的伺服器都位於相同電腦上時，才應該使用此方法。  
   
 ### <a name="stored-credentials"></a>預存認證  
  您可以儲存用於存取外部資料來源的認證。 認證是以可回復加密的方式，儲存在報表伺服器資料庫中。 您可以為用於報表中的每一個資料來源，指定一組預存認證。 您提供的認證會為執行報表的每一個使用者擷取相同的資料。  
@@ -113,25 +113,25 @@ ms.lasthandoff: 08/09/2017
   
  若要授與此權限，請執行下列動作：  
   
-1.  報表伺服器電腦上，在**系統管理工具**，開啟**本機安全性原則**。  
+1.  在報表伺服器電腦的 [系統管理工具] 中，開啟 [本機安全性原則]。  
   
-2.  在下**安全性設定**，依序展開**本機原則**，然後按一下 **使用者權限指派**。  
+2.  在 [安全性設定] 底下，展開 [本機原則]，然後按一下 [使用者權限指派]。  
   
-3.  在詳細資料窗格中，以滑鼠右鍵按一下**允許本機登入**然後以滑鼠右鍵按一下**屬性**。  
+3.  在詳細資料窗格中，以滑鼠右鍵按一下 [允許本機登入]，然後以滑鼠右鍵按一下 [內容]。  
   
 4.  按一下 **[加入使用者或群組]**。  
   
-5.  按一下**位置**，指定網域或您想要搜尋，然後按一下 其他位置**確定**。  
+5.  按一下 [位置]，指定要搜尋的網域或其他位置，然後按一下 [確定]。  
   
-6.  輸入您想要允許互動式登入，然後按一下的 Windows 帳戶**確定**。  
+6.  輸入允許互動式登入的 Windows 帳戶，然後按一下 [確定]。  
   
-7.  在**允許登入本機屬性**對話方塊中，按一下 **確定**。  
+7.  在 [允許本機登入內容] 對話方塊中，按一下 [確定]。  
   
 8.  確定您選取的帳戶沒有拒絕權限：  
   
-    1.  以滑鼠右鍵按一下**拒絕本機登入**然後以滑鼠右鍵按一下**屬性**。  
+    1.  以滑鼠右鍵按一下 [拒絕本機登入]，然後以滑鼠右鍵按一下 [內容]。  
   
-    2.  如果列出的帳戶，請選取它，然後按一下**移除**。  
+    2.  如果帳戶列於其中，請選取帳戶，然後按一下 [移除]。  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>以預存認證使用模擬  
  您也可以使用認證來模擬其他使用者的身分。 針對 SQL Server 資料庫，使用模擬選項會設定 [SETUSER](../../t-sql/statements/setuser-transact-sql.md) 函數。  
@@ -148,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 -   報表是使用父報表之認證的子報表。  
   
- 在這些狀況下，報表伺服器會使用您必須事先定義的自動執行帳戶連接到遠端資料來源。 報表伺服器未利用它的服務認證連接到遠端伺服器，因此，您必須指定帳戶，讓報表伺服器能夠用於進行連接。 如需有關如何建立此帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ 在這些狀況下，報表伺服器會使用您必須事先定義的自動執行帳戶連接到遠端資料來源。 報表伺服器未利用它的服務認證連接到遠端伺服器，因此，您必須指定帳戶，讓報表伺服器能夠用於進行連接。 如需建立此帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="user-name-and-password-login"></a>使用者名稱和密碼登入  
  當您選取 **[使用此使用者名稱和密碼]**時，必須提供使用者名稱和密碼才能存取資料來源。 若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，這些認證可能會用於資料庫登入。 認證將會傳遞至資料來源以供驗證。  
@@ -166,12 +166,12 @@ ms.lasthandoff: 08/09/2017
 ## <a name="setting-credentials-programmatically"></a>以設計程式的方式設定認證  
  您可以在您的程式碼中設定認證，來控制報表和報表伺服器的存取。 如需詳細資訊，請參閱 [資料來源和連接方法](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [管理報表資料來源](../../reporting-services/report-data/manage-report-data-sources.md)   
- [報表管理員 &#40;SSRS 原生模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [建立、刪除或修改共用的資料來源 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [設定報表 &#40; 資料來源屬性報表管理員 &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [設定報表的資料來源屬性 &#40;報表管理員&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "內建的 Globals and Users References (Report Builder and SSRS) |Microsoft 文件"
+title: "內建的全域和使用者參考 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: db369d1d9cd1e8767da8dc25a2a2487f138044d5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 821c2e768a14af3004971ca8f7b8d8ab76e2c762
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>內建集合-內建的 Globals and Users References （報表產生器）
+# <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>內建集合 - 內建的全域和使用者參考 (報表產生器)
   內建欄位集合包含 **Globals** 和 **User** 集合，代表在處理報表時 Reporting Services 所提供的全域值。 **Globals** 集合提供的值包括報表名稱、開始處理報表的時間，以及報表頁首及頁尾的目前頁碼。 **User** 集合則提供使用者識別碼和語言設定。 您可以在運算式中使用這些值以在報表中篩選結果。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>使用 Globals 集合  
- **Globals** 集合包含報表的全域變數。 在設計介面，這些變數會出現為具有前置 & （連字號），例如`[&ReportName]`。 下表描述 **Globals** 集合的成員。  
+ **Globals** 集合包含報表的全域變數。 這些變數在設計介面上會顯示為具有前置的 & (連字號)，例如 `[&ReportName]`。 下表描述 **Globals** 集合的成員。  
   
 |**成員**|**型別**|**說明**|  
 |----------------|--------------|---------------------|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>使用 User 集合  
- **User** 集合包含正在執行報表之使用者的相關資料。 您可以利用此集合來篩選出現在報表中的資料 (例如，只顯示目前使用者的資料)，或是在報表標題中顯示 UserID 或其他項目。 在設計介面，這些變數會出現為具有前置 & （連字號），例如`[&UserID]`。  
+ **User** 集合包含正在執行報表之使用者的相關資料。 您可以利用此集合來篩選出現在報表中的資料 (例如，只顯示目前使用者的資料)，或是在報表標題中顯示 UserID 或其他項目。 這些變數在設計介面上會顯示為具有前置的 & (連字號)，例如 `[&UserID]`。  
   
  下表描述 **User** 集合的成員。  
   
@@ -93,11 +93,11 @@ ms.lasthandoff: 08/09/2017
 ### <a name="identifying-userid-for-snapshot-or-history-reports"></a>識別快照集或歷程記錄報表的 UserID  
  在某些情況下，包含 *User!UserID* 變數的報表將無法顯示正在檢視報表之目前使用者特定的報表資料。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [運算式對話方塊 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
- [運算式 &#40; 中的資料類型報表產生器及 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [格式化數字和日期 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [運算式範例 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [運算式對話方塊 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

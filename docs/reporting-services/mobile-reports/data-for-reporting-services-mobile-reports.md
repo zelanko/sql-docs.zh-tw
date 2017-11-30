@@ -1,34 +1,31 @@
 ---
-title: "Reporting Services 行動報表的資料 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services 行動報表資料 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 9cf879fae78095f5fa6cb6f10d20cb0dfe6d12a1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 68ae16ae7746d414109530a18584277931bea9c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Reporting Services 行動報表資料
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 資料模型十分簡單。 資料會以資料集的集合形式匯入至 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 。 資料集之間的正式關聯性不是必要的。 只要符合索引鍵值，就會從某個資料集查閱到另一個資料集。 日期/時間彙總是由行動報表執行階段所處理，而且在不同的資料集之間會相符，即使資料集之間的日期/時間資料粒度不同也是一樣。   
   
 您可以從兩種類型的來源匯入資料：   
   
-* **本機 Excel 檔案**：選取 Excel 文件，並挑選要匯入的工作表。 匯入之後，會將資料儲存在行動報表定義內。 若要重新整理原始 Excel 檔案中的資料，請使用**重新整理資料**右上角中的命令上[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]**資料** 索引標籤。深入了解[準備 SSRS 行動報表的 Excel 資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)。  
+* **本機 Excel 檔案**：選取 Excel 文件，並挑選要匯入的工作表。 匯入之後，會將資料儲存在行動報表定義內。 若要重新整理原始 Excel 檔案中的資料，請使用 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] [資料] 索引標籤右上角的 [重新整理資料] 命令。深入了解[準備 SSRS 行動報表的 Excel 資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)。  
   
 * **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)] 共用資料集**︰瀏覽伺服器上的已發行資料集清單，並選取要加入行動報表中的已發行資料集。 根據伺服器資料的行動報表一律會保持連接至原始伺服器資料集，並反映伺服器上資料的最新狀態。 請參閱 [支援的資料來源清單](https://msdn.microsoft.com/library/ms159219.aspx)。   
   
@@ -49,5 +46,4 @@ ms.lasthandoff: 09/27/2017
 - [保留行動報表中 Analysis Services 資料的日期格式](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 
   
   
-
 

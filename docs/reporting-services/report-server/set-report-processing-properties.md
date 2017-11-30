@@ -1,5 +1,5 @@
 ---
-title: "設定報表處理屬性 |Microsoft 文件"
+title: "設定報表處理屬性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,22 +18,21 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], running reports from
 - report execution snapshots [Reporting Services]
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2c66ebf45916b6e820a5599b4b90416703b377e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e2bae47182f317a699f968b6953015f7a2eac823
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-report-processing-properties"></a>設定報表處理屬性
   報表執行屬性控制處理報表的方式。 您必須針對每個報表個別設定執行屬性。  
   
- 若要設定報表執行屬性，請在報表管理員中開啟報表，然後導覽到 [執行] 屬性頁面。 如需詳細資訊，請參閱[處理選項屬性頁面 &#40;報表管理員 &#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). 您也可以設定屬性使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; 請參閱[處理選項屬性頁面 &#40;報表管理員 &#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ 若要設定報表執行屬性，請在報表管理員中開啟報表，然後導覽到 [執行] 屬性頁面。 如需詳細資訊，請參閱[處理選項屬性頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。 您也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]；請參閱[處理選項屬性頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。  
   
 ## <a name="report-execution-modes"></a>報表執行模式  
  您可以視需要或以快照集的形式執行報表。 下一節描述每一種方法。  
@@ -59,14 +58,13 @@ ms.lasthandoff: 08/09/2017
   
 -   現有的訂閱設定成使用與您為快照集指定之預設參數值不同的參數值。  
   
- 如果有這種情況，報表伺服器就會在下次訂閱排程執行時停用訂閱。 若要重新啟動訂閱，請開啟再儲存訂閱。 當您開啟訂閱，報表伺服器會將訂閱參數值更新為快照集所指定的值。 如需訂用帳戶的詳細資訊，請參閱[訂閱和傳遞 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
+ 如果有這種情況，報表伺服器就會在下次訂閱排程執行時停用訂閱。 若要重新啟動訂閱，請開啟再儲存訂閱。 當您開啟訂閱，報表伺服器會將訂閱參數值更新為快照集所指定的值。 如需訂用帳戶的詳細資訊，請參閱[訂用帳戶與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [設定報表的執行屬性 &#40;報表管理員&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Reporting Services 概念 &#40;SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [如何： 將快照集加入報表記錄](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Reporting Services 概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [如何：將快照集新增至報表記錄](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [指定報表資料來源的認證及連線資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

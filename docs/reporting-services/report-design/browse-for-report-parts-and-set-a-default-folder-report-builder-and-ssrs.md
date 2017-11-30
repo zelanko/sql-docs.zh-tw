@@ -1,5 +1,5 @@
 ---
-title: "瀏覽報表組件及設定預設資料夾 （報表產生器及 SSRS） |Microsoft 文件"
+title: "瀏覽報表組件及設定預設資料夾 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
 ms.openlocfilehash: 0495d013be21d73c0ea5ae67c4a810c75db4298e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 11/07/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>瀏覽報表組件及設定預設資料夾 (報表產生器及 SSRS)
 建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表最簡單的方式，就是從報表組件庫將現有的報表組件 (例如資料表和圖表) 加入您的報表。 當您將報表組件加入到報表時，您也會加入此組件運作所必須擁有的所有項目。 例如，顯示資料的所有報表組件都取決於資料集，也就是資料來源的查詢和連接。 當您將報表組件加入至報表之後，您可以盡量修改它。  
@@ -32,14 +31,14 @@ ms.lasthandoff: 11/07/2017
   
 ## <a name="to-browse-for-report-parts"></a>若要瀏覽報表組件  
   
-1.  在**插入**功能表上，按一下 **報表組件**。  
+1.  在 [插入] 功能表上，按一下 [報表組件]。  
   
-     如果您尚未連接，按一下**連接到報表伺服器**，並輸入名稱。  
+     如果您尚未連線，請按一下 [連線到報表伺服器]，並輸入名稱。  
   
     > [!NOTE]  
     >  您必須連接到報表伺服器，才能瀏覽報表組件。  
   
-2.  您可以指定報表組件的詳細資料來縮小搜尋範圍。 輸入全部或部分的名稱和描述**搜尋**，或者按一下**將準則新增**與新增的任何或所有的這些欄位的值：  
+2.  您可以指定報表組件的詳細資料來縮小搜尋範圍。 請在 [搜尋] 方塊中鍵入完整名稱或名稱的一部分和描述，或是按一下 [新增準則] 並針對任何欄位或所有欄位新增值：  
   
     -   建立者  
   
@@ -53,16 +52,16 @@ ms.lasthandoff: 11/07/2017
   
     -   類型  
   
-     例如，若要尋找映像，請按一下**將準則新增**，然後按一下 **類型**。 在下拉式方塊中，選取**映像**核取方塊，按下 ENTER、，然後按一下 [搜尋] 放大鏡。  
+     例如，若要尋找影像，請按一下 [新增準則]，然後按一下 [類型]。 在下拉式方塊中，選取 [影像] 核取方塊，按 ENTER ，然後按一下「搜尋」放大鏡。  
   
     > [!NOTE]  
-    >  如**由**和**上次修改者**值，報表伺服器上所代表人員的使用者名稱搜尋。  
+    >  針對 [建立者] 和 [上次修改者] 值，搜尋此人員在報表伺服器上所代表的使用者名稱。  
   
 ## <a name="to-set-a-default-folder-for-report-parts"></a>若要設定報表組件的預設資料夾  
   
-1.  按一下**報表產生器**，然後按一下 **選項**。  
+1.  按一下 [報表產生器]，然後按一下 [選項]。  
   
-2.  在**選項**對話方塊**設定**索引標籤上，輸入資料夾名稱中的**預設發行報表組件到這個資料夾**文字方塊。  
+2.  在 [選項] 對話方塊的 [設定] 索引標籤上，於 [將報表組件預設發行到此資料夾] 文字方塊中鍵入資料夾名稱。  
   
  如果此資料夾尚未存在，而且您有權在報表伺服器上建立資料夾，報表產生器將會建立這個資料夾。  
   
@@ -76,4 +75,3 @@ ms.lasthandoff: 11/07/2017
  [發行與重新發行報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   
-

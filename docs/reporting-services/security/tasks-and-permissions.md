@@ -1,5 +1,5 @@
 ---
-title: "工作和權限 |Microsoft 文件"
+title: "工作與權限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - predefined tasks [Reporting Services]
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e2822182d644b90aa419986f75a6fdc6fd3296
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0d2ea7df496e47ec31b79557d238fd564a4e7128
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tasks-and-permissions"></a>工作和權限
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，「工作」(Task) 是使用者或管理員可以執行的動作。 工作是預先定義的。 您無法建立自訂工作或修改以程式設計的方式或透過工具而提供的工作。 總共有 25 種工作。 這些工作構成以角色為基礎之安全性中，可以使用的整個作業集。 工作的範例包括「檢視報表」、「管理報表」以及「管理報表伺服器屬性」。  
@@ -49,10 +48,9 @@ ms.lasthandoff: 08/09/2017
 |[項目層級工作](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)|在資料夾、報表、報表模型和資源等受到報表伺服器管理之項目上執行的動作。<br /><br /> 項目層級工作的範圍為報表伺服器資料夾命名空間。 您透過報表伺服器上的資料夾，或者透過 URL 存取的所有項目，都受到包含項目層級工作之角色指派的保護。|  
 |[系統層級工作](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)|在系統層級執行的動作，例如管理作業或可以用於許多項目的共用排程。 系統層級工作的範圍是在報表伺服器資料夾命名空間以外。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [角色定義](../../reporting-services/security/role-definitions.md)   
- [預先定義的角色](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

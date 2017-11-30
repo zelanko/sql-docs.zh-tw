@@ -1,29 +1,26 @@
 ---
-title: "電子郵件設定-Reporting Services 原生模式 （組態管理員） |Microsoft 文件"
+title: "電子郵件設定 - Reporting Services 原生模式 (設定管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.rsconfigtool.emailsettings.F1
-helpviewer_keywords:
-- SQL11.rsconfigtool.emailsettings.F1
+f1_keywords: SQL13.rsconfigtool.emailsettings.F1
+helpviewer_keywords: SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 6ecaee1ba9757745e7d1e884067fa9c06632c6e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45aad2cc5dbdbc23fa28f1f70b138da4ec05f281
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子郵件設定 - Reporting Services 原生模式 (組態管理員)
 Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透過電子郵件散發報表。 根據您定義電子郵件訂閱的方式而定，傳遞可能會由通知、連結、附加檔案或內嵌報表所組成。 電子郵件傳遞延伸模組可搭配現有的郵件伺服器技術一起使用。 郵件伺服器必須是 SMTP 伺服器或轉送器。 報表伺服器會透過作業系統提供的 Collaboration Data Objects (CDO) 程式庫 (cdosys.dll) 連接到 SMTP 伺服器。
@@ -57,25 +54,25 @@ Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透�
 
 1. 啟動 Reporting Services 組態管理員，並連接到報表伺服器執行個體。
 
-2. 在**寄件者地址**，輸入電子郵件地址，以用於**從：**產生的電子郵件欄位。 
+2. 在 [寄件者地址] 中輸入要產生的電子郵件 [寄件者:] 欄位中使用的電子郵件地址。 
 
-     您必須指定有權從 SMTP 伺服器傳送郵件的使用者帳戶。 您輸入的值**寄件者地址**會儲存在`<From>`rsreportserver.config 檔案中的欄位。  
+     您必須指定有權從 SMTP 伺服器傳送郵件的使用者帳戶。 您在 [寄件者地址] 鍵入的值會儲存在 rsreportserver.config 檔案的 [`<From>`] 欄位中。  
 
-3.  在**SMTP 伺服器**，指定 SMTP 伺服器或要使用的閘道。 
+3.  在 [SMTP 伺服器] 中，指定要使用的 SMTP 伺服器或閘道。 
 
-     此值可以是 IP 位址、您公司內部網路之電腦的 NetBIOS 名稱，或是完整的網域名稱。 您輸入的值**SMTP 伺服器**會儲存在`<SMTPServer>`rsreportserver.config 檔案中的欄位。
+     此值可以是 IP 位址、您公司內部網路之電腦的 NetBIOS 名稱，或是完整的網域名稱。 您在 [SMTP 伺服器] 鍵入的值會儲存在 rsreportserver.config 檔案的 [`<SMTPServer>`] 欄位中。
 
-4. 使用**驗證**下拉式清單來指定如何驗證 SMTP 伺服器。 此 
+4. 使用 [驗證] 下拉式清單來指定如何驗證 SMTP 伺服器。 此 
 
-     - **無驗證**表示您會以匿名方式連線到指定的郵件伺服器。
+     - [不需要驗證] 表示您會以匿名方式連接到指定的郵件伺服器。
      
           選取此選項會在 rsreportserver.config 中將 `<SendUsing>` 設為 **2** 值，將 `<SMTPAuthenticate>` 設為 **0** 值。
      
-     - **使用者名稱和密碼 （基本）**可讓您指定的使用者名稱和密碼，連接到郵件伺服器。 您也可以選取**使用安全連線**有此 go 透過加密連線到郵件伺服器。
+     - [使用者名稱與密碼 (基本)] 可讓您指定連接到郵件伺服器的使用者名稱和密碼。 您也可以選取 [使用安全連線] 使用您郵件伺服器的加密連線。
      
-          選取此選項會在 rsreportserver.config 中將 `<SendUsing>` 設為 **2** 值，將 `<SMTPAuthenticate>` 設為 **1** 值。 選取**使用安全連線**將`SMTPUseSSL`至**True**。 **中的** 使用者名稱 `<SendUserName>` 會設為加密值。 **中的** 密碼 `<SendPassword>` 會設為加密值。
+          選取此選項會在 rsreportserver.config 中將 `<SendUsing>` 設為 **2** 值，將 `<SMTPAuthenticate>` 設為 **1** 值。選取 [使用安全連線] 會將 `SMTPUseSSL` 設為 **True**。 **中的** 使用者名稱 `<SendUserName>` 會設為加密值。 **中的** 密碼 `<SendPassword>` 會設為加密值。
      
-     - **報表伺服器服務帳戶 (NTLM)**將報表伺服器使用您指定的服務帳戶。 如果使用報表伺服器服務帳戶進行驗證，請確認服務帳戶具有 SMTP 伺服器的 **傳送為** 權限。
+     - [報表伺服器服務帳戶 (NTLM)] 會使用您為報表伺服器指定的服務帳戶。 如果使用報表伺服器服務帳戶進行驗證，請確認服務帳戶具有 SMTP 伺服器的 **傳送為** 權限。
      
           選取此選項會在 rsreportserver.config 中將 `<SendUsing>` 設為 **2** 值，將 `<SMTPAuthenticate>` 設為 **2** 值。
 
@@ -134,9 +131,9 @@ Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透�
 ## <a name="configuration-options-for-remote-smtp-service"></a>遠端 SMTP 服務的組態選項
 報表伺服器和 SMTP 伺服器或轉寄站之間的連接，是由下列組態設定決定：
 
-- `<SendUsing>`指定傳送訊息的方法。 您可以選擇網路 SMTP 服務或本機 SMTP 服務收取目錄。 若要使用遠端 SMTP 服務，必須在 RSReportServer.config 檔案中將此值設定為 **2** 。
-- `<SMTPServer>`指定遠端 SMTP 伺服器或轉送器。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。
-- `<From>`設定值，會出現在**從：**列的電子郵件訊息。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。
+- `<SendUsing>` 指定傳送訊息的方法。 您可以選擇網路 SMTP 服務或本機 SMTP 服務收取目錄。 若要使用遠端 SMTP 服務，必須在 RSReportServer.config 檔案中將此值設定為 **2** 。
+- `<SMTPServer>` 指定遠端 SMTP 伺服器或轉送子。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。
+- [`<From>`] 設定的值，會在電子郵件訊息 [寄件者:] 行內顯示。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。
 
 用於遠端 SMTP 服務的其他值包括下列項目 (請注意，除非您要覆寫預設值，否則不需要指定這些值)。
 
@@ -184,23 +181,23 @@ Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透�
 
 ### <a name="to-configure-a-local-smtp-service-for-the-report-server"></a>若要為報表伺服器設定本機 SMTP 服務
 
-1. 在 [控制台] 中選取**開啟或關閉 Windows 功能**啟動**新增角色及功能精靈**。
+1. 在 [控制台] 中選取 [開啟或關閉 Windows 功能] 來啟動 [新增角色及功能精靈]。
 
-2. 選取**角色型或功能型安裝**選取**下一步**。
+2. 選取 [角色型或功能型安裝]，然後選取 [下一步]。
 
-3. 選取要安裝 Internet Information Server (IIS) 拖曳至並選取伺服器**下一步**。
+3. 選取要安裝 Internet Information Server (IIS) 的伺服器，然後選取 [下一步]。
 
-4. 選取**下一步**上*伺服器角色** 頁面。
+4. 選取 [伺服器角色]* 頁面的 [下一步]。
      
-5. 在*功能*頁面上，選取**SMTP 伺服器**，然後選取 **下一步**。
+5. 選取 [功能] 頁面上的 [SMTP 伺服器]，然後選取 [下一步]。
 
-     如果系統提示您加入功能所需的 SMTP 伺服器，請選取**新增功能**。
+     如果系統提示您新增 SMTP 伺服器所需的功能，請選取 [新增功能]。
 
-6. 選取**下一步**上*網頁伺服器 (IIS)*頁面。
+6. 選取 [網頁伺服器角色 (IIS)] 頁面的 [下一步]。
 
-7. 選取**下一步**上*角色服務*頁面。
+7. 選取 [角色服務] 頁面的 [下一步]。
 
-8. 選取**安裝**上**確認**頁面。
+8. 選取 [確認] 頁面上的 [安裝]。
 
 9. 確認 [服務] 主控台正在執行 **簡易郵件傳送通訊協定 (SMTP)** Windows 服務。
 
@@ -222,7 +219,7 @@ Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透�
      
      預設位置是 *C:\inetpub\mailroot\Pickup*。
      
-16. 設定 `<From>`。 這會將會出現在值**從：**列的電子郵件訊息。
+16. 設定 `<From>`。 這會設定電子郵件訊息 [寄件者:] 行內顯示的值。
      
 17. 儲存檔案。
   
@@ -232,4 +229,3 @@ Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透�
 [Rsreportserver.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
   
-

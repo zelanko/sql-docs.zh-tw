@@ -1,33 +1,30 @@
 ---
-title: "使用快照集 （入口網站） |Microsoft 文件"
+title: "使用快照集 (Web 入口網站) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7498112d3822d18976ea6482c6014ce7bc69435f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-snapshots-web-portal"></a>使用快照集 (入口網站)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-如果選取的報表建立快照集，您可以控制**省略符號 （...）**的報表，請選取**管理**，然後選取**快取**或**記錄快照集**。  
+您可以控制是否要為報表建立快照集，方法是選取報表的**省略符號 (...)**，並選取 [管理]，然後選取 [快取] 或 [記錄快照集]。  
   
 > [!NOTE]
 > 需要啟動 SQL Server Agent 服務。  
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="create-modify-and-delete-history-snapshots"></a>建立、修改及刪除記錄快照集  
   
-若要使用記錄快照集，請管理報表並選取 [記錄快照集]。  
+若要使用記錄快照集，請管理報表，並選取 [記錄快照集]。  
   
 使用 [記錄快照集] 頁面來檢視產生和儲存一段時間的報表快照集。 依據在報表伺服器上設定的選項，記錄可能只包含最近的快照集。  
   
@@ -80,9 +77,8 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>後續的步驟
 
-[Web 入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
+[入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
 [使用分頁報表](working-with-paginated-reports-web-portal.md)  
 [使用共用資料集](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

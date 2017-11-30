@@ -1,5 +1,5 @@
 ---
-title: "轉譯行為 （報表產生器及 SSRS） |Microsoft 文件"
+title: "轉譯行為 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4cf19162ddf8e94b897de746e311f218a94b9dda
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>轉譯行為 (報表產生器及 SSRS)
   根據所選取的轉譯器，當轉譯報表時，系統會將某些規則套用到報表主體及其內容。 將報表項目全部容納在一頁的方式，取決於下列因素的組合：  
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/09/2017
   
 -   系統會使用報表項目上顯示的頁面高度與次數來建立約略的版面配置。 例如，如果文字方塊的高度為 .5 英吋，而且會在報表中重複 5 次，就會保留 2.5 英吋。  
   
--   系統會根據互動式高度設定，插入多個軟分頁符號。 若要在 HTML 和 ReportViewer 控制項中隱藏分頁符號，而且僅控制具有明確分頁符號的分頁，請將[互動高度] 值設定為 0 或非常大的數字。  
+-   系統會根據互動式高度設定，插入多個軟分頁符號。 若要在 HTML 和 ReportViewer 控制項中隱藏分頁符號，而且僅控制具有明確分頁符號的分頁，請將 [互動高度] 值設定為 0 或非常大的數字。  
   
     > [!NOTE]  
     >  在軟分頁符號轉譯器中不會使用互動式寬度設定。  
@@ -96,7 +95,7 @@ ms.lasthandoff: 08/09/2017
  以 HTML 或 MHTML 轉譯格式進行轉譯時，下列規則會套用到頁首和頁尾：  
   
 > [!NOTE]  
->  如需 Excel 如何轉譯頁首和頁尾的相關資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。 如需 Word 如何轉譯頁首和頁尾的相關資訊，請參閱[匯出至 Microsoft Word &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)。  
+>  如需 Excel 如何轉譯頁首和頁尾的資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。 如需 Word 如何轉譯頁首和頁尾的資訊，請參閱[匯出至 Microsoft Word &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)。  
   
 -   頁面出現時，在每頁頂端和底部的可用頁面區域內，會轉譯頁首和頁尾。  
   
@@ -133,10 +132,9 @@ ms.lasthandoff: 08/09/2017
   
 -   系統不會保留在資料表或矩陣資料格之項目上定義的邏輯分頁符號。 這不適用於清單中的項目。  
   
-## <a name="see-also"></a>請參閱＜  
- [不同報表轉譯延伸模組 &#40; 的互動式功能報表產生器及 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [轉譯為 HTML &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [頁面配置和轉譯 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [轉譯為 HTML &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
+ [頁面配置和轉譯 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   
-

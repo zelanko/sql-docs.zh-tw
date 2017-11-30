@@ -1,5 +1,5 @@
 ---
-title: "建立 RSExecRole |Microsoft 文件"
+title: "建立 RSExecRole | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,21 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RSExecRole
+helpviewer_keywords: RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-the-rsexecrole"></a>建立 RSExecRole
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用稱為 **RSExecRole** 之預先定義的資料庫角色，授與報表伺服器對於報表伺服器資料庫的權限。 **RSExecRole** 角色會自動與報表伺服器資料庫一起建立。 您絕對不能修改它或是將其他使用者指派給這個角色，這是一般的規則。 但是，當您將報表伺服器資料庫移到新的或另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，您必須在 Master 和 MSDB 系統資料庫中重新建立此角色。  
@@ -193,11 +190,11 @@ ms.lasthandoff: 08/09/2017
 30. 針對 sysjobs 資料表重複此步驟。 必須針對這兩個資料表為 RSExecRole 授與 Select 權限。  
   
 ## <a name="move-the-report-server-database"></a>移動報表伺服器資料庫  
- 在建立角色之後，您可以將報表伺服器資料庫移到新的 SQL Server 執行個體。 如需詳細資訊，請參閱[將報表伺服器資料庫移到另一部電腦](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。  
+ 在建立角色之後，您可以將報表伺服器資料庫移到新的 SQL Server 執行個體。 如需詳細資訊，請參閱[將報表伺服器資料庫移至其他電腦](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。  
   
- 如果您要升級[!INCLUDE[ssDE](../../includes/ssde-md.md)]至 SQL Server 2016，您可以將它升級之前或之後移動資料庫。  
+ 如果您要將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 升級到 SQL Server 2016，您可以在移動資料庫之前或之後來升級。  
   
- 當報表伺服器會連接到它時，將會自動升級報表伺服器資料庫。 升級此資料庫不需要任何特定步驟。  
+ 當報表伺服器連線到報表伺服器資料庫時，報表伺服器資料庫將會自動升級。 升級此資料庫不需要任何特定步驟。  
   
 ## <a name="restore-encryption-keys-and-verify-your-work"></a>還原加密金鑰及確認工作  
  如果您已經附加報表伺服器資料庫，您現在應該能夠完成以下步驟來確認您的工作。  
@@ -212,7 +209,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  按一下 **[選擇現有報表伺服器資料庫]**。  
   
-5.  輸入 Database Engine 的伺服器名稱。 如果您附加報表伺服器資料庫的具名執行個體時，您必須以此格式輸入執行個體名稱： \<servername >\\< instancename\>。  
+5.  輸入 Database Engine 的伺服器名稱。 如果您將報表伺服器資料庫附加到具名執行個體，您應該使用以下格式鍵入此執行個體名稱：\<伺服器名稱>\\<執行個體名稱\>。  
   
 6.  按一下 **[測試連接]**。  
   

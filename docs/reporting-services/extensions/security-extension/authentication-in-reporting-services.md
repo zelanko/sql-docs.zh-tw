@@ -1,5 +1,5 @@
 ---
-title: "驗證 Reporting Services 中的 |Microsoft 文件"
+title: "Reporting Services 中的驗證 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], authentication
 - forms-based authentication [Reporting Services]
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: a01267851f882bdafcfced0cee200ff3af01cdcf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6926d7787a715ab9183763939ca78ed192d0e251
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services 中的驗證
   驗證是建立使用者對識別的權限之程序。 您可以使用許多技術來驗證使用者。 最常見的方式是使用密碼。 例如，當您實作表單驗證時，想要查詢使用者是否有認證 (通常是透過某個介面來要求登入名稱與密碼)，然後針對資料存放區來驗證使用者，例如資料庫資料表或是組態檔。 如果無法驗證認證，驗證程序會失敗，而且使用者將假設匿名識別。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/12/2017
 ## <a name="custom-authentication-in-reporting-services"></a>Reporting Services 中的自訂驗證  
  在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，Windows 作業系統會透過整合式安全性，或是透過使用者認證之明確接收與驗證，來處理使用者的驗證。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中可以開發自訂驗證，以支援其他的驗證配置。 這是透過安全性延伸介面 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2> 來達成。 所有的延伸模組都會針對報表伺服器所部署和使用的任何延伸模組，自 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 基底介面繼承。 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 以及 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2> 是 <xref:Microsoft.ReportingServices.Interfaces> 命名空間的成員。  
   
- 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中針對報表伺服器驗證的主要方法是 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法。 Reporting Services Web 服務的這個成員，可用以將使用者認證傳遞給報告伺服器以供驗證。 您的基礎安全性延伸模組實作**IAuthenticationExtension2.LogonUser**其中包含您的自訂驗證程式碼。 在表單驗證範例中， **LogonUser**，其資料庫中執行針對提供的認證以及自訂使用者存放區執行驗證檢查。 實作的範例**LogonUser**看起來像這樣：  
+ 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中針對報表伺服器驗證的主要方法是 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法。 Reporting Services Web 服務的這個成員，可用以將使用者認證傳遞給報告伺服器以供驗證。 您的基礎安全性延伸模組會實作 **IAuthenticationExtension2.LogonUser**，以包含自訂驗證程式碼。 在表單驗證範例中，**LogonUser** 會針對提供的認證以及資料庫中的自訂使用者存放區執行驗證檢查。 **LogonUser** 的實作範例看起來像這樣：  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -103,7 +102,7 @@ internal static bool VerifyPassword(string suppliedUserName,
 ```  
   
 ## <a name="authentication-flow"></a>驗證流程  
- Reporting Services Web 服務提供自訂驗證延伸模組來啟用表單驗證入口網站和報表伺服器。  
+ Reporting Services Web 服務提供自訂驗證延伸模組，以允許入口網站與報表伺服器的表單驗證。  
   
  Reporting Services Web 服務的 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法是用以將認證提交到報表伺服器以進行驗證。 Web 服務使用 HTTP 標頭，將驗證 Ticket (又稱為 Cookie) 從伺服器傳遞到用戶端，以驗證登入要求。  
   
@@ -115,7 +114,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  用戶端應用程式會呼叫 Web 服務的 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法來驗證使用者。  
   
-2.  Web 服務會呼叫<xref:ReportService2010.ReportingService2010.LogonUser%2A>方法的安全性延伸模組，具體而言，類別可實作**IAuthenticationExtension2**。  
+2.  Web 服務會呼叫安全性延伸模組的 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法；特別是，實作 **IAuthenticationExtension2** 的類別。  
   
 3.  <xref:ReportService2010.ReportingService2010.LogonUser%2A> 的實作會在使用者存放區或是安全性授權中，驗證使用者名稱與密碼。  
   

@@ -1,5 +1,5 @@
 ---
-title: "管理我的資料警示管理員 中的資料警示 |Microsoft 文件"
+title: "在資料警示管理員中管理我的資料警示 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 84bd8143bbc487ad38416f7b4c7fed48ab0f0369
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: de78105e53535a100792126ff762cdfab2f691c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>在資料警示管理員中管理我的資料警示
 
@@ -35,7 +34,7 @@ SharePoint 使用者可以檢視自己所建立資料警示的清單，以及警
  ![SharePoint 使用者的警示管理員功能](../reporting-services/media/rs-alertmanageriw.gif "SharePoint 使用者的警示管理員功能")
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
 ### <a name="to-view-a-list-of-your-alerts"></a>若要檢視警示清單  
   
@@ -78,10 +77,9 @@ SharePoint 使用者可以檢視自己所建立資料警示的清單，以及警
   
      無論您在 [資料警示設計工具] 中指定的排程選項為何，警示執行個體都會建立，而且資料警示訊息也會立即傳送。 例如，設定為每週且僅在結果變更時傳送的警示便會傳送。  
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 
 [警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

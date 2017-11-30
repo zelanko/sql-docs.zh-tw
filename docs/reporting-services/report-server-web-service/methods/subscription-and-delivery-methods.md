@@ -1,5 +1,5 @@
 ---
-title: "Subscription and Delivery Methods |Microsoft 文件"
+title: "訂用帳戶與傳遞方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - reports [Reporting Services], delivering
 - delivery [Reporting Services]
 - methods [Reporting Services], subscription and delivery
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 45e772533354fea94bf0bee7f01219622dc09c4f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 7ac0b032199a3ec9878d604e5f7d726af872a830
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subscription-and-delivery-methods"></a>訂閱與傳遞方法
   您可以使用這些方法來建立及管理目錄項目的訂閱與傳遞。  
@@ -47,10 +45,9 @@ ms.lasthandoff: 08/12/2017
 |<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>|設定訂閱的屬性值。|  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Web 服務和.NET Framework 建置應用程式](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [使用 Web 服務和 .NET Framework 建置應用程式](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [報表伺服器 Web 服務](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [報表伺服器 Web 服務方法](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [技術參考 &#40;SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [技術參考 &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

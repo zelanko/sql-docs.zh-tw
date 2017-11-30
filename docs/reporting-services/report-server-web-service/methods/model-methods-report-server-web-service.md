@@ -1,5 +1,5 @@
 ---
-title: "模型報表伺服器 Web 服務方法-|Microsoft 文件"
+title: "模型方法 - 報表伺服器 Web 服務 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6f95a5e6d379d9f0a998cb58cbf32c00be980884
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: c9730c12ed92d1035238b6836016b0f62e03bba0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="model-methods---report-server-web-service"></a>模型方法-報表伺服器 Web 服務
+# <a name="model-methods---report-server-web-service"></a>模型方法 - 報表伺服器 Web 服務
   您可以使用這些方法來管理模型。  
   
 |方法|動作|  
@@ -45,10 +43,9 @@ ms.lasthandoff: 08/12/2017
 |<xref:ReportService2010.ReportingService2010.SetModelItemPolicies%2A>|在模型項目上設定安全性原則。|  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Web 服務和.NET Framework 建置應用程式](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [使用 Web 服務和 .NET Framework 建置應用程式](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [報表伺服器 Web 服務](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [報表伺服器 Web 服務方法](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [技術參考 &#40;SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [技術參考 &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

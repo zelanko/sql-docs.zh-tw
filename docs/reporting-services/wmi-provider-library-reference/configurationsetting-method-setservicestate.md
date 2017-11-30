@@ -1,5 +1,5 @@
 ---
-title: "SetServiceState 方法 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文件"
+title: "SetServiceState 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetServiceState method
+helpviewer_keywords: SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 85e26f683c03e9b411ae3dc7d17f1b326981740d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setservicestate"></a>SetServiceState ConfigurationSetting 方法
+# <a name="configurationsetting-method---setservicestate"></a>ConfigurationSetting 方法 - SetServiceState
   開啟和關閉報表伺服器 Windows 與 Web 服務。  
   
 ## <a name="syntax"></a>語法  
@@ -57,7 +53,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  表示報表管理員所需狀態的 **布林** 值。
  
  > [!NOTE] 
- > 從 SQL Server 2016 Reporting Services 累計更新 2 開始，已被取代這項設定。 Web 入口網站將會永遠啟用。 會忽略的值。
+ > 此設定已在 SQL Server 2016 Reporting Services 累積更新 2 之後淘汰。 入口網站會一律啟用。 將會忽略值。
   
  *HRESULT*  
  [out] 指出呼叫成功或失敗的值。  
@@ -70,8 +66,7 @@ public void SetServiceState(Boolean EnableWindowsService,
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

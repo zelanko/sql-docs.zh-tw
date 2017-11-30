@@ -1,28 +1,25 @@
 ---
-title: "取得資料連接 （報表產生器） 的替代方式 |Microsoft 文件"
+title: "取得資料連線的替代方式 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d485cf494efedfc0fe7f6a47f11d3ca0825b3654
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 81cebc286a8187b058ac1be3262f968fa6a69299
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>取得資料連接的替代方式 (報表產生器)
 資料連接包含連接至外部資料來源的資訊，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 通常您會向資料來源擁有者取得連接資訊以及要使用的認證類型。  
@@ -64,9 +61,9 @@ ms.lasthandoff: 08/09/2017
   
     報表產生器會連接到報表伺服器，並且在根資料夾中載入可用的資料來源。  
   
-5.  巡覽至包含您有足夠權限可連接之資料來源的資料夾，選取該資料來源，然後按一下 [開啟]。  
+5.  巡覽至包含您有足夠權限可連線之資料來源的資料夾，選取該資料來源，然後按一下 [開啟]。  
   
-    您會回到 [選擇與資料來源的連接] 頁面。  
+    您會回到 [選擇與資料來源的連線] 頁面。  
   
 6.  若要確認您能夠連接至資料來源，請按一下 **[測試連接]**。  
   
@@ -82,5 +79,4 @@ ms.lasthandoff: 08/09/2017
 [報表資料集 &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md) 
   
-
 

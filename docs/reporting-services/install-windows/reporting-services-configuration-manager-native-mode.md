@@ -1,12 +1,11 @@
 ---
-title: "Reporting Services 組態管理員 （原生模式） |Microsoft 文件"
+title: "Reporting Services 組態管理員 (原生模式) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +17,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: c9aa72267460ed2d52ae3e2d42a73071b4d7a0f3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: e693575acb5c2eef31231a434dc25ee90b3ade36
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -54,7 +51,7 @@ ms.lasthandoff: 09/21/2017
   
 -   設定報表伺服器電子郵件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含報表伺服器電子郵件傳遞延伸模組，可使用簡易郵件傳送通訊協定 (SMTP) 將報表或報表處理通知傳遞到電子郵件信箱中。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員指定要使用您網路上的哪個 SMTP 伺服器或閘道傳遞電子郵件。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不會協助您管理報表伺服器內容、啟用其他功能，或授與伺服器的存取權。 完整部署需要您同時使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]來啟用其他功能或修改預設值，以及入口網站，以授與使用者存取伺服器。
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不會協助您管理報表伺服器內容、啟用其他功能，或授與伺服器的存取權。 完整部署需要您也使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來啟用其他功能或修改預設值，並使用入口網站來授與使用者對伺服器的存取權。
 
 ##  <a name="bkmk_requirements"></a> 需求
 
@@ -76,19 +73,19 @@ ms.lasthandoff: 09/21/2017
 
 1.  請使用下列適合您的 Microsoft Windows 版本的步驟：
 
-    - 在 Windows [開始] 畫面中，輸入**報告**選取**Reporting Services 組態管理員**earch 結果中。
+    - 在 Windows 的 [開始] 畫面上，鍵入 **Reporting** ，然後從搜尋結果中選取 [Reporting Services 組態管理員] 。
 
     - 選取 [開始]，然後依序指向 [所有程式] 和 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，再指向 [組態工具]。
 
          如果您想要從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定報表伺服器執行個體，請開啟該版本的程式資料夾。 例如，指向 [ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ] 而不是 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ]，以開啟 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 伺服器元件的組態工具。
 
-         選取**Reporting Services 組態管理員**。
+         選取 [Reporting Services 組態管理員]。
 
 2. **[Reporting Services 組態連接]** 對話方塊隨即出現，可讓您選取所要設定的報表伺服器執行個體。 選取 [連接]。
 
 3. 在 **[伺服器名稱]**中，指定安裝報表伺服器執行個體的電腦名稱。 預設會出現本機電腦的名稱，但是如果您想要連接到遠端電腦上所安裝的報表伺服器，也可以輸入遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。
 
-4. 如果您指定遠端電腦，選取**尋找**建立連線。
+4. 如果您指定遠端電腦，請選取 [尋找] 來建立連線。
 
 5. 在 **Report Server 在stance**中，選取您要設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 只有這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的報表伺服器執行個體會顯示在清單中。 您不能設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。
 
@@ -96,11 +93,10 @@ ms.lasthandoff: 09/21/2017
 
 ## <a name="next-steps"></a>後續的步驟
 
-[Web 入口網站](../../reporting-services/web-portal-ssrs-native-mode.md)   
+[入口網站](../../reporting-services/web-portal-ssrs-native-mode.md)   
 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
-[設定報表伺服器資料庫連接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[設定報表伺服器資料庫連線](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)   
-[設定及管理報表伺服器](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
+[設定和管理報表伺服器](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

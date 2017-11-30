@@ -1,5 +1,5 @@
 ---
-title: "ConfigurationSetting 屬性-WindowsServiceIdentityActual |Microsoft 文件"
+title: "ConfigurationSetting 屬性 - WindowsServiceIdentityActual | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- WindowsServiceIdentityActual
-apilocation:
-- reportingservices.mof
+apiname: WindowsServiceIdentityActual
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- WindowsServiceIdentityActual property
+helpviewer_keywords: WindowsServiceIdentityActual property
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ae7b3392b114858ef4630cc957117ca985dd89e0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 374e9ff04623bd92a35c3cd29cd54346b1b97c6d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---windowsserviceidentityactual"></a>ConfigurationSetting 屬性-WindowsServiceIdentityActual
+# <a name="configurationsetting-property---windowsserviceidentityactual"></a>ConfigurationSetting 屬性 - WindowsServiceIdentityActual
   執行報表伺服器 Windows 服務所使用的識別。 唯讀。  
   
 ## <a name="syntax"></a>語法  
@@ -52,8 +48,7 @@ public string WindowsServiceIdentityActual;
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "格式化量測計 （報表產生器及 SSRS） 上的標尺 |Microsoft 文件"
+title: "格式化量測計上的標尺 (報表產生器及 SSRS)| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,21 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 2b35ef78ab099933bd7d86bab2818734d1f93836
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的標尺 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，量測計標尺是顯示在量測計上，受限於最小值與最大值的數字範圍。 量測計標尺通常包含量測計標籤與刻度，以便正確讀取量測計指標所顯示的數目。 量測計標尺通常與一或多個量測計指標相關聯。 在相同的量測計上可以有一個以上的標尺。  
   
- ![量測計標尺上的項目概觀](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "的量測計標尺上的項目概觀")  
+ ![量測計標尺的項目概觀](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "量測計標尺的項目概觀")  
   
  與定義多個群組的圖表不同的是，量測計只會顯示一個值。 您必須定義標尺的最小值和最大值。 系統會根據您針對最小值和最大值指定的值，自動計算間隔數字。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  指定最小值和最大值。 這些值不會根據您的資料集自動計算，因此您必須在量測計的 **[屬性]** 對話方塊上提供值。  
   
-2.  如果沒有指定 [間隔] 的值，預設值為 [自動]。 也就是說，應用程式將會根據第一個步驟中所指定的最小值與最大值，計算間隔的等距數字。 如果您有指定 [間隔] 的值，量測計將會計算最大值與最小值之間的差距，並將該數目除以 [間隔] 屬性中指定的值。  
+2.  如果沒有指定 [間隔] 的值，預設值為 [自動]。也就是說，應用程式將會根據第一個步驟中所指定的最小值與最大值，計算間隔的等距數字。 如果您有指定 [間隔] 的值，量測計將會計算最大值與最小值之間的差距，並將該數目除以 [間隔] 屬性中指定的值。  
   
  同時，也有一些定義標籤和刻度間隔的屬性。 如果您指定這些屬性的值，它們將會覆寫針對標尺間隔屬性指定的值。 例如，如果標尺間隔為 [自動]，但是您指定 4 做為標籤間隔，這些標籤將會顯示為 0、4、8 等等，但是主要刻度仍然會由量測計根據其自己的計算來計算。 這可能會造成標籤與刻度不同步的情況。 如果您有設定標籤間隔，請考慮隱藏刻度而不顯示。  
   
@@ -83,11 +83,11 @@ ms.lasthandoff: 08/09/2017
   
 -   線性量測計之量測計高度或寬度最小值的 1%。  
   
-## <a name="see-also"></a>請參閱＜  
- [格式化量測計 &#40; 的範圍報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [格式化量測計 &#40; 上的指標報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [格式化圖表 &#40; 上的軸標籤報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [量測計 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [格式化量測計上的範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [格式化量測計上的指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

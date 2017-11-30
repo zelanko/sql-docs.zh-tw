@@ -1,5 +1,5 @@
 ---
-title: "開始使用 ReportViewer 2016 控制項 |Microsoft 文件"
+title: "開始使用 ReportViewer 2016 控制項 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -12,42 +12,41 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: dff598efce33f778359c2b6fb4c3a0184f2b88f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>整合 Reporting Services 使用 ReportViewer 控制項-快速入門
+# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>使用 ReportViewer 控制項整合 Reporting Services - 快速入門
 
-了解如何開發人員可以在 ASP.NET 網站和 Windows Forms 應用程式，透過 Reporting Services 2016 ReportViewer 控制項內嵌分頁的報表。 您可以將控制項加入新的專案，或更新現有的專案。
+了解開發人員如何透過 Reporting Services 2016 ReportViewer 控制項，內嵌 ASP.NET 網站的分頁報表以及 Windows Forms 應用程式。 您可以將控制項新增至新的專案，或更新現有的專案。
 
-## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>將 ReportViewer 控制項加入至新的 web 專案
+## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>將 ReportViewer 控制項新增至新的 Web 專案
 
-1. 建立新**ASP.NET 空網站**或開啟現有的 ASP.NET 專案。
+1. 建立新的 **ASP.NET 空網站**或開啟現有的 ASP.NET 專案。
 
-    ![ssRS 建立--專案間的新 ASPNET](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
+    ![ssRS-Create-New-ASPNET-Project](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
 
-2. 安裝 ReportViewer 2016 控制項 nuget 封裝，透過**Nuget 封裝管理員主控台**。
+2. 透過 **Nuget 套件管理員主控台**安裝 ReportViewer 2016 控制項 Nuget 套件。
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
     ```
-3. 專案中加入新的.aspx 網頁，並註冊頁面中使用 ReportViewer 控制項組件。
+3. 在專案中新增新的 .aspx 頁面，並註冊 ReportViewer 控制項組件供頁面使用。
 
     ```
     <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
     ```
     
-4. 新增**ScriptManagerControl**至頁面。
+4. 將 **ScriptManagerControl** 新增至頁面。
 
-5. 將 ReportViewer 控制項加入至頁面。 以下程式碼片段可以更新為參考的遠端報表伺服器上裝載的報表。
+5. 將 ReportViewer 控制項新增至頁面。 您可以更新以下程式碼片段，以參考遠端報表伺服器上裝載的報表。
 
     ```
     <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/13/2017
     </rsweb:ReportViewer>
     ```
     
-最後一頁看起來應該如下所示。
+最後的頁面應該類似下例。
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
@@ -83,7 +82,7 @@ ms.lasthandoff: 09/13/2017
 
 ## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>更新現有的專案以使用 ReportViewer 控制項
 
-要使用現有的專案中 ReportViewer 2016 控制項、 將透過 Nuget 控制項加入和更新版本的組件參考*版本為 14.0.0.0*。 這包括正在更新專案的 web.config 和所有參考的 ReportViewer 控制項的.aspx 網頁。
+若要在現有的專案中使用 ReportViewer 2016 控制項，請透過 Nuget 新增控制項並更新版本 *14.0.0.0* 的組件參考。 這包括更新專案的 web.config 和所有參考 ReportViewer 控制項的 .aspx 頁面。
 
 ### <a name="sample-webconfig-changes"></a>範例 web.config 變更
 
@@ -132,7 +131,7 @@ ms.lasthandoff: 09/13/2017
 </configuration>
 ```
 
-### <a name="sample-aspx"></a>範例.aspx
+### <a name="sample-aspx"></a>範例 .aspx
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
@@ -143,18 +142,18 @@ ms.lasthandoff: 09/13/2017
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>將 ReportViewer 控制項加入至新的 Windows Form 專案
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>將 ReportViewer 控制項新增至新的 Windows Forms 專案
 
-1. 建立新**Windows Forms 應用程式**或開啟現有的專案。
+1. 建立新的 **Windows Forms 應用程式** 或開啟現有的專案。
 
-    ![ssRS 建立--專案間的新 winforms](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
+    ![ssRS-Create-New-winforms-Project](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
 
-2. 安裝 ReportViewer 2016 控制項 nuget 封裝，透過**Nuget 封裝管理員主控台**。
+2. 透過 **Nuget 套件管理員主控台**安裝 ReportViewer 2016 控制項 Nuget 套件。
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. 從程式碼中加入新控制項或[將控制項加入 [工具箱]](##adding-control-to-visual-studio-toolbar)。
+3. 從程式碼新增新的控制項，或[將控制項新增至 [工具箱]](##adding-control-to-visual-studio-toolbar)。
 
     ```
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
@@ -178,13 +177,13 @@ ms.lasthandoff: 09/13/2017
     }
     ```
 
-## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>如何設定報表檢視器 2016年控制項上的 100%的高度
+## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>如何在報表檢視器 2016 控制項上設定 100% 的高度
 
-新的報表檢視器 2016年控制項最適合用於 HTML5 標準模式的頁面，適用於所有現代化瀏覽器。 在過去，與舊 RVC 控制項，當您設定 100 %height 屬性，它即使沒有任何上階必須指定高度。 此行為已經變更 html5 格式。 當您在新的 RVC 控制項上設定此屬性時，則在父項目已定義的高度時，才會正確運作，也就是不是自動的值或所有上階的 RVC 也有 100%的高度。
+新的報表檢視器 2016 控制項已針對 HTML5 標準模式頁面最佳化，適用於所有現代化瀏覽器。 過去使用舊的 RVC 控制項，當您設定 100 % 高度屬性時，即使沒有任何上階指定高度，它都會作用。 此行為在 HTML5 中已變更。 當您在新的 RVC 控制項上設定此屬性時，它只有在父項目有定義的高度 (亦即不是自動值)，或所有上階的 RVC 也有 100% 高度時，才會正確運作。
 
-以下是兩個範例，若要這樣做。
+以下為兩個示範範例。
 
-### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>將所有父系的高度項目設定為 100%
+### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>將所有父項目的高度設為 100%
 
 ```
 <!DOCTYPE html>
@@ -210,9 +209,9 @@ ms.lasthandoff: 09/13/2017
 
 ```
 
-### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>藉由設定 reportviewer 控制項的父代上的樣式高度屬性
+### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>設定 reportviewer 控制項的父代樣式高度屬性
 
-如需檢視區百分比長度的詳細資訊，請參閱[檢視區百分比長度](https://www.w3.org/TR/css3-values/#viewport-relative-lengths)。
+如需檢視區百分比長度的詳細資訊，請參閱 [Viewport-percentage lengths](https://www.w3.org/TR/css3-values/#viewport-relative-lengths) (檢視區百分比長度)。
 
 ```
 <!DOCTYPE html>
@@ -233,43 +232,43 @@ ms.lasthandoff: 09/13/2017
 
 ```
 
-## <a name="adding-control-to-visual-studio-toolbar"></a>將控制項加入至 Visual Studio 工具列
+## <a name="adding-control-to-visual-studio-toolbar"></a>將控制項新增至 Visual Studio 工具列
 
-報表檢視器控制項現在隨附以 NuGet 套件。 因為這個緣故，不會看到顯示 Visual Studio 工具箱中的預設報表檢視器控制項。 您可以將控制項加入工具箱 中，執行下列動作。
+報表檢視器控制項現在隨附為 Nuget 套件。 因為這個緣故，Visual Studio 工具箱中預設不顯示報表檢視器控制項。 您可以執行下列動作，將控制項新增至工具箱。
 
-1. WinForms 或 WebForms 如上面所述安裝 NuGet 套件。
+1. 依上述指示安裝 WinForms 或 WebForms 的 Nuget 套件。
 
-2. 在工具箱中移除所列的 ReportViewer 控制項。 這是 12.x 的版本控制。
+2. 移除 [工具箱] 中列出的 ReportViewer 控制項。 這是 12.x 版的控制項。
 
-    ![ssRS-移除-舊-rvcontrol-工具箱](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
+    ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. 以滑鼠右鍵按一下在任何位置工具箱 中，然後選取**選擇項目...**.
+3. 以滑鼠右鍵按一下 [工具箱] 的任何位置，然後選取 [選擇項目]。
 
-    ![ssRS 工具箱-選擇的項目](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
+    ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
-4. 在**.NET Framework 元件**，選取**瀏覽**。
+4. 在 [.NET Framework 元件] 中選取 [瀏覽]。
 
-    ![瀏覽工具箱 ssRS](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
+    ![ssRS-toolbox-browse](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
 
-5. 選取**Microsoft.ReportViewer.WinForms.dll**或**Microsoft.ReportViewer.WebForms.dll**從您安裝 NuGet 封裝。
+5. 從安裝的 Nuget 套件中選取 **Microsoft.ReportViewer.WinForms.dll** 或 **Microsoft.ReportViewer.WebForms.dll**。
 
     > [!NOTE] 
-    > 您的專案的方案目錄中，將會安裝 NuGet 封裝。 Dll 的路徑必須與下列類似：`{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.{version}\lib\net40`或`{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.{version}\lib\net40`。
+    > Nuget 套件會安裝在專案的解決方案目錄中。 dll 的路徑類似：`{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.{version}\lib\net40` 或 `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.{version}\lib\net40`。
 
-6. 新的控制項應該顯示在 [工具箱] 中。 您可以將其移動至另一個索引標籤，工具箱內視。
+6. 新的控制項應該顯示在 [工具箱] 中。 如希望，您可以將它移動至工具箱的另一個索引標籤中。
 
-    ![ssRS-工具箱-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
+    ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-### <a name="things-to-be-aware-of"></a>要注意的事項
+### <a name="things-to-be-aware-of"></a>注意事項
 
-- 這會新增在目前專案中安裝的 NuGet 套件的參考。 [工具箱] 中的項目會保存至其他專案。 當您安裝 NuGet 封裝在新的方案/專案中時，工具箱項目也可能會參照較舊的版本。 
+- 這會在目前的專案中新增已安裝 Nuget 套件的參考。 [工具箱] 中的項目會保存至其他專案。 當您在新的解決方案/專案中安裝 Nuget 套件時，工具箱項目可能會參考較舊的版本。 
 
-- 即使組件不再可用時，控制項仍在 [工具箱]。 若已刪除該專案，Visual Studio 將會擲回錯誤如果再次嘗試將控制項從 [工具箱]。 若要更正這個錯誤，從 [工具箱] 移除控制項並重新加入使用上述步驟。
+- 即使組件無法再使用，[工具箱] 中仍保留控制項。 若已刪除該專案，當您嘗試從 [工具箱] 新增控制項時，Visual Studio 會擲回錯誤。 若要更正這個錯誤，請從 [工具箱] 移除控制項，使用上述步驟重新新增它。
 
 
 ## <a name="common-issues"></a>常見的問題
     
-- ReportViewer 2016 控制項被為了搭配新式瀏覽器。 如果瀏覽器中呈現網頁 IE 相容性模式中，控制項可能無法運作。 內部網路網站可能需要其中鼓勵轉譯相容性模式中的內部網路頁面 meta 標記，來覆寫設定。
+- ReportViewer 2016 控制項旨在搭配新式瀏覽器使用。 如果瀏覽器以 IE 相容性模式呈現網頁，控制項可能無法運作。 內部網路網站可能需要中繼標籤覆寫設定，這會鼓勵以相容性模式轉譯內部網路頁面。
 
     ```
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -277,11 +276,10 @@ ms.lasthandoff: 09/13/2017
       
 ## <a name="providing-feedback"></a>提供意見反應
 
-可讓小組了解您的控制項會遇到的問題[Reporting Services MSDN 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)或透過電子郵件在[ RVCFeedback@microsoft.com ](mailto:RVCFeedback@microsoft.com)。
+在 [Reporting Services MSDN 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)或透過電子郵件 [RVCFeedback@microsoft.com](mailto:RVCFeedback@microsoft.com)，讓小組了解您遇到的控制項問題。
 
 ## <a name="see-also"></a>另請參閱
 
 [2016 ReportingViewer 控制項中的資料收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 更多問題嗎？ [試試 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-
 

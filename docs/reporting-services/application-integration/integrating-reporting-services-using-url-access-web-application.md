@@ -1,5 +1,5 @@
 ---
-title: "Web 應用程式中使用 URL 存取 |Microsoft 文件"
+title: "在 Web 應用程式中使用 URL 存取 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - links [Reporting Services], URL access
 - URL access [Reporting Services], Web applications
@@ -20,19 +19,18 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: b8d7aff6c9afdfa6e6fb322d028b9bccf5cbaaf5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 123e0ff6bbc5a33214e515401ad38f7af5604b5f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-url-access---web-application"></a>整合 Reporting Services 使用 URL 存取的 Web 應用程式
+# <a name="integrating-reporting-services-using-url-access---web-application"></a>使用 URL 存取整合 Reporting Services - Web 應用程式
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 存取是特別針對可透過網路存取個別報表所設計。 這種類型的存取最適於將報表檢視與導覽整合到自訂 Web 應用程式。 若要在 Web 應用程式中使用 URL 存取，您可以：  
   
 -   從網站或是入口網站將 URL 定址到特定的報表伺服器。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/12/2017
 -   使用表單 POST 方法，並使用表單欄位將查詢字串參數傳遞到報表伺服器 URL。  
   
 ## <a name="url-access-through-direct-addressing"></a>透過直接定址的 URL 存取  
- 若要使用 URL 來存取報表伺服器或是報表伺服器資料庫項目，請直接在網頁瀏覽器或應用程式中提供 URL 位址。 您也可以提供參數給 URL，這將可影響正在存取的報表或資源的外觀。 URL 可以針對報表伺服器透過網頁瀏覽器的網址列或 URL 可以是來源**IFrame**也就是較大的 Web 應用程式或入口網站的一部分。 您可以將超連結包括到入口網站之各個網頁上的報表中，以及鎖定報表的特定框架，或是在處理序中開啟一個新的瀏覽器視窗。  
+ 若要使用 URL 來存取報表伺服器或是報表伺服器資料庫項目，請直接在網頁瀏覽器或應用程式中提供 URL 位址。 您也可以提供參數給 URL，這將可影響正在存取的報表或資源的外觀。 URL 可以透過網頁瀏覽器的位址列來鎖定報表伺服器，或者 URL 可以是較大的 Web 應用程式或是入口網站一部分之 **IFrame** 的來源。 您可以將超連結包括到入口網站之各個網頁上的報表中，以及鎖定報表的特定框架，或是在處理序中開啟一個新的瀏覽器視窗。  
   
  在下列範例中，超連結會鎖定名為 "main" 的框架，這可能與包含超連結的框架不同。 超連結可能是 Web 入口網站的一部分。  
   
@@ -51,9 +49,9 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
 </a>  
 ```  
   
- 在上述範例中，裝置資訊設定**LinkTarget**值為"main"傳入 URL 的查詢字串。 這可確保在報表中的任何鑽研超連結也鎖定名為 "main" 的框架。  
+ 在上述範例中，會使用 URL 的查詢字串中 "main" 的值來傳遞 **LinkTarget** 裝置資訊設定。 這可確保在報表中的任何鑽研超連結也鎖定名為 "main" 的框架。  
   
- 如需有關裝置資訊設定的詳細資訊，請參閱[將裝置資訊設定傳遞至轉譯延伸模組](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
+ 如需裝置資訊設定的詳細資訊，請參閱[將裝置資訊設定傳遞至轉譯延伸模組](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
   
  請注意，許多伺服器與瀏覽器會限制在 URL 中允許的字元數目。 在某些情況下，會加諸 256 個字元的限制。 若要解決此限制，您可以使用表單提交來使用 POST 要求。  
   
@@ -90,7 +88,6 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0
  [將 Reporting Services 整合到應用程式](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [使用 URL 存取整合 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [在 Windows 應用程式中使用 URL 存取](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
- [URL 存取 &#40;SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
+ [URL 存取 &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   
   
-

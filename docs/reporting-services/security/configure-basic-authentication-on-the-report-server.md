@@ -1,5 +1,5 @@
 ---
-title: "在報表伺服器上設定基本驗證 |Microsoft 文件"
+title: "設定報表伺服器上的基本驗證 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-server-2016
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfadbdb617198fe04b789d0d1d6589f4af2d887f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>設定報表伺服器上的基本驗證
   根據預設，Reporting Services 會接受可指定交涉式驗證或 NTLM 驗證的要求。 如果您的部署包含了使用基本驗證的用戶端應用程式或瀏覽器，您必須將基本驗證加入支援的類型清單中。 此外，如果您要使用報表產生器，必須啟用對報表產生器檔案的匿名存取。  
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
  如果您希望在認證傳給網路中的網域控制站的過程中，能夠減低認證被攔截的風險，就需要通道加密，例如安全通訊端層 (SSL)。 基本驗證本身會使用純文字格式傳輸使用者名稱，並使用 base64 編碼方式傳輸密碼。 加入通道加密會讓封包無法讀取。 如需詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
- 啟用基本驗證之後，請注意，使用者就無法選取**Windows 整合式安全性**選項時將連接屬性設定為外部資料來源提供資料給報表。 資料來源屬性頁上的這個選項將會呈現灰色。  
+ 當您啟用基本驗證之後，請注意在使用者設定外部資料來源的連線屬性，而此資料來源會提供資料給報表時，就無法選取 [Windows 整合式安全性] 選項。 資料來源屬性頁上的這個選項將會呈現灰色。  
   
 > [!NOTE]  
 >  下列指示用於原生模式報表伺服器。 如果您在 SharePoint 整合模式下部署報表伺服器，您必須使用可指定 Windows 整合式安全性的預設驗證設定。 報表伺服器會使用預設 Windows 驗證延伸模組中的內部功能來支援 SharePoint 整合模式下的報表伺服器。  
@@ -43,9 +42,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  在文字編輯器中開啟 RSReportServer.config。  
   
-     檔案是位於*\<磁碟機 >:*\Program Files\Microsoft SQL Server\MSRS13。MSSQLSERVER\Reporting Services\ReportServer。  
+     此檔案位於 \<磁碟機>:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer。  
   
-2.  尋找\<**驗證**>。  
+2.  尋找 \<**驗證**>。  
   
 3.  複製下列其中一個最符合您需要的 XML 結構。 第一個 XML 結構會提供指定所有元素的預留位置，下一節會加以描述：  
   
@@ -70,13 +69,13 @@ ms.lasthandoff: 08/09/2017
           </AuthenticationTypes>  
     ```  
   
-4.  貼上的現有項目\<**驗證**>。  
+4.  將它貼到 \<**驗證**> 的現有項目上。  
   
      如果您使用多個驗證類型，請只加入 **RSWindowsBasic** 元素，而不要刪除 **RSWindowsNegotiate**、 **RSWindowsNTLM**或 **RSWindowsKerberos**的項目。  
   
      請注意，您無法搭配其他驗證類型使用 **Custom** 。  
   
-5.  空白值取代\<**領域**> 或\< **DefaultDomain**> 適用於您環境的值。  
+5.  使用對環境有效的值來取代 \<**Realm**> 或 \<**DefaultDomain**> 的空白值。  
   
 6.  儲存檔案。  
   
@@ -98,4 +97,3 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services 安全性與保護](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   
-

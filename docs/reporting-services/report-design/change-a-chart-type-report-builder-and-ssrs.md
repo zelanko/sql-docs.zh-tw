@@ -1,5 +1,5 @@
 ---
-title: "變更圖表類型 （報表產生器及 SSRS） |Microsoft 文件"
+title: "變更圖表類型 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4e963dc1fbee3ca6c7d035a748fe49708b36a78
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fdc412e2ad4896548d07f4a747cb5e150bb68d4b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>變更圖表類型 (報表產生器及 SSRS)
 當您先將圖表插入 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表時，[選取圖表類型] 對話方塊隨即出現。 如果您取消此對話方塊，預設會加入直條圖圖表類型。  
@@ -35,17 +34,16 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-change-the-chart-type"></a>變更圖表類型  
   
-1.  在設計檢視，以滑鼠右鍵按一下圖表，然後按一下 **變更圖表類型**。  
+1.  在 [設計] 檢視中，以滑鼠右鍵按一下圖表，然後按一下 [變更圖表類型]。  
   
     > [!NOTE]  
     >  當圖表上有多個數列時，您必須以滑鼠右鍵按一下您想要變更的數列，而非圖表。  
   
-2.  在**SelectChart 類型**對話方塊中，選取從清單中的圖表類型。  
+2.  在 [選取圖表類型] 對話方塊中，從清單中選取圖表類型。  
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [量測計 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [將圖表加入至報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   
-

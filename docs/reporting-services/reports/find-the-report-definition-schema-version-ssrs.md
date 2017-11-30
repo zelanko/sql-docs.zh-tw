@@ -1,5 +1,5 @@
 ---
-title: "尋找報表定義結構描述版本 (SSRS) |Microsoft 文件"
+title: "尋找報表定義結構描述版本 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,19 +15,17 @@ helpviewer_keywords:
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dadc45cb80ec7fa1fedca54af2a17eef5eef2bf6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="find-the-report-definition-schema-version-ssrs"></a>尋找報表定義結構描述版本 (SSRS)
 
 報表定義檔案會針對用來驗證 rdl 檔的報表定義結構描述版本指定 RDL 命名空間。 當您在報表撰寫環境 (例如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的報表設計師或報表產生器) 中開啟 .rdl 檔案時，如果此報表是針對先前的命名空間所建立，系統就會自動建立備份檔案，而且此報表會升級為目前的命名空間。 如果您儲存了升級的報表定義，就會儲存轉換的 .rdl 檔。 這是升級報表定義的唯一方式。 報表定義本身不會在報表伺服器上升級。 不過，已編譯的報表會在報表伺服器上升級。 如需詳細資訊，請參閱 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)。  
@@ -47,13 +45,13 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>如何：識別報表設計師的 RDL 結構描述版本  
   
-1.  開啟新的專案。 您所選擇的專案版本會決定 RDL 結構描述的版本。 在 SQL Server，可支援一個以上的結構描述版本。 如需詳細資訊，請參閱[部署和版本支援 SQL Server Data Tools 中](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
+1.  開啟新的專案。 您所選擇的專案版本會決定 RDL 結構描述的版本。 SQL Server 中支援多個結構描述版本。 如需詳細資訊，請參閱 [SQL Server Data Tools 中的部署和版本支援](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
   
-2.  在 [專案] 功能表上，按一下 [加入新項目]。 [加入新項目] 對話方塊隨即開啟。  
+2.  在 [專案] 功能表上，按一下 [加入新項目]。 [新增項目] 對話方塊隨即開啟。  
   
 3.  在 [範本] 窗格中，按一下 [報表]。  
   
-4.  在 [名稱] 中，輸入報表名稱或接受預設值。  
+4.  在 [名稱] 中，鍵入報表名稱或接受預設值。  
   
 5.  按一下 **[加入]**。 報表設計師就會在 [設計] 檢視中開啟新的空白報表。  
   
@@ -94,4 +92,3 @@ ms.lasthandoff: 08/09/2017
 [報表定義語言](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

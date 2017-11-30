@@ -1,33 +1,33 @@
 ---
 title: "使用內建函式，驗證、查詢以及變更 JSON 資料 (SQL Server) | Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-json
+ms.suite: sql
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, built-in functions
 - functions (JSON)
 ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e3a398f0ab3fec7da5ef914fe1a94f949bc71942
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: d8c99e842ceaa2351c98583238cbba28e2a152c7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用內建函數，驗證、查詢以及變更 JSON 資料 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 內建的 JSON 支援包含下列在此主題中簡述的內建功能。  
   
@@ -120,7 +120,7 @@ ORDER BY LastName
 |**$.c**|hi|NULL 或錯誤|  
   
 ## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>使用 AdventureWorks 範例資料庫，測試 JSON_VALUE 與 JSON_QUERY  
-依據本主題中所述，使用 AdventureWorks 範例資料庫，執行下列範例 (其中包含 JSON 資料)，以測試內建函數。 若要取得 AdventureWorks 範例資料庫，請 [按一下此處](http://www.microsoft.com/en-us/download/details.aspx?id=49502)。  
+依據本主題中所述，使用 AdventureWorks 範例資料庫，執行下列範例，以測試內建函式。 如需何處取得 AdventureWorks 及如何新增 JSON 資料以供測試的資訊，請參閱[測試磁碟機內建的 JSON 支援](json-data-sql-server.md#test-drive-built-in-json-support)。
   
 在下列範例中，`SalesOrder_json`資料表中的 `Info` 資料行包含 JSON 文字。  
   
@@ -181,4 +181,3 @@ SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')
  [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)  
   
   
-

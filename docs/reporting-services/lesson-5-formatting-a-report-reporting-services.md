@@ -1,27 +1,25 @@
 ---
-title: "第 5 課： 格式化報表 (Reporting Services) |Microsoft 文件"
+title: "第 5 課：格式化報表 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: a59d1082e60e358e1447838997192791950c41ed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e168601f761a966d494168cd79d3724fc4342b63
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
 既然您已經將資料區域和某些欄位加入到銷售訂單報表，您可以格式化日期和貨幣欄位，以及資料行標頭。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  以滑鼠右鍵按一下含有 `[Date]` 欄位運算式的資料格，然後按一下 [文字方塊屬性]。  
   
-3.  按一下**數目**，然後在**類別**欄位中，按一下**日期**。  
+3.  按一下 [數字]，然後按一下 [類別目錄] 欄位中的 [日期]。  
   
 4.  在 **[類型]** 方塊中，選取 **[January 31, 2000]**。  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  以滑鼠右鍵按一下含有 `[LineTotal]` 欄位運算式的資料格，然後按一下 [文字方塊屬性]。  
   
-2.  按一下**數目**，然後在**類別**欄位中，按一下**貨幣**。  
+2.  按一下 [數字]，然後在 [類別目錄] 欄位中按一下 [貨幣]。  
   
 3.  如果您的地區設定為英文 (美國)，預設值應為：  
   
@@ -81,14 +79,14 @@ ms.lasthandoff: 08/09/2017
   
 3.  選取資料列包含資料行標頭標籤，然後從 **[格式]** 功能表指向 **[字型]** ，然後按一下 **[粗體]**。  
   
-4.  若要預覽報表，按一下 **[預覽]** 索引標籤。 其外觀應該如下所示：  
+4.  若要預覽報表，按一下 **[預覽]** 索引標籤。其外觀應該如下所示：  
   
-    ![具有粗體資料行標頭的資料表的預覽](../reporting-services/media/rs-basictabledetailsformattedpreview.png "具有粗體資料行標頭的資料表的預覽")  
+    ![具有粗體資料行標頭的資料表預覽](../reporting-services/media/rs-basictabledetailsformattedpreview.png "具有粗體資料行標頭的資料表預覽")  
   
 5.  按一下 **[檔案]** 功能表上的 **[全部儲存]** ，即可儲存報表。  
   
 ## <a name="next-steps"></a>後續步驟  
-您已經成功格式化資料行標頭和日期以及貨幣值。 下一步，您會將群組和總計加入至報表。 請參閱[第 6 課：加入群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
+您已經成功格式化資料行標頭和日期以及貨幣值。 下一步，您會將群組和總計加入至報表。 請參閱[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
@@ -96,5 +94,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

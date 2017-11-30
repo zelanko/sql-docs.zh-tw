@@ -1,5 +1,5 @@
 ---
-title: "資料警示訊息 |Microsoft 文件"
+title: "資料警示訊息 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: a192628a5f2f899e96753d98e210bca6bfd426f1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea76fbe6f4b59874270d70efde68b3d3493d7f2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-messages"></a>資料警示訊息
 
@@ -29,23 +28,23 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services 資料警示會以電子郵件傳遞兩種類型的資料警示訊息： 含有資料警示結果以及含有錯誤描述的訊息。 包含結果的訊息會通知所有收件者共同感興趣以及對業務決策相當重要的報表資料變更。 如果由於某種原因發生錯誤而無法提供結果，則會改為傳送錯誤訊息。
+SQL Server Reporting Services 資料警示會以電子郵件傳遞兩種類型的資料警示訊息：含有資料警示結果的訊息以及含有錯誤描述的訊息。 包含結果的訊息會通知所有收件者共同感興趣以及對業務決策相當重要的報表資料變更。 如果由於某種原因發生錯誤而無法提供結果，則會改為傳送錯誤訊息。
 
 資料警示定義的擁有者還可以在 [資料警示管理員] 中檢視資料警示執行個體的相關資訊。 如需相關資訊，請參閱 [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md)。  
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
   
 ##  <a name="DataAlertMessages"></a> 資料警示訊息  
  下圖顯示含有結果的資料警示訊息以及含有錯誤描述的警示訊息。  
   
  **結果訊息**  
   
- ![含有結果的資料警示的電子郵件訊息](../reporting-services/media/rs-alertmessageresults.gif "含有結果的資料警示的電子郵件訊息")  
+ ![包含結果的資料警示電子郵件訊息](../reporting-services/media/rs-alertmessageresults.gif "包含結果的資料警示電子郵件訊息")  
   
  **錯誤訊息**  
   
- ![錯誤訊息含有資料警示訊息](../reporting-services/media/rs-alertmessageerrror.gif "錯誤訊息含有資料警示訊息")  
+ ![包含錯誤訊息的資料警示訊息](../reporting-services/media/rs-alertmessageerrror.gif "包含錯誤訊息的資料警示訊息")  
   
  這些訊息包含相同類型的資訊。  
   
@@ -69,14 +68,13 @@ SQL Server Reporting Services 資料警示會以電子郵件傳遞兩種類型�
 ##  <a name="HowTo"></a> 相關工作  
  本節列出的程序說明如何建立和編輯資料警示定義，以提供可在資料警示訊息中看見的大部分資訊。  
   
--   [在 資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [在資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [編輯資料警示設計工具中警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 
 [資料警示設計工具](../reporting-services/data-alert-designer.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

@@ -1,24 +1,22 @@
 ---
 title: "匯入和匯出 SQL Server 和 Azure SQL Database 的資料 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/17/2017
+ms.date: 10/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9ab07b5c374b20ce815c16f5346969d3517bbc26
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>匯入和匯出 SQL Server 和 Azure SQL Database 的資料
 您可以使用各種方法在 SQL Server 和 Azure SQL Database 匯入和匯出資料。 這些方法包括 Transact-SQL 陳述式、命令列工具和精靈。
@@ -35,6 +33,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="use-the-import-flat-file-wizard"></a>使用「匯入一般檔案精靈」
 如果您不需要使用「匯入及匯出精靈」和其他工具中的所有設定選項，則可以使用 SQL Server Management Studio (SSMS) 中的**匯入一般檔案精靈**將文字檔匯入 SQL Server。 如需詳細資訊，請參閱下列文章：
+- [將一般檔案匯入 SQL 精靈](import-flat-file-wizard.md)
 - [SQL Server Management Studio 17.3 的新功能](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) \(英文\)
 - [在 SSMS 17.3 中新推出的「匯入一般檔案精靈」簡介](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) \(英文\)
 
@@ -65,4 +64,3 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="next-steps"></a>後續的步驟
 如果您不確定從何開始匯入或匯出工作，請考慮使用 SQL Server 匯入和匯出精靈。 如需快速簡介，請參閱[開始使用匯入和匯出精靈的簡單範例](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
-

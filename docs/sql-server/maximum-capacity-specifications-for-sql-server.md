@@ -1,11 +1,10 @@
 ---
 title: "SQL Server 的最大容量規格 | Microsoft Docs"
-ms.date: 03/09/2017
+ms.date: 11/6/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c56b0a570f295896e76c5d0b3441042543445178
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
 
@@ -81,12 +79,12 @@ ms.lasthandoff: 08/11/2017
 |每個資料庫的檔案數||32,767||  
 |檔案大小 (資料)||16 TB||  
 |檔案大小 (記錄檔)||2 TB||  
-|每個資料庫之記憶體最佳化資料的資料檔案||4.096||  
+|每個資料庫之記憶體最佳化資料的資料檔案||在 [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] 中為 4,096。 更新版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會有這類嚴格的限制。||  
 |記憶體最佳化資料之每個資料檔案的差異檔案||1||  
 |每個資料表的外部索引鍵資料表參考數||外寄 = 253。 內送 = 10,000。|相關限制，請參閱 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)。|  
 |識別碼長度 (字元數)||128||  
 |每部電腦的執行個體數||單機伺服器為 50 個執行個體。<br /><br /> 當使用共用叢集磁碟做為叢集安裝的預存選項時，在容錯移轉叢集上可支援 25 個執行個體，若您選擇 SMB 檔案共用為叢集安裝的儲存選項， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 則可在容錯移轉叢集上支援 50 個執行個體。||  
-|每個記憶體最佳化資料表的索引||8||  
+|每個記憶體最佳化資料表的索引||從 [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] 開始及在 [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 ([!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] 和 [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)]) 中為 999||  
 |包含 SQL 陳述式的字串長度 (批次大小)||65,536 * 網路封包大小|網路封包大小是表格式資料流 (TDS) 封包的大小，這些封包用於應用程式與關聯式 [!INCLUDE[ssDE](../includes/ssde-md.md)]之間的通訊。 預設封包大小是 4 KB，由 network packet size 組態選項所控制。|  
 |每個連接的鎖定數||每部伺服器的最大鎖定數||  
 |每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||僅受限於記憶體|這個值是針對靜態鎖定配置。 動態鎖定僅受限於記憶體。|  
@@ -159,4 +157,3 @@ ms.lasthandoff: 08/11/2017
  [SQL Server 公用程式的功能與工作](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   
-

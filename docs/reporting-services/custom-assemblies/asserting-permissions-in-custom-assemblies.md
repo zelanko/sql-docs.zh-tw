@@ -1,5 +1,5 @@
 ---
-title: "判斷提示的自訂組件中的權限 |Microsoft 文件"
+title: "自訂組件中的判斷提示權限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - secure calls [Reporting Services]
 - custom assemblies [Reporting Services], permissions
@@ -21,30 +20,30 @@ helpviewer_keywords:
 - limited permission sets
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: dc3e6e84c3f0a70a3c794b5cfd803e228e5dcce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: e98c186e950b5f4186aea4057fb63c0f27eaf1b3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>自訂組件中的判斷提示權限
-  根據預設，自訂組件程式碼會使用有限的**執行**權限集合。 在某些情況下，您可能希望實作自訂組件，以安全地呼叫在安全性系統中受保護的資源 (例如檔案或是登錄)。 若要完成這個動作，您必須執行下列項目：  
+  根據預設，自訂組譯碼會使用有限的 **Execution** 權限集合執行。 在某些情況下，您可能希望實作自訂組件，以安全地呼叫在安全性系統中受保護的資源 (例如檔案或是登錄)。 若要完成這個動作，您必須執行下列項目：  
   
-1.  識別您程式碼所需的完整權限，以進行安全的呼叫。 如果此方法的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]程式庫，這項資訊應該包含在方法文件。  
+1.  識別您程式碼所需的完整權限，以進行安全的呼叫。 如果這個方法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程式庫的一部分，這項資訊應該包含在方法文件集中。  
   
-2.  修改報表伺服器原則組態檔，以授與自訂組件所需的權限。 如需有關安全性原則組態檔的詳細資訊，請參閱[使用 Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。  
+2.  修改報表伺服器原則組態檔，以授與自訂組件所需的權限。 如需安全性原則設定檔的詳細資訊，請參閱[使用 Reporting Services 安全性原則檔](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。  
   
-3.  判斷提示所需的權限，做為進行安全呼叫的方法之一部分。 這是必要的因為報表伺服器會呼叫自訂組件程式碼是報表運算式主機組件，會以一部分**執行**預設權限。 **執行**權限集合可讓程式碼執行，但不是允許使用受保護的資源。  
+3.  判斷提示所需的權限，做為進行安全呼叫的方法之一部分。 這是必要的動作，因為報表伺服器所呼叫的自訂組譯碼是報表運算式主機組件的一部分，報表運算式主機組件預設會以 **Execution** 權限執行。 **Execution** 權限集合允許執行程式碼，但不允許使用受保護的資源。  
   
-4.  標示的自訂組件**AllowPartiallyTrustedCallersAttribute**如果簽署為強式名稱。 這是必要的因為從報表運算式一部分的報表運算式主機組件，根據預設，未授與呼叫自訂組件**FullTrust**; 因此它是 「 部分受信任 」 的呼叫端。 如需詳細資訊，請參閱[使用強式名稱自訂組件](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md)。  
+4.  如果使用強式名稱簽署自訂組件，請將它標示為 **AllowPartiallyTrustedCallersAttribute**。 這是必要的動作，因為自訂組件是從報表運算式中呼叫，而報表運算式是報表運算式主機組件的一部分，所以預設不會授與 **FullTrust**，因此它屬於「部分信任的」呼叫端。 如需詳細資訊，請參閱[使用強式名稱自訂組件](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md)。  
   
 ## <a name="implementing-a-secure-call"></a>實作安全呼叫  
- 您可以修改原則組態檔，以授與組件特定權限。 例如，如果您正在撰寫用來進行貨幣轉換的自訂組件，可能需要從檔案讀取目前的貨幣匯率。 若要擷取匯率資訊，您必須加入額外的安全性使用權限， **FileIOPermission**，權限集合組件。 您可以在原則組態檔中建立下列其他項目：  
+ 您可以修改原則組態檔，以授與組件特定權限。 例如，如果您正在撰寫用來進行貨幣轉換的自訂組件，可能需要從檔案讀取目前的貨幣匯率。 若要擷取匯率資訊，您需要將額外的安全性權限 **FileIOPermission** 新增至組件的權限集合。 您可以在原則組態檔中建立下列其他項目：  
   
 ```  
 <PermissionSet class="NamedPermissionSet"  

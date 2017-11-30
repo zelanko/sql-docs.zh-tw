@@ -1,12 +1,11 @@
 ---
 title: "定序與 Unicode 支援 | Microsoft 文件"
 ms.custom: 
-ms.date: 08/04/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,17 +26,16 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: b165344ccc0f06c8de77633069ff4bd59ad8d4a5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: 03e346a8f89d923525951ec8b8683527b611d8f5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="collation-and-unicode-support"></a>定序與 Unicode 支援
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的定序會提供資料的排序規則、大小寫和區分腔調字屬性。 與字元資料類型 (例如 **char** 和 **varchar** ) 搭配使用的定序會指示字碼頁，以及可針對該資料類型表示的對應字元。 不論您是安裝新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體、還原資料庫備份，還是將伺服器連接至用戶端資料庫，都請務必了解您要使用之資料的地區設定需求、排序次序和區分大小寫與腔調字。 若要列出您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所提供的定序，請參閱 [sys。fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)。    
@@ -133,7 +131,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  此外，您也可以嘗試針對伺服器上的資料使用不同的定序。 您可以選擇將對應至用戶端字碼頁的定序。    
     
- 若要使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中提供的 UTF-16 定序，您可以選取其中一個補充字元 `_SC` 定序 (僅限 Windows 定序) 來改善部分 Unicode 字元的搜尋和排序。    
+ 若要使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的 UTF-16 定序來改善部分 Unicode 字元的搜尋和排序 (僅限 Windows 定序)，您可以選取其中一個增補字元 characters (_SC) 定序或其中一個版本 140 定序。    
     
  若要評估與使用 Unicode 或非 Unicode 資料類型有關的議題，請測試自己的狀況，在您的環境中衡量效能差異。 建議您將組織內系統上使用的定序標準化，並盡量部署 Unicode 伺服器和用戶端。    
     
@@ -155,35 +153,39 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ##  <a name="Supplementary_Characters"></a> 增補字元    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供資料類型 (例如 **nchar** 和 **nvarchar** ) 來儲存 Unicode 資料。 這些資料類型會使用稱為 *UTF-16*的格式來編碼文字。 Unicode Consortium 會為每個字元配置唯一的字碼指標，其值介於 0x0000 到 0x10FFFF 的範圍。 最常用的字元具有可在記憶體和磁碟上納入 16 位元單字的字碼指標值，但是字碼指標值大於 0xFFFF 的字元則需要兩個連續的 16 位元單字。 這些字元稱為 *「增補字元」*(Supplementary Character)，而這兩個連續的 16 位元單字則稱為 *「Surrogate 字組」*(Surrogate Pair)。    
     
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引進之全新系列的增補字元 (_SC) 定序可以搭配 **nchar**、**nvarchar** 和 **sql_variant** 資料類型使用。 例如： `Latin1_General_100_CI_AS_SC`或 `Japanese_Bushu_Kakusu_100_CI_AS_SC`(如果使用日文定序的話)。    
+
+ 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，所有新定序都會自動支援增補字元。
+
  如果您使用增補字元：    
     
 -   增補字元可用於 90 (含) 以上定序版本的排序及比較作業。    
     
--   所有 _100 層級定序都支援含有增補字元的語言排序。    
+-   所有版本 100 定序都支援含有增補字元的語言排序。    
     
 -   不支援在中繼資料內使用增補字元，例如資料庫物件的名稱。    
     
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引進之全新系列的增補字元 (SC) 定序可以搭配 **nchar**、**nvarchar** 和 **sql_variant** 資料類型使用。 例如： `Latin1_General_100_CI_AS_SC`或 `Japanese_Bushu_Kakusu_100_CI_AS_SC`(如果使用日文定序的話)。    
-  > [!NOTE]    
-  >  無法啟用搭配使用定序與增補字元 (\_SC) 的資料庫，進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫。 這是因為針對複寫所建立的某些系統資料表和預存程序使用舊版 **ntext** 資料類型，其不支援增補字元。  
+-   無法啟用搭配使用定序與增補字元 (\_SC) 的資料庫，進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫。 這是因為針對複寫所建立的某些系統資料表和預存程序使用舊版 **ntext** 資料類型，其不支援增補字元。  
     
-     SC 旗標可套用至：    
+-   SC 旗標可套用至：    
     
-    -   90 版本的 Windows 定序    
+    -   版本 90 定序    
     
-    -   100 版本的 Windows 定序    
+    -   版本 100 定序    
     
-     SC 旗標無法套用至：    
+-   SC 旗標無法套用至：    
     
     -   80 版本的非版本控制 Windows 定序    
     
     -   BIN 或 BIN2 二進位定序    
     
-    -   SQL* 定序    
+    -   SQL\* 定序    
     
- 下表將比較當某些字串函數和字串運算子使用增補字元搭配或不搭配 SC 定序時，這些函數和運算子的行為。    
+    -   版本 140 定序 (這些定序已支援增補字元，因此不需要 SC 旗標)    
     
-|字串函數或運算子|搭配 SC 定序|不搭配 SC 定序|    
+ 下表將比較當某些字串函式和字串運算子使用增補字元搭配或不搭配增補字元感知 (SCA) 定序時，這些函式和運算子的行為：    
+    
+|字串函數或運算子|搭配增補字元感知 (SCA) 定序|不搭配 SCA 定序|    
 |---------------------------------|--------------------------|-----------------------------|    
 |[CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)<br /><br /> [LEN](../../t-sql/functions/len-transact-sql.md)<br /><br /> [PATINDEX](../../t-sql/functions/patindex-transact-sql.md)|將 UTF-16 Surrogate 字組視為單一字碼指標。|將 UTF-16 Surrogate 字組視為兩個字碼指標。|    
 |[LEFT](../../t-sql/functions/left-transact-sql.md)<br /><br /> [REPLACE](../../t-sql/functions/replace-transact-sql.md)<br /><br /> [REVERSE](../../t-sql/functions/reverse-transact-sql.md)<br /><br /> [RIGHT](../../t-sql/functions/right-transact-sql.md)<br /><br /> [SUBSTRING](../../t-sql/functions/substring-transact-sql.md)<br /><br /> [STUFF](../../t-sql/functions/stuff-transact-sql.md)|這些函數會將每個 Surrogate 字組視為單一字碼指標，並且如預期方式運作。|這些函數可能會將 Surrogate 字組拆開，造成無法預期的結果。|    
@@ -205,13 +207,15 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 
 ##  <a name="Japanese_Collations"></a> 在  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
-從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，支援兩種新的日文定序系列，可使用不同選項 (_CS、_AS、_KS、_WS、_VSS 等等) 排列。 
+從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，支援兩種新的日文定序系列，可使用不同選項 (\_CS、\_AS、\_KS、\_WS、\_VSS) 排列。 
 
-您可查詢 SQL Server Database Engine 列出這些定序：
+您可查詢 SQL Server 資料庫引擎列出這些定序：
 ``` 
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
+
+所有新定序都內建增補字元支援，因此沒有且不需要 SC 旗標。
 
 資料庫引擎索引、記憶體最佳化資料表、資料行存放區索引和原生編譯的模組都支援這些定序。
     
@@ -239,5 +243,4 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
   
-
 

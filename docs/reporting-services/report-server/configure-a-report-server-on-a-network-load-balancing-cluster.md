@@ -1,5 +1,5 @@
 ---
-title: "網路負載平衡叢集上設定報表伺服器 |Microsoft 文件"
+title: "在網路負載平衡叢集上設定報表伺服器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- report servers [Reporting Services], network load balancing
+helpviewer_keywords: report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b9200dd4152625e0dce4c0c77b10fa2f3ad196ef
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: cd081a235bf3a816c211f7a94dd122fc3cf01bf0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在網路負載平衡叢集上設定報表伺服器
   如果您要將報表伺服器向外延展設定為在網路負載平衡 (NLB) 叢集上執行，就必須進行下列動作：  
@@ -41,9 +39,9 @@ ms.lasthandoff: 08/09/2017
   
 |步驟|說明|詳細資訊|  
 |----------|-----------------|----------------------|  
-|1|在 NLB 叢集的伺服器節點上安裝 Reporting Services 之前，請先檢查向外延展部署的需求。|[向外延展部署-Reporting Services 原生模式 &#40;組態管理員 &#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》|  
+|1|在 NLB 叢集的伺服器節點上安裝 Reporting Services 之前，請先檢查向外延展部署的需求。|《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[向外延展部署 - Reporting Services 原生模式 &#40;設定管理員&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)|  
 |2|設定 NLB 叢集並確認它是否正常運作。<br /><br /> 請務必將主機標頭名稱對應至 NLB 叢集的虛擬伺服器 IP。 此主機標頭名稱會用於報表伺服器 URL 中，而且比 IP 位址更容易記得和輸入。|如需詳細資訊，請參閱 Windows Server 產品文件集來了解您所執行的 Windows 作業系統版本。|  
-|3|將主機標頭的 NetBIOS 和完整網域名稱 (FQDN) 加入至 Windows 登錄內儲存的 **BackConnectionHostNames** 清單。 使用 **KB 896861** (http://support.microsoft.com/kb/896861) 中的 [Method 2: Specify host names](http://support.microsoft.com/kb/896861) (方法 2：指定主機名稱)，並進行下列調整。 KB 文章中的**步驟 7** 說「Quit Registry Editor, and then restart the IISAdmin service. (結束登錄編輯程式，然後重新啟動 IISAdmin 服務)。」 而不是將電腦重新開機以確認變更是否生效。<br /><br /> 例如，如果主機標頭名稱\<MyServer > 虛擬名稱為"contoso"的 Windows 電腦名稱，您或許可以參考 FQDN 形式"contoso.domain.com"。 您需要將主機標頭名稱 (MyServer) 及 FQDN 名稱 (contoso.domain.com) 均加入 **BackConnectionHostNames**中的清單。|若您伺服器環境中包含本機電腦上的 NTLM 驗證，則必須執行此步驟，以建立回送連接。<br /><br /> 在此情況下，您將發現報表管理員與報表伺服器之間的要求會是失敗的 401 狀態 (未經授權)。|  
+|3|將主機標頭的 NetBIOS 和完整網域名稱 (FQDN) 加入至 Windows 登錄內儲存的 **BackConnectionHostNames** 清單。 使用 **KB 896861** (http://support.microsoft.com/kb/896861) 中的 [Method 2: Specify host names](http://support.microsoft.com/kb/896861) (方法 2：指定主機名稱)，並進行下列調整。 KB 文章中的**步驟 7** 說「Quit Registry Editor, and then restart the IISAdmin service. (結束登錄編輯程式，然後重新啟動 IISAdmin 服務)。」 而不是將電腦重新開機以確認變更是否生效。<br /><br /> 例如，若主機標頭名稱 \<MyServer> 是 “contoso” 之 Windows 電腦名稱的虛擬名稱，您或許可以參考 FQDN 形式的 “contoso.domain.com”。 您需要將主機標頭名稱 (MyServer) 及 FQDN 名稱 (contoso.domain.com) 均加入 **BackConnectionHostNames**中的清單。|若您伺服器環境中包含本機電腦上的 NTLM 驗證，則必須執行此步驟，以建立回送連接。<br /><br /> 在此情況下，您將發現報表管理員與報表伺服器之間的要求會是失敗的 401 狀態 (未經授權)。|  
 |4|在僅限檔案模式中，於已經屬於 NLB 叢集之一部分的節點上安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，並設定報表伺服器執行個體來進行向外延展部署。<br /><br /> 您所設定的向外延展可能不會回應導向虛擬伺服器 IP 的要求。 將向外延展設定為使用虛擬伺服器 IP 的作業會在您設定檢視狀態驗證之後的步驟進行。|[設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|設定檢視狀態驗證<br /><br /> 為了獲得最佳結果，請在您設定向外延展部署之後，而在將報表伺服器執行個體設定為使用虛擬伺服器 IP 之前，執行這個步驟。 先設定檢視狀態驗證，就可以在使用者嘗試存取互動式報表時，避免發生有關狀態驗證失敗的例外狀況。|本主題中的[如何設定檢視狀態驗證](#ViewState) 。|  
 |6|將 **Hostname** 和 **UrlRoot** 設定為使用 NLB 叢集的虛擬伺服器 IP。|本主題中的[如何設定 Hostname 和 UrlRoot](#SpecifyingVirtualServerName) 。|  
@@ -56,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
  為了解決此問題，您可以產生任意驗證金鑰來支援檢視狀態驗證，然後手動將每個報表伺服器節點設定為使用相同的金鑰。 您可以使用任何隨機產生的十六進位序列。 驗證演算法 (例如 SHA1) 會決定十六進位序列必須包含的長度。  
   
-1.  使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的自動產生功能來產生驗證金鑰和解密金鑰。 最後，您必須將單一\< **machineKey**> 項目，您可以將它貼到向外延展部署中每個報表管理員執行個體的 Web.config 檔案。  
+1.  使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的自動產生功能來產生驗證金鑰和解密金鑰。 最後，您必須擁有單一 \<**machineKey**> 項目，以便針對向外延展部署中的每個報表管理員執行個體貼到 Web.config 檔案中。  
   
      下列範例說明您必須取得的值。 請勿將此範例複製到組態檔中，因為這些金鑰值是無效的。  
   
@@ -64,13 +62,13 @@ ms.lasthandoff: 08/09/2017
     <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
-2.  開啟 Web.config 檔案，報表管理員，並在\< **system.web**> 區段中貼上\< **machineKey**> 產生的項目。 根據預設，報表管理員的 Web.config 檔案位於 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config。  
+2.  開啟報表管理員的 Web.config 檔案，並在 \<**system.web**> 區段中貼上您產生的 \<**machineKey**> 項目。 根據預設，報表管理員的 Web.config 檔案位於 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config。  
   
 3.  儲存檔案。  
   
 4.  針對向外延展部署中的每個報表伺服器重複以上步驟。  
   
-5.  請確認所有 \Reporting Services\Report Manager 資料夾中的 Web.Config 檔案都包含相同\< **machineKey**> 中的項目\< **system.web**> 一節。  
+5.  確認 \Reporting Services\Report Manager 資料夾中的所有 Web.Config 檔案在 \<**system.web**> 區段中包含相同的 \<**machineKey**> 項目。  
   
 ##  <a name="SpecifyingVirtualServerName"></a> 如何設定 Hostname 和 UrlRoot  
  若要在 NLB 叢集上設定報表伺服器向外延展部署，您必須定義單一虛擬伺服器名稱，以便提供伺服器叢集的單一存取點。 然後向您所在環境中的網域名稱伺服器 (DNS) 註冊這個虛擬伺服器名稱。  
@@ -83,26 +81,26 @@ ms.lasthandoff: 08/09/2017
   
  如果您將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 與 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 整合，或是您在自訂 Web 應用程式中主控報表，您可能只需要設定 **UrlRoot** 屬性。 在此範例中，將 **UrlRoot** 屬性設定為 SharePoint 網站或 Web 應用程式的 URL。 這樣會將報表環境的網路流量導向可處理報表的應用程式，而不是報表伺服器或 NLB 叢集。  
   
- 請不要修改 **ReportServerUrl**。 如果您修改這個 URL，就會在每次處理內部要求時增加虛擬伺服器之間的額外往返。 如需詳細資訊，請參閱[組態檔 &#40; 中的 UrlSSRS 組態管理員 &#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). 如需有關如何編輯組態檔的詳細資訊，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+ 請不要修改 **ReportServerUrl**。 如果您修改這個 URL，就會在每次處理內部要求時增加虛擬伺服器之間的額外往返。 如需詳細資訊，請參閱[設定檔中的 URL &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 如需編輯設定檔的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
 1.  在文字編輯器中開啟 RSReportServer.config。  
   
-2.  尋找**\<服務 >**區段，然後將下列資訊加入至組態檔中，取代**Hostname** NLB 伺服器的虛擬伺服器名稱的值：  
+2.  請尋找 **\<Service** 區段、將以下資訊新增至設定檔中，並以 NLB 伺服器的虛擬伺服器名稱取代 **Hostname** 值：  
   
     ```  
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3.  尋找 **UrlRoot**。 在組態檔中，並未指定項目，但所使用的預設值是採用下列格式的 URL: http:// 或`https://<computername>/<reportserver>`，其中\< *reportserver*> 是報表伺服器 Web 服務的虛擬目錄名稱。  
+3.  尋找 **UrlRoot**。 雖然設定檔沒有指定這個項目，但是所使用的預設值是採用下列格式的 URL：http:// 或 `https://<computername>/<reportserver>`，其中 \<*reportserver*> 是報表伺服器 Web 服務的虛擬目錄名稱。  
   
-4.  輸入的值**UrlRoot** ，包括在叢集中的虛擬名稱採用下列格式： http:// 或`https://<virtual_server>/<reportserver>`。  
+4.  鍵入 **UrlRoot** 的值，其中包括採用下列格式的叢集虛擬名稱：http:// 或 `https://<virtual_server>/<reportserver>`。  
   
 5.  儲存檔案。  
   
 6.  針對向外延展部署中的每個報表伺服器，在每個 RSReportServer.config 檔案中重複這些步驟。  
   
 ##  <a name="Verify"></a> 確認報表伺服器存取  
- 確認您可以透過虛擬伺服器名稱存取向外延展部署 (例如，`https://MyVirtualServerName/reportserver`和`https://MyVirtualServerName/reports`)。  
+ 確認您可以透過虛擬伺服器名稱存取向外延展部署 (例如，`https://MyVirtualServerName/reportserver` 和 `https://MyVirtualServerName/reports`)。  
   
  您可以查看報表伺服器記錄檔，或檢查 RS 執行記錄 (執行記錄資料表包含稱為 **InstanceName** 的資料行，它會顯示哪一個執行個體處理特定要求)，藉以檢查實際上是哪一個節點在處理報表。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/report-server/reporting-services-log-files-and-sources.md) Reporting Services 記錄檔和來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -113,15 +111,14 @@ ms.lasthandoff: 08/09/2017
   
 1.  在文字編輯器中開啟 RSReportServer.config 檔。  
   
-2.  尋找\< **Hostname**>， \< **ReportServerUrl**>，並\< **UrlRoot**>，並檢查每個設定的主機名稱。 如果此值不是您所預期的主機名稱，請將它取代成正確的主機名稱。  
+2.  尋找 \<**Hostname**>、\<**ReportServerUrl**> 和 \<**UrlRoot**>，並檢查每個設定的主機名稱。 如果此值不是您所預期的主機名稱，請將它取代成正確的主機名稱。  
   
- 如果您啟動 Reporting Services 組態工具進行這些變更後，可能會變更工具\< **ReportServerUrl**> 設定為預設值。 一律保存組態檔的備份副本，以防您需要將它們取代成內含欲使用之設定的版本。  
+ 如果您於變更後再啟動 Reporting Services 設定工具，則該工具可能會將 \<**ReportServerUrl**> 設定變更成預設值。 一律保存組態檔的備份副本，以防您需要將它們取代成內含欲使用之設定的版本。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [設定 URL &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [設定原生模式報表伺服器向外延展部署 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
-

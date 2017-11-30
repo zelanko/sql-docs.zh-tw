@@ -1,29 +1,27 @@
 ---
-title: "加入行動報表中的資料格 |Reporting Services |Microsoft 文件"
+title: "在行動報表中新增資料格 | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c51169b12265eea7e6d57e0daa7539322e338851
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ec3aeacbac833427f6aba9042345c7abe3d355b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>將資料格加入行動報表 | Reporting Services
-有時候，資料本身就是最佳的視覺效果。 深入了解用於顯示 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中資料的三種「資料格」：
+有時候，資料本身就是最佳的視覺效果。 深入了解用於顯示 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中資料的三種「資料格」或資料表：
 * 簡易資料格
 * 指示器資料格
 * 圖表資料格
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/09/2017
 
 3. 選取 [選項]，然後選取 [量測計類型]。 
 
-4. 設定 [值] 和 [比較] 欄位以及 [值方向]，就像是在[您直接加入行動報表的量測計](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)中一樣。
+4. 設定 [值] 和 [比較] 欄位以及 [值方向]，就像是在[直接新增至行動報表的量測計](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)中一樣。
 
 資料格只會將該列資料格特定的資料自動饋送給量測計。  
 
@@ -70,7 +68,7 @@ ms.lasthandoff: 08/09/2017
 
 2. 在 [資料行] 窗格的 [資料] 索引標籤上，選取 [新增圖表資料行]。 
 
-3. 如果您還沒有這麼做，請取得 [Excel 或共用資料集的資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)，以新增與主資料表共用一個欄位的第二個資料表。
+3. 如果您還沒有這麼做，請取得 [Excel 或共用資料集的資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) ，以新增與主資料表共用一個欄位的第二個資料表。
 
 4. 在 [資料屬性] 下，選取 [方格檢視的資料] 中的主資料表，然後選取 [圖表視覺效果的參考資料] 中的第二個資料表。
 
@@ -90,4 +88,3 @@ ms.lasthandoff: 08/09/2017
 * [Reporting Services 行動報表中的量測計](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)  
  
   
-

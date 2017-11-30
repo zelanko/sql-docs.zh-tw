@@ -1,5 +1,5 @@
 ---
-title: "變更預設 Reporting Services 傳遞延伸模組 |Microsoft 文件"
+title: "變更預設 Reporting Services 傳遞延伸模組 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Manager [Reporting Services], default delivery extension
+helpviewer_keywords: Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f4eefd89797559f2ea8e6bfbb2b7c2a2b83b70e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e46c81c5c96bc3c71eef8a2ca48a89c177ca1700
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>變更預設 Reporting Services 傳遞延伸模組
   您可以修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態設定，以變更訂閱定義頁面的 **[傳遞者]** 清單中所顯示的預設傳遞延伸模組。 例如，您可以修改組態，使得在使用者建立新的訂閱時依預設會選取檔案共用傳遞，而不是電子郵件傳遞。 您也可以變更傳遞延伸模組在使用者介面中列出的順序。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="default-native-mode-report-server-configuration"></a>預設原生模式報表伺服器組態  
  在 **[傳遞者]** 清單的 [報表管理員] 中顯示傳遞延伸模組的順序，是根據 **RSReportServer.config** 檔中傳遞延伸模組項目的順序而定。 例如，下圖在清單中會先顯示電子郵件，並依預設加以選取。  
   
- ![預設傳遞延伸模組清單](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "預設傳遞延伸模組清單")  
+ ![預設的傳遞延伸模組清單](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "預設的傳遞延伸模組清單")  
   
  以下是 **RSReportServer.config** 的預設區段，會控制預設傳遞延伸模組及其在報表管理員中的顯示順序。 請注意，電子郵件會先出現在檔案中，並且設為預設值。  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
      在文字編輯器中開啟 RSReportServer.config 檔。 如需組態檔的詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。 組態變更之後，UI 會如下圖所示：  
   
-     ![修改傳遞延伸模組清單](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "修改傳遞延伸模組清單")  
+     ![修改過的傳遞延伸模組清單](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "修改過的傳遞延伸模組清單")  
   
 2.  修改 DeliveryUI 區段使其如下列範例所示，並記下主要變更：  
   
@@ -117,7 +115,7 @@ ms.lasthandoff: 08/09/2017
   
     ```
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 中的檔案共用傳遞](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
@@ -125,4 +123,3 @@ ms.lasthandoff: 08/09/2017
  [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
-

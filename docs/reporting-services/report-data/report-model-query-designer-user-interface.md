@@ -1,5 +1,5 @@
 ---
-title: "報表模型查詢設計工具使用者介面 |Microsoft 文件"
+title: "報表模型查詢設計工具使用者介面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3a7fd4f315f8fe171a6b5e8df47c5e5be5b01fb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-model-query-designer-user-interface"></a>報表模型查詢設計工具使用者介面
   報表設計師提供了兩個查詢設計工具，可協助您指定想要將「報表伺服器模型」資料來源中的哪些資料用於報表中。 圖形化查詢設計工具可用來瀏覽和選擇模型實體與實體欄位。 使用以文字為基礎的查詢設計工具可直接處理 XML 格式的語意模型定義語言 (SMDL) 規格。  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 |----------|--------------|  
 |[總管] 窗格|顯示模型中各實體與實體欄位的圖形表示。 這個窗格可用來瀏覽實體、其相關實體和欄位。|  
 |設計區域|顯示模型中的欄位清單。 這個窗格可用來排列您所選擇之欄位的配置。|  
-|Results pane|顯示查詢的結果。 若要執行查詢，以滑鼠右鍵按一下任何窗格，然後**執行**，或按一下**執行**(![執行查詢](../../reporting-services/report-data/media/rsqdicon-run.gif "執行查詢")) 在工具列上的按鈕。|  
+|Results pane|顯示查詢的結果。 若要執行查詢，請以滑鼠右鍵按一下任何窗格，然後按一下 [執行]，或是按一下工具列上的 [執行] (![執行查詢](../../reporting-services/report-data/media/rsqdicon-run.gif "執行查詢")) 按鈕。|  
   
  如果在檔案總管窗格或 [設計區域] 窗格中變更資訊，將會影響按一下 [執行] 後出現在 [結果] 窗格中的內容。  
   
@@ -61,16 +60,16 @@ ms.lasthandoff: 08/09/2017
 |按鈕|說明|  
 |------------|-----------------|  
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 「報表伺服器」模型資料來源的查詢是 XML 格式的語意模型查詢語言 (SMQL) 規格。|  
-|**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。 如需詳細資訊，請參閱[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
-|![復原動作](../../reporting-services/report-data/media/rsqdicon-undo.gif "復原動作")|恢復上一個動作。|  
-|![取消復原動作](../../reporting-services/report-data/media/rsqdicon-redo.gif "取消復原動作")|重做上一個動作。|  
+|**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。|  
+|![恢復動作](../../reporting-services/report-data/media/rsqdicon-undo.gif "恢復動作")|恢復上一個動作。|  
+|![重做動作](../../reporting-services/report-data/media/rsqdicon-redo.gif "重做動作")|重做上一個動作。|  
 |![執行查詢](../../reporting-services/report-data/media/rsqdicon-run.gif "執行查詢")|執行查詢並將產生的資料列顯示在 [結果] 窗格中。|  
-|![選取的篩選資料行旁邊的篩選圖形](../../reporting-services/report-data/media/rsqdicon-filter.gif "旁邊所選取的篩選資料行的篩選圖形")|開啟 [篩選資料] 對話方塊，讓您指定要篩選的資料。 您可以指定與目前 [設計區域] 中資料無關的篩選。|  
+|![在選取篩選條件資料行旁邊的篩選圖形](../../reporting-services/report-data/media/rsqdicon-filter.gif "在選取篩選條件資料行旁邊的篩選圖形")|開啟 [篩選資料] 對話方塊，讓您指定要篩選的資料。 您可以指定與目前 [設計區域] 中資料無關的篩選。|  
   
 ## <a name="text-based-query-designer"></a>以文字為基礎的查詢設計工具  
  當您建立「報表伺服器模型」資料集查詢時，圖形化查詢設計工具為預設的工具。 若要切換到文字型查詢設計工具，請按一下工具列上的 [當成文字編輯] 切換按鈕。  
   
- 以文字為基礎的查詢設計工具包含兩個窗格：SMQL [查詢] 窗格和 [結果] 窗格。 當您已經有來自其他來源的 SMQL 查詢規格，而且想要將其貼入查詢窗格時，這個查詢設計工具檢視最為有用。 以文字為基礎的查詢設計工具不會檢查查詢語法或重新設定查詢的結構，這一點與圖形化查詢設計工具不同。 當您按一下**執行**資料來源上執行的工具列上，查詢和結果會顯示在 [結果] 窗格中。  
+ 以文字為基礎的查詢設計工具包含兩個窗格：SMQL [查詢] 窗格和 [結果] 窗格。 當您已經有來自其他來源的 SMQL 查詢規格，而且想要將其貼入查詢窗格時，這個查詢設計工具檢視最為有用。 以文字為基礎的查詢設計工具不會檢查查詢語法或重新設定查詢的結構，這一點與圖形化查詢設計工具不同。 當您按一下工具列上的 [執行] 時，便會對資料來源執行查詢，並且將結果顯示在 [結果] 窗格中。  
   
  下圖會標示出各個窗格。  
   
@@ -92,11 +91,10 @@ ms.lasthandoff: 08/09/2017
 |**匯入**|從現有的報表中匯入查詢。|  
 |![執行查詢](../../reporting-services/report-data/media/rsqdicon-run.gif "執行查詢")|執行查詢文字並將產生的資料列集顯示在 [結果] 窗格中。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [查詢設計工具 &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [從外部資料來源新增資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [報表模型連接 &#40;SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
- [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
+ [報表模型連線 &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [RSReportDesigner 設定檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   
-

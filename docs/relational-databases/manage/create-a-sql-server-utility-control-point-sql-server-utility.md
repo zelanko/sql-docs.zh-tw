@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bbc03b0f57c516ab923bbc636df78e1e006b9797
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f06506dffa7c0d8497a6fc0986e8a29a701d0415
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>建立 SQL Server 公用程式控制點 (SQL Server 公用程式)
   企業可以擁有多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式，每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式都可以管理多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和資料層應用程式。 每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式都只能有一個公用程式控制點 (UCP)。 您必須針對每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式建立新的 UCP。 每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體和每一個資料層應用程式都只是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的成員，而且是由單一 UCP 所管理。  
@@ -106,7 +104,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## <a name="wizard-steps"></a>精靈步驟  
  ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- 下列章節提供有關建立新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 之精靈工作流程中每一頁的詳細資訊。 若要啟動此精靈來建立新的 UCP，請從 SSMS 的 [檢視] 功能表中開啟 [公用程式總管] 窗格，然後按一下 [公用程式總管] 窗格上方的 [建立 UCP] 按鈕 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")。  
+ 下列章節提供有關建立新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 之精靈工作流程中每一頁的詳細資訊。 若要啟動此精靈來建立新的 UCP，請從 SSMS 的 [檢視] 功能表中開啟公用程式總管窗格，然後按一下公用程式總管窗格上方的 [建立 UCP] 按鈕 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")。  
   
  按一下以下清單中的連結可導覽到精靈中頁面的詳細資料。  
   
@@ -129,9 +127,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> 建立 UCP 精靈簡介  
  如果您開啟公用程式總管，而且沒有連接的公用程式控制點，您必須連接到其中一個控制點或建立新的控制點。  
   
- **連接到現有的 UCP** - 如果您的部署中已經有公用程式控制點，您可以按一下 [公用程式總管] 窗格上方的 [連接到公用程式] 按鈕 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility") 來連接。 若要連接到現有的 UCP，您必須擁有系統管理員認證，或是具有公用程式讀取者角色成員的身分。 請注意，每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式上只能有一個 UCP，而且您也只能夠從一個 SSMS 執行個體連接到一個 UCP。  
+ **連接到現有的 UCP** - 如果您的部署中已經有公用程式控制點，您可以按一下公用程式總管窗格上方的 [連接到公用程式] 按鈕 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility") 來連線。 若要連接到現有的 UCP，您必須擁有系統管理員認證，或是具有公用程式讀取者角色成員的身分。 請注意，每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式上只能有一個 UCP，而且您也只能夠從一個 SSMS 執行個體連接到一個 UCP。  
   
- **建立新的 UCP** - 若要建立新的公用程式控制點，請按一下 [公用程式總管] 窗格上方的 [建立 UCP] 按鈕 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")。 若要建立新的 UCP，您必須指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，並在連接對話方塊中提供系統管理員認證。 請注意，每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式只能有一個 UCP。  
+ **建立新的 UCP** - 若要建立新的公用程式控制點，請按一下公用程式總管窗格上方的 [建立 UCP] 按鈕 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")。 若要建立新的 UCP，您必須指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，並在連接對話方塊中提供系統管理員認證。 請注意，每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式只能有一個 UCP。  
   
 ##  <a name="Instance_name"></a> 指定執行個體  
  指定有關您建立之 UCP 的下列資訊：  
@@ -235,4 +233,3 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  [疑難排解 SQL Server 公用程式](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

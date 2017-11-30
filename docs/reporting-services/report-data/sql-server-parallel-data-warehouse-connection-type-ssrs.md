@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 平行資料倉儲的連接類型 (SSRS) |Microsoft 文件"
+title: "SQL Server 平行處理資料倉儲連線類型 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 2b4cc5365a0d351304f0e4939b20425fec0f97db
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6b968bb97c484834915f2fdfb9b0ac294243810a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 連接類型 (SSRS)
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 是可擴充的資料倉儲應用裝置，透過大量平行處理提供效能和擴充性。 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]使用 SQL Server 資料庫進行分散式處理和資料存放。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 是可擴充的資料倉儲應用裝置，透過大量平行處理提供效能和擴充性。 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]使用 SQL Server 資料庫來進行分散式處理和資料存放。  
   
- 跨多個實體節點，每個節點執行自己的 SQL Server 執行個體應用裝置磁碟分割大型資料庫資料表。 當報表連接至 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 以擷取報表資料時，它會連接至 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 應用裝置中負責管理查詢處理的控制節點。 建立連接之後，使用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境內和不在該環境中的 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 執行個體便無差別。  
+ 此應用裝置會將大型資料庫資料表分割到多個實體節點，每個節點均執行其各自的 SQL Server 執行個體。 當報表連接至 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 以擷取報表資料時，它會連接至 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 應用裝置中負責管理查詢處理的控制節點。 建立連接之後，使用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境內和不在該環境中的 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 執行個體便無差別。  
   
  若要在報表中包含來自 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 的資料，您必須具有以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 平行資料倉儲類型之報表資料來源為基礎的資料集。 這個內建的資料來源類型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 平行處理資料倉儲資料延伸模組為基礎。 使用此資料來源類型可連接至 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]並從中擷取資料。  
   
@@ -57,7 +56,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   使用預存的使用者名稱和密碼。 為了交涉在資料庫包含的報表資料不同於報表伺服器時發生的雙躍點，請選取使用認證做為 Windows 認證的選項。 您也可以選擇在連接到資料來源之後模擬已驗證的使用者。  
   
--   不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱 msdn.microsoft.com 上 [Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312)中的[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+-   不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱 msdn.microsoft.com 上 [Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312)中的[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
  如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
@@ -73,13 +72,13 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   從檔案或報表匯入現有的查詢。 使用查詢設計工具的 **[匯入查詢]** 按鈕瀏覽至 .sql 檔案或 .rdl 檔案，然後匯入查詢。  
   
- 如需詳細資訊，請參閱[關聯式查詢設計工具使用者介面和 &#40;報表產生器&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) 和[以文字為基礎的查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
+ 如需詳細資訊，請參閱[關聯式查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) 和[以文字為基礎的查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
   
  以文字為基礎的查詢設計工具支援 [文字](#QueryText) 模式，在此模式下，您可以輸入從資料來源選取資料的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 命令。  
   
 -   [文字](#QueryText)  
   
- 您使用[!INCLUDE[DWsql](../../includes/dwsql-md.md)]與[!INCLUDE[ssDW](../../includes/ssdw-md.md)]和[!INCLUDE[tsql](../../includes/tsql-md.md)]與 SQL Server。 這兩種 SQL 語言方言非常類似。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源連接類型撰寫的查詢，通常可用於 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 資料來源連接類型。  
+ 您可以使用 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 搭配 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 以及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 搭配 SQL Server。 這兩種 SQL 語言方言非常類似。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源連接類型撰寫的查詢，通常可用於 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 資料來源連接類型。  
   
  若查詢是從大型資料庫 (包括 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]的資料倉儲) 擷取報表資料，它產生的結果集可能具有非常大量的資料列，除非您彙總和摘要資料來減少查詢傳回的資料列數。 您可以使用圖形化或以文字為基礎的查詢設計工具來撰寫包含彙總和群組的查詢。  
   
@@ -141,7 +140,7 @@ WHERE EmployeeID = (@EmpID)
   
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [將篩選加入資料集 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> 相關章節  
@@ -150,13 +149,13 @@ WHERE EmployeeID = (@EmpID)
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [資料連接、 資料來源和報表產生器中的連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供資料連接與資料來源的相關資訊。  
   
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  提供內嵌與共用資料集的相關資訊。  
   
- [資料集欄位集合 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供查詢所產生之資料集欄位集合的相關資訊。  
   
  《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  

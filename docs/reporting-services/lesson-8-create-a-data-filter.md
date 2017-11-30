@@ -1,28 +1,25 @@
 ---
-title: "第 8 課： 建立資料篩選 |Microsoft 文件"
+title: "第 8 課：建立資料篩選 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea0e116101c9599268b3fc2f3cd556d2149433c8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3061a846f34ad19da2ea2d17ef571513d8d97ae1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 課：建立資料篩選
 在父報表上加入鑽研動作後，下一步是要針對您為子報表定義的資料表建立資料篩選。  
@@ -48,9 +45,9 @@ ms.lasthandoff: 08/09/2017
   
 4.  在 [運算式] 欄位的下拉式清單中，選取 [ProductID]。 這是要套用篩選的資料行。  
   
-5.  選取 [運算子] 下拉式清單中的等號 (**=**) 運算子。  
+5.  選取 [運算子] 下拉式清單中的等於 (**=**) 運算子。  
   
-6.  依序選取 [值] 欄位旁的運算式按鈕和 [類別] 區域中的 [參數]，然後按兩下 [值] 區域中的 [productid]。 [設定運算式對象: 值)] 欄位現在應該包含類似 **=Parameters!productid.Value** 的運算式。  
+6.  依序選取 [值] 欄位旁的運算式按鈕和 [類別目錄] 區域中的 [參數]，然後按兩下 [值] 區域中的 [productid]。 [設定運算式對象: 值] 欄位現在應該包含類似 **=Parameters!productid.Value** 的運算式。  
   
 7.  選取 [確定]，並再次選取 [Tablix 屬性] 對話方塊中的 [確定]。  
   
@@ -114,7 +111,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  以滑鼠右鍵按一下 [ReportViewer] 控制項，然後選取 [屬性]。  
   
-3.  在 [屬性] 頁面上，按一下**事件**圖示。  
+3.  在 [屬性] 頁面上，選取**事件**圖示。  
   
 4.  按兩下 [鑽研] 事件。  
   
@@ -230,7 +227,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  以滑鼠右鍵按一下 [ReportViewer] 控制項，然後選取 [屬性]。  
   
-3.  在 [屬性] 窗格上，按一下**事件**圖示。  
+3.  在 [屬性] 窗格上，選取**事件**圖示。  
   
 4.  按兩下 [鑽研] 事件。  
   
@@ -300,5 +297,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

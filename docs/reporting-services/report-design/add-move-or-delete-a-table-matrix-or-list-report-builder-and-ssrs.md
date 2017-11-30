@@ -1,5 +1,5 @@
 ---
-title: "加入、 移動或刪除資料表、 矩陣或清單 （報表產生器及 SSRS） |Microsoft 文件"
+title: "新增、移動或刪除資料表、矩陣或清單 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 52df1c4404f761f58189e5bfc05e23359f053808
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eb1487fb02db3d644cccfd7b0e982ee3dcadb206
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>加入、移動或刪除資料表、矩陣或清單 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，資料區會顯示報表資料集中的資料。 資料區包括資料表、矩陣、清單、圖表和量測計。 若要讓某個資料區以巢狀結構的方式置於另一個資料區內，請個別加入每一個資料區，然後將子資料區拖曳到父資料區。  
@@ -32,7 +31,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在 **[插入]** 索引標籤上，按一下 **[資料表]** 或 **[矩陣]**，然後按一下 **[資料表精靈]** 或 **[矩陣精靈]**。  
   
-2.  請依照**新資料表**或**新矩陣**精靈。  
+2.  遵循 [新增資料表] 或 [新增矩陣] 精靈中的步驟進行。  
   
 3.  在 **[主資料夾]** 索引標籤上，按一下 **[執行]** 查看轉譯的報表。  
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
      隨即出現選取控點和八個調整大小的控點。  
   
-     巢狀的資料區，以滑鼠右鍵按一下巢狀的資料區域中，按一下**選取**，然後選取您想要的報表項目。 若要確認哪一個報表項目已選取，請使用 [屬性] 窗格。 設計介面上選取的項目名稱會出現在 [屬性] 窗格的工具列中。  
+     若為巢狀資料區，請在巢狀資料區中按一下滑鼠右鍵、按一下 [選取]，然後選取您想要的報表項目。 若要確認哪一個報表項目已選取，請使用 [屬性] 窗格。 設計介面上選取的項目名稱會出現在 [屬性] 窗格的工具列中。  
   
 ## <a name="to-move-a-data-region"></a>若要移動資料區  
   
@@ -64,11 +63,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-delete-a-data-region"></a>若要刪除資料區  
   
--   選取的資料區，在資料區域中，按一下滑鼠右鍵，然後按一下**刪除**。  
+-   選取資料區，在資料區中按一下滑鼠右鍵，然後按一下 [刪除]。  
   
 ## <a name="see-also"></a>另請參閱  
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [資料表、 矩陣和清單 &#40;報表產生器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

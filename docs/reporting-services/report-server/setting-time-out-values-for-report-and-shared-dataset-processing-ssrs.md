@@ -1,5 +1,5 @@
 ---
-title: "報表和共用資料集處理 (SSRS) 設定逾時值 |Microsoft 文件"
+title: "設定報表和共用資料集處理的逾時值 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - report processing [Reporting Services], time-outs
 - report execution time-outs [Reporting Services]
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 19e7171dbcc26806b0a7dbf96afe5770dcebd826
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7b64cfa425784e7e495b510f960a50109175537b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>設定報表和共用資料集處理的逾時值 (SSRS)
   您可以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指定逾時值，以便設定系統資源的使用限制。 報表伺服器支援兩種逾時值：  
@@ -36,10 +36,10 @@ ms.lasthandoff: 08/09/2017
   
 -   報表執行逾時值是報表處理在停止之前，可以繼續的秒數上限。 此值是在系統層級定義的。 您可以針對個別報表更改此設定。  
   
- 大部分的逾時錯誤會在查詢處理時發生。 如果您遇到逾時錯誤，請試著增加查詢逾時值。 請務必調整報表執行逾時值，使其大於查詢逾時。 這個時間週期應該要足以完成查詢與報表處理。  
+ 大部分的逾時錯誤會在查詢處理時發生。 如果您遇到逾時錯誤，請試著增加查詢逾時值。 請務必調整報表執行逾時值，使其大於查詢逾時。這個時間週期應該要足以完成查詢與報表處理。  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>設定報表中內嵌資料集的查詢逾時  
- 當您定義內嵌資料集時，可在報表撰寫期間指定查詢逾時值。 逾時值會與報表一起儲存在報表定義的 **Timeout** 元素中。 依預設，此值設定為 30 秒。 如需詳細資訊，請參閱 [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) (報表內嵌資料集和共用資料集 (報表產生器及 SSRS))。  
+ 當您定義內嵌資料集時，可在報表撰寫期間指定查詢逾時值。 逾時值會與報表一起儲存在報表定義的 **Timeout** 元素中。 依預設，此值設定為 30 秒。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。  
   
  擁有權限修改已發行報表之屬性的使用者，可以編輯報表定義檔案，重設此值。  
   
@@ -59,10 +59,10 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  您可以在 RSReportServer.config 檔案中設定 **RunningRequestsDbCycle** 設定，以變更評估執行中之作業的頻率。  
   
-## <a name="see-also"></a>請參閱＜  
- [設定處理選項 &#40;Reporting Services SharePoint 整合模式 &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Reporting Services 報表伺服器 &#40;原生模式 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [管理執行程序](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [報表管理員 &#40;SSRS 原生模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+## <a name="see-also"></a>另請參閱  
+ [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

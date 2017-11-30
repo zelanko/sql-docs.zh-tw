@@ -1,13 +1,11 @@
 ---
-title: "Stretch Database 資料庫與資料表 - Stretch Database Advisor | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 06/14/2016
+title: "使用 Data Migration Assistant 識別適用於 Stretch Database 的資料庫和資料表 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
+ms.date: 10/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,51 +14,51 @@ helpviewer_keywords:
 - identifying databases for Stretch Database
 - identifying tables for Stretch Database
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d945060845495143f209f53e6bbb2bc2e224f4f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 59608301d353d99eb710a956389fd9f8d8948dfe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="stretch-database-databases-and-tables---stretch-database-advisor"></a>Stretch Database 資料庫與資料表 - Stretch Database Advisor
+# <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>使用 Data Migration Assistant 識別適用於 Stretch Database 的資料庫和資料表
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  若要識別屬於 Stretch Database 對象的資料庫和資料表，請下載 SQL Server 2016 Upgrade Advisor，並執行 Stretch Database Advisor。 Stretch Database Advisor 也可以識別封鎖問題。  
+  若要識別適用於 Stretch Database 的資料庫和資料表，以及潛在的封鎖問題，請下載並執行 Microsoft Data Migration Assistant。
   
-## <a name="download-and-install-upgrade-advisor"></a>下載並安裝 Upgrade Advisor  
- 從 [這裡](https://www.microsoft.com/en-us/download/details.aspx?id=53595)下載並安裝 Upgrade Advisor。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 安裝媒體未隨附此工具。  
+## <a name="get-data-migration-assistant"></a>取得 Data Migration Assistant
+ 從 [這裡](https://www.microsoft.com/download/details.aspx?id=53595)下載並安裝 Data Migration Assistant。 SQL Server 安裝媒體未隨附此工具。  
   
-## <a name="run-the-stretch-database-advisor"></a>執行 Stretch Database Advisor  
+## <a name="run-data-migration-assistant"></a>執行 Data Migration Assistant  
   
-1.  執行 Upgrade Advisor。  
-  
-2.  選取 **[Scenarios]** \(案例)，然後選取 **[Run Stretch Database Advisor]** \(執行 Stretch Database Advisor)。  
-  
-3.  在 **[Run Stretch Database Advisor]** \(執行 Stretch Database Advisor) 刀鋒視窗上，按一下 **[SELECT DATABASES TO ANALYZE]** \(選取要分析的資料庫)。  
-  
-4.  在 **[選取資料庫]** 刀鋒視窗中，輸入或選取伺服器名稱和驗證資訊。 按一下 **[連接]**。
+1.  執行 Microsoft Data Migration Assistant。  
 
-5.  所選伺服器上的資料庫清單隨即出現。 選取您想要分析的資料庫。 按一下 **[選取]**。  
-  
-6.  在 **[Run Stretch Database Advisor]** \(執行 Stretch Database Advisor) 刀鋒視窗上，按一下 **[執行]**。  即會執行分析。  
-  
+2.  建立類型為 [Assessment] (評量) 的新專案並指定名稱。
+
+3.  選取 **SQL Server** 同時作為 [Source server type ] (來源伺服器類型) 和 [Target server type] (目標伺服器類型)。
+
+4.  選取 [建立]。 
+
+5. 在 [Options] (選項) 頁面上 (步驟 1)，選取 [New features recommendation] (新增功能建議)。 (選擇性) 清除 [Compatibility issues] (相容性問題) 的選取。
+
+6.  在 [Select sources] (選取來源) 頁面上 (步驟 2)，連線到一部伺服器並選取一個資料庫，然後選取 [Add ] (新增)。
+
+7.  選取 [Start Assessment] (啟動評量)。
+
 ## <a name="review-the-results"></a>檢閱結果  
   
-1.  分析完成時，請在 [**Analyzed databases** (已分析資料庫)] 刀鋒視窗上選取您已分析的其中一個資料庫，以顯示 **[分析結果]** 刀鋒視窗。  
-  
-     **[分析結果]** 刀鋒視窗會列出所選資料庫中符合預設建議準則的建議資料表。 
-  
-2.  在 **[分析結果]** 刀鋒視窗的資料表清單中，選取其中一個建議資料表來顯示 **[資料表結果]** 刀鋒視窗。  
-  
-     **[資料表結果]** 刀鋒視窗會列出所選資料表的封鎖問題。 如需 Stretch Database Advisor 偵測到之封鎖問題的相關資訊，請參閱 [Stretch Database 的限制](../../sql-server/stretch-database/limitations-for-stretch-database.md)。  
-  
-3.  在 **[Table results (資料表結果)]** 刀鋒視窗的封鎖問題清單中，選取其中一個問題，以顯示所選問題的詳細資訊，以及建議的降低風險步驟。 如果您想要設定針對 Stretch Database 選取的資料表，請實作建議的因應步驟。  
+1.  當分析完成時，在 [Review results] (檢閱結果)  頁面上 (步驟 3)，選取 [Feature recommendations] (功能建議) 選項，然後選取 [Storage] (儲存體) 索引標籤。
+
+2.  檢閱 Stretch Database 的相關建議。 每個建議會列出 Stretch Database 可能適用的資料表，以及任何潛在的封鎖問題。
+
+## <a name="historical-note"></a>歷史備註
+Stretch Database Advisor 之前是 SQL Server 2016 Upgrade Advisor 的一個元件。 在當時，您必須另外選取並執行 Stretch Database Advisor。
+
+發行 Data Migration Assistant 以取代並擴充 Upgrade Advisor 之後，Stretch Database Advisor 的功能會併入這項新工具。 您不需要選取任何選項，即可取得 Stretch Database 的相關建議。 當您在 Data Migration Assistant 中執行評量時，Stretch Database 的相關結果會出現在 [Feature recommendations ] (功能建議) 的 [Storage] (儲存體) 索引標籤中。
   
 ## <a name="next-step"></a>下一步  
  啟用 Stretch Database。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 07/29/2017
  [為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
-

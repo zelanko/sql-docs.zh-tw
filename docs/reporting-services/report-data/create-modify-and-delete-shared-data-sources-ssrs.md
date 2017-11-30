@@ -1,5 +1,5 @@
 ---
-title: "建立、 修改及刪除共用的資料來源 (SSRS) |Microsoft 文件"
+title: "建立、修改及刪除共用資料來源 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fa6fb63a3766dc5f4f40a1a3891119c867b8aaf7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>建立、修改及刪除共用資料來源 (SSRS)
   共用資料來源是一組資料來源連接屬性，可供多個報表、模型以及在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上執行的資料驅動訂閱參考。  共用資料來源提供一種簡單的方式，可用來管理通常會隨著時間而變更的資料來源屬性。 如果使用者帳戶或密碼變更，或者如果您將資料庫移到不同的伺服器，可以在一個地方更新連接資訊。  
@@ -47,14 +46,14 @@ ms.lasthandoff: 08/09/2017
 |----------|-----------------|  
 |名稱|識別報表伺服器資料夾階層中之項目的名稱。|  
 |說明|檢視資料夾的內容時，與「報表管理員」中的項目一起顯示的描述。|  
-|連接類型|與資料來源搭配使用的資料處理延伸模組。 您僅能使用在報表伺服器上部署的資料處理延伸模組。 如需隨附的資料處理延伸模組[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請參閱[支援的 Reporting Services &#40; 資料來源SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
+|連接類型|與資料來源搭配使用的資料處理延伸模組。 您僅能使用在報表伺服器上部署的資料處理延伸模組。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附之資料處理延伸模組的詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|  
 |連接字串|資料庫的連接字串。 如需詳細資訊，或者要檢視常用資料來源之連接字串的範例，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
 |認證類型|指定如何取得用於連接的認證，以及建立連接後是否要使用這些認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。|  
   
  共用資料來源不包含用來擷取資料的查詢資訊。 查詢永遠會保留在報表定義中。  
   
 ## <a name="creating-and-modifying-shared-data-sources"></a>建立與刪除共用資料來源  
- 若要建立共用的資料來源，或修改其屬性，您必須擁有**管理資料來源**報表伺服器上的權限。 如果報表伺服器是在原生模式下執行，您可以使用「報表管理員」來建立與設定共用資料來源。 如果報表伺服器是在 SharePoint 整合模式下執行，您可以使用 SharePoint 網站上的應用程式頁面。 如果是任意模式下的任何報表伺服器，您可以在「報表設計師」中建立共用資料來源，然後將其發行到目標伺服器上。  
+ 若要建立共用資料來源或修改其屬性，您必須擁有報表伺服器的 [管理資料來源] 權限。 如果報表伺服器是在原生模式下執行，您可以使用「報表管理員」來建立與設定共用資料來源。 如果報表伺服器是在 SharePoint 整合模式下執行，您可以使用 SharePoint 網站上的應用程式頁面。 如果是任意模式下的任何報表伺服器，您可以在「報表設計師」中建立共用資料來源，然後將其發行到目標伺服器上。  
   
  在報表伺服器上建立共用資料來源之後，您可以建立角色指派來控制其存取權、將其移動到不同的位置、重新命名它，或者在外部資料來源執行維護作業時離線以防進行報表處理。 如果您重新命名或移動共用資料來源項目至報表伺服器資料夾階層中的其他位置，所有參考共用資料來源的報表或訂閱，其相關路徑資訊會隨之更新。 如果您讓共用資料來源離線，所有報表、模型和訂閱都不會執行，直到您重新啟用資料來源為止。  
   
@@ -69,9 +68,9 @@ ms.lasthandoff: 08/09/2017
   
 2.  在 **[名稱]** 文字方塊中，輸入資料來源的名稱或接受預設值。 資料來源名稱是在報表內部使用。 為了清楚起見，我們建議資料來源的名稱要包含連接字串中所指定的資料庫名稱。  
   
-3.  確認**使用共用資料來源參考**已選取，然後執行下列動作。  
+3.  請確認已選取 [使用共用資料來源參考]，然後執行下列動作。  
   
-    1.  按一下 **[新增]**。 在**共用資料來源**屬性對話方塊、 後續步驟 2 和 3 來建立新的資料來源。  
+    1.  按一下 **[新增]**。 在 [共用資料來源] 屬性對話方塊中，遵循步驟 2 和 3 來建立新的資料來源。  
   
     2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -87,15 +86,15 @@ ms.lasthandoff: 08/09/2017
   
 2.  在報表管理員中，導覽至 **[內容]** 頁面。  
   
-3.  按一下 **[新增資料來源]**。 **新的資料來源**頁面隨即開啟。  
+3.  按一下 **[新增資料來源]**。 [新增資料來源] 頁面隨即開啟。  
   
 4.  輸入項目的名稱。 名稱必須至少包含一個字元，而且開頭必須為字母。 它也可以包含特定符號，但不能包含空格或下列字元：; ? : @ & = + , $ / * < > | " /。  
   
-5.  選擇性地輸入描述，以提供使用者有關連接的資訊。 此描述會出現在**內容**頁面在報表管理員中。  
+5.  選擇性地輸入描述，以提供使用者有關連接的資訊。 此描述會出現在報表管理員的 [內容] 頁面上。  
   
-6.  在**資料來源類型**清單中，指定用來處理資料來源的資料處理延伸模組。  
+6.  在 [資料來源類型] 清單中，指定用來處理資料來源中之資料的資料處理延伸模組。  
   
-7.  如**連接字串**，指定報表伺服器用來連接到資料來源的連接字串。 建議您不要在連接字串中指定認證。  
+7.  針對 [連接字串]，指定報表伺服器用於連線到資料來源的連接字串。 建議您不要在連接字串中指定認證。  
   
      下列範例將說明用以連接至本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
   
@@ -105,17 +104,17 @@ ms.lasthandoff: 08/09/2017
   
 8.  針對 **[使用下列方式連接]**，指定報表執行時要如何取得認證：  
   
-    -   如果您要提示使用者輸入登入名稱和密碼，請按一下 **[執行報表的使用者所提供的認證]**。 若要使用的認證當做 Windows 認證的使用者輸入，按一下 **連接到資料來源時作為 Windows 認證**。 如果使用者名稱和密碼是資料庫認證，請勿選取此選項。  
+    -   如果您要提示使用者輸入登入名稱和密碼，請按一下 **[執行報表的使用者所提供的認證]**。 若要使用使用者所輸入的認證作為 Windows 認證，請按一下 [連線到資料來源時作為 Windows 認證]。 如果使用者名稱和密碼是資料庫認證，請勿選取此選項。  
   
-    -   如果您想要使用資料來源做為共用的資料來源與儲存的資料來源，擁有者所管理的認證，或如報表支援訂閱或其他已排程的作業 （例如自動化的報表記錄產生），請按一下 **認證安全地儲存在報表伺服器**。 如果資料庫伺服器支援模擬或委派，您就可以選取 **[連接到資料來源後，模擬已驗證的使用者]**。  
+    -   如果您打算將資料來源當作具有資料來源擁有者所管理之預存認證的共用資料來源，或是在支援訂閱或其他已排程之作業 (例如自動化報表記錄產生) 的報表中使用資料來源，請按一下 [安全地儲存在報表伺服器中的認證]。 如果資料庫伺服器支援模擬或委派，您就可以選取 **[連接到資料來源後，模擬已驗證的使用者]**。  
   
     -   對於存取報表的使用者提供的認證，若要讓報表伺服器將認證傳送給主控外部資料來源的伺服器，請按一下 **[Windows 整合式安全性]**。 在此情況下，不會提示使用者輸入使用者名稱或密碼。  
   
     -   如果資料來源沒有使用認證 (例如，如果資料來源是從檔案系統存取的 XML 檔)，請按一下 [不需要認證]。 只有當這種認證類型適用於資料來源時，您才應該指定此認證類型。 如果您針對需要驗證的資料來源選取此選項，連接將會失敗。 如果您選取此選項，請務必設定自動執行帳戶，以便在使用者認證無法使用時，允許報表伺服器連接至其他電腦以擷取資料或檔案。  
   
-         如需設定認證的詳細資訊，請參閱[指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 如需自動執行帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+         如需設定認證的詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 如需自動執行帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-9. 按一下**測試連接** 按鈕以驗證資料來源組態。  
+9. 按一下 [測試連線] 按鈕，驗證資料來源設定。  
   
     > [!NOTE]  
     >  [測試連接] 按鈕不支援 XML 資料來源類型。  
@@ -126,7 +125,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在報表管理員中，導覽至 [內容] 頁面。  
   
-2.  瀏覽至共用的資料來源項目、 將滑鼠停留在項目、 按一下下拉式清單，及從內容功能表中，按一下 **管理**。 **屬性**頁面隨即開啟。  
+2.  巡覽至共用資料來源項目，將滑鼠停留在該項目上，按一下下拉式清單，然後在操作功能表中按一下 [管理]。 [屬性] 頁面隨即開啟。  
   
 3.  修改資料來源，然後按一下 [套用]。  
   
@@ -141,9 +140,9 @@ ms.lasthandoff: 08/09/2017
   
          按一下項目來開啟它。 [一般屬性] 頁面隨即開啟。  
   
-         按一下**刪除**，然後按一下 **確定**。  
+         按一下 [刪除]，然後按一下 [確定]。  
   
-    -   在**內容**頁面上，瀏覽至包含您想要刪除的資料來源的資料夾。  
+    -   在 [內容] 頁面中，巡覽至包含您要刪除之資料來源的資料夾。  
   
          將滑鼠停留在該項目上，按一下下拉式清單，然後在操作功能表中按一下 [刪除]。  
   
@@ -160,9 +159,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="importing-shared-data-sources"></a>匯入共用資料來源  
  **若要在報表設計師中匯入現有的資料來源**  
   
-1.  在方案總管中，以滑鼠右鍵按一下報表伺服器專案中的 [共用資料來源] 資料夾，然後按一下 [加入現有項目]。 **加入現有項目**對話方塊隨即開啟。  
+1.  在方案總管中，以滑鼠右鍵按一下報表伺服器專案中的 [共用資料來源] 資料夾，然後按一下 [加入現有項目]。 [新增現有項目] 對話方塊隨即開啟。  
   
-2.  導覽至現有報表定義共用資料來源 (rds) 檔案，然後按一下**開啟**。  
+2.  巡覽至現有的報表定義共用資料來源 (rds) 檔案，然後按一下 [開啟]。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -179,30 +178,30 @@ ms.lasthandoff: 08/09/2017
   
 1.  按一下文件庫功能區上的 [文件] 索引標籤。  
   
-2.  在**新文件**功能表上，按一下 **報表資料來源**  
+2.  在 [新增文件] 功能表上，按一下 [報表資料來源]  
   
     > [!NOTE]  
-    >  如果您沒有看到**報表資料來源**項目在功能表中，報表資料來源內容類型尚未啟用。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+    >  如果您沒有在功能表上看見 [報表資料來源] 項目，表示報表資料來源內容類型尚未啟用。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
   
-3.  在**名稱**，輸入.rsds 檔的描述性名稱。  
+3.  在 [名稱] 中，輸入 .rsds 檔的描述性名稱。  
   
-4.  在**資料來源類型**，從清單中選取的資料來源類型。 如需詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+4.  在 [資料來源類型] 的清單中，選取資料來源的類型。 如需詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
-5.  在**連接字串**，指定資料來源與任何其他設定，建立外部資料來源的連接所需的指標。 您所使用的資料來源類型會決定連接字串的語法。 如需詳細資訊和範例，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+5.  在 [連接字串] 中，指定資料來源的指標以及其他建立外部資料來源連線必要的任何設定。 您所使用的資料來源類型會決定連接字串的語法。 如需詳細資訊和範例，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 6.  在 [認證] 中，指定報表伺服器取得認證來存取外部資料來源的方式。 認證可以針對自動報表處理而儲存、提示、整合或設定。  
   
     -   如果您想要使用開啟報表之使用者的認證來存取資料，請選取 [Windows 驗證 (整合式)]。 如果 SharePoint 網站或伺服陣列使用表單驗證或透過受信任帳戶連接到報表伺服器，請勿選取這個選項。 如果您想要排程這個報表的訂閱或資料處理，請勿選取這個選項。 在針對網域啟用 Kerberos 驗證時，或者資料來源與報表伺服器是在同一部電腦上時，此選項具有最佳的效能。 如果未啟用 Kerberos 驗證，Windows 認證只能傳遞至一部其他電腦。 這表示，如果外部資料來源位於另一部需要其他連接的電腦上，您就會收到錯誤而非所預期的資料。  
   
-    -   選取**提示認證**他或她如果您想讓使用者輸入其認證每次執行報表。 如果您想要排程這個報表的訂閱或資料處理，請勿選取這個選項。  
+    -   如果您希望使用者在每次執行報表時輸入自己的認證，請選取 [提示認證]。 如果您想要排程這個報表的訂閱或資料處理，請勿選取這個選項。  
   
-    -   選取**預存認證**如果您想要使用一組認證存取資料。 認證會先經過加密，然後再儲存。 您可以選取決定預存認證之驗證方式的選項。 如果預存認證屬於 Windows 使用者帳戶，請選取 [當做 Windows 認證使用]。 如果您想在資料庫伺服器上設定執行內容，請選取 [設定執行內容到這個帳戶]。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，此選項會設定 SETUSER 函數。 如需詳細資訊，請參閱[SETUSER &#40;TRANSACT-SQL &#41;](../../t-sql/statements/setuser-transact-sql.md).  
+    -   如果您想要使用單一認證集來存取這個資料，請選取 [預存認證]。 認證會先經過加密，然後再儲存。 您可以選取決定預存認證之驗證方式的選項。 如果預存認證屬於 Windows 使用者帳戶，請選取 [當做 Windows 認證使用]。 如果您想在資料庫伺服器上設定執行內容，請選取 [設定執行內容到這個帳戶]。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，此選項會設定 SETUSER 函數。 如需詳細資訊，請參閱 [SETUSER &#40;Transact-SQL&#41;](../../t-sql/statements/setuser-transact-sql.md)。  
   
-    -   選取**就不需要認證**如果您想要在連接字串中指定認證，或如果您想要使用報表伺服器設定的最小權限帳戶執行報表。 如果這個帳戶並未在報表伺服器上設定，系統就會提示使用者輸入認證，而且您針對該報表定義的所有排程作業將不會執行。  
+    -   如果您想要在連接字串中指定認證，或是想要使用報表伺服器上設定的最低權限帳戶來執行報表，請選取 [不需要認證]。 如果這個帳戶並未在報表伺服器上設定，系統就會提示使用者輸入認證，而且您針對該報表定義的所有排程作業將不會執行。  
   
 7.  如果您想要讓資料來源成為使用中，請選取 [啟用此資料來源]。 如果資料來源已設定，但是非使用中，當使用者嘗試使用以資料來源為基礎的報表時，他們就會看見錯誤訊息。  
   
-8.  按一下**測試連接** 按鈕以驗證資料來源組態。  
+8.  按一下 [測試連線] 按鈕，驗證資料來源設定。  
   
     > [!NOTE]  
     >  [測試連接] 按鈕不支援 XML 資料來源類型。  
@@ -215,7 +214,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  指向共用資料來源。  
   
-3.  按一下即可顯示向下箭號，然後按一下 **刪除**。  
+3.  按一下即可顯示向下箭頭，然後按一下 [刪除]。  
   
  如果您不小心刪除了想要保留的共用資料來源，可以建立包含相同連接資訊的新共用資料來源。 在您重新建立共用資料來源之後，就必須開啟使用該資料來源的每個報表和模型，然後選取共用資料來源。 新的共用資料來源項目的名稱、認證或連接字串語法可以與之前刪除的資料來源不同。 只要連接解析成相同的資料來源，資料來源屬性可能會與原始值不同。  
   
@@ -230,19 +229,18 @@ ms.lasthandoff: 08/09/2017
   
 2.  指向共用資料來源。  
   
-3.  按一下即可顯示向下箭號，然後選取**檢視相依項目**。  
+3.  按一下即可顯示向下箭頭，然後選取 [檢視相依項目]。  
   
      若為報表模型，相依項目的清單就會顯示在報表產生器中建立的報表。 若為共用資料來源，相依項目清單可能會同時包括報表和報表模型。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [建立及管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [管理報表資料來源](../../reporting-services/report-data/manage-report-data-sources.md)   
- [報表管理員 &#40;SSRS 原生模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
  [資料來源屬性頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [建立、刪除或修改共用的資料來源 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [設定報表 &#40; 資料來源屬性報表管理員 &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [設定報表的資料來源屬性 &#40;報表管理員&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
-

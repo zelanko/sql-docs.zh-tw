@@ -1,30 +1,61 @@
 ---
 title: "SQL Server Data Tools (SSDT) 的變更記錄 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 10/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 64583be5bd94e71a52b894c5babd3d29107c56dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: e3901423d7f9e2a8f8a6c3753c284c1727644829
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 這是 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) 的變更記錄。  
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
+
+
+## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>適用於 Visual Studio 2017 (15.4.0 預覽) 的 SSDT
+組建編號︰14.0.16134.0
+  
+### <a name="whats-new"></a>新功能
+
+此版本提供獨立式 Web 安裝程式，適用於 Visual Studio 2017 15.4 (或更新版本) 的 SQL Server Database、Analysis Services、Reporting Services 與 Integration Services 專案。
+
+### <a name="installer"></a>安裝程式
+
+- 可讓使用者在安裝新的適用於 VS2017 的 SSDT 執行個體時設定暱稱。
+- 如果未選取任何 VS 執行個體，則隱藏安裝程式的功能選取核取方塊。
+- 根據客戶意見反應改進安裝程式的某些訊息。
+- 修正安裝程式不支援升級的問題。
+
+
+### <a name="ssis"></a>SSIS
+
+- 修正在安裝 Azure 功能套件時，[匯入/匯出精靈] 無法列出資料來源的問題。
+- 修正在切換連線時，編輯 SSIS Analysis Services 處理工作擲回例外狀況的問題。
+- 修正在套用新增 __$command_id 資料行的 SQL 修正程式之後，CDC 元件中斷的問題。
+- 修正在以舊版 SQL Server 為目標時，無法編輯和執行協力廠商套件的問題。
+- 修正在按兩下 DTSWizard.exe 並選取 [一般檔案來源] 時，[一般檔案來源] 設定對話方塊未正確顯示的問題。
+- 修正在以 SQL Server 2017 為目標時，含有 Azure 功能套件工作/元件的套件無法執行的問題。
+
+
+**已知問題**
+
+- 安裝程式未當地語系化。
+- 當 *ExecuteOutOfProcess* 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+
 
 ## <a name="ssdt-173-for-visual-studio-2015"></a>適用於 Visual Studio 2015 的 SSDT 17.3
 組建編號︰14.0.61709.290
@@ -458,7 +489,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 **新功能**
 
 - **發行版本控制與編號︰**發行版本現在以數值標記而不是依月份標記。 這與新的 SSMS 原則一致，並簡化在一個月中有多個版本或 hotfix 時的情況。 此版本是 16.3，表示在 RTM 版本之後的第三個更新。 任何 hotfix 將是 16.3.1，依此類推，下一個更新 (下個月的計劃) 將是 16.4。
-- **Analysis Services - 表格式模型總管：**表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 檢視 功能表，指向 其他視窗，然後按一下表格式模型總管 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
+- **Analysis Services - 表格式模型總管：**表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
 - **資料庫工具 - Always Encrypted**︰此版本提供新的[Always Encrypted 金鑰管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)對話方塊，可輕鬆地將資料行主要金鑰或資料行加密金鑰加入至資料庫專案或 SQL Server 物件總管中的即時資料庫。 此版本支援 Windows 憑證存放區中的憑證。 未來的版本將會支援 Azure 金鑰保存庫和 CNG 提供者。
     - 在建立資料行主要金鑰或資料行加密金鑰時，您可能會發現按一下 [更新資料庫] 之後，SQL Server 物件總管無法立即反映所做的變更。 若要解決這個問題，請重新整理 SQL Server 物件總管中的資料庫節點。
     - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援這項功能。 未來版本中將會支援 SQL Server 物件總管。
@@ -550,4 +581,3 @@ SSDT 公開上市 (GA) 現在已發行。 2016 年 6 月的 SSDT GA 更新加入
 [Analysis Services 的新功能](../analysis-services/what-s-new-in-analysis-services.md)  
 [Integration Services 的新功能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
-

@@ -1,5 +1,5 @@
 ---
-title: "保護資料夾的安全 |Microsoft 文件"
+title: "保護資料夾的安全 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5aad5bbe0b53e2e6669df93496795f4c5b6a3bca
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0eed722cabb60b072328181e82fe0c55f265d7aa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-folders"></a>保護資料夾的安全
   資料夾安全性是保護報表伺服器中之所有內容的基礎。 因為安全性會在整個資料夾結構繼承，所以您可以指定很多或很少區段的資料夾階層，來允許特定類型的存取。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/09/2017
   
  低安全性資料夾可以用來儲存您要很容易存取的報表。  
   
- 資料夾安全性會形成項目層級安全性的基礎，以報表伺服器資料夾階層的根節點開始，也就是 [主資料夾] 資料夾。 因為安全性是繼承的，建議在 [主資料夾] 資料夾設定較嚴格的安全性原則。 使用 [主資料夾] 資料夾角色指派裡的 [瀏覽者] 角色，即可提供只供檢視存取。  
+ 資料夾安全性會形成項目層級安全性的基礎，以報表伺服器資料夾階層的根節點開始，也就是 [主資料夾] 資料夾。 因為安全性是繼承的，建議在 [主資料夾] 資料夾設定較嚴格的安全性原則。 使用 [主資料夾] 角色指派裡的 [瀏覽器] 角色，即可提供只供檢視存取。  
   
 ## <a name="tasks-and-folder-access"></a>工作和資料夾存取  
  建立資料夾的角色指派時，請考慮下表列出的工作。  
@@ -48,10 +47,9 @@ ms.lasthandoff: 08/09/2017
 |管理資料來源|將新的共用資料來源項目加入至資料夾，以及變更現有的共用資料來源。|  
 |設定項目安全性|建立和修改控制資料夾之存取的角色指派。 此工作必須用於「檢視資料夾」或「管理資料夾」。 若不這麼做，使用者將無法選取項目，而不會產生任何影響。|  
   
-## <a name="see-also"></a>請參閱＜  
- [保護報表和資源](../../reporting-services/security/secure-reports-and-resources.md)   
- [安全的共用的資料來源項目](../../reporting-services/security/secure-shared-data-source-items.md)   
- [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)   
+ [保護共用資料來源項目的安全](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

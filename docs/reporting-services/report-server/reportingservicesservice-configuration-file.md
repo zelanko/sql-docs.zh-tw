@@ -1,5 +1,5 @@
 ---
-title: "ReportingServicesService 組態檔 |Microsoft 文件"
+title: "ReportingServicesService 設定檔 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 72985f45d29d0f7f2d5a40494da929dfdfbbdc12
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 437760484aa49e7e4a8f806a2fd7bc64ec405f33
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 組態檔
  ||  
@@ -38,7 +37,7 @@ ReportingServicesService.exe.config 檔包括設定追蹤的設定。
  此檔案位於 \Reporting Services\Report Server\Bin 資料夾中。  
   
 ## <a name="editing-guidelines"></a>編輯指導方針  
- 您可以修改此檔案以重新命名記錄檔，或者增加或減少追蹤層級。 請勿修改其他任何設定。 如需指示，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 如需追蹤記錄的詳細資訊，請參閱[報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)。  
+ 您可以修改此檔案以重新命名記錄檔，或者增加或減少追蹤層級。 請勿修改其他任何設定。 如需指示，請參閱[修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 如需追蹤紀錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
 ## <a name="example-configuration"></a>範例組態  
  下列範例顯示 ReportingServicesService.exe.config 檔中的設定和預設值。  
@@ -94,9 +93,8 @@ ReportingServicesService.exe.config 檔包括設定追蹤的設定。
 |**Components**|指定建立追蹤記錄的元件。 預設值是 **all**秒。 此設定的其他有效值包括內部元件的名稱。 請勿修改此值。|  
 |**執行階段**|指定支援與前版回溯相容的組態設定。 執行階段設定是用來重新導向以新版為前版 Microsoft.ReportingServices.Interfaces 之目標的要求。<br /><br /> 本節中的所有組態設定會在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 產品文件集中加以描述。 如需詳細資訊，請在 MSDN 網站上或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文件集中搜尋「執行階段結構描述設定」。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   
-

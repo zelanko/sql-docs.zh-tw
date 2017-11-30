@@ -1,5 +1,5 @@
 ---
-title: "指定軸間隔 （報表產生器及 SSRS） |Microsoft 文件"
+title: "指定軸間隔 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e86de97e19273c282f6cfe8d845eb11a20b98a5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定軸間隔 (報表產生器及 SSRS)
 了解如何藉由設定 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表的軸間隔，在圖表中變更類別 (x) 軸中標籤及刻度的數目。
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
 
 但在類別軸上 (通常是 x 軸)，有時自動軸間隔會產生沒有軸標籤的類別。 您可以在軸 Interval 屬性中指定所需間隔數。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會根據結果集中的資料，在執行階段計算間隔數。 如需如何計算軸間隔的詳細資訊，請參閱 [格式化圖表上的軸標籤](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
 
-若要再試一次設定軸間隔的範例資料，請參閱[教學課程： 將直條圖加入至報表 （報表產生器）](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)。
+若要嘗試使用範例資料設定軸間隔，請參閱[教學課程︰將直條圖新增至報表 (報表產生器)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)。
   
 > [!NOTE]  
 >  類別目錄軸通常是水平軸或 X 軸。 不過，如果是長條圖，類別目錄軸會是垂直軸或 Y 軸。  
@@ -44,11 +44,11 @@ ms.lasthandoff: 08/09/2017
 
 ![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
-1.  以滑鼠右鍵按一下類別目錄軸，然後按一下**水平軸屬性**。   
+1.  以滑鼠右鍵按一下類別軸，然後按一下 [水平軸屬性]。   
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  在**水平軸屬性**對話方塊 >**軸選項**索引標籤上，設定**間隔**至**1**以顯示每個類別目錄群組標籤。 若要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。 
+2.  在 [水平軸屬性] 對話方塊 > [軸選項] 索引標籤上，將 [間隔] 設為 **1** 以顯示每個類別群組標籤。 若要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -81,21 +81,20 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-enable-a-variable-interval-calculation-on-an-axis"></a>在軸上啟用可變間隔計算  
 
-根據預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將軸間隔設為 [自動]。 此程序說明如何將它設回預設值。 
+根據預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將軸間隔設為 [自動]。此程序說明如何將它設回預設值。 
   
 1.  以滑鼠右鍵按一下要變更的圖表軸，然後按一下 **[軸屬性]**。 
   
-2.  在**水平軸屬性**對話方塊 >**軸選項**索引標籤上，設定**間隔**至**自動**。 圖表將顯示可納入軸的最佳類別目錄標籤數目。  
+2.  在 [水平軸屬性] 對話方塊 > [軸選項] 索引標籤上，將 [間隔] 設為 [自動]。圖表將顯示可納入軸的最佳類別目錄標籤數目。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>請參閱＜  
- [格式化圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [格式化圖表 （報表產生器及 SSRS） 上的資料點](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [在資料區域 （報表產生器及 SSRS） 的排序資料](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [軸屬性對話方塊、 軸選項 &#40;報表產生器及 SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
- [指定對數刻度 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [繪製次要座標軸 &#40; 上的資料報表產生器及 SSRS &#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [格式化圖表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [格式化圖表上的資料點 (報表產生器及 SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [在資料區中排序資料 (報表產生器及 SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [軸屬性對話方塊，軸選項 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [指定對數刻度 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [繪製副座標軸上的資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
-

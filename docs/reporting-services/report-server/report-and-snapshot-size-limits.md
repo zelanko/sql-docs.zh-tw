@@ -1,5 +1,5 @@
 ---
-title: "報表和快照集大小限制 |Microsoft 文件"
+title: "報表和快照集的大小限制 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a101dd362ea9ec71a0d4e75347bea60171cd8d1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0016b55ab5b7a72b8e231a943df6db191bf8b6c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-and-snapshot-size-limits"></a>報表和快照集的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理員可以透過此主題中的資訊來了解，當報表發行至報表伺服器、在執行階段進行轉譯以及儲存至檔案系統時，報表大小的限制。 此主題也提供有關如何測量報表伺服器資料庫大小的實作指南，並且描述快照集大小對伺服器效能的影響。  
@@ -85,10 +84,9 @@ EXEC sp_spaceused
   
  儲存在報表伺服器資料庫中的快照集數量，是個別儲存的，與效能因素無關， 因此您可以儲存大量的快照集而不會影響伺服器的效能。 您可以永遠保留快照集， 但是，請注意報表記錄是可設定的， 如果報表伺服器管理員降低報表記錄的限制，您可能會遺失原本打算保留的記錄報表。 如果刪除該報表，所有的報告記錄也會隨之刪除。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
- [報表伺服器資料庫 &#40;SSRS 原生模式 &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [處理大型報表](../../reporting-services/report-server/process-large-reports.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "解除安裝報表產生器 |Microsoft 文件"
+title: "將報表產生器解除安裝 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 87d8e248cb143322c06570092ca3afc380827356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ebfb5781c80cac35936dfdb9ad2e434ee5ca7f9e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="uninstall-report-builder"></a>將報表產生器解除安裝
 
 您可以從控制台或命令列解除安裝單機版本的報表產生器。
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  在 [控制台] 中，按一下 **[程式和功能]**。  
   
-3.  找出[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server 2016 報表產生器中**名稱**清單，然後按一下它。  
+3.  在 [名稱] 清單中找出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 報表產生器，然後按一下它。  
   
 4.  按一下 **[解除安裝]**。  
   

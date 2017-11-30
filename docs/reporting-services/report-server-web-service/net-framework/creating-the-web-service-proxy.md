@@ -1,5 +1,5 @@
 ---
-title: "建立 Web 服務 Proxy |Microsoft 文件"
+title: "建立 Web 服務 Proxy | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, proxies
 - proxies [Reporting Services]
@@ -19,27 +18,26 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 1c39d81ec9a1d2cd24f01b9dccfed13e8560a770
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b3f80f446e3d68059d2337d6fa64e9e99022e24f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-the-web-service-proxy"></a>建立 Web 服務 Proxy
   用戶端與 Web 服務可以使用 SOAP 訊息來進行通訊，這會以 XML 來封裝輸入與輸出參數。 Proxy 類別會將參數對應至 XML 元素，然後透過網路傳送 SOAP 訊息。 以此方式，Proxy 類別可讓您免於在 SOAP 層級與 Web 服務通訊，並可讓您在任何支援 SOAP 與 Web 服務 Proxy 的開發環境中，叫用 Web 服務方法。  
   
- 有兩種方式可以將 proxy 類別加入您開發的專案使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]： 中的 WSDL 工具[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，並可加入 Web 參考[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。 下列小節針對這個主題進行更詳細的討論。  
+ 有兩種方式可以將 Proxy 類別新增至使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的開發專案：使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的 WSDL 工具，以及在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中新增 Web 參考。 下列小節針對這個主題進行更詳細的討論。  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>使用 WSDL 工具加入 Proxy  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 包含 Web 服務描述語言工具 (Wsdl.exe)，這可讓您在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開發環境中產生要使用的 Web 服務 Proxy。 最常見的方式以支援 Web 服務的語言建立用戶端 proxy (目前 C# 和[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 是使用 WSDL 工具。  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 包含 Web 服務描述語言工具 (Wsdl.exe)，這可讓您在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開發環境中產生要使用的 Web 服務 Proxy。 使用支援 Web 服務的語言 (目前 C# 與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 來建立用戶端 Proxy 的最常見方式是使用 WSDL 工具。  
   
- **若要將 proxy 類別加入您專案中使用 Wsdl.exe**  
+ **使用 Wsdl.exe 將 Proxy 類別新增至專案**  
   
 1.  從命令提示，使用 Wsdl.exe 來建立 Proxy 類別，(至少) 將 URL 指定為報表伺服器 Web 服務。  
   
@@ -76,15 +74,15 @@ ReportingService2010 service = new ReportingService2010();
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>使用 Visual Studio 中的 Web 參考來加入 Proxy  
  Web 參考可讓專案取用一個或多個 Web 服務。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 可讓使用者遵循一些簡單的步驟，將 Web 服務參考加入專案中。  
   
- **若要加入 Web 參考加入專案**  
+ **將 Web 參考新增至專案**  
   
-1.  在**方案總管 中**，選取將取用 Web 服務的專案。  
+1.  在**方案總管**中，選取將取用 Web 服務的專案。  
   
-2.  在**專案**功能表上，按一下 **加入 Web 參考**。  
+2.  在 [專案] 功能表上，按一下 [新增 Web 參考]。  
   
-     **加入 Web 參考**對話方塊隨即開啟。  
+     [新增 Web 參考] 對話方塊隨即開啟。  
   
-3.  在**URL**欄位中，輸入報表伺服器 Web 服務的完整路徑。  
+3.  在 [URL] 欄位中，輸入報表伺服器 Web 服務的完整路徑。  
   
      報表伺服器 Web 服務的報表執行端點之簡化的 URL，可能如下所示：  
   
@@ -92,24 +90,24 @@ ReportingService2010 service = new ReportingService2010();
     http://<Server Name>/reportserver/reportexecution2005.asmx  
     ```  
   
-     這個 URL 包含部署報表伺服器 Web 服務的網域、包含服務的資料夾名稱，以及服務的探索檔名稱。 如需不同 URL 元素的完整說明，請參閱[存取 SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)。  
+     這個 URL 包含部署報表伺服器 Web 服務的網域、包含服務的資料夾名稱，以及服務的探索檔名稱。 如需不同 URL 項目的完整描述，請參閱[存取 SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)。  
   
      Web 服務提供的方法與屬性之描述會出現在左邊的 [瀏覽器] 窗格中。  
   
     > [!NOTE]  
-    >  如需與報表伺服器 Web 服務相關聯的項目，請參閱[報表伺服器 Web 服務方法](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)。  
+    >  如需與報表伺服器 Web 服務建立關聯之項目的詳細資訊，請參閱[報表伺服器 Web 服務方法](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)。  
   
 4.  請確認您的專案可以使用報表伺服器 Web 服務，而且您有適當的權限可以存取報表伺服器。  
   
-5.  在**Web 參考名稱**欄位中，輸入您要使用的名稱在您的程式碼，以程式設計方式存取報表伺服器 Web 服務。  
+5.  在 [Web 參考名稱] 欄位中，輸入在程式碼中將以程式設計方式存取報表伺服器 Web 服務所使用的名稱。  
   
-6.  選取**加入參考**按鈕，以建立 Web 服務應用程式中的參考。  
+6.  選取 [新增參考] 按鈕，在應用程式中建立對 Web 服務的參考。  
   
-     新的參考會出現在**方案總管 中**中所指定名稱的 Web 參考節點下，使用中的專案， **Web 參考名稱**欄位。  
+     [Web 參考名稱] 欄位中所指定名稱的新參考，將出現於**方案總管**中使用中專案的 [Web 參考] 節點之下。  
   
-7.  在**方案總管 中**，展開 Web 參考 資料夾，請注意，可用於您的專案中的項目 Web 參考類別的命名空間。  
+7.  在**方案總管**中，展開 [Web 參考] 資料夾，以寫下在專案中項目的可用 Web 參考類別之命名空間。  
   
-     加入 Web 參考至您的專案之後，相關聯的檔案會顯示在的 Web 參考 資料夾內的資料夾**方案總管 中**。  
+     在將 Web 參考新增專案之後，會在**方案總管**的 [Web 參考] 資料夾的某個資料夾中顯示相關聯的檔案。  
   
  在加入 Web 參考之後，請使用下列語法建立 Proxy 類別的執行個體。  
   
@@ -126,7 +124,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```  
   
- 您也可以加入**使用**(**匯入**中[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 指示詞加入報表伺服器 Web 服務參考。 如果您使用這個指示詞，就不需要完全符合命名空間的類型。 若要這樣做，請將下列程式碼加入檔案中：  
+ 您也可以將 **using** (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為**匯入**) 指示詞新增報表伺服器 Web 服務參考。 如果您使用這個指示詞，就不需要完全符合命名空間的類型。 若要這樣做，請將下列程式碼加入檔案中：  
   
 ```vb  
 Import myNamespace.myReferenceName  
@@ -138,8 +136,7 @@ using myNamespace.myReferenceName;
   
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器 Web 服務](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [使用 Web 服務和.NET Framework 建置應用程式](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [技術參考 &#40;SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [使用 Web 服務和 .NET Framework 建置應用程式](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [技術參考 &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

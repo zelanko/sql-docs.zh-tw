@@ -1,5 +1,5 @@
 ---
-title: "資料集欄位集合參考 （報表產生器及 SSRS） |Microsoft 文件"
+title: "資料集 Fields 集合參考 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d9c1c724e1b097e842975de2e8095a34fbbbb2d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>內建集合的資料集欄位集合參考 （報表產生器）
+# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>內建集合 - 資料集 Fields 集合參考 (報表產生器)
   報表中的每一個資料集都包含一個 Fields 集合。 Fields 集合是資料集查詢所指定的欄位加上您建立之任何其他導出欄位的集合。 當您建立資料集之後，欄位集合會出現在 **[報表資料]** 窗格中。  
   
- 運算式中的簡單欄位參考會在設計介面上顯示為簡單運算式。 例如，當您將 `Sales` 欄位從 [報表資料] 窗格拖曳到設計介面上的資料表資料格時，就會顯示 `[Sales]` 。 這代表在文字方塊 Value 屬性上設定的基礎運算式 `=Fields!Sales.Value` 。 當報表執行時，報表處理器會評估此運算式，並將資料來源中的實際資料顯示在資料表資料格內的文字方塊中。 如需詳細資訊，請參閱 [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) (運算式 (報表產生器及 SSRS)) 和 [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md) (資料集 Fields 集合 (報表產生器及 SSRS))。  
+ 運算式中的簡單欄位參考會在設計介面上顯示為簡單運算式。 例如，當您將 `Sales` 欄位從 [報表資料] 窗格拖曳到設計介面上的資料表資料格時，就會顯示 `[Sales]` 。 這代表在文字方塊 Value 屬性上設定的基礎運算式 `=Fields!Sales.Value` 。 當報表執行時，報表處理器會評估此運算式，並將資料來源中的實際資料顯示在資料表資料格內的文字方塊中。 如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) 和[資料集 Fields 集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="displaying-the-field-collection-for-a-dataset"></a>顯示資料集的欄位集合  
  若要顯示欄位集合的個別值，請將每一個欄位拖曳到資料表詳細資料列，並執行報表。 資料表之詳細資料列或清單資料區中的參考會顯示資料集中每一個資料列的值。  
   
- 若要顯示欄位的摘要值，請將每一個數值欄位拖曳到矩陣的資料區。 總計資料列的預設彙總函式為 Sum，例如 `=Sum(Fields!Sales.Value)`。 您可以變更預設函數，以便能夠計算不同的總計。 如需詳細資訊，請參閱[彙總函式參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 若要顯示欄位的摘要值，請將每一個數值欄位拖曳到矩陣的資料區。 總計資料列的預設彙總函式為 Sum，例如 `=Sum(Fields!Sales.Value)`。 您可以變更預設函數，以便能夠計算不同的總計。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
  若要將欄位集合的摘要值直接顯示在設計介面上的文字方塊中 (不屬於資料區的一部分)，您必須將資料集名稱指定為彙總函式的範圍。 例如，如果是名為 `SalesData`的資料集，下列運算式會針對 `Sales`: `=Sum(Fields!Sales,"SalesData")`欄位指定所有值的總計。  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>在執行階段偵測動態查詢的遺漏欄位  
- Fields 集合內的項目預設會有兩個屬性：Value 和 IsMissing。 IsMissing p 屬性會指出在設計階段針對資料集所定義的欄位是否包含在執行階段擷取的欄位中。 例如，您的查詢可能會呼叫預存程序的結果集隨著輸入參數，或您的查詢可能`SELECT * FROM` *\<資料表 >*變更資料表定義。  
+ Fields 集合內的項目預設會有兩個屬性：Value 和 IsMissing。 IsMissing p 屬性會指出在設計階段針對資料集所定義的欄位是否包含在執行階段擷取的欄位中。 例如，您的查詢可能會呼叫預存程序 (其中的結果集會因為輸入參數而不同)，或者您的查詢可能會是 `SELECT * FROM` \<資料表> (變更資料表定義的地方)。  
   
 > [!NOTE]  
 >  IsMissing 會偵測設計階段與執行階段之間對於任何資料來源類型的資料集結構描述變更。 IsMissing 不能用來偵測多維度 Cube 中的空白成員，而且不會與 **EMPTY** 和 **NON EMPTY**的 MDX 查詢語言概念產生關聯。  
@@ -92,13 +91,12 @@ End Function
  此文字方塊會顯示欄位值或是您指定的文字。  
   
 ### <a name="using-extended-field-properties"></a>使用擴充欄位屬性  
- 擴充欄位屬性是資料處理延伸模組在欄位上所定義的其他屬性，此模組是由資料集的資料來源類型所決定。 擴充欄位屬性是預先定義的，或是資料來源類型所特有的。 如需詳細資訊，請參閱 [Extended Field Properties for an Analysis Services Database &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md) (Analysis Services 資料庫的擴充欄位屬性 (SSRS))。  
+ 擴充欄位屬性是資料處理延伸模組在欄位上所定義的其他屬性，此模組是由資料集的資料來源類型所決定。 擴充欄位屬性是預先定義的，或是資料來源類型所特有的。 如需詳細資訊，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
  如果您指定了該欄位不支援的屬性，則運算式會評估為 **null** (**中為** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])。 如果資料提供者不支援擴充欄位屬性，或是執行查詢時找不到欄位，則當屬性類型為 **String** 和**Object** 時，此屬性值會是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null **(在** 中則為 **Nothing**)；當屬性類型為 **Integer**時，此屬性值為零 (0)。 資料處理延伸模組可藉由最佳化包含這個語法的查詢來利用預先定義的屬性。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
-

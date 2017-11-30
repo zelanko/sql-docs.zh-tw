@@ -1,27 +1,24 @@
 ---
-title: "準備 Reporting Services 行動報表的 Excel 資料 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "準備 Reporting Services 行動報表的 Excel 資料 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0403dcd2f622f6bd6c8cbc88d12a4f8a955d8605
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>準備 Reporting Services 行動報表的 Excel 資料
   
@@ -83,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-在您轉換資料格後，您必須將它們格式化為日期，方法是選取它們或整個資料行 > **操作**功能表 > [儲存格格式] > [類別] 清單中的 [日期]。 您也可以使用 Excel 資料剖析精靈將文字資料格轉換為正確格式的日期。  
+在您轉換資料格後，您必須將它們格式化為日期，方法是選取它們或整個資料行 > **操作**功能表 > [儲存格格式] > [類別目錄] 清單中的 [日期]。 您也可以使用 Excel 資料剖析精靈將文字資料格轉換為正確格式的日期。  
   
 ## <a name="unsupported"></a>不支援  
   
@@ -92,7 +89,7 @@ ms.lasthandoff: 08/09/2017
 Excel 工作表中的自訂物件，包括樞紐分析表、視覺效果和影像等，均不會匯入至 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
   
 ### <a name="see-also"></a>另請參閱  
-- [準備 Reporting Services 行動報表的資料](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
+- [Prepare data for Reporting Services mobile reports (準備 Reporting Services 行動報表的資料)](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  在 [iPad app 中檢視 SQL Server 行動報表和 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
 -  請參閱 [在 iPhone 應用程式中檢視 SQL Server 行動報表和 KPI (iOS 版 Power BI)](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (iOS 版 Power BI)  
@@ -103,5 +100,4 @@ Excel 工作表中的自訂物件，包括樞紐分析表、視覺效果和影�
   
   
   
-
 

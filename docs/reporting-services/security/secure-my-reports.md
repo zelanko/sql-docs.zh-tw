@@ -1,5 +1,5 @@
 ---
-title: "保護我的報表 |Microsoft 文件"
+title: "保護我的報表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,30 +17,29 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 162f43fc4f81c228d90839c75d1959d71eff9322
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8c612e899a4ec7be7879d16f03f2a9528addb316
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-my-reports"></a>保護我的報表
   [我的報表] 功能會提供用於報表之使用者管理的工作空間。 為達成其目的，[我的報表] 資料夾的權限，應較一般用途的其他資料夾為寬鬆。 使用者如果只有檢視及執行其他資料夾中之報表的權限，則需要一組擴充的權限來管理其 [我的報表] 資料夾和擁有的內容。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供此用途的特殊角色指派及角色定義。  
   
 > [!NOTE]  
->  只有在報表管理員中，才能使用 [我的報表]。 它不適用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+>  只有在報表管理員中，才能使用 [我的報表]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中無法使用它。  
   
 ## <a name="role-assignment-for-my-reports"></a>[我的報表] 的角色指派  
  [我的報表] 的角色指派有預先設定的元素，而且是為啟用 [我的報表] 資料夾的每一個使用者自動建立的。 讓報表伺服器自動指派安全性，對於廣泛使用 [我的報表] 的組織特別有用，因為管理員不必啟用每個 [我的報表] 使用者的存取權。  
   
  **我的報表** 角色指派是由下列元素組成：  
   
--   使用者的我的報表] 資料夾，位於 [使用者資料夾\\*\<使用者名稱 >*\My Reports 資料夾。  
+-   使用者的 [我的報表] 資料夾，位於 Users Folders\\\<使用者名稱>\My Reports 資料夾內。  
   
 -   使用者帳戶，會判斷何時啟用 [我的報表] 資料夾。 資料夾是當使用者按一下報表管理員的 [我的報表] 資料夾，或者從報表設計師發行報表至 [我的報表] 資料夾時啟用。 此資料夾也會在使用者要求 [我的報表] 連結的屬性時啟用。  
   
@@ -60,10 +59,9 @@ ms.lasthandoff: 08/09/2017
   
  當您停用 [我的報表] 時，會從報表管理員移除 [我的報表] 資料夾的連結。 支援 [我的報表] 的基礎資料夾結構 (亦即，[使用者資料夾] 資料夾和子資料夾) 仍然可以使用，而且若使用者知道資料夾路徑，也可以存取。 從 **我的報表** 角色移除工作，可確保禁止存取。  
   
-## <a name="see-also"></a>請參閱＜  
- [保護報表和資源](../../reporting-services/security/secure-reports-and-resources.md)   
- [安全的資料夾](../../reporting-services/security/secure-folders.md)   
- [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)   
+ [保護資料夾的安全](../../reporting-services/security/secure-folders.md)   
+ [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

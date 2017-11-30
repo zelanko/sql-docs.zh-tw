@@ -1,28 +1,26 @@
 ---
-title: "加入 Reporting Services 行動報表的導覽器 |Microsoft 文件"
+title: "將導覽器新增至 Reporting Services 行動報表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 712a4e62ebee6d175b5e9945d74a06d32f2cb324
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-navigators-to-reporting-services-mobile-reports"></a>加入 Reporting Services 行動報表的導覽器
+# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中，您加入 *「導覽器」* (Navigator)，以依時間或依選取項目來篩選視覺效果中的資料。 
 
 導覽器與 Power BI 和 Excel 樞紐分析表中的交叉分析篩選器類似，但導覽器也有一些特有的特性。
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 正如其名，您可以使用時間導覽器，來篩選依時間範圍所繫結的資料範圍。   
   
 ![SSMRP_TimeNav](../../reporting-services/mobile-reports/media/ssmrp-timenav.png)  
-*在該時間範圍的預設設定四個折線圖左邊。在右側的折線圖是篩選器。*  
+*[時間範圍預設] 的左邊會設定四個折線圖。右邊的折線圖是篩選。*  
   
 當您在預覽或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 入口網站中檢視報表時，請拖曳時間導覽器中的箭號來篩選報表的其餘部分。  
   
@@ -59,13 +57,13 @@ ms.lasthandoff: 08/09/2017
 
 1. 從 [配置] 索引標籤中，將 [選擇清單] 拖曳至設計介面，並調整為您想要的大小。
 
-2. 選取 [資料] 索引標籤，然後在 [資料屬性] 窗格的 [索引鍵] 下，選取將是篩選的資料表和資料行。 
+2. 選取 [資料] 索引標籤，然後在 [資料屬性] 窗格的 [索引鍵] 下，選取將為篩選的資料表和資料行。 
 
 3. 在 [標籤] 下，選取具有要顯示之標籤的資料行。 索引鍵資料行與標籤資料行可相同。  
   
    若為階層樹狀目錄資料，選取父索引鍵資料行。  
   
-4. 設定資料屬性之後，請在 [Tables Filtered by Selection List (選擇清單所篩選的資料表)] 下選取要篩選的資料表以及要作為篩選依據的資料行。 此資料行需要比對選擇清單之索引鍵資料行中的值。 
+4. 設定資料屬性之後，請在 [Tables Filtered by Selection List ] (選擇清單所篩選的資料表) 下選取要篩選的資料表以及要作為篩選依據的資料行。 此資料行需要比對選擇清單之索引鍵資料行中的值。 
 
 針對行動報表中您要選擇清單篩選的每個視覺效果︰
 
@@ -85,11 +83,11 @@ ms.lasthandoff: 08/09/2017
 
 1. 從 [配置] 索引標籤中，將 [計分卡方格] 拖曳至設計介面，並調整為您想要的大小。
 
-2. 選取 [資料] 索引標籤，然後在 [資料屬性] 窗格的 [索引鍵] 下，選取將是篩選的資料表和資料行。 
+2. 選取 [資料] 索引標籤，然後在 [資料屬性] 窗格的 [索引鍵] 下，選取將為篩選的資料表和資料行。 
 
 3. 在 [標籤] 下，選取具有要顯示之標籤的資料行。 索引鍵資料行與標籤資料行可相同。  
   
-4. 若要加入分數指標，請在 [資料行] 窗格中選取 [新增分數]。   
+4. 若要新增分數指標，請在 [資料行] 窗格中選取 [新增分數]。   
   
 5. 命名分數指標，然後選取 [選項] 來設定您要針對資料方格中的指標所設定的相同屬性：  
   
@@ -98,13 +96,13 @@ ms.lasthandoff: 08/09/2017
    * 比較欄位
    * 值方向
   
-6. 若要加入值指標，請在 [資料行] 窗格中選取 [新增值]。
+6. 若要新增值指標，請在 [資料行] 窗格中選取 [新增值]。
 
 7. 視需要為值指標命名，從資料表中選擇其來源資料行，然後選取格式化的方式。  
 
    ![mobile-report-scorecard-grid-data-properties](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
 
-8. 設定資料屬性之後，請在 [Tables Filtered by Selection List (選擇清單所篩選的資料表)] 下選取要篩選的資料表以及要作為篩選依據的資料行。 此資料行需要比對選擇清單之索引鍵資料行中的值。 
+8. 設定資料屬性之後，請在 [Tables Filtered by Selection List ] (選擇清單所篩選的資料表) 下選取要篩選的資料表以及要作為篩選依據的資料行。 此資料行需要比對選擇清單之索引鍵資料行中的值。 
 
 如果您在預覽或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 入口網站中檢視行動報表，並且在計分卡方格中選取值，則會篩選行動報表中的其他視覺效果。
 
@@ -132,4 +130,3 @@ ms.lasthandoff: 08/09/2017
 * [Reporting Services 行動報表中的視覺效果](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Reporting Services 行動報表中的量測計](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 * [Reporting Services 行動報表中的資料格](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)  
-

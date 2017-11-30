@@ -1,5 +1,5 @@
 ---
-title: "識別執行狀態 |Microsoft 文件"
+title: "識別執行狀態 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,32 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - session states [Reporting Services]
 - lifetimes [Reporting Services]
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 4e7dcd26be988380e17041134e0ff511ed3bed83
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 83cdd4165f745bd6f2e42e65c8638328c1d41bd3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="identifying-execution-state"></a>識別執行狀態
   超文字傳輸協定 (HTTP) 是一種無連接且沒有狀態 (Stateless) 的通訊協定，也就是說它不會自動指出不同的要求是否全都來自相同的用戶端，也不會自動指出某個特定瀏覽器執行個體是否仍在主動檢視網頁或網站。 工作階段會建立邏輯連接以透過 HTTP 維護伺服器與用戶端之間的狀態。 與特定工作階段相關的使用者特定資訊又稱為工作階段狀態。  
   
  工作階段管理需要將 HTTP 要求與從相同工作階段產生的其他舊要求相互關聯。 若沒有工作階段管理，由於 HTTP 通訊協定的無連接與無狀態的本質，這些要求會顯得與報表伺服器 Web 服務不相關。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 並不會公開工作階段狀態的整體概念，例如由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 所公開。 不過，當執行報表時，報表伺服器會維護狀態方法之間呼叫的形式**執行**。 執行可讓使用者以數種方式和報表互動，包括從報表伺服器載入報表、設定報表的認證與參數，以及轉譯報表。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 並不會公開工作階段狀態的整體概念，例如由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 所公開。 不過，當執行報表時，報表伺服器會以**執行**的形式在方法呼叫之間維護狀態。 執行可讓使用者以數種方式和報表互動，包括從報表伺服器載入報表、設定報表的認證與參數，以及轉譯報表。  
   
  在與報表伺服器進行通訊時，用戶端會使用執行來管理報表檢視以及對報表中其他頁面的使用者導覽，並顯示或是隱藏報表的區段。 用戶端應用程式正在執行的每個報表，會有唯一的執行。  
   
@@ -67,8 +65,7 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>另請參閱  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [技術參考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [技術參考 &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [使用 Reporting Services SOAP 標頭](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
-

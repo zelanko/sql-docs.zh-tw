@@ -1,5 +1,5 @@
 ---
-title: "設定及管理 SQL Server Reporting Services 報表伺服器 |Microsoft 文件"
+title: "設定和管理 SQL Server Reporting Services 報表伺服器 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,13 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: b521a0a2198d74c8766f18fb8d7a199b25005efe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: fe898a9401340f80884fa15f3ea1ce45108fbbc6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>設定及管理 SQL Server Reporting Services 報表伺服器
+# <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>設定和管理 SQL Server Reporting Services 報表伺服器
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -30,9 +29,9 @@ ms.lasthandoff: 10/06/2017
 SQL Server Reporting Services 是一種伺服器報表平台，提供齊全的現成工具與服務，協助您建立、部署和管理您組織的報表，並提供可讓您擴充和自訂報表功能的程式設計功能。 您可以將報表環境與 SharePoint 產品整合，以體驗使用 SharePoint 網站所提供之共同作業環境的優點。
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
-使用下列各節可協助您了解概念、 部署案例、 程序和多個與 SharePoint 產品或技術整合 Reporting Services 環境：  
+使用下列章節可幫助您更佳了解概念、部署案例、程序等等，讓您將 Reporting Services 環境與 SharePoint 產品或技術整合：  
   
 -   SharePoint 文件庫中的功能表選項  
   
@@ -66,7 +65,6 @@ SQL Server Reporting Services 是一種伺服器報表平台，提供齊全的�
   
 -   [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- 一般 Reporting Services 的詳細資訊，請參閱[Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。 如需有關其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件、工具和資源的詳細資訊，請參閱《 [SQL Server 線上叢書](../../sql-server/sql-server-technical-documentation.md)》。  
+ 如需更多的 Reporting Services 一般資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的 [Reporting Service](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)。 如需有關其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件、工具和資源的詳細資訊，請參閱《 [SQL Server 線上叢書](../../sql-server/sql-server-technical-documentation.md)》。  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

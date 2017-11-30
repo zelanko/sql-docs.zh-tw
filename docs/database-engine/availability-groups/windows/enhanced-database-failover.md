@@ -3,10 +3,9 @@ title: "將增強資料庫容錯移轉新增至可用性群組 (SQL Server) | Mi
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
-ms.reviewer: 
+ms.reviewer: mikeray
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +17,12 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cd058f11f860682754f9dfe06830fafb087b1fe7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
-ms.openlocfilehash: 6faff6e4464f21503132c72034535d11b8c3a0eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>將增強資料庫容錯移轉新增至可用性群組 (SQL Server)
 
 在 SQL Server 2012 和 2014 中，如果參與主要複本上可用性群組的資料庫無法寫入交易，就不會觸發容錯移轉，即使同步處理並設定複本以進行自動容錯移轉也是一樣。
@@ -44,7 +41,7 @@ SQL Server 2016 引進名為「增強資料庫容錯移轉」的新選擇性行�
 
 可用性群組設定於執行個體 A 與執行個體 B 之間，包含兩個資料庫：DB1 和 DB2。 可用性模式設定為具有自動容錯移轉模式的同步認可，並啟用增強資料庫容錯移轉。 遺失包含 DB2 資料和交易記錄檔之磁碟的存取權。 偵測到問題時，可用性群組會自動容錯移轉至執行個體 B。
 
-## <a name="configuring-and-viewing-the-enhanced-database-failover-option"></a>設定和檢視增強資料庫容錯移轉選項
+## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>設定和檢視增強資料庫容錯移轉選項
 
 增強資料庫容錯移轉可以使用 SQL Server Management Studio 或 Transact-SQL 進行設定。 PowerShell Cmdlet 目前沒有這項功能。 預設會停用增強資料庫容錯移轉。
 
@@ -63,17 +60,18 @@ SQL Server 2016 引進名為「增強資料庫容錯移轉」的新選擇性行�
 ### <a name="transact-sql"></a>Transact-SQL
 
 若要在建立可用性群組期間設定增強資料庫容錯移轉行為，DB_FAILOVER 必須設定為 ON，如下所示：
-```
+
+```SQL
 CREATE AVAILABILITY GROUP [AGNAME]
 WITH ( DB_FAILOVER = ON)
 ...
 ```
 若要在設定可用性群組之後新增此行為，請使用 ALTER AVAILABILITY GROUP 命令：
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = ON)
 ```
 若要停用此行為，請發出下列 ALTER AVAILABILITY GROUP 命令：
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>動態管理檢視
@@ -88,5 +86,4 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 - [使用新增可用性群組對話方塊 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [使用 Transact-SQL 建立可用性群組](create-an-availability-group-transact-sql.md)
-
 

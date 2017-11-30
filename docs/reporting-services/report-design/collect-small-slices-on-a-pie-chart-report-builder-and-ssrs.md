@@ -1,5 +1,5 @@
 ---
-title: "圓形圖 （報表產生器及 SSRS） 上收集小扇區 |Microsoft 文件"
+title: "收集圓形圖上的小配量 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e25526de7b4ae194d0aa510c12a9a995208c035a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a791e5bae17ab1259fb664d065a9a13fcde21aa1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>收集圓形圖上的小配量 (報表產生器及 SSRS)
-使用太多的配量的圓形圖看起來可能很雜亂。 了解如何在圓形圖中的許多小扇區收集成一個中的單一扇區[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]分頁報表。
+配量太多的圓形圖看起來很雜亂。 了解在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中將圓形圖中的許多小配量收集成一個單一配量。
  
  若要將小扇區收集成一個扇區，請先決定收集小扇區的臨界值是以圓形圖的百分比或是以固定值表示。 
  
- [教學課程： 將圓形圖加入至報表 （報表產生器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)會引導您完成小扇區收集成單一扇區，如果您想要先嘗試這以範例資料。
+ 如果您想要先使用範例資料嘗試此功能，[教學課程：將圓形圖新增至報表 (報表產生器)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) 會引導您將許多小配量收集成單一配量。
  
  ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/09/2017
          將 CollectedThreshold 屬性設定為 **10**。  
   
         > [!NOTE]  
-        >  如果您將 [collectedstyle] 設定為**SingleSlice**，CollectedThreshold 大於值**100**，和以 CollectedThresholdUsePercent **True**，圖表會擲回例外狀況，因為它無法計算百分比。 若要解決此問題，設定為值 CollectedThreshold 小於**100**。  
+        >  如果將 CollectedStyle 設定為 **SingleSlice**、將 CollectedThreshold 設定為大於 **100** 的值，且將 CollectedThresholdUsePercent 設定為 **True**，則圖表會擲回例外狀況；因為它無法計算百分比。 若要解決此問題，請將 CollectedThreshold 設定為小於 **100** 的值。  
   
     -   **依資料值。** 例如，將圓形圖上小於 5000 的任何扇區收集成單一扇區：  
   
@@ -87,10 +86,9 @@ ms.lasthandoff: 08/09/2017
 >  您無法格式化次要圓形圖。 因為這個緣故，所以我們強烈建議您在收集圓形圖扇區時使用第一種方法。  
   
 ## <a name="see-also"></a>另請參閱  
-* [教學課程： 將圓形圖加入至報表 （報表產生器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [教學課程：將圓形圖加入至報表 (報表產生器)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
 *  [圓形圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [在圓形圖外部顯示資料點標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
 *  [在圓形圖上顯示百分比值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)     
   
-

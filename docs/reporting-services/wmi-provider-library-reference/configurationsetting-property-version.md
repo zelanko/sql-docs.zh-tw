@@ -1,5 +1,5 @@
 ---
-title: "Version 屬性 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文件"
+title: "Version 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Version property
+helpviewer_keywords: Version property
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 0ad9b07cd6347484935d9585ce198a37a35cfd57
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 58131b4a15e3d221ecef2a9c0b230e2b52449740
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---version"></a>ConfigurationSetting 屬性-版本
+# <a name="configurationsetting-property---version"></a>ConfigurationSetting 屬性 - Version
   以 Major.Minor.Build.Revision 的格式傳回報表伺服器的版本。 唯讀。  
   
 ## <a name="syntax"></a>語法  
@@ -47,8 +45,7 @@ public string Version;
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [MSReportServer_Instance 成員](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   
-

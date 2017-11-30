@@ -1,27 +1,25 @@
 ---
-title: "教學課程： 將 KPI 加入至報表 （報表產生器） |Microsoft 文件"
+title: "教學課程：將 KPI 新增至報表 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 0ba9911d41a851ed51150d83e96b61c2e7ec2c2f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 加入至報表 (報表產生器)
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教學課程中，您會將關鍵效能指標 (KPI) 新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表。  
@@ -37,7 +35,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 完成本教學課程的估計時間：15 分鐘。  
   
-## <a name="requirements"></a>요구 사항  
+## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Table"></a>1.從資料表或矩陣精靈建立資料表報表和資料集  
@@ -59,7 +57,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 5.  按一下 **[下一步]**。  
   
-6.  在**選擇資料來源的連接**頁面上，選取現有的資料來源或瀏覽至報表伺服器並選取資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需詳細資訊，請參閱[教學課程： 建立基本資料表報表 &#40;報表產生器 &#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  在 [選擇與資料來源的連線] 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需詳細資訊，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  按一下 **[下一步]**。  
   
@@ -103,7 +101,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
        'SLR Camera' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-10. 在查詢設計工具的工具列上，按一下 [執行]\(**!**)。
+10. 在查詢設計工具的工具列上，按一下 [執行](**!**)。
 
 11. 按一下 **[下一步]**。  
   
@@ -112,13 +110,13 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 ### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>將資料組織成群組，並選擇配置 
   
-1.  在 [排列欄位] 頁面上，拖曳產品**值**。  
+1.  在 [排列欄位] 頁面上，將 [Product] 拖曳至 [值]。  
   
 2.  將 [Quantity] 拖曳至 [值] 並放置在 [Product] 之下。  
   
     [Quantity] 是使用 Sum 函數摘要的，這個函數是摘要數值欄位的預設函數。  
   
-3.  將銷售拖曳到**值**，並將 [Quantity] 之下。  
+3.  將 [Sales] 拖曳至 [值] 並放置在 [Quantity] 之下。  
   
     步驟 1、2 和 3 會指定要在資料表中顯示的資料。  
   
@@ -132,7 +130,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
     當您執行報表時，資料表會顯示每個日期、每個日期的所有訂單，以及每個訂單的所有產品、數量和銷售總額。  
   
-7.  在 選擇配置頁面的 **選項**，確認**顯示小計和總計**已選取。  
+7.  在 [選擇配置] 頁面的 [選項] 下方，確定已選取 [顯示小計和總計]。  
   
 8.  驗證已選取 [區塊式，小計位於下方]。  
   
@@ -157,15 +155,15 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 ### <a name="format-dates-and-currency"></a>格式化日期和貨幣
 現在，我們來加寬資料行，並設定日期和貨幣格式。
 
-1. 按一下**設計**来回到 [設計] 檢視中。
+1. 按一下 [設計]，返回設計檢視。
 
 2. 產品名稱應該可以使用更多空間。 若要讓 Product 資料行更寬，請選取整個資料表，然後拖曳 Product 資料行右上角的控點。
 
 3. 按下 Ctrl 鍵，然後選取包含 [Sum(Sales)] 的 4 個資料格。
 
-4. 在**首頁** 索引標籤 >**數目** > **貨幣**。 這些資料格就會變更為顯示格式化貨幣。
+4. 在 [主資料夾] 索引標籤 > [數字] > [貨幣] 上。 這些資料格就會變更為顯示格式化貨幣。
 
-   如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [$12,345.00]。 若未看見範例貨幣值中**數字**群組中，按一下**預留位置樣式** > **範例值**。
+   如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [$12,345.00]。 如果未顯示範例貨幣值，請按一下 [數字] 群組中的 [預留位置樣式] > [範例值]。
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
 
@@ -173,7 +171,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 
 6. 按一下包含 [SalesDate] 的資料格。
 
-6. 在**數目**群組 >**日期**。
+6. 在 [數字] 群組 > [日期] 中。
 
    資料格就會顯示範例日期 [1/31/2000]。 
 
@@ -186,13 +184,13 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 ### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>若要使用背景色彩來顯示 KPI 的目前狀態  
   
-1.  在資料表中，以滑鼠右鍵按一下第二個`[Sum(Sales)]`儲存格 （的小計資料列會顯示子類別銷售額），然後按一下**文字方塊內容**。 
+1.  在資料表中，以滑鼠右鍵按一下第二個 `[Sum(Sales)]` 資料格 (顯示子類別銷售額的小計資料列)，然後按一下 [文字方塊屬性]。 
 
-    請確定您已經選取資料格，而不是在資料格中，若要檢視的文字**文字方塊內容**。 
+    請確定您已選取該資料格 (而不是資料格中的文字)，才能檢視 [文字方塊屬性]。 
     
     ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  在**填滿**索引標籤上，按一下  **fx**旁邊**填滿色彩**並輸入下列運算式中的**設定運算式對象： BackgroundColor**欄位：  
+2.  在 [填滿] 索引標籤上，按一下 [填滿色彩] 旁的 [fx] 按鈕，然後在 [設定運算式對象: BackgroundColor] 欄位中輸入下列運算式：  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -213,15 +211,15 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 1.  切換回設計檢視。  
   
-2.  在資料表中，以滑鼠右鍵按一下 Sales 資料行的資料行控制代碼 >**插入資料行** > **右邊**。 新的資料行就會加入至此資料表。  
+2.  在資料表中，以滑鼠右鍵按一下 [Sales] 資料行的資料行控點 > [插入資料行] > [右方]。 新的資料行就會加入至此資料表。  
 
     ![report-builder-kpi-insert-column](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  在資料行標題中，輸入 **線性 KPI** 。  
   
-4.  在**插入** 索引標籤 >**資料視覺效果** > **量測計**，然後按一下資料表外部的設計介面。   
+4.  在 [插入] 索引標籤 > [資料視覺效果] > [量測計]，然後按一下資料表外部的設計介面。   
   
-5.  在**選取量測計類型** 對話方塊中，選取第一個線性量測計類型，**水平**。  
+5.  在 [選取量測計類型] 對話方塊中，選取第一個線性量測計類型 [水平]。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -229,24 +227,24 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 7.  從 [報表資料] 窗格，將 `Sales` 欄位拖曳到量測計。 [量測計資料] 窗格隨即開啟。  
   
-    當您卸除`Sales`欄位拖曳到量測計中，移至**值**清單，並使用內建的 Sum 函數彙總資料。  
+    當您將 `Sales` 欄位放置到量測計上時，該欄位會移至 [值] 清單，並使用內建的 Sum 函式進行彙總。  
    
     ![report-builder-kpi-drag-sales-field](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
    
-9. 在**量測計資料** 窗格中，按一下箭號旁**LinearPointer1** > **指標屬性**。  
+9. 在 [量測計資料] 窗格中，按一下 [LinearPointer1] > [指標屬性] 旁的箭號。  
   
-10. 在**線性指標屬性**對話方塊 >**指標選項** 索引標籤 >**指標類型**，請確定**列**已選取。 
+10. 在 [線性指標屬性] 對話方塊 > [指標選項] 索引標籤 > [指標類型] 中，確定已選取 [橫條]。 
  
 11. 按一下 **[確定]**。  
   
-12. 以滑鼠右鍵按一下量測計標尺，然後按一下**標尺屬性**。  
+12. 以滑鼠右鍵按一下量測計中的標尺，然後按一下 [標尺屬性]。  
   
-13. 在**線性標尺屬性**對話方塊 >**一般**索引標籤上，設定**最大**設為 25000。  
+13. 在 [線性標尺屬性] 對話方塊 > [一般] 索引標籤中，將 [最大值] 設為 25000。  
 
     > [!NOTE]  
-    > 除了像是 25000 的常數，您可以使用運算式動態計算的值**最大**選項。 運算式會使用彙總功能進行彙總，看起來就類似於運算式 `=Max(Sum(Fields!Sales.value), "Tablix1")`。  
+    > 除了 25000 這類常數，您也可以使用運算式動態計算 [最大值] 選項的值。 運算式會使用彙總功能進行彙總，看起來就類似於運算式 `=Max(Sum(Fields!Sales.value), "Tablix1")`。  
 
-14. 在**標籤**索引標籤上，核取**隱藏標尺標籤**。
+14. 在 [標籤] 索引標籤上，核取 [隱藏標尺標籤]。
 
 15. 按一下 **[確定]**。
   
@@ -262,31 +260,31 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="Indicator"></a>5.使用指標顯示 KPI  
-指標是小型的簡單量測計，可一目了然資料值。 由於指標的尺寸小加上簡單明瞭，因此常用於資料表和矩陣。 如需詳細資訊，請參閱[指標 &#40;報表產生器及 SSRS &#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+指標是小型的簡單量測計，可一目了然資料值。 由於指標的尺寸小加上簡單明瞭，因此常用於資料表和矩陣。 如需詳細資訊，請參閱[指標 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>若要使用指標來顯示 KPI 的目前狀態  
   
 1.  切換至 [設計] 檢視。  
   
-2.  在資料表中，以滑鼠右鍵按一下您在上一個程序中加入的線性的 KPI 資料行的資料行控制代碼 >**插入資料行** > **右邊**。 新的資料行就會加入至此資料表。  
+2.  在資料表中，以滑鼠右鍵按一下您在上一個程序中新增之 [線性 KPI] 資料行的資料行控點 > [插入資料行] > [右方]。 新的資料行就會加入至此資料表。  
   
 3.  在資料行標題中輸入 **警示燈 KPI** 。  
   
 4.  按一下子類別小計的資料格 (位於您在上一個程序中新增的線性量測計旁邊)。  
   
-5.  在**插入** 索引標籤 >**資料視覺效果**> 按兩下**指標。**  
+5.  在 [插入] 索引標籤 > [資料視覺效果] > 按兩下 [指標]。  
   
-6.  在**選取指標類型**對話方塊的 **圖形**，選取第一個形狀類型**3 三交通號誌 （無框）**。  
+6.  在 [選取指標類型] 對話方塊的 [形狀] 下方，選取第一個形狀類型 [三交通號誌 (無框)]。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     即會將指標新增至新的「警示燈 KPI」資料行中的資料格。  
   
-8.  以滑鼠右鍵按一下指標，然後按一下**指標屬性**。  
+8.  以滑鼠右鍵按一下指標，然後按一下 [指標屬性]。  
   
-9. 在**值和狀態**索引標籤的**值**方塊中，選取**[sum （sales)]**。 請不要變更任何其他選項。  
+9. 在 [Values and States (值和狀態)] 索引標籤的 [值] 方塊中，選取 [Sum(Sales)]。 請不要變更任何其他選項。  
   
-    根據預設，資料同步處理會整個資料區域，而且您會看到值**Tablix1**，在報表中，資料表資料區域的名稱在**同步處理範圍**方塊。  
+    根據預設，整個資料區域會進行資料同步處理，而您會在 [同步處理範圍] 方塊中看到值 **Tablix1**，這是報表中的資料表資料區域的名稱。  
   
     在此報表中，您也可以變更子類別小計資料格中放置之指標的範圍，以同步處理 [SalesDate] 欄位。  
   
@@ -307,7 +305,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 2.  輸入 **產品銷售 KPI**，然後按一下文字方塊外部。  
   
-3.  （選擇性） 包含的文字方塊中以滑鼠右鍵按一下**產品銷售 KPI**，按一下 **文字方塊內容**，然後在 字型 索引標籤上選取不同的字型樣式、 大小和色彩。  
+3.  選擇性地以滑鼠右鍵按一下包含**產品銷售 KPI** 的文字方塊，並按一下 [文字方塊屬性]，然後在 [字型] 索引標籤上選取不同的字型樣式、大小和色彩。  
   
 4.  按一下 **[執行]** 預覽報表。  
   
@@ -324,7 +322,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
     「正在連接到報表伺服器」訊息隨即顯示。 連接完成時，您就會看見報表伺服器管理員指定為預設報表位置之報表資料夾的內容。  
   
-4.  在**名稱**，將預設名稱取代**產品銷售 KPI**。  
+4.  將 [名稱] 中的預設名稱取代為**產品銷售 KPI**。  
   
 5.  按一下 **[儲存]**。  
   
@@ -337,9 +335,9 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 2.  按一下 [桌面]、[我的文件] 或 [我的電腦]，然後瀏覽到您要儲存報表的資料夾。  
   
 > [!NOTE]  
-> 如果您沒有報表伺服器的存取權，請按一下**桌面**，**我的文件**，或**我的電腦**並將報表儲存到您的電腦。  
+> 如果您無法存取報表伺服器，請按一下 [桌面]、[我的文件] 或 [我的電腦]，然後將報表儲存到您的電腦。  
   
-1.  在**名稱**，將預設名稱取代**產品銷售 KPI**。  
+1.  將 [名稱] 中的預設名稱取代為**產品銷售 KPI**。  
   
 2.  按一下 **[儲存]**。  
   
@@ -352,5 +350,4 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 * [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)
 * [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 
