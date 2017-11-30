@@ -1,5 +1,5 @@
 ---
-title: "部署轉譯延伸模組 |Microsoft 文件"
+title: "部署轉譯延伸模組 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,27 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - deploying [Reporting Services], extensions
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 3fbab7c48a0d522519a9e7ada9cf9c8cb1d40c7b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 396fe5513bb713b1d3296a7edfaff386708de052
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploying-a-rendering-extension"></a>部署轉譯延伸模組
-  您所撰寫，並編譯之後您[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]報表轉譯延伸模組至[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]程式庫，您需要使其可供報表伺服器和報表設計師。 若要這樣做，請將延伸模組複製到適當的目錄，並將項目加入適當的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態檔。  
+  在您撰寫 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表轉譯延伸模組並將其編譯成 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程式庫之後，需要使其可供報表伺服器和報表設計師探索。 若要這樣做，請將延伸模組複製到適當的目錄，並將項目加入適當的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態檔。  
   
 ## <a name="configuration-file-rendering-extension-element"></a>組態檔轉譯延伸模組元素  
- 在將轉譯延伸模組編譯成 .DLL 之後，您就可以將項目加入至 rsreportserver.config 檔案。 根據預設，位置是 %ProgramFiles%\Microsoft SQL server\msrs10_50.<instancename>\reporting。\<執行個體名稱 > services\reportserver。 父項目是\<呈現 >。 Render 元素之下是代表每個轉譯延伸模組的 Extension 元素。 **Extension** 元素包含兩個屬性：Name 與 Type。  
+ 在將轉譯延伸模組編譯成 .DLL 之後，您就可以將項目加入至 rsreportserver.config 檔案。 預設位置為 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer。 父項目是 \<Render>。 Render 元素之下是代表每個轉譯延伸模組的 Extension 元素。 **Extension** 元素包含兩個屬性：Name 與 Type。  
   
  下表描述轉譯延伸模組之 **Extension** 元素的屬性：  
   
@@ -50,9 +48,9 @@ ms.lasthandoff: 08/12/2017
   
 ### <a name="to-deploy-the-assembly"></a>若要部署組件  
   
-1.  將組件從執行位置複製到您要在其上使用轉譯延伸模組之報表伺服器的 bin 目錄。 報表伺服器 Bin 目錄的預設位置是 %ProgramFiles%\Microsoft SQL server\msrs10_50.<instancename>\reporting。\<執行個體名稱 > services\reportserver\bin。  
+1.  將組件從執行位置複製到您要在其上使用轉譯延伸模組之報表伺服器的 bin 目錄。 報表伺服器 Bin 目錄的預設位置是 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer\Bin。  
   
-2.  在複製組件檔之後，開啟 rsreportserver.config 檔。 rsreportserver.config 檔也位於報表伺服器的 bin 目錄中。 您需要在延伸模組組件檔的組態檔中建立項目。 您可以開啟檔案所使用[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或簡單的文字編輯器。  
+2.  在複製組件檔之後，開啟 rsreportserver.config 檔。 rsreportserver.config 檔也位於報表伺服器的 bin 目錄中。 您需要在延伸模組組件檔的組態檔中建立項目。 您可以利用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或簡單的文字編輯器開啟此檔案。  
   
      如需詳細資訊，請參閱 [RsReportServer.config 組態檔](../../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 08/12/2017
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     **Name** 值是轉譯延伸模組的唯一名稱。 值**類型**是以逗號分隔的清單，包括完整的命名空間的項目您<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>實作中，後面接著組件 （不包括.dll 副檔名） 的名稱。 根據預設，轉譯延伸模組是可見的。 若要在使用者介面中隱藏延伸模組 (例如報表管理員)，請將 **Visible** 屬性加入到 **Extension** 元素，並將其設定為 **false**。  
+     **Name** 值是轉譯延伸模組的唯一名稱。 **類型**的值是以逗號分隔的清單，包括 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 實作的完整命名空間項目，後面接著組件的名稱 (不包括 .dll 副檔名)。 根據預設，轉譯延伸模組是可見的。 若要在使用者介面中隱藏延伸模組 (例如報表管理員)，請將 **Visible** 屬性加入到 **Extension** 元素，並將其設定為 **false**。  
   
 ## <a name="verifying-the-deployment"></a>確認部署  
  您也可以開啟報表管理員，然後確認延伸模組是否包含在報表可用匯出類型的清單中。  
@@ -84,4 +82,3 @@ ms.lasthandoff: 08/12/2017
  [延伸模組的安全性考量](../../../reporting-services/extensions/security-considerations-for-extensions.md)  
   
   
-

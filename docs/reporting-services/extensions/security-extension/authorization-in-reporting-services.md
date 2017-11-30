@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 中的授權 |Microsoft 文件"
+title: "Reporting Services 中的授權 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- authorization [Reporting Services]
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: bd7ecdc8e792fe11810affa362ff681bfdf267f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 10fbded684af5a1d17a6491d28a3524acbb2759a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services 中的授權
-  授權這項程序可決定是否應該將要求的存取權類型授與某個識別，允許其對於報表伺服器資料庫中特定資源進行存取。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用以角色為基礎的授權架構，會根據應用程式的使用者角色指派，將使用者存取權授與指定的資源。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的安全性延伸模組包含授權元件的實作，是用以在使用者通過報表伺服器上的驗證之後，授與存取權給他們。 當使用者透過 SOAP API 與透過 URL 存取，嘗試在系統上或是報表伺服器項目執行作業時，就會叫用授權。 這透過可能的安全性延伸模組介面**IAuthorizationExtension2**。 如先前所述，所有延伸會都繼承自**IExtension**您部署的任何延伸模組的基底介面。 **IExtension**和**IAuthorizationExtension2**屬於**Microsoft.ReportingServices.Interfaces**命名空間。  
+  授權這項程序可決定是否應該將要求的存取權類型授與某個識別，允許其對於報表伺服器資料庫中特定資源進行存取。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用以角色為基礎的授權架構，會根據應用程式的使用者角色指派，將使用者存取權授與指定的資源。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的安全性延伸模組包含授權元件的實作，是用以在使用者通過報表伺服器上的驗證之後，授與存取權給他們。 當使用者透過 SOAP API 與透過 URL 存取，嘗試在系統上或是報表伺服器項目執行作業時，就會叫用授權。 這是透過安全性延伸模組介面 **IAuthorizationExtension2** 來達成的。 如前所述，您所部署的任何延伸模組都會自 **IExtension** 繼承基底介面。 **IExtension** 與 **IAuthorizationExtension2** 是 **Microsoft.ReportingServices.Interfaces** 命名空間的成員。  
   
 ## <a name="checking-access"></a>檢查存取  
  在授權中，任何自訂安全性實作的關鍵在於存取檢查，這個檢查是實作在 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 方法之中。 每次使用者嘗試在報表伺服器上執行作業時，就會呼叫 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A>。 每個作業類型都會多載 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 方法。 若是資料夾作業，存取檢查的範例可能如下所示：  
@@ -61,7 +59,7 @@ public bool CheckAccess(
 }  
 ```  
   
- 報表伺服器透過傳遞登入使用者的名稱、使用者 Token、項目的安全性描述項，以及要求的作業，來呼叫 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 方法。 這裡您將檢查使用者名稱和適當的權限，以完成要求，然後傳回的安全性描述元**true**以表示已授與存取權或**false**來表示存取遭到拒絕。  
+ 報表伺服器透過傳遞登入使用者的名稱、使用者 Token、項目的安全性描述項，以及要求的作業，來呼叫 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 方法。 在這裡您將檢查使用者名稱的安全性描述項以及適當的權限以完成要求，然後傳回 **true** 以表示授與存取，或是傳回 **false** 來表示存取遭到拒絕。  
   
 ## <a name="security-descriptors"></a>安全性描述項  
  在報表伺服器資料庫中，設定項目上的授權原則時，用戶端應用程式 (例如報表管理員) 會將使用者資訊連同項目的安全性原則一起提交到安全性延伸模組。 這個安全性原則與使用者資訊統稱為安全性描述項。 安全性描述項在報表伺服器資料庫中包含項目的下列資訊：  

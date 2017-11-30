@@ -1,5 +1,5 @@
 ---
-title: "部署和版本支援在 SQL Server Data Tools (SSDT) |Microsoft 文件"
+title: "SQL Server 資料工具中的部署和版本支援 (SSDT) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 173d2a355d1084b22bdc90643484dbab2568e0b0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/06/2017
-
+ms.openlocfilehash: 02dc4f34643ca904f04c0f2c1b88fc3bdc202904
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>部署和版本支援 SQL Server Data Tools (SSDT) 中
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的部署和版本支援 (SSDT) | Microsoft Docs
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支援以下案例：  
   
 -   開啟報表定義 (*.rdl) 與報表伺服器專案 (\*.rptproj)。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/06/2017
   
 -   OutputPath 是會識別資料夾路徑的建置屬性，用於儲存組建驗證、部署與預覽報表時所使用的報表定義。  
   
--   ErrorLevel 是建置屬性，會識別回報為錯誤之建置問題的嚴重性。 嚴重性層級小於或等於 ErrorLevel 值的問題會回報為錯誤；否則，會將這些問題回報為警告。 如需詳細資訊，請參閱中的 < 報表驗證和錯誤層級 > 一節[使用報表設計工具 &#40; 設計報表SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel 是建置屬性，會識別回報為錯誤之建置問題的嚴重性。 嚴重性層級小於或等於 ErrorLevel 值的問題會回報為錯誤；否則，會將這些問題回報為警告。 如需詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) 中的＜報表驗證和錯誤等級＞一節。  
   
 -   TargetServerVersion 是部署屬性，可以識別 TargetServerURL 屬性中所指定之目標報表伺服器上安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預期版本。  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 09/06/2017
 ##  <a name="bkmk_SupportedVersions"></a> 支援的版本  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不是報表伺服器專案的 32 位元開發環境上執行[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-架構的電腦，不會安裝在[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]為基礎的伺服器。 不過， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (報表伺服器專案的 32 位元開發環境) 不是設計成要在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 架構電腦上執行，而且未安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 架構伺服器上。 不過， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  
   
  下表描述在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中撰寫及發行報表所支援的版本。  
   
@@ -75,8 +74,7 @@ ms.lasthandoff: 09/06/2017
   
  如需在舊版報表定義結構描述中開啟報表的詳細資訊，請參閱 [升級報表](../../reporting-services/install-windows/upgrade-reports.md)。 如需有關特定報表定義結構描述的詳細資訊，請參閱＜ [報表定義語言規格](http://go.microsoft.com/fwlink/?linkid=116865)＞。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [發行資料來源與報表](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "加入、 移動或刪除文字方塊 （報表產生器及 SSRS） |Microsoft 文件"
+title: "新增、移動或刪除文字方塊 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 96e5c879ff7427c121ae2a90a39587f475280ab2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>加入、移動或刪除文字方塊 (報表產生器及 SSRS)
   文字方塊是 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中最常使用的報表項目。 您可以將文字方塊加入至報表主體，以便顯示標題、參數選擇、內建欄位和日期等資訊。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 6.  在 [屬性] 窗格內，確認 **[Parent]** 屬性是自動加入至清單資料區的矩形。  
   
     > [!NOTE]  
-    >  如果看不到 [屬性] 窗格，請核取 [檢視] 索引標籤上的 [屬性] 。  
+    >  如果看不到 [屬性] 窗格，請核取 [檢視] 索引標籤上的 [屬性]。  
   
 ## <a name="to-move-a-text-box"></a>若要移動文字方塊  
   
@@ -75,9 +75,9 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  如果您在文字方塊中按一下並且處於編輯模式，請按下 ESC 來選取文字方塊。  
   
-## <a name="see-also"></a>請參閱＜  
- [文字方塊 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [運算式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [鍵盤快速鍵 &#40;報表產生器 &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+## <a name="see-also"></a>另請參閱  
+ [文字方塊 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [鍵盤快速鍵 &#40;報表產生器&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   

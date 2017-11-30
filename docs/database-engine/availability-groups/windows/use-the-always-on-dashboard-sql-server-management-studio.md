@@ -1,31 +1,30 @@
 ---
 title: "使用 AlwaysOn 可用性群組儀表板 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/30/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.agdashboard.f1
+f1_keywords: sql13.swb.agdashboard.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 67e89145b05f396c4f4801ea908372fe3f75ae52
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 AlwaysOn 可用性群組儀表板 (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +122,10 @@ ms.lasthandoff: 08/02/2017
  連接之伺服器執行個體與可用性群組為成員節點的叢集名稱和狀態。  
   
 ##  <a name="AvReplicaDetails"></a> 可用性複本詳細資料  
- **[可用性複本]** 窗格會顯示下列資料行：  
+
+當連線到主要複本時，[可用性複本詳細資料] 會顯示可用性群組中的所有複本資訊。 當連線到次要複本時，只會顯示連線的複本資訊。  
+
+**[可用性複本]** 窗格會顯示下列資料行：  
   
  **名稱**  
  裝載可用性複本的伺服器執行個體名稱。 預設顯示此資料行。  
@@ -362,4 +364,3 @@ ms.lasthandoff: 08/02/2017
  [監視可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
-

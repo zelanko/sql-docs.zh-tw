@@ -1,5 +1,5 @@
 ---
-title: "資料處理延伸模組概觀 |Microsoft 文件"
+title: "資料處理延伸模組概觀 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,34 +10,31 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data processing extensions [Reporting Services], about extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 11e8c43eb7b717227cf5a624f6a18a424b598967
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-processing-extensions-overview"></a>資料處理延伸模組概觀
-  在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的資料處理延伸模組，可讓您連接到資料來源並擷取資料。 它們也可當做資料來源與資料集之間的橋樑。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]資料處理延伸模組為模型的子集[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]資料提供者介面。  
+  在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的資料處理延伸模組，可讓您連接到資料來源並擷取資料。 它們也可當做資料來源與資料集之間的橋樑。 因為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組是依照 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者介面子集建立的。  
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 隨附的資料處理延伸模組。  
   
 |資料處理延伸模組|Description|  
 |-------------------------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料處理延伸模組|用於連接到並從中擷取資料的.NET Framework Data Provider for SQL Server [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]。|  
-|OLE DB 的資料處理延伸模組|使用.NET Framework Data Provider for OLE DB。 透過這個延伸模組，報表伺服器可以查詢具有 OLE DB 提供者的資料來源。|  
-|Oracle 的資料處理延伸模組|使用.NET Framework Data Provider for Oracle。 透過這個延伸模組，報表伺服器可以藉由 Oracle 用戶端連接軟體存取 Oracle 資料來源。|  
-|ODBC 的資料處理延伸模組|使用.NET Framework Data Provider for ODBC。 透過這個延伸模組，報表伺服器可以存取具有 ODBC 驅動程式之資料庫中的資料。|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料處理延伸模組|使用 .NET Framework Data Provider for SQL Server 來連線和擷取 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 的資料。|  
+|OLE DB 的資料處理延伸模組|使用 .NET Framework Data Provider for OLE DB。 透過這個延伸模組，報表伺服器可以查詢具有 OLE DB 提供者的資料來源。|  
+|Oracle 的資料處理延伸模組|使用 .NET Framework Data Provider for Oracle。 透過這個延伸模組，報表伺服器可以藉由 Oracle 用戶端連接軟體存取 Oracle 資料來源。|  
+|ODBC 的資料處理延伸模組|使用 .NET Framework Data Provider for ODBC。 透過這個延伸模組，報表伺服器可以存取具有 ODBC 驅動程式之資料庫中的資料。|  
   
  您可以使用 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 資料處理 API 將自訂資料處理加入報表伺服器。  
   
@@ -62,7 +59,7 @@ Reporting Services 資料處理延伸模組架構
 ## <a name="data-extension-process-flow"></a>資料延伸模組處理流量  
  開發自訂資料延伸模組之前，應該先了解報表伺服器如何使用資料延伸模組處理資料， 並熟悉報表伺服器呼叫的建構函式與方法。  
   
- ![處理資料處理延伸模組的流程](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "處理流程資料處理延伸模組")  
+ ![資料處理延伸模組的處理流程](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "資料處理延伸模組的處理流程")  
 報表伺服器呼叫的資料延伸模組之逐步處理流程  
   
  圖例中顯示了下列事件的順序：  
@@ -78,17 +75,16 @@ Reporting Services 資料處理延伸模組架構
   
 -   已安裝報表設計師或報表伺服器的部署電腦。  
   
--   開發電腦[!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)]或以上版本，或[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]軟體開發套件 (SDK) 安裝。  
+-   安裝 [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] 或以上版本，或是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 軟體開發套件 (SDK) 的開發電腦。  
   
 -   對 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的特性與功能有深入的了解。  
   
--   深入瞭解[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vstecado](../../../includes/vstecado-md.md)]架構，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]資料提供者、 ADO.NET DataSet 物件以及常用[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]介面。  
+-   對 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 架構、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者、ADO.NET DataSet 物件以及常用的 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 介面有深入的了解。  
   
--   開發經驗[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]這類語言[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual C# 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET。  
+-   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 語言的開發體驗，例如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 或是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 延伸模組](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Reporting Services 延伸模組程式庫](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

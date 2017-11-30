@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 8b20829937e6ad532b4ce4a42e2fe42c6c70375f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>協調多位使用者所做的變更 (Visual Database Tools)
 在多位使用者環境中，可以同時讓多位使用者修改相同的物件。 這樣的情況會發生在當您使用資料表或資料庫圖表設計工具設計物件的結構時，或是發生在 [查詢和檢視設計師] 的 [結果] 窗格中的值。 這樣會產生您需要解決的衝突。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/18/2017
   
 -   選擇 [是] 可儲存資料表，並且可使用清單中的所有變更更新資料庫。  
   
-    這個動作會影響共用相同資料庫物件的資料表。 例如，假設您編輯 `au`資料表`id` _ `titleauthors` 資料行，而另一位使用者正在使用與 `authors` 資料表 `titleauthors` 資料行相關的 `au`\_`id` 資料表。 如果您儲存您的資料表將會影響其他使用者的資料表。 同樣的，假設其他使用者在 `qty` 資料表中定義了一個 `sales` 資料行的檢查條件約束。 如果您刪除 `qty` 資料行並儲存 `sales` 資料表，則會影響其他使用者的檢查條件約束。  
+    這個動作會影響共用相同資料庫物件的資料表。 例如，假設您編輯 `titleauthors` 資料表中的 `au_id` 資料行，而另一位使用者正在使用與 `titleauthors` 資料表 `au_id` 資料行相關的 `authors` 資料表。 如果您儲存您的資料表將會影響其他使用者的資料表。 同樣的，假設其他使用者在 `qty` 資料表中定義了一個 `sales` 資料行的檢查條件約束。 如果您刪除 `qty` 資料行並儲存 `sales` 資料表，則會影響其他使用者的檢查條件約束。  
   
 -   選擇 [否] 會取消儲存動作。  
   
@@ -65,4 +64,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>另請參閱  
 [偵測到資料庫變更對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
-

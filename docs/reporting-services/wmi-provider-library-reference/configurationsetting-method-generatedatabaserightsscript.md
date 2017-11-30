@@ -1,5 +1,5 @@
 ---
-title: "GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文件"
+title: "GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- GenerateDatabaseRightsScript method
+helpviewer_keywords: GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2e7e3d80d7e67b3a6e0924f04600860039086c94
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b9657229fa2bbdb3e7be35fd385162bf8debb53c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---generatedatabaserightsscript"></a>GenerateDatabaseRightsScript ConfigurationSetting 方法
+# <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 方法 - GenerateDatabaseRightsScript
   產生可用來將報表伺服器資料庫和其他資料庫 (執行報表伺服器所需) 之權限授與使用者的 SQL 指令碼。 呼叫者預期要連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫伺服器並執行此指令碼。  
   
 ## <a name="syntax"></a>語法  
@@ -72,7 +68,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>備註  
  如果 *DatabaseName* 是空的，即忽略 *IsRemote* ，而且報表伺服器組態檔值會用於資料庫名稱。  
   
- 如果*IsWindowsUser*設**true**， *UserName*格式應該是\<網域 >\\< 使用者名稱\>。  
+ 如果 *IsWindowsUser* 設為 **true**，則 *UserName* 的格式應該為 \<網域>\\<使用者名稱\>。  
   
  當 *IsWindowsUser* 設為 [true] 時，產生的指令碼就會將登入權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者、將報表伺服器資料庫設定為預設資料庫，並且針對報表伺服器資料庫、報表伺服器暫存資料庫、master 資料庫和 MSDB 系統資料庫授與 **RSExec** 角色。  
   
@@ -82,12 +78,12 @@ out Int32 HRESULT);
   
 |已轉譯的帳戶 / SID|一般名稱|遠端名稱|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|本機系統|\<網域 >\\< 電腦名稱\>$|  
-|.\LocalSystem|本機系統|\<網域 >\\< 電腦名稱\>$|  
-|ComputerName\LocalSystem|本機系統|\<網域 >\\< 電腦名稱\>$|  
-|LocalSystem|本機系統|\<網域 >\\< 電腦名稱\>$|  
-|(S-1-5-20)|網路服務|\<網域 >\\< 電腦名稱\>$|  
-|NT AUTHORITY\NetworkService|網路服務|\<網域 >\\< 電腦名稱\>$|  
+|(S-1-5-18)|本機系統|\<網域>\\<電腦名稱\>$|  
+|.\LocalSystem|本機系統|\<網域>\\<電腦名稱\>$|  
+|ComputerName\LocalSystem|本機系統|\<網域>\\<電腦名稱\>$|  
+|LocalSystem|本機系統|\<網域>\\<電腦名稱\>$|  
+|(S-1-5-20)|網路服務|\<網域>\\<電腦名稱\>$|  
+|NT AUTHORITY\NetworkService|網路服務|\<網域>\\<電腦名稱\>$|  
 |(S-1-5-19)|本機服務|錯誤 – 請參閱下面。|  
 |NT AUTHORITY\LocalService|本機服務|錯誤 – 請參閱下面。|  
   
@@ -103,15 +99,15 @@ out Int32 HRESULT);
 |“(local)”||  
 |“LOCAL”||  
 |localhost||  
-|\<Machinename >|testlab14|  
-|\<MachineFQDN >|example.redmond.microsoft.com|  
-|\<IPAddress >|180.012.345,678|  
+|\<機器名稱>|testlab14|  
+|\<機器 FQDN>|example.redmond.microsoft.com|  
+|\<IP 位址>|180.012.345,678|  
   
- 當 *IsWindowsUser* 設為 [true] 時，WMI 提供者就會呼叫 LookupAccountName 來取得帳戶的 SID，然後呼叫 LookupAccountSID 來取得要放入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼的名稱。 這樣可確保所使用的帳戶名稱會通過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。  
+ 當 *IsWindowsUser* 設為 **true** 時，WMI 提供者就會呼叫 LookupAccountName 來取得帳戶的 SID，然後呼叫 LookupAccountSID 來取得要放入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼的名稱。 這樣可確保所使用的帳戶名稱會通過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。  
   
- 當 *IsWindowsUser* 設為 [false] 時，產生的指令碼會針對報表伺服器資料庫、報表伺服器暫存資料庫和 MSDB 資料庫授與 **RSExec** 角色。  
+ 當 *IsWindowsUser* 設為 **false** 時，產生的指令碼會針對報表伺服器資料庫、報表伺服器暫存資料庫和 MSDB 資料庫授與 **RSExec** 角色。  
   
- 當 *IsWindowsUser* 設為 [false] 時，SQL Server 使用者必須已經存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，才能讓指令碼順利執行。  
+ 當 *IsWindowsUser* 設為 **false** 時，SQL Server 使用者必須已經存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，才能讓指令碼順利執行。  
   
  如果報表伺服器尚未指定報表伺服器資料庫，呼叫 GrantRightsToDatabaseUser 就會傳回錯誤。  
   
@@ -120,8 +116,7 @@ out Int32 HRESULT);
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

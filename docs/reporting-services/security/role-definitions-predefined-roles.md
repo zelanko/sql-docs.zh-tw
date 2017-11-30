@@ -1,5 +1,5 @@
 ---
-title: "預先定義的角色 |Microsoft 文件"
+title: "預先定義的角色 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/22/2015
 ms.prod: sql-server-2016
@@ -15,19 +15,18 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 694b2d5d3aeb126ba0c61b42af2ffb5538b14269
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 64192b6a5cb00633c1a9f89096b77c9b9d5539bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="role-definitions---predefined-roles"></a>角色定義的預先定義的角色
+# <a name="role-definitions---predefined-roles"></a>角色定義 - 預先定義的角色
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會安裝一些預先定義的角色，可讓您用來授與報表伺服器作業的存取權。 每個預先定義的角色都會描述相關工作的集合。 您可以將群組和使用者帳戶指派至預先定義的角色，以便提供報表伺服器作業的立即存取權。  
   
 ## <a name="how-to-use-predefined-roles"></a>如何使用預先定義的角色  
@@ -215,12 +214,11 @@ ms.lasthandoff: 08/09/2017
   
  可以使用 **系統使用者** 角色來補充預設安全性。 您可以將角色包括在新的角色指派中，這會擴充報表伺服器存取權給報表使用者。 如需詳細資訊，請參閱 [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。  
   
-## <a name="see-also"></a>請參閱＜  
- [建立、 刪除或修改角色 &#40;Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [授與使用者存取報表伺服器 &#40;報表管理員 &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [修改或刪除角色指派 &#40;報表管理員 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+## <a name="see-also"></a>另請參閱  
+ [建立、刪除或修改角色 &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [修改或刪除角色指派 &#40;報表管理員&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [工作和權限](../../reporting-services/security/tasks-and-permissions.md)  
   
   
-

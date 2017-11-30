@@ -1,5 +1,5 @@
 ---
-title: "匯出至 Microsoft Word （報表產生器及 SSRS） |Microsoft 文件"
+title: "匯出至 Microsoft Word (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: fa120c78f7b443eb0dc6078a5444b79b20bbda8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
 
   Word 轉譯延伸模組會將分頁報表轉譯成  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 格式 (.docx)。 此格式為 Office Open XML。  
   
  此轉譯器會產生 **application/vnd.openxmlformats-officedocument.wordprocessingml.document** 內容類型的檔案，而檔案的副檔名為 .docx。  
   
- 請參閱[匯出報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)的詳細資料匯出到 Word。  
+ 如需如何匯出至 Word 的詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
   
  將報表匯出至 Word 文件之後，您可以變更報表的內容，並設計文件樣式的報表，例如郵件標籤、訂購單或套印信件。  
   
@@ -114,13 +113,13 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="SquigglyLines"></a> 匯出之報表中的曲線  
  在 Word 中匯出並檢視時，報表資料或常數可能會加上紅色或綠色曲線的底線。 紅色曲線表示拼寫錯誤。 綠色曲線表示文法錯誤。 當報表包含不符合 Word 中所指定編輯語言校訂 (拼字和文法) 的字詞時，就會發生這種情形。 例如，如果報表是以西班牙文版的 Word 轉譯，則英文報表資料行的標頭可能會加上紅色曲線的底線。 報表中察覺的拼字錯誤會比察覺的文法錯誤更為常見，因為報表通常只包含簡短的文字，而不是完整的句子或段落。  
   
- 報表中出現的曲線暗示報表有錯誤，但也可能不是錯誤。 您可以藉由變更報表的校訂語言來移除曲線。 若要變更校訂語言，請選取報表的內容，然後為該內容指定適當的語言。 您可以選取全部或部分內容。 在 Word 中，語言選項**設定校訂語言**處於**語言**區域**檢閱** 索引標籤。 更新內容之後，需要重新儲存文件。  
+ 報表中出現的曲線暗示報表有錯誤，但也可能不是錯誤。 您可以藉由變更報表的校訂語言來移除曲線。 若要變更校訂語言，請選取報表的內容，然後為該內容指定適當的語言。 您可以選取全部或部分內容。 在 Word 中，語言選項 [設定校訂語言] 位於 [校閱] 索引標籤的 [語言] 區域中。更新內容之後，需要重新儲存文件。  
   
  根據您 Office 程式的語言版本而定，您所選擇語言的校訂工具 (如字典) 會隨程式提供，或是在您購買的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 語言套件中提供。  
   
  下列主題提供有關設定 Office 和 Word 選項的其他資訊。  
   
--   變更編輯語言**Microsoft Office 語言喜好設定**或**Word 選項**在 Word 中的對話方塊。 如需詳細資訊，請參閱＜ [在 Office 程式中啟用使用其他語言的功能](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1)＞。  
+-   在 Word 的 [Microsoft Office 語言喜好設定] 或 [Word 選項] 對話方塊中變更編輯語言。 如需詳細資訊，請參閱＜ [在 Office 程式中啟用使用其他語言的功能](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1)＞。  
   
 -   加入 Office 語言套件，然後變更編輯語言。 如需詳細資訊，請參閱 [在 Office 程式中啟用使用其他語言的功能](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) 和 [Office 語言選項](http://office.microsoft.com/language/)。  
   
@@ -161,13 +160,13 @@ ms.lasthandoff: 08/09/2017
   
  與 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 相容的舊版 Word 轉譯延伸模組已重新命名為 Word 2003。 根據預設，只能使用 Word 轉譯延伸模組。 您必須更新 Reporting Services 組態檔，才能使用 Word 2003 轉譯延伸模組。 Word 2003 轉譯器會產生 **application/vnd.ms-word** 內容類型的檔案，而檔案的副檔名為 .doc。  
   
- 在 SQL Server Reporting Services 中，預設 Word 轉譯器轉譯為版本[!INCLUDE[ofprword](../../includes/ofprword-md.md)](.docx) 格式。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站和 SharePoint 清單的 [匯出] 功能表中，這就是 [Word] 選項。 只與 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 相容的舊版現在已命名為 Word 2003，而且使用該名稱列於功能表上。 根據預設，系統不會顯示 **[Word 2003]** 功能表選項，但是管理員可以透過更新 RSReportServer 組態檔，顯示此選項。 若要使用 Word 2003 轉譯器，從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 匯出報表，請更新 RSReportDesigner 組態檔。 不過，讓 Word 2003 轉譯器顯示並不適用於所有案例。 因為 RSReportServer 組態檔位於報表伺服器上，所以您從中匯出報表的工具或產品必須連接至報表伺服器，以便讀取組態檔。 如果您在中斷連接或本機模式中使用工具或產品，讓 Word 2003 轉譯器顯示就沒有任何作用。 **[Word 2003]** 功能表選項會維持無法使用的狀態。 如果您在 RSReportDesigner 組態檔中，讓 Word 2003 轉譯器顯示，就一定可以在 **報表預覽中使用** [Word 2003] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 功能表選項。  
+ 在 SQL Server Reporting Services 中，預設的 Word 轉譯器是可轉譯為 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 格式 (.docx) 的版本。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站和 SharePoint 清單的 [匯出] 功能表中，這就是 [Word] 選項。 只與 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 相容的舊版現在已命名為 Word 2003，而且使用該名稱列於功能表上。 根據預設，系統不會顯示 **[Word 2003]** 功能表選項，但是管理員可以透過更新 RSReportServer 組態檔，顯示此選項。 若要使用 Word 2003 轉譯器，從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 匯出報表，請更新 RSReportDesigner 組態檔。 不過，讓 Word 2003 轉譯器顯示並不適用於所有案例。 因為 RSReportServer 組態檔位於報表伺服器上，所以您從中匯出報表的工具或產品必須連接至報表伺服器，以便讀取組態檔。 如果您在中斷連接或本機模式中使用工具或產品，讓 Word 2003 轉譯器顯示就沒有任何作用。 **[Word 2003]** 功能表選項會維持無法使用的狀態。 如果您在 RSReportDesigner 組態檔中，讓 Word 2003 轉譯器顯示，就一定可以在 **報表預覽中使用** [Word 2003] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 功能表選項。  
   
  在下列案例中， **[Word 2003]** 功能表選項永不顯示：  
   
 -   報表產生器處於中斷連接模式，而且您在報表產生器中預覽報表。  
   
--   報表檢視器 Web 組件處於本機模式，而且 SharePoint 伺服陣列並未與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器整合。 如需詳細資訊，請參閱[本機模式與。連線模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   報表檢視器 Web 組件處於本機模式，而且 SharePoint 伺服陣列並未與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器整合。 如需詳細資訊，請參閱[本機模式與連線模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  如果 **[Word 2003]** 轉譯器設定為顯示，在下列案例中，您就可以同時使用 **[Word]** 和 **[Word 2003]** 功能表選項：  
   

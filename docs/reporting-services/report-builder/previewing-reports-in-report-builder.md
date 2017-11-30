@@ -1,5 +1,5 @@
 ---
-title: "在 報表產生器中預覽報表 |Microsoft 文件"
+title: "在報表產生器中預覽報表 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: f28003b3e3460e2450c17f68ab944ae2aeab55e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1635c00223ae559c703a56e528f8e4f74f5a67ef
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="previewing-reports-in-report-builder"></a>在報表產生器中預覽報表
   當您建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表時，這對經常預覽報表以確認報表如預期般顯示相當有幫助。 若要預覽報表，按一下 **[執行]**。 報表隨即在預覽模式下呈現。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
  編輯工作階段的其他優點包括，能夠編輯使用內嵌資料來源或參考項目的報表，例如儲存在報表伺服器上的影像或子報表。  
   
 > [!NOTE]  
-> 有一些報表產生器中預覽以及瀏覽器中檢視之間的差異。 例如，日曆控制項，您指定日期/時間類型參數時，就會加入至報表，是在報表產生器，以及在瀏覽器中不同。 
+> 在報表產生器中預覽與在瀏覽器中檢視有些不同。 例如，當您指定日期/時間類型參數時新增至報表的月曆控制項，在報表產生器中與在瀏覽器中會不同。 
   
 ## <a name="improving-preview-performance"></a>提升預覽效能  
  您建立和更新報表的方式會影響報表在預覽中呈現的速度。 當您第一次預覽依賴伺服器參考的報表時，系統會為您建立編輯工作階段，而且執行報表時所使用的資料會加入到儲存在報表伺服器上的資料快取中。 當您針對報表進行不會影響資料的變更時，報表會使用資料的快取副本。 也就是說，每次預覽報表時，您都看不到資料變更。 如果您想要新的資料，請按一下功能區上的 [重新整理] 按鈕。  
@@ -82,11 +82,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [格式化報表項目 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [資料表、 矩陣和清單 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [資料表、 矩陣和清單 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [儲存報表 &#40;報表產生器 &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+ [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [儲存報表 &#40;報表產生器&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
   
   
-

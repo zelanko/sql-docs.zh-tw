@@ -1,5 +1,5 @@
 ---
-title: "頁首和頁尾 （報表產生器及 SSRS） |Microsoft 文件"
+title: "頁首和頁尾 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -24,17 +24,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e36c4f041d79b343e372b3bc9eb87ed2e3e7ec56
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>頁首和頁尾 (報表產生器及 SSRS)
   報表可以包含分別在每個頁面的頂端和底端邊緣處的頁首和頁尾。 頁首和頁尾可以包含靜態文字、影像、線條、矩形、框線、背景色彩、背景影像和運算式。 運算式包含剛好具有一個資料集之報表的資料集欄位參考，以及包含該資料集做為範圍的彙總函式呼叫。  
@@ -42,9 +41,9 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  每個轉譯延伸模組處理頁面的方式不同。 如需報表分頁和轉譯延伸模組的詳細資訊，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
- 根據預設，報表具有頁尾，但沒有頁首。 如需如何將其加入或移除的詳細資訊，請參閱[加入或移除頁首或頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
+ 根據預設，報表具有頁尾，但沒有頁首。 如需如何將其新增或移除的詳細資訊，請參閱[新增或移除頁首或頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
   
- 頁首和頁尾通常包含頁碼、報表標題和其他報表屬性。 如需如何將這些項目加入報表頁首或頁尾的詳細資訊，請參閱[顯示頁碼或其他報表屬性 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)。  
+ 頁首和頁尾通常包含頁碼、報表標題和其他報表屬性。 如需如何將這些項目新增至報表頁首或頁尾的詳細資訊，請參閱[顯示頁碼或其他報表屬性 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)。  
   
  頁首或頁尾在建立之後，就會顯示在每個報表頁面上。 如需如何在第一頁和最後一頁上隱藏頁首和頁尾的詳細資訊，請參閱[隱藏第一頁或最後一頁的頁首或頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)。  
   
@@ -130,11 +129,10 @@ ms.lasthandoff: 08/09/2017
   
  較精確的頁面計數是以關聯於列印頁面尺寸的邏輯頁面為基礎。 在 Excel 中，頁尾會自動使用邏輯頁碼。 若要將邏輯頁面計數放在頁首中，您必須將裝置資訊設定設成使用簡單頁首。 請注意，使用簡單頁首時，您會移除在頁首區域中處理複雜報表配置的功能。  
   
- 如需詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)中使用這項資料。  
   
 ## <a name="see-also"></a>另請參閱  
  [在報表中內嵌影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [矩形和線條 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+ [矩形和線條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   
-

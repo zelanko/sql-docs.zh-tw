@@ -1,5 +1,5 @@
 ---
-title: "管理正在執行的處理序 |Microsoft 文件"
+title: "管理執行中的處理序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -28,17 +28,16 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 805c1ba338d75d49e6dbd48fb6f1d8af2f5e5701
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-running-process"></a>管理執行中的處理序
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會監視在報表伺服器上執行之作業的狀態。 報表伺服器會以固定間隔執行進行中作業的掃描，並將狀態資訊寫入報表伺服器資料庫或服務應用程式資料庫 (如果是 SharePoint 模式)。 如果下列任一個處理序進行中，作業就是進行中：在遠端或本機資料庫伺服器上的查詢執行、報表處理，以及報表轉譯。  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 -   個別使用者所擁有的標準訂閱。  
   
- 取消作業只會取消在報表伺服器上執行的處理序。 由於報表伺服器不會管理在其他電腦上進行的資料處理，因此您必須手動取消隨後在其他系統上遺棄的查詢處理序。 請考慮指定查詢逾時值，以自動關閉花太長時間執行的查詢。 如需詳細資訊，請參閱[設定逾時值，如報表和共用資料集處理 &#40;SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). 如需詳細資訊，請參閱 [停用或暫停報表與訂閱處理](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)。  
+ 取消作業只會取消在報表伺服器上執行的處理序。 由於報表伺服器不會管理在其他電腦上進行的資料處理，因此您必須手動取消隨後在其他系統上遺棄的查詢處理序。 請考慮指定查詢逾時值，以自動關閉花太長時間執行的查詢。 如需詳細資訊，請參閱[設定報表和共用資料集處理的逾時值 &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)。 如需詳細資訊，請參閱 [停用或暫停報表與訂閱處理](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)。  
   
 > [!NOTE]  
 >  很少數的情況下，您可能需要重新啟動伺服器才能取消處理序。 如果是 SharePoint 模式，您可能需要重新啟動裝載 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的應用程式集區。 如需詳細資訊，請參閱 [啟動與停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)。  
@@ -85,7 +84,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  開啟 **[作業]** 資料夾。  
   
-3.  以滑鼠右鍵按一下報表，然後按一下**取消作業**。  
+3.  以滑鼠右鍵按一下報表，然後按一下 [取消作業]。  
   
 ### <a name="how-to-cancel-a-data-driven-subscription"></a>如何取消資料驅動訂閱  
   
@@ -97,7 +96,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  儲存檔案。  
   
-5.  在報表管理員中，刪除資料驅動訂閱的訂閱 索引標籤的報表，或從**我的訂閱**。  
+5.  在報表管理員中，從報表的 [訂閱] 索引標籤或 [我的訂閱] 中刪除資料驅動訂閱。  
   
 6.  刪除訂閱之後，請在 RSReportServer.config 檔中，尋找 **IsNotificationService** ，然後將它設為 **True**。  
   
@@ -124,13 +123,12 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_programmatically"></a> 以程式設計方式管理作業  
  您可以用程式設計方式或利用指令碼來管理作業。 如需詳細資訊，請參閱 <xref:ReportService2010.ReportingService2010.ListJobs%2A>和 <xref:ReportService2010.ReportingService2010.CancelJob%2A>。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [取消報表伺服器作業 &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [作業屬性 &#40;Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [修改 Reporting Services 組態檔 &#40;RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [作業屬性 &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [報表管理員 &#40;SSRS 原生模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [監視報表伺服器效能](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   
-

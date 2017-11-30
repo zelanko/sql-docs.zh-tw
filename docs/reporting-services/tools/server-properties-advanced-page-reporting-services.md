@@ -10,31 +10,28 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.advanced.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 80f962efa995f8f6a5d422f8b470826acddbab58
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 您可以使用這個頁面來設定報表伺服器的系統屬性。 有許多方式可設定系統屬性。 這項工具提供了圖形化使用者介面，如此您不需要撰寫程式碼就可以設定屬性。
 
-若要開啟此頁面，啟動 SQL Server Management Studio，連接到報表伺服器執行個體，以滑鼠右鍵按一下報表伺服器的名稱，並選取**屬性**。 選取**進階**即可開啟此頁面。
+若要開啟此頁面，請啟動 SQL Server Management Studio，並連線至報表伺服器執行個體，然後以滑鼠右鍵按一下報表伺服器名稱，再選取 [屬性]。 選取 [進階]，即可開啟此頁面。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 **EnableMyReports**  
 指出 [我的報表] 功能是否已啟用。 值若為 **true** 表示此功能已啟用。  
@@ -80,9 +77,9 @@ ms.lasthandoff: 08/28/2017
 
 |值|Description|
 |---------|---------|
-|**SQL**|儲存在報表伺服器資料庫時，會壓縮快照集。 這是目前的行為。|
-|**無**|不壓縮快照集。|
-|**全部**|針對所有儲存體選項，其中包含報表伺服器資料庫或檔案系統會壓縮快照集。|
+|**SQL**|快照集在儲存於報表伺服器資料庫時會進行壓縮。 這是目前的行為。|
+|**無**|系統不會壓縮快照集。|
+|**全部**|系統會針對所有儲存選項壓縮快照集，包括報表伺服器資料庫或是檔案系統。|
 
 **SystemReportTimeout**  
 在報表伺服器命名空間中管理之所有報表的預設報表處理逾時值 (以秒為單位)。 在報表層級可以覆寫這個值。 如果已設定此屬性，當指定的時間已過期時，報表伺服器就會嘗試停止處理報表。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，命名空間中的報表就不會在處理期間逾時。 預設值是 **1800**秒。  
@@ -95,8 +92,8 @@ ms.lasthandoff: 08/28/2017
 
 |值|Description|
 |---------|---------|
-|**True**|已啟用 Windows 整合式的安全性。|
-|**False**|未啟用 Windows 整合式的安全性。 設定為使用 Windows 整合式安全性的報表資料來源不會執行。|
+|**True**|已啟用 Windows 整合式安全性。|
+|**False**|未啟用 Windows 整合式安全性。 設定為使用 Windows 整合式安全性的報表資料來源不會執行。|
 
 **EnableLoadReportDefinition**  
 選取此選項即可指定使用者是否可以從報表產生器報表執行特定報表執行。 設定這個選項會針對報表伺服器決定 **EnableLoadReportDefinition** 屬性的值。  
@@ -117,31 +114,34 @@ ms.lasthandoff: 08/28/2017
 **EditSessionTimeout**  
 指定報表編輯工作階段逾時之前的秒數。預設值是 7200 秒 (2 小時)。  
 
-**EnableCustomVisuals** ***(Power BI 報表伺服器)***  
-PowerBI ReportServer 應該啟用 power Bi 自訂視覺效果的顯示。 有效值為 True，False。  預設值是 True。  
+**EnableCustomVisuals** ***(僅限 Power BI 報表伺服器)***  
+PowerBI ReportServer 應該啟用 PowerBI 自訂視覺效果的顯示。 值為 True、False。  預設值是 True。  
 
-**EnablePowerBIReportExportData** ***(Power BI 報表伺服器)***  
-PowerBI ReportServer 應該啟用匯出從 power Bi 視覺效果的資料。 有效值為 True，False。  預設值是 True。  
+**EnablePowerBIReportExportData** ***(僅限 Power BI 報表伺服器)***  
+PowerBI ReportServer 應該啟用從 PowerBI 視覺效果匯出資料。 值為 True、False。  預設值是 True。  
+
+**ScheduleRefreshTimeoutMinutes** ***(僅限 Power BI 報表伺服器)***  
+在含內嵌 AS 模型的 PowerBI 報表上排定重新整理的資料重新整理逾時 (分鐘)。 預設值是 120 分鐘。
 
 **EnableTestConnectionDetailedErrors**  
 指出當使用者使用報表伺服器來測試資料來源連接時，是否要將詳細的錯誤訊息傳送至用戶端電腦。 預設值為 **true**。 如果此選項設定為 **false**，就只會傳送一般錯誤訊息。
 
 **AccessControlAllowCredentials**  
-指出當設定 [認證] 旗標時是否可以公開用戶端要求的回應為 true。 預設值是 **false**秒。
+指出 'credentials' 旗標設為 true 時是否可以公開用戶端要求的回應。 預設值是 **false**秒。
 
-**AccessControlAllowHeaders**伺服器允許當用戶端要求的標頭的逗號分隔的清單。 這個屬性可以是空字串，指定 * 將允許所有標頭。
+**AccessControlAllowHeaders** 伺服器在用戶端提出要求時允許的標題清單 (以逗號分隔)。 這個屬性可以是空字串，而指定 * 將允許所有標題。
 
-**AccessControlAllowMethods**逗號分隔的清單，當用戶端要求伺服器允許的 HTTP 方法。 預設值為 (GET、 PUT、 POST、 PATCH、 DELETE)，指定 * 將允許所有方法。
+**AccessControlAllowMethods** 伺服器在用戶端提出要求時允許的 HTTP 方法清單 (以逗號分隔)。 預設值為 (GET、PUT、POST、PATCH、DELETE)，而指定 * 將允許所有方法。
 
-**AccessControlAllowOrigin**的伺服器可讓用戶端要求時的來源逗號分隔的清單。 預設值是空白使所有的要求，指定 * 時不會設定認證; 將允許所有來源如果未指定認證，必須指定明確的原始來源清單。
+**AccessControlAllowOrigin** 伺服器在用戶端提出要求時允許的來源清單 (以逗號分隔)。 預設值是可防止所有要求的空白，而指定 * 將在未設定認證時允許所有來源；如果指定認證，則必須指定明確的來源清單。
 
-**AccessControlExposeHeaders**伺服器要公開給用戶端的標頭的逗號分隔的清單。 預設值是空白。
+**AccessControlExposeHeaders** 伺服器向用戶端公開的標題清單 (以逗號分隔)。 預設值是空白。
 
-**AccessControlMaxAge**指定可以快取預檢要求結果的秒數。 預設值為 600 （10 分鐘）。
+**AccessControlMaxAge** 指定可快取推斷要求結果的秒數。 預設值為 600 (10 分鐘)。
 
 ## <a name="see-also"></a>另請參閱
 
-[設定報表伺服器屬性 &#40;Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+[設定報表伺服器屬性 &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
 [Reporting Services 屬性](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
 [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
@@ -150,4 +150,3 @@ PowerBI ReportServer 應該啟用匯出從 power Bi 視覺效果的資料。 有
 [啟用與停用我的報表](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

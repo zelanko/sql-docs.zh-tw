@@ -1,28 +1,25 @@
 ---
-title: "第 3 課： 定義資料驅動訂閱 |Microsoft 文件"
+title: "第 3 課：定義資料驅動訂閱 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ae87a509d3d5d1eb55645408b63f8267498efbd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c092a13ee59f483a993810e558be4e11f88c3716
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 在這個 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將利用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 入口網站資料驅動訂閱頁面來連接訂閱資料來源、建立擷取訂閱資料的查詢，以及將結果集對應至報表和傳遞選項。  
@@ -35,16 +32,16 @@ ms.lasthandoff: 08/09/2017
   
 1.  在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站中，按一下 [首頁]，然後巡覽至包含 **Sales Orders** 報表的資料夾。  
   
-2.  在報表的 ![ssrs_tutorial_datadriven_reportmenu](../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png) 內容功能表中，按一下 [管理]，然後按一下左窗格中的 [訂閱]。  
+2.  在報表的操作功能表 ![ssrs_tutorial_datadriven_reportmenu](../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png) 中，按一下 [管理]，然後按一下左窗格中的 [訂閱]。  
   
 3.  按一下 [+ 新增訂閱]。 如果您沒有看見這個按鈕，表示您沒有「內容管理員」權限。 
   
 ## <a name="define-a-description"></a>定義描述  
 1.  在 [描述] 中，輸入 **銷售訂單傳遞** 。
-## <a name="type"></a>型別
+## <a name="type"></a>類型
 1.  按一下 [資料驅動訂閱]。  
 ## <a name="schedule"></a>排程
-1. 在 [排程] 區段中按一下 [報表特定排程]。
+1. 在 [排程] 區段中，按一下 [報表特定排程]。
 2. 按一下 [編輯排程]。
 3.  在 **[排程詳細資料]**中，按一下 **[一次]**。  
 4.  請指定現在以後的幾分鐘做為開始時間。  
@@ -55,8 +52,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="dataset"></a>資料集
 1. 按一下 [編輯資料集]。
 2. 選取 **[自訂資料來源]**。
-3. 選取 [Microsoft SQL Server] 作為資料來源 [連接] 類型。
-4. 在 [連接字串] 中，輸入下列連接字串。 訂閱者是您在第 1 課所建立的資料庫。 
+3. 選取 [Microsoft SQL Server] 作為資料來源 [連線] 類型。
+4. 在 [連接字串] 中，輸入下列連接字串。 「訂閱者」是您在第 1 課所建立的資料庫。 
   
     ```  
     data source=localhost; initial catalog=Subscribers
@@ -77,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  將逾時指定為 30 秒。  
   
-3.  按一下 [驗證查詢]，然後按一下 [下一步]。
+3.  按一下 [驗證查詢]，然後按一下 [套用]。
 ## <a name="delivery-options"></a>傳遞選項
 填入下列值：
 
@@ -88,7 +85,7 @@ ms.lasthandoff: 08/09/2017
 **轉譯格式** | 從資料集取得值 | 格式
 **寫入模式**| 輸入值| 自動遞增    
 **副檔名** |輸入值 |True
-**[使用者名稱]** | 輸入值 | 輸入網域使用者帳戶。 以此格式輸入：\<網域 >\\\<帳戶 >。 使用者帳戶必須擁有您設定之路徑的權限。 
+**[使用者名稱]** | 輸入值 | 輸入網域使用者帳戶。 請以此格式來輸入：\<網域>\\\<帳戶>。 使用者帳戶必須擁有您設定之路徑的權限。 
 **[密碼]** | 輸入值 | 輸入密碼
 
 ## <a name="report-parameters"></a>報表參數
@@ -98,12 +95,12 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>後續步驟  
 當訂閱執行時，會將四個報表檔傳遞至您指定的檔案共用，「訂閱者」  資料來源中的每筆訂單各一個。 在資料 (資料應該隨著訂單而不同)、轉譯格式及檔案格式等方面，每項傳遞都應該是唯一的。 您可以開啟共用資料夾中的每一份報表，確認每個版本都是根據您定義的訂閱選項來自訂的。  
   
-![訂用帳戶所建立的檔案清單](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "訂用帳戶所建立的檔案清單")  
+![訂閱建立的檔案清單](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "訂閱建立的檔案清單")  
   
 入口網站中的訂閱頁面將包含訂閱的 [上次執行] 日期和 [狀態]。 
 **注意：** 請在訂閱執行之後重新整理頁面，以便查看更新的資訊。  
     
-![訂用帳戶會在報表管理員中](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "訂用帳戶會在報表管理員")  
+![報表管理員中的訂閱結果](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "報表管理員中的訂閱結果")  
   
 此步驟是＜定義資料驅動訂閱＞教學課程的總結。   
   
@@ -115,5 +112,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

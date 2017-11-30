@@ -1,5 +1,5 @@
 ---
-title: "變更資料列高度或資料行寬度 （報表產生器及 SSRS） |Microsoft 文件"
+title: "變更資料列高度或資料行寬度 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 6b1a6cf8ee0f04929c645854c5f162d30ce04405
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>變更資料列高度或資料行寬度 (報表產生器及 SSRS)
   當您設定資料列高度時，就是針對轉譯報表中的資料列指定最大高度。 不過，根據預設，資料列中的文字方塊會設定為垂直成長，以便在執行階段容納其資料，而且這可能會導致資料列擴展超過您所指定的高度。 若要設定固定的資料列高度，您必須變更文字方塊屬性，讓它們不會自動擴展。  
@@ -45,11 +44,11 @@ ms.lasthandoff: 09/27/2017
   
 1.  在 [設計] 檢視中，按一下資料表資料列中的儲存格。  
   
-     ![在資料表中選取資料格](../../reporting-services/report-design/media/table-selectcell.png "資料表中選取資料格")  
+     ![資料表中選取的資料格](../../reporting-services/report-design/media/table-selectcell.png "資料表中選取的資料格")  
   
 2.  在顯示的 **[屬性]** 窗格中，修改 **[高度]** 屬性，然後按一下 **[屬性]** 窗格外的任何位置。  
   
-     ![針對選取的資料表資料格屬性 窗格](../../reporting-services/report-design/media/cell-propertiespane.png "屬性 窗格，針對選取的資料表資料格")  
+     ![適用於所選取資料表資料格的 [屬性] 窗格](../../reporting-services/report-design/media/cell-propertiespane.png "適用於所選取資料表資料格的 [屬性] 窗格")  
   
 ### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>防止資料列自動垂直擴展  
   
@@ -57,7 +56,7 @@ ms.lasthandoff: 09/27/2017
   
 2.  按一下資料列控制代碼，即可選取此資料列。  
   
-3.  在 [屬性] 窗格中，設定為 CanGrow **False**。  
+3.  在 [屬性] 窗格中，將 CanGrow 設為 [False]。  
   
     > [!NOTE]  
     >  如果您看不到 [屬性] 窗格，請按一下 **[檢視]** 功能表上的 **[屬性]**。  
@@ -71,12 +70,11 @@ ms.lasthandoff: 09/27/2017
 3.  按一下以抓取資料行的邊緣，然後向左或向右移動，以便調整資料行寬度。  
   
 ## <a name="see-also"></a>另請參閱  
- [Tablix 資料區域 （報表產生器及 SSRS）](tablix-data-region-report-builder-and-ssrs.md)   
- [Tablix 資料區域資料格、 列和資料行 （報表產生器） 和 SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [資料表 （報表產生器及 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [矩陣 （報表產生器及 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   
- [清單 （報表產生器及 SSRS）](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [資料表、 矩陣和清單 （報表產生器及 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Tablix 資料區 (報表產生器及 SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablix 資料區資料格、資料列及資料行 (報表產生器及 SSRS)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [資料表 (報表產生器及 SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [矩陣 (報表產生器及 SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
+ [清單 (報表產生器及 SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [資料表、矩陣和清單 (報表產生器及 SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

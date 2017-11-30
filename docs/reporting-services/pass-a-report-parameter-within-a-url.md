@@ -1,5 +1,5 @@
 ---
-title: "將報表參數，在 URL 內傳遞 |Microsoft 文件"
+title: "在 URL 內傳遞報表參數 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
 - passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d16e5466bbbdd2f15ba36540ba2cde8d0417b1dd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>在 URL 內傳遞報表參數
   您可以在報表 URL 中包括報表參數，以便將它們傳遞給報表。 這些 URL 參數不會加上前置詞，因為它們會直接傳遞給報表處理引擎。  
@@ -111,9 +110,8 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [URL 存取 &#40;SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+## <a name="see-also"></a>另請參閱  
+ [URL 存取 &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)  
   
   
-

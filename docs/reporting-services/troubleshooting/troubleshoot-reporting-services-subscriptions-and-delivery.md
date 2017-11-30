@@ -1,5 +1,5 @@
 ---
-title: "疑難排解 Reporting Services 訂閱與傳遞 |Microsoft 文件"
+title: "針對 Reporting Services 訂用帳戶和傳遞進行疑難排解 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c3031036636e8c2ba2e2a0487ea2092c882c3e0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ab2dfe5e8abdc1cb3f168ae2b5e146e08ed3e5bc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>為 Reporting Services 訂閱與傳遞疑難排解
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 如果您是在 Microsoft Windows Server 2003 上執行使用郵局通訊協定第 3 版 (POP3) 的電子郵件應用程式，可能會無法使用本機 POP3 伺服器來傳送報表。 如果您設定報表伺服器以本機 POP3 伺服器傳送電子郵件，並建立傳送報表的訂閱，則可能會收到下列錯誤訊息：  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Failure sending mail: <error message>`  
   
-其中\<錯誤訊息 > 取代為從共同作業 Data Objects (CDO) 傳回的其他錯誤訊息資訊。  
+其中 \<錯誤訊息> 會取代為協同作業資料物件 (CDO) 所傳回的其他錯誤訊息資訊。  
   
 ### <a name="to-resolve-this-problem"></a>若要解決這個問題：  
 * 將 `SendUsing` Rsreportserver.config **檔案中的** 元素的值設為 1。  
@@ -84,5 +83,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

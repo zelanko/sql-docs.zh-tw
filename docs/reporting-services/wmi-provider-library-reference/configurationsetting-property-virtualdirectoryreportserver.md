@@ -1,5 +1,5 @@
 ---
-title: "ConfigurationSetting 屬性-VirtualDirectoryReportServer |Microsoft 文件"
+title: "ConfigurationSetting 屬性 - VirtualDirectoryReportServer | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- VirtualDirectoryReportServer property
+helpviewer_keywords: VirtualDirectoryReportServer property
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 51dad011a884370b009e7bb43e9012079859aca8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 68879d004cae62d22353431666fe920c26f7c0ae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---virtualdirectoryreportserver"></a>ConfigurationSetting 屬性-VirtualDirectoryReportServer
+# <a name="configurationsetting-property---virtualdirectoryreportserver"></a>ConfigurationSetting 屬性 - VirtualDirectoryReportServer
   傳回報表伺服器應用程式的虛擬目錄。 唯讀。  
   
 ## <a name="syntax"></a>語法  
@@ -47,8 +45,7 @@ public string VirtualDirectoryReportServer;
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

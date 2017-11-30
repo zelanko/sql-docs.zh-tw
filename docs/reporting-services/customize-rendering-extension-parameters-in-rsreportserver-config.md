@@ -1,5 +1,5 @@
 ---
-title: "自訂轉譯延伸模組參數，在 RSReportServer.Config 中的 |Microsoft 文件"
+title: "在 RSReportServer.Config 中自訂轉譯延伸模組參數 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a04703eb04c9745fd5a1de0a5378b29210f61b65
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>在 RSReportServer.Config 中自訂轉譯延伸模組參數
   您可以在 RSReportServer 組態檔中指定轉譯延伸模組參數，以便覆寫在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器上執行之報表的預設報表轉譯行為。 您可以修改轉譯延伸模組參數來達成下列目標：  
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **DeviceInfo** XML 結構會定義轉譯延伸模組所使用的裝置資訊設定。 大部分的轉譯延伸模組參數會指定為裝置資訊設定。  
   
- 您可以使用文字編輯器來修改 RSReportServer.config 檔案， 此檔案可以在 \Reporting Services\Report Server\Bin 資料夾中找到。 如需有關修改組態檔的詳細資訊，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config &#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ 您可以使用文字編輯器來修改 RSReportServer.config 檔案， 此檔案可以在 \Reporting Services\Report Server\Bin 資料夾中找到。 如需修改設定檔的詳細資訊，請參閱[修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
 ## <a name="changing-the-display-name"></a>變更顯示名稱  
  轉譯延伸模組的顯示名稱會出現在報表工具列的 [匯出] 清單中。 預設顯示名稱的範例包括網頁封存、TIFF 檔案和 Acrobat (PDF) 檔案。 藉著指定組態檔中的 **OverrideNames** 元素，您可以使用自訂的值來取代預設的顯示名稱。 此外，如果您正在定義單一轉譯延伸模組的兩個執行個體，也可以使用 **OverrideNames** 元素在 [匯出] 清單中區分每一個執行個體。  
@@ -134,7 +133,7 @@ ms.lasthandoff: 08/09/2017
 </Render>  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [RsReportServer.config 組態檔](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RSReportDesigner 組態檔](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [CSV 裝置資訊設定](../reporting-services/csv-device-information-settings.md)   
@@ -146,4 +145,3 @@ ms.lasthandoff: 08/09/2017
  [XML 裝置資訊設定](../reporting-services/xml-device-information-settings.md)  
   
   
-

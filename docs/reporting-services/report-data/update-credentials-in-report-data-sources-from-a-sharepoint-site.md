@@ -1,5 +1,5 @@
 ---
-title: "更新報表資料來源，從 SharePoint 網站中的認證 |Microsoft 文件"
+title: "從 SharePoint 網站更新報表資料來源的認證 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85652be59a369ff3b571f8858a744962b5b3f619
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a51aa3ec7297ff2c183057f32e35a9012dddc6af
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>從 SharePoint 網站更新報表資料來源的認證
   本主題描述如何更新內嵌於報表內的資料來源，以及儲存在 SharePoint 文件庫中的共用資料來源。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  在 [名稱] 資料行中，按一下資料來源。  
   
-4.  確認已針對 [連接類型] 選取 [自訂資料來源] 選項。  
+4.  確認已針對 [連線類型] 選取 [自訂資料來源] 選項。  
   
      這個選項表示資料來源內嵌於報表中。  
   
@@ -50,15 +49,15 @@ ms.lasthandoff: 08/09/2017
   
      在某些情況下也可以使用 [不需要認證] 選項。  
   
-     針對某些資料來源類型，必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[從外部資料來源加入資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 和[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) 中對應資料來源類型的主題。  
+     針對某些資料來源類型，必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[從外部資料來源新增資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 和[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) 中對應資料來源類型的主題。  
   
 7.  輸入使用者名稱和密碼。  
   
-    -   如果帳戶是 Windows 網域使用者帳戶，會將它指定格式如下：\<網域 >\\< 帳戶\>，然後選取**當做 Windows 認證連接到資料來源時使用**。  
+    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連線到資料來源時作為 Windows 認證]。  
   
     -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]**。 如果資料庫伺服器支援模擬或委派，您可以選取 **[設定執行內容到這個帳戶]**。  
   
-8.  若要驗證資料來源能夠使用更新的認證連接，請按一下 [測試連接]。  
+8.  若要驗證資料來源能夠使用更新的認證連接，請按一下 [測試連線]。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -70,28 +69,27 @@ ms.lasthandoff: 08/09/2017
   
      [資料來源] 頁面隨即開啟。  
   
-3.  除非您要將共用資料來源連接到其他類型的資料來源、其他伺服器或資料存放區，否則讓 [資料來源類型] 和 [連接字串] 選項保持不變。  
+3.  除非您要將共用資料來源連線到其他類型的資料來源、其他伺服器或資料存放區，否則讓 [資料來源類型] 和 [連接字串] 選項保持不變。  
   
 4.  針對 [認證] 選取 [預存認證]。  
   
      在某些情況下也可以使用 [不需要認證] 選項。 只有在資料來源未接受認證，或是使用一些其他方式傳送認證時，這個選項才有用。  
   
-     針對某些資料來源類型，必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[從外部資料來源加入資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 和[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) 中對應資料來源類型的主題。  
+     針對某些資料來源類型，必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[從外部資料來源新增資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 和[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) 中對應資料來源類型的主題。  
   
 5.  輸入使用者名稱和密碼。  
   
-    -   如果帳戶是 Windows 網域使用者帳戶，會將它指定格式如下：\<網域 >\\< 帳戶\>，然後選取**當做 Windows 認證連接到資料來源時使用。**  
+    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連線到資料來源時作為 Windows 認證]。  
   
     -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]**。 如果資料庫伺服器支援模擬或委派，您可以選取 **[設定執行內容到這個帳戶]**。  
   
-6.  若要驗證資料來源能夠使用更新的認證連接，請使用 [測試連接]。  
+6.  若要驗證資料來源能夠使用更新的認證連線，請使用 [測試連接]。  
   
 7.  驗證是否已選取 [啟用此資料來源]。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [將文件上傳到 SharePoint 文件庫 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "RS.exe 公用程式 (SSRS) |Microsoft 文件"
+title: "RS.exe 公用程式 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - scripts [Reporting Services], command prompt
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 8b31796877b7ae964b1d4ec124979d213d9be4b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe 公用程式會處理您在輸入檔中所提供的指令碼。 使用此公用程式可自動化報表伺服器部署和管理工作。  
@@ -85,7 +85,7 @@ rs {-?}
  如果未指定值，則會使用 Mgmt2005 端點。 如需有關 SOAP 端點的詳細資訊，請參閱＜ [Report Server Web Service Endpoints](../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)＞。  
   
  **-l** *time_out*  
- (選擇性) 指定與伺服器的連接逾時之前所經過的秒數。 預設值是 60 秒。 若未指定逾時值，則使用預設值。 值為 **0** 指定連接永不逾時。  
+ (選擇性) 指定與伺服器的連接逾時之前所經過的秒數。預設值是 60 秒。 若未指定逾時值，則使用預設值。 值為 **0** 指定連接永不逾時。  
   
  **-b**  
  (選擇性) 指定以批次方式執行指令碼檔案中的命令。 若有任何命令失敗，便會回復此批次。 有些命令無法批次處理，而會依平常方式執行。 只有在指令碼中發生未處理的例外狀況會導致批次復原。 如果指令碼處理例外狀況並從 **Main**正常地傳回，則會認可該批次。 如果忽略此參數，則會執行此命令而不會建立批次。 如需詳細資訊，請參閱 [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
@@ -126,7 +126,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 > [!TIP]  
 >  如需詳細範例，請參閱 [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 - [執行 Reporting Services 指令碼檔案](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
 - [編寫部署和管理工作的指令碼](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 - [利用 rs.exe 公用程式與 Web 服務編寫指令碼](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   

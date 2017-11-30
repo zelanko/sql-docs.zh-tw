@@ -1,5 +1,5 @@
 ---
-title: "控制報表頁面上的 Tablix 資料區顯示 |Microsoft 文件"
+title: "控制報表頁面上的 Tablix 資料區顯示 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 27f2dab25bd2c5e956b847666836de8757a65911
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea832d4470d5a7cdca520cd568baf8df32fa390c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>控制報表頁面上的 Tablix 資料區顯示
 請了解您可在資料表、矩陣或清單資料區之 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中設定的屬性，以變更它在您檢視報表時的顯示方式。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **控制排序次序**。 若要控制排序次序，您可以針對資料區定義排序運算式。 若要控制與群組相關聯之資料列和資料行的排序次序，您可以針對群組 (包括詳細資料群組) 定義排序運算式。 您也可以加入互動式排序按鈕，讓使用者排序 Tablix 資料區或其群組。 如需詳細資訊，請參閱[在資料區中排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)。  
   
--   **沒有資料時顯示訊息**。 報表資料集在執行階段沒有資料存在時，您可以撰寫自己要顯示的訊息來取代資料區。 如需詳細資訊，請參閱[在資料區中設定沒有資料的訊息 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)。  
+-   **沒有資料時顯示訊息**。 報表資料集在執行階段沒有資料存在時，您可以撰寫自己要顯示的訊息來取代資料區。 如需詳細資訊，請參閱[在資料區域中設定沒有資料的訊息 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)。  
   
 -   **有條件地隱藏資料**。 若要有條件地控制要顯示或隱藏一個資料區域或部分資料區域，您可以將 Hidden 屬性設定為 **True** 或設定為運算式。 運算式可以包含報表參數的參考。 您也可以指定切換項目，讓使用者可以決定顯示詳細資料。 如需詳細資訊，請參閱[向下鑽研動作 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)。  
   
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="controlling-how-a-tablix-data-region-renders-on-a-page"></a>控制 Tablix 資料區在頁面上轉譯的方式  
  下列清單將描述您可以協助控制 Tablix 資料區如何在報表中顯示的方式：  
   
--   **控制分頁**。 若要控制顯示在每個報表頁面上的資料量，您可以針對資料區域設定分頁符號。 您也可以針對群組設定分頁符號。 分頁符號可以透過減少需要在每個頁面上處理的資料量來影響視需要轉譯的效能。 如需詳細資訊，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md) 和[加入分頁符號 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)。  
+-   **控制分頁**。 若要控制顯示在每個報表頁面上的資料量，您可以針對資料區域設定分頁符號。 您也可以針對群組設定分頁符號。 分頁符號可以透過減少需要在每個頁面上處理的資料量來影響視需要轉譯的效能。 如需詳細資訊，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md) 和[新增分頁符號 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)。  
   
 -   **在資料列標頭的任何一端顯示資料**。 您不一定要將資料列標頭顯示在 Tablix 資料區的旁邊。 您可以在資料行之間移動資料列標頭，使資料的資料行出現在資料列標頭之前。 若要這樣做，請修改矩陣的 GroupsBeforeRowHeaders 屬性。 您可以透過 [屬性] 視窗存取這個屬性。 這個屬性的值是整數；例如，2 這個值會先顯示資料區域資料行的兩個群組執行個體，然後才顯示包含資料列標頭的資料行。  
   
@@ -75,15 +74,14 @@ ms.lasthandoff: 08/09/2017
  如需將報表匯出成不同格式如何影響 Tablix 資料區在頁面上轉譯之方式的詳細資訊，請參閱[轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [將多個資料區域連結至相同的資料集 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [巢狀的資料區 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [總計、 彙總與內建集合 &#40; 的運算式範圍報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [控制分頁符號、 標題、 資料行和資料列 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Tablix 資料區 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [資料表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [將多個資料區連結至相同的資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [控制分頁符號、標題、資料行和資料列 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [資料表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [建立矩陣](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [建立發票與表單清單](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [資料表、 矩陣和清單 &#40;報表產生器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [使用清單建立發票和表單](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

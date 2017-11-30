@@ -1,5 +1,5 @@
 ---
-title: "暫停及繼續共用排程 |Microsoft 文件"
+title: "暫停及繼續共用排程 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], resuming
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 71dcd66394cf96bd6994e40de76b10a519f32a74
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pause-and-resume-shared-schedules"></a>暫停及繼續共用排程
   您可以暫停並繼續使用中的共用排程。 暫停共用排程提供暫時凍結用於觸發報表處理與訂閱排程的方法。 只有共用排程可以暫停並繼續。 您無法暫停報表特定排程。  
@@ -68,11 +67,10 @@ ms.lasthandoff: 08/09/2017
   
 4.  選取排程，然後按一下 **[暫停選取的排程]** 或 **[執行選取的排程]**。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]**。  
   
-## <a name="see-also"></a>請參閱＜  
- [排程](../../reporting-services/subscriptions/schedules.md)   
- [建立、 修改及刪除共用排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [變更時區和時鐘設定報表伺服器上](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
- [管理執行程序](../../reporting-services/subscriptions/manage-a-running-process.md)  
+## <a name="see-also"></a>另請參閱  
+ [[排程]](../../reporting-services/subscriptions/schedules.md)   
+ [建立、修改和刪除共用排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [變更報表伺服器上的時區和時鐘設定](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   
-

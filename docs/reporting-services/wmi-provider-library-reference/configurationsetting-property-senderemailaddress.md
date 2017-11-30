@@ -1,5 +1,5 @@
 ---
-title: "SenderEmailAddress 屬性 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文件"
+title: "SenderEmailAddress 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SenderEmailAddress
-apilocation:
-- reportingservices.mof
+apiname: SenderEmailAddress
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SenderEmailAddress property
+helpviewer_keywords: SenderEmailAddress property
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3a84aa4e943eaa4cbc20dc2309ab41d32db19207
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6c165c5ea53ae8d3014417c97abcce0fc495d17e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---senderemailaddress"></a>ConfigurationSetting 屬性-SenderEmailAddress
+# <a name="configurationsetting-property---senderemailaddress"></a>ConfigurationSetting 屬性 - SenderEmailAddress
   取得用以從報表伺服器傳送電子郵件的位址。 唯讀。  
   
 ## <a name="syntax"></a>語法  
@@ -52,8 +48,7 @@ public string SenderEmailAddress;
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

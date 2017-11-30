@@ -1,5 +1,5 @@
 ---
-title: "新增或移除頁首或頁尾 （報表產生器及 SSRS） |Microsoft 文件"
+title: "新增或移除頁首或頁尾 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 551fbc941b9d0aaf5c2a4cbd9a7d0b2a7828096e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>加入或移除頁首或頁尾 (報表產生器及 SSRS)
   您可以將靜態文字、影像、線條、矩形和框線加入至頁首或頁尾。 如果您想要在頁首或頁尾放入變數或計算的資料，可以在文字方塊中放置運算式和資料繫結影像。  
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  以滑鼠右鍵按一下頁首，然後按一下 [頁首屬性] 來加入框線、背景影像、色彩，或調整頁首的寬度。 然後按一下 [確定]。  
   
-4.  以滑鼠右鍵按一下頁尾，然後按一下 [頁尾屬性] 來加入框線、背景影像、色彩，或調整頁尾的寬度。 然後按一下 [確定]。  
+4.  以滑鼠右鍵按一下頁尾，然後按一下 [頁尾屬性] 來新增框線、背景影像、色彩，或調整頁尾的寬度。 然後按一下 [確定]。  
   
 ### <a name="to-remove-a-page-header-or-footer"></a>若要移除頁首或頁尾  
   
@@ -68,8 +67,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  您移除頁首或頁尾時，會將其從報表刪除。 如果您後來又重新加入頁首或頁尾，則先前您加入頁首或頁尾的項目並不會重新出現。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   
-

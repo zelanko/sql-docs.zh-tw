@@ -1,26 +1,24 @@
 ---
-title: "Reporting Services 行動報表中的對應 |Microsoft 文件"
+title: "Reporting Services 行動報表中的地圖 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 975ad199788370f01686c50d5dcc05f093c31f50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Reporting Services 行動報表中的地圖
 地圖是將地理資料視覺化的最佳方式。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 提供三種不同類型的地圖視覺效果，以及針對各大洲和一些個別國家/地區內建的地圖。 您也可以 [上傳和使用自訂的地圖](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。   
@@ -63,12 +61,12 @@ SQL Server 行動報表提供三種不同類型的地圖，適用於各種不同
   
 1. 選取左上角的 [資料] 索引標籤。  
   
-2. 選取**將資料加入**，然後選擇**本機 Excel**或**SSRS 伺服器**。  
+2. 選取 [Add Dat] (新增資料)，然後選取 [本機 Excel] 或 [SSRS 伺服器]。  
   
    > **提示**︰請確定 [資料為適用於行動報表的格式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
   
 3. 選取所需的工作表，然後選取 [匯入]。  
-   您會在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 中看見您的資料。  
+   您會在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中看見您的資料。  
   
 4. 在這個 [資料] 檢視 > [資料屬性] 面板 > [索引鍵] 下方的左側方塊中，選取包含地圖資料的資料表，並在右側方塊中選取符合您地圖區域的索引鍵欄位。  
   
@@ -85,8 +83,7 @@ SQL Server 行動報表提供三種不同類型的地圖，適用於各種不同
 8. 選取左上角的 [儲存] 圖示，以及 [本機儲存] 於您的電腦上或 [儲存到伺服器]。  
   
 ### <a name="see-also"></a>另請參閱  
--  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+-  [Reporting Services 行動報表中的自訂地圖](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-

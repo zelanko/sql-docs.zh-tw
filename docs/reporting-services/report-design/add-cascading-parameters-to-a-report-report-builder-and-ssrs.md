@@ -1,5 +1,5 @@
 ---
-title: "將串聯參數加入至報表 （報表產生器及 SSRS） |Microsoft 文件"
+title: "將串聯參數新增至報表 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: a0d28c5a5210eef5f2f6eea857f9361bbe434ad6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>將串聯參數加入至報表 (報表產生器及 SSRS)
   串聯參數會提供管理大量報表資料的方法。 您可以定義一組相關的參數，讓某一個參數的值清單會視另一個參數所選擇的值而定。 例如，第一個參數是獨立的，而且可能代表一個產品類別目錄的清單。 使用者選取類別目錄時，第二個參數會相依於第一個參數的值。 其值會隨著所選類別目錄內的子類別目錄清單更新。 當使用者檢視報表時，類別目錄與子類別目錄參數的值都用於篩選報表資料。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 若要建立串聯參數，您要先定義資料集查詢，然後加入所需之每個串聯參數的查詢參數。 您也必須針對每個串聯參數建立個別的資料集來提供可用的值。 如需詳細資訊，請參閱[新增、 變更或刪除報表參數 &#40; 的可用值報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+ 若要建立串聯參數，您要先定義資料集查詢，然後加入所需之每個串聯參數的查詢參數。 您也必須針對每個串聯參數建立個別的資料集來提供可用的值。 如需詳細資訊，請參閱[為報表參數新增、變更或刪除可用的值 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)。  
   
  順序對於串聯參數相當重要，因為列在清單中後面之參數的資料集查詢會包含清單中前面每個參數的參考。 在執行階段，參數在 [報表資料] 窗格中的順序會決定參數查詢出現在報表中的順序，因此，也會決定使用者選擇每個後續參數值的順序。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/09/2017
 6.  按一下 **[執行]** (**!**)。 加入查詢參數然後執行查詢之後，會自動建立對應到查詢參數的報表參數。  
   
     > [!NOTE]  
-    >  您第一次執行查詢時，查詢參數的順序會決定這些參數在報表中建立的順序。 若要變更順序，請參閱[變更報表參數 &#40; 順序報表產生器及 SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+    >  您第一次執行查詢時，查詢參數的順序會決定這些參數在報表中建立的順序。 若要變更順序，請參閱[變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 08/09/2017
     WHERE (Category = @Category)  
     ```  
   
-     在 WHERE 子句中，類別是從欄位名稱\<資料表 > 和@Category是查詢參數。 此陳述式會產生子類別目錄中所指定的分類清單@Category。 在執行階段，系統會利用使用者針對報表參數選擇的同名值填入此值。  
+     在 WHERE 子句中，[類別目錄] 是 \<資料表> 的欄位名稱，而 @Category 則是查詢參數。 此陳述式會針對在 @Category 中指定的類別目錄，產生子類別目錄的清單。 在執行階段，系統會利用使用者針對報表參數選擇的同名值填入此值。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -158,12 +158,12 @@ ms.lasthandoff: 08/09/2017
   
 4.  按一下 **[檢視報表]**。 報表會根據您所選擇的參數，更新顯示。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [加入、變更或刪除報表參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [報表參數 &#40;報表產生器和報表設計工具 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [教學課程： 將參數加入您的報表 &#40;報表產生器 &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)   
- [加入資料集篩選、 資料區域篩選和群組篩選 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

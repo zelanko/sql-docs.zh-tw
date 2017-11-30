@@ -1,5 +1,5 @@
 ---
-title: "詞彙 （報表產生器） |Microsoft 文件"
+title: "詞彙 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d58372b901950fa8a7f674a417aa76457e80c466
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="glossary-report-builder"></a>詞彙 (報表產生器)
   
@@ -82,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 |色彩規則 (color rules)|自動將色彩指派給地圖圖層上每個地圖元素的演算法。|  
 |色階 (color scale)|一種地圖圖例類型，用來解譯地圖上所代表的色彩。|  
 |Common Language Runtime|在 Managed 程式碼執行核心的引擎。 這個執行階段提供含有如跨語言整合、程式碼存取安全性、物件存留期間管理，以及偵錯和設定檔作業支援的 Managed 程式碼。|  
-|複雜運算式 (complex expression)|無法以單一內建欄位參考，並顯示在設計介面上做為運算式 <\<Expr >>。|  
+|複雜運算式 (complex expression)|一種運算式，這種運算式無法以單一內建欄位參考表示，而且在設計介面上會顯示為 <\<Expr>>。|  
 |串連 (concatenation)|指將兩個或多個字元字串或運算式結合成單一字元字串或運算式，或將兩個或多個二進位字串或運算式結合成單一二進位字串或運算式。|  
 |並行 (concurrency)|讓多位使用者同時存取和變更共用資料的程序。 SQL Server 利用鎖定，讓多位使用者同時存取和變更共用資料，且彼此不會發生衝突。|  
 |組態檔 (config file)|請參閱其他詞彙：組態檔|  
@@ -364,7 +363,7 @@ ms.lasthandoff: 08/09/2017
 |使用者執行個體 (user instance)|由父執行個體代表使用者所產生的 SQL Server Express 執行個體。|  
 |值 (y) 軸 (value (y) axis)|用來顯示圖表中之數值資料值的軸。 通常是垂直軸。 例外：在橫條圖中，這兩個軸是相反的，因此 y 軸會顯示群組資料。|  
 |值運算式 (value expression)|在多維度運算式 (MDX) 中，會傳回值的運算式。 值運算式可以處理集合、Tuple、成員、層級、數字或字串。|  
-|變數|1.在 Integration Services 中，變數是用於儲存可在指令碼、運算式和屬性運算式中使用的值，用以設定資料行值及封裝物件的屬性。 <br />2.已指派值的定義實體。 定義區域變數DECLARE@localvariable陳述式和指派一個初始值宣告其中一種 SELECT 陳述式批次內或SET@localvariable陳述式。|  
+|變數|1.在 Integration Services 中，變數是用於儲存可在指令碼、運算式和屬性運算式中使用的值，用以設定資料行值及封裝物件的屬性。 <br />2.已指派值的定義實體。 區域變數利用 DECLARE@localvariable 陳述式來定義，且會在利用 SELECT 或 SET@localvariable 陳述式來宣告區域變數的陳述式批次內指派初始值。|  
 |可變間隔 (variable interval)|Reporting Services 圖表上的選項，可指定來根據圖表寬度或高度，自動計算某個軸上可放置的最佳標籤數目。|  
 |視覺效果 (visualization)|在地圖、圖表和量測計中，使用者選擇用來視覺化分析資料的方式。|  
 |Web 服務|在 Reporting Services 中，透過 HTTP 使用簡易物件存取通訊協定 (SOAP) 而且在用戶端程式與報表伺服器之間當做通訊介面的服務。|  
@@ -375,8 +374,7 @@ ms.lasthandoff: 08/09/2017
 |X 軸 (x-axis)|請參閱其他詞彙：類別目錄 (x) 軸|  
 |Y 軸 (y-axis)|請參閱其他詞彙：值 (y) 軸|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "建立、 修改和刪除報表記錄中的快照集 |Microsoft 文件"
+title: "建立、修改及刪除報表記錄中的快照集 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c3d0de81994b5a234ead420277718c760f9ddb3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9a85cae2bbc12b86357160781596b1730fba7c88
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>建立、修改及刪除報表記錄中的快照集
   報表記錄是報表快照集的集合。 您可以加入和刪除快照集，或修改影響報表記錄儲存區的屬性，來維護報表記錄。 您可以用手動方式或依據排程來建立報表記錄。  
@@ -65,12 +64,11 @@ ms.lasthandoff: 08/09/2017
   
  刪除報表時，報表記錄也會一併刪除。 例如，若您刪除每月銷售額報表而以較新版本加以取代，則所有和該報表關聯的報表記錄也會遭到刪除。 然而，如果您移動報表，則所有報表記錄會隨著移動。  
   
-## <a name="see-also"></a>請參閱＜  
- [建立報表記錄 &#40;Reporting Services SharePoint 整合模式 &#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [報表管理員 &#40;SSRS 原生模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+## <a name="see-also"></a>另請參閱  
+ [建立報表記錄 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [加入至報表記錄 &#40; 的快照集報表管理員 &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [限制報表記錄 &#40;報表管理員 &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
+ [將快照集加入報表記錄 &#40;報表管理員&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [限制報表記錄 &#40;報表管理員&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
   
   
-

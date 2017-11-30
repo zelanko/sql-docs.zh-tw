@@ -1,5 +1,5 @@
 ---
-title: "使用 WebForms ReportViewer 控制項 |Microsoft 文件"
+title: "使用 WebForms ReportViewer 控制項 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -10,47 +10,44 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 98afd0f9a34c1b15fce4905fcc1f16c3b9b024fb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b3b92dbd07d94a0e30c93d994c5eaaa28cb7627d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控制項
   若要檢視已部署至報表伺服器或存在於本機檔案系統的報表，您可以使用 WebForms ReportViewer 控制項在 Web 應用程式中加以轉譯。  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>若要在 Web 應用程式中使用 ReportViewer 控制項  
   
-1.  建立新[!INCLUDE[msCoName](../../includes/msconame-md.md)]ASP.NET 網站上使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)]或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。  
+1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 建立新的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET 網站。  
   
-     \- 或者-  
+     \- 或 -  
   
      開啟現有的 ASP.NET 網站並加入新的 Web Form。  
   
-2.  找出**ScriptManager**控制**AJAX 擴充功能**群組**工具箱**視窗中，並將它拖曳至設計介面的 Web 表單。  
+2.  從 [工具箱] 視窗的 [AJAX 延伸模組] 群組中找出 **ScriptManager** 控制項，並將它拖曳到 Web 表單的設計介面。  
   
-     如果**工具箱**不是可見，您可以存取它從**檢視**功能表選取**工具箱**。  
+     如果看不到 [工具箱]，可以從 [檢視] 功能表選取 [工具箱] 加以存取。  
   
-3.  找出**ReportViewer**控制**工具箱**並將它拖曳至設計介面下方**ScriptManager**控制項。  
+3.  在 [工具箱] 中找出 **ReportViewer** 控制項，並將它拖曳至設計介面上的 **ScriptManager** 控制項下方。  
   
-     **ReportViewer**名為 reportViewer1 的控制項加入至表單。  
+     名為 reportViewer1 的 **ReportViewer** 控制項會新增至表單。  
   
- 控制項加入至表單後**ReportViewer 工作**智慧標籤會出現提示您選取報表。 如果您想要檢視的報表已部署至報表伺服器選取**\<伺服器報表 >**選項**選擇報表**下拉式清單。 一次**\<伺服器報表 >**選項是選取的兩個額外的屬性會出現，**報表伺服器 Url**和**報表路徑**。 **報表伺服器 Url**是到報表伺服器的位址和**報表路徑**是您要轉譯報表的完整路徑。  
+ 將控制項新增至表單後，[ReportViewer 工作] 智慧標籤將會顯示以提示您選取報表。 如果您希望檢視的報表已部署到報表伺服器，請從 [選擇報表] 下拉式清單，選取 [\<伺服器報表>] 選項。 選取 [\<伺服器報表>] 選項之後，會出現兩個額外屬性：[報表伺服器 URL] 和 [報表路徑]。 [報表伺服器 URL] 是到報表伺服器的位址，[報表路徑] 則是要轉譯之報表的完整路徑。  
   
- 如果您想要在本機模式檢視報表選取**設計新報表**選項來啟動報表設計師，或選取已是現有專案一部分的報表。 您選取報表之後，請務必輸入報表 RDLC 檔案中的名稱**ReportPath** ReportViewer 控制項的屬性。 這個屬性會出現在**LocalReport**節點**屬性**窗格。  
+ 如果您要以本機模式檢視報表，請選取 [設計新報表] 選項以啟動報表設計師，或選取已是現有專案一部分的報表。 在您選取報表之後，請務必在 ReportViewer 控制項的 **ReportPath** 屬性中輸入報表 RDLC 檔案的名稱。 這個屬性會出現在 [屬性] 窗格的 **LocalReport** 節點下方。  
   
- 當轉譯報表時，您可以選擇隱藏 ReportViewer 工具列上的一個或多個項目。 例如，您可以隱藏列印按鈕。 若要隱藏工具列項目，將以下 ReportViewer 屬性設為**False**中**屬性**窗格。  
+ 當轉譯報表時，您可以選擇隱藏 ReportViewer 工具列上的一個或多個項目。 例如，您可以隱藏列印按鈕。 若要隱藏工具列項目，請在 [屬性] 窗格中將以下 ReportViewer 屬性設為 **False**。  
   
 -   **ShowBackButton**  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="viewing-reports-in-remote-processing-mode"></a>以遠端處理模式檢視報表  
  下列範例示範如何轉譯已部署到報表伺服器的報表。 這個範例使用包含在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例報表專案中的 Sales Order Detail 報表。  
   
- 此範例使用整合式 Windows 驗證，因此您必須啟用模擬。 執行此會插入下列行插入**web.config**檔案：  
+ 此範例使用整合式 Windows 驗證，因此您必須啟用模擬。 若要這樣做，請將下列行插入 **web.config** 檔案：  
   
 ```  
 <!-- Web.config file. -->  
@@ -108,7 +105,7 @@ protected void Page_Init(object sender, EventArgs e)
 }  
 ```  
   
-**在 VB.NET**
+**VB.NET**
 ```
 Imports Microsoft.Reporting.WebForms  
   
@@ -155,19 +152,19 @@ End Class
   
 1.  開啟將加入報表的網站。  
   
-2.  從**網站**功能表上，選取**加入現有項目**。  
+2.  從 [網站] 功能表上，選取 [新增現有項目]。  
   
 3.  瀏覽至安裝 AdventureWorks 報表範例專案的位置。  
   
      預設位置是 C:\Program Files\Microsoft SQL Server\100\Samples\Reporting Services\Report Samples\AdventureWorks Sample Reports。  
   
-4.  選取 Sales Order Detail.rdl 檔案，然後按一下**新增** 按鈕。  
+4.  選取 Sales Order Detail.rdl 檔案，然後按一下 [新增] 按鈕。  
   
      Sales Order Detail.rdl 檔案現在應該是專案的一部分。  
   
-5.  以滑鼠右鍵按一下方案總管 中的 Sales Order Detail.rdl 檔案，然後選取**重新命名**。 若要將報表重新命名**Sales Order Detail.rdlc**按下 ENTER。  
+5.  在方案總管中，以滑鼠右鍵按一下 Sales Order Detail.rdl 檔案，然後選擇 [重新命名]。 將報表重新命名為 **Sales Order Detail.rdlc**，然後按 ENTER。  
   
-     如果看不到 [方案總管] 中，您可以開啟它從**檢視**功能表選取 [方案總管] 中。  
+     如果看不到方案總管，可以從 [檢視] 功能表選取方案總管加以開啟。  
   
  下列的程式碼範例會為銷售訂單資料建立資料集，然後以本機模式轉譯 Sales Order Detail 報表。  
 
@@ -319,7 +316,7 @@ private void GetSalesOrderDetailData(string salesOrderNumber,
     }  
 }  
 ```  
-**在 VB.NET**
+**VB.NET**
 ```vb  
 Imports System.Data  
 Imports System.Data.SqlClient  
@@ -491,7 +488,6 @@ End Class
   
 ## <a name="see-also"></a>另請參閱  
  [使用 ReportViewer 控制項整合 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
- [ReportViewer 控制項 2016年中的資料收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
+ [ReportViewer 控制項 2016 中的資料收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "SecureConnectionLevel 屬性 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文件"
+title: "SecureConnectionLevel 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SecureConnectionLevel
-apilocation:
-- reportingservices.mof
+apiname: SecureConnectionLevel
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SecureConnectionLevel property
+helpviewer_keywords: SecureConnectionLevel property
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 926be7ba1e11f82f6306b8828b84823a91b3d515
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: be620ce014ce7357a23e20b0cbb61df79775a3b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---secureconnectionlevel"></a>ConfigurationSetting 屬性-SecureConnectionLevel
+# <a name="configurationsetting-property---secureconnectionlevel"></a>ConfigurationSetting 屬性 - SecureConnectionLevel
   傳回 RSReportServer.config 檔案中指定的安全連接層級。 唯讀。  
   
 ## <a name="syntax"></a>語法  
@@ -52,8 +48,7 @@ public Integer SecureConnectionLevel;
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

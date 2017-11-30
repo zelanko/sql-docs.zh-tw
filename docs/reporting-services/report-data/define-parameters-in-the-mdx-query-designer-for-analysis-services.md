@@ -1,5 +1,5 @@
 ---
-title: "Analysis Services 的 MDX 查詢設計工具中定義參數 |Microsoft 文件"
+title: "為 Analysis Services 定義 MDX 查詢設計工具的參數 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e3a54629b97f7e774a75d33711d34ba866b86c6c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>在 Analysis Services 的 MDX 查詢設計工具中定義參數
   若要將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源的 MDX 查詢參數化，您必須將查詢參數加入查詢中。 在 MDX 查詢設計工具中，您可以透過指定篩選，在 [設計] 模式和 [查詢] 模式中加入查詢參數。 在您使用查詢參數來定義查詢之後，Reporting Services 會自動建立報表參數和資料集來提供有效值的清單。 如此可讓使用者指定直接傳遞給查詢的值。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>在設計模式下定義 MDX 中的查詢參數  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源類型建立的資料集，然後按一下 **[查詢]**。 MDX 查詢設計工具會在 [設計] 模式中開啟。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源類型建立的資料集，然後按一下 [查詢]。 MDX 查詢設計工具會在 [設計] 模式中開啟。  
   
 2.  將維度拖曳到篩選區域，然後將它放在 **[維度]** 資料行的第一個資料格上。  
   
@@ -61,13 +60,13 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>在查詢模式下定義 MDX 中的查詢參數  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源類型建立的資料集，然後按一下 **[查詢]**。 MDX 查詢設計工具會在 [設計] 模式中開啟。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源類型建立的資料集，然後按一下 [查詢]。 MDX 查詢設計工具會在 [設計] 模式中開啟。  
   
 2.  在工具列上按一下 **[設計]** ，切換至 [查詢] 模式。  
   
-3.  MDX 查詢設計工具工具列上，按一下 **查詢參數**(![查詢參數對話方塊的圖示](../../reporting-services/report-data/media/iconqueryparameter.gif "查詢參數對話方塊的圖示"))。 [查詢參數] 對話方塊隨即開啟。  
+3.  在 MDX 查詢設計工具的工具列上，按一下 [查詢參數] (![查詢參數對話方塊圖示](../../reporting-services/report-data/media/iconqueryparameter.gif "查詢參數對話方塊圖示"))。 [查詢參數] 對話方塊隨即開啟。  
   
-4.  在**參數**資料行中，按一下  **\<輸入參數 >**，然後輸入參數的名稱。  
+4.  在 [參數] 資料行中，按一下 [\<輸入參數>]，然後鍵入參數名稱。  
   
 5.  在 [維度] 資料行中，從下拉式清單選擇一個值。  
   
@@ -88,8 +87,7 @@ ms.lasthandoff: 08/09/2017
      若要檢視可為報表參數提供可用值的資料集，請以滑鼠右鍵按一下 [報表資料] 窗格中的空白區，然後按一下 **[顯示隱藏的資料集]**。 [報表資料] 窗格會顯示報表中的所有資料集。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX &#40; analysis Services 連接類型SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [MDX 的 Analysis Services 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
  [Analysis Services MDX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   
-

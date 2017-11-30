@@ -1,5 +1,5 @@
 ---
-title: "搭配 Reporting Services 報表的資料擷取問題疑難排解 |Microsoft 文件"
+title: "針對 Reporting Services 報表的資料擷取問題進行疑難排解 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f801ab4a8033d7f457aad0483ead5cb080fd8ed
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8986a6212c34cfcaea56669e96d04384191c2e6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>搭配 Reporting Services 報表為資料擷取問題疑難排解
 在報表處理期間，第一個步驟是執行資料集查詢以擷取各資料集的報表資料。 在本機預覽報表時，您的資料來源連接和認證必須使用足夠的權限，才能將資料擷取到電腦上。 在報表伺服器上執行報表時，資料來源連接和認證也必須使用足夠的權限，才能將資料擷取到報表伺服器上。 您可以使用本主題來協助疑難排解有關報表資料擷取的問題。   
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 確認密碼不包含特殊字元。 如果無法變更此密碼，請與資料庫管理員合作，將適當的認證儲存在本機以及伺服器上，當做系統 ODBC 資料來源名稱 (DSN) 的一部分。 如需詳細資訊，請參閱 MSDN 上 .NET Framework SDK 文件集中的＜OdbcConnection.ConnectionString＞。   
   
 > [!NOTE]  
->建議您不要在連接字串中加入登入資訊，例如密碼。 報表設計師會在 [[資料來源屬性]](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) 或 [[共用資料來源屬性]](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) 對話方塊中提供 [認證] 頁面，讓您用於輸入認證。 這些認證都加上保護，儲存在報表撰寫電腦上。  
+>建議您不要在連接字串中加入登入資訊，例如密碼。 報表設計師會在[資料來源屬性](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md)或[共用資料來源屬性](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md)對話方塊中提供 [認證] 頁面，讓您用於輸入認證。 這些認證都加上保護，儲存在報表撰寫電腦上。  
   
 ## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>在查詢設計工具中執行查詢時，為什麼看不到資料？  
 當您建立資料集之後，資料集欄位集合會出現在 [報表資料] 窗格中。 有時候，資料集欄位集合不會如預期顯示。   
@@ -64,16 +63,15 @@ ms.lasthandoff: 08/09/2017
   
 若要擴展資料集欄位集合，請執行下列動作：  
 * 請確定您擁有從資料庫中擷取欄位資訊的權限。 對於某些資料來源而言，您可能擁有存取資料來源的權限，但是沒有存取資料表或資料行的權限。 您可能擁有存取檢視的權限，但對於建立檢視的預存程序，卻沒有執行權限。 若要驗證您對資料庫中特定資料表或資料行的存取權，請使用您用於報表的相同權限，在 SQL Server Management Studio 等個別應用程式中確認查詢結果。 如果您無法看到想要的查詢結果，請與系統管理員一起調整您對資料的權限。   
-* 在 [資料集屬性] 對話方塊的 [查詢] 窗格中執行查詢。 如需詳細資訊，請參閱[報表資料集 (報表產生器 3.0 及 SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  
+* 在 [資料集屬性] 對話方塊的 [查詢] 窗格中執行查詢。 如需詳細資訊，請參閱 [報表資料集 (報表產生器 3.0 及 SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  
 * 手動加入欄位。 如需詳細資訊，請參閱 [如何：加入、編輯、重新整理報表資料窗格中的欄位 (報表產生器 3.0 及 SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。   
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [錯誤和事件 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 
 
 

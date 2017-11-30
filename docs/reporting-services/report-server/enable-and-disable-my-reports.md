@@ -1,5 +1,5 @@
 ---
-title: "啟用和停用 我的報表 |Microsoft 文件"
+title: "啟用與停用我的報表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 - disabling My Reports folder
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e04d57e159b255567ebde31308db68bfed33946
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c40e45fad4833f89154ea7b0338677251437b7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-and-disable-my-reports"></a>啟用與停用我的報表
   [我的報表] 功能會配置報表伺服器資料庫中的個人儲存區，讓使用者能夠將自己的報表儲存在私人資料夾內。 身為報表伺服器管理員，您可以啟用或停用此功能，或修改安全性設定 (此設定會控制使用者可以在其工作空間執行哪些動作) 來變更此功能的運作方式。  
@@ -56,9 +55,8 @@ ms.lasthandoff: 08/09/2017
   
  請注意，若您啟用「我的報表」，當網域帳戶的使用者按下 [我的報表] 連結時，報表伺服器就會為每一位使用者建立 [我的報表] 資料夾，即使使用者不想要或不需要 [我的報表] 資料夾。 目前沒有可判斷哪些資料夾正在使用的有效方法。 您必須手動檢視資料夾，以查看其中是否包含任何資料。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [保護我的報表](../../reporting-services/security/secure-my-reports.md)   
- [報表伺服器內容管理 &#40;SSRS 原生模式 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   
-

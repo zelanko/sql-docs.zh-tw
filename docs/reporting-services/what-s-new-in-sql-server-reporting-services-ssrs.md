@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services (SSRS) 中最新消息 |Microsoft 文件"
+title: "Reporting Services (SSRS) 中的新功能 | Microsoft Docs"
 ms.date: 10/10/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
@@ -13,56 +13,54 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
-ms.openlocfilehash: 323873f42f6d3abd8442683731deef478dd2ebfb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: 65eb6720677fbb4e6f95086aefc162dc23563206
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-深入了解新功能 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 這會涵蓋主要功能領域，並在發行新的項目時更新。
+了解 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的新功能。 這會涵蓋主要功能領域，並在發行新的項目時更新。
 
-  如需新功能的 SQL Server 的其他區域中的資訊，請參閱[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)或[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)。
+  如需 SQL Server 其他區域之新功能的資訊，請參閱 [SQL Server 2017 中的新功能](../sql-server/what-s-new-in-sql-server-2017.md)或 [SQL Server 2016 中的新功能](../sql-server/what-s-new-in-sql-server-2016.md)。
 
  **下載** ![download](../analysis-services/media/download.png "download")
 
-- 若要下載 SQL Server 2017 Reporting Services，請移至 **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**。
+- 請前往 **[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=55252)**下載 SQL Server 2017 Reporting Services。
 
-如需目前的版本資訊，請參閱[SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)或[Power BI 報表伺服器版本資訊](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)。 Power BI 報表伺服器的相關資訊，請參閱[開始使用 Power BI 報表伺服器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
+如需目前的版本資訊，請參閱 [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)或 [Power BI 報表伺服器版本資訊](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)。 如需 Power BI 報表伺服器的資訊，請參閱[開始使用 Power BI 報表伺服器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
 
 ## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 
-### <a name="comments-on-reports"></a>在報表上的註解
+### <a name="comments-on-reports"></a>報表的註解
 
 報表現在提供留言功能，可新增觀點並與其他人共同作業。 您也可以在留言內包含附件。
 
-![報表伺服器中的註解](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
+![報表伺服器內的註解](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
 
-如需詳細資訊，請參閱[至報表伺服器的報表中加入註解](https://powerbi.microsoft.com/documentation/reportserver-add-comments/)。
+如需詳細資訊，請參閱[新增報表伺服器中報表的註解](https://powerbi.microsoft.com/documentation/reportserver-add-comments/)。
 
-### <a name="dax-queries-in-reporting-tools"></a>在報告工具中的 DAX 查詢
+### <a name="dax-queries-in-reporting-tools"></a>報告工具中的 DAX 查詢
 
 在最新版的報表產生器和 SQL Server Data Tools 中，您可以藉由在查詢設計工具中拖放所需的欄位，來對支援的 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 請參閱 [Reporting Services 部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
 
 ### <a name="rest-api-support"></a>REST API 支援
 
-若要啟用現代化應用程式和自訂的開發，SQL Server Reporting Services 現在支援完全 OpenAPI 相容 rest 式 API。 完整的 API 規格和文件現在位於[swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0)。
+為了進行現代化應用程式的開發和自訂，SQL Server Reporting Services 現在支援完全符合 OpenAPI 的 RESTful API。 您現在可以在 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0) 上找到完整的 API 規格和文件。
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>查詢設計工具支援現在在報表產生器及 SQL Server Data Tools 中的 DAX
+## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>現在報表產生器及 SQL Server Data Tools 中支援 DAX 的查詢設計工具
 
-中的最新版本報表產生器以及 SQL Server Data Tools – 發行候選版本，您現在可以建立原生支援的 SQL Server Analysis Services 表格式資料模型的 DAX 查詢。 您可以使用這兩個工具的查詢設計工具拖放的欄位，並已為您產生，而不必自行撰寫 DAX 查詢。  
+在最新版的報表產生器和 SQL Server Data Tools - 候選版中，您現在可以對支援的 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 您可以在這兩個工具中使用查詢設計工具來拖放您想要的欄位，並為您產生 DAX 查詢，而不需要自行撰寫。  
  
-在閱讀更多[Reporting Services 部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
+請參閱 [Reporting Services 部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
 
-* 下載[SQL Server 2016 報表產生器](https://go.microsoft.com/fwlink/?LinkId=734968)。
-* 下載[SQL Server Data Tools-Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)。
+* 下載 [SQL Server 2016 報表產生器](https://go.microsoft.com/fwlink/?LinkId=734968)。
+* 下載 [SQL Server Data Tools - 候選版](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)。
 
-> **請注意**： 您可以只使用查詢設計工具 DAX 的內建在 SQL Server 2016 + SSAS 表格式資料來源。
+> **注意**：您只能搭配使用 DAX 的查詢設計工具與 SQL Server 2016+ 內建的 SSAS 表格式資料來源。
  
 ## <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
   
@@ -112,7 +110,7 @@ Reporting Services 行動報表是針對各種外形規格最佳化的專用報�
  
 如需詳細資訊，請參閱：  
   
--   [支援的 SharePoint 和 Reporting Services 伺服器與增益集 &#40; 組合SQL Server 2016 &#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+-   [支援的 SharePoint 和 Reporting Services 伺服器與增益集的組合 &#40;SQL Server 2016&#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 -   [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -129,15 +127,15 @@ Reporting Services 行動報表是針對各種外形規格最佳化的專用報�
 
 **新式分頁報表：** 使用樣式新穎的圖表、量測計、地圖和其他資料視覺效果，設計美觀的新式分頁報表。
   
-**樹狀圖與放射環狀圖：**加強您的報表樹狀結構圖![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")和放射環狀![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")圖表，顯示階層式資料的好方法。 如需詳細資訊，請參閱 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)。  
+**矩形式樹狀結構圖和放射環狀圖：**使用矩形式樹狀結構圖 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 和放射環狀圖 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 增強報表，這是顯示階層資料的不錯方式。 如需詳細資訊，請參閱 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)。  
 
 **報表內嵌：** 您現在可以使用 iframe 及 URL 參數，將行動和分頁報表內嵌到其他網頁和應用程式中。  
 
-**將報表項目釘選到 Power BI 儀表板** ：當您在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中檢視報表時，可以選取報表項目，並將其釘選到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板。   可釘選的項目包括圖表、量測計面板、地圖和影像。 您可以 **(1)** 選取包含您要釘選之目的地儀表板的群組， **(2)** 選取您也要釘選項目的儀表板，以及 **(3)** 選取您要在儀表板中更新磚的頻率。   ![請注意](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")重新整理受[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]訂用帳戶已釘選的項目之後，您可以編輯訂用帳戶和設定不同的重新整理排程。  
+**將報表項目釘選到 Power BI 儀表板** ：當您在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中檢視報表時，可以選取報表項目，並將其釘選到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板。   可釘選的項目包括圖表、量測計面板、地圖和影像。 您可以 **(1)** 選取包含您要釘選之目的地儀表板的群組， **(2)** 選取您也要釘選項目的儀表板，以及 **(3)** 選取您要在儀表板中更新磚的頻率。   ![注意](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")：重新整理由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂用帳戶管理，而釘選項目之後，您可以編輯訂用帳戶和設定不同的重新整理排程。  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
- 如需詳細資訊，請參閱[Power BI 報表伺服器整合 &#40;組態管理員 &#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)和[Power BI 儀表板的釘選 Reporting Services 項目](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。  
+ 如需詳細資訊，請參閱 [Power BI 報表伺服器整合 &#40;設定管理員&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) 和[將 Reporting Services 項目釘選到 Power BI 儀表板](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。  
  
  **PowerPoint 轉譯及匯出** ：Microsoft PowerPoint (PPTX) 格式是新的 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 轉譯延伸模組。 您可以使用 PPTX 格式從下列常用應用程式匯出報表：報表產生器、報表設計師 (在 SSDT 中) 和 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]。 如需範例，下圖顯示了 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]的匯出功能表。 
   
@@ -178,7 +176,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 **自訂參數窗格** ：您現在可以自訂參數窗格。 使用報表產生器中的設計界面，您可以將參數拖曳到參數窗格中的特定資料行及資料列。 您可以新增及移除資料行以變更窗格配置。   如需詳細資訊，請參閱[自訂報表中的參數窗格 &#40;報表產生器&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)。  
   
- ![在 [報表資料] 窗格中，並在參數窗格中的參數清單](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "報表資料 窗格中，並在參數窗格中的參數清單")  
+ ![[報表資料] 窗格和參數窗格中的參數清單](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "[報表資料] 窗格和參數窗格中的參數清單")  
 
   
 **高 DPI 支援** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] 支援高 DPI (每英吋點數) 縮放比例及裝置。  如需高 DPI 的詳細資訊，請參閱下列主題：  
@@ -199,4 +197,3 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 [Power BI 報表伺服器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

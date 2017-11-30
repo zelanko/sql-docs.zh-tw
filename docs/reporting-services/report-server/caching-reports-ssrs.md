@@ -1,5 +1,5 @@
 ---
-title: "快取報表 (SSRS) |Microsoft 文件"
+title: "快取報表 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - expiration [Reporting Services]
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 799f6c8803852baf8b4c2262d85826167f55ed5c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 79a60b96277352c51ce19d24d9504735e5fdb91f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="caching-reports-ssrs"></a>快取多個報表 (SSRS)
   報表伺服器可以快取已處理報表的副本，並在使用者開啟報表時還原該副本。 對使用者而言，能夠指出報表是快取副本的唯一證據是報表執行的日期和時間。 如果日期或時間不是目前的日期和時間，且報表不是快照集，則報表是從快取擷取而來。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
  快取是一種效能增強技術。 快取的內容為動態，而且會隨報表加入、取代或移除而變更。 如果您需要更可預測的快取策略，就應該建立報表快照集。 如需詳細資訊，請參閱 [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]將暫存檔儲存在資料庫以支援使用者工作階段和報表處理。 這些檔案會快取供內部使用，以及在單一瀏覽器工作階段期間支援一致的檢視體驗。 如需如何快取內部使用暫存檔的詳細資訊，請參閱[報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將暫存檔儲存在資料庫中，以便支援使用者工作階段和報表處理。 這些檔案會快取供內部使用，以及在單一瀏覽器工作階段期間支援一致的檢視體驗。 如需如何快取內部使用暫存檔的詳細資訊，請參閱[報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)。  
   
 ## <a name="cached-instances"></a>快取執行個體  
  報表的快取執行個體是以報表的中繼格式為基礎。 報表伺服器一般會以報表名稱為基礎，快取一個報表的執行個體。 不過，如果報表依據查詢參數而包含不同的資料，則在任何給定時間可能會快取多種版本的報表。 例如，假設您有一個將區域代碼當成參數值的參數化報表。 如果 4 個不同的使用者指定了 4 個唯一的區域代碼，就會建立 4 個快取副本。  
@@ -75,14 +74,13 @@ ms.lasthandoff: 08/09/2017
   
  如果因為任何原因造成報表無法從快取執行個體轉譯 (例如，若使用者指定的參數值與用於產生快取報表的參數值不同)，則報表伺服器會重新執行報表。  
   
-## <a name="see-also"></a>請參閱＜  
- [設定處理選項 &#40;Reporting Services SharePoint 整合模式 &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+## <a name="see-also"></a>另請參閱  
+ [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Reporting Services 概念 &#40;SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [預先載入快取 &#40;報表管理員 &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
- [排程](../../reporting-services/subscriptions/schedules.md)   
- [快取共用資料集 &#40;SSRS &#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [快取重新整理選項 &#40;報表管理員 &#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
+ [Reporting Services 概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [預先載入快取 &#40;報表管理員&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [[排程]](../../reporting-services/subscriptions/schedules.md)   
+ [快取共用資料集 &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
+ [快取重新整理選項 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   
-

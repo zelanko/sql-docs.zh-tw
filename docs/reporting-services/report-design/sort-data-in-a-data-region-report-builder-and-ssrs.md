@@ -1,5 +1,5 @@
 ---
-title: "排序資料在資料區域 （報表產生器及 SSRS） |Microsoft 文件"
+title: "在資料區中排序資料 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01fdabcd4005e5b3b15e6c2656daed1cff499211
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1bd8061755f4dbacdf16106ecca5e7a22b1101e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>在資料區中排序資料 (報表產生器及 SSRS)
   若要在資料區域中變更報表第一次執行時資料的排序次序，您必須針對資料區域或群組設定排序運算式。 根據預設，群組的排序運算式會自動設定為與群組運算式相同的值。  
@@ -32,9 +31,9 @@ ms.lasthandoff: 08/09/2017
   
 -   在量測計資料區域中，您通常不需要排序資料，因為量測計會顯示一個相對於範圍的單一值。 如果您需要排序量測計中的資料，則必須先定義一個群組，然後設定該群組的排序運算式。  
   
- 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
   
- 若是 Tablix 資料區域，您也可以將互動式排序按鈕加入到資料行標頭的頂端，以提供使用者變更群組或詳細資料列之排序次序的能力。 如需詳細資訊，請參閱[篩互動式排序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)。  
+ 若是 Tablix 資料區域，您也可以將互動式排序按鈕加入到資料行標頭的頂端，以提供使用者變更群組或詳細資料列之排序次序的能力。 如需詳細資訊，請參閱[互動式排序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -85,7 +84,7 @@ ms.lasthandoff: 08/09/2017
   
     2.  選取符合您群組欄位的運算式。 您可以按一下 **[群組]**來驗證群組欄位的運算式。  
   
-    3.  從 [Order] 資料行下拉式清單中，選擇每個運算式的排序方向。 [A-Z] 會以字母的遞增順序排序運算式。 [Z-A] 會以字母的遞減順序排序運算式。  
+    3.  從 **Order** 資料行下拉式清單中，選擇每個運算式的排序方向。 [A-Z] 會以字母的遞增順序排序運算式。 [Z-A] 會以字母的遞減順序排序運算式。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -107,7 +106,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-sort-data-in-ascending-or-descending-order-for-display-on-a-gauge"></a>在量測計上，以遞增或遞減的順序排序要顯示的資料  
   
-1.  以滑鼠右鍵按一下量測計，然後按一下 [加入資料群組]。  
+1.  以滑鼠右鍵按一下量測計，然後按一下 [新增資料群組]。  
   
 2.  必要時，在 [量測計面板群組屬性] 對話方塊中，按一下 [一般]。  
   
@@ -125,17 +124,16 @@ ms.lasthandoff: 08/09/2017
   
     2.  選取符合您群組欄位的運算式。 您可以按一下 **[群組]**來驗證群組欄位的運算式。  
   
-    3.  從 **Order** 資料行下拉式清單中，選擇每個運算式的排序方向。 **A-Z** 會以遞增順序排序運算式。 [Z-A] 會以遞減順序排序運算式。  
+    3.  從 **Order** 資料行下拉式清單中，選擇每個運算式的排序方向。 **A-Z** 會以遞增順序排序運算式。 **Z-A** 會以遞減順序排序運算式。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  如需如何在量測計中群組資料的詳細資訊，請參閱[量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [對話方塊、 窗格和精靈的報表產生器說明](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [格式化圖表 &#40; 上的軸標籤報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [跨多個形狀圖 &#40; 指定一致的色彩報表產生器及 SSRS &#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
+ [對話方塊、窗格和精靈的報表產生器說明](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
+ [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [跨多個形狀圖指定一致的色彩 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
   
-

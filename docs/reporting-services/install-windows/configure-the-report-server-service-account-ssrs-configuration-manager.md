@@ -1,32 +1,30 @@
 ---
-title: "設定報表伺服器服務帳戶 （SSRS 組態管理員） |Microsoft 文件"
+title: "設定報表伺服器服務帳戶 (SSRS 設定管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e68467845079107509d7cf259b06b8f5c52dbb06
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會實作成單一服務，其中包含報表伺服器 Web 服務、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，以及用於排程報表處理和訂閱傳遞的背景處理應用程式。 本主題將說明如何在一開始設定服務帳戶，以及如何使用 Reporting Services 組態工具來修改此帳戶或密碼。  
   
 ## <a name="initial-configuration"></a>初始組態  
- 報表伺服器服務帳戶是在安裝期間所定義。 您可以在網域使用者帳戶或內建帳戶 (例如 **虛擬服務帳戶**) 之下執行此服務。 沒有預設帳戶;您在中指定任何帳戶**服務帳戶**安裝精靈頁面都會成為報表伺服器服務的初始帳戶。  
+ 報表伺服器服務帳戶是在安裝期間所定義。 您可以在網域使用者帳戶或內建帳戶 (例如 **虛擬服務帳戶**) 之下執行此服務。 沒有預設帳戶；您在安裝精靈的 [服務帳戶] 頁面中指定的任何帳戶都會成為報表伺服器服務的初始帳戶。  
   
 > [!IMPORTANT]  
 >  雖然報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 為個別的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式，但是它們會在同一個報表伺服器處理序識別內的單一服務架構下執行。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
 -   自動更新用來主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的登入權限。 新的帳戶會加入至 **RSExecRole**。  
   
-     舊帳戶的資料庫登入將不會自動移除。 請務必移除不再使用的帳戶。 如需詳細資訊，請參閱[管理報表伺服器資料庫 &#40;SSRS 原生模式 &#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)中 SQL Server 線上叢書。  
+     舊帳戶的資料庫登入將不會自動移除。 請務必移除不再使用的帳戶。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的[管理報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)。  
   
      只有在一開始設定報表伺服器資料庫連接使用新的服務帳戶，才能將資料庫權限授與這個服務帳戶。 如果您設定報表伺服器資料庫連接使用網域使用者帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入，則連接資訊將不會受到服務帳戶更新的影響。  
   
@@ -114,5 +112,4 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services 組態管理員 &#40;原生模式 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-
+ [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

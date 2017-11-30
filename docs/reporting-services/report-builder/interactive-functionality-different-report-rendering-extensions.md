@@ -1,5 +1,5 @@
 ---
-title: "互動式功能的不同報表轉譯延伸模組 |Microsoft 文件"
+title: "互動式功能 - 不同報表轉譯延伸模組 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4e91731abe741a802252475bb054c826454ee2a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="interactive-functionality---different-report-rendering-extensions"></a>互動式功能的不同報表轉譯延伸模組
+# <a name="interactive-functionality---different-report-rendering-extensions"></a>互動式功能 - 不同報表轉譯延伸模組
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供可在執行階段與分頁報表互動的功能。 並非所有報表轉譯格式都支援互動式功能的完整範圍。 利用下表來了解每個互動式功能在特定格式中的運作方式。  
   
 > [!NOTE]  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
 |-------------------|-------------------------|  
 |預覽/報表檢視器、HTML|使用者按一下 [展開] 和 [摺疊] 圖示，即可檢視報表的各區段。|  
 |PDF|報表伺服器會將目前報表的顯示或隱藏狀態匯出至 PDF。 不支援互動式切換|  
-|Excel|可以切換的鑽研連結和項目會轉譯為 Excel 中可折疊的大綱。 您可以在 Excel 中展開及摺疊報表的各區段。 如需有關 Excel 限制的詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Excel|可以切換的鑽研連結和項目會轉譯為 Excel 中可折疊的大綱。 您可以在 Excel 中展開及摺疊報表的各區段。 如需 Excel 規定限制的詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。|  
 |Word|報表伺服器會將目前報表的顯示或隱藏狀態匯出至 PDF。 不支援互動式切換|  
 |其他|不適用於 MHTML、XML 或 CSV。 匯出到影像格式時，報表伺服器會將目前報表的顯示或隱藏狀態匯出至 PDF。 不支援互動式切換。|  
   
@@ -114,12 +113,11 @@ ms.lasthandoff: 08/09/2017
 |Word|報表伺服器會利用目前報表中的篩選資料，將報表匯出至 Word。|  
 |其他|報表伺服器會利用目前報表中的篩選資料，將報表匯出至其他格式。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [互動式排序、 文件引導模式及連結 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

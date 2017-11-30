@@ -1,5 +1,5 @@
 ---
-title: "伺服器與 Reporting Services 的資料庫連線問題疑難排解 |Microsoft 文件"
+title: "針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b901ec323ee3aa021d9e581cb8a1aedbde3116b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e7dddbd58335ffc0ad9d4f44fa6fab633ba4da43
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>伺服器與 Reporting Services 的資料庫連線問題疑難排解
+# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解
 使用此主題，即可對在連接到報表伺服器時遇到的問題進行疑難排解。 此主題也提供有關「意外的錯誤」訊息的資訊。 如需資料來源組態和設定報表伺服器連接的詳細資訊，請參閱 [指定報表資料來源的認證和連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 和 [設定報表伺服器資料庫連接 (SSRS 組態管理員)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>無法與資料來源 'datasourcename' 建立連接。 (rsErrorOpeningConnection)  
@@ -63,7 +62,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>在 Management Studio 中連接至報表伺服器時發生 WMI 錯誤  
 根據預設，Management Studio 會使用 Reporting Services Windows Management Instrumentation (WMI) 提供者來建立報表伺服器的連接。 如果未正確安裝 WMI 提供者，當您嘗試連接至報表伺服器時，將會收到下列錯誤：  
   
-無法連線到\<您的伺服器名稱 >。 未安裝報表服務 Reporting Services WMI 提供者，或設定錯誤 (Microsoft.SqlServer.Management.UI.RSClient)。  
+無法連線到 \<您的伺服器名稱>。 未安裝報表服務 Reporting Services WMI 提供者，或設定錯誤 (Microsoft.SqlServer.Management.UI.RSClient)。  
   
 若要解決這個錯誤，您應該重新安裝此軟體。 除此之外，您可以透過 SOAP 端點連接至報表伺服器，當做暫時的解決方法：  
   
@@ -117,7 +116,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="unable-to-connect-to-the-reports-and-reportserver-directories-when-the-report-server-databases-are-created-on-a-virtual-sql-server-that-runs-in-a-microsoft-cluster-services-mscs-cluster"></a>當報表伺服器資料庫是在執行於 Microsoft Cluster Services (MSCS) 叢集中的虛擬 SQL Server 上建立時，無法連接至 /reports 和 /reportserver 目錄  
 當您在執行於 MSCS 叢集中的虛擬 SQL Server 上建立報表伺服器資料庫 **ReportServer** 和 **ReportServerTempDB**時，採用 `<domain>\<computer_name>$` 格式的遠端名稱可能無法向 SQL Server 註冊成登入。 若您已經將報表伺服器服務帳戶設定成需要這個遠端名稱進行連接的帳戶，使用者就無法連接至 Reporting Services 中的 /reports 和 /reportserver 目錄。 例如，內建的 Windows 帳戶 NetworkService 就需要這個遠端名稱。 若要避免這個問題發生，請使用明確網域帳戶或 SQL Server 登入來連接至報表伺服器資料庫。  
     
-  ## <a name="see-also"></a>請參閱＜  
+  ## <a name="see-also"></a>另請參閱  
 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [錯誤和事件 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [搭配 Reporting Services 報表為資料擷取問題疑難排解](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
@@ -127,5 +126,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

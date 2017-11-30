@@ -1,5 +1,5 @@
 ---
-title: "使用 Reporting Services Security Policy Files |Microsoft 文件"
+title: "使用 Reporting Services 安全性原則檔 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - CodeGroup elements
@@ -21,22 +20,22 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 7e007886cadd8cfe9775ebda2c2271f3fd66b17d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 490f32a022606157376f7c8402d11cd8f027bc04
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-reporting-services-security-policy-files"></a>使用 Reporting Services 安全性原則檔
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會將元件安全性原則資訊儲存在安裝過程中複製到檔案系統的三個組態檔內。 這些組態檔可能會包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中程式碼組件之內部使用和使用者定義安全性原則的組合。 這三個組態檔會對應至 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的三個安全性實體元件：報表伺服器和 Windows 服務、報表管理員 Web 應用程式，以及報表設計師預覽視窗。  
   
 > [!NOTE]  
->  有兩個報表設計師預覽模式: [預覽] 索引標籤和快顯預覽視窗中啟動報表專案時，會啟動**DebugLocal**模式。 **預覽** 索引標籤不是安全性實體元件，但不適用於安全性原則設定。 預覽視窗是用以模擬報表伺服器功能，因此具有原則組態檔，而且您或系統管理員必須修改該檔案，才能在報表設計師中使用自訂組件和自訂延伸模組。  
+>  報表設計師有兩個預覽模式：當在 **DebugLocal** 模式中啟動報表專案時，會啟動預覽索引標籤與快顯預覽視窗。 [預覽] 索引標籤並非安全性實體元件，而且不會套用安全性原則設定。 預覽視窗是用以模擬報表伺服器功能，因此具有原則組態檔，而且您或系統管理員必須修改該檔案，才能在報表設計師中使用自訂組件和自訂延伸模組。  
   
  這些安全性原則組態檔包含安全性類別資訊、某些預設的具名權限集合，以及 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中組件的程式碼群組。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的原則組態檔與 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中決定與電腦和企業層級原則相關聯之程式碼群組階層和權限集合的 Security.config 檔很相似。 這個檔案的位置是 C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CONFIG\security.config。  
   

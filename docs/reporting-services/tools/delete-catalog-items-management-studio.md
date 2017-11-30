@@ -1,5 +1,5 @@
 ---
-title: "刪除目錄項目 (Management Studio) |Microsoft 文件"
+title: "刪除目錄項目 (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.deleteitems.f1
+f1_keywords: sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1d530acc7b22cee01e7f8eaf639e08801c38d855
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-catalog-items-management-studio"></a>刪除目錄項目 (Management Studio)
   您可以使用這個頁面刪除共用排程和角色定義。  
@@ -50,10 +48,9 @@ ms.lasthandoff: 08/09/2017
  **錯誤**  
  如果在刪除項目時發生錯誤，則顯示錯誤碼。  
   
-## <a name="see-also"></a>請參閱＜  
- [刪除項目 &#40;Management Studio &#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
- [Report Server in Management Studio F1 說明](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [建立、 修改及刪除共用排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
+## <a name="see-also"></a>另請參閱  
+ [刪除項目 &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
+ [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [建立、修改和刪除排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   
-

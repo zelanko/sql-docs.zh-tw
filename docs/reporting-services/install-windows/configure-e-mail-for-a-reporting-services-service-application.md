@@ -1,26 +1,24 @@
 ---
-title: "Reporting Services 服務應用程式，設定電子郵件 |Microsoft 文件"
+title: "設定 Reporting Services 服務應用程式的電子郵件 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: d7fb8e7ae95ef5606b42db3b0622a90a4bdd7990
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: ad03be92870b2b6829d42d92a2faebc0ff9fe4e1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>設定 Reporting Services 服務應用程式的電子郵件
 
@@ -29,7 +27,7 @@ ms.lasthandoff: 08/17/2017
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示以電子郵件訊息傳送警示。 若要傳送電子郵件，您可能需要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式，以及修改服務應用程式的電子郵件傳遞延伸模組。 如果您計劃針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱功能使用電子郵件傳遞延伸模組，也需要電子郵件設定。  
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
   
 ### <a name="to-configure-e-mail-for-the-shared-service"></a>設定共用服務的電子郵件  
   
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/17/2017
   
 6.  在 **[外送 SMTP 伺服器]** 方塊中，輸入 SMTP 伺服器的名稱。  
   
-7.  在 [來源位址] 方塊中，輸入電子郵件地址。  
+7.  在 [來源位址] 方塊中，鍵入電子郵件地址。  
   
      此地址是所有警示電子郵件訊息的寄件者地址。  
   
@@ -94,4 +92,3 @@ ms.lasthandoff: 08/17/2017
   
   
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

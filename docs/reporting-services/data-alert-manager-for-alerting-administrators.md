@@ -1,5 +1,5 @@
 ---
-title: "資料警示管理員的警示管理員 |Microsoft 文件"
+title: "警示系統管理員的資料警示管理員 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9df65141967b8e9e0ab4e1f7115986b19674d341
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>警示系統管理員的資料警示管理員
 
@@ -32,12 +31,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services 提供 Data Alert Manager for SharePoint 警示系統管理員管理資料警示。 警示系統管理員可以檢視儲存到網站之所有警示的相關資訊，以及刪除警示。 下圖說明 [資料警示管理員] 中可供 SharePoint 警示管理員使用的功能。
+SQL Server Reporting Services 提供 [資料警示管理員] 讓 SharePoint 警示系統管理員管理資料警示。 警示系統管理員可以檢視儲存到網站之所有警示的相關資訊，以及刪除警示。 下圖說明 [資料警示管理員] 中可供 SharePoint 警示管理員使用的功能。
 
-![警示系統管理員的 Sharepoint 警示管理員](../reporting-services/media/rs-alertmanagersite.gif "警示管理員讓 SharePoint 網站管理員")
+![Sharepoint 網站管理員的警示管理員](../reporting-services/media/rs-alertmanagersite.gif "SharePoint 網站管理員的警示管理員")
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
  啟用網站進行資料警示時，會建立 MyDataAlerts.aspx 和 SiteDataAlerts.aspx 這兩個 SharePoint 頁面，並且將其加入 SharePoint 網站中。 SiteDataAlerts.aspx 是警示系統管理員的 [資料警示管理員]。 警示系統管理員可以從 [網站設定] SharePoint 頁面開啟 [資料警示管理員]。 警示系統管理員必須具備「SharePoint 警示管理」權限才能開啟 [資料警示管理員]。  
   
@@ -51,7 +50,7 @@ SQL Server Reporting Services 提供 Data Alert Manager for SharePoint 警示系
 ##  <a name="ViewingAlerts"></a> 檢視資料警示資訊  
  在 SharePoint 中安裝並設定 Reporting Services 之後，[網站設定] SharePoint 頁面就會包含 **[Reporting Services]** 選項。 警示系統管理員在 Reporting Service 中按一下 **[管理資料警示]** 選項，就可以開啟 [資料警示管理員]。 下圖說明 [網站設定] 頁面上開啟 [資料警示管理員] 的位置。  
   
- ![站台設定 頁面上的 reporting Services 區段](../reporting-services/media/rs-sitesettings.gif "Reporting Services 區段的網站設定 頁面")  
+ ![網站設定頁面的 Reporting Services 區段](../reporting-services/media/rs-sitesettings.gif "網站設定頁面的 Reporting Services 區段")  
   
  [資料警示管理員] 包含一個資料表，其中列出警示名稱、報表名稱、警示擁有者的名稱、傳送的警示訊息數目、上一次執行警示的時間、上一次修改警示定義的時間，以及警示訊息的狀態。 如果警示無法產生或是傳送，狀態資料行就會包含有關錯誤的資訊並協助您疑難排解警示。 如需詳細資訊，請參閱 [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
   
@@ -61,7 +60,7 @@ SQL Server Reporting Services 提供 Data Alert Manager for SharePoint 警示系
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|上次警示執行成功，並且已傳送警示。|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|上次警示執行成功，但因為資料未變更所以未傳送警示。|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<錯誤訊息 > 記錄檔包含有關錯誤的詳細的資訊。 具有識別碼的記錄項目，請參閱： \<GUID >。|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<錯誤訊息> 記錄檔包含有關錯誤的詳細資訊。 請參閱識別碼為 \<GUID> 的記錄項目。|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|已建立警示。|  
   
  如需詳細資訊，請參閱 [在資料警示管理員中管理 SharePoint 網站上的所有資料警示](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
@@ -82,9 +81,8 @@ SQL Server Reporting Services 提供 Data Alert Manager for SharePoint 警示系
   
 -   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

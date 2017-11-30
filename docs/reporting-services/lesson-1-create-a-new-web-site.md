@@ -1,28 +1,25 @@
 ---
-title: "第 1 課： 建立新的網站 |Microsoft 文件"
+title: "第 1 課：建立新的網站 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c679c81a0db86c7d4894a7ed1eb1544b42fd4b9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ee2a6d33189e110b96f3b095b6b13e5bcf3e441a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>第 1 課：建立新的網站
 在這一課，您將學習如何使用 Visual C# 的 ASP.NET 網站範本建立新的網站專案。  
@@ -37,8 +34,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  在 [位置] 方塊中，指定專案目錄並選取 [確定]。  
   
-網站專案隨即開啟，並且將啟動 [報表精靈]。 **取消**以離開資料來源和 [報表精靈]，我們將在下一個步驟中建立自訂資料集。  
+網站專案隨即開啟，並且將啟動 [報表精靈]。 **取消** 以離開資料來源和 [報表精靈]，我們將在下一個步驟中建立自訂資料集。  
   
 ## <a name="next-task"></a>下一項工作  
 您已成功建立新的網站專案。 接下來您將建立父報表的資料連接和資料表。 請參閱 [第 2 課：定義父報表的資料連接和資料表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。
-

@@ -1,5 +1,5 @@
 ---
-title: "疑難排解發行或原生模式報表伺服器上檢視報表 |Microsoft 文件"
+title: "針對在原生模式報表伺服器上發行或檢視報表進行疑難排解 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 723b88c6d0bc077cf47b6a83346c274c0ecbeef5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>在原生模式報表伺服器上疑難排解發行或檢視報表
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>當我在已發行的報表中切換項目時，沒有反應。  
   在本機預覽中檢視報表時，您可以切換報表中的項目，並加以顯示或隱藏。 當報表發行至報表伺服器後，重新檢視報表時，切換項目會失去作用。   
   
-\<報表伺服器名稱 > 包含底線 (_)  
+\<報表伺服器名稱> 包含底線 (_)  
   
 如果報表執行時沒有錯誤，但是切換項目沒有作用 (例如，您按一下展開按鈕 (+) 但沒有反應)，請檢查主控報表伺服器之電腦的名稱。 如果電腦名稱包含底線，切換項目會沒有作用。 這是已知的問題。 沒有因應措施。   
   
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
 請確認您有權限可以存取包含快取檔案的資料夾。   
     
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [錯誤和事件 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [搭配 Reporting Services 報表為資料擷取問題疑難排解](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
@@ -66,5 +65,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

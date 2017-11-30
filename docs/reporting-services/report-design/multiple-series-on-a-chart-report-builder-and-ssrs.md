@@ -1,5 +1,5 @@
 ---
-title: "圖表 （報表產生器及 SSRS） 上的多個數列 |Microsoft 文件"
+title: "圖表上的多個數列 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3e3fa82b79529b1e128260f020b8e98225e26fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dd942ab8b1aee3047c693f40a99453cd79981dc3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>圖表上的多個數列 (報表產生器及 SSRS)
   當圖表上出現多個數列時，您必須決定比較數列的最好方式。 您可以使用堆疊圖表顯示每個數列的相關比例。 如果您只要比較共用共同類別目錄 (x) 軸的兩個數列，請使用副座標軸。 顯示兩個相關資料數列 (例如，價格和數量，或收入和稅額) 時，這相當實用。 如果圖表變成無法讀取，請考慮使用多個圖表區域，在每個數列之間建立更多視覺上的分隔。  
@@ -32,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-stacked-and-100-stacked-charts"></a>使用堆疊與 100% 堆疊圖表  
- 堆疊圖表通常用於顯示一個圖表區域中的多個數列。 當您嘗試顯示的資料緊密相關時，請考慮使用堆疊圖表。 在堆疊圖表上顯示四個 (包含) 以下的數列也是相當好的作法。 如果您要比較每個數列佔整體的比例，使用 100% 堆疊區域、長條圖或直條圖。 這些圖表會計算每個數列佔類別目錄的相對百分比。 如需詳細資訊，請參閱[區域圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md) 和[橫條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) 和[直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)。  
+ 堆疊圖表通常用於顯示一個圖表區域中的多個數列。 當您嘗試顯示的資料緊密相關時，請考慮使用堆疊圖表。 在堆疊圖表上顯示四個 (包含) 以下的數列也是相當好的作法。 如果您要比較每個數列佔整體的比例，使用 100% 堆疊區域、長條圖或直條圖。 這些圖表會計算每個數列佔類別目錄的相對百分比。 如需詳細資訊，請參閱[區域圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)、[橫條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) 和[直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)。  
   
 ## <a name="using-the-secondary-axis"></a>使用副座標軸  
  當新的數列加入到圖表時，該數列會使用主要 x 和 y 軸繪製。 當您想要比較屬於不同測量單位的值時，請考慮使用 *「副座標軸」* (Secondary Axis)，讓您可以在個別的軸上繪製兩個數列。 在比較屬於不同測量單位的值時，副座標軸相當實用。 副座標軸繪製在主座標軸的另一側。 此圖表僅支援主座標軸和副座標軸。 副座標軸與主座標軸的屬性相同。 如需詳細資訊，請參閱[繪製副座標軸上的資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)。  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="using-chart-areas"></a>使用圖表區域  
  此圖表是最上層的容器，其中包含外框、圖表標題和圖例。 依預設，圖表包含一個預設的圖表區域。 在圖表介面上看不到圖表區域，但是您可以將圖表區域視為僅包含軸標籤、軸標題，以及一或多個數列之繪圖區的容器。 下圖顯示單一圖表內圖表區域的概念。  
   
- ![顯示一個圖表區域的圖](../../reporting-services/report-design/media/chartareasdiagram.gif "顯示一個圖表區域的圖")  
+ ![顯示圖表區域的圖表](../../reporting-services/report-design/media/chartareasdiagram.gif "顯示圖表區域的圖表")  
   
  您可以使用 **[圖表區域屬性]** 對話方塊，指定包含在圖表區域中所有數列的 2D 和 3D 方向、對齊相同圖表內的多個圖表區域，以及格式化繪圖區的色彩。 在僅包含一個預設圖表區域的圖表上定義新的圖表區域時，圖表區域的可用空間會以水平方式分成兩個，而新的圖表區域放置在第一個圖表區域之下。  
   
@@ -60,9 +59,8 @@ ms.lasthandoff: 08/09/2017
  範圍圖表的每個資料點都有兩個值。 如果您的圖表包含共用相同類別目錄 (x) 軸的兩個數列，您可以使用範圍圖表顯示兩個數列間的差距。 範圍圖表最適合用於顯示高-低或上-下資訊。 例如，如果第一個數列包含一月每天的最高銷售額，而第二個數列包含一月每天的最低銷售額，則您可以使用範圍圖表顯示每天銷售額中，最高與最低間的差距。 如需詳細資訊，請參閱[範圍圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [包含多個資料範圍的數列顯示在圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [圖表類型 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
+ [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [將包含多個資料範圍的數列顯示在圖表上 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [圖表類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
   
   
-

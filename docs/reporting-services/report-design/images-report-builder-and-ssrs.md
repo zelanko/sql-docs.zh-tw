@@ -1,5 +1,5 @@
 ---
-title: "影像 （報表產生器及 SSRS） |Microsoft 文件"
+title: "映像 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b50d53f5b7ba102454f53646dec8cf1897df52f9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 777cab4f21219aa5b4387c67b264e3769cbf1e59
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="images-report-builder-and-ssrs"></a>影像 (報表產生器及 SSRS)
   影像是一種報表項目，其中包含了內嵌在報表中、儲存在資料庫中、儲存在報表伺服器上或儲存在網路上其他位置之影像的參考。 影像可能是一個隨資料列數重複顯示的圖片。 您也可以將影像當做某些報表項目的背景。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="ExternalImages"></a> 外部影像  
  您可以指定影像的 URL，在報表中包含預存影像。 當您在報表中使用外部影像時，影像來源會設定為 **External** ，而影像的值則是影像的 URL 位址或路徑。  
   
- 如需詳細資訊，請參閱[指定外部項目的路徑 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱[指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
  在報表產生器或報表設計師中執行報表時，預覽會以使用者的認證來顯示影像。 在報表伺服器上執行報表時，如果伺服器認證不足以存取影像，可能就不會顯示報表中的影像。 在這種情況下，請連絡系統管理員。  
   
@@ -84,9 +83,8 @@ ms.lasthandoff: 08/09/2017
  [加入資料繫結影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [匯出至影像檔 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
- [轉譯行為 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   
-

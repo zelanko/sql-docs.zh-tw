@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services （報表產生器及 SSRS） 中的分頁 |Microsoft 文件"
+title: "Reporting Services 中的分頁 (報表產生器與 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ad24564f035952b3bf4834162e1039370efb3f2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9e295143b577d99732186b0cefda5be908c1c34
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services 中的分頁 (報表產生器與 SSRS)
   分頁指的是報表內的頁數，以及如何在這些頁面上排列報表項目。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的分頁會根據您用於檢視和傳遞報表的轉譯延伸模組而有所不同。 當您在報表伺服器上執行報表時，報表會使用 HTML 轉譯器。 HTML 會遵循特定的一組分頁規則。 例如，如果您將相同的報表匯出至 PDF，系統就會使用 PDF 轉譯器，並套用另一組不同的規則，因此，報表的分頁就會不同。 若要為使用者成功設計容易閱讀的報表，並針對計畫用於傳遞報表的轉譯器最佳化該報表，您必須了解用於控制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中之分頁的規則。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  在配置邊界、資料行間距和頁首與頁尾的空間後剩餘的實體頁面區域稱為 *「可用的頁面區域」*(Usable Page Area)。 只有在您以手動分頁符號轉譯器格式轉譯與列印報表時，才會套用邊界。 下列影像指出實體頁面的邊界與可用的頁面區域。  
   
- ![具有邊界與可用區域的實體頁面。](../../reporting-services/report-design/media/rspagemargins.gif "邊界與可用區域的實體頁面。")  
+ ![具有邊界與可用區域的實體頁面。](../../reporting-services/report-design/media/rspagemargins.gif "具有邊界與可用區域的實體頁面。")  
   
 ### <a name="newsletter-style-columns"></a>新聞稿樣式資料行  
  您的報表可以分割為多個資料行 (例如，新聞稿中的資料行)，而且這些資料行會被視為在相同實體頁面上轉譯的邏輯頁面。 這些資料行會從左到右、從上到下排列，而且在每個資料行之間，會以空格分隔。 如果報表分割為一個以上的資料行，每個實體頁面都會垂直分割為多個資料行，而且其中每個資料行都會被視為一個邏輯頁面。 例如，假設您的實體頁面上有兩個資料行。 報表的內容會先填滿第一個資料行，然後再填滿第二個資料行。 如果報表無法完整容納在前兩個資料行內，報表會先填滿第一個資料行，然後再填滿下一頁的第二個資料行。 資料行會從左到右，從上到下，繼續填滿，直到所有報表項目都轉譯完成為止。 如果您指定的資料行大小會使頁面的水平寬度或垂直寬度等於零，資料行間距會預設為零。  
@@ -88,6 +88,6 @@ ms.lasthandoff: 08/09/2017
  如需報表匯出至 Excel 時，這些屬性如何運作的詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [頁面配置和轉譯 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [頁面配置和轉譯 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

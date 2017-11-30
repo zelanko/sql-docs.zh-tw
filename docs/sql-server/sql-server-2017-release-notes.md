@@ -1,44 +1,43 @@
 ---
 title: "SQL Server 2017 版本資訊 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/30/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
-caps.latest.revision: 41
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: fe3554aa067ef7e7fd0c1ffa2e8ac3adc5aaaa07
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 373d01cf6a8032d76c36af0b84be7180c79a7117
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
-此主題說明 SQL Server 2017 的限制及問題。 如需相關資訊，請參閱：
+本文說明 SQL Server 2017 的限制和問題。 如需相關資訊，請參閱：
 - [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)
-- [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
+- [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
+- [SQL Server 2017 累積更新](http://aka.ms/sql2017cu)，以取得最新累積更新 (CU) 版本的資訊
 
 **試用 SQL Server！**
 - [![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下載 SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![建立虛擬機器](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [使用 SQL Server 2017 加速虛擬機器](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![建立虛擬機器](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [使用 SQL Server 2017 加速虛擬機器](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 ## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - 正式運作版本 (2017 年 10 月)
 ### <a name="database-engine"></a>Database Engine
 
 - **問題和客戶的影響：**升級之後，現有的 FILESTREAM 網路共用可能無法再使用。
 
-- **因應措施：**首先請重新啟動電腦，並檢查 FILESTREAM 網路共用是否可用。 如果仍無法使用此共用，請執行下列動作：
+- **因應措施：**首先請重新啟動電腦，並檢查 FILESTREAM 網路共用是否可用。 如果仍無法使用此共用，請完成下列步驟：
 
-    1. 在 SQL Server 組態管理員中，以滑鼠右鍵按一下 SQL Server 執行個體，並按一下 [屬性]。 
-    2. 在 [FILESTREAM]索引標籤上，清除 [啟用 FILESTREAM 的檔案 I/O 資料流存取]，然後按一下 [套用]。
+    1. 在 SQL Server 設定管理員中，以滑鼠右鍵按一下 SQL Server 執行個體，然後按一下 [屬性]。 
+    2. 在 [FILESTREAM] 索引標籤上，清除 [啟用 FILESTREAM 的檔案 I/O 資料流存取]，然後按一下 [套用]。
     3. 使用原始共用名稱再次選取 [啟用 FILESTREAM 的檔案 I/O 資料流存取]，然後按一下 [套用]。
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
@@ -50,7 +49,10 @@ ms.lasthandoff: 10/02/2017
   - 執行「[在實體層級上套用權限時發生錯誤](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)」這個 MDS 小組部落格中說明的指令碼
 
 ### <a name="analysis-services"></a>Analysis Services
-- **問題和客戶的影響：**若表格式模型的相容性層級為 1400，當使用 [取得資料] 時，某些資料來源 (如：Amazon Redshift、IBM Netezza 和 Impala) 的資料連接器尚無法使用。
+- **問題和客戶的影響：**1400 相容性層級的表格式模型目前無法使用下列來源的資料連接器。
+  - Amazon Redshift
+  - IBM Netezza
+  - Impala
 - **因應措施** ：無。   
 
 - **問題和客戶的影響：**具有檢視方塊且相容性層級為 1400 的直接查詢模型可能會在查詢或探索中繼資料時失敗。
@@ -60,10 +62,9 @@ ms.lasthandoff: 10/02/2017
 - **問題和客戶的影響：**執行 *DReplay* 失敗，出現下列訊息：「錯誤 DReplay 發生未預期的錯誤！」。
 - **因應措施** ：無。
 
-
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 候選版 (RC2 - 2017 年 8 月)
-此版本沒有 Windows 上的 SQL Server 版本資訊。 請參閱 [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes) \(英文\)。
+沒有與此版本相關的 Windows 上的 SQL Server 版本資訊。 請參閱 [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes) \(英文\)。
 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
@@ -86,8 +87,8 @@ ms.lasthandoff: 10/02/2017
 
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP 2.1)
 
-- **問題和對客戶的影響：**如果 SQL Server Reporting Services 和 Power BI 報表伺服器在同一部電腦上，而您將其中之一解除安裝，則會無法以報表伺服器組態管理員連線到其餘的報表伺服器。
-- **因應措施：**若要解決此問題，您必須在執行下列作業之後解除安裝其中一個伺服器。
+- **問題和對客戶的影響：**如果 SQL Server Reporting Services 和 Power BI 報表伺服器在同一部電腦上，而您將其中之一解除安裝，則無法以報表伺服器設定管理員連線到其餘的報表伺服器。
+- **因應措施：**若要解決此問題，必須在解除安裝其中一部伺服器之後，執行下列作業。
 
     1. 以系統管理員模式啟動命令提示字元。
     2. 前往剩餘的報表伺服器安裝所在目錄。
@@ -112,7 +113,7 @@ ms.lasthandoff: 10/02/2017
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **問題和對客戶的影響：**在已安裝 *TSqlLanguageService.msi* 2016 版本 (透過 SQL 安裝程式或獨立式可轉散發套件) 的電腦上安裝之後，即會移除 *Microsoft.SqlServer.Management.SqlParser.dll* 和 *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* 的 v13.* (SQL 2016) 版本。 任何相依於這些 2016 版本組件的應用程式之後會停止運作，並提供如下錯誤：*錯誤： 無法載入檔案或組件 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' 或其中一個相依性。系統找不到指定的檔案。*
+- **問題和對客戶的影響：**在已安裝 *TSqlLanguageService.msi* 2016 版本 (透過 SQL 安裝程式或獨立式可轉散發套件) 的電腦上安裝之後，即會移除 *Microsoft.SqlServer.Management.SqlParser.dll* 和 *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* 的 v13.* (SQL 2016) 版本。 任何相依於這些 2016 版本組件的應用程式會停止運作，並產生類似如下的錯誤：*錯誤：無法載入檔案或組件 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' 或其相依性的其中之一。系統找不到指定的檔案。*
 
    此外，嘗試重新安裝 TSqlLanguageService.msi 的 2016 版本將會失敗，並顯示如下訊息：「安裝 Microsoft SQL Server 2016 T-SQL 語言服務失敗，因為電腦上已經有較新的版本」。
 
@@ -132,7 +133,7 @@ ms.lasthandoff: 10/02/2017
 
 ### <a name="always-on-availability-groups"></a>AlwaysOn 可用性群組
 
-- **問題和客戶的影響：**如果 SQL Server 主要版本低於裝載主要複本的執行個體，裝載可用性群組次要複本的 SQL Server 執行個體就會當機。 影響從所有裝載可用性群組的受支援版本 SQL Server 升級到 SQL server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0 的作業。 在下列步驟中將發生此狀況。 
+- **問題和客戶的影響：**如果 SQL Server 主要版本低於裝載主要複本的執行個體，裝載可用性群組次要複本的 SQL Server 執行個體就會當機。 影響從所有裝載可用性群組的受支援版本 SQL Server 升級到 SQL server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0 的作業。 在下列狀況下會發生這個問題。 
 
 > 1. 使用者可根據[最佳做法](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)，升級裝載次要複本的 SQL Server 執行個體。
 > 2. 升級之後，會進行容錯移轉，將新升級的次要複本變成主要複本，然後才能完成可用性群組中所有次要複本的升級。 舊的主要複本現在成為次要複本，其版本低於主要複本。
@@ -144,16 +145,11 @@ ms.lasthandoff: 10/02/2017
 
    裝載次要複本的 SQL Server 執行個體即會復原。
 
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 取得說明 
-- [Stack Overflow (標記 sql-server) - 詢問 SQL 開發問題](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN 論壇 - 詢問技術性問題](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - 報告錯誤及要求功能](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - 有關 SQL Server 的一般討論](https://www.reddit.com/r/SQLServer/)
-- [Microsoft SQL Server 授權條款及資訊](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
-
 ## <a name="more-information"></a>詳細資訊
 - [SQL Server Reporting Services 版本資訊](../reporting-services/reporting-services-release-notes.md)的限制及問題。
 - [機器學習服務的已知問題](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
+- [SQL Server 更新中心 - 所有已支援版本的連結和資訊](https://msdn.microsoft.com/library/ff803383.aspx)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
-

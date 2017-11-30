@@ -1,29 +1,27 @@
 ---
 title: "查詢處理架構指南 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21fcbd9486cd94e3d3e5370f5374aaeb99d36324
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +36,9 @@ ms.lasthandoff: 10/13/2017
 
 `SELECT` 陳述式為非程序性，它無法敘述資料庫伺服器應用來擷取所需資料的正確步驟。 這是表示資料庫伺服器應該先分析陳述式，才能判斷出取得所需資料的最有效方式。 這稱為將 `SELECT` 陳述式最佳化。 執行此動作的元件稱為查詢最佳化工具。 查詢最佳化工具的輸入是由查詢、資料庫結構描述 (資料表和索引定義) 以及資料庫統計資料所組成。 查詢最佳化工具的輸出是查詢執行計畫，有時稱為查詢計畫或只是計畫。 在本主題稍後將更詳盡地描述查詢計畫的內容。
 
-下圖說明在單一 `SELECT` 陳述式最佳化期間，查詢最佳化工具的輸入與輸出： ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+下圖說明在單一 `SELECT` 陳述式最佳化期間，查詢最佳化工具的輸入與輸出：
+
+![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` 陳述式僅定義下列項目：  
 * 結果集的格式。 這大部份是在選取清單中指定。 不過，其他如 `ORDER BY` 和 `GROUP BY` 等子句也會影響結果集的最後格式。
@@ -619,7 +619,7 @@ WHERE ProductID = 63;
   每一個查詢或索引作業都需要某個數目的背景工作執行緒來執行。 執行平行計畫所需的背景工作執行緒會比執行序列計畫還多，而且所需的背景工作執行緒數目會隨著平行處理原則的程度增加。 當無法滿足針對平行處理原則之特定程度的平行計畫背景工作執行緒需求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會自動降低平行處理原則的程度，或是完全放棄指定工作負載內容中的平行計畫。 然後，它會執行序列計畫 (一個背景工作執行緒)。 
 
 3. 已執行的查詢或索引作業類型。  
-  建立或重建索引，或是卸除叢集索引的索引作業，以及大量使用 CPU 循環的查詢，最適合使用平行計畫。 例如，聯結大型資料表、大型彙總及排序大型結果集，皆適用於平行計畫。 經常在交易處理應用程式中發現的簡單查詢，會尋找執行平行查詢時所需的其他協調作業，此平行查詢比潛在的效能提升更為重要。 為區分能否從平行處理原則中獲益的查詢，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會比較執行查詢或索引作業的預估成本與[平行處理的成本臨界值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)的值。 雖然不建議這麼做，但使用者可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)來變更預設值 5。 
+  建立或重建索引，或是卸除叢集索引的索引作業，以及大量使用 CPU 循環的查詢，最適合使用平行計畫。 例如，聯結大型資料表、大型彙總及排序大型結果集，皆適用於平行計畫。 經常在交易處理應用程式中發現的簡單查詢，會尋找執行平行查詢時所需的其他協調作業，此平行查詢比潛在的效能提升更為重要。 為區分能否從平行處理原則中獲益的查詢，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會比較執行查詢或索引作業的預估成本與[平行處理的成本臨界值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)的值。 如果適當測試發現不同的值更適合執行的工作負載，使用者可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來變更預設值 5。 
 
 4. 要處理的資料列數目是否足夠。  
   如果查詢最佳化工具判定資料列數目太少，則它不會引進交換運算子來散發資料列。 因此，運算子會循序執行。 在序列計畫中執行運算子，可避免啟動、散發、協調成本超過執行平行運算子所獲得的利益時的案例。
@@ -716,9 +716,9 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
          ([tpcd1G].[dbo].[LINEITEM].[L_ORDER_DATES_IDX]), ORDERED)
 ```
 
-![parallel_plan](../relational-databases/media/parallel-plan.gif) 使用 DOP 4 的查詢計畫，其中包含兩個資料表的聯結。
+上圖所示為使用平行處理原則程度 4 來執行的查詢計劃，包含兩個資料表的聯結。
 
-上圖所示為使用平行處理原則程度 4 來執行的查詢最佳化工具計畫，包含兩個資料表的聯結。
+![parallel_plan](../relational-databases/media/parallel-plan.gif)
 
 平行計畫包含三個平行處理原則運算子。 `o_datkey_ptr` 索引的 Index Seek 運算子和 `l_order_dates_idx` 索引的 Index Scan 運算子會以平行方式執行。 這會產生數個獨佔的資料流。 可分別從 Index Scan 和 Index Seek 運算子上方最接近的 Parallelism 運算子來判斷。 兩者都會重新分割交換類型。 也就是說，它們只是將資料流間的資料重新改組，然後依據其輸入的資料流數量產生等量的輸出資料流。 此資料流數量就等於平行處理原則的程度。
 
@@ -727,6 +727,8 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 在 Index Seek 運算子上方的 Parallelism 運算子會使用 `O_ORDERKEY` 值，重新分割其輸入資料流。 因為其輸入未在 `O_ORDERKEY` 資料行值上進行排序，而且此為 `Merge Join` 運算子中的聯結資料行，所以介於 Parallelism 與 Merge Join 運算子之間的 Sort 運算子，可確保會在聯結資料行上針對 `Merge Join` 運算子為輸入進行排序。 `Sort` 運算子 (如 Merge Join 運算子) 會以平行方式執行。
 
 最頂端的 Parallelism 運算子會將數個資料流中的結果，集合成單一資料流。 接著，在 Parallelism 運算子下方之 Stream Aggregate 運算子所執行的部分彙總，會累積為 Parallelism 運算子上方之 Stream Aggregate 運算子中，各個不同 `O_ORDERPRIORITY` 值的單一 `SUM` 值。 由於此計畫具有兩個交換區段，且平行處理原則的程度為 4，因此會使用八個背景工作執行緒。
+
+如需此範例中所使用之運算子的詳細資訊，請參閱[執行程序表邏輯和實體運算子參考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。
 
 ### <a name="parallel-index-operations"></a>平行索引作業
 
@@ -1040,4 +1042,3 @@ GO
  [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [基數估計](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [彈性查詢處理](../relational-databases/performance/adaptive-query-processing.md)
-

@@ -2,10 +2,13 @@
 title: "SQL Server 說明檢視器與離線內容 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -13,19 +16,19 @@ applies_to:
 - SQL Server 2016
 - SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a5e7fb01cd74ccafb3a324dbd79bd849bef0bca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: b8e93b7afb8845398e23ca52c5c3f3bf3901898c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="help-viewer-and-offline-content-for-sql-server"></a>SQL Server 說明檢視器與離線內容
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
   
   
@@ -66,7 +69,7 @@ ms.lasthandoff: 09/08/2017
   
    >[!IMPORTANT] 
    >在 SQL Server Management Studio 和 Visual Studio 中，加入文件程序期間可能會凍結 (擱置) 說明檢視器應用程式。 若要解決此問題，請執行下列作業。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](https://msdn.microsoft.com/library/mt654096.aspx)。  
-   >>以 [記事本] 開啟 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings 檔案，將下列程式碼中的日期變更為未來的日期。 只有當您已安裝 Visual Studio 時，才能在您的本機電腦上使用這個檔案。 
+   >>以 [記事本] 開啟 %LOCALAPPDATA%\Microsoft\HelpViewer2.3\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio15_en-US.settings 檔案，將下列程式碼中的日期變更為未來的日期。 只有當您已安裝 Visual Studio 時，才能在您的本機電腦上使用這個檔案。 
    >>>Cache LastRefreshed="12/31/2017 00:00:00"  
   
     左窗格中的目錄會自動更新以包含您已加入的文件。  
@@ -139,7 +142,5 @@ ms.lasthandoff: 09/08/2017
 此外，說明檢視器不支援 Proxy 設定，也不支援 ISO 格式。 
 
 ## <a name="additional-information"></a>其他資訊
-[Microsoft 說明檢視器 - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
-
+[Microsoft 說明檢視器 - Visual Studio](/visualstudio/ide/microsoft-help-viewer)  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

@@ -1,5 +1,5 @@
 ---
-title: "在 資料警示設計工具中建立資料警示 |Microsoft 文件"
+title: "在資料警示設計工具中建立資料警示 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 54f1cd4f907de0cd3511f1aa25ed8d6e49e2b54b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3cbf24497be6bc9716678645568850297158c20f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在資料警示設計工具中建立資料警示
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/17/2017
 您可在 [資料警示設計工具] 中建立資料警示定義。 儲存警示定義之後，可以在 [資料警示設計工具] 中再次開啟、編輯，然後再次儲存警示定義。 如需編輯警示定義的相關資訊，請參閱 [在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) 和 [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
 ## <a name="create-a-data-alert-definition"></a>建立資料警示定義
  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/17/2017
   
 4.  您也可以選擇性地從 [報表資料名稱] 下拉式清單中選取不同的資料摘要。  
   
-     如果未從報表產生任何資料摘要，則無法為該報表建立警示定義。 報表的配置決定每一個資料摘要的內容。 如需詳細資訊，請參閱[從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
+     如果未從報表產生任何資料摘要，則無法為該報表建立警示定義。 報表的配置決定每一個資料摘要的內容。 如需詳細資訊，請參閱[從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)中使用這項資料。  
   
 5.  (選擇性) 在 [警示名稱] 文字方塊中，將預設名稱更新為更有意義的名稱。  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/17/2017
   
 6.  (選擇性) 將預設資料選項從 [資料摘要中的任何資料都有] 變更為 [資料摘要中的任何資料都沒有]。  
   
-7.  按一下 [加入規則]。  
+7.  按一下 [新增規則]。  
   
      資料摘要中的資料行清單隨即出現。  
   
@@ -76,9 +75,9 @@ ms.lasthandoff: 08/17/2017
   
      根據所選取資料行的資料類型而定，會列出不同的比較運算子。 如果資料行的資料類型為日期，則規則的臨界值旁邊會顯示一個行事曆圖示。 您可以藉由按一下行事曆中的日期或輸入日期的方式來輸入資料。  
   
-     資料警示設計工具提供兩種比較模式：[值輸入模式] 和 [欄位選取模式]。 預設模式為 [值輸入模式]。 只有在處於 [值輸入模式] 模式且使用 [is] 比較時，才可以加入 OR 子句。  
+     資料警示設計工具提供兩種比較模式：[值輸入模式] 和 [欄位選取模式]。 預設模式為 [值輸入模式]。 只有在處於 [值輸入模式] 且使用 [is] 比較時，才可以新增 OR 子句。  
   
-9. 若要加入 OR 子句，請按一下向下箭頭，然後按一下值輸入模式。  
+9. 若要新增 OR 子句，請按一下向下箭頭，然後按一下 [值輸入模式]。  
   
 10. 輸入比較值。  
   
@@ -92,7 +91,7 @@ ms.lasthandoff: 08/17/2017
   
      您將會發現，您按一下以加入 OR 子句的省略符號 **(…)** 已消失。  
   
-13. (選擇性) 再按一次 [加入規則] 即可將其他規則。  
+13. (選擇性) 再按一次 [新增規則] 即可新增其他規則。  
   
      規則是使用 AND 邏輯運算子結合。  
   
@@ -109,7 +108,7 @@ ms.lasthandoff: 08/17/2017
      根據預設，警示訊息沒有停止日期。  
   
     > [!NOTE]  
-    >  停止警示訊息並不會刪除警示定義。 停止警示訊息之後，可以藉由更新開始和停止日期將它重新啟動。 如需刪除警示定義的相關資訊，請參閱[在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
+    >  停止警示訊息並不會刪除警示定義。 停止警示訊息之後，可以藉由更新開始和停止日期將它重新啟動。 如需刪除警示定義的相關資訊，請參閱 [在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
 18. (選擇性) 清除 [僅在結果變更時傳送訊息] 核取方塊。  
   
@@ -117,21 +116,20 @@ ms.lasthandoff: 08/17/2017
   
 19. 輸入警示訊息收件者的電子郵件地址。 以分號分隔地址。  
   
-     如果警示定義建立者的電子郵件地址可用，就會加入 [收件者] 方塊中。  
+     如果警示定義建立者的電子郵件地址可用，就會新增至 [收件者] 方塊中。  
   
 20. (選擇性) 在 [主旨] 文字方塊中更新警示訊息的 [主旨]。  
   
-     預設的主體為**資料警示的\<資料警示名稱 >**。  
+     預設的 [主旨] 為**\<資料警示名稱> 的資料警示**。  
   
 21. (選擇性) 在 [描述] 文字方塊中輸入警示訊息的描述。  
   
 22. 按一下 **[儲存]**。  
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 
 [資料警示設計工具](../reporting-services/data-alert-designer.md)   
 [警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

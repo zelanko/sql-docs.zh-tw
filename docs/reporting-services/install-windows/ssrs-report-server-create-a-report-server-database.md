@@ -1,26 +1,23 @@
 ---
-title: "建立報表伺服器資料庫 （SSRS 組態管理員） |Microsoft 文件"
+title: "建立報表伺服器資料庫 (SSRS 設定管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: aac0bcb0b004a0c8225b580313281c9668c1c882
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: 75f48182cdabaa731eca28d2e9a6ad3dc638178f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-report-server-database"></a>建立報表伺服器資料庫
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
@@ -45,11 +42,11 @@ ms.lasthandoff: 09/21/2017
 ## <a name="ways-to-create-the-report-server-database"></a>建立報表伺服器資料庫的方法  
  **原生模式：** 您可以利用下列方式建立原生模式報表伺服器資料庫：  
   
--   自動：如果選擇預設組態安裝選項，則會使用 SQL Server 安裝精靈。 在 SQL Server 安裝精靈中，這是**安裝及設定**在報表伺服器安裝選項 頁面。 如果您選擇**只安裝**選項，您必須使用 Reporting Services 組態管理員來建立資料庫。  
+-   自動：如果選擇預設組態安裝選項，則會使用 SQL Server 安裝精靈。 在 [SQL Server 安裝精靈] 中，這是 [報表伺服器安裝選項] 頁面中的 [安裝和設定]。 如果您選擇了 [Install only] (只安裝) 選項，就必須使用 Reporting Services 設定管理員建立資料庫。  
   
--   手動：使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 如果您要使用遠端 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 來主控報表伺服器資料庫，您必須手動建立此資料庫。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+-   手動：使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 如果您要使用遠端 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 來主控報表伺服器資料庫，您必須手動建立此資料庫。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
- **SharePoint 模式：** [報表伺服器安裝選項] 頁面中只有一個用於 SharePoint 模式的選項**只安裝**。 此選項會安裝所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務。 下一步是透過下列其中一種方式建立至少一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式：  
+ **SharePoint 模式：**[報表伺服器安裝選項] 頁面只有一個用於 SharePoint 模式的選項 [只安裝]。 此選項會安裝所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務。 下一步是透過下列其中一種方式建立至少一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式：  
   
 -   使用 SharePoint 管理中心建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需詳細資訊，請參閱 [步驟 3：建立 Reporting Services 服務應用程式](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)的＜服務應用程式＞一節。  
   
@@ -81,4 +78,3 @@ ms.lasthandoff: 09/21/2017
 [Reporting Services 組態管理員](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

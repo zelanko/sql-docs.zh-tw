@@ -1,5 +1,5 @@
 ---
-title: "使用 WinForms ReportViewer 控制項 |Microsoft 文件"
+title: "使用 WinForms ReportViewer 控制項 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -10,35 +10,32 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4b6a64a6d5832461e7d1d73597499e6a67e4bc4b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b8a315338fec870de62e1705f84c1396d1570520
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控制項
   若要檢視已部署至報表伺服器或存在於本機檔案系統的報表，您可以使用 WinForms ReportViewer 控制項在 Windows 應用程式中加以轉譯。  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>將 ReportViewer 控制項加入至 Windows 應用程式  
   
-1.  建立新的 Windows 應用程式使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)]或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。  
+1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 建立新的 Windows 應用程式。  
   
-     \-或者-  
+     \- 或 -  
   
      開啟現有的 Windows 應用程式專案並加入的新表單。  
   
-2.  找不到在 ReportViewer 控制項**工具箱**。 如果**工具箱**不是可見，您可以存取它從**檢視**功能表選取**工具箱**。  
+2.  在 [工具箱] 中找出 ReportViewer 控制項。 如果看不到 [工具箱]，可以從 [檢視] 功能表選取 [工具箱] 加以存取。  
   
      ![選取 ReportViewer 控制項](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "選取 ReportViewer 控制項")  
   
@@ -46,13 +43,13 @@ ms.lasthandoff: 08/09/2017
   
      名為 reportViewer1 的 ReportViewer 控制項會加入至表單。  
   
- 控制項加入至表單的後**ReportViewer 工作**智慧標籤隨即出現，並提示您選取報表。  
+ 將控制項新增至表單後，[ReportViewer 工作] 智慧標籤會顯示，並提示您選取報表。  
   
- 如果您想要檢視的報表已部署至報表伺服器來選取**\<伺服器報表 >**選項**選擇報表**下拉式清單。 之後**\<伺服器報表 >**選取選項，則會出現兩個額外屬性：**報表伺服器 Url**和**報表路徑**。 **報表伺服器 Url**是到報表伺服器的位址和**報表路徑**是要轉譯之報表的完整路徑。  
+ 如果您希望檢視的報表已部署到報表伺服器，請從 [選擇報表] 下拉式清單，選取 [\<伺服器報表>] 選項。 選取 [\<伺服器報表>] 選項之後，會出現兩個額外屬性：[報表伺服器 URL] 和 [報表路徑]。 [報表伺服器 URL] 是報表伺服器的位址，[報表路徑] 則是要轉譯之報表的完整路徑。  
   
  ![選取伺服器報表](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "選取伺服器報表")  
   
- 如果您想要在本機模式檢視報表的報表，請選取 **設計新報表**選項來啟動報表設計師，或選取已是現有專案一部分的報表。  
+ 如果您要檢視的報表是本機模式報表，請選取 [設計新報表] 選項以啟動報表設計師，或選取已是現有專案一部分的報表。  
   
  ![選取本機報表](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "選取本機報表")  
   
@@ -101,7 +98,7 @@ public partial class Form1 : Form
     }  
 }  
 ```  
-**在 VB.NET**
+**VB.NET**
 ```vb  
 Imports Microsoft.Reporting.WinForms  
   
@@ -157,30 +154,30 @@ End Class
   
 1.  開啟其中將加入此報表的 Windows 專案。  
   
-2.  從**專案**功能表上，選取**加入現有項目**。  
+2.  從 [專案] 功能表上，選取 [新增現有項目]。  
   
 3.  瀏覽到安裝「[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 報表範例」專案的位置。  
   
-     下載報表範例，請移至[AdventureWorks 2012 報表範例](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     如果要下載報表範例，請移至 [AdventureWorks 2012 報表範例](http://go.microsoft.com/fwlink/?LinkId=404153)  
   
-4.  選取 Sales Order Detail.rdl 檔案，然後按一下**新增** 按鈕。  
+4.  選取 Sales Order Detail.rdl 檔案，然後按一下 [新增] 按鈕。  
   
      Sales Order Detail.rdl 檔案現在應該是專案的一部分。  
   
-     ![銷售訂單詳細資料報表](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "銷售訂單詳細資料報表")  
+     ![Sales Order Detail 報表](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Sales Order Detail 報表")  
   
-5.  以滑鼠右鍵按一下方案總管 中的 Sales Order Detail.rdl 檔案，然後選取**重新命名**。 若要將報表重新命名**Sales Order Detail.rdlc**按下 ENTER。  
+5.  在方案總管中，以滑鼠右鍵按一下 Sales Order Detail.rdl 檔案，然後選擇 [重新命名]。 將報表重新命名為 **Sales Order Detail.rdlc**，然後按 ENTER。  
   
-     如果看不到 方案總管 中，您可以開啟它從**檢視**功能表選取**方案總管 中**。  
+     如果看不到方案總管，可以從 [檢視] 功能表選取方案總管開啟。  
   
     > [!NOTE]  
-    >  重新命名為 rdlc 從 rdl 檔案延伸模組可讓您編輯使用報表設計師報表[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]。  
+    >  將副檔名從 rdl 重新命名為 rdlc 可以讓您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 的報表設計師編輯報表。  
   
-6.  在報表重新命名後，選取檔案並找出 [屬性] 視窗。 變更**複製到輸出目錄**屬性**更新時才複製**。  
+6.  在報表重新命名後，選取檔案並找出 [屬性] 視窗。 將 [複製到輸出目錄] 屬性變更為 [有更新時才複製]。  
   
-     ![設定複製到輸出](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "設定複製到輸出設定")  
+     ![設定 [複製到輸出] 設定](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "設定 [複製到輸出] 設定")  
   
-     如果**屬性**看不到視窗中，您可以從開啟**檢視**功能表選取**屬性 視窗**。  
+     如果看不到 [屬性] 視窗，可以從 [檢視] 功能表選取 [屬性視窗] 加以開啟。  
   
  下列的程式碼範例會為銷售訂單資料建立資料集，然後以本機模式轉譯 Sales Order Detail 報表。  
 
@@ -342,7 +339,7 @@ public partial class Form1 : Form
     }  
 }  
 ```  
-**在 VB.NET**
+**VB.NET**
 ```vb  
 Imports System.Data.SqlClient  
 Imports Microsoft.Reporting.WinForms  
@@ -515,4 +512,3 @@ End Class
  [使用 ReportViewer 控制項整合 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   
-

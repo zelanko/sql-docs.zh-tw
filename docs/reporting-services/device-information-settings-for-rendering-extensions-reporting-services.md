@@ -1,7 +1,6 @@
 ---
-title: "轉譯延伸模組 (Reporting Services) 的裝置資訊設定 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "轉譯延伸模組的裝置資訊設定 (Reporting Services) | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/15/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -12,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b54af8ae1b0141a0fceb29c8e583d0026d377fdd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8a5618026c0a8e3714eb33725195f5d891c3e467
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>轉譯延伸模組的裝置資訊設定 (Reporting Services)
   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，裝置資訊設定會用於將轉譯參數傳遞給轉譯延伸模組。 每一個轉譯延伸模組都會接受一組特定的設定。  
@@ -43,8 +41,7 @@ ms.lasthandoff: 08/09/2017
 |[RGDI 裝置資訊設定](../reporting-services/rgdi-device-information-settings.md)|描述與 RGDI 轉譯輸出相關聯的裝置資訊設定。|  
 |[PPTX 裝置資訊設定](../reporting-services/pptx-device-information-settings.md)|描述與 PPTX 轉譯輸出相關聯的裝置資訊設定。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [在 RSReportServer.Config 中自訂轉譯延伸模組參數](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   
-

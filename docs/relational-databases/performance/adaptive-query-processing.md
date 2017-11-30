@@ -2,7 +2,7 @@
 title: "Microsoft SQL 資料庫中的彈性查詢處理 | Microsoft Docs | Microsoft Docs"
 description: "可改善 SQL Server (2017 和更新版本) 和 Azure SQL Database 查詢效能的彈性查詢處理功能。"
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/13/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,14 +15,12 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 64f0c0226ab040eb8b43c4b62a6784296d22c6aa
+ms.sourcegitcommit: fa030c0d644bae31f9688b1cc3523f60834f13c5
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/14/2017
 ---
-
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 資料庫中的彈性查詢處理
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -183,7 +181,7 @@ MSTVF 在 SQL Server 2014 和 SQL Server 2016 的固定基數估計值為 "100"�
 1. 亦請注意，我們不再顯示溢出警告，因為我們要根據 MSTVF 資料表掃描的實際資料列計數，授與更多記憶體。
 
 ### <a name="interleaved-execution-eligible-statements"></a>符合交錯執行的陳述式
-在交錯執行中參考陳述式的 MSTVF，目前必須是唯讀的，且不為資料修改作業的一部分。 此外，MSTVF 不適合進行交錯執行，如果它們用在 CROSS APPLY 內部。
+在交錯執行中參考陳述式的 MSTVF，目前必須是唯讀的，且不為資料修改作業的一部分。 此外，如果 MSTVF 未使用執行階段常數，則不適用於交錯執行。
 
 ### <a name="interleaved-execution-benefits"></a>交錯執行的優點
 一般情況下，預估和實際資料列數目間的扭曲愈高，加上下游計劃作業的數目，對效能的影響就愈大。
@@ -231,5 +229,4 @@ MSTVF 在 SQL Server 2014 和 SQL Server 2016 的固定基數估計值為 "100"�
 [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)
 
 [示範彈性查詢處理](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 

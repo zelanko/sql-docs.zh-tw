@@ -1,5 +1,5 @@
 ---
-title: "資料警示設計工具 |Microsoft 文件"
+title: "資料警示設計工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 67b7bf50b5773ee52651942345e40146a7e70fb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-designer"></a>資料警示設計工具
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 您可在 [資料警示設計工具] 中建立和編輯資料警示定義。 警示定義是中繼資料的集合，包括您感興趣的報表資料、報表資料必須符合才能建立資料警示執行個體和傳送資料警示訊息的規則、警示訊息的收件者等。  
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
  若要建立警示定義，您需要執行一些相關工作：  
   
@@ -57,14 +57,14 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  由於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示功能只有在您安裝 SharePoint 模式的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時才可使用，因此要建立其警示的報表必須儲存、部署或上傳到 SharePoint 文件庫。  
 >   
->  資料警示不能在使用 Windows 整合式驗證或提示輸入認證的報表上建立。 報表必須使用預存認證。 如需詳細資訊，請參閱[指定報表資料來源的認證及連接資訊](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
+>  資料警示不能在使用 Windows 整合式驗證或提示輸入認證的報表上建立。 報表必須使用預存認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
  若要開啟 [資料警示設計工具]，請在報表工具列上按一下 [動作] 功能表上的 [新資料警示] 選項。 如果您看不見 [新資料警示] 選項，表示報表未設定為使用預存認證。 您可以藉由從 SharePoint 文件庫更新報表資料來源的方式更新認證類型。  
   
 ##  <a name="AlertDesigner"></a> 資料警示設計工具使用者介面  
  [資料警示設計工具] 分成下列幾個區域。 選取報表資料摘要的區域、將規則加入條件中以建立簡單或複雜條件的區域等。 下圖顯示 [資料警示設計工具] 中的區域。  
   
- ![在警示設計工具使用者介面中的區域](../reporting-services/media/rs-alertdesigner.gif "警示設計工具使用者介面中的區域")  
+ ![警示設計工具使用者介面中的區域](../reporting-services/media/rs-alertdesigner.gif "警示設計工具使用者介面中的區域")  
   
   
 ### <a name="alert-data"></a>警示資料  
@@ -144,9 +144,9 @@ ms.lasthandoff: 08/09/2017
   
 -   數值資料類型的比較包括： **是**、 **不是**、 **小於**、 **小於或等於**、 **大於**以及 **大於或等於**  
   
--   字串資料類型的比較包括：**是**、**不是**及**包含**  
+-   字串資料類型的比較包括： **是**、 **不是**及 **包含**  
   
- 在建立規則時，您會透過選擇 [值輸入模式] 或 [欄位選取模式] 的方式指定要在比較中使用值或欄位。 如果您選擇 [值輸入模式]，則提供要比較的值清單。 包含多個 OR 子句的比較與 [!INCLUDE[tsql](../includes/tsql-md.md)] 中的 IN 邏輯比較十分相似，後者是用來測試是否有相符項目的值清單。 如需詳細資訊，請參閱 [IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md)。  
+ 在建立規則時，您會透過選擇 [值輸入模式] 或 [欄位選取模式] 的方式指定要在比較中使用值或欄位。 如果您選擇 [值輸入模式]，則提供要比較的值清單。 包含多個 OR 子句的比較與 [!INCLUDE[tsql](../includes/tsql-md.md)]中的 IN 邏輯比較十分相似，後者是用來測試是否有相符項目的值清單。 如需詳細資訊，請參閱 [IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md)。  
   
  如果您選擇 [欄位選取模式]，則會在兩個欄位之間逐一比較資料列。 這兩個欄位必須擁有相容的資料類型 (例如，兩個數值欄位)，否則比較無效。 當您選擇 [欄位選取模式] 時，欄位清單會自動顯示。  
   
@@ -177,7 +177,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="email-settings"></a>電子郵件設定  
  您可在 [收件者] 選項中指定要接收資料警示訊息電子郵件之收件者的電子郵件地址。 多個電子郵件是以分號分隔，與 Microsoft Office Outlook 電子郵件中的方式相同。 您也可以指定通訊群組做為收件者，如此可讓管理收件者清單的工作更容易且更有效率。 如果建立警示定義時，SharePoint 可以判斷您的電子郵件地址，則您的電子郵件地址會自動加入收件者清單，否則您就必須明確將自己加入為收件者。  
   
- 電子郵件的預設主旨是**資料警示的\<警示名稱 >**。 您可以依需要變更主旨。  
+ 預設的電子郵件主旨為 [\<警示名稱> 的資料警示]。 您可以依需要變更主旨。  
   
  您也可以在 [描述] 選項中提供要包含在資料警示訊息中的描述。 包含描述 (尤其是擁有類似的資料警示時) 有助於迅速區分和了解警示訊息。 除了在報表資料滿足指定的規則時傳送的警示訊息之外，警示訊息還會在發生錯誤時傳送至所有收件者。 如需相關資訊，請參閱 [Data Alert Messages](../reporting-services/data-alert-messages.md)。  
   
@@ -205,7 +205,7 @@ ms.lasthandoff: 08/09/2017
   
  若要編輯資料警示定義，請在 [資料警示管理員] 中以滑鼠右鍵按一下該資料警示定義，然後按一下 [編輯]。 下圖說明 [資料警示管理員] 中資料警示的內容功能表。  
   
- ![開啟資料警示設計工具，即可編輯](../reporting-services/media/rs-alertmanageriwopendesigner.gif "開啟的資料警示設計工具，按一下 編輯")  
+ ![按一下 [編輯]，開啟資料警示設計工具](../reporting-services/media/rs-alertmanageriwopendesigner.gif "按一下 [編輯]，開啟資料警示設計工具")  
   
  如需詳細資訊，請參閱 [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
@@ -213,11 +213,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="HowTo"></a> 相關工作  
  本節列出如何建立和編輯警示的程序。  
   
--   [編輯資料警示設計工具中警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [在資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 
 [Reporting Services 資料警示](../reporting-services/reporting-services-data-alerts.md)   
 [警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md)  

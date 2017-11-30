@@ -1,5 +1,5 @@
 ---
-title: "授權方法 |Microsoft 文件"
+title: "授權方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], reports
 - authorization [Reporting Services]
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - tasks [Reporting Services]
 - roles [Reporting Services], methods
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: eb327018c69059a27f7ff21a8f487f2a4eb6f306
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 567a67c801ceb2613f9cd5068c05bd79cb693850
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="authorization-methods"></a>授權方法
   您可以使用這些方法在報表伺服器上管理工作、角色和原則。  
@@ -46,17 +44,16 @@ ms.lasthandoff: 08/12/2017
 |<xref:ReportService2010.ReportingService2010.InheritParentSecurity%2A>|刪除與報表伺服器資料庫中特定項目關聯的原則，並將項目的安全性原則設定為其父項的安全性原則。|  
 |<xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>|傳回布林值，指出是否需要安全通訊端層 (SSL) 通訊協定，以便使用 <xref:ReportService2010> 端點。|  
 |<xref:ReportService2010.ReportingService2010.ListRoles%2A>|傳回報表伺服器所管理角色的名稱與描述。|  
-|<xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A>|傳回在叫用時需要安全連接的 <xref:ReportExecution2005> 端點中，簡易物件存取通訊協定 (SOAP) 方法的清單。 **SecureConnectionLevel**報表伺服器的設定用來判斷哪些方法會傳回。|  
+|<xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A>|傳回在叫用時需要安全連接的 <xref:ReportExecution2005> 端點中，簡易物件存取通訊協定 (SOAP) 方法的清單。 報表伺服器的 **SecureConnectionLevel** 設定是用以決定所要傳回的方法。|  
 |<xref:ReportService2010.ReportingService2010.ListTasks%2A>|傳回由報表伺服器所管理的工作。|  
 |<xref:ReportService2010.ReportingService2010.SetPolicies%2A>|設定與指定之項目關聯的原則。|  
 |<xref:ReportService2010.ReportingService2010.SetRoleProperties%2A>|設定角色中繼資料屬性，並將一組工作與角色相關聯。 這個方法只適用於原生模式。|  
 |<xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A>|設定系統原則，以定義群組及其關聯的角色。 這個方法只適用於原生模式。|  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Web 服務和.NET Framework 建置應用程式](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [使用 Web 服務和 .NET Framework 建置應用程式](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [報表伺服器 Web 服務](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [報表伺服器 Web 服務方法](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [技術參考 &#40;SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [技術參考 &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

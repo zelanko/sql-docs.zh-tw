@@ -1,7 +1,6 @@
 ---
-title: "Reporting Services 和 Power View 的瀏覽器支援 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services 和 Power View 的瀏覽器支援 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -21,30 +20,29 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6dcf1d4b0423517113345f9ed6532fb6baf07e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的瀏覽器支援
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-了解哪些瀏覽器相關管理和檢視 [SQL Server Reporting Services、 ReportViewer 控制項和 Power View 支援版本。
+了解支援管理和檢視 SQL Server Reporting Services、ReportViewer 控制項和 Power View 的瀏覽器版本。
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
-## <a name="browser-requirements-for-the-web-portal"></a>Web 入口網站的瀏覽器需求
+## <a name="browser-requirements-for-the-web-portal"></a>入口網站的瀏覽器需求
 
-以下是目前的瀏覽器支援入口網站的清單。
+以下是入口網站目前支援的瀏覽器清單。
 
 **Microsoft Windows**  
 *Windows 7、8.1、10；Windows Server 2008 R2、2012、2012 R2*
@@ -155,12 +153,11 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>後續的步驟
 
-[尋找及檢視報表，在 web 入口網站](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+[在入口網站中尋找和檢視報表](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
 [入口網站 (SSRS 原生模式)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-
 

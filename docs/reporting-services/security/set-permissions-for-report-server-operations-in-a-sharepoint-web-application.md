@@ -1,5 +1,5 @@
 ---
-title: "在 SharePoint Web 應用程式中設定報表伺服器作業的權限 |Microsoft 文件"
+title: "在 SharePoint Web 應用程式中設定報表伺服器作業的權限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a872862355624b84fe792cfccc892f26bf9e3433
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>在 SharePoint Web 應用程式中設定報表伺服器作業的權限
   針對以 SharePoint 整合模式執行的報表伺服器，在 SharePoint 網站上定義的安全性設定可以決定您檢視與管理報表、報表模型與共用資料來源的方式。 如果您使用預設的 SharePoint 群組、權限等級以及權限指派，則可以使用目前的安全性設定處理報表和其他文件。  
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  如果您要使用預先定義的權限等級，則不需要進行任何動作，因為上述權限已經包括在完整控制、設計、參與、讀取和限制存取中。 但是，如果您要使用自訂權限等級或編輯權限指派給特定使用者或群組，則必須手動加入權限。  
   
- 「瀏覽使用者資訊」權限可讓報表伺服器傳回項目建立者以及項目最後修改者的相關資訊。 沒有這個權限，報表伺服器將會傳回下列錯誤。 若是瀏覽作業，此錯誤為：「報表伺服器發生 SharePoint 錯誤。 ---> System.UnauthorizedAccessException: 存取遭到拒絕。」 若是發行作業，錯誤為: 「 授與使用者的權限 '\<網域 >\\< 使用者\>' 不足，無法執行此作業。 」  
+ 「瀏覽使用者資訊」權限可讓報表伺服器傳回項目建立者以及項目最後修改者的相關資訊。 沒有這個權限，報表伺服器將會傳回下列錯誤。 若是瀏覽作業，此錯誤為：「報表伺服器發生 SharePoint 錯誤。 ---> System.UnauthorizedAccessException: 存取遭到拒絕。」 若是發行作業，錯誤為「授與使用者 ‘\<網域>\\<使用者\>' 的權限不足，無法執行此作業」。  
   
 ##  <a name="permissionReports"></a> 檢視和管理報表的權限  
  報表定義權限是透過包含報表的文件庫上的「清單」權限定義，不過，如果您要限制存取，可以在個別報表上設定權限。 下表提供工作以及支援各項工作之權限的清單。  
@@ -137,11 +136,10 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  沒有編輯報表模型的權限。 即使您可以產生或刪除報表模型，仍無法在 SharePoint 網站內進行編輯。 編輯報表模型需要模型設計師，這是一個用戶端撰寫工具，不受您在 SharePoint 中設定的權限影響。  
   
-## <a name="see-also"></a>請參閱＜  
- [授與權限在 SharePoint 網站上的報表伺服器項目](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Reporting Services to SharePoint Groups and Permissions 中比較角色和工作](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [授與權限在 SharePoint 網站上的報表伺服器項目](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [在報表伺服器項目的 Windows SharePoint Services 中使用內建安全性](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+## <a name="see-also"></a>另請參閱  
+ [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   
-

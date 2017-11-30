@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services SharePoint 模式的 PowerShell cmdlet |Microsoft 文件"
+title: "Reporting Services SharePoint 模式的 PowerShell Cmdlet | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,33 +14,32 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 5ab2078266bb130e80b0919c2a4f19e8cf45a671
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: be7fe550a03d527e3189adf029f183bbb3af517b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式的 PowerShell cmdlet
+# <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式的 PowerShell Cmdlet
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-當您安裝 SQL Server 2016 Reporting Services SharePoint 模式時，以支援 SharePoint 模式報表伺服器會安裝 PowerShell cmdlet。 這些指令程式涵蓋三個功能類別。  
+當您安裝 SQL Server 2016 Reporting Services SharePoint 模式時，系統就會安裝 PowerShell Cmdlet 以支援 SharePoint 模式的報表伺服器。 這些指令程式涵蓋三個功能類別。  
   
--   安裝 Reporting Services SharePoint 共用服務和 proxy。  
+-   安裝 Reporting Services SharePoint 共用服務和 Proxy。  
   
--   佈建及管理的 Reporting Services 服務應用程式和相關聯的 proxy。  
+-   佈建和管理 Reporting Services 服務應用程式和相關聯 Proxy。  
   
--   管理 Reporting Services 功能，如範例延伸模組和加密金鑰。  
+-   管理 Reporting Services 功能，例如延伸模組和加密金鑰。  
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
 ## <a name="cmdlet-summary"></a>指令程式摘要
 
- 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱 [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx)。 在下列指令程式摘要中，服務應用程式 「 資料庫 」 參考的所有資料庫建立及使用 Reporting Services 服務應用程式。 其中包括組態、警示和暫時資料庫。  
+ 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱 [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx)。 在下列 Cmdlet 摘要中，服務應用程式「資料庫」的參考是指 Reporting Services 服務應用程式建立和使用的所有資料庫。 其中包括組態、警示和暫時資料庫。  
   
  當您輸入 PowerShell 範例時，將會看到類似下面的錯誤訊息：  
   
@@ -49,7 +48,7 @@ ms.lasthandoff: 10/06/2017
   
  發生以下其中一個問題：  
   
--   Reporting Services SharePoint 模式未安裝，因此不會安裝 Reporting Services 指令程式。  
+-   Reporting Services SharePoint 模式未安裝，因此 Reporting Services Cmdlet 也未安裝。  
   
 -   您已在 Windows PowerShell 或 Windows PowerShell ISE 中執行 PowerShell 命令，而不是在 SharePoint 管理命令介面中執行。 使用 SharePoint 管理命令介面，或是透過以下命令將 SharePoint 嵌入式管理單元加入至 Windows PowerShell 視窗：  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 10/06/2017
   
  如需詳細資訊，請參閱 [Use Windows PowerShell to administer SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx)。  
   
-### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>開啟 SharePoint 管理命令介面並執行指令程式
+### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>開啟 SharePoint 管理命令介面並執行 Cmdlet
   
 1.  按一下 **[開始]** 按鈕  
   
@@ -71,20 +70,20 @@ ms.lasthandoff: 10/06/2017
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
-##  <a name="shared-service-and-proxy-cmdlets"></a>共用的服務和 proxy 指令程式
+##  <a name="shared-service-and-proxy-cmdlets"></a>共用服務和 Proxy Cmdlet
 
- 下表包含 Reporting Services SharePoint 共用服務的 PowerShell cmdlet。  
+ 下表包含用於 Reporting Services SharePoint 共用服務的 PowerShell Cmdlet。  
   
 |指令程式|說明|  
 |------------|-----------------|  
-|Install-SPRSService|安裝及註冊或是解除安裝 Reporting Services 共用的服務。 作法是只在已安裝 SQL Server Reporting Services SharePoint 模式中的電腦上。 針對安裝會進行兩項作業：<br /><br /> -Reporting Services 服務會安裝在伺服器陣列。<br /><br /> -Reporting Services 服務執行個體安裝到目前的電腦。<br /><br /> 針對解除安裝會進行兩項作業：<br /><br /> -Reporting Services 服務會從目前的電腦解除安裝。<br /><br /> -Reporting Services 服務會從伺服器陣列解除安裝。<br /><br /> <br /><br /> 如果有任何其他電腦在伺服陣列中的安裝 Reporting Services 服務，或如果仍然有伺服器陣列中執行的 Reporting Services 服務應用程式，會顯示一則警告訊息。|  
+|Install-SPRSService|安裝及註冊或是解除安裝 Reporting Services 共用服務。 只有在擁有 SharePoint 模式之 SQL Server Reporting Services 安裝的電腦上才可以執行這項作業。 針對安裝會進行兩項作業：<br /><br /> -Reporting Services 服務會安裝在伺服器陣列中。<br /><br /> -Reporting Services 服務執行個體會安裝到目前的電腦上。<br /><br /> 針對解除安裝會進行兩項作業：<br /><br /> -Reporting Services 服務會從目前的電腦解除安裝。<br /><br /> -Reporting Services 服務會從伺服器陣列解除安裝。<br /><br /> <br /><br /> 如果伺服器陣列中有任何其他電腦已安裝 Reporting Services 服務，或者依然有 Reporting Services 服務應用程式在伺服器陣列中執行，則會顯示警告訊息。|  
 |Install-SPRSServiceProxy|在 SharePoint 伺服器陣列中安裝及註冊或是解除安裝 Reporting Services 服務 Proxy。|  
 |Get-SPRSProxyUrl|取得用來存取 Reporting Services 服務的 URL。|  
-|Get-SPRSServiceApplicationServers|在包含 Reporting Services 共用服務安裝的本機 SharePoint 伺服器陣列中取得所有伺服器。 這個指令程式可用於 Reporting Services 升級，若要判斷哪些伺服器執行共用的服務因此需要升級。|  
+|Get-SPRSServiceApplicationServers|在包含 Reporting Services 共用服務安裝的本機 SharePoint 伺服器陣列中取得所有伺服器。 這個 Cmdlet 對於 Reporting Services 升級很有用，可判斷哪些伺服器執行共用服務因此需要升級。|  
   
-## <a name="service-application-and-proxy-cmdlets"></a>服務應用程式和 proxy 指令程式
+## <a name="service-application-and-proxy-cmdlets"></a>服務應用程式和 Proxy Cmdlet
 
- 下表包含 Reporting Services 服務應用程式和其相關聯的 proxy 的 PowerShell cmdlet。  
+ 下表包含用於 Reporting Services 服務應用程式及其相關聯 Proxy 的 PowerShell Cmdlet。  
   
 |Cmdlet|說明|  
 |------------|-----------------|  
@@ -94,17 +93,17 @@ ms.lasthandoff: 10/06/2017
 |Set-SPRSServiceApplication|編輯現有 Reporting Services 服務應用程式的屬性。|  
 |New-SPRSServiceApplicationProxy|建立新的 Reporting Services 服務應用程式 Proxy。|  
 |Get-SPRSServiceApplicationProxy|取得一個或多個 Reporting Services 服務應用程式 Proxy。|  
-|Dismount-SPRSDatabase|卸載的 Reporting Services 服務應用程式的服務應用程式資料庫。|  
-|Remove-SPRSDatabase|移除 Reporting Services 服務應用程式的服務應用程式資料庫。|  
-|Set-SPRSDatabase|設定 Reporting Services 服務應用程式相關聯之資料庫的屬性。|  
+|Dismount-SPRSDatabase|為 Reporting Services 服務應用程式卸載服務應用程式資料庫。|  
+|Remove-SPRSDatabase|為 Reporting Services 服務應用程式移除服務應用程式資料庫。|  
+|Set-SPRSDatabase|設定與 Reporting Services 服務應用程式相關聯之資料庫的屬性。|  
 |Mount-SPRSDatabase|掛載 Reporting Services 服務應用程式的資料庫。|  
-|New-SPRSDatabase|建立新的服務應用程式資料庫，為指定的 Reporting Services 服務應用程式。|  
-|Get-SPRSDatabaseCreationScript|資料庫建立指令碼輸出到畫面，以便在 Reporting Services 服務應用程式。 然後您就可以在 SQL Server Management Studio 中執行指令碼。|  
+|New-SPRSDatabase|為指定的 Reporting Services 服務應用程式建立新的服務應用程式資料庫。|  
+|Get-SPRSDatabaseCreationScript|針對 Reporting Services 服務應用程式將資料庫建立指令碼輸出到畫面。 然後您就可以在 SQL Server Management Studio 中執行指令碼。|  
 |Get-SPRSDatabase|取得一個或多個 Reporting Services 服務應用程式資料庫。 使用命令來取得服務應用程式資料庫的識別碼，以便使用 Set-SPRSDatabase Cmdlet 來修改屬性，例如 `querytimeout`。 請參閱本主題中的範例， [取得並設定 Reporting Services 應用程式資料庫的屬性](#bkmk_example_db_properties)。|  
-|Get-SPRSDatabaseRightsScript|將資料庫權限指令碼輸出到畫面，以便在 Reporting Services 服務應用程式。 它會提示您提供所需的使用者和資料庫，然後傳回您可執行以修改權限的 Transact SQL。 然後您就可以在 SQL Server Management Studio 中執行這個指令碼。|  
-|Get-SPRSDatabaseUpgradeScript|將資料庫升級指令碼輸出至畫面。 指令碼將會升級至目前的 Reporting Services 安裝的資料庫版本的 Reporting Services 服務應用程式資料庫。|  
+|Get-SPRSDatabaseRightsScript|針對 Reporting Services 服務應用程式將資料庫權限指令碼輸出到畫面。 它會提示您提供所需的使用者和資料庫，然後傳回您可執行以修改權限的 Transact SQL。 然後您就可以在 SQL Server Management Studio 中執行這個指令碼。|  
+|Get-SPRSDatabaseUpgradeScript|將資料庫升級指令碼輸出至畫面。 指令碼會將 Reporting Services 服務應用程式資料庫升級至目前 Reporting Services 安裝的資料庫版本。|  
   
-## <a name="reporting-services-custom-runctionality-cmdlets"></a>Reporting Services 自訂 runctionality 指令程式
+## <a name="reporting-services-custom-runctionality-cmdlets"></a>Reporting Services 自訂功能 Cmdlet
   
 |指令程式|說明|  
 |------------|-----------------|  
@@ -120,7 +119,7 @@ ms.lasthandoff: 10/06/2017
   
 ## <a name="basic-samples"></a>基本範例
 
- 傳回名稱中包含 'SPRS' 的指令程式清單。 這會是完整的 Reporting Services 指令程式清單。  
+ 傳回名稱中包含 'SPRS' 的指令程式清單。 這會是完整的 Reporting Services Cmdlet 清單。  
   
 ```  
 Get-command –noun *SPRS*  
@@ -132,7 +131,7 @@ Get-command –noun *SPRS*
 Get-command -noun *SPRS* | Select name, definition | Format-List | Out-File c:\commandlist.txt  
 ```  
   
- 安裝 Reporting Services SharePoint 服務和服務 proxy。  
+ 安裝 Reporting Services SharePoint 服務和服務 Proxy。  
   
 ```  
 Install-SPRSService  
@@ -154,7 +153,7 @@ get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | 
 Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
 ```  
   
-## <a name="detailed-samples"></a>詳細的範例
+## <a name="detailed-samples"></a>詳細範例
 
  除了下列範例之外，亦請參閱 [Windows PowerShell script for Steps 1–4](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script)主題中的＜Windows PowerShell 指令碼＞一節。  
   
@@ -166,7 +165,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  將 Proxy 加入至預設 Proxy 群組。  
   
-3.  將服務應用程式存取權授與連接埠 80 Web 應用程式的內容資料庫。 指令碼會假設站台`http://sitename`已經存在。  
+3.  將服務應用程式存取權授與連接埠 80 Web 應用程式的內容資料庫。 此指令碼會假設網站 `http://sitename` 已存在。  
   
 ```  
 # Create service application and service application proxy  
@@ -220,7 +219,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server 
 get-sprsserviceapplication –Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
-### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>取得並設定 Reporting Services 應用程式資料庫的屬性
+### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>取得及設定 Reporting Service 應用程式資料庫的屬性
 
  下列範例一開始傳回資料庫與屬性的清單，您可以用來決定之後提供給 set 命令的資料庫 GUID (識別碼)。 如需屬性的完整清單，請使用 `Get-SPRSDatabase | format-list`。  
   
@@ -254,7 +253,7 @@ Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, q
   
 ### <a name="list-reporting-services-data-extensions"></a>列出 Reporting Services 資料延伸模組
 
- 下列範例會透過每個 Reporting Services 服務應用程式執行迴圈，並列出每個目前的資料延伸模組。  
+ 下列範例會在每一個 Reporting Services 服務應用程式中執行迴圈，並列出每一個應用程式目前的資料延伸模組。  
   
 ```  
 $apps = Get-SPRSServiceApplication  
@@ -295,9 +294,8 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
   
 ## <a name="next-steps"></a>後續的步驟
 
-[使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂閱](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[檢查清單： 使用 PowerShell 驗證 Powerpivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
-[取得說明 SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂閱](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
+[檢查清單：使用 PowerShell 驗證 Power Pivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[取得 SQL Server PowerShell 說明](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

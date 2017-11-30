@@ -1,5 +1,5 @@
 ---
-title: "電子郵件傳遞的 Reporting Services 中 |Microsoft 文件"
+title: "Reporting Services 中的電子郵件傳遞 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 1698558dcfe2a7d31b6050295e714337dbe66b01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的電子郵件傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含了電子郵件傳遞延伸模組，可讓您透過電子郵件傳送報表給個別使用者或群組。 若要透過電子郵件散發報表，您可以 1) 設定報表伺服器的電子郵件傳遞以及 2) 定義標準訂閱或資料驅動訂閱。 單一訂閱無法在單一電子郵件訊息中傳遞多個報表。 不過，您可以建立多個訂閱。  
@@ -61,7 +60,7 @@ ms.lasthandoff: 09/27/2017
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在傳送報表之前，不會檢查附加檔案或訊息的大小。 如果附加檔案或訊息超過郵件伺服器所允許的上限，將不會傳遞報表。 如果是大型報表，請選擇其他傳遞選項之一 (例如 URL 或通知)。  
   
- 您可以設定傳遞選項，來決定建立訂閱時如何傳遞報表。 例如，如果您選取**包含連結**訂用帳戶，在電子郵件訊息會包含報表的超連結。  
+ 您可以設定傳遞選項，來決定建立訂閱時如何傳遞報表。 例如，您若是在訂閱中選取 [包含連結]，則電子郵件訊息包含連結到報表的超連結。  
   
 ## <a name="native-mode-role-based-e-mail-settings"></a>原生模式角色型電子郵件設定  
  在原生模式報表伺服器環境中，您所使用的電子郵件傳遞設定會依您的角色包含的是「管理個別訂閱」工作或「管理所有訂閱」工作而異。  
@@ -81,7 +80,7 @@ ms.lasthandoff: 09/27/2017
 ## <a name="controlling-e-mail-delivery"></a>控制電子郵件傳遞  
  您可以設定報表伺服器，來限制只能散發電子郵件至特定主機網域。 例如，您可以防止原生報表伺服器將報表傳遞至 **RSReportServer.config** 組態檔中所列網域以外的所有網域。  
   
- 您也可以設定的組態設定，以隱藏**至**訂用帳戶中的欄位。 在此情況下，報表只會傳遞給定義訂閱的使用者。 然而，在報表傳送給使用者之後，您無法明確地防止其被轉送。  
+ 您也可以組態組態設定，以隱藏訂閱中的 [收件者] 欄位。 在此情況下，報表只會傳遞給定義訂閱的使用者。 然而，在報表傳送給使用者之後，您無法明確地防止其被轉送。  
   
  控制報表散發最有效的方式，是將報表伺服器設定為只傳送報表伺服器 URL。 報表伺服器使用 Windows 驗證和以角色為基礎的驗證模型，來控制對報表的存取。 如果使用者意外地透過電子郵件接收到未被授權檢視的報表，報表伺服器將不會顯示報表。 如需有關訂閱的詳細資訊，請參閱下方項目。  
   
@@ -89,7 +88,7 @@ ms.lasthandoff: 09/27/2017
  對於原生模式報表伺服器，您可以透過原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員並藉由編輯 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態檔，設定電子郵件傳遞延伸模組。 對於 SharePoint 模式報表伺服器，您可在 SharePoint 管理頁面和 PowerShell 指令碼中設定電子郵件傳遞延伸模組。  
   
  
- 如需如何設定原生模式報表伺服器的資訊，請參閱[電子郵件設定-Reporting Services 原生模式 （組態管理員）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
+ 如需如何設定原生模式報表伺服器的資訊，請參閱[電子郵件設定 - Reporting Services 原生模式 (設定管理員)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  如需如何設定 SharePoint 模式報表伺服器的詳細資訊，請參閱下列內容：  
@@ -102,4 +101,3 @@ ms.lasthandoff: 09/27/2017
  [角色指派](../../reporting-services/security/role-assignments.md)  
   
   
-

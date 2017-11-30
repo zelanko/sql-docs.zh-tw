@@ -1,5 +1,5 @@
 ---
-title: "巢狀資料區域 （報表產生器及 SSRS） |Microsoft 文件"
+title: "巢狀資料區域 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: c8c0ce2fe9fcbdeb417770aba60e356ef889b667
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3a2829591b4024a9423c83b057ed1462c6762255
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>巢狀資料區 (報表產生器及 SSRS)
   您可以在一個資料區域 (例如矩陣) 內巢狀另一個資料區域 (例如圖表)，這樣通常可以透過精確的方式顯示資料摘要，或提供視覺化顯示以及資料表或矩陣顯示。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/09/2017
   
  在此圖中，邊角資料格中的圓形圖和資料列中的走勢圖都是巢狀資料區域。  
   
- 根據定義，巢狀資料區域是以相同的報表資料集為基礎。 您無法巢狀以不同資料集為基礎的資料區域。 若要顯示來自不同資料集的資料，請考慮使用鑽研報表或子報表。 如需詳細資訊，請參閱[鑽研、向下鑽研、子報表和巢狀資料區域 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
+ 根據定義，巢狀資料區域是以相同的報表資料集為基礎。 您無法巢狀以不同資料集為基礎的資料區域。 若要顯示來自不同資料集的資料，請考慮使用鑽研報表或子報表。 如需詳細資訊，請參閱 [鑽研、向下鑽研、子報表和巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Tablix 主體** ：套用資料集、外部 Tablix 與資料列和資料行群組的篩選與排序運算式後，最內部群組中以資料列群組和資料行群組之交集表示的資料。  
   
- 如需詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
 ## <a name="nesting-a-chart-sparkline-or-data-bar-in-a-tablix"></a>將圖表、走勢圖或資料橫條以巢狀方式置於 Tablix 中  
  當您將圖表 (包括走勢圖或資料橫條) 加入到 Tablix 資料行群組頭或群組尾資料列時，或加入到 Tablix 主體資料格時，傳遞到圖表中的資料範圍為該資料格的資料子集。 根據預設，當您將圖表加入到 Tablix 資料格時，圖表維度會擴充以填滿資料格。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/09/2017
  根據預設，圖表圖例色彩取決於圖表數列中資料點的色彩。 若要控制色彩，讓巢狀圖表資料區域針對相同的資料類別目錄，全部使用相同的色彩，您必須使用自訂色彩，並針對資料設定排序運算式。 如需詳細資訊，請參閱[跨多個形狀圖指定一致的色彩 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md) 和[在資料區域中排序資料 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)。  
   
 ## <a name="nesting-a-gauge-or-an-indicator-in-a-tablix"></a>將量測計或指標以巢狀方式置於 Tablix 中  
- 您可以在資料表、矩陣或清單內部巢狀量測計或指標，藉以顯示關鍵效能指標 (KPI)。 當您在資料表內部放置量測計或指標時，會出現在 Tablix 的每個資料列中。 如需將指標加入 Tablix 的詳細資訊，請參閱[指標 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
+ 您可以在資料表、矩陣或清單內部巢狀量測計或指標，藉以顯示關鍵效能指標 (KPI)。 當您在資料表內部放置量測計或指標時，會出現在 Tablix 的每個資料列中。 如需將指標新增 Tablix 的詳細資訊，請參閱[指標 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
 ### <a name="adding-a-gauge-to-a-tablix"></a>將量測計加入到 Tablix  
  將量測計加入到 Tablix 資料區域有兩種方式：  
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/09/2017
   
  如同圖表般，傳遞到量測計中的資料集範圍為該資料格的資料子集。 當量測計放置在 Tablix 資料格內部之後，量測計永遠只會彙總一個資料列。  
   
- 當 Tablix 中的資料包含群組時，Tablix 內部巢狀的量測計資料區域不會自動繼承此群組。 您必須將相符的群組運算式加入到量測計中，才能顯示 Tablix 上所顯示的相同資訊。 例如，如果 Tablix 中的資料依 Product 分組，您必須將 Product 群組運算式加入到量測計，才能顯示相同的資料。 如需詳細資訊，請參閱[量測計 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md) 和[在資料區中加入或刪除群組 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
+ 當 Tablix 中的資料包含群組時，Tablix 內部巢狀的量測計資料區域不會自動繼承此群組。 您必須將相符的群組運算式加入到量測計中，才能顯示 Tablix 上所顯示的相同資訊。 例如，如果 Tablix 中的資料依 Product 分組，您必須將 Product 群組運算式加入到量測計，才能顯示相同的資料。 如需詳細資訊，請參閱[量測計 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md) 和[在資料區中新增或刪除群組 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
  您必須設定將會顯示在量測計標尺上的最小值與最大值。 若要指定量測計的最大值，您可以使用運算式，例如 `=Max!MyField.Value`。 不過，因為此運算式僅會在資料格中資料的範圍內進行評估，對於 Tablix 中的所有資料列而言，每個量測計的最大值都不會相同。 這在 Tablix 中的量測計間進行比較時，可能會更難以了解。 或者，您可以為最大值指定一個靜態值。 Tablix 內部的所有資料列都會顯示包含此最大值的量測計。 如需詳細資訊，請參閱[設定量測計的最小值或最大值 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
   
@@ -83,18 +83,18 @@ ms.lasthandoff: 08/09/2017
  您可以針對清單資料區域定義一個群組，然後加入 Tablix 和圖表，就可以提供相同資料的不同檢視。 若要達成這個效果，您必須針對內嵌的 Tablix 和圖表，定義相同的群組與排序運算式。 根據定義，Tablix 和圖表會使用來自父清單資料區域之資料集的資料。  
   
 > [!NOTE]  
->  依預設，當您將清單資料區域加入到設計介面時，該清單包含一個詳細資料列。 您可以加入群組資料列並移除詳細資料列來變更此預設值。 如需詳細資訊，請參閱[探索 Tablix 資料區的彈性 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
+>  依預設，當您將清單資料區域加入到設計介面時，該清單包含一個詳細資料列。 您可以加入群組資料列並移除詳細資料列來變更此預設值。 如需詳細資訊，請參閱[探索 Tablix 資料區的彈性 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
- 如需詳細資訊，請參閱[了解群組 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) 和[加入、移動或刪除資料表、矩陣或清單 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱[了解群組 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) 和[新增、移動或刪除資料表、矩陣或清單 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選、 群組和排序資料 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [資料表、 矩陣和清單 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [量測計 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [運算式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [格式化報表項目 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [教學課程： 將 KPI 加入至您的報表 &#40;報表產生器 &#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [格式化量測計 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [篩選、分組和排序資料 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

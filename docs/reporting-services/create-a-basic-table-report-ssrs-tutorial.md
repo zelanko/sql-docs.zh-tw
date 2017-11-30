@@ -1,50 +1,46 @@
 ---
-title: "建立基本資料表報表 （SSRS 教學課程） |Microsoft 文件"
+title: "建立基本資料表報表 (SSRS 教學課程) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3fce85745c90ee7cae060c26a24042eccbd0ee10
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 658a882ae3c4e907e50b71a5b98137aa009ea4e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>建立基本資料表報表 (SSRS 教學課程)
 
-在本教學課程中，您使用報表設計師在 SQL Server Data Tools 中建立基本[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]分頁報表使用的資料表，根據 **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** 資料庫。 您也可以建立[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]分頁報表使用報表產生器。 
+在本教學課程中，您將使用 SQL Server Data Tools 中的報表設計師，根據 **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** 建立內含一個資料表的基本 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表。 您也可以使用報表產生器建立 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表。 
 
-當您瀏覽本教學課程，您將建立報表專案、 設定連接資訊、 定義查詢、 加入資料表資料區域、 群組和加總某些欄位，和預覽報表。  
+在進行本教學課程的過程中，您將建立報表專案、設定連線資訊、定義查詢、新增資料表資料區域、分組與加總某些欄位，以及預覽報表。  
   
 ## <a name="requirements"></a>需求  
 您的系統必須已經安裝下列項目，才能使用這個教學課程：  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]SQL Server database engine。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] SQL Server 資料庫引擎。  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 。  
   
--   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 資料庫。  如需詳細資訊，請參閱 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Adventure Works 2014 範例資料庫)。  
+-   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 資料庫。  如需詳細資訊，請參閱 [Adventure Works 2014 Sample Databases](https://github.com/Microsoft/sql-server-samples/releases) (Adventure Works 2014 範例資料庫)。  
   
- -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)與 「 SQL Server Reporting Services 」 元件安裝，因此您必須在報表設計工具。    
+ -   已安裝 "SQL Server Reporting Services" 元件的 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)，以便擁有報表設計師。    
   
 另外，您也必須擁有從 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 資料庫擷取資料的唯讀權限。
 
@@ -68,4 +64,3 @@ ms.lasthandoff: 09/27/2017
 [Reporting Services 教學課程](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

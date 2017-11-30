@@ -1,27 +1,25 @@
 ---
-title: "教學課程： 將圓形圖加入至報表 （報表產生器） |Microsoft 文件"
+title: "教學課程：將圓形圖新增至報表 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: f48e91fcf3ea24bacaf71649db1cb4d92c7f6962
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教學課程：將圓形圖加入至報表 (報表產生器)
 在本教學課程中，您會在 Reporting Services 分頁報表中建立圓形圖。 您將新增百分比，並將小配量合併為單一配量。
@@ -35,11 +33,11 @@ ms.lasthandoff: 08/09/2017
 如果圓形圖上的資料點過多，資料點標籤可能會太擁擠而難以閱讀。 在該情況下，請考慮將多個小配量合併成一個較大配量。 將資料彙總成少數資料點時，圓形圖會更容易讀取。  
  
 > [!NOTE]  
-> 在本教學課程中，精靈的步驟會合併為兩個程序。 逐步說明如何瀏覽至報表伺服器中，加入資料來源，並將資料集，請參閱本系列的第一個教學課程：[教學課程： 建立基本資料表報表 &#40;報表產生器 &#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> 在本教學課程中，精靈的步驟會合併為兩個程序。 如需如何瀏覽至報表伺服器、新增資料來源以及新增資料集的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 完成本教學課程的估計時間：10 分鐘  
   
-## <a name="requirements"></a>요구 사항  
+## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Chart"></a>1.從圖表精靈建立圓形圖  
@@ -54,11 +52,11 @@ ms.lasthandoff: 08/09/2017
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
-3.  在右窗格中，按一下 **圖表精靈**。  
+3.  在右窗格中，按一下 [圖表精靈]。  
   
-4.  在**選擇資料集**頁面上，按一下**建立資料集**，然後按一下 **下一步**。  
+4.  在 [選擇資料集] 頁面上，按一下 [建立資料集]，然後按一下 [下一步]。  
   
-5.  在**選擇資料來源的連接**頁面上，選取現有的資料來源或瀏覽至報表伺服器並選取資料來源，然後按一下**下一步**。 您可能需要輸入使用者名稱和密碼。  
+5.  在 [選擇與資料來源的連線] 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源，然後按一下 [下一步]。 您可能需要輸入使用者名稱和密碼。  
   
     > [!NOTE]  
     > 只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -89,13 +87,13 @@ ms.lasthandoff: 08/09/2017
 您可以選擇各種不同預先定義的圖表類型。  
 
   
-1.  在**選擇圖表類型**頁面上，按一下**圓形圖**，然後按一下 **下一步**。 **排列圖表欄位**頁面隨即開啟。  
+1.  在 [選擇圖表類型] 頁面上，按一下 [圓形圖]，然後按一下 [下一步]。 [排列圖表欄位] 頁面隨即開啟。  
   
-    在**排列圖表欄位**頁面上，拖曳至 [產品] 欄位**類別**窗格。 類別目錄會定義圓形圖中的配量數目。 在這則範例中，共有八個配量，每一個代表一個產品。  
+    在 [排列圖表欄位] 頁面上，將 [Product] 欄位拖曳至 [類別目錄] 窗格。 類別目錄會定義圓形圖中的配量數目。 在這則範例中，共有八個配量，每一個代表一個產品。  
   
-2.  拖曳至 [銷售量] 欄位**值**窗格。 Sales 代表每個子類別目錄的銷售量。 **值** 窗格會顯示`[Sum(Sales)]`因為圖表會顯示每個產品的彙總。  
+2.  將 [Sales] 欄位拖曳至 [值] 窗格。 Sales 代表每個子類別目錄的銷售量。 因為圖表會顯示每項產品的彙總，所以 [值] 窗格會顯示 `[Sum(Sales)]`。  
   
-3.  按一下**下一步**查看的預覽。  
+3.  按一下 [下一步]，以查看預覽。  
   
 5.  按一下 **[完成]**。  
   
@@ -117,18 +115,18 @@ ms.lasthandoff: 08/09/2017
   
 1.  切換到報表設計檢視。  
   
-2.  以滑鼠右鍵按一下圓形圖，然後按一下**顯示資料標籤**。 資料標籤就會顯示在圖表上。  
+2.  以滑鼠右鍵按一下圓形圖，然後按一下 [顯示資料標籤]。 資料標籤就會顯示在圖表上。  
   
-3.  以滑鼠右鍵按一下標籤，然後按一下 **數列標籤屬性**。  
+3.  以滑鼠右鍵按一下標籤，然後按一下 [數列標籤屬性]。  
   
 4.  在 [標籤資料] 方塊中，選取 **#PERCENT**。  
     
-5.  （選擇性）若要指定小數位數標籤所示，在**標示資料**方塊之後**#PERCENT**，型別**{Pn}**其中 *n* 是要顯示的小數位數。 例如，如果不要顯示任何小數位數，請輸入 **#PERCENT{P0}**。  
+5.  (選擇性) 若要指定標籤所顯示的小數位數，請在 [標籤資料] 方塊中，於 **#PERCENT** 後面鍵入**{Pn}**，其中 *n* 是要顯示的小數位數。 例如，如果不要顯示任何小數位數，請輸入 **#PERCENT{P0}**。  
 
-6.  若要以百分比顯示值，UseValueAsLabel 屬性必須為 False。 如果系統提示您設定這個值**確認動作**] 對話方塊中，按一下 [**是**。  
+6.  若要以百分比顯示值，UseValueAsLabel 屬性必須為 False。 如果系統提示您在 [確認動作] 對話方塊中設定這個值，請按一下 [是]。  
   
     > [!NOTE]  
-    > **數字格式**中**數列標籤屬性**您格式化百分比時，對話方塊會有任何作用。 這會將標籤格式化成百分比，但是不會計算每個配量所代表的圓形圖百分比。  
+    > 當您格式化百分比時，[數列標籤屬性] 對話方塊中的 [數字格式] 沒有任何作用。 這會將標籤格式化成百分比，但是不會計算每個配量所代表的圓形圖百分比。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -143,7 +141,7 @@ ms.lasthandoff: 08/09/2017
 
 1.  切換到報表設計檢視。  
   
-2.  如果 屬性 窗格未顯示，在**檢視** 索引標籤 >**顯示/隱藏**群組 > 選取**屬性**。  
+2.  如果看不到 [屬性] 窗格，請在 [檢視] 索引標籤 > [顯示/隱藏] 群組 > 選取 [屬性]。  
   
 3.  在設計介面上按一下圓形圖的任何配量。 數列的屬性會顯示在 [屬性] 窗格中。  
   
@@ -157,7 +155,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  確認 **CollectedThresholdUsePercent** 屬性設定為 **True**。  
   
-8.  在**首頁**索引標籤上，按一下 **執行**預覽報表。  
+8.  在 [主資料夾] 索引標籤上，按一下 [執行] 預覽報表。  
   
 在圖例中，您現在會看到「其他」類別目錄。 新的圓形圖配量會將低於 5% 的所有配量結合成一個佔整個圓形圖 6% 的配量。  
 
@@ -173,7 +171,7 @@ ms.lasthandoff: 08/09/2017
 
 2. 選取圓形圖本身。
 
-3. 在 [屬性] 窗格中，在**自訂屬性**，變更從 PieStartAngle **0**至**270**。
+3. 在 [屬性] 窗格的 [自訂屬性] 底下，將 PieStartAngle 從 **0** 變更為 **270**。
 
 4. 按一下 [執行] 以預覽報表。
 
@@ -187,7 +185,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在圖表中，選取 [圖表標題] 方塊，然後按 DELETE。
 
-2. n 設計介面中，按一下**按一下以加入標題**。  
+2. 在設計介面上，按一下 [按一下以新增標題]。  
   
 2.  輸入 **Camera and Camcorder Sales**並按 ENTER，然後輸入 **As a Percentage of Total Sales**，它看起來如下：  
   
@@ -197,7 +195,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  選取 [Camera and Camcorder Sales]，然後在 [首頁] 索引標籤 > [字型] 區段 > 按一下 [粗體]。  
   
-4.  選取**以百分比的總銷售額**，然後在**首頁** 索引標籤 >**字型**區段 > 將字型大小設定為**10**。  
+4.  選取 [As a Percentage of Total Sales]，然後在 [主資料夾] 索引標籤 > [字型] 區段 > 將字型大小設為 [10]。  
   
 5.  (選擇性) 您可能需要增加 [標題] 文字方塊的高度，才能容納兩行文字。  
   
@@ -213,18 +211,17 @@ ms.lasthandoff: 08/09/2017
   
 2.  在 [檔案] 功能表上，按一下 [儲存]。  
   
-3.  在**名稱**，型別**銷售圓形圖**。  
+3.  在 [名稱] 中，鍵入 **Sales Pie Chart**。  
   
 4.  按一下 **[儲存]**。  
   
 您的報表就會儲存在報表伺服器上。  
   
 ## <a name="next-steps"></a>後續步驟  
-您已成功完成「將圓形圖加入至報表」教學課程。 若要了解有關圖表的詳細資訊，請參閱[圖表 &#40;報表產生器及 SSRS &#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md)和[走勢圖和資料橫條 &#40;報表產生器及 SSRS &#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+您已成功完成「將圓形圖加入至報表」教學課程。 若要深入了解圖表，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 和[走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

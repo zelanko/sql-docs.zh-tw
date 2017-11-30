@@ -1,12 +1,11 @@
 ---
-title: "刪除並重新建立加密金鑰 （SSRS 組態管理員） |Microsoft 文件"
+title: "刪除和重新建立加密金鑰 (SSRS 設定管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b042bef86620c773f39f81ea16a62b3d9c4c2a6a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b918ecf448e9498c95b679843ccc857b75b92f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 加密金鑰-刪除並重新建立加密金鑰
+# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 加密金鑰 - 刪除和重新建立加密金鑰
   刪除和重新建立加密金鑰是例行加密金鑰維護範圍之外的活動。 執行這些工作是為了因應報表伺服器所受的特定威脅，或者當您無法存取報表伺服器資料庫時的最後手段。  
   
 -   您認為現有的對稱金鑰被洩漏時，請重新建立對稱金鑰。 也可以當成最佳安全性作法，定期重新建立金鑰。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
  唯有報表伺服器處於工作狀態時，您才能重新建立對稱金鑰。 重新建立加密金鑰和重新加密內容會中斷伺服器作業。 進行重新加密時，必須將伺服器離線。 重新加密過程中，不應該對報表伺服器提出任何要求。  
   
- 您可以使用 Reporting Services 組態工具或 **rskeymgmt** 公用程式，來重設對稱金鑰和加密資料。 如需如何建立對稱金鑰的詳細資訊，請參閱[初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
+ 您可以使用 Reporting Services 組態工具或 **rskeymgmt** 公用程式，來重設對稱金鑰和加密資料。 如需如何建立對稱金鑰的詳細資訊，請參閱[初始化報表伺服器 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
 ### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>如何重新建立加密金鑰 (Reporting Services 組態工具)  
   
@@ -49,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
      如果您是重新建立報表伺服器向外延展部署的加密金鑰，請針對部署中的所有執行個體停用這個屬性。  
   
-    1.  開啟 Windows 檔案總管並巡覽至 <磁碟機>:\Program Files\Microsoft SQL Server\\報表伺服器執行個體\Reporting Services。 將 <磁碟機> 取代成磁碟機代號並將 <報表伺服器執行個體> 取代成對應至您想要停用 Web 服務和 HTTP 存取之報表伺服器執行個體的資料夾名稱。 例如，C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services。  
+    1.  開啟 Windows 檔案總管並巡覽至 *drive*:\Program Files\Microsoft SQL Server\\<報表伺服器執行個體>\Reporting Services。 將 *drive* 取代成磁碟機代號並將 <報表伺服器執行個體> 取代成對應至您想要停用 Web 服務和 HTTP 存取之報表伺服器執行個體的資料夾名稱。 例如，C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services。  
   
     2.  開啟 rsreportserver.config 檔案。  
   
@@ -121,8 +119,7 @@ ms.lasthandoff: 08/09/2017
 4.  針對使用加密資料的訂閱 (這包括使用加密的檔案共用傳遞延伸模組和協力廠商傳遞延伸模組)，開啟每個訂閱並重新輸入認證。 使用報表伺服器電子郵件傳遞的訂閱並不使用加密資料，因此不受金鑰變更的影響。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定和管理加密金鑰 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   
-

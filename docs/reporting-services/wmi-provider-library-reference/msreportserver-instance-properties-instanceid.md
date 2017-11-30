@@ -1,5 +1,5 @@
 ---
-title: "InstanceID 屬性 (WMI MSReportServer_Instance) |Microsoft 文件"
+title: "InstanceID 屬性 (WMI MSReportServer_Instance) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- InstanceID Property (WMI MSReportServer_Instance)
-apilocation:
-- reportingservices.mof
+apiname: InstanceID Property (WMI MSReportServer_Instance)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- InstanceID property
+helpviewer_keywords: InstanceID property
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8e002210d1041da8c510cde99bc0c09261eb66b7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e4bd2b3d44f946063b23278f98bb504b9f209fc2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="msreportserverinstance-properties---instanceid"></a>MSReportServer_Instance 屬性-執行個體識別碼
+# <a name="msreportserverinstance-properties---instanceid"></a>MSReportServer_Instance 屬性 - InstanceID
   此物件支援 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 基礎結構，而且不能直接從程式碼使用。  
   
 ## <a name="syntax"></a>語法  
@@ -46,8 +42,7 @@ public string InstanceID;
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [MSReportServer_Instance 成員](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   
-

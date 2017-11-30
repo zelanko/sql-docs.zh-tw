@@ -1,5 +1,5 @@
 ---
-title: "Tablix 資料區的區域 （報表產生器及 SSRS） |Microsoft 文件"
+title: "Tablix 資料區的區域 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 61ec2adb507793813554c1ec8c07418354f9e549
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 資料區的區域 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，Tablix 資料區具有四個包含 Tablix 資料格的區域︰   
@@ -50,17 +49,16 @@ ms.lasthandoff: 08/09/2017
   
  下圖顯示預覽中的 Tablix 資料區。  
   
- ![預覽，Tablix 邊角、 資料列和資料行群組、 主體](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "預覽，Tablix 邊角、 資料列和資料行群組、 主體")  
+ ![預覽、Tablix 邊角、資料列和資料行群組、主體](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "預覽、Tablix 邊角、資料列和資料行群組、主體")  
   
  資料列群組區域會為 Clothing 和 Components 顯示兩個類別目錄群組執行個體。 資料行群組會為 North America 顯示地理群組執行個體，其中具有 Canada (CA) 和 United States (US) 的兩個巢狀國家 (地區) 群組執行個體。 另外，相鄰的資料行會為 2003 和 2004 顯示兩個年群組執行個體。 [總計] 資料行資料列會顯示資料列總計；類別目錄群組所重複的總計資料列會顯示子類別目錄總計，而全部總計資料列則會針對資料區域顯示一次類別目錄的總計。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)   
- [資料表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [資料表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [建立矩陣](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [建立發票與表單清單](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [使用清單建立發票和表單](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   
-

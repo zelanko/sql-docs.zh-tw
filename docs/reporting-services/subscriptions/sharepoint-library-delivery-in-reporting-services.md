@@ -1,5 +1,5 @@
 ---
-title: "SharePoint Library Delivery in Reporting Services |Microsoft 文件"
+title: "Reporting Services 中的 SharePoint 文件庫傳遞 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b269676875edbb4a250a9bfd1e45c894239282
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 文件庫傳遞
   針對 SharePoint 整合所設定的報表伺服器包含您可以用來將報表傳送至 SharePoint 文件庫的傳遞延伸模組。  
@@ -80,20 +79,19 @@ ms.lasthandoff: 08/09/2017
  在目標文件庫中，指定報表的選用 **Title** 屬性。 這是儲存在文件庫中之所有項目的標準屬性。 使用者可以在檢視 SharePoint 網站上的文件庫內容時，指定要顯示或隱藏此屬性。  
   
  路徑  
- 指定指向 SharePoint 文件庫的完整 URL，包括 SharePoint Web 應用程式和網站。 例如： `http://mySharePointWeb/MySite/MyDocLib`; 其中`http://mySharePointWeb`表示 Web 應用程式中，"MySite"是 SharePoint 網站，且"MyDocLib"是 SharePoint 文件庫會傳遞報表。  
+ 指定指向 SharePoint 文件庫的完整 URL，包括 SharePoint Web 應用程式和網站。 例如，`http://mySharePointWeb/MySite/MyDocLib`，其中的 `http://mySharePointWeb` 表示 Web 應用程式，"MySite" 是 SharePoint 網站，而 "MyDocLib" 是將傳遞報表的 SharePoint 文件庫。  
   
  您無法指定頁面、網站或清單。 目標容器必須是相同網站或伺服陣列中的文件庫。  
   
  覆寫選項  
- 指定在處理訂閱時，具有相同名稱與副檔名的檔案是否要由較新的版本取代。 如果您要以較新的版本取代現有的檔案，選擇 [覆寫]。 如果您不要訂閱取代檔案，選擇 [無]。 在此情況下，如果有具有目標名稱與副檔名的檔案存在，則傳遞不會發生。 如果您要在檔案名稱結尾附加一個數字，藉此加入相同檔案的連續版本，選擇 [自動遞增]。  
+ 指定在處理訂閱時，具有相同名稱與副檔名的檔案是否要由較新的版本取代。 如果您要以較新的版本取代現有的檔案，選擇 [覆寫]。 如果您不要訂閱取代檔案，選擇 [無]。 在此情況下，如果有具有目標名稱與副檔名的檔案存在，則傳遞不會發生。 如果您要在檔案名稱結尾附加一個數字，藉此新增相同檔案的連續版本，選擇 [自動遞增]。  
   
  自動複製  
- 如果您要使用 [自動複製] 功能，將檔案的最新版本自動複製到多個位置，當啟用 [覆寫] 時，就會複製該檔案。 如果您使用**Autoincrement**或**無**，便會失敗而**rsDeliveryError**就會發生錯誤。  
+ 如果您要使用 [自動複製] 功能，將檔案的最新版本自動複製到多個位置，當啟用 [覆寫] 時，就會複製該檔案。 如果您使用的是 [自動遞增] 或 [無]，傳遞將會失敗，而且會發生 **rsDeliveryError** 錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立和管理 SharePoint 模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [訂閱和傳遞 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [指定認證和報表資料來源的連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [建立及管理 SharePoint 模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [指定報表資料來源的認證及連線資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

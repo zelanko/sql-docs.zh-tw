@@ -1,5 +1,5 @@
 ---
-title: "尋找及檢視報表 （報表產生器及 SSRS） 的瀏覽器 |Microsoft 文件"
+title: "使用瀏覽器尋找及檢視報表 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 981003ec6e3520053dca8e5467d0c7def217c29a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用瀏覽器尋找及檢視報表 (報表產生器及 SSRS)
   您可以使用任何支援的網頁瀏覽器，透過報表伺服器的直接連接來檢視報表。 每一個報表在報表伺服器上都有一個 URL 位址。 您可以輸入報表的 Web 位址，在任何 Web 應用程式的瀏覽器視窗中開啟該報表。 該報表會以 HTML 格式開啟，而且其中包含報表工具列，讓您可以在報表中瀏覽頁面或搜尋資料值。 您可以在 URL 上設定參數，以隱藏工具列或選取報表的輸出格式。  
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  如果您不知道報表的 Web 位址，您可以開啟報表伺服器的 Web 位址，然後瀏覽報表伺服器的資料夾階層，以選取您要檢視的報表。 下圖說明瀏覽器視窗中所顯示的資料夾階層。  
   
- ![瀏覽器中的資料夾](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![瀏覽器中的資料夾](../../reporting-services/report-builder/media/rs-browserfolder.GIF "瀏覽器中的資料夾")  
 瀏覽器中的資料夾  
   
 > [!NOTE]  
@@ -48,9 +47,9 @@ ms.lasthandoff: 08/09/2017
   
 -   沒有其他指標的連結就是報表或模型。  
   
--   標記\<ds > 表示共用的資料來源。  
+-   \<ds> 標記代表共用資料來源。  
   
--   標記\<dir > 表示資料夾項目。  
+-   \<dir> 標記代表資料夾項目。  
   
 -   副檔名代表資源。 副檔名可識別資源的 MIME 類型。 例如，.jpg 代表 JPEG 格式的影像。  
   
@@ -64,4 +63,3 @@ ms.lasthandoff: 08/09/2017
  如需如何透過 URL 存取報表的詳細資訊，包括如何建構 URL 的資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](http://go.microsoft.com/fwlink/?linkid=121312) 的＜URL 存取＞。  
   
   
-

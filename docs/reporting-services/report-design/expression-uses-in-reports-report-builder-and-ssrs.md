@@ -1,5 +1,5 @@
 ---
-title: "使用報表 （報表產生器及 SSRS） 中的運算式 |Microsoft 文件"
+title: "報表中的運算式用法 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- expressions [Reporting Services], about expressions
+helpviewer_keywords: expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 546817a006d06b1acbea5962cc1a3230867e111e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 040dc71113e8db518b1e98420241e1e6f2c3ba19
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>報表中的運算式用法 (報表產生器及 SSRS)
-在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，整個報表定義中都會使用運算式來指定或計算參數、查詢、篩選、報表項目屬性、群組和排序定義、文字方塊屬性、書籤、文件引導模式、動態頁首和頁尾內容、影像及動態資料來源定義的值。 本主題提供的範例將說明您可以在許多地方使用運算式來將報表的內容或外觀差異化。 這份清單並不是完整的清單。 您可以設定任何屬性的運算式，在對話方塊中顯示的運算式 (**fx**) 按鈕或下拉式清單中，會顯示**\<運算式 … >**。  
+在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，整個報表定義中都會使用運算式來指定或計算參數、查詢、篩選、報表項目屬性、群組和排序定義、文字方塊屬性、書籤、文件引導模式、動態頁首和頁尾內容、影像及動態資料來源定義的值。 本主題提供的範例將說明您可以在許多地方使用運算式來將報表的內容或外觀差異化。 這份清單並不是完整的清單。 您可以在顯示運算式 (**fx**) 按鈕的對話方塊中或在顯示 **\<運算式...>** 的下拉式清單中，為任何屬性設定運算式。  
   
  運算式可能很簡單或很複雜。 *「簡單運算式」* (Simple Expression) 包含單一資料集欄位、參數或內建欄位的參考。 複雜運算式可包含多個內建參考、運算子和函數呼叫。 例如，複雜運算式可能會包含套用至 Sales 欄位的 Sum 函數。  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 08/09/2017
 |根據值格式化文字方塊內的資料。|Tablix 的詳細資料資料列中，文字方塊內的預留位置色彩。 使用 **[文字方塊屬性對話方塊、字型]**。|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |計算值一次，以便在整個報表中參考。|報表變數的值。 使用 **[報表屬性對話方塊、變數]**。|`=Variables!MyCalculation.Value`|  
 |從資料集中併入一個以上欄位的特定值。|Tablix 中群組的篩選方程式。 使用 **[Tablix 屬性對話方塊、篩選]**。|選取 **[布林值]**做為資料類型。<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|隱藏設計介面上的文字方塊，使用者可以使用名為 *Show*的布林參數進行切換。|文字方塊上的 Hidden 屬性。 使用 **[文字方塊屬性對話方塊、可見性]**。|`=Not Parameters!`*顯示\<布林參數 >*`.Value`|  
+|隱藏設計介面上的文字方塊，使用者可以使用名為 *Show*的布林參數進行切換。|文字方塊上的 Hidden 屬性。 使用 **[文字方塊屬性對話方塊、可見性]**。|`=Not Parameters!`*顯示\<布林參數>*`.Value`|  
 |指定動態頁首或頁尾內容。|放置在頁首或頁尾之文字方塊內的預留位置值。|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |使用參數動態指定資料來源。|資料來源上的連接字串。 使用 **[資料來源屬性對話方塊、一般]**。|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |識別使用者選擇之多值參數的所有值。|文字方塊內的預留位置值。 使用 **[Tablix 屬性對話方塊、篩選]**。|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
@@ -74,15 +72,14 @@ ms.lasthandoff: 08/09/2017
 |指定針對特定文化特性格式化的日期。|資料區中文字方塊內的預留位置值。 使用 **[文字方塊屬性對話方塊、一般]**。|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |串連字串及數字 (該數字格式化成兩個小數位數的百分比)。|資料區中文字方塊內的預留位置值。 使用 **[文字方塊屬性對話方塊、一般]**。|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
-## <a name="see-also"></a>請參閱＜  
- [運算式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [運算式範例 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [報表參數 &#40;報表產生器和報表設計工具 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [篩選方程式範例 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [篩選、 群組和排序資料 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [頁首和頁尾 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [格式化文字和預留位置 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [隱藏項目 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [篩選方程式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [隱藏項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "加入子報表和參數 （報表產生器及 SSRS） |Microsoft 文件"
+title: "新增子報表和參數 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ f1_keywords:
 - "10093"
 - sql13.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0c4652d1d6edb34aafcbebee7bbb2b26b95c3944
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>加入子報表和參數 (報表產生器及 SSRS)
   當您想要建立主報表，而該主報表為多個相關報表的容器時，請在報表中加入子報表。 子報表是另一個報表的參考。 若要透過資料值讓報表產生關聯 (例如，讓多個報表都顯示同一位客戶的資料)，您必須設計參數化報表 (例如，顯示特定客戶之詳細資料的報表) 當做子報表。 當您將子報表加入到主報表時，可以指定要傳遞給子報表的參數。  
@@ -42,19 +41,19 @@ ms.lasthandoff: 08/09/2017
   
 2.  在設計介面上，按一下報表上的某個位置，然後將方塊拖曳至所需的子報表大小。 另外，您也可以按一下設計介面來建立預設大小的子報表。  
   
-3.  子報表中，以滑鼠右鍵按一下，然後按一下 **子報表屬性**。  
+3.  以滑鼠右鍵按一下子報表，然後按一下 [子報表屬性]。  
   
 4.  在 **[子報表屬性]** 對話方塊中，於 **[名稱]** 文字方塊內輸入名稱或是接受預設值。 名稱在報表內必須是唯一的。 根據預設，系統會指派一般名稱，例如 Subreport1 或 Subreport2。  
   
-5.  在 **[將此報表當成子報表]** 方塊中，按一下 **[瀏覽]**，或輸入報表的名稱。 建議您按一下 **[瀏覽]** ，因為系統將自動指定子報表的路徑。 您可以透過幾種方式指定報表。 如需詳細資訊，請參閱[指定外部項目的路徑 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
+5.  在 **[將此報表當成子報表]** 方塊中，按一下 **[瀏覽]**，或輸入報表的名稱。 建議您按一下 **[瀏覽]** ，因為系統將自動指定子報表的路徑。 您可以透過幾種方式指定報表。 如需詳細資訊，請參閱[指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
-6.  （選擇性）按一下**是**如**省略分頁符號上的框線**至以防框線在子報表跨越一頁以上時遭到轉譯在子報表。  
+6.  (選用) 如果子報表橫跨多頁，針對 [省略分頁符號上的框線] 按一下 [是]，就不會在子報表中轉譯框線。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### <a name="to-specify-parameters-to-pass-to-a-subreport"></a>指定要傳遞給子報表的參數  
   
-1.  在設計檢視中，以滑鼠右鍵按一下子報表，然後按一下 **子報表屬性**。  
+1.  在 [設計] 檢視中，以滑鼠右鍵按一下子報表，然後按一下 [子報表屬性]。  
   
 2.  在 **[子報表屬性]** 對話方塊中，按一下 **[參數]**。  
   
@@ -65,7 +64,7 @@ ms.lasthandoff: 08/09/2017
 5.  在 **[值]** 清單方塊中，輸入或選取要傳遞給子報表的值。 這個值可以是靜態文字，也可以是參考主報表中的欄位或其他物件的運算式。  
   
     > [!NOTE]  
-    >  在報表產生器，如果遺漏參數**參數**清單和子報表都有定義了預設值，將會正確處理子報表。  
+    >  在報表產生器中，如果 [參數] 清單遺漏某參數，而子報表中定義了預設值，則系統會正確處理子報表。  
     >   
     >  在報表設計師中，子報表所需要的所有參數都必須包括在 **[參數]** 清單中。 如果遺漏必要的參數，子報表便無法正確顯示在主報表內。  
   
@@ -77,9 +76,8 @@ ms.lasthandoff: 08/09/2017
   
      變更子報表參數的順序並不會影響子報表的處理。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [子報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
- [轉譯行為 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   
-

@@ -1,12 +1,11 @@
 ---
-title: "備份與還原 Reporting Services 加密金鑰 |Microsoft 文件"
+title: "備份與還原 Reporting Services 加密金鑰 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,24 +14,23 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 670c061b0c624eb321fd00c0f4e2f372b6ba9e71
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a4344a31ac18bc128845935fa2dce6223dab5710
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密金鑰的備份與還原加密金鑰
+# <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密金鑰 - 備份與還原加密金鑰
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   在報表伺服器組態中，建立用於加密機密資訊的對稱金鑰備份副本是很重要的一部分。 許多例行作業都需要金鑰的備份副本，這備份副本可以讓您在新安裝中重複使用現有的報表伺服器資料庫。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
  發生下列任何事件時，就必須還原加密金鑰的備份副本。  
   
@@ -89,7 +87,7 @@ ms.lasthandoff: 08/09/2017
   
 -   刪除先前儲存的對稱金鑰資料 (例如，先前部署中已存在於報表伺服器資料庫中的金鑰資訊)。  
   
- 若要還原加密金鑰，檔案上必須有一個加密金鑰的副本。 您也必須知道解除鎖定儲存之副本的密碼。 如果您有金鑰和密碼，就可以執行 Reporting Services 組態工具或 **rskeymgmt** 公用程式來還原金鑰。 對稱金鑰必須和鎖定與解除鎖定目前儲存在報表伺服器資料庫中之加密資料的金鑰相同。 如果您還原無效的副本，報表伺服器將無法存取目前儲存在報表伺服器資料庫中的加密資料。 萬一發生這種情形，如果無法還原有效的金鑰，就必須刪除所有的加密值。 如果因故無法還原加密金鑰 (例如，您若沒有備份副本)，則必須刪除現有的金鑰和加密內容。 如需詳細資訊，請參閱[刪除和重新建立加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)。 如需建立對稱金鑰的詳細資訊，請參閱[初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
+ 若要還原加密金鑰，檔案上必須有一個加密金鑰的副本。 您也必須知道解除鎖定儲存之副本的密碼。 如果您有金鑰和密碼，就可以執行 Reporting Services 組態工具或 **rskeymgmt** 公用程式來還原金鑰。 對稱金鑰必須和鎖定與解除鎖定目前儲存在報表伺服器資料庫中之加密資料的金鑰相同。 如果您還原無效的副本，報表伺服器將無法存取目前儲存在報表伺服器資料庫中的加密資料。 萬一發生這種情形，如果無法還原有效的金鑰，就必須刪除所有的加密值。 如果因故無法還原加密金鑰 (例如，您若沒有備份副本)，則必須刪除現有的金鑰和加密內容。 如需詳細資訊，請參閱[刪除和重新建立加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)。 如需建立對稱金鑰的詳細資訊，請參閱[初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
 ###  <a name="bkmk_restore_configuration_manager"></a> 還原加密金鑰 - Reporting Services 組態管理員 (原生模式)  
   
@@ -115,4 +113,3 @@ ms.lasthandoff: 08/09/2017
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

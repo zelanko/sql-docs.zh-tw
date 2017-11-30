@@ -1,26 +1,24 @@
 ---
-title: "將量測計加入至行動報表 |Reporting Services |Microsoft 文件"
+title: "在行動報表中新增量測計 | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec1f4cee1318947e3c1ab730b3e4f7eaa16dd333
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 156402a49bd7c72f32b548d37707acf8a0aadef2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>在行動報表中加入量測計 | Reporting Services
 量測計是行動報表中使用最廣泛的基本視覺效果。 它們顯示資料集中的單一值，只有值或和目標比較的值。
@@ -29,7 +27,7 @@ ms.lasthandoff: 08/09/2017
   
 *[配置] 索引標籤中的量測計視覺效果*  
   
-SQL Server 行動報表發行工具中的所有量測計中有至少一個屬性共同： 主要值，設為其中一個行動報表中的資料表中的數值欄位。  
+在 SQL Server 行動報表發行工具 中，所有量測計至少都有一個共通屬性︰主要值，在行動報表其中一份資料表中設為數值的欄位。  
 
 除數字量測計外，所有量測計也都可以顯示比較值或稱「差異」值，即主要值和比較值之間的關聯性。 比較值通常是目標，而量測計則是此目標的進度視覺指標，或實際和目標之間的差異。
 
@@ -95,4 +93,3 @@ SQL Server 行動報表發行工具中的所有量測計中有至少一個屬性
 * [Reporting Services 行動報表中的導覽器](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Reporting Services 行動報表中的視覺效果](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Reporting Services 行動報表中的資料格](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
-

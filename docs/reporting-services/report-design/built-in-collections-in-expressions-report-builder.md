@@ -1,5 +1,5 @@
 ---
-title: "Built-in Collections in Expressions （報表產生器及 SSRS） |Microsoft 文件"
+title: "運算式中的內建集合 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ff834d00c915ae81179ff9b0bebed19e7c9ec6c1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 36edefef85ac163d9755328752af05563691cc17
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections-in-expressions-report-builder"></a>Built-in Collections in Expressions （報表產生器）
+# <a name="built-in-collections-in-expressions-report-builder"></a>運算式中的內建集合 (報表產生器)
   在報表的運算式中，您可以包含下列內建集合的參考：ReportItems、Parameters、Fields、DataSets、DataSources、Variables，以及類似報表名稱等全域資訊的內建欄位。 並不是所有的集合都會顯示在 **[運算式]** 對話方塊中。 只有報表伺服器上已發行的報表，才可以在執行階段使用 DataSets 和 DataSources 集合。 ReportItems 集合是報表區域中的文字方塊集合，例如在頁面或頁首中的文字方塊。  
   
  如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 |**Globals**|內建欄位|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|代表對報表很有用的全域變數，例如：報表名稱或頁碼。 永遠可以使用。<br /><br /> 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。|  
 |**使用者**|內建欄位|`=User.UserID`<br /><br /> - 或 -<br /><br /> `=User.Language`|代表有關執行報表之使用者的資料集合，例如，語言設定或使用者識別碼。 永遠可以使用。<br /><br /> 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。|  
 |**參數**|參數|`=Parameters("ReportMonth").Value`<br /><br /> - 或 -<br /><br /> `=Parameters!ReportYear.Value`|代表報表參數的集合，每個參數都可以是單一值或多重值。 處理初始化完成後才可以使用。 如需詳細資訊，請參閱[參數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)。|  
-|**欄位 (** *\<資料集 >* **)**|欄位|`=Fields!Sales.Value`|代表可供報表使用之資料集的欄位集合。 可在從資料來源將資料擷取至資料集之後使用。 如需詳細資訊，請參閱[資料集欄位集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。|  
+|**Fields(** *\<Dataset>* **)**|欄位|`=Fields!Sales.Value`|代表可供報表使用之資料集的欄位集合。 可在從資料來源將資料擷取至資料集之後使用。 如需詳細資訊，請參閱[資料集 Fields 集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。|  
 |**資料集**|不顯示|`=DataSets("TopEmployees").CommandText`|代表從報表定義的主體所參考的資料集集合。 不包含只用於頁首或頁尾的資料來源。 不適用於本機預覽。 如需詳細資訊，請參閱 [DataSources 和 DataSets 集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)。|  
 |**DataSources**|不顯示|`=DataSources("AdventureWorks2012").Type`|代表從報表主體內所參考的資料來源集合。 不包含只用於頁首或頁尾的資料來源。 不適用於本機預覽。 如需詳細資訊，請參閱 [DataSources 和 DataSets 集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)。|  
 |**變數**|`Variables`|`=Variables!CustomTimeStamp.Value`|代表報表變數和群組變數的集合。 如需詳細資訊，請參閱[報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)。|  
@@ -56,9 +55,8 @@ ms.lasthandoff: 08/09/2017
 |*Collection("成員")*|`=User("Language")`|  
 |*Collection.Member*|`=User.Language`|  
   
-## <a name="see-also"></a>請參閱＜  
- [加入運算式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
- [運算式範例 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [加入運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
+ [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

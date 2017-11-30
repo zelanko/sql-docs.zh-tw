@@ -1,5 +1,5 @@
 ---
-title: "列印報表 （報表產生器及 SSRS） |Microsoft 文件"
+title: "列印報表 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 98680d72888f7c5bea47a6b1d7bf8e81d90bc06c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>列印報表 (報表產生器及 SSRS)
-  您將報表儲存至報表伺服器之後，您可以檢視和瀏覽器、 Reporting Services 入口網站，或您用於檢視匯出的報表的任何應用程式列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
+  將報表儲存至報表伺服器之後，您就可以從瀏覽器、 Reporting Services 入口網站或任何用來檢視所匯出報表的應用程式，檢視及列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
   
  當您列印報表時，可以指定所要使用的紙張大小。 紙張大小會決定報表中的頁數及哪些報表資料適合每一頁的大小。 紙張大小只會影響以硬分頁轉譯器所轉譯的報表：PDF、影像和列印。 設定紙張大小對於其他轉譯器沒有任何作用。 如需詳細資訊，請參閱[轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
   
- 從報表檢視器工具列或報表產生器中預覽 Reporting Services 入口網站中，您可以將報表匯出到手動分頁符號轉譯器，或按一下 [列印] 按鈕來列印報表的複本。 您可能需要設定紙張大小或是其他版面設定屬性。 使用 **[報表屬性]** 對話方塊可變更版面設定屬性，包括紙張大小。  
+ 您可以從 Reporting Services 入口網站的報表檢視器工具列或報表產生器中的預覽，將報表匯出到手動分頁轉譯器，或是按一下 [列印] 按鈕來列印報表的複本。 您可能需要設定紙張大小或是其他版面設定屬性。 使用 **[報表屬性]** 對話方塊可變更版面設定屬性，包括紙張大小。  
   
  您可以在兩個不同位置中指定列印頁面邊界：設計模式和執行模式。  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  在設計或執行模式中，不會顯示列印邊界。 設計介面區域與報表的列印區域之間沒有任何關聯性。 若要查看列印邊界，請在執行模式中，於 [功能區] 的 **[執行]** 索引標籤上，按一下 [整頁模式]。  
   
- 如需有關報表分頁的詳細資訊，請參閱[Reporting Services &#40; 中的分頁報表產生器及 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ 如需報表分頁的詳細資訊，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -49,9 +49,9 @@ ms.lasthandoff: 08/09/2017
   
 2.  在 [主資料夾] 索引標籤上，按一下 **[執行]**。  
   
-3.  （選擇性）按一下**整頁模式**以查看報表列印時的外觀。  
+3.  (選擇性) 按一下 [整頁模式] 查看報表列印時的外觀。  
   
-4.  （選擇性）按一下**版面**設定紙張、 方向與邊界。  
+4.  (選擇性) 按一下 [版面設定] 設定紙張、方向與邊界。  
   
     > [!NOTE]  
     >  這些設定的預設值來自 [設計] 檢視中所設定的報表屬性。 您在 **[版面設定]** 對話方塊中設定的值只會用於此工作階段。 當您關閉這份報表並重新開啟時，它就會再次具有預設值。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-print-a-report-from-a-web-browser-application"></a>若要從網頁瀏覽器應用程式列印報表  
   
-1.  在 Reporting Services 入口網站中，瀏覽至您想要列印的報表。 開啟報表。  
+1.  在 Reporting Services 入口網站中，巡覽至您想要列印的報表。 開啟報表。  
   
 3.  在報表頂端的工具列上，按一下 **[列印]**。  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-print-a-report-from-other-applications"></a>若要從其他應用程式列印報表  
   
-1.  在 Reporting Services 入口網站中，瀏覽至您想要列印的報表。 開啟報表。  
+1.  在 Reporting Services 入口網站中，巡覽至您想要列印的報表。 開啟報表。  
   
 2.  在報表頂端的工具列上，選取一種轉譯格式，然後按一下 **[匯出]**。 報表會在對應至轉譯格式的檢視器應用程式中開啟。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-change-paper-size"></a>變更紙張大小  
   
-1.  以滑鼠右鍵按一下報表主體的外面，按一下 **報表屬性**。  
+1.  以滑鼠右鍵按一下報表主體的外面，然後按一下 [報表屬性]。  
   
 2.  在 **[版面設定]**中，從 **[紙張大小]** 清單選取一個值。 每個選項都會填入 **[寬度]** 和 **[高度]** 屬性。 您也可以指定自訂大小，其方式是在 **[寬度]** 和 **[高度]** 方塊內輸入數值。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -92,16 +92,16 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-set-page-margins-in-design-mode"></a>在設計模式中設定頁面邊界  
   
--   以滑鼠右鍵按一下設計介面周圍的藍色區域中，按一下**報表屬性**，然後按一下 **版面**頁面。  
+-   以滑鼠右鍵按一下設計介面周圍的藍色區域，按一下 [報表屬性]，然後按一下 [版面設定] 頁面。  
   
 ### <a name="to-set-page-margins-in-run-mode"></a>若要在執行模式中設定頁面邊界  
   
 -   按一下 **[執行]** 索引標籤上的 **[版面設定]** 。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [報表屬性對話方塊、 版面設定 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [報表屬性對話方塊、版面設定 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "預先載入快取 （報表管理員） |Microsoft 文件"
+title: "預先載入快取 (報表管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ce5bc7b1e8016eecf227c24e4751c3dee812474d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preload-the-cache-report-manager"></a>預先載入快取 (報表管理員)
   您可以為共用資料集建立快取重新整理計劃，為共用資料集預先載入快取。  
@@ -45,11 +44,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>若要透過建立快取重新整理計劃以預先載入快取  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在報表管理員中，導覽到 **[內容]** 頁面，然後導覽到您要快取的項目。  
   
-3.  將滑鼠停留在項目，按一下下拉式清單，然後按**管理**。  
+3.  將滑鼠停留在該項目上方，按一下下拉式清單，然後按一下 [管理]。  
   
 4.  按一下 **[快取重新整理選項]** 索引標籤。  
   
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  針對共用排程，按一下 **[共用排程]**，然後選取要使用的排程名稱。  
   
-     針對自訂排程，按一下**項目特定排程**，然後按一下 **設定**。  
+     針對自訂排程，按一下 [項目特定排程]，然後按一下 [設定]。  
   
 8.  設定排程  
   
@@ -72,11 +71,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>若要透過使用資料驅動訂閱以預先載入含使用者專屬報表的快取  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在報表管理員中，導覽至 **[內容]** 頁面，然後導覽至您要建立訂閱的報表。  
   
-3.  按一下報表，按一下 **訂閱**索引標籤，然後再按一下**新增資料驅動訂閱**。  
+3.  按一下報表，按一下 [訂閱] 索引標籤，然後按一下 [新增資料驅動訂閱]。  
   
 4.  選擇性地輸入訂閱的描述。  
   
@@ -104,12 +103,12 @@ ms.lasthandoff: 08/09/2017
   
 12. 指定訂閱的報表參數值，然後按 **[下一步]**。  
   
-13. 指定處理訂閱的時間。 請勿選擇 **[更新報表伺服器上的報表資料時]**。 該設定僅適用於快照集。 如果想要使用預先存在的排程，請選取**共用排程上**。  
+13. 指定處理訂閱的時間。 請勿選擇 **[更新報表伺服器上的報表資料時]**。 該設定僅適用於快照集。 如果您想要使用預先存在的排程，請選取 [在共用排程上]。  
   
      或者，若要建立自訂排程，請按一下 **[在為此訂閱建立的排程上]** ，然後按 **[下一步]**。 設定排程，然後按一下 **[完成]**。  
   
     > [!NOTE]  
-    >  為了讓訂閱者能夠接收到最新的報表，您設定的排程應該與您為訂閱者所定義的報表傳遞排程一致。 如需詳細資訊，請參閱[報表管理員 &#40;SSRS 原生模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+    >  為了讓訂閱者能夠接收到最新的報表，您設定的排程應該與您為訂閱者所定義的報表傳遞排程一致。 如需詳細資訊，請參閱[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 14. 設定報表的執行選項，如下。 在報表頁面上，按一下 **[屬性]** 索引標籤。  
   
@@ -119,18 +118,17 @@ ms.lasthandoff: 08/09/2017
   
 17. 選擇下列兩個快取選項的其中之一並設定逾期，如下：  
   
-    -   若要使快取副本在特定時間週期之後過期，請按一下 **快取報表的暫存副本。讓報表副本過期的分鐘數。** 輸入報表過期的分鐘數。  
+    -   若要使快取副本在特定時間週期之後過期，請按一下 **[快取報表的暫存副本。報表副本會在下列分鐘數後過期]。** 輸入報表過期的分鐘數。  
   
-    -   若要使快取的副本依據排程過期，請按一下**快取報表的暫存副本。讓下列排程上的報表副本過期。** 按一下 **[設定]**，或選取共用排程來設定報表過期的排程。  
+    -   若要使快取副本依據排程過期，請按一下 [快取報表的暫存副本。**在下列排程上使報表的副本過期]。** 按一下 **[設定]**，或選取共用排程來設定報表過期的排程。  
   
 18. 按一下 **[套用]**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料驅動訂閱](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [效能、 快照、 快取 &#40;Reporting Services &#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
+ [效能、快照、快取 &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
  [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   
-

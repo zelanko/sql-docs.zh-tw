@@ -4,34 +4,34 @@ ms.custom:
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: SQL
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - online index operations
 - source indexes [SQL Server]
-- preexisting indexes [SQL Server]
+- pre-existing indexes [SQL Server]
 - target indexes [SQL Server]
 - temporary mapping index [SQL Server]
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.service: 
 ms.component: indexes
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5c4b0e6d0830e1addce4f3bc586aa4c09029314c
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="how-online-index-operations-work"></a>線上索引作業如何運作
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   此主題定義線上索引作業期間存在的結構，以及顯示有關這些結構的活動。  
   
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/22/2017
   
 |階段|來源活動|來源鎖定|  
 |-----------|---------------------|------------------|  
-|準備<br /><br /> 非常短的階段|準備建立新的空索引結構的系統中繼資料。<br /><br /> 定義資料表的快照集。 亦即，會使用資料列版本設定來提供交易層級的讀取一致性。<br /><br /> 並行使用者對來源的寫入作業會被鎖定一段非常短的時間。<br /><br /> 除了建立多個非叢集索引，不允許並行的 DDL 作業。|資料表上是 S (共用)*<br /><br /> IS (意圖共用)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|建置<br /><br /> 主要階段|在大量載入作業中，資料會被掃描、排序、合併且插入目標。<br /><br /> 並行使用者的選取、插入、更新或刪除作業，會同時套用到預先存在的索引和任何建立的新索引。|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
-|完成<br /><br /> 非常短的階段|所有無法認可的更新交易必須在此階段開始之前完成。 根據獲得的鎖定不同，所有新的使用者讀取或寫入交易會被鎖定一段非常短的時間，直到此階段完成為止。<br /><br /> 系統中繼資料會更新，以目標取代來源。<br /><br /> 如果需要來源，會卸除來源。 例如，在重建或卸除叢集索引之後。|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 如果正在建立非叢集索引，資料表上是 S。\*<br /><br /> 如果卸除任何來源結構 (索引或資料表)，則是 SCH-M (結構描述修改)。\*|  
+|準備<br /><br /> 短期階段|準備建立新的空索引結構的系統中繼資料。<br /><br /> 定義資料表的快照集。 亦即，會使用資料列版本設定來提供交易層級的讀取一致性。<br /><br /> 並行使用者對來源的寫入作業會短時間封鎖。<br /><br /> 除了建立多個非叢集索引，不允許並行的 DDL 作業。|資料表上是 S (共用)*<br /><br /> IS (意圖共用)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
+|建置<br /><br /> 主要階段|在大量載入作業中，資料會被掃描、排序、合併且插入目標。<br /><br /> 並行使用者的選取、插入、更新和刪除作業，會同時套用到預先存在的索引和任何建立的新索引。|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|完成<br /><br /> 短期階段|所有無法認可的更新交易必須在此階段開始之前完成。 根據所取得的鎖定，所有新的使用者讀取或寫入交易會短時間封鎖，直到此階段完成為止。<br /><br /> 系統中繼資料會更新，以目標取代來源。<br /><br /> 如果需要來源，會卸除來源。 例如，在重建或卸除叢集索引之後。|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 如果正在建立非叢集索引，資料表上是 S。\*<br /><br /> 如果卸除任何來源結構 (索引或資料表)，則是 SCH-M (結構描述修改)。\*|  
   
  \* 索引作業會等待任何未認可的更新交易先完成，然後才取得資料表的 S 鎖定或 SCH-M 鎖定。  
   
@@ -97,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
-

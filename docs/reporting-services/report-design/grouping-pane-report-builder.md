@@ -1,5 +1,5 @@
 ---
-title: "群組窗格 （報表產生器） |Microsoft 文件"
+title: "群組窗格 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10033"
-helpviewer_keywords:
-- Grouping Pane dialog box
+f1_keywords: "10033"
+helpviewer_keywords: Grouping Pane dialog box
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f8017dd30a085519f9dd5d3593aaa3d59329f8c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3766308293310541636462adc6b44de34ca7d703
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="grouping-pane-report-builder"></a>群組窗格 (報表產生器)
   [群組] 窗格會顯示目前所選 Tablix 資料區的資料列群組和資料行群組。 [群組] 窗格不適用於 [圖表] 或 [量測計] 資料區。 [群組] 窗格包含 [資料列群組] 窗格和 [資料行群組] 窗格。 [群組] 窗格有兩種模式：預設和進階。 預設模式會針對資料列和資料行群組，顯示動態成員的階層式檢視。 進階模式則會針對資料列和資料行群組，同時顯示動態和靜態成員。 群組是來自顯示於資料區域上之報表資料集的命名集資料。 群組會組織成包含靜態和動態成員的階層。 如需詳細資訊，請參閱[了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
@@ -37,18 +34,18 @@ ms.lasthandoff: 08/09/2017
   
  [群組] 窗格支援下列模式：  
   
--   **預設值：** 使用預設模式加入、編輯或刪除群組。 您可以從 [報表資料] 窗格拖曳欄位，並將這些欄位插入到群組階層中，藉以加入父群組、子群組和詳細資料群組。 若要加入相鄰群組，您必須使用 **[加入群組]** 快速鍵。 如需詳細資訊，請參閱[在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
+-   **預設值：** 使用預設模式加入、編輯或刪除群組。 您可以從 [報表資料] 窗格拖曳欄位，並將這些欄位插入到群組階層中，藉以加入父群組、子群組和詳細資料群組。 若要加入相鄰群組，您必須使用 **[加入群組]** 快速鍵。 如需詳細資訊，請參閱 [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
--   **進階**： 使用 **[進階模式]** 檢視資料列和資料行群組的所有成員，並針對靜態成員設定屬性。 當您建立群組或加入總計時，會自動設定控制 Tablix 資料區域如何在每個報表頁面上轉譯資料列與資料行的屬性。 若要手動調整這些屬性，您必須針對 Tablix 成員設定這些屬性。 如需詳細資訊，請參閱[控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。  
+-   **進階**： 使用 **[進階模式]** 檢視資料列和資料行群組的所有成員，並針對靜態成員設定屬性。 當您建立群組或加入總計時，會自動設定控制 Tablix 資料區域如何在每個報表頁面上轉譯資料列與資料行的屬性。 若要手動調整這些屬性，您必須針對 Tablix 成員設定這些屬性。 如需詳細資訊，請參閱 [控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。  
   
 ## <a name="default-mode"></a>預設模式  
  在預設模式下，[資料列群組] 窗格和 [資料行群組] 窗格會顯示所有父群組、子群組和相鄰群組的階層式檢視。 子群組會以縮排顯示在其父群組下。 相鄰群組會與其同層級群組顯示在相同的縮排層級上。 下圖顯示 Tablix 資料區與巢狀資料列群組，以及巢狀資料行和相鄰資料行群組。  
   
- ![Tablix、 巢狀及相鄰的資料列和資料行群組](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix、 巢狀及相鄰的資料列和資料行群組")  
+ ![Tablix、巢狀及相鄰的資料列和資料行群組](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix、巢狀及相鄰的資料列和資料行群組")  
   
  [群組] 窗格會顯示對應的資料列和資料行群組。 在下圖中，以子類別目錄為基礎的群組已在 [資料列群組] 窗格中選取，而 [Subcat] 群組資料格則已在 Tablix 資料區中選取：  
   
- ![巢狀資料列和資料行群組的群組 窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的群組 窗格")  
+ ![巢狀資料列和資料行群組的群組窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的群組窗格")  
   
  在 [資料列群組] 窗格中，以子類別目錄為基礎之群組是以類別目錄為基礎之群組的子系。 在 [資料行群組] 窗格中，國家/地區群組是地理位置群組的子系。 年份群組和國家/地區群組則是相鄰的群組。  
   
@@ -84,10 +81,9 @@ ms.lasthandoff: 08/09/2017
   
 -   **(Static)** ：表示不包含標頭資料格的靜態成員，亦即隱藏的靜態。  
   
-## <a name="see-also"></a>請參閱＜  
- [對話方塊、 窗格和精靈的報表產生器說明](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [篩選、 群組和排序資料 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [資料表、 矩陣和清單 &#40;報表產生器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [對話方塊、窗格和精靈的報表產生器說明](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
+ [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

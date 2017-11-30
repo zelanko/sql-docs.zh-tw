@@ -1,5 +1,5 @@
 ---
-title: "檔案共用傳遞 Reporting Services 中的 |Microsoft 文件"
+title: "Reporting Services 中的檔案共用傳遞 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,22 +14,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0d0492a8bc9b5ef61e8ef8b1d237aac1f818abd5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的檔案共用傳遞
-  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括檔案共用傳遞延伸模組，讓您可以傳遞報表到資料夾。 依預設，可以使用檔案共用傳遞延伸模組，且不需額外的組態。 若要順利完成檔案傳遞，您必須設定共用資料夾的寫入權限。 需要寫入者權限可以排除的帳戶是在訂用帳戶中設定的認證或**檔案共用帳戶**針對報表伺服器設定。 如需檔案共用帳戶的詳細資訊，請參閱 [訂閱設定與檔案共用帳戶 &#40;組態管理員&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 此外，需要存取報表的使用者必須擁有共用資料夾的讀取權限。  
+  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括檔案共用傳遞延伸模組，讓您可以傳遞報表到資料夾。 依預設，可以使用檔案共用傳遞延伸模組，且不需額外的組態。 若要順利完成檔案傳遞，您必須設定共用資料夾的寫入權限。 需要寫入者權限的帳戶可以排除訂閱中所設定的認證或針對報表伺服器所設定的「檔案共用帳戶」。 如需檔案共用帳戶的詳細資訊，請參閱 [訂閱設定與檔案共用帳戶 &#40;組態管理員&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 此外，需要存取報表的使用者必須擁有共用資料夾的讀取權限。  
   
- 若要散發報表到檔案共用，您必須定義標準訂閱或資料驅動訂閱。 若要了解如何使用資料驅動訂閱中的檔案共用傳遞，請參閱[建立資料驅動訂閱 &#40;SSRS 教學課程 &#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). 此外，執行遠端檔案共用訂閱的帳戶需要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 電腦上進行本機登入的權限。  
+ 若要散發報表到檔案共用，您必須定義標準訂閱或資料驅動訂閱。 若要了解如何在資料驅動訂閱中使用檔案共用傳遞，請參閱[建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。 此外，執行遠端檔案共用訂閱的帳戶需要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 電腦上進行本機登入的權限。  
   
 ||  
 |-|  
@@ -88,7 +87,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理原生模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [訂用帳戶設定和檔案共用帳戶 &#40;組態管理員 &#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
+ [訂閱設定與檔案共用帳戶 &#40;設定管理員&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   
   
-

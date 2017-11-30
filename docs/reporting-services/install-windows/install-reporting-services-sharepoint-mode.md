@@ -1,13 +1,11 @@
 ---
-title: "安裝 Reporting Services SharePoint 模式 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "安裝 Reporting Services SharePoint 模式 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - installing Reporting Services, SharePoint integrated mode
 - installation options [Reporting Services]
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 4bba09c0ec60a810faf3d7ef8e75a7a43661dfba
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 0579de9d264d5b81713fd47b25feeb1fb817b8e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-reporting-services-sharepoint-mode"></a>安裝 Reporting Services SharePoint 模式
 
@@ -33,10 +30,10 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services 在 SharePoint 中，啟用報表建立和檢視文件庫中的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]訂閱傳遞的報表透過電子郵件， [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，資料警示，和報表管理功能，在部署中的所有基礎的[!INCLUDE[msCoName](../../includes/msconame-md.md)]SharePoint。 如需有關 SharePoint 模式中功能的詳細資訊，請參閱 < > 一節 「 功能支援與行為差異的伺服器模式 」 中[Reporting Services 報表伺服器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)。
+SQL Server Reporting Services 在 SharePoint 中，可以在文件庫中啟用報表建立和檢視、透過電子郵件、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、資料警示和報表管理功能傳送報表的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱，全部都在以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 為基礎的部署中。 如需 SharePoint 模式中功能的詳細資訊，請參閱 [Reporting Services 報表伺服器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)中的＜依伺服器模式排列的功能支援與行為差異＞一節。
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
 針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，SharePoint 模式需要安裝兩個核心 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件：  
 
@@ -71,4 +68,3 @@ SQL Server Reporting Services 在 SharePoint 中，啟用報表建立和檢視�
  [警示系統管理員的資料警示管理員](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

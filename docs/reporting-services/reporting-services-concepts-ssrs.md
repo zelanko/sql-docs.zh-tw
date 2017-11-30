@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 概念 (SSRS) |Microsoft 文件"
+title: "Reporting Services 概念 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/25/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 522c9f0c5cec7b6966d80c45a890a5be90e60b07
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 383b918c5559810d426ea4a26742a9f3df3c0caa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本主題提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念的簡短摘要。  
@@ -38,10 +37,10 @@ ms.lasthandoff: 08/09/2017
  與 SharePoint 整合的報表伺服器有兩種可能的組態。 在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]中， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是與做為 SharePoint 共用服務的 SharePoint 伺服器一起安裝。 在舊版本中，報表伺服器會透過安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 增益集與 SharePoint Server 的整合。 在這兩種情況下，與報表伺服器、報表和報表相關項目的互動是在 SharePoint 網站上使用應用程式頁面。 您可以使用 SharePoint 文件庫以及其他您建立用以儲存報表相關內容類型的文件庫。 如需詳細資訊，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)。  
   
 ### <a name="report-server-items"></a>報表伺服器項目 
- 報表伺服器項目包含分頁與行動報表、KPI、共用資料來源、共用資料集，以及其他可發行、上傳或儲存至報表伺服器的項目。 組織原生報表伺服器之報表伺服器階層資料夾結構中的項目，或是組織 SharePoint 網站之 SharePoint 內容庫中的項目。 如需詳細資訊，請參閱[報表伺服器內容管理 &#40;SSRS 原生模式 &#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md).  
+ 報表伺服器項目包含分頁與行動報表、KPI、共用資料來源、共用資料集，以及其他可發行、上傳或儲存至報表伺服器的項目。 組織原生報表伺服器之報表伺服器階層資料夾結構中的項目，或是組織 SharePoint 網站之 SharePoint 內容庫中的項目。 如需詳細資訊，請參閱[報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)。  
   
 ### <a name="folders"></a>資料夾
- 在原生報表伺服器上，資料夾提供儲存在報表伺服器中所有可定址項目的階層式導覽結構和路徑。 您可以使用資料夾階層和網站以及資料夾權限，協助控制對報表伺服器項目的存取權，這稱為 *「項目層級安全性」*(Item-level security)。 資料夾階層中的子資料夾預設會繼承您對特定資料夾所定義的角色指派。 若您將特定的角色指派給資料夾，則繼承規則將不再適用。 資料夾結構包含一個稱為 **[主資料夾]**的根節點以及多個支援選擇性 **[我的報表]** 功能的保留資料夾。 在瀏覽器中，根節點是報表伺服器虛擬目錄，名稱，例如`http://myreportserver/reports`。 如需詳細資訊，請參閱 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
+ 在原生報表伺服器上，資料夾提供儲存在報表伺服器中所有可定址項目的階層式導覽結構和路徑。 您可以使用資料夾階層和網站以及資料夾權限，協助控制對報表伺服器項目的存取權，這稱為 *「項目層級安全性」*(Item-level security)。 資料夾階層中的子資料夾預設會繼承您對特定資料夾所定義的角色指派。 若您將特定的角色指派給資料夾，則繼承規則將不再適用。 資料夾結構包含一個稱為 **[主資料夾]**的根節點以及多個支援選擇性 **[我的報表]** 功能的保留資料夾。 在瀏覽器中，根節點是報表伺服器虛擬目錄的名稱 (例如，`http://myreportserver/reports`)。 如需詳細資訊，請參閱 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
   
  在 SharePoint 網站上，使用文件庫和內容庫中的 SharePoint 資料夾來組織項目。  
   
@@ -57,10 +56,10 @@ ms.lasthandoff: 08/09/2017
  訂閱是要在特定時間或回應事件時傳遞報表的永久性要求，並採用您在訂閱中指定的應用程式檔案格式。 訂閱會提供視需要執行報表的替代方案。 視需要報表會要求您在每次檢視報表時，主動選取報表。 反之，訂閱可用於排程然後自動傳遞報表。 您可以將報表傳遞至電子郵件收件匣或檔案共用。 如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
 ### <a name="extensions"></a>延伸模組
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供可用以自訂報表方案的可延伸架構。 報表伺服器支援自訂驗證延伸模組、資料處理延伸模組、報表處理延伸模組、轉譯延伸模組和傳遞延伸模組，以及在 RSReportServer.config 組態檔中適用於使用者的可設定延伸模組。 例如，您可以限制報表檢視器允許使用的匯出格式。 傳遞與報表處理延伸模組是選擇性的，但是您若要支援報表散發或自訂控制項，則是必要的。 如需詳細資訊，請參閱[Reporting Services 延伸模組 &#40;SSRS &#41;](../reporting-services/extensions-ssrs.md).  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供可用以自訂報表方案的可延伸架構。 報表伺服器支援自訂驗證延伸模組、資料處理延伸模組、報表處理延伸模組、轉譯延伸模組和傳遞延伸模組，以及在 RSReportServer.config 組態檔中適用於使用者的可設定延伸模組。 例如，您可以限制報表檢視器允許使用的匯出格式。 傳遞與報表處理延伸模組是選擇性的，但是您若要支援報表散發或自訂控制項，則是必要的。 如需詳細資訊，請參閱 [Reporting Services 延伸模組 &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)。  
   
 ### <a name="report-access"></a>報表存取 
- 視需要存取可讓使用者從報表檢視工具選取報表。 根據報表伺服器組態，您可以使用 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 組件、SharePoint 文件庫 (以 SharePoint 整合模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時)、內嵌的 ReportViewer 控制項，或是使用 URL 存取的瀏覽器。 如需有關視需要存取報表的詳細資訊，請參閱[尋找、 檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ 視需要存取可讓使用者從報表檢視工具選取報表。 根據報表伺服器組態，您可以使用 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]( [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 組件)、SharePoint 文件庫 (以 SharePoint 整合模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時)、內嵌的 ReportViewer 控制項，或是使用 URL 存取的瀏覽器。 如需視需要存取報表的詳細資訊，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
  訂閱會提供視需要執行報表的替代方案。 如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
@@ -115,7 +114,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **內嵌資料集。** 內嵌資料集是在單一報表中定義，只供單一報表使用。  
   
- 如需詳細資訊，請參閱[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。  
   
 ### <a name="report-parameters"></a>報表參數 
  報表參數是報表定義的一部分。 您可以將參數加入至 Reporting Services 分頁與行動報表，以便連結相關報表、控制報表外觀、篩選報表資料，或是將報表的範圍縮小至特定使用者或位置。 將分頁報表發行至原生報表伺服器或 SharePoint 網站時，會將報表參數儲存為個別的報表伺服器項目。 參數可以獨立管理，與報表定義無關。 若要為相同的報表建立多組參數，請建立 *「連結報表」*(Linked report)。  
@@ -160,7 +159,7 @@ ms.lasthandoff: 08/09/2017
  向下鑽研報表是一種配置設計，一開始會隱藏複雜度，並讓使用者條件式地切換隱藏的報表項目，以控制要顯示多詳細的資料。 向下鑽研報表必須擷取所有可能會顯示在報表上的資料。 若為使用大量資料的報表，請考慮改用鑽研報表。 如需詳細資訊，請參閱[向下鑽研動作 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)。  
   
 ### <a name="subreports"></a>子報表
- 子報表是以配置元素形式加入至報表的報表項目。 子報表會指向不同的報表，而且會在主報表的主體內顯示為子報表執行個體。 子報表可以使用與主報表不同的資料來源。 雖然可以使用參數在每個子報表執行個體中篩選資料，以在資料區中重複子報表，不過子報表通常是與主報表搭配使用，做為簡報書籍或是可以容納相關報表集合的容器。 每個子報表執行個體都會切換主報表與子報表之間的報表處理內容。 若為使用多個子報表執行個體的報表，請考慮改用鑽研報表。 如需詳細資訊，請參閱[子報表 &#40;報表產生器及 SSRS &#41;](../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
+ 子報表是以配置元素形式加入至報表的報表項目。 子報表會指向不同的報表，而且會在主報表的主體內顯示為子報表執行個體。 子報表可以使用與主報表不同的資料來源。 雖然可以使用參數在每個子報表執行個體中篩選資料，以在資料區中重複子報表，不過子報表通常是與主報表搭配使用，做為簡報書籍或是可以容納相關報表集合的容器。 每個子報表執行個體都會切換主報表與子報表之間的報表處理內容。 若為使用多個子報表執行個體的報表，請考慮改用鑽研報表。 如需詳細資訊，請參閱[子報表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/subreports-report-builder-and-ssrs.md)。  
   
  ### <a name="maindetail-reports-and-drillthrough-reports"></a>主/詳細資料報表及鑽研報表
  主/詳細資料報表方案所含的主報表會顯示摘要資訊，而摘要資訊具有一個或多個可顯示詳細資訊之報表的超連結。  只有在報告讀取器按一下詳細資料報表的連結時，才會執行詳細資料報表。 鑽研報表是個別從主報表中開啟。 超連結可以定義在任何具有 Action 屬性的報表項目上，例如文字方塊、預留位置文字或圖表數列。 如需詳細資訊，請參閱[鑽研報表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)。  
@@ -174,9 +173,9 @@ ms.lasthandoff: 08/09/2017
  報表記錄是報表快照集的集合。 您可以使用報表記錄，以維護報表經過一段時間的記錄。 報表記錄不適用於包含機密或個人資料的報表。 因此，報表記錄只會包含使用單一認證組以查詢資料來源的報表。 您也可以定義排程及訂閱，將具有已匯出檔案格式的報表傳遞至檔案共用，以建立報表的記錄。 如需詳細資訊，請參閱[效能、快照集、快取 &#40;Reporting Services&#41;](../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)。  
   
 ### <a name="cached-reports"></a>快取報表 
- 快取報表是已編譯報表及報表資料的已儲存複本。 快取報表可用以提升效能，其方式是減少報表處理器的處理要求數目以及減少擷取大型報表資料集所需的時間。 它們具有強制性的到期時間 (通常以分鐘為單位)。 如需如何使用快取的報表的詳細資訊，請參閱[快取報表 &#40;SSRS &#41;](../reporting-services/report-server/caching-reports-ssrs.md).  
+ 快取報表是已編譯報表及報表資料的已儲存複本。 快取報表可用以提升效能，其方式是減少報表處理器的處理要求數目以及減少擷取大型報表資料集所需的時間。 它們具有強制性的到期時間 (通常以分鐘為單位)。 如需如何使用快取報表的詳細資訊，請參閱[快取報表 &#40;SSRS&#41;](../reporting-services/report-server/caching-reports-ssrs.md)。  
   
- 您也可以快取共用資料集的查詢結果。 如需詳細資訊，請參閱[快取共用資料集 &#40;SSRS &#41;](../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
+ 您也可以快取共用資料集的查詢結果。 如需詳細資訊，請參閱[快取共用資料集 &#40;SSRS&#41;](../reporting-services/report-server/cache-shared-datasets-ssrs.md)。  
   
 ### <a name="snapshots"></a>快照集
  報表快照集是一種報表，它包含在特定時間點擷取的配置資訊和查詢結果。 與檢視報表時即取得最新查詢結果的視需要報表不同，報表伺服器會擷取報表在建立快照集時的已編譯報表及報表資料。 報表快照集不會以特定轉譯格式儲存。 而是只有在使用者或應用程式要求它時，報表快照集才以最後的檢視格式轉譯 (例如 HTML)。 如需詳細資訊，請參閱[效能、快照集、快取 &#40;Reporting Services&#41;](../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)。  
@@ -210,7 +209,7 @@ ms.lasthandoff: 08/09/2017
  同時含有資料及配置資訊之完整處理過的報表。  
   
 ### <a name="rendered-report"></a>轉譯報表
- 完整處理過的報表會傳送至報表轉譯器，以結合每個具有目標轉譯格式之頁面上的資料及配置。 您可以自訂及擴充轉譯延伸模組。 報表的預設轉譯格式為 HTML 4.0。 如需詳細資訊，請參閱[頁面配置和轉譯 &#40;報表產生器及 SSRS &#41;](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)和[擴充功能 &#40;SSRS &#41;](../reporting-services/extensions-ssrs.md).  
+ 完整處理過的報表會傳送至報表轉譯器，以結合每個具有目標轉譯格式之頁面上的資料及配置。 您可以自訂及擴充轉譯延伸模組。 報表的預設轉譯格式為 HTML 4.0。 如需詳細資訊，請參閱[頁面配置和轉譯 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md) 和[延伸模組 &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)。  
   
 ### <a name="exported-report"></a>匯出的報表
  匯出的報表是以特定檔案格式儲存的完整分頁報表。 匯出格式取決於已安裝的轉譯延伸模組，而且可以進行自訂。 匯出格式預設會包含 Excel、Word、XML、PDF、TIFF 及 CSV。 如需詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
@@ -218,8 +217,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 功能及工作 &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
- [技術參考 &#40;SSRS &#41;](../reporting-services/technical-reference-ssrs.md)   
+ [技術參考 &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   
-

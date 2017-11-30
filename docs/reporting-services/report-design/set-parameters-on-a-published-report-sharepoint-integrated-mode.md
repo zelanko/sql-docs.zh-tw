@@ -1,5 +1,5 @@
 ---
-title: "已發行的報表-SharePoint 整合模式上設定參數 |Microsoft 文件"
+title: "在已發行的報表上設定參數 - SharePoint 整合模式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,18 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ba05b4727499c702b9f8827de9564aad444c1ebc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57f464054989a20b56b729624d711b6520466d13
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>設定已發行的報表-SharePoint 整合模式上的參數
+# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>在已發行的報表上設定參數 - SharePoint 整合模式
   參數化報表是指可接受輸入值的報表，而這些輸入值會在您執行報表時用來篩選資料。 參數是在報表建立時定義的。 根據報表參數在報表定義中的定義方式，它可能會接受單一值、多個值或動態值，而這些值會變更以便回應之前的選取項目 (例如，當您選取產品類別目錄時，下一個選取項目可能是來自該類別目錄的特定產品)。 參數可能會有預設值，而且此值可用來自動執行已篩選的報表版本或可能由不同的值取代。  
   
  這些屬性可以在報表定義中設定，或是在已經發行報表後設定。 雖然您可以在已發行的報表中修改某些參數屬性來變更值並顯示屬性，但是您無法變更參數名稱或資料類型。 參數名稱與資料類型僅能透過報表定義中的報表作者變更。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/09/2017
   
  若要在已發行的報表上設定參數屬性，您必須擁有該報表的「編輯項目」權限。 您可以在從 SharePoint 網站執行的報表上，修改部分或所有參數屬性。 但是，您無法透過儲存想要重複使用之參數值的組合，個人化報表。 您所指定的任何預設值都會由開啟報表的所有使用者使用。  
   
- 如果報表內嵌在設定為永遠顯示該報表的報表檢視器 Web 組件中，在報表檢視器 Web 組件上設定屬性。 如需詳細資訊，請參閱[將報表檢視器 Web 組件加入至網頁 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)。  
+ 如果報表內嵌在設定為永遠顯示該報表的報表檢視器 Web 組件中，在報表檢視器 Web 組件上設定屬性。 如需詳細資訊，請參閱[將報表檢視器網頁組件新增至網頁 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)。  
   
 ### <a name="to-run-a-parameterized-report"></a>執行參數化的報表  
   
@@ -69,17 +68,17 @@ ms.lasthandoff: 08/09/2017
   
 5.  在 [預設值] 中，輸入參數的值。 由於此值將不會進行驗證，因此請確定您提供了適用於報表的值。  
   
-    1.  如果您要使用建立報表時所定義的預設值，選擇 [使用報表定義中指定的值運算式]。 如果報表定義不提供預設值，將無法使用此選項。  
+    1.  如果您要使用建立報表時所定義的預設值，請選擇 [使用報表定義中指定的值運算式]。 如果報表定義不提供預設值，將無法使用此選項。  
   
-    2.  如果您要為報表定義預設值指定一個取代值，選擇 [覆寫報表預設值]。 對於接受 Null 值的報表參數，您可以根據該參數，選擇性地選取 [Null] 核取方塊以防止篩選。  
+    2.  如果您要為報表定義預設值指定一個取代值，請選擇 [覆寫報表預設值]。 對於接受 Null 值的報表參數，您可以根據該參數，選擇性地選取 [Null] 核取方塊以防止篩選。  
   
-    3.  如果您想讓每位使用者指定值，然後再處理報表，請選擇 [Parameter does not have a default value (參數沒有預設值)]。 如果您選取這個選項，就應該設定提示使用者指定值的顯示設定。  
+    3.  如果您想讓每位使用者指定值，然後再處理報表，請選擇 [參數沒有預設值]。 如果您選取這個選項，就應該設定提示使用者指定值的顯示設定。  
   
      請注意，如果所有參數值都具有預設值，當使用者開啟報表時，報表將會使用這些值自動執行。 不過，如果有顯示參數區域，使用者可以覆寫預設值，然後重新執行報表。  
   
 6.  您可以設定顯示選項，以便決定參數是否會顯示。  
   
-    1.  選擇 [提示]，即可在頁面上顯示參數。 您可以指定出現在欄位中的提示文字，以提供關於使用者必須提供之資料格式或類型的簡短說明。  
+    1.  選擇 [提示使用者]，即可在頁面上顯示參數。 您可以指定出現在欄位中的提示文字，以提供關於使用者必須提供之資料格式或類型的簡短說明。  
   
     2.  如果您要使用預設值，而且不想讓此參數顯示在 [參數] 區域中，請選擇 [隱藏]。  
   
@@ -87,8 +86,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  按一下 **[套用]**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [報表伺服器項目的 SharePoint 網站和清單權限參考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   
-

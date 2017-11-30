@@ -1,6 +1,6 @@
 ---
-title: "Reporting Services (SSRS) |Microsoft 文件"
-description: "深入了解工具與服務，行動和分頁 Reporting Services 報表和 Power BI 報表，在內部部署。"
+title: Reporting Services (SSRS) | Microsoft Docs
+description: "深入了解行動和分頁 Reporting Services 報表及內部部署 Power BI 報表的工具與服務。"
 ms.custom: 
 ms.date: 07/01/2017
 ms.prod: sql-server-2016
@@ -18,30 +18,28 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 49f990d30564a2c4fc38a527e7da1e97f9a21ca1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 94d3e2266c6539cc75b0ac5a51c47f6b6c20b0b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什麼是 SQL Server Reporting Services (SSRS)？
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-建立、 部署和管理行動和分頁的 Reporting Services 報表和 Power BI 報表，在內部部署的已備妥要使用的工具和 SQL Server Reporting Services (SSRS) 和 Power BI 提供的服務範圍。
+在內部部署建立、部署和管理行動和分頁 Reporting Services 報表及 Power BI 報表等工作，都可使用 SQL Server Reporting Services (SSRS) 和 Power BI 提供齊全的現成工具與服務來完成。
 
-![SQL Server Reporting Services 一起](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 一起")
+![SQL Server Reporting Services 全部整合](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 全部整合")
 
-## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>建立、 部署和管理行動和分頁報表
+## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>建立、部署和管理行動及分頁報表
 
 SQL Server Reporting Services 是客戶可在自己的內部部署的解決方案，以便建立、發行和管理報表，然後以不同的方式將報表提供給正確的使用者，而不論使用者是在其行動裝置上的網頁瀏覽器中檢視報表，還是將報表當做 [收件匣] 中的電子郵件進行檢視。
 
@@ -49,7 +47,7 @@ SQL Server 2016 版的 Reporting Services 提供更新產品套件：
 
 * **「傳統」分頁報表** 已經過更新，因此您可以建立具有現代化外觀的報表，並提供更新工具和新功能來建立這些報表。
 * **新的行動報表** 具有可配合不同裝置和不同保留方式調整的回應式配置。
-* 您可以在任何新式瀏覽器中檢視的**新式入口網站** 。 在新的入口網站，您可以組織並顯示 Reporting Services 報表和 Kpi 行動和分頁加上 Power BI Desktop 報表。 您也可以儲存在入口網站上的 Excel 活頁簿。
+* 您可以在任何新式瀏覽器中檢視的**新式入口網站** 。 在新的入口網站，您可以組織並顯示行動和分頁的 Reporting Services 報表和 KPI，加上 Power BI Desktop 報表。 您也可以在入口網站上儲存 Excel 活頁簿。
 
 請繼續閱讀以深入了解各項內容。
 
@@ -70,7 +68,7 @@ SQL Server 2016 版的 Reporting Services 提供更新產品套件：
 
 Reporting Services 與「傳統」分頁文件樣式報表相關聯，您擁有的資料愈多，資料表中的資料列愈多，而且報表會有愈多頁面。 這適合用來產生針對列印最佳化之固定式配置、像素完美的文件，例如 PDF 和 Word 檔案。
 
-該核心 BI 工作負載至今仍然存在，因此我們已將它現代化。 現在您可以使用更新的新功能，以建立現代化尋找報表，使用[報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)或報表設計師中[SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。
+該核心 BI 工作負載至今仍然存在，因此我們已將它現代化。 您現在可以使用[報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)或 [SQL Server Data Tools (SSDT) 中的報表設計師](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)，建立具有現代化外觀和更新功能的報表。
 
 * 我們已更新所有預設樣式和調色盤，因此根據預設，您可以使用新的極簡現代樣式來建立報表。
 * 我們已更新 [參數] 窗格，因此您可以視需要排列參數。
@@ -91,17 +89,17 @@ Reporting Services 與「傳統」分頁文件樣式報表相關聯，您擁有�
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
-原生模式 Reporting Services 使用者的首頁，就是您可以在任何新式瀏覽器中檢視的新式入口網站。 您可以存取您所有的 Reporting Services 行動和分頁報表和 Kpi，新的入口網站，再加上 Power BI Desktop 報表中。 深入了解[Power BI 報表中 Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md)。  
+原生模式 Reporting Services 使用者的首頁，就是您可以在任何新式瀏覽器中檢視的新式入口網站。 您可以在新的入口網站上，存取所有 Reporting Services 行動和分頁報表，加上 Power BI Desktop 報表。 如需詳細資訊，請參閱 [Reporting Services 中的 Power BI 報表](../reporting-services/power-bi-reports-in-reporting-services.md)。  
 
 您可以將自訂商標套用至您的入口網站。 而且您可以直接在入口網站中建立 KPI。 KPI 可以在瀏覽器中呈現關鍵業務指標概覽，而不必開啟報表。 
 
 新的入口網站完全是報表管理員的重寫。 現在它是單一頁面的標準式 HTML5 應用程式，並已針對下列新式瀏覽器最佳化︰Edge、Internet Explorer 10 和 11、Chrome、Firefox、Safari，以及所有主要瀏覽器。
 
-Web 入口網站上的內容依類型來組織： Reporting Services 行動和分頁報表和 Kpi，加上 Power BI Desktop 報表、 Excel 活頁簿、 共用資料集和共用的資料來源要做為建置組塊用於您的報表。 您可以儲存並管理其安全地在這裡，傳統資料夾階層中。 您可以標記 [我的最愛]，而且如果您具有相關角色，也可以管理內容。
+入口網站的內容依類型組織：Reporting Services 行動和分頁報表及 KPI，加上 Power BI Desktop 報表、Excel 活頁簿、共用資料集和共用資料來源，用為報表的建置組塊。 您可以在這裡用安全的方式，以傳統資料夾階層儲存並管理它們。 您可以標記 [我的最愛]，而且如果您具有相關角色，也可以管理內容。
 
 您仍然可以在新的入口網站中，為報表處理進行排程、視需要存取報表，以及訂閱已發行的報表。
 
-深入了解[入口網站 （SSRS 原生模式）](../reporting-services/web-portal-ssrs-native-mode.md)。
+深入了解[入口網站 (SSRS 原生模式)](../reporting-services/web-portal-ssrs-native-mode.md)。
 
 ## <a name="reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 整合模式的 Reporting Services
 
@@ -120,7 +118,6 @@ Web 入口網站上的內容依類型來組織： Reporting Services 行動和�
 * [安裝 Reporting Services](../reporting-services/install-windows/install-reporting-services.md)  
 * [安裝報表產生器](../reporting-services/install-windows/install-report-builder.md)   
 * [下載 SQL Server Data Tools (SSDT)](http://go.microsoft.com/fwlink/?LinkID=616714)  
-* [在 Reporting Services 中的 power BI 報表](../reporting-services/power-bi-reports-in-reporting-services.md)
+* [Reporting Services 中的 Power BI 報表](../reporting-services/power-bi-reports-in-reporting-services.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

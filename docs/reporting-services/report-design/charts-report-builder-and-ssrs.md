@@ -1,5 +1,5 @@
 ---
-title: "圖表 （報表產生器及 SSRS） |Microsoft 文件"
+title: "圖表 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -21,49 +21,49 @@ f1_keywords:
 - "10172"
 - sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ca57a00afd7256fce9c620099277a9894cbf59a3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="charts-report-builder-and-ssrs"></a>圖表 (報表產生器及 SSRS)
-有關使用圖表資料區域以利的讀取器讀取您[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]分頁的報表了解一眼彙總資料的大型磁碟區。  
+閱讀有關使用圖表資料區域的詳細資訊，以協助您的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表讀者一眼便了解大量的彙總資料。  
 
-經過小心地準備及了解您的資料建立圖表之前, 您花更多的時間就愈容易以迅速、 有效地設計圖表。 如需協助選擇要使用哪一個圖表，請參閱[圖表類型](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)啟動立即圖表來實驗，請參閱列、 資料行、 走勢圖和圓形圖教學課程中的[報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)。  
+您在建立圖表之前花越多時間仔細準備及了解您的資料，便越容易迅速而有效率地設計圖表。 如需協助選擇要使用哪一個圖表，請參閱[圖表類型](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)要立即開始使用圖表來實驗，請參閱[報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)中的列、資料行、走勢圖和圓形圖教學課程。  
   
  下圖顯示圖表中使用的許多不同元素。  
   
- ![圖表元素圖](../../reporting-services/report-design/media/rs-chartelementsc.gif "圖表元素圖")  
+ ![圖表項目圖](../../reporting-services/report-design/media/rs-chartelementsc.gif "圖表項目圖")  
   
- 您可以發行圖表當做報表分開*報表組件*。 如需詳細資訊，請參閱[報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。
+ 您可以與報表分開發行圖表，作為「報表組件」。 如需詳細資訊，請參閱[報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。
   
  
 ##  <a name="DesigningChart"></a> 設計圖表  
- 將圖表資料區加入至設計介面之後，您可以將數值和非數值資料的報表資料集欄位拖曳到圖表的 [圖表資料] 窗格。 當您在設計介面按一下圖表時，[圖表資料] 窗格隨即出現，其中包含三個區域：[類別目錄群組]、[數列群組] 和 [值]。 如果報表有共用或內嵌資料集，資料集中的欄位會出現在 [報表資料] 窗格中。 將欄位從資料集拖曳到圖表資料 窗格的適當區域。 根據預設，當欄位加入到圖表的其中一個區域時， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會計算該欄位的彙總。 您也可以使用數列群組動態產生數列。 圖表是[組織矩陣像](#SimilarMatrix)。  
+ 將圖表資料區加入至設計介面之後，您可以將數值和非數值資料的報表資料集欄位拖曳到圖表的 [圖表資料] 窗格。 當您在設計介面按一下圖表時，[圖表資料] 窗格隨即出現，其中包含三個區域：[類別目錄群組]、[數列群組] 和 [值]。 如果報表有共用或內嵌資料集，資料集中的欄位會出現在 [報表資料] 窗格中。 將欄位從資料集拖曳至 [圖表資料] 窗格的適當區域中。 根據預設，當欄位加入到圖表的其中一個區域時， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會計算該欄位的彙總。 您也可以使用數列群組動態產生數列。 圖表的[組織類似矩陣](#SimilarMatrix)。  
   
  ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   
 > [!NOTE]  
 >  圖表在設計階段的資料與圖表在報表處理時的資料不同。 它不是您實際的資料。 它會產生已經加入的資料，讓您可以利用圖表外觀的概念，設計您的圖表。  
   
-##  <a name="SimilarMatrix"></a>圖表方式就像是矩陣  
+##  <a name="SimilarMatrix"></a>圖表與矩陣的相似處  
  考慮圖表如何運作的其中一種方法是比較圖表與矩陣。  
   
- ![從 [工具箱] 中，選取加入新的矩陣](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "新矩陣從工具箱新增選取")  
+ ![從工具箱新增選取的新矩陣](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "從工具箱新增選取的新矩陣")  
   
  在概念上，組織是相同的：  
   
--   在矩陣中的資料行群組就像是在圖表中的 [類別目錄群組] 區域。  
+-   矩陣中的 [資料行] 群組與圖表中的 [類別目錄群組] 區域類似。  
   
--   在矩陣中的資料列群組就像是在圖表中的 [數列群組] 區域。  
+-   矩陣中的 [資料列] 群組與圖表中的 [數列群組] 區域類似。  
   
--   在矩陣資料區域就像是在圖表中的 [值] 區域。  
+-   矩陣中的 [資料] 區域與圖表中的 [值] 區域類似。  
   
  
 ##  <a name="AddingData"></a> 將資料加入到圖表中  
@@ -96,11 +96,11 @@ ms.lasthandoff: 08/09/2017
   
  您可以使用數種方法來合併圖表上的資料：  
   
--   在使用圓形圖時，將小扇區收集成稱為「其他」的單一扇區。 這樣可以減少圓形圖上的扇區數目。 如需詳細資訊，請參閱[收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)。  
+-   在使用圓形圖時，將小扇區收集成稱為「其他」的單一扇區。 這樣可以減少圓形圖上的扇區數目。 如需詳細資訊，請參閱 [收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)。  
   
 -   請避免在資料點很多時使用資料點標籤。 資料點標籤在圖表上只有幾個點時最有效。  
   
--   請篩選不想要或不相關的資料。 這樣有助於強調您想要在圖表上顯示的關鍵資料。 若要篩選圖表中的資料點，請針對類別目錄群組或數列群組設定篩選。 依預設，圖表會使用內建函數 Sum，將屬於相同群組的值彙總成數列中的個別資料點。 如果您變更數列的彙總函式，則必須同樣變更篩選運算式中的彙總函式。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+-   請篩選不想要或不相關的資料。 這樣有助於強調您想要在圖表上顯示的關鍵資料。 若要篩選圖表中的資料點，請針對類別目錄群組或數列群組設定篩選。 依預設，圖表會使用內建函數 Sum，將屬於相同群組的值彙總成數列中的個別資料點。 如果您變更數列的彙總函式，則必須同樣變更篩選運算式中的彙總函式。 如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
   
 -   若要在資料表或矩陣範本中顯示比例資料，請考慮使用線性量測計，而不要使用橫條圖。 量測計較適合用來顯示資料格內的單一值。 如需詳細資訊，請參閱 [巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)。  
    
@@ -142,12 +142,12 @@ ms.lasthandoff: 08/09/2017
  [疑難排解圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
  描述使用圖表的秘訣。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [影像、文字方塊、矩形和線條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [互動式排序、 文件引導模式及連結 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [巢狀的資料區 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [教學課程： 將直條圖加入至您的報表 &#40;報表產生器 &#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [教學課程：將直條圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [教學課程： 將橫條圖加入至您的報表 &#40;報表產生器 &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [教學課程：將橫條圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

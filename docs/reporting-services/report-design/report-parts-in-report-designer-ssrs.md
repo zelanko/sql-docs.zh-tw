@@ -1,5 +1,5 @@
 ---
-title: "報表組件在報表設計工具 (SSRS) |Microsoft 文件"
+title: "報表設計師中的報表組件 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.components.f1
+f1_keywords: sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 44d4d2ae5bf33c8a35c54659bd89a504e2bb58fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="report-parts-in-report-designer-ssrs"></a>報表設計師中的報表組件 (SSRS)
 
-  在報表設計師中，建立專案的資料表、圖表及其他分頁報表項目之後，您可以將它們當作「報表組件」發行至報表伺服器或與報表伺服器整合的 SharePoint 網站，以供您和其他人員在其他報表中重複使用這些組件。  
+  在報表設計師中，建立專案的資料表、圖表及其他分頁報表項目之後，您可以將它們當作*「報表組件」*發行至報表伺服器或與報表伺服器整合的 SharePoint 網站，以供您和其他人員在其他報表中重複使用這些組件。  
   
  一般來說，報表組件在報表設計師和報表產生器中的運作方式都相同。 若要了解基本功能，請參閱[報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
@@ -82,7 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  部署報表。  
   
- 部署報表時，報表組件會發行至 SharePoint 網站或報表伺服器，讓其他人也可以重複使用。 若要發行報表組件，您必須連線至足夠的權限，並在報表伺服器上部署報表時。  
+ 部署報表時，報表組件會發行至 SharePoint 網站或報表伺服器，讓其他人也可以重複使用。 若要發行報表組件，必須具有報表伺服器的連線，並在部署報表時具有該伺服器上足夠的權限。  
   
   
 ##  <a name="SearchReuseComponents"></a> 重複使用報表組件  
@@ -102,4 +99,3 @@ ms.lasthandoff: 08/09/2017
 [管理報表組件](../../reporting-services/report-design/managing-report-parts.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

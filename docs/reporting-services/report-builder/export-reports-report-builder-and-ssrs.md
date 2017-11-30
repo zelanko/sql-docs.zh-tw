@@ -1,7 +1,6 @@
 ---
-title: "匯出報表 （報表產生器及 SSRS） |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "匯出報表 (報表產生器及 SSRS) | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -11,21 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10437"
+f1_keywords: "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: f77f9fbab85eaff80f3f31e6190d737c35239ea4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: db9a6cef14a145c8546a0f47a71bf83a358d483c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="export-reports-report-builder-and-ssrs"></a>匯出報表 (報表產生器及 SSRS)
 
   您可以將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表匯出成另一種檔案格式 (例如 PowerPoint、Image、PDF、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]或 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] )，或是透過產生 Atom 服務文件，並且列出報表中所提供與 Atom 相符的資料摘要，藉此匯出報表。 您可以從報表產生器、報表設計師 ([!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]) 或報表伺服器匯出報表。  
@@ -38,13 +35,13 @@ ms.lasthandoff: 08/09/2017
   
 -   **將報表複本儲存為其他檔案類型。** 例如，您可以將報表匯出為 Word 並儲存，以建立報表的複本。  
   
--   **使用報表資料做為應用程式中的資料摘要。** 例如，您可以產生符合 Atom 的資料摘要的 Power Pivot 或 Power BI 中，可以使用，並使用 Power Pivot 或 Power BI 中的資料。 如需詳細資訊，請參閱[從報表產生資料摘要](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)  
+-   **使用報表資料做為應用程式中的資料摘要。** 例如，您可以產生 Power Pivot 或 Power BI 可以使用且與 Atom 相符的資料摘要，然後在 Power Pivot 或 Power BI 中使用這項資料。 如需詳細資訊，請參閱[從報表產生資料摘要](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)  
   
 -   當您設定訂閱或透過電子郵件傳遞報表時，或者，如果您想要儲存報表伺服器上提供的報表時，在報表伺服器上轉譯報表很有用。 如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供許多轉譯延伸模組，可支援將報表匯出為常用的檔案格式。 轉譯延伸模組支援軟分頁 (例如 Word 或 Excel)、手動分頁 (例如 PDF 或 TIFF)，或是僅限資料 (例如 CSV 或與 Atom 相符的 XML) 的檔案格式。  
   
- 當您將報表匯出為不同格式時，報表分頁可能會受到影響。 當您預覽報表時，其實是檢視遵循軟分頁規則的 HTML 轉譯延伸模組所轉譯的報表。 當您將報表匯出為不同的檔案格式 (例如 Adobe Acrobat (PDF)) 時，分頁是根據實體頁面大小而定，並且遵循手動分頁規則。 這些頁面也可以利用您加入到報表的邏輯分頁符號來分隔，但是頁面的實際長度會根據您所使用的轉譯器類型而有所不同。 若要變更報表的分頁，您必須了解所選擇的轉譯延伸模組的分頁行為。 您可能需要針對此轉譯延伸模組調整報表配置的設計。 如需詳細資訊，請參閱[頁面配置和轉譯](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)。  
+ 當您將報表匯出為不同格式時，報表分頁可能會受到影響。 當您預覽報表時，其實是檢視遵循軟分頁規則的 HTML 轉譯延伸模組所轉譯的報表。 當您將報表匯出為不同的檔案格式 (例如 Adobe Acrobat (PDF)) 時，分頁是根據實體頁面大小而定，並且遵循手動分頁規則。 這些頁面也可以利用您加入到報表的邏輯分頁符號來分隔，但是頁面的實際長度會根據您所使用的轉譯器類型而有所不同。 若要變更報表的分頁，您必須了解所選擇的轉譯延伸模組的分頁行為。 您可能需要針對此轉譯延伸模組調整報表配置的設計。 如需詳細資訊，請參閱 [頁面配置和轉譯](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -55,11 +52,11 @@ ms.lasthandoff: 08/09/2017
   
 2.  在功能區上按一下 **[匯出]**。  
   
-     ![報表產生器匯出](../../reporting-services/report-builder/media/ssrb-export.png "產生器匯出報表")  
+     ![報表產生器匯出](../../reporting-services/report-builder/media/ssrb-export.png "報表產生器匯出")  
   
 3.  選取要使用的格式。  
   
-     **存** 對話方塊隨即開啟。 依預設，檔案名稱就是您匯出之報表的名稱。 您可以選擇變更檔案名稱。  
+     [另存新檔] 對話方塊隨即開啟。 依預設，檔案名稱就是您匯出之報表的名稱。 您可以選擇變更檔案名稱。  
   
 ##  <a name="bkmk_export_from_rm"></a> 從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站匯出報表  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  在 [報表檢視器] 工具列上，按一下 [匯出] 下拉式箭頭。  
   
-     ![Reporting Services web 入口網站匯出](../../reporting-services/report-builder/media/ssrsportal-export.png "Reporting Services web 入口網站匯出")  
+     ![Reporting Services 入口網站匯出](../../reporting-services/report-builder/media/ssrsportal-export.png "Reporting Services 入口網站匯出")  
   
 4.  選取要使用的格式。  
   
@@ -124,7 +121,7 @@ ms.lasthandoff: 08/09/2017
 |格式|轉譯延伸模組類型|說明|  
 |------------|------------------------------|-----------------|  
 |Acrobat (PDF) 檔案|手動分頁|PDF 轉譯延伸模組會將報表轉譯成可在 Adobe Acrobat 與支援 PDF 1.3 之其他協力廠商 PDF 檢視器中開啟的檔案。 雖然 PDF 1.3 與 Adobe Acrobat 4.0 和更新版本相容，但是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 只支援 Adobe Acrobat 6 或更新版本。 轉譯延伸模組不需要 Adobe 軟體就能轉譯報表。 不過，必須使用 PDF 檢視器 (例如 Adobe Acrobat) 才能檢視或列印 PDF 格式的報表。<br /><br /> 如需詳細資訊，請參閱[匯出至 PDF 檔案](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)。|  
-|Atom|資料|Atom 轉譯延伸模組會從報表產生與 Atom 相符的資料摘要。 資料摘要讀取與交換應用程式，例如 Power Pivot 或 Power BI 中，可以取用符合 Atom 的資料摘要。<br /><br /> 輸出結果為 Atom 服務文件，其中會列出可從報表取得的資料摘要。 針對報表中的每一個資料區，至少會建立一個資料摘要。 根據資料區的類型以及該資料區顯示的資料而定，可能會產生多個資料摘要。<br /><br /> 如需詳細資訊，請參閱[從報表產生資料摘要](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。|  
+|Atom|資料|Atom 轉譯延伸模組會從報表產生與 Atom 相符的資料摘要。 資料摘要可以透過可使用與 Atom 相符之資料摘要的應用程式 (例如 Power Pivot 或 Power BI) 讀取和交換。<br /><br /> 輸出結果為 Atom 服務文件，其中會列出可從報表取得的資料摘要。 針對報表中的每一個資料區，至少會建立一個資料摘要。 根據資料區的類型以及該資料區顯示的資料而定，可能會產生多個資料摘要。<br /><br /> 如需詳細資訊，請參閱[從多個報表產生資料摘要](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。|  
 |CSV|資料|逗號分隔值 (CSV) 轉譯延伸模組會將報表從多數應用程式都可輕易讀取與交換的標準化純文字格式報表，轉譯為扁平化表示的資料。<br /><br /> 如需詳細資訊，請參閱[匯出至 CSV 檔案](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。|  
 |EXCELOPENXML|軟分頁|檢閱報表時，在匯出功能表中顯示為 "Excel"。 Excel 轉譯延伸模組會將報表轉譯成與 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013 相容的 Excel 文件 (.xlsx)。  如需詳細資訊，請參閱[匯出至 Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。|  
 |PowerPoint|手動分頁|PowerPoint 轉譯擴充功能會將報表轉譯成與 PowerPoint 2013 相容的 PowerPoint 文件 (.pptx)。|  
@@ -136,7 +133,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="GeneratingDataFeedsFromReport"></a> 從報表產生資料摘要  
  若要從報表產生資料摘要，請在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站中執行報表，然後按一下入口網站工具列上的 **產生資料摘要** 圖示。 系統會提示您選擇要儲存還是開啟檔案。 如果您選擇 **[開啟]**，Atom 服務文件會在與 .atomsvc 副檔名相關聯的應用程式中開啟。 如果您選擇 **[儲存]**，文件會儲存為 .atomsvc 檔。 根據預設，檔案的名稱會是報表的名稱。 您可以將名稱變更為更有意義的名稱。  
   
- 將 Atom 服務文件儲存到您的電腦上。 之後您可以將文件上傳到報表伺服器或是其他伺服器，以供其他人使用。 如需詳細資訊，請參閱[從報表產生資料摘要](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)和[從報表產生資料摘要](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
+ 將 Atom 服務文件儲存到您的電腦上。 之後您可以將文件上傳到報表伺服器或是其他伺服器，以供其他人使用。 如需詳細資訊，請參閱[從多個報表產生資料摘要](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)和[從報表產生資料摘要](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   
 ##  <a name="Troubleshooting"></a> 匯出的報表疑難排解  
  在您將報表匯出成另一種格式後，有時報表看起來會跟原來不一樣，或是未能依照您希望的方式運作。 發生這種情況的原因是，轉譯器可能套用了某些規則和限制。 當您建立報表時，可以考量許多限制來加以對付。 您可能需要在報表中使用稍微不同的配置、小心對齊報表內的項目、將報表頁尾限制為單行文字等等。  
@@ -171,9 +168,9 @@ ms.lasthandoff: 08/09/2017
   
 -   [從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了額外的功能，可協助您建立在其他格式中正常運作的報表。 在 Tablix 資料區 (資料表、矩陣和清單)、群組和矩形上的分頁符號，可讓您更充分掌控報表的分頁。 以分頁符號隔開的報表頁面，可以有不同的頁面名稱，以及重設頁碼編排方式。 頁面名稱和頁碼可以透過運用運算式，以動態方式在報表執行時更新。 如需詳細資訊，請參閱[Reporting Services 中的分頁](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了額外的功能，可協助您建立在其他格式中正常運作的報表。 在 Tablix 資料區 (資料表、矩陣和清單)、群組和矩形上的分頁符號，可讓您更充分掌控報表的分頁。 以分頁符號隔開的報表頁面，可以有不同的頁面名稱，以及重設頁碼編排方式。 頁面名稱和頁碼可以透過運用運算式，以動態方式在報表執行時更新。 如需詳細資訊，請參閱 [Reporting Services 中的分頁](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
- 此外，您還可以使用內建的全域 RenderFormat，針對不同的轉譯器依條件套用不同的報表配置。 如需詳細資訊，請參閱[Built-in Globals and Users References](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)
+ 此外，您還可以使用內建的全域 RenderFormat，針對不同的轉譯器依條件套用不同的報表配置。 如需詳細資訊，請參閱[內建的全域和使用者參考](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)
 
 ##  <a name="OtherWaysExportingReports"></a> 匯出報表的其他方式  
  匯出報表是在您於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站或報表產生器中開啟報表時，視需要而執行的工作。 如果您想要使匯出作業自動化 (例如，依重複執行的排程，以特定檔案類型將報表匯出至共用資料夾)，請建立訂閱，將報表傳遞至共用資料夾。 如需詳細資訊，請參閱＜ [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)＞。  
@@ -196,9 +193,9 @@ http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%
 
 ## <a name="next-steps"></a>後續的步驟
 
-[控制分頁符號、 標題、 資料行和資料列 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+[控制分頁符號、標題、資料行和資料列 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
 [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
 [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
-[儲存報表 &#40;報表產生器 &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+[儲存報表 &#40;報表產生器&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

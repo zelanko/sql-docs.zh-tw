@@ -1,12 +1,13 @@
 ---
 title: "可用性模式 (AlwaysOn 可用性群組) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/16/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,22 +18,23 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
+ms.openlocfilehash: a2e011db2b5d3e1b82f2b1fca6497128676d8eb1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cec987001aa2242861da91b0815c8cc6455b9efd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性模式 (AlwaysOn 可用性群組)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，「可用性模式」為複本屬性，可判斷給定可用性複本是否可以在同步認可模式下執行。 您必須將每個可用性複本的可用性模式設定為同步認可模式或非同步認可模式。  若將主要複本設定為「非同步認可模式」，其便不會等候任何次要複本將內送交易記錄檔記錄寫入磁碟 (「強行寫入記錄」)。 若將給定次要複本設定為非同步認可模式，主要複本便不會等候次要複本強行寫入記錄。 若將主要複本與給定次要複本皆設定為「同步認可模式」，主要複本會等候次要複本確認其已強行寫入記錄 (除非次要複本在主要的「工作階段逾時期限」內無法 Ping 主要複本)。  
+  在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，「可用性模式」為複本屬性，可判斷給定可用性複本是否可以在同步認可模式下執行。 您必須將每個可用性複本的可用性模式設定為同步認可模式、非同步認可模式或僅限設定模式。  若將主要複本設定為「非同步認可模式」，其便不會等候任何次要複本將內送交易記錄檔記錄寫入磁碟 (「強行寫入記錄」)。 若將給定次要複本設定為非同步認可模式，主要複本便不會等候次要複本強行寫入記錄。 若將主要複本與給定次要複本皆設定為「同步認可模式」，主要複本會等候次要複本確認其已強行寫入記錄 (除非次要複本在主要的「工作階段逾時期限」內無法 Ping 主要複本)。 
   
+
 > [!NOTE]  
 >  若次要複本超過主要的工作階段逾時期限，主要複本將會暫時切換為該次要複本的非同步認可模式。 當次要複本與主要複本重新連接時，即會回復成同步認可模式。  
   
@@ -58,6 +60,8 @@ ms.lasthandoff: 08/02/2017
 -   「同步認可模式」強調的是高可用性而非效能，但是相對地增加了交易延遲。 在同步認可模式下，交易會等候傳送交易確認至用戶端，直到次要複本將記錄強行寫入磁碟為止。 當資料同步處理開始在次要資料庫上執行時，次要複本就會開始套用對應主要資料庫中的內送記錄檔記錄。 一旦強行寫入每個記錄檔記錄之後，次要資料庫就會進入 SYNCHRONIZED 狀態。 此後，在記錄檔記錄寫入本機記錄檔之前，次要複本會先強行寫入每筆新交易。 當給定次要複本的所有次要資料庫都已同步處理時，同步認可模式就會支援手動容錯移轉，並且選擇性地支援自動容錯移轉。  
   
      如需詳細資訊，請參閱本主題稍後的 [同步認可的可用性模式](#SyncCommitAvMode)。  
+
+-   「僅限設定模式」適用於不在 Windows Server 容錯移轉叢集的可用性群組。 僅限設定模式中的複本不會包含使用者資料。 在僅限設定模式中，master 資料庫複本會儲存可用性群組設定中繼資料。 如需詳細資訊，請參閱[使用僅限設定複本的可用性群組](../../../linux/sql-server-linux-availability-group-ha.md)。
   
  下圖顯示包含五個可用性複本的可用性群組。 主要複本和一個次要複本設定為包含自動容錯移轉的同步認可模式。 另一個次要複本則設定為僅包含規劃的手動容錯移轉的同步認可模式，而且兩個次要複本設定為非同步認可模式 (僅支援強制手動容錯移轉，一般稱為「強制容錯移轉」)。  
   
@@ -185,4 +189,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

@@ -1,26 +1,24 @@
 ---
-title: "從行動報表的鑽研加入到其他行動報表或 Url |Microsoft 文件"
+title: "從行動報表將鑽研新增至其他行動報表或 URL | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9133e86862ec5cf234b87e598d152811dced75c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>從行動報表將鑽研加入其他行動報表或 URL
 您可以從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表中的任何量測計、圖表或資料格將鑽研加入另一個行動報表或自訂 URL。 
@@ -56,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="set-up-a-drillthrough-to-a-custom-url"></a>設定鑽研到自訂 URL  
   
-1. 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 的配置檢視中，選取可支援鑽研目標的視覺效果。    
+1. 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]的配置檢視中，選取可支援鑽研目標的視覺效果。    
 2. 在 [視覺屬性] 窗格中，選取 [鑽研目標] > [自訂 URL]。  這樣會開啟鑽研組態對話方塊。  
   
 3. 在 [設定鑽研 URL] 中，輸入要在按一下視覺效果時前往的目的地 URL，然後從右側所列的 [可用參數] 中進行選取。 下列面板會顯示與範例解析參數 (如果包括的話) 合併之自訂 URL 的預覽。  
@@ -79,7 +77,7 @@ ms.lasthandoff: 08/09/2017
 
 您可以選擇檢視 Web 入口網站中的隱藏項目︰ 
 
-* 在 Web 入口網站的右上方，選取 [檢視] > [顯示隱藏項]。 
+* 在入口網站的右上方，選取 [檢視] > [顯示隱藏項]。 
 
 隱藏的項目會以較淡的色彩顯示。
     
@@ -87,6 +85,5 @@ ms.lasthandoff: 08/09/2017
  
 * [將參數加入 Reporting Services 行動報表中](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
-* [Web 入口網站 （SSRS 原生模式）](../../reporting-services/web-portal-ssrs-native-mode.md)
-
+* [入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)
 

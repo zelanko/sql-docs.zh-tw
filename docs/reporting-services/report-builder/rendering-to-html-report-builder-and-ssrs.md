@@ -1,5 +1,5 @@
 ---
-title: "轉譯為 HTML （報表產生器及 SSRS） |Microsoft 文件"
+title: "轉譯為 HTML (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a431b5b8c988b981f217353c366bbbe1f1f68699
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 13d54a271ce3889f0fe3e9c86c2a44b9889529c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>轉譯為 HTML (報表產生器及 SSRS)
   HTML 轉譯延伸模組會轉譯 HTML 格式的分頁報表。 轉譯延伸模組也可產生完整的 HTML 頁面，或內嵌在其他 HTML 頁面中的 HTML 片段。 所有 HTML 均以 UTF-8 編碼產生。  
@@ -81,13 +80,13 @@ ms.lasthandoff: 08/09/2017
  文件引導模式標籤可以轉譯，而且可以使用檢視器控制項中的文件引導模式來導覽。 若是省略的資料區域標頭，就會在第一個子資料格上轉譯標籤。 如果沒有顯示任何子資料格，則會在第一個子資料格前的子系上轉譯標籤。  
   
 ### <a name="bookmarks"></a>書籤  
- 系統會轉譯書籤連結並顯示為超連結。 同時，系統會轉譯書籤目標，而且按一下書籤連結就可以導覽。 按一下書籤連結時，報表會移到第一個出現的目標書籤標籤，而且，如果可能，瀏覽器會捲動，讓書籤連結位於視窗最上方。 HTML 錨定 (\<>) 標記用於標示書籤目標。  
+ 系統會轉譯書籤連結並顯示為超連結。 同時，系統會轉譯書籤目標，而且按一下書籤連結就可以導覽。 按一下書籤連結時，報表會移到第一個出現的目標書籤標籤，而且，如果可能，瀏覽器會捲動，讓書籤連結位於視窗最上方。 HTML 錨點 (\<a>) 標記用於標示書籤目標。  
   
 ### <a name="interactive-sorting"></a>互動式排序  
  如果文字方塊中已定義使用者排序，HTML 轉譯延伸模組會將文字方塊中的排序圖示轉譯到其內容的右側。 如果報表內含其中已定義使用者排序的任何文字方塊，按一下排序影像時，會轉譯導致回傳至伺服器的 JavaScript。  
   
 ### <a name="hyperlinks-and-drillthrough"></a>超連結與鑽研  
- 超連結與鑽研連結會轉譯為超連結的報表項目使用 HTML 錨定 (\<>) 標記定義所在的項目周圍。  
+ 在定義超連結與鑽研連結的項目周圍使用 HTML 錨點 (\<a>) 標記時，這些超連結與鑽研連結會轉譯為報表項目的超連結。  
   
 ### <a name="search"></a>搜尋  
  [搜尋] 功能可讓使用者在報表內搜尋文字的字串。  
@@ -99,12 +98,11 @@ ms.lasthandoff: 08/09/2017
  您可以變更此轉譯器的某些預設值，包括要在哪個模式下轉譯，方法是，變更裝置資訊設定。 如需相關資訊，請參閱 [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md)。  
   
   
-## <a name="see-also"></a>請參閱＜  
- [Reporting Services &#40; 中的分頁報表產生器及 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [轉譯行為 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組 &#40; 的互動式功能報表產生器及 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [轉譯報表項目 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [資料表、 矩陣和清單 &#40;報表產生器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

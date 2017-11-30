@@ -1,26 +1,26 @@
 ---
 title: "讀取級別可用性群組 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/11/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7c607ab320a7deb80fb140ee9f4cc25b798b7fc4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6dfa046a07b9fd5a3eddbe474b5ea63c1163c26c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="read-scale-availability-groups"></a>讀取級別可用性群組
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
@@ -35,10 +35,12 @@ ms.lasthandoff: 08/02/2017
 
 在 [!INCLUDE[sssql15-md](..\..\..\includes\sssql15-md.md)] 和以前版本中，所有可用性群組都需要叢集。 叢集已提供商務持續性 - 高可用性和災害復原 (HADR)。 此外，無法設定次要複本進行讀取作業。 如果 HA 不是目標，則設定和操作叢集表示會有大量操作費用。 SQL Server 2017 引進沒有叢集的讀取級別可用性群組。 
 
-如果商務需求是保留主要複本上執行之任務關鍵性工作負載的資源，則使用者現在可以使用唯讀路由，或直接連接至可讀取的次要複本，而不需要根據與任何叢集技術的整合。 這些新功能可供在 Windows 和 Linux 平台上執行的 SQL Server 2017 使用。
+如果商務需求是保留主要複本上執行之任務關鍵性工作負載的資源，則使用者現在可以使用唯讀路由，或直接連線至可讀取的次要複本，而不需要與任何叢集技術的整合。 這些新功能可供在 Windows 和 Linux 平台上執行的 SQL Server 2017 使用。
 
 >[!IMPORTANT]
->這不是高可用性安裝。 沒有任何基礎結構可監視與協調失敗偵測和自動容錯移轉。 若是需要 HADR 功能的使用者，請使用叢集管理員 (在 Windows 上為 WSFC，在 Linux 上則為 Pacemaker)。 
+>這不是高可用性安裝。 沒有任何基礎結構可監視與協調失敗偵測和自動容錯移轉。 若沒有叢集，SQL Server 就無法提供自動化 HA 解決方案所提供的低復原時間目標 (RTO)。 若是需要 HA 功能的使用者，請使用叢集管理員 (在 Windows 上為 WSFC，在 Linux 上則為 Pacemaker)。 
+>
+>讀取級別可用性群組可提供災害復原功能。 當唯讀複本在同步認可模式時，提供零復原點目標 (RPO)。 若要容錯移轉讀取級別可用性群組，請參閱[容錯移轉讀取級別可用性群組上的主要複本](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly)
 
 ## <a name="use-distributed-availability-groups-for-geographic-read-scale"></a>將分散式可用性群組用於地理讀取級別
 
@@ -57,4 +59,3 @@ ms.lasthandoff: 08/02/2017
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

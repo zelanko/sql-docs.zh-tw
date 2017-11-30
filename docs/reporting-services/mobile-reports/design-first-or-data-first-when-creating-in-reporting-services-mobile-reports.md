@@ -1,27 +1,24 @@
 ---
-title: "First 中設計優先還是資料建立 Reporting Services 行動報表中時 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "建立 Reporting Services 行動報表時應該設計優先還是資料優先 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a7b355fa-312b-4074-bc9b-776269d4fb51
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8cf203f17ac149825e0e4d79ed7f6f6041700ae4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4794afd8a2226271e9ba9db2ec4d7926c672d590
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>建立 Reporting Services 行動報表時設計優先還是資料優先
   
@@ -52,5 +49,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

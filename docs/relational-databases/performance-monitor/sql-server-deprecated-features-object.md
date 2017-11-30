@@ -2,11 +2,13 @@
 title: "SQL Server 的 Deprecated Features 物件 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 物件提供了計數器來監視指定為已被取代的功能。 在每一個案例中，此計數器都會提供一個使用計數，列出上一次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後所遇到之已被取代功能的次數。  
   
@@ -40,13 +42,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 下表描述 SQL Server **已被取代的功能** 效能物件。
 
-|**SQL Server 已被取代的功能計數器**|說明|  
+|**SQL Server 已被取代的功能計數器**|Description|  
 |-------------|-----------------|  
 |**使用方式**|自上次啟動 SQL Server 後的功能使用方式。|
   
  下表描述 SQL Server Deprecated Features 計數器執行個體。  
   
-|SQL Server 已被取代的功能計數器執行個體|說明|  
+|SQL Server 已被取代的功能計數器執行個體|Description|  
 |------------------------------------------------------|-----------------|  
 |做為暫存資料表和預存程序名稱的 '#' 和 '##'。|遇到一個不包含 # 以外之任何字元的識別碼。 請至少使用一個其他字元。 每次編譯時發生一次。|  
 |'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代為 `SELECT column_list FROM` <函數名稱>`()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)` 取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
@@ -114,7 +116,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Hindi|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。 請改用 Indic_General_90。|  
 |沒有括號的 HOLDLOCK 資料表提示。||  
 |IDENTITYCOL|遇到 INDENTITYCOL 語法。 請重寫陳述式來使用 $identity 語法。 每次編譯時發生一次。|  
-|沒有 COUNT_BIG(*) 的索引檢視表 SELECT 清單|彙總索引檢視表的 SELECT 清單必須包含 COUNT_BIG (*)。|  
+|沒有 COUNT_BIG(\*) 的索引檢視表 SELECT 清單|彙總索引檢視表的 SELECT 清單必須包含 COUNT_BIG (\*)。|  
 |INDEX_OPTION|遇到 CREATE TABLE、ALTER TABLE 或 CREATE INDEX 語法，但是選項周圍沒有括號。 請重寫陳述式來使用目前的語法。 每次查詢時發生一次。|  
 |INDEXKEY_PROPERTY|遇到 INDEXKEY_PROPERTY 語法。 請重寫陳述式來查詢 sys.index_columns。 每次編譯時發生一次。|  
 |間接 TVF 提示|透過檢視表將資料表提示間接套用到多重陳述式資料表值函式 (TVF) 的引動過程，將從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本中移除。|  
@@ -292,4 +294,3 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [使用 SQL Server 物件](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "資料警示管理員讓 SharePoint 使用者 |Microsoft 文件"
+title: "SharePoint 使用者的資料警示管理員 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -14,31 +14,29 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 65e857b83f1f9821601492542ef87aa9fa57fddb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 使用者的資料警示管理員
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供資料警示管理員為管理資料警示的 SharePoint 資訊工作者。 資訊工作者可以檢視自己所建立警示的資訊、刪除警示、開啟警示定義進行編輯，以及視需要執行警示。 他們可以選擇僅檢視單一報表的警示，或是所有報表的警示。 下圖說明 [資料警示管理員] 中可供資訊工作者使用的功能。
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 為 SharePoint 資訊工作者提供了 [資料警示管理員] 以管理資料警示。 資訊工作者可以檢視自己所建立警示的資訊、刪除警示、開啟警示定義進行編輯，以及視需要執行警示。 他們可以選擇僅檢視單一報表的警示，或是所有報表的警示。 下圖說明 [資料警示管理員] 中可供資訊工作者使用的功能。
 
 ![SharePoint 使用者的警示管理員功能](../reporting-services/media/rs-alertmanageriw.gif "SharePoint 使用者的警示管理員功能")  
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
 啟用 SharePoint 網站進行資料警示時，會建立 MyDataAlerts.aspx 和 SiteDataAlerts.aspx 這兩個 SharePoint 頁面，並且將其加入 SharePoint 網站中。 MyDataAlerts.aspx 是 SharePoint 資訊工作者的 [資料警示管理員]。 資訊工作者可以從已建立警示之報表的右鍵功能表開啟 [資料警示管理員]。  
 
@@ -72,29 +70,28 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="EditAlerts"></a> 編輯資料警示  
- 身為資訊工作者，您可以從 [資料警示管理員] 中開啟警示定義進行編輯。 您可以編輯自己建立的警示定義，但無法編輯其他人建立的警示定義。 您以滑鼠右鍵按一下警示定義，然後按一下 [編輯]，[資料警示設計工具] 就會開啟，並且顯示警示定義。 如需詳細資訊，請參閱[資料警示設計工具](../reporting-services/data-alert-designer.md)和[在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
+ 身為資訊工作者，您可以從 [資料警示管理員] 中開啟警示定義進行編輯。 您可以編輯自己建立的警示定義，但無法編輯其他人建立的警示定義。 您以滑鼠右鍵按一下警示定義，然後按一下 [編輯]，[資料警示設計工具] 就會開啟，並且顯示警示定義。 如需詳細資訊，請參閱 [資料警示設計工具](../reporting-services/data-alert-designer.md) 和 [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
   
 ##  <a name="RunAlerts"></a> 執行資料警示  
- [資料警示管理員] 包含上一次警示服務處理資料警示定義的時間，以及已傳送資料警示訊息的次數等相關資訊。 您可能想要立即執行並傳送警示訊息，而不是等到排程指定的時間。 當您從 [資料警示管理員] 執行警示時，會覆寫警示排程，並且在一到五分鐘內開始處理警示定義，這段時間取決於執行報表所需的時間，以及在您選擇執行警示當時報表伺服器的忙碌程度。 不過，如果您指定僅在結果變更時傳送訊息，但結果並未變更，則不會建立或傳送任何訊息。 如需詳細資訊，請參閱[在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
+ [資料警示管理員] 包含上一次警示服務處理資料警示定義的時間，以及已傳送資料警示訊息的次數等相關資訊。 您可能想要立即執行並傳送警示訊息，而不是等到排程指定的時間。 當您從 [資料警示管理員] 執行警示時，會覆寫警示排程，並且在一到五分鐘內開始處理警示定義，這段時間取決於執行報表所需的時間，以及在您選擇執行警示當時報表伺服器的忙碌程度。 不過，如果您指定僅在結果變更時傳送訊息，但結果並未變更，則不會建立或傳送任何訊息。 如需詳細資訊，請參閱 [在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
 > [!NOTE]  
->  您按一下 [執行] 選項之後，需要幾秒鐘時間更新 [狀態] 資料行的值，才會表示警示正在處理。 如果您多次按下 [執行] 選項，則會多次處理警示。 這樣將會不當耗用報表伺服器的資源，並且可能影響報表伺服器的效能。 若要查看有關警示的更新資訊，請按一下網頁瀏覽器的 [重新整理] 按鈕，查看有關警示的狀態更新以及其他資訊。  
+>  您按一下 [執行] 選項之後，需要幾秒鐘時間更新 [狀態] 資料行的值，才會表示警示正在處理。 如果您多次按一下 [執行] 選項，則會多次處理警示。 這樣將會不當耗用報表伺服器的資源，並且可能影響報表伺服器的效能。 若要查看有關警示的更新資訊，請按一下網頁瀏覽器的 [重新整理] 按鈕，查看有關警示的狀態更新以及其他資訊。  
   
   
 ##  <a name="HowTo"></a> 相關工作  
  本節列出如何管理和編輯警示定義的程序。  
   
--   [管理我的資料警示管理員 中的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
+-   [在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [編輯資料警示設計工具中警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 
 [資料警示設計工具](../reporting-services/data-alert-designer.md)   
-[在 資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
+[在資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

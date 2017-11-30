@@ -1,12 +1,11 @@
 ---
-title: "設定原生模式報表伺服器向外延展部署 |Microsoft 文件"
+title: "設定原生模式報表伺服器向外延展部署 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,23 +13,22 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 39de4778d781c1d98c93b3ab802c0ca09d39eeb2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a90a566e3e100fff3bb17e838a368a82ac3f4f5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>設定原生模式報表伺服器向外延展部署
 
   Reporting Services 原生模式支援向外延展部署模型，它可讓您在執行多個報表伺服器執行個體時共用單一報表伺服器資料庫。 向外延展部署是用來提高報表伺服器的延展性，以便處理更多的並行使用者及更大量的報表執行負載。 它也可以給特定伺服器專用，以處理互動式或已排程的報表。  
   
- SharePoint 模式報表伺服器會利用 SharePoint 產品基礎結構進行向外延展。 SharePoint 模式向外延展是透過將其他 SharePoint 模式報表伺服器加入至 SharePoint 伺服器陣列來執行。 如需 SharePoint 模式中向外延展的相關資訊，請參閱[將其他報表伺服器加入至伺服器陣列 &#40;SSRS 向外延展&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
+ SharePoint 模式報表伺服器會利用 SharePoint 產品基礎結構進行向外延展。SharePoint 模式向外延展是透過將其他 SharePoint 模式報表伺服器加入至 SharePoint 伺服器陣列來執行。 如需 SharePoint 模式中向外延展的資訊，請參閱[將其他報表伺服器新增至伺服器陣列 &#40;SSRS 向外延展&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
  
   *「向外延展部署」* (Scale-out Deployment) 的使用案例如下：  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
     -   使用安裝程式可安裝將要加入向外延展部署的每一個報表伺服器執行個體。  
   
-         若要避免在將伺服器執行個體連接到共用資料庫時發生資料庫相容錯誤，請確定所有的執行個體都是相同的版本。 比方說，如果您建立報表伺服器資料庫使用 SQL Server 2016 報表伺服器執行個體，相同部署中的所有執行個體也必須是 SQL Server 2016。  
+         若要避免在將伺服器執行個體連接到共用資料庫時發生資料庫相容錯誤，請確定所有的執行個體都是相同的版本。 例如，如果您使用 SQL Server 2016 報表伺服器執行個體來建立報表伺服器資料庫，則相同部署中的所有其他執行個體也都必須為 SQL Server 2016。  
   
     -   使用 Reporting Services 組態管理員可將每一部報表伺服器連接到共用資料庫。 您一次只能連接並設定一個報表伺服器。  
   
@@ -74,57 +72,57 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="service-accounts"></a>服務帳戶
 
-處理向外延展部署時，很重要的 Reporting Services 執行個體使用的服務帳戶。 部署您的 Reporting Services 執行個體時，您應該進行下列其中之一。
+用於 Reporting Services 執行個體的服務帳戶在處理向外延展部署時很重要。 您應該在部署 Reporting Services 執行個體時，執行下列其中一項。
 
-**選項 1:**所有 Reporting Services 執行個體應該使用相同的網域使用者帳戶的服務帳戶設定。
+**選項 1：**所有 Reporting Services 執行個體都應該設定為使用服務帳戶的相同網域使用者帳戶。
 
-**選項 2:**每個個別服務帳戶，網域帳戶，就需要將被授與內主控 ReportServer 目錄資料庫的 SQL Server 資料庫執行個體的 dbadmin 權限。
+**選項 2：**每個服務帳戶不論是否為網域帳戶，都必須授與主控 ReportServer 目錄資料庫之 SQL Server 資料庫執行個體的 dbadmin 權限。
 
-如果您已設定比上述選項的其中一個不同的組態，您可能會斷斷續續地發生失敗的修改 SQL 代理程式的工作。 這會顯示記錄檔中這兩個 Reporting Services 錯誤和入口網站上編輯報表訂閱時。
+如果您已設定與上述兩個選項不同的設定，則可能會修改 SQL Agent 工作時發生斷斷續續的失敗。 編輯報表訂閱時，這會同時在 Reporting Services 記錄和入口網站上顯示為一個錯誤。
 
 ```
 An error occurred within the report server database.  This may be due to a connection failure, timeout or low disk condition within the database.
 ``` 
 
-問題會斷斷續續，只有伺服器建立 SQL 代理程式 」 工作將會有權限才能檢視、 刪除或編輯項目。 如果您沒有進行上述選項的其中一個，則當負載平衡器將所有該訂用帳戶要求傳送至伺服器，以建立 SQL 代理程式工作才會成功的作業。 
+此問題會斷斷續續發生，只有建立 SQL Agent 工作的伺服器才有權檢視、刪除或編輯該項目。 如果您未執行上述任一選項，則只有在負載平衡器將該訂閱的所有要求傳送至建立 SQL Agent 工作的伺服器時，作業才會成功。 
   
 ## <a name="to-install-the-first-report-server-instance"></a>若要安裝第一個報表伺服器執行個體  
   
-1.  安裝屬於部署之一部分的第一個報表伺服器執行個體。 當您安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，請在 [報表伺服器安裝選項] 頁面上選擇 [Install but do not configure server (安裝但不設定伺服器)] 選項。  
+1.  安裝屬於部署之一部分的第一個報表伺服器執行個體。 當您安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，請在 [報表伺服器安裝選項] 頁面上選擇 [安裝但不設定伺服器] 選項。  
   
 2.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。  
   
-3.  設定報表伺服器 Web 服務 URL、 Web 入口網站 URL 和報表伺服器資料庫。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[設定報表伺服器 &#40;Reporting Services 原生模式&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)。  
+3.  設定報表伺服器 Web 服務 URL、入口網站 URL 和報表伺服器資料庫。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[設定報表伺服器 &#40;Reporting Services 原生模式&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)。  
   
 4.  確認報表伺服器可運作。 如需詳細資訊，請參閱《 [線上叢書》的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 驗證 Reporting Services 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="to-install-and-configure-the-second-report-server-instance"></a>若要安裝和設定第二個報表伺服器執行個體  
   
-1.  執行安裝程式，將第二個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體安裝在另一部電腦上，或做為相同電腦上的具名執行個體。 當您安裝 Reporting Services 時，請在 [報表伺服器安裝選項] 頁面上選擇 [Install but do not configure server (安裝但不設定伺服器)] 選項。  
+1.  執行安裝程式，將第二個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體安裝在另一部電腦上，或做為相同電腦上的具名執行個體。 當您安裝 Reporting Services 時，請在 [報表伺服器安裝選項] 頁面上選擇 [安裝但不設定伺服器] 選項。  
   
 2.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到您剛才安裝的新執行個體。  
   
 3.  請將報表伺服器連接到您用於第一個報表伺服器執行個體的相同資料庫：  
   
-    1.  選取**資料庫**以開啟 [資料庫] 頁面。  
+    1.  選取 [資料庫] 開啟 [資料庫] 頁面。  
   
-    2.  選取**變更資料庫**。  
+    2.  選取 [變更資料庫]。  
   
-    3.  選取**選擇現有的報表伺服器資料庫**。  
+    3.  選取 [選擇現有報表伺服器資料庫]。  
   
     4.  輸入主控您要使用之報表伺服器資料庫的 SQL Server Database Engine 執行個體的伺服器名稱。 這必須是您在先前的指示集內所連接的相同伺服器。  
   
-    5.  選取**測試連接**，然後選取**下一步**。  
+    5.  選取 [測試連線]，然後選取 [下一步]。  
   
-    6.  在**報表伺服器資料庫**選取第一個報表伺服器中，您建立的資料庫，然後選取**下一步**。 預設名稱為 ReportServer。 請勿選取 ReportServerTempDB，因為它只能在處理報表時用來儲存暫存資料。 如果資料庫清單是空的，請重複前四個步驟來建立與伺服器的連接。  
+    6.  在 [報表伺服器資料庫] 中，選取您針對第一部報表伺服器所建立的資料庫，然後選取 [下一步]。 預設名稱為 ReportServer。 請勿選取 ReportServerTempDB，因為它只能在處理報表時用來儲存暫存資料。 如果資料庫清單是空的，請重複前四個步驟來建立與伺服器的連接。  
   
     7.  在 [認證] 頁面中，選取報表伺服器將用來連接到報表伺服器資料庫的帳戶類型和認證。 您可以使用與第一個報表伺服器執行個體相同的認證，或是不同的認證。 選取 **[下一步]**。  
   
-    8.  選取**摘要**，然後選取 **完成**。  
+    8.  選取 [摘要]，然後選取 [完成]。  
   
-4.  設定報表伺服器**Web 服務 URL**。 還不要測試 URL， 要等到報表伺服器加入向外延展部署之後，才會解析此 URL。  
+4.  設定報表伺服器 [Web 服務 URL]。 還不要測試 URL， 要等到報表伺服器加入向外延展部署之後，才會解析此 URL。  
   
-5.  設定**Web 入口網站的 URL**。 還不要測試此 URL 或嘗試驗證部署。 要等到報表伺服器加入向外延展部署之後，報表伺服器才可以使用。  
+5.  設定 [入口網站 URL]。 還不要測試此 URL 或嘗試驗證部署。 要等到報表伺服器加入向外延展部署之後，報表伺服器才可以使用。  
   
 ## <a name="to-join-the-second-report-server-instance-to-the-scale-out-deployment"></a>將第二個報表伺服器執行個體加入向外延展部署  
   
@@ -132,7 +130,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  按一下 [向外延展部署]，開啟 [向外延展部署] 頁面。 您應該會看到兩個項目，一個項目適用於連接到報表伺服器資料庫的每一個報表伺服器執行個體。 第一個報表伺服器執行個體應該會加入， 第二部報表伺服器應該是「正在等候加入」。 如果您沒有看到類似於部署的項目，請確認您已連接到已設定及初始化來使用報表伺服器資料庫的第一部報表伺服器。  
   
-     ![向外延展部署 頁面的局部螢幕擷取畫面](../../reporting-services/install-windows/media/scaloutscreen.gif "向外延展部署 頁面的局部螢幕擷取畫面")  
+     ![[向外延展部署] 頁面的局部螢幕擷取畫面](../../reporting-services/install-windows/media/scaloutscreen.gif "[向外延展部署] 頁面的局部螢幕擷取畫面")  
   
 3.  在 [向外延展部署] 頁面上，選取正等候加入此部署的報表伺服器執行個體，然後選取 [加入伺服器]。  
   
@@ -141,7 +139,7 @@ An error occurred within the report server database.  This may be due to a conne
     >   
     >  **因應措施** ：從第一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體備份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密金鑰，然後將此金鑰還原到第二部 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器。 接著嘗試將第二部伺服器加入 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 向外延展部署。  
   
-4.  您現在應該能夠確認這兩個報表伺服器執行個體都可運作。 若要確認第二個執行個體，您可以使用 Reporting Services 組態工具連接到報表伺服器，並按一下**Web 服務 URL**或**入口網站 URL**。  
+4.  您現在應該能夠確認這兩個報表伺服器執行個體都可運作。 若要確認第二個執行個體，您可以使用 Reporting Services 設定工具連線到報表伺服器，然後按一下 [Web 服務 URL] 或 [入口網站 URL]。  
   
  如果您打算在負載平衡的伺服器叢集中執行報表伺服器，還需要其他組態。 如需詳細資訊，請參閱 [在網路負載平衡叢集上設定報表伺服器](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
 
@@ -150,9 +148,9 @@ An error occurred within the report server database.  This may be due to a conne
 [設定服務帳戶](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
 [設定 URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [建立原生模式報表伺服器資料庫](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-[設定報表伺服器 Url](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
-[設定報表伺服器資料庫連接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[加入和移除向外延展部署的加密金鑰](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+[設定報表伺服器 URL](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[設定報表伺服器資料庫連線](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[新增和移除向外延展部署的加密金鑰](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
 [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

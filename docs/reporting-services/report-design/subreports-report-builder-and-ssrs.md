@@ -1,5 +1,5 @@
 ---
-title: "子報表 （報表產生器及 SSRS） |Microsoft 文件"
+title: "子報表 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 1ef1efaa3eb6e369e4b46766b3ed13fcbd2c0725
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>子報表 (報表產生器及 SSRS)
   子報表是一個報表項目，會在主要報表的主體內顯示另一個報表。 報表中子報表的概念類似於網頁中的框架。 它用於在報表中內嵌報表。 任何報表都可以做為子報表。 顯示為子報表的報表儲存在報表伺服器上，通常會與父報表儲存在同一個資料夾中。 您可以設計父報表來傳遞參數給子報表。 子報表可以在資料區域中重複，使用參數在每一個子報表執行個體中篩選資料。  
@@ -50,16 +50,16 @@ ms.lasthandoff: 08/09/2017
   
  您可以在報表主體或資料區域中放置一個子報表。 如果您在資料區域中放置一個子報表，子報表將在資料區域中重複群組或資料列的每一個執行個體。 若要從群組或資料列傳遞值給子報表，請在子報表值屬性中，針對包含要傳遞給子報表參數的值欄位，使用欄位運算式。  
   
- 如需有關使用子報表的詳細資訊，請參閱[加入子報表和參數 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ 如需使用子報表的詳細資訊，請參閱[新增子報表和參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)。  
   
 ## <a name="specifying-subreport-names-and-locations"></a>指定子報表名稱和位置  
  您可以設計主報表，以便在相同報表伺服器上的不同資料夾中指定子報表。  
   
- 您用來指定子報表的語法，取決於報表伺服器處於原生模式或 SharePoint 整合模式而定。 如需詳細資訊，請參閱[指定外部項目的路徑 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
+ 您用來指定子報表的語法，取決於報表伺服器處於原生模式或 SharePoint 整合模式而定。 如需詳細資訊，請參閱[指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
  在報表產生器中，若要預覽主報表中的子報表，則兩個報表都必須位在相同的報表伺服器上，或者您必須指定子報表的完整路徑。  
   
-## <a name="see-also"></a>請參閱＜  
- [鑽研、 向下鑽研、 子報表和巢狀的資料區 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+## <a name="see-also"></a>另請參閱  
+ [鑽研、向下鑽研、子報表和巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

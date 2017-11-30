@@ -1,13 +1,11 @@
 ---
 title: "Always Encrypted (資料庫引擎) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
+ms.openlocfilehash: 874cea214cb14c0dbfb5cffdff3035970a6e259d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="always-encrypted-database-engine"></a>一律加密 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ Database Engine 會將每個資料行的加密設定儲存在資料庫中繼資�
 
 接下來，驅動程式會連絡內含資料行主要金鑰的金鑰存放區，以將加密的資料行加密金鑰值解密，再使用純文字資料行加密金鑰來加密參數。 系統會快取產生的純文字資料行加密金鑰，以減少後續使用相同資料行加密金鑰的金鑰存放區來回行程。 驅動程式會將以加密資料行為目標之參數的純文字值取代為其加密的值，再將查詢傳送至伺服器進行處理。
 
-伺服器會計算結果集，並針對結果集中包含的任何加密資料，附加資料行的加密中繼資料，包括加密演算法和對應金鑰的相關資訊。 驅動程式會先嘗試在本機快取中尋找純文字資料行加密金鑰；如果快取中找不到金鑰，它只會在資料行主要金鑰中來回一次。 接下來，驅動程式會解密結果，並將純文字值傳給應用程式。
+伺服器會計算結果集，並針對結果集中包含的任何加密資料行，附加資料行的加密中繼資料，包括加密演算法和對應金鑰的相關資訊。 驅動程式會先嘗試在本機快取中尋找純文字資料行加密金鑰；如果快取中找不到金鑰，它只會在資料行主要金鑰中來回一次。 接下來，驅動程式會解密結果，並將純文字值傳給應用程式。
 
  用戶端驅動程式會使用資料行主要金鑰存放區提供者，來與內含資料行主要金鑰的金鑰存放區互動；該提供者為一種用戶端軟體元件，可封裝含有資料行主要金鑰的金鑰存放區。 Microsoft 的用戶端驅動程式程式庫有提供常見的金鑰存放區提供者，或是作為獨立下載項目提供。 您也可以實作自己的提供者。 [永遠加密] 功能與內建的資料行主要金鑰存放區提供者，會因驅動程式程式庫和其版本而異。 
 
@@ -254,4 +251,3 @@ GO
 [sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
-

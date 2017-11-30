@@ -1,5 +1,5 @@
 ---
-title: "項目層級工作 |Microsoft 文件"
+title: "項目層級工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- item-level tasks [Reporting Services]
+helpviewer_keywords: item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 067a0b9d4f33e20625fb796fa98f7b4ec6184f3e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8eb56fa3035306d447ba3bf3dde5403c1a877d7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="tasks-and-permissions---item-level-tasks"></a>工作和權限的項目層級工作
+# <a name="tasks-and-permissions---item-level-tasks"></a>工作和權限 - 項目層級工作
   項目層級工作是與報表、資料夾、報表模型、資源或共用資料來源關聯的權限集合。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 也包括套用至整個報表伺服器網站的系統層級工作。 如需詳細資訊，請參閱 [系統層級工作](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)。 如需一般工作和權限的詳細資訊，請參閱 [工作和權限](../../reporting-services/security/tasks-and-permissions.md)。  
   
 > [!NOTE]  
->  如果您是以程式設計的方式使用這些工作，就必須使用支援項目層級工作的方法。 如需詳細資訊，請參閱<xref:ReportService2010.ReportingService2010.ListTasks%2A>和<xref:ReportService2010.ReportingService2010.ListRoles%2A>。  
+>  如果您是以程式設計的方式使用這些工作，就必須使用支援項目層級工作的方法。 如需詳細資訊，請參閱 <xref:ReportService2010.ReportingService2010.ListTasks%2A> 和 <xref:ReportService2010.ReportingService2010.ListRoles%2A>。  
   
 ## <a name="permissions-in-item-level-tasks"></a>項目層級工作中的權限  
  下表列出項目層級工作、每個工作中包含的權限，以及權限套用的項目。 列出權限只是為了參考用途，以提供每項工作可以使用之功能的更準確描述。  
@@ -64,8 +62,7 @@ ms.lasthandoff: 08/09/2017
 |檢視資源|資源|讀取內容<br /><br /> 讀取屬性|  
 |檢視資源|報表組件|讀取內容<br /><br /> 讀取屬性|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

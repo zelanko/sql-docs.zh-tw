@@ -1,5 +1,5 @@
 ---
-title: "加入資料集篩選，資料區域篩選和群組篩選 |Microsoft 文件"
+title: "新增資料集篩選、資料區篩選和群組篩選 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ed3e111ebce37b58c5a76a0dcb56a5a87d6c8810
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>新增資料集篩選、資料區篩選和群組篩選
   在報表中，篩選屬於資料集、資料區域或資料區域群組的一部分，您可以篩選來限制報表中所要使用的資料。 如果您無法變更資料集查詢，那麼篩選便是協助您控制報表資料的好辦法，例如，如果您正在使用共用的資料集。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
  您可以在擷取報表資料集之前或之後來篩選報表資料。 若要在擷取資料之前進行篩選，請針對每個資料集變更查詢。 當您篩選查詢中的資料時，您會篩選資料來源中的資料，這樣會減少在報表中擷取及處理所需的資料量。 若要在擷取資料之後進行篩選，請在報表中建立篩選運算式。 您可以為資料集、資料區或群組 (包括詳細資料群組) 設定篩選運算式。 您也可以在篩選運算式中包含參數，提供一個方式來為特定值或特定使用者篩選資料，例如，篩選可識別檢視報表之使用者的值。  
   
 ##  <a name="Where"></a> 選擇要設定篩選的位置  
- 依據您想要在報表中達成的效果，判斷要設定篩選的位置。 在執行階段，報表處理器會按照下列順序套用篩選：套用至資料集、套用至資料區，然後由上而下套用至每個群組階層中的群組。 在資料表、矩陣和清單上，系統會針對資料列群組、資料行群組和相鄰群組獨立套用篩選。 在圖表上，系統會針對類別目錄群組和數列群組獨立套用篩選。 當報表處理器套用篩選時，系統就會按照在每個報表項目之 [屬性] 對話方塊的 [篩選] 頁面上定義的順序套用所有篩選方程式，而這就相當於使用 Boolean AND 作業來結合這些篩選方程式。  
+ 依據您想要在報表中達成的效果，判斷要設定篩選的位置。 在執行階段，報表處理器會按照下列順序套用篩選：套用至資料集、套用至資料區，然後由上而下套用至每個群組階層中的群組。 在資料表、矩陣和清單上，系統會針對資料列群組、資料行群組和相鄰群組獨立套用篩選。 在圖表上，系統會針對類別目錄群組和數列群組獨立套用篩選。 當報表處理器套用篩選時，系統就會按照在每個報表項目之 [屬性] 對話方塊的 [篩選] 頁面上定義的順序套用所有篩選方程式，而這就相當於使用布林值 AND 作業來結合這些篩選方程式。  
   
  下列清單會比較針對不同報表項目設定篩選的效果：  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
  下列各節將描述篩選方程式的每個部分。  
   
 ### <a name="expression"></a>運算式  
- 當報表處理器在執行階段評估篩選方程式時，運算式和值的資料類型必須相同。 您針對 [運算式] 選取的欄位資料類型是由用來從資料來源中擷取資料的資料處理延伸模組或資料提供者所決定。 您輸入運算式的資料型別**值**取決於[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]預設值。 資料類型的選擇是由支援報表定義的資料類型所決定。 資料提供者可能會將資料庫的值轉換成 CLR 類型。  
+ 當報表處理器在執行階段評估篩選方程式時，運算式和值的資料類型必須相同。 您針對 [運算式] 選取的欄位資料類型是由用來從資料來源中擷取資料的資料處理延伸模組或資料提供者所決定。 您針對 [值] 輸入的運算式資料類型是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設值所決定。 資料類型的選擇是由支援報表定義的資料類型所決定。 資料提供者可能會將資料庫的值轉換成 CLR 類型。  
   
 ### <a name="data-type"></a>資料類型  
  若要讓報表處理器比較兩個值，其資料類型必須相同。 下表將列出 CLR 資料類型與報表定義資料類型之間的對應。 您從資料來源中擷取的資料可能會在它是報表資料時轉換成不同的資料類型。  
@@ -104,9 +103,8 @@ ms.lasthandoff: 08/09/2017
   
  回到頁首  
   
-## <a name="see-also"></a>請參閱＜  
- [報表 &#40; 中的運算式用法報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另請參閱  
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

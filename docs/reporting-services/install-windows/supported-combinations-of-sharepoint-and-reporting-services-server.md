@@ -1,13 +1,11 @@
 ---
-title: "支援的 SharePoint 與 Reporting Services 的伺服器組合 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "支援的 SharePoint 和 Reporting Services 伺服器組合 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 07/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,29 +13,27 @@ helpviewer_keywords:
 - add-in for sharepoint
 - rsSharePoint
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: b9fc7191c5ebb97cca0596b40e7db149d8293fd2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 3728854cebbbfb07b8540c91accc73cfa17649cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>支援的 SharePoint 與 Reporting Services 的伺服器組合
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>支援的 SharePoint 與 Reporting Services 伺服器組合
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-以 SharePoint 模式安裝 SQL Server Reporting Services 報表伺服器需要適用於 SharePoint 產品，您在 SharePoint 伺服器安裝的 SharePoint 和 SQL Server Reporting Services 增益集 (rsSharePoint.msi) 的版本。 本主題摘要所支援的組合。
+針對以 SharePoint 模式安裝的 SQL Server Reporting Services 報表伺服器，您必須具備在 SharePoint 伺服器上安裝之 SharePoint 產品的適用 SharePoint 版本和 SQL Server Reporting Services 增益集 (rsSharePoint.msi)。 本主題摘要所支援的組合。
 
 > [!NOTE]
-> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
 ## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>支援的 SharePoint 與 Reporting Services 元件組合
 
@@ -51,17 +47,17 @@ ms.lasthandoff: 10/06/2017
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
 |3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
 |4|SQL Server 2014|SQL Server 2014|SharePoint 2010|
-|5|SQL Server 2012 SP3|SQL Server 2014 和 SQL Server 2012 SP3|SharePoint 2013|
-|6|SQL Server 2012 SP2|SQL Server 2014 和 SQL Server 2012 SP2|SharePoint 2013|
-|7|SQL Server 2012 SP1|SQL Server 2014 和 SQL Server 2012 SP1|SharePoint 2013|
-|8|SQL Server 2012 和 SQL Server 2012 SP1 *|SQL Server 2014|SharePoint 2010|
+|5|SQL Server 2012 SP3|SQL Server 2014 與 SQL Server 2012 SP3|SharePoint 2013|
+|6|SQL Server 2012 SP2|SQL Server 2014 與 SQL Server 2012 SP2|SharePoint 2013|
+|7|SQL Server 2012 SP1|SQL Server 2014 與 SQL Server 2012 SP1|SharePoint 2013|
+|8|SQL Server 2012 與 SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
 |9|SQL Server 2012|SQL Server 2012|SharePoint 2010|
 |10|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
-|11|SQL Server 2008 R2|SQL Server 2012 和 SQL Server 2012 SP1 或更新版本|SharePoint 2010|
+|11|SQL Server 2008 R2|SQL Server 2012 與 SQL Server 2012 SP1 或更新版本|SharePoint 2010|
 |12|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
 |13|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
 |14|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
-|15|SQL Server 2008 SP2|SQL Server 2008 和 SQL Server 2008 SP2|SharePoint 2007|
+|15|SQL Server 2008 SP2|SQL Server 2008 與 SQL Server 2008 SP2|SharePoint 2007|
 
  *例外狀況：不支援 Power View 整合。
 
@@ -75,11 +71,11 @@ ms.lasthandoff: 10/06/2017
 
 - SharePoint 2013 支援 (包括 Power View 整合) 需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集版的 SQL Server 2012 SP1 或更新版本。
 
-- SQL Server 2012 中引進了 power View。 因此，Power View 與 SharePoint 2010 整合需要 SQL Server 2012 或更新版本的增益集。
+- Power View 是在 SQL Server 2012 引進。 因此，Power View 與 SharePoint 2010 的整合需要 SQL Server 2012 或更新版本的增益集。
 
 - SQL Server 2012 (或更新版本) 報表伺服器不支援 SQL Server 2008 R2 增益集。 SharePoint 2010 必要條件安裝程式會自動安裝 SQL Server 2008 R2 增益集。 在安裝較新版本的增益集之前必須先解除安裝。 不支援就地升級增益集。
 
-- **升級：** 已安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的 SharePoint 2010 無法就地升級至 SharePoint 2013。 SharePoint 2013 需要 SQL Server 2012 SP1 或更新版本的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]增益集和報表伺服器。 如需升級的詳細資訊，請參閱 [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。
+- **升級：** 已安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的 SharePoint 2010 無法就地升級至 SharePoint 2013。 SharePoint 2013 需要 SQL Server 2012 SP1 或更新版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集與報表伺服器。 如需升級的詳細資訊，請參閱 [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。
 
 ## <a name="next-steps"></a>後續的步驟
 
@@ -88,4 +84,3 @@ ms.lasthandoff: 10/06/2017
  [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

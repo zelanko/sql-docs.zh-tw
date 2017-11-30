@@ -1,5 +1,5 @@
 ---
-title: "格式化圖表 （報表產生器及 SSRS） 上的軸標籤 |Microsoft 文件"
+title: "格式化圖表上的軸標籤 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -25,25 +25,23 @@ f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.labelfont.f1
 - sql13.rtp.rptdesigner.axisproperties.minortickmarks.f1
 - "10141"
-helpviewer_keywords:
-- "10140"
+helpviewer_keywords: "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3bb6bc91b9b96830074bac3de28fc6a5f6b0143
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e7cc9e4800d6fd00cd0934bc2c1eeac04f7a68fa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的軸標籤 (報表產生器及 SSRS)
   以座標為基礎的圖表類型 (直條圖、橫條圖、區域圖、點圖、折線圖和範圍圖) 具有兩個座標軸，可用來分類及顯示資料關聯性。 每個座標軸都會套用不同類型的格式設定。  
   
- 您可以使用格式化座標軸**軸屬性**對話方塊或使用 [屬性] 窗格。 以滑鼠右鍵按一下您想要格式化，並按一下的座標軸**軸屬性**變更軸文字、 數字的值和日期格式，主要和次要刻度，自動調整標籤和粗細、 色彩、 和軸線條樣式。 若要變更軸標題的值，以滑鼠右鍵按一下軸標題，然後按一下**軸標題屬性**。  
+ 您可以使用 [軸屬性] 對話方塊或 [屬性] 窗格來設定軸的格式。 以滑鼠右鍵按一下要格式化的軸，然後按一下 [軸屬性]，變更軸文字、數值和日期格式、主要和次要刻度、標籤自動調整以及軸線條的粗細、色彩和樣式等值。 若要變更軸標題的值，以滑鼠右鍵按一下軸標題，然後按一下 [軸標題屬性]。  
   
  軸標籤會在圖表上識別主要格線間隔。 根據預設，圖表會使用演算法來決定如何將標籤以最佳化的方式放置在軸上，以避免文字重疊。  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="types-of-axes"></a>軸的類型  
  圖表有兩種主要的軸：值軸和類別目錄軸。  
   
- ![類別圖表和值軸](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "圖表類別，且值軸")  
+ ![圖表類別與數值座標軸](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "圖表類別與數值座標軸")  
   
  當您將欄位從資料集拖曳到圖表介面上時，圖表會決定這個欄位是屬於類別目錄軸或值軸。  
   
@@ -106,16 +104,16 @@ ms.lasthandoff: 08/09/2017
  不論大小為何，圖表都會計算大約 5 個軸標籤。 如果圖表較寬或較高，而您只在軸上顯示 5 個標籤，則每個標籤之間可能會出現很大的間距。 這會使得根據軸來識別每個資料點的值更為困難。 若要避免在較寬或較高的圖表上發生這個問題，可以設定可變的軸間隔。 根據相對應的軸，圖表會依其寬度或高度來計算軸上可出現的最佳化標籤數。 如需詳細資訊，請參閱 [指定軸間隔 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)。  
   
 ## <a name="sorting-axis-values"></a>軸值排序  
- 類別目錄會依其在結果集中的出現順序沿著 X 軸顯示。 您可以藉由在查詢中加入 SORT 命令，或使用運算式排序資料集來變更群組順序。 圖表資料區域的排序方式與所有其他資料區相同。 如需如何排序資料的詳細資訊，請參閱[排序資料區 &#40; 中的資料報表產生器及 SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+ 類別目錄會依其在結果集中的出現順序沿著 X 軸顯示。 您可以藉由在查詢中加入 SORT 命令，或使用運算式排序資料集來變更群組順序。 圖表資料區域的排序方式與所有其他資料區相同。 如需如何排序資料的詳細資訊，請參閱[在資料區中排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)。  
   
 ## <a name="specifying-scalar-values-on-the-category-axis"></a>在類別目錄軸上指定純量值  
  根據預設，圖表只會在包含有效值的資料集中顯示資料點的軸標籤。 例如，如果在類別目錄軸上有 1、2 和 6 等值，則圖表也會顯示類別目錄 1、2 和 6。 若要維持類別目錄值的刻度，可以將圖表指定為使用純量軸。 在下列案例中，圖表會在圖表的 X 軸上顯示 1-6 的標籤，即使資料集並未包含 3-5 的值。  
   
  有兩種方式可以設定純量軸：  
   
--   選取**純量軸**選項**軸屬性** 對話方塊。 這樣會在軸上沒有資料群組值存在的位置加入數值或日期/時間值。 如需詳細資訊，請參閱[軸屬性對話方塊、 軸選項 &#40;報表產生器及 SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   在 [軸屬性] 對話方塊中，選取 [純量軸] 選項。 這樣會在軸上沒有資料群組值存在的位置加入數值或日期/時間值。 如需詳細資訊，請參閱[軸屬性對話方塊、軸選項 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)。  
   
--   選取欄位，或輸入運算式**類別目錄欄位**選項**數列屬性** 對話方塊。 圖表會針對您所指定之類別目錄欄位中的所有值加入軸間隔。  
+-   在 [數列屬性] 對話方塊中，針對 [類別目錄欄位] 選項選取欄位或鍵入運算式。 圖表會針對您所指定之類別目錄欄位中的所有值加入軸間隔。  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>從類別目錄軸加入或移除側邊界  
  在橫條圖、直條圖和散佈圖類型中，圖表會自動在 X 軸的端點加入側邊界。 您不可以變更邊界的大小。 在所有其他圖表類型中，圖表中都不會加入側邊界。 如需詳細資訊，請參閱 [加入或移除圖表中的邊界 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)。  
@@ -131,10 +129,9 @@ ms.lasthandoff: 08/09/2017
   
  [指定對數刻度 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [格式化圖表 &#40; 上的資料點報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
+ [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   
-

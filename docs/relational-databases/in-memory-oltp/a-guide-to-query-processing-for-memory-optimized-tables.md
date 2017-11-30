@@ -2,31 +2,26 @@
 title: "記憶體最佳化資料表的查詢處理指南 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: in-memory-oltp
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.suite: 
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a09967430cc92c19a48d7559b3f0783a71f4bb6e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9ccac8e37be94ca8956486bd68a0848ea8516cfd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   記憶體中 OLTP 推出記憶體最佳化資料表以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的原生編譯預存程序。 本文針對記憶體最佳化資料表和原生編譯的預存程序提供查詢處理的概觀。  
   
@@ -80,7 +75,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  執行計畫大致如下面的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 所示  
   
- ![聯結磁碟為基礎資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Query plan for join of disk-based tables.")  
+ ![聯結以磁碟為基礎的資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "聯結以磁碟為基礎的資料表的查詢計劃。")  
 聯結磁碟為基礎資料表的查詢計劃。  
   
  關於這個查詢計劃：  
@@ -99,7 +94,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  這個查詢的計畫大致如下：  
   
- ![磁碟為基礎資料表的雜湊聯結查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Query plan for a hash join of disk-based tables.")  
+ ![雜湊聯結以磁碟為基礎的資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "雜湊聯結以磁碟為基礎的資料表的查詢計劃。")  
 磁碟為基礎資料表的雜湊聯結查詢計劃。  
   
  在這個查詢中，Orders 資料表的資料列是使用叢集索引擷取。 **Hash Match** 實體運算子現在用於 **Inner Join**。 Order 上的叢集索引不會在 CustomerID 上排序，因此 **Merge Join** 會需要排序運算子，而這樣就會影響效能。 請記下與上一個範例中 **Merge Join** 運算子成本 (46%) 相較的 **Hash Match** 運算子相對成本 (75%)。 最佳化工具原本也會在上一個範例中考慮 **Hash Match** 運算子，但結果卻是 **Merge Join** 運算子提供更佳效能的結果。  
@@ -107,7 +102,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟資料表的查詢處理  
  下圖概述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中隨選查詢的查詢處理流程：  
   
- ![SQL Server 查詢處理管線。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server query processing pipeline.")  
+ ![SQL Server 查詢處理管線。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server 查詢處理管線。")  
 SQL Server 查詢處理管線。  
   
  在這個案例中：  
@@ -131,7 +126,7 @@ SQL Server 查詢處理管線。
   
  解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可用來存取記憶體最佳化和磁碟為基礎的資料表。 下圖說明對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取之查詢處理：  
   
- ![用於解譯之 tsql 的查詢處理管線。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Query processing pipeline for interpreted tsql.")  
+ ![用於解譯的 tsql 的查詢處理管線。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "用於解譯的 tsql 的查詢處理管線。")  
 對記憶體最佳化資料表進行解譯的 Transact-SQL 存取之查詢處理管線。  
   
  如圖中所示，查詢處理管線大致保持不變：  
@@ -169,7 +164,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  估計的計畫如下所示：  
   
- ![聯結記憶體最佳化資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Query plan for join of memory optimized tables.")  
+ ![聯結記憶體最佳化資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "聯結記憶體最佳化資料表的查詢計劃。")  
 聯結記憶體最佳化資料表的查詢計劃。  
   
  請觀察與磁碟為基礎的資料表 (圖 1) 上相同查詢的下列差異：  
@@ -210,7 +205,7 @@ END
 ### <a name="compilation-and-query-processing"></a>編譯和查詢處理  
  下圖說明原生編譯預存程序的編譯程序：  
   
- ![預存程序的原生編譯。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Native compilation of stored procedures.")  
+ ![預存程序的原生編譯。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "預存程序的原生編譯。")  
 預存程序的原生編譯。  
   
  這個程序描述為：  
@@ -227,7 +222,7 @@ END
   
  原生編譯預存程序的引動過程會轉譯為在 DLL 中呼叫函數。  
   
- ![執行原生編譯預存程序。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Execution of natively compiled stored procedures.")  
+ ![執行原生編譯預存程序。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "執行原生編譯預存程序。")  
 執行原生編譯預存程序。  
   
  原生編譯預存程序的引動過程描述如下：  
@@ -313,4 +308,3 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

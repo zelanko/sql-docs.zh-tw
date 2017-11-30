@@ -1,5 +1,5 @@
 ---
-title: "設定報表伺服器進行遠端管理 |Microsoft 文件"
+title: "設定報表伺服器來進行遠端管理 | Microsoft Docs"
 ms.date: 09/14/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 9c2bf31935e821aff995fead3f8aa0478114424e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>設定報表伺服器來進行遠端管理
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，您可以在本機或遠端設定報表伺服器執行個體。 若要設定遠端報表伺服器執行個體，您可以使用 Reporting Services 組態工具，或是撰寫使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供者的自訂程式碼。 Reporting Services 組態工具提供了 WMI 提供者的圖形介面，好讓您不需要撰寫程式碼就可以設定報表伺服器。 當您啟動這個工具時，可以指定要連接的遠端伺服器。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  按一下 **[開始]**，並依序指向 **[程式集]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。  
   
-2.  在左窗格中，依序展開**SQL Server 網路組態**，然後按一下 **通訊協定**執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+2.  在左窗格中，展開 [SQL Server 網路設定]，然後針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體按一下 [通訊協定]。  
   
 3.  在詳細資料窗格中，啟用 TCP/IP 和具名管道通訊協定，然後重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
   
 9. 輸入您的使用者帳戶名稱，然後按一下 **[確定]**。  
   
-10. 中**權限\<使用者或群組 >**，請在**允許**欄中，選取**遠端啟動**和**遠端啟用**，然後按一下 **確定**。  
+10. 在 [\<使用者或群組> 的權限] 的 [允許] 欄中，選取 [遠端啟動] 和 [遠端啟用]，然後按一下 [確定]。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>針對非管理員設定報表伺服器 WMI 命名空間的權限  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  開啟 [服務及應用程式] 資料夾。  
   
-3.  以滑鼠右鍵按一下**WMI 控制**，然後選取**屬性**。  
+3.  以滑鼠右鍵按一下 [WMI 控制]，然後選取 [內容]。  
   
 4.  按一下 **[安全性]**。  
   
@@ -144,8 +144,7 @@ ms.lasthandoff: 08/09/2017
   
 13. 在 **[允許]** 一欄中，選取 **[啟用帳戶]**、 **[遠端啟用]**及 **[讀取安全性]**，然後按一下 **[確定]**。  
   
-## <a name="see-also"></a>請參閱＜  
- [Reporting Services 組態管理員 &#40;原生模式 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+## <a name="see-also"></a>另請參閱  
+ [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
-

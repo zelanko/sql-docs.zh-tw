@@ -1,5 +1,5 @@
 ---
-title: "報表疑難排解： 地圖報表 （報表產生器及 SSRS） |Microsoft 文件"
+title: "報表疑難排解：地圖報表 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2ed84682cda474d2cba6e7f0854e8cc1cde8d827
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 (報表產生器及 SSRS)
   當您將地圖或地圖圖層加入至報表時、自訂報表中現有的地圖或地圖圖層時、預覽報表中的地圖時，或發行包含地圖的報表時，在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中可能會發生與地圖相關的問題。 您可以使用本主題來協助疑難排解這些問題。  
@@ -164,7 +163,7 @@ ms.lasthandoff: 08/09/2017
   
  若要控制每個圖例的標題與內容，請使用規則的 [圖例] 屬性。 您可以指定要建立的內文區塊數目、變更將值指派給每個內文區塊的計算、設定最小與最大範圍值，以及變更圖例文字的格式。  
   
- 如需詳細資訊，請參閱[變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
 ## <a name="the-rules-that-i-set-do-not-give-the-results-that-i-expect"></a>我設定的規則沒有得到預期的結果。  
  規則會套用到圖層上與地圖元素相關的分析資料。 使用下列清單協助識別與所有色彩規則、大小規則、寬度規則和標記類型規則相關的問題：  
@@ -173,7 +172,7 @@ ms.lasthandoff: 08/09/2017
   
 -   符合欄位問題。 符合欄位允許在地圖元素和分析資料之間進行資料繫結。 對應到符合欄位的分析資料與空間資料欄位必須擁有相同的資料類型與相同的格式。 如果符合欄位沒有完全符合空間資料與分析資料，規則就沒有作用。 例如，如果空間資料的符合欄位與分析資料的符合欄位相較之下，前者擁有額外的空白或額外的標點符號，則不相符。  
   
--   如需詳細資訊，請參閱[使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
+-   如需詳細資訊，請參閱 [使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ## <a name="what-is-the-value-nan-on-the-color-scale"></a>色階上的 NaN 值代表什麼意思？  
  **NaN** 代表「非數字」(Not a Number)。 色階值應為數值。 針對與色階相關的規則，檢查分佈設定與圖例文字值。 如果您已經建立自訂分佈範圍，請確認您在第一個範圍指定下限，並在最後一個範圍指定上限。  
@@ -181,7 +180,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>當我執行報表時，我的色階沒有出現。  
  當地圖圖層針對整個圖層或針對內嵌的地圖元素指定多邊形、線條或點的色彩規則時，色階會對使用者顯示相關資訊。 如果地圖元素沒有指定任何色彩規則，或者色彩規則透過圖例 (而非色彩地圖) 指定，則色彩地圖不會出現在轉譯的報表中。  
   
- 若要顯示色階，請針對圖層或內嵌的地圖元素指定色彩規則。 如需詳細資訊，請參閱[變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
+ 若要顯示色階，請針對圖層或內嵌的地圖元素指定色彩規則。 如需詳細資訊，請參閱 [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
 ##  <a name="Tile"></a> 影像分割問題  
  使用本節協助解決與影像分割背景選項相關的問題。  
@@ -197,7 +196,7 @@ ms.lasthandoff: 08/09/2017
   
 -   對於本機預覽，您必須擁有網際網路存取權。 對於從報表伺服器執行的報表，必須將報表伺服器設定為支援影像分割背景。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](http://go.microsoft.com/fwlink/?linkid=121312) 的＜規劃地圖支援＞。  
   
- 如需加入圖格圖層的詳細資訊，請參閱[加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
+ 如需新增圖格圖層的詳細資訊，請參閱[新增、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
 ## <a name="how-do-i-control-the-text-on-a-tile-layer"></a>如何控制影像分割圖層上的文字？  
  **[道路]** 與 **[混合式]** 檢視都包含文字。 文字是來自 Bing Map Web 服務之影像分割的一部分。  
@@ -212,9 +211,8 @@ ms.lasthandoff: 08/09/2017
   
  若要指定與非報表資料集一部分之空間資料相關的資料，您必須使用符號 #，後面接著一個指定資料名稱的標籤。  
   
-## <a name="see-also"></a>請參閱＜  
- [對應 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [疑難排解報表產生器](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+## <a name="see-also"></a>另請參閱  
+ [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [針對報表產生器進行疑難排解](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   
-

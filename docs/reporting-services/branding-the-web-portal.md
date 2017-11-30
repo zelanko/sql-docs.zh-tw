@@ -1,26 +1,23 @@
 ---
-title: "商標 web 入口網站 |Microsoft 文件"
+title: "建立入口網站品牌形象 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9c78d9480dd8d2bacca80fd06183b9d31f7714d5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="branding-the-web-portal"></a>建立入口網站品牌形象
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -74,7 +71,7 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
         background-color:@primaryButtonBg;   
     }  
   
-儘管這類似於 CSS 語法，但色彩值，加上@symbol，對是唯一的。 它們是透過 json 檔案設定其值的變數。  
+儘管這類似於 CSS 語法，但色彩值 (以 @symbol 作為首碼) 對 LESS 是唯一的。 它們是透過 json 檔案設定其值的變數。  
   
 例如，如果 colors.json 檔案具有下列值。  
   
@@ -248,4 +245,3 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
     }  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-

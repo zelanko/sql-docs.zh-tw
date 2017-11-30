@@ -1,35 +1,32 @@
 ---
-title: "設定 URL （SSRS 組態管理員） |Microsoft 文件"
+title: "設定 URL (SSRS 設定管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- URL access [Reporting Services], syntax
+helpviewer_keywords: URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 99c21c41115748c82267ed72845607b044ee3a6a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1c356b28e675e824b1a6b6a4b434f27c4fe81de8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>設定 URL (SSRS 組態管理員)
-  使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器] 選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，就表示已經為每一個應用程式設定了 URL。  
+  使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器] 選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。  
   
  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具可設定 URL， URL 的所有部分都會定義在這個工具中。 與舊版不同的是，Internet Information Services (IIS) 網站不再提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本中 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 應用程式的存取權。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供預設值在大多數部署狀況下，其中包括與其他 Web 服務和應用程式的-並存部署順利運作的。 預設 URL 會併入執行個體名稱，好讓在相同電腦上執行多個報表伺服器執行個體時的 URL 衝突風險降到最低。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供可在大多數部署狀況下順利運作的預設值，包括與其他 Web 服務和應用程式的並存部署。 預設 URL 會併入執行個體名稱，好讓在相同電腦上執行多個報表伺服器執行個體時的 URL 衝突風險降到最低。  
   
  本主題提供下列工作的指示：  
   
@@ -39,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 -   設定進階的 URL 屬性，以定義其他 URL。  
   
- 如需有關如何儲存和維護 Url 或是互通性問題的詳細資訊，請參閱[關於 「 URL 保留項目和註冊 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)和[安裝 Reporting Services 和網際網路資訊服務的並行 &#40;SSRS 原生模式 &#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。 若要檢閱 Reporting Services 安裝中常用的 URL 範例，請參閱本主題的＜ [URL 範例](#URLExamples) ＞。  
+ 如需如何儲存和維護 URL 或是互通性問題的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[關於 URL 保留項目和註冊 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) 和[並存安裝 Reporting Services 和 Internet Information Services &#40;SSRS 原生模式&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)。 若要檢閱 Reporting Services 安裝中常用的 URL 範例，請參閱本主題的＜ [URL 範例](#URLExamples) ＞。  
   
 ## <a name="prerequisites"></a>必要條件  
  在您建立或修改 URL 之前，請記住以下要點：  
@@ -76,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
     -   **[::1]** 是 IPv6 格式的回送位址。  
   
-    -   特定的 IP 位址也會出現在這個清單中。 IP 位址可以採用 IPv4 和 IPv6 格式。 *Nnn.nnn.nnn.nnn* 是電腦網路介面卡的 32 位元 IPv4 位址。 IPv6 位址為 128 位元，具有以冒號分隔的八個 4 位元組欄位：\<前置詞 >:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   特定的 IP 位址也會出現在這個清單中。 IP 位址可以採用 IPv4 和 IPv6 格式。 *Nnn.nnn.nnn.nnn* 是電腦網路介面卡的 32 位元 IPv4 位址。 IPv6 位址為 128 位元，具有以冒號分隔的八個 4 位元組的欄位：\<前置詞>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          如果您有多張網路介面卡或是您的網路同時支援 IPv4 和 IPv6 位址，您將會看到多個 IP 位址。 如果您只選取一個 IP 位址，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。 一般來說，如果您選取這個值，這是因為您正在設定多個同時也指定明確 IP 位址或主機名稱的 URL 保留項目 (例如，一個項目用於內部網路連接的網路介面卡，另一個項目用於外部網路連接)。  
   
@@ -98,7 +95,7 @@ ms.lasthandoff: 08/09/2017
   
 9. 按一下 **[套用]** ，即可建立此 URL。  
   
-10. 按一下頁面 **[URL]** 區段中的連結來測試此 URL。 請注意，在您可以測試此 URL 之前，必須先建立及設定報表伺服器資料庫。 如需指示，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
+10. 按一下頁面 **[URL]** 區段中的連結來測試此 URL。 請注意，在您可以測試此 URL 之前，必須先建立及設定報表伺服器資料庫。 如需指示，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
 > [!NOTE]  
 >  如果您有現有的 SSL 繫結和 URL 保留項目，而您想要變更 SSL 繫結，例如使用不同的憑證或主機標頭，則建議您依序完成以下步驟：  
@@ -117,7 +114,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到報表伺服器執行個體。  
   
-2.  按一下**Web 入口網站的 URL**。  
+2.  按一下 [入口網站 URL]。  
   
 3.  指定虛擬目錄。 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 會接聽與報表伺服器 Web 服務相同的 IP 位址和通訊埠。 如果您設定 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 指向不同的報表伺服器 Web 服務，您必須修改 RSReportServer.config 檔案中的 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] URL 設定。  
   
@@ -155,11 +152,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>設定 URL 的進階屬性  
   
-1.  在  **Web 服務 URL**或**入口網站 URL**頁面上，按一下**進階**。  
+1.  在 [Web 服務 URL] 或 [入口網站 URL] 頁面上，按一下 [進階]。  
   
 2.  按一下 **[加入]**。  
   
-3.  按一下 IP 位址或主機標頭名稱。 如果您指定主機標頭，請務必指定 DNS 服務可以解析的名稱。 如果您要指定公開可用的網域名稱，請包含整個 URL，包括`http://www`。  
+3.  按一下 IP 位址或主機標頭名稱。 如果您指定主機標頭，請務必指定 DNS 服務可以解析的名稱。 如果您要指定公開可用的網域名稱，請包含整個 URL，包括 `http://www` 在內。  
   
 4.  指定通訊埠。 如果您指定自訂通訊埠，應用程式的 URL 一定要包含通訊埠編號。  
   
@@ -168,7 +165,7 @@ ms.lasthandoff: 08/09/2017
 6.  開啟瀏覽器視窗，並輸入此 URL 加以測試。  
   
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>相同電腦上多個報表伺服器執行個體的 URL  
- 如果您為多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體保留 URL，您應該遵循命名慣例，好讓您可以避免命名衝突。 如需詳細資訊，請參閱[多重執行個體報表伺服器部署的 URL 保留項目 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)。  
+ 如果您為多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體保留 URL，您應該遵循命名慣例，好讓您可以避免命名衝突。 如需詳細資訊，請參閱[多重執行個體報表伺服器部署的 URL 保留項目 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)。  
   
 ##  <a name="URLExamples"></a> URL 組態的範例  
  下列清單顯示一些報表伺服器 URL 的範例：  
@@ -200,6 +197,5 @@ ms.lasthandoff: 08/09/2017
 -   `https://www.adventure-works.com:8080/reports`  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員 &#40;原生模式 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [設定報表伺服器 Url &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
-
+ [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)

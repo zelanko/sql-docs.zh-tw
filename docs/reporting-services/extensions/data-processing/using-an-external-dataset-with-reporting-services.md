@@ -1,5 +1,5 @@
 ---
-title: "搭配 Reporting Services 使用外部資料集 |Microsoft 文件"
+title: "透過 Reporting Services 使用外部資料集 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,32 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: add18839976ae919686cbd488385531de3bf684e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 179c1ecb3641a848561c49489d1d23a51c1b6ff8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>透過 Reporting Services 使用外部資料集
-  **資料集**物件支援的核心中斷連接，散發資料案例，附帶[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]。 **資料集**物件是常駐記憶體表示法提供與資料來源無關的一致性關聯式程式設計模型的資料。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 **資料集**物件都代表一組完整的資料，包括相關的資料表、 條件約束及資料表間的關聯性。 因為**資料集**物件的彈性儲存和公開資料，您的資料可能會經常處理並轉換成**資料集**物件，該資料的任何報告發生之前。  
+  **DataSet** 物件是支援 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 已中斷連線之分散式資料案例的關鍵。 **DataSet** 物件是常駐記憶體的資料表示，可提供與資料來源無關的一致性關聯式程式設計模型。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 **DataSet** 物件表示一組完整的資料，包括相關資料表、條件約束及資料表間的關聯性。 因為 **DataSet** 物件具有儲存和公開資料的多樣性，所以通常會在報告您的資料之前，先將該資料處理和轉換成 **DataSet** 物件。  
   
- 與[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]資料處理延伸模組，您可以整合自訂**資料集**由外部應用程式所建立的物件。 若要達成此目的，您會建立中的自訂資料處理延伸模組[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]作用就像之間的橋樑您**資料集**物件與報表伺服器。 處理這個程式碼的大部分**資料集**物件包含在**DataReader**您所建立的類別。  
+ 透過 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組，您可以整合由外部應用程式建立的任何自訂 **DataSet** 物件。 若要完成這項動作，您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中建立自訂資料處理延伸模組，以作為 **DataSet** 物件與報表伺服器之間的橋樑。 大部分處理這個 **DataSet** 物件的程式碼，都是包含在您建立的 **DataReader** 類別中。  
   
- 公開的第一個步驟您**資料集**到報表伺服器的物件是實作提供者特定的方法，在您**DataReader**類別可以擴展**資料集**物件。 下列範例示範如何將靜態資料載入**資料集**使用中的提供者特定方法的程式**DataReader**類別。  
+ 向報表伺服器公開 **DataSet** 物件的第一個步驟，是在可以擴展 **DataSet** 物件的 **DataReader** 類別中，為提供者實作特定方法。 下列範例示範如何使用 **DataReader** 類別中的提供者特定方法，將靜態資料載入 **DataSet** 物件。  
   
 ```vb  
 'Private members of the DataReader class  
@@ -168,7 +166,7 @@ public int GetOrdinal(string name)
 }  
 ```  
   
- 一旦您建立或擷取您的資料集，您可以使用**資料集**物件在您實作的**讀取**， **GetValue**， **GetName**， **GetOrdinal**， **GetFieldType**，和**FieldCount**成員**DataReader**類別。  
+ 一旦您建立或是擷取資料集，就可以在實作 **DataReader** 類別的 **Read**、**GetValue**、**GetName**、**GetOrdinal**、**GetFieldType** 和 **FieldCount** 成員時，使用 **DataSet** 物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 延伸模組](../../../reporting-services/extensions/reporting-services-extensions.md)   
@@ -176,4 +174,3 @@ public int GetOrdinal(string name)
  [Reporting Services 延伸模組程式庫](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

@@ -1,30 +1,28 @@
 ---
-title: "建立原生模式報表伺服器資料庫 （SSRS 組態管理員） |Microsoft 文件"
+title: "建立原生模式報表伺服器資料庫 (SSRS 設定管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e51657eabce531ab1f7c44b88c8e5ff13c94fce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1458fe51bc43c24904be30c5484f8829f8b45ebc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-native-mode-report-server-database"></a>建立原生模式報表伺服器資料庫
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
@@ -71,7 +69,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  選取資料庫執行個體。  
   
-5.  以滑鼠右鍵按一下**TCP/IP**選取**啟用**。  
+5.  以滑鼠右鍵按一下 [TCP/IP]，然後選取 [啟用]。  
   
 6.  重新啟動服務。  
   
@@ -81,17 +79,17 @@ ms.lasthandoff: 08/09/2017
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到您正在建立資料庫的報表伺服器執行個體。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在 [資料庫] 頁面上選取**變更資料庫**。  
+2.  在 [資料庫] 頁面上，選取 [變更資料庫]。  
   
-3.  選取**建立新的報表伺服器資料庫**，然後選取**下一步**。  
+3.  選取 [建立新的報表伺服器資料庫]，然後選取 [下一步]。  
   
 4.  連接到將用來建立及主控報表伺服器資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體：  
   
-    1.  輸入您想要使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。 此精靈將會顯示本機 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，它會當做預設執行個體 (如果有的話) 來執行。 否則，您必須輸入要使用的伺服器和執行個體。 依照此格式來指定具名執行個體： \<servername >\\< instancename\>。  
+    1.  輸入您想要使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。 此精靈將會顯示本機 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，它會當做預設執行個體 (如果有的話) 來執行。 否則，您必須輸入要使用的伺服器和執行個體。 具名執行個體會依照以下格式來指定：\<伺服器名稱>\\<執行個體名稱\>。  
   
     2.  輸入用於與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之單次連接的認證，以便建立報表伺服器資料庫。 如需有關如何使用這些認證的詳細資訊，請參閱本主題的「 [在開始之前](#rsdbrequirements) 」。  
   
-    3.  選取**測試連接**來驗證伺服器的連線。  
+    3.  選取 [測試連線] 可驗證與伺服器的連線。  
   
     4.  選取 **[下一步]**。  
   
@@ -117,7 +115,7 @@ ms.lasthandoff: 08/09/2017
   
     2.  選取 **[下一步]**。  
   
-7.  若要確認設定都正確無誤，然後選取 [摘要] 頁面上檢閱**下一步**。  
+7.  檢閱 [摘要] 頁面上的資訊，以確認設定都正確無誤，然後選取 [下一步]。  
   
 8.  選取 [報表伺服器 URL] 頁面或 [報表管理員 URL] 頁面上的 URL 來確認連接。 必須有定義 URL，這項測試才有效。 如果報表伺服器資料庫連接有效，您將會在瀏覽器視窗中看到報表伺服器資料夾階層或報表管理員。 如需詳細資訊，請參閱《 [線上叢書》的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 驗證 Reporting Services 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
 
@@ -127,13 +125,13 @@ ms.lasthandoff: 08/09/2017
 
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到您正在建立資料庫的報表伺服器執行個體。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在 [資料庫] 頁面上選取**變更認證**。 
+2.  在 [資料庫] 頁面上，選取 [變更認證]。 
 
 3.  連接到將用來建立及主控報表伺服器資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體：  
   
     1.  輸入用於與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之單次連接的認證，以便建立報表伺服器資料庫。 如需有關如何使用這些認證的詳細資訊，請參閱本主題的「 [在開始之前](#rsdbrequirements) 」。  
   
-    2.  選取**測試連接**來驗證伺服器的連線。  
+    2.  選取 [測試連線] 可驗證與伺服器的連線。  
   
     3.  選取 **[下一步]**。  
 
@@ -149,13 +147,13 @@ ms.lasthandoff: 08/09/2017
   
     2.  選取 **[下一步]**。 
 
-5. 檢閱設定，然後選取**下一步**。
+5. 檢閱設定並選取 [下一步]。
 
 6. 變更後選取 [完成]。
 
 ## <a name="next-steps"></a>後續的步驟
 
-[設定報表伺服器資料庫連接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[設定報表伺服器資料庫連線](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
