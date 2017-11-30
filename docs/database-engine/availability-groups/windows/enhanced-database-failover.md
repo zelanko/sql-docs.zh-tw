@@ -2,9 +2,12 @@
 title: "將增強資料庫容錯移轉新增至可用性群組 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: mikeray
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,13 +20,14 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd058f11f860682754f9dfe06830fafb087b1fe7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>將增強資料庫容錯移轉新增至可用性群組 (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在 SQL Server 2012 和 2014 中，如果參與主要複本上可用性群組的資料庫無法寫入交易，就不會觸發容錯移轉，即使同步處理並設定複本以進行自動容錯移轉也是一樣。
 
