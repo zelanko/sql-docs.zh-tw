@@ -2,7 +2,10 @@
 title: "被遺棄使用者疑難排解 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: 
 ms.reviewer: 
 ms.suite: 
 ms.technology: dbe-high-availability
@@ -22,14 +25,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9ff0d42bc753de6e179e0cd4c7882bdfd9626cba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 53342ad62ae05d614acee18c2bbace0b2feaae6b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>被遺棄使用者疑難排解 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的被遺棄使用者，當資料庫中的使用者登入是根據 **master** 資料庫，但登入已不存在於 **master**時就會發生。 當登入遭到刪除，或當資料庫移動到另一個登入不存在的資料庫時，就可能發生。 本主題說明如何尋找被遺棄使用者，並將他們重新對應至登入。  
   

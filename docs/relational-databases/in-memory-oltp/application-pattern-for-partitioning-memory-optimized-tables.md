@@ -2,9 +2,12 @@
 title: "分割記憶體最佳化資料表的應用程式模式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b6593ff770d40500cf7f40c500db9f9bfa59ee8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 395967f86de07074db3a7c8cad7c49195ed54d86
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>分割記憶體最佳化資料表的應用程式模式
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支援的模式如下：將有限的使用中資料數量保留在記憶體最佳化資料表中，而比較不常存取的資料則在磁碟中處理。 這種情況一般都是根據 **datetime** 索引鍵儲存資料。  
   

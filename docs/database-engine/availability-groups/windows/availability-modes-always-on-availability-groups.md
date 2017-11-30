@@ -2,11 +2,12 @@
 title: "可用性模式 (AlwaysOn 可用性群組) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a2e011db2b5d3e1b82f2b1fca6497128676d8eb1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 095b40c8525e83a6d686a0d40d1f6aa1974a3442
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性模式 (AlwaysOn 可用性群組)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，「可用性模式」為複本屬性，可判斷給定可用性複本是否可以在同步認可模式下執行。 您必須將每個可用性複本的可用性模式設定為同步認可模式、非同步認可模式或僅限設定模式。  若將主要複本設定為「非同步認可模式」，其便不會等候任何次要複本將內送交易記錄檔記錄寫入磁碟 (「強行寫入記錄」)。 若將給定次要複本設定為非同步認可模式，主要複本便不會等候次要複本強行寫入記錄。 若將主要複本與給定次要複本皆設定為「同步認可模式」，主要複本會等候次要複本確認其已強行寫入記錄 (除非次要複本在主要的「工作階段逾時期限」內無法 Ping 主要複本)。 
   

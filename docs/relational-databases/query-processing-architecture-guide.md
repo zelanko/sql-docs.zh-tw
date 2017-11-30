@@ -3,8 +3,11 @@ title: "查詢處理架構指南 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 21fcbd9486cd94e3d3e5370f5374aaeb99d36324
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可在多種資料儲存架構處理查詢，例如本機資料表、資料分割資料表及散發到多部伺服器的資料表。 下列主題涵蓋了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何處理查詢以及透過執行計畫快取最佳化查詢重複使用。
 
