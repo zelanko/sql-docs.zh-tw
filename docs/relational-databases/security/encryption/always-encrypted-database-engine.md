@@ -1,10 +1,13 @@
 ---
 title: "Always Encrypted (資料庫引擎) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 874cea214cb14c0dbfb5cffdff3035970a6e259d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="always-encrypted-database-engine"></a>一律加密 (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
@@ -96,7 +99,7 @@ Database Engine 會將每個資料行的加密設定儲存在資料庫中繼資�
 
 ## <a name="getting-started-with-always-encrypted"></a>開始使用 [永遠加密]
 
-使用 [永遠加密的精靈] [Always Encrypted 精靈](../../../relational-databases/security/encryption/always-encrypted-wizard.md) 來快速開始使用 Always Encrypted。 精靈將會佈建必要的金鑰，並針對所選的資料行設定加密。 如果您要設定加密的資料行已經包含一些資料，則精靈會加密這些資料。 下列範例會示範加密資料行的程序。
+使用 [[永遠加密的精靈] ](../../../relational-databases/security/encryption/always-encrypted-wizard.md) 來快速開始使用 Always Encrypted。 精靈將會佈建必要的金鑰，並針對所選的資料行設定加密。 如果您要設定加密的資料行已經包含一些資料，則精靈會加密這些資料。 下列範例會示範加密資料行的程序。
 
 > [!NOTE]  
 >  如需使用精靈的影片，請參閱 [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)(搭配 SSMS 開始使用永遠加密)。
