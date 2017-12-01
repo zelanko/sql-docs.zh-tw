@@ -1,28 +1,25 @@
 ---
-title: "使用訂閱 （入口網站） |Microsoft 文件"
+title: "處理訂用帳戶 (Web 入口網站) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 131c3a86efc1e3fe2c0e896f726f292ab5e0db55
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-subscriptions-web-portal"></a>處理訂閱 (Web 入口網站)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -36,11 +33,11 @@ ms.lasthandoff: 08/09/2017
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-您可以藉由選取 [訂閱] 頁面來取得**省略符號 （...）**的報表，請選取**管理**，然後選取**訂閱**。  
+選取報表的**省略符號 (...)**，並選取 [管理]，然後選取 [訂用帳戶]，即可到達 [訂用帳戶] 頁面。  
   
 從 [訂閱] 頁面中，您可以選取 [+ 新增訂閱] 來建立新的訂閱。 您也可以編輯現有訂閱，或刪除所選取的訂閱。  
   
-此頁面也會在 [結果] 資料行上提供訂閱執行的結果狀態。 如果訂閱發生錯誤，請先檢查結果資料行，查看訊息為何。  
+此頁面也會在 [結果] 資料行上提供訂用帳戶執行的結果狀態。 如果訂閱發生錯誤，請先檢查結果資料行，查看訊息為何。  
   
 ## <a name="creating-or-editing-a-subscription"></a>建立或編輯訂閱  
 使用 [新增訂閱] 或 [編輯訂閱] 頁面，即可在報表中建立新的訂閱或修改現有的訂閱。 這個頁面的此選項隨著您的角色指派而改變。 具有進階權限的使用者可以使用額外的選項。  
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/09/2017
 可自主式執行的報表支援訂閱。 報表至少必須使用預存認證或無認證。 如果報表使用參數，就必須指定預設值。 如果您變更報表執行設定或移除參數屬性的預設值，就可能會造成訂閱停用。 如需詳細資訊，請參閱 [建立和管理原生模式報表伺服器的訂閱]。  
   
 ### <a name="type-of-subscription"></a>訂閱的類型  
-您可以選取 [標準訂閱] 和 [資料驅動訂閱]。  
+您可以選取 [標準訂用帳戶] 和 [資料驅動訂用帳戶]。  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
    
@@ -92,9 +89,8 @@ ms.lasthandoff: 08/09/2017
   
 在您建立查詢之後，即可指派必要欄位的值。 您可以輸入手動資料，或從您所建立的資料集中選取欄位。
 
-[Web 入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
+[入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
 [使用分頁報表](working-with-paginated-reports-web-portal.md)  
 [使用共用資料集](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
-
