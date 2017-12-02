@@ -177,7 +177,7 @@
 ## 追蹤部落格
 ### [SSIS 小組部落格](https://blogs.msdn.microsoft.com/ssis/)
 ## 取得說明
-### [MSDN 上的 SSIS 論壇](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [MSDN 上的 SSIS 論壇](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Stack Overflow 上的 SSIS 標記](http://stackoverflow.com/questions/tagged/ssis)  
 ## 提供意見
 ### [Microsoft Connect (英文)](https://connect.microsoft.com/SQLServer/Feedback)  
