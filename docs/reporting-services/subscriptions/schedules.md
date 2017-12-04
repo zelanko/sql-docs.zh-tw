@@ -95,7 +95,7 @@ ms.lasthandoff: 11/09/2017
 |建立、修改或刪除使用者自訂訂閱中的報表特定排程|管理個別訂閱|瀏覽器、報表產生器、我的報表和內容管理員|訪客、成員|  
 |建立、修改或刪除所有其他已排程之作業的報表特定排程|管理報表記錄、管理所有訂閱、管理報表|內容管理員|擁有者|  
   
- 如需原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中安全性的詳細資訊，請參閱 [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)(預先定義的角色)、 [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 和 [工作和權限](../../reporting-services/security/tasks-and-permissions.md)。 如果是 SharePoint 模式，請參閱＜ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)＞  
+ 如需原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中安全性的詳細資訊，請參閱 [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)(預先定義的角色)、 [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 和 [工作和權限](../../reporting-services/security/tasks-and-permissions.md)。 如果是 SharePoint 模式，請參閱＜ [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)＞  
   
 ##  <a name="bkmk_how_scheduling_works"></a> 排程與傳遞處理器的運作方式  
  排程與傳遞處理器提供下列功能：  

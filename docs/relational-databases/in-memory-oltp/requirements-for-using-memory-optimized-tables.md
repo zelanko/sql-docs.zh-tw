@@ -1,7 +1,7 @@
 ---
 title: "使用記憶體最佳化資料表的需求 | Microsoft 文件"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -17,21 +17,23 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 88939992ca125a6db88d0e0f3cb3dab794916195
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41c5e5193a9ce056846f935e7663ef33fbb08337
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用記憶體最佳化資料表的需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  若要在 Azure DB 中使用記憶體內部 OLTP，請參閱[在 SQL Database 中開始使用 In-Memory](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/)。  
+  若要在 Azure DB 中使用記憶體內部 OLTP，請參閱 [在 SQL Database 中開始使用 In-Memory](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/)。  
   
- 除了 [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)以外，以下還有使用記憶體內部 OLTP 的需求：  
+ 除了[安裝 SQL Server 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)之外，使用記憶體內部 OLTP 的還有以下需求：  
   
--   SQL Server 2016 SP1 (或更新版本) 任何版本。 SQL Server 2014 及 SQL Server 2016 RTM (SP1 以前的版本) 需要 Enterprise、Developer 或 Evaluation 版本。
-    - 請注意︰記憶體內部 OLTP 需要 64 位元版本的 SQL Server。  
+-   若為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 (或更新版本)，任何版本皆可。 若為 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM (SP1 以前的版本)，則需要 Enterprise、Developer 或 Evaluation 版本。
+    
+    > [!NOTE]
+    > 記憶體內部 OLTP 需要 64 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要有足夠的記憶體來容納記憶體最佳化資料表和索引中的資料，以及額外的記憶體來支援線上工作負載。 如需詳細資訊，請參閱 [估計記憶體最佳化資料表的記憶體需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 。  
 
@@ -45,16 +47,21 @@ ms.lasthandoff: 11/17/2017
   
 -   記憶體內部 OLTP 會安裝為 **Database Engine Services**的一部分。  
   
-     若要安裝報表產生 ([判斷是否應將資料表或預存程序匯出至記憶體內部 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管來管理記憶體內部 OLTP)，請 [下載 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。   
+     若要安裝報表產生功能 ([判斷是否應將資料表或預存程序移植到記憶體內部 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管來管理記憶體內部 OLTP)，請 [下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。   
   
-## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]的重要注意事項  
+## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的重要注意事項  
   
--   自 SQL Server 2016 起，記憶體最佳化資料表除了可用的記憶體之外，沒有大小限制。 在 SQL Server 2014 中，資料庫中所有持久資料表的記憶體內部大小總計，若為 SQL Server 2014 資料庫則不應該超過 250 GB。 如需詳細資訊，請參閱 [估計記憶體最佳化資料表的記憶體需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)。  
-    - 請注意︰自 SQL Server 2016 SP1 開始，Standard 和 Express 版本支援記憶體內部 OLTP，但它們會徵用可以用在指定資料庫的記憶體最佳化資料表記憶體數量的配額。 Standard 版本是每個資料庫 32 GB，Express 版本是每個資料庫 352 MB。 
+-   自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，記憶體最佳化資料表除了可用的記憶體之外，沒有任何大小限制。 
+
+-   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，資料庫內所有耐久資料表的記憶體中大小總計，不應超過 250 GB。 如需詳細資訊，請參閱 [估計記憶體最佳化資料表的記憶體需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)。  
+
+> [!NOTE]
+> 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 起，Standard 和 Express 版本皆支援記憶體內部 OLTP，但會用到在指定資料庫用於記憶體最佳化資料表的記憶體數量的配額。 Standard 版本是每個資料庫 32 GB，Express 版本是每個資料庫 352 MB。 
   
--   如果您建立一個或多個具有記憶體最佳化資料表的資料庫，就應該針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟用立即檔案初始化 (將 SE_MANAGE_VOLUME_NAME 使用者權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動帳戶)。 如果沒有立即檔案初始化，記憶體最佳化儲存體檔案 (資料和差異檔案) 將會在建立時初始化，而這樣可能會對工作負載的效能造成負面影響。 如需有關立即檔案初始化的詳細資訊，請參閱 [資料庫檔案初始化](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx)。 如需有關如何啟用立即檔案初始化的詳細資訊，請參閱 [如何及為何啟用立即檔案初始化](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx)。  
+-   如果您建立一或多個具有記憶體最佳化資料表的資料庫，即應將 *SE_MANAGE_VOLUME_NAME* 使用者權利授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動帳戶，以啟用檔案立即初始化 (IFI)。 如果沒有 IFI，記憶體最佳化儲存體檔案 (資料與差異檔案) 將會在建立時進行初始化，而如此可能會對工作負載的效能產生負面的影響。 如需 IFI 的詳細資訊及啟用方式，請參閱[資料庫檔案立即初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
+ [資料庫檔案立即初始化](../../relational-databases/databases/database-instant-file-initialization.md)  
+ [記憶體架構指南](../../relational-databases/memory-management-architecture-guide.md)
   
