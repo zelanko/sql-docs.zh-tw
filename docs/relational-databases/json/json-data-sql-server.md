@@ -20,16 +20,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0e71ab1057f1147ce34d049494aa313967daa114
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b8479ec695d01cfc6963fd6b57c55a8605e25d16
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="json-data-sql-server"></a>JSON 資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-JSON 是在最新 Web 和行動應用程式中用來交換資料的常見文字資料格式。 JSON 也可用於將非結構化的資料儲存在記錄檔或類似 Microsoft Azure DocumentDB 的 NoSQL 資料庫中。 許多 REST Web 服務會傳回已格式化為 JSON 文字的結果，或接受已格式化為 JSON 的資料。 例如，大部分的 Azure 服務 (例如 Azure 搜尋服務、Azure 儲存體和 Azure DocumentDb) 具有傳回或取用 JSON 的 REST 端點。 JSON 也是使用 AJAX 呼叫在網頁和 Web 伺服器之間交換資料的主要格式。  
+JSON 是在最新 Web 和行動應用程式中用來交換資料的常見文字資料格式。 JSON 也可用於將非結構化的資料儲存在記錄檔或是類似 Microsoft Azure Cosmos DB 的 NoSQL 資料庫中。 許多 REST Web 服務會傳回已格式化為 JSON 文字的結果，或接受已格式化為 JSON 的資料。 例如，大部分的 Azure 服務 (例如 Azure 搜尋服務、Azure 儲存體和 Azure Cosmos DB) 都具有傳回或取用 JSON 的 REST 端點。 JSON 也是使用 AJAX 呼叫在網頁和 Web 伺服器之間交換資料的主要格式。  
   
  以下是 JSON 文字範例︰  
   
@@ -176,7 +176,7 @@ FOR JSON PATH
  
 JSON 文字通常儲存在 varchar 或 nvarchar 資料行中，並以純文字形式編製索引。 任何支援文字的 SQL Server 功能或元件都支援 JSON，因此 JSON 和其他 SQL Server 功能之間幾乎沒有任何互動限制。 您可以將 JSON 儲存在記憶體內部或暫存資料表中，您可以在 JSON 文字上套用資料列層級安全性的述詞等等。
 
-如只有要使用自訂查詢語言來處理 JSON 文件的 JSON 工作負載，請考慮 Microsoft Azure Microsoft Azure [DocumentDB](https://azure.microsoft.com/services/documentdb/)。  
+如果您有想要在其中使用專為處理 JSON 文件而設定之查詢語言的 JSON 工作負載，請考慮使用 Microsoft Azure [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)。  
   
  以下提供數個使用案例，示範如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用內建的 JSON 支援。  
   
