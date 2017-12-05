@@ -1,5 +1,5 @@
 # [概觀](xquery-language-reference-sql-server.md)  
-# [新的與最近更新的文件](new-updated-xquery.md)
+# [新增及更新的發行項](new-updated-xquery.md)
 # [模組和初構 - XQuery 初構](modules-and-prologs-xquery-prolog.md)  
 
 # [XQuery 基本概念](xquery-basics.md)  

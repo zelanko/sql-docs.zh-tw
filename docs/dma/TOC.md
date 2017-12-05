@@ -1,6 +1,7 @@
 # [資料移轉小幫手概觀](dma-overview.md)
 
 # [資料移轉小幫手的新功能](dma-whatsnew.md)
+# [新增及更新的發行項](new-updated-dma.md)
 # [SQL Server 移轉評定](dma-assesssqlonprem.md)
 # [合併評定報告](dma-consolidatereports.md)
 # [合併評定的 Power BI 報表](dma-powerbiassesreport.md)

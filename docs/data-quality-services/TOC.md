@@ -1,5 +1,5 @@
 # [概觀](data-quality-services.md)  
-# [新的與最近更新的文件](new-updated-data-quality-services.md)
+# [新增及更新的發行項](new-updated-data-quality-services.md)
 
 # 概念和功能
 ## [Data Quality Services 簡介](introduction-to-data-quality-services.md)  
