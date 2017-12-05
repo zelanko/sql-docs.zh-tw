@@ -15,7 +15,7 @@
 #### [管理](partner-management-sql-server.md)
 #### [開發](partner-dev-sql-server.md)
 
-# [SQL Server 的最近更新文件](sql-server-new-updated-sql-docs-pr.md)
+# [新增及更新的發行項](new-updated-sql-server.md)
 
 # 版本資訊
 
