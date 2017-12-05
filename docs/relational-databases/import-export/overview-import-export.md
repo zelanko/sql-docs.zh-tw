@@ -2,9 +2,12 @@
 title: "匯入和匯出 SQL Server 和 Azure SQL Database 的資料 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/27/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,14 +15,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ab07b5c374b20ce815c16f5346969d3517bbc26
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>匯入和匯出 SQL Server 和 Azure SQL Database 的資料
-您可以使用各種方法在 SQL Server 和 Azure SQL Database 匯入和匯出資料。 這些方法包括 Transact-SQL 陳述式、命令列工具和精靈。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用多種方法將資料匯入 SQL Server 和 Azure SQL Database 中，及從中匯出資料。 這些方法包括 Transact-SQL 陳述式、命令列工具和精靈。
 
 您也可以匯入和匯出各種不同資料格式的資料。 這些格式包括一般檔案、Excel、主要關聯式資料庫，以及各種雲端服務。
 

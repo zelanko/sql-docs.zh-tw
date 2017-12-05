@@ -2,9 +2,12 @@
 title: "SQL Server 2016 中已被取代的全文檢索搜尋功能 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2849b5a4570c4ce4c2633c13522c66d04b4c47fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7492b1c26c21a2cbc831c2bed39be165310bf51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016 中已被取代的全文檢索搜尋功能
-  本主題描述 SQL Server 中仍然可用之已被取代的全文檢索搜尋功能。 這些功能將在未來版本中移除。 請勿在新的應用程式中使用已被取代的功能。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 本主題說明 SQL Server 中即將淘汰但仍可使用的全文檢索搜尋功能。 這些功能將在未來版本中移除。 請勿在新的應用程式中使用已被取代的功能。  
   
 使用 **SQL Server:Deprecated Features** 物件效能計數器和追蹤事件，即可監視已被取代之功能的使用。 如需詳細資訊，請參閱 [使用 SQL Server 物件](../../relational-databases/performance-monitor/use-sql-server-objects.md)。  
   

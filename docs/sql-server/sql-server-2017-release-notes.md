@@ -2,9 +2,12 @@
 title: "SQL Server 2017 版本資訊 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/30/2017
-ms.prod: sql-server-2017
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,14 +16,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fe3554aa067ef7e7fd0c1ffa2e8ac3adc5aaaa07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0cc5502883bd349f8a2586f901d5088c4edacf65
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
-本文說明 SQL Server 2017 的限制和問題。 如需相關資訊，請參閱：
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] 本文說明 SQL Server 2017 的限制和問題。 如需相關資訊，請參閱：
 - [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
 - [SQL Server 2017 累積更新](http://aka.ms/sql2017cu)，以取得最新累積更新 (CU) 版本的資訊

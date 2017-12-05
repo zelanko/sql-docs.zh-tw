@@ -2,9 +2,12 @@
 title: "SQL Server 2017 的新功能 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/19/2017
-ms.prod: sql-server-2017
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9abddcd8544221c5d6dff0eeb12dc441df632933
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: db5dd719e105809acbd5e4bc925a94af94df902e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
-SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基礎的 Docker 容器和 Windows 中，是讓 SQL Server 成為可選擇開發語言、資料類型、內部部署或雲端以及作業系統之平台的重要一步。 本主題摘要說明特定功能區的新功能，並包含其他詳細資料的連結。 如需 Linux 上之 SQL Server 的詳細資訊，請參閱 [Linux 上的 SQL Server](https://docs.microsoft.com/sql/linux/) 文件
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] SQL Server 2017 邁出重要的一步，把 SQL Server 的強大功能整合到 Linux、以 Linux 為基礎的 Docker 容器和 Windows 中，將 SQL Server 推展成可選擇開發語言、資料類型、內部部署或雲端以及作業系統的平台。 本主題摘要說明特定功能區的新功能，並包含其他詳細資料的連結。 如需 Linux 上之 SQL Server 的詳細資訊，請參閱 [Linux 上的 SQL Server](https://docs.microsoft.com/sql/linux/) 文件
 
 [![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **試用看看：** [下載 SQL Server 2017 版 - 2017 年 10月：](http://go.microsoft.com/fwlink/?LinkID=829477)。
 

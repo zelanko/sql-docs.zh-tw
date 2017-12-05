@@ -1,7 +1,7 @@
 ---
 title: "設定 min memory per query 伺服器組態選項 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -22,16 +22,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 18458fbe7a7008c23516d372e15979e9dfc7decc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05c59d21bfa00c9d32ef740f4a1ef7acfcf178d8
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>設定 min memory per query 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] min memory per query [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **每個查詢的最小記憶體** 選項會指定為執行查詢所配置的最小記憶體數量 (以 KB 為單位)。 例如，如果將 **min memory per query** 設成 2,048 KB，就可以保證查詢至少有這些記憶體量可使用。 預設值為 1,024 KB。 最小值是 512 KB，最大值則是 2,147,483,647 KB (2 GB)。  
+  此主題描述如何使用 **或** ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] min memory per query [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **每個查詢的最小記憶體** 選項會指定為執行查詢所配置的最小記憶體數量 (以 KB 為單位)。 例如，如果將 **min memory per query** 設成 2,048 KB，就可以保證查詢至少有這些記憶體量可使用。 預設值為 1,024 KB。 最小值是 512 KB，最大值則是 2,147,483,647 KB (2 GB)。  
   
  **本主題內容**  
   
@@ -55,13 +55,15 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   每個查詢的最小記憶體數量的優先順序高於 [索引建立記憶體選項](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)。 若您同時變更了兩個選項，且索引建立記憶體選項小於每個查詢的最小記憶體，您會看到警告訊息，但仍會設定該值。 執行查詢時，您會看到另一個類似的警告。  
+-   每個查詢的最小記憶體數量之優先順序，高於 [[索引建立記憶體]](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) 選項。 若您同時變更了兩個選項，且索引建立記憶體選項小於每個查詢的最小記憶體，您會看到警告訊息，但仍會設定該值。 執行查詢時，您會看到另一個類似的警告。  
   
 ###  <a name="Recommendations"></a> 建議  
   
 -   這個選項是進階選項，只有有經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術人員才可變更。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢處理器會嘗試判斷要配置給查詢的最佳記憶體數量。 min memory per query 選項可讓系統管理員指定任何單一查詢所接收的最小記憶體數量。 若查詢中含有大量資料的雜湊和排序作業，則這些查詢通常會接收比此值更多的記憶體。 提高 min memory per query 的值也許可以改善一些小型至中型查詢的效能，但這樣做也可能導致競用記憶體資源的情形增加。 每個查詢的最小記憶體選項包含了為進行排序所配置的記憶體。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢處理器會嘗試判斷要配置給查詢的最佳記憶體數量。 min memory per query 選項可讓系統管理員指定任何單一查詢所接收的最小記憶體數量。 若查詢中含有大量資料的雜湊和排序作業，則這些查詢通常會接收比此值更多的記憶體。 提高 min memory per query 的值也許可以改善一些小型至中型查詢的效能，但這樣做也可能導致競用記憶體資源的情形增加。 每個查詢的最小記憶體選項包含為排序作業所配置的記憶體。  
+
+-    因為查詢必須等到其可取得要求的最小記憶體，或是等到超過查詢等待伺服器設定選項中指定的值為止，所以請勿將每個查詢的最小記憶體伺服器設定選項設得太大，特別是在非常忙碌的系統上。 如果可用的記憶體多於執行所需的指定最小值，那麼只要記憶體可以有效地供查詢使用，查詢就會利用額外的記憶體。 
   
 ###  <a name="Security"></a> 安全性  
   
@@ -98,8 +100,7 @@ GO
 EXEC sp_configure 'min memory per query', 3500 ;  
 GO  
 RECONFIGURE;  
-GO  
-  
+GO    
 ```  
   
 ##  <a name="FollowUp"></a> 待處理：設定 min memory per query 選項之後  

@@ -2,9 +2,12 @@
 title: "適用於 SQL Server 的教學課程 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,15 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2c9938f54717ccf38f849a55d6629375f568e5f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9e7eec3322fecf2df16624ce63f0188c526108d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="tutorials-for-sql-server"></a>適用於 SQL Server 的教學課程
-
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 提供可協助您了解新技術和功能的教學課程。 舊版的教學課程通常可用於較新版本。 當教學課程提及較新的功能時，將指出完成該教學課程所需的最低版本。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 提供教學課程，可協助您了解新技術和功能。 舊版的教學課程通常可用於較新版本。 當教學課程提及較新的功能時，將指出完成該教學課程所需的最低版本。  
      
 -   如果教學課程使用其中一個 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料庫，那麼您應該從 CodePlex 下載最新版本並加以使用。 如需詳細資訊，請參閱 [AdventureWorks 資料庫與 SQL Server 2016 CTP3 的指令碼](https://www.microsoft.com/download/details.aspx?id=49502)。    
 -   若要下載 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表搭配 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 教學課程使用，請前往 [SQL Server 2012 的 Power View 範例](http://go.microsoft.com/fwlink/?LinkId=220734)。  
