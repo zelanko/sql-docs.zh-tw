@@ -3,9 +3,12 @@ title: "Microsoft SQL 資料庫中的彈性查詢處理 | Microsoft Docs | Micro
 description: "可改善 SQL Server (2017 和更新版本) 和 Azure SQL Database 查詢效能的彈性查詢處理功能。"
 ms.custom: 
 ms.date: 11/13/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,15 +18,14 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 64f0c0226ab040eb8b43c4b62a6784296d22c6aa
-ms.sourcegitcommit: fa030c0d644bae31f9688b1cc3523f60834f13c5
+ms.openlocfilehash: 6be92bfbfdd149eb51c4151c3f4ff0d8fe0b4e91
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 資料庫中的彈性查詢處理
-
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 本文介紹的這些彈性查詢處理功能，可用來改善 SQL Server 和 Azure SQL Database 的查詢效能：
 - 批次模式記憶體授與意見反應。
@@ -69,7 +71,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 不同的參數值可能也需要不同的查詢計劃，以維持最佳狀態。 這類型的查詢即定義為「參數敏感」。 凡是參數敏感的計劃，如果記憶體授與意見反應有不穩定的記憶體需求，就會在查詢上自行停用。  計劃在查詢重複數輪後停用，透過監視 *memory_grant_feedback_loop_disabled* XEvent 可觀察到此狀況。
 
 ### <a name="memory-grant-feedback-caching"></a>記憶體授與意見反應快取
-意見反應可以儲存在快取計劃中供單次執行之用。 這是該陳述式的連續執行，但得益自記憶體授與意見反應的調整。 此功能適用於重複執行的陳述式。 記憶體授與意見反應僅會變更快取的計劃。 查詢存放區目前並未採用變更。
+意見反應可以儲存在快取計劃中供單次執行之用。 這是該陳述式的連續執行，但得益自記憶體授與意見反應的調整。 此功能適用於重複執行的陳述式。 記憶體授與意見反應僅會變更快取的計劃。 查詢存放區目前並未擷取變更。
 如已從快取收回計劃，則不保存意見反應。 如有容錯移轉，也會遺失意見反應。 使用 OPTION(RECOMPILE) 的陳述式會建立新的計劃，不是快取計劃。 因為它不是快取而來，所以不會產生記憶體授與意見反應，也不會儲存供編譯及執行。  不過，如果快取並重複執行了「不曾」使用 OPTION(RECOMPILE) 的對等陳述式 (亦即使用相同的查詢雜湊)，則連續的陳述式可得益於記憶體授與意見反應。
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>追蹤記憶體授與意見反應活動

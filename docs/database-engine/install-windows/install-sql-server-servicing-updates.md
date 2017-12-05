@@ -1,12 +1,13 @@
 ---
 title: "安裝 SQL Server 服務更新 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: c3575f248a06e596cefea9c41a86bff1e3ebeb09
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 760625b44f96422eabb6f753dab02c47da4f0750
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-servicing-updates"></a>安裝 SQL Server 服務更新
-本主題提供有關安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]更新的資訊。 本節提供下列作業的相關資訊：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題提供安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 更新的相關資訊。 本節提供下列作業的相關資訊：  
   
 - 在進行新安裝期間安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 的更新。  
   

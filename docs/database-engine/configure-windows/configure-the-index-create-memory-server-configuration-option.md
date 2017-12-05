@@ -1,7 +1,7 @@
 ---
 title: "設定 index create memory 伺服器組態選項 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c9e2a10cd21015fa56a2081e359baf3b9198064
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8aab31080adfc6235d6110aa0ad21159996bfcff
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>設定 index create memory 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **index create memory** 選項會控制最初配置來建立索引的記憶體數量上限。 這個選項的預設值是 0 (自我設定)。 若稍後在建立索引時需要更多記憶體，且有足夠的記憶體可用，則伺服器會使用該記憶體，因而超過此選項的設定。 若沒有更多可用的記憶體，則會使用預先配置的記憶體繼續進行索引建立作業。  
+  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 [索引建立記憶體] 選項會控制在建立索引時，一開始為排序作業所配置的記憶體數量上限。 這個選項的預設值是 0 (自我設定)。 若稍後在建立索引時需要更多記憶體，且有足夠的記憶體可用，則伺服器會使用該記憶體，因而超過此選項的設定。 若沒有更多可用的記憶體，則會使用預先配置的記憶體繼續進行索引建立作業。  
   
  **本主題內容**  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   **min memory per query** 選項之設定的優先順序高於 **index create memory** 選項。 若您同時變更了兩個選項，且 **index create memory** 小於 **min memory per query**，您會看到警告訊息，但仍會設定該值。 執行查詢時，您會看到同樣的警告。  
+-   **[[每個查詢的最小記憶體]](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 選項之設定，優先順序高於 **[索引建立記憶體]** 選項。 若您同時變更了兩個選項，且 **index create memory** 小於 **min memory per query**，您會看到警告訊息，但仍會設定該值。 執行查詢時，您會看到同樣的警告。  
   
 -   使用資料分割資料表與索引時，如果有非對齊之資料分割索引與高度平行處理，建立索引時所需的最低記憶體需求會大幅增加。 此選項會控制在單一索引建立作業中，為所有索引資料分割配置的初始記憶體數量總計。 若此選項設定的記憶體數量小於執行查詢所需的最低記憶體需求，則查詢會終止，且會顯示錯誤訊息。  
   
@@ -61,7 +61,9 @@ ms.lasthandoff: 11/20/2017
   
 -   這個選項是進階選項，只有有經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術人員才可變更。  
   
--   [索引建立記憶體] 選項為自我設定，並且通常不需要調整便可使用。 然而，如果無法建立索引，請考慮增加這個選項的執行值。  
+-   **[索引建立記憶體]** 選項為自我設定，並且通常不需要調整便可使用。 然而，如果無法建立索引，請考慮增加這個選項的執行值。  
+
+-   對生產系統建立索引通常是難得執行的工作，多半排程為工作在離峰時間執行。 因此，一旦有機會在離峰時間或是在建立索引不頻繁時，加大 **[索引建立記憶體]** 可能有助於改善建立索引的效能。 但仍請儘量將 **[[每個查詢的最小記憶體]](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 設定選項維持在較小的值，讓索引建立作業即使無法取得要求的記憶體，還是能夠啟動。
   
 ###  <a name="Security"></a> 安全性  
   

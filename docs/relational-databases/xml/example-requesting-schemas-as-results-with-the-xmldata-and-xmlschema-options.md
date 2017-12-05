@@ -2,9 +2,12 @@
 title: "範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當作結果 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 23b4fa4de47e1b2bb734d608654e5a9f67a491ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b00e028bcc0c14b803aad5203f0b5e88aecceea3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當做結果
-  下列查詢會傳回用於描述文件結構的 XML-DATA 結構描述。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 下列查詢會傳回描述文件結構的 XML-DATA 結構描述。  
   
 ## <a name="example"></a>範例  
   

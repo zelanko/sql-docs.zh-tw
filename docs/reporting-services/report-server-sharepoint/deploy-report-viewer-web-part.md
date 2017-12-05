@@ -14,11 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 347e737c378f79ec1bdd0de42d78c896c3c44f7a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 32a2cc64cb54fda7244a07ad8aff8463899f0b3d
+ms.sourcegitcommit: 4286dddf27dcdf1c8ef3ef134474e72559c2f65c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>將 SQL Server Reporting Services 報表檢視器網頁組件部署至 SharePoint 頁面
 
@@ -76,7 +76,7 @@ Microsoft 下載中心提供報表檢視器網頁組件。
 
 ## <a name="activate-feature"></a>啟用功能
 
-1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [網站設定]*。
+1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [網站設定]。
 
     ![從齒輪圖示開啟網站設定。](media/sharepoint-site-settings.png)
 
@@ -116,7 +116,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 撤銷解決方案不會從 SharePoint 網站中的網頁組件清單中移除報表檢視器網頁組件。 若要移除報表檢視器網頁組件，請執行下列作業。
 
-1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [網站設定]*。
+1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [網站設定]。
 
     ![從齒輪圖示開啟網站設定。](media/sharepoint-site-settings.png)
 
