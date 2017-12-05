@@ -1,5 +1,5 @@
 # [概觀](data-mining-extensions-dmx-reference.md)  
-# [新的與最近更新的文件](new-updated-dmx.md)
+# [新增及更新的發行項](new-updated-dmx.md)
 
 # [DMX 陳述式 - 資料定義](dmx-statements-data-definition.md)  
 ## [CREATE MINING STRUCTURE](create-mining-structure-dmx.md)  

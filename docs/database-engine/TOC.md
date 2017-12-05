@@ -11,7 +11,7 @@
 ## [SQL Server 2016 中已停用的功能](discontinued-database-engine-functionality-in-sql-server-2016.md)  
 ## [SQL Server 2017 中的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2017.md)  
 ## [SQL Server 2016 中的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
-## [新的與最近更新的文件](new-updated-database-engine.md)
+## [新增及更新的發行項](new-updated-database-engine.md)
 
 # [安裝](../database-engine/install-windows/installation-for-sql-server-2016.md)
 # [設定](../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)

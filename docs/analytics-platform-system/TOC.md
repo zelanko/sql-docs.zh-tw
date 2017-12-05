@@ -1,5 +1,6 @@
 # 關於此版本
 ## [新功能](whats-new-analytics-platform-system.md)
+## [新增及更新的發行項](new-updated-analytics-platform-system.md)
 
 # Architecture
 ## [平行處理資料倉儲概觀](parallel-data-warehouse-overview.md)

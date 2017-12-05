@@ -4,7 +4,7 @@
 # 新功能
 ## [SSMS 變更記錄和先前的版本](sql-server-management-studio-changelog-ssms.md)
 ## [版本資訊](download-sql-server-management-studio-ssms.md#release-notes)
-## [新的與最近更新的文件](new-updated-ssms.md)
+## [新增及更新的發行項](new-updated-ssms.md)
 
 # [下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)
 

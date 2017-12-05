@@ -156,7 +156,7 @@ ms.lasthandoff: 11/21/2017
  **已啟用 *資料庫名稱*的 Guest 帳戶**  
  唯讀屬性，表示選取的資料庫上是否啟用 Guest 帳戶。 使用 Guest 帳戶之 **[登入屬性]** 對話方塊的 **[狀態]** 頁面，啟用或停用 Guest 帳戶。  
   
- **資料庫角色成員資格對象: *資料庫名稱***  
+ **資料庫角色成員資格對象:** *資料庫名稱*  
  在指定的資料庫中選取使用者的角色。 在每一個資料庫中，所有使用者都是 **public** 角色的成員，且無法移除。 如需資料庫角色的詳細資訊，請參閱 [資料庫層級角色](../../../relational-databases/security/authentication-access/database-level-roles.md)。  
   
 ### <a name="securables"></a>[安全性實體]  
