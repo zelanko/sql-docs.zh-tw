@@ -3,7 +3,7 @@
 # 概觀
 ## [SQL Server Analysis Services 2016 的新功能](what-s-new-in-analysis-services.md)  
 ## [SQL Server Analysis Services 2017 的新功能](what-s-new-in-sql-server-analysis-services-2017.md) 
-## [新的與最近更新的文件](new-updated-analysis-services.md)
+## [新增及更新的發行項](new-updated-analysis-services.md)
 ## [工具和應用程式](tools-and-applications-used-in-analysis-services.md)   
 ## [比較表格式和多維度解決方案](comparing-tabular-and-multidimensional-solutions-ssas.md)  
 ## [SQL Server 2016 版本支援的 Analysis Services 功能](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   

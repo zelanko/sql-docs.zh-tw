@@ -1,5 +1,5 @@
 # [下載 SSDT](download-sql-server-data-tools-ssdt.md)
-# [新的與最近更新的文件](new-updated-ssdt.md)
+# [新增及更新的發行項](new-updated-ssdt.md)
 # [SSDT 的變更記錄](changelog-for-sql-server-data-tools-ssdt.md)
 # [資料層應用程式架構 - 授權條款](data-tier-application-framework-license-terms.md)
 # [舊版的 SSDT 和 SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)

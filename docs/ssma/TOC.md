@@ -1,5 +1,5 @@
 # [SQL Server 移轉小幫手](sql-server-migration-assistant.md)
-# [新的與最近更新的文件](new-updated-ssma.md)
+# [新增及更新的發行項](new-updated-ssma.md)
 
 # [Access +](../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md)
 # [DB2 +](../ssma/db2/installing-ssma-for-db2-db2tosql.md)

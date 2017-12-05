@@ -2,7 +2,7 @@
 
 # 概觀
 ## [Master Data Services 的新增功能](what-s-new-in-master-data-services-mds.md)  
-## [新的與最近更新的文件](new-updated-master-data-services.md)
+## [新增及更新的發行項](new-updated-master-data-services.md)
 ## [學習 SQL Server Master Data Services](learn-sql-server-master-data-services.md)  
 ## [SQL Server 範例：模型部署套件 (MDS)](sql-server-samples-model-deployment-packages-mds.md)  
 ## [SQL Server 2016 版本支援的 Master Data Services 和 Data Quality Services 功能](master-data-services-and-data-quality-services-features-support.md)  
