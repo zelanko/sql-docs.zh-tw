@@ -2,9 +2,12 @@
 title: "系統角色屬性 (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 9b8c79918ee560fc34ed7f642e54dd39e57a1264
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c2f2b1cbdb4d32c87af4614f4d8907b2d621c99b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="system-role-properties-management-studio"></a>系統角色屬性 (Management Studio)
   您可以使用 [系統角色] 頁面來檢視目前為報表伺服器定義的系統角色定義。 系統角色定義包含相對於整個網站 (而非個別項目) 所執行之工作的具名集合。 角色定義會指派給使用者或群組，以便建立產生的角色指派。 角色定義中的工作會指定使用者或群組可執行的工作。  

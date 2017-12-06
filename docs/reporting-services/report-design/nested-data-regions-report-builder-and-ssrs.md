@@ -2,9 +2,12 @@
 title: "巢狀資料區域 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: c8c0ce2fe9fcbdeb417770aba60e356ef889b667
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 59069ccd23dc528f27186772acbe30739c1fc4e1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>巢狀資料區 (報表產生器及 SSRS)
   您可以在一個資料區域 (例如矩陣) 內巢狀另一個資料區域 (例如圖表)，這樣通常可以透過精確的方式顯示資料摘要，或提供視覺化顯示以及資料表或矩陣顯示。  

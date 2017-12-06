@@ -2,9 +2,12 @@
 title: "報表設計師 F1 說明 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a3629ab42cef5cceeaccb8a969b003667808936f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a283102f53802dabef95b289f7dcab6a96af6c34
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-designer-f1-help"></a>報表設計師 F1 說明
   本節提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]報表設計師精靈、檢視和對話方塊的 F1 說明。 或者，您可以在使用對話方塊時，按下 F1 或按一下對話方塊中顯示的 [說明] 按鈕，來開啟 [F1 說明]。  

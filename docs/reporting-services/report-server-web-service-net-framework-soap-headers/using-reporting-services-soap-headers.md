@@ -2,9 +2,12 @@
 title: "使用 Reporting Services SOAP 標頭 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service-net-framework-soap-headers
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 60f5539eeaf9a529082a2c8db13decaa33d33ee1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a3aca058733efe1a4d211065683082117cdc8c65
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-reporting-services-soap-headers"></a>使用 Reporting Services SOAP 標頭
   使用 SOAP 與 Web 服務方法通訊需要遵循標準格式。 這個格式的一部分是編碼於 XML 文件中的資料。 XML 文件是由根 **Envelope** 項目所組成，該項目則是由必要的 **Body** 項目和選擇性的 **Header** 項目組成。 **Body** 項目包含訊息特定的資料。 選擇性的 **Header** 項目可能包含其他與特定訊息沒有直接關聯的資訊。 **Header** 項目的每個子項目都稱為 SOAP 標頭。  

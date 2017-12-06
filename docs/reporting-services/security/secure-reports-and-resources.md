@@ -2,9 +2,12 @@
 title: "保護報表和資源的安全 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f94e761021f97653e77eaf18a3825db869f8133e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 27a166e56c39fcaef49913838e44e32506a11d49
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="secure-reports-and-resources"></a>保護報表和資源的安全
   您可以設定個別報表以及資源的安全性，來控制使用者必須對這些項目擁有的存取權程度。 依預設，只有屬於 **管理員** 內建群組成員的使用者才可以執行報表、檢視資源、修改屬性及刪除項目。 其他所有使用者都必須具有針對他們所建立的角色指派，好讓他們存取報表或資源。  

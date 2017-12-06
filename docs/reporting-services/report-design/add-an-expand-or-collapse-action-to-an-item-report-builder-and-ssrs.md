@@ -2,9 +2,12 @@
 title: "將展開或摺疊動作新增項目中 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 24cdcaa5d1596b743f370aead53457358d20490a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bcde38a83f0d49ab917547c35fe34c59d5c65a6d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>將展開或摺疊動作加入項目中 (報表產生器及 SSRS)
   您可以讓使用者以互動方式展開或摺疊報表項目，或者針對資料表或矩陣，展開或摺疊與群組關聯的資料列和資料行。 若要讓使用者展開或摺疊項目，您可以設定該項目的可見性屬性。 設定可見性適用於 HTML 報表檢視器，有時稱為 *「向下鑽研」* (Drilldown) 動作。  

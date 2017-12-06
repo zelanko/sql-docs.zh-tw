@@ -2,9 +2,12 @@
 title: "允許文字方塊擴張或縮小 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 1bdcf9e8abfc51cf514bcc57b8591186a4768ac2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 821458f2eac2a87cd05a4070b60983957c745bd0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>允許文字方塊擴張或縮小 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，文字方塊不只是在報表設計介面上的獨立方塊。 資料表或矩陣 (Tablix 資料區) 中的每個資料格也都包含一個文字方塊，這個文字方塊能以和獨立文字方塊相同的方式進行格式化。依預設，文字方塊的大小是固定的。 您可以設定讓文字方塊根據其內容擴張或縮小的選項。 這些選項相當於 [屬性] 窗格中的 **CanGrow** 或 **CanShrink** 屬性。  

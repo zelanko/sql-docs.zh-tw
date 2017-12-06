@@ -2,9 +2,12 @@
 title: "建立自訂報表項目設計階段元件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-report-items
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 829a00acf7b22870fe185cd6c2c0a37338dee938
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 746ca3586d58f561278eb25ad9459e6102b8b55a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>建立自訂報表項目設計階段元件
   自訂報表項目設計階段元件是可用於 Visual Studio 報表設計工具環境的控制項。 自訂報表項目設計階段元件提供啟動的設計介面，這個介面與 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性瀏覽器相整合，可接受拖放作業，並能夠提供自訂屬性編輯器。  
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  自訂報表項目設計階段元件會實作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 元件。 本文件將描述自訂報表項目設計階段元件特定的實作詳細資料。 如需使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 來開發元件的詳細資訊，請參閱 MSDN Library 中的 [Visual Studio 中的元件](http://go.microsoft.com/fwlink/?LinkId=116576)。  
   
- 如需完全實作自訂報表項目的範例，請參閱 [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+ 如需完全實作的自訂報表項目的範例，請參閱 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   
 ## <a name="implementing-a-design-time-component"></a>實作設計階段元件  
  自訂報表項目設計階段元件的主類別是繼承自 **Microsoft.ReportDesigner.CustomReportItemDesigner** 類別。 除了用於 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 控制項的標準屬性外，元件類別還應該定義 **CustomReportItem** 屬性。 這個屬性必須與定義於 reportserver.config 檔案中的自訂報表項目的名稱相對應。 如需 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 屬性的清單，請參閱 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 文件集中的＜屬性＞。  

@@ -2,9 +2,12 @@
 title: "管理報表資料來源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 9e742dbe81b1220a045bc427b6da4bc829356b40
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c38232b3e2f201cc392d39cde0b5ffcb31ddf0db
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="manage-report-data-sources"></a>管理報表資料來源
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，報表、報表模型和資料驅動訂閱都會從外部資料來源擷取資料。 為了連接到外部資料來源，報表伺服器會使用在報表、模型或訂閱中定義，或者從其中參考的資料來源連接資訊。 資料來源連接屬性一定會在建立報表或模型時，使用報表或模型來定義，但是當報表或模型發行到報表伺服器之後，可以獨立管理這些屬性。  

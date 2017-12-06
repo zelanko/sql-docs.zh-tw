@@ -2,9 +2,12 @@
 title: "建立及管理 SharePoint 模式報表伺服器的訂用帳戶 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b34e48d7cda4b55a4162c2229f99e2bcdbcbb90e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1679abc5cdec550cd1c81208e71532613996e2cd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>建立及管理 SharePoint 模式報表伺服器的訂閱
   您可以建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱，傳遞以 SharePoint 模式報表伺服器整合的 SharePoint Web 應用程式報表。 訂閱可以將報表傳遞至文件庫、檔案資料夾，或以電子郵件傳送。 本主題摘要說明建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱的需求與步驟。  

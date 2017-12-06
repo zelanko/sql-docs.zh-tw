@@ -2,9 +2,12 @@
 title: "運算式中的資料類型 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: efd0b42180aa54a60c572c6c149aa53bd9ee852c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 51b8f1249bb257d3aea3752b6b593e470ae8c775
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>運算式中的資料類型 (報表產生器及 SSRS)
   資料類型代表不同種類的資料，以便讓系統能夠有效率地儲存和處理資料。 一般資料類型包括文字 (也稱為字串)、含與不含小數位數的數字、日期和時間，以及影像。 報表中的值必須是報表定義語言 (RDL) 資料類型。 當您在報表中顯示值時，可以根據您的喜好設定來格式化值。 例如，代表貨幣的欄位會當做浮點數儲存在報表定義中，但是可能會根據您選擇的格式屬性，以各種格式顯示此欄位。  

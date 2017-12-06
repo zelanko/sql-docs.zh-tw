@@ -2,9 +2,12 @@
 title: "報表伺服器 ExecutionLog 和 ExecutionLog3 檢視 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ccd6c7081233b6d677ad366e7796a03b01d5e13e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8458127daae58d63376f80dc1b67302928f9f943
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表伺服器執行記錄包含有關在伺服器上執行，或在原生模式向外延展部署或 SharePoint 伺服器陣列中多個伺服器上執行之報表的資訊。 您可以使用報表執行記錄來了解要求報表的頻率、最常使用的輸出格式，以及每一個處理階段所花費處理時間的毫秒數。 此記錄會包含執行報表之資料集查詢所花費時間長度的資訊，以及處理資料所花費的時間。 如果您是報表伺服器管理員，可以檢閱記錄資訊、識別長時間執行工作，並且向報表作者提出有關他們能夠改善之報表區域 (資料集或處理) 的建議。  

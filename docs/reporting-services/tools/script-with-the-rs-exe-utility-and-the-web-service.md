@@ -2,9 +2,12 @@
 title: "利用 rs.exe 公用程式與 Web 服務編寫指令碼 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f6c01ecec4f909ff4e5cbe445b1685b6dd07a750
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d5417fb473850fc0e2b97790d83af88474e930dc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>利用 rs.exe 公用程式與 Web 服務編寫指令碼
   開發人員與報表伺服器管理員可以在報表伺服器上，透過使用 **rs** 公用程式 (RS.exe) 來執行作業。 利用這個公用程式，您可以使用以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫的指令碼，透過程式設計方式管理報表伺服器。  

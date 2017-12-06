@@ -2,9 +2,12 @@
 title: "教學課程：將橫條圖新增至報表 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e05e6893c50dc0976b873dbd96caaf30d3dc76f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6039892e8cdd711102c2c3f647b0a201723b0eef
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教學課程：將橫條圖加入至報表 (報表產生器)
 在本教學課程中，您會使用 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 中的精靈，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表中建立圓形圖。 接著新增篩選，並加強圖表。 

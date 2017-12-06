@@ -1,10 +1,13 @@
 ---
 title: "報表伺服器內容管理 （SSRS 原生模式） |Microsoft 文件"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 67bae5bc2158db5a03272aa2756f5a15dd47fdbc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 21bafd5c07350c38ee14f7de27aaeab265f22e59
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>報表伺服器內容管理 (SSRS 原生模式)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，內容管理是指管理報表伺服器項目。 所有項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。 從 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 開始可以使用  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站。 本文會探討報表管理員和新的入口網站體驗。  

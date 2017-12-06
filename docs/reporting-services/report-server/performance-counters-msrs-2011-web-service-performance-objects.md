@@ -2,9 +2,12 @@
 title: "效能計數器 MSRS 2011 Web Service、效能物件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d75a88f416a41812b2e4e6cd99b87c2a5279e985
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 75a3ae82313f5dcf1486d60ddc747b109ae1fecd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>效能計數器 MSRS 2011 Web Service、效能物件
   本主題描述 **MSRS 2011 Web Service** 和 **MSRS 2011 Windows Service** 效能物件的效能計數器。 這些物件是 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 原生模式部署的一部分。  

@@ -2,9 +2,12 @@
 title: "建立、修改及刪除共用資料來源 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: fa6fb63a3766dc5f4f40a1a3891119c867b8aaf7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2bb9f43c7a19513edfa469779e6de9a53ce3b1be
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>建立、修改及刪除共用資料來源 (SSRS)
   共用資料來源是一組資料來源連接屬性，可供多個報表、模型以及在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上執行的資料驅動訂閱參考。  共用資料來源提供一種簡單的方式，可用來管理通常會隨著時間而變更的資料來源屬性。 如果使用者帳戶或密碼變更，或者如果您將資料庫移到不同的伺服器，可以在一個地方更新連接資訊。  

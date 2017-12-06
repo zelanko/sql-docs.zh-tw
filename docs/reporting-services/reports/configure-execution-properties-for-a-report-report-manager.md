@@ -2,9 +2,12 @@
 title: "設定報表的執行屬性 (報表管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 17a12495002c7a243ea410d26b8a4ad6cafaac3e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5964bc338f54a2c506df4edcc545d8e28429880c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>設定報表的執行屬性 (報表管理員)
   您可以設定報表處理選項，以便指定擷取報表資料的時間。 如果外部資料來源是在特定時間重新整理 (例如，每日或每週重新整理的資料倉儲)，而且您想要避免每次要求報表都擷取相同資料的負擔，排程報表的資料處理就很有用。 此外，如果您想要控制外部資料庫伺服器的處理負載，或者當您想要針對必須使用相同資料集的多位使用者提供一致的結果時，排程資料處理也很有用。 若為變動資料，視需要報表可能會在不同的時間產生不同的結果。 相對地，報表快照集可讓您針對包含相同時間資料的其他報表或分析工具，進行有效的比較。  

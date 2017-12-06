@@ -2,9 +2,12 @@
 title: "啟用遠端錯誤 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 1d409aa01ca3d060068fa9045b0a1fafec8bf3fe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: afdb8a3c8dbd683853f5cc7a129fa52009d13764
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="enable-remote-errors-reporting-services"></a>啟用遠端錯誤 (Reporting Services)
   您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上設定伺服器屬性，以便傳回有關遠端伺服器上發生之錯誤狀況的其他資訊。 如果錯誤訊息包含「如需有關此錯誤的詳細資料，請導覽至本機伺服器電腦上的報表伺服器，或啟用遠端錯誤」這段文字，您可以設定 **EnableRemoteErrors** 屬性來存取可幫助您排解疑難問題的其他資訊。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) 報表伺服器系統屬性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

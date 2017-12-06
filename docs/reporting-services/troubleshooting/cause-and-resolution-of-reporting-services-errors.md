@@ -2,9 +2,12 @@
 title: "Reporting Services 錯誤的原因和解決方案 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0f13ebef237e353886dac2b66d6f1547433e093a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b3a628528072e711b0fdb7f3266313b2961a630e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 錯誤的原因和解決方案
   本主題包含數個與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]相關之錯誤的原因和解決方案資訊。 本節中的錯誤訊息主題提供錯誤訊息的說明、可能的原因，以及您可以採取哪些動作以更正問題。  

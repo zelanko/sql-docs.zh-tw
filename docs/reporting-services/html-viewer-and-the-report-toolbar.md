@@ -1,9 +1,13 @@
 ---
 title: "HTML 檢視器和報表工具列 | Microsoft Docs"
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
+ms.custom: 
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 2d42edc002d7dffe1747c0219e4da4dd48e9ba00
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bbb4d1492bb3abf35d9e3bc3047b9f1d4f3fcfa5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 檢視器和報表工具列
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了 HTML 檢視器，可用來從報表伺服器要求報表時，視需要顯示這些報表。 HTML 檢視器提供以 HTML 檢視報表的架構。 其中包含報表工具列、參數區段、認證區段以及文件對應。 HTML 檢視器中的報表工具列含有可用來處理報表的功能，包括可以讓您以非 HTML 格式檢視報表的匯出選項。 只有在開啟設定為使用參數和文件引導模式控制項的報表時，才會顯示參數區段和文件引導模式。  

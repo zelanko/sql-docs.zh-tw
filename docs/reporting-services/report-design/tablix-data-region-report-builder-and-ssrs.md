@@ -2,9 +2,12 @@
 title: "Tablix 資料區 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 49d872c920e735ffa2b1891f09c16e2738518b69
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 90f52e1c600c0f866eb6a2754c486d0c4e5af08a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Tablix 資料區 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]中，Tablix 資料區是一種廣義的配置報表項目，可在組織到資料列和資料行的資料格中顯示分頁報表資料。 報表資料可以是從資料來源擷取時的詳細資料，或者是組織到您指定之群組中的彙總詳細資料。 每個 Tablix 資料格可以包含任何報表項目，例如文字方塊或影像，或是其他資料區，例如 Tablix 區、圖表或量測計。 若要將多個報表項目加入至資料格，請先加入當做容器使用的矩形。 然後再將報表項目加入至矩形。  

@@ -2,9 +2,12 @@
 title: "運算式中的內建集合 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 36edefef85ac163d9755328752af05563691cc17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b92f8a42033da33b867393b67b26efaaaf9899af
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>運算式中的內建集合 (報表產生器)
   在報表的運算式中，您可以包含下列內建集合的參考：ReportItems、Parameters、Fields、DataSets、DataSources、Variables，以及類似報表名稱等全域資訊的內建欄位。 並不是所有的集合都會顯示在 **[運算式]** 對話方塊中。 只有報表伺服器上已發行的報表，才可以在執行階段使用 DataSets 和 DataSources 集合。 ReportItems 集合是報表區域中的文字方塊集合，例如在頁面或頁首中的文字方塊。  

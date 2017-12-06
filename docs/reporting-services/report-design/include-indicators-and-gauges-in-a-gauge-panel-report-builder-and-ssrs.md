@@ -2,9 +2,12 @@
 title: "在量測計面板中加入指標與量測計 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4597b87876b52b41810f62423a59fef7b45394b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 863d9eb4f059fa46b0f8584af09718cb46dec859
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>在量測計面板中加入指標與量測計 (報表產生器及 SSRS)
   量測計面板是最上層的容器，其中保存一個或多個量測計和指標。 指標可以內嵌在量測計中，或置於量測計面板旁邊。  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/09/2017
   
 8.  以滑鼠右鍵按一下量測計，按一下 [新增指標]，然後按一下 [子系]。 [選取指標樣式] 對話方塊隨即開啟。  
   
-9. 在左窗格的 [選取指標樣式] 對話方塊中，按一下您想要的指標類型，然後按一下指標集合。  
+9. 在左窗格的 [Select Indicator Style] (選取指標樣式) 對話方塊中，按一下您想要的指標類型，然後按一下指標集合。  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/09/2017
   
 8.  以滑鼠右鍵按一下量測計，按一下 [新增指標]，然後按一下 [相鄰]。 [選取指標樣式] 對話方塊隨即開啟。  
   
-9. 在左窗格的 [選取指標樣式] 對話方塊中，按一下您想要的指標類型，然後按一下指標集合。  
+9. 在左窗格的 [Select Indicator Style] (選取指標樣式) 對話方塊中，按一下您想要的指標類型，然後按一下指標集合。  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

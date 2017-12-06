@@ -2,9 +2,12 @@
 title: "使用我的報表 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3f8bf6c65bd022103f50704c35b2bae7556e247c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b80b260f392298dd02d37d411ae910d81b420715
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>使用我的報表 (報表產生器及 SSRS)
   在設定為原生模式的報表伺服器上，[我的報表] 資料夾是個人的工作空間，可以用來儲存和使用您所擁有的報表。 其他報表伺服器資料夾都是公開的，通常使用者必須具備進階權限才可以加入或修改資料夾內容。 相對地，[我的報表] 資料夾是使用者自行管理的工作空間。 您可以加入或移除報表和資料夾，以及使用個人化的設定來儲存連結報表。  

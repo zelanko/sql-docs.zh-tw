@@ -2,9 +2,12 @@
 title: "設計檢視 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 461e68458cc754355a172e607bfa638ae1eb2eb0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6d683ce26988ec3edda4706f3fa6903bb52ca556
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="design-view"></a>設計檢視
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表設計師中，使用 [設計] 檢視，即可排列報表中的報表項目。 [設計] 檢視有時稱為設計介面或配置檢視。  

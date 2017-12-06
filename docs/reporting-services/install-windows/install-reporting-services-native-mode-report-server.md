@@ -1,10 +1,13 @@
 ---
 title: "安裝 Reporting Services 原生模式報表伺服器 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 15a6372f34d1490499880d89e32ac8f0804b0fb8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9feeb8c3f7e9d2c1d365e8d6ad7f327e20d80b4f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>安裝 Reporting Services 原生模式報表伺服器
 
@@ -169,7 +172,7 @@ ms.lasthandoff: 11/09/2017
   
  [疑難排解 Reporting Services 安裝](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
   
-##  <a name="bkmk_additional_configuration"></a> 其他組態  
+##  <a name="bkmk_additional_configuration"></a> 其他設定  
   
 -   若要設定 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 整合，以將報表項目釘選到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板，請參閱 [Power BI 報表伺服器整合](../../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)。  
   

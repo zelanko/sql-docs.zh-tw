@@ -2,9 +2,12 @@
 title: "在數列上顯示工具提示 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 669d6fdc4560d40b0cb3cfb165c4622a0f6b4eb1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3244afa1caf23e6c60410419c48d8fa4d8876a42
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>在數列上顯示工具提示 (報表產生器及 SSRS)
   您可以將工具提示加入圖表數列上的每個資料點，以顯示與資料點相關的資訊，例如，群組名稱、資料點的值，或相對於數列總數之資料點的百分比。 在使用者將滑鼠指標停留在已轉譯之分頁報表中的資料點時，就會看到這項資訊。  

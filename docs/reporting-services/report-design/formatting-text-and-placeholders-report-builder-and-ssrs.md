@@ -2,9 +2,12 @@
 title: "格式化文字和預留位置 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7022c0f2662d62f5ff74a1c1d67a2e4f85f5a681
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e3dbe51460c639d7574df42ad9d0a275e80cdbd5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>格式化文字和預留位置 (報表產生器及 SSRS)
   文字方塊可以是資料區內包含文字的報表項目或個別資料格、導出欄位、資料庫中欄位的指標，或是所有這三個項目的組合。 您可以混合字型和色彩、加入粗體和斜體樣式，以及使用對齊和首行縮排等段落樣式。 您可以格式化整個文字方塊，也可以格式化文字方塊內的特定文字、數字、運算式或欄位。  

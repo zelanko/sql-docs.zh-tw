@@ -2,10 +2,10 @@
 title: "升級 SQL Server 容錯移轉叢集執行個體 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-high-availability
@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4cc4c589c9b30d3ae05ec4c273e5376da29dbcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 48d80ca9c0e939f0d70cac411014b41cc1e777b4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>升級 SQL Server 容錯移轉叢集執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集升級為新版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 或累積更新，或在所有容錯移轉叢集節點上個別安裝至新的 Windows Service Pack 或累積更新，而且停機限制為單次手動容錯移轉 (回復為原始主要複本時則為兩次手動容錯移轉)。  

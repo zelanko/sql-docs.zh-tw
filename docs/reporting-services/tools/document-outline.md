@@ -2,9 +2,12 @@
 title: "文件大綱 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0d2e671ec8553abfe3b96d5fafa4dd639823d7e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b91ff4f78091405ebdf47e8d164e1f8c70cef37d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="document-outline"></a>文件大綱
   使用 [文件大綱] 視窗檢視報表中報表項目的階層。 Tablix 資料區域會顯示 Tablix 資料格中所包含的所有文字方塊及其他報表項目。 當您在設計介面上選取報表項目時，會在 [文件大綱] 視窗中選取對應的報表項目。 使用這個檢視，在設計介面上尋找報表項目。 例如，當您預覽包含運算式錯誤的報表時，[輸出] 視窗會針對每個錯誤顯示一個訊息。 訊息包含運算式錯誤之文字方塊的名稱。 您可以在 [文件大綱] 視窗中按一下文字方塊的名稱、在設計介面上顯示為已選取，然後檢視包含錯誤的運算式。  

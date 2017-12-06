@@ -2,9 +2,12 @@
 title: "訂用帳戶設定與檔案共用帳戶 (設定管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f0f86350f35ccf9843328fc8f8795a0ed2215f7f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a39e6c65d56d17330a3ffbcf5b1b2bace51d93ac
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>訂閱設定與檔案共用帳戶 (Configuration Manager)
   使用 **Configuration Manager 的 [訂閱設定]**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面，針對原生模式報表伺服器與檔案共用訂閱設定檔案共用帳戶。 檔案共用帳戶可讓您在將報表傳遞至檔案共用的多個訂閱中，使用單一認證組合。 當變更認證時，您可針對檔案共用帳戶設定變更，而無須更新每個個別訂閱。  

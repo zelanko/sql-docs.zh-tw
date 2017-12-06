@@ -2,9 +2,12 @@
 title: "設定報表伺服器 URL (SSRS 設定管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 10a3b057521c849fadae8bbe38b54317acf22a81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 87c3c32e3068d9b3d1303697b846664d2e5cadb0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>設定報表伺服器 URL (SSRS 組態管理員)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，URL 是用來存取報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]。 在您可以使用其中一個應用程式以前，您至少必須為此 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]設定一個 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會針對在大多數部署方案下運作良好的這兩個應用程式 URL 提供預設值，其中包括與其他 Web 服務和應用程式並存的部署。  

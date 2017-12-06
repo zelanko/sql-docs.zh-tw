@@ -2,9 +2,12 @@
 title: "使用我的訂閱 (原生模式報表伺服器) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2c79c95756003d4b019834ca99a8800eb57034da
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e6482fde0811b8dac118be7385b49733d757e689
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>使用我的訂閱 (原生模式報表伺服器)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站包括 [我的訂閱] 頁面，將您所有的訂閱組織在一個地方。 您可以使用 [我的訂閱] 來檢視、修改、啟用、停用和刪除現有的訂閱。 然而，無法用它來建立訂閱。  [我的訂閱] 僅顯示您所建立的訂閱。 即使您已經加入成為其他使用者擁有之訂閱的訂閱者，它一樣不會列出其他使用者擁有的訂閱，也不會顯示資料驅動訂閱。

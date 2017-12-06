@@ -2,9 +2,12 @@
 title: "Reporting Services (SSRS) 支援的資料來源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -26,11 +29,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ba615acb50ae46324d9315feb97ef10502cbac2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 96b080d0244783a3af13c8bbe4a7f1587cb10f18
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services (SSRS) 支援的資料來源
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會透過使用資料處理延伸模組的模組化與可延伸資料層，擷取資料來源中的報表資料。 若要擷取資料來源中的報表資料，您必須選取資料處理延伸模組，其同時支援資料來源的類型 (也就是在資料來源上執行的軟體版本) 與資料來源平台 (32 位元或 64 位元 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])。  
@@ -275,7 +278,7 @@ ms.lasthandoff: 11/09/2017
   
  此延伸模組支援多重值參數。 您可以在 TEXT 查詢模式下使用 EXECUTE 命令指定查詢中的巨集。  
   
- 如需詳細資訊，請參閱 [Teradata 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)。  
+ 如需詳細資訊，請參閱 [Teradata 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)。  
   
  您也可以根據 Teradata 資料庫建立模型。 如需詳細資訊，請參閱 Teradata 網站上的以下白皮書： [Microsoft SQL Server 2012 Reporting Services 和 Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(英文)。  
   
@@ -299,7 +302,7 @@ ms.lasthandoff: 11/09/2017
  您可以指定的認證是依照用戶端應用程式所使用的實作而定。 如需詳細資訊，請參閱 [SharePoint 清單連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)。  
   
 ###  <a name="XML"></a> XML 資料處理延伸模組  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括 XML 資料處理延伸模組，因此您可以在報表中使用 XML 資料。 可以從 XML 文件、Web 服務或是可透過 URL 存取的網路架構應用程式來擷取這些資料。 如需詳細資訊，請參閱 [XML 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)。 如需相關聯之查詢設計工具的詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)中的＜以文字為基礎的查詢設計工具＞一節。 如需範例，請參閱 [Reporting Services：使用 XML 與 Web 服務資料來源](http://go.microsoft.com/fwlink/?LinkId=81654)。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括 XML 資料處理延伸模組，因此您可以在報表中使用 XML 資料。 可以從 XML 文件、Web 服務或是可透過 URL 存取的網路架構應用程式來擷取這些資料。 如需詳細資訊，請參閱 [XML 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)。 如需相關聯之查詢設計工具的詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)中的＜以文字為基礎的查詢設計工具＞一節。 如需範例，請參閱 [Reporting Services：使用 XML 與 Web 服務資料來源](http://go.microsoft.com/fwlink/?LinkId=81654)。  
   
  [返回資料來源資料表](#DataSourcesTable)  
   

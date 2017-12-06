@@ -2,9 +2,12 @@
 title: "報表伺服器服務追蹤記錄 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a0410f4feb1525ca103d852b601145ec2585dc47
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 643bbac27a2db99f611a164e97da36c6e5204dbf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-service-trace-log"></a>報表伺服器服務追蹤記錄
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器追蹤記錄是 ASCII 文字檔，包含了報表伺服器服務作業的詳細資訊。  檔案中的資訊包括報表伺服器 Web 服務、Web 入口網站及背景處理所執行的作業。 追蹤記錄檔包括已記錄於其他記錄檔的重複資訊，加上別處所沒有的其他資訊。 如果您要偵錯包含報表伺服器的應用程式，或者調查寫入事件記錄或執行記錄的特定問題，追蹤記錄資訊會很有用。 例如，疑難排解訂閱問題時。  
@@ -77,7 +80,7 @@ ms.lasthandoff: 11/09/2017
 |**Prefix**|指定可區別記錄檔執行個體的產生值。|依預設，會將時間戳記附加至追蹤記錄檔名稱。 此值設定為 "appdomain, tid, time"。 請勿修改此設定。|  
 |**TraceListeners**|指定輸出追蹤記錄內容的目標。 您可以指定多重目標，每個目標之間請以逗號隔開。|有效值為：<br /><br /> <br /><br /> DebugWindow<br /><br /> File (預設值)<br /><br /> StdOut|  
 |**TraceFileMode**|指定追蹤記錄中是否要包含 24 小時內的資料。 每個元件每一天只能有一份追蹤記錄。|此值設定為「Unique (預設值)」。 請勿修改此值。|  
-|**元件類別**|使用下列格式來指定要產生追蹤記錄資訊的元件以及追蹤層級：<br /><br /> \<元件類別 :\<追蹤層級><br /><br /> 您可以指定全部或部分元件 (**all**、 **RunningJobs**、 **SemanticQueryEngine**、 **SemanticModelGenerator**)。 如果不要產生特定元件的資訊，可以停用該元件的追蹤 (例如 "SemanticModelGenerator:0")。 請不要停用 **all**的追蹤。<br /><br /> 如果要檢視為每個語意查詢產生的 Transact-SQL 陳述式，您可以設定 "SemanticQueryEngine:4"。 Transact-SQL 陳述式就會記錄在追蹤記錄中。 下列範例說明將 Transact-SQL 陳述式加入記錄的組態設定：<br /><br /> \<add name="元件" value="all,SemanticQueryEngine:4" />|元件類別可設定為：<br /><br /> <br /><br /> **All** 用於針對所有不屬於特定類別的程序，追蹤其一般報表伺服器活動。<br /><br /> **RunningJobs** 用於追蹤進行中報表或訂閱作業。<br /><br /> **SemanticQueryEngine** 用於追蹤語意查詢，語意查詢會在使用者對以模型為基礎的報表執行隨選資料瀏覽時處理。<br /><br /> **SemanticModelGenerator** 用於追蹤模型產生。<br /><br /> **http** 是用於啟用報表伺服器 HTTP 記錄檔。 如需詳細資訊，請參閱＜ [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)＞。|  
+|**元件類別**|使用下列格式來指定要產生追蹤記錄資訊的元件以及追蹤層級：<br /><br /> \<元件類別>:\<追蹤層級><br /><br /> 您可以指定全部或部分元件 (**all**、 **RunningJobs**、 **SemanticQueryEngine**、 **SemanticModelGenerator**)。 如果不要產生特定元件的資訊，可以停用該元件的追蹤 (例如 "SemanticModelGenerator:0")。 請不要停用 **all**的追蹤。<br /><br /> 如果要檢視為每個語意查詢產生的 Transact-SQL 陳述式，您可以設定 "SemanticQueryEngine:4"。 Transact-SQL 陳述式就會記錄在追蹤記錄中。 下列範例說明將 Transact-SQL 陳述式加入記錄的組態設定：<br /><br /> \<add name="元件" value="all,SemanticQueryEngine:4" />|元件類別可設定為：<br /><br /> <br /><br /> **All** 用於針對所有不屬於特定類別的程序，追蹤其一般報表伺服器活動。<br /><br /> **RunningJobs** 用於追蹤進行中報表或訂閱作業。<br /><br /> **SemanticQueryEngine** 用於追蹤語意查詢，語意查詢會在使用者對以模型為基礎的報表執行隨選資料瀏覽時處理。<br /><br /> **SemanticModelGenerator** 用於追蹤模型產生。<br /><br /> **http** 是用於啟用報表伺服器 HTTP 記錄檔。 如需詳細資訊，請參閱＜ [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)＞。|  
 |元件類別的**tracelevel** 值|\<元件類別>:\<追蹤層級><br /><br /> <br /><br /> 如果您沒有將追蹤層級附加至元件，就會使用針對 **DefaultTraceSwitch** 所指定的值。 例如，如果指定 "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator"，所有元件都會使用預設追蹤層級。|追蹤層級的有效值包括：<br /><br /> <br /><br /> 0= 停用追蹤<br /><br /> 1= 例外狀況和重新啟動<br /><br /> 2= 例外、重新啟動和警告<br /><br /> 3= 例外、重新啟動、警告和狀態訊息 (預設值)<br /><br /> 4= 詳細資訊模式<br /><br /> 報表伺服器的預設值是："all:3"。|  
   
 ##  <a name="bkmk_add_custom"></a> 新增自訂組態設定來指定傾印檔位置  

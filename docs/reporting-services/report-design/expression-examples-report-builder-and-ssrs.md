@@ -2,9 +2,12 @@
 title: "運算式範例 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -31,11 +34,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: e76028d17363d05047531dd11da6021d766d59bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 860bf17283de6fc522c956ed0c9f4ee26497be8b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>運算式範例 (報表產生器及 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中常會使用運算式來控制內容與報表的外觀。 運算式是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]所撰寫，而且可以使用內建函數、自訂程式碼、報表與群組變數，以及使用者定義的變數。 運算式以等號 (=) 當做開頭。 如需運算式編輯器以及可包含之參考類型的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 和[新增運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)。  
@@ -240,7 +243,7 @@ ms.lasthandoff: 11/09/2017
   
     ```  
   
--   當測試的條件有三個或三個以上時， **[!INCLUDE[dnprdnshort](../Token/dnprdnshort_md.md)]** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 函數對於變更現有字串的格式 (例如，格式化電話號碼) 很有用處。 下列運算式使用 **Replace** 函數，將欄位中十位數電話號碼的格式從 "*nnn*-*nnn*-*nnnn*" 變更為 "(*nnn*) *nnn*-*nnnn*"：  
+-   當測試的條件有三個或三個以上時， [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 中的**Regex** 函數對於變更現有字串的格式 (例如，格式化電話號碼) 很有用處。 下列運算式使用 **Replace** 函數，將欄位中十位數電話號碼的格式從 "*nnn*-*nnn*-*nnnn*" 變更為 "(*nnn*) *nnn*-*nnnn*"：  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  

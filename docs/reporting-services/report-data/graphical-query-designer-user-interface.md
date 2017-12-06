@@ -2,9 +2,12 @@
 title: "圖形化查詢設計工具使用者介面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -25,11 +28,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 89fc51cda730b9227d80099bf3bb129d43b76a50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 27cbba801cfa54e30dc69534f6835b3c2d381dfc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="graphical-query-designer-user-interface"></a>圖形化查詢設計工具使用者介面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同時提供了圖形化查詢設計工具以及以文字為基礎的查詢設計工具來建立查詢，以便從關聯式資料庫中擷取資料作為報表設計師中的報表資料集。 使用圖形化查詢設計工具，可透過互動方式建立查詢及檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 資料來源類型的結果。 使用以文字為基礎的查詢設計工具，可指定多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、複雜查詢或命令語法以及以運算式為基礎的查詢。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。 如需使用特定資料來源類型的詳細資訊，請參閱 [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)。  

@@ -2,9 +2,12 @@
 title: "影像、文字方塊、矩形和線條 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7f03108d7806d126efca5db70465565ba1ae6d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ea493c80dba54d0c9b497c7c41423d24764a9533
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>影像、文字方塊、矩形和線條 (報表產生器及 SSRS)
   除了資料表、矩陣和圖表之類的資料區外， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表也會使用其他的報表項目 (例如影像、文字方塊和矩形) 來加入視覺趣味、反白顯示主要資訊，或提供相關的資訊。 您可以變更報表項目的格式。 例如，您可以加入框線或填補、變更初始的可見性或方向，或指定項目的精確大小及位置。  

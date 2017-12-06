@@ -2,9 +2,12 @@
 title: "將共用資料來源發行至 SharePoint 文件庫 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 9446eee0c8c36cb9a962de16da272c6ba5829891
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 255dcf9ef1b6cacb3d07d88d9984838e7d197dac
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>將共用資料來源發行至 SharePoint 文件庫
   若要將共用資料來源發行到以 SharePoint 整合模式執行的報表伺服器，您必須在報表設計師中設定報表專案屬性。 在專案屬性中，伺服器、報表和共用資料來源的所有參考都必須是完整 URL。  

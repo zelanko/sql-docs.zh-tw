@@ -2,9 +2,12 @@
 title: "將資料新增至 Tablix 資料區 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 13337dbbc9c1546c7e5443b8b2d2c9e02a7d66ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dc72748fdcb76e456c9c8155a5d91c83a1ad2483
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>將資料加入至 Tablix 資料區 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，若要在資料表或矩陣中顯示報表資料集的資料，請在每個資料格中，指定要顯示之資料集欄位的名稱。 您可以顯示詳細資料或群組資料。 如果您將群組加入到資料表或矩陣，則會自動加入群組值與群組資料的資料列和資料行。 接著，您可以加入資料的小計與總計。  

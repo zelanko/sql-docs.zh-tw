@@ -2,9 +2,12 @@
 title: "參數集合參考 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b944ac913b24c1da4eb5af6db5fe1f9c1eef4241
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b4b5fa050cbb69944039c143f3140086851a68ab
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>內建集合 - 參數集合參考 (報表產生器)
   報表參數是您可以從運算式參考的其中一個內建集合。 您可以在運算式中包含參數，以根據使用者所做的選擇來自訂報表資料及外觀。 可以針對提供 (*Fx*) 或 \<**運算式**> 選項的任何報表項目屬性或文字方塊屬性使用運算式。 您也可以用其他方法來使用運算式控制報表的內容及外觀。 如需詳細資訊，請參閱[運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)。  

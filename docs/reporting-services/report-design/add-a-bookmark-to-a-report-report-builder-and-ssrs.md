@@ -2,9 +2,12 @@
 title: "將書籤新增至報表 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6b1596b50f62a3e42ce592d3bc675cf19165ee46
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d08c5ede8ad95a151dc5a4d0e721d386490f3fa0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>將書籤加入至報表 (報表產生器及 SSRS)
   當您想要在報表中提供自訂內容資料表或是提供自訂內部導覽連結時，請將書籤或書籤連結加入到報表中。 一般來說，您會在報表中想要引導使用者的位置上加入書籤，例如每一個資料表或圖表的書籤，或是資料表或矩陣內顯示之唯一群組值的標籤。 您可以建立自己的字串當做書籤使用，或是針對群組設定群組運算式的標籤。  

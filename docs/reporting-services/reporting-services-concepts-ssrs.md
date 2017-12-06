@@ -2,9 +2,12 @@
 title: "Reporting Services 概念 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/25/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 383b918c5559810d426ea4a26742a9f3df3c0caa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cd2500d7c1d3dff0ee0a3c41b40e6f35bb4060d5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本主題提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念的簡短摘要。  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/09/2017
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供可用以自訂報表方案的可延伸架構。 報表伺服器支援自訂驗證延伸模組、資料處理延伸模組、報表處理延伸模組、轉譯延伸模組和傳遞延伸模組，以及在 RSReportServer.config 組態檔中適用於使用者的可設定延伸模組。 例如，您可以限制報表檢視器允許使用的匯出格式。 傳遞與報表處理延伸模組是選擇性的，但是您若要支援報表散發或自訂控制項，則是必要的。 如需詳細資訊，請參閱 [Reporting Services 延伸模組 &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)。  
   
 ### <a name="report-access"></a>報表存取 
- 視需要存取可讓使用者從報表檢視工具選取報表。 根據報表伺服器組態，您可以使用 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]( [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 組件)、SharePoint 文件庫 (以 SharePoint 整合模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時)、內嵌的 ReportViewer 控制項，或是使用 URL 存取的瀏覽器。 如需視需要存取報表的詳細資訊，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 視需要存取可讓使用者從報表檢視工具選取報表。 根據報表伺服器組態，您可以使用 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] ( [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 組件)、SharePoint 文件庫 (以 SharePoint 整合模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時)、內嵌的 ReportViewer 控制項，或是使用 URL 存取的瀏覽器。 如需視需要存取報表的詳細資訊，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
  訂閱會提供視需要執行報表的替代方案。 如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   

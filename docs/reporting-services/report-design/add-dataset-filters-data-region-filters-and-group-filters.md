@@ -2,9 +2,12 @@
 title: "新增資料集篩選、資料區篩選和群組篩選 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ed3e111ebce37b58c5a76a0dcb56a5a87d6c8810
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ead354a4f95b061f44728b76bbbccd6ef84606a0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>新增資料集篩選、資料區篩選和群組篩選
   在報表中，篩選屬於資料集、資料區域或資料區域群組的一部分，您可以篩選來限制報表中所要使用的資料。 如果您無法變更資料集查詢，那麼篩選便是協助您控制報表資料的好辦法，例如，如果您正在使用共用的資料集。  

@@ -2,9 +2,12 @@
 title: "報表模型連線 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3172a7164765b04b18046e043ed4d56205eafaca
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8b5e95cd5974f1bcef5ed5edf6c0708d8c856cc0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-model-connection-ssrs"></a>報表模型連接 (SSRS)
   若要包含來自報表模型的資料，您必須擁有以報表模型為基礎的資料集做為資料來源。 與其他報表資料來源不同的是，報表模型沒有資料延伸模組。 在報表產生器中，您會直接從報表伺服器瀏覽並選取模型。 在報表設計師中，您會指定報表模型的 URL。  

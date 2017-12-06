@@ -2,9 +2,12 @@
 title: "針對 Reporting Services 報表問題進行疑難排解 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3828cfd2e56ce5bf6005e6b5e2502c869df06aa8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7f74bae865a6d2fe3ec5fbd86c77b24af2284ff7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>針對 Reporting Services 報表問題進行疑難排解
 本主題可協助您對下列問題進行疑難排解： [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] 報表設計、預覽報表、以原生模式或 SharePoint 模式將報表發行至報表伺服器、在報表伺服器上檢視報表，或是將報表匯出為不同的檔案格式。  

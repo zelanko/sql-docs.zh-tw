@@ -2,9 +2,12 @@
 title: "Teradata 連線類型 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a8ea676c2160c51a85fe9b672166c63e068a2927
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3160bff59e5a6c84f73846d0741c9092116c98da
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="teradata-connection-type-ssrs"></a>Teradata 連接類型 (SSRS)
   若要在報表中包含來自 Teradata 關聯式資料庫的資料，您必須具有以 Teradata 類型的報表資料來源為基礎的資料集。 此內建的資料來源類型是以 .NET Managed Provider for Teradata 資料處理延伸模組為基礎。  

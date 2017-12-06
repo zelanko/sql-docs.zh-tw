@@ -2,9 +2,12 @@
 title: "新增背景影像 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 47029b9b4ed3508f9c937cac9c585e5c296e9ef4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e8384182f7eb57df836a9530af6baf3f0b008154
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>加入背景影像 (報表產生器及 SSRS)
   您可以將背景影像加入至報表項目 (如矩形、文字方塊、清單、矩陣、資料表和部分圖表) 或是加入至報表區段 (如頁首、頁尾或報表主體)。 您可以針對在 [屬性] 窗格中顯示 **[BackgroundImage]** 之報表設計介面上的任何選定項目來定義背景影像。 如同其他影像，背景影像可以是報表伺服器上影像的 URL、資料集欄位中的影像，或是報表定義中內嵌的影像。 若要使用內嵌在報表中的影像，您必須先將影像加入至報表定義，然後才可以將影像加入至設計介面。  

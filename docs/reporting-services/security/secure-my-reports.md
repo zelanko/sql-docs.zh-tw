@@ -2,9 +2,12 @@
 title: "保護我的報表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8c612e899a4ec7be7879d16f03f2a9528addb316
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff08b3c8e78fb337a97cbdf491a745157d52fd53
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="secure-my-reports"></a>保護我的報表
   [我的報表] 功能會提供用於報表之使用者管理的工作空間。 為達成其目的，[我的報表] 資料夾的權限，應較一般用途的其他資料夾為寬鬆。 使用者如果只有檢視及執行其他資料夾中之報表的權限，則需要一組擴充的權限來管理其 [我的報表] 資料夾和擁有的內容。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供此用途的特殊角色指派及角色定義。  

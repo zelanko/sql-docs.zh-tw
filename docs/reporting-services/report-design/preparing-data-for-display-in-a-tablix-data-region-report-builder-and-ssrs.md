@@ -2,9 +2,12 @@
 title: "準備要在 Tablix 資料區中顯示的資料 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6fafd7952d245d7292f3e0f54ae7bbcce864c1ee
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3c4550f888d208653a598d4301e4da3278f31fd7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>準備要在 Tablix 資料區中顯示的資料 (報表產生器及 SSRS)
   Tablix 資料區域會顯示資料集中的資料。 您可以檢視針對資料集擷取的所有資料，或者您可以建立篩選，讓您僅能看到資料的子集。 您也可以加入條件式運算式來填入 Null 值，或修改資料集的查詢來包含定義現有資料行之排序次序的資料行。  

@@ -2,9 +2,12 @@
 title: "與群組一起顯示頁首和頁尾 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 5c1004a59c0cda51fb5cf9230b81a18945765005
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 76748c3a02ca158e3519197b043ce8e4c978f915
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>與群組一起顯示頁首和頁尾 (報表產生器及 SSRS)
   您可以協助控制靜態資料列 (例如群組頁首或頁尾) 是否會與動態資料列 (與 Tablix 資料區中的群組有關聯) 一起轉譯。  

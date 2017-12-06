@@ -2,9 +2,12 @@
 title: "管理執行中的處理序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -33,11 +36,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 805c1ba338d75d49e6dbd48fb6f1d8af2f5e5701
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 30c9b46ae50450697f9288b0e40e062a20af8a82
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="manage-a-running-process"></a>管理執行中的處理序
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會監視在報表伺服器上執行之作業的狀態。 報表伺服器會以固定間隔執行進行中作業的掃描，並將狀態資訊寫入報表伺服器資料庫或服務應用程式資料庫 (如果是 SharePoint 模式)。 如果下列任一個處理序進行中，作業就是進行中：在遠端或本機資料庫伺服器上的查詢執行、報表處理，以及報表轉譯。  

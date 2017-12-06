@@ -2,9 +2,12 @@
 title: "使用 Reporting Services 安全性原則檔 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -25,11 +28,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7e007886cadd8cfe9775ebda2c2271f3fd66b17d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8e5be508787d44acd1c3356105cd3bd988b175a4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-reporting-services-security-policy-files"></a>使用 Reporting Services 安全性原則檔
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會將元件安全性原則資訊儲存在安裝過程中複製到檔案系統的三個組態檔內。 這些組態檔可能會包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中程式碼組件之內部使用和使用者定義安全性原則的組合。 這三個組態檔會對應至 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的三個安全性實體元件：報表伺服器和 Windows 服務、報表管理員 Web 應用程式，以及報表設計師預覽視窗。  

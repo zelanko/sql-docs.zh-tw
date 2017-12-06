@@ -2,9 +2,12 @@
 title: "在圓形圖外部顯示資料點標籤 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 199c77966ac02e8a7c293c0b9245b6e0249e3ac7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dd03d69009ee48fb88df575305bf2538e64a82a6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>在圓形圖外部顯示資料點標籤 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，圓形圖標籤經過最佳化，只會顯示在幾個資料扇形區上。 如果圓形圖包含的扇形區過多，標籤可能會重疊。 其中一種解決方法是將標籤顯示在圓形圖外部，這樣可能可以為較長的資料標籤創造更多空間。 如果您發現標籤仍會重疊，則可以透過啟用 3D 來建立更多的標籤空間。 如此可以縮減圓形圖的直徑，而在圖表外部建立更多空間。  

@@ -2,9 +2,12 @@
 title: "教學課程：將 KPI 新增至報表 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0ba9911d41a851ed51150d83e96b61c2e7ec2c2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7e3e6194d510371b5a7aed8cad4f2efe5d188687
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 加入至報表 (報表產生器)
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教學課程中，您會將關鍵效能指標 (KPI) 新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表。  

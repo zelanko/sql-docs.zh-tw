@@ -2,9 +2,12 @@
 title: "指定多個形狀圖報表產生器-在 SSRS 中一致的色彩 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 661d22ed1d594af2c282b61ec28eaaa37bd6821d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f73e01f06207255c7af761b46e48d0a35b1a8b40
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>跨多個形狀圖指定一致的色彩 (報表產生器及 SSRS)
   在分頁報表的非形狀圖上，您可以根據圖表中的數列索引， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 從調色盤選取新的色彩。 例如，圖表上的第一個數列將會對應到調色盤中的第一個色彩。 不過，對於形狀圖來說，這個行為是不同的。 在形狀圖上，調色盤中的每個色彩都會對應到資料集中的資料點。 例如，資料點 1 對應到調色盤中的第一個色彩，資料點 2 對應到調色盤中的第二個色彩等等。  

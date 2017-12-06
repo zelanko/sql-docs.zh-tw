@@ -2,9 +2,12 @@
 title: "角色定義 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 53968d85370c60720f4d6caf72054a869348b27d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d30bd923a2a88d4438c2700073cf8430966e0d2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="role-definitions"></a>角色定義
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，「角色定義」是一個具名的工作集合，這些工作會定義可在報表伺服器上執行的作業。 角色定義會提供報表伺服器用來強制執行安全性的規則。 當使用者嘗試執行工作 (例如發行報表) 時，報表伺服器就會檢查使用者的角色指派，以便判斷工作是否包含在其角色定義中。 如果工作包括在角色定義中，便會提交要求。  

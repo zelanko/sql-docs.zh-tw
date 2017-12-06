@@ -2,9 +2,12 @@
 title: "在圖表中新增或刪除群組 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5828189294b51d10f36c4d0250f6a7b5aa5f2151
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 573874566d91bdc732bf4e1919f85927a92fceb0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>在圖表中加入或刪除群組 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中，按一下圖表資料區域，以顯示 [圖表資料] 窗格。 將資料集欄位拖曳到 **[類別目錄群組]** 和 **[數列群組]** 區域來建立群組。 若要加入巢狀群組，請將多個欄位加入至該區域。  

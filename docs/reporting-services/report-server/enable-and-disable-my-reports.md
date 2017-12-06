@@ -2,9 +2,12 @@
 title: "啟用與停用我的報表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5c40e45fad4833f89154ea7b0338677251437b7f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 352e2118319664c4458c4e46ea5623bcf8290a45
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="enable-and-disable-my-reports"></a>啟用與停用我的報表
   [我的報表] 功能會配置報表伺服器資料庫中的個人儲存區，讓使用者能夠將自己的報表儲存在私人資料夾內。 身為報表伺服器管理員，您可以啟用或停用此功能，或修改安全性設定 (此設定會控制使用者可以在其工作空間執行哪些動作) 來變更此功能的運作方式。  

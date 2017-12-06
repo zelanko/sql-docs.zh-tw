@@ -2,9 +2,12 @@
 title: "電子郵件設定 - Reporting Services 原生模式 (設定管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6ecaee1ba9757745e7d1e884067fa9c06632c6e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4f4a978424825e4f54596ec2485818b47ce4d0c9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子郵件設定 - Reporting Services 原生模式 (組態管理員)
 Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透過電子郵件散發報表。 根據您定義電子郵件訂閱的方式而定，傳遞可能會由通知、連結、附加檔案或內嵌報表所組成。 電子郵件傳遞延伸模組可搭配現有的郵件伺服器技術一起使用。 郵件伺服器必須是 SMTP 伺服器或轉送器。 報表伺服器會透過作業系統提供的 Collaboration Data Objects (CDO) 程式庫 (cdosys.dll) 連接到 SMTP 伺服器。

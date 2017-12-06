@@ -2,9 +2,12 @@
 title: "格式化 Reporting Services 指令碼檔案 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 07ff237eee12f3cf3499ad30880adfecef157e3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f66d08b28265a6c6c0cb782dd6b8df7c00d7584a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="format-a-reporting-services-script-file"></a>格式化 Reporting Services 指令碼檔案
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指令碼是針對 Web Service Description Language (WSDL) 內建 Proxy 撰寫的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 程式碼檔案，其中會定義 Reporting Services SOAP API。 指令碼檔案會儲存為 Unicode 或 UTF-8 文字檔，且其副檔名為 .rss。  

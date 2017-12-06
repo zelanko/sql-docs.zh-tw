@@ -2,9 +2,12 @@
 title: "Reporting Services 中的檔案共用傳遞 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 0d0492a8bc9b5ef61e8ef8b1d237aac1f818abd5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dc40553b8a964ad542f22c983ffa7fae5dec243e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的檔案共用傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括檔案共用傳遞延伸模組，讓您可以傳遞報表到資料夾。 依預設，可以使用檔案共用傳遞延伸模組，且不需額外的組態。 若要順利完成檔案傳遞，您必須設定共用資料夾的寫入權限。 需要寫入者權限的帳戶可以排除訂閱中所設定的認證或針對報表伺服器所設定的「檔案共用帳戶」。 如需檔案共用帳戶的詳細資訊，請參閱 [訂閱設定與檔案共用帳戶 &#40;組態管理員&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 此外，需要存取報表的使用者必須擁有共用資料夾的讀取權限。  
@@ -83,7 +86,7 @@ ms.lasthandoff: 11/09/2017
   
  下圖是針對檔案共用傳遞所設定之訂閱的檔案設定範例。  
   
- ![檔案共用訂閱](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "檔案共用訂閱")  
+ ![檔案共用訂用帳戶](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "檔案共用訂用帳戶")  
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理原生模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   

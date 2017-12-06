@@ -2,9 +2,12 @@
 title: "設定量測計上範圍的格式 (報表產生器及 SSRS)| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 851b829cf66a2d89ba2753381dc1598e5bc439b6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e0202e6304e13851a62896d3bf83807bac7e805d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>設定量測計上範圍的格式 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，量測計範圍是量測計標尺上的一個區域，表示值在量測計上的重要子區段。 您可以使用量測計範圍，以視覺化的方式表示指標值靠近特定值範圍的時間。 範圍是由開始值和結束值所定義。  

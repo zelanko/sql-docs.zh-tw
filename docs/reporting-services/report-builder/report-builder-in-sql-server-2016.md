@@ -2,9 +2,12 @@
 title: "SQL Server 2016 的報表產生器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: bc8ac3d0ed00a6fda642ab09bf2a28e705a6b419
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c84b428355b76b69e15aa14fad713c5fdd9b575e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 的報表產生器
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 是撰寫分頁報表的工具，適合喜歡在獨立的環境中工作，而不是使用 Visual Studio 報表設計師的商務使用者。  當您設計分頁報表時，您建立的報表定義會指定資料的取得位置、要取得的資料，以及資料的顯示方式。 當您執行報表時，報表處理器會採用已指定的報表定義、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 中預覽報表，然後將報表發行至原生模式或 SharePoint 整合模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器，讓其他人執行報表。  

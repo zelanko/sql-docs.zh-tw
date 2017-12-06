@@ -2,9 +2,12 @@
 title: "報表設計檢視 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -27,11 +30,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4a5dc89785c680636b7747d26cb2e6a493223c09
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d98e581133e48ec19c9123973a39b6a9c0d3a0ac
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-design-view-report-builder"></a>報表設計檢視 (報表產生器)
   [報表產生器] 視窗的設計目的是要協助您輕鬆地組織報表資源和快速地建立所需的編頁報表。 設計介面位於視窗中央，並且具有功能區和窗格。 設計介面是您可以加入和組織報表項目的位置。 本文所說明的窗格可用來加入、選取並組織報表資源，以及變更報表項目屬性。  
