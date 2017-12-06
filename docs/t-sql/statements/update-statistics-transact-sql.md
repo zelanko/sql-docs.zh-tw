@@ -131,7 +131,7 @@ PERSIST_SAMPLE_PERCENT = {ON |OFF}
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)和[sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)公開選取統計資料的持續性的範例百分比值。
  
- **適用於**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)](開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。  
+ **適用於**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。  
  
  ON PARTITIONS ({ \<> |\<範圍 >}[，… n])] 會強制重新計算，並然後合併以建立全域統計 ON PARTITIONS 子句中指定之分割區區的分葉層級統計資料。 由於無法將使用不同取樣率建立的分割區區統計資料合併在一起，因此需要 WITH RESAMPLE。  
   

@@ -1,10 +1,13 @@
 ---
 title: "安裝 SQL Server (MySQLToSql) 上的 SSMA 元件 |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 190c3cfcb9d41af357bfffe2a247aa353e2676e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9e191282cdba94d3c3e48db0a59b7b6d90b6d5b6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>安裝 SQL Server (MySQLToSql) 上的 SSMA 元件
 除了安裝 SSMA，您也必須安裝元件正在執行的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 這些元件包括 SSMA 延伸模組組件，可支援資料移轉和 MySQL 提供者，以啟用伺服器對伺服器的連線。  
@@ -82,7 +85,7 @@ SSMA for MySQL 伺服器元件在安裝之前[!INCLUDE[ssNoVersion](../../includ
   
 11. 若要安裝到其他執行個體的公用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，選取**是**，然後按一下 **下一步**。 或者，若要結束精靈，請按一下**否**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [安裝 SSMA for MySQL 用戶端 &#40;MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
 [將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -2,9 +2,12 @@
 title: "報表伺服器屬性 （登入 索引標籤） |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 134c8ff1760e2c56c8d5298015dc56dbbbddbc98
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8e326dd97af3e3fbd8580bc5b624c6957a711293
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-properties-log-on-tab"></a>Report Server 屬性 (登入索引標籤)
-  您可以使用 **[Report Server 屬性]** 對話方塊的 **[登入]** 索引標籤來指定 Report Server 服務所使用的帳戶，以及啟動和停止該服務。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**登入** 索引標籤**Report Server 屬性**對話方塊來指定報表伺服器服務所使用的帳戶，以及啟動和停止該服務。  
   
 ## <a name="options"></a>選項。  
  **本機系統帳戶**  

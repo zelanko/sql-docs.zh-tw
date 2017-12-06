@@ -1,10 +1,13 @@
 ---
 title: "轉換、 載入和移轉 (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2bdc0bbcd65b726990c12767e2169e8b620c0aa5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 89e343044e82f00a2d5d7978c2571bd32fa6d09b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>轉換、 載入和移轉 (AccessToSQL)
 **轉換、 載入和移轉**對話方塊報告移轉狀態，當您使用 轉換、 載入和移轉 按鈕或 移轉精靈。  
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
 **報表**  
 顯示相關聯的轉換或移轉報表。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [使用者介面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
 [移轉精靈](http://msdn.microsoft.com/en-us/5bab5914-b2ae-4795-8cf5-83e42d64bef2)  
   

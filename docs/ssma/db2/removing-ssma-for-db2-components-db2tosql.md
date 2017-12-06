@@ -1,10 +1,13 @@
 ---
 title: "移除 SSMA for DB2 元件 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a7b78b858bc4af9820dd919d46d38e283920c1f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a5015a66df18f74e0c0490f9ba1b1bd57bef7846
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>移除 SSMA for DB2 元件 (DB2ToSQL)
 當您完成將資料庫移轉至 DB2 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可能想要解除安裝 SSMA 元件。 您可以在任何時間，以解除安裝用戶端元件。 不過，您不應該解除安裝的延伸模組組件，從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]除非您已移轉的資料庫不再使用中的函式**ssma_DB2**的結構描述**sysdb**資料庫。  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="uninstalling-the-extension-pack"></a>解除安裝延伸模組組件  
 如果您確定您已移轉的資料庫不會使用中的物件**sysdb.ssma_DB2**結構描述中，您可以藉由刪除從結構描述中移除延伸模組組件 – 沒有任何 Windows 解除安裝  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [SSMA 安裝 DB2 用戶端 &#40; DB2ToSQL &#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
 [SSMA 元件安裝 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
   

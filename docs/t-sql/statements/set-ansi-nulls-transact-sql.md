@@ -1,7 +1,7 @@
 ---
 title: "SET ANSI_NULLS (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.service: 
@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 19f61f2ba3274bb854f60073408cbceea9f4def7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a6ef51bb13ae7372175a390a3d8c5509550a3ad1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,24 +42,24 @@ ms.lasthandoff: 11/21/2017
   指定在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中搭配 Null 值一起使用時，等於 (=) 和不等於 (<>) 比較運算子的 ISO 標準行為。  
   
 > [!IMPORTANT]  
->  在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，ANSI_NULLS 一定會是 ON，而且明確將此選項設定為 OFF 的應用程式將會產生錯誤。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。  
+>  未來版本中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 ANSI_NULLS 是 ON，以及任何明確地將選項設為 OFF 的應用程式會產生錯誤。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>語法  
-  
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_NULLS { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_NULLS ON;  
-```  
-  
+
+## <a name="syntax"></a>語法
+
+```
+-- Syntax for SQL Server
+
+SET ANSI_NULLS { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_NULLS ON
+```
+
 ## <a name="remarks"></a>備註  
  當 SET ANSI_NULLS 是 ON 時，SELECT 陳述式，使用 WHERE *column_name* = **NULL**傳回零個資料列，即使有 null 值在*column_name*。 SELECT 陳述式，使用 WHERE *column_name* <> **NULL**傳回零個資料列，即使在非 null 值*column_name*。  
   
@@ -73,7 +73,7 @@ SET ANSI_NULLS ON;
   
  SET ANSI_NULLS 應該設為 ON，以便執行分散式查詢。  
   
- 當您建立或變更計算資料行索引或索引檢視表時，SET ANSI_NULLS 也必須是 ON。 如果 SET ANSI_NULLS 是 OFF，含計算資料行索引的資料表或索引檢視之任何 CREATE、UPDATE、INSERT 和 DELETE 陳述式會失敗。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤，列出違反必要值的所有 SET 選項。 另外，當您執行 SELECT 陳述式時，如果 SET ANSI_NULLS 是 OFF，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會忽略計算資料行或檢視的索引值，且會依照資料表或檢視沒有這類索引的相同方式來解析這項選取作業。  
+ 當您建立或變更計算資料行索引或索引檢視表時，SET ANSI_NULLS 也必須是 ON。 如果 SET ANSI_NULLS 是 OFF，含計算資料行索引的資料表或索引檢視之任何 CREATE、UPDATE、INSERT 和 DELETE 陳述式會失敗。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會傳回錯誤，列出違反必要的值的所有 SET 選項。 此外，當您執行 SELECT 陳述式，如果 SET ANSI_NULLS 是 OFF，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會忽略針對計算資料行或檢視表的索引值，並解決好像沒有這類索引的資料表或檢視表的 select 作業。  
   
 > [!NOTE]  
 >  ANSI_NULLS 是處理計算資料行索引或索引檢視表時，必須設成必要選項的七個 SET 選項之一。 ANSI_PADDING、ANSI_WARNINGS、ARITHABORT、QUOTED_IDENTIFIER 和 CONCAT_NULL_YIELDS_NULL 等選項也必須設成 ON，NUMERIC_ROUNDABORT 必須設成 OFF。  
@@ -84,7 +84,7 @@ SET ANSI_NULLS ON;
   
  SET ANSI_NULLS 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
- 若要檢視此設定的目前設定，請執行下列查詢。  
+ 若要檢視這項設定的目前設定，請執行下列查詢：
   
 ```  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  
@@ -167,7 +167,7 @@ DROP TABLE dbo.t1;
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SESSIONPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
  [= &#40;Equals &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/equals-transact-sql.md)   

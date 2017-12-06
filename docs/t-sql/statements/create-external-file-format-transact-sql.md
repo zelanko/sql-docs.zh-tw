@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 037f9e0da637b872298d3859499858620570bc41
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6db9730d5e0905d464a57151365a9413f61a86eb
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-external-file-format-transact-sql"></a>建立外部檔案格式 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -158,7 +158,7 @@ WITH (
 -   STRING_DELIMITER = '0x7E0x7E'-兩個 tildas (例如 ~ ~)
   
  DATE_FORMAT = *fieldinfo*  
- 指定自訂格式，可能會出現文字分隔的檔案中的所有日期和時間資料。 如果原始程式檔會使用預設 datefime 格式，不需要這個選項。 只有一個自訂的日期時間格式允許每個檔案。 您無法指定每個檔案的多個自訂日期時間格式。 不過，您可以使用多個日期時間格式，如果每個外部資料表定義中其各自的資料類型的預設格式。
+ 指定自訂格式，可能會出現文字分隔的檔案中的所有日期和時間資料。 如果原始程式檔會使用預設的日期時間格式，不需要這個選項。 只有一個自訂的日期時間格式允許每個檔案。 您無法指定每個檔案的多個自訂日期時間格式。 不過，您可以使用多個日期時間格式，如果每個外部資料表定義中其各自的資料類型的預設格式。
  
  
 PolyBase 只會使用自訂日期格式匯入資料。 它不使用自訂格式以將資料寫入至外部檔案。
@@ -356,7 +356,7 @@ WITH (
 );  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [建立外部 TABLE AS SELECT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

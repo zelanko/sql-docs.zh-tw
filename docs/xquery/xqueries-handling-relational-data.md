@@ -3,8 +3,11 @@ title: "XQueries 處理關聯式資料 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7a14ed2b176f65b379f9e09a7f920094a16b2f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 447ffa853f8a5b6a257cc7e2918feaddcbde8a0f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xqueries-handling-relational-data"></a>XQueries 處理關聯式資料
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   指定針對 XQuery **xml**類型資料行或變數使用其中一種[XML 資料類型方法](../t-sql/xml/xml-data-type-methods.md)。 這些包括**query （)**， **value （)**， **exist （)**，或**modify （)**。 對查詢中所識別出的 XML 執行個體執行 XQuery，以產生 XML 。  
   
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/09/2017
   
  如需詳細資訊，請參閱[: column （） 函數 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)和[: variable （） 函數 (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XML 建構 &#40;XQuery &#41;](../xquery/xml-construction-xquery.md)  

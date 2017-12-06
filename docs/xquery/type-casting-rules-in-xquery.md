@@ -3,8 +3,11 @@ title: "中的類型轉換規則 XQuery |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94e1dccc658f20ce15a392e11db531a741b3cbc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 31d3c181abbd099f0eec549ead909211e86b0422
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery 中的類型轉換規則
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   下列 W3C XQuery 1.0 與 XPath 2.0 函數與運算子規格圖表顯示內建資料類型。 這包含內建基本類型與內建衍生類型。  
   
@@ -202,7 +205,7 @@ min(xs:integer("1"), xs:double("1.1"))
   
 -   可轉換的值會受到目標型別實作的限制。 例如，您無法轉換的日期字串，含有負數年份來**xs: date**。 如果此值是在執行階段提供，這樣的轉換將會產生空的序列 (而不是引發執行階段錯誤)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [定義 XML 資料的序列化](../relational-databases/xml/define-the-serialization-of-xml-data.md)  
   
   

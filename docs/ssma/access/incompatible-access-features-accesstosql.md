@@ -1,10 +1,13 @@
 ---
 title: "不相容的存取功能 (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -35,11 +38,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 22120bdb847408e9701b87a46b21b78c5f0499ce
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 59c6c7d0130c93efb7e5d3136deb0edbd5d05ab9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="incompatible-access-features-accesstosql"></a>不相容的存取功能 (AccessToSQL)
 並非所有存取資料庫的功能都都相容[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和存取具有不同的保留關鍵字集合。 問題如這些可以阻礙成功移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 若要了解可能的移轉問題，您可以執行資訊，請使用下表。  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/09/2017
 |存取資料表有超連結資料行。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不支援**超連結**資料行。 相反地，資料行被視為存取備忘資料行。 根據預設，將這些資料行轉換成**nvarchar （max)**中的資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以自訂對應。 如需詳細資訊，請參閱[對應來源和目標資料型別](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)。|  
 |預設值或驗證的規則運算式包含存取函式不能轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。|存取系統函式或未對應至使用者定義函數，則可能會包含存取預設運算式或驗證規則[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 不會對應到的函式的使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 會防止載入預設運算式或驗證規則加入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [準備移轉的 Access 資料庫](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
 [將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

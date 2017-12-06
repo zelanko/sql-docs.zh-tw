@@ -1,10 +1,13 @@
 ---
 title: "載入已轉換成 SQL Server (OracleToSQL) 資料庫物件 |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 5ef463ece76e4077b0c68ba6f1027a516297371c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 66240ced7e9016aede65ffc8a51ac21108154d85
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>載入已轉換成 SQL Server (OracleToSQL) 資料庫物件
 Oracle 結構描述轉換至 SQL Server 之後，您可以載入 SQL Server 來產生資料庫物件。 您可以讓 SSMA 建立物件，或您可以編寫物件指令碼，並自行執行指令碼。 此外，SSMA 可讓您更新 SQL Server 資料庫的實際內容目標中繼資料。  
@@ -112,6 +115,6 @@ Oracle 結構描述轉換至 SQL Server 之後，您可以載入 SQL Server 來�
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[將資料移轉至 SQL Server](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [將 Oracle 資料庫移轉至 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -3,8 +3,11 @@ title: "XQuery 與靜態輸入 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 473b3e2fc020778b1d91f75935a46f50f0e886de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2861a4b1460bebf51ea138678dd797e5f0048a41
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 與靜態類型
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 是靜態類型的語言。 也就是，它會在查詢編譯期間，當特定函數或運算子不接受運算式傳回含有類型或基數的值時，就會引發類型錯誤。 除此之外，如果在具類型的 XML 文件中的路徑運算式之類型為錯誤的，靜態類型檢查也可以偵測到。 XQuery 編譯器首先會套用加入如自動化等隱含作業的正規化階段，然後執行靜態類型推斷和靜態類型檢查。  
   
@@ -91,7 +94,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="example-operator-over-union-type"></a>範例：聯集類型的運算子  
  加法運算 ('+') 需要精確的運算元類型。 因此，運算式 `(//r)[1] + 1` 會傳回靜態錯誤，其中含有前述之元素 <`r`> 的類型定義。 有一種解決方法，就是將它改寫成 `(//r)[1] cast as xs:int? +1`，其中 "?" 表示出現次數 0 或 1。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要 "cast as" 含有 "?"，因為任何轉換都可能會因執行階段錯誤，而造成空的序列。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

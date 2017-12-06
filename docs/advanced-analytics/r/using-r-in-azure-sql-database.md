@@ -1,8 +1,8 @@
 ---
 title: "在 Azure SQL Database 中使用 R |Microsoft 文件"
 ms.custom: 
-ms.date: 11/16/2017
-ms.prod: sql-server-2017
+ms.date: 12/04/2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -13,20 +13,20 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 4562dc3490f4790a31b4b32e06b9e5133a151c67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ef6573ca1d682ae4b4f4336ad6f809f1e094e9fc
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-r-in-azure-sql-database"></a>在 Azure SQL Database 中使用 R
 
-在年 10 月 2017，SQL Server 開發團隊宣布計劃，以支援執行 R 程式碼中的資料庫使用預存程序，類似於 SQL Server 2016 中的 R Services。
-
-> [!IMPORTANT]
-> 已宣布的初始的預覽版本已適用於測試及僅瀏覽。 目前，此功能是**停用**進一步支援開發 Azure SQL Database 中。 
+在年 10 月 2017，SQL Server 開發團隊宣布計劃，以支援執行 R 程式碼中的資料庫使用預存程序，類似於 SQL Server 2016 中的 R Services。 這項功能是仍在開發。
 
 若要保持最新的公開發行排程和即將發生的事件，請參閱[SQL Server 部落格](https://blogs.technet.microsoft.com/dataplatforminsider/)或[Microsoft R Server 部落格](https://blogs.msdn.microsoft.com/rserver/)。
+
+> [!IMPORTANT]
+> 已宣布的初始的預覽版本已適用於測試及僅瀏覽。 目前的功能是提供有限的區域，在 Azure SQL Database 中，功能都會受到限制，相較於 SQL Server 2016 或 2017年中支援的功能。
 
 **Azure 資源**
 

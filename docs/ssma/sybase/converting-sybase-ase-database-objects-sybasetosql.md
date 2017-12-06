@@ -1,10 +1,13 @@
 ---
 title: "轉換 Sybase ASE 資料庫物件 (SybaseToSQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 12/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,25 +21,25 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c26c897ef9b4ffe1a05a47ab722770681a3737a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 67806cc9609d6fb0c6fae16c3f73161d91259f7f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="converting-sybase-ase-database-objects-sybasetosql"></a>轉換 Sybase ASE 資料庫物件 (SybaseToSQL)
-您已經連接到 Sybase Adaptive Server Enterprise (ASE) 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 及設定專案和對應的資料選項，您可以將轉換至 Sybase Adaptive Server Enterprise (ASE) 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫物件。  
+# <a name="converting-sap-ase-database-objects-sybasetosql"></a>轉換 SAP ASE 資料庫物件 (SybaseToSQL)
+您已經連接到 SAP Adaptive Server Enterprise (ASE) 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 設定專案和對應的資料選項，您可以將轉換至 SAP Adaptive Server Enterprise (ASE) 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL database物件。  
   
 ## <a name="the-conversion-process"></a>轉換程序  
-轉換的資料庫物件會從 ASE 中取得的物件定義、 將它們轉換成類似[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 物件，然後再將這項資訊載入至 SSMA 中繼資料。 不會載入到的執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您接著可以使用檢視物件和其屬性[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 中繼資料總管。  
+轉換的資料庫物件會從 ASE 中取得的物件定義、 將它們轉換成類似[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 物件，然後再將這項資訊載入至 SSMA 中繼資料。 不會載入到的執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您接著可以使用檢視物件和其屬性[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 中繼資料總管。
   
-在轉換期間，SSMA 會列印至輸出窗格的輸出訊息和錯誤訊息 [錯誤清單] 窗格。 若要判斷您是否需要修改 ASE 資料庫或您要取得所需的轉換結果的轉換程序使用的輸出和錯誤的資訊。  
+SSMA 會進行轉換時，列印輸出訊息至輸出窗格及錯誤訊息，以**錯誤清單**窗格。 若要判斷您是否需要修改 ASE 資料庫或您要取得所需的轉換結果的轉換程序使用的輸出和錯誤的資訊。  
   
 ## <a name="setting-conversion-options"></a>設定轉換選項  
 在轉換前的物件，請檢閱中的專案轉換選項**專案設定** 對話方塊。 藉由使用此對話方塊中，您可以設定 SSMA 如何將轉換函式和全域變數。 如需詳細資訊，請參閱[專案設定 &#40;轉換 &#41;&#40;SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
   
 ## <a name="converting-ase-database-objects"></a>轉換 ASE 資料庫物件  
-若要將 ASE 資料庫物件，您先選取您要轉換的物件，然後 SSMA 執行轉換。 若要進行轉換時，檢視輸出訊息上**檢視**功能表上，選取**輸出**。  
+若要將 ASE 資料庫物件，先選取您要轉換的物件，然後執行轉換的 SSMA。 若要進行轉換時，檢視輸出訊息上**檢視**功能表上，選取**輸出**。  
   
 **若要將 ASE 物件轉換成 SQL Server 或 SQL Azure 的語法**  
   
@@ -54,12 +57,12 @@ ms.lasthandoff: 11/09/2017
   
     -   轉換或省略個別物件，展開類別目錄資料夾，然後選取或清除物件旁的核取方塊。  
   
-3.  若要將所有選取的物件，以滑鼠右鍵按一下**資料庫**選取**轉換結構描述**。  
+3.  若要將所有選取的物件，以滑鼠右鍵按一下**資料庫**，然後選取**轉換結構描述**。  
   
     您也可以轉換個別物件或類別目錄的物件，以滑鼠右鍵按一下物件或其包含的資料夾，然後選取**轉換結構描述**。  
   
 > [!NOTE]  
-> 某些 Sybase 系統函式不完全相符對等的 SQL Server 系統函數的行為。 為了模擬 Sybase ASE 行為，SSMA 會在呼叫 's2ss' 的結構描述已轉換的 SQL Server 資料庫中產生使用者定義函式。 根據專案設定，某些 SQL Server 系統函數會取代這些模擬函式。 SSMA 會建立下列使用者定義函數：  
+> 有些 SAP ASE 系統函式不完全相符對等的 SQL Server 系統函數的行為。 為了模擬 SAP ASE 行為，SSMA 會在呼叫 's2ss' 的結構描述已轉換的 SQL Server 資料庫中產生使用者定義函式。 根據專案設定，某些 SQL Server 系統函數會取代這些模擬函式。 SSMA 會建立下列使用者定義函數：  
   
 ||||  
 |-|-|-|  
@@ -70,8 +73,8 @@ ms.lasthandoff: 11/09/2017
 |**ulowsurr**|**to_unichar**|**ssma_current_time**|  
 |**uhighsurr**|||  
   
-## <a name="objects-not-supported-in-sql-azure"></a>不支援 SQL Azure 中的物件  
-下列 T-SQL 關鍵字所使用 SSMA for Sybase 轉換成一般的 SQL Server 時，但不是支援這些關鍵字的 SQL Azure T-SQL 語法：  
+## <a name="objects-not-supported-in-azure-sql"></a>Azure SQL 中不支援物件  
+下列 T-SQL 關鍵字會使用 SSMA for SAP ASE 期間轉換為 SQL Server 內部部署，但是 SQL Azure T-SQL 語法不支援這些關鍵字：  
   
 ||||  
 |-|-|-|  
@@ -82,7 +85,7 @@ ms.lasthandoff: 11/09/2017
 |WRITETEXT|||  
   
 ## <a name="viewing-conversion-problems"></a>檢視轉換問題  
-某些 ASE 物件可能不會轉換。 您可以檢視摘要轉換報表來判斷轉換成功率。  
+有些 SAP ASE 物件可能不會轉換。 您可以檢視摘要轉換報表來判斷轉換成功率。  
   
 **若要檢視摘要報表**  
   
@@ -110,27 +113,27 @@ ms.lasthandoff: 11/09/2017
   
 5.  選取具有紅色錯誤圖示的物件。  
   
-6.  在右窗格中，按一下 [**報表**] 索引標籤。  
+6.  在右窗格中，選取**報表** 索引標籤。  
   
 7.  在頂端**報表** 索引標籤是下拉式清單。 如果此清單會顯示**統計資料**，變更選取範圍到**來源**。  
   
     SSMA 會顯示與原始程式碼和數個程式碼正上方的按鈕。  
   
-8.  按一下**下一個問題** 按鈕。 這是指向右側的箭號以紅色錯誤圖示。  
+8.  選取**下一個問題**，紅色錯誤圖示，指向右側的箭號。  
   
-    SSMA for ASE 會反白顯示在目前的物件中找到的第一個有問題的原始碼。  
+    SSMA for SAP ASE 會反白顯示在目前的物件中找到的第一個有問題的原始碼。  
   
 針對無法轉換每個項目，您必須決定您想要使用該物件：  
   
 -   您可以在編輯程序和觸發程序的原始程式碼**SQL**  索引標籤。  
   
--   您可以改變 ASE 物件以移除或修改程式碼有問題。 若要更新的程式碼載入 SSMA，您必須更新的中繼資料。 如需詳細資訊，請參閱[連接到 Sybase ASE &#40;SybaseToSQL &#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
+-   您可以變更 SAP ASE 物件以移除或修改程式碼有問題。 若要更新的程式碼載入 SSMA，您必須更新的中繼資料。 如需詳細資訊，請參閱[連接到 SAP ASE &#40;SybaseToSQL &#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
--   您可以從移轉排除的物件。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 中繼資料總管和 Sybase 中繼資料總管，清除項目旁邊的核取方塊，然後再載入物件到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 和 ASE 從移轉資料。  
+-   您可以從移轉排除的物件。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 中繼資料總管和 Sybase 中繼資料總管，清除項目旁邊的核取方塊，然後再載入物件到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 和 SAP ASE 從移轉資料。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-steps"></a>後續的步驟  
 移轉程序的下一個步驟是[載入轉換的資料庫物件至 SQL Server / SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06)。  
   
-## <a name="see-also"></a>請參閱＜  
-[Sybase ASE 將資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>另請參閱  
+[SAP ASE 將資料庫移轉至 SQL Server-Azure SQL Database &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

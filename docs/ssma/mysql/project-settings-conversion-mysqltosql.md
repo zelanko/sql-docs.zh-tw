@@ -1,10 +1,13 @@
 ---
 title: "專案設定 （轉換） (MySQLToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 19c450dbb2f30c4cb7dd571305c25084e964d02f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5c40fe3bcc95b062b188c041477011358d60fba2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>專案設定 （轉換） (MySQLToSQL)
 [轉換] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何將 MySQL 語法轉換為 SQL Server 或 SQL Azure 的語法的設定。  
@@ -117,6 +120,6 @@ ms.lasthandoff: 11/09/2017
 |**具有超過 38 的有效位數的數值常值**|指定如何將數值常值轉換成具有有效位數超過 38。<br /><br />**預設模式**： 盡可能四捨五入<br /><br />**開放式模式**： 盡可能四捨五入<br /><br />**完整模式**： 盡可能四捨五入|  
 |**NOT NULL 資料行中的零日期**|指定如何處理指派至 NOT NULL 資料行的零日期零中日期或無效的日期/時間值。<br /><br />**預設模式**: getdate （)<br /><br />**開放式模式**: getdate （)<br /><br />**完整模式**: getdate （)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [使用者介面參考 &#40;MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

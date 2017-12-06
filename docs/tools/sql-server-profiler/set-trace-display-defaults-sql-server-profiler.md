@@ -2,9 +2,12 @@
 title: "設定追蹤顯示預設值 (SQL Server Profiler) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94a063f38e24c06e2b07b4a41fd094e3407df490
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8737ffefa5cf01785de31d41ee7a17a3b4787b1c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>設定追蹤顯示預設值 (SQL Server Profiler)
-  此主題描述如何設定工具選項，以指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在追蹤視窗中用來顯示追蹤的字型、大小及樣式。 您也可以指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用作業系統設定的區域設定，來顯示所有的日期和時間。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題描述如何設定工具選項，以指定的字型、 大小及樣式，[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]用來顯示在追蹤視窗中的追蹤。 您也可以指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用作業系統設定的區域設定，來顯示所有的日期和時間。  
   
 ### <a name="to-set-trace-display-defaults"></a>若要設定追蹤顯示預設值  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  按一下 [確定] 關閉 [一般選項] 對話方塊。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -1,10 +1,13 @@
 ---
 title: "專案設定 （移轉） (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: dbe432d2df571eef49610ccb9611e5d88a85d1a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4949b300d292ffdd9406b09f199ef2775c400d8c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-migration-oracletosql"></a>專案設定 （移轉） (OracleToSQL)
 [移轉] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何從 Oracle 移轉資料的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  

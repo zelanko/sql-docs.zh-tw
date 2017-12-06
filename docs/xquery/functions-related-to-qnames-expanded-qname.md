@@ -3,8 +3,11 @@ title: "擴充 QName (XQuery) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a688ffc9299e8f00b0b4d8cccd0e33538cbe63d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3ea3ecf9c14ae49f14e6c22a4650c2dabe1ef431
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>函式與 QNames 相關的-Expanded-qname
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   傳回 URI 中指定的命名空間的 xs: qname 類型值*$paramURI*中指定的本機名稱和*$paramLocal*。 如果*$paramURI*是空字串或空的序列，它代表沒有命名空間。  
   
@@ -205,7 +208,7 @@ FROM T
 ### <a name="implementation-limitations"></a>實作限制  
  會有一個限制： **expanded-qname （)**函式接受空的序列，做為第二個引數，並會傳回空白的而不是第二個引數不正確時引發執行階段錯誤。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [與 QNames &#40; 函式XQuery &#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

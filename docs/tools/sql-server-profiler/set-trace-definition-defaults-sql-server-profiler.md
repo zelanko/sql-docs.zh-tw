@@ -2,9 +2,12 @@
 title: "設定追蹤定義預設值 (SQL Server Profiler) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3a8d5677ce67c60caf910104cf30144bfde3950
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d50b6e43cff642a072359607938ceb6d2cde8ab7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>設定追蹤定義預設值 (SQL Server Profiler)
-  追蹤定義預設值是指用於每個提供者或伺服器的預設追蹤範本。 您可為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]設定預設追蹤範本。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]追蹤定義預設值是用於每個提供者或伺服器的預設追蹤範本。 您可為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]設定預設追蹤範本。  
   
 ### <a name="to-set-trace-definition-defaults"></a>若要設定追蹤定義預設值  
   

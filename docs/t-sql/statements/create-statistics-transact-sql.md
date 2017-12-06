@@ -163,7 +163,7 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = {ON |OFF}  
  當**ON**，統計資料將會保留未明確指定取樣百分比的後續更新建立取樣百分比。 當**OFF**，統計資料取樣百分比便會重設預設取樣中未明確指定取樣百分比的後續更新。 預設值是**OFF**。 
  
- **適用於**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)](開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。    
+ **適用於**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。    
   
  STATS_STREAM  **=**  *stats_stream*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  

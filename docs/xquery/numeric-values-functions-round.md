@@ -3,8 +3,11 @@ title: "round 函數 (XQuery) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a579433be42dbd22db3467cbf72a9bb4de623a51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c55c1d6b374f82789f0b7761a3926d5d9daed510
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="numeric-values-functions---round"></a>四捨五入數字值函式-
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   傳回最接近引數且去掉小數部份的數字。 如果這樣的數字不止一個，則傳回最接近正無限數的那一個。 例如：  
   
@@ -68,7 +71,7 @@ fn:round ( $arg as numeric?) as numeric?
   
 -   **Round （)**介於-0.5 e 0 和-0e0 xs: double 和 xs: float 值的函式會對應到 0e0 而不是-0e0。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [floor 函式 &#40;XQuery &#41;](../xquery/numeric-values-functions-floor.md)   
  [ceiling 函數 &#40;XQuery &#41;](../xquery/numeric-values-functions-ceiling.md)  
   

@@ -2,9 +2,12 @@
 title: "osql 公用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: osql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f8e8f3045d6af2264007d7b0ec5fac9f4e464a5f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="osql-utility"></a>osql 公用程式
-  **osql** 公用程式可讓您輸入 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式、系統程序和指令碼檔案。 這個公用程式利用 ODBC 來與伺服器通訊。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Osql**公用程式可讓您輸入[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式、 系統程序和指令碼檔案。 這個公用程式利用 ODBC 來與伺服器通訊。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的未來版本將移除此功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 改用 **sqlcmd** 。 如需詳細資訊，請參閱 [sqlcmd Utility](../tools/sqlcmd-utility.md)。  
@@ -192,7 +195,7 @@ osql -E -q "select name, object_id from %table%"
  它也會將預設的 DOS ERRORLEVEL 值設為 -1。  
   
 > [!NOTE]  
->  **-n** ， **-O**和**-D**不再支援的選項**osql**。  
+>   **-n** ， **-O**和**-D**不再支援的選項**osql**。  
   
 ## <a name="remarks"></a>備註  
  **osql** 公用程式會在已設定此處所列之區分大小寫選項的情況下，直接從作業系統中啟動。 啟動 **osql**後，其會接受 SQL 陳述式並以互動方式傳送至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 結果會格式化，顯示在畫面中 (**stdout**)。 使用 QUIT 或 EXIT 來結束 **osql**。  
