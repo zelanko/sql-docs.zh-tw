@@ -6,14 +6,16 @@ ms.author: annashres
 manager: jhubbard
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 0bc304b50930f8c8de5d244ea0b606add5f24d2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5a7ea24d7563a7256c93dbfaa052bfb4041f9aa0
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>在雲端中執行 SQL Server 2017
 
@@ -25,7 +27,7 @@ ms.lasthandoff: 11/09/2017
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
-1.  建立 Linux AMI 至少 3.25 gb 的記憶體從 marketplace 
+1.  建立 Linux AMI 至少 2 gb 的記憶體從 marketplace 
     * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/09/2017
     
 ## <a name="digital-ocean"></a>數位 Ocean
 1. 登入[控制台](https://cloud.digitalocean.com/login)按一下建立 droplet
-1. 選擇 Ubuntu 16.04 droplet 至少 3.25 gb 的記憶體
+1. 選擇 Ubuntu 16.04 droplet 至少 2 gb 的記憶體
 1. 連接到與 droplet ssh
 1. 請遵循[Ubuntu 快速入門](quickstart-install-connect-ubuntu.md)
 1. 遠端連線設定：
@@ -51,7 +53,7 @@ ms.lasthandoff: 11/09/2017
     * 新增輸入的規則以允許 SQL Server 接聽 （預設值 TCP 通訊埠 1433年） 的連接埠上的流量
     
 ## <a name="google-cloud-platform"></a>Google 雲端平台
-1.  在至少 3.25 gb 的記憶體從雲端啟動器建立 Linux 映像 
+1.  使用至少 2 GB 的記憶體從雲端啟動器建立 Linux 映像 
     * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)

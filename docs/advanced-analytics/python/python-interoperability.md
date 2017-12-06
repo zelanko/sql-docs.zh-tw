@@ -2,7 +2,7 @@
 title: "Python 互通性與 SQL Server |Microsoft 文件"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -12,11 +12,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ee7187d490c8da80c66fb27156b2726e71782238
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2cd9ded408fe110439928985cab8ef8ba9fa0aa4
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="python-interoperability-with-sql-server"></a>Python 與 SQL Server 的互通性
 
@@ -69,6 +69,6 @@ Python 的輸入的資料必須是表格式。 必須的形式傳回所有 Pytho
 
 使用 Python 的機器學習服務安裝的一部分，您必須同意 GNU Public License 中的條款。
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
 
 [Python 程式庫和資料類型](python-libraries-and-data-types.md)

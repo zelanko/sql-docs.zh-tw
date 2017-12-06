@@ -1,6 +1,6 @@
 ---
-title: "已更新-SQL Server 文件的 MDX |Microsoft 文件"
-description: "顯示程式碼片段的最近變更過的文件的多維度運算式 (MDX) 的 Microsoft SQL Server 的更新內容。"
+title: "已更新-SQL Server 文件 DMA |Microsoft 文件"
+description: "顯示程式碼片段的最近變更過的文件，如資料移轉小幫手 (DMA) 的 Microsoft SQL Server 的更新內容。"
 services: na
 documentationcenter: 
 author: MightyPen
@@ -14,14 +14,14 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: mdx-multidimensional-expressions
-ms.openlocfilehash: 3e5e7b7cf8e76dbc354bbab4ef3c78dfc221827b
+ms.workload: dma-data-migration-assistant
+ms.openlocfilehash: 3d542535f92107266e841f72168257cc9a64a9b4
 ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/04/2017
 ---
-# <a name="new-and-recently-updated-multidimensional-expressions-mdx-for-sql-server"></a>新增和更新最近： 適用於 SQL Server 的多維度運算式 (MDX)
+# <a name="new-and-recently-updated-data-migration-assistant-dma-for-sql-server"></a>新增和更新最近： SQL Server 的資料移轉小幫手 (DMA)
 
 
 
@@ -34,7 +34,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 - *日期範圍的更新：* &nbsp; **2017年-09-28** &nbsp; -到- &nbsp; **2017年-12-02**
-- *主旨區域：* &nbsp; **多維度運算式 (MDX) for SQL Server**。
+- *主旨區域：* &nbsp; **資料移轉小幫手 (DMA) for SQL Server**。
 
 
 

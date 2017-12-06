@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a9253b744e337a69a86e6562156806d59b8f66a6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4235f142dbe0a0022ba8b6af4fb2d3c981fae709
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server 的範例： 無人看管的 SQL Server 安裝指令碼
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="prerequisites"></a>必要條件
 
-- 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
+- 您需要至少 2 GB 的記憶體來執行 SQL Server on Linux。
 - 檔案系統必須是**XFS**或**EXT4**。 其他檔案系統，例如**BTRFS**，不受支援。
 - 其他系統需求，請參閱[系統需求的 SQL Server on Linux](sql-server-linux-setup.md#system)。
 

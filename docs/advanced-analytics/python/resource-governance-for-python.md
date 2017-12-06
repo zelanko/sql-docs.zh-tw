@@ -2,7 +2,7 @@
 title: "資源管理針對 Python |Microsoft 文件"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -12,11 +12,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fff94725d1e564b4fe9eb286ea6bf1e390a3179
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c980e3f3e9959d72dba2fe582e10db09f8587aa3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="resource-governance-for-python"></a>資源管理針對 Python
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/09/2017
 
 萬一失控的指令碼，您可以停用所有的指令碼執行。 只要反向執行此程序，並將屬性設定`external scripts enabled`為 FALSE 或 0，執行個體上的。 這會立即停用任何外部指令碼執行。 您應該保留此選項的安全性問題，或在其中系統管理員需要立即以緩解資源問題的情況。
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
 
 [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
 

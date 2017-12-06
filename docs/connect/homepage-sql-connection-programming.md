@@ -2,7 +2,7 @@
 title: "SQL 用戶端程式設計的首頁 |Microsoft 文件"
 description: "註解式連結來下載和文件的語言和作業系統，連線到 SQL Server 或 Azure SQL Database 的許多組合中樞 頁面。"
 author: MightyPen
-ms.date: 09/13/2017
+ms.date: 11/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -14,11 +14,11 @@ ms.topic: article
 ms.reviewer: meetb
 ms.author: genemi
 ms.workload: Inactive
-ms.openlocfilehash: dbbb2e06521b364de7d8de1b32869380fbc2772a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>用戶端程式設計與 Microsoft SQL Server 首頁
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/18/2017
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp;[ ![C# 標誌][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework 的.NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java 標誌][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js 標誌][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP 標誌][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Node.js 標誌][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp 大加號][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP 標誌][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp;[ ![Python 標誌][image-ref-370-python]](#an-180-python-docu) | &nbsp;[![拼音標誌][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -184,7 +184,7 @@ SQL Server 的 Node.js 連接驅動程式是在 JavaScript 中實作。 驅動�
 
 ## <a name="odbc-for-c"></a>C + + ODBC 
 
-![ODBC 標誌][image-ref-350-odbc]
+![ODBC 標誌][image-ref-350-odbc] ![cpp 大加號][image-ref-322-cpp]
 
 開放式資料庫連接 (ODBC) 所開發在 1990，和它之前的.NET Framework。 ODBC 被設計為獨立於任何特定資料庫的系統，且獨立的作業系統。
 
@@ -364,7 +364,6 @@ SQL Server 的 Node.js 連接驅動程式是在 JavaScript 中實作。 驅動�
 
 <!-- Image references. -->
 
-[image-ref-310-ado-net]: ./media/homepage-sql-connection-drivers/gm-ado-net-an51.png
 [image-ref-322-cpp]: ./media/homepage-sql-connection-drivers/gm-cpp-4point-p61f.png
 [image-ref-320-csharp]: ./media/homepage-sql-connection-drivers/gm-csharp-c10c.png
 [image-ref-333-ef]: ./media/homepage-sql-connection-drivers/gm-entity-framework-ef20d.png

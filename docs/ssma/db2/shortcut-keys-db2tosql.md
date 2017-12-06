@@ -1,10 +1,13 @@
 ---
 title: "攠摝坫 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +20,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4683c8a606bcbd1528807567ad79d83b8084191d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 149e928b0926b88917997d608143edf704b3b90c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="shortcut-keys-db2tosql"></a>攠摝坫 (DB2ToSQL)
 您可以使用鍵盤快速鍵來瀏覽 SSMA 應用程式。 如需詳細資訊，請參閱下列主題。  
   
 -   [功能表命令和其他快速鍵 &#40; DB2ToSQL &#41;](../../ssma/db2/menu-commands-and-other-shortcut-keys-db2tosql.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [SSMA for 入門 DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
   

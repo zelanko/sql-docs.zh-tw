@@ -22,16 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec112810e691aceac5085f3ded941564331f74b9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3752ac2db3a8687fd44fc43c2e29f24526db7ca1
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  開啟資料指標。 sp_cursoropen 會定義資料指標和資料指標選項相關聯的 SQL 陳述式，然後擴展資料指標。 對等的組合 sp_cursoropenis[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式 DECLARE_CURSOR 和 OPEN。 這個程序的叫用方式是在表格式資料流 (TDS) 封包中指定 ID = 2。  
+  開啟資料指標。 sp_cursoropen 會定義資料指標和資料指標選項相關聯的 SQL 陳述式，然後擴展資料指標。 sp_cursoropen 相當的組合[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式 DECLARE_CURSOR 和 OPEN。 這個程序的叫用方式是在表格式資料流 (TDS) 封包中指定 ID = 2。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

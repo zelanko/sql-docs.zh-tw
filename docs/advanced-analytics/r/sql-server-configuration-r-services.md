@@ -2,7 +2,7 @@
 title: "SQL Server 組態 (R Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 486c0d2772660d4a549e3ebdf29e2cd54ace3d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6bb91c23d7890fdd92cbe949e468cbad5d1dc143
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>使用 R 與 SQL Server 組態
 
@@ -70,7 +70,7 @@ Windows 作業系統會使用分頁檔來管理損毀傾印，以及用來儲存
 
 分頁檔儲存所在的磁碟速度也會影響效能。 將分頁檔儲存於 SSD 上，或跨多個 SSD 使用多個分頁檔，均可改善效能。
 
-如需調整分頁檔的大小資訊，請參閱[如何判斷適當的分頁檔大小為 64 位元版本的 Windows](https://support.microsoft.com/en-us/kb/2860880)。
+如需調整分頁檔的大小資訊，請參閱[如何判斷適當的分頁檔大小為 64 位元版本的 Windows](https://support.microsoft.com/kb/2860880)。
 
 ## <a name="optimizations-at-instance-or-database-level"></a>在執行個體或資料庫層級的最佳化
 
@@ -167,7 +167,7 @@ FROM sys.dm_os_memory_clerks
 
 **其他資源：**
 
-+ [SQL Server 中的軟體 NUMA](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [SQL Server 中的軟體 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     如何將軟體 NUMA 節點對應到 Cpu
 

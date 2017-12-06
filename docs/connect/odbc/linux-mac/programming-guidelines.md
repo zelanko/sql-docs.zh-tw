@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7bdb349022f82d29045c7277185485b595675bc3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
@@ -75,21 +75,36 @@ ODBC 應用程式可以使用 Multiple Active Result Sets (MARS) 和其他[!INCL
 
 ## <a name="character-set-support"></a>字元設定支援
 
-編碼的用戶端可以是下列其中一項：
+其中一個下列字元集中的 SQLCHAR 資料是由驅動程式支援：
+
   -  UTF-8
-  -  ISO 8859-1
-  -  ISO 8859-2
+  -  CP437
+  -  CP850
+  -  CP874
+  -  CP932
+  -  CP936
+  -  CP949
+  -  CP950
+  -  CP1251
+  -  CP1253
+  -  CP1256
+  -  CP1257
+  -  CP1258
+  -  ISO 8859-1 / CP1252
+  -  ISO 8859-2 / CP1250
   -  ISO 8859-3
   -  ISO 8859-4
   -  ISO 8859-5
   -  ISO 8859-6
   -  ISO 8859-7
-  -  ISO 8859-8
-  -  ISO 8859-9
+  -  ISO 8859-8 / CP1255
+  -  ISO 8859-9 / CP1254
   -  ISO-8859-13
   -  ISO 8859-15
-  
-SQLCHAR 資料必須是其中一個支援的字元集。 SQLWCHAR 資料必須是 UTF-16LE (Little Endian)。  
+
+連接時，驅動程式會偵測處理程序中載入的目前地區設定。 如果是上述支援的編碼方式的其中一個，驅動程式會使用該編碼 SQLCHAR （窄字元） 的資料;否則，它會預設為 utf-8。 因為所有處理程序啟動"C"地區設定中的預設值 （並因此造成驅動程式新增至預設為 utf-8），如果應用程式需要使用上述的編碼方式的其中一個，則應該使用**setlocale**之前適當地設定的地區設定的函式連線;藉由明確地指定想要的地區設定，或使用空字串，例如`setlocale(LC_ALL, "")`，若要使用的環境中地區設定。
+
+SQLWCHAR 資料必須是 UTF-16LE (Little Endian)。
 
 如果 SQLDescribeParameter 未指定伺服器上的 SQL 類型，驅動程式將會使用 SQLBindParameter 的 *ParameterType* 參數中所指定的 SQL 類型。 如果 SQLBindParameter 中指定了窄字元 SQL 類型，例如 SQL_VARCHAR，驅動程式會將轉換提供的資料從用戶端字碼頁為預設值[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]字碼頁。 (預設值[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]字碼頁通常是 1252年。)如果不支援用戶端字碼頁，它就會設定為 utf-8。 在此情況下，驅動程式再將 utf-8 資料轉換成預設字碼頁。 不過，資料可能會遺失。 如果字碼頁 1252 無法顯示某個字元，驅動程式會將該字元轉換成問號 ('?')。 若要避免這種資料遺失，請在 SQLBindParameter 中指定 Unicode SQL 字元類型，例如 SQL_NVARCHAR。 在此情況下，驅動程式將轉換提供的 Unicode 資料，在 utf-8 編碼為 utf-16，而不會遺失資料。
 
@@ -110,7 +125,7 @@ SQLCHAR 資料必須是其中一個支援的字元集。 SQLWCHAR 資料必須�
     
 2.  如果陳述式屬性是透過 SQLSetConnectAttr 來傳遞的，則 UnixODBC 驅動程式對於所有的陳述式屬性都會傳回「無效的屬性/選項識別碼」。 在 Windows 中，當 SQLSetConnectAttr 接收陳述式的屬性值會導致驅動程式，也就是連接控制代碼的子系的所有作用中陳述式上設定該值。  
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [常見問題集](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 
 [此驅動程式版本的已知問題](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)

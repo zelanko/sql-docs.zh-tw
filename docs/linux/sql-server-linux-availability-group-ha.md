@@ -5,7 +5,7 @@ ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cacdf2de6c6e85c8afd0723f4dae21feab0c71cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7131eec581f973738d1cacb45dd355e2b7168aeb
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組組態的高可用性與資料保護
 
@@ -161,7 +161,7 @@ SQL Server 2017 導入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資�
 
 您可以選擇要覆寫預設行為，並避免設定可用性群組資源`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`自動。
 
-下列指令碼設定`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`設為 0 到可用性群組上名為`<**ag1**>`。 執行取代之前`<**ag1**>`與可用性群組的名稱。
+下列指令碼設定`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`設為 0 到可用性群組上名為`<**ag1**>`。 執行之前，請以您的可用性群組名稱取代 `<**ag1**>`。
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

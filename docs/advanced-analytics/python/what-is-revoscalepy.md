@@ -2,7 +2,7 @@
 title: "簡介 revoscalepy |Microsoft 文件"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -11,11 +11,11 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad525f173ad6082f587324b41af768816077e371
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="introducing-revoscalepy"></a>介紹 revoscalepy
 
@@ -89,7 +89,7 @@ SQL Server，並將 Python 某些情況下使用不同的資料類型。 如需 
 |`rx_predict` | 產生從定型模型的預測|`rx_predict_ex`在 CTP 2.0|
 |`rx_summary` | 產生模型的摘要||
 
-新的機器學習演算法也會提供的 Python 版本[MicrosoftML](https://docs.microsoft.com/en-us/r-server/python-reference/microsoftml/microsoftml-package):
+新的機器學習演算法也會提供的 Python 版本[MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
 | 函數| Description|
 | ------ | ------ |
@@ -167,6 +167,6 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 
 如果您使用 Python Tools for Visual Studio 時，您可以使用 IntelliSense，取得語法和引數的說明。 如需詳細資訊，請參閱[Python 支援 Visual Studio 中](http://docs.microsoft.com/visualstudio/python/installation)，並下載符合您的 Visual Studio 版本的擴充功能。 您可以使用 Visual Studio 2015 和 2017，具有 Python 或更早版本。
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
 
 [Python 教學課程](../tutorials/sql-server-python-tutorials.md)

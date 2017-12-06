@@ -1,10 +1,13 @@
 ---
 title: "建立變數值檔案 (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a04787fdf99c804a7ec304ae4f022583a192508f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef98e5026d0cb488f0edfc4fccd386c0b1539bcd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>建立變數值檔案 (AccessToSQL)
 變數的值，檔案是 XML 檔案中所包含的參數值經常變更整個伺服器移轉的命令 （例如來源或目的地伺服器名稱）。 大量的資料庫移轉發生時，建立並與主要指令碼檔案中參考多個變數的檔案，以儲存每個來源伺服器的值**– v**在命令列參數。 這個行為有助於維護幾個指令碼檔案中的多個變數的檔案中的變數值的靜態值。  
