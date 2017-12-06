@@ -1,10 +1,13 @@
 ---
 title: "將 Sybase ASE 資料庫移轉至 SQL Server-Azure SQL DB |Microsoft 文件"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 11/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,41 +20,41 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1bc6d8b076588b53d83e6af9e88be5dff14f08f4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e9b4f48de979d4ce1949842bb173a1ee08202d15
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="migrating-sybase-ase-databases-to-sql-server---azure-sql-db-sybasetosql"></a>Sybase ASE 將資料庫移轉至 SQL Server-Azure SQL DB (SybaseToSQL)
-SQL Server 移轉小幫手 (SSMA) for Sybase 是完整的環境，可協助您快速 Sybase Adaptive Server Enterprise (ASE) 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 利用 SSMA for Sybase，檢閱資料庫物件和資料，評估要移轉的資料庫，資料庫將物件移轉為[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB、，然後將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
+# <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>SAP ASE 資料庫移轉到 SQL Server-Azure SQL Database (SybaseToSQL)
+SQL Server 移轉小幫手 (SSMA) 的 SAP Adaptive Server Enterprise (ASE) 是一種完整的環境，可協助您快速 SAP ASE 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。 藉由使用 SAP ASE SSMA，檢閱資料庫物件和資料，評估要移轉的資料庫，資料庫將物件移轉為[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database，然後再移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。  
   
-## <a name="recommended-migration-process"></a>建議您移轉程序  
-若要成功移轉物件和資料，從 ASE 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，請使用下列程序：  
+## <a name="recommended-migration-process"></a>建議的移轉程序  
+若要成功移轉物件和資料，從 SAP ASE 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database，使用下列程序：  
   
 1.  [建立新的 SSMA 專案](http://msdn.microsoft.com/en-us/11091d95-c488-48c3-891a-743cac94ac93)。  
   
     建立專案之後，您可以設定專案轉換、 移轉和型別對應的選項。 專案設定的相關資訊，請參閱[設定專案選項 &#40;SybaseToSQL &#41;](../../ssma/sybase/setting-project-options-sybasetosql.md). 如需自訂資料型別對應資訊，請參閱[對應 Sybase ASE 和 SQL Server 資料類型 &#40;SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
   
-2.  [連接到 Sybase ASE 資料庫伺服器](http://msdn.microsoft.com/en-us/a45a2330-9175-4c9e-af38-ef920e350614)。  
+2.  [連接到 SAP ASE 資料庫伺服器](http://msdn.microsoft.com/en-us/a45a2330-9175-4c9e-af38-ef920e350614)。  
   
-3.  [連接到 SQL Server 執行個體](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)或[連接到 Azure SQL DB 的執行個體](http://msdn.microsoft.com/en-us/9e77e4b0-40c0-455c-8431-ca5d43849aa7)。  
+3.  [連接到 SQL Server 執行個體](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)或[連接到 Azure SQL Database 的執行個體](http://msdn.microsoft.com/en-us/9e77e4b0-40c0-455c-8431-ca5d43849aa7)。  
   
-4.  [ASE 資料庫結構描述對應到 SQL Server / Azure SQL DB 資料庫結構描述](http://msdn.microsoft.com/en-us/2c927003-c49d-4fe1-8e3e-5b2899166268)。  
+4.  [SAP ASE 資料庫結構描述對應到 SQL Server / Azure SQL Database 的資料庫結構描述](http://msdn.microsoft.com/en-us/2c927003-c49d-4fe1-8e3e-5b2899166268)。  
   
 5.  （選擇性）[建立的評估報告](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c)以評估資料庫物件的轉換，並評估的轉換時間。  
   
-6.  [將 Sybase ASE 資料庫結構描述轉換成 SQL Server / Azure SQL DB 結構描述](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3)。  
+6.  [將 SAP ASE 資料庫結構描述轉換成 SQL Server / Azure SQL Database 的結構描述](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3)。  
   
-7.  [轉換的資料庫物件載入 SQL Server / Azure SQL DB](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06)。  
+7.  [轉換的資料庫物件載入 SQL Server / Azure SQL Database](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06)。  
   
-    您可以透過其中一種儲存指令碼並執行它[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB、 或者您可以同步處理資料庫物件。  
+    請儲存指令碼，並執行它[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database，或同步處理資料庫物件。  
   
-8.  [將資料移轉到 SQL Server / Azure SQL DB](http://msdn.microsoft.com/en-us/54a39f5e-9250-4387-a3ae-eae47c799811)。  
+8.  [將資料移轉到 SQL Server / Azure SQL Database](http://msdn.microsoft.com/en-us/54a39f5e-9250-4387-a3ae-eae47c799811)。  
   
 9. 必要時，更新您的資料庫應用程式。  
   
-## <a name="see-also"></a>請參閱＜  
-[安裝 SSMA for Sybase &#40;SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
-[開始使用 SSMA for Sybase &#40;SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
+## <a name="see-also"></a>另請參閱  
+[針對 SAP ASE &#40; 安裝 SSMASybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+[開始使用 SSMA for SAP ASE &#40;SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   

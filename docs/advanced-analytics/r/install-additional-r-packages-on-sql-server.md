@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 8c8e95bf2f0715684bb656d2b2de4dd94aea14f8
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: f8d20c5b5b687a6d9d94cd97605f294cead27215
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>SQL Server 上安裝其他的 R 封裝
 
@@ -158,8 +158,9 @@ ms.lasthandoff: 11/16/2017
 
     ```R
     packageList <- c("e1071")
-
-3. Define a connection string to the instance and database where package management is enabled, and use the connection string to create a SQL Server compute context.
+    ```
+    
+3. 定義連接字串的執行個體和資料庫啟用封裝管理的位置，並建立 SQL Server 計算內容使用的連接字串。
 
     ```R
     sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)

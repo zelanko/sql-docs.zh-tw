@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a1b63756bbf257709b1888caf2af7bad2ddf5e74
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35a8e5ef7b08530b54d751636c122c6455971faf
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 容器中的 SQL Server 資料庫還原
 
@@ -36,12 +36,9 @@ ms.lasthandoff: 11/20/2017
 ## <a name="prerequisites"></a>必要條件
 
 * Docker 引擎 1.8 + 任何支援 Mac/Windows Linux 發佈或 Docker。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
-* 至少 4 GB 的磁碟空間
-* 至少 4 GB 的 RAM
+* 最小值為 2 GB 的磁碟空間
+* 最小值為 2 GB 的 RAM
 * [SQL Server on Linux 的系統需求](sql-server-linux-setup.md#system)。
-
-> [!IMPORTANT]
-> 適用於 Mac 的 Docker 和 Docker for Windows 上的預設值是 2 GB 一定 vm，因此您必須將它變更為 4 GB。 如果您在 Mac 或 Windows 上執行，請增加您使用的記憶體設定[Docker 快速入門中的指示](quickstart-install-connect-docker.md)。
 
 ## <a name="pull-and-run-the-container-image"></a>提取和執行容器映像
 

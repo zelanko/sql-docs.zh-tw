@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: acd47bd1e2104027610f7ee38c9b135a785429e5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>執行 SQL Server 2017 容器映像使用 Docker
 
@@ -35,31 +35,9 @@ ms.lasthandoff: 11/20/2017
 ## <a id="requirements"></a> 必要條件
 
 - Docker 引擎 1.8 + 任何支援 Mac/Windows Linux 發佈或 Docker。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
-- 至少 4 GB 的磁碟空間
-- 至少 4 GB 的 RAM
+- 最小值為 2 GB 的磁碟空間
+- 最小值為 2 GB 的 RAM
 - [SQL Server on Linux 的系統需求](sql-server-linux-setup.md#system)。
-
-> [!IMPORTANT]
-> 適用於 Mac 的 Docker 和 Docker for Windows 上的預設值是 2 GB 一定 vm，因此您必須將它變更為 4 GB。 如果您在 Mac 或 Windows 上執行，請使用下列程序來增加記憶體。
-
-### <a name="increase-docker-memory-to-4-gb-mac"></a>Docker 將記憶體增加到 4 GB (Mac)
-
-下列步驟會增加對 Docker Mac 為 4 GB 的記憶體。
-
-1. 按一下頂端的狀態列上的 Docker 標誌。
-1. 選取**喜好設定**。
-1. 將 4 GB 或更多的記憶體指標。
-1. 按一下**重新啟動** 按鈕，在畫面的按鈕。
-
-### <a name="increase-docker-memory-to-4-gb-windows"></a>Docker 將記憶體增加到 4 GB (Windows)
-
-下列步驟來增加 Docker for Windows 為 4 GB 的記憶體。
-
-1. Docker 圖示從工作列上按一下滑鼠右鍵。
-1. 按一下**設定**該功能表底下。
-1. 按一下**進階** 索引標籤。
-1. 將 4 GB 或更多的記憶體指標。
-1. 按一下**套用** 按鈕。
 
 ## <a name="pull-and-run-the-container-image"></a>提取和執行容器映像
 

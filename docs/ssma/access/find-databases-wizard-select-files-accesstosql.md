@@ -1,10 +1,13 @@
 ---
 title: "尋找資料庫精靈 （選取檔案） (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9f9283dddd98208c1eb25990fa228e2287793615
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 98f799138330399da6b4f96bbf10574b3878763d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>尋找資料庫精靈 （選取檔案） (AccessToSQL)
 [尋找資料庫精靈] 的 [選取檔案] 頁面上會列出在搜尋中找到的檔案。 若要選取要加入至 SSMA 檔案，請選取包含檔案名稱的資料列。 當您完成選取的檔案，請按一下**下一步**若要檢視 [確認選取] 頁面。  
@@ -56,6 +59,6 @@ ms.lasthandoff: 11/09/2017
 **修改日期**  
 日期和時間，上次更新資料庫中。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [使用者介面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

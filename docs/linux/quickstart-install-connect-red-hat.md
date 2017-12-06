@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 213cabec248c9f293944904a1909f51484fcdf4a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 42bcabc32c3a47c09bc8c3dd116403163faa2071
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>安裝 SQL Server，並在 Red Hat 上建立資料庫
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="prerequisites"></a>必要條件
 
-您必須擁有 RHEL 7.3 或 7.4 機器**至少 3.25 GB**的記憶體。
+您必須擁有 RHEL 7.3 或 7.4 機器**至少 2 GB**的記憶體。
 
 若要在自己電腦上安裝 Red Hat Enterprise Linux，請移至[http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 您也可以在 Azure 中建立 RHEL 虛擬機器。 請參閱[建立和管理 Linux Vm 與 Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，並使用`--image RHEL`呼叫`az vm create`。
 

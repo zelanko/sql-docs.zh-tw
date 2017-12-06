@@ -1,7 +1,7 @@
 ---
 title: "SET PARSEONLY (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -30,14 +30,14 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 107a70e458201f43d29b5a32885acce9a789acca
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: eb009b23f9d4a751f6850218f4845c6c70c3bbd3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="set-parseonly-transact-sql"></a>SET PARSEONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   檢查每個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的語法，且會在未編譯或執行陳述式的情況下，傳回任何錯誤訊息。  
   
@@ -60,7 +60,7 @@ SET PARSEONLY { ON | OFF }
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [設定位移 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
   

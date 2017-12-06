@@ -1,8 +1,8 @@
 ---
-title: "如何使用 olapR 來建立 MDX 查詢 | Microsoft Docs"
+title: "如何建立 MDX 查詢使用 olapR |Microsoft 文件"
 ms.custom: 
-ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.date: 11/29/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,16 +15,30 @@ ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
 caps.latest.revision: "3"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 04dc669f1ca6e472bf66b3795cf3096e9fa77f0d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4ee223a3c27ee35a823917f9d1aefcd8fb86e80e
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
-# <a name="how-to-create-mdx-queries-using-olapr"></a>如何使用 olapR 建立 MDX 查詢
-## <a name="how-to-build-an-mdx-query-from-r"></a>如何從 R 建置 MDX 查詢
+# <a name="how-to-create-mdx-queries-using-olapr"></a>如何建立使用 olapR MDX 查詢
+
+[OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)套件支援對 SQL Server Analysis Services 中所裝載的多維度模型的查詢。 您可以建立對現有的 cube 使用 MDX 查詢、 瀏覽維度和其他 cube 物件和貼上現有的 MDX 查詢以擷取資料。
+
+本文說明兩個主要用途之一 olapR 封裝：
+
++ [從 R 使用 olapR 封裝中提供的建構函式建立查詢](#buildMDX)
++ [執行使用 olapR 和 OLAP 提供者現有、 有效 MDX 查詢](#executeMDX)
+
+不支援下列作業：
+
++ 表格式模型的查詢
++ 建立新的 OLAP 物件
++ 資料分割，包括量值或總和的回寫
+
+## <a name="buildMDX"></a>從 R 建立 MDX 查詢
 
 1. 定義可指定 OLAP 資料來源 (SSAS 執行個體) 和 MSOLAP 提供者的連接字串。
 
@@ -33,21 +47,24 @@ ms.lasthandoff: 11/09/2017
 3. 使用 `Query()` 建構函式具現化查詢物件。
 
 4. 使用下列 helper 函式，以提供要包含在 MDX 查詢中之維度和量值的更多詳細資訊︰
+
      + `cube()` 指定 SSAS 資料庫的名稱。
-     + `columns()` 提供要在 ON COLUMNS 引數中使用的量值名稱。  
-     + `rows()` 提供要在 ON ROWS 引數中使用的量值名稱。
+     + `columns()`提供的使用中的量值名稱**ON 資料行**引數。
+     + `rows()`提供的使用中的量值名稱**ON 列**引數。
      + `slicers()` 指定要用作交叉分析篩選器的欄位或成員。 交叉分析篩選器就像套用至所有 MDX 查詢資料的篩選。
      
-     + `axis()` 指定要在查詢中使用之其他座標軸的名稱。 OLAP Cube 最多可以包含 128 個查詢座標軸。 前四個座標軸一般稱為「資料行」、「資料列」、「頁面」和「章節」。 如果您的查詢相當簡單，您可以使用 `columns`、 `rows`等函式來建置查詢。     
-     不過，您也可以使用索引值非零的 `axis()` 函式來建置具有許多限定詞的 MDX 查詢，或將額外維度新增為限定詞。
+     + `axis()` 指定要在查詢中使用之其他座標軸的名稱。 
+     
+         OLAP Cube 最多可以包含 128 個查詢座標軸。 通常前, 四個座標軸稱為**資料行**，**列**，**頁面**，和**章節**。 
+         
+         如果您的查詢相當簡單，您可以使用 `columns`、 `rows`等函式來建置查詢。 不過，您也可以使用索引值非零的 `axis()` 函式來建置具有許多限定詞的 MDX 查詢，或將額外維度新增為限定詞。
 
 5. 根據結果的形狀，將控制代碼和已完成 MDX 查詢傳遞至 `executeMD` 或 `execute2D`函式。
 
   + `executeMD` 傳回多維度陣列
   + `execute2D` 傳回二維 (表格式) 資料框架
 
-
-## <a name="how-to-run-an-existing-mdx-query-from-r"></a>如何從 R 執行現有 MDX 查詢
+## <a name="executeMDX"></a>從 R 執行有效的 MDX 查詢
 
 1. 定義可指定 OLAP 資料來源 (SSAS 執行個體) 和 MSOLAP 提供者的連接字串。
 
@@ -60,9 +77,13 @@ ms.lasthandoff: 11/09/2017
     + `executeMD` 傳回多維度陣列
     + `execute2D` 傳回二維 (表格式) 資料框架
 
-
-
 ## <a name="examples"></a>範例
+
+下列範例會根據 AdventureWorks 資料超市和 cube 專案，因為該專案廣泛使用，在多個版本中，包括 Analysis Services 可輕鬆還原的備份檔案。 如果您沒有現有的 cube，取得範例 cube 中使用其中一個選項：
+
++ 這些範例中建立 cube 所使用，依照 Analysinotes Services 教學課程中的，最多第 4 課：[建立 OLAP cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
+
++ 下載現有的 cube，以當作備份，並將它還原到 Analysis Services 的執行個體。 例如，這個網站提供以壓縮格式的完整處理的 cube: [Adventure Works 多維度模型 SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334)。 擷取檔案，然後將它還原至 SSAS 執行個體。 如需詳細資訊，請參閱[備份和還原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)，或[Restore-asdatabase 指令程式](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.交叉分析篩選器的基本 MDX
 
@@ -77,8 +98,8 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + 在資料行上，您可以指定多個量值作為以逗號區隔字串的元素。
 + [資料列] 座標軸會使用「產品線」維度的所有可能值 (所有 MEMBERS)。 
-+ 這個查詢會傳回包含三個資料行的資料表，內含所有國家/地區的網際網路銷售量的「積存」  摘要。 
-+ WHERE 子句是「交叉分析篩選器座標軸」 。 交叉分析篩選器會使用 SalesTerritory 維度成員來篩選查詢，僅在計算中使用來自澳洲的銷售量。
++ 這個查詢會傳回包含三個資料行的資料表，內含所有國家/地區的網際網路銷售量的「積存」  摘要。
++ WHERE 子句會指定_slicer 座標軸_。 在此範例中，交叉分析篩選器會使用的成員**SalesTerritory**來篩選查詢，以便在計算中使用來自澳洲的銷售的維度。
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>使用 olapR 中所提供的函式來建置此查詢
 
@@ -107,17 +128,16 @@ mdx <- "SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sal
 result2 <- execute2D(ocs, mdx)
 ```
 
-請注意，如果您使用 SQL Server Management Studio 中的 MDX 產生器來定義查詢，然後儲存 MDX 字串，則會從 0 開始對座標軸進行編號，如下所示︰ 
+如果您在 SQL Server Management Studio 中使用 MDX 產生器定義查詢並儲存的 MDX 字串，它將編號 0，開始的軸，如下所示： 
 
-~~~~
+```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amount]} ON AXIS(0), 
    {[Product].[Product Line].[Product Line].MEMBERS} ON AXIS(1) 
    FROM [Analysis Services Tutorial] 
-   WHERE [Sales Territory].[Sales Territory Country].[Australia]
-~~~~
+   WHERE [Sales Territory].[Sales Territory Countr,y].[Australia]
+```
 
-您還是可以執行這個查詢作為預先定義的 MDX 字串。 不過，若要使用 R 並使用 `axis()` 函式來建置相同查詢，請一定要從1 開始對座標軸進行編號。
-
+您還是可以執行這個查詢作為預先定義的 MDX 字串。 不過，若要建置使用 R 使用相同的查詢`axis()`函式，您必須重新編號從 1 開始的軸。
 
 ### <a name="2-explore-cubes-and-their-fields-on-an-ssas-instance"></a>2.探索 SSAS 執行個體上的 Cube 和其欄位
 
@@ -126,7 +146,9 @@ SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amou
 #### <a name="to-list-the-cubes-available-on-the-specified-connection"></a>列出所指定連線上的可用 Cube
 
 若要檢視您具有檢視權限的執行個體上的所有 Cube 或檢視方塊，請提供控制代碼作為 `explore`的引數。
-請注意，最終結果不是 Cube；TRUE 僅表示中繼資料作業成功。 如果引數無效，則會擲回錯誤。
+
+> [!IMPORTANT]
+> 最後的結果是**不**cube;為 true，則只是表示中繼資料作業成功。 如果引數無效，則會擲回錯誤。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
@@ -141,8 +163,6 @@ explore(ocs)
 |_轉售商銷售_|
 |_銷售摘要_|
 |_[1] TRUE_|
-     
-
 
 #### <a name="to-get-a-list-of-cube-dimensions"></a>取得 Cube 維度清單
 
@@ -164,7 +184,6 @@ explore(ocs, "Sales")
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>傳回所指定維度和階層的所有成員
 
 定義來源並建立控制代碼之後，請指定要傳回的 Cube、維度和階層。
-請注意，傳回結果中前面加上 **->** 的項目代表前一個成員的子系。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
@@ -182,7 +201,8 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |-> 組件元件|
 
 
+在前面加上傳回結果中的項目 **->** 代表上一個成員的子系。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[在 R 中使用 OLAP Cube 的資料](../../advanced-analytics/r-services/using-data-from-olap-cubes-in-r.md)
+[在 R 中使用 OLAP cube 的資料](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)

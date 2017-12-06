@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: 74d1111cab0b0e59ff13644e86ed33323a0185dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a65ee3607cb2bbe2a1a30135950e611e4456f8ba
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>疑難排解 SQL Server on Linux
 
@@ -149,7 +149,7 @@ SQL 傾印
    ```
   
 > [!WARNING]  
->  啟動 SQL Server on Linux，與 「 mssql 」 使用者若要避免未來啟動問題。 範例"sudo-u mssql /opt/mssql/bin/sqlservr [開機選項]" 
+>  以 "mssql" 使用者身分啟動 Linux 上的 SQL Server，以免未來發生啟動問題。 例如，"sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]" 
 
 如果您不小心與其他使用者啟動 SQL Server，您必須將 SQL Server 資料庫檔案的擁有權變更回之前啟動 SQL Server 與 systemd 'mssql' 使用者。 例如，若要變更 'mssql' 使用者 /var/opt/mssql 底下的所有資料庫檔案的擁有權，執行下列命令
 

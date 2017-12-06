@@ -2,7 +2,7 @@
 title: "R Services-資料最佳化的效能 |Microsoft 文件"
 ms.custom: 
 ms.date: 07/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 57cd083ac721f94eba1135c4d5b34147015700d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1ac2f8b49ad9b992fd85e087528c426936587f9d
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-資料最佳化的效能
 

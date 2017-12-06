@@ -2,7 +2,7 @@
 title: "第 2 課： 將資料匯入 SQL Server 使用 PowerShell |Microsoft 文件"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -18,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c9190157b005158bb2ca8b9aeb7addbdbf1e69f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c62ca99196267262fbeee9c44136a8f8a015ecaa
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>第 2 課： 將資料匯入 SQL Server 使用 PowerShell
 

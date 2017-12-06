@@ -2,7 +2,7 @@
 title: "使用 R 建立 BI 工作流程 |Microsoft 文件"
 ms.custom: SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 177242eadd1883e4f6c9de0893dc805c4312c36f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c4fd8e50dc082acde85cb427c74e8a1fca91744d
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="creating-bi-workflows-with-r"></a>使用 R 建立 BI 工作流程
 

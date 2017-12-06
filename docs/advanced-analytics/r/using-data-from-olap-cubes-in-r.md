@@ -1,31 +1,36 @@
 ---
 title: "在 R 中使用 OLAP cube 的資料 |Microsoft 文件"
 ms.custom: 
-ms.date: 11/03/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.date: 11/29/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs: r-services
 ms.assetid: 8093599c-8307-4237-983b-0908d0f8ab77
 caps.latest.revision: "12"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 1c55a5b834cd91478a87ded7ebb86884117c7bfb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 60e95f4c101a4afe2a8161ba40df7b27bd85f602
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用 OLAP cube 的資料
 
-**OlapR**封裝是 R 封裝，提供由 Microsoft 用於機器學習伺服器和 SQL Server R 服務，可讓您執行 MDX 查詢以從 OLAP cube 取得資料。 此套件中，您不需要建立連結的伺服器，或清除扁平化的資料列集。您可以直接在 r 中使用 OLAP 資料
+**OlapR**封裝是 R 封裝，提供由 Microsoft 用於機器學習 Server 和 SQL Server，可讓您執行 MDX 查詢以從 OLAP cube 取得資料。 此套件中，您不需要建立連結的伺服器，或清除扁平化的資料列集。您可以直接在 r 中使用 OLAP 資料
 
-本文說明的 API，以及概觀 fo OLAP 和 MDX 的 R 使用者可能是多維度 cube 資料庫的新手。
+本文說明的 API，以及的 R 使用者可能是多維度 cube 資料庫的新手 OLAP 和 MDX 的概觀。
+
+> [!IMPORTANT]
+> Analysis Services 的執行個體可以支援傳統的多維度 cube 或表格式模型中，但執行個體無法支援這兩種類型的模型。 因此，您建立查詢，以對 Analysis Services 資料庫之前，請確認它包含多維度模型。
+> 
+> 雖然您可以使用 MDX 查詢表格式模型**olapR**套件不支援表格式模型執行個體的連接。 如果您需要從表格式模式中取得資料，較好的選擇是要啟用[DirectQuery](https://docs.microsoft.com/sql/analysis-services/tabular-models/directquery-mode-ssas-tabular)模型，以及建立可做為 SQL Server 中連結的伺服器執行個體上。 
 
 ## <a name="what-is-an-olap-cube"></a>什麼是 OLAP cube？
 
@@ -35,7 +40,7 @@ Microsoft 提供[Analysis Services](https://docs.microsoft.com/sql/analysis-serv
 
 基於效能考量，OLAP 資料庫通常計算摘要 (或_彙總_) 事先，然後將它們儲存為更快速地擷取。 摘要根據*量值*，代表可以套用至數值資料的公式。 您使用維度來定義資料的子集，並透過該資料計算量值。 例如，您要用於量值計算特定產品線的總銷售額減去稅金，報告特定供應商、 年度至今累積薪資付費，等等的平均貨運成本的多個季。
 
-短的多維度運算式，MDX 是查詢 cube 所使用的語言。 MDX 查詢通常會包含資料定義，其中包含一個或多個維度，以及至少一個量值、 thogh MDX 查詢可以取得也更複雜，並將包含循環 windows、 累計平均或加總，依百分位數。 
+短的多維度運算式，MDX 是查詢 cube 所使用的語言。 MDX 查詢通常會包含資料定義包含一或多個維度和至少一個量值，MDX 查詢可以取得也更複雜，而且包括輪流 windows、 累積平均值、 總和、 排列次序或依百分位數。 
 
 以下是當您啟動建立 MDX 查詢時可能會很有幫助的其他某些詞彙：
 
@@ -51,17 +56,19 @@ Microsoft 提供[Analysis Services](https://docs.microsoft.com/sql/analysis-serv
 
 + 「樞紐」 會輪流選取 Cube 或資料。
 
-本主題提供更多的基本語法的範例 cube 上的查詢： 
+## <a name="how-to-use-olapr-to-create-mdx-queries"></a>如何使用 olapR 建立 MDX 查詢
 
-+ [如何建立 MDX 查詢使用 R](../../advanced-analytics/r-services/how-to-create-mdx-queries-using-olapr.md)
+下列文章提供詳細的建立，或對 cube 執行查詢的語法範例：
+
++ [如何建立 MDX 查詢使用 R](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md)
 
 ## <a name="olapr-api"></a>olapR 應用程式開發介面
 
 **olapR** 封裝支援兩種建立 MDX 查詢的方法：
 
-- **使用 MDX 產生器。** 使用封裝中的 R 函數來產生簡單的 MDX 查詢中，選擇 cube 中，並設定座標軸和交叉分析篩選器。 這是用來建置有效的 MDX 查詢，如果您沒有存取傳統的 OLAP 工具，或不需要深入了解 MDX 語言。
+- **使用 MDX 產生器。** 使用封裝中的 R 函數來產生簡單的 MDX 查詢，方式是選擇 cube，然後設定 軸和交叉分析篩選器。 這是用來建置有效的 MDX 查詢，如果您沒有存取傳統的 OLAP 工具，或不需要深入了解 MDX 語言。
 
-    可以使用此方法，建立不是所有可能的 MDX 查詢，因為 MDX 可能會很複雜。 不過，此 API 支援大多數最常用與實用作業，包括在 N 維度中的配量、 細分、 向下鑽研、 rollup 和樞紐分析。
+    可以使用此方法，建立不是所有的 MDX 查詢，因為 MDX 可能會很複雜。 不過，此 API 支援大多數最常用與實用作業，包括在 N 維度中的配量、 細分、 向下鑽研、 rollup 和樞紐分析。
 
 + **複製-貼上 MDX 格式不正確。** 手動建立，然後貼上任何 MDX 查詢中。 這個選項最適合您有現有的 MDX 查詢，以您想要重複使用，或如果您想要建置的查詢太複雜， **olapR**來處理。 
 
@@ -71,19 +78,46 @@ Microsoft 提供[Analysis Services](https://docs.microsoft.com/sql/analysis-serv
 
 ## <a name="known-issues"></a>已知問題
 
-### <a name="tabular-models-not-supported"></a>不支援表格式模型
+本節列出有關的一些已知的問題和常見問題的解答**olapR**封裝。
 
-+ 如果您連接到 Analysis services 表格式執行個體`explore`函式會報告成功傳回的值為 TRUE。 但是，表格式模型物件的不相容的型別，而且無法瀏覽。
+### <a name="tabular-models-are-not-supported"></a>不支援表格式模型
 
-+ 您可以使用 DAX 或 MDX 查詢表格式模型。 如果您設計有效的 MDX 查詢，針對表格式模型使用外部工具，然後將查詢貼到此應用程式開發介面時，查詢會傳回 NULL 結果，並不會報告錯誤。
+如果您連接到包含表格式模型中，Analysis services 執行個體`explore`函式會報告成功傳回的值為 TRUE。 但是，表格式模型物件的不相容的型別，而且無法瀏覽。
+
+此外，如果您設計有效的 MDX 查詢，針對表格式模型 （藉由使用外部工具），然後將查詢貼到此應用程式開發介面時，查詢會傳回 NULL 結果，而且不會報告錯誤。
+
+如果您需要在 R 中使用的表格式模型中擷取資料，請考慮這些選項：
+
++ 啟用 DirectQuery 模型上，將伺服器新增為 SQL Server 中連結的伺服器。 
++ 如果在關聯式資料超市上建置表格式模型時，請直接從來源取得的資料。
+
+### <a name="how-to-determine-whether-an-instance-contains-tabular-or-multidimensional-models"></a>如何判斷執行個體是否包含表格式或多維度模型
+
+表格式模型的基本差異也會影響資料的方式的多維度模型是儲存及處理。 例如，表格式模型儲存在記憶體中，並利用執行非常快速的計算資料行存放區索引。 在多維度模型中，資料會儲存在磁碟上，預先定義及使用 MDX 查詢擷取彙總。
+
+基於這個理由，單一 Analysis Services 執行個體可以包含一種模型。 請參閱下列文件，如需有關如何區分兩種模型類型的秘訣：
+
++ [比較多維度和表格式模型](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
+
+如果您連接到 Analysis Services 使用 SQL Server Management Studio 之類的用戶端，您可以立即判斷出支援的模型類型，藉由查看資料庫的圖示。
+
+您也可以檢視伺服器屬性。 **伺服器模式**屬性支援兩個值：_多維度_或_表格式_。
+
+如需如何確認使用 [伺服器] 屬性的伺服器類型的詳細資訊，請參閱[OLE DB for OLAP 結構描述資料列集](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
+
+### <a name="writeback-is-not-supported"></a>不支援回寫
+
+您不可能將自訂 R 計算結果寫回 cube。
+
+一般情況下，即使已啟用回寫 cube，支援有限的作業，並可能還需要額外的設定。 我們建議您針對這些作業使用 MDX。
+
++ [啟用寫入的維度](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
++ [寫入的資料分割](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
++ [設定資料格資料的自訂存取](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
 
 ## <a name="resources"></a>資源
 
-如果您不熟悉 OLAP 或 MDX 查詢，請參閱下列維基百科文章︰ [OLAP Cube](https://en.wikipedia.org/wiki/OLAP_cube)
-[MDX 查詢](https://en.wikipedia.org/wiki/MultiDimensional_eXpressions)
+如果您不熟悉 OLAP 或 MDX 查詢，請參閱這些維基百科文章： 
 
-### <a name="samples"></a>範例
-
-如果您想要深入了解 Cube，您可以遵循 Analysis Services 教學課程直到第 4 課： [建立 OLAP Cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)，以建立用於這些範例的 Cube
-
-您也可以下載現有的 Cube 作為備份，並將它還原到 Analysis Services 的執行個體。 例如，您可以下載 [Adventure Works Multidimensional Model SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334)之完整處理的 Cube (壓縮格式)，並將它還原到 SSAS 執行個體。 如需詳細資訊，請參閱 [備份與還原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)或 [Restore-ASDatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
++ [OLAP cube](https://en.wikipedia.org/wiki/OLAP_cube)
++ [MDX 查詢](https://en.wikipedia.org/wiki/MultiDimensional_eXpressions)
