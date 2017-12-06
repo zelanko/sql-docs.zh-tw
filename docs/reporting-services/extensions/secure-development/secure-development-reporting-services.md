@@ -2,9 +2,12 @@
 title: "安全開發 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 94a4edc787bb625bca60991dba4dcb0ec5fcd635
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5a82e0223882d98db52cd9837ea8f9cb1ae832de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="secure-development-reporting-services"></a>安全開發 (Reporting Services)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了強固的安全性系統，可在嚴格控制、管理員定義的安全性環境中執行程式碼。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全性系統，也稱為程式碼存取安全性 (或是證據型安全性)。 在程式碼存取安全性之下，系統會信任使用者存取資源，但是如果使用者執行的程式碼未獲得信任，該資源的存取將會遭到拒絕。  

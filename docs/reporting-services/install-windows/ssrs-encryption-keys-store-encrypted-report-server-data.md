@@ -2,9 +2,12 @@
 title: "儲存加密的報表伺服器資料 (SSRS 設定管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0727e4e4fa6290396d08bedbd1404722c18e6807
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f7ede2f08bd7f09eb4a3dd0be273225dc5ba6b8d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密金鑰 - 儲存加密的報表伺服器資料
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會在報表伺服器資料庫和組態檔中儲存加密值。 大部份加密值是用於存取將資料提供給報表之外部資料來源的認證。 本主題將描述哪些值會進行加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所使用的加密功能，以及您應該知道的其他預存機密資料類型。  

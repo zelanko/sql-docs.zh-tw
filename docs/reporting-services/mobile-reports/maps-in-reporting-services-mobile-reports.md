@@ -2,9 +2,12 @@
 title: "Reporting Services 行動報表中的地圖 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 975ad199788370f01686c50d5dcc05f093c31f50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dd0c562ba03e3a5b5d92530a40ad58b89e75756c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Reporting Services 行動報表中的地圖
 地圖是將地理資料視覺化的最佳方式。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 提供三種不同類型的地圖視覺效果，以及針對各大洲和一些個別國家/地區內建的地圖。 您也可以 [上傳和使用自訂的地圖](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。   
