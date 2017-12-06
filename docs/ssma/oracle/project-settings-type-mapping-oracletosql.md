@@ -1,10 +1,13 @@
 ---
 title: "專案設定 （型別對應） (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: f387bee9f8e83568bb463ae0e07c4f614a725b15
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 60a996ce7e67c418e511e88306224818286541c2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>專案設定 （型別對應） (OracleToSQL)
 類型對應 頁面**專案設定**對話方塊包含自訂 SSMA 如何轉換到 Oracle 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
@@ -160,10 +163,10 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |Nclob|nvarchar(max)|  
 |number|float [53]|  
 |數字 [*..\*]|數字 [*]|  
-|數字 [*..\*][\*..\*]|數字 [*] [\*]|  
+|數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |numeric|numeric|  
 |數字 [*..\*]|數字 [*]|  
-|數字 [*..\*][\*..\*]|數字 [*] [\*]|  
+|數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |nvarchar2 [*..\*]|nvarchar [*]|  
 |原始 [*..\*]|varbinary [*]|  
 |real|float [53]|  
@@ -268,6 +271,6 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |varchar2 [8001..*]|varcha(max)|  
 |Xmltype|xml|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [使用者介面參考 &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

@@ -3,8 +3,11 @@ title: "順序和 Qname (XQuery) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2414607a95b28aeba61bded3d9898ac25cb720a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d47b0ccdb749cf334562be98ad2a3a43dc16ce15
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sequence-and-qnames-xquery"></a>順序和 QName (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   此主題描述下列 XQuery 基礎概念：  
   
@@ -151,7 +154,7 @@ WHERE ProductModelID=7;
 > [!NOTE]  
 >  此實作並不支援 `local` 前置詞，如 http://www.w3.org/2004/07/xquery-local-functions 中的 XQuery 規格所述。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [XQuery 基本概念](../xquery/xquery-basics.md)  
   
   

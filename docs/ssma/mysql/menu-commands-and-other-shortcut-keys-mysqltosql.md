@@ -1,10 +1,13 @@
 ---
 title: "功能表命令和其他的快速鍵 (MySQLToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 040f770f568e7dacf3d378415f227742e70935f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5080cb5af9e80651d60dbabc55249617c7d31907
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>功能表命令和其他的快速鍵 (MySQLToSQL)
 下列章節來存取功能表命令與 MySQL 應用程式使用不同的 SSMA 對話方塊中其他快速鍵的鍵盤快速鍵。  
@@ -186,6 +189,6 @@ ms.lasthandoff: 11/09/2017
 |啟動 快速諮詢。|CTRL + SHIFT + 空間|  
 |移至宣告。|F12|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [攠摝坫 &#40;MySQLToSQL &#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   

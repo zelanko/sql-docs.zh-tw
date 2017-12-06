@@ -2,9 +2,12 @@
 title: "檢視微調報表 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a3fca4cfcb035c48e37c455e72b03a76474a3cd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d270a34d882cbe4c5ffd458e52a9033db1b16c26
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>課程 1-3-檢視微調報表
-在這個課程的上一個練習中，您檢視了在 MySession 微調工作階段所產生的 Database Engine Tuning Advisor 建議中建立或卸除資料庫物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 MySession 微調工作階段是先前在 [微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)中所建立的。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本課程的上一個練習中，您檢視[!INCLUDE[tsql](../../includes/tsql-md.md)]建立或 mysession 微調工作階段所產生的 Database Engine Tuning Advisor 建議中卸除資料庫物件的指令碼。 MySession 微調工作階段是先前在 [微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)中所建立的。  
   
 雖然檢視用來實作微調結果的指令碼非常有用，但 Database Engine Tuning Advisor 也另外提供了許多有用的報表，供您檢視。 這些報表提供您在微調的資料庫其中之現有實體設計結構的相關資訊，以及所建議之結構的相關資訊。 您可以依照下列練習中的說明，按一下 [報表] 索引標籤來檢視這些微調報表。 這個練習使用[微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)和[檢視微調建議](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md)中所建立的 MySession 和 EvaluateMySession 微調工作階段。  
   

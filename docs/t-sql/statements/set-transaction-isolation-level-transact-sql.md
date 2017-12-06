@@ -1,7 +1,7 @@
 ---
 title: "設定交易隔離等級 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 32948fdc6c6c24de0331be45678dc89561de69de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cde588fed7aad439e90c97de99ba89633a1df2c5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,29 +44,27 @@ ms.lasthandoff: 11/21/2017
   控制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 連接所發出之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式的鎖定和資料列版本設定行為。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>語法
+
+```
+-- Syntax for SQL Server and Azure SQL Database
   
-## <a name="syntax"></a>語法  
+SET TRANSACTION ISOLATION LEVEL
+    { READ UNCOMMITTED
+    | READ COMMITTED
+    | REPEATABLE READ
+    | SNAPSHOT
+    | SERIALIZABLE
+    }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET TRANSACTION ISOLATION LEVEL  
-    { READ UNCOMMITTED  
-    | READ COMMITTED  
-    | REPEATABLE READ  
-    | SNAPSHOT  
-    | SERIALIZABLE  
-    }  
-[ ; ]  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED  
-[ ; ]  
-```  
-  
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+```
+
 ## <a name="arguments"></a>引數  
  READ UNCOMMITTED  
  指定陳述式可以讀取其他交易已修改，但尚未認可的資料列。  
@@ -187,7 +185,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [DBCC USEROPTIONS &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

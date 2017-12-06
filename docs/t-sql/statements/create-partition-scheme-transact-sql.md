@@ -34,17 +34,20 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 993a96a957d617a53b008a6929522ab468bc3e1e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c97264457e575aa076e6b10f3454f0d8cf6e2d7
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在目前資料庫建立一項配置，將資料分割資料表或索引的資料分割，對應至檔案群組。 資料分割資料表或索引的資料分割數目和網域，由資料分割函數來決定。 資料分割函式必須先建立在[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)陳述式後再建立資料分割配置。  
-  
+
+[!NOTE]
+在 Azure SQL Database 支援只有主要檔案群組。  
+
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
@@ -172,7 +175,7 @@ AS PARTITION myRangePF1
 ALL TO ( [PRIMARY] );  
 ```
    
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [ALTER PARTITION SCHEME &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
  [DROP PARTITION SCHEME &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   

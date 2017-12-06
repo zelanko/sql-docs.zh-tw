@@ -1,10 +1,13 @@
 ---
 title: "使用者介面參考 (MySQLToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b630c95516370e4c0352e18d1259f05649c106d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2e61c90785328f887caff3df0b97d632cf4cdbaf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="user-interface-reference-mysqltosql"></a>使用者介面參考 (MySQLToSQL)
 此章節包含 [說明] 主題的 SQL Server 移轉小幫手 (SSMA) MySQL。  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
 |[從資料庫 &#40; 重新整理MySQLToSQL &#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|使用**從資料庫重新整理**對話方塊來選取要重新整理從 MySQL 資料庫。|  
 |[儲存中繼資料 &#40;MySQLToSQL &#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|**儲存中繼資料**儲存遺失中繼資料的專案時，對話方塊隨即出現。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [開始使用 SSMA for MySQL &#40;MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

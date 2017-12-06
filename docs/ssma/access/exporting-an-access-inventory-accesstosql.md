@@ -1,10 +1,13 @@
 ---
 title: "匯出存取清查 (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5d4c6fb051f37d02875070eeef6709cba84ae452
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7ec72d4137f8fcee6b600783988981f24b108f1d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>匯出存取清查 (AccessToSQL)
 如果您有多個存取資料庫，而且您不確定要將移轉至哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以匯出專案中的所有存取資料庫的清查。 您可以檢閱，然後查詢來判斷哪一個資料庫並移轉這些資料庫中的物件的清查中繼資料。 這個清查可讓您快速尋找問題解答，如下所示：  
@@ -233,6 +236,6 @@ WHERE ColumnName LIKE '%salary%';
 ```  
 如果您不知道資料行名稱，您可以撰寫查詢來傳回所有資料行。 若要這樣做，請從上一個查詢移除 WHERE 子句。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [準備移轉的 Access 資料庫](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   

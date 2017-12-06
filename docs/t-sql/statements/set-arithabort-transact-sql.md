@@ -1,7 +1,7 @@
 ---
 title: "SET ARITHABORT (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 977cf066d10f3318497720da7b32b1caad16e0fc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 372e4ff2a6f1c89395f30a7e1d6a000ec5ebea7f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,19 +47,17 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>語法  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
+```
+-- Syntax for SQL Server and Azure SQL Database
   
-SET ARITHABORT { ON | OFF }  
-[ ; ]  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ARITHABORT ON   
-[ ; ]  
-```  
+SET ARITHABORT { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ARITHABORT ON
+```
   
 ## <a name="remarks"></a>備註  
  您應該在登入工作階段中一律將 ARITHABORT 設為 ON。 將 arithabort 設為 OFF 可能會對造成負面影響查詢最佳化，導致效能問題。  
@@ -82,13 +80,13 @@ SET ARITHABORT ON
   
  如果 SET ARITHABORT 或 SET ARITHIGNORE 是 OFF，而 SET ANSI_WARNINGS 是 ON，當發現除以零或溢位的錯誤時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤訊息。  
   
- 如果 SET ARITHABORT 設為 OFF，且在 IF 陳述式的 Boolean 條件的評估中發生中止錯誤，就會執行 FALSE 分支。  
+ 如果 SET ARITHABORT 設為 OFF，且在 IF 陳述式的布林值條件的評估期間發生中止錯誤，則會執行 FALSE 分支。
   
- 當您建立或變更計算資料行索引或索引檢視時，SET ARITHABORT 也必須是 ON。 如果 SET ARITHABORT 是 OFF，含計算資料行索引的資料表或索引檢視之 CREATE、UPDATE、INSERT 和 DELETE 陳述式會失敗。  
+ 當您建立或變更計算資料行索引或索引檢視時，SET ARITHABORT 也必須是 ON。 如果 SET ARITHABORT 是 OFF，含計算資料行索引的資料表或索引檢視之 CREATE、UPDATE、INSERT 和 DELETE 陳述式會失敗。
   
  SET ARITHABORT 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
- 若要檢視此設定的目前設定，請執行下列查詢。  
+ 若要檢視這項設定的目前設定，請執行下列查詢：
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
@@ -196,7 +194,7 @@ DROP TABLE t2;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ARITHIGNORE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
  [SESSIONPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  

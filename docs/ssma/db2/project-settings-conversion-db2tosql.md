@@ -1,10 +1,13 @@
 ---
 title: "專案設定 （轉換） (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 02cc7f58c47138b7da063151f0d8e9df08762ae0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e40e6f4d56f3c246516de617dbdc4a7c9516db9c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-conversion-db2tosql"></a>專案設定 （轉換） (DB2ToSQL)
 [轉換] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何轉換 DB2 語法來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]語法。  
@@ -485,6 +488,6 @@ SSMA 還提供用以將 DB2 序列轉換成 SSMA 順序模擬器選項。 這是
   
 -   如果您選取**否**，SSMA 會將標示為外部觸發程序上的轉換後排序 CURRVAL 並產生錯誤的所有參考。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [使用者介面參考 &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

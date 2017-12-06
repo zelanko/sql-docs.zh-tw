@@ -2,9 +2,12 @@
 title: "SQL Server 組態管理員說明 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46fae234aa78b30fcb3f16bc4d7cf0db40228f8e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 06fa3ef8d6b7f34f31b21685a1ba5b543f0fb6a6
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 組態管理員說明
-  您可以使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務以及設定網路連接性。 若要建立或管理資料庫物件、設定安全性以及撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如需有關 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務以及設定網路連線。 若要建立或管理資料庫物件、設定安全性以及撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如需有關 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》。  
   
  本節包含關於「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」中對話方塊的 F1 說明主題。  
   
@@ -72,10 +75,10 @@ ms.lasthandoff: 11/09/2017
   
  **若要存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager 使用[!INCLUDE[win8](../../includes/win8-md.md)]**  
   
- 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是單獨的程式，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時並不會出現 [!INCLUDE[win8](../../includes/win8-md.md)] 組態管理員這樣的應用程式。 若要開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，請在 [搜尋] 常用鍵的 [應用程式] 下，輸入 **SQLServerManager12.msc** (適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 或 **SQLServerManager11.msc** (適用於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])，然後按 **Enter**。  
+ 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是單獨的程式，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時並不會出現 [!INCLUDE[win8](../../includes/win8-md.md)] 組態管理員這樣的應用程式。 若要開啟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager，請在**搜尋**快速鍵**應用程式**，型別**SQLServerManager12.msc** (如[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 或**SQLServerManager11.msc** (如[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])，然後按下**Enter**。  
   
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SQL Server 服務](../../tools/configuration-manager/sql-server-services.md)   
  [SQL Server 網路組態](../../tools/configuration-manager/sql-server-network-configuration.md)   
  [SQL Native Client 11.0 組態](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   

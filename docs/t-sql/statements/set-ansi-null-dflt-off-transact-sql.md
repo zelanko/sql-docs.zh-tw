@@ -1,7 +1,7 @@
 ---
 title: "SET ANSI_NULL_DFLT_OFF (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 415f93dc71d8a3f69f3dfb93053e789080bc607a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 93677ffee0b86f342d07b8a129b6a1e0b2676d28
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansinulldfltoff-transact-sql"></a>SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,21 +41,21 @@ ms.lasthandoff: 11/21/2017
   改變資料庫的 ANSI null default 選項時，覆寫新資料行的預設 null 屬性的工作階段的行為**true**。 如需有關設定 ANSI null 預設值的詳細資訊，請參閱[ALTER DATABASE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>語法
+
+```
+-- Syntax for SQL Server and Azure SQL Database
   
-## <a name="syntax"></a>語法  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET ANSI_NULL_DFLT_OFF { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_NULL_DFLT_OFF OFF  
-```  
-  
+SET ANSI_NULL_DFLT_OFF { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_NULL_DFLT_OFF OFF
+```
+
 ## <a name="remarks"></a>備註  
  這項設定只在 CREATE TABLE 和 ALTER TABLE 陳述式未指定新資料行的 Null 屬性時，才會影響新資料行的 Null 屬性設定。 依預設，當 SET ANSI_NULL_DFLT_OFF 是 ON 時，如果未明確指定資料行的 Null 屬性狀態，ALTER TABLE 和 CREATE TABLE 陳述式所建立的新資料行是 NOT NULL。 SET ANSI_NULL_DFLT_OFF 不會影響利用明確的 NULL 或 NOT NULL 來建立的資料行。  
   
@@ -149,7 +149,7 @@ DROP TABLE t1, t2, t3, t4, t5, t6;
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   

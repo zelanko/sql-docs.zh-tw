@@ -2,9 +2,12 @@
 title: "XML 輸入檔範例，含使用者指定組態 (DTA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1650b5ccfc752cc07e97647c3e1cced118b3bb7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0a8f6fb06e3e587410321dbe3a205df08f421356
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xml-input-file-sample-with-user-specified-configuration-dta"></a>含使用者指定組態的 XML 輸入檔範例 (DTA)
-  請複製利用 **Configuration** 元素指定使用者指定組態的這個 XML 輸入檔範例，再將它貼到您喜愛的 XML 編輯器或文字編輯器中。 這可讓您進行「假設」分析。 「假設」分析包括利用 **Configuration** 元素來指定您要微調之資料庫的一組假設性實體設計結構。 之後，您再利用 Database Engine Tuning Advisor 來分析針對這個假設性組態來執行工作負載的效果，以了解它是否能夠改進查詢的處理效能。 這類分析的好處是既能夠評估新的組態，又免除了實際實作的負擔。 如果假設性組態所改進的效能不符需求，您很容易改變它，再分析它，直到產生的結果符合需求的組態出現為止。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]複製並貼上指定的使用者指定組態的 XML 輸入檔的這個範例**組態**到您喜愛的 XML 編輯器或文字編輯器的項目。 這可讓您進行「假設」分析。 「假設」分析包括利用 **Configuration** 元素來指定您要微調之資料庫的一組假設性實體設計結構。 之後，您再利用 Database Engine Tuning Advisor 來分析針對這個假設性組態來執行工作負載的效果，以了解它是否能夠改進查詢的處理效能。 這類分析的好處是既能夠評估新的組態，又免除了實際實作的負擔。 如果假設性組態所改進的效能不符需求，您很容易改變它，再分析它，直到產生的結果符合需求的組態出現為止。  
   
  將這個範例複製到編輯工具之後，請利用您的特定微調工作階段的各個值來取代指定給 **Server**、 **Database**、 **Schema**、 **Table**、 **Workload**、 **TuningOptions**和 **Configuration** 等元素的值。 如需可以搭配這些元素來使用的所有屬性和子元素的詳細資訊，請參閱 [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。 下列範例只用到部份可用的屬性及子元素選項。  
   

@@ -2,9 +2,12 @@
 title: "檢閱重新執行結果 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44e055d7a3da857a1be798ae5b5222a4a8a35713
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c51dd81d0d3b0c97a74cbdc42cdf37a79d9dcb83
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="review-the-replay-results"></a>檢閱重新執行結果
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能完成分散式重新執行之後，即可擷取每個用戶端的重新執行活動，並將其儲存在每個用戶端的結果追蹤檔案中。 若要擷取此活動，您必須在以 **replay** 選項執行管理工具時使用 **-o** 參數。 如需詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]之後[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能完成分散式重新執行，可以擷取每個用戶端重新執行活動，並儲存在每個用戶端的結果追蹤檔案。 若要擷取此活動，您必須在以 **replay** 選項執行管理工具時使用 **-o** 參數。 如需詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
   
  結果追蹤檔案的儲存位置是由每個用戶端上用戶端組態檔 `<ResultDirectory>` 中的 `DReplayClient.xml` XML 元素所指定。 每次重新執行時都會覆寫用戶端結果目錄中的追蹤檔案。  
   

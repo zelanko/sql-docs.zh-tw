@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>巢狀資料表 (Analysis Services - 資料採礦)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料必須當作包含在案例資料表內的一系列案例，傳送至資料採礦演算法。 不過，並非所有的案例都可以由單一資料列描述。 例如，案例可能從兩個資料表衍生：一個資料表包含客戶資訊，而另一個資料表包含客戶購買資訊。 客戶資訊表中的單一客戶在客戶購買資料表中可能有多筆購買項目，所以很難以單一資料列描述資料。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供獨特方法來處理這些情況下，使用*巢狀資料表*。 下圖展示巢狀資料表的概念。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  例如，如果巢狀資料表包含資料行 **Product**、 **ProductQuantity**和 **ProductPrice**，您可以選擇 **Product** 作為巢狀資料表索引鍵，但對採礦結構加入 **ProductQuantity** 當作輸出。  
   
 ## <a name="filtering-nested-table-data"></a>篩選巢狀資料表資料  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您可以在用於定型或測試資料採礦模型的資料上建立篩選。 篩選可用於影響模型的構成要素或在案例子集上測試模型。 篩選也可以套用到巢狀資料表。 不過，巢狀資料表可使用的語法具有限制。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您可以在用於定型或測試資料採礦模型的資料上建立篩選。 篩選可用來影響模型的構成，或為的案例子集上測試模型。 篩選也可以套用到巢狀資料表。 不過，巢狀資料表可使用的語法具有限制。  
   
  通常當您將篩選套用至巢狀資料表時，也是在測試屬性是否存在。 例如，您可以套用篩選，限制模型中所用的案例只能是在巢狀資料表中具有指定值的案例。 或者，也可以將模型中使用的案例限制為尚未購買過特定項目的客戶。  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  如需如何建立及使用模型篩選的詳細資訊，請參閱[採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   

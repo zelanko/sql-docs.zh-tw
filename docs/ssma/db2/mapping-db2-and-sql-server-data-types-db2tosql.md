@@ -1,10 +1,13 @@
 ---
 title: "對應 DB2 與 SQL Server 資料類型 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59b9367b5d6171f1c5692e278fc99cef0fcbce19
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ce0e2311d040705713b51bf007b9334bccaa69ff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>對應 DB2 與 SQL Server 資料類型 (DB2ToSQL)
 DB2 資料庫類型的不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫類型。 當您轉換至 DB2 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件，您必須指定如何對應到 DB2 中的資料類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以接受預設資料類型對應，或您可以自訂對應，如下列各節中所示。  
@@ -94,6 +97,6 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
 ## <a name="next-steps"></a>後續步驟  
 移轉程序的下一個步驟是為[評估報表 &#40; DB2ToSQL &#41;](../../ssma/db2/assessment-report-db2tosql.md)或[轉換 DB2 結構描述 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)。 如果您建立的評估報告，評估期間自動轉換 DB2 物件。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [DB2 資料庫移轉至 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

@@ -2,9 +2,12 @@
 title: "sqllogship 應用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sqllogship
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4c712a94883ce48c321a8ccc15b766b709da7648
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bbc29db3024f217fc09f283c3310ead6034e5003
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sqllogship-application"></a>sqllogship 應用程式
-  **sqllogship** 應用程式會對記錄傳送組態執行備份、複製或還原作業，以及相關的清除工作。 這些作業是在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特定執行個體上對特定資料庫執行。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqllogship**應用程式會記錄傳送組態執行備份、 複製或還原作業和相關聯的清除工作。 這些作業是在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特定執行個體上對特定資料庫執行。  
   
  ![主題連結圖示](../database-engine/configure-windows/media/topic-link.gif "主題連結圖示")語法慣例，請參閱[命令提示字元公用程式參考 &#40; Database engine&#41;](../tools/command-prompt-utility-reference-database-engine.md)。  
   

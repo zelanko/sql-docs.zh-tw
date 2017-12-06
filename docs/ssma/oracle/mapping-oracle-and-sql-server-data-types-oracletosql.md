@@ -1,10 +1,13 @@
 ---
 title: "Oracle 和 SQL Server 資料類型 (OracleToSQL) 對應 |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 80f9b9c13057d65877aaadb3b51047d739e50beb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6c12d5cb52f510f97816bc452cc2961230a5bd43
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Oracle 和 SQL Server 資料類型 (OracleToSQL) 對應
 Oracle 資料庫類型的不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫類型。 當您轉換至 Oracle 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件，您必須指定如何將對應從 Oracle 資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以接受預設資料類型對應，或您可以自訂對應，如下列各節中所示。  
@@ -92,6 +95,6 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
 ## <a name="next-steps"></a>後續步驟  
 移轉程序的下一個步驟是為[建立評估報表](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357)或[將 Oracle 資料庫物件轉換成 SQL Server 語法](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272)。 如果您建立的評估報告時，Oracle 物件會自動轉換期間評估。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [將 Oracle 資料庫移轉至 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

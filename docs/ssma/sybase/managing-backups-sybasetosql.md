@@ -3,8 +3,11 @@ title: "管理備份 (SybaseToSQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4c33164e2d9516bacf4e7c36a4647cd1e7bb7e36
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5b6c378905edce07e46d048eae391be837352e07
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="managing-backups-sybasetosql"></a>管理備份 (SybaseToSQL)
 Sybase 備份管理可讓您備份和還原之前或之後執行測試的表格資料。 您也可以管理與管理備份的內容對話方塊的備份內容。  
@@ -98,6 +101,6 @@ SQL Server 備份管理可讓您備份和還原之前或之後執行測試的表
   
 -   按一下**關閉**按鈕以關閉對話方塊。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [測試移轉的資料庫物件 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

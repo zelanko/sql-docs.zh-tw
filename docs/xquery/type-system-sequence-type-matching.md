@@ -3,8 +3,11 @@ title: "序列類型比對 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6bd44dc569515f6673bb5791cd7d53a0500d09d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: af693b0d47a92fdefc2ebf2104455d7ea5b782c5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="type-system---sequence-type-matching"></a>類型系統的序列類型比對
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery 運算式值一律為 0 個以上項目的序列。 項目可以是不可部份完成的值，或是節點。 序列類型是指將查詢運算式傳回的序列類型與特定類型比對的能力。 例如：  
   
@@ -435,7 +438,7 @@ RETURN
   
 -   明確查詢**xsi: type**或**xsi: nil**不支援。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [型別系統 &#40;XQuery &#41;](../xquery/type-system-xquery.md)  
   
   

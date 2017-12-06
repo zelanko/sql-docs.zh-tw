@@ -1,10 +1,13 @@
 ---
 title: "轉換 Oracle 結構描述 (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 87a15ad693bb183c6a82e0d094b5de4fb189bfc0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 698f85fea4a5a21c2fbd697ec53f90ec7e888ccf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>轉換 Oracle 結構描述 (OracleToSQL)
 您已經連接到 Oracle 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，設定專案和對應的資料選項，您可以將轉換至 Oracle 資料庫物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫物件。  
@@ -118,6 +121,6 @@ ms.lasthandoff: 11/09/2017
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[已轉換的物件載入 SQL Server](http://msdn.microsoft.com/en-us/a8ae33b2-1883-4785-922b-ea0e31c0b37a)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [將 Oracle 資料庫移轉至 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

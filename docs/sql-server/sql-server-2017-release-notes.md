@@ -2,10 +2,10 @@
 title: "SQL Server 2017 版本資訊 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/30/2017
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.technology: server-general
@@ -16,11 +16,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0cc5502883bd349f8a2586f901d5088c4edacf65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69f0db3da6a75c64aa331a0050be39274e01dad3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] 本文說明 SQL Server 2017 的限制和問題。 如需相關資訊，請參閱：

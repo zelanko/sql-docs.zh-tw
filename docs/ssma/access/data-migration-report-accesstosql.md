@@ -1,10 +1,13 @@
 ---
 title: "資料移轉報告 (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 902db63e79472afb65f81ee3d15f1fbfa87cbb8d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ca5f142a3aed5c618558c3fd6502af59f7fda185
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-migration-report-accesstosql"></a>資料移轉報告 (AccessToSQL)
 **資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  

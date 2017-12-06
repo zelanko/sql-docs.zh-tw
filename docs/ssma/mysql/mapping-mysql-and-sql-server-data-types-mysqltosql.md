@@ -1,10 +1,13 @@
 ---
 title: "對應 MySQL 及 SQL Server 資料類型 (MySQLToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48c2a4a1439065bc80f1f233fa500bf8c6f795f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a2757f2f5a3abe743eae1ef6f72b8ca00e4c14bf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>對應 MySQL 及 SQL Server 資料類型 (MySQLToSQL)
 MySQL 資料庫類型的不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫類型。 當您轉換至的 MySQL 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 物件，您必須指定如何對應資料類型從 MySQL 至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以接受預設資料類型對應，或您可以自訂對應，如下列程序中所示。  
@@ -88,6 +91,6 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是為[建立評估報表](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec)或[轉換 MySQL 資料庫物件為 SQL Server 或 SQL Azure 的語法](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7)。 如果您建立報表時，在評估期間自動轉換 MySQL 物件。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

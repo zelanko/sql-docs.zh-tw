@@ -3,8 +3,11 @@ title: "安裝 SSMA for Sybase 用戶端 (SybaseToSQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 04357499b0ac47f8fa130ceb117946cbeeba1378
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d7fe5ff03fd5f16700480bdb11b3fd8f45a51ccc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>安裝的 SSMA for Sybase 用戶端 (SybaseToSQL)
 SSMA 用戶端所組成，可用來連接到 Sybase Adaptive Server Enterprise (ASE) 資料庫伺服器和執行個體的程式檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或轉換至 ASE 資料庫物件的 Azure SQL DB[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 語法，物件載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB、，然後將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQLDB。  
@@ -71,7 +74,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
   
 SSMA 程式除了檔案之外，您也必須安裝 SSMA for Sybase 延伸模組組件上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如需詳細資訊，請參閱[上 SQL Server &#40; 安裝 SSMA 元件SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [在 SQL Server &#40; 安裝 SSMA 元件SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
 [Sybase ASE 將資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

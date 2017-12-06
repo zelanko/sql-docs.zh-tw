@@ -2,9 +2,12 @@
 title: "儲存追蹤及追蹤範本 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 515c034ba96c93101ea8346dd0207e17143d2e80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 613946c9986edf5cbb2cb95f9e483bdb5bed50e6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-traces-and-trace-templates"></a>儲存追蹤及追蹤範本
-  區分儲存追蹤檔案與儲存追蹤範本是很重要的。 儲存追蹤檔案牽涉到將擷取的事件資料儲存到指定的位置上。 儲存追蹤範本則牽涉到儲存追蹤的定義，例如指定的資料行、事件類別或篩選等。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]請務必區分儲存追蹤檔案與儲存追蹤範本。 儲存追蹤檔案牽涉到將擷取的事件資料儲存到指定的位置上。 儲存追蹤範本則牽涉到儲存追蹤的定義，例如指定的資料行、事件類別或篩選等。  
   
 ## <a name="saving-traces"></a>儲存追蹤  
  若您必須於稍後分析或重新執行擷取的資料，請將擷取的事件資料儲存到檔案或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 使用追蹤檔案可執行下列作業：  

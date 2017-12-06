@@ -2,9 +2,12 @@
 title: "SQL Server Profiler 對話方塊 |Microsoft 文件"
 ms.custom: 
 ms.date: 07/07/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -45,14 +48,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c48b3eca23a83669e33c7d31ddb7495176944813
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2e27d4133d4115d3313dcb7b9f0e9e834b60645d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 對話方塊
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一種會從伺服器擷取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的工具。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。 以下是中命令和設定可用之對話方塊的[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]是工具，可擷取[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來自伺服器的事件。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。 以下是中命令和設定可用之對話方塊的[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
 ## <a name="trace-properties"></a>追蹤屬性
 ### <a name="general-tab"></a>一般索引標籤
 使用 **[追蹤屬性]** 對話方塊的 **[一般]** 索引標籤，來檢視或指定追蹤的屬性。  

@@ -2,9 +2,12 @@
 title: "執行 SQL Server Profiler 所需的權限 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f7fd787af4d874b8c0d6d7fc23aa58227f4c58e2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2ad771af23debc0bb70cf0a2ce8870ba18aac1bc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>執行 SQL Server Profiler 所需的權限
-  根據預設，執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 時，所需的使用者權限與用來建立追蹤的 Transact-SQL 預存程序相同。 若要執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，使用者必須被授與 ALTER TRACE 權限。 如需詳細資訊，請參閱 [GRANT 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]根據預設，執行[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]需要與用來建立追蹤的 TRANSACT-SQL 預存程序相同的使用者權限。 若要執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，使用者必須被授與 ALTER TRACE 權限。 如需詳細資訊，請參閱 [GRANT 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)。  
   
 > [!IMPORTANT]  
 >  具有 SHOWPLAN、ALTER TRACE 或 VIEW SERVER STATE 權限的使用者可以檢視執行程序表輸出中所擷取的查詢。 這些查詢可能會包含類似密碼的敏感資訊。 因此，我們建議您只能將這些權限授與給有權檢視敏感資訊的使用者，例如 db_owner 固定資料庫角色的成員或是 sysadmin 固定伺服器角色的成員。 此外，我們也建議您只將執行程序表檔案或是包含與執行程序表相關之事件的追蹤檔案儲存到使用 NTFS 檔案系統的位置，並建議您將存取權限制為有權檢視敏感資訊的使用者。  
@@ -67,7 +70,7 @@ ms.lasthandoff: 11/09/2017
   
  ![SQL Server Profiler 重新執行追蹤權限](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "SQL Server Profiler 重新執行追蹤權限")  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SQL Server Profiler 預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [重新執行追蹤](../../tools/sql-server-profiler/replay-traces.md)   
  [建立追蹤 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   

@@ -3,8 +3,11 @@ title: "類型系統 (XQuery) |Microsoft 文件"
 ms.custom: 
 ms.date: 08/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -27,14 +30,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b8c3bc023375876e4581e28f1cbeec39c1fa8995
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3c0c11fc81be9e8a5b34548e22a7f2feb43a441b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="type-system-xquery"></a>類型系統 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery 對結構描述類型而言是一個強式類型語言，對於不具類型的資料而言是一個弱式類型語言。 XQuery 的預先定義類型包括下列各項：  
   
@@ -151,7 +154,7 @@ WHERE ProductModelID=7
 > [!NOTE]  
 >  明確使用**data （)**函式，在此範例中是僅供說明。 如果未指定， **sum （)**隱含地套用**data （)**函式可擷取節點的具類型的值。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [XQuery 基本概念](../xquery/xquery-basics.md)  
   

@@ -2,9 +2,12 @@
 title: "Distributed Replay 需求 |Microsoft 文件"
 ms.custom: 
 ms.date: 11/08/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: ondemand
-ms.openlocfilehash: 68f5121e66e0f91c9c6626dbbc80e9ba6aaaf80e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1344620cc4885e91be7e89432969903fb0e79301
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay 需求
-  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能之前，請先考慮本主題所列的各項產品需求。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用之前[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能，請考慮本主題中所述的產品需求。  
   
 ## <a name="input-trace-requirements"></a>輸入追蹤需求  
  為了順利重新執行追蹤資料，它必須符合版本和格式的需求，並且包含必要的事件和資料行。  

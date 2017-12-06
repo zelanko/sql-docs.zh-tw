@@ -3,8 +3,11 @@ title: "SQL Server 移轉小幫手 |Microsoft 文件"
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8c431da24d6449ce7d7ec8a5125d207828ff0b6c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bde2050f1151c19eeeecde37752c4fd52624017f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
 Microsoft SQL Server 移轉小幫手 (SSMA) 是要從 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 自動化 SQL Server 資料庫移轉所設計的工具。  
@@ -87,7 +90,7 @@ SSMA 支援下列版本的目標。
   
 Microsoft 可能擁有本文件集所提及內容中所含之專利權、專利優先權、商標、著作權，或其他智慧財產權。 除非 Microsoft 書面授權合約所明示規定者外，提供本文件集並不授與貴用戶上述專利權、商標、著作權或其他智慧財產權。  
   
-© Microsoft Corporation 2017。 著作權所有，並保留一切權利。  
+© 2017 Microsoft Corporation. 著作權所有，並保留一切權利。  
   
 Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System 及 WinFX 係 Microsoft Corporation 在美國及 (或) 其他國家/地區的註冊商標或商標。  
   

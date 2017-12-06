@@ -2,9 +2,12 @@
 title: "設定全域追蹤選項 (SQL Server Profiler) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6989b5de95546bfb8307d5d1e01866743cf6d4a5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0ffc9ee6552a206928f7b70705d894686d503f01
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>設定全域追蹤選項 (SQL Server Profiler)
-  此主題描述如何設定適用於利用特定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]執行個體而建立之所有追蹤的選項。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題描述如何設定套用至所建立的特定執行個體的所有追蹤選項[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
   
 ### <a name="to-set-global-trace-options"></a>若要設定全域追蹤選項  
   

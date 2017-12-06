@@ -1,10 +1,13 @@
 ---
 title: "專案設定 （型別對應） (MySQLToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 445f69a6c78293f74dfea35f40ea99c380108e72
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 00caaddad937894b416e3289a7d4e96b152ac41b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>專案設定 （型別對應） (MySQLToSQL)
 型別對應的專案設定可讓您設定的 SSMA 專案的預設型別對應。  
@@ -99,12 +102,12 @@ ms.lasthandoff: 11/09/2017
 |小數 [*..65][\*..30]|decimal [*] [\*]|  
 |double|float [53]|  
 |雙精度|float [53]|  
-|雙精確度 [*..255][\*..30]|數字 [*] [\*]|  
-|double [*..255][\*..30]|數字 [*] [\*]|  
+|雙精確度 [*..255][\*..30]|數字 [*][\*]|  
+|double [*..255][\*..30]|數字 [*][\*]|  
 |修正|numeric|  
-|修正 [*..65][\*..30]|數字 [*] [\*]|  
+|修正 [*..65][\*..30]|數字 [*][\*]|  
 |float|float [24]|  
-|float [*..255][\*..30]|數字 [*] [\*]|  
+|float [*..255][\*..30]|數字 [*][\*]|  
 |float [*..53]|float [53]|  
 |int|int|  
 |int [*..255]|int|  
@@ -139,13 +142,13 @@ ms.lasthandoff: 11/09/2017
 |nchar [2..255]|nchar [*]|  
 |numeric|numeric|  
 |數字 [*..65]|數字 [*] [0]|  
-|數字 [*..65][\*..30]|數字 [*] [\*]|  
+|數字 [*..65][\*..30]|數字 [*][\*]|  
 |nvarchar|nvarchar [1]|  
 |nvarchar [0..1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
 |nvarchar [4001..*]|nvarchar(max)|  
 |real|float [53]|  
-|實際 [*..255][\*..30]|數字 [*] [\*]|  
+|實際 [*..255][\*..30]|數字 [*][\*]|  
 |序列|bigint|  
 |smallint|smallint|  
 |smallint [*..255]|smallint|  
@@ -169,12 +172,12 @@ ms.lasthandoff: 11/09/2017
 |不帶正負號的十進位 [*..65][\*..30]|decimal [*] [\*]|  
 |不帶正負號的雙|float [53]|  
 |不帶正負號的雙精度|float [53]|  
-|不帶正負號雙精確度 [*..255][\*..30]|數字 [*] [\*]|  
-|不帶正負號 double [*..255][\*..30]|數字 [*] [\*]|  
+|不帶正負號雙精確度 [*..255][\*..30]|數字 [*][\*]|  
+|不帶正負號 double [*..255][\*..30]|數字 [*][\*]|  
 |不帶正負號固定|numeric|  
-|不帶正負號固定 [*..65][\*..30]|數字 [*] [\*]|  
+|不帶正負號固定 [*..65][\*..30]|數字 [*][\*]|  
 |不帶正負號的浮點數|float [24]|  
-|不帶正負號的浮點數 [*..255][\*..30]|數字 [*] [\*]|  
+|不帶正負號的浮點數 [*..255][\*..30]|數字 [*][\*]|  
 |不帶正負號的浮點數 [*..53]|float [53]|  
 |不帶正負號的整數|bigint|  
 |不帶正負號的 int [*..255]|bigint|  
@@ -184,9 +187,9 @@ ms.lasthandoff: 11/09/2017
 |不帶正負號的 mediumint [*..255]|int|  
 |不帶正負號的數字|numeric|  
 |不帶正負號的數字 [*..65]|數字 [*] [0]|  
-|不帶正負號的數字 [*..65][\*..30]|數字 [*] [\*]|  
+|不帶正負號的數字 [*..65][\*..30]|數字 [*][\*]|  
 |未簽署的真實|float [53]|  
-|未簽署的真實 [*..255[[\*..30]|數字 [*] [\*]|  
+|未簽署的真實 [*..255[[\*..30]|數字 [*][\*]|  
 |不帶正負號的 smallint|int|  
 |不帶正負號的 smallint [*..255]|int|  
 |不帶正負號的 tinyint|tinyint|  

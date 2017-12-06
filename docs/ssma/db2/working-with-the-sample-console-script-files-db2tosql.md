@@ -1,10 +1,13 @@
 ---
 title: "使用範例主控台指令碼檔案 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c6243c644b6a64aea05bbc826652ea9a09e1d19f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 13046bbc813a7c508593fc54903850ec8cbb09af
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用範例主控台指令碼檔案 (DB2ToSQL)
 幾個範例檔案與產品一起提供給使用者參考和使用方式。 本章節描述的方式，輕鬆地自訂這些指令碼，以符合使用者需求。  
@@ -83,7 +86,7 @@ ms.lasthandoff: 11/09/2017
     |`synchronize-target`|目標物件會同步處理目標資料庫。<br /><br />如果使用者以評估多個物件具有 / 資料庫他可以指定多個`metabase-object`節點中所示`synchronize-target`命令的範例主控台指令碼檔案的範例 3。|`object-name:`指定 sql server 資料庫/物件建立所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更`object-name`|  
     |`migrate-data`|將來源資料移轉到目標。<br /><br />如果使用者以評估多個物件具有 / 資料庫他可以指定多個`metabase-object`節點中所示`migrate-data`命令的範例 2 的範例主控台指令碼檔案。|`object-name:`指定來源資料庫/資料表移轉所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更`object-name`|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [建立變數值的檔案 &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
 [建立伺服器連接檔案 &#40; DB2ToSQL &#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
 [產生報表 &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md)  

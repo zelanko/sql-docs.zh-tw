@@ -3,8 +3,11 @@ title: "SQL Server Management Studio - 授權條款 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,13 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c35f596a096c84d8d55ca4d0db08c4c1ca8ef34a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d65a55f580dc91ed96f72986222ee8c0d0e85a75
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - 授權條款
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>可用語言：  
 [中文 (中華人民共和國)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [中文 (台灣)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [英文 (美國)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [法文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
 [德文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [義大利文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [日文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [韓文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [葡萄牙文 (巴西)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [俄文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [西班牙文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  

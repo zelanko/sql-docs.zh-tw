@@ -3,8 +3,11 @@ title: "路徑運算式 (XQuery) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ef1984885b5b35d93fa680d677321287d6daf33
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6a611a904ab2c969060e6d756a20bcf635ce2100
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="path-expressions-xquery"></a>路徑運算式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery 路徑運算式會找出文件中的節點，例如元素、屬性及文字節點。 路徑運算式的結果永遠發生在文件順序中，在結果時序中沒有重複的節點。 在指定的路徑中，您可以使用未縮寫或縮寫的語法。 下列資訊是著重在未縮寫的語法中。 本主題稍後將說明縮寫語法。  
   

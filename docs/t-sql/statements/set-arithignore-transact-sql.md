@@ -1,7 +1,7 @@
 ---
 title: "SET ARITHIGNORE (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c42787eeb8132da21344b87411f781a8456942f0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8229ccdae1e3074bf8f726a9dfdfcc4e52b8df5e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,19 +44,17 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-    
-SET ARITHIGNORE { ON | OFF }  
-[ ; ]  
-```  
-  
-```  
+-- Syntax for SQL Server and Azure SQL Database
+
+SET ARITHIGNORE { ON | OFF }
+```
+
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ARITHIGNORE OFF   
-[ ; ]  
-```  
-  
+
+SET ARITHIGNORE OFF
+```
+
 ## <a name="remarks"></a>備註  
  SET ARITHIGNORE 設定只會控制是否傳回錯誤訊息。 在包含溢位或除以零的錯誤之計算中，不論這項設定為何，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會傳回 NULL。 您可以利用 SET ARITHABORT 設定來判斷查詢是否終止。 這項設定不會影響 INSERT、UPDATE 和 DELETE 陳述式期間所發生的錯誤。  
   
@@ -116,7 +114,7 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ARITHABORT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   

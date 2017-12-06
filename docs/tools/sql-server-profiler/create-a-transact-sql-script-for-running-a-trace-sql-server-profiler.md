@@ -2,9 +2,12 @@
 title: "建立 TRANSACT-SQL 指令碼以執行追蹤 (SQL Server Profiler) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d855ef185a7110c4beb7ecf33512ebb50b3ea51f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 312b81b1ac9dd733d81259972b8dd443861923c1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>建立 Transact-SQL 指令碼以執行追蹤 (SQL Server Profiler)
-  此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，從現有的追蹤檔或資料表建立 Transact-SQL 指令碼。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題描述如何從現有的追蹤檔案或資料表建立 TRANSACT-SQL 指令碼，使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
   
 ### <a name="to-create-a-transact-sql-script-to-run-a-trace"></a>若要建立 Transact-SQL 指令碼以執行追蹤  
   
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  在 [另存新檔] 對話方塊中，輸入指令碼檔案的名稱，然後按一下 [儲存]。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SQL Server Profiler 範本和權限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

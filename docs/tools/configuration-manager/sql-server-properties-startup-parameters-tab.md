@@ -2,9 +2,12 @@
 title: "SQL Server 屬性 （啟動參數 索引標籤） |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e95c19736c01be2f7526a3c32e52fb61cb3a0c83
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bc88c227ddad0cabd100e78d4424375399aa5fb6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 屬性 (啟動參數索引標籤)
-  您可以使用這個對話方塊來加入或移除 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的啟動參數。 啟動參數可能會對 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 效能產生很大的影響。 加入或變更啟動參數之前，請先參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此對話方塊來新增或移除的啟動參數， [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 啟動參數可能會對 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 效能產生很大的影響。 加入或變更啟動參數之前，請先參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題。  
   
 ## <a name="options"></a>選項。  
  **指定啟動參數**  

@@ -3,8 +3,11 @@ title: "SSMA for 入門 SAP ASE (SybaseToSQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4cc7553ec5936efeafdde72f87b19c9656a699e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e25e89ba868ca867a57bed89b6d85be790280ca7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SSMA for 入門 SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) 的 SAP ASE 可讓您快速 SAP Adaptive Server Enterprise (ASE) 資料庫將結構描述轉換至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database 的結構描述上傳到產生的結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database，並將資料從若要 SAP ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。  

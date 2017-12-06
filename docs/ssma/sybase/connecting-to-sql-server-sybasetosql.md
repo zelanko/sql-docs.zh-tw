@@ -3,8 +3,11 @@ title: "連接到 SQL Server (SybaseToSQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 41c928ecb172b79aec0286c33f02343039d00d8a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8ac694c943bc781801804a5ab249ca12a039fd22
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>連接到 SQL Server (SybaseToSQL)
 若要將 Sybase Adaptive Server Enterprise (ASE) 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您必須連接到任何目標執行個體的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 SSMA 連線時，取得執行個體中的所有資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]並顯示資料庫中繼資料中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管。 SSMA 會儲存有關哪一個執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]您已連線，但不會儲存密碼。  
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/09/2017
 |SQL Azure||||||是|  
   
 > [!IMPORTANT]  
-> 根據專案類型，但不是根據版本的資料庫物件的轉換會執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]您已連線到。 如果是[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005年專案轉換為實行依照[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 即使您已連線到較高版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016年)  
+> 根據專案類型，但不是根據版本的資料庫物件的轉換會執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]您已連線到。 如果是[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005年專案轉換為實行依照[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 即使您已連線到較高版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016年)  
   
 ## <a name="reconnecting-to-sql-server"></a>重新連接到 SQL Server  
 您的連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]維持使用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]如果您想要的使用中連接到伺服器。 您可以離線直到更新中繼資料，將資料庫物件載入到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，並將資料移轉。  
@@ -130,6 +133,6 @@ ms.lasthandoff: 11/09/2017
   
 -   如果您不需要進行這些，您可以將轉換成的 Sybase ASE 資料庫物件定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件定義。 如需詳細資訊，請參閱[轉換 Sybase ASE 資料庫物件 &#40;SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [Sybase ASE 將資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

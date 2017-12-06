@@ -1,10 +1,13 @@
 ---
 title: "建立指令碼檔案 (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: 2945b7fac5aeb464511d38b6130c747c8ce95abc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2cdefc64512ba0b4b86c6c71b9b59885359ddc7f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="creating-script-files-accesstosql"></a>建立指令碼檔案 (AccessToSQL)
 第一個步驟之前啟動 SSMA 主控台應用程式。 若要建立指令碼檔案，並在必要時建立的變數值的檔案和伺服器連接檔案。  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
   
     </output-providers>  
     ```  
-    *或*   
+     *或*   
   
     ```xml  
     <…All commands…>  
@@ -105,7 +108,7 @@ ms.lasthandoff: 11/09/2017
   
     </output-providers>  
     ```  
-    *或*   
+     *或*   
   
     ```xml  
     <migrate-data>  
@@ -138,7 +141,7 @@ ms.lasthandoff: 11/09/2017
   
     </output-providers>  
     ```  
-    *或*   
+     *或*   
   
     ```xml  
     <!-- Connect to target database -->  
@@ -171,7 +174,7 @@ ms.lasthandoff: 11/09/2017
   
     </output-providers>  
     ```  
-    *或*   
+     *或*   
   
     ```xml  
     <!--synchronization-->  
@@ -182,7 +185,7 @@ ms.lasthandoff: 11/09/2017
   
     </synchronize-target>  
     ```  
-    *或*   
+     *或*   
   
     ```xml  
     <!--data migration-->  
@@ -217,7 +220,7 @@ ms.lasthandoff: 11/09/2017
   
     </output-providers>  
     ```  
-    *或*   
+     *或*   
   
     ```xml  
     <convert-schema object-name="ssma.TT1">  
@@ -270,7 +273,7 @@ ms.lasthandoff: 11/09/2017
   
     </output-providers>  
     ```  
-    *或*   
+     *或*   
   
     ```xml  
     <…All commands…>  
@@ -312,7 +315,7 @@ ms.lasthandoff: 11/09/2017
   
     </output-providers>  
     ```  
-    *或*   
+     *或*   
   
     ```xml  
     <…All commands…>  

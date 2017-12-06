@@ -2,10 +2,10 @@
 title: "SQL Server 說明檢視器與離線內容 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/27/2017
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.reviewer: 
 ms.suite: sql
@@ -21,11 +21,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a5e7fb01cd74ccafb3a324dbd79bd849bef0bca
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 048b1d257287b8f0a4645f57ce88c30b24a9f654
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="help-viewer-and-offline-content-for-sql-server"></a>SQL Server 說明檢視器與離線內容
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

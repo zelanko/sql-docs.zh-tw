@@ -1,10 +1,13 @@
 ---
 title: "轉換 DB2 結構描述 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9704f41686d4859e2b6ba10fbf1ef86ea7a5b23b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3b5519b19a5ae8098016e7d9bf0daa25c8678cdd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>轉換 DB2 結構描述 (DB2ToSQL)
 您已經連接到 DB2 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，設定專案和對應的資料選項，您可以將轉換至 DB2 資料庫物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫物件。  
@@ -155,6 +158,6 @@ DB2 的某些物件可能不會轉換。 您可以檢視摘要轉換報表來判
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[已轉換的物件載入 SQL Server](http://msdn.microsoft.com/en-us/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [將 DB2 資料移轉到 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

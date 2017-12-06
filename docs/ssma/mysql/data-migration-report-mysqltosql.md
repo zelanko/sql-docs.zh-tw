@@ -1,10 +1,13 @@
 ---
 title: "資料移轉報告 (MySQLToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc2d41edf4cc7e3425207de550a4793865ff9afb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 90f8bc1e1985e48f07603bebab9431c0c7c1e05b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-migration-report--mysqltosql"></a>資料移轉報告 (MySQLToSQL)
 **資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  

@@ -2,10 +2,10 @@
 title: "下載 SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/19/2017
-ms.prod: ssdt
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: ssdt
-ms.component: 
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
 ms.technology: tools-ssdt
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb7f31d4af338702182bed66cc7053fb3cefb784
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 46b86d31a7d5b03bf0c43f61c3c7c7fcf4c2a8ce
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下載 SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

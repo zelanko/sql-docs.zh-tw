@@ -1,10 +1,13 @@
 ---
 title: "開始使用 SSMA for DB2 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 125bf372621875c92a316751246d22e61554ee6b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e22ba8791b1905e49a9ce9bb87cee68e69af9e43
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>開始使用 SSMA for DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) for DB2 可讓您快速 DB2 資料庫將結構描述轉換至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]結構描述上, 傳到產生的結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]並將資料從 DB2 移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -110,7 +113,7 @@ SSMA 會有兩個工具列： 專案工具列和移轉工具列。
   
 -   [錯誤清單] 窗格會顯示錯誤、 警告和參考用訊息可排序清單中。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [將 DB2 資料移轉到 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
 [使用者介面參考 &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
