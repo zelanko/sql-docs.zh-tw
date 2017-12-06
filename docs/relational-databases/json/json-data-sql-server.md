@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b8479ec695d01cfc6963fd6b57c55a8605e25d16
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 224731f2d3c4bfa4b1bfd9884a3daf374d813bb5
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="json-data-sql-server"></a>JSON 資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -279,7 +279,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
 -   如果以行分隔的 JSON 檔案儲存在 Azure Blob 儲存體或 Hadoop 檔案系統中，您就可以使用 Polybase 來載入 JSON 文字、在 Transact-SQL 程式碼中進行剖析，並將它載入資料表。  
   
 ## <a name="test-drive-built-in-json-support"></a>測試磁碟機內建的 JSON 支援  
- **使用 AdventureWorks 範例資料庫測試磁碟機內建的 JSON 支援。** 若要取得 AdventureWorks 範例資料庫，至少要從 [這裡](https://www.microsoft.com/en-us/download/details.aspx?id=49502)。 將範例資料庫還原到 SQL Server 2016 的執行個體之後，解壓縮範例檔案，並從 JSON 資料夾開啟「JSON 範例查詢程序檢視和索引.sql」檔案。 執行此檔案中的程式碼，將部分存在的資料重新格式化為 JSON 資料、執行有關 JSON 資料的範例查詢和報告、編製 JSON 資料的索引，以及匯入和匯出 JSON。  
+ **使用 AdventureWorks 範例資料庫測試磁碟機內建的 JSON 支援。** 若要取得 AdventureWorks 範例資料庫，至少要從 [這裡](https://www.microsoft.com/download/details.aspx?id=49502)。 將範例資料庫還原到 SQL Server 2016 的執行個體之後，解壓縮範例檔案，並從 JSON 資料夾開啟「JSON 範例查詢程序檢視和索引.sql」檔案。 執行此檔案中的程式碼，將部分存在的資料重新格式化為 JSON 資料、執行有關 JSON 資料的範例查詢和報告、編製 JSON 資料的索引，以及匯入和匯出 JSON。  
   
  以下是您可以使用檔案中包含的指令碼執行的動作。  
   

@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd6b58bb3dd8298ced1a04f5b5ba10b960ce776a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d4f0fa43e367a354ab20e859688df7e20585d29f
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="breaking-changes-to-database-engine-features-in-includesssqlv14-mdincludessssqlv14-mdmd"></a>[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 資料庫引擎功能的重大變更
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="breaking-changes-in-includesssqlv14-mdincludessssqlv14-mdmdincludessdeincludesssde-mdmd"></a>[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 的重大變更  
   
 -  CLR 使用 .NET Framework 中的程式碼存取安全性 (CAS)，而這不再支援為安全性界限。 從 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 開始，引進稱為 `clr strict security` 的 `sp_configure` 選項，來增強 CLR 組件的安全性。 預設啟用 clr strict security，並將 `SAFE` 和 `EXTERNAL_ACCESS` CLR 組件視同標示了 `UNSAFE`。 可以基於回溯相容性停用 `clr strict security` 選項，但不建議這麼做。 停用 `clr strict security` 時，使用 `PERMISSION_SET = SAFE` 所建立的 CLR 組件可能可以存取外部系統資源、呼叫 Unmanaged 程式碼，以及需要 **sysadmin** 權限。 啟用嚴格安全性之後，任何未簽署的組件都將無法載入。 此外，如果資料庫有 `SAFE` 或 `EXTERNAL_ACCESS` 組件，`RESTORE` 或 `ATTACH DATABASE` 陳述式可以完成，但可能無法載入組件。   
-  若要載入組件，您必須改變或置放並重新建立每個組件，以便使用憑證或非對稱金鑰簽署，該金鑰有具有伺服器 `UNSAFE ASSEMBLY` 權限的對應登入。 如需詳細資訊，請參閱 [clr strict security](../database-engine/configure-windows/clr-strict-security.md)。 
+  若要載入組件，您必須改變或置放並重新建立每個組件，以便使用憑證或非對稱金鑰簽署，該金鑰有具有伺服器 `UNSAFE ASSEMBLY` 權限的對應登入。 如需詳細資訊，請參閱 [CLR 嚴格安全性](../database-engine/configure-windows/clr-strict-security.md)。 
 
 
   

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4482935894f2aa785814c1af430065920afe25b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 59b8b667a9a895b9e95388ac781ec6bb46923920
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="import-json-documents-into-sql-server"></a>將 JSON 文件匯入 SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ END
         pages_i int, author nvarchar(100)) AS book
     ```
 
-如需 Azure 檔案儲存體的詳細資訊，請參閱[檔案儲存體](https://azure.microsoft.com/en-us/services/storage/files/)。
+如需 Azure 檔案儲存體的詳細資訊，請參閱[檔案儲存體](https://azure.microsoft.com/services/storage/files/)。
 
 ## <a name="import-json-documents-from-azure-blob-storage"></a>從 Azure Blob 儲存體匯入 JSON 文件
 
