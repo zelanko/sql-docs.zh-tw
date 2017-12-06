@@ -2,9 +2,12 @@
 title: "更新資源 (報表管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 09c43f1eb33ae86935be561c2ef956307092a9e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d88f10131832c28a00da5d8c4afca2413d99b54c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="update-a-resource-report-manager"></a>更新資源 (報表管理員)
   您可以使用新版本來取代舊版本，以此方式更新資源。 資源是一些項目，儲存在包含您上傳之檔案中之內容的報表伺服器上。 您可以將新的或不同的檔案內容匯入現有的資源，以取代現有的資源。 更新資源提供一種方式，可以更新內容，同時保留資源的現有屬性與安全性設定。  

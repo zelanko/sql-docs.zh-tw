@@ -1,9 +1,13 @@
 ---
 title: "啟用報表伺服器進行 Power BI 行動存取 | Microsoft Docs"
 ms.date: 12/17/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
+ms.custom: 
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ffb3f281925623dac949f42d84a1f6f73588de7b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d243b32fdc2565a442b21ba7ca7f040279766be6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>啟用報表伺服器進行 Power BI 行動存取
 您可以使用 Power BI 行動應用程式使用行動報表。 您必須設定幾個項目，允許 Power BI 行動應用程式連接到 Reporting Services。  

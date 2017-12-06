@@ -2,9 +2,12 @@
 title: "搜尋報表和其他項目 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 88576d1bab512cb0d8567ef95e6b7ef3a1db124a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 46825c7f0b93267a216444a91c5d7da0bef3879f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>搜尋報表和其他項目 (報表產生器及 SSRS)
   您可以使用報表管理員，依名稱或描述在報表伺服器上搜尋特定項目。 您可以搜尋已發行的報表、報表模型、資料夾、共用資料來源和資源。 您不可以搜尋排程、擁有者、角色指派、報表記錄中的特定快照集或訂閱。 此搜尋會在儲存項目的報表伺服器資料庫上執行。  
