@@ -26,7 +26,7 @@ manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: a39d648c6e9a7abb24c1c5a936fa1908b4ddd91a
 ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/17/2017
 ---

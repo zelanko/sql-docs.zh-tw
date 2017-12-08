@@ -39,7 +39,7 @@ manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
 ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/17/2017
 ---
