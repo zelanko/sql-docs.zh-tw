@@ -13,7 +13,7 @@ ms.author: jeannt
 manager: jhubbard
 ms.openlocfilehash: 8cce800526dbf89da77508713b4dd2aa2eead4ae
 ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/01/2017
 ---

@@ -15,7 +15,7 @@ manager: jhubbard
 ms.workload: On Demand
 ms.openlocfilehash: 5bfdab27d2d071d93e78bec2d48244f8a7bcb803
 ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/01/2017
 ---
