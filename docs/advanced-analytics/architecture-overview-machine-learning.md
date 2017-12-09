@@ -14,7 +14,7 @@ manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 9726ba8958f623d3c3c92d18f59f4c25d18fb0b0
 ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/01/2017
 ---

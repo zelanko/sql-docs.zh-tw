@@ -16,7 +16,7 @@ ms.technology: database-engine
 ms.workload: Inactive
 ms.openlocfilehash: 29da4f824b83a09ed839e469a4788ce42e7d92a4
 ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/01/2017
 ---
