@@ -57,7 +57,7 @@ SQL Server 2017 所有支援的平台，包括 Linux 上有相同的基礎資料
 ##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) 與 SQL Server 工程團隊交流
 
 - [DBA 堆疊 Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)： 提問資料庫管理
-- [堆疊溢位](http://stackoverflow.com/questions/tagged/sql-server)： 開發提問
+- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)： 開發提問
 - [MSDN 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)： 詢問技術問題
 - [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)： 報告錯誤和要求的功能
 - [Reddit](https://www.reddit.com/r/SQLServer/)： 討論 SQL Server
