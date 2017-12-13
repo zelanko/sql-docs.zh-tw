@@ -2,12 +2,12 @@
 title: "資料來源檢視 (Analysis Services) 中定義具名的查詢 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a6db35f9ab119025bf5b7d60aed0b27747adaa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6d83f1264b7eb9f3b306c4540dca9f1407eff0b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義具名查詢 (Analysis Services)
-  具名查詢是以資料表代表的 SQL 運算式。 在具名查詢中，您可以指定 SQL 運算式，來選取在一個或多個資料來源中的一個或多個資料表所傳回的資料列和資料行。 具名查詢就像資料來源檢視 (DSV) 中具有資料列和關聯性的其他任何資料表一樣，差別在於具名查詢是以運算式為基礎。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]具名的查詢是以資料表代表的 SQL 運算式。 在具名查詢中，您可以指定 SQL 運算式，來選取在一個或多個資料來源中的一個或多個資料表所傳回的資料列和資料行。 具名查詢就像資料來源檢視 (DSV) 中具有資料列和關聯性的其他任何資料表一樣，差別在於具名查詢是以運算式為基礎。  
   
  具名查詢可讓您擴充 DSV 中之現有資料表的關聯式結構描述，不需修改基礎資料來源。 例如，一系列具名查詢可以將複雜的維度資料表分割為較小、較簡單的維度資料表，以供資料庫維度使用。 具名查詢也可以用來將一個或多個資料來源中的多個資料庫資料表聯結到單一資料來源檢視資料表中。  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  按一下 **[確定]**。 資料表頁首會出現表示兩個重疊資料表的圖示，指出資料表已取代為具名查詢。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   

@@ -2,12 +2,12 @@
 title: "瀏覽模型，使用 Microsoft 時序叢集檢視器 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b8b0c7196664eab72688e79e8625cfb2eb50eb8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5de5490ccd81bc62103ea451041bb93011f6426e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>使用 Microsoft 時序叢集檢視器瀏覽模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 時序叢集檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是時序分析演算法，用來瀏覽包含事件的資料，這些事件可透過遵循路徑或 *時序*加以連結。 如需這個演算法的詳細資訊，請參閱 [Microsoft 時序群集演算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]時序群集檢視器中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]顯示採礦模型所建置的[!INCLUDE[msCoName](../../includes/msconame-md.md)]時序群集演算法。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是時序分析演算法，用來瀏覽包含事件的資料，這些事件可透過遵循路徑或 *時序*加以連結。 如需這個演算法的詳細資訊，請參閱 [Microsoft 時序群集演算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)。  
   
 > [!NOTE]  
 >  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
  [回到頁首](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   

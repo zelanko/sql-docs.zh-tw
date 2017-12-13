@@ -2,12 +2,12 @@
 title: "命令元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9dad2fd03f81522873b5e40bb09c709fad4e2fbf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: acf5ae4d454e96af2702e2ef72a8578bcc1efe7b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="command-element-xmla"></a>Command 元素 (XMLA)
-  包含要執行之命令[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含要執行之命令[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  **命令**所使用項目**Execute**命令轉送至資料來源的方法。 雖然 XML for Analysis (XMLA) 1.1 規格僅支援**陳述式**命令， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援許多新的 XMLA 命令。 如需有關所支援之 XMLA 命令[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，請參閱[命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [XML 資料類型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

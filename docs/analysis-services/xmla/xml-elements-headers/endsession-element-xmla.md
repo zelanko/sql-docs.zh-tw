@@ -2,12 +2,12 @@
 title: "EndSession 元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d58ed65e574fe9055c0a5dd0be1746242e163aa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9cc62b7d87aeaade6984b44c7724de120b17dcaf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="endsession-element-xmla"></a>EndSession 元素 (XMLA)
-  在 SOAP 要求訊息中會使用 SOAP 標頭，結束執行個體上現有的工作階段[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]在 SOAP 要求訊息中會使用 SOAP 標頭，結束執行個體上現有的工作階段[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
  **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-分析  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  **EndSession** SOAP 要求傳送到現有且明確啟動工作階段上的標頭元素屬於[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。 如果**EndSession** 、 標頭元素已傳送，但是包含不再有效的工作階段識別碼，表示找不到工作階段傳回 SOAP 錯誤。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [BeginSession 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
  [Session 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)   
  [管理連接和工作階段 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   

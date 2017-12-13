@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3383f50142e04966a24515adcf08efbc4c5c60bc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: HT
+ms.openlocfilehash: 64ce16cd3b23c1c0bf0526619f90c7028ff80df6
+ms.sourcegitcommit: 0431de135547f5aff48d6cad57090717f27bc063
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_replcounters
 |**複寫頻率 trans/sec**|**float**|傳遞給散發資料庫的每秒平均交易數目。|  
 |**複寫延遲**|**float**|在散發之前，交易在記錄中的平均時間 (以秒為單位)。|  
 |**Replbeginlsn**|**binary(10)**|記錄中目前截斷點的日誌序號 (LSN)。|  
-|**Replendlsn**|**binary(10)**|等待傳遞給散發資料庫的下一項認可記錄的 LSN。|  
+|**Replnextlsn**|**binary(10)**|等待傳遞給散發資料庫的下一項認可記錄的 LSN。|  
   
 ## <a name="remarks"></a>備註  
  **sp_replcounters**用於異動複寫中。  
@@ -59,7 +59,7 @@ sp_replcounters
 ## <a name="permissions"></a>Permissions  
  需要的成員資格**db_owner**固定的資料庫角色或**sysadmin**固定的伺服器角色。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   

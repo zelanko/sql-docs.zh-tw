@@ -2,12 +2,12 @@
 title: "報表設計的 CSDLBI 屬性 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>報表設計的 CSDLBI 屬性
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  本節描述表格式模型化的 CSDL 延伸模組中影響 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 查詢設計的屬性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本章節描述表格式模型化以及影響的 CSDL 延伸模組中的屬性[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]查詢設計。  
   
 ## <a name="model-attributes"></a>模型屬性  
  這些屬性在 csdl 的子元素上定義[EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)項目。  

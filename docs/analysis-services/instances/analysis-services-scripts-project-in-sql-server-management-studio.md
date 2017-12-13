@@ -2,12 +2,12 @@
 title: "Analysis Services 指令碼專案，在 SQL Server Management Studio |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c974474663bf17f49f235ef57983a61196054d16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e849993eeda199ad134f21b80872828993803d14
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio 中的 Analysis Services 指令碼專案
-  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立 Analysis Server 指令碼專案，將相關的指令碼組合在一起，以供開發、管理和原始檔控制使用。 如果 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中目前未載入方案，則建立新的 Analysis Server 指令碼專案會自動建立新方案。 否則，可以將新的 Analysis Server 指令碼專案加入到現有的方案，或是在新的方案中建立。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您可以建立一個 Analysis Server 指令碼專案中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]分組在一起的開發、 管理相關的指令碼和原始檔控制使用。 如果 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中目前未載入方案，則建立新的 Analysis Server 指令碼專案會自動建立新方案。 否則，可以將新的 Analysis Server 指令碼專案加入到現有的方案，或是在新的方案中建立。  
   
  您使用下列基本步驟，即可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立 Analysis Server 指令碼專案：  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="analysis-services-templates"></a>Analysis Services 範本  
  將新的 MDX、DMX 或 XMLA 指令碼加入到 Analysis Server 指令碼專案時，您可以選擇使用範本總管來尋找 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 範本，這些範本是示範如何執行指定動作之預先定義指令碼或陳述式的集合。 您可以在 [檢視] 功能表上使用範本總管，其中包含了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的範本。 如需詳細資訊，請參閱[在 SQL Server Management Studio 中使用 Analysis Services 範本](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [使用 SQL Server 資料工具 &#40;SSDT&#41; 建立多維度模型](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [多維度運算式 &#40;MDX&#41 參考](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)   

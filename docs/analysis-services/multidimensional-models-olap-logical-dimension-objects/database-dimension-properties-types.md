@@ -2,12 +2,12 @@
 title: "維度類型 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bab78f642342cd070ecde62a37d65972a17a109f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimension-properties---types"></a>資料庫維度屬性類型
-  **類型**屬性設定會提供給伺服器和用戶端應用程式的維度內容的相關資訊。 在某些情況下，**類型**設定只提供用戶端應用程式的指引，而且是選擇性。 在其他情況下，例如**帳戶**或**時間**維度**類型**維度和其屬性的屬性設定可決定特定的伺服器型行為而可能需要在 cube 中實作的特定行為。 例如，**類型**維度的屬性可以設定為**帳戶**用戶端應用程式指出標準維度包含帳戶屬性。 如需有關時間、 帳戶和貨幣維度的詳細資訊，請參閱[建立日期類型維度](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[建立父子式類型維度的財務帳戶](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[建立貨幣輸入維度](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**類型**屬性設定會提供給伺服器和用戶端應用程式的維度內容的相關資訊。 在某些情況下，**類型**設定只提供用戶端應用程式的指引，而且是選擇性。 在其他情況下，例如**帳戶**或**時間**維度**類型**維度和其屬性的屬性設定可決定特定的伺服器型行為而可能需要在 cube 中實作的特定行為。 例如，**類型**維度的屬性可以設定為**帳戶**用戶端應用程式指出標準維度包含帳戶屬性。 如需有關時間、 帳戶和貨幣維度的詳細資訊，請參閱[建立日期類型維度](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[建立父子式類型維度的財務帳戶](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[建立貨幣輸入維度](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
   
  維度類型的預設設定**規則**，不讓內容的維度不作任何假設。 這是所有維度的預設設定，當您一開始定義維度，除非您指定**時間**定義維度使用 「 維度精靈 」 時。 您也應該保留**規則**做為維度類型，如果 「 維度精靈 」 不會列出維度類型的適當的類型。  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |通路|此維度的屬性代表通道資訊。|  
 |促銷|此維度的屬性代表行銷促銷資訊。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [使用現有的資料表建立維度](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [維度 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   

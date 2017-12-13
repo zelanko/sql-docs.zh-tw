@@ -2,12 +2,12 @@
 title: "Tables 物件 (TMSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d681a36710cdc096739f2c4e5f6f13afeb3ac8cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 85e0d667cc7ad89533dd9df7ced0a68e6e7ae8a7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables-object-tmsl"></a>Tables 物件 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  定義模型中所包含的資料表。 在模型中的資料表可能是繫結至外部資料庫從中匯入或查詢，資料中的資料表或從 DAX 運算式建構導出的資料表。 在資料表中，一或多個**分割**物件描述的資料來源。  資料表之間**關聯性**物件會指定基數、 篩選方向和關聯性的其他屬性。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定義模型中所包含的資料表。 在模型中的資料表可能是繫結至外部資料庫從中匯入或查詢，資料中的資料表或從 DAX 運算式建構導出的資料表。 在資料表中，一或多個**分割**物件描述的資料來源。  資料表之間**關聯性**物件會指定基數、 篩選方向和關聯性的其他屬性。  
   
 ## <a name="object-definition"></a>物件定義  
  所有物件都具有一組常用的屬性，包括名稱、 類型、 描述、 屬性集合，以及註解。 **資料表**物件也有下列屬性。  
@@ -820,7 +817,7 @@ ms.lasthandoff: 11/17/2017
         }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   

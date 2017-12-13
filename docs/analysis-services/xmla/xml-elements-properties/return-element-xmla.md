@@ -2,12 +2,12 @@
 title: "return 元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fb9f422df762c370f800cdc6f6dcef799d3fa77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1f42d9b1770bd754dea15749d65993b01421867a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="return-element-xmla"></a>return 元素 (XMLA)
-  包含所傳回的資訊[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)元素為了回應[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法呼叫或[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)元素為了回應[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含所傳回的資訊[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)元素為了回應[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法呼叫或[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)元素為了回應[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  **傳回**元素包含所傳回的資料**探索**和**Execute**方法。 一般而言，**傳回**元素包含單一**根**包含成功所傳回的資料元素**探索**或**Execute**方法呼叫或 XML for Analysis (XMLA) 方法呼叫不成功所傳回的例外狀況。 如果**Execute**方法包含**批次**執行多項作業的命令**傳回**元素包含**結果**元素，其亦包含一個**根**每個命令執行成功或失敗的項目**批次**命令。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

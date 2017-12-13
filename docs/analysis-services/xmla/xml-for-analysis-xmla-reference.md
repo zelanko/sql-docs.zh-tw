@@ -2,12 +2,12 @@
 title: "XML for Analysis (XMLA) 參考 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 826536d6f28df078b3ca0899176303cbe1a06865
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 90f16cb73dc060e7708054afbeba44d597c02ef8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-for-analysis--xmla-reference"></a>XML for Analysis (XMLA) 參考
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用 XML for Analysis (XMLA) 通訊協定來處理用戶端應用程式和 Analysis Services 執行個體之間的通訊。 在最基本的層級上，其他用戶端程式庫 (例如 ADOMD.NET 和 AMO) 會以 XMLA 建構要求及解碼回應，當做 Analysis Services 執行個體 (以獨佔方式使用 XMLA) 的中繼。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用 XML for Analysis (XMLA) 通訊協定來處理用戶端應用程式和 Analysis Services 執行個體之間的通訊。 在最基本的層級上，其他用戶端程式庫 (例如 ADOMD.NET 和 AMO) 會以 XMLA 建構要求及解碼回應，當做 Analysis Services 執行個體 (以獨佔方式使用 XMLA) 的中繼。  
   
  若要以多維度及表格式格式支援探索和操作的資料，XMLA 規格會定義兩種普遍可存取的方法，[探索](../../analysis-services/xmla/xml-elements-methods-discover.md)和[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)，和XML 項目和資料類型的集合。 由於 XML 允許鬆散偶合的用戶端與伺服器架構，因此這兩種方法會處理採用 XML 格式的傳入和傳出資訊。 Analysis Services 與 XMLA 1.1  規格，但還擴充它包含資料定義和管理功能，實為註解上**探索**和**Execute**方法。 擴充的 XML 語法稱為 Analysis Services 指令碼語言 (ASSL)。 ASSL 會根據 XMLA 規格建立，而不會打破此規格。 不論您只使用 XMLA 還是 XMLA 和 ASSL 一起使用，都會確保以 XMLA 為根據的互通性。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
  [使用分析管理物件 &#40;AMO&#41; 來開發](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [了解 Microsoft OLAP 架構](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
   

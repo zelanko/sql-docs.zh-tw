@@ -2,12 +2,12 @@
 title: "安裝、 散佈及參考表格式物件模型 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2ba71ce1ac7dcc0787e84edba3ea436bd33e25f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 60d264dccf042ec9447d92f17045f238597cd29e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>安裝、 散佈及參考表格式物件模型
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-本文說明如何下載、 參考以及轉散發 Analysis Services 表格式物件模型 (TOM)，來建立及管理表格式模型與資料庫中的 managed 程式碼的 C# 程式庫。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本文說明如何下載、 參考以及轉散發 Analysis Services 表格式物件模型 (TOM)，來建立及管理表格式模型與資料庫中的 managed 程式碼的 C# 程式庫。  
   
 TOM 是隨附於 SQL Server 2016 AMO 用戶端程式庫 (Microsoft.AnalysisServices.dll) 擴充功能。 它可搭配 SQL Server 2016 版本中的表格式中繼資料引擎為目標的表格式模型。 若要使用 TOM，必須是模型與資料庫相容性層級 1200年或更高。  
 

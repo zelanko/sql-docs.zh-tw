@@ -2,12 +2,12 @@
 title: "執行緒集區屬性 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: afc7c7e8464661b6d853715c98f6cc61b00bf6b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 25a741e35b7efa0b3bb13047853f6f39d8300c3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="thread-pool-properties"></a>執行緒集區屬性
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 為許多作業使用多執行緒處理，透過平行執行多個作業改善整體伺服器效能。 為了更有效率地管理執行緒， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用執行緒集區預先配置執行緒，以使下一個作業有可用的執行緒。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用多執行緒處理許多作業，以平行方式執行多個作業改善整體伺服器效能。 為了更有效率地管理執行緒， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用執行緒集區預先配置執行緒，以使下一個作業有可用的執行緒。  
   
  每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體各自維護一組執行緒集區。 表格式執行個體和多維度執行個體使用執行緒集區的方式不同。 例如，只有多維度執行個體使用 **IOProcess** 執行緒集區。 因此，如同本主題所述， **PerNumaNode** 屬性對於表格式執行個體沒有意義。 在下面的 [屬性參考](#bkmk_propref) 區段中，會呼叫每個屬性的模式需求。
   
@@ -283,7 +283,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  如需如何設定屬性的指示，請參閱 [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [關於處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
  [多個處理器](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
  [處理器群組](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   

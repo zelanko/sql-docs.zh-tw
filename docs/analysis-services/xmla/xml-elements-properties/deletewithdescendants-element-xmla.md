@@ -2,12 +2,12 @@
 title: "DeleteWithDescendants 元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7420b12875dd521186741726b084fc99131fa5cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 026e93d341083f56180ea9c6158afff705325bf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deletewithdescendants-element-xmla"></a>DeleteWithDescendants 元素 (XMLA)
-  指出是否屬性成員的下階也會一併刪除父代[卸除](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)命令。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]指出是否屬性成員的下階也會一併刪除父代[卸除](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
   
  如需刪除和更新屬性成員的詳細資訊，請參閱[插入、更新和卸除成員 &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

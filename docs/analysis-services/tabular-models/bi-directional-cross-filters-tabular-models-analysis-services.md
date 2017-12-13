@@ -2,12 +2,12 @@
 title: "雙向交叉篩選-表格式模型的 Analysis Services |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77c84d5c262127b64ad38a2e643028120ec5da12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>雙向交叉篩選-表格式模型的 Analysis Services
-  SQL Server 2016 中有內建的新方法可以啟用表格式模型中的「雙向交叉篩選」，因此不需要透過自訂 DAX 因應措施在資料表關聯性之間散佈篩選內容。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]新 SQL Server 2016 中已內建方法啟用*雙向交叉篩選*在表格式模型中，因而不須對手工 DAX 因應措施的資料表關聯性之間傳播篩選內容。  
   
  此概念可分解成以下元件組件：「交叉篩選」是指根據相關資料表中的值設定資料表篩選內容的功能，而「雙向」是指將篩選內容傳遞至資料表關聯性另一端的第二個相關資料表。 正如其名，您有兩種方向可以切入關聯性，而不是只有一種方向。  就內部而言，雙向篩選會展開篩選內容來查詢資料的超集。  
   
@@ -204,7 +204,7 @@ ms.lasthandoff: 11/17/2017
   
  實際上來說，交叉篩選能夠啟用通常只有透過多對多建構才能提供的資料瀏覽格式。 然而，請務必了解雙向交叉篩選不是多對多建構。  此版本的表格式模型設計仍不支援實際的多對多資料表設定。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [在 Power BI Desktop 建立並管理關聯性](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
  [如何處理簡單多對多關聯性，在 Power Pivot 和 SSAS 表格式模型中的實際範例](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
  [正在解析多對多關聯性利用 DAX 交叉資料表篩選](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   

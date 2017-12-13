@@ -2,12 +2,12 @@
 title: "了解透過 1103年的表格式物件模型，在層級 1050年 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4c6d64d576aa1b95cabb9e343ffb514b11125be6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 48091c81446898964d504f1a174f68f1ee90af92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>了解在層級 1050 透過 1103年的表格式物件模型
-
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
 [!INCLUDE[ssas-appliesto-sqlas-all](../../../includes/ssas-appliesto-sqlas-all.md)]
 
   表格式模型是資料表、關聯性、階層、檢視方塊、量值和關鍵效能的邏輯表示法。 本節介紹使用 AMO 進行的內部實作。 請參閱[使用分析管理物件 &#40; 開發AMO &#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)如果您未曾使用過 AMO 之前。  

@@ -2,12 +2,12 @@
 title: "命令事件資料行 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 56c47bd0dc279176ee56a31a6ee06ae3c6f1ca82
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4ca478c82617a39b311e0f627320e363a5f7127f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="command-events-data-columns"></a>命令事件資料行
-  下表列出 [命令事件] 事件類別目錄中，每種事件類別的資料行。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]下表列出的資料行中每個事件類別**命令事件**事件類別目錄。  
   
  [命令事件] 事件類別目錄含有下列事件類別：  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
 |NTDomainName|包含與命令事件相關聯的 Windows 網域帳戶。|  
 |ClientProcessID|包含與命令事件相關聯的唯一用戶端處理序識別碼。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
   
   

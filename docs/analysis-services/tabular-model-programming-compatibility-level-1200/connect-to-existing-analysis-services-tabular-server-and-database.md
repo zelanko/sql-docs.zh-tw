@@ -2,12 +2,12 @@
 title: "連接到現有的 Analysis Services 表格式伺服器和資料庫 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df4fb2df60cf27c5a2f33676b9e34fdf1b255a34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e34cc306126acc431048fd93b7eab99049bc2414
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>連接到現有的 Analysis Services 表格式伺服器和資料庫
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-在 SQL Server 2016 中，Analysis Services 管理物件 (AMO) 會包含可用來設定伺服器連接的數個命名空間。 本文說明如何建立伺服器連接的 Microsoft.AnalysisServices.Tabular 命名空間使用模型以及資料庫建立在 1200年或更高的相容性層級。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在 SQL Server 2016 中，Analysis Services 管理物件 (AMO) 會包含可用來設定伺服器連接的數個命名空間。 本文說明如何建立伺服器連接的 Microsoft.AnalysisServices.Tabular 命名空間使用模型以及資料庫建立在 1200年或更高的相容性層級。 
 
 若要連接到 Analysis Services 伺服器，您的程式碼必須具現化伺服器物件，然後在其上呼叫 Connect 方法。 一旦連接之後，伺服器物件的屬性會反映目前的 Analysis Services 執行個體的設定。 
 

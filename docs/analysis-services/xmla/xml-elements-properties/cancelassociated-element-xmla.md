@@ -2,12 +2,12 @@
 title: "CancelAssociated 元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 65d60344142e10f0912c81fdb7062f30b740a9ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e7acf63471a2714808559829f31b3dcf2f4e7e2e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cancelassociated-element-xmla"></a>CancelAssociated 元素 (XMLA)
-  指出 [Cancel](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) 父元素是否應該取消所有相關聯的命令。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]指出是否父[取消](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)項目應該取消所有相關聯的命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  如果您指定了這個元素並將它設定為 **True**，系統就會取消 **Cancel** 父命令中識別的每個對應連接、工作階段和命令。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ConnectionID 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/connectionid-element-xmla.md)   
  [SessionID 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md)   
  [SPID 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/spid-element-xmla.md)   

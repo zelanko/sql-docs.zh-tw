@@ -2,12 +2,12 @@
 title: "模型物件 (TMSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e2ba45e7f346fc597e579ce7dd7d7d0369fd94de
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="model-object-tmsl"></a>模型物件 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  定義表格式模型。 沒有一個模型，每個資料庫和只有一個可以在任何指定的命令中指定的資料庫。 資料庫物件是父系物件。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定義表格式模型。 沒有一個模型，每個資料庫和只有一個可以在任何指定的命令中指定的資料庫。 資料庫物件是父系物件。  
   
  模型定義太大而無法重現整個語法中的主題。 基於這個理由，反白顯示的主要組件部分語法可以找到下，子物件的連結。  
   
@@ -100,7 +97,7 @@ ms.lasthandoff: 11/17/2017
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   

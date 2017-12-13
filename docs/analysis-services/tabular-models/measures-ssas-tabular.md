@@ -2,12 +2,12 @@
 title: "量值 |Microsoft 文件"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ece228053898085df6a2d95bf513c0d889cfa646
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6309c988b279db0e96915e6ae4d17011255d47f6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures"></a>量值
-  在表格式模型中，量值是透過報表用戶端內使用的 DAX 公式所建立的計算。 量值會以使用者在報表用戶端應用程式中選取的欄位、篩選及交叉分析篩選器為依據來計算。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格式模型中，量值是在報表用戶端使用的 DAX 公式建立的計算。 量值會以使用者在報表用戶端應用程式中選取的欄位、篩選及交叉分析篩選器為依據來計算。  
   
 ##  <a name="bkmk_understanding"></a> 優點  
  量值可以用標準彙總函式 (例如 AVERAGE、COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 除了公式以外，每個量值都具備由量值資料類型定義的屬性，如名稱、資料表詳細資料、格式及小數位數。  
@@ -97,7 +97,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |-----------|-----------------|  
 |[建立及管理量值](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|描述如何使用模型設計師中的量值方格，建立及管理量值。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [建立及管理 Kpi](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
  [導出資料行](../../analysis-services/tabular-models/ssas-calculated-columns.md)  

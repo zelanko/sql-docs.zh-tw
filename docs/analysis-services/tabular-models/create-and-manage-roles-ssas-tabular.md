@@ -2,12 +2,12 @@
 title: "建立及管理角色 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 13aa039fc89a95af9f977c191ef90b624edb6b9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cde5ecfbcaa904dc4f0f62e0b135dac5780b8ffd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>建立及管理角色 (SSAS 表格式)
-  表格式模型中的角色定義模型的成員權限。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [角色管理員] 對話方塊來定義模型專案的角色。 部署模型之後，資料庫管理員即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]管理角色。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]角色、 表格式模型中定義成員模型的權限。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [角色管理員] 對話方塊來定義模型專案的角色。 部署模型之後，資料庫管理員即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]管理角色。  
   
  此主題中的工作描述如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [角色管理員] 對話方塊，在模型撰寫期間建立及管理角色。 如需在已部署的模型資料庫中管理角色的相關資訊，請參閱[表格式模型角色 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
 9. 按一下 **[確定]**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [角色 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [檢視方塊 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [在 Excel &#40; 中進行分析SSAS 表格式 &#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   

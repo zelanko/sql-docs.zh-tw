@@ -2,12 +2,12 @@
 title: "多維度模型中的 cube |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b51afe2909197369128b50f70d7afa44a977b34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2bec0055791056d71879f9d2d4be2dbda26c5b7b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cubes-in-multidimensional-models"></a>多維度模型中的 Cube
-  Cube 是包含用於分析之資訊的多維度結構；Cube 主要由維度和量值構成。 維度定義 Cube 的結構 (可進一步切割資料)，而量值提供使用者感興趣的彙總數值。 如同邏輯結構，Cube 允許用戶端應用程式擷取 (量值的) 值，就如同值包含在 Cube 的資料格中一樣；資料格是為每個可能的摘要值所定義。 Cube 中的資料格是由維度成員的交集所定義，並且包含該特定交集處之量值的彙總值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cube 是用於分析之; 包含資訊的多維度結構cube 的主要項目是維度和量值。 維度定義 Cube 的結構 (可進一步切割資料)，而量值提供使用者感興趣的彙總數值。 如同邏輯結構，Cube 允許用戶端應用程式擷取 (量值的) 值，就如同值包含在 Cube 的資料格中一樣；資料格是為每個可能的摘要值所定義。 Cube 中的資料格是由維度成員的交集所定義，並且包含該特定交集處之量值的彙總值。  
   
 ## <a name="benefits-of-using-cubes"></a>使用 Cube 的優點  
  Cube 提供儲存所有相關資料以進行分析的單一位置。  

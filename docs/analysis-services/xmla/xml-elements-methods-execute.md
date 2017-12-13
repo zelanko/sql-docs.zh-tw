@@ -2,12 +2,12 @@
 title: "Execute 方法 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2743ccdbe0f2186db5721479c812f61adfcfe92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81fe305b48ade93b57020bcaa6fe7e8baa087f9e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-elements---methods---execute"></a>XML 項目-方法-執行
-  將 XML for Analysis (XMLA) 命令傳送到的執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 這包括涉及資料傳輸的要求，例如擷取或更新伺服器資料的要求。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]將 XML for Analysis (XMLA) 命令傳送到的執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 這包括涉及資料傳輸的要求，例如擷取或更新伺服器資料的要求。  
   
  **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-分析  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
 </Execute>  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [XML 資料類型 &#40;XMLA &#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [探索方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods.md)   

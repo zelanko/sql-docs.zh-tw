@@ -2,12 +2,12 @@
 title: "巢狀資料表 (Analysis Services-資料採礦) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
-ms.translationtype: HT
+ms.openlocfilehash: e561111342531d5e390111282d1ca64f0b05fe17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>巢狀資料表 (Analysis Services - 資料採礦)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料必須當作包含在案例資料表內的一系列案例，傳送至資料採礦演算法。 不過，並非所有的案例都可以由單一資料列描述。 例如，案例可能從兩個資料表衍生：一個資料表包含客戶資訊，而另一個資料表包含客戶購買資訊。 客戶資訊表中的單一客戶在客戶購買資料表中可能有多筆購買項目，所以很難以單一資料列描述資料。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供獨特方法來處理這些情況下，使用*巢狀資料表*。 下圖展示巢狀資料表的概念。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，資料必須為一系列的案例資料表內所包含的情況下傳送至資料採礦演算法。 不過，並非所有的案例都可以由單一資料列描述。 例如，案例可能從兩個資料表衍生：一個資料表包含客戶資訊，而另一個資料表包含客戶購買資訊。 客戶資訊表中的單一客戶在客戶購買資料表中可能有多筆購買項目，所以很難以單一資料列描述資料。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供獨特方法來處理這些情況下，使用*巢狀資料表*。 下圖展示巢狀資料表的概念。  
   
  ![兩個資料表使用巢狀的資料表結合](../../analysis-services/data-mining/media/nested-tables.gif "利用巢狀的資料表來組合兩個資料表")  
   

@@ -2,12 +2,12 @@
 title: "計算內容 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 961f989f2b1973c162f08a89d083c947e56871de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9fe1f8809fc966d9801a17dee7cd7960116fa331
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculation-context"></a>計算內容
-  計算內容是 Cube 中評估運算式以及所有座標為明確已知或可衍生自運算式的已知子空間。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]計算內容是的 cube 中評估運算式以及所有座標為明確已知或可衍生自運算式的已知子空間。  
   
 ## <a name="determining-the-calculation-context"></a>決定計算內容  
  每個集合、成員、Tuple 或數值函數都是在整個 MDX 運算式或陳述式的內容中執行。 傳遞引數 (例如 Tuple) 至函數時，只會明確提供 Cube 空間中的部分座標。 其他座標是根據目前的計算內容取得。  
@@ -78,7 +78,7 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  為了提高查詢效能，您應在解析程序中盡早刪除成員和 Tuple。 如此一來，最終一個成員集合上的複雜查詢階段計算便會在最少資料格上運作。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立查詢中的 Cube 內容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
  [MDX 查詢基礎觀念 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX 的關鍵概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  

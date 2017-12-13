@@ -4,7 +4,7 @@ description: "本主題包含的版本資訊，並支援在 Linux 上執行的 S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 11/28/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 460333eec732a38015229a402aaf1d7985710bc4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
+ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
 
@@ -148,7 +148,7 @@ ms.lasthandoff: 12/01/2017
 
 ### <a name="known-issues"></a>已知問題
 
-下列章節說明在 Linux 上的一般上市 （GA) 版本的 SQL Server 2017 的已知的問題。
+下列章節說明在 Linux 上的 SQL Server 2017 的通用版本上市 (GA) 版本的已知的問題。
 
 #### <a name="general"></a>一般
 
@@ -178,7 +178,7 @@ ms.lasthandoff: 12/01/2017
 
 - 還原 Windows 上的 SQL Server 備份資料庫時，您必須使用**WITH MOVE**子句在 TRANSACT-SQL 陳述式中的。
 
-- 在 Linux 上執行的 SQL Server 上不支援需要 Microsoft 分散式交易協調器服務的分散式交易。 SQL Server 到 SQL Server 支援分散式的交易。
+- 在 Linux 上執行的 SQL Server 上不支援需要 Microsoft 分散式交易協調器服務的分散式交易。 除非所涉及的 DTC 支援連結的伺服器的 SQL server 的 SQL Server。 如需詳細資訊，請參閱[需要 Microsoft 分散式交易協調器服務的分散式交易不支援在 Linux 上執行的 SQL Server 上](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/)。
 
 - 某些演算法 （加密套件） 的傳輸層安全性 (TLS) 無法正常運作的 SQL Server on Linux。 這會導致連接失敗時嘗試連線到 SQL Server，以及建立高可用性群組複本之間的連線問題。
 

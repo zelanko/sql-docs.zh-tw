@@ -2,12 +2,12 @@
 title: "建立及管理量值 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3314afb5a5351b541e29d403ac4a41d98ec27263
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e0f4139b090b70ec3f76dc5613abfe3dfabb77cc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>建立及管理量值 (SSAS 表格式)
-  量值是為了在報表或 Excel 樞紐分析表 (或樞紐分析圖) 中使用而建立的公式。 量值可以用標準彙總函式 (例如 COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 此主題中的工作描述如何使用資料表的量值方格建立及管理量值。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]量值是針對使用報表或 Excel 樞紐分析表 （或樞紐分析圖） 中所建立的公式。 量值可以用標準彙總函式 (例如 COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 此主題中的工作描述如何使用資料表的量值方格建立及管理量值。  
   
  本主題也包括下列工作：  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
 -   在量值方格的量值上按一下滑鼠右鍵，然後按一下 [刪除]。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [量值 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [KPI &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [導出資料行 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  

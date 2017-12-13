@@ -2,12 +2,12 @@
 title: "角色 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6bdb45605383bb567f8b3f1b313f5ac9b7600b81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 121aa11fa1238529d4d3c382c0347878615a3068
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="roles"></a>角色
-  表格式模型中的角色定義模型的成員權限。 角色的成員可以依角色權限所定義，對模型執行動作。 以讀取權限定義的角色也可以使用資料列層級篩選，在資料列層級提供額外的安全性。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]角色、 表格式模型中定義成員模型的權限。 角色的成員可以依角色權限所定義，對模型執行動作。 以讀取權限定義的角色也可以使用資料列層級篩選，在資料列層級提供額外的安全性。 
   
  SQL Server Analysis services，角色包含使用者成員依 Windows 使用者名稱或 Windows 群組和權限 （讀取、 處理程序、 系統管理員）。 Azure Analysis services，使用者必須在您的 Azure Active Directory 和使用者名稱和指定的群組都必須是組織的電子郵件地址的 UPN。 
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/17/2017
 |-----------|-----------------|  
 |[建立及管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)|此主題中的工作描述如何使用 [角色管理員] 對話方塊來建立及管理角色。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [在 Excel 中進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
  [USERNAME 函數 (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   

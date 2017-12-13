@@ -2,12 +2,12 @@
 title: "Member 元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: be758dd6797bd399604ca20faf57904b5725d52b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 54ea0bd96716ae6c11fa1195c9845b721fc76ef6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="member-element-xmla"></a>Member 元素 (XMLA)
-  表示父系中的單一成員[成員](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)或[Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]表示父系中的單一成員[成員](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)或[Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  **成員**元素包含找出並顯示指定的階層內的成員所需的資訊。 父**成員**項目，由已指定階層**階層**父項目的屬性。 父**Tuple**項目，使用指定的階層**階層**屬性**成員**項目。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

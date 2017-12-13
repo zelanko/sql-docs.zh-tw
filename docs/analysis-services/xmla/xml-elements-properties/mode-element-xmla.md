@@ -2,12 +2,12 @@
 title: "Mode 元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3e2047c923e6c205990c58602e1694f645ef97c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4435e7cf6957eba3ddc6ab0828a5026f59f56a92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mode-element-xmla"></a>Mode 元素 (XMLA)
-  識別要父系所使用的模式[鎖定](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)項目指定的物件上建立鎖定時。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]識別要父系所使用的模式[鎖定](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)項目指定的物件上建立鎖定時。  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 |*CommitShared*|在指定的物件上建立共用鎖定。 您可以針對相同的物件建立其他共用鎖定。<br /><br /> 共用的鎖定會防止交易包含寫入作業，例如[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)執行方法呼叫[Alter](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)命令上指定的物件，從認可，直到移除共用的鎖定為止。 共用的鎖定無法防止交易包含讀取的作業，例如[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法呼叫或**Execute**執行方法呼叫[陳述式](../../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md)命令，從正在認可。|  
 |*執行 CommitExclusive*|在指定的物件上建立獨佔鎖定。 您無法針對相同的物件建立其他共用或獨佔鎖定。<br /><br /> 獨佔鎖定會防止認可在指定的物件上包含讀取或寫入作業的交易，直到移除獨佔鎖定為止。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ID 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)   
  [Object 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

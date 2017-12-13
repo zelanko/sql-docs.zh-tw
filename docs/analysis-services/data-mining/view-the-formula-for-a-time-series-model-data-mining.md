@@ -2,12 +2,12 @@
 title: "檢視時間序列公式模型 （資料採礦） |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a84f9cefb4793cd03536b228c52db3452d7937b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb044b96eecbbb5c6eb18dcc33eae1807b2fe8b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>檢視時間序列模型的公式 (資料採礦)
-  如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦建立時間序列模型，要看到模型迴歸方程式，最簡單的方法是使用 [Microsoft 時間序列檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)的 [採礦圖例]，它會以可閱讀的格式呈現所有常數。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果您建立時間序列模型使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料採礦，請參閱迴歸方程式，模型是使用最簡單的方式**採礦圖例**的[Microsoft 時間序列檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)，可讀取的格式呈現所有常數。  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>檢視時間序列模式的 ARTXP 迴歸公式  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  如果您瀏覽混合模型的內容，且該模型同時使用 ARIMA 和 ARTXP 模型，則兩個模型會位於個別的樹狀結構，並在代表模型的根節點聯結。 即使為了方便起見，ARIMA 和 ARTXP 模型顯示在一個檢視器中，結構和方程式是非常不同的，它們無法進行結合或比較。 ARTXP 樹狀目錄更像是決策樹，而 ARIMA 樹狀目錄則代表一系列的移動平均。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [使用 Microsoft 時間序列檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   

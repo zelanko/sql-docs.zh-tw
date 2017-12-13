@@ -2,12 +2,12 @@
 title: "DAX 中表格式模型 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 10/21/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73a56576091a746db0ca8c52ea2be22f60a50148
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e44414be7517bbecf0411753bdd55337cc9e0d39
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>DAX 中表格式模型 (SSAS 表格式)
-  Data Analysis Expressions (DAX) 是一種公式語言，用來在 Analysis Services、 Power BI Desktop 和 Power Pivot，在 Excel 中建立自訂計算。 DAX 公式包含函數、運算子和值，可對資料表和資料行中的資料執行進階計算。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Data Analysis Expressions (DAX) 是一種公式語言，用來在 Analysis Services、 Power BI Desktop 和 Power Pivot，在 Excel 中建立自訂計算。 DAX 公式包含函數、運算子和值，可對資料表和資料行中的資料執行進階計算。  
   
  雖然 DAX 會使用在 Analysis Services、 Power BI Desktop 和 Power Pivot，在 Excel 中，本主題適用於多撰寫在 SQL Server Data Tools (SSDT) 的 Analysis Services 表格式模型專案。  
   
@@ -397,7 +397,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  [DAX 資源中心](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 會提供關於 DAX 的內外部資訊，包括由主要的 Business Intelligence 專業人員所提交的多個 DAX 解決方案。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Data Analysis Expressions (DAX) 參考](http://msdn.microsoft.com/en-us/70a82136-0926-4a91-bcb3-e18e82593b0d)   
  [量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [導出資料行](../../analysis-services/tabular-models/ssas-calculated-columns.md)   

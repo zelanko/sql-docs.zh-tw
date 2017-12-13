@@ -2,12 +2,12 @@
 title: "表格式模型指令碼語言 (TMSL) 參考 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 02d8617161c4d2a023ea5b91e5e4fc2074c6c07d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6a897c2cc561d5a313f2f7c7b30d987c5ad21d01
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>表格式模型指令碼語言 (TMSL) 參考
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  表格式模型指令碼語言 (TMSL) 是命令和物件模型定義的相容性層級 1200年或更高版本的 Analysis Services 表格式模型資料庫。 Analysis Services 透過 XMLA 通訊協定，與外界溝通 TMSL 其中[XMLA。執行](../analysis-services/xmla/xml-elements-methods-execute.md)方法接受 JSON 型**陳述式**TMSL 與傳統 XML 架構中的指令碼中的指令碼[Analysis Services 指令碼語言 &#40;ASSL XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]表格式模型指令碼語言 (TMSL) 是命令和物件模型定義的相容性層級 1200年或更高版本的 Analysis Services 表格式模型資料庫。 Analysis Services 透過 XMLA 通訊協定，與外界溝通 TMSL 其中[XMLA。執行](../analysis-services/xmla/xml-elements-methods-execute.md)方法接受 JSON 型**陳述式**TMSL 與傳統 XML 架構中的指令碼中的指令碼[Analysis Services 指令碼語言 &#40;ASSL XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  TMSL 的重要元素如下：  
   
@@ -81,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 |SQL Server 2012|ASSL|ASSL|NA|NA|  
 
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 中表格式模型的相容性層級](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services 指令碼語言 &#40;ASSL XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  

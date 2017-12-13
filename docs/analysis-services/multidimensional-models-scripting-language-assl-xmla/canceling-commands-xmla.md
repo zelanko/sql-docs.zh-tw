@@ -2,12 +2,12 @@
 title: "取消命令 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d86c304f8735cc8933fd9c466af4f58f4d980c74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5b6e43a5c79ccce179f960053ec7adde4e407509
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="canceling-commands-xmla"></a>取消命令 (XMLA)
-  視發出命令的使用者的系統管理權限[取消](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)命令在 XML for Analysis (XMLA) 可以取消工作階段，工作階段、 連接、 伺服器處理序或相關聯的工作階段上的命令或連接。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]視發出命令的使用者的系統管理權限[取消](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)命令在 XML for Analysis (XMLA) 可以取消工作階段，工作階段、 連接、 伺服器處理序或相關聯的工作階段上的命令或連接。  
   
 ## <a name="canceling-commands"></a>取消命令  
  使用者可以取消目前執行的命令在目前的明確工作階段的內容傳送**取消**命令沒有指定屬性。  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="canceling-associated-sessions-and-connections"></a>取消關聯的工作階段和連接。  
  您可以設定[CancelAssociated](../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)屬性設定為 true，若要取消連接、 工作階段和連接、 工作階段或在指定的 SPID 相關聯的命令**取消**命令。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [探索方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   

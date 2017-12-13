@@ -2,12 +2,12 @@
 title: "BaseProperty 元素 (CSDLBI) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 79d391ef3ac0388187c91dac96859172a347effc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c0dfb628e7c70edf6e5daf197e3f0d48d4cc9b20
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="baseproperty-element-csdlbi"></a>BaseProperty 元素 (CSDLBI)
-  BaseProperty 元素為複雜類型，可做為其他元素的基底。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]BaseProperty 元素是做為其他元素的基底複雜型別。  
   
  其屬性可以出現在資料行和量值中。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |內容|使用內送關聯性名稱。|  
 |合併式|串連內送關聯性名稱和屬性名稱。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [了解表格式物件模型在相容性層級 1050年透過 1103](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

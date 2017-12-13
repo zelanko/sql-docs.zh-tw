@@ -1,12 +1,12 @@
 ---
 title: "表格式模型方案 (SSAS 表格式) |Microsoft 文件"
 ms.date: 05/22/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 27d4523d7d0e23fbc0043c0ef4b8909285703e31
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 147f0b4f37d0b24e78ad8c314e9cdff12e85459e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="creating-tabular-models"></a>建立表格式模型
-  本節中的主題提供如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的表格式模型設計師來撰寫表格式模型的資訊。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本節中的主題提供有關如何使用表格式模型設計師中的撰寫表格式模型資訊[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
 ## <a name="in-this-section"></a>本節內容  
  [表格式模型設計師](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  [表格式模型方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [下載 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)   
  [工具和 Analysis Services 中使用的應用程式](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   

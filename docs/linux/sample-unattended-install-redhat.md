@@ -2,8 +2,8 @@
 title: "Red Hat Enterprise Linux 上的 SQL Server 的自動的安裝 |Microsoft 文件"
 description: "SQL Server 指令碼範例在 Red Hat Enterprise Linux 上的自動安裝"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8f352dcf0f646cd259a1163a5c752f233ed16393
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
-ms.translationtype: HT
+ms.openlocfilehash: 93e6520d3d2c15559ee001742bf58fa897814e3d
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux 的範例： 無人看管的 SQL Server 安裝指令碼
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/01/2017
 範例指令碼儲存至檔案，然後進行自訂，取代指令碼中變數的值。 您也可以設定任何指令碼的變數視為環境變數，只要您移除指令碼檔案。
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

@@ -2,12 +2,12 @@
 title: "ProtocolCapabilities 元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42ff93dce6b71f7cfd69ed85d92c4c4f7912faee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bac8f7dccd818128280dc532f276379050c69a77
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="protocolcapabilities-element-xmla"></a>ProtocolCapabilities 元素 (XMLA)
-  在 SOAP 要求訊息中使用 SOAP 標頭，以識別執行個體之間的通訊協定功能[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]和用戶端應用程式。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]在 SOAP 要求訊息中使用 SOAP 標頭，以識別執行個體之間的通訊協定功能[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]和用戶端應用程式。  
   
  **命名空間**`http://schemas.microsoft.com/analysisservices/2003/engine`  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
   
  通訊協定功能不需要明確交涉。 也就是說，用戶端應用程式不需要在 SOAP 要求中包含 **ProtocolCapabilities** 元素。 如果 SOAP 要求不包含**ProtocolCapabilities**項目，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體使用相同的格式與 SOAP 要求的回應。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [管理連接和工作階段 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [標頭 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   

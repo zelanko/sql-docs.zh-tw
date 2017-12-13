@@ -2,12 +2,12 @@
 title: "啟用維度回寫 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 015ecb28286589516d78476caf0f12938980ad5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f8f2ddac65e4ffbb24118a498f96dad83c2c138d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---enable-dimension-writeback"></a>BI 精靈-啟用維度回寫
-  加入維度回寫增強功能至 Cube 或維度，以允許使用者手動修改維度結構和成員。 可寫入維度的更新會直接記錄在維度資料表中。 這項增強功能會變更維度的 **WriteEnabled** 屬性設定。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]將維度回寫增強功能加入至 cube 或維度，以允許使用者手動修改維度結構和成員。 可寫入維度的更新會直接記錄在維度資料表中。 這項增強功能會變更維度的 **WriteEnabled** 屬性設定。  
   
  若要加入維度回寫，您可使用 [商業智慧精靈]，並於 [選擇增強功能] 頁面上選取 [啟用維度回寫] 選項。 然後，此精靈會引導您逐步完成選取要套用維度回寫的維度，並為選取的維度設定此選項。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 >   
 >  如需詳細資訊，請參閱[使用 Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [可寫入維度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

@@ -2,12 +2,12 @@
 title: "AMO 基礎類別 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5323ecb7ac5acc40964357e57ce86f6538313ea9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0ffdb76b0fa396430c913cfb081e7ca5f6f27b0b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-fundamental-classes"></a>AMO 基礎類別
-  基礎類別是使用分析管理物件 (AMO) 的起點。 透過這些類別，就可以為應用程式內將使用的其餘物件建立環境。 基礎類別包括下列物件：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]基礎類別是使用與 「 分析管理物件 」 (AMO) 的起始點。 透過這些類別，就可以為應用程式內將使用的其餘物件建立環境。 基礎類別包括下列物件：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。  
   
  下圖顯示在本主題中說明的類別關聯性。  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.DataSource>＞中的＜<xref:Microsoft.AnalysisServices.DataSourceView>＞與＜<xref:Microsoft.AnalysisServices>＞。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO 基礎物件的程式設計](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)  

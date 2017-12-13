@@ -2,12 +2,12 @@
 title: "將篩選套用至模型測試資料 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 39d35b7421b9d3ddeff5cede6e1539b34b7012c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e0a9ffaeaeaffb9a93e36f865a6b3e7a0647befa
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-filters-to-model-testing-data"></a>將篩選套用至模型測試資料
-  當您指定要用於測試模型的外部資料來源時，可以選擇性地套用篩選，以限制輸入資料。 例如，您可能想要特別針對某個收入範圍的客戶進行預測來測試模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您指定測試模型使用的外部資料來源時，您可以選擇性地套用篩選，以限制輸入的資料。 例如，您可能想要特別針對某個收入範圍的客戶進行預測來測試模型。  
   
  例如，在 Adventure Works 目標郵寄案例中，您可以對 ProspectiveBuyer (這是包含測試資料的資料表) 建立一個如下的篩選運算式，依收入範圍來限制測試案例：  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/17/2017
   
      當您建立精確度圖表時，此篩選條件會套用至資料來源。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [選擇和對應模型測試資料](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [使用巢狀資料表做為輸入用於精確度圖表](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [選擇精確度圖表類型及設定圖表選項](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  

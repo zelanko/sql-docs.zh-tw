@@ -2,12 +2,12 @@
 title: "設定 Power View 報表 (SSAS 表格式) 的預設欄位集 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b357d75c87cc9a2a086382bbbf65079b31b59b52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e5a36f650081d5932e7100abc923b627a4aa47c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---configure-default-field-set-for-reports"></a>Power View-設定報表的預設欄位集
-  預設欄位集是預先定義的資料行和量值的清單，當您選取報表欄位清單中的資料表時，此清單會自動加入 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表畫布。 表格式模型作者可以建立預設欄位集，針對在報表中使用此模型的報表作者移除多餘的步驟。 例如，如果您知道使用客戶連絡資訊的大部分報表作者都想要看到連絡人的名稱、主要電話號碼、電子郵件地址和公司名稱，您可以預先選取這些資料行，這樣當報表作者按一下 [客戶連絡人] 資料表時，這些資料行就會固定加入到報表畫布上。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]預設欄位集是預先定義的資料行和量值，會自動加入至清單[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]報表欄位清單中選取資料表時，報表畫布。 表格式模型作者可以建立預設欄位集，針對在報表中使用此模型的報表作者移除多餘的步驟。 例如，如果您知道使用客戶連絡資訊的大部分報表作者都想要看到連絡人的名稱、主要電話號碼、電子郵件地址和公司名稱，您可以預先選取這些資料行，這樣當報表作者按一下 [客戶連絡人] 資料表時，這些資料行就會固定加入到報表畫布上。  
   
 > [!NOTE]  
 >  預設欄位集只會套用至 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]中當做資料模型使用的表格式模型。 Excel 的樞紐分析報表不支援預設欄位集。  

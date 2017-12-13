@@ -2,12 +2,12 @@
 title: "管理連接與工作階段 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52392cf2a1af25e0f67634286e371fb2bef408f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bf118b3eb709ffffd67d5e984b0303bdfa21d149
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理連接與工作階段 (XMLA)
-  *Statefulness*是在伺服器保留之身分識別與內容的用戶端方法呼叫之間的條件。 *Statelessness*是在伺服器不會記住之身分識別與內容的用戶端方法呼叫完成之後的條件。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Statefulness*是在伺服器保留之身分識別與內容的用戶端方法呼叫之間的條件。 *Statelessness*是在伺服器不會記住之身分識別與內容的用戶端方法呼叫完成之後的條件。  
   
  若要提供 statefulness，XML for Analysis (XMLA) 支援*工作階段*，允許一系列陳述式一起執行。 這樣一系列的陳述式範例，將會建立用於後續查詢的導出成員。  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
     </SOAP-ENV:Header>  
     ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
