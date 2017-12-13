@@ -2,12 +2,12 @@
 title: "將屬性繫結至索引鍵資料行 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4f19e7ee6c46ff06cbfc8005252bab2ec1115eb3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6288f1323e76c5efa43a05e97a30b23f86de7559
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>屬性內容-屬性繫結至索引鍵資料行
-  此程序描述如何在維度中，變更屬性 (attribute) 的 **Name** 屬性 (property) 設定。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]此程序描述如何變更的設定**名稱**維度中屬性的屬性。  
   
 ### <a name="to-bind-an-attribute-to-a-key-column"></a>若要將屬性繫結至索引鍵資料行  
   

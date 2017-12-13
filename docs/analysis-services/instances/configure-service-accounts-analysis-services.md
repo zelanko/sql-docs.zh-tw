@@ -2,12 +2,12 @@
 title: "設定服務帳戶 (Analysis Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 43be205737ddf16cd329598646cb60a8cebbe8e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f2109157a401082febbaadb2a42f607aba22ee73
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-service-accounts-analysis-services"></a>設定服務帳戶 (Analysis Services)
-  [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中記載如何佈建適用於整個產品範圍的帳戶，該主題提供適用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務 (包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 的全方位服務帳戶資訊。 如需了解有效的帳戶類型、由安裝程式指派的 Windows 權限、檔案系統權限、登錄權限等，請參閱該主題。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]全產品帳戶佈建記載於[設定 Windows 服務帳戶和權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)，提供完整的服務帳戶資訊的所有主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務，包括[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 如需了解有效的帳戶類型、由安裝程式指派的 Windows 權限、檔案系統權限、登錄權限等，請參閱該主題。  
   
  本主題提供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的補充資訊，包含表格式和叢集安裝所需的其他權限。 其中也涵蓋支援伺服器作業所需的權限。 例如，您可以在服務帳戶底下設定要排除的處理和查詢作業 - 在這個情況下，您將需要授與其他權限來讓這個動作生效。  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 11/17/2017
 |回寫|將服務帳戶新增到在遠端伺服器上定義的 Analysis Services 資料庫角色|在用戶端應用程式中啟用時，回寫是多維度模型功能，可在資料分析期間建立新的資料值。 如果已在維度或 Cube 內啟用回寫， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶就必須針對來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫中的回寫資料表具備寫入權限。 如果這個資料表不存在而需要建立，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中，也必須有建立資料表的權限。|  
 |寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫中的查詢記錄資料表|建立服務帳戶的資料庫登入並指派查詢記錄表格的寫入權限|您可以啟用查詢記錄，以收集資料庫資料表中的使用量資料進行後續分析。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶對指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的查詢記錄資料表，必須具有寫入權限。 如果這個資料表不存在而需要建立，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 登入帳戶在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中，也必須有建立資料表的權限。 如需詳細資訊，請參閱 [Improve SQL Server Analysis Services Performance with the Usage Based Optimization Wizard (部落格)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) 和 [Query Logging in Analysis Services (部落格)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server 服務帳戶和個別服務 SID （部落格）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server 使用服務 SID 提供服務隔離 （知識庫文章）](http://support.microsoft.com/kb/2620201)   

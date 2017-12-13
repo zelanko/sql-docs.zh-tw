@@ -2,12 +2,12 @@
 title: "多維度模型組件管理 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 62bd92bbfc8c0bf4cb3278186ee27a55e8e6aea0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 73dfb81f267fea0d246ff1f7c7e48abb8d1dcccc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多維度模型組件管理
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供許多可與多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 語言搭配使用的內建函數，其設計目的是要完成從標準統計計算一直到階層中周遊成員間的各種運算。 但是，就如同其他複雜且強固的產品一樣，總是有進一步擴充產品功能的需求。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供許多的內建函數搭配多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 語言，設計來完成從標準統計計算所有項目階層中周遊成員。 但是，就如同其他複雜且強固的產品一樣，總是有進一步擴充產品功能的需求。  
   
  因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可讓您將組件加入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體或資料庫中。 組件可讓您使用任何 Common Language Runtime (CLR) 語言 (例如 Microsoft Visual Basic .NET 或 Microsoft Visual C#) 來建立外部使用者自訂函數。 您也可以使用元件物件模型 (COM) 自動化語言 (例如 Microsoft Visual Basic 或 Microsoft Visual C++)。  
   
@@ -121,7 +121,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  因為應用程式網域界限和每個網域中的組件都是由實作所定義，所以您不應該依賴在同一應用程式網域中尋找組件。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [設定預存程序的安全性](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [定義預存程序](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

@@ -2,12 +2,12 @@
 title: "AggregationDimension 資料類型 (ASSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 17c7c2b0eb70477bc0e10e49e4795b94612c6cba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cd73d9a355f19357ea22f5554d56dfe4eaaff6d6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="aggregationdimension-data-type-assl"></a>AggregationDimension 資料類型 (ASSL)
-  定義代表維度之間的關聯性的基本資料類型和[彙總](../../../analysis-services/scripting/objects/aggregation-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義代表維度之間的關聯性的基本資料類型和[彙總](../../../analysis-services/scripting/objects/aggregation-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AggregationDimension>。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

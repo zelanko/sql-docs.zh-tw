@@ -2,12 +2,12 @@
 title: "HoldoutSeed 元素 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 751e18d05897651d0996232f8b4c5c590985a5b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c018e11960726554b2f02a0ec7aaa537d599a6d0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="holdoutseed-element"></a>HoldoutSeed 元素
-  指定包含測試集的可重複鑑效組資料分割的種子[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)項目。 這個種子可確保模型內容在重新處理期間會保持不變。 如果未指定或設為 0，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]建立的採礦結構名稱使用雜湊演算法的種子。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定包含測試集的可重複鑑效組資料分割的種子[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)項目。 這個種子可確保模型內容在重新處理期間會保持不變。 如果未指定或設為 0，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]建立的採礦結構名稱使用雜湊演算法的種子。  
   
 ## <a name="syntax"></a>語法  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
  對應目的父代的項目**HoldoutSeed**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MiningStructure>。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [HoldoutActualSize 元素](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)   
  [HoldoutMaxPercent 元素](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)   

@@ -2,12 +2,12 @@
 title: "Analysis Services 指令碼語言 XML 資料類型 (ASSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b15c0ffee8bc0217ec119d6d66ef446f7897c0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c4f046379f48724876223ea5248f4aff58bb637
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Analysis Services 指令碼語言 XML 資料類型 (ASSL)
-  這個參考章節包含在「Analysis Services 指令碼語言」(ASSL) 結構描述中當做類型之每個元素的語法和使用方式資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]這個參考章節包含每個項目，可做為 Analysis Services 指令碼語言 (ASSL) 結構描述中的類型的語法和使用方式資訊。  
   
  雖然 ASSL 結構描述僅包含 XML 元素，從開發人員的觀點來看，這一節所述的元素對應至類型，例如**繫結**和**權限**，這是用來定義子項目和其他物件的屬性。  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/17/2017
 |[Translation 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/translation-data-type-assl.md)|定義代表當地語系化翻譯的基本資料類型。|  
 |[UserDefinedGroupBinding 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/userdefinedgroupbinding-data-type-assl.md)|定義代表某個屬性之使用者定義群組的衍生資料類型。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 指令碼語言 XML 元素階層 &#40;ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   

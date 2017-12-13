@@ -2,12 +2,12 @@
 title: "Power Pivot 服務應用程式連線到 CA 中的 SharePoint Web 應用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 673a35deddae2b67e6dfcdee51ecb1d9ca666cdc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7eacb900494941994ff38fd01f8b58e8939c1ebf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Power Pivot 服務應用程式連線到 CA 中的 SharePoint Web 應用程式
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式可由伺服陣列中任何數目的 SharePoint Web 應用程式使用。 若要讓 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式可用，請將它加入至服務關聯清單。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式可以使用任何數目的伺服陣列中的 SharePoint Web 應用程式。 若要讓 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式可用，請將它加入至服務關聯清單。  
   
 > [!IMPORTANT]  
 >  預設群組中必須有一個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式，才能確保 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板能夠適當運作。 請勿將多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式加入到預設群組。 加入相同服務應用程式類型的多個項目並不是支援的組態，而且可能會發生錯誤。 如果您要建立其他服務應用程式，請將它們加入到自訂清單。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  按一下 **[確定]**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [在管理中心建立和設定 Power Pivot 服務應用程式](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
  [初始組態 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
   

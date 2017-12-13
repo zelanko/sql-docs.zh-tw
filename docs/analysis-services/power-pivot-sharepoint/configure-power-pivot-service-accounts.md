@@ -2,12 +2,12 @@
 title: "設定 Power Pivot Service Accounts |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aae3f818de4936974dd53f14c2b3fdbbea0b369f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 016909afa00382f9b1a0905e95423eb82007b758
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-service-accounts"></a>設定 Power Pivot 服務帳戶
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝包含兩個支援伺服器作業的服務。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 服務是一種 Windows 服務，它會在應用程式伺服器上提供 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料處理和查詢支援。 當您在 SharePoint 整合模式下安裝 Analysis Services 時，一定會在進行 SQL Server 安裝程式期間指定這個服務的登入帳戶。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝包含兩個支援伺服器作業的服務。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 服務是一種 Windows 服務，它會在應用程式伺服器上提供 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料處理和查詢支援。 當您在 SharePoint 整合模式下安裝 Analysis Services 時，一定會在進行 SQL Server 安裝程式期間指定這個服務的登入帳戶。  
   
  此外，您必須針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式指定第二個帳戶，此服務應用程式是一種共用 Web 服務，其會以 SharePoint 伺服器陣列中的應用程式集區身分識別執行。 此帳戶是在使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]組態工具或 PowerShell 來設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝時所指定。  
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 11/17/2017
   
  如果已安裝 Reporting Services，請使用 Reporting Services 組態管理員更新報表伺服器的密碼，以及報表伺服器資料庫的連接。 如需詳細資訊，請參閱[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [啟動或停止 Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
  [設定 Power Pivot 自動資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   

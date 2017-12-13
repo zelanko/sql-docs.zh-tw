@@ -2,12 +2,12 @@
 title: "Invocation 元素 (ASSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8e83bb6a69802c2a4aa39108712661d6e7f1c692
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ec2780c83910bc3311ee64d1149a9a9c41e2ff6f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="invocation-element-assl"></a>Invocation 元素 (ASSL)
-  指定如何[動作](../../../analysis-services/scripting/objects/action-element-assl.md)應叫用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定如何[動作](../../../analysis-services/scripting/objects/action-element-assl.md)應叫用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  列舉型別對應至允許的值**引動過程**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Action>。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

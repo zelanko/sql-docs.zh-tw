@@ -2,12 +2,12 @@
 title: "資料庫一致性檢查 (DBCC) for Analysis Services |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9dee0f68a2d9b4dd1bdae90435de3c02eddfeba2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1bf91c2e3c09b30f5e9ea48756ae2b7c9f889644
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 的 database Consistency Checker (DBCC)
-  DBCC 提供適用於 Analysis Services 執行個體上之多維度和表格式資料庫的隨選驗證。 您可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查詢視窗中執行 DBCC，並在 SSMS 的 SQL Server Profiler 或 xEvent 工作階段中追蹤 DBCC 輸出。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC 提供隨選驗證多維度和表格式資料庫的 Analysis Services 執行個體。 您可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查詢視窗中執行 DBCC，並在 SSMS 的 SQL Server Profiler 或 xEvent 工作階段中追蹤 DBCC 輸出。  
 此命令會接受物件定義，並傳回空的結果集或詳細錯誤資訊 (如果物件已損毀)。   在本文中，您將了解如何執行命令、解譯結果，以及解決任何發生的問題。  
   
  對於表格式資料庫，DBCC 所執行的一致性檢查相當於每次重新載入、同步處理或還原資料庫時自動發生的內建驗證。  相反地，多維度資料庫的一致性檢查只會在您依照需求執行 DBCC 時發生。  
@@ -305,7 +305,7 @@ Execution complete
 > [!NOTE]  
 >  在根據需求執行命令時，這項設定不會對 DBCC 產生任何影響。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [處理資料庫、資料表或資料分割 &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [監視 Analysis Services 執行個體](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   

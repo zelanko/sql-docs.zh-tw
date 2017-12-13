@@ -2,12 +2,12 @@
 title: "組態設定參考 (Power Pivot for SharePoint) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 267128105fe02befb5fa42053fdaa77c581dd361
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 683198616cb883944a20de70e3531d9fa48fee62
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>組態設定參考 (PowerPivot for SharePoint)
-  本主題提供 SharePoint 伺服器陣列中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式所使用的組態設定參考文件。 如果您使用 PowerShell 指令碼來設定伺服器，或者，如果想查閱特定設定的資訊，本主題中的資訊提供詳細的說明。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題提供的組態設定所使用的參考文件[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務 SharePoint 伺服陣列中的應用程式。 如果您使用 PowerShell 指令碼來設定伺服器，或者，如果想查閱特定設定的資訊，本主題中的資訊提供詳細的說明。  
   
  組態設定是為每個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式設定。 在伺服陣列中，您可以建立多個服務應用程式，做為設定相同實體服務執行個體之獨立邏輯執行個體的一種方式。 組態設定會儲存在為您所設定每個服務應用程式建立的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 應用程式資料庫中。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 |[預期回應時間上限]|3000 (以毫秒為單位)|1 到 n 毫秒，其中 n 是任何有效的整數。|在預設情況下，預期要求的臨界值是三秒。<br /><br /> 此臨界值設定預期查詢時間的上限。|  
 |長回應時間上限|10000 (以毫秒為單位)|1 到 n 毫秒，其中 n 是任何有效的整數。|在預設情況下，長時間要求的臨界值是十秒。<br /><br /> 這些要求的執行時間比預期還長，但仍在可接受的範圍內。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [在管理中心建立和設定 Power Pivot 服務應用程式](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
  [SharePoint 2010 中的 PowerPivot 資料重新整理](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [設定使用量資料收集的對象 &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   

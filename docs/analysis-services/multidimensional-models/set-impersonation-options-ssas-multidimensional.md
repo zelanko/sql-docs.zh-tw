@@ -2,12 +2,12 @@
 title: "設定模擬選項 (SSAS-多維度) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b448d78a897c6e7c6aa6973b6e61b92ff7a9aade
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5758391cdcc5e216bed3ec100b254c8f5f6e3a89
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>設定模擬選項 (SSAS - 多維度)
-  在 Analysis Services 模型中建立 **資料來源** 物件時，您必須進行的其中一項設定就是模擬選項。 此選項會決定當執行與連接有關的本機作業時，Analysis Services 是否採用特定 Windows 使用者帳戶的識別，例如在支援漫遊設定檔的環境中載入 OLE DB 資料提供者或解析使用者設定檔資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]建立時**資料來源**物件在 Analysis Services 模型中，您必須設定的設定值就是模擬選項。 此選項會決定當執行與連接有關的本機作業時，Analysis Services 是否採用特定 Windows 使用者帳戶的識別，例如在支援漫遊設定檔的環境中載入 OLE DB 資料提供者或解析使用者設定檔資訊。  
   
  如果是使用 Windows 驗證的連接，則模擬選項也會決定在外部資料來源執行查詢所使用的使用者識別。 例如，如果您將模擬選項設定為 **contoso\dbuser**，則在處理期間用來擷取資料的查詢將會以資料庫伺服器上的 **contoso\dbuser** 身分執行。  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
 
  若為多維度資料庫，[預設值] 表示使用服務帳戶和目前使用者進行資料採礦作業。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立資料來源 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [設定資料來源屬性 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 

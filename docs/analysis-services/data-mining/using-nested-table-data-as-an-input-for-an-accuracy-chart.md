@@ -2,12 +2,12 @@
 title: "使用巢狀的資料表資料做為輸入，精確度圖表 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d60e6dbaae295d5bc4f3e221306ab478583defc9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 05314d5f52757332c8909f78fd57f8d141ff1696
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用巢狀資料表當做精確度圖表的輸入
-  當您使用外部資料測試採礦模型的精確度時，如果採礦模型包含巢狀資料表，則外部資料必須也包含案例資料表和相關聯的巢狀資料表。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您使用外部資料，如果採礦模型包含巢狀的資料表來測試採礦模型的精確度時，則外部資料必須也包含案例資料表和相關聯的巢狀的資料表。  
   
  本主題描述如何處理用於模型測試的巢狀資料表、如何對應模式和外部資料中的巢狀與案例資料表，以及如何將篩選套用至巢狀資料表。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
      如果您需要修改巢狀資料表與案例資料表之間的關聯性，請按一下 **[修改聯結]** ，開啟 **[建立關聯性]** 對話方塊。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [選擇和對應模型測試資料](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [將篩選套用至模型測試資料](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   

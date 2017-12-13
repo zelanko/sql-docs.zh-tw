@@ -2,12 +2,12 @@
 title: "Tuple |Microsoft 文件"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4720db7c001c17a99016e9d81b32ee46d990e06f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 15dfc7f0ef9690acb208acd17eb6c4b5f27778bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tuples"></a>Tuples
-  Tuple 可以唯一識別 Cube 中的資料配量。 Tuple 是由維度成員的組合所構成，只要沒有兩個以上的成員屬於相同階層即可。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Tuple 可以唯一識別 cube 中的資料配量。 Tuple 是由維度成員的組合所構成，只要沒有兩個以上的成員屬於相同階層即可。  
   
 ## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>Tuple 中的隱含或預設屬性成員  
  在 MDX 查詢或運算式中定義 Tuple 時，您不需明確包含每個屬性階層的屬性成員。 如果屬性階層的成員沒有明確包含在查詢或運算式中，該屬性階層的預設成員就是 Tuple 中隱含包含的屬性成員。 除非 Cube 中另有明確定義，否則每個屬性階層的預設成員就是 (全部) 成員 (如果 (全部) 成員存在的話)。 如果 (全部) 成員不存在屬性階層中，預設成員就是屬性階層的最上層成員。 除非明確定義了預設量值，否則預設量值就是 Cube 中第一個指定的量值。 如需詳細資訊，請參閱[定義預設成員](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)和 [DefaultMember &#40;MDX&#41;](../../../mdx/defaultmember-mdx.md)。  
@@ -74,10 +74,10 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  屬性成員可以其成員名稱或成員索引鍵代表。 在上述範例中，您可以將參考值從 [CY 2004] 取代成 &[2004]。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [MDX 的關鍵概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [「 自動存在 」](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [使用成員、 Tuple 及集合 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
+ [使用成員、 Tuple 及集合 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   

@@ -2,12 +2,12 @@
 title: "使用範本來建立動作 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bc98dc219eb8b4f003f77236f088f2e1f4fbe4d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 27968d5a1e32dc5f357f1fd509508347628c9367
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-a-template-to-create-an-action"></a>使用範本建立動作
-  Cube 設計師的 [動作] 檢視包含可用來建立一般動作的一些範本。 您可從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取 Cube 設計師。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**動作**Cube 設計工具檢視中的包含數個範本可讓您建立一般動作。 您可從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取 Cube 設計師。  
   
 > [!NOTE]  
 >  在建立動作之後，您必須先更新或重新處理 Cube，使用者才能使用動作。 如需詳細資訊，請參閱[處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 -   填入必要資訊，以完成建置以範本為基礎的動作。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [動作 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
   
   

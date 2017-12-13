@@ -2,12 +2,12 @@
 title: "授與權限的資料來源物件 (Analysis Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c774f7711a32eb512c28914146b05f2db52f4b2c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a08c7f67120126f836552af70bf97e0b6cda366
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>授與資料來源物件的權限 (Analysis Services)
-  通常，大部分的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用者都不需要存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的基礎資料來源。 使用者通常只會查詢 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的資料。 不過，在資料採礦的內容中，例如要執行以採礦模型為基礎的預測時，使用者就必須聯結採礦模型的所獲得 (Learned) 資料與使用者提供的資料。 若要連接到包含使用者所提供資料的資料來源，使用者要使用包含 [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) 和 [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md) 子句的資料採礦延伸模組 (DMX) 查詢。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]一般而言，大部分使用者都[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]不需要存取基礎資料來源[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。 使用者通常只會查詢 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的資料。 不過，在資料採礦的內容中，例如要執行以採礦模型為基礎的預測時，使用者就必須聯結採礦模型的所獲得 (Learned) 資料與使用者提供的資料。 若要連接到包含使用者所提供資料的資料來源，使用者要使用包含 [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) 和 [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md) 子句的資料採礦延伸模組 (DMX) 查詢。  
   
  若要執行連接到資料來源的 DMX 查詢，使用者必須存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的資料來源物件。 根據預設，只有伺服器管理員或資料庫管理員擁有存取資料來源物件的權限。 這表示除非管理員授與權限，否則使用者無法存取資料來源物件。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
      如果用戶端不容許模擬 (透過 OLE DB 和其他用戶端元件的模擬層級屬性)， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 將會嘗試與基礎資料來源建立匿名連線。 匿名連線遠端資料來源很少成功，因為大部分的資料來源都不接受匿名連線)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [多維度模型中的資料來源](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [連接字串屬性 &#40;Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
  [Analysis Services 支援的驗證方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   

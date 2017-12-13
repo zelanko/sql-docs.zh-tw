@@ -2,12 +2,12 @@
 title: "階層 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a7604fe65427b5744cb0b34689a98f7fc6cd809b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 11112104f624c3594a99e867d03bfaaab28ac37c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="hierarchies"></a>階層
-  表格式模型中的階層是中繼資料，可定義資料表中兩個 (含) 以上的資料行之間的關聯性。 在報表用戶端欄位清單中，階層可以與其他資料行分開顯示，讓用戶端使用者更易於導覽及包含在報表中。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]表格式模型中的階層會定義兩個或多個資料表中的資料行之間的關聯性的中繼資料。 在報表用戶端欄位清單中，階層可以與其他資料行分開顯示，讓用戶端使用者更易於導覽及包含在報表中。  
   
 ##  <a name="bkmk_benefits"></a> 優點  
  資料表可以包含數十個或甚至數百個具有不常見資料行名稱的資料行，且沒有明顯的順序。 這可能會導致未排序的報表用戶端欄位清單外觀，讓使用者很難在報表中尋找及包含資料。 階層可以針對複雜的資料結構，提供簡單直覺式的檢視。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 |----------|-----------------|  
 |[建立及管理階層](../../analysis-services/tabular-models/create-and-manage-hierarchies-ssas-tabular.md)|描述如何在 [圖表檢視] 中，使用模型設計師建立及管理階層。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [表格式模型設計師](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)  

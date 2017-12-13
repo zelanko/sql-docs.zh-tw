@@ -2,12 +2,12 @@
 title: "資料類型 （資料採礦） |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 380a7208eceb9468e4bca2490f04c79149d4665d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 275fddacc7d5d24be9581613863e81d2a061c92d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-types-data-mining"></a>資料類型 (資料採礦)
-  當您在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中建立採礦模型或採礦結構時，您必須針對採礦結構內的每一個資料行定義資料類型。 此資料類型會告訴分析引擎，資料來源中的資料是數值還是文字，以及應該如何處理資料。 例如，如果您的來源資料包含數值資料，您可以指定數字應該視為整數還是使用小數位數。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您建立採礦模型或採礦結構中的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您必須針對每一個採礦結構中的資料行定義資料類型。 此資料類型會告訴分析引擎，資料來源中的資料是數值還是文字，以及應該如何處理資料。 例如，如果您的來源資料包含數值資料，您可以指定數字應該視為整數還是使用小數位數。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援以下採礦結構資料行的資料類型：  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="changing-a-data-type"></a>變更資料類型  
  如果您變更資料行的資料類型，一定要重新處理採礦結構及根據該結構的任何採礦模型。 有時當您變更資料類型時，該資料行就不能再用於特定的模型中。 在這種情況下，當您重新處理模型時，Analysis Services 將會引發錯誤，或是處理此模型，但是不處理該特定資料行。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
  [內容類型 &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
  [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

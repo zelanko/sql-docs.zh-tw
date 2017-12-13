@@ -2,12 +2,12 @@
 title: "重要的 MDX (Analysis Services) 中的概念 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f6f9969a793d33ba203ba1f93d87b1a235a896f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 的關鍵概念 (Analysis Services)
-  在您使用多維度運算式 (MDX) 查詢 Cube 中的多維度資料，或在 Cube 中建立 MDX 運算式之前，先了解多維度的概念與詞彙會相當有助益。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]您可以使用多維度運算式 (MDX) 查詢多維度資料，或是建立 cube 內的 MDX 運算式之前，它有助於了解多維度概念和詞彙。  
   
  最好先從您已經知道的資料摘要開始著手，然後觀察 MDX 如何與此資料摘要相關聯。 以下是在 Excel 中建立的樞紐分析表，其中已填入了 Analysis Services 範例 Cube 的資料。  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [多維度模型化 &#40;Adventure Works 教學課程&#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tuple](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [「 自動存在 」](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   

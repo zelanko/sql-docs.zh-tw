@@ -2,12 +2,12 @@
 title: "採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52e0108a90e47ae9868b450375be26ffdf563c63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
-  當您已經使用基礎採礦結構中的資料來設計及處理採礦模型之後，該採礦模型會是完整的，並包含 *「採礦模型內容」*(Mining Model Content)。 您可以使用此內容來進行預測或分析資料。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]採礦模型設計和處理採礦模型使用基礎採礦結構中的資料之後，已完成，並包含*採礦模型內容*。 您可以使用此內容來進行預測或分析資料。  
   
  採礦模型內容包含有關模型的中繼資料、有關資料的統計資料及採礦演算法所找到的模式。 根據所使用的演算法而定，模型內容可能會包含迴歸公式、規則和項目集的定義，或是加權和其他統計資料。  
   
@@ -310,7 +310,7 @@ SELECT * FROM [<mining model name>].CONTENT
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您也可以存取資料採礦結構描述資料列集中的資訊，其方式是開啟 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連接及查詢系統資料表。 如需詳細資訊，請參閱 [資料採礦結構描述資料列集 &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
  [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   

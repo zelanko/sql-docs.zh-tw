@@ -2,12 +2,12 @@
 title: "UnknownMemberTranslations 元素 (ASSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 583a74407d57c96723309f4f2da49464505f11d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7267dbb9efa4e033b994a22350a2d22e7321b867
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="unknownmembertranslations-element-assl"></a>UnknownMemberTranslations 元素 (ASSL)
-  包含標題的翻譯集合[UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md)維度的項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含標題的翻譯集合[UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md)維度的項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**UnknownMemberTranslations**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Dimension>。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Translation 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/translation-data-type-assl.md)   
  [集合 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   

@@ -2,12 +2,12 @@
 title: "OLE DB 結構描述資料列集 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 240b1fff05adb7bc528ba8a53f54d59a7b1af854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10a60e9e3696076a4e3672e7bcb5037f362f161b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB 結構描述資料列集
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者支援下列 OLE DB 結構描述資料列集。 使用**DISCOVER_ENUMERATORS**含有資料列集[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法來檢查特定資料來源提供者是否支援資料列集。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]下列的 OLE DB 結構描述資料列集都受到[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XML for Analysis (XMLA) 提供者。 使用**DISCOVER_ENUMERATORS**含有資料列集[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法來檢查特定資料來源提供者是否支援資料列集。  
   
  您也可以在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 網站上於 MSDN® Library 的「OLE DB 程式設計人員參考」部分中，藉由搜尋「結構描述資料列集」主題，來尋找有關這些資料列集的詳細資訊。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
  <sup>1</sup>指出支援的 MSOLAP 資料來源提供者的結構描述資料列集[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XMLA 提供者。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [DISCOVER_ENUMERATORS 資料列集](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)   
  [Analysis Services 結構描述資料列集](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   

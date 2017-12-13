@@ -2,12 +2,12 @@
 title: "建立及設定 Power Pivot 服務應用程式，在 CA |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 27d009450f9bdfac7eeff0f1bc9e1909d8968f01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 49fc11b6e1c6ed280af505d904fc514cfce6bbc8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>建立及設定 Power Pivot 服務應用程式，在 CA 中
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務的共用服務執行個體。 每一個服務應用程式都有它自己的應用程式識別、組態設定、屬性以及內部資料儲存位置。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式是共用的服務執行個體的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]系統服務。 每一個服務應用程式都有它自己的應用程式識別、組態設定、屬性以及內部資料儲存位置。  
   
  本主題包含下列幾節：  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  在功能區上按一下 **[屬性]** 。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [管理中心的 PowerPivot 伺服器管理和組態](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

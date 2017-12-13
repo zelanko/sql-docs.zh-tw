@@ -2,12 +2,12 @@
 title: "Hierarchy 元素 (CSDLBI) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: acffabef75c9d62bc0f28c993c12577c03bbb434
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 53d88729411c0a353b82923d3f4a3337647902ed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 元素 (CSDLBI)
-  Hierarchy 元素是資料表中可彼此連結以構成階層之欄位的邏輯容器。 Hierarchy 元素衍生自 CSDL Member 元素而且已擴充，可支援商業智慧資料模型中建立的階層。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Hierarchy 元素是可連結到彼此會形成階層的資料表中的欄位的邏輯容器。 Hierarchy 元素衍生自 CSDL Member 元素而且已擴充，可支援商業智慧資料模型中建立的階層。  
   
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 Hierarchy 元素的元素和屬性  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [了解表格式物件模型在相容性層級 1050年透過 1103](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [了解 DAX 中的父子式階層的函數](http://msdn.microsoft.com/en-us/b11f0cff-cee4-4ae7-a5b3-ebe288fc42d3)   
  [設定 &#40;所有 &#41;屬性階層層級](../../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  

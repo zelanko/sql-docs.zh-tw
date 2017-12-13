@@ -1,12 +1,12 @@
 ---
 title: "Analysis Services 教學課程 (SSAS) |Microsoft 文件"
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 69e97b3571679a523bbd1033ce33fd2491a20ecc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f0a5c233e9789f8f4228f90f85b71c5bfe3b8cbc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services 教學課程 (SSAS)
-此章節包含 SQL Server Analysis Services 教學課程。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]此章節包含 SQL Server Analysis Services 教學課程。  
   
 [表格式模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 本教學課程提供有關如何使用 SQL Server Data Tools (SSDT) 為虛擬公司 Adventure Works 撰寫基本 Analysis Services 表格式模型的課程。  

@@ -2,12 +2,12 @@
 title: "授與權限的維度 (Analysis Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 415bb6a484edafc091f091c2e572a05155a561fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccf0f7d014bfd85f3368633058984089005101ec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>授與維度的權限 (Analysis Services)
-  維度安全性是用來設定維度物件的權限，而不是設定它的資料。 通常，允許或拒絕存取處理作業是在設定維度權限時的主要目標。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]維度安全性用來設定維度物件時，不會其資料的權限。 通常，允許或拒絕存取處理作業是在設定維度權限時的主要目標。  
   
  不過，或許您的目標不是控制處理作業，而是維度的資料存取，或其所包含的屬性和階層。 例如，設有地區業務部門的公司可能想要讓該部門以外的其他部門無法看見銷售績效資訊。 若要針對不同構成份子允許或拒絕存取部分維度資料，您可以設定維度屬性和維度成員的權限。 請注意，您無法拒絕存取個別維度物件本身，僅能拒絕存取其資料。 如果您的立即目標是允許或拒絕存取維度中的成員 (包含個別屬性階層的存取權限)，請參閱 [授與維度資料的自訂存取權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) ，以取得更多資訊。  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  如果您使用分析管理物件 (AMO) 來設定資料庫角色權限，則任何參考 Cube 之 DimensionPermission 屬性的 Cube 維度，就會切斷資料庫的 DimensionPermission 屬性的權限繼承。 如需 AMO 的詳細資訊，請參閱[使用分析管理物件 &#40;AMO&#41; 來開發](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [角色與權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
  [授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [授與權限的資料採礦結構和模型 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   

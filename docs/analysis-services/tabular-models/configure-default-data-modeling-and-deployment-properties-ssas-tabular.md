@@ -2,12 +2,12 @@
 title: "設定預設的資料模型和部署屬性 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 704a719e3f2d509b5a949f7e44dd86cdcea7b183
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f37da1066d505f36b6863dd65d401d689ccdedf5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>設定預設的資料模型和部署屬性 (SSAS 表格式)
-  本主題描述如何設定預設相容性層級、部署和工作空間資料庫屬性設定，這些設定可以針對您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立的新表格式模型專案預先定義。 建立新專案之後，這些屬性仍可依據您的特殊需求進行變更。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題描述如何設定預設相容性層級，在中建立的部署和工作空間資料庫屬性設定，為每個新的表格式模型專案，您可以是預先定義[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 建立新專案之後，這些屬性仍可依據您的特殊需求進行變更。  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>若要針對新的模型專案設定預設相容性層級屬性設定  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  變更預設模型屬性並不會影響變更前已建立之現有模型的屬性。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [專案屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
  [模型屬性 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
  [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  

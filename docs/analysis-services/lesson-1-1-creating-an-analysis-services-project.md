@@ -2,12 +2,12 @@
 title: "建立 Analysis Services 專案 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e2ec11e3b9dc622f254a42f82e24eadc88808400
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ebc25a68b66605dd82de6107011bcce34a2a0557
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>課程 1-1-建立 Analysis Services 專案
-在下列工作中，您將根據 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案範本，使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 來建立名為 **[Analysis Services 教學課程]**的新 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案。 *「專案」* (Project) 是相關物件的集合。 專案存在於方案內，方案包括一或多個專案。 如需詳細資訊，請參閱 [建立 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在下列工作中，您會使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]來建立新的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案名為**Analysis Services 教學課程**根據[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案範本。 *「專案」* (Project) 是相關物件的集合。 專案存在於方案內，方案包括一或多個專案。 如需詳細資訊，請參閱 [建立 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>若要建立新的 Analysis Services 專案  
   

@@ -2,12 +2,12 @@
 title: "指定 Slicer 軸 (MDX) 的內容 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 75bba3346fdfc496e2fb6fcce55bc757bb65d989
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c88d724873a7e2a7e811a4a28c9b76b5c9b12ccd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>MDX 查詢及 Slicer 軸-指定 Slicer 軸的內容
-  Slicer 軸會篩選多維度運算式 (MDX) SELECT 陳述式傳回的資料，限制傳回的資料，以便只傳回與指定成員交集的資料。 它可以視為查詢中隱藏的額外軸。 Slicer 軸定義在 MDX SELECT 陳述式的 WHERE 子句中。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Slicer 軸會篩選多維度運算式 (MDX) SELECT 陳述式，限制傳回的資料，以便將會傳回與指定成員交集的資料只有所傳回的資料。 它可以視為查詢中隱藏的額外軸。 Slicer 軸定義在 MDX SELECT 陳述式的 WHERE 子句中。  
   
 ## <a name="slicer-axis-syntax"></a>Slicer 軸語法  
  若要明確指定 Slicer 軸，您可以在 MDX 中使用 `<SELECT slicer axis clause>` ，如以下語法所述：  

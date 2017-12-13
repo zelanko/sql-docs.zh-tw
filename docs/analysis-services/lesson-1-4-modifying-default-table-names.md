@@ -2,12 +2,12 @@
 title: "修改預設資料表名稱 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e575b698fcb22480fc6dbcbd073f62254095bbee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 37923455444f171842e84349a2ce6fc71cd7fd57
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-4---modifying-default-table-names"></a>課程 1-4-修改預設資料表名稱
-您可以針對資料來源檢視中的物件，變更 **FriendlyName** 屬性的值，使其更明顯且更容易使用。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]您可以變更的值**FriendlyName**屬性，使其更容易注意到和使用資料來源檢視中的物件。  
   
 在下列工作中，您會在資料來源檢視中變更每個資料表的易記名稱，方法是從這些資料表中移除 "**Dim**" 和 "**Fact**" 前置詞。 這樣可以讓 Cube 和維度物件 (將在下一課定義) 更明顯且更容易使用。  
   

@@ -2,12 +2,12 @@
 title: "了解傳遞順序與解決順序 (MDX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e1f07fa57c0c4c16dd1cbbeeac504b59a250912
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9c3b028eb658f2f75d6e70ec9057f3f156ca5f05
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 資料操作-了解傳遞順序與解決順序
-  當 Cube 做為 MDX 指令碼的計算結果時，Cube 會根據所使用的各種計算相關功能來進行多個計算階段。 每個階段都稱為一個計算行程。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]當 cube 的計算方式為 MDX 指令碼的結果時，來進行多階段的計算根據所使用的各種計算相關功能。 每個階段都稱為一個計算行程。  
   
  計算行程可以是序數位置，稱為計算行程數目。 完整計算 Cube 中所有資料格所需的計算行程數目稱為 Cube 的計算行程深度。  
   
@@ -221,7 +221,7 @@ FROM [Adventure Works]
 ## <a name="additional-considerations"></a>其他考量  
  若 Cube 有大量的維度，並牽涉到導出成員、自訂積存公式或導出資料格時，處理解決順序會是非常複雜的問題。 當 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估 MDX 查詢時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會考慮給定行程內牽涉到的所有項目 (包括 MDX 查詢中指定之 Cube 的維度) 的解決順序值。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CalculationCurrentPass &#40;MDX&#41;](../../../mdx/calculationcurrentpass-mdx.md)   
  [CalculationPassValue &#40;MDX &#41;](../../../mdx/calculationpassvalue-mdx.md)   
  [CREATE MEMBER 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   

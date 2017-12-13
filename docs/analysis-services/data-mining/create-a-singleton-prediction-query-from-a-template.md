@@ -2,12 +2,12 @@
 title: "從範本建立單一預測查詢 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7b455a9f4c8996ec2dd9e6d255f4e9f282d58df4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ddcf7a176fd619ffb3140b8bbeea390b3532b2e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>根據範本建立單一預測查詢
-  如果您具有一個要用於預測的模型，但不希望將該模型對應至外部輸入資料集或產生大量預測，則單一查詢很有用。 使用單一查詢，您可以向模型提供一個或多個值，並且立即會看到預測值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您的模型是您想要用於預測，但不想將它對應至外部輸入資料集，或產生大量預測時，單一查詢便很有用。 使用單一查詢，您可以向模型提供一個或多個值，並且立即會看到預測值。  
   
  例如，下列 DMX 查詢表示針對目標郵寄模型 TM_Decision_Tree 的單一查詢。  
   
@@ -99,7 +99,7 @@ AS [t]
   
 11. 按一下 **[執行]**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立預測 &#40;資料採礦基本教學課程&#41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   

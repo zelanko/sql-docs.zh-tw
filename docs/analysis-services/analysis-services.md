@@ -1,12 +1,12 @@
 ---
 title: "Analysis Services |Microsoft 文件"
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d31d430fdaf5276b52a3f90efacf4a9a56576a35
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what-is-analysis-services"></a>什麼是 Analysis Services？
-  Analysis Services 是用於決策支援和商業分析，Reporting Services 報表、 報表和用戶端應用程式，例如 Excel、 Power BI 提供的分析資料和其他資料視覺效果工具的分析資料引擎。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services 是用於決策支援和商業分析，Reporting Services 報表、 報表和用戶端應用程式，例如 Excel、 Power BI 提供的分析資料和其他資料視覺效果工具的分析資料引擎。  
   
  一般工作流程包含撰寫多維度或表格式資料模型，將模型部署為在內部部署 SQL Server Analysis Services 或 Azure Analysis Services 伺服器執行個體的資料庫、 設定週期性的資料處理和指派由使用者允許存取資料的權限。 準備就緒時，語意資料模型可以存取的用戶端應用程式支援 Analysis Services 做為資料來源。  
  

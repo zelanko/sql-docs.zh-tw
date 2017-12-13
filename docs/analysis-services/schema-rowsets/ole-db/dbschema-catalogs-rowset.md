@@ -2,12 +2,12 @@
 title: "DBSCHEMA_CATALOGS 資料列集 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6e001700aab7f231e186576226ae97468572698d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ed421bd5b4ad15d79e1e54afb4b629d1eff02d91
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dbschemacatalogs-rowset"></a>DBSCHEMA_CATALOGS 資料列集
-  識別與可從資料庫管理系統 (DBMS) 存取之目錄相關聯的實體屬性 (Attribute)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]識別可從資料庫管理系統 (DBMS) 存取的目錄相關聯的實體屬性。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DBSCHEMA_CATALOGS**資料列集包含下列資料行。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|--------------------|-----------------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|選擇性|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [OLE DB 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

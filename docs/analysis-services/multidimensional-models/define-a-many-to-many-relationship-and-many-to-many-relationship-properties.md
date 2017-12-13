@@ -2,12 +2,12 @@
 title: "定義多對多關聯性及多對多關聯性屬性 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ad2f336f3197d7746ef250b942d48b5d17740d20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f9f9807ecfe195dc38d1d953092775e1b648adb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定義多對多關聯性及多對多關聯性屬性
-  本主題說明 Analysis Services 中的多對多維度，包括何時使用這些維度以及如何建立這些維度。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題說明多對多維度 Analysis Services，包括使用時機，以及如何建立它們。  
   
 ## <a name="introduction"></a>簡介  
  Analysis Services 支援多對多維度，其允許的分析方式比典型星形結構描述中所描述的分析方式更為複雜許多。 在典型星形結構描述中，所有維度都有包含事實資料表的一對多關聯性。 每個事實只會聯結到一個維度成員，單一維度成員會與多個事實產生關聯。  
@@ -191,7 +191,7 @@ ms.lasthandoff: 11/17/2017
   
  [教學課程：SQL Server Analysis Services 的多對多維度範例](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [維度關聯性](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [安裝 Analysis services 多維度模型化教學課程的範例資料和專案](../../analysis-services/install-sample-data-and-projects.md)   
  [部署 Analysis Services 專案 &#40;SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   

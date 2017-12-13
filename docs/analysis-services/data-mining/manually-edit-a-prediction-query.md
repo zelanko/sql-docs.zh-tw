@@ -2,12 +2,12 @@
 title: "手動編輯預測查詢 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ab8bb78ceb4bfe411030cf160c84751b6176682a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2b0450b31862960c3c78e7061c0ec823e93316e6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="manually-edit-a-prediction-query"></a>手動編輯預測查詢
-  在使用預測查詢產生器設計查詢之後，您可以切換到資料採礦設計師的 [採礦模型預測] 索引標籤上的 [查詢文字] 檢視來修改查詢。 文字編輯器會出現在畫面底端，以顯示查詢產生器建立的查詢。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用預測查詢產生器設計查詢之後，您可以藉由切換到查詢文字檢視上，修改查詢**採礦模型預測**資料採礦設計師索引標籤。 文字編輯器會出現在畫面底端，以顯示查詢產生器建立的查詢。  
   
  切換到 [查詢文字] 檢視對於在查詢中添加內容很實用。 例如，您可以加入 WHERE 子句或 ORDER BY 子句。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  如果您建立的查詢無效，則 [結果] 視窗不會顯示錯誤，也不會顯示任何結果。 按一下 [設計] 按鈕或從 [採礦模型] 功能表選取 [設計] 或 [查詢] 以修正問題，並再次執行查詢。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [預測查詢產生器 &#40; 資料採礦 &#41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
  [第 6 課：建立及處理預測 &#40;基本資料採礦教學課程&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  

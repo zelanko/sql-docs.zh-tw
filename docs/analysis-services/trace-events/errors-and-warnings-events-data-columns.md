@@ -2,12 +2,12 @@
 title: "錯誤和警告事件資料行 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78a12a28e4178d5839217d472d686e6e2e08f3d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5e32c6503bdd5ad2d13b1194a67d97e44d6ca12f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="errors-and-warnings-events-data-columns"></a>錯誤和警告事件資料行
-  安全性稽核事件類別目錄含有下列事件類別：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]安全性稽核事件類別目錄具有下列事件類別：  
   
 -   錯誤類別  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |TextData|42|9|包含與錯誤事件相關聯的文字資料。|  
 |ServerName|43|8|包含發生錯誤事件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器執行個體名稱。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [安全性稽核事件類別目錄](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

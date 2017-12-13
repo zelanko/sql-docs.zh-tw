@@ -2,12 +2,12 @@
 title: "資料採礦結構描述資料列 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 35f4df3e7e01a8f0987e955a180842efde5793e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcde375ccb8186f0ef5d38dca2c7f88aefaaf4b7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-schema-rowsets"></a>資料採礦結構描述資料列集
-  正在執行的伺服器[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下列資料採礦結構描述資料列集。 若要檢查特定 XML/A 提供者是否支援特定的資料列集，請使用[DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)含有資料列集[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]正在執行的伺服器[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下列資料採礦結構描述資料列集。 若要檢查特定 XML/A 提供者是否支援特定的資料列集，請使用[DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)含有資料列集[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。  
   
  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，資料採礦結構描述資料列集會以 Transact-SQL 語言中的資料表格式，在 $SYSTEM 結構描述中公開。 例如，在 Analysis Services 執行個體上的下列查詢會傳回在目前執行個體上可用的結構描述清單。  
   
@@ -57,7 +57,7 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
   
  此處所列的所有結構描述資料列所執行的伺服器支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 結構描述資料列集](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
  [資料採礦結構描述資料列集 &#40;Ssas&#41;](../../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)  
   

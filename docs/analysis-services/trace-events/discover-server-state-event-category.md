@@ -2,12 +2,12 @@
 title: "探索伺服器狀態事件類別目錄 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f553fc692cb15d5393718c3b40d2c5d33dbcf222
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 744cf73bdbdf1389ce7f9a67d10f2a90232606b6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discover-server-state-event-category"></a>探索伺服器狀態事件類別目錄
-  探索伺服器狀態事件類別目錄具有下表所描述的事件類別。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]探索伺服器狀態事件類別目錄具有下表中所述的事件類別。  
   
 |Event Class|事件識別碼|說明|  
 |-----------------|--------------|-----------------|  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  如需與每個「查詢事件」事件類別相關聯之資料行的資訊，請參閱 [探索伺服器狀態事件資料行](../../analysis-services/trace-events/discover-server-state-events-data-columns.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 追蹤事件](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

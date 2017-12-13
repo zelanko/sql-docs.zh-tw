@@ -2,12 +2,12 @@
 title: "多維度模型資料存取 (Analysis Services-多維度資料) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ff56655be72dd63160bcfdbdb27f3c2a978de367
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 678912f45f94b99ce9abf96e864b60dd794f7b1c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多維度模型資料存取 (Analysis Services - 多維度資料)
-  使用本主題中的資訊了解如何使用程式設計方法、指令碼或用戶端應用程式 (其中包含的內建支援可連接至網路上的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器) 存取 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多維度資料。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]使用本主題中的資訊以了解如何存取[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用以程式設計方式、 指令碼或連接到內建支援的用戶端應用程式的多維度資料[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]您網路上的伺服器。  
   
  本主題包含下列幾節：  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/17/2017
 |XMLA|XMLA 是提供給 Analysis Services 程式設計人員的最低層級 API，也是做為所有 Analysis Services 資料存取方法的共同分母。 XMLA 是一種業界標準，SOAP 以 XML 通訊協定為基礎，支援通用資料透過 HTTP 連接，對於任何可用之標準多維度資料來源的存取。 它會使用 SOAP 編寫用於多維度資料的要求和回應。 如果您的應用程式在非 Windows 平台上執行，可以使用 XMLA 存取在網路上的 Windows 伺服器上執行的多維度資料庫。 如需詳細資訊，請參閱 [在 Analysis Services 中使用 XMLA 進行開發](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)。|  
 |Analysis Services 指令碼語言 (ASSL)|ASSL 是一個適用於 XMLA 通訊協定之 Analysis Services 延伸模組的描述性詞彙。 由於 Execute 和 Discover 方法是由 XMLA 通訊協定所描述，因此 ASSL 會加入下列功能：<br /><br /> -XMLA 指令碼<br /><br /> -XMLA 物件定義<br /><br /> -XMLA 命令<br /><br /> ASSL 延伸模組可讓 Analysis Services 使用超出通訊協定基本提供範圍的 XMLA 建構函式，以增加資料定義、資料操作以及資料控制支援。 如需詳細資訊，請參閱＜ [使用 Analysis Services 指令碼語言 &#40;ASSL&#41; 開發](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)＞。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [連接到 Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [開發使用 Analysis Services 指令碼語言 &#40;ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [使用 Analysis Services 中的 XMLA 進行開發](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   

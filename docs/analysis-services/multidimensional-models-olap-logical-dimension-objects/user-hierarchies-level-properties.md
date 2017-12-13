@@ -2,12 +2,12 @@
 title: "層級內容-使用者階層 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dea548f76a6197f557a520bfa0153133643bed3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 72ba77005dbe1470bcf1104ef27bf751104d45ba
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="user-hierarchies---level-properties"></a>使用者階層的層級屬性
-  下表列出並描述使用者自訂階層中的層級屬性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]下表列出並描述中的使用者定義階層的層級的屬性。  
   
 |屬性|說明|  
 |--------------|-----------------|  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 |名稱|包含層級的易記名稱。 依預設，層級與來源屬性有相同的名稱。|  
 |SourceAttribute|包含作為層級基礎之來源屬性的名稱。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [使用者階層屬性](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   
   

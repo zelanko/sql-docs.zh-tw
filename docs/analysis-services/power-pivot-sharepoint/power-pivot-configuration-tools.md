@@ -2,12 +2,12 @@
 title: "Power Pivot 組態工具 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 093e9a77dccdf8b01383152601ceadcdff816db9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 51bfbb7fa3cbfad5c8415fcda1fab0e54643ec62
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot 組態工具
-  使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具設定、修復或移除 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]設定、 修復或移除[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]與[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]組態工具。  
   
  [ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈] 不會為 SharePoint 安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。 組態工具在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]未來的版本中將可供下載。  
   

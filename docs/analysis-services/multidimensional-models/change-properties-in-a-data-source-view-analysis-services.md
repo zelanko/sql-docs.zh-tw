@@ -2,12 +2,12 @@
 title: "變更屬性中的資料來源檢視 (Analysis Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa1e0fa67c2a9dca58b4cfcff33407994810baa5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b8d8d731552fe099d161d6b87bca87ceecd709a9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>變更資料來源檢視的屬性 (Analysis Services)
-  當您使用 [資料來源檢視精靈] 定義資料來源檢視，以及將資料表、檢視、具名計算和具名查詢加入到此資料來源檢視之後，您可能會想要變更與下列項目有關的屬性：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]定義資料來源檢視，使用資料來源檢視精靈，以及加入資料表、 檢視、 具名計算和具名的查詢，以資料來源檢視之後，您可能想要變更與相關的屬性：  
   
 -   資料來源檢視比對準則  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |長度|根據基礎資料表或檢視中資料行內的資料來指定資料行的最大長度。|  
 |名稱|指定基礎資料行的名稱，或是具名計算的名稱。 當根據具名計算來定義屬性時，OLAP 和資料採礦物件會使用 **[Name]** 屬性。 只有在具名計算中才可以編輯這個屬性。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

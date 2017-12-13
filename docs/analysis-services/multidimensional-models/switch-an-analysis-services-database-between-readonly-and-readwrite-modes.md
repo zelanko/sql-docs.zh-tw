@@ -2,12 +2,12 @@
 title: "切換 ReadOnly 和 ReadWrite 模式之間的 Analysis Services 資料庫 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8c153dbc0b85271f175c86b37ee2b165957e926c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e38e3ac4af9df6a512ee26809dedf1d4fc21d839
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員可以變更表格式或多維度資料庫的讀寫模式，以便將查詢工作負載分散於多部僅供查詢的伺服器。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫系統管理員可以變更表格式或多維度資料庫的讀取/寫入模式更大的投入時間的分散到多部僅查詢伺服器查詢工作負載的一部分。  
   
  您可以使用多種方式來切換資料庫模式。 本文件將說明下列常見狀況：  
   
@@ -138,7 +138,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
 9. 執行 XMLA 命令。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Analysis Services 的高可用性與延展性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)   
  [附加和卸離 Analysis Services 資料庫](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   

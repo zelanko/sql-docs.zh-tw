@@ -2,12 +2,12 @@
 title: "MeasureGroupID 元素 (ASSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fad98c2acc4873721a30a22fd1ee14a871b0d0b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3ee1d96d9dff13d4a63c67d57a5af94a2d30cec2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measuregroupid-element-assl"></a>MeasureGroupID 元素 (ASSL)
-  將[MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)與父元素、 繫結或超出的非正規繫結。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]將[MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)與父元素、 繫結或超出的非正規繫結。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  對應至父系的項目**MeasureGroupID**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ManyToManyMeasureGroupDimension>， <xref:Microsoft.AnalysisServices.MeasureGroupBinding>，和<xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

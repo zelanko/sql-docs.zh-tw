@@ -2,12 +2,12 @@
 title: "Analysis Services 個人化延伸模組 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3e1e10612e9e0f93206299e07271b3795c92962a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bcc21da9d0f0297bf5db834d3ec66acdb3be397a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 個人化延伸模組
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組是實作外掛程式架構的概念的基礎。 在外掛程式架構中，您可以動態開發新的 Cube 物件和功能，並輕鬆地與其他開發人員共用。 因此，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組提供的功能可讓您能夠達成以下目標：  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組是實作外掛程式架構的概念的基礎。 在外掛程式架構中，您可以動態開發新的 Cube 物件和功能，並輕鬆地與其他開發人員共用。 因此，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組提供的功能可讓您能夠達成以下目標：  
   
 -   **動態設計和部署**您設計及部署之後，立即[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組，使用者可以存取這些物件和功能的下一個使用者工作階段開頭。  
   

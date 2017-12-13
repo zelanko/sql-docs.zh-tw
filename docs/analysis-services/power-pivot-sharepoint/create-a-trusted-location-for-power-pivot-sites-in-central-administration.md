@@ -2,12 +2,12 @@
 title: "在管理中心建立 Power Pivot 網站的信任的位置 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcfb1bb5f17a912178b20c9ff96ef8feaed76e2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 91e058351ec0314dced6586c98cde4ca9f781be7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>在管理中心建立 Power Pivot 網站的信任位置
-  Excel Services 可讓您指定哪些位置對於在 SharePoint 伺服器上開啟的活頁簿而言是有效的儲存機制。 這些位置稱為「信任位置」，而且您可以針對每個建立的信任位置使用不同的組態設定。 對於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署，您可以考慮針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的網站建立信任位置，讓您可以套用最適合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取的設定，同時針對其餘的伺服器陣列保留預設值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Excel Services 可讓您指定的位置是有效的儲存機制，您可以在 SharePoint 伺服器上開啟活頁簿。 這些位置稱為「信任位置」，而且您可以針對每個建立的信任位置使用不同的組態設定。 對於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署，您可以考慮針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的網站建立信任位置，讓您可以套用最適合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取的設定，同時針對其餘的伺服器陣列保留預設值。  
   
   
 ## <a name="prerequisites"></a>必要條件  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
 11. 按一下 **[確定]**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Power Pivot 圖庫](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
  [建立及自訂 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [使用 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  

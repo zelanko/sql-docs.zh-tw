@@ -2,12 +2,12 @@
 title: "將 BI 語意模型連接內容類型加入至程式庫 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 228022da2c96886d099c1f5dbdf1a52bd9815aed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 805165cf99d7effe8977d6c603742e46685a60d5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-bi-semantic-model-connection-content-type-to-library"></a>將 BI 語意模型連接內容類型加入至程式庫
-  BI 語意模型連接是在 SharePoint 中所建立，它會重新導向至網路伺服器上 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿或 Analysis Services 表格式模型資料庫內的商業智慧語意模型資料。 在 SharePoint 中建立 BI 語意模型連接之前，您必須擴充文件庫以允許建立 .bism 檔。 針對每個文件庫，僅需要執行一次這個步驟，但是您將需要針對您要建立 .bism 檔的任何來源文件庫重複該步驟。 最佳做法建議您建立集中式文件庫來儲存 .bism 檔，讓您可以在一個地方管理權限。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在 SharePoint 中建立 BI 語意模型連接並重新導向至在商業智慧語意模型資料[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿或網路伺服器上的 Analysis Services 表格式模型資料庫。 在 SharePoint 中建立 BI 語意模型連接之前，您必須擴充文件庫以允許建立 .bism 檔。 針對每個文件庫，僅需要執行一次這個步驟，但是您將需要針對您要建立 .bism 檔的任何來源文件庫重複該步驟。 最佳做法建議您建立集中式文件庫來儲存 .bism 檔，讓您可以在一個地方管理權限。  
   
 > [!NOTE]  
 >  如果您已經使用 SharePoint 資料連線庫，則會將 BI 語意模型連接內容類型自動加入至該連線庫範本。 如果您使用已經讓您建立新 BI 語意模型連接文件的資料連線庫，可以略過本節中的步驟。  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
  [建立與表格式模型資料庫的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Power Pivot BI 語意模型連接 &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [在 Excel 或 Reporting Services 使用 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   

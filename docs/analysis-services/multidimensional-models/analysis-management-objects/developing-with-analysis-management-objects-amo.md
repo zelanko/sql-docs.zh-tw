@@ -2,12 +2,12 @@
 title: "使用分析管理物件 (AMO) 來開發 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbcf54edc79a1e8254ad6210d327f4a83973f1fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 41a8625ba173af8ce47cc52a9dac9ca21aa01b41
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="developing-with-analysis-management-objects-amo"></a>使用分析管理物件 (AMO) 來開發
-分析管理物件 (AMO) 是以程式設計方式存取物件的可讓應用程式管理的執行個體的完整程式庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]分析管理物件 (AMO) 是以程式設計方式存取物件的可讓應用程式管理的執行個體的完整程式庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。
 
 本章節說明的 AMO 概念著重在主要物件，並且會包括使用的方式與時機，以及這些物件互相關聯的方式。 如需有關特定物件或類別的詳細資訊，請參閱：
 
@@ -44,6 +44,6 @@ ms.lasthandoff: 11/17/2017
 
 自訂指令碼以及針對較早版本的 AMO 所撰寫的應用程式將繼續運作並進行任何修改。 不過，如果您有指令碼或應用程式目標的 SQL Server 2016 具體來說，或是您需要重新建置自訂解決方案，務必將新的組件和命名空間加入至專案。
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
 [開發使用 Analysis Services 指令碼語言 &#40;ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md) 
 [使用 Analysis Services 中的 XMLA 進行開發](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)

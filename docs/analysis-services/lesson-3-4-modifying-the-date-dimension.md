@@ -2,12 +2,12 @@
 title: "修改 Date 維度 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ce770ce3ac600e086ea0b6d1ed03ed1b26b4ee3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c9f593c830dbdffe9b09b6f5e44d0957a7bb1d4e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>課程 3-4-修改日期 維度
-在這個主題的工作中，您會建立一個使用者定義階層，以及變更針對 [日期]、[月]、[日曆季] 和 [日曆半年] 屬性所顯示的成員名稱。 您也會定義屬性的複合索引鍵、控制維度成員的排序次序，以及定義屬性關聯性。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本主題中的工作，您可以建立使用者定義階層，並變更針對日期、 月份、 日曆季] 和 [日曆半年屬性所顯示的成員名稱。 您也會定義屬性的複合索引鍵、控制維度成員的排序次序，以及定義屬性關聯性。  
   
 ## <a name="adding-a-named-calculation"></a>加入具名計算  
 具名計算是以導出資料行表示的 SQL 運算式，您可以將它加入資料來源檢視的資料表中。 這個運算式以資料表的資料行呈現及運作。 具名計算可讓您延伸資料來源檢視中現有資料表的關聯式結構描述，而不必修改基礎資料來源中的資料表。 如需詳細資訊，請參閱[在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  

@@ -2,12 +2,12 @@
 title: "建立及自訂 Power Pivot 圖庫 |Microsoft 文件"
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c8fc14fc26221bedd8d97af5e4f478de99535b74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3443f25a3a929f9bad6cbe394a4fe60b38785b65
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>建立及自訂 Power Pivot 圖庫
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一種特殊類型的 SharePoint 文件庫，針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]圖庫是一種特殊類型的 SharePoint 文件庫，提供豐富的預覽與文件管理功能已發行 Excel 活頁簿和 Reporting Services 報表，其中包含[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料。  
   
 ##  <a name="bkmk_top"></a> 本主題內容  
   
@@ -155,7 +155,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  在 [自訂] 檢視的 [管理檢視] 中，從清單選取您要使用的檢視。 預先設計好的檢視包括 [圖庫]、[劇場] 和 [浮動切換]。 或者，如果您要移動、刪除或管理文件庫中的文件，您可以選擇 [所有文件]。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [對 PowerPivot for SharePoint 安裝進行疑難排解](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
  [使用 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
  [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   

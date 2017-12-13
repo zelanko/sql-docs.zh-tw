@@ -2,12 +2,12 @@
 title: "物件命名規則 (Analysis Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1493d5236d4c44fe4a496a67a2c435aab703daa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8a1c08102482ecfd1282416fda65d930526b8de3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="object-naming-rules-analysis-services"></a>物件命名規則 (Analysis Services)
-  本主題將描述物件命名慣例以及任何物件名稱 (以 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的程式碼或指令碼形式) 中無法使用的保留字和字元。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主題描述物件的命名慣例，以及保留的字和字元不能在任何物件名稱，在程式碼或指令碼[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ##  <a name="bkmk_Names"></a>命名慣例  
  每個物件具有**名稱**和**識別碼**在父集合的範圍內必須是唯一的屬性。 例如，兩個維度可以擁有相同的名稱，前提是每個維度都位在不同的資料庫內。  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
  資料庫可以有 ModelType 預設值。 預設值相當於多維度，因此不支援在資料行名稱中使用保留的字元。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [MDX 保留字](../../../mdx/mdx-reserved-words.md)   
  [Analysis Services 中的翻譯支援](../../../analysis-services/translation-support-in-analysis-services.md)   
  [XML for Analysis 符合 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  

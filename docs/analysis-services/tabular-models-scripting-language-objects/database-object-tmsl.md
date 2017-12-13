@@ -2,12 +2,12 @@
 title: "資料庫物件 (TMSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 239c6e21a7c0e05f52fa00c17d11c5ff81d8a216
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c8506cdf1917fb803c701ca0acd9f1bf1f25b141
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-object-tmsl"></a>資料庫物件 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  定義表格式資料庫相容性層級 1200年或更高，相同層級的模型為基礎。 本主題將說明物件定義的資料庫，提供裝載之要求的建立、 修改、 刪除和執行資料庫管理工作。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定義表格式資料庫相容性層級 1200年或更高，相同層級的模型為基礎。 本主題將說明物件定義的資料庫，提供裝載之要求的建立、 修改、 刪除和執行資料庫管理工作。  
   
 > [!NOTE]  
 >  任何指令碼，只有一個資料庫時，可參考。 資料庫本身以外的任何物件，資料庫屬性是選擇性，如果您指定的模型。 沒有模型，可用來推算的資料庫名稱，如果未明確提供的資料庫之間具有一對一對應。   
@@ -85,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Analysis Services 的高可用性與延展性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)  
   

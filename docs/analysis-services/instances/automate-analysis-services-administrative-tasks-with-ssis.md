@@ -2,12 +2,12 @@
 title: "使用 SSIS Analysis Services 管理工作自動化 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 43277dfa53b449da914ec32f35f1263f3082f9b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f9303a84fe9bd7b26434d869ec4c2d6216f0938f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>使用 SSIS 自動化 Analysis Services 管理工作
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可讓您自動執行 DDL 指令碼、Cube 和採礦模型處理工作，以及資料採礦查詢工作。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可視為控制流程和維護工作的集合，可以連結它們來形成循序和平行的資料處理作業。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]可讓您自動執行 DDL 指令碼、 cube 和採礦模型處理工作，以及資料採礦查詢工作。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可視為控制流程和維護工作的集合，可以連結它們來形成循序和平行的資料處理作業。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以在執行資料處理工作期間進行資料清除作業，以及匯集來自不同資料來源的資料。 使用 Cube 和採礦模型時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以將非數值資料轉換為數值資料，且可以確定資料值會落在預期的界限內，從而建立用來擴展事實資料表和維度的全新資料。  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="data-mining-query-task"></a>資料採礦查詢工作  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的資料採礦查詢工作，可讓您在採礦模型中擷取和儲存資訊。 資訊通常會儲存在關聯式資料庫，且 (例如) 可用來隔離目標行銷活動的潛在客戶清單。 資料採礦可以識別客戶的值和客戶回應特定行銷廣告的機率。 您可以使用資料採礦查詢工作來擷取和修改資料為慣用的格式。 如需有關如何實作這項工作的詳細資訊，請參閱＜ [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)＞。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料分割處理目的地](../../integration-services/data-flow/partition-processing-destination.md)   
  [維度處理目的地](../../integration-services/data-flow/dimension-processing-destination.md)   
  [資料採礦查詢轉換](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
