@@ -2,12 +2,12 @@
 title: "支援 XMLA 屬性 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 64b2e13193dc3742f23d78473a34667bbf0fa100
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e29ed3613253db0f93580717f126dbc53a37c108
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="propertylist-element---supported-xmla-properties"></a>PropertyList 元素-支援 XMLA 屬性
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下表中列出的屬性。 使用列出的屬性用於[屬性](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)元素[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)和[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下表中列出的屬性。 使用列出的屬性用於[屬性](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)元素[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)和[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
 |名稱|Description|類型|值|  
 |----------|-----------------|----------|------------|  
@@ -148,7 +148,7 @@ ms.lasthandoff: 11/17/2017
 |UserName|這個屬性不再受到支援。<br /><br /> 指定字串，它會傳回 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體與命令產生關聯所用的使用者名稱。 回溯相容性，而不會產生錯誤與搭配使用時忽略這個屬性**Execute**或**探索**方法。 這個屬性就相當於 OLE DB 屬性 DBPROP_USERNAME。<br /><br /> 這個屬性的預設值是開啟目前工作階段或連接的使用者名稱。<br /><br /> 這個屬性可以搭配**Execute**方法。|選擇性的唯讀**字串**屬性||  
 |VisualMode|這個屬性就相當於 OLE DB 屬性 MDPROP_VISUALMODE。<br /><br /> 這個屬性的預設值為零 (0)，相當於 DBPROPVAL_VISUAL_MODE_DEFAULT。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯寫**整數**屬性||  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [PropertyList 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)  
   
   

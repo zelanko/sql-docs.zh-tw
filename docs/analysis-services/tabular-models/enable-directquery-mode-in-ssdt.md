@@ -2,12 +2,12 @@
 title: "SSDT 中啟用 DirectQuery 模式 |Microsoft 文件"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a3b43ff386936e76091c64d8db1f73bda587f23b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1866cd3c6194edf7065ebb2929cc77f8cc4acc3a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>在 SSDT 中啟用 DirectQuery 模式
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-在本主題中，我們將說明如何在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中啟用表格式模型專案的 DirectQuery 模式。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題中，我們將說明如何啟用 DirectQuery 模式中的表格式模型專案[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
   
 當您啟用在 SSDT 中所設計之表格式模型的 DirectQuery 模式時︰
 -   停用與 DirectQuery 模式不相容的功能。  

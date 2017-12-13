@@ -2,12 +2,12 @@
 title: "屬性 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ad143a8832224d0b8964aec3c10d504bf4ff5de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 94ff2b30d64c0d3039910c57adf8327781e38c75
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-elements---properties"></a>XML 項目-內容
-  XML for Analysis (XMLA) 通訊協定會使用 XML 元素來表示 XMLA 標頭、方法、物件、命令和資料類型的屬性資訊以及值。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]XML for Analysis (XMLA) 通訊協定會使用 XML 項目，表示屬性資訊以及 XMLA 標頭、 方法、 物件、 命令和資料類型的值。  
   
 ## <a name="topic-list"></a>主題清單  
  下列主題將描述 [!INCLUDE[ssAS](../../../includes/ssas-md.md)] 所實作的 XMLA 元素。  
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/17/2017
 |[其中元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)||  
 |[WritebackTableCreation 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/writebacktablecreation-element-xmla.md)||  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [XML 資料類型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [XML 項目 &#40;XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)  
   

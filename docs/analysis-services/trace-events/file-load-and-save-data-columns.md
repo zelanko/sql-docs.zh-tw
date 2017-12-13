@@ -2,12 +2,12 @@
 title: "檔案載入及儲存資料行 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e711c51d3a6d8cae4fc437c9b9f6f0bc758c899
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 788c4b0e0ff0b35a193f5af55b3e4949fb04e572
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="file-load-and-save-data-columns"></a>檔案載入及儲存資料行
-  檔案載入和儲存事件類別目錄具有下列事件類別：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]檔案載入及儲存事件類別目錄具有下列事件類別：  
   
 |**事件識別碼**|**事件名稱**|**事件描述**|  
 |------------------|--------------------|---------------------------|  
@@ -223,7 +223,7 @@ ms.lasthandoff: 11/17/2017
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [檔案載入及儲存事件目錄](../../analysis-services/trace-events/file-load-and-save-event-category.md)  
   
   

@@ -2,12 +2,12 @@
 title: "屬性 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: efb844dd4888a93bf805a7b22a278366bdf5d388
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8c17ebbb2e4e2e7d128c866ad9f38284a3166e1a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-ssas-tabular"></a>屬性 (SSAS 表格式)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的表格式模型專案包含各種屬性，可定義專案、模型、報表及部署的行為。 屬性設定會以 XML 格式儲存在 Model.bim 檔案中，但是本節所述的所有屬性都可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [屬性] 視窗中設定。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]表格式模型專案中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包含各種屬性，可定義專案、 模型、 報告和部署的行為。 屬性設定會以 XML 格式儲存在 Model.bim 檔案中，但是本節所述的所有屬性都可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [屬性] 視窗中設定。  
   
 ## <a name="related-tasks"></a>相關工作  
   

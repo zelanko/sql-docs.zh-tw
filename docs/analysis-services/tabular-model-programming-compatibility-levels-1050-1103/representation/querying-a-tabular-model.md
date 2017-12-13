@@ -2,12 +2,12 @@
 title: "查詢表格式模型 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6bf0f912ecc01127cc8cf1f6f347141440792911
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8e413fe7d6d56d3b79637eb2b263abd8c06f23e1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="querying-a-tabular-model"></a>查詢表格式模型
-  身為開發人員，查詢表格式模型表示會從表格式資料庫擷取資料；若要完成這個目標，您有兩個選項：在 DAX 中使用資料表查詢，或是使用 MDX 並擷取資料，就像是 Cube 中的資料一樣。 但是，根據您的表格式模型的基礎模式而定，您可能會受限於只能使用 DAX 資料表查詢；DirectQuery 模式需要使用 DAX 資料表查詢。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]身為開發人員查詢表格式模型表示從表格式資料庫擷取資料若要達成此目標中，您有兩個選項： 使用資料表查詢在 DAX 中，或使用 MDX 並擷取的資料，因為它來自 cube。 但是，根據您的表格式模型的基礎模式而定，您可能會受限於只能使用 DAX 資料表查詢；DirectQuery 模式需要使用 DAX 資料表查詢。  
   
 ## <a name="querying-with-adomdnet"></a>使用 ADOMD.Net 查詢  
  使用 ADOMD.Net 查詢表格式模型很簡單而且有彈性；您可以從 DAX 傳送 MDX 陳述式或表格式查詢運算式給伺服器來取得結果。  

@@ -2,12 +2,12 @@
 title: "物件 (ASSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 678eabca49558ed4ff9a933433a97f5ed308dcb3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e05ba70d4d1593e444cd8735196ddb04e4ef7ae7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="objects-assl"></a>物件 (ASSL)
-  這個參考章節包含在「Analysis Services 指令碼語言」(ASSL) 結構描述中當做物件之每個元素的語法和使用方式資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]這個參考章節包含每個項目，可做為 Analysis Services 指令碼語言 (ASSL) 結構描述中物件的語法和使用方式資訊。  
   
  雖然 ASSL 結構描述僅包含 XML 元素，從開發人員的觀點來看，這一節所述的元素對應至物件，例如**資料庫**， **Cube**，和**維度**的執行個體所包含的物件階層中的物件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
 |[UnknownMemberTranslation 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/unknownmembertranslation-element-assl.md)|包含標題的翻譯[UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md)元素[維度](../../../analysis-services/scripting/objects/dimension-element-assl.md)項目。|  
 |[ValueColumn 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/valuecolumn-element-assl.md)|識別提供父元素之值的資料行。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 指令碼語言 XML 元素階層 &#40;ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   

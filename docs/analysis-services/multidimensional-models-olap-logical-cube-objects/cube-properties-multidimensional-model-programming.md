@@ -2,12 +2,12 @@
 title: "Cube 內容-多維度模型程式設計 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -41,14 +41,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5fc44854185830f93ff672cae6a0ebc68a88aa80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 473861d8ff30f272cdeaa08a0157c6ad1f9a5646
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Cube 內容-多維度模型程式設計
-  Cube 有許多屬性，您可以設定這些屬性來影響整個 Cube 的行為。 這些屬性都摘要在下表中：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cube 有許多您可以設定來影響整個 cube 的行為的屬性。 這些屬性都摘要在下表中：  
   
 > [!NOTE]  
 >  有些屬性是在建立 Cube 時自動設定，且無法變更。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  如需有關如何處理 null 值和其他資料完整性問題時如何設定 ErrorConfiguration 屬性值的詳細資訊，請參閱[Analysis Services 2005 中處理資料完整性問題](http://go.microsoft.com/fwlink/?LinkId=81891)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [主動式快取 &#40;分割區 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
   
   

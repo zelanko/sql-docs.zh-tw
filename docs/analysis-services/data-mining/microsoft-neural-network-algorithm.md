@@ -2,12 +2,12 @@
 title: "Microsoft 類神經網路演算法 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b34600d0037fc0d2f5eaac20251718ae4ff217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dc7c43077650ddee110eb48ad455e7cb1ab5ce8e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft 類神經網路演算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法是機器學習服務之熱門且可調整的類神經網路架構實作。  此演算法的運作方式是，針對可預測屬性的每種可能狀態測試輸入屬性的每種可能狀態，並根據定型資料計算每種組合的機率。 您可以使用這些機率來進行分類或迴歸工作，依據一些輸入屬性預測結果。 類神經網路也可以用於關聯分析。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]類神經網路演算法是機器學習受歡迎且研究可調適性的類神經網路架構的實作。  此演算法的運作方式是，針對可預測屬性的每種可能狀態測試輸入屬性的每種可能狀態，並根據定型資料計算每種組合的機率。 您可以使用這些機率來進行分類或迴歸工作，依據一些輸入屬性預測結果。 類神經網路也可以用於關聯分析。  
   
  當您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立採礦模型時，您可以包含多個輸出，演算法將會建立多個網路。 單一採礦模型中所包含的網路數目，取決輸入資料行中的狀態 (或屬性值) 數目，以及採礦模型所使用的可預測資料行數目及這些資料行中的狀態數目。  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 -   不支援建立資料採礦維度。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Microsoft 類神經網路演算法技術參考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [類神經網路模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [類神經網路模型查詢範例](../../analysis-services/data-mining/neural-network-model-query-examples.md)   

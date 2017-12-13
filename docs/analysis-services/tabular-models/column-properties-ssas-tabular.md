@@ -2,12 +2,12 @@
 title: "資料行屬性 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 05/23/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 909733f4c7c9973d4812c8d3bc2f46f81e2788d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ce23f4ec3f28ed2057ac2433615b1ab4fb98938a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="column-properties-ssas-tabular"></a>資料行屬性 (SSAS 表格式)
-  本主題描述表格式模型資料行屬性。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題描述表格式模型資料行屬性。  
   
 >  [!NOTE]  
 >  所有的相容性層級不支援某些屬性。    
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  在 **[屬性]** 視窗中按一下屬性，然後輸入值，或按一下向下箭頭來選取設定選項。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Power View 報表屬性](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
  [隱藏或凍結資料行](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)   
  [在資料表新增資料行](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)  

@@ -2,12 +2,12 @@
 title: "定義預設成員 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 436a1983bfee05a6deb3d998e42f2d126682dc51
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca6ba7f117f4803e62efe9904b3028d5f9262f4f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---define-a-default-member"></a>屬性內容-定義預設成員
-  當查詢中並未包含屬性階層時，會使用屬性階層的預設成員來評估運算式。 只要查詢包含屬性階層，或是使用者階層包含做為屬性階層來源的屬性，就會忽略預設成員。 這是因為使用查詢中指定的成員。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]之預設成員的屬性階層用於查詢中不包含屬性階層時，評估運算式。 只要查詢包含屬性階層，或是使用者階層包含做為屬性階層來源的屬性，就會忽略預設成員。 這是因為使用查詢中指定的成員。  
   
  屬性階層的預設成員是透過指定屬性成員作為屬性階層的 **DefaultMember** 屬性值而設定的。 您可以在維度設計師中的 [維度結構] 索引標籤上設定此屬性，也可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中 Cube 設計師的 [計算] 索引標籤上的 Cube 計算指令碼中設定此屬性。 您也可以在定義維度安全性時，在 [維度資料] 索引標籤上指定安全性角色的 **DefaultMember** 屬性 (覆寫在維度上設定的預設成員)。 若要避免名稱解析問題，請於下列情況，在 Cube 的 MDX 指令碼中定義預設成員：如果 Cube 多次參考資料庫維度、如果 Cube 中的維度名稱與資料庫中的維度名稱不同，或是如果您要在不同的 Cube 中有不同的預設成員。  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
  若階層中的層級自然彙總，您可以定義階層中任何屬性的預設成員，而不必管階層中的其他屬性。 例如，在 Country–Province–City 階層中，您可以定義 City 的預設成員，例如 [City].[Montreal]，而不必定義 State 或 Country 的預設成員。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [設定屬性階層的 &#40;全部&#41; 層級](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

@@ -2,12 +2,12 @@
 title: "Analysis Services 的新功能 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services 的新功能
-SQL Server 2016 Analysis Services 包含許多新的增強功能提供更佳的效能、 更容易撰寫的方案、 自動化的資料庫管理，增強的關聯性具有雙向交叉篩選，平行資料分割處理和執行更多。 此版本中的大多數增強功能的核心是針對表格式模型資料庫新增的相容性層級 1200。     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services 包含許多新的增強功能提供更佳的效能、 更容易撰寫的方案、 自動化的資料庫管理，增強的關聯性具有雙向交叉篩選，平行資料分割處理和執行更多。 此版本中的大多數增強功能的核心是針對表格式模型資料庫新增的相容性層級 1200。     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
 2016 SQL PASS 會議中宣告 Analysis Services 現為雲端 Azure 服務。 **Azure Analysis Services**支援在 1200年或更高的相容性層級的表格式模型。 DirectQuery、資料分割、資料列層級安全性、雙向關聯性和翻譯全都支援。 如需深入了解並免費試用，請參閱 [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/)。 

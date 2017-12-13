@@ -2,8 +2,8 @@
 title: "在 Ubuntu 上的 SQL Server 的自動的安裝 |Microsoft 文件"
 description: "SQL Server 指令碼範例在 Ubuntu 上自動安裝"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 29da4f824b83a09ed839e469a4788ce42e7d92a4
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
-ms.translationtype: HT
+ms.openlocfilehash: 507d136d24a9c9b7b68435a46952b79aecb1f688
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ubuntu 的範例： 無人看管的 SQL Server 安裝指令碼
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/01/2017
 ## <a name="sample-script"></a>範例指令碼
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

@@ -2,12 +2,12 @@
 title: "探索事件類別目錄 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e495f241035fdafdc6e16bd7835b70297efd6d16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: af8ffe2fc68b8bb2694ec1cf3e0776fd15e6875b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discover-events-event-category"></a>探索事件的事件類別目錄
-  探索事件的事件類別目錄，具有下表所描述的事件類別。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]探索事件的事件類別目錄具有下表中所述的事件類別。  
   
 |Event Class|事件識別碼|說明|  
 |-----------------|--------------|-----------------|  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
  如需與每個 [探索事件] 事件類別相關聯之資料行的相關資訊，請參閱 [探索事件資料行](../../analysis-services/trace-events/discover-events-data-columns.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 追蹤事件](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

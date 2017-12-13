@@ -2,12 +2,12 @@
 title: "工作空間資料庫 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0d10c2fab9cb3a613446015e8bd3dbe3dbdce868
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae2e26606a2f84abea1caed7032a80d2e2de7e45
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="workspace-database-ssas-tabular"></a>工作空間資料庫 (SSAS 表格式)
-  當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立新的表格式模型專案時，會建立表格式模型工作區資料庫 (模型撰寫期間所使用)。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]當您建立新的表格式模型專案中建立表格式模型工作空間資料庫，用於撰寫模型期間[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。
   
 ## <a name="specifying-a-workspace-instance"></a>指定工作區執行個體  
   當您在 SSDT 中建立新的表格式模型專案時，可以指定撰寫專案時所要使用的 Analysis Services 執行個體。 自 2016 年 9 月發行的 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]版本 (14.0.60918.0) 中引進了兩種模式，可讓您在建立新的表格式模型專案時，指定工作區執行個體。 

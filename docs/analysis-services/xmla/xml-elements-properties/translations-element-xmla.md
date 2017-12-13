@@ -2,12 +2,12 @@
 title: "Translations 元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71c0a06802b3ab16468638f25079eaa4a8be7a19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 68c0979adaf1b2dd19ee6750746ee8128da649af
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-element-xmla"></a>Translations 元素 (XMLA)
-  包含用來識別 [Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) 父元素所代表之屬性成員的成員索引鍵的 [Translation](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md) 元素集合。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含集合[轉譯](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)用來識別父系所代表之屬性成員的成員索引鍵的項目[屬性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [插入項目 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Update 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

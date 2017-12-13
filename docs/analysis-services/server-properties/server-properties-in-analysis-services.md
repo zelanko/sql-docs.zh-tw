@@ -2,12 +2,12 @@
 title: "Server Properties in Analysis Services |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4ca49040080552d3492b98510daef87df75781c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6da7af04e852c5fff10a6d33e1ab69723d79e014
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services 的伺服器屬性
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的預設伺服器組態屬性。 每一個執行個體都有自己的組態屬性，與同一部伺服器上的其他執行個體分開設定。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]系統管理員可以修改預設伺服器組態屬性的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。 每一個執行個體都有自己的組態屬性，與同一部伺服器上的其他執行個體分開設定。  
   
  若要設定伺服器，請使用 SQL Server Management Studio，或是編輯特定執行個體的 msmdsrv.ini 檔。  
  
@@ -92,7 +92,7 @@ SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬�
 |[安全性屬性](../../analysis-services/server-properties/security-properties.md)|安全性區段包含定義存取權限的基本和進階屬性。 這包含與管理員和使用者有關的設定。|  
 |[執行緒集區屬性](../../analysis-services/server-properties/thread-pool-properties.md)|執行緒集區屬性控制伺服器會建立多少執行緒。 這些屬性主要是進階屬性。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 執行個體管理](../../analysis-services/instances/analysis-services-instance-management.md)   
  [指定方案部署的組態設定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   

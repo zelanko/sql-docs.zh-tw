@@ -2,12 +2,12 @@
 title: "表格式模型 (Analysis Services) 中的翻譯 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>表格式模型 (Analysis Services) 中的翻譯
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]新增翻譯字串支援表格式模型。 模型中的單一物件可具有多個名稱或描述翻譯，因此可在模型定義中支援多語言版本。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]新增翻譯字串支援表格式模型。 模型中的單一物件可具有多個名稱或描述翻譯，因此可在模型定義中支援多語言版本。  
   
  翻譯字串僅適用於諸如 Excel 樞紐分析表清單等用戶端工具中顯示的物件中繼資料 (資料表與資料行的名稱及說明)。  為了使用翻譯字串，用戶端連線會指定文化特性。 在 [Analysis in Excel (Excel 中的分析)] 功能中，您可從下拉式清單選擇語言。 針對其他工具，您可能必須在連接字串中指定文化特性。  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/17/2017
   
      您建立樞紐分析表時，應會看見已翻譯的資料表與資料行名稱。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services 的全球化案例](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  

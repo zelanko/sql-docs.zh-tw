@@ -2,12 +2,12 @@
 title: "使用 SQL Server Profiler 監視資料採礦 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3a8a59a9bea7f2e11d4ec3d68d5ad2dcd28ec6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 98bafd9d594d06ea85330d8affc47969bbcab43f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>使用 SQL Server Profiler 監視資料採礦 (Analysis Services - 資料採礦)
-  如果您有必要的權限，可以使用 SQL Server Profiler 來監視資料採礦活動，這些活動會當做傳送給 SQL Server Analysis Services 執行個體的要求來發行。 資料採礦活動可包括模型或結構的處理、預測查詢或內容查詢，或是新模型或結構的建立。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果您有必要的權限，您可以使用 SQL Server Profiler 來監視會發出為要求傳送至 SQL Server Analysis Services 執行個體的資料採礦活動。 資料採礦活動可包括模型或結構的處理、預測查詢或內容查詢，或是新模型或結構的建立。  
   
  SQL Server Profiler 會使用 [追蹤] 監視從多個用戶端傳送的要求，包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、SQL Server Management Studio、Web 服務或是適用於 Excel 的資料採礦增益集，只要這些活動全都使用相同的 SQL Server Analysis Services 執行個體即可。 您必須針對您想要監視的每一個 SQL Server Analysis Services 執行個體建立個別的追蹤。 如需追蹤及如何使用 SQL Server Profiler 的一般資訊，請參閱[使用 SQL Server Profiler 監視 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  您也可以藉由檢視追蹤記錄內的命令陳述式，查看用戶端傳送給 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器之複雜陳述式的語法，包括系統預存程序的呼叫。 此資訊對於偵錯很有幫助，或者您也可以使用有效的陳述式當做範本來建立新的預測查詢或模型。 如需您可以透過追蹤擷取之預存程序呼叫的一些範例，請參閱 [叢集模型查詢範例](../../analysis-services/data-mining/clustering-model-query-examples.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [監視 Analysis Services 執行個體](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [使用 SQL Server 擴充事件監視 Analysis Services](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   

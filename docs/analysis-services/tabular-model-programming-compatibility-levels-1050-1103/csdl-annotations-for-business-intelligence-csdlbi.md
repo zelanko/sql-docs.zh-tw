@@ -2,12 +2,12 @@
 title: "CSDL 註解，商業智慧 (CSDLBI) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5cf3fd7bb1f6e5bf907e6550fe48a3e87c6be5af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4f41d6d697299ad964912fe1df86db9b0581cdda
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>商業智慧的 CSDL 註解 (CSDLBI)
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援 XML 格式中稱為「概念結構定義語言商業智慧註解」(CSDLBI) 的表格式模型定義表示法。 此主題提供 CSDLBI 的概觀，及其搭配 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料模型的用法。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援稱為概念結構定義語言商業智慧註解 (CSDLBI) 的 XML 格式的表格式模型的定義呈現方式。 此主題提供 CSDLBI 的概觀，及其搭配 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料模型的用法。  
   
 ## <a name="understanding-the-role-of-csdl"></a>了解 CSDL 的角色  
  概念結構定義語言 (CSDL) 是一種 XML 語言，描述實體、關聯性與功能。 CSDL 會定義為實體資料架構的一部分。 BI 註解是延伸模組，其設計在於支援使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的資料模型。  
@@ -83,7 +80,7 @@ ms.lasthandoff: 11/17/2017
   
  如需 CSDLBI 註解中個別項目的詳細資訊，請參閱[csdl 之 BI 註解的技術參考](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)。 如需有關核心 CSDL 規格的詳細資訊，請參閱[CSDL 規格](http://go.microsoft.com/fwlink/?LinkId=205855)MSDN 上。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [了解表格式物件模型在相容性層級 1050年透過 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [CSDLBI 概念](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md)   
  [了解表格式物件模型在相容性層級 1050年透過 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  

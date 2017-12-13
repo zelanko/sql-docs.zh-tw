@@ -2,12 +2,12 @@
 title: "了解 Microsoft OLAP 架構 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77fae4f9fd4b057a5388029b1544aa72842d91ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c0158fb2175ff279e1a405b580c6add273a72b1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>了解 Microsoft OLAP 架構
-  使用這些主題可更加了解 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多維度資料庫，並規劃如何在商業智慧方案中實作多維度資料庫。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]使用這些主題來深入了解[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]多維度資料庫，並規劃如何在商業智慧方案中實作多維度資料庫。  
   
  ![小型檔案資料夾圖示](../../../analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")**邏輯架構**  
  [伺服器物件 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md)  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
  ![小型檔案資料夾圖示](../../../analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")**國際化考量**  
  [Analysis Services 的全球化案例](../../../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [技術參考 &#40;Ssas&#41;](../../../analysis-services/powershell/technical-reference-ssas.md)  
   
   

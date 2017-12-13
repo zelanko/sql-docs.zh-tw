@@ -2,12 +2,12 @@
 title: "RestrictionList 元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: af4df63d245aacd861c9f4a2a1d8a4c9d8a9b01d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 96bbf8798521a6661e630115e5a5669ee24d15df
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="restrictionlist-element-xmla"></a>RestrictionList 元素 (XMLA)
-  包含 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 方法所使用之限制資料行和值的集合。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含的限制資料行和所使用的值集合[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  **RestrictionList** 元素包含可用來篩選 **Discover** 方法所傳回之資料的限制資料行集合。 **RestrictionList** 元素中的每個限制資料行都由不同的 XML 元素所定義。 限制資料行的值是 XML 元素所包含的資料，而限制資料行的名稱會對應至 XML 元素的名稱。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -2,12 +2,12 @@
 title: "資料來源檢視中的多維度模型 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4e502fb546500d0de60fbdb0a5584ecb0604075
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa655c5c761d4ba943bad6c7f8c188b50c45a275
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>多維度模型中的資料來源檢視
-  資料來源檢視 (DSV) 是關聯式資料來源的摘要，其會成為您在多維度專案中建立之 Cube 與維度的根據。 DSV 的用途是可讓您控制專案所用的資料結構，以及與基礎資料來源分開運作 (例如，重新命名或串連資料行而不需要直接修改原始資料來源的能力)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料來源檢視 (DSV) 是抽象的關聯式資料來源就會變得之 cube 與多維度專案中建立的維度的基礎。 DSV 的用途是可讓您控制專案所用的資料結構，以及與基礎資料來源分開運作 (例如，重新命名或串連資料行而不需要直接修改原始資料來源的能力)。  
   
  您可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫中針對一個或多個資料來源建立多個資料來源檢視，並建構每一個資料來源檢視，使其滿足不同方案的需求。  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
  [在資料來源檢視中重新整理結構描述 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [結構描述產生精靈 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)   
  [支援的資料來源 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   

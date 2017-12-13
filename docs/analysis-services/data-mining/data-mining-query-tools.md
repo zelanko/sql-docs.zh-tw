@@ -2,12 +2,12 @@
 title: "資料採礦查詢工具 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3979e01644bbec77b71a93b7a20cfc9bc4276402
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-query-tools"></a>資料採礦查詢工具
-  所有資料採礦查詢都使用資料採礦延伸模組 (DMX) 語言。 DMX 可以用來建立各種機器學習工作的模型，包括分類、風險分析、產生建議及線性迴歸。 您也可以撰寫 DMX 查詢，來取得在處理模型時所產生之模式和統計資料的相關資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]所有的資料採礦查詢使用資料採礦延伸模組 (DMX) 語言。 DMX 可以用來建立各種機器學習工作的模型，包括分類、風險分析、產生建議及線性迴歸。 您也可以撰寫 DMX 查詢，來取得在處理模型時所產生之模式和統計資料的相關資訊。  
   
  您可以自行撰寫 DMX，或是使用工具，例如預測查詢產生器，建立基本 DMX 然後加以修改。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 都提供協助您建立 DMX 預測查詢的工具。 此主題描述如何使用這些工具來建立及執行資料採礦查詢。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
   
 -   若要擷取**模型內容**和**模型中繼資料** (例如叢集數、決策樹中所使用的屬性、模型上次處理的日期及建立模型時所使用的演算法參數)，您可以使用 [Discover 方法 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) 方法，並在 [RequestType 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 標頭中指定其中一個資料採礦結構描述資料列集。 若要縮小查詢範圍，請輸入準則作為 [RestrictionList 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md) 元素內的限制。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)   
  [了解 DMX Select 陳述式](../../dmx/understanding-the-dmx-select-statement.md)   

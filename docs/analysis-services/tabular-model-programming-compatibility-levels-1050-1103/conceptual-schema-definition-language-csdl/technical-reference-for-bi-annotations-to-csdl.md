@@ -2,12 +2,12 @@
 title: "Csdl 的 BI 註解的技術參考資料 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 525b00678272347473f0cf845689be6d691c8ace
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be086d8e2a61ffbf5871c12b73cb628f656414ac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>CSDL 之 BI 註解的技術參考
-  本節列出了 CSDL 中用於表示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 表格式模型的元素、屬性 (Attribute) 和屬性 (Property)。 某些元素是新增的，其他元素則已加上註解或擴充，可支援商業智慧模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]此區段會列出項目、 屬性及屬性在 CSDL 中的，用來表示[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]表格式模型。 某些元素是新增的，其他元素則已加上註解或擴充，可支援商業智慧模型。  
   
  如需表格式模型，以及如何在 CSDL 中表示實體、 關聯性和公式的概觀，請參閱[Business Intelligence &#40; 的 CSDL 註解CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
 |Stability|[屬性項目 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/property-element-csdlbi.md)|  
 |SortDirection|[BaseProperty 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/baseproperty-element-csdlbi.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CSDLBI 概念](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md)  
   
   

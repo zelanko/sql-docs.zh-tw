@@ -2,12 +2,12 @@
 title: "偵錯預存程序 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e8a7802551181de7292650ec806eeb85a06140c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9e786c2885f12ceba82d3f49526a1f15f42fb8ef
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="debugging-stored-procedures"></a>除錯預存程序
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預存程序實際上是以 C# (或任何其他 CLR 或 COM 語言) 撰寫的 CLR 或 COM 程式庫 (通常是 DLL)。 因此，偵錯預存程序十分類似在 Visual Studio 偵錯環境中除錯任何其他應用程式。 您可以使用整合偵錯功能，在 Visual Studio 開發環境中偵錯預存程序。 它們可讓您在程序位置上停止，檢查記憶體和登錄值，變更變數，觀察訊息流量，以及仔細查看程式碼的運作方式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]預存程序會實際 CLR 或 COM 程式庫 (通常是 Dll) 以 C# （或任何其他 CLR 或 COM 語言） 撰寫。 因此，偵錯預存程序十分類似在 Visual Studio 偵錯環境中除錯任何其他應用程式。 您可以使用整合偵錯功能，在 Visual Studio 開發環境中偵錯預存程序。 它們可讓您在程序位置上停止，檢查記憶體和登錄值，變更變數，觀察訊息流量，以及仔細查看程式碼的運作方式。  
   
 ### <a name="to-debug-a-stored-procedure"></a>偵錯預存程序  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
  如果您在偵錯程式庫時發生問題，請確定對應的程式資料庫 (PDB) 檔案已複製到伺服器上的部署位置。 如果在註冊或部署期間未複製此檔案，您必須手動將它複製到與 DLL 相同的位置。 若為機器碼 (COM DLL)，PDB 檔是位於 \debug 子目錄中。 若為 Managed 程式碼 (CLR DLL)，它位於 \WINDEBUG 子目錄中。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [多維度模型組件管理](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   
  [定義預存程序](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

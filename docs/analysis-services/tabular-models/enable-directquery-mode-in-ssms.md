@@ -2,12 +2,12 @@
 title: "SSMS 中啟用 DirectQuery 模式 |Microsoft 文件"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 209ab16c43e8d90e47dd9c4758c45af9d7eb8b62
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fbce2dcf30bcdeded89ab0d8ea558d18585fe6a4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>在 SSMS 中啟用 DirectQuery 模式
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  您可以變更已部署的表格式模型資料存取屬性，藉此啟用 DirectQuery 模式，讓查詢針對後端關聯是資料來源執行，而不是針對位於記憶體內部的快取資料。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]您可以變更資料存取屬性的已部署，表格式模型啟用 DirectQuery 模式，其中查詢針對後端關聯式資料來源執行而不是位於記憶體中資料快取。  
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，DirectQuery 設定的步驟會因為模型的相容性層級而有所不同。 您可以在下方看到適用於所有相容性層級的步驟。  
   
