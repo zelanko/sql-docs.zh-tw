@@ -2,12 +2,12 @@
 title: "建立及管理遠端資料分割 (Analysis Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbcff2fe14716ebb2af74430538573706f8c2475
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>建立及管理遠端分割區 (Analysis Services)
-  分割量值群組時，您可以在遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上設定次要資料庫作為分割區儲存。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當資料分割的量值群組，您可以設定次要資料庫在遠端[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]作為分割區儲存的執行個體。  
   
  Cube (稱為 master 資料庫) 的遠端分割區，會儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 遠端執行個體上的專用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫 (稱為次要資料庫) 中。  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  雖然結構描述資料列集不會顯示專用於儲存遠端分割區的資料庫，但是使用分析管理物件 (AMO) 的應用程式仍可使用 XML for Analysis Discover 命令探索專用資料庫。 任何使用 TCP 或 HTTP 用戶端直接傳送至專用資料庫的 CREATE 或 DELETE 命令會成功完成，但是伺服器會傳回警告，指出這些動作可能會損毀此密切管理的資料庫。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料分割 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

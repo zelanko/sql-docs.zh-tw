@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8aa36adac3f7be50105a387dc3d39fca208eaba8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>效能最佳作法和 Linux 上的 SQL Server 2017 的設定指導方針
 
@@ -55,7 +55,6 @@ ms.lasthandoff: 12/01/2017
 請考慮使用下列 Linux 作業系統組態設定經驗的 SQL Server 安裝的最佳效能。
 
 ### <a name="kernel-settings-for-high-performance"></a>高效能的核心設定
-
 這些是建議的 Linux 作業系統設定為高相關的效能和輸送量的 SQL Server 安裝。 請參閱您的 Linux 作業系統文件的程序來設定這些設定。
 
 
@@ -92,7 +91,7 @@ sysctl -w kernel.numa_balancing=0
 預設值為**vm.max_map_count** （此為 65536） 可能無法夠高，SQL Server 安裝的。 （此為上限） 此值變更為 256 K。
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>停用上次存取日期/時間在檔案系統上的 SQL Server 資料和記錄檔

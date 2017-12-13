@@ -2,12 +2,12 @@
 title: "彙總和彙總設計 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db3dce8f47d784b62a03524361edc9308dad68fc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b51ee2cb78ff5309e6f2fe3ffc515a15a1649619
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="aggregations-and-aggregation-designs"></a>彙總和彙總設計
-  <xref:Microsoft.AnalysisServices.AggregationDesign> 物件會定義可在多個資料分割之間共用的一組彙總定義。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]<xref:Microsoft.AnalysisServices.AggregationDesign>物件會定義一組可以橫跨多個資料分割的彙總定義。  
   
  <xref:Microsoft.AnalysisServices.Aggregation> 物件表示在維度的某個資料粒度上之量值群組資料的摘要。  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
  雖然彙總是使用精靈所設計，但是除非已處理好所設計之彙總的資料分割，否則不會實際計算彙總。 建立彙總之後，如果 Cube 的結構變更，或是在 Cube 的來源資料表中加入或變更資料，則通常會需要檢閱 Cube 的彙總並再次處理該 Cube。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料分割儲存模式及處理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
   
   

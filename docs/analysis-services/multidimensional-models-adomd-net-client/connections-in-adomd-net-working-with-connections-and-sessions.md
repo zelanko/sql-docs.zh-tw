@@ -2,12 +2,12 @@
 title: "使用 連接和 ADOMD.NET 中的工作階段 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 061a51539b40630874e36096cc59557ac375c671
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2a384fc1f08cd6a60132d7d99cf3072973e3add8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet---working-with-connections-and-sessions"></a>Connections in ADOMD.NET-使用連接與工作階段
-  在 XML for Analysis (XMLA) 中，工作階段可支援分析資料存取期間可設定狀態的作業。 工作階段會為分析資料來源界定命令與交易的範圍和內容。 用來管理工作階段的 XMLA 元素[BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)，[工作階段](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)，和[EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在 XML for Analysis (XMLA) 中，工作階段會提供支援分析資料存取期間可設定狀態的作業。 工作階段會為分析資料來源界定命令與交易的範圍和內容。 用來管理工作階段的 XMLA 元素[BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)，[工作階段](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)，和[EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)。  
   
  ADOMD.NET 會在您開始工作階段時、在工作階段期間查詢或是擷取資料時，以及關閉工作階段時分別使用這三個 XMLA 工作階段元素。  
   
@@ -111,7 +111,7 @@ static string CreateSession(string connectionString)
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [在 ADOMD.NET 中建立連接](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)  
   
   

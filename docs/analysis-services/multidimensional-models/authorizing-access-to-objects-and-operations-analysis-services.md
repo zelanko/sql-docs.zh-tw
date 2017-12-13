@@ -2,12 +2,12 @@
 title: "授與物件和作業 (Analysis Services) 存取權 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bc4a8f86ade20312789199c7a762951763000eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cff9bdcefc19729ed8f29a1fe8f04267e03ddf4a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>物件和作業的存取權授權 (Analysis Services)
-  非系統管理使用者對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的 Cube、維度和採礦模型的存取權，是透過一個或多個資料庫角色的成員資格來授與。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 系統管理員可以建立這些資料庫角色、授與這些角色對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的讀取或讀取/寫入權限，然後將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者和群組指派給每個角色。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]非系統管理使用者存取 cube、 維度和採礦模型內[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫透過一或多個資料庫角色的成員資格授與。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 系統管理員可以建立這些資料庫角色、授與這些角色對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的讀取或讀取/寫入權限，然後將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者和群組指派給每個角色。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會結合與使用者或群組所屬的每一個資料庫角色相關聯的權限，來決定特定 Windows 使用者或群組的有效權限。 因此，如果某個資料庫角色沒有授與使用者或群組檢視維度、量值或屬性的權限，但另一個資料庫角色有授與該使用者或群組該權限，則該使用者或群組將具有檢視該物件的權限。  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/17/2017
   
  使用與此類似的方法能避免模型中的角色定義和角色成員資格紊亂，並為角色指派提供能見度，讓 Cube 權限在實作和維護上會更容易些。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [將伺服器管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [角色與權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Analysis Services 支援的驗證方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  

@@ -2,12 +2,12 @@
 title: "監視追蹤 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45bf2482dc80a7f6f2019572ffd38b1937e72b85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f913d7d7cd223d017f617430e4beae1a6c1b8c95
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitoring-traces-xmla"></a>監視追蹤 (XMLA)
-  您可以使用[訂閱](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md)XML for Analysis (XMLA) 來監視現有的執行個體上定義的追蹤命令[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 **訂閱**命令會傳回成資料列集追蹤的結果。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以使用[訂閱](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md)XML for Analysis (XMLA) 來監視現有的執行個體上定義的追蹤命令[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 **訂閱**命令會傳回成資料列集追蹤的結果。  
   
 ## <a name="specifying-a-trace"></a>指定追蹤  
  [物件](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)屬性**訂閱**命令必須包含物件參考為[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體或上的追蹤[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。 如果**物件**未指定屬性，或在未指定追蹤識別碼**物件**屬性，**訂閱**命令監視的預設工作階段追蹤指定命令的 SOAP 標頭中的明確工作階段。  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/17/2017
 |RequestParameters|字串|發生事件的參數化查詢或是 XMLA 命令的參數。|  
 |RequestProperties|字串|發生事件之 XMLA 方法的屬性。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

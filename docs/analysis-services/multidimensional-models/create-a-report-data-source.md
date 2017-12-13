@@ -2,12 +2,12 @@
 title: "建立報表資料來源 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f30b38b27a56bf3af10c4f39681b160feec34fd5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e8bac4005982e113a765b59557ae4380610b03b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-report-data-source"></a>建立報表資料來源
-  為了讓 Power View 連接到多維度模型，您必須在 SharePoint 文件庫中建立共用報表資料來源定義，也稱為 .rsds 檔。 .rsds 檔會指定 Analysis Services 伺服器執行個體的名稱、連接類型、連接字串，以及用來連接到多維度模型的認證。 當使用者按下 .rsds 時，新的空白 Power View 報表 (.rdlx 檔) 就會在瀏覽器中開啟。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]為了讓 Power View 連接到多維度模型，您必須建立共用的報表資料來源定義，也稱為.rsds 檔，在 SharePoint 文件庫中。 .rsds 檔會指定 Analysis Services 伺服器執行個體的名稱、連接類型、連接字串，以及用來連接到多維度模型的認證。 當使用者按下 .rsds 時，新的空白 Power View 報表 (.rdlx 檔) 就會在瀏覽器中開啟。  
   
  若要建立 .rsds 連接，您必須已安裝 SQL Server 2012 (或更新版本) Reporting Services 以及適用於 SharePoint 2010 或 SharePoint 2013 的 Reporting Services 增益集。  
   
@@ -72,9 +72,9 @@ ms.lasthandoff: 11/17/2017
   
     -   如果您想要使用開啟報表之使用者的認證來存取資料，請選取 [Windows 驗證 (整合式)]。 如果 SharePoint 網站或伺服陣列使用表單驗證或透過受信任帳戶連接到報表伺服器，請勿選取這個選項。 如果您想要排程這個報表的訂閱或資料處理，請勿選取這個選項。 在針對網域啟用 Kerberos 驗證時，或者資料來源與報表伺服器是在同一部電腦上時，此選項具有最佳的效能。 如果未啟用 Kerberos 驗證，Windows 認證只能傳遞至一部其他電腦。 這表示，如果外部資料來源位於另一部需要其他連接的電腦上，您就會收到錯誤而非所預期的資料。  
   
-    -   選取**提示認證**他或她如果您想讓使用者輸入其認證每次執行報表。 如果您想要排程這個報表的訂閱或資料處理，請勿選取這個選項。  
+    -   如果您希望使用者在每次執行報表時輸入自己的認證，請選取 [提示認證]。 如果您想要排程這個報表的訂閱或資料處理，請勿選取這個選項。  
   
-    -   選取**預存認證**如果您想要使用一組認證存取資料。 認證會先經過加密，然後再儲存。 您可以選取決定預存認證之驗證方式的選項。 如果預存認證屬於 Windows 使用者帳戶，請選取 [當做 Windows 認證使用]。 如果您想在資料庫伺服器上設定執行內容，請選取 [設定執行內容到這個帳戶]。  
+    -   如果您想要使用單一認證集來存取這個資料，請選取 [預存認證]。 認證會先經過加密，然後再儲存。 您可以選取決定預存認證之驗證方式的選項。 如果預存認證屬於 Windows 使用者帳戶，請選取 [當做 Windows 認證使用]。 如果您想在資料庫伺服器上設定執行內容，請選取 [設定執行內容到這個帳戶]。  
   
     -   如果您在連接字串中指定認證，或是想要使用最低權限帳戶來執行報表，請選取 [不需要認證]。  
   

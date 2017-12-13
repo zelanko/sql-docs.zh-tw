@@ -2,12 +2,12 @@
 title: "模型篩選語法和範例 (Analysis Services-資料採礦) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b487f4e00d8ae1aa3dd644eadef07516fcbfb45b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fd0525c4b4381cc553f3e6aca9e0bf2522ef87e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型篩選語法和範例 (Analysis Services - 資料採礦)
-  本節提供了有關模型篩選語法的詳細資訊，以及範例運算式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本節提供有關模型篩選，以及範例運算式語法的詳細的資訊。  
   
  [篩選語法](#bkmk_Syntax)  
   
@@ -319,7 +319,7 @@ FILTER (EXISTS (Products))
  例如，如果您想要篩選客服中心結果，只顯示週末，可以在資料來源檢視中建立運算式以擷取每個日期的工作天名稱，然後將該工作天名稱值用於輸入或當做篩選的離散值。 請記得，重複值會影響模型，因此您應該只使用其中一個資料行，而不是日期資料行加上衍生值。  
   
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [測試及驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
