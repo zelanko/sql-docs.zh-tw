@@ -2,12 +2,12 @@
 title: "隱藏及停用屬性階層 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0e234bf68aee7907a2b40e381ecbe43af5267026
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b1ae1a57e05d8953c4bd5f93b9e247419ee986c0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>課程 4-4-隱藏及停用屬性階層
-根據預設，系統會在維度中建立每個屬性的屬性階層，而且每個階層都可用來建立事實資料的維度。 這個階層是由「全部」層級和詳細資料層級 (含階層的所有成員) 所組成。 如同您已學到的，您可以將屬性組織成使用者自訂階層，在 Cube 中提供導覽路徑。 在某些情況下，您可以停用或隱藏某些屬性及其階層。 例如，某些屬性如保險號碼或身分證號碼、薪水、出生日期和登入資訊等，使用者不能利用這些屬性來建立 Cube 資訊的維度。 相反地，這項資訊通常只是做為特定屬性成員的詳細資料來檢視。 您可以隱藏這些屬性階層，讓屬性只顯示成特定屬性的成員屬性。 您也可以讓其他屬性的成員 (例如客戶名稱或郵遞區號) 只透過使用者階層而非透過獨立屬性階層來檢視。 這麼做的原因是為了顯示屬性階層中的全部相異成員。 最後，為了增進處理效能，您應該將使用者不再用來瀏覽的屬性階層停用。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]根據預設，在維度中，每個屬性建立屬性階層，而且每個階層都可用來測量事實資料。 這個階層是由「全部」層級和詳細資料層級 (含階層的所有成員) 所組成。 如同您已學到的，您可以將屬性組織成使用者自訂階層，在 Cube 中提供導覽路徑。 在某些情況下，您可以停用或隱藏某些屬性及其階層。 例如，某些屬性如保險號碼或身分證號碼、薪水、出生日期和登入資訊等，使用者不能利用這些屬性來建立 Cube 資訊的維度。 相反地，這項資訊通常只是做為特定屬性成員的詳細資料來檢視。 您可以隱藏這些屬性階層，讓屬性只顯示成特定屬性的成員屬性。 您也可以讓其他屬性的成員 (例如客戶名稱或郵遞區號) 只透過使用者階層而非透過獨立屬性階層來檢視。 這麼做的原因是為了顯示屬性階層中的全部相異成員。 最後，為了增進處理效能，您應該將使用者不再用來瀏覽的屬性階層停用。  
   
 **AttributeHierarchyEnabled** 屬性的值決定是否建立屬性階層。 如果這個屬性設為 **False**，則不建立屬性階層，且屬性不得做為使用者階層中的一個層級；屬性階層只得以成員屬性的身分存在。 不過，已停用的屬性階層仍然可以用來排序另一個屬性的成員。 如果 **AttributeHierarchyEnabled** 屬性的值設為 **True**，則 **AttributeHierarchyVisible** 屬性的值將決定是否不論屬性階層在使用者自訂階層中的用法為何皆會顯示。  
   

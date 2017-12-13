@@ -2,12 +2,12 @@
 title: "安裝 Sample Data and Projects |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 0e675845383c3e54c8477a8e0866231ac302cd1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e0372941de7d139b7e91f8e03a3ce6b903d05a9f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-sample-data-and-projects"></a>安裝 Sample Data and Projects 
-使用本主題中提供的指示與連結，安裝 Analysis Services 教學課程中所使用的所有資料和專案檔案。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]若要安裝的所有資料和專案檔案使用 Analysis Services 教學課程中使用的指示與本主題提供的連結。  
   
 ## <a name="step-1-install-sql-server-software"></a>步驟 1：安裝 SQL Server 軟體  
 本教學課程中的課程假設您已安裝下列軟體。 下列所有軟體都是使用 SQL Server 安裝媒體進行安裝。 為簡化部署，您可以在一台電腦上安裝所有功能。 若要安裝這些功能，請執行 SQL Server 安裝程式，並從 [特徵選取] 頁面中選取這些功能。 如需詳細資訊，請參閱 [從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
@@ -154,7 +154,7 @@ Analysis Services 多維度模型使用您從關聯式資料庫管理系統匯�
 ## <a name="next-step"></a>下一個步驟  
 您現在可以使用此教學課程。 如需如何開始使用的詳細資訊，請參閱[多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
 [設定 Windows 防火牆以允許 Analysis Services 存取](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 [設定 Windows 防火牆以允許 SQL Server 存取](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  

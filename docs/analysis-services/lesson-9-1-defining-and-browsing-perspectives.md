@@ -2,12 +2,12 @@
 title: "定義和瀏覽檢視方塊 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 07e244c89cc130619f1464427a0f8e31dbafa162
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 86bf8220b54d34646a38542b7edb861b8312137c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>課程 9-1-定義和瀏覽檢視方塊
-檢視方塊可以針對特定的用途，簡化 Cube 的檢視。 根據預設，使用者可以看到 Cube 中他們擁有權限的所有元素。 當使用者檢視整個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 時，他們所檢視的就是該 Cube 的預設檢視方塊。 整個 Cube 的檢視可能非常複雜，讓使用者難以瀏覽，尤其有的使用者只需要與一小部分的 Cube 互動，即可滿足他們的商業智慧和報告需求。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]檢視方塊可以簡化 cube 的檢視，提供特定用途。 根據預設，使用者可以看到 Cube 中他們擁有權限的所有元素。 當使用者檢視整個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 時，他們所檢視的就是該 Cube 的預設檢視方塊。 整個 Cube 的檢視可能非常複雜，讓使用者難以瀏覽，尤其有的使用者只需要與一小部分的 Cube 互動，即可滿足他們的商業智慧和報告需求。  
   
 若要簡化 Cube 明顯的複雜性，您可以建立稱為 *「檢視方塊」*(Perspective) 的可檢視 Cube 子集，它只會讓使用者看到 Cube 中部分的量值群組、量值、維度、屬性、階層、關鍵效能指標 (KPI)、動作以及導出成員。 這對於使用針對舊版 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所撰寫的用戶端應用程式特別有用。 例如，雖然這些用戶端沒有顯示資料夾或檢視方塊的概念，但是對於舊版的用戶端而言，檢視方塊就像是 Cube 一樣。 如需詳細資訊，請參閱 [檢視方塊](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)和 [多維度模型中的檢視方塊](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)。  
   

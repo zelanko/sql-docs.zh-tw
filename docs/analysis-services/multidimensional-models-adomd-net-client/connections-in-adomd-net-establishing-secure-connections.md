@@ -2,12 +2,12 @@
 title: "建立安全 Connections in ADOMD.NET |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a4545dc84372ae73ba90ac0c90a8586e92afe8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 192686dd747d307163e4530c55459e2c2d814cc4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connections in ADOMD.NET-建立安全連接
-  當您在 ADOMD.NET 中使用的連接時，用於連接的安全性方法取決於值**ProtectionLevel**呼叫時所用的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>方法<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您在 ADOMD.NET 中使用的連接時，用於連接的安全性方法取決於值**ProtectionLevel**呼叫時所用的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>方法<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
  **ProtectionLevel**屬性提供四個安全性層級： 未驗證、 驗證、 簽署，且加密。 下表描述各種安全性層級。  
   
@@ -121,7 +121,7 @@ End Function
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [在 ADOMD.NET 中建立連接](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)  
   
   

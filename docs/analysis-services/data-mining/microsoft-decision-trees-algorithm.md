@@ -2,12 +2,12 @@
 title: "Microsoft 決策樹演算法 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 60e78baa62709d39d61fb1592eab794dbccb458d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5b1fd05f99d361aabc8e5f340cd3d013475203d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 決策樹演算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是一種分類和迴歸演算法，可用於離散和連續屬性的預測模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]決策樹演算法是用於離散和連續屬性的預測模型的分類和迴歸演算法。  
   
  針對分隔屬性，此演算法依據資料集內的輸入資料行之間的關聯性來產生預測。 它會使用這些資料行的值 (稱為狀態) 來預測您指定為可預測之資料行的狀態。 尤其，此演算法會識別與可預測資料行相互關聯的輸入資料行。 例如，在預測哪些客戶可能購買腳踏車的狀況中，如果 10 個年輕客戶當中有 9 個購買腳踏車，但 10 個年紀較大的客戶當中只有 2 個人這麼做，則演算法會推斷年齡是腳踏車購買的理想預測器。 決策樹就是依據傾向於特定結果的趨勢來產生預測。  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/17/2017
   
 -   支援 OLAP 採礦模型的使用和資料採礦維度的建立。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 決策樹演算法技術參考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
  [決策樹模型查詢範例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   

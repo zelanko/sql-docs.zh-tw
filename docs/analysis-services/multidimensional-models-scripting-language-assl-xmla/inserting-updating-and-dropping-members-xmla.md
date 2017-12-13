@@ -2,12 +2,12 @@
 title: "插入、 更新和卸除成員 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d98ad262e92a1da61c6ac3dda67aaac871dabd1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8e7a4600dc6a3a0a9b32db40d0d9111907510768
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>插入、更新和卸除成員 (XMLA)
-  您可以使用[插入](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)，[更新](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)，和[卸除](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)命令在 XML for Analysis (XMLA) 分別插入、 更新或刪除從可寫入維度的成員。 如需啟用寫入的維度的詳細資訊，請參閱[Write-Enabled 維度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以使用[插入](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)，[更新](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)，和[卸除](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)命令在 XML for Analysis (XMLA) 分別插入、 更新或刪除從可寫入維度的成員。 如需啟用寫入的維度的詳細資訊，請參閱[Write-Enabled 維度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
   
 ## <a name="inserting-new-members"></a>插入新成員  
  **插入**命令會將新成員插入可寫入維度中的指定屬性。  
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  使用者只要擁有父成員的刪除權限，即可同時刪除父成員及其子階。 使用者不需要子階的刪除權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [卸除元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
  [插入項目 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Update 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   

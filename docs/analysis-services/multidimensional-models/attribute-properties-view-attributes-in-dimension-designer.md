@@ -2,12 +2,12 @@
 title: "在維度設計師中檢視屬性 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ec4596584aafb35d54506d244855447b0ce67c7f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: df19b0c27b5968219b012a2f9e1a3162359c5d95
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---view-attributes-in-dimension-designer"></a>屬性的內容位在維度設計師中檢視屬性
-  屬性是在維度物件上建立的。 您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的維度設計師，檢視和設定屬性。 維度設計師之 [維度結構] 索引標籤的 [屬性] 窗格，會列出維度中的屬性。 使用此窗格，即可加入、移除或設定屬性。 您也可以選取屬性，以用來做為新階層中的層級，或者加入做為現有階層的層級。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在維度物件上建立屬性。 您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的維度設計師，檢視和設定屬性。 維度設計師之 [維度結構] 索引標籤的 [屬性] 窗格，會列出維度中的屬性。 使用此窗格，即可加入、移除或設定屬性。 您也可以選取屬性，以用來做為新階層中的層級，或者加入做為現有階層的層級。  
   
  若要檢視維度中的屬性，請針對維度開啟維度設計師。 設計師之 [維度結構] 索引標籤的 [屬性] 窗格，會顯示維度中的屬性。 您可以指向 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 之 [維度] 功能表上的 [顯示屬性於]，然後按一下下列命令之一，在清單、樹狀或方格檢視之間切換：  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |![索引鍵屬性圖示](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "索引鍵屬性圖示")|索引鍵|  
 |![父屬性圖示](../../analysis-services/multidimensional-models/media/as-icon-parent-attribute.gif "父屬性圖示")|父系|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [維度屬性 (Attribute) 屬性 (Property) 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

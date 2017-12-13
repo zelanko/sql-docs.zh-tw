@@ -2,12 +2,12 @@
 title: "設定 Analysis Services 專案屬性 (SSDT) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 310906f7fa8ddc07f5643121e5120acf1135cb39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d36e47029fb6fac4a7ba0bbfc846d1c7efac8aa9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>設定 Analysis Services 專案屬性 (SSDT)
-  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時，將會包含一些影響 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案建立及部署的預設屬性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案定義的特定預設屬性會影響建置與部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。  
   
  若要變更專案屬性，請以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案物件，然後按一下 [屬性]。 或者，您可以在 [專案] 功能表上，按一下 [屬性]。  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
  在建立其他組態之前，所有開發人員都會使用這個共同的組態； 但是，在專案開發的各個不同階段期間 (例如，在最初開發專案及測試專案期間)，不同的開發人員可能會使用不同的資料來源，並針對不同用途將此專案部署到不同的伺服器； 組態可讓您保留不同組態檔內的這些不同設定。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立 Analysis Services 專案 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [部署 Analysis Services 專案 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

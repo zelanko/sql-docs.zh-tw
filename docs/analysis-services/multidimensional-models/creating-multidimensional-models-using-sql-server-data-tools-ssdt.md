@@ -2,12 +2,12 @@
 title: "建立多維度模型使用 SQL Server Data Tools (SSDT) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8069e4cb513ca83cd161564c6d9a0b2284890fdc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c79cf49be9eb64e21a6a19b6c8ac540d6c655d6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>使用 SQL Server 資料工具 (SSDT) 建立多維度模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供兩個不同環境來建立、部署及管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案： [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 這兩個環境都會實作專案系統。 如需有關 Visual Studio 專案的詳細資訊，請參閱 MSDN Library 中的 [以專案做為容器](http://go.microsoft.com/fwlink/?LinkId=63960) 。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供兩個不同環境來建置、 部署和管理[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]方案：[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]和[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 這兩個環境都會實作專案系統。 如需有關 Visual Studio 專案的詳細資訊，請參閱 MSDN Library 中的 [以專案做為容器](http://go.microsoft.com/fwlink/?LinkId=63960) 。  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是一個以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2010 為基礎的開發環境，用於建立及修改商業智慧方案。 運用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，您可以建立包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件之定義 (Cube、維度等等) 的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，這些都儲存在包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 元素的 XML 檔案中。 包含這些專案的方案也可以包含其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的專案，其中包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您可以開發 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，成為方案中獨立於任何特定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的部分。 您可以將物件部署到測試伺服器上的執行個體，在開發期間進行測試，然後使用相同的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，將物件部署到一或多個暫存或實際執行伺服器上的執行個體。 包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在內之方案中的專案和項目，可以與原始程式碼控制整合在一起，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe。 如需使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案的詳細資訊，請參閱 [建立 Analysis Services 專案 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)。 您也可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 直接連接到現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，以便建立及修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件，而不需要使用專案以及在 XML 檔案中儲存物件定義。 如需詳細資訊，請參閱 [多維度模型資料庫 &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)和 [在連線模式下連接至 Analysis Services 資料庫](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)。  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [在實際執行環境中搭配 Analysis Services 專案及資料庫使用](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-production.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立 Analysis Services 專案 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [SQL Server Management Studio 中的 analysis Services 指令碼專案](../../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)   
  [多維度模型資料庫 &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  

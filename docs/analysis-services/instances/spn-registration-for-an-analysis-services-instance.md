@@ -2,12 +2,12 @@
 title: "Analysis Services 執行個體的 SPN 註冊 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 53dd8aa711b2d9ba4a565f86ee66572e523fa78a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>為 Analysis Services 執行個體註冊 SPN
-  使用 Kerberos 相互驗證用戶端和服務識別時，服務主要名稱 (SPN) 可唯一識別在 Active Directory 網域中的服務執行個體。 SPN 與服務執行個體的執行登入帳戶有關。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用 Kerberos 相互驗證用戶端和服務識別時，服務主要名稱 (SPN) 唯一識別在 Active Directory 網域中的服務執行個體。 SPN 與服務執行個體的執行登入帳戶有關。  
   
  對透過 Kerberos 驗證連接至 Analysis Services 的用戶端應用程式而言，Analysis Services 用戶端程式庫會使用連接字串中的主機名稱和所有 Analysis Services 之指定版本中固有的已知變數 (例如服務類別) 來建構 SPN。  
   
@@ -171,7 +171,7 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  Analysis Services 執行個體只能接聽單一通訊埠， 因此不支援使用多個通訊埠。 如需通訊埠組態的詳細資訊，請參閱＜ [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)＞。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Microsoft BI 驗證及識別委派](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [相互驗證使用 Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [如何設定 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 使用 Kerberos 驗證](http://support.microsoft.com/kb/917409)   

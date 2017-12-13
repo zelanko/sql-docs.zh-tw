@@ -2,12 +2,12 @@
 title: "建立日期類型維度 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38a9c9d9a1fc035d652525b9ec0564977ac691bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b3be92a4572e464d23c24c0f7152a7a106e1932c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>資料庫維度-建立日期類型維度
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，時間維度是其屬性代表時間週期的維度類型，例如年、學期、季、月和日。 時間維度中的週期，會為分析和報表提供時間層級的資料粒度。 屬性會組織在階層中，而時間維度的資料粒度多半取決於記錄資料的商務和報表需求。 例如，商業智慧應用程式中的大部份財務和商務資料，都使用每月或每季的資料粒度。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，時間維度是其屬性代表時間週期，例如年、 半年度、 季、 月和日的維度類型。 時間維度中的週期，會為分析和報表提供時間層級的資料粒度。 屬性會組織在階層中，而時間維度的資料粒度多半取決於記錄資料的商務和報表需求。 例如，商業智慧應用程式中的大部份財務和商務資料，都使用每月或每季的資料粒度。  
   
  通常， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 Cube 會將時間維度併入某個表單或其他表單中。 Cube 可能會包含多個時間維度，或來自相同時間維度的數個階層，視資料的資料粒度和報表需求而定。 不過，並非所有 Cube 都需要時間維度。 因為活動式維度的成本估計是根據活動，而非時間，所以有些 OLAP 應用程式 (例如活動式成本估計) 並不需要時間維度。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  您不能使用商業智慧精靈將時間智慧加入至伺服器時間維度。 商業智慧精靈會加入支援時間智慧的階層，而此階層必須繫結到時間維度資料表的資料行。 伺服器時間維度沒有對應的時間維度資料表，因此無法支援此額外階層。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [商業智慧精靈 F1 說明](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
  [維度類型](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  

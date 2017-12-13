@@ -2,12 +2,12 @@
 title: "Cube 儲存體 (Analysis Services-多維度資料) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 082e54f8ebaf83609c8f90b37e41657cb26da1f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 83762a6da2ee3b67c388fdd7b1b3ac5ffc144573
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Cube 儲存體 (Analysis Services - 多維度資料)
-  儲存體可以只包含 Cube 中繼資料，或是包含事實資料表的所有來源資料，以及與量值群組相關之維度所定義的彙總。 儲存的資料量取決於選取的儲存模式和彙總數目。 直接儲存的資料數量會影響查詢效能； [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用數種技術來儲存 cube 資料和彙總所需的空間最小化：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]儲存體可能包括僅 cube 中繼資料，或可能包含的所有事實資料表與量值群組相關之維度所定義的彙總從來源資料。 儲存的資料量取決於選取的儲存模式和彙總數目。 直接儲存的資料數量會影響查詢效能； [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用數種技術來儲存 cube 資料和彙總所需的空間最小化：  
   
 -   儲存選項可讓您選取最適合 Cube 資料的儲存模式和位置。  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="linked-measure-groups"></a>連結量值群組  
  這需要大量磁碟空間來儲存不同 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上之 Cube 的多個副本，但您可將量值群組的副本取代為連結量值群組，以大幅減少所需的空間。 連結量值群組的基礎是位於相同或不同 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上之另一個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中之 Cube 的量值群組。 連結量值群組也可以與來自相同來源 Cube 的連結維度一起使用。 連結維度和量值群組使用來源 Cube 的彙總，而沒有自己的資料儲存需求。 因此，透過維護某個資料庫中的來源量值群組和維度，以及在其他資料庫的 Cube 中建立連結 Cube 和維度，您即可以節省用於進行儲存的磁碟空間。 如需詳細資訊，請參閱[Linked Measure Groups](../../analysis-services/multidimensional-models/linked-measure-groups.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [彙總和彙總設計](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

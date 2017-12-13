@@ -2,12 +2,12 @@
 title: "從用戶端應用程式 (Analysis Services) 連接 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0310a1012153fae8ecb364e63a270ce0846af277
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e893df8d4edada2a28d16c341cc8353fd3478625
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>從用戶端應用程式連接 (Analysis Services)
-  如果您不熟悉 Analysis Services，請透過本主題中的資訊，使用常用的工具和應用程式連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 現有的執行個體。 本主題也說明如何以不同的使用者識別進行連接，方便測試之用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果您不熟悉 Analysis services，本主題中使用的資訊來連接到現有的執行個體[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用常用的工具和應用程式。 本主題也說明如何以不同的使用者識別進行連接，方便測試之用。  
   
 -   [使用 SQL Server Management Studio (SSMS) 連接](#bkmk_SSMS)  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 11/17/2017
   
  [Resolving Common Connectivity Issues in SQL Server 2005 Analysis Services Connectivity Scenarios](http://technet.microsoft.com/library/cc917670.aspx)(在 SQL Server 2005 Analysis Services 連接狀況中解決常見的連接問題)。 這份文件已經有一些歲月，但是其中的資訊和方法仍然適用。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 支援的驗證方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [模擬 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   

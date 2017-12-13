@@ -2,12 +2,12 @@
 title: "使用資料來源檢視建立 Cube |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdd918ba24a9704d17753ccf39176c96ec03586d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c5514b6ef512855ff718740fc7b7ea7342a1258
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>使用資料來源檢視建立 Cube
-  如果您想使用現有的資料來源檢視，請使用此建立新 Cube 的方法。 透過此方法，您可以指定資料來源檢視，並選取要用於資料來源檢視的事實和維度資料表。 然後，您可以選擇要包含在 Cube 中的維度和量值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用這個方法建立新的 cube，如果您想要使用現有的資料來源檢視。 透過此方法，您可以指定資料來源檢視，並選取要用於資料來源檢視的事實和維度資料表。 然後，您可以選擇要包含在 Cube 中的維度和量值。  
   
  若要使用資料來源建立 Cube，請在方案總管中，以滑鼠右鍵按一下 [Cube]，然後選取 [新增 Cube]。 [Cube 精靈] 隨即開啟。  
   

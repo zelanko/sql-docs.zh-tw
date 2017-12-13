@@ -2,12 +2,12 @@
 title: "設定 Analysis Services 及 Kerberos 限制委派 (KCD) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 95a002a015a94f0b6ad69bc2331403604717d778
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae2cafe597e5540a58cc89e28cee87516942d021
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>設定 Analysis Services 及 Kerberos 限制委派 (KCD)
-  Kerberos 限制委派 (KCD) 是驗證通訊協定，您可使用 Windows 驗證對其進行設定，在整個環境的服務間委派用戶端認證。 KCD 需要其他基礎結構 (例如網域控制站)，以及您環境的其他組態。 某些在 SharePoint 2016 使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料的案例會需要 KCD。 在 SharePoint 2016 中，Excel Services 已從 SharePoint 伺服器陣列外移到不同的新伺服器： **Office Online Server**。 因為 Office Online Server 是獨立的，所以對於在典型雙躍點案例中委派用戶端認證的方法，其需求漸增。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Kerberos 限制的委派 (KCD) 是您可以使用 Windows 驗證來委派從用戶端認證設定的驗證通訊協定服務在整個環境的服務。 KCD 需要其他基礎結構 (例如網域控制站)，以及您環境的其他組態。 某些在 SharePoint 2016 使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料的案例會需要 KCD。 在 SharePoint 2016 中，Excel Services 已從 SharePoint 伺服器陣列外移到不同的新伺服器： **Office Online Server**。 因為 Office Online Server 是獨立的，所以對於在典型雙躍點案例中委派用戶端認證的方法，其需求漸增。  
   
 ||  
 |-|  

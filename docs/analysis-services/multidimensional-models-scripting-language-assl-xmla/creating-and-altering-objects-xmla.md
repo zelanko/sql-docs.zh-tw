@@ -2,12 +2,12 @@
 title: "建立和改變物件 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: be8a71595f444b18c68324fcb18375665525ddd1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 06d6b8e0460ffa303c6e365820c61f9d200dcc95
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="creating-and-altering-objects-xmla"></a>建立和改變物件 (XMLA)
-  主要物件可以獨立建立、改變和刪除。 主要物件包括下列物件：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]主要物件可以是獨立建立、 改變和刪除。 主要物件包括下列物件：  
   
 -   伺服器  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="comments"></a>註解  
  **ObjectExpansion**屬性**Alter**命令已設為*ObjectProperties*。 此設定可讓[ImpersonationInfo](../../analysis-services/scripting/properties/impersonationinfo-element-assl.md)元素、 次要物件，從資料來源中定義要排除**ObjectDefinition**。 因此，資料來源的模擬資訊仍然會設定成服務帳號，如第一個範例中所指定。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [執行方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
  [開發使用 Analysis Services 指令碼語言 &#40;ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  

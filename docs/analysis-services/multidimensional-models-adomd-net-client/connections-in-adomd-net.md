@@ -2,12 +2,12 @@
 title: "在 ADOMD.NET 中建立連接 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 262b81a3177806ead76bbff15f770e0d1d0418aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcda3b90d2157869be1c187e8c6d86449790f7b0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet"></a>Connections in ADOMD.NET
-  在 ADOMD.NET 中，您使用<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>物件來開啟連接和分析資料來源，例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 當不再需要連接時，應該明確地關閉連接。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在 ADOMD.NET 中，您使用<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>物件來開啟連接和分析資料來源，例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 當不再需要連接時，應該明確地關閉連接。  
   
 ## <a name="opening-a-connection"></a>開啟連接  
  若要在 ADOMD.NET 中開啟連接，您必須先將連接字串指定成有效的分析資料來源與資料庫。 然後，您必須明確地開啟該資料來源的連接。  
@@ -72,7 +72,7 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
 > [!IMPORTANT]  
 >  在**Finalize**方法的任何實作類別，請勿呼叫**關閉**或**處置**方法<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>物件<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>物件，或任何其他managed 的物件。 在 finalizer 中，只須釋放實作類別直接擁有的 Unmanaged 資源。 如果實作的類別未擁有任何 unmanaged 的資源，並包含**Finalize**類別定義中的方法。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADOMD.NET 用戶端程式設計](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   

@@ -2,12 +2,12 @@
 title: "定義連結的維度 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 261ba3bea0256789df5f6ad72cff553c6ed253f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4d3f3148837cd2e511ffd6d8fc539c32db362c88
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-linked-dimensions"></a>定義連結維度
-  連結維度是根據在相同版本與相容性層級的另一個 Analysis Services 資料庫中所建立和儲存的維度。 藉由使用連結維度，您可以在一個資料庫上建立、儲存和維護維度，同時將該維度提供給多個資料庫的使用者使用。 對於使用者來說，連結維度和其他任何維度看起來都一樣。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]連結的維度為基礎的維度，建立並儲存在相同的版本與相容性層級的另一個 Analysis Services 資料庫。 藉由使用連結維度，您可以在一個資料庫上建立、儲存和維護維度，同時將該維度提供給多個資料庫的使用者使用。 對於使用者來說，連結維度和其他任何維度看起來都一樣。  
   
  連結維度是唯讀的。 若您想修改維度或建立新的關聯性，則必須變更來源維度，然後刪除並重新建立連結維度和其關聯性。 您無法重新整理連結維度來收集來源物件中的變更。  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="next-steps"></a>後續步驟  
  您不能變更連結維度的結構，所以無法使用維度設計師的 [維度結構] 索引標籤來檢視它。 處理連結維度之後，您可以使用 [瀏覽器] 索引標籤來檢視。您也可以變更其名稱，並為名稱建立翻譯。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [多維度資料庫的相容性層級 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [連結量值群組](../../analysis-services/multidimensional-models/linked-measure-groups.md)   
  [維度關聯性](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
