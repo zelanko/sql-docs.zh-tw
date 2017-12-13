@@ -2,12 +2,12 @@
 title: "Persistence 元素 (ASSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f49d7a5eabaeaec3ba9d75bcfec92adda6c0e196
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c4aef3415177f4676ca2d4000dff178e2d7fbc0e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="persistence-element-assl"></a>Persistence 元素 (ASSL)
-  決定繫結的來源資料中哪些部分是動態的而且會檢查是否有使用所指定的頻率更新[RefreshPolicy](../../../analysis-services/scripting/properties/refreshpolicy-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]決定繫結的來源資料中哪些部分是動態的而且會檢查是否有使用所指定的頻率更新[RefreshPolicy](../../../analysis-services/scripting/properties/refreshpolicy-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
   
  列舉型別對應至允許的值**持續性**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.PersistenceType>。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

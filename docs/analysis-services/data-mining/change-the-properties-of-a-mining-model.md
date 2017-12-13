@@ -2,12 +2,12 @@
 title: "變更採礦模型的屬性 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a0b40837b81326e63821e4f46f360f79b5940280
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccfd17eb10b11052f24cf18f9b0e94649b5030af
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>變更採礦模型的屬性
-  有些採礦模型屬性可套用至整個模型，有些模型屬性只套用至個別資料行。 例如， **Drillthrough** 屬性可套用至整個模型，它指定案例資料是否應該可用於查詢， **Description** 屬性也是這類屬性。 套用至資料行的屬性包含 **Usage** 和 **ModelingFlags**，它們控制資料行中的資料在模型內的使用方式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]有些採礦模型屬性套用至整個模型和其他模型屬性可套用至個別資料行。 例如， **Drillthrough** 屬性可套用至整個模型，它指定案例資料是否應該可用於查詢， **Description** 屬性也是這類屬性。 套用至資料行的屬性包含 **Usage** 和 **ModelingFlags**，它們控制資料行中的資料在模型內的使用方式。  
   
  下列模型屬性具有可用於建立運算式或設定複雜模型屬性的進階編輯器。 下列屬性提供：  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
      您在設計師中選取其他元素時，新值就會生效。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

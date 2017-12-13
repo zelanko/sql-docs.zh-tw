@@ -2,12 +2,12 @@
 title: "內建成員屬性 (MDX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 95f89f7681777d6d65f9d385521c9cfb911ff1b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf5daff8843fab7cdf1aed4acd0fec0dec84e5ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成員屬性內建成員屬性
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會公開維度成員的內建屬性，您可以將它們納入查詢中，以便傳回用於自訂應用程式的其他資料或中繼資料，或協助模型調查或建構。 如果您使用 SQL Server 用戶端工具，您可以在 SQL Server Management Studio (SSMS) 中檢視內建屬性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]公開內建屬性，您可以在自訂應用程式中，會傳回額外的資料或中繼資料使用，或協助模型調查或建構的查詢中包含的維度成員上。 如果您使用 SQL Server 用戶端工具，您可以在 SQL Server Management Studio (SSMS) 中檢視內建屬性。  
   
  內建屬性包括 **ID**、 **KEY**、 **KEYx**和 **NAME**，這些屬性可在任何層級公開給每位成員。 您也可以傳回位置資訊，例如 **LEVEL_NUMBER** 或 **PARENT_UNIQUE_NAME**，以及其他資訊。  
   
@@ -213,7 +213,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [PeriodsToDate &#40;MDX&#41;](../../../mdx/periodstodate-mdx.md)   
  [子系 &#40;MDX &#41;](../../../mdx/children-mdx.md)   
  [Hierarchize &#40;MDX &#41;](../../../mdx/hierarchize-mdx.md)   

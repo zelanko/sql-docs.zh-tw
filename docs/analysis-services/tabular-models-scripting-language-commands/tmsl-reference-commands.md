@@ -1,12 +1,12 @@
 ---
 title: "命令在表格式模型指令碼語言 (TMSL) |Microsoft 文件"
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71b44ae1e5f8e5db2859bb4d3b2457c752de4dc6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e041aa751bc2d54713cb996dde321c21231bf608
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tmsl-reference---commands"></a>TMSL 參考-命令
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  您可以執行命令，在 XMLA 端點，公式中使用表格式模型指令碼語言 (TMSL)，針對表格式模型資料庫的 JSON 物件定義。   請參閱[物件定義的表格式模型指令碼語言 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)使用下列命令所使用的物件清單。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]您可以執行命令，在 XMLA 端點，公式中使用表格式模型指令碼語言 (TMSL)，針對表格式模型資料庫的 JSON 物件定義。   請參閱[物件定義的表格式模型指令碼語言 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)使用下列命令所使用的物件清單。  
   
 ## <a name="object-operations"></a>物件的作業  
   
@@ -63,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |[還原命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/restore-command-tmsl.md)|將資料庫還原到伺服器。|  
 |[同步處理命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/synchronize-command-tmsl.md)|同步處理 Analysis Services 資料庫與另一個現有的資料庫。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [安裝 Analysis Services 資料提供者 &#40;AMO、 ADOMD.NET、 MSOLAP &#41;](../../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md)   
  [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  

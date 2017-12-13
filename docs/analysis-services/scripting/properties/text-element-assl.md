@@ -2,12 +2,12 @@
 title: "文字元素 (ASSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a3a33c603168a8a6858e2381220dbc1f5b4c4de9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2b29cec590540efb11150c5b277b591e789626de
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="text-element-assl"></a>Text 元素 (ASSL)
-  包含文字的[命令](../../../analysis-services/scripting/objects/command-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含文字的[命令](../../../analysis-services/scripting/objects/command-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**文字**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Command>。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Commands 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/commands-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   

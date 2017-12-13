@@ -2,12 +2,12 @@
 title: "將資料行加入資料表 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef9aaa80dba9212e9fb22af7a1701bb6b3f17eb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 71f93fa48d1bc1c8f6649262a8964f0d4ff8546f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>將資料行加入至資料表 (SSAS 表格式)
-  本主題描述如何將資料行加入現有資料表。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題描述如何將資料行加入至現有的資料表。  
   
 ## <a name="add-columns-from-the-data-source"></a>從資料來源加入資料行  
  當您使用 [資料表匯入精靈] 從資料來源資料表匯入資料時，系統會在模型中建立新的資料表，此模型包含來源資料表中的所有資料行；或者如果您選擇使用 [預覽和篩選] 功能來篩選出某些資料行，則只會包含您選取的資料行及篩選的資料。 您也可以撰寫 SQL 查詢來指定只匯入某些資料行。 但是，您之後可決定來源資料表擁有您想要加入至模型資料表的其他資料行，或者您必須加入所包含的值衍生自 DAX 公式的導出資料行。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  按一下頂端資料格，然後輸入名稱，再按 ENTER。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [編輯資料表屬性對話方塊 &#40;SSAS&#41;](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
  [變更資料表、資料行或資料列篩選對應 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   

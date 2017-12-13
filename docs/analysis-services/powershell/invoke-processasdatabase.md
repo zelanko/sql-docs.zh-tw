@@ -2,12 +2,12 @@
 title: "叫用 ProcessASDatabase |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 72c96cddc1d505906164aa3d634871ba0ae30072
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 711ab57846b862479c946dae4ad50402a5876f48
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  在指定的 **Database** 進行 **Process** 作業，使用特定 **ProcessType** 或 **RefreshType** ，視基礎中繼資料類型而定。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]進行**程序**作業指定**資料庫**具有特定**ProcessType**或**RefreshType**取決於基礎中繼資料型別。  
   
  使用 **ProcessType** 作為資料庫，並使用多維度中繼資料 (這包括相容性層級 1050、1100 或 1103 的表格式資料庫)。  
   

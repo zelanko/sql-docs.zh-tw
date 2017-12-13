@@ -2,12 +2,12 @@
 title: "第 5 課： 定義維度與量值群組之間的關聯性 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a36c57ed912ec93c52d0f3316d0ac7ba421e4966
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 55d2ea123600615d64d737cbf9de5a895f1000ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>第 5 課：在維度和量值群組之間定義關聯性
-在這個教學課程的前面課程中，您已了解加入至 Cube 的資料庫維度可做為一或多個 Cube 維度的基礎。 在這一課，您將學習如何在 Cube 維度和量值群組之間定義不同類型的關聯性，以及指定這些關聯性的屬性。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本教學課程中先前的課程，您學會加入至 cube 的資料庫維度可以用做為基礎，為一或多個 cube 維度。 在這一課，您將學習如何在 Cube 維度和量值群組之間定義不同類型的關聯性，以及指定這些關聯性的屬性。  
   
 如需詳細資訊，請參閱 [維度關聯性](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   

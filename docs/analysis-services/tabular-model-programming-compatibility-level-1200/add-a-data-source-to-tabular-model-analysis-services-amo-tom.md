@@ -2,12 +2,12 @@
 title: "將資料來源加入至表格式模型 (Analysis Services AMO-TOM) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b8f6397f70727173345a41e92704a4277de32ddd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8aac5145c520ac61fda5689a4ba40b882bb554da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>將資料來源加入至表格式模型 (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-**DataSource** Microsoft.AnalysisServices.Tabular 命名空間中的類別是在資料重新整理作業期間的指定類型的表格式模型的資料來源的抽象概念和匯入資料的位置。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]**DataSource** Microsoft.AnalysisServices.Tabular 命名空間中的類別是在資料重新整理作業期間的指定類型的表格式模型的資料來源的抽象概念和匯入資料的位置。 
 
 可以藉由執行個體化的類別，衍生自物件將資料來源加入至表格式模型**DataSource**，然後將它新增到**DataSources**模型物件的集合。 若要變更認可到伺服器，呼叫**Model.SaveChanges()**或**Database.Update(UpdateOptions.ExpandFull)**。 
 

@@ -2,12 +2,12 @@
 title: "建立查詢 (MDX) 中的 Cube 內容 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 08eee9eb06b6e69e5681f5d88ac3f9c7f7a29d27
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1b8d97b906a0ef1121daac5379f4938dfe4b2466
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>建立查詢中的 Cube 內容 (MDX)
-  每個  MDX 查詢都會在指定的 Cube 內容內執行。 此內容定義在查詢內由運算式評估的成員。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]每個 MDX 查詢在指定的 cube 內容內執行。 此內容定義在查詢內由運算式評估的成員。  
   
  在 SELECT 陳述式中，FROM 子句可決定 Cube 內容。 此內容可以是整個 Cube 或只是 Cube 的一個 Subcube。 透過 FROM 子句取得指定的 Cube 內容，您可以使用其他函數來擴充或限制內容。  
   
@@ -67,7 +67,7 @@ FROM [Adventure Works]
   
  您可以使用 MDX [LookupCube](../../../mdx/lookupcube-mdx.md) 函數來擷取 Cube 內容之外的 Cube 資料。 此外，例如可用的 [Filter](../../../mdx/filter-mdx.md) 函數，允許在評估查詢時暫時限制內容。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

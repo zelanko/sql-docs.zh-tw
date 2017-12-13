@@ -73,6 +73,7 @@
 # [部署套件](packages/deploy-integration-services-ssis-projects-and-packages.md)
 # [Scale Out](scale-out/integration-services-ssis-scale-out.md)
 
+# [目錄和伺服器](catalog/integration-services-ssis-server-and-catalog.md)
 # [服務 (舊版)](../integration-services/service/integration-services-service-ssis-service.md)
 # [安全性](../integration-services/security/security-overview-integration-services.md)
 # [[效能]](../integration-services/performance/monitor-running-packages-and-other-operations.md)

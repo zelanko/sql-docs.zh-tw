@@ -2,12 +2,12 @@
 title: "使用資料摘要 (Power Pivot for SharePoint) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78239c159da9213ca3cbc3e14ac5367e9846aa8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ecbf6babc1bfa86cb8c7cdd5d18789be02cf8229
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>使用資料摘要 (Power Pivot for SharePoint)
-  資料摘要是從線上資料來源產生，並串流至目的地文件或應用程式的一個或多個資料流。 如果您使用的是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料摘要是一或多個資料流是從線上資料來源產生並串流至目的地文件或應用程式。 如果您使用的是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
   
  您使用資料摘要的方式，取決於您是使用支援 Atom 資料摘要之應用程式中的內建匯出功能，還是建立並使用自訂資料服務。 能夠發行並讀取 Atom XML 資料的應用程式提供完美的資料傳輸，隱藏資料摘要與資料服務的機制，讓使用者看不到。 對使用者來說，只是將資料從一個應用程式移到另一個。  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  輸入 [資料表名稱]，每個摘要各使用一個資料表。 此為必要值。 資料表名稱是由取用資料摘要的用戶端應用程式所使用。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中，資料表名稱用來命名 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中，將包含已匯入之資料的資料表。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [在管理中心為網站集合啟用 Power Pivot 功能整合](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [使用資料摘要庫共用資料摘要 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   

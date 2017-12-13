@@ -6,20 +6,24 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.service: 
+ms.component: advanced-analytics
+ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
+ms.prod: sql-non-specified
+ms.prod_service: r-services
 ms.author: genemi
 ms.workload: advanced-analytics
-ms.openlocfilehash: 636e243f1f39f0bfa688c6caada1e03078de9a32
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
-ms.translationtype: HT
+ms.openlocfilehash: 840e34eee090d9fba2ec25e10375a8b0c375fea4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>新增和更新最近： SQL Server 的進階分析
 

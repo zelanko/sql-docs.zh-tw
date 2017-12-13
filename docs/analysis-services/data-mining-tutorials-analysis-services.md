@@ -2,12 +2,12 @@
 title: "資料採礦教學課程 (Analysis Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 05/06/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -19,14 +19,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f7375fc22170ffa3f0f11455af619d62f42df50c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>資料採礦教學課程 (Analysis Services)
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可讓您使用精靈和整合式的視覺效果，輕鬆地建立資料採礦方案。 特別是當您不熟悉機器學習服務時， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的工具可以輕鬆地設計、定型和瀏覽資料採礦模型。 模型中的資料可以儲存在 Cube、關聯式資料庫或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援的任何其他來源。 建立模型之後，您可以將它放到實際執行環境，方法是存取模型以使用預測多個用戶端建立預測，包括 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 ASP.NET。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]容易建立使用精靈和整合式視覺效果的資料採礦方案。 特別是當您不熟悉機器學習服務時， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的工具可以輕鬆地設計、定型和瀏覽資料採礦模型。 模型中的資料可以儲存在 Cube、關聯式資料庫或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援的任何其他來源。 建立模型之後，您可以將它放到實際執行環境，方法是存取模型以使用預測多個用戶端建立預測，包括 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 ASP.NET。  
   
 > [!NOTE]  
 >此處所述的教學課程尚未針對 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]更新。 您可以使用為 SQL Server 2014 建立的教學課程。 在功能上， [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的資料採礦功能沒有任何變更。 步驟應該是相同的。  

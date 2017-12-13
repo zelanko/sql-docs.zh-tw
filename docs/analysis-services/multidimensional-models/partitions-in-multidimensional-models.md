@@ -2,12 +2,12 @@
 title: "多維度模型中的分割區 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea486225e7ada9256aae3ad17732761388481835
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 986ade2663f23d0e987269a9474963d3f7137e71
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-in-multidimensional-models"></a>多維度模型中的分割區
-  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中， *「分割區」* (Partition) 提供載入量值群組之事實資料的實體儲存體。 系統會自動為每個量值群組建立一個分割區，但通常會建立其他分割區以進一步分割資料，因此處理效能更佳且查詢效能更快。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、*分割*提供載入量值群組的事實資料的實體儲存。 系統會自動為每個量值群組建立一個分割區，但通常會建立其他分割區以進一步分割資料，因此處理效能更佳且查詢效能更快。  
   
  因為可以在一部或多部伺服器上獨立及平行處理分割區，因此處理進行得更有效率。 因為可設定每個分割區使用儲存模式和彙總最佳化，藉此縮短回應時間，因此查詢執行速度更快。 例如，針對包含較新資料的分割區選擇 MOLAP 儲存，通常會比 ROLAP 更快。 同樣地，如果您依日期分割，包含較新資料的分割區，這會比包含較舊資料 (較少存取) 的分割區，具有更高的最佳化。 請注意，改變分割區使用的儲存和彙總設計，會對未來的合併作業造成負面影響。 因此最佳化個別分割區之前，請務必考慮合併是否為分割區管理策略中不可或缺的一部分。  
   

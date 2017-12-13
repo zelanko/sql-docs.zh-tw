@@ -2,12 +2,12 @@
 title: "內容類型 （資料採礦） |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,14 +35,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e3cf974c1b3cc1b8cecbc441da3ab2514c8f512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6d605692200b4e1c056d90070238dcce442c1e29
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="content-types-data-mining"></a>內容類型 (資料採礦)
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以同時定義採礦結構中資料行的實體資料類型，以及用於模型內之資料行的邏輯內容類型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您可以在採礦結構和在模型中，用於資料行的邏輯內容類型中定義的兩個實體資料類型資料行  
   
  *「資料類型」* 會決定當您建立採礦模型時，演算法要如何處理這些資料行中的資料。 定義資料行的資料類型會提供資訊給演算法，這是有關資料行中的資料類型及如何處理資料的資訊。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的每一個資料類型都會支援一個或多個適用於資料採礦的內容類型。  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="classified"></a>Classified  
  除了前述常用於所有模型的內容類型之外，您可以使用分類資料行來定義某些資料類型的內容類型。 如需分類資料行的詳細資訊，請參閱[分類資料行 &#40;資料採礦&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [內容類型 &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
  [資料類型 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [資料類型 &#40; DMX &#41;](../../dmx/data-types-dmx.md)   

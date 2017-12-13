@@ -2,12 +2,12 @@
 title: "DBSCHEMA_COLUMNS 資料列集 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce502f05dbbb701f694f4699f2867b92c0b3158c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1a653f5191f3017c499631851184c70b5d854161
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dbschemacolumns-rowset"></a>DBSCHEMA_COLUMNS 資料列集
-  為所有符合提供之限制準則的資料行提供資料行資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供符合提供之限制準則的所有資料行的資料行資訊。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DBSCHEMA_COLUMNS**資料列集包含下列資料行。  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/17/2017
 |**COLUMN_NAME**|**DBTYPE_WSTR**|選擇性|  
 |**COLUMN_OLAP_TYPE**|**DBTYPE_WSTR**|選擇性|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [OLE DB 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

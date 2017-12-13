@@ -2,12 +2,12 @@
 title: "設定屬性類型 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 60ccef2ddc36c4a8dda691526cb3209eb6737c6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3a7d8d9405d27956eecef276ef9a5b80b1806667
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>屬性內容-設定屬性類型
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，屬性類型有助於從商務功能上將屬性分類。 屬性類型有很多，而且大部份可供用戶端應用程式用來顯示或支援屬性。 不過，有些屬性類型對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]也有特定意義。 例如，有些屬性類型會針對時間維度，識別代表各種日曆之時間週期的屬性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，屬性類型有助於從商務功能上的將屬性分類。 屬性類型有很多，而且大部份可供用戶端應用程式用來顯示或支援屬性。 不過，有些屬性類型對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]也有特定意義。 例如，有些屬性類型會針對時間維度，識別代表各種日曆之時間週期的屬性。  
   
 ##  <a name="setting_attibute_types"></a> 設定屬性類型  
  屬性 (attribute) 之 **Type** 屬性 (property) 的值決定該屬性 (attribute) 的屬性 (attribute) 類型。 定義維度或屬性時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的數個精靈會設定屬性類型。 這些 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 精靈] 將其他功能加入維度時，也會設定屬性類型。 例如，當商業智慧精靈加入帳戶智慧來識別包含維度之名稱、程式碼、號碼和帳戶結構的屬性時，精靈會將數個屬性類型套用至維度中的屬性。 商業智慧精靈也會耗用屬性類型，例如貨幣的轉換。 如需詳細資訊，請參閱 [建立貨幣類型維度](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
@@ -314,7 +314,7 @@ ms.lasthandoff: 11/17/2017
 |**WinterSummerSeason**|指出日期是否為冬季/夏季的一部份。|  
 |**Years**|代表年。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性和屬性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [維度屬性內容參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   

@@ -2,12 +2,12 @@
 title: "處理 Analysis Services 物件 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7314562257267c1350174e48c79c3e0b28bbaa6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 14559d9f5b7581c406df31aee9782019a580bc31
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-analysis-services-objects"></a>處理 Analysis Services 物件
-  處理會影響下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件類型： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫、Cube、維度、量值群組、資料分割，以及資料採礦結構和模型。 您可以針對每一個物件，指定物件的處理層級，或者指定 [處理預設] 選項，讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自動選取最佳的處理層級。 如需處理每一個物件之不同層級的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]處理會影響下列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件類型：[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫、 cube、 維度、 量值群組、 資料分割，以及資料採礦結構和模型。 您可以針對每一個物件，指定物件的處理層級，或者指定 [處理預設] 選項，讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自動選取最佳的處理層級。 如需處理每一個物件之不同層級的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
  您必須了解處理行為的後果，以減少任何不良影響。 例如，完整處理維度會自動將相依於該維度的所有資料分割設定為尚未處理狀態。 如此會造成受影響的 Cube 無法供查詢使用，直到相依的資料分割進行處理為止。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
   
  如需處理採礦結構和模型的詳細資訊，請參閱[處理需求和考量 &#40;資料採礦&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [處理的工具和方式 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
  [批次處理 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  

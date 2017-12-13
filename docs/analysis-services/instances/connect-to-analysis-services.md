@@ -2,12 +2,12 @@
 title: "連接到 Analysis Services |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 45b056f7b2d109396a114a7d8459bcc4db95c1ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 683474e873b45eca2fc39d0b8f254da06d205cf2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-analysis-services"></a>連接到 Analysis Services
-  請使用本節中的資訊，來了解連接字串屬性，用於連接的用戶端程式庫，Analysis Services 支援的驗證方法，以及如何設定或清除連接再讓伺服器離線。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]若要了解連接字串屬性，用於的連接的驗證方法都支援 Analysis Services，以及如何設定或清除連接再讓伺服器離線的用戶端程式庫中使用本節中的資訊。  
   
 ## <a name="analysis-services-connections"></a>Analysis Services 連接  
  Analysis Services 使用 TCP 當做網路通訊協定，並使用 XML for Analysis (XMLA) 當做溝通通訊協定。 Analysis Services 提供的所有用戶端程式庫在最低層級都會實作 XMLA-over-TCP。 雖然也可以根據原始 XMLA 來建置應用程式，但是大多數應用程式和應用程式開發人員仍然使用用戶端程式庫，因為這些程式庫擁有物件模型及編碼效率等優點。 對於用戶端與 Analysis Services 的連接，如果您無法跨堆疊使用 TCP，則可以使用 IIS 做為中繼連接。 透過 IIS 使用 HTTP 存取的其中一個優點是，能夠從在連接字串上傳遞認證的應用程式進行連接。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |[用於 Analysis Services 連接的資料提供者](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)|Analysis Services 提供三套用於存取伺服器作業或 Analysis Services 資料的用戶端程式庫。 本主題簡單介紹 ADOMD.NET、Analysis Services 管理物件 (AMO) 和 Analysis Services OLE DB 提供者 (MSOLAP)。|  
 |[中斷 Analysis Services 伺服器上的使用者和工作階段連接](../../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md)|讓伺服器離線或執行基準效能測試之前，請清除現有的連接和工作階段。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [後續安裝組態 &#40;Analysis Services&#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)   
  [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
   

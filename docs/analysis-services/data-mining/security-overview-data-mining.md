@@ -2,12 +2,12 @@
 title: "安全性概觀 （資料採礦） |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e41132d9c98186073c67799bea6e9d677f5b3c82
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1292f8fc828d938d59bd9ceafe8cbc467da8e02d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="security-overview-data-mining"></a>安全性概觀 (資料採礦)
-  保護 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之安全的程序發生在多個層級上。 您必須保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每一個執行個體及其資料來源的安全，以確定只有獲得授權的使用者對於選取的維度、採礦模型和資料來源，具有讀取或讀取/寫入權限。 您也必須保護基礎資料來源的安全，以防止未經授權的使用者惡意破壞機密商業資訊。 下列主題描述保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之安全的程序。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]保護的處理序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]發生在多個層級。 您必須保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每一個執行個體及其資料來源的安全，以確定只有獲得授權的使用者對於選取的維度、採礦模型和資料來源，具有讀取或讀取/寫入權限。 您也必須保護基礎資料來源的安全，以防止未經授權的使用者惡意破壞機密商業資訊。 下列主題描述保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之安全的程序。  
   
 ##  <a name="bkmk_Architecture"></a> 安全性架構  
  請參閱以下資源，以了解 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的基本安全性架構，包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證來驗證使用者存取權。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
  如果您使用 Integration Services 封裝清除資料、更新採礦模型或進行預測，您必須確保 Integration Services 服務具備儲存模型所在之資料庫的適當權限，以及來源資料的適當權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [角色與權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

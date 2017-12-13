@@ -2,12 +2,12 @@
 title: "刪除 Power Pivot 資料摘要的庫 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f1151f0b20e0da5fbdacc6ea0a025245430405ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca9fd712c42fa3cd2c39371172c1a948341d7b52
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>刪除 Power Pivot 資料摘要庫
-  您必須是網站擁有者，才能刪除資料摘要庫。 如果摘要庫中包含項目，就會連同摘要庫一起刪除。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您必須是網站擁有者，才能刪除資料摘要庫。 如果摘要庫中包含項目，就會連同摘要庫一起刪除。  
   
  您必須知道所要刪除資料摘要庫的名稱。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  在 [權限與管理] 之下，按一下 [刪除此文件庫]。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Power Pivot 資料摘要](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   

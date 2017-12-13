@@ -2,12 +2,12 @@
 title: "邏輯架構概觀 (Analysis Services-多維度資料) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 356eff5190638e3ac2086b1839649b99dc788699
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
-  Analysis Services 會以伺服器部署模式運作，該模式可判斷不同類型的 Analysis Services 模型所使用的記憶體架構和執行階段環境。 伺服器模式是在安裝期間決定。 **多維度和資料採礦模式**支援傳統 OLAP 和資料採礦。 **表格式模式**支援表格式模型。 **SharePoint 整合的模式**做為已安裝的 Analysis Services 的執行個體是指[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint，使用載入和查詢 Excel 或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]活頁簿內的資料模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services 會決定不同類型的 Analysis Services 模型所使用的記憶體架構和執行階段環境的伺服器部署模式運作。 伺服器模式是在安裝期間決定。 **多維度和資料採礦模式**支援傳統 OLAP 和資料採礦。 **表格式模式**支援表格式模型。 **SharePoint 整合的模式**做為已安裝的 Analysis Services 的執行個體是指[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint，使用載入和查詢 Excel 或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]活頁簿內的資料模型。  
   
  本主題說明 Analysis Services 以多維度和資料採礦模式運作時的基本架構。 如需有關其他模式的詳細資訊，請參閱[表格式模型化 &#40;Ssas&#41;](../../../analysis-services/tabular-models/tabular-models-ssas.md)和[比較表格式和多維度方案 &#40;Ssas&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/17/2017
   
  此處所顯示的範例只包含單一事實資料表。 當 Cube 具有多份事實資料表時，會將每份事實資料表的量值組成量值群組，並根據定義的維度關聯性讓量值群組與特定的維度集產生關聯。 而透過指定資料來源檢視的參與資料表和關聯性的資料粒度，即可建立這些關聯性。 **相關的主題：**[維度關聯性](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [多維度模型資料庫 &#40;Ssas&#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

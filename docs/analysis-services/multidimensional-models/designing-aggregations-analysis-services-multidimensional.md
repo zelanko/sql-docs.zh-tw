@@ -2,12 +2,12 @@
 title: "設計彙總 (Analysis Services-多維度) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: efa41383ba0e5ba5032b4763dc069fd83d03e489
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 139ad1c8585dbed61b4881b2a171c18b686bbf37
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>設計彙總 (Analysis Services - 多維度)
-  彙總是 Cube 資料的預先計算摘要，可幫助啟用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以提供快速查詢回應。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]彙總是預先計算的摘要，可幫助啟用的 cube 資料的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供快速查詢回應。  
   
  若要設定分割區的儲存選項和設計彙總，請使用彙總設計精靈。 此精靈一次操作一個量值群組的單一分割區，因此您可以為每一個分割區選取不同的選項和設計。 此精靈會逐步引導您設定分割區的儲存和設計彙總。 如需設定儲存的詳細資訊，請參閱。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
  精靈的最後步驟可讓您處理或延遲處理。 處理會建立您以精靈設計的彙總，而延遲處理則會儲存所設計的彙總供未來處理，如此可讓設計活動繼續而不進行處理。 視分割區的大小而定，處理可能需要花費很多時間。 您可以選擇中斷處理分割區。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [彙總和彙總設計](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

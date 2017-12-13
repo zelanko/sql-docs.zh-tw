@@ -2,12 +2,12 @@
 title: "備份、 還原和同步處理資料庫 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d23fcaca8e9ad0d73d1e79566d2fa11348382a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7155763db87be5c44ae9e5718d3d72939380038b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>備份、還原和同步處理資料庫 (XMLA)
-  在 XML for Analysis 中，有三個命令分別可用來備份、還原和同步處理資料庫：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在 XML for Analysis，有三個命令所備份、 還原和同步處理資料庫：  
   
 -   [備份](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)命令會備份[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]備份檔案 (.abf)，一節中所述[備份資料庫](#backing_up_databases)。  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 11/17/2017
   
  您可以使用**位置**同步處理 ROLAP 物件的同步處理命令中的項目。 每個**位置**用來放置資料來源，項目**DataSourceType**屬性必須明確設定為*本機*。 執行個體時提供 SQL Server 登入。 您也必須設定**ConnectionString**屬性**位置**至新位置的連接字串的項目。 同步處理期間， **Synchronize**命令將會取代所識別的資料來源的連接字串**DataSourceID**屬性**位置**具有值的項目**ConnectionString**屬性**位置**項目。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Backup 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [Restore 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
  [Synchronize 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   

@@ -2,12 +2,12 @@
 title: "建立導出的資料表 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: adeaa21b5bf9a70f52dc6442b5e453b99ad6721b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 61ad9b1d13918bd6d172c7670b20b127d0713b67
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-calculated-table-ssas-tabular"></a>建立導出資料表 (SSAS 表格式)
-  *導出資料表* 是以 DAX 查詢或運算式為基礎的計算物件，衍生自相同模型中其他資料表的全部或部分。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]A*導出的資料表*DAX 查詢或運算式為基礎的計算的物件衍生自全部或部分的相同模型中其他資料表。  
   
  導出資料表可以解決的一個常見的設計問題就是呈現特定內容中的角色扮演維度，以便您將它公開為用戶端應用程式中的查詢結構。  您可能還記得，角色扮演維度只是一個顯示在多個內容中的資料表 — 典型的例子就是 [Date] 資料表，根據外部索引鍵關聯性可顯示為 OrderDate、ShipDate 或 DueDate。 藉由明確地建立 ShipDate 的導出資料表，您可以取得一個和其他資料表一樣可以完全運作，用來進行查詢的獨立資料表。  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 =CROSSJOIN(DimProductCategory, DimCurrency)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Data Analysis Expressions &#40; DAX &#41;在 Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
  [了解表格式模型中的 DAX &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  

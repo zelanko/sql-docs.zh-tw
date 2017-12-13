@@ -2,12 +2,12 @@
 title: "EXISTING 關鍵字 (MDX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c8542b33d91ff7a228eb2f8b2be29b6b6748c4c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5bc9a22779eba59b104b75587c8fb216218cdb10
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query---existing-keyword"></a>MDX 查詢-EXISTING 關鍵字
-  強制在目前內容內評估指定的集合。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]強制指定的設定為目前的內容內評估。  
   
 ## <a name="syntax"></a>語法  
   
@@ -83,7 +83,7 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Count &#40;集合&#41; &#40;MDX&#41;](../../../mdx/count-set-mdx.md)   
  [AddCalculatedMembers &#40;MDX &#41;](../../../mdx/addcalculatedmembers-mdx.md)   
  [彙總 &#40;MDX &#41;](../../../mdx/aggregate-mdx.md)   

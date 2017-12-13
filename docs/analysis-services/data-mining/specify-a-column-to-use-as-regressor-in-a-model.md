@@ -2,12 +2,12 @@
 title: "指定要使用的資料行做為模型中的迴歸輸入變數 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f818532f51fa5fbbec6b6688709173849eae063
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d21033d8d839a11f4c511d7913f94b809a64881f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>在模型中指定當做迴歸輸入變數使用的資料行
-  線性迴歸模型會把可預測屬性的值表示為公式的結果，此公式結合輸入的方式會使資料盡可能地貼近預估迴歸線。 這種演算法只接受數值當做輸入，而且會自動偵測提供最佳解的輸入。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]線性迴歸模型代表可預測屬性的值做為結合的方式，為密切儘可能納入資料輸入的公式的結果來預估迴歸線。 這種演算法只接受數值當做輸入，而且會自動偵測提供最佳解的輸入。  
   
  不過，您可以藉由將 FORCE_REGRESSOR 參數加入模型並且指定所使用的迴歸輸入變數，指定將資料行包含為迴歸輸入變數。 當屬性具有某種意義 (即使其效果過小而無法由模型偵測出來)，或者您想要確保屬性包含在公式中時，就可以這麼做。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
      在檢視器中，模型會以包含迴歸公式的單一節點來表示。 您可以在 [採礦圖例] 中檢視公式，或者也可以藉由使用查詢來擷取公式的係數。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Microsoft 線性迴歸演算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 線性迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   

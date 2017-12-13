@@ -2,12 +2,12 @@
 title: "加入巢狀的資料表至採礦結構 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 95bac11034fd091d9390a618568a6b58e6067dcf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 779df394f1ce179c07292723200a7405d4648ec8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>將巢狀資料表加入至採礦結構
-  資料採礦精靈建立巢狀資料表之後，即可使用資料採礦設計師，將巢狀資料表加入至採礦結構。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用資料採礦設計師來建立資料採礦精靈之後，加入巢狀的資料表至採礦結構。  
   
 ### <a name="to-add-a-nested-table-to-a-mining-structure"></a>若要加入巢狀資料表至採礦結構  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
      包含索引鍵資料行的新資料表資料行，就會加入至採礦結構。 如需如何加入其他資料行的相關資訊，請參閱 [將資料行加入至採礦結構](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

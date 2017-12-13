@@ -2,12 +2,12 @@
 title: "集合 (ASSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 68be246ab77c93a910a4d37b40808a42adecb8ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be1fe8952758379ec471b22e60c2c643f87013c4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="collections-assl"></a>集合 (ASSL)
-  這個參考章節包含在「Analysis Services 指令碼語言」(ASSL) 結構描述中當做集合之每個元素的語法和使用方式資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]這個參考章節包含每個項目，可做為集合中的 Analysis Services 指令碼語言 (ASSL) 結構描述的語法和使用方式資訊。  
   
  雖然 ASSL 結構描述僅包含 XML 元素，從開發人員的觀點來看，這一節所述的元素會對應至物件的集合，例如**維度**和**Cube**集合。  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/17/2017
 |[Translations 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/translations-element-assl.md)|包含集合[轉譯](../../../analysis-services/scripting/objects/translation-element-assl.md)元素與父元素相關聯。|  
 |[UnknownMemberTranslations 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/unknownmembertranslations-element-assl.md)|包含標題的翻譯集合[UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md)維度的項目。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 指令碼語言 XML 元素階層 &#40;ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   

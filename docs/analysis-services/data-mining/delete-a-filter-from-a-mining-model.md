@@ -2,12 +2,12 @@
 title: "從採礦模型刪除篩選器 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 36eec0622aa30b2ece9eac7ff3ee3b4e6403d252
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f39a61be641cf10e7cc3753e7e4c169013076f20
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>從採礦模型刪除篩選
-  當您建立採礦模型的篩選時，您可以在資料來源檢視中的資料子集上建立模型。 篩選對於測試原始資料子集上之模型的精確度也非常實用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您在採礦模型上建立篩選時，您可以建立模型的資料來源檢視中的資料子集上。 篩選對於測試原始資料子集上之模型的精確度也非常實用。  
   
  不過，如果想要再次檢視完整的案例集，則必須刪除篩選。 此程序描述如何移除篩選的條件，或完全刪除篩選。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  按退格鍵或 Delete 鍵。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [鑽研採礦模型的案例資料](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
  [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  

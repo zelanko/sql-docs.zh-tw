@@ -2,12 +2,12 @@
 title: "MDSCHEMA_INPUT_DATASOURCES 資料列集 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b5b662ff2397cc845284048a9406e0b01b5aeb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 64055e6a00de0229971812cf0979b838e15b8d03
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdschemainputdatasources-rowset"></a>MDSCHEMA_INPUT_DATASOURCES 資料列集
-  說明在資料庫內定義的資料來源。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述在資料庫內定義的資料來源。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **MDSCHEMA_INPUT_DATASOURCES**資料列集包含下列資料行。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |**DATASOURCE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**DATASOURCE_TYPE**|**DBTYPE_WSTR**|選擇性。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

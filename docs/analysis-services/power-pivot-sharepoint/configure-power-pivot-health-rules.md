@@ -2,12 +2,12 @@
 title: "設定 Power Pivot 健全狀況規則 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09a92c74c31247541767258e30b9d61d62cd567d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d18bf49c81bbd296160d21e90e59d6cce68a163d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-health-rules"></a>設定 PowerPivot 健全狀況規則
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 包含的 SharePoint 健全狀況規則可幫助您監控及修復伺服器可用性與組態問題。 套用至 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 的健全狀況規則會出現在 [檢閱規則定義] 頁面中。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]for SharePoint 包含的 SharePoint 健全狀況規則可幫助您監控及修復伺服器可用性與組態問題。 套用至 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 的健全狀況規則會出現在 [檢閱規則定義] 頁面中。  
   
  健全狀況規則可以早期偵測最終可能導致服務中斷的伺服器問題。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 提供數個規則來協助您在影響使用者之前，先識別並修正問題。 您可以自訂這些規則中的多個規則，以納入部署的唯一特性。 例如，如果您想要更多時間來處理磁碟空間的警告，可以將可用磁碟空間百分比從 5% 提高到 10%，讓您可以提前收到警告。  
   
@@ -136,7 +137,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      此組態設定會對應到 [檢閱問題與方案] 頁面上的以下規則定義：[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 使用量資料並未以預期的頻率更新]。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [設定磁碟空間使用量 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)   
  [Power Pivot 管理儀表板和使用量資料](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   

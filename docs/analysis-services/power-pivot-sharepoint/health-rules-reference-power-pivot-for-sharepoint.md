@@ -2,12 +2,12 @@
 title: "健全狀況規則參考 (Power Pivot for SharePoint) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da1a6f30d5a94efd5aaf9a5fecc5bd4435a49bfd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e1e98142c2234fc680daa8311cf35cbd8057bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>健全狀況規則參考 (Power Pivot for SharePoint)
-  本參考主題描述 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 安裝所加入的 SharePoint 健全狀況規則。 這些規則是用來報告伺服器健全狀況、可用性或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務應用程式組態或是其相關 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的問題。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本參考主題會描述所加入的 SharePoint 健全狀況規則[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]for SharePoint 安裝。 這些規則是用來報告伺服器健全狀況、可用性或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務應用程式組態或是其相關 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的問題。  
   
  下表根據這些規則出現在 SharePoint 管理中心的 [狀況分析規則定義] 頁面上的順序加以列出。 可設定的規則是您可以在觸發規則時變更臨界值的規則。 如需詳細資訊，請參閱 [設定 Power Pivot 健全狀況規則](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)。 自動修復表示您可以從問題報告頁面按一下內建修復方法來解決問題。  
   

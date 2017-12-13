@@ -2,12 +2,12 @@
 title: "MDSCHEMA_MEMBERS 資料列集 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5ac98919c5ac10900eb69c9fe7319c6e8b22a75
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bff8fc8c121f88dbc8bf7cbdc0b2ce1705934702
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdschemamembers-rowset"></a>MDSCHEMA_MEMBERS 資料列集
-  描述資料庫內的成員。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述資料庫內的成員。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **MDSCHEMA_MEMBERS**資料列集包含下列資料行。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 |**TREE_OP**|**DBTYPE_I4**|(選擇性) 只適用於單一成員：<br /><br /> **MDTREEOP_ANCESTORS** (**0x20**) 會傳回所有上階。<br /><br /> **MDTREEOP_CHILDREN** (**0x01**) 傳回直屬子系。<br /><br /> **MDTREEOP_SIBLINGS** (**0x02**) 在相同層級傳回成員。<br /><br /> **MDTREEOP_PARENT** (**0x04**) 傳回的直屬父代。<br /><br /> **MDTREEOP_SELF** (**0x08**) 傳回本身傳回的資料列的清單中。<br /><br /> **MDTREEOP_DESCENDANTS** (**0x10**) 會傳回所有下階。|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|（選擇性）預設限制為 1 的值。 點陣圖，下列有效的值之一：<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION (維度)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
