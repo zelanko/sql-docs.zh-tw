@@ -1,5 +1,5 @@
 ---
-title: "catalog.clear_object_parameter_value （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.clear_object_parameter_value (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d0d89081a31341a8d813d9985940c0e3ce0160a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9c079f4c5ce9809d1624992601213f6d5fafc8e3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +39,20 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @folder_name =] *folder_name*  
- 包含專案之資料夾的名稱。 *Folder_name*是**nvarchar （128)**。  
+ [ @folder_name = ] *folder_name*  
+ 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
   
- [ @project_name =] *project_name*  
- 專案的名稱。 *Project_name*是**nvarchar （128)**。  
+ [ @project_name = ] *project_name*  
+ 專案的名稱。 *project_name* 是 **nvarchar(128)**。  
   
- [ @object_type =] *object_type*  
- 物件的類型。 有效的值包括 `20` (專案) 和 `30` (封裝)。 *Object_type*是**smallInt**。  
+ [ @object_type = ] *object_type*  
+ 物件的類型。 有效的值包括 `20` (專案) 和 `30` (封裝)。 *object_type* 是 **smallInt**。  
   
- [@ 物件 b =]*物件 b*  
- 封裝名稱。 *物件 b*是**nvarchar （260)**。  
+ [ @ object _name = ] *object _name*  
+ 封裝名稱。 *object _name* 是 **nvarchar(260)**。  
   
- [@parameter_名稱 =] *parameter_name*  
- 參數的名稱。 *Parameter_ 名稱*是**nvarchar （128)**。  
+ [ @parameter_ name = ] *parameter_name*  
+ 參數的名稱。 *parameter_ name* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
@@ -67,12 +65,12 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 -   專案的 READ 和 MODIFY 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
- 下列清單描述可能會導致 clear_object_parameter 預存程序引發錯誤的某些條件：  
+ 下列清單將描述可能會造成 clear_object_parameter 預存程序引發錯誤的某些條件：  
   
 -   指定了無效的物件類型，或在專案中找不到物件名稱。  
   
@@ -83,4 +81,3 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 -   使用者未具備適當的權限。  
   
   
-

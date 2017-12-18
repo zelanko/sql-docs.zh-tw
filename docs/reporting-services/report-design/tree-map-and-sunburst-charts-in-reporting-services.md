@@ -1,10 +1,13 @@
 ---
 title: "SQL Server Reporting Services 中的樹狀圖與放射環狀圖 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 50224e926c08951887a6423ab1c95eb7ac23a944
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ece2ccbf6f9c67789d5d248a9ad92b2acf0a7f36
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的樹狀圖與放射環狀圖
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀圖和放射環狀視覺效果是以視覺呈現階層資料的絕佳方式。 本文是如何新增樹狀圖或放射環狀圖到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表的概觀。 本文也包含可協助您開始使用的 AdventureWorks 範例查詢。  
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀圖和放射環狀視覺效果是以視覺呈現階層資料的絕佳方式。 本文是如何新增樹狀圖或放射環狀圖到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表的概觀。 本文也包含可協助您開始使用的 AdventureWorks 範例查詢。  
   
 ##  <a name="bkmk_treemap_chart"></a> 樹狀圖圖表  
 

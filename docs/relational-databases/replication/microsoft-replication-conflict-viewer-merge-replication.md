@@ -2,9 +2,12 @@
 title: "Microsoft 複寫衝突檢視器 (合併式複寫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2f4a72c3792d2274a4bad98d5ad8914549ad242
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2fdedf349961105e1c979b87c0876150acbf04dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 複寫衝突檢視器 (合併式複寫)
-  複寫衝突檢視器可以讓您檢視在複寫同步處理過程中發生的任何衝突。 如果在兩個不同的伺服器端 (例如，在發行者端和訂閱者端，或在兩個不同的訂閱者端) 修改相同的資料，就會發生衝突。 複寫會使用建立發行項時選取的 Conflict Resolver 以自動解決衝突。 不過，複寫衝突檢視器可讓您在必要時選擇衝突的不同解決方案。 會發生下列衝突：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 複寫衝突檢視器可以讓您檢視在複寫同步處理過程中發生的任何衝突。 如果在兩個不同的伺服器端 (例如，在發行者端和訂閱者端，或在兩個不同的訂閱者端) 修改相同的資料，就會發生衝突。 複寫會使用建立發行項時選取的 Conflict Resolver 以自動解決衝突。 不過，複寫衝突檢視器可讓您在必要時選擇衝突的不同解決方案。 會發生下列衝突：  
   
 -   更新衝突。 更新衝突發生於相同的資料在兩個位置同時更改時。 一個變更成功，而另一個變更失敗。 您可以選擇保存現有的資料 (成功的資料)、以衝突的資料覆寫現有的資料 (失敗的資料)，或者合併成功與失敗的資料並更新現有的資料。  
   

@@ -3,8 +3,11 @@ title: "SQL Server Management Studio 中的工具視窗 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,13 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5ad390a70e95a80bd6faf9763b5b24892e402706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 35014aa84f0b9126185016056ea4259d7ce68801
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具視窗
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 提供了許多功能強大的工具視窗，讓您可以在不同的開發及管理階段中使用。 有些工具適用於所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 元件，有些工具只適用於特定元件。 下表指出 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]的所有元件都能使用的工具。  
   
 |||  

@@ -2,9 +2,12 @@
 title: "Exception 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6587158c7da0f1169e794be782659cf3ed3bcaab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e7316a182f49097ddf93c370192b1f4740ef3d87
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="exception-event-class"></a>Exception 事件類別
-  Exception 事件類別是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中發生了例外狀況。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Exception 事件類別是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中發生了例外狀況。  
   
 ## <a name="exception-event-class-data-columns"></a>Exception 事件類別資料行  
   

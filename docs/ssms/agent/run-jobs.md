@@ -3,8 +3,11 @@ title: "執行作業 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7771bf3c44f4f4c583ce3f2277cc547ea69b6bf7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 703027a77c621f28a561082fa0d5f897220cc2b0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="run-jobs"></a>執行作業
-若要管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]、 [!INCLUDE[tsql](../../includes/tsql_md.md)] 預存程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 管理物件。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]、[!INCLUDE[tsql](../../includes/tsql_md.md)] 預存程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 管理物件。  
   
 ## <a name="related-tasks"></a>相關工作  
   

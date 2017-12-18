@@ -3,8 +3,11 @@ title: "移除查詢結果的資料行 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a70cc40a6645cb0341568fc7c2dec702323f3b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ade4d54d4e9e1ea791a7f0330d6bb6da091b6c19
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>移除查詢結果的資料行 (Visual Database Tools)
-如果在選取查詢中使用資料行，但不要此資料行顯示於結果集 (也就是說，不要它出現在查詢的選取清單)，您可以將它從輸出中移除。 從查詢的輸出移除資料行後，仍可以在搜尋條件中使用它或做為排序欄位。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果在選取查詢中使用資料行，但不要此資料行顯示於結果集 (也就是說，不要它出現在查詢的選取清單)，您可以將它從輸出中移除。 從查詢的輸出移除資料行後，仍可以在搜尋條件中使用它或做為排序欄位。  
   
 > [!NOTE]  
 > 如果您想要從查詢一併移除資料行，請參閱 [移除查詢的資料行 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md)。  

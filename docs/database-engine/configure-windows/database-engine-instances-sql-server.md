@@ -2,9 +2,12 @@
 title: "資料庫引擎執行個體 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 418e09ffb86563d22b145c2fba9f7ce61ad0c746
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 906150705dabca37cfee4eae1d0e19cecc641e4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-engine-instances-sql-server"></a>Database Engine 執行個體 (SQL Server)
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體是作為作業系統服務執行之 **sqlservr.exe** 可執行檔的複本。 每個執行個體都會管理數個系統資料庫以及一個或多個使用者資料庫。 每部電腦都可以執行多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。 應用程式會連接至執行個體，以在執行個體所管理的資料庫中執行工作。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體是作為作業系統服務執行之 **sqlservr.exe** 可執行檔的複本。 每個執行個體都會管理數個系統資料庫以及一個或多個使用者資料庫。 每部電腦都可以執行多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。 應用程式會連接至執行個體，以在執行個體所管理的資料庫中執行工作。  
   
 ## <a name="instances"></a>執行個體  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體是做為服務來操作，而該服務可處理所有應用程式要求，以使用執行個體所管理之任何資料庫中的資料。 這是來自應用程式之連接要求 (登入) 的目標。 如果應用程式和執行個體位在不同的電腦上，則此連接會透過網路連接來執行。 如果應用程式和執行個體位在相同的電腦上，則 SQL Server 連接可以網路連接或記憶體中的連接形式來執行。 連接完成時，應用程式會透過與執行個體的連接來傳送 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 此執行個體會根據資料庫中的資料和物件將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式解析為作業，而且如果已將必要的權限授與登入認證，則會執行工作。 任何擷取的資料以及任何訊息 (例如錯誤) 都會傳回給應用程式。  

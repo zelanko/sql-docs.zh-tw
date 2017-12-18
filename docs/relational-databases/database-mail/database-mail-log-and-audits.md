@@ -2,9 +2,12 @@
 title: "Database Mail 記錄與稽核 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 36ed8df0fb949ab678be1760b8c3dd9dfc247119
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f52d8d40a66f2331bf5a0ef12cdf3b8f741e4272
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-mail-log-and-audits"></a>Database Mail 記錄與稽核
-  Database Mail 記錄功能的設計目的是要提供方法來隔離並更正問題。 Database Mail 會將記錄資訊儲存至 **msdb** 資料庫。 Database Mail 電子郵件內容、電子郵件狀態和任何收到之訊息 (例如錯誤) 的相關資訊，是透過 Database Mail 進行記錄，而且可用於進行疑難排解和稽核。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Database Mail 記錄功能的設計目的是要提供方法來隔離並更正問題。 Database Mail 會將記錄資訊儲存至 **msdb** 資料庫。 Database Mail 電子郵件內容、電子郵件狀態和任何收到之訊息 (例如錯誤) 的相關資訊，是透過 Database Mail 進行記錄，而且可用於進行疑難排解和稽核。  
   
 ## <a name="database-mail-logs"></a>Database Mail 記錄檔  
  **msdb** 資料庫中的資料表會記錄來自 [Database Mail 外部程式](../../relational-databases/database-mail/database-mail-external-program.md)的資訊。 [Database Mail 檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md) 會公開資料表以供疑難排解之用。 如果 Service Broker 無法啟動外部程式、外部程式發生網路問題或 Simple Mail Transport Protocol (SMTP) 伺服器拒絕電子郵件訊息，則 [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md) 檢視中會出現錯誤。 當外部程式無法登入 **msdb** 資料表時，該程式會將錯誤記錄到 Windows 應用程式事件記錄檔中。  

@@ -1,9 +1,13 @@
 ---
 title: "全文檢索搜尋使用者入門 | Microsoft Docs"
 ms.date: 08/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 01c9732a26e3e5e717de05a16e4c65b06c9cd358
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 65e7b1e15e55604eb6f92d0aed96d3be7dc54ad1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
-預設會啟用 SQL Server 資料庫的全文檢索功能。 不過，您必須先建立全文檢索目錄，並在您想要搜尋的資料表或索引檢視表上建立全文檢索索引，才能執行全文檢索查詢。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 預設會啟用 SQL Server 資料庫的全文檢索功能。 不過，您必須先建立全文檢索目錄，並在您想要搜尋的資料表或索引檢視表上建立全文檢索索引，才能執行全文檢索查詢。
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>使用兩個步驟設定全文檢索搜尋
 設定全文檢索搜尋有兩個基本步驟︰  

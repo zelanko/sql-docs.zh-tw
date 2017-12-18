@@ -3,8 +3,11 @@ title: "開啟方式 (新增檔案) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce714ce9042b3c827e1916ec3b6664ca06e278e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1a6dddfbff4900c77823dbe7782dd720d75f4135
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-with-new-file"></a>開啟方式 (新增檔案)
-按一下 [檔案] 功能表上的 [開啟]，然後按一下 [檔案]，就可以在一或多個編輯器中開啟文件。 在 [開啟檔案] 對話方塊中選取檔案，按一下 [開啟] 箭頭，然後按一下 [開啟方式]。 在 [開啟方式] 對話方塊的 [選取要開啟的程式] 清單中，按一下慣用的程式，然後按一下 [開啟]。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 按一下 [檔案] 功能表上的 [開啟]，然後按一下 [檔案]，就可以在一或多個編輯器中開啟文件。 在 [開啟檔案] 對話方塊中選取檔案，按一下 [開啟] 箭頭，然後按一下 [開啟方式]。 在 [開啟方式] 對話方塊的 [選取要開啟的程式] 清單中，按一下慣用的程式，然後按一下 [開啟]。  
   
 ## <a name="options"></a>選項。  
 **選取要開啟的程式**  

@@ -2,9 +2,12 @@
 title: "資料庫鏡像和記錄傳送 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c9b4e97b5da12b98fc6d1a4ee362a4a7cb00e70b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 55051d755bb2fb2abec5668fb21328905c0dbf82
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>資料庫鏡像和記錄傳送 (SQL Server)
-  給定的資料庫可以進行鏡像或記錄傳送；它也可以同時進行鏡像和記錄傳送。 選擇使用的方式時，請考慮下列事項：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 指定的資料庫可以進行鏡像或記錄傳送；它也可以同時進行鏡像和記錄傳送。 選擇使用的方式時，請考慮下列事項：  
   
 -   您需要多少個目的地伺服器？  
   

@@ -2,9 +2,12 @@
 title: "Database Suspect Data Page 事件類別 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2984420c1a3106b88187af17a9d9babbc106b44b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5b6882a854d3cb6ea7f4febf7d66ecf09f20e9e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 事件類別
-  **Database Suspect Data Page** 事件類別指出何時要將頁面加入 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 中的 [suspect_pages](../../relational-databases/databases/msdb-database.md)資料表。 請在監視可疑頁面出現的追蹤中包含此事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Database Suspect Data Page** 事件類別指出何時要將頁面新增至 [msdb](../../relational-databases/databases/msdb-database.md) 中的 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 資料表。 請在監視可疑頁面出現的追蹤中包含此事件類別。  
   
 > [!NOTE]  
 >  這個事件會以非同步的方式發出，與將對應的資料列插入到 **suspect_pages** 資料表無關。 因此，接聽此事件的作業可能無法立即找到對應的 **suspect_pages** 項目。  

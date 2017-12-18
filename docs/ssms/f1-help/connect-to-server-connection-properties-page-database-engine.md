@@ -3,8 +3,11 @@ title: "連接到伺服器 (連接屬性頁面) 資料庫引擎 | Microsoft Docs
 ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-f1
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92c974ad90689a01d4155610b71babc7df7765d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a77352d39a6842399dbcae8b1db0c380b41b505b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine
-連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 執行個體或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 執行個體時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 連線到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 執行個體或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 執行個體時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  
   
 **連接到資料庫**  
 從清單中選取要連接的資料庫。 如果您選取 **<default>**，就會連線到伺服器的預設資料庫。 如果您選取 **<Browse server>**，您就可以瀏覽伺服器來尋找您要連接的資料庫。  

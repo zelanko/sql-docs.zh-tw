@@ -3,8 +3,11 @@ title: "顯示查詢屬性 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4e0fc1013d807d6b0ab6c6c2f32867b86a9fb8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4746b9f1006d627e2567a7bad861083ae4f015d8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="show-query-properties-visual-database-tools"></a>顯示查詢屬性 (Visual Database Tools)
-您可以在 [查詢和檢視設計師] 的 [屬性] 視窗中顯示查詢的屬性。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以在查詢和檢視表設計工具的 [屬性] 視窗中顯示查詢的屬性。  
   
 ### <a name="to-display-properties-for-a-query"></a>若要顯示查詢的屬性  
   

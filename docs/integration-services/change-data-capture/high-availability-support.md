@@ -1,5 +1,5 @@
 ---
-title: "高可用性支援 |Microsoft 文件"
+title: "高可用性支援 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a194c2d28916ad348086a02ff521c1b6cbb16542
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9792f20dfcb55685d1ebc5a49a611f1262bc0fd6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="high-availability-support"></a>高可用性支援
   Oracle CDC 服務是專為高可用性所設計。 以下功能會提供部分高可用性支援：  
@@ -39,4 +37,3 @@ ms.lasthandoff: 08/03/2017
 -   Oracle CDC 服務支援 Oracle RAC，好讓它與 Oracle 資料庫通訊並處理記錄，即使當其中一個 Oracle RAC 節點關閉時也是如此。  
   
   
-

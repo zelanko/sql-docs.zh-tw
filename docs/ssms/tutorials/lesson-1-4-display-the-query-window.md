@@ -2,9 +2,12 @@
 title: "顯示查詢視窗 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d08fcde17bb33268af8f2dbd62c14fcae1a9bafb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f8f181bb4d9eb048704be6b2c671f4870c1a8946
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-4---display-the-query-window"></a>課程 1-4 - 顯示查詢視窗
-當您開啟多個查詢視窗時，它們會顯示為索引標籤式文件視窗。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 當您開啟多個查詢視窗時，它們會顯示為索引標籤式文件視窗。  
   
 1.  在主要工具列上，按一下 [Database Engine 查詢]。 在 [連接到 Database Engine] 對話方塊中，按一下 [連接]。  
   

@@ -1,10 +1,13 @@
 ---
 title: "第 9 課︰管理備份組和檔案快照集備份 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc4ce7fe2c3648da7923dbb35fbfe252c971b006
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a2e16cd4312b50b700363be0dc85a67d2740a889
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-9-manage-backup-sets-and-file-snapshot-backups"></a>第 9 課︰管理備份組和檔案快照集備份
-在這一課，您將會使用 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) 系統預存程序來刪除備份組。 這個系統預存程序會刪除備份檔案以及與這個備份組相關聯的每個資料庫檔案上的檔案快照集。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您將會使用 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) 系統預存程序來刪除備份組。 這個系統預存程序會刪除備份檔案以及與這個備份組相關聯的每個資料庫檔案上的檔案快照集。  
   
 > [!NOTE]  
 > 如果您只是刪除 Azure Blob 容器中的備份檔案來嘗試刪除備份組，則只會刪除備份檔案本身，相關聯的檔案快照集將會予以保留。 如果您發現自己處於這種情況，請使用 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) 系統函數來識別孤立檔案快照集 URL，以及使用 [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) 系統預存程序來刪除每個孤立檔案快照集。 如需詳細資訊，請參閱  [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  

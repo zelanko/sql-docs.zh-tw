@@ -3,8 +3,11 @@ title: "Visual Database Tool 設計工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0dd9803b8a53023baa09ec8d05e075a642105388
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 206d464ab885728f270c81d9bb527b9c5f2a98ec
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tool 設計工具
-Visual Database Tools 是設計組合工具，可用來使用資料來源。 您可以使用這些工具來建立查詢、設計或修改資料庫結構，或是更新資料。 這些工具包括資料庫圖表設計工具、資料表設計師以及查詢和檢視設計師。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Visual Database Tools 是設計組合工具，可用來使用資料來源。 您可以使用這些工具來建立查詢、設計或修改資料庫結構，或是更新資料。 這些工具包括資料庫圖表設計工具、資料表設計師以及查詢和檢視設計師。  
   
 ## <a name="properties-window"></a>屬性視窗  
 [屬性] 視窗並非專屬於 Visual Database Tools，但可在其中進行許多修改動作。 其顯示目前所選取項目 (例如，資料表) 的屬性，並可讓您編輯這些屬性 (從屬性名稱到資料行定序的所有屬性)。 某些屬性可以在屬性視窗中查看，但必須以不同工具修改。  

@@ -1,5 +1,5 @@
 ---
-title: "檢閱及產生補充記錄指令碼 |Microsoft 文件"
+title: "檢閱及產生補充記錄指令碼 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- scripts
+f1_keywords: scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3213f6e757e9fc3bcff63d0833d7f0c7fdee201
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7b5587d6def935cf31d4bf96056b21cfd2c263a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>檢閱及產生補充記錄指令碼
   使用 [指令碼] 索引標籤可在設定補充記錄的 Oracle 來源資料庫上執行或重新執行指令碼。  
@@ -61,9 +58,8 @@ ms.lasthandoff: 08/03/2017
   
 2.  提供檔案名稱，然後按一下 **[儲存]** 來儲存檔案。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [如何編輯 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [執行指令碼的 oracle 認證](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [執行指令碼的 Oracle 認證](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   
-

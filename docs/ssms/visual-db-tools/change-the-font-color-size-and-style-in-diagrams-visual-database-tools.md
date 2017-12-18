@@ -3,8 +3,11 @@ title: "變更圖表中的字型色彩、大小及樣式 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a4dc93c6b56c1ab9578bb759a57935d5f14d333
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eb0f8bdb8cdb830825b419321ed15fe6557e1193
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>變更圖表中的字型色彩、大小及樣式 (Visual Database Tools)
-您可以透過變更字型色彩、大小及樣式，自訂資料庫圖表中文字的顯示方式。 進行修改後，這些變更就會套用至新的圖表以及現有的圖表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以透過變更字型色彩、大小及樣式，自訂資料庫圖表中文字的顯示方式。 進行修改後，這些變更就會套用至新的圖表以及現有的圖表。  
   
 ### <a name="to-change-the-font-color-size-and-style-in-diagrams"></a>若要變更圖表中的字型色彩、大小及樣式  
   

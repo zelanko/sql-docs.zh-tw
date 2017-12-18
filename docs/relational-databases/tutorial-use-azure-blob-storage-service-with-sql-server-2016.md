@@ -1,10 +1,13 @@
 ---
 title: "教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016 | Microsoft 文件"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 01/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3ee451e1af1df985f99281008c6e5fbf4147e11b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b9d87679a2775450c37feedec713f00c077145d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
-歡迎使用在 Microsoft Azure Blob 儲存體服務教學課程中使用 SQL Server 2016。 本教學課程可協助您了解如何將 Microsoft Azure Blob 儲存體服務用於 SQL Server 資料檔案和 SQL Server 備份。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 歡迎使用「在 Microsoft Azure Blob 儲存體服務中使用 SQL Server 2016」教學課程。 本教學課程可協助您了解如何將 Microsoft Azure Blob 儲存體服務用於 SQL Server 資料檔案和 SQL Server 備份。  
   
 Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL Server 2012 Service Pack 1 CU2 增強功能，並且已使用 SQL Server 2014 和 SQL Server 2016 進一步加強。 如需功能概觀以及使用此功能的優點，請參閱 [Microsoft Azure 中的 SQL Server 資料檔案](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。 如需即時的示範，請參閱 [File-Snapshot Backups Demo (檔案快照集備份示範)](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。  
   

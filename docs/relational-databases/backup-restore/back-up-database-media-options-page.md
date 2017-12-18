@@ -2,9 +2,12 @@
 title: "備份資料庫 (媒體選項頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b8d57e71183e433cb9c3c3038cecac6adf992072
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 36f6bc6f33194ce8bb4cf110fa8bbd44fd870a40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="back-up-database-media-options-page"></a>備份資料庫 (媒體選項頁面)
-  使用 [備份資料庫] 對話方塊的 [媒體選項] 頁面以簡式或修改資料庫媒體選項。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [備份資料庫] 對話方塊的 [媒體選項] 頁面，即可檢視或修改資料庫媒體選項。  
   
  **若要使用 SQL Server Management Studio 建立備份**  
   

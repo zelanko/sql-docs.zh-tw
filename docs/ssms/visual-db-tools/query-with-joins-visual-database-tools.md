@@ -3,8 +3,11 @@ title: "使用聯結進行查詢 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c22ecdbe76b036bbf78810db4d2a18729b184757
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a4d46c668c5654155783c3cc70a1ad23b33c5c82
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="query-with-joins-visual-database-tools"></a>使用聯結進行查詢 (Visual Database Tools)
-查詢結果可包含來自多個資料表或表格值物件的資料。 若要結合來自多個資料表值物件的資料，請使用 SQL 的 JOIN 作業。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查詢結果可包含來自多個資料表或表格值物件的資料。 若要結合來自多個資料表值物件的資料，請使用 SQL 的 JOIN 作業。  
   
 如需使用多個資料表建立查詢的詳細資訊，請參閱下列主題。  
   

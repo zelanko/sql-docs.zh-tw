@@ -2,9 +2,12 @@
 title: "執行使用者定義函式 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8bf738f8ef313edd347fadcabf91a8007c228a7d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 637dbc59f1aaad1bf6fbbf5c11c8a92a504ef847
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execute-user-defined-functions"></a>執行使用者定義函數
-  使用 Transact-SQL 執行使用者定義函數。
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 使用 Transact-SQL 執行使用者定義函數。
   
 
 > **注意** ︰造訪  [使用者定義的函式](user-defined-functions.md) 和 [Create Function (Transact SQL](../../t-sql/statements/create-function-transact-sql.md) 以取得使用者定義函式的詳細資訊。 

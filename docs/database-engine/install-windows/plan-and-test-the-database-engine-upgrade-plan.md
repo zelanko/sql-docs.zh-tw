@@ -2,11 +2,12 @@
 title: "計劃和測試資料庫引擎升級計畫 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/20/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: cbe7bceca06dd5eef19b56433a8054c20d2e88d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef0de3c547ac843807bf9e8e906ea19fa1e3a5b5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>計劃和測試資料庫引擎升級計畫
-  若要成功執行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 升級，不論使用何種方法，都需要適當規劃。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 若要成功執行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 升級，不論使用何種方法，都需要適當規劃。  
   
 ## <a name="release-notes-and-known-upgrade-issues"></a>版本資訊與已知升級問題  
  升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之前，請檢閱：

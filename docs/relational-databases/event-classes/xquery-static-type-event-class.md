@@ -2,9 +2,12 @@
 title: "XQuery 靜態類型事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e132b69508b9f87ca6d9e0a3f1706582f630440
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 838605d370e0c98d1c9ba079adc6ec38d33af6b4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xquery-static-type-event-class"></a>XQuery 靜態類型事件類別
-  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 XQuery 運算式時，就會發生 XQuery 靜態類型事件類別。 這個事件類別提供 XQuery 運算式的靜態類型。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 XQuery 運算式時，就會發生 XQuery 靜態類型事件類別。 這個事件類別提供 XQuery 運算式的靜態類型。  
   
 ## <a name="xquery-static-type-event-class-data-columns"></a>XQuery 靜態類型事件類別資料行  
   

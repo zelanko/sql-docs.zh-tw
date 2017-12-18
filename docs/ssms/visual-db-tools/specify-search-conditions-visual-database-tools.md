@@ -3,8 +3,11 @@ title: "指定搜尋條件 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6f2cd332b92b5ac3e82f459bb5956f7a55475759
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3573826befe64c24817f0c1198af1a2c632bcb6a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>指定搜尋條件 (Visual Database Tools)
-您可以藉由指定搜尋條件來指定出現在查詢中的資料列。 例如，若是正在查詢 `employee` 資料表，可以指定只尋找在特定區域工作的員工。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以藉由指定搜尋條件來指定出現在查詢中的資料列。 例如，若是正在查詢 `employee` 資料表，可以指定只尋找在特定區域工作的員工。  
   
 使用運算式指定搜尋條件。 通常運算式包含運算子和搜尋值。 例如，若要尋找在特定銷售區域的員工，可以在 `region` 資料行指定下列搜尋準則：  
   

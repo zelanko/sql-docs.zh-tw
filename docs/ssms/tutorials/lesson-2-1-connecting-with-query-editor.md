@@ -2,9 +2,12 @@
 title: "連接查詢編輯器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6714bafa18075219a7da895b05b954f3d67329d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5a822268755f46da6775150119b6c7fd771838c8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-2-1---connecting-with-query-editor"></a>課程 2-1 - 連接查詢編輯器
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 允許您在未連接伺服器的情況下，撰寫或編輯程式碼。 當伺服器無法使用，或您想節省寶貴的伺服器或網路資源時，這可能很有用。 您也可以在不開啟新 [查詢編輯器] 視窗或重新輸入程式碼的情況下，將查詢編輯器改成連接到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 允許您在未連線伺服器的情況下，撰寫或編輯程式碼。 當伺服器無法使用，或您想節省寶貴的伺服器或網路資源時，這可能很有用。 您也可以在不開啟新 [查詢編輯器] 視窗或重新輸入程式碼的情況下，將查詢編輯器改成連接到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
 ## <a name="coding-offline"></a>離線撰寫程式碼  
   

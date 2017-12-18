@@ -3,8 +3,11 @@ title: "方案 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f9d66e69535af5c4811d9ac6f038d6fa0a2ee78
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 506e7aec9c3c6c89d057d75f4b8b92947cc0cd50
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="solutions-sql-server-management-studio"></a>方案 (SQL Server Management Studio)
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 方案是一個或多個相關專案的集合。 專案是開發人員用來組織相關檔案 (例如常用管理指令碼的集合) 的容器。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 解決方案是一或多個相關專案的集合。 專案是開發人員用來組織相關檔案 (例如常用管理指令碼的集合) 的容器。  
   
 ## <a name="solution-overview"></a>方案概觀  
 您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 做為 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]的指令碼開發平台。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 程式碼編輯器可用來開發關聯式和多維資料庫的指令碼和查詢，以及將相關指令碼和查詢都收集至專案中。  

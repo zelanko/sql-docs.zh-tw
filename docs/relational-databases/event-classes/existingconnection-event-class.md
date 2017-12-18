@@ -2,9 +2,12 @@
 title: "ExistingConnection 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 98b79af4713d77b3c53bf2de715d70d2bddc8ede
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f3d1b7aff3c86f0ec85ccc66f5adf96ae99cfb20
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection 事件類別
-  ExistingConnection 事件類別指出現有使用者連接在追蹤啟動時的屬性。 伺服器會為每個現有使用者連接引發一個 ExistingConnection 事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] ExistingConnection 事件類別指出現有使用者連線在追蹤啟動時的屬性。 伺服器會為每個現有使用者連接引發一個 ExistingConnection 事件。  
   
 ## <a name="existing-connection-event-class-data-columns"></a>Existing Connection 事件類別資料行  
   

@@ -3,8 +3,11 @@ title: "在相同查詢中使用 HAVING 和 WHERE 子句 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 44b656aff64222d86d80fd7ef68a08267c15ffe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4bfd62f245d9f2c46324fc437483fb379a2faa7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>在相同查詢中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
-在某些情況下，將條件套用到整個群組 (使用 HAVING 子句) 之前，您可能會想排除群組中的個別資料列 (使用 WHERE 子句)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在某些情況下，將條件套用到整個群組 (使用 HAVING 子句) 之前，您可能會想排除群組中的個別資料列 (使用 WHERE 子句)。  
   
 HAVING 子句類似 WHERE 子句，但是只適用於整個群組 (也就是在結果集中表示群組的資料列)，而 WHERE 子句則適用於個別資料列。 查詢可以同時包含 WHERE 子句和 HAVING 子句。 在此情況下：  
   

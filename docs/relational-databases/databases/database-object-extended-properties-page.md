@@ -2,9 +2,12 @@
 title: "資料庫物件 (擴充屬性頁面) | Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 398d3c8ac57fa0ffa8e66d5075b44d2363ebba66
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ada959607aff6c1482194b19e91284cf1aaef67e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-object-extended-properties-page"></a>資料庫物件 (擴充屬性頁面)
-  擴充屬性讓您能夠將自訂屬性加入資料庫物件中。 使用此頁面來檢視或修改選取物件的擴充屬性。 所有資料庫物件類型的 [擴充屬性] 頁面都是相同的。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 擴充屬性讓您能夠將自訂屬性新增至資料庫物件。 使用此頁面來檢視或修改選取物件的擴充屬性。 所有資料庫物件類型的 [擴充屬性] 頁面都是相同的。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **資料庫**  

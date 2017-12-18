@@ -3,8 +3,11 @@ title: "選取 SQL Server Agent 服務的帳戶 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c4caa940800f07f91adbb6472b1221c6aa35234e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ef5922992da36377ad46ab4f76a3a8fb6b310edb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>選取 SQL Server Agent 服務的帳戶
-服務啟動帳戶會定義 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Agent 用來執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 帳戶及其網路權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會以指定的使用者帳戶執行。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 組態管理員選擇下列選項，藉此選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務的帳戶：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 服務啟動帳戶會定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 用來執行的 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 帳戶及其網路權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會以指定的使用者帳戶執行。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 組態管理員選擇下列選項，藉此選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務的帳戶：  
   
 -   **內建帳戶**。 您可從下列內建 Windows 服務帳戶的清單中進行選擇：  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：對於多伺服器管理使用非管理帳戶  
 在主要伺服器上編列目標伺服器可能失敗，並出現下列錯誤訊息：「編列作業失敗」。  
   
-若要解決此錯誤，請重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務。 如需詳細資訊，請參閱 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/en-us/32660a02-e5a1-411a-9e57-7066ca459df6)。  
+若要解決此錯誤，請重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務。 如需詳細資訊，請參閱 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)。  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2：對於多伺服器管理使用本機系統帳戶  
 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務在本機系統帳戶下執行時支援多伺服器管理，但前提是主要伺服器和目標伺服器都必須位於相同電腦上。 如果您使用此組態，則當您在主要伺服器上編列目標伺服器時會傳回下列訊息：  
@@ -115,13 +118,13 @@ ms.lasthandoff: 11/09/2017
   
 **若要指定 SQL Server Agent 的郵件設定檔**  
   
--   [如何：將 SQL Server Agent Mail 設定為使用 Database Mail (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [如何：將 SQL Server Agent Mail 設定為使用 Database Mail (SQL Server Management Studio)](http://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 組態管理員，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 必須在啟動作業系統時啟動。  
   
 ## <a name="see-also"></a>另請參閱  
-[設定 Windows 服務帳戶](http://msdn.microsoft.com/en-us/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
-[使用 SQL 電腦管理員管理服務](http://msdn.microsoft.com/en-us/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+[設定 Windows 服務帳戶](http://msdn.microsoft.com/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
+[使用 SQL 電腦管理員管理服務](http://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
   

@@ -2,9 +2,12 @@
 title: "摘要：將資料表轉換為階層式結構 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a0e190e5277b5f662c9a3e4e13957f2e3d6f72c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b9d4e54cf888e5c8f66d4c47aa41edb532f06f74
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-4---summary---converting-a-table-to-a-hierarchical-structure"></a>第 1-4 課：摘要 - 將資料表轉換為階層式結構
-**hierarchyid** 資料類型可以用簡單、精簡的格式，儲存階層式關聯性。 適當的索引可以按照階層的層級、階層的子樹，或傳統的單一查閱，有效傳回資料。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] **hierarchyid** 資料類型可以用簡單、精簡的格式，儲存階層式關聯性。 適當的索引可以按照階層的層級、階層的子樹，或傳統的單一查閱，有效傳回資料。  
   
 在本課程中，您使用其中兩個階層式方法。 下一課將會示範如何使用其他方法查詢與操作階層式資料。  
   

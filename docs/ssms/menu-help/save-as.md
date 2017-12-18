@@ -3,8 +3,11 @@ title: "另存新檔 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9feab44925e6c973b712e0d85e07912c00f91cd3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2f86afead1c6eca201a6669e8f64e89425f0cb1c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-as"></a>另存新檔
-此對話方塊可用於將目前項目的執行個體，以指定的檔案格式儲存在指定位置。 按一下 [檔案]**檔案** 功能表上的 [另存新檔] *<file>*  上 功能表 (其中 *<file>* 是目前項目的名稱)，或在程式碼輯器中按 ALT + F、A 鍵。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 此對話方塊可用於將目前項目的執行個體，以指定的檔案格式儲存在指定位置。 按一下 [檔案]**檔案** 功能表上的 [另存新檔] *<file>*  上 功能表 (其中 *<file>* 是目前項目的名稱)，或在程式碼輯器中按 ALT + F、A 鍵。  
   
 ## <a name="central-panel"></a>中央面板  
 **儲存於**  

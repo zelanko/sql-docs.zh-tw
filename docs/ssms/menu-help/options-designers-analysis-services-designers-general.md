@@ -3,8 +3,11 @@ title: "選項 (設計工具 - Analysis Services 設計工具 - 一般) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5059827ffb027d0397863b2076da4bbe8507fccc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fabfd5ea9993155d3d4516f80779032c96de42a7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>選項 (設計工具 - Analysis Services 設計工具 - 一般)
-使用 [設計師]、[維護計畫]、[Analysis Services]、[一般] 頁面，來決定 Analysis Services 設計師的預設行為。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [設計工具]、[維護計畫]、[Analysis Services]、[一般] 頁面，來決定 Analysis Services 設計工具的預設行為。  
   
 ## <a name="connectivity"></a>連接性  
 查詢逾時  

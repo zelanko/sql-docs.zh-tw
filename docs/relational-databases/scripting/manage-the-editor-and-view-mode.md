@@ -2,9 +2,12 @@
 title: "管理編輯器和檢視模式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 20b9724db826018521d68f44e42447112921027c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b3058e6ca6902a5b91368724763ab53f82bc982b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理編輯器和檢視模式
-  編輯器提供了許多用來控制程式碼檢視的方式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 編輯器提供了許多用來控制程式碼檢視的方式。  
   
 ## <a name="changing-the-view-mode"></a>變更檢視模式  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有一個稱為 **[索引標籤文件]**的檢視模式，您可以利用這個模式來同時開啟多個編輯器和多份文件，並利用編輯器頂端的索引標籤來存取它們。 另外，您也可以在多重文件介面 (MDI) 模式中開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 環境，此時會將不含索引標籤的各個視窗聯結起來，您可以並排這些視窗、將它們最小化...等等。  

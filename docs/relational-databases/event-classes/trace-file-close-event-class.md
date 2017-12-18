@@ -2,9 +2,12 @@
 title: "Trace File Close 事件類別 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4478bfd117f1388d0372081cf76018786d8e9919
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6df506ce2a83364b176fb3975dc935bf1d36175e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close 事件類別
-  **Trace File Close** 事件類別表示已在追蹤檔案換用期間關閉追蹤檔案。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Trace File Close** 事件類別表示已在追蹤檔案換用期間關閉追蹤檔案。  
   
 ## <a name="trace-file-close-event-class-data-columns"></a>Trace File Close 事件類別資料行  
   

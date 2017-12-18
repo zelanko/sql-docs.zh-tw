@@ -3,8 +3,11 @@ title: "以遞增或遞減順序排序 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dda95a29640a5f026db2f9f57d73b84b7a1bd561
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 03a5868a7e70052899d938443935b0443c2bd915
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>以遞增或遞減順序排序 (Visual Database Tools)
-您可以使用  或  關鍵字搭配  子句，以遞增或遞減的方式，排序結果集中一個或多個資料行內的查詢結果。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用 **ASC** 或 **DESC** 關鍵字搭配 **ORDER BY** 子句，以遞增或遞減的方式，排序結果集中一或多個資料行內的查詢結果。  
   
 > [!NOTE]  
 > 排序次序一部份取決於資料行的定序序列。 您可以在 [定序](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md)對話方塊中變更定序序列。  
