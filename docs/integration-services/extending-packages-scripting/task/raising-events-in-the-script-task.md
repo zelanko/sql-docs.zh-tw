@@ -1,5 +1,5 @@
 ---
-title: "在指令碼工作中引發事件 |Microsoft 文件"
+title: "在指令碼工作中引發事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - events [Integration Services], scripts
 - warnings [Integration Services]
@@ -25,22 +22,21 @@ helpviewer_keywords:
 - Events property
 - Script task [Integration Services], events
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 80f16c8d4fa5d4eb27eefe76b2dcf811e21cfaab
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f89d065e802cf37ddbca5ef173e3cd3004a00bbb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raising-events-in-the-script-task"></a>在指令碼工作中引發事件
-  事件會提供向包含封裝報告錯誤、警告和其他資訊 (例如工作進度或狀態) 的方法。 封裝提供管理事件通知的事件處理常式。 指令碼工作可以引發事件上呼叫方法<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>屬性**Dts**物件。 如需有關如何[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]封裝處理事件，請參閱[Integration Services &#40;SSIS &#41;事件處理常式](../../../integration-services/integration-services-ssis-event-handlers.md)。  
+  事件會提供向包含封裝報告錯誤、警告和其他資訊 (例如工作進度或狀態) 的方法。 封裝提供管理事件通知的事件處理常式。 指令碼工作可以呼叫 **Dts** 物件之 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 屬性上的方法來引發事件。 如需 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝如何處理事件的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 事件處理常式](../../../integration-services/integration-services-ssis-event-handlers.md)。  
   
- 事件可以記錄到封裝中啟用的任何記錄提供者。 記錄提供者會在資料存放區中儲存事件的相關資訊。 指令碼工作也可以使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法將資訊記錄到記錄提供者，而不會引發事件。 如需有關如何使用<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>方法，請參閱[登入指令碼工作](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)。  
+ 事件可以記錄到封裝中啟用的任何記錄提供者。 記錄提供者會在資料存放區中儲存事件的相關資訊。 指令碼工作也可以使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法將資訊記錄到記錄提供者，而不會引發事件。 如需如何使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法的詳細資訊，請參閱[在指令碼工作中記錄](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)。  
   
  為了引發事件，指令碼工作會呼叫 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 屬性所公開的其中一個方法。 下表列出 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 屬性所公開的方法。  
   
@@ -153,8 +149,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS &#41;事件處理常式](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [將事件處理常式加入封裝](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Integration Services &#40;SSIS&#41; 事件處理常式](../../../integration-services/integration-services-ssis-event-handlers.md)   
+ [將事件處理常式加入封裝中](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

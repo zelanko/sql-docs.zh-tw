@@ -2,11 +2,12 @@
 title: "升級 Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +26,14 @@ caps.latest.revision: "79"
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ec21983a07b5f61359912f90a4e32731de7ce8b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-analysis-services"></a>升級 Analysis Services
-  Analysis Services 執行個體可以升級至相同伺服器模式的 SQL Server 版本，以利用目前版本中所採用的功能，如 [Analysis Services 的新功能](../../analysis-services/what-s-new-in-analysis-services.md)中所述。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Analysis Services 執行個體可以升級至相同伺服器模式的 SQL Server 版本，以利用目前版本中所採用的功能，如 [Analysis Services 的新功能](../../analysis-services/what-s-new-in-analysis-services.md)中所述。  
   
  您可以就地升級每個執行個體，相同硬體上執行的執行個體皆與其他執行個體無關。 但大部分的系統管理員會為應用程式測試選擇安裝新版本的新執行個體，然後再對新的伺服器傳輸實際執行的工作負載。 但是對於開發或測試伺服器而言，就地升級就可能會比較方便。  
   

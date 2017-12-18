@@ -1,5 +1,5 @@
 ---
-title: "傳送 HTML 郵件 with the Script Task |Microsoft 文件"
+title: "以指令碼工作傳送 HTML 郵件訊息 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,26 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Send Mail task [Integration Services]
 - Script task [Integration Services], examples
 - Script task [Integration Services], HTML mail message
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b5f50a79ca83243ea130c77a0d95ab402ba2d31a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 29b1dd04ab4be364b2569f783fe6c07f2929d925
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>使用指令碼工作傳送 HTML 郵件訊息
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] SendMail 工作只支援純文字格式的郵件訊息。 不過您可以使用指令碼工作與 .NET Framework 的郵件功能，輕鬆地傳送 HTML 郵件訊息。  
@@ -40,7 +36,7 @@ ms.lasthandoff: 08/03/2017
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
 ## <a name="description"></a>Description  
- 下列範例會使用**System.Net.Mail**來設定和傳送 HTML 郵件訊息的命名空間。 指令碼、 取得從主旨以及從封裝變數的電子郵件的本文、 使用它們來建立新**MailMessag**e 和設定其**IsBodyHtml**屬性**True**。 然後它會從另一個封裝變數初始化的執行個體中取得 SMTP 伺服器名稱**System.Net.Mail.SmtpClient**，並呼叫其**傳送**傳送 HTML 郵件的方法。 這個範例會封裝在副程式中傳送功能的訊息，副程式本身可在其他指令碼中重複使用。  
+ 下列範例使用 **System.Net.Mail** 命名空間來設定和傳送 HTML 郵件訊息。 指令碼會從套件變數取得電子郵件的收件者、寄件者、主旨以及本文、使用它們來建立新的 **MailMessage** 並將其 **IsBodyHtml** 屬性設定為 **True**。 然後它會從其他套件變數取得 SMTP 伺服器名稱、初始化 **System.Net.Mail.SmtpClient** 的執行個體，然後呼叫其 **Send** 方法以傳送 HTML 訊息。 這個範例會封裝在副程式中傳送功能的訊息，副程式本身可在其他指令碼中重複使用。  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>若要不使用 SMTP 連接管理員來設定這個指令碼工作範例  
   
@@ -54,19 +50,19 @@ ms.lasthandoff: 08/03/2017
   
 3.  建立名為 `HtmlEmailServer` 的字串變數，並指派可用的 SMTP 伺服器名稱，以接受匿名的外寄訊息。  
   
-4.  指派至這些變數的全部五個**[readonlyvariables]**新的指令碼工作的屬性。  
+4.  將這五個變數全部都指派到新指令碼工作的 **ReadOnlyVariables** 屬性。  
   
-5.  匯入**System.Net**和**System.Net.Mail**插入程式碼中的命名空間。  
+5.  將 **System.Net** 和 **System.Net.Mail** 命名空間匯入程式碼。  
   
  本主題中的範例程式碼會從封裝變數取得 SMTP 伺服器名稱。 不過，您也可以利用 SMTP 連接管理員封裝連接資訊，並從程式碼中的連接管理員擷取伺服器名稱。 SMTP 連接管理員的 <xref:Microsoft.SqlServer.Dts.ManagedConnections.SMTPConn.AcquireConnection%2A> 方法會以下列格式傳回字串：  
   
  `SmtpServer=smtphost;UseWindowsAuthentication=False;EnableSsl=False;`  
   
- 您可以使用**String.Split**號 （=），然後擷取第二個引數 （標註 1） 做為伺服器名稱陣列中的方法分為個別在每個分號 （;） 的字串陣列中的這個引數清單，或等於。  
+ 您可以使用 **String.Split** 方法，在每個分號 (;) 或是等號 (=) 將此引數清單分隔成個別字串的陣列，然後從陣列中擷取第二個引數 (標註 1) 作為伺服器名稱。  
   
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>若要使用 SMTP 連接管理員來設定這個指令碼工作範例  
   
-1.  修改指令碼工作，藉由移除先前設定`HtmlEmailServer`變數的清單從**[readonlyvariables]**。  
+1.  透過從 **ReadOnlyVariables** 清單中移除 `HtmlEmailServer` 變數，以修改之前設定的指令碼工作。  
   
 2.  取代用以取得伺服器名稱的程式碼行：  
   
@@ -161,7 +157,6 @@ public void Main()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [傳送郵件工作](../../integration-services/control-flow/send-mail-task.md)  
+ [傳送電子郵件工作](../../integration-services/control-flow/send-mail-task.md)  
   
   
-

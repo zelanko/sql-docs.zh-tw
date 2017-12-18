@@ -1,5 +1,5 @@
 ---
-title: "catalog.deploy_packages |Microsoft 文件"
+title: catalog.deploy_packages | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1839430dd7fb83ab16c4de46011819e3ce28e835
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a19a301fab52b0373eadb673d17e7436d0ffc1e2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeploypackages"></a>catalog.deploy_packages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  將一或多個套件部署中的資料夾[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]目錄或更新先前已部署的現有套件。  
+  將一或多個套件部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的資料夾，或更新先前已部署的現有套件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,17 +35,17 @@ ms.lasthandoff: 09/26/2017
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @folder_name =] *folder_name*  
- 資料夾的名稱。 *Folder_name*是**nvarchar （128)**。  
+ [ @folder_name = ] *folder_name*  
+ 資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
   
- [ @project_name =] *project_name*  
- 資料夾中的專案名稱。 *Project_name*是**nvarchar （128)**。  
+ [ @project_name = ] *project_name*  
+ 資料夾中的專案名稱。 *project_name* 是 **nvarchar(128)**。  
   
- [ @packages_table =] *packages_table*  
- 二進位內容之[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝 (.dtsx) 檔案。 *Packages_table*是**[catalog]。 [Package_Table_Type]**  
+ [ @packages_table = ] *packages_table*  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件 (.dtsx) 檔案的二進位內容。 *packages_table* 是 **[catalog].[Package_Table_Type]**  
   
- [ @operation_id =] *operation_id*  
- 傳回部署作業的唯一識別碼。 *Operation_id*是**bigint**。  
+ [ @operation_id = ] *operation_id*  
+ 傳回部署作業的唯一識別碼。 *operation_id* 是 **bigint**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
@@ -58,18 +56,17 @@ ms.lasthandoff: 09/26/2017
 ## <a name="permissions"></a>Permissions  
  這個預存程序需要下列其中一個權限：  
   
--   專案或修改封裝的權限來更新封裝的 CREATE_OBJECTS 權限。  
+-   要更新套件之專案的 CREATE_OBJECTS 權限或套件的 MODIFY 權限。  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會造成預存程序引發錯誤的某些條件：  
   
--   參數參考到不存在的物件、 參數會嘗試建立的物件已經存在，或以其他方法的參數無效。  
+-   參數參考到不存在的物件、參數會嘗試建立物件已經存在的物件，或參數因為其他原因而無效。  
   
 -   使用者未具備足夠的權限  
   
   
-

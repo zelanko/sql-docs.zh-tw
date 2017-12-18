@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 目的地編輯器 （進階頁面） |Microsoft 文件"
+title: "SAP BW 目的地編輯器 (進階頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwdestination.advanced.f1
+f1_keywords: sql13.dts.designer.sapbwdestination.advanced.f1
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e15c7e770bc46c3ddc3a9f58ae99a5440617720d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: bb716e6703aa35de90e78a3e9db65fab7091663b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>SAP BW 目的地編輯器 (進階頁面)
   使用 SAP BW 目的地編輯器的 [進階] 頁面可以設定進階設定，例如封裝大小和逾時資訊。  
@@ -63,11 +60,10 @@ ms.lasthandoff: 08/03/2017
  **不要啟動 InfoPackage (僅等候)**  
  指定目的地不會觸發 InfoPackage，而是只會等候 SAP Netweaver BW 系統已開始載入資料的通知。  
   
-## <a name="see-also"></a>請參閱＜  
- [SAP BW 目的地編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [SAP BW 目的地編輯器 &#40;[對應] 頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [SAP BW 目的地編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+## <a name="see-also"></a>另請參閱  
+ [SAP BW 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

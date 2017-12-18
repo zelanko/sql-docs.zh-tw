@@ -1,5 +1,5 @@
 ---
-title: "使用 with the Script Task 影像 |Microsoft 文件"
+title: "以指令碼工作處理映像 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - graphics [Integration Services]
 - Script task [Integration Services], images
@@ -28,53 +25,52 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a28fe7c6024d8cf5669199e5f33e3532013e4d3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c86c8f11ec6351882ccb4b152b4254bad70210f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-images-with-the-script-task"></a>以指令碼工作處理影像
-  產品或是使用者的資料庫除了文字與數值資料之外經常包括影像。 **System.Drawing** Microsoft.NET Framework 中的命名空間提供操作影像的類別。  
+  產品或是使用者的資料庫除了文字與數值資料之外經常包括影像。 Microsoft .NET Framework 中的 **System.Drawing** 命名空間提供操作影像的類別。  
   
- [範例 1： 將影像轉換成 JPEG 格式](#example1)  
+ [範例 1：將影像轉換為 JPEG 格式](#example1)  
   
- [範例 2： 建立和儲存縮圖影像](#example2)  
+ [範例 2：建立和儲存縮圖影像](#example2)  
   
 > [!NOTE]  
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-##  <a name="example1"></a>範例 1 描述： 將影像轉換成 JPEG 格式  
+##  <a name="example1"></a> 範例 1 描述：將影像轉換為 JPEG 格式  
  下列範例會開啟變數指定的影像檔，並使用編碼器將它儲存為壓縮的 JPEG 檔案。 擷取編碼器資訊的程式碼是封裝在私用函數中。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>若要將指令碼工作範例設定成與單一影像檔搭配使用  
   
 1.  建立名為 `CurrentImageFile` 的字串變數，並將其值設定為現有影像檔的路徑與檔案名稱。  
   
-2.  在**指令碼**頁面**指令碼工作編輯器**，新增`CurrentImageFile`變數設為**[readonlyvariables]**屬性。  
+2.  在**指令碼工作編輯器**的 [指令碼] 頁面上，將 `CurrentImageFile` 變數新增至 **ReadOnlyVariables** 屬性。  
   
-3.  在指令碼專案中，將參考設定至**System.Drawing**命名空間。  
+3.  在指令碼專案中，設定 **System.Drawing** 命名空間的參考。  
   
-4.  在程式碼中，使用**匯入**陳述式匯入**System.Drawing**和**System.IO**命名空間。  
+4.  在程式碼中，使用 **Imports** 陳述式匯入 **System.Drawing** 和 **System.IO** 命名空間。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>若要將指令碼工作範例設定成與多個影像檔搭配使用  
   
 1.  在 Foreach 迴圈容器中置放指令碼工作。  
   
-2.  在**集合**頁面**Foreach 迴圈編輯器**，選取**Foreach 檔案列舉值**為列舉值，指定來源的路徑和檔案遮罩和檔案，例如為"*.bmp"。  
+2.  在 **Foreach 迴圈編輯器** 的 [集合] 頁面上，將 [Foreach 檔案列舉值] 選取為列舉值，以及指定來源檔案的路徑與檔案遮罩，例如 "*.bmp"。  
   
-3.  在**變數對應**頁面上，將`CurrentImageFile`變數設為 0 索引。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
+3.  在 [變數對應] 頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
   
     > [!NOTE]  
     >  除了列在用於單一影像檔之程序的步驟之外，這是額外的步驟。  
   
-### <a name="example-1-code"></a>範例 1 的程式碼  
+### <a name="example-1-code"></a>範例 1 程式碼  
   
 ```vb  
 Public Sub Main()  
@@ -159,7 +155,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a>範例 2 描述： 建立和儲存縮圖影像  
+##  <a name="example2"></a> 範例 2 描述：建立和儲存縮圖影像  
  下列範例會開啟變數所指定的影像檔、建立影像的縮圖，同時維護固定的外觀比例，並以修改的檔案名稱儲存縮圖。 計算縮圖的高度與寬度並維持其固定外觀比例的程式碼，是封裝在私用副程式中。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>若要將指令碼工作範例設定成與單一影像檔搭配使用  
@@ -168,24 +164,24 @@ End Function
   
 2.  另外建立 `MaxThumbSize` 整數變數並指派以像素為單位的值，例如 100。  
   
-3.  在**指令碼**頁面**指令碼工作編輯器**，將這兩個變數加入**[readonlyvariables]**屬性。  
+3.  在**指令碼工作編輯器**的 [指令碼] 頁面上，將兩個變數都新增至 **ReadOnlyVariables** 屬性。  
   
-4.  在指令碼專案中，將參考設定至**System.Drawing**命名空間。  
+4.  在指令碼專案中，設定 **System.Drawing** 命名空間的參考。  
   
-5.  在程式碼中，使用**匯入**陳述式匯入**System.Drawing**和**System.IO**命名空間。  
+5.  在程式碼中，使用 **Imports** 陳述式匯入 **System.Drawing** 和 **System.IO** 命名空間。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>若要將指令碼工作範例設定成與多個影像檔搭配使用  
   
 1.  在 Foreach 迴圈容器中置放指令碼工作。  
   
-2.  在**集合**頁面**Foreach 迴圈編輯器**，選取**Foreach 檔案列舉值**為**列舉值**，並指定路徑與檔案遮罩的來源檔案，例如"*.jpg"。  
+2.  在 **Foreach 迴圈編輯器**的 [集合] 頁面上，將 [Foreach 檔案列舉值] 選取為 [列舉值]，以及指定來源檔案的路徑與檔案遮罩，例如 "*.jpg"。  
   
-3.  在**變數對應**頁面上，將`CurrentImageFile`變數設為 0 索引。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
+3.  在 [變數對應] 頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
   
     > [!NOTE]  
     >  除了列在用於單一影像檔之程序的步驟之外，這是額外的步驟。  
   
-### <a name="example-2-code"></a>程式碼範例 2  
+### <a name="example-2-code"></a>範例 2 程式碼  
   
 ```vb  
 Public Sub Main()  
@@ -300,4 +296,3 @@ bool ThumbnailCallback()
 ```  
   
   
-

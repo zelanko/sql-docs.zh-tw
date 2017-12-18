@@ -1,5 +1,5 @@
 ---
-title: "偵錯資料流程 |Microsoft 文件"
+title: "偵錯資料流程 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 1780b770f45bd53f8f0735c092f2859593f9fa5c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供許多功能和工具，讓您用來疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程。  
@@ -176,7 +174,7 @@ order by source_component_name desc
   
 4.  以滑鼠右鍵按一下要設定其錯誤輸出資料行的元件，並按一下 [顯示進階編輯器]。  
   
-5.  按一下**輸入與輸出屬性**索引標籤上，展開  **\<元件名稱 > 錯誤輸出**，然後展開 **輸出資料行**。  
+5.  按一下 [輸入與輸出屬性] 索引標籤，並展開 [\<元件名稱> 錯誤輸出]，然後展開 [輸出資料行]。  
   
 6.  按一下資料行並更新其屬性。  
   
@@ -253,7 +251,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  add_data_tap 預存程序的 dataflow_path_id_string 參數對應到您要在其上加入資料點選之資料流程路徑的 IdentificationString 屬性。 若要取得 dataflow_path_id_string，請按一下資料流程路徑 (資料流程中位於工作之間的箭號)，並記下 [屬性] 視窗所示 **IdentificationString** 屬性的值。  
   
- 當您執行指令碼時，輸出檔會儲存在\<程式檔案 > \Microsoft SQL Server\110\DTS\DataDumps。 如果已有同名的檔案存在，則將建立附帶尾碼的新檔案 (例如：output[1].txt)。  
+ 當您執行指令碼時，輸出檔會儲存於 \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps。 如果已有同名的檔案存在，則將建立附帶尾碼的新檔案 (例如：output[1].txt)。  
   
  如先前所述，您也可以使用 [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)預存程序，而不是使用 add_data_tap 預存程序。 此預存程序接受資料流程工作的識別碼當做參數，而非 task_package_path。 您可以從 Visual Studio 屬性視窗取得資料流程工作的識別碼。  
   
@@ -283,4 +281,3 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

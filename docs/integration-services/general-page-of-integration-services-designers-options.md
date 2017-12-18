@@ -1,5 +1,5 @@
 ---
-title: "一般頁面的 Integration Services 設計工具選項 |Microsoft 文件"
+title: "Integration Services 設計師選項的一般頁面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
+f1_keywords: VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 599665d49b8512ec772ac5ca522cb4e0b7a521ec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: e0c72afb5690be9e69958276c6d7e5b2663ce24a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 設計師選項的 [一般]頁面
   在 [選項] 對話方塊上使用 [Integration Services 設計師] 頁面上的 [一般] 頁面，指定用來載入、顯示及升級封裝的選項。  
@@ -66,4 +63,3 @@ ms.lasthandoff: 09/28/2017
  [使用指令碼擴充套件](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   
-

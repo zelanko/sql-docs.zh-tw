@@ -3,8 +3,11 @@ title: "使用 SSMS XEvent 分析工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/02/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: genemi
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -20,14 +23,14 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d76bcf75112533bce6d74fda23dc43d983cf555
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5d478dc053a744cfffa9f7234fe49bad552cc429
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>使用 SSMS XEvent 分析工具
-XEvent 分析工具是一項 SQL Server Management Studio (SSMS) 功能，其可顯示擴充事件的即時檢視器視窗。 本概觀將說明使用此分析工具的理由、重要功能，並會提供檢視擴充事件的入門指示。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] XEvent 分析工具是一項 SQL Server Management Studio (SSMS) 功能，其可顯示擴充事件的即時檢視器視窗。 本概觀將說明使用此分析工具的理由、重要功能，並會提供檢視擴充事件的入門指示。
 
 ## <a name="why-would-i-use-the-xevent-profiler"></a>為什麼要使用 XEvent 分析工具？
 XEvent 分析工具不同於 SQL Profiler，其可直接整合到 SSMS，並以 SQL 引擎中可調式擴充事件技術作為基礎建置而成。 您可利用這項功能在 SQL 伺服器上快速存取診斷事件的即時串流檢視。 您可自訂此檢視，讓這些自訂內容以 .viewsettings 檔案的形式與其他 SSMS 使用者共用。 XE 分析工具建立的工作階段，對運作中 SQL 伺服器所造成的干擾，低於類似 SQL 追蹤使用 SQL Profiler 所造成的干擾。 使用者也可使用現有的 XE 工作階段屬性 UI 或是 TSQL，自訂此工作階段。

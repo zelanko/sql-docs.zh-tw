@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 記錄 |Microsoft 文件"
+title: "Integration Services (SSIS) 記錄 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,17 +31,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 22c1126b8d5555dc743f7c8906230cf5dbcb08a8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 772217a434d69d8849fdaefd66108365c25e46e7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用於在封裝、容器和工作中實作記錄的記錄提供者。 使用記錄，可以擷取有關封裝的執行階段資訊，藉此幫助您在每次執行封裝時對其進行稽核和疑難排解。 例如，記錄可以擷取執行封裝之操作員的名稱，以及封裝開始和結束的時間。  
@@ -141,7 +139,7 @@ ms.lasthandoff: 09/28/2017
 |**OnVariableValueChanged**|在變數的值變更時寫入記錄項目。|  
 |**OnWarning**|發生警告時寫入記錄項目。|  
 |**PipelineComponentTime**|針對每個資料流程元件，寫入每個驗證和執行階段的記錄項目。 記錄項目會指定每個階段的處理時間。|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|寫入提供診斷資訊的記錄項目。<br /><br /> 例如，您可以在每次呼叫外部資料提供者前後記錄訊息。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 當您想要在有錯誤的資料流程資料行中尋找資料行名稱時，請記錄 **DiagnosticEx** 事件。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。 如需詳細資訊，請參閱＜ [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)＞。<br /><br /> 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 注意︰如果使用 SQL Server 記錄提供者來記錄 **DiagnosticEx** 事件，輸出可能被截斷。 SQL Server 記錄提供者的 [訊息] 欄位類型是 nvarchar(2048)。 若要避免發生截斷，記錄 **DiagnosticEx** 事件時請使用不同的記錄提供者。|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|寫入提供診斷資訊的記錄項目。<br /><br /> 例如，您可以在每次呼叫外部資料提供者前後記錄訊息。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 當您想要在有錯誤的資料流程資料行中尋找資料行名稱時，請記錄 **DiagnosticEx** 事件。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。 如需詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 注意︰如果使用 SQL Server 記錄提供者來記錄 **DiagnosticEx** 事件，輸出可能被截斷。 SQL Server 記錄提供者的 [訊息] 欄位類型是 nvarchar(2048)。 若要避免發生截斷，記錄 **DiagnosticEx** 事件時請使用不同的記錄提供者。|  
   
  封裝及許多工作都有可以啟用記錄功能的自訂記錄項目。 例如，[傳送郵件] 工作會提供 **SendMailTaskBegin** 自訂記錄項目，其會在 [傳送郵件] 工作開始執行時，但在工作傳送電子郵件訊息之前，記錄資訊。 如需詳細資訊，請參閱 [自訂訊息以進行記錄](#custom_messages)。  
   
@@ -177,7 +175,7 @@ ms.lasthandoff: 09/28/2017
  資料流程工作提供許多可用以監視及調整效能的自訂記錄項目。 例如，您可以監視可能會造成記憶體遺漏的元件，或是追蹤執行某特定元件所花費的時間。 如需這些自訂記錄項目的清單以及記錄輸出範例，請參閱 [資料流程工作](../../integration-services/control-flow/data-flow-task.md)。  
   
 #### <a name="capture-the-names-of-columns-in-which-errors-occur"></a>擷取發生錯誤的資料行名稱  
- 當您設定資料流的錯誤輸出時，錯誤輸出預設只提供發生錯誤的資料行數值識別碼。 如需詳細資訊，請參閱＜ [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)＞。  
+ 當您設定資料流的錯誤輸出時，錯誤輸出預設只提供發生錯誤的資料行數值識別碼。 如需詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。  
   
  您可以啟用記錄並選取 **DiagnosticEx** 事件，找到資料行名稱。 此事件會將資料流程歷程對應寫入記錄檔。 接著從這個歷程對應中的資料行識別項，查閱資料行名稱。 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。  
   
@@ -232,9 +230,9 @@ ms.lasthandoff: 09/28/2017
   
 2.  在 **[SSIS]** 功能表上，按一下 **[記錄]**。  
   
-3.  在 提供者類型 清單中選取記錄提供者，然後按一下加入。  
+3.  在 [提供者類型] 清單中選取記錄提供者，然後按一下 [加入]。  
   
-4.  在**組態**資料行中，選取連接管理員，或按一下**\<新增連接 >**為記錄提供者建立新的連接管理員適當的型別。 因所選提供者的不同，使用下列連接管理員之一：  
+4.  在 [設定] 資料行中，選取連線管理員，或按一下 [\<新增連線>]，為記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
   
     -   若為「文字」檔案，請使用「檔案」連接管理員。 如需詳細資訊，請參閱 [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -251,7 +249,7 @@ ms.lasthandoff: 09/28/2017
     > [!NOTE]  
     >  封裝可以使用每種類型一個以上的記錄檔。  
   
-6.  選擇性地選取封裝層級核取方塊，並選取要用於封裝層級記錄的記錄檔，然後按一下詳細資料 索引標籤。  
+6.  選擇性地選取封裝層級核取方塊，並選取要用於封裝層級記錄的記錄檔，然後按一下 [詳細資料] 索引標籤。  
   
 7.  在 [詳細資料] 索引標籤上，選取 [事件]，以記錄所有記錄項目，或清除 [事件]，以選取個別事件。  
   
@@ -260,7 +258,7 @@ ms.lasthandoff: 09/28/2017
     > [!NOTE]  
     >  依預設，會記錄所有資訊。  
   
-9. 在 [詳細資料] 索引標籤上，按一下 [儲存]。 [另存新檔] 對話方塊隨即出現。 尋找要儲存記錄組態的資料夾，輸入新記錄組態的檔案名稱，然後按一下儲存。  
+9. 在 [詳細資料] 索引標籤上，按一下 [儲存]。 [另存新檔] 對話方塊隨即出現。 尋找要儲存記錄組態的資料夾，輸入新記錄組態的檔案名稱，然後按一下 [儲存]。  
   
 10. 按一下 **[確定]**。  
   
@@ -316,12 +314,12 @@ ms.lasthandoff: 09/28/2017
  描述欄位是可編輯的。 按一下，然後修改記錄的預設描述。  
   
  **Configuration**  
- 在清單中，選取現有的連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
+ 在清單中選取現有連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
   
  相關主題： [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **Delete**  
- 選取記錄提供者，然後按一下刪除。  
+ 選取記錄提供者，然後按一下 [刪除]。  
   
 ###  <a name="detail"></a> 設定 [詳細資料] 索引標籤上的選項  
  使用 **[設定 SSIS 記錄]** 對話方塊的 **[詳細資料]** 索引標籤，即可指定要啟用記錄的事件以及要記錄的資訊詳細資料。 您選取的資訊適用於封裝中的所有記錄提供者。 例如，您無法寫入部份資訊到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，而寫入不同資訊到文字檔。  
@@ -420,7 +418,7 @@ ms.lasthandoff: 09/28/2017
 |Basic|記錄所有事件，自訂和診斷事件除外。 這是預設值。|  
 |RuntimeLineage|收集追蹤資料流程中歷程資訊所需的資料。 您可以剖析此歷程資訊，以對應工作間的歷程關聯性。 ISV 和開發人員可以使用此資訊來建置自訂歷程對應工具。|  
 |效能|只記錄效能統計資料，以及 OnError 和 OnWarning 事件。<br /><br /> **[執行效能]** 報表會顯示封裝資料流程元件的 [啟用時間] 和 [總時間]。 最後一個封裝執行作業的記錄層次設定為 **[效能]** 或 **[詳細資訊]**時，就可使用這項資訊。 如需詳細資訊，請參閱 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) 檢視會顯示每一個執行階段之資料流程元件的開始和結束時間。 此檢視只會在封裝執行作業的記錄層次設定為 **[效能]** 或 **[詳細資訊]**時，顯示這些元件的這項資訊。|  
-|[詳細資訊]|記錄所有事件，包括自訂和診斷事件。<br /><br /> 自訂事件包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 工作所記錄的事件。 如需有關自訂事件的詳細資訊，請參閱 [Custom Messages for Logging](#custom_messages)。<br /><br /> **DiagnosticEx** 事件即為診斷事件的範例。 每當「執行封裝」工作執行子封裝時，此事件就會擷取傳遞至子封裝的參數值。<br /><br /> **DiagnosticEx** 事件也可協助您取得發生資料列層級錯誤的資料行名稱。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。  如需詳細資訊，請參閱＜ [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)＞。<br /><br /> **DiagnosticEx** 的訊息資料行值是 XML 文字。 若要檢視封裝執行的訊息文字，請查詢 [catalog.operation_messages &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) 檢視。 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 每當資料流程元件傳送資料至封裝執行的下游元件， [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) 檢視就會顯示一個資料列。 您必須將記錄層次設定為 **[詳細資訊]** ，以擷取檢視中的這項資訊。|  
+|[詳細資訊]|記錄所有事件，包括自訂和診斷事件。<br /><br /> 自訂事件包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 工作所記錄的事件。 如需有關自訂事件的詳細資訊，請參閱 [Custom Messages for Logging](#custom_messages)。<br /><br /> **DiagnosticEx** 事件即為診斷事件的範例。 每當「執行封裝」工作執行子封裝時，此事件就會擷取傳遞至子封裝的參數值。<br /><br /> **DiagnosticEx** 事件也可協助您取得發生資料列層級錯誤的資料行名稱。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。  如需詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> **DiagnosticEx** 的訊息資料行值是 XML 文字。 若要檢視封裝執行的訊息文字，請查詢 [catalog.operation_messages &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) 檢視。 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 每當資料流程元件傳送資料至封裝執行的下游元件， [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) 檢視就會顯示一個資料列。 您必須將記錄層次設定為 **[詳細資訊]** ，以擷取檢視中的這項資訊。|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>使用自訂的記錄層級管理對話方塊建立和管理自訂的記錄層級  
  您可以建立自訂的記錄層級，只收集您所需的統計資料和事件。 您也可以選擇性擷取事件的內容，包括變數值、連接字串及元件屬性。 當您執行封裝時，每當您可以選取內建記錄層級時，就能選取自訂的記錄層級。  
@@ -432,9 +430,9 @@ ms.lasthandoff: 09/28/2017
   
 2.  若要 **建立** 新的自訂記錄層級，可按一下 [建立] ，然後提供名稱和描述。 在 [統計資料]  和 [事件]  索引標籤上，選擇您想要收集的統計資料與事件。 在 [事件]  索引標籤上，選擇性地選取個別事件的 [包含內容]  。 然後按一下 [儲存] 。  
   
-3.  若要 **更新** 現有的自訂記錄層級，可在清單中選取該層級、重新進行設定，然後按一下儲存 。  
+3.  若要 **更新** 現有的自訂記錄層級，可在清單中選取該層級、重新進行設定，然後按一下 [儲存] 。  
   
-4.  若要 **刪除** 現有的自訂記錄層級，可在清單中選取該層級，然後按一下刪除 。  
+4.  若要 **刪除** 現有的自訂記錄層級，可在清單中選取該層級，然後按一下 [刪除] 。  
   
  **自訂記錄層級的權限。**  
   
@@ -687,4 +685,3 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
   
 ## <a name="related-content"></a>相關內容  
  [用於完整及詳細記錄的 DTLoggedExec 工具 (CodePlex 專案)](http://go.microsoft.com/fwlink/?LinkId=150579)  
-

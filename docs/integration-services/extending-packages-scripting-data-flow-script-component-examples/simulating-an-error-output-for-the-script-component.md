@@ -1,5 +1,5 @@
 ---
-title: "模擬錯誤輸出指令碼元件 |Microsoft 文件"
+title: "模擬指令碼元件的錯誤輸出 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script component [Integration Services], error output
 - error outputs [Integration Services], Script component
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 0af8434531660958557928376cf8a4fd19ca9e68
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f7a802bffc3178cecd58279fed0d93ad55bcdc0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>模擬指令碼元件的錯誤輸出
   雖然您無法在指令碼元件中將輸出直接設定為錯誤輸出，以自動處理錯誤資料列，不過可以建立其他輸出並使用指令碼中的條件式邏輯，適時地將資料列導向此輸出，以重新產生內建錯誤輸出的功能。 您可能會想要加入兩個額外的輸出資料行，以接收發生錯誤的資料行之錯誤碼與識別碼，來模擬內建錯誤輸出的行為。  
@@ -46,23 +42,23 @@ ms.lasthandoff: 08/03/2017
   
 2.  將新指令碼元件加入資料流程設計師介面，並將它設定為轉換。 開啟**指令碼轉換編輯器**。  
   
-3.  在**指令碼**頁面上，設定**ScriptLanguage**屬性，以您想要編寫指令碼的程式碼使用的指令碼語言。  
+3.  在 [指令碼] 頁面上，將 **ScriptLanguage** 屬性設定成您要用以撰寫指令碼的指令碼語言。  
   
 4.  按一下 **[編輯指令碼]** 開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。  
   
-5.  在**Input0_ProcessInputRow**方法中，輸入或貼上的範例程式碼，如下所示。  
+5.  在 **Input0_ProcessInputRow** 方法中，鍵入或貼上下列範例程式碼。  
   
 6.  關閉 VSTA。  
   
-7.  在**的輸入資料行**頁面上，選取您想要在指令碼轉換中處理的資料行。 此範例只使用 CountryRegionName 資料行。 您保留未選取的可用輸入資料行，將會在資料流程中傳遞時保持不變。  
+7.  在 [輸入資料行] 頁面上，選取您要在指令碼轉換中處理的資料行。 此範例只使用 CountryRegionName 資料行。 您保留未選取的可用輸入資料行，將會在資料流程中傳遞時保持不變。  
   
-8.  在**輸入和輸出**頁面、 加入新，第二個輸出，然後設定其**SynchronousInputID**為輸入，也是值的識別碼值的**SynchronousInputID**屬性的預設輸出。 設定**ExclusionGroup**為相同的非零值 (例如，1)，表示每個資料列會被導向至兩個輸出的其中之一的兩個輸出的屬性。 提供特殊的名稱給新錯誤輸出，例如 "MyErrorOutput"。  
+8.  在 [輸入及輸出] 頁面上，新增新的第二個輸出，並將其 **SynchronousInputID** 值設定為輸入的識別碼，這也是預設輸出的 **SynchronousInputID** 屬性值。 將兩個輸出的 **ExclusionGroup** 屬性設定為相同的非零值 (例如 1)，以指出將每個資料列導向僅兩個輸出的其中一個。 提供特殊的名稱給新錯誤輸出，例如 "MyErrorOutput"。  
   
 9. 將額外輸出資料行加入新錯誤輸出，以擷取所需的錯誤資訊，這可能包含發生錯誤的資料行之錯誤碼與識別碼，以及或許還有錯誤描述。 此範例會建立新資料行 ErrorColumn 與 ErrorMessage。 如果您在自己的實作中擷取預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤，請確定加入錯誤號碼的 ErrorCode 資料行。  
   
 10. 請記下指令碼元件將檢查錯誤條件之輸入資料行的識別碼值。 這個範例使用此資料行識別碼以擴展 ErrorColumn 值。  
   
-11. 關閉**指令碼轉換編輯器。**  
+11. 關閉**指令碼轉換編輯器**。  
   
 12. 將指令碼元件的輸出附加至適當的目的地。 一般檔案目的地對於特定測試而言是最容易設定的。  
   
@@ -115,4 +111,3 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
  [使用指令碼元件建立同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

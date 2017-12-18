@@ -1,5 +1,5 @@
 ---
-title: "檢視封裝物件 |Microsoft 文件"
+title: "檢視套件物件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4314664538d2f3f328e0fbc48965e2541089a95c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 88c6bc973c6039b81d8af48a9dd7d76304946add
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="view-package-objects"></a>檢視封裝物件
   在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中，[封裝總管] 索引標籤提供封裝的總管檢視。 此檢視反映 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 架構的容器階層。 封裝容器位於階層的頂端，您可以展開封裝以檢視其中的連接、可執行檔、事件處理常式、記錄提供者、優先順序條件約束和變數。  
@@ -45,9 +43,9 @@ ms.lasthandoff: 09/26/2017
   
  下圖顯示簡單封裝的樹狀檢視。  
   
- ![封裝總管索引標籤的螢幕擷取畫面](../integration-services/media/packageexplorer.gif "封裝總管索引標籤的螢幕擷取畫面")  
+ ![[套件總管] 索引標籤的螢幕擷取畫面](../integration-services/media/packageexplorer.gif "[套件總管] 索引標籤的螢幕擷取畫面")  
   
-## <a name="view-the-package-structure-and-content"></a>檢視封裝結構及內容  
+## <a name="view-the-package-structure-and-content"></a>檢視套件結構和內容  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含您要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [封裝總管] **中檢視之封裝的**專案。  
   
@@ -57,21 +55,20 @@ ms.lasthandoff: 09/26/2017
   
 4.  視封裝結構而定，展開任何下一層級資料夾。  
   
-## <a name="view-the-properties-of-a-package-object"></a>檢視封裝物件的屬性
+## <a name="view-the-properties-of-a-package-object"></a>檢視套件物件的屬性
   
 -   以滑鼠右鍵按一下物件，然後按一下 [屬性]以開啟 [屬性] 視窗。  
   
-## <a name="delete-an-object-in-a-package"></a>刪除封裝中的物件  
+## <a name="delete-an-object-in-a-package"></a>刪除套件中的物件  
   
 -   以滑鼠右鍵按一下物件，然後按一下 [刪除]。 
  
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../integration-services/control-flow/integration-services-tasks.md)   
- [整合服務容器](../integration-services/control-flow/integration-services-containers.md)   
+ [Integration Services 容器](../integration-services/control-flow/integration-services-containers.md)   
  [優先順序條件約束](../integration-services/control-flow/precedence-constraints.md)   
  [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)   
- [Integration Services &#40;SSIS &#41;事件處理常式](../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40;SSIS &#41;記錄](../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS&#41; 事件處理常式](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services &#40;SSIS&#41; 記錄](../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

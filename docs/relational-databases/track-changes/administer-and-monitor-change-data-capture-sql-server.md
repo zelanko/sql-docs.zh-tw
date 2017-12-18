@@ -2,9 +2,12 @@
 title: "管理和監視異動資料擷取 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eeb22b42fa171fe644e6fa01e1be107bc1917afa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0528c9fb9751aadc11f7896347538d5a200b0290
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和監視異動資料擷取 (SQL Server)
-  此主題描述如何管理及監視異動資料擷取。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 本主題描述如何管理及監視異動資料擷取。  
   
 ##  <a name="Capture"></a> 擷取作業  
  擷取作業是透過執行無參數的預存程序 **sp_MScdc_capture_job**起始的。 這個預存程序一開始會從 msdb.dbo.cdc_jobs 中擷取作業之 *maxtrans*、 *maxscans*、 *continuous*和 *pollinginterval* 的設定值。 然後，這些設定值會當作參數傳遞給 **sp_cdc_scan**預存程序。 這個預存程序是用來叫用 **sp_replcmds** ，以便執行記錄檔掃描。  

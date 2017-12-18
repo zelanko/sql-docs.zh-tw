@@ -1,5 +1,5 @@
 ---
-title: "catalog.check_schema_version |Microsoft 文件"
+title: catalog.check_schema_version | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 56eacb6ed209f34f65ae406fe4dd520284b79e5b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ac266609952f0e2995dde7a8f7882bbeb50a822c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcheckschemaversion"></a>catalog.check_schema_version
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +39,8 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @use32bitruntime=] *use32bitruntime*  
- 當參數設定為**True**，會呼叫 32 位元版本的 dtexec。 *Use32bitruntime*是**Bool**。  
+ [ @use32bitruntime= ] *use32bitruntime*  
+ 當此參數設為 **True** 時，會呼叫 32 位元版本的 dtexec。 *use32bitruntime* 是 **Bool**。  
   
 ## <a name="result-set"></a>結果集  
  無  
@@ -50,7 +48,6 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ## <a name="permissions"></a>Permissions  
  這個預存程序需要下列權限：  
   
--   成員資格**ssis_admin**資料庫角色。  
+-   **ssis_admin** 資料庫角色的成員資格。  
   
   
-

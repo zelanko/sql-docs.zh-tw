@@ -2,9 +2,12 @@
 title: "OLE Automation 結果集 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 86a6ef5870af8d4ee2f9151301d560e04de9c11f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: baef4873acc75daecf116f482cb1e1401015e82a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-automation-result-sets"></a>OLE Automation 結果集
-  如果 OLE Automation 屬性或方法以一維或二維陣列 (One or two Dimension Array) 的形式傳回資料，該陣列將以結果集 (Result Set) 形式傳給用戶端：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果 OLE Automation 屬性或方法以一維或二維陣列的形式傳回資料，該陣列將以結果集形式傳給用戶端：  
   
 -   一維陣列會以單一資料列結果集的方式傳回給用戶端，這個資料列中有多個資料行，資料行數目等於陣列的元素數目。 例如，陣列 (10) 將傳回 10 個資料行的單一資料列。  
   

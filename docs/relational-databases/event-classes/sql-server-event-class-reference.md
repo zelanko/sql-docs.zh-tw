@@ -2,9 +2,12 @@
 title: "SQL Server 事件類別參考 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b3ffd0d188f72e949a520b72562f0b82694970ba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a083ff406bf20d23e3453d642229b10210003834
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server 事件類別參考
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可讓您記錄 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體中發生的事件。 所記錄的事件就是追蹤定義的事件類別執行個體。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，可以在 **[追蹤檔案屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤上，取得事件類別和其事件類別目錄。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可讓您記錄 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體中發生的事件。 所記錄的事件就是追蹤定義的事件類別執行個體。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，可以在 **[追蹤檔案屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤上，取得事件類別和其事件類別目錄。  
   
  下表描述事件類別目錄，並列出相關的事件類別。  
   

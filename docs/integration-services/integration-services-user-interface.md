@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 使用者介面 |Microsoft 文件"
+title: "Integration Services 使用者介面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SSIS, SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f6f682da8a11f99d1d58d85405dd2ff0d526a47
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 53d4cd6d44f33b05ca586077a33307616aa45986
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 使用者介面
   除了 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 索引標籤上的設計介面以外，使用者介面還提供對下列視窗和對話方塊 (用以將功能加入封裝及設定封裝物件屬性) 的存取權：  
@@ -55,7 +53,7 @@ ms.lasthandoff: 09/28/2017
 |**數位簽章**|簽署封裝或從封裝中移除簽章。|在 **[SSIS]** 功能表上，按一下 **數位簽章**。<br /><br /> -或-<br /><br /> 以滑鼠右鍵按一下 [控制流程] 索引標籤之設計介面的任意位置，然後按一下 [數位簽章]。|  
 |**[設定中斷點]**|啟用工作上的中斷點並設定中斷點屬性。|在 [控制流程] 索引標籤的設計介面上，以滑鼠右鍵按一下工作或容器，然後按一下 [編輯中斷點]。 若要設定封裝上的中斷點，請以滑鼠右鍵按一下 [控制流程] 索引標籤之設計介面的任意位置，然後按一下 [編輯中斷點]。|  
   
- [使用者入門] 視窗提供範例、教學課程和影片的連結。 若要加入其他內容的連結，請修改目前版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]隨附的 SamplesSites.xml 檔案。 建議您修改\<GettingStartedSamples > 項目值，指定 RSS 摘要的 URL。 此檔案位於*\<磁碟機 >*: \Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾。 64 位元電腦上，此檔案位於*\<磁碟機 >*: \Program Files (x86) \Microsoft SQL Server\110\DTS\Binn 資料夾  
+ [使用者入門] 視窗提供範例、教學課程和影片的連結。 若要加入其他內容的連結，請修改目前版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]隨附的 SamplesSites.xml 檔案。 建議您不要修改指定 RSS 摘要 URL 的 \<GettingStartedSamples> 元素值。 檔案位於 \<磁碟機>:\Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾。 在 64 位元電腦上，檔案位於 \<磁碟機>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 資料夾  
   
  如果 SamplesSites.xml 檔案未損毀，請使用下列預設 xml 取代檔案中的 xml。  
   
@@ -128,4 +126,3 @@ ms.lasthandoff: 09/28/2017
  [SSIS 設計師](../integration-services/ssis-designer.md)  
   
   
-

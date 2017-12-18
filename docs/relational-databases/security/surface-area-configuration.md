@@ -2,9 +2,12 @@
 title: "介面區組態 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 caps.latest.revision: "79"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 97c76061aac16fa1f0f71e2f2f68fa06d56cdc0d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e16dac870c31a7d409189d29b84f88686a71db21
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="surface-area-configuration"></a>介面區組態
-  在新安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預設組態中，許多功能都不會啟用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為了將可能會遭受惡意使用者攻擊的功能數目最小化，因此會選擇性地只安裝與啟動主要的服務與功能。 系統管理員可在安裝期間變更這些預設值，也可以選擇性地啟用或停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之執行中執行個體的功能。 此外，從其他電腦連接時，某些元件可能要等到設定通訊協定之後才能使用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在新安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設設定中，許多功能都不會啟用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為了將可能會遭受惡意使用者攻擊的功能數目最小化，因此會選擇性地只安裝與啟動主要的服務與功能。 系統管理員可在安裝期間變更這些預設值，也可以選擇性地啟用或停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之執行中執行個體的功能。 此外，從其他電腦連接時，某些元件可能要等到設定通訊協定之後才能使用。  
   
 > [!NOTE]  
 >  與新安裝不同的是，在升級處理期間不會關閉任何現有的服務或功能，但是在升級完成後可能會套用其他介面區組態選項。  

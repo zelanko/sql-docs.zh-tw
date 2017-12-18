@@ -1,5 +1,5 @@
 ---
-title: "dtutil 公用程式 |Microsoft 文件"
+title: "dtutil 公用程式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 114
+caps.latest.revision: "114"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 81ec19156c13362af0484e358bdc4b2dddacc0cb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 7a5cf2737ac465c5d216a0d9a27a3c3e6e5836e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dtutil-utility"></a>dtutil 公用程式
   **dtutil** 命令提示字元公用程式可用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 這個公用程式可以複製、移動、刪除封裝，或確認封裝是否存在。 下列三個位置所儲存的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝都可以執行這些動作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區和檔案系統。 如果公用程式存取存放在 **msdb**中的封裝，則命令提示字元可能會需要使用者名稱和密碼。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，則命令提示字元需要使用者名稱和密碼。 如果遺漏使用者名稱， **dtutil** 會嘗試使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 封裝的儲存類型是由 **/SQL**、 **/FILE**和 **/DTS** 等選項來識別。  
@@ -70,18 +68,18 @@ ms.lasthandoff: 09/28/2017
   
  在 64 位元電腦上， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會安裝 64 位元版本的 **dtexec** 公用程式 (dtexec.exe) 和 **dtutil** 公用程式 (dtutil.exe)。 若要安裝 32 位元版本的這些 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 工具，您必須在安裝期間選取用戶端工具或 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 。  
   
- 根據預設，同時安裝了 64 位元和 32 位元版之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 命令提示字元公用程式的 64 位元電腦將會在命令提示字元上執行 32 位元版本。 執行 32 位元版本是因為 32 位元版本的目錄路徑在 PATH 環境變數中會出現在 64 位元版本的目錄路徑前面 (一般來說，32 位元的目錄路徑是*\<磁碟機 >*: \Program 檔案 (x86) \Microsoft SQL Server\130\DTS\Binn，而 64 位元的目錄路徑是*\<磁碟機 >*: \Program Files\Microsoft SQL Server\130\DTS\Binn。)  
+ 根據預設，同時安裝了 64 位元和 32 位元版之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 命令提示字元公用程式的 64 位元電腦將會在命令提示字元上執行 32 位元版本。 執行 32 位元版本是因為 32 位元版本的目錄路徑在 PATH 環境變數中會出現在 64 位元版本的目錄路徑前面 (一般來說，32 位元的目錄路徑是 \<磁碟機>:\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn，而 64 位元的目錄路徑是 \<磁碟機>:\Program Files\Microsoft SQL Server\130\DTS\Binn)。  
   
 > [!NOTE]  
 >  如果您使用 SQL Server Agent 執行此公用程式，SQL Server Agent 會自動使用 64 位元版的公用程式。 SQL Server Agent 會使用此登錄 (而不是 PATH 環境變數) 來尋找此公用程式的正確可執行檔。  
   
  若要確保您可在命令提示字元上執行 64 位元版的公用程式，您可以採取下列其中一個動作：  
   
--   開啟 [命令提示字元] 視窗中，切換到包含 64 位元版公用程式的目錄*(\<磁碟機 >*: \Program Files\Microsoft SQL Server\130\DTS\Binn)，然後從該位置執行公用程式。  
+-   開啟 [命令提示字元] 視窗，然後將目錄切換到包含 64 位元版公用程式的目錄 (\<磁碟機>:\Program Files\Microsoft SQL Server\130\DTS\Binn)，再從該位置執行公用程式。  
   
--   在命令提示字元中，執行公用程式輸入完整路徑 (*\<磁碟機 >*: \Program Files\Microsoft SQL Server\130\DTS\Binn) 64 位元版公用程式。  
+-   在命令提示字元上，輸入 64 位元版公用程式的完整路徑 (\<磁碟機>:\Program Files\Microsoft SQL Server\130\DTS\Binn)，以執行此公用程式。  
   
--   永久變更 PATH 環境變數中的路徑順序放置在 64 位元路徑 (*\<磁碟機 >*: \Program Files\Microsoft SQL Server\130\DTS\Binn) 之前在 32 位元路徑 (*\<磁碟機 >*: \程式檔案 (x86) \Microsoft SQL Server\130\DTS\Binn） 在變數中。  
+-   在 PATH 環境變數中將 64 位元路徑 (\<磁碟機>:\Program Files\Microsoft SQL Server\130\DTS\Binn) 置於 32 位元路徑 (\<磁碟機>:\ Program Files(x86)\Microsoft SQL Server\130\DTS\Binn) 之前，可以永久變更該變數中的路徑順序。  
   
 ## <a name="syntax"></a>語法  
   
@@ -100,7 +98,7 @@ dtutil /option [value] [/option [value]]...
 |/DestP[assword] *password*|指定搭配 SQL 選項來連接使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之目的地 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 如果 *DESTPASSWORD* 是指定在不含 *DTSUSER* 選項的命令列上，則會產生錯誤。<br /><br /> 注意： [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。|  
 |/DestS[erver] *server_instance*|指定以任何動作搭配使用的伺服器名稱，這些動作會使目的地儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的。 當儲存 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝時，它用來識別非本機或非預設的伺服器。 在不含與 *相關聯動作的命令列上指定* DESTSERVER [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]是錯的。 *SIGN SQL*、 *COPY SQL*或 *MOVE SQL* 選項之類的動作，就是結合這個選項的適當命令。<br /><br /> 您可以在伺服器名稱中加入反斜線和執行個體名稱來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱。|  
 |/DestU[ser] *username*|指定與 *SIGN SQL*、 *COPY SQL*和 *MOVE SQL* 選項一起使用的使用者名稱，以連接到使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 在不含 *DESTUSER* 、 *SIGN SQL*或 *COPY SQL*選項的命令列上指定 *MOVE SQL* 是錯的。|  
-|/Dump *處理序識別碼*|(選擇性) 讓指定的處理序 ( **dtexec** 公用程式或 **dtsDebugHost.exe** 處理序) 暫停，並建立偵錯傾印檔案 .mdmp 和 .tmp。<br /><br /> 注意：若要使用 **/Dump**選項，您必須被指派「偵錯程式」使用者權限 (SeDebugPrivilege)。<br /><br /> 若要找出您想要暫停之處理序的 *process ID* ，請使用 Windows 工作管理員。<br /><br /> 根據預設，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]偵錯傾印檔案儲存在資料夾中， *\<磁碟機 >*: \Program Files\Microsoft SQL Server\130\Shared\ErrorDumps。<br /><br /> 如需 **dtexec** 公用程式和 **dtsDebugHost.exe** 處理序的詳細資訊，請參閱 [dtexec Utility](../integration-services/packages/dtexec-utility.md) 和 [Building, Deploying, and Debugging Custom Objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。<br /><br /> 如需有關偵錯傾印檔案的詳細資訊，請參閱＜ [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)＞。<br /><br /> 注意：偵錯傾印檔案可能會包含敏感性資訊。 您可以使用存取控制清單 (ACL) 來限制這些檔案的存取權，或將這些檔案複製到具有限制性存取權的資料夾。|  
+|/Dump *處理序識別碼*|(選擇性) 讓指定的處理序 ( **dtexec** 公用程式或 **dtsDebugHost.exe** 處理序) 暫停，並建立偵錯傾印檔案 .mdmp 和 .tmp。<br /><br /> 注意：若要使用 **/Dump**選項，您必須被指派「偵錯程式」使用者權限 (SeDebugPrivilege)。<br /><br /> 若要找出您想要暫停之處理序的 *process ID* ，請使用 Windows 工作管理員。<br /><br /> 根據預設，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會將偵錯傾印檔案儲存在 \<磁碟機>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps 資料夾中。<br /><br /> 如需 **dtexec** 公用程式和 **dtsDebugHost.exe** 處理序的詳細資訊，請參閱 [dtexec Utility](../integration-services/packages/dtexec-utility.md) 和 [Building, Deploying, and Debugging Custom Objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。<br /><br /> 如需有關偵錯傾印檔案的詳細資訊，請參閱＜ [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)＞。<br /><br /> 注意：偵錯傾印檔案可能會包含敏感性資訊。 您可以使用存取控制清單 (ACL) 來限制這些檔案的存取權，或將這些檔案複製到具有限制性存取權的資料夾。|  
 |/DT[S] *filespec*|指定要處理的 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝是在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區中。 *filespec* 引數必須包含資料夾路徑，並以 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區的根目錄為開頭。 根據預設，組態檔中根資料夾的名稱為 "MSDB" 和 "File System"。 您必須使用雙引號來隔開包含空格的路徑。<br /><br /> 如果 DT[S] 選項是指定在與下列任何選項相同的命令列上，則會傳回 DTEXEC_DTEXECERROR：<br /><br /> **FILE**<br /><br /> **SQL**<br /><br /> **SOURCEUSER**<br /><br /> **SOURCEPASSWORD**<br /><br /> **SOURCESERVER**|  
 |/En[crypt] *{SQL &#124; FILE}; Path;ProtectionLevel[;password]*|(選擇性)。 利用指定的保護等級和密碼來加密載入的封裝，並將它儲存在 *Path*所指定的位置中。 *ProtectionLevel* 用來決定是否需要密碼。<br /><br /> *SQL* - 路徑是目的地封裝名稱。<br /><br /> *FILE* - 路徑是指封裝的完整路徑和檔案名稱。<br /><br /> *DTS* - 目前不支援此選項。<br /><br /> *ProtectionLevel* 選項：<br /><br /> 等級 0：解除機密資訊。<br /><br /> 等級 1：機密資訊使用本機使用者認證加密。<br /><br /> 等級 2：機密資訊使用必要的密碼加密。<br /><br /> 等級 3：封裝使用必要的密碼加密。<br /><br /> 等級 4：封裝使用本機使用者認證加密。<br /><br /> 等級 5：封裝使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 儲存體加密。|  
 |/Ex[ists]|(選擇性)。 用來判斷封裝是否存在。 **dtutil** 會嘗試找出透過 *SQL*、 *DTS* 或 *FILE* 選項所指定的封裝。 如果 **dtutil** 找不到指定的封裝，就會傳回 DTEXEC_DTEXECERROR。|  
@@ -115,7 +113,7 @@ dtutil /option [value] [/option [value]]...
 |/M[ove] {*SQL* &#124; *File* &#124; *DTS*}; *pathandname*|對 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝指定移動動作。 若要使用此參數，請先使用 **/FI**、 **/SQ**或 **/DT** 選項來指定封裝的位置。 接下來，指定 **Move** 動作。 這個動作需要兩個以分號分隔的引數：<br /><br /> 目的地引數可指定 *SQL*、 *FILE*或 *DTS*。 *SQL* 目的地可包含 *DESTUSER*、 *DESTPASSWORD*和 *DESTSERVER* 選項。<br /><br /> *pathandname* 引數指定封裝位置： *SQL* 使用封裝路徑和封裝名稱， *FILE* 使用 UNC 或本機路徑， *DTS* 使用相對於 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區根目錄的位置。 當目的地為 *FILE* 或 *DTS*時，路徑引數不包含檔案名稱。 而是使用在指定位置的封裝名稱來做為檔案名稱。<br /><br /> <br /><br /> 當 **MOVE** 動作在目的地發現現有的封裝時， **dtutil** 會提示您確認是否要覆寫該封裝。 **Y** 回覆會覆寫封裝， **N** 回覆會結束程式。 當命令包含 *QUIET* 選項時，不會出現提示，並且會覆寫任何現有的封裝。|  
 |/Q[uiet]|停止執行包含 **COPY**、 **MOVE**或 **SIGN** 選項的命令時所可能出現的確認提示。 如果目的地電腦中已有指定封裝的同名封裝，或已簽署了指定的封裝，就會出現這些提示。|  
 |/R[emark] *text*|在命令列中加入註解。 註解引數是選擇性的。 如果註解文字包括空格，就必須用引號括住文字。 您可以在單一命令列中併入多個 REM 選項。|  
-|/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|簽署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝。 這個動作需要使用三個以分號分隔的引數 (目的地、路徑及雜湊)：<br /><br /> 目的地引數可指定 *SQL*、 *FILE*或 *DTS*。 SQL 目的地可包含 *DESTUSER*、 *DESTPASSWORD* 和 *DESTSERVER* 選項。<br /><br /> path 引數指定要處理之封裝的位置。<br /><br /> hash 引數指定用可變長度十六進位字串來表示的憑證識別碼。<br /><br /> 如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。<br /><br /> <br /><br /> **\*\* 重要事項 \*\*** 當 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 設定為檢查封裝的簽章時，將只會檢查數位簽章是否存在、是否有效，以及是否來自信任的來源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]沒有*不*檢查封裝是否已經變更。|  
+|/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|簽署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝。 這個動作需要使用三個以分號分隔的引數 (目的地、路徑及雜湊)：<br /><br /> 目的地引數可指定 *SQL*、 *FILE*或 *DTS*。 SQL 目的地可包含 *DESTUSER*、 *DESTPASSWORD* 和 *DESTSERVER* 選項。<br /><br /> path 引數指定要處理之封裝的位置。<br /><br /> hash 引數指定用可變長度十六進位字串來表示的憑證識別碼。<br /><br /> 如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。<br /><br /> <br /><br /> **\*\* 重要事項 \*\*** 當 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 設定為檢查封裝的簽章時，將只會檢查數位簽章是否存在、是否有效，以及是否來自信任的來源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]「不會」檢查套件是否經過變更。|  
 |/SourceP[assword] *password*|指定 *SQL* 和 *SOURCEUSER* 選項使用的密碼，以擷取儲存在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 執行個體上之資料庫中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 在不含 *SOURCEUSER* 選項的命令列上指定 **SOURCEPASSWORD** 是錯的。<br /><br /> 注意： [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
 |/SourceS[erver] *server_instance*|指定與 **SQL** 選項一起使用的伺服器名稱，以擷取 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中所儲存之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 在不含與 *SOURCESERVER* 、 *SIGN SQL*、 *COPY* *SQL*或 *MOVE* *SQL* 選項來指定封裝的位置。<br /><br /> 您可以在伺服器名稱中加入反斜線和執行個體名稱來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱。|  
 |/SourceU[ser] *username*|指定與 *SOURCESERVER* 選項一起使用的伺服器名稱，以擷取 [!INCLUDE[ssIS](../includes/ssis-md.md)] 驗證之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 在不含 *SOURCEUSER* 、 *SIGN SQL*或 *COPY SQL*選項的命令列上指定 *MOVE SQL* 是錯的。<br /><br /> 注意： [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
@@ -284,4 +282,3 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 [執行 Integration Services (SSIS) 套件](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   
-

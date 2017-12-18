@@ -2,9 +2,12 @@
 title: "預估角色切換的服務中斷時間 (資料庫鏡像) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd86103fe23292df96c1ef11dafd0e3b5d70196e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2083d1c82e4557e4de96cd8841ce043563b25f90
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>預估角色切換期間的服務中斷時間 (資料庫鏡像)
-  在角色切換期間，資料庫鏡像無法服務的時間量視角色切換類型和角色切換原因而定。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在角色切換期間，資料庫鏡像無法服務的時間量視角色切換類型和角色切換原因而定。  
   
 -   對於自動容錯移轉，有兩個因素構成服務中斷時間：鏡像伺服器辨識主體伺服器執行個體失敗所需的時間，即錯誤偵測，加上資料庫容錯移轉所需的時間，即容錯移轉時間。  
   

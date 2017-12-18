@@ -1,29 +1,27 @@
 ---
 title: "規劃在 SQL Server 中採用記憶體內部 OLTP 功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/08/2017
+ms.date: 11/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d8cfb42dd7bfa261ba364b427075280631d386b9
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d1a1f9dceede34a4ccf9c6914b0fb4c50c5babdf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>規劃在 SQL Server 中採用記憶體內部 OLTP 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -261,126 +259,15 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 ## <a name="e-limitations-of-native-procs"></a>E. 原生程序的限制
 
 
-原生編譯的預存程序中不支援 Transact-SQL 的特定元素。
+原生編譯的 T-SQL 模組 (包括預存程序) 不支援 Transact-SQL 的特定項目。 如需支援哪些功能的詳細資訊，請參閱：
 
-如需將 Transact-SQL 指令碼移轉至原生程序時的考量，請參閱︰
+- [原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
+
+在 Transact-SQL 模組使用不受支援功能的情況下，如需將其移轉至原生編譯的考量，請參閱：
 
 - [原生編譯預存程序的移轉問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
 
-
-### <a name="e1-no-case-in-a-native-proc"></a>E.1 在原生程序中不可使用 CASE
-
-Transact-SQL 中的 CASE 運算式不能用於原生程序內。 您可以採用的解決方法是︰
-
-- [在原生編譯的預存程序中實作 CASE 運算式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)
-
-
-### <a name="e2-no-merge-in-a-native-proc"></a>E.2 在原生程序中不可使用 MERGE
-
-
-Transct-SQL [MERGE 陳述式](../../t-sql/statements/merge-transact-sql.md) 與一般所稱的 *upsert* 功能有相似之處。 原生程序不能使用 MERGE 陳述式。 不過，您可以使用 SELECT 加上 UPDATE 加上 INSERT 陳述式的組合，達到與 MERGE 相同的功能。 程式碼範例位於：
-
-- [在原生編譯的預存程序中實作 MERGE 功能](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)
-
-
-
-### <a name="e3-no-joins-in-update-or-delete-statements-in-a-native-proc"></a>E.3 在原生程序的 UPDATE 或 DELETE 陳述式中不可使用聯結
-
-原生程序中的 Transact-SQL 陳述式只能存取記憶體最佳化資料表。 在 UPDATE 和 DELETE 陳述式中，您無法聯結任何資料表。 原生程序中的嘗試會失敗，並有訊例如 Msg 12319 的訊息，說明您︰
-
-- 無法在 UPDATE 陳述式中使用 FROM 子句。
-- 無法在 DELETE 陳述式中指定資料表來源。
-
-子查詢的任何類型都未提供解決辦法。 不過，您可以使用記憶體最佳化資料表變數來達成多個陳述式的聯結結果。 兩個程式碼範例如下︰
-
-- DELETE...JOIN...我們想要在原生程序中執行，但無法達成。
-- Transact-SQL 陳述式的解決方法集，達成刪除聯結。
-
-
-*案例︰* TabProjectEmployee 資料表有兩個資料行的唯一索引鍵︰ProjectId 和 EmployeeId。 每個資料列都表示員工指派到使用中專案。 當員工離職時，員工必須從 TabProjectEmployee 資料表中刪除。
-
-
-#### <a name="invalid-t-sql-deletejoin"></a>無效的 T-SQL, DELETE...JOIN
-
-
-原生程序不能有如下的 DELETE...JOIN。
-
-
-```tsql
-DELETE pe
-    FROM
-             TabProjectEmployee   AS pe
-        JOIN TabEmployee          AS e
-
-            ON pe.EmployeeId = e.EmployeeId
-    WHERE
-            e.EmployeeStatus = 'Left-the-Company'
-;
-```
-
-
-#### <a name="valid-work-around-manual-deletejoin"></a>有效解決辦法, 手動 DELETE...JOIN
-
-接下來是解決辦法程式碼範例，分兩個部分︰
-
-1. CREATE TYPE 會執行一次，在任何實際資料表變數第一次使用類型的數天前。
-
-2. 商務程序會使用建立的類型。 一開始先宣告所建立資料表類型的資料表變數。
-
-
-```tsql
-
-CREATE TYPE dbo.type_TableVar_EmployeeId
-    AS TABLE  
-    (
-        EmployeeId   bigint   NOT NULL
-    );
-```
-
-
-接下來，使用建立資料表類型。
-
-
-```tsql
-DECLARE @MyTableVarMo  dbo.type_TableVar_EmployeeId  
-
-INSERT INTO @MyTableVarMo (EmployeeId)
-    SELECT
-            e.EmployeeId
-        FROM
-                 TabProjectEmployee  AS pe
-            JOIN TabEmployee         AS e  ON e.EmployeeId = pe.EmployeeId
-        WHERE
-            e.EmployeeStatus = 'Left-the-Company'
-;
-
-DECLARE @EmployeeId   bigint;
-
-WHILE (1=1)
-BEGIN
-    SET @EmployeeId = NULL;
-
-    SELECT TOP 1 @EmployeeId = v.EmployeeId
-        FROM @MyTableVarMo  AS v;
-
-    IF (NULL = @Employeed) BREAK;
-    
-    DELETE TabProjectEmployee
-        WHERE EmployeeId = @EmployeeId;
-
-    DELETE @MyTableVarMo
-        WHERE EmployeeId = @EmployeeId;
-END;
-```
-
-
-### <a name="e4-query-plan-limitations-for-native-procs"></a>E.4 原生程序的查詢計劃限制
-
-
-原生程序無法使用某些類型的查詢計劃。 許多詳細資料討論於︰
-
-- [記憶體最佳化資料表的查詢處理指南](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)
-
+除了 Transact-SQL 特定項目上的限制，針對原生編譯的 T-SQL 模組所支援的查詢運算子也有一些限制。 由於這些限制，原生編譯的預存程序並不適用於處理大型資料集的分析查詢。
 
 #### <a name="no-parallel-processing-in-a-native-proc"></a>原生程序中不可使用平行處理
 
@@ -421,6 +308,5 @@ END;
 ## <a name="related-links"></a>相關連結
 
 - [In-Memory OLTP (記憶體中最佳化)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
 
 

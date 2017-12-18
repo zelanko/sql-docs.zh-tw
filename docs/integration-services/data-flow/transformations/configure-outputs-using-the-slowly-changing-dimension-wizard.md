@@ -1,5 +1,5 @@
 ---
-title: "使用 「 緩時變更維度精靈 」 來設定輸出 |Microsoft 文件"
+title: "使用緩時變維度精靈來設定輸出 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 478b3340eda942efc1cbef8a19a2cb811daf0685
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用緩時變維度精靈來設定輸出
   「緩時變維度精靈」做為「緩時變維度」轉換的編輯器使用。 為緩時變維度資料建立並設定資料流程會是一個複雜的工作。 「緩時變維度精靈」可引導您執行對應資料行、選取商務索引鍵資料行、設定資料行變更屬性，以及設定對推斷之維度成員的支援等步驟，為「緩時變維度」轉換輸出提供建立資料流程的最簡單方法。  
@@ -82,7 +80,7 @@ ms.lasthandoff: 08/03/2017
   
      下圖顯示一個資料流程範例，它支援固定屬性、變更屬性和記錄屬性變更、推斷的成員以及對符合記錄的變更。  
   
-     ![從緩時變維度精靈 」 的資料流](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "緩時變維度精靈 」 中資料流")  
+     ![來自緩時變維度精靈的資料流程](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "來自緩時變維度精靈的資料流程")  
   
 ## <a name="updating-slowly-changing-dimension-outputs"></a>更新緩時變維度輸出  
  更新「緩時變維度」轉換輸出之組態的最簡單方法，就是重新執行「緩時變維度精靈」並修改精靈頁面中的屬性。 您還可以使用 [進階編輯器] 對話方塊或以程式設計方式更新「緩時變維度」轉換。  
@@ -91,4 +89,3 @@ ms.lasthandoff: 08/03/2017
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "MSMQ 連接管理員 |Microsoft 文件"
+title: "MSMQ 連線管理員 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.msmqconnectionmanager.f1
+f1_keywords: sql13.dts.designer.msmqconnectionmanager.f1
 helpviewer_keywords:
 - connections [Integration Services], message queues
 - connection managers [Integration Services], MSMQ
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 0e028f9f648acc18d56dc05262adccbbc52f8f7e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ae3af4dcc8937acc481e773d3af3a9ead0cf775
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 連接管理員
   MSMQ 連接管理員可讓封裝連接到使用 Message Queuing (又稱為 MSMQ) 的訊息佇列。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的「訊息佇列」工作使用 MSMQ 連線管理員。  
@@ -47,8 +44,8 @@ ms.lasthandoff: 08/09/2017
   
 |佇列類型|範例路徑|  
 |----------------|-----------------|  
-|公用|\<電腦名稱 >\\< 佇列名稱\>|  
-|Private|\<電腦名稱 > \Private$\\< 佇列名稱\>|  
+|公用|\<電腦名稱>\\<佇列名稱\>|  
+|Private|\<電腦名稱>\Private$\\<佇列名稱\>|  
   
  您可以使用句號 (.) 代表本機電腦。  
   
@@ -79,8 +76,8 @@ ms.lasthandoff: 08/09/2017
   
 |佇列類型|範例路徑|  
 |----------------|-----------------|  
-|公用|\<電腦名稱 >\\< 佇列名稱\>|  
-|Private|\<電腦名稱 > \Private$\\< 佇列名稱\>|  
+|公用|\<電腦名稱>\\<佇列名稱\>|  
+|Private|\<電腦名稱>\Private$\\<佇列名稱\>|  
   
  您可以使用 "." 代表本機電腦。  
   
@@ -89,7 +86,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [訊息佇列工作](../../integration-services/control-flow/message-queue-task.md)   
- [Integration Services &#40;SSIS &#41;連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

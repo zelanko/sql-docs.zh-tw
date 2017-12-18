@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 目的地 |Microsoft 文件"
+title: "SQL Server 目的地 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: e85093b58f8fcad60231c0f1a5c24387be686be3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: ff9e0b26ec409940e08fd1e3161add395d00b524
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-destination"></a>SQL Server 目的地
   SQL Server 目的地會連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，並大量載入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表和檢視中。 如果封裝會存取遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，您就無法在這種封裝中使用 SQL Server 目的地。 反之，這種封裝應該使用 OLE DB 目的地。 如需詳細資訊，請參閱 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。  
@@ -130,7 +128,7 @@ ms.lasthandoff: 08/17/2017
   使用 **[SQL 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可指定資料來源資訊並預覽結果。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地會將資料載入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料表或檢視。  
   
 ### <a name="options"></a>選項。  
- **OLE DB 連接管理員**  
+ **[無快取]**  
  從清單中選取現有的連接，或按一下 [新增] 來建立新的連接。  
   
  **新增**  
@@ -167,7 +165,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="sql-destination-editor-advanced-page"></a>SQL 目的地編輯器 (進階頁面)
   使用 [SQL 目的地編輯器] 對話方塊的 [進階] 頁面，即可指定進階大量插入選項。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **保留識別**  
  指定工作是否應該將值插入識別欄位中。 此屬性的預設值為 **False**。  
   
@@ -211,4 +209,3 @@ ms.lasthandoff: 08/17/2017
  [資料流程](../../integration-services/data-flow/data-flow.md)  
   
   
-

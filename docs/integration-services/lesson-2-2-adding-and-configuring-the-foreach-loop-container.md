@@ -1,5 +1,5 @@
 ---
-title: "步驟 2： 加入和設定 「 Foreach 迴圈 」 容器 |Microsoft 文件"
+title: "步驟 2：新增和設定 Foreach 迴圈容器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 315933379f0ec61453fa0fd783686f9446a977c0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4c5183131893849feca62582a63a0d2c25963631
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>課程 2-2-加入和設定 Foreach 迴圈容器
+# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>課程 2-2 - 新增和設定 Foreach 迴圈容器
 在這項工作中，您將加入功能，於一般檔案的資料夾中形成迴圈，並對每個一般檔案套用在第 1 課使用的相同資料流程轉換。 您的作法是在控制流程中加入和設定 Foreach 迴圈容器。  
   
 您加入的 Foreach 迴圈容器必須能夠連接到資料夾的每個一般檔案。 由於資料夾的所有檔案都具有相同格式，所以 Foreach 迴圈容器可以使用相同的一般檔案連接管理員來連接每一個檔案。 容器要使用的一般檔案連接管理員與您在第 1 課建立的一般檔案連接管理員相同。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 08/03/2017
 對封裝做了這些修改之後，當封裝執行時，Foreach 迴圈容器將反覆進行範例資料夾內的檔案集合。 每次發現符合準則的檔案時，Foreach 迴圈容器就會在使用者自訂變數中填入檔案名稱，將使用者自訂變數對應至 [範例貨幣資料一般檔案] 連接管理員的 **ConnectionString** 屬性，然後對該檔案執行資料流程。 因此，在 Foreach 迴圈的每個反覆運算中，資料流程工作將取用不同的一般檔案。  
   
 > [!NOTE]  
-> 因為[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]隔開控制流程與資料流程中，您將加入控制流程任何迴圈時，不需要對資料流程做修改。 因此，您在第 1 課建立的資料流程不必改變。  
+> 因為 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 隔開控制流程與資料流程，所以您要加入控制流程中的任何迴圈都不需要對資料流程做修改。 因此，您在第 1 課建立的資料流程不必改變。  
   
 ### <a name="to-add-a-foreach-loop-container"></a>若要加入 Foreach 迴圈容器  
   
@@ -71,11 +68,11 @@ ms.lasthandoff: 08/03/2017
   
     此範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要下載範例資料和課程封裝，請執行下列動作。  
   
-    1.  巡覽至 [Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=275027)。 
+    1.  導覽至 [Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=275027)。 
   
     2.  按一下 **[下載]** 索引標籤。  
   
-    3.  按一下連結以取得[SQL2012。Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031)檔案。  
+    3.  按一下 [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031) 檔案的連結。  
   
 6.  在 [檔案] 方塊中，輸入 **Currency_\*.txt**。  
   
@@ -83,7 +80,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  按一下 [變數對應]。  
   
-2.  在**變數對應**頁面上，於**變數**資料行中，按一下空白儲存格，然後選取**\<新增變數 … >**。  
+2.  在 [變數對應] 頁面的 [變數] 資料行中，按一下空白資料格，然後選取 [\<新增變數...>]。  
   
 3.  在 [新增變數] 對話方塊中，對 [名稱] 輸入 **varFileName**。  
   
@@ -99,7 +96,7 @@ ms.lasthandoff: 08/03/2017
 -   將 [擷取範例貨幣資料] 資料流程工作拖曳至 Foreach 迴圈容器，這個容器現在已重新命名為 [資料夾的 Foreach 檔案]。  
   
 ## <a name="next-lesson-task"></a>下一課的工作  
-[步驟 3： 修改一般檔案連接管理員](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+[步驟 3：修改一般檔案連接管理員](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
@@ -107,4 +104,3 @@ ms.lasthandoff: 08/03/2017
   
   
   
-

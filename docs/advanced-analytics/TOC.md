@@ -122,6 +122,7 @@
 
 ### [避免 R 使用者套件程式庫的錯誤](r/packages-installed-in-user-libraries.md)
 
+### [新增 SQLRUserGroup 作為資料庫使用者](r/add-sqlrusergroup-to-database.md)
 
 ## 資料探索和模型化
 

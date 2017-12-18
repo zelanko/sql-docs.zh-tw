@@ -1,10 +1,13 @@
 ---
 title: "SQL Server 2016 的新功能"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8cbdc851a7b050f359bd473e8ea971587ff850b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7f4f6bc0101c4cd05a9ec301b3e46b083250d08f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
- 使用 SQL Server 2016，您可以使用內建所有功能 (從記憶體內部效能和進階安全性到資料庫內分析) 的可調整混合式資料庫平台，建置智慧型的任務關鍵應用程式。 SQL Server 2016 版本新增了新的安全性功能、查詢能力、Hadoop 和雲端整合、R 分析等等，以及許多改進和增強功能。 
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] 使用 SQL Server 2016，您可以使用內建所有功能 (從記憶體內部效能和進階安全性到資料庫內分析) 的可調整混合式資料庫平台，建置智慧型的任務關鍵應用程式。 SQL Server 2016 版本新增了新的安全性功能、查詢能力、Hadoop 和雲端整合、R 分析等等，以及許多改進和增強功能。 
 
 此頁面會提供摘要資訊，以及能針對每個 SQL Server 元件提供詳細資料的 SQL Server 2016 新功能資訊連結。 
 

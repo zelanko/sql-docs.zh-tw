@@ -1,5 +1,5 @@
 ---
-title: "轉換自訂屬性 |Microsoft 文件"
+title: "轉換自訂屬性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -44,17 +43,16 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 964997cb8223139d44c696a80b4c659769f717a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
   除了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型中大部分資料流程物件通用的屬性以外，許多資料流程物件都具有物件特有的自訂屬性。 這些自訂屬性只能在執行階段使用，而且不會記錄在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed 程式設計參考文件集中。  
@@ -268,7 +266,7 @@ ms.lasthandoff: 09/28/2017
   
 |屬性|資料類型|說明|  
 |--------------|---------------|-----------------|  
-|Delimiters|字串|轉換所使用的 Token 分隔符號。 預設分隔符號包括下列字元： 空格 （）、 逗號 （，）、 句號 （.）、 分號 （;）、 冒號 （:）、 連字號 （-），按兩下雙引號 （"）、 單一直引號 （'）、 連字號 (&)、 斜線符號 （/），反斜線 (\\)，at 符號 (@)，驚嘆號 （！）、 問號 （？），開啟括號 （（）、 右括弧 （）），小於 (\<)、 大於 (>)、 開啟括號 ([)、 右括弧 (])、 左大括號 （{}） 括號 （}）、 管道 (&#124;)、 關閉數字符號 （#），星號 （*）、 插入號 (^) 和百分比 （%）。|  
+|Delimiters|字串|轉換所使用的 Token 分隔符號。 預設分隔符號包括下列字元：空格 ( )、逗號 (,)、句號 (.)、分號 (;)、冒號 (:)、連字號 (-)、雙引號 (")、單引號 (')、& 符號、正斜線 (/)、反斜線 (\\)、@ 符號、驚嘆號 (!)、問號 (?)、左括弧 (()、右括弧 ())、小於 (\<)、大於 (>)、左方括弧 ([)、右方括弧 (])、左大括弧 ({)、右大括弧 (})、縱線字元 (&#124;)、數字符號 (#)、星號 (*)、插入號 (^) 和百分比 (%)。|  
 |Exhaustive|布林|一個值，指定每個輸入資料錄是否會與其他每個輸入資料錄比較。 **True** 值大部分用於偵錯目的。 此屬性的預設值為 **False**。<br /><br /> 注意：雖然您無法在模糊群組轉換編輯器中使用這個屬性，但是可以使用進階編輯器來設定這個屬性。|  
 |MaxMemoryUsage|Integer|可供轉換使用的記憶體數量上限。 此屬性的預設值為 **0**，表示啟用動態記憶體使用量。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 注意：雖然您無法在模糊群組轉換編輯器中使用這個屬性，但是可以使用進階編輯器來設定這個屬性。|  
 |MinSimilarity|Double|轉換用來識別重複項目的相似度臨界值，表示成介於 0 與 1 之間的值。  這個屬性的預設值為 0.8。|  
@@ -302,7 +300,7 @@ ms.lasthandoff: 09/28/2017
 |屬性|資料類型|說明|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|布林|指定是否應該針對模糊查閱索引建構和後續的查閱建立參考資料表的副本。 這個屬性的預設值為 **True**。|  
-|Delimiters|字串|轉換用來 Token 化資料行值的分隔符號。 預設分隔符號包括下列字元： 空格 （）、 逗號 （，）、 句號 （.） 分號 （;）、 冒號 （:） 連字號 （-）、 按兩下雙引號 （"）、 單一直引號 （'）、 連字號 (&)、 斜線符號 （/），反斜線 (\\)，at 符號 (@)，驚嘆號 （！）、 問號 （？）、 左括號 （（）、 右括弧 （）），小於 (\<)、 大於 (>)、 開啟括號 ([)、 右括弧 (])、 左大括號 （{}） 括號 （}）、 管道 (&#124;) 結束。 數字符號 (#)、星號 (*)、插入號 (^) 及百分比 (%)。|  
+|Delimiters|字串|轉換用來 Token 化資料行值的分隔符號。 預設分隔符號包括下列字元：空格 ( )、逗號 (,)、句號 (.)、分號 (;)、冒號 (:)、連字號 (-)、雙引號 (")、單引號 (')、& 符號、正斜線 (/)、反斜線 (\\)、@ 符號、驚嘆號 (!)、問號 (?)、左括弧 (()、右括弧 ())、小於 (\<)、大於 (>)、左方括弧 ([)、右方括弧 (])、左大括弧 ({)、右大括弧 (})、縱線字元 (&#124;)。 數字符號 (#)、星號 (*)、插入號 (^) 及百分比 (%)。|  
 |DropExistingMatchIndex|布林|值，指定是否要在 MatchIndexOptions 未設定為 ReuseExistingIndex 時，刪除 MatchIndexName 中指定的比對索引。 這個屬性的預設值是 [True]。|  
 |Exhaustive|布林|一個值，指定每個輸入資料錄是否會與其他每個輸入資料錄比較。 **True** 值大部分用於偵錯目的。 此屬性的預設值為 **False**。<br /><br /> 注意：雖然您無法在模糊查閱轉換編輯器中使用這個屬性，但是可以使用進階編輯器來設定這個屬性。|  
 |MatchIndexName|字串|相符索引的名稱。 相符索引是轉換用以建立並儲存它所使用之索引的資料表。 若重複使用相符索引，MatchIndexName 會指定要重複使用的索引。 MatchIndexName 必須是有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別碼名稱。 例如，如果名稱包含空格，此名稱就必須以方括號括住。|  
@@ -350,7 +348,7 @@ ms.lasthandoff: 09/28/2017
 |DefaultCodePage|Integer|無法從資料來源中取得字碼頁資訊時要使用的預設字碼頁。|  
 |MaxMemoryUsage|Integer|查閱資料表的快取大小上限。 此屬性的預設值為 **25**，表示快取大小沒有任何限制。|  
 |MaxMemoryUsage64|Integer|在 64 位元電腦上，查閱資料表的快取大小上限。|  
-|NoMatchBehavior|整數 (列舉)|一個值，指定在參考資料集中沒有相符項目的資料列是否會被視為錯誤。<br /><br /> 當此屬性設定為 [將無相符項目的資料列視為錯誤]\(0) 時，沒有相符項目的資料列就會被視為錯誤。 您可以使用 [查閱轉換編輯器] 對話方塊的 [錯誤輸出] 頁面來指定發生這種錯誤類型時要採取的動作。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。<br /><br /> 當屬性設定為 [將無相符項目的資料列傳送至無相符結果輸出]\(1)，資料列就不會被視為錯誤。<br /><br /> 預設值是 [將無相符項目的資料列視為錯誤]\(0)。|  
+|NoMatchBehavior|整數 (列舉)|一個值，指定在參考資料集中沒有相符項目的資料列是否會被視為錯誤。<br /><br /> 當此屬性設定為 [將無相符項目的資料列視為錯誤] (0) 時，沒有相符項目的資料列就會被視為錯誤。 您可以使用 [查閱轉換編輯器] 對話方塊的 [錯誤輸出] 頁面來指定發生這種錯誤類型時要採取的動作。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。<br /><br /> 當屬性設定為 [將無相符項目的資料列傳送至無相符結果輸出] (1)，資料列就不會被視為錯誤。<br /><br /> 預設值是 [將無相符項目的資料列視為錯誤] (0)。|  
 |ParameterMap|字串|歷程識別碼的分號分隔清單，而這些歷程識別碼會對應至 **SqlCommand** 陳述式中使用的參數。|  
 |ReferenceMetadataXML|字串|轉換從查閱資料表中複製到輸出之資料行的中繼資料。|  
 |SqlCommand|字串|填入查閱資料表的 SELECT 陳述式。|  
@@ -638,7 +636,6 @@ ms.lasthandoff: 09/28/2017
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [路徑屬性](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [可以利用運算式來設定資料流程屬性](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
+ [可以使用運算式設定的資料流程屬性](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   
-

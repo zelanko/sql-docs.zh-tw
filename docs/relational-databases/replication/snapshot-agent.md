@@ -2,9 +2,12 @@
 title: "快照集代理程式 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ee37152d554f8ac6303ff85f3467aca84f620b7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d0e2a93a43691f361692bda75f1545c1e3317650
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="snapshot-agent"></a>快照集代理程式
-  **[快照集代理程式]** 對話方塊會顯示快照集代理程式的詳細資訊，包括狀態、記錄、參考用訊息以及任何錯誤訊息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [快照集代理程式] 對話方塊會顯示快照集代理程式的詳細資訊，包括狀態、記錄、資訊訊息以及任何錯誤訊息。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  從 **[檢視]** 功能表選取要檢視的快照集代理程式工作階段，然後在標示為 **[快照集代理程式的工作階段]**的方格中選取特定工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[所選取工作階段中的動作]**之方格中。 如果選取的工作階段結束時發生錯誤， **[所選取之工作階段的錯誤詳細資料或訊息]** 的文字區域也會顯示。  
   
  **[檢視]**  

@@ -2,9 +2,12 @@
 title: "Sort Warnings 事件類別 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b0f67e978040b0efbb440b1d31055ff4058c53e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d24e294e048d5673e9ed4e51cfb20fce153e9e67
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 事件類別
-  Sort Warnings 事件類別指出不適合在記憶體中的排序作業。 不包括關於索引建立的排序作業，只包括在查詢中 (例如在 SELECT 陳述式中所用的 ORDER BY 子句) 的排序作業。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Sort Warnings 事件類別指出不適合在記憶體中的排序作業。 不包括關於索引建立的排序作業，只包括在查詢中 (例如在 SELECT 陳述式中所用的 ORDER BY 子句) 的排序作業。  
   
  如果關於排序作業的查詢產生 Sort Warnings 事件類別，而 EventSubClass 資料行值為 2，就會影響到查詢的效能，因為資料上的多個行程都要求將資料排序。 請進一步調查查詢以判定是否能刪除排序作業。  
   

@@ -2,9 +2,12 @@
 title: "Attention 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b16f6c0ade71ebbfc39784342308ccd640042004
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e254e957aeda52e7a73e7b866d402bb0c32f18b0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attention-event-class"></a>Attention 事件類別
-  **Attention** 事件類別指出發生了注意事項事件，例如取消、用戶端中斷要求或用戶端連線中斷。 取消作業也可視為實作資料存取驅動程式逾時的一部份。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Attention** 事件類別指出發生了注意事項事件，例如取消、用戶端中斷要求或用戶端連線中斷。 取消作業也可視為實作資料存取驅動程式逾時的一部份。  
   
 ## <a name="attention-event-class-data-columns"></a>Attention 事件類別資料行  
   

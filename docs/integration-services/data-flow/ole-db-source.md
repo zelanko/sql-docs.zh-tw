@@ -1,5 +1,5 @@
 ---
-title: "OLE DB 來源 |Microsoft 文件"
+title: "OLE DB 來源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 669c3d72bd6287d0e534dd34f874978a8157da21
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ole-db-source"></a>OLE DB 來源
   OLE DB 來源會使用資料庫資料表、檢視或 SQL 命令，從各種 OLE DB 相容的關聯式資料庫中擷取資料。 例如，OLE DB 來源可從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中擷取資料。  
@@ -132,7 +130,7 @@ ms.lasthandoff: 09/28/2017
 > [!NOTE]  
 >  在 OLE DB 來源編輯器中無法使用 OLE DB 來源的 **CommandTimeout** 屬性，但可使用進階編輯器來設定這個屬性。 如需這個屬性的詳細資訊，請參閱 [OLE DB 自訂屬性](../../integration-services/data-flow/ole-db-custom-properties.md)的＜Excel 來源＞一節。  
   
-### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>開啟 OLE DB 來源編輯器 （連接管理員頁面）  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>開啟 OLE DB 來源編輯器 (連線管理員頁面)  
   
 1.  將 OLE DB 來源加入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝 (於 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中)。  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 09/28/2017
  使用 [資料檢視] 對話方塊來預覽結果。 [預覽] 最多可顯示 200 個資料列。  
   
 > [!NOTE]  
->  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而是值\<值太大，無法顯示 > 或 System.Byte []。 使用 SQL OLE DB 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
+>  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而會顯示 \<數值太大而無法顯示> 或 System.Byte[]。 使用 SQL OLE DB 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
   
 ### <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
   
@@ -239,4 +237,3 @@ ms.lasthandoff: 09/28/2017
  [資料流程](../../integration-services/data-flow/data-flow.md)  
   
   
-

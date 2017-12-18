@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 服務所記錄的事件 |Microsoft 文件"
+title: "Integration Services 服務所記錄的事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dc85b9b432cfccacabb6cf877e7f26edd4b0b975
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 服務所記錄的事件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會將各種訊息記錄至 Windows 應用程式事件記錄檔。 當服務啟動、停止以及發生特定問題時，此服務就會記錄這些訊息。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 08/03/2017
   
  如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的詳細資訊，請參閱 [Integration Services 服務 &#40;SSIS 服務&#41;](../../integration-services/service/integration-services-service-ssis-service.md)。  
   
-## <a name="service-status-messages"></a>服務的狀態訊息
+## <a name="service-status-messages"></a>服務狀態訊息
  當您選取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 進行安裝時，系統就會安裝並啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務，而且它的啟動類型會設定為自動。  
   
 |事件識別碼|符號名稱|Text|注意|  
@@ -47,10 +45,10 @@ ms.lasthandoff: 08/03/2017
 |258|DTS_MSG_SERVER_STOPPING|正在停止 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服務。%n%n結束時停止所有執行中的封裝: %1|服務正在停止，而且如果您將此服務設定為這樣做，就會停止所有執行中的封裝。 您可以在組態檔中設定 True 或 False 值，以便決定在此服務本身停止時，是否會停止執行中封裝。 這個事件的訊息包括這項設定的值。|  
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服務已停止。%n伺服器版本 %1|服務已停止。|  
   
-## <a name="settings-file-messages"></a>設定檔訊息  
+## <a name="settings-file-messages"></a>設定檔案訊息  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的設定會儲存在您可以修改的 XML 檔案中。 如需詳細資訊，請參閱 [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md) (Integration Services 服務 (SSIS 服務))。  
   
-|이벤트 ID|符號名稱|Text|注意|  
+|事件識別碼|符號名稱|Text|注意|  
 |--------------|-------------------|----------|-----------|  
 |274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服務: %n指定組態檔的登錄設定不存在。 %n嘗試載入預設組態檔。|包含組態檔路徑的登錄項目不存在或是空的。|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服務組態檔不存在。%n載入預設值。|組態檔本身不存在指定的位置中。|  
@@ -65,7 +63,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="view-events"></a>檢視事件
   目前有兩個工具可讓您用來檢視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的事件：  
   
--   **中的** [記錄檔檢視器] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]對話方塊。 **[記錄檔檢視器]** 對話方塊包括匯出、篩選和搜尋記錄檔的選項。 如需 [記錄檔檢視器] [**中選項的詳細資訊，請參閱**記錄檔檢視器 F1 說明](../../relational-databases/logs/log-file-viewer-f1-help.md)。  
+-   **中的** [記錄檔檢視器] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]對話方塊。 **[記錄檔檢視器]** 對話方塊包括匯出、篩選和搜尋記錄檔的選項。 如需 [記錄檔檢視器]**[ 中選項的詳細資訊，請參閱**記錄檔檢視器 F1 說明](../../relational-databases/logs/log-file-viewer-f1-help.md)。  
   
 -   Windows 事件檢視器。  
   
@@ -105,4 +103,3 @@ ms.lasthandoff: 08/03/2017
  
 ## <a name="related-tasks"></a>相關工作  
  如需如何檢視記錄項目的資訊，請參閱 [Integration Services 封裝所記錄的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-

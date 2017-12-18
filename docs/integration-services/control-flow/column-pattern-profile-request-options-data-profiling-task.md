@@ -1,5 +1,5 @@
 ---
-title: "資料行模式設定檔要求選項 （資料分析工作） |Microsoft 文件"
+title: "資料行模式設定檔要求選項 (資料分析工作) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/05/2017
-
+ms.openlocfilehash: f51bdacbe57674f10f2dc7ea1c20d1ab64b0c229
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>資料行模式設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行模式設定檔要求] 設定選項。 資料行模式設定檔會報告一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。 這個設定檔可協助您識別資料中的問題，例如無效的字串，而且可以建議未來可用於驗證新值的規則運算式。 例如，「美國郵遞區號」資料行的模式設定檔可能會產生規則運算式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果您看見其他規則運算式，表示您的資料可能包含無效或格式錯誤的值。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 10/05/2017
   
 -   **分隔符號**：根據預設，分隔符號清單包含下列字元：空格、水平定位字元 (\t)、新行字元 (\n) 和歸位字元 (\r)。 雖然您可以指定其他分隔符號，但是無法移除預設的分隔符號。  
   
--   **符號**根據預設，清單**符號**包含下列字元：`,.;:-"'~=&/@!?()<>[]{}|#*^%`以及刻度標記。 例如，如果這些符號是 "`()-`"，"(425) 123-4567" 值就會 Token 化成為 ["(", "425", ")", "123", "-", "4567", ")"]。  
+-   **符號**：根據預設，[符號] 清單包含下列字元：`,.;:-"'~=&/@!?()<>[]{}|#*^%` 以及刻度標記。 例如，如果這些符號是 "`()-`"，"(425) 123-4567" 值就會 Token 化成為 ["(", "425", ")", "123", "-", "4567", ")"]。  
   
  一個字元無法同時屬於分隔符號和符號。  
   
@@ -136,7 +133,7 @@ ms.lasthandoff: 10/05/2017
  如需詳細資訊，請參閱本主題前面的「了解分隔符號和符號的使用方式」。  
   
  **Symbols**  
- 列出應該保留成為模式一部分的符號。 範例可能包括 "/" (代表日期)、":" (代表時間) 和 " @ " (代表電子郵件地址)。 根據預設，清單**符號**包含下列字元： `,.;:-"'~=&/@!?()<>[]{}|#*^%`。  
+ 列出應該保留成為模式一部分的符號。 範例可能包括 "/" (代表日期)、":" (代表時間) 和 "@" (代表電子郵件地址)。 根據預設，[符號] 清單包含下列字元：`,.;:-"'~=&/@!?()<>[]{}|#*^%`。  
   
  如需詳細資訊，請參閱本主題前面的「了解分隔符號和符號的使用方式」。  
   
@@ -152,7 +149,6 @@ ms.lasthandoff: 10/05/2017
   
 ## <a name="see-also"></a>另請參閱  
  [資料分析工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [單一資料表快速分析表單 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

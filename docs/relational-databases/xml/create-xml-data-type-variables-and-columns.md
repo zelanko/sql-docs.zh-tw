@@ -2,9 +2,12 @@
 title: "建立 XML 資料類型變數與資料行 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34d820e076639a944e216d00d02b90b7f2c63e2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 204c9ecf128f9aea3b520a63f4d001c09e9e9b19
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>建立 XML 資料類型變數與資料行
-  **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 **int** 與 **varchar**。 如同其他內建類型，當您建立資料表作為變數類型、參數類型、函數傳回類型，或是在 **CAST 和 CONVERT** 中建立資料表時，可以使用 [xml](../../t-sql/functions/cast-and-convert-transact-sql.md)資料類型作為資料行類型。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 **int** 與 **varchar**。 如同其他內建類型，當您建立資料表作為變數類型、參數類型、函數傳回類型，或是在 **CAST 和 CONVERT** 中建立資料表時，可以使用 [xml](../../t-sql/functions/cast-and-convert-transact-sql.md)資料類型作為資料行類型。  
   
 ## <a name="creating-columns-and-variables"></a>建立資料行和變數  
  若要在資料表中建立 `xml` 類型資料行，請使用 `CREATE TABLE` 陳述式，如下列範例所示：  

@@ -1,5 +1,5 @@
 ---
-title: "！ = （不等於） （SSIS 運算式） |Microsoft 文件"
+title: "!= (不等於) (SSIS 運算式) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 062024b2e222c0240852ce36646ecfd5b001deba
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: c77407983c720aaf36042f678799ba698cb6dcb5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="-unequal-ssis-expression"></a>!= (不等於) (SSIS 運算式)
   執行比較來決定兩個資料類型相容的運算式是否不相等。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。  
@@ -118,4 +116,3 @@ ListPrice != 500
  [運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

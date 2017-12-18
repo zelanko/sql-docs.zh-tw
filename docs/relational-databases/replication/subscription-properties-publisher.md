@@ -2,9 +2,12 @@
 title: "訂閱屬性 - 發行者 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e23aa71ea138af1689a60a44f00424a4158906c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2f971a24eaa58022a12a139bc6a6bd960b0dec76
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subscription-properties---publisher"></a>訂閱屬性 - 發行者
-  在發行者端的 **[訂閱屬性]** 對話方塊，可以讓您檢視和設定發送訂閱的屬性。 您也可以檢視提取訂閱的某些屬性，但在訂閱者端的 **[訂閱屬性]** 對話方塊，會顯示其他屬性並允許修改屬性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在發行者端的 [訂閱屬性] 對話方塊，可以讓您檢視和設定發送訂閱的屬性。 您也可以檢視提取訂閱的某些屬性，但在訂閱者端的 **[訂閱屬性]** 對話方塊，會顯示其他屬性並允許修改屬性。  
   
  **[訂閱屬性]** 對話方塊中的每個屬性包含一個描述。 按一下某個屬性，即可查看其在對話方塊底部顯示的描述。 此主題提供了關於一些屬性的其他資訊，其中大多數屬性僅會針對發行者端的發送訂閱顯示。 屬性會依下列類別目錄分組：  
   

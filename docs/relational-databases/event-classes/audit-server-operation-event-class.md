@@ -2,9 +2,12 @@
 title: "Audit Server Operation 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5d6f626646d1cd43aaebaf6a2657170ea9361016
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9226c0e3f9fa5dfce57c0ec1ae65379e55e73f7f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-server-operation-event-class"></a>Audit Server Operation 事件類別
-  使用安全性稽核作業 (例如改變設定、資源、外部存取或驗證) 時，就會發生 **稽核伺服器作業** 事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 使用安全性稽核作業 (例如改變設定、資源、外部存取或驗證) 時，就會發生 **Audit Server Operation** 事件類別。  
   
 ## <a name="audit-server-operation-event-class-data-columns"></a>Audit Server Operation 事件類別資料行  
   

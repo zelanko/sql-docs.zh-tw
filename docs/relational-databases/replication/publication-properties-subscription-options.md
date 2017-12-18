@@ -2,9 +2,12 @@
 title: "發行集屬性、訂閱選項 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e46255c7b91546ff00dadd04c5bc7d214831b2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5517df85eefa69980aa212e573165ef7cf0c1d5d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publication-properties-subscription-options"></a>發行集屬性，訂閱選項
-  **[發行集屬性]** 對話方塊的 **[訂閱選項]** 頁面，可以讓您檢視和設定訂閱相關聯的發行集層級屬性。 屬性會依下列類別目錄分組：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [發行集屬性] 對話方塊的 [訂閱選項] 頁面，可以讓您檢視和設定與訂閱建立關聯的發行集層級屬性。 屬性會依下列類別目錄分組：  
   
 -   套用至所有發行集的屬性。  
   

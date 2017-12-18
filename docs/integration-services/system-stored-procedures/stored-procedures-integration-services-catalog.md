@@ -1,5 +1,5 @@
 ---
-title: "預存程序 （Integration Services 目錄） |Microsoft 文件"
+title: "預存程序 (Integration Services 目錄) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,33 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- stored procedures [Integration Services]
+helpviewer_keywords: stored procedures [Integration Services]
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 21715bf65f3a85669dfe823511ddb9b6c2dd4d57
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 60fbd38303bcdb8b07d6831d6ab3fd473a8890c6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>預存程序 (Integration Services 目錄)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本節描述可用來管理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 專案 (已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的執行個體) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序。  
   
- 呼叫[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]預存程序來新增、 移除、 修改或執行儲存在物件**SSISDB**類別目錄。  
+ 呼叫 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 預存程序，即可新增、移除、修改或執行 **SSISDB** 目錄中所儲存的物件。  
   
- 類別目錄的預設名稱是 SSISDB。 儲存在目錄中的物件包含了專案、封裝、參數、環境和作業歷程記錄。  
+ 目錄的預設名稱為 SSISDB。 儲存在目錄中的物件包含了專案、封裝、參數、環境和作業歷程記錄。  
   
  您可以直接使用資料庫檢視和預存程序，或撰寫可呼叫 Managed API 的自訂程式碼。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 Managed API 會查詢檢視並呼叫本節中說明的預存程序，以執行許多工作。  
   
@@ -48,10 +45,10 @@ ms.lasthandoff: 09/26/2017
  [catalog.check_schema_version](../../integration-services/system-stored-procedures/catalog-check-schema-version.md)  
  判斷 SSISDB 目錄結構描述與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 二進位檔 (ISServerExec 和 SQLCLR 組件) 是否相容。  
   
- [catalog.clear_object_parameter_value &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)  
+ [catalog.clear_object_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)  
  清除現有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案或封裝儲存在伺服器上的參數值。  
   
- [catalog.configure_catalog &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)  
+ [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)  
  藉由將目錄屬性設定為指定值來設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄。  
   
  [catalog.create_environment &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database.md)  
@@ -63,7 +60,7 @@ ms.lasthandoff: 09/26/2017
  [catalog.create_environment_variable &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database.md)  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中建立環境變數。  
   
- [catalog.create_execution &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)  
+ [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中建立執行執行個體。  
   
  [catalog.create_execution_dump](../../integration-services/system-stored-procedures/catalog-create-execution-dump.md)  
@@ -87,19 +84,19 @@ ms.lasthandoff: 09/26/2017
  [catalog.delete_project &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md)  
  從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的資料夾刪除現有專案。  
   
- [catalog.deny_permission &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md)  
+ [catalog.deny_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md)  
  拒絕 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的安全性實體物件權限。  
   
  [catalog.deploy_project &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md)  
  將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的資料夾，或更新先前已部署的現有專案。  
   
- [catalog.get_parameter_values &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)  
+ [catalog.get_parameter_values &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)  
  從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的專案和對應封裝解析與擷取預設參數值。  
   
  [catalog.get_project &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
  擷取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 類別目錄中現有專案的屬性。  
   
- [catalog.grant_permission &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
+ [catalog.grant_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
  為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的安全性實體物件授與權限。  
   
  [catalog.move_environment &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md)  
@@ -120,7 +117,7 @@ ms.lasthandoff: 09/26/2017
  [catalog.restore_project &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
  將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的專案還原到舊版。  
   
- [catalog.revoke_permission &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md)  
+ [catalog.revoke_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md)  
  撤銷 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的安全性實體物件權限。  
   
  [catalog.set_environment_property &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database.md)  
@@ -132,7 +129,7 @@ ms.lasthandoff: 09/26/2017
  [catalog.set_environment_variable_property &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database.md)  
  設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中環境變數的屬性。  
   
- [catalog.set_environment_variable_protection &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md)  
+ [catalog.set_environment_variable_protection &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md)  
  設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中環境變數的區分位元。  
   
  [catalog.set_environment_variable_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database.md)  
@@ -147,32 +144,31 @@ ms.lasthandoff: 09/26/2017
  [catalog.set_folder_description &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
  設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中資料夾的描述。  
   
- [catalog.set_object_parameter_value &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)  
+ [catalog.set_object_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)  
  設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的參數值。 將值與環境變數建立關聯，或指派常值，在沒有指派其他值的情況下依預設使用。  
   
- [catalog.start_execution &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)  
+ [catalog.start_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)  
  啟動在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的執行執行個體。  
   
  [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md)  
  執行 SSISDB 目錄之作業狀態的維護。  
   
- [catalog.stop_operation &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)  
+ [catalog.stop_operation &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)  
  停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的驗證或執行執行個體。  
   
- [catalog.validate_package &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md)  
+ [catalog.validate_package &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md)  
  以非同步方式驗證 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的封裝。  
   
- [catalog.validate_project &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md)  
+ [catalog.validate_project &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md)  
  以非同步方式驗證 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的專案。  
   
-[catalog.add_execution_worker &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)   
-新增[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]標尺出背景工作中向外執行的執行個體。
+[catalog.add_execution_worker &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)   
+將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker 新增 Scale Out 中的執行個體。
 
-[catalog.enable_worker_agent &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)   
-針對標尺出 Master，與此工作啟用標尺出背景工作[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]類別目錄。
+[catalog.enable_worker_agent &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)   
+啟用處理此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄之相應放大主機的相應放大背景工作。
 
-[catalog.disable_worker_agent &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)   
-停用的標尺出 Master，與此工作的標尺出工作者[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]類別目錄。
-
+[catalog.disable_worker_agent &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)   
+停用處理此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄之相應放大主機的相應放大背景工作。
 
 

@@ -1,5 +1,5 @@
 ---
-title: "優先順序條件約束 |Microsoft 文件"
+title: "優先順序條件約束 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.precedenceconstraint.f1
+f1_keywords: sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -22,30 +20,29 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 380c7e4c06b4baec2efcbad54000a009a93b93e1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="precedence-constraints"></a>優先順序條件約束
   優先順序條件約束可在控制流程中，連結封裝中的可執行檔、容器和工作，並指定判斷可執行檔是否執行的條件。 可執行檔可以是「For 迴圈」容器、「Foreach 迴圈」容器、「時序」容器、工作或事件處理常式。 事件處理常式也可使用優先順序條件約束，以將其可執行檔連結至控制流程。  
   
  優先順序條件約束會連結兩個可執行檔：優先順序可執行檔和受條件約束的可執行檔。 優先順序可執行檔在條件約束可執行檔之前執行，且優先順序可執行檔的執行結果可以決定條件約束可執行檔是否執行。 下圖顯示了由優先順序條件約束連結的兩個可執行檔。  
   
- ![連接的優先順序條件約束的可執行檔](../../integration-services/control-flow/media/ssis-pcsimple.gif "連接的優先順序條件約束的可執行檔")  
+ ![以優先順序條件約束連接的可執行檔](../../integration-services/control-flow/media/ssis-pcsimple.gif "以優先順序條件約束連接的可執行檔")  
   
  在線性控制流程 (即沒有分支的控制流程) 中，優先順序條件約束單獨管理工作執行的順序。 在控制流程分支中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段引擎決定直接跟隨在分支後面的工作和容器之執行順序。 執行階段引擎也決定控制流程中未連接的工作流程之執行順序。  
   
  除僅封裝單一工作的工作主機容器之外， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的巢狀容器架構會啟用所有容器，用以包含每個都具有其各自控制流程的其他容器。 「For 迴圈」容器、「Foreach 迴圈」容器和「時序」容器可以包含多個工作和其他容器，而工作和其他容器進而可以包含多個工作和容器。 例如，具有「指令碼」工作和「時序」容器的封裝具有連結「指令碼」工作和「時序」容器的優先順序條件約束。 「時序」容器包括三個「指令碼」工作，且其優先順序條件約束會將這三個「指令碼」工作連結至一個控制流程。 下圖顯示具有兩個巢狀層級之封裝中的優先順序條件約束。  
   
- ![在封裝中的優先順序條件約束](../../integration-services/control-flow/media/mw-dts-12.gif "封裝中的優先順序條件約束")  
+ ![封裝中的優先順序條件約束](../../integration-services/control-flow/media/mw-dts-12.gif "封裝中的優先順序條件約束")  
   
  因為封裝位於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 容器架構的最上層，所以優先順序條件約束無法連結多個封裝；但是，您可以將「執行封裝」工作加入封裝，然後間接地將其他封裝連結至控制流程。  
   
@@ -86,7 +83,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  只有是同一 **Precedence Constraint** 集合之成員的優先順序條件約束，才可以使用邏輯 AND 條件將其分組。 例如，您無法結合來自兩個「Foreach 迴圈」容器的優先順序條件約束。  
   
-## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>設定優先順序條件約束與優先順序條件約束編輯器中的屬性  
+## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>使用優先順序條件約束編輯器來設定優先順序條件約束的屬性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -124,7 +121,7 @@ ms.lasthandoff: 09/26/2017
  指定下列條件約束值：[成功]、[失敗] 或 [完成]。  
   
 > [!NOTE]  
->  優先順序條件約束線條若是綠色代表**成功**、 反白顯示代表**失敗**，而藍色代表**完成**。  
+>  優先順序條件約束線條若是綠色代表 [成功]，反白顯示代表 [失敗]，而藍色代表 [完成]。  
   
  **運算式**  
  如果使用 [運算式]、[運算式與條件約束] 或 [運算式或條件約束] 作業，請輸入運算式或啟動運算式產生器以建立運算式。 運算式必須評估為布林。  
@@ -144,7 +141,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  此種類型的優先順序條件約束會顯示為綠色、反白顯示或藍色的虛線。  
   
-## <a name="set-the-properties-of-a-precedence-constraint-in-properties-window"></a>在 [屬性] 視窗中設定的優先順序條件約束屬性  
+## <a name="set-the-properties-of-a-precedence-constraint-in-properties-window"></a>在屬性視窗中設定優先順序條件約束的屬性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含要修改之封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -168,7 +165,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 
-## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>設定快顯功能表的優先順序條件約束的值  
+## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>使用捷徑功能表來設定優先順序條件約束的值  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -187,11 +184,11 @@ ms.lasthandoff: 09/26/2017
   
  在下圖中，工作 A 及工作 B 由使用執行結果及運算式的優先順序條件約束連結。 條件約束值設為 [成功] 且運算式為 `@X >== @Z`。 工作 B (受條件約束的工作) 只在工作 A 順利完成且變數 **X** 的值大於或等於變數 **Z**的值時執行。  
   
- ![兩個工作間的優先順序條件約束](../../integration-services/control-flow/media/mw-dts-03.gif "兩個工作間的優先順序條件約束")  
+ ![兩個工作之間的優先順序條件約束](../../integration-services/control-flow/media/mw-dts-03.gif "兩個工作之間的優先順序條件約束")  
   
  可執行檔也可以使用包含不同運算式的多個優先順序條件約束來連結。 例如在下圖中，工作 B 和 C 由使用執行結果及運算式的優先順序條件約束連結至工作 A。 二個條件約束值都設為 [成功]。 一個優先順序條件約束包含運算式 `@X >== @Z`，另一個優先順序條件約束包含運算式 `@X < @Z`。 視變數 **X** 與 **Z**的值而定，會執行工作 C 或工作 B。  
   
- ![優先順序條件約束運算式](../../integration-services/control-flow/media/mw-dts-04.gif "優先順序條件約束運算式")  
+ ![優先順序條件約束上的運算式](../../integration-services/control-flow/media/mw-dts-04.gif "優先順序條件約束上的運算式")  
   
  使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中的 [優先順序條件約束編輯器] 及 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的 [屬性] 視窗，可以新增或修改運算式。 然而，[屬性] 視窗不提供運算式語法的驗證。  
   
@@ -239,12 +236,12 @@ ms.lasthandoff: 09/26/2017
   
  藉由群組條件約束來組裝複雜的條件約束案例，可讓您在封裝中實作複雜的控制流程。 例如，在下圖中，工作 D 按 [成功] 條件約束連結到工作 A、按 [失敗] 條件約束連結到工作 B，同時按 [成功] 條件約束連結到工作 C。 工作 D 與工作 A、工作 D 與工作 B，以及工作 D 與工作 C 之間的優先順序條件約束會參與邏輯 *and* 關聯性。 因此，工作 A 必須成功執行、工作 B 必須失敗，而且工作 C 必須成功執行，才可以執行工作 D。  
   
- ![工作優先順序條件約束連結](../../integration-services/control-flow/media/precedenceconstraints.gif "優先順序條件約束所連結的工作")  
+ ![優先順序條件約束所連結的工作](../../integration-services/control-flow/media/precedenceconstraints.gif "優先順序條件約束所連結的工作")  
   
 ### <a name="logicaland-property"></a>LogicalAnd 屬性  
  如果工作或容器具有多個條件約束，則 **LogicalAnd** 屬性會指定是只評估優先順序條件約束，還是同時評估其他條件約束。  
   
- 您可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的 [優先順序條件約束編輯器]\(或在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的 [屬性] 視窗中)，設定 **LogicalAnd** 屬性。  
+ 您可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的 [優先順序條件約束編輯器] (或在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的 [屬性] 視窗中)，設定 **LogicalAnd** 屬性。  
 
 ## <a name="set-the-default-value-for-precedence-constraints"></a>設定優先順序條件約束的預設值  
 首次使用 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 時，優先順序條件約束的預設值為 **Success**。 請遵循下列步驟來設定「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」，以便使用優先順序條件約束的其他預設值。
@@ -272,4 +269,3 @@ ms.lasthandoff: 09/26/2017
 4.  在 [控制流程] 索引標籤的設計介面上，按一下工作或容器，然後將其連接子拖曳到您要套用優先順序條件約束的可執行檔。  
   
 5.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
-

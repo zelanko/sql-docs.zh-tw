@@ -1,5 +1,5 @@
 ---
-title: "開發自訂資料流程元件 |Microsoft 文件"
+title: "開發自訂資料流程元件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,20 +21,19 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f25c74b52eaccb6c7b0e92cb7dace3d56f3cdd83
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 015f4a6df784666e03203790aca090f6fc2eb39a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-data-flow-component"></a>開發自訂資料流程元件
-  資料流程工作是由連接至各種資料來源然後以高速轉換和路由資料的元件組成。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]提供可延伸物件模型，可讓開發人員建立自訂來源、 轉換和目的地可讓您在[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]和部署的封裝。 本章節包含將引導您開發自訂資料流程元件的主題。  
+  資料流程工作是由連接至各種資料來源然後以高速轉換和路由資料的元件組成。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的可延伸物件模型，讓開發人員建立可在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 及部署的套件中使用的自訂來源、轉換和目的地。 本章節包含將引導您開發自訂資料流程元件的主題。  
   
 ## <a name="in-this-section"></a>本節內容  
  [建立自訂資料流程元件](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
@@ -48,10 +45,10 @@ ms.lasthandoff: 08/03/2017
  [資料流程元件的執行階段方法](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
  描述自訂資料流程元件中實作的執行階段方法。  
   
- [執行計劃和緩衝區配置](../../../integration-services/extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md)  
+ [執行計劃和緩衝配置](../../../integration-services/extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md)  
  描述資料流程執行計劃以及資料緩衝區的配置。  
   
- [使用資料流程中的資料類型](../../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)  
+ [在資料流程中使用資料類型](../../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)  
  說明資料流程如何將 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型對應至 .NET Framework Managed 資料類型。  
   
  [驗證資料流程元件](../../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)  
@@ -60,10 +57,10 @@ ms.lasthandoff: 08/03/2017
  [實作外部中繼資料](../../../integration-services/extending-packages-custom-objects/data-flow/implementing-external-metadata.md)  
  說明如何使用外部中繼資料行進行資料驗證。  
   
- [引發和定義事件的資料在資料流程元件](../../../integration-services/extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md)  
+ [在資料流程元件中引發和定義事件](../../../integration-services/extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md)  
  說明如何引發預先定義事件和自訂事件。  
   
- [記錄和定義記錄項目中的資料在資料流程元件](../../../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md)  
+ [在資料流程元件中記錄和定義記錄項目](../../../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md)  
  說明如何建立和寫入自訂記錄項目。  
   
  [在資料流程元件中使用錯誤輸出](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
@@ -75,10 +72,10 @@ ms.lasthandoff: 08/03/2017
  [開發資料流程元件的使用者介面](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
  說明如何實作元件的自訂編輯器。  
   
- [開發特定類型資料的資料流程元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
+ [開發特定類型的資料流程元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
  包含開發三種資料流程元件的相關資訊：來源、轉換和目的地。  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>參考  
  <xref:Microsoft.SqlServer.Dts.Pipeline>  
  包含用以建立自訂資料流程元件的類別與介面。  
   
@@ -111,18 +108,17 @@ ms.lasthandoff: 08/03/2017
  [開發自訂工作](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  討論如何進行自訂工作的程式設計。  
   
- [開發自訂連接管理員](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  
+ [開發自訂連線管理員](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  
  討論如何進行自訂連接管理員的程式設計。  
   
  [開發自訂記錄提供者](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
  討論如何進行自訂記錄提供者的程式設計。  
   
- [開發自訂 ForEach 列舉值](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
+ [開發自訂 Foreach 列舉程式](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  討論如何進行自訂列舉值的程式設計。  
   
 ## <a name="see-also"></a>另請參閱  
- [擴充 with the Script Component 資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
- [比較指令碼方案和自訂物件](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
+ [使用指令碼元件擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
+ [比較指令碼解決方案和自訂物件](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   
-

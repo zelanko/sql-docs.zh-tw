@@ -1,5 +1,5 @@
 ---
-title: "步驟 7： 加入和設定 OLE DB 目的地 |Microsoft 文件"
+title: "步驟 7：新增及設定 OLE DB 目的地 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e50d2f6d1622cc124cf8b55fbd1ae14811d5cc9c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9d1e14ed63694a7b5dc320f062de85c73c843883
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>課程 1-7： 加入和設定 OLE DB 目的地
+# <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>課程 1-7 - 新增和設定 OLE DB 目的地
 現在，封裝可以從一般檔案來源中擷取資料，再將資料轉換成與目的地相容的格式。 下一項工作是要把已轉換的資料實際載入到目的地。 若要載入資料，您必須將 OLE DB 目的地加入資料流程中。 OLE DB 目的地可使用資料庫資料表、檢視或 SQL 命令，將資料載入到各種 OLE DB 相容資料庫中。  
   
 在這個程序中，您加入和設定 OLE DB 目的地來使用您先前建立的 OLE DB 連接管理員。  
@@ -70,4 +67,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

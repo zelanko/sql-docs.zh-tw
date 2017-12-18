@@ -1,10 +1,13 @@
 ---
 title: "第 4 課︰從 URL 將資料庫還原至虛擬機器 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f641f3df1010396d54a655beaaf982a7bff63972
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad780f4f49f99c0537e5ff560d1addab59627d9c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>第 4 課︰從 URL 將資料庫還原至虛擬機器
-在這一課，您會將 AdventureWorks2014 資料庫還原至 AdventureWorks2014 資料庫所在之 Azure 虛擬機器中的 SQL Server 2016 執行個體。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您會將 AdventureWorks2014 資料庫還原至 AdventureWorks2014 資料庫所在之 Azure 虛擬機器中的 SQL Server 2016 執行個體。  
   
 > [!NOTE]  
 > 為了簡化本教學課程，我們將使用與資料庫備份時所用的相同資料和記錄檔容器。 在生產環境中，您可能會使用多個容器，通常也可能會使用多個資料檔案。 使用 SQL Server 2016 時，您也可以考慮將備份等量分割到多個 Blob，以提升備份大型資料庫時的備份效能。  

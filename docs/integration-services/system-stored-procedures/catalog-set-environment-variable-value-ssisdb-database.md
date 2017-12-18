@@ -1,5 +1,5 @@
 ---
-title: "catalog.set_environment_variable_value （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.set_environment_variable_value (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7f30937f6dca19f82ccb2dc8ac998dd9f9510c0f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 05d356be0d0f3c5327c77653aeed1fde7f6f3ef8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetenvironmentvariablevalue-ssisdb-database"></a>catalog.set_environment_variable_value (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +38,17 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @folder_name =] *folder_name*  
- 包含環境之資料夾的名稱。 *Folder_name*是**nvarchar （128)**。  
+ [ @folder_name = ] *folder_name*  
+ 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
   
- [ @environment_name =] *environment_name*  
- 環境的名稱。 *Environment_name*是**nvarchar （128)**。  
+ [ @environment_name = ] *environment_name*  
+ 環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
   
- [ @variable v =] *v*  
- 環境變數的名稱。 *v*是**nvarchar （128)**。  
+ [ @variable _name = ] *variable _name*  
+ 環境變數的名稱。 *variable _name* 是 **nvarchar(128)**。  
   
- [ @value =]*值*  
- 環境變數的值。 *值*是**sql_variant**。  
+ [ @value = ] *value*  
+ 環境變數的值。 *value* 是 **sql_variant**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
@@ -63,9 +61,9 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
   
 -   環境的 READ 和 MODIFY 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會引發錯誤或警告的某些條件：  
@@ -79,4 +77,3 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
 -   使用者未具備適當的權限  
   
   
-

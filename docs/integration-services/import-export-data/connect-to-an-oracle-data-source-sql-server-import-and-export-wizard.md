@@ -1,5 +1,5 @@
 ---
-title: "連接到 Oracle 資料來源 （SQL Server 匯入和匯出精靈） |Microsoft 文件"
+title: "連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,69 +8,67 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e589e7f7a0262d258342bf887ec84c57d57dc978
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f2a93e5d4c038db3620e78a4141ca8235d703263
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>連接到 Oracle 資料來源 （SQL Server 匯入和匯出精靈）
-本主題說明如何連接到**Oracle**資料來源從**選擇資料來源**或**選擇目的地**SQL Server 匯入和匯出精靈 頁面。 有數個可讓您連接到 Oracle 資料提供者。
+# <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈)
+本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至 **Oracle** 資料來源。 您可以使用數個資料提供者來連線至 Oracle。
 
 > [!IMPORTANT]
-> 詳細的需求和必要條件連接到 Oracle 資料庫等已超出 Microsoft 本文的範圍。 本文假設您已安裝 Oracle 用戶端軟體，而且，您可以已成功連接到目標 Oracle 資料庫。 如需詳細資訊，請參閱 Oracle 資料庫管理員或 Oracle 文件集。
+> 這一篇 Microsoft 文章範圍未涵蓋連線至 Oracle 資料庫的詳細需求和必要條件。 本文假設您已安裝 Oracle 用戶端軟體，並已成功連線至目標 Oracle 資料庫。 如需詳細資訊，請參閱 Oracle 資料庫管理員或 Oracle 文件集。
 
-## <a name="connect-to-oracle-with-the-net-framework-data-provider-for-oracle"></a>連接到 Oracle 的.Net Framework Data Provider for Oracle
-選取後**.NET Framework Data Provider for Oracle**上**選擇資料來源**或**選擇目的地**頁面在精靈的頁面會顯示群組的提供者的選項清單。 其中有許多惡意的名稱和不熟悉的設定。 幸運的是，您只需要提供兩個或三項資訊。 您可以忽略其他設定的預設值。
+## <a name="connect-to-oracle-with-the-net-framework-data-provider-for-oracle"></a>使用 .NET Framework Data Provider for Oracle 連線至 Oracle
+在您選取精靈的 [選擇資料來源] 或 [選擇目的地] 頁面上的 [.NET Framework Data Provider for Oracle] 之後，頁面會顯示提供者的分組選項清單。 其中有許多是不易記的名稱和不熟悉的設定。 不過別擔心，因為您只需要提供兩、三項資訊即可。 您可以忽略其他設定的預設值。
 
 > [!NOTE]
-> Oracle 為您的來源或目的地連接選項，此資料提供者都是相同的。 也就是您所看到的選項會同時針對相同**選擇資料來源**和**選擇目的地**精靈頁面。
+> 不論 Oracle 是您的來源還是目的地，此資料提供者的連線選項都會相同。 也就是說，您在精靈的 [選擇資料來源] 和 [選擇目的地] 頁面上會看到一樣的選項。
 
-|所需的資訊|.Net framework Data Provider for Oracle 屬性|
+|必要資訊|.Net Framework Data Provider for Oracle 屬性|
 |---|---|
 |伺服器名稱|**資料來源**|
-|驗證 （登入） 資訊|**使用者識別碼**和**密碼**; 或者，**整合式安全性**|
+|驗證 (登入) 資訊|[使用者識別碼] 和 [密碼]；或 [整合式安全性]|
 
-您不需要輸入中的連接字串**ConnectionString**清單的欄位。 Oracle 伺服器名稱輸入個別的值之後 (**資料來源**)，並登入資訊，此精靈將組合從個別的屬性和其值的連接字串。 
+您不需要在清單的 [ConnectionString] 欄位中輸入連接字串。 當您為 Oracle 伺服器名稱 ([資料來源]) 輸入個別的值和登入資訊之後，精靈即會從個別的屬性和屬性值來組合連接字串。 
 
-![使用.NET 提供者連接到 Oracle](../../integration-services/import-export-data/media/connect-to-oracle-with-net-provider.jpg)
+![使用 .NET 提供者連線至 Oracle](../../integration-services/import-export-data/media/connect-to-oracle-with-net-provider.jpg)
 
-## <a name="connect-to-oracle-with-the-microsoft-odbc-driver-for-oracle"></a>Oracle 連接到 Oracle 的 Microsoft ODBC 驅動程式
-ODBC 驅動程式未列在下拉式清單中的資料來源。 若要連接的 ODBC 驅動程式，一開始選取**.NET Framework Data Provider for ODBC**做為資料來源上**選擇資料來源**或**選擇目的地**頁面。 此提供者做為包裝函式，ODBC 驅動程式。
+## <a name="connect-to-oracle-with-the-microsoft-odbc-driver-for-oracle"></a>使用 Microsoft ODBC Driver for Oracle 連線至 Oracle
+ODBC 驅動程式並未列在下拉式資料來源清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源] 和 [選擇目的地] 頁面上，將 [.NET Framework Data Provider for ODBC] 選取為資料來源。 此提供者的作用為 ODBC 驅動程式的包裝函式。
 
-以下是您選取.NET Framework Data Provider for ODBC 之後，立即會看到泛用螢幕。
+以下是您選取 .NET Framework Data Provider for ODBC 之後會立即顯示的一般畫面。
 
-![連接到 Oracle 使用 ODBC 之前](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
+![使用 ODBC 連線至 Oracle](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
-### <a name="options-to-specify-odbc-driver-for-oracle"></a>選項來指定 （oracle 的 ODBC 驅動程式）
+### <a name="options-to-specify-odbc-driver-for-oracle"></a>要指定的選項 (ODBC Driver for Oracle)
 
 > [!NOTE]
-> Oracle 為您的來源或目的地，此資料提供者和 ODBC 驅動程式的連接選項都相同。 也就是您所看到的選項會同時針對相同**選擇資料來源**和**選擇目的地**精靈頁面。
+> 不論 Oracle 是您的來源還是目的地，此資料提供者和 ODBC 驅動程式的連線選項都會相同。 也就是說，您在精靈的 [選擇資料來源] 和 [選擇目的地] 頁面上會看到一樣的選項。
 
-若要連接到 Oracle Oracle 的 ODBC 驅動程式，組合連接字串，其中包含下列設定，以及它們的值。 完整的連線字串的格式緊接在後面設定的清單。
+若要使用 ODBC Driver for Oracle 連線至 Oracle，請組合出包含下列設定與設定值的連接字串。 完整連接字串的格式緊接在設定清單後面。
 
 > [!TIP]
-> 取得說明組裝正確的連接字串。 或者，而不是提供的連接字串，提供現有的資料來源名稱 （資料來源名稱），或另外新建一個。 如需這些選項的詳細資訊，請參閱[連接到 ODBC 資料來源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
+> 取得組合正確連接字串的說明。 或者，您可以提供現有 DSN (資料來源名稱) 或建立新的 DSN，而不提供連接字串。 如需這些選項的詳細資訊，請參閱[連線至 ODBC 資料來源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
 
 **驅動程式**  
-ODBC 驅動程式名稱**Oracle 的 Microsoft ODBC**。
+ODBC 驅動程式名稱，亦即 **Microsoft ODBC for Oracle**。
 
 **Server**  
-在 Oracle 伺服器名稱。 
+Oracle 伺服器的名稱。 
 
-**Uid**和**Pwd**   
-使用者識別碼和密碼來連接。
+**Uid** 和 **Pwd**   
+用來進行連線的使用者識別碼和密碼。
 
 ### <a name="connection-string-format"></a>連接字串格式
 以下是一般連接字串的格式。
@@ -80,14 +78,14 @@ ODBC 驅動程式名稱**Oracle 的 Microsoft ODBC**。
     ```
 
 ### <a name="enter-the-connection-string"></a>輸入連接字串
-輸入中的連接字串**ConnectionString**欄位，或輸入中的 DSN 名稱**Dsn**欄位上**選擇資料來源**或**選擇目的地**頁面。 您輸入的連接字串之後，精靈會剖析字串，並會顯示個別的屬性及其值清單中。
+在 [選擇資料來源] 或 [選擇目的地] 頁面上，於 [ConnectionString] 欄位中輸入連接字串，或在 [Dsn] 欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。
 
-以下是您輸入的連接字串之後，請參閱螢幕。
+以下是您在輸入連接字串之後看到的畫面。
 
-![連接到 Oracle 使用 ODBC](../../integration-services/import-export-data/media/connect-to-oracle-with-odbc.jpg)
+![使用 ODBC 連線至 Oracle](../../integration-services/import-export-data/media/connect-to-oracle-with-odbc.jpg)
 
 ## <a name="whats-my-oracle-server-name"></a>我的 Oracle 伺服器名稱是什麼？
-執行下列查詢來取得 Oracle 伺服器名稱的其中一個。
+您可以執行下列查詢，以取得 Oracle 伺服器的名稱。
 
 `SELECT host_name FROM v$instance`
 
@@ -95,11 +93,10 @@ ODBC 驅動程式名稱**Oracle 的 Microsoft ODBC**。
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 
-## <a name="other-data-providers-and-more-info"></a>其他資料提供者和其他資訊
-如需如何連接到 Oracle 與此處未列出的資料提供者資訊，請參閱[Oracle 連接字串](https://www.connectionstrings.com/oracle/)。 此第三方網站也會包含資料提供者和描述在此頁面上的連接參數的詳細資訊。
+## <a name="other-data-providers-and-more-info"></a>其他資料提供者和詳細資訊
+若要了解如何使用此處未列出的資料提供者連線至 Oracle 的資訊，請參閱 [Oracle connection strings](https://www.connectionstrings.com/oracle/) (Oracle 連接字串)。 這個協力廠商網站也包含本頁面所述的資料提供者和連線參數的詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
 [選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [選擇目的地](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
 

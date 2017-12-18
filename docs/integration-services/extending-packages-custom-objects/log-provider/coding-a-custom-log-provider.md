@@ -1,5 +1,5 @@
 ---
-title: "程式碼撰寫的自訂記錄提供者 |Microsoft 文件"
+title: "撰寫自訂記錄提供者的程式碼 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom log providers [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ae46112c19473b117a9a11eb83fc4510427365c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0fdab647193d9439ba9be97f89c503978254e0a5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-log-provider"></a>撰寫自訂記錄提供者的程式碼
   建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 基底類別的類別，並將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 屬性 (attribute) 套用到類別之後，必須覆寫基底類別的屬性 (properties) 與方法的實作，才可提供自訂功能。  
@@ -40,7 +36,7 @@ ms.lasthandoff: 08/03/2017
  您覆寫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A> 方法以快取連接集合與事件介面的參考。 您可以稍後在記錄提供者的其他方法中使用這些快取的參考。  
   
 ### <a name="using-the-configstring-property"></a>使用 ConfigString 屬性  
- 在設計階段的記錄提供者接收組態資訊從**組態**資料行。 這個組態資訊會對應至記錄提供者的 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 屬性。 依預設，這個資料行包含您可以從中擷取任何字串資訊的文字方塊。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所含的大部分記錄提供者，都會使用此屬性儲存提供者用以連接外部資料來源之連接管理員的名稱。 如果您的記錄提供者使用<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>屬性，請使用<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>方法驗證這個屬性，並確定已正確設定的屬性。  
+ 在設計階段，記錄提供者會從 [組態] 資料行接收組態資訊。 這個組態資訊會對應至記錄提供者的 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 屬性。 依預設，這個資料行包含您可以從中擷取任何字串資訊的文字方塊。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所含的大部分記錄提供者，都會使用此屬性儲存提供者用以連接外部資料來源之連接管理員的名稱。 如果您的記錄提供者使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 屬性，請使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法驗證這個屬性，並確定已正確設定屬性。  
   
 ### <a name="validating-the-log-provider"></a>驗證記錄提供者  
  您覆寫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法以確定已正確設定提供者，而且已準備執行。 一般而言，驗證的最低層級是確定 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 已正確地設定。 必須等到記錄提供者從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> 方法傳回 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>，執行才能繼續。  
@@ -87,7 +83,7 @@ End Function
 ```  
   
 ### <a name="persisting-the-log-provider"></a>保存記錄提供者  
- 一般而言，您不必實作連接管理員的自訂持續性。 只有在物件的屬性使用複雜的資料類型時，才需要自訂持續性。 如需詳細資訊，請參閱[Integration services 開發自訂物件](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)。  
+ 一般而言，您不必實作連接管理員的自訂持續性。 只有在物件的屬性使用複雜的資料類型時，才需要自訂持續性。 如需詳細資訊，請參閱[開發 Integration Services 的自訂物件](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)。  
   
 ## <a name="logging-with-the-log-provider"></a>使用記錄提供者進行記錄  
  有三個必須由所有記錄提供者覆寫的執行階段方法：<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>。  
@@ -142,7 +138,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>寫入記錄項目  
- <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>封裝中的物件會藉由呼叫火災引發事件，每次呼叫方法\<事件 > 上的事件介面的其中一個方法。 每個引發的事件都會帶有關於其內容且通常是說明訊息的資訊。 不過，並不是每次呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法都包括每個方法參數的資訊。 例如，有些其名稱字面意義明白的標準事件並未提供 MessageText，而且 DataCode 與 DataBytes 是為了提供選擇性的補充資訊。  
+ 每次封裝中的物件呼叫其中一個事件介面上的 Fire\<event> 方法來引發事件時，就會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法。 每個引發的事件都會帶有關於其內容且通常是說明訊息的資訊。 不過，並不是每次呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法都包括每個方法參數的資訊。 例如，有些其名稱字面意義明白的標準事件並未提供 MessageText，而且 DataCode 與 DataBytes 是為了提供選擇性的補充資訊。  
   
  下列程式碼範例會實作 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法，並將事件寫入上一節所開啟的資料流。  
   
@@ -203,4 +199,3 @@ End Sub
  [開發自訂記錄提供者的使用者介面](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   
   
-

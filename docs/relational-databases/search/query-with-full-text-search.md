@@ -2,9 +2,12 @@
 title: "使用全文檢索搜尋進行查詢 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bfded7d067ded1dacaffede2f36f261451cd59c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-with-full-text-search"></a>使用全文檢索搜尋進行查詢
-
-使用全文檢索述詞 **CONTAINS** 和 **FREETEXT** 以及具有 **SELECT** 陳述式的資料列集值函式 **CONTAINSTABLE** 和 **FREETEXTTABLE**，以撰寫全文檢索查詢。 本主題提供每個述詞和函式的範例，並協助您選擇最適合的述詞和函式。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 使用全文檢索述詞 **CONTAINS** 和 **FREETEXT** 以及具有 **SELECT** 陳述式的資料列集值函式 **CONTAINSTABLE** 和 **FREETEXTTABLE**，以撰寫全文檢索查詢。 本主題提供每個述詞和函式的範例，並協助您選擇最適合的述詞和函式。
 
 -   使用 **CONTAINS** 和 **CONTAINSTABLE**，以比對單字和片語。
 -   使用 **FREETEXT** 和 **FREETEXTTABLE** 比對意義，而不是確切的用字。

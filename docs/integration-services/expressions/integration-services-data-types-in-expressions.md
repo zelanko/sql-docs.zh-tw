@@ -1,28 +1,30 @@
 ---
-title: "Integration Services Data Types in Expressions |Microsoft 文件"
+title: "運算式中的 Integration Services 資料類型 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44b5829a581f0e0a0c2ff67eabe4a2a4fae3885e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-data-types-in-expressions"></a>運算式中的 Integration Services 資料類型
   運算式評估工具使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 當資料初次進入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程時，資料流程引擎會將所有資料行的資料轉換成 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，而運算式所使用的資料行資料已為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 「條件式分割」和「衍生的資料行」轉換中使用的運算式可參考資料行，因為它們是包含資料行資料的資料流程中的一部分。  
@@ -38,13 +40,13 @@ ms.lasthandoff: 08/03/2017
 ## <a name="strings"></a>字串  
  您可以使用 DT_STR 或 DT_WSTR 作為運算式的傳回類型。 不過，在運算式中僅支援 DT_WSTR，因此會將 DT_STR 值轉換成 DT_WSTR 值。 當您撰寫運算式時，這種行為會有幾個隱含式。  
   
--   在運算式中，使用 NULL(DT_WSTR, ...) 而不是 NULL(DT_STR, ...)。 如需此函數的詳細資訊，請參閱 [NULL &#40;SSIS 運算式&#41;](../../integration-services/expressions/null-ssis-expression.md)。  
+-   在運算式中，使用 NULL(DT_WSTR, ...) 而不是 NULL(DT_STR, ...)。如需此函數的詳細資訊，請參閱 [NULL &#40;SSIS 運算式&#41;](../../integration-services/expressions/null-ssis-expression.md)。  
   
 -   在運算式中，您只可以在運算式的根位置使用 CAST 函數將值轉換成 DT_STR 類型；亦即，當您要傳回運算式的最終結果時。 否則，請在運算式中使用 DT_WSTR 類型。  
   
  請參考下列螢幕擷取畫面中的運算式。  
   
- ![SSIS 運算式中的資料類型的字串](../../integration-services/expressions/media/stringsinssisexpressions.png "字串 SSIS 運算式中的資料類型")  
+ ![SSIS 運算式中的字串資料類型](../../integration-services/expressions/media/stringsinssisexpressions.png "SSIS 運算式中的字串資料類型")  
   
 1.  第一個運算式可順利執行而不會發生錯誤，因為 NULL(DT_STR, ...) 函數位於運算式的根層級。  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
  下列範例示範轉換的效果。  
   
- ![SSIS 運算式中轉換字串](../../integration-services/expressions/media/stringsinssisexpressions2.png "SSIS 運算式中轉換字串")  
+ ![在 SSIS 運算式中轉換字串](../../integration-services/expressions/media/stringsinssisexpressions2.png "在 SSIS 運算式中轉換字串")  
   
 1.  在第一個運算式中，轉換不是在運算式的根層級。 運算式評估工具可以智慧的方式處理這項轉換，並將其轉換為 DT_WSTR，而不是 DT_STR。 運算式會傳回 DT_WSTR。  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 08/03/2017
   
  下圖顯示 BINARY 運算之隱含轉換的結果類型。 此資料表中資料行和資料列的交集為具有左 (從) 和右 (至) 類型之運算元的二進位運算結果類型。  
   
- ![隱含資料類型的資料類型之間轉換](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "隱含資料類型的資料類型之間轉換")  
+ ![資料類型之間的隱含資料類型轉換](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "資料類型之間的隱含資料類型轉換")  
   
  帶正負號和不帶正負號的整數之間的交集，應是大於任一引數的帶正負號整數。  
   

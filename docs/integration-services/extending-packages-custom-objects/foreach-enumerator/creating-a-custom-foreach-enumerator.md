@@ -1,5 +1,5 @@
 ---
-title: "建立自訂 Foreach 列舉值 |Microsoft 文件"
+title: "建立自訂 Foreach 列舉值 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
-helpviewer_keywords:
-- custom foreach enumerators [Integration Services], creating
+helpviewer_keywords: custom foreach enumerators [Integration Services], creating
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f2f852ff319554d0b863fd06d790c2e5e9bf2d59
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e2efdf248c8db4b3e99c808a7e576ee96e83fb7f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>建立自訂 Foreach 列舉值
   建立自訂 Foreach 列舉值的步驟，與建立 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 之其他自訂物件的步驟類似：  
@@ -43,7 +39,7 @@ ms.lasthandoff: 08/03/2017
   
 -   (選擇性) 開發自訂使用者介面。 對於 Foreach 列舉值而言，這需要實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSForEachEnumeratorUI> 介面的類別。  
   
- 自訂列舉值是由 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 容器所裝載。 在執行階段，<xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 容器會呼叫自訂列舉值的 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> 方法。 自訂列舉值傳回的物件，實作**IEnumerable**介面，例如**ArrayList**。 然後，<xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 會逐一查看集合中的每一個元素、透過使用者定義的變數將目前元素的值提供給控制流程，然後在容器內執行此控制流程。  
+ 自訂列舉值是由 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 容器所裝載。 在執行階段，<xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 容器會呼叫自訂列舉值的 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> 方法。 自訂列舉值會傳回可實作 **IEnumerable** 介面的物件，例如 **ArrayList**。 然後，<xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 會逐一查看集合中的每一個元素、透過使用者定義的變數將目前元素的值提供給控制流程，然後在容器內執行此控制流程。  
   
 ## <a name="getting-started-with-a-custom-foreach-enumerator"></a>自訂 ForEach 列舉值使用者入門  
   
@@ -55,9 +51,9 @@ ms.lasthandoff: 08/03/2017
  透過使用強式名稱金鑰檔案，將兩個專案都設定成簽署將在建立時期產生的組件。  
   
 ### <a name="applying-the-dtsforeachenumerator-attribute"></a>套用 DtsForEachEnumerator 屬性  
- 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 屬性套用至您已建立的類別，以便將它識別為Foreach 列舉值。 此屬性會提供設計階段資訊，例如 Foreach 列舉值的名稱和描述。 **名稱**屬性會出現在可用的列舉值的下拉式清單上**集合** 索引標籤**Foreach 迴圈編輯器** 對話方塊。  
+ 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 屬性套用至您已建立的類別，以便將它識別為Foreach 列舉值。 此屬性會提供設計階段資訊，例如 Foreach 列舉值的名稱和描述。 **Name** 屬性會出現在 [Foreach 迴圈編輯器] 對話方塊內 [集合] 索引標籤上的可用列舉值下拉式清單內。  
   
- 使用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 屬性將 Foreach 列舉值連結至其自訂使用者介面。 若要取得的公開金鑰 token 所需的屬性，可以使用**sn.exe t**顯示從您想要用來簽署使用者介面組件的金鑰組 (.snk) 檔案的公開金鑰 token。  
+ 使用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 屬性將 Foreach 列舉值連結至其自訂使用者介面。 如需取得此屬性所需的公開金鑰權杖，可以使用 **sn.exe -t**，從要用於簽署使用者介面組件的金鑰組 (.snk) 檔案顯示公開金鑰權杖。  
   
 ```vb  
 Imports System  
@@ -85,11 +81,10 @@ namespace Microsoft.Samples.SqlServer.Dts
 ```  
   
 ## <a name="building-deploying-and-debugging-a-custom-enumerator"></a>建立、部署和偵錯自訂列舉值  
- 在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中建立、部署和偵錯自訂 Foreach 列舉值的步驟，非常類似於其他類型的自訂物件所需的步驟。 如需詳細資訊，請參閱[Building，Deploying，and Debugging Custom Objects](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。  
+ 在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中建立、部署和偵錯自訂 Foreach 列舉值的步驟，非常類似於其他類型的自訂物件所需的步驟。 如需詳細資訊，請參閱[建立、部署和偵錯自訂物件](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [程式碼撰寫自訂 Foreach 列舉值](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)   
- [開發自訂 ForEach 列舉值的使用者介面](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [撰寫自訂 Foreach 列舉值的程式碼](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)   
+ [開發自訂 Foreach 列舉程式的使用者介面](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   
-

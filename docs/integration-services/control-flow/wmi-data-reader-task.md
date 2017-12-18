@@ -1,5 +1,5 @@
 ---
-title: "WMI 資料讀取器工作 |Microsoft 文件"
+title: "WMI 資料讀取器工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 75beba806fea6d2e680720ef9c9c72b7809dbe70
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 59c418092ff7a4c5e0f4f2365ccc5293576068fc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作
   「WMI 資料讀取器」工作使用「Windows Management Instrumentation (WMI) 查詢語言」執行查詢，該查詢語言會從 WMI 傳回有關電腦系統的資訊。 您可將「WMI 資料讀取器」工作用於下列用途：  
@@ -127,9 +125,9 @@ Select * FROM Win32_QuickFixEngineering
   
 ### <a name="static-options"></a>靜態選項  
  **WMIConnectionName**  
- 在清單中，選取 WMI 連接管理員，或按一下\<**新增 WMI 連接...**> 以建立新的連接管理員。  
+ 在清單中選取 WMI 連線管理員，或按一下 [\<新增 WMI 連接...>] 建立新的連線管理員。  
   
- **相關主題：**[WMI 連接管理員](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 連接管理員編輯器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+ **相關主題** [WMI 連線管理員](../../integration-services/connection-manager/wmi-connection-manager.md)、 [WMI 連線管理員編輯器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  選取工作執行之 WQL 查詢的來源類型。 這個屬性具有下表中所列的選項。  
@@ -162,13 +160,13 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = 檔案連接  
  **WQLQuerySource**  
- 在清單中，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連接...>] 建立新的連線管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = 變數  
  **WQLQuerySource**  
- 在清單中，選取變數，或按一下\<**新增變數...**> 若要建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
  **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -176,13 +174,13 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="destinationtype--file-connection"></a>DestinationType = 檔案連接  
  **目的地**  
- 在清單中，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連接...>] 建立新的連線管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="destinationtype--variable"></a>DestinationType = 變數  
  **目的地**  
- 在清單中，選取變數，或按一下\<**新增變數...**> 若要建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
  **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -191,4 +189,3 @@ Select * FROM Win32_QuickFixEngineering
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   
   
-

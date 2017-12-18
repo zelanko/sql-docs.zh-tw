@@ -1,5 +1,5 @@
 ---
-title: "Web 服務工作 |Microsoft 文件"
+title: "Web 服務工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,20 +16,18 @@ f1_keywords:
 - sql13.dts.designer.webservicestask.general.f1
 - sql13.dts.designer.webservicestask.input.f1
 - sql13.dts.designer.webservicestask.output.f1
-helpviewer_keywords:
-- Web Service task [Integration Services]
+helpviewer_keywords: Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: d8ebe6e3486cb13440a66383c518c9d306f2984f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 9bdfbf05eafc612d7a6c5531e5c5c1b00fd576a3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="web-service-task"></a>Web 服務工作
   「Web 服務」工作執行一個 Web 服務方法。 您可將「Web 服務」工作用於下列用途：  
@@ -89,9 +86,9 @@ ms.lasthandoff: 08/11/2017
 ## <a name="web-service-task-editor-general-page"></a>Web 服務工作編輯器 (一般頁面)
   使用 [Web 服務工作編輯器] 對話方塊的 [一般] 頁面，來指定 HTTP 連接管理員、指定 Web 服務工作使用的 Web 服務描述語言 (WSDL) 檔案的位置、描述 Web 服務工作，以及下載 WSDL 檔案。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **HTTPConnection**  
- 在清單中，選取連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
+ 在清單中選取連線管理員，或按一下 [\<新增連線…>]，即可建立新的連線管理員。  
   
 > [!IMPORTANT]  
 >  HTTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -136,7 +133,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="web-service-task-editor-input-page"></a>Web 服務工作編輯器 (輸入頁面)
   使用 [Web 服務工作編輯器] 對話方塊的 [輸入] 頁面，即可指定 Web 服務、Web 方法，以及提供給 Web 方法的輸入值。 在 [值] 資料行中直接輸入字串，或是在 [值] 資料行中選取變數，即可提供這些值。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **服務**  
  從清單中選取要用於執行 Web 方法的 Web 服務。  
   
@@ -177,16 +174,15 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="outputtype--file-connection"></a>OutputType = 檔案連接  
  **檔案**  
- 在清單中選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = 變數  
  **變數**  
- 在清單中選取變數，或按一下\<**新增變數...**> 若要建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>]，以建立新的變數。  
   
  **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>相關內容  
  technet.microsoft.com 上的影片： [How to: Call a Web Service by Using the Web Service Task](http://go.microsoft.com/fwlink/?LinkId=259642)(如何：使用 Web 服務工作呼叫 Web 服務) (SQL Server 影片)。  
-

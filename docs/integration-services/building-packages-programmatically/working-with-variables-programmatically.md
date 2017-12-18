@@ -1,5 +1,5 @@
 ---
-title: "以程式設計方式使用變數 |Microsoft 文件"
+title: "以程式設計方式使用變數 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - custom variables [Integration Services]
 - variables [Integration Services], customizing
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 5c8968302f42e1b8fde55894810ecb77cf715ab6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5326ae33eada7dc692607d14779180174a045959
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-variables-programmatically"></a>以程式設計方式使用變數
   變數是在封裝、容器、工作及事件處理常式中動態設定值和控制處理序的方式。 優先順序條件約束也可以使用變數，以控制資料流向不同工作的方向。 變數有各種不同的用途：  
@@ -46,17 +43,17 @@ ms.lasthandoff: 08/03/2017
   
 -   在執行階段擴展 Transact-SQL 陳述式的參數值。  
   
--   控制 Foreach 迴圈的流程。 如需詳細資訊，請參閱[加入列舉型別控制流程](http://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a)。  
+-   控制 Foreach 迴圈的流程。 如需詳細資訊，請參閱[將列舉新增至控制流程](http://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a)。  
   
 -   按照運算式中的用途控制優先順序條件約束。 優先順序條件約束可以包含條件約束定義中的變數。 如需詳細資訊，請參閱 [將運算式加入優先順序條件約束](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
   
--   控制 For 迴圈容器的條件式重複。 如需詳細資訊，請參閱[加入反覆項目控制流程](http://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a)。  
+-   控制 For 迴圈容器的條件式重複。 如需詳細資訊，請參閱[將反覆項目新增至控制流程](http://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a)。  
   
 -   建立包含變數值的運算式。  
   
--   您可以建立所有容器類型的自訂變數： 封裝， **Foreach 迴圈**容器**For 迴圈 」**容器，**順序**容器、 Taskhost 和事件處理常式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+-   您可以為下列所有容器類型建立自訂變數：套件、**Foreach 迴圈**容器、**For 迴圈**容器、**時序**容器、TaskHost 和事件處理常式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
-## <a name="scope"></a>범위  
+## <a name="scope"></a>範圍。  
  每個容器有它自己的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合。 在建立新變數時，它在其父容器的範圍內。 因為封裝容器位於容器階層的最上層，所以具有封裝範圍的變數在功能上與全域變數相同，而且在封裝中的所有容器都可以看到它們。 透過使用集合中的變數名稱或是變數的索引，容器的子系也可以透過 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合來存取容器的變數集合。  
   
  因為變數的可見性範圍是從上向下，所以封裝中的所有容器都可以看到在封裝層級宣告的變數。 因此，在容器上的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合除了自己的變數以外，還會包括屬於其父系的所有變數。  
@@ -165,23 +162,23 @@ End Module
   
  `Variable: VersionMinor, Int32, 0`  
   
- 請注意，所有的變數範圍中**系統**命名空間會提供給封裝。 如需詳細資訊，請參閱 [系統變數](../../integration-services/system-variables.md)。  
+ 請注意，在**系統**命名空間中限定範圍的所有變數，都可供套件使用。 如需詳細資訊，請參閱 [系統變數](../../integration-services/system-variables.md)。  
   
 ## <a name="namespaces"></a>命名空間  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 提供兩個預設命名空間，其中變數存在於**使用者**和**系統**命名空間。 根據預設，開發人員建立的任何自訂變數加入至**使用者**命名空間。 系統變數位於**系統**命名空間。 您可以建立其他命名空間以外**使用者**命名空間來容納自訂變數，而您可以變更名稱**使用者**命名空間，但您無法加入或修改中的變數**系統**命名空間，或系統變數指派給不同的命名空間。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 提供存在兩個變數的預設命名空間：**使用者**與**系統**命名空間。 根據預設，開發人員建立的任何自訂變數都會新增至**使用者**命名空間。 系統變數位於**系統**命名空間中。 您可以建立**使用者**命名空間之外的其他命名空間，以儲存自訂變數，而且可以變更**使用者**命名空間的名稱，但是無法在**系統**命名空間中新增或修改變數，也無法將系統變數指派給不同的命名空間。  
   
- 可使用的系統變數會因容器類型而異。 如需可用來封裝、 容器、 工作和事件處理常式的系統變數的清單，請參閱[系統變數](../../integration-services/system-variables.md)。  
+ 可使用的系統變數會因容器類型而異。 如需可用於套件、容器、工作和事件處理常式的系統變數清單，請參閱[系統變數](../../integration-services/system-variables.md)。  
   
-## <a name="value"></a>Value  
+## <a name="value"></a>值  
  自訂變數值可以是常值或是運算式：  
   
 -   如果您希望變數包含常值，請設定其 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 屬性值。  
   
--   如果您想要變數包含運算式，以便您可以使用運算式的結果做為其值，設定<xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A>變數的屬性**true**，並提供的運算式中<xref:Microsoft.SqlServer.Dts.Runtime.Variable.Expression%2A>屬性。 在執行階段會評估運算式，而且運算式的結果會做為變數值。 例如，如果變數的運算式屬性是 `"100 * 2""100 * 2"`，則變數會將值評估為 200。  
+-   如果您希望變數包含運算式，以便使用運算式的結果作為其值，請將變數的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A> 屬性設定為 **true**，並在 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Expression%2A> 屬性中提供運算式。 在執行階段會評估運算式，而且運算式的結果會做為變數值。 例如，如果變數的運算式屬性是 `"100 * 2""100 * 2"`，則變數會將值評估為 200。  
   
- 對於變數，您無法明確地設定其 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> 的值。 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> 值是從指派給變數的初始值來推斷，而且之後不能變更。 如需有關變數資料類型的詳細資訊，請參閱[Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 對於變數，您無法明確地設定其 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> 的值。 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> 值是從指派給變數的初始值來推斷，而且之後不能變更。 如需變數資料類型的詳細資訊，請參閱[整合服務資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
- 下列程式碼範例會建立新的變數集<xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A>至**true**，將運算式指派`"100 * 2"`變數的運算式屬性然後輸出變數的值。  
+ 下列程式碼範例會建立新變數，將 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A> 設定為 **true**、將運算式 `"100 * 2"` 指派給變數的運算式屬性，然後輸出變數值。  
   
 ```csharp  
 using System;  
@@ -236,11 +233,10 @@ End Module
  運算式必須是使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 運算式語法的有效運算式。 除了運算式語法提供的運算子與函數之外，變數運算式中還允許常值，但是運算式無法參考其他變數或是資料行。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)為止。  
   
 ## <a name="configuration-files"></a>組態檔  
- 如果組態檔包含自訂變數，則可以在執行階段更新變數。 這表示當封裝執行時，會使用組態檔中的新值來取代原本在封裝中的變數值。 當將封裝部署到需要不同變數值的多部伺服器時，這個取代技術將特別有用。 例如，變數可以指定的次數**Foreach 迴圈**容器重複其工作流程或清單的收件者的事件處理常式會傳送電子郵件給引發錯誤時，或變更封裝失敗之前可以發生的錯誤數目。 這些變數是在每個環境的組態檔中動態提供的。 因此，在組態檔中只允許讀取/寫入的變數。 如需詳細資訊，請參閱[建立封裝組態](../../integration-services/packages/create-package-configurations.md)。  
+ 如果組態檔包含自訂變數，則可以在執行階段更新變數。 這表示當封裝執行時，會使用組態檔中的新值來取代原本在封裝中的變數值。 當將封裝部署到需要不同變數值的多部伺服器時，這個取代技術將特別有用。 例如，變數可以指定 **Foreach 迴圈**容器重複其工作流程的次數；或是列出事件處理常式在引發錯誤時，傳送電子郵件的收件者清單；或是變更套件失敗前，允許發生的錯誤次數。 這些變數是在每個環境的組態檔中動態提供的。 因此，在組態檔中只允許讀取/寫入的變數。 如需詳細資訊，請參閱 [建立封裝組態](../../integration-services/packages/create-package-configurations.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS &#41;變數](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)   
  [在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
-

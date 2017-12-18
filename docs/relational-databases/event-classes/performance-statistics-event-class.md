@@ -2,9 +2,12 @@
 title: "Performance Statistics 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1822de581220e2544ab14622b8a5784cc9cabc7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 952bad5b2f70ce0d1c22579ea50708cd48e6b9a0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 事件類別
-  Performance Statistics 事件類別可用來監視正在執行之查詢、預存程序和觸發程序的效能。 其六個事件子類別分別表示了系統中查詢、預存程序和觸發程序存留期間內的一項事件。 您可以使用這些事件子類別以及關聯 sys.dm_exec_query_stats、sys.dm_exec_procedure_stats 和 sys.dm_exec_trigger_stats 動態管理檢視的組合，重新組成任何給定查詢、預存程序或觸發程序的效能記錄。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Performance Statistics 事件類別可用來監視正在執行之查詢、預存程序和觸發程序的效能。 其六個事件子類別分別表示了系統中查詢、預存程序和觸發程序存留期間內的一項事件。 您可以使用這些事件子類別以及關聯 sys.dm_exec_query_stats、sys.dm_exec_procedure_stats 和 sys.dm_exec_trigger_stats 動態管理檢視的組合，重新組成任何給定查詢、預存程序或觸發程序的效能記錄。  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Performance Statistics 事件類別資料行  
  下表描述與下列每個事件子類別相關聯的事件類別資料行：EventSubClass 0、EventSubClass 1、EventSubClass 2、EventSubClass 3、EventSubClass 4 和 EventSubClass 5。  

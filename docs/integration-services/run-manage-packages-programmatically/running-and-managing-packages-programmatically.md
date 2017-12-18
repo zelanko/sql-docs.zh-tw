@@ -1,5 +1,5 @@
 ---
-title: "執行和以程式設計方式管理封裝 |Microsoft 文件"
+title: "以程式設計方式執行及管理套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 206411bed262d99b043cf667b9699a6fbeb85981
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6affcd02d932b1e382268f328a6e5c6abf8b177b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="running-and-managing-packages-programmatically"></a>以程式設計方式執行及管理封裝
   如果您需要在開發環境以外的地方管理和執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，可以使用程式設計方式操作封裝。 在這種方法中，您有許多的選擇：  
@@ -38,14 +35,14 @@ ms.lasthandoff: 09/26/2017
   
  您可以只撰寫幾行程式碼，從用戶端應用程式載入及執行現有的封裝。  
   
- 本章節描述及示範如何以程式設計方式執行現有的封裝，以及如何從其他應用程式存取資料流程的輸出。 一個進階程式設計選項，您可以透過程式設計方式建立[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝逐行 > 主題中所述[Packages Programmatically<](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)。  
+ 本章節描述及示範如何以程式設計方式執行現有的封裝，以及如何從其他應用程式存取資料流程的輸出。 如同進階程式設計選項，您能夠以程式設計方式逐行建立 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件 (如[以程式設計方式建置套件](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)主題中所述)。  
   
  本章節也會討論您可以使用程式設計方式執行的其他管理工作，以管理預存程序、執行中的封裝和封裝角色。  
   
 ## <a name="running-packages-on-the-integration-services-server"></a>在 Integration Services 伺服器上執行封裝  
  當您將封裝部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器時，可以使用 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間，以程式設計方式執行封裝。 Microsoft.SqlServer.Management.IntegrationServices 組件是使用 .NET Framework 3.5 編譯的。 如果您要建置 .NET Framework 4.0 應用程式，可能需要將組件參考直接加入至專案檔案。  
   
- 您也可以使用此命名空間，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上部署和管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。 如需命名空間和程式碼片段的概觀，請參閱部落格文章： [SSIS 目錄管理物件模型初探](http://go.microsoft.com/fwlink/?LinkId=253122)，blogs.msdn.com 上。  
+ 您也可以使用此命名空間，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上部署和管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。 如需命名空間的概觀和程式碼片段，請參閱 blogs.msdn.com 上的部落格文章：[SSIS 目錄管理物件模型初探](http://go.microsoft.com/fwlink/?LinkId=253122)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [了解本機和遠端執行之間的差異](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/26/2017
  [以程式設計方式管理執行中的套件](../../integration-services/run-manage-packages-programmatically/managing-running-packages-programmatically.md)  
  描述如何列出目前正在執行的封裝、檢查封裝的屬性，並停止執行中的封裝。  
   
- [以程式設計方式管理封裝角色 &#40;SSIS 服務 &#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
+ [以程式設計方式管理套件角色 &#40;SSIS 服務&#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
  描述如何取得或設定指派給封裝或資料夾之角色的相關資訊。  
   
 ## <a name="reference"></a>參考  
@@ -90,4 +87,3 @@ ms.lasthandoff: 09/26/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

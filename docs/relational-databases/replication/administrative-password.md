@@ -2,9 +2,12 @@
 title: "管理密碼 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 592f3db3d5340f29832c29e1fcca7a2d46a7033f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e197fb3bcaee9bba96de0dc6dd6519a01e5a13b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administrative-password"></a>管理密碼
-  如果在此精靈的 **[散發者]** 頁面上為此發行者選取了遠端散發者，您就必須為複寫用於在發行者與散發者之間進行連接的 **distributor_admin** 登入輸入密碼。 密碼必須符合設定散發精靈的 **[散發者密碼]** 頁面上指定的密碼，或是在 **[散發者屬性]** 對話方塊的 **[發行者]** 頁面上指定的密碼。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 如果在此精靈的 [散發者] 頁面上為此發行者選取了遠端散發者，您就必須為複寫用於在發行者與散發者之間進行連線的 **distributor_admin** 登入輸入密碼。 密碼必須符合設定散發精靈的 **[散發者密碼]** 頁面上指定的密碼，或是在 **[散發者屬性]** 對話方塊的 **[發行者]** 頁面上指定的密碼。  
   
 ## <a name="options"></a>選項  
  **密碼**  

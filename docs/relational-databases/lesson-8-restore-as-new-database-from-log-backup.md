@@ -1,10 +1,13 @@
 ---
 title: "第 8 課： 從記錄備份還原為新的資料庫 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd973fc07c6849a1e211f77be4a995bdada4b271
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 65e5464a1a3ee36420d92b23268ab9aa7cb88c02
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>第 8 課： 從記錄備份還原為新的資料庫
-在這一課，您會從檔案快照集交易記錄備份將 AdventureWorks2014 資料庫還原為新的資料庫。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您會從檔案快照集交易記錄備份將 AdventureWorks2014 資料庫還原為新的資料庫。  
   
 在此情況下，您會基於商務分析和報告在不同的虛擬機器上執行還原至 SQL Server 執行個體。 還原至不同虛擬機器上的不同執行個體，會基於此目的，將工作負載卸載至專用虛擬機器並進行大小調整，方法是從交易式系統中移除其資源需求。  
   

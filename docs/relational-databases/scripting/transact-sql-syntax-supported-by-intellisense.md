@@ -2,9 +2,12 @@
 title: "IntelliSense 所支援的 Transact-SQL 語法 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fa116b3ef7a86697f053a653c14aad0e86f1535
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bec5a6542bc3095df0414c77af09acbb2ec05020
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 所支援的 Transact-SQL 語法
-  此主題描述 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中 IntelliSense 所支援的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]陳述式和語法。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中 IntelliSense 所支援的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和語法。  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense 所支援的陳述式  
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，IntelliSense 僅支援最常用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 某些一般的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器條件可能會讓 IntelliSense 無法運作。 如需詳細資訊，請參閱[疑難排解 IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md)。  

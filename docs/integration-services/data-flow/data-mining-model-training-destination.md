@@ -1,5 +1,5 @@
 ---
-title: "資料採礦模型培訓目的地 |Microsoft 文件"
+title: "資料採礦模型定型目的地 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 570a7e8c6b20ea528f5980fb3ae53a60037d0243
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: fe2df40e58f7a4164655d4b7970797c697fcff37
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
   「資料採礦模型培訓」目的地藉由傳送目的地接收的資料至資料採礦模型演算法，來培訓資料採礦模型。 如果多個資料採礦模型建立於同一資料採礦結構上，則可以由一個目的地來培訓這些模型。 如需詳細資訊，請參閱 [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md) 和 [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)。  
@@ -60,8 +58,8 @@ ms.lasthandoff: 08/17/2017
 ## <a name="data-mining-model-training-editor-connection-tab"></a>資料採礦模型培訓編輯器 (連接索引標籤)
   使用 **[資料採礦模型培訓編輯器]** 對話方塊的 **[連接]** 頁面，選取要培訓的採礦模型。  
   
-### <a name="options"></a>選項  
- **連線管理員**  
+### <a name="options"></a>選項。  
+ **[ODBC 目的地編輯器]**  
  從現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接清單中進行選取，或使用 [新增] 按鈕建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接，如下所述。  
   
  **新增**  
@@ -79,7 +77,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="data-mining-model-training-editor-columns-tab"></a>資料採礦模型培訓編輯器 (資料行索引標籤)
   使用 **[資料採礦模型培訓編輯器]** 對話方塊的 **[資料行]** 頁面，即可將輸入資料行對應至採礦結構的資料行。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **可用的輸入資料行**  
  檢視可用的輸入資料行清單。 拖曳輸入資料行以對應至採礦結構資料行。  
   
@@ -92,4 +90,3 @@ ms.lasthandoff: 08/17/2017
  **採礦結構資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  
   
-

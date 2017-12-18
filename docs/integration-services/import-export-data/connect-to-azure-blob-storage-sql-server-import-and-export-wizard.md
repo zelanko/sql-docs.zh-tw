@@ -1,5 +1,5 @@
 ---
-title: "連接到 Azure Blob 儲存體 （SQL Server 匯入和匯出精靈） |Microsoft 文件"
+title: "連接到 Azure Blob 儲存體 (SQL Server 匯入和匯出精靈) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -8,49 +8,47 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 36b992b5141799d4e168b2e990643e6a515a8d69
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7f586df639ab239539f21f1d94155b589cd9c865
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>連接到 Azure Blob 儲存體 （SQL Server 匯入和匯出精靈）
-本主題說明如何連接到**Azure Blob 儲存體**資料來源從**選擇資料來源**或**選擇目的地**SQL Server 匯入和匯出精靈 頁面。
+# <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>連接到 Azure Blob 儲存體 (SQL Server 匯入和匯出精靈)
+本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連接到 **Azure Blob 儲存體**資料來源。
 
 >   [!NOTE]
-> 若要使用 Azure Blob 來源或目的地，您必須安裝 Azure Feature Pack for SQL Server Integration Services。
-> - 若要下載 Feature Pack，請參閱[Microsoft SQL Server 2016 Integration Services 功能套件 azure](https://www.microsoft.com/download/details.aspx?id=49492)。
+> 若要使用 Azure Blob 來源或目的地，您必須安裝適用於 SQL Server Integration Services 的 Azure Feature Pack。
+> - 若要下載此 Feature Pack，請參閱 [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)。
 >
 > - 如需詳細資訊，請參閱 [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)。
 
-下列螢幕擷取畫面顯示，以連接至 Azure Blob 儲存體設定的選項。
+下列螢幕擷取畫面顯示連接到 Azure Blob 儲存體的設定選項。
 
 ![Azure blob 儲存體連接](../../integration-services/import-export-data/media/azure-blob-storage-connection.png)
 
-## <a name="options-to-specify"></a>若要指定的選項
+## <a name="options-to-specify"></a>要指定的選項
 
 > [!NOTE]
-> Azure Blob 儲存體是您的來源或目的地連接選項，此資料提供者都是相同的。 也就是您所看到的選項會同時針對相同**選擇資料來源**和**選擇目的地**精靈頁面。
+> 不論 Azure Blob 儲存體是您的來源還是目的地，此資料提供者的連接選項都會相同。 也就是說，您在精靈的 [選擇資料來源] 和 [選擇目的地] 頁面上會看到一樣的選項。
 
  **使用 Azure 帳戶**  
  指定是否要使用線上帳戶。
   
  **儲存體帳戶名稱**  
- 輸入 Azure 儲存體帳戶名稱。  
+ 輸入 Azure 儲存體帳戶的名稱。  
   
 **帳戶金鑰**  
-輸入 Azure 儲存體帳戶金鑰。  
+輸入 Azure 儲存體帳戶的金鑰。  
   
  **使用 HTTPS**  
  指定要使用 HTTP 或 HTTPS 連線到儲存體帳戶。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 08/03/2017
  選取 [文字] 或 [Avro] 檔案格式。  
   
  **資料行分隔符號字元**  
- 如果您選取文字格式，輸入資料行分隔符號字元。  
+ 如果您選取了 [文字] 格式，請輸入資料行分隔符號字元。  
   
  **使用第一個資料列作為資料行名稱**  
  指定資料的第一個資料列是否包含資料行名稱。  
@@ -73,5 +71,4 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>另請參閱
 [選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [選擇目的地](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
 

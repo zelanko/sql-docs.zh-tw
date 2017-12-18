@@ -2,9 +2,12 @@
 title: "Audit Add DB User 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c7de35de5031e404f7ac4a2ea580988bec1d981
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 25d15b25de3c25223cb2a49a62f442afc51b5603
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User 事件類別
-  每當資料庫中新增或移除了資料庫使用者的登入時，就會發生 **Audit Add DB User** 事件類別。 這個事件類別用於 **sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**和 **sp_dropuser** 預存程序。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 每當資料庫中新增或移除資料庫使用者的登入時，就會發生 **Audit Add DB User** 事件類別。 這個事件類別用於 **sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**和 **sp_dropuser** 預存程序。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本可能會移除這個事件類別。 建議您改用 **Audit Database Principal Management** 事件類別。  
   

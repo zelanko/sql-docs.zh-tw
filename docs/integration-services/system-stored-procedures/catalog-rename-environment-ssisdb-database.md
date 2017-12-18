@@ -1,5 +1,5 @@
 ---
-title: "catalog.rename_environment （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.rename_environment (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 504d3ca0f18c9ea11105ebb575d2f5db449f91e4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fab134694401fa13f2798fcd5a5ef0787dc14f52
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +37,14 @@ catalog.rename_environment [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @folder_name =] *folder_name*  
- 包含環境之資料夾的名稱。 *Folder_name*是**nvarchar （128)**。  
+ [ @folder_name = ] *folder_name*  
+ 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
   
- [ @environment_name =] *environment_name*  
- 環境的原始名稱。 *Environment_name*是**nvarchar （128)**。  
+ [ @environment_name = ] *environment_name*  
+ 環境的原始名稱。 *environment_name* 是 **nvarchar(128)**。  
   
- [ @new_environment_name =] *new_environment_name*  
- 環境的新名稱。 *New_environment_name*是**nvarchar （128)**。  
+ [ @new_environment_name = ] *new_environment_name*  
+ 環境的新名稱。 *new_environment_name* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
@@ -59,9 +57,9 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   環境的 MODIFY 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **系統管理員**伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會引發錯誤或警告的某些條件：  
@@ -77,4 +75,3 @@ catalog.rename_environment [ @folder_name = ] folder_name
 >  當環境參考無效時，使用這些參考的對應封裝之驗證和執行將會失敗。  
   
   
-

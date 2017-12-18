@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 開發人員文件 |Microsoft 文件"
+title: "Integration Services 開發人員文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,19 +21,18 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf7d7afba8ada3f6027db3053914b1822597792c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4f1568b369673d68051ecccf19484f80b6094087
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="integration-services-developer-documentation"></a>Integration Services 開發人員文件集
+# <a name="integration-services-developer-documentation"></a>Integration Services 開發人員文件
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括完全改寫的物件模型，已透過許多功能增強，這使得擴充封包和設計其程式更輕鬆、更彈性且更強大。 開發人員幾乎可以擴充和程式設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的每個層面。  
   
  身為 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 開發人員，有兩種主要的方式可進行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的程式設計：  
@@ -68,7 +65,7 @@ ms.lasthandoff: 09/26/2017
  說明同步與非同步輸出之間的重要差別，以及會在資料流程中使用這些輸出的元件。  
   
  [以程式設計方式使用連線管理員](../integration-services/working-with-connection-managers-programmatically.md)  
- 列出您可以從 managed 程式碼中使用的連接管理員的連接管理員時程式碼會呼叫所傳回的值**AcquireConnection**方法。  
+ 列出您可從受控碼中使用的連線管理員，以及當程式碼呼叫 **AcquireConnection** 方法時，連線管理員所傳回的值。  
   
  [使用指令碼擴充套件](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  說明如何透過使用指令碼工作擴充控制流程，或是如何透過使用指令碼元件擴充資料流程。  
@@ -92,10 +89,9 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="external-resources"></a>外部資源  
   
--   CodePlex 範例： [Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkID=131204)，位於 www.codeplex.com/MSFTISProdSamples  
+-   位於 www.codeplex.com/MSFTISProdSamples 的 CodePlex 範例：[Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkID=131204)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   
-

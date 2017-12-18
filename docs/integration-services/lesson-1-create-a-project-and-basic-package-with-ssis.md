@@ -1,5 +1,5 @@
 ---
-title: "第 1 課： 建立專案和基本封裝與 SSIS |Microsoft 文件"
+title: "課程 1：使用 SSIS 建立專案和基本套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,38 +8,35 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 0839d5dfbcb033a9a0d466ce9b87ecc738b15250
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 58a71c4ef573925218061d5796a56028d82d042b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 建立專案和基本套件
 
- > 如需舊版的 SQL Server 相關的內容，請參閱[第 1 課： 建立專案和基本封裝](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[課程 1：建立專案和基本套件](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx)。
 
 在這一課，您將建立一個從單個一般檔案來源擷取資料的簡易 ETL 封裝，使用兩個查閱轉換元件來轉換資料、將該資料寫入至 **AdventureWorksDW2012** 中的 **FactCurrency**事實資料表。 在這一課，您會學到如何建立新封裝，加入和設定資料來源和目的地連接，以及使用新控制流程和資料流程元件。  
   
 > [!IMPORTANT]  
-> 這個教學課程需要 **AdventureWorksDW2012** 範例資料庫。 如需有關安裝和部署 **AdventureWorksDW2012**的資訊，請參閱 [CodePlex 上的 Reporting Services 產品範例](http://go.microsoft.com/fwlink/p/?LinkID=526910)。  
+> 這個教學課程需要 **AdventureWorksDW2012** 範例資料庫。 如需安裝和部署 **AdventureWorksDW2012**的詳細資訊，請參閱 [CodePlex 上的 Reporting Services 產品範例](http://go.microsoft.com/fwlink/p/?LinkID=526910)。  
   
 ## <a name="understanding-the-package-requirements"></a>了解封裝需求  
 這個教學課程需要 Microsoft SQL Server Data Tools。  
   
-如需有關安裝 SQL Server Data Tools 的詳細資訊，請參閱＜ [SQL Server Data Tools 下載](http://msdn.microsoft.com/en-us/data/hh297027)＞。  
+如需安裝 SQL Server Data Tools 的詳細資訊，請參閱 [SQL Server Data Tools 下載](http://msdn.microsoft.com/en-us/data/hh297027)。  
   
 在建立封裝之前，您需要了解來源資料和目的地使用的格式。 了解這些資料格式之後，您就可以定義必要的轉換，將來源資料對應至目的地。  
   
@@ -84,25 +81,24 @@ ms.lasthandoff: 08/03/2017
 ## <a name="lesson-tasks"></a>課程工作  
 這一課包含下列工作：  
   
--   [步驟 1： 建立新的 Integration Services 專案](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [步驟 1：建立新的 Integration Services 專案](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [步驟 2： 加入和設定一般檔案連接管理員](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [步驟 2：加入和設定一般檔案連接管理員](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [步驟 3： 加入和設定 OLE DB 連接管理員](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [步驟 3：加入和設定 OLE DB 連接管理員](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [步驟 4： 將資料流程工作加入封裝](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [步驟 4：將資料流程工作加入至封裝中](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [步驟 5： 加入和設定一般檔案來源](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [步驟 5：加入和設定一般檔案來源](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [步驟 6： 加入和設定 「 查閱 」 轉換](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [步驟 6：加入及設定查閱轉換](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [步驟 7： 加入和設定 OLE DB 目的地](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [步驟 7：加入及設定 OLE DB 目的地](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [步驟 8： 使第 1 課封裝更易於了解](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [步驟 8：使第 1 課的封裝更容易了解](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [步驟 9： 測試第 1 課的教學課程封裝](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [步驟 9：測試第 1 課的教學課程封裝](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
-[步驟 1： 建立新的 Integration Services 專案](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+[步驟 1：建立新的 Integration Services 專案](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
-

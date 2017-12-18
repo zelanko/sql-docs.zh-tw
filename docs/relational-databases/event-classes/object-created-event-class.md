@@ -2,9 +2,12 @@
 title: "Object:Created 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b16e94c7d025bceead676537fc54c4343403345
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 47d2d9db2ee856e62aa7e4ec3378d7cb00b34281
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="objectcreated-event-class"></a>Object:Created 事件類別
-  Object:Created 事件類別指出已建立物件，例如，利用 CREATE INDEX、CREATE TABLE 或 CREATE DATABASE 陳述式建立的物件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Object:Created 事件類別指出已建立物件，例如，利用 CREATE INDEX、CREATE TABLE 或 CREATE DATABASE 陳述式建立的物件。  
   
  例如，您可利用此事件類別來判斷物件是否正由通常建立暫時性預存程序的 ODBC 應用程式建立。 您可藉由監視 LoginName 和 NTUserName 資料行，判斷正在建立、刪除或存取物件的使用者名稱。  
   

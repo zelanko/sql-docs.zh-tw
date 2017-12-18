@@ -1,5 +1,5 @@
 ---
-title: "封裝管理 （SSIS 服務） |Microsoft 文件"
+title: "套件管理 (SSIS 服務) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,31 +29,30 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51d6e32f04d470c7f4ddfc8d3c4b6d994e0bd764
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="package-management-ssis-service"></a>封裝管理 (SSIS 服務)
-  封裝管理包括監視、 管理、 匯入和匯出封裝。  
+  套件管理包含監視、管理、匯入和匯出套件。  
  
  ## <a name="package-store"></a>封裝存放區  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供存取封裝的兩個最上層資料夾： 
- - **執行封裝** 
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供用於存取套件的兩個最上層資料夾： 
+ - **[Running Packages]** 
  - **[Stored Packages]**
 
  **[Running Packages]** 資料夾會列出伺服器上目前正在執行的封裝。 **[Stored Packages]** 資料夾會列出所有儲存在封裝存放區中的封裝。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務只會管理這些封裝。 封裝存放區可以只由 msdb 資料庫組成，或者由該資料庫和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務組態檔中所列之檔案系統資料夾所組成。 組態檔會指定要管理的 msdb 及檔案系統資料夾。 您可能還有不是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所管理的封裝，而存放在檔案系統的其他位置。  
   
- 您將儲存到 msdb 的封裝都存放在名為 sysssispackages 資料表。 當您將封裝儲存到 msdb 中時，您可以將它們群邏輯資料夾。 使用邏輯資料夾可以協助您依用途組織封裝，或篩選的 sysssispackages 資料表中的封裝。 建立新的邏輯資料夾中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 依預設，您加入至 msdb 的任何邏輯資料夾都會自動納入封裝存放區。  
+ 您儲存至 msdb 的套件會存放在名為 sysssispackages 的資料表中。 當您將套件儲存至 msdb 時，可以將它們群組成邏輯資料夾。 使用邏輯資料夾可以協助您依用途組織套件，或是篩選 sysssispackages 資料表中的套件。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立新邏輯資料夾。 依預設，您加入至 msdb 的任何邏輯資料夾都會自動納入封裝存放區。  
   
- 您所建立的邏輯資料夾會以在 sysssispackagefolders msdb 資料表中的資料列表示。 sysssispackagefolders 中的 folderid 及 parentfolderid 資料行會定義資料夾階層。 在 msdb 中的根邏輯資料夾是在 sysssispackagefolders parentfolderid 資料行中有 null 值的資料列。 如需詳細資訊，請參閱[sysssispackages &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/sysssispackages-transact-sql.md)和[sysssispackagefolders (Transact-SQL （& s))](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md)。  
+ 您建立的邏輯資料夾會呈現為 msdb 中 sysssispackagefolders 資料表的資料列。 sysssispackagefolders 中的 folderid 及 parentfolderid 資料行會定義資料夾階層。 msdb 中的根邏輯資料夾是 sysssispackagefolders 的 parentfolderid 資料行中具有 Null 值的資料列。 如需詳細資訊，請參閱 [sysssispackages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysssispackages-transact-sql.md) 和 [sysssispackagefolders (Transact-SQL&)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md)。  
   
  當您開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]時，會看到列在 Stored Packages 資料夾中由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所管理的 msdb 資料夾。 如果組態檔指定了根檔案系統資料夾，[Stored Packages] 資料夾也會在這些資料夾及所有子資料夾中列出儲存至檔案系統的封裝。  
   
@@ -66,14 +64,14 @@ ms.lasthandoff: 08/03/2017
   
  若要檢視封裝存放區中的封裝清單，您必須開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
   
-## <a name="monitor-running-packages"></a>監視執行中封裝  
- **Running Packages**資料夾會列出目前正在執行的封裝。 若要在 **的** [摘要] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]頁面上檢視有關目前封裝的資訊，請按一下 **Running Packages** 資料夾。 **[摘要]** 頁面上會列出諸如正在執行封裝的執行持續時間等資訊。 選擇性地重新整理資料夾以顯示最新的資訊。  
+## <a name="monitor-running-packages"></a>監視執行中套件  
+ [Running Packages] 資料夾會列出目前正在執行的套件。 若要在 **的** [摘要] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]頁面上檢視有關目前封裝的資訊，請按一下 **Running Packages** 資料夾。 **[摘要]** 頁面上會列出諸如正在執行封裝的執行持續時間等資訊。 選擇性地重新整理資料夾以顯示最新的資訊。  
   
  若要在 **[摘要]** 頁面上檢視有關單一正在執行封裝的資訊，請按一下該封裝。 **[摘要]** 頁面會顯示諸如封裝的版本和描述等資訊。  
   
-停止執行中的封裝從**Running Packages**資料夾，以滑鼠右鍵按一下封裝，然後按一下**停止**。  
+在 [Running Packages] 資料夾中以滑鼠右鍵按一下套件，然後按一下 [停止]，以停止執行中套件。  
   
-## <a name="view-packages-in-ssms"></a>在 SSMS 中檢視封裝
+## <a name="view-packages-in-ssms"></a>檢視 SSMS 中的套件
     
  此程序描述如何在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，以及檢視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所管理的封裝清單。  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 08/03/2017
     > [!IMPORTANT]  
     >  如果您無法連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務目前可能沒有執行。 若要了解此服務的狀態，請按一下 **[開始]**，依序指向 **[所有程式]**、 **[Microsoft SQL Server]**和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。 在左窗格中，按一下 **[SQL Server 服務]**。 在右窗格中，尋找 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 如果此服務尚未執行，請將它啟動。  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]隨即開啟。 依預設，[物件總管] 視窗會在 Studio 左下角開啟並定位。 如果 [物件總管] 未開啟，請按一下 **[檢視]** 功能表上的 **[物件總管]** 。  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 隨即開啟。 依預設，[物件總管] 視窗會在 Studio 左下角開啟並定位。 如果 [物件總管] 未開啟，請按一下 **[檢視]** 功能表上的 **[物件總管]** 。  
   
 ### <a name="to-view-the-packages-that-integration-services-service-manages"></a>若要檢視 Integration Services 服務所管理的封裝  
   
@@ -94,11 +92,11 @@ ms.lasthandoff: 08/03/2017
   
 2.  展開 [Stored Packages] 的子資料夾以顯示封裝。  
 
-## <a name="import-and-export-packages"></a>匯入和匯出封裝
+## <a name="import-and-export-packages"></a>匯入和匯出套件
  
  封裝可以儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫的 sysssispackages 資料表中，也可以儲存在檔案系統中。  
   
- 封裝存放區 ([!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所監視和管理的邏輯儲存體) 可以同時包含在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務之組態檔中指定的 msdb 資料庫和檔案系統資料夾。  
+ 封裝存放區 ( [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所監視和管理的邏輯儲存體) 可以同時包含在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務之組態檔中指定的 msdb 資料庫和檔案系統資料夾。  
   
  您可以在下列儲存體類型之間匯入和匯出封裝：  
   
@@ -108,21 +106,21 @@ ms.lasthandoff: 08/03/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]可讓您匯入和匯出封裝，並藉此變更儲存格式和套件的位置。 使用匯入和匯出功能，可以將封裝加入檔案系統、封裝存放區或 msdb 資料庫，並將封裝從一個儲存體複製到另一個儲存體。 例如，可以將 msdb 中儲存的封裝複製到檔案系統，反之亦然。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可讓您匯入和匯出封裝，並藉此變更封裝的儲存格式和位置。 使用匯入和匯出功能，可以將封裝加入檔案系統、封裝存放區或 msdb 資料庫，並將封裝從一個儲存體複製到另一個儲存體。 例如，可以將 msdb 中儲存的封裝複製到檔案系統，反之亦然。  
   
  您也可以使用 **dtutil** 命令提示公用程式 (dtutil.exe)，將封裝複製成其他格式。 如需詳細資訊，請參閱 [dtutil Utility](../../integration-services/dtutil-utility.md)。  
   
  您可以在下列位置之間匯入或匯出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝：  
   
--   您可以匯入儲存在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體、檔案系統或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區內的封裝。 匯入的封裝將儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區內的資料夾中。  
+-   您可以匯入儲存在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體、檔案系統或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區內的封裝。 匯入的封裝將儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區內的資料夾中。  
   
--   您可以將儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體、檔案系統或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區內的封裝匯出至不同的儲存格式和位置。  
+-   您可以將儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體、檔案系統或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區內的封裝匯出至不同的儲存格式和位置。  
   
- 不過，在不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之間匯入和匯出封裝有一些限制：  
+ 不過，在不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本之間匯入和匯出封裝有一些限制：  
   
--   在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的執行個體上，雖然您可以從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的執行個體匯入封裝，但是無法將封裝匯出至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的執行個體。  
+-   在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的執行個體上，雖然您可以從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的執行個體匯入封裝，但是無法將封裝匯出至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的執行個體。  
   
--   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的執行個體上，您無法在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的執行個體之間匯入封裝或匯出封裝。  
+-   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的執行個體上，您無法在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的執行個體之間匯入封裝或匯出封裝。  
   
  下列程序將描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來匯入或匯出封裝。  
   
@@ -134,7 +132,7 @@ ms.lasthandoff: 08/03/2017
   
     -   在 [伺服器類型] 方塊中，選取 [Integration Services]。  
   
-    -   在**伺服器名稱**方塊中，提供伺服器名稱或按一下**\<瀏覽其他 … >**並找出要使用的伺服器。  
+    -   在 [伺服器名稱] 方塊中提供伺服器名稱，或按一下 [\<瀏覽其他…>]，並尋找要使用的伺服器。  
   
 3.  如果物件總管尚未開啟，請在 [檢視] 功能表上，按一下物件總管。  
   
@@ -170,7 +168,7 @@ ms.lasthandoff: 08/03/2017
   
     -   在 [伺服器類型] 方塊中，選取 [Integration Services]。  
   
-    -   在**伺服器名稱**方塊中，提供伺服器名稱或按一下**\<瀏覽其他 … >**並找出要使用的伺服器。  
+    -   在 [伺服器名稱] 方塊中提供伺服器名稱，或按一下 [\<瀏覽其他…>]，並尋找要使用的伺服器。  
   
 3.  如果物件總管尚未開啟，請在 [檢視] 功能表上，按一下物件總管。  
   
@@ -234,7 +232,7 @@ ms.lasthandoff: 08/03/2017
  選擇性地重新命名封裝。 預設名稱是要匯入的封裝名稱。  
   
  **保護等級**  
- 按一下瀏覽按鈕 **(...)** 並更新 **[封裝保護等級]** 對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
+ 按一下瀏覽按鈕 **(...)** 並更新 **[封裝保護等級]** 對話方塊中的保護等級。 如需詳細資訊，請參閱[封裝與專案保護等級對話方塊](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>匯出封裝對話方塊 UI 參考
   使用 **[匯出封裝]** 對話方塊 (可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中存取)，即可匯出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝到不同的位置，並選擇性地修改封裝的保護等級。  
@@ -271,9 +269,9 @@ ms.lasthandoff: 08/03/2017
  輸入封裝路徑，或按一下瀏覽按鈕 **(…)** ，並找出要儲存封裝的資料夾。  
   
  **保護等級**  
- 按一下瀏覽按鈕 **(...)** 並更新 [封裝保護等級] 對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
+ 按一下瀏覽按鈕 **(...)** 並更新 [封裝保護等級] 對話方塊中的保護等級。 如需詳細資訊，請參閱[封裝與專案保護等級對話方塊](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
 
-## <a name="back-up-and-restore-packages"></a>備份和還原封裝
+## <a name="back-up-and-restore-packages"></a>備份和還原套件
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝可以儲存至檔案系統或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料庫 msdb。 儲存至 msdb 的封裝可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原功能進行備份和還原。  
   
@@ -295,4 +293,3 @@ ms.lasthandoff: 08/03/2017
  [Integration Services 服務 &#40;SSIS 服務&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   
-

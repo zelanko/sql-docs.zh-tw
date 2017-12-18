@@ -1,5 +1,5 @@
 ---
-title: "合併在 Integration Services 封裝 |Microsoft 文件"
+title: "Integration Services 封裝中的 MERGE | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MERGE statement [SQL Server]
+helpviewer_keywords: MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a3b26c9c918e1a3c59b0bd8cd688b3fff2d6a868
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   目前版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之「執行 SQL」工作中的 SQL 陳述式可能會包含 MERGE 陳述式。 這個 MERGE 陳述式可讓您在單一陳述式中完成多項 INSERT、UPDATE 及 DELETE 作業。  
@@ -77,4 +74,3 @@ ms.lasthandoff: 08/03/2017
  Inventory 資料庫具有一份 ProductsInventory 資料表，其中包含 ProductID 和 StockOnHand 資料行。 含有 ProductID、CustomerID 和 Quantity 資料行的 Shipments 資料表會追蹤客戶的產品出貨。 ProductInventory 資料表必須根據 Shipments 資料表中的資訊每日更新。 單一 MERGE 陳述式可以根據出貨減少 ProductInventory 資料表中的存貨。 如果某項產品的存貨已經減少至 0，該 MERGE 陳述式也可以從 ProductInventory 資料表中刪除該項產品的資料列。  
   
   
-

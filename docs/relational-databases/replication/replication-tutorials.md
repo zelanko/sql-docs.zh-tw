@@ -2,9 +2,12 @@
 title: "複寫教學課程 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 84c864082da2c0a224b8ef42cea768c677534d23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 501582405c40f5688514c9ce5fbcfe06ca2952c1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-tutorials"></a>複寫教學課程
-複寫課程包含可用來學習如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]設定及執行複寫拓撲的教學課程。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 複寫課程包含可用來學習如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定及執行複寫拓撲的教學課程。  
   
 在複寫教學課程中，「發行者」是指包含所要複寫之來源資料的伺服器，而「訂閱者」則是指目的地伺服器。 發行者和訂閱者可以共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，但這不是必要條件。 如需詳細資訊，請參閱 [複寫發行模型概觀](../../relational-databases/replication/publish/replication-publishing-model-overview.md)。  
   

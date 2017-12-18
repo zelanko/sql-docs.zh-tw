@@ -2,9 +2,12 @@
 title: "佇列更新衝突偵測和解決 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30768bae36208218fc5529c64744abc7e1b12a44
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b48c692d0f4992c46bcf27ffa80e2d1bf0740c39
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>可更新訂閱 - 佇列更新衝突解決方法
-  因為佇列更新訂閱允許在多個位置對相同資料做修改，則在發行者同步資料時，有可能發生衝突。 複寫會在變更與發行者同步處理時偵測是否有任何衝突，並使用您在建立發行集時選取的解決原則解決衝突。 會發生下列衝突：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 由於佇列更新訂閱允許在多個位置對相同資料做修改，因此在發行者端同步處理資料時，有可能會發生衝突。 複寫會在變更與發行者同步處理時偵測是否有任何衝突，並使用您在建立發行集時選取的解決原則解決衝突。 會發生下列衝突：  
   
 -   更新與插入衝突。 當相同的資料在兩個位置同時變更時，就會發生此衝突。 一個變更成功，而另一個變更失敗。  
   

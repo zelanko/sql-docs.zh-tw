@@ -1,5 +1,5 @@
 ---
-title: "catalog.operation_messages （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.operation_messages (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 235e9896cbf075bdc26e3df120b23091b8e82d6d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 666d7014adb8feaa77e72f5856838051d992c8df
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,17 +36,17 @@ ms.lasthandoff: 09/26/2017
 |operation_message_id|**bigint**|訊息的唯一識別碼 (ID)。|  
 |operation_id|**bigint**|作業的唯一識別碼。|  
 |message_time|**datetimeoffset(7)**|建立訊息的日期和時間。|  
-|m|**smallint**|顯示的訊息類型。|  
+|message_type|**smallint**|顯示的訊息類型。|  
 |message_source_type|**smallint**|訊息來源類型的識別碼。|  
 |message|**nvarchar(max)**|訊息的文字。|  
-|extended_info_id|**bigint**|在中找到的其他相關資訊的作業訊息，ID [x](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)檢視。|  
+|extended_info_id|**bigint**|在 [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) 檢視中所找到，且與作業訊息相關之其他資訊的識別碼。|  
   
 ## <a name="remarks"></a>備註  
  這個檢視會顯示在目錄作業期間所記錄之每個訊息的資料列。 訊息可由伺服器、封裝執行處理或執行引擎所產生。  
   
  這個檢視會顯示下列訊息類型：  
   
-|**m**值|Description|  
+|**message_type** 值|Description|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|錯誤|  
@@ -84,12 +82,11 @@ ms.lasthandoff: 09/26/2017
   
 -   作業的 READ 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 > [!NOTE]  
 >  當您擁有在伺服器上執行操作的權限時，也會具有檢視作業資訊的權限。 強制使用資料列層級安全性，只會顯示您具有檢視權限的資料列。  
   
   
-

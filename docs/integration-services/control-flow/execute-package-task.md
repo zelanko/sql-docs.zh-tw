@@ -1,5 +1,5 @@
 ---
-title: "執行封裝工作 |Microsoft 文件"
+title: "執行套件工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-package-task"></a>執行封裝工作
   「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/11/2017
  「執行封裝」工作可以執行包含父封裝之相同專案中所含的子封裝。 您可以透過將 **[ReferenceType]** 屬性設定為 **[專案參考]**，然後設定 **[PackageNameFromProjectReference]** 屬性，以便從專案中選取子封裝。  
   
 > [!NOTE]  
->  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 [部署 Integration Services (SSIS) 專案和封裝](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+>  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 [部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  「執行封裝」工作也可執行儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中的封裝，以及儲存在檔案系統中的封裝。 此工作使用 OLE DB 連接管理員連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或使用檔案連接管理員存取檔案系統。 如需詳細資訊，請參閱＜ [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) ＞和＜ [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)＞。  
   
@@ -162,7 +160,7 @@ ms.lasthandoff: 08/11/2017
  為專案中的子封裝選取 [專案參考]。 為封裝外部的子封裝選取 [外部參考]  
   
 > [!NOTE]  
->  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 [部署 Integration Services (SSIS) 專案和封裝](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+>  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 [部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  **密碼**  
  如果子封裝受到密碼保護，請提供子封裝的密碼，或按一下省略符號 (...) 按鈕，然後建立子封裝的新密碼。  
@@ -195,18 +193,18 @@ ms.lasthandoff: 08/11/2017
   
 ##### <a name="location--sql-server"></a>位置 = SQL Server  
  **連接**  
- 在清單中，選取 OLE DB 連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
+ 在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連線…>] 建立新的連線管理員。  
   
- **相關主題：** [OLE DB 連接管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **相關主題：**[OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
  輸入子封裝的名稱，或按一下省略符號 (…)，然後找出該封裝。  
   
 ##### <a name="location--file-system"></a>位置 = 檔案系統  
  **連接**  
- 在清單中，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
   
- **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
+ **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **PackageNameReadOnly**  
  顯示封裝名稱。  
@@ -214,7 +212,7 @@ ms.lasthandoff: 08/11/2017
 ###  <a name="parameter"></a> 設定 [參數繫結] 頁面上的 [選項]  
  您可以將值從父封裝或專案傳遞至子封裝。 專案必須使用專案部署模型，而且子封裝必須包含在包含父封裝的相同專案中。  
   
- 如需將專案轉換為專案部署模型的資訊，請參閱[部署 Integration Services (SSIS) 專案和封裝](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+ 如需將專案轉換為專案部署模型的資訊，請參閱 [部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  **子封裝參數**  
  輸入或選取子封裝參數的名稱。  
@@ -229,4 +227,3 @@ ms.lasthandoff: 08/11/2017
  按一下此選項可移除參數或變數與子封裝參數之間的對應。  
   
   
-

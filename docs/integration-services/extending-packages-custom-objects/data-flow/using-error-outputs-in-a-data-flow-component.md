@@ -1,5 +1,5 @@
 ---
-title: "在資料流程元件中使用錯誤輸出 |Microsoft 文件"
+title: "在資料流程元件中使用錯誤輸出 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,25 +26,24 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0253d7a43724b0b852b96bb84618480df6c8f9a4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6dae159609b8bdd57375c9a9e2abd0fbd8ee0ca1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>使用資料流程元件中的錯誤輸出
   您可以將呼叫錯誤輸出的特殊 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 物件加入元件，讓元件將無法在執行期間處理的資料列重新導向。 元件可能遇到的問題通常會歸類為錯誤或是截斷，而且是每個元件特有的。 提供錯誤輸出的元件透過從結果集篩選出錯誤資料列、當問題發生時讓元件失敗，以及忽略錯誤並繼續，讓元件的使用者有處理錯誤狀況的彈性。  
   
- 若要實作和支援錯誤輸出的元件中，您必須先設定<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A>至元件的屬性**true**。 然後您必須將輸出加入元件具有其<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A>屬性設定為**true**。 最後，元件必須包含錯誤或截斷發生時會將資料列導向錯誤輸出的程式碼。 本主題涵蓋這三個步驟並說明同步與非同步錯誤輸出之間的差異。  
+ 若要在元件中實作和支援錯誤輸出，您必須先將元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> 屬性設定為 **true**。 接著您必須將輸出新增至其 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> 屬性設定為 **true** 的元件。 最後，元件必須包含錯誤或截斷發生時會將資料列導向錯誤輸出的程式碼。 本主題涵蓋這三個步驟並說明同步與非同步錯誤輸出之間的差異。  
   
 ## <a name="creating-an-error-output"></a>建立錯誤輸出  
- 呼叫來建立錯誤輸出<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A>方法<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A>，然後設定<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A>屬性的新輸出**true**。 如果輸出是非同步，則不需要對輸出再執行任何動作。 如果輸出是同步的，而且對同一個輸入而言有另一個同步的輸出，則也必須設定 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 屬性。 對同一個輸入而言屬同步的兩個輸出間，這兩個屬性值必須相同。 如果這些屬性不是設定成非零的值，輸入所提供的資料列會傳送至對輸入同步的兩個輸出。  
+ 您可以呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> 方法，然後將新輸出的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> 屬性設定為 **true**，以建立錯誤輸出。 如果輸出是非同步，則不需要對輸出再執行任何動作。 如果輸出是同步的，而且對同一個輸入而言有另一個同步的輸出，則也必須設定 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 屬性。 對同一個輸入而言屬同步的兩個輸出間，這兩個屬性值必須相同。 如果這些屬性不是設定成非零的值，輸入所提供的資料列會傳送至對輸入同步的兩個輸出。  
   
  當元件在執行期間遇到錯誤或是截斷，它會根據發生錯誤之輸入或輸出，或是輸入或輸出資料行的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ErrorRowDisposition%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.TruncationRowDisposition%2A> 屬性的設定繼續。 這些屬性值預設應該設定為 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition.RD_NotUsed>。 當元件的錯誤輸出連接到下游元件時，會由元件的使用者設定這個屬性，並讓使用者控制元件處理錯誤或截斷的方式。  
   
@@ -283,7 +280,7 @@ End Sub
 ```  
   
 ### <a name="redirecting-a-row-with-asynchronous-outputs"></a>重新導向具有非同步輸出的資料列  
- 具有同步錯誤輸出的元件是將資料列導向輸出，而具有非同步輸出的元件則是明確地將資料列加入輸出 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>，以便將資料列傳送到錯誤輸出。 實作使用非同步錯誤輸出的元件，需要將資料行加入提供給下游元件的錯誤輸出，並且為 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 方法期間提供給元件的錯誤輸出快取輸出緩衝區。 詳細資料 > 主題中會說明實作具有非同步輸出的元件的詳細資料[開發具有非同步輸出的自訂轉換元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)。 如果資料行未明確地加入錯誤輸出，則加入輸出緩衝區的緩衝區資料列只會包含兩個錯誤資料行。  
+ 具有同步錯誤輸出的元件是將資料列導向輸出，而具有非同步輸出的元件則是明確地將資料列加入輸出 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>，以便將資料列傳送到錯誤輸出。 實作使用非同步錯誤輸出的元件，需要將資料行加入提供給下游元件的錯誤輸出，並且為 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 方法期間提供給元件的錯誤輸出快取輸出緩衝區。 實作具有非同步輸出之元件的詳細資料，將於[開發具有非同步輸出的自訂轉換元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)主題中詳細說明。 如果資料行未明確地加入錯誤輸出，則加入輸出緩衝區的緩衝區資料列只會包含兩個錯誤資料行。  
   
  若要將資料列傳送到非同步錯誤輸出，則必須將資料列加入錯誤輸出緩衝區。 有時，資料列可能已經加入非錯誤輸出緩衝區，而您必須使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.RemoveRow%2A> 方法來移除此資料列。 接下來您要設定輸出緩衝區資料行值，最後則是呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetErrorInfo%2A> 方法，以提供元件特定的錯誤碼與錯誤資料行值。  
   
@@ -441,8 +438,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料中的錯誤處理](../../../integration-services/data-flow/error-handling-in-data.md)   
+ [處理資料中的錯誤](../../../integration-services/data-flow/error-handling-in-data.md)   
  [使用錯誤輸出](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "篩選發行的資料 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8dccb06209dc9f938254fe2b1e86dc490ed00ab0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d6b8a32e40c44b7cdc0ec8bb082ebc08a95d2221
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filter-published-data"></a>篩選發行的資料
-  篩選資料表發行項可讓您建立即將發行的資料分割。 利用篩選發行的資料，您可以：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 篩選資料表發行項可讓您建立即將發行的資料分割。 利用篩選發行的資料，您可以：  
   
 -   將透過網路傳送的資料總量縮減到最少。  
   

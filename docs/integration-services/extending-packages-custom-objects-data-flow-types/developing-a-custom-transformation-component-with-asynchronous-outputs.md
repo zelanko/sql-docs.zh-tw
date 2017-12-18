@@ -1,5 +1,5 @@
 ---
-title: "開發具有非同步輸出的自訂轉換元件 |Microsoft 文件"
+title: "開發具有非同步輸出的自訂轉換元件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,28 +26,27 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: de3e9e37d125e8c098fc4fd3fe8036b3c634f228
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fbd542b091316f11c17af387e0a8f735704f5e54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>開發具有非同步輸出的自訂轉換元件
-  當轉換在元件收到它的所有輸入資料列以前無法輸出資料料時，或是當轉換無法針對每一個收到的輸入資料列剛好產生一個輸出資料列時，您會使用非同步輸出。 例如，彙總轉換要等到讀取所有資料列以後，才能計算資料列的總和。 相反地，每當您在資料通過時修改每一個資料列時，都可以搭配同步輸出來使用元件。 您可以就地修改每一個資料列的資料，或是建立一或多個其他新的資料行，每一個資料行對於每一個輸入資料列都有一個值。 如需有關同步和非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
+  當轉換在元件收到它的所有輸入資料列以前無法輸出資料料時，或是當轉換無法針對每一個收到的輸入資料列剛好產生一個輸出資料列時，您會使用非同步輸出。 例如，彙總轉換要等到讀取所有資料列以後，才能計算資料列的總和。 相反地，每當您在資料通過時修改每一個資料列時，都可以搭配同步輸出來使用元件。 您可以就地修改每一個資料列的資料，或是建立一或多個其他新的資料行，每一個資料行對於每一個輸入資料列都有一個值。 如需同步與非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
   
  具有非同步輸出的轉換元件是唯一的，因為它們會同時當做目的地和來源元件。 這種元件會從上游元件收到資料列，並加入下游元件所耗用的資料列。 沒有其他資料流程元件會執行這兩種作業。  
   
  可供具有同步輸出之元件使用之上游元件中的資料行會自動提供給此元件的下游元件使用。 因此，具有同步輸出的元件不必定義任何輸出資料行，也可提供資料行和資料列給下一個元件。 就另一方面而言，具有非同步輸出的元件必須定義輸出資料行，並提供資料列給下游元件。 因此，具有非同步輸出的元件在設計和執行階段會有更多的工作要執行，而且元件開發人員會有更多的程式碼要實作。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包含數種具有非同步輸出的轉換。 例如，排序轉換會先要求它的所有資料列，然後才能加以排序，並使用非同步輸出達成這個結果。 當它收到所有資料列以後，它會加以排序並將其加入到輸出中。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含數個具有非同步輸出的轉換。 例如，排序轉換會先要求它的所有資料列，然後才能加以排序，並使用非同步輸出達成這個結果。 當它收到所有資料列以後，它會加以排序並將其加入到輸出中。  
   
- 本章節將詳細說明如何開發具有非同步輸出的轉換。 如需有關來源元件開發的詳細資訊，請參閱[開發自訂來源元件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)。  
+ 本章節將詳細說明如何開發具有非同步輸出的轉換。 如需來源元件開發的詳細資訊，請參閱[開發自訂來源元件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)。  
   
 ## <a name="design-time"></a>設計階段  
   
@@ -334,4 +331,3 @@ End Namespace
  [使用指令碼元件建立非同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
-

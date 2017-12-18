@@ -1,5 +1,5 @@
 ---
-title: "剖析資料 |Microsoft 文件"
+title: "剖析資料 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e7d198fce5bdc57a21083ea063522f73cc9dde22
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parsing-data"></a>剖析資料
   封裝中的資料流程會在異質資料存放區之間擷取和載入資料，這樣可以使用各種不同的標準和自訂資料類型。 在一個資料流程中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源執行擷取資料、剖析字串資料並將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的工作。 後續轉換可以剖析資料以便將其轉換成不同的資料類型，或者建立資料類型不同的資料行副本。 元件中使用的運算式同樣可以將引數和運算元轉換成不同的資料類型。 最後，當資料載入資料存放區時，目的地則可以剖析資料以便將其轉換成目的地使用的資料類型。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
   
-## <a name="two-types-of-parsing"></a>兩種類型的剖析  
+## <a name="two-types-of-parsing"></a>兩種剖析類型  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供兩種用於轉換資料的剖析類型：快速剖析和標準剖析。  
   
 -   快速剖析是一組快速而簡單的剖析常式，它不支援地區設定特定的資料類型轉換，僅支援最常用的日期和時間格式。 
@@ -41,7 +39,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="fast-parse"></a>Fast Parse
 快速剖析提供一組快速、簡單的常式用以剖析資料。 這些常式並不區分地區設定，而且只支援一組日期、時間和整數格式的子集。  
   
-### <a name="requirements-and-limitations"></a>需求和限制  
+### <a name="requirements-and-limitations"></a>需求與限制  
  實作快速剖析時，封裝將無法解譯使用特定地區設定格式與許多常用之 ISO 8601 基本格式與擴充格式的日期、時間和數值資料，但卻可以提高封裝的效能。 例如，快速剖析僅支援最常用的日期格式表示法 (例如 YYYYMMDD 和 YYYY-MM-DD)，不會執行地區設定特定的剖析，也不會識別貨幣資料中的特殊字元，且無法轉換以十六進位表示或以科學記號表示的整數。  
   
  只有在使用「一般檔案」來源或「資料轉換」時，才能夠使用快速剖析。 效能的提高可能會很顯著，因此如果可能，您應該考慮在這些資料流程元件中使用快速剖析。  
@@ -52,7 +50,7 @@ ms.lasthandoff: 09/26/2017
   
  快速剖析在資料行層級指定。 在「一般檔案」來源和「資料轉換」轉換中，可以在輸出資料行上指定「快速剖析」。 輸入和輸出均可包含區分地區設定和不區分地區設定的資料行。  
  
-## <a name="numeric-data-formats-fast-parse"></a>數值資料格式 （快速剖析）
+## <a name="numeric-data-formats-fast-parse"></a>數值資料格式 (快速剖析)
 快速剖析提供一組快速、簡易且區分區域設定的常式集，以剖析資料。 快速剖析僅支援整數資料類型的有限格式集。  
   
 ### <a name="integer-data-type"></a>整數資料類型
@@ -84,7 +82,7 @@ ms.lasthandoff: 09/26/2017
   
 -   一個或多個印度-阿拉伯數字 (0-9)。  
 
-## <a name="date-and-time-formats-fast-parse"></a>日期和時間格式 （快速剖析）
+## <a name="date-and-time-formats-fast-parse"></a>日期和時間格式 (快速剖析)
 快速剖析提供一組快速、簡單的常式用以剖析資料。 快速剖析可支援下列格式的日期和時間資料類型。  
   
 ### <a name="date-data-type"></a>日期資料類型 
@@ -210,4 +208,3 @@ ms.lasthandoff: 09/26/2017
   
  標準剖析提供對國際性資料之資料類型轉換的支援，它應在「快速剖析」不支援資料格式時使用。 如需 Automation 資料類型轉換 API 的詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427)中的＜資料類型轉換 API＞。 
  
-

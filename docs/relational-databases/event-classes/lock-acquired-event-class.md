@@ -2,9 +2,12 @@
 title: "Lock:Acquired 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f96b334e4c722b456bad9a043d753b18cca5495b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 707749c893523d6db48220d4223bf29bb8680ef0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired 事件類別
-  Lock:Acquired 事件類別指出已完成對資源 (例如資料頁) 取得鎖定。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Lock:Acquired 事件類別指出已完成對資源 (例如資料頁) 取得鎖定。  
   
  Lock:Acquired 與 Lock:Released 事件類別可用來監視物件何時鎖定、採用的鎖定類型以及鎖定已保留多久的時間。 長期保留的鎖定可能會造成競爭問題，應該加以調查。 例如，某個應用程式可能取得資料表中資料列的鎖定，然後等候使用者輸入。 由於使用者可能要很長時間來輸入，因此鎖定可能會封鎖其他使用者。 在這個例子中，應重新設計應用程式，只在需要時才提出鎖定要求，而且取得鎖定後不需要使用者輸入。  
   

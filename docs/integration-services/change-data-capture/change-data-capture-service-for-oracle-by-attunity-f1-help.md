@@ -1,5 +1,5 @@
 ---
-title: "Change Data Capture Service for Oracle by Attunity F1 說明 |Microsoft 文件"
+title: "Attunity Oracle Change Data Capture 服務 F1 說明 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d214af688c862d64e5a5d5f608c5b02f9037b55a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e97cdc3490c7a0d0c263b434a50eaa958c6ebac0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Attunity Oracle Change Data Capture (CDC) 服務 F1 說明
   您可以使用 CDC 服務組態主控台來定義本機 Oracle CDC 服務，並加以更新和刪除。  
@@ -32,19 +30,18 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [SQL Server 連接](../../integration-services/change-data-capture/connection-to-sql-server.md)  
+-   [連接到 SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)  
   
--   [連接到 SQL Server 進行刪除](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
+-   [連接到 SQL Server 以進行刪除作業](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   
 -   [建立及編輯 Oracle CDC 服務](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
 -   [管理 Oracle CDC 服務](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
--   [為 CDC 準備 SQL Server](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
+-   [準備 SQL Server 以使用 CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
--   [為 Oracle CDC 檢視指令碼準備 SQL Server](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md)  
+-   [準備 SQL Server 以使用 Oracle CDC 檢視指令碼](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md)  
   
 -   [使用 CDC 服務](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   
-

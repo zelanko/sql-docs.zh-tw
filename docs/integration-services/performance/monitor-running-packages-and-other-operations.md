@@ -1,5 +1,5 @@
 ---
-title: "監視執行中封裝和其他作業 |Microsoft 文件"
+title: "監視執行中套件和其他作業 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2555a719c2677c2c573a07dfa803ad80b3946ebf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: a23adf907e01dd8c95c5c44a5a57db0aeb807625
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
   您可以使用下列其中一項或多項工具，監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行封裝、專案驗證及其他作業。 某些工具 (例如資料點選) 僅適用於部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的專案。  
@@ -54,7 +52,7 @@ ms.lasthandoff: 09/27/2017
   
  有九種不同的狀態類型可用來指示作業的狀態。 如需狀態類型的完整清單，請參閱 [catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視。  
 
-## <a name="active_ops"></a>作用中的作業對話方塊
+## <a name="active_ops"></a> 作用中的作業對話方塊
   使用 **[作用中的作業]** 對話方塊檢視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上目前執行中之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 作業 (例如，部署、驗證及封裝執行) 的狀態。 此資料儲存在 SSISDB 目錄中。  
   
  如需相關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 檢視的詳細資訊，請參閱 [catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)、[catalog.validations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 和 [catalog.executions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
@@ -102,7 +100,7 @@ ms.lasthandoff: 09/27/2017
  若要檢視正在伺服器上執行之封裝的清單，請針對狀態 2 的封裝查詢檢視 [catalog.executions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md) 。  
   
  透過 Managed API 來以設計程式方式存取  
- 請參閱<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空間和其類別。  
+ 請參閱 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間和其類別。  
   
 ### <a name="stopping-a-running-package"></a>停止執行中的封裝  
  您可以在 **[作用中的作業]** 對話方塊中要求執行中的封裝停止。 如需詳細資訊，請參閱 [Active Operations Dialog Box](#active_ops)。  
@@ -113,7 +111,7 @@ ms.lasthandoff: 09/27/2017
  若要停止正在伺服器上執行的封裝，請呼叫預存程序 [catalog.stop_operation &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)。  
   
  透過 Managed API 來以設計程式方式存取  
- 請參閱<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空間和其類別。  
+ 請參閱 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間和其類別。  
   
 ### <a name="viewing-the-history-of-packages-that-have-run"></a>檢視已執行封裝的記錄  
  若要檢視已在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中執行之封裝的記錄，請使用 **[所有執行]** 報表。 如需 [所有執行] 報表和其他標準報表的詳細資訊，請參閱 [Reports for the Integration Services Server](#reports) (Integration Services 伺服器的報表)。  
@@ -124,14 +122,14 @@ ms.lasthandoff: 09/27/2017
  若要檢視已執行封裝的資訊，請查詢檢視 [catalog.executions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)。  
   
  透過 Managed API 來以設計程式方式存取  
- 請參閱<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空間和其類別。  
+ 請參閱 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間和其類別。  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的目前版本中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供標準報表，協助您監視已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。 這些報表可協助您檢視封裝狀態及記錄，如有必要，也可協助您識別封裝執行失敗的原因。  
   
  在每個報表頁面上方，上一步圖示可前往檢視的上一頁，重新整理圖示會重新整理頁面上顯示的資訊，而列印圖示可讓您列印目前頁面。  
   
- 如需有關如何將封裝部署至詳細[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器，請參閱[部署 Integration Services (SSIS) 專案和封裝](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+ 如需如何將套件部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
 ### <a name="integration-services-dashboard"></a>Integration Services 儀表板  
  [Integration Services 儀表板] 報表提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上所有封裝執行的概觀。 對於伺服器上已執行的每個封裝，儀表板可讓您放大報表，尋找可能發生之封裝執行錯誤的特定詳細資料。  
@@ -178,7 +176,7 @@ ms.lasthandoff: 09/27/2017
  [所有驗證] 報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 驗證的摘要。 此摘要會顯示每個驗證的資訊，例如狀態、開始時間和結束時間。 每個摘要項目都包含一個指向驗證期間產生之訊息的連結。 就如同 Integration Services 儀表板一樣，您可以將篩選套用至資料表，以縮小顯示的資訊範圍。  
   
 ### <a name="custom-reports"></a>自訂報表  
- 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，將自訂報表 (.rdl 檔案) 加入 [Integration Services 目錄] 節點底下的 [SSISDB] 目錄節點。 加入報表之前，請確認您正在使用三部分命名慣例來完整限定您所參考的物件，例如來源資料表。 否則， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將會顯示錯誤。 命名慣例是\<資料庫 >。\<擁有者 >。\<物件 >。 SSISDB.internal.executions 就是範例。  
+ 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，將自訂報表 (.rdl 檔案) 加入 [Integration Services 目錄] 節點底下的 [SSISDB] 目錄節點。 加入報表之前，請確認您正在使用三部分命名慣例來完整限定您所參考的物件，例如來源資料表。 否則， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將會顯示錯誤。 此命名慣例是 \<資料庫>.\<擁有者>.\<物件>。 SSISDB.internal.executions 就是範例。  
   
 > [!NOTE]  
 >  當您將自訂報表加入 [資料庫] 節點底下的 [SSISDB] 節點時，不需要使用 SSISDB 前置詞。  
@@ -207,6 +205,5 @@ ms.lasthandoff: 09/27/2017
     -   **所有連接**  
 
 ## <a name="see-also"></a>另請參閱  
- [執行專案和封裝](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [執行專案和套件](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
  [套件執行的疑難排解報告](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
-

@@ -2,9 +2,12 @@
 title: "Execution Warnings 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e8a8f643884c4d2c817a6a899690f980dc41502
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a0f3903f3bcf19915b962f95e413ccee492ae34c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings 事件類別
-  Execution Warnings 事件類別指出在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式或預存程序期間發生的記憶體授與警告。 可監視此事件類別以判定繼續進行之前，查詢是否需等待可供使用的記憶體，或者取得記憶體的初始嘗試是否失敗。 有關查詢等候期間的資訊可協助發現系統中會影響效能的競爭問題。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Execution Warnings 事件類別指出在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式或預存程序期間發生的記憶體授與警告。 可監視此事件類別以判定繼續進行之前，查詢是否需等待可供使用的記憶體，或者取得記憶體的初始嘗試是否失敗。 有關查詢等候期間的資訊可協助發現系統中會影響效能的競爭問題。  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Execution Warnings 事件類別資料行  
   

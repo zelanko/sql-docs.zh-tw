@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 運算式 |Microsoft 文件"
+title: "Integration Services (SSIS) 運算式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988f9993207daeebe6c5aaea0f60d887fe74024c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 14b6c80d59f3f302e2beef26a03d95b2bf6f8294
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 運算式
   運算式是產生單一資料值的符號組合 (識別碼、常值、函數和運算子)。 簡單的運算式可以是單一常數、變數或函數。 通常運算式都比較複雜，更常使用多個運算子和函數，並參考多個資料行和變數。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，運算式可用於定義 CASE 陳述式的條件、建立和更新資料行中的值、指派值到變數、在執行階段更新或擴展屬性、定義優先順序條件約束中的條件約束和提供「For 迴圈」容器所使用的運算式。  
@@ -51,9 +49,9 @@ ms.lasthandoff: 09/28/2017
   
 -   變數會使用運算式來設定其值。 例如，GETDATE() 會將變數值設為目前的日期。  
   
--   優先順序條件約束可使用運算式，指定決定受條件約束的工作或封裝中的容器是否執行的條件。 優先順序條件約束中使用的運算式必須評估為 **true** 或 **false**。 例如，運算式@A>@B比較兩個使用者定義的變數，以決定是否要執行受條件約束的工作。  
+-   優先順序條件約束可使用運算式，指定決定受條件約束的工作或封裝中的容器是否執行的條件。 優先順序條件約束中使用的運算式必須評估為 **true** 或 **false**。 例如，運算式 @A > @B 會比較兩個使用者定義的變數，決定是否執行受條件約束的工作。  
   
--   「For 迴圈」容器可使用運算式建立迴圈結果使用的初始化、評估和累加陳述式。 例如，運算式@Counter= 1 會初始化迴圈計數器。  
+-   「For 迴圈」容器可使用運算式建立迴圈結果使用的初始化、評估和累加陳述式。 例如，運算式 @Counter = 1 會初始化迴圈計數器。  
   
  運算式還可用於更新封裝、容器 (例如「For 迴圈」和「Foreach 迴圈」)、工作、封裝和專案層級之連接管理員、記錄提供者和 Foreach 列舉值的屬性值。 例如，使用屬性運算式，可將字串 "Localhost.AdventureWorks" 指派到「執行 SQL」工作的 ConnectionName 屬性。 如需詳細資訊，請參閱 [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
   
@@ -80,4 +78,3 @@ ms.lasthandoff: 09/28/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

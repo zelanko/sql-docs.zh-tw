@@ -1,5 +1,5 @@
 ---
-title: "連接資料流程中的元件 |Microsoft 文件"
+title: "連接資料流程中的元件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 73a379b190f05f4eedc361b4557afefd700a9664
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: b7690c6550e11f8a3c35aeeec3f18533916ee467
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-components-in-a-data-flow"></a>連接資料流程中的元件
   此程序描述如何將資料流程中的元件輸出，連接到同一資料流程中的其他元件。  
@@ -59,7 +57,6 @@ ms.lasthandoff: 09/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [在資料流程中加入或刪除元件](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md)[資料流程](../../integration-services/data-flow/data-flow.md)  
+ [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md) [資料流程](../../integration-services/data-flow/data-flow.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "以程式設計方式加入工作 |Microsoft 文件"
+title: "以程式設計方式加入工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 35fbfd1c17d88d684671050c297a19822b098479
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cbd8f1d0ac4a942fae2305f7841fe25dc185e463
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-tasks-programmatically"></a>以程式設計方式加入工作
   在執行階段引擎中可以將工作加入下列類型的物件：  
@@ -50,10 +47,10 @@ ms.lasthandoff: 08/03/2017
   
  每個容器都有 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 集合，它包含個別的 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 物件。 每個可執行的工作都會繼承和實作 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> 方法和 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> 方法。 這兩種方法都是由執行階段引擎來呼叫以處理每個 <xref:Microsoft.SqlServer.Dts.Runtime.Executable>。  
   
- 若要將工作加入封裝，您需要具有 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 現有集合的容器。 大部分的情況下，您將加入集合的工作是封裝。 若要加入新的工作可執行檔，該容器的集合，請呼叫<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>方法。 該方法有單一參數和一個字串，包含 CLSID、PROGID、STOCK Moniker 或是您正在加入的工作之 <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A>。  
+ 若要將工作加入封裝，您需要具有 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 現有集合的容器。 大部分的情況下，您將加入集合的工作是封裝。 若要將新工作可執行檔加入容器的集合，可呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 方法。 該方法有單一參數和一個字串，包含 CLSID、PROGID、STOCK Moniker 或是您正在加入的工作之 <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A>。  
   
 ## <a name="task-names"></a>工作名稱  
- 雖然您可以依名稱或識別碼，來指定工作**股票**moniker 是最常用於參數<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>方法。 若要將工作加入所識別的可執行檔**股票**moniker 時，使用下列語法：  
+ 雖然您可以依名稱或是識別碼指定工作，**STOCK** Moniker 是在 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 方法中最常使用的參數。 若要將工作加入 **STOCK** Moniker 識別的可執行檔，請使用下列語法：  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -65,7 +62,7 @@ Dim exec As Executable = package.Executables.Add("STOCK:BulkInsertTask")
   
 ```  
   
- 下列清單顯示後面所使用的每個工作名稱**股票**moniker。  
+ 下列清單顯示在 **STOCK** Moniker 後面所使用的每個工作名稱。  
   
 -   ActiveXScriptTask  
   
@@ -127,7 +124,7 @@ Dim exec As Executable = package.Executables.Add( _
   "Culture=neutral, PublicKeyToken=89845dcd8080cc91")  
 ```  
   
- 您可以以程式設計的方式，取得工作的完整名稱，而不需要指定工作版本，使用**AssemblyQualifiedName**類別，如下列範例所示的屬性。 這個範例需要 Microsoft.SqlServer.SQLTask 組件的參考。  
+ 您可以用程式設計的方式取得工作的完整名稱，而不需指定工作版本，方法是使用類別的 **AssemblyQualifiedName** 屬性，如下列範例所示。 這個範例需要 Microsoft.SqlServer.SQLTask 組件的參考。  
   
 ```csharp  
 using Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask;  
@@ -143,7 +140,7 @@ Imports Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask
       GetType(Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask).AssemblyQualifiedName)  
 ```  
   
- 下列程式碼範例示範如何建立<xref:Microsoft.SqlServer.Dts.Runtime.Executables>集合而使之新的封裝，然後加入檔案系統 」 工作和 「 大量插入 」 工作加入集合中，使用其**股票**moniker。 這個範例需要 Microsoft.SqlServer.FileSystemTask 與 Microsoft.SqlServer.BulkInsertTask 組件的參考。  
+ 下列程式碼範例示範如何從新封裝建立 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 集合，然後使用工作的 **STOCK** Moniker，將檔案系統工作和大量插入工作加入集合。 這個範例需要 Microsoft.SqlServer.FileSystemTask 與 Microsoft.SqlServer.BulkInsertTask 組件的參考。  
   
 ```csharp  
 using System;  
@@ -331,7 +328,7 @@ End Module
   
 -   您可以撰寫可用於任何工作的一般常式，因為在編譯時期並不需要知道工作的名稱。 這樣的一般常式包括您傳遞工作名稱給該方法的一些方法，而且該方法的程式碼適用於所有工作。 這是撰寫測試程式碼的好方法。  
   
- 從轉型<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>為工作特定的類別具有下列優點：  
+ 從 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 轉換為工作特定的類別，具有下列優點：  
   
 -   Visual Studio 專案提供您陳述式完成 (IntelliSense)。  
   
@@ -420,10 +417,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>外部資源  
- 部落格文章： [EzAPI-已更新 SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223)，blogs.msdn.com 上。  
+ blogs.msdn.com 上的部落格文章：[EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI - 針對 SQL Server 2012 更新)。  
 
 ## <a name="see-also"></a>另請參閱  
- [以程式設計方式連接工作](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
+ [以程式設計方式連線工作](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "設定 Oracle 發行者 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 66977f7eeb747d77d8f0db82b76b307e1aff2cca
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 57b1971bbd25071242b35f32b25ffebbaf4fe6f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-an-oracle-publisher"></a>設定 Oracle 發行者
-  「Oracle 發行者」之發行集的建立方式與典型的快照式及交易式發行集的建立方式相同，但是在從「Oracle 發行者」端建立發行集之前，您必須完成下列步驟 (步驟一、三和四在本主題中有詳細描述)：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]「Oracle 發行者」之發行集的建立方式與典型的快照式及交易式發行集的建立方式相同，但是在從「Oracle 發行者」端建立發行集之前，您必須完成下列步驟 (步驟一、三和四在本主題中有詳細描述)：  
   
 1.  使用提供的指令碼在 Oracle 資料庫中建立複寫管理使用者。  
   

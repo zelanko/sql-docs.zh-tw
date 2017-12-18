@@ -1,5 +1,5 @@
 ---
-title: "設定封裝屬性 |Microsoft 文件"
+title: "設定套件屬性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 860438f65035233e198177697f24d2a2d820d75f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-package-properties"></a>設定封裝屬性
   當您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 所提供的圖形介面，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝時，可以在 [屬性] 視窗中設定封裝物件的屬性。  
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [版本](#Version)  
   
- 如需有關您無法設定中的其他封裝屬性資訊**屬性**視窗中，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
+ 如需無法在 [屬性] 視窗中設定的其他套件屬性的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>在屬性視窗中設定封裝屬性  
   
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/03/2017
 |**CreatorComputerName**|用來建立封裝的電腦名稱。|  
 |**CreatorName**|封裝建立者名稱。|  
 |**說明**|封裝功能描述。|  
-|**ID**|在建立封裝時所指派的封裝 GUID。 此屬性是唯讀的。 若要產生新的隨機值，如**識別碼**屬性選取**\<產生新的識別碼\>**下拉式清單中。|  
+|**ID**|在建立封裝時所指派的封裝 GUID。 此屬性是唯讀的。 若要為 **ID** 屬性產生新的隨機值，請選取下拉式清單中的 **\<產生新的識別碼\>**。|  
 |**名稱**|封裝名稱。|  
 |**PackageType**|封裝類型。 可能的值為 **Default**、 **DTSDesigner**、 **DTSDesigner100**、 **DTSWizard**、 **SQLDBMaint**和 **SQLReplication**。 此屬性的預設值為 **Default**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>。|  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 08/03/2017
 |**VersionMajor**|封裝的最新主要版本。|  
 |**VersionMinor**|封裝的最新次要版本。|  
 
-## <a name="set-package-properties-in-the-properties-window"></a>在 [屬性] 視窗中設定封裝屬性 
+## <a name="set-package-properties-in-the-properties-window"></a>在屬性視窗中設定套件屬性 
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含要設定之封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
 2.  在方案總管中，按兩下封裝以使其在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中開啟，或是以滑鼠右鍵按一下並選取 [檢視設計師]。  
@@ -176,4 +174,3 @@ ms.lasthandoff: 08/03/2017
   
 5.  在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** ，以儲存已更新的封裝。  
   
-

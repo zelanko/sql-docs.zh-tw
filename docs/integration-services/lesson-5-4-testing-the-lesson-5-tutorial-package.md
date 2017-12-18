@@ -1,5 +1,5 @@
 ---
-title: "步驟 4： 測試第 5 課的教學課程封裝 |Microsoft 文件"
+title: "步驟 4：測試第 5 課的教學課程封裝 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd1b78e3c7d1e3d9324987a292220adf03f1100b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f761097d3e2b7bac98c8617a723927d132c9f30b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>課程 5-4-測試第 5 課的教學課程封裝
+# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>課程 5-4 - 測試第 5 課的教學課程封裝
 在執行階段，您的封裝將從執行階段更新的變數中取得 **Directory** 屬性的值，而不是使用您建立封裝時指定的原始目錄名稱。 變數的值會由 SSISTutorial.dtsConfig 檔案擴展。  
   
 若要確認封裝在執行階段使用新值來更新 Directory 屬性，只要執行封裝即可。 因為只有 3 個範例資料檔會複製到新目錄，所以資料流程只會執行 3 次，而不是反覆執行原始資料夾的 14 個檔案。  
@@ -37,11 +34,11 @@ ms.lasthandoff: 09/26/2017
   
 **控制流程**  
   
-![控制流程封裝中](../integration-services/media/task4lesson2control.gif "控制流程封裝中")  
+![封裝中的控制流程](../integration-services/media/task4lesson2control.gif "封裝中的控制流程")  
   
 **資料流程**  
   
-![封裝中的資料流程](../integration-services/media/task9lesson1data.gif "中封裝的資料流程")  
+![封裝中的資料流程](../integration-services/media/task9lesson1data.gif "封裝中的資料流程")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>若要測試第 5 課的教學課程封裝  
   
@@ -54,4 +51,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

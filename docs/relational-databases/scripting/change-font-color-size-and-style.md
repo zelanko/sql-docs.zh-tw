@@ -2,9 +2,12 @@
 title: "變更字型色彩、大小與樣式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44b149ed19e4c5eefc4ca2b0298fc8d63342b2c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0b27197892a40573ba8a164c54392f90158c218c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-font-color-size-and-style"></a>變更字型色彩、大小與樣式
-  您可以自訂文字在編輯器及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他位置中之呈現方式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以自訂文字在編輯器及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的其他位置中之呈現方式。  
   
 ### <a name="to-change-font-color-size-and-style-in-the-editor"></a>變更編輯器中的字型色彩、大小和樣式  
   

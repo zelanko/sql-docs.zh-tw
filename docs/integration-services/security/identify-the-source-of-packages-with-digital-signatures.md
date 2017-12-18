@@ -1,5 +1,5 @@
 ---
-title: "識別具有數位簽章的套件來源 |Microsoft 文件"
+title: "使用數位簽章來識別套件的來源 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.digitalsigning.f1
+f1_keywords: sql13.dts.digitalsigning.f1
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1df41a5be2b49662abec2f44ddc0de07fea87a6e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 43734906c7c48c3747c88c10583a30af097d6706
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用數位簽章來識別封裝的來源
   您可以使用數位憑證來簽署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，以便識別其來源。 當您已經使用數位憑證來簽署封裝之後，就可以讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查數位簽章，然後再載入封裝。 若要讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查簽章，您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 公用程式 (dtexec.exe) 中設定選項，或設定選擇性登錄值。  
@@ -66,7 +63,7 @@ ms.lasthandoff: 08/03/2017
   
  下表列出 DWORD 資料的有效值及其相關聯的原則。  
   
-|Value|설명|  
+|Value|描述|  
 |-----------|-----------------|  
 |0|沒有管理限制。|  
 |1|封鎖無效的簽章。<br /><br /> 此設定不會封鎖未簽署的封裝。|  
@@ -141,7 +138,7 @@ ms.lasthandoff: 08/03/2017
   
      雖然封裝已經簽署，但是您現在必須設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，以便檢查或確認數位簽章，然後再載入封裝。  
 
-## <a name="signing_dialog"></a>數位簽章對話方塊 UI 參考
+## <a name="signing_dialog"></a> 數位簽章對話方塊 UI 參考
   使用 **[數位簽章]** 對話方塊，即可使用數位簽章來簽署封裝，或是移除簽章。 在 **中，可從** [SSIS] **功能表的** [數位簽章] **選項來使用** [數位簽章] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]對話方塊。  
   
  如需詳細資訊，請參閱 [使用數位憑證來簽署封裝](#cert)。  
@@ -155,7 +152,6 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)   
- [安全性概觀 &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [安全性概觀 (Integration Services)](../../integration-services/security/security-overview-integration-services.md)  
   
   
-

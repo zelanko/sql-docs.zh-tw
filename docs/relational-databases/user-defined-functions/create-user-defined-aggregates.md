@@ -2,9 +2,12 @@
 title: "建立使用者定義彙總 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89b3e7ef61770563f49a8eb59974c55dcffd6086
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 48ec74f09990f3ace92feb25605c256d69166e32
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-user-defined-aggregates"></a>建立使用者定義彙總
-  您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立資料庫物件，此功能是以 CLR 組件設計而成。 可以使用 CLR 提供之多種程式設計模型的資料庫物件，包括觸發程序、預存程序、函數、彙總函式和類型。  
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立資料庫物件，此功能是以 CLR 組件設計而成。 可以使用 CLR 提供之多種程式設計模型的資料庫物件，包括觸發程序、預存程序、函數、彙總函式和類型。  
   
  就像 [!INCLUDE[tsql](../../includes/tsql-md.md)]所提供的內建彙總函式一樣，使用者定義彙總函式會執行一組值的計算並傳回單一值。  
   

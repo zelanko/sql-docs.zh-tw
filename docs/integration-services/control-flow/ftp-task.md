@@ -1,5 +1,5 @@
 ---
-title: "FTP 工作 |Microsoft 文件"
+title: "FTP 工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
 - sql13.dts.designer.ftptask.general.f1
 - sql13.dts.designer.ftptask.filetransfer.f1
-helpviewer_keywords:
-- FTP task [Integration Services]
+helpviewer_keywords: FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 212e304b2c94004135923a345b592b3c3eef1bcc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: fe5fd069ec931c3eee57b2ef46da35437dd81875
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ftp-task"></a>FTP 工作
   FTP 工作會下載和上傳資料檔以及管理伺服器上的目錄。 例如，封裝可從遠端伺服器或網際網路位置下載資料檔，此工作可視為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程的一部分。 您可將 FTP 工作用於下列用途：  
@@ -87,9 +84,9 @@ ms.lasthandoff: 08/11/2017
 ## <a name="ftp-task-editor-general-page"></a>FTP 工作編輯器 (一般頁面)
   使用 **[FTP 工作編輯器]** 對話方塊的 **[一般]** 頁面，即可指定 FTP 連接管理員，以連接到工作進行通訊的 FTP 伺服器。 您也可以命名和描述 FTP 工作。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **FtpConnection**  
- 選取現有的 FTP 連接管理員，或按一下\<**新增連接...**> 若要建立的連接管理員。  
+ 選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>] 建立連線管理員。  
   
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -111,7 +108,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="ftp-task-editor-file-transfer-page"></a>FTP 工作編輯器 (檔案傳輸頁面)
   使用 **[FTP 工作編輯器]** 對話方塊的 **[檔案傳輸]** 頁面，來設定工作執行的 FTP 作業。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **IsRemotePathVariable**  
  指出遠端路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
@@ -152,33 +149,32 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **[RemoteVariable]**  
- 選取現有的使用者定義變數，或按一下\<**新增變數...**> 以建立使用者定義的變數。  
+ 選取現有的使用者定義變數，或按一下 [\<新增變數...>] 來建立使用者定義變數。  
   
  **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、加入變數  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **[RemotePath]**  
- 選取現有的 FTP 連接管理員，或按一下\<**新增連接...**> 若要建立的連接管理員。  
+ 選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>] 建立連線管理員。  
   
- **相關主題**：[FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相關主題** [FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、 [FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 動態選項  
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **[LocalVariable]**  
- 選取現有的使用者定義變數，或按一下\<**新增變數...**> 若要建立的變數。  
+ 選取現有的使用者定義變數，或按一下 [\<新增變數...>] 來建立變數。  
   
  **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、加入變數  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **[LocalPath]**  
- 選取現有的檔案連接管理員，或按一下\<**新增連接...**> 若要建立的連接管理員。  
+ 選取現有的檔案連線管理員，或按一下 [\<新增連線...>] 建立連線管理員。  
   
- **相關主題**:[一般檔案連接管理員](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ **相關主題**：[一般檔案連線管理員](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   
   
-

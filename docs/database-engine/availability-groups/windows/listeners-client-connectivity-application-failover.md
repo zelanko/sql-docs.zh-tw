@@ -2,9 +2,12 @@
 title: "接聽程式、用戶端連接和應用程式容錯移轉 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: af6a6732a78007d51221cff6c6fb386e3abe48f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7b83e4fedf8ee39ceb90b2156852de4698ae273a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>接聽程式、用戶端連接和應用程式容錯移轉
-  此主題包含有關 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用戶端連接和應用程式容錯移轉功能的考量資訊。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題包含有關 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用戶端連線和應用程式容錯移轉功能的考量資訊。  
   
 > [!NOTE]  
 >  對於大多數的一般接聽程式組態，您只需要使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式或 PowerShell 指令程式，就可以建立第一個可用性群組接聽程式。 如需詳細資訊，請參閱本主題稍後的 [相關工作](#RelatedTasks)。  

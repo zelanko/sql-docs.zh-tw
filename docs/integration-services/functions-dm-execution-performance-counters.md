@@ -1,5 +1,5 @@
 ---
-title: "dm_execution_performance_counters （SSISDB 資料庫） |Microsoft 文件"
+title: "dm_execution_performance_counters (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,22 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 67d5ece89f5b964acb2bb55a8cc69ff2fb77b93b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e143b66f9a10627695387bc5215c3b92565e230f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="functions---dmexecutionperformancecounters"></a>函式-dm_execution_performance_counters
+# <a name="functions---dmexecutionperformancecounters"></a>函式 - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   傳回 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上執行之執行的效能統計資料。  
@@ -38,10 +36,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @execution_id =] *execution_id*  
+ [ @execution_id = ] *execution_id*  
  包含一個或多個封裝之執行的唯一識別碼。 以「執行封裝」工作執行的封裝，會與父封裝在相同執行中執行。  
   
- 如果沒有指定的執行識別碼，則會傳回多個執行的效能統計資料。 如果您是 **ssis_admin** 資料庫角色的成員，則會傳回所有執行中之執行的效能統計資料。  如果您不是 **ssis_admin** 資料庫角色的成員，則會傳回您具有讀取權限之執行中執行的效能統計資料。 *Execution_id*是**BigInt**。  
+ 如果沒有指定的執行識別碼，則會傳回多個執行的效能統計資料。 如果您是 **ssis_admin** 資料庫角色的成員，則會傳回所有執行中之執行的效能統計資料。  如果您不是 **ssis_admin** 資料庫角色的成員，則會傳回您具有讀取權限之執行中執行的效能統計資料。 *execution_id* 是 **BigInt**。  
   
 ## <a name="remarks"></a>備註  
  下表列出 dm_execution_performance_counter 函數傳回的計數器名稱值。  
@@ -66,8 +64,8 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
 |資料行名稱|資料行類型|Description|備註|  
 |-----------------|-----------------|-----------------|-------------|  
-|execution_id|**BigInt**<br /><br /> **NULL**不是有效的值。|包含封裝之執行的唯一識別碼。||  
-|counter_name|**nvarchar （128)**|計數器的名稱。|請參閱**備註**區段的值。|  
+|execution_id|**BigInt**<br /><br /> **NULL** 是無效的值。|包含封裝之執行的唯一識別碼。||  
+|counter_name|**nvarchar(128)**|計數器的名稱。|請參閱值的**備註**一節。|  
 |counter_value|**BigInt**|計數器傳回的值。||  
   
 ## <a name="example"></a>範例  
@@ -90,9 +88,9 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   執行的執行個體之 READ 和 MODIFY 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單描述會導致函數失敗的情況。  
@@ -102,4 +100,3 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 -   指定的執行識別碼無效。  
   
   
-

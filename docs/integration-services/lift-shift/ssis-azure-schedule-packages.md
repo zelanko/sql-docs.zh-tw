@@ -1,5 +1,5 @@
 ---
-title: "排程在 Azure 上的 SSIS 封裝執行 |Microsoft 文件"
+title: "排程 Azure 上的 SSIS 套件執行 | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,44 +8,42 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: 80fac355ad3ecc1486257651999be9d3f6ad30e6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>排程的 SSIS 封裝在 Azure 上執行
-您可以排定執行的封裝儲存在 Azure SQL Database 伺服器上的 SSISDB 目錄資料庫中，選擇其中一個排程的下列選項：
+# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>排程 Azure 上的 SSIS 套件執行
+您可以選擇下列其中一個排程選項，來排程執行 Azure SQL Database 伺服器的 SSISDB 目錄資料庫上所儲存的套件：
 -   [SQL Server Agent](#agent)
--   [SQL Database 彈性的工作](#elastic)
--   [Azure 資料 Factory SQL Server 預存程序活動](#sproc)
+-   [SQL Database 彈性作業](#elastic)
+-   [Azure Data Factory SQL Server 預存程序活動](#sproc)
 
-## <a name="agent"></a>排程 SQL Server Agent 的封裝
+## <a name="agent"></a> 使用 SQL Server Agent 排程套件
 
 ### <a name="prerequisite"></a>必要條件
 
-您可以在內部部署使用 SQL Server Agent 來排程儲存在 Azure SQL Database 伺服器上的封裝執行之前，您必須將 SQL Database 伺服器新增為連結的伺服器。 如需詳細資訊，請參閱[建立連結的伺服器](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)和[連結的伺服器](../../relational-databases/linked-servers/linked-servers-database-engine.md)。
+您必須先將 SQL Database 伺服器新增為連結的伺服器，才能在內部部署環境中使用 SQL Server Agent 來排程執行 Azure SQL Database 伺服器上所儲存的套件。 如需詳細資訊，請參閱[建立連結的伺服器](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)和[連結的伺服器](../../relational-databases/linked-servers/linked-servers-database-engine.md)。
 
 ### <a name="create-a-sql-server-agent-job"></a>建立 SQL Server Agent 作業
 
-若要排程在內部部署 SQL Server Agent 的封裝，請使用作業步驟呼叫 SSIS 目錄的建立作業預存程序`[catalog].[create_execution]`然後`[catalog].[start_execution]`。 如需詳細資訊，請參閱[封裝的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。
+若要使用 SQL Server Agent 來排程內部部署環境中的套件，請使用可依序呼叫 SSIS 目錄預存程序 `[catalog].[create_execution]` 和 `[catalog].[start_execution]` 的作業步驟來建立作業。 如需詳細資訊，請參閱[套件的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。
 
-1.  在 SQL Server Management Studio 中，連接到您要建立作業在內部部署 SQL Server 資料庫。
+1.  在 SQL Server Management Studio 中，連線至您要在其上建立作業的內部部署 SQL Server 資料庫。
 
-2.  以滑鼠右鍵按一下**SQL Server Agent**節點中，選取**新增**，，然後選取 [**作業**開啟**新工作**] 對話方塊。
+2.  以滑鼠右鍵按一下 [SQL Server Agent] 節點，並選取 [新增]，然後選取 [作業] 開啟 [新增作業] 對話方塊。
 
-3.  在**新工作**對話方塊中，選取**步驟**頁面，然後再選取**新增**開啟**新增作業步驟** 對話方塊。
+3.  在 [新增作業] 對話方塊中，選取 [步驟] 頁面，然後選取 [新增] 開啟 [新增作業步驟] 對話方塊。
 
-4.  在**新增作業步驟**對話方塊中，選取`SSISDB`為**資料庫。**
+4.  在 [新增作業步驟] 對話方塊中，選取 `SSISDB` 作為 [資料庫]。
 
-5.  在 [命令] 欄位中，輸入類似下列範例所示的指令碼的 TRANSACT-SQL 指令碼：
+5.  在命令欄位中，輸入與下列範例中所示指令碼類似的 Transact-SQL 指令碼：
 
     ```sql
     DECLARE @return_value int, @exe_id bigint 
@@ -60,23 +58,23 @@ ms.lasthandoff: 10/18/2017
     GO
     ```
 
-6.  完成設定和排程工作。
+6.  完成設定和排程作業。
 
-## <a name="elastic"></a>排程 SQL Database 彈性工作的封裝
+## <a name="elastic"></a> 使用 SQL Database 彈性作業排程套件
 
-如需在 SQL Database 彈性作業的詳細資訊，請參閱[管理向外延展雲端資料庫](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。
+如需在 SQL Database 上彈性作業的詳細資訊，請參閱[管理相應放大的雲端資料庫](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。
 
 ### <a name="prerequisites"></a>必要條件
 
-您可以使用彈性的作業來排程儲存在 Azure SQL Database 伺服器上的 SSISDB 目錄資料庫的 SSIS 封裝之前，您必須執行下列動作：
+您必須執行下列動作，才能使用彈性作業來排程 Azure SQL Database 伺服器的 SSISDB 目錄資料庫上所儲存的 SSIS 套件：
 
-1.  安裝和設定的彈性資料庫工作元件。 如需詳細資訊，請參閱[安裝彈性資料庫工作概觀](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation)。
+1.  安裝和設定彈性資料庫作業元件。 如需詳細資訊，請參閱[安裝彈性資料庫作業概觀](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation)。
 
-2. 建立工作可用來將命令傳送至 SSIS 目錄資料庫的資料庫範圍認證。 如需詳細資訊，請參閱[CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
+2. 建立作業可用來將命令傳送至 SSIS 目錄資料庫的資料庫範圍認證。 如需詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
-### <a name="create-an-elastic-job"></a>建立彈性的工作
+### <a name="create-an-elastic-job"></a>建立彈性作業
 
-使用類似下列範例所示的指令碼的 TRANSACT-SQL 指令碼，以建立作業：
+使用與下列範例中所示指令碼類似的 Transact-SQL 指令碼，來建立作業：
 
 ```sql
 -- Create Elastic Jobs target group 
@@ -108,25 +106,25 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a>排程封裝，以與 Azure 資料 Factory SQL Server 預存程序活動
+## <a name="sproc"></a> 使用 Azure Data Factory SQL Server 預存程序活動來排程套件
 
 > [!IMPORTANT]
-> 在下列範例中使用 Azure Data Factory 第 1 版使用 JSON 指令碼預存程序活動。
+> 搭配使用下列範例中的 JSON 指令碼與 Azure Data Factory 第 1 版預存程序活動。
 
-若要排程封裝，以與 Azure 資料 Factory SQL Server 預存程序活動，執行下列動作：
+若要使用 Azure Data Factory SQL Server 預存程序活動來排程套件，請執行下列動作：
 
 1.  建立 Data Factory。
 
-2.  建立連結的服務，SQL database 主控 SSISDB。
+2.  針對裝載 SSISDB 的 SQL Database 建立連結的服務。
 
-3.  建立輸出資料集的磁碟機的排程。
+3.  建立進行排程的輸出資料集。
 
-4.  建立 Data Factory 管線用來執行 SSIS 封裝的 SQL Server 預存程序活動。
+4.  建立 Data Factory 管線，以使用 SQL Server 預存程序活動來執行 SSIS 套件。
 
-本節提供這些步驟的概觀。 完整的 Data Factory 教學課程已超出本文的範圍。 如需詳細資訊，請參閱[SQL Server 預存程序活動](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)。
+本節提供這些步驟的概觀。 完整 Data Factory 教學課程超出本文範圍。 如需詳細資訊，請參閱 [SQL Server 預存程序活動](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)。
 
-### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>建立連結的服務，SQL database 主控 SSISDB
-連結的服務可讓連接到 SSISDB 的 Data Factory。
+### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>針對裝載 SSISDB 的 SQL Database 建立連結的服務
+連結的服務可讓 Data Factory 連線至 SSISDB。
 
 ```json
 {
@@ -142,7 +140,7 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 ```
 
 ### <a name="create-an-output-dataset"></a>建立輸出資料集
-輸出資料集包含排程的資訊。
+輸出資料集包含排程資訊。
 
 ```json
 {
@@ -161,7 +159,7 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 }
 ```
 ### <a name="create-a-data-factory-pipeline"></a>建立 Data Factory 管線
-管線會使用 SQL Server 預存程序活動執行 SSIS 封裝。
+此管線使用 SQL Server 預存程序活動來執行 SSIS 套件。
 
 ```json
 {
@@ -191,7 +189,7 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 }
 ```
 
-您不必建立新的預存程序，將封裝以建立並啟動 SSIS 封裝執行所需的 Transact SQL 命令。 您可以提供完整的指令碼的值為`stmt`上述的 JSON 範例中的參數。 以下是範例指令碼：
+您不需要建立新的預存程序，即可封裝建立和啟動 SSIS 套件執行所需的 Transact-SQL 命令。 您可以將整個指令碼提供為先前 JSON 範例中的 `stmt` 參數值。 範例指令碼如下：
 
 ```sql
 -- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
@@ -227,10 +225,9 @@ END
 GO
 ```
 
-如需此指令碼中的程式碼的詳細資訊，請參閱[部署及執行 SSIS 封裝使用預存程序](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures)。
+如需此指令碼中程式碼的詳細資訊，請參閱[使用預存程序部署和執行 SSIS 套件](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures)。
 
 ## <a name="next-steps"></a>後續的步驟
-如需 SQL Server Agent 的詳細資訊，請參閱[封裝的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。
+如需 SQL Server Agent 的詳細資訊，請參閱[套件的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。
 
-如需在 SQL Database 彈性作業的詳細資訊，請參閱[管理向外延展雲端資料庫](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。
-
+如需在 SQL Database 上彈性作業的詳細資訊，請參閱[管理相應放大的雲端資料庫](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。

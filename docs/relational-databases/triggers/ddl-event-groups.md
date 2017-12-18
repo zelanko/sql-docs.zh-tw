@@ -2,9 +2,12 @@
 title: "DDL 事件群組 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ccea01b74a215c298ad5411c7da862f2f7f62a15
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ec4272b36c365f38793bcf8ccd5692e5933e3164
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ddl-event-groups"></a>DDL 事件群組
-  下表列出可用來執行 DDL 觸發程序或事件通知的 DDL 事件群組，以及它們所涵蓋的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 請注意這些事件群組的內含本質。 例如，指定 FOR DDL_TABLE_EVENTS (10018) 的 DDL 觸發程序或事件通知會涵蓋 CREATE TABLE、ALTER TABLE 和 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 指定 FOR DDL_TABLE_VIEW_EVENTS (10017) 的 DDL 觸發程序或事件通知會涵蓋 DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS 和 DDL_STATISTICS_EVENTS 類型底下的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 下表列出可用來執行 DDL 觸發程序或事件通知的 DDL 事件群組，以及它們所涵蓋的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 請注意這些事件群組的內含本質。 例如，指定 FOR DDL_TABLE_EVENTS (10018) 的 DDL 觸發程序或事件通知會涵蓋 CREATE TABLE、ALTER TABLE 和 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 指定 FOR DDL_TABLE_VIEW_EVENTS (10017) 的 DDL 觸發程序或事件通知會涵蓋 DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS 和 DDL_STATISTICS_EVENTS 類型底下的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 > [!NOTE]  
 >  執行類似 DDL 作業的某些系統預存程序也可以引發 DDL 觸發程序或事件通知。 請測試 DDL 觸發程序和事件通知，以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式與 **sp_addtype** 預存程序都會引發在 CREATE_TYPE 事件上建立的 DDL 觸發程序或事件通知。  

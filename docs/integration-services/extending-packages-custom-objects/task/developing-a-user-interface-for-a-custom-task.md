@@ -1,5 +1,5 @@
 ---
-title: "自訂工作開發使用者介面 |Microsoft 文件"
+title: "開發自訂工作的使用者介面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1d13e82111d97d4d4a63615c91b3cbb48f68f708
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8707a24fda7d84ac260e33884d01279d8cbe5501
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>開發自訂工作的使用者介面
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型會提供自訂工作開發人員能夠輕鬆地針對工作建立自訂使用者介面的能力 (該介面之後可以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中整合及顯示)。 使用者介面可在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中提供有用的資訊給使用者，然後指引使用者正確地設定自訂工作的屬性和設定。  
@@ -50,7 +47,7 @@ ms.lasthandoff: 08/03/2017
   
  本章節描述當您為自訂工作開發使用者介面時 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 屬性和 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> 介面的角色，並提供有關如何在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師內建立、整合、部署及偵錯此工作的詳細資料。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)]設計工具提供工作的使用者介面的多個進入點： 使用者可以選取**編輯**捷徑功能表上，按兩下此工作，或按一下**顯示編輯器**屬性工作表底部的連結。 當使用者存取其中一個進入點時，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師就會尋找及載入包含此工作之使用者介面的組件。 此工作的使用者介面要負責建立對話方塊的屬性，該對話方塊會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中顯示給使用者。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師針對此工作提供使用者介面的多個進入點：使用者可以在捷徑功能表上選取 [編輯]、按兩下此工作，或是按一下屬性表底部的 [顯示編輯器] 連結。 當使用者存取其中一個進入點時，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師就會尋找及載入包含此工作之使用者介面的組件。 此工作的使用者介面要負責建立對話方塊的屬性，該對話方塊會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中顯示給使用者。  
   
  工作和它的使用者介面是不同的實體。 它們應該在不同的組件中實作，以減少當地語系化、部署和維護工作。 工作 DLL 不會載入、呼叫，或是通常會包含有關其使用者介面的任何知識，除了在工作中編碼之 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 屬性值內包含的資訊以外。 這是工作與其使用者介面產生關聯的唯一方式。  
   
@@ -67,7 +64,7 @@ ms.lasthandoff: 08/03/2017
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|如果有使用的話，請將它設定為 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 列舉內的其中一個值。 例如， `RequiredProductLevel = DTSProductLevel.None`。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|保留連絡人資訊給此工作需要技術支援的情況使用。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|指派類型給此工作。|  
-|Attribute.TypeId|在衍生類別中實作時，取得這個屬性的唯一識別碼。 如需詳細資訊，請參閱**Attribute.TypeID** .NET Framework 類別庫中的屬性。|  
+|Attribute.TypeId|在衍生類別中實作時，取得這個屬性的唯一識別碼。 如需詳細資訊，請參閱 .NET Framework 類別庫中的 **Attribute.TypeID** 屬性。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.UITypeName%2A>|此組件的類型名稱，由 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師用來載入此組件。 這個屬性是用來尋找此工作的使用者介面組件。|  
   
  下列程式碼範例會顯示 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 的面貌 (在類別定義上方編碼)。  
@@ -127,7 +124,7 @@ End Class 'MyTask
   
  設計師會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> 方法，要求顯示於 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中的視窗。 此工作會建立包含此工作之使用者介面的視窗執行個體，並將此使用者介面傳回給設計師以供顯示。 一般來說，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 和 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 物件會透過多載建構函式提供給視窗，好讓它們可用於設定工作。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師會呼叫工作使用者介面的 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> 方法，以顯示此工作的使用者介面。 此工作使用者介面會從這個方法傳回 Windows Form，而 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師會將這個表單顯示為強制回應對話方塊。 當關閉表單時，[!INCLUDE[ssIS](../../../includes/ssis-md.md)]設計工具會檢查值**DialogResult**來判斷工作是否已修改，以及如果應該儲存這些修改表單的屬性。 如果值**DialogResult**屬性是**確定**、[!INCLUDE[ssIS](../../../includes/ssis-md.md)]設計工具會呼叫以儲存變更工作的持續性方法; 否則會捨棄這些變更。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師會呼叫工作使用者介面的 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> 方法，以顯示此工作的使用者介面。 此工作使用者介面會從這個方法傳回 Windows Form，而 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師會將這個表單顯示為強制回應對話方塊。 當關閉此表單時，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師會檢查此表單之 **DialogResult** 屬性的值，以判斷此工作是否已經修改過，以及是否應該儲存這些修改。 如果 **DialogResult** 屬性的值是 **OK**，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師會呼叫此工作的保存方法來儲存變更，否則會捨棄這些變更。  
   
  下列程式碼範例會實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> 介面，並假設有一個名為 SampleTaskForm 的 Windows Form 類別存在。  
   
@@ -209,8 +206,7 @@ End Class
  
 ## <a name="see-also"></a>另請參閱  
  [建立自訂工作](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
- [編寫自訂工作](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
- [自訂工作開發使用者介面](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
+ [撰寫自訂工作的程式碼](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
+ [開發自訂工作的使用者介面](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
   
   
-

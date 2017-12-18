@@ -1,5 +1,5 @@
 ---
-title: "Analysis Services 處理工作 |Microsoft 文件"
+title: "Analysis Services 處理工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 1a5107d988014807892ec405dadf61656c7606a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 15614fbc56266471ea3e6ee79d07cc965b79eb94
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 處理工作
   「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 處理」工作會處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件，例如表格式模型、Cube、維度及採礦模型。  
@@ -90,7 +88,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 處理工作編輯器 (一般頁面)
   使用 [Analysis Services 處理工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述 Analysis Services 處理工作。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **名稱**  
  為 Analysis Services 處理工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
   
@@ -117,7 +115,7 @@ ms.lasthandoff: 08/11/2017
  **Analysis Services 連接管理員**  
  在清單中選取現有的 Analysis Services 連接管理員，或按一下 [新增] 以建立新的連接管理員。  
   
- **新**  
+ **新增**  
  建立新的 Analysis Services 連接管理員。  
   
  **相關主題：** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)、 [加入 Analysis Services 連接管理員對話方塊 UI 參考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -128,7 +126,7 @@ ms.lasthandoff: 08/11/2017
 |**Object Name**|列出指定的物件名稱。|  
 |**型別**|列出指定的物件類型。|  
 |**處理選項**|選取清單中的處理選項。<br /><br /> **相關主題：**[處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
-|**[設定]**|列出指定物件的處理設定。|  
+|**設定**|列出指定物件的處理設定。|  
   
  **加入**  
  將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件加入清單中。  
@@ -155,4 +153,3 @@ ms.lasthandoff: 08/11/2017
   
  **相關主題：**[變更設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   
-

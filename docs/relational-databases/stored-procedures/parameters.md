@@ -3,8 +3,11 @@ title: "參數 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1d4e6260a060152121b7b3ec0ef9ac14b2042c3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 697268f348d50079d2d3f740ea56b9dd28944792
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameters"></a>參數
-參數是用以交換預存程序和呼叫預存程序的函數、應用程式或工具之間的資料： 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 參數是用以交換預存程序和函式以及呼叫預存程序或函式的應用程式或工具之間的資料： 
 
 *  輸入參數可讓呼叫者將資料值傳遞給預存程序或函數。
 *  輸出參數可讓預存程序將資料值或資料指標變數傳回給呼叫者。 使用者自訂函數無法指定輸出參數。

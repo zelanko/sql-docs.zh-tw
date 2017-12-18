@@ -2,9 +2,12 @@
 title: "建立及管理全文檢索目錄 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8b4b38c2aac9a5d960f84f2b9d6f7b32762aa862
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5686cc0fc615c7765ea592d80b803f2beecd4c52
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>建立及管理全文檢索目錄
-全文檢索目錄是一組全文檢索索引的邏輯容器。 您必須先建立全文檢索目錄，才能建立全文檢索索引。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 全文檢索目錄是一組全文檢索索引的邏輯容器。 您必須先建立全文檢索目錄，才能建立全文檢索索引。
 
 全文檢索目錄是不屬於任何檔案群組的虛擬物件。
   

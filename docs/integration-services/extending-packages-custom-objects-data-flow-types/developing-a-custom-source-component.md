@@ -1,5 +1,5 @@
 ---
-title: "開發自訂來源元件 |Microsoft 文件"
+title: "開發自訂來源元件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,30 +24,29 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 30e5320679193120148f714324da10d4d0c65506
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7ff2fd453c04886594f4d70e1115f00acac72edb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-source-component"></a>開發自訂來源元件
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]可讓開發人員撰寫來源元件可以連接至自訂資料來源，並提供這些來源的資料在資料流程工作中的其他元件。 當您必須連接至無法使用其中一個現有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源存取的資料來源時，能夠建立自訂來源的能力是很重要的。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供開發人員撰寫來源元件的能力，這些元件可以連線至自訂資料來源，並將那些來源的資料提供給資料流程工作中的其他元件。 當您必須連接至無法使用其中一個現有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源存取的資料來源時，能夠建立自訂來源的能力是很重要的。  
   
  來源元件具有一或多個輸出與零輸入。 在設計階段，來源元件是用以建立和設定連接、從外部資料來源讀取資料行中繼資料，以及設定以外部資料來源為基礎之來源的輸出資料行。 在執行期間，它們會連接至外部資料來源並將資料列加入輸出緩衝區。 資料流程工作會將這個緩衝區的資料列提供給下游元件。  
   
- 資料流程元件開發的一般概觀，請參閱[開發自訂資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
+ 如需資料流程元件開發的一般概觀，請參閱[開發自訂資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
 ## <a name="design-time"></a>設計階段  
  實作來源元件的設計階段功能需要指定連至外部資料來源的連接、加入和設定反映資料來源的輸出資料行，以及驗證元件是否已就緒可執行。 依定義，來源元件具有零個輸入以及一或多個非同步輸出。  
   
 ### <a name="creating-the-component"></a>建立元件  
- 來源元件使用在封裝中定義的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件，連接至外部資料來源。 它們將元素加入 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 屬性的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 集合，以指出其連接管理員需求。 這個集合有兩個目的：用以儲存元件所使用的封裝中的連接管理員參考，以及用以向設計工具通告連接管理員的需求。 當<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>已加入至集合中，**進階編輯器**顯示**連接屬性**索引標籤上，可讓使用者選取或封裝中建立的連接。  
+ 來源元件使用在封裝中定義的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件，連接至外部資料來源。 它們將元素加入 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 屬性的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 集合，以指出其連接管理員需求。 這個集合有兩個目的：用以儲存元件所使用的封裝中的連接管理員參考，以及用以向設計工具通告連接管理員的需求。 將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 新增至集合時，[進階編輯器] 會顯示 [連線屬性] 索引標籤，這可讓使用者在套件中選取或是建立連線。  
   
  下列程式碼範例顯示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 的實作，它加入輸出並將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 物件加入 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>。  
   
@@ -188,7 +185,7 @@ End Sub
 |DT_STR|大於 0 且小於 8000。|0|0|非 0，並為有效的字碼頁。|  
 |DT_WSTR|大於 0，且小於 4000。|0|0|0|  
   
- 由於資料類型屬性的限制會以輸出資料行的資料類型為準，因此在使用 Managed 類型時，必須選擇正確的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 資料類型。 基底類別提供三種 helper 方法， <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>， <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>，和<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>，以協助 managed 的元件開發人員在選取[!INCLUDE[ssIS](../../includes/ssis-md.md)]提供 managed 的類型的資料類型。 這些方法會將 Managed 資料類型轉換為 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 資料類型，反之亦然。  
+ 由於資料類型屬性的限制會以輸出資料行的資料類型為準，因此在使用 Managed 類型時，必須選擇正確的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 資料類型。 基底類別提供三種 Helper 方法：<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>，以協助受控元件開發人員在提供受控類型時，選取 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 資料類型。 這些方法會將 Managed 資料類型轉換為 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 資料類型，反之亦然。  
   
  下列程式碼範例顯示元件的輸出資料行集合如何根據表格的結構描述擴展。 基底類別的 Helper 方法是用以設定資料行的資料類型，而相依的屬性則會根據資料類型來設定。  
   
@@ -371,7 +368,7 @@ End Sub
 ### <a name="validating-the-component"></a>驗證元件  
  您應該驗證來源元件，並確認輸出資料行集合中所定義的資料行，符合在外部資料來源的資料行。 有時，針對外部資料來源驗證輸出資料行是無法執行的，例如在中斷連接的狀態下，或是當最好避免長時間往返伺服器時。 在這些情況下，在輸出中的資料行仍然可以使用輸出物件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> 來驗證。 如需詳細資訊，請參閱[驗證資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)。  
   
- 在輸入和輸出物件上都有這個集合，而且您可以使用外部資料來源的資料行來擴展它。 您可以使用此集合來驗證輸出資料行時[!INCLUDE[ssIS](../../includes/ssis-md.md)]設計工具處於離線狀態，當元件中斷連接，或<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>屬性是**false**。 當建立輸出資料行時，應該同時先擴展集合。 將外部中繼資料行加入集合是相當容易的，因為外部中繼資料行應該一開始便符合輸出資料行。 資料行的資料類型屬性應該已正確地設定，而且可以將屬性直接複製到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 物件。  
+ 在輸入和輸出物件上都有這個集合，而且您可以使用外部資料來源的資料行來擴展它。 當 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具離線時，或是當 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性是 **false** 時，可以使用這個集合來驗證輸出資料行。 當建立輸出資料行時，應該同時先擴展集合。 將外部中繼資料行加入集合是相當容易的，因為外部中繼資料行應該一開始便符合輸出資料行。 資料行的資料類型屬性應該已正確地設定，而且可以將屬性直接複製到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 物件。  
   
  下列範例程式碼會加入以新建立的輸出資料行為基礎的外部中繼資料行。 它會假設已建立輸出資料行。  
   
@@ -678,7 +675,6 @@ End Namespace
   
 ## <a name="see-also"></a>另請參閱  
  [開發自訂目的地元件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
- [使用指令碼元件建立來源](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
+ [以指令碼元件建立來源](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   
   
-

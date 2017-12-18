@@ -1,5 +1,5 @@
 ---
-title: "了解同步和非同步轉換 |Microsoft 文件"
+title: "了解同步和非同步轉換 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - transformations [Integration Services], synchronous and asynchronous
 - asynchronous transformations [Integration Services]
 - data flow components [Integration Services], synchronous and asynchronous
 - synchronous transformations [Integration Services]
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9cc38505042dadb1b057a737279be82bb7923432
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c258cd2c85a26c20fc50c1a5e860096f7e69f26f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和非同步轉換
   如需了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 之同步與非同步轉換間的差異，可以從了解同步轉換開始著手。 如果同步轉換不符合您的需求，您的設計可能需要非同步轉換。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 09/26/2017
   
  同步轉換的一個範例為資料轉換。 對於每一個內送的資料列而言，它都會轉換指定之資料行中的值，並依照其方式來傳送此資料列。 每一個離散轉換作業都與資料集內的所有其他資料列無關。  
   
- 在[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]查閱元件輸入的識別碼，並將它指派給指令碼和程式設計中，指定同步轉換**SynchronousInputID**元件輸出的屬性。 這樣會告訴資料流程引擎要處理輸入中的每一個資料列，並將每一個資料列自動傳送給指定的輸出。 如果您希望每一個資料列都能進入到每一個輸出，您不需要撰寫任何其他程式碼，也可以輸出資料。 如果您使用**ExclusionGroup**屬性來指定資料列應該只能進入到某群組的輸出，因為在 「 條件式分割 」 轉換中，您必須呼叫**DirectRow**方法來選取每個資料列的適當的目的地。 當您有錯誤輸出時，您必須呼叫**DirectErrorRow**傳送至錯誤輸出，而不是預設輸出資料列有問題。  
+ 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 指令碼和程式設計中，您會指定同步轉換，其方式是查閱元件輸入的識別碼，並將它指派給元件輸出的 **SynchronousInputID** 屬性。 這樣會告訴資料流程引擎要處理輸入中的每一個資料列，並將每一個資料列自動傳送給指定的輸出。 如果您希望每一個資料列都能進入到每一個輸出，您不需要撰寫任何其他程式碼，也可以輸出資料。 如果您使用 **ExclusionGroup** 屬性來指定資料列應該只能進入到某一組輸出 (如同「條件式分割」轉換中的處理方式)，您必須呼叫 **DirectRow** 方法，才能為每一個資料列選取適當的目的地。 當您有錯誤輸出時，必須呼叫 **DirectErrorRow**，將有問題的資料列傳送到錯誤輸出，而不是預設輸出。  
   
 ## <a name="asynchronous-transformations"></a>非同步轉換  
  當您無法將每一個資料列與所有其他資料列分開處理時，您可能會決定您的設計需要非同步處理。 換句話說，當您處理每一個資料列時，您無法在資料流程中傳遞它，但是必須改為以非同步方式輸出資料，或是讓輸出與輸入的時間不同。 例如，下列案例需要非同步轉換：  
@@ -51,7 +48,7 @@ ms.lasthandoff: 09/26/2017
   
 -   輸入資料列和輸出資料列之間有一對一的關係。 彙總轉換就是一個範例，其中的元件必須在輸出中加入資料列，才能保留計算的彙總值。  
   
- 在[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]指令碼和程式設計中，您將此值為 0 時可指派指定非同步轉換**SynchronousInputID**元件輸出的屬性。 執行個體時提供 SQL Server 登入。 這樣會告訴資料流程引擎不要將每一個資料列自動傳送給輸出。 然後您必須撰寫程式碼，明確地將每一個資料列傳送給適當的輸出，其方式是將其加入到針對非同步轉換輸出所建立的新輸出緩衝區內。  
+ 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 指令碼和程式設計中，您會指定非同步轉換，其方式是將 0 的值指派給元件輸出的 **SynchronousInputID** 屬性。 執行個體時提供 SQL Server 登入。 這樣會告訴資料流程引擎不要將每一個資料列自動傳送給輸出。 然後您必須撰寫程式碼，明確地將每一個資料列傳送給適當的輸出，其方式是將其加入到針對非同步轉換輸出所建立的新輸出緩衝區內。  
   
 > [!NOTE]  
 >  由於來源元件也必須明確地將它從資料來源讀取的每一個資料列加入到它的輸出緩衝區內，所以來源類似於具有非同步輸出的轉換。  
@@ -65,4 +62,3 @@ ms.lasthandoff: 09/26/2017
  [開發具有非同步輸出的自訂轉換元件](../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
   
   
-

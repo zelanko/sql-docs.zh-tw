@@ -1,5 +1,5 @@
 ---
-title: "在叢集中的 integration Services (SSIS) |Microsoft 文件"
+title: "叢集中的 Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,27 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 52fb4e913a48b65544aaca84408f847af74412be
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>叢集中的 Integration Services (SSIS)
   不建議您以叢集方式設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，因為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不是叢集服務或叢集感知的服務，也不支援從一個叢集節點容錯移轉到另一個叢集節點。 因此，在叢集環境中，應該以獨立服務的形式在叢集中的每一個節點上安裝及啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
   
  雖然 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務並非叢集服務，但在叢集的每個節點上個別安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之後，您可以手動設定該服務，把它當做叢集資源來運作。  
   
- 不過，如果您在建立叢集硬體環境時的目標是高可用性，則就算不將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務設定為叢集資源，也可以達到此目標。  若要從叢集的任何其他節點來管理叢集中任何節點上的封裝，請在叢集中的每個節點上修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔。 您要將每個組態檔修改成指向封裝儲存所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有可用執行個體。 這個方案能提供大多數客戶所需的高可用性，而沒有將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務設定為叢集資源時可能遇到的問題。 如需如何變更組態檔的詳細資訊，請參閱[Integration Services 服務 &#40;SSIS 服務 &#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
+ 不過，如果您在建立叢集硬體環境時的目標是高可用性，則就算不將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務設定為叢集資源，也可以達到此目標。  若要從叢集的任何其他節點來管理叢集中任何節點上的封裝，請在叢集中的每個節點上修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔。 您要將每個組態檔修改成指向封裝儲存所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有可用執行個體。 這個方案能提供大多數客戶所需的高可用性，而沒有將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務設定為叢集資源時可能遇到的問題。 如需如何變更設定檔的詳細資訊，請參閱 [Integration Services 服務 &#40;SSIS 服務&#41;](../../integration-services/service/integration-services-service-ssis-service.md)。  
   
  若要針對如何在叢集環境中設定服務而進行資訊完整的決策，了解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的角色是很重要的。 如需詳細資訊，請參閱 [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md) (Integration Services 服務 (SSIS 服務))。  
   
@@ -139,4 +137,3 @@ ms.lasthandoff: 09/26/2017
 -   請在 [叢集管理員] 中，選取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務並按一下滑鼠右鍵，然後從快顯功能表中選取 [上線]。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務現在已連線成叢集資源。  
   
   
-

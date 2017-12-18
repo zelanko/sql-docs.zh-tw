@@ -1,5 +1,5 @@
 ---
-title: "How to Manage a CDC Instance |Microsoft 文件"
+title: "如何管理 CDC 執行個體 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d368fcacfb8e548647785c8b5f6ef5b73b4ef10b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 582c5f02f3d3e019e9b77a80d43355a4f9f83504
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>如何管理 CDC 執行個體
   此程序描述如何使用 CDC 設計工具主控台，於執行階段管理 CDC 執行個體操作。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 09/28/2017
   
     -   **刪除**：刪除 CDC 執行個體。  
   
-    -   **Oracle 記錄指令碼**： 按一下**Oracle 記錄指令碼**顯示 Oracle 補充記錄指令碼與 Oracle 記錄指令碼對話方塊方塊。 如需有關您可以在此對話方塊中執行之操作的詳細資訊，請參閱＜ [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)＞。  
+    -   **Oracle 記錄指令碼**：按一下 [Oracle 記錄指令碼] 可顯示 [Oracle 記錄指令碼] 對話方塊，其中包含 Oracle 補充記錄指令碼。 如需有關您可以在此對話方塊中執行之操作的詳細資訊，請參閱＜ [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)＞。  
   
          **注意**：當您執行補充記錄指令碼時，將會開啟 [執行指令碼的 Oracle 認證] 對話方塊，您可以在此提供有效的 Oracle 使用者名稱和密碼。 如需有關如何提供適當之 Oracle 認證的詳細資訊，請參閱＜ [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)＞。  
   
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/28/2017
  您也可以選取 **[屬性]** 來編輯 CDC 執行個體組態屬性。 如需有關編輯 CDC 執行個體屬性的詳細資訊，請參閱＜ [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)＞。  
   
   
-

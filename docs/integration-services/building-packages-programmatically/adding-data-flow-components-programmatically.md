@@ -1,5 +1,5 @@
 ---
-title: "以程式設計方式加入資料流程元件 |Microsoft 文件"
+title: "以程式設計方式新增資料流程元件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,30 +20,29 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 8bd642d31e0a6a813b239935f3fb091003b682fc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cef868a3eef5413777e8bd05101311931df9e191
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-data-flow-components-programmatically"></a>以程式設計方式加入資料流程元件
-  當您建立資料流程時，可以從加入元件開始。 接著您會設定這些元件，然後將它們連接在一起以便在執行階段建立資料流程。 本章節描述將元件加入資料流程工作，建立元件的設計階段執行個體，然後設定元件。 如需如何連接元件的資訊，請參閱[連接資料資料流程元件以程式設計方式](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
+  當您建立資料流程時，可以從加入元件開始。 接著您會設定這些元件，然後將它們連接在一起以便在執行階段建立資料流程。 本章節描述將元件加入資料流程工作，建立元件的設計階段執行個體，然後設定元件。 如需如何連線元件的資訊，請參閱[以程式設計方式連線資料流程元件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
   
 ## <a name="adding-a-component"></a>加入元件  
  呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaDataCollection100.New%2A> 集合的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.ComponentMetaDataCollection%2A> 方法，以建立新元件並將它加入資料流程工作中。 這個方法會傳回元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面。 不過，此時，<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 並不包含任何一個元件的特定資訊。 設定 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 屬性以識別元件的類型。 資料流程工作使用此屬性值在執行階段建立元件的執行個體。  
   
- 在 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 屬性中指定的值，可以是 CLSID、PROGID 或是元件的 <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> 屬性。 CLSID 通常會顯示在 [屬性] 視窗中，做為元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 屬性值。 取得這個屬性以及可用元件的其他屬性的相關資訊，請參閱[探索資料資料流程元件以程式設計方式](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)。  
+ 在 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 屬性中指定的值，可以是 CLSID、PROGID 或是元件的 <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> 屬性。 CLSID 通常會顯示在 [屬性] 視窗中，做為元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 屬性值。 如需取得此屬性及可用元件其他屬性的資訊，請參閱[以程式設計方式探索資料流程元件](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)。  
   
 ## <a name="adding-a-managed-component"></a>加入 Managed 元件  
- 您無法使用 CLSID 或 PROGID 將 Managed 資料流程元件加入資料流程，因為這些值會指向包裝函數，而不是元件本身。 您可以改為使用**CreationName**屬性或**AssemblyQualifiedName**屬性，如下列範例所示。  
+ 您無法使用 CLSID 或 PROGID 將 Managed 資料流程元件加入資料流程，因為這些值會指向包裝函數，而不是元件本身。 您可以改用 **CreationName** 屬性或 **AssemblyQualifiedName** 屬性，如下列範例所示。  
   
- 如果您想要使用**AssemblyQualifiedName**屬性，則必須加入參考您[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]包含 managed 的元件的組件的專案。 這些組件不會列在 .NET 索引標籤的**加入參考** 對話方塊。 通常您必須瀏覽，以找出組件中的**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents**資料夾。  
+ 如果您打算使用 **AssemblyQualifiedName** 屬性，則必須在包含受控元件的組件 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 專案中新增參考。 這些組件不會列在 [新增參考] 對話方塊的 [.NET] 索引標籤上。 通常必須在 **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** 資料夾中瀏覽以找出組件。  
   
  內建的 Managed 資料流程元件包括：  
   
@@ -55,7 +52,7 @@ ms.lasthandoff: 08/03/2017
   
 -   DataReader 目的地  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact 目的地  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目的地  
   
 -   指令碼元件  
   
@@ -145,7 +142,7 @@ End Module
  請盡可能使用設計階段執行個體的方法來修改元件，而不要採用直接修改元件中繼資料的方式。 雖然在中繼資料中有一些項目是必須直接設定的 (例如連接)，不過，通常不建議直接修改中繼資料，因為您會略過元件監視並驗證變更的能力。  
   
 ## <a name="assigning-connections"></a>指派連接  
- 有些元件 (例如 OLE DB 來源元件) 需要外部資料的連接，並為了此用途使用封裝中現有的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> 集合的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 屬性會指出元件所需的執行階段 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件數目。 如果計數大於零，則元件需要連接。 藉由指定 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A> 內第一個連接的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 屬性，將連接管理員從封裝指派至元件。 請注意，在執行階段連接集合中的連接管理員名稱必須符合連接 managerreferenced 從封裝的名稱。  
+ 有些元件 (例如 OLE DB 來源元件) 需要外部資料的連接，並為了此用途使用封裝中現有的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> 集合的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 屬性會指出元件所需的執行階段 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件數目。 如果計數大於零，則元件需要連接。 藉由指定 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A> 內第一個連接的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 屬性，將連接管理員從封裝指派至元件。 請注意，執行階段連線集合中的連線管理員名稱，必須符合從套件參考的連線管理員名稱。  
   
 ## <a name="setting-the-values-of-custom-properties"></a>設定自訂屬性值  
  在建立元件的設計階段執行個體之後，呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A> 方法。 此方法類似於建構函式，因為它會建立其自訂屬性及其輸入和輸出物件，以初始化新建立的元件。 請勿在一個元件上呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A> 超過一次，因為元件可能會重設本身，並且遺失之前對其中繼資料所做的任何修改。  
@@ -158,7 +155,7 @@ End Module
  呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> 方法以初始化來源元件輸出中的資料行。 因為元件不會自動連接到外部資料來源，所以請在呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.AcquireConnections%2A> 之前先呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> 方法，以提供其外部資料來源的元件存取權，以及擴展其資料行中繼資料的能力。 最後，呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReleaseConnections%2A> 方法以釋放連接。  
   
 ## <a name="next-step"></a>下一個步驟  
- 加入和設定元件之後, 下一個步驟是 > 主題中所討論的元件之間建立路徑[建立路徑之間兩個元件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
+ 在新增和設定元件之後，下一個步驟就是要在兩個元件之間建立路徑，也就是[在兩個元件之間建立路徑](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)主題所討論的內容。  
   
 ## <a name="sample"></a>範例  
  下列程式碼範例會將 OLE DB 來源元件加入資料流程工作，建立元件的設計階段執行個體，然後設定元件的屬性。 這個範例需要 Microsoft.SqlServer.DTSRuntimeWrap 組件的額外參考。  
@@ -290,10 +287,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>外部資源  
- 部落格文章： [EzAPI-已更新 SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223)，blogs.msdn.com 上。  
+ blogs.msdn.com 上的部落格文章：[EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI - 針對 SQL Server 2012 更新)。  
 
 ## <a name="see-also"></a>另請參閱  
- [以程式設計方式連接資料流程元件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
+ [以程式設計的方式連線資料流程元件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
   
   
-

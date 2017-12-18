@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Integration Services (SSIS) 中的執行的封裝向外延展 |Microsoft 文件"
+title: "執行 SQL Server Integration Services (SSIS) Scale Out 中的套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-f1_keywords:
-- sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 88537ff52ada042d642b8915342e374ecca3246e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-
-# <a name="run-packages-in-integration-services-ssis-scale-out"></a>在 Integration Services (SSIS) 向外執行封裝
+# <a name="run-packages-in-integration-services-ssis-scale-out"></a>執行 Integration Services (SSIS) Scale Out 中的套件
 在封裝部署到 Integration Services 伺服器之後，您可以在相應放大中執行它們。
 
-## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>封裝執行執行封裝中向外對話方塊 
+## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>執行具有 [在相應放大中執行套件] 對話方塊的套件 
 
 1. 開啟 [在相應放大中執行套件] 對話方塊
 
@@ -43,7 +39,7 @@ ms.lasthandoff: 08/03/2017
     在 [進階]  索引標籤上，設定稱為 [重試計數] 的相應放大選項。 它會設定封裝執行失敗時重試的次數。
 
     > [!Note]
-    > **在錯誤時傾印**選項才會生效，當執行標尺出 Worker 服務的帳戶是本機電腦的系統管理員。
+    > 只有在執行 Scale Out Worker 服務的帳戶是本機電腦管理員時，[在發生錯誤時傾印] 選項才會生效。
 
 3. 選取電腦
 
@@ -53,7 +49,7 @@ ms.lasthandoff: 08/03/2017
    > [選取電腦]  頁面會顯示使用相應放大背景工作服務的使用者帳戶認證執行的封裝。 預設的帳戶是 NT Service\SSISScaleOutWorker140。 您可能會想要變更為自己的實驗室帳戶。
 
    >[!WARNING]
-   >在相同的背景工作上的不同使用者所觸發的封裝執行會以相同的帳戶執行。 在它們之間沒有安全性界限。 
+   >相同背景工作上不同使用者所觸發的套件執行，都是使用相同的帳戶來執行。 它們之間沒有安全性界限。 
 
 4. 執行套件並檢視報表 
 
@@ -109,16 +105,15 @@ GO
   
 -   **sysadmin** 伺服器角色中的成員資格  
 
-## <a name="set-default-execution-mode"></a>設定預設的執行模式
-若要設定預設的執行模式以 「 小數位數出 」，以滑鼠右鍵按一下**SSISDB**節點在物件總管 中的 SSMS，並選取**屬性**。
-在**目錄屬性**對話方塊中，設定**全伺服器的預設執行模式**至**向外**。
+## <a name="set-default-execution-mode"></a>設定預設執行模式
+若要將預設執行模式設定為 [相應放大]，請以滑鼠右鍵按一下 SSMS 物件總管中的 [SSISDB] 節點，然後選取 [屬性]。
+在 [目錄屬性] 對話方塊中，將 [全伺服器的預設執行模式] 設定為 [相應放大]。
 
-此設定之後, 就不需要指定 **@runinscaleout** 參數 [catalog]。 [create_execution]。 執行會在向外自動執行。 
+在此設定後面，不需要針對 [catalog].[create_execution] 指定 **@runinscaleout** 參數。 執行會自動以相應放大執行。 
 
-![Exe 模式](media\exe-mode.PNG)
+![執行模式](media\exe-mode.PNG)
 
-若要切換回非-小數位數 Out 模式的預設的執行模式，只要將**全伺服器的預設執行模式**至**伺服器**。
+若要將預設執行模式切換回非相應放大模式，只需要將 [全伺服器的預設執行模式] 設定為 [伺服器]。
 
-## <a name="run-package-in-sql-agent-job"></a>SQL agent 作業中執行封裝
-在 Sql 代理程式工作中，您可以選擇執行 SSIS 封裝當做工作的一個步驟。 若要在向外執行封裝，您可以利用上述預設執行模式。 之後設定以 「 小數位數出 」 的預設執行模式下，Sql agent 作業中的封裝會在向外執行。
-
+## <a name="run-package-in-sql-agent-job"></a>在 SQL Agent 作業中執行套件
+在 SQL Agent 作業中，您可以選擇將 SSIS 套件執行為作業的一個步驟。 若要在 Scale Out 中執行套件，您可以利用上述預設執行模式。 將預設執行模式設定為 [相應放大] 之後，將會以 [相應放大] 執行 SQL Agent 作業中的套件。

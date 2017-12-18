@@ -1,10 +1,13 @@
 ---
 title: "統計資料 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 11/20/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,21 +30,63 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b64fe249a6fb8d1c619f9e63ecb2cd7af4494c17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 39ed8dd07bab5c83f60eaee420bb0e494f5dda85
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="statistics"></a>Statistics
-  查詢最佳化工具會使用統計資料來建立可改善查詢效能的查詢計劃。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計劃的必要統計資料。不過，在少數情況下，您必須建立其他統計資料或修改查詢設計，以便獲得最佳結果。 本主題將討論有效使用查詢最佳化統計資料的概念和指導方針。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查詢最佳化工具會使用統計資料來建立可改善查詢效能的查詢計劃。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計劃的必要統計資料。不過，在少數情況下，您必須建立其他統計資料或修改查詢設計，以便獲得最佳結果。 本主題將討論有效使用查詢最佳化統計資料的概念和指導方針。  
   
 ##  <a name="DefinitionQOStatistics"></a> 元件和概念  
 ### <a name="statistics"></a>Statistics  
  查詢最佳化的統計資料是指包含資料表或索引檢視表之一個或多個資料行中值分佈相關統計資料的物件。 查詢最佳化工具會使用這些統計資料來估計查詢結果中的*基數*或資料列數目。 這些*基數估計值*可讓查詢最佳化工具建立高品質的查詢計劃。 例如，根據您的述詞而定，查詢最佳化工具可使用基數估計值來選擇索引搜尋運算子，而非需要更大量資源的索引掃描運算子，而且這樣做會改善查詢效能。  
   
- 每個統計資料物件都是針對一或多個資料表資料行的清單所建立，而且包含顯示第一個資料行中值分佈的長條圖。 多個資料行的統計資料物件也會儲存這些資料行之間值相互關聯的相關統計資料。 這些相互關聯統計資料 (或稱「密度」) 衍生自資料行值之相異資料列的數目。 如需統計資料物件的詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。  
+ 每個統計資料物件都是針對一或多個資料表資料行的清單所建立，其中包含「長條圖」以顯示第一個資料行中的值分佈狀態。 多個資料行的統計資料物件也會儲存這些資料行之間值相互關聯的相關統計資料。 這些相互關聯統計資料 (或稱「密度」) 衍生自資料行值之相異資料列的數目。 
+
+#### <a name="histogram"></a>長條圖  
+「長條圖」可測量資料集中每一個相異值的發生頻率。 查詢最佳化工具會計算有關統計資料物件之第一個索引鍵資料行中資料行值的長條圖，以統計方式取樣資料列或執行資料表或檢視表中所有資料列的完整掃描來選取資料行值。 如果長條圖是從一組取樣的資料列所建立，資料列數和相異值數的儲存總計會是預估值，而且不需要為整數。
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的長條圖只會針對單一資料行建置；也就是統計資料物件之索引鍵資料行集合中的第一個資料行。
   
+若要建立長條圖，查詢最佳化工具會排序資料行值、計算符合每一個相異資料行值的值數目，然後將資料行值彙總成最多 200 個連續長條圖步驟。 每一個長條圖步驟都包含某個範圍的資料行值，後面緊接著上限資料行值。 此範圍包括界限值之間的所有可能資料行值，但是不包括界限值本身。 最低的已排序資料行值就是第一個長條圖步驟的上限值。
+
+更詳細來說，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以下列三個步驟，從已排序的資料行值集合來建立「長條圖」：
+
+- **長條圖初始化**：第一個步驟會從已排序的集合開頭處理一連串的值，並收集最多 200 個 *range_high_key*、*equal_rows*、*range_rows* 和 *distinct_range_rows* 的值 (在此步驟中，*range_rows* 和 *distinct_range_rows* 一定是零)。 當所有的輸入都已用完，或已找到 200 個值時，就會結束第一個步驟。 如需詳細資訊，請參閱 [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)。 
+- **使用貯體合併掃描**：第二個步驟會依順序處理統計資料索引鍵之前置資料行的每一個額外值；每個後續的值可以新增到最後一個範圍，或在結束時建立新的範圍 (由於輸入的值會排序，因此這是可行的)。 建立新的範圍時，會將現有的一組相鄰範圍摺疊成單一範圍。 系統會選取這一組範圍，以將資訊遺失的機率降至最低。 此方法會使用「最大差異」演算法，讓長條圖中的步驟數減至最少，同時讓界限值之間的差異最大化。 在這整個步驟期間，範圍摺疊之後的步驟數目仍然為 200。
+- **長條圖彙總**：第三個步驟可能會摺疊更多範圍 (如果不會遺失大量資訊的話)。 長條圖步驟的數目可以少於相異值數目，即使包含了少於 200 個界限點的資料行也是如此。 因此，即使資料行具有超過 200 個唯一值，長條圖仍可能只需 200 個以下的步驟。 若資料行都是由唯一值組成，則合併的長條圖將只有最少的三個步驟。
+
+> [!NOTE]
+> 如果已使用樣本來建置長條圖，而非進行完整掃描，則 *equal_rows*、*range_rows*、*distinct_range_rows* 和 *average_range_rows* 的值會是預估值，而且不需要為整數。
+
+下列長條圖顯示包含六個步驟的長條圖。 第一個上限值左側的區域就是第一個步驟。
+  
+![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+  
+針對上述每一個長條圖步驟：
+-   粗線代表上限值 (*range_high_key*) 以及其所發生的次數 (*equal_rows*)  
+  
+-   *range_high_key* 左邊的實線區域代表資料行值範圍，以及每一個資料行值發生的平均次數 (*average_range_rows*)。 第一個長條圖步驟的 *average_range_rows* 一定是 0。  
+  
+-   虛線代表用來預估範圍內相異值總數的取樣值 (*distinct_range_rows*) 以及範圍內的值總數 (*range_rows*)。 查詢最佳化工具會使用 *range_rows* 和 *distinct_range_rows* 來計算 *average_range_rows*，而且不會儲存取樣值。   
+  
+#### <a name="density-vector"></a>密度向量  
+**密度**是給定資料行或組合資料行中的重複項目數量資訊，其計算方式為 1/(相異值數目)。 查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 密度向量針對統計資料物件中資料行的每個前置詞各包含一個密度。 
+
+> [!NOTE]
+> 「頻率」是統計資料物件第一個索引鍵資料行中每一個相異值的發生次數資訊，其計算方式為資料列計數乘以密度。 如果資料行具有唯一值，則其最大頻率為 1。
+
+例如，如果統計資料物件具有 `CustomerId`、`ItemId` 和 `Price` 等索引鍵資料行，就會根據下列每一個資料行前置詞來計算密度。
+  
+|資料行前置詞|計算密度的依據|  
+|---|---|
+|(CustomerId)|與 CustomerId 的值相符的資料列|  
+|(CustomerId, ItemId)|與 CustomerId 和 ItemId 的值相符的資料列|  
+|(CustomerId, ItemId, Price)|與 CustomerId、ItemId 和 Price 的值相符的資料列| 
+
 ### <a name="filtered-statistics"></a>篩選的統計資料  
  對於從定義完善的資料子集中選取的查詢而言，篩選的統計資料可以改善查詢效能。 篩選的統計資料會使用篩選述詞來選取統計資料中所含的資料子集。 設計完善的篩選統計資料可以改善查詢執行計畫 (相較於完整資料表統計資料而言)。 如需篩選述詞的詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。 如需有關何時建立篩選統計資料的詳細資訊，請參閱本主題的 [何時建立統計資料](#CreateStatistics) 一節。  
   
@@ -53,7 +98,7 @@ ms.lasthandoff: 11/09/2017
   
  當查詢最佳化工具因使用 AUTO_CREATE_STATISTICS 選項而產生統計資料時，統計資料名稱就會以 `_WA` 作為開頭。 您可以使用下列查詢來判斷查詢最佳化工具是否已經針對查詢述詞資料行建立統計資料。  
   
-```tsql  
+```t-sql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -147,7 +192,7 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
   
  若要建立對於基數估計值有用的密度，查詢述詞中的資料行必須與統計資料物件定義的其中一個資料行前置詞相符。 例如，下列命令會針對 `LastName`、 `MiddleName`和 `FirstName`資料行建立多重資料行統計資料物件。  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -174,7 +219,7 @@ GO
   
  查詢最佳化工具可以使用 `BikeWeights` 篩選統計資料，來針對下列會選取所有重量超過 `25` 之腳踏車的查詢，改善其查詢計劃。  
   
-```tsql  
+```t-sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -268,7 +313,7 @@ GO
   
      例如，下列預存程序 `Sales.GetRecentSales` 會在 `@date` 為 NULL 時變更 `@date` 參數的值。  
   
-    ```tsql  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -287,7 +332,7 @@ GO
   
      如果預存程序 `Sales.GetRecentSales` 的第一次呼叫傳遞 NULL 給 `@date` 參數，查詢最佳化工具就會使用 `@date = NULL` 的基數估計值來編譯此預存程序，即使沒有使用 `@date = NULL` 來呼叫查詢述詞也一樣。 這個基數估計值可能會與實際查詢結果中的資料列數目具有大幅差異。 因此，查詢最佳化工具可能會選擇到次佳的查詢計劃。 為了協助避免這種情況發生，您可以將此預存程序重新撰寫成兩個程序，如下所示：  
   
-    ```tsql  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -317,7 +362,7 @@ GO
   
  對於某些應用程式而言，每次執行查詢都重新編譯查詢可能會花費太多時間。 即使您沒有使用 `RECOMPILE` 選項，`OPTIMIZE FOR` 查詢提示仍然有所幫助。 例如，您可以將 `OPTIMIZE FOR` 選項加入至預存程序 Sales.GetRecentSales，以便指定特定日期。 下列範例會將 `OPTIMIZE FOR` 選項加入至 Sales.GetRecentSales 程序。  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -349,6 +394,6 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)   
- [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行為](http://support.microsoft.com/help/2754171) \(機器翻譯\)
-  
+ [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行為](http://support.microsoft.com/help/2754171) [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  

@@ -1,5 +1,5 @@
 ---
-title: "Change Data Capture Service for Oracle by Attunity |Microsoft 文件"
+title: "Attunity Oracle 異動資料擷取服務 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
-ms.openlocfilehash: 1f1ce0a4f9e616f38f4b99ad220a7c7e8ba6a2fc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 5438d58a852f5f61cd45b3f9b74a7a7ed5383c47
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取服務
   Oracle CDC 服務是一種 Windows 服務，可掃描 Oracle 交易記錄，並將相關 Oracle 資料表的變更擷取到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 變更資料表中。 用來儲存從 Oracle 擷取之變更的 SQL 變更資料表與原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異動資料擷取功能中所使用的變更資料表類型相同。 如此一來，取用這些變更就像取用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫變更一樣輕鬆。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 09/28/2017
 ### <a name="source-oracle-database"></a>來源 Oracle 資料庫  
   
 -   Oracle Database 10g Release 2
--   Oracle Database 11g Release 1 和 2 版
+-   Oracle Database 11g Release 1 和 Release 2
 -   Oracle Database 12c 正在進行傳統安裝。 (不支援多租用戶安裝。)  
   
 ### <a name="target-sql-server-database"></a>目標 SQL Server 資料庫  
@@ -91,4 +89,3 @@ ms.lasthandoff: 09/28/2017
  [使用 Oracle CDC 服務](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "catalog.event_messages |Microsoft 文件"
+title: catalog.event_messages | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a0db5ace2a95bea93189cb48378b01a4ba599942
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c1569b4bb562d9342792e4ff9cda58ffe3714eb2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +31,14 @@ ms.lasthandoff: 09/26/2017
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|bigint|事件訊息的唯一識別碼。|  
-|Operation_id|bigint|作業的類型。<br /><br /> 如需作業類型的清單，請參閱[catalog.operations &#40;SSISDB 資料庫 &#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
+|Operation_id|bigint|作業的類型。<br /><br /> 如需作業類型的清單，請參閱 [catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)。|  
 |Message_time|datetimeoffset(7)|建立訊息的時間。|  
-|Message_type|smallint|顯示的訊息類型。 如需訊息類型的詳細資訊，請參閱[catalog.operation_messages &#40;SSISDB 資料庫 &#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
+|Message_type|smallint|顯示的訊息類型。 如需訊息類型的詳細資訊，請參閱 [catalog.operation_messages &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)。|  
 |Message_source_type|smallint|訊息的來源。|  
 |message|nvarchar(max)|訊息的文字。|  
-|Extended_info_id|bigint|在中找到的其他相關資訊的作業訊息，ID [catalog.extended_operation_info &#40;SSISDB 資料庫 &#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)檢視。|  
+|Extended_info_id|bigint|在 [catalog.extended_operation_info &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) 檢視中所找到，且與作業訊息相關之其他資訊的識別碼。|  
 |Package_name|nvarchar(260)|封裝檔案的名稱。|  
-|Event_name|nvarchar （1024)|與訊息相關聯的執行階段事件。|  
+|Event_name|nvarchar(1024)|與訊息相關聯的執行階段事件。|  
 |Message_source_name|nvarchar(4000)|訊息來源的封裝元件。|  
 |Message_source_id|nvarchar(38)|訊息來源的唯一識別碼。|  
 |Subcomponent_name|nvarchar(4000)|訊息來源的資料流程元件。<br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 引擎傳回訊息時，SSIS.Pipeline 會出現在這個資料行中。|  
@@ -66,12 +64,11 @@ ms.lasthandoff: 09/26/2017
   
 -   作業的 READ 權限  
   
--   成員資格**ssis_admin**資料庫角色。  
+-   **ssis_admin** 資料庫角色的成員資格。  
   
--   成員資格**sysadmin**伺服器角色。  
+-   **sysadmin** 伺服器角色的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
  [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
   
-

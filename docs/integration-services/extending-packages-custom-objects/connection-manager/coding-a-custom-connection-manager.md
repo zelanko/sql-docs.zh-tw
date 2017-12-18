@@ -1,5 +1,5 @@
 ---
-title: "程式碼撰寫自訂連接管理員 |Microsoft 文件"
+title: "撰寫自訂連線管理員的程式碼 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,27 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom connection managers [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c8117a84ee1dcbd78de5015e5e9e21bfa0e8940
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ab9cc5d32606564b4b79ac5270217fd849e97fd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-connection-manager"></a>撰寫自訂連接管理員的程式碼
   建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 基底類別的類別，並將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 屬性 (attribute) 套用到類別之後，必須覆寫基底類別的屬性 (properties) 與方法的實作，才可提供自訂功能。  
   
- 如需自訂連接管理員的範例，請參閱[開發的自訂連接管理員的使用者介面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)。 在本主題中所顯示的程式碼範例是取自＜SQL Server 自訂連接管理員＞範例。  
+ 如需連線管理員範例，請參閱[開發自訂連線管理員的使用者介面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)。 在本主題中所顯示的程式碼範例是取自＜SQL Server 自訂連接管理員＞範例。  
   
 > [!NOTE]  
 >  已經建置到 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中的大多數工作、來源和目的地只能搭配特定類型的內建連接管理員一起使用。 因此，不能使用內建工作和元件來測試這些範例。  
@@ -196,13 +192,13 @@ public override Microsoft.SqlServer.Dts.Runtime.DTSExecResult Validate(Microsoft
 ```  
   
 ### <a name="persisting-the-connection-manager"></a>保存連接管理員  
- 通常，您不必實作連接管理員的自訂持續性。 只有在物件的屬性使用複雜的資料類型時，才需要自訂持續性。 如需詳細資訊，請參閱[Integration services 開發自訂物件](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)。  
+ 通常，您不必實作連接管理員的自訂持續性。 只有在物件的屬性使用複雜的資料類型時，才需要自訂持續性。 如需詳細資訊，請參閱[開發 Integration Services 的自訂物件](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)。  
   
 ## <a name="working-with-the-external-data-source"></a>使用外部資料來源  
  支援連接至外部資料來源的方法是自訂連接管理員最重要的方法。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 與 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A> 方法是在設計階段與執行階段的不同時間呼叫。  
   
 ### <a name="acquiring-the-connection"></a>取得連接  
- 您需要決定哪些類型的物件適用於 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 方法，從自訂連接管理員傳回。 例如，檔案連接管理員只會傳回包含路徑與檔案名稱的字串，而 ADO.NET 連接管理員則會傳回已經開啟的 Managed 連接物件。 OLE DB 連接管理員會傳回原生 OLE DB 連接物件，而此物件無法從 Managed 程式碼中加以使用。 自訂 SQL Server 連接管理員，從中內製作了本主題中的程式碼片段，傳回開啟**SqlConnection**物件。  
+ 您需要決定哪些類型的物件適用於 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 方法，從自訂連接管理員傳回。 例如，檔案連接管理員只會傳回包含路徑與檔案名稱的字串，而 ADO.NET 連接管理員則會傳回已經開啟的 Managed 連接物件。 OLE DB 連接管理員會傳回原生 OLE DB 連接物件，而此物件無法從 Managed 程式碼中加以使用。 本主題中的程式碼片段是取自 SQL Server 連線管理員，它會傳回已開啟的 **SqlConnection** 物件。  
   
  連接管理員的使用者需要事先知道需要哪些類型的物件，這樣他們才能將傳回的物件轉換為適當的類型，並存取其方法與屬性。  
   
@@ -269,8 +265,7 @@ public override void ReleaseConnection(object connection)
 ```  
  
 ## <a name="see-also"></a>另請參閱  
- [建立自訂連接管理員](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
- [開發自訂連接管理員的使用者介面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [建立自訂連線管理員](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
+ [開發自訂連線管理員的使用者介面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

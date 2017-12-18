@@ -2,9 +2,12 @@
 title: "訂閱，同步處理記錄 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5773373f1b865e8f3d36eebb3f459bbc84fc7e70
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f7f8b884fedc5f602297e4aa579d5eda7a1011f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subscription-synchronization-history"></a>訂閱，同步處理記錄
-  **[同步處理記錄]** 索引標籤會顯示有關合併代理程式的詳細資訊，包括狀態、發行項統計資料、記錄、參考訊息和錯誤訊息等等。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [同步處理記錄] 索引標籤會顯示合併代理程式的詳細資訊，包括狀態、發行項統計資料、記錄、資訊訊息及任何錯誤訊息。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  從 **[檢視]** 功能表中選取要檢視的合併代理程式工作階段，再於 **[合併代理程式工作階段]**方格中選取特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[在選取的工作階段中處理的發行項]**的方格中。  
   
  **[檢視]**  
