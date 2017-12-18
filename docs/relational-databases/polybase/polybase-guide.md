@@ -8,8 +8,7 @@ ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -22,21 +21,19 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f7ce518d2588e07ae90842f92a7e9ee47cfc5543
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: HT
-ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
-ms.openlocfilehash: f9fe99ddd630b8444819c94111f6a363e96105f5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="polybase-guide"></a>PolyBase 指南
-
-  PolyBase 是一種技術，可透過 t-sql 語言存取資料庫外部的資料。  在 SQL Server 2016 中，它可讓您對 Hadoop 中的外部資料執行查詢，或從 Azure Blob 儲存體匯入/匯出資料。 查詢已最佳化，可將計算推送到 Hadoop。 在 Azure SQL 資料倉儲中，您可以從 Azure Blob 儲存體和 Azure Data Lake Store 中匯入/匯出資料。
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase 是一種技術，可透過 t-sql 語言存取資料庫外部的資料。  在 SQL Server 2016 中，它可讓您對 Hadoop 中的外部資料執行查詢，或從 Azure Blob 儲存體匯入/匯出資料。 查詢已最佳化，可將計算推送到 Hadoop。 在 Azure SQL 資料倉儲中，您可以從 Azure Blob 儲存體和 Azure Data Lake Store 中匯入/匯出資料。
   
   
  若要使用 PolyBase，請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)。  
@@ -82,4 +79,3 @@ ms.lasthandoff: 07/31/2017
 |[PolyBase, 疑難排解](../../relational-databases/polybase/polybase-troubleshooting.md)|管理 PolyBase 查詢的技術。 使用動態管理檢視 (DMV) 來監視 PolyBase 查詢，並了解如何讀取 PolyBase 查詢計劃來找出效能瓶頸。|  
   
   
-

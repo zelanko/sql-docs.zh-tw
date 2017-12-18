@@ -2,9 +2,12 @@
 title: "CursorOpen 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef99bb8938a8a565d98fe624567a08502a2d2f0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 276c1b736886099672a38b85e48f982291e8ae1e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen 事件類別
-  **CursorOpen** 事件類別描述應用程式開發介面 (API) 資料指標中發生的資料指標開啟事件。 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 定義要與資料指標建立關聯的 SQL 陳述式、定義資料指標選項，並擴展資料指標時，就會發生資料指標開啟事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **CursorOpen** 事件類別描述應用程式開發介面 (API) 資料指標中發生的資料指標開啟事件。 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 定義要與資料指標建立關聯的 SQL 陳述式、定義資料指標選項，並擴展資料指標時，就會發生資料指標開啟事件。  
   
  可將 **CursorOpen** 事件類別包含在記錄資料指標效能的追蹤內。 當追蹤包含 **CursorOpen** 事件類別時，所造成的負擔量，是依追蹤期間針對資料庫使用資料指標的頻率而定。 如果大量使用資料指標，追蹤可能會明顯地妨礙效能。  
   

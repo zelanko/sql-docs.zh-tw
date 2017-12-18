@@ -3,8 +3,11 @@ title: "自訂功能表與快速鍵 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34aac044681d6ba558799ed7bcbedbd2fde1411e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 04f57c9717643065fa50f1364586b9b886c92c4c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自訂功能表與快速鍵
-鍵盤對應鍵可讓您按 ALT+*<single letter>* 來選取功能表命令或按鈕。 例如，若要開啟 [編輯] 功能表，請按下 ALT+E。 您可以利用 [自訂] 對話方塊來重新安排和修改工具列按鈕、功能表及功能表命令。 提供的指示將協助您利用滑鼠以及只用鍵盤來變更設定。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 鍵盤對應鍵可讓您按 ALT+*<single letter>* 來選取功能表命令或按鈕。 例如，若要開啟 [編輯] 功能表，請按下 ALT+E。 您可以利用 [自訂] 對話方塊來重新安排和修改工具列按鈕、功能表及功能表命令。 提供的指示將協助您利用滑鼠以及只用鍵盤來變更設定。  
   
 您可以從 [工具/選項] 對話方塊的 [鍵盤] 頁面上，建立使用 Ctrl 鍵的預存程序鍵盤對應鍵。  
   

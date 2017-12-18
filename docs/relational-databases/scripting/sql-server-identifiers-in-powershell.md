@@ -2,9 +2,12 @@
 title: "PowerShell 中的 SQL Server 識別碼 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cdc0185b9ac8564a47ca6e4e51b8fdb76e63a653
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 95ead7b5686d23d3318d30b84abe868d00fb1622
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell 中的 SQL Server 識別碼
-  適用於 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供者會使用 Windows PowerShell 路徑中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼可能包含 Windows PowerShell 路徑中不支援的字元。 當您使用 Windows PowerShell 路徑中的識別碼時，必須逸出這些字元或針對這些字元使用特殊編碼。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 適用於 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供者會使用 Windows PowerShell 路徑中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼可能包含 Windows PowerShell 路徑中不支援的字元。 當您使用 Windows PowerShell 路徑中的識別碼時，必須逸出這些字元或針對這些字元使用特殊編碼。  
   
 ## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Windows PowerShell 路徑中的 SQL Server 識別碼  
  Windows PowerShell 提供者會使用與 Windows 檔案系統所使用之路徑結構類似的結構來公開資料階層。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供者會實作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件的路徑。 如果是 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，磁碟機會設定為 SQLSERVER:、第一個資料夾會設定為 \SQL，而且資料庫物件會當做容器和項目來參考。 這是預設 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 執行個體中 [!INCLUDE[ssDE](../../includes/ssde-md.md)]資料庫之 Purchasing 結構描述的 Vendor 資料表路徑：  

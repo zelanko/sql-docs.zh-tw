@@ -2,9 +2,12 @@
 title: "複寫代理程式設定檔 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba2b5e4cb56cc8134a3febebb5c84ff8935a235d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 88f88d0a47ec41c18382d4247051156d65dfcf99
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-agent-profiles"></a>複寫代理程式設定檔
-  設定複寫時，會在散發者上安裝一組代理程式設定檔。 代理程式設定檔包含一組參數，代理程式每次執行時都會使用這組參數：每個代理程式在啟動過程中都會登入散發者，並查詢其設定檔內的參數。 針對使用 Web 同步處理的合併訂閱，會下載設定檔並儲存於「訂閱者」。 如果設定檔變更，則「訂閱者」中的設定檔會在下一次「合併代理程式」執行時更新。 如需有關 Web 同步處理的詳細資訊，請參閱＜ [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)＞。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 設定複寫時，會在散發者上安裝一組代理程式設定檔。 代理程式設定檔包含一組參數，代理程式每次執行時都會使用這組參數：每個代理程式在啟動過程中都會登入散發者，並查詢其設定檔內的參數。 針對使用 Web 同步處理的合併訂閱，會下載設定檔並儲存於「訂閱者」。 如果設定檔變更，則「訂閱者」中的設定檔會在下一次「合併代理程式」執行時更新。 如需有關 Web 同步處理的詳細資訊，請參閱＜ [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)＞。  
   
  複寫為每個代理程式提供預設的設定檔，並為記錄讀取代理程式、散發代理程式及合併代理程式提供其他預先定義的設定檔。 除了提供的設定檔之外，您也可以建立適合自己的應用程式需求的設定檔。 代理程式設定檔可讓您輕易變更關聯該設定檔的所有代理程式的關鍵參數。 例如，若有 20 個「快照集代理程式」，且必須變更其查詢逾時值 ( **-QueryTimeout** 參數)，則可以更新「快照集代理程式」所用的設定檔，則該類型的所有代理程式都會在下次執行時自動開始使用新值。  
   

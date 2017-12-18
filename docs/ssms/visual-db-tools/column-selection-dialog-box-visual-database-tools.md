@@ -3,8 +3,11 @@ title: "資料行選取對話方塊 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9dc761c177b2845c88a197034228eed073e811d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f391acc3059f0e263977ea4a3f834a98ce5d962f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>資料行選取對話方塊 (Visual Database Tools)
-讓您在資料庫圖表中變更資料表的 [自訂] 檢視。 [自訂] 檢視只會顯示使用者可識別的資料行屬性。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 讓您在資料庫圖表中變更資料表的 [自訂] 檢視。 [自訂] 檢視只會顯示使用者可識別的資料行屬性。  
   
 在資料表上按一下滑鼠右鍵，然後從快速鍵功能表選擇 [修改自訂檢視]，便會出現此對話方塊。  
   

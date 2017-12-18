@@ -2,9 +2,12 @@
 title: "CursorExecute 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6756b69213e3c9cd9d8f27eeab02f662445751c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3c6c48706f855065e96ebcd6c254dd2856c3e15d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 事件類別
-  **CursorExecute** 事件類別描述出現在應用程式開發介面 (API) 資料指標中的資料指標執行事件。 在資料指標準備事件所建立的執行計畫中，當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 建立及擴展資料指標時，就會發生資料指標執行事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **CursorExecute** 事件類別描述出現在應用程式開發介面 (API) 資料指標中的資料指標執行事件。 在資料指標準備事件所建立的執行計畫中，當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 建立及擴展資料指標時，就會發生資料指標執行事件。  
   
  可將 **CursorExecute** 事件類別併入用來記錄資料指標效能的追蹤中。 當 **CursorExecute** 事件類別併入追蹤時，所造成的負擔量是依追蹤期間針對資料庫使用資料指標的頻率而定。 如果大量使用資料指標，追蹤可能會明顯地妨礙效能。  
   

@@ -2,9 +2,12 @@
 title: "新增 Transact-SQL 程式碼片段 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: be592feef35a8cf875d9dce783f5843979d4f835
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dd782cbd60c23d139a980bbf943b158cb38561b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-transact-sql-snippets"></a>新增 Transact-SQL 程式碼片段
-  將您自己的 Transact-SQL 程式碼片段加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包含的預先定義程式碼片段集合。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以將自己的 Transact-SQL 程式碼片段新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中包含的預先定義程式碼片段集合。  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>建立 Transact-SQL 程式碼片段檔案  
  建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段的第一部分是使用您自己的程式碼片段文字建立 XML 檔案。 此檔案必須有 .snippet 副檔名，且必須符合 [程式碼片段結構描述參考](http://go.microsoft.com/fwlink/?LinkId=207504)的需求。 將程式碼片段語言設定為 SQL。  

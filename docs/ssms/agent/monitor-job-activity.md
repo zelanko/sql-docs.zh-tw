@@ -3,8 +3,11 @@ title: "監視作業活動 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 469142ab52bedda92cba1650982afbc6809b77ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ddc5235281231c8d1aa08a22e7f55fe4131480d5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="monitor-job-activity"></a>監視作業活動
-您可以使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業活動監視器」，監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體上所有已定義作業的目前活動。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業活動監視器」，監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體上所有已定義作業的目前活動。  
   
 ## <a name="sql-server-agent-sessions"></a>SQL Server Agent 工作階段  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 每次服務啟動時，Agent 都會建立新的工作階段。 建立新的工作階段時， **msdb** 資料庫中的 **sysjobactivity** 資料表就會填入所有現有的已定義作業。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 重新啟動時，這個資料表會保留作業的上一個活動。 每一個工作階段會記錄從作業開始到完成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 一般作業活動。 這些工作階段的相關資訊儲存在 **msdb** 資料庫的 **syssessions** 資料表中。  

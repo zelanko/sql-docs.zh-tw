@@ -3,8 +3,11 @@ title: "選擇名稱對話方塊 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b77cc551ac361367c4007669f46a672fca7d11fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 12ffe1100786f9e31c7036f6a7efb8e79542ca21
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>選擇名稱對話方塊 (Visual Database Tools)
-當您選擇 [檔案] 功能表中的 [儲存 \<TableName>]、[儲存 <DiagramName>] 或 [儲存 <ViewName>] 時，即會顯示此對話方塊。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 當您選擇 [檔案] 功能表中的 [儲存 \<表格名稱>]、[儲存 <DiagramName>] 或 [儲存 <ViewName>] 時，即會顯示此對話方塊。  
   
 **輸入資料表、圖表或檢視的名稱**  
 提供可供您輸入資料表、圖表或檢視名稱的文字方塊。  

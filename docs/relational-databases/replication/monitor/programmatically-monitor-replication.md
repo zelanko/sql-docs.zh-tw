@@ -2,9 +2,12 @@
 title: "以程式設計方式監視複寫 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -31,14 +34,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ab76000d3986678af0be8b85303a6b2df89ea34
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: caa7d7966fee784794884d7e840f0802c4a7774d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programmatically-monitor-replication"></a>以程式設計方式監視複寫
-  「複寫監視器」是一個允許您監視複寫拓撲之全面健全狀況的圖形化工具。 您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 複寫預存程序或 Replication Management Objects (RMO)，以程式設計的方式存取相同的監視資料。 這些物件可用來設計下列工作：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 複寫監視器是一個允許您監視複寫拓撲的圖形化工具。 您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 複寫預存程序或 Replication Management Objects (RMO)，以程式設計的方式存取相同的監視資料。 這些物件可用來設計下列工作：  
   
 -   監視「發行者」、發行集和訂閱的狀態。  
   
@@ -126,13 +129,13 @@ ms.lasthandoff: 11/09/2017
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetLastSessionSummaryDataRow%2A> - 傳回 <xref:System.Data.DataRow> 物件，提供最後一個「合併代理程式」工作階段的相關資訊。 請記下此工作階段的 **Session_id** 資料行值。  
   
-4.  (選擇性) 呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> ，以重新整理以 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 所傳遞之 *mss,* 物件的資料，或呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> ，以重新整理以 <xref:System.Data.DataRow> 所傳遞之 *drRefresh*。  
+4.  (選擇性) 呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> ，以重新整理以 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 所傳遞之 *T:Microsoft.SqlServer.Replication.MergeSessionSummary* 物件的資料，或呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> ，以重新整理以 <xref:System.Data.DataRow> 所傳遞之 *T:System.Data.DataRow*。  
   
 5.  使用步驟 3 中取得的工作階段識別碼，呼叫下列其中一個方法來傳回有關特定工作階段詳細資料的資訊。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> - 傳回 <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> ，傳回 *SessionId*。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> - 傳回 <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> ，傳回 *T:Microsoft.SqlServer.Replication.MergeSessionDetail*。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> - 傳回 <xref:System.Data.DataSet> 物件，提供指定之 *SessionId*。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> - 傳回 <xref:System.Data.DataSet> 物件，提供指定之 *T:Microsoft.SqlServer.Replication.MergeSessionDetail*。  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>若要監視在散發者端所有發行集的複寫屬性  
   
@@ -270,7 +273,7 @@ ms.lasthandoff: 11/09/2017
   
         |值|說明|  
         |-----------|-----------------|  
-        |1|**expiration** - 監視交易式發行集的訂閱是否即將到期。|  
+        |@shouldalert|**expiration** - 監視交易式發行集的訂閱是否即將到期。|  
         |2|**latency** - 監視交易式發行集的訂閱效能。|  
         |4|**mergeexpiration** - 監視合併式發行集的訂閱是否即將到期。|  
         |5|**mergeslowrunduration** - 監視透過低頻寬 (撥號) 連接進行合併同步處理的持續時間。|  

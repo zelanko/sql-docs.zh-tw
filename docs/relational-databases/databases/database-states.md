@@ -2,9 +2,12 @@
 title: "資料庫狀態 | Microsoft 文件"
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 997df06a840d50669a643dd4d662d00ec896eaa2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d4743b5a903630f267c48c42aced53776e8bc073
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-states"></a>資料庫狀態
-  資料庫永遠都在特定的狀態。 例如，這些狀態包括 ONLINE、OFFLINE 或 SUSPECT。 若要驗證資料庫目前的狀態，請選取 **sys.databases** 目錄檢視中的 [state_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行或是在 **DATABASEPROPERTYEX** 函數中的 [Status](../../t-sql/functions/databasepropertyex-transact-sql.md) 屬性。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 資料庫永遠都在特定的狀態。 例如，這些狀態包括 ONLINE、OFFLINE 或 SUSPECT。 若要驗證資料庫目前的狀態，請選取 **sys.databases** 目錄檢視中的 [state_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行或是在 **DATABASEPROPERTYEX** 函數中的 [Status](../../t-sql/functions/databasepropertyex-transact-sql.md) 屬性。  
   
 ## <a name="database-state-definitions"></a>資料庫狀態定義  
  下表定義資料表狀態。  

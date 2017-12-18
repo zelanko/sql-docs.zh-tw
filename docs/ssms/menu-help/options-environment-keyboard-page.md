@@ -3,8 +3,11 @@ title: "選項 (環境 - 鍵盤頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6f0a390c8492d331de1524ed371dddcdf28ebc8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 27217dad35a1fc323c92cd0db69c867fcbc7a766
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---keyboard-page"></a>選項 (環境 - 鍵盤頁面)
-[選項] 對話方塊可以讓您自訂 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的鍵盤配置。 使用此選項以選擇鍵盤配置。 若要存取此頁面，請按一下 [工具] 功能表上的 [選項]，選取 [環境] 資料夾，然後按一下 [鍵盤]。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [選項] 對話方塊可以讓您自訂 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的鍵盤配置。 使用此選項以選擇鍵盤配置。 若要存取此頁面，請按一下 [工具] 功能表上的 [選項]，選取 [環境] 資料夾，然後按一下 [鍵盤]。  
   
 [鍵盤配置] 下拉式清單提供可用的快速鍵集合。 若要載入特定配置，請從清單中選取。 準備離開 [選項] 對話方塊時，請按一下 [確定]。 您選取的配置將載入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]。  
   

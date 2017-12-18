@@ -3,8 +3,11 @@ title: "在資料庫圖表設計工具中巡覽 (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c07ed4430746956d41af750140d24066c49217f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2745dbdedeac792e45e9d7c9cc59fb95f7bca7b9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>在資料庫圖表設計工具中導覽 (Visual Database Tools)
-您可使用鍵盤和滑鼠，在 [資料庫圖表設計工具] 中工作。 如需在 [資料庫圖表設計工具] 中所用的特定方法，請參閱下列資料表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可使用鍵盤和滑鼠，在資料庫圖表設計工具中工作。 如需在 [資料庫圖表設計工具] 中所用的特定方法，請參閱下列資料表。  
   
 |**若要**|**按鍵**|  
 |----------|-------------|  

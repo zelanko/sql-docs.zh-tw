@@ -3,8 +3,11 @@ title: "使用參數查詢 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3deb83bf9fdaafd3598080e5889999b2630aaf22
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7a74efc549ad7e04191e518ba17b1a88c230d8cf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>使用參數查詢 (Visual Database Tools)
-在許多情況下，建立可以在應用程式中重複使用多次，而每次輸入都不相同的查詢，是有幫助的。 在此章節中，您能夠獲得關於如何針對這些一般用途建立參數查詢的詳細資訊。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在許多情況下，建立可以在應用程式中重複使用多次，而每次輸入都不相同的查詢，是有幫助的。 在此章節中，您能夠獲得關於如何針對這些一般用途建立參數查詢的詳細資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
 [參數查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/parameter-queries-visual-database-tools.md)  

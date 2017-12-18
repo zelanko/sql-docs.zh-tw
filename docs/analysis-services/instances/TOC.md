@@ -15,7 +15,7 @@
 ## [Kerberos 驗證](configure-analysis-services-for-kerberos-constrained-delegation.md)  
 ## [SPN 註冊](spn-registration-for-an-analysis-services-instance.md)  
 ## [HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)  
-## [資料提供者](data-providers-used-for-analysis-services-connections.md)  
+## [用戶端程式庫 (資料提供者)](data-providers-used-for-analysis-services-connections.md)  
 ## [中斷使用者和工作階段的連接](disconnect-users-and-sessions-on-analysis-services-server.md)  
 # [監視 Analysis Services 執行個體](monitor-an-analysis-services-instance.md)  
 ## [SQL Server Profiler](use-sql-server-profiler-to-monitor-analysis-services.md)  

@@ -3,8 +3,11 @@ title: "在專案中建立查詢與連接的關聯性 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bdda055c57486f6f20216b30a3c41e0a8c433e1f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 36217d01e2858e7193b1d7cbe72e734d6831281f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="associate-a-query-with-a-connection-in-a-project"></a>在專案中建立查詢與連接的關聯性
-如果建立不含連接的查詢，或在專案之間移動查詢，這項查詢都不會與目前專案中的連接相關聯。  
+# <a name="associate-a-query-with-a-connection-in-a-project"></a>建立查詢與專案中連接的關聯性
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果建立不含連線的查詢，或在專案之間移動查詢，這項查詢都不會與目前專案中的連線建立關聯。  
   
 ### <a name="to-associate-a-query-with-a-connection-in-a-project"></a>若要建立查詢與專案中連接的關聯性  
   

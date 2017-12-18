@@ -2,9 +2,12 @@
 title: "建立使用範本的指令碼 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fc7fd3fbed4069c45382c404fe1a8b65b81f366f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e042e4083d3e62543cee463e2d8456f162b945aa
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-3-1---create-scripts-using-templates"></a>課程 3-1 - 建立使用範本的指令碼
-Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供大量包含許多一般工作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式之指令碼範本。 這些範本包含使用者提供值的參數，如資料表名稱。 您可以利用這些參數，只輸入名稱一次，之後，便自動將名稱複製到指令碼內所有必要的位置。 您可以撰寫您自己的自訂範本來支援您最常撰寫的指令碼。 您也可以重新組織範本樹狀結構、移動範本，或建立新資料夾來存放範本。 在下列練習中，您將利用範本，指定定序範本來建立資料庫。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供大量包含許多一般工作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式之指令碼範本。 這些範本包含使用者提供值的參數，如資料表名稱。 您可以利用這些參數，只輸入名稱一次，之後，便自動將名稱複製到指令碼內所有必要的位置。 您可以撰寫您自己的自訂範本來支援您最常撰寫的指令碼。 您也可以重新組織範本樹狀結構、移動範本，或建立新資料夾來存放範本。 在下列練習中，您將利用範本，指定定序範本來建立資料庫。  
   
 ## <a name="using-templates"></a>使用範本  
   

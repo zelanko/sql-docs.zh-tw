@@ -2,9 +2,12 @@
 title: "字串資料類型的 FOR XML 支援 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6aa21fb590fb43d54a1319b6d5b114f45ca3b467
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5b4b3103da8a566932c356753b816cc2e5b028f5
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="for-xml-support-for-string-data-types"></a>字串資料類型的 FOR XML 支援
-  實體化資料中 FOR XML 空白字元所產生的 XML。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 實體化資料中 FOR XML 空白字元所產生的 XML。  
   
  下列範例將建立範例資料表 **T** ，並插入含有換行字元、歸位字元以及定位字元的範例資料。 SELECT 陳述式會從資料表擷取資料。  
   

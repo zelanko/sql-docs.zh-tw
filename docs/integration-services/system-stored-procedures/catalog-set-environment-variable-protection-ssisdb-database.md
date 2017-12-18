@@ -1,5 +1,5 @@
 ---
-title: "catalog.set_environment_variable_protection （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.set_environment_variable_protection (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6d282ca675a35e84f2d283d3ad85b15039a15e52
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ba92aca58744a652314630f786ea6783e51b1cbb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetenvironmentvariableprotection-ssisdb-database"></a>catalog.set_environment_variable_protection (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +38,17 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @folder_name =] *folder_name*  
- 包含環境之資料夾的名稱。 *Folder_name*是**nvarchar （128)**。  
+ [ @folder_name = ] *folder_name*  
+ 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
   
- [ @environment_name =] *environment_name*  
- 環境的名稱。 *Environment_name*是**nvarchar （128)**。  
+ [ @environment_name = ] *environment_name*  
+ 環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
   
- [ @variable_name =] *variable_name*  
- 環境變數的名稱。 *Variable_name*是**nvarchar （128)**。  
+ [ @variable_name = ] *variable_name*  
+ 環境變數的名稱。 *variable_name* 是 **nvarchar(128)**。  
   
- [ @sensitive =]*機密*  
- 指出變數是否包含機密值。 使用 `1` 值表示環境變數的值是機密值，或者，使用 `0` 值則表示該值不是機密值。 機密值會在儲存時加密。 非機密值則會儲存為純文字。 *機密*參數是**元**。  
+ [ @sensitive = ] *sensitive*  
+ 指出變數是否包含機密值。 使用 `1` 值表示環境變數的值是機密值，或者，使用 `0` 值則表示該值不是機密值。 機密值會在儲存時加密。 非機密值則會儲存為純文字。 *sensitive* 參數是 **bit**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
@@ -63,9 +61,9 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
   
 -   環境的 READ 和 MODIFY 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會引發錯誤或警告的某些條件：  
@@ -79,4 +77,3 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
 -   使用者未具備適當的權限  
   
   
-

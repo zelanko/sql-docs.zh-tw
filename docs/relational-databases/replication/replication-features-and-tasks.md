@@ -2,9 +2,12 @@
 title: "複寫功能及工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/11/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b4ef422b369e65855321be32b171522337441e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fff6d14c8303b4f627492c258177331f8d7db2a2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-features-and-tasks"></a>複寫功能及工作
-  尋找任何人 (設計人員、開發人員、分析師或管理員) 設計及實作複寫解決方案所需的資訊。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 尋找任何人 (設計師、開發人員、分析師或系統管理員) 設計及實作複寫解決方案所需的資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
   

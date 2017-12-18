@@ -3,8 +3,11 @@ title: "資料行清單對話方塊 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bcc0686b1d0cca66764bde9dffe7ab725fd6e50f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7347d75f3f213cb5b39fa753fc33a184a36b29cf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>資料行清單對話方塊 (Visual Database Tools)
-撰寫查詢時，如果能夠看到您在資料表值物件中選取的可用資料行清單會相當有用。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 撰寫查詢時，如果能夠看到您在資料表值物件中選取的可用資料行清單會相當有用。  
   
 若要存取這個對話方塊，在 [查詢設計工具] 功能表中，以滑鼠右鍵按一下 [圖表] 窗格中的資料表值物件的標頭，再按一下 [屬性]。 在 [屬性] 視窗中，按一下 [資料表清單] 欄位。 再按欄位右邊的省略符號 (**…**)。  
   

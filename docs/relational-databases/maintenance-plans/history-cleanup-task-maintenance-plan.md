@@ -2,9 +2,12 @@
 title: "記錄清除工作 (維護計畫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc83d234dd463f352fde14e3fb56422e7bcbc1cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4d88b3e5b54b2ede47272d58717b7088f0e0825f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>記錄清除工作 (維護計畫)
-  使用 **[記錄清除工作]** 對話方塊，即可從 msdb 資料庫的資料表中捨棄舊的記錄資訊。 這個工作支援備份和還原記錄、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業記錄，以及維護計畫記錄的刪除。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [記錄清除工作] 對話方塊，即可從 msdb 資料庫的資料表中捨棄舊的記錄資訊。 這個工作支援備份和還原記錄、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業記錄，以及維護計畫記錄的刪除。  
   
  此陳述式會使用 **sp_purge_jobhistory** 和 **sp_delete_backuphistory** 陳述式。  
   

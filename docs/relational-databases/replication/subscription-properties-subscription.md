@@ -2,9 +2,12 @@
 title: "訂閱屬性 - &lt;訂閱&gt; | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59ab8e4fd557d3c87ae891865df72da9af9d9db9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f1d9da63f72d99df307223307c2759a9dc6d1657
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subscription-properties---ltsubscriptiongt"></a>訂閱屬性 - &lt;訂閱&gt;
-  此章節提供有關 **[訂閱屬性]** 對話方塊的資訊：  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 本節提供有關 [訂閱屬性] 對話方塊的資訊：  
   
 -   [訂閱屬性 - 訂閱者](../../relational-databases/replication/subscription-properties-subscriber.md)涵蓋了訂閱者端可用的訂閱屬性 (僅限提取訂閱)。  
   

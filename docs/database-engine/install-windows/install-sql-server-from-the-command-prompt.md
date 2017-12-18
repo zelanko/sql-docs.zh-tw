@@ -2,11 +2,12 @@
 title: "從命令提示字元安裝 SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -89,14 +90,14 @@ caps.latest.revision: "255"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 0015d57b64757afb886fb6ded1d5803d93ed13e3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cf7f4a160fe33cad667f1b469ee6178835d0c384
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
-  在執行 SQL Server 安裝程式之前，檢閱 [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在執行 SQL Server 安裝程式之前，請檢閱[規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)。  
   
  在命令提示字元中安裝新的 SQL Server 執行個體，可讓您指定要安裝的功能以及這些功能應該設定的方式。 您也可以指定與安裝程式使用者介面的無訊息、基本或完整互動。  
   

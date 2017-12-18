@@ -1,5 +1,5 @@
 ---
-title: "catalog.set_execution_property_override_value |Microsoft 文件"
+title: catalog.set_execution_property_override_value | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 20f2c882a78f5e60931b0152d5877898e1972d0a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d8e561e94e3dee033941c5defade34d28b1ac89c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +38,20 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @execution_id =] *execution_id*  
- 執行之執行個體的唯一識別碼。 *Execution_id*是**bigint**。  
+ [ @execution_id = ] *execution_id*  
+ 執行之執行個體的唯一識別碼。 *execution_id* 是 **bigint**。  
   
- [ @property_path =] *property_path*  
- 封裝中之屬性的路徑。 *Property_path*是**nvarchar （4000)**。  
+ [ @property_path = ] *property_path*  
+ 封裝中之屬性的路徑。 *property_path* 是 **nvarchar(4000)**。  
   
- [ @property_value =] *property_value*  
- 要指派給屬性的覆寫值。 *Property_value*是**nvarchar （max)**。  
+ [ @property_value = ] *property_value*  
+ 要指派給屬性的覆寫值。 *property_value* 是 **nvarchar(max)**。  
   
- [ @sensitive =]*機密*  
- 當值為 1 時，屬性為敏感值，而且會在儲存時加密。 當值為 0 時，屬性不是敏感值，而且會儲存為純文字。 *機密*引數是**元**。  
+ [ @sensitive = ] *sensitive*  
+ 當值為 1 時，屬性為敏感值，而且會在儲存時加密。 當值為 0 時，屬性不是敏感值，而且會儲存為純文字。 *sensitive* 引數是 **bit**。  
   
 ## <a name="remarks"></a>備註  
- 此程序會執行相同的功能**屬性會覆寫**一節中**進階** 索引標籤**執行封裝**對話方塊。 屬性的路徑衍生自**封裝路徑**「 封裝 」 工作的屬性。  
+ 這個程序會與 [執行封裝] 對話方塊之 [進階] 索引標籤中的 [屬性覆寫] 區段執行相同的功能。 屬性的路徑衍生自封裝工作的 [封裝路徑] 屬性。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
@@ -76,4 +74,3 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
   
-

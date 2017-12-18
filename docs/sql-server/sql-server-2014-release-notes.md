@@ -2,10 +2,13 @@
 title: "SQL Server 2014 版本資訊 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2014
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c507363ad05be7410ae69fc6d5f6748ad1738cb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
-這份版本資訊文件說明安裝或疑難排解 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]之前應該閱讀的已知問題。  
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)] 這份版本資訊文件說明安裝或疑難排解 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 之前應該閱讀的已知問題。  
   
 ## <a name="top"></a>目錄  
 [1.0 安裝之前](#BeforeInstall)  

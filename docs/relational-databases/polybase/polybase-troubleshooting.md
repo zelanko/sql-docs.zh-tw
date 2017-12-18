@@ -8,31 +8,27 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - PolyBase, monitoring
 - PolyBase, performance monitoring
-helpviewer_keywords:
-- PolyBase, troubleshooting
+helpviewer_keywords: PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea89e4192c833ce569c336f5f2eb5f7382c136ab
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: HT
-ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
-ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase, 疑難排解
-
-  可使用您在本主題中找到的技術，為 PolyBase 的問題疑難排解。  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 可使用您在本主題中找到的技術，為 PolyBase 的問題疑難排解。  
   
 ## <a name="catalog-views"></a>目錄檢視  
  使用此處所列的類別目錄檢視管理 PolyBase 作業。  
@@ -145,7 +141,7 @@ ms.lasthandoff: 10/12/2017
   
 ## <a name="to-view-the--polybase-query-plan"></a>檢視 PolyBase 查詢計劃  
   
-1.  在 SSMS 中，啟用 [包括實際執行計畫] \(Ctrl + M) 並執行查詢。  
+1.  在 SSMS 中，啟用 [包括實際執行計畫] (Ctrl + M) 並執行查詢。  
   
 2.  按一下 [執行計劃] 索引標籤。  
   
@@ -248,4 +244,3 @@ PolyBase 不會與名稱節點 HA 服務互動，例如目前的 Zookeeper 或 K
 
 ## <a name="see-also"></a>另請參閱
 [對 PolyBase Kerberos 的連線問題進行疑難排解](polybase-troubleshoot-connectivity.md)
-

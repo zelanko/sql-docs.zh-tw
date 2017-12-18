@@ -3,8 +3,11 @@ title: "選項 (SQL Server 物件總管 - 指令碼頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd98889c12d8a292e0f1fe64d390fc9f51578ce5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b49bce06a339326d1458827f2712130c725453d3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>選項 (SQL Server 物件總管 - 指令碼頁面)
-使用此頁面設定指定碼選項，以在**物件總管**之物件操作功能表的下列命令中使用：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此頁面設定指定碼選項，以在物件總管之物件操作功能表的下列命令中使用：  
   
 -   使用者資料表與檢視的 [編輯] 命令。  
   

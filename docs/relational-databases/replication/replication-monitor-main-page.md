@@ -2,9 +2,12 @@
 title: "複寫監視器的主要頁面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ea7953ff3052c4880564ab566b549336d542345
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 390fc9dbb3202793d1dcd80e253586adf193b6a6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-monitor-main-page"></a>複寫監視器，主要頁面
-  複寫監視器可讓您跨複寫拓撲，追蹤發行集和訂閱的狀態與效能。 下列主題提供詳細資訊：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 複寫監視器可讓您跨複寫拓撲，追蹤發行集和訂閱的狀態與效能。 下列主題提供詳細資訊：  
   
 -   如需複寫監視器概觀，請參閱[監視複寫](../../relational-databases/replication/monitor/monitoring-replication-overview.md)。  
   

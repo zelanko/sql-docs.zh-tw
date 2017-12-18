@@ -2,9 +2,12 @@
 title: "SQL Server 安裝的新增功能 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-non-specified
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d41437182f423016da8e25c71bd493c5f1816f95
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8754cccdcecd0c9ce12e2416e62234f0857aa8c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 安裝的新增功能
-
- 只支援安裝 x64 處理器。 如需詳細資訊，請參閱[安裝 SQL Server 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 只支援安裝 x64 處理器。 如需詳細資訊，請參閱[安裝 SQL Server 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
   
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的安裝會提示您指定目錄，用來儲存所擷取的封裝。 如未輸入位置，伺服器會預設為電腦的系統磁碟機。 在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安裝完成之後，仍會保留所擷取的檔案。  
   

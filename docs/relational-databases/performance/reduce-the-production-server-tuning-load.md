@@ -2,9 +2,12 @@
 title: "降低生產伺服器的微調負載 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 860458ebec0954d872b31bceb4443450bf96ad21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0da94113a0d79705e95790584302e6c17e6f9970
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>降低生產伺服器的微調負載
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會仰賴查詢最佳化工具來分析工作負載以及提出微調建議。 針對實際伺服器執行這項分析會增加伺服器負載，而且可能會在微調工作階段期間減損伺服器效能。 除了實際伺服器以外，您可以使用測試伺服器來減少微調工作階段期間對伺服器負載造成的影響。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會仰賴查詢最佳化工具來分析工作負載以及提出微調建議。 針對實際伺服器執行這項分析會增加伺服器負載，而且可能會在微調工作階段期間減損伺服器效能。 除了實際伺服器以外，您可以使用測試伺服器來減少微調工作階段期間對伺服器負載造成的影響。  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Database Engine Tuning Advisor 使用測試伺服器的方式  
  測試伺服器的傳統使用方式是，將生產伺服器上所有的資料都複製到測試伺服器上，然後微調測試伺服器，再於生產伺服器上實作建議項目。 這項程序可避免對生產伺服器造成效能上的影響，但卻不是最好的解決方案。 例如，從生產伺服器複製大量資料到測試伺服器，會耗用大量的時間與資源。 此外，測試伺服器硬體不太可能和生產伺服器所部署的硬體一樣強大。 微調處理所依賴的是查詢最佳化工具，而它所產生的建議有部份卻是依據基礎硬體。 如果測試與實際伺服器的硬體不同， [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 建議的品質就會受到影響。  

@@ -1,5 +1,5 @@
 ---
-title: "資料來源 |Microsoft 文件"
+title: "資料來源 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/27/2016
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data sources [Integration Services], about data sources
+helpviewer_keywords: data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 77ca3b5849eb90d21da55989d2c9ec7ae94a53f6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: a9bdd1ee95d794dc02851da35beff5ce4ea88243
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-sources"></a>資料來源
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用的設計階段物件：資料來源。  
@@ -52,4 +49,3 @@ ms.lasthandoff: 09/27/2017
  資料來源與參考資料來源的連接管理員之間沒有相依性。 如果資料來源不再是專案的一部分，封裝將繼續有效，因為有關資料來源的資訊 (例如其連接類型和連接字串) 都包含在封裝定義中。  
   
   
-

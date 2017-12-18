@@ -3,8 +3,11 @@ title: "權限和 Visual Database Tools (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 232491b14f93a24416f1d5704b5d627ca6d1358b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ceb8a15b4f480c2f2a075928787d86803f567187
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>權限和 Visual Database Tools (Visual Database Tools)
-允許使用者存取資料來源物件之使用權限，是在資料來源而非在 Visual Database Tools 中授與。 資料來源物件上所授與的存取使用權限，是由您安裝的安全性原則控制。 如果沒有存取某些資料庫物件的權限，您應該連絡資料庫管理員。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 允許使用者存取資料來源物件之使用權限，是在資料來源而非在 Visual Database Tools 中授與。 資料來源物件上所授與的存取使用權限，是由您安裝的安全性原則控制。 如果沒有存取某些資料庫物件的權限，您應該連絡資料庫管理員。  
   
 如果資料庫權限只可以用來檢視但不能修改資料庫結構，您可以使用變更指令碼來設計所做的修改，而不須將修改傳送到資料庫。  
   

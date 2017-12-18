@@ -1,5 +1,5 @@
 ---
-title: "catalog.get_project （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.get_project (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: adb3542d50db426d5908aa8786145406d7263ad6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 82aeb62f5c160ef11d3a815b73212910e9fe016e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,29 +35,29 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @folder_name =] *folder_name*  
- 包含專案之資料夾的名稱。 *folder_name*是**nvarchar （128)**。  
+ [ @folder_name = ] *folder_name*  
+ 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
   
- [ @project_name =] *project_name*  
- 專案的名稱。 *project_name*是**nvarchar （128)**。  
+ [ @project_name = ] *project_name*  
+ 專案的名稱。 *project_name* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
   
 ## <a name="result-sets"></a>結果集  
- 專案的二進位資料流當成**varbinary （max)**。 如果找不到資料夾或專案，則會不傳回任何結果。  
+ 專案的二進位資料流會當作 **varbinary(MAX)** 傳回。 如果找不到資料夾或專案，則會不傳回任何結果。  
   
 ## <a name="permissions"></a>Permissions  
  這個預存程序需要下列其中一個權限：  
   
 -   專案的 READ 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
- 下列清單描述可能會導致 get_project 預存程序引發錯誤的某些條件：  
+ 下列清單將描述可能會造成 get_project 預存程序引發錯誤的某些條件：  
   
 -   專案不存在  
   
@@ -68,4 +66,3 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
 -   使用者未具備適當的權限  
   
   
-

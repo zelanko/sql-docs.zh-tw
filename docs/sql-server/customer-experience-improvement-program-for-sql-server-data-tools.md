@@ -2,9 +2,12 @@
 title: "SQL Server Data Tools 的客戶經驗改進計畫 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d3ac32a1bded13f7d2411fac6100353f3ec7e2c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 43e2581a1d24c109ed3389d2a6686c44b870c285
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools 的客戶經驗改進計畫
-  了解客戶經驗改進計畫 (CEIP) 如何協助 Microsoft 找出可讓我們的軟體變得更好的方法。  您隨時都能設定工具來選擇加入或退出。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 了解客戶經驗改善計畫 (CEIP) 如何協助 Microsoft 找出可讓我們的軟體變得更好的方法。  您隨時都能設定工具來選擇加入或退出。  
   
 > [!NOTE]  
 >  如需 Microsoft SQL Server 2016 版本及任何其他產品和服務中使用者資料收集與使用方式的說明，請參閱這份 [Microsoft 提供的隱私權聲明](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)。  
