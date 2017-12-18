@@ -2,10 +2,10 @@
 title: "容錯移轉叢集執行個體的容錯移轉原則 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-high-availability
@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 70117aaa0f1e936fff8c8d78f82636d4e77c460b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>容錯移轉叢集執行個體的容錯移轉原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 中，一個給定時間只能有一個節點可以擁有 Windows Server 容錯移轉叢集 (WSFC) 叢集資源群組。 用戶端要求都是透過 FCI 中的此節點提供服務。 萬一發生失敗而且重新啟動不成功，群組擁有權會移至 FCI 中的另一個 WSFC 節點。 這項程序就稱為容錯移轉。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高失敗偵測的可靠性，並提供靈活的容錯移轉原則。  

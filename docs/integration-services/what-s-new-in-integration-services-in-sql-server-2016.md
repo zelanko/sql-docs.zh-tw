@@ -2,7 +2,7 @@
 title: "SQL Server 2016 Integration Services 的新功能 | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: integration-services
@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 984807a0a75321b529c5e2519da71b81bed8a788
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 36f418950cfa6d475c911c05fd9737fcecf62aa6
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 本主題描述 SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中已新增或更新的功能。 它也包含 [Azure Feature Pack for Integration Services &#40;SSIS &#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) 在SQL Server 2016 期間新增或更新的功能。  
 

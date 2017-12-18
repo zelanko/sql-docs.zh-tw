@@ -2,10 +2,10 @@
 title: "解除安裝及移除 Master Data Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
 ms.technology: setup-install
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4934ba6f54b7bcd5270f69b860b291903cba5556
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b48600926323b9963f0eef29c1355b7b1398e277
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>解除安裝及移除 Master Data Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體解除安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能時，請遵循[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) 的步驟，並於 [選取功能] 頁面指定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 為應移除的功能。 解除安裝程序會從本機電腦移除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料夾和檔案，以及解除安裝 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 。  

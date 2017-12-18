@@ -26,15 +26,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0106bf197cb7fdc4920cba421c4904706262e88a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 812980a1fffc05c40531cb961502ec2b627fd402
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
- > 如需舊版 SQL Server 的相關內容，請參閱 [SQL Server Integration Services](https://msdn.microsoft.com/en-US/library/ms141026(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱 [SQL Server Integration Services](https://msdn.microsoft.com/library/ms141026(SQL.120).aspx)。
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是可建立企業級資料整合和資料轉換方案的平台。 您可利用下列方式使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 解決複雜的商務問題：複製或下載檔案、傳送電子郵件訊息以回應事件、更新資料倉儲、清理和採礦資料，以及管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件和資料。 這些封裝可單獨使用或搭配其他封裝使用，以因應複雜的商務需求。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可從各種來源 (如 XML 資料檔案、一般檔案與關聯式資料來源) 擷取與轉換資料，然後再將該資料載入一個或多個目的地。<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含一組豐富的內建工作和轉換；建構封裝的工具；以及執行和管理封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務。 您可使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 圖形工具建立方案，而不需要撰寫任何程式碼；或者，您也可以撰寫擴充 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型，以程式設計方式建立封裝及撰寫自訂工作和其他封裝物件。
 
@@ -45,8 +45,8 @@ ms.lasthandoff: 11/20/2017
 
 ##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 取得說明
  
-- [SSIS 的 MSDN 論壇 - 詢問問題](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
-- [SSDT 和 SSMS 的 MSDN 論壇 - 詢問問題](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltool)
+- [SSIS 的 MSDN 論壇 - 詢問問題](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+- [SSDT 和 SSMS 的 MSDN 論壇 - 詢問問題](https://social.msdn.microsoft.com/Forums/home?forum=sqltool)
 - [Stack Overflow (標記 *ssis*) - 詢問問題](http://stackoverflow.com/questions/tagged/ssis)
 - [Microsoft Connect - 報告錯誤及要求功能](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - 有關 SSIS 的一般討論](https://www.reddit.com/r/SQLServer/search?q=ssis&restrict_sr=on)

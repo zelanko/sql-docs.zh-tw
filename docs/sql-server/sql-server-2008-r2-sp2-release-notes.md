@@ -1,9 +1,9 @@
 ---
 title: "SQL Server 2008 R2 SP2 版本資訊 | Microsoft Docs"
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
@@ -20,11 +20,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 274eacb496ce91ca2171c467e9265acad5ce4b79
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a497aaec3879414fe2a7c6785a180ebf77ba25de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 這份版本資訊文件描述安裝或對 Microsoft SQL Server 2008 R2 Service Pack 2 進行疑難排解之前應該閱讀的已知問題。 這份版本資訊文件適用於 SQL Server 2008 R2 SP2 的所有版本，而且僅在線上提供使用。 將定期進行更新。  

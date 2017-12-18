@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 29b1dd04ab4be364b2569f783fe6c07f2929d925
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3fcd13b5395ddb1a2e8438d26b631f62a332370e
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>使用指令碼工作傳送 HTML 郵件訊息
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] SendMail 工作只支援純文字格式的郵件訊息。 不過您可以使用指令碼工作與 .NET Framework 的郵件功能，輕鬆地傳送 HTML 郵件訊息。  
@@ -85,10 +85,10 @@ ms.lasthandoff: 11/20/2017
 ```vb  
 Public Sub Main()  
   
-  Dim htmlMessageTo As String = _  
-    Dts.Variables("HtmlEmailTo").Value.ToString  
   Dim htmlMessageFrom As String = _  
     Dts.Variables("HtmlEmailFrom").Value.ToString  
+  Dim htmlMessageTo As String = _  
+    Dts.Variables("HtmlEmailTo").Value.ToString  
   Dim htmlMessageSubject As String = _  
     Dts.Variables("HtmlEmailSubject").Value.ToString  
   Dim htmlMessageBody As String = _  
@@ -97,7 +97,7 @@ Public Sub Main()
     Dts.Variables("HtmlEmailServer").Value.ToString  
   
   SendMailMessage( _  
-      htmlMessageTo, htmlMessageFrom, _  
+      htmlMessageFrom, htmlMessageTo, _  
       htmlMessageSubject, htmlMessageBody, _  
       True, smtpServer)  
   
@@ -106,7 +106,7 @@ Public Sub Main()
 End Sub  
   
 Private Sub SendMailMessage( _  
-    ByVal SendTo As String, ByVal From As String, _  
+    ByVal From As String, ByVal SendTo As String,  _  
     ByVal Subject As String, ByVal Body As String, _  
     ByVal IsBodyHtml As Boolean, ByVal Server As String)  
   
@@ -114,7 +114,7 @@ Private Sub SendMailMessage( _
   Dim mySmtpClient As SmtpClient  
   
   htmlMessage = New MailMessage( _  
-    SendTo, From, Subject, Body)  
+    From, SendTo, Subject, Body)  
   htmlMessage.IsBodyHtml = IsBodyHtml  
   
   mySmtpClient = New SmtpClient(Server)  
@@ -128,25 +128,25 @@ End Sub
 public void Main()  
         {  
   
-            string htmlMessageTo = Dts.Variables["HtmlEmailTo"].Value.ToString();  
             string htmlMessageFrom = Dts.Variables["HtmlEmailFrom"].Value.ToString();  
+            string htmlMessageTo = Dts.Variables["HtmlEmailTo"].Value.ToString();  
             string htmlMessageSubject = Dts.Variables["HtmlEmailSubject"].Value.ToString();  
             string htmlMessageBody = Dts.Variables["HtmlEmailBody"].Value.ToString();  
             string smtpServer = Dts.Variables["HtmlEmailServer"].Value.ToString();  
   
-            SendMailMessage(htmlMessageTo, htmlMessageFrom, htmlMessageSubject, htmlMessageBody, true, smtpServer);  
+            SendMailMessage(htmlMessageFrom, htmlMessageTo, htmlMessageSubject, htmlMessageBody, true, smtpServer);  
   
             Dts.TaskResult = (int)ScriptResults.Success;  
   
         }  
   
-        private void SendMailMessage(string SendTo, string From, string Subject, string Body, bool IsBodyHtml, string Server)  
+        private void SendMailMessage(string From, string SendTo, string Subject, string Body, bool IsBodyHtml, string Server)  
         {  
   
             MailMessage htmlMessage;  
             SmtpClient mySmtpClient;  
   
-            htmlMessage = new MailMessage(SendTo, From, Subject, Body);  
+            htmlMessage = new MailMessage(From, SendTo, Subject, Body);  
             htmlMessage.IsBodyHtml = IsBodyHtml;  
   
             mySmtpClient = new SmtpClient(Server);  

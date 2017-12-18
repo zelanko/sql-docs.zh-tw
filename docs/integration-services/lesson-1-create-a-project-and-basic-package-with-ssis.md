@@ -18,15 +18,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 58a71c4ef573925218061d5796a56028d82d042b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4c51d7d251a7e445b85558dabd4bd5d4af80b4d8
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 建立專案和基本套件
 
- > 如需舊版 SQL Server 的相關內容，請參閱[課程 1：建立專案和基本套件](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[課程 1：建立專案和基本套件](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx)。
 
 在這一課，您將建立一個從單個一般檔案來源擷取資料的簡易 ETL 封裝，使用兩個查閱轉換元件來轉換資料、將該資料寫入至 **AdventureWorksDW2012** 中的 **FactCurrency**事實資料表。 在這一課，您會學到如何建立新封裝，加入和設定資料來源和目的地連接，以及使用新控制流程和資料流程元件。  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="understanding-the-package-requirements"></a>了解封裝需求  
 這個教學課程需要 Microsoft SQL Server Data Tools。  
   
-如需安裝 SQL Server Data Tools 的詳細資訊，請參閱 [SQL Server Data Tools 下載](http://msdn.microsoft.com/en-us/data/hh297027)。  
+如需有關安裝 SQL Server Data Tools 的詳細資訊，請參閱＜ [SQL Server Data Tools 下載](http://msdn.microsoft.com/data/hh297027)＞。  
   
 在建立封裝之前，您需要了解來源資料和目的地使用的格式。 了解這些資料格式之後，您就可以定義必要的轉換，將來源資料對應至目的地。  
   

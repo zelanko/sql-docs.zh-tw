@@ -2,10 +2,10 @@
 title: "容錯移轉叢集執行個體管理及維護 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-high-availability
@@ -30,11 +30,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef96b749f2dcfde79202efe935412b73ade6ddee
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 964ce2dcfcff3edb1de4822ee01982583062f958
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>容錯移轉叢集執行個體管理及維護
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 從現有 AlwaysOn 容錯移轉叢集執行個體 (FCI) 中新增或移除節點這類的維護工作是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式來完成。 其他管理工作 (例如變更 IP 位址資源、從特定 FCI 案例復原) 則是使用容錯移轉叢集管理員嵌入式管理單元 (Windows Server 容錯移轉叢集 (WSFC) 服務的嵌入式管理單元) 來完成。  

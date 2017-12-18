@@ -30,15 +30,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ac2dd0d5907c2fc0f06713b49c79db5ad548f32f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2bb672edb72392a8ae215160719aa3476c2452f1
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 匯入和匯出精靈來匯入或匯出資料
 
- > 如需舊版 SQL Server 的相關內容，請參閱[執行 SQL Server 匯入和匯出精靈](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[執行 SQL Server 匯入和匯出精靈](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx)。
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈是將資料從來源複製到目的地的簡單方式。 本概觀說明精靈可作為來源和目的地使用的資料來源，以及執行精靈所需的權限。
 
@@ -46,8 +46,8 @@ ms.lasthandoff: 11/20/2017
 如果您想要執行精靈，但電腦上尚未安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則可以安裝 SQL Server Data Tools (SSDT) 來安裝 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱 [下載 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>執行精靈時會如何？
--    **看到步驟的清單。** 如需精靈中各步驟的說明描述，請參閱 [SQL Server 匯入和匯出精靈中的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 精靈的每個頁面也都會有個別文件。  
-    \- 或 [選擇目的地] \-
+-    **看到步驟的清單。** 如需精靈中各步驟的說明描述，請參閱 [SQL Server 匯入和匯出精靈中的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 精靈的每個頁面也都會有個別文件頁面。  
+    \- 或 \-
 -   **看到一個範例。** 若要快速查看您在一般工作階段中看到的數個畫面，請在單一頁面查看此簡單範例 - [透過匯入和匯出精靈的簡單範例開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。  
 
 ##  <a name="wizardSources"></a> 可以使用哪些資料來源與目的地？  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/20/2017
 -   [連線至 MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
 
-如需如何連線至此處未列出之資料來源的資訊，請參閱 [The Connection Strings Reference](https://www.connectionstrings.com/) (連接字串參考)。 這個協力廠商網站包含範例連接字串、資料提供者的詳細資訊以及其所需的連線資訊。
+若要了解如何連線至此處未列出的資料提供者的資訊，請參閱[連接字串參考](https://www.connectionstrings.com/)。 這個協力廠商網站包含範例連接字串、資料提供者的詳細資訊以及其所需的連線資訊。
 
 ## <a name="what-permissions-do-i-need"></a>我需要哪些權限？  
  若要順利完成 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]，您至少必須具備下列權限。 如果您已經在使用您的資料來源和目的地，可能就已經有需要的權限。
