@@ -1,31 +1,27 @@
 ---
 title: "查詢存放區使用案例 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Query Store, usage scenarios
+helpviewer_keywords: Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c996f85f6c487874f1d5bc5e4839b1ea2a9c618
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 231a1a6204c9010ec5c4895b7cb7506d3b4159ff
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-store-usage-scenarios"></a>查詢存放區使用案例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +99,7 @@ ms.lasthandoff: 09/27/2017
   
     1.  開啟 [整體資料庫耗用量] 來判斷對整個資料庫的影響。  
   
-    2.  開啟 [資源耗用量排名在前的查詢]\(或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行您自己的分析)，以分析變更最重要的查詢的影響。  
+    2.  開啟 [資源耗用量排名在前的查詢] (或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行您自己的分析)，以分析變更最重要的查詢的影響。  
   
 5.  萬一無法接受新的效能，請決定要保留變更，或是執行復原。  
   
@@ -136,7 +132,7 @@ ms.lasthandoff: 09/27/2017
   
 4.  移至最新的資料庫相容性層級︰將您的工作負載公開至最新的查詢最佳化工具變更，讓它有機會建立新計劃。  
   
-5.  使用查詢存放區進行分析和迴歸修正︰在大多數情況下，新的查詢最佳化工具變更應該會產生更好的計劃。 不過，查詢存放區可讓您輕鬆找出計劃選擇迴歸，並使用計劃強制執行機制加以修正。  
+5.  使用查詢存放區進行分析和迴歸修正︰在大多數情況下，新的查詢最佳化工具變更應該會產生更好的計劃。 不過，查詢存放區可讓您輕鬆找出計劃選擇迴歸，並使用計劃強制執行機制加以修正。 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，使用[自動計畫更正](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction)功能時，此步驟會自動執行。  
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>找出並改善特定的工作負載  
  某些工作負載沒有主控查詢，可讓您加以調整來改善整體應用程式效能。 這些工作負載通常是使用相對大量的各種查詢作為特性，這其中每一個查詢都會耗用部分的系統資源。 由於是唯一的，這些查詢很少執行 (通常只執行一次，因此會以特別的方式命名)，所以它們的執行階段耗用量並不重要。 相反地，假設該應用程式會不停地產生全新的查詢，則會在不是最佳化的查詢編譯中耗費絕大部分的系統資源。 這對查詢存放區而言不是理想的情況，假設有更大量的查詢和計畫湧進您所保留的空間，這表示查詢存放區很可能會非常快速地以唯讀模式結束。 若您啟用 [Size Based Cleanup Policy (大小基礎清除原則)] ([強烈建議](best-practice-with-the-query-store.md)持續啟動並執行查詢存放區)，則背景處理程序大部分的時間將會清除查詢存放區結構，並佔用大量系統資源。  
@@ -229,4 +225,3 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
  [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   
-

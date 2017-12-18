@@ -1,5 +1,5 @@
 ---
-title: "識別項 (SSIS) |Microsoft 文件"
+title: "識別碼 (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc690b6318c3e9fea27fbbba74b1f1b7289a3d32
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 819dc582a8c30c4758399c3d7d07184a65b72b44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
   在運算式中，識別碼是可供運算的資料行和變數。 運算式可使用一般和限定識別碼。  
@@ -93,7 +91,7 @@ ms.lasthandoff: 08/03/2017
 >  如果虛線標記法中的兩個元素都加上一對方括號，則運算式評估工具會將這對元素解譯為單一識別碼，而非來源資料行組合。  
   
 ## <a name="variables-in-expressions"></a>運算式中的變數  
- 在運算式中參考變數時，必須包括 @ 前置詞。 例如，**計數器**使用參考變數@Counter。 @ 字元並非變數名稱的一部份；該字元僅用來識別運算式評估工具的變數。 如果您使用「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供的對話方塊建立運算式，則 @ 字元會自動加入變數名稱中。 不可在 @ 字元和變數名稱之間加入空白。  
+ 在運算式中參考變數時，必須包括 @ 前置詞。 例如，**Counter** 變數是使用 @Counter 參考。 @ 字元並非變數名稱的一部份；該字元僅用來識別運算式評估工具的變數。 如果您使用「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供的對話方塊建立運算式，則 @ 字元會自動加入變數名稱中。 不可在 @ 字元和變數名稱之間加入空白。  
   
  變數名稱與其他一般識別碼的名稱遵循相同的規則：  
   
@@ -132,4 +130,3 @@ ms.lasthandoff: 08/03/2017
  pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](http://go.microsoft.com/fwlink/?LinkId=746575)  
   
   
-

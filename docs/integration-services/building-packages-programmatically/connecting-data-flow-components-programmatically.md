@@ -1,5 +1,5 @@
 ---
-title: "以程式設計方式連接資料流程元件 |Microsoft 文件"
+title: "以程式設計的方式連線資料流程元件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,28 +21,27 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 40869328965e049b5981e94655226bc0a78dc37f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c79cd2d2b540bab98b810ae07a1c66a3cff650c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>以程式設計的方式連接資料流程元件
   在將元件加入資料流程工作後，就可以連接元件以建立執行樹狀目錄，以代表從來源經過轉換到目的地的資料流程。 您使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 物件以連接資料流程中的元件。  
   
 ## <a name="creating-a-path"></a>建立路徑  
- 呼叫的新方法<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A>屬性<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe>介面來建立新的路徑，並將它加入至資料流程工作中的路徑集合。 此方法會傳回中斷連接的新 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 物件，您可用以連接兩個元件。  
+ 呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> 介面中 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> 屬性的 New 方法，以建立新路徑並將它新增資料流程工作中的路徑集合。 此方法會傳回中斷連接的新 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 物件，您可用以連接兩個元件。  
   
  呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> 方法以連接路徑並通知元件參與已連接它們的路徑。 這個方法會以參數的方式接受上游元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>以及下游元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>。 依預設，呼叫元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 方法會為具有輸入的元件建立單一輸入，並為具有輸出的元件建立單一輸出。 下列範例使用目的地之來源與輸入的這個預設輸出。  
   
 ## <a name="next-step"></a>下一個步驟  
- 建立兩個元件之間的路徑之後下, 一個步驟是在下游的元件中，在下一個主題中所討論的輸入資料行對應[選取輸入資料行以程式設計方式](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)。  
+ 在您建立兩個元件之間的路徑之後，下一個步驟就是要對應下游元件中的輸入資料行，這將在下一主題中討論：[以程式設計方式選取輸入資料行](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)。  
   
 ## <a name="sample"></a>範例  
  下列程式碼範例示範如何在兩個元件之間建立路徑。  
@@ -134,4 +131,3 @@ End Module
  [以程式設計方式選取輸入資料行](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
   
   
-

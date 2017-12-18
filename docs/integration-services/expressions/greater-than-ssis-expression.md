@@ -1,5 +1,5 @@
 ---
-title: "&gt;（大於）（SSIS 運算式） |Microsoft 文件"
+title: "&gt; (大於) (SSIS 運算式) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79a0d985349cfbb950e5eab2c32c40a5ef71c173
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: c584ec6710548ac0abfb065c39bafa4fb634099f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="gt-greater-than-ssis-expression"></a>&gt;（大於）（SSIS 運算式）
+# <a name="gt-greater-than-ssis-expression"></a>&gt; (大於) (SSIS 運算式)
   執行比較來決定第一個運算式是否大於第二個運算式。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。  
   
 > [!NOTE]  
@@ -109,11 +107,10 @@ ListPrice > 500
   
 ## <a name="see-also"></a>另請參閱  
  [&#60; &#40;小於&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
- [&#62; = &#40;大於或等於 &#41;&#40;SSIS 運算式 &#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
- [&#60; = &#40;小於或等於 &#41;&#40;SSIS 運算式 &#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
+ [&#62;= &#40;大於或等於&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
+ [&#60;= &#40;小於或等於&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
  [== &#40;等於&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
  [運算子優先順序與關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

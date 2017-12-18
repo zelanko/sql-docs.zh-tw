@@ -1,5 +1,5 @@
 ---
-title: "開發資料流程元件的使用者介面 |Microsoft 文件"
+title: "開發資料流程元件的使用者介面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -27,25 +25,24 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5a1e9773d91303335b616159f70de7aa0ddf966e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ce13ece34803cd0f30c0ec5633e59b6dbb1151cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>開發資料流程元件的使用者介面
   元件開發人員可為元件提供自訂使用者介面，當編輯此元件時會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中顯示此使用者介面。 實作自訂使用者介面會為您提供通知功能，讓您知道何時在資料流程工作中加入及刪除此元件，以及何時要求此元件的協助。  
   
- 如果您並未針對元件提供自訂使用者介面，使用者仍然可以使用進階編輯器來設定此元件和它的自訂屬性。 您可以確保進階編輯器允許使用者適當地編輯自訂屬性值，其方式是在適當時使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 屬性。 如需詳細資訊，請參閱 < 建立自訂屬性"[資料流程元件的設計階段方法](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)。  
+ 如果您並未針對元件提供自訂使用者介面，使用者仍然可以使用進階編輯器來設定此元件和它的自訂屬性。 您可以確保進階編輯器允許使用者適當地編輯自訂屬性值，其方式是在適當時使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 屬性。 如需詳細資訊，請參閱[資料流程元件的設計階段方法](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)中的＜建立自訂屬性＞。  
   
 ## <a name="setting-the-uitypename-property"></a>設定 UITypeName 屬性  
- 若要提供自訂使用者介面，開發人員必須將 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 屬性設定為可實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 介面的類別名稱。 當這個屬性設定的元件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]載入及呼叫自訂使用者介面中編輯此元件時[!INCLUDE[ssIS](../../../includes/ssis-md.md)]設計工具。  
+ 若要提供自訂使用者介面，開發人員必須將 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 屬性設定為可實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 介面的類別名稱。 當此元件設定這個屬性時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 會在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中編輯此元件時載入及呼叫自訂使用者介面。  
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> 屬性是以逗號分隔的字串，可識別此類型的完整名稱。 下列清單將依序顯示可識別此類型的元素：  
   
@@ -94,10 +91,10 @@ End Class
   
  雖然您可以透過 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面直接修改此元件，但是比較好的作法是使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> 方法建立 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A> 執行個體。 當您使用此介面直接編輯元件時，您會略過此元件的驗證防護。 透過 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> 使用此元件之設計階段執行個體的優點如下：您可確保此元件可控制對它所做的變更。  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法的傳回值會決定對元件所做的變更是會保存下來還是捨棄。 當這個方法傳回**false**，所有變更都會被都捨棄。**true**仍然存在此元件所做的變更，並將標示為需要儲存封裝。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法的傳回值會決定對元件所做的變更是會保存下來還是捨棄。 當這個方法傳回 **false** 時，所有的變更都會被捨棄；**true** 會保存對此元件所做的變更，並將此套件標示為需要儲存。  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>使用 SSIS 設計師的服務  
- **IServiceProvider**參數<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A>方法提供下列服務的存取[!INCLUDE[ssIS](../../../includes/ssis-md.md)]設計工具：  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法的 **IServiceProvider** 參數會提供對下列 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工作服務的存取權：  
   
 |服務|Description|  
 |-------------|-----------------|  
@@ -295,4 +292,3 @@ End Namespace
  [建立自訂資料流程元件](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
   
   
-

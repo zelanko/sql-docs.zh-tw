@@ -1,5 +1,5 @@
 ---
-title: "開發自訂連接管理員的使用者介面 |Microsoft 文件"
+title: "開發自訂連線管理員的使用者介面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c66c5410f38532c80a631cb190f248f7c5377bd5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 267313c3cc0c6d12f290088832ad908bf53dd980
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>開發自訂連接管理員的使用者介面
   在您覆寫基底類別的屬性與方法的實作，以提供自訂功能之後，可能會想要建立連接管理員的自訂使用者介面。 如果您不建立自訂使用者介面，使用者只能透過使用 [屬性] 視窗設定您的連接管理員。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/03/2017
  在自訂使用者介面專案或是組件中，通常有兩個類別：實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> 的類別，以及它所顯示的 Windows Form，以蒐集使用者資訊。  
   
 > [!IMPORTANT]  
->  在簽署和建置您的自訂使用者介面，以及安裝在全域組件快取中所述之後[程式碼撰寫自訂連接管理員](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)，請記得要提供此類別中的完整的名稱<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A>屬性<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>。  
+>  在簽署和建立自訂使用者介面，以及在全域組件快取中安裝它之後 (如[撰寫自訂連線管理員的程式碼](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)中所述)，請記得在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 屬性中提供這個類別的完整名稱。  
   
 > [!NOTE]  
 >  已經建置到 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中的大多數工作、來源和目的地只能搭配特定類型的內建連接管理員一起使用。 因此，不能使用內建工作和元件來測試這些範例。  
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/03/2017
 >  當使用者刪除連接管理員的執行個體時，如果不需要清除，則不需要為 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A> 方法撰寫任何程式碼。  
   
 ### <a name="initializing-the-user-interface"></a>初始化使用者介面  
- 在 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A> 方法中，設計工具會提供設定中連接管理員的參考，如此使用者介面類別就可以修改連接管理員的屬性。 下列程式碼所示，您的程式碼需要快取的參考連接 managerfor 稍後使用。  
+ 在 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A> 方法中，設計工具會提供設定中連接管理員的參考，如此使用者介面類別就可以修改連接管理員的屬性。 如下列程式碼所示，您的程式碼需要快取連線管理員的參考，以供稍後使用。  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As Microsoft.SqlServer.Dts.Runtime.ConnectionManager, ByVal serviceProvider As System.IServiceProvider) Implements Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize  
@@ -170,7 +167,7 @@ public bool Edit(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSe
  在建立使用者介面類別以實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> 介面的方法之後，您必須建立 Windows Form，讓使用者能夠在其中設定連接管理員的屬性。  
   
 ### <a name="initializing-the-user-interface-form"></a>初始化使用者介面表單  
- 當您顯示供編輯之用的自訂表單時，可以傳遞編輯中連接管理員的參考。 您可以使用自訂的表單類別，建構函式，或建立您自己的傳遞此參考**初始化**方法如下所示。  
+ 當您顯示供編輯之用的自訂表單時，可以傳遞編輯中連接管理員的參考。 您可以使用表單類別的自訂建構函式，或建立自己的 **Initialize** 方法 (如此處所示) 傳遞此參考。  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As ConnectionManager, ByVal serviceProvider As IServiceProvider)  
@@ -295,8 +292,7 @@ private void ConfigureControlsFromConnectionManager()
 ```
   
 ## <a name="see-also"></a>另請參閱  
- [建立自訂連接管理員](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
+ [建立自訂連線管理員](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
  [撰寫自訂連線管理員的程式碼](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
   
   
-

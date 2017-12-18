@@ -1,5 +1,5 @@
 ---
-title: "ADO NET 目的地 |Microsoft 文件"
+title: "ADO NET 目的地 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: dc8301025936bb5f1b0ad31db6b15d90416580ba
-ms.contentlocale: zh-tw
-ms.lasthandoff: 11/08/2017
-
+ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ado-net-destination"></a>ADO NET 目的地
   ADO NET 目的地會將資料載入使用資料庫資料表或檢視的各種 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]相容資料庫中。 您可以選擇將這些資料載入現有的資料表或檢視中，也可以建立新的資料表並將資料載入新的資料表內。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/08/2017
  ADO NET 目的地包含輸入資料行與目的地資料來源中資料行之間的對應。 您不需要將輸入資料行對應至所有的目的地資料行。 但是，某些目的地資料行的屬性可能需要對應輸入資料行。 否則，可能會發生錯誤。 例如，如果目的地資料行不允許 Null 值，您必須將輸入資料行對應到該目的地資料行。 此外，對應之資料行的資料類型必須相容。 例如，如果 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 提供者不支援，您就無法將具有字串資料類型的輸入資料行對應至具有數值資料類型的目的地資料行。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支援將文字插入到資料行的資料型別設定為影像。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的詳細資訊，請參閱 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)＞。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援將文字插入資料類型設定為影像的資料行內。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的詳細資訊，請參閱 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)＞。  
   
 > [!NOTE]  
 >  ADO NET 目的地不支援將類型設定為 DT_DBTIME 的輸入資料行對應至類型設定為日期時間的資料庫資料行。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
@@ -101,15 +99,15 @@ ms.lasthandoff: 11/08/2017
   
  您可以使用 .NET Data Provider for SQL Server (SqlClient) 連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
- 如果您選取 [盡可能使用大量插入]，並將 [錯誤] 選項設定為 [重新導向資料列]，目的地重新導向至錯誤輸出的資料批次可能會包含良好的資料列。如需處理大量作業中錯誤的詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。 如需有關**錯誤**選項，請參閱[ADO NET 目的地編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
+ 如果您選取 [盡可能使用大量插入]，並將 [錯誤] 選項設定為 [重新導向資料列]，目的地重新導向至錯誤輸出的資料批次可能會包含良好的資料列。如需處理大量作業中錯誤的詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。 如需 [錯誤] 選項的詳細資訊，請參閱 [ADO NET 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
   
 > [!NOTE]  
->  如果 SQL Server 或 Sybase 來源資料表包含識別欄位，您必須使用執行 SQL 」 工作，才能啟用 IDENTITY_INSERT ADO NET 目的地之前以及將它一次之後停用。 （identity 資料行屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可讓來源資料表中明確值插入至目的地資料表中的識別欄位。）  
+>  如果 SQL Server 或 Sybase 來源資料表包含識別欄位，您就必須使用執行 SQL 工作，在 ADO NET 目的地前後啟用及停用 IDENTITY_INSERT 陳述式。 (識別欄位屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可將來源資料表中的明確值插入至目的地資料表中的識別欄位。)  
 >   
->   若要執行 SET IDENTITY_INSERT 陳述式和資料載入成功，您必須執行下列動作。 
->       1. 針對執行 SQL 工作和 ADO.NET 目的地，請使用相同的 ADO.NET 連接管理員。 
->       2. 在 連接管理員上設定**RetainSameConnection**屬性和**MultipleActiveResultSets**屬性設定為 True。 
->       3. 在 ADO.NET 目的地中，設定**UseBulkInsertWhenPossible**屬性設定為 False。 
+>   若要成功執行 SET IDENTITY_INSERT 陳述式並載入資料，您必須執行下列動作。 
+>       1. 執行 SQL 工作和 ADO NET 目的地要使用相同的 ADO NET 連線管理員。 
+>       2. 在連線管理員上，將 **RetainSameConnection** 屬性和 **MultipleActiveResultSets** 屬性設定為 True。 
+>       3. 在 ADO.NET 目的地上，將 **UseBulkInsertWhenPossible** 屬性設為 False。 
 >
 >  如需詳細資訊，請參閱 [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
   
@@ -135,7 +133,7 @@ ms.lasthandoff: 11/08/2017
  檢視可用的目的地資料行清單。 使用拖放作業，即可將資料表中的可用目的地資料行對應到輸入資料行。  
   
  **輸入資料行**  
- 檢視所選取的輸入資料行。 您可以選取來移除對應**\<忽略 >**從輸出排除資料行。  
+ 檢視所選取的輸入資料行。 您可以選取 [\<忽略>] 移除對應，排除輸出的資料行。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  
@@ -176,4 +174,3 @@ ms.lasthandoff: 11/08/2017
  將錯誤處理選項套用至選取的資料格。  
   
   
-

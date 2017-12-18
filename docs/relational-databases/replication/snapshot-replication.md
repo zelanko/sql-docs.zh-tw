@@ -2,9 +2,12 @@
 title: "快照式複寫 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 927b6cb09af9a41a8326033cc36f949b3e29bb68
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d2ce2c53b4aee32b5d280b81d6672f9b5c679798
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="snapshot-replication"></a>快照式複寫
-  快照式複寫可以精確地將資料以其特定時點的樣子散發出去，且不監視此資料的更新。 在進行同步處理的時候，會產生整個快照集並傳送至「訂閱者」。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 快照式複寫可以精確地將資料以其特定時點的樣子散發出去，且不監視此資料的更新。 在進行同步處理的時候，會產生整個快照集並傳送至「訂閱者」。  
   
 > [!NOTE]  
 >  快照集複寫可以自行使用，但一般同時使用快照集處理 (它可建立所有發行集指定的物件和資料的副本) 以提供用於交易式發行集和合併式發行集的初始資料與資料庫物件集合。  

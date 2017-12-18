@@ -1,5 +1,5 @@
 ---
-title: "使用新的執行個體精靈 |Microsoft 文件"
+title: "使用新增執行個體精靈 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b85f434ad5130b984e318337bcc493945a06eb93
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 5805f3fa68e7b37b48edc294bf487a61aeb19ac4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新增執行個體精靈
   新增執行個體精靈是用來建立 CDC 服務的新執行個體。 您會從 CDC 設計工具主控台開啟 [建立 Oracle CDC 執行個體] 精靈。 您可以在新增執行個體精靈中執行以下動作。  
@@ -36,9 +34,9 @@ ms.lasthandoff: 09/28/2017
   
 -   [選取 Oracle 資料表和資料行](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
--   [選取 Oracle 資料表來擷取變更](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
+-   [選取 Oracle 資料表以擷取變更](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
--   [變更為了擷取變更所選取的資料表](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+-   [針對為了擷取變更所選取的資料表進行變更](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
 -   [產生及執行補充記錄指令碼](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/28/2017
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
   
-

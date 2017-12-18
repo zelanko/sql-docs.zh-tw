@@ -1,10 +1,13 @@
 ---
-title: "external scripts enabled 伺服器組態選項 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
-ms.date: 08/03/2017
-ms.prod: sql-server-2016
+title: "啟用外部指令碼伺服器設定選項 | Microsoft Docs"
+ms.date: 11/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -14,37 +17,57 @@ f1_keywords:
 helpviewer_keywords: external scripts enabled option
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: jeannt
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05c5af488241c28a5b83c01ac089fa5e1e1715c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d92fc9873ffd3fded2e0f614b0f633895d6a715
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="external-scripts-enabled-server-configuration-option"></a>啟用外部指令碼伺服器組態選項
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="external-scripts-enabled-server-configuration-option"></a>啟用外部指令碼伺服器設定選項
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-  使用 **external scripts enabled** 選項以啟用具有特定遠端語言擴充功能之指令碼的執行。 依預設，此屬性為 OFF。 如果已安裝**進階分析服務**，安裝程式就可以選擇將此屬性設定為 true。  
-  
+使用 **external scripts enabled** 選項以啟用具有特定遠端語言擴充功能之指令碼的執行。 依預設，此屬性為 OFF。 如果已安裝**進階分析服務**，安裝程式就可以選擇將此屬性設定為 true。
 
- 您必須先啟用 external script enabled 選項，才能使用 **sp_execute_external_script** 程序來執行外部指令碼。 使用 **sp_execute_external_script** 執行以所支援語言 (例如 R) 所撰寫的指令碼。在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 包含與 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 一起安裝的伺服器元件，以及可將資料科學家連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的高效能環境的一組工作站工具和連線程式庫。  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式期間安裝 [進階分析擴充功能] 功能，以啟用 R 指令碼的執行。 如需詳細資訊，請參閱 [Installing Previous Versions of SQL Server R Services](http://msdn.microsoft.com/library/48380645-9e72-4744-bebb-1c1fd8a18c43)。  
-  
- 如果要啟用外部指令碼，請執行下列指令碼：  
-  
-```  
-sp_configure 'external scripts enabled', 1;  
+## <a name="remarks"></a>備註
+
+您必須先啟用 external script enabled 選項，才能使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 程序來執行外部指令碼。 使用 **sp_execute_external_script** 執行以所支援語言 (例如 R 或 Python) 所撰寫的指令碼。 
+
++ 針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
+
+    [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 支援 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 R 語言，以及一組 R 工作站工具和連線程式庫。
+
+    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式期間安裝 [進階分析擴充功能] 功能，以啟用 R 指令碼的執行。 預設會安裝 R 語言。
+
++ 針對 [[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+
+    [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 使用與 SQL Server 2016 相同的結構，但支援 Python 語言。
+
+    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式期間安裝 [進階分析擴充功能] 功能，以啟用外部指令碼的執行。 請務必在初始安裝期間選取至少一個語言：R、Python 或兩者。 
+
+## <a name="additional-requirements"></a>其他需求
+
+安裝後，若要啟用外部指令碼，請執行下列指令碼：
+
+```sql
+sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH OVERRIDE;  
-```  
-  
- 您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，讓這項變更生效。  
-  
-## <a name="see-also"></a>另請參閱  
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)   
- [SQL Server R 服務](../../advanced-analytics/r-services/sql-server-r-services.md)  
-  
-  
+```
+
+您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，讓這項變更生效。
+
+如需詳細資訊，請參閱[設定 SQL Server Machine Learning](/../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+
+[RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
+
+[sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
+
+[SQL Server 機器學習服務](../../advanced-analytics/r/sql-server-r-services.md)

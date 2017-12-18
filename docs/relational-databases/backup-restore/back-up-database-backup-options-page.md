@@ -2,9 +2,12 @@
 title: "備份資料庫 (備份選項頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fa20534a1e98766899cbcd0825b5fbbf6c62ea0c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7f1d587759b7c57accdc4836346446e181f7df60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="back-up-database-backup-options-page"></a>備份資料庫 (備份選項頁面)
-  使用 [備份資料庫] 對話方塊的 [備份選項] 頁面，即可檢視或修改資料庫備份選項。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [備份資料庫] 對話方塊的 [備份選項] 頁面，即可檢視或修改資料庫備份選項。  
   
  **若要使用 SQL Server Management Studio 建立備份**  
   

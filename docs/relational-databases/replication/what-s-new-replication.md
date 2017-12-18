@@ -1,9 +1,13 @@
 ---
 title: "新功能 (複寫) | Microsoft Docs"
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6a5d4711c4ad311149c09f8f85af571b6a110d75
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad87c9f51a0a8d82b596cb28f599a572fbce088d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what39s-new-replication"></a>新功能 (複寫)
-  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 並未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫中引入重大的新功能。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 並未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫中引入重大的新功能。  
   
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援往或來自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssEW](../../includes/ssew-md.md)]的複寫。  
   

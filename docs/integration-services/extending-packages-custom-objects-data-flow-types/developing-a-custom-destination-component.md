@@ -1,5 +1,5 @@
 ---
-title: "開發自訂目的地元件 |Microsoft 文件"
+title: "開發自訂目的地元件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,30 +23,29 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], destination components
 - data flow components [Integration Services], destination components
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b579a17ba5095e3864148abaff75880da9fed108
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a95f24318503d8f76604bbcf683bc9ed79bd1ce0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-destination-component"></a>開發自訂目的地元件
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]可讓開發人員撰寫可連接到並將資料儲存在任何自訂資料來源的自訂目的地元件。 當您必須連接至無法使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的其中一個現有來源元件所存取的資料來源時，自訂目的地元件就很有用。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 讓開發人員能夠撰寫可連線至任何自訂資料來源並在其中儲存資料的自訂目的地元件。 當您必須連接至無法使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的其中一個現有來源元件所存取的資料來源時，自訂目的地元件就很有用。  
   
  目的地元件具有一或多個輸入與零個輸出。 在設計階段中，它們會建立並設定連接，並且從外部資料來源中讀取資料行中繼資料。 在執行期間，它們會連接至外部資料來源，並且將從資料流程的上游元件收到的資料列加入至外部資料來源。 如果外部資料來源在執行此元件之前就存在，目的地元件也必須確定此元件收到之資料行的資料類型與外部資料來源之資料行的資料類型相符。  
   
- 本節將討論如何開發目的地元件的詳細資料，並且提供程式碼範例以釐清重要的概念。 資料流程元件開發的一般概觀，請參閱[開發自訂資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
+ 本節將討論如何開發目的地元件的詳細資料，並且提供程式碼範例以釐清重要的概念。 如需資料流程元件開發的一般概觀，請參閱[開發自訂資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
 ## <a name="design-time"></a>設計階段  
  實作目的地元件的設計階段功能包括指定外部資料來源的連接，以及驗證元件是否已正確設定。 根據定義，目的地元件具有一個輸入，而且可能具有一個錯誤輸出。  
   
 ### <a name="creating-the-component"></a>建立元件  
- 目的地元件會使用在封裝中定義的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件，連接至外部資料來源。 目的地元件會指出使用連接管理員及其需求[!INCLUDE[ssIS](../../includes/ssis-md.md)]設計工具，以及使用者的元件，透過將元素加入<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>集合<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>。 這個集合有兩個目的：首先，它會向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師通告連接管理員的需求。然後，在使用者已選取或建立連接管理員之後，它會在封裝中保留元件所使用之連接管理員的參考。 當<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>加入至集合，**進階編輯器**顯示**連接屬性**索引標籤上，以提示使用者選取或建立用於封裝中元件的連接。  
+ 目的地元件會使用在封裝中定義的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件，連接至外部資料來源。 目的地元件會將元素新增至 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，以向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具和元件的使用者指出其連線管理員的需求。 這個集合有兩個目的：首先，它會向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師通告連接管理員的需求。然後，在使用者已選取或建立連接管理員之後，它會在封裝中保留元件所使用之連接管理員的參考。 將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 新增至集合時，[進階編輯器] 會顯示 [連線屬性] 索引標籤，提示使用者在套件中選取或建立連線以供元件使用。  
   
  下列程式碼範例會顯示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 的實作，它加入輸入並將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 物件加入至 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>。  
   
@@ -174,9 +171,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>驗證元件  
- 目的地元件開發人員應該執行的驗證中所述[元件驗證](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)。 此外，他們應該驗證元件輸入資料行集合中定義的資料行資料類型屬性與外部資料來源的資料行相符。 有時候，您可能無法或不想要針對外部資料來源驗證輸入資料行，例如元件或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師處於中斷連接狀態時，或者無法接受伺服器的往返時。 在這些情況下，您仍然可以使用輸入物件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> 來驗證輸入資料行集合中的資料行。  
+ 目的地元件開發人員應該依照[元件驗證](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)中所述的內容執行驗證。 此外，他們應該驗證元件輸入資料行集合中定義的資料行資料類型屬性與外部資料來源的資料行相符。 有時候，您可能無法或不想要針對外部資料來源驗證輸入資料行，例如元件或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師處於中斷連接狀態時，或者無法接受伺服器的往返時。 在這些情況下，您仍然可以使用輸入物件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> 來驗證輸入資料行集合中的資料行。  
   
- 這個集合同時存在輸入和輸出物件上，而且必須由元件開發人員根據外部資料來源的資料行擴展它。 此集合可以用來驗證輸入資料行時[!INCLUDE[ssIS](../../includes/ssis-md.md)]設計工具處於離線狀態，當元件中斷連接，或<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>屬性是**false**。  
+ 這個集合同時存在輸入和輸出物件上，而且必須由元件開發人員根據外部資料來源的資料行擴展它。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具離線、中斷元件連線或 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性為 **false** 時，這個集合可以用來驗證輸入資料行。  
   
  下列範例程式碼會加入以現有輸入資料行為基礎的外部中繼資料行。  
   
@@ -214,7 +211,7 @@ End Sub
 ```  
   
 ## <a name="run-time"></a>執行階段  
- 在執行期間，每當上游元件提供完整的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 時，目的地元件就會接收 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 方法的呼叫。 這個方法會重複呼叫，直到沒有其他緩衝區可用和<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>屬性是**true**。 執行這個方法期間，目的地元件會讀取緩衝區中的資料行和資料列，並且將它們加入至外部資料來源。  
+ 在執行期間，每當上游元件提供完整的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 時，目的地元件就會接收 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 方法的呼叫。 系統會重複呼叫這個方法，直到沒有其他緩衝區可用而且 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 屬性為 **true** 為止。 執行這個方法期間，目的地元件會讀取緩衝區中的資料行和資料列，並且將它們加入至外部資料來源。  
   
 ### <a name="locating-columns-in-the-buffer"></a>找出緩衝區中的資料行  
  元件的輸入緩衝區包含資料流程中上游元件之輸出資料行集合內定義的所有資料行。 例如，如果來源元件在其輸出中提供三個資料行，而下一個元件加入額外的輸出資料行，則提供給目的地元件的緩衝區就會包含四個資料行，即使目的地元件只會寫入兩個資料行也一樣。  
@@ -496,4 +493,3 @@ End Namespace
  [使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   
-

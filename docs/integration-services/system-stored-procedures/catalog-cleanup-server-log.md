@@ -1,29 +1,30 @@
 ---
-title: "catalog.cleanup_server_log |Microsoft 文件"
+title: catalog.cleanup_server_log | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1195bbfcc77cb6b96ea5a68cd1a95c2b2126a81e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6cf0f550930ac73199276dc403763f49ce45b5e7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   清除作業記錄檔，以讓 SSISDB 資料庫進入可讓您變更 SERVER_OPERATION_ENCRYPTION_LEVEL 屬性值的狀態。  
   
@@ -37,7 +38,7 @@ catalog.cleanup_server_log
  無。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 0 代表成功，1 表示失敗。  
+ 0 表示成功，1 則表示失敗。  
   
 ## <a name="result-sets"></a>結果集  
  無。  
@@ -45,41 +46,41 @@ catalog.cleanup_server_log
 ## <a name="permissions"></a>Permissions  
  這個預存程序需要下列其中一個權限：  
   
--   讀取和執行專案的權限和 （適用），讀取權限參考的環境。  
+-   專案的 READ 與 EXECUTE 權限，以及參考環境的 READ 權限 (如果適用的話)。  
   
--   中的成員資格**ssis_admin**資料庫角色。  
+-   **ssis_admin** 資料庫角色中的成員資格。  
   
--   成員資格**sysadmin**伺服器角色。  
+-   **sysadmin** 伺服器角色的成員資格。  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
- 這個預存程序會引發錯誤，依下列情況：  
+ 在下列情況下，此預存程序會引發錯誤：  
   
--   有一或多個作用中的作業，SSISDB 資料庫中。  
+-   SSISDB 資料庫中有一個或多個作用中的作業。  
   
--   SSISDB 資料庫不是處於單一使用者模式。  
+-   SSISDB 資料庫未處於單一使用者模式。  
   
 ## <a name="remarks"></a>備註  
- SQL Server 2012 Service Pack 2 新增至 SERVER_OPERATION_ENCRYPTION_LEVEL 屬性**internal.catalog_properties**資料表。 此屬性具有兩個可能值：  
+ SQL Server 2012 Service Pack 2 已將 SERVER_OPERATION_ENCRYPTION_LEVEL 屬性新增至 **internal.catalog_properties** 資料表。 此屬性有兩個可能的值：  
   
--   **(1) PER_EXECUTION** -憑證和對稱金鑰用於保護機密的執行中參數，並執行記錄會建立每次執行。 這是預設值。 您可能會遇到效能問題 （死結，失敗的維護工作等...） 在生產環境中因為每次執行會產生憑證/金鑰。 不過，這項設定會提供較高的安全性比其他值 (2)。  
+-   **PER_EXECUTION (1)** - 會針對每次執行建立憑證和對稱金鑰，以用於保護機密的執行參數和執行記錄。 您可能會在生產環境中遇到效能問題 (鎖死、維護作業失敗等等)，因為每次執行時都會產生憑證/金鑰。 不過，此設定所提供的安全性層級高於另一個值 (2)。  
   
--   **(2) PER_PROJECT** – 每個專案建立的憑證和對稱金鑰用於保護敏感性參數。 這可讓您更佳的效能比 PER_EXECUTION 層級因為金鑰和憑證會產生一次的專案，而不是每次執行。  
+-   **PER_PROJECT (2)** - 會針對每個專案建立憑證和對稱金鑰，以用於保護敏感性 參數。 預設值為 PER_PROJECT (2)。 此設定可讓您擁有優於 PER_EXECUTION 層級的效能，因為金鑰和憑證只會針對專案產生一次，而不是每次執行都產生一次。  
   
- 您必須執行[catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md)預存程序，從 1 到 2 （或） 從 1 到 2，才能變更 SERVER_OPERATION_ENCRYPTION_LEVEL。 執行這個預存程序之前，請執行下列動作：  
+ 您必須先執行 [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) 預存程序，才能將 SERVER_OPERATION_ENCRYPTION_LEVEL 從 2 變更為 1 (或) 從 1 變更為 2。 執行此預存程序之前，請執行下列動作：  
   
-1.  請確定 OPERATION_CLEANUP_ENABLED 屬性的值設定為 TRUE 的[catalog.catalog_properties &#40;SSISDB 資料庫 &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)資料表。  
+1.  確定 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 資料表中的 OPERATION_CLEANUP_ENABLED 屬性值設定為 TRUE。  
   
-2.  設定為單一使用者模式的 Integration Services 資料庫 (SSISDB)。 在 SQL Server Management Studio，啟動 SSISDB 資料庫屬性 對話方塊、 切換到 選項 索引標籤，並限制存取 屬性設定為單一使用者模式 (SINGLE_USER)。 執行 cleanup_server_log 之後預存程序，會設定屬性值設回原始值。  
+2.  將 Integration Services 資料庫 (SSISDB) 設為單一使用者模式。 在 SQL Server Management Studio 中，啟動 SSISDB 的 [資料庫屬性] 對話方塊，再切換至 [選項] 索引標籤，然後將 [限制存取] 屬性設為單一使用者模式 (SINGLE_USER)。 執行 cleanup_server_log 預存程序之後，請將屬性值設回原始值。  
   
-3.  執行預存程序[catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md)。  
+3.  執行 [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) 預存程序。  
   
-4.  現在，請繼續並變更 SERVER_OPERATION_ENCRYPTION_LEVEL 屬性中的值[catalog.catalog_properties &#40;SSISDB 資料庫 &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)資料表。  
+4.  現在，請繼續變更 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 資料表中的 SERVER_OPERATION_ENCRYPTION_LEVEL 屬性值。  
   
-5.  執行預存程序[catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md)清除憑證金鑰從 SSISDB 資料庫。 從 SSISDB 資料庫卸除憑證和金鑰可能需要很長的時間，讓它應該定期在離峰時間執行。  
+5.  執行 [catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md) 預存程序，以清除 SSISDB 資料庫中的憑證金鑰。 捨棄 SSISDB 資料庫中的憑證和金鑰可能需要很長的時間，因此您應該在離峰期間定期執行這項作業。  
   
-     您可以指定的範圍或層級 （執行與專案） 和刪除的索引鍵數目。 刪除的預設批次大小為 1000年。 當您將層級設定為 2 時，金鑰和憑證會才刪除相關的專案已被刪除。  
+     您可以指定範圍或層級 (執行/專案) 以及要刪除的金鑰數目。 刪除的預設批次大小是 1000。 如果您將層級設為 2，則只有在刪除相關的專案時，才會刪除金鑰和憑證。  
   
- 如需詳細資訊，請參閱下列知識庫文件。 [修正： 儲存在 SQL Server 2012 中的 SSISDB 作為您的部署時的效能問題](http://support.microsoft.com/kb/2972285)  
+ 如需詳細資訊，請參閱下列知識庫文章：[FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012](http://support.microsoft.com/kb/2972285) (修正：當您在 SQL Server 2012 中使用 SSISDB 作為部署存放區時的效能問題)  
   
 ## <a name="example"></a>範例  
  下列範例會呼叫 cleanup_server_log 預存程序。  
@@ -95,4 +96,3 @@ GO
 ```  
   
   
-

@@ -2,9 +2,12 @@
 title: "SQL Server 公用程式的功能與工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c099214c37d6f3a2d8f1198e6f172f1a11d1b64e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4c7a221f337f54f625840fa724db01545a7af2c7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 公用程式的功能與工作
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客戶有一項需求，也就是以整體方式管理其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境，這項需求會在這一版中透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內應用程式和多伺服器管理的概念來滿足。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客戶有一項需求，也就是以整體方式管理其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境，這項需求會在這一版中透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內應用程式和多伺服器管理的概念來滿足。  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>SQL Server 公用程式的優點  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式會將組織的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相關實體在統一的檢視中模型化。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSMS) 中的公用程式總管和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 公用程式視點會透過做為公用程式控制點 (UCP) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，為系統管理員提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源健全狀況的整體檢視。 UCP 中所呈現之使用量過低和使用量過高的原則以及各種索引鍵參數的摘要和詳細資料組合，將可讓您輕鬆識別資源合併機會和資源使用量過高的情形。 健全狀況原則是可以設定的，而且可加以調整來變更資源使用量的上下臨界值。 您可以變更全域監視原則，或是針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中管理的每個實體來設定個別監視原則。  

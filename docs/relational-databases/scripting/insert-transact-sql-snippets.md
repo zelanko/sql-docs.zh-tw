@@ -2,9 +2,12 @@
 title: "插入 Transact-SQL 程式碼片段 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd2463b84505c7dbbd617e4a700725147e01c336
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8b37ab2c15e2d1770f2dd0f8c861fb8c2e0f3144
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="insert-transact-sql-snippets"></a>插入 Transact-SQL 程式碼片段
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段是範本，當您在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器中撰寫新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 陳述式時可將它做為起點。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段是範本，當您在[!INCLUDE[ssDE](../../includes/ssde-md.md)]查詢編輯器中撰寫新的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時可將它作為起點。  
   
 ## <a name="inserting-snippets"></a>插入程式碼片段  
  您可以使用 [插入程式碼片段] 功能表開啟分類的程式碼片段清單，從中選擇。  

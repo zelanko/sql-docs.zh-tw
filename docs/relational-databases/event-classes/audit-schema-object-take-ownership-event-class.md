@@ -2,9 +2,12 @@
 title: "Audit Schema Object Take Ownership 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3eb6eca99cfcfd182ac71a942136bca3586ac052
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d33b405c83a983f428b9f231cd7f6086a75a7916
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership 事件類別
-  檢查是否有變更結構描述物件 (例如資料表、程序或函數) 擁有者的權限時，就會發生 **Audit Schema Object Take Ownership** 事件類別。 這是在使用 ALTER AUTHORIZATION 陳述式指派物件的擁有者時發生。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 檢查是否有變更結構描述物件 (例如資料表、程序或函式) 擁有者的權限時，就會發生 **Audit Schema Object Take Ownership** 事件類別。 這是在使用 ALTER AUTHORIZATION 陳述式指派物件的擁有者時發生。  
   
 ## <a name="audit-schema-object-take-ownership-event-class-data-columns"></a>Audit Schema Object Take Ownership 事件類別資料行  
   

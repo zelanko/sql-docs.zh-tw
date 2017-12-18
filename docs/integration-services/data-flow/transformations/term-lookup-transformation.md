@@ -1,5 +1,5 @@
 ---
-title: "詞彙查閱轉換 |Microsoft 文件"
+title: "詞彙查閱轉換 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 11b53327292545add9678714c4901dbdad01007e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="term-lookup-transformation"></a>詞彙查閱轉換
   「詞彙查閱」轉換會比對從轉換輸入資料行的文字中擷取的詞彙，以及參考資料表中的詞彙。 然後，它會計算查閱資料表中的詞彙在輸入資料集中出現的次數，並將計數與參考資料表的詞彙一起寫入轉換輸出中的資料行。 此轉換包括單字頻率統計資料，對基於輸入文字建立自訂單字清單很有用處。  
@@ -73,7 +71,7 @@ ms.lasthandoff: 08/19/2017
 |參考詞彙|Windows、Windows 7 Professional|  
 |輸出|Windows|  
   
- 「詞彙查閱」轉換可以比對包含特殊字元的名詞及名詞片語，且參考資料表中的資料可能包含這些字元。 特殊字元，如下所示為: %，@，&、 $、 #、 \*，:，;，。， **，** ，！，？， \<，>，+、 =、 ^、 ~，|， \\，/，（、）、 [、]、 {、}、"，和 '。  
+ 「詞彙查閱」轉換可以比對包含特殊字元的名詞及名詞片語，且參考資料表中的資料可能包含這些字元。 特殊字元如下：%、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
   
 ## <a name="data-types"></a>資料型別  
  「詞彙查閱」轉換只可以使用具有 DT_WSTR 或 DT_NTEXT 資料類型的資料行。 如果資料行包含文字，但不具有這些資料類型的其中之一，則「資料轉換」可以將具有 DT_WSTR 或 DT_NTEXT 資料類型的資料行加入資料流程，並將資料行值複製至新資料行。 然後，「資料轉換」的輸出可以用作「詞彙查閱」轉換的輸入。 如需詳細資訊，請參閱 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
@@ -114,11 +112,11 @@ ms.lasthandoff: 08/19/2017
 ## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>詞彙查閱轉換編輯器 (詞彙查閱索引標籤)
   使用 **[詞彙查閱轉換編輯器]** 對話方塊的 **[詞彙查閱]** 索引標籤，即可將輸入資料行對應至參考資料表的查閱資料行，並提供每一個輸出資料行的別名。  
   
-### <a name="options"></a>選項  
- **可用輸入資料行**  
+### <a name="options"></a>選項。  
+ **可用的輸入資料行**  
  使用核取方塊選取輸入資料行，即可讓這些輸入資料行在不變更的狀況下通過至輸出。 將輸入資料行拖曳至 **[可用的參考資料行]** 清單，即可對應至參考資料表的查閱資料行。 輸入和查閱資料行都必須有相符、受支援的資料類型，包括 DT_NTEXT 或 DT_WSTR。 在 [ [建立關聯性](../../../integration-services/data-flow/transformations/create-relationships.md) ] 對話方塊中選取對應行，並以滑鼠右鍵按一下來編輯對應。  
   
- **可用的參考資料行**  
+ **[可用的參考資料行]**  
  檢視參考資料表中可用的資料行。 選擇包含要比對之詞彙清單的資料行。  
   
  **通過資料行**  
@@ -134,10 +132,10 @@ ms.lasthandoff: 08/19/2017
   使用 [詞彙查閱轉換編輯器] 對話方塊的 [參考資料表] 索引標籤，即可指定參考 (查閱) 資料表的連接。  
   
 ### <a name="options"></a>選項。  
- **OLE DB 連接管理員**  
+ **[無快取]**  
  從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
   
- **新**  
+ **新增**  
  使用 [設定 OLE DB 連線管理員] 對話方塊來建立新的連線。  
   
  **參考資料表名稱**  
@@ -149,7 +147,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>詞彙查閱轉換編輯器 (進階索引標籤)
   使用 [詞彙查閱轉換編輯器] 對話方塊的 [進階] 索引標籤，即可指定查閱是否應區分大小寫。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **使用區分大小寫的詞彙查閱**  
  指出查閱是否區分大小寫。 預設值為 **False**。  
   
@@ -160,4 +158,3 @@ ms.lasthandoff: 08/19/2017
  [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
  [詞彙擷取轉換](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
-

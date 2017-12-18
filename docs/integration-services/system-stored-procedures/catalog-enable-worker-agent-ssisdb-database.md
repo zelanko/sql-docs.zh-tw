@@ -1,5 +1,5 @@
 ---
-title: "catalog.enable_worker_agent （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.enable_worker_agent (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 3eb3f21b6a686c3013cdaaa3000038896edfbf94
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: de5764612b34aa44b4e41287c951b0de4d0b5ddf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent （SSISDB 資料庫）
+# <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-針對標尺出 Master，與此工作啟用標尺出背景工作[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]類別目錄。
+啟用處理此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄之 Scale Out Master 的 Scale Out Worker。
 
 ## <a name="syntax"></a>語法
 
@@ -36,7 +34,7 @@ ms.lasthandoff: 10/20/2017
 catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>引數
-[@WorkerAgentId =] *WorkerAgentId*背景工作代理程式識別碼的標尺出背景工作。 *WorkerAgentId*是**uniqueidentifier**。
+[@WorkerAgentId =] *WorkerAgentId*：Scale Out Worker 的背景工作代理程式識別碼。 *WorkerAgentId* 是 **uniqueidentifier**。
 
 ## <a name="example"></a>範例
 這個範例會在 MachineA 上啟用相應放大背景工作。
@@ -61,10 +59,9 @@ GO
 ## <a name="permissions"></a>Permissions  
  這個預存程序需要下列其中一個權限：  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色 
+-   **系統管理員**伺服器角色的成員資格 
 
 ## <a name="errors-and-warnings"></a>錯誤和警告
-如果背景工作代理程式識別碼不是有效的則預存程序會傳回錯誤。
-
+如果背景工作代理程式識別碼無效，則預存程序會傳回錯誤。

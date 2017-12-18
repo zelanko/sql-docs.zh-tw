@@ -1,10 +1,13 @@
 ---
 title: "使用查詢存放區的最佳做法 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 617746f2d48662ca0eb5a26338149cf4a2e77793
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本主題概述搭配您的工作負載使用查詢存放區的最佳作法。  
   
-##  <a name="SSMS"></a> 使用最新版 SQL Server Management Studio  
+##  <a name="SSMS"></a> 使用最新版 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 擁有一組針對設定查詢存放區，以及耗用有關工作負載之收集資料所設計的使用者介面。  
 [在此](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)下載最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
@@ -125,9 +128,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 巡覽至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的物件總管中資料庫節點下的 [查詢存放區] 子資料夾，以開啟特定案例的疑難排解檢視。   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 查詢存放區檢視會操作執行計量組，每個都以下列任一統計資料函式表示：  
   
-|執行計量|統計資料函式|  
-|----------------------|------------------------|  
-|CPU 時間、持續時間、執行計數、邏輯讀取、邏輯寫入、記憶體耗用量和實體讀取|平均值、最大值、最小值、標準差、總計|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|執行計量|統計資料函式|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU 時間、持續時間、執行計數、邏輯讀取、邏輯寫入、記憶體耗用量、實體讀取、CLR 時間、平行處理原則的程度 (DOP) 和資料列計數|平均值、最大值、最小值、標準差、總計|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU 時間、持續時間、執行計數、邏輯讀取、邏輯寫入、記憶體耗用量、實體讀取、CLR 時間、平行處理原則的程度 (DOP)、資料列計數、記錄檔記憶體、TempDB 記憶體和等候時間|平均值、最大值、最小值、標準差、總計|
   
  下圖顯示顯示如何找出查詢存放區檢視 ︰  
   
@@ -200,7 +204,7 @@ FROM sys.database_query_store_options;
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- 您可以透過執行下列明確地將變更作業模式變更回讀寫，套用其中一個或兩個步驟：  
+您可以透過執行下列明確地將變更作業模式變更回讀寫，套用其中一個或兩個步驟：  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   

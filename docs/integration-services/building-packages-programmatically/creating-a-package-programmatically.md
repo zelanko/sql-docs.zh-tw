@@ -1,5 +1,5 @@
 ---
-title: "以程式設計方式建立封裝 |Microsoft 文件"
+title: "以程式設計方式建立套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 58a8201d68cb6d942bd98ca3c53b6cf98336284e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b16b2cc623c44884e088168e3c16ccb412dd88b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-package-programmatically"></a>以程式設計方式建立封裝
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> 物件是 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 專案方案中所有其他物件的最上層容器。 做為最上層容器，封裝是第一個建立的物件，而且後續的物件會加入其中，然後在封裝的內容中執行。 封裝本身不會移動或是轉換資料。 封裝依賴它所含的工作 (Task) 以執行工作 (Work)。 工作 (Task) 會執行封裝所執行的大部分工作 (Work)，並定義封裝的功能。 只需要三行程式碼就可以建立和執行封裝，但是還需要將各種工作與 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件加入，以便為您的封裝提供其他功能。 本節討論如何以程式設計方式建立封裝。 有關如何建立工作或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 的詳細資訊並非在此提供， 這些內容將於後續章節說明。  
@@ -73,15 +70,15 @@ Module Module1
 End Module  
 ```  
   
- 若要編譯和執行範例，請在 Visual Studio 中按 F5。 若要建置使用 C# 編譯器的程式碼**csc.exe**，請在命令提示字元進行編譯，請使用下列命令與檔案參考，取代*\<檔名 >* .cs 或.vb 檔案，並提供的名稱取代 *\<outputfilename >*您選擇。  
+ 若要編譯和執行範例，請在 Visual Studio 中按 F5。 若要使用 C# 編譯器 **csc.exe** 建置程式碼，請在要編譯的命令提示字元之下，使用下列命令與檔案參考，以 .cs 或 .vb 檔案的名稱取代 \<filename>，並提供您所選擇的*\<outputfilename>*。  
   
- **csc /target: library /out: \<outputfilename >.dll\<檔名 >.cs /r:Microsoft.SqlServer.Managed DTS.dll"/r**  
+ **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 若要建置程式碼使用 Visual Basic.NET 編譯器**vbc.exe**，請在命令提示字元進行編譯，請使用下列命令與檔案參考。  
+ 若要使用 Visual Basic .NET 編譯器 **vbc.exe** 建置程式碼，請在要編譯的命令提示字元之下，使用下列命令與檔案參考。  
   
- **vbc /target: library /out: \<outputfilename >.dll\<檔名 >.vb /r:Microsoft.SqlServer.Managed DTS.dll"/r**  
+ **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 您也可以載入儲存在磁碟上、在檔案系統或是儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的現有封裝以建立封裝。 其差異在於，<xref:Microsoft.SqlServer.Dts.Runtime.Application>第一次建立物件，和封裝物件然後填滿其中一種應用程式的多載方法： **LoadPackage**用於一般檔案、 **LoadFromSQLServer**封裝儲存到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>封裝儲存至檔案系統。 下列範例會從磁碟載入現有封裝，然後檢視封裝上的數個屬性。  
+ 您也可以載入儲存在磁碟上、在檔案系統或是儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的現有封裝以建立封裝。 其差異在於會先建立 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 物件，然後其中一個應用程式的多載方法會填入套件物件：**LoadPackage** 用於一般檔案、**LoadFromSQLServer** 用於儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的套件，或是 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 用於儲存到檔案系統的套件。 下列範例會從磁碟載入現有封裝，然後檢視封裝上的數個屬性。  
   
 ```csharp  
 using System;  
@@ -160,12 +157,11 @@ End Module
   
 ## <a name="external-resources"></a>外部資源  
   
--   部落格文章： [API 範例-OleDB 來源與 OleDB 目的地](http://go.microsoft.com/fwlink/?LinkId=220824)，blogs.msdn.com 上。  
+-   blogs.msdn.com 上的部落格文章：[API Sample - OleDB source and OleDB destination](http://go.microsoft.com/fwlink/?LinkId=220824) (API 範例 - OleDB 來源與 OleDB 目的地)。  
   
--   部落格文章： [EzAPI-已更新 SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223)，blogs.msdn.com 上。  
+-   blogs.msdn.com 上的部落格文章：[EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI - 針對 SQL Server 2012 更新)。  
   
 ## <a name="see-also"></a>另請參閱  
- [以程式設計方式加入工作](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
+ [以程式設計方式新增工作](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
   
   
-

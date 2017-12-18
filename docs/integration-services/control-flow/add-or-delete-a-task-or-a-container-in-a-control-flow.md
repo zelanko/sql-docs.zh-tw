@@ -1,5 +1,5 @@
 ---
-title: "加入或刪除工作或容器控制流程中的 |Microsoft 文件"
+title: "在控制流程中新增或刪除工作或容器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9c5a240223fb25e36a9ccd4591656fffbc8875a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f7502275ff31671bd8726dec5ecb42a299d3f17c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>在控制流程中加入或刪除工作或容器
   當您在控制流程設計師中工作時，[ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中的 [工具箱] 會列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供用於在封裝中建立控制流程的工作。 如需工具箱的詳細資訊，請參閱 [SSIS 工具箱](../../integration-services/ssis-toolbox.md)。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 09/26/2017
   
  下列程序將描述如何在封裝的控制流程中加入或刪除工作或容器。  
   
-## <a name="add-a-task-or-a-container-to-a-control-flow"></a>新增工作或容器加入控制流程  
+## <a name="add-a-task-or-a-container-to-a-control-flow"></a>將工作或容器新增至控制流程  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>從控制流程刪除工作或容器  
+## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>從控制流程中刪除工作或容器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -70,11 +68,11 @@ ms.lasthandoff: 09/26/2017
 3.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 
 ## <a name="set-the-properties-of-a-task-or-container"></a>設定工作或容器的屬性
-您可以使用 [屬性] 視窗來設定工作和容器的大部分屬性。 例外狀況是工作集合的屬性以及太複雜，無法使用設定的屬性**屬性**視窗。 例如，您無法在 [屬性] 視窗中設定「Foreach 迴圈」容器所使用的列舉值。 您必須使用工作或容器編輯器來設定這些複雜屬性。 大部分工作和容器編輯器都具有多個節點，而且每個節點都包含相關的屬性。 節點的名稱表示此節點所包含之屬性的主旨。  
+您可以使用 [屬性] 視窗來設定工作和容器的大部分屬性。 例外的是工作集合的屬性，以及因太複雜而無法使用 [屬性] 視窗設定的屬性。 例如，您無法在 [屬性] 視窗中設定「Foreach 迴圈」容器所使用的列舉值。 您必須使用工作或容器編輯器來設定這些複雜屬性。 大部分工作和容器編輯器都具有多個節點，而且每個節點都包含相關的屬性。 節點的名稱表示此節點所包含之屬性的主旨。  
   
  下列程序將描述如何使用 [屬性] 視窗或對應的工作或容器編輯器來設定工作或容器的屬性。  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>設定工作或容器的 [屬性] 視窗的內容  
+### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>使用 [屬性] 視窗來設定工作或容器的屬性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>設定工作或容器與工作或容器編輯器的內容  
+### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>使用工作或容器編輯器來設定工作或容器的屬性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -120,8 +118,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
- [整合服務容器](../../integration-services/control-flow/integration-services-containers.md)   
+ [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   
   
-

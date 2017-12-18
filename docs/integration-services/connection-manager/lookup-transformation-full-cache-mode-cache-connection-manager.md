@@ -1,5 +1,5 @@
 ---
-title: "查閱轉換完整快取模式快取連接管理員 |Microsoft 文件"
+title: "查閱轉換完整快取模式 - 快取連線管理員 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Lookup transformation [Integration Services]
+helpviewer_keywords: Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 01d518ca176ab3de156ba303221777e9cbc65207
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 804b0ab72a0e52c9ddcd10f8261998e0e8847d9f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查閱轉換完整快取模式快取連接管理員
+# <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查閱轉換完整快取模式 - 快取連線管理員
   您可以將查閱轉換設定為使用完整快取模式以及快取連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  
   
 > [!NOTE]  
@@ -61,11 +58,11 @@ ms.lasthandoff: 08/03/2017
   
 -   [快取轉換](../../integration-services/data-flow/transformations/cache-transform.md)  
   
--   [快取連接管理員](../../integration-services/connection-manager/cache-connection-manager.md)  
+-   [快取連線管理員](../../integration-services/connection-manager/cache-connection-manager.md)  
   
 -   [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)  
   
--   [執行封裝工作](../../integration-services/control-flow/execute-package-task.md)  
+-   [執行套件工作](../../integration-services/control-flow/execute-package-task.md)  
   
 -   [時序容器](../../integration-services/control-flow/sequence-container.md)  
   
@@ -287,10 +284,9 @@ ms.lasthandoff: 08/03/2017
   
 9. 執行封裝。  
   
-## <a name="see-also"></a>請參閱＜  
- [在完整快取模式下使用 OLE DB 連接管理員實作查閱轉換](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [以沒有快取或部分快取模式實作查閱](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+## <a name="see-also"></a>另請參閱  
+ [使用 OLE DB 連線管理員以完整快取模式來實作查閱轉換](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [以沒有快取或部分快取模式來實作查閱](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

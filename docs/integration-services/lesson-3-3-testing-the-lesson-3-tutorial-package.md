@@ -1,5 +1,5 @@
 ---
-title: "步驟 3： 測試第 3 課的教學課程封裝 |Microsoft 文件"
+title: "步驟 3：測試第 3 課教學課程套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d6477267c95ffd200f70b2c93191dfaf0883a4af
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fa344530396b13defc44680a1232a3d6a1c39b42
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>課程 3-3-測試第 3 課的教學課程封裝
+# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>課程 3-3 - 測試第 3 課教學課程套件
 在這項工作中，您將執行 Lesson 3.dtsx 封裝。 當封裝執行時，[記錄事件] 視窗會列出寫入記錄檔的記錄項目。 在封裝完成執行之後，您要確認記錄提供者所產生之記錄檔的內容。  
   
 ## <a name="checking-the-package-layout"></a>檢查封裝配置  
@@ -35,11 +32,11 @@ ms.lasthandoff: 09/26/2017
   
 **控制流程**  
   
-![控制流程封裝中](../integration-services/media/task4lesson2control.gif "控制流程封裝中")  
+![套件中的控制流程](../integration-services/media/task4lesson2control.gif "套件中的控制流程")  
   
 **資料流程**  
   
-![封裝中的資料流程](../integration-services/media/task9lesson1data.gif "中封裝的資料流程")  
+![套件中的資料流程](../integration-services/media/task9lesson1data.gif "套件中的資料流程")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>若要執行第 4 課的教學課程封裝  
   
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

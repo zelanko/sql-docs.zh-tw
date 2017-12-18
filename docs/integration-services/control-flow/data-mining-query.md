@@ -1,5 +1,5 @@
 ---
-title: "資料採礦查詢 |Microsoft 文件"
+title: "資料採礦查詢 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataminingquery.f1
+f1_keywords: sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8809f1e5f91ad5746b66d4640747b1ec0a923f0f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 4509a3b7838e112bbd002c7efe4b6782a772f7d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query"></a>資料採礦查詢
   設計窗格包含資料採礦預測查詢產生器，您可以使用該產生器來建立資料採礦預測查詢。 您可以依據輸入資料表來設計預測查詢，或設計單一預測查詢。 切換到結果檢視以執行查詢並檢視結果。 查詢檢視會顯示預測查詢產生器所建立的資料採礦延伸模組 (DMX) 查詢。  
@@ -34,9 +31,9 @@ ms.lasthandoff: 09/28/2017
  切換檢視按鈕  
  按一下圖示，即可在設計與查詢窗格之間切換。 預設會開啟設計窗格。  
   
- 若要切換至設計窗格，請按一下![設計圖示](../../integration-services/control-flow/media/ssis-designicon.gif "設計圖示")圖示。  
+ 若要切換到設計窗格，請按一下![設計圖示](../../integration-services/control-flow/media/ssis-designicon.gif "設計圖示")圖示。  
   
- 若要切換到 [查詢] 窗格，請按一下![SQL 圖示](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL 圖示")圖示。  
+ 若要切換到查詢窗格，請按一下![SQL 圖示](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL 圖示")圖示。  
   
  **採礦模型**  
  顯示選取的採礦模型，並以此模型作為預測的基礎。  
@@ -72,7 +69,6 @@ ms.lasthandoff: 09/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

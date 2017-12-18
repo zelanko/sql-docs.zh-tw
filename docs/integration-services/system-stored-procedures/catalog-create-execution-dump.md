@@ -1,5 +1,5 @@
 ---
-title: "catalog.create_execution_dump |Microsoft 文件"
+title: catalog.create_execution_dump | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b05e1b46845c0a2b5ee47b94dc239d79d4a12a17
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e8fc97f65fb17605393505c428b645994d3fd1da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  導致執行中的封裝暫停，並建立傾印檔案。 此檔案儲存於*\<磁碟機 >*: \Program Files\Microsoft SQL Server\130\Shared\ErrorDumps 資料夾。  
+  導致執行中的封裝暫停，並建立傾印檔案。 此檔案儲存於 \<磁碟機>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps 資料夾。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,8 +36,8 @@ catalog.create_execution_dump [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @execution_id =] *execution_id*  
- 執行中之封裝的執行識別碼。 *Execution_id*是**bigint**。  
+ [ @execution_id = ] *execution_id*  
+ 執行中之封裝的執行識別碼。 *execution_id* 是 **bigint**。  
   
 ## <a name="example"></a>範例  
  在下列範例中，會提示執行識別碼為 88 的執行中封裝建立傾印檔案。  
@@ -57,7 +55,7 @@ EXEC create_execution_dump @execution_id = 88
  無  
   
 ## <a name="permissions"></a>Permissions  
- 這個預存程序需要使用者為成員的**ssis_admin**資料庫角色。  
+ 此預存程序需要使用者為 **ssis_admin** 資料庫角色的成員。  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單描述會導致預存程序失敗的情況。  
@@ -72,4 +70,3 @@ EXEC create_execution_dump @execution_id = 88
  [產生套件執行的傾印檔案](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

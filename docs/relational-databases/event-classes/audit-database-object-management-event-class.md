@@ -2,9 +2,12 @@
 title: "Audit Database Object Management 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ff1a11eda7fca9303bd1bb3b1f05a3188925c9a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ab0aa40a81d6e0cb09062fe3916c30953fd1983d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-database-object-management-event-class"></a>Audit Database Object Management 事件類別
-  對資料庫物件 (例如結構描述) 執行 CREATE、ALTER 或 DROP 陳述式時，即會產生 **Audit Database Object Management** 事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 對資料庫物件 (例如結構描述) 執行 CREATE、ALTER 或 DROP 陳述式時，即會產生 **Audit Database Object Management** 事件類別。  
   
 > [!NOTE]  
 >  系統不會稽核與公開金鑰相關的動作。  

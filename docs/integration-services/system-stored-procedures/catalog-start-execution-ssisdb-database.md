@@ -1,5 +1,5 @@
 ---
-title: "catalog.start_execution （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.start_execution (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: a09c765e61b71586802d31b31917644a0f336f0c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,16 +36,16 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
   
 ## <a name="arguments"></a>引數  
  [@execution_id =] *execution_id*  
- 執行之執行個體的唯一識別碼。 *Execution_id*是**bigint**。
+ 執行之執行個體的唯一識別碼。 *execution_id* 是 **bigint**。
  
  [@retry_count =] *retry_count*  
- 執行失敗時重試次數。 向外中執行時，才會生效。這個參數是選擇性的。 如果未指定，則會將其值設定為 0。 *Retry_count*是**int**。
+ 執行失敗時的重試次數。 只有當執行位在 Scale Out 中時，它才會生效。這個參數是選擇性的。 如果未指定，會將其值設定為 0。 *retry_count* 是 **int**。
   
 ## <a name="remarks"></a>備註  
- 執行用來指定在封裝執行的單一執行個體期間封裝使用的參數值。 建立執行執行個體之後，在該執行執行個體啟動之前，對應的專案可能已重新部署。 在此情況下，執行執行個體參考的專案已過期。 無效的參考會導致失敗的預存程序。  
+ 已使用執行來指定在套件執行的單一執行個體期間，套件所使用的參數值。 建立執行執行個體之後，在該執行執行個體啟動之前，對應的專案可能已重新部署。 在這種情況下，執行的執行個體將會參考已過期的專案。 無效的參考會導致預存程序失敗。  
   
 > [!NOTE]  
->  執行只能啟動一次。 若要開始執行的執行個體，它必須是處於已建立狀態 (值為`1`中**狀態**資料行[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)檢視)。  
+>  執行只能啟動一次。 若要啟動執行的執行個體，它必須處於已建立狀態 ([catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視之 **status** 資料行中的值為 `1`)。  
   
 ## <a name="example"></a>範例  
  以下範例呼叫 catalog.create_execution 建立 Child1.dtsx 封裝執行之執行個體。 Integration Services Project1 包含此封裝。 本範例呼叫 catalog.set_execution_parameter_value 來設定 Parameter1、Parameter2 和 LOGGING_LEVEL 參數的值。 本範例將呼叫 catalog.start_execution 以啟動執行之執行個體。  
@@ -77,9 +75,9 @@ GO
   
 -   執行執行個體的 READ 和 MODIFY 權限、專案的 READ 和 EXECUTE 權限，以及 (如果適用的話) 參考環境的 READ 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會引發錯誤或警告的某些條件：  
@@ -97,4 +95,3 @@ GO
 -   與執行執行個體相關聯的專案版本已過期；只能執行最新版本的專案  
   
   
-

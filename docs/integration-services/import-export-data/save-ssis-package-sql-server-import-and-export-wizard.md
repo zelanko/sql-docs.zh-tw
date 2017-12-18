@@ -1,5 +1,5 @@
 ---
-title: "儲存 SSIS 封裝 （SQL Server 匯入和匯出精靈） |Microsoft 文件"
+title: "儲存 SSIS 套件 (SQL Server 匯入和匯出精靈) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -8,36 +8,33 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.savedtspackage.f1
+f1_keywords: sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 6ebbab742350e6874b86213c1fbf516e095a1e9a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4b938ef910a1c1e8c302529364ab6cfddfec54fb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>儲存 SSIS 封裝 (SQL Server 匯入和匯出精靈)
-  如果您在上指定**儲存和執行封裝**您想要將您的設定儲存為 SQL Server Integration Services (SSIS) 封裝時，頁面[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈 」 會顯示**儲存 SSIS 封裝**。 這個頁面上，您可以指定其他選項來儲存精靈所建立的封裝。  
+  如果您在 [儲存並執行套件] 頁面上指定要將設定儲存為 SQL Server Integration Services (SSIS) 套件，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [儲存 SSIS 套件]。 在此頁面上，您可以指定儲存精靈所建立套件的其他選項。  
 
 您之前在 [儲存並執行封裝]  頁面上為將封裝儲存到 SQL Server 或檔案系統所執行的選擇，決定您在 [儲存 SSIS 封裝]  頁面中看到的選項。 若要再次查看 [儲存並執行封裝]  頁面，請參閱 [儲存並執行封裝](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。
  
 **什麼是套件？** 精靈使用 SQL Server Integration Services (SSIS) 複製資料。 在 SSIS 中，基本的單位就是封裝。 當您在精靈的頁面間移動並指定選項時，精靈會在記憶體中建立 SSIS 封裝。
 
-## <a name="screen-shot---common-options"></a>螢幕擷取畫面-常用的選項
-下列螢幕擷取畫面顯示的第一個部分**儲存 SSIS 封裝**精靈頁面。 網頁的其餘的選項，這取決於您選擇封裝目的地變數數目。
+## <a name="screen-shot---common-options"></a>螢幕擷取畫面 - 一般選項
+下列螢幕擷取畫面顯示精靈的 [儲存 SSIS 套件] 頁面的第一個部分。 頁面的其餘部分具有不同數目的選項，而這取決於您選擇的套件目的地。
 
-![儲存封裝的一般選項](../../integration-services/import-export-data/media/save-package-common-options.png)
+![儲存套件 - 一般選項](../../integration-services/import-export-data/media/save-package-common-options.png)
 
 ## <a name="provide-a-name-and-description-for-the-package"></a>提供套件的名稱和描述  
  **名稱**  
@@ -51,14 +48,14 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>螢幕擷取畫面 - 將套件儲存在 SQL Server
 
- 下列螢幕擷取畫面顯示**儲存 SSIS 封裝**精靈中，如果您選取的頁面**SQL Server**選項**儲存和執行封裝**頁面。 
+ 下列螢幕擷取畫面會在您於 [儲存並執行套件] 頁面上選取 [SQL Server] 選項時，顯示精靈的 [儲存 SSIS 套件] 頁面。 
   
-![儲存 SSIS 封裝匯入和匯出精靈 」 的頁面](../../integration-services/import-export-data/media/save-package2.png "匯入和匯出精靈 」 的儲存 SSIS 封裝頁面")  
+![[匯入和匯出精靈] 的 [儲存 SSIS 套件] 頁面](../../integration-services/import-export-data/media/save-package2.png "[匯入和匯出精靈] 的 [儲存 SSIS 套件] 頁面")  
 
-## <a name="options-to-specify-target--sql-server"></a>若要指定的選項 (目標 = SQL Server) 
+## <a name="options-to-specify-target--sql-server"></a>要指定的選項 (目標 = SQL Server) 
 
  > [!NOTE]
- > 精靈會將儲存在封裝**msdb**資料庫**sysssispackages**資料表。 此選項的作用**不**將封裝儲存到 SSIS 目錄資料庫 (SSISDB)。  
+ > 精靈會將 **msdb** 資料庫的套件儲存至 **sysssispackages** 資料表。 此選項**不會**將套件儲存至 SSIS 目錄資料庫 (SSISDB)。  
  
  **伺服器名稱**  
  輸入或選取目的地伺服器名稱。  
@@ -70,29 +67,29 @@ ms.lasthandoff: 08/03/2017
 使用 SQL Server 驗證連接到伺服器。  
   
  **使用者名稱**  
-如果您指定 SQL Server 驗證，請輸入使用者名稱。  
+如果您已指定 SQL Server 驗證，請輸入使用者名稱。  
   
  **密碼**  
-如果您指定 SQL Server 驗證，請輸入密碼。  
+如果您已指定 SQL Server 驗證，請輸入密碼。  
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>螢幕擷取畫面 - 將套件儲存在檔案系統
  
-下列螢幕擷取畫面顯示**儲存 SSIS 封裝**精靈中，如果您選取的頁面**檔案系統**選項**儲存和執行封裝**頁面。 
+下列螢幕擷取畫面會在您於 [儲存並執行套件] 頁面上選取 [檔案系統] 選項時，顯示精靈的 [儲存 SSIS 套件] 頁面。 
   
-![儲存 SSIS 封裝匯入和匯出精靈 」 的頁面](../../integration-services/import-export-data/media/save-package1.png "匯入和匯出精靈 」 的儲存 SSIS 封裝頁面")  
+![[匯入和匯出精靈] 的 [儲存 SSIS 套件] 頁面](../../integration-services/import-export-data/media/save-package1.png "[匯入和匯出精靈] 的 [儲存 SSIS 套件] 頁面")  
 
-## <a name="options-to-specify-target--file-system"></a>若要指定的選項 (目標 = 檔案系統)
+## <a name="options-to-specify-target--file-system"></a>要指定的選項 (目標 = 檔案系統)
 
  **檔案名稱**  
- 目的地檔案中，輸入路徑和檔案名稱或使用**瀏覽**按鈕以選取目的地。  
+ 輸入目的地檔案的路徑和檔案名稱，或使用 [瀏覽] 按鈕選取目的地。  
   
 > [!TIP]
-> 請務必指定目的地資料夾，輸入或瀏覽。 如果您只輸入不具路徑的檔名，您不知道位置，精靈會儲存封裝。 此外，精靈也可能會嘗試將封裝儲存在您無權儲存檔案的位置，進而引發錯誤。  
+> 請務必透過輸入或瀏覽方式指定目的地資料夾。 如果您只輸入檔案名稱而未輸入路徑，則不知道精靈儲存套件的位置。 此外，精靈也可能會嘗試將封裝儲存在您無權儲存檔案的位置，進而引發錯誤。  
 >   
 >  請記住封裝檔案的儲存位置。  
   
  **瀏覽**  
- （選擇性） 瀏覽以選取目的地檔案的路徑**儲存封裝** 對話方塊。  
+ 選擇性地，在 [儲存套件] 對話方塊中，瀏覽以選取目的地檔案的路徑。  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>有關儲存封裝選項的兩個頁面  
  [儲存 SSIS 封裝]  頁面是挑選用來儲存 SSIS 封裝選項的兩個頁面之一。  
@@ -124,4 +121,3 @@ ms.lasthandoff: 08/03/2017
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)
  
  
-

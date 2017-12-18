@@ -1,5 +1,5 @@
 ---
-title: "步驟 9： 測試第 1 課的教學課程封裝 |Microsoft 文件"
+title: "步驟 9：測試第 1 課的教學課程套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ca45e8e1ba02246eb5429bd7bfea125663f69f41
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c8cd5718bca93ff1384a2f2df15dac5c80627414
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>課程 1-9： 測試第 1 課的教學課程封裝
+# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>課程 1-9 - 測試第 1課 的教學課程套件
 在這一課，您完成了下列工作：  
   
 -   建立新的 [!INCLUDE[ssIS](../includes/ssis-md.md)] 專案。  
@@ -43,11 +40,11 @@ ms.lasthandoff: 09/26/2017
   
 **控制流程**  
   
-![控制流程封裝中](../integration-services/media/task9lesson1control.gif "控制流程封裝中")  
+![套件中的控制流程](../integration-services/media/task9lesson1control.gif "套件中的控制流程")  
   
 **資料流程**  
   
-![封裝中的資料流程](../integration-services/media/task9lesson1data.gif "中封裝的資料流程")  
+![套件中的資料流程](../integration-services/media/task9lesson1data.gif "套件中的資料流程")  
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>若要執行第 1 課的教學課程封裝  
   
@@ -65,4 +62,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

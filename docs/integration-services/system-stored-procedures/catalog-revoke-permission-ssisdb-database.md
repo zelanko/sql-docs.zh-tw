@@ -1,5 +1,5 @@
 ---
-title: "catalog.revoke_permission （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.revoke_permission (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f058368bdd39b31a569d8810cccfc4d03d9f875e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bc46123d3d395080f6bc5252bfccd63e597a3612
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,28 +41,28 @@ catalog.revoke_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @object_type =] *object_type*  
- 安全性實體物件的類型。 安全性實體物件類型包括資料夾 (`1`)、 專案 (`2`)、 環境 (`3`)，和作業 (`4`)。*Object_type*是**smallint***。*  
+ [ @object_type = ] *object_type*  
+ 安全性實體物件的類型。 安全性實體物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。*object_type* 是 **smallint***。*  
   
- [ @object_id =] *object_id*  
- 安全性實體物件的唯一識別碼 (ID)。 *Object_id*是**bigint**。  
+ [ @object_id = ] *object_id*  
+ 安全性實體物件的唯一識別碼 (ID)。 *object_id* 是 **bigint**。  
   
- [ @principal_id =] *principal_id*  
- 要撤銷其權限之主體的識別碼。 *Principal_id*是**int**。  
+ [ @principal_id = ] *principal_id*  
+ 要撤銷其權限之主體的識別碼。 *principal_id* 是 **int**。  
   
- [ @permission_type =] *permission_type*  
- 權限的類型。 *Permission_type*是**smallint**。  
+ [ @permission_type = ] *permission_type*  
+ 權限的類型。 *permission_type* 是 **smallint**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功)  
   
- 1 （object_class 無效）  
+ 1 (object_class 無效)  
   
- 2 （object_id 不存在）  
+ 2 (object_id 不存在)  
   
- 3 （主體不存在）  
+ 3 (主體不存在)  
   
- 4 （權限不正確）  
+ 4 (權限無效)  
   
  5 (其他錯誤)  
   
@@ -79,12 +77,12 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   專案的 ASSIGN_PERMISSIONS 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 ## <a name="remarks"></a>備註  
- 如果指定 permission_type，預存程序會移除已明確指派給主體對於物件的權限。 即使沒有這種類型的執行個體，程序還是會傳回成功的程式碼值 (`0`)。 如果省略 permission_type，預存程序會移除所有的權限的主體物件。  
+ 如果指定 permission_type，則預存程序會移除已明確指派給物件主體的權限。 即使沒有這種類型的執行個體，程序還是會傳回成功的程式碼值 (`0`)。 如果省略 permission_type，則預存程序會移除物件主體的所有權限。  
   
 > [!NOTE]  
 >  如果主體是具有指定權限之角色的成員，則主體依然會具有物件的指定權限。  
@@ -104,4 +102,3 @@ catalog.revoke_permission [ @object_type = ] object_type
 |`104`|MANAGE_OBJECT_PERMISSIONS|允許主體管理資料夾中所有物件的權限。|資料夾|  
   
   
-

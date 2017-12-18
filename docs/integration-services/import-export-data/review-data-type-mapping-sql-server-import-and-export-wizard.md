@@ -1,5 +1,5 @@
 ---
-title: "檢閱資料類型對應 （SQL Server 匯入和匯出精靈） |Microsoft 文件"
+title: "檢閱資料類型對應 (SQL Server 匯入和匯出精靈) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,45 +8,42 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.reviewissues.f1
+f1_keywords: sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9ddeba48bde846c4c3494fef62d946bab792984
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f73734f20bcda435f099066852d84101192fb212
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>檢閱資料類型對應 (SQL Server 匯入和匯出精靈)
-如果您所指定的資料類型對應在 [資料行對應]  對話方塊的 [對應]  清單中失敗，則 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [檢閱資料類型對應]  頁面。 在這個頁面上，您可以檢閱精靈必須執行才能讓來源資料與目的地相容之資料類型轉換的詳細資訊。 此資訊包括視覺提示以區別預期會成功的轉換可能會導致錯誤或截斷的轉換的資料類型轉換。 針對每個轉換，您可以決定是否要接受精靈所建議的轉換，而且可以指定如何處理發生的任何錯誤。   
+如果您所指定的資料類型對應在 [資料行對應]  對話方塊的 [對應]  清單中失敗，則 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [檢閱資料類型對應]  頁面。 在這個頁面上，您可以檢閱精靈必須執行才能讓來源資料與目的地相容之資料類型轉換的詳細資訊。 這項資訊包括視覺提示，可區別預期會成功的轉換與可能導致錯誤或截斷的資料類型轉換。 針對每個轉換，您可以決定是否要接受精靈所建議的轉換，而且可以指定如何處理發生的任何錯誤。   
   
 > [!TIP]
 > 您無法在 [檢閱資料類型對應]  頁面上變更資料類型對應。 不過，您可以按一下 [上一步]  返回 [選取來源資料表和檢視表]  頁面，然後按一下 [編輯對應]  再次開啟 [資料行對應]  對話方塊。 在 [資料行對應]  對話方塊中，您可以指定較可能成功的資料類型對應。 若要再次查看 [資料行對應]  對話方塊，請參閱 [資料行對應](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。  
   
 ## <a name="screen-shot-of-the-review-data-type-mapping-page"></a>[檢閱資料類型對應] 頁面的螢幕擷取畫面
- 下列螢幕擷取畫面顯示的範例**檢閱資料類型對應**精靈頁面。
+ 下列螢幕擷取畫面顯示精靈的 [檢閱資料類型對應] 頁面的範例。
  
  在此範例中：
- -   使用者已指定中的對應**資料行對應**對話方塊可能會失敗。
+ -   使用者已指定 [資料行對應] 對話方塊中可能會失敗的對應。
  -   [資料表]  清單中資料列上的警告圖示，指出將至少一個資料行從查詢結果轉換成目的地資料表中的相容資料類型時發生問題。
- -   中的第一個資料列上的警告圖示**資料類型對應**清單表示從對應**int**的來源資料行的資料型別**smalldatetime**資料型別目的地資料行可能會導致資料遺失。
+ -   [資料類型對應] 清單中第一個資料列上的警告圖示，指出從來源資料行的 **int** 資料類型對應至目的地資料行的 **smalldatetime** 資料類型可能會導致資料遺失。
  
- ![匯入和匯出精靈的 [檢閱資料類型對應] 頁面](../../integration-services/import-export-data/media/review-mapping.png "檢閱資料類型對應頁面的匯入和匯出精靈") 
+ ![匯入和匯出精靈的 [檢閱資料類型對應] 頁面](../../integration-services/import-export-data/media/review-mapping.png "匯入和匯出精靈的 [檢閱資料類型對應] 頁面") 
  
 ## <a name="review-the-source-and-destination-tables"></a>檢閱來源與目的地資料表  
- [檢閱資料類型對應]  頁面的上半部是 [資料表]  清單，其中列出要從來源複製至目的地的資料表。 若要查看個別資料表的轉換資訊，請在 [資料表]  清單中選取資料表。 選取之資料表的個別資料行的轉換資訊會顯示在頁面的下半部中**資料類型對應**方格。
+ [檢閱資料類型對應]  頁面的上半部是 [資料表]  清單，其中列出要從來源複製至目的地的資料表。 若要查看個別資料表的轉換資訊，請在 [資料表]  清單中選取資料表。 所選取資料表之個別資料行的轉換資訊會顯示在此頁面下半部的 [資料類型對應] 方格中。
 
-在此範例中，使用者提供查詢的結果將會複製到目的地 Sales.CustomerNew2 資料表。 警告圖示指出有問題，將至少一個資料行從查詢結果轉換成目的地資料表中的相容資料類型。
+在此範例中，使用者提供之查詢的結果將會複製到目的地的 Sales.CustomerNew2 資料表。 警告圖示指出，將至少一個資料行從查詢結果轉換成目的地資料表中的相容資料類型時發生問題。
 
 ![檢閱對應 - 資料表](../../integration-services/import-export-data/media/review-mapping-tables.png)
   
@@ -54,15 +51,15 @@ ms.lasthandoff: 09/26/2017
   
 |資料行|Description|  
 |------------|-----------------|  
-|（來源圖示）|指出資料類型轉換的成功機率：<br /> - **綠色** 的核取記號圖示表示精靈預期這個資料表的所有資料類型轉換都會成功。<br />- **黃色** 的警告圖示表示您應該檢閱精靈即將執行的個別轉換。 若要檢閱這些轉換，請選取資料表，然後在 **[資料類型對應]** 清單中檢閱個別資料行的轉換。<br />- **紅色** 的錯誤圖示表示精靈無法確實針對這個資料表執行某些轉換。|  
+|(來源圖示)|指出資料類型轉換的成功機率：<br /> - **綠色** 的核取記號圖示表示精靈預期這個資料表的所有資料類型轉換都會成功。<br />- **黃色** 的警告圖示表示您應該檢閱精靈即將執行的個別轉換。 若要檢閱這些轉換，請選取資料表，然後在 **[資料類型對應]** 清單中檢閱個別資料行的轉換。<br />- **紅色** 的錯誤圖示表示精靈無法確實針對這個資料表執行某些轉換。|  
 |**來源**|來源資料表的名稱。|  
-|（目的地圖示）|指出目的地已經存在或將由精靈建立：<br /> -   資料表圖示表示目的地是現有的資料表。<br />-   含有光環的資料表圖示表示目的地是精靈即將建立的新資料表。|  
+|(目的地圖示)|指出目的地已經存在或將由精靈建立：<br /> -   資料表圖示表示目的地是現有的資料表。<br />-   含有光環的資料表圖示表示目的地是精靈即將建立的新資料表。|  
 |**目的地**|目的地資料表的名稱。|  
   
 ## <a name="review-the-data-type-mappings"></a>檢閱資料類型對應  
- [檢閱資料類型對應]  頁面的下半部是 [資料類型對應]  清單。 此方格會提供有關在來源資料表中所選取之資料行的詳細的轉換資訊**資料表**中頁面的上半部的清單。
+ [檢閱資料類型對應]  頁面的下半部是 [資料類型對應]  清單。 此方格會提供有關在 [資料表] 清單中選取之來源資料表內資料行的詳細轉換資訊。
 
-在此範例中，每個來源的資料行，會複製到具有相同名稱和目的地資料類型的資料行中。 中的第一個資料列上的警告圖示**資料類型對應**清單表示從對應**int**的來源資料行的資料型別**smalldatetime**資料型別目的地資料行可能會導致資料遺失。
+在此範例中，來源的每個資料行都會複製到目的地中具有相同名稱和資料類型的資料行。 [資料類型對應] 清單中第一個資料列上的警告圖示，指出從來源資料行的 **int** 資料類型對應至目的地資料行的 **smalldatetime** 資料類型可能會導致資料遺失。
  
 ![檢閱對應 - 對應](../../integration-services/import-export-data/media/review-mapping-mappings.png)  
 
@@ -70,7 +67,7 @@ ms.lasthandoff: 09/26/2017
 
 |資料行|Description|  
 |------------|-----------------|  
-|（轉換圖示）|指出資料類型轉換的成功機率：<br /> - **綠色** 的核取記號圖示表示精靈預期這個資料行的資料類型轉換會成功。<br />- **黃色** 的警告圖示表示您應該檢閱精靈即將執行的轉換。 若要檢閱轉換，請按兩下資料行，即可檢視 [資料行轉換詳細資訊]  對話方塊。 如需詳細資訊，請參閱 [資料行轉換詳細資訊對話方塊](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)。<br />- **紅色** 錯誤圖示表示精靈無法確實執行轉換。|  
+|(轉換圖示)|指出資料類型轉換的成功機率：<br /> - **綠色** 的核取記號圖示表示精靈預期這個資料行的資料類型轉換會成功。<br />- **黃色** 的警告圖示表示您應該檢閱精靈即將執行的轉換。 若要檢閱轉換，請按兩下資料行，即可檢視 [資料行轉換詳細資訊]  對話方塊。 如需詳細資訊，請參閱 [資料行轉換詳細資訊對話方塊](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)。<br />- **紅色** 錯誤圖示表示精靈無法確實執行轉換。|  
 |**來源資料行**|來源資料行的名稱。|  
 |**來源類型**|來源資料行的資料類型。|  
 |**目的地資料行**|目的地資料行的名稱。|  
@@ -104,5 +101,4 @@ ms.lasthandoff: 09/26/2017
  
  ## <a name="see-also"></a>另請參閱
 [SQL Server 匯入及匯出精靈的資料類型對應](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
-
 

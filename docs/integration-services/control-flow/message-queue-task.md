@@ -1,5 +1,5 @@
 ---
-title: "訊息佇列工作 |Microsoft 文件"
+title: "訊息佇列工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: eddacf0c8454160e6078ff59d150bab5218b6523
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: cc23a330f63d67cef6a5e12df9bf3b6ca82dcff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="message-queue-task"></a>訊息佇列工作
   「訊息佇列」工作可讓您使用 Message Queuing (又稱為 MSMQ) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝之間傳送和接收訊息，或將訊息傳送至由自訂應用程式處理的應用程式佇列。 這些訊息可採用簡單文字、檔案或變數及其值的形式。  
@@ -110,7 +108,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="message-queue-task-editor-general-page"></a>訊息佇列工作編輯器 (一般頁面)
   使用 **[訊息佇列工作編輯器]** 對話方塊的 **[一般頁面]** ，即可命名和描述訊息佇列工作、指定訊息格式以及指出工作是否傳送或接收訊息。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **名稱**  
  為訊息佇列工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
   
@@ -124,9 +122,9 @@ ms.lasthandoff: 08/11/2017
  指示是否使用 Message Queuing (又稱為 MSMQ) 的 2000 格式。 預設值為 **False**。  
   
  **MSMQConnection**  
- 選取現有的 MSMQ 連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
+ 選取現有的 MSMQ 連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題**：[MSMQ 連線管理員](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 連線管理員編輯器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **相關主題**： [MSMQ 連線管理員](../../integration-services/connection-manager/msmq-connection-manager.md)、 [MSMQ 連線管理員編輯器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
  **訊息**  
  指定訊息佇列工作是否傳送或接收訊息。 如果選取 **[傳送訊息]**，對話方塊的左窗格會列出 [傳送] 頁面，如果選取 **[接收訊息]**，則會列出 [接收] 頁面。 依預設，此值設定為 **[傳送訊息]**。  
@@ -175,7 +173,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="message-queue-task-editor-receive-page"></a>訊息佇列工作編輯器 (接收頁面)
   使用 [訊息佇列工作編輯器] 對話方塊的 [接收] 頁面，即可設定訊息佇列工作，以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) 訊息。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **RemoveFromMessageQueue**  
  指出接收訊息之後，是否從佇列中移除該訊息。 此值預設為 **False**。  
   
@@ -234,7 +232,7 @@ ms.lasthandoff: 08/11/2017
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
   
  **變數**  
- 輸入變數名稱，或按一下\<**新增變數...**>，然後設定新的變數。  
+ 鍵入變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
   
  **相關主題：**[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -279,7 +277,7 @@ ms.lasthandoff: 08/11/2017
  除非 [比較] 選項設定為 [無]，否則請提供訊息要比較的字串。  
   
  **變數**  
- 輸入要保留已接收的訊息，或按一下 變數名稱\<**新增變數...**>，然後設定新的變數。  
+ 鍵入要保存已接收之訊息的變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
   
  **相關主題：**[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -308,4 +306,3 @@ ms.lasthandoff: 08/11/2017
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   
   
-

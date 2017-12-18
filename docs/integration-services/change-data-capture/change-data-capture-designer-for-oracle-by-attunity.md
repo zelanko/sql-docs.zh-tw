@@ -1,5 +1,5 @@
 ---
-title: "變更資料擷取設計工具 for Oracle by Attunity |Microsoft 文件"
+title: "Attunity Oracle Change Data Capture 設計工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- desCons
+f1_keywords: desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dd65ef848696254aa8badb47e41196106401e100
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 64cc7301033e061d85f5c39d2b3e498f6c218d8f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取設計工具
   CDC 設計工具主控台是用來開發及維護 Oracle CDC 執行個體。 CDC 設計工具主控台是包含以下元素的 Microsoft Management Console 嵌入式管理單元：  
@@ -50,21 +47,20 @@ ms.lasthandoff: 08/03/2017
   
 -   [Oracle CDC 資料庫](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
   
--   [異動資料擷取設計工具 for Oracle by Attunity F1 說明參考](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
+-   [Attunity Oracle Change Data Capture (CDC) 設計工具 F1 說明參考](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
   
--   [異動資料擷取設計工具 for Oracle by Attunity 如何指南](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
+-   [Attunity Oracle Change Data Capture (CDC) 設計工具使用說明指南](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
--   [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+-   [用來建立執行個體的 SQL Server 連接](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
--   [進階的連接屬性](../../integration-services/change-data-capture/advanced-connection-properties.md)  
+-   [進階連接屬性](../../integration-services/change-data-capture/advanced-connection-properties.md)  
   
--   [執行指令碼的 oracle 認證](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+-   [執行指令碼的 Oracle 認證](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
 -   [Oracle 補充記錄指令碼](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)  
   
 -   [CDC 執行個體部署指令碼](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)  
   
--   [CDC 設計工具 SQL Server 連接所需權限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+-   [SQL Server 連接所需的 CDC 設計工具權限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   
-

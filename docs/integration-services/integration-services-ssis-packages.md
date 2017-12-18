@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 封裝 |Microsoft 文件"
+title: "Integration Services (SSIS) 套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2a80b0c5d00cac3ca874bb61d1acf55311892dec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
   封裝是指經過組織的連接、控制流程元素、資料流程元素、事件處理常式、變數、參數以及組態的集合，您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的圖形設計工具組裝或利用撰寫程式的方式建立封裝。  然後將完成的封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區或檔案系統中，或者您可以將 ssISnoversion 專案部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器。 封裝是所擷取、執行和儲存的工作單位。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 08/03/2017
   
  下列圖表說明包含控制流程的簡易封裝，而該控制流程的資料流程工作則擁有資料流程。  
   
- ![控制流程和資料流程的封裝](../integration-services/media/ssis-package.gif "控制流程和資料流程的封裝")  
+ ![具有控制流程和資料流程的套件](../integration-services/media/ssis-package.gif "具有控制流程和資料流程的套件")  
   
  在您建立基本封裝之後，就可以加入記錄和變數這類進階功能，以擴充封裝功能。 如需詳細資訊，請參閱有關「擴充封裝功能的物件」一節。  
   
@@ -98,7 +96,7 @@ ms.lasthandoff: 08/03/2017
 |**PackageEnd**|指出封裝已經完成。<br /><br /> 注意：此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
 |**Diagnostic**|提供影響封裝執行之系統組態的相關資訊，例如可以同時執行的可執行檔數目。|  
   
-## <a name="set-the-properties-of-a-package"></a>設定封裝的屬性  
+## <a name="set-the-properties-of-a-package"></a>設定套件的屬性  
  您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或以程式設計方式設定屬性。  
   
  如需如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]來設定這些屬性的詳細資訊，請參閱 [設定封裝屬性](../integration-services/set-package-properties.md)。  
@@ -115,11 +113,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>相關工作  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 用來建立封裝的工具除了 [!INCLUDE[ssIS](../includes/ssis-md.md)] 物件模型之外，還包含兩項圖形工具：[ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 設計師] 和 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱下列主題。  
   
--   [匯入和匯出資料的 SQL server 匯入和匯出精靈](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+-   [使用 SQL Server 匯入和匯出精靈來匯入和匯出資料](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
--   [在 SQL Server Data Tools 中建立封裝](../integration-services/create-packages-in-sql-server-data-tools.md)  
+-   [在 SQL Server Data Tools 中建立套件](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
--   請參閱[以程式設計方式建立封裝](../integration-services/building-packages-programmatically/building-packages-programmatically.md)開發人員指南中。 
+-   請參閱《開發人員指南》中的[以程式設計方式建置套件](../integration-services/building-packages-programmatically/building-packages-programmatically.md)。 
   
   
-

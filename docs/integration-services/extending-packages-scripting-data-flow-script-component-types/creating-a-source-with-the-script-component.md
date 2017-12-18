@@ -1,5 +1,5 @@
 ---
-title: "使用指令碼元件建立來源 |Microsoft 文件"
+title: "使用指令碼元件建立來源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,143 +8,139 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script component [Integration Services], source components
 - output columns [Integration Services]
 - sources [Integration Services], components
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d4944c3d5752da21fed90f16a38a33b4fad41515
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 397039d98c68bc6828473099091a70b8777f350d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-source-with-the-script-component"></a>以指令碼元件建立來源
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用來源元件，以從資料來源載入資料，進而將其傳遞至下游轉換與目的地。 通常您會透過現有的連接管理員來連接到資料來源。  
   
- 如需指令碼元件的概觀，請參閱[Extending the Data Flow with Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+ 如需指令碼元件的概觀，請參閱[使用指令碼元件擴充資料流程](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
- 指令碼元件以及它為您產生的基礎結構程式碼，可大幅簡化開發自訂資料流程元件的程序。 不過，若要了解指令碼元件如何運作，全部讀完開發自訂資料流程元件所需的步驟，可能會非常有用。 請參閱節[開發自訂資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)，特別是 <<c4> [ 開發自訂來源元件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)。  
+ 指令碼元件以及它為您產生的基礎結構程式碼，可大幅簡化開發自訂資料流程元件的程序。 不過，若要了解指令碼元件如何運作，全部讀完開發自訂資料流程元件所需的步驟，可能會非常有用。 請參閱[開發自訂資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)一節，尤其是[開發自訂來源元件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)主題。  
   
 ## <a name="getting-started-with-a-source-component"></a>開始使用來源元件  
- 當您將指令碼元件加入至 [資料流程] 窗格的[!INCLUDE[ssIS](../../includes/ssis-md.md)]設計工具中，**選取指令碼元件類型**對話方塊會開啟，並提示您選取的來源、 目的地或轉換的指令碼。 在此對話方塊中，選取**來源**。  
+ 當您將指令碼元件新增至 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具的 [資料流程] 窗格時，就會開啟 [選取指令碼元件類型] 對話方塊，並提示您選取 [來源]、[目的地] 或是 [轉換] 指令碼。 在這個對話方塊中，選取 [來源]。  
   
 ## <a name="configuring-a-source-component-in-metadata-design-mode"></a>在中繼資料設計模式中設定來源元件  
- 選取後建立來源元件，您必須設定元件利用**指令碼轉換編輯器**。 如需詳細資訊，請參閱[設定指令碼元件指令碼元件編輯器中](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
+ 選擇建立來源元件之後，您可以使用 [指令碼轉換編輯器] 來設定元件。 如需詳細資訊，請參閱[在指令碼元件編輯器中設定指令碼元件](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
   
- 資料流程來源元件沒有輸入，而且支援一或多個輸出。 設定輸出的元件是其中一個步驟，您必須使用中繼資料設計模式中，在完成**指令碼轉換編輯器**，然後才能在您撰寫自訂指令碼。  
+ 資料流程來源元件沒有輸入，而且支援一或多個輸出。 設定元件的輸出是您必須在中繼資料設計模式下完成的其中一個步驟，方法是在撰寫自訂指令碼之前先使用 [指令碼轉換編輯器]。  
   
- 您也可以藉由設定指定的指令碼語言**ScriptLanguage**屬性**指令碼**頁面**指令碼轉換編輯器**。  
+ 您也可以在 [指令碼轉換編輯器] 的 [指令碼] 頁面上設定 [ScriptLanguage] 屬性，來指定指令碼語言。  
   
 > [!NOTE]  
->  若要設定指令碼元件和指令碼工作的預設指令碼語言，使用**指令碼語言**選項**一般**頁面**選項** 對話方塊。 如需相關資訊，請參閱 [General Page](~/integration-services/control-flow/script-task-editor-general-page.md)。  
+>  若要為指令碼元件和指令碼工作設定預設指令碼語言，請使用 [選項] 對話方塊的 [一般] 頁面上的 [指令碼語言] 選項。 如需相關資訊，請參閱 [General Page](~/integration-services/control-flow/script-task-editor-general-page.md)。  
   
 ### <a name="adding-connection-managers"></a>加入連接管理員  
- 通常來源元件使用現有的連接管理員，以連接到它將資料載入資料流程的資料來源。 在**連接管理員**頁面**指令碼轉換編輯器**，按一下 **新增**新增適當的連接管理員。  
+ 通常來源元件使用現有的連接管理員，以連接到它將資料載入資料流程的資料來源。 在 [指令碼轉換編輯器] 的 [連線管理員] 頁面上，按一下 [新增] 新增適當的連線管理員。  
   
  然而，連接管理員只是一種便利的單位，用以封裝和儲存連接至特定類型的資料來源所需的資訊。 您必須撰寫自己的自訂程式碼，以載入或是儲存資料，以及 (可能的話) 開啟和關閉連至資料來源的連接。  
   
- 如需如何透過指令碼元件使用連接管理員的一般資訊，請參閱[連接到指令碼元件中的資料來源](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)。  
+ 如需如何利用指令碼元件以使用連線管理員的一般資訊，請參閱[在指令碼元件中連線至資料來源](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)。  
   
- 如需有關**連接管理員**頁面**指令碼轉換編輯器**，請參閱[指令碼轉換編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
+ 如需 [指令碼轉換編輯器] 之 [連線管理員] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)。  
   
 ### <a name="configuring-outputs-and-output-columns"></a>設定輸出和輸出資料行  
- 來源元件沒有輸入，而且支援一或多個輸出。 在**輸入和輸出**頁面**指令碼轉換編輯器**，根據預設，已建立單一輸出，但是尚未建立任何輸出資料行。 在編輯器的此頁面上，您可能會需要或想要設定下列項目。  
+ 來源元件沒有輸入，而且支援一或多個輸出。 在 [指令碼轉換編輯器] 的 [輸入及輸出] 頁面上，預設已建立單一輸出，但是尚未建立輸出資料行。 在編輯器的此頁面上，您可能會需要或想要設定下列項目。  
   
--   您必須為每個輸出手動加入和設定輸出資料行。 選取每個輸出，輸出資料行 資料夾，然後使用**加入資料行**和**移除資料行**按鈕管理來源元件的每個輸出的輸出資料行。 之後，您將在指令碼中使用這裡所指派的名稱來參考輸出資料行，方法是使用在自動產生的程式碼中為您建立的具有類型之存取子屬性。  
+-   您必須為每個輸出手動加入和設定輸出資料行。 為每個輸出選取 [輸出資料行] 資料夾，然後使用 [新增資料行] 和 [移除資料行] 按鈕，為來源元件的每個輸出管理輸出資料行。 之後，您將在指令碼中使用這裡所指派的名稱來參考輸出資料行，方法是使用在自動產生的程式碼中為您建立的具有類型之存取子屬性。  
   
--   您可能會想要建立一或多個其他輸出，例如含有非預期值的資料列之模擬錯誤輸出。 使用**加入輸出**和**移除輸出**按鈕管理來源元件的輸出。 所有輸入資料列會導向至所有可用的輸出，除非您同時指定相同的非零值的**ExclusionGroup**那些您想要將導向至其中一個共用相同的輸出的每個資料列的輸出屬性**ExclusionGroup**值。 若要識別選取特定的整數值**ExclusionGroup**並不重要。  
+-   您可能會想要建立一或多個其他輸出，例如含有非預期值的資料列之模擬錯誤輸出。 使用 [新增輸出] 和 [移除輸出] 按鈕管理來源元件的輸出。 所有的輸入資料列都會導向至所有可用的輸出，除非您也為那些輸出的 **ExclusionGroup** 屬性指定相同的非零值，也就是您想要將每個輸入資料列導向至有著相同 **ExclusionGroup** 值的其中一個輸出。 至於選取哪一個特定的整數值以識別 **ExclusionGroup** 則無關緊要。  
   
     > [!NOTE]  
-    >  您也可以使用非零**ExclusionGroup**具有單一輸出，當您不想要輸出所有資料列的屬性值。 在此情況下，不過，您必須明確呼叫**DirectRowTo\<outputbuffer >**您想要傳送至輸出每個資料列的方法。  
+    >  當您不想要輸出所有的資料列時，也可以使用具有單一輸出的非零 **ExclusionGroup** 屬性值。 然而，在此情況下，您必須為要傳送至輸出的每個資料列，明確地呼叫 **DirectRowTo\<outputbuffer>** 方法。  
   
 -   您可能會想要將易記名稱指派給輸出。 之後，您將在指令碼中使用輸出的名稱來加以參考，方法是使用在自動產生的程式碼中為您建立的具有類型之存取子屬性。  
   
--   多個在相同的輸出通常**ExclusionGroup**有相同的輸出資料行。 然而，如果您正在建立模擬的錯誤輸出，可能會想要加入更多的資料行以儲存錯誤資訊。 如需如何資料流程引擎的相關資訊，處理錯誤資料列，請參閱[資料流程元件中使用錯誤輸出](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)。 不過，在指令碼元件中，您必須撰寫自已的程式碼，以適當的錯誤資訊填入其他資料行。 如需詳細資訊，請參閱[模擬錯誤輸出指令碼元件](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)。  
+-   通常，在相同 **ExclusionGroup** 中的多個輸出都有相同的輸出資料行。 然而，如果您正在建立模擬的錯誤輸出，可能會想要加入更多的資料行以儲存錯誤資訊。 如需資料流程引擎如何處理錯誤資料列的資訊，請參閱[使用資料流程元件中的錯誤輸出](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)。 不過，在指令碼元件中，您必須撰寫自已的程式碼，以適當的錯誤資訊填入其他資料行。 如需詳細資訊，請參閱[模擬指令碼元件的錯誤輸出](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)。  
   
- 如需有關**輸入和輸出**頁面**指令碼轉換編輯器**，請參閱[指令碼轉換編輯器 &#40; 輸入及輸出頁面 &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 如需 [指令碼轉換編輯器] 之 [輸入及輸出] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
   
 ### <a name="adding-variables"></a>加入變數  
- 如果有任何現有變數的值，您想要使用指令碼中，您可以將其加入**[readonlyvariables]**和**[readwritevariables]**屬性欄位上**指令碼**頁面**指令碼轉換編輯器**。  
+ 如果有任何要在指令碼中使用其值的現有變數，則可以在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，將它們新增至 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位中。  
   
- 當您在屬性欄位中輸入多個變數時，請用逗號分隔變數名稱。 您也可以輸入多個變數，依序按一下省略符號 (**...**) 旁邊**[readonlyvariables]**和**[readwritevariables]**中的，選取變數和屬性欄位**選取變數**對話方塊.  
+ 當您在屬性欄位中輸入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取變數，以輸入多個變數。  
   
- 如需如何使用指令碼元件中使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
+ 如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
- 如需有關**指令碼**頁面**指令碼轉換編輯器**，請參閱[指令碼轉換編輯器 &#40;指令碼頁面 &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ 如需 [指令碼轉換編輯器] 的 [指令碼] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>在程式碼設計模式中編寫來源元件的指令碼  
- 您已設定您的元件中繼資料之後，請開啟[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以撰寫自訂指令碼。 若要開啟 VSTA，請按一下**編輯指令碼**上**指令碼**頁面**指令碼轉換編輯器**。 您可以撰寫指令碼使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Basic 或[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual C# 中，針對選取的指令碼語言而定**ScriptLanguage**屬性。  
+ 在您已為元件設定中繼資料之後，請開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以撰寫自訂指令碼。 若要開啟 VSTA，請在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，按一下 [編輯指令碼]。 您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 撰寫指令碼，視為 **ScriptLanguage** 屬性選取的指令碼語言而定。  
   
- 適用於所有類型的元件所使用的指令碼元件建立的重要資訊，請參閱[編碼和偵錯指令碼元件](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
+ 如需使用指令碼元件所建立之各種元件都適用的重要資訊，請參閱[編碼和偵錯指令碼元件](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
 ### <a name="understanding-the-auto-generated-code"></a>了解自動產生的程式碼  
- 當您在建立並設定來源元件，可編輯之後開啟 VSTA IDE 時**ScriptMain**類別會出現在程式碼編輯器。 您可以撰寫自訂程式碼**ScriptMain**類別。  
+ 當您在建立和設定來源元件之後開啟 VSTA IDE，可編輯的 **ScriptMain** 類別會出現在程式碼編輯器中。 您在 **ScriptMain** 類別中撰寫自訂程式碼。  
   
- **ScriptMain**類別包含的 stub **CreateNewOutputRows**方法。 **CreateNewOutputRows**是來源元件中最重要的方法。  
+ **ScriptMain** 類別包含 **CreateNewOutputRows** 方法的虛設常式。 **CreateNewOutputRows** 是來源元件中最重要的方法。  
   
- 如果您開啟**Project Explorer**視窗在 VSTA 中的，您可以看到，指令碼元件也會產生唯讀**BufferWrapper**和**ComponentWrapper**專案項目。 **ScriptMain**類別繼承自**UserComponent**類別**ComponentWrapper**專案項目。  
+ 如果您在 VSTA 中開啟 [專案總管] 視窗，則可以看到指令碼元件也會產生唯讀的 **BufferWrapper** 和 **ComponentWrapper** 專案項目。 **ScriptMain** 類別繼承自 **ComponentWrapper** 專案項目中的 **UserComponent** 類別。  
   
- 在執行階段，資料流程引擎會叫用**PrimeOutput**方法中的**UserComponent**類別，它會覆寫<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PrimeOutput%2A>方法<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>父類別。 **PrimeOutput**方法會呼叫下列方法：  
+ 在執行階段，資料流程引擎會叫用 **UserComponent** 類別中的 **PrimeOutput** 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PrimeOutput%2A> 方法。 **PrimeOutput** 方法會依序呼叫下列方法：  
   
-1.  **CreateNewOutputRows**方法，在您覆寫**ScriptMain**從資料來源的資料列加入輸出緩衝區，也就是空的一開始。  
+1.  您在 **ScriptMain** 中覆寫以便從資料來源將資料列新增至輸出緩衝區的 **CreateNewOutputRows** 方法，一開始會是空的。  
   
-2.  **FinishOutputs**方法，預設是空的。 覆寫這個方法在**ScriptMain**執行完成輸出所需的任何處理。  
+2.  **FinishOutputs** 方法預設是空的。 在 **ScriptMain** 中覆寫此方法以執行完成輸出所需的處理。  
   
-3.  私用**MarkOutputsAsFinished**方法，這個方法會呼叫<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A>方法<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>父類別，表示資料流程引擎輸出已完成。 您不需要呼叫**SetEndOfRowset**在自己的程式碼中明確。  
+3.  私用 **MarkOutputsAsFinished** 方法 (呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A> 方法) 用以指出輸出已完成的資料流程引擎。 您在自己的程式碼中不需要明確地呼叫 **SetEndOfRowset**。  
   
 ### <a name="writing-your-custom-code"></a>撰寫您的自訂程式碼  
- 為了完成建立自訂來源元件，您可能想要撰寫指令碼中提供下列方法**ScriptMain**類別。  
+ 為了完成建立自訂來源元件，您可能會想要以 **ScriptMain** 類別中提供的下列方法來撰寫指令碼。  
   
-1.  覆寫**AcquireConnections**方法，以連接到外部資料來源。 從連接管理員擷取連接物件，或是必要的連接資訊。  
+1.  覆寫 **AcquireConnections** 方法以連線至外部資料來源。 從連接管理員擷取連接物件，或是必要的連接資訊。  
   
-2.  覆寫**PreExecute**方法來載入資料時，如果您可以同時載入所有來源資料。 例如，您可以執行**SqlCommand**針對[!INCLUDE[vstecado](../../includes/vstecado-md.md)]連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中，所有來源資料都載入到同時**SqlDataReader**。 如果您必須載入的來源資料的一列一次 （例如，讀取文字檔時），您可以將資料載入循環使用中的資料列**CreateNewOutputRows**。  
+2.  如果您可以同時載入所有的來源資料，請覆寫 **PreExecute** 方法以載入資料。 例如，您可以針對連至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線，執行 **SqlCommand**，並同時將所有的來源資料載入 **SqlDataReader**。 如果您必須一次載入一個資料列的來源資料 (例如，在讀取文字檔時)，可以在 **CreateNewOutputRows** 中循環使用資料列時載入資料。  
   
-3.  使用覆寫**CreateNewOutputRows**方法以將新的資料列加入空的輸出緩衝區，並填入新的輸出資料列中每個資料行的值。 使用**AddRow**方法的每一個輸出緩衝區，來加入空白的新資料列，然後再將 每個資料行的值。 通常您會複製從外部來源載入的資料行值。  
+3.  使用覆寫的 **CreateNewOutputRows** 方法將新資料列新增至空的輸出緩衝區，並將新輸出資料列中的每個資料行填入值。 使用每個輸出緩衝區的 **AddRow** 方法，新增空的新資料列，然後設定每個資料行的值。 通常您會複製從外部來源載入的資料行值。  
   
-4.  覆寫**PostExecute**方法來完成處理資料。 例如，您可以關閉**SqlDataReader**您用來載入資料。  
+4.  覆寫 **PostExecute** 方法以完成處理資料。 例如，您可以關閉用以載入資料的 **SqlDataReader**。  
   
-5.  覆寫**ReleaseConnections**外部資料來源中斷連線，視需要的方法。  
+5.  視需要，覆寫 **ReleaseConnections** 方法從外部資料來源中斷連線。  
   
 ## <a name="examples"></a>範例  
- 下列範例示範自訂程式碼所需的**ScriptMain**類別來建立來源元件。  
+ 下列範例示範建立來源元件時，**ScriptMain** 類別中所需的自訂程式碼。  
   
 > [!NOTE]  
->  這些範例使用**Person.Address**資料表中**AdventureWorks**範例資料庫，並傳遞其第一個和第四個資料行， **intAddressID**和**nvarchar (30) 縣 （市)** ，經過資料流資料行。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。  
+>  這些範例使用 **AdventureWorks** 範例資料庫中的 **Person.Address** 資料表，並透過資料流程傳遞其第一個和第四個資料行：**intAddressID** 和 **nvarchar(30)City** 資料行。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。  
   
 ### <a name="adonet-source-example"></a>ADO.NET 來源範例  
- 這個範例示範一個來源元件，它使用現有[!INCLUDE[vstecado](../../includes/vstecado-md.md)]與載入資料的連接管理員[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至資料流程的資料表。  
+ 這個範例示範一個來源元件，它使用現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表將資料載入資料流程。  
   
  如果您要執行這個範例程式碼，必須依下列方式設定封裝與元件：  
   
-1.  建立[!INCLUDE[vstecado](../../includes/vstecado-md.md)]使用連接管理員**SqlClient**提供者連接到**AdventureWorks**資料庫。  
+1.  建立 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以使用 **SqlClient** 提供者連線至 **AdventureWorks** 資料庫。  
   
 2.  將新指令碼元件加入資料流程設計師介面，並將它設定為來源。  
   
-3.  開啟**指令碼轉換編輯器**。 在**輸入和輸出**頁面上，重新命名預設輸出更具描述性的名稱，例如**MyAddressOutput**，以及加入和設定兩個輸出資料行**AddressID**和**縣 （市)**。  
+3.  開啟 [指令碼轉換編輯器]。 在 [輸入及輸出] 頁面上，以更具描述性的名稱重新命名預設輸出，例如 **MyAddressOutput**，以及新增和設定兩個輸出資料行：**AddressID** 和 **City**。  
   
     > [!NOTE]  
-    >  確定要變更的資料型別**縣 （市)**為 DT_WSTR 的輸出資料行。  
+    >  務必將 **City** 輸出資料行的資料類型變更為 DT_WSTR。  
   
-4.  在**連接管理員**頁面上，加入或建立[!INCLUDE[vstecado](../../includes/vstecado-md.md)]連接管理員並加以命名，例如**MyADONETConnection**。  
+4.  在 [連線管理員] 頁面上，新增或建立 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，並指定一個名稱，例如 **MyADONETConnection**。  
   
-5.  在**指令碼**頁面上，按一下**編輯指令碼**並輸入以下指令碼。 然後關閉 指令碼開發環境和**指令碼轉換編輯器**。  
+5.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，並輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]。  
   
-6.  建立和設定目的地元件，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地、 或中所示範的範例目的地元件[與指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)，它需要**AddressID**和**縣 （市)**資料行。 然後將來源元件連接到目的地  (不需要任何轉換，就可以直接將來源連接到目的地)。您可以執行下列命令，以建立目的地資料表[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**AdventureWorks**資料庫：  
+6.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件，它需要 **AddressID** 和 **City** 資料行。 然後將來源元件連接到目的地  (不需要任何轉換，就可以直接將來源連接到目的地)。您可以在 **AdventureWorks** 資料庫中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以建立目的地資料表：  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -265,19 +261,19 @@ ms.lasthandoff: 09/26/2017
   
  如果您要執行這個範例程式碼，必須依下列方式設定封裝與元件：  
   
-1.  使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈 」，匯出**Person.Address**資料表中**AdventureWorks**到逗點分隔的一般檔案的範例資料庫。 這個範例使用的檔案名稱為 ExportedAddresses.txt。  
+1.  使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 從 **AdventureWorks** 範例資料庫將 **Person.Address** 資料表匯出至以逗號分隔的一般檔案。 這個範例使用的檔案名稱為 ExportedAddresses.txt。  
   
 2.  建立一般檔案連接管理員以連接至匯出的資料檔案。  
   
 3.  將新指令碼元件加入資料流程設計師介面，並將它設定為來源。  
   
-4.  開啟**指令碼轉換編輯器**。 在**輸入和輸出**頁面上，重新命名預設輸出更具描述性的名稱，例如**MyAddressOutput**。 加入和設定兩個輸出資料行**AddressID**和**縣 （市)**。  
+4.  開啟 [指令碼轉換編輯器]。 在 [輸入及輸出] 頁面上，以更具描述性的名稱重新命名預設輸出，例如 **MyAddressOutput**。 新增和設定兩個輸出資料行：**AddressID** 和 **City**。  
   
-5.  在**連接管理員**頁面上，加入或建立一般檔案連接管理員 中，使用描述性名稱，例如**MyFlatFileSrcConnectionManager**。  
+5.  在 [連線管理員] 頁面上，使用更具描述性的名稱 (例如 **MyFlatFileSrcConnectionManager**) 以新增或建立一般檔案連線管理員。  
   
-6.  在**指令碼**頁面上，按一下**編輯指令碼**並輸入以下指令碼。 然後關閉 指令碼開發環境和**指令碼轉換編輯器**。  
+6.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，並輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]。  
   
-7.  建立和設定目的地元件，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地、 或中所示範的範例目的地元件[與指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)。 然後將來源元件連接到目的地  (不需要任何轉換，就可以直接將來源連接到目的地)。您可以執行下列命令，以建立目的地資料表[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**AdventureWorks**資料庫：  
+7.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將來源元件連接到目的地  (不需要任何轉換，就可以直接將來源連接到目的地)。您可以在 **AdventureWorks** 資料庫中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以建立目的地資料表：  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -401,4 +397,3 @@ ms.lasthandoff: 09/26/2017
  [開發自訂來源元件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
   
   
-

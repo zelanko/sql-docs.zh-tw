@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 角色 （SSIS 服務） |Microsoft 文件"
+title: "Integration Services 角色 (SSIS 服務) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.dtsserver.packageroles.f1
+f1_keywords: sql13.dts.dtsserver.packageroles.f1
 helpviewer_keywords:
 - security [Integration Services], roles
 - db_ssisoperator role
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 0fa2a9cbc44c9f934ddde096cf22be56bf705a67
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3e618908333f48e0a86fa7974ce82f0a48293c5c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色 (SSIS 服務)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供特定固定資料庫層級角色來協助保護對於儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的封裝的存取。 可用的角色根據您將封裝儲存在 SSIS 目錄資料庫 (SSISDB) 或 msdb 資料庫而有所不同。  
@@ -138,7 +135,7 @@ ms.lasthandoff: 08/03/2017
   
 11. 按一下 **[確定]**。
 
-## <a name="roles_dialog"></a>封裝角色對話方塊 UI 參考
+## <a name="roles_dialog"></a> 套件角色對話方塊 UI 參考
   使用 [封裝角色] 對話方塊 (可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用)，即可指定擁有封裝之讀取權限的資料庫層級角色以及擁有封裝之寫入權限的資料庫層級角色。 資料庫層級角色僅適用於儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 資料庫中的封裝。  
   
  對話方塊中所列出的角色是 **msdb** 系統資料庫的目前資料庫角色。 如果沒有選取角色，則會套用預設 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色。 依預設，讀取者角色包含 **db_ssisadmin**、 **db_ssisoperator**和建立封裝的使用者。 上述其中一個角色之成員或是建立封裝的使用者可以列舉、檢視、匯出和執行封裝。 依預設，寫入者角色包含 **db_ssisadmin** 以及建立封裝的使用者。 這個角色的成員使用者以及建立封裝的使用者，可以匯入、刪除和變更封裝。  
@@ -154,4 +151,3 @@ ms.lasthandoff: 08/03/2017
   
  **寫入器角色**  
  選取清單中的角色  
-

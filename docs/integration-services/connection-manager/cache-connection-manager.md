@@ -1,5 +1,5 @@
 ---
-title: "快取連接管理員 |Microsoft 文件"
+title: "快取連線管理員 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.cacheconnection.f1
-helpviewer_keywords:
-- Cache connection manager
+f1_keywords: sql13.dts.designer.cacheconnection.f1
+helpviewer_keywords: Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 481075f02dff2f4900eeca549835b990b50aee37
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df50fb19024245379a92dbb5486d2c2ab035f851
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cache-connection-manager"></a>快取連接管理員
   快取連接管理員會從快取轉換或快取檔案 (.caw) 中讀取資料，而且可以將資料儲存至快取檔案。 不論您是否將快取連接管理員設定為使用快取檔案，資料一定會儲存在記憶體中。  
@@ -59,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
  您可以透過「 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需如何以程式設計方式設定連接管理員的資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>和[新增連線以程式設計方式](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+ 如需如何以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和[以程式設計方式新增連線](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="cache-connection-manager-editor"></a>快取連接管理員編輯器
   快取連接管理員會從快取轉換或快取檔案 (.caw) 中讀取參考資料集，而且可以將資料儲存至快取檔案。 資料永遠會儲存在記憶體中。  
@@ -135,7 +131,6 @@ ms.lasthandoff: 08/09/2017
  指定資料行類型的字碼頁。 如果適用於資料類型，您可以更新 **Code Page**。  
   
 ## <a name="related-tasks"></a>相關工作  
- [在完整快取模式下使用快取連接管理員實作查閱轉換](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [使用快取連線管理員以完整快取模式來實作查閱轉換](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "載入和以程式設計方式執行本機封裝 |Microsoft 文件"
+title: "以程式設計方式載入和執行本機套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Integration Services packages, running
 - events [Integration Services], capturing
@@ -25,20 +22,19 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 07ceb460488ca1973295b6b8e991948efe8b9d2a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7a017f2d0b04df41b25e093bdeccd53036aa5710
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>以程式設計的方式載入和執行本機封裝
-  您可以執行[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝視需要或是在使用中所述的方法預定時間[Running Packages](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx)。 然而，只需要幾行的程式碼，您就可以從 Windows Form 應用程式、主控台應用程式、ASP.NET Web 表單或 Web 服務，或是 Windows 服務等自訂應用程式執行封裝。  
+  您可以使用[執行套件](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx)中所述的方法，視需要或是依預定的次數執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。 然而，只需要幾行的程式碼，您就可以從 Windows Form 應用程式、主控台應用程式、ASP.NET Web 表單或 Web 服務，或是 Windows 服務等自訂應用程式執行封裝。  
   
  此主題會討論：  
   
@@ -46,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
 -   以程式設計方式執行封裝  
   
- 本主題中用以載入和執行封裝的方法的所有需要的參考**Microsoft.SqlServer.ManagedDTS**組件。 新的專案中加入參考之後, 匯入<xref:Microsoft.SqlServer.Dts.Runtime>命名空間與**使用**或**匯入**陳述式。  
+ 本主題中用來載入和執行套件的所有方法，都需要 **Microsoft.SqlServer.ManagedDTS** 組件的參考。 在新專案中新增參考之後，請使用 **using** 或 **Imports** 陳述式匯入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間。  
   
 ## <a name="loading-a-package-programmatically"></a>以程式設計方式載入封裝  
  無論封裝儲存在本機或遠端，如果要在本機電腦上以程式設計方式載入封裝，請呼叫下列其中一種方法：  
@@ -67,9 +63,9 @@ ms.lasthandoff: 08/03/2017
   
 1.  啟動 Visual Studio 開發環境，並以慣用的開發語言建立新應用程式。 此範例使用主控台應用程式，不過，您也可以從 Windows Form 應用程式、ASP.NET Web 表單或 Web 服務或是 Windows 服務執行封裝。  
   
-2.  在**專案**功能表上，按一下 **加入參考**並加入參考**microsoft.sqlserver.manageddts.dll 中**。 按一下 **[確定]**。  
+2.  在 [專案] 功能表上，按一下 [新增參考]，然後新增 **Microsoft.SqlServer.ManagedDTS.dll** 的參考。 按一下 **[確定]**。  
   
-3.  使用 Visual Basic**匯入**陳述式或 C#**使用**陳述式匯入**Microsoft.SqlServer.Dts.Runtime**命名空間。  
+3.  使用 Visual Basic **Imports** 陳述式或 C# **using** 陳述式匯入 **Microsoft.SqlServer.Dts.Runtime** 命名空間。  
   
 4.  在主常式中加入下列程式碼。 完成的主控台應用程式應類似下列範例。  
   
@@ -235,8 +231,7 @@ namespace RunFromClientAppWithEventsCS
   
 ## <a name="see-also"></a>另請參閱  
  [了解本機與遠端執行之間的差異](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [載入和以程式設計方式執行遠端封裝](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
- [載入本機封裝的輸出](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
+ [以程式設計方式載入和執行遠端套件](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
+ [載入本機套件的輸出](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   
-

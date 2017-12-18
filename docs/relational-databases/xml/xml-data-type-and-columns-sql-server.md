@@ -2,9 +2,12 @@
 title: "XML 資料類型和資料行 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cfc290578e784712d372008aae777fee9d08b0d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 401b870e8a40b2d451bf7b17aa0eb7c4f7a304f0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 資料類型和資料行 (SQL Server)
-  本主題討論 **中** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型的優勢和限制，並幫助您選擇儲存 XML 資料的方式。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 本主題討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 **xml** 資料類型的優點和限制，並幫助您選擇儲存 XML 資料的方式。  
   
 ## <a name="relational-or-xml-data-model"></a>關聯式或 XML 資料模型  
  如果您的資料使用已知的結構描述來高度結構化，則關聯式模型對資料儲存來說可能是最好的方式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供必要的功能以及您可能需要的工具。 另一方面，如果結構是半結構化或是無結構，或是情況不明，您就必須考慮將這類資料模型化。  

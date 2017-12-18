@@ -1,5 +1,5 @@
 ---
-title: "開發具有同步輸出的自訂轉換元件 |Microsoft 文件"
+title: "開發具有同步輸出的自訂轉換元件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,20 +24,19 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: d316a3921cd3b2d8b3e82a6ed5c5b629389614a7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5c6999fbcc1dccdf7a79802bdc9a2d49630f908e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>開發具有同步輸出的自訂轉換元件
-  具有同步輸出的轉換元件會從上游元件接收資料列，並在傳遞資料列給下游元件時，讀取或是修改這些資料列之資料行中的值。 它們也必須定義從上游元件提供的資料行所衍生之其他輸出資料行，但是它們不需要將資料列加入資料流程。 如需有關同步和非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
+  具有同步輸出的轉換元件會從上游元件接收資料列，並在傳遞資料列給下游元件時，讀取或是修改這些資料列之資料行中的值。 它們也必須定義從上游元件提供的資料行所衍生之其他輸出資料行，但是它們不需要將資料列加入資料流程。 如需同步與非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
   
  這種元件適用於將資料提供給元件時以內嵌方式修改資料的工作，以及元件不必看到所有的資料列就能處理它們的工作。 它是最容易開發的元件，因為具有同步輸出的轉換通常不會連接至外部資料來源、管理外部中繼資料行，或是將資料列加入輸出緩衝區。  
   
@@ -194,7 +191,7 @@ End Sub
 ### <a name="processing-rows"></a>處理資料列  
  元件會接收 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 方法中包含資料列與資料行的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 物件。 在這個方法期間會反覆運算緩衝區中的資料列，而且會在讀取和修改 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 期間識別資料行。 資料流程工作會重複呼叫該方法，直到不再從上游元件提供其他資料列為止。  
   
- 個別資料行緩衝區中的讀取或寫入使用陣列索引子存取方法，或使用其中一種**取得**或**設定**方法。 **取得**和**設定**方法會更有效率，並知道在緩衝區中的資料行的資料類型時應該使用。  
+ 透過使用陣列索引子存取方法，或是透過使用其中一個 **Get** 或 **Set** 方法，會讀取或寫入緩衝區中的個別資料行。 在已知緩衝區內資料行的資料類型時，應該使用較有效率的 **Get** 和 **Set** 方法。  
   
  下列程式碼範例顯示處理內送資料列的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法之實作。  
   
@@ -337,4 +334,3 @@ End Namespace
  [使用指令碼元件建立同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

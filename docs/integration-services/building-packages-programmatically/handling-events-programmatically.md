@@ -1,5 +1,5 @@
 ---
-title: "以程式設計方式處理事件 |Microsoft 文件"
+title: "以程式設計方式處理事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -29,27 +27,26 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 7235703f494bd1fb50e696aef537391ba23d1749
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dadff8ac9d513c998dbe8f019e00e4fd84983344
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="handling-events-programmatically"></a>以程式設計方式處理事件
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 執行階段會提供在驗證和執行封裝之前、期間和之後所發生的事件集合。 這些事件可使用兩種方式來擷取。 第一個方法是藉由實作<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>介面類別中，並為參數，以提供類別**Execute**和**驗證**封裝的方法。 第二個方法是建立 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 物件，其中可包含當 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 內發生事件時所執行的其他 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 物件 (如工作和迴圈)。 本章節描述這兩個方法，並提供示範其使用方式的程式碼範例。  
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 執行階段會提供在驗證和執行封裝之前、期間和之後所發生的事件集合。 這些事件可使用兩種方式來擷取。 第一個方法是在類別中實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面，並將此類別當作參數提供給套件的 **Execute** 和 **Validate** 方法。 第二個方法是建立 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 物件，其中可包含當 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 內發生事件時所執行的其他 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 物件 (如工作和迴圈)。 本章節描述這兩個方法，並提供示範其使用方式的程式碼範例。  
   
 ## <a name="receiving-idtsevents-callbacks"></a>接收 IDTSEvents 回撥  
- 以程式設計方式建立及執行封裝的開發人員，可以在驗證和執行程序期間使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面來接收事件通知。 這是藉由建立一個類別，實作<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>介面並提供此類別當做參數**驗證**和**Execute**封裝的方法。 然後當事件發生時，執行階段引擎會呼叫此類別的方法。  
+ 以程式設計方式建立及執行封裝的開發人員，可以在驗證和執行程序期間使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面來接收事件通知。 其處理方式是建立一個類別來實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面，並將這個類別當作參數提供給套件的 **Validate** 和 **Execute** 方法。 然後當事件發生時，執行階段引擎會呼叫此類別的方法。  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 類別是一個已經實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面的類別；因此，直接實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 的另一個方法是衍生自 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>，並覆寫您想要回應的特定事件。 然後提供您的類別當做參數**驗證**和**Execute**方法<xref:Microsoft.SqlServer.Dts.Runtime.Package>接收事件回撥。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 類別是一個已經實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面的類別；因此，直接實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 的另一個方法是衍生自 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>，並覆寫您想要回應的特定事件。 然後您可以將您的類別當作參數提供給 <xref:Microsoft.SqlServer.Dts.Runtime.Package> 的 **Validate** 和 **Execute** 方法，以接收事件回撥。  
   
- 下列程式碼範例會示範衍生自 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 的類別，並覆寫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> 方法。 類別然後依現狀來 aparameter**驗證**和**Execute**封裝的方法。  
+ 下列程式碼範例會示範衍生自 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 的類別，並覆寫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> 方法。 然後此類別會當作參數提供給此套件的 **Validate** 和 **Execute** 方法。  
   
 ```csharp  
 using System;  
@@ -118,7 +115,7 @@ End Class
 ## <a name="creating-dtseventhandler-objects"></a>建立 DtsEventHandler 物件  
  執行階段引擎會透過 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 物件提供功能強大且彈性高的事件處理和通知系統。 這些物件可讓您在事件處理常式內設計完整工作流程，只有當此事件處理常式所屬的事件發生時，才會執行這些工作流程。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 物件是一個容器，當引發其父物件上的對應事件時會執行此物件。 此架構可讓您建立隔離的工作流程，執行這些工作流程是為了回應容器上所發生的事件。 因為 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 物件是同步的，所以要等到附加至此事件的事件處理常式傳回之後，才會繼續執行。  
   
- 下列程式碼示範如何建立 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 物件。 此程式碼會將 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 加入至此封裝的 <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A> 集合，然後為此工作的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 事件建立 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> 物件。 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 會加入至事件處理常式中，當第一個 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> 發生 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 事件時就會執行此事件處理常式。 這個範例假設您有一個名為 C:\Windows\Temp\DemoFile.txt 的檔案以供測試。 第一次執行此範例時，表示順利複製此檔案而且未呼叫此事件處理常式。 第二次執行此範例中，第一個<xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>將檔案複製失敗 (因為值<xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A>是**false**)，呼叫事件處理常式時，第二個<xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>刪除原始程式檔和封裝報表失敗，因為發生錯誤。  
+ 下列程式碼示範如何建立 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 物件。 此程式碼會將 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 加入至此封裝的 <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A> 集合，然後為此工作的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 事件建立 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> 物件。 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 會加入至事件處理常式中，當第一個 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> 發生 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 事件時就會執行此事件處理常式。 這個範例假設您有一個名為 C:\Windows\Temp\DemoFile.txt 的檔案以供測試。 第一次執行此範例時，表示順利複製此檔案而且未呼叫此事件處理常式。 當您第二次執行此範例時，表示第一個 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 複製檔案失敗 (因為 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> 的值是 **false**)、已呼叫此事件處理常式、第二個 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 偵測到來源檔案，而且因為發生錯誤而導致套件報表失敗。  
   
 ## <a name="example"></a>範例  
   
@@ -258,8 +255,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS &#41;事件處理常式](../../integration-services/integration-services-ssis-event-handlers.md)   
- [將事件處理常式加入封裝](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Integration Services &#40;SSIS&#41; 事件處理常式](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [將事件處理常式新增至套件](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "SSIS 封裝升級精靈 F1 說明 |Microsoft 文件"
+title: "SSIS 套件升級精靈 F1 說明 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,20 +20,19 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0e9c1eccc9a14c580ba733fc3c4f63e88db92d60
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 01c6f66c5b72a320284034cf5e789d37cc265551
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 封裝升級精靈 F1 說明
-  使用 SSIS 封裝升級精靈升級舊版所建立的封裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]目前版本的封裝格式[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  
+  使用 [SSIS 套件升級精靈] 將舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所建立的套件升級為目前 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本的套件格式。  
   
  **執行 SSIS 封裝升級精靈**  
   
@@ -90,7 +88,7 @@ ms.lasthandoff: 09/26/2017
  **密碼**  
  輸入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證將用來連接伺服器的密碼。  
  
-## <a name="select-destination-location-page"></a>選取目的地位置 頁面
+## <a name="select-destination-location-page"></a>選取目的地位置頁面
  使用 **[選取目的地位置]** 頁面，指定用來儲存升級封裝的目的地。  
   
 > [!NOTE]  
@@ -142,7 +140,7 @@ ms.lasthandoff: 09/26/2017
  **密碼**  
  輸入使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證來連接伺服器時所要使用的密碼。  
  
-## <a name="select-package-management-options-page"></a>選取封裝管理選項頁面
+## <a name="select-package-management-options-page"></a>選取套件管理選項頁面
   使用 [選取封裝管理選項] 頁面，指定用來升級封裝的選項。  
   
  **執行 SSIS 封裝升級精靈**  
@@ -153,56 +151,56 @@ ms.lasthandoff: 09/26/2017
  **更新連接字串以使用新的提供者名稱**  
  更新目前版本之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的連接字串，以使用下列提供者的名稱：  
   
--   OLE DB 提供者[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   OLE DB Provider for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
   
  [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝升級精靈] 只會更新儲存在連線管理員中的連接字串。 此精靈不會更新使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 運算式語言或使用指令碼工作中之程式碼以動態方式建構的連接字串。  
   
- **驗證升級封裝**  
+ **驗證升級套件**  
  驗證升級封裝，並只儲存通過驗證的那些升級封裝。  
   
  如果您不選取這個選項，此精靈將不會驗證升級封裝。 因此，此精靈將會儲存所有的升級封裝，不論封裝是否有效。 此精靈會將升級封裝儲存到精靈之 [選取目的地位置] 頁面上所指定的目的地。  
   
  驗證會增加升級程序的時間。 如果是可能會升級成功的大型封裝，我們建議您不要選取這個選項。  
   
- **建立新的封裝識別碼**  
+ **建立新的套件識別碼**  
  為升級封裝建立新的封裝識別碼。  
   
- **當封裝升級失敗時繼續升級程序**  
+ **當套件升級失敗時，繼續升級程序**  
  指定當封裝無法升級時，[ [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝升級精靈] 應繼續升級其餘的封裝。  
   
- **封裝名稱衝突**  
+ **套件名稱衝突**  
  指定精靈應該要如何處理同名的封裝。 這個選項的值列於下表中。  
   
- **覆寫現有的封裝檔案**  
+ **覆寫現有套件檔案**  
  以同名的升級封裝取代現有的封裝。  
   
- **加入數字後置字元升級封裝名稱**  
+ **在升級套件名稱後新增數字後置字元**  
  在升級封裝名稱後加入數字後置字元。  
   
- **不升級封裝**  
+ **不升級套件**  
  停止升級封裝，並在完成精靈時顯示錯誤。  
   
  當您在精靈的 [選取目的地位置] 頁面上選取 [儲存至來源位置] 選項時，無法使用這些選項。  
   
- **忽略組態**  
+ **忽略設定**  
  封裝升級期間不載入封裝組態。 選取此選項可減少升級封裝所需的時間。  
   
- **備份原始封裝**  
+ **備份原始套件**  
  讓精靈將原始封裝備份到 **SSISBackupFolder** 資料夾。 此精靈會將 **SSISBackupFolder** 資料夾建立為包含原始封裝和升級封裝之資料夾的子資料夾。  
   
 > [!NOTE]  
 >  只有當您指定原始封裝和升級封裝儲存在檔案系統和相同的資料夾時，才可使用這個選項。  
 
-## <a name="select-packages-page"></a>選取封裝頁面
+## <a name="select-packages-page"></a>選取套件頁面
   使用 **[選取封裝]** 頁面，選取要升級的封裝。 這個頁面會列出精靈的 **[選取來源位置]** 頁面上指定之位置內所儲存的封裝。  
   
 ### <a name="options"></a>選項。  
- **現有的封裝名稱**  
+ **現有套件名稱**  
  選取一或多個要升級的封裝。  
   
- **升級封裝名稱**  
+ **升級套件名稱**  
  提供目的地封裝名稱，或使用精靈提供的預設名稱。  
   
 > [!NOTE]  
@@ -221,7 +219,7 @@ ms.lasthandoff: 09/26/2017
  **選項摘要**  
  檢閱您在精靈中選取的升級選項。 若要變更任何選項，請按 **[上一步]** 回到之前的精靈頁面。
  
-## <a name="upgrading-the-packages-page"></a>升級封裝 頁面
+## <a name="upgrading-the-packages-page"></a>正在升級套件頁面
   使用 **[正在升級封裝]** 頁面，即可檢視封裝升級的進度，並在必要時中斷升級程序。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝升級精靈會逐一升級選取的封裝。  
   
 ### <a name="options"></a>選項。  
@@ -251,12 +249,12 @@ ms.lasthandoff: 09/26/2017
   
 -   以電子郵件訊息傳送報表。  
 
-## <a name="view-upgraded-packages"></a>檢視升級的封裝
-### <a name="view-upgraded-packages-that-were-saved-to-a-sql-server-database-or-to-the-package-store"></a>檢視儲存到 SQL Server 資料庫或封裝存放區的升級的封裝
+## <a name="view-upgraded-packages"></a>檢視升級的套件
+### <a name="view-upgraded-packages-that-were-saved-to-a-sql-server-database-or-to-the-package-store"></a>檢視儲存至 SQL Server 資料庫或套件存放區的已升級套件
   
 在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的 [物件總管] 中，連接到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的本機執行個體，然後展開 **[存放的封裝]** 節點，查看已升級的封裝。  
   
-### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>檢視已從 SQL Server 資料工具升級的升級的封裝  
+### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>檢視從 SQL Server Data Tools 升級的已升級套件  
   
 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的 [方案總管] 中，開啟 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，然後展開 **[SSIS 封裝]** 節點，查看升級的封裝。  
   
@@ -264,4 +262,3 @@ ms.lasthandoff: 09/26/2017
  [升級 Integration Services 封裝](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 專案和解決方案 |Microsoft 文件"
+title: "Integration Services (SSIS) 專案和方案 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.importprojectwizard.f1
+f1_keywords: sql13.ssis.importprojectwizard.f1
 helpviewer_keywords:
 - projects [Integration Services], creating
 - folders [Integration Services], projects
@@ -21,22 +19,21 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 246a6df702e323d57d21e9e014aa059db31b300e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c5231ce48a81595fe3523b490ca38ea056f0c9a3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 專案及解決方案
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 以用於開發 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]封裝位於專案中。 若要建立及使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，您必須安裝 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 環境。 如需詳細資訊，請參閱[安裝 Integration Services](../integration-services/install-windows/install-integration-services.md)。  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件位在專案中。 若要建立及使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，您必須安裝 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 環境。 如需詳細資訊，請參閱[安裝 Integration Services](../integration-services/install-windows/install-integration-services.md)。  
   
  當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時，[新增專案] 對話方塊將包含 [Integration Services 專案] 範本。 此專案範本會建立包含單一封裝的新專案。  
   
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/26/2017
  專案會儲存在方案中。 您可以先建立方案，然後將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案加入方案。 如果沒有方案存在， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會在您第一次建立專案時自動為您建立一個方案。 方案可以包含多個不同類型的專案。  
   
 > [!TIP]  
->  根據預設，當您建立新的專案中[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，解決方案不會顯示在**方案總管 中**窗格。 若要變更這個預設行為，請按一下 [工具] 功能表上的 [選項]。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [一般]。 在 [一般] 頁面上，選取 [永遠顯示方案]。  
+>  根據預設，當您在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中建立新的專案時，方案不會顯示在方案總管窗格中。 若要變更這個預設行為，請按一下 [工具] 功能表上的 [選項]。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [一般]。 在 [一般] 頁面上，選取 [永遠顯示方案]。  
 
 ## <a name="solutions-contain-projects"></a>方案包含專案  
  方案是將您在開發端對端商務方案時所使用的專案分組，並對其進行管理的一個容器。 方案可讓您將多個專案當做一個單位來處理，並將對商務方案有幫助的一個或多個相關專案集合在一起。  
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="folders-in-integration-services-projects"></a>Integration Services 專案中的資料夾  
  下圖顯示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中位於 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]專案內的資料夾。  
   
- ![在 Integration Services 專案資料夾](../integration-services/media/solutionexplorer.gif "Integration Services 專案中的資料夾")  
+ ![Integration Services 專案中的資料夾](../integration-services/media/solutionexplorer.gif "Integration Services 專案中的資料夾")  
   
  下表描述顯示在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中的資料夾。  
   
@@ -92,7 +89,7 @@ ms.lasthandoff: 09/26/2017
   
  在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性] 以開啟專案的屬性頁。 在 [組態屬性]  的 [一般] 索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
- ![專案 [屬性] 對話方塊中的 TargetServerVersion 屬性](../integration-services/media/targetserverversion2.png "TargetServerVersion 屬性中的專案屬性對話方塊")  
+ ![專案屬性對話方塊中的 TargetServerVersion 屬性](../integration-services/media/targetserverversion2.png "專案屬性對話方塊中的 TargetServerVersion 屬性")  
  
 ## <a name="create-a-new-integration-services-project"></a>建立新的 Integration Services 專案  
   
@@ -124,11 +121,11 @@ ms.lasthandoff: 09/26/2017
   
 2.  在 [組態屬性]  的 [一般] 索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
-     ![專案 [屬性] 對話方塊中的 TargetServerVersion 屬性](../integration-services/media/targetserverversion2.png "TargetServerVersion 屬性中的專案屬性對話方塊")  
+     ![專案屬性對話方塊中的 TargetServerVersion 屬性](../integration-services/media/targetserverversion2.png "專案屬性對話方塊中的 TargetServerVersion 屬性")  
   
  您可以建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝。  
 
-## <a name="import-an-existing-project-with-the-import-project-wizard"></a>匯入現有專案匯入專案精靈
+## <a name="import-an-existing-project-with-the-import-project-wizard"></a>使用匯入專案精靈匯入現有專案
   
 1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中，按一下 [檔案] 功能表上的 [新增] > [專案]。  
   
@@ -160,7 +157,7 @@ ms.lasthandoff: 09/26/2017
   
 12. 按一下 **[關閉]** ，關閉 **[Integration Services 匯入專案精靈]** 對話方塊。  
 
-## <a name="add-a-project-to-a-solution"></a>將專案加入方案 
+## <a name="add-a-project-to-a-solution"></a>將專案新增至方案 
  當您加入專案時，可以讓 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 建立全新的空白專案，也可以加入已經針對不同方案建立的專案。 只有當您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中看到方案時，才能將專案加入至現有的方案。  
   
 ### <a name="add-a-new-project-to-a-solution"></a>將新專案加入方案  
@@ -189,7 +186,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  專案會加入方案總管中的方案資料夾。  
   
-## <a name="remove-a-project-from-a-solution"></a>從方案移除專案
+## <a name="remove-a-project-from-a-solution"></a>移除方案中的專案
  只有當您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中看到方案時，才能從方案中移除專案。 看見方案之後，您就可以只保留一個專案，並移除其他所有專案。 等到只剩下一個專案之後，[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 就不會再顯示方案資料夾，而且您也不能移除最後一個專案。  
    
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，開啟您要從中移除 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的方案。  
@@ -198,7 +195,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  按一下 [確定] 確認移除。  
 
-## <a name="add-an-item-to-a-project"></a>將項目加入至專案  
+## <a name="add-an-item-to-a-project"></a>將項目新增至專案  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，開啟包含要在其中加入項目之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的方案。  
   
@@ -211,7 +208,7 @@ ms.lasthandoff: 09/26/2017
 3.  新項目便會出現在 [方案總管] 中適當的資料夾內。  
 
 ## <a name="copy-project-items"></a>複製專案項目  
-您可以複製物件內[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]專案或介於[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]專案。 您也可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案的其他類型之間、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]之間複製物件。 若要在兩個專案之間進行複製，專案必須在同一個 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 方案中。
+您可以在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案內或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案之間複製物件。 您也可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案的其他類型之間、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]之間複製物件。 若要在兩個專案之間進行複製，專案必須在同一個 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 方案中。
 
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟您要使用的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案或方案。  
   
@@ -223,4 +220,3 @@ ms.lasthandoff: 09/26/2017
   
      這些項目會自動複製到正確的資料夾。 如果您將項目複製到不是封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，這些項目會複製到 **[其他]** 資料夾中。  
      
-

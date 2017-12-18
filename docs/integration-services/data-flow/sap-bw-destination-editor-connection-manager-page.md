@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 目的地編輯器 （連接管理員頁面） |Microsoft 文件"
+title: "SAP BW 目的地編輯器 (連線管理員頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwdestination.connection.f1
+f1_keywords: sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17d5ce8dd762a61b6dcbf4f2363d78c090495690
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8c63ac10d6cb4726817d8481be70533df8e2014c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目的地編輯器 (連接管理員頁面)
   使用 **[SAP BW 目的地編輯器]** 的 **[連接管理員]** 頁面可以選取 SAP BW 目的地將使用的 SAP BW 連接管理員。 在這個頁面上，您也可以選取將資料載入 SAP Netweaver BW 系統中所用的參數。  
@@ -119,11 +116,10 @@ ms.lasthandoff: 08/03/2017
 |**InfoSource**|使用 **[建立 InfoSource]** 對話方塊，然後使用 **[建立交易資料的 InfoSource]** 或 **[建立主要資料的 InfoSource]** 對話方塊來建立新的 InfoSource。 如需有關這些對話方塊的詳細資訊，請參閱＜ [Create InfoSource](../../integration-services/data-flow/create-infosource.md)＞、＜ [Create InfoSource for Transaction Data](../../integration-services/data-flow/create-infosource-for-transaction-data.md) ＞和＜ [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md)＞。|  
 |**InfoPackage**|使用 **[建立 InfoPackage]** 對話方塊來建立新的 InfoPackage。 如需有關此對話方塊的詳細資訊，請參閱＜ [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md)＞。|  
   
-## <a name="see-also"></a>請參閱＜  
- [SAP BW 目的地編輯器 &#40;[對應] 頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [SAP BW 目的地編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [SAP BW 目的地編輯器 &#40;進階的頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+## <a name="see-also"></a>另請參閱  
+ [SAP BW 目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [SAP BW 目的地編輯器 &#40;進階頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

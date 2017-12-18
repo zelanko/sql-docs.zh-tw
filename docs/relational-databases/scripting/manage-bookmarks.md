@@ -2,9 +2,12 @@
 title: "管理書籤 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ae054743dcdf57727fd94a55ccf1ba78b0875fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-bookmarks"></a>管理書籤
-  使用程式碼編輯器時，[書籤] 視窗可讓您建立連結至文件內之程式碼的特定行。 您可以從 [檢視] 功能表顯示這個視窗。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用程式碼編輯器時，[書籤] 視窗可讓您建立文件內特定程式碼行的連結。 您可以從 [檢視] 功能表顯示這個視窗。  
   
  若要建立和巡覽整個書籤，請按一下位於 [文字編輯器] 工具列上和 [書籤] 視窗上方的按鈕。 您可加入和刪除書籤、啟動或停用書籤以及將書籤組織到資料夾中。 [書籤] 視窗的捷徑功能表中，也有一些可用的特定命令。 若要加入或移除書籤，請將插入點放在適用的編輯器行上，然後按一下 [切換書籤]。 若要啟用書籤，請在 [書籤] 視窗中選取其核取方塊；若要停用 (而非移除) 書籤，則請清除其核取方塊。  
   

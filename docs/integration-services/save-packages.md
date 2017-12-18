@@ -1,5 +1,5 @@
 ---
-title: "將封裝儲存 |Microsoft 文件"
+title: "儲存套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.savecopyas.f1
+f1_keywords: sql13.dts.designer.savecopyas.f1
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 997f393918f0800cad1858df142e909d3a59348d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b29636580a8e8e87229ce591863547a91cd05a8f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="save-packages"></a>儲存封裝
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，您可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師來建立封裝，並將封裝儲存為檔案系統中的 XML 檔案 (.dtsx 檔案)。 您也可以將封裝 XML 檔案的複本儲存至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 msdb 資料庫，或儲存至封裝存放區。 封裝存放區代表 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務所管理之檔案系統位置中的資料夾。  
@@ -51,7 +48,7 @@ ms.lasthandoff: 09/26/2017
     >  您可以在 [屬性] 視窗中，確認儲存封裝的路徑和檔案名稱。  
 
 ## <a name="save-a-copy-of-a-package"></a>儲存封裝的複本
-  本章節描述如何將封裝的副本儲存至檔案系統、 封裝存放區，或**msdb**資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 當您指定儲存封裝副本的位置時，也可以更新封裝名稱。  
+  本節描述如何將套件的複本儲存至檔案系統、套件存放區，或  中的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 當您指定儲存封裝副本的位置時，也可以更新封裝名稱。  
   
  封裝存放區可以包含 **msdb** 資料庫和檔案系統中的資料夾、或者只有包含 **msdb**，或只有包含檔案系統中的資料夾。 在 **msdb**中，封裝是儲存至 **sysssispackages** 資料表。 這個資料表包含了識別封裝所屬之邏輯資料夾的 **folderid** 資料行。 邏輯資料夾會以相同的方式為 **msdb** 中所儲存的封裝提供實用的分組方法，就像檔案系統中的資料夾為檔案系統中所儲存的封裝提供實用的分組方法一樣。 **msdb** 中 **sysssispackagefolders** 資料表的資料列會定義資料夾。  
   
@@ -64,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  在 [方案總管] 中，按兩下要儲存副本的封裝。  
   
-2.  上**檔案**功能表上，按一下 **儲存副本\<封裝檔案 > 為**。  
+2.  在 [檔案] 功能表上，按一下 [另存\<套件檔案> 的副本為]。  
   
 3.  在 **[儲存封裝的副本]** 對話方塊中，從 **[封裝位置]** 清單選取封裝位置。 下列是可以使用的選項：  
     -   SQL Server
@@ -93,8 +90,8 @@ ms.lasthandoff: 09/26/2017
   
 9. 按一下 **[確定]**。  
 
-## <a name="save-a-package-as-a-package-template"></a>將封裝儲存為封裝範本
- 本章節描述如何指定及使用自訂封裝作為範本，當您建立新的 Integration Services 封裝中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 根據預設，當您將新封裝加入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中時， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會使用可建立空白封裝的封裝範本。 您不能置換這個預設範本，但是可以加入新的範本。  
+## <a name="save-a-package-as-a-package-template"></a>將套件儲存為套件範本
+ 本節描述當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中建立新的 Integration Services 套件時，如何指定及使用自訂套件作為範本。 根據預設，當您將新封裝加入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中時， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會使用可建立空白封裝的封裝範本。 您不能置換這個預設範本，但是可以加入新的範本。  
   
  您可以指定將多個封裝當作範本使用。 不過您必須先建立封裝，才能將自訂封裝實作成範本。  
   
@@ -114,9 +111,8 @@ ms.lasthandoff: 09/26/2017
   
 2.  在方案總管中，以滑鼠右鍵按一下專案，指向 [加入]，然後按一下 [新增項目]。  
   
-3.  在**加入新項目-\<專案名稱 >**對話方塊方塊中，按一下您想要當作範本使用的封裝。  
+3.  在 [新增新項目 -\<專案名稱>] 對話方塊中，按一下要當作範本使用的套件。  
   
      範本清單中包含名稱為 [新增 SSIS 封裝] 的預設封裝範本。 封裝圖示識別可當作封裝範本使用的範本。  
   
 4.  按一下 **[加入]**。  
-

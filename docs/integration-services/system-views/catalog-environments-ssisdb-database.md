@@ -1,5 +1,5 @@
 ---
-title: "catalog.environments （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.environments (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6e7ba1ba0bd8a444e4609a2f3d011da9cd233b73
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: edb3360d05e44131d6f30b510ed5dd120e2aeae7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +33,9 @@ ms.lasthandoff: 09/26/2017
 |environment_id|**bigint**|環境的唯一識別碼 (ID)。|  
 |name|**sysname**|環境的名稱。|  
 |folder_id|**bigint**|環境所在資料夾的唯一識別碼。|  
-|description|**nvarchar （1024)**|環境的描述。 此為選擇性的值。|  
+|description|**nvarchar(1024)**|環境的描述。 此為選擇性的值。|  
 |created_by_sid|**varbinary(85)**|建立環境之使用者的安全性識別碼 (SID)。|  
-|created_by_name|**nvarchar （128)**|建立環境的使用者名稱。|  
+|created_by_name|**nvarchar(128)**|建立環境的使用者名稱。|  
 |created_time|**datetimeoffset**|建立環境的日期和時間。|  
   
 ## <a name="remarks"></a>備註  
@@ -48,12 +46,11 @@ ms.lasthandoff: 09/26/2017
   
 -   環境的 READ 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 > [!NOTE]  
 >  強制使用資料列層級安全性，只會顯示您具有檢視權限的資料列。  
   
   
-

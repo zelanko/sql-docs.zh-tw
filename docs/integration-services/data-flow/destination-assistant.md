@@ -1,5 +1,5 @@
 ---
-title: "目的地小幫手 |Microsoft 文件"
+title: "目的地小幫手 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.destinationassistant.f1
 - sql13.DTS.DESIGNER.DESTINATIONASSIST.F1
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aebe1dfa1046bddfa86e48aecdd68930caf3285c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 21ce9dc332f5a31fa95ea57e5cbe63a2757f198a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="destination-assistant"></a>Destination Assistant
   目的地小幫手元件有助於建立目的地元件和連線管理員。 該元件位於 SSIS 工具箱的 **[我的最愛]** 區段中。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  目的地小幫手取代了 Integration Services 連接專案和對應的精靈。  
 
-## <a name="add-a-destination-with-destination-assistant"></a>加入目的地，以使用目的地小幫手
+## <a name="add-a-destination-with-destination-assistant"></a>使用目的地小幫手新增目的地
 本主題提供使用目的地小幫手來加入新目的地的步驟，也會列出可在 [加入新目的地] 對話方塊上使用的選項。當您將目的地小幫手拖放至 SSIS 設計師時，即會顯示此對話方塊。  
 
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟要加入目的地元件的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
@@ -43,19 +41,18 @@ ms.lasthandoff: 09/26/2017
   
 3.  在 [類型] 清單中選取目的地的類型。  
   
-4.  選取現有的連接管理員中**連接管理員**清單或選取**\<新增 >**以建立新的連接管理員。  
+4.  在 [連線管理員] 清單中選取現有的連線管理員，或選取 [\<新增>]，以建立新的連線管理員。  
   
 5.  如果您選取現有的連線管理員，請按一下 [確定]，以關閉 [加入新目的地] 對話方塊。 您應該會看到目的地和連線管理員已加入資料流程。  
   
-6.  如果您按一下**\<新增 >**若要建立新的連接管理員，您應該看到**連線管理員**對話方塊，可讓您指定連接參數。 完成建立新的連接管理員之後，您會在 SSIS 設計師中看到目的地和連接管理員。 
+6.  如果按一下 [\<新增>] 來建立新的連線管理員，應會顯示 [連線管理員] 對話方塊，讓您指定連線參數。 完成建立新的連接管理員之後，您會在 SSIS 設計師中看到目的地和連接管理員。 
   
-## <a name="add-new-destination-dialog-box"></a>加入新目的地對話方塊
-下表列出可用的選項**加入新目的地** 對話方塊。  
+## <a name="add-new-destination-dialog-box"></a>新增新目的地對話方塊
+下表列出可以在 [新增新目的地] 對話方塊中使用的選項。  
   
 |選項|說明|  
 |------------|-----------------|  
 |類型|選取您要連接的目的地類型。|  
-|連接管理員|選取現有的連接管理員，或按一下**\<新增 >**以建立新的連接管理員。|  
+|連接管理員|選取現有的連線管理員，或按一下 [\<新增>] 以建立新的連線管理員。|  
 |僅顯示已安裝|指定是否只要檢視已安裝的目的地。|  
 |確定|按一下以儲存您的變更，並開啟任何後續的對話方塊設定其他選項。|  
-

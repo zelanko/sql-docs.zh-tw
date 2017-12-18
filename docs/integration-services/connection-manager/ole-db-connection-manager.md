@@ -1,5 +1,5 @@
 ---
-title: "OLE DB 連接管理員 |Microsoft 文件"
+title: "OLE DB 連線管理員 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.oledbconnection.f1
+f1_keywords: sql13.dts.designer.oledbconnection.f1
 helpviewer_keywords:
 - OLE DB connection manager
 - data sources [Integration Services], connections
 - connection managers [Integration Services], OLE DB
 - connections [Integration Services], OLE DB
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 6a81892e0206775357c7fdf74ef81a7b8c3ae3c7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a3dc2aa8c75ff17e556a3b42358186ee81f42eff
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 連接管理員
   OLE DB 連接管理員可透過使用 OLE DB 提供者讓封裝連接到資料來源。 例如，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接的 OLE DB 連線管理員可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。    
@@ -88,17 +85,16 @@ ms.lasthandoff: 08/09/2017
  **資料連接屬性**  
  檢視選取之 OLE DB 資料連接的屬性和值。  
   
- **新**  
+ **新增**  
  使用 [連線管理員] 對話方塊來建立 OLE DB 資料連線。  
   
- **刪除**  
+ **Delete**  
  選取資料連接，然後使用 [刪除] 按鈕將其刪除。  
   
 ## <a name="see-also"></a>另請參閱    
  [OLE DB 來源](../../integration-services/data-flow/ole-db-source.md)     
  [OLE DB 目的地](../../integration-services/data-flow/ole-db-destination.md)     
  [執行 SQL 工作](../../integration-services/control-flow/execute-sql-task.md)     
- [Integration Services &#40;SSIS &#41;連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)    
+ [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)    
     
   
-

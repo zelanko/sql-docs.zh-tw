@@ -1,5 +1,5 @@
 ---
-title: "catalog.rename_customized_logging_level |Microsoft 文件"
+title: catalog.rename_customized_logging_level | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00c2cd8fa5f8423a7791d663d02aecbf27b8ab41
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 345b424bd4404af4cc2f52aee4fc9ce174aee983
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  重新命名現有的自訂的記錄層級。 如需自訂的記錄層級的詳細資訊，請參閱[Integration Services &#40;SSIS &#41;記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+  重新命名現有的自訂記錄層次。 如需自訂記錄層次的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,15 +36,15 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @old_name =] *l d _*  
- 名稱的現有自訂記錄層級重新命名。  
+ [ @old_name = ] *old_name*  
+ 要重新命名的現有自訂記錄層次名稱。  
   
- *l d _*是**nvarchar （128)**。  
+ *old_name* 是 **nvarchar(128)**。  
   
- [ @new_name =] *new_name*  
- 指定的新名稱的自訂記錄層次。  
+ [ @new_name = ] *new_name*  
+ 指定的自訂記錄層次的新名稱。  
   
- *New_name*是**nvarchar （128)**。  
+ *new_name* 是 **nvarchar(128)**。  
   
 ## <a name="remarks"></a>備註  
   
@@ -68,7 +66,6 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單描述會導致預存程序失敗的情況。  
   
--   使用者沒有必要的權限。  
+-   使用者沒有必要權限。  
   
   
-

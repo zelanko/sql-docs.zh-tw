@@ -1,5 +1,5 @@
 ---
-title: "定義狀態變數 |Microsoft 文件"
+title: "定義狀態變數 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ebec44b7492ead6e3417758ac653360f44d4df9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 5266703e8a7644a36ebf7eeeaccde1456ce735e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
   此程序描述如何定義 CDC 狀態儲存所在的封裝變數。  
@@ -36,18 +34,18 @@ ms.lasthandoff: 09/28/2017
   
 |元件|Description|  
 |---------------|-----------------|  
-|**\<狀態名稱 >**|此為目前 CDC 狀態的名稱。|  
+|**\<狀態名稱>**|此為目前 CDC 狀態的名稱。|  
 |**CS**|此標示目前處理範圍的起點 (Current Start)。|  
-|**\<cs lsn >**|此為上一個 CDC 回合最後處理的 LSN (記錄序號)。|  
+|**\<cs-lsn>**|此為上一個 CDC 回合最後處理的 LSN (記錄序號)。|  
 |**CE**|此標示目前處理範圍的終點 (Current End)。 CDC 狀態中若存在 CE 元件，代表目前正在處理 CDC 封裝，或是 CDC 封裝在其 CDC 處理範圍未處理完全之前即已失敗。|  
-|**\<ce lsn >**|此為目前 CDC 回合要處理的最後一個 LSN。 處理的最後一個序號一律假設為最大值 (0xFFF…)。|  
+|**\<ce-lsn>**|此為目前 CDC 回合要處理的最後一個 LSN。 處理的最後一個序號一律假設為最大值 (0xFFF…)。|  
 |**IR**|此標示初始處理範圍。|  
-|**\<ir 開始 >**|此為初始載入剛要開始前之異動的 LSN。|  
-|**\<ir 端 >**|此為初始載入才剛結束後之異動的 LSN。|  
+|**\<ir-start>**|此為初始載入剛要開始前之異動的 LSN。|  
+|**\<ir-end>**|此為初始載入才剛結束後之異動的 LSN。|  
 |**TS**|此標示上次 CDC 狀態更新的時間戳記。|  
-|**\<時間戳記 >**|此為 64 位元 System.DateTime.UtcNow 屬性的十進位表示法。|  
+|**\<時間戳記>**|此為 64 位元 System.DateTime.UtcNow 屬性的十進位表示法。|  
 |**ER**|此將在上次作業失敗時出現，且包含錯誤原因的簡短描述。 若存在此元件，則其一定出現於最後。|  
-|**\<簡短的錯誤文字 >**|此為簡短的錯誤描述。|  
+|**\<簡短的錯誤描述>**|此為簡短的錯誤描述。|  
   
  每個 LSN 和序號都是編碼為多達 20 位數的十六進位字串，代表 Binary(10) 的 LSN 值。  
   
@@ -97,4 +95,3 @@ ms.lasthandoff: 09/28/2017
  [CDC 控制工作編輯器](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
-

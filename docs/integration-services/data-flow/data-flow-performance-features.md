@@ -1,5 +1,5 @@
 ---
-title: "資料流程的效能功能 |Microsoft 文件"
+title: "資料流程效能功能 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 1598f40bb947a98b8fccc8ae47ba1dd7b9447b0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow-performance-features"></a>Data Flow Performance Features
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
@@ -106,7 +104,7 @@ ms.lasthandoff: 09/28/2017
  不管資料流程元件為何，都有兩個您應該遵循的一般指導方針來改善效能：最佳化查詢與避免不必要的字串。  
   
 #### <a name="optimize-queries"></a>最佳化查詢  
- 某些資料流程元件會在從來源擷取資料時或在查閱作業中使用查詢，以建立參考資料表。 預設查詢會使用 SELECT * FROM \<tableName > 語法。 這種類型的查詢會傳回來源資料表中的所有資料行。 讓所有資料行都在設計階段可用，您便可以選擇任何資料行作為查閱、傳遞或來源資料行。 不過，在選擇要使用的資料行後，您應該將查詢修訂為只包含選取的資料行。 移除多餘的資料行可讓封裝中的資料流程更為有效，因為資料行越少，就會建立越小的資料列。 資料列越小，表示有越多的資料列可以納入同一個緩衝區，而且處理資料集中全部資料列所需的工作也就越少。  
+ 某些資料流程元件會在從來源擷取資料時或在查閱作業中使用查詢，以建立參考資料表。 預設查詢會使用 SELECT * FROM \<資料表名稱> 語法。 這種類型的查詢會傳回來源資料表中的所有資料行。 讓所有資料行都在設計階段可用，您便可以選擇任何資料行作為查閱、傳遞或來源資料行。 不過，在選擇要使用的資料行後，您應該將查詢修訂為只包含選取的資料行。 移除多餘的資料行可讓封裝中的資料流程更為有效，因為資料行越少，就會建立越小的資料列。 資料列越小，表示有越多的資料列可以納入同一個緩衝區，而且處理資料集中全部資料列所需的工作也就越少。  
   
  若要建構查詢，您可以輸入查詢或使用「查詢產生器」。  
   
@@ -213,4 +211,3 @@ ms.lasthandoff: 09/28/2017
  [套件執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

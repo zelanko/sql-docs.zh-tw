@@ -1,6 +1,8 @@
 
 # [SQL Server 工具和公用程式概觀](../tools/overview-sql-tools.md)
-# [新的與最近更新的文件](new-updated-tools.md)
+# [新增及更新的發行項](new-updated-tools.md)
+
+# [SQL Operations Studio (預覽)](../sql-operations-studio/what-is.md)
 
 # [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 

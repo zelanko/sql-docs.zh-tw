@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 服務 （SSIS 服務） |Microsoft 文件"
+title: "Integration Services 服務 (SSIS 服務) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,22 +24,21 @@ helpviewer_keywords:
 - service [Integration Services]
 - SQL Server Integration Services, service
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cb825e9f5a654ec7dd24059d43dcea5b7d91e1e1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 9c2a1063b982ab1f3b8203f76adc59e945da12b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服務 (SSIS 服務)
   本節中的主題討論 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務 (用於管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 Windows 服務)。 若要建立、儲存及執行 Integration Services 封裝，則不需要這項服務。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支援 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務能與舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]回溯相容。  
   
- 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會針對使用專案部署模型部署至 **伺服器的專案，將物件、設定和操作資料儲存在** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料庫中。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器是主控資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的執行個體。 如需資料庫的詳細資訊，請參閱 [SSIS 目錄](../../integration-services/service/ssis-catalog.md)。 如需有關將專案部署到[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器，請參閱[部署 Integration Services (SSIS) 專案和封裝](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+ 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會針對使用專案部署模型部署至 **伺服器的專案，將物件、設定和操作資料儲存在** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料庫中。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器是主控資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的執行個體。 如需資料庫的詳細資訊，請參閱 [SSIS 目錄](../../integration-services/service/ssis-catalog.md)。 如需將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
 ## <a name="management-capabilities"></a>管理功能  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務是可用於管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務只可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用。  
@@ -146,7 +144,7 @@ ms.lasthandoff: 09/27/2017
   
 7.  在 [檔案] 功能表上，按一下 [結束]，以關閉 [服務] 嵌入式管理單元。  
 
-## <a name="grant-permissions-to-the-service"></a>授與服務的權限
+## <a name="grant-permissions-to-the-service"></a>將權限授與服務
   在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，Users 群組中的所有使用者預設都能存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 當您安裝目前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，使用者無法存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 因此，服務預設是安全的。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，管理員必須授與該服務的存取權。  
   
 ### <a name="to-grant-access-to-the-integration-services-service"></a>授與 Integration Services 服務的存取權  
@@ -175,7 +173,7 @@ ms.lasthandoff: 09/27/2017
   
 -   要在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的 [物件總管] 中顯示的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 根資料夾為 [MSDB] 和 [檔案系統] 資料夾。  
   
--   檔案系統中的封裝，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]管理服務位於 %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages。  
+-   檔案系統中，由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所管理的套件位於 %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages 中。  
   
  此組態檔也會指定哪一個 msdb 資料庫包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務將會管理的封裝。 根據預設， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務設定為可管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝，該執行個體與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]同時安裝。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體並未同時安裝， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會設定為可管理本機預設 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體之 msdb 資料庫中的封裝。  
   
@@ -209,7 +207,7 @@ ms.lasthandoff: 09/27/2017
 </DtsServiceConfiguration>  
 ```  
   
-### <a name="modify-the-configuration-file"></a>修改組態檔  
+### <a name="modify-the-configuration-file"></a>修改設定檔  
  您可以修改組態檔，允許封裝在服務停止時繼續執行、在 [物件總管] 中顯示其他根資料夾，或在檔案系統中指定要由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務管理的不同資料夾或其他資料夾。 例如，您可以建立屬於 **SqlServerFolder**類型的其他根資料夾來管理其他 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體之 msdb 資料庫中的封裝。  
   
 > [!NOTE]  
@@ -254,18 +252,18 @@ ms.lasthandoff: 09/27/2017
 </DtsServiceConfiguration>  
 ```  
   
-### <a name="modify-the-configuration-file-location"></a>修改組態檔位置  
- 登錄機碼**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile**指定的位置和名稱的組態檔[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服務所使用。 登錄機碼的預設值是**C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**。 您可以更新此登錄機碼的值，以便針對組態檔使用不同的名稱和位置。 請注意，路徑中的版本號碼 (適用於 SQL Server 120 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]、 130 的[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]等等) 將 SQL Server 版本而有所不同。
+### <a name="modify-the-configuration-file-location"></a>修改設定檔位置  
+ 登錄機碼 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** 指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所使用之設定檔的位置和名稱。 此登錄機碼的預設值為 **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**。 您可以更新此登錄機碼的值，以便針對組態檔使用不同的名稱和位置。 請注意，路徑中的版本號碼 (120 適用於 SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]、130 適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 等等) 將會根據 SQL Server 版本而不同。
   
 > [!CAUTION]  
 >  不當地編輯登錄可能會造成嚴重問題，並導致您必須重新安裝作業系統。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不保證能夠解決不當編輯登錄所產生的問題。 在編輯登錄之前，請先備份重要資料。 如需有關如何備份、還原及編輯登錄的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件： [Microsoft Windows 登錄說明](http://support.microsoft.com/kb/256986)。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務啟動時會載入組態檔。 登錄項目如有任何變更，就必須重新啟動服務。  
 
-## <a name="connect-to-the-local-service"></a>連線到本機服務
+## <a name="connect-to-the-local-service"></a>連線至區域服務
   連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務之前，管理員必須授與您該服務的存取權。 
   
-### <a name="to-connect-to-the-integration-services-service"></a>若要連接到 Integration Services 服務  
+### <a name="to-connect-to-the-integration-services-service"></a>連線至 Integration Services 服務  
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
@@ -277,7 +275,7 @@ ms.lasthandoff: 09/27/2017
   
 5.  按一下 **[連接]**。  
 
-## <a name="connect-to-a-remote-ssis-server"></a>連接到遠端的 SSIS 伺服器
+## <a name="connect-to-a-remote-ssis-server"></a>連線至遠端 SSIS 伺服器
   
  從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或其他管理應用程式連接到遠端伺服器上的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行個體時，應用程式的使用者必須具備一組特定的伺服器權限。  
   
@@ -361,20 +359,20 @@ ms.lasthandoff: 09/27/2017
  
 ## <a name="configure-the-firewall"></a>設定防火牆
   
- Windows 防火牆系統有助於防止未經授權的存取電腦資源，透過網路連線。 若要透過此防火牆存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，必須設定防火牆來啟用存取。  
+ Windows 防火牆系統有助於防止未經授權的使用者透過網路連線來存取電腦資源。 若要透過此防火牆存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，必須設定防火牆來啟用存取。  
   
 > [!IMPORTANT]  
 >  若要管理儲存在遠端伺服器上的封裝，您不必連接到該遠端伺服器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務執行個體， 而是要編輯 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔，好讓 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 顯示儲存在遠端伺服器上的封裝。
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務使用 DCOM 通訊協定。 如需有關 DCOM 通訊協定如何穿越防火牆運作的詳細資訊，請參閱 MSDN Library 中的[搭配防火牆使用分散式 COM](http://go.microsoft.com/fwlink/?LinkId=12490)文件。  
   
- 有許多防火牆系統可用。 如果您執行 Windows 防火牆以外的防火牆，請參閱防火牆文件正在使用之系統特定資訊。  
+ 有許多防火牆系統可用。 如果您正在執行 Windows 防火牆以外的防火牆，請參閱防火牆文件以獲取您正在使用之系統所特定的資訊。  
   
  如果防火牆支援應用程式層級篩選，您可以使用 Windows 提供的使用者介面，指定允許穿越防火牆的例外狀況，例如程式和服務。 否則，您必須設定 DCOM 使用有限的一組 TCP 通訊埠。 上一段落提供的 Microsoft 網站連結包含有關如何指定所要使用之 TCP 通訊埠的資訊。  
   
  Integration Services 服務使用通訊埠 135，且無法變更。 您必須開啟 TCP 通訊埠 135 供服務控制管理員 (SCM) 存取。 SCM 會執行工作，例如啟動和停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務，以及將控制要求傳送至執行中服務。  
   
- 下列章節中的資訊是 Windows 防火牆 」 特定的項目。 在命令提示字元執行命令，或在 [Windows 防火牆] 對話方塊中設定屬性，您可以設定 Windows 防火牆系統。  
+ 下節中的資訊是 Windows 防火牆特定的資訊。 您可以在命令提示字元處執行命令，或在「Windows 防火牆」對話方塊中設定屬性，來設定 Windows 防火牆系統。  
   
  如需預設 Windows 防火牆設定的詳細資訊以及影響 Database Engine、Analysis Services、Reporting Services 和 Integration Services 之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
@@ -400,7 +398,7 @@ ms.lasthandoff: 09/27/2017
   
  下列程序描述如何使用 Windows 使用者介面來開啟 TCP 通訊埠 135，將 MsDtsSrvr.exe 加入例外狀況清單中，並指定防火牆的不封鎖範圍。  
   
-#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>若要使用 Windows 防火牆對話方塊設定防火牆  
+#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>使用 Windows 防火牆對話方塊來設定防火牆  
   
 1.  在 [控制台] 中按兩下 [Windows 防火牆]。  
   
@@ -424,5 +422,4 @@ ms.lasthandoff: 09/27/2017
 9. 若要關閉 **[Windows 防火牆]** 對話方塊，請按一下 **[確定]**。  
   
     > [!NOTE]  
-    >  若要設定 Windows 防火牆，此程序會使用**Windows 防火牆**控制台 中的項目。 **[Windows 防火牆]** 項目只會針對目前網路位置設定檔來設定防火牆。 不過，您也可以設定 Windows 防火牆使用**netsh**命令列工具或[!INCLUDE[msCoName](../../includes/msconame-md.md)]Management Console (MMC) 嵌入式管理單元，名為 具有進階安全性的 Windows 防火牆。 如需這些工具的詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
-
+    >  為了設定 Windows 防火牆，這個程序會使用 [控制台] 中的 [Windows 防火牆] 項目。 **[Windows 防火牆]** 項目只會針對目前網路位置設定檔來設定防火牆。 不過，若要設定 Windows 防火牆，也可以使用 **netsh** 命令列工具或是名為「具有進階安全性的 Windows 防火牆」的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 嵌入式管理單元。 如需這些工具的詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  

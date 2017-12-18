@@ -2,9 +2,12 @@
 title: "Scan:Stopped 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c092c2ff1b38a7bc1316f7f4389a18123078f30b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 587761a7b03883613698d1e7ad64c4d72c77c644
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="scanstopped-event-class"></a>Scan:Stopped 事件類別
-  當資料表或索引掃描停止時，會發生 Scan:Stopped 事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 當資料表或索引掃描停止時，會發生 Scan:Stopped 事件類別。  
   
 ## <a name="scanstopped-event-class-data-columns"></a>Scan:Stopped 事件類別資料行  
   

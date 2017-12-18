@@ -1,5 +1,5 @@
 ---
-title: "CDC 控制工作 |Microsoft 文件"
+title: "CDC 控制工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 99a864cf9f2e8708fa4e605dacaa7ecaf170ef79
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: d098ce43f58a5a65424b536742da199bb162957f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
   CDC 控制工作是用來控制異動資料擷取 (CDC) 封裝的開發週期。 它會處理 CDC 封裝與初始載入封裝的同步處理，以及 CDC 封裝執行中所處理之記錄序號 (LSN) 範圍的管理。 此外，CDC 控制工作也會處理錯誤狀況和復原。  
@@ -76,7 +74,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="configuring-the-cdc-control-task"></a>設定 CDC 控制工作  
  您可以透過 SSIS 設計師或以程式設計方式設定屬性。  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>本節內容  
   
 -   [CDC 控制工作自訂屬性](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
@@ -161,4 +159,3 @@ ms.lasthandoff: 08/11/2017
  **狀態名稱**  
  輸入要與持續性 CDC 狀態產生關聯的名稱。 使用相同 CDC 內容的完整載入和 CDC 封裝都將指定一般狀態名稱。 這個名稱是用於查閱狀態資料表中的狀態資料列。  
   
-

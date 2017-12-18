@@ -1,5 +1,5 @@
 ---
-title: "加入自訂工作中偵錯支援 |Microsoft 文件"
+title: "新增自訂工作中的偵錯支援 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,33 +24,32 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f6e3d95b834bf64cb4dd4201658e0905d3e3ed46
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 90156ac284967ca1446ec7a9e34416208f612b6e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>新增自訂工作中的偵錯支援
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎允許在執行期間，使用中斷點暫停封裝、工作和其他類型的容器。 使用中斷點可讓您檢閱和修正妨礙應用程式或工作正確執行的錯誤。 中斷點架構可讓用戶端在定義的執行點暫停工作處理，以評估封裝中物件的執行階段值。  
   
  自訂工作開發人員可以使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面及其父介面 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>，以利用此架構建立自訂中斷點目標。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面會定義執行階段引擎與工作之間的互動，以建立和管理自訂中斷點位置或目標。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面提供執行階段引擎呼叫的方法與屬性，通知工作暫停或是繼續其執行。  
   
- 中斷點位置或目標是在工作執行中可以暫停處理的點。 使用者從中的可用中斷點位置選取**設定中斷點** 對話方塊。 例如，除了預設中斷點選項之外，[Foreach 迴圈容器] 提供 [在迴圈的每一次反覆運算開始時中斷] 選項。  
+ 中斷點位置或目標是在工作執行中可以暫停處理的點。 使用者可以從 [設定中斷點] 對話方塊中的可用中斷點位置選取。 例如，除了預設中斷點選項之外，[Foreach 迴圈容器] 提供 [在迴圈的每一次反覆運算開始時中斷] 選項。  
   
- 當工作在執行期間到達中斷點目標時，它會評估中斷點目標以決定是否啟用中斷點。 這指出使用者希望在該中斷點停止執行。 如果啟用中斷點，工作會將 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 事件引發至執行階段引擎。 執行階段引擎呼叫來回應事件**暫停**目前正在執行封裝中的每項工作的方法。 當執行階段呼叫，就會繼續執行工作的**ResumeExecution**已暫停工作的方法。  
+ 當工作在執行期間到達中斷點目標時，它會評估中斷點目標以決定是否啟用中斷點。 這指出使用者希望在該中斷點停止執行。 如果啟用中斷點，工作會將 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 事件引發至執行階段引擎。 執行階段引擎會呼叫目前在封裝中執行的每項工作之 **Suspend** 方法以回應事件。 當執行階段呼叫已暫停工作的 **ResumeExecution** 方法時，工作會繼續執行。  
   
  不使用中斷點的工作仍應實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 與 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面。 這可確保當封裝中的其他物件引發 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 事件時，正確地暫停工作。  
   
 ## <a name="idtsbreakpointsite-interface-and-breakpointmanager"></a>IDTSBreakpointSite 介面與 BreakpointManager  
- 工作透過呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 方法，並提供整數識別碼和字串描述做為參數，以建立中斷點目標。 當工作到達其程式碼中包含中斷點目標的點時，它會使用 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> 方法評估中斷點目標，以判斷是否已啟用該中斷點。 如果**true**，工作通知執行階段引擎引發<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>事件。  
+ 工作透過呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 方法，並提供整數識別碼和字串描述做為參數，以建立中斷點目標。 當工作到達其程式碼中包含中斷點目標的點時，它會使用 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> 方法評估中斷點目標，以判斷是否已啟用該中斷點。 若為 **true**，工作會引發 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 事件，以通知執行階段引擎。  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面會定義單一方法 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>，後者會由執行階段引擎於工作建立期間呼叫。 這個方法會以參數形式提供 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 物件，然後由工作使用該物件來建立並管理其中斷點。 工作應該儲存<xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>供期間使用本機**驗證**和**Execute**方法。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面會定義單一方法 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>，後者會由執行階段引擎於工作建立期間呼叫。 這個方法會以參數形式提供 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 物件，然後由工作使用該物件來建立並管理其中斷點。 工作會在本機上儲存 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>，以供在 **Validate** 與 **Execute** 方法期間使用。  
   
  下列範例程式碼示範如何使用 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 來建立中斷點目標。 範例會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 方法以引發事件。  
   
@@ -97,11 +94,11 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>IDTSSuspend 介面  
- <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面會定義當執行階段引擎暫停或是繼續工作的執行時，該引擎呼叫的方法。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>介面由實作<xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>介面，並將其**暫停**和**ResumeExecution**方法通常會覆寫自訂工作。 當執行階段引擎收到**OnBreakpointHit**它會呼叫從工作事件，**暫停**方法的每個執行中工作，通知工作暫停。 當用戶端繼續執行時，執行階段引擎呼叫**ResumeExecution**方法將暫止的工作。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面會定義當執行階段引擎暫停或是繼續工作的執行時，該引擎呼叫的方法。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面是由 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面實作，而且自訂工作通常會覆寫其 **Suspend** 與 **ResumeExecution** 方法。 當執行階段引擎從工作收到 **OnBreakpointHit** 事件時，它會呼叫每個執行中工作的 **Suspend** 方法，以通知工作暫停。 當用戶端繼續執行時，執行階段引擎會呼叫已暫停工作的 **ResumeExecution** 方法。  
   
- 暫停和繼續工作執行需要暫停和繼續工作的執行緒。 在 managed 程式碼，您執行此操作使用**ManualResetEvent**類別**System.Threading**的.NET framework 命名空間。  
+ 暫停和繼續工作執行需要暫停和繼續工作的執行緒。 在 Managed 程式碼中，您使用 .NET Framework 之 **System.Threading** 命名空間中的 **ManualResetEvent** 類別，來執行這項動作。  
   
- 下列程式碼範例示範工作執行的暫停與繼續。 請注意， **Execute**方法已從先前的程式碼範例中，並引發中斷點時暫停執行緒。  
+ 下列程式碼範例示範工作執行的暫停與繼續。 請注意，**Execute** 方法和上一個程式碼範例不同，而且會在引發中斷點時暫停執行緒。  
   
 ```csharp  
 private ManualResetEvent m_suspended = new ManualResetEvent( true );  
@@ -354,4 +351,3 @@ End Sub
  [偵錯控制流程](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   
-

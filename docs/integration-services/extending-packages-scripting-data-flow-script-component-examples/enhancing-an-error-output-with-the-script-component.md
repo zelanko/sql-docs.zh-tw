@@ -1,5 +1,5 @@
 ---
-title: "增強錯誤輸出 with the Script Component |Microsoft 文件"
+title: "使用指令碼元件增強錯誤輸出 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,42 +8,39 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 - error outputs [Integration Services], enhancing
 - Script component [Integration Services], transformation components
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 3881b57f4089dbb075d019f9bd1a88a96a307b72
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f6058a8d8a12b9004cb42d26753a1fc7cee7181
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用指令碼元件增強錯誤輸出
-  根據預設，在兩個額外的資料行[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]錯誤輸出，ErrorCode 與 ErrorColumn 只包含數字碼，代表錯誤號碼及發生錯誤的資料行的識別碼。 這些數字的值可能是沒有對應的錯誤描述和資料行名稱，則用途有限。  
+  根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤輸出中的兩個額外資料行 ErrorCode 和 ErrorColumn 只包含數字碼，代表錯誤號碼及發生錯誤之資料行的識別碼。 這些數值若無對應的錯誤描述和資料行名稱，則用途有限。  
   
- 本主題描述如何使用指令碼元件將錯誤描述和資料行名稱加入至資料流程中的現有錯誤輸出資料。 此範例使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法 (可透過指令碼元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 屬性取得)，加入對應至特定預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤碼之錯誤描述。 此範例將擷取的歷程識別碼對應的資料行名稱使用<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>相同介面的方法。  
+ 此主題描述如何使用指令碼元件，將錯誤描述和資料行名稱新增至資料流程現有的錯誤輸出資料。 此範例使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法 (可透過指令碼元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 屬性取得)，加入對應至特定預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤碼之錯誤描述。 然後，本例會使用相同介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法新增資料行名稱，此名稱對應至擷取的歷程識別碼。  
   
 > [!NOTE]  
 >  如果您要建立可以更輕鬆地在多個資料流程工作與多個封裝之間重複使用的元件，請考慮使用這個指令碼元件範例中的程式碼，做為自訂資料流程元件的起點。 如需詳細資訊，請參閱 [開發自訂資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
 ## <a name="example"></a>範例  
- 如下所示的範例會使用指令碼元件設定成轉換，將錯誤描述和資料行名稱加入至資料流程中的現有錯誤輸出資料。  
+ 在這裡顯示的範例使用設定成轉換的指令碼元件，將錯誤描述和資料行名稱新增至資料流程現有的錯誤輸出資料。  
   
- 如需如何設定使用的指令碼元件為資料流程中的資料轉換的詳細資訊，請參閱[使用指令碼元件建立同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用指令碼元件建立非同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
+ 如需如何設定指令碼元件以用作資料流程中轉換的詳細資訊，請參閱[使用指令碼元件建立同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用指令碼元件建立非同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>設定此指令碼元件範例  
   
@@ -53,21 +50,21 @@ ms.lasthandoff: 08/03/2017
   
 3.  從上游元件將錯誤輸出連接至新指令碼元件。  
   
-4.  開啟**指令碼轉換編輯器**，然後在**指令碼** 頁面上，針對**ScriptLanguage**屬性，選取指令碼語言。  
+4.  開啟**指令碼轉換編輯器**，然後在 [指令碼] 頁面上選取 **ScriptLanguage** 屬性的指令碼語言。  
   
-5.  按一下**編輯指令碼**開啟[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 加入如下所示的範例程式碼。  
+5.  按一下 [編輯指令碼] 開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，並新增以下所示的範例程式碼。  
   
 6.  關閉 VSTA。  
   
-7.  在指令碼轉換編輯器中，在**的輸入資料行**頁面上，選取 ErrorCode 和 ErrorColumn 資料行。  
+7.  在指令碼轉換編輯器的 [輸入資料行] 頁面上，選取 ErrorCode 和 ErrorColumn 資料行。  
   
-8.  在**輸入和輸出**頁面上，新增兩個新的資料行。  
+8.  在 [輸入及輸出] 頁面上新增兩個新的資料行。  
   
-    -   加入新的輸出資料行型別的**字串**名為**ErrorDescription**。 將新資料行的預設長度增加至 255，以支援長訊息。  
+    -   新增新的輸出資料行，類型為**字串**名稱為 **ErrorDescription**。 將新資料行的預設長度增加至 255，以支援長訊息。  
   
-    -   加入另一個新的輸出資料行型別的**字串**名為**ColumnName**。 預設長度增加至 255，以支援長值的新資料行。  
+    -   新增另一個新的輸出資料行，類型為**字串**，名稱為 **ColumnName**。 將新資料行的預設長度增加至 255，以支援長值。  
   
-9. 關閉**指令碼轉換編輯器。**  
+9. 關閉**指令碼轉換編輯器**。  
   
 10. 將指令碼元件的輸出附加至適當的目的地。 一般檔案目的地對於特定測試而言是最容易設定的。  
   
@@ -116,4 +113,3 @@ public class ScriptMain:
  [使用指令碼元件建立同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
   
   
-

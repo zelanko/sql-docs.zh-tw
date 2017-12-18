@@ -1,5 +1,5 @@
 ---
-title: "使用者角色 |Microsoft 文件"
+title: "使用者角色 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f01d18033764d683871cbc8d5883e25c78b7d958
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-roles"></a>使用者角色
   本節描述 Attunity Oracle Change Data Capture (CDC) 服務的使用者角色。 描述的角色包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色、Windows 角色或 Oracle 資料庫角色。  
@@ -147,7 +145,7 @@ ms.lasthandoff: 08/03/2017
   
  下列清單描述記錄採礦使用者應該被授與的必要權限：  
   
--   選取 \<任何擷取的資料表 >  
+-   SELECT on \<任何擷取的資料表>  
   
 -   SELECT ANY TRANSACTION  
   
@@ -181,4 +179,3 @@ ms.lasthandoff: 08/03/2017
  絕對不會儲存這個使用者的認證。 每當需要這些認證時，CDC 設計工具主控台便會要求這些認證，而且在其餘 UI 工作階段會保存這些認證。  
   
   
-

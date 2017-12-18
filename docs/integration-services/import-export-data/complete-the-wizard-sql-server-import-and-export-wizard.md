@@ -1,5 +1,5 @@
 ---
-title: "完成精靈 （SQL Server 匯入和匯出精靈） |Microsoft 文件"
+title: "完成精靈 (SQL Server 匯入和匯出精靈) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,36 +8,33 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.completewizard.f1
+f1_keywords: sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c2592ac0539b2cd693e4aef48d7652c7970ec71c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b06adc095408d010acc2008352447a2ee48d8f67
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>完成精靈 (SQL Server 匯入和匯出精靈)
-而且您選擇儲存封裝精靈所建立，您可以指定您是否要立即執行複製作業之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈 」 會顯示**完成精靈**。 在此頁面上，您可以檢閱在精靈中的選擇，然後按一下 [完成]  開始複製作業。
+指定是否要立即執行複製作業之後，以及選擇性儲存精靈建立的套件之後，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [完成精靈]。 在此頁面上，您可以檢閱在精靈中的選擇，然後按一下 [完成]  開始複製作業。
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>[完成精靈] 頁面的螢幕擷取畫面 
- 下列螢幕擷取畫面顯示簡單的範例**完成精靈**精靈頁面。  
+ 下列螢幕擷取畫面顯示精靈 [完成精靈] 頁面的簡單範例。  
   
- ![完成精靈頁面的匯入和匯出精靈](../../integration-services/import-export-data/media/complete.png "完成精靈頁面的匯入和匯出精靈")  
+ ![[匯入和匯出精靈] 的 [完成精靈] 頁面](../../integration-services/import-export-data/media/complete.png "[匯入和匯出精靈] 的 [完成精靈] 頁面")  
   
 ## <a name="review-the-options-you-selected"></a>檢閱您選取的選項  
  
-檢閱摘要，並確認下列資訊：  
+檢閱摘要並確認下列資訊：  
 -   要複製之資料的來源和目的地。
 -   要複製的資料。
 -   是否儲存封裝。
@@ -48,5 +45,4 @@ ms.lasthandoff: 09/26/2017
  
 ## <a name="see-also"></a>另請參閱
 [透過匯入和匯出精靈的簡單範例開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 

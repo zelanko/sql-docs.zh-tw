@@ -2,9 +2,12 @@
 title: "建立及管理全文檢索索引 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 468a8c1d4b2b528b612684a93d571fca374db6cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1b0c6e128f6b2213e1a4a2af46281388f7c8a593
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
-本主題描述如何建立、填入和管理 SQL Server 中的全文檢索索引。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 本主題描述如何建立、填入和管理 SQL Server 中的全文檢索索引。
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>先決條件 - 建立全文檢索目錄
 您需要有全文檢索目錄，才能建立全文檢索索引。 目錄是一或多個全文檢索索引的虛擬容器。 如需詳細資訊，請參閱[建立及管理全文檢索目錄](../../relational-databases/search/create-and-manage-full-text-catalogs.md)。

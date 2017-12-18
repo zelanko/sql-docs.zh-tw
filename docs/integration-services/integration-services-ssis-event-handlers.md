@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 事件處理常式 |Microsoft 文件"
+title: "Integration Services (SSIS) 事件處理常式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4fb7cc58ace602daa44d07dbaf59f76d9b7755
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d546b045520134cd3e429ec0ecf1098a1b8b462e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
   在執行階段，可執行檔 (封裝和「Foreach 迴圈」、「For 迴圈」、「時序」，以及工作主機容器) 會引發事件。 例如，當發生錯誤時，會引發 OnError 事件。 您可以建立這些事件的自訂事件處理常式，以擴充封裝功能，並使封裝在執行階段易於管理。 事件處理常式可以執行下列工作：  
@@ -51,7 +49,7 @@ ms.lasthandoff: 09/26/2017
   
  下圖顯示一個具有「For 迴圈」容器的簡單封裝，該容器包含一個「執行 SQL」工作。  
   
- ![封裝、 For 迴圈、 工作主機和執行 SQL 」 工作](../integration-services/media/mw-dts-eventhandlerpkg.gif "封裝、 For 迴圈、 工作主機和執行 SQL 」 工作")  
+ ![套件、For 迴圈、工作主機和執行 SQL 工作](../integration-services/media/mw-dts-eventhandlerpkg.gif "套件、For 迴圈、工作主機和執行 SQL 工作")  
   
  針對其 **OnError** 事件，僅封裝具有事件處理常式。 如果在「執行 SQL」工作執行時發生錯誤，則會執行封裝的 **OnError** 事件處理常式。 下圖顯示引發封裝執行 **OnError** 事件處理常式的呼叫順序。  
   
@@ -105,7 +103,7 @@ ms.lasthandoff: 09/26/2017
   
  [事件處理常式] 索引標籤還包含 [連線管理員] 區域，在此區域中，您可以建立並修改事件處理常式用於連接到伺服器和資料來源的連線管理員。 如需詳細資訊，請參閱[建立連線管理員](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
   
-### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>加入事件處理常式 索引標籤上的事件處理常式  
+### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>在事件處理常式索引標籤上新增事件處理常式  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
@@ -113,7 +111,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  按一下 [事件處理常式] 索引標籤。  
   
-     ![與事件處理常式設計介面的螢幕擷取畫面](../integration-services/media/eventhandlers.gif "與事件處理常式設計介面的螢幕擷取畫面")  
+     ![含事件處理常式之設計介面的螢幕擷取畫面](../integration-services/media/eventhandlers.gif "含事件處理常式之設計介面的螢幕擷取畫面")  
   
      在事件處理常式中建立控制流程和資料流程，與在封裝中建立控制流程和資料流程相似。 如需詳細資訊，請參閱[控制流程](../integration-services/control-flow/control-flow.md)和[資料流程](../integration-services/data-flow/data-flow.md)。  
   
@@ -129,7 +127,7 @@ ms.lasthandoff: 09/26/2017
   
 9. 在 [檔案] 功能表上，按一下 [儲存選取項目]，以儲存封裝。  
 
-## <a name="set-the-properties-of-an-event-handler"></a>設定事件處理常式屬性  
+## <a name="set-the-properties-of-an-event-handler"></a>設定事件處理常式的屬性  
  您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或以程式設計方式設定屬性。  
   
  如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中設定這些屬性的相關資訊，請參閱 [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
@@ -140,4 +138,3 @@ ms.lasthandoff: 09/26/2017
  如需如何將事件處理常式加入封裝的相關資訊，請參閱 [將事件處理常式加入封裝中](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
   
   
-

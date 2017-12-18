@@ -2,9 +2,12 @@
 title: "管理 (複寫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47107da4379ff36923d9bf8987501203d3830175
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 86a4e432940b36b3ebb8a8dfec58d768b2a036fd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administration-replication"></a>管理 (複寫)
-  本節包含管理複寫拓撲的相關資訊。 建議您先閱讀最佳做法主題，然後遵循該主題中的連結，取得本節及其他章節的詳細資訊。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本節包含管理複寫拓撲的相關資訊。 建議您先閱讀最佳做法主題，然後遵循該主題中的連結，取得本節及其他章節的詳細資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
  [複寫管理的最佳做法](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  

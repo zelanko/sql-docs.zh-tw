@@ -1,5 +1,5 @@
 ---
-title: "catalog.grant_permission （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.grant_permission (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 5f9bb38521631bcc60d39fba747f17b86183545d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: 6d9115186c35eaae94e36cc079753bbdbe798638
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,28 +41,28 @@ catalog.grant_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @object_type =] *object_type*  
- 安全性實體物件的類型。 安全性實體物件類型包括資料夾 (`1`)、 專案 (`2`)、 環境 (`3`)，和作業 (`4`)。*Object_type*是**smallint***。*  
+ [ @object_type = ] *object_type*  
+ 安全性實體物件的類型。 安全性實體物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。*object_type* 是 **smallint***。*  
   
- [ @object_id =] *object_id*  
- 安全性實體物件的唯一識別碼 (ID)。 *Object_id*是**bigint**。  
+ [ @object_id = ] *object_id*  
+ 安全性實體物件的唯一識別碼 (ID)。 *object_id* 是 **bigint**。  
   
- [ @principal_id =] *principal_id*  
- 要授與其權限之主體的識別碼。 *Principal_id*是**int**。  
+ [ @principal_id = ] *principal_id*  
+ 要授與其權限之主體的識別碼。 *principal_id* 是 **int**。  
   
- [ @permission_type =] *permission_type*  
- 要授與的權限類型。 *Permission_type*是**smallint**。  
+ [ @permission_type = ] *permission_type*  
+ 要授與的權限類型。 *permission_type* 是 **smallint**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功)  
   
- 1 （object_class 無效）  
+ 1 (object_class 無效)  
   
- 2 （object_id 不存在）  
+ 2 (object_id 不存在)  
   
- 3 （主體不存在）  
+ 3 (主體不存在)  
   
- 4 （權限無效）  
+ 4 (權限無效)  
   
  5 (其他錯誤)  
   
@@ -76,11 +74,11 @@ catalog.grant_permission [ @object_type = ] object_type
   
 -   專案的 ASSIGN_PERMISSIONS 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
 
-由 SQL Server 驗證登入不能呼叫這個程序。 無法呼叫由 sa 登入。
+由 SQL Server 驗證的登入不能呼叫這個程序。 sa 登入也不能呼叫它。
   
 ## <a name="remarks"></a>備註  
  這個預存程序可讓您授與下表所述的權限類型：  
@@ -101,4 +99,3 @@ catalog.grant_permission [ @object_type = ] object_type
  請參閱＜傳回碼值＞一節以了解相關的錯誤和警告。  
   
   
-

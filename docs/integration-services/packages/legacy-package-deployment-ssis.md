@@ -1,5 +1,5 @@
 ---
-title: "舊版封裝部署 (SSIS) |Microsoft 文件"
+title: "舊版套件部署 (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,17 +33,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 486fa573b955848828bff349f364543e6a1e23f7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="legacy-package-deployment-ssis"></a>舊版封裝部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的工具和精靈可以簡化將封裝從開發電腦部署到實際伺服器或部署到其他電腦的流程。  
@@ -153,7 +151,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="registry-entry"></a>登錄項目  
  如果您想使用登錄項目儲存組態，可以使用現有的機碼或在 HKEY_CURRENT_USER 中建立新的機碼。 您所使用的登錄機碼必須具有名為 **Value**的值。 該值可以是 DWORD 或字串。  
   
- 如果您選取 [登錄項目] 組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式是\<登錄機碼 >。 如果您想要使用不在 HKEY_CURRENT_USER 根目錄的登錄機碼，使用格式\<y key>\\...> 若要找出的金鑰。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 **SSISPackages\MyPackage**。  
+ 如果您選取 [登錄項目] 組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式為 \<登錄機碼>。 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式識別該機碼。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 **SSISPackages\MyPackage**。  
   
 #### <a name="sql-server"></a>SQL Server  
  如果選取 [SQL Server] 組態類型，則需要指定要儲存組態之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的連接。 您可以將組態儲存至現有的資料表，或者在指定的資料庫中建立新的資料表。  
@@ -241,7 +239,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 4.  在 [SSIS] 功能表上，按一下 [封裝組態]。  
   
-5.  在 封裝組態組合管理 對話方塊中，選取 啟用封裝組態，然後按一下加入。  
+5.  在 [封裝組態組合管理] 對話方塊中，選取 [啟用封裝組態]，然後按一下 [加入]。  
   
 6.  在 [封裝組態精靈] 頁面的歡迎頁面上，按 [下一步]。  
   
@@ -251,7 +249,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
     > **注意：**只有 [XML 組態檔] 和 [SQL Server] 組態類型支援在組態中併入多個屬性。  
   
-9. 在 正在完成精靈 頁面上，輸入組態的名稱，然後按一下完成。  
+9. 在 [正在完成精靈] 頁面上，輸入組態的名稱，然後按一下 [完成]。  
   
 10. 檢視 [封裝組態組合管理] 對話方塊中的組態。  
   
@@ -294,7 +292,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  重新執行封裝組態精靈來編輯現有的組態。  
   
  **移除**  
- 選取組態，然後按一下移除。  
+ 選取組態，然後按一下 [移除]。  
   
  **箭頭**  
  選取組態，然後使用向上和向下箭頭，即可將其在清單中向上移動或向下移動。 組態會依其出現在清單中的順序載入。  
@@ -364,7 +362,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |Value|說明|  
 |-----------|-----------------|  
-|**登錄項目**|輸入包含組態資訊的登錄機碼。 格式是\<登錄機碼 >。<br /><br /> 登錄機碼必須已經存在於 HKEY_CURRENT_USER 中且具有名為 Value 的值。 該值可以是 DWORD 或字串。<br /><br /> 如果您想要使用的登錄機碼不是在 HKEY_CURRENT_USER 根目錄中，使用格式\<y key>\\...> 若要找出的金鑰。|  
+|**登錄項目**|輸入包含組態資訊的登錄機碼。 格式為 \<登錄機碼>。<br /><br /> 登錄機碼必須已經存在於 HKEY_CURRENT_USER 中且具有名為 Value 的值。 該值可以是 DWORD 或字串。<br /><br /> 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式來識別該機碼。|  
   
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
@@ -431,7 +429,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[完成]**  
  建立組態，並結束 [封裝組態精靈]。  
 
-## <a name="child"></a>子封裝中使用變數和參數的值
+## <a name="child"></a> 在子套件中使用變數和參數的值
   此程序描述如何建立使用父變數組態類型的封裝組態。 此組態類型可讓從父封裝執行的子封裝存取父變數。  
   
 > [!NOTE]  
@@ -492,7 +490,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |[CreateDeploymentUtility]|指定建立專案時是否建立封裝部署公用程式的值。 此屬性必須為 **True** ，才能建立部署公用程式。|  
 |DeploymentOutputPath|與部署公用程式之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案相關的位置。|  
   
- 當您建置[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]專案時，資訊清單檔\<專案名稱 >。C t Name>.ssisdeploymentmanifest.xml，建立並新增，以及專案封裝和封裝相依性，在專案中的 bin\Deployment 資料夾或 DeploymentOutputPath 屬性中指定的位置的複本。 資訊清單檔會列出專案中的封裝、封裝組態和任何其他檔案。  
+ 建立 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案時，會建立資訊清單檔 \<專案名稱>.SSISDeploymentManifest.xml，以及專案套件和套件相依性的複本，並將資訊清單檔和這些複本新增至專案的 bin\Deployment 資料夾，或新增至 DeploymentOutputPath 屬性所指定的位置。 資訊清單檔會列出專案中的封裝、封裝組態和任何其他檔案。  
   
  每次建立專案時，都會重新整理部署資料夾的內容。 這表示系統將會刪除儲存在這個資料夾，而建立程序並未重新複製到資料夾中的任何檔案。 例如，儲存在部署資料夾的封裝組態檔案將會被刪除。  
   
@@ -502,7 +500,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  以滑鼠右鍵按一下專案，然後按一下 [屬性]。  
   
-3.  在**\<專案名稱 > 屬性頁**對話方塊中，按一下 **部署公用程式**。  
+3.  在 [\<專案名稱> 屬性頁] 對話方塊中，按一下 [部署公用程式]。  
   
 4.  若要在部署封裝時更新封裝組態，請將 **[AllowConfigurationChanges]** 設為 **True**。  
   
@@ -512,7 +510,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 7.  按一下 **[確定]**。  
   
-8.  在方案總管中，以滑鼠右鍵按一下專案，然後按一下建立。  
+8.  在方案總管中，以滑鼠右鍵按一下專案，然後按一下 [建立]。  
   
 9. 檢視 **[輸出]** 視窗中的建立進度和建立錯誤。  
 
@@ -521,7 +519,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  部署資料夾的路徑是在為其建立部署公用程式之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案的 DeploymentOutputPath 屬性中指定的。 預設路徑為 bin\Deployment (相對於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案)。 如需詳細資訊，請參閱 [建立部署公用程式](../../integration-services/packages/create-a-deployment-utility.md)。  
   
- 請使用「封裝安裝精靈」來安裝封裝。 若要啟動此精靈，請在將部署資料夾複製到伺服器後按兩下部署公用程式檔案。 這個檔案命名為\<專案名稱 >。SSISDeploymentManifest，以及可以在目的地電腦上，部署資料夾中找到。  
+ 請使用「封裝安裝精靈」來安裝封裝。 若要啟動此精靈，請在將部署資料夾複製到伺服器後按兩下部署公用程式檔案。 此檔案名為 \<專案名稱>.SSISDeploymentManifest；您可以在目的地電腦的部署資料夾中找到這個檔案。  
   
 > [!NOTE]  
 >  根據所部署的封裝版本，如果有不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並存安裝，可能會發生錯誤。 因為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]所有版本的 .SSISDeploymentManifest 副檔名都相同，所以可能會發生這項錯誤。 按兩下此檔案就會針對最近安裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]版本 (可能與部署公用程式檔案的版本不同) 呼叫安裝程式 (dtsinstall.exe)。 若要解決此問題，請從命令列執行正確的 dtsinstall.exe 版本，並且提供部署公用程式檔案的路徑。  
@@ -544,7 +542,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  開啟目標電腦上的部署資料夾。  
   
-2.  按兩下資訊清單檔\<專案名稱 >。SSISDeploymentManifest，啟動 封裝安裝精靈。  
+2.  按兩下資訊清單檔 \<專案名稱>.SSISDeploymentManifest，以啟動 [套件安裝精靈]。  
   
 3.  在 [部署 SSIS 封裝] 頁面上，選取 [SQL Server 部署] 選項。  
   
@@ -705,5 +703,4 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **[完成]**  
  按一下 [完成] 以結束精靈。  
-
 

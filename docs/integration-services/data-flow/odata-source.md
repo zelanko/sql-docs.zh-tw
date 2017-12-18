@@ -1,5 +1,5 @@
 ---
-title: "OData 來源 |Microsoft 文件"
+title: "OData 來源 | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,8 +8,7 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 1e0ef2b7cca9509a58aeadca3903e8aec3b7b9b9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/23/2017
-
+ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odata-source"></a>OData 來源
 使用 SSIS 封裝中的 OData 來源元件，從開放式資料通訊協定 (OData) 服務取用資料。 此元件支援 OData v3 和 v4 通訊協定。  
@@ -38,18 +36,18 @@ ms.lasthandoff: 08/23/2017
 -   針對 OData V4 通訊協定，此元件支援 JSON 資料格式。  
 
 OData 來源包含下列資料來源的支援：
--   Microsoft Dynamics AX 線上和 Microsoft Dynamics CRM Online
--   SharePoint 清單。 若要查看 SharePoint 伺服器上的所有清單，請使用下列 URL: http://\<伺服器 > / _vti_bin/ListData.svc。 如需 SharePoint URL 慣例的詳細資訊，請參閱 [SharePoint Foundation REST 介面](http://msdn.microsoft.com/library/ff521587.aspx)。
+-   Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online
+-   SharePoint 清單。 若要查看 SharePoint 伺服器上的所有清單，請使用下列 URL：http://\<伺服器>/_vti_bin/ListData.svc。 如需 SharePoint URL 慣例的詳細資訊，請參閱 [SharePoint Foundation REST 介面](http://msdn.microsoft.com/library/ff521587.aspx)。
   
 ## <a name="odata-format-and-performance"></a>OData 格式和效能
- 大部分的 OData 服務可以在多種格式傳回結果。 您可以指定結果集所使用的格式`$format`查詢選項。 類似 JSON 和 JSON Light 的格式要比 ATOM 或 XML 更有效率，而且在傳輸大量資料時可能會提供更好的效能。 下表提供範例測試的結果。 如您所見，當從 ATOM 切換到 JSON 時有 30-53% 的效能提升，而且當從 ATOM 切換到新的 JSON light 格式時有 67% 的效能提升 (適用於 WCF Data Services 5.1)。  
+ 大部分的 OData 服務都會傳回多種格式的結果。 您可使用 `$format` 查詢選項來指定結果集的格式。 類似 JSON 和 JSON Light 的格式要比 ATOM 或 XML 更有效率，而且在傳輸大量資料時可能會提供更好的效能。 下表提供範例測試的結果。 如您所見，當從 ATOM 切換到 JSON 時有 30-53% 的效能提升，而且當從 ATOM 切換到新的 JSON light 格式時有 67% 的效能提升 (適用於 WCF Data Services 5.1)。  
   
 |資料列|ATOM|JSON|JSON (Light)|  
 |-|-|-|-|  
 |10000|113 秒|74 秒|68 秒|  
 |1000000|1110 秒|853 秒|665 秒|  
   
-## <a name="related-topics-in-this-section"></a>本節中的相關的主題  
+## <a name="related-topics-in-this-section"></a>本節中的相關主題  
   
 -   [教學課程：使用 OData 來源](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
@@ -81,7 +79,7 @@ OData 來源包含下列資料來源的支援：
  指定查詢的選項。 例如： `$top=5` 
   
  **摘要 url**  
- 顯示唯讀摘要 URL 根據在此對話方塊中您選取的選項。  
+ 根據您在此對話方塊中選取的選項顯示唯讀摘要 URL。  
   
  **預覽**  
  使用 [預覽] 對話方塊來預覽結果。 **[預覽]** 最多可顯示 20 個資料列。  
@@ -101,7 +99,7 @@ OData 來源包含下列資料來源的支援：
   
 ### <a name="options"></a>選項。  
  **可用的外部資料行**  
- 在資料來源中檢視可用的來源資料行清單。 使用清單中的核取方塊，為頁面底部的資料表加入或移除資料行。 選取的資料行加入輸出。  
+ 在資料來源中檢視可用的來源資料行清單。 使用清單中的核取方塊，為頁面底部的資料表加入或移除資料行。 選取的資料行會新增至輸出。  
   
  **[外部資料行]**  
  檢視您選擇要包含在輸出中的來源資料行。  
@@ -140,4 +138,3 @@ OData 來源包含下列資料來源的支援：
  [OData 連線管理員](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   
-

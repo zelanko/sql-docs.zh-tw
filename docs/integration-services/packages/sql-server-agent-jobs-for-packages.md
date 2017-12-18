@@ -1,5 +1,5 @@
 ---
-title: "封裝的 SQL Server Agent 作業 |Microsoft 文件"
+title: "套件的 SQL Server Agent 作業 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2cb08ab16291e87a25eb2596f75f4d01616a80db
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: d4b24dfbb66204f7506cac9612f46e04836f70e5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，自動化並排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的執行。 您可以排程部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，並且儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統的封裝。  
@@ -136,7 +134,7 @@ ms.lasthandoff: 09/27/2017
     |--------------------|-----------------|  
     |**SSIS 目錄**|儲存在 SSISDB 資料庫中的封裝。 封裝會包含在部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案中。|  
     |**SQL Server**|儲存在 MSDB 資料庫中的封裝。 您會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務管理這些封裝。|  
-    |**SSIS 封裝存放區**|儲存在您電腦上預設資料夾中的封裝。 預設資料夾是*\<磁碟機 >*: \Program Files\Microsoft SQL Server\110\DTS\Packages。 您會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務管理這些封裝。<br /><br /> 注意：您可以指定不同的資料夾，或指定檔案系統中 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務要管理的其他資料夾，方法是修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的組態檔。 如需詳細資訊，請參閱 [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md) (Integration Services 服務 (SSIS 服務))。|  
+    |**SSIS 封裝存放區**|儲存在您電腦上預設資料夾中的封裝。 預設資料夾為 \<磁碟機>:\Program Files\Microsoft SQL Server\110\DTS\Packages。 您會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務管理這些封裝。<br /><br /> 注意：您可以指定不同的資料夾，或指定檔案系統中 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務要管理的其他資料夾，方法是修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的組態檔。 如需詳細資訊，請參閱 [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md) (Integration Services 服務 (SSIS 服務))。|  
     |**[File System]**|儲存在您本機電腦上任何資料夾中的封裝。|  
   
      **下表描述根據您選取的封裝來源，可供作業步驟使用的組態選項。**  
@@ -149,12 +147,12 @@ ms.lasthandoff: 09/27/2017
     |---------|-------------|  
     |**封裝**|**Server**<br /><br /> 輸入或選取主控 SSISDB 目錄之資料庫伺服器執行個體的名稱。<br /><br /> 如果 [SSIS 目錄] 是封裝來源，您只能使用 Microsoft Windows 使用者帳戶登入伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法使用驗證。|  
     ||**封裝**<br /><br /> 按一下省略符號按鈕並選取封裝。<br /><br /> 您會在**物件總管**的 [Integration Services 目錄] 節點下，選取資料夾中的封裝。|  
-    |**參數**<br /><br /> 位於 [組態] 索引標籤上。|[Integration Services 專案轉換精靈] 可讓您以參數取代封裝組態。<br /><br /> [參數] 索引標籤會顯示您設計封裝時加入的參數，例如透過使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 索引標籤也會顯示您將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案從封裝部署模型轉換為專案部署模型時加入封裝的參數。 輸入包含在封裝中之參數的新值。 您可以輸入常值，或使用包含在已對應至參數之伺服器環境變數中的值。<br /><br /> 若要輸入常值，請按一下參數旁邊的省略符號按鈕。 [編輯執行的常值] 對話方塊隨即出現。<br /><br /> 若要使用環境變數，請按一下 [環境]，然後選取包含您要使用之變數的環境。<br /><br /> **\*\* 重要事項 \*\*** 如果您已將多個參數及/或連線管理員屬性對應至多個環境中包含的變數，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會顯示錯誤訊息。 對於某個特定執行，封裝只能藉由單一伺服器環境中包含的值執行。<br /><br /> 如需如何建立伺服器環境及對應的變數參數資訊，請參閱[部署 Integration Services (SSIS) 專案和封裝](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。|  
-    |**連接管理員**<br /><br /> 位於 [組態] 索引標籤上。|變更連接管理員屬性的值。 例如，您可以變更伺服器名稱。 SSIS 伺服器上會自動產生連接管理員屬性的參數。 若要變更屬性值，您可以輸入常值，或使用包含在已對應至連接管理員屬性之伺服器環境變數中的值。<br /><br /> 若要輸入常值，請按一下參數旁邊的省略符號按鈕。 [編輯執行的常值] 對話方塊隨即出現。<br /><br /> 若要使用環境變數，請按一下 [環境]，然後選取包含您要使用之變數的環境。<br /><br /> **\*\* 重要事項 \*\*** 如果您已將多個參數及/或連線管理員屬性對應至多個環境中包含的變數，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會顯示錯誤訊息。 對於某個特定執行，封裝只能藉由單一伺服器環境中包含的值執行。<br /><br /> 如需如何建立伺服器環境，並將變數對應至連接管理員屬性的資訊，請參閱[部署 Integration Services (SSIS) 專案和封裝](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。|  
+    |**參數**<br /><br /> 位於 [組態] 索引標籤上。|[Integration Services 專案轉換精靈] 可讓您以參數取代封裝組態。<br /><br /> [參數] 索引標籤會顯示您設計封裝時加入的參數，例如透過使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 索引標籤也會顯示您將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案從封裝部署模型轉換為專案部署模型時加入封裝的參數。 輸入包含在封裝中之參數的新值。 您可以輸入常值，或使用包含在已對應至參數之伺服器環境變數中的值。<br /><br /> 若要輸入常值，請按一下參數旁邊的省略符號按鈕。 [編輯執行的常值] 對話方塊隨即出現。<br /><br /> 若要使用環境變數，請按一下 [環境]，然後選取包含您要使用之變數的環境。<br /><br /> **\*\* 重要事項 \*\*** 如果您已將多個參數及/或連線管理員屬性對應至多個環境中包含的變數，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會顯示錯誤訊息。 對於某個特定執行，封裝只能藉由單一伺服器環境中包含的值執行。<br /><br /> 如需如何建立伺服器環境以及將變數對應至參數的資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。|  
+    |**連接管理員**<br /><br /> 位於 [組態] 索引標籤上。|變更連接管理員屬性的值。 例如，您可以變更伺服器名稱。 SSIS 伺服器上會自動產生連接管理員屬性的參數。 若要變更屬性值，您可以輸入常值，或使用包含在已對應至連接管理員屬性之伺服器環境變數中的值。<br /><br /> 若要輸入常值，請按一下參數旁邊的省略符號按鈕。 [編輯執行的常值] 對話方塊隨即出現。<br /><br /> 若要使用環境變數，請按一下 [環境]，然後選取包含您要使用之變數的環境。<br /><br /> **\*\* 重要事項 \*\*** 如果您已將多個參數及/或連線管理員屬性對應至多個環境中包含的變數，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會顯示錯誤訊息。 對於某個特定執行，封裝只能藉由單一伺服器環境中包含的值執行。<br /><br /> 如需如何建立伺服器環境以及將變數對應至連線管理員屬性的資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。|  
     |**進階**<br /><br /> 位於 [組態] 索引標籤上。|設定封裝執行的下列其他設定：|  
     ||**屬性覆寫**：<br /><br /> 按一下 [加入] 輸入封裝屬性的新值、指定屬性路徑，以及指出屬性值是否為敏感。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器加密敏感資料。 若要編輯或移除屬性的設定，請按一下 [屬性覆寫] 方塊中的資料列，然後按一下 [編輯] 或 [移除]。 您可以執行下列其中一個動作來尋找屬性路徑：<br /><br /> -從 XML 組態檔 (\*.dtsconfig) 檔案複製屬性路徑。 路徑會在檔案的 [組態] 區段中列出，做為 [路徑] 屬性的值。 以下是 MaximumErrorCount 屬性的路徑範例：\Package.Properties[MaximumErrorCount]<br /><br /> -執行 [封裝組態精靈]，並從最後的 [正在完成精靈] 頁面複製屬性路徑。 然後您就可以取消精靈。<br /><br /> <br /><br /> 注意：[屬性覆寫] 選項主要用於您從舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 升級之組態的封裝。 您使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 建立並部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的建立會使用參數，而非組態。|  
     ||**記錄層次**<br /><br /> 選取下列其中一個封裝執行的記錄層級。 請注意，選取 [效能] 或 [詳細資訊] 記錄層級，可能會影響封裝執行的效能。<br /><br /> **無**：<br />                          關閉記錄功能。 只記錄封裝執行狀態。<br /><br /> **基本**：<br />                          記錄所有事件，自訂和診斷事件除外。 這是記錄層級的預設值。<br /><br /> **效能**：<br />                          只記錄效能統計資料，以及 OnError 和 OnWarning 事件。<br /><br /> **詳細資訊**：<br />                          記錄所有事件，包括自訂和診斷事件。<br /><br /> 您選取的記錄層級會決定 SSISDB 檢視及 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的報表中顯示的資訊。 如需詳細資訊，請參閱 [Integration Services (SSIS) 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。|  
-    ||**在發生錯誤時傾印**<br /><br /> 指定在封裝執行期間發生任何錯誤時，是否產生偵錯傾印檔案。 這些檔案會包含有關封裝執行的資訊，可幫助您針對問題進行疑難排解。 當您選取此選項，而在執行期間發生錯誤時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立 .mdmp 檔 (二進位檔) 和 .tmp 檔 (文字檔)。 根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]儲存在檔案*\<磁碟機 >:*\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾。|  
+    ||**在發生錯誤時傾印**<br /><br /> 指定在封裝執行期間發生任何錯誤時，是否產生偵錯傾印檔案。 這些檔案會包含有關封裝執行的資訊，可幫助您針對問題進行疑難排解。 當您選取此選項，而在執行期間發生錯誤時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立 .mdmp 檔 (二進位檔) 和 .tmp 檔 (文字檔)。 根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會將檔案儲存在 \<磁碟機>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾中。|  
     ||**32 位元執行階段**<br /><br /> 指出是否在已安裝 64 位元版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 64 位元電腦上，使用 32 位元版本的 dtexec 公用程式執行封裝。<br /><br /> 如果您的封裝使用的原生 OLE DB 提供者無法在 64 位元版本中使用，您可能需要使用 32 位元版本的 dtexec 執行封裝。 如需詳細資訊，請參閱 [Integration Services 的 64 位元考量](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 根據預設，當您選取 [SQL Server Integration Services 封裝] 作業步驟類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用系統自動叫用的 dtexec 公用程式版本執行封裝。 系統會根據電腦處理器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本和電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，叫用 32 位元或 64 位元版本的公用程式。|  
   
      **封裝來源**：SQL Server、SSIS 封裝存放區或檔案系統  
@@ -193,7 +191,7 @@ ms.lasthandoff: 09/27/2017
     >  當您為排程命名時，請考慮使用唯一的描述性名稱，以便更容易區分此排程與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。  
 
 ## <a name="see-also"></a>另請參閱  
- [執行專案和封裝](deploy-integration-services-ssis-projects-and-packages.md)  
+ [執行專案和套件](deploy-integration-services-ssis-projects-and-packages.md)  
 
 ## <a name="external-resources"></a>外部資源  
   
@@ -210,4 +208,3 @@ ms.lasthandoff: 09/27/2017
 -   mssqltips.com 上的部落格文章： [Configuring SQL Agent Jobs to Write to Windows Event Log](http://go.microsoft.com/fwlink/?LinkId=220745)(將 SQL 代理程式工作設定成寫入 Windows 事件記錄檔)。  
   
   
-
