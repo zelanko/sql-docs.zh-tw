@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c2b83605714e01961c50d71e83ba57691bc3833
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33293b17caff5d5c71b58bff3f34ed130ab19ba3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>從命令提示字元使用 DTExec.exe 執行 SSIS 套件
 本快速入門教學課程會示範如何以適當的參數執行 `DTExec.exe`，從命令提示字元執行 SSIS 套件。
@@ -25,7 +25,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]
 > 本文中描述的方法尚未以部署到 Azure SQL Database 伺服器的套件測試。
 
-如需 `DTExec.exe` 的詳細資訊，請參閱 [dtexec 公用程式](https://docs.microsoft.com/en-us/sql/integration-services/packages/dtexec-utility)。
+如需 `DTExec.exe` 的詳細資訊，請參閱 [dtexec 公用程式](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility)。
 
 ## <a name="run-a-package-with-dtexec"></a>使用 dtexec 執行套件
 

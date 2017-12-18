@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 89bf032a15857d8716fd19def326256862f4d9e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9d7a5ad6abf892a9b8ab0b125336e13cf1318100
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 各版本支援的 Integration Services 功能
  本主題提供不同 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]版本所支援之 SQL Server Integration Services (SSIS) 功能的詳細資訊。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 
 SQL Server Evaluation Edition 提供了 180 天的試用期。  
     
-> [![從 Evaluation Center 下載](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[從 Evaluation Center 下載 SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+> [![從 Evaluation Center 下載](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[從 Evaluation Center 下載 SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
 ## <a name="ISNew"></a> SQL Server 2017 的新 Integration Services 功能
   

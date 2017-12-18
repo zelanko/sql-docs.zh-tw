@@ -20,11 +20,11 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a5520dc00083bdd4522e10a2479e69fa000dc65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 556f0efa1ce15ee23acc190e547e3700e64eca4d
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 連線管理員
 SQL Server Integration Services (SSIS) 套件可使用 Azure Data Lake Store 連線管理員，連線至具有下列兩種驗證類型其中之一的 Azure Data Lake Store 服務：
@@ -47,7 +47,7 @@ Azure Data Lake Store 連線管理員是 [SQL Server Integration Services (SSIS)
     1.  如果選取 [Azure AD 使用者身分識別] 驗證選項，請執行下列動作︰
         1. 提供 [使用者名稱] 和 [密碼] 欄位的值。 
     
-        2. 選取 [測試連線] 來測試連線。 如果您或租用戶系統管理員之前未同意允許 SSIS 存取您的 Azure Data Lake Store 資料，當提示出現時請選取 [接受]。 如需此同意體驗的詳細資訊，請參閱 [整合應用程式與 Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-integrating-applications#updating-an-application)。
+        2. 選取 [測試連線] 來測試連線。 如果您或租用戶系統管理員之前未同意允許 SSIS 存取您的 Azure Data Lake Store 資料，當提示出現時請選取 [接受]。 如需此同意體驗的詳細資訊，請參閱[整合應用程式與 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)。
     
         >   [!NOTE] 
         > 當您選取 [Azure AD 使用者身分識別] 驗證選項時，不支援多重要素驗證和 Microsoft 帳戶驗證。
@@ -55,7 +55,7 @@ Azure Data Lake Store 連線管理員是 [SQL Server Integration Services (SSIS)
     2. 如果選取 [Azure AD 服務識別] 驗證選項，請執行下列動作︰
         1. 建立 Azure Active Directory (AAD) 應用程式和服務主體以存取 Azure Data Lake 資料。
     
-        2. 指派合適的權限，讓此 AAD 應用程式存取 Azure Data Lake 資源。 如需此驗證選項的詳細資訊，請參閱 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)(使用入口網站建立可存取資源的 Active Directory 應用程式和服務主體)。
+        2. 指派合適的權限，讓此 AAD 應用程式存取 Azure Data Lake 資源。 如需此驗證選項的詳細資訊，請參閱 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal) (使用入口網站建立可存取資源的 Active Directory 應用程式和服務主體)。
     
         3. 提供 [用戶端識別碼]、[祕密金鑰] 和 [租用戶名稱] 欄位的值。
     

@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9e6cc56ec5fe995f27833fad48ec75c317598587
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7f44e93c4fa879a8717b0af33e6071fcc0d53368
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>第 6 課：在 SSIS 中搭配專案部署模型使用參數
 SQL Server 2012 引進了新的部署模型，讓您可以將專案部署到 Integration Services 伺服器。 Integration Services 伺服器可讓您管理及執行封裝，以及設定封裝的執行值。  
@@ -34,7 +34,7 @@ SQL Server 2012 引進了新的部署模型，讓您可以將專案部署到 Int
 當您重新執行套件時，Integration Services 服務會使用參數來填入變數的值，然後此變數會更新目錄屬性。 因此，封裝會反覆執行此參數值所指定之新資料夾中的檔案，而不反覆執行封裝組態檔中所設定之資料夾中的檔案。  
   
 > [!IMPORTANT]  
-> 這個教學課程需要 **AdventureWorksDW2012** 範例資料庫。 如需如何安裝及部署 **AdventureWorksDW2012**的詳細資訊，請參閱 [安裝 SQL Server 範例和範例資料庫的考量](http://technet.microsoft.com/en-us/library/ms161556%28v=sql.105%29)。  
+> 這個教學課程需要 **AdventureWorksDW2012** 範例資料庫。 如需如何安裝及部署 **AdventureWorksDW2012** 的詳細資訊，請參閱[安裝 SQL Server 範例和範例資料庫的考量](http://technet.microsoft.com/library/ms161556%28v=sql.105%29)。  
   
 ## <a name="lesson-tasks"></a>課程工作  
 這一課包含下列工作：  

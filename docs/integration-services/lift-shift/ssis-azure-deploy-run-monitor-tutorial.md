@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3391c69ccf0d3b31499d0cf18713847d3a88fc5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4bf9df198105549f481dda8472f7142533fa8f23
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>部署、執行和監視 Azure 上的 SSIS 套件
 本教學課程示範如何將 SQL Server Integration Services 專案部署至 Azure SQL Database 上的 SSISDB 目錄資料庫、在 Azure SSIS Integration Runtime 中執行套件，以及監視執行中的套件。
@@ -26,7 +26,7 @@ ms.lasthandoff: 11/20/2017
 
 開始之前，請確定您有 17.2 版或更新版本的 SQL Server Management Studio。 若要下載最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-也請確定您已設定 SSISDB 資料庫和佈建 Azure SSIS Integration Runtime。 如需在 Azure 上佈建 SSIS 的資訊，請參閱[將 SQL Server Integration Services (SSIS) 套件隨即轉移至 Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
+也請確定您已設定 SSISDB 資料庫和佈建 Azure SSIS Integration Runtime。 如需在 Azure 上佈建 SSIS 的資訊，請參閱[將 SQL Server Integration Services (SSIS) 套件隨即轉移至 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
 ## <a name="connect-to-the-ssisdb-database"></a>連線至 SSISDB 資料庫
 
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/20/2017
 
 您也可以在 [物件總管] 中選取套件，並按一下滑鼠右鍵，然後依序選取 [報表]、[標準報表] 和 [所有執行]。
 
-如需如何監視 SSMS 之執行中套件的詳細資訊，請參閱[監視執行中的套件和其他作業](https://docs.microsoft.com/en-us/sql/integration-services/performance/monitor-running-packages-and-other-operations)。
+如需如何監視 SSMS 之執行中套件的詳細資訊，請參閱[監視執行中的套件和其他作業](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations)。
 
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>監視 Azure SSIS Integration Runtime
 

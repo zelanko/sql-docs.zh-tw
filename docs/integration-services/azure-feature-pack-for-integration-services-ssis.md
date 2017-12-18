@@ -20,21 +20,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7f0a4bcdaa5a79332e41199ef4407d6136b38bb9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7bd2425af92d89982ea7ccfc8b2a3220a15b24e7
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
 SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模組，可提供此頁面上所列的元件，以便讓 SSIS 連接到 Azure 服務、在 Azure 和內部部署資料來源之間轉送資料，以及處理儲存在 Azure 中的資料。
 
-[![下載 SSIS Feature Pack for Azure](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=54798) **下載**
+[![下載 SSIS Feature Pack for Azure](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **下載**
 
 - SQL Server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 - SQL Server 2016 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
-- SQL Server 2014 - [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47366)
-- SQL Server 2012 - [Microsoft SQL Server 2012 Integration Services Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47367)
+- SQL Server 2014 - [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)
+- SQL Server 2012 - [Microsoft SQL Server 2012 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47367)
 
 ## <a name="components-in-the-feature-pack"></a>Feature Pack 中的元件
 -   連接管理員
@@ -83,7 +83,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模
  下載 SQL Server Integration Services (SSIS) Feature Pack for Azure。
  
 - 適用於 SQL Server 2016 的 [SSIS Feature Pack for Azure](http://go.microsoft.com/fwlink/?LinkID=626967)
-- 適用於 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的 [SSIS Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=54798)
+- 適用於 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的 [SSIS Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 
 ## <a name="prerequisites"></a>必要條件
  您必須先安裝下列必要條件，再安裝這個功能套件。
