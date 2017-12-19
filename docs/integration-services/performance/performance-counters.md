@@ -1,5 +1,5 @@
 ---
-title: "效能計數器 |Microsoft 文件"
+title: "效能計數器 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/27/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a079ca03c21823aa8a3308bccc92cc71e92930c5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 1906bfa062b4c38c00c708bbbb9d09cbf0612071
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="performance-counters"></a>效能計數器
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會安裝一組您可以用於監視資料流程引擎效能的效能計數器。 例如,，您可以監看 "Buffers spooled" 計數器以判斷是否要在封裝執行時，暫時將資料緩衝區寫入到磁碟中。 這種交換會降低效能，並指出電腦的記憶體不足。  
@@ -125,5 +123,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  您必須使用 Administrators 群組成員的本機帳戶或網域帳戶，啟動「效能記錄檔及警示」服務。  
 
 ## <a name="see-also"></a>另請參閱  
- [執行專案和封裝](../packages/run-integration-services-ssis-packages.md) [Integration Services 封裝所記錄的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-
+ [執行專案與封裝](../packages/run-integration-services-ssis-packages.md) [Integration Services 套件記錄的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
