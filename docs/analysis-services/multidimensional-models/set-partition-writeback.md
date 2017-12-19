@@ -2,12 +2,12 @@
 title: "設定分割區回寫 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3f1f8ef13a4b05c5f5be5553b601e019b68aa100
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d2e7e571a9fd2b807375046653953098d722556d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-partition-writeback"></a>設定分割區回寫
-  如果您啟用量值群組的寫入功能，使用者可以在瀏覽 Cube 資料時進行變更，系統會將變更儲存到另一個資料表 (稱為回寫資料表)，而不是在 Cube 資料或來源資料中儲存變更。 瀏覽可寫入分割區的使用者，會看到所有變更在分割區的回寫資料表中產生的結果。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果您啟用寫入的量值群組，使用者可以變更 cube 資料，在瀏覽，稱為回寫資料表，不在 cube 資料或來源資料的個別資料表中儲存的變更時。 瀏覽可寫入分割區的使用者，會看到所有變更在分割區的回寫資料表中產生的結果。  
   
  您可以瀏覽或刪除回寫資料。 您也可以將回寫資料轉換為分割區。 在可寫入分割區上，您可以使用 Cube 角色來授與讀取/寫入存取權給使用者和使用者群組，並限制對分割區中的特定資料格或資料格群組的存取。  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
  若要將回寫資料轉換為資料分割，請使用 [轉換為資料分割] 對話方塊，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下可寫入資料分割的回寫資料表，即可存取此對話方塊。 您可以指定分割區的名稱，以及是否要在建立分割區的同時或稍後設計分割區的彙總。 若要在您選擇分割區的同時建立彙總，您必須選擇從現有的分割區複製彙總設計。 這通常 (但並非一定) 是目前的回寫分割區。 您也可以選擇在建立分割區的同時處理分割區。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [可寫入的資料分割](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [啟用回寫到 OLAP Cube 在 Excel 2010 中的資料格層級](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
  [啟用及設定安全性與 Analysis Services 回寫資料輸入](http://go.microsoft.com/fwlink/p/?LinkId=394953)  

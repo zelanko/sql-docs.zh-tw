@@ -2,12 +2,12 @@
 title: "RefreshPolicy 元素 (ASSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 84fcc378f14364c5728e78fc9ee866ecca2dad8b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fe18ffe7b7453c0591591acb8f92d37cd545724f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="refreshpolicy-element-assl"></a>RefreshPolicy 元素 (ASSL)
-  決定多久維度或量值群組之動態部分 (依指定[持續性](../../../analysis-services/scripting/properties/persistence-element-assl.md)項目) 會檢查是否有變更。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]決定多久維度或量值群組之動態部分 (依指定[持續性](../../../analysis-services/scripting/properties/persistence-element-assl.md)項目) 會檢查是否有變更。  
   
 ## <a name="syntax"></a>語法  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
  列舉型別對應至允許的值**RefreshPolicy**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.RefreshPolicy>。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Persistence 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/persistence-element-assl.md)   
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   

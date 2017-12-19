@@ -1,5 +1,5 @@
 ---
-title: "逐步解說： 發行 SSIS 封裝做為 SQL 檢視 |Microsoft 文件"
+title: "逐步解說︰將 SSIS 套件發佈為 SQL 檢視 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.packagepublishwizard.f1
+f1_keywords: sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: f0e5fa598ce47a95aafe11fd3f05c82eca79c064
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說︰發行 SSIS 封裝做為 SQL 檢視
   本逐步解說提供詳細的步驟來發行 SSIS 封裝，以做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的 SQL 檢視。  
@@ -77,7 +74,7 @@ ms.lasthandoff: 09/28/2017
   
     5.  設定元件以便從 **TestDB** 資料庫的 **Employee** 資料表中擷取資料。 針對 [OLE DB 連線管理員] 選取 [(local).TestDB]、針對 [資料存取模式] 選取 [資料表或檢視表]，以及針對 [資料表或檢視表的名稱] 選取 [[dbo].[Employee]]。  
   
-         ![資料流目的地-OLE DB 連接](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "資料流目的地-OLE DB 連接")  
+         ![資料流目的地 - OLE DB 連線](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "資料流目的地 - OLE DB 連線")  
   
 6.  現在，將 [資料流目的地]  從工具箱拖曳至資料流程。 您應該可在工具箱的 [一般] 區段中找到此元件。  
   
@@ -100,17 +97,17 @@ ms.lasthandoff: 09/28/2017
   
 2.  在 [簡介]  頁面上，按 [下一步]  。  
   
-     ![資料摘要發行精靈-簡介頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "資料摘要發行精靈-簡介頁面")  
+     ![資料摘要發行精靈 - 簡介頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "資料摘要發行精靈 - 簡介頁面")  
   
 3.  在 [封裝設定]  頁面上，執行下列動作：  
   
     1.  輸入包含 SSIS 目錄的 SQL Server 執行個體 **名稱** ，或按一下 [瀏覽]  來選取伺服器。  
   
-         ![資料摘要發行精靈-封裝設定頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "資料摘要發行精靈-封裝設定頁面")  
+         ![資料摘要發行精靈 - 套件設定頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "資料摘要發行精靈 - 套件設定頁面")  
   
     2.  按一下 [路徑] 欄位旁的 [瀏覽]、瀏覽 SSIS 目錄、選取您要發行的 SSIS 封裝 (例如︰[SSISDB]->[SSISPackagePublishing]->[Package.dtsx])，然後按一下 [確定]。  
   
-         ![資料摘要發行精靈-瀏覽封裝](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "資料摘要發行精靈-瀏覽封裝")  
+         ![資料摘要發行精靈 - 瀏覽套件](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "資料摘要發行精靈 - 瀏覽套件")  
   
     3.  使用頁面底部的 [封裝參數]、[專案參數] 和 [連接管理員] 索引標籤，針對任何封裝參數、專案參數或適用於封裝的連接管理員設定來輸入值。 您也可以指定要用來進行封裝執行的環境參考，並將專案/封裝參數繫結至環境變數。  
   
@@ -122,7 +119,7 @@ ms.lasthandoff: 09/28/2017
   
     1.  針對要建立的檢視選取 **資料庫** 。  
   
-         ![資料摘要發行精靈-發行設定頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "資料摘要發行精靈-發行設定頁面")  
+         ![資料摘要發行精靈 - 發行設定頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "資料摘要發行精靈 - 發行設定頁面")  
   
     2.  輸入 **檢視** 的 **名稱**。 您也可以從下拉式清單選取現有的檢視。  
   
@@ -144,7 +141,7 @@ ms.lasthandoff: 09/28/2017
   
 5.  在 [驗證]  頁面上，檢閱驗證所有設定之值的結果。 在下列範例中，您會看到關於連結的伺服器是否存在的 **警告** ，因為連結的伺服器不存在於選取的 SQL Server 執行個體上。 如果您在 **結果** 中看見 **錯誤**，請將滑鼠游標移到 **錯誤** 上方，您將會看到關於此錯誤的詳細資料。 例如，如果您尚未針對 SSISOLEDB 提供者啟用 [允許 Inprocess] 選項，就會在 [連結伺服器的組態] 動作上得到錯誤。  
   
-     ![資料摘要發行精靈-驗證頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "資料摘要發行精靈-驗證頁面")  
+     ![資料摘要發行精靈 - 驗證頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "資料摘要發行精靈 - 驗證頁面")  
   
 6.  若要將此報表儲存為 XML 檔案，可按一下 [儲存報表]。  
   
@@ -152,7 +149,7 @@ ms.lasthandoff: 09/28/2017
   
 8.  在 [摘要]  頁面中檢視您的選取項目，然後按一下 [發行]  來啟動發行程序，這將會建立連結的伺服器 (如果它尚未存在於伺服器上)，然後使用連接的伺服器建立檢視。  
   
-     ![資料摘要發行精靈-摘要頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "資料摘要發行精靈-摘要頁面")  
+     ![資料摘要發行精靈 - 摘要頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "資料摘要發行精靈 - 摘要頁面")  
   
      您現在可以針對 TestDB 資料庫執行下列 SQL 陳述式來查詢封裝的輸出資料：SELECT * FROM [SSISPackageView]。  
   
@@ -168,9 +165,9 @@ ms.lasthandoff: 09/28/2017
   
 1.  啟動 SQL Server Management Studio。  
   
-2.  展開\<**機器名稱**>，**資料庫**， \<**您在精靈中選取的資料庫**>，並**檢視**。  
+2.  依序展開 [\<機器名稱>]、[資料庫]、[\<您在精靈中選取的資料庫>] 及 [檢視]。  
   
-3.  以滑鼠右鍵按一下\<**精靈所建立的檢視**> 建立的精靈，並按一下**選取前 1000 個資料列**。  
+3.  以滑鼠右鍵按一下精靈建立的 [\<精靈建立的檢視>]，然後按一下 [選取前 1000 個資料列]。  
   
 4.  確認您看到 SSIS 封裝的結果。  
   
@@ -278,4 +275,3 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
  [設定資料流目的地](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   
-

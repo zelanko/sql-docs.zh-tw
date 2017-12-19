@@ -2,9 +2,12 @@
 title: "使用者資料庫的 Guest 權限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 49a29bf175c9ad048a1243bc4d495bf4be6f0e92
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dd16791702b01180158b894145f69211017281ad
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="guest-permissions-on-user-databases"></a>使用者資料庫的 Guest 權限
-  此規則會判斷 guest 使用者是否有權存取資料庫。 此規則只適用於使用者資料庫。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 此規則會判斷來賓使用者是否有權存取資料庫。 此規則只適用於使用者資料庫。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建議  
  撤銷 guest 使用者存取資料庫的權限 (如果不需要的話)。  

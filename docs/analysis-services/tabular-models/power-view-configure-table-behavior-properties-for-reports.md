@@ -2,12 +2,12 @@
 title: "設定 Power View 報表 (SSAS 表格式) 的資料表行為屬性 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d1bd1900080d7b41b161461fb715edac4b2b1614
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-設定報表的資料表行為屬性
-  如果您要將表格式模型當作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的資料模型使用，可以設定資料表行為屬性，在更細微的層級公開詳細資料列。 設定資料表行為屬性會變更詳細資料列的群組行為，並讓識別資訊 (例如姓名、相片識別碼或標誌影像) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]如果您使用表格式模型當做資料模型的[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，您可以設定資料表行為屬性，以公開更細微的層級的詳細資料列。 設定資料表行為屬性會變更詳細資料列的群組行為，並讓識別資訊 (例如姓名、相片識別碼或標誌影像) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 不同於其他報表應用程式，因為它會在報表設計期間自動群組項目，方法是根據您所使用的呈現格式來評估您將哪些資料行放在報表欄位清單中。 在大多數情況下，預設群組行為會產生最佳的結果。 但對於某些資料表 (主要是包含詳細資料的資料表)，預設群組行為有時會將不應群組的資料列群組在一起。 如果是這類資料表，您可以設定屬性來變更評估群組的方式。  
   

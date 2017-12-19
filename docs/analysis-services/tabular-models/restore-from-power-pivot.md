@@ -2,12 +2,12 @@
 title: "從 Powerpivot 還原 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88cd0379f0d23f819ab362a273c58bb40db81fa9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2cc8322e9a7208189ec7a8630e79a47baecaeb92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="restore-from-power-pivot"></a>從 PowerPivot 還原
-  您可以在 SQL Server Management Studio 中使用 [從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 還原] 功能，於 Analysis Services 執行個體上建立新的表格式模型資料庫 (以表格式模式執行)，或是從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿 (.xlsx) 還原到現有的資料庫。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]您可以使用從還原[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]功能 （以表格式模式執行），Analysis Services 執行個體上建立新的表格式模型資料庫的 SQL Server Management Studio 中，或還原到現有的資料庫從[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿 (.xlsx)。  
   
 > [!NOTE]  
 >  SQL Server Data Tools 中的 [從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 匯入] 專案範本提供了類似的功能。 如需詳細資訊，請參閱 [從 Power Pivot 匯入 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  在 [選項] 中，保持核取 [包含安全性資訊]。 從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿還原時，這項設定並不適用。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [表格式模型資料庫 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
  [從 Power Pivot 匯入 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   

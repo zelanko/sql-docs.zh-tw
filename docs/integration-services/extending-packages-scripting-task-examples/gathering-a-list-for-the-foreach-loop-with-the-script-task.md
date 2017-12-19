@@ -1,5 +1,5 @@
 ---
-title: "收集指令碼工作使用 「 ForEach 迴圈 」 清單 |Microsoft 文件"
+title: "以指令碼工作蒐集 ForEach 迴圈的清單 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,41 +8,38 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Foreach Loop containers
 - Script task [Integration Services], Foreach loops
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b1bd133c2fdc8c500db9c07df9c54e954db327bf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8abf9b5440cb59319b7d827a406efd900ac689bb
+ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>以指令碼工作蒐集 ForEach 迴圈的清單
-  Foreach from Variable 列舉值會透過以變數傳遞給它的清單中之項目來列舉，並針對每個項目執行相同的工作。 您可以在指令碼工作中使用自訂程式碼，針對此目的填入清單。 如需列舉值的詳細資訊，請參閱[Foreach 迴圈 」 容器](../../integration-services/control-flow/foreach-loop-container.md)。  
+  Foreach from Variable 列舉值會透過以變數傳遞給它的清單中之項目來列舉，並針對每個項目執行相同的工作。 您可以在指令碼工作中使用自訂程式碼，針對此目的填入清單。 如需列舉值的詳細資訊，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)。  
   
 > [!NOTE]  
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
 ## <a name="description"></a>Description  
- 下列範例會使用從方法**System.IO**還要新或是使用者在變數中指定的天數比舊的電腦上的 Excel 活頁簿清單蒐集的命名空間。 它會在磁碟 C 上以遞迴方式搜尋目錄中有 .xls 副檔名的檔案，並檢查檔案最後修改的日期，以判斷檔案是否應歸屬於清單中。 它會新增符合的檔案加入**ArrayList** ，並將儲存**ArrayList**供稍後使用 「 Foreach 迴圈 」 容器中的變數。 Foreach Loop 容器是設定為從 Variable 列舉值使用 Foreach。  
+ 下列範例使用 **System.IO** 命名空間的方法，蒐集電腦上的 Excel 活頁簿清單，這些活頁簿比使用者在變數中所指定的天數還要新或是還要舊。 它會在磁碟 C 上以遞迴方式搜尋目錄中有 .xls 副檔名的檔案，並檢查檔案最後修改的日期，以判斷檔案是否應歸屬於清單中。 它會將符合的檔案加入 **ArrayList**，並將 **ArrayList** 儲存到變數，以供稍後用於 Foreach 迴圈容器。 Foreach Loop 容器是設定為從 Variable 列舉值使用 Foreach。  
   
 > [!NOTE]  
->  您可以使用 Foreach from Variable 列舉值的變數必須屬於型別**物件**。 您放置在變數中的物件必須實作下列介面的其中一個： **System.Collections.IEnumerable**， **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**， **System.ComponentModel IListSource**，或**Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**。 **陣列**或**ArrayList**常用。 **ArrayList**需要參考和**匯入**陳述式**System.Collections**命名空間。  
+>  從 Variable 列舉值與 Foreach 搭配使用的變數必須是 **Object** 類型。 您放置在變數中的物件必須實作下列其中一個介面：**System.Collections.IEnumerable**、**System.Runtime.InteropServices.ComTypes.IEnumVARIANT**、**System.ComponentModel IListSource** 或 **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**。 經常會使用 **Array** 或 **ArrayList**。 **ArrayList** 需要參考以及 **System.Collections** 命名空間的 **Imports** 陳述式。  
   
  您可以透過為 `FileAge` 封裝變數使用不同的正值與負值，來試驗這項工作。 例如，您可以輸入 5 以搜尋在過去五天內建立的檔案，或是輸入 3 搜尋已建立超過三天的檔案。 這項工作可能需要花費一兩分鐘，以搜尋磁碟機上的許多資料夾。  
   
@@ -50,11 +47,11 @@ ms.lasthandoff: 09/26/2017
   
 1.  建立名為 `FileAge` 且類型為整數的封裝孌數，並輸入正整數值或負整數值。 當值為正數時，程式碼會搜尋比指定天數還要新的檔案，當值為負數時，會搜尋比指定的天數還要舊的檔案。  
   
-2.  建立名為的封裝變數`FileList`型別的**物件**接收蒐集指令碼工作，供稍後使用 Foreach from Variable 列舉值的檔案清單。  
+2.  建立類型為 **Object** 且名為 `FileList` 的變數，以接收指令碼工作蒐集的檔案清單，以便稍後供 Variable 列舉值的 Foreach 使用。  
   
-3.  新增`FileAge`變數加入指令碼工作的**[readonlyvariables]**屬性，並加入`FileList`變數設為**[readwritevariables]**屬性。  
+3.  將 `FileAge` 變數加入指令碼工作的 **ReadOnlyVariables** 屬性，然後將 `FileList` 變數加入 **ReadWriteVariables** 屬性。  
   
-4.  在您的程式碼中，匯入**System.Collections**和**System.IO**命名空間。  
+4.  在您的程式碼中，匯入 **System.Collections** 和 **System.IO** 命名空間。  
   
 ### <a name="code"></a>程式碼  
   
@@ -183,7 +180,7 @@ public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTAR
     // Extract number of days as positive integer.  
     fileAgeLimit = Math.Abs(fileAgeLimit);  
   
-    ArrayList listForEnumerator = new ArrayList();  
+    listForEnumerator = new ArrayList();  
   
     GetFilesInFolder(FILE_ROOT);  
   
@@ -260,4 +257,3 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
  [設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   
-

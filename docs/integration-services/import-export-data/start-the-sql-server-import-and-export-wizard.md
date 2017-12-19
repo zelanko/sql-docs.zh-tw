@@ -1,5 +1,5 @@
 ---
-title: "啟動 SQL Server 匯入和匯出精靈 |Microsoft 文件"
+title: "啟動 SQL Server 匯入和匯出精靈 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/20/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,26 +17,25 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-caps.latest.revision: 130
+caps.latest.revision: "130"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4fd91a36594a8d0d50e3f4eb8490497d6fe0e172
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 1c54f2e961abc3ec9bbbc3b19214e78d58208104
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>啟動 SQL Server 匯入和匯出精靈
 
- > 如需舊版的 SQL Server 相關的內容，請參閱[執行 SQL Server 匯入和匯出精靈](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[執行 SQL Server 匯入和匯出精靈](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx)。
 
-啟動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈 」，其中一種方式，本主題中所述匯入資料，並將資料匯出至任何支援的資料來源。
+使用本主題中所述的其中一種方式來啟動 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]，以從中匯入資料，並將資料匯出至任何支援的資料來源。
 
 > [!IMPORTANT]
-> 本主題僅描述如何 **啟動** 精靈。 如果您想要尋求其他項目，請參閱[相關的工作和內容](#related)。
+> 本主題僅描述如何 **啟動** 精靈。 如果您要尋找其他項目，請參閱[相關工作和內容](#related)。
 
 您可以啟動精靈：
 -   從 [[開始] 功能表](#startStart)。
@@ -45,15 +43,15 @@ ms.lasthandoff: 09/27/2017
 -   如果您匯入 SQL Server 或從中匯出，可以使用 [SQL Server Management Studio (SSMS)](#startSSMS)。
 -   如果您匯入 SQL Server 或從中匯出，可以使用 [搭配 SQL Server Data Tools (SSDT) 使用 Visual Studio](#startVS)。
 
-## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>必要條件-是安裝在電腦上的精靈嗎？
+## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>必要條件 - 電腦上已安裝精靈嗎？
 如果您想要執行精靈，但電腦上尚未安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則可以安裝 SQL Server Data Tools (SSDT) 來安裝 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱 [下載 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
 
 > [!NOTE]
-> 若要使用 64 位元版本的 SQL Server 匯入和匯出精靈，您必須安裝 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位元應用程式，並只安裝 32 位元檔案，包括 32 位元版本的精靈。
+> 若要使用 64 位元版本的 [SQL Server 匯入和匯出精靈]，您必須安裝 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位元應用程式，而且只會安裝 32 位元檔案 (包含 32 位元版本的精靈)。
 
 ## <a name="startStart"></a> [開始] 功能表  
-### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>從 [開始] 功能表啟動 SQL Server 匯入和匯出精靈
-1.  在**啟動**功能表上，尋找並展開**Microsoft SQL Server 2016**。
+### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>從開始功能表中啟動 SQL Server 匯入和匯出精靈
+1.  在 [開始] 功能表上，找出並展開 [Microsoft SQL Server 2016]。
 3.  按一下下列其中一個選項。
   
     -   **SQL Server 2016 匯入和匯出資料 (64 位元)**
@@ -65,7 +63,7 @@ ms.lasthandoff: 09/27/2017
     ![啟動精靈 (開始)](../../integration-services/import-export-data/media/start-wizard-start.jpg)
   
 ## <a name="startCmd"></a> Command prompt
-### <a name="start-the-sql-server-import-and-export-wizard-from-the-command-prompt"></a>從命令提示字元啟動 SQL Server 匯入和匯出精靈  
+### <a name="start-the-sql-server-import-and-export-wizard-from-the-command-prompt"></a>從命令提示字元中啟動 SQL Server 匯入和匯出精靈  
 在命令提示字元視窗中，執行下列其中一個位置的 **DTSWizard.exe** 。  
   
 -   **C:\Program Files\Microsoft SQL Server\130\DTS\Binn** (適用於 64 位元版本)。  
@@ -77,7 +75,7 @@ ms.lasthandoff: 09/27/2017
 ![啟動精靈 (Cmd)](../../integration-services/import-export-data/media/start-wizard-cmd.jpg)  
   
 ## <a name="startSSMS"></a> SQL Server Management Studio (SSMS)
-### <a name="start-the-sql-server-import-and-export-wizard-from-sql-server-management-studio-ssms"></a>從 SQL Server Management Studio (SSMS) 中啟動 SQL Server 匯入和匯出精靈    
+### <a name="start-the-sql-server-import-and-export-wizard-from-sql-server-management-studio-ssms"></a>從 SQL Server Management Studio (SSMS) 啟動 SQL Server 匯入和匯出精靈    
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。
     
 2.  展開 **[資料庫]**。
@@ -93,8 +91,8 @@ ms.lasthandoff: 09/27/2017
 
 如果您未安裝 SQL Server，或您有 SQL Server 但未安裝 SQL Server Management Studio，請參閱[下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
   
-## <a name="startVS"></a>Visual Studio
-### <a name="start-the-sql-server-import-and-export-wizard-from-visual-studio-with-sql-server-data-tools-ssdt"></a>從 SQL Server Data Tools (SSDT) 與 Visual Studio 中啟動 SQL Server 匯入和匯出精靈 
+## <a name="startVS"></a> Visual Studio
+### <a name="start-the-sql-server-import-and-export-wizard-from-visual-studio-with-sql-server-data-tools-ssdt"></a>使用 SQL Server Data Tools (SSDT) 從 Visual Studio 啟動 SQL Server 匯入和匯出精靈 
  在具有 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 Visual Studio 中開啟 Integration Services 專案，然後執行下列其中一個動作。 
   
 -   在 [專案]  功能表上，按一下 [SSIS 匯入和匯出精靈] 。 
@@ -119,21 +117,20 @@ ms.lasthandoff: 09/27/2017
  ## <a name="whats-next"></a>下一步  
  當您啟動精靈時，第一頁是 [歡迎使用 SQL Server 匯入和匯出精靈] 。 您不需要在此頁面上採取任何動作。 如需詳細資訊，請參閱 [歡迎使用 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)。  
   
-## <a name="related"></a>相關的工作和內容  
- 以下是一些基本的工作。
--   **在精靈的運作方式的簡單的範例，請參閱。**
+## <a name="related"></a> 相關工作和內容  
+ 以下是一些其他基本工作。
+-   **請參閱精靈運作方式的快速範例。**
 
-    -   **如果您想要查看螢幕擷取畫面。** 在單一頁面-看看這個簡單的端對端範例[開始匯入和匯出精靈 」 的這個簡單的範例使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
+    -   **如果您想要查看螢幕擷取畫面。** 在單一頁面查看此簡單端對端範例 - [透過匯入和匯出精靈的簡單範例開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
 
-    -   **如果您想要觀看影片。** 觀賞此四分鐘的影片與 YouTube 示範精靈和清楚地說明只是如何將資料匯出至 Excel-[使用 SQL Server 匯入和匯出精靈 來匯出至 Excel](https://go.microsoft.com/fwlink/?linkid=829049)。
+    -   **如果您想要觀看影片。** 觀看這個四分鐘的 YouTube 影片，以清楚且簡單地示範精靈並說明如何將資料匯出至 Excel - [使用 SQL Server 匯入和匯出精靈匯出至 Excel](https://go.microsoft.com/fwlink/?linkid=829049)。
 
--   **深入了解精靈如何運作。**
+-   **深入了解精靈運作方式。**
 
     -   **深入了解精靈。** 如果您要尋找精靈概觀，請參閱 [使用 SQL Server 匯入及匯出精靈匯入和匯出資料](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
 
-    -   **深入了解精靈中的步驟。** 如果您想要尋求精靈中的步驟的相關資訊，請參閱[的 SQL Server 匯入和匯出精靈 」 中的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 也是在精靈的每一頁的文件的個別頁面。
+    -   **了解精靈中的步驟。** 如果您要尋找精靈中各步驟的資訊，請參閱 [SQL Server 匯入和匯出精靈中的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 精靈的每個頁面也都會有個別文件頁面。
 
-    -   **了解如何連接到資料來源和目的地。** 如果您要尋找如何連接到您資料的相關資訊，從這裡的清單中選取您要的頁面[連接到資料來源的 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)。 沒有針對數個常用的資料來源的每個文件的個別頁面。
-
+    -   **了解如何連線至資料來源和目的地。** 如果您要尋找如何連線至資料的資訊，請從這裡的清單中選取您想要的頁面 - [使用 SQL Server 匯入和匯出精靈連線至資料來源](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)。 數個常用資料來源都各有個別文件頁面。
 
 

@@ -2,9 +2,12 @@
 title: "移除伺服器群組 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0cb0a74caa92ed03822c8115096e8030e1e7b7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f605faa9711e014f94325bb86414ee849f2f7ad6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>移除伺服器群組 (SQL Server Management Studio)
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中移除 [已註冊的伺服器] 中的伺服器群組。 您可以隨時刪除伺服器群組。 如果不是空的伺服器群組，那麼被刪除的伺服器群組內包含的伺服器或伺服器群組，也將會一併刪除。 刪除伺服器群組織前，請將想要保留的伺服器或伺服器群組移動到新的伺服器群組。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中移除 [已註冊的伺服器] 中的伺服器群組。 您可以隨時刪除伺服器群組。 如果不是空的伺服器群組，那麼被刪除的伺服器群組內包含的伺服器或伺服器群組，也將會一併刪除。 刪除伺服器群組織前，請將想要保留的伺服器或伺服器群組移動到新的伺服器群組。  
   
 ##  <a name="SSMSProcedure"></a>  
   

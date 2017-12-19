@@ -3,8 +3,11 @@ title: "使用物件總管管理物件 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1deb4bbc2566d2c59bf24caddde565265594f2a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 190cdeff71f6b46b6ff2e7c6f42895137a67eda6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用物件總管管理物件
-您可以使用物件總管管理像是資料庫、資料表和預存程序等物件。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用物件總管管理像是資料庫、資料表和預存程序等物件。  
   
 ## <a name="viewing-objects-in-object-explorer"></a>在物件總管中檢視物件  
 物件總管會利用樹狀結構，將資訊分組成資料夾。 若要展開資料夾，請按一下加號 (+)，或按兩下資料夾。 展開資料夾來顯示更詳細的資訊。 以滑鼠右鍵按一下資料夾或物件來執行一般工作。 請按兩下物件來執行最平常的工作。  

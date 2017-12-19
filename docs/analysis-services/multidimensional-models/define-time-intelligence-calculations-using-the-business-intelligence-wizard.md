@@ -2,12 +2,12 @@
 title: "定義時間智慧計算使用商業智慧精靈 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -33,14 +33,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d40605d85444307073de84d7fb8c8e4bbeea163d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2c0a46098b9f1793309ae31417f29f2b23772de0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商業智慧精靈定義時間智慧計算
-  時間智慧增強功能是一種 Cube 增強功能，用於將時間計算 (時間檢視) 加入至選取的階層。 此增強功能支援下列計算類別目錄：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]時間智慧增強功能是一種 cube 增強功能，將時間計算 （或時間檢視） 加入至選取的階層。 此增強功能支援下列計算類別目錄：  
   
 -   至今的期間數。  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
 |資料來源檢視|針對時間維度中的每個新屬性，在時間資料表內加入導出資料行。|  
 |Cube|加入定義多維度運算式 (MDX) 程式碼的導出成員以執行計算。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立導出成員](../../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   

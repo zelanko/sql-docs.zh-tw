@@ -2,12 +2,12 @@
 title: "通知事件資料行 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 29b3b8561d260e17adb78bb944ee32a20b26406b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 39c93ff427048fe1893dd78f8fe35abc0b52885b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="notification-events-data-columns"></a>通知事件資料行
-  通知事件不是由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用者直接造成的事件。 例如，通知是因為使用者更新主動式快取的基礎資料表而發生。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]通知事件是不的使用者直接造成的事件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 例如，通知是因為使用者更新主動式快取的基礎資料表而發生。  
   
  [通知事件] 事件類別目錄具有下列事件類別：  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
 |TextData|42|9|包含與通知事件相關聯的文字資料。|  
 |ServerName|43|8|包含發生通知事件之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

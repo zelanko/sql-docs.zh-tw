@@ -2,12 +2,12 @@
 title: "表格式模型物件層級安全性 |Microsoft 文件"
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bc44742d56d744e9d0d4c1f1697d0bcd4e40488c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d86f5ce95ce359f5955e974f7f57012721c3dcb5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="object-level-security"></a>物件層級安全性
-
-[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
-
-資料模型的安全性是以有效地實作[角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)和資料列層級篩選，來定義使用者權限的資料模型物件和資料。 從開始 1400年的表格式模型，您也可以定義物件層級安全性，包括資料表層級的安全性和中的資料行層級安全性[角色物件](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]資料模型的安全性是以有效地實作[角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)和資料列層級篩選，來定義使用者權限的資料模型物件和資料。 從開始 1400年的表格式模型，您也可以定義物件層級安全性，包括資料表層級的安全性和中的資料行層級安全性[角色物件](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)。
 
 ## <a name="table-level-security"></a>資料表層級的安全性
 
@@ -100,7 +97,7 @@ ms.lasthandoff: 11/17/2017
 
 
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
 [Roles 物件 (TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
 [表格式模型指令碼語言 (TMSL)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

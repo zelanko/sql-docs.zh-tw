@@ -2,12 +2,12 @@
 title: "採礦結構和結構資料行的屬性 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1a05d933124d98894ddf40edee9584c0dfd89bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 42ee21307542c7e204ac7b4616714c2285cce032
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>採礦結構和結構資料行的屬性
-  您可以使用 [資料採礦設計師] 的 [採礦結構] 索引標籤，來設定或變更採礦結構及其相關聯資料行和巢狀資料表的屬性。 在此索引標籤中設定的屬性會傳播至與結構相關聯的每一個採礦模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以設定或變更了採礦結構與屬性及其相關聯的資料行和巢狀的資料表使用**採礦結構**資料採礦設計師索引標籤。 在此索引標籤中設定的屬性會傳播至與結構相關聯的每一個採礦模型。  
   
 > [!NOTE]  
 >  如果您在採礦結構中變更了任何屬性的值，甚至是中繼資料 (例如名稱或描述)，就必須先重新處理該採礦結構及其模型，然後才能檢視或查詢模型。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
   
  如需設定或變更屬性的詳細資訊，請參閱 [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立關聯式採礦結構](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)  
   

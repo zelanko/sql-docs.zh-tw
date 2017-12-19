@@ -3,8 +3,11 @@ title: "變更專案的預設位置 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07946eac3644f969f89ebc1eeb2d112924eead83
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eafe0cdf17d433e821e78128dcc30b1eff83cfae
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="change-the-default-location-for-projects"></a>變更專案的預設位置
-檔案和專案的預設位置是 [我的文件] 資料夾中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 專案資料夾。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 檔案和專案的預設位置是 [我的文件] 資料夾中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 專案資料夾。  
   
 ### <a name="to-change-the-default-location-for-projects"></a>變更專案的預設位置  
   

@@ -2,12 +2,12 @@
 title: "在樹狀結構、 清單或方格中 維度設計師中檢視屬性 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 978317c821433458c129a8e9580cc881a8be2889
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 931dd94ffd2a82974628207ffcf7437f6dc75310
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-attributes-in-dimension-designer"></a>在維度設計師中檢視屬性
-  此程序會描述如何變更維度設計師中顯示屬性的方式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]此程序描述如何變更屬性的維度設計師中顯示方式。  
   
 ### <a name="to-change-the-format-of-the-attributes-pane-in-dimension-designer"></a>在維度設計師中變更屬性窗格的格式  
   

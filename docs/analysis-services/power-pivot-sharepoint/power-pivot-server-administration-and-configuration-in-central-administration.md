@@ -2,12 +2,12 @@
 title: "Power Pivot 伺服器系統管理和組態，在 [管理中心] |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a414e1d07c7a8789ed0c91db91cc3af4009c417b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dff0e2f3dda0e4fc568f04787c4056ab27611a18
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>管理中心的 PowerPivot 伺服器管理和組態
-  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 伺服器管理與組態是由 SharePoint 服務應用程式管理員使用 SharePoint 管理中心所執行。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]伺服器管理與組態由 SharePoint 服務應用程式管理員使用 SharePoint 管理中心。  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint，然後才能使用。 在您使用 SQL Server 安裝程式安裝 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 之後，您可以使用下列任何方法加以設定：  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 |[建立及自訂 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)|選擇性|如果是手動設定的安裝，這個程序會說明如何建立 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 圖庫，以顯示其中所包含之 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 活頁簿的影像縮圖。|  
 |[將 BI 語意模型連接內容類型加入至文件庫 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)|選擇性|說明如何擴充文件庫來支援 BI 語意模型連接檔案的建立。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Power Pivot for SharePoint 2010 安裝](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [組態設定參考 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Power pivot for SharePoint 災害復原](http://go.microsoft.com/fwlink/p/?LinkId=389570)  

@@ -1,5 +1,5 @@
 ---
-title: "指令碼工作 |Microsoft 文件"
+title: "指令碼工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: b1a74f830a25717aa3e0e36910842582be4be1c5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 83f4682136c01e29f034800656ee4bb27a8d62da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="script-task"></a>指令碼工作
   指令碼工作提供程式碼，用來執行無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的內建工作和轉換中使用的函數。 指令碼工作亦可在一個指令碼中結合函數，而不使用多項工作和轉換。 您可以使用指令碼工作處理必須在封裝中執行一次 (或是每個列舉物件一次) 的工作，而非每個資料列執行一次的工作。  
@@ -100,7 +98,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="script-task-editor-general-page"></a>指令碼工作編輯器 (一般頁面)
   使用 **[指令碼工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述指令碼工作。  
   
- 若要深入了解指令碼工作，請參閱＜ [指令碼工作](../../integration-services/control-flow/script-task.md) ＞和＜ [在指令碼工作編輯器中設定指令碼工作](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼工作，請參閱＜ [擴充具有指令碼工作的封裝](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)＞。  
+ 若要深入了解指令碼工作，請參閱＜ [Script Task](../../integration-services/control-flow/script-task.md) ＞和＜ [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼工作，請參閱＜ [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)＞。  
   
 ### <a name="options"></a>選項。  
  **名稱**  
@@ -118,7 +116,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  在 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 和更新的版本中，所有指令碼都是先行編譯。 在舊版中，您會設定 **[PrecompileScriptIntoBinaryCode]** 屬性來指定指令碼已先行編譯。  
   
- 若要深入了解指令碼工作，請參閱＜ [Script Task](../../integration-services/control-flow/script-task.md) ＞和＜ [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼工作，請參閱＜ [擴充具有指令碼工作的封裝](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)＞。  
+ 若要深入了解指令碼工作，請參閱＜ [Script Task](../../integration-services/control-flow/script-task.md) ＞和＜ [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼工作，請參閱＜ [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)＞。  
   
 ### <a name="options"></a>選項。  
  **ScriptLanguage**  
@@ -153,4 +151,3 @@ ms.lasthandoff: 08/11/2017
 -   shareourideas.com 上的技術文件： [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)(如何在 C# 中傳送包含傳遞通知的電子郵件)  
   
   
-

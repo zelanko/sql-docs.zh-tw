@@ -1,5 +1,5 @@
 ---
-title: "catalog.deny_permission （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.deny_permission (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 689a59e92286881fa3be7ee3754a786ccb54ae6c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5ba6cb8b0d185ce5c669fd33f563a9bb5754baa2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,28 +38,28 @@ catalog.deny_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @object_type =] *object_type*  
- 安全性實體物件的類型。 安全性實體物件類型包括資料夾 (`1`)、 專案 (`2`)、 環境 (`3`)，和作業 (`4`)。*Object_type*是**smallint***。*  
+ [ @object_type = ] *object_type*  
+ 安全性實體物件的類型。 安全性實體物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。*object_type* 是 **smallint***。*  
   
- [ @object_id =] *object_id*  
- 安全性實體物件的唯一識別碼 (ID) 或主索引鍵。 *Object_id*是**bigint**。  
+ [ @object_id = ] *object_id*  
+ 安全性實體物件的唯一識別碼 (ID) 或主索引鍵。 *object_id* 是 **bigint**。  
   
- [ @principal_id =] *principal_id*  
- 要拒絕之主體的識別碼。 *Principal_id*是**int**。  
+ [ @principal_id = ] *principal_id*  
+ 要拒絕之主體的識別碼。 *principal_id* 是 **int**。  
   
- [ @permission_type =] *permission_type*  
- 要拒絕之權限的類型。 *Permission_type*是**smallint**。  
+ [ @permission_type = ] *permission_type*  
+ 要拒絕之權限的類型。 *permission_type* 是 **smallint**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功)  
   
- 1 （object_class 無效）  
+ 1 (object_class 無效)  
   
- 2 （object_id 不存在）  
+ 2 (object_id 不存在)  
   
- 3 （主體不存在）  
+ 3 (主體不存在)  
   
- 4 （權限不正確）  
+ 4 (權限無效)  
   
  5 (其他錯誤)  
   
@@ -73,9 +71,9 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   物件的 MANAGE_PERMISSIONS 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 ## <a name="remarks"></a>備註  
  這個預存程序可讓您拒絕下表所述的權限類型：  
@@ -95,9 +93,8 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會引發錯誤或警告的某些條件：  
   
--   如果指定 permission_type，程序會拒絕已明確指派給指定主體對於指定的物件所指定權限。 即使沒有這類型的執行個體，程序仍然會傳回成功的程式碼值 (`0`)。  
+-   如果已指定 permission_type，程序會拒絕已明確指派給指定主體對於指定物件的指定權限。 即使沒有這類型的執行個體，程序仍然會傳回成功的程式碼值 (`0`)。  
   
--   如果省略 permission_type，程序會拒絕指定主體的指定物件的所有權限。  
+-   如果已忽略 permission_type，程序會拒絕指定主體對於指定物件的所有權限。  
   
   
-

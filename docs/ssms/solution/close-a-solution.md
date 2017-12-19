@@ -3,8 +3,11 @@ title: "關閉方案 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eded62f65ee87e08eb6c051a628bcedbd8960da0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3e13c2c8384dfb73daa4f1a4468e70c8d00b9bb2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="close-a-solution"></a>關閉方案
-您可以關閉方案，再從 [方案總管] 中移除它。 關閉方案之後，[方案總管] 便無法使用它。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以關閉解決方案，再從方案總管中移除它。 關閉方案之後，[方案總管] 便無法使用它。  
   
 > [!NOTE]  
 > 關閉 [方案總管] 不會自動關閉方案。 它只會隱藏 [方案總管] 視窗。  

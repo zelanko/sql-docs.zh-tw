@@ -1,5 +1,5 @@
 ---
-title: "步驟 1： 複製第 4 課封裝 |Microsoft 文件"
+title: "步驟 1：複製第 4 課套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 54328f5769560ca6710ed7df6ebe8de9509b8316
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9d7c64162898389439190286fa470854bc716318
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-1---copying-the-lesson-4-package"></a>課程 5-1-複製第 4 課封裝
+# <a name="lesson-5-1---copying-the-lesson-4-package"></a>課程 5-1 - 複製第 4 課套件
 在這項工作中，您將為第 4 課所建立的 Lesson 4.dtsx 套件建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 4 課套件加入至專案中，然後改為複製該套件。 在第 5 課其餘的課程中，您將使用這個新的副本。  
   
 ### <a name="to-copy-the-lesson-4-package"></a>複製第 4 課的套件  
@@ -73,4 +70,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [步驟 2：啟用和設定封裝組態](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
-

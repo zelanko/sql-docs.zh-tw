@@ -1,5 +1,5 @@
 ---
-title: "在封裝中的機密資料的存取控制 |Microsoft 文件"
+title: "套件中敏感性資料的存取控制 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51150293cd37e0d9f641bd7ee2ee30f8cce8ed95
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: bd057df624f83e6a43bd7ed13d8f7c98e462c698
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>封裝中的敏感性資料存取控制
   若要保護 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料，您可以設定保護等級，只保護封裝中的機密資料或全部資料。 此外，您可以使用密碼或使用者金鑰將資料加密，或是藉由資料庫來加密資料。 也請注意，用於封裝的保護等級不一定是靜態的，而是隨著封裝生命週期有所改變。 通常，您會在開發階段設定一個保護等級，然後在部署封裝時設定另一個保護等級。  
@@ -118,7 +116,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>在命令提示字元設定或變更封裝的保護等級  
   
-1.  檢閱可用的值**ProtectionLevel**區段中的屬性[設定封裝保護等級](#set_protection)，並判斷您的套件的適當值。  
+1.  在[設定套件的保護等級](#set_protection)一節中，檢閱 **ProtectionLevel** 屬性可用的值，並判斷適用於您套件的值。  
   
 2.  在 **dtutil 公用程式** 主題中，檢閱 [Encrypt](../../integration-services/dtutil-utility.md)選項的對應，並判斷適合當做所選 **ProtectionLevel** 屬性值的整數。  
   
@@ -140,10 +138,10 @@ ms.lasthandoff: 08/03/2017
   
          如果您要對批次檔使用類似命令，請將檔案預留位置 "%f" 改輸入為批次檔適用的 "%%f"。  
 
-## <a name="protection_dialog"></a>封裝專案保護等級對話方塊
+## <a name="protection_dialog"></a> 套件/專案保護等級對話方塊
   使用 **[封裝保護等級]** 對話方塊，即可更新封裝的保護等級。 保護等級會決定保護方法、密碼或使用者金鑰，以及封裝保護的範圍。 保護可包括所有資料或只包括機密資料。  
   
- 若要了解封裝安全性選項與需求，您可能會發現若要查看[安全性概觀 &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)。  
+ 若要了解套件安全性的需求和選項，請參閱[安全性概觀 &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)。  
   
 ### <a name="options"></a>選項。  
  **Package protection level**  
@@ -155,7 +153,7 @@ ms.lasthandoff: 08/03/2017
  **再次輸入密碼**  
  再輸入密碼一次。  
 
-## <a name="password_dialog"></a>封裝密碼 對話方塊
+## <a name="password_dialog"></a> 套件密碼對話方塊
   使用 **[封裝密碼]** 對話方塊，即可為使用密碼加密的封裝提供封裝密碼。 如果封裝使用 **[機密資料以密碼加密]**或 **[所有資料以密碼加密]** 保護等級，則必須提供密碼。  
   
 ### <a name="options"></a>選項。  
@@ -164,7 +162,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)   
- [安全性概觀 &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [安全性概觀 (Integration Services)](../../integration-services/security/security-overview-integration-services.md)  
  [dtutil 公用程式](../../integration-services/dtutil-utility.md)  
   
-

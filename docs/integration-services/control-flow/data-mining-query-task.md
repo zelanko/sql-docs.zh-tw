@@ -1,5 +1,5 @@
 ---
-title: "資料採礦查詢工作 |Microsoft 文件"
+title: "資料採礦查詢工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 72ed17f506e2da78c972c54e19e98c8deacc287c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
   「資料採礦查詢」工作會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]內建的資料採礦模型執行預測查詢。 預測查詢會使用採礦模型建立新資料的預測。 例如，預測查詢可預測夏季各月間可能出售的帆船數目，或產生可能購買帆船的預期客戶清單。  
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入資料採礦查詢工作的描述。  
   
 ### <a name="mining-model-tab-options"></a>採礦模型索引標籤選項  
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入資料採礦查詢工作的描述。  
   
 ### <a name="build-query-tab-options"></a>建立查詢索引標籤選項  
@@ -172,14 +170,14 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入資料採礦查詢工作的描述。  
   
 ### <a name="output-tab-options"></a>輸出索引標籤選項  
  **連接**  
  在清單中選取連線管理員，或按一下 [新增] 來建立新的連線管理員。  
   
- **新**  
+ **新增**  
  建立新的連接管理員。 只能使用 ADO.NET 和 OLE DB 連接管理員類型。  
   
  **輸出資料表**  
@@ -188,4 +186,3 @@ ms.lasthandoff: 08/11/2017
  **卸除並重新建立輸出資料表**  
  指出預測查詢是否應藉由卸除然後重新建立資料表，來覆寫目的地資料表的內容。  
   
-

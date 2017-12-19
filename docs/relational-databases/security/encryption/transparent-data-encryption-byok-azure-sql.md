@@ -1,11 +1,11 @@
 ---
-title: "TDE - 攜帶您自己的金鑰 - Azure SQL | Microsoft Docs"
-description: "使用 Azure Key Vault for SQL Database 和資料倉儲攜帶您自己的金鑰支援透明資料加密的概觀。 本文涵蓋功能、運作方式、考量和建議等各方優點。"
+title: "TDE - 自行管理金鑰 (BYOK) - Azure SQL | Microsoft Docs"
+description: "自行管理金鑰 (BYOK) 支援適用於 SQL Database 和資料倉儲的 Azure Key Vault 透明資料加密 (TDE)。 TDE 與 BYOK 的概觀、優點、運作方式、考量和建議。"
 keywords: 
 services: sql-database
 documentationcenter: 
-author: becczhang
-manager: cguyer
+author: aliceku
+manager: craigg
 editor: 
 ms.assetid: 
 ms.service: sql-database
@@ -14,26 +14,25 @@ ms.workload: Inactive
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
-ms.date: 08/07/2017
-ms.author: rebeccaz
-ms.openlocfilehash: 35e51899bda60ccb5b176de0a3d7fabcc86faad7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.date: 11/15/2017
+ms.author: aliceku
+ms.openlocfilehash: 5a0b56974d85f63e3382f26b1388e7d30dfbd6f8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰支援
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+自行管理金鑰 (BYOK) 支援[透明資料加密 (TDE)](transparent-data-encryption.md)，可讓您充分掌控 TDE 加密金鑰，並限制存取的人員與時間。 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) 是 Azure 的雲端式外部金鑰管理系統，亦為首款整合 TDE 與 BYOK 支援的金鑰管理服務。 使用 BYOK，資料庫加密金鑰即受到儲存在 Key Vault 的非對稱金鑰保護。 非對稱金鑰是在伺服器層級設定，該伺服器底的所有資料庫都繼承它。 
 
-攜帶您自己的金鑰 (BYOK) 支援[透明資料加密 (TDE)](transparent-data-encryption.md)，可讓您充分掌控 TDE 加密金鑰，並控制存取的人員與時間。 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)，Azure 的雲端式外部金鑰管理系統，是 TDE 用以整合 BYOK 支援的第一項金鑰管理服務。 使用 BYOK，資料庫加密金鑰即受到儲存在 Key Vault 的非對稱金鑰保護。 非對稱金鑰是在伺服器層級設定，該伺服器底的所有資料庫都繼承它。 
-
-使用 BYOK 支援，使用者現在可以控制金鑰管理工作，包括金鑰輪替、金鑰保存庫權限、刪除金鑰，以及啟用所有加密金鑰的稽核/報告。 Key Vault 提供集中式的金鑰管理、利用嚴密監控的硬體安全性模組 (HSM)，並促進金鑰和資料的分開管理作業，以協助符合法規合規性。 
+現在，BYOK 支援可讓使用者控制金鑰管理工作，包括金鑰輪替、Key Vault 權限、刪除金鑰，以及啟用所有加密金鑰的稽核/報告。 Key Vault 提供集中式的金鑰管理、利用嚴密監控的硬體安全性模組 (HSM)，並保障金鑰和資料的管理分責，以協助滿足法規的合規要求。 
 
 有 BYOK 的 TDE 具有下列優點：
 - 增加自我管理 TDE 保護裝置的透明度和細微控制力   
 - 將 TDE 加密金鑰 (及其他 Azure 服務中使用的其他金鑰和密碼) 裝載在 Key Vault 中集中管理
-- 組織內分開管理金鑰和資料以支援分隔角色
+- 分隔組織內的金鑰和資料管理角色，以支援分責
 - 因為 Key Vault 的設計是讓 Microsoft 看不到或擷取不到任何加密金鑰，所以對您自己的用戶端會有更高的信任。 
 - 支援金鑰輪替
 
@@ -56,10 +55,10 @@ ms.lasthandoff: 11/09/2017
 ### <a name="key-management-responsibilities"></a>金鑰管理責任
 
 照料應用程式資源的加密金鑰管理是很重要的責任。 透過 Key Vault 使用有 BYOK 的 TDE，以下是可預見的金鑰管理工作：
-- **金鑰輪替：** TDE 保護裝置應根據內部法規或規範需求輪替。 金鑰輪替可以透過 TDE 保護裝置的金鑰保存庫完成。  
+- **金鑰輪替**：TDE 保護裝置應根據內部原則或合規性需求輪替。 金鑰輪替可以透過 TDE 保護裝置的金鑰保存庫完成。  
 - **金鑰保存庫權限**：Key Vault 內的權限會跨金鑰保存庫和伺服器層級佈建。 使用金鑰保存庫的存取原則可以隨時撤銷伺服器的金鑰保存庫權限。
-- **刪除金鑰**：為額外安全或符合合規性，可從 Key Vault 及 SQL 伺服器卸除金鑰。
-- **所有加密金鑰的稽核/報告**：Key Vault 提供的記錄檔很容易插入到其他安全性資訊和事件管理 (SIEM) 工具中。 Operations Management Suite (OMS) [記錄分析](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault)是已整合的一個範例服務。
+- **刪除金鑰**：為了保障額外安全或滿足合規需求，您可以從 Key Vault 及 SQL Server 卸除金鑰。
+- **所有加密金鑰的稽核/報告**：Key Vault 提供的記錄檔很容易插入到其他安全性資訊和事件管理 (SIEM) 工具中。 Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) 即為整合服務的一個範例。
 
 ### <a name="pricing-considerations"></a>定價考量 
 
@@ -72,11 +71,11 @@ ms.lasthandoff: 11/09/2017
 
 ### <a name="loss-of-access-to-keys"></a>遺失金鑰存取權
 
-一旦伺服器不再能存取 TDE 保護裝置 (無論是因為移除了 Key Vault 權限或刪除了金鑰)，**封鎖伺服器下加密資料庫的所有連線，且將這些資料庫離線，於 24 小時內卸除**。 無法再存取使用不能取用之金鑰加密的舊備份。 如發生懷疑金鑰遭盜用的極端情況 (例如，服務或使用者有未經授權的金鑰存取權)，最好遵循[移除可能遭盜用的金鑰](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)的指導方針刪除金鑰。 必須先卸除資料庫，再刪除作用中的 TDE 保護裝置，以免可能遺失最多 10 分鐘的資料。  
+一旦伺服器無法存取 TDE 保護裝置 (可能是因為移除了 Key Vault 權限或刪除了金鑰)，系統即會**封鎖該伺服器中加密資料庫的所有連線，並將這些資料庫離線，於 24 小時內卸除**。 您將無法再存取以無效金鑰加密的舊備份。 如果金鑰可能遭盜用 (例如，服務或使用者有未經授權的金鑰存取情況)，最好遵循[移除可能遭盜用的金鑰](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)中的指導方針刪除金鑰。 必須先卸除資料庫，再刪除作用中的 TDE 保護裝置，以免可能遺失最多 10 分鐘的資料。  
 
 ### <a name="expired-keys"></a>過期的金鑰
 
-因為 TDE 保護裝置的可用性會直接影響資料庫可用性，所以過期的金鑰不能新增至 SQL server。 如果金鑰已當成 TDE 保護裝置用於伺服器，稍後並在 Azure Key Vault 中新增到期日，則**金鑰一旦過期，加密的資料庫就無法再存取其 TDE 保護裝置，並於 24 小時內卸除。**
+因為 TDE 保護裝置的可用性會直接影響資料庫可用性，所以過期的金鑰不能新增至 SQL server。 如果金鑰已作為伺服器的 TDE 保護裝置，並於稍後在 Azure Key Vault 中設定到期日，則**金鑰一旦過期，加密的資料庫就無法存取其 TDE 保護裝置，並會於 24 小時內被卸除。**
 
 ### <a name="deleted-server-identities"></a>刪除的伺服器識別 
 
@@ -86,17 +85,17 @@ ms.lasthandoff: 11/09/2017
 
 用於 TDE 的金鑰保存庫必須和 SQL Database 或資料倉儲伺服器在相同的 AAD 租用戶中。 不支援跨租用戶金鑰保存庫與伺服器的互動。 正在使用 Key Vault 金鑰加密的資源，無法在 Azure 訂閱間移動。 在訂閱間移動資源會中斷能讓 TDE 使用 BYOK 的必要 Key Vault 存取控制項。 如有任何資源必須移至另一個訂閱，請將 TDE 模式從 BYOK 變更為[服務管理 TDE](transparent-data-encryption-azure-sql.md)。 
 
-不支援資料庫或資料倉儲的唯一 TDE 保護裝置。 TDE 保護裝置是在伺服器層級設定，伺服器下所有資源都繼承它。 
+不支援資料庫或資料倉儲的唯一 TDE 保護裝置。 TDE 保護裝置是在伺服器層級設定，因此伺服器下的所有資源都會繼承這個保護裝置。 
 
 ## <a name="guidelines-for-managing-encrypted-databases"></a>管理加密資料庫的指導方針
 
 ### <a name="high-availability-and-disaster-recovery"></a>高可用性和災害復原
   
-有兩種方式可以設定使用 Key Vault 之伺服器的異地複寫： 
+針對使用 Key Vault 的伺服器，您可以使用下列兩種方式來設定異地複寫： 
 
 - **不同的金鑰保存庫**：每部伺服器都可以存取不同的金鑰保存庫 (最好每個都在自己的 Azure 區域內)。 這是建議的組態，因為每部伺服器都有自己的一份 TDE 保護裝置供加密的異地複寫資料庫使用。 如果其中一部伺服器的 Azure 區域離線，其他伺服器可以繼續存取異地複寫資料庫。   
 
-- **共用的金鑰保存庫**：所有伺服器共用相同的金鑰保存庫。 此組態很容易設定，但如果金鑰保存庫所在地的 Azure 區域離線，則所有伺服器都無法讀取加密的異地複寫資料庫或自己的加密資料庫。 
+- **共用的金鑰保存庫**：所有伺服器共用相同的金鑰保存庫。 此設定很容易設定，但如果金鑰保存庫所在地的 Azure 區域為離線狀態，則所有伺服器都無法讀取加密的異地複寫資料庫或自己的加密資料庫。 
  
 若要開始，請使用 [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) Cmdlet 將每部伺服器的 Key Vault 金鑰新增至異地複寫連結中的其他伺服器。  
 (Key Vault 的 KeyId 範例：*https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h*)
@@ -149,10 +148,10 @@ ms.lasthandoff: 11/09/2017
 
 如果要將加密的資料庫複寫到另一部伺服器，請**先**確定伺服器可以存取另一部伺服器的 Key Vault 金鑰內容複本，再移動或複製資料庫。  
 
-我們建議每部伺服器都可以存取其他伺服器所用之 Key Vault 金鑰內容的複本，它儲存在不同的金鑰保存庫中 (最好每個都和伺服器位於相同的 Azure 區域)。 使用這項設定，每部伺服器就有自己的一份 TDE 保護裝置供加密的異地複寫資料庫使用。 如果其中一部伺服器的 Azure 區域離線，其他伺服器可以繼續存取複寫的資料庫。
+建議做法是讓每部伺服器都可以存取其他伺服器所用的 Key Vault 金鑰內容複本，並將複本儲存在不同的金鑰保存庫中 (最好每個都和伺服器位於相同的 Azure 區域)。 使用這項設定，每部伺服器就有自己的一份 TDE 保護裝置供加密的異地複寫資料庫使用。 如果其中一部伺服器的 Azure 區域離線，其他伺服器可以繼續存取複寫的資料庫。
 
 ## <a name="next-steps"></a>後續的步驟
 
 - 開始使用攜帶您自己的金鑰支援 TDE：[使用 PowerShell 從 Key Vault 開啟使用自己金鑰的 TDE](transparent-data-encryption-byok-azure-sql-configure.md)。
-- 了解如何輪替伺服器的 TDE 保護裝置，以符合安全性需求：[使用 PowerShell 輪替透明資料加密保護裝置](transparent-data-encryption-byok-azure-sql-key-rotation.md)。
-- 發生安全性風險時，了解如何移除可能遭盜用的 TDE 保護裝置：[移除可能遭盜用的金鑰](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)。 
+- 了解如何輪替伺服器的 TDE 保護裝置，以符合安全性原則：[使用 PowerShell 輪替透明資料加密保護裝置](transparent-data-encryption-byok-azure-sql-key-rotation.md)。
+- 發生安全性事件時，了解如何移除可能遭盜用的 TDE 保護裝置：[移除可能遭盜用的金鑰](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)。 

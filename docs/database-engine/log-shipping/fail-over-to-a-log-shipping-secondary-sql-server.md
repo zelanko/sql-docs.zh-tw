@@ -2,9 +2,12 @@
 title: "容錯移轉至記錄傳送次要 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ecab7acaedde247abc727149f93942da3ea4be61
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b1e994ededa0a1316bf4edd529fc056ed3de6848
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>容錯移轉至記錄傳送次要 (SQL Server)
-  如果主要伺服器執行個體失敗或需要維護，則容錯移轉至記錄傳送次要十分有用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 如果主要伺服器執行個體失敗或需要維護，則容錯移轉至記錄傳送次要十分有用。  
   
 ## <a name="preparing-for-a-controlled-failover"></a>準備控制的容錯移轉  
  一般而言，因為主要資料庫的最新備份作業後仍會繼續更新該主要資料庫，所以主要和次要資料庫並不同步。 而且，在某些情況下，最近的交易記錄備份尚未複製到次要伺服器執行個體，或某些複製的記錄備份可能仍未套用至次要資料庫。 建議您，如果可能，請使用主要資料庫開始同步處理所有次要資料庫。  

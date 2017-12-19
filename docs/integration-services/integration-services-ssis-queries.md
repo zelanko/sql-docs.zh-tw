@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 查詢 |Microsoft 文件"
+title: "Integration Services (SSIS) 查詢 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,38 +8,35 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.querybuilder.f1
+f1_keywords: sql13.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder [Integration Services]
 - queries [Integration Services]
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 81dd719383f3a05356d15677ce61bad5e8962807
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查詢
   「執行 SQL」工作、OLE DB 來源、OLE DB 目的地和「查閱」轉換可使用 SQL 查詢。 在「執行 SQL」工作中，SQL 陳述式可建立、更新和刪除資料庫物件和資料；執行預存程序；以及執行 SELECT 陳述式。 在 OLE DB 來源和「查閱」轉換中的 SQL 陳述式通常都是 SELECT 陳述式或 EXEC 陳述式。 後者最常執行傳回結果集的預存程序。  
   
  可以剖析查詢，以確定它是否有效。 剖析使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]連接的查詢時，會剖析和執行該查詢，並將執行結果 (成功或失敗) 指派給剖析結果。 如果查詢使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]以外的資料連接，就只會剖析陳述式。  
   
-您可以下列方式提供的 SQL 陳述式：
-1.   直接在設計工具中，請輸入它。
-2.   指定的檔案連接包含陳述式。
+您可以使用下列方式提供 SQL 陳述式：
+1.   直接在設計工具中輸入它。
+2.   指定與包含此陳述式之檔案的連線。
 3.   指定包含此陳述式的變數。  
   
 ## <a name="direct-input-sql"></a>直接輸入 SQL  
@@ -90,7 +87,7 @@ ms.lasthandoff: 09/26/2017
   
  若要深入了解 Transact-SQL 語言及其語法，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../t-sql/transact-sql-reference-database-engine.md)。  
   
- 您也可以在查詢中使用變數以提供值給輸入參數、擷取輸出參數的值以及儲存傳回碼。 若要了解有關在封裝使用的查詢中使用變數的詳細資訊，請參閱[執行 SQL 」 工作](../integration-services/control-flow/execute-sql-task.md)， [OLE DB 來源](../integration-services/data-flow/ole-db-source.md)，和[Integration Services &#40;SSIS &#41;查詢](../integration-services/integration-services-ssis-queries.md)。 若要深入了解如何在執行 SQL 工作中使用變數，請參閱 [執行 SQL 工作中的參數和傳回碼](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 和 [執行 SQL 工作中的結果集](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)。  
+ 您也可以在查詢中使用變數以提供值給輸入參數、擷取輸出參數的值以及儲存傳回碼。 若要深入了解如何在套件所用的查詢中使用變數，請參閱[執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md)、[OLE DB 來源](../integration-services/data-flow/ole-db-source.md)和 [Integration Services &#40;SSIS&#41; 查詢](../integration-services/integration-services-ssis-queries.md)。 若要深入了解如何在執行 SQL 工作中使用變數，請參閱 [執行 SQL 工作中的參數和傳回碼](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 和 [執行 SQL 工作中的結果集](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)。  
   
  「查閱」和「模糊」查閱轉換也可以使用具有參數和傳回碼的變數。 OLE DB 來源的相關資訊也適用於這兩個轉換。  
   
@@ -105,12 +102,12 @@ ms.lasthandoff: 09/26/2017
 |**顯示/隱藏 SQL 窗格**|顯示或隱藏 **[SQL]** 窗格。|  
 |**顯示/隱藏結果窗格**|顯示或隱藏 **[結果]** 窗格。|  
 |**執行**|執行查詢。 結果會顯示在結果窗格中。|  
-|**確認 SQL**|確認 SQL 陳述式有效。|  
+|**驗證 SQL**|確認 SQL 陳述式有效。|  
 |**遞增排序**|在方格窗格中之選取的資料行上，依遞增順序排序輸出資料列。|  
 |**遞減排序**|在方格窗格中之選取的資料行上，依遞減順序排序輸出資料列。|  
 |**移除篩選**|選取方格窗格中的某資料行名稱，然後按一下 **[移除篩選]** ，即可移除該資料行的排序準則。|  
 |**使用群組依據**|將 GROUP BY 功能加入至查詢。|  
-|**加入資料表**|將新的資料表加入至查詢。|  
+|**新增資料表**|將新的資料表加入至查詢。|  
   
  **查詢定義**  
  查詢定義會提供可在其中定義和測試查詢的工具列和窗格。  
@@ -123,4 +120,3 @@ ms.lasthandoff: 09/26/2017
 |**結果** 窗格|當您在工具列上按一下 **[執行]** 時，會顯示查詢的結果。| 
 
   
-

@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cff5b201eee23cad7d5f8a6d6fe7748e4441f400
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 256a8f2456c5d5f728322e80d03629c75d921161
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中已取代的資料庫引擎功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |相容性層級|資料庫相容性層級 110 和 120。|請針對將來的版本規劃升級資料庫和應用程式。|資料庫相容性層級 110<br /><br /> 資料庫相容性層級 120||  
 |XML|內嵌 XDR 結構描述的產生|FOR XML 選項的 XMLDATA 指示詞已被取代。 在 RAW 和 AUTO 模式的情況下，請使用 XSD 產生。 EXPLICT 模式中沒有 XMLDATA 指示詞的替代項目。|XMLDATA|181|  
 |備份與還原|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *磁帶裝置*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *磁碟裝置*|BACKUP DATABASE 或 LOG TO TAPE|235|  
-|備份與還原|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
+|備份與還原|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
 |備份與還原|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |定序|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|無。 這些定序存在於 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，但無法透過 fn_helpcollations 顯示出來。|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |定序|Hindi<br /><br /> Macedonian|這些定序存在於 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 和更高的版本中，但無法透過 fn_helpcollations 顯示出來。 請改用 Macedonian_FYROM_90 和 Indic_General_90。|Hindi<br /><br /> Macedonian|190<br /><br /> 193|  

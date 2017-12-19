@@ -2,12 +2,12 @@
 title: "貨幣轉換 (Analysis Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9a35589bbcd4bbc89e0c47a0f1cc76e60f8a7a5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8565a3599dfd9ef96f1cb4156f4bbbdc8ac60927
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="currency-conversions-analysis-services"></a>貨幣轉換 (Analysis Services)
-  [!INCLUDE[applies](../includes/applies-md.md)] 僅限多維度  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)]多維度只  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會使用多維度運算式 (MDX) 指令碼提供的一組功能，在支援多重貨幣的 Cube 中提供貨幣轉換支援。  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 11/17/2017
   
  您可以視需要變更貨幣轉換中所包含的指令碼命令。 不過，如果覆寫貨幣轉換，將會遺失您的變更。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 的全球化案例](../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
   

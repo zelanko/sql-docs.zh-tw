@@ -1,5 +1,5 @@
 ---
-title: "catalog.set_environment_reference_type （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.set_environment_reference_type (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 31a6d4310ad32f2517c8779172b0d539803e9f15
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +37,14 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @reference_id =] *e _ i d*  
- 要更新之環境參考的唯一識別碼。 *E _ i d*是**bigint**。  
+ [ @reference_id = ] *reference_id*  
+ 要更新之環境參考的唯一識別碼。 *reference_id* 是 **bigint**。  
   
- [ @reference_type =] *reference_type*  
- 指出環境會位於與專案相同的資料夾 (相對參考) 中，或是在不同的資料夾 (絕對參考) 中。 使用值 `R` 表示相對參考。 使用值 `A` 表示絕對參考。 *Reference_type*是**char （1)**。  
+ [ @reference_type = ] *reference_type*  
+ 指出環境會位於與專案相同的資料夾 (相對參考) 中，或是在不同的資料夾 (絕對參考) 中。 使用值 `R` 表示相對參考。 使用值 `A` 表示絕對參考。 *reference_type* 是 **char(1)**。  
   
- [ @environment_folder_name =] *n*  
- 環境所在的資料夾。 對於絕對參考來說，這個值是必要值。 *n*是**nvarchar （128)**。  
+ [ @environment_folder_name = ] *environment_folder_name*  
+ 環境所在的資料夾。 對於絕對參考來說，這個值是必要值。 *environment_folder_name* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
@@ -59,9 +57,9 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   專案的 READ 和 MODIFY 權限，以及環境的 READ 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會引發錯誤或警告的某些條件：  
@@ -70,13 +68,12 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   使用者未具備適當的權限  
   
--   使用指定了絕對參考`A`字元在*reference_location*參數，但資料夾名稱未指定與*n*參數。  
+-   已使用 *reference_location* 參數中的 `A` 字元指定了絕對參照，但是並未使用 *environment_folder_name* 參數指定資料夾名稱。  
   
 ## <a name="remarks"></a>備註  
  專案可以具有相對或絕對的環境參考。 相對參考會依名稱參考環境，並且需要位於與專案相同的資料夾中。 絕對參考會依名稱和資料夾參考環境，且可以參考位於與專案不同資料夾中的環境。 專案可以參考多個環境。  
   
 > [!IMPORTANT]  
->  如果指定了相對參照， *n*參數值不在使用中，而且環境資料夾名稱會自動設為**NULL**。 如果指定了絕對參考，則必須提供環境資料夾名稱中*n*參數。  
+>  如果指定了相對參照，就不會使用 *environment_folder_name* 參數值，且環境資料夾名稱會自動設為 **NULL**。 如果指定了絕對參照，就必須在 *environment_folder_name* 參數中提供環境資料夾名稱。  
   
   
-

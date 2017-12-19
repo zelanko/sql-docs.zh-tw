@@ -59,11 +59,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2a7ab870eda08de78986c14233e4ebc79b397573
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 92e32f9a86265376a67466aa389f29ec9608a061
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -241,7 +241,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  *index_name*  
  這是索引的名稱。 在資料表或檢視表內，索引名稱必須是唯一的，但在資料庫內就不一定要是唯一的。 索引名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
   
- *資料行*  
+ *column*  
  這是做為索引根據的資料行。 您可以指定兩個或兩個以上的資料行名稱，在指定之資料行的合計值上建立複合索引。 列出要包含在複合的索引，排序優先權順序之後, 在括號內的資料行*table_or_view_name*。  
   
  最多 32 個資料行可以結合成單一複合索引鍵。 複合索引鍵中的所有資料行都必須在相同的資料表或檢視表中。 結合的索引值的允許大小上限是 900 個位元組的叢集索引或非叢集索引為 1,700。 限制為 16 個資料行與之前的版本 900 個位元組[!INCLUDE[ssSDS](../../includes/sssds-md.md)]V12 和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。  
@@ -422,17 +422,11 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  如果不支援每個分割區區的統計資料，則會忽略該選項，並產生警告。 針對下列統計資料類型，不支援累加統計資料：  
   
 -   建立統計資料時，所使用的索引未與基底資料表進行分割區對齊。  
-  
 -   在 AlwaysOn 可讀取次要資料庫上建立的統計資料。  
-  
 -   在唯讀資料庫上建立的統計資料。  
-  
 -   在篩選的索引上建立的統計資料。  
-  
 -   在檢視上建立的統計資料。  
-  
 -   在內部資料表上建立的統計資料。  
-  
 -   使用空間索引或 XML 索引建立的統計資料。  
   
  DROP_EXISTING = {ON |**OFF** }  
@@ -473,15 +467,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  您可以採用線上方式建立索引，包括全域暫存資料表上的索引，但以下是例外狀況：  
   
 -   XML 索引  
-  
 -   本機暫存資料表上的索引。  
-  
 -   檢視表上的初始唯一叢集索引。  
-  
 -   停用的叢集索引。  
-  
 -   如果基礎資料表包含 LOB 資料類型的叢集的索引：**映像**， **ntext**，**文字**，以及空間類型。  
-  
 -   **varchar （max)**和**varbinary （max)**資料行不能是索引的一部分。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ) 然後在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，當資料表包含**varchar （max)**或**varbinary （max)**可以有資料行，包含其他資料行的叢集索引建立或重新使用**線上**選項。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]不允許**線上**選項時，基底資料表包含**varchar （max)**或**varbinary （max)**資料行。  
   
  如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
@@ -511,7 +500,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  MAXDOP = *max_degree_of_parallelism*  
  **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 覆寫[設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)索引作業期間的組態選項。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
+ 覆寫**的最大平行處理原則程度**索引作業期間的組態選項。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
   
  *max_degree_of_parallelism*可以是：  
   
@@ -1044,7 +1033,7 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
     ON Purchasing..ProductVendor (VendorID);   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   

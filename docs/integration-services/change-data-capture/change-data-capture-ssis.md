@@ -1,5 +1,5 @@
 ---
-title: "異動資料擷取 (SSIS) |Microsoft 文件"
+title: "異動資料擷取 (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b9c01b948f5510a01c778648c23324155471b8ac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1f2d68bc745df5c06b623a74815efa937366e8ec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-ssis"></a>異動資料擷取 (SSIS)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，異動資料擷取會針對將累加式載入從來源資料表有效執行到資料超市和資料倉儲的挑戰，提供有效的方案。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 09/26/2017
   
  一旦管理員已經在資料庫上啟用異動資料擷取，您就可以建立執行累加式變更資料載入的封裝。 下圖顯示建立可從單一資料表執行累加式載入這種封裝的步驟：  
   
- ![變更資料擷取封裝建立步驟](../../integration-services/change-data-capture/media/cdc-package-creation.gif "變更資料擷取封裝建立步驟")  
+ ![異動資料擷取封裝建立步驟](../../integration-services/change-data-capture/media/cdc-package-creation.gif "異動資料擷取封裝建立步驟")  
   
  如上圖所示，建立可執行累加式變更資料載入的封裝包含下列步驟：  
   
@@ -115,11 +113,11 @@ ms.lasthandoff: 09/26/2017
   
 -   [準備查詢變更資料](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
--   [建立函數以擷取變更資料](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
+-   [建立函式以擷取變更資料](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
 -   [擷取與了解變更資料](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
--   [處理插入、更新與刪除](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
+-   [處理插入、更新與刪除作業](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
 -   [將變更套用到目的地](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
@@ -129,4 +127,3 @@ ms.lasthandoff: 09/26/2017
  sqlblog.com 上的部落格文章： [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679)(SSIS 設計模式 - 累加式載入)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "catalog.move_environment （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.move_environment (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e08328e0baccaa9098d8647b50c6133de2504912
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4c143403ba0ebfb429c8d7f646214704c4e692d4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +37,14 @@ catalog.move_environment [ @source_folder = ] source_folder
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @source_folder =] *source_folder*  
- 在移動之前，環境所在之來源資料夾的名稱。 *Source_folder*是**nvarchar （128)**。  
+ [ @source_folder = ] *source_folder*  
+ 在移動之前，環境所在之來源資料夾的名稱。 *source_folder* 是 **nvarchar(128)**。  
   
- [ @environment_name =] *environment_name*  
- 要移動之環境的名稱。 *Environment_name*是**nvarchar （128)**。  
+ [ @environment_name = ] *environment_name*  
+ 要移動之環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
   
- [ @destination_folder =] *destination_folder*  
- 在移動之後，環境所在之目的地資料夾的名稱。 *Destination_folder*是**nvarchar （128)**。  
+ [ @destination_folder = ] *destination_folder*  
+ 在移動之後，環境所在之目的地資料夾的名稱。 *destination_folder* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
@@ -59,9 +57,9 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   環境的 READ 和 MODIFY 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會引發錯誤或警告的某些條件：  
@@ -79,4 +77,3 @@ catalog.move_environment [ @source_folder = ] source_folder
 >  專案可以具有相對或絕對的環境參考。 相對參考會依名稱參考環境，而這些參考會要求環境位於與專案相同的資料夾中。 絕對參考會依名稱和資料夾參考環境，而這些參考會參考位於與專案資料夾不同之資料夾中的環境。  
   
   
-

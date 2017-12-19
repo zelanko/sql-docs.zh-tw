@@ -1,5 +1,5 @@
 ---
-title: "[變數] 視窗 |Microsoft 文件"
+title: "變數視窗 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.variables.f1
 - sql13.dts.designer.variableoptionswindow.f1
-helpviewer_keywords:
-- Variables Window dialog box
+helpviewer_keywords: Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a87438f0f702a46b88b350ee32b734f64b1c6ad2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="variables-window"></a>變數視窗
   使用 [變數] 視窗，即可建立和修改使用者定義的變數，並檢視系統變數。  
@@ -86,7 +83,7 @@ ms.lasthandoff: 09/26/2017
   
  若您將運算式指派給變數，變數旁邊會顯示特殊圖示標記。 此特殊圖示標記也會顯示在已經設定運算式的連線管理員及工作旁邊。  
 
-## <a name="variable-grid-options-dialog-box"></a>變數方格選項 對話方塊
+## <a name="variable-grid-options-dialog-box"></a>[變數方格選項] 對話方塊
  使用 **[變數方格選項]** 對話方塊選擇將顯示在 **[變數]** 視窗中的資料行，並選取要套用到此變數清單的篩選。 如需所對應之變數屬性的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)。  
   
 ### <a name="options-for-filter"></a>篩選選項  
@@ -120,8 +117,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)   
  [在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Integration Services &#40;SSIS &#41;運算式](../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services &#40;SSIS&#41; 運算式](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [產生套件執行的傾印檔案](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

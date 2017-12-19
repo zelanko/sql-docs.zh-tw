@@ -2,12 +2,12 @@
 title: "匯出和匯入資料採礦物件 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 494f808919d4cc82ecdb91536e79b60976e74565
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d62dc8db6debd9b930c81abb4130a45543010e41
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="export-and-import-data-mining-objects"></a>匯出及匯入資料採礦物件
-  除了在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中針對備份、還原和移轉方案提供的功能之外，SQL Server 資料採礦還可以使用資料採礦延伸模組 (DMX)，在不同的伺服器之間快速傳送資料採礦結構和模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]除了中所提供的功能[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]針對備份、 還原和移轉方案，SQL Server 資料採礦提供了可快速傳送資料採礦結構和模型，使用資料採礦的不同伺服器之間延伸模組 (DMX)。  
   
  如果您的資料採礦方案使用關聯式資料，而非多維度資料庫，則使用 **EXPORT** 和 **IMPORT** 傳送模型要比使用資料庫還原或部署整個方案更為快速而且容易。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  如果伺服器上已存在相同名稱的模型或結構，則無法將該模型或結構匯入到該伺服器中。 同時，您無法匯入資料採礦物件，然後在匯出檔案中修改該物件的名稱。 因此，如果您預期會發生命名衝突，應該刪除目標伺服器上的資料採礦物件，或在匯出定義前，先重新命名該資料採礦物件。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦方案與物件的管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

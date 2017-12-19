@@ -2,9 +2,12 @@
 title: "Deprecation Final Support 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17095ce06acb9ed65e30c38bd71bb966fe6bc76d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cdf73d4ccb8d8ccfaa366f599368cce51fa310c8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support 事件類別
-  當您使用將從 **的下一個主要版本移除的功能時，就會發生** Deprecation Final Support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件類別。 為了使應用程式的使用壽命達到最久，請勿使用會造成 **Deprecation Final Support** 事件類別或 **Deprecation Announcement** 事件類別的功能。 請盡快修改使用最終取代功能的應用程式。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 當您使用將從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的下一個主要版本移除的功能時，就會發生 **Deprecation Final Support** 事件類別。 為了使應用程式的使用壽命達到最久，請勿使用會造成 **Deprecation Final Support** 事件類別或 **Deprecation Announcement** 事件類別的功能。 請盡快修改使用最終取代功能的應用程式。  
   
 ## <a name="deprecation-final-support-event-class-data-columns"></a>Deprecation Final Support 事件類別資料行  
   

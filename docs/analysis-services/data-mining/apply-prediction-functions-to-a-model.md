@@ -2,12 +2,12 @@
 title: "套用至模型的預測函數 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 496cacf7c8c2a374748f81b45a1a5e7ac770016b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c36ab1bbdb5f2f11b81ddc43fb79b5f073ec9b9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>將預測函數套用至模型
-  若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦中建立預測查詢，您必須先選取該查詢要作為基礎的採礦模型。 您可以選取存在於目前專案中的任何採礦模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]若要建立預測查詢中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料採礦，您必須先選取查詢所根據的採礦模型。 您可以選取存在於目前專案中的任何採礦模型。  
   
  在您選取模型之後，請將 [預測函數] 加入查詢中。 預測函數可用來取得預測，但您也可以加入傳回相關統計資料的預測函數，例如預測值的機率或用於產生預測的資訊。  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/17/2017
   
  如果您想要在陳述式中的其他地方加入其他子句，例如，如果您想要加入 WHERE 子句，您不能使用此方格來加入，而必須先切換到 DMX 檢視。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

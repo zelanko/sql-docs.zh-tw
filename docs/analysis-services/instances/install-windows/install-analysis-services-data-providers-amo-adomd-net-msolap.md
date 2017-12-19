@@ -2,12 +2,12 @@
 title: "安裝 Analysis Services 資料提供者 (AMO、 ADOMD.NET、 MSOLAP) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 63ce2b423f04ef4199bbb32b5349c26c25fe2199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7cd7f4a950335557e3fb65d3d504f79af0801de0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-analysis-services-data-providers-amo-adomdnet-msolap"></a>安裝 Analysis Services 資料提供者 (AMO、ADOMD.NET、MSOLAP)
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 是 Analysis Services 資料提供者 (包含 ADOMD.Net、AMO 和 MSOLAP) 的版本更新。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]是 Analysis Services 資料提供者包含 ADOMD.Net、 AMO 和 MSOLAP 的版本更新。  
   
  在大部分查詢資料存取案例中，您可以使用用戶端系統上已安裝的現有舊版資料提供者來存取 SQL Server 2016 Analysis Services 執行個體上的表格式和多維度模型 (包括使用 SQL Server 2016 專屬功能的表格式模型)。 存取 Analysis Services 模型時，可產生查詢的用戶端應用程式 (例如 Excel、Reporting Services 或 Tableau) 一般應該不需要最新的資料提供者。  
   

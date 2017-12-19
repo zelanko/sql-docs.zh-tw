@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 6860fb131bb645ca918f7095481776884c0f4f6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,11 +103,11 @@ ms.lasthandoff: 11/17/2017
 - 從索引重建失敗 (例如資料庫容錯移轉或磁碟空間不足) 中復原。
 - 當索引作業暫停時，原始索引和新建立的索引都需要磁碟空間，而且必須在 DML 作業期間進行更新。
 
-- 在索引重建作業期間啟用截斷記錄的截斷功能 (無法為一般線上索引作業執行此作業)。
+- 在索引重建作業期間啟用交易記錄的截斷功能 (無法為一般線上索引作業執行此作業)。
 - 不支援 SORT_IN_TEMPDB=ON 選項
 
 > [!IMPORTANT]
-> 可繼續的重建不需要您持續開啟長時間執行的截斷，允許在此作業期間執行記錄截斷，而讓記錄空間管理的效能更佳。 利用新的設計，我們設法將資料庫中的必要資料與重新啟動可繼續作業所需的所有參考保存在一起。
+> 可繼續的重建不需要您持續開啟長時間執行的交易，允許在此作業期間執行記錄截斷，而讓記錄空間管理的效能更佳。 利用新的設計，我們設法將資料庫中的必要資料與重新啟動可繼續作業所需的所有參考保存在一起。
 >
 
 一般而言，可繼續和不可繼續的線上索引重建之間沒有效能差異。 若在索引重建作業暫停時，更新可繼續的索引：

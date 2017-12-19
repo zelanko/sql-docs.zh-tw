@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2012 SP2 版本資訊 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71bde30cb5cefaf1c60bcbd5a5de08b84b3975b3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 31f86cebfc5dc23aac8d56a1a9c75d140b744063
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp2-release-notes"></a>SQL Server 2012 SP2 Release Notes
-這些版本資訊描述您在安裝或疑難排解 SQL Server 2012 Service Pack 2 之前需要了解的問題。 版本資訊僅於線上提供，安裝媒體中並不提供。 我們會在發現問題時定期更新它們。 如需詳細資訊，請參閱 [SQL Server 2012 Service Pack 2 中修正的錯誤](http://support.microsoft.com/KB/2958429) 。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 這些版本資訊描述您在安裝或對 SQL Server 2012 Service Pack 2 進行疑難排解之前需要了解的問題。 版本資訊僅於線上提供，安裝媒體中並不提供。 我們會在發現問題時定期更新它們。 如需詳細資訊，請參閱 [SQL Server 2012 Service Pack 2 中修正的錯誤](http://support.microsoft.com/KB/2958429) 。  
   
 ## <a name="choose-the-correct-file-to-download-and-install"></a>選擇正確檔案來下載並安裝  
 使用下表，根據您目前安裝的版本來識別要下載的檔案位置與名稱。 下載頁面會提供系統需求與基本安裝指示。  

@@ -2,12 +2,12 @@
 title: "在 Management Studio 建立 Analysis Services 指令碼 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 22811448d173c9f55229557dfed64e16ead18706
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 55f3f1485ba2e684371444ec6f40696b3f853fcd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>在 Management Studio 中建立 Analysis Services 指令碼
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包含指令碼產生功能、範本和編輯器，您可以使用它們來編寫 Analysis Services 物件和工作的指令碼。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]包含指令碼產生功能、 範本和編輯器可讓您編寫指令碼 Analysis Services 物件和工作。  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>在 Management Studio 中編寫 Analysis Services 工作的指令碼  
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中編寫工作指令碼，是在工作導向的對話方塊中按一下其中一個指令碼選項來完成。 用來執行備份或還原資料庫、處理物件或設計彙總等工作的所有對話方塊，在對話方塊頂端都包含指令碼選項。 選取其中一個選項，會根據對話方塊中的資訊和設定來產生 XMLA 指令碼。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  一般而言，如果您要建立檔案的多個不同版本，請選取 [檔案]。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [XMLA 查詢編輯器 &#40;Analysis Services-多維度資料 &#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

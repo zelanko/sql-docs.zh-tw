@@ -2,9 +2,12 @@
 title: "SQL:FullTextQuery 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 37a8e60840cd645e6d97229bdb426d0dc17c68a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 67e62208027e8fe048e37a163bb84f2408e509f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery 事件類別
-  SQL:FullTextQuery 事件類別是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行全文檢索查詢時發生。 請將此事件類別加入到監視全文檢索目錄問題的追蹤。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SQL:FullTextQuery 事件類別是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行全文檢索查詢時發生。 請將此事件類別加入到監視全文檢索目錄問題的追蹤。  
   
  加入 SQL:FullTextQuery 事件類別之後，額外負擔將偏高。 如果這類事件時常發生，追蹤可能會嚴重妨礙效能。 為了將額外負擔降到最低，請將此事件類別限於用在短暫監視特定問題的追蹤。  
   

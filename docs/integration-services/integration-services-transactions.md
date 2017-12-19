@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 交易 |Microsoft 文件"
+title: "Integration Services 交易 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7355d98c342052997441c2013e056b0453962c5a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8fa0747761ecfac4fd617096942db77a2214019d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-transactions"></a>Integration Services 交易
   封裝使用交易將工作執行的資料庫動作繫結至原子單位，這樣可以保持資料的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器類型 (封裝、For 迴圈、Foreach 迴圈和時序容器，以及封裝每個工作的工作主機) 皆可設定成使用交易。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供三個設定交易的選項，分別是 **NotSupported**、 **Supported**及 **Required**。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 09/26/2017
   
  下列程序將描述如何設定這兩個選項。  
   
-### <a name="configure-a-package-to-use-a-single-transaction"></a>設定封裝以使用單一交易  
+### <a name="configure-a-package-to-use-a-single-transaction"></a>將套件設定成使用單一交易  
  在這個選項中，封裝本身會起始單一交易。 您可以將封裝的 TransactionOption 屬性設定為 **Required**，藉以將此封裝設定成起始這筆交易。  
   
  接著，您可以在這個單一交易中編列特定工作和容器。 若要在交易中編列工作或容器，您可以將該工作或容器的 TransactionOption 屬性設定為 **Supported**。  
@@ -77,7 +75,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  針對您想要在此交易中註冊的每個工作和容器，重複步驟 6 和 7。  
   
-### <a name="configure-a-package-to-use-multiple-transactions"></a>設定封裝以使用多個交易  
+### <a name="configure-a-package-to-use-multiple-transactions"></a>將套件設定成使用多個交易  
  在這個選項中，雖然封裝本身支援交易，但是不會啟動交易。 您可以將封裝的 TransactionOption 屬性設定為 **Supported**，藉以將此封裝設定成支援交易。  
   
  接著，您可以將封裝內部的所需工作和容器設定成起始或參與交易。 若要將工作或容器設定成起始交易，您可以將該工作或容器的 TransactionOption 屬性設定為 **Required**。   
@@ -108,10 +106,10 @@ ms.lasthandoff: 09/26/2017
   
 10. 針對啟動交易的每個工作和容器，重複步驟 6 至 9。  
 
-## <a name="multiple-transactions-in-a-package"></a>在封裝中的多個交易
+## <a name="multiple-transactions-in-a-package"></a>套件中有多個交易
 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中，封裝可以包含不相關的交易。 任何時候如果巢狀容器階層中間的容器不支援交易，而階層中其上面或下面的容器設定為支援交易，則這些容器就會啟動分別的交易。 交易會從巢狀容器階層中最內層的工作到封裝依序進行認可或回復。 不過，內部交易認可後，如果外部交易已中止，則不會回復該交易。  
   
-### <a name="example-of-multiple-transactions-in-a-package"></a>在封裝中的多個交易的範例 
+### <a name="example-of-multiple-transactions-in-a-package"></a>套件中有多個交易的範例 
  例如，封裝具有的「時序」容器包含兩個「Foreach 迴圈」容器，而每個容器包含兩個「執行 SQL」工作。 時序容器支援交易，Foreach 迴圈容器不支援，而執行 SQL 工作則支援。 在此範例中，每一個執行 SQL 工作都會啟動自己的交易，而即使時序工作上的交易中止，也不會回復。  
   
  「時序」容器、「Foreach 迴圈」容器和「執行 SQL」工作的 TransactionOption 屬性設定如下：  
@@ -124,7 +122,7 @@ ms.lasthandoff: 09/26/2017
   
  下圖顯示封裝中五個不相關的交易。 一個交易是由「時序」容器啟動的，四個交易是由「執行 SQL」工作啟動的。  
   
- ![實作多個交易的](../integration-services/media/mw-dts-trans2.gif "實作多個交易")  
+ ![多個交易的實作](../integration-services/media/mw-dts-trans2.gif "多個交易的實作")  
  
 ## <a name="inherited-transactions"></a>繼承的交易
  封裝可使用「執行封裝」工作執行另一個封裝。 子封裝 (亦即「執行封裝」工作所執行的封裝) 可建立其自己的封裝交易，也可以繼承父封裝交易。  
@@ -137,7 +135,7 @@ ms.lasthandoff: 09/26/2017
   
  除非子封裝自行聯結交易，否則子封裝中的容器和工作無法聯結父封裝交易。  
   
-### <a name="example-of-inherited-transactions"></a>繼承的交易的範例  
+### <a name="example-of-inherited-transactions"></a>繼承的交易範例  
  在下圖中，有三個使用交易的封裝。 每一個封裝都包含多個工作。 為強調交易的行為，只會顯示「執行封裝」工作。 封裝 A 執行封裝 B 和 C。而封裝 B 又執行封裝 D 和 E，封裝 C 執行封裝 F。  
   
  封裝和工作具有下列交易屬性：  
@@ -170,4 +168,3 @@ ms.lasthandoff: 09/26/2017
  [多個交易](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   
   
-

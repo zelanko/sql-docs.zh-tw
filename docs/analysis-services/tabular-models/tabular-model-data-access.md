@@ -2,12 +2,12 @@
 title: "表格式模型資料存取 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6b535c1eba06e7f023ef9a1f7b00476e7be39eb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 23f654a293447e562baf7a8785871417b2bfd975
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-data-access"></a>表格式模型資料存取
-  Analysis Services 中的表格式模型資料庫可由您用來擷取多維度模型中之資料或中繼資料的大部分相同用戶端、介面和語言所存取。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在 Analysis Services 表格式模型資料庫可以存取受到大部分相同的用戶端、 介面及您使用多維度模型中擷取資料或中繼資料的語言。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
   
  本主題描述搭配表格式模型使用的用戶端、查詢語言，以及程式設計介面。  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 >  您不能在已經於 DirectQuery 模式下部署的資料庫中使用 MDX 或 DMX 查詢；因此，如果您需要使用結構描述資料列集來針對 DirectQuery 模式執行查詢，您應該使用 XMLA 而不是關聯的 DMV。 如果是整體會傳回伺服器結果的 DMV，例如來自 $system.DBSCHEMA_CATALOGS 或 DISCOVER_TRACES 的 SELECT *，您可以在快取模式中部署的資料庫內容中執行查詢。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [連接到表格式模型資料庫 &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
  [Power Pivot 資料存取](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)   
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  

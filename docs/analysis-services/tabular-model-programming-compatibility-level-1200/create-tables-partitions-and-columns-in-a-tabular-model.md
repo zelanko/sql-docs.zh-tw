@@ -2,12 +2,12 @@
 title: "表格式模型中建立資料表、 資料分割和資料行 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ecf8c233177b283c5dc3a5601a267bdfa0c8a10f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 94bad422a63276ad130027ea77de4734571016a8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>表格式模型中建立資料表、 資料分割和資料行
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-在表格式模型中，資料表是由資料列和資料行所組成。 資料列會組織成資料分割，以支援累加式的資料重新整理。 表格式解決方案可支援幾種類型的資料表，根據資料來自何處：  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格式模型中，資料表是由資料列和資料行所組成。 資料列會組織成資料分割，以支援累加式的資料重新整理。 表格式解決方案可支援幾種類型的資料表，根據資料來自何處：  
 
 * 一般的資料表，從關聯式資料來源，此資料提供者透過產生資料。 
 

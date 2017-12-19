@@ -3,8 +3,11 @@ title: "列印查詢結果 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ba40459f019675c3975b31155cbd7f3cfbfa45e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0e4347b0c336d750d5e2cd08aa744cb03fca9210
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="print-query-results-visual-database-tools"></a>列印查詢結果 (Visual Database Tools)
-若要列印查詢結果，可將 [結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) 的內容複製到其他的 Windows 程式，例如 Word Processing 程式，然後格式化並列印。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 若要列印查詢結果，可將[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)的內容複製到其他的 Windows 程式，例如 Word Processing 程式，然後格式化並列印。  
   
 查詢和檢視設計師將查詢結果放入剪貼簿時，會以定位點做為資料行之間的分隔符號，資料列之間的分隔符號則用歸位/換行字元組 (Carriage Return/Line Feed)。  
   

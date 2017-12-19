@@ -2,12 +2,12 @@
 title: "定義 Cube 屬性 (Property) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c45283b8f78802445028b96ce40395189cd55f9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f051a3372b965e2652dfd6ea4c57826212509c1d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-cube-attribute-properties"></a>定義 Cube 屬性 (Attribute) 屬性 (Property)
-  Cube 屬性 (Attribute) 的屬性 (Property) 可讓您根據同一個資料庫維度，為 Cube 維度中的維度屬性 (Attribute) 指定唯一的設定。 下表描述 Cube 屬性 (Attribute) 的屬性 (Property)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cube 屬性 (property) 可讓您在同一資料庫維度為基礎的 cube 維度中指定唯一設定維度屬性。 下表描述 Cube 屬性 (Attribute) 的屬性 (Property)。  
   
 |屬性|說明|  
 |--------------|-----------------|  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |**AttributeHierarchyVisible**|指出這個 Cube 維度上是否可以看見此屬性階層， 如此可允許在特定 Cube 或維度角色上看見屬性階層。 如果看不到基礎屬性階層，這個設定不會有任何作用。 預設值為 **True**。|  
 |**AttributeID**|包含此屬性的唯一識別碼 (ID)。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [定義 Cube 維度屬性](../../analysis-services/multidimensional-models/define-cube-dimension-properties.md)   
  [定義 Cube 階層屬性](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "catalog.move_project （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.move_project (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,22 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5b091ccea1f733ebbf6e52308d17c7bdb7449cbe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0a7cc5e2b529f503c0a4182f43e1436fc355ab4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project-SSISDB 資料庫
+# <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - SSISDB 資料庫
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   將專案從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的某個資料夾移動到另一個資料夾。  
@@ -39,14 +37,14 @@ catalog.move_project [ @source_folder = ] source_folder
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @source_folder =] *source_folder*  
- 在移動之前，專案所在之來源資料夾的名稱。 *Source_folder*是**nvarchar （128)**。  
+ [ @source_folder = ] *source_folder*  
+ 在移動之前，專案所在之來源資料夾的名稱。 *source_folder* 是 **nvarchar(128)**。  
   
- [ @project_name =] *project_name*  
- 要移動之專案的名稱。 *Project_name*是**nvarchar （128)**。  
+ [ @project_name = ] *project_name*  
+ 要移動之專案的名稱。 *project_name* 是 **nvarchar(128)**。  
   
- [ @destination_folder =] *destination_folder*  
- 在移動之後，專案所在之目的地資料夾的名稱。 *Destination_folder*是**nvarchar （128)**。  
+ [ @destination_folder = ] *destination_folder*  
+ 在移動之後，專案所在之目的地資料夾的名稱。 *destination_folder* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
@@ -59,9 +57,9 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   您想要移動之專案的 READ 和 MODIFY 權限，以及目的地資料夾的 CREATE_OBJECTS 權限  
   
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會造成預存程序引發錯誤的某些條件：  
@@ -81,4 +79,3 @@ catalog.move_project [ @source_folder = ] source_folder
 >  專案可以具有相對或絕對的環境參考。 相對參考會依名稱參考環境，而這些參考會要求環境位於與專案相同的資料夾中。 絕對參考會依名稱和資料夾參考環境，而這些參考會參考位於與專案資料夾不同之資料夾中的環境。  
   
   
-

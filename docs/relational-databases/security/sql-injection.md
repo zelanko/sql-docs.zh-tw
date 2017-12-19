@@ -1,10 +1,13 @@
 ---
 title: "SQL 資料隱碼 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 caps.latest.revision: "7"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58bdc38f3f48ce52f7d67281af89b45e2007be59
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5de3575bfac8b2e13e6d02835d5355b1e6b78cfa
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-injection"></a>SQL 資料隱碼
-  SQL 插入式攻擊是指將惡意程式碼插入字串中，然後將這些字串傳遞至 SQL Server 的執行個體進行剖析和執行。 建構 SQL 陳述式的任何程序都應該經過檢閱，以確認有無插入弱點，因為 SQL Server 會執行收到的所有語法有效查詢。 即使是參數化資料也可能被技術純熟又執意操作的攻擊者操縱。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL 插入式攻擊會將惡意程式碼插入字串中，然後將這些字串傳遞給 SQL Server 的執行個體進行剖析和執行。 建構 SQL 陳述式的任何程序都應該經過檢閱，以確認有無插入弱點，因為 SQL Server 會執行收到的所有語法有效查詢。 即使是參數化資料也可能被技術純熟又執意操作的攻擊者操縱。  
   
 ## <a name="how-sql-injection-works"></a>SQL 插入如何運作  
  SQL 資料隱碼的主要形式是將程式碼直接插入與 SQL 命令串連並執行的使用者輸入變數。 不直接的攻擊會將惡意程式碼插入用於資料表中儲存目的之字串，或插入做為中繼資料。 當儲存的字串在以後串連成動態 SQL 指令時，就會執行惡意程式碼。  

@@ -17,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba7958a1b5b9398dec3cb07630ee84b72970d2ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e7662fe90dc6f90c4437f200086e4d96b486a20b
+ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 工具和公用程式 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>執行查詢及管理資料庫的工具  
@@ -37,7 +36,12 @@ ms.lasthandoff: 12/05/2017
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 開啟 Visual Studio 強大的開發環境中 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲。 **在 Windows 上執行 SSDT**。|
 | [Visual Studio 程式碼](https://code.visualstudio.com/)| 安裝 Visual Studio 程式碼之後, 安裝[mssql 延伸](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)開發 Microsoft SQL Server、 Azure SQL Database 和 SQL 資料倉儲。 **在 Windows、 macOS 和 Linux 上執行 visual Studio Code**。|
 
+## <a name="which-tool-should-i-choose"></a>我應該選擇哪一種工具？
 
+- 管理 SQL Server 執行個體或資料庫，請在 Windows、 Linux 或 Mac 上的輕量級編輯器嗎？ 選擇[[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
+- 管理 SQL Server 執行個體或在 Windows 上的資料庫具有完整的 GUI 支援嗎？ 選擇[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- 執行您想要建立或維護資料庫程式碼，包括編譯時間驗證、 重構和設計工具支援在 Windows 上？ 選擇[SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- 在 Windows、 Linux 或 Mac 上的輕量級編輯器中撰寫 T-SQL 指令碼嗎？ 選擇[Visual Studio Code](https://code.visualstudio.com/)和[mssql 延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="additional-tools"></a>其他工具
 

@@ -1,5 +1,5 @@
 ---
-title: "HDFS 檔案目的地 |Microsoft 文件"
+title: "HDFS 檔案目的地 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.hdfsfiledest.f1
+f1_keywords: sql13.ssis.designer.hdfsfiledest.f1
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02a2ecf62d91110bfd7e8a1429d5e1b835e4244e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d07d4efaa0b26a19f60ca27e465177d0ea7b797c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hdfs-file-destination"></a>HDFS 檔案目的地
   HDFS 檔案目的地元件可讓 SSIS 封裝將資料寫入 HDFS 檔案。 支援的檔案格式為文字、Avro 和 ORC。  
@@ -34,7 +31,7 @@ ms.lasthandoff: 08/03/2017
   
  ![HDFS 檔案目的地編輯器](../../integration-services/data-flow/media/hdfs-file-dest.png "HDFS 檔案目的地編輯器")  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  在 [Hadoop File Destination Editor (Hadoop 檔案目的地編輯器)] 對話方塊的 [一般] 索引標籤上，設定下列選項。  
   
 |欄位|說明|  
@@ -52,4 +49,3 @@ ms.lasthandoff: 08/03/2017
  [HDFS 檔案來源](../../integration-services/data-flow/hdfs-file-source.md)  
   
   
-

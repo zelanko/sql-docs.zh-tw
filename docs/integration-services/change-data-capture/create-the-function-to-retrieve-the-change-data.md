@@ -1,5 +1,5 @@
 ---
-title: "建立函數以擷取變更資料 |Microsoft 文件"
+title: "建立函數以擷取變更資料 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],creating function
+helpviewer_keywords: incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20f754d1559e170c4922969b11aa97052f576cc7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3d7a5305d9b8c5c094f27b02bdcbd9c1c7bbb4a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>建立函數以擷取變更資料
   完成執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程後，下一個工作是建立可擷取變更資料的資料表值函式。 第一次累加式載入前，您僅需要建立一次這個函數。  
@@ -124,9 +121,9 @@ deallocate #hfunctions
   
  為讓變更資料表之所有資料列的查詢更為簡單，所產生的包裝函數也支援下列慣例：  
   
--   如果@start_time參數是 null，包裝函式使用的擷取執行個體中最低的 LSN 值，做為查詢的下限。  
+-   如果 @start_time 參數為 Null，包裝函數會使用擷取執行個體中最低的 LSN 值，作為查詢的下限。  
   
--   如果@end_time參數是 null，包裝函式使用擷取執行個體中最高的 LSN 值，為查詢的上限。  
+-   如果 @end_time 參數為 Null，包裝函數會使用擷取執行個體中最高的 LSN 值，作為查詢的上限。  
   
  大部分使用者應該都可以在不修改的情況下，使用 **sys.sp_cdc_generate_wrapper_function** 系統預存程序所建立的包裝函式。 不過，若要自訂包裝函數，您必須先自訂 CREATE 指令碼，然後再執行這些指令碼。  
   
@@ -220,7 +217,7 @@ go
 |**__$seqval**|**binary(10)**|用來排序交易內資料列變更的序列值。|  
 |**__$operation**|**int**|與變更相關聯的資料操作語言 (DML) 作業。 可以是下列其中一項：<br /><br /> 1 = 刪除<br /><br /> 2 = 插入<br /><br /> 3 = 更新 (更新作業之前的值)。<br /><br /> 4 = 更新 (更新作業之後的值)。|  
 |**__$update_mask**|**varbinary(128)**|位元遮罩，可根據變更資料表的資料行序數識別這些變更的資料行。 如果您必須判斷已經變更的資料行，可以檢查這個值。|  
-|**\<擷取來源資料表資料行 >**|變化|這個函數所傳回的其餘資料行都是建立擷取執行個體時，在來源資料表中識別成擷取資料行的資料行。 如果擷取的資料行清單中沒有以序數指定任何資料行，就會傳回來源資料表中的所有資料行。|  
+|**\<擷取的來源資料表資料行>**|變化|這個函數所傳回的其餘資料行都是建立擷取執行個體時，在來源資料表中識別成擷取資料行的資料行。 如果擷取的資料行清單中沒有以序數指定任何資料行，就會傳回來源資料表中的所有資料行。|  
   
  如需詳細資訊，請參閱 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
   
@@ -230,4 +227,3 @@ go
  **下一個主題：**[擷取與了解變更資料](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   
-

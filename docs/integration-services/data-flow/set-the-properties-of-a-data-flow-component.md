@@ -1,5 +1,5 @@
 ---
-title: "設定資料流程元件的屬性 |Microsoft 文件"
+title: "設定資料流程元件的屬性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- components [Integration Services], properties
+helpviewer_keywords: components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2073bf67289ff1d54a364f6a82bff51779dc1c5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e1e43cd578cd37385b643890a07588ff0d3fdc43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>設定資料流程元件的屬性
   若要設定資料流程元件的屬性 (包括來源、目的地和轉換)，請使用下列其中一個功能：  
@@ -36,7 +33,7 @@ ms.lasthandoff: 09/26/2017
   
 -   [進階編輯器] 對話方塊可讓您存取每一個元件的自訂屬性。 [進階編輯器] 對話方塊也可讓您存取所有資料流程元件的屬性，也就是輸入、輸出、錯誤輸出、資料行和外部資料行的屬性。  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>設定資料流程元件使用元件編輯器的內容  
+## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>使用元件編輯器設定資料流程元件的屬性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -50,7 +47,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
   
-## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>在 [屬性] 視窗中設定資料流程元件的屬性  
+## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>在屬性視窗中設定資料流程元件的屬性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -67,7 +64,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>設定資料流程元件的 [進階編輯器] 的屬性  
+## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>使用進階編輯器設定資料流程元件的屬性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -110,7 +107,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
 
-## <a name="common-properties-of-data-flow-components"></a>資料流程元件通用的屬性
+## <a name="common-properties-of-data-flow-components"></a>資料流程元件的通用屬性
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中的資料流程物件具有元件層級、輸入和輸出層級，以及輸入資料行和輸出資料行層級上的通用屬性和自訂屬性。 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
   
  本主題將列出及描述資料流程物件的通用屬性。  
@@ -126,7 +123,7 @@ ms.lasthandoff: 09/26/2017
 -   [輸出資料行](#outputcolumns)  
   
  
-###  <a name="components"></a>元件屬性  
+###  <a name="components"></a> 元件屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，資料流程中的元件會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面。  
   
  下表將描述資料流程中的元件屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -146,7 +143,7 @@ ms.lasthandoff: 09/26/2017
 |ValidateExternalMetadata|布林|指示是否會驗證外部資料行的中繼資料。 此屬性的預設值為 **True**。|  
 |版本|Integer|元件的版本。|  
   
-###  <a name="inputs"></a>輸入的屬性  
+###  <a name="inputs"></a> 輸入屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，轉換和目的地都有輸入。 資料流程中元件的輸入會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> 介面。  
   
  下表將描述資料流程中元件輸入的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -166,7 +163,7 @@ ms.lasthandoff: 09/26/2017
   
  目的地和某些轉換不支援錯誤輸出，而且這些元件的 ErrorRowDisposition 和 TruncationRowDisposition 屬性是唯讀的。  
   
-###  <a name="inputcolumns"></a>輸入資料行屬性  
+###  <a name="inputcolumns"></a> 輸入資料行屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，輸入包含輸入資料行的集合。 資料流程中元件的輸入資料行會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> 介面。  
   
  下表將描述資料流程中元件輸入資料行的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -190,7 +187,7 @@ ms.lasthandoff: 09/26/2017
   
  輸入資料行也具有資料類型屬性 (如「資料類型屬性」底下所述)。  
   
-###  <a name="outputs"></a>輸出屬性  
+###  <a name="outputs"></a> 輸出屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，來源和轉換都有輸出。 資料流程中元件的輸出會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 介面。  
   
  下表將描述資料流程中元件輸出的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -206,12 +203,12 @@ ms.lasthandoff: 09/26/2017
 |ID|Integer|可唯一識別輸出的值。|  
 |IdentificationString|字串|識別輸出的字串。|  
 |IsErrorOut|布林|指示輸出是否為錯誤輸出。|  
-|IsSorted|布林|指示是否要排序輸出。 預設值為 **[False]**。<br /><br /> **\*\*重要\* \*** 設定的值**IsSorted**屬性**True**不會排序資料。 此屬性僅針對資料先前已經過排序的下游元件提供提示。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
+|IsSorted|布林|指示是否要排序輸出。 預設值為 **[False]**。<br /><br /> **\*\* 重要事項 \*\*** 將 **IsSorted** 屬性的值設定為 **True** 時，不會排序資料。 此屬性僅針對資料先前已經過排序的下游元件提供提示。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |名稱|字串|輸出的名稱。|  
 |SynchronousInputID|Integer|與輸出同步之輸入的識別碼。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值包括 [失敗元件]、[忽略失敗] 和 [重新導向資料列]。|  
   
-###  <a name="outputcolumns"></a>輸出資料行屬性  
+###  <a name="outputcolumns"></a> 輸出資料行屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，輸出包含輸出資料行的集合。 資料流程中元件的輸出資料行會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> 介面。  
   
  下表將描述資料流程中元件輸出資料行的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -234,7 +231,7 @@ ms.lasthandoff: 09/26/2017
   
  輸出資料行也包含一組資料類型屬性。  
   
-### <a name="external-metadata-column-properties"></a>外部中繼資料資料行屬性  
+### <a name="external-metadata-column-properties"></a>外部中繼資料行屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，輸入和輸出都可以包含外部中繼資料行的集合。 資料流程中元件的外部中繼資料行會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 介面。  
   
  下表將描述資料流程中元件之外部中繼資料行的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -262,7 +259,7 @@ ms.lasthandoff: 09/26/2017
 |小數位數|Integer|數值資料行的小數位數。|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>資料流程元件的自訂屬性
-自訂屬性的相關資訊，請參閱下列主題  
+如需自訂屬性的資訊，請參閱下列主題  
   
 -   [ADO NET 自訂屬性](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -335,7 +332,7 @@ ms.lasthandoff: 09/26/2017
     > [!NOTE]  
     >  如果運算式無效，則會出現警示，描述運算式中的語法錯誤。  
 
-## <a name="data-flow-properties-that-you-can-set-with-an-expression"></a>您可以使用運算式設定資料流程屬性
+## <a name="data-flow-properties-that-you-can-set-with-an-expression"></a>您可以使用運算式設定的資料流程屬性
 可使用「資料流程」工作容器上提供的屬性運算式，以指定資料流程物件的某些屬性值。  
   
  如需使用屬性運算式的資訊，請參閱 [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
@@ -378,7 +375,6 @@ ms.lasthandoff: 09/26/2017
 |----------------------|--------------|  
 |ADO NET 目的地|TableOrViewName 屬性<br /><br /> BatchSize 屬性<br /><br /> CommandTimeout 屬性|  
 |一般檔案目的地|Header 屬性|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact 目的地|TableName 屬性|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地|BulkInsertTableName 屬性<br /><br /> BulkInsertFirstRow 屬性<br /><br /> BulkInsertLastRow 屬性<br /><br /> BulkInsertOrder 屬性<br /><br /> Timeout 屬性|  
-
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目的地|TableName 屬性|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地|BulkInsertTableName 屬性<br /><br /> BulkInsertFirstRow 屬性<br /><br /> BulkInsertLastRow 屬性<br /><br /> BulkInsertOrder 屬性<br /><br /> Timeout 屬性|  
 

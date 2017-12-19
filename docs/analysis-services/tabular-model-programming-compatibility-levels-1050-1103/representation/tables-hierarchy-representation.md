@@ -2,12 +2,12 @@
 title: "階層表示法 （表格式） |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 843a0f870ad9b30ad4746bbe9913de845bfc30e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 58ee908dc3dbf745a15c8dfa5f44d711f91c392b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables---hierarchy-representation"></a>資料表的階層表示法
-  在表格式模型中，階層是根據使用者選取的值從一個屬性到另一個屬性的導覽路徑。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在表格式模型階層是從一個屬性到另一個使用者所選取的值為基礎的導覽路徑。  
   
 ## <a name="hierarchy-representation"></a>階層表示法  
   

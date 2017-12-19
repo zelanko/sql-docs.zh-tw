@@ -2,9 +2,12 @@
 title: "Showplan XML 事件類別 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 813e54cf56af7b0d0b465e474582ea16d9fea16a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 38dd57838cab286714f85716e71b617e493c551c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML 事件類別
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan XML 事件類別。 加入此 Showplan XML 事件類別，可識別 Showplan 運算子。 此事件類別會以定義妥善的 XML 文件來儲存每一個事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan XML 事件類別。 加入此 Showplan XML 事件類別，可識別 Showplan 運算子。 此事件類別會以定義妥善的 XML 文件來儲存每一個事件。  
   
  當追蹤中包含 Showplan XML 事件類別時，負擔量將會明顯妨礙效能。 Showplan XML 會在最佳化查詢時儲存所建立的查詢計畫。 若要使造成的負擔降到最低，請將此事件類別限用於追蹤對特定問題的短期監視。  
   

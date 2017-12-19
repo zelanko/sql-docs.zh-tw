@@ -1,5 +1,5 @@
 ---
-title: "快取轉換 |Microsoft 文件"
+title: "快取轉換 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
 - sql13.dts.designer.cachetranscon.f1
 - sql13.dts.designer.cachetransmap.f1
-helpviewer_keywords:
-- Cache transform
+helpviewer_keywords: Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: b1120ee2702b4951c91717a108997253de023d9c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cache-transform"></a>快取轉換
   「快取轉換」轉換會藉由將資料從資料流程中連接的資料來源寫入至快取連接管理員的方式，產生「查閱轉換」的參考資料集。 「查閱轉換」會藉由聯結已連接資料來源輸入資料行中的資料與參考資料庫中的資料行來執行查閱。  
@@ -45,7 +42,7 @@ ms.lasthandoff: 09/28/2017
   
  在單一封裝中，只有「快取轉換」可以將資料寫入至相同的快取連接管理員。 如果封裝包含多個「快取轉換」，則在封裝執行時呼叫的第一個「快取轉換」會將資料寫入連接管理員。 後續「快取轉換」的寫入作業會失敗。  
   
- 如需詳細資訊，請參閱[快取連接管理員](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
+ 如需詳細資訊，請參閱[快取連線管理員](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
   
 ## <a name="configuration-of-the-cache-transform"></a>快取轉換的組態  
  您可以將快取連接管理員設定為將資料儲存至快取檔案 (.caw)。  
@@ -85,4 +82,3 @@ ms.lasthandoff: 09/28/2017
  [資料流程](../../../integration-services/data-flow/data-flow.md)  
   
   
-

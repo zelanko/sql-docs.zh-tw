@@ -1,5 +1,5 @@
 ---
-title: "傳送郵件工作 |Microsoft 文件"
+title: "傳送電子郵件工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a810d72817ebdf5a1078e95315adb755a2d42891
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="send-mail-task"></a>傳送郵件工作
   傳送郵件工作會傳送電子郵件訊息。 藉由使用傳送郵件工作，封裝即可在封裝工作流程中的工作成功或失敗時傳送訊息，或傳送回應封裝在執行階段所引發事件的訊息。 例如，工作可通知資料庫管理員「備份資料庫」工作成功或失敗。  
@@ -95,7 +93,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="send-mail-task-editor-general-page"></a>傳送郵件工作編輯器 (一般頁面)
   使用 [傳送郵件工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送郵件工作。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **名稱**  
  為傳送郵件工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
   
@@ -109,7 +107,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>選項。  
  **SMTPConnection**  
- 在清單中，選取 SMTP 連接管理員，或按一下**\<新增連接 … >**以建立新的連接管理員。  
+ 在清單中選取 SMTP 連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
   
 > [!IMPORTANT]  
 >  SMTP 連接管理員僅支援匿名驗證和 Windows 驗證， 而不支援基本驗證。  
@@ -140,7 +138,7 @@ ms.lasthandoff: 08/11/2017
 |**檔案連接**|將來源設定為包含訊息文字的檔案。 選取此值會顯示動態選項 [MessageSource]。|  
 |**變數**|將來源設定為包含訊息文字的變數。 選取此值會顯示動態選項 [MessageSource]。|  
   
- **優先順序**  
+ **優先權**  
  設定訊息的優先權。  
   
  **附加檔案**  
@@ -157,13 +155,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 檔案連接  
  **MessageSource**  
- 在清單中選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = 變數  
  **MessageSource**  
- 在清單中選取變數，或按一下\<**新增變數...**> 若要建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>]，以建立新的變數。  
   
  **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -172,4 +170,3 @@ ms.lasthandoff: 08/11/2017
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   
   
-

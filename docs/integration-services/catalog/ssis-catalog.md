@@ -1,12 +1,14 @@
 ---
-title: "SSIS 目錄 |Microsoft 文件"
+title: "SSIS 目錄 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: service
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,19 +16,17 @@ f1_keywords:
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3e2139cf2c56b1f716aac32aa6b3f71cb49a2d61
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 0a05b62e5c2ffb8c5a268ac8030e703d3a192742
+ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/12/2017
 ---
-
 # <a name="ssis-catalog"></a>SSIS 目錄
   **SSISDB** 目錄是處理您已部署至 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器之 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 專案的中心點。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器作業。  
   
@@ -48,25 +48,25 @@ ms.lasthandoff: 09/27/2017
 > [!NOTE]
 > 如果附加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSISDB **資料庫的** 執行個體停止或沒有回應，ISServerExec.exe 處理序便會結束。 會在 Windows 事件記錄檔中寫入一則訊息。  
 >   
->  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的容錯移轉是叢集容錯移轉的一部分，就不會重新啟動執行中的封裝。 您可以使用檢查點重新啟動封裝。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+>  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的容錯移轉是叢集容錯移轉的一部分，就不會重新啟動執行中的套件。 您可以使用檢查點重新啟動封裝。 如需詳細資訊，請參閱 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
-## <a name="features-and-capabilities"></a>特色與功能  
+## <a name="features-and-capabilities"></a>特性與功能  
   
--   [目錄物件識別碼](../../integration-services/service/ssis-catalog.md#CatalogObjectIdentifiers)  
+-   [目錄物件識別碼](../../integration-services/catalog/ssis-catalog.md#CatalogObjectIdentifiers)  
   
--   [目錄組態](../../integration-services/service/ssis-catalog.md#Configuration)  
+-   [目錄組態](../../integration-services/catalog/ssis-catalog.md#Configuration)  
   
--   [權限](../../integration-services/service/ssis-catalog.md#Permissions)  
+-   [權限](../../integration-services/catalog/ssis-catalog.md#Permissions)  
   
--   [資料夾](../../integration-services/service/ssis-catalog.md#Folders)  
+-   [資料夾](../../integration-services/catalog/ssis-catalog.md#Folders)  
   
--   [專案和套件](../../integration-services/service/ssis-catalog.md#ProjectsAndPackages)  
+-   [專案和套件](../../integration-services/catalog/ssis-catalog.md#ProjectsAndPackages)  
   
--   [參數](../../integration-services/service/ssis-catalog.md#Parameters)  
+-   [參數](../../integration-services/catalog/ssis-catalog.md#Parameters)  
   
--   [伺服器環境、伺服器變數和伺服器環境參考](../../integration-services/service/ssis-catalog.md#ServerEnvironments)  
+-   [伺服器環境、伺服器變數和伺服器環境參考](../../integration-services/catalog/ssis-catalog.md#ServerEnvironments)  
   
--   [執行和驗證](../../integration-services/service/ssis-catalog.md#Executions)  
+-   [執行和驗證](../../integration-services/catalog/ssis-catalog.md#Executions)  
 
 ##  <a name="CatalogObjectIdentifiers"></a> 目錄物件識別碼  
  當您在目錄中建立新的物件時，請為此物件指派名稱。 物件名稱是識別碼。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會定義哪些字元可以在識別碼中使用的規則。 隨後的物件名稱必須遵照識別碼規則。  
@@ -84,11 +84,11 @@ ms.lasthandoff: 09/27/2017
 ###  <a name="Folder"></a> 資料夾、專案、環境  
  在重新命名資料夾、專案或環境時，請考慮以下規則。  
   
--   無效的字元包括 ASCII/Unicode 字元 1 到 31、 引號 （"）、 小於 (\<)、 大於 (>)、 直立線符號 (|)、 退格鍵 (\b)、 null (\0) 和定位字元 (\t)。  
+-   無效的字元包括 ASCII/Unicode 字元 1 到 31、引號 (")、小於 (\<)、大於 (>)、直立線符號 (|)、退格鍵 (\b)、null (\0) 和 Tab 鍵 (\t)。  
   
 -   名稱不得包含開頭或尾端空格。  
   
--   @ 不可做為第一個字元，但後續字元可以使用@。  
+-   不允許以 @ 作為第一個字元，但隨後的字元可以使用 @。  
   
 -   名稱的長度必須大於 0 且小於或等於 128。  
   
@@ -102,11 +102,11 @@ ms.lasthandoff: 09/27/2017
 ###  <a name="EnvironmentVariable"></a> 環境變數  
  在命名環境變數時，請考慮以下規則。  
   
--   無效的字元包括 ASCII/Unicode 字元 1 到 31、 引號 （"）、 小於 (\<)、 大於 (>)、 直立線符號 (|)、 退格鍵 (\b)、 null (\0) 和定位字元 (\t)。  
+-   無效的字元包括 ASCII/Unicode 字元 1 到 31、引號 (")、小於 (\<)、大於 (>)、直立線符號 (|)、退格鍵 (\b)、null (\0) 和 Tab 鍵 (\t)。  
   
 -   名稱不得包含開頭或尾端空格。  
   
--   @ 不可做為第一個字元，但後續字元可以使用@。  
+-   不允許以 @ 作為第一個字元，但隨後的字元可以使用 @。  
   
 -   名稱的長度必須大於 0 且小於或等於 128。  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 09/27/2017
   
 -   DES  
   
- 當您將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器時，目錄會自動將封裝資料與敏感值加密。 當您擷取時，目錄也會自動解密資料。 SSISDB 目錄會使用 **ServerStorage** 保護等級。 如需詳細資訊，請參閱 [Access Control for Sensitive Data in Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md)。  
+ 當您將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器時，目錄會自動將封裝資料與敏感值加密。 當您擷取時，目錄也會自動解密資料。 SSISDB 目錄會使用 **ServerStorage** 保護等級。 如需詳細資訊，請參閱 [Access Control for Sensitive Data in Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md)。  
   
  變更加密演算法是需要大量時間的作業。 首先，伺服器必須使用先前指定的演算法來解密所有組態值。 然後，伺服器必須使用新的演算法來重新加密值。 在這段期間，伺服器上不能有其他的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 作業。 因此，為了讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 作業持續不受干擾，在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的此對話方塊中，加密演算法會是唯讀值。  
   
@@ -192,18 +192,16 @@ ms.lasthandoff: 09/27/2017
 ### <a name="managing-permissions"></a>管理權限  
  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] UI、預存程序及 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間來管理權限。  
   
- 若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] UI 管理權限，請使用以下對話方塊。  
+ 若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] UI 來管理權限，請使用以下對話方塊： 
   
--   針對資料夾，使用 **Folder Properties Dialog Box** 的 [&#91;權限&#93;](../../integration-services/service/folder-properties-dialog-box.md)頁面。  
+-   針對資料夾，使用 **Folder Properties Dialog Box** 的 [&#91;權限&#93;](../../integration-services/catalog/folder-properties-dialog-box.md)頁面。  
   
--   針對專案中，使用 **權限** 頁面 [Project Properties Dialog Box](../../integration-services/service/project-properties-dialog-box.md)。  
-  
--   為了讓環境，使用 **中的 權限** 頁面 [NIB︰ 環境屬性 對話方塊](http://msdn.microsoft.com/en-us/6a91a8d4-0006-4cfd-9759-3e4295ae452b)。  
-  
- 若要使用 Transact-SQL 管理權限，請呼叫 [catalog.grant_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)、[catalog.deny_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md) 及 [catalog.revoke_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md)。 若要檢視對所有物件之目前主體有效的權限，請查詢 [catalog.effective_object_permissions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md)。 此主題會提供不同類型之權限的描述。 若要檢視已明確指派給使用者的權限，請查詢 [catalog.explicit_object_permissions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md)。  
+-   針對專案中，使用 **權限** 頁面 [Project Properties Dialog Box](../../integration-services/catalog/project-properties-dialog-box.md)。  
+
+ 若要使用 Transact-SQL 來管理權限，請呼叫 [catalog.grant_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)、[catalog.deny_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md) 及 [catalog.revoke_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md)。 若要檢視對所有物件之目前主體有效的權限，請查詢 [catalog.effective_object_permissions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md)。 此主題會提供不同類型之權限的描述。 若要檢視已明確指派給使用者的權限，請查詢 [catalog.explicit_object_permissions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md)。  
   
 ##  <a name="Folders"></a> 資料夾  
- 資料夾包含 **SSISDB** 目錄中的一個或多個專案和環境。 您可以使用 [catalog.folders &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-folders-ssisdb-database.md) 檢視來存取目錄中資料夾的相關資訊。 您可以使用以下預存程序來管理資料夾。  
+ 資料夾包含 **SSISDB** 目錄中的一個或多個專案和環境。 您可以使用 [catalog.folders &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-folders-ssisdb-database.md) 檢視來存取目錄中資料夾的相關資訊。 您可以使用以下預存程序來管理資料夾：  
   
 -   [catalog.create_folder &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
   
@@ -214,9 +212,9 @@ ms.lasthandoff: 09/27/2017
 -   [catalog.set_folder_description &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
   
 ##  <a name="ProjectsAndPackages"></a> 專案和套件  
- 每一個專案都可包含多個封裝。 專案和封裝都可以包含參數及環境的參考。 您可以使用 [Configure Dialog Box](../../integration-services/service/configure-dialog-box.md)來存取參數和環境參考。  
+ 每一個專案都可包含多個封裝。 專案和封裝都可以包含參數及環境的參考。 您可以使用 [Configure Dialog Box](../../integration-services/catalog/configure-dialog-box.md)來存取參數和環境參考。  
   
- 您可以藉由呼叫以下預存程序來完成其他專案工作。  
+ 您可以藉由呼叫以下預存程序來完成其他專案工作： 
   
 -   [catalog.delete_project &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md)  
   
@@ -326,7 +324,7 @@ ms.lasthandoff: 09/27/2017
   
 5.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]，讓 [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md) 預存程序會在每次 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 伺服器執行個體重新啟動時執行。  
   
-     預存程序會執行 SSISDB 目錄之作業狀態的維護。 它會在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 伺服器執行個體效能降低時，修正正在執行之任何封裝的狀態。  
+     預存程序會執行 SSISDB 目錄之作業狀態的維護。 如果 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 伺服器執行個體關閉，它就會修正任何執行中套件的狀態。  
   
 6.  輸入密碼，然後按一下 **[確定]**。  
   
@@ -358,7 +356,7 @@ ms.lasthandoff: 09/27/2017
   
     ```  
   
-     如需如何使用 Windows PowerShell 的範例和<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空間，請參閱部落格文章： [SSIS 和 PowerShell，在 SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)，blogs.msdn.com 上。如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](http://go.microsoft.com/fwlink/?LinkId=254267)。  
+     如需如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間的其他範例，請參閱 blogs.msdn.com 上的部落格文章：[SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](http://go.microsoft.com/fwlink/?LinkId=254267)。  
 
 ## <a name="catalog-properties-dialog-box"></a>目錄屬性對話方塊
   使用 [目錄屬性] 對話方塊來設定 SSISDB 目錄。 目錄屬性定義如何加密敏感性資料，如何保留作業和專案版本設定資料，以及何時驗證作業逾時。SSISDB 目錄是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案、封裝、參數與環境的中央儲存和管理點。  
@@ -387,17 +385,17 @@ ms.lasthandoff: 09/27/2017
 |屬性名稱 (目錄屬性對話方塊)|屬性名稱 (catalog.catalog_property 檢視表)|說明|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |加密演算法名稱|ENCRYPTION_CLEANUP_ENABLED|指定用來加密目錄中敏感性參數值的加密類型。 以下是可能的值：<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (預設)|  
-|驗證逾時 (秒)|VALIDATION_TIMEOUT|指定專案驗證或封裝驗證在停止之前，可以執行的秒數上限。 預設值為 300 秒。<br /><br /> 執行驗證是非同步作業。 專案或封裝愈大，驗證所需時間愈長。<br /><br /> 如需有關驗證專案和封裝的詳細資訊，請參閱＜ [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)＞。|  
+|驗證逾時 (秒)|VALIDATION_TIMEOUT|指定專案驗證或套件驗證在停止之前可以執行的秒數上限。 預設值為 300 秒。<br /><br /> 執行驗證是非同步作業。 專案或套件越大，驗證所需時間越長。<br /><br /> 如需有關驗證專案和封裝的詳細資訊，請參閱＜ [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)＞。|  
 |定期清除記錄檔|OPERATION_CLEANUP_ENABLED|將屬性設為 True，指出 SQL Server Agent 作業 (作業清除) 會執行。 否則請將屬性設為 False。|  
 |保留週期 (天)|RETENTION_WINDOW|指定可允許的作業資料存在時間上限 (以天為單位)。 SQL Agent 作業 (作業清除) 會移除比指定天數還舊的資料。|  
-|每一專案的版本數目上限|MAX_PROJECT_VERSIONS|指定多少個專案版本會儲存在目錄中。 當專案版本清除作業執行時，將會移除超過最大值的舊專案版本。|  
+|每一專案的版本數目上限|MAX_PROJECT_VERSIONS|指定目錄中所儲存的專案版本數目。 當專案版本清除作業執行時，會移除超過上限的舊專案版本。|  
 
-## <a name="back-up-restore-and-move-the-ssis-catalog"></a>備份、 還原和移動的 SSIS 目錄
+## <a name="back-up-restore-and-move-the-ssis-catalog"></a>備份、還原和移動 SSIS 目錄
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包括 SSISDB 資料庫。 您可以查詢 SSISDB 資料庫中的檢視，以檢查物件、設定以及儲存在 [SSISDB] 目錄中的作業資料。 本主題提供備份與還原資料庫的指示。  
   
- [SSISDB] 目錄會儲存您已經部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝。 如需目錄的詳細資訊，請參閱 [SSIS 目錄](../../integration-services/service/ssis-catalog.md)。  
+ [SSISDB] 目錄會儲存您已經部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝。 如需目錄的詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
   
 ###  <a name="backup"></a> 若要備份 SSIS 資料庫  
   
@@ -415,23 +413,23 @@ ms.lasthandoff: 09/27/2017
   
     ```  
   
-3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫] 對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱[如何：備份資料庫 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫] 對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱 [如何：備份資料庫 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812)。  
   
-4.  執行下列操作，產生 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 指令碼。 如需詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)。  
+4.  執行下列動作，以產生 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 指令碼。 如需詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)。  
   
     1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，展開 [安全性] 節點，然後展開 [登入] 節點。  
   
     2.  以滑鼠右鍵按一下 [##MS_SSISServerCleanupJobLogin##]，然後按一下 [編寫登入的指令碼為] > [CREATE 至] > [新增查詢編輯器視窗]。  
   
-5.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請執行下列動作，藉以產生 sp_ssis_startup 的 CREATE PROCEDURE 指令碼。 如需詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)。  
+5.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請執行下列動作，以產生 sp_ssis_startup 的 CREATE PROCEDURE 指令碼。 如需詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)。  
   
     1.  在物件總管中，展開 [資料庫] 節點，然後展開 [master] > [可程式性] > [預存程序] 節點。  
   
-    2.  以滑鼠右鍵按一下 [dbo.sp_ssis_startup]，然後按一下 [編寫預存程序的指令碼為] > [CREATE 至] > [新增查詢編輯器視窗]。  
+    2.  以滑鼠右鍵按一下 [dbo.sp_ssis_startup]，然後按一下 [產生預存程序的指令碼為] > [CREATE 至] > [新增查詢編輯器視窗]。  
   
 6.  確認已啟動 SQL Server Agent  
   
-7.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請執行下列動作，藉以產生 SSIS 伺服器維護作業的指令碼。 當您建立 SSISDB 目錄時，系統就會自動在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 中建立指令碼。 此作業有助於清除保留週期外部的清除作業，並移除舊版專案。  
+7.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請執行下列動作，以產生 SSIS 伺服器維護作業的指令碼。 當您建立 SSISDB 目錄時，系統就會自動在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 中建立指令碼。 此作業有助於清除保留週期外部的清除作業，並移除舊版專案。  
   
     1.  在物件總管中，展開 [SQL Server Agent] 節點，然後展開 [作業] 節點。  
   
@@ -466,7 +464,7 @@ ms.lasthandoff: 09/27/2017
   
     ```  
   
-3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [還原資料庫] 對話方塊，從備份還原 SSISDB 資料庫。 如需詳細資訊，請參閱下列主題。  
+3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [還原資料庫] 對話方塊，從備份還原 SSISDB 資料庫。 如需詳細資訊，請參閱下列主題：  
   
     -   [還原資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -502,11 +500,11 @@ ms.lasthandoff: 09/27/2017
         >  確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶擁有讀取備份金鑰檔案的權限。  
   
         > [!NOTE]  
-        >  如果服務主要金鑰尚未加密資料庫主要金鑰，您將會看到下列警告訊息顯示在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中。 忽略警告訊息。  
+        >  如果服務主要金鑰尚未加密資料庫主要金鑰，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中即會顯示下列警告訊息。 忽略警告訊息。  
         >   
-        >  **無法解密目前的主要金鑰。已忽略錯誤，因為已指定 FORCE 選項。**  
+        >  **無法解密目前的主要金鑰。因為指定了 FORCE 選項，因此忽略了這個錯誤。**  
         >   
-        >  FORCE 引數會指定即使未開放目前的資料庫主要金鑰，也應該繼續還原程序。 若是 SSISDB 目錄，因為尚未在您要還原資料庫所在的執行個體上開放資料庫主要金鑰，因此您將會看到此訊息。  
+        >  FORCE 引數會指定即使未開放目前的資料庫主要金鑰，也應該繼續還原程序。 針對 SSISDB 目錄，因為尚未在您要還原資料庫的目標執行個體上開啟資料庫主要金鑰，因此您會看到此訊息。  
   
     -   **方法 2**  
   
@@ -519,7 +517,7 @@ ms.lasthandoff: 09/27/2017
   
 8.  執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.check_schema_version [，以判斷 SSISDB 目錄結構描述與](../../integration-services/system-stored-procedures/catalog-check-schema-version.md)二進位檔 (ISServerExec 和 SQLCLR 組件) 是否相容。  
   
-9. 若要確認已成功還原 SSISDB 資料庫，請針對 SSISDB 目錄執行作業，例如執行已經部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝。 如需詳細資訊，請參閱[執行 Integration Services (SSIS) 封裝](../../integration-services/packages/run-integration-services-ssis-packages.md)。  
+9. 若要確認已成功還原 SSISDB 資料庫，請針對 SSISDB 目錄執行作業，例如執行已經部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝。 如需詳細資訊，請參閱[執行 Integration Services (SSIS) 套件](../../integration-services/packages/run-integration-services-ssis-packages.md)。  
   
 ### <a name="to-move-the-ssis-database"></a>若要移動 SSIS 資料庫  
   
@@ -530,11 +528,11 @@ ms.lasthandoff: 09/27/2017
      確定 Integration Services (SSIS) 相關物件建立在尚未建立 SSISDB 目錄的新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中。  
 
 ## <a name="upgrade-the-ssis-catalog-ssisdb"></a>升級 SSIS 目錄 (SSISDB)
-  當資料庫版本比目前的 SQL Server 執行個體版本還舊時，執行 SSISDB 升級精靈來升級 SSIS 目錄資料庫 (SSISDB)。 這會在下列其中一個條件成立時發生：  
+  當資料庫版本比目前的 SQL Server 執行個體版本還舊時，執行 SSISDB 升級精靈來升級 SSIS 目錄資料庫 (SSISDB)。 當下列其中一個條件成立時，資料庫可能為舊版。  
   
 -   您已從舊版 SQL Server 還原資料庫。  
   
--   您在升級 SQL Server 執行個體之前，並未從 AlwaysOn 可用性群組移除資料庫。 這可防止資料庫自動升級。 如需詳細資訊，請參閱＜ [Upgrading SSISDB in an availability group](#Upgrade)＞。  
+-   您在升級 SQL Server 執行個體之前，並未從 AlwaysOn 可用性群組移除資料庫。 此條件可防止資料庫自動升級。 如需詳細資訊，請參閱＜ [Upgrading SSISDB in an availability group](#Upgrade)＞。  
   
  此精靈只能升級本機伺服器執行個體上的資料庫。  
   
@@ -546,7 +544,7 @@ ms.lasthandoff: 09/27/2017
   
 3.  以滑鼠右鍵按一下 [SSISDB]，然後選取 [資料庫升級] 啟動 [SSISDB 升級精靈]。  
   
-     ![啟動 SSISDB 升級精靈](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "啟動 SSISDB 升級精靈")  
+     ![啟動 [SSISDB 升級精靈]](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "啟動 [SSISDB 升級精靈]")  
   
 4.  在 [選取執行個體]  頁面上，選取本機伺服器上的 SQL Server 執行個體。  
   
@@ -555,15 +553,15 @@ ms.lasthandoff: 09/27/2017
   
      選取此核取方塊，表示您已經在執行這個精靈之前備份 SSISDB 資料庫。  
   
-     ![SSISDB 升級精靈 中選取伺服器](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "SSISDB 升級精靈 中選取伺服器")  
+     ![選取 [SSISDB 升級精靈] 中的伺服器](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "選取 [SSISDB 升級精靈] 中的伺服器")  
   
 5.  選取 [升級]  升級 SSIS 目錄資料庫。  
   
 6.  在 [結果]  頁面上，檢閱結果。  
   
-     ![SSISDB 升級精靈中檢閱結果](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "SSISDB 升級精靈中檢閱結果")  
+     ![檢閱 [SSISDB 升級精靈] 中的結果](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "檢閱 [SSISDB 升級精靈] 中的結果")  
 
-## <a name="always-on-for-ssis-catalog-ssisdb"></a>Alwayson 的 SSIS 目錄 (SSISDB)
+## <a name="always-on-for-ssis-catalog-ssisdb"></a>適用於 SSIS 目錄 (SSISDB) 的 Always On
   AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
  為了提供 SSIS 目錄 (SSISDB) 及其內容 (專案、封裝、執行記錄等) 的高可用性，您可以將 SSISDB 資料庫 (就像任何其他使用者資料庫) 加入 AlwaysOn 可用性群組。 發生容錯移轉時，其中一個次要節點會自動變成新的主要節點。  
@@ -580,13 +578,13 @@ ms.lasthandoff: 09/27/2017
 3.  [在可用性群組中升級 SSISDB](#Upgrade)  
   
 ###  <a name="prereq"></a> 必要條件  
- 您必須執行下列必要條件步驟，才能針對 SSISDB 資料庫啟用 AlwaysOn 支援。  
+針對 SSISDB 資料庫啟用 Always On 支援之前，請先執行下列必要條件步驟。  
   
-1.  設定 Windows 容錯移轉叢集。 如需相關指示，請參閱 [安裝適用於 Windows Server 2012 的容錯移轉叢集功能和工具](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 部落格文章。 您應該在所有叢集節點上安裝此功能和工具。  
+1.  設定 Windows 容錯移轉叢集。 如需相關指示，請參閱 [安裝適用於 Windows Server 2012 的容錯移轉叢集功能和工具](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 部落格文章。 在所有叢集節點上安裝功能和工具。  
   
 2.  在叢集的每個節點上，安裝含有 Integration Services (SSIS) 功能的 SQL Server 2016。  
   
-3.  每個 SQL Server 執行個體啟用 Alwayson 可用性群組。 如需詳細資訊，請參閱 [啟用和停用 AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) 。  
+3.  啟用每個 SQL Server 執行個體的 Always On 可用性群組。 如需詳細資訊，請參閱 [啟用和停用 AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) 。  
   
 ###  <a name="Firsttime"></a> 設定適用於 AlwaysOn 的 SSIS 支援  
   
@@ -598,8 +596,11 @@ ms.lasthandoff: 09/27/2017
   
 > [!IMPORTANT]  
 > -   您必須在可用性群組的 **主要節點** 上執行這些步驟。
-> -   您必須啟用**SSIS 支援 Alwayson 的***之後*您將 SSISDB 加入 Alwayson 可用性群組。  
-  
+> -   將 SSISDB 新增至 Always On 群組之後，您必須啟用**適用於 Always On 的 SSIS 支援**。  
+
+> [!NOTE]
+> 如需此程序的詳細資訊，請參閱下列由 SQL Server MVP Marcos Freccia 提供的逐步解說與其他螢幕擷取畫面：[將 SSISDB 新增至 SQL Server 2016 的 AG](https://marcosfreccia.wordpress.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/) \(英文\)。
+
 ####  <a name="Step1"></a> 步驟 1：建立 Integration Services 目錄  
   
 1.  啟動 **SQL Server Management Studio** 並連接到您想要在叢集中設定為適用於 SSISDB 的 AlwaysOn 高可用性群組 **主要節點** 的 SQL Server 執行個體。  
@@ -613,47 +614,49 @@ ms.lasthandoff: 09/27/2017
 5.  輸入 **密碼**，然後按一下 [確定] 。 此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需詳細資訊，請參閱 [備份資料庫主要金鑰](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
 ####  <a name="Step2"></a> 步驟 2：將 SSISDB 新增至 AlwaysOn 可用性群組  
- 將 SSISDB 資料庫加入 AlwaysOn 可用性群組，幾乎等於是將任何其他使用者資料庫加入可用性群組。 請參閱 [使用可用性群組精靈](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)。  
+將 SSISDB 資料庫加入 AlwaysOn 可用性群組，幾乎等於是將任何其他使用者資料庫加入可用性群組。 請參閱 [使用可用性群組精靈](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)。  
   
- 您需要提供您在 **新增可用性群組** 精靈的 [選取資料庫]  頁面中建立 SSIS 目錄時指定的密碼。  
+提供您在 [新增可用性群組] 精靈的 [選取資料庫]  頁面中建立 SSIS 目錄時指定的密碼。
+
+當系統提示您 [選取您的資料同步處理喜好設定] 時，請選取 [略過初始資料同步處理]。
   
- ![新的可用性群組](../../integration-services/service/media/ssis-newavailabilitygroup.png "新增可用性群組")  
+ ![新增可用性群組](../../integration-services/service/media/ssis-newavailabilitygroup.png "新增可用性群組")  
   
 ####  <a name="Step3"></a> 步驟 3：啟用適用於 AlwaysOn 的 SSIS 支援  
- 建立 Integration Services 目錄之後，請以滑鼠右鍵按一下 [Integration Services 目錄]  節點，然後按一下 [啟用 AlwaysOn 支援...]  您應該會看到下列 [啟用 AlwaysOn 支援]  對話方塊。 如果這個功能表項目已停用，請確認您已安裝的所有必要條件，然後按一下 [重新整理] 。  
+ 建立 Integration Services 目錄之後，以滑鼠右鍵按一下 [Integration Services 目錄] 節點，然後按一下 [啟用 Always On 支援]。 您應該會看到下列 [啟用 AlwaysOn 支援]  對話方塊。 如果這個功能表項目已停用，請確認您已安裝的所有必要條件，然後按一下 [重新整理] 。  
   
- ![上的 永遠啟用支援](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
+ ![啟用 Always On 支援](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
   
 > [!WARNING]  
 >  在您啟用適用於 AlwaysOn 的 SSIS 支援之前，不支援自動容錯移轉 SSISDB 資料庫。  
   
- 新加入的次要複本從 Alwayson 可用性群組將會顯示在資料表中。 按一下 **[連接]** 按鈕，然後輸入驗證認證以連接到複本。 使用者帳戶必須是以啟用 SSIS 支援 Alwayson 的每個複本上的 sysadmin 群組的成員。 當您成功連接到每個複本之後，按一下 [確定]  以啟用適用於 AlwaysOn 的 SSIS 支援。  
+ 表格會顯示剛從 Always On 可用性群組新增的次要複本。 按一下 **[連接]** 按鈕，然後輸入驗證認證以連接到複本。 使用者帳戶必須是每個複本上的系統管理員群組成員，才能啟用 SSIS 的 Always On 支援。 當您成功連接到每個複本之後，按一下 [確定]  以啟用適用於 AlwaysOn 的 SSIS 支援。  
  
-如果**啟用 Alwayson 支援**操作功能表上的選項會出現在完成其他必要條件之後, 停用嘗試下列方法：
-1.  重新整理操作功能表，依序按一下**重新整理**選項。
-2.  請確定您要連接到主要節點。 您必須啟用 Alwayson 支援的主要節點上。
-3.  請確定 SQL Server 版本 13.0 或更高版本。 SSIS 支援 Alwayson 只能在 SQL Server 2016 和更新版本上。
+在您完成其他必要條件之後，如果操作功能表上的 [啟用 Always On 支援] 選項顯示為停用，請嘗試下列方法：
+1.  按一下 [重新整理] 選項，以重新整理操作功能表。
+2.  請確定您已連線到主要節點。 您必須啟用主要節點上的 Always On 支援。
+3.  請確定 SQL Server 版本為 13.0 或更新版本。 只有在 SQL Server 2016 和更新版本上，SSIS 才會支援 Always On。
 
 ###  <a name="Upgrade"></a> 在可用性群組中升級 SSISDB  
- 如果您要從先前的版本升級 SQL Server，而且 SSISDB 在 AlwaysOn 可用性群組中，則您的升級可能會遭到「SSISDB 在 AlwaysOn 可用性群組中檢查」規則所封鎖。 因為升級是在單一使用者模式中執行，而可用性資料庫必須是多使用者資料庫，就會發生此封鎖。 因此，在升級或修補期間，所有的可用性資料庫 (包括 SSISDB) 都要離線，而且不會進行升級或修補。 若要讓升級繼續，您必須先從可用性群組移除 SSISDB，接著升級或修補每個節點，然後將 SSISDB 加回可用性群組。  
+ 如果您要從先前的版本升級 SQL Server，而且 SSISDB 在 AlwaysOn 可用性群組中，則您的升級可能會遭到「SSISDB 在 AlwaysOn 可用性群組中檢查」規則所封鎖。 因為升級是在單一使用者模式中執行，而可用性資料庫必須是多使用者資料庫，就會發生此封鎖。 因此，在升級或修補期間，所有的可用性資料庫 (包括 SSISDB) 都要離線，而且不會進行升級或修補。 若要讓升級繼續，請先從可用性群組移除 SSISDB，再升級或修補每個節點，然後將 SSISDB 加回可用性群組。  
   
- 如果您遭到「SSISDB 在 AlwaysOn 可用性群組中檢查」規則封鎖，就必須依照這些步驟來升級 SQL Server。  
+ 如果您被「Always On 可用性群組中的 SSISDB 檢查」規則封鎖，就必須依照這些步驟來升級 SQL Server。  
   
 1.  從可用性群組中移除 SSISDB 資料庫。 如需詳細資訊，請參閱[將次要資料庫從可用性群組移除 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md) 和[將主要資料庫從可用性群組移除 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)。  
   
-2.  按一下升級精靈中的 [重新執行]。 「SSISDB 在 AlwaysOn 可用性群組中檢查」規則將會通過。  
+2.  按一下升級精靈中的 [重新執行]。 即可通過「Always On 可用性群組中的 SSISDB 檢查」規則。  
   
 3.  按 [下一步]  繼續升級。  
   
 4.  當您已升級所有節點之後，請將 SSISDB 資料庫加回 AlwaysOn 可用性群組。 如需詳細資訊，請參閱[將資料庫加入至可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/availability-group-add-a-database.md)。  
   
- 如果您在升級 SQL Server 時未遭到封鎖，且 SSISDB 在 AlwaysOn 可用性群組中，就必須在升級 SQL Server 資料庫引擎之後個別升級 SSISDB。 使用 SSIS 升級精靈來升級 SSISDB，如下列程序所述。  
+ 如果您在升級 SQL Server 時未遭到封鎖，且 SSISDB 在 Always On 可用性群組中，請在升級 SQL Server 資料庫引擎之後個別升級 SSISDB。 使用 SSIS 升級精靈來升級 SSISDB，如下列程序所述。  
   
-1.  將 SSISDB 資料庫移出可用性群組，或者如果 SSISDB 是可用性群組中唯一的資料庫，請刪除可用性群組。 您必須在可用性群組的 **主要節點** 上啟動 **SQL Server Management Studio** ，來執行這項工作。  
+1.  將 SSISDB 資料庫移出可用性群組，或者如果 SSISDB 是可用性群組中唯一的資料庫，請刪除可用性群組。 若要執行這項工作，請在可用性群組的**主要節點**上啟動 [SQL Server Management Studio]。  
   
 2.  從所有 **複本節點**移除 SSISDB 資料庫。  
   
-3.  在 **主要節點**上升級 SSISDB 資料庫。 在 SQL Server Management Studio 的物件總管 中，展開 [Integration Services 目錄] 、以滑鼠右鍵按一下 [SSISDB] ，然後選取 [資料庫升級] 。 遵循 **SSISDB 升級精靈** 中的指示來升級資料庫。 您必須在 **主要節點** 上本機啟動 **SSIDB 升級精靈**。  
+3.  在 **主要節點**上升級 SSISDB 資料庫。 在 SQL Server Management Studio 的物件總管 中，展開 [Integration Services 目錄] 、以滑鼠右鍵按一下 [SSISDB] ，然後選取 [資料庫升級] 。 遵循 **SSISDB 升級精靈** 中的指示來升級資料庫。 在**主要節點**本機上啟動 [SSIDB 升級精靈]。  
   
 4.  依照 [步驟 2：將 SSISDB 加入 AlwaysOn 可用性群組](#Step2) 的指示，將 SSISDB 加回可用性群組。  
   
@@ -666,4 +669,3 @@ ms.lasthandoff: 09/27/2017
 -   blogs.msdn.com 上的部落格文章： [SSIS 目錄存取控制提示](http://go.microsoft.com/fwlink/?LinkId=246669)。  
   
 -   blogs.msdn.com 上的部落格文章 [SSIS 目錄管理物件模型初探](http://go.microsoft.com/fwlink/?LinkId=254267)。  
-

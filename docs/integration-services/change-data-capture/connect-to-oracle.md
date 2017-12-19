@@ -1,5 +1,5 @@
 ---
-title: "連接到 Oracle |Microsoft 文件"
+title: "連線到 Oracle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- connOra
+f1_keywords: connOra
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1f8d78348d21f48a19ba05a55de836520a0afd6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: c330170cc9f97b97a82d0d151a09d0426b618bb6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-oracle"></a>連接到 Oracle
   當您初次加入或編輯 CDC 執行個體中使用的資料表時，系統可能會要求您連接到 Oracle 資料庫。 您應該輸入可以存取要擷取之資料表結構描述的 Oracle 使用者認證。 請在此對話方塊中輸入以下資訊：  
@@ -42,4 +39,3 @@ ms.lasthandoff: 09/28/2017
  [將資料表加入至 CDC 執行個體](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
   
   
-

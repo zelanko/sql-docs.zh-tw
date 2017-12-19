@@ -2,12 +2,12 @@
 title: "模型屬性 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f0f897572dda34193a87cab649cb3d1b9e155fcb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10fc0c4c74dddf6faaa2cfe0b2bff4e24695ec2d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="model-properties-ssas-tabular"></a>Model Properties (SSAS Tabular)
-  本主題描述表格式模型屬性。 每個表格式模型專案皆含有模型屬性，可影響您在 SQL Server 開發工具中撰寫之模型的建立方式、備份方式，以及工作空間資料庫的儲存方式。 此處所述的模型屬性，並不適用於已部署的模型。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題描述表格式模型屬性。 每個表格式模型專案皆含有模型屬性，可影響您在 SQL Server 開發工具中撰寫之模型的建立方式、備份方式，以及工作空間資料庫的儲存方式。 此處所述的模型屬性，並不適用於已部署的模型。  
   
  本主題的章節：  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  在 **[屬性]** 視窗中，按一下屬性，然後輸入值，或按一下向下鍵選取設定選項。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [專案屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   

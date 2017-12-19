@@ -1,5 +1,5 @@
 ---
-title: "LOG （SSIS 運算式） |Microsoft 文件"
+title: "LOG (SSIS 運算式) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - base-10 logarithms
 - LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 855937a74d16d811a6a97694fc9d32b6beb200ea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dd3333c26d95d2089d12d17ebd9be08fb88525ad
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="log-ssis-expression"></a>LOG (SSIS 運算式)
   傳回數值運算式以 10 為底的對數。  
@@ -69,10 +67,9 @@ LOG(Length)
 LOG(@Length)   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [EXP & #40;SSIS 運算式 & #41;](../../integration-services/expressions/exp-ssis-expression.md)   
- [LN & #40;SSIS 運算式 & #41;](../../integration-services/expressions/ln-ssis-expression.md)   
- [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另請參閱  
+ [EXP &#40;SSIS 運算式&#41;](../../integration-services/expressions/exp-ssis-expression.md)   
+ [LN &#40;SSIS 運算式&#41;](../../integration-services/expressions/ln-ssis-expression.md)   
+ [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

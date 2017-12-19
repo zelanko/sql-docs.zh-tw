@@ -2,12 +2,12 @@
 title: "AMO 資料採礦類別 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 14895a6d8ac42c49902a7315ae2afc53ce24902f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c7f7e5ed96e4d25d33d8d69124f9f94ccccdcef1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-data-mining-classes"></a>AMO 資料採礦類別
-  資料採礦類別可協助您建立、修改、刪除和處理資料採礦物件。 處理資料採礦物件包括建立資料採礦結構、建立資料採礦模型和處理模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]資料採礦類別可協助您建立、 修改、 刪除和處理資料採礦物件。 處理資料採礦物件包括建立資料採礦結構、建立資料採礦模型和處理模型。  
   
  如需有關如何設定環境，以及大約<xref:Microsoft.AnalysisServices.Server>， <xref:Microsoft.AnalysisServices.Database>， <xref:Microsoft.AnalysisServices.DataSource>，和<xref:Microsoft.AnalysisServices.DataSourceView>物件，請參閱[AMO 基礎類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)。  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
   
  建立完成後，<xref:Microsoft.AnalysisServices.MiningModel> 可以使用自己的處理方法進行處理，或者也可以在父物件使用其處理方法自行處理時，一併加以處理。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.AnalysisServices>   
  [AMO 基礎類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [程式設計 AMO 資料採礦物件](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md)   

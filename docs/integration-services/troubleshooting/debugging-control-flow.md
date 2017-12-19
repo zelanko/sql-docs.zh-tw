@@ -1,16 +1,17 @@
 ---
-title: "偵錯控制流程 |Microsoft 文件"
+title: "偵錯控制流程 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.setbreakpoints.f1
+f1_keywords: sql13.dts.designer.setbreakpoints.f1
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: dbf3a57ca87678aed1eac296b24e230d68db93b7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 3fbeb43740b012eb4af3b9bb38252a4e18006ba2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debugging-control-flow"></a>偵錯控制流程
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含您可用於疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中之控制流程的功能及工具。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供偵錯視窗。  
   
 ## <a name="breakpoints"></a>中斷點  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]設計工具提供**設定中斷點**對話方塊，在其中您可以藉由啟用中斷條件設定中斷點並暫停指定的中斷點可在執行封裝之前發生的次數。 中斷點可以在封裝層級啟用，也可以在個別元件層級啟用。 如果中斷條件在工作或容器層級啟用，則中斷點圖示會顯示在 [控制流程] 索引標籤之設計介面的工作或容器旁。 如果中斷條件在封裝上啟用，則中斷點圖示會顯示在 [控制流程] 索引標籤的標籤上。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具提供 [設定中斷點] 對話方塊，您可以啟用中斷條件，並指定套件的執行暫停之前中斷點可以出現的次數，在此設定中斷點。 中斷點可以在封裝層級啟用，也可以在個別元件層級啟用。 如果中斷條件在工作或容器層級啟用，則中斷點圖示會顯示在 [控制流程] 索引標籤之設計介面的工作或容器旁。如果中斷條件在封裝上啟用，則中斷點圖示會顯示在 [控制流程] 索引標籤的標籤上。  
   
  當叫用中斷點時，中斷點圖示會變更，以協助您識別中斷點的來源。 您可以在封裝執行時加入、刪除及變更中斷點。  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 08/03/2017
 -   [針對工作或容器設定中斷點以偵錯封裝](#debug)  
   
 ## <a name="progress-reporting"></a>進度報表  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]設計師 」 包含兩種類型的進度報表： 設計介面上的色彩編碼**控制流程**索引標籤，然後上的進度訊息**進度** 索引標籤。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具包含兩種類型的進度報告：[控制流程] 索引標籤之設計介面上的色彩編碼，以及 [進度] 索引標籤上的進度訊息。  
   
  當您執行封裝時，「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會使用指示執行狀態的色彩來顯示每個工作或容器，以描述執行進度。 您可以根據元素的色彩判斷它是在等候執行、執行中、已順利完成，還是未成功結束。 在您停止封裝執行之後，色彩編碼會消失。  
   
@@ -103,12 +104,12 @@ ms.lasthandoff: 08/03/2017
   
  下圖顯示 [進度] 索引標籤。  
   
- ![SSIS 設計師的 [進度] 索引標籤](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "SSIS 設計師的 [進度] 索引標籤")  
+ ![SSIS 設計工具的 [進度] 索引標籤](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "SSIS 設計工具的 [進度] 索引標籤")  
   
 ## <a name="debug-windows"></a>偵錯視窗  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含許多視窗，您可將其用於處理中斷點及偵錯包含中斷點的封裝。 若要了解每個視窗的詳細資訊，請開啟該視窗並按 F1，以顯示視窗的 [說明]。  
   
- 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中開啟這些視窗，請按一下 「偵錯」 功能表，指向 「視窗」，然後按一下 「中斷點」、「輸出」 或 「立即」。  
+ 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中開啟這些視窗，請按一下 [偵錯] 功能表，指向 [視窗]，然後按一下 [中斷點]、[輸出] 或 [立即]。  
   
  下表描述這些視窗。  
   
@@ -135,7 +136,7 @@ ms.lasthandoff: 08/03/2017
   
     -   若要在事件處理常式中設定中斷點，請按一下 [事件處理常式] 索引標籤，並以滑鼠右鍵按一下工作、「For 迴圈」容器、「Foreach 迴圈」容器或「時序」容器，然後按一下 [編輯中斷點]。  
   
-4.  在**設定中斷點\<容器名稱 >**對話方塊方塊中，選取要啟用的中斷點。  
+4.  在 [設定中斷點 \<容器名稱>] 對話方塊中，選取要啟用的中斷點。  
   
 5.  選擇性地修改每個中斷點的叫用計數類型和叫用計數數目。  
   
@@ -165,6 +166,5 @@ ms.lasthandoff: 08/03/2017
  指定觸發中斷的叫用次數。 如果中斷點永遠有效，則無法使用此選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [疑難排解封裝開發的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
- [在指令碼工作和指令碼元件中設定中斷點來偵錯指令碼](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   
-
+ [套件開發的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
+ [在指令碼工作和指令碼元件中設定中斷點來對指令碼偵錯](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   

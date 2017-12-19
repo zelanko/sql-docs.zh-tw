@@ -1,5 +1,5 @@
 ---
-title: "CDC 設計工具主控台簡介 |Microsoft 文件"
+title: "CDC 設計工具主控台簡介 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
-ms.openlocfilehash: 12afe7ad2b83c4ab25e4c0803d015442ef9cfc55
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a8e2ce4d5ae36f6b9c202eda8b7bb15d4babe3b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 設計工具主控台簡介
   本節描述 Attunity Oracle Change Data Capture (CDC) 設計工具的安裝程序。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="source-oracle-database"></a>來源 Oracle 資料庫
   
 -   Oracle Database 10g Release 2
--   Oracle Database 11g Release 1 和 2 版
+-   Oracle Database 11g Release 1 和 Release 2
 -   Oracle Database 12c 正在進行傳統安裝。 (不支援多租用戶安裝。)  
 
 ### <a name="target-sql-server-database"></a>目標 SQL Server 資料庫
@@ -70,4 +68,3 @@ ms.lasthandoff: 08/03/2017
  使用 [控制台] 的 [程式和功能] 將 CDC 設計工具主控台解除安裝。  
   
   
-

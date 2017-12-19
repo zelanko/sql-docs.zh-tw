@@ -2,12 +2,12 @@
 title: "授與資料庫權限 (Analysis Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ae21903694c80a5f919374e4e367dc82b4cec09e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d313637275d28a83b8a0f79e23bfc46bd972ae2a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-database-permissions-analysis-services"></a>授與資料庫權限 (Analysis Services)
-  如果您具備關聯式資料庫的背景並正在嘗試接觸 Analysis Services 資料庫管理，您需要了解的第一件事是，就資料存取而言，資料庫不是 Analysis Services 中主要的安全物件。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]處理 Analysis Services 資料庫管理與在關聯式資料庫背景時，如果您需要了解第一件事是，根據資料存取的資料庫不是 Analysis Services 中的主要安全性實體物件。  
   
  Analysis Services 中主要的查詢結構是 Cube (或表格式模型)，以及在這些特定物件上設定的使用者權限。 對照關聯式資料庫引擎 (已在資料庫本身設定資料庫登入和使用者權限 (通常是 **db_datareader**)，Analysis Services 資料庫大部分都是資料模型中主要查詢物件的容器。 如果您當前的目標是針對 Cube 或表格式模型啟用資料存取，您可以立即略過資料庫權限，並直接前往以下主題：[授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="read-definition"></a>讀取定義  
  就像 [處理資料庫] 一樣，在資料庫層級設定 [讀取定義] 權限也會對資料庫內的其他物件產生串聯效果。 如果您想要在更細微的層級上設定 [讀取定義] 權限，您必須清除在 [一般] 窗格中以資料庫屬性方式顯示的 [讀取定義]。 如需詳細資訊，請參閱[授與物件中繼資料的讀取定義權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [將伺服器管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [授與處理權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   

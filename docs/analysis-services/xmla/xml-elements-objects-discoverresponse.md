@@ -2,12 +2,12 @@
 title: "DiscoverResponse 元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6f5051e1c5a9841ccf4a949a6c5b99f45a9fc8d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f575ce174f464d739deded0b0d59b8375c222bb9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-elements---objects---discoverresponse"></a>XML 項目物件-DiscoverResponse
-  包含執行個體所傳回的資訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]回應[探索](../../analysis-services/xmla/xml-elements-methods-discover.md)方法呼叫。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]包含執行個體所傳回的資訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]回應[探索](../../analysis-services/xmla/xml-elements-methods-discover.md)方法呼叫。  
   
  **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-分析  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  **DiscoverResponse**項目是最上層的項目之 SOAP 回應的主體內**探索**方法。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ExecuteResponse 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-objects-executeresponse.md)   
  [物件 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-objects.md)  
   

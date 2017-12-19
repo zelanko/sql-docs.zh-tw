@@ -2,9 +2,12 @@
 title: "Audit Server Object Take Ownership 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08eb73672db400903897dfb9cff5f3b9370e6e1d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5e860f06317c13c1d2170e1b2175dc5d386b0462
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-server-object-take-ownership-event-class"></a>Audit Server Object Take Ownership 事件類別
-  當伺服器範圍內的物件擁有者變更時，會發生 **Audit Server Object Take Ownership** 事件類別。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 當伺服器範圍內的物件擁有者變更時，會發生 **Audit Server Object Take Ownership** 事件類別。  
   
 ## <a name="audit-server-object-take-ownership-event-class-data-columns"></a>Audit Server Object Take Ownership 事件類別資料行  
   

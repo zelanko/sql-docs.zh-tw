@@ -15,15 +15,17 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 7859f555672077ee77d46fa05789f6757943cafe
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 015c170e998fc824a8816010288b33be33d89005
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>使用 ssis conf，設定 Linux 上的 SQL Server Integration Services
 
-在您執行`ssis-conf`Red Hat Enterprise Linux 和 Ubuntu 安裝 SQL Server Integration Services (SSIS) 時的設定指令碼。 您可以使用此公用程式來設定下列屬性：
+在您執行`ssis-conf`Red Hat Enterprise Linux 和 Ubuntu 安裝 SQL Server Integration Services (SSIS) 時的設定指令碼。 如需安裝 SSIS 的詳細資訊，請參閱[安裝 SQL Server Integration Services (SSIS) 在 Linux 上](sql-server-linux-setup-ssis.md)。
+
+您也可以使用`ssis-conf`公用程式來設定下列屬性：
 
 | Command | Description |
 |-------------|---------------------------------------------------------------------|

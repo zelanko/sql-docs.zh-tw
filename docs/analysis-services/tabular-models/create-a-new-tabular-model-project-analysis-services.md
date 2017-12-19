@@ -2,12 +2,12 @@
 title: "建立新的表格式模型專案 (Analysis Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c63f5ceb89e975cf320d9e84419d34a5fe4ecfc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ba385fc25fd2e67cfdd25be4136aec57729e6e1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-new-tabular-model-project-analysis-services"></a>建立新的表格式模型專案 (Analysis Services)
-  此主題描述如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立一個新的空白表格式模型專案。 建立新的模型專案之後，您可以從資料來源匯入資料，以便開始撰寫模型專案。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題描述如何建立新的空白表格式模型專案中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 建立新的模型專案之後，您可以從資料來源匯入資料，以便開始撰寫模型專案。  
   
 #### <a name="to-create-a-new-blank-tabular-model-project"></a>若要建立新的空白表格式模型專案  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  建立新的專案後，請務必設定專案和模型屬性。 如需詳細資訊，請參閱 [專案屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md) (專案屬性 (SSAS 表格式)) 和 [模型屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)中建立一個新的空白表格式模型專案。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [專案屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
  [模型屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
   

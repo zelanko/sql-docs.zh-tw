@@ -2,12 +2,12 @@
 title: "進度報表事件類別目錄 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c45bcf105dcd2de68f1ba25bdafebc9cb77c295d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0c2038ea3e714991c6574619b4de9084a06876b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="progress-reports-event-category"></a>進度報表事件類別目錄
-  進度報表事件類別目錄具有下表所描述的事件類別。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]進度報表事件類別目錄具有下表中所述的事件類別。  
   
 |Event Class|事件識別碼|說明|  
 |-----------------|--------------|-----------------|  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  如需每個 [進度報表] 事件類別之相關資料行的資訊，請參閱 [進度報表資料行](../../analysis-services/trace-events/progress-reports-data-columns.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 追蹤事件](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

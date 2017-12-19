@@ -1,6 +1,6 @@
 ---
 title: "Linux 上安裝 SQL Server Integration Services |Microsoft 文件"
-description: "本主題描述如何在 Linux 上安裝 SQL Server Integration Services (SSIS)。"
+description: "本文說明如何在 Linux 上安裝 SQL Server Integration Services (SSIS)。"
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 851d8dc5121eb12b7d754a95db73494adcc632b4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上安裝 SQL Server Integration Services (SSIS)
 
@@ -117,21 +117,11 @@ sudo yum update mssql-server-is
 ### <a name="remove-ssis"></a>移除 SSIS
 若要移除`mssql-server-is`，您可以執行下列命令：
 ```bash
-sudo yum remove msssql-server-is
+sudo yum remove mssql-server-is
 ```
-
-
-
-
-## <a name="run-a-package"></a>執行封裝
-將 SSIS 封裝複製至 Linux 電腦。 然後使用下列命令來執行封裝。
-
-```bash
-dtexec /F <package name> /DE <protection password>
-```
-
-
 
 ## <a name="next-steps"></a>後續的步驟
 
-如需如何在 Linux 上使用 SSIS 來擷取、 轉換和載入資料的詳細資訊，請參閱[擷取、 轉換和載入資料的 SQL Server on Linux 與 SSIS](sql-server-linux-migrate-ssis.md)。
+若要在 Linux 上執行 SSIS 封裝，請參閱[擷取、 轉換及載入資料的 SQL Server on Linux 與 SSIS](sql-server-linux-migrate-ssis.md)。
+
+若要設定在 Linux 上的 SSIS 的其他設定，請參閱[ssis conf 與 Linux 上設定 SQL Server Integration Services](sql-server-linux-configure-ssis.md)。

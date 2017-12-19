@@ -1,10 +1,13 @@
 ---
 title: "第 3 課：資料庫備份至 URL | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec613fcc50ceb8cf712ad4a51b543a686cdb9cfd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f63e84d8c22b5c88214cc4d85a6bebf572c41430
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-3-database-backup-to-url"></a>第 3 課：資料庫備份至 URL
-在這一課，您會將內部部署 SQL Server 2016 執行個體中的 AdventureWorks2014 資料庫，備份至您在 [第 1 課︰在 Azure 容器上建立預存存取原則和共用存取簽章](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)中建立的 Azure 容器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您會將內部部署 SQL Server 2016 執行個體中的 AdventureWorks2014 資料庫，備份至您在[第 1 課︰在 Azure 容器上建立預存存取原則和共用存取簽章](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)中建立的 Azure 容器。  
   
 > [!NOTE]  
 > 如果您想要將 SQL Server 2012 SP1 CU2 或更新版本的資料庫或 SQL Server 2014 資料庫備份至此 Azure 容器，您可以使用 [這裡](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) 所記載之已被取代的語法，透過 WITH CREDENTIAL 語法備份至 URL。  

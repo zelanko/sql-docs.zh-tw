@@ -3,8 +3,11 @@ title: "將自訂報表加入 Management Studio | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a46f60b50eee6f24c9f9cd20571a9954c9630560
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 99bdd9671b2cea32f88b3904b3d67f698c50d085
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>將自訂報表加入 Management Studio
-本主題描述如何建立儲存為 .rdl 檔案的簡單 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] 報表，然後將該 rdl 檔案加入至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 做為自訂報表。 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 可以建立多種精密報表。 若要使用本主題來建立報表，您必須先在電腦上安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 。 您不需要在 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ，即可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]執行自訂報表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何建立儲存為 .rdl 檔案的簡單 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] 報表，然後將該 rdl 檔案新增至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 作為自訂報表。 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 可以建立多種精密報表。 若要使用本主題來建立報表，您必須先在電腦上安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 。 您不需要在 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ，即可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]執行自訂報表。  
   
  
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>建立儲存成 .rdl 檔的簡單報表  

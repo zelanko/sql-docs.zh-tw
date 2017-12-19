@@ -1,5 +1,5 @@
 ---
-title: "Excel 檔案，並使用 「 Foreach 迴圈 」 容器的資料表執行迴圈 |Microsoft 文件"
+title: "使用 Foreach 迴圈容器執行 Excel 檔案和資料表迴圈 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b4b4a69b1712a5b84b49c63aee4242cb6355bc5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: 41d1bbd66cb2dc73441e95cfa9573f60ced3358b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表
   此主題的程序描述如何使用「Foreach 迴圈」容器搭配適當列舉值，循環使用資料夾中的 Excel 活頁簿，或循環使用 Excel 活頁簿中的資料表。  
@@ -101,10 +99,9 @@ ms.lasthandoff: 09/28/2017
 ## <a name="see-also"></a>另請參閱  
  [設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [新增或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)   
- [Excel 連接管理員](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [Excel 連線管理員](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Excel 來源](../../integration-services/data-flow/excel-source.md)   
  [Excel 目的地](../../integration-services/data-flow/excel-destination.md)   
  [以指令碼工作處理 Excel 檔案](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   
-

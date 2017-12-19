@@ -1,5 +1,5 @@
 ---
-title: "步驟 4： 加入一般檔案目的地 |Microsoft 文件"
+title: "步驟 4：新增一般檔案目的地 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ff4badae70e5762f51003c0d3edae3ad1fb3907b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6fb6a9d21c02faf2615d786dda40f35da4b25a7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-4---adding-a-flat-file-destination"></a>課程 4-4-加入一般檔案目的地
+# <a name="lesson-4-4---adding-a-flat-file-destination"></a>課程 4-4 - 新增一般檔案目的地
 [查閱貨幣索引鍵] 轉換的錯誤輸出，將使得查閱作業失敗的任何資料列重新導向至 [指令碼] 轉換。 為了加強所發生錯誤的相關資訊，[指令碼] 轉換執行一個取得錯誤描述的指令碼。  
   
 在這項工作中，您將失敗資料列的所有資訊儲存至分隔檔案中供以後處理。 若要儲存失敗的資料列，您必須為包含該錯誤資料的文字檔加入及設定一般檔案連接管理員和一般檔案目的地。 透過設定「一般檔案」目的地使用之「一般檔案」連接管理員上的屬性，您可以指定「一般檔案」目的地如何格式化並寫入文字檔。 如需詳細資訊，請參閱＜ [Flat File Connection Manager](../integration-services/connection-manager/flat-file-connection-manager.md) ＞和＜ [Flat File Destination](../integration-services/data-flow/flat-file-destination.md)＞。  
@@ -73,4 +70,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

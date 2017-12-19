@@ -1,5 +1,5 @@
 ---
-title: "catalog.delete_customized_logging_level |Microsoft 文件"
+title: catalog.delete_customized_logging_level | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a2c53009bfbd2f0876d4cf0a01cf8fa2b5bc738e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5268aa751ca177158cbcb3627aa5dd61473f5e06
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeletecustomizedlogginglevel"></a>catalog.delete_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  刪除現有的自訂的記錄層級。 如需自訂的記錄層級的詳細資訊，請參閱[Integration Services &#40;SSIS &#41;記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+  刪除現有的自訂記錄層次。 如需自訂記錄層次的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,10 +36,10 @@ delete_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @level_name =] *l*  
- 名稱的現有自訂記錄層級刪除。  
+ [ @level_name = ] *level_name*  
+ 要刪除的現有自訂記錄層次名稱。  
   
- *l*是**nvarchar （128)**。  
+ *level_name* 是 **nvarchar(128)**。  
   
 ## <a name="remarks"></a>備註  
   
@@ -63,7 +61,6 @@ delete_customized_logging_level [ @level_name = ] level_name
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單描述會導致預存程序失敗的情況。  
   
--   使用者沒有必要的權限。  
+-   使用者沒有必要權限。  
   
   
-

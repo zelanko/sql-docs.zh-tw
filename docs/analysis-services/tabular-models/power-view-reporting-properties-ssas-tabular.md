@@ -2,12 +2,12 @@
 title: "電源檢視報表屬性 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83c7a6d7bc2008e1532a302f68c6db93123a24b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d8ef26565ff777cf7f280408d08791364c136225
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---reporting-properties-ssas-tabular"></a>Power View-報表屬性 (SSAS 表格式)
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 為商業使用者 (例如資料分析師、企業決策者和資訊工作者) 提供了直覺式的隨選報表。 他們可以從根據 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中發行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的表格式模型或是使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 撰寫的表格式模型，輕鬆地建立資料檢視並與其互動，然後將其部署到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services 執行個體。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是從 SharePoint Server 2010 或更新版本啟動的瀏覽器型 Silverlight 應用程式。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]提供直覺式的隨選報表的商務使用者，例如資料分析師、 企業決策者和資訊工作者。 他們可以從根據 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中發行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的表格式模型或是使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 撰寫的表格式模型，輕鬆地建立資料檢視並與其互動，然後將其部署到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services 執行個體。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是從 SharePoint Server 2010 或更新版本啟動的瀏覽器型 Silverlight 應用程式。  
   
  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中撰寫表格式模型專案時，您可以設定 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表特有的某些報表屬性。 本節的主題描述如何最佳化模型來提升 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]中的報告體驗。  
   

@@ -1,5 +1,5 @@
 ---
-title: "執行階段方法的資料在資料流程元件 |Microsoft 文件"
+title: "資料流程元件的執行階段方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da14a10c936d1966e9317fe50141ecdb86c23379
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f978a101e721ee1b96caa59e7633988777d30dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>資料流程元件的執行階段方法
   在執行階段，資料流程工作會檢查元件的順序、準備執行計畫，以及管理執行工作計畫的工作者執行緒集區。 此工作會從來源載入資料列、透過轉換處理它們，然後將它們儲存到目的地。  
@@ -167,10 +164,10 @@ public overrides sub PrimeOutput( outputs as Integer , outputIDs() as Integer ,b
 End Sub  
 ```  
   
- 如需有關開發元件加入至輸出緩衝區的資料列的詳細資訊，請參閱[開發自訂來源元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)和[開發具有非同步輸出的自訂轉換元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)。  
+ 如需開發將資料列新增至輸出緩衝區之元件的詳細資訊，請參閱[開發自訂來源元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)和[開發具有非同步輸出的自訂轉換元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)。  
   
 ### <a name="receiving-rows"></a>接收資料列  
- 元件會從 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 物件中的上游元件接收資料列。 資料流程工作會提供 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 物件，該物件包含上游元件以 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法的參數形式加入至資料流程的資料列。 這個輸入緩衝區可用以檢查和修改緩衝區中的資料列與資料行，但是無法用以加入或是移除資料列。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法會重複呼叫，直到沒有其他可用的緩衝區為止。 最後一次呼叫，<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>屬性是**true**。 您可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> 方法，使緩衝區前進到下一個資料列，以逐一查看緩衝區中的資料列集合。 這個方法會傳回**false**緩衝區位於集合中的最後一個資料列。 除非您在已處理最後一個資料列之後還必須執行其他動作，否則不必檢查 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 屬性。  
+ 元件會從 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 物件中的上游元件接收資料列。 資料流程工作會提供 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 物件，該物件包含上游元件以 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法的參數形式加入至資料流程的資料列。 這個輸入緩衝區可用以檢查和修改緩衝區中的資料列與資料行，但是無法用以加入或是移除資料列。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法會重複呼叫，直到沒有其他可用的緩衝區為止。 上次呼叫它時，<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 屬性是 **true**。 您可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> 方法，使緩衝區前進到下一個資料列，以逐一查看緩衝區中的資料列集合。 當緩衝區位於集合中的最後一個資料列時，此方法會傳回 **false**。 除非您在已處理最後一個資料列之後還必須執行其他動作，否則不必檢查 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 屬性。  
   
  下列文字將示範使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> 方法和 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 屬性的正確模式：  
   
@@ -216,10 +213,9 @@ Public Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pipe
 End Sub  
 ```  
   
- 如需開發接收輸入緩衝區中的資料列的元件的詳細資訊，請參閱[開發自訂目的地元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)和[開發具有同步輸出的自訂轉換元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)。  
+ 如需開發接收輸入緩衝區中資料列之元件的詳細資訊，請參閱[開發自訂目的地元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)和[開發具有同步輸出的自訂轉換元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程元件的設計階段方法](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   
-

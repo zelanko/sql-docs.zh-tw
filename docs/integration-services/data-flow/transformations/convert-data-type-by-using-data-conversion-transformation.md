@@ -1,5 +1,5 @@
 ---
-title: "使用資料轉換 」 轉換資料類型 |Microsoft 文件"
+title: "使用資料轉換轉換資料類型 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 3a6de227fc2fd0e93abfc9e8ac5300dbf0a137ac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: fcae6a724feb11400c8b6c3d4e149bc6b87504c9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="convert-data-type-by-using-data-conversion-transformation"></a>使用資料轉換 」 轉換資料類型
+# <a name="convert-data-type-by-using-data-conversion-transformation"></a>使用資料轉換轉換資料類型
   若要加入及設定「資料轉換」，封裝必須已包含至少一個「資料流程」工作及一個來源。  
   
 ### <a name="to-convert-data-to-a-different-data-type"></a>轉換資料至不同的資料類型  
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/28/2017
  [資料流程工作](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

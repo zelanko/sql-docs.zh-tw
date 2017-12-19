@@ -1,5 +1,5 @@
 ---
-title: "資料設定檔檢視器 |Microsoft 文件"
+title: "資料設定檔檢視器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.dataprofileviewer.f1
+f1_keywords: sql13.dts.dataprofileviewer.f1
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 78476021d8f54edb0f26748e6d610f9590bee037
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: f364b536b40a68565eb1dac1c8709dc28931043e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profile-viewer"></a>資料設定檔檢視器
   檢視和分析資料設定檔是資料分析程序中的下一個步驟。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行「資料分析」工作並計算資料設定檔後，檢視這些設定檔。 如需如何設定和執行「資料分析」工作的詳細資訊，請參閱 [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。  
@@ -41,7 +38,7 @@ ms.lasthandoff: 08/11/2017
   
 -   以滑鼠右鍵按一下 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的 [資料分析] 工作，然後按一下 [編輯]。 在 [資料分析工作編輯器] 的 [一般] 頁面上按一下 [開啟設定檔檢視器]。  
   
--   在資料夾中， *\<磁碟機 >*: \Program Files (x86) |程式 Files\Microsoft SQL Server\110\DTS\Binn 中，執行 DataProfileViewer.exe。  
+-   在 \<磁碟機>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中，執行 DataProfileViewer.exe。  
   
  此檢視器可使用多個窗格，顯示您所要求與計算之結果的設定檔以及選擇性的詳細資料與向下鑽研能力：  
   
@@ -98,7 +95,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-length-distribution-profile"></a>設定檔類型 = 資料行長度散發設定檔  
   
-##### <a name="column-length-distribution-profile---column-pane"></a>資料行長度散發設定檔-\<資料行 > 窗格  
+##### <a name="column-length-distribution-profile---column-pane"></a>資料行長度散發設定檔 - \<資料行> 窗格  
  **最小長度**  
  顯示這個資料行中值的最小長度。  
   
@@ -118,7 +115,7 @@ ms.lasthandoff: 08/11/2017
  **長度**  
  顯示在已分析資料行中找到的資料行長度。  
   
- **計數**  
+ **Count**  
  顯示已分析資料行的值具有 [長度] 資料行中所顯示之長度的資料列數目。  
   
  **百分比**  
@@ -126,7 +123,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-null-ratio-profile"></a>設定檔類型 = 資料行 Null 比例設定檔  
   
-##### <a name="column-null-ratio-profile---column-pane"></a>資料行 Null 比例設定檔-\<資料行 > 窗格  
+##### <a name="column-null-ratio-profile---column-pane"></a>資料行 Null 比例設定檔 - \<資料行> 窗格  
  **Null 計數**  
  顯示已分析資料行具有 Null 值的資料列數目。  
   
@@ -138,7 +135,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-pattern-profile"></a>設定檔類型 = 資料行模式設定檔  
   
-##### <a name="column-pattern-profile---column-pane"></a>資料行模式設定檔-\<資料行 > 窗格  
+##### <a name="column-pattern-profile---column-pane"></a>資料行模式設定檔 - \<資料行> 窗格  
  **資料列計數**  
  顯示資料表或檢視表中的資料列數目。  
   
@@ -151,7 +148,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-statistics-profile"></a>設定檔類型 = 資料行統計資料設定檔  
   
-##### <a name="column-statistics-profile---column-pane"></a>資料行統計資料設定檔-\<資料行 > 窗格  
+##### <a name="column-statistics-profile---column-pane"></a>資料行統計資料設定檔 - \<資料行> 窗格  
  **最小值**  
  顯示在已分析資料行中找到的最小值。  
   
@@ -166,7 +163,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-value-distribution-profile"></a>設定檔類型 = 資料行值散發設定檔  
   
-##### <a name="column-value-distribution-profile---column-pane"></a>資料行值散發設定檔-\<資料行 > 窗格  
+##### <a name="column-value-distribution-profile---column-pane"></a>資料行值散發設定檔 - \<資料行> 窗格  
  **相異值的數目**  
  顯示在已分析資料行中找到之相異值的計數。  
   
@@ -177,7 +174,7 @@ ms.lasthandoff: 08/11/2017
  **Value**  
  顯示在已分析資料行中找到的相異值。  
   
- **計數**  
+ **Count**  
  顯示已分析資料行具有 [值] 資料行中所顯示之值的資料列數目。  
   
  **百分比**  
@@ -185,7 +182,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--candidate-key-profile"></a>設定檔類型 = 候選索引鍵設定檔  
   
-##### <a name="candidate-key-profile---table-pane"></a>候選索引鍵設定檔-\<資料表 > 窗格  
+##### <a name="candidate-key-profile---table-pane"></a>候選索引鍵設定檔 - \<資料表> 窗格  
  **索引鍵資料行**  
  顯示針對分析成候選索引鍵所選取的資料行。  
   
@@ -193,7 +190,7 @@ ms.lasthandoff: 08/11/2017
  顯示候選索引鍵資料行或資料行組合的強度 (以百分比為單位)。 小於 100% 的索引鍵強度表示存在重複的值。  
   
 ##### <a name="key-violations-pane"></a>索引鍵違規窗格  
- **\<column1 >， \<column2 > 等等。**  
+ **\<資料行1>、\<資料行2> 等等。**  
  顯示在已分析資料行中找到的重複值。  
   
  **Count**  
@@ -216,17 +213,17 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  如果資料中錯誤值的百分比很高，可能會導致功能相依性設定檔產生非預期的結果。 例如，在 90% 的資料列中，州值 "WI" 代表郵遞區號值 "98052"。 此設定檔會將包含正確州值 "WA" 的資料列回報成違規。  
   
- **\<行列式資料行名稱 >**  
+ **\<行列式資料行名稱>**  
  顯示這個功能相依性違規的執行個體中行列式資料行或資料行組合的值。  
   
- **\<相依資料行名稱 >**  
+ **\<相依資料行名稱>**  
  顯示這個功能相依性違規的執行個體中相依資料行的值。  
   
  **支持度計數**  
  顯示行列式資料行值會決定相依資料行的資料列數目。  
   
  **違規計數**  
- 顯示行列式資料行值無法決定相依資料行的資料列數目 (這些是相依值所在中顯示之值的資料列**\<相依資料行名稱 >**資料行。)  
+ 顯示行列式資料行值無法決定相依資料行的資料列數目 (這些是相依值為 **\<相依資料行名稱>** 資料行中所顯示之值的資料列)。  
   
  **支持度百分比**  
  顯示行列式資料行會決定相依資料行的資料列百分比。  
@@ -244,10 +241,9 @@ ms.lasthandoff: 08/11/2017
  顯示資料行之間重疊的強度 (以百分比為單位)。 小於 100% 的索引鍵強度表示發生了在超集值中找不到子集值的情況。  
   
 ##### <a name="inclusion-violations-pane"></a>包含違規窗格  
- **\<column1 >， \<column2 > 等等。**  
+ **\<資料行1>、\<資料行2> 等等。**  
  顯示子集資料行中的值，但這些值在超集資料行中找不到。  
   
  **Count**  
  顯示指定之資料行具有第一個資料行中所顯示之值的資料列數目。  
   
-

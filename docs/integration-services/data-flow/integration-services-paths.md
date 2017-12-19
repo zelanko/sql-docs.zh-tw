@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 路徑 |Microsoft 文件"
+title: "Integration Services 路徑 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 541c8faa4c878922411680646f3fa7a557eefe0f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 388a88d1f9a7ad6b18b2f04a702d2198c644e4fe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-paths"></a>Integration Services 路徑
   將一個資料流程元件的輸出與另一元件的輸入連接，路徑可連接資料流程中的兩個元件。 路徑具有一個來源和一個目的地。 例如，如果路徑連接 OLE DB 來源和「排序」轉換，則 OLE DB 來源是路徑的來源，而「排序」轉換是路徑的目的地。 來源是路徑開始處的元件，而目的地是路徑結束處的元件。  
@@ -49,7 +47,7 @@ ms.lasthandoff: 09/26/2017
   
  中繼資料顯示上一個元件輸出中之每個資料行的名稱、資料類型、有效位數、小數位數、長度、字碼頁和來源元件。 來源元件是建立資料行的資料流程元件。 但不一定是資料流程中的第一個元件。 例如，「聯集全部」和「排序」轉換都會建立自己的資料行，因此它們是其輸出資料行的來源。 相反地，「複製資料行」轉換可以通過資料行而不對其進行變更，或可以藉由複製輸入資料行來建立新的資料行。 因此「複製資料行」轉換僅是新資料行的來源元件。  
 
-## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>設定路徑以資料流程路徑編輯器 的屬性
+## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>使用資料流程路徑編輯器來設定路徑的屬性
 路徑會連接兩個資料流程元件。 在您可以設定路徑屬性之前，資料流程必須包含至少兩個已連接的資料流程元件。
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
@@ -64,7 +62,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 
-## <a name="general-page---data-flow-path-editor"></a>[一般] 頁面-資料流程路徑編輯器
+## <a name="general-page---data-flow-path-editor"></a>一般頁面 - 資料流程路徑編輯器
 使用 **[資料流程路徑編輯器]** 對話方塊，即可設定路徑屬性、檢視資料行中繼資料，以及管理附加至路徑的資料檢視器。  
   
  使用 **[資料流程路徑編輯器]** 對話方塊的 **[一般]** 節點，即可命名和描述路徑，以及指定路徑註解的選項。  
@@ -91,7 +89,7 @@ ms.lasthandoff: 09/26/2017
  **SourceName**  
  顯示路徑開頭的輸出。  
  
-## <a name="metadata-page---data-flow-path-editor"></a>中繼資料] 頁面的 [資料流程路徑編輯器
+## <a name="metadata-page---data-flow-path-editor"></a>中繼資料頁面 - 資料流程路徑編輯器
 使用 [資料流程路徑編輯器] 對話方塊的 [中繼資料] 頁面，即可檢視路徑資料行的中繼資料。  
   
 ### <a name="options"></a>選項。  
@@ -128,10 +126,10 @@ ms.lasthandoff: 09/26/2017
  **來源元件**  
  列出是資料行來源的資料流程元件。  
   
- **複製到剪貼簿**  
+ **複製至剪貼簿**  
  將資料行中繼資料複製到剪貼簿。 依預設，所有中繼資料列都會加以複製，就像依目前顯示的順序加以排序一般。  
  
-## <a name="data-viewers-page---data-flow-path-editor"></a>資料檢視器頁面資料流程路徑編輯器
+## <a name="data-viewers-page---data-flow-path-editor"></a>資料檢視器頁面 - 資料流程路徑編輯器
 使用 **[資料流程路徑編輯器]** 對話方塊的 **[資料檢視器]** 頁面，即可管理附加至路徑的資料檢視器。  
   
 ### <a name="options"></a>選項。  
@@ -155,7 +153,7 @@ ms.lasthandoff: 09/26/2017
   
  本主題將列出及描述連接資料流程物件之路徑的自訂屬性。  
   
-### <a name="custom-properties-of-a-path"></a>路徑的自訂屬性  
+### <a name="custom-properties-of-a-path"></a>自訂路徑屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，連接資料流程中元件的路徑會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 介面。  
   
  下表將描述資料流程中路徑的可設定屬性。 資料流程引擎也會將值指派給這裡未列出的其他唯讀屬性。  
@@ -165,4 +163,3 @@ ms.lasthandoff: 09/26/2017
 |PathAnnotation|整數 (列舉)|指出設計師介面上是否應該與路徑一起顯示註解的值。 可能的值為 **AsNeeded**、 **SourceName**、 **PathName**和 **Never**。 預設值為 **AsNeeded**。|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|與路徑相關聯的輸入。|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|與路徑相關聯的輸出。|  
-

@@ -1,5 +1,5 @@
 ---
-title: "Analysis Services 執行 DDL 工作 |Microsoft 文件"
+title: "Analysis Services 執行 DDL 工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 908b95b4020cb20e02bb2d196d95860ddca27049
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作
   「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL」工作會執行可建立、卸除或修改採礦模型和多維度物件 (如 Cube 和維度) 的資料定義語言 (DDL) 陳述式。 例如，DDL 陳述式可在 **Adventure Works** Cube 中建立資料分割，或在 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中所含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範例資料庫) 中刪除維度。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="ddl-statements"></a>DDL 陳述式  
  DDL 陳述式會在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 中以陳述式的方式呈現，在 XML for Analysis (XMLA) 命令中則會加上框架。  
   
--   ASSL 是用來定義和描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，及其包含的資料庫和資料庫物件。 如需詳細資訊，請參閱 [Analysis Services 指令碼語言 &#40;ASSL&#41; 參考](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)。  
+-   ASSL 是用來定義和描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，及其包含的資料庫和資料庫物件。 如需詳細資訊，請參閱 [Analysis Services 指令碼語言 &#40;ASSL&#41; 參考 ](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)。  
   
 -   XMLA 為命令語言，用來傳送動作命令 (如「建立」、「改變」或「處理」) 至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體。 如需詳細資訊，請參閱 [XML for Analysis &#40;XMLA&#41; 參考](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)。  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 08/11/2017
  由於 DDL 陳述式可能包含密碼和其他機密資訊，因此包含一或多項「[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL」工作的封裝應使用封裝保護等級 **EncryptAllWithUserKey** 或 **EncryptAllWithPassword**。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)。  
   
 ### <a name="ddl-examples"></a>DDL 範例  
- 下列三種 DDL 陳述式由 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中所含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫) 中的指令碼物件所產生。  
+ 下列三種 DDL 陳述式由 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中所含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫) 中的指令碼物件所產生。  
   
  下列 DDL 陳述式會刪除 **Promotion** 維度。  
   
@@ -140,7 +138,7 @@ ms.lasthandoff: 08/11/2017
   
 ```  
   
- 下列三種 DDL 陳述式由 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中所含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫) 中的指令碼物件所產生。  
+ 下列三種 DDL 陳述式由 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中所含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫) 中的指令碼物件所產生。  
   
  下列 DDL 陳述式會刪除 **Promotion** 維度。  
   
@@ -240,7 +238,7 @@ ms.lasthandoff: 08/11/2017
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
 ## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services 執行 DDL 工作編輯器 (一般頁面)
-  使用 **[Analysis Services 執行 DDL 工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名並描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL 工作。  
+  使用 [Analysis Services 執行 DDL 工作編輯器] 對話方塊的 [一般] 頁面，即可命名並描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL 工作。  
   
 ### <a name="options"></a>選項。  
  **名稱**  
@@ -257,7 +255,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="static-options"></a>靜態選項  
  **連接**  
- 選取[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]連接管理員 中的清單或按一下\<**新增連接...**>，並使用**加入 Analysis Services 連接管理員**對話方塊，即可建立新的連接。  
+ 選取清單中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員，或是按一下 [\<新增連線...>] 並使用 [新增 Analysis Services 連線管理員] 對話方塊，即可建立新的連線。  
   
  **相關主題：** [加入 Analysis Services 連線管理員對話方塊 UI 參考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、 [Analysis Services 連線管理員](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
@@ -266,7 +264,7 @@ ms.lasthandoff: 08/11/2017
   
 |Value|說明|  
 |-----------|-----------------|  
-|**直接輸入**|將來源設定為 **[SourceDirect]** 文字方塊中所儲存的 DDL 陳述式。 選取這個值就會顯示在下列章節中的動態選項。|  
+|**直接輸入**|將來源設定為 [SourceDirect] 文字方塊中所儲存的 DDL 陳述式。 選取這個值就會顯示在下列章節中的動態選項。|  
 |**檔案連接**|將來源設定為包含 DDL 陳述式的檔案。 選取這個值就會顯示在下列章節中的動態選項。|  
 |**變數**|將來源設定為變數。 選取這個值就會顯示在下列章節中的動態選項。|  
   
@@ -274,18 +272,17 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="sourcetype--direct-input"></a>SourceType = 直接輸入  
  **Source**  
- 輸入 DDL 陳述式或按一下省略符號 **(…)**，然後在 **[DDL 陳述式]** 對話方塊中輸入陳述式。  
+ 輸入 DDL 陳述式或按一下省略符號 **(…)**，然後在 [DDL 陳述式] 對話方塊中輸入陳述式。  
   
 #### <a name="sourcetype--file-connection"></a>SourceType = 檔案連接  
  **Source**  
- 在清單中，選取檔案連接，或按一下\<**新增連接...**>，並使用**檔案 」 連接管理員**對話方塊，即可建立新的連接。  
+ 選取清單中的 [檔案連線]，或是按一下 [\<新增連線...>] 再使用 [檔案連線管理員] 對話方塊，即可建立新的連線。  
   
- **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
+ **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = 變數  
  **Source**  
- 在清單中，選取變數，或按一下\<**新增變數...**>，並使用**加入變數**對話方塊，即可建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>] 並使用 [新增變數] 對話方塊，以建立新的變數。  
   
- **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)  
   
-

@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2012 SP4 版本資訊 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 10/05/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b09784b129109f907c19a56a2a6fadcba119e73d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7aed12a3e687ab4c8b42b8f07c29d252e0d6acad
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp4-release-notes"></a>SQL Server 2012 SP4 版本資訊
-本主題摘要說明 SQL Server 2012 SP4 中所包含的改善。 本主題也說明安裝 SP4 或針對 SP4 安裝進行疑難排解之前所要檢閱的問題。 版本資訊僅於線上提供，安裝媒體中並不提供。 我們會在發現問題時定期更新本主題。 如需 SP4 中修正的詳細清單，請參閱 [SQL Server 2012 SP4 發行資訊](https://go.microsoft.com/fwlink/?linkid=846937)。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 本主題摘要說明 SQL Server 2012 SP4 中所包含的改善。 本主題也說明安裝 SP4 或針對 SP4 安裝進行疑難排解之前所要檢閱的問題。 版本資訊僅於線上提供，安裝媒體中並不提供。 我們會在發現問題時定期更新本主題。 如需 SP4 中修正的詳細清單，請參閱 [SQL Server 2012 SP4 發行資訊](https://go.microsoft.com/fwlink/?linkid=846937)。  
 
 > Service Pack 4 包含所有 SQL Server 2012 SP3 累積更新。
   

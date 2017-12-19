@@ -2,12 +2,12 @@
 title: "動作 (Analysis Services-多維度資料) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8880e5f1dd0f2d2163fecbf33d08fb5162c7ddc9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 23021f365a349e226194326ed2d4d43acb2e7af8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>動作 (Analysis Services - 多維度資料)
-  動作可以屬於不同類型，而且必須據此來建立。 動作可以是：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]動作可以屬於不同類型，而且必須據此建立。 動作可以是：  
   
 -   鑽研動作，該動作會傳回一組資料列，這些資料列表示動作發生所在之 Cube 中選定資料格的基礎資料。  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="resolving-and-executing-actions"></a>解析及執行動作  
  商務使用者存取定義其命令物件的物件時，雖然會自動解析與該動作相關的陳述式，讓用戶端應用程式可使用該陳述式，但是不會自動執行該動作。 只有當商務使用者執行起始動作的用戶端特定作業時，才會執行該動作。 例如，在商務使用者以滑鼠右鍵按一下特定成員或資料格時，用戶端應用程式可能會以快顯功能表形式來顯示動作清單。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [多維度模型中的動作](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

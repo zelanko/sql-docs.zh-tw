@@ -1,5 +1,5 @@
 ---
-title: "保存自訂物件 |Microsoft 文件"
+title: "保存自訂物件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom objects [Integration Services], persisting
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom objects [Integration Services], persisting
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7b43f65b19f3dd4804ba1f7c18a81b640ed277d5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 27b800182751ea40ad827c77ea71c6f2815eecc7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="persisting-custom-objects"></a>保存自訂物件
-  您不需要您建立，只要它們的屬性使用例如只有簡單資料類型的自訂物件實作自訂持續性**整數**和**字串**。 預設的持續性實作可以儲存物件的中繼資料，及其所有屬性值。  
+  只要您建立的自訂物件其屬性只有使用簡單的資料類型，例如 **integer** 與 **string**，就不需要為這些自訂物件實作自訂持續性。 預設的持續性實作可以儲存物件的中繼資料，及其所有屬性值。  
   
  不過，如果您的物件具有使用複雜資料類型的屬性，或是如果您想要在載入和儲存屬性值時，在它們上面執行自訂處理，可以實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> 介面及其 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> 與 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A> 方法。 在這些方法中，您從封裝的 XML 定義載入 XML 片段 (或是將它儲存到封裝的 XML 定義)，而 XML 片段包含物件的屬性以及其目前的值。 並未定義這個 XML 片段的格式，它必須只能是格式正確的 XML。  
   
@@ -38,7 +34,7 @@ ms.lasthandoff: 08/03/2017
 >  當您實作自訂持續性時，必須保存物件的所有屬性，包括繼承的屬性和您加入的自訂屬性。  
   
 ## <a name="example"></a>範例  
- 雖然 Sql Server 自訂連接管理員範例不需要三個屬性類型的自訂持續性**字串**，下列程式碼顯示將需要保存連接管理員及其屬性的自訂程式碼範例。 包含此程式碼的類別必須實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> 介面。  
+ 雖然 SQL Server 自訂連線管理員範例並不需要 **string** 類型之三個屬性的自訂持續性，不過下列程式碼所顯示的自訂程式碼範例，將需要保存連線管理員及其屬性。 包含此程式碼的類別必須實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> 介面。  
   
 ```vb  
 Private Const PERSIST_ELEMENT As String = "SqlConnectionManager"  
@@ -163,8 +159,7 @@ public void SaveToXML(System.Xml.XmlDocument doc,
 ```  
  
 ## <a name="see-also"></a>另請參閱  
- [開發 Integration Services 自訂物件](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
+ [開發 Integration Services 的自訂物件](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
  [自訂物件的建立、部署和偵錯](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Azure Feature Pack for Integration Services (SSIS) |Microsoft 文件"
+title: "適用於 Integration Services (SSIS) 的 Azure Feature Pack | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
 ms.prod: sql-non-specified
@@ -8,37 +8,35 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.SSIS.AZURE.F1
 - SQL14.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
-ms.openlocfilehash: d4204ba56e515025bed3ae3bf8e7a77d6da471be
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 7bd2425af92d89982ea7ccfc8b2a3220a15b24e7
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
-SQL Server Integration Services (SSIS) Feature Pack for Azure 是提供給 SSIS 連接到 Azure 服務之間傳輸資料 Azure 和內部部署資料來源，以及處理資料儲存在 Azure 中的這個頁面列出的元件擴充功能。
+SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模組，可提供此頁面上所列的元件，以便讓 SSIS 連接到 Azure 服務、在 Azure 和內部部署資料來源之間轉送資料，以及處理儲存在 Azure 中的資料。
 
-[![下載 SSIS Feature Pack for Azure](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=54798) **下載**
+[![下載 SSIS Feature Pack for Azure](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **下載**
 
-- 適用於 SQL Server 2017- [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
-- 適用於 SQL Server 2016- [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
-- 適用於 SQL Server 2014- [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47366)
-- 適用於 SQL Server 2012- [Microsoft SQL Server 2012 Integration Services Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47367)
+- SQL Server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
+- SQL Server 2016 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
+- SQL Server 2014 - [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)
+- SQL Server 2012 - [Microsoft SQL Server 2012 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47367)
 
-## <a name="components-in-the-feature-pack"></a>在功能套件元件
+## <a name="components-in-the-feature-pack"></a>Feature Pack 中的元件
 -   連接管理員
 
     -   [Azure 儲存體連線管理員](../integration-services/connection-manager/azure-storage-connection-manager.md)
@@ -47,7 +45,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure 是提供給 SSIS 
     
     -   [Azure Data Lake Store 連線管理員](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
     
-    -   [Azure 資源管理員的連接管理員](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
+    -   [Azure Resource Manager 連線管理員](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
     
     -   [Azure HDInsight 連線管理員](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
 
@@ -79,15 +77,15 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure 是提供給 SSIS 
     
     -   [Azure Data Lake Store 目的地](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob 和 ADLS 檔案列舉值。 請參閱[Foreach 迴圈容器](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+-   Azure Blob 與 ADLS 檔案列舉值。 請參閱 [Foreach 迴圈容器](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
 
 ## <a name="download-the-feature-pack"></a>下載功能套件
- 下載 SQL Server Integration Services (SSIS) 功能套件適用於 Azure。
+ 下載 SQL Server Integration Services (SSIS) Feature Pack for Azure。
  
-- [SSIS Azure 的功能套件](http://go.microsoft.com/fwlink/?LinkID=626967)適用於 SQL Server 2016
-- [SSIS Azure 的功能套件](https://www.microsoft.com/en-us/download/details.aspx?id=54798)的[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+- 適用於 SQL Server 2016 的 [SSIS Feature Pack for Azure](http://go.microsoft.com/fwlink/?LinkID=626967)
+- 適用於 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的 [SSIS Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
  您必須先安裝下列必要條件，再安裝這個功能套件。
 
 -   SQL Server Integration Services
@@ -119,4 +117,3 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure 是提供給 SSIS 
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
-

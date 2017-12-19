@@ -2,12 +2,12 @@
 title: "操作資料 (MDX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37ee4f05ad916e3fb1d12b2bfb29da183f9ebb47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4a38653e2a8e4370d144c1ed799ac068f9b08585
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---manipulating-data"></a>MDX 資料操作的操作資料
-  您可以使用多維度運算式 (MDX) 以不同的方式操作資料。 下列主題涵蓋 MDX 語言中一些較為進階的資料操作概念。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]多維度運算式 (MDX) 可用來操作各種不同的方式中的資料。 下列主題涵蓋 MDX 語言中一些較為進階的資料操作概念。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |[使用 RollupChildren 函數 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-rollupchildren-function.md)|討論 MDX [RollupChildren](../../../mdx/rollupchildren-mdx.md)函數對多維度資料分析的影響。|  
 |[了解行程順序和求解順序 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|詳細說明解決順序的概念，以及此功能如何影響 MDX 運算式、陳述式及指令碼。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

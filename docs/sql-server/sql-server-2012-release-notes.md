@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2012 版本資訊 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Release Notes, SQL Server
@@ -15,14 +18,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2aa2d466fce0c67b1bf51493d986cbb43af1b166
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e7adc5d4b4fdcf8886b2c8d08bce8de90d9b3eb1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 版本資訊
-這份版本資訊文件將描述有關您安裝或疑難排解 Microsoft SQL Server 2012 ([請按一下這裡下載](http://go.microsoft.com/fwlink/?LinkId=238647)) 之前應該閱讀的已知問題。 這份版本資訊文件僅於線上提供，安裝媒體中並不提供，而且會定期更新。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 這份版本資訊文件描述安裝或對 Microsoft SQL Server 2012 進行疑難排解之前應該閱讀的已知問題 ([請按一下這裡下載](http://go.microsoft.com/fwlink/?LinkId=238647))。 這份版本資訊文件僅於線上提供，安裝媒體中並不提供，而且會定期更新。  
   
 如需有關如何開始使用和安裝 SQL Server 2012 的詳細資訊，請參閱 SQL Server 2012 讀我檔案。 您可以從安裝媒體與 [讀我檔案](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) 下載頁面，取得讀我檔案文件。 您也可以在 [SQL Server 線上叢書](http://go.microsoft.com/fwlink/?LinkId=190948) 和 [SQL Server 論壇](http://go.microsoft.com/fwlink/?LinkId=213599)中尋找更多資訊。  
   

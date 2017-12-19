@@ -2,12 +2,12 @@
 title: "資料採礦查詢 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85305fce0f348bca26bb5b2381a87bd204e4679c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f836f060a52db56267cd943c1dea018c9b0732a3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-queries"></a>資料採礦查詢
-  資料採礦查詢有許多實用的用途。 您可以：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料採礦查詢可以用於許多用途。 您可以：  
   
 -   將模型套用到新的資料，以做出單一或多個預測。 您可以在批次中提供輸入值當做參數。  
   
@@ -174,7 +174,7 @@ ms.lasthandoff: 11/17/2017
 |設定查詢選項，以及疑難排解查詢權限和問題|[針對資料採礦查詢變更逾時值](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
 |在 Integration Services 中使用資料採礦元件|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   

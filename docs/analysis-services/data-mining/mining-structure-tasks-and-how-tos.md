@@ -2,12 +2,12 @@
 title: "採礦結構工作和使用說明 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7bf40cbc33a3f20110e135f2f67c8a6a06d0489e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: db7f8b700505c6bf34caadee3642d709962c2228
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>採礦結構工作和使用說明
-  **中之資料採礦設計師的** [採礦結構] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 索引標籤包含您可用來建立、編輯和處理採礦結構的工具。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**採礦結構** 索引標籤中的資料採礦設計師的[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包含工具，可用來建立、 編輯和處理採礦結構。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 -   [處理採礦結構](../../analysis-services/data-mining/process-a-mining-structure.md)  
   
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [設計和實作使用說明主題 (Analysis Services - 資料採礦)](https://msdn.microsoft.com/library/bb522452.aspx)  
   
   

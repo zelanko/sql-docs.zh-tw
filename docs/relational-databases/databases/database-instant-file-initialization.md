@@ -1,10 +1,13 @@
 ---
 title: "資料庫檔案立即初始化 | Microsoft 文件"
 ms.custom: 
-ms.date: 08/15/2017
-ms.prod: sql-server-2016
+ms.date: 11/17/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,36 +22,36 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5d1ed7065cdbf710888c6b455fc1a059ecaebbfe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c1e3fb032916c235cff2dfaf9b0bf8a88d4dec82
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-instant-file-initialization"></a>資料庫立即檔案初始化
-  系統會將資料和記錄檔初始化，以覆寫磁碟上先前刪除之檔案中所遺留的任何現有資料。 資料檔和記錄檔初始化的方式是先在您執行下列作業之一時，在檔案中填入 0：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 系統會將資料和記錄檔初始化，以覆寫磁碟上先前刪除之檔案中所遺留的任何現有資料。 資料檔和記錄檔初始化的方式是先在您執行下列作業之一時，在檔案中填入 0：  
   
--   建立資料庫。  
+- 建立資料庫。  
   
--   將資料或記錄檔新增至現有的資料庫。  
+- 將資料或記錄檔新增至現有的資料庫。  
   
--   增加現有檔案的大小 (包括自動成長作業)。  
+- 增加現有檔案的大小 (包括自動成長作業)。  
   
--   還原資料庫或檔案群組。  
+- 還原資料庫或檔案群組。  
   
- 檔案初始化會導致這些作業需要較長的時間。 不過，當資料第一次寫入檔案時，作業系統並不需要在檔案中填入 0。  
+檔案初始化會導致這些作業需要較長的時間。 不過，當資料第一次寫入檔案時，作業系統並不需要在檔案中填入 0。  
   
 ## <a name="instant-file-initialization"></a>立即檔案初始化  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，資料檔可以立即初始化。 檔案立即初始化可以加快先前提到的檔案作業執行速度。 立即檔案初始化會回收使用的磁碟空間，卻不會在該空間中填入零。 而是在新資料寫入檔案時將磁碟內容覆寫為新資料。 記錄檔無法立即初始化。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，資料檔可以立即初始化。 檔案立即初始化可以加快先前提到的檔案作業執行速度。 立即檔案初始化會回收使用的磁碟空間，卻不會在該空間中填入零。 而是在新資料寫入檔案時將磁碟內容覆寫為新資料。 記錄檔無法立即初始化。  
   
 > [!NOTE]  
 >  檔案立即初始化只在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] 或 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 或更新版本中提供。  
   
- 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) 服務帳戶被授與 SE_MANAGE_VOLUME_NAME 時，才能使用立即檔案初始化。 Windows Administrator 群組的成員擁有此權限，並可將此權限授與其他使用者 (方法是將他們新增到「執行磁碟區維護工作」  安全性原則。 如需指派使用者權限的詳細資訊，請參閱 Windows 文件集。  
+只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) 服務帳戶被授與 SE_MANAGE_VOLUME_NAME 時，才能使用立即檔案初始化。 Windows Administrator 群組的成員擁有此權限，並可將此權限授與其他使用者 (方法是將他們新增到「執行磁碟區維護工作」  安全性原則。 如需指派使用者權限的詳細資訊，請參閱 Windows 文件集。  
   
-有些條件 (例如 TDE) 會防止檔案立即初始化。  
+有些功能使用方式 (例如 [TDE](../../relational-databases/security/encryption/transparent-data-encryption.md)) 會防止檔案立即初始化。  
   
- 授與帳戶「 `Perform volume maintenance tasks` 」權限：  
+授與帳戶「 `Perform volume maintenance tasks` 」權限：  
   
 1.  在即將建立備份檔案的電腦上，開啟 [本機安全性原則] 應用程式 (`secpol.msc`)。  
   
@@ -65,9 +68,9 @@ ms.lasthandoff: 11/09/2017
   
  如果洩漏刪除的內容可能是一項隱憂，您應該採取下列其中一或兩個項動作：  
   
--   務必確保所有卸離的資料檔和備份檔都具有限制的 DACL。  
+- 務必確保所有卸離的資料檔和備份檔都具有限制的 DACL。  
   
--   停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的立即檔案初始化，方法是從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶撤銷 SE_MANAGE_VOLUME_NAME。  
+- 停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的立即檔案初始化，方法是從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶撤銷 SE_MANAGE_VOLUME_NAME。  
   
 > [!NOTE]  
 >  停用立即檔案初始化只會影響使用者權限撤銷後建立或大小增加的檔案。  

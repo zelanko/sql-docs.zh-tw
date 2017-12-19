@@ -1,35 +1,35 @@
 ---
-title: "資料流目的地 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "資料流目的地 | Microsoft Docs"
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
+f1_keywords: SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b2a918e3460d23f33f432ea0925d722f9aefde78
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f6b5a6b41776010d957f149a28cd74d51a3b35b3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-streaming-destination"></a>資料流目的地
   **資料流目的地** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 目的地元件，可讓 **OLE DB Provider for SSIS** 取用 SSIS 封裝的輸出做為表格式結果集。 您可以建立連結的伺服器來使用 OLE DB Provider for SSIS，然後在連結的伺服器上執行 SQL 查詢來顯示 SSIS 封裝所傳回的資料。  
   
  在下列範例中，下列查詢會在 SSIS 目錄的 Power BI 資料夾中，傳回 SSISPackagePublishing 專案的 Package.dtsx 封裝輸出。 此查詢會使用名為 [Integration Services 的預設連結伺服器] 的連結伺服器，接著使用新的 OLE DB Provider for SSIS。 此查詢包括 SSIS 目錄中的資料夾名稱、專案名稱和封裝名稱。 OLE DB Provider for SSIS 會執行您在查詢中指定的封裝，然後傳回表格式結果集。  
   
-```  
+```sql
 SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Folder=Power BI;Project=SSISPackagePublishing;Package=Package.dtsx')  
   
 ```  
@@ -37,7 +37,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="data-feed-publishing-components"></a>資料摘要發行元件  
  資料摘要發行元件包括下列元件︰OLE DB Provider for SSIS、資料流目的地和 SSIS 封裝發行精靈。 此精靈可讓您發行 SSIS 封裝做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫執行個體中的 SQL 檢視。 此精靈會協助您建立連結的伺服器來使用 OLE DB Provider for SSIS，以及一個 SQL 檢視來表示連結伺服器上的查詢。 您可以執行檢視，來查詢 SSIS 封裝的結果做為表格式資料集。  
   
- 若要確認 SSISOLEDB 提供者已安裝，可在 SQL Server Management Studio 中，展開 [伺服器物件] 、[連結的伺服器] 、[提供者] ，然後確認您看到 **SSISOLEDB** 提供者。 按兩下 [SSISOLEDB]、啟用 [允許 Inprocess] \(若未啟用)，然後按一下 [確定]。  
+ 若要確認 SSISOLEDB 提供者已安裝，可在 SQL Server Management Studio 中，展開 [伺服器物件] 、[連結的伺服器] 、[提供者] ，然後確認您看到 **SSISOLEDB** 提供者。 按兩下 [SSISOLEDB]、啟用 [允許 Inprocess] (若未啟用)，然後按一下 [確定]。  
   
 ## <a name="publish-an-ssis-package-as-a-sql-view"></a>發行 SSIS 封裝做為 SQL 檢視  
  下列程序說明發行 SSIS 封裝做為 SQL 檢視的步驟。  
@@ -65,7 +65,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 -   [逐步解說︰發行 SSIS 套件作為 SQL 檢視](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
   
 ## <a name="configure-data-streaming-destination"></a>設定資料流目的地
-  您可以使用 [Advanced Editor for Data Streaming Destination (資料流目的地進階編輯器)] 對話方塊來設定資料流目的地。 若要開啟此對話方塊，請按兩下元件，或在資料流程設計師中，以滑鼠右鍵按一下元件，然後按一下編輯。  
+  您可以使用 [Advanced Editor for Data Streaming Destination (資料流目的地進階編輯器)] 對話方塊來設定資料流目的地。 若要開啟此對話方塊，請按兩下元件，或在資料流程設計師中，以滑鼠右鍵按一下元件，然後按一下 [編輯]。  
   
  此對話方塊有三個索引標籤︰[元件屬性]、[輸入資料行] 和 [輸入與輸出屬性]。  
   
@@ -82,7 +82,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  在此索引標籤的上方窗格中，您會看到所有可用輸入資料行。 選取您想要在此元件輸出中包含的資料行。 在下方窗格中的清單，會顯示所選資料行。 您可以藉由在清單中輸入 [輸出別名]欄位的新名稱，變更輸出資料行的名稱。  
   
 ## <a name="input-output-properties-tab"></a>輸入與輸出屬性索引標籤  
- 類似於 [輸入資料行] 索引標籤，您可以變更此索引標籤中的輸出資料行名稱。 在左側樹狀檢視中，依序展開 [Data Streaming Destination 輸入] 和 [輸入資料行]。 按一下輸入資料行名稱，在右窗格中的輸出資料行名稱中變更名稱。  
+ 類似於 [輸入資料行] 索引標籤，您可以變更此索引標籤中的輸出資料行名稱。在左側樹狀檢視中，依序展開 [Data Streaming Destination 輸入] 和 [輸入資料行]。 按一下輸入資料行名稱，在右窗格中的輸出資料行名稱中變更名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [發行 SSIS 封裝做為 OData 摘要來源](http://go.microsoft.com/fwlink/?LinkID=317367)  

@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 變數 |Microsoft 文件"
+title: "Integration Services (SSIS) 變數 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eb632c5fa2242b5b607d62488b65682a0cc4b07f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
   變數會儲存 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其容器、工作和事件處理常式在執行階段可使用的值。 「指令碼」工作和「指令碼」元件中的指令碼也可以使用變數。 將工作和容器排序成工作流程的優先順序條件約束，可在其條件約束定義含有運算式時使用變數。  
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/03/2017
   
  如需變數之實際使用狀況的詳細資訊，請參閱 [在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
-## <a name="properties-of-variables"></a>變數的屬性  
+## <a name="properties-of-variables"></a>變數屬性  
  您可以透過在 [變數] 視窗或 [屬性] 視窗中設定下列屬性來設定使用者定義變數。 但某些屬性只能在 [屬性] 視窗中設定。  
   
 > [!NOTE]  
@@ -103,7 +101,7 @@ ms.lasthandoff: 08/03/2017
  指定變數名稱。  
   
  **命名空間**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供兩個命名空間：**使用者**和**系統**。 依預設，自訂變數屬於 **User** 命名空間，而系統變數則屬於 **System** 命名空間。 您可以為使用者定義變數建立其他命名空間，並變更 **User** 命名空間的名稱，但是您無法變更 **System** 命名空間的名稱，也無法將變數加入 **System** 命名空間或將系統變數指派給其他命名空間。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供兩個命名空間：**User** 和 **System**。 依預設，自訂變數屬於 **User** 命名空間，而系統變數則屬於 **System** 命名空間。 您可以為使用者定義變數建立其他命名空間，並變更 **User** 命名空間的名稱，但是您無法變更 **System** 命名空間的名稱，也無法將變數加入 **System** 命名空間或將系統變數指派給其他命名空間。  
   
 **RaiseChangedEvent**  
  當此屬性設為 [True] 時，**OnVariableValueChanged** 事件會在變數變更值時產生。  
@@ -111,7 +109,7 @@ ms.lasthandoff: 08/03/2017
  **ReadOnly**  
  當此屬性設為 [False]，表示變數可讀取\寫入。  
   
-**範圍**    
+**範圍。**    
  > [!NOTE]  
 >  您只能透過按一下 [變數] 視窗中的 [移動變數] 來變更此屬性設定。  
   
@@ -199,10 +197,10 @@ ms.lasthandoff: 08/03/2017
  **命名空間**  
  指定變數的命名空間。 依預設，使用者定義變數是在 **User** 命名空間中。  
   
- **實值型別**  
+ **值類型**  
  選取資料類型。  
   
- **Value**  
+ **值**  
  鍵入值。 此值必須與 [值類型] 選項中所指定的資料類型相容。  
   
  **唯讀**  
@@ -248,9 +246,9 @@ ms.lasthandoff: 08/03/2017
 -   [屬性] 視窗。 [屬性] 視窗會列出屬性，以供您設定 [變數] 視窗中無法使用的變數：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]也提供一組系統變數，其內容無法更新，除了 RaiseChangedEvent 屬性。  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 也提供一組無法更新屬性的系統變數，但屬性 RaiseChangedEvent 除外。  
   
-### <a name="set-expressions-on-variables"></a>在變數上設定運算式  
+### <a name="set-expressions-on-variables"></a>設定變數上的運算式  
   
  當您使用 [屬性] 視窗設定使用者定義變數的運算式時：  
   
@@ -274,7 +272,7 @@ ms.lasthandoff: 08/03/2017
   
  **Name** 和 **Namespace** 屬性的值必須以 Unicode Standard 2.0 中定義的字母字元或底線 (_) 為開頭。 後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (\_)。  
   
-### <a name="set-variable-properties-in-the-variables-window"></a>在 [變數] 視窗中設定變數屬性   
+### <a name="set-variable-properties-in-the-variables-window"></a>在變數視窗中設定變數屬性   
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
@@ -292,7 +290,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
   
-### <a name="set-variable-properties-in-the-properties-window"></a>在 [屬性] 視窗中設定變數的屬性  
+### <a name="set-variable-properties-in-the-properties-window"></a>在屬性視窗中設定變數屬性  
 
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
@@ -308,15 +306,14 @@ ms.lasthandoff: 08/03/2017
   
 7.  在 [屬性] 視窗中，更新讀取/寫入變數屬性。 有些使用者自訂變數的屬性為讀取/唯讀。  
   
-     如需屬性的詳細資訊，請參閱[Integration Services &#40;SSIS &#41;變數](../integration-services/integration-services-ssis-variables.md)。  
+     如需屬性的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)。  
   
 8.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
 
-## <a name="update-a-variable-dynamically-with-configurations"></a>動態更新設定的變數  
- 若要動態地更新變數，您可以建立變數的組態，使用封裝部署組態，然後在部署封裝時更新組態檔中的變數值。 在執行階段，封裝會使用更新的變數值。 如需詳細資訊，請參閱[建立封裝組態](../integration-services/packages/create-package-configurations.md)。  
+## <a name="update-a-variable-dynamically-with-configurations"></a>使用設定動態更新變數  
+ 若要動態地更新變數，您可以建立變數的組態，使用封裝部署組態，然後在部署封裝時更新組態檔中的變數值。 在執行階段，封裝會使用更新的變數值。 如需詳細資訊，請參閱 [建立封裝組態](../integration-services/packages/create-package-configurations.md)。  
 
 ## <a name="related-tasks"></a>相關工作  
  [在子封裝中使用變數和參數的值](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [在資料流程元件中將查詢參數對應至變數](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
-

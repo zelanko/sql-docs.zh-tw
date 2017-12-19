@@ -1,5 +1,5 @@
 ---
-title: "指令碼工作範例 |Microsoft 文件"
+title: "指令碼工作範例 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,26 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], examples
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f7732abe880aa5eeaab2030da423e18d1977d64a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: cd20d44652dacf8f5d0c4e6039c477a87f8bd3f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="script-task-examples"></a>指令碼工作範例
   指令碼工作是多用途的工具，可用於封裝中以滿足 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所含的工作無法達成的幾乎任何需求。 本主題列出指令碼工作程式碼範例，以示範某些可用的功能。  
@@ -51,16 +47,16 @@ ms.lasthandoff: 09/26/2017
  蒐集符合使用者指定的準則之檔案清單，並填入變數以供稍後由 Foreach From Variable 列舉值使用。  
   
  [以指令碼工作查詢 Active Directory](../../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md)  
- 從的值為基礎的 Active Directory 擷取使用者資訊[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]變數時，使用 System.DirectoryServices 命名空間中的類別。  
+ 使用 System.DirectoryServices 命名空間中的類別，根據 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 變數值，從 Active Directory 擷取使用者資訊。  
   
  [以指令碼工作監視效能計數器](../../integration-services/extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md)  
- 建立自訂效能計數器，可用於追蹤的執行進度[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]System.Diagnostics 命名空間中使用類別來封裝。  
+ 使用 System.Diagnostics 命名空間中的類別，建立可用以追蹤 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件執行進度的自訂效能計數器。  
   
  [以指令碼工作處理影像](../../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)  
- 將影像壓縮成 JPEG 格式並建立縮圖影像，System.Drawing 命名空間中使用類別。  
+ 透過使用 System.Drawing 命名空間中的類別，將影像壓縮成 JPEG 格式，並從其中建立縮圖影像。  
   
  [以指令碼工作尋找安裝的印表機](../../integration-services/extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md)  
- 找出已安裝的印表機 System.Drawing.Printing 命名空間中使用類別來支援特定的紙張大小。  
+ 透過使用 System.Drawing.Printing 命名空間中的類別，尋找支援特定紙張大小的已安裝印表機。  
   
  [以指令碼工作傳送 HTML 郵件訊息](../../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md)  
  以 HTML 格式，而不是純文字格式傳送郵件訊息。  
@@ -87,4 +83,3 @@ ms.lasthandoff: 09/26/2017
  將工作所處理的項目數目記錄到啟用的記錄提供者。  
   
   
-

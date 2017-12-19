@@ -1,5 +1,5 @@
 ---
-title: "資料夾 [內容] 對話方塊 |Microsoft 文件"
+title: "資料夾屬性對話方塊 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,17 +16,16 @@ f1_keywords:
 - sql13.ssis.ssms.iscreatefolder.f1
 - sql13.ssis.ssms.isfolderprop.general.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 942e05985c353e6c6cc433ace0dfddd204b02252
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 878739f5941c58feeff4da0448570614340e3cd6
+ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="folder-properties-dialog-box"></a>資料夾屬性對話方塊
   資料夾會包含 **SSISDB** 目錄中的專案和環境。 每個資料夾都會定義套用到資料夾內容的權限。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 權限的詳細資訊，請參閱 [catalog.grant_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)。  
@@ -45,8 +43,7 @@ ms.lasthandoff: 09/27/2017
 5.  按一下 [確定] 接受變更，並關閉 [資料夾屬性] 對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS &#41;伺服器](../integration-services-ssis-packages.md)   
- [catalog.grant_permission &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
+ [Integration Services &#40;SSIS&#41; 伺服器](../integration-services-ssis-packages.md)   
+ [catalog.grant_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
   
-

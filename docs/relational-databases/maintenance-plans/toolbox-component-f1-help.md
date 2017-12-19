@@ -2,9 +2,12 @@
 title: "工具箱元件 F1 說明 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6ee1d17314517b3115f594d36f781bd778585e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7d1295c3b760386380c626e1afde9b98401ef3bd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱元件 F1 說明
-  **[工具箱]** 會顯示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案中所使用的各種項目。 您可以從 **[檢視]** 功能表中開啟 **[工具箱]** ，然後將此視窗停駐在您希望的位置。 停駐之後，可以將 **[工具箱]** 固定開啟，或在不使用時將其設定為 **[自動隱藏]** 。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [工具箱] 會顯示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案中所使用的各種項目。 您可以從 **[檢視]** 功能表中開啟 **[工具箱]** ，然後將此視窗停駐在您希望的位置。 停駐之後，可以將 **[工具箱]** 固定開啟，或在不使用時將其設定為 **[自動隱藏]** 。  
   
  [工具箱] 項目可以拖曳再放置或是複製再貼上至程式碼編輯器，或者至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 內的設計檢視介面上。  
   

@@ -1,5 +1,5 @@
 ---
-title: "查詢 Active Directory with the Script Task |Microsoft 文件"
+title: "以指令碼工作查詢 Active Directory| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,34 +8,30 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], Active Directory access
 - SSIS Script task, Active Directory access
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ee5a82829785e78554b105e1f3bf3bd24f05b778
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0328b2eeaa94e279a53b45e8e205c1356768e53d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>以指令碼工作查詢 Active Directory
-  企業資料處理應用程式 (例如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝) 通常需要根據儲存在 Active Directory 中的職等、工作職稱或是員工的其他特色，以不同的方式處理資料。 Active Directory 是[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 目錄服務，可集中的儲存中繼資料不僅有關使用者，而且還有關電腦與印表機等其他組織資產。 **System.DirectoryServices** Microsoft.NET Framework 中的命名空間提供類別，以使用 Active Directory，可協助您根據它所儲存的資訊的直接資料處理工作流程。  
+  企業資料處理應用程式 (例如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝) 通常需要根據儲存在 Active Directory 中的職等、工作職稱或是員工的其他特色，以不同的方式處理資料。 Active Directory 是一種 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 目錄服務，可集中儲存中繼資料，這些資料不僅有關使用者，而且還有關電腦與印表機等其他組織資產。 在 Microsoft .NET Framework 中的 **System.DirectoryServices** 命名空間提供使用 Active Directory 的類別，以協助您根據它所儲存的資訊來指示資料處理工作流程。  
   
 > [!NOTE]  
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
@@ -47,13 +43,13 @@ ms.lasthandoff: 09/26/2017
   
 1.  建立三個字串變數 `email`、`name` 和 `title`。 輸入有效的公司電子郵件地址做為 `email` 變數值。  
   
-2.  在**指令碼**頁面**指令碼工作編輯器**，新增`email`變數設為**[readonlyvariables]**屬性。  
+2.  在 [指令碼工作編輯器] 的 [指令碼] 頁面上，將 `email` 變數加入 **ReadOnlyVariables** 屬性。  
   
-3.  新增`name`和`title`變數**[readwritevariables]**屬性。  
+3.  將 `name` 和 `title` 變數加入 **ReadWriteVariables** 屬性。  
   
-4.  在指令碼專案中，加入的參考**System.DirectoryServices**命名空間。  
+4.  在指令碼專案中，加入 **System.DirectoryServices** 命名空間的參考。  
   
-5.  執行個體時提供 SQL Server 登入。 在程式碼中，使用**匯入**陳述式匯入**DirectoryServices**命名空間。  
+5.  執行個體時提供 SQL Server 登入。 在程式碼中，使用 **Imports** 陳述式匯入 **DirectoryServices** 命名空間。  
   
 > [!NOTE]  
 >  若要順利執行這個指令碼，您的公司必須在其網路上使用 Active Directory，並儲存這個範例所使用的員工資訊。  
@@ -118,7 +114,6 @@ public void Main()
   
 ## <a name="external-resources"></a>外部資源  
   
--   技術文件：[在 SSIS 中處理 Active Directory 資訊](http://go.microsoft.com/fwlink/?LinkId=199588)，social.technet.microsoft.com 上的  
+-   social.technet.microsoft.com 上的技術文件：[Processing Active Directory Information in SSIS](http://go.microsoft.com/fwlink/?LinkId=199588) (在 SSIS 中處理 Active Directory 資訊)  
   
   
-

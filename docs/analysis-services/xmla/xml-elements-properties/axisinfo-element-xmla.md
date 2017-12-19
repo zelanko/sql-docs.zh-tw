@@ -2,12 +2,12 @@
 title: "AxisInfo 元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 63c34fdea2c6f00d109cd155cfaff82fa592c4e4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 69c1a17e7badcab61023d353314ac4c273c81a0b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="axisinfo-element-xmla"></a>AxisInfo 元素 (XMLA)
-  表示父系所包含之單一軸的中繼資料[AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]表示父系所包含之單一軸的中繼資料[AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  在**根**項目，會使用**MDDataSet**物件， **AxisInfo**項目包含集合**HierarchyInfo**項目，結合的值**名稱**屬性，代表多維度資料集中傳回之單一軸的定義。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

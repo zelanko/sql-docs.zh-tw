@@ -1,47 +1,44 @@
 ---
-title: "什麼 &#39; SQL Server 2016 中 Integration Services 中的新 s |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+title: "SQL Server 2016 Integration Services 的新功能 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-caps.latest.revision: 183
+caps.latest.revision: "183"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: 084c6eeaf3b83df5435092f3fc424fb9c86ea446
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/29/2017
-
+ms.openlocfilehash: 36f418950cfa6d475c911c05fd9737fcecf62aa6
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/04/2017
 ---
-# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>什麼 & #39 的新 SQL Server 2016 中 Integration Services
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-本主題說明功能已加入或更新 SQL Server 2016 中[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 它也包含中新增或更新功能[Azure Feature Pack for Integration Services &#40;SSIS &#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) SQL Server 2016 的時間範圍內。  
+本主題描述 SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中已新增或更新的功能。 它也包含 [Azure Feature Pack for Integration Services &#40;SSIS &#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) 在SQL Server 2016 期間新增或更新的功能。  
 
-## <a name="new-for-ssis-in-azure-data-factory"></a>新的 Azure Data Factory 中的 SSIS
+## <a name="new-for-ssis-in-azure-data-factory"></a>Azure Data Factory 中的 SSIS 新功能
 
-Azure Data Factory 2017 年 9 月的第 2 版的公用預覽，您現在可以執行下列動作：
--   將封裝部署到 Azure SQL Database 上 SSIS 目錄資料庫 (SSISDB)。
--   執行封裝部署至 Azure 上 Azure SSIS 整合執行階段，Azure Data Factory 第 2 版的元件。
+使用 2017 年 9 月 Azure Data Factory 第 2 版的公開預覽，您現在可以執行下列動作：
+-   將套件部署至 Azure SQL Database 上的 SSIS 目錄資料庫 (SSISDB)。
+-   在 Azure-SSIS Integration Runtime (即 Azure Data Factory 第 2 版的元件) 上執行部署至 Azure 的套件。
 
-如需詳細資訊，請參閱[增益和 shift SQL Server Integration Services 工作負載至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+如需詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
 
-這些新功能需要 SQL Server Data Tools (SSDT) 版本 17.2 或更新版本，但不是需要 SQL Server 2017 或 SQL Server 2016。 當您將封裝部署至 Azure 時，套件部署精靈 」 一律為最新的封裝格式升級的封裝。
+這些新功能需要 SQL Server Data Tools (SSDT) 17.2 版或更新版本，但不需要 SQL Server 2017 或 SQL Server 2016。 當您將套件部署至 Azure 時，[套件部署精靈] 一律會將套件升級至最新套件格式。
 
-## <a name="2016-improvements-by-category"></a>依分類 2016年增強功能  
+## <a name="2016-improvements-by-category"></a>2016 版的改進 (依類別)  
   
 -   **管理能力**  
   
@@ -162,14 +159,14 @@ Azure Data Factory 2017 年 9 月的第 2 版的公用預覽，您現在可以�
   
 -   您在升級 SQL Server 執行個體之前，並未從 AlwaysOn 可用性群組移除資料庫。 這可防止資料庫自動升級。 如需詳細資訊，請參閱＜ [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)＞。  
   
- 如需詳細資訊，請參閱[SSIS 目錄 &#40;SSISDB &#41;](../integration-services/service/ssis-catalog.md). 
+ 如需詳細資訊，請參閱[SSIS 目錄 &#40;SSISDB&#41;](../integration-services/service/ssis-catalog.md)。 
 
 ####  <a name="AlwaysOn"></a> 支援 SSIS 目錄中的AlwaysOn  
  AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [永遠開啟可用性群組](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
- 在 SQL Server 2016 中，SSIS 會引進新功能，可讓您輕鬆部署到集中式 SSIS 目錄 （也就是 SSISDB 使用者資料庫）。 為了提供 SSISDB 資料庫及其內容的高可用性 (專案、封裝、執行記錄等)，您可以將 SSISDB 資料庫加入「永遠開啟」可用性群組，就像其他任何使用者資料庫。 發生容錯移轉時，其中一個次要節點會自動變成新的主要節點。  
+ 在 SQL Server 2016 中，SSIS 引進新功能，可讓您輕鬆部署到集中式 SSIS 目錄 (也就是 SSISDB 使用者資料庫)。 為了提供 SSISDB 資料庫及其內容的高可用性 (專案、封裝、執行記錄等)，您可以將 SSISDB 資料庫加入「永遠開啟」可用性群組，就像其他任何使用者資料庫。 發生容錯移轉時，其中一個次要節點會自動變成新的主要節點。  
   
- 詳細的概觀及針對 SSISDB 啟用 Alwayson 的逐步指示，請參閱[SSIS 目錄](../integration-services/service/ssis-catalog.md)。  
+ 如需詳細的概觀以及針對 SSISDB 啟用 AlwaysOn 的逐步指示，請參閱 [SSIS 目錄](../integration-services/service/ssis-catalog.md)。  
 
 ####  <a name="IncrementalDeployment"></a> 累加套件部署  
 累加封裝部署功能可讓您將一或多個封裝部署到現有或新的專案中，而不需部署整個專案。 您可以使用下列工具，以累加方式部署封裝。  
@@ -184,7 +181,7 @@ Azure Data Factory 2017 年 9 月的第 2 版的公用預覽，您現在可以�
   
 -   管理物件模型 (MOM) API  
   
- 如需詳細資訊，請參閱 [部署 Integration Services (SSIS) 專案和封裝] (.../ integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md。  
+ 如需詳細資訊，請參閱 [部署 Integration Services (SSIS) 專案和套件](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
 
 ####  <a name="encrypted"></a> 支援 SSIS 目錄中的 AlwaysOn  
  SSIS 已經支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的永遠加密功能。 如需詳細資訊，請參閱下列部落格文章。  
@@ -204,12 +201,12 @@ Azure Data Factory 2017 年 9 月的第 2 版的公用預覽，您現在可以�
  SSIS 目錄中新的 **RuntimeLineage** 記錄層次會收集在資料流程中追蹤歷程資訊所需的資料。 您可以剖析此歷程資訊，以對應工作間的歷程關聯性。 ISV 和開發人員可以使用此資訊來建置自訂歷程對應工具。 
 
 ####  <a name="CustomLogging"></a> SSIS 目錄中新的自訂記錄層級  
- 舊版 SSIS 目錄可讓您在執行封裝時，從四個內建的記錄層次進行選擇： **無、基本、效能或詳細資訊**。 SQL Server 2016 新增**RuntimeLineage**記錄層級。 此外，您現在可以在 SSIS 目錄中建立和儲存多個自訂記錄層級，並挑選每次您執行封裝時要使用的記錄層級。 針對每個自訂記錄層級，只選取您想要擷取的統計資料和事件。 選擇性地包含事件內容，以查看變數值、連接字串和工作屬性。 如需詳細資訊，請參閱＜ [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。 
+ 舊版 SSIS 目錄可讓您在執行封裝時，從四個內建的記錄層次進行選擇： **無、基本、效能或詳細資訊**。 SQL Server 2016 新增 **RuntimeLineage** 記錄層級。 此外，您現在可以在 SSIS 目錄中建立和儲存多個自訂記錄層級，並挑選每次您執行封裝時要使用的記錄層級。 針對每個自訂記錄層級，只選取您想要擷取的統計資料和事件。 選擇性地包含事件內容，以查看變數值、連接字串和工作屬性。 如需詳細資訊，請參閱＜ [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。 
 
 ####  <a name="ErrorColumn"></a> 資料流程中適用於錯誤的資料行名稱  
  當您在資料流程中包含錯誤至錯誤輸出的資料列重新導向時，則輸出會包含錯誤發生，但不會顯示的資料行名稱的資料行的數值識別項。 現在，有數種方式可用來尋找或顯示發生錯誤的資料行名稱。  
   
--   當您設定記錄時，請選取 **DiagnosticEx** 事件以供記錄使用。 此事件會將資料流程資料行對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此資料行對應中查詢資料行名稱。 如需詳細資訊，請參閱＜ [Error Handling in Data](../integration-services/data-flow/error-handling-in-data.md)＞。  
+-   當您設定記錄時，請選取 **DiagnosticEx** 事件以供記錄使用。 此事件會將資料流程資料行對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此資料行對應中查詢資料行名稱。 如需詳細資訊，請參閱[處理資料中的錯誤](../integration-services/data-flow/error-handling-in-data.md)。  
   
 -   在進階編輯器中，您可以在檢視資料流程元件的輸入或輸出資料行的屬性時，看到上游資料行的資料行名稱。  
   
@@ -300,7 +297,7 @@ Azure Data Factory 2017 年 9 月的第 2 版的公用預覽，您現在可以�
 ### <a name="expanded-connectivity-to-the-cloud"></a>已擴充與雲端的連線
 
 ####  <a name="AFP2016"></a> 針對 SQL Server 2016 發行的 Azure Feature Pack for SSIS  
- 已發行 Azure Feature Pack for Integration Services 的 SQL Server 2016。 此功能套件包含連線管理員，可連接到 Azure 資料來源和工作來執行一般的 Azure 作業。 如需詳細資訊，請參閱 [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
+ 已針對 SQL Server 2016 發行 Azure Feature Pack for Integration Services。 此功能套件包含連線管理員，可連接到 Azure 資料來源和工作來執行一般的 Azure 作業。 如需詳細資訊，請參閱 [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
 
 #### <a name="dynamics"></a> Service Pack 1 已發行 Microsoft Dynamics Online 資源的支援
 
@@ -328,7 +325,7 @@ Azure Data Factory 2017 年 9 月的第 2 版的公用預覽，您現在可以�
 
  在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性]  以開啟專案的屬性頁。 在 [組態屬性]  的 [一般] 索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    
- ![專案 [屬性] 對話方塊中的 TargetServerVersion 屬性](../integration-services/media/targetserverversion2.png "TargetServerVersion 屬性中的專案屬性對話方塊")  
+ ![專案屬性對話方塊中的 TargetServerVersion 屬性](../integration-services/media/targetserverversion2.png "專案屬性對話方塊中的 TargetServerVersion 屬性")  
 
 >   [!IMPORTANT]
 > 如果您正在開發 SSIS 的自訂擴充功能，請參閱 [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) (在您的自訂元件中支援多目標功能) 和 [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(取得 SSIS 自訂延伸模組，以支援 SQL Server 2016 的 SSDT 2015 多版本支援)。  
@@ -377,5 +374,4 @@ Azure Data Factory 2017 年 9 月的第 2 版的公用預覽，您現在可以�
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

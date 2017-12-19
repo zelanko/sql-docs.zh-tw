@@ -15,17 +15,17 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2b09251cae6b89dd742d685f9405155a7b674a3d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 83c602be92eae7a907d891a56c85141873b5266e
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>擷取、 轉換和載入與 SSIS Linux 上的資料
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本主題描述如何在 Linux 上執行 SQL Server Integration Services (SSIS) 封裝。 SSIS 可從多個來源和格式，擷取資料來解決複雜的資料整合問題轉換並清理資料，並將資料載入到多個目的地。 
+本文說明如何在 Linux 上執行 SQL Server Integration Services (SSIS) 封裝。 SSIS 可從多個來源和格式，擷取資料來解決複雜的資料整合問題轉換並清理資料，並將資料載入到多個目的地。 
 
 在 Linux 上執行 SSIS 封裝可以連接到 Microsoft SQL Server 在 Windows 內部部署或在雲端中，在 Linux 上或在 Docker 中執行。 它們也可以連接到 Azure SQL Database、 Azure SQL 資料倉儲、 ODBC 資料來源、 一般檔案和其他資料來源，包括 ADO.NET 來源、 XML 檔案和 OData 服務。
 
@@ -47,17 +47,17 @@ ms.lasthandoff: 12/01/2017
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## <a name="other-common-ssis-tasks"></a>其他常見的 SSIS 工作
+## <a name="design-packages"></a>設計封裝
 
--   **設計封裝**。
+**連接至 ODBC 資料來源**。 在重新整理 Linux CTP 2.1 和更新版本的 SSIS，SSIS 封裝可以使用 ODBC 連接 on Linux。 這項功能經過測試可與 SQL Server 及 MySQL ODBC 驅動程式，但也應該使用 ODBC 規格會觀察到的任何 Unicode ODBC 驅動程式。 在設計階段，您可以提供 DSN 或連接字串連接至 ODBC 資料;您也可以使用 Windows 驗證。 如需詳細資訊，請參閱[部落格文章發表的 ODBC 支援在 Linux 上](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
 
-    -   **連接至 ODBC 資料來源**。 在重新整理 Linux CTP 2.1 和更新版本的 SSIS，SSIS 封裝可以使用 ODBC 連接 on Linux。 這項功能經過測試可與 SQL Server 及 MySQL ODBC 驅動程式，但也應該使用 ODBC 規格會觀察到的任何 Unicode ODBC 驅動程式。 在設計階段，您可以提供 DSN 或連接字串連接至 ODBC 資料;您也可以使用 Windows 驗證。 如需詳細資訊，請參閱[部落格文章發表的 ODBC 支援在 Linux 上](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
+**路徑**。 提供 SSIS 封裝中的視窗樣式路徑。 在 Linux 上的 SSIS 不支援 Linux 樣式路徑，但在執行階段，將 Windows 樣式路徑對應至 Linux 樣式路徑。 然後，例如，在 Linux 上的 SSIS 對應 Windows 樣式路徑`C:\test`Linux 樣式路徑`/test`。
 
-    -   **路徑**。 提供 SSIS 封裝中的視窗樣式路徑。 在 Linux 上的 SSIS 不支援 Linux 樣式路徑，但在執行階段，將 Windows 樣式路徑對應至 Linux 樣式路徑。 然後，例如，在 Linux 上的 SSIS 對應 Windows 樣式路徑`C:\test`Linux 樣式路徑`/test`。
+## <a name="deploy-packages"></a>部署封裝
+您只可以將封裝儲存在 Linux 上的檔案系統，在此版本中。 SSIS 目錄資料庫和舊版 SSIS 服務無法使用。 在 Linux 上的封裝部署和儲存體
 
--   **部署封裝**。 您只可以將封裝儲存在 Linux 上的檔案系統，在此版本中。 SSIS 目錄資料庫和舊版 SSIS 服務無法使用。 在 Linux 上的封裝部署和儲存體
-
--   **排程封裝**。 您可以使用這類排程工具的 Linux 系統`cron`排程封裝。 您無法使用 Linux 上的 SQL 代理程式排程在此版本中的封裝執行。 如需詳細資訊，請參閱[排程 SSIS 封裝在 Linux 上的 cron](sql-server-linux-schedule-ssis-packages.md)。
+## <a name="schedule-packages"></a>排程封裝
+您可以使用這類排程工具的 Linux 系統`cron`排程封裝。 您無法使用 Linux 上的 SQL 代理程式排程在此版本中的封裝執行。 如需詳細資訊，請參閱[排程 SSIS 封裝在 Linux 上的 cron](sql-server-linux-schedule-ssis-packages.md)。
 
 ## <a name="limitations-and-known-issues"></a>限制與已知的問題
 

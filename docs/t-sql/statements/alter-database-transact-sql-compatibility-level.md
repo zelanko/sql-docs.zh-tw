@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE 相容性層級 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 62a9e4eec99073e63d53c2d610a7527fbe5f9c91
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
-ms.translationtype: HT
+ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (TRANSACT-SQL) 相容性層級
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,15 +102,7 @@ SELECT name, compatibility_level FROM sys.databases;
  如果現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]應用程式會受到您的版本中的行為差異[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，轉換至緊密地與新的相容性模式下使用應用程式。 然後使用**ALTER DATABASE**變更為 130 的相容性層級。 新資料庫的相容性設定生效時**USE Database**發行或處理新的登入的預設資料庫為該資料庫。  
   
 ## <a name="best-practices"></a>最佳作法  
- 在使用者連接到資料庫時變更相容性層級，可能會讓使用中的查詢產生不正確的結果集。 例如，如果在編譯查詢計劃時變更相容性層級，編譯的計畫可能會同時以新的和舊的相容性層級為根據，而導致不正確的計畫以及可能不精確的結果。 此外，如果此計畫放入計畫快取且重複用於後續的查詢，問題可能更嚴重。 若要避免發生不精確的查詢結果，建議您使用下列程序變更資料庫的相容性層級：  
-  
-1.  使用 ALTER DATABASE SET SINGLE_USER 將資料庫設定為單一使用者存取模式。  
-  
-2.  變更資料庫的相容性層級。  
-  
-3.  使用 ALTER DATABASE SET MULTI_USER 將資料庫設定成多使用者存取模式。  
-  
-4.  如需有關設定資料庫的存取模式的詳細資訊，請參閱[ALTER DATABASE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+升級相容性層級的建議工作流程，請參閱[變更資料庫相容性模式並使用查詢存放區](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。  
   
 ## <a name="compatibility-levels-and-stored-procedures"></a>相容性層級和預存程序  
  當執行預存程序時，它會使用定義所在之資料庫的目前相容性層級。 當資料庫的相容性設定改變時，也會同時自動重新編譯它的所有預存程序。  

@@ -1,5 +1,5 @@
 ---
-title: "負載平衡封裝的遠端伺服器上使用 SQL Server Agent |Microsoft 文件"
+title: "使用 SQL Server Agent 在遠端伺服器上設定套件負載平衡 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c6226a4f0e91ac69b8355892d67c721325a1439b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e94e2a9341651198f556022e4cd20cb257b2c6ce
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>使用 SQL Server Agent 在遠端伺服器上設定封裝負載平衡
   當您必須執行許多封裝時，使用其他可用的伺服器會更方便。 當封裝全都受單一父封裝控制時，使用其他伺服器來執行封裝的這種方法，即稱為負載平衡。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，負載平衡是一種必須由封裝擁有者建構的手動程序。 伺服器並不會自動執行負載平衡。 此外，遠端伺服器上執行的封裝也必須是完整的封裝，而不是其他封裝中的個別工作。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="illustration-of-load-balancing"></a>負載平衡的圖例說明  
  下圖顯示伺服器上的父封裝。 此父封裝包含多項「執行 SQL 作業代理程式」工作。 父封裝中的每項工作都會呼叫遠端伺服器上的 SQL Server Agent。 這些遠端伺服器包含 SQL Server Agent 作業，而這些作業都有一個步驟可以呼叫該伺服器上的封裝。  
   
- ![SSIS 負載平衡架構概觀](../../integration-services/packages/media/loadbalancingoverview.gif "概觀的 SSIS 負載平衡架構")  
+ ![SSIS 負載平衡架構概觀](../../integration-services/packages/media/loadbalancingoverview.gif "SSIS 負載平衡架構概觀")  
   
  以這種架構設定負載平衡所需要的步驟並不是新的概念。 相反地，負載平衡是利用現有概念和一般 SSIS 物件，以新的方式來達成。  
   
@@ -92,7 +90,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>偵錯 SQL Server Agent 作業和子封裝  
  您可以使用下列其中一種方法來建立 SQL Server Agent 作業及其子封裝：  
   
--   在 SSIS 設計師中，執行每個子封裝，依序按一下**偵錯** / **啟動但不偵錯**。  
+-   按一下 [偵錯] / [啟動但不偵錯]，以便在 SSIS 設計師中執行每個子套件。  
   
 -   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行遠端電腦上的個別 SQL Server Agent 作業，以確定封裝執行無誤。  
   
@@ -110,7 +108,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="listing-child-packages"></a>列出子封裝  
  若您將包含父封裝及子封裝的專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，可以檢視由父封裝執行的子封裝清單。 當您執行父封裝時，會在 **中自動產生父封裝的 [概觀]**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]報告。 該告會列出父封裝中包含的執行封裝工作所執行之子封裝清單，如下圖所示。  
   
- ![概觀報表與子封裝的清單](../../integration-services/packages/media/overviewreport-childpackagelisting.png "概觀 」 報表與子封裝的清單")  
+ ![含有子套件清單的概觀報表](../../integration-services/packages/media/overviewreport-childpackagelisting.png "含有子套件清單的概觀報表")  
   
  如需存取 [概觀]  報告的資訊，請參閱＜ [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)＞。  
   
@@ -125,17 +123,16 @@ ms.lasthandoff: 08/03/2017
 >  您可以使用包含 Transact-SQL 陳述式為 **sp_start_job N'package_name'** 的「執行 SQL 工作」。 如需詳細資訊，請參閱 [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)。  
   
 ### <a name="debugging-environment"></a>環境偵錯  
- 測試父封裝時，請使用 [偵錯] / [開始偵錯] \(F5) 來執行以使用設計師的偵錯環境。 或者，也可以使用命令提示公用程式 **dtexec**。 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
+ 測試父封裝時，請使用 [偵錯] / [開始偵錯] (F5) 來執行以使用設計師的偵錯環境。 或者，也可以使用命令提示公用程式 **dtexec**。 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
 
 ## <a name="logging-for-load-balanced-packages-on-remote-servers"></a>遠端伺服器上負載平衡封裝的記錄
   當所有子封裝都使用相同的記錄提供者，而且全部寫入同一個目的地時，可以讓管理員較容易管理各種伺服器上執行之所有子封裝的記錄檔。 為所有子封裝建立共用記錄檔的其中一個方法，就是透過設定子封裝，使它們將事件記錄到 SQL Server 記錄提供者。 您可以將所有封裝設定成使用同一個資料庫、同一部伺服器，以及伺服器的同一個執行個體。  
   
  若要檢視記錄檔，管理員只需登入單一伺服器即可檢視所有子封裝的記錄檔。  
   
- 如需如何啟用封裝中的記錄資訊，請參閱[Integration Services (SSIS) 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 如需如何在套件中啟用記錄的資訊，請參閱 [Integration Services (SSIS) 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
 
 ## <a name="related-tasks"></a>相關工作  
  [封裝的 SQL Server Agent 作業](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   
-

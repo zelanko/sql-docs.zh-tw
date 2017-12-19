@@ -1,5 +1,5 @@
 ---
-title: "ODBC 來源 |Microsoft 文件"
+title: "ODBC 來源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1e26fe82d939dd58cbbfa850f041a7ae3d23b248
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-source"></a>ODBC 來源
   ODBC 來源會使用資料庫資料表、檢視或 SQL 陳述式，從 ODBC 支援的資料庫中擷取資料。  
@@ -89,7 +87,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [使用 ODBC 來源擷取資料](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
+-   [使用 ODBC 來源來擷取資料](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
 -   [ODBC 來源自訂屬性](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
@@ -200,4 +198,3 @@ ms.lasthandoff: 08/17/2017
  導致錯誤或截斷的資料列會導向至 ODBC 來源的錯誤輸出。  
   
   
-

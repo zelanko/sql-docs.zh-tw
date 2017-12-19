@@ -2,9 +2,12 @@
 title: "針對 IntelliSense 進行疑難排解 (SQL Server Management Studio) | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8e71773ba2cb7e49c9d76a52dbdfc96d671e9cf2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cadf7e8e4aafd5c2c6073a1406c8daa9879dcc5f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshooting-intellisense"></a>針對 IntelliSense 進行疑難排解
-  在某些情況下，IntelliSense 選項的運作可能會不符合您的預期。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在某些情況下，IntelliSense 選項的運作可能會不符合您的預期。  
   
 ## <a name="conditions-that-affect-intellisense"></a>影響 IntelliSense 的條件  
  下列條件可能會影響 IntelliSense 的行為：  

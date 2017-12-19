@@ -2,12 +2,12 @@
 title: "Analysis Services 中的翻譯支援 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f9339fc314e178ec75777d985851da2589a3658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ffebab4d2702f914cdf43ba4acdff916b1f54e57
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services 中的翻譯支援
-  在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料模型中，您可以內嵌標題或描述的多個翻譯，根據 LCID 提供文化特性的字串。 若為多維度模型，您可以為資料庫名稱、Cube 物件和資料庫維度物件加入翻譯。 若為表格式模型，您可以翻譯資料表和資料行的標題和描述。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料模型，您可以內嵌標題或描述，以提供特定文化特性的字串，根據 LCID 的多個翻譯。 若為多維度模型，您可以為資料庫名稱、Cube 物件和資料庫維度物件加入翻譯。 若為表格式模型，您可以翻譯資料表和資料行的標題和描述。  
   
  定義翻譯會在模型內建立中繼資料和翻譯的標題，但若要在用戶端應用程式中轉譯當地語系化的字串，您必須在物件上設定 **Language** 屬性，或在連接字串上傳遞 **Culture** 或 **Locale Identifier** 參數 (例如，藉由設定 `LocaleIdentifier=1036` 以傳回法文字串)。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [多維度模型中的翻譯 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 的全球化案例](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [語言和定序 &#40;Analysis Services &#41;](../analysis-services/languages-and-collations-analysis-services.md)   
  [設定或變更資料行定序](../relational-databases/collations/set-or-change-the-column-collation.md)   

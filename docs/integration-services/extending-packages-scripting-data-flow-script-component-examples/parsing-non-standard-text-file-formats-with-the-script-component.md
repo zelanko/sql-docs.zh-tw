@@ -1,5 +1,5 @@
 ---
-title: "With the Script Component 剖析非標準文字檔案格式 |Microsoft 文件"
+title: "使用指令碼元件剖析非標準文字檔案格式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,48 +8,45 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - text file reading [Integration Services]
 - Script component [Integration Services], non-standard text file formats
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c6bf6a70027da7804e2fdca998948d44c9a26097
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 71d6dc8817b80e99fa5aece9fd5c581f22c69c4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用指令碼元件剖析非標準文字檔案格式
   當來源資料是以非標準格式排列時，為了達成相同的結果，您可能會發現將所有剖析邏輯合併在單一指令碼中會比將多個 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 轉換鏈結在一起更方便。  
   
- [範例 1： 剖析資料列分隔記錄](#example1)  
+ [範例 1：剖析以資料列分隔的記錄](#example1)  
   
- [範例 2： 分割父記錄和子記錄](#example2)  
+ [範例 2：分割父記錄和子記錄](#example2)  
   
 > [!NOTE]  
 >  如果您要建立可以更輕鬆地在多個資料流程工作與多個封裝之間重複使用的元件，請考慮使用這個指令碼元件範例中的程式碼，做為自訂資料流程元件的起點。 如需詳細資訊，請參閱 [開發自訂資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
-##  <a name="example1"></a>範例 1： 剖析資料列分隔記錄  
+##  <a name="example1"></a> 範例 1：剖析以資料列分隔的記錄  
  這則範例將示範如何取得每個資料行都以個別行顯示的文字檔案，並且使用指令碼元件，將它剖析成目的地資料表。  
   
- 如需如何設定使用的指令碼元件為資料流程中的資料轉換的詳細資訊，請參閱[使用指令碼元件建立同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用指令碼元件建立非同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
+ 如需如何設定指令碼元件以用作資料流程中轉換的詳細資訊，請參閱[使用指令碼元件建立同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用指令碼元件建立非同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>設定此指令碼元件範例  
   
-1.  建立和儲存名為文字檔**rowdelimiteddata.txt** ，其中包含下列來源資料：  
+1.  建立並儲存名為 **rowdelimiteddata.txt** 的文字檔案，其中包含下列來源資料：  
   
     ```  
     FirstName: Nancy  
@@ -94,17 +91,17 @@ ms.lasthandoff: 09/26/2017
   
 6.  將 OLE DB 連接管理員加入至此封裝，並且將它設定為連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體以及您在其中建立目的地資料表的資料庫。  
   
-7.  將資料流程工作加入封裝，然後按一下**資料流程**SSIS 設計工具索引標籤。  
+7.  將資料流程工作新增至套件，然後按一下 SSIS 設計工具的 [資料流程] 索引標籤。  
   
-8.  將一般檔案來源加入至資料流程，並且將它設定為使用 RowDelimitedData 連接管理員。 在**資料行**頁面**一般檔案來源編輯器**，選取單一可用的外部資料行。  
+8.  將一般檔案來源加入至資料流程，並且將它設定為使用 RowDelimitedData 連接管理員。 在 [一般檔案來源編輯器] 的 [資料行] 頁面上，選取單一可用的外部資料行。  
   
 9. 將指令碼元件加入至資料流程並將它設定為轉換。 將一般檔案來源的輸出連接至指令碼元件。  
   
-10. 按兩下要顯示的指令碼元件**指令碼轉換編輯器**。  
+10. 按兩下指令碼元件，以顯示 [指令碼轉換編輯器]。  
   
-11. 在**輸入資料行**頁面**指令碼轉換編輯器**，選取單一可用的輸入資料行。  
+11. 在 [指令碼轉換編輯器] 的 [輸入資料行] 頁面上，選取單一可用的輸入資料行。  
   
-12. 在**輸入和輸出**頁面**指令碼轉換編輯器**、 選取 Output 0，並設定其**SynchronousInputID**為 None。 建立 5 個輸出資料行，全部都屬於字串 [DT_STR] 類型而且長度為 32：  
+12. 在 [指令碼轉換編輯器] 的 [輸入及輸出] 頁面上，選取 [Output 0] 並將其 **SynchronousInputID** 設定為 None。 建立 5 個輸出資料行，全部都屬於字串 [DT_STR] 類型而且長度為 32：  
   
     -   FirstName  
   
@@ -116,7 +113,7 @@ ms.lasthandoff: 09/26/2017
   
     -   StateProvince  
   
-13. 在**指令碼**頁面**指令碼轉換編輯器**，按一下 **編輯指令碼**輸入程式碼所示**ScriptMain**的類別此範例中。 關閉指令碼開發環境和**指令碼轉換編輯器**。  
+13. 在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，按一下 [編輯指令碼]，然後輸入範例之 **ScriptMain** 類別中所示的程式碼。 關閉指令碼開發環境以及 [指令碼轉換編輯器]。  
   
 14. 將 SQL Server 目的地加入至資料流程。 將它設定為使用 OLE DB 連接管理員和 RowDelimitedData 資料表。 將指令碼元件的輸出連接至這個目的地。  
   
@@ -197,17 +194,17 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a>範例 2： 分割父記錄和子記錄  
+##  <a name="example2"></a> 範例 2：分割父記錄和子記錄  
  這則範例將示範如何取得文字檔案 (分隔符號資料列位於父記錄資料列前面，而且後面接著不定數目的子記錄資料列)，並且使用指令碼元件，將它剖析成適當正規化的父和子目的地資料表。 您可以針對每筆父記錄和子記錄使用多個資料列或資料行的來源檔案輕鬆地調整這則簡單範例，只要存在可識別每筆記錄之開頭和結尾的方式即可。  
   
 > [!CAUTION]  
 >  這則範例僅供示範使用。 如果您執行此範例多次，它就會將重複的索引鍵值插入目的地資料表中。  
   
- 如需如何設定使用的指令碼元件為資料流程中的資料轉換的詳細資訊，請參閱[使用指令碼元件建立同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用指令碼元件建立非同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
+ 如需如何設定指令碼元件以用作資料流程中轉換的詳細資訊，請參閱[使用指令碼元件建立同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用指令碼元件建立非同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>設定此指令碼元件範例  
   
-1.  建立和儲存名為文字檔**parentchilddata.txt** ，其中包含下列來源資料：  
+1.  建立並儲存名為 **parentchilddata.txt** 的文字檔案，其中包含下列來源資料：  
   
     ```  
     **********  
@@ -253,23 +250,23 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 6.  將 OLE DB 連接管理員加入至此封裝，並且將它設定為連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體以及您在其中建立目的地資料表的資料庫。  
   
-7.  將資料流程工作加入封裝，然後按一下**資料流程**SSIS 設計工具索引標籤。  
+7.  將資料流程工作新增至套件，然後按一下 SSIS 設計工具的 [資料流程] 索引標籤。  
   
-8.  將一般檔案來源加入至資料流程，並且將它設定為使用 ParentChildData 連接管理員。 在**資料行**頁面**一般檔案來源編輯器**，選取單一可用的外部資料行。  
+8.  將一般檔案來源加入至資料流程，並且將它設定為使用 ParentChildData 連接管理員。 在 [一般檔案來源編輯器] 的 [資料行] 頁面上，選取單一可用的外部資料行。  
   
 9. 將指令碼元件加入至資料流程並將它設定為轉換。 將一般檔案來源的輸出連接至指令碼元件。  
   
-10. 按兩下要顯示的指令碼元件**指令碼轉換編輯器**。  
+10. 按兩下指令碼元件，以顯示 [指令碼轉換編輯器]。  
   
-11. 在**輸入資料行**頁面**指令碼轉換編輯器**，選取單一可用的輸入資料行。  
+11. 在 [指令碼轉換編輯器] 的 [輸入資料行] 頁面上，選取單一可用的輸入資料行。  
   
-12. 在**輸入和輸出**頁面**指令碼轉換編輯器**，選取 Output 0、 將它重新命名為 ParentRecords 並將其**SynchronousInputID**為 None。 建立 2 的輸出資料行：  
+12. 在 [指令碼轉換編輯器] 的 [輸入及輸出] 頁面上，選取 [Output 0]，並將它重新命名為 ParentRecords，然後將其 **SynchronousInputID** 設定為 None。 建立 2 個輸出資料行：  
   
     -   ParentID (主索引鍵)，屬於四位元組帶正負號的整數 [DT_I4] 類型  
   
     -   ParentRecord，屬於字串 [DT_STR] 類型而且長度為 32  
   
-13. 建立第二個輸出並將它命名為 ChildRecords。 **SynchronousInputID**新輸出的已設定為 None。 建立 3 個輸出資料行：  
+13. 建立第二個輸出並將它命名為 ChildRecords。 新輸出的 **SynchronousInputID** 已經設定為 None。 建立 3 個輸出資料行：  
   
     -   ChildID (主索引鍵)，屬於四位元組帶正負號的整數 [DT_I4] 類型  
   
@@ -277,7 +274,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   ChildRecord，屬於字串 [DT_STR] 類型而且長度為 50  
   
-14. 在**指令碼**頁面**指令碼轉換編輯器**，按一下 **編輯指令碼**。 在**ScriptMain**類別中，輸入程式碼範例所示。 關閉指令碼開發環境和**指令碼轉換編輯器**。  
+14. 在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，按一下 [編輯指令碼]。 在 **ScriptMain** 類別中，輸入範例中所示的程式碼。 關閉指令碼開發環境以及 [指令碼轉換編輯器]。  
   
 15. 將 SQL Server 目的地加入至資料流程。 將指令碼元件的 ParentRecords 輸出連接至這個目的地。將它設定為使用 OLE DB 連接管理員和 Parents 資料表。  
   
@@ -361,4 +358,3 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
  [使用指令碼元件建立非同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
-

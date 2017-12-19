@@ -2,12 +2,12 @@
 title: "TOM API (Analysis Services AMO-TOM) 中的錯誤處理 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 30d824c54359a7f7db0d57f7a4a7922329a0e89b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5ba78401880831916adb608cb55f0c93579f84e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="handling-errors-in-the-tom-api-analysis-services-amo-tom"></a>TOM API (Analysis Services AMO-TOM) 中的錯誤處理
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Managed 程式庫，例如 Analysis Services 管理物件 (AMO) 表格式物件模型 (TOM) 的常見作法是使用例外狀況做為向使用者回報錯誤狀況的機制。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Managed 程式庫，例如 Analysis Services 管理物件 (AMO) 表格式物件模型 (TOM) 的常見作法是使用例外狀況做為向使用者回報錯誤狀況的機制。  
 
 當 AMO TOM 中偵測到錯誤時，除了擲回一些標準的.NET 例外狀況就像**ArgumentException**和**InvalidOperationException**，TOM 也數個 TOM 特定例外狀況。  
 

@@ -1,5 +1,5 @@
 ---
-title: "專案版本對話方塊 |Microsoft 文件"
+title: "專案版本對話方塊 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.ssms.isprojectprop.versions.f1
+f1_keywords: sql13.ssis.ssms.isprojectprop.versions.f1
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bdf9a0d6fa3ae9a022b720ff0bac003cd65c00db
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 08a17d5d42312536a196ae22e6882b3d3c6aa395
+ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="project-versions-dialog-box"></a>專案版本對話方塊
   使用 **[專案版本]** 對話方塊檢視專案版本，以及還原舊版。  
@@ -58,4 +55,3 @@ ms.lasthandoff: 08/03/2017
  若要還原舊版專案，請在 **[版本]** 資料表中選取版本，然後按一下 **[還原至選取的版本]**。 專案便會還原到選取的版本，而且該版本會以 **[版本]** 資料表之 **[目前]** 資料行中的核取記號表示。  
   
   
-

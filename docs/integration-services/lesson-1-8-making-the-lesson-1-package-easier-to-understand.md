@@ -1,5 +1,5 @@
 ---
-title: "步驟 8： 使第 1 課封裝更易於了解 |Microsoft 文件"
+title: "步驟 8：使第 1 課的封裝更容易了解 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 55bd386054f3a7d066dc8c28c13e22ae82e9f0cb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ac8c3fa9e34de95c826c6c89a0356ac4797bd638
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>課程 1-8： 使第 1 課封裝更容易了解
+# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>課程 1-8 - 使課程 1 的封裝更容易了解
 現在您已完成第 1 課封裝的組態，不妨整理一下封裝配置。 如果控制流程配置和資料流程配置中的形狀是隨機大小，或形狀沒有對齊或分組，則封裝功能可能更難以了解。  
   
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 會提供方便而快速格式化封裝配置的工具。 格式化功能包括使形狀變成相同大小、對齊形狀和操控形狀之間水平和垂直距離的能力。  
@@ -65,4 +62,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

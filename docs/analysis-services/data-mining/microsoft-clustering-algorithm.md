@@ -2,12 +2,12 @@
 title: "Microsoft 群集演算法 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d569cea784548d1e6869868f3f2e0030927b96e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cb57075143154d8e317350625b6ac602dc241597
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft 群集演算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法是 *segmentation* 或 *clustering* 演算法，可逐一查看資料集中的案例，以將它們分成包含類似特性的群集。 這些群集對於瀏覽資料、識別資料的異常及建立預測很有幫助。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]群集演算法是*分割*或*叢集*逐一查看資料集，以便將它們組成包含類似特性的群集中案例的演算法。 這些群集對於瀏覽資料、識別資料的異常及建立預測很有幫助。  
   
  群集模型會識別資料集內，無法透過偶然的邏輯觀察而衍生之關聯性。 例如，您可以輕易地猜測出騎腳踏車上班的人通常不會住在離工作地點很遠的地方。 不過，此演算法可以尋找關於腳踏車通勤者之其他較不明顯的特性。 在下列圖表中，群集 A 代表可能要開車上班的人之資料，而群集 B 代表可能要騎腳踏車上班的人之資料。  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
   
 -   支援 OLAP 採礦模型的使用和資料採礦維度的建立。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 群集演算法技術參考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [叢集模型 &#40; 採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   

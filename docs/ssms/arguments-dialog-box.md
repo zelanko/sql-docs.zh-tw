@@ -3,8 +3,11 @@ title: "引數對話方塊 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f0ecbeb85aa37a96fd7dd0278c0bb7398ba74b3e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3e5b21e5522fd44c4a97068c166355f571831302
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="arguments-dialog-box"></a>引數對話方塊
-[引數] 對話方塊用來指定工具的新引數或現有引數。 當您啟動在 [外部工具] 對話方塊中選取了 [提示輸入引數] 選項的外部工具時，會出現這個對話方塊。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [引數] 對話方塊用來指定工具的新引數或現有引數。 當您啟動在 [外部工具] 對話方塊中選取了 [提示輸入引數] 選項的外部工具時，會出現這個對話方塊。  
   
 ## <a name="options"></a>選項。  
 **引數**  

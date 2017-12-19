@@ -2,9 +2,12 @@
 title: "Log File Auto Shrink 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32ea569906a61d179c4634f11dff301b5d2c0783
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4ff072f287fd371fb0239c2adbe80c90965fee4e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink 事件類別
-  **Log File Auto Shrink** 事件類別指出記錄檔會自動壓縮。 如果記錄檔是因為明確的 ALTER DATABASE 陳述式而壓縮，則不會觸發這個事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Log File Auto Shrink** 事件類別指出記錄檔會自動壓縮。 如果記錄檔是因為明確的 ALTER DATABASE 陳述式而壓縮，則不會觸發這個事件。  
   
  可將 **Log File Auto Shrink** 事件類別包含在會監視記錄檔壓縮的追蹤中。 當此事件類別包含在追蹤中，除非經常壓縮檔案，否則所造成的額外負荷擔不多。  
   

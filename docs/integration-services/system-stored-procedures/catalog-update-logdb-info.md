@@ -1,30 +1,28 @@
 ---
-title: "catalog.update_logdb_info （SSISDB 資料庫） |Microsoft 文件"
+title: "catalog.update_logdb_info (SSISDB 資料庫) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a898be08859230ab873fd8e358b892789aaed043
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0bd5af1a51baf6947f9634f1f7260af20a7e87b2
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/01/2017
 ---
-# <a name="catalogupdatelogdbinfo-ssisdb-database"></a>catalog.update_logdb_info （SSISDB 資料庫）
+# <a name="catalogupdatelogdbinfo-ssisdb-database"></a>catalog.update_logdb_info (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-更新[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]標尺出記錄資訊。
+更新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out 記錄資訊。
 
 ## <a name="syntax"></a>語法
 
@@ -33,11 +31,11 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 ```
 
 ## <a name="arguments"></a>引數
-[ @server_name =] *server_name*  
- Sql Server 用於向外的記錄。 *Server_name*是**nvarchar**。  
+[ @server_name = ] *server_name*  
+ 用於 Scale Out 記錄的 SQL Server。 *server_name* 是 **nvarchar**。  
 
- [ @connection_string =] *connection_string*  
- 向外記錄所使用的連接字串。 *Connection_string*是**nvarchar**。
+ [ @connection_string = ] *connection_string*  
+ 用於 Scale Out 記錄的連接字串。 *connection_string* 是 **nvarchar**。
 
  ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
@@ -48,8 +46,7 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 ## <a name="permissions"></a>Permissions  
  這個預存程序需要下列其中一個權限：  
    
--   成員資格**ssis_admin**資料庫角色  
+-   **ssis_admin** 資料庫角色的成員資格  
   
--   成員資格**sysadmin**伺服器角色  
+-   **sysadmin** 伺服器角色的成員資格  
  
-

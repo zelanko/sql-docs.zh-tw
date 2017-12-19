@@ -2,9 +2,12 @@
 title: "將 Excel 中的資料匯入到 SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 08/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,14 +15,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3541efebe50e19ce56e528dc575084c2c5bb1d07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: efa9c31464572543c67edde5fa6a740d659d4d48
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>將 Excel 中的資料匯入到 SQL Server 或 Azure SQL Database
-有數種方式可以將 Excel 檔案中的資料匯入到 SQL Server 或 Azure SQL Database。 本文摘要說明所有這些選項，並提供更詳細指示的連結。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 有數種方式可以將 Excel 檔案中的資料匯入到 SQL Server 或 Azure SQL Database。 本文摘要說明所有這些選項，並提供更詳細指示的連結。
 -   您可以使用下列其中一種工具，透過單一步驟將資料從 Excel 匯入至 SQL：
     -   SQL Server 匯入和匯出精靈
     -   SQL Server Integration Services (SSIS)

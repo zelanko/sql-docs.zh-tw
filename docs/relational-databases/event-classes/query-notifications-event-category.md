@@ -2,9 +2,12 @@
 title: "Query Notifications 事件類別目錄 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2176b111d90957a25a1ec0ce1ea493924b0f017f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 86888e2777517edd867c089e310826685b9ce371
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-notifications-event-category"></a>查詢通知事件類別目錄
-  **查詢通知** 事件類別目錄含有會回報資訊的事件類別，而開發人員和管理員可以使用這項資訊來監視並疑難排解查詢通知。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Query Notifications** 事件類別目錄含有會回報資訊的事件類別，而開發人員和管理員可以使用這項資訊來監視查詢通知並對其進行疑難排解。  
   
 ## <a name="in-this-section"></a>本節內容  
  [QN:Dynamics 事件類別](../../relational-databases/event-classes/qn-dynamics-event-class.md)  

@@ -2,12 +2,12 @@
 title: "工具和 Analysis Services 中使用的應用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d286657c8264cc0b1fa82b87a2978cd60387506
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cedca243acc9608e2d3855b2ee7ee2aa183c1d73
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services 中使用的工具和應用程式
-  尋找工具和應用程式所需的建立 Analysis Services 模型和管理部署資料庫。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]尋找工具和應用程式所需的建立 Analysis Services 模型和管理部署資料庫。  
   
 ## <a name="analysis-services-model-designers"></a>Analysis Services 模型設計師  
  使用專案範本中 SQL Server Data Tools (SSDT)，Visual Studio shell 中撰寫模型。 專案範本提供模型設計人員建立組成 Analysis Services 方案的資料模型物件。 SSDT 是更新每個月的免費 web 下載。
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="community-and-third-party-tools"></a>社群與協力廠商工具  
  如需社群程式碼範例，請造訪 [Analysis Services codeplex 頁面](http://sqlsrvanalysissrvcs.codeplex.com/) 。 當您在尋找支援 Analysis Services 之協力廠商工具的建議時，[論壇](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) 是相當實用的資源。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [多維度資料庫的相容性層級](../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [相容性層級的表格式模型](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   

@@ -2,12 +2,12 @@
 title: "FORMAT_STRING 內容 (MDX) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX 資料格屬性 FORMAT_STRING 內容
-  **FORMAT_STRING** 資料格屬性可格式化 **VALUE** 資料格屬性，建立 **FORMATTED_VALUE** 資料格屬性的值。 **FORMAT_STRING** 資料格屬性能處理原始的字串及原始數值，對該值套用格式運算式，以傳回格式化的 **FORMATTED_VALUE** 資料格屬性值。 下列資料表詳述了用來處理字串和數值的語法和格式字元。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**FORMAT_STRING**資料格屬性可格式化**值**資料格屬性，建立的值**FORMATTED_VALUE**資料格屬性。 **FORMAT_STRING** 資料格屬性能處理原始的字串及原始數值，對該值套用格式運算式，以傳回格式化的 **FORMATTED_VALUE** 資料格屬性值。 下列資料表詳述了用來處理字串和數值的語法和格式字元。  
   
 ## <a name="string-values"></a>字串值  
  字串的格式運算式可以有一個區段或以分號 (;) 分隔的兩個區段。  
@@ -157,7 +157,7 @@ ms.lasthandoff: 11/17/2017
 |`Medium Time`|使用時、分和 AM/PM 指示項的 12 小時格式來顯示時間。|  
 |`Short Time`|使用 24 小時格式來顯示時間，例如 17:45。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [LANGUAGE 及 FORMAT_STRING FORMATTED_VALUE 上](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
  [使用資料格屬性 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [建立和使用屬性值 &#40;MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   

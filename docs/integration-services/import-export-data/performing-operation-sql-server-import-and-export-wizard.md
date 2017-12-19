@@ -1,5 +1,5 @@
 ---
-title: "執行作業 （SQL Server 匯入和匯出精靈） |Microsoft 文件"
+title: "執行作業 (SQL Server 匯入和匯出精靈) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/11/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.performingoperation.f1
+f1_keywords: sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 75dc26699071ee88bb0c05368b4bf36ba677c35b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6d31607e0a2880d0a984efe20e4b11c9195cb789
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在執行作業 (SQL Server 匯入和匯出精靈)
 檢閱您在精靈中所做的選擇，並在 [完成精靈]  頁面上按一下 [完成]  之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [正在執行作業] 。 在此頁面上，您會看到在前幾頁設定之作業的進度和結果。 您不需要在此頁面上採取任何動作。
@@ -33,12 +30,12 @@ ms.lasthandoff: 09/26/2017
 ## <a name="screen-shot---operation-in-progress"></a>螢幕擷取畫面 - 作業進行中 
  下列螢幕擷取畫面顯示當作業仍在進行中時，精靈的 [正在執行作業]  頁面。  
   
- ![執行作業 頁面的匯入和匯出精靈](../../integration-services/import-export-data/media/performing-operation1.png "執行作業 頁面的匯入和匯出精靈")  
+ ![匯入和匯出精靈的執行作業頁面](../../integration-services/import-export-data/media/performing-operation1.png "匯入和匯出精靈的執行作業頁面")  
 
 ## <a name="screen-shot---operation-completed"></a>螢幕擷取畫面 - 作業已完成 
  下列螢幕擷取畫面顯示當作業完成之後，精靈的 [正在執行作業]  頁面。 按一下 [訊息]  資料行中的項目，取得關於對應步驟的詳細資訊。  
   
- ![執行作業 頁面的匯入和匯出精靈](../../integration-services/import-export-data/media/performing-operation2.png "執行作業 頁面的匯入和匯出精靈")  
+ ![匯入和匯出精靈的執行作業頁面](../../integration-services/import-export-data/media/performing-operation2.png "匯入和匯出精靈的執行作業頁面")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>查看作業進度
  **動作**  
@@ -64,6 +61,5 @@ ms.lasthandoff: 09/26/2017
 
 ## <a name="see-also"></a>另請參閱
 [透過匯入和匯出精靈的簡單範例開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

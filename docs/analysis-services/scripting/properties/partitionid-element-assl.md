@@ -2,12 +2,12 @@
 title: "PartitionID 元素 (ASSL) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ced5e03a10c37e4b28c467efd03a72c42dadea4d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 596cf1ea5ae9f95e5e23f58002e3165ab2690c6d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitionid-element-assl"></a>PartitionID 元素 (ASSL)
-  將[分割](../../../analysis-services/scripting/objects/partition-element-assl.md)元素與父元素、 繫結或超出的非正規繫結。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]將[分割](../../../analysis-services/scripting/objects/partition-element-assl.md)元素與父元素、 繫結或超出的非正規繫結。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  如需繫結和-單行繫結的詳細資訊，請參閱[資料來源和繫結 &#40;SSAS 多維度 &#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

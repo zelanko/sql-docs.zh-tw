@@ -2,12 +2,12 @@
 title: "多維度資料來源建立 Power View 報表 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffbac3cbba343bdaa966c6018cfa8add822e3869
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5f216f4fc9938938fedc9a8b02b943784fd44535
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>建立具有多維度資料來源的 Power View 報表
-  根據多維度模型建立 Power View 報表與根據 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿或 Analysis Services 表格式模型建立報表並無不同之處。 Power View 報表是從 SharePoint 文件庫的報表資料來源連接檔案 (.rsds) 建立。 如需如何建立 .rsds 的詳細資訊，請參閱 [建立報表資料來源](../../analysis-services/multidimensional-models/create-a-report-data-source.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]建立 Power View 多維度模型為基礎的報表並無不同建立報表，根據[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿或 Analysis Services 表格式模型。 Power View 報表是從 SharePoint 文件庫的報表資料來源連接檔案 (.rsds) 建立。 如需如何建立 .rsds 的詳細資訊，請參閱 [建立報表資料來源](../../analysis-services/multidimensional-models/create-a-report-data-source.md)。  
   
  在開始進行之前，您需要先了解：  
   

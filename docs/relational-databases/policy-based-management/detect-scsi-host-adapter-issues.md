@@ -2,9 +2,12 @@
 title: "偵測 SCSI 主機介面卡問題 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1812014dc470d143bd74ecd26e110dbd9a3560b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b9a5ef035e5aa3bea80d8ceb353b9d0ce7386232
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>偵測到 SCSI 主機介面卡問題
-  這個規則會檢查系統事件記錄檔中是否有 EventId 1066。 這個錯誤是因為發生 SCSI 主機介面卡組態問題或是裝置異常。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 這個規則會檢查系統事件記錄檔中是否有 EventId 1066。 這個錯誤是因為發生 SCSI 主機介面卡組態問題或是裝置異常。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建議  
  如需有關如何排除此錯誤的詳細資訊，請檢閱下列 Microsoft 知識庫文件：  

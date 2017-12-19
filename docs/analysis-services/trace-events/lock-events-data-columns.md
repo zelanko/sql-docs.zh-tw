@@ -2,12 +2,12 @@
 title: "鎖定事件資料行 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a48fc9d15009184436ec835915c4f5cec4f9fe7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb35430b89a607cbf11c20099da0e1a616e433fe
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lock-events-data-columns"></a>鎖定事件資料行
-  鎖定事件類別目錄含有下列事件類別：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]鎖定事件類別目錄具有下列事件類別：  
   
 |**事件識別碼**|**事件名稱**|**事件描述**|  
 |------------------|--------------------|---------------------------|  
@@ -121,7 +121,7 @@ ms.lasthandoff: 11/17/2017
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Lock 事件類別目錄](../../analysis-services/trace-events/lock-events-category.md)  
   
   

@@ -2,12 +2,12 @@
 title: "實體架構 (Analysis Services-資料採礦) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 772d9a4b58c199ce34a6b85b710519c344fd8deb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dc6dcc6e4383e22a3b1695cc03cd40bd6acf8fb2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>實體架構 (Analysis Services – 資料採礦)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用伺服器和用戶端元件，為商業智慧應用程式提供資料採礦功能：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會使用伺服器和用戶端元件提供商業智慧應用程式的資料採礦功能：  
   
 -   伺服器元件是以 Microsoft Windows 服務的形式實作。 同一部電腦上可以有多個執行個體，每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體都實作為個別的 Windows 服務執行個體。  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
  用戶端與 Analysis Services 伺服器之間的所有通訊都會使用 XMLA，這是一種與平台和語言無關的通訊協定。 從用戶端收到要求時，Analysis Services 就會判斷此要求是否與 OLAP 或資料採礦有關，然後適當地路由傳送此要求。 如需詳細資訊，請參閱 [OLAP 引擎伺服器元件](../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [邏輯架構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

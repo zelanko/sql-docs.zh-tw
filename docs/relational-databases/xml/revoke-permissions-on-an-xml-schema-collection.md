@@ -2,9 +2,12 @@
 title: "撤銷 XML 結構描述集合上的權限 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db10bb0d69106c3263c01a6762a0685a3cd721d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3daaadf50d221b5f5b4fc2f580990a3e849a0c60
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>撤銷 XML 結構描述集合上的權限
-  建立 XML 結構描述集合的權限可以使用下列其中一種方式來撤銷：  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 建立 XML 結構描述集合的權限可以使用下列其中一種方式來撤銷：  
   
 -   撤銷關聯式結構描述的 ALTER 權限。 然後，主體便無法在關聯式結構描述中建立 XML 結構描述集合。 但是，主體仍然可以在同一資料庫的其他關聯式結構描述中建立 XML 結構描述集合。  
   

@@ -1,5 +1,5 @@
 ---
-title: "ODBC 目的地 |Microsoft 文件"
+title: "ODBC 目的地 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 0c3df5b8f8ef946021fcc72bb12cb164e99fdb5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
   ODBC 目的地會將資料大量載入到 ODBC 支援的資料庫資料表。 ODBC 目的地使用 ODBC 連接管理員來連接到資料來源。  
@@ -70,11 +68,11 @@ ms.lasthandoff: 08/17/2017
   
  如需詳細資訊，請參閱下列其中一個主題：  
   
--   [ODBC 目的地編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [ODBC 目的地編輯器 &#40;[對應] 頁面 &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 目的地編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [ODBC 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  **[進階編輯器]** 對話方塊包含可以程式設計方式設定的屬性。  
   
@@ -84,9 +82,9 @@ ms.lasthandoff: 08/17/2017
   
  如需有關可在 [進階編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱＜ [ODBC Destination Custom Properties](../../integration-services/data-flow/odbc-destination-custom-properties.md)＞。  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>本節內容  
   
--   [使用 ODBC 目的地載入資料](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
+-   [使用 ODBC 目的地來載入資料](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [ODBC 目的地自訂屬性](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
@@ -127,7 +125,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="odbc-destination-editor-mappings-page"></a>ODBC 目的地編輯器 (對應頁面)
   使用 [ODBC 目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應至目的地資料行。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
   
 #### <a name="available-input-columns"></a>可用的輸入資料行  
  可用輸入資料行的清單。 將輸入資料行拖放至可用的目的地資料行，即可對應資料行。  
@@ -136,7 +134,7 @@ ms.lasthandoff: 08/17/2017
  可用目的地資料行的清單。 將目的地資料行拖放至可用的輸入資料行，即可對應資料行。  
   
 #### <a name="input-column"></a>輸入資料行  
- 檢視所選取的輸入資料行。 您可以選取來移除對應**\<忽略 >**從輸出排除資料行。  
+ 檢視所選取的輸入資料行。 您可以選取 [\<忽略>] 移除對應，排除輸出的資料行。  
   
 #### <a name="destination-column"></a>目的地資料行  
  檢視所有可用的目的地資料行，包括對應和取消對應的資料行。  
@@ -189,4 +187,3 @@ ms.lasthandoff: 08/17/2017
 #### <a name="redirect-flow"></a>重新導向流程  
  導致錯誤或截斷的資料列會導向至 ODBC 目的地的錯誤輸出。 如需詳細資訊，請參閱＜ODBC 目的地＞。  
   
-

@@ -3,8 +3,11 @@ title: "摘要查詢結果 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5eebba84a544f1b8bf426337a7413e7f51131c5d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1e53feeedbed3359c525507de49e1e41caec621d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>摘要查詢結果 (Visual Database Tools)
-當您建立彙總查詢時，可以套用某些邏輯原則。 例如，您無法顯示摘要查詢中的個別資料列內容。 查詢和檢視設計工具可協助您依據 [圖表窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 與 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 的運作模式來符合這些原則。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 當您建立彙總查詢時，可以套用某些邏輯原則。 例如，您無法顯示摘要查詢中的個別資料列內容。 查詢和檢視設計工具可協助您依據 [圖表窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 與 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 的運作模式來符合這些原則。  
   
 暸解彙總查詢和查詢和檢視設計工具的作業方式後，您就可以用邏輯方式來建立正確的彙總查詢。 使用彙總查詢的最重要的原則就是只能產生摘要資訊。 因此，其他的原則即說明可用來參考彙總查詢個別資料欄的其他方法。  
   

@@ -1,5 +1,5 @@
 ---
-title: "catalog.event_message_context |Microsoft 文件"
+title: catalog.event_message_context | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b7aeb07c52f7ed00aa5a6a29cdd054258cb62d65
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bb3d3f706bba3e6c0c6cbf88b5c2145e73fdaaeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +34,10 @@ ms.lasthandoff: 09/26/2017
 |Event_message_id|bigint|與內容相關之訊息的唯一識別碼。|  
 |Context_depth|int|隨著深度的增加，內容與錯誤之間的距離越遠。 當發生錯誤時，內容深度從 1 開始。 值為 0 表示開始執行之前的封裝狀態。|  
 |Package_path|Nvarchar(max)|內容來源的封裝路徑。|  
-|Context_type|smallint|內容來源的物件類型。 請參閱**備註**部分內容類型清單。|  
-|Context_source_name|Nvarchar （4000)|內容來源的物件名稱。|  
+|Context_type|smallint|內容來源的物件類型。 如需內容類型的清單，請參閱＜**備註**＞一節。|  
+|Context_source_name|Nvarchar(4000)|內容來源的物件名稱。|  
 |Context_source_id|Nvarchar(38)|內容來源之物件的唯一識別碼。|  
-|Property_name|Nvarchar （4000)|與內容來源相關聯的屬性名稱。|  
+|Property_name|Nvarchar(4000)|與內容來源相關聯的屬性名稱。|  
 |Property_value|Sql_variant|與內容來源相關聯的屬性值。|  
   
 ## <a name="remarks"></a>備註  
@@ -62,9 +60,8 @@ ms.lasthandoff: 09/26/2017
   
 -   作業的 READ 權限  
   
--   成員資格**ssis_admin**資料庫角色。  
+-   **ssis_admin** 資料庫角色的成員資格。  
   
--   成員資格**sysadmin**伺服器角色。  
+-   **sysadmin** 伺服器角色的成員資格。  
   
   
-

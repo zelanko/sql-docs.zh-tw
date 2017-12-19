@@ -2,12 +2,12 @@
 title: "安全性角色 (Analysis Services-多維度資料) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01525ae36d9efed7df054d4100c7a4b79340a2aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5bb382b53436e7567df3b970a77c75e7e3fe2be0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>安全性角色 (Analysis Services - 多維度資料)
-  角色用於[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]要管理的安全性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件和資料。 基本上，角色產生關聯的 Microsoft Windows 使用者和群組具有特定存取權限和定義的執行個體所管理之物件的權限的安全性識別碼 (Sid) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 中提供兩種角色類型[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]角色用於[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]要管理的安全性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件和資料。 基本上，角色產生關聯的 Microsoft Windows 使用者和群組具有特定存取權限和定義的執行個體所管理之物件的權限的安全性識別碼 (Sid) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 中提供兩種角色類型[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   伺服器角色，這是一種固定角色，提供對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體的管理員存取權。  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 |寫入|{**None**, **Allowed**}<br /><br /> 預設值=**None**|指定成員是否具有父物件資料的寫入權。<br /><br /> 也適用於 <xref:Microsoft.AnalysisServices.Dimension>、<xref:Microsoft.AnalysisServices.Cube> 和 <xref:Microsoft.AnalysisServices.MiningModel> 子類別。 不適用於資料庫<xref:Microsoft.AnalysisServices.MiningStructure>子類別，這樣會產生驗證錯誤。<br /><br /> **允許**上<xref:Microsoft.AnalysisServices.Dimension>授與維度中的所有屬性的都寫入權限。<br /><br /> **允許**上<xref:Microsoft.AnalysisServices.Cube>授與其寫入權限定義為類型的資料分割的 cube 資料格上 = 回寫。<br /><br /> **允許**上<xref:Microsoft.AnalysisServices.MiningModel>授與修改模型內容的權限。<br /><br /> **允許**上<xref:Microsoft.AnalysisServices.MiningStructure>沒有特定的意義[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。<br /><br /> 注意： 寫入不能設定為**允許**除非讀取也設定為**允許**|  
 |Administer<br /><br /> 注意： 只有在資料庫權限|{**true**, **false**}<br /><br /> 預設值=**false**|指定成員是否可以管理資料庫。<br /><br /> **true** 會授與資料庫中所有物件的存取權。<br /><br /> 成員可以具有特定資料庫的管理權限，但不包含其他資料庫。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [權限和存取權限 &#40;Analysis Services-多維度資料 &#41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
  [授權的存取權的物件和作業 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   

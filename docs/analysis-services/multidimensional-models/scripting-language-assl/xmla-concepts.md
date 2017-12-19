@@ -2,12 +2,12 @@
 title: "XMLA 概念 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3defefc1088b24e386f797ba4b97b4eacb5cee33
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5dca0d0e247a985194109651ad14810d98a570e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xmla-concepts"></a>XMLA 概念
-  XML for Analysis (XMLA) 開放標準支援對位於全球資訊網上的資料來源進行資料存取。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]依據 XMLA 1.1 規格實作 XMLA。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]XML for Analysis (XMLA) 開放標準支援全球資訊網上的資料來源的資料存取。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]依據 XMLA 1.1 規格實作 XMLA。  
   
  XML for Analysis (XMLA) 是以簡易物件存取通訊協定 (SOAP) 為基礎的 XML 通訊協定，它是特別針對位在網路上的任何標準多維度資料來源進行通用資料存取而設計。 XMLA 也不需要部署用戶端元件以公開元件物件模型 (COM) 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 介面。 XMLA 是針對網際網路最佳化，因為在這種環境下，往返伺服器的作業會耗用大量的時間和資源，而且資料來源的可設定狀態連接可能會限制伺服器上的使用者連接。  
   

@@ -2,12 +2,12 @@
 title: "語言和定序 (Analysis Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3992b6ea5ff2dedbb18571919041407a8545fd4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="languages-and-collations-analysis-services"></a>語言和定序 (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 作業系統所提供的語言和定序。 **Language** 和 **Collation** 屬性會在安裝期間於執行個體層級進行初始設定，但之後可在物件階層的不同層級進行變更。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援的語言和定序所提供[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 作業系統。 **Language** 和 **Collation** 屬性會在安裝期間於執行個體層級進行初始設定，但之後可在物件階層的不同層級進行變更。  
   
  在多維度模型中 (僅限多維度模型)，您可以在資料庫或 Cube 上設定這些屬性，您也可以在為 Cube 中物件所建立的翻譯上設定這些屬性。 在表格式模型中，語言和定序會繼承自主機作業系統。  
   
@@ -181,7 +181,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_gb18030"></a> Analysis Services 中的 GB18030 支援  
  GB18030 是一種獨立標準，可供中華人民共和國進行中文字元的編碼。 在 GB18030 中，字元的長度可以是 1、2 或 4 個位元組。 在 Analysis Services 中，處理外部來源的資料時沒有任何資料轉換。 資料會以 Unicode 的簡單格式儲存。 在查詢時，當查詢結果中傳回文字資料時，系統會根據用戶端作業系統設定，透過 Analysis Services 用戶端程式庫 (也就是 MSOLAP.dll OLE DB 提供者) 來執行 GB18030 轉換。 資料庫引擎也支援 GB18030。 如需詳細資訊，請參閱＜ [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)＞。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Analysis Services 的全球化案例](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [全球化秘訣和最佳作法 &#40;Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)  

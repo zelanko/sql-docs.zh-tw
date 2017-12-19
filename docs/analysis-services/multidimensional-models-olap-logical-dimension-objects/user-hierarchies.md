@@ -2,12 +2,12 @@
 title: "使用者階層 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -35,14 +35,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 069f68e31f516a7f90a07cd462b70e0b455ab800
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 71c8f644f19236e9507b37ebdd75f1bcde7299eb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="user-hierarchies"></a>使用者階層
-  使用者定義階層是使用者定義的屬性中所使用的階層[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]維度的成員組織成階層式結構，並提供 cube 中的導覽路徑。 例如，下表定義時間維度的維度資料表， 此維度資料表支援三個屬性，名為年份、季度和月份。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用者定義階層是使用者定義的屬性中所使用的階層[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]維度的成員組織成階層式結構，並提供 cube 中的導覽路徑。 例如，下表定義時間維度的維度資料表， 此維度資料表支援三個屬性，名為年份、季度和月份。  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
   
  使用者自訂階層中的層級數目會決定使用者可看到的層級數目，而父子式階層則與使用者自訂階層不同，是由屬性階層的單一層級所定義，而這個單一層級中的值會產生使用者可看到的多個層級。 顯示之層級的數目，會視儲存成員索引鍵和父索引鍵之維度資料表資料行的內容而定。 維度資料表中的資料變更時，層級的數目可能會變更。 如需詳細資訊，請參閱[父子式維度](../../analysis-services/multidimensional-models/parent-child-dimension.md)，和[父子式階層中的屬性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立使用者定義階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [使用者階層屬性](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [維度屬性內容參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  

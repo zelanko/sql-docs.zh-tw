@@ -1,5 +1,5 @@
 ---
-title: "連接到 Excel 活頁簿 |Microsoft 文件"
+title: "連線至 Excel 活頁簿 | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,24 +8,21 @@ ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Excel [Integration Services]
+helpviewer_keywords: Excel [Integration Services]
 ms.assetid: d9746318-3669-4ce2-bbb0-4a1bd471c9dd
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: f8fb1db80ac1b750950a3401516b54af5ee29686
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: ae0acf0c57aae829f41b4af1b48018fa60eef0da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-an-excel-workbook"></a>連接至 Excel 活頁簿
   若要將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝連接至 Microsoft Office Excel 活頁簿，您需要使用 Excel 連線管理員。  
@@ -34,17 +31,17 @@ ms.lasthandoff: 09/28/2017
  
 ## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Microsoft Excel 和 Access 檔案的連線元件
   
-您可能要下載 Microsoft Office 檔案的連線元件，如果它們尚未安裝。 下載最新版的 Excel 和 Access 檔案的連線元件： [Microsoft Access 資料庫引擎 2016年可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。
+您可能必須下載 Microsoft Office 檔案的連線元件 (如果尚未安裝)。 在這裡下載 Excel 和 Access 檔案的連線元件最新版本：[Microsoft Access Database Engine 2016 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。
   
-最新版本的元件可以開啟以舊版 Excel 建立的檔案。
+最新版的元件可以開啟舊版 Excel 所建立的檔案。
 
-如果電腦有 32 位元版本的 Office，則必須安裝 32 位元版本的元件，而且您也必須確定您在 32 位元模式執行封裝。
+如果電腦有 32 位元版本的 Office，則必須安裝 32 位元版本的元件，而且您也必須確定以 32 位元模式執行套件。
 
-如果您有 Office 365 訂閱，請確定您在 Access 資料庫引擎 2016年可轉散發套件並不使用 Microsoft Access 2016 執行階段時下載。 當您執行安裝程式時，您可能會看到錯誤訊息，您無法安裝下載的並存 Office 按一下來執行元件。 略過此錯誤訊息，並已成功安裝元件，以執行安裝以無訊息模式開啟命令提示字元視窗並執行。下載的 EXE 檔案`/quiet`切換。 例如：
+如果您有 Office 365 訂用帳戶，請確定下載 Access Database Engine 2016 可轉散發套件，而非 Microsoft Access 2016 Runtime。 當您執行安裝程式時，可能會看到錯誤訊息，指出您無法使用 Office 隨選即用元件並存安裝下載。 若要略過此錯誤訊息並順利安裝元件，請開啟 [命令提示字元] 視窗並執行使用 `/quiet` 參數所下載的 .EXE 檔案，以無訊息模式執行安裝。 例如：
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="create-an-excel-connection-manager"></a>建立 Excel 連接管理員
+## <a name="create-an-excel-connection-manager"></a>建立 Excel 連線管理員
 
 ### <a name="to-create-an-excel-connection-manager-from-the-connection-managers-area"></a>若要從連接管理員區域建立 Excel 連接管理員  
   
@@ -68,4 +65,3 @@ ms.lasthandoff: 09/28/2017
  [連接至 Access 資料庫](../../integration-services/connection-manager/connect-to-an-access-database.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "發行者屬性 - 發行者，一般 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 238153ea4c30f6d71e93ab6e55373db7377deb40
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fcaae5273d0dcc631b5788821302afc769e3c376
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publisher-properties---publisher-general"></a>發行者屬性 - 發行者，一般
-  **[發行者屬性]** 對話方塊的 **[一般]** 頁面，會顯示散發者與發行者所使用之散發資料庫的唯讀資訊。 若要變更散發者或發行者的散發資料庫：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [發行者屬性] 對話方塊的 [一般] 頁面，會顯示散發者與發行者所使用之散發資料庫的唯讀資訊。 若要變更散發者或發行者的散發資料庫：  
   
 1.  在發行者上停用發行。 如需詳細資訊，請參閱[停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)。  
   

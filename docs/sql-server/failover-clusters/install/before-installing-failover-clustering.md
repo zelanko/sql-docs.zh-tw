@@ -2,9 +2,12 @@
 title: "安裝容錯移轉叢集之前 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3ee39b07f117a70c4de03d921cf2c751913e70c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ad89b5180e55bbbcdde55e2856588ca46695baa1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
-  安裝 SQL Server 容錯移轉叢集之前，您必須先選取硬體以及要執行 SQL Server 的作業系統。 您也必須設定 Windows Server 容錯移轉叢集 (WSFC)，並檢閱要在容錯移轉叢集上執行之其他軟體的網路、安全性及考量。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 安裝 SQL Server 容錯移轉叢集之前，您必須先選取硬體以及要執行 SQL Server 的作業系統。 您也必須設定 Windows Server 容錯移轉叢集 (WSFC)，並檢閱要在容錯移轉叢集上執行之其他軟體的網路、安全性及考量。  
   
  如果 Windows 叢集有本機磁碟機，而且同一個磁碟機代號在一個或多個叢集節點上也做為共用磁碟機使用時，您無法將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝在該磁碟機上。  
   

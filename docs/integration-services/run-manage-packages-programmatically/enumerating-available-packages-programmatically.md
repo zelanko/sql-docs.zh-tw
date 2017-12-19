@@ -1,5 +1,5 @@
 ---
-title: "以程式設計方式列舉可用的封裝 |Microsoft 文件"
+title: "以程式設計方式列舉可用的套件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,30 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programmatically enumerate packages [SSIS]
 - existence testing [Integration Services]
 - enumerating packages [Integration Services]
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ebdf52b9ec71be3845d0fcdf3053b2168467389
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 84ab5ed55cd87c1dce61455a80b75990c423e792
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enumerating-available-packages-programmatically"></a>以程式設計方式列舉可用的封裝
-  <a name="top"></a>當您以程式設計方式使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝時，您可能想要判斷個別封裝或資料夾是否存在，或是列舉可用來載入及執行的預儲的封裝。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別，提供各種方法以滿足這些需求。    
+  <a name="top"></a> 當您以程式設計方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件時，可能會需要判別個別的套件或資料夾是否存在，或是列舉可供載入與執行的預存套件。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別，提供各種方法以滿足這些需求。    
     
-##  <a name="exists"></a>判斷封裝或資料夾是否存在    
+##  <a name="exists"></a> 判斷套件或資料夾是否存在    
  若要以程式設計方式判斷儲存的封裝是否存在，請在嘗試載入和執行封裝之前，呼叫下列其中一個方法：    
     
 |儲存位置|要呼叫的方法|    
@@ -51,7 +48,7 @@ ms.lasthandoff: 09/26/2017
     
  [回到頁首](#top)    
     
-##  <a name="listing"></a>列舉可用的封裝    
+##  <a name="listing"></a> 列舉可用的套件    
  若要以程式設計方式取得儲存的封裝清單，請呼叫下列其中一個方法：    
     
 |儲存位置|要呼叫的方法|    
@@ -61,7 +58,7 @@ ms.lasthandoff: 09/26/2017
     
  下列範例是可示範這些方法之使用的主控台應用程式。    
     
-###  <a name="listing_store"></a>範例 （SSIS 封裝存放區）    
+###  <a name="listing_store"></a> 範例 (SSIS 套件存放區)    
  使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> 方法來列出 SSIS 封裝存放區內儲存的封裝。 由 SSIS 封裝存放區所管理的預設儲存位置是檔案系統和 MSDB。 您可以在這些位置建立其他邏輯資料夾。    
     
 ```vb    
@@ -167,7 +164,7 @@ namespace EnumeratePackagesSSIS_CS
     
  [回到頁首](#top)    
     
-###  <a name="listing_sql"></a>範例 (SQL Server)    
+###  <a name="listing_sql"></a> 範例 (SQL Server)    
  使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> 方法來列出儲存於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行個體中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝。    
     
 ```vb    
@@ -252,4 +249,3 @@ namespace EnumeratePackagesSql_CS
  [封裝管理 &#40;SSIS 服務&#41;](../../integration-services/service/package-management-ssis-service.md)    
     
   
-

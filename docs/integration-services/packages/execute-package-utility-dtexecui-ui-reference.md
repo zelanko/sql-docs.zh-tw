@@ -1,5 +1,5 @@
 ---
-title: "執行封裝公用程式 (dtexecui) |Microsoft 文件"
+title: "執行套件公用程式 (dtexecui) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,22 +22,20 @@ f1_keywords:
 - sql13.dts.dtexecui.executionoptions.f1
 - sql13.dts.dtexecui.commandline.f1
 - sql13.dts.dtexecui.configuration.f1
-helpviewer_keywords:
-- DTExecUI utility
+helpviewer_keywords: DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b9491e2857cabef1c8aa15bdac1b6fd3628790c2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="execute-package-utility-dtexecui"></a>執行封裝公用程式 (dtexecui)
+# <a name="execute-package-utility-dtexecui"></a>執行套件公用程式 (dtexecui)
   您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的封裝： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。 此使用者介面可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟或藉由在命令提示字元輸入 **dtexecui** 加以開啟，作為使用 **DTExec** 命令提示字元工具執行封裝的替代方案。  
   
  封裝會在與 **dtexecui.exe** 公用程式相同的處理序中執行。 由於此公用程式是 32 位元工具，因此封裝會在 Windows on Win32 (WOW) 所執行的 64 位元環境中透過 **dtexecui.exe** 加以執行。 在 64 位元電腦上使用 dtexecui.exe 公用程式開發及測試命令時，應先使用 64 位元版本的 **dtexec.exe** 以 64 位元模式測試命令，然後才在實際伺服器上部署或為命令排程。  
@@ -122,7 +119,7 @@ ms.lasthandoff: 08/03/2017
  **使用 Windows 驗證**  
  選取此選項即可使用 Windows 驗證，並以 Microsoft Windows 使用者帳戶登入。  
   
- **[使用 SQL Server 驗證]**  
+ **使用 SQL Server 驗證**  
  當您執行儲存在 [SSIS 封裝存放區] 的封裝時，無法使用此選項。  
   
  **封裝**  
@@ -147,7 +144,7 @@ ms.lasthandoff: 08/03/2017
  **移除**  
  選取清單中的組態檔，然後按一下 [移除]。  
   
- **Execute**  
+ **執行**  
  按一下以執行封裝。  
   
  **關閉**  
@@ -169,7 +166,7 @@ ms.lasthandoff: 08/03/2017
  **移除**  
  選取文字方塊中的命令檔，然後使用 [移除] 按鈕將它移除。  
   
- **Execute**  
+ **執行**  
  按一下以執行封裝。  
   
  **關閉**  
@@ -368,7 +365,7 @@ ms.lasthandoff: 08/03/2017
  **手動編輯命令列**  
  按一下即可編輯 [命令列] 文字方塊中的命令列。  
   
- **Command line**  
+ **命令列**  
  顯示目前的命令列。 如果您選取要以手動編輯命令列的選項，就可以編輯。  
   
  **Execute**  
@@ -381,4 +378,3 @@ ms.lasthandoff: 08/03/2017
  [dtexec 公用程式](../../integration-services/packages/dtexec-utility.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "SP:Recompile 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 534879ddcc283e600d44c4d248375edd56c0944f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bbf4970fd14025832f234b194f3314b189013766
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile 事件類別
-  SP:Recompile 事件類別表示有某個預存程序、觸發程序或使用者自訂函數已重新編譯。 這個事件類別報告的重新編譯會在陳述式層級發生。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SP:Recompile 事件類別表示有某個預存程序、觸發程序或使用者定義函式已重新編譯。 這個事件類別報告的重新編譯會在陳述式層級發生。  
   
  若要追蹤陳述式層級的重新編譯，建議使用 SQL:StmtRecompile 事件類別。 SP:Recompile 事件類別已被取代。 如需詳細資訊，請參閱 [SQL:StmtRecompile 事件類別](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)。  
   

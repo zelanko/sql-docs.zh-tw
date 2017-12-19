@@ -2,9 +2,12 @@
 title: "使用複製資料庫精靈 | Microsoft 文件"
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7e53c91fb8462fb26fd5a94e20c7a6ba7e2f54d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 28f18fd090691e5aae6023fe7282ef235b12778c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
-[複製資料庫精靈] 可讓您輕鬆地將資料庫和特定伺服器物件，從某個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體移動或複製到另一個執行個體，而不需要讓伺服器停機。 使用此精靈可以執行下列作業： 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [複製資料庫精靈] 可讓您輕鬆地將資料庫和特定伺服器物件，從某個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體移動或複製到另一個執行個體，而不需要讓伺服器停機。 使用此精靈可以執行下列作業： 
   
 -   挑選來源和目的地伺服器。  
   

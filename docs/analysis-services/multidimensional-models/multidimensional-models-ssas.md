@@ -2,12 +2,12 @@
 title: "多維度模型 (SSAS) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73a6a2986bd06354ccb1443424ce2aaa31715a72
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c03d39261ff288832dbbeedc5e2a5cc90175d735
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-modeling-ssas"></a>多維度模型化 (SSAS)
-  Analysis Services 多維度方案會使用 Cube 結構來分析跨多個維度的商務資料。 多維度模式為 Analysis Services 的預設伺服器模式。 它包含 OLAP 資料查詢及計算引擎，其 MOLAP、ROLAP 和 HOLAP 儲存模式可平衡效能與可擴充的資料需求。 Analysis Services OLAP 引擎是領先業界的 OLAP 伺服器，可與眾多 BI 工具搭配使用。 大部分 Analysis Services 部署都是安裝為傳統 OLAP 伺服器。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services 多維度方案會使用 cube 結構來分析跨多個維度的商務資料。 多維度模式為 Analysis Services 的預設伺服器模式。 它包含 OLAP 資料查詢及計算引擎，其 MOLAP、ROLAP 和 HOLAP 儲存模式可平衡效能與可擴充的資料需求。 Analysis Services OLAP 引擎是領先業界的 OLAP 伺服器，可與眾多 BI 工具搭配使用。 大部分 Analysis Services 部署都是安裝為傳統 OLAP 伺服器。  
   
 ## <a name="benefits-of-using-multidimensional-solutions"></a>使用多維度方案的優點  
  建置 Analysis Services 多維度模型的主要原因是要達到針對商務資料進行隨選查詢的快速效能。 多維度模型是由 Cube 和維度組成，這些 Cube 和維度可加上註解並擴充以支援複雜查詢建構。 BI 開發人員會建立 Cube 以支援快速回應時間，以及提供商務報表的單一資料來源。 鑑於商業智慧的重要性在組織的所有層級之間逐漸提高，因此擁有分析資料的單一來源可確保不一致的情形保持在最低限度 (如果沒有完全刪除的話)。  

@@ -2,12 +2,12 @@
 title: "XML 資料類型 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba74f6ec5cb8ad35d4cdbb76e408bcb6cc203dea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a65065437ced53d1554ddd11035e7aa687872e9f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-data-types-xmla"></a>XML 資料類型 (XMLA)
-  除了 XML 1.0 建議所定義的標準基本和衍生類型以外，XML for Analysis (XMLA) 1.1 規格還定義了其他資料類型，可支援多維度和表格式資料的表示。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]除了標準基本和衍生所定義之類型的 XML 1.0 版建議事項，XML for Analysis (XMLA) 1.1 規格會定義其他資料類型，以支援多維度和表格式資料的表示法。  
   
  XMLA 會使用下表所列的資料類型。  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
  如需標準 XML 資料類型的完整描述，請參閱全球資訊網協會 (WC3) 的候選建議。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [XML 項目 &#40;XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [XML for Analysis &#40;XMLA &#41;參考](../../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   

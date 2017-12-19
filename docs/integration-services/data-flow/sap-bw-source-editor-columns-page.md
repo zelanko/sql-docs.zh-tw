@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 來源編輯器 （資料行頁面） |Microsoft 文件"
+title: "SAP BW 來源編輯器 (資料行頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwsource.columns.f1
+f1_keywords: sql13.dts.designer.sapbwsource.columns.f1
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2047fddb6986bd3014015d742053bfb0dda42019
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c6bb6d1d1061314752207fce3cdb5123daa57104
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 來源編輯器 (資料行頁面)
   使用 [SAP BW 來源編輯器] 的 [資料行] 頁面可以將輸出資料行對應至每個外部 (來源) 資料行。  
@@ -62,13 +59,12 @@ ms.lasthandoff: 08/03/2017
  若要變更資料行的順序，請在 **[可用的外部資料行]** 清單中，清除所有資料行的核取方塊。 然後，按照您想要讓資料行出現的順序選取資料行。  
   
  **輸出資料行**  
- 為每個輸出資料行提供唯一的名稱。 預設值是選取之外部 (來源) 資料行的名稱。 不過，您可以輸入任何唯一的描述性名稱。 [!INCLUDE[ssIS](../../includes/ssis-md.md)]設計工具將顯示**輸出資料行**設定從這個來源取用資料的下游元件時的資料行的名稱。  
+ 為每個輸出資料行提供唯一的名稱。 預設值是選取之外部 (來源) 資料行的名稱。 不過，您可以輸入任何唯一的描述性名稱。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師將會顯示這些資料行的 **輸出資料行** 名稱。  
   
-## <a name="see-also"></a>請參閱＜  
- [SAP BW 來源編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 來源編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [SAP BW 來源編輯器 &#40;進階的頁面 &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+## <a name="see-also"></a>另請參閱  
+ [SAP BW 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [SAP BW 來源編輯器 &#40;進階頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

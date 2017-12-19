@@ -2,12 +2,12 @@
 title: "使用動態管理檢視 (Dmv) 監視 Analysis Services |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5df4b77f4a373a69360c8e51f9c3f1362a4bf904
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6969869d6f4a7c10303838d2e3e696ae577fe180
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用動態管理檢視 (DMV) 監視 Analysis Services
-  Analysis Services 動態管理檢視 (DMV) 是公開本機伺服器作業和伺服器健全狀況相關資訊的查詢結構。 查詢結構是傳回 Analysis Services 執行個體中繼資料和監視資訊之結構描述資料列集的介面。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services 動態管理檢視 (DMV) 是公開本機伺服器作業和伺服器健全狀況的相關資訊的查詢結構。 查詢結構是傳回 Analysis Services 執行個體中繼資料和監視資訊之結構描述資料列集的介面。  
   
  對於大多數 DMV 查詢，都是將 **SELECT** 陳述式和 **$System** 結構描述搭配 XML/A 結構描述資料列集使用。  
   
@@ -171,7 +171,7 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_PROPERTIES 資料列集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|傳回每個屬性的完整名稱，以及屬性類型、資料類型和其他中繼資料。|  
 |[MDSCHEMA_SETS 資料列集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|傳回目前連接所定義之集合的清單。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SQL Server 2008 R2 Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [限制資料列集和 Dmv 的新 SYSTEMRESTRICTEDSCHEMA 函數](http://go.microsoft.com/fwlink/?LinkId=231885)  

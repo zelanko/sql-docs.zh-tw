@@ -1,10 +1,13 @@
 ---
 title: "註冊 Kerberos 連接的服務主體名稱 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/20/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ec8294a92b9c6bb3da761b84a2bae702bd85dfdd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4eba9f74d9eb5a46cfda7d5d28c1584c20fb22e7
+ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
-  若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Kerberos 驗證，需要符合下列兩個條件：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 若要搭配使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 Kerberos 驗證，需要符合下列兩個條件：  
   
 -   用戶端和伺服器電腦必須屬於相同的 Windows 網域，或在受信任的網域中。  
   
@@ -36,9 +39,9 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  如果伺服器無法自動註冊 SPN，則必須手動註冊 SPN。 請參閱 [手動 SPN 註冊](#Manual)。  
   
- 您可以透過查詢 sys.dm_exec_connections 動態管理檢視，驗證連接是否使用 Kerberos。 請執行下列查詢並檢查 auth_scheme column 的值 (如果有啟用 Kerberos，該值將為 "KERBEROS")。  
+您可以透過查詢 sys.dm_exec_connections 動態管理檢視，驗證連接是否使用 Kerberos。 請執行下列查詢並檢查 auth_scheme column 的值 (如果有啟用 Kerberos，該值將為 "KERBEROS")。  
   
-```  
+```t-sql  
 SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;  
 ```  
   
@@ -72,39 +75,40 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ##  <a name="Formats"></a> SPN 格式  
  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，SPN 格式就有了變動，以便能夠在 TCP/IP、具名管道和共用記憶體上支援 Kerberos 驗證。 具名和預設執行個體支援的 SPN 格式如下所示。  
   
- **具名執行個體**  
+**具名執行個體**  
   
--   *MSSQLSvc/FQDN*:[*port***|***instancename*]，其中：  
+-   **MSSQLSvc/\<FQDN>:[\<連接埠> | \<執行個體名稱>]**，其中：  
   
-    -   *MSSQLSvc* 是所註冊的服務。  
+    -   **MSSQLSvc** 是所註冊的服務。  
   
-    -   *FQDN* 是伺服器的完整網域名稱。  
+    -   **\<FQDN>** 是伺服器的完整網域名稱。  
   
-    -   *port* 是 TCP 通訊埠編號。  
+    -   **\<連接埠>** 是 TCP 通訊埠編號。  
   
-    -   *instancename* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
+    -   **\<執行個體名稱>** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
   
- **預設執行個體**  
+**預設執行個體**  
   
--   *MSSQLSvc/FQDN*:*port***|***MSSQLSvc/FQDN*，其中：  
+-   **MSSQLSvc/\<FQDN>:\<連接埠>** | **MSSQLSvc/\<FQDN>**，其中：  
   
-    -   *MSSQLSvc* 是所註冊的服務。  
+    -   **MSSQLSvc** 是所註冊的服務。  
   
-    -   *FQDN* 是伺服器的完整網域名稱。  
+    -   **\<FQDN>** 是伺服器的完整網域名稱。  
   
-    -   *port* 是 TCP 通訊埠編號。  
+    -   **\<連接埠>** 是 TCP 通訊埠編號。  
   
- 新的 SPN 格式不需要通訊埠編號。 這表示，不使用通訊埠編號的多重通訊埠伺服器或通訊協定可以使用 Kerberos 驗證。  
-  
-> [!NOTE]  
->  在 TCP/IP 連接的情況下，由於 TCP 通訊埠包含於 SPN 中，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須啟用 TCP 通訊協定，使用者才能使用 Kerberos 驗證進行連接。  
-  
+    > [!NOTE]
+    > 新的 SPN 格式不需要通訊埠編號。 這表示，不使用通訊埠編號的多重通訊埠伺服器或通訊協定可以使用 Kerberos 驗證。  
+   
 |||  
 |-|-|  
-|MSSQLSvc/*fqdn:port*|使用 TCP 時，此為提供者產生的預設 SPN。 *port* 是 TCP 通訊埠編號。|  
-|MSSQLSvc/*fqdn*|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。 *fqdn* 是完整網域名稱。|  
-|MSSQLSvc/*fqdn/InstanceName*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。 *InstanceName* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的名稱。|  
-  
+|MSSQLSvc/\<FQDN>:<port>|使用 TCP 時，此為提供者產生的預設 SPN。 \<連接埠> 是 TCP 通訊埠編號。|  
+|MSSQLSvc/\<FQDN>|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。 \<FQDN> 是完整網域名稱。|  
+|MSSQLSvc/\<FQDN>:\<執行個體名稱>|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。 \<執行個體名稱> 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|  
+
+> [!NOTE]  
+> 在 TCP/IP 連接的情況下，由於 TCP 通訊埠包含於 SPN 中，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須啟用 TCP 通訊協定，使用者才能使用 Kerberos 驗證進行連接。 
+
 ##  <a name="Auto"></a> 自動 SPN 註冊  
  當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的 SPN。 當此執行個體停止時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試取消註冊 SPN。 如果是 TCP/IP 連接，SPN 會以 MSSQLSvc/\<FQDN>:\<tcpport> 格式註冊。具名執行個體和預設執行個體都會註冊為 MSSQLSvc (根據 \<tcpport> 值來區分執行個體)。  
   
@@ -113,44 +117,45 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  如果服務帳戶缺少這些動作所需的權限，可能需要手動介入才能註冊或取消註冊 SPN。  
   
 ##  <a name="Manual"></a> 手動 SPN 註冊  
- 若要手動註冊 SPN，管理員必須使用 Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 支援工具所隨附的 Setspn.exe 工具。 如需詳細資訊，請參閱 [Windows Server 2003 Service Pack 1 支援工具](http://support.microsoft.com/kb/892777) KB 文件。  
+若要手動註冊 SPN，管理員必須使用 Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 支援工具所隨附的 Setspn.exe 工具。 如需詳細資訊，請參閱 [Windows Server 2003 Service Pack 1 支援工具](http://support.microsoft.com/kb/892777) KB 文件。  
   
- Setspn.exe 是一個命令列工具，可讓您讀取、修改及刪除服務主要名稱 (SPN) 目錄屬性。 此工具也可讓您檢視目前的 SPN、重設此帳戶的預設 SPN，或是加入或刪除補充 SPN。  
+Setspn.exe 是一個命令列工具，可讓您讀取、修改及刪除服務主要名稱 (SPN) 目錄屬性。 此工具也可讓您檢視目前的 SPN、重設此帳戶的預設 SPN，或是加入或刪除補充 SPN。  
   
- 下列範例說明用來手動註冊 TCP/IP 連接之 SPN 的語法。  
-  
-```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 accountname  
-```  
-  
- **注意** 如果 SPN 已存在，必須先將它刪除以後才可以重新註冊。 您可以搭配 `setspn` 參數使用 `-D` 命令來進行這項處理。 下列範例說明如何手動註冊以新執行個體為基礎的 SPN。 若為預設執行個體，請使用：  
+下列範例說明使用網域使用者帳戶手動註冊 SPN，以進行 TCP/IP 連線的語法：  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 redmond\accountname  
 ```  
   
- 若為具名執行個體，請使用：  
+> [!NOTE]
+> 如果 SPN 已存在，必須先將它刪除之後才可以重新註冊。 您可以搭配 `setspn` 參數使用 `-D` 命令來進行這項處理。 下列範例說明如何手動註冊以新執行個體為基礎的 SPN。 若是使用網域使用者帳戶的預設執行個體，請使用：  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname  
+```  
+  
+若為具名執行個體，請使用：  
+  
+```  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename redmond\accountname  
 ```  
   
 ##  <a name="Client"></a> 用戶端連接  
  用戶端驅動程式內可支援使用者指定的 SPN。 但是，如果未提供 SPN，將會根據用戶端連接的類型來自動產生 SPN。 如果是 TCP 連接，將會針對具名和預設執行個體使用 *MSSQLSvc*/*FQDN*:[*port*] 格式的 SPN。  
   
- 如果是具名管道和共用記憶體的連接，將會針對具名執行個體使用 *MSSQLSvc*/*FQDN*:*instancename* 格式的 SPN，並針對預設執行個體使用 *MSSQLSvc*/*FQDN* 格式的 SPN。  
+如果是具名管道和共用記憶體的連線，將會針對具名執行個體使用 *MSSQLSvc/\<FQDN>:\<執行個體名稱>* 格式的 SPN，並針對預設執行個體使用 *MSSQLSvc/\<FQDN>* 格式的 SPN。  
   
  **將服務帳戶當做 SPN 使用**  
   
- 服務帳戶可以當做 SPN 使用， 它們是透過 Kerberos 驗證的連接屬性所指定，而且會使用以下的格式：  
+服務帳戶可以當做 SPN 使用， 它們是透過 Kerberos 驗證的連接屬性所指定，而且會使用以下的格式：  
   
 -   適用於網域使用者帳戶的 **username@domain** 或 **domain\username**  
   
 -   適用於電腦網域帳戶 (如本機系統或 NETWORK SERVICES) 的 **machine$@domain** 或 **host\FQDN**。  
   
- 若要判斷連接的驗證方法，請執行下列查詢。  
+若要判斷連接的驗證方法，請執行下列查詢。  
   
-```tsql  
+```t-sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
@@ -167,7 +172,7 @@ WHERE session_id = @@SPID;
 |SPN 查閱失敗或是未對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶，或者不是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。|本機和遠端連接都會使用 NTLM。|  
   
 > [!NOTE]  
->  「正確」表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務所使用的帳戶。  
+> 「正確」表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務所使用的帳戶。  
   
 ##  <a name="Comments"></a> 註解  
  專用管理員連接 (DAC) 使用以執行個體名稱為基礎的 SPN。 如果該 SPN 註冊成功的話，Kerberos 驗證便可搭配 DAC 使用。 另外，使用者也可將此帳戶名稱指定為 SPN。  

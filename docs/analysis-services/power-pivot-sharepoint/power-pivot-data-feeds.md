@@ -2,12 +2,12 @@
 title: "Power Pivot 資料摘要 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4703cf8f6ac0af1d45c4fcfb4129b40fd52ecb9a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6e845c632a44b4d74a7b12eeaf2ed80e85ffbb02
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-data-feeds"></a>Power Pivot 資料摘要
-  資料摘要會視需要提供從線上資料來源到用戶端應用程式的資料串流。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用資料摘要，從 Atom 感知 Web 服務或應用程式，將資料加入至 Excel 活頁簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源中。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料摘要會視需要從線上資料來源用戶端應用程式提供資料的流。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用資料摘要，從 Atom 感知 Web 服務或應用程式，將資料加入至 Excel 活頁簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源中。  
   
  本節提供資訊，協助您發揮資料摘要的最大效用，以取得現有的企業或工作群組資料來送入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中。 也提供下列資料：如何與組織中其他人員共用資料摘要，以及在您需要疑難排解所發生的任何問題時，如何建構及使用資料摘要。  
   

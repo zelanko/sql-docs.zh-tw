@@ -2,9 +2,12 @@
 title: "管理及監視語意搜尋 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d3fd6231c0067f6536d9ff2c06b4a62a8bd3bd5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b01af634ed2681c49bdb444cd4a468b45be3ab03
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-and-monitor-semantic-search"></a>管理及監視語意搜尋
-  描述語意索引的程序，以及與管理及監視索引相關的工作。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 描述語意索引的程序，以及與管理及監視索引相關的工作。  
   
 ##  <a name="HowToMonitorStatus"></a>檢查語意索引的狀態  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>語意索引的第一個階段是否已完成？

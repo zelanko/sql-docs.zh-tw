@@ -2,12 +2,12 @@
 title: "檢視方塊 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 36e28c1211017a46a66ce7c7ef519eb887248c8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1fdbede4868884656f3dbf9e7ff8d37e3019ed12
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="perspectives"></a>檢視方塊
-  表格式模型中的檢視方塊會定義可檢視之模型子集，以提供具體的特定商務或應用程式模型視點。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]檢視方塊，在表格式模型中，定義可檢視之模型子集提供有焦點，商務特有或應用程式特定的模型視點。  
   
 ##  <a name="bkmk_understanding"></a> 優點  
  對於要瀏覽的使用者而言，表格式模型可以是很複雜的。 單一模型可能代表完整的資料倉儲內容，其中有許多資料表、量值和維度。 對只需要與模型的一小部分進行互動即可滿足其商業智慧和報表需求的使用者而言，這樣的複雜性令人望而生畏。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |-----------|-----------------|  
 |[建立及管理檢視方塊](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)|描述如何使用模型設計師中的 [檢視方塊] 對話方塊，以建立及管理檢視方塊。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [階層](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   

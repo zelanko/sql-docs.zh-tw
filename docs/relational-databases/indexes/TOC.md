@@ -26,13 +26,11 @@
 ## [設定平行索引作業](configure-parallel-index-operations.md)  
 ## [索引屬性 F1 說明](index-properties-f1-help.md)  
 
-
-
 # 資料行存放區索引
 ## [概觀](columnstore-indexes-overview.md)  
-## [架構](columnstore-indexes-architecture.md)  
-## [設計指引](columnstore-indexes-design-guidance.md)  
-## [資料載入指引](columnstore-indexes-data-loading-guidance.md)  
+## [架構](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)  
+## [設計指導](columnstore-indexes-design-guidance.md)  
+## [資料載入指導](columnstore-indexes-data-loading-guidance.md)  
 ## [新功能](columnstore-indexes-what-s-new.md)  
 ## [查詢效能](columnstore-indexes-query-performance.md)  
 ## [即時作業分析](get-started-with-columnstore-for-real-time-operational-analytics.md)  

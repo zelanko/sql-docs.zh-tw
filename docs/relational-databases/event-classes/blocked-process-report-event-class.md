@@ -2,9 +2,12 @@
 title: "Blocked Process Report 事件類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea1519e09402020d9ee6daccfbe34b3de5dffe67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e9b92c3ed426d733243916372a15df601d3c01e0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件類別
-  **Blocked Process Report** 事件類別指出封鎖工作的時間已超過指定的時間量。 這個事件類別不包含系統工作，或在無法偵測死結的資源上等候的工作。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Blocked Process Report** 事件類別指出封鎖工作的時間已超過指定的時間量。 這個事件類別不包含系統工作，或在無法偵測死結的資源上等候的工作。  
   
  若要設定產生報告的臨界值和頻率，請使用 **sp_configure** 命令來設定 [已封鎖的處理序臨界值] 選項。 預設不會針對已封鎖的處理序產生任何報告。 如需設定 [已封鎖的處理序臨界值] 選項的詳細資訊，請參閱[已封鎖的處理序臨界值伺服器組態選項](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
   

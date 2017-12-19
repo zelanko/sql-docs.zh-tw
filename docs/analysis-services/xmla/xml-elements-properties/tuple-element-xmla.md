@@ -2,12 +2,12 @@
 title: "Tuple 元素 (XMLA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 976d47573aa44ffe73878475e5ece552639428bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5b736390fc88221a35d0080ccde11feea772ae0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tuple-element-xmla"></a>Tuple 元素 (XMLA)
-  包含 [Tuples](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md) 父元素所包含之 [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) 元素的集合。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含集合[成員](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)父元素所包含[Tuple](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/17/2017
 </Axes>  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
