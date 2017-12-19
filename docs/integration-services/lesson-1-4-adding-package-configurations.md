@@ -1,5 +1,5 @@
 ---
-title: "步驟 4： 加入封裝組態 |Microsoft 文件"
+title: "步驟 4：新增套件設定 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 9e708a39e926908ff542a5137517f51a5e200009
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 65f39cdf199ebe30eccc4d3ae11f5332b18ae532
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-4---adding-package-configurations"></a>課程 1-4-加入封裝組態
+# <a name="lesson-1-4---adding-package-configurations"></a>課程 1-4 - 新增套件設定
 在這項工作中，您會為每個封裝加入組態。 組態會在執行階段更新封裝屬性和封裝物件的值。  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了各種組態類型。 您可以將組態儲存在環境變數、登錄項目、使用者自訂變數、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表和 XML 檔案中。 為了提供更大的彈性， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 還支援使用間接組態。 這表示您可以使用環境變數來指定組態的位置，進而指定實際的值。 「部署教學課程」專案中的封裝會使用 XML 組態檔和間接組態的組合。 XML 組態檔可以包含多個屬性的組態，而且在適當的情況下，可以由多個封裝參考。 在這個教學課程中，您會針對各個封裝使用不同的組態檔。  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供各種組態類型。 您可以將組態儲存在環境變數、登錄項目、使用者自訂變數、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表和 XML 檔案中。 為了提供更大的彈性， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 還支援使用間接組態。 這表示您可以使用環境變數來指定組態的位置，進而指定實際的值。 「部署教學課程」專案中的封裝會使用 XML 組態檔和間接組態的組合。 XML 組態檔可以包含多個屬性的組態，而且在適當的情況下，可以由多個封裝參考。 在這個教學課程中，您會針對各個封裝使用不同的組態檔。  
   
 組態檔通常會包含像是連接字串等機密資訊。 因此，您應該使用存取控制清單 (ACL) 來限制對儲存檔案所在位置或資料夾的存取，只將存取權授與給允許執行封裝的使用者或帳戶。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../integration-services/security/security-overview-integration-services.md#files)。  
   
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  在 [SSIS] 功能表上，按一下 [封裝組態]。  
   
-4.  在 [Package Configuration Organize (封裝組態組合管理)] 對話方塊中，選取 [啟用封裝組態] \(如果尚未選取的話)，然後按一下 [加入]。  
+4.  在 [Package Configuration Organize (封裝組態組合管理)] 對話方塊中，選取 [啟用封裝組態] (如果尚未選取的話)，然後按一下 [加入]。  
   
 5.  在 [封裝組態精靈] 的歡迎使用頁面上，按一下 [下一步]。  
   
@@ -145,4 +142,3 @@ ms.lasthandoff: 08/03/2017
 [封裝組態](../integration-services/packages/package-configurations.md)  
 [建立封裝組態](../integration-services/packages/create-package-configurations.md)  
 [對封裝使用之檔案的存取權](../integration-services/security/security-overview-integration-services.md#files)  
-
