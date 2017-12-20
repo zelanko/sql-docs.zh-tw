@@ -1,5 +1,6 @@
 # [SQL Operations Studio (預覽)](what-is.md)
 # [安裝](download.md)
+# [版本資訊](release-notes.md)
 # 快速入門
 ## [連線與查詢 SQL Server](quickstart-sql-server.md)
 ## [連線與查詢 Azure SQL Database](quickstart-sql-database.md)
