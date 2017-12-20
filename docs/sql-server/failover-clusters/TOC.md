@@ -25,3 +25,4 @@
 ### [變更容錯移轉叢集執行個體的 IP 位址](windows/change-the-ip-address-of-a-failover-cluster-instance.md)  
 ## [升級 SQL Server 容錯移轉叢集執行個體](windows/upgrade-a-sql-server-failover-cluster-instance.md)  
 ### [升級 SQL Server 容錯移轉叢集執行個體 (安裝程式)](windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)
+### [升級 SQL Server 容錯移轉叢集執行個體 (Windows Server 2008/2008 R2/2012)](windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)
