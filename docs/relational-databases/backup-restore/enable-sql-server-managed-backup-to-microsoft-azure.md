@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
  本教學課程使用 Azure PowerShell。 開始本教學課程之前，請 [下載並安裝 Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)。  
   
 > [!IMPORTANT]  
->  如果您也想要啟用進階選項或使用自訂排程，則在啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前，需先進行這些設定。 如需詳細資訊，請參閱 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
+>  如果您也想要啟用進階選項或使用自訂排程，則在啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前，需先進行這些設定。 如需詳細資訊，請參閱 [設定 Microsoft Azure 的 SQL Server 受管理備份進階選項](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
   
 ## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並使用預設值進行設定  
   
