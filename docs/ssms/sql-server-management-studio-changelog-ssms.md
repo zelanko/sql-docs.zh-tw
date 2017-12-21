@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - 變更記錄 (SSMS) | Microsoft Docs"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -17,17 +17,113 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dde2d7831a7bc75f9873efedcddb0bf6134669d9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6046e57ec48ace2795c65879d00ad563d81fd0d6
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本文提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。 下載[下面的舊版 SSMS](#previous-ssms-releases)。
 
 
-## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
+正式運作 | 組建編號：14.0.17213.0
+
+### <a name="whats-new"></a>新功能
+
+**一般 SSMS**
+
+弱點評定：
+- 已加入新的 SQL 弱點評定服務，可在您的資料庫中掃描潛在的弱點和偏離最佳做法的項目，例如錯誤的設定、過多的權限和公開的機密資料。 
+- 評定結果包含可以解決個別問題的可操作步驟，以及合適情況下的自訂補救指令碼。 您可以針對每個環境和特定需求來自訂評定報告。 於 [SQL 弱點評定](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)深入了解。
+
+SMO：
+- 已修正 *HasMemoryOptimizedObjects* 在 Azure 上擲回例外狀況的問題。
+- 已加入新 CATALOG_COLLATION 功能的支援。
+
+Always On 儀表板：
+- 改進了可用性群組中延遲分析。
+- 已加入兩個新的報告：*AlwaysOn\_Latency\_Primary* 和 *AlwaysOn\_Latency\_Secondary*。
+
+執行程序表：
+- 已更新連結，以指向正確的文件。
+- 允許直接從產生的實際計劃進行單一計劃分析。
+- 新的圖示集。
+- 已加入辨識 GbApply、InnerApply 等「套用邏輯運算子」的支援。
+        
+XE 分析工具：
+- 已重新命名為 XEvent 分析工具。
+- 停止/啟動功能表命令現在預設會停止/啟動工作階段。
+- 已啟用鍵盤快速鍵 (例如，CTRL-F 可進行搜尋)。
+- 已加入 database\_name 與 client\_hostname 動作至 XEvent 分析工具工作階段中適當的事件。 若要讓變更生效，您可能需要刪除伺服器上現有的 QuickSessionStandard 或 QuickSessionTSQL 工作階段執行個體 - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
+
+命令列：
+- 已加入新的命令列選項 ("-G")，可用來讓 SSMS 使用 Active Directory 驗證 (「整合式」或「密碼」)，自動連線至伺服器/資料庫。 如需詳細資訊，請參閱 [Ssms 公用程式](ssms-utility.md)。
+
+匯入一般檔案精靈：
+- 已加入在建立資料表時可以挑選結構描述名稱的方法，而不是只能使用預設值 ("dbo")。
+
+查詢存放區：
+- 已還原展開「查詢存放區」可用報告清單時的「迴歸查詢」報告。
+
+**Integration Services (IS)**
+- 已加入「部署精靈」中的套件驗證功能，以協助使用者了解 Azure-SSIS IR 中不支援的 SSIS 套件內元件。
+
+### <a name="bug-fixes"></a>錯誤修正
+
+**一般 SSMS**
+
+- 物件總管：
+    - 已修正資料庫快照集未顯示「資料表值函式」節點的問題 - [Connect 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161)。
+    - 已改進當伺服器有 autoclose 資料庫時展開 *Databases* 節點的效能。
+- 查詢編輯器：
+    - 已修正 IntelliSense 針對沒有 master 資料庫存取權的使用者會失敗的問題。
+    - 已修正遠端電腦連線關閉時，在某些情況下會造成 SSMS 當機的問題 - [Connect 3142557](https://connect.microsoft.com/SQLServer/feedback/details/3142557)。
+- XEvent 檢視器：
+    - 已重新啟用匯出到 XEL 的功能。
+    - 已修正某些情況下使用者無法載入整個 XEL 檔案的問題。
+- XEvent 分析工具：
+    - 已修正當使用者沒有 *VIEW SERVER STATE* 權限時，造成 SSMS 當機的問題。
+    - 已修正關閉 [XE 分析工具即時資料] 視窗無法停止底層工作階段的問題。
+- 已註冊的伺服器：
+    - 已修正 [移至…] 命令停止運作的問題 - [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 和 [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)。
+- SMO：
+    - 已修正 TransferData 方法在傳送物件上無法運作的問題。
+    - 已修正 Server 資料庫針對暫停的 SQL DW 資料庫擲回例外狀況的問題。
+    - 已修正針對 SQL DW 編寫 SQL 資料庫指令碼時，產生不正確 T-SQL 參數值的問題。
+    - 已修正編寫延伸資料庫指令碼時，不正確地發出 *DATA\_COMPRESSION* 選項的問題。
+- 作業活動監視器：
+    - 已修正使用者在嘗試依類別篩選時，出現「索引超出範圍。 必須為非負數且小於集合的大小。 
+        參數名稱：index (System.Windows.Forms)」錯誤的問題 - [Connect 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691)。
+- 連線對話方塊：
+    - 已修正網域使用者沒有讀取/寫入網域控制站存取權時，無法使用 SQL 驗證登入 SQL Server 的問題 - [Connect 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381)。
+- 複寫：
+    - 已修正當查看 SQL Server 中提取訂閱的屬性時，顯示類似「無法將值 'null' 套用至 ServerInstance 屬性」錯誤的問題。
+- SSMS 安裝程式：
+    - 已修正 SSMS 安裝程式不正確地造成電腦上所有已安裝產品重新設定的問題。
+- 使用者設定：
+   - 藉由此修正，US Government 官方雲端使用者將可透過通用驗證和 Azure Active Directory 登入，使用 SSMS 持續存取其 Azure SQL Database 和 ARM 資源。  舊版 SSMS 使用者需要開啟 [工具]|[選項]|[Azure 服務]，並在 [資源管理] 下將 [Active Directory 授權單位] 屬性的設定變更為 https://login.microsoftonline.us。
+
+**Analysis Services (AS)**
+
+- 分析工具：已修正嘗試使用 Window 驗證對 Azure AS 進行連線的問題。
+- 已修正在 1400 模型上取消連線詳細資料時造成當機的問題。
+- 當重新整理認證時，在 [連接屬性] 對話方塊中設定 Azure Blob 索引鍵之際，現在會把它遮住不被看見。
+- 已修正 [Azure Analysis Services 使用者選項] 對話方塊的問題，以便在進行搜尋時會顯示應用程式識別碼 GUID，而非物件識別碼。
+- 已修正瀏覽資料庫\MDX 查詢設計工具工具列中，造成圖示不正確地對應部分按鈕的問題。
+- 已修正使用 msmdpump IIS http/https 位址連線無法至 SSAS 的問題。
+- [Azure Analysis Services 使用者選擇器] 對話方塊中的數個字串，現在已翻譯為更多種語言。
+- 表格式模型中的資料來源現在可看見 MaxConnections 屬性。
+- 部署精靈現在將針對 Azure AS 角色成員產生正確的 JSON 定義。
+- 已修正在 SQL 分析工具中針對 Azure AS 選取 Windows 驗證時仍會提示登入的問題。
+
+
+## <a name="previous-ssms-releases"></a>舊版 SSMS
+
+按一下下列各節中的標題連結，以下載舊版 SSMS。
+
+## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![下載](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 正式運作 | 組建編號：14.0.17199.0
 
 ### <a name="enhancements"></a>功能增強
@@ -117,10 +213,6 @@ ms.lasthandoff: 12/05/2017
 
 - [catalog].[event_messagea] 中的 [execution_path] 不是 Scale Out 中正確的套件執行路徑。[execution_path] 會以 “\Package” 開頭，而不是套件可執行檔的物件名稱。 在 SSMS 中檢視套件執行的概觀報表時，[執行概觀] 中 [執行路徑] 的連結無法運作。 因應措施是按一下概觀報表中的 [檢視訊息] 以檢查所有事件訊息。
 
-
-## <a name="previous-ssms-releases"></a>舊版 SSMS
-
-按一下下列各節中的標題連結，以下載舊版 SSMS。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![下載](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 正式運作 | 組建編號：14.0.17177.0

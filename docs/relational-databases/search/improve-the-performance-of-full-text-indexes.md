@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 本主題描述全文檢索索引和查詢效能降低的一些常見原因。 它也會提供一些建議，以減少這些問題的發生並改善效能。
@@ -151,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
  `F = 8*10*8=640`  
   
- 下一個計算會取得 [最大伺服器記憶體] 的最佳值—*M*。 此系統上可用的實體記憶體總計 (以 MB 為單位)—*T*—是`8192`。  
+ 下一個計算會取得 [最大伺服器記憶體] 的最佳值—*M*。 此系統上可用的實體記憶體總計 (以 MB 為單位) *T* 為 `8192`。  
   
  `M = 8192-640-500=7052`  
   

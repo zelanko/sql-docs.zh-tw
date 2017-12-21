@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ddfcca6408a64b2c2875aaa625c275899e8c85f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>將 SQL Server Integration Services 工作負載隨即轉移至雲端
 您現在可以將 SQL Server Integration Services (SSIS) 套件和工作負載移至 Azure 雲端。
@@ -55,7 +55,7 @@ Azure Data Factory 會裝載 Azure 上 SSIS 套件的執行階段引擎。 執�
 Data Factory 也支援其他類型的 Integration Runtime。 若要深入了解 SSIS IR 和其他類型的整合執行階段，請參閱 [Azure Data Factory 中的整合執行階段](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime)。
 
 ## <a name="prerequisites"></a>必要條件
-本主題中所述的功能不需要 SQL Server 2017 或 SQL Server 2016。
+本文中所述的功能不需要 SQL Server 2017 或 SQL Server 2016。
 
 這些功能需要下列 SQL Server Data Tools (SSDT) 版本：
 -   針對 Visual Studio 2017 15.3 版 (Preview) 或更新版本。

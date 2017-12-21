@@ -24,18 +24,20 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0da3801d395420c24ebb09b8d8d746ec4d417379
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ef239563e768ee5044e07e8bca666bdd4169158
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>對發行集資料庫進行結構描述變更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 複寫支援對已發行物件進行大範圍的結構描述變更。 當您在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行者端針對適當已發行物件，進行下列任何一種結構描述變更時，該變更也預設傳播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者：  
   
 -   ALTER TABLE  
   
--   ALTER TABLE SET LOCK ESCALATION (如果結構描述變更複寫已啟用，且有拓撲包含 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] 訂閱者，則不應使用。) ALTER VIEW  
+-   ALTER TABLE SET LOCK ESCALATION (如果已啟用結構描述變更複寫，且拓撲包含 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] 訂閱者，則不應使用)。
+
+-   ALTER VIEW  
   
 -   ALTER PROCEDURE  
   

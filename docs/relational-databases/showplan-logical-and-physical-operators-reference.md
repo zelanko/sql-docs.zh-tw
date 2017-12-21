@@ -142,11 +142,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 85c04a4e1322476be6181e09e6c3a6873955ec37
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e90365c7328e85782a818b3dc07462ef185c9ec
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>執行程序邏輯和實體運算子參考
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 運算子描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何執行查詢或資料操作語言 (DML) 陳述式。 查詢最佳化工具會使用運算子來建立查詢計畫，以便建立查詢所指定的結果，或執行 DML 陳述式所指定的作業。 查詢計畫是由實體運算子所組成的樹狀目錄。 您可使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的圖形執行計畫選項 SET SHOWPLAN 陳述式，以及 SQL Server Profiler Showplan 事件類別，檢視查詢計畫。  
@@ -192,7 +192,7 @@ ms.lasthandoff: 11/17/2017
 |![算術運算式運算子圖示](../relational-databases/media/arithmetic-expression-32x-2.gif "算術運算式運算子圖示")|**算術運算式**|「算術運算式」運算子會從資料列中現有的值計算出新的值。 「算術運算式」無法用於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中。|  
 |![判斷提示運算子圖示](../relational-databases/media/assert-32x.gif "判斷提示運算子圖示")|**判斷提示**|「判斷提示」運算子會驗證條件。 例如，它會驗證參考完整性，或確定純量子查詢傳回一個資料列。 「判斷提示」運算子會針對每個輸入資料列來評估執行計畫之 **Argument** 資料行中的運算式。 如果這個運算式評估為 NULL，代表資料列通過「判斷提示」運算子的驗證，則查詢會繼續執行。 如果這個運算式得出非 Null 值，就會得出相對的錯誤。 「判斷提示」運算子是實體運算子。|  
 |![指派語言項目圖示](../relational-databases/media/assign-32.gif "指派語言項目圖示")|**指派**|「指派」運算子會將運算式的值或常數指派給變數。 「指派」是語言元素。|  
-|無|**Asnyc Concat**|**Asnyc Concat** 運算子只能使用於遠端查詢 (分散式查詢)。 它有 *n* 個子節點和一個父節點。 一般來說，某些子節點是參與分散式查詢的遠端電腦。 **Asnyc Concat** 會同時向所有子節點發出 `open()` 呼叫，然後再將點陣圖套用到每個子節點。 **Async Concat** 會針對每一個是 1 的位元，視需要將輸出資料列傳送給父節點。|  
+|無|**Async Concat**|**Async Concat** 運算子只能使用於遠端查詢 (分散式查詢)。 它有 *n* 個子節點和一個父節點。 一般來說，某些子節點是參與分散式查詢的遠端電腦。 **Async Concat** 會同時向所有子節點發出 `open()` 呼叫，然後再將點陣圖套用到每個子節點。 **Async Concat** 會針對每一個是 1 的位元，視需要將輸出資料列傳送給父節點。|  
 |![點陣圖運算子圖示](../relational-databases/media/bitmap-32x.gif "點陣圖運算子圖示")|**點陣圖**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用「點陣圖」運算子來實作平行查詢計畫中的點陣圖篩選。 點陣圖篩選可先透過消除其索引鍵值無法產生任何聯結記錄的資料列來加速執行查詢，然後再透過另一個運算子 (如「平行處理原則」運算子) 傳遞資料列。 點陣圖篩選會於運算子樹狀目錄的一部分，以精簡方式顯示資料表中的一組值，以便從此樹狀目錄的另一個部分篩選第二個資料表中的資料列。 藉由盡早移除查詢中的不必要資料列，後續的運算子需要處理的資料列就會更少，而查詢的整體效能也會提升。 最佳化工具會判斷點陣圖何時具有足夠的選擇性能夠充分運用以及將篩選套用到哪個運算子。 「點陣圖」是實體運算子。|  
 |![點陣圖運算子圖示](../relational-databases/media/bitmap-32x.gif "點陣圖運算子圖示")|**點陣圖建立**|「點陣圖建立」運算子會出現在建立點陣圖的 Showplan 輸出中。 **點陣圖建立** 是邏輯運算子。|  
 |![書籤查閱運算子圖示](../relational-databases/media/bookmark-lookup-32x.gif "書籤查閱運算子圖示")|**書籤查閱**|「書籤查閱」運算子使用書籤 (資料列識別碼或叢集索引鍵) 在資料表或叢集索引中查詢對應的資料列。 **Argument** 資料行中包含用來在資料表或叢集索引中查詢資料列的書籤標記。 **Argument** 資料行中也包含查詢資料列的資料表或叢集索引的名稱。 如果 **Argument** 資料行中出現 WITH PREFETCH 子句，表示查詢處理器已決定在資料表或叢集索引中查詢書籤時，使用非同步預先提取 (預先讀取) 是最佳方法。<br /><br /> 「書籤查閱」無法用於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中。 不過，[叢集索引搜尋] 和 [RID 查閱] 會提供書籤查閱功能。 「索引鍵查閱」運算子也提供這項功能。|  

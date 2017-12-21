@@ -1,19 +1,19 @@
 ---
 title: "將檔案儲存至內部部署和 Azure 檔案共用並從中擷取 | Microsoft Docs"
 description: "本文描述如何透過 SSIS 在內部部署和 Azure 中使用檔案系統和檔案共用"
-ms.date: 11/10/2017
+ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4980f39deea4d70817da3650dccbff7997ba83d
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>透過 SSIS 將檔案儲存至內部部署和 Azure 檔案共用並從中擷取
 本文描述當您將使用本機檔案系統的套件隨即轉移至 Azure 中的 SQL Server Integration Services (SSIS) 時，如何更新 SSIS 套件。
@@ -22,7 +22,7 @@ ms.lasthandoff: 11/16/2017
 > 目前，SSIS 目錄資料庫 (SSISDB) 僅支援一組存取認證。 因此，Azure-SSIS Integration Runtime (IR) 無法使用不同的認證，來連線到多個內部部署檔案共用和 Azure 檔案服務共用。
 
 ## <a name="store-temporary-files"></a>儲存暫存檔案
-如果您需要在單一套件執行期間儲存及處理暫存檔案，套件可以使用暫存資料夾 `(.)/temp` 或 Azure-SSIS Integration Runtime 節點的 `%TEMP%`。
+如果您需要在單一套件執行期間儲存及處理暫存檔案，套件可以使用目前的工作目錄 (`.`) 或 Azure-SSIS Integration Runtime 節點的暫存資料夾 (`%TEMP%`)。
 
 ## <a name="store-files-across-multiple-package-executions"></a>在多個套件執行之間儲存檔案
 如果您需要儲存及處理永久性檔案，並在多個套件執行之間保存這些檔案，您可以使用內部部署檔案共用或 Azure 檔案服務
