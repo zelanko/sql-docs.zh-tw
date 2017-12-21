@@ -1,7 +1,7 @@
-# [安裝 Reporting Services](install-reporting-services.md)
+# [安裝 Reporting Services 2017](install-reporting-services.md)
+## [尋找 Reporting Services 2017 產品金鑰](find-reporting-services-product-key-ssrs.md)
 
-
-# [使用原生模式安裝 Reporting Services](install-reporting-services-native-mode-report-server.md)  
+# [使用原生模式安裝 Reporting Services 2016](install-reporting-services-native-mode-report-server.md)  
 ## [執行 Reporting Services 的僅限檔案安裝](files-only-installation-reporting-services.md)  
 ## [並存安裝 Reporting Services 和 Internet Information Services (SSRS 原生模式)](install-reporting-and-internet-information-services-side-by-side.md)  
 ## [在 SQL Server 容錯移轉叢集中裝載報表伺服器資料庫](host-a-report-server-database-in-a-sql-server-failover-cluster.md)  
@@ -29,7 +29,7 @@
 ### [Power BI 整合](power-bi-report-server-integration-configuration-manager.md)  
 
 
-# [安裝 Reporting Services SharePoint 模式](install-reporting-services-sharepoint-mode.md)  
+# [以 SharePoint 模式安裝 Reporting Services 2016](install-reporting-services-sharepoint-mode.md)  
 ## [支援的 SharePoint 和 Reporting Services 伺服器與增益集 (SQL Server 2016) 的組合](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 ## [可找到適用於 SharePoint 的 SSRS 增益集之處](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
 ## [以 SharePoint 模式安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)  
