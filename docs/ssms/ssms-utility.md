@@ -1,7 +1,7 @@
 ---
 title: "SSMS 公用程式 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e308a64f82ddb822bc5535c6cae7dc076265d212
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 867317119ffb1b58aeac049f4a1e64162368ff08
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="ssms-utility"></a>Ssms 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **Ssms** 公用程式會開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 如果有指定， **Ssms** 也會建立伺服器的連接，且會開啟查詢、指令碼、檔案、專案和方案。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 Ssms  
     [scriptfile] [projectfile] [solutionfile]  
-    [-S servername] [-d databasename] [-U username] [-P password]   
+    [-S servername] [-d databasename] [-G] [-U username] [-P password]   
     [-E] [-nosplash] [-log [filename]?] [-?]  
 ```  
   
@@ -58,27 +58,34 @@ Ssms
  指定要開啟的方案。 這個參數必須包含方案檔的完整路徑。  
   
  [**-S** *servername*]  
- 伺服器名稱  
+  伺服器名稱  
   
  [**-d** *databasename*]  
- 資料庫名稱  
+  資料庫名稱  
+
+ [**-G**] 使用 Active Directory 驗證來連線。 是否包含 **-P** 及/或 **-U** 可決定連線類型。
+ - 如果未包含 **-U** 和 **-P**，則會使用 **Active Directory - 整合式**，且不會出現任何對話方塊。
+ - 如果同時包含 **-U** 和 **-P**，則會使用 **Active Directory - 密碼**。 **不建議**使用此選項，因為您必須在命令列上指定純文字密碼，而這並非建議的做法。
+ - 如果包含 **-U**，但遺漏 **-P**，則會快顯 [驗證] 對話方塊，但所有登入嘗試都將會失敗。 
+
+  請注意，目前不支援**具 MFA 支援的 Active Directory - 通用**。 
   
- [**-U** *username*]  
- 利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證來連接時的使用者名稱  
+[**-U** *username*]  
+ 使用「SQL 驗證」或「Active Directory - 密碼」進行連線時的使用者名稱  
   
- [**-P** *password*]  
- 利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證來連接時的密碼  
+[**-P** *password*]  
+ 使用「SQL 驗證」或「Active Directory - 密碼」進行連線時的密碼
   
- [**-E**]  
+[**-E**]  
  使用 Windows 驗證進行連接  
   
- [**-nosplash**]  
+[**-nosplash**]  
  在開啟時，使 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 不呈現開頭顯示畫面。 當您利用頻寬有限的連接，透過「終端機服務」來連接執行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的電腦時，請使用這個選項。 這個引數不區分大小寫，可出現在其他引數的前後。  
   
- [**-log***[filename]?*]  
+[**-log***[filename]?*]  
  將 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 活動記錄到指定的檔案以利於進行疑難排解  
   
- [**-?**]  
+[**-?**]  
  顯示命令列說明  
   
 ## <a name="remarks"></a>備註  
@@ -103,13 +110,21 @@ Ssms
   
 ```  
   
+ 下列指令碼會使用 *Active Directory - 整合式*，從命令提示字元開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]：  
+  
+```  
+Ssms.exe -S servername.database.windows.net -G
+  
+``` 
+
+
  下列指令碼會在命令提示字元之下，將程式碼編輯器設為伺服器 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，在不呈現開頭顯示畫面的情況下，利用 Windows 驗證來開啟 `ACCTG and the database AdventureWorks2012,` ：  
   
 ```  
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash  
   
 ```  
-  
+
  下列指令碼會在命令提示字元之下開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，且會開啟 MonthEndQuery 指令碼。  
   
 ```  
@@ -130,7 +145,10 @@ Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"  
   
 ```  
-  
+ 
+
+
+
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   

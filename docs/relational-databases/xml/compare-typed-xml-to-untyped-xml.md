@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1335222c16e955affee5237c0160afb058ebeea2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cf2185ff9c0aa70c97b4d067f4d58d5360b70948
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 您可以建立 **xml** 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 **XML** 類型的變數、參數和資料行建立關聯。 在此情況下，此 **XML** 資料類型的執行個體即稱為「具類型」。 非此種情況下的 XML 執行個體則稱為「不具類型」。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
  在下列範例中，會使用兩段式命名慣例來指定 XML 結構描述集合名稱。 第一個部分是結構描述名稱，而第二個部分是 XML 結構描述集合名稱。  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>範例：將結構描述集合與 xml 類型變數產生關聯  
- 下列範例會建立一個**XML** 類型變數，並將結構描述集合與此變數產生關聯。 範例中指定的結構描述集合已經匯入 **AdventureWorks** 資料庫。  
+ 下列範例會建立一個 **xml** 類型變數，並將結構描述集合與此變數產生關聯。 範例中指定的結構描述集合已經匯入 **AdventureWorks** 資料庫。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   

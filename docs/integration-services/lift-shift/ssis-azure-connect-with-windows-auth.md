@@ -1,6 +1,6 @@
 ---
 title: "使用 Windows 驗證連線至內部部署資料來源和 Azure 檔案共用 | Microsoft Docs"
-ms.date: 09/25/2017
+ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -13,50 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9235ffd3225e76ee94067519c72e997c451d9893
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c0f5e1e2319e58e9013b1f67e8a81efa9a07d556
+ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>使用 Windows 驗證連線至內部部署資料來源和 Azure 檔案共用
-本文描述如何在 Azure SQL Database 上設定 SSIS 目錄以執行套件，這些套件會使用 Windows 驗證來連線至內部部署資料來源和 Azure 檔案共用。
+本文描述如何在 Azure SQL Database 上設定 SSIS 目錄以執行套件，這些套件會使用 Windows 驗證來連線至內部部署資料來源和 Azure 檔案共用。 無論是在內部部署和 Azure 虛擬機器上及 Azure 檔案中，您都可以使用 Windows 驗證來連線至與 Azure SSIS Integration Runtime 相同虛擬網路中的資料來源。
 
 遵循本文步驟所提供的網域認證適用於 SQL Database 執行個體上的所有套件執行，直到您變更或移除這些認證為止。
 
-## <a name="connect-to-on-premises-data-sources"></a>連線至內部部署資料來源
-
-### <a name="prerequisite"></a>必要條件
-在設定 Windows 驗證的網域認證之前，請檢查未加入網域的電腦是否可以在 `runas` 模式下連線至內部部署資料來源。
-
-#### <a name="connecting-to-sql-server"></a>連線到 SQL Server
-若要檢查是否可以連線至內部部署 SQL Server，請執行下列動作：
-
-1.  若要執行這項測試，請尋找未加入網域的電腦。
-
-2.  在未加入網域的電腦上，執行下列命令，以您想要使用的網域認證啟動 SQL Server Management Studio (SSMS)：
-
-    ```cmd
-    runas.exe /netonly /user:<domain>\<username> SSMS.exe
-    ```
-
-3.  從 SSMS 中，檢查是否可以連線至您想要使用的內部部署 SQL Server。
-
-#### <a name="connecting-to-a-file-share"></a>連線至檔案共用
-若要檢查是否可以連線至內部部署檔案共用，請執行下列動作：
-
-1.  若要執行這項測試，請尋找未加入網域的電腦。
-
-2.  在未加入網域的電腦上，執行下列命令。 此命令會使用您要使用的網域認證開啟命令提示字元視窗，然後藉由取得目錄清單來測試與檔案共用的連線。
-
-    ```cmd
-    runas.exe /netonly /user:<domain>\<username> cmd.exe
-    dir \\fileshare
-    ```
-
-3.  檢查是否會針對您要使用的內部部署檔案共用傳回目錄清單。
-
-### <a name="provide-domain-credentials"></a>提供網域認證
+## <a name="provide-domain-credentials-for-windows-authentication"></a>提供 Windows 驗證的網域認證
 若要提供網域認證，讓套件使用 Windows 驗證以連線至內部部署資料來源，請執行下列動作：
 
 1.  使用 SQL Server Management Studio (SSMS) 或其他工具，連線至裝載 SSIS 目錄資料庫 (SSISDB) 的 SQL Database。 如需詳細資訊，請參閱[連線至 Azure 上的 SSISDB 目錄資料庫](ssis-azure-connect-to-catalog-database.md)。
@@ -68,6 +36,7 @@ ms.lasthandoff: 11/20/2017
     ```sql
     catalog.set_execution_credential @user='<your user name>', @domain='<your domain name>', @password='<your password>'
     ```
+
 4.  執行 SSIS 套件。 套件會使用您提供的認證，透過 Windows 驗證連線至內部部署資料來源。
 
 ### <a name="view-domain-credentials"></a>檢視網域認證
@@ -98,10 +67,42 @@ ms.lasthandoff: 11/20/2017
     catalog.set_execution_credential @user='', @domain='', @password=''
     ```
 
-## <a name="connect-to-file-shares"></a>連線至檔案共用
-您可以使用 Windows 驗證來連線至與 Azure SSIS Integration Runtime 相同之虛擬網路中的檔案共用 (無論是在內部部署和 Azure 虛擬機器上還是 Azure 檔案中)。 如需 Azure 檔案的詳細資訊，請參閱 [Azure 檔案](https://azure.microsoft.com/services/storage/files/)。
+## <a name="connect-to-an-on-premises-sql-server"></a>連線到內部部署 SQL Server
+若要檢查是否可以連線至內部部署 SQL Server，請執行下列動作：
 
-若要連線至 Azure 虛擬機器上的檔案共用或 Azure 檔案共用，請執行下列動作：
+1.  若要執行這項測試，請尋找未加入網域的電腦。
+
+2.  在未加入網域的電腦上，執行下列命令，以您想要使用的網域認證啟動 SQL Server Management Studio (SSMS)：
+
+    ```cmd
+    runas.exe /netonly /user:<domain>\<username> SSMS.exe
+    ```
+
+3.  從 SSMS 中，檢查是否可以連線至您想要使用的內部部署 SQL Server。
+
+### <a name="prerequisites"></a>必要條件
+若要從 Azure 上執行的套件連線到內部部署 SQL Server，您必須啟用下列必要條件：
+
+1.  在 SQL Server 組態管理員中，啟用 TCP/IP 通訊協定。
+2.  允許通過 Windows 防火牆進行存取。 如需詳細資訊，請參閱[設定 Windows 防火牆以允許 SQL Server 存取](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access)。
+3.  若要使用 Windows 驗證進行連線，請確定 Azure-SSIS Integration Runtime 屬於同時也包含內部部署 SQL Server 的虛擬網路 (VNet)。  如需詳細資訊，請參閱[將 Azure-SSIS Integration Runtime 加入虛擬網路](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)。 然後，如本文所述，使用 `catalog.set_execution_credential` 來提供認證。
+
+## <a name="connect-to-an-on-premises-file-share"></a>連線至內部部署檔案共用
+若要檢查是否可以連線至內部部署檔案共用，請執行下列動作：
+
+1.  若要執行這項測試，請尋找未加入網域的電腦。
+
+2.  在未加入網域的電腦上，執行下列命令。 此命令會使用您要使用的網域認證開啟命令提示字元視窗，然後藉由取得目錄清單來測試與檔案共用的連線。
+
+    ```cmd
+    runas.exe /netonly /user:<domain>\<username> cmd.exe
+    dir \\fileshare
+    ```
+
+3.  檢查是否會針對您要使用的內部部署檔案共用傳回目錄清單。
+
+## <a name="connect-to-a-file-share-on-an-azure-vm"></a>連線至 Azure VM 上的檔案共用
+若要連線到 Azure 虛擬機器上的檔案共用，請執行下列動作：
 
 1.  使用 SQL Server Management Studio (SSMS) 或其他工具，連線至裝載 SSIS 目錄資料庫 (SSISDB) 的 SQL Database。
 
@@ -109,13 +110,20 @@ ms.lasthandoff: 11/20/2017
 
 3.  執行 `catalog.set_execution_credential` 預存程序，如下列選項中所述：
 
-    a.  若要連線至 Azure 虛擬機器上的檔案共用，請執行下列預存程序：
-
     ```sql
     catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
     ```
 
-    b.  若要連線至 Azure 檔案共用 (也就是在 Azure 檔案中)，請執行下列預存程序：
+## <a name="connect-to-a-file-share-in-azure-files"></a>連線至 Azure 檔案中的檔案共用
+如需 Azure 檔案的詳細資訊，請參閱 [Azure 檔案](https://azure.microsoft.com/services/storage/files/)。
+
+若要連線至 Azure 檔案共用上的檔案共用，請執行下列動作：
+
+1.  使用 SQL Server Management Studio (SSMS) 或其他工具，連線至裝載 SSIS 目錄資料庫 (SSISDB) 的 SQL Database。
+
+2.  使用 SSISDB 作為目前的資料庫，開啟查詢視窗。
+
+3.  執行 `catalog.set_execution_credential` 預存程序，如下列選項中所述：
 
     ```sql
     catalog.set_execution_credential @domain = N'Azure', @user = N'<storage-account-name>', @password = N'<storage-account-key>'

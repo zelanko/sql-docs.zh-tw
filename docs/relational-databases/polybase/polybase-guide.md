@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f7ce518d2588e07ae90842f92a7e9ee47cfc5543
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5c47b393a4c91aa9e02b934834a00d3e2ec5a88d
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="polybase-guide"></a>PolyBase 指南
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase 是一種技術，可透過 t-sql 語言存取資料庫外部的資料。  在 SQL Server 2016 中，它可讓您對 Hadoop 中的外部資料執行查詢，或從 Azure Blob 儲存體匯入/匯出資料。 查詢已最佳化，可將計算推送到 Hadoop。 在 Azure SQL 資料倉儲中，您可以從 Azure Blob 儲存體和 Azure Data Lake Store 中匯入/匯出資料。
@@ -55,11 +55,11 @@ ms.lasthandoff: 11/18/2017
 
 -   **將資料匯出至 Hadoop、Azure Blob 儲存體或 Azure Data Lake Store。** 將資料封存至 Hadoop、Azure Blob 儲存體或 Azure Data Lake Store 以達成符合成本效益的儲存體，並讓它持續上線，方便進行存取。  
   
--   **與 BI 工具整合。** 搭配使用 PolyBase 與 Microsoft 的商務智慧和分析堆疊，或使用與 SQL Server 相容的任何協力廠商工具。  
+-   **與 BI 工具整合。** 使用 PolyBase 搭配 Microsoft 的商務智慧和分析堆疊，或使用與 SQL Server 相容的任何協力廠商工具。  
   
 ## <a name="performance"></a>效能  
   
--   **將計算推送到 Hadoop。**查詢最佳化工具會做出成本型決策，以將計算推送到 Hadoop，而這麼做可以改善查詢效能。  它使用外部資料表上的統計資料來做出成本型決策。   推送計算會建立 MapReduce 工作，並利用 Hadoop 的分散式運算資源。  
+-   **將計算推送到 Hadoop。**查詢最佳化工具會做出成本型決策，以將計算推送到 Hadoop，而這麼做可以改善查詢效能。  它使用外部資料表上的統計資料來做出成本型決策。 推送計算會建立 MapReduce 工作，並利用 Hadoop 的分散式運算資源。  
   
 -   **調整計算資源。** 若要改善查詢效能，您可以使用 SQL Server [PolyBase 向外延展群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。 這可啟用 SQL Server 執行個體與 Hadoop 節點之間的平行資料傳輸，而且會加入在外部資料上運作的計算資源。  
   
