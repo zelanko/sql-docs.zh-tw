@@ -3,7 +3,7 @@
 # 概觀
 ## [什麼是 Microsoft Machine Learning 服務](r/r-services.md)
 ## [機器學習服務的新功能](what-s-new-in-sql-server-machine-learning-services.md)
-## [新的與最近更新的文件](new-updated-advanced-analytics.md)
+## [新增及更新的發行項](new-updated-advanced-analytics.md)
 ## [架構和概觀](architecture-overview-machine-learning.md)
 ## [SQL Server 版本間的機器學習服務功能差異](r/differences-in-r-features-between-editions-of-sql-server.md)
 
@@ -122,8 +122,6 @@
 
 ### [避免 R 使用者套件程式庫的錯誤](r/packages-installed-in-user-libraries.md)
 
-### [新增 SQLRUserGroup 作為資料庫使用者](r/add-sqlrusergroup-to-database.md)
-
 ## 資料探索和模型化
 
 ### [R 程式庫和資料類型](r/r-libraries-and-data-types.md)
@@ -155,7 +153,10 @@
 ### [SQL Server 中 R 執行階段的安全性考量](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [修改 SQL Server Machine Learning 服務的使用者帳戶集區](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 
+### [新增 SQLRUserGroup 作為資料庫使用者](r/add-sqlrusergroup-to-database.md)
+
 ### [使用 Web 服務部署及取用模型](operationalization-with-mrsdeploy.md)
+
 ### [管理及監視機器學習服務方案](r/managing-and-monitoring-r-solutions.md)
 ### [Machine Learning 服務的資源管理](r/resource-governance-for-r-services.md)
 ### [建立機器學習的資源集區](r/how-to-create-a-resource-pool-for-r.md)
