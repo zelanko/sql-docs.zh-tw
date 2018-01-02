@@ -42,7 +42,7 @@ ms.lasthandoff: 12/04/2017
   
  效能增強功能可讓您建立更大的模型、更有效率地載入資料，以及獲得更佳的整體效能。 這包括改進了 Microsoft Excel 增益集的效能，可降低資料載入時間，並可讓增益集能處理較大型的實體。  
   
- 如需 Microsoft Excel 增益集的詳細資訊，請參閱 [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)。  
+ 如需 Microsoft Excel 增益集的詳細資訊，請參閱 [適用於 Microsoft Excel 的 Master Data Services 增益集](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)。  
   
  下列改良功能包括在內。  
   
