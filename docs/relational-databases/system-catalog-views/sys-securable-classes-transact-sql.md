@@ -24,21 +24,21 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 592e0b34a2789df1c1aeb76b412feee110af248c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3d21b559f232a05ab8699962b4691aa3b4e3bea9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssecurableclasses-transact-sql"></a>sys.securable_classes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回安全性實體類別的清單  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**class_desc**|**sysname**|類別的名稱。|  
-|**類別**|**int**|類別的數值指定。|  
+|**class**|**int**|類別的數值指定。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -46,11 +46,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>範例  
  下列範例會傳回這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所支援的安全性實體類別。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.securable_classes ORDER BY class;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [安全性實體](../../relational-databases/security/securables.md)  
   
   

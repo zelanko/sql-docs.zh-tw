@@ -3,7 +3,7 @@ title: "組織追蹤 (SQL Server Profiler) 中所顯示的資料行 |Microsoft �
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7a21efcc0d50f58497cc169610c77cd9fb0d00e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 35692d5068e1dfcbe446d3a9bd79ee7f35ef1e18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>組織追蹤內顯示的資料行 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以群組在追蹤中的資料行選取**組織資料行**中追蹤資料表或**追蹤檔案屬性**對話方塊中，或當您定義的追蹤。 群組資料行可讓您以更佳的方式分析 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤輸出。 如需詳細資訊，請參閱[使用 SQL Server Profiler 檢視和分析追蹤](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|稽核登入|648|  
-|1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
+|@shouldalert|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
 -   只選擇一個資料行來進行群組，則可群組並彙總追蹤事件。 當您只選擇一個資料行來進行群組時，追蹤視窗會根據該資料行的值來群組並顯示事件，並將其下的所有事件都摺疊起來。 在您選擇用來進行群組的資料行中，事件左邊會出現一個加號 (**+**)，而其下已摺疊的事件數目，則會顯示在事件右邊的括弧內。 下列範例顯示如果只選擇 **EventClass** 資料行來進行群組，追蹤視窗方格將如何顯示。 請注意，所有事件都會組識在 **EventClass** 資料行之下。 若要檢視所有事件，請按一下加號，展開並顯示該類型的所有事件類別。  

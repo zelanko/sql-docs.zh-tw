@@ -1,7 +1,7 @@
 ---
 title: "全域設定 （[輸出] 視窗） (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea89e36362923083f3275092a6bba2ecd0939da3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 71cd07bb7a2e249193dfd0337d3d0aa055493e04
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-output-window-db2tosql"></a>全域設定 （[輸出] 視窗） (DB2ToSQL)
 使用**通用設定**對話方塊來指定 SSMA 的設定。  

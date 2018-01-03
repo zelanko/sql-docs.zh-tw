@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ee043b18eebafdc86b0d2d6e6a34afc0fc865c2f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e6de8f9b9a1ed36135915e5985312a02c02fba6d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] （萬用字元-相符的個字元） (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/18/2017
 ### <a name="a-simple-example"></a>答： 簡單的範例   
 下列範例會傳回名稱開頭為字母`m`。 `[n-z]`指定第二個字母必須是某處，範圍從`n`至`z`。 百分比萬用字元`%`允許開頭為 3 個字元的任何或任何字元。 `model`和`msdb`資料庫符合此準則。 `master`資料庫並不會與結果集。
  
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm[n-z]%';
 ```
@@ -59,7 +59,7 @@ msdb
 ### <a name="b-more-complex-example"></a>B： 更複雜的範例   
  下列範例會利用 [] 運算子，來尋找地址有四位數郵遞區號之所有 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 員工的識別碼和名稱。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.BusinessEntityID, p.FirstName, p.LastName, a.PostalCode  
@@ -81,7 +81,7 @@ EmployeeID      FirstName      LastName      PostalCode
 
 
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [像 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;TRANSACT-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [%&#40;萬用字元-字元 &#40; s &#41;若要比對 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   

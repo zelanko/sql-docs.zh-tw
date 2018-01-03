@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ed224c77a502f81da57b232a68fddc0d4157338
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 147ac7627ba30a8a249e00cbf03e37887368de09
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**event_type**|**nvarchar(256)**|指定的 spid 的輸入緩衝區中的事件類型。|  
 |**參數**|**smallint**|陳述式所提供的任何參數。|  
@@ -75,7 +75,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 ### <a name="a-simple-example"></a>A. 簡單範例  
  下列範例會示範將工作階段識別碼 (SPID) 和要求識別碼傳遞至函式。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
@@ -83,7 +83,7 @@ GO
 ### <a name="b-using-cross-apply-to-additional-information"></a>B. 使用跨套用的其他資訊  
  下列範例會列出工作階段識別碼大於 50 的工作階段的輸入的緩衝區。  
   
-```tsql  
+```sql  
 SELECT es.session_id, ib.event_info   
 FROM sys.dm_exec_sessions AS es  
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib  
@@ -91,7 +91,7 @@ WHERE es.session_id > 50;
 GO
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
  [sys.dm_exec_requests &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   

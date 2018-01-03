@@ -3,7 +3,7 @@ title: "重新執行追蹤資料 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e890b0d0dcaca33dcae4c7731cec7f32b89fff56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 820558d326ceb54cc6324f08b147e83dfcc670f1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="replay-trace-data"></a>重新執行追蹤資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以啟動分散式重新執行與[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能，您已經備妥輸入的追蹤資料之後。 如需詳細資訊，請參閱 [準備輸入追蹤資料](../../tools/distributed-replay/prepare-the-input-trace-data.md)。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  當分散式重新執行完成時，管理工具就會傳回摘要資訊。 如果您已指定 **-o** 選項，重新執行活動就已經儲存在每個用戶端的結果追蹤檔案中。 如需結果追蹤檔案的詳細資訊，請參閱 [檢閱重新執行結果](../../tools/distributed-replay/review-the-replay-results.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  

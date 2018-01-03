@@ -18,18 +18,18 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 79944f54d12681ab7a430362ec0204a8d54bf477
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3b10564c7736dce2ab21cc83bed819606230e7b9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   包含資料行存放區索引中每個資料行的資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**sys.partitions**|**bigint**|指出資料分割識別碼。 在資料庫中，這是唯一的。|  
 |**hobt_id**|**bigint**|具有此資料行存放區索引之資料表的堆積或 B 型樹狀目錄索引 (hobt) 的識別碼。|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列查詢會傳回資料行存放區索引之區段的相關資訊。  
   
-```tsql  
+```sql  
 SELECT i.name, p.object_id, p.index_id, i.type_desc,   
     COUNT(*) AS number_of_segments  
 FROM sys.column_store_segments AS s   
@@ -84,7 +84,7 @@ ORDER BY css.hobt_id, css.column_id;
 ## <a name="permissions"></a>Permissions  
  需要**VIEW SERVER STATE**權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [建立資料行存放區索引 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_row_groups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   

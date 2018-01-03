@@ -3,7 +3,7 @@ title: "設定工具選項和配置 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d497ec1f8b0d7c557c6d802328ddbbb4360a988
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc759f4beb67d96abad27dc5bdbe0a4e322f330a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>課程 1-2-設定工具選項和配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以設定選項來設定 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) 會顯示在啟動時，它會使用時，字型，並調整其他工具的功能支援使用它。 這一頁的練習可讓您熟悉您可以設定的選項及如何設定它們。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/05/2017
     -   依預設，會核取 [停止工作階段分析之前先詢問]，以避免在 Database Engine Tuning Advisor 分析工作負載完成之前不慎停止微調工作階段。  
   
 ## <a name="next-lesson"></a>下一課  
-[第 2 課：使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[課程 2：使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

@@ -1,7 +1,7 @@
 ---
 title: "使用者介面參考 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d33e600f56cf1110b002a8e81a1e72a2a0e2b77d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a5540e2c9a197145db5fbd60250b56a04b74b60e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-reference-db2tosql"></a>使用者介面參考 (DB2ToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) for DB2。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/05/2017
   
 |||  
 |-|-|  
-|主題|Description|  
+|主題|描述|  
 |[進階物件選取項目 &#40; DB2ToSQL &#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|使用**進階物件選取**對話方塊來尋找資料庫物件所使用的篩選準則，然後選取或清除這些物件。|  
 |[評估報表 &#40; DB2ToSQL &#41;](../../ssma/db2/assessment-report-db2tosql.md)|使用評估報表來檢視的 DB2 物件轉換的結果[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，並以估計的時間和移轉到的複雜性[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |[連接到 DB2 資料庫 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|使用**連接到 DB2**對話方塊連接到您想要移轉的 DB2 資料庫。|  

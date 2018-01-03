@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ba34b4411b5c3946bf1bc5cb75bc361cd7929990
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>建立外部資料來源 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -211,7 +211,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 
 |Hadoop 連接|預設資源管理員的連接埠|
 |-------------------|-----------------------------|
-|1|50300|
+|@shouldalert|50300|
 |2|50300|
 |3|8021|
 |4|8032|
@@ -308,7 +308,7 @@ Polybase，RESOURCE_MANAGER_LOCATION 或 JOB_TRACKER_LOCATION 定義時，查詢
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. 建立參考 Hadoop 的外部資料來源  
 若要建立外部資料來源參考 Hortonworks 或 Cloudera Hadoop 叢集，請指定電腦名稱或 IP 位址的 Hadoop Namenode 和連接埠。  
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -320,7 +320,7 @@ WITH (
 ### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. 建立參考 Hadoop 的外部資料來源使用啟用的下推  
 指定要啟用針對 PolyBase 查詢的下推計算至 Hadoop RESOURCE_MANAGER_LOCATION 選項。 啟用之後，PolyBase 會用來判斷是否應該查詢計算推送到 Hadoop 或所有資料應都移到處理 SQL Server 中的查詢成本型決策。
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -333,7 +333,7 @@ WITH (
 ###  <a name="credential"></a> C. 建立參考 Kerberos 保護的 Hadoop 的外部資料來源  
 若要確認是否 Hadoop 叢集 Kerberos 保護，請檢查在 Hadoop core-site.xml hadoop.security.authentication 屬性的值。 若要參考由 Kerberos 保護的 Hadoop 叢集，您必須指定包含您的 Kerberos 使用者名稱和密碼的資料庫範圍認證。 資料庫主要金鑰用來加密的資料庫範圍的認證的密碼。 
   
-```tsql  
+```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
 
@@ -380,7 +380,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. 建立分區對應管理員外部資料來源
 若要建立外部資料來源參考對包含 SHARD_MAP_MANAGER，指定裝載分區對應管理員，Azure SQL Database 或 Azure 的虛擬機器上的 SQL Server 資料庫中的邏輯伺服器名稱。
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred  
@@ -400,7 +400,7 @@ WITH (
 ### <a name="f-create-an-rdbms-external-data-source"></a>F. 建立 RDBMS 外部資料來源
 若要建立外部資料來源參考 RDBMS，指定 Azure SQL Database 中的遠端資料庫的邏輯伺服器名稱。
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
@@ -421,7 +421,7 @@ WITH (
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. 建立參考 Azure Data Lake Store 的外部資料來源
 Azure Data lake Store 連線根據 ADLS URI 和 Azure 啟用目錄應用程式的服務主體。 建立此應用程式的文件，請參閱[使用 Active Directory 資料湖存放區驗證](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)。
 
-```tsql
+```sql
 -- If you do not have a Master Key on your DW you will need to create one.
 CREATE MASTER KEY
 
@@ -444,7 +444,7 @@ WITH (TYPE = HADOOP,
 ### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. 建立參考 Hadoop 的外部資料來源使用啟用的下推
 指定要啟用針對 PolyBase 查詢的下推計算至 Hadoop JOB_TRACKER_LOCATION 選項。 啟用之後，PolyBase 會用來判斷是否應該查詢計算推送到 Hadoop 或所有資料應都移到處理 SQL Server 中的查詢成本型決策。 
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -458,7 +458,7 @@ WITH (
 
 在此範例中，外部資料來源會呼叫 Azure 儲存體帳戶命名為 myaccount dailylogs Azure blob 儲存體容器。 Azure 儲存體的外部資料來源是只有資料傳輸，並不支援述詞下推。
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
         TYPE = HADOOP, 
         LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'
@@ -469,7 +469,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. 建立從 Azure Blob 儲存體擷取資料的大量作業的外部資料來源。   
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。   
 使用下列資料來源的大量作業使用[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)或[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)。 使用的認證必須使用可建立`SHARED ACCESS SIGNATURE`作為身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -479,7 +479,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 ```   
 若要查看在使用這個範例，請參閱[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)。
   
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
 [改變外部資料來源 (TRANSACT-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   

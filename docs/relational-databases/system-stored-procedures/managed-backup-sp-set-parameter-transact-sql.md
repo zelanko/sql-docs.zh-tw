@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3fb501b9fedb7b9e9fd55d571b44d1dcc702b5f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 31460ed7e3e972d87d9c6461ad78d5560fd67861
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 EXEC managed_backup.sp_set_parameter   
     [@parameter_name = ] {'SSMBackup2WANotificationEmailIds' | 'SSMBackup2WAEnableUserDefinedPolicy' | 'SSMBackup2WADebugXevent' | 'FileRetentionDebugXevent' | 'StorageOperationDebugXevent'}  
     ,[@parameter_value = ] 'parameter_value'  
@@ -73,7 +73,7 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="best-practices"></a>最佳作法  
  描述使用者執行陳述式或常式時應了解之最佳作法的選用章節。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要**EXECUTE**權限**managed_backup.sp_set_parameter**預存程序。  

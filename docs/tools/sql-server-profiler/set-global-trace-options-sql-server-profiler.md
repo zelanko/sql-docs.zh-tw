@@ -3,7 +3,7 @@ title: "設定全域追蹤選項 (SQL Server Profiler) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ffc9ee6552a206928f7b70705d894686d503f01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ffb801e92dfaa141be2b5e942a1c0bd95c19a6cb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>設定全域追蹤選項 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題描述如何設定套用至所建立的特定執行個體的所有追蹤選項[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/05/2017
   
     -   [預設重新執行執行緒數目] 控制重新執行期間要使用的處理器執行緒數目。 執行緒數目較多可使重新執行更快速完成，但會導致重新執行期間的伺服器效能降低。 建議設定是 **4**。 下表列出可用選項：  
   
-        |值|描述|  
+        |ReplTest1|描述|  
         |-----------|-----------------|  
         |**2**|最小值。 使用兩個執行緒重新執行。|  
         |**4**|預設值。|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
     -   [預設健全狀況監視器等候間隔 (秒)] 設定重新執行的執行緒可封鎖其他處理序的最長時間量 (以秒為單位)。 下表會說明這些值。  
   
-        |值|描述|  
+        |ReplTest1|描述|  
         |-----------|-----------------|  
         |**0**|最小值。 設為 **0** 代表 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 永遠不會停止封鎖處理序。|  
         |**3600**|預設值。 允許封鎖處理序，封鎖時間不超過 **3600** 秒或一小時。|  
@@ -65,13 +65,13 @@ ms.lasthandoff: 12/05/2017
   
     -   [預設健全狀況監視器輪詢間隔 (秒)] 設定輪詢重新執行的執行緒是否有封鎖處理序的頻率。 下表會說明這些值。  
   
-        |值|描述|  
+        |ReplTest1|描述|  
         |-----------|-----------------|  
         |**1**|最小值。 設為 **1** 代表 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會每秒輪詢封鎖處理序一次。|  
         |**60**|預設值。 每分鐘輪詢封鎖處理序一次。|  
         |**86400**|最大值。 每 **86400** 秒或每日輪詢封鎖處理序一次。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定追蹤顯示預設值 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

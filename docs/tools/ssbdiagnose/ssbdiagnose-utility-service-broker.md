@@ -3,7 +3,7 @@ title: "ssbdiagnose 公用程式 (Service Broker) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssbdiagnose
 ms.reviewer: 
@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 601de096e50a39b13113ff09e86965187701b327
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1cac73fa5276aeb6d3323201a59979979c999a61
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Ssbdiagnose**公用程式會報告中的問題[!INCLUDE[ssSB](../../includes/sssb-md.md)]交談或設定[!INCLUDE[ssSB](../../includes/sssb-md.md)]服務。 您可以針對兩個服務或單一服務進行組態檢查。 問題會在命令提示字元視窗中報告成人們可讀取的文字，或可重新導向至檔案或其他程式的格式化 XML。  
@@ -221,7 +221,7 @@ WHERE database_id = DB_ID();
  如果同時使用 **-E** 選項和 **-U** 或 **-P** 選項，就會產生錯誤訊息。  
   
  **-U** *login_id*  
- 使用指定的登入識別碼，藉以開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線。 登入必須是 **系統管理員** 固定伺服器角色的成員。  
+ 使用指定的登入識別碼，藉以開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線。 登入必須是**系統管理員**固定伺服器角色的成員。  
   
  如未指定 **-E** 也未指定 **-U** ， **ssbdiagnose** 就會使用 SQLCMDUSER 環境變數的值。 如果也沒有設定 SQLCMDUSER， **ssbdiagnose** 就會根據正在執行 **ssbdiagnose**的使用者 Windows 帳戶，使用 Windows 驗證模式嘗試連接。  
   
@@ -451,7 +451,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [BEGIN DIALOG CONVERSATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [建立 BROKER 優先權 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   

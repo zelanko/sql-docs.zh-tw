@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3db3cbecf2486ba4096096b5d70c33eb12f0fc7f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cccac1ba1615e6a825230c3735488e182aeed1e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
 
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|資料庫的名稱，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]伺服器內是唯一的。|  
 |**database_id**|**int**|資料庫的識別碼，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]伺服器內是唯一的。|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 |**is_read_only**|**bit**|1 = 資料庫是 READ_ONLY<br /> 0 = 資料庫是 READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE 是 ON<br /> 0 = AUTO_CLOSE 是 OFF|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK 是 ON<br /> 0 = AUTO_SHRINK 是 OFF|  
-|**狀態**|**tinyint**|**值 &#124;適用於**<br /> 0 = ONLINE  <br /> 1 = RESTORING <br /> 2 = RECOVERING:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT <br /> 5 = 緊急：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = 離線：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPYING: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注意：**剛上線的資料庫不一定馬上能接受連線。 若要識別資料庫可接受連接，請查詢 sys.databases 的 sys.databases 資料行或的定序屬性**DATABASEPROPERTYEX**。 當資料庫定序傳回非 Null 值時，表示資料庫可接受連接。 對於 Alwayson 資料庫，查詢`database_state`或`database_state_desc`的資料行[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。|  
+|**state**|**tinyint**|**值 &#124;適用於**<br /> 0 = ONLINE  <br /> 1 = RESTORING <br /> 2 = RECOVERING:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT <br /> 5 = 緊急：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = 離線：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPYING: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注意：** Alwayson 資料庫，如查詢`database_state`或`database_state_desc`的資料行[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。|  
 |**state_desc**|**nvarchar （60)**|資料庫狀態的描述。 請參閱狀態。|  
 |**is_in_standby**|**bit**|還原記錄的資料庫是唯讀資料庫。|  
 |**is_cleanly_shutdown**|**bit**|1 = 資料庫完全關閉；不必在啟動時復原<br /> 0 = 資料庫並未完全關閉；必須在啟動時復原|  
@@ -103,9 +103,9 @@ ms.lasthandoff: 11/21/2017
 |**group_database_id**|**uniqueidentifier**|Always On 可用性群組內，如果任何資料庫正在參與資料庫的唯一識別碼。 **group_database_id**是相同的主要複本上和每個次要複本所在的資料庫已加入至可用性群組的這個資料庫。<br /> NULL = 資料庫不是任何可用性群組中可用性複本的一部分。<br /> **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|對應到這個資料庫之資源集區的識別碼。 這個資源集區會控制可供這個資料庫中記憶體最佳化資料表使用的記憶體總量。<br /> **適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**default_language_lcid**|**smallint**|表示自主資料庫預設語言的地區設定識別碼 (LCID)。<br /> **請注意**做[設定 default language 伺服器組態選項](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)的**sp_configure**。 這個值是**null**非自主資料庫。<br /> **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**default_language_name**|**nvarchar （128)**|表示自主資料庫的預設語言。<br /> 這個值是**null**非自主資料庫。<br /> **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**default_language_name**|**nvarchar(128)**|表示自主資料庫的預設語言。<br /> 這個值是**null**非自主資料庫。<br /> **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_lcid**|**int**|表示自主資料庫預設全文檢索語言的地區設定識別碼 (LCID)。<br /> **請注意**函式做為預設[設定伺服器組態選項的預設全文檢索語言](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)的**sp_configure**。 這個值是**null**非自主資料庫。<br /> **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**default_fulltext_language_name**|**nvarchar （128)**|表示自主資料庫的預設全文檢索語言。<br /> 這個值是**null**非自主資料庫。<br /> **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**default_fulltext_language_name**|**nvarchar(128)**|表示自主資料庫的預設全文檢索語言。<br /> 這個值是**null**非自主資料庫。<br /> **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_nested_triggers_on**|**bit**|指出自主資料庫是否允許巢狀觸發程序。<br /> 0 = 不允許巢狀觸發程序。<br /> 1 = 允許巢狀觸發程序。<br /> **請注意**做[設定 nested 的 triggers 伺服器組態選項](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)的**sp_configure**。 這個值是**null**非自主資料庫。 請參閱[sys.configurations &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)以取得詳細資訊。<br /> **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_transform_noise_words_on**|**bit**|指出自主資料庫中是否應該轉換非搜尋字。<br /> 0 = 不應該轉換非搜尋字。<br /> 1 = 應該轉換非搜尋字。<br /> **請注意**做[轉換非搜尋字伺服器組態選項](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)的**sp_configure**。 這個值是**null**非自主資料庫。 請參閱[sys.configurations &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)以取得詳細資訊。<br /> **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**two_digit_year_cutoff**|**smallint**|表示 1753 與 9999 之間的數值，代表將二位數年份解譯為四位數年份時的截斷年份 (Cutoff Year)。<br /> **請注意**做[設定 two digit year cutoff 伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)的**sp_configure**。 這個值是**null**非自主資料庫。 請參閱[sys.configurations &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)以取得詳細資訊。<br /> **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/21/2017
 |**delayed_durability**|**int**|延遲的持久性設定：<br /> 0 = 停用<br /> 1 = 允許<br /> 2 = 強制<br /> 如需詳細資訊，請參閱[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)。<br /> **適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
 |**delayed_durability_desc**|**nvarchar （60)**|延遲的持久性設定：<br /> DISABLED<br /> ALLOWED<br /> FORCED<br /> **適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**is_memory_optimized_elevate_to_snapshot_on**|**bit**|當工作階段設定 TRANSACTION ISOLATION LEVEL 設定為較低的隔離等級 READ COMMITTED 或 READ UNCOMMITTED 時，會使用 SNAPSHOT 隔離存取記憶體最佳化的資料表。<br /> 1 = 最低隔離等級為 SNAPSHOT。<br /> 0 = 不提高隔離等級。|  
-|**is_federation_member**|**bit**|表示資料庫是否為同盟的成員。<br /> **適用於**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_federation_member**|**bit**|表示資料庫是否為同盟的成員。<br /> **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_remote_data_archive_enabled**|**bit**|指出資料庫是否會自動縮放。<br /> 0 = 資料庫不是已啟用 Stretch。<br /> 1 = 資料庫是已啟用 Stretch。<br /> **適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 如需詳細資訊，請參閱[Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
 |**is_mixed_page_allocation_on**|**bit**|指出是否在資料庫中資料表和索引可以初始頁面的配置混合範圍。<br /> 0 = 資料表，並在資料庫中的索引一律從一致範圍配置初始頁面。<br /> 1 = 資料表，並在資料庫中的索引可以從混合範圍配置初始頁面。<br /> **適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 如需詳細資訊，請參閱的 SET MIXED_PAGE_ALLOCATION 選項[ALTER DATABASE SET 選項 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**is_temporal_retention_enabled**|**bit**|指出是否已啟用時態的保留原則清除工作。<br /> **適用於**: Azure SQL Database|
@@ -158,7 +158,7 @@ WHERE a.state = 7;
 ### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>C. 檢查中暫時保留原則狀態[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  下列範例會查詢`sys.databases`是否已啟用時態的保留清除 」 工作傳回資訊。 請注意，在還原作業後暫時保留預設會停用。 使用`ALTER DATABASE`若要明確啟用它。
   
-**適用於**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
 ```  
 -- Execute from the master database.  
@@ -166,7 +166,7 @@ SELECT a.name, a.is_temporal_history_retention_enabled
 FROM sys.databases AS a;
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
  [sys.database_recovery_status &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)   

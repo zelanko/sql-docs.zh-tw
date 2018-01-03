@@ -1,7 +1,7 @@
 ---
 title: "追蹤旗標 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e0315da3d42331296f78cf977c7fd36cdff32853
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 05d205ca74a1da06e0783a69102b332603ec75a0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-追蹤旗標 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/28/2017
 > 在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，不一定支援追蹤旗標行為。 
 
   
-|追蹤旗標|Description|  
+|追蹤旗標|描述|  
 |---|---|
 |**139**| 正確的 DBCC 範圍中的轉換語意檢查命令要強制[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)， [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)和[DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md)分析時，改進的精確度和轉換邏輯所導入的相容性等級 130 的特定資料類型上有較低的相容性層級的資料庫。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/help/4010261)。<br /><br />**注意：**這個追蹤旗標適用於[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]RTM CU3， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 和更新版本的組建。<br /><br />**警告：**追蹤旗標 139 並非用於生產環境中，在持續啟用，應該用於只是為了在執行資料庫驗證會檢查所述[Microsoft 支援文章](http://support.microsoft.com/help/4010261). 它應該立即停用完成驗證檢查。<br /><br />**範圍**： 全域只|
 |**174**|增加[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]計畫快取 bucket 計數從 40,009 160,001 至 64 位元系統上。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/3026083)。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**範圍**： 全域只|
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/28/2017
 |**1204**|傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/832524)。<br /><br />**範圍：**全域只|  
 |**1211**|停用以記憶體壓力或鎖定個數為基礎的鎖定擴大。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 不會將資料列或頁面鎖定擴大到資料表鎖定。<br /><br />使用這個追蹤旗標可能產生大量鎖定。 這可能會降低 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的效能，或因記憶體不足而造成 1204 錯誤 (無法配置鎖定資源)。<br /><br />如果同時設定了追蹤旗標 1211 和 1224，將會優先採用 1211。 但是，由於追蹤旗標 1211 會在每一個情況下防止鎖定擴大 (即使是在記憶體壓力下)，所以建議您最好使用 1224。 如此可避免在使用許多鎖定時，發生「鎖定不足」錯誤。<br /><br />**範圍**： 全域或工作階段|  
 |**1222**|以不符合任何 XSD 結構描述的 XML 格式來傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。<br /><br />**範圍**： 全域只|  
-|**1224**|停用以鎖定個數為基礎的鎖定擴大。 不過，記憶體壓力仍然可以啟動鎖定擴大。 如果鎖定物件使用的記憶體數量超出下列其中一個條件，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會將資料列或頁面鎖定擴大至資料表 (或資料分割) 鎖定：<br /><br />-使用的記憶體 40% [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 這是時才適用**鎖定**sp_configure 參數設為 0。<br />的使用所設定的鎖定記憶體 40%**鎖定**sp_configure 的參數。 如需詳細資訊，請參閱 [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。<br /><br />如果同時設定了追蹤旗標 1211 和 1224，將會優先採用 1211。 但是，由於追蹤旗標 1211 會在每一個情況下防止鎖定擴大 (即使是在記憶體壓力下)，所以建議您最好使用 1224。 如此可避免在使用許多鎖定時，發生「鎖定不足」錯誤。<br /><br />**注意：**也可以使用的 LOCK_ESCALATION 選項控制鎖定擴大到 HoBT 層級的資料粒度或資料表層級[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)陳述式。<br /><br />**範圍：**全域或工作階段|
+|**1224**|停用以鎖定個數為基礎的鎖定擴大。 不過，記憶體壓力仍然可以啟動鎖定擴大。 如果鎖定物件使用的記憶體數量超出下列其中一個條件，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會將資料列或頁面鎖定擴大至資料表 (或資料分割) 鎖定：<br /><br />-使用的記憶體 40% [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 這是時才適用**鎖定**sp_configure 參數設為 0。<br />的使用所設定的鎖定記憶體 40%**鎖定**sp_configure 的參數。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。<br /><br />如果同時設定了追蹤旗標 1211 和 1224，將會優先採用 1211。 但是，由於追蹤旗標 1211 會在每一個情況下防止鎖定擴大 (即使是在記憶體壓力下)，所以建議您最好使用 1224。 如此可避免在使用許多鎖定時，發生「鎖定不足」錯誤。<br /><br />**注意：**也可以使用的 LOCK_ESCALATION 選項控制鎖定擴大到 HoBT 層級的資料粒度或資料表層級[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)陳述式。<br /><br />**範圍：**全域或工作階段|
 |**1236**|可讓資料庫鎖定資料分割。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2926217)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP3 和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]這種行為由引擎和追蹤旗標 1236 SP1 有任何作用。<br /><br />**範圍**： 全域只|
 |**1237**|允許 ALTER PARTITION FUNCTION 陳述式來接受目前的使用者定義的工作階段的死結優先權，而不是預設情況下可能的死結的犧牲者。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/help/4025261)。<br /><br />**注意：**開頭[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]和資料庫[相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)140 這是預設行為，所以追蹤旗標 1237年沒有任何作用。<br /><br />**範圍**： 全域或工作階段或查詢|
 |**1260**|停用排程器監視器傾印。<br /><br />**範圍**： 全域只|   
@@ -82,12 +82,13 @@ ms.lasthandoff: 11/28/2017
 |**2371**|將固定的自動更新統計資料閾值變更為動態的自動更新統計資料的臨界值。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2754171)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]下方和 [資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)130，此行為由引擎所控制，追蹤旗標 2371年沒有作用。<br /><br />**範圍**： 全域只|
 |**2389**|啟用自動產生遞增索引鍵 （長條圖修正） 快速統計的資料。 如果設定追蹤旗標 2389年，前端統計資料資料行標示為遞增，將會在查詢編譯時間調整用來預估基數的長條圖。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**注意：** CE 120 版或更新將不會套用這個追蹤旗標。 請改用追蹤旗標 4139。<br /><br />**範圍**： 全域或工作階段或查詢|
 |**2390**|啟用自動產生的快速統計資料，以遞增或未知的機碼 （長條圖修正）。 如果設定追蹤旗標 2390年，前端統計資料資料行標示為遞增或不明，將會在查詢編譯時間調整用來預估基數的長條圖。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**注意：** CE 120 版或更新將不會套用這個追蹤旗標。 請改用追蹤旗標 4139。<br /><br />**範圍**： 全域或工作階段或查詢|
+|**2430**|可讓其他鎖定類別清除。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2754301)。<br /><br />**範圍**： 全域只| 
 |**2453**|可讓資料表變數，以足夠的資料列的數目變更時觸發重新編譯。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2952444)。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**範圍**： 全域或工作階段或查詢|
 |**2528**|利用 DBCC CHECKDB、DBCC CHECKFILEGROUP 和 DBCC CHECKTABLE 來停用物件的平行檢查。 依預設，查詢處理器會自動判斷平行處理原則的程度。 最大平行處理原則程度的設定方式與平行查詢相同。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。<br /><br />**注意：**平行 DBCC 會檢查通常都是啟用 （預設值）。 查詢處理器會重新評估，並且會自動調整的每個資料表或資料表 DBCC checkdb 檢查批次的平行處理原則。<br /><br />一般使用案例時，系統管理員可讓您知道該伺服器負載會增加 DBCC CHECKDB 完成，再以手動方式減少或增加並行處理與其他使用者的工作負載若要停用平行處理原則，因此選擇。 不過，停用平行檢查在 DBCC CHECKDB 可能會造成它需要更長的時間才能完成。<br /><br />**注意：**如果使用 TABLOCK 選項來執行 DBCC CHECKDB，平行處理原則已停用資料表可能已鎖定的時間較長的時間。<br /><br />**注意：**開頭[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2，MAXDOP 選項可用來覆寫 max degree of parallelism 組態選項的 sp_configure 陳述式。<br /><br />**範圍**： 全域或工作階段|
 |**2549**|執行 DBCC CHECKDB 命令，假設每個資料庫檔案唯一的磁碟機上。 DBCC CHECKDB 命令會建立內部清單來跨所有資料庫檔案每個唯一的磁碟機讀取的頁數。 此邏輯會判斷唯一根據每個檔案的實體檔案名稱的磁碟機代號的磁碟機。<br /><br />**注意：**不使用這個追蹤旗標，除非您知道每個檔案為基礎的唯一實體磁碟。<br /><br />**注意：**雖然這個追蹤旗標會改善效能的 DBCC CHECKDB 命令的目標使用 PHYSICAL_ONLY 選項，但是某些使用者可能不會看到任何效能改進。 這個追蹤旗標可改善磁碟 I/O 資源使用量，而基礎磁碟資源的效能可能會限制 DBCC CHECKDB 命令的整體效能。 如需詳細資訊，請參閱[Microsoft 支援文章](http://support.microsoft.com/kb/2634571)。<br /><br />**範圍**： 全域只| 
 |**2562**|執行 DBCC CHECKDB 命令，在單一"batch"，無論在資料庫中的索引數目。 根據預設，DBCC CHECKDB 命令會嘗試藉由限制的索引或 「 事實 」 使用 「 批次 」 概念所產生的數字，tempdb 資源減到最低。 這個追蹤旗標會強制成一個批次的所有處理。<br /><br />使用此追蹤旗標的其中一個影響是 tempdb 的空間需求可能會增加。 Tempdb 可能成長至最多可達 5%以上的 DBCC CHECKDB 命令正在處理的使用者資料庫。<br /><br />**注意：**雖然這個追蹤旗標會改善效能的 DBCC CHECKDB 命令的目標使用 PHYSICAL_ONLY 選項，但是某些使用者可能不會看到任何效能改進。 這個追蹤旗標可改善磁碟 I/O 資源使用量，而基礎磁碟資源的效能可能會限制 DBCC CHECKDB 命令的整體效能。 如需詳細資訊，請參閱[Microsoft 支援文章](http://support.microsoft.com/kb/2634571)。<br /><br />**範圍**： 全域只|
 |**2566**|除非指定 DATA_PURITY 選項，請執行 DBCC CHECKDB 命令沒有資料純度檢查。<br /><br />**注意：**資料行值的完整性檢查依預設會啟用並不需要 DATA_PURITY 選項。 對於從舊版的 SQL Server 升級資料庫，資料行值檢查不會啟用預設 DBCC CHECKDB WITH data_purity，否則已執行之前發生錯誤的資料庫至少一次。 此後，依預設 DBCC CHECKDB 會檢查資料行值的完整性。 如需詳細資訊，請參閱[Microsoft 支援文章](http://support.microsoft.com/kb/945770)。<br /><br />**範圍**： 全域只|
-|**3023**|啟用成 BACKUP 命令的預設值的總和檢查碼選項。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2656988)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]此行為藉由設定控制**備份總和檢查碼預設**組態選項。 如需詳細資訊，請參閱 [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。<br /><br />**範圍**： 全域和工作階段|
+|**3023**|啟用成 BACKUP 命令的預設值的總和檢查碼選項。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2656988)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]此行為藉由設定控制**備份總和檢查碼預設**組態選項。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。<br /><br />**範圍**： 全域和工作階段|
 |**3042**|略過預設備份壓縮預先配置演算法，讓備份檔案只會視需要成長以達到其最終大小。 如果您只要配置壓縮備份所需的實際大小，藉以節省空間，這個追蹤旗標就很有用。 使用此追蹤旗標可能會導致效能稍微降低 (可能會增加備份作業的持續時間)。 如需有關預先配置演算法的詳細資訊，請參閱[備份壓縮 &#40;SQL Server &#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br />**範圍**： 全域只|
 |**3051**|可讓 SQL Server 備份至 URL 的特定錯誤記錄檔記錄。 如需詳細資訊，請參閱[SQL Server 備份至 URL 的最佳作法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。<br /><br />**範圍**： 全域只|  
 |**3205**|依預設，如果磁帶機支援硬體壓縮，DUMP 或 BACKUP 陳述式就會使用它。 當使用這個追蹤旗標時，您可以停用磁帶機的硬體壓縮。 當您要與其他不支援壓縮的站台或磁帶機交換磁帶時，這非常有用。<br /><br />**範圍**： 全域或工作階段|  
@@ -165,13 +166,13 @@ ms.lasthandoff: 11/28/2017
 ## <a name="examples"></a>範例  
  下列範例會設定追蹤旗標 3205 上的所有工作階段的伺服器層級使用 DBCC TRACEON。  
   
-```t-sql  
+```sql  
 DBCC TRACEON (3205,-1);  
 ```
 
 您可以啟用追蹤旗標 4199 和 4137 針對特定查詢所控制的所有 「 影響計畫的 hotfix。
   
-```t-sql
+```sql
 SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137)
 ``` 
  

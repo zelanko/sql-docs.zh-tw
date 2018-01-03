@@ -3,7 +3,7 @@ title: "sqlcmd 公用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlcmd
 ms.reviewer: 
@@ -33,11 +33,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fbf609bb0bfba5f49a38e942deb566377b066864
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 711ac727b68dbd6ee3c1697e7933ead413919a29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -319,7 +319,7 @@ sqlcmd
 > [!IMPORTANT]  
 >  請勿在查詢中使用 GO 結束字元。  
   
- 如果使用此選項時指定 **-b** ， **sqlcmd** 會發生錯誤，並結束作業。 本主題稍後將說明**-b** 。  
+ 如果使用此選項時指定 **-b** ， **sqlcmd** 會發生錯誤，並結束作業。 本主題稍後將說明 **-b**。  
   
  **-Q"** *cmdline query* **"**  
  啟動 **sqlcmd** 時執行查詢，然後立即結束 **sqlcmd**。 可以執行多項以分號分隔的查詢。  
@@ -505,7 +505,7 @@ sqlcmd
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 指令碼變數  
   
-|變數|相關參數|R/W|預設值|  
+|變數|相關參數|R/W|預設|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -676,7 +676,7 @@ sqlcmd
   
  傳回值-1 至-99 保留 SQL Server;**sqlcmd**定義下列其他傳回值：  
   
-|傳回值|說明|  
+|傳回值|描述|  
 |-------------------|-----------------|  
 |-100|在選取傳回值之前發生錯誤。|  
 |-101|在選取傳回值時，找不到任何資料列。|  
@@ -841,7 +841,7 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyA
   
 -   將批次或查詢執行的逾時值，設定成高於您預期執行批次或查詢所需的時間值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [啟動 sqlcmd 公用程式](~/relational-databases/scripting/sqlcmd-start-the-utility.md)   
  [使用 sqlcmd 執行 Transact-SQL 指令碼檔案](~/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)   
  [使用 sqlcmd 公用程式](~/relational-databases/scripting/sqlcmd-use-the-utility.md)   

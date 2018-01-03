@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c0b06e7119f051d5854ae7f5435e8edd7fecf1a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8d32038273e727db3b47125b26ad8293ce088672
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -219,7 +219,7 @@ WINDOWS
   
  如果使用 **CREDENTIAL** 選項，則也需要伺服器的 **ALTER ANY CREDENTIAL** 權限。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
  之後建立的登入，登入可以連接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]或[!INCLUDE[ssSDS](../../includes/sssds-md.md)]只授與的權限，但**公用**角色。 請考慮執行下列其中一些活動。  
   
 -   若要連接至資料庫，請建立用於登入的資料庫使用者。 如需詳細資訊，請參閱 [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)。  
@@ -314,7 +314,7 @@ GO
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. 建立具有密碼的 SQL Server 驗證登入  
  下列範例會建立登入`Mary7`密碼`A2c3456`。  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   
@@ -335,7 +335,7 @@ CREATE LOGIN [Contoso\Mary] FROM WINDOWS;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [密碼原則](../../relational-databases/security/password-policy.md)   

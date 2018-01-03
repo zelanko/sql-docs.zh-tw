@@ -1,6 +1,6 @@
 ---
 title: "開始使用 docker 的 SQL Server 2017 |Microsoft 文件"
-description: "本快速入門教學課程會示範如何使用 Docker 執行 SQL Server 2017 容器映像。 接著，您會建立並查詢資料庫，以使用 sqlcmd。"
+description: "本快速入門示範如何使用 Docker 執行 SQL Server 2017 容器映像。 接著，您會建立並查詢資料庫，以使用 sqlcmd。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,24 +15,24 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>執行 SQL Server 2017 容器映像使用 Docker
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-在這個快速入門教學課程中，您必須使用 Docker 提取並執行 SQL Server 2017 容器映像[mssql-伺服器-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)。 然後以連接**sqlcmd**來建立您的第一個資料庫和執行查詢。
+本快速入門中，您必須使用 Docker 來提取及執行 SQL Server 2017 容器映像， [mssql-伺服器-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)。 然後以連接**sqlcmd**來建立您的第一個資料庫和執行查詢。
 
 此映像包含根據 Ubuntu 16.04 Linux 上執行的 SQL Server。 它可以用 Docker 引擎 1.8 + Docker 或 Linux 上的 Mac/windows。
 
 > [!NOTE]
 > 本快速入門特別著重於使用 mssql-server-**linux**映像。 未涵蓋的 Windows 映像，但您可以深入了解上[mssql server-windows developer Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)。
 
-## <a id="requirements"></a> 必要條件
+## <a id="requirements"></a> Prerequisites
 
 - Docker 引擎 1.8 + 任何支援 Mac/Windows Linux 發佈或 Docker。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
 - 最小值為 2 GB 的磁碟空間
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/04/2017
 
    下表提供在舊版的參數說明`docker run`範例：
 
-   | 參數 | Description |
+   | 參數 | 描述 |
    |-----|-----|
    | **-e ' ACCEPT_EULA = Y'** |  設定**ACCEPT_EULA**變數設為任何值，以確認您接受[使用者授權合約](http://go.microsoft.com/fwlink/?LinkId=746388)。 需要設定 SQL Server 映像。 |
    | **-e ' MSSQL_SA_PASSWORD =\<YourStrong ！Passw0rd\>'** | 指定您自己的強式密碼至少為 8 個字元，並符合[SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 需要設定 SQL Server 映像。 |
@@ -240,6 +240,8 @@ SELECT @@SERVERNAME,
 
 - [Visual Studio 程式碼](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) Windows 上](sql-server-linux-develop-use-ssms.md)
+- [SQL Server 作業 Studio （預覽）](../sql-operations-studio/what-is.md)
+- [mssql cli （預覽）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>移除您的容器
 
@@ -258,7 +260,13 @@ docker rm sql1
 > [!WARNING]
 > 停止並移除容器，永久刪除容器中的任何 SQL Server 資料。 如果您要保留您的資料，[建立，並將容器之外的備份檔案複製](tutorial-restore-backup-in-sql-server-container.md)或使用[容器資料持續性技術](sql-server-linux-configure-docker.md#persist)。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="docker-demo"></a>Docker 示範
+
+您嘗試使用 Docker 的 SQL Server 的容器映像之後，您可能想要知道如何使用 Docker 來提升開發和測試。 下列影片示範如何使用 Docker 連續整合和部署案例中。
+
+> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
+
+## <a name="next-steps"></a>後續步驟
 
 如需如何將資料庫備份檔案還原到容器的教學課程，請參閱[Linux Docker 容器中的 SQL Server 資料庫還原](tutorial-restore-backup-in-sql-server-container.md)。 若要瀏覽其他案例中的，執行多個容器，例如資料持續性和疑難排解，請參閱[設定 SQL Server 2017 容器映像 docker](sql-server-linux-configure-docker.md)。
 

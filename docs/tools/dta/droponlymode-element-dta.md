@@ -3,7 +3,7 @@ title: "DropOnlyMode 元素 (DTA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8798a084ab6762781e2445700c0f0e4f51d2f617
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 27b7db70bf4ee3a7e775c25dba130f1546b1bb82
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定 Database Engine Tuning Advisor 應該只考慮卸除現有的索引、 索引檢視表或資料分割，在微調工作階段。 當指定這個微調選項時，不考慮任何新的實體設計結構。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/05/2017
 </TuningOptions>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

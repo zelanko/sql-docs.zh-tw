@@ -3,7 +3,7 @@ title: "安裝 Distributed 的 Replay |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ad107252ba6c6dc86e6720a7a07dfa87d82b2a4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99cb53df96c3b675274c5940edcf1e9bd4c8516a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="install-distributed-replay"></a>安裝 Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以在三種方式之一來安裝 Distributed Replay:  
@@ -143,7 +143,7 @@ ms.lasthandoff: 12/05/2017
  在命令提示字元處安裝 Distributed Replay 的新執行個體，讓您可以指定安裝功能及應如何設定。 命令提示字元安裝支援安裝、修復、升級及解除 Distributed Replay 元件。 透過命令提示字元安裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 /Q 參數進行完整無訊息模式。  
   
 > [!NOTE]  
->  如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
+>  如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
   
 ### <a name="installation-parameters"></a>安裝參數  
  最上層功能清單包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和工具。 工具功能會安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，以及其他共用元件。 若要安裝 Distributed Replay 元件，請指定下列參數：  
@@ -163,11 +163,11 @@ ms.lasthandoff: 12/05/2017
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **選擇性**|Distributed Replay Controller 服務的服務帳戶。|檢查帳戶和密碼|  
 |/CTLRSVCPASSWORD<br /><br /> **選擇性**|Distributed Replay Controller 服務帳戶的密碼。|檢查帳戶和密碼|  
-|/CTLRSTARTUPTYPE<br /><br /> **選擇性**|Distributed Replay Controller 服務的啟動類型。|自動<br /><br /> 已停用<br /><br /> 手動|  
+|/CTLRSTARTUPTYPE<br /><br /> **選擇性**|Distributed Replay Controller 服務的啟動類型。|Automatic<br /><br /> 已停用<br /><br /> 手動|  
 |/CTLRUSERS<br /><br /> **選擇性**|指定哪些使用者擁有 Distributed Replay Controller 服務的權限。|使用者帳戶字串的集合，以 “ ” (空格) 做為分隔符號<br /><br /> **重要事項**：當您設定 Distributed Replay Controller 服務時，可以指定將用來執行 Distributed Replay Client 服務的一個或多個使用者帳戶。 下列是支援帳戶的清單：<br /><br /> 網域使用者帳戶<br /><br /> 使用者建立的本機使用者帳戶<br /><br /> 系統管理員<br /><br /> 系統管理員<br /><br /> 虛擬帳戶和 MSA (受管理的服務帳戶)<br /><br /> 網路服務、本機系統和系統<br /><br /> <br /><br /> 注意：不接受群組帳戶 (本機或網域) 和其他內建帳戶 (例如 Everyone)。|  
 |/CLTSVCACCOUNT<br /><br /> **選擇性**|Distributed Replay Client 服務的服務帳戶。|檢查帳戶和密碼|  
 |/CLTSVCPASSWORD<br /><br /> **選擇性**|Distributed Replay 用戶端服務帳戶的密碼。|檢查帳戶和密碼|  
-|/CLTSTARTUPTYPE<br /><br /> **選擇性**|Distributed Replay Client 服務的啟動類型。|自動<br /><br /> 已停用<br /><br /> 手動|  
+|/CLTSTARTUPTYPE<br /><br /> **選擇性**|Distributed Replay Client 服務的啟動類型。|Automatic<br /><br /> 已停用<br /><br /> 手動|  
 |/CLTCTLRNAME<br /><br /> **選擇性**|用戶端與 Distributed Replay Controller 服務通訊的電腦名稱。||  
 |/CLTWORKINGDIR<br /><br /> **選擇性**|Distributed Replay Client 服務的工作目錄。|有效路徑|  
 |/CLTRESULTDIR<br /><br /> **選擇性**|Distributed Replay Client 服務的結果目錄。|有效路徑|  
@@ -220,7 +220,7 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  您必須在命令列中指定這兩個密碼，因為您無法在組態檔中設定它們。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   

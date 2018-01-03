@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a154c40a9ede59d808d0ad77af685d27b23db208
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: aef67c09e34bf23fa1185cc10b12ff3fb88e6a6c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,13 +45,13 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP { PROC | PROCEDURE } [ IF EXISTS ] { [ schema_name. ] procedure } [ ,...n ]  
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }  
@@ -75,7 +75,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ## <a name="metadata"></a>中繼資料  
  若要顯示現有程序的清單，請查詢**sys.objects**目錄檢視。 若要顯示程序定義，請查詢**sys.sql_modules**目錄檢視。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要**控制項**程序中，權限或**ALTER**權限的程序所屬的結構描述或成員資格**db_ddladmin**固定的伺服器角色.  
@@ -102,7 +102,7 @@ GO
 ```  
   
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [sys.objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

@@ -43,11 +43,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 671eb95a5c1772ec790886d923112d491bbd2a35
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a739b230d39726367d54a64e7b2327f6a80f9ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -464,7 +464,7 @@ ID     Value
 ## <a name="logging-behavior"></a>記錄行為  
  記錄 UPDATE 陳述式。不過，部分更新大數值資料類型使用**。**WRITE 子句會使用最低限度記錄。 如需詳細資訊，請參閱前面＜資料類型＞一節中的＜更新大數值資料類型＞。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要目標資料表的 UPDATE 權限。 也是必要如果 UPDATE 陳述式包含 WHERE 子句，或是正在更新之資料表的 SELECT 權限*運算式*集中子句，請使用資料表中的資料行。  
@@ -1216,7 +1216,7 @@ DROP TABLE CTAS_acs
 ;
 ```
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [資料指標 &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   

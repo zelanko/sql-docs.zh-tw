@@ -15,11 +15,11 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 3a29c6580a4163bd69d2bb2ee1d037afc04f8108
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 416a05397580e6b9c609307f8b25c8014099f999
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>設定 SQL Server 2017 容器映像 docker
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="pull-and-run-the-container-image"></a>提取和執行容器映像
 
-提取，並針對 SQL Server 2017 執行 Docker 容器映像，請遵循下列快速入門教學課程中的必要條件和步驟：
+若要提取，而且執行 SQL Server 2017 Docker 容器映像，請遵循的必要條件和下列快速入門中的步驟：
 
 - [執行 SQL Server 2017 容器映像使用 Docker](quickstart-install-connect-docker.md)
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a id="production"></a>執行實際執行的容器映像
 
-快速入門教學課程中的，如上一節中會執行從 Docker Hub 免費的 SQL Server 的開發人員版本。 如果您想要執行實際執行的容器映像，例如 Enterprise、 Standard 或 Web edition，仍適用於大部分的資訊。 不過，有幾項差異，此處所述。
+快速入門中上一節會從 Docker Hub 執行免費的 SQL Server 的開發人員版本。 如果您想要執行實際執行的容器映像，例如 Enterprise、 Standard 或 Web edition，仍適用於大部分的資訊。 不過，有幾項差異，此處所述。
 
 - 如果您有有效的授權，可以只在生產環境中使用 SQL Server。 您可以取得免費的 SQL Server Express 生產授權[這裡](https://go.microsoft.com/fwlink/?linkid=857693)。 SQL Server Standard 和 Enterprise Edition 授權都是透過[Microsoft 大量授權](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx)。
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/01/2017
 
    1. 接著，您必須取得免費的開發人員 Docker 存放區上的容器映像。 移至[https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)，按一下 **繼續簽出**，並遵循指示。
 
-   1. 檢閱需求，並執行程序[快速入門教學課程](quickstart-install-connect-docker.md)。 但是，有兩個差異。 您必須先提取映像**存放區/microsoft/mssql-伺服器-linux:\<標記名稱\>**從 Docker 存放區。 您必須指定與您生產環境版本**MSSQL_PID**環境變數。 下列範例會示範如何執行 Enterprise edition 的最新的 SQL Server 2017 容器映像：
+   1. 檢閱需求，並執行程序[快速入門](quickstart-install-connect-docker.md)。 但是，有兩個差異。 您必須先提取映像**存放區/microsoft/mssql-伺服器-linux:\<標記名稱\>**從 Docker 存放區。 您必須指定與您生產環境版本**MSSQL_PID**環境變數。 下列範例會示範如何執行 Enterprise edition 的最新的 SQL Server 2017 容器映像：
 
       ```bash
       docker run --name sqlenterprise \
@@ -429,8 +429,8 @@ cat errorlog
 > [!TIP]
 > 如果掛接主機目錄**/var/opt/mssql**當您建立您的容器，您可以改為查看**記錄**主機上的對應路徑的子目錄。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
-開始使用 docker 的 SQL Server 2017 容器映像進行[快速入門教學課程](quickstart-install-connect-docker.md)。
+開始使用 docker 的 SQL Server 2017 容器映像進行[快速入門](quickstart-install-connect-docker.md)。
 
 此外，請參閱[mssql docker GitHub 儲存機制](https://github.com/Microsoft/mssql-docker)資源、 意見反應，和已知的問題。

@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa43f93003240c41fefdc589392f936c60a2333d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  選擇哪個工作階段作為死結犧牲者，會隨著每個工作階段的死結優先權而不同：  
   
--   如果兩個工作階段的死結優先權相同，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會選擇回復成本較低的工作階段作為死結的犧牲者。 例如，如果兩個工作階段的死結優先權都設成 HIGH，此時執行個體會選擇評估回復成本較低的工作階段來作為犧牲者。  
+-   如果兩個工作階段的死結優先權相同，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會選擇回復成本較低的工作階段作為死結的犧牲者。 例如，如果兩個工作階段的死結優先權都設成 HIGH，此時執行個體會選擇評估回復成本較低的工作階段來作為犧牲者。 成本取決於比較寫入每筆交易在該點的記錄位元組數目。 （您可以看到這個值為"Log Used"死結圖形中）。
   
 -   如果工作階段的死結優先權不同，就選擇死結優先權最低的工作階段來作為死結犧牲者。  
   
@@ -102,7 +102,7 @@ SET DEADLOCK_PRIORITY NORMAL;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET LOCK_TIMEOUT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  

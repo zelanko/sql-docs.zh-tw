@@ -3,7 +3,7 @@ title: "設定 Distributed 的 Replay |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0eb4502675fb2bd9e9978b5443882a44f867e39c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dc41572e269bda127f8d725960944d40acacdfae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-distributed-replay"></a>設定 Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay controller、 client 上的 XML 檔案中指定 Distributed Replay 組態詳細資料以及安裝管理工具的位置。 這些檔案包括下列各項：  
@@ -41,9 +41,9 @@ ms.lasthandoff: 12/05/2017
   
  控制器組態檔所指定的記錄層次包括：  
   
-|設定|XML 元素|說明|允許的值|Required|  
+|設定|XML 元素|描述|允許的值|必要項|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|記錄層級|`<LoggingLevel>`|指定控制器服務的記錄層次。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|否。 根據預設，此值為 `CRITICAL`。|  
+|記錄層級|`<LoggingLevel>`|指定控制器服務的記錄層次。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|資料分割 根據預設，此值為 `CRITICAL`。|  
   
 ### <a name="example"></a>範例  
  此範例會顯示已經修改為隱藏 `INFORMATION` 和 `WARNING` 記錄項目的控制器組態檔。  
@@ -62,12 +62,12 @@ ms.lasthandoff: 12/05/2017
   
  用戶端組態檔所指定的設定包括：  
   
-|設定|XML 元素|說明|允許的值|Required|  
+|設定|XML 元素|描述|允許的值|必要項|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|控制器|`<Controller>`|指定控制器的電腦名稱。 用戶端會嘗試連絡控制器，藉以向 Distributed Replay 環境註冊。|您可以使用 "`localhost`" 或 "`.`" 表示本機電腦。|否。 根據預設，用戶端會嘗試向本機執行的 Controller 執行個體 ("`.`") 註冊 (如果它存在的話)。|  
+|控制器|`<Controller>`|指定控制器的電腦名稱。 用戶端會嘗試連絡控制器，藉以向 Distributed Replay 環境註冊。|您可以使用 "`localhost`" 或 "`.`" 表示本機電腦。|資料分割 根據預設，用戶端會嘗試向本機執行的 Controller 執行個體 ("`.`") 註冊 (如果它存在的話)。|  
 |用戶端工作目錄|`<WorkingDirectory>`|這是在用戶端上儲存分派檔案的本機路徑。<br /><br /> 下一次重新執行時，就會覆寫這個目錄中的檔案。|完整目錄名稱，以磁碟機代號為開頭。|否。 如果未指定值，則分派檔案與預設用戶端組態檔會儲存在相同的位置。 如果有指定值，而且該資料夾不存在用戶端上，用戶端服務就不會啟動。|  
-|用戶端結果目錄|`<ResultDirectory>`|這是在用戶端上儲存重新執行活動之結果追蹤檔案 (針對用戶端) 的本機路徑。<br /><br /> 下一次重新執行時，就會覆寫這個目錄中的檔案。|完整目錄名稱，以磁碟機代號為開頭。|否。 如果未指定值，則結果追蹤檔案與預設用戶端組態檔會儲存在相同的位置。 如果有指定值，而且該資料夾不存在用戶端上，用戶端服務就不會啟動。|  
-|記錄層級|`<LoggingLevel>`|這是用戶端服務的記錄層次。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|否。 根據預設，此值為 `CRITICAL`。|  
+|用戶端結果目錄|`<ResultDirectory>`|這是在用戶端上儲存重新執行活動之結果追蹤檔案 (針對用戶端) 的本機路徑。<br /><br /> 下一次重新執行時，就會覆寫這個目錄中的檔案。|完整目錄名稱，以磁碟機代號為開頭。|資料分割 如果未指定值，則結果追蹤檔案與預設用戶端組態檔會儲存在相同的位置。 如果有指定值，而且該資料夾不存在用戶端上，用戶端服務就不會啟動。|  
+|記錄層級|`<LoggingLevel>`|這是用戶端服務的記錄層次。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|資料分割 根據預設，此值為 `CRITICAL`。|  
   
 ### <a name="example"></a>範例  
  此範例會顯示已經修改為指定控制器服務在不同電腦 (名為 `Controller1`的電腦) 上執行的用戶端組態檔。 `WorkingDirectory` 和 `ResultDirectory` 項目已經分別設定成使用 `c:\ClientWorkingDir` 和 `c:\ResultTraceDir`資料夾。 記錄層次已經從預設值變更為隱藏 `INFORMATION` 和 `WARNING` 記錄項目。  
@@ -93,10 +93,10 @@ ms.lasthandoff: 12/05/2017
   
  前置處理組態設定指定於前置處理組態檔中屬於 `<PreprocessModifiers>` 元素子系的 XML 元素中。 這些設定包括：  
   
-|設定|XML 元素|說明|允許的值|Required|  
+|設定|XML 元素|描述|允許的值|必要項|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|包含系統工作階段活動|`<IncSystemSession>`|指出是否要在重新執行期間包含擷取期間進行的系統工作階段活動。|`Yes` &#124; `No`|否。 根據預設，此值為 `No`。|  
-|最大閒置時間|`<MaxIdleTime>`|將閒置時間的上限設定為絕對數字 (以秒為單位)。|>= -1 的整數。<br /><br /> `-1` 表示沒有變更原始追蹤檔案的原始值。<br /><br /> `0` 表示在任何給定的時間點有某個活動進行中。|否。 根據預設，此值為 `-1`。|  
+|包含系統工作階段活動|`<IncSystemSession>`|指出是否要在重新執行期間包含擷取期間進行的系統工作階段活動。|`Yes` &#124; `No`|資料分割 根據預設，此值為 `No`。|  
+|最大閒置時間|`<MaxIdleTime>`|將閒置時間的上限設定為絕對數字 (以秒為單位)。|>= -1 的整數。<br /><br /> `-1` 表示沒有變更原始追蹤檔案的原始值。<br /><br /> `0` 表示在任何給定的時間點有某個活動進行中。|資料分割 根據預設，此值為 `-1`。|  
   
 ### <a name="example"></a>範例  
  預設前置處理組態檔：  
@@ -125,25 +125,25 @@ ms.lasthandoff: 12/05/2017
 ### <a name="replayoptions-element"></a>\<P > 項目  
  重新執行組態檔在 `<ReplayOptions>` 元素中指定的設定如下：  
   
-|設定|XML 元素|說明|允許的值|Required|  
+|設定|XML 元素|描述|允許的值|必要項|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目標執行個體 (測試伺服器)|`<Server>`|指定伺服器名稱以及要連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|*server_name*[\\*instance_name*]<br /><br /> 您無法使用 "`localhost`" 或 "`.`" 來代表本機主機。|否，如果已經搭配使用 **-s***目標伺服器* 參數與管理工具的 [重新執行] 選項來指定伺服器名稱。|  
-|順序模式|`<SequencingMode>`|指定用於事件排程的模式。|`synchronization` &#124; `stress`|否。 根據預設，此值為 `stress`。|  
+|順序模式|`<SequencingMode>`|指定用於事件排程的模式。|`synchronization` &#124; `stress`|資料分割 根據預設，此值為 `stress`。|  
 |壓力規模粒度|`<StressScaleGranularity>`|指定服務設定檔識別碼 (SPID) 上的所有連接是應該在壓力模式下同時 (SPID) 還是個別 (連接) 調整。|SPID &#124; 連接|是的。 根據預設，此值為 `SPID`。|  
-|連接時間間隔|`<ConnectTimeScale>`|這是用來在壓力模式中設定連接時間的間隔。|介於 `1` 與 `100`之間的整數。|否。 根據預設，此值為 `100`。|  
-|考慮時間間隔|`<ThinkTimeScale>`|這是用來在壓力模式中設定考慮時間的間隔。|介於 `0` 與 `100`之間的整數。|否。 根據預設，此值為 `100`。|  
+|連接時間間隔|`<ConnectTimeScale>`|這是用來在壓力模式中設定連接時間的間隔。|介於 `1` 與 `100`之間的整數。|資料分割 根據預設，此值為 `100`。|  
+|考慮時間間隔|`<ThinkTimeScale>`|這是用來在壓力模式中設定考慮時間的間隔。|介於 `0` 與 `100`之間的整數。|資料分割 根據預設，此值為 `100`。|  
 |使用連接共用|`<UseConnectionPooling>`|指定是否要在每個 Distributed Replay Client 上啟用連接共用。|是 &#124; 否|是的。 根據預設，此值為 `Yes`。|  
-|健全狀況監視器間隔|`<HealthmonInterval>`|表示要執行健全狀況監視器的頻率 (以秒為單位)。<br /><br /> 此值只用於同步處理模式中。|>= 1 的整數<br /><br /> (`-1` 表示停用)|否。 根據預設，此值為 `60`。|  
-|查詢逾時|`<QueryTimeout>`|指定查詢逾時值 (以秒為單位)。 此值只在傳回第一個資料列之前有效。|>= 1 的整數<br /><br /> (`-1` 表示停用)|否。 根據預設，此值為 `3600`。|  
-|每個用戶端的執行緒|`<ThreadsPerClient>`|指定要用於每個重新執行用戶端的重新執行執行緒數目。|介於 `1` 與 `512`之間的整數。|否。 如果未指定，則 Distributed Replay 會使用值 `255`。|  
+|健全狀況監視器間隔|`<HealthmonInterval>`|表示要執行健全狀況監視器的頻率 (以秒為單位)。<br /><br /> 此值只用於同步處理模式中。|>= 1 的整數<br /><br /> (`-1` 表示停用)|資料分割 根據預設，此值為 `60`。|  
+|查詢逾時|`<QueryTimeout>`|指定查詢逾時值 (以秒為單位)。 此值只在傳回第一個資料列之前有效。|>= 1 的整數<br /><br /> (`-1` 表示停用)|資料分割 根據預設，此值為 `3600`。|  
+|每個用戶端的執行緒|`<ThreadsPerClient>`|指定要用於每個重新執行用戶端的重新執行執行緒數目。|介於 `1` 與 `512`之間的整數。|資料分割 如果未指定，則 Distributed Replay 會使用值 `255`。|  
   
 ### <a name="outputoptions-element"></a>\<P > 項目  
  重新執行組態檔在 `<OutputOptions>` 元素中指定的設定如下：  
   
-|設定|XML 元素|說明|允許的值|Required|  
+|設定|XML 元素|描述|允許的值|必要項|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|記錄資料列計數|`<RecordRowCount>`|指出是否應該針對每個結果集記錄資料列計數。|`Yes` &#124; `No`|否。 根據預設，此值為 `Yes`。|  
-|記錄結果集|`<RecordResultSet>`|指出是否應該記錄所有結果集的內容。|`Yes` &#124; `No`|否。 根據預設，此值為 `No`。|  
+|記錄資料列計數|`<RecordRowCount>`|指出是否應該針對每個結果集記錄資料列計數。|`Yes` &#124; `No`|資料分割 根據預設，此值為 `Yes`。|  
+|記錄結果集|`<RecordResultSet>`|指出是否應該記錄所有結果集的內容。|`Yes` &#124; `No`|資料分割 根據預設，此值為 `No`。|  
   
 ### <a name="example"></a>範例  
  預設重新執行組態檔：  
@@ -169,7 +169,7 @@ ms.lasthandoff: 12/05/2017
 </Options>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [SQL Server Distributed Replay 論壇](http://social.technet.microsoft.com/Forums/sl/sqldru/)   

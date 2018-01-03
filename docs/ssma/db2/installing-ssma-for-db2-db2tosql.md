@@ -1,7 +1,7 @@
 ---
 title: "安裝 SSMA for DB2 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e4bd893e696586626ea7f283d3a83c29878044a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3905408cbfd94e61599282d902dc13e5a0f0382a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-db2-db2tosql"></a>安裝 SSMA for DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) for DB2 組成用戶端應用程式讓您從 DB2 執行移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和 Azure SQL DB。 它也包含支援資料移轉和 DB2 系統函式的使用在您移轉之資料庫中的延伸模組組件。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="contents"></a>目錄  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
 |[SSMA 安裝 DB2 用戶端 &#40; DB2ToSQL &#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|提供有關的資訊和指示安裝 SSMA 用戶端。|  
 |[SSMA 元件安裝 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)|提供相關資訊與執行個體上安裝的延伸模組組件的指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  

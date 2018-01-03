@@ -4,7 +4,7 @@ description: "本主題包含的版本資訊，並支援在 Linux 上執行的 S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 12/12/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 2e43e6f3ae6761886b2279910a69a83e756dc35f
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/12/2017
 | Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> 檢閱[系統需求](sql-server-linux-setup.md#system)for SQL Server on Linux。
+> 如需詳細資訊，請檢閱[系統需求](sql-server-linux-setup.md#system)for SQL Server on Linux。 SQL Server 2017 最新的支援原則，請參閱[Microsoft SQL Server 的技術支援人員原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
 
 ## <a name="supported-client-tools"></a>支援的用戶端工具
 
@@ -134,7 +134,7 @@ ms.lasthandoff: 12/12/2017
 | &nbsp; | 異動資料擷取 |
 | &nbsp; | 受管理備份 |
 | **高可用性** | 資料庫鏡像  |
-| **安全性** | 可延伸金鑰管理 |
+| **Security** | 可延伸金鑰管理 |
 | &nbsp; | 連結伺服器的 AD 驗證 | 
 | &nbsp; | 可用性群組 (Ag) 的 AD 驗證 | 
 | &nbsp; | 第 3 個合作對象 AD 工具 (Centrify，Vintela，Powerbroker) | 
@@ -287,9 +287,9 @@ ms.lasthandoff: 12/12/2017
 
 - 若要保留的記錄檔的數目不能修改。
 
-### <a name="next-steps"></a>後續的步驟
+### <a name="next-steps"></a>後續步驟
 
-若要開始，請參閱下列快速入門教學課程：
+若要開始，請參閱下列快速入門：
 
 - [Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)

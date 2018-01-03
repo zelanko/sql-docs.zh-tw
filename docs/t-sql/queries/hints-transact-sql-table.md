@@ -42,11 +42,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 54104cda5736255ae1cea4205e24f7aadcc0c124
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---table"></a>提示 (TRANSACT-SQL)-資料表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -195,7 +195,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  您可以使用下列方式指定 FORCESEEK 提示。  
   
-|語法|範例|Description|  
+|語法|範例|描述|  
 |------------|-------------|-----------------|  
 |沒有索引或 INDEX 提示|`FROM dbo.MyTable WITH (FORCESEEK)`|查詢最佳化工具只會考慮透過任何相關索引的索引搜尋作業存取資料表或檢視表。|  
 |結合 INDEX 提示|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|查詢最佳化工具只會考慮利用指定索引的索引搜尋作業存取資料表或檢視表。|  
@@ -450,7 +450,7 @@ GO
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. 使用 TABLOCK 提示指定鎖定方法  
  以下範例會指定在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `Production.Product` 資料表上採用共用鎖定，並且將鎖定保留到 UPDATE 陳述式結束為止。  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -474,7 +474,7 @@ GO
   
  下列範例會使用 FORCESEEK 提示搭配索引，強制查詢最佳化工具對指定的索引和索引資料行執行索引搜尋作業。  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -489,7 +489,7 @@ GO
 ### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>C. 使用 FORCESCAN 提示指定索引掃描作業  
  以下範例會使用 FORCESCAN 提示，強制查詢最佳化工具對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `Sales.SalesOrderDetail` 資料表執行掃描作業。  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -499,7 +499,7 @@ WHERE h.TotalDue > 100
 AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
  [查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  

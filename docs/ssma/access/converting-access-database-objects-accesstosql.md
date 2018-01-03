@@ -1,7 +1,7 @@
 ---
 title: "轉換存取資料庫物件 (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -40,11 +40,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 273aa5bf31ffddc9665531297cbca9b8dbfbbd5a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a710d76b5df020e258676e0b1ff160c0e2e7a353
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>轉換 (AccessToSQL) 來存取資料庫物件
 您已加入 Access 資料庫，並連接到之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure、 SSMA 顯示中繼資料存取和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫物件。 您可以現在選取 存取資料庫物件，然後再轉換成結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 結構描述。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/05/2017
   
 |存取物件|產生的 SQL Server 物件|  
 |-----------------|-------------------------------|  
-|table|table|  
+|資料表|資料表|  
 |column|column|  
 |索引|索引|  
 |外部索引鍵 (foreign key)|外部索引鍵 (foreign key)|  

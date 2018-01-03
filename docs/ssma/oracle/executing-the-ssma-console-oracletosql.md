@@ -1,7 +1,7 @@
 ---
 title: "執行 SSMA 主控台 (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -22,11 +22,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ce380d48c1c8af960fac1153cbde8e60ab593566
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9c0109ed3c675b140cbce6d780c24256c0eb2bc9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>執行 SSMA 主控台 (OracleToSQL)
 Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 主控台應用程式會使用某些標準的指令碼檔案命令做為列舉這一節。  
@@ -167,7 +167,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
   metabase="<source/target>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <force-load>  
@@ -280,7 +280,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <generate-assessment-report  
@@ -354,7 +354,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <convert-schema  
@@ -422,7 +422,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
 </migrate-data>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <migrate-data  
@@ -511,7 +511,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <synchronize-target  
@@ -520,7 +520,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
    object-type="<object-category>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <synchronize-target>  
@@ -576,7 +576,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <refresh-from-database  
@@ -585,7 +585,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
    object-type="<object-category>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <refresh-from-database>  
@@ -635,7 +635,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <save-as-script  
@@ -711,7 +711,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
 </convert-sql-statement>  
 ```  
-或  
+中的多個  
   
 ```  
 <convert-sql-statement  
@@ -734,7 +734,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-或  
+中的多個  
   
 ```  
 <convert-sql-statement  

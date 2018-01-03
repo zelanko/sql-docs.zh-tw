@@ -3,7 +3,7 @@ title: "SQL Server Agent 屬性 （登入 索引標籤） |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 49b79b7f17c90e3a7a0162142b6032ea82ef3b4a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e73063d89a2557f82fded4a426873c6d27604c9f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>SQL Server Agent 屬性 (登入索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**登入** 索引標籤**SQL Server Agent 屬性**對話方塊來指定所使用的帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式服務，以及啟動和停止該服務。 帳戶密碼的變更會立即生效，不需要重新啟動服務。  

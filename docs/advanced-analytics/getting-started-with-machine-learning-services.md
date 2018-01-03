@@ -1,11 +1,11 @@
 ---
 title: "開始使用 SQL Server 中的機器學習 |Microsoft 文件"
 ms.custom: 
-ms.date: 11/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.date: 12/20/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 98f6498eb042cc79728f8c1fb55e142655842481
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 600f105a3e3fb5fb590ce081633258db3d3d35d5
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>開始使用 SQL Server 中的機器學習服務
 
@@ -83,7 +83,7 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 
 + [機器學習教學課程](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  從這裡開始了解使用機器學習解決方案中找到的所有資源清單[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]或[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]。
+  從這裡開始了解使用 SQL Server 2016 和 SQL Server 2017 的機器學習解決方案找不到的所有資源清單。
 
 ### <a name="r-tutorials"></a>R 教學課程
 
@@ -95,7 +95,7 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 
 + [瀏覽 25 精簡函式中 R 和 ScaleR](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   不熟悉 R 嗎？ 想知道如何 Microsoft R （或 RevoScaleR） 與比較標準 R 嗎？ R 伺服器，請參閱這些快速啟動。
+   不熟悉 R 嗎？ 想知道如何 Microsoft R （或 RevoScaleR） 與比較標準 R 嗎？ 針對 R 伺服器和機器學習伺服器，請參閱這些快速啟動。
 
 ### <a name="python-tutorials"></a>Python 教學課程
 
@@ -123,7 +123,7 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 
 + [方案範本](../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md)
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [開始使用 SQL Server 機器學習服務](../advanced-analytics/r/getting-started-with-sql-server-r-services.md)
 

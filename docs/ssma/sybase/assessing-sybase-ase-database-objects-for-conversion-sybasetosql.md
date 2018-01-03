@@ -3,7 +3,7 @@ title: "評估 SAP ASE 資料庫物件進行轉換 (SybaseToSQL) |Microsoft 文�
 ms.custom: 
 ms.date: 12/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f9fad1e13a82077bf25422e42a390804d67358c2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e22710f19c00a846c33e1dd378e7b0de5b8526e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>評估 SAP ASE 資料庫物件的轉換 (SybaseToSQL)
 在您載入的物件，並將資料移轉至之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 中，您應該先判斷如何移轉程序的複雜度和應該花費多少時間。 SSMA 可以建立顯示的物件和程序，將會成功轉換為百分比的評估報告[!INCLUDE[tsql](../../includes/tsql_md.md)]。 SSMA 也可讓您檢視可能會導致轉換失敗的特定問題。  
@@ -83,7 +83,7 @@ SSMA 建立此評估報表時，將選取的 SAP Adaptive Server Enterprise (ASE
   
     -   您可以從移轉排除的物件。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 中繼資料總管和 Sybase 中繼資料總管，清除項目旁邊的核取方塊之前物件載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL ASE 從移轉資料。
   
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
 [轉換 SAP ASE 資料庫物件 &#40;SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>請參閱  

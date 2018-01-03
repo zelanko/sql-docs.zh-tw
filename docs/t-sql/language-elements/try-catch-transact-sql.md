@@ -34,11 +34,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6bf90e58d4956877786dd0d247653e8a99480c67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d344044a5ce4a0cd995cc1695b69ac9312d4db74
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -108,7 +108,7 @@ END CATCH
   
  如果是在 CATCH 區塊範圍之外呼叫這些函數，它們會傳回 NULL。 這些函數可以從 CATCH 區塊範圍內的任何位置擷取錯誤資訊。 例如，下列指令碼顯示包含錯誤處理函數的預存程序。 在 `CATCH`建構的 `TRY…CATCH`區塊中，會呼叫預存程序，並傳回錯誤的相關資訊。  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -161,7 +161,7 @@ END CATCH;
   
  下列範例顯示 `SELECT` 陳述式所產生的物件名稱解析錯誤，是在預存程序內執行相同的 `TRY…CATCH` 陳述式時，由 `CATCH` 區塊來擷取，而不是由 `SELECT` 建構來擷取。  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -178,7 +178,7 @@ END CATCH
   
  在預存程序內執行 `SELECT` 陳述式，會使錯誤發生在低於 `TRY` 區塊的層級。 這個錯誤由 `TRY…CATCH` 建構來處理。  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -211,7 +211,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. 使用 TRY…CATCH  
  下列範例顯示將會產生除以零的錯誤之 `SELECT` 陳述式。 這個錯誤會使執行動作跳到相關聯的 `CATCH` 區塊。  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -231,7 +231,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. 在交易中使用 TRY…CATCH  
  下列範例顯示 `TRY…CATCH` 區塊在交易內運作的方式。 `TRY` 區塊內的陳述式產生條件約束違規錯誤。  
   
-```t-sql  
+```sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -260,7 +260,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>C. 使用 TRY…CATCH 搭配 XACT_STATE  
  下列範例顯示如何利用 `TRY…CATCH` 建構來處理交易內所發生的錯誤。 `XACT_STATE` 函數會判斷是否應該認可或回復交易。 在此範例中，`SET XACT_ABORT` 是 `ON`。 當發生條件約束違規錯誤時，會使交易成為無法認可。  
   
-```t-sql  
+```sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -329,7 +329,7 @@ GO
 ### <a name="d-using-trycatch"></a>D. 使用 TRY…CATCH  
  下列範例顯示將會產生除以零的錯誤之 `SELECT` 陳述式。 這個錯誤會使執行動作跳到相關聯的 `CATCH` 區塊。  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -345,7 +345,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [THROW &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [Database Engine 錯誤嚴重性](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   

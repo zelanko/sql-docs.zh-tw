@@ -3,7 +3,7 @@ title: "使用 SQL Server Profiler 分析死結 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c0de1737702872b1d692a5489afbd4c64eba499
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c2940a94d2893fb58886506fa5db07402b86280d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死結
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來識別死結的原因。 SQL Server 中有兩個或兩個以上的執行緒 (或處理序)，因為某些資源集而產生循環相依性時，就會發生死結。 利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以建立一個用來記錄、重新執行和顯示死結事件的追蹤，以便進行分析。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
 |擁有者識別碼|正在使用交易且目前正在等待鎖定之處理序的交易識別碼。|  
 |交易描述項|說明交易狀態之交易描述項的指標。|  
 |輸入緩衝區|目前處理序的輸入緩衝區，定義事件類型和正在執行的陳述式。 可能的值包括：<br /><br /> **語言**<br /><br /> **RPC**<br /><br /> **無**|  
-|Statement|陳述式的類型。 可能的值為：<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
+|引數|陳述式的類型。 可能的值為：<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>死結資源節點  
  在死結中，有兩個處理序正在互相等待彼此所保留的資源。 在死結圖形中，資源會顯示為資源節點。  

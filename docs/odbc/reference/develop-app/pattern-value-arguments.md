@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 28caa361e4363aa2224d6cfa63a8830675aeece8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4959b329f855028cedc99f7c43ef889754baecda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pattern-value-arguments"></a>模式值引數
 在目錄中的某些引數函式，例如*TableName*引數中的**SQLTables**，接受搜尋模式。 這些引數接受搜尋模式如果 SQL_ATTR_METADATA_ID 陳述式屬性設定為 SQL_FALSE。它們是這個屬性設定為 SQL_TRUE，如果不接受之搜尋模式的識別項引數。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
  逸出字元會擷取中的 SQL_SEARCH_PATTERN_ESCAPE 選項**SQLGetInfo**。 它必須在任何底線、 百分比符號或逸出字元之前接受要包含該字元作為常值的搜尋模式的引數。 下表顯示範例。  
   
-|搜尋模式|Description|  
+|搜尋模式|描述|  
 |--------------------|-----------------|  
 |%A%|所有包含字母 A 的識別項|  
 |ABC_|所有四個字元的識別項開頭為 ABC|  

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: 11eea4891b1214e48f70ca56462322305fa97c06
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9f037f1e5c6f093582aeec4d2080a52e280718a4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 RHEL 叢集
 
@@ -151,7 +151,7 @@ sudo pcs property set start-failure-is-fatal=false
 若要建立可用性群組資源，請使用`pcs resource create`命令，並設定資源屬性。 El comando siguiente crea`ocf:mssql:ag`主/從可用性群組名稱的型別資源`ag1`。
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
@@ -207,6 +207,6 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 
 手動容錯移轉之可用性群組的`pcs`。 不會起始與 TRANSACT-SQL 的容錯移轉。 如需指示，請參閱[容錯移轉](sql-server-linux-availability-group-failover-ha.md#failover)。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [操作 HA 可用性群組](sql-server-linux-availability-group-failover-ha.md)

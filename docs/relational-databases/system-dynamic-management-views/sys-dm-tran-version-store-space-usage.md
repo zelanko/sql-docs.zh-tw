@@ -24,11 +24,11 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: 8488ee0a8bb823438071cb912bd56c08af640b42
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cfdd2caa03fdd12501580c2584d68f374ee54222
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 因為版本控制記錄是以二進位儲存，所以不同資料庫的不同定序不會造成問題。 使用**sys.dm_tran_version_store_space_usage**根據 SQL Server 執行個體中的資料庫版本存放區空間使用量的監視和規劃的 tempdb 大小。
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|資料庫的資料庫識別碼。|  
 |**reserved_page_count**|**bigint**|Tempdb 的版本中保留的頁面的總計數存放區資料庫的記錄。|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="examples"></a>範例  
  下列查詢可用來判斷使用 tempdb 中空間由 SQL Server 執行個體中每個資料庫的版本存放區。 
   
-```tsql  
+```sql  
 SELECT 
   DB_NAME(database_id) as 'Database Name',
   reserved_page_count,
@@ -70,7 +70,7 @@ AdventureWorks2016DW      0                    0
 WideWorldImporters        20                   160             
 ```
  
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

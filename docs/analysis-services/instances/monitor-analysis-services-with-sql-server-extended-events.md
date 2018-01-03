@@ -1,7 +1,7 @@
 ---
 title: "監視 Analysis Services with SQL Server 擴充事件 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 12/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0fc2147822a5377f3ff3a3d60475225cf0e80c03
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 58e23a9d4732274b84c325f6ac8424b0330d8dc4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>使用 SQL Server 擴充事件監視 Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]擴充事件 (*xEvents*) 是輕量型追蹤和效能監視會使用系統資源非常少的系統，以便診斷問題生產與測試伺服器上的理想工具。 它也具備高擴充性且可設定，而且在 SQL Server 2016 中，可以更輕鬆地透過新的內建工具支援來使用。 在 SQL Server Management Studio 中與 Analysis Services 執行個體的連接上，您可以設定、執行和監視即時追蹤，類似於使用 SQL Server Profiler。 增加更好的工具應該能夠讓 xEvents 更合理地成為 SQL Server Profiler 的取代項目，並且在診斷資料庫引擎和 Analysis Services 工作負載的問題方式中建立更多的對稱。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]擴充事件 (*xEvents*) 是輕量型追蹤和效能監視會使用系統資源非常少的系統，以便診斷問題生產與測試伺服器上的理想工具。 它也具備高擴充性且可設定，而且在 SQL Server 2016 中，可以更輕鬆地透過新的內建工具支援來使用。 在 SQL Server Management Studio 中與 Analysis Services 執行個體的連接上，您可以設定、執行和監視即時追蹤，類似於使用 SQL Server Profiler。 增加更好的工具應該能夠讓 xEvents 更合理地成為 SQL Server Profiler 的取代項目，並且在診斷資料庫引擎和 Analysis Services 工作負載的問題方式中建立更多的對稱。  
   
  除了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，您也可以透過 XMLA 指令碼，使用舊方法來設定  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 擴充事件工作階段 (如同舊版本中所支援)。  
   

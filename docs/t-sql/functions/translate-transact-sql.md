@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda4f4793f0692b77ba8a606c904612674e29721
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a498430f8af12bad1e5ec934dcb60c63aeb96e56
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="translate-transact-sql"></a>翻譯 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>B. 將 GeoJSON 點轉換成 well-known text，WKT    
 GeoJSON 是一種格式的編碼方式各種不同的地理資料結構。 與`TRANSLATE`函式，開發人員可以輕鬆轉換 GeoJSON 點 well-known text，WKT 格式，反之亦然。 下列查詢會將輸入中的方形和大括號取代規則的大括號：   
-```tsql
+```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
@@ -90,7 +90,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 (137.4  72.3) |[137.4,72.3] |
 
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
 
 [字串函數 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 [取代 (TRANSACT-SQL)](../../t-sql/functions/replace-transact-sql.md)   

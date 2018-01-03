@@ -3,7 +3,7 @@ title: "啟動 dta 命令提示字元公用程式和微調工作負載 |Microsof
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 615ce013af8c88bc748f1fc150e47fea182e7a06
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 70cb8fd744c0f169d151d076606740ad53fa404e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>課程 3-1-啟動 dta 命令提示字元公用程式和微調工作負載
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]這項工作會引導您逐步啟動**dta**公用程式，檢視它的說明，然後利用它來微調工作負載從命令提示字元。 它會使用您在 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) 的 [微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)練習中所建立的 MyScript.sql 工作負載。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/05/2017
   
 若要返回教學課程的開頭，請參閱 [教學課程：Database Engine Tuning Advisor](../../tools/dta/tutorial-database-engine-tuning-advisor.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [Database Engine 教學課程](../../relational-databases/database-engine-tutorials.md)  
   
   

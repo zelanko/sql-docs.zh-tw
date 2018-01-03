@@ -3,7 +3,7 @@ title: "功能表命令和其他的快速鍵 (Sybase 到 SQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: afe129f3d37176757ac17ba1571197ac80dd2eb0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc86f038488652df0bee371d695f5b21ce105147
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>功能表命令和其他的快速鍵 (Sybase 到 SQL)
 下列章節說明的鍵盤快速鍵，來存取功能表命令和其他 Sybase 應用程式使用不同的 SSMA 對話方塊中的快速鍵。  

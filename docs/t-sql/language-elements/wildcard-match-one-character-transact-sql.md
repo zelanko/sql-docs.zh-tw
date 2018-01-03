@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f6134bec732593480cd20973eb7687a29cfbf2b8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 63f4d48f77556f04f1d9d2c3c381afd859a7c240
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (萬用字元 - 符合單一字元) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 
 下列範例會傳回所有資料庫名稱以字母為開頭的`m`，而且有字母`d`為第三個字母。 底線字元指定名稱的第二個字元可以是任何字母。 `model`和`msdb`資料庫符合此準則。 `master`資料庫並不會。
 
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm_d%';
 ```   
@@ -65,7 +65,7 @@ msdb
 ### <a name="b-more-complex-example"></a>B： 更複雜的範例
  下列範例會尋找中的所有人員使用 _ 運算子`Person`資料表具有三個字母的名字結束於`an`。  
   
-```tsql  
+```sql  
 -- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
@@ -76,14 +76,14 @@ ORDER BY FirstName;
 ## <a name="c-escaping-the-underscore-character"></a>C： 逸出底線字元   
 下列範例會傳回類似的固定的資料庫角色的名稱`db_owner`和`db_ddladmin`，但它也會傳回`dbo`使用者。 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
 中的第三個的字元位置底線會被視為萬用字元，加上字母為開頭的主體不會篩選`db_`。 要逸出底線將它括在方括號`[_]`。 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   
@@ -99,7 +99,7 @@ db_securityadmin
 ```
 
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [像 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;TRANSACT-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [%（萬用字元-相符的字元）](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   

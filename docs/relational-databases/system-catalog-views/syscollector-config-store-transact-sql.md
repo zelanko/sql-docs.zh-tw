@@ -24,20 +24,20 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6811c1ab9fef0f15422f1d51ac9b969476e58699
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4bf584c6d467d311223831d180838e6851013830
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回套用至整個資料收集器 (而非收集集合執行個體) 的屬性。 這個檢視中的每個資料列都會描述特定資料收集器屬性，例如管理資料倉儲的名稱，以及管理資料倉儲所在的執行個體名稱。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|parameter_name|**nvarchar （128)**|屬性的名稱。 不可為 Null。|  
+|parameter_name|**nvarchar(128)**|屬性的名稱。 不可為 Null。|  
 |parameter_value|**sql_variant**|屬性的實際值。 可為 Null。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="remarks"></a>備註  
  可用屬性的清單是固定的，而且您只能使用適當的預存程序來變更其值。 下表說明可透過這個檢視公開的屬性。  
   
-|屬性名稱|Description|  
+|屬性名稱|描述|  
 |-------------------|-----------------|  
 |CacheDirectory|收集器類型封裝在檔案系統中儲存暫存資訊的目錄名稱。<br /><br /> NULL = 使用預設的暫存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄。|  
 |CacheWindow|指出失敗的資料上傳的快取目錄資料保留原則。<br /><br /> -1 = 保留所有上傳失敗的資料。<br /><br /> 0 = 不要保留任何上傳失敗的資料。<br /><br /> *n*= 保留資料 *n* 次先前上傳失敗，其中 *n*  > = 1。<br /><br /> 您可以使用 sp_syscollector_set_cache_window 預存程序來變更此值。|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="examples"></a>範例  
  下列範例會查詢 syscollector_config_store 檢視。  
   
-```tsql  
+```sql  
 SELECT parameter_name, parameter_value  
 FROM msdb.dbo.syscollector_config_store;  
 ```  

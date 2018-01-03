@@ -3,7 +3,7 @@ title: "SQL Server 屬性 （進階索引標籤） |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 570471b64b257bda598f72015e6b9a7767a4e5ba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1e84232f8ef7287e3b3c2447c364284b024d8ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 屬性 (進階索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]下列屬性會出現在**進階**預設索引標籤。 如果定義了自訂屬性，這些屬性與其值也會在這個索引標籤上顯示。  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/05/2017
  **存貨保持單元**  
  顯示產品存貨保持單元 (SKU) 號碼。  
   
- **版本**  
+ **版本(Version)**  
  顯示這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的版本號碼。  
   
  **虛擬伺服器名稱**  

@@ -1,7 +1,7 @@
 ---
 title: "全域設定 （記錄） (MySQLToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e6ea75490d2d28671d9271d808e45b7d2e7a958
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2f80a451a574aad466258d77e9408c839d5a4075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-logging--mysqltosql"></a>全域設定 （記錄） (MySQLToSQL)
 使用**通用設定**對話方塊來指定 SSMA 的記錄設定。 一般而言，您需要在使用產品支援時，才變更這些設定。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
 **訊息層級**  
 底下的下列選項可用**訊息層級**:  
   
-|選項|Description|  
+|選項|描述|  
 |----------|---------------|  
 |**[所有類別目錄]**|用來設定下列選項的所有的記錄層級。|  
 |**收集器**|會收集有關來源結構描述的中繼資料，並將它儲存至專案。|  

@@ -23,11 +23,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 051b93348547603d2e68a007ede531bfa73a6d58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ea8fbfa2707da63b0b936539281ec578de02285c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## <a name="table-returned"></a>傳回的資料表
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|工作階段的識別碼。 不可為 Null。|
 |request_id|**int**|要求的識別碼。 不可為 Null。|
@@ -88,14 +88,14 @@ sys.dm_exec_query_statistics_xml(session_id)
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. 查看即時查詢計劃和執行統計資料執行中批次  
  下列範例會查詢**sys.dm_exec_requests**來尋找有趣的查詢並複製其`session_id`從輸出。  
   
-```t-sql  
+```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
  然後，若要取得即時查詢計劃和執行統計資料，使用 複製`session_id`搭配系統函數**sys.dm_exec_query_statistics_xml**。  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
@@ -103,14 +103,14 @@ GO
 
  或合併所有的執行要求。  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_requests
 CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  
 GO  
 ```   
   
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
   [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

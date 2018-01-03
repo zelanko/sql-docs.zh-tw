@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3ef20711fc03d6dac95d62cb8b2bd4a8b0d69528
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ OPENROWSET
 > [!NOTE]  
 >  我們建議您除了指定在格式檔案中，每個資料行的定序名稱，當您希望 65001 選項的優先順序高於定序/字碼頁規格。  
   
-|CODEPAGE 值|Description|  
+|CODEPAGE 值|描述|  
 |--------------------|-----------------|  
 |ACP|將轉換的資料行**char**， **varchar**，或**文字**資料型別，從 ANSI /[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 字碼頁 (ISO 1252)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字碼頁。|  
 |OEM (預設值)|將轉換的資料行**char**， **varchar**，或**文字**從系統 OEM 字碼頁的資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字碼頁。|  
@@ -281,7 +281,7 @@ FIELDQUOTE  **=**  'field_quote'
 ### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>A. 搭配 SELECT 和 SQL Server Native Client OLE DB 提供者來使用 OPENROWSET  
  下列範例會使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者來存取`HumanResources.Department`資料表中[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]遠端伺服器上的資料庫`Seattle1`。 (使用 SQLNCLI 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會重新導向至最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者)。`SELECT` 陳述式是用來定義傳回的資料列集。 提供者字串包含 `Server` 和 `Trusted_Connection` 關鍵字。 這些關鍵字可辨識[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。  
   
-```tsql  
+```sql  
 SELECT a.*  
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',  
      'SELECT GroupName, Name, DepartmentID  
@@ -295,7 +295,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 > [!NOTE]  
 >  這個範例假設您已經安裝了 Access。 若要執行這個範例，您必須安裝 Northwind 資料庫。  
   
-```tsql  
+```sql  
 SELECT CustomerID, CompanyName  
    FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',  
       'C:\Program Files\Microsoft Office\OFFICE11\SAMPLES\Northwind.mdb';  
@@ -309,7 +309,7 @@ GO
 > [!NOTE]  
 >  這個範例假設您已經安裝了 Access。 若要執行這個範例，您必須安裝 Northwind 資料庫。  
   
-```tsql  
+```sql  
 USE Northwind  ;  
 GO  
 SELECT c.*, o.*  
@@ -324,7 +324,7 @@ GO
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. 使用 OPENROWSET 將檔案資料大量插入到 varbinary(max) 資料行中  
  下列範例會建立一份小型資料表做為示範之用，並且從 `Text1.txt` 根目錄下的 `C:` 檔，將檔案資料插入到 `varbinary(max)` 資料行中。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTable(FileName nvarchar(60),   
@@ -341,7 +341,7 @@ GO
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. 搭配一個格式檔來使用 OPENROWSET BULK 提供者，從文字檔擷取資料列  
  下列範例會利用一個格式檔，從 Tab 鍵分隔的文字檔 `values.txt` 擷取資料列，該檔含有下列資料：  
   
-```tsql  
+```sql  
 1     Data Item 1  
 2     Data Item 2  
 3     Data Item 3  
@@ -349,7 +349,7 @@ GO
   
  格式檔 `values.fmt` 會描述 `values.txt` 中的資料行：  
   
-```tsql  
+```sql  
 9.0  
 2  
 1  SQLCHAR  0  10 "\t"        1  ID                SQL_Latin1_General_Cp437_BIN  
@@ -358,7 +358,7 @@ GO
   
  這是擷取該資料的查詢：  
   
-```tsql  
+```sql  
 SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',   
    FORMATFILE = 'c:\test\values.fmt') AS a;  
 ```  
@@ -366,14 +366,14 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. 指定格式檔案和程式碼 頁面  
  下列範例顯示如何同時使用這兩種格式檔案和程式碼頁面選項。  
   
-```tsql  
+```sql  
 INSERT INTO MyTable SELECT a.* FROM  
 OPENROWSET (BULK N'D:\data.csv', FORMATFILE =   
     'D:\format_no_collation.txt', CODEPAGE = '65001') AS a;  
 ```  
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. 從 CSV 檔案，使用格式檔案的存取資料  
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
-```tsql
+```sql
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMATFILE = N'D:\XChange\test-csv.fmt', 
@@ -383,7 +383,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. 從 CSV 檔案，不使用格式檔案的存取資料
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK 'C:\Program Files\Microsoft SQL Server\MSSQL14.CTP1_1\MSSQL\DATA\inv-2017-01-19.csv',
    SINGLE_CLOB) AS DATA;
@@ -393,7 +393,7 @@ SELECT * FROM OPENROWSET(
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 下列範例會使用外部資料來源指向 Azure 儲存體帳戶，並建立共用的存取簽章使用資料庫範圍認證中的容器。     
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
@@ -420,7 +420,7 @@ SELECT * FROM OPENROWSET(
   
 -   [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   

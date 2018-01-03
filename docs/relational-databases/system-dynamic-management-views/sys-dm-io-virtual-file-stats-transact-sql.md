@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: deec9ee56fe129b77e130276c22b24c415ddc473
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6890eda5969d783a6d40b27493b07e8831146aa8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -76,7 +76,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|資料庫名稱。</br></br>SQL 資料倉儲，這是儲存在 pdw_node_id 所識別的節點上的資料庫名稱。 每個節點都有一個具有 13 個檔案的 tempdb 資料庫。 每個節點也有分佈，每一個資料庫，而每個散發資料庫有 5 的檔案。 例如，如果每個節點包含 4 分佈，結果會顯示 pdw_node_id 每 20 個散發資料庫檔案。 
 |**database_id**|**smallint**|資料庫的識別碼。|  
@@ -107,7 +107,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中記錄檔的統計資料。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
 ```  
@@ -116,13 +116,13 @@ GO
 
 **適用於：** Azure SQL 資料倉儲
 
-```tsql
+```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
 WHERE database_name = ‘tempdb’ AND file_id = 2;
 
 ```
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [我 O 相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

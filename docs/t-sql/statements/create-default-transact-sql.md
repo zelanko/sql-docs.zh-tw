@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc9282956afda2a41751dd57c2447da6314fb528
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a51a1045532b9194586d197c6b1b537d795d1996
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ AS constant_expression [ ; ]
 ### <a name="a-creating-a-simple-character-default"></a>A. 建立簡單字元預設值  
  下列範例會建立一個稱為 `unknown` 的字元預設值。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DEFAULT phonedflt AS 'unknown';  
@@ -108,13 +108,13 @@ CREATE DEFAULT phonedflt AS 'unknown';
   
  由於名稱為 `phonedflt` 的預設值不存在，因此，下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會失敗。 這個範例只供說明。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

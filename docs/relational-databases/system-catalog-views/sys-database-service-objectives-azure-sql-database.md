@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4d1ccfea9f9c24312d29be192e5b6497c89e7972
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72cc970e8e6b37988399707b5cef77cbda3afd36
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.lasthandoff: 11/17/2017
   
  Sys.database_service_objectives 檢視包含下列資料行。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|database_id|int|資料庫中的 Azure SQL Database 伺服器執行個體的唯一識別碼。 可加入與[sys.databases &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|ssNoversion|資料庫中的 Azure SQL Database 伺服器執行個體的唯一識別碼。 可加入與[sys.databases &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |版本|sysname|資料庫或資料倉儲的服務層：**基本**，**標準**， **Premium**或**資料倉儲**。|  
 |service_objective|sysname|資料庫的定價層。 如果資料庫是彈性集區中，會傳回**ElasticPool**。<br /><br /> 在**基本**層，傳回**基本**。<br /><br /> **Standard 服務層中的單一資料庫**傳回下列其中之一： S0、 S1、 S2 或 S3。<br /><br /> **Premium 層中的單一資料庫**傳回下列動作： P1、 P2、 P4、 P6/P3 或 P11。<br /><br /> **SQL 資料倉儲**傳回透過 DW2000 DW100。|  
 |elastic_pool_name|sysname|名稱[彈性集區](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)所屬的資料庫。 傳回**NULL**如果資料庫是單一資料庫或資料 warehoue。|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="examples"></a>範例  
  可以執行此範例中，使用者資料庫或主要資料庫上。 查詢會傳回名稱、 服務和資料庫的效能層資訊。  
   
-```tsql  
+```sql  
 SELECT  d.name,   
      slo.*    
 FROM sys.databases d   

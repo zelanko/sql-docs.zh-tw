@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d36338abefd30103b80a202ebde030d73b6b071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0a52966aaa6bd8cc58c58eeb7fbf16bc6ab31afa
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ## <a name="tables-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|定序|Description|  
+|資料行名稱|資料類型|定序|描述|  
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar （60)**|伺服器的定序|安全性實體類別的描述。|  
 |permission_name|**nvarchar （60)**|伺服器的定序|權限名稱。|  
@@ -224,9 +224,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **適用於**： [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|DATABASE|  
-|DL|DELETE|DATABASE|  
-|DL|DELETE|OBJECT|  
-|DL|DELETE|SCHEMA|  
+|DL|Delete|DATABASE|  
+|DL|Delete|OBJECT|  
+|DL|Delete|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|DATABASE|  
 |EX|執行 CREATE 陳述式之前，請先執行|DATABASE|  
 |EX|執行 CREATE 陳述式之前，請先執行|OBJECT|  
@@ -236,9 +236,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |IAL|IMPERSONATE ANY LOGIN<br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|SERVER|  
 |IM|IMPERSONATE|登入|  
 |IM|IMPERSONATE|使用者|  
-|IN|INSERT|DATABASE|  
-|IN|INSERT|OBJECT|  
-|IN|INSERT|SCHEMA|  
+|IN|Insert|DATABASE|  
+|IN|Insert|OBJECT|  
+|IN|Insert|SCHEMA|  
 |KIDC|KILL DATABASE CONNECTION<br />**適用於**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|DATABASE|  
 |RC|RECEIVE|OBJECT|  
 |RF|REFERENCES|ASSEMBLY|  
@@ -348,25 +348,25 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ### <a name="a-listing-all-built-in-permissions"></a>A. 列出所有內建權限   
 使用`DEFAULT`或空字串，以傳回所有的權限。   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
 ### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>B. 列出可在對稱金鑰上設定的權限   
 指定要傳回所有可能的權限，該類別的類別。   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
   
 ### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>C. 列出具有 SELECT 權限的類別   
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT)   
     WHERE permission_name = 'SELECT';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [建立結構描述 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   

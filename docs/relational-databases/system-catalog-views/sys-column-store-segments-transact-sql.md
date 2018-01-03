@@ -24,18 +24,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a23388dd2333694f779b9f78de81dd9659916b49
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 322cd5a22f3d23db02984e13f87989c0585db13e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
 傳回一個資料列資料行存放區索引中每個資料行區段。 沒有每個資料行，每個資料列群組的一個資料行區段。 例如，具有 10 個資料列群組和 34 的資料行的資料表傳回 340 的資料列。 
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**sys.partitions**|**bigint**|指出資料分割識別碼。 在資料庫中，這是唯一的。|  
 |**hobt_id**|**bigint**|具有此資料行存放區索引之資料表的堆積或 B 型樹狀目錄索引 (hobt) 的識別碼。|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>備註  
  下列查詢會傳回資料行存放區索引之區段的相關資訊。  
   
-```tsql  
+```sql  
 SELECT i.name, p.object_id, p.index_id, i.type_desc,   
     COUNT(*) AS number_of_segments  
 FROM sys.column_store_segments AS s   
@@ -75,7 +75,7 @@ GO
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [物件目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

@@ -3,7 +3,7 @@ title: "SQL Server 屬性 （登入 索引標籤） |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9449025621c2269b4a810f1a0dfdaaae7850471e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 623948bfc41640e1aebe0b492872fbc095c056f6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 屬性 (登入索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**登入** 索引標籤**SQL Server 屬性**對話方塊來指定所使用的帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務變更密碼的帳戶，並以啟動和停止該服務。 帳戶密碼的變更會立即生效。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/05/2017
 >   
 >  如需有關選取帳戶以執行服務的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜設定 Windows 服務帳戶＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **內建帳戶**  
  **本機系統**  
  -   指定本機系統帳戶。 這個帳戶不需要密碼。 但是，根據授與帳戶的權限，本機系統帳戶可能會禁止服務與其他伺服器互動。  

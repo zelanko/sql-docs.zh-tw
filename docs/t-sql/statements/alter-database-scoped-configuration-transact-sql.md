@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f003a852db7b1773e2c82b6ade3a951da673dbe0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2867f3aff5b8d6d7256d2a9a4ecbe7dcfdccb88c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ IDENTITY_CACHE  **=**  { **ON** |OFF}
 > [!NOTE] 
 > 這個選項只能設定為主要。 如需詳細資訊，請參閱[識別資料行](create-table-transact-sql-identity-property.md)。  
 
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  需要改變任何資料庫範圍組態   
 在資料庫中。 控制資料庫上的權限的使用者可以授與此權限。  
   
@@ -194,7 +194,7 @@ IDENTITY_CACHE  **=**  { **ON** |OFF}
 此範例中，授與權限，才能執行 ALTER DATABASE SCOPED CONFIGURATION     
 使用者 [Joe]。  
   
-```tsql  
+```sql  
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;  
 ```  
   
@@ -202,14 +202,14 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 
 此範例會設定 MAXDOP = 1 適用於主要資料庫和 MAXDOP = 4 的地理複寫案例中，次要資料庫。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
 此範例會設定次要資料庫的 MAXDOP 必須相同，因為設定的主要資料庫在地理複寫案例。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
@@ -217,13 +217,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 
 此範例的地理複寫案例中，次要資料庫設定為 ON LEGACY_CARDINALITY_ESTIMATION。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 這個範例會設定 LEGACY_CARDINALITY_ESTIMATION 次要資料庫，所以其主要資料庫中的地理複寫案例。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
@@ -231,20 +231,20 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 
 此範例的地理複寫案例的主要資料庫設定為 OFF PARAMETER_SNIFFING。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;  
 ```  
   
 此範例的地理複寫案例的主要資料庫設定為 OFF PARAMETER_SNIFFING。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
 這個範例 PARAMETER_SNIFFING 次要資料庫的設定，所以主要資料庫上   
 在地理複寫的案例。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
@@ -253,7 +253,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
 QUERY_OPTIMIZER_HOTFIXES 設為 ON，主要資料庫   
 在地理複寫的案例。  
 
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;  
 ```  
   
@@ -261,7 +261,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 
 這個範例會清除程序快取 （僅適用於主要資料庫可能的話）。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;  
 ```  
 
@@ -271,7 +271,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 這個範例會停用識別快取。
 
-```tsql 
+```sql 
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
 ```
 

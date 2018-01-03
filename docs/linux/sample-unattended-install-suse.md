@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: c2a77abb7a86806281de3a84687f02c7c0b8fd7a
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: ceec3b427cb8b82cc155bbd5410d6ecca77bc64c
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server 的範例： 無人看管的 SQL Server 安裝指令碼
 
@@ -27,9 +27,9 @@ ms.lasthandoff: 12/09/2017
 這個範例 Bash 指令碼沒有互動式的輸入 SUSE Linux Enterprise Server (SLES) v12 SP2 上安裝 SQL Server 2017。 提供範例的安裝 database engine，SQL Server 命令列工具，SQL Server Agent，並且會執行後續安裝步驟。 您可以選擇性地安裝全文檢索搜尋，並建立系統管理使用者。
 
 > [!TIP]
-> 如果您不需要自動的安裝指令碼，是遵循最快速的方式安裝 SQL Server [SLES 快速入門教學課程](quickstart-install-connect-suse.md)。 其他安裝資訊，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
+> 如果您不需要自動的安裝指令碼，是遵循最快速的方式安裝 SQL Server [SLES 的快速入門](quickstart-install-connect-suse.md)。 其他安裝資訊，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 您需要至少 2 GB 的記憶體來執行 SQL Server on Linux。
 - 檔案系統必須是**XFS**或**EXT4**。 其他檔案系統，例如**BTRFS**，不受支援。
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/09/2017
 ## <a name="sample-script"></a>範例指令碼
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 
@@ -210,7 +210,7 @@ Bash 指令碼會執行第一件事是設定一些變數。 這些可以是指�
 
 1. 如果建立新的伺服器系統管理員使用者```SQL_INSTALL_USER```和```SQL_INSTALL_USER_PASSWORD```都設定。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 簡化多個自動的安裝，然後再建立獨立的 Bash 指令碼設定適當的環境變數。 您可以移除任何變數的範例指令碼會使用，並將它們放在自己 Bash 指令碼。
 

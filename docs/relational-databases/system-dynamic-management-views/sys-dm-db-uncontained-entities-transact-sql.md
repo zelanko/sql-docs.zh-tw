@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2786493aeb75402eae5d7e91458e97436f3435a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 91f36a8a8070e5f5752acf82bec5305fa4adc021
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/27/2017
 ||||  
 |-|-|-|  
 |**資料行名稱**|**型別**|**說明**|  
-|*類別*|**int**|1 = 物件或資料行 (包含模組、XPs、檢視、同義字及資料表)。<br /><br /> 4 = 資料庫主體<br /><br /> 5 = 組件<br /><br /> 6 = 類型<br /><br /> 7 = 索引 (全文檢索索引)<br /><br /> 12 = 資料庫 DDL 觸發程序<br /><br /> 19 = 路由<br /><br /> 30 = 稽核規格|  
+|*class*|**int**|1 = 物件或資料行 (包含模組、XPs、檢視、同義字及資料表)。<br /><br /> 4 = 資料庫主體<br /><br /> 5 = 組件<br /><br /> 6 = 類型<br /><br /> 7 = 索引 (全文檢索索引)<br /><br /> 12 = 資料庫 DDL 觸發程序<br /><br /> 19 = 路由<br /><br /> 30 = 稽核規格|  
 |*class_desc*|**nvarchar(120)**|實體類別的描述。 下列其中一種以符合類別：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*則 major_id 就*|**int**|實體的識別碼。<br /><br /> 如果*類別*= 1，則 object_id<br /><br /> 如果*類別*= 4，則 sys.database_principals.principal_id。<br /><br /> 如果*類別*= 5，則 sys.assemblies.assembly_id。<br /><br /> 如果*類別*= 6，則 sys.types.user_type_id。<br /><br /> 如果*類別*= 7，則 sys.indexes.index_id。<br /><br /> 如果*類別*= 12，則 sys.triggers.object_id。<br /><br /> 如果*類別*= 19，則為 sys.routes.route_id。<br /><br /> 如果*類別*= 30，則 sys。 database_audit_specifications.databse_specification_id。|  
 |*statement_line_number*|**int**|如果類別為模組，將會傳回非內含使用所在的行號。  否則，此值為 Null。|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/27/2017
   
 -   內建系統函數  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  sys.dm_db_uncontained_entities 只會傳回使用者具有某些權限類型的物件。 若要完整評估的資料庫的高特殊權限的使用者，例如成員應該使用這個函式的內含項目**sysadmin**固定的伺服器角色或**db_owner**角色。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="examples"></a>範例  
  下列範例會建立一個名為 P1 的程序，然後查詢 `sys.dm_db_uncontained_entities`。 查詢會回報 P1 使用位於資料庫外部的 **sys.endpoints** 。  
   
-```tsql  
+```sql  
 CREATE DATABASE Test;  
 GO  
   

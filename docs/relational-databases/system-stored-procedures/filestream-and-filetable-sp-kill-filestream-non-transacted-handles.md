@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7958e7a6513363030d8962774a28992bd055661d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d06550f0a9cd322e26acfa8f29890833c15f947
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="filestream-and-filetable---spkillfilestreamnontransactedhandles"></a>Filestream 和 FileTable-sp_kill_filestream_non_transacted_handles
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [[ @handle_id = ] @handle_id]]  
 ```  
   
@@ -66,7 +66,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 ## <a name="metadata"></a>中繼資料  
  如需開啟的非交易式檔案控制代碼，查詢動態管理檢視[sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  您必須擁有**VIEW DATABASE STATE**權限，以取得檔案控制代碼，從**sys.dm_FILESTREAM_non_transacted_handles**動態管理檢視以及執行**sp_kill_filestream_non_transacted_handles**。  
@@ -74,7 +74,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 ## <a name="examples"></a>範例  
  下列範例示範如何呼叫**sp_kill_filestream_non_transacted_handles**關閉 FileTable 資料的非交易式檔案控制代碼。  
   
-```tsql  
+```sql  
 -- Close all open handles in the current database.  
 sp_kill_filestream_non_transacted_handles  
   
@@ -87,7 +87,7 @@ sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’, @hand
   
  下列範例示範如何使用指令碼來取得*handle_id*並將它關閉。  
   
-```tsql  
+```sql  
 DECLARE @handle_id varbinary(16);  
 DECLARE @table_name sysname;  
   
@@ -98,7 +98,7 @@ EXEC sp_kill_filestream_non_transacted_handles @dbname, @table_name, @handle_id;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [管理 FileTable](../../relational-databases/blob/manage-filetables.md)  
   
   

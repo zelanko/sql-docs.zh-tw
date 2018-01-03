@@ -41,11 +41,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 57fe9fffdb553dffc3cd019d36692a8c34681817
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 777f08cf0a05e195ca5086f7af25eb8d95ef4010
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (SQL Server Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ CREATE DATABASE database_snapshot_name
   
      指定資料庫層級的非交易式 FILESTREAM 存取層級。  
   
-    |值|描述|  
+    |ReplTest1|描述|  
     |-----------|-----------------|  
     |OFF|已停用非交易式存取|  
     |READONLY|非交易式處理序可以讀取此資料庫中的 FILESTREAM 資料。|  
@@ -359,7 +359,7 @@ CREATE DATABASE database_snapshot_name
   
  大小不能指定何時*os_file_name*指定為 UNC 路徑。 SIZE 不會套用到 FILESTREAM 檔案群組。  
   
- *大小*  
+ *size*  
  這是檔案的初始大小。  
   
  當*大小*未提供主要檔案，[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用的模型資料庫中主要檔案大小。 模型的預設大小是 8 MB (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 或 1 MB （適用於先前的版本）。 當指定了次要資料檔或記錄檔時，但*大小*檔案，未指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]將檔 8 MB (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 或 1 MB （適用於先前的版本）。 所指定的主要檔案大小至少必須跟 model 資料庫的主要檔案大小一樣大。  
@@ -541,7 +541,7 @@ GO
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. 建立指定資料檔案和交易記錄檔的資料庫  
  下列範例會建立資料庫 `Sales`。 因為未使用關鍵字 PRIMARY，所以第一個檔案 (`Sales_dat`) 會成為主要檔案。 因為 `Sales_dat` 檔的 SIZE 參數中沒有指定 MB 或 KB，所以它會使用 MB 並 MB 來配置。 每當建立、修改或卸除使用者資料庫時，都應該備份 `Sales_log` 檔會以 MB 為單位配置，因為 `MB` 參數中明確陳述 `SIZE` 後置詞。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -563,7 +563,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 利用指定多個資料檔案和交易記錄檔的方式建立資料庫  
  下列範例會建立資料庫 `Archive`，這個資料庫有三個 `100-MB` 的資料檔案和兩個 `100-MB` 的交易記錄檔。 主要檔案是清單中的第一個檔案，並以關鍵字 `PRIMARY` 明確指定。 交易記錄檔是以關鍵字 `LOG ON` 指定的。 請注意 `FILENAME` 選項中之檔案的副檔名：`.mdf` 用於主要資料庫，`.ndf` 用於次要資料檔案，`.ldf` 則用於交易記錄檔。 此範例會將此資料庫放在 `D:` 磁碟機上，而不是與 `master` 資料庫放在一起。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -609,7 +609,7 @@ GO
   
  此範例將資料和記錄檔放在不同的磁碟上，藉此改進效能。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -658,7 +658,7 @@ GO
 ### <a name="e-attaching-a-database"></a>E. 附加資料庫  
  下列範例會先卸離在範例 D 中建立的資料庫 `Archive`，再利用 `FOR ATTACH` 子句附加該資料庫。 `Archive` 定義為具有多個資料檔案和記錄檔。 不過，因為檔案建立之後並未改變位置，所以在 `FOR ATTACH` 子句中只需要指定主要檔案。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，所附加之資料庫中的任何全文檢索檔案，都會隨著資料庫而一起附加。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -674,7 +674,7 @@ GO
   
  這個範例中的來源資料庫就是在範例 D 中建立的資料庫 `Sales`。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -691,7 +691,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. 建立資料庫並指定定序名稱和選項  
  下列範例會建立資料庫 `MyOptionsTest`。 它指定定序名稱，並將 `TRUSTYWORTHY` 和 `DB_CHAINING` 選項設為 `ON`。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -712,7 +712,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 附加已移動的全文檢索目錄  
  下列範例會附加全文檢索目錄 `AdvWksFtCat` 以及 `AdventureWorks2012` 資料檔案和記錄檔。 在這個範例中，全文檢索目錄會從預設位置移至新的位置 `c:\myFTCatalogs`。 資料檔案和記錄檔仍保留在它們的預設位置中。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -737,7 +737,7 @@ GO
   
 -   `FileStreamResumes` 包含 FILESTREAM 資料。 其包含一個 FILESTREAM 資料容器 `FSResumes` (位於 `C:\MyFSfolder\Resumes`)。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  
@@ -789,7 +789,7 @@ GO
 ### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. 建立包含多個檔案之 FILESTREAM 檔案群組的資料庫  
  下列範例會建立 `BlobStore1` 資料庫。 此資料庫是使用一個資料列檔案群組和一個 FILESTREAM 檔案群組 `FS` 所建立。 FILESTREAM 檔案群組包含兩個檔案：`FS1` 和 `FS2`。 然後，此範例會將第三個檔案 `FS3` 加入至 FILESTREAM 檔案群組，藉以改變資料庫。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   
@@ -835,7 +835,7 @@ TO FILEGROUP [FS];
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   

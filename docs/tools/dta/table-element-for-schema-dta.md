@@ -3,7 +3,7 @@ title: "資料表元素 (DTA) 結構描述 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 730783951f15814c4ffd02dba76b8b45d95d61ad
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d6ebf5a4a05d02281f7335d7244fc17bbca7e2b3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="table-element-for-schema-dta"></a>結構描述的 Table 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定微調的資料表。  
@@ -39,13 +39,13 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|Attribute|描述|  
+|attribute|描述|  
 |---------------|-----------------|  
 |**NumberOfRows**|選擇性。 可讓您模擬不同大小的資料表之整數。|  
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**string**，在 1 和 255 個字元之間。|  
 |**預設值**|無。|  

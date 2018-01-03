@@ -3,7 +3,7 @@ title: "sqllogship 應用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqllogship
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bbc29db3024f217fc09f283c3310ead6034e5003
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d98cbf2e1e18538fe20fd4ff76319b8b69d1e05
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqllogship-application"></a>sqllogship 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqllogship**應用程式會記錄傳送組態執行備份、 複製或還原作業和相關聯的清除工作。 這些作業是在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特定執行個體上對特定資料庫執行。  
@@ -61,7 +61,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |level|描述|  
 |-----------|-----------------|  
 |0|輸出不追蹤和偵錯的訊息。|  
-|1|輸出錯誤處理訊息。|  
+|@shouldalert|輸出錯誤處理訊息。|  
 |2|輸出警告和錯誤處理訊息。|  
 |**3**|輸出參考用訊息、警告和錯誤處理訊息。 這是預設值。|  
 |4|輸出所有偵錯和追蹤訊息。|  
@@ -91,7 +91,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 > [!NOTE]  
 >  若要找出備份和複製目錄的路徑，您可以執行 **sp_help_log_shipping_secondary_database** 預存程序或檢視 **msdb** 中的 **log_shipping_secondary** 資料表。 備份目錄和目的地目錄的路徑分別位於 **backup_source_directory** 和 **backup_destination_directory** 資料行中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_primary_databases &#40;TRANSACT-SQL &#41;](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
  [log_shipping_secondary &#40;TRANSACT-SQL &#41;](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   

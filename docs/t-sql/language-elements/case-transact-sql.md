@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4d5241ddc65de92d7588e4c8d1ddb7c2e6b08528
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 283484ce00b3f0c19dea00b47826926a2b86df43
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -122,7 +122,7 @@ END
   
  CASE 陳述式會依序評估其條件，並在滿足其條件的第一個條件時停止。 在某些情況下，運算式會在 CASE 陳述式收到運算式的結果做為其輸入之前進行評估。 評估這些運算式是否可能時發生錯誤。 針對 CASE 陳述式，出現在 WHEN 引數中的彙總運算式會先進行評估，然後再提供給 CASE 陳述式。 例如，下列查詢會在產生 MAX 彙總的值時，產生除以零的錯誤。 這個情況會在評估 CASE 運算式之前發生。  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   
@@ -354,7 +354,7 @@ WHERE SalariedFlag = 0;
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [聯合 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   

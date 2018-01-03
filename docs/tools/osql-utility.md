@@ -3,7 +3,7 @@ title: "osql 公用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: osql
 ms.reviewer: 
@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f8e8f3045d6af2264007d7b0ec5fac9f4e464a5f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a41dd247105dcce2580027c014aa266df5ed9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="osql-utility"></a>osql 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Osql**公用程式可讓您輸入[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式、 系統程序和指令碼檔案。 這個公用程式利用 ODBC 來與伺服器通訊。  
@@ -212,7 +212,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL 命令  
  除了 [!INCLUDE[tsql](../includes/tsql-md.md)] osql **內的**陳述式，您也可以使用這些命令。  
   
-|Command|描述|  
+|命令|描述|  
 |-------------|-----------------|  
 |GO|執行在上一個 GO 之後輸入的所有陳述式。|  
 |RESET|清除您已輸入的任何陳述式。|  
@@ -340,7 +340,7 @@ GO
   
  這個陳述式會產生 `10.3496`的結果，這表示在儲存值時，所有小數點保留不動。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [註解 &#40;MDX&#41;](../mdx/comment-mdx.md)   
  [-&#40;註解 &#41;&#40;MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   

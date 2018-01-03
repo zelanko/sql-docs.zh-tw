@@ -1,7 +1,7 @@
 ---
 title: "選取並設定受影響的物件 (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 54b2b1e67a0d7049b14c5f4bdd85c28d427810ca
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a4fe479f53c914b4417cd0069335fa8bb0da027
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>選取並設定受影響的物件 (OracleToSQL)
 在此頁面中，您可以選取資料表和外部索引鍵，在其中變更應該比較當 SSMA 確認上一個步驟中所選擇的物件執行的結果。 此外，您可以自訂的驗證參數。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/05/2017
   
 -   規則  
   
--   預設值  
+-   預設  
   
 -   識別  
   

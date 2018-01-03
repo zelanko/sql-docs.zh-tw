@@ -3,7 +3,7 @@ title: "準備輸入的追蹤資料 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 41930826cc18840a250ecd29d5a09ac0a63853fe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e7f92ad0cc65a6e4be5df650d480e5bbb04174f0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prepare-the-input-trace-data"></a>準備輸入追蹤資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以開始使用分散式重新執行之前[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能，您必須準備輸入的追蹤資料起始前置處理階段，從 distributed 的 replay 管理工具。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  在前置處理階段完成之後，中繼檔案會儲存在控制器工作目錄中。 若要起始事件重新執行階段，您必須以 **replay** 選項執行管理工具。 如需詳細資訊，請參閱 [重新執行追蹤資料](../../tools/distributed-replay/replay-trace-data.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   

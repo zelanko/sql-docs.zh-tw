@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6175fc0e363d336e9baf2eed2faa82b5954828a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 249d3114af6631b56dd5d5106564f3912072ab29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="static-sql"></a>靜態 SQL
 所示的內嵌的 SQL[內嵌的 SQL 範例](../../odbc/reference/embedded-sql-example.md)稱為靜態 SQL。 在程式中的 SQL 陳述式都是靜態的因為呼叫靜態 SQL也就是說，不會變更每次執行程式。 上一節所述，這些陳述式會編譯編譯程式的其餘部分時。  

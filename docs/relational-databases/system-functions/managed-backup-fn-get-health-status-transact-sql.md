@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25675b2dc83e5251b381bf95af353deb647d563a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4314d23f344df87d270f526a64e4d6d0f033dab
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
@@ -57,20 +57,20 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|程式連接到 Windows Azure 儲存體帳戶時的連接錯誤數目。|  
-|number_of_sql_errors|int|程式連接到 SQL Server 引擎時傳回的錯誤數目。|  
-|number_of_invalid_credential_errors|int|程式嘗試使用 SQL 認證進行驗證時傳回的錯誤數目。|  
-|number_of_other_errors|int|除了連接、SQL 或認證以外其他類別目錄中的錯誤數目。|  
-|number_of_corrupted_or_deleted_backups|int|已刪除或損毀的備份檔案數目。|  
-|number_of_backup_loops|int|備份代理程式掃描[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所設定的全部資料庫的次數。|  
-|number_of_retention_loops|int|掃描資料庫以評估所設定保留週期的次數。|  
+|number_of_storage_connectivity_errors|ssNoversion|程式連接到 Windows Azure 儲存體帳戶時的連接錯誤數目。|  
+|number_of_sql_errors|ssNoversion|程式連接到 SQL Server 引擎時傳回的錯誤數目。|  
+|number_of_invalid_credential_errors|ssNoversion|程式嘗試使用 SQL 認證進行驗證時傳回的錯誤數目。|  
+|number_of_other_errors|ssNoversion|除了連接、SQL 或認證以外其他類別目錄中的錯誤數目。|  
+|number_of_corrupted_or_deleted_backups|ssNoversion|已刪除或損毀的備份檔案數目。|  
+|number_of_backup_loops|ssNoversion|備份代理程式掃描[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所設定的全部資料庫的次數。|  
+|number_of_retention_loops|ssNoversion|掃描資料庫以評估所設定保留週期的次數。|  
   
 ## <a name="best-practices"></a>最佳作法  
  這些彙總計算可用來監視系統健全狀況。 例如，如果 number_of_retention_loops 資料行在 30 分鐘內為 0，則保留管理可能需要耗費長時間運作，或甚至運作不正確。 非零的錯誤資料行可能表示出現問題，應檢查擴充事件記錄來了解任何問題。 或者，使用預存程序**managed_backup.sp_get_backup_diagnostics**以取得擴充的事件，以尋找錯誤的詳細資料的清單。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要**選取**函式的權限。  

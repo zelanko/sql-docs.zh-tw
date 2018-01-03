@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 移轉小幫手 for Oracle (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: 4e0f23723b7098ffd57a8e2ac2a05712b2ff412c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d50eba13921bea6921295421a4202cd1fd0618f2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>Oracle (OracleToSQL) 的 SQL Server 移轉小幫手
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) for Oracle 是一個工具，將 Oracle 資料庫移轉至[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 年[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008， [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012年[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014， [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016， [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 Windows 和 Linux （預覽），以及 Azure SQL DB。 SSMA for Oracle 將轉換至 Oracle 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫物件，會建立這些物件中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，然後再移轉資料從 Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="contents"></a>目錄  
   
-|章節|Description|  
+|章節|描述|  
 |-----------|---------------|  
 |[SSMA for Oracle 中最新消息](http://msdn.microsoft.com/en-us/f305ebb6-7393-4a43-abb3-6332b739d690)|在這一版的 SSMA for Oracle 最新消息|  
 |[SSMA 安裝 Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|包含的主題將提供先決條件與指示正在執行的電腦上安裝 Oracle 用戶端和必要的元件 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  

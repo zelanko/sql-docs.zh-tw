@@ -33,11 +33,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea94b26815eb1bc3453a1bcf01eb6b522f41e037
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a095e1de4fdffc97d615a39fd7cf185c99493d02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,35 +97,35 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. 建立 int 資料行的 RANGE LEFT 資料分割函數  
  下列資料分割函數會將資料表或索引分割成四份資料分割。  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 ```  
   
  下表顯示如何使用這個資料分割函數分割資料行的資料表**col1**進行資料分割。  
   
-|資料分割|1|2|3|4|  
+|資料分割|@shouldalert|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**值**|**col1** <= `1`|**col1**  >  `1` AND **col1** <= `100`|**col1**  >  `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. 建立 int 資料行的 RANGE RIGHT 資料分割函數  
  下列資料分割函數會使用相同的值*boundary_value* [ **，***...n* ] 與前一個範例，不過，它指定 RANGE RIGHT。  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
 AS RANGE RIGHT FOR VALUES (1, 100, 1000);  
 ```  
   
  下表顯示如何使用這個資料分割函數分割資料行的資料表**col1**進行資料分割。  
   
-|資料分割|1|2|3|4|  
+|資料分割|@shouldalert|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**值**|**col1** \<`1`|**col1**  >=  `1` AND **col1** \<`100`|**col1**  >=  `100` AND **col1** \<`1000`|**col1** >= `1000`| 
   
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. 建立 datetime 資料行的 RANGE RIGHT 資料分割函數  
  下列資料分割函數將資料表或索引分割成 12 個資料分割，其中每個月的值中的一年的價值**datetime**資料行。  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION [myDateRangePF1] (datetime)  
 AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',  
                '20030501', '20030601', '20030701', '20030801',   
@@ -134,28 +134,28 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
  下表顯示如何將資料表或索引分割區資料行上使用這個資料分割函數**datecol**進行資料分割。  
   
-|資料分割|1|2|...|11|12|  
+|資料分割|@shouldalert|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
 |**值**|**datecol** \<`February 1, 2003`|**datecol**  >=  `February 1, 2003` AND **datecol** \<`March 1, 2003`||**datecol**  >=  `November 1, 2003` AND **col1** \<`December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
 ### <a name="d-creating-a-partition-function-on-a-char-column"></a>D. 建立 char 資料行的資料分割函數  
  下列資料分割函數會將資料表或索引分割成四份資料分割。  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF3 (char(20))  
 AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');  
 ```  
   
  下表顯示如何使用這個資料分割函數分割資料行的資料表**col1**進行資料分割。  
   
-|資料分割|1|2|3|4|  
+|資料分割|@shouldalert|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**值**|**col1** \< `EX`...|**col1**  >=  `EX` AND **col1** \< `RXE`...|**col1**  >=  `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
   
 ### <a name="e-creating-15000-partitions"></a>E. 建立 15,000 個資料分割  
  下列資料分割函數會將資料表或索引分割成 15,000 個資料分割。  
   
-```tsql  
+```sql  
 --Create integer partition function for 15,000 partitions.  
 DECLARE @IntegerPartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION IntegerPartitionFunction (int) 
@@ -174,7 +174,7 @@ GO
 ### <a name="f-creating-partitions-for-multiple-years"></a>F. 建立多個年度的資料分割  
  下列資料分割函數的資料表或索引分割成 50 個資料分割上**datetime2**資料行。 2007 年 1 月至 2011 年 1 月之間的每個月份都有一個資料分割。  
   
-```tsql  
+```sql  
 --Create date partition function with increment by month.  
 DECLARE @DatePartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION DatePartitionFunction (datetime2) 
@@ -190,7 +190,7 @@ EXEC sp_executesql @DatePartitionFunction;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料分割的資料表和索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
  [$PARTITION &#40;TRANSACT-SQL &#41;](../../t-sql/functions/partition-transact-sql.md)   
  [ALTER PARTITION FUNCTION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)   

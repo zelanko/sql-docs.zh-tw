@@ -1,7 +1,7 @@
 ---
 title: "準備移轉 (AccessToSQL) 的 Access 資料庫 |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -31,11 +31,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: 7acee61cd57706ff696abda0fae9c48d6bfaaeac
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fb7743e870b97882ad2bcec0428b3047f28f538d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>準備移轉 (AccessToSQL) 的 Access 資料庫
 移轉至 Access 資料庫之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您必須判斷哪些資料庫移轉，並確保這些資料庫準備好進行移轉。  

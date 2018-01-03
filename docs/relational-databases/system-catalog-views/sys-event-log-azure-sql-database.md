@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4df7543112666b498a2896d62d16186a83d6e4af
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 77682d906a1fe24f371e6ec31c11e586398cdba6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
  `sys.event_log`檢視包含下列資料行。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|資料庫的名稱。 如果連接失敗且使用者未指定資料庫名稱，則這個資料行會是空白。|  
 |**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 對於彙總的事件，這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |**event_type**|**nvarchar （64)**|事件的類型。<br /><br /> 請參閱[事件類型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)取得一份可能的值。|  
 |**event_subtype**|**int**|所發生事件的子類型。<br /><br /> 請參閱[事件類型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)取得一份可能的值。|  
 |**event_subtype_desc**|**nvarchar （64)**|事件子類型的描述。<br /><br /> 請參閱[事件類型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)取得一份可能的值。|  
-|**嚴重性**|**int**|錯誤的嚴重性。 可能的值為：<br /><br /> 0 = 資訊<br />1 = 警告<br />2 = 錯誤|  
+|**severity**|**int**|錯誤的嚴重性。 可能的值為：<br /><br /> 0 = 資訊<br />1 = 警告<br />2 = 錯誤|  
 |**event_count**|**int**|發生此事件的次數指定的資料庫指定的時間間隔內 (**start_time**和**end_time**)。|  
 |**描述**|**nvarchar(max)**|事件的詳細描述。<br /><br /> 請參閱[事件類型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)取得一份可能的值。|  
 |**additional_data**|**XML**|*注意： 這個值一律為 Azure SQL Database V12 為 NULL。請參閱[範例](#Deadlock)一節以取得如何擷取適用於 V12 死結事件。*<br /><br /> 如**死結**事件，這個資料行會包含死結圖表。 對於其他事件類型，這個資料行為 NULL。 |  
@@ -64,11 +64,11 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  這個檢視不包括所有可能發生的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料庫事件，只包括這裡列出的事件。 其他類別目錄、事件類型和子類型會在未來的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 版本中加入。  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**嚴重性**|**描述**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**描述**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**連線能力**|**connection_successful**|0|**connection_successful**|0|已成功連接資料庫。|  
 |**連線能力**|**connection_failed**|0|**invalid_login_name**|2|登入名稱在這個版本的 SQL Server 中無效。|  
-|**連線能力**|**connection_failed**|1|**windows_auth_not_supported**|2|這個版本的 SQL Server 不支援 Windows 登入。|  
+|**連線能力**|**connection_failed**|@shouldalert|**windows_auth_not_supported**|2|這個版本的 SQL Server 不支援 Windows 登入。|  
 |**連線能力**|**connection_failed**|2|**attach_db_not_supported**|2|使用者要求附加不支援的資料庫檔案。|  
 |**連線能力**|**connection_failed**|3|**change_password_not_supported**|2|不支援使用者要求變更使用者登入的密碼。|  
 |**連線能力**|**connection_failed**|4|**login_failed_for_user**|2|使用者登入失敗。|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/21/2017
 |**連線能力**|**connection_failed**|8|**client_close**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 用戶端可能在建立連接時逾時。 嘗試建立連接時發生逾時。|  
 |**連線能力**|**connection_failed**|9|**重新設定**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 連接失敗，因為資料庫當時正在進行重新組態。|  
 |**連線能力**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 連接已閒置超過系統定義的臨界值。|  
-|**連線能力**|**connection_terminated**|1|**重新設定**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 由於資料庫重新設定，已終止工作階段。|  
+|**連線能力**|**connection_terminated**|@shouldalert|**重新設定**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 由於資料庫重新設定，已終止工作階段。|  
 |**連線能力**|**節流設定**|*\<原因碼 >*|**reason_code**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 要求已節流。  節流原因代碼： *\<原因碼 >*。 如需詳細資訊，請參閱[引擎節流](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
 |**連線能力**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 工作階段已終止，因為您有長時間執行的交易。 請嘗試縮短您的交易。 如需詳細資訊，請參閱[資源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**連線能力**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它取得太多鎖定。 請嘗試在單一交易中讀取或修改較少的資料列。 如需詳細資訊，請參閱[資源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  例如，如果使用者因為登入名稱無效，而在連接到 Database1 資料庫時於 2012 年 2 月 5 日 11:00 到 11:05 (UTC) 之間失敗七次，這項資訊會在這個檢視的單一資料列中提供：  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**嚴重性**|**event_count**|**描述**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**描述**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -174,7 +174,7 @@ WHERE event_type = 'throttling'
 ### <a name="db-scoped-extended-event"></a>資料庫範圍擴充的事件  
  若要設定資料庫範圍擴充事件 (XEvent) 工作階段中使用下列範例程式碼：  
   
-```tsql  
+```sql  
 IF EXISTS  
     (SELECT * from sys.database_event_sessions  
         WHERE name = 'azure_monitor_deadlock_session')  
@@ -206,7 +206,7 @@ ALTER EVENT SESSION azure_monitor_deadlock_session
 
 您可以使用下列查詢來檢查是否有死結。  
   
-```tsql  
+```sql  
 WITH CTE AS (  
     SELECT CAST(xet.target_data AS XML)  AS [target_data_XML]  
         FROM            sys.dm_xe_database_session_targets AS xet  
@@ -227,7 +227,7 @@ WITH CTE AS (
 SELECT * FROM CTE2;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Azure SQL Database 中的擴充的事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
   
   

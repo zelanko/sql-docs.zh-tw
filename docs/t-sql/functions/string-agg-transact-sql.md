@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fed0fc07f27a3069ba56309b1da7f18197bd987f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 
 ### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. 產生新行分隔之名稱的清單 
 下列範例會產生一份在單一結果的資料格中，以換行字元分隔的名稱。
-```tsql
+```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
 ```
@@ -107,7 +107,7 @@ FROM Person.Person;
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 產生名稱以不含 NULL 值的逗號分隔的清單   
 下列範例取代 'N/A' 的 null 值，並傳回單一結果資料格中的逗號分隔的名稱。  
-```tsql
+```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
 ```
@@ -122,7 +122,7 @@ FROM Person.Person;
 
 ### <a name="c-generate-comma-separated-values"></a>C. 產生以逗號分隔值 
 
-```tsql   
+```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -141,7 +141,7 @@ FROM Person.Person;
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 傳回新聞文章，具有相關的標記 
 
 文件，以及其標籤分成不同的資料表。 開發人員想要傳回的所有相關聯標籤的每一個發行項每一個資料列。 使用下列查詢： 
-```tsql
+```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
 LEFT JOIN dbo.ArticleTag AS t 
@@ -160,7 +160,7 @@ GROUP BY a.articleId, title;
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 產生的每個擁有電子郵件的清單
 
 下列查詢會尋找員工的電子郵件地址，並依城鎮分組： 
-```tsql
+```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
 GROUP BY town; 
@@ -178,7 +178,7 @@ GROUP BY town;
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. 產生已排序的清單，每個擁有電子郵件   
    
 類似於上一個範例，下列查詢會尋找員工的電子郵件地址、 城鎮，將它們分組和字母順序排列的電子郵件：   
-```tsql
+```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
 FROM dbo.Employee 
@@ -193,7 +193,7 @@ GROUP BY town;
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
 
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 
 [字串函數 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
 

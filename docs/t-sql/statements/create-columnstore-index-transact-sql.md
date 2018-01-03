@@ -34,11 +34,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,8 +46,11 @@ ms.lasthandoff: 11/17/2017
 將資料列存放區資料表轉換成叢集資料行存放區索引，或建立非叢集資料行存放區索引。 有效率地對 OLTP 工作負載執行即時作業分析，或是改善資料倉儲工作負載的資料壓縮和查詢效能，請使用資料行存放區索引。  
   
 > [!NOTE]  
->  從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，您可以建立資料表作為叢集資料行存放區索引。   不再需要先建立資料列存放區資料表，然後將它轉換成叢集資料行存放區索引。  
-  
+> 從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，您可以建立資料表作為叢集資料行存放區索引。   不再需要先建立資料列存放區資料表，然後將它轉換成叢集資料行存放區索引。  
+
+> [!TIP]
+> 索引設計指導方針的相關資訊，請參閱[SQL Server 索引設計指南](../../relational-databases/sql-server-index-design-guide.md)。
+
 略過的範例：  
 -   [將資料列存放區資料表轉換為資料行存放區範例](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [非叢集資料行存放區索引的範例](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
@@ -257,7 +260,7 @@ ON
   
 在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 ON **"**預設**"**或 ON **[**預設**]**。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="GenRemarks"></a>一般備註  
@@ -272,7 +275,7 @@ ON
 - INSERT、UPDATE、DELETE 或 MERGE 作業修改已篩選之索引中的資料。  
 - 篩選的索引用於查詢最佳化工具產生查詢計劃。  
   
-    |Set 選項|必要值|預設伺服器值|預設值<br /><br /> OLE DB 與 ODBC 值|預設值<br /><br /> DB-Library 值|  
+    |Set 選項|必要值|預設伺服器值|預設<br /><br /> OLE DB 與 ODBC 值|預設<br /><br /> DB-Library 值|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -299,20 +302,20 @@ ON
 **資料行存放區索引中的每個資料行必須是下列的一般商務資料類型的其中一個：** 
 -   datetimeoffset [(  *n*  )]  
 -   datetime2 [(  *n*  )]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   date  
+-   日期  
 -   時間 [(  *n*  )]  
 -   float [(  *n*  )]  
 -   實際 [(  *n*  )]  
 -   小數 [(*精確度*[ *，標尺*] **)** ]
 -   數字 [(*精確度*[ *，標尺*] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
+-   SMALLMONEY  
+-   BIGINT  
+-   ssNoversion  
 -   smallint  
--   tinyint  
+-   TINYINT  
 -   bit  
 -   nvarchar [(  *n*  )] 
 -   nvarchar （max) (適用於[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和 Azure SQL Database premium 定價層，僅限叢集資料行存放區索引中)   

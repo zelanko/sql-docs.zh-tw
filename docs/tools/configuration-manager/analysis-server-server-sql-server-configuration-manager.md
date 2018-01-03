@@ -3,7 +3,7 @@ title: "Analysis Server&lt;伺服器&gt;（SQL Server 組態管理員） |Micros
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6cef690f4e9a0c034d0564e7938ce56a34811b10
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f13670410d9e6e0032b0fd49521658bb7906d028
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analysis-server-ltservergt-sql-server-configuration-manager"></a>Analysis Server&lt;伺服器&gt;（SQL Server 組態管理員）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]這是支援 Microsoft 服務[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 若要檢視服務的屬性，請以滑鼠右鍵按一下詳細資料窗格中的服務，然後按一下 **[屬性]**。  

@@ -3,7 +3,7 @@ title: "dta 公用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dta-utility"></a>dta 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Dta**公用程式是 Database Engine Tuning Advisor 的命令提示字元版本。 **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  指定 **dta** 應該在建議中包含的實體設計結構類型。 下表列出並說明這個引數所能指定的值。 如果未指定任何值， **dta** 將使用預設的 **-fa****IDX**。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |IDX_IV|索引和索引檢視表。|  
 |IDX|只有索引。|  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  指定 **dta** 在產生建議時，必須保留的現有實體設計結構。 下表列出並說明這個引數所能指定的值：  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |無|無現有結構。|  
 |ALL|所有現有結構。|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  指定是否應該分割 **dta** 所提出的新實體設計結構 (索引和索引檢視表) 及其分割方式。 下表列出並說明這個引數所能指定的值：  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |無|沒有資料分割。|  
 |FULL|完整的資料分割 (選擇這個項目，可以增進效能)。|  
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  指定是否在線上建立實體設計結構。 下表列出和描述這個引數所能指定的值：  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |OFF|不能在線上建立任何建議的實體設計結構。|  
 |ON|可以在線上建立所有建議的實體設計結構。|  
@@ -285,7 +285,7 @@ dta -iq -I 48
  **-of** *output_script_file_name*  
  指定 **dta** 將建議以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼形式，寫入指定的檔案名稱與目的地。  
   
- 您可以搭配此選項來使用 **-F** 。 請確定檔案名稱沒有重複，特別是當您也正在使用 **-or** 和 **-ox**時。  
+ 您可以搭配此選項來使用 **-F**。 請確定檔案名稱沒有重複，特別是當您也正在使用 **-or** 和 **-ox**時。  
   
  **-or** *output_xml_report_file_name*  
  指定 **dta** 將建議以 XML 格式寫入輸出報表。 如果提供了檔案名稱，建議便會寫入該目的地。 否則， **dta** 將使用該工作階段名稱來產生檔案名稱，並將其寫入目前的目錄。  
@@ -306,7 +306,7 @@ dta -iq -I 48
  **-rl** *analysis_report_list*  
  指定要產生的分析報表清單。 下表列出這個引數所能指定的值：  
   
-|值|報表|  
+|ReplTest1|報表|  
 |-----------|------------|  
 |ALL|所有分析報表|  
 |STMT_COST|陳述式成本報表|  
@@ -388,7 +388,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
   
  **C.限制微調查詢的數目**  
   
- 這個範例會將從 orders_wkld.sql 檔讀取的查詢數目限制為最大值 10 (`-n 10`)，或執行 15 分鐘 (`-A 15`)，兩者中先出現者優先。 若要確定 10 項查詢全都得到微調，請利用 `-A 0`來指定無限微調時間。 如果時間很重要，請依照這個範例所顯示，利用 `-A` 引數指定微調所能使用的分鐘數來指定適當的時間限制。  
+ 這個範例會將從 orders_wkld.sql 檔讀取的查詢數目限制為最大值 10 (`-n 10`)，或執行 15 分鐘 (`-A 15`)，兩者中先出現者優先。 若要確定 10 項查詢全都得到微調，請利用 `-A 0` 來指定無限微調時間。 如果時間很重要，請依照這個範例所顯示，利用 `-A` 引數指定微調所能使用的分鐘數來指定適當的時間限制。  
   
 ```  
 dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
@@ -420,7 +420,7 @@ AdventureWorks2012.Production.Product  2000000
 dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [命令提示字元公用程式參考 &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   

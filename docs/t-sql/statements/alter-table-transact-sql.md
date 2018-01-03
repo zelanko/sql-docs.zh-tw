@@ -64,11 +64,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 596e524d009f62439e5b8205603040369384fc79
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -543,7 +543,7 @@ WITH CHECK | WITH NOCHECK
   
  *max_degree_of_parallelism*可以是下列值之一：  
   
- 1  
+ @shouldalert  
  隱藏平行計畫的產生。  
   
  \>1  
@@ -765,7 +765,7 @@ TABLE
   
  **為資料表啟用 Stretch Database**  
   
- 當您啟用 Stretch 的資料表指定`ON`，您也必須指定`MIGRATION_STATE = OUTBOUND`開始移轉資料的立即或`MIGRATION_STATE = PAUSED`延後資料移轉。 預設值是`MIGRATION_STATE = OUTBOUND`。 如需啟用 Stretch 的資料表的詳細資訊，請參閱[針對資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
+ 當您啟用 Stretch 的資料表指定`ON`，您也必須指定`MIGRATION_STATE = OUTBOUND`開始移轉資料的立即或`MIGRATION_STATE = PAUSED`延後資料移轉。 預設值是 `MIGRATION_STATE = OUTBOUND`。 如需啟用 Stretch 的資料表的詳細資訊，請參閱[針對資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
   
  **必要條件**。 為資料表啟用 「 延展 」 之前，您必須在伺服器和資料庫上啟用 Stretch。 如需詳細資訊，請參閱 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。  
   
@@ -777,7 +777,7 @@ TABLE
   
 -   若要針對資料表停用 Stretch，並將資料表的遠端資料從 Azure複製回 SQL Server，請執行下列命令。 無法取消此命令。  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
@@ -788,7 +788,7 @@ ALTER TABLE \<table name>
   
 -   若要針對資料表停用 Stretch 並放棄遠端資料，請執行下列命令。  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
@@ -1764,7 +1764,7 @@ WITH
   
 |資料分割|具有資料嗎？|界限的範圍|  
 |---------------|---------------|--------------------|  
-|1|是|OrderDate < ' 2004年-01-01'|  
+|@shouldalert|是|OrderDate < ' 2004年-01-01'|  
 |2|是|'2004年-01-01' < = OrderDate <' 2005年-01-01'|  
 |3|是|'2005年-01-01' < = OrderDate <' 2006年-01-01'|  
 |4|是|'2006年-01-01'< = OrderDate <' 2007年-01-01'|  
@@ -1845,7 +1845,7 @@ ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');
 -   資料分割 2 （空白）: '2004年-01-01' <' 2005年-01-01'  
 -   分割區 3 （空白）: ' 2005年-01-01' < = OrderDate  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

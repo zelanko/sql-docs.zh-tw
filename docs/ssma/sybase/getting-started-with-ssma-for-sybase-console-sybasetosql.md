@@ -3,7 +3,7 @@ title: "開始使用 SSMA for Sybase 主控台 (SybaseToSQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d2c78871f1fdd0da18877741a198b2e11f1fbb5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 689cd4339d926cd4f8e20c799a0c074adb29b81f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>開始使用 SSMA for Sybase 主控台 (SybaseToSQL)
 本章節描述的程序啟動並開始使用 SSMA for Sybase 主控台應用程式。 此處也列出所使用的慣例典型的 SSMA 主控台輸出視窗中。  
@@ -66,7 +66,7 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
   
 色彩解譯主控台輸出會出現在下表中：  
   
-|Color|Description|  
+|Color|描述|  
 |---------|---------------|  
 |紅色|執行期間發生嚴重錯誤|  
 |灰色|日期和時間戳記，訊息給使用者|  

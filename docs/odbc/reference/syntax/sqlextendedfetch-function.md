@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: de06acf9fac735e5929d5361f0a442a7e9536fe0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 100b877fb6adc71b0f42dd41a0bc8a8d437b1d1a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 函式
 **一致性**  
@@ -76,7 +76,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="diagnostics"></a>診斷  
  當**SQLExtendedFetch**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以藉由呼叫取得相關聯的 SQLSTATE 值**SQLError**。 下表列出通常所傳回的 SQLSTATE 值**SQLExtendedFetch** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。 如果在單一資料行，就會發生錯誤**SQLGetDiagField**可以使用呼叫*Sqlgetdiagfield* SQL_DIAG_COLUMN_NUMBER 來判斷發生錯誤; 資料行的和**SQLGetDiagField**可以使用呼叫*Sqlgetdiagfield*的 SQL_DIAG_ROW_NUMBER 來判斷包含該資料行的資料列。  
   
-|SQLSTATE|錯誤|Description|  
+|SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|字串或資料行所傳回的二進位資料會導致非空白的字元或二進位資料為非 NULL 的截斷。 如果是字串值，它就是向右截斷。 如果它是數字的值，已截斷的數字的小數部分。  （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -142,6 +142,6 @@ SQLRETURN SQLExtendedFetch(
 |定位資料指標，重新整理此資料列集中，或更新或刪除在結果集中的資料|[SQLSetPos 函式](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |設定陳述式屬性|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

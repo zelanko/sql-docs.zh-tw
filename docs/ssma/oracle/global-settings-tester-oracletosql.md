@@ -1,7 +1,7 @@
 ---
 title: "全域設定 （測試人員） (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8f539352279a21b6f736616c5425b4f24856cb03
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4aa9d87eefc0b268fbd8fca9cabf26e7cd27b663
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-tester-oracletosql"></a>全域設定 （測試人員） (OracleToSQL)
 使用的測試人員頁面**通用設定**對話方塊來指定設定 SSMA 軟體測試人員。  

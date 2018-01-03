@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: da7c61f339c0d8d66c8c0bcd00514a6ecf58286f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d362be9a5cf9e3b60f30760073ec4ea30288a61
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_db_file_space_usage**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|資料庫識別碼。|  
 |file_id|**smallint**|檔案識別碼。<br /><br /> file_id 會對應至中的 file_id [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)和中的 fileid [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)。|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>判斷 tempdb 的可用空間量  
  下列查詢會傳回頁數和總可用空間的總數 (mb) 使用中的所有檔案在**tempdb**。  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 SELECT SUM(unallocated_extent_page_count) AS [free pages],   
@@ -112,7 +112,7 @@ FROM sys.dm_db_file_space_usage;
 ### <a name="determining-the-amount-of-space-used-by-user-objects"></a>判斷使用者物件使用的空間量  
  下列查詢會傳回 tempdb 中使用者物件使用的總頁數和使用者物件使用的總空間。  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 SELECT SUM(user_object_reserved_page_count) AS [user object pages used],  
@@ -120,7 +120,7 @@ SELECT SUM(user_object_reserved_page_count) AS [user object pages used],
 FROM sys.dm_db_file_space_usage;
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_db_task_space_usage &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   

@@ -3,7 +3,7 @@ title: "重新執行 TRANSACT-SQL 指令碼 (SQL Server Profiler) |Microsoft 文
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1b9de32b90da72311b4d239d9b734bd97f8b60c5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 337569e89216611f972b0ac2305b42cc5c519826
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>重新執行 Transact-SQL 指令碼 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]當測試效能問題的可能方案時，使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]重新執行[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼，並比較變更前後的效能。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [重新執行追蹤](../../tools/sql-server-profiler/replay-traces.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

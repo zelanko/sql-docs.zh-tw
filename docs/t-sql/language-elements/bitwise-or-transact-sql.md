@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 47d4b177e93d028ccf0afffec6a9480928e11cb0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 65a39571e4cd02b9bbb20d42463301d38d0f8836
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (位元 OR) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,7 @@ expression | expression
 ## <a name="examples"></a>範例  
  下列範例會建立具有資料表**int**資料類型，以顯示原始值，並將資料表放入一個資料列。  
   
-```tsql  
+```sql  
 CREATE TABLE bitwise  
 (   
  a_int_value int NOT NULL,  
@@ -103,7 +103,7 @@ GO
 0000 0000 1110 1011  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [位元運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
  [&#124; = &#40;位元 OR 指派 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   

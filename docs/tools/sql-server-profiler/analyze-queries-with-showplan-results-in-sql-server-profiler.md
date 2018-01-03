@@ -3,7 +3,7 @@ title: "使用在 SQL Server Profiler SHOWPLAN 結果分析查詢 |Microsoft 文
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7cf597a585e7fa47f63a7680fb24d76f4bff0331
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aaa8f844875745aff792771df4085e59f7808a54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以將 Showplan 事件類別加入追蹤定義中，會導致[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]蒐集並顯示在追蹤中的查詢計畫資訊。 您也可以從追蹤所收集的其他事件中擷取顯示計畫事件，並將這些顯示計畫事件儲存在個別的 XML 檔案中。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 |**Showplan XML For Query Compile**|顯示查詢進行編譯時的查詢計畫。 如需詳細資訊，請參閱 [Showplan XML for Query Compile 事件類別](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)。|  
 |**Showplan XML Statistics Profile**|所顯示的查詢計畫，含有 XML 格式的完整執行時間詳細資料。 例如，此事件類別會擷取執行中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中，每個運算子所通過的資料列數。 如需詳細資訊，請參閱 [Showplan XML Statistics Profile 事件類別](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Performance 事件類別目錄](../../relational-databases/event-classes/performance-event-category.md)  
   
   

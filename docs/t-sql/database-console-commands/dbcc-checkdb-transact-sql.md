@@ -1,7 +1,7 @@
 ---
 title: "DBCC CHECKDB (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 09/21/2016
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4a5ab88b068d32e9a40f4556564018a5f806608
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,10 +132,7 @@ DBCC CHECKDB
 >  若要修復錯誤，我們建議您從備份中還原。 修復作業並不考慮資料表或資料表之間的任何條件約束。 如果指定的資料表涉及一或多項條件約束，建議您在修復作業之後，執行 DBCC CHECKCONSTRAINTS。 如果您必須使用 REPAIR，請執行不含修復選項的 DBCC CHECKDB 來尋找要使用的修復層級。 如果您使用 REPAIR_ALLOW_DATA_LOSS 層級，建議您在搭配這個選項執行 DBCC CHECKDB 之前，先備份資料庫。    
     
  ALL_ERRORMSGS  
- 根據每個物件顯示所有報告的錯誤。 系統預設會顯示所有錯誤訊息。 指定或省略這個選項沒有任何作用。 錯誤訊息會依照物件識別碼，從產生的訊息除外[tempdb 資料庫](../../relational-databases/databases/tempdb-database.md)。  
-    
-> [!NOTE] 
-> 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，傳回的最大錯誤訊息數目是 1000。 當您指定 ALL_ERRORMSGS 時，我們建議您藉由執行 DBCC 命令[sqlcmd 公用程式](../../tools/sqlcmd-utility.md)或藉由排程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式作業來執行命令，並將輸出導向至檔案。 執行任何其中一種方式，都可確保執行一次命令將能回報所有錯誤訊息。    
+ 根據每個物件顯示所有報告的錯誤。 系統預設會顯示所有錯誤訊息。 指定或省略這個選項沒有任何作用。 錯誤訊息會依照物件識別碼，從產生的訊息除外[tempdb 資料庫](../../relational-databases/databases/tempdb-database.md)。     
 
  EXTENDED_LOGICAL_CHECKS  
  如果相容性層級為 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高，則會針對索引檢視表、XML 索引和空間索引 (如果有的話) 執行邏輯一致性檢查。  
@@ -224,10 +221,10 @@ DBCC CHECKDB 使用內部資料庫快照集來維護執行這些檢查時所需�
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 錯誤訊息    
 DBCC CHECKDB 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中會寫入一則訊息。 如果 DBCC 命令執行成功，該訊息將指出命令已順利完成，並顯示命令執行的時間量。 如果 DBCC 命令由於發生錯誤而在完成檢查之前停止執行，則訊息會指出命令已經結束，並顯示狀態值以及命令執行的時間量。 下表列出並描述可以包含在訊息中的狀態值。
     
-|State|Description|    
+|State|描述|    
 |-----------|-----------------|    
 |0|已引發錯誤號碼 8930。 這表示中繼資料中的損毀導致 DBCC 命令結束。|    
-|1|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|    
+|@shouldalert|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|    
 |2|修復緊急模式資料庫期間發生失敗。|    
 |3|這表示中繼資料中的損毀導致 DBCC 命令結束。|    
 |4|偵測到判斷提示或存取違規。|    
@@ -398,7 +395,7 @@ DBCC CHECKDB WITH NO_INFOMSGS;
 GO    
 ```    
     
-## <a name="see-also"></a>請參閱＜    
+## <a name="see-also"></a>請參閱    
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [檢視資料庫快照集的疏鬆檔案大小 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  

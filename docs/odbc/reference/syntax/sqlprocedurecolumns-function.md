@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 03b9d05021f44df544715823fb984d72d87bdce7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c5d5ceb9f955d8eb583181d789847eeb79d1b0a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns 函數
 **一致性**  
@@ -93,7 +93,7 @@ SQLRETURN SQLProcedureColumns(
 ## <a name="diagnostics"></a>診斷  
  當**SQLProcedureColumns**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType*利用 SQL_HANDLE_STMT 的和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLProcedureColumns** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 位於驅動程式傳回的 Sqlstate 的說明管理員。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|Description|  
+|SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
@@ -158,7 +158,7 @@ SQLRETURN SQLProcedureColumns(
   
 |資料行名稱|資料行編號|資料類型|註解|  
 |-----------------|-------------------|---------------|--------------|  
-|PROCEDURE_CAT (ODBC 2.0)|1|Varchar|程序類別目錄名稱。如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些程序，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 沒有目錄這些程序。|  
+|PROCEDURE_CAT (ODBC 2.0)|@shouldalert|Varchar|程序類別目錄名稱。如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些程序，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 沒有目錄這些程序。|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|程序結構描述名稱。如果不適用於資料來源，則為 NULL。 如果驅動程式支援的結構描述對於某些程序，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 並沒有結構描述這些程序。|  
 |PROCEDURE_NAME (ODBC 2.0)|3|Varchar 不是 NULL|程序名稱。 沒有名稱的程序會傳回空字串。|  
 |COLUMN_NAME (ODBC 2.0)|4|Varchar 不是 NULL|程序的資料行名稱。 驅動程式會傳回空字串的程序資料行沒有名稱。|  
@@ -191,6 +191,6 @@ SQLRETURN SQLProcedureColumns(
 |提取資料的區塊或捲動結果集|[SQLFetchScroll 函式](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |傳回資料來源中的程序的清單|[SQLProcedures 函式](../../../odbc/reference/syntax/sqlprocedures-function.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

@@ -60,11 +60,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c678854df4be6f4d228ad3c02edd8ee29bc9d0e8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---query"></a>提示 (TRANSACT-SQL)-查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -363,7 +363,7 @@ GO
 ### <a name="c-using-maxrecursion"></a>C. 使用 MAXRECURSION  
  您可以利用 MAXRECURSION 來防止形式不良的遞迴通用資料表運算式進入無限迴圈。 下列範例刻意建立無限迴圈，並使用 MAXRECURSION 提示限制為兩個的遞迴層級數目。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
-```tsql  
+```sql  
 --Creates an infinite loop  
 WITH cte (CustomerID, PersonID, StoreID) AS  
 (  
@@ -553,7 +553,7 @@ OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DIS
 GO  
 ```  
     
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_control_plan_guide &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  

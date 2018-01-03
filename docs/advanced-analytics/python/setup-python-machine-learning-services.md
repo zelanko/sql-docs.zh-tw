@@ -1,10 +1,12 @@
 ---
 title: "安裝和設定 Python 機器學習服務 |Microsoft 文件"
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-non-specified
+ms.date: 12/20/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,15 +14,15 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: bc9cfe7bf885c99ccfe487e10e001ff36f68ee86
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: bea554929e222b98788524203ed060c9b5e0ce17
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>設定 Python 機器學習服務 （資料庫）
 
-  安裝 Python 藉由執行所需的元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈，並遵循本主題中所述的互動式提示。
+  本文說明如何安裝 Python 藉由執行所需的元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈中，並遵循互動式提示。
 
 ## <a name="machine-learning-options-in-sql-server-setup"></a>機器學習中 SQL Server 安裝程式選項
 
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/01/2017
 
 已完成安裝之後，重新設定為允許使用外部可執行檔的指令碼執行的執行個體。 您可能需要進行其他變更到伺服器，以支援機器學習工作負載。 組態變更通常需要重新啟動的執行個體或啟動控制板服務重新啟動。
 
-### <a name="prerequisites"></a>必要條件
+### <a name="prerequisites"></a>Prerequisites
 
 + 需要 SQL Server 2017。 舊版的 SQL Server 上不支援 Python 整合。
 + 請務必安裝 database engine。 SQL Server 執行個體，才能執行 Python 指令碼中的資料庫。
@@ -40,11 +42,12 @@ ms.lasthandoff: 12/01/2017
   因應措施，您可以使用複寫，將必要資料表複製到使用 Python 服務的獨立 SQL Server 執行個體。 或者，您可以安裝機器學習服務與 Python 的服務使用的 AlwaysOn 設定，而且可用性群組的一部分的獨立電腦上。
 
 + SQL Server 執行個體使用 Anaconda 發佈其本身複本，則可能與其他的 Python 版本的並存安裝。 不過，執行 SQL Server 外部的 SQL Server 電腦使用 Python 程式碼可能會導致各種問題：
-    + 您使用不同的程式庫和其他可執行檔，並比您執行 SQL Server 中時，取得不同的結果。
-    + 在 外部程式庫中執行 Python 指令碼無法受 SQL Server，導致資源爭用的情況。
+    
+    - 您使用不同的程式庫和其他可執行檔，並比您執行 SQL Server 中時，取得不同的結果。
+    - 在 外部程式庫中執行 Python 指令碼無法受 SQL Server，導致資源爭用的情況。
   
 > [!IMPORTANT]
-> 安裝程式完成後，請務必在完成本主題中所述的其他後置組態步驟。 其中包括啟用 SQL Server 以使用外部指令碼，以及新增 SQL Server 來代表您執行 Python 作業所需的帳戶。
+> 安裝程式完成之後，請務必完成本文中所述的其他後置組態步驟。 這些步驟包括啟用 SQL Server 以使用外部指令碼，並加入所需的 SQL Server，代替您執行 Python 工作帳戶。
 
 ### <a name="unattended-installation"></a>自動安裝
 
@@ -103,7 +106,12 @@ ms.lasthandoff: 12/01/2017
 
 ##  <a name="bkmk_enableFeature"></a>步驟 2： 啟用執行 Python 指令碼
 
-1. 開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果未安裝，您可以執行一次，若要開啟下載連結，並將它安裝 SQL Server 安裝精靈。
+1. 開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
+
+    > [!TIP]
+    > 您可以下載並安裝適當版本，從這個頁面：[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+    > 
+    > 您也可以試用預覽版本的[SQL 作業 Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)，可支援 SQL Server 查詢和管理工作。
   
 2. 連接到機器學習服務，安裝的執行個體，並執行下列命令：
 
@@ -120,7 +128,7 @@ ms.lasthandoff: 12/01/2017
     RECONFIGURE WITH OVERRIDE
     ```
     
-    如果您已啟用的 R 語言功能，您不需要執行第二次重新設定 Python。 基礎的擴充性平台支援這兩種語言。
+    如果您已啟用的 R 語言功能，不會執行第二次重新設定 Python。 基礎的擴充性平台支援這兩種語言。
 
 4. 重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 SQL Server 服務。 也會自動重新啟動 SQL Server 服務重新啟動相關[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]服務。
 

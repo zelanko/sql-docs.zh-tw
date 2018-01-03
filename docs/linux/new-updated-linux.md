@@ -15,11 +15,11 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: 4adfcb675e52b5b73bd4dcc4867bf79350a26d52
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 030f30580b0ddb02da2a67990d0c58acf15236c9
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>新的與最近的更新： SQL Server on Linux 的文件
 
@@ -33,7 +33,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 
-- *日期範圍的更新：* &nbsp; **2017年-09-28** &nbsp; -到- &nbsp; **2017年-12-02**
+- *更新的日期範圍：* &nbsp; **2017-09-28** &nbsp; 到 &nbsp; **2017-12-02**
 - *主旨區域：* &nbsp; **Microsoft SQL Server on Linux**。
 
 
@@ -102,7 +102,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 ### <a name="1-nbsp-run-the-sql-server-2017-container-image-with-dockerquickstart-install-connect-dockermd"></a>1.&nbsp;[執行 SQL Server 2017 容器映像使用 Docker](quickstart-install-connect-docker.md)
 
-*更新日期︰ 2017年-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([下一步](#TitleNum_2))
+*更新日期：2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([下一個](#TitleNum_2))
 
 <!-- Source markdown line 261.  ms.author= jroth.  -->
 
@@ -210,7 +210,7 @@ docker rm sql1
 
 | |高可用性 （& s) </br> 資料保護 | 資料保護
 |:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|@shouldalert
 |主要複本中斷 | 自動容錯移轉。 新的主要是 R / W | 自動容錯移轉。 新的主要不適用於使用者交易。
 |次要複本中斷 | 主要是 R/W，公開執行資料遺失 （如果主要失敗，且無法復原）。 如果主要沒有自動容錯移轉也會失敗。 | 主要不適用於使用者交易。 沒有任何容錯移轉至主要複本也會失敗。
 |組態的唯一複本中斷 | 主要是 R / W 如果主要沒有自動容錯移轉也會失敗。 | 主要是 R / W 如果主要沒有自動容錯移轉也會失敗。
@@ -256,7 +256,7 @@ docker rm sql1
 **<a id="production"></a>執行實際執行的容器映像**
 
 
-快速入門教學課程中的，如上一節中會執行從 Docker Hub 免費的 SQL Server 的開發人員版本。 如果您想要執行實際執行的容器映像，例如 Enterprise、 Standard 或 Web edition，仍適用於大部分的資訊。 不過，有幾項差異，此處所述。
+快速入門中上一節會從 Docker Hub 執行免費的 SQL Server 的開發人員版本。 如果您想要執行實際執行的容器映像，例如 Enterprise、 Standard 或 Web edition，仍適用於大部分的資訊。 不過，有幾項差異，此處所述。
 
 - 如果您有有效的授權，可以只在生產環境中使用 SQL Server。 您可以取得免費的 SQL Server Express 生產授權[這裡](https://go.microsoft.com/fwlink/?linkid=857693)。 SQL Server Standard 和 Enterprise Edition 授權都是透過[Microsoft 大量授權](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx)。
 
@@ -272,7 +272,7 @@ docker rm sql1
 
    1. 接著，您必須取得免費的開發人員 Docker 存放區上的容器映像。 移至[https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)，按一下 **繼續簽出**，並遵循指示。
 
-   1. 檢閱需求，和執行程序，在 [快速入門教學課程--快速入門-安裝-連線-docker.md）。 但是，有兩個差異。 您必須先提取映像**存放區/microsoft/mssql-伺服器-linux:\<標記名稱\>**從 Docker 存放區。 您必須指定與您生產環境版本**MSSQL_PID**環境變數。 下列範例會示範如何執行 Enterprise edition 的最新的 SQL Server 2017 容器映像：
+   1. 檢閱需求和程序執行，[快速入門-快速入門-安裝-連線-docker.md）。 但是，有兩個差異。 您必須先提取映像**存放區/microsoft/mssql-伺服器-linux:\<標記名稱\>**從 Docker 存放區。 您必須指定與您生產環境版本**MSSQL_PID**環境變數。 下列範例會示範如何執行 Enterprise edition 的最新的 SQL Server 2017 容器映像：
 
 
 
@@ -506,7 +506,7 @@ docker rm sql1
 
 ### <a name="9-nbsp-troubleshoot-sql-server-on-linuxsql-server-linux-troubleshooting-guidemd"></a>9.&nbsp;[疑難排解 SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)
 
-*更新日期︰ 2017年-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([先前](#TitleNum_8))
+*更新日期：2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_8))
 
 <!-- Source markdown line 125.  ms.author= anshrest.  -->
 
@@ -569,26 +569,26 @@ docker rm sql1
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
 
-- [新 + 更新 (3 + 14): **Advanced Analytics sql**文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章 + 更新文章 (3+14)：**SQL 的進階分析**文件](../advanced-analytics/new-updated-advanced-analytics.md)
 - [新文章 + 更新文章 (1+0)：**Analysis Services for SQL** 文件](../analysis-services/new-updated-analysis-services.md)
-- [新 + 更新 (87 + 0): **Analytics Platform System sql**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新 + 更新 (5 + 4):**連接到 SQL**文件](../connect/new-updated-connect.md)
-- [新 + 更新 (0 + 1): **sql 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
-- [新 + 更新 (2 + 2): **sql Integration Services**文件](../integration-services/new-updated-integration-services.md)
-- [新 + 更新 (10 + 9): **sql Linux**文件](../linux/new-updated-linux.md)
-- [新 + 更新 (2 + 4):**關聯式資料庫供 SQL**文件](../relational-databases/new-updated-relational-databases.md)
-- [新 + 更新 (4 + 2): **Reporting Services SQL**文件](../reporting-services/new-updated-reporting-services.md)
-- [新 + 更新 (0 + 1):**範例 sql**文件](../sample/new-updated-sample.md)
-- [新 + 更新 (21 + 0): **SQL 作業 Studio**文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新 + 更新 (5 + 1): **Microsoft SQL Server**文件](../sql-server/new-updated-sql-server.md)
+- [新文章 + 更新文章 (87+0)：**SQL 的分析平台系統**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新文章 + 更新文章 (5+4)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
+- [新文章 + 更新文章 (0+1)：**SQL 的資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新文章 + 更新文章 (2+2)：**SQL 的 Integration Services** 文件](../integration-services/new-updated-integration-services.md)
+- [新文章 + 更新文章 (10+9)：**SQL 適用的 Linux** 文件](../linux/new-updated-linux.md)
+- [新文章 + 更新文章 (2+4)：**SQL 的關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
+- [新文章 + 更新文章 (4+2)：**SQL 的 Reporting Services** 文件](../reporting-services/new-updated-reporting-services.md)
+- [新文章 + 更新文章 (0+1)：**SQL 範例**文件](../sample/new-updated-sample.md)
+- [新文章 + 更新文章 (21+0)：**SQL Operations Studio** 文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章 + 更新文章 (5+1)：**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
 - [新文章 + 更新文章 (0+1)：**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
-- [新 + 更新 (1 + 0): **SQL Server 移轉小幫手 (SSMA)**文件](../ssma/new-updated-ssma.md)
+- [新文章 + 更新文章 (1+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新文章 + 更新文章 (0+1)：**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
-- [新 + 更新 (0 + 2): **TRANSACT-SQL**文件](../t-sql/new-updated-t-sql.md)
+- [新文章 + 更新文章 (0+2)：**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
-- [新 + 更新 (0 + 0):**資料移轉小幫手 (DMA) sql**文件](../dma/new-updated-dma.md)
+- [新文章 + 更新文章 (0+0)：**SQL 資料移轉小幫手 (DMA)** 文件](../dma/new-updated-dma.md)
 - [新文章 + 更新文章 (0+0)：**ActiveX Data Objects (ADO) for SQL** 文件](../ado/new-updated-ado.md)
 - [新文章 + 更新文章 (0+0)：**Data Quality Services for SQL** 文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 資料採礦延伸模組 (DMX)** 文件](../dmx/new-updated-dmx.md)

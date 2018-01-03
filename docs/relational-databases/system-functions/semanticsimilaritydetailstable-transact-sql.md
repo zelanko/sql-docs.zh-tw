@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f7ea0123e9d5c86bdd6b3983d0b6c20ceed59c0e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c602d6119bba1b828c9c68853c2ed60249e33c60
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 SEMANTICSIMILARITYDETAILSTABLE  
     (  
     table,  
@@ -75,7 +75,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>傳回的資料表  
  下表說明此資料列集函式傳回的主要片語相關資訊。  
   
-|Column_name|類型|Description|  
+|Column_name|類型|描述|  
 |------------------|----------|-----------------|  
 |**主要片語**|**NVARCHAR**|來源文件與比對文件中出現類似度的主要片語。|  
 |**分數**|**實數**|此主要片語與兩份文件中所有其他類似片語之關聯性的相對值。<br /><br /> 此值是 [0.0, 1.0] 範圍內的小數值，分數愈高表示權重愈高。1.0 為滿分。|  
@@ -90,7 +90,7 @@ SEMANTICSIMILARITYDETAILSTABLE
   
 -   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要建立全文檢索和語意索引之基底資料表的 SELECT 權限。  
@@ -98,7 +98,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="examples"></a>範例  
  下列範例會擷取所指定候選人之間相似度分數最高的 5 個主要片語**HumanResources.JobCandidate** AdventureWorks2012 範例資料庫的資料表。 @CandidateId和@MatchedID變數代表來自全文檢索索引之索引鍵資料行的值。  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROMSEMANTICSIMILARITYDETAILSTABLE  
     (  

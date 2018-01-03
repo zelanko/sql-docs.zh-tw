@@ -1,7 +1,7 @@
 ---
 title: "產生報表 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1cd4e49126faf6816575c21f1b87c312c6d7a48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77bca9dfb3bb5ff1f2d12fc112ae39a4dda4ed15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generating-reports-db2tosql"></a>產生報表 (DB2ToSQL)
 使用命令來執行特定活動的報表會在物件樹狀目錄層級的 SSMA 主控台產生。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
     ||||  
     |-|-|-|  
     |**Sl。[否]。**|**Command**|**報表標題**|  
-    |1|產生評估報告|AssessmentReport&lt;n&gt;。XML|  
+    |@shouldalert|產生評估報告|AssessmentReport&lt;n&gt;。XML|  
     |2|轉換結構描述|SchemaConversionReport&lt;n&gt;。XML|  
     |3|移轉資料|DataMigrationReport&lt;n&gt;。XML|  
     |4|轉換 sql 陳述式|ConvertSQLReport&lt;n&gt;。XML|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/05/2017
     ||||  
     |-|-|-|  
     |**Sl。[否]。**|**命令和參數**|**輸出說明**|  
-    |1|verbose ="false"|產生之活動的摘要的報告。|  
+    |@shouldalert|verbose ="false"|產生之活動的摘要的報告。|  
     |2|verbose ="true"|產生每個活動的摘要和詳細狀態報告。|  
   
     > [!NOTE]  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/05/2017
     ||||  
     |-|-|-|  
     |**Sl。[否]。**|**命令和參數**|**輸出說明**|  
-    |1|報告錯誤 ="false"|沒有詳細資料發生錯誤 / 警告 / 資訊訊息。|  
+    |@shouldalert|報告錯誤 ="false"|沒有詳細資料發生錯誤 / 警告 / 資訊訊息。|  
     |2|報告錯誤 ="true"|詳細的錯誤 / 警告 / 資訊訊息。|  
   
     > [!NOTE]  

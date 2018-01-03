@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 410d3c7c51e1b5fc0824da8c5d3f788ccb77f104
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fa96adb2d8a3cf5430ca09b636007887b7863df1
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd 和 bcp 的 SQL Server 命令列工具 Linux 上安裝
 
@@ -259,9 +259,9 @@ brew install --no-sandbox mssql-tools
     dpkg -I mssql-tools_14.0.5.0-1_amd64.deb | grep "Depends:"
     ```
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
-如需如何使用的範例**sqlcmd**若要連接到 SQL Server，並建立資料庫，請參閱下列快速的其中一個開始教學課程：
+如需如何使用的範例**sqlcmd**若要連接到 SQL Server，並建立資料庫，請參閱下列快速入門：
 
 - [Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)

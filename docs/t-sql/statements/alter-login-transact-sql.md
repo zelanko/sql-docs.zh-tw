@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0bc7681bdb3404f3b6114d0725cbed7ef8f388e9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fc5c2a17e3d75cb743c6c0e3a335d911e102de0e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -262,28 +262,28 @@ ALTER LOGIN login_name
 ### <a name="a-enabling-a-disabled-login"></a>A. 啟用已停用的登入  
  下列範例會啟用登入 `Mary5`。  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 ENABLE;  
 ```  
   
 ### <a name="b-changing-the-password-of-a-login"></a>B. 變更登入的密碼  
  下列範例會將登入 `Mary5` 的密碼變更為增強式密碼。  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
   
 ### <a name="c-changing-the-name-of-a-login"></a>C. 變更登入的名稱  
  下列範例會將登入 `Mary5` 的名稱變更為 `John2`。  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
 ### <a name="d-mapping-a-login-to-a-credential"></a>D. 將登入對應到認證  
  下列範例會將登入 `John2` 對應到認證 `Custodian04`。  
   
-```tsql  
+```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
@@ -293,7 +293,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
  
 **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5  
 ADD CREDENTIAL EKMProvider1;  
 GO  
@@ -303,7 +303,7 @@ GO
  若要解除鎖定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，請執行下列陳述式 (以您要的帳戶密碼取代其中的 ****)。  
   
   
-```tsql  
+```sql  
 ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;  
 
 GO  
@@ -311,7 +311,7 @@ GO
   
  若要在不變更密碼的情況下解除鎖定登入，請先關閉再開啟 CHECK_POLICY。  
   
-```tsql  
+```sql  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;  
 GO  
@@ -322,7 +322,7 @@ GO
   
 **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```tsql  
+```sql  
 ALTER LOGIN TestUser WITH   
 PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;  
 GO  
@@ -330,7 +330,7 @@ GO
   
  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [認證 &#40; Database engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [卸除登入 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   

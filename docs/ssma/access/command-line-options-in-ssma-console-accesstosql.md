@@ -1,7 +1,7 @@
 ---
 title: "SSMA 主控台 (AccessToSQL) 中的命令列選項 |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: 7a7f1612f8947a67ec454a4fcc25c7e155d9f23e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c1d26043b33ea902aec4ae7976ad8b215829bf34
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 主控台 (AccessToSQL) 中的命令列選項
 Microsoft 提供一組強固的執行及控制 SSMA 活動的命令列選項。 後續章節將提供其他詳細資料。  
@@ -175,7 +175,7 @@ SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;Access
   
 SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md)  
   
-### <a name="next-steps"></a>後續的步驟  
+### <a name="next-steps"></a>後續步驟  
 下一個步驟取決於您的專案需求：  
   
 1.  指定的密碼或匯出 / 匯入的密碼，請參閱[管理密碼 &#40;AccessToSQL &#41;](../../ssma/access/managing-passwords-accesstosql.md).  

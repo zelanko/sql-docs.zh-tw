@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4192928157e3f6e534b8fb50c34e349dac3f5b8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7cc579d5f4c5d84dcec335e69d12334725f60741
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="collations"></a>定序
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -113,7 +113,7 @@ FROM fn_helpcollations();
 ### <a name="a-specifying-collation-during-a-select"></a>A. 在選取時指定定序  
  下列範例會建立簡單的資料表並且插入 4 個資料列。 然後範例會在從資料表選取資料時套用兩個定序，並且示範如何以不同的方式排序 `Chiapas`。  
   
-```tsql  
+```sql  
 CREATE TABLE Locations  
 (Place varchar(15) NOT NULL);  
 GO  
@@ -157,7 +157,7 @@ GO
 ### <a name="b-additional-examples"></a>B. 其他範例  
  如需使用的其他範例**COLLATE**，請參閱[CREATE DATABASE &#40;SQL Server TRANSACT-SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)範例**G.建立資料庫並指定定序名稱和選項**，和[ALTER TABLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md)範例**V.變更資料行定序**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)   
  [定序優先順序 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   

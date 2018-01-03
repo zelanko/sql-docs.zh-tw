@@ -52,11 +52,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -716,7 +716,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *logical_expression*  
  這是一個傳回 TRUE 或 FALSE 的邏輯運算式。 這個運算式不能含有別名資料類型。  
   
- *資料行*  
+ *column*  
  這是資料表條件約束中的一個資料行或一份資料行清單 (用括號括住)，用來指示條件約束定義中所用的各個資料行。  
   
  [ **ASC** |DESC]  
@@ -901,7 +901,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  **為資料表啟用 Stretch Database**  
   
- 當您啟用 Stretch 的資料表指定`ON`，您可以選擇性地指定`MIGRATION_STATE = OUTBOUND`開始移轉資料的立即或`MIGRATION_STATE = PAUSED`延後資料移轉。 預設值是`MIGRATION_STATE = OUTBOUND`。 如需啟用 Stretch 的資料表的詳細資訊，請參閱[針對資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
+ 當您啟用 Stretch 的資料表指定`ON`，您可以選擇性地指定`MIGRATION_STATE = OUTBOUND`開始移轉資料的立即或`MIGRATION_STATE = PAUSED`延後資料移轉。 預設值是 `MIGRATION_STATE = OUTBOUND`。 如需啟用 Stretch 的資料表的詳細資訊，請參閱[針對資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
   
  **必要條件**。 為資料表啟用 「 延展 」 之前，您必須在伺服器和資料庫上啟用 Stretch。 如需詳細資訊，請參閱 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。  
   
@@ -1083,7 +1083,7 @@ Azure SQL 資料庫的全域暫存資料表遵循相同的語法和語意，SQL 
 
 - 工作階段 A 中 Azure SQL Database testdb1 建立全域暫存資料表 ##test，並將加入 1 個資料列
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1101,7 +1101,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - 工作階段 B 會連接到 Azure SQL Database testdb1，而且可以存取資料表建立的工作階段 A ##test
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1109,7 +1109,7 @@ SELECT * FROM ##test
 
 - C 的工作階段連接至 Azure SQL Database testdb2 中的另一個資料庫，並想要存取 ##test testdb1 中建立。 這個，請選取失敗，因為全域暫存資料表的資料庫範圍 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1118,7 +1118,7 @@ Invalid object name '##test'
 
 - 從目前的使用者資料庫 testdb1 定址 Azure SQL Database tempdb 中的系統物件
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
@@ -1405,7 +1405,7 @@ GO
   
 |檔案群組|test1fg|test2fg|test3fg|test4fg|  
 |---------------|-------------|-------------|-------------|-------------|  
-|**資料分割**|1|2|3|4|  
+|**資料分割**|@shouldalert|2|3|4|  
 |**值**|資料行 1 \<= 1|col1 > 1 AND col1 \<= 100|col1 > 100 AND col1 \<= 1000|col1 > 1000 |  
   
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>I. 在資料行中使用 uniqueidentifier 資料類型  
@@ -1639,7 +1639,7 @@ GO
  ```
  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [COLUMNPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   

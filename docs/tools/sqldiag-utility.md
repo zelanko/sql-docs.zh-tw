@@ -3,7 +3,7 @@ title: "SQLdiag 公用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqldiag
 ms.reviewer: 
@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2533811a2ccc47ac836079c4a4972bfc1f9e5bd7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9ffbcdc873f61ee683e182294d40bb7880047b60
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**SQLdiag**公用程式是可當做主控台應用程式或服務執行的一般用途診斷集合公用程式。 您可以使用 **SQLdiag** ，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和其他類型的伺服器收集記錄檔案和資料檔案，並使用其監視一段時間的伺服器，或對伺服器的特定問題進行疑難排解。 **SQLdiag** 的用途是為了加速及簡化 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶支援服務的診斷資訊收集工作。  
@@ -233,7 +233,7 @@ sqldiag
   
  只有指定 **SQLdiag** 具名執行個體的 **/A**引數，才可以與 **START**、 **STOP**或 **STOP_ABORT** 一起使用，來控制 **SQLdiag** 服務的特定執行個體。 例如：  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START/A** *SQLdiag_application_name*  
   
 ## <a name="security-requirements"></a>安全性需求  
  除非 **SQLdiag** 於一般模式下執行 (藉由指定 **/G** 命令列引數)，否則執行 **SQLdiag** 的使用者必須是 Windows **Administrator** 群組的成員，及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **系統管理員** 固定伺服器角色的成員。 依預設， **SQLdiag** 會使用 Windows 驗證來連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，但它也支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證。  
@@ -371,7 +371,7 @@ SQLDIAG START /A Instance1
 > [!NOTE]  
 >  若要從叢集的 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 執行個體收集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 追蹤資訊，必須在叢集上啟用管理共用 (ADMIN$)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [命令提示字元公用程式參考 &#40;Database Engine&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

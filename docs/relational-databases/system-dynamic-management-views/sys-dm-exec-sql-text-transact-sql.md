@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91602b959da7ed3b622fcc77e59670cdfc803722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e024b0147fb716adfba320d2129a7d623bbff85d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|資料庫的識別碼。<br /><br /> 對於隨選和準備的 SQL 陳述式而言，則為編譯陳述式的資料庫識別碼。|  
 |**objectid**|**int**|物件的識別碼。<br /><br /> 特定和準備 SQL 陳述式的這個值是 NULL。|  
@@ -96,7 +96,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 以下是一個基本範例，說明傳遞**sql_handle**直接或使用**CROSS APPLY**。
   1.  建立活動。  
 在新的 [查詢] 視窗中執行下列 T-SQL [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。   
-      ```tsql
+      ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -108,7 +108,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
     2.  使用**CROSS APPLY**。  
     從 sql_handle **sys.dm_exec_requests**會傳遞至**sys.dm_exec_sql_text**使用**CROSS APPLY**。 開啟新的查詢視窗，並傳遞步驟 1 所識別的 spid。 在此範例中的 spid 剛好是`59`。
 
-        ```tsql
+        ```sql
         SELECT t.*
         FROM sys.dm_exec_requests AS r
         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
@@ -118,7 +118,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
     2.  傳遞**sql_handle**直接。  
 取得**sql_handle**從**sys.dm_exec_requests**。 然後，傳遞**sql_handle**直接**sys.dm_exec_sql_text**。 開啟新查詢視窗，並傳遞步驟 1 中所識別的 spid **sys.dm_exec_requests**。 在此範例中的 spid 剛好是`59`。 接著，將傳回**sql_handle**做為引數**sys.dm_exec_sql_text**。
 
-        ```tsql
+        ```sql
         -- acquire sql_handle
         SELECT sql_handle FROM sys.dm_exec_requests WHERE session_id = 59  -- modify this value with your actual spid
         
@@ -130,7 +130,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. 取得前五項查詢的平均 CPU 時間資訊  
  下列範例會傳回 SQL 陳述式的文字以及前五項查詢的平均 CPU 時間。  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -145,7 +145,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### <a name="c-provide-batch-execution-statistics"></a>C. 提供批次執行統計資料  
  下列範例會傳回以批次方式執行的 SQL 查詢之文字並提供有關這些查詢的統計資訊。  
   
-```tsql  
+```sql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   

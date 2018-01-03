@@ -1,7 +1,7 @@
 ---
 title: "執行測試案例 (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8fd2e06a9d9dcaa243876638f405bcc78c6a9d33
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6d9e4e71813ff5b092ba1b67db207abd9b1adc44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-test-cases-oracletosql"></a>執行測試案例 (OracleToSQL)
 當 SSMA 軟體測試人員執行測試案例時，它會執行測試所選取的物件，並建立驗證結果的相關報表。 如果兩個平台上相同的結果，測試成功。 Oracle 之間的物件的對應關係和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]取決於目前的 SSMA 專案的結構描述對應設定。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="test-case-execution-steps"></a>測試案例執行步驟  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
 SSMA 軟體測試人員會檢查測試在測試執行開始之前是否符合所有必要條件。 如果未滿足一些條件，便會出現錯誤訊息。  
   
 ### <a name="initialization"></a>初始化  
@@ -49,10 +49,10 @@ SSMA 軟體測試人員會檢查測試在測試執行開始之前是否符合所
   
 ||||  
 |-|-|-|  
-|名稱|型別|Description|  
+|[屬性]|類型|描述|  
 |USER_TABLE$ Trg|觸發程序 (trigger)|稽核的變更已驗證的資料表中的觸發程序。|  
-|USER_TABLE$ 則|table|儲存已刪除和覆寫的資料列的資料表。|  
-|USER_TABLE$ AUDID|table|儲存新和已變更的資料列的資料表。|  
+|USER_TABLE$ 則|資料表|儲存已刪除和覆寫的資料列的資料表。|  
+|USER_TABLE$ AUDID|資料表|儲存新和已變更的資料列的資料表。|  
 |USER_TABLE|檢視|資料表修改簡化表示法。|  
 |新 USER_TABLE $|檢視|簡化的插入和覆寫的資料列的表示法。|  
 |USER_TABLE$ NEW_ID|檢視|插入和已變更資料列的識別。|  
@@ -62,16 +62,16 @@ SSMA 軟體測試人員會檢查測試在測試執行開始之前是否符合所
   
 ||||  
 |-|-|-|  
-|名稱|型別|Description|  
+|[屬性]|類型|描述|  
 |USER_TABLE$ Trg|觸發程序 (trigger)|稽核的變更已驗證的資料表中的觸發程序。|  
   
 下列物件會在建立和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb 資料庫中。  
   
 ||||  
 |-|-|-|  
-|名稱|型別|Description|  
-|USER_TABLE$ 則|table|儲存已刪除和覆寫的資料列的資料表。|  
-|USER_TABLE$ AudID|table|儲存新和已變更的資料列的資料表。|  
+|[屬性]|類型|描述|  
+|USER_TABLE$ 則|資料表|儲存已刪除和覆寫的資料列的資料表。|  
+|USER_TABLE$ AudID|資料表|儲存新和已變更的資料列的資料表。|  
 |USER_TABLE|檢視|資料表修改簡化表示法。|  
 |新的 USER_TABLE $|檢視|簡化的插入和覆寫的資料列的表示法。|  
 |USER_TABLE$ new_id|檢視|插入和已變更資料列的識別。|  

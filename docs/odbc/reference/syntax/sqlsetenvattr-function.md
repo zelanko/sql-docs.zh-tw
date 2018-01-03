@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad246dc337b57eb97b588c1ed08bb380cc4d6185
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8a70e7d7de19f4f69a79db56742938ca0d61344
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr 函數
 **一致性**  
@@ -67,7 +67,7 @@ SQLRETURN SQLSetEnvAttr(
 ## <a name="diagnostics"></a>診斷  
  當**SQLSetEnvAttr**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType* SQL_ 的HANDLE_ENV 和*處理*的*EnvironmentHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLSetEnvAttr** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。 如果驅動程式不支援的環境屬性，則可以傳回的錯誤，只在連接時間。  
   
-|SQLSTATE|錯誤|Description|  
+|SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01S02 的警告|選項值已變更|驅動程式不支援指定的值*ValuePtr*置換相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -105,7 +105,7 @@ SQLRETURN SQLSetEnvAttr(
 |配置控制代碼|[SQLAllocHandle 函式](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |傳回環境屬性的設定|[SQLGetEnvAttr 函式](../../../odbc/reference/syntax/sqlgetenvattr-function.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC 3.8 的新功能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

@@ -3,7 +3,7 @@ title: "查詢 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|queries
 ms.reviewer: 
@@ -18,15 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1281c4a6accf5083cf6b023b4dc19b31ff432d25
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d7e4bf6357fe56f3c9b6a1e67e9e6aeb3675930
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queries"></a>查詢
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  資料操作語言 (DML) 是一種詞彙，用來擷取與處理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的資料。 請使用這些陳述式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中加入、修改、查詢或移除資料。  
+  資料操作語言 (DML) 是一種詞彙，用來擷取和使用中的資料[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和 SQL Database。 最也用於 SQL 資料倉儲和 PDW （檢閱每個個別的陳述式，如需詳細資訊）。 請使用這些陳述式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中加入、修改、查詢或移除資料。  
   
 ## <a name="in-this-section"></a>本節內容  
  下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的 DML 陳述式。  

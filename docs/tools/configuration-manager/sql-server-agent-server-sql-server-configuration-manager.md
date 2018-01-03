@@ -3,7 +3,7 @@ title: "SQL Server Agent&lt;伺服器&gt;（SQL Server 組態管理員） |Micro
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 79f385d0644ace59d7c972d452a0cdbfefc8a086
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 95d1ed4efb268ddb5c1ccc7755925ad0cb90ec92
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent-ltservergt-sql-server-configuration-manager"></a>SQL Server Agent&lt;伺服器&gt;（SQL Server 組態管理員）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]這是支援的服務[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。 若要檢視服務的屬性，請以滑鼠右鍵按一下詳細資料窗格中的服務，然後按一下 **[屬性]**。  

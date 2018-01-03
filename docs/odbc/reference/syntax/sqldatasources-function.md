@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09c64ec707be4d99bb66547f8583f707dd281277
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8aee3d9e1caa424f4792fb1fae0551adcacfcdc3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 函式
 **一致性**  
@@ -89,7 +89,7 @@ SQLRETURN SQLDataSources(
 ## <a name="diagnostics"></a>診斷  
  當**SQLDataSources**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以藉由呼叫取得相關聯的 SQLSTATE 值**SQLGetDiagRec**與*HandleType*利用 SQL_HANDLE_ENV 的和*處理*的*EnvironmentHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLDataSources** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|Description|  
+|SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|(DM) 驅動程式管理員特有的資訊訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|(DM) 緩衝區\* *ServerName*仍不夠大，無法傳回完整的資料來源名稱。 因此，名稱被截斷。 中會傳回整個資料來源名稱的長度\* *NameLength1Ptr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。<br /><br /> (DM) 緩衝區\**描述*仍不夠大，無法傳回完整的驅動程式描述。 因此，描述已截斷。 中會傳回未截斷的資料來源描述的長度 **NameLength2Ptr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -119,6 +119,6 @@ SQLRETURN SQLDataSources(
 |連接到資料來源使用的連接字串或對話方塊方塊|[SQLDriverConnect 函式](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |傳回的驅動程式描述和屬性|[SQLDrivers 函式](../../../odbc/reference/syntax/sqldrivers-function.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

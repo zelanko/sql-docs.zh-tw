@@ -1,7 +1,7 @@
 ---
 title: "連接到 SQL Server (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: ee72004a627a7fd99f347677575b82fd1d9fd7b8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a5632152d76ea821022dd2915396d69efe722a8b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>連接到 SQL Server (OracleToSQL)
 使用**連接到 SQL Server**對話方塊連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]您想要移轉到。 若要存取**連接到 SQL Server**對話方塊**檔案**功能表上，按一下 **連接到 SQL Server**。  
@@ -39,13 +39,13 @@ ms.lasthandoff: 12/05/2017
 **伺服器通訊埠**  
 如果您的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]未設定為接受連接，使用預設通訊埠 (1433)，輸入連接埠號碼。 否則，這個值保留空白。  
   
-**資料庫**  
+**[資料庫備份]**  
 指定要移轉的物件和資料的資料庫。 此選項時，無法提供重新連接至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 **驗證**  
 選取用來連接到的驗證方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 若要使用目前的 Windows 帳戶，請選取 [Windows 驗證]。 若要指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登入和密碼，選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]驗證。  
   
-**使用者名稱**  
+**User name**  
 如果您使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]驗證，該執行個體輸入的登入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如果您使用 Windows 驗證，此選項無法使用。  
   
 **密碼**  

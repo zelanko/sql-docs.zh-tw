@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1c7a34974cfcae2d58f7dcaefaffc9bc09e148f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3bb439adf4e60fec1eeda76d2fefce440b9d8700
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>選取的 OVER 子句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -195,7 +195,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 ### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. 搭配 ROW_NUMBER 函數來使用 OVER 子句  
  下列範例示範如何搭配 ROW_NUMBER 函數使用 OVER 子句，以針對資料分割內的每一個資料列顯示資料列號碼。 OVER 子句中指定的 ORDER BY 子句會依照 `SalesYTD` 資料行來排序每一個資料分割中的資料列。 SELECT 陳述式中的 ORDER BY 子句會決定傳回整個查詢結果集的順序。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
@@ -235,7 +235,7 @@ GO
 ### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. 搭配彙總函式來使用 OVER 子句  
  下列範例會針對查詢傳回的所有資料列來搭配彙總函式使用 `OVER` 子句。 在這個範例中，使用 `OVER` 子句比使用子查詢來衍生彙總值更有效率。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -278,7 +278,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
   
  下列範例顯示在計算值中搭配彙總函式來使用 `OVER` 子句。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -322,7 +322,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
 ### <a name="c-producing-a-moving-average-and-cumulative-total"></a>C. 產生移動平均值和累計總和  
  下列範例搭配 OVER 子句來使用 AVG 與 SUM 函數，為 `Sales.SalesPerson` 資料表中各領域的年度銷售提供移動平均值和累計總和。 `TerritoryID` 負責分割資料，而 `SalesYTD` 會進行邏輯性地排序。 這表示，將會根據銷售年度來針對每一個領域計算 AVG 函數。 請注意，在 `TerritoryID` 1 中，2005 銷售年度有兩個資料列，分別表示在該年度有銷售業績的兩個銷售人員。 計算這兩個資料列的平均銷售額，然後將表示 2006 年度銷售額的第三個資料列納入計算。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
@@ -361,7 +361,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  在這個範例中，OVER 子句未包含 PARTITION BY。 這表示，該函數將套用到查詢所傳回的所有資料列。 OVER 子句中指定的 ORDER BY 子句會決定套用 AVG 函數的邏輯順序。 此查詢會依照 WHERE 子句中指定的所有銷售領域傳回依年度的銷售量移動平均值。 SELECT 陳述式中指定的 ORDER BY 子句會決定查詢的資料列顯示的順序。  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
@@ -398,7 +398,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  下列範例使用 ROWS 子句來定義的視窗，哪些資料列會計算為目前的資料列和*N*遵循 （1 個資料列在此範例中） 的資料列的數目。  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -428,7 +428,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
  在下列範例中，會使用 UNBOUNDED PRECEDING 來指定 ROWS 子句。 結果是視窗從資料分割的第一個資料列開始。  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -462,7 +462,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. 搭配 ROW_NUMBER 函數來使用 OVER 子句  
  下列範例會傳回 ROW_NUMBER 根據其指派的銷售配額的銷售代表。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
@@ -489,7 +489,7 @@ GROUP BY LastName, FirstName;
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. 搭配彙總函式來使用 OVER 子句  
  下列範例顯示搭配彙總函式來使用 OVER 子句。 在此範例中，使用 OVER 子句會比使用子查詢更有效率的。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey,   
@@ -521,7 +521,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  
  下列範例顯示使用中的導出值的彙總函式來使用 OVER 子句。 請注意，彙總的計算方式是`SalesOrderNumber`和銷售訂單總數的百分比計算的每一行`SalesOrderNumber`。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   
@@ -547,7 +547,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43659      229      2    16     18.75  
  ```
  
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [彙總函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [分析函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
  [視窗函數和移轉時，相關 sqlmag.com，由 Itzik Ben-Gan 上的絕佳的部落格文章](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  

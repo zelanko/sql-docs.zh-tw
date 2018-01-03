@@ -3,7 +3,7 @@ title: "TuningTimeInMin 元素 (DTA) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed0440a28276fa64aa94dad3bbfcdbb287dc28d7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f96f2d58bdc3e5bed18e9dd76fbdd7813a24f8a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定以分鐘為單位的微調工作階段的最大長度。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**unsignedInt**，沒有長度限制。|  
 |**預設值**|480 分鐘 (8 小時)。|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="example"></a>範例  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  下列程式碼範例顯示如何設定 12 小時作為最大微調時間：  
   
 ## <a name="code"></a>程式碼  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/05/2017
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

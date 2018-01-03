@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bafca706c9fa8aa1f90bfb38b16df067c317a475
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d0f725b1725442ec7853bc4ac130b3d3e1d10fe2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間資料-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
@@ -49,9 +49,9 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**類別**|**int**|1 = 條件約束<br /><br /> 7 = 索引和堆積|  
+|**class**|**int**|1 = 條件約束<br /><br /> 7 = 索引和堆積|  
 |**class_desc**|**nvarchar （60)**|條件約束的 OBJECT 或 COLUMN<br /><br /> 索引和堆積的 INDEX|  
 |**則 major_id 就**|**int**|條件約束的 OBJECT ID<br /><br /> 包含索引和堆積的資料表 OBJECT ID|  
 |**minor_id**|**int**|條件約束的 NULL<br /><br /> 索引和堆積的 Index_id|  
@@ -114,7 +114,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 -   **Geography:: 減少**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>停用物件的行為  
- **索引**  
+ **[索引]**  
   
  如果叢集的索引已停用，或如果進行強制的非叢集索引，就會引發下列錯誤: 「 查詢處理器會無法產生計畫，因為索引 ' %。\*ls' 在資料表或檢視表 ' %。\*ls' 已停用。 」 若要重新啟用這些物件，升級之後重建索引藉由呼叫**ALTER INDEX ON...重建**。  
   
@@ -143,7 +143,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  由於無法停用單一資料行，因此，如果要停用整份資料表，必須停用叢集索引或堆積。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要 VIEW DATABASE STATE 權限。  
@@ -151,7 +151,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ## <a name="example"></a>範例  
  下列範例示範查詢**sys.dm_db_objects_disabled_on_compatibility_level_change**尋找受到變更為 120 的相容性層級的物件。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  
 GO  
   

@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64686457f1f5f4057635eb4a4c9a0f3d4030d8fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c2a8612af978c6cd32056ff192e0eae8909b50cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -223,14 +223,14 @@ CREATE DATABASE database_name
 ### <a name="simple-example"></a>簡單範例  
  建立資料庫的簡單範例。  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
 ### <a name="simple-example-with-edition"></a>簡單的範例，版本  
  建立標準資料庫的簡單範例。  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB2  
 ( EDITION = 'standard' );  
 ```  
@@ -238,7 +238,7 @@ CREATE DATABASE TestDB2
 ### <a name="example-with-additional-options"></a>使用其他選項的範例  
  使用多個選項的範例。  
   
-```tsql  
+```sql  
 CREATE DATABASE hito   
 COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS   
 ( MAXSIZE = 500 MB, EDITION = 'standard', SERVICE_OBJECTIVE = 'S1' ) ;  
@@ -247,7 +247,7 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ### <a name="creating-a-copy"></a>建立複本  
  範例建立資料庫的副本。  
   
-```tsql  
+```sql  
 CREATE DATABASE escuela   
 AS COPY OF school;  
 ```  
@@ -255,21 +255,21 @@ AS COPY OF school;
 ### <a name="creating-a-database-in-an-elastic-pool"></a>彈性集區中建立資料庫  
  建立新的資料庫中名為 S3M100 集區：  
   
-```tsql  
+```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>另一部伺服器上建立資料庫的副本  
  下列範例會建立名 db_copy P2 效能層級為單一資料庫的 db_original 資料庫複本。  這是不論 db_original 是彈性集區或單一資料庫的效能層級中，則為 true。  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' )  ;  
 ```  
   
  下列範例會建立一份 db_original 資料庫中，名為 db_copy 名為 ep1 彈性集區中。  這是不論 db_original 是彈性集區或單一資料庫的效能層級中，則為 true。  如果 db_original 在彈性集區使用不同的名稱，然後 db_copy 仍會建立在 ep1。  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original   
     (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
@@ -279,7 +279,7 @@ CREATE DATABASE db_copy
 
 下列範例將 DATABASE_DEFAULT 目錄定序設定在資料庫建立時，設定，使資料庫定序與相同的目錄定序。
 
-```tsql
+```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```

@@ -3,7 +3,7 @@ title: "檢閱重新執行結果 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c51dd81d0d3b0c97a74cbdc42cdf37a79d9dcb83
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad034ad1cd4bc4f2c2945365e186262d500a6776
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="review-the-replay-results"></a>檢閱重新執行結果
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]之後[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能完成分散式重新執行，可以擷取每個用戶端重新執行活動，並儲存在每個用戶端的結果追蹤檔案。 若要擷取此活動，您必須在以 **replay** 選項執行管理工具時使用 **-o** 參數。 如需詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/05/2017
   
 |資料行名稱|資料類型|描述|資料行識別碼|  
 |----------------------|---------------|-----------------|---------------|  
-|EventClass|**nvarchar**|事件類別的名稱。|1|  
+|EventClass|**nvarchar**|事件類別的名稱。|@shouldalert|  
 |EventSequence|**bigint**|針對提供者錯誤以及內部錯誤和警告，這是對應於錯誤或警告的擷取事件順序。<br /><br /> 針對所有其他事件類別，這是原始追蹤資料中的事件順序。|2|  
 |ReplaySequence|**bigint**|針對提供者錯誤以及內部錯誤和警告，這是對應於錯誤或警告的重新執行事件順序。<br /><br /> 針對所有其他事件類別，這是重新執行期間指派的事件順序。|3|  
 |TextData|**ntext**|TextData 的內容取決於 EventClass。<br /><br /> 針對 Audit Login 和 ExistingConnection，這是連接的設定選項。<br /><br /> 針對 SQL:BatchStarting，這是批次要求的主體。<br /><br /> 針對 RPC:Starting，這是呼叫的預存程序。<br /><br /> 針對 Replay Settings Event，此資料行包含重新執行組態檔中所定義的設定。<br /><br /> 針對 Replay Statistics Event，這包含下列資訊：<br /><br /> -重新執行目標 SQL Server<br /><br /> -可重新執行的事件總數<br /><br /> -提供者錯誤數目<br /><br /> -內部錯誤數目<br /><br /> -內部警告<br /><br /> -錯誤總數<br /><br /> -整體成功率<br /><br /> -重新執行時間 (HH:MM:SS:MMM)<br /><br /> 針對 Replay Result Set Event，這會顯示傳回結果資料行標頭的清單。<br /><br /> 針對 Replay Result Row Event，這會顯示該資料列所有資料行的傳回值。<br /><br /> 針對 Replay Internal Warning 和 Replay Provider Error，此資料行包含提供者警告或錯誤。|4|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/05/2017
 |ReplayHostName|**nvarchar**|重新執行期間用戶端執行所在的電腦名稱。|16|  
 |ApplicationName|**nvarchar**|擷取期間建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線的用戶端應用程式名稱。|17|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   

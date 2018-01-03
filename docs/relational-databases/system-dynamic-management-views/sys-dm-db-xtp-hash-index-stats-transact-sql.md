@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2952f937268ea71a60c87b9bbf766000c5b5a92
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 83e0b404fddcabaa9a70acda6718a3c53d7ba7de
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,13 +41,14 @@ ms.lasthandoff: 11/17/2017
   
 -   如果空貯體的數目較高或最大鏈結長度相對於平均鏈結長度而言較高，則可能有許多資料列包含重複的索引鍵值，或是索引鍵值扭曲。 所有具有相同索引鍵值的資料列都會雜湊處理為相同貯體，因此該貯體會擁有很長的鏈結長度。  
   
- 較長的鏈結長度可能對個別資料列上所有 DML 作業的效能造成相當大的影響，包括 SELECT 和 INSERT。 鏈結長度較短且空的值區計數較高時，表示 bucket_count 太高。 這樣會降低索引掃描的效能。  
+較長的鏈結長度可能對個別資料列上所有 DML 作業的效能造成相當大的影響，包括 SELECT 和 INSERT。 鏈結長度較短且空的值區計數較高時，表示 bucket_count 太高。 這樣會降低索引掃描的效能。  
   
- **sys.dm_db_xtp_hash_index_stats**掃描整個資料表。 因此，如果您的資料庫中有大型資料表**sys.dm_db_xtp_hash_index_stats**可能需要較長時間執行。  
+> [!WARNING]
+> **sys.dm_db_xtp_hash_index_stats**掃描整個資料表。 因此，如果您的資料庫中有大型資料表**sys.dm_db_xtp_hash_index_stats**可能需要較長時間執行。  
   
- 如需詳細資訊，請參閱[記憶體最佳化資料表的雜湊索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)。  
+如需詳細資訊，請參閱[記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|父資料表的物件識別碼。|  
 |xtp_object_id|**bigint**|記憶體最佳化資料表的識別碼。|  
@@ -67,37 +68,35 @@ ms.lasthandoff: 11/17/2017
 
 下列查詢可用來疑難排解現有的資料表的雜湊索引值區計數。 使用者資料表，查詢會傳回空值區和所有的雜湊索引的鏈結長度的百分比有關的統計資料。
 
-```Transact-SQL
+```sql
   SELECT  
     QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [table],   
     i.name                   as [index],   
     h.total_bucket_count,  
     h.empty_bucket_count,  
-      
     FLOOR((  
       CAST(h.empty_bucket_count as float) /  
         h.total_bucket_count) * 100)  
                              as [empty_bucket_percent],  
     h.avg_chain_length,   
     h.max_chain_length  
-  FROM  
-         sys.dm_db_xtp_hash_index_stats  as h   
-    JOIN sys.indexes                     as i  
+  FROM sys.dm_db_xtp_hash_index_stats as h   
+  INNER JOIN sys.indexes as i  
             ON h.object_id = i.object_id  
            AND h.index_id  = i.index_id  
-    JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
-    JOIN sys.tables t on h.object_id=t.object_id
+    INNER JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
+    INNER JOIN sys.tables t on h.object_id=t.object_id
   WHERE ia.type=1
   ORDER BY [table], [index];  
 ``` 
 
-如需有關如何解譯此查詢的結果的詳細資訊，請參閱[記憶體最佳化資料表的雜湊索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)。  
+如需有關如何解譯此查詢的結果的詳細資訊，請參閱[疑難排解記憶體最佳化資料表的雜湊索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)。  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 內部資料表的雜湊索引統計資料
 
 某些功能會使用內部利用雜湊索引，例如記憶體最佳化資料表的資料行存放區索引的資料表。 下列查詢會傳回連結至使用者資料表的內部資料表上的雜湊索引的統計資料。
 
-```Transact-SQL
+```sql
   SELECT  
     QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [user_table],
     ia.type_desc as [internal_table_type],
@@ -106,13 +105,12 @@ ms.lasthandoff: 11/17/2017
     h.empty_bucket_count,  
     h.avg_chain_length,   
     h.max_chain_length  
-  FROM  
-         sys.dm_db_xtp_hash_index_stats  as h   
-    JOIN sys.indexes                     as i  
+  FROM sys.dm_db_xtp_hash_index_stats as h   
+  INNER JOIN sys.indexes as i  
             ON h.object_id = i.object_id  
            AND h.index_id  = i.index_id  
-    JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
-    JOIN sys.tables t on h.object_id=t.object_id
+    INNER JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
+    INNER JOIN sys.tables t on h.object_id=t.object_id
   WHERE ia.type!=1
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
@@ -121,7 +119,7 @@ ms.lasthandoff: 11/17/2017
 
 此查詢不會傳回任何資料列，除非您正在使用的功能，運用內部資料表上的雜湊索引。 下列記憶體最佳化資料表包含資料行存放區索引。 建立這個資料表之後, 您會看到在內部資料表上的雜湊索引。
 
-```Transact-SQL
+```sql
   CREATE TABLE dbo.table_columnstore
   (
     c1 INT NOT NULL PRIMARY KEY NONCLUSTERED,
@@ -129,7 +127,7 @@ ms.lasthandoff: 11/17/2017
   ) WITH (MEMORY_OPTIMIZED=ON)
 ```
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [記憶體最佳化的資料表動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

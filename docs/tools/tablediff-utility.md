@@ -3,7 +3,7 @@ title: "tablediff 公用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: tabledif
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e239a3d36e5e4eed3304d953e887d737b5edd8d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Tablediff**公用程式用來比較兩個資料表資料的非聚合狀況，並特別適用於疑難排解複寫拓撲中的非聚合。 您可以在命令提示字元之下，或在批次檔中，利用這個公用程式來執行下列工作：  
@@ -170,7 +170,7 @@ tablediff
   
 ## <a name="return-value"></a>傳回值  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0**|成功|  
 |**1**|嚴重錯誤|  
@@ -227,7 +227,7 @@ tablediff
   
  若要使用 **-o** 或 **-f** 選項，您必須具有指定檔案目錄位置的寫入權限。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [比較複寫資料表的差異 &#40;複寫程式設計&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

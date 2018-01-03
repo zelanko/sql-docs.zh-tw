@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55b67a0a3db22697b9f320f3c8861b08e09a2475
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 55ede35d26ce9f7de1655e076f1aeaad40642218
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  下表包含可能的傳回值：  
   
-|傳回值|Description|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |24400|有效|  
 |24401|無效，原因未知。|  
@@ -68,13 +68,13 @@ ms.lasthandoff: 11/17/2017
 ## <a name="examples"></a>範例  
  無效的空間物件的下列範例說明如何**isvaliddetailed （)**方法的行為。  
   
-```tsql  
+```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
 SELECT @p.IsValidDetailed()  
 --Returns: 24404: Not valid because polygon ring (1) intersects itself or some other ring.  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

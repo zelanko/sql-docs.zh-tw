@@ -1,7 +1,7 @@
 ---
 title: "開始使用 SSMA for Oracle 主控台 (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4b6a0c0f55747ad531a3baf478eb1fe69193649f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f73c9250dd75d3beb5ec16cdb70fb3a4f7c57b20
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>開始使用 SSMA for Oracle 主控台 (OracleToSQL)
 本章節描述的程序啟動並開始使用 Oracle 的主控台應用程式。 亦會使用的慣例典型的 SSMA 主控台輸出視窗中。  
@@ -62,7 +62,7 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
   
 下表中的主控台輸出的色彩解譯：  
   
-|Color|Description|  
+|Color|描述|  
 |---------|---------------|  
 |紅色|執行期間發生嚴重錯誤|  
 |灰色|日期和時間戳記，訊息給使用者|  

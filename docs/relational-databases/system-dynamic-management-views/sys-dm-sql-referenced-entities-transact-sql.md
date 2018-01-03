@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2fd94b7bab89220337cede905ecbaf1decef722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   資料分割函數  
   
-**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -80,7 +80,7 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|當參考實體是資料行時，就是資料行識別碼，否則便是 0。 不可為 Null。|  
 |referenced_server_name|**sysname**|受參考實體之伺服器的名稱。<br /><br /> 這個資料行會因透過指定有效的四部分名稱所達成的跨伺服器相依性而擴展。 多部分名稱的相關資訊，請參閱[TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> 若為參考了實體的非結構描述繫結相依性，但沒有指定四部分名稱，則為 NULL。<br /><br /> 結構描述繫結的實體為 NULL; 因為它們必須位於相同的資料庫，因此只能定義使用兩部分 (*schema.object*) 名稱。|  
@@ -152,7 +152,7 @@ sys.dm_sql_referenced_entities (
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. 傳回資料庫層級 DDL 觸發程序所參考的實體  
  下列範例會傳回資料庫層級 DDL 觸發程序 `ddlDatabaseTriggerLog` 所參考的實體 (資料表和資料行)：  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -164,7 +164,7 @@ GO
 ### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. 傳回物件所參考的實體  
  下列範例會傳回使用者定義函數 `dbo.ufnGetContactInformation` 所參考的實體。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -176,7 +176,7 @@ GO
 ### <a name="c-returning-column-dependencies"></a>C. 傳回資料行相依性  
  下列範例會以計算資料行 `Table1` 定義為資料行 `c` 和 `a` 的總和，建立資料表 `b`。 然後系統會呼叫 `sys.dm_sql_referenced_entities` 檢視表。 接著，此檢視表會傳回兩個資料列 (針對計算資料行中定義的每個資料行各傳回一個資料列)。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -205,7 +205,7 @@ GO
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. 傳回非結構描述繫結的資料行相依性  
  下列範例會卸除 `Table1` 並建立 `Table2` 和預存程序 `Proc1`。 此程序會參考 `Table2` 和不存在的資料表 `Table1`。 然後，系統會執行檢視表 `sys.dm_sql_referenced_entities`，並將預存程序指定成參考實體。 結果集會針對 `Table1` 顯示一個資料列，並針對 `Table2` 顯示 3 個資料列。 因為 `Table1` 不存在，所以無法解析資料行相依性，而且會傳回錯誤 2020。 `is_all_columns_found` 資料行會針對 `Table1` 傳回 0，表示有資料行找不到。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -239,7 +239,7 @@ GO
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>E. 示範動態相依性維護  
  下列範例會擴充範例 D，以便展示如何以動態方式維護相依性。 此範例首先會重新建立 `Table1` (之前在範例 D 中卸除)。然後，系統會再次執行 `sys.dm_sql_referenced_entities`，並將預存程序指定成參考實體。 結果集顯示，資料表以及其在預存程序中定義的各自資料行都會傳回。 此外，`is_all_columns_found` 資料行會針對所有物件和資料行傳回 1。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -272,7 +272,7 @@ GO
   
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```t-sql  
+```sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   
@@ -292,7 +292,7 @@ FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalIn
  Employee      Gender              0           1          0
  ```
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

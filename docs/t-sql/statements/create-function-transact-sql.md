@@ -41,11 +41,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e570da6faf04bb8aef58829911cdf19e7f5951c9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -573,7 +573,7 @@ RETURNS return_data_type
 ### <a name="computed-column-interoperability"></a>計算資料行的互通性  
  函數具有下列屬性。 這些屬性的值會決定是否可以在可保存或索引的計算資料行中使用函數。  
   
-|屬性|Description|注意|  
+|屬性|描述|注意|  
 |--------------|-----------------|-----------|  
 |**Columnproperty**|函數可分為具決定性或不具決定性。|具決定性函數中允許本機資料存取。 例如，每當利用一組特定輸入值來呼叫函數時都一律傳回相同結果且含有相同資料庫狀態的函數，就會被標示為具決定性。|  
 |**IsPrecise**|函數可分為精確或不精確。|不精確函數內含浮點作業之類的作業。|  
@@ -649,7 +649,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>中繼資料  
  下表列出您可以用來傳回使用者定義函數之中繼資料的系統目錄檢視表。  
   
-|系統檢視表|Description|  
+|系統檢視表|描述|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|請參閱下面的範例 > 一節中的範例 E。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|顯示 CLR 使用者定義函數的相關資訊。|  
@@ -668,7 +668,7 @@ RETURNS return_data_type
   
  以下是函數呼叫。 請注意，`DATEFIRST` 是設為 `1`。  
   
-```tsql
+```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
 RETURNS int  
 WITH EXECUTE AS CALLER  
@@ -703,7 +703,7 @@ ISO Week
 ### <a name="b-creating-an-inline-table-valued-function"></a>B. 建立內嵌資料表值函式  
  下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的內嵌資料表值函式。 它會傳回三個資料行`ProductID`，`Name`和依商店的年度迄今總計的彙總`YTD Total`每項產品銷售給商店。  
   
-```tsql  
+```sql  
 CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  
 RETURNS TABLE  
 AS  
@@ -722,14 +722,14 @@ GO
 
  若要叫用函數，請執行這項查詢。    
 
-```tsql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
 ### <a name="c-creating-a-multi-statement-table-valued-function"></a>C. 建立多重陳述式資料表值函式  
  下列範例會在 AdventureWorks2012 資料庫中建立資料表值函式 `fn_FindReports(InEmpID)`。 當提供有效的員工識別碼時，此函數會傳回對應於所有員工的資料表，該資料表會直接或間接報告給員工。 此函數會利用遞迴通用資料表運算式 (CTE) 來產生階層式員工清單。 如需有關遞迴 Cte 的詳細資訊，請參閱[common_table_expression &#40; 與TRANSACT-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
 RETURNS @retFindReports TABLE   
 (  
@@ -779,7 +779,7 @@ GO
   
 **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```tsql  
+```sql  
 DECLARE @SamplesPath nvarchar(1024);  
 -- You may have to modify the value of this variable if you have  
 -- installed the sample in a location other than the default location.  
@@ -803,7 +803,7 @@ GO
   
 ### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. 顯示的定義[!INCLUDE[tsql](../../includes/tsql-md.md)]使用者定義函式  
   
-```tsql  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o ON m.object_id = o.object_id   
@@ -813,7 +813,7 @@ GO
   
  利用 ENCRYPTION 選項建立的函數定義無法利用 sys.sql_modules 來檢視，但是會顯示有關加密函數的其他資訊。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
  [卸除函數 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;TRANSACT-SQL &#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   

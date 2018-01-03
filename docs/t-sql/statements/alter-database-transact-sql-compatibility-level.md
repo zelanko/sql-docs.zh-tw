@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE 相容性層級 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c5e55a85b2ff67327198ff3fa54654b904429ed8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (TRANSACT-SQL) 相容性層級
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 
  執行下列查詢，以判斷版本[!INCLUDE[ssDE](../../includes/ssde-md.md)]連線到。  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
 ```  
   
@@ -88,12 +88,13 @@ SELECT SERVERPROPERTY('ProductVersion');
 
  若要判斷目前的相容性層級，請查詢**compatibility_level**資料行[sys.databases &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level FROM sys.databases;  
 ```  
   
 ## <a name="remarks"></a>備註  
- 為所有安裝的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，預設相容性層級設定的版本為[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 資料庫都設定為這個層級，除非**模型**資料庫有較低的相容性層級。 當資料庫升級任何舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如果它是至少要有最小允許該執行個體，資料庫會保留其現有的相容性層級[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 升級具有的相容性層級低於允許的層級的資料庫，會將資料庫設定為層級允許的最低相容性。 這同樣適用於系統和使用者資料庫。 使用**ALTER DATABASE**若要變更資料庫的相容性層級。 若要檢視資料庫的目前相容性層級，請查詢**compatibility_level**中的資料行**sys.databases**目錄檢視。  
+
+為所有安裝的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，預設相容性層級設定的版本為[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 資料庫都設定為這個層級，除非**模型**資料庫有較低的相容性層級。 當資料庫升級任何舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如果它是至少要有最小允許該執行個體，資料庫會保留其現有的相容性層級[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 升級具有的相容性層級低於允許的層級的資料庫，會將資料庫設定為層級允許的最低相容性。 這同樣適用於系統和使用者資料庫。 使用**ALTER DATABASE**若要變更資料庫的相容性層級。 若要檢視資料庫的目前相容性層級，請查詢**compatibility_level**中的資料行**sys.databases**目錄檢視。  
 
   
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>使用相容性層級來提供回溯相容性  
@@ -136,7 +137,8 @@ SELECT name, compatibility_level FROM sys.databases;
 | 追蹤 2371年中預設是 OFF [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 | [追蹤 2371年](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/)中預設為 ON [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 追蹤旗標 2371年指示要取樣的較小尚未直接資料列的子集，具有很棒的多個資料列的資料表中的自動統計資料更新程式。 <br/> <br/> 一個改善就是要包含在此範例中的最近插入多個資料列。 <br/> <br/> 另一個改善就是讓查詢執行時，更新統計資料程序會執行，而不是封鎖的查詢。 |  
 | 統計資料取樣的層級 120 的*單一*-執行緒程序。 | 統計資料取樣的層級 130*多重*-執行緒程序。 |  
 | 內送 253 的外部索引鍵是的限制。 | 最多 10,000 個連入的外部索引鍵或類似的參考可以參考給定的資料表。 相關限制，請參閱 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |  
-|允許使用已被取代的 MD2、 MD4、 MD5、 SHA 和 SHA1 雜湊演算法。|允許使用唯一的 SHA2_256 和 SHA2_512 雜湊演算法。|  
+|允許使用已被取代的 MD2、 MD4、 MD5、 SHA 和 SHA1 雜湊演算法。|允許使用唯一的 SHA2_256 和 SHA2_512 雜湊演算法。|
+||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]在某些資料類型轉換和一些 （大多不常見） 的作業包括改進。 如需詳細資訊，請參閱[中某些資料類型與不常見作業所處理的 SQL Server 2016 改進](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)。|
   
   
 修正程式已在追蹤旗標 4199 較舊版本中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]現在預設會啟用。 與 130 的相容性模式。 追蹤旗標 4199 仍會適用於發行後發行的新查詢最佳化工具修正[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 若要使用較舊的查詢最佳化工具在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]您必須選取相容性層級為 110。 如需有關追蹤旗標 4199 資訊，請參閱[追蹤旗標 4199](https://support.microsoft.com/en-us/kb/974006)。  
@@ -146,7 +148,7 @@ SELECT name, compatibility_level FROM sys.databases;
   
 |相容性層級設定為 110 或更低|相容性層級設定為 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|使用舊版的查詢最佳化工具。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括了可建立及最佳化查詢計劃之元件的大幅改良。 這個新的查詢最佳化工具功能取決於資料庫相容性層級 120 的使用。 新的資料庫應用程式應該使用資料庫相容性層級 120 加以開發，以便充分利用這些改良功能。 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉的應用程式應該謹慎測試，以確認良好的效能得以持續或改善。 如果效能降低，您可以將資料庫相容性層級設定為 110 或更低的數字，以便使用舊的查詢最佳化工具方法。<br /><br /> 資料庫相容性層級 120 會使用新的基數估計工具，其經過調整適合於新型資料倉儲和 OLTP 工作負載。 在之前設定資料庫相容性層級為 110，基於效能考量，請參閱中的查詢計劃區段的建議[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [What's New in Database Engine](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主題。|  
+|使用舊版的查詢最佳化工具。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]包含建立和最佳化查詢計劃之元件的大幅改良。 這個新的查詢最佳化工具功能取決於資料庫相容性層級 120 的使用。 新的資料庫應用程式應該使用資料庫相容性層級 120 加以開發，以便充分利用這些改良功能。 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉的應用程式應該謹慎測試，以確認良好的效能得以持續或改善。 如果效能降低，您可以將資料庫相容性層級設定為 110 或更低的數字，以便使用舊的查詢最佳化工具方法。<br /><br /> 資料庫相容性層級 120 會使用新的基數估計工具，其經過調整適合於新型資料倉儲和 OLTP 工作負載。 在之前設定資料庫相容性層級為 110，基於效能考量，請參閱中的查詢計劃區段的建議[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [What's New in Database Engine](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主題。|  
 |在低於 120 的相容性層級，轉換時，會忽略語言設定**日期**值字串值。 請注意，此行為是只**日期**型別。 請參閱下面的範例 > 一節中的範例 B。|轉換時，不會忽略語言設定**日期**值字串值。|  
 |EXCEPT 子句右邊的遞迴參考會建立無限迴圈。 下列範例 > 一節中的範例 C 示範此行為。|EXCEPT 子句中的遞迴參考會產生符合 ANSI SQL 標準的錯誤。|  
 |遞迴 CTE 允許重複的資料行名稱。|遞迴 CTE 不允許重複的資料行名稱。|  
@@ -222,7 +224,7 @@ SELECT name, compatibility_level FROM sys.databases;
 ### <a name="a-changing-the-compatibility-level"></a>A. 變更相容性層級  
  下列範例會變更的相容性層級[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫`110,` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET COMPATIBILITY_LEVEL = 110;  
 GO  
@@ -230,7 +232,7 @@ GO
   
  下列範例會傳回目前資料庫的相容性層級。  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level   
 FROM sys.databases   
 WHERE name = db_name();  
@@ -239,7 +241,7 @@ WHERE name = db_name();
 ### <a name="b-ignoring--the-set-language-statement-except-under-compatibility-level-120"></a>B. 正在略過相容性層級 120 以外的 SET LANGUAGE 陳述式  
  下列查詢會忽略除了相容性層級 120 的 SET LANGUAGE 陳述式。  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;   
 DECLARE @t2 date = '12/5/2011' ;  
 SET LANGUAGE dutch;   
@@ -255,7 +257,7 @@ SELECT CONVERT(varchar(11), @t2, 106);
 ### <a name="c"></a>C.  
  對於相容性層級設定為 110 或更低，EXCEPT 子句右邊的遞迴參考會建立無限迴圈。  
   
-```tsql  
+```sql  
 WITH   
 cte AS (SELECT * FROM (VALUES (1),(2),(3)) v (a)),  
 r   
@@ -270,7 +272,7 @@ FROM r;
 ### <a name="d"></a>D.  
  此範例顯示樣式 0 與 121 之間的差異。 如需日期和時間樣式的詳細資訊，請參閱[CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE TABLE t1 (c1 time(7), c2 datetime2);   
   
 INSERT t1 (c1,c2) VALUES (GETDATE(), GETDATE());  
@@ -293,7 +295,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ### <a name="e"></a>E.  
  在包含最上層 UNION 運算子的陳述式中允許使用變數指派，但是會傳回非預期的結果。 例如在下列陳述式中，會將兩個資料表之聯集中的 `@v` 資料行值指派給 `BusinessEntityID` 區域變數。 就定義來說，如果 SELECT 陳述式傳回多個值，就會將最後傳回的值指派給變數。 在此情況下，便會將最後一個值正確地指派給變數，但是也會傳回 SELECT UNION 陳述式的結果集。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET compatibility_level = 90;  
 GO  
@@ -309,7 +311,7 @@ SELECT @v;
 ### <a name="f"></a>F.  
  在包含最上層 UNION 運算子的陳述式中，不允許使用變數指派。 傳回錯誤 10734。 若要解決此錯誤，請重寫查詢，如下列範例所示。  
   
-```tsql  
+```sql  
 DECLARE @v int;  
 SELECT @v = BusinessEntityID FROM   
     (SELECT BusinessEntityID FROM HumanResources.Employee  

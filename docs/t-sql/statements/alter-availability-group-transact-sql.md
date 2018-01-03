@@ -1,7 +1,7 @@
 ---
 title: "ALTER 可用性群組 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 01/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c31f7eef71570c9c25afe19e26779943678ff509
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ALTER AVAILABILITY GROUP group_name
  指定新的可用性群組名稱。 *group_name*必須是有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別碼，而且必須是唯一的 WSFC 叢集中的所有可用性群組。  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {主要 |SECONDARY_ONLY |次要 |無}  
- 指定在選擇要在何處執行備份時，有關備份作業應該如何評估主要複本的喜好設定。 您可以編寫給定備份作業，將自動備份喜好設定納入考量。 請務必了解，喜好設定並不是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 強制施行，所以它對於隨選備份沒有任何影響。  
+ 指定在選擇要在何處執行備份時，有關備份作業應該如何評估主要複本的喜好設定。 您可以編寫給定備份作業，將自動備份喜好設定納入考量。 請務必了解，喜好設定不會強制執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，因此它在隨選備份沒有任何影響。  
   
  只有主要複本上才支援。  
   
@@ -185,7 +185,7 @@ ALTER AVAILABILITY GROUP group_name
  指定當您選擇要執行備份的複本時，您希望備份作業忽略可用性複本的角色。 請注意，備份作業可能會評估其他因素，例如每個可用性複本的備份優先權，搭配其操作狀態和連接狀態。  
   
 > [!IMPORTANT]  
->  不會強制執行 AUTOMATED_BACKUP_PREFERENCE 設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 自動備份喜好設定對於特定備份沒有任何影響。 如需詳細資訊，請參閱[設定可用性複本 &#40; 上的備份SQL Server &#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
+>  不會強制執行 AUTOMATED_BACKUP_PREFERENCE 設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 自動備份喜好設定會將不會影響對隨選備份。 如需詳細資訊，請參閱[設定可用性複本 &#40; 上的備份SQL Server &#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 > [!NOTE]  
 >  若要檢視現有的可用性群組的自動備份喜好設定，請選取**automated_backup_preference**或**automated_backup_preference_desc**資料行[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)目錄檢視。 此外， [sys.fn_hadr_backup_is_preferred_replica &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)可用來判斷慣用的備份複本。  此函數永遠都會針對至少其中一個複本傳回 1，即使當 `AUTOMATED_BACKUP_PREFERENCE = NONE` 時亦然。  
@@ -197,9 +197,9 @@ ALTER AVAILABILITY GROUP group_name
   
  失敗狀況層級 (1–5) 的範圍從最低限制 (層級 1) 到最高限制 (層級 5)。 給定的狀況層級包含所有較少限制的層級。 因此，最嚴格的狀況層級 5 包含四個較少限制的狀況層級 (1-4)，層級 4 則包含層級 1-3，依此類推。 下表描述與每個層級對應的失敗狀況。  
   
-|Level|失敗狀況|  
+|層級|失敗狀況|  
 |-----------|-----------------------|  
-|1|指定在發生以下任何情況時應該起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務關閉。<br /><br /> 由於未從伺服器執行個體收到 ACK，所以用於連接到 WSFC 叢集的可用性群組租用已到期。 如需詳細資訊，請參閱 [How It Works: SQL Server Always On Lease Timeout](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)(運作方式：SQL Server AlwaysOn 租用逾時)。|  
+|@shouldalert|指定在發生以下任何情況時應該起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務關閉。<br /><br /> 由於未從伺服器執行個體收到 ACK，所以用於連接到 WSFC 叢集的可用性群組租用已到期。 如需詳細資訊，請參閱 [How It Works: SQL Server Always On Lease Timeout](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)(運作方式：SQL Server AlwaysOn 租用逾時)。|  
 |2|指定在發生以下任何情況時應該起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體未連接到叢集，而且已超出使用者指定之可用性群組的 HEALTH_CHECK_TIMEOUT 臨界值。<br /><br /> 可用性複本處於失敗狀態。|  
 |3|指定應該在嚴重 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部錯誤發生時起始自動容錯移轉，例如執行緒同步鎖定遭到遺棄、嚴重的寫入存取違規或是傾印過多。<br /><br /> 這是預設行為。|  
 |4|指定應該在發生中度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部錯誤時起始自動容錯移轉，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部資源集區中持續的記憶體不足狀況。|  
@@ -316,7 +316,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  可讓手動容錯移轉或強制手動容錯移轉 (*強制容錯移轉*) 的資料庫管理員。  
   
- FAILOVER_MODE 在 ADD REPLICA ON 子句中是必要的，而在 MODIFY REPLICA ON 子句中則是選擇性。 有兩種手動容錯移轉類型存在，也就是不遺失資料的手動容錯移轉以及強制容錯移轉 (可能遺失資料)，不同情況下會支援不同類型。  如需詳細資訊，請參閱[容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。  
+ FAILOVER_MODE 在 ADD REPLICA ON 子句中是必要的，而在 MODIFY REPLICA ON 子句中則是選擇性。 有兩種手動容錯移轉類型存在，也就是不遺失資料的手動容錯移轉以及強制容錯移轉 (可能遺失資料)，不同情況下會支援不同類型。  如需詳細資訊，請參閱本主題稍後的 [容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。  
   
  SEEDING_MODE  **=**  {自動 |手動}  
  指定如何在次要複本會一開始植入。  
@@ -337,7 +337,7 @@ ALTER AVAILABILITY GROUP group_name
   
 -   0 表示絕對不會選擇這個可用性複本來執行備份。 例如，這對於您永遠不希望將備份容錯移轉到其中的遠端可用性複本十分有用。  
   
- 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)中心概念。  
+ 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
  SECONDARY_ROLE **(** ... **)**  
  指定將會在此可用性複本目前擁有次要角色 (亦即，每當它是次要複本時) 時生效的角色專屬設定。 在括弧內指定任一個或兩個次要角色選項。 如果您同時指定兩個選項，則使用逗號分隔清單。  
@@ -599,10 +599,10 @@ ALTER AVAILABILITY GROUP group_name
   
  如需可用性群組 TRANSACT-SQL 陳述式有關限制的詳細資訊，請參閱[概觀的 TRANSACT-SQL 陳述式的 Alwayson 可用性群組 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
- 需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
+ 需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  也需要 ALTER ANY DATABASE 權限。   
   
 ## <a name="examples"></a>範例  
   
@@ -622,7 +622,7 @@ ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [卸除可用性群組 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   

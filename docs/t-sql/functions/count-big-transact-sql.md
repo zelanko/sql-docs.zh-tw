@@ -27,13 +27,13 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b0165fefcc715becfb9c59644ed0ddd96cca9c07
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad2b7e5343547bb65c6d81de8c6586ef5209e52a
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="countbig-transact-sql"></a>COUNT_BIG (Transact-SQL)
+# <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 傳回群組中的項目數。 COUNT_BIG 的運作方式類似 COUNT 函數。 這兩個函數的唯一差異是它們的傳回值。 COUNT_BIG 一律會傳回**bigint**資料類型值。 COUNT 一律會傳回**int**資料類型值。

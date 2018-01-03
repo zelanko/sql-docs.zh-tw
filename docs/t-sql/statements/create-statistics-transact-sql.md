@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e1f234dc76b6b231fc3f1d0f258937e70035a65
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b34ea1ffe5a61b8cb7a0ba8b695015a8655c8709
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -234,7 +234,7 @@ CREATE STATISTICS statistics_name
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. 搭配 SAMPLE 數目 PERCENT 使用 CREATE STATISTICS  
  下列範例會建立 `ContactMail1` 統計資料，其方式是使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `BusinessEntityID` 資料表內，`EmailPromotion` 和 `Contact` 資料行的 5% 隨機取樣。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
@@ -243,7 +243,7 @@ CREATE STATISTICS ContactMail1
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>B. 搭配 FULLSCAN 和 NORECOMPUTE 使用 CREATE STATISTICS  
  下列範例會針對 `ContactMail2` 資料表的 `BusinessEntityID` 和 `EmailPromotion` 資料行中的所有資料列來建立 `Contact` 統計資料，且會停用統計資料的自動重新計算。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, NORECOMPUTE;  
@@ -252,7 +252,7 @@ CREATE STATISTICS NamePurchase
 ### <a name="c-using-create-statistics-to-create-filtered-statistics"></a>C. 使用 CREATE STATISTICS 來建立篩選的統計資料  
  下列範例會建立篩選的統計資料 `ContactPromotion1`。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會取樣百分之 50 的資料，然後選取 `EmailPromotion` 等於 2 的所有資料列。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactPromotion1  
     ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
 WHERE EmailPromotion = 2  
@@ -265,7 +265,7 @@ GO
   
  因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入資料至暫存資料表建立統計資料，完整掃描選項的外部資料表將花更長時間。 在大型資料表，預設取樣方法通常已足夠。  
   
-```t-sql  
+```sql  
 --Create statistics on an external table and use default sampling.  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
   
@@ -276,7 +276,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. 使用 CREATE STATISTICS 搭配 FULLSCAN 和 PERSIST_SAMPLE_PERCENT  
  下列範例會建立`ContactMail2`統計資料的所有資料列`BusinessEntityID`和`EmailPromotion`的資料行`Contact`資料表，並設定所有的後續更新執行不明確地指定取樣百分之 100 取樣百分比百分比。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
@@ -287,14 +287,14 @@ CREATE STATISTICS NamePurchase
 ### <a name="f-create-statistics-on-two-columns"></a>F. 在兩個資料行上建立統計資料  
  下列範例會建立`CustomerStats1`統計資料，根據`CustomerKey`和`EmailAddress`的資料行`DimCustomer`資料表。 根據具有統計價值的取樣中的資料列建立統計資料`Customer`資料表。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. 使用完整掃描來建立統計資料  
  下列範例會建立`CustomerStatsFullScan`統計資料，根據掃描中的資料列的所有`DimCustomer`資料表。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsFullScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
@@ -302,12 +302,12 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. 藉由指定取樣百分比建立統計資料  
  下列範例會建立`CustomerStatsSampleScan`統計資料，根據掃描中的資料列的 50%`DimCustomer`資料表。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsSampleScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [統計資料](../../relational-databases/statistics/statistics.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   

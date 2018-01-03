@@ -1,7 +1,7 @@
 ---
 title: "攠摝坫 (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c749697b746941b9f8b68ca2fe820b3fe8198f7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c3a66b199bed34de91c19a089345d110f9f805ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shortcut-keys-accesstosql"></a>攠摝坫 (AccessToSQL)
 您可以使用鍵盤快速鍵來瀏覽 SSMA 應用程式。 如需詳細資訊，請參閱下列主題。  

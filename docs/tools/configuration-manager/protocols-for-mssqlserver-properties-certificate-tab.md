@@ -3,7 +3,7 @@ title: "MSSQLSERVER 通訊協定屬性 （憑證索引標籤） |Microsoft 文�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 906539a3d5bf160a7d4eae77f5503830becb0b72
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 22aed889fcc7884a34f770e7931cf82ac6983061
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER 的通訊協定內容 (憑證索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**憑證**索引標籤上**MSSQLSERVER 通訊協定屬性**對話方塊來選取憑證以進行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或若要檢視憑證內容。 選取憑證之前所有欄位都會是空白。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/05/2017
  電腦上之使用者的憑證會儲存在本機中。 若要載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的憑證，您必須使用和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務相同的使用者帳戶來執行「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」。  
   
 ## <a name="page-header"></a>頁首  
- **檢視**  
+ **[檢視]**  
  可存取憑證上其他的詳細資料。 在 **[憑證]** 方塊中選取憑證之前，此按鈕無法使用。 如需憑證詳細資料的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 文件集。  
   
  **Clear**  

@@ -3,7 +3,7 @@ title: "檢視微調報表 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d270a34d882cbe4c5ffd458e52a9033db1b16c26
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9a1a567a2f29073f73033182fd14867540a95b93
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>課程 1-3-檢視微調報表
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本課程的上一個練習中，您檢視[!INCLUDE[tsql](../../includes/tsql-md.md)]建立或 mysession 微調工作階段所產生的 Database Engine Tuning Advisor 建議中卸除資料庫物件的指令碼。 MySession 微調工作階段是先前在 [微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)中所建立的。  
