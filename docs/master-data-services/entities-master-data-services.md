@@ -5,7 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f76478f355ea25c72572ebd52535360697b301cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cf437e4047e30beb754fac29c4ed2626de594363
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="entities-master-data-services"></a>實體 (Master Data Services)
   實體是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 模型中包含的物件。 每個實體都含有會員，也就是您所管理之主要資料的資料列。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
  以您要管理的主要資料清單來擴展實體。  
   
- 實體可用來建立衍生階層，也就是以多個實體為基礎的層級型階層。 如需詳細資訊，請參閱[衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)。  
+ 實體可用來建立衍生階層，也就是以多個實體為基礎的層級型階層。 如需詳細資訊，請參閱 [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)。  
   
  您也可以讓實體包含明確階層 (以單一實體為基礎的不完全結構) 和集合 (成員子集的 One-off 合併)。 如需詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md) 和[集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)。  
   

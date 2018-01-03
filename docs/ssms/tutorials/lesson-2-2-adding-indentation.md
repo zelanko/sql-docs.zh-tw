@@ -3,7 +3,7 @@ title: "新增縮排 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 21b8fbca046e733afd062b07e5316694cb0adc76
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5559f970627449d56863f4c9d933d5e6636f0bd2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-2---adding-indentation"></a>課程 2-2 - 新增縮排
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查詢編輯器可讓您利用單一步驟來縮排一大段的程式碼，而且您也可以變更縮排的量。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
     ![[定位點] 對話方塊的外觀](./media/lesson-2-2-adding-indentation/tabsdialog.gif "[定位點] 對話方塊的外觀")  
   
-3.  按一下 **[確定]**。  
+3.  按一下 [確定] 。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [將查詢編輯器最大化](../../tools/sql-server-management-studio/lesson-2-3-maximizing-query-editor.md)  

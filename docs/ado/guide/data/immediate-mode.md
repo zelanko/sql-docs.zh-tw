@@ -3,7 +3,7 @@ title: "即時模式 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 714cbcae65121a92f8a38bbcf93fbb472ada5573
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b667a5ebb190ddd7c3507bc04e5f2fbcd25dca19
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="immediate-mode"></a>即時模式
 即時模式就是作用中時**LockType**屬性設定為**Adlockreadonly**或**Locktype**。 在即時模式中，記錄的變更會傳播到資料來源為您宣告工作的資料列上完成藉由呼叫**更新**方法。  

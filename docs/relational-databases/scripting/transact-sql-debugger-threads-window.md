@@ -3,9 +3,9 @@ title: "執行緒視窗 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9511c1ddb0b6a83c6b3ebbedd2e68ff1808c39e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 032e8eb400eba98ad3be775159cf66c6f0f35a1e
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Transact-SQL 偵錯工具 - 執行緒視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [執行緒] 視窗會顯示有關所偵錯之[!INCLUDE[ssDE](../../includes/ssde-md.md)]查詢編輯器工作階段使用的[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行緒資訊。 您必須在偵錯模式中，才能顯示執行緒資訊。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   在 [偵錯] 功能表中，按一下 [視窗]，再按一下 [執行緒]。  
   
-## <a name="columns"></a>資料行  
+## <a name="columns"></a>[資料行]  
  **ID**  
  這是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具指派給執行緒的唯一識別碼。 您可以從 sys.dm_os_threads 動態管理檢視選取資料列，以尋找有關執行緒的詳細資訊。  
   

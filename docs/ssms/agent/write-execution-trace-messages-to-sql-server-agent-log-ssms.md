@@ -3,7 +3,7 @@ title: "在 SQL Server Agent 錯誤記錄檔中寫入執行追蹤訊息 | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3371b7c9da8b9bef3564351623e96bc661636a2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cbc4482ae5b9c9b020a160cc76814236a8e80b02
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 將執行追蹤訊息納入其錯誤記錄檔中。  
@@ -74,5 +74,5 @@ ms.lasthandoff: 12/05/2017
   
 3.  在 [SQL Server Agent 屬性 - <伺服器名稱>] 對話方塊，於 [一般] 頁面上的 [錯誤記錄檔] 底下，選取 [包含執行追蹤訊息] 核取方塊。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   

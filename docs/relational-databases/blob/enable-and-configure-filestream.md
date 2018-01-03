@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 28de8df00cc2a98756492b7ae434838d04a4e53c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55dd8e263f95d9abf13d34bc37d703b7171bea2c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-and-configure-filestream"></a>啟用及設定 FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在您開始使用 FILESTREAM 之前，必須先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體上啟用 FILESTREAM。 此主題描述如何使用 SQL Server 組態管理員來啟用 FILESTREAM。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
 11. 在 [查詢編輯器] 中，輸入下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼：  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
 ||||||  
 |-|-|-|-|-|  
-|RAID 層級|寫入效能|讀取效能|容錯|備註|  
+|RAID 層級|寫入效能|讀取效能|容錯|Remarks|  
 |RAID 5|一般|一般|非常好|效能高於單一磁碟或 JBOD，而低於具有條狀配置的 RAID 0 或 RAID 5。|  
 |RAID 0|非常好|非常好|無||  
 |RAID 5 + 條狀配置|非常好|非常好|非常好|成本最高的選項。|  

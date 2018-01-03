@@ -3,7 +3,7 @@ title: "CacheSize 屬性 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 57ac5e367e3dd9181dcdbde260b04917d30453ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a035843f42ba6dd29f18887fec5ca334943a0df4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachesize-property-ado"></a>CacheSize 屬性 (ADO)
 表示記錄數目[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)本機快取在記憶體中的物件。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CacheSize 屬性範例 (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
  [CacheSize 屬性範例 （VC + +）](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
  [CacheSize 屬性範例 (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)

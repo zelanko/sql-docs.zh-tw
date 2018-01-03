@@ -3,9 +3,9 @@ title: "管理書籤 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4dc1a1474d70e686fb08e6c6df79c40cb9d3488
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-bookmarks"></a>管理書籤
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用程式碼編輯器時，[書籤] 視窗可讓您建立文件內特定程式碼行的連結。 您可以從 [檢視] 功能表顯示這個視窗。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
  **停用/啟用所有書籤**  
  在 [書籤] 視窗中，清除或啟用所有書籤的核取方塊。 這不會移除書籤，或改變它們標示的程式碼行。  
   
- **Delete**  
+ **刪除**  
  從 [書籤] 視窗以及書籤所出現的文件中，移除目前選取的書籤。 這不會移除有書籤的程式碼行。  
   
  書籤核取方塊  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="bookmarks-window-shortcut-menu"></a>書籤視窗快速鍵功能表  
  以滑鼠右鍵按一下 [書籤] 視窗中的項目時，可從捷徑功能表使用下列命令。  
   
- **Delete**  
+ **刪除**  
  從 [書籤] 視窗以及書籤所出現的文件中，移除目前選取的書籤。 這不會移除有書籤的程式碼行。  
   
  **Rename**  

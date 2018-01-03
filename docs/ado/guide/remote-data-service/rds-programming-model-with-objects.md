@@ -3,7 +3,7 @@ title: "RDS 程式設計模型與物件 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eafec33754d2c1dd0c7a79ddfae627006e31f493
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0f2d2e5cfb50df5fa6a6b1eaace7ba285b0855e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS 與物件的程式設計模型
 RDS 的目標為存取和更新的媒介，例如 IIS 透過資料來源。 程式設計模型指定的活動所需達成此目標的序列。 物件模型中指定的物件，其方法和屬性會影響的程式設計模型。  
@@ -46,7 +46,7 @@ RDS 的目標為存取和更新的媒介，例如 IIS 透過資料來源。 程�
   
 -   若要變更**資料錄集**物件傳送至伺服器及用來更新資料來源 (**.RDSDataControl**或**RDSServer.DataFactory**)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [RDS 物件模型摘要](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   

@@ -3,7 +3,7 @@ title: "篩選更新記錄 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29539dfd62901a2db41e3d282f615a5ce550cb84
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 37ad79ea1018a2e272cb9071bde61176ddf6348e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filtering-for-updated-records"></a>篩選的更新記錄
 在呼叫 UpdateBatch 之前，您可以使用資料錄集的篩選條件屬性，以檢視這些資料錄集開啟之後已經變更的記錄或 UpdateBatch 在上次呼叫。 若要這樣做，請設定篩選等於 adFilterPendingRecords 來判斷將更新的多少筆記錄，請在下一節中的程式碼範例所示。  
@@ -59,5 +59,5 @@ ms.lasthandoff: 11/17/2017
 'EndFilterPend  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [批次模式](../../../ado/guide/data/batch-mode.md)

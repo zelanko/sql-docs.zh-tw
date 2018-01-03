@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53d4cd6d44f33b05ca586077a33307616aa45986
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e491a90b39421fb04501498b205b5e8355eec063
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 使用者介面
   除了 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 索引標籤上的設計介面以外，使用者介面還提供對下列視窗和對話方塊 (用以將功能加入封裝及設定封裝物件屬性) 的存取權：  

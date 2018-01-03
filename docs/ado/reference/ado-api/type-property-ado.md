@@ -3,7 +3,7 @@ title: "型別屬性 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bdc4aa735c131b800b77086c76902dbe688e9399
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 635a1ad2cae9e9e698bebdbf479a3b542af4d953
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-ado"></a>型別屬性 (ADO)
 表示作業的類型或資料類型的[參數](../../../ado/reference/ado-api/parameter-object.md)，[欄位](../../../ado/reference/ado-api/field-object.md)，或[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|  
 |[Field 物件](../../../ado/reference/ado-api/field-object.md)|[Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)|[Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [型別屬性範例 （欄位） (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [型別屬性範例 （屬性） （VC + +）](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [RecordType 屬性 (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   

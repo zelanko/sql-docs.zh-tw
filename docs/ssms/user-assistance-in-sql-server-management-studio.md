@@ -3,7 +3,7 @@ title: "SQL Server Management Studio 中的使用者協助 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6a3108ec508a859dd6b097425f27475a85c026f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: af99082f7ec0d39d59c7aa20fc1f6ba1d51596ed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的使用者協助
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以利用 [說明] 功能表和《[!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 線上叢書》，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中取得使用者輔助程式。 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 中的 [說明] 功能表提供了幾個不同的路徑，供您取得 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]的相關資訊。 您也可以利用它來存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 社群和 MSDN Online 資源，先前的 [說明] 環境並未提供這項功能。 另外，您現在也可以將 [說明] 環境設定成在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 環境內啟動，或在它自己的相關外部視窗中啟動。  
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  如果 [Codezone 社群] 是您選取的其中一個搜尋提供者，請在 [Codezone 社群] 清單中選取及清除適當的項目。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>從 [搜尋] 頁面搜尋 MSDN Online 和 SQL Server 焦點社群  
   

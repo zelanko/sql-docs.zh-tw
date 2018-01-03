@@ -3,7 +3,7 @@ title: "位置對話方塊 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e909d68acae61d209d8d5c9be569b6d76c88b892
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c355410d0536b4f461973ac55ba382183aa3694
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>位置對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用這個對話方塊來尋找並選取含有感興趣之檔案的資料夾。 這個對話方塊會將所選取之資料夾的路徑傳回給呼叫對話方塊。 您可以使用下列方法存取這個對話方塊：  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/05/2017
 **移到上一層**  
 導覽樹狀結構至階層中的下一個最高資料夾。  
   
-**Delete**  
+**刪除**  
 從存放區中刪除選取的檔案或資料夾。  
   
 **建立新資料夾**  

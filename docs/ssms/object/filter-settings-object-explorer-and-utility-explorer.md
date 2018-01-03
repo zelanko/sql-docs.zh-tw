@@ -3,7 +3,7 @@ title: "篩選設定 (物件總管與公用程式總管) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fa2f9375b9fe2883e4dbc2fd69a42f163a6fe386
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ebfd7d638615b68d02da5b01c33ce4719cd162b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>篩選設定 (物件總管與公用程式總管)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此對話方塊來指定篩選。 篩選可以讓您將 [物件總管] 與 [公用程式總管] 設定為僅顯示符合特定準則的項目。 例如，您可以使用篩選，僅顯示名稱中包含單字「Maintenance」的作業。 [篩選設定] 對話方塊的標頭包含伺服器的名稱，也可以包含資料庫的名稱。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/05/2017
 **屬性**  
 顯示要根據該屬性進行篩選的屬性。  
   
-**運算子**  
+**[運算子]**  
 選取篩選將值套用到屬性的方式。 有下列的選項：  
   
 -   **等於**  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
     適用於日期，此篩選會顯示日期早於或晚於所提供之兩個日期的項目。 選取 [不介於] 並按下 TAB 鍵跳離 [運算子] 資料行，即可新增另一個資料列，以輸入第二個日期。  
   
-**Value**  
+**ReplTest1**  
 輸入要和屬性比較的值。 針對日期，按一下向下鍵以顯示用來選取日期的日曆。  
   
 **清除篩選**  

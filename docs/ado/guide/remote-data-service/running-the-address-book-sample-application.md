@@ -3,7 +3,7 @@ title: "執行通訊錄範例應用程式 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df6396d83c993c41e59bb2fcb6c1a87734049b07
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a09bacb8adeabaefd925e34b613bef3d2dad5097
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-the-address-book-sample-application"></a>執行通訊錄範例應用程式
 > [!IMPORTANT]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  您可以再嘗試通訊錄範例應用程式中的各種案例，例如搜尋人員根據他或她列出所有標題為 「 程式經理 」 的人員的電子郵件名稱或編輯現有記錄。 按一下**尋找**資料方格中填入所有可用的名稱。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [通訊錄資料繫結物件](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
 
 

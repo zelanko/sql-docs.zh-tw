@@ -3,7 +3,7 @@ title: "使用自訂報表搭配物件總管節點屬性 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd4e8e45cb6002d2ede2a7ac487f9408b13e8685
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc21ac20f60dfbe503779d4ad41c47d99068259f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>使用自訂報表搭配物件總管節點屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果自訂報表參考選定 [物件總管] 節點的報表參數，自訂報表就可以在該節點的內容中執行。 這可讓自訂報表使用目前的內容 (例如目前的資料庫) 或資料庫或伺服器物件。  
@@ -32,11 +32,11 @@ ms.lasthandoff: 12/05/2017
 |參數名稱|資料類型|  
 |------------------|-------------|  
 |**ObjectName**|**字串**|  
-|**ObjectTypeName**|**字串**|  
+|**ObjectTypeName**|**String**|  
 |**已篩選**|**布林**|  
-|**ServerName**|**字串**|  
-|**FontName**|**字串**|  
-|**DatabaseName**|**字串**|  
+|**ServerName**|**String**|  
+|**FontName**|**String**|  
+|**DatabaseName**|**String**|  
   
 ## <a name="object-explorer-node-report-parameters-example"></a>物件總管節點報表參數範例  
 若要執行範例，請使用下列程序。  

@@ -3,7 +3,7 @@ title: "FetchProgress 事件 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 990e5bbe3a203cd48c34c6153a9ee0ca8e678758
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d02419b59dec4200bab7279f4afc64d5b6426747
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress 事件 (ADO)
 **FetchProgress**回報到目前已擷取多個資料列數目的長時間非同步作業期間定期呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -57,6 +57,6 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
 > [!NOTE]
 >  若要使用**FetchProgress**搭配 Microsoft Visual Basic 中，Visual Basic 6.0 或更新版本為必要。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)

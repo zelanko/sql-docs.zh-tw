@@ -3,7 +3,7 @@ title: "Fabricating 階層式資料錄集 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 363ec5c1b2f1d73ec4278a3e6b0386a5610a4ec5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91871ae51f53b9330228db1b64bab422dfef0d4b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Fabricating 階層式資料錄集
 下列範例示範如何使用資料的形式來定義資料行的父系、 子群組和孫系文法由此沒有基礎資料來源的階層式資料錄集**資料錄集**。  
@@ -60,7 +60,7 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
   
  只要**資料錄集**已傳遞，它可以是填入、 操作，或保存至檔案。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [存取資料列中的階層式資料錄集](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [型式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [提供者所需的資料成形](../../../ado/guide/data/required-providers-for-data-shaping.md)   

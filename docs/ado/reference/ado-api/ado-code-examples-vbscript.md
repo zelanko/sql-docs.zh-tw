@@ -3,7 +3,7 @@ title: "ADO 程式碼範例的 VBScript |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f9c7a73af6a237d94acf01090a2566055dbad92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 079d23b396786b1d15bd9e7d980af336e4f6f183
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-code-examples-vbscript"></a>ADO 程式碼範例的 VBScript
 若要了解如何使用 ADO 方法，在 Microsoft® Visual Basic® Scripting Edition (VBScript) 撰寫時，使用下列程式碼範例。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [開啟與關閉方法範例](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [在 Visual Basic 中的 ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [Visual c + + 中的 ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
  [附錄 D：ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

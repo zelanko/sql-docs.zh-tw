@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 175d7015137566ae5d9ecf2de97698395679eca2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 404829831ddf4958c19fa89eae9eb8c8fbd7077f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>備份交易記錄 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 PowerShell，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中備份交易記錄。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 -   根據預設，每項成功的備份作業都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔與系統事件記錄檔中，加入一個項目。 如果您經常備份記錄檔，這些成功訊息可能會快速累積，因而產生龐大的錯誤記錄檔，讓您難以尋找其他訊息。 在這類情況下，如果沒有任何指令碼相依於這些記錄項目，您就可以使用追蹤旗標 3226 來隱藏這些記錄項目。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
 **請檢查權限是否正確，再開始進行！** 
 
 預設必須將 BACKUP DATABASE 和 BACKUP LOG 權限授與 **系統管理員** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
   
          結尾記錄備份是在發生失敗後進行的，會備份記錄的結尾，以防止遺失工作資料。 在以下兩種情況時應備份使用中的記錄 (結尾記錄備份)：發生失敗後開始還原資料庫之前，或是容錯移轉到次要資料庫時。 選取此選項相當於在 Transact-SQL 的 BACKUP LOG 陳述式中，指定 NORECOVERY 選項。 如需結尾記錄備份的詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
-16. 如果您要備份至磁帶機 (如同 [一般] 頁面的 [目的地] 區段中所指定)，即可使用 [備份後卸載磁帶] 選項。 按一下這個選項會啟動 **[卸載之前倒轉磁帶]** 選項。  
+16. 如果是備份至磁帶機 (在 [一般] 頁面的 [目的地] 區段中指定)，[備份後卸載磁帶] 選項會啟用供選擇。 按一下這個選項會啟動 **[卸載之前倒轉磁帶]** 選項。  
   
 17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 **[壓縮備份]**壓縮備份，而且可以透過核取 **[不要壓縮備份]**防止壓縮。  
   
@@ -145,13 +145,13 @@ ms.lasthandoff: 11/17/2017
   
     -   寫入交易記錄備份的備份裝置。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
   
 > **重要！！！** 這個範例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫，而該資料庫則是使用簡單復原模式。 為了允許記錄備份，在執行完整資料庫備份之前，此資料庫已設定為使用完整復原模式。 如需詳細資訊，請參閱[檢視或變更資料庫的復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   
  這個範例會在先前所建立的具名備份裝置 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 上建立 `MyAdvWorks_FullRM_log1`資料庫的交易記錄備份。  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
    TO MyAdvWorks_FullRM_log1;  
 GO  

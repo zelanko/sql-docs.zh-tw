@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c4026c4495c9c11922f8f4496b0000dfb2c9420
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  如果您的工作負載會產生很多不同的查詢和計劃，或者是如果您希望保留更長時間的查詢記錄，預設值 (100 MB) 可能不足。 追蹤目前的空間使用量，並增加大小上限 (MB) 以防止查詢存放區轉換為唯讀模式。  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或執行下列指令碼取得有關查詢存放區大小的最新資訊：  
   
-```tsql 
+```sql 
 USE [QueryStoreDB];  
 GO  
   
@@ -68,14 +68,14 @@ FROM sys.database_query_store_options;
   
  下列指令碼會設定新的大小上限 (MB)：  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **統計資料收集間隔：** 定義已收集之執行階段統計資料的資料粒度層級 (預設值是 1 小時)。 如果您需要更精細的資料粒度或使用較短的時間偵測與解決問題，請考慮使用較低的值，但請注意，它會直接影響查詢存放區資料的大小。 使用 SSMS 或 Transact-SQL 來針對統計資料收集間隔設定不同的值：  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
@@ -84,7 +84,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);
   
  避免保留您沒有計畫使用的歷程記錄資料。 這會降低變更為唯讀狀態。 查詢存放區資料的大小以及偵測和解決問題的時間會更容易預測。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或下列指令碼來設定以時間為基礎的清除原則：  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
@@ -93,7 +93,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
   
  強烈建議您啟用大小基礎的清除模式，以確保查詢存放區一律以讀寫模式執行並收集最新的資料。  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -108,7 +108,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  下列指令碼會將查詢擷取模式設定為 [Auto]：  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -120,7 +120,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 啟用查詢存放區，如上一節中所述，或執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
-```tsql  
+```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -179,7 +179,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 ##  <a name="Verify"></a> 確認查詢存放區會持續收集查詢資料  
  查詢存放區可以無訊息方式變更作業模式。 您應該定期監視查詢存放區的狀態，以確定查詢存放區正在運作，並採取動作避免因為預防因素造成的失敗。 執行下列查詢來判斷作業模式，並檢視最相關的參數：  
   
-```tsql
+```sql
 USE [QueryStoreDB];  
 GO  
   
@@ -200,13 +200,13 @@ FROM sys.database_query_store_options;
   
 -   使用下列陳述式清除查詢存放區資料：  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
 您可以透過執行下列明確地將變更作業模式變更回讀寫，套用其中一個或兩個步驟：  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -222,7 +222,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>錯誤狀態  
  若要復原查詢存放區， 請嘗試明確地重新設定讀寫模式，並檢查實際狀態。  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -240,7 +240,7 @@ FROM sys.database_query_store_options;
  
  如果沒有幫助，您可以嘗試在要求讀寫模式之前，先清除查詢存放區。  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -303,7 +303,7 @@ FROM sys.database_query_store_options;
 
  強制執行計畫是一個針對重要查詢修正效能的方便的機制，並讓查詢變得更容易預測。 不過，因為有計畫提示與計畫指南，強制執行計畫並不保證它將在未來的執行中使用。 一般而言，當資料庫結構描述都以執行計畫所參考之物件都已改變或卸除的方式變更時，強制執行計畫就會開始失敗。 在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會退而重新編譯查詢，而實際的強制執行失敗原因會顯示在 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 下列查詢會傳回強制執行計畫的相關資訊 ︰  
   
-```tsql  
+```sql  
 USE [QueryStoreDB];  
 GO  
   

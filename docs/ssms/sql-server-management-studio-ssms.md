@@ -2,7 +2,7 @@
 title: SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.date: 02/02/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 381f25f48dbbf367b81ba7fdf95cc75f4665cff4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1319f45b9a41cf32357f4c92c3088e5dc18ade25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 元件  
   
-|Description|元件|  
+|描述|元件|  
 |---------------|---------|  
 |使用 **物件總管** 檢視及管理一個或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]執行個體中的所有物件。|[物件總管](../ssms/object/object-explorer.md)|  
 |如何使用 **範本總管** 建立及管理模板文字檔案，以加快查詢與指令碼的開發速度。|[範本總管](../ssms/template/template-explorer.md)|  
@@ -46,6 +46,6 @@ ms.lasthandoff: 12/05/2017
 |如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 語言編輯器以互動的方式建立查詢與指令碼，以及對其執行偵錯。|[查詢與文字編輯器 (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
 
 
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
 [教學課程：SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
 [教學課程：撰寫國際性通用的 Transact-SQL 陳述式](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  

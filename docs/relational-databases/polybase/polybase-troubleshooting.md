@@ -21,11 +21,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea89e4192c833ce569c336f5f2eb5f7382c136ab
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2f69e34f9d4fbbe6514cc2350ca2b14c2685ce8a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase, 疑難排解
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 可使用您在本主題中找到的技術，為 PolyBase 的問題疑難排解。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/18/2017
   
      記錄執行時間最長之查詢的執行識別碼。  
   
-    ```tsql  
+    ```sql  
      -- Find the longest running query  
     SELECT execution_id, st.text, dr.total_elapsed_time  
     FROM sys.dm_exec_distributed_requests  dr  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/18/2017
   
     -   DMS：暗示 PolyBase 資料移動服務作業。 繼續執行步驟 3b。  
   
-    ```tsql  
+    ```sql  
     -- Find the longest running step of the distributed query plan  
     SELECT execution_id, step_index, operation_type, distribution_type,   
     location_type, status, total_elapsed_time, command   
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/18/2017
   
          使用先前步驟所記錄的執行識別碼與步驟索引。 使用先前步驟所記錄的執行識別碼與步驟索引。  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of SQL step    
         SELECT execution_id, step_index, distribution_id, status,   
         total_elapsed_time, row_count, command   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/18/2017
   
          使用先前步驟所記錄的執行識別碼與步驟索引。  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of DMS step    
         SELECT execution_id, step_index, dms_step_index, status,   
         type, bytes_processed, total_elapsed_time  
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/18/2017
   
      使用先前步驟所記錄的執行識別碼與步驟索引。  
   
-    ```tsql  
+    ```sql  
     SELECT execution_id, step_index, dms_step_index, compute_node_id,   
     type, input_name, length, total_elapsed_time, status   
     FROM sys.dm_exec_external_work   

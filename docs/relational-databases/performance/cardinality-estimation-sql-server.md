@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b1c53b09fe118de3a90c78bd1393da90a915385b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b009aea458e83421468e57a07455803f9df96a0b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  **相容性層級** ︰您可以使用下列有關 [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的 Transact-SQL 程式碼，來確保您的資料庫處於特定層級。  
 
-```tsql  
+```sql  
 SELECT ServerProperty('ProductVersion');  
 go  
   
@@ -65,7 +65,7 @@ go
   
  **舊版 CE：**若是相容性層級設定為 120 以上的 SQL Server 資料庫，可使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 在資料庫層級啟用 CE 版本 70。
   
-```tsql  
+```sql  
 ALTER DATABASE
     SCOPED CONFIGURATION  
         SET LEGACY_CARDINALITY_ESTIMATION = ON;  
@@ -78,7 +78,7 @@ SELECT name, value
  
  或者從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，使用[查詢提示](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`。
  
- ```tsql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01'; 
@@ -87,7 +87,7 @@ SELECT CustomerId, OrderAddedDate
  
  **查詢存放區**︰從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，提供查詢存放區工具，方便您檢查查詢的效能。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，啟用查詢存放區的情況下，**物件總管**中的資料庫節點下會顯示**查詢存放區**節點。  
   
-```tsql  
+```sql  
 ALTER DATABASE <yourDatabase>  
     SET QUERY_STORE = ON;  
 go  
@@ -109,7 +109,7 @@ ALTER DATABASE <yourDatabase>
   
  追蹤基數估計處理序的另一個做法，是使用名為 **query_optimizer_estimate_cardinality** 的擴充事件。 下列 T-SQL 程式碼範例會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上執行。 它會將 .xel 檔案寫入 C:\Temp\ (不過您可以變更此路徑)。 當您在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中開啟 .xel 檔案時，會以使用方便的方式來顯示其詳細資訊。  
   
-```tsql  
+```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
 go  
   
@@ -143,11 +143,11 @@ go
   
  接下來的步驟可讓您用來評估是否有任何最重要查詢在最新 CE 下的執行效能不佳。 其中一些步驟是透過執行上一節所示的程式碼範例來進行。  
   
-1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]。 確定您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫已設定為最高可用的相容性層級。  
+1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 確定您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫已設定為最高可用的相容性層級。  
   
 2.  執行下列預備步驟：  
   
-    1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]。  
+    1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]  
   
     2.  執行 T-SQL，確定您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫已設定為最高可用的相容性層級。  
   
@@ -234,7 +234,7 @@ go
   
 假設上次是在 2016 年 4 月 30 日收集 OrderTable 的統計資料，而最大 OrderAddedDate 是 2016 年 4 月 30 日。 相容性層級 120 (及更高層級) 的 CE 認為 OrderTable 中資料行所包含之「遞增」資料的值，可能大於統計資料所記錄的最大值。 此認知改進了類似如下之 SQL SELECT 的查詢計劃。  
   
-```tsql  
+```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01';  
@@ -246,7 +246,7 @@ SELECT CustomerId, OrderAddedDate
   
 層級 120 的 CE 認為相同資料表上的兩個資料行 Model 和 ModelVariant 之間可能會相互關聯。 CE 可更準確地的估計查詢所要傳回的資料列數目，而且查詢最佳化工具會產生更佳的計劃。  
   
-```tsql  
+```sql  
 SELECT Model, Purchase_Price  
     FROM dbo.Hardware  
     WHERE  
@@ -257,7 +257,7 @@ SELECT Model, Purchase_Price
 ### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tablescc"></a>範例 C：CE 不會再假設來自不同資料表的篩選述詞之間有任何相互關聯 
 對新式工作負載和實際商務資料的最新詳細研究顯示，來自不同資料表的述詞篩選條件通常彼此沒有關聯。 在下列查詢中，CE 假設 s.type 和 r.date 之間沒有關聯。 因此，CE 所估計的傳回資料列數目比較低。  
   
-```tsql  
+```sql  
 SELECT s.ticket, s.customer, r.store  
     FROM  
                    dbo.Sales    AS s  

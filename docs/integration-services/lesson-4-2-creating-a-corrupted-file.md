@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89cd8b22732914664b8fc870334c3994adc15373
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f00ad52ab0eb775a7934b24cb56400e3235fab55
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-2---creating-a-corrupted-file"></a>課程 4-2 - 建立損毀的檔案
 若要示範組態和轉換錯誤的處理，您必須建立處理時會造成元件失敗的範例一般檔案。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     > 數字 27 是元件的識別碼。 當您建立資料流程時會指派此值，您封裝中的值可能不同。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 [步驟 3：加入錯誤流程重新導向](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
   

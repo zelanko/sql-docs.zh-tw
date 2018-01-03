@@ -3,7 +3,7 @@ title: "ConnectModeEnum |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd3a2912bdc0e204bfbbe1c16a878302f181679c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 99befb958e09e6973059d9677fa51ca1d5f7fc1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 指定在修改資料的可用權限[連接](../../../ado/reference/ado-api/connection-object-ado.md)、 開啟[記錄](../../../ado/reference/ado-api/record-object-ado.md)，或指定的值[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性**記錄**和[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
   
-|常數|值|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
-|**adModeRead**|1|表示唯讀權限。|  
+|**adModeRead**|@shouldalert|表示唯讀權限。|  
 |**adModeReadWrite**|3|表示讀取/寫入權限。|  
 |**adModeRecursive**|0x400000|用於搭配其他 *\*ShareDeny\** 值 (**adModeShareDenyNone**， **adModeShareDenyWrite**，或**adModeShareDenyRead**) 傳播至所有子記錄的目前的共用限制**記錄**。 如果有任何影響**記錄**並沒有任何子系。 如果搭配使用，就會產生執行階段錯誤**adModeShareDenyNone**只。 不過，它可以搭配**adModeShareDenyNone**與其他值結合時。 例如，您可以使用 「**adModeRead**或者**adModeShareDenyNone**或者**adModeRecursive**"。|  
 |**adModeShareDenyNone**|16|可讓其他人開啟與任何權限的連線。 無法拒絕他人的讀取或寫入權限。|  

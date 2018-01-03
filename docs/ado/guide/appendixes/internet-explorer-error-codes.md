@@ -3,7 +3,7 @@ title: "Internet Explorer 錯誤碼 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b68dac1402ee576985e2480a4212c00082eccd3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17a8f2fbfbc626d0ad6d30118bba3e232a93da1f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>遠端資料服務的 Internet Explorer 錯誤代碼
 下表列出遠端資料服務的使用方式相關的 Microsoft® Internet Explorer 錯誤碼。 正數低的兩個位元組十進位轉譯，就會顯示完整的錯誤程式碼和十六進位值負的十進位轉譯。
 
-|Internet Explorer (Wininet) 錯誤|Number|Description|
+|Internet Explorer (Wininet) 錯誤|Number|描述|
 |------------------------------------------|------------|-----------------|
 |**IDS_WinInet_CantConnect**|8195-2146820093 0x800A2003|網際網路用戶端錯誤： 無法連接到伺服器。|
 |**IDS_WinInet_ ConnectionReset**|12031-2146816257 0x800A2EFF|網際網路用戶端時發生錯誤： 連接重設。|

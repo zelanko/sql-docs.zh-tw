@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,13 +25,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9f27a4c04ec14896f2a8375c7b849560539dcafc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 1196fdf3fe4e37faa0da98a0cd44c3de3e0d46e7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何建立 ETL 套件
+# <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何建立 ETL 封裝
 
  > 如需舊版 SQL Server 的相關內容，請參閱 [SSIS 教學課程：建立簡易 ETL 套件](https://msdn.microsoft.com/library/ms169917(SQL.120).aspx)。
 

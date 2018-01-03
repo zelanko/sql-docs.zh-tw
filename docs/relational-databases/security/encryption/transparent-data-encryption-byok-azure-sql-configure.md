@@ -2,32 +2,34 @@
 title: "PowerShell：使用您自己的 Azure Key Vault 金鑰來啟用 TDE | Microsoft Docs"
 description: "了解如何設定 Azure SQL Database 和資料倉儲，以開始使用透明資料加密 (TDE) 並用於 PowerShell 的靜態加密。"
 keywords: 
-services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: aliceku
-ms.openlocfilehash: f8de7e653a925e04dbcab9efbd5b5c8e5354b611
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0acfd9faa668d1e86cb82496bdd97dc6a0ec2bc8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell：使用您自己的 Azure Key Vault 金鑰來啟用透明資料加密
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 本使用說明指南逐步解說如何在 SQL Database 或資料倉儲上，使用 Azure Key Vault 的金鑰進行透明資料加密 (TDE) 。 若要深入了解支援自行管理金鑰 (BYOK) 的 TDE，請瀏覽 [TDE 讓您在 Azure SQL 中自行管理金鑰](transparent-data-encryption-byok-azure-sql.md)。 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 您必須擁有 Azure 訂用帳戶，而且是該訂用帳戶的系統管理員。
 - [建議但非必要] 備妥硬體安全性模組 (HSM) 或本機金鑰存放區，以建立 TDE 保護裝置金鑰內容的本機複本。
@@ -185,7 +187,7 @@ ms.lasthandoff: 11/21/2017
    - 金鑰不應該有到期日
    - 金鑰必須啟用「取得」、「包裝金鑰」和「解除包裝金鑰」作業。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 - 了解如何輪替伺服器的 TDE 保護裝置，以符合安全性需求：[使用 PowerShell 輪替透明資料加密保護裝置](transparent-data-encryption-byok-azure-sql-key-rotation.md)。
 - 萬一發生安全性風險時，了解如何移除可能被盜用的 TDE 保護裝置：[移除可能被盜用的金鑰](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)。 

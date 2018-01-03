@@ -5,7 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c5231ce48a81595fe3523b490ca38ea056f0c9a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a1b5a5839699b44fe0e5a2ff7d08ea7c663915a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 專案及解決方案
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 以用於開發 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/20/2017
   
  下表描述顯示在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中的資料夾。  
   
-|資料夾|說明|  
+|資料夾|描述|  
 |------------|-----------------|  
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|包含封裝。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 封裝](../integration-services/integration-services-ssis-packages.md)。|  
 |其他|包含封裝檔案之外的檔案。|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/20/2017
  
 ## <a name="create-a-new-integration-services-project"></a>建立新的 Integration Services 專案  
   
-1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
+1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]  
   
 2.  在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。  
   
@@ -172,7 +172,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  (選擇性) 編輯專案名稱及位置。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 ### <a name="add-an-existing-project-to-a-solution"></a>將現有專案加入方案  
   

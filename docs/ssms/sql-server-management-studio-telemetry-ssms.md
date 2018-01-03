@@ -3,7 +3,7 @@ title: "SQL Server Management Studio - 遙測 (SSMS) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/20/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db59123cfd2f78bc069bdb2b688dc2daec8e6830
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c9e2f0d6a57d890eaeb673d213c48245e84e5624
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 使用意見收集的本機稽核
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功能，可收集匿名的功能使用方式資料並傳送給 Microsoft。 SSMS 可能會收集標準的電腦資訊以及關於使用方式和效能的資訊，這些資訊可能會傳送給 Microsoft，並基於改善 SSMS 的品質、安全性和可靠性的目的加以分析。 我們不會收集　貴用戶的姓名、地址或是其他連絡資訊等資料。 如需詳細資訊，請參閱 [SQL Server 隱私權聲明](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx)。

@@ -3,7 +3,7 @@ title: "參數化命令與中介計算命令 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c21676293fe0d395a1e0cc5952a3d6fab1951d60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d59ce82d8c0d451495b229cc285e25286f5d197
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>參數化的命令與中介計算命令
 一般的參數化的圖形附加命令有一個子句，會建立父**資料錄集**查詢命令與另一個子句，以建立子系**資料錄集**使用參數化的查詢命令：也就是包含的參數預留位置的命令 (問號，"？")。 產生的形狀**資料錄集**具有父代所佔高層級的兩個層級和子系會佔用較低層級。  
@@ -35,5 +35,5 @@ ms.lasthandoff: 11/17/2017
   
  一般使用這項功能是要叫用的彙總函式和群組功能 shapeCOMPUTE 命令建立的中介**資料錄集**物件的子系的分析資訊**資料錄集**. 此外，因為這是參數化的圖形命令時，每次的父代的章節資料行存取時，新的子系**資料錄集**可擷取。 因為的中介層級都衍生自子，它們也會重新計算。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)

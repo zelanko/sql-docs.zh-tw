@@ -3,7 +3,7 @@ title: "確保有足夠的 TempDB 空間 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b604ad466cd4bb304252806be75c9f722c6ee803
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 095660fd0e5ecb1db40ece75a8c551855182d60a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>確保有足夠的 TempDB 空間
 如果在處理時所發生的錯誤[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)需要處理在 Microsoft SQL Server 6.5 空間的物件，您可能需要增加 TempDB 的大小。 (某些查詢需要暫存處理空間; 例如，具有 ORDER BY 子句的查詢則需要排序的**資料錄集**，這需要一些暫存空間。)  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
  如需有關本主題的詳細資訊，請搜尋 「 展開資料庫 對話方塊。 」 的 Microsoft SQL Server Enterprise Manager 的說明檔  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

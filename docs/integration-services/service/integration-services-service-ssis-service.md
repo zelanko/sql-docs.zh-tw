@@ -29,16 +29,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9c2a1063b982ab1f3b8203f76adc59e945da12b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4ee9dbf85cc5fbe25b4547c1152ff1139ec9c6fd
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服務 (SSIS 服務)
   本節中的主題討論 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務 (用於管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 Windows 服務)。 若要建立、儲存及執行 Integration Services 封裝，則不需要這項服務。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支援 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務能與舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]回溯相容。  
   
- 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會針對使用專案部署模型部署至 **伺服器的專案，將物件、設定和操作資料儲存在** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料庫中。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器是主控資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的執行個體。 如需資料庫的詳細資訊，請參閱 [SSIS 目錄](../../integration-services/service/ssis-catalog.md)。 如需將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+ 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會針對使用專案部署模型部署至 **伺服器的專案，將物件、設定和操作資料儲存在** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料庫中。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器是主控資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的執行個體。 如需資料庫的詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。 如需將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
 ## <a name="management-capabilities"></a>管理功能  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務是可用於管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務只可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
  您可以使用下列其中一個 Microsoft Management Console (MMC) 嵌入式管理單元來管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務：SQL Server 組態管理員或服務。 您必須先確定服務已啟動，然後才能管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的封裝。  
   
- 根據預設， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務設定為可管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝，該執行個體與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]同時安裝。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體並未同時安裝， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會設定為可管理本機預設 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體之 msdb 資料庫中的封裝。 若要管理儲存在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]具名或遠端執行個體中的封裝，或儲存在多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中的封裝，您就必須修改此服務的組態檔。
+ 根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務設定為可管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝，該執行個體與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 同時安裝。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體並未同時安裝，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會設定為可管理本機預設 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝。 若要管理儲存在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]具名或遠端執行個體中的封裝，或儲存在多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中的封裝，您就必須修改此服務的組態檔。
   
  依預設， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會設定為在服務停止時停止執行中的封裝。 不過， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不會等待封裝停止，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務停止後，仍可能有部份封裝在執行中。  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/20/2017
         > [!NOTE]  
         >  [進階] 索引標籤不包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的資訊。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 5.  在 [檔案] 功能表上，按一下 [結束]，以關閉 [SQL Server 組態管理員] 嵌入式管理單元。  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/20/2017
   
     -   按一下 **[相依性]** 索引標籤，以檢視相依性服務的清單。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不具有相依性。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
 6.  或者，如果啟動類型是 [手動] 或 [自動]，則可以用滑鼠右鍵按一下 [SQL Server Integration Services]，然後按一下 [啟動]、[停止] 或 [重新啟動]。  
   

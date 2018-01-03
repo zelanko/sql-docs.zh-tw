@@ -3,7 +3,7 @@ title: "Visual c + + ADO 程式設計 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8decc959840898d0b82c86c0d955b29a7affddde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae662529fc9297fa709d1a185b63d0648b0af903
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-ado-programming"></a>Visual c + + ADO 程式設計
 ADO 應用程式開發介面參考描述 ADO 應用程式開發介面 (API) 的語法以 Microsoft Visual Basic 類似的功能。 適用對象是所有使用者，雖然 ADO 程式設計人員採用各種不同的語言，例如 Visual Basic、 Visual c + + (逾時或無**#import**指示詞)，和 Visual J + + （與 ADO/WFC 類別封裝）。  

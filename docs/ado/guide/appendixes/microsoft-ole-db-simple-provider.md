@@ -3,7 +3,7 @@ title: "Microsoft OLE DB 簡單提供者 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1159651ab4b7198895f4d5192a1b34701dcaac7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49eb75b772d3e8532074bcc1f9bccfd703d622ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 簡單提供者概觀
 Microsoft OLE DB 簡單提供者 (OSP) 可讓 ADO 存取任何資料的提供者已寫入使用[OLE DB 簡單提供者 (OSP) 工具組](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6)。 簡單的提供者被用來存取資料來源需要唯一基本的 OLE DB 支援，例如記憶體中陣列或 XML 文件。
@@ -50,7 +50,7 @@ MSDAOSP
 
  字串，包含這些關鍵字：
 
-|關鍵字|Description|
+|關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定 SQL Server 的 OLE DB 提供者。|
 |**資料來源**|指定伺服器的名稱。|

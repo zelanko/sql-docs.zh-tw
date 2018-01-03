@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88497e6a02ded0fc47b703ebe2bda99e10917d6b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 03ffca860f467f806dca3c9385543a59ef743219
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
   階層成員權限為選擇性，而且只有當您希望使用者擁有特定成員的受限存取權時，才應該使用。 如果您未在 [階層成員] 索引標籤上指派權限，則使用者的權限完全是根據 [模型] 索引標籤上指派的權限。  
@@ -40,12 +40,12 @@ ms.lasthandoff: 11/20/2017
   
  階層成員權限會套用到您指派的模型版本以及該版本的任何將來複本。 它們不會套用到早於您所指派的版本。  
   
-|權限|說明|  
+|權限|描述|  
 |----------------|-----------------|  
 |**讀取**|顯示成員。<br /><br /> <br /><br /> 注意：如果您僅指派 [讀取] 權限給 [根]，[根] 底下的成員是唯讀的。但是在明確階層和集合中，使用者可以將成員移到 [根] 而且可以將新的成員加入到 [根]。|  
 |**建立**|階層成員的權限不足以建立權限。|  
 |**Update**|顯示成員，而且使用者可加以變更。 使用者也可以在任何明確階層或成員所屬的集合中移動成員。|  
-|**Delete**|顯示成員，而且使用者可加以刪除。|  
+|**刪除**|顯示成員，而且使用者可加以刪除。|  
 |**拒絕**|不顯示成員。|  
   
  在 [階層成員] 索引標籤上，您指派的權限不會立即生效。 權限套用的頻率取決於 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中 [系統設定] 資料表內的 [成員安全性處理間隔設定]。 遵循[立即套用成員權限 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md) 中的步驟，可以立即套用成員權限。  

@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d5606c5733472e462b74d32a8ff4598f52ebcf90
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3158ac5784d00ce59964e3de010d68dd873c21c7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>監視與疑難排解記憶體使用量
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 耗用記憶體的模式與磁碟資料表不同。 您可以使用針對記憶體和記憶體回收子系統提供的 DMV 或效能計數器，監視資料庫中記憶體最佳化資料表和索引所配置和使用的記憶體數量。  如此就能讓您同時深入查看系統和資料庫層級，並且讓您防止因記憶體耗盡而發生問題。  
@@ -155,7 +155,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>記憶體最佳化資料表和索引的記憶體耗用量  
  您可以藉由查詢 `sys.dm_db_xtp_table_memory_stats` 找到所有使用者資料表、索引和系統物件的記憶體耗用量，如此處所示。  
   
-```tsql  
+```sql  
 SELECT object_name(object_id) AS Name  
      , *  
    FROM sys.dm_db_xtp_table_memory_stats  
@@ -181,7 +181,7 @@ NULL       -2          192                           25                      16 
 #### <a name="memory-consumption-by-internal-system-structures"></a>內部系統結構的記憶體耗用量  
  系統物件也會耗用記憶體，這些系統物件包括交易式結構、資料和差異檔案的緩衝區、記憶體回收結構等。 您可以藉由查詢 `sys.dm_xtp_system_memory_consumers` 找到這些系統物件所使用的記憶體，如此處所示。  
   
-```tsql  
+```sql  
 SELECT memory_consumer_desc  
      , allocated_bytes/1024 AS allocated_bytes_kb  
      , used_bytes/1024 AS used_bytes_kb  
@@ -220,7 +220,7 @@ PGPOOL:  4K               0                    0                    0
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>存取記憶體最佳化資料表時的執行階段記憶體耗用量  
  您可以使用下列查詢判斷執行階段結構 (例如程序快取) 所耗用的記憶體：執行此查詢可取得執行階段結構 (例如程序快取) 所使用的記憶體。 所有執行階段結構都會加上 XTP 標記。  
   
-```tsql  
+```sql  
 SELECT memory_object_address  
      , pages_in_bytes  
      , bytes_used  
@@ -253,7 +253,7 @@ memory_object_address pages_ in_bytes bytes_used type
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎跨執行個體所耗用的記憶體  
  管理配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎和記憶體最佳化物件之記憶體的方式，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中其他任何記憶體取用者的管理方式相同。 MEMORYCLERK_XTP 類型的 Clerk 會考量所有配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎的記憶體。 使用下列查詢可找出 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎所使用的所有記憶體。  
   
-```tsql  
+```sql  
 -- this DMV accounts for all memory used by the hek_2 engine  
 SELECT type  
      , name  

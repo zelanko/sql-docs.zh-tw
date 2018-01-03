@@ -3,7 +3,7 @@ title: "屬性視窗 (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f31c5197f6b4767c91c85b042caf418c4c2b2ad7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e1bd4e6f6201bc9a64e68a7b05722b281abbb0e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="properties-window-management-studio"></a>屬性視窗 (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此視窗來檢視所選項目的屬性。 您也可以利用 [屬性] 視窗來檢視檔案、專案和方案屬性。 按一下 [檢視] 功能表上的 [屬性視窗]，就可以使用 [屬性] 視窗。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="options"></a>選項。  
   
-|元素|說明|  
+|元素|描述|  
 |-----------|---------------|  
 |**物件名稱**|列出目前選取的物件。 只有來自使用中編輯器或設計師的物件才可見。|  
 |**類別目錄**|依類別目錄列出已選取物件的全部屬性和屬性值。 您可以摺疊類別目錄，以減少可見屬性的數目。 當您展開或摺疊類別目錄時，類別目錄名稱左側會出現加號 (+) 或減號 (-)。 類別目錄依字母順序來排列。|  

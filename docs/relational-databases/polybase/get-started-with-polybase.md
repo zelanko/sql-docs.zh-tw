@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 330a9b9a12312ab22389e8de0849ab164b8f0d47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 27265e6d6caf4f1acfc0803839e3077cd1597f67
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="get-started-with-polybase"></a>開始使用 PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   使用 PolyBase 物件的查詢範例  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  [SQL Server (64 位元)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 的執行個體和下列項目：  
   
 -   Microsoft .NET Framework 4.5。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="how-to-confirm-installation"></a>如何確認安裝  
  安裝之後，執行下列命令來確認已成功安裝 PolyBase。 如果已安裝 PolyBase 會傳回 1，否則會傳回 0。  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
@@ -102,8 +102,8 @@ Hadoop 遵循其新版本的 "Major.Minor.Version" 模式。 支援所支援主�
   
 ### <a name="external-data-source-configuration"></a>外部資料來源設定  
   
-1.  執行 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ 並設定適當的值。 根據預設，Hadoop 連接設為 7。 若要尋找值，請參閱 [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (PolyBase 連線組態 &#40;Transact-SQL&#41;)。  
-      ```tsql  
+1.  執行 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ 並設定適當的值。 根據預設，Hadoop 連接設為 7。 若要尋找值，請參閱 [PolyBase 組態 &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。  
+      ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -289,7 +289,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   臨機操作查詢  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 1: Ad-Hoc Query joining relational with Hadoop data   
     -- Select customers who drive faster than 35 mph: joining structured customer data stored   
     -- in SQL Server with car sensor data stored in Hadoop.  
@@ -303,7 +303,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   匯入資料  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 2: Import external data into SQL Server.  
     -- Import data for fast drivers into SQL Server to do more in-depth analysis and  
     -- leverage Columnstore technology.  
@@ -362,7 +362,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
  從 SQL Server 2016 RC1 升級至 RC2 或 RC3 之後，查詢可能會失敗。 如需詳細資訊及解決方式，請參閱 [SQL Server 2016 版本資訊](../../sql-server/sql-server-2016-release-notes.md) ，並搜尋 "PolyBase"。  
   
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
  若要了解向外延展功能，請參閱 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(PolyBase 向外延展群組)。  若要監視 PolyBase，請參閱 [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)(疑難排解 PolyBase)。 若要針對 PolyBase 效能進行疑難排解，請參閱[使用動態管理檢視進行 PolyBase 疑難排解](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80) \(英文\)。  
   
 ## <a name="see-also"></a>另請參閱  

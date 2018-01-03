@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77b06bff3d98e39104970adaaeadf9f8d342a357
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76913433e0cfe08d316c668a79d452959ebbee3b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>建立 AlwaysOn 可用性群組的叢集 DTC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題將逐步引導您完成 SQL Server AlwaysOn 可用性群組之叢集 DTC 資源的設定。 完整組態最多可能需要一小時才能完成。 
@@ -120,7 +120,7 @@ foreach ($node in $nodes) {
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.設定 [不能肯定的交易解析] 
 此指令碼會將未決交易的 [不能肯定的交易解析] 伺服器組態選項設定為「假設為認可」。  在 SQL Server Management Studio (SSMS) 中，對 **SQLCMD 模式**的 `SQLNODE1` 執行下列 T-SQL 指令碼。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -161,7 +161,7 @@ GO
 ## <a name="4-create-test-databases"></a>4.建立測試資料庫
 此指令碼會在 `SQLNODE1` 上建立名為 `AG1` 的資料庫，並在 `SQLNODE2` 上建立名為 `dtcDemoAG1` 的資料庫。  在 SSMS 中，對 **SQLCMD 模式**的 `SQLNODE1` 執行下列 T-SQL 指令碼。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -217,9 +217,9 @@ GO
 ----------------------------------------------------------------
 ```
 ## <a name="5---create-endpoints"></a>5. 建立端點
-此指令碼會建立在 TCP 通訊埠 `5022` 上接聽的端點 `AG1_endpoint`。  在 SSMS 中，對 **SQLCMD 模式**的 `SQLNODE1` 執行下列 T-SQL 指令碼。
+此指令碼會建立在 TCP 通訊埠 `5022` 上接聽的端點 `AG1_endpoint`。  在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的**執行下列 T-SQL 指令碼。
 
-```tsql  
+```sql  
 /**********************************************
 Execute on SQLNODE1 in SQLCMD mode
 **********************************************/
@@ -250,9 +250,9 @@ GO
 ```
 
 ## <a name="6---prepare-databases-for-availability-group"></a>6. 準備可用性群組的資料庫
-此指令碼會在 `SQLNODE1` 上備份 `AG1`，並將它還原至 `SQLNODE2`。  在 SSMS 中，對 **SQLCMD 模式**的 `SQLNODE1` 執行下列 T-SQL 指令碼。
+此指令碼會在 `SQLNODE1` 上備份 `AG1`，並將它還原至 `SQLNODE2`。  在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的**執行下列 T-SQL 指令碼。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -285,7 +285,7 @@ GO
 ## <a name="7---create-availability-group"></a>7. 建立可用性群組
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必須使用 **CREATE AVAILABILITY GROUP** 命令和 **WITH DTC_SUPPORT = PER_DB** 子句建立。  您目前無法改變現有可用性群組。  [新增可用性群組精靈] 不允許您啟用新可用性群組的 DTC 支援。  下列指令碼會建立新的可用性群組，並加入次要。  在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的**執行下列 T-SQL 指令碼。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -488,7 +488,7 @@ $nodes = (Get-ClusterNode).Name;
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務第一次需要分散式交易時，它會向 DTC 服務註冊。 SQL Server 服務將繼續使用該 DTC 服務，直到重新啟動為止。 如果有叢集 DTC 服務可供使用，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會向叢集 DTC 服務註冊。 如果沒有叢集 DTC 服務可供使用，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會向本機 DTC 服務註冊。 若要確認 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 向叢集 DTC 服務註冊，請停止並重新啟動每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 
 
 請依照下列 T-SQL 指令碼中包含的步驟進行：
-```tsql  
+```sql  
 /*
 Gracefully cycle the SQL Server service and failover the Availability Group
     a.  On SQLNODE2, cycle the SQL Server service from SQL Server Configuration Manger
@@ -549,7 +549,7 @@ END
 ### <a name="create-linked-servers"></a>建立連結的伺服器  
 下列指令碼會在 `SQLNODE1`上建立兩個連結的伺服器。  在 SSMS 中，對 `SQLNODE1`執行下列 T-SQL 指令碼。
 
-```tsql  
+```sql  
 -- SQLNODE1
 IF NOT EXISTS (SELECT * FROM sys.servers where name = N'SQLNODE1')
 BEGIN
@@ -565,7 +565,7 @@ END
 ### <a name="execute-a-distributed-transaction"></a>執行分散式交易
 此指令碼會先傳回目前的 DTC 交易統計資料，  再使用 `SQLNODE1` 和 `SQLNODE2`上的資料庫來執行分散式交易。  然後，指令碼會再次傳回 DTC 交易統計資料，其計數現在應該會增加。  實際連接到 `SQLNODE1` ，並在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的**執行下列 T-SQL 指令碼。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
     Must be physically connected to SQLNODE1

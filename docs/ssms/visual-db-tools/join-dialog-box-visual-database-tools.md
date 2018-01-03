@@ -3,7 +3,7 @@ title: "聯結對話方塊 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d463f00d5c86368858f18d2dfc3d72f989de88e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f5cb437552b01e7bd7027dc8285f2939198a5037
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>聯結對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此對話方塊來指定聯結資料表的選項。 若要存取此對話方塊，請在 [設計] 窗格中選取聯結線 (Join Line)。 然後，在 [屬性] 視窗中按一下 [聯結條件及類型]，並按一下顯示在屬性右邊的省略符號 (**…**)。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
 |------------|------------------|  
 |**Table**|聯結中相關資料表或資料表值物件的名稱。 不能在這裡變更資料表的名稱 — 此資訊只用於顯示資訊。|  
 |**資料行**|用於聯結資料表的資料行名稱。 運算子清單中的運算子會指定各資料行中資料之間的關係。 不能在這裡變更資料行的名稱 — 此資訊只用於顯示資訊。|  
-|**運算子**|指定用於關聯聯結資料行的運算子。 若要指定等於 (=) 之外的運算子，請從清單中選取。 關閉屬性頁時，您選取的運算子會出現在聯結線的菱形圖中，如下所示：<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 圖示")|  
+|**[運算子]**|指定用於關聯聯結資料行的運算子。 若要指定等於 (=) 之外的運算子，請從清單中選取。 關閉屬性頁時，您選取的運算子會出現在聯結線的菱形圖中，如下所示：<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 圖示")|  
 |**選取所有資料列，從 <table1>**|指定輸出中顯示左邊資料表裡全部的資料列，即使右邊資料表中沒有對應的符合也一樣。 右邊資料表中沒有符合資料的資料行會顯示為 null。 選擇此選項就等於在 SQL 陳述式中指定 LEFT OUTER JOIN。|  
 |**選取所有資料列，從 <table2>**|指定輸出中顯示右邊資料表裡全部的資料列，即使左邊資料表中沒有對應的符合也一樣。 左邊資料表中沒有符合資料的資料行會顯示為 null。 選擇此選項就等於在 SQL 陳述式中指定 RIGHT OUTER JOIN。|  
   

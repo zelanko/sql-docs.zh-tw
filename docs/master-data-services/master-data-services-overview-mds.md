@@ -5,7 +5,7 @@ ms.date: 02/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: beb17b82f5dc7ce522403d7d32a71e52a497bd2e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 60127dd894485c979e0c79dcde0091119d88ed9a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概觀 (MDS)
   本主題說明 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的索引鍵資料組織和管理功能。 
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
  當您為資料定義基本結構之後，就可開始使用匯入功能加入資料記錄 (成員)。 您將資料載入暫存資料表、使用商務規則驗證資料，以及將資料載入 MDS 資料表。  您也可以使用商務規則來設定屬性值。  
   
- 下表摘要列出 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的主要工作。 除非另有指示，否則您必須是模型系統管理員，才能完成下列所有程序。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+ 下表摘要列出 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的主要工作。 除非另有指示，否則您必須是模型系統管理員，才能完成下列所有程序。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 > [!NOTE]  
 >  安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]後，您可能想要在測試環境中完成下列工作，並使用所提供的範例資料。 如需詳細資訊，請參閱[部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)。  

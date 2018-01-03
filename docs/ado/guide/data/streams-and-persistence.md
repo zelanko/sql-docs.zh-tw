@@ -3,7 +3,7 @@ title: "資料流和持續性 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 184f33a603d94f3c40e139c8b4a1fdeb6556d012
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d39b1eee58a466ea57febf439f736ce8fa86bd52
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="streams-and-persistence"></a>資料流和持續性
 [資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件[儲存](../../../ado/reference/ado-api/save-method.md)方法存放區，或*持續發生*、**資料錄集**在檔案中，而[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法還原**資料錄集**從該檔案。  
@@ -166,7 +166,7 @@ function GetRs()
 ...  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Open 方法 （ADO 資料錄集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [記錄物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

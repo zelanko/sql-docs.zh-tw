@@ -3,7 +3,7 @@ title: "作業步驟屬性 - 新增作業步驟 (一般頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fb87fbdb20c9872d502543f125911eb638cfc8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13f3553e80052f9264f70d0018d8d1157aaacb14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>作業步驟屬性 - 新增作業步驟 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理程式作業步驟的屬性，或定義新的作業步驟。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
 **執行身分**  
 設定作業步驟的 Proxy 帳戶。 系統管理員 (sysadmin) 固定伺服器角色的成員也會指定 [SQL 代理程式服務帳戶]。  
   
-**資料庫**  
+**[資料庫備份]**  
 設定作業步驟執行所在的資料庫。 並非所有作業步驟類型都可使用這個選項。  
   
 **Command**  
@@ -137,7 +137,7 @@ ms.lasthandoff: 12/05/2017
 貼上剪貼簿的內容。  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>複寫佇列讀取器作業步驟的選項  
-**資料庫**  
+**[資料庫備份]**  
 作業步驟將使用的資料庫。  
   
 **全選**  
@@ -212,7 +212,7 @@ ms.lasthandoff: 12/05/2017
 **封裝來源**  
 指定儲存 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 封裝的位置。 選擇下列其中之一：  
   
--   **SQL Server**  
+-   **[SQL Server]**  
   
 -   **檔案系統**  
   
@@ -221,10 +221,10 @@ ms.lasthandoff: 12/05/2017
 **Server**  
 輸入儲存 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 封裝的伺服器名稱。 唯有當 [套件來源] 指定 [SQL Server] 或 [SSIS 套件存放區] 時，才能使用此選項。  
   
-**使用 Windows 驗證**  
+**[使用 Windows 驗證]**  
 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 驗證登入 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 。  
   
-**使用 SQL Server 驗證**  
+**[使用 SQL Server 驗證]**  
 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 。 如果選取這種驗證方法，請輸入適當的 [使用者名稱] 和 [密碼]。  
   
 > [!IMPORTANT]  
@@ -242,7 +242,7 @@ ms.lasthandoff: 12/05/2017
 **組態檔**  
 列出封裝的組態檔。  
   
-**加入**  
+**[加入]**  
 加入封裝的組態檔。  
   
 **移除**  
@@ -260,7 +260,7 @@ ms.lasthandoff: 12/05/2017
 **命令檔**  
 列出封裝的命令檔。  
   
-**加入**  
+**[加入]**  
 加入命令檔。  
   
 **移除**  
@@ -329,7 +329,7 @@ ms.lasthandoff: 12/05/2017
 **屬性路徑**  
 檢視或變更屬性的路徑。  
   
-**Value**  
+**ReplTest1**  
 檢視或變更屬性的值。  
   
 **移除**  

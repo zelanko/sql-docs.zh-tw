@@ -3,7 +3,7 @@ title: "模式屬性 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71b8bbcaa20e10791f8e3d684655b47e3dd1441a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21a3257ff92cd73d10f0685a7727d98417a917ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mode-property-ado"></a>模式屬性 (ADO)
 表示可用的權限中修改資料[連接](../../../ado/reference/ado-api/connection-object-ado.md)，[記錄](../../../ado/reference/ado-api/record-object-ado.md)，或[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
@@ -51,6 +51,6 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|  
 |[Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [IsolationLevel 和模式屬性範例 (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
  [IsolationLevel 和模式屬性範例 （VC + +）](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

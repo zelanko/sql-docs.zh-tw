@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c8a82c0ebb888c4ea075789c7f2149726ff7af25
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e21ab2cdfc462485bf15b741dbe6e795c0833de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 套件和專案參數
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 參數可讓您在封裝執行時，將值指派給封裝內的屬性。 您可以在專案層級建立 *「專案參數」* (Project Parameter)，並在封裝層級建立 *「封裝參數」* (Package Parameter)。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
@@ -122,14 +122,14 @@ ms.lasthandoff: 11/20/2017
   
 3.  在清單本身或 **[屬性]**視窗中，輸入 **[名稱]**、 **[資料類型]**、 **[值]**、 **[區分]** 以及 **[必要]** 屬性的值。 下表描述這些屬性。  
   
-    |屬性|說明|  
+    |屬性|描述|  
     |--------------|-----------------|  
     |[屬性]|參數的名稱。|  
     |[名稱]|參數的資料類型。|  
     |預設值|在設計時指派的參數預設值。 這也稱為設計預設值。|  
-    |[值]|敏感性參數值會在目錄中加密，以 Transact-SQL 或 SQL Server Management Studio 來檢視時，會顯示為 NULL 值。|  
+    |區分|敏感性參數值會在目錄中加密，以 Transact-SQL 或 SQL Server Management Studio 來檢視時，會顯示為 NULL 值。|  
     |必要項|必須先指定一個值 (非設計預設值)，封裝才能執行。|  
-    |說明|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
+    |描述|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
   
     > **注意**：當您將專案部署至目錄時，會再多幾個屬性與專案相關聯。 若要查看目錄中所有參數的所有屬性，請使用 [catalog.object_parameters &#40;SSISDB 資料庫&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 檢視。  
   
@@ -153,14 +153,14 @@ ms.lasthandoff: 11/20/2017
   
 4.  輸入 **[名稱]**、 **[資料類型]**、 **[值]**、 **[區分]**以及 **[必要]** 屬性的值。  
   
-    |屬性|說明|  
+    |屬性|描述|  
     |--------------|-----------------|  
     |[屬性]|參數的名稱。|  
     |[名稱]|參數的資料類型。|  
     |預設值|在設計時指派的參數預設值。 這也稱為設計預設值。|  
-    |[值]|敏感性參數值會在目錄中加密，以 Transact-SQL 或 SQL Server Management Studio 來檢視時，會顯示為 NULL 值。|  
+    |區分|敏感性參數值會在目錄中加密，以 Transact-SQL 或 SQL Server Management Studio 來檢視時，會顯示為 NULL 值。|  
     |必要項|必須先指定一個值 (非設計預設值)，封裝才能執行。|  
-    |說明|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
+    |描述|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
   
 5.  儲存專案以儲存參數的變更。 參數值儲存在專案檔案的組態中。 儲存專案檔案即可將參數值的任何變更認可到磁碟。  
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 11/20/2017
  **說明**  
  指定參數的描述。  
   
- **值**  
+ **ReplTest1**  
  指定參數的預設值。 這也稱作設計預設值，以後在部署時可以覆蓋該值。  
   
  **範圍。**  

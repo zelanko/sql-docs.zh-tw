@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b0c6e128f6b2213e1a4a2af46281388f7c8a593
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 本主題描述如何建立、填入和管理 SQL Server 中的全文檢索索引。
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 
 ##  <a name="view"></a> 檢視全文檢索索引的屬性
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>使用 Transact-SQL 檢視全文檢索索引的屬性
-|目錄或動態管理檢視|Description|  
+|目錄或動態管理檢視|描述|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|針對通往全文檢索索引參考的每個全文檢索目錄，各傳回一個資料列。|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|屬於全文檢索索引一部分的每個資料行各有一個資料列。|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  在 **[選取頁面]** 窗格中，您可以選取下列任何頁面：  
   
-    |頁面|Description|  
+    |頁面|描述|  
     |----------|-----------------|  
     |**一般**|顯示全文檢索索引的基本屬性。 這些屬性包括許多可修改的屬性和一些無法變更的屬性，例如資料庫名稱、資料表名稱，以及全文檢索索引鍵資料行的名稱。 可修改的屬性包括：<br /><br /> **全文檢索索引停用字詞表**<br /><br /> **全文檢索索引已啟用**<br /><br /> **變更追蹤**<br /><br /> **搜尋屬性清單**<br /><br />如需詳細資訊，請參閱[全文檢索索引屬性 &#40;一般頁面&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f)。|  
     |**資料行**|顯示可用於全文檢索索引的資料表資料行。 系統會針對選取的資料行建立全文檢索索引。 您可以選取任意數目的可用資料行，以便包含在全文檢索索引中。 如需詳細資訊，請參閱[全文檢索索引屬性 &#40;資料行頁面&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)。|  
@@ -174,7 +174,7 @@ GO
   
 請注意，全文檢索引擎可以運用安裝在作業系統中的現有篩選。 您必須先將作業系統篩選、斷詞工具和字幹分析器載入伺服器執行個體中，然後才能使用它們，如下所示：  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_service @action='load_os_resources', @value=1  
 ```  
   

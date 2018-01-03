@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebc75200894e27976911f2c7413e027fbb1c5b14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43888872cd4d686363fbf995a71e0367beb3c7e7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>原生程序中不可部分完成的區塊
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  下列範例說明使用不可部分完成的區塊和原生編譯預存程序處理錯誤的行為：  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -138,14 +138,14 @@ GO
   
  **BEGIN ATOMIC**需要以下選項：  
   
-|必要設定|Description|  
+|必要設定|描述|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|支援的值為 **SNAPSHOT**、 **REPEATABLEREAD**和 **SERIALIZABLE**。|  
 |**LANGUAGE**|判斷日期和時間格式及系統訊息。 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中的所有語言和別名都受到支援。|  
   
  以下是選擇性設定：  
   
-|選擇性設定|Description|  
+|選擇性設定|描述|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式都受到支援。 當指定時， **DATEFORMAT** 會覆寫與 **LANGUAGE**相關聯的預設日期格式。|  
 |**DATEFIRST**|當指定時， **DATEFIRST** 會覆寫與 **LANGUAGE**相關聯的預設值。|  

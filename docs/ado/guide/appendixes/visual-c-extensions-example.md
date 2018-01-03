@@ -3,7 +3,7 @@ title: "Visual c + + 擴充功能範例 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 04f9d075a9ff4b48f83e27a6699a28a99dfcb2dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9303528381341f57722730a6e92b69a773a73b13
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-extensions-example"></a>Visual c + + 擴充功能範例
 此程式會顯示是如何從欄位擷取值，將其轉換為 C/c + + 變數。  
@@ -114,6 +114,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [使用 Visual c + + 擴充功能](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++ Extensions 標題](../../../ado/guide/appendixes/visual-c-extensions-header.md)

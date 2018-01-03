@@ -3,7 +3,7 @@ title: "傳遞參數至具名命令 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd64725eab5760c0cce7d2ecf33b320d94b3a283
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0db27250c2f095c31aa5bca95b738fa64ca922
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="passing-parameters-to-a-named-command"></a>將參數傳遞至具名的命令
 就像命令的結果會當做傳遞*出*具名命令參數的變數參數化的命令可以針對已做為傳入的*中*具名命令的變數。  
@@ -98,5 +98,5 @@ objConn.GetOrdersOf "12345", objRs
   
  — 有效，但會產生空的結果集，因為沒有這類記錄存在於資料庫中。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

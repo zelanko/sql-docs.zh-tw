@@ -3,7 +3,7 @@ title: "最佳化屬性範例 （VC + +） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07c69f576fcd1c85bd293c01c7b7995f7b7e1e9f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b7ef91419c5891d4f49aacfb0c50712609aeec8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimize-property-example-vc"></a>最佳化屬性範例 （VC + +）
 這個範例會示範[欄位](../../../ado/reference/ado-api/field-object.md)物件動態**最佳化**屬性。 **Zip**欄位**作者**資料表中**Pubs**資料庫未編製索引。 設定[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性**True**上**zip**欄位授權 ADO 來建立可改善效能的索引[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法。  
@@ -137,6 +137,6 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Akiko Yokomoto 3 銀級 Ct.核桃溪 CA**   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
  [Optimize 動態屬性 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

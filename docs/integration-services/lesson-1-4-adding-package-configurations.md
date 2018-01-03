@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65f39cdf199ebe30eccc4d3ae11f5332b18ae532
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69c55653dd8044bc2236025457fa3b5ae180cbed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>課程 1-4 - 新增套件設定
 在這項工作中，您會為每個封裝加入組態。 組態會在執行階段更新封裝屬性和封裝物件的值。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     > 若要在清單中提供環境變數，可能必須在加入變數之後重新啟動電腦。 如果不想要重新啟動電腦，可以輸入環境變數的名稱。  
   
-7.  按一下 **[下一步]**。  
+7.  按 [下一步] 。  
   
 8.  在 [正在完成精靈] 頁面的 [組態名稱] 方塊中，輸入「DataTransfer 環境變數組態」、在 [預覽] 窗格中檢閱組態內容，然後按一下 [完成]。  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/20/2017
   
 10. 在 [連接管理員] 內，展開 [NewCustomers]，然後選取 [連接字串] 核取方塊。  
   
-11. 按一下 **[下一步]**。  
+11. 按 [下一步] 。  
   
 12. 在 [正在完成精靈] 頁面的 [組態名稱] 方塊中，輸入「DataTransfer 組態」、檢閱組態的內容，然後按一下 [完成]。  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  在 [方案總管] 中，按兩下 LoadXMLData.dtsx。  
   
-2.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，按一下控制流程設計介面背景中的任何位置。  
+2.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，按一下控制流程設計介面背景中的任何位置。  
   
 3.  在 [SSIS] 功能表上，按一下 [封裝組態]。  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     > 若要在清單中提供環境變數，可能必須在加入變數之後重新啟動電腦。  
   
-7.  按一下 **[下一步]**。  
+7.  按 [下一步] 。  
   
 8.  在 [正在完成精靈] 頁面的 [組態名稱] 方塊中，輸入「LoadXMLData EV 組態」、檢閱組態的內容，然後按一下 [完成]。  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  在 [方案總管] 中，按兩下 LoadXMLData.dtsx。  
   
-2.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，按一下控制流程設計介面背景中的任何位置。  
+2.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，按一下控制流程設計介面背景中的任何位置。  
   
 3.  在 [SSIS] 功能表上，按一下 [封裝組態]。  
   
@@ -129,7 +129,7 @@ ms.lasthandoff: 11/20/2017
   
 9. 在 [選取要匯出的屬性] 頁面上，依序展開 [LoadXMLData]、[可執行檔]、[載入 XML 資料] 和 [屬性]，然後選取 [[XMLSource].[XMLData]] 和 [[XMLSource].[XMLSchemaDefinition]] 核取方塊。  
   
-10. 按一下 **[下一步]**。  
+10. 按 [下一步] 。  
   
 11. 在 [正在完成精靈] 頁面的 [組態名稱] 方塊中，輸入「LoadXMLData 組態」、檢閱組態的內容，然後按一下 [完成]。  
   

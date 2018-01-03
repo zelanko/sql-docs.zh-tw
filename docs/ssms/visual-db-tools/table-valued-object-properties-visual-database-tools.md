@@ -3,7 +3,7 @@ title: "資料表值物件屬性 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a9ee522227473617b98b60691599b42ec7f8d35c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 090fd11012ac76b5651170fa05b73ff08cf17dce
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>資料表值物件屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您在**查詢和檢視表設計工具**中選取資料表值物件時，這些屬性就會出現在 [屬性] 視窗中。 資料表值物件可以是檢視、同義字、衍生資料表，或是資料表值函數。 除非另有說明，這些屬性在 [屬性] 視窗中都是唯讀的。  

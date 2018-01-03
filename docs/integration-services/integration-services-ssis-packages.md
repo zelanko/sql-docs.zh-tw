@@ -5,7 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 953fccc13a0d3ef9d34cfe84e5ed50675eeb801b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
   封裝是指經過組織的連接、控制流程元素、資料流程元素、事件處理常式、變數、參數以及組態的集合，您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的圖形設計工具組裝或利用撰寫程式的方式建立封裝。  然後將完成的封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區或檔案系統中，或者您可以將 ssISnoversion 專案部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器。 封裝是所擷取、執行和儲存的工作單位。  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="custom-log-entries-available-on-the-package"></a>封裝上可用的自訂記錄項目  
  下表列出封裝的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|說明|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**PackageStart**|指出封裝已經開始執行。<br /><br /> 注意：此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
 |**PackageEnd**|指出封裝已經完成。<br /><br /> 注意：此記錄項目會自動寫入記錄檔中。 您無法排除它。|  

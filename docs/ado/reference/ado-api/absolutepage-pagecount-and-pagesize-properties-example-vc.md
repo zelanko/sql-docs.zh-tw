@@ -3,7 +3,7 @@ title: "AbsolutePage、 PageCount 和 PageSize 屬性範例 （VC + +） |Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 703979cfbdcd81f36f25f7885365924910025de3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b2f7a4d82931b259cc6fb893416a98f405a7f10
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、 PageCount 和 PageSize 屬性範例 （VC + +）
 這個範例會使用[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)， [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)，和[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)屬性，以顯示名稱和雇用日期***員工***資料表中，一次的五筆記錄。  
@@ -183,7 +183,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [AbsolutePage 屬性 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount 屬性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize 屬性 (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

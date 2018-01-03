@@ -3,7 +3,7 @@ title: "備妥屬性範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c712e506073f1094b52bd0f00218e55256997d24
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a736db7dd3eb28ee2e14a173fee0347c2d31828
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prepared-property-example-vb"></a>已備妥的屬性範例 (VB)
 這個範例會示範[已準備](../../../ado/reference/ado-api/prepared-property-ado.md)開啟兩個屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件 — 一個備妥，尚未準備好的另一個。  
@@ -118,6 +118,6 @@ End Sub
 'EndPreparedVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared 屬性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

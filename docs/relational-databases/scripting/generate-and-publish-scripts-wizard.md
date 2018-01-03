@@ -3,9 +3,9 @@ title: "產生和發佈指令碼精靈 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -49,11 +49,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 69d2561990609eb94620ab8a3f7abd9c31dbb316
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 801dba9b807d9928f7d7dcb1db83274ca11ee778
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>[產生和發佈指令碼]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用 [產生和發佈指令碼精靈] 建立指令碼，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 執行個體之間傳送資料庫。 您可以針對區域網路上 Database Engine 執行個體的資料庫產生指令碼，或是從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]產生指令碼。 產生的指令碼可以在另一個 Database Engine 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行個體上執行。 您也可以使用此精靈，將資料庫內容直接發行到使用資料庫發行服務所建立的 Web 服務。 您可以針對整個資料庫建立指令碼，或將它限制為特定物件。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
  若要將資料庫發佈至 Web 主控服務，請選取精靈之 **[設定指令碼編寫選項]** 頁面上的 **[發佈到 Web 服務]** 選項。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 權限  
  發行資料庫的最低權限是來源資料庫上 db_ddladmin 固定資料庫角色中的成員資格。 將資料庫指令碼發行至位於主控提供者之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的最低權限是目標資料庫上 db_ddladmin 固定資料庫角色中的成員資格。  
   
  此外，使用者也必須提供使用者名稱和密碼來存取主控提供者帳戶，以便使用此精靈發行。 您必須先在主控提供者處建立目標資料庫，然後再發行來源資料庫。 發行會覆寫現有資料庫中的物件。  
@@ -178,7 +178,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **指令碼繫結** ：產生用於繫結預設物件和規則物件的指令碼。 預設值為 **False**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) 和 [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)。  
   
--   [指令碼定序] - 在指令碼中包含定序資訊。 預設值為 **False**。 如需相關資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+-   [指令碼定序] - 在指令碼中包含定序資訊。 預設值為 **False**。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 -   **編寫預設值的指令碼** ：包含用來在資料表資料行中設定預設值的預設物件。 預設值為 **True**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)。  
   
@@ -274,7 +274,7 @@ ms.lasthandoff: 11/17/2017
   
  **資料表/檢視表選項** ：下列選項只適用於資料表或檢視表。  
   
-1.  **發佈 CHECK 條件約束** ：在發佈程序中包含建立 **CHECK** 條件約束的程序。 預設值為 **True**。 **CHECK** 條件約束會要求輸入資料表的資料必須符合某些指定的條件。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
+1.  **發佈 CHECK 條件約束** ：在發佈程序中包含建立 **CHECK** 條件約束的程序。 預設值為 **True**。 **CHECK** 條件約束會要求輸入資料表的資料必須符合某些指定的條件。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
 2.  **發佈外部索引鍵** ：在發佈程序中包含建立外部索引鍵的程序。 預設值為 **True**。 外部索引鍵指出並強制執行資料表之間的關聯性。 如需詳細資訊，請參閱 [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。  
   
@@ -286,7 +286,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  **發佈觸發程序** ：在發佈程序中包含建立 DML 觸發程序的程序。 預設值為 **True**。 DML 觸發程序是以程式設計當資料庫伺服器發生資料操作語言 (DML) 事件時所執行的動作。 如需詳細資訊，請參閱 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
   
-7.  **發佈唯一索引鍵** ：在發佈程序中包含建立資料表之唯一索引鍵的程序。 唯一索引鍵可防止輸入重複的資料。 預設值為 **True**。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
+7.  **發佈唯一索引鍵** ：在發佈程序中包含建立資料表之唯一索引鍵的程序。 唯一索引鍵可防止輸入重複的資料。 預設值為 **True**。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
 8.  **發行變更追蹤** ：如果來源資料庫或來源資料庫中的資料表已啟用變更追蹤，則會在發佈程序中包含變更追蹤。 預設值為 **False**。 如需詳細資訊，請參閱[關於變更追蹤 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)。  
   
@@ -351,9 +351,9 @@ ms.lasthandoff: 11/17/2017
 
 1. 依序按一下 [工具] 與 [選項]。  
 2. 在 [一般指令碼選項] 下方，設定下列項目：  
-    1. 適用於 Database Engine 類型的指令碼：**Microsoft Azure SQL Database**。  
+    1. 適用於 Database Engine 類型的指令碼： **Microsoft Azure SQL Database**。  
     2. 適用於 Database Engine 版本的指令碼： **Microsoft Azure SQL 資料倉儲版本**。  
-3. 按一下 **[確定]**。
+3. 按一下 [確定] 。
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>如果適用於 SQL 資料倉儲的指令碼不是預設指令碼選項，該如何產生該指令碼  
 

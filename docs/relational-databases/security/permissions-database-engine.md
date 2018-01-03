@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6d2d7b6f97be65f053248396528c3f4f18f7230e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e37b0da02e9608249c2283683324fee42fe9a8e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 [![Database Engine 權限](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
 一旦您了解權限後，可以透過 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)和 [DENY](../../t-sql/statements/deny-transact-sql.md) 陳述式，將伺服器層級權限套用至登入和資料庫層級權限使用者。 例如：   
-```tsql
+```sql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
@@ -110,10 +110,10 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |----------------|----------------|  
 |ALTER|除了 TYPE 之外的所有物件類別。|  
 |CONTROL|所有物件類別︰ <br />AGGREGATE、<br />APPLICATION ROLE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />AVAILABILITY GROUP、<br />CERTIFICATE、<br />CONTRACT、<br />CREDENTIALS, DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br /> DEFAULT、<br />ENDPOINT、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />LOGIN、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />REMOTE SERVICE BINDING、<br />ROLE、<br />ROUTE、<br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SERVER、<br />SERVER ROLE、<br />SERVICE、<br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、USER、<br />VIEW，以及<br />XML SCHEMA COLLECTION|  
-|DELETE|除了 DATABASE SCOPED CONFIGURATION 及 SERVER 以外的所有物件類別。|  
-|EXECUTE|CLR 類型、外部指令碼、程序 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)、純量與彙總函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)，及同義字|  
+|Delete|除了 DATABASE SCOPED CONFIGURATION 及 SERVER 以外的所有物件類別。|  
+|執行 CREATE 陳述式之前，請先執行|CLR 類型、外部指令碼、程序 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)、純量與彙總函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)，及同義字|  
 |IMPERSONATE|登入及使用者|  
-|INSERT|同義字、資料表與資料行、檢視與資料行。 權限可以在資料庫、結構描述或物件層級授與。|  
+|Insert|同義字、資料表與資料行、檢視與資料行。 權限可以在資料庫、結構描述或物件層級授與。|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列|  
 |REFERENCES|AGGREGATE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />CERTIFICATE、<br />CONTRACT、<br />DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SEQUENCE OBJECT、 <br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、<br />VIEW，以及<br />XML SCHEMA COLLECTION|  
 |SELECT|同義字、資料表與資料行、檢視與資料行。 權限可以在資料庫、結構描述或物件層級授與。|  
@@ -217,10 +217,10 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
-|DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
+|DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
+|DATABASE|執行 CREATE 陳述式之前，請先執行|EX|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> 適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到目前的版本)。|SERVER|CONTROL SERVER|  
-|DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
+|DATABASE|Insert|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 只適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
@@ -264,9 +264,9 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|DELETE|  
-|OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
-|OBJECT|INSERT|IN|SCHEMA|INSERT|  
+|OBJECT|DELETE|DL|SCHEMA|Delete|  
+|OBJECT|執行 CREATE 陳述式之前，請先執行|EX|SCHEMA|執行 CREATE 陳述式之前，請先執行|  
+|OBJECT|Insert|IN|SCHEMA|Insert|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
 |OBJECT|SELECT|SL|SCHEMA|SELECT|  
@@ -294,9 +294,9 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|DELETE|DL|DATABASE|DELETE|  
-|SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
-|SCHEMA|INSERT|IN|DATABASE|INSERT|  
+|SCHEMA|Delete|DL|DATABASE|Delete|  
+|SCHEMA|執行 CREATE 陳述式之前，請先執行|EX|DATABASE|執行 CREATE 陳述式之前，請先執行|  
+|SCHEMA|Insert|IN|DATABASE|Insert|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
 |SCHEMA|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
@@ -352,7 +352,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |TYPE|CONTROL|CL|SCHEMA|CONTROL|  
-|TYPE|EXECUTE|EX|SCHEMA|EXECUTE|  
+|TYPE|執行 CREATE 陳述式之前，請先執行|EX|SCHEMA|執行 CREATE 陳述式之前，請先執行|  
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
@@ -362,7 +362,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |使用者|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
-|XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
+|XML SCHEMA COLLECTION|執行 CREATE 陳述式之前，請先執行|EX|SCHEMA|執行 CREATE 陳述式之前，請先執行|  
 |XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
@@ -424,7 +424,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ## <a name="secial-considerations-for-column-level-permissions"></a>資料行層級權限的 Secial 考量
 
 資料行層級權限授與使用語法 *<table_name>(\<column _name>)*。 例如：
-```tsql
+```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 資料行上的 GRANT 會覆寫資料表上的 DENY。 不過，後續資料表上的 DENY 將會移除資料行的 GRANT。 
@@ -435,7 +435,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. 傳回完整的可授與權限清單  
  下列陳述式使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 函數傳回所有 `fn_builtin_permissions` 權限。 如需詳細資訊，請參閱 [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)。  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions(default);  
 GO  
 ```  
@@ -443,7 +443,7 @@ GO
 ### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>B. 傳回特定物件類別的權限  
  下列範例使用 `fn_builtin_permissions` 檢視可供安全性實體類別目錄使用的所有權限。 範例會傳回組件的權限。  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions('assembly');  
 GO    
 ```  
@@ -451,7 +451,7 @@ GO
 ### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>C. 傳回授與物件上執行中主體的權限  
  下列範例使用 `fn_my_permissions` 來傳回指定安全性實體之呼叫主體所持有的有效權限清單。 範例會傳回名為 `Orders55` 之物件的權限。 如需詳細資訊，請參閱 [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)。  
   
-```tsql  
+```sql  
 SELECT * FROM fn_my_permissions('Orders55', 'object');  
 GO  
 ```  
@@ -459,7 +459,7 @@ GO
 ### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D. 傳回適用於指定物件的權限  
  下列範例會傳回適用於名為 `Yttrium`之物件的權限。 請注意，此內建函數 `OBJECT_ID` 是用來擷取物件 `Yttrium`的識別碼。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_permissions   
     WHERE major_id = OBJECT_ID('Yttrium');  
 GO  

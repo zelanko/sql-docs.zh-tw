@@ -3,9 +3,9 @@ title: "中斷點視窗 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06c8b84f4cf69b06e54e8a8d10c1121add1c6026
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1d2cbc8ca85606b85f8f4780bfda7bf25527162
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL 偵錯工具 - 中斷點視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [中斷點] 視窗會列出目前[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中設定的所有中斷點。 若要管理中斷點，請使用 [中斷點] 視窗內的工具列。 中斷點是偵錯模式下暫停執行的程式碼位置，好讓您可以檢視偵錯資料。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="breakpoints-window-toolbar"></a>中斷點視窗工具列  
  當目前的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [查詢編輯器] 視窗有使用中的中斷點時，[中斷點] 視窗會顯示一個可用來管理中斷點的工具列。  
   
- **Delete**  
+ **刪除**  
  刪除選取的中斷點。  
   
  **刪除所有中斷點**  

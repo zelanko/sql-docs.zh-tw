@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b955ca40730e07da0b0532ee42b0820116ad14f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c10eafdd991210ceff584c215efc9426446bb40
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-editor"></a>進階編輯器
   使用 **[進階編輯器]** 對話方塊設定所選取之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件的屬性。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
  顯示的屬性會因元件而異。 如需有關 **[進階編輯器]**可能顯示之屬性的詳細資訊，請參閱下列主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

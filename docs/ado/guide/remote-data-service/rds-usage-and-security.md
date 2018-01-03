@@ -3,7 +3,7 @@ title: "RDS 提供使用量與安全性 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d10f7422ca7cf39d343b67a37a6285243248eb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 659be3fb60dc311c4fa2d2076cbc90841399c9f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-usage-and-security"></a>RDS 提供使用量與安全性
 使用本節中的資訊，設定您的伺服器，並使用 RDS 快速。 本節包含您可能需要實作 RDS，描述一些 RDS 和其他技術之間的索引鍵關聯性時應採取的特定設定步驟，並有助於識別設定時，可能會遇到的問題的解決方案RDS 的方案。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [為 RDS 疑難排解](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [RDS 的基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)

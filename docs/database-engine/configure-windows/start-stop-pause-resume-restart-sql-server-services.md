@@ -47,11 +47,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2694383403923ad677ba680fcdaaa0a2e7e5138a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e9ff0f1d6fb35c9c5bc63b973e4ec269f12b3865
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>啟動、停止、暫停、繼續、重新啟動 SQL Server 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ ms.lasthandoff: 11/20/2017
   
     -   [其他資訊](#MoreInformation)  
   
-    -   [安全性](#Security)  
+    -   [Security](#Security)  
   
 -   **使用指示：**  
   
     -   [SQL Server 組態管理員](#SSCMProcedure)  
   
-    -   [SQL Server Management Studio](#SSMSProcedure)  
+    -   [Transact-SQL](#SSMSProcedure)  
   
     -   [命令提示字元視窗中的 net 命令](#CommandPrompt)  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  根據預設，只有本機 Administrators 群組的成員能夠啟動、停止、暫停、繼續或重新啟動服務。 若要將管理服務的能力授與非系統管理員，請參閱 [How to grant users rights to manage services in Windows Server 2003](http://support.microsoft.com/kb/325349)(如何在 Windows Server 2003 中，將管理服務的權限授與使用者)。 (其他 Windows 版本的程序都很相似)。  
   
  使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] SHUTDOWN [!INCLUDE[tsql](../../includes/tsql-md.md)]**命令停止** 需要 **sysadmin** 或 **serveradmin** 固定伺服器角色的成員資格，而且無法移轉。  
@@ -134,7 +134,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
   
-     由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是獨立的程式，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。 以下是 Windows 安裝在 C 磁碟機時，最近四個版本的路徑。  
+     由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是獨立的程式，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。 以下是將 Windows 安裝在 C 磁碟機時的最近四個版本路徑。  
   
     |||  
     |-|-|  
@@ -276,13 +276,13 @@ ms.lasthandoff: 11/20/2017
   
 -   若要等待目前執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和預存程序完成，然後停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，請執行下列陳述式。  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   若要立即停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，請執行下列陳述式。  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,16 +20,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 708c9aaa3b0d5550104b23d08dec5339e8639e6b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c6d8362fb50fbaa020cb2ff5b43e603c4917df4c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-a-user-master-data-services"></a>加入使用者 (Master Data Services)
   在 **的** [使用者] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 清單中加入使用者，開始指派 Web 應用程式權限的程序。 在清單中的使用者存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]之前，您必須提供使用者一個或多個功能區域和模型物件的權限。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
@@ -44,9 +44,9 @@ ms.lasthandoff: 11/20/2017
   
 4.  (選擇性) 按一下 **[檢查名稱]**。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
   
 -   [指派功能區域權限 &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   

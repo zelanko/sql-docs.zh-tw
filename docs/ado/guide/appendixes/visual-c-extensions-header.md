@@ -3,7 +3,7 @@ title: "Visual c + + 擴充功能的標頭 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2cb1c9de2672077e98b930b18b8e1bc382feb5a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 14cc7d50dd75b325b9980341aa74f5542a7b2074
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-extensions-header"></a>Visual c + + 擴充功能的標頭
 下列標頭， **icrsint.h**，詳細資料的介面可讓用戶端擷取欄位從**資料錄集**到衍生自的類別中定義的變數**CADORecordBinding**. 您必須指定您想要存取每個欄位 ADO 繫結巨集。  
@@ -212,6 +212,6 @@ public:
 #endif // !_ICRSINT_H_  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Visual c + + 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [使用 Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)

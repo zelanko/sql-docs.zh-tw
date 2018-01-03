@@ -3,7 +3,7 @@ title: "ADO 基本概念 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9eb2a8ddce4813a0738fc73dd4f54d6b015d30c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a6b693060ad00f8b18268c503a7d0a96f3e5e62a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-fundamentals"></a>ADO 基本概念
 ADO 提供開發人員一種功能強大的邏輯物件模型以程式設計方式存取、 編輯和更新資料，從各種不同的資料來源透過 OLE DB 系統介面。 ADO 最常見的使用是查詢關聯式資料庫中資料表或資料表，請擷取和結果顯示在應用程式，並可能讓使用者進行變更和儲存的資料。 其他的工作包括下列各項：  

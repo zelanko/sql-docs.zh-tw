@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44774cbb85152ecbb16c36a01326973177bad8f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f958bece2f83b2a29914367fb71adbac640a941d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式儲存執行計畫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將執行計畫儲存為 XML 檔，並開啟它們來進行檢視。  
@@ -40,14 +40,14 @@ ms.lasthandoff: 11/17/2017
   
 2.  利用下列陳述式開啟 [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md)：  
   
-    ```t-sql  
+    ```sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
      若要開啟 [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)，請使用下列陳述式：  
   
-    ```t-sql  
+    ```sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
@@ -55,9 +55,9 @@ ms.lasthandoff: 11/17/2017
      > [!NOTE] 
      > SHOWPLAN_XML 會產生查詢的編譯階段查詢執行計畫資訊，但不會執行查詢。 這就是所謂的**估計**執行計畫。 STATISTICS XML 會產生查詢的執行階段查詢執行計畫資訊，並且執行查詢。 這就是所謂的**實際**執行計畫。  
   
-3.  執行查詢。 範例：  
+3.  執行查詢。 範例  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  

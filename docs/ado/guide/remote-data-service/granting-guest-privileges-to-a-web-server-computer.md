@@ -3,7 +3,7 @@ title: "Guest 權限授與 Web 伺服器電腦 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3935d66bdd1dfb412f5410b245231036ae025823
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6820750d28fde85db93e4495a31963411554da42
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Guest 權限授與 Web 伺服器電腦
 匿名的 Web 伺服器帳戶 (IUSR_<*ComputerName*) 必須新增至本機來賓 Web 伺服器電腦上使用.rds  
@@ -42,6 +42,6 @@ ms.lasthandoff: 11/17/2017
   
 5.  如果匿名的 Web 伺服器帳戶未出現在清單中**選取使用者或群組**對話方塊方塊中輸入其名稱 (IUSR_<*ComputerName*) 到下方空白方塊中，然後再按一下**新增**.  
   
-6.  按一下 **[確定]**。
+6.  按一下 [確定] 。
 
 

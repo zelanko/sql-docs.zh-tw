@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,24 +20,24 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 005c8b60f2248f8a1aa4a17abfb0745c98eaead3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2f742b5222054c918dc37ceb609dbee525cc4521
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="model-permissions-master-data-services"></a>模型權限 (Master Data Services)
   模型權限適用於所有實體、衍生階層、明確階層及存在於模型內的集合。 可以針對任何個別的物件來覆寫指派給模型的權限。  
   
 > [!NOTE]  
->  如果使用者是模型管理員，則使用者介面的所有功能區域中都會顯示此模型。 否則，此模型只會顯示在 [總管] 功能區域中。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+>  如果使用者是模型管理員，則使用者介面的所有功能區域中都會顯示此模型。 否則，此模型只會顯示在 [總管] 功能區域中。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
-|權限|說明|  
+|權限|描述|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取成員、屬性、階層成員資格或集合成員資格。|  
 |**建立**|使用者可以建立成員，並在建立期間指派屬性值。|  
 |**Update**|使用者可以更新成員、屬性、階層成員資格或集合成員資格。|  
-|**Delete**|使用者可以刪除成員。|  
+|**刪除**|使用者可以刪除成員。|  
 |**拒絕**|拒絕所有對模型的存取。|  
 |**管理**|模型的管理員權限。 模型層級才提供管理員權限。|  
   

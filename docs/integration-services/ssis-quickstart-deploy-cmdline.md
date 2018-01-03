@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c3e7f7e3fa870c7aa5b30a5a4a324f0cef7f6ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a753aa1418e935604148d0d42afa22716dec1b17
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>從命令提示字元中使用 ISDeploymentWizard.exe 部署 SSIS 專案
 本快速入門教學課程示範如何執行 Integration Servicess 部署精靈 `ISDeploymentWizard.exe`，從命令提示字元中部署 SSIS 專案。
 
 如需 Integration Services 部署精靈的詳細資訊，請參閱 [Integration Services 部署精靈](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)。
 
-## <a name="start-the-integration-services-deployment-wizard"></a>啟動 Integration Services 部署精靈
+## <a name="start-the-integration-services-deployment-wizard"></a>啟動 [Integration Services 部署精靈]
 1. 開啟 [命令提示字元] 視窗。
 
 2. 執行 `ISDeploymentWizard.exe`。 即會開啟 [Integration Services 部署精靈]。
@@ -50,10 +50,10 @@ ms.lasthandoff: 11/20/2017
   
 5.  完成部署程序之後，會開啟 [結果] 頁面。 此頁面會顯示每個動作執行成功或失敗。
     -   如果動作失敗，請按一下 [結果] 資料行中的 [失敗] 以顯示錯誤的說明。
-    -   選擇性：按一下 [儲存報表...]，將結果儲存到 XML 檔案。
+    -   選擇性地按一下 [儲存報表]，將結果儲存至 XML 檔案。
     -   按一下 [關閉] 結束精靈。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 - 請考慮使用其他方式來部署套件。
     - [使用 SSMS 部署 SSIS 套件](./ssis-quickstart-deploy-ssms.md)
     - [使用 Transact-SQL 部署 SSIS 套件 (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)

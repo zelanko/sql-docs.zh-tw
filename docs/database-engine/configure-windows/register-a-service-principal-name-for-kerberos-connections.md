@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4eba9f74d9eb5a46cfda7d5d28c1584c20fb22e7
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: ddf0e47b4ff05f5280401ae5fdbc7a81a8ebb7ec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 若要搭配使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 Kerberos 驗證，需要符合下列兩個條件：  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
 您可以透過查詢 sys.dm_exec_connections 動態管理檢視，驗證連接是否使用 Kerberos。 請執行下列查詢並檢查 auth_scheme column 的值 (如果有啟用 Kerberos，該值將為 "KERBEROS")。  
   
-```t-sql  
+```sql  
 SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;  
 ```  
   
@@ -62,7 +62,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  Windows 驗證是 SQL Server 驗證使用者的慣用方法。 使用 Windows 驗證的用戶端是透過 NTLM 或 Kerberos 進行驗證。 在 Active Directory 環境中，永遠會先嘗試 Kerberos 驗證。 使用具名管道的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 使用者無法使用 Kerberos 驗證。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務啟動時，它會嘗試註冊服務主體名稱 (SPN)。 如果啟動 SQL Server 的帳戶無權在 Active Directory 網域服務中註冊 SPN，這個呼叫就會失敗，而且在應用程式事件記錄檔與 SQL Server 錯誤記錄檔中會記錄警告訊息。 若要註冊 SPN， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必須在內建帳戶下執行，例如 Local System (不建議) 或 NETWORK SERVICE，或是在具有註冊 SPN 之權限的帳戶下執行 (例如網域管理員帳戶)。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在  [!INCLUDE[win7](../../includes/win7-md.md)] 或  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 作業系統上執行時，您可以使用虛擬帳戶或受管理的服務帳戶 (MSA) 執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 虛擬帳戶和 MSA 都可以註冊 SPN。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並未在這些帳戶的其中一個之下執行，SPN 就不會在啟動時註冊，而且網域管理員必須手動註冊 SPN。  
   
 > [!NOTE]  
@@ -155,7 +155,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename redmond\accountname
   
 若要判斷連接的驗證方法，請執行下列查詢。  
   
-```t-sql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

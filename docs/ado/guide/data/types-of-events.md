@@ -3,7 +3,7 @@ title: "事件類型 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f33ed98f367560da7f4b60d5a754d99937319358
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7880a6a3d2499735ad31b92d3c67cdfcafd8325d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-of-events"></a>事件類型
 有兩種事件的基本類型。 「 將事件 」 呼叫作業開始之前，通常包含在其名稱中的 」 將"— 比方說， **WillChangeRecordset**或**WillConnect**。 通常已經完成事件後呼叫的事件其名稱中包含 「 完成 」 — 比方說， **RecordChangeComplete**或**ConnectComplete**。 例外狀況存在 — 例如**InfoMessage** — 但相關聯的作業已完成之後，這些會發生。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="other-events"></a>其他事件  
  其他事件處理常式，也就是事件的名稱不是表單的**將*事件** * 或***事件*完成**— 只會呼叫之後在作業完成。 這些事件是**中斷連線**， **EndOfRecordset**，和**InfoMessage**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [事件參數](../../../ado/guide/data/event-parameters.md)   

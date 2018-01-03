@@ -5,7 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -23,11 +23,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18a5a0b1d3309d58cda54387fe228010ca11d831
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 630e5a4d312855581c6a2d8b29028d415068a396
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="leaf-permissions-master-data-services"></a>分葉權限 (Master Data Services)
   分葉權限適用於某個實體所有分葉成員的屬性值。  
@@ -40,12 +40,12 @@ ms.lasthandoff: 11/20/2017
   
 -   系統不會強制使用指派給 **Name** 和 **Code** 屬性的權限。  
   
-|權限|說明|  
+|權限|描述|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取分葉成員、屬性。|  
 |**建立**|使用者可以建立分葉成員，並在建立期間指派屬性值。|  
 |**Update**|使用者可以更新分葉成員和屬性。|  
-|**Delete**|使用者可以刪除分葉成員。|  
+|**刪除**|使用者可以刪除分葉成員。|  
 |**拒絕**|拒絕所有對分葉成員的存取。|  
   
  讀取、建立、更新和刪除權限可以合併。 指派建立、更新和刪除時，將會自動指派讀取權限。  
@@ -53,18 +53,18 @@ ms.lasthandoff: 11/20/2017
 ## <a name="attribute-permissions"></a>屬性權限  
  屬性權限適用於特定實體的屬性值。 只有屬性權限的使用者無法加入或移除成員。  
   
-|權限|說明|  
+|權限|描述|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取屬性。|  
 |**建立**|使用者可以在建立成員時指派值。|  
 |**Update**|使用者可以更新屬性。|  
-|**Delete**|沒有影響。|  
+|**刪除**|沒有影響。|  
 |**拒絕**|不顯示屬性。<br /><br /> 注意：您無法明確拒絕存取 Name 和 Code 屬性。|  
   
 ### <a name="example"></a>範例  
  如果是 Product 實體，請將 [更新] 權限指派給 Subcategory 屬性。 拒絕其他所有屬性的權限。  
   
-|Name|Code|Subcategory (更新)|  
+|[屬性]|程式碼|Subcategory (更新)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} Mountain Bikes|  
 |Mountain-100|BK-M201|{5} Mountain Bikes|  

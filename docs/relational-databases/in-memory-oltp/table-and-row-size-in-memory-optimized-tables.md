@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ed01c6cc36fac642856ef74bbb6a73f15d433228
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 52a0c6ab3ddd9f88cc0da731795f1b3d61b72714
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,14 +106,14 @@ ms.lasthandoff: 11/17/2017
   
  對於大於 200 的時間，資料表包含下列資料列：  
   
-|名稱|City|  
+|[屬性]|[縣/市]|  
 |----------|----------|  
 |John|Beijing|  
 |Jane|Prague|  
   
  不過，開始時間為 100 的任何使用中交易都會看到下列版本的資料表：  
   
-|名稱|City|  
+|[屬性]|[縣/市]|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prague|  
@@ -150,7 +150,7 @@ ms.lasthandoff: 11/17/2017
   
  假設 Orders 資料表具有下列定義：  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -232,7 +232,7 @@ GO
   
  這個資料表及其索引實際配置和使用的記憶體可透過下列查詢取得：  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

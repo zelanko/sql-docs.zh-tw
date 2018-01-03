@@ -3,7 +3,7 @@ title: "移動已註冊的伺服器或已註冊的伺服器群組 | Microsoft Do
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ac3daddf1a07d6872d4813c99981c8546352d75
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89f9a409da7eede0af44d58d9d33a1105ec5b0e0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>移動已註冊的伺服器或已註冊的伺服器群組
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何透過在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中移動已註冊伺服器或伺服器群組的方式，組織 [已註冊的伺服器] 中的伺服器。 伺服器群組可以包含已註冊的伺服器或其他伺服器群組。 伺服器和伺服器群組都可以從一個伺服器群組移到另一個伺服器群組中。  

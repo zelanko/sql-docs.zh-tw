@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: deb2b7ee8d96fe02383647345aad7bcf4562ad6f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c962285d10ca05434deafc9cf1d071a09f8cca65
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 從 Visual Studio Code 執行 SSIS 套件
 此快速入門示範如何使用 Visual Studio Code 連線至 SSIS 目錄資料庫，然後使用 Transact-SQL 陳述式執行 SSIS 目錄中所儲存的 SSIS 套件。
 
 Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式碼編輯器，包含連線至 Microsoft SQL Server、Azure SQL Database 或 Azure SQL Data Warehouse 的 `mssql` 延伸模組。 如需 VS Code 的詳細資訊，請參閱 [Visual Studio Code](https://code.visualstudio.com/)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 開始之前，請確定您已安裝最新版 Visual Studio Code 並載入 `mssql` 延伸模組。 若要下載這些工具，請參閱下列頁面：
 -   [下載 Visual Studio Code](https://code.visualstudio.com/Download)
@@ -60,7 +60,7 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
    | **伺服器名稱** | 完整伺服器名稱 | 如果您要連線至 Azure SQL Database 伺服器，則名稱的格式如下：`<server_name>.database.windows.net`。 |
    | **資料庫名稱** | **SSISDB** | 要連線之資料庫的名稱。 |
    | **驗證** | SQL 登入| 本快速入門使用 SQL 驗證。 |
-   | **使用者名稱** | 伺服器系統管理員帳戶 | 這是您在建立伺服器時指定的帳戶。 |
+   | **User name** | 伺服器系統管理員帳戶 | 這是您在建立伺服器時指定的帳戶。 |
    | **密碼 (SQL 登入)** | 伺服器系統管理員帳戶的密碼 | 這是您在建立伺服器時指定的密碼。 |
    | **儲存密碼嗎？** | [是] 或 [否] | 如果您不想要每次都輸入密碼，請選取 [是]。 |
    | **輸入此設定檔的名稱** | 設定檔名稱，例如 **mySSISServer** | 儲存的設定檔名稱可在後續的登入中加速您的連線。 | 
@@ -96,10 +96,10 @@ EXEC [SSISDB].[catalog].[start_execution] @execution_id
 GO
 ```
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 - 請考慮使用其他方式來執行套件。
     - [使用 SSMS 執行 SSIS 套件](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [從命令提示字元中執行 SSIS 套件](./ssis-quickstart-run-cmdline.md)
+    - [從命令提示字元執行 SSIS 套件](./ssis-quickstart-run-cmdline.md)
     - [使用 PowerShell 執行 SSIS 套件](ssis-quickstart-run-powershell.md)
     - [使用 C# 執行 SSIS 套件](./ssis-quickstart-run-dotnet.md) 

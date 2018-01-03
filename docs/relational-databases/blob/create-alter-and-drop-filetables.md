@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3834e2948ea4e43bc5e44a4aed9f1560b2864b64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e9c1bcfec7bd2d009af31b69317f9fd23b68843
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 描述如何建立新的 FileTable，或是改變或卸除現有的 FileTable。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  下列範例會建立新的 FileTable，並指定 **FILETABLE_DIRECTORY** 和 **FILETABLE_COLLATE_FILENAME**的使用者定義值。  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -84,7 +84,7 @@ GO
   
  下列範例也會建立新的 FileTable。 因為未指定使用者定義值，所以 **FILETABLE_DIRECTORY** 的值會成為 FileTable 的名稱， **FILETABLE_COLLATE_FILENAME** 的值會成為 database_default，而主索引鍵和唯一條件約束則會接受系統產生的名稱。  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -119,7 +119,7 @@ GO
   
  **範例**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -150,7 +150,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> 當您建立 FileTable 時也會建立其他資料庫物件  
  當您建立新的 FileTable 時，也會建立一些系統定義的索引和條件約束。 您不能改變或卸除這些物件，只有當 FileTable 本身卸除時它們才會消失。 若要查看這些物件的清單，請查詢目錄檢視 [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md)。  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  

@@ -3,7 +3,7 @@ title: "結構描述 > 一節 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbe340ed1778b125d6281ef62f53b721923939cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65b56003d7fd7723dce57a0c8c6fae2ecee6da06
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schema-section"></a>結構描述 > 一節
 需要結構描述 」 一節。 如先前範例所示，ADO 將保留的資料值語意盡可能更新每個資料行的相關寫出詳細的中繼資料。 不過，若要載入 XML 中，ADO 只需要資料行和其所屬的資料列集的名稱。 最小的結構描述的範例如下：  
@@ -179,5 +179,5 @@ ms.lasthandoff: 11/17/2017
   
  OLE DB 的進一步資訊建構可供使用的 XML 文件結構描述中的 OLE DB，請參閱的定義 」 描述 urn:-microsoft-com:rowset 」 和 OLE DB 程式設計人員指南 》。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

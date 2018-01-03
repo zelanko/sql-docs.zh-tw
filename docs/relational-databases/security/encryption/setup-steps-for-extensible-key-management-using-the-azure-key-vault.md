@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3105ead24cc79ba2374e6caf1438ed1384078a01
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 375898263ea58a2ac8dd9e54f86257d07d1daeca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
      執行下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼，設定 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 使用 EKM 提供者。  
   
-    ```tsql  
+    ```sql  
     -- Enable advanced options.  
     USE master;  
     GO  
@@ -294,7 +294,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
      -- 使用本身為 Azure 金鑰保存庫之 EKM 提供者的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器，建立密碼編譯提供者。    
     此範例使用名稱 `AzureKeyVault_EKM_Prov`。  
   
-    ```tsql  
+    ```sql  
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
@@ -324,9 +324,9 @@ SQL Server 版本  |可轉散發套件的安裝連結
         > [!IMPORTANT]  
         >  您必須移除 **用戶端識別碼**中的連字號。  
   
-    -   使用第 I 部分中的 `SECRET` 用戶端密碼 **，完成** 引數的第二個部分。在此範例中，第 1 部分中的 **用戶端密碼** 是 `Replace-With-AAD-Client-Secret`。 `SECRET` 引數的最終字串將是一連串較長的字母和數字，*不含連字號*。  
+    -   使用第 I 部分中的 `SECRET` 用戶端密碼 **，完成** 引數的第二個部分。在此範例中，第 1 部分中的 **用戶端密碼** 是 `Replace-With-AAD-Client-Secret`。 `SECRET` 引數的最終字串將是一連串較長的字母和數字， *不含連字號*。  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -351,7 +351,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
     -   將 `ContosoRSAKey0` 取代為 Azure 金鑰保存庫中您金鑰的名稱。  
   
-    ```tsql  
+    ```sql  
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  

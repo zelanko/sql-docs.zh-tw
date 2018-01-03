@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d3588fd2410fdacb3c4e332c3485b40640b5587
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
 
 例如，請考慮下列檢視：
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW EmployeeName AS
@@ -118,7 +118,7 @@ GO
 
 根據此檢視，這兩個 SQL 陳述式會在基底資料表上執行相同的作業，並產生相同的結果：
 
-```tsql
+```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
@@ -142,7 +142,7 @@ WHERE OrderDate > '20020531';
 
 在查詢中檢視所放置的提示可能與在擴充檢視以存取基底資料表時所發現的其他提示衝突。 當這種情況發生時，查詢會傳回錯誤： 例如，請考慮下列在其定義中包含資料表提示的檢視：
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
@@ -154,7 +154,7 @@ WHERE a.StateProvinceID = s.StateProvinceID;
 
 現在假設您輸入以下查詢：
 
-```tsql
+```sql
 SELECT AddressID, AddressLine1, StateProvinceCode, CountryRegionCode
 FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
@@ -168,7 +168,7 @@ WHERE StateProvinceCode = 'WA';
 
 在包含檢視表的查詢中使用 `FORCE ORDER` 提示時，檢視表中資料表的聯結順序將由依序建構中的檢視表位置來決定。 例如，下列查詢會從三個資料表和一個檢視中選取：
 
-```tsql
+```sql
 SELECT * FROM Table1, Table2, View1, Table3
 WHERE Table1.Col1 = Table2.Col1 
     AND Table2.Col1 = View1.Col1
@@ -178,7 +178,7 @@ OPTION (FORCE ORDER);
 
 而 `View1` 的定義如下所示：
 
-```tsql
+```sql
 CREATE VIEW View1 AS
 SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
@@ -249,7 +249,7 @@ WHERE TableA.ColZ = TableB.Colz;
 
 請考慮針對這個在 Server1 上執行之查詢所建置的執行計畫：
 
-```tsql
+```sql
 SELECT *
 FROM CompanyData.dbo.Customers
 WHERE CustomerID BETWEEN 3200000 AND 3400000;
@@ -259,7 +259,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢處理器也可以將動態邏輯建立至 SQL 陳述式的查詢執行計畫中，但該計畫建立時索引鍵值為未知。 例如，請參考這個預存程序：
 
-```tsql
+```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
 AS
 SELECT *
@@ -269,7 +269,7 @@ WHERE CustomerID = @CustomerIDParameter;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法預測每次執行程序時，`@CustomerIDParameter` 參數將提供的索引鍵值。 因為索引鍵值無法預測，所以查詢處理器也無法預測必須存取哪個成員資料表。 為了處理這種情形，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 建立了具有條件式邏輯的執行計畫 (稱為動態篩選)，可根據輸入參數值來控制存取的成員資料表。 假設 `GetCustomer` 預存程序是在 Server1 上執行，則執行計畫邏輯就能以下列形式來表示：
 
-```tsql
+```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
 ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
@@ -303,7 +303,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 此演算法若要能使得新的 SQL 陳述式符合快取中現有、未使用的執行計畫，所有的物件參考必須是完整的。 例如，這些 `SELECT` 陳述式的第一個不符合現有計畫，而第二個則符合：
 
-```tsql
+```sql
 SELECT * FROM Person;
 
 SELECT * FROM Person.Person;
@@ -383,13 +383,13 @@ SELECT * FROM Person.Person;
  
 下列這兩個 `SELECT` 陳述式的唯一差異在於 `WHERE` 子句中所比較的值：
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
@@ -401,7 +401,7 @@ WHERE ProductSubcategoryID = 4;
 
 * 在 Transact-SQL 中，使用 `sp_executesql`： 
 
-   ```tsql
+   ```sql
    DECLARE @MyIntParm INT
    SET @MyIntParm = 1
    EXEC sp_executesql
@@ -436,7 +436,7 @@ WHERE ProductSubcategoryID = 4;
 
 啟用強制參數化之後，仍會發生簡單參數化。 例如，根據強制參數化的規則，下列查詢無法參數化：
 
-```tsql
+```sql
 SELECT * FROM Person.Address
 WHERE AddressID = 1 + 2;
 ```
@@ -454,18 +454,18 @@ WHERE AddressID = 1 + 2;
 
 請參考這個陳述式：
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 在陳述式尾端的數值 1，可以指定成參數。 關聯式引擎會建立此批次的執行計畫，就像已經指定參數來取代值 1 一樣。 由於這個簡單參數化的緣故，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可辨識下列兩個陳述式 (這兩個陳述式基本上會產生相同的執行計畫)，並重複使用第二個陳述式的第一個計畫：
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
@@ -561,7 +561,7 @@ WHERE ProductSubcategoryID = 4;
 
 使用第一種方式，應用程式可以針對所要求的每個產品執行不同的查詢。
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
@@ -569,7 +569,7 @@ WHERE ProductID = 63;
 使用第二種方式，應用程式會執行下列動作： 
 
 1. 準備含有參數標記 (?) 的陳述式：  
-   ```tsql
+   ```sql
    SELECT * FROM AdventureWorks2014.Production.Product  
    WHERE ProductID = ?;
    ```
@@ -654,7 +654,7 @@ WHERE ProductID = 63;
 
 這個範例使用假設性的資料表和資料行名稱。
 
-```tsql
+```sql
 SELECT o_orderpriority, COUNT(*) AS Order_Count
 FROM orders
 WHERE o_orderdate >= '2000/04/01'
@@ -672,7 +672,7 @@ WHERE o_orderdate >= '2000/04/01'
 
 假設下列索引定義於 `lineitem` 和 `orders` 資料表上：
 
-```tsql
+```sql
 CREATE INDEX l_order_dates_idx 
    ON lineitem
       (l_orderkey, l_receiptdate, l_commitdate, l_shipdate)
@@ -765,7 +765,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可
 * 連結伺服器名稱  
   系統預存程序 `sp_addlinkedserver` 和 `sp_addlinkedsrvlogin` 可用來將伺服器名稱指定至 OLE DB 資料來源。 您可以使用四個部分名稱，在 Transact-SQL 陳述式中參考這些連結伺服器中的物件。 例如，如果 `DeptSQLSrvr` 的連結伺服器名稱是根據 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的另一個執行個體所定義，則下列陳述式會參考該伺服器上的資料表： 
   
-  ```tsql
+  ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
@@ -775,7 +775,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可
 * 特定連接子名稱  
   對於資料來源的非經常性參考，需要以連接至連結伺服器所需的資訊來指定 `OPENROWSET` 或 `OPENDATASOURCE` 函數。 然後您就能在 Transact-SQL 陳述式中，使用與參考資料表一樣的方式來參考這個資料列集： 
   
-  ```tsql
+  ```sql
   SELECT *
   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
         'c:\MSOffice\Access\Samples\Northwind.mdb';'Admin';'';
@@ -811,13 +811,13 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可
 
 In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (當做邏輯前端資料行) 上完成，而其他索引鍵資料行及第二層搜尋 (具有另一個條件) 也可能會在一或多個其他資料行上完成 (針對符合第一層搜尋作業資格的每一個相異值)。 也就是說，這個稱為「略過掃描」的作業可讓查詢最佳化工具根據某一個條件來執行搜尋或掃描作業，以判斷要存取的資料分割及該運算子內的第二層索引搜尋作業，以便從符合其他條件的資料分割中傳回資料列。 例如，假設有以下的查詢。
 
-```tsql
+```sql
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
 在此範例中，假設定義為 `T(a, b, c)`的資料表 T 已在資料行 a 上進行資料分割，而且資料行 b 上具有叢集索引。 資料表 T 的資料分割界限是由以下資料分割函數所定義：
 
-```tsql
+```sql
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
@@ -847,7 +847,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 為了示範如何在圖形化執行計畫輸出和 XML 執行程序表輸出中顯示這項資訊，假設資料分割資料表 `fact_sales`上有以下的查詢。 此查詢會更新兩個資料分割中的資料。 
 
-```tsql
+```sql
 UPDATE fact_sales
 SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
@@ -976,7 +976,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 > [!NOTE]
 > 這個範例會將一百萬個以上的資料列插入資料表中。 執行此範例可能需要好幾分鐘的時間 (視您的硬體而定)。 在執行此範例之前，請確認有 1.5 GB 以上的磁碟空間可用。 
  
-```tsql
+```sql
 USE master;
 GO
 IF DB_ID (N'db_sales_test') IS NOT NULL

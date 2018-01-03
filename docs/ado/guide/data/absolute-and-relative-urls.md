@@ -3,7 +3,7 @@ title: "絕對和相對 Url |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ae21e6abedfda13da5a02130110cac0034ef8f34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f0bbd79ff71ffe17c9fb33903501ab7302766fbf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absolute-and-relative-urls"></a>絕對和相對 Url
 URL 指定的位置儲存在本機或網路的電腦上的目標。 目標可以是檔案、 目錄、 HTML 網頁、 影像、 程式及等等*。*  
@@ -93,7 +93,7 @@ recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect
   
  ADO 支援辨識其本身的 URL 結構描述的 OLE DB 提供者。 例如， [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*，*存取 「 發行 」 的 Windows 2000 檔案會辨識現有 HTTP 配置。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [記錄物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

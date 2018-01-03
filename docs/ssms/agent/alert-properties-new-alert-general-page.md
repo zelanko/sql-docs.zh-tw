@@ -3,7 +3,7 @@ title: "警示屬性 - 新增警示 (一般頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f3f7d45da8f980797f6ff93a7446cbf827945b2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3860afc9e6af4561093350b148b1a36b6c527262
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alert-properties---new-alert-general-page"></a>警示屬性 - 新增警示 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此頁面來檢視和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 警示的一般屬性。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 12/05/2017
 **命名空間**  
 指定針對 WMI 查詢語言 (WQL) 陳述式使用的命名空間。 僅支援執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 之電腦上的命名空間。  
   
-**查詢**  
+**[資料集屬性]**  
 指定會識別警示所回應之事件的 WQL 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -3,7 +3,7 @@ title: "所需資料成形的提供者 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 123bcb546cabae6895dac5fbf9edd06b97e9400b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 87c86790165d7f428ec3a5d5328fd36cd8165acf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="required-providers-for-data-shaping"></a>提供者所需的資料成形
 資料成形時，通常會需要兩個提供者。 服務提供者[for OLE DB Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)、 提供用來形成功能和資料提供者，例如 SQL Server 的 OLE DB 提供者的資料、 提供資料列的資料來填入形狀[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -43,7 +43,7 @@ cnn.Provider = "MSDataShape"
 cnn.Open "Data Provider=SQLOLEDB;Integrated Security=SSPI;Database=Northwind"  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
  [型式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

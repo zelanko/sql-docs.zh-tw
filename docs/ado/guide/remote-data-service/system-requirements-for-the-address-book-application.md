@@ -3,7 +3,7 @@ title: "系統需求，地址通訊錄應用程式 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 74ec1d3159669f5c9233047c18226c06ec45c30b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b0d0f4a2429a3bae63f3a29c2e785cb428d921c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>通訊錄應用程式的系統需求
 若要設定通訊錄範例應用程式，您必須符合下列軟體和資料庫需求：  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
  如果您沒有權限，您的資料庫管理員可能需要設定和提供您存取資料庫的權限，或將資料庫設定為您的系統。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [執行活頁簿 SQL 指令碼](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [執行通訊錄範例應用程式](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)

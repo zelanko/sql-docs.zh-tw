@@ -3,7 +3,7 @@ title: "使用參數查詢 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a74efc549ad7e04191e518ba17b1a88c230d8cf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 66b72b4a855628c20ba06afa465be5ee7997fb6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>使用參數查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在許多情況下，建立可以在應用程式中重複使用多次，而每次輸入都不相同的查詢，是有幫助的。 在此章節中，您能夠獲得關於如何針對這些一般用途建立參數查詢的詳細資訊。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
 使用未命名參數建立查詢。  
   
 ## <a name="related-sections"></a>相關章節  
-[執行查詢的基本作業 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[使用查詢執行基本作業 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 提供包含大部份常見查詢工作之主題的連結。  
   
 [指定搜尋準則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  

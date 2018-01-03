@@ -3,7 +3,7 @@ title: "自訂檔案 SQL > 一節 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e596d2c1ae90e86931e5656ac7ccdbdeb95e4d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0cb92bcd2ea9580fa8824a50b15a1f60cdf35c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customization-file-sql-section"></a>自訂檔案 SQL > 一節
 **Sql**區段只能包含新的 SQL 字串，取代用戶端的命令字串。 如果沒有 SQL 字串的區段中，將會忽略 > 一節。  
@@ -51,12 +51,12 @@ SQL = " "
  **SQL =**   
  ***sqlString***  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
 |**SQL**|常值字串，表示這是 SQL 區段項目。|  
 |***sqlString***|SQL 字串，取代用戶端的字串。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自訂檔案記錄檔 > 一節](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自訂檔案 UserList > 一節](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

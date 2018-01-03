@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d7173c3482cb13806c4d4754d493ccec3118a73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc840281d8a9cd2ae9a1f85988f850cc29ab1582
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Database Mail 訊息的複本及其附件會隨著 Database Mail 事件記錄檔一起保留在 **msdb** 資料表。 您可能需要定期減少資料表的大小，並封存不再需要的訊息和事件。 下列程序可建立 SQL Server Agent 作業以便自動執行程序。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  在 **[命令]** 方塊中，輸入下列陳述式建立一個資料表，以上一個月份命名，包含這個月之前的所有資料列：  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  在 **[命令]** 方塊中，輸入下列陳述式建立一個附加檔案資料表，以上一個月份命名，包含前一步驟轉移訊息所對應的附件：  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -144,7 +144,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  在 **[命令]** 方塊中，輸入下列陳述式建立一個記錄資料表，以上一個月份命名，包含前面步驟轉移訊息所對應的記錄項目：  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  在 **[命令]** 方塊中，輸入下列陳述式，從 Database Mail 資料表移除這個月之前的資料列：  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @CopyDate ;  
@@ -191,7 +191,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  在 **[命令]** 方塊中，輸入下列陳述式，從 Database Mail 事件記錄檔移除這個月之前的資料列：  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_log_sp @logged_before = @CopyDate ;  

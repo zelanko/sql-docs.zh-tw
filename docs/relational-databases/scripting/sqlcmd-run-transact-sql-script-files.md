@@ -3,9 +3,9 @@ title: "使用 sqlcmd 執行 Transact-SQL 指令碼檔案 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/15/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 29c0d2c346777e0f5add0c1b4fd03517f5e9c587
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: beee362d87df237fa93f574823a4dc9d53208e95
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - 執行 Transact-SQL 指令碼檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用 **sqlcmd** 來執行 Transact-SQL 指令碼檔案。 Transact-SQL 指令碼檔案是一個文字檔，可以包含 Transact-SQL 陳述式、 **sqlcmd** 命令和指令碼變數的組合。  
@@ -73,6 +73,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>另請參閱  
  [啟動 sqlcmd 公用程式](../../relational-databases/scripting/sqlcmd-start-the-utility.md)   
- [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)  
+ [sqlcmd 工用程式](../../tools/sqlcmd-utility.md)  
   
   

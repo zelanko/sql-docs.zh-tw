@@ -3,7 +3,7 @@ title: "XML 索引對話方塊 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1d2fc393ebd15e3c76dd17912e0e9f29c7a369a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2c44720dea321d4fee407bd33d6a41ad4cdcee5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 索引對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [XML 索引] 對話方塊可建立 XML 資料類型資料行的索引，但是此類資料行無法以 [索引/索引鍵] 對話方塊進行索引。 各個 XML 資料行可以具有一個以上的 XML 索引，但是首先建立 (主要) 的索引將成為其他索引 (次要) 的基準。 如果刪除主要的 XML 索引，次要索引也將一併刪除。  
@@ -31,10 +31,10 @@ ms.lasthandoff: 12/05/2017
 **選取的 XML 索引**  
 列出現有的 XML 索引。 選取此選項，即可在右邊方格中顯示其屬性。 如果清單是空的，表示此資料表沒有任何定義的項目。  
   
-**加入**  
+**[加入]**  
 建立新的 XML 索引。  
   
-**Delete**  
+**刪除**  
 刪除 [選取的 XML 索引] 清單中選取的 XML 索引。 如果刪除主要 XML 索引，您會接獲通知表示這個動作將同時刪除所有的次要索引；您可以選擇繼續或取消動作。  
   
 **一般類別目錄**  

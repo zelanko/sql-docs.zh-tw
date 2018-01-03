@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 569ad370fac11210cff47eff842f056635a380ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 428c7c62cb1b4e65ad7d2c1d22186190a9a69594
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>還原檔案和檔案群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ ms.lasthandoff: 11/17/2017
   
      [限制事項](#Restrictions)  
   
--   [安全性](#Security)  
+-   [Security](#Security)  
   
 -   **若要使用下列項目還原檔案和檔案群組：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，RESTORE 權限預設為 **系統管理員 (sysadmin)** 和 **資料庫建立者 (dbcreator)** 固定伺服器角色的成員以及資料庫的擁有者 (**dbo**) (對 FROM DATABASE_SNAPSHOT 選項而言，資料庫一律存在)。  
   
- RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此，因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
+ RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/17/2017
     |**型別**|執行的備份類型： **[完整]**、 **[差異]**或 **[交易記錄]**。|  
     |**Server**|執行備份作業的 Database Engine 執行個體名稱。|  
     |**檔案邏輯名稱**|檔案的邏輯名稱。|  
-    |**資料庫**|備份作業中所含的資料庫名稱。|  
+    |**[資料庫備份]**|備份作業中所含的資料庫名稱。|  
     |**開始日期**|備份作業開始時的日期和時間，會出現在用戶端的地區設定中。|  
     |**完成日期**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
     |**大小**|備份組的大小 (以位元組為單位)。|  
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/17/2017
      您必須為不同的媒體集交換磁帶時，這個選項特別有用，例如當伺服器只有一個磁帶機時。  
   
      **限制對還原資料庫的存取**  
-     僅有 **資料庫擁有者 (db_owner)**、 **資料庫建立者 (dbcreator)**或 **系統管理員 (sysadmin)**的成員可以使用還原資料庫。  
+     僅有 **db_owner**、 **dbcreator**或 **系統管理員**的成員可以使用還原資料庫。  
   
      選取此選項相當於使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式的 RESTRICTED_USER 選項。  
   
@@ -186,10 +186,10 @@ ms.lasthandoff: 11/17/2017
   
          如果套用交易記錄備份，則交易記錄備份必須涵蓋備份檔案與檔案群組直到記錄結束的時間 (除非還原「所有的」資料庫檔案)。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  這個範例會還原 `MyDatabase` 資料庫的檔案和檔案群組。 為了將資料庫還原到目前的時間，還套用了兩份交易記錄。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Restore the files and filesgroups for MyDatabase.  

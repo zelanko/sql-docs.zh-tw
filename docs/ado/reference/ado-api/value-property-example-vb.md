@@ -3,7 +3,7 @@ title: "值屬性範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9dec056e56809d7dc874e858930997238268ae7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 812eee7536a0dcfdcd8f868a6bd151436201fed4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-property-example-vb"></a>值屬性範例 (VB)
 這個範例會示範[值](../../../ado/reference/ado-api/value-property-ado.md)屬性[欄位](../../../ado/reference/ado-api/field-object.md)和[屬性](../../../ado/reference/ado-api/property-object-ado.md)所顯示的欄位和屬性值的物件***員工***資料表。  
@@ -104,7 +104,7 @@ End Sub
 'EndValueVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
  [屬性物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value 屬性 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9eea80799dd0ccc51c23685249ebccc1cf3b1338
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62c79a98fc0b23173539b9653272f85f20a534a7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>定義及修改靜態資料列篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中定義及修改靜態資料列篩選。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **若要定義及修改靜態資料列篩選，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Recommendations"></a> 建議  
   
--   由於這些篩選都是靜態的，所以所有訂閱者都將收到相同子集的資料。 如果您需要動態篩選屬於合併式發行集之資料表發行項內的資料，好讓每一個訂閱者都會收到不同的資料分割，請參閱＜ [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。 合併式複寫也可讓您根據現有的資料列篩選來篩選相關的資料列。 如需詳細資訊，請參閱 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
+-   由於這些篩選都是靜態的，所以所有訂閱者都將收到相同子集的資料。 如果您需要動態篩選屬於合併式發行集之資料表發行項內的資料，好讓每一個訂閱者都會收到不同的資料分割，請參閱＜ [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。 合併式複寫也可讓您根據現有的資料列篩選來篩選相關的資料列。 如需詳細資訊，請參閱 [定義和修改合併發行項之間的聯結篩選](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  您可以在 [新增發行集精靈] 的 [篩選資料表的資料列] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊的 [篩選資料列] 頁面上，定義、修改及刪除靜態資料列篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
@@ -76,25 +76,25 @@ ms.lasthandoff: 11/17/2017
   
     -   **[篩選陳述式]** 文字區域包括預設文字，其格式為：  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [schema].[tablename] WHERE  
         ```  
   
     -   預設的文字無法變更；使用標準 SQL 語法，在 WHERE 關鍵字後面輸入篩選子句。 完整的篩選子句應類似於：  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE [LoginID] = 'adventure-works\ranjit0'  
         ```  
   
     -   靜態資料列篩選可以包含使用者定義函數。 含有使用者定義函數的靜態資料列篩選之完整的篩選子句應類似於：  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 儲存並關閉對話方塊。  
+5.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
   
 #### <a name="to-modify-a-static-row-filter"></a>若要修改靜態資料列篩選  
   
@@ -113,11 +113,11 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>為快照式或交易式發行集定義靜態資料列篩選  
   
-1.  定義要篩選的發行項。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
+1.  定義要篩選的發行項。 如需詳細資訊，請參閱 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  在發行集資料庫的發行者端，執行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 針對 **@article**指定發行項的名稱、針對 **@publication**指定發行集的名稱、針對 **@filter_name**指定篩選的名稱，並針對 **@filter_clause** (不包括 `WHERE`) 指定篩選子句。  
   
-3.  如果仍然必須定義資料行篩選，請參閱＜ [定義及修改資料行篩選](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)＞。 否則，執行 [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 針對 **@publication**指定發行集的名稱、針對 **@article**指定篩選的發行項名稱，並針對 **@filter_clause**中定義及修改靜態資料列篩選。 這樣會針對篩選的發行項建立同步處理物件。  
+3.  如果仍然必須定義資料行篩選，請參閱＜ [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)＞。 否則，執行 [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 針對 **@publication**指定發行集的名稱、針對 **@article**指定篩選的發行項名稱，並針對 **@filter_clause**中定義及修改靜態資料列篩選。 這樣會針對篩選的發行項建立同步處理物件。  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>為快照式或交易式發行集修改靜態資料列篩選  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>為合併式發行集定義靜態資料列篩選  
   
-1.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 針對 **@subset_filterclause** (不包括 `WHERE`) 指定篩選子句。 如需詳細資訊，請參閱 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+1.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 針對 **@subset_filterclause** (不包括 `WHERE`) 指定篩選子句。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  如果仍然必須定義資料行篩選，請參閱＜ [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)＞。  
   

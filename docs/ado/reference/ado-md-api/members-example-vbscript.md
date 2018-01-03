@@ -3,7 +3,7 @@ title: "成員範例 (VBScript) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e583363b1aeb0af736b34634a158fe6d136acde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41e43b59b8c9fe849582f1bb3845f544f89ddeb7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="members-example-vbscript"></a>成員範例 (VBScript)
 這個範例會使用 MDX 查詢字串擷取 OLAP 資料並將產生的資料格集寫入一個 HTML 資料表結構，使用多維度資料格集資料行跨越功能。  

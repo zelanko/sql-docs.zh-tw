@@ -3,9 +3,9 @@ title: "尋找結果視窗 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca6d03068225909a645b05059a3da15893604821
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ce32d0a7ee6acdaf2a605392e8b9ee5ceee3d94e
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-results-windows"></a>尋找結果視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 兩個 [尋找結果] 視窗會顯示使用 [尋找和取代] 對話方塊的 [檔案中尋找] 或 [檔案中取代] 索引標籤找到的相符結果。 **[檔案中尋找]** 和 **[檔案中取代]** 的 **[結果選項]** 命令允許您選擇 [尋找結果] 視窗，其中會列出所有找到的相符結果。  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
 -   完整路徑  
   
--   檔案名稱  
+-   [檔案名稱]  
   
 -   行號  
   

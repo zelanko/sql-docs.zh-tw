@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fbbbdd8675aff3dbf19e628b0063b96460f596f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7ab3415d2252e52e79a0129ab5c5d438ad114a76
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>在 .NET 應用程式中使用 C# 程式碼執行 SSIS 套件
 本快速入門教學課程示範如何撰寫 C# 程式碼，來連線至資料庫伺服器並執行 SSIS 套件。
 
 您可以使用 Visual Studio、Visual Studio Code 或您選擇的另一個工具，來建立 C# 應用程式。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 開始之前，請確定已安裝 Visual Studio 或 Visual Studio Code。 從 [Visual Studio 下載](https://www.visualstudio.com/downloads/)，下載免費的 Visual Studio Community Edition 或免費的 Visual Studio Code。
 
@@ -118,7 +118,7 @@ namespace run_ssis_package
 1. 若要執行應用程式，請按 **F5**。
 2. 確認套件已如預期般執行，然後關閉應用程式視窗。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 - 請考慮使用其他方式來執行套件。
     - [使用 SSMS 執行 SSIS 套件](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)

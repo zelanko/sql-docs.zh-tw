@@ -37,11 +37,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e0115a7595476adadb0fc0328a14b01b0476771a
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: c55cc253a5b82bed265b2b67ab9cd63d8c971408
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新組織與重建索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/28/2017
   
  **sys.dm_db_index_physical_stats** 函數傳回的結果集包含下列資料行。  
   
-|資料行|描述|  
+|「資料行」|描述|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|邏輯片段的百分比 (索引中失序的頁面)。|  
 |**fragment_count**|在索引中的片段數目 (實體上為連續的分葉頁面)。|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/28/2017
   
 ### <a name="Security"></a> 安全性  
   
-#### <a name="Permissions"></a> Permissions  
+#### <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ## <a name="SSMSProcedureFrag"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 檢查索引片段  
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Find the average fragmentation percentage of all indexes  
@@ -212,7 +212,7 @@ ms.lasthandoff: 11/28/2017
   
 7.  選取 **[壓縮大型物件資料行資料]** 核取方塊，可指定一併壓縮包含大型物件 (LOB) 資料的所有頁面。  
   
-8.  按一下 **[確定]**。  
+8.  按一下 **[確定].**  
   
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>若要重新組織資料表中的所有索引  
   
@@ -228,7 +228,7 @@ ms.lasthandoff: 11/28/2017
   
 6.  選取 **[壓縮大型物件資料行資料]** 核取方塊，可指定一併壓縮包含大型物件 (LOB) 資料的所有頁面。  
   
-7.  按一下 **[確定]**。  
+7.  按一下 **[確定].**  
   
 #### <a name="to-rebuild-an-index"></a>若要重建索引  
   
@@ -258,7 +258,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
@@ -276,9 +276,9 @@ ms.lasthandoff: 11/28/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize all indexes on the HumanResources.Employee table.  

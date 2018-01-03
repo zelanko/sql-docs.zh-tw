@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55cb73039ad0db22f6e58dfb84203b92993ac980
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea2993557756fc3808000064e5a6088ce27c32a4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restart-an-interrupted-restore-operation-transact-sql"></a>重新啟動中斷的還原作業 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題說明如何重新啟動被中斷的還原作業。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="example"></a>範例  
  此範例會重新啟動被中斷的還原作業。  
   
-```tsql  
+```sql  
 -- Restore a full database backup of the AdventureWorks database.  
 RESTORE DATABASE AdventureWorks  
    FROM DISK = 'C:\AdventureWorks.bck'  

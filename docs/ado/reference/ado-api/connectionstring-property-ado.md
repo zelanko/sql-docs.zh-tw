@@ -3,7 +3,7 @@ title: "ConnectionString 屬性 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 590125743d78e4c583cd22011dcf40f58eed1999
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41f887dbd21f120706e32059128227669f517ea4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 屬性 (ADO)
 表示用來連接到資料來源的資訊。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
  ADO 支援五個引數的**ConnectionString**屬性; 直接到而不進行任何處理由 ADO 提供者的其他引數傳遞。 引數 ADO 支援如下所示。  
   
-|引數|Description|  
+|引數|描述|  
 |--------------|-----------------|  
 |*提供者 =*|指定要用於連接的提供者的名稱。|  
 |*檔案名稱 =*|指定的提供者特定的檔案 （例如，保存的資料來源物件） 包含預設的連接資訊的名稱。|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="applies-to"></a>適用於  
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ConnectionString、 ConnectionTimeout 和 State 屬性範例 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString、 ConnectionTimeout 和 State 屬性範例 （VC + +）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c434a1c9c514018176b1afcc0a7a57c63fc896e3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0cc470ce80e24520283f3a34c9e1f560ab096288
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ OGC 的 SQL 簡單特徵規格討論了外部環形和內部環形，但是這�
 下圖顯示完全相同的等腰三角形 (三角形 A 會使用直線線段來定義三角形，而三角形 B 則使用圓弧線段來定義三角形)：  
 
 ![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) 此範例示範如何使用 **LineString** 執行個體和 **CircularString** 執行個體來儲存上述等腰三角形：  
-```tsql
+```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
 SET @g1 = geometry::STGeomFromText('LINESTRING(1 1, 5 1, 3 5, 1 1)', 0);
@@ -125,7 +125,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 請注意， **CircularString** 執行個體需要使用七個點來定義三角形，但是 **LineString** 執行個體只需要使用四個點來定義三角形。 這是因為 **CircularString** 執行個體會儲存圓弧線段而非直線線段。 因此，儲存在 **CircularString** 執行個體中的三角形側邊為 ABC、CDE 和 EFA，而儲存在 **LineString** 執行個體中的三角形側邊為 AC、CE 和 EA。  
 
 請考慮下列程式碼片段：  
-```tsql
+```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
@@ -145,7 +145,7 @@ LS LengthCS Length
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 和 CompoundCurve 的比較  
 下列程式碼範例會示範如何使用 **LineString** 和 **CompoundCurve** 執行個體來儲存相同的圖形：
-```tsql
+```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
@@ -154,7 +154,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 中的多個  
 
 在上述範例中， **LineString** 執行個體或 **CompoundCurve** 執行個體都可以儲存此圖形。  下一個範例會使用 **CompoundCurve** 來儲存圓形圖配量：  
-```tsql
+```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
 
@@ -162,7 +162,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>CircularString 和 CompoundCurve 的比較  
 下列程式碼範例會示範如何將圓形圖配量儲存在 **CircularString** 執行個體中：  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
 SELECT @g.ToString(), @g.STLength();
@@ -170,12 +170,12 @@ SELECT @g.ToString(), @g.STLength();
 
 若要使用 **CircularString** 執行個體來儲存圓形圖配量，每個直線線段都必須使用三個點。  如果中繼點為未知，則必須計算此點，或者直線線段的端點必須加倍，如下列程式碼片段所示：  
 
-```tsql
+```sql
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
 **CompoundCurve** 執行個體同時允許 **LineString** 和 **CircularString** 元件，因此只需要知道圓形圖配量之直線線段的兩個點。  此程式碼範例會示範如何使用 **CompoundCurve** 來儲存相同的圖形：  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246), (-3 6.3246, 0 0, 3 6.3246))');
 SELECT @g.ToString(), @g.STLength();

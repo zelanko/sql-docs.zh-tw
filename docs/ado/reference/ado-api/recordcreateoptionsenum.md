@@ -3,7 +3,7 @@ title: "RecordCreateOptionsEnum |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32d0349d5a37f73e03670d1e34a509530e9153fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e25b3793d4e3f271d1ea9a1b172440106c591ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 指定是否將現有**記錄**應該開啟或新**記錄**建立[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件[開啟](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 值可以與 AND 運算子結合。  
   
-|常數|值|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|建立新**記錄**所指定的節點在*來源*參數，而不是開啟的現有**記錄**。 如果來源會指向現有的節點，則會發生執行階段錯誤，除非**adCreateCollection**結合**adOpenIfExists**或**adCreateOverwrite**。|  
 |**adCreateNonCollection**|0|建立新**記錄**型別的[adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)。|  

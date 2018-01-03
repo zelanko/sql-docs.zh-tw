@@ -3,8 +3,11 @@ title: "SQL Server 2016 Integration Services 的新功能 | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 36f418950cfa6d475c911c05fd9737fcecf62aa6
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 6e459849dbbc844039ba3ae7a766794f1283e8a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -157,16 +160,16 @@ ms.lasthandoff: 12/04/2017
   
 -   您已從舊版 SQL Server 還原資料庫。  
   
--   您在升級 SQL Server 執行個體之前，並未從 AlwaysOn 可用性群組移除資料庫。 這可防止資料庫自動升級。 如需詳細資訊，請參閱＜ [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)＞。  
+-   您在升級 SQL Server 執行個體之前，並未從 AlwaysOn 可用性群組移除資料庫。 這可防止資料庫自動升級。 如需詳細資訊，請參閱＜ [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)＞。  
   
- 如需詳細資訊，請參閱[SSIS 目錄 &#40;SSISDB&#41;](../integration-services/service/ssis-catalog.md)。 
+ 如需詳細資訊，請參閱[SSIS 目錄 &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md)。 
 
 ####  <a name="AlwaysOn"></a> 支援 SSIS 目錄中的AlwaysOn  
  AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [永遠開啟可用性群組](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
  在 SQL Server 2016 中，SSIS 引進新功能，可讓您輕鬆部署到集中式 SSIS 目錄 (也就是 SSISDB 使用者資料庫)。 為了提供 SSISDB 資料庫及其內容的高可用性 (專案、封裝、執行記錄等)，您可以將 SSISDB 資料庫加入「永遠開啟」可用性群組，就像其他任何使用者資料庫。 發生容錯移轉時，其中一個次要節點會自動變成新的主要節點。  
   
- 如需詳細的概觀以及針對 SSISDB 啟用 AlwaysOn 的逐步指示，請參閱 [SSIS 目錄](../integration-services/service/ssis-catalog.md)。  
+ 如需詳細的概觀以及針對 SSISDB 啟用 AlwaysOn 的逐步指示，請參閱 [SSIS 目錄](../integration-services/catalog/ssis-catalog.md)。  
 
 ####  <a name="IncrementalDeployment"></a> 累加套件部署  
 累加封裝部署功能可讓您將一或多個封裝部署到現有或新的專案中，而不需部署整個專案。 您可以使用下列工具，以累加方式部署封裝。  
@@ -230,7 +233,7 @@ ms.lasthandoff: 12/04/2017
 >  (在 RC0 中，這個方法已移至新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 介面。 如需詳細資訊，請參閱 [New IDTSComponentMetaData130 interface in the API](#CMD130)(API 中新的 IDTSComponentMetaData130 介面)。  
 
 ####  <a name="ServerLogLevel"></a> 支援全伺服器的預設記錄層級  
- 在 SQL Server 的 [伺服器屬性] 中，您現在可以在 [Server logging level (伺服器記錄層次)]  屬性下方，選取預設的全伺服器記錄層次。 您可以挑選其中一個內建的記錄層級 (基本、無、詳細資訊、效能或執行階段歷程)，或者可挑選現有的自訂記錄層級。 選取的記錄層級會套用到所有部署到 SSIS 目錄的封裝。 它預設也會套用到執行 SSIS 封裝的 SQL Agent 工作步驟。  
+ 在 SQL Server 的 [伺服器屬性] 中，您現在可以在 [Server logging level (伺服器記錄層次)]  屬性下方，選取預設的全伺服器記錄層次。 您可以挑選其中一個內建的記錄層級 (基本、無、詳細資訊、效能或執行階段歷程)，或者可挑選現有的自訂記錄層級。 選取的記錄層級會套用到所有部署到 SSIS 目錄的封裝。 它預設也會套用到執行 SSIS 封裝的 SQL 代理程式工作步驟。  
 
 ####  <a name="CMD130"></a> API 中新的 IDTSComponentMetaData130 介面  
  SSIS 目錄中新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 介面會在 SQL Server 2016 中將新功能加入現有 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面中，尤其是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法。 ( **GetIdentificationStringByID** 方法會從 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面移至新的介面)。另外還有新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> (已擴大錯誤資料行名稱的支援) 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> 介面，這兩種介面都提供 **LineageIdentificationString** 屬性。 如需詳細資訊，請參閱＜ [資料流程中適用於錯誤的資料行名稱](#ErrorColumn)＞。  
@@ -316,7 +319,7 @@ ms.lasthandoff: 12/04/2017
 ### <a name="better-install-experience"></a>更好的安裝體驗
 
 ####  <a name="Upgrade"></a> 當 SSISDB 屬於可用性群組時封鎖升級  
- 如果 SSIS 目錄資料庫 (SSISDB) 屬於「永遠開啟」可用性群組，您就必須從可用性群組中移除 SSISDB、升級 SQL Server，然後將 SSISDB 加回可用性群組。 如需詳細資訊，請參閱＜ [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)＞。  
+ 如果 SSIS 目錄資料庫 (SSISDB) 屬於「永遠開啟」可用性群組，您就必須從可用性群組中移除 SSISDB、升級 SQL Server，然後將 SSISDB 加回可用性群組。 如需詳細資訊，請參閱＜ [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)＞。  
 
 ### <a name="better-design-experience"></a>更好的設計體驗
 

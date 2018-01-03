@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 07f4bba6b5a5312d62898f26b1ed6965f72cbec2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b78023eab9f0a737276e02c76a0ef27ce16c3002
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Integration Services (SSIS) 開發和管理工具
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含兩個可搭配封裝使用的 Studio：  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
  如需 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的詳細資訊，請參閱 [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/hh272686.aspx)。  
   
-## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+## <a name="sql-server-management-studio"></a>Transact-SQL  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會提供 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，您可以使用該服務管理封裝、監視執行中封裝以及判斷 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件的影響及資料歷程。  
   
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]在  中工作時，您可以執行下列工作：  

@@ -3,7 +3,7 @@ title: "選項 (環境 - 說明 - 一般頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,19 +18,19 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc966f121da19eb546c9950f2f852d0d37fc9a96
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b12f4599658f6e9c3a330e96aa87b65090092478
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="options-environment---help---general-page"></a>選項 (環境說明 - 一般頁面)
+# <a name="options-environment---help---general-page"></a>選項 (環境 - 說明 - 一般頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [選項] 對話方塊來選擇文件集，並決定是否要在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中顯示主題，或是在不同的視窗中顯示。 若要存取此對話方塊，請按一下 [工具] 功能表上的 [選項]，展開 [環境] 節點中的 [說明]，然後按一下 [一般]。  
   
 > [!NOTE]  
 > 一直到重新啟動環境之後，在此頁面上對選項所做的變更才會生效。  
   
-## <a name="settings"></a>設定  
+## <a name="settings"></a>[設定]  
 **顯示說明使用的工具**  
 指定說明顯示的方式。 從下拉式清單中選取 [外部說明檢視器]，即可在外部浮動視窗中顯示主題。 選取 [整合式說明檢視器]，即可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 內停駐的 Web 瀏覽器視窗中顯示說明主題。  
   

@@ -3,7 +3,7 @@ title: "OLE DB Provider for Internet 發行 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29dc06f21ef0a20271184ae71ecb9d203897f2aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5731b15274e4d2c1acafec09bd6478fc244a1f59
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>OLE DB Provider for Internet 發行
 ADO[記錄](../../../ado/reference/ado-api/record-object-ado.md)和[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件可用於搭配 Microsoft OLE DB Provider for Internet Publishing （網際網路發行的提供者） 存取及管理資源，例如 Web 資料夾或檔案由 Microsoft FrontPage。 ADO 中，您可以指定的來源**記錄**，**資料流**，或[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)是 url。 您可以然後上傳、 下載、 移動、 複製和刪除資源，或直接管理 資源內容。  

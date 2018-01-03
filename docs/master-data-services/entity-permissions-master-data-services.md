@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba616e93dac142ea283a15640afec5f0acf6228c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 10fcf58743fc17f120bfba6844ca3188fc6f3a66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="entity-permissions-master-data-services"></a>實體權限 (Master Data Services)
   實體權限適用於：  
@@ -40,12 +40,12 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  這些權限只適用於使用者介面的 [總管] 功能區域。  
   
-|權限|說明|  
+|權限|描述|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取成員、屬性、階層成員資格或集合成員資格。|  
 |**建立**|使用者可以建立成員，並在建立期間指派屬性值。|  
 |**Update**|使用者可以更新成員、屬性、階層成員資格或集合成員資格。|  
-|**Delete**|使用者可以刪除成員。|  
+|**刪除**|使用者可以刪除成員。|  
 |**拒絕**|拒絕所有對實體的存取。|  
   
  讀取、建立、更新和刪除權限可以彼此合併。 指派建立、更新和刪除權限時，將會自動指派讀取權限。  

@@ -3,7 +3,7 @@ title: "自訂檔案連接 > 一節 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe0012f287536d015e1086d02833a0f6651194f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b18fd84d31e95aa2973dd0d5377fbc8f51fafe4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customization-file-connect-section"></a>自訂檔案連接 > 一節
 此處理常式的預設行為是拒絕所有連線。 **連接**區段會指定該行為的例外狀況。 例如，如果所有**連接**區段已不存在或空的則預設無法建立任何連線。  
@@ -59,16 +59,16 @@ connectionString
   
 ## <a name="remarks"></a>備註  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
-|**連接**|常值字串，表示這是連接字串的項目。|  
+|**[連接]**|常值字串，表示這是連接字串的項目。|  
 |***連接字串***|字串，取代整個用戶端連接字串。|  
 |**存取**|常值字串，表示這是存取項目。|  
 |***accessRight***|其中一個的下列存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** — 使用者可以讀取的資料來源。<br />-   **ReadWrite** — 使用者可讀取或寫入至資料來源。|  
   
  如果您想要允許任何連線 （效果，請停用預設處理常式的行為），設定存取項目**連接預設**區段`Access=ReadWrite`，並刪除或標記為註解的任何其他**連接***識別碼*> 一節。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [自訂檔案記錄檔 > 一節](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自訂檔案 SQL > 一節](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [自訂檔案 UserList > 一節](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b25081133a9af071fbd0dfb2ee98344c60d3d35a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3bbb3a9345c969d5d5bc038f31f7f7bc0b731c40
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>參照 ADO 程式庫中的 Visual c + + 應用程式
 若要使用 ADO 的最新版本的 Visual c + + 應用程式中，使用下列`#import`指示詞：  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
  若要使用 ADO MD 或 ADOX，您必須匯入*msadomd.dll*或*msadox.dll*，可以使用上述語法。  
   
-## <a name="backward-compatibility"></a>回溯相容性  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  若要使用 ADO 的任何先前的版本，取代*msado15.dll*上面其中下列型別程式庫。  
   
 -   *msado27.tlb*，ADO 2.7 類型程式庫  

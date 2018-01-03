@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4710f13f257f98326f0fa6c7f4550551bff3fd5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4b5518a521154b37dc473eb700c3ff50d1a70d60
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>使用 Transact-SQL 從 SSMS 執行 SSIS 套件
 本快速入門示範如何使用 SQL Server Management Studio (SSMS) 連線至 SSIS 目錄資料庫，然後使用 Transact-SQL 陳述式來執行儲存在 SSIS 目錄的 SSIS 套件。
 
 SQL Server Management Studio 是整合式環境，用於管理任何 SQL 基礎結構，從 SQL Sever 到 SQL Database 皆適用。 如需 SSMS 的詳細資訊，請參閱 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 開始之前，請確定您有最新版的 SQL Server Management Studio (SSMS)。 若要下載 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
@@ -62,7 +62,7 @@ SQL Server Management Studio 是整合式環境，用於管理任何 SQL 基礎�
 
 4.  執行指令碼。
 
-5. 在 [物件總管] 中，在必要時更新 **SSISDB** 的內容，然後檢查是否有您所部署的專案。
+5. 在 [物件總管] 中，於必要時更新 **SSISDB** 的內容，然後檢查是否有您所部署的專案。
 
 ```sql
 Declare @execution_id bigint
@@ -82,7 +82,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execution_id
 GO
 ```
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 - 請考慮使用其他方式來執行套件。
     - [使用 SSMS 執行 SSIS 套件](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (VS Code)](ssis-quickstart-run-tsql-vscode.md)

@@ -3,7 +3,7 @@ title: "色彩對話方塊 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7380a1f338e519517fee09cda3c7419b1ac4817b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c769d37bb4ebda8299498f54c22b87099e788fb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>色彩對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [色彩] 對話方塊會傳回使用者所選取之色彩的 RGB 值。 使用者可從一組由顯示驅動程式所判斷的基本色彩或一組自訂色彩中進行選取。 請從基本色彩中進行選取，或建立自訂色彩。 按一下色彩矩陣，或輸入 [色調]、[濃度]、[亮度]、[紅]、[綠] 和 [藍] 方塊，即可定義色彩。  

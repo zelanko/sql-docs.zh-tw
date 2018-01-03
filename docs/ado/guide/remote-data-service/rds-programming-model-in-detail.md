@@ -3,7 +3,7 @@ title: "RDS 程式設計模型，在詳細資料 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b471eb6a057e0669bd628089886cb6465598f697
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e3edfd1b1ec33d4c014fae4a0fed8d61d5ef8ed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-programming-model-in-detail"></a>在詳細資料的 RDS 程式設計模型
 RDS 的程式設計模型的重要元素如下：  
@@ -75,7 +75,7 @@ RDS 的程式設計模型的重要元素如下：
 > [!NOTE]
 >  Microsoft Internet Explorer 提供兩個額外的事件至 RDS: **onDataSetChanged**，這表示**資料錄集**是功能，但仍然擷取資料列，以及**onDataSetComplete**，這表示**資料錄集**完成擷取資料列。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [RDS 與物件的程式設計模型](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   

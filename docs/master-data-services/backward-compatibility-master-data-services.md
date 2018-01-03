@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9710a8f5fcc77032f7bb575e90be1b91188c6e5c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4c074fdc892d55da4ee65c433a3189e94138f4b1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backward-compatibility-master-data-services"></a>回溯相容性 (Master Data Services)
   本節描述 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]版本之間的變更。 它涵蓋不能再使用或已排程在未來版本中移除的功能。 此外，也描述的是產品的變更，已知這些變更會中斷或變更包含 Integration Services 功能現有應用程式的行為。  

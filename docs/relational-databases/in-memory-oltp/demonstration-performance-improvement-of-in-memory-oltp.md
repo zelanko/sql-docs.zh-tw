@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 19c04ed5c67cc2f661ed0774b3941082dec07d81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 030764b39018049a729496177f967f659fb5b08c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>示範：記憶體中 OLTP 的效能改善
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  執行簡短 T-SQL 來建立資料庫和其記憶體最佳化檔案群組。  
   
-```tsql  
+```sql  
 go  
 CREATE DATABASE imoltp;    --  Transact-SQL  
 go  
@@ -79,7 +79,7 @@ go
   
 2.  在資料庫中執行下列 T-SQL。  
   
-```tsql  
+```sql  
 go  
 DROP PROCEDURE IF EXISTS ncsp;  
 DROP TABLE IF EXISTS sql;  
@@ -131,7 +131,7 @@ go
   
 2.  同樣地，使用 SSMS.exe，在資料庫中重新執行下列 T-SQL。  
   
-```tsql  
+```sql  
 go  
 SET STATISTICS TIME OFF;  
 SET NOCOUNT ON;  
@@ -194,7 +194,7 @@ go
   
  接下來是第二個測試執行所產生的輸出時間統計資料。  
   
-```tsql  
+```sql  
 10453 ms , A: Disk-based table and interpreted Transact-SQL.  
 5626 ms , B: memory-optimized table with hash index and interpreted Transact-SQL.  
 3937 ms , C: memory-optimized table with hash index and native SP.  

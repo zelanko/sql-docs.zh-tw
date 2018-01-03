@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6fb6a9d21c02faf2615d786dda40f35da4b25a7c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a5037fb489588b174ec66a8845cf4994d8a915e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-4---adding-a-flat-file-destination"></a>課程 4-4 - 新增一般檔案目的地
 [查閱貨幣索引鍵] 轉換的錯誤輸出，將使得查閱作業失敗的任何資料列重新導向至 [指令碼] 轉換。 為了加強所發生錯誤的相關資訊，[指令碼] 轉換執行一個取得錯誤描述的指令碼。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
     請注意，除了來源資料檔的資料行之外，還出現三個新的資料行：ErrorCode、ErrorColumn 和 ErrorDescription。 這些資料行是由 [查閱貨幣索引鍵] 轉換的錯誤輸出和 [取得錯誤描述] 轉換中的指令碼產生，而且可用來找出失敗資料列的原因並加以解決。  
   
-12. 按一下 **[確定]**。  
+12. 按一下 [確定] 。  
   
 13. 在 **[一般檔案目的地編輯器]**中，清除 **[覆寫檔案中的資料]** 核取方塊。  
   
@@ -63,9 +63,9 @@ ms.lasthandoff: 11/20/2017
   
 14. 在 **[一般檔案目的地編輯器]**中，按一下 **[對應]** 來確認所有資料行都正確。 您可以選擇性地重新命名目的地的資料行。  
   
-15. 按一下 **[確定]**。  
+15. 按一下 [確定] 。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 [步驟 5：測試第 4 課的教學課程封裝](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

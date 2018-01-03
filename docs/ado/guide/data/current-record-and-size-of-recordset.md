@@ -3,7 +3,7 @@ title: "目前的記錄和資料錄集的大小 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6e1da6abaf639a691c647168f51dfa6130da12f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6b4bab8061c7343d303dcd322ae2ae7fef2fd42
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="current-record-and-size-of-recordset"></a>目前的記錄和資料錄集的大小
 本章節描述如何在範例中尋找目前的游標位置**資料錄集**中[JScript 程式碼範例，以傳回一個資料錄集](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)。  

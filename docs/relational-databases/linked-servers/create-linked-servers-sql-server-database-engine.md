@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ba9740868c30bcc587cae0f99411bd6a49276fc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b6d7a92e154f6e517fe3299a952a78a05aa4b7d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Procedures"></a> 如何建立連結的伺服器  
  您可以使用下列任一項：  
   
--   [SQL Server Management Studio](#SSMSProcedure)  
+-   [Transact-SQL](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/17/2017
      **遠端密碼**  
      指定遠端使用者的密碼。  
   
-     **加入**  
+     **[加入]**  
      加入新的本機登入。  
   
      **移除**  
@@ -207,7 +207,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  在查詢編輯器中，輸入下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來連結名稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `SRVR002\ACCTG`執行個體：  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -219,7 +219,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  執行下列程式碼來設定連結的伺服器使用將使用連結的伺服器之登入的網域認證。  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -234,7 +234,7 @@ ms.lasthandoff: 11/17/2017
   
 -   執行下列程式碼來測試連結之伺服器的連線。 此範例會傳回連結之伺服器上的資料庫名稱。  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -244,7 +244,7 @@ ms.lasthandoff: 11/17/2017
   
 -   使用四部分的名稱來表示連結之伺服器上的物件。 執行下列程式碼以傳回本機伺服器上的所有登入清單，及其連結之伺服器上相符的登入。  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  

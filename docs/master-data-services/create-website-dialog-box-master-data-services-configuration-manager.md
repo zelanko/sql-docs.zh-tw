@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,18 +18,18 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e828a16a51b3a5744703fc08cf79abaeb489d2e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4da374ba8805fe07bf3d155f2f0910d944ac78d9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>建立網站對話方塊 (Master Data Services 組態管理員)
   使用 **[建立網站]** 對話方塊可在本機電腦上建立新的網站。 當您在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中建立網站時，網站會新增至本機電腦上的 Internet Information Services (IIS)，而且包含設定為 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的根應用程式。 也會建立新的應用程式集區，而 Web 應用程式會放在該應用程式集區內。  
   
 ## <a name="web-site"></a>網站  
   
-|控制項名稱|說明|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
 |**網站名稱**|輸入網站的名稱或使用預設名稱。 這個名稱是僅用來識別 IIS 中站台的易記名稱。 它不是用來從 Web 瀏覽器存取網站。<br /><br /> 此名稱在本機電腦上 IIS 的所有網站當中必須是唯一的。|  
 |**通訊協定**|顯示 **http**。 當您不需要透過加密通道進行用戶端和伺服器通訊時，請選取超文字傳輸協定 (HTTP)。<br /><br /> **注意**：您無法在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中建立 HTTPS 網站。 HTTPS 是使用安全通訊端層 (SSL) 的 HTTP 通訊協定，而且當您交換機密或個人資料，或是當您希望使用者先確認伺服器的識別再傳輸個人資訊時，將會很實用。 如果您需要透過加密通道在用戶端和伺服器之間傳輸資訊，必須使用 IIS 工具 (如 IIS 管理員) 來設定具有 HTTPS 繫結的網站，並將網站繫結與伺服器憑證產生關聯，在您於 Web 瀏覽器中成功開啟網站之前需要這項處理。 如需有關伺服器憑證的詳細資訊，請參閱 [TechNet 上的](http://go.microsoft.com/fwlink/?LinkId=163220) IIS 7.0：在 IIS 7.0 中設定伺服器憑證 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。|  
@@ -39,10 +39,10 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="application-pool"></a>應用程式集區  
   
-|控制項名稱|說明|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
 |**名稱**|請輸入新應用程式集區的唯一易記名稱，或使用所提供的預設名稱。 這個網站的根 Web 應用程式會在此應用程式集區中執行。<br /><br /> 應用程式集區提供了界限，可防止一個應用程式集區中的應用程式影響另一個應用程式集區中的應用程式。|  
-|**使用者名稱**|輸入 Active Directory 中的網域和使用者名稱。 此帳戶是 Web 應用程式在其中執行之應用程式集區的識別。<br /><br /> 這個帳戶會加入至 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 mds_exec 資料庫角色，來進行資料庫存取。 如需詳細資訊，請參閱[資料庫登入、使用者和角色 &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)。 它也會新增至 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Windows 群組 (**MDS_ServiceAccounts**)，而這個群組在檔案系統中已被授與暫存編譯目錄 **MDSTempDir** 的權限。 如需詳細資訊，請參閱[資料夾和檔案的權限 &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md)。|  
+|**User name**|輸入 Active Directory 中的網域和使用者名稱。 此帳戶是 Web 應用程式在其中執行之應用程式集區的識別。<br /><br /> 這個帳戶會加入至 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 mds_exec 資料庫角色，來進行資料庫存取。 如需詳細資訊，請參閱[資料庫登入、使用者和角色 &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)。 它也會新增至 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Windows 群組 (**MDS_ServiceAccounts**)，而這個群組在檔案系統中已被授與暫存編譯目錄 **MDSTempDir** 的權限。 如需詳細資訊，請參閱[資料夾和檔案的權限 &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md)。|  
 |**密碼**|輸入指定之使用者帳戶的密碼。|  
 |**確認密碼**|重新輸入指定之使用者帳戶的密碼。 **[密碼]** 和 **[確認密碼]** 欄位必須包含相同的密碼。|  
   

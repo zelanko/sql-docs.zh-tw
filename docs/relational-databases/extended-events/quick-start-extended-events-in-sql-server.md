@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a505859d320552f4c591e61440a5b97bf92d8e17
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21b7665fa4beaf0dc48f336c7f706f1a12ed4865
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>快速入門︰SQL Server 中的擴充事件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ SSMS UI 經年累月的調整結果，可能會造成文字和支援的螢幕擷
 以下是您在 UI 中點選後，針對 [您的工作階段] 所產生的 T-SQL CREATE EVENT SESSION 陳述式：
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [YourSession]
     ON SERVER 
     ADD EVENT sqlserver.sql_statement_completed
@@ -206,7 +206,7 @@ GO
 在 CREATE EVENT SESSION 陳述式之前，您可能想要有條件地發出 DROP EVENT SESSION，以免名稱已經存在。
 
 
-```tsql
+```sql
 IF EXISTS (SELECT *
       FROM sys.server_event_sessions    -- If Microsoft SQL Server.
     --FROM sys.database_event_sessions  -- If Azure SQL Database in the cloud.
@@ -226,7 +226,7 @@ go
 當您建立事件工作階段時，預設為無法自動開始執行。 您可以使用下列 T-SQL ALTER EVENT SESSION 陳述式，隨時開始或停止事件工作階段。
 
 
-```tsql
+```sql
 ALTER EVENT SESSION [YourSession]
       ON SERVER
     --ON DATABASE
@@ -252,7 +252,7 @@ ALTER EVENT SESSION [YourSession]
 
 
 
-```tsql
+```sql
 SELECT
         c.name,
         Count(*)  AS [Count-Per-Column-Repeated-Name]
@@ -304,7 +304,7 @@ trace_event_id         3
 > 此事件系統一律會在您指定的 *.xel* event_file 檔案名稱前面附加長數字。 您必須複製系統指定的完整名稱並貼到 SELECT 中，才能從檔案執行下列 SELECT。
 
 
-```tsql
+```sql
 SELECT
         object_name,
         file_name,
@@ -446,7 +446,7 @@ SELECT
 下列 T-SQL SELECT 會針對每個可用的事件傳回一個資料列，其名稱包含三個字元字串 'sql'。 當然，您可以編輯 LIKE 值來搜尋不同的事件名稱。 這些資料列也會命名包含事件的封裝。
 
 
-```tsql
+```sql
 SELECT   -- Find an event you want.
         p.name         AS [Package-Name],
         o.object_type,
@@ -578,7 +578,7 @@ SQL Server 中已建立一些擴充事件。 所有事件都已設定為在啟�
 下列 SELECT...UNION ALL 陳述式會傳回資料列，顯示哪些人員具有建立事件工作階段，以及查詢系統目錄檢視中的擴充事件時所需的權限。
 
 
-```tsql
+```sql
 -- Ascertain who has the permissions listed in the ON clause.
 -- 'CONTROL SERVER' permission includes the permissions
 -- 'ALTER ANY EVENT SESSION' and 'VIEW SERVER STATE'.
@@ -636,7 +636,7 @@ SELECT
 此外，如果您有權暫時「模擬」其他帳戶，您可以取消註解 [EXECUTE AS LOGIN](../../t-sql/statements/execute-as-transact-sql.md) 及 REVERT 陳述式，以查詢其他帳戶。
 
 
-```tsql
+```sql
 --EXECUTE AS LOGIN = 'AccountNameHere';
 SELECT HAS_PERMS_BY_NAME(
     null, null,

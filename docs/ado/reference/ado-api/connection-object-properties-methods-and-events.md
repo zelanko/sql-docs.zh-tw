@@ -3,7 +3,7 @@ title: "連接物件屬性、 方法和事件 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8dc35d2758821e7a44ad43c7f239864425b84f72
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d7a8f078f07ec578efa8daaaba9e4e526a5116f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-object-properties-methods-and-events"></a>連接物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>/ 屬性的集合  
@@ -78,5 +78,5 @@ ms.lasthandoff: 11/17/2017
   
  [WillExecute 事件](../../../ado/reference/ado-api/willexecute-event-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

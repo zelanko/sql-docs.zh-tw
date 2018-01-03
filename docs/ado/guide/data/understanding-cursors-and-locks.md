@@ -3,7 +3,7 @@ title: "了解資料指標和鎖定 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75209516e372612beb8885051fd22882b967894c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 183fb439f3cd120dcc5620c3b2c08bd2788f70d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-cursors-and-locks"></a>了解資料指標和鎖定
 請務必了解資料指標的運作方式，您可以選取應用程式的資料存取需求的最佳且最有效率的資料指標類型。 較不比最佳化的資料指標設定可讓資料存取作業到變慢。  

@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4fa39b24f9e57e335f6b1f01efebb4e741cdcd0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa80d1e050c08e66b1576835045f4faf2ef497a5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>將資料庫還原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 SQL Server Management Studio (SSMS) 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫還原至新位置，並選擇性地重新命名資料庫。 您可以將資料庫移至新目錄路徑，或是在相同的伺服器執行個體或不同的伺服器執行個體上建立資料庫的複本。  
@@ -56,22 +56,22 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Security"></a> 安全性  
  基於安全性的理由，建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，則 RESTORE 權限預設為 **系統管理員** 和 **dbcreator** 固定伺服器角色的成員，以及資料庫的擁有者 (**dbo**)。  
   
- RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此，因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
+ RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
   
   
 ## <a name="restore-a-database-to-a-new-location-optionally-rename-the-database-using-ssms"></a>將資料庫還原至新位置，並選擇性地使用 SSMS 重新命名資料庫 
 
   
-1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體，然後在 [物件總管] 中，按一下伺服器名稱以展開伺服器樹狀目錄。  
+1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體，然後在 [物件總管] 中，按一下伺服器名稱以展開伺服器樹狀目錄。  
   
 2.  以滑鼠右鍵按一下 [資料庫]，然後按一下 [還原資料庫]。 **[還原資料庫]** 對話方塊隨即開啟。  
   
 3.  在 **[一般]** 頁面上，使用 **[來源]** 區段指定要還原之備份組的來源和位置。 選取下列其中一個選項：  
   
-    -   **資料庫**  
+    -   **[資料庫備份]**  
   
          從下拉式清單中選取要還原的資料庫。 此清單僅包含已根據 **msdb** 備份記錄而備份的資料庫。  
   
@@ -169,12 +169,12 @@ ms.lasthandoff: 11/17/2017
     |*operating_system_file_name*|針對 *logical_file_name_in_backup*所指定的檔案指定新的位置。 檔案將還原至這個位置。<br /><br /> (選擇性) *operating_system_file_name* 會針對還原的檔案指定新的檔案名稱。 如果您要在相同的伺服器執行個體上建立現有資料庫的副本，這就是必要選項。|  
     |*n*|這是預留位置，表示您可以指定其他 MOVE 陳述式。|  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  此範例會透過還原 `MyAdvWorks` 範例資料庫的備份 (其中包括兩個檔案： [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] _Data 和 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log)，建立名為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]的新資料庫。 這個資料庫會使用簡單復原模式。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫已經存在伺服器執行個體上，因此備份中的檔案都必須還原至新的位置。 RESTORE FILELISTONLY 陳述式是用來決定資料庫中所要還原的檔案數目及名稱。 此資料庫備份是備份裝置上的第一個備份組。  
   
 > **注意：**備份和還原交易記錄 (包括時間點還原) 的範例會使用從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 建立的 `MyAdvWorks_FullRM` 資料庫，就如同以下 `MyAdvWorks` 範例。 不過，您必須使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將產生的 `MyAdvWorks_FullRM` 資料庫變更為使用完整復原模式：ALTER DATABASE <database_name> SET RECOVERY FULL。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  

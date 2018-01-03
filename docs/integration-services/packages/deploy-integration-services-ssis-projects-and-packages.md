@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e9f7359e19df03dc544211ba3a39041efa0637
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援兩種部署模型：專案部署模型和舊版封裝部署模型。 專案部署模型可讓您將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="features-of-project-deployment-model"></a>專案部署模型的功能  
  下表列出可用於專為專案部署模型開發之專案的功能。  
   
-|功能|說明|  
+|功能|描述|  
 |-------------|-----------------|  
 |參數|參數指定要供封裝使用的資料。 您可以將參數範圍限定在分別具有封裝參數和專案參數的封裝層級或專案層級。 在運算式或工作中，都會用到參數。 將專案部署到目錄之後，您可以為每個參數各指定一個常值，或是使用在設計時所指派的預設值。 您也可以參考環境變數來替代常值。 環境變數會在封裝執行時解析。|  
 |環境|環境是可供 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案參考之變數的容器。 每個專案都可以有多個環境參考，但是封裝執行的單一執行個體只能參考來自單一環境的變數。 環境可讓您組織指派給封裝的值。 例如，您可能會有命名為 "Dev"、"test" 和 "Production" 的環境。|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
  如果要將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，請完成下列工作：  
   
-1.  建立 SSISDB 目錄 (若無)。 如需詳細資訊，請參閱 [SSIS 目錄](../../integration-services/service/ssis-catalog.md)。  
+1.  建立 SSISDB 目錄 (若無)。 如需詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
   
 2.  請執行 [Integration Services 專案轉換精靈] 將專案轉換為專案部署模型。 如需詳細資訊，請參閱底下指示： [將專案轉換為專案部署模型](#convert)  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/20/2017
     -   若是在舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中建立專案，在您於 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中開啟專案檔案後，請將專案轉換為專案部署模型。  
   
         > [!NOTE]  
-        >  如果專案包含一個或多個資料來源，則在完成專案轉換時，會移除資料來源。 若要建立專案中的封裝可以共用的資料來源連接，請在專案層級加入連接管理員。 如需詳細資訊，請參閱[加入、刪除或共用封裝中的連線管理員](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
+        >  如果專案包含一個或多個資料來源，則在完成專案轉換時，會移除資料來源。 若要建立專案中的封裝可以共用的資料來源連接，請在專案層級加入連接管理員。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
   
          根據您是從 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 還是從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行 [Integration Services 專案轉換精靈]，此精靈會執行不同的轉換工作。  
   
@@ -341,7 +341,7 @@ static void Main()
 > [!IMPORTANT]  
 >  對於某個特定執行，封裝只能藉由單一伺服器環境中包含的值執行。  
   
- 您可以透過查詢檢視表，取得伺服器環境、環境參考和環境變數的清單。 您也可以呼叫預存程序來加入、刪除及修改環境、環境參考和環境變數。 如需詳細資訊，請參閱 [SSIS 目錄](../../integration-services/service/ssis-catalog.md)中的＜伺服器環境、伺服器變數和伺服器環境參考＞一節。  
+ 您可以透過查詢檢視表，取得伺服器環境、環境參考和環境變數的清單。 您也可以呼叫預存程序來加入、刪除及修改環境、環境參考和環境變數。 如需詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)中的＜伺服器環境、伺服器變數和伺服器環境參考＞一節。  
   
 ### <a name="to-create-and-use-a-server-environment"></a>若要建立和使用伺服器環境  
   
@@ -361,13 +361,13 @@ static void Main()
   
     3.  輸入環境變數的 [值]。  
   
-         如需環境變數名稱規則的資訊，請參閱 [SSIS 目錄](../../integration-services/service/ssis-catalog.md)中的＜環境變數＞一節。  
+         如需環境變數名稱規則的資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)中的＜環境變數＞一節。  
   
     4.  選取或清除 [區分] 核取方塊，以指出此變數是否包含機密值。  
   
          如果您選取 [區分]，變數值就不會顯示在 [值] 欄位內。  
   
-         機密值將在 SSISDB 目錄中進行加密。 如需加密的詳細資訊，請參閱 [SSIS 目錄](../../integration-services/service/ssis-catalog.md)。  
+         機密值將在 SSISDB 目錄中進行加密。 如需加密的詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
   
 6.  在 [權限] 頁面上執行下列動作，對選取的使用者和角色授與或拒絕任何權限。  
   
@@ -577,7 +577,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **使用 SQL Server 驗證**  
  當使用者透過不信任連接並指定登入名稱和密碼進行連接時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會驗證此連接，檢查是否已建立該 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入帳戶，而且指定的密碼是否符合先前記錄的密碼。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 沒有登入帳戶集，驗證將失敗，而使用者會收到錯誤訊息。  
   
- **使用者名稱**  
+ **User name**  
  使用 SQL Server 驗證時，請指定使用者名稱。  
   
  **密碼**  
@@ -602,7 +602,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **套用至選取項目**  
  按一下可將 [密碼] 文字方塊中的密碼套用至選取的一個或多個封裝。  
   
- **重新整理**  
+ **[重新整理]**  
  重新整理封裝的清單。  
   
 ###  <a name="destination"></a> 設定 [選取目的地] 頁面上的選項  
@@ -670,7 +670,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **加入組態**  
  將其他專案中包含的封裝組態加入至您要以參數取代的可用組態清單中。 您可以選取儲存在檔案系統或 SQL Server 中的組態。  
   
- **重新整理**  
+ **[重新整理]**  
  按一下可重新整理組態的清單。  
   
  **轉換後從所有封裝移除組態**  
@@ -697,7 +697,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **範圍。**  
  列出參數的範圍。  
   
- **Value**  
+ **ReplTest1**  
  列出參數值。  
   
  按一下值欄位旁邊的省略符號按鈕來設定參數屬性。  

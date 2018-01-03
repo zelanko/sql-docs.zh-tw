@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 365b24e35f44154c644afbf2646f8c52738bd90c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7058099b0da0b991327f6ab408e55fc7143f8d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-object-security-master-data-services"></a>資料庫物件安全性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中，資料儲存在多個資料庫資料表並且顯示在檢視表中。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中受到保護的資訊，對具有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫存取權的使用者是可見的。  
@@ -48,14 +48,14 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="Staging"></a> 暫存資料  
  在下表中，每個安全物件都會有 "name" 做為名稱的一部分。 這表示建立實體時所指定的暫存資料表名稱。 如需詳細資訊，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-|動作|安全性實體|Permissions|  
+|動作|[安全性實體]|Permissions|  
 |------------|----------------|-----------------|  
 |建立、更新和刪除分葉成員及其屬性。|stg.name_Leaf|必要：INSERT<br /><br /> 選擇性：SELECT 和 UPDATE|  
-|將資料從 [分葉] 暫存資料表載入至適當的 MDS 資料庫資料表。|stg.udp_name_Leaf|EXECUTE|  
+|將資料從 [分葉] 暫存資料表載入至適當的 MDS 資料庫資料表。|stg.udp_name_Leaf|執行 CREATE 陳述式之前，請先執行|  
 |建立、更新和刪除合併成員及其屬性。|stg.name_Consolidated|必要：INSERT<br /><br /> 選擇性：SELECT 和 UPDATE|  
-|將資料從 [合併] 暫存資料表載入至適當的 MDS 資料庫資料表。|stg.udp_name_Consolidated|EXECUTE|  
+|將資料從 [合併] 暫存資料表載入至適當的 MDS 資料庫資料表。|stg.udp_name_Consolidated|執行 CREATE 陳述式之前，請先執行|  
 |在明確階層中移動成員。|stg.name_Relationship|必要：INSERT<br /><br /> 選擇性：SELECT 和 UPDATE|  
-|將資料從 [關聯性] 暫存資料表載入至適當的 MDS 資料表。|stg.udp_name_Relationship|EXECUTE|  
+|將資料從 [關聯性] 暫存資料表載入至適當的 MDS 資料表。|stg.udp_name_Relationship|執行 CREATE 陳述式之前，請先執行|  
 |檢視將資料從暫存資料表插入至 MDS 資料庫資料表時發生的錯誤。|stg.udp_name_Relationship|SELECT|  
   
  如需詳細資訊，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
@@ -64,24 +64,24 @@ ms.lasthandoff: 11/20/2017
   
 |動作|安全性實體|Permissions|  
 |------------|---------------|-----------------|  
-|依商務規則驗證資料版本|mdm.udpValidateModel|EXECUTE|  
+|依商務規則驗證資料版本|mdm.udpValidateModel|執行 CREATE 陳述式之前，請先執行|  
   
  如需詳細資訊，請參閱 [驗證預存程序 &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)。  
   
 ##  <a name="Versions"></a> 刪除版本  
   
-|動作|安全性實體|Permissions|  
+|動作|[安全性實體]|Permissions|  
 |------------|----------------|-----------------|  
 |決定要刪除之版本的識別碼|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
-|刪除模型的版本|mdm.udpVersionDelete|EXECUTE|  
+|刪除模型的版本|mdm.udpVersionDelete|執行 CREATE 陳述式之前，請先執行|  
   
  如需詳細資訊，請參閱[刪除版本 &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)。  
   
 ##  <a name="Hierarchy"></a> 立即套用階層成員權限  
   
-|動作|安全性實體|Permissions|  
+|動作|[安全性實體]|Permissions|  
 |------------|----------------|-----------------|  
-|立即套用成員權限|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
+|立即套用成員權限|mdm.udpSecurityMemberProcessRebuildModel|執行 CREATE 陳述式之前，請先執行|  
   
  如需詳細資訊，請參閱[立即套用成員權限 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)。  
   

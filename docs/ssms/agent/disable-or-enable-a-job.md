@@ -3,7 +3,7 @@ title: "停用或啟用作業 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aa31613e7b528a3f44e756b311f1367e2c065ee8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1f7eaa5780808dedf69d99805d36f3b1655a322d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="disable-or-enable-a-job"></a>Disable or Enable a Job
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 [!INCLUDE[tsql](../../includes/tsql_md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業。 當您停用作業時，該項作業並未刪除，而且必要時可以重新啟用。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **若要使用下列項目停用或啟用作業：**  
   
-    [Transact-SQL](#SSMS)  
+    [SQL Server Management Studio](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- changes the name, description, and disables status of the job NightlyBackups.  

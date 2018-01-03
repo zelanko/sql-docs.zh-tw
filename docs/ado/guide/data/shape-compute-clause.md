@@ -3,7 +3,7 @@ title: "圖形 COMPUTE 子句 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-compute-clause"></a>圖形 COMPUTE 子句
 圖形 COMPUTE 子句產生父代**資料錄集**，其資料行所組成之子系的參考**資料錄集**; 選擇性資料行內容的章節中，新的、 或導出資料行，或子系上執行彙總函式的結果**資料錄集**或先前形狀**資料錄集**; 以及從子系的任何資料行**資料錄集**中所列選擇性的 BY 子句。  
@@ -38,7 +38,7 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  這個子句的部分如下所示：  
   
  *子命令*  
@@ -82,15 +82,15 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
   
  例如，假設您有一個資料表，名為人口統計資料，包括狀態、 縣市和母體擴展的欄位。 （僅做為範例會提供圖形內資料表的母體擴展。）  
   
-|State|City|母體|  
+|State|[縣/市]|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
+|或|Medford|200,000|  
+|或|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|聖地牙哥|600,000|  
 |WA|Tacoma|500,000|  
-|OR|Corvallis|300,000|  
+|或|Corvallis|300,000|  
   
  現在，發出此圖形命令：  
   
@@ -114,31 +114,31 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Child1 參考|CA|  
 |1,200,000|Child2 參考|WA|  
-|1,100,000|Child3 參考|OR|  
+|1,100,000|Child3 參考|或|  
   
 ## <a name="child1"></a>Child1  
   
-|State|City|母體|  
+|State|[縣/市]|母體|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
 |CA|聖地牙哥|600,000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|City|母體|  
+|State|[縣/市]|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|City|母體|  
+|State|[縣/市]|母體|  
 |-----------|----------|----------------|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
-|OR|Corvallis|300,000|  
+|或|Medford|200,000|  
+|或|Portland|400,000|  
+|或|Corvallis|300,000|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [存取資料列中的階層式資料錄集](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [資料成形概觀](../../../ado/guide/data/data-shaping-overview.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   

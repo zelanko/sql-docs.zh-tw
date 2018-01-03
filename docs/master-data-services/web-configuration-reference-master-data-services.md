@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 986bad8757aca39e8bdaa67c11c29dad21bbb430
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8744b03d00edf39f71c034d44a890ed5cd7570fe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 組態參考 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 在 Web.config 檔案中包含讓 Internet Information Services (IIS) 主控 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和 Web 服務的組態設定。 這個 Web.config 檔案位於 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安裝路徑的 WebApplication 資料夾。 如需路徑和權限的詳細資訊，請參閱[資料夾和檔案的權限 &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md)。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="webconfig-elements"></a>Web.Config 元素  
  除了標準的 IIS、.NET Framework、ASP.NET 和 Windows Communication Foundation (WCF) 組態項目以外，Web.config 檔案還包含自訂的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 項目 (**\<masterDataServices>**)。 下表描述 Web.config 檔案中包含的元素。  
   
-|組態元素|說明|  
+|組態元素|描述|  
 |---------------------------|-----------------|  
 |**masterDataServices**|自訂元素。 將 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服務連接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。|  
 |**connectionStrings**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [connectionStrings 項目 (ASP.NET 設定結構描述)](http://go.microsoft.com/fwlink/?LinkId=178347) 。|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
 ### <a name="elements-and-attributes"></a>元素和屬性  
   
-|項目|說明|  
+|項目|描述|  
 |----------|-----------------|  
 |**執行個體**|子元素。 包含指定 Web 服務和資料庫連接字串之資訊的屬性。|  
 |**virtualPath**|屬性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和服務的路徑。 這對應於 IIS ApplicationHost.config 檔案中 **\<site>** 項目下之 **\<application>** 項目的 **path** 屬性。|  

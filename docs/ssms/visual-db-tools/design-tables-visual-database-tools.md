@@ -3,7 +3,7 @@ title: "建立及更新資料表 (SSMS) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28e181751426bf7169693973ca9c974e1d130e9f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b693dfa57d72db69a6c4a5edd3545ad216645a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-update-database-tables"></a>建立及更新資料表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 資料表設計工具是視覺效果工具，您可在其中設計[資料庫資料表](../../relational-databases/tables/tables.md)及將其視覺化。 使用 SQL Server Management Studio (SSMS) 資料表設計工具來建立、編輯或刪除資料表、資料行、索引鍵、索引、關聯性及條件約束。  
@@ -65,6 +65,6 @@ ms.lasthandoff: 12/05/2017
 [資料行屬性](column-properties-visual-database-tools.md)  
 [在資料表新增資料行](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  
 [主要與外部索引鍵](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
-[索引](../../relational-databases/indexes/indexes.md)  
+[[索引]](../../relational-databases/indexes/indexes.md)  
 [資料類型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [下載 SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)  

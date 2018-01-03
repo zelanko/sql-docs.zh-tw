@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 83025e81146c8d7087c100c66fb47215a0603562
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04a9fcb300f3c3f374a3ee940df34c77d2516db0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="plan-guides"></a>計畫指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 當您無法或不想要在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中直接變更實際查詢的文字時，您可以使用計畫指南來最佳化查詢的效能。 計畫指南是將查詢提示或固定的查詢計畫附加至查詢，藉以影響查詢的最佳化。 當協力廠商所提供的資料庫應用程式中有少量查詢子集的執行情況不如預期時，使用計畫指南會非常有用。 在計畫指南中，指定您要最佳化的 Transact-SQL 陳述式以及包含您想要使用之查詢提示的 OPTION 子句，或者是您想要用來將查詢進行最佳化的特定查詢計畫。 執行查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會比對 Transact-SQL 陳述式與計畫指南，然後在執行階段中，將 OPTION 子句附加至查詢或使用指定的查詢計畫。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  假設下列採用 `@Country_region` 參數的預存程序位於針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫所部署的資料庫應用程式中：  
   
-```t-sql  
+```sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -66,7 +66,7 @@ END;
   
  您可以修改預存程序並將 `OPTIMIZE FOR` 查詢提示加入查詢以處理此問題。 不過，因為預存程序是在已部署的應用程式中，所以您無法直接修改應用程式的程式碼。 您只能在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中建立下列計畫指南。  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -86,13 +86,13 @@ sp_create_plan_guide
  ### <a name="sql-plan-guide"></a>SQL 計畫指南  
  SQL 計畫指南可搭配在不屬於資料庫物件的獨立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與批次內容中執行的查詢。 以 SQL 為基礎的計畫指南可用以搭配參數化為指定形式的查詢。 SQL 計畫指南會套用至獨立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和批次。 這些陳述式通常是由應用程式使用 [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) 系統預存程序進行提交。 例如，請考慮下列獨立批次：  
   
-```t-sql  
+```sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  若要防止這項查詢產生平行執行計畫，請建立下列計畫指南並將 `MAXDOP` 參數中的 `1` 查詢提示設定為 `@hints` 。  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -119,13 +119,13 @@ sp_create_plan_guide
 ## <a name="plan-guide-matching-requirements"></a>計畫指南比對需求  
  計畫指南的範圍僅限於建立它們的資料庫。 因此，當查詢執行時，只有位於目前資料庫中的計畫指南才可以配合查詢。 例如，如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是目前的資料庫且執行下列查詢：  
   
- ```t-sql
+ ```sql
  SELECT FirstName, LastName FROM Person.Person;
  ```  
   
  只有在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的計畫指南能夠配合此查詢。 不過，如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是目前的資料庫且執行下列陳述式：  
   
- ```t-sql
+ ```sql
  USE DB1; 
  SELECT FirstName, LastName FROM Person.Person;
  ```  

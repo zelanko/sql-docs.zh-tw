@@ -3,7 +3,7 @@ title: "在物件總管中隱藏系統物件 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73a97e78886138d5461dcff102750e255f752037
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d663f053d417f02a3249ddec2b4174d30db7595
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>在物件總管中隱藏系統物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 的物件總管中隱藏系統物件。 物件總管的 [資料庫] 節點包含諸如系統資料庫的系統物件。 使用 [工具]/[選項] 頁面，隱藏系統物件。 某些系統物件 (如系統函數和系統資料類型) 不受這個設定所影響。  

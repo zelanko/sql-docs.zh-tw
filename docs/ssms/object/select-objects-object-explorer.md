@@ -3,7 +3,7 @@ title: "選取物件 (物件總管) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2290199a222c9b914ca0d23a8065e699bf397d4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 27a9e701bc4dede53db94d2f9ab3260e3d305d81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select-objects-object-explorer"></a>選取物件 (物件總管)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [選取物件] 對話方塊，即可將物件新增至另一個對話方塊中的清單。 對話方塊中可用的對話方塊標題和選項，會視其如何開啟而定。 只有可用的選項會出現；例如，當您選取新物件的擁有者時，只可以使用登入。  

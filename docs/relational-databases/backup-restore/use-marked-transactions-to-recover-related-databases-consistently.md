@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc94325654b02854cff6a20f36519fa8ee46f17a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43c86f6c856ae0e3ba814fcb899ab5c532c4945a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>使用標示的交易以一致的方式復原相關資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="examples"></a>範例  
  下列範例會將交易記錄還原到名為 `ListPriceUpdate`的標示交易中之標示。  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -135,7 +135,7 @@ RESTORE LOG AdventureWorks
   
  例如，假設有一個資料分割資料庫存在於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的多個執行個體上。 每一個執行個體上都有一個名為 `coyote`的資料庫。 首先，在每個資料庫中建立預存程序，例如 `sp_SetMark`。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -147,7 +147,7 @@ GO
   
  接下來，建立包含交易的預存程序 `sp_MarkAll` ，它會在每一個資料庫中放入標示。 `sp_MarkAll` 可以從任何執行個體來執行。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  
@@ -188,6 +188,6 @@ GO
  [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [復原包含標記之異動的相關資料庫](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
+ [復原包含標示之交易的相關資料庫](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
   
   

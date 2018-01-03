@@ -3,7 +3,7 @@ title: "在 VBScript 中的錯誤處理 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0f80fa93733c9e9fc4541617d45bd1f266434ba1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 362e34cdb8c5b4ae5d9e6fc33ae20dca4b25bf60
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-errors-in-vbscript"></a>在 VBScript 中處理錯誤
 沒有與 Visual Basic 中使用的方法與用於 VBScript 只有些微的差異。 主要差異是 VBScript 不支援標籤在繼續執行的方式處理錯誤的概念。 換句話說，您不能使用`On Error GoTo`VBScript 中。 請改用`On Error Resume Next`，然後檢查兩者**Err.Number**和**計數**屬性**錯誤**集合中，如下列範例所示：  

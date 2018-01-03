@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 dev_langs: VB
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f7369fe9b75148c7b0d448ff4fd2b9457dc77212
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eee5dea5945d48b4fd9a2d40380c61c632d02410
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>參考 Visual Basic 6 應用程式中的 ADO 程式庫
 ADO 程式庫匯入的 Microsoft Visual Basic 6 應用程式，您必須在 Visual Basic 專案中設定參考。  
@@ -45,7 +45,7 @@ ADO 程式庫匯入的 Microsoft Visual Basic 6 應用程式，您必須在 Visu
   
 6.  按一下**確定**完成設定的參考。  
   
-## <a name="backward-compatibility"></a>回溯相容性  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  安裝 ADO 也會將複製舊版本的下列類型程式的庫：  
   
 -   *msado27.tlb*，ADO 2.7 類型程式庫  

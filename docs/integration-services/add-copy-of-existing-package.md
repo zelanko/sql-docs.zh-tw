@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2b0255236aee66b63318dca9a18cfbae54d7ed6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e437e550b8522d85319a5207b2a26365b4e0d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-copy-of-existing-package"></a>加入現有封裝的副本
   使用 **[加入現有封裝的副本]** 對話方塊，即可將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、檔案系統，或 SSIS 封裝存放區中所儲存之封裝的副本，加入至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  **驗證類型**  
  如果是從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]複製，請選取驗證類型。  
   
- **使用者名稱**  
+ **User name**  
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，請提供使用者名稱。  
   
  **密碼**  

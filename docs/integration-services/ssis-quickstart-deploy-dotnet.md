@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7891a781a5874653eb7d4864529630d4d2a03442
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e01ed21accad152b2ef32d012f3194458ab0440
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>在 .NET 應用程式中使用 C# 程式碼部署 SSIS 專案
 本快速入門教學課程示範如何撰寫 C# 程式碼，來連線至資料庫伺服器並部署 SSIS 專案。
 
 若要建立 C# 應用程式，您可以使用 Visual Studio、Visual Studio Code 或您選擇的另一個工具。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 開始之前，請確定已安裝 Visual Studio 或 Visual Studio Code。 從 [Visual Studio 下載](https://www.visualstudio.com/downloads/)，下載免費的 Visual Studio Community Edition 或免費的 Visual Studio Code。
 
@@ -118,7 +118,7 @@ namespace deploy_ssis_project
 1. 若要執行應用程式，請按 **F5**。
 2. 在 SSMS 中，確認已部署專案。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 - 請考慮使用其他方式來部署套件。
     - [使用 SSMS 部署 SSIS 套件](./ssis-quickstart-deploy-ssms.md)
     - [使用 Transact-SQL 部署 SSIS 套件 (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)

@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d18cd3ec8da823d0395e755ae2bc9402071f1e0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 641090022517c5bae1cb0a3040de9216c9dd36a1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="disable-lightweight-pooling"></a>停用輕量型共用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 這個規則會檢查輕量型共用是否已經在伺服器上停用。 將 lightweightpooling 設定為 1 會使得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 切換到 Fiber 模式排程。 Fiber 模式適用於 UMS 工作者的環境切換是重要效能瓶頸的某些狀況。 因為這個狀況非常罕見，所以 Fiber 模式幾乎不太會提高一般系統上的效能或延展性。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  若要移除輕量型共用，請執行以下陳述式，然後重新啟動： [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。  
   
-```tsql  
+```sql  
 sp_configure 'show advanced options', 1;  
 GO  
 sp_configure 'lightweight pooling', 0;  

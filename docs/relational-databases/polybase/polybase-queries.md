@@ -24,11 +24,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bad7cdb475aa1b9416e7a0463485293e0035de8d
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 0d02b151b9197d2e6cb3f6a58161e84256a9073e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/12/2017
 ## <a name="select-from-external-table"></a>從外部資料表進行 SELECT  
  從已定義外部資料表傳回資料的簡單查詢。  
   
-```tsql  
+```sql  
 SELECT TOP 10 * FROM [dbo].[SensorData];   
 ```
   
@@ -201,6 +201,6 @@ SELECT * FROM sys.external_tables;
 SELECT name, type, is_external FROM sys.tables WHERE name='myTableName'   
 ```  
   
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
 
 若要深入了解疑難排解，請參閱 [PolyBase 疑難排解](../../relational-databases/polybase/polybase-troubleshooting.md)。

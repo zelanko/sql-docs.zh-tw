@@ -3,7 +3,7 @@ title: "移動方法範例 （VC + +） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 569bcbcc4c9c2ee2c195711f58271f326f902bfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9aae109bcabaa9d6f57e6a2b997993b162e321b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-method-example-vc"></a>Move 方法的範例 （VC + +）
 這個範例會使用[移動](../../../ado/reference/ado-api/move-method-ado.md)來定位資料錄指標的方法會根據使用者輸入。  
@@ -261,5 +261,5 @@ Enter number of records to Move
 (positive or negative, Enter to quit):  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Move 方法 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)

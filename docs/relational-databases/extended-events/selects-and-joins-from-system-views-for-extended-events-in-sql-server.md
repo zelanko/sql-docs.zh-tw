@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 160513acf82e56718e15893de1aa70d698174c80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a81021ed7170b6bf92bfd2eebfebef9044de3bde
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ ms.lasthandoff: 11/17/2017
 下列 T-SQL 指令碼是經由 SSMS 還原工程所建立。 然後，只能以空白字元的策略操作手動美化指令碼。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_session_test3]
     ON SERVER  -- Or, if on Azure SQL Database, ON DATABASE.
 
@@ -219,7 +219,7 @@ CREATE EVENT SESSION [event_session_test3]
 不要怕！ 下列 T-SQL SELECT 陳述式之所以很長，只是因為它將數個小型的 SELECT UNION 在一起。 任何小型的 SELECT 都可以獨立執行。 小型的 SELECT 顯示各種系統類別目錄檢視應該如何 JOIN 在一起。
 
 
-```tsql
+```sql
 SELECT
         s.name        AS [Session-Name],
         '1_EVENT'     AS [Clause-Type],
@@ -414,7 +414,7 @@ DMV 的參考文件位於 [擴充事件動態管理檢視](../../relational-data
 所有您可以在擴充事件區域中使用的物件，都來自系統載入的封裝。 本節會列出所有封裝及其說明。
 
 
-```tsql
+```sql
 SELECT  --C.1
         p.name         AS [Package],
         p.description  AS [Package-Description]
@@ -470,7 +470,7 @@ XtpRuntime     Extended events for the XTP Runtime
 本節會告訴我們事件封裝包含的物件類型。 顯示 *sys.dm\_xe\_objects* 所有物件類型的完整清單，以及每種類型的計數。
 
 
-```tsql
+```sql
 SELECT  --C.2
         Count(*)  AS [Count-of-Type],
         o.object_type
@@ -514,7 +514,7 @@ Count-of-Type   object_type
 
 
 
-```tsql
+```sql
 SELECT  --C.3
         o.object_type  AS [Type-of-Item],
         p.name         AS [Package],
@@ -583,7 +583,7 @@ type           package0       xml                           Well formed XML frag
 - 您也必須編輯 *o.name =*的 WHERE 子句值。
 
 
-```tsql
+```sql
 SELECT  -- C.4
         p.name         AS [Package],
         c.object_name  AS [Event],
@@ -661,7 +661,7 @@ SELECT 旨在顯示您可為事件工作階段選擇的許多欄位。 事件欄
 - 篩選會傳送的發生事件與從目標保留的發生事件。
 
 
-```tsql
+```sql
 SELECT  --C.5
         dp.name         AS [Package],
         do.name         AS [Object],
@@ -736,7 +736,7 @@ you could put:
 - 您也必須編輯 *o.name =*的 WHERE 子句值。
 
 
-```tsql
+```sql
 SELECT  --C.6
         p.name        AS [Package],
         o.name        AS [Target],
@@ -801,7 +801,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 - 您可能需要編輯 *s.name =*的 WHERE 子句值。
 
 
-```tsql
+```sql
 SELECT  --C.7
         s.name,
         t.target_name,
@@ -869,7 +869,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
     - 不用理會 SQL 系統在工作階段每次重新啟動時，嵌入到實際 .XEL 檔案名稱中的額外數字。 只要提供標準的根名稱和副檔名即可。
 
 
-```tsql
+```sql
 SELECT  --C.8
         f.module_guid,
         f.package_guid,

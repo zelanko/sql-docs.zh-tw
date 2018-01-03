@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8f7e37a81441292f84089faa027d008071de0936
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 734efcf822d2e270f8a2ae14e62ef787010acdc1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的套件是一個 XML 檔案，其中包含可部署的模型結構，以及模型中的資料 (選擇性)。 使用模型封裝將模型的副本從一個 MDS 環境移到另一個 MDS 環境，或在現有的 MDS 環境中建立新的模型。  
@@ -75,8 +75,8 @@ ms.lasthandoff: 11/20/2017
 |工作描述|主題|  
 |----------------------|-----------|  
 |使用 MDSModelDeploy 工具建立模型物件與/或資料的新部署封裝。|[使用 MDSModelDeploy 建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
-|使用精靈僅建立模型物件的新部署封裝。|[使用精靈建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
-|使用 MDSModelDeploy 工具部署模型物件與資料的封裝。|[使用 MDSModelDeploy 部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|使用精靈僅建立模型物件的新部署封裝。|[使用精靈建立模型部署套件](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
+|使用 MDSModelDeploy 工具部署模型物件與資料的封裝。|[使用 MDSModelDeploy 部署模型部署套件](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
 |使用精靈僅部署模型物件的封裝。|[使用精靈部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
 |編輯模型部署封裝以部署選取的模型部分，而非整個模型。|[編輯模型部署封裝](../master-data-services/edit-a-model-deployment-package.md)|  
   

@@ -3,7 +3,7 @@ title: "使用工具箱 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f8899fed233516fce93277a48f2ceb652212ff8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a33bf533868113e2fda6b550a36ac9e9969a96b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以從 [工具箱] 中選取項目、文字和控制項，將它們拖曳到表單、頁面和設計工具中；也可以從這些來源中，將項目拖回 [工具箱] 中，以便日後重複使用。 例如，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中，您可以將工作拖回 [維護計畫] 中。  

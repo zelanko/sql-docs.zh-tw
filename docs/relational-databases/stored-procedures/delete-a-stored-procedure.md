@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6334d38dd066fc5980851ebf02116c3b96568991
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6bfbc46bb8c08c1176e14809cd2ca98ae8dcaad7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="delete-a-stored-procedure"></a>刪除預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,13 +43,13 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要程序所屬結構描述的 ALTER 權限，或程序的 CONTROL 權限。  
   
 ##  <a name="Procedures"></a> 如何刪除預存程序  
  您可以使用下列其中一項：  
   
--   [SQL Server Management Studio](#SSMSProcedure)  
+-   [Transact-SQL](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  取得要從目前資料庫移除之預存程序的名稱。 在 [物件總管] 中，依序展開 **[可程式性]** 與 **[預存程序]**。 或在查詢編輯器中，執行下列陳述式。  
   
-    ```tsql  
+    ```sql  
     SELECT name AS procedure_name   
         ,SCHEMA_NAME(schema_id) AS schema_name  
         ,type_desc  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  將下列範例複製並貼到查詢編輯器中，然後插入要從目前資料庫中刪除的預存程序名稱。  
   
-    ```tsql  
+    ```sql  
     DROP PROCEDURE <stored procedure name>;  
     GO  
     ```  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f761097d3e2b7bac98c8617a723927d132c9f30b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 179a1924a52c5cede301584c7f658abc4a4ef3d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>課程 5-4 - 測試第 5 課的教學課程封裝
 在執行階段，您的封裝將從執行階段更新的變數中取得 **Directory** 屬性的值，而不是使用您建立封裝時指定的原始目錄名稱。 變數的值會由 SSISTutorial.dtsConfig 檔案擴展。  
@@ -34,11 +34,11 @@ ms.lasthandoff: 11/20/2017
   
 **控制流程**  
   
-![封裝中的控制流程](../integration-services/media/task4lesson2control.gif "封裝中的控制流程")  
+![套件中的控制流程](../integration-services/media/task4lesson2control.gif "套件中的控制流程")  
   
 **資料流程**  
   
-![封裝中的資料流程](../integration-services/media/task9lesson1data.gif "封裝中的資料流程")  
+![套件中的資料流程](../integration-services/media/task9lesson1data.gif "套件中的資料流程")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>若要測試第 5 課的教學課程封裝  
   

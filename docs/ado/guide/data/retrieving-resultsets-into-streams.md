@@ -3,7 +3,7 @@ title: "擷取結果集資料流 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed2d2412cf8314875f9469689677c22ae4e60e7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7bca240a384ef3e8a3e6bbd2a59731cc8861136d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-resultsets-into-streams"></a>擷取結果集資料流
 而不是在傳統收到結果**資料錄集**物件、 ADO 可以改成資料流擷取查詢結果。 ADO**資料流**物件 (或其他物件，支援 COM **IStream**介面，例如 ASP**要求**和**回應**物件) 可用來包含這些結果。 這項功能的一個用法是擷取 XML 格式的結果。 與 SQL Server，例如 XML 結果可以傳回以多種方式，例如 SQL SELECT 查詢中使用 FOR XML 子句，或使用 XPath 查詢。  

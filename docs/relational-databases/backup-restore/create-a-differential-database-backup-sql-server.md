@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4d34c96c7a70464aeb072bd80dc6cddafd2cdc34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2276cce5bd041722169bf4825bd13483bad9789
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>建立差異資料庫備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立差異資料庫備份。  
@@ -41,11 +41,11 @@ ms.lasthandoff: 11/17/2017
   
      [建議](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要使用下列項目建立差異資料庫備份：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/17/2017
   
 9. 指定備份組會在何時過期：  
   
-    -   若要讓備份組在特定的天數後過期，請按一下 [之後] (預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以是 0 到 99999 天，0 天表示備份組永遠不會過期。  
+    -   若要讓備份組在特定的天數後過期，請按一下 [之後]\(預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以是 0 到 99999 天，0 天表示備份組永遠不會過期。  
   
          預設值會在 [伺服器屬性] 對話方塊 ([資料庫設定] 頁面) 的 [預設備份媒體保留 (以天為單位)] 選項中設定。 若要存取，請以滑鼠右鍵按一下物件總管中的伺服器名稱並選取 [屬性]，然後選取 [資料庫設定] 頁面。  
   
@@ -157,10 +157,10 @@ ms.lasthandoff: 11/17/2017
   
      BACKUP DATABASE <資料庫名稱> TO <備份裝置> WITH DIFFERENTIAL  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  這個範例會建立 `MyAdvWorks` 資料庫的完整和差異資料庫備份。  
   
-```tsql  
+```sql  
 -- Create a full database backup first.  
 BACKUP DATABASE MyAdvWorks   
    TO MyAdvWorks_1   

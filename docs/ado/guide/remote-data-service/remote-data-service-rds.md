@@ -3,7 +3,7 @@ title: "遠端資料服務 (RDS) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fcaa4455373ac30a39b114dc3adbe3c13fe840a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 59136d668052e8761b31867106384e470eb69ae6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remote-data-service-rds"></a>遠端資料服務 (RDS)
 遠端資料服務 (RDS) 是的 ADO 中，與將資料從伺服器移至用戶端應用程式或 Web 網頁、 管理用戶端上的資料和更新資訊傳回至單一反覆存取伺服器的功能。  

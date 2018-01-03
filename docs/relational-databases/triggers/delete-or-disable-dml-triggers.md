@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ffca436fc0c0557950e239fcf979c84b973df6a0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bca0580d442c30bc41d46340b3317cbe15515309
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="delete-or-disable-dml-triggers"></a>刪除或停用 DML 觸發程序
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 刪除或停用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 DML 觸發程序。  
@@ -39,11 +39,11 @@ ms.lasthandoff: 11/17/2017
   
      [建議](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要刪除或停用 DML 觸發程序，使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  刪除 DML 觸發程序需要定義觸發程序所在資料表或檢視表的 ALTER 權限。  
   
  若要停用或啟用 DML 觸發程序，使用者至少要對建立該觸發程序的資料表或檢視，具備 ALTER 權限。  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  將下列範例複製並貼入查詢視窗中。 執行 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) 陳述式即可建立 `Sales.bonus_reminder` 觸發程序。 若要刪除觸發程序，請執行 [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) 陳述式。  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -112,7 +112,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Delete the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -130,7 +130,7 @@ GO
   
 3.  將下列範例複製並貼入查詢視窗中。 執行 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) 陳述式即可建立 `Sales.bonus_reminder` 觸發程序。 若要停用和啟用觸發程序，請分別執行 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 和 [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) 陳述式。  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -146,7 +146,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Disable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -155,7 +155,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Enable the trigger.  
 USE AdventureWorks2012;  
 GO  

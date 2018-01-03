@@ -3,7 +3,7 @@ title: "Microsoft OLE DB Provider for Microsoft 索引服務 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0fb1ffdfdd73562aaa5b64ce997e857ae9f213
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d278b3fd6a2460471195e5744baef93292dfbc30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服務概觀
 Microsoft OLE DB Provider for Microsoft 索引服務提供以程式設計方式唯讀存取檔案系統和 Web 資料由 Microsoft 索引服務編製索引。 ADO 應用程式可以發出 SQL 查詢來擷取內容和檔案屬性資訊。
@@ -50,7 +50,7 @@ MSIDXS
 
  字串，包含這些關鍵字：
 
-|關鍵字|Description|
+|關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定 OLE DB Provider for Microsoft 索引服務。 一般而言，這是唯一的連接字串中指定的關鍵字。|
 |**資料來源**|指定的索引服務類別目錄名稱。 如果未指定此關鍵字，系統會使用預設目錄。|
@@ -107,7 +107,7 @@ MSIDXS
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|否|
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|是|
 |[關閉](../../../ado/reference/ado-api/close-method-ado.md)|是|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|
+|[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|
 |[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|是|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|
@@ -121,5 +121,5 @@ MSIDXS
 
  對於特定的實作詳細資料和 Microsoft 索引服務的 Microsoft OLE DB 提供者的功能資訊，請參閱[OLE DB 程式設計人員指南](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)，或請造訪 Windows NT Server Web 的 Web 服務頁面站台。
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
  [CommandType 屬性 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [ConnectionString 屬性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [提供者屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [支援方法](../../../ado/reference/ado-api/supports-method.md)

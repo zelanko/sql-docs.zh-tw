@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2d1ad6752ce23a04d3c9989d0f35660c05e904e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4072e0134a01cfa27164f3d83b867a68b097295a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>第 2-1 課：建置部署公用程式
 在這項工作中，您將設定並建立「部署教學課程」專案的部署公用程式。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  在 [Deployment Tutorial Property Pages (部署教學課程屬性頁)] 對話方塊的右邊窗格中，確認 **AllowConfigurationChanges** 是設為 **true**，再將 **CreateDeploymentUtility** 設為 **true**，並選擇性更新 **DeploymentOutputPath** 的預設值。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
 ### <a name="to-build-the-deployment-utility"></a>建立部署公用程式  
   

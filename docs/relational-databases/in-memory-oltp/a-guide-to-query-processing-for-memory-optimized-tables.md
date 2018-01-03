@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebca47eee84b4e48edc5164fa6a66670a84e3fee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9f4dcd81deb9f16e21cd1b63df80cebb25a53ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  我們假設兩個資料表 Customer 和 Order。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼包含這兩個資料表與相關聯索引的定義 (以磁碟為基礎 (傳統) 的格式)：  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -72,7 +72,7 @@ GO
   
  請看下列查詢，其中聯結了 Customer 和 Order 這兩個資料表，並且會傳回訂單識別碼和相關聯的客戶資訊：  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -91,7 +91,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  請考慮與這個查詢稍微不同的做法，傳回 Order 資料表的所有資料列，而不只是 OrderID：  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -144,7 +144,7 @@ SQL Server 查詢處理管線。
   
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼包含 Order 和 Customer 資料表的記憶體最佳化版本 (使用雜湊索引)：  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -161,7 +161,7 @@ GO
   
  請考慮在記憶體最佳化的資料表上執行相同的查詢：  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -183,7 +183,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 ## <a name="natively-compiled-stored-procedures"></a>原生編譯的預存程序  
  原生編譯的預存程序是編譯成機器碼的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，而不是由查詢執行引擎所解譯。 下列指令碼會建立執行範例查詢的原生編譯預存程序 (從「範例查詢」區段)。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -197,7 +197,7 @@ FROM dbo.[Order] o INNER JOIN dbo.[Customer] c
 END  
 ```  
   
- 原生編譯的預存程序會在建立時編譯，而解譯的預存程序則是在第一次執行時編譯 (編譯的一部分，尤其是指剖析和 Algebrization，會在建立時發生。 不過，對於解譯的預存程序，查詢計劃的最佳化是在第一次執行時進行)。重新編譯邏輯也很類似。 如果伺服器重新啟動，原生編譯的預存程序就會在第一次執行程序時重新編譯。 如果計畫已不在計畫快取中，解譯的預存程序就會重新編譯。 下表摘要說明原生編譯的預存程序及解譯的預存程序之編譯和重新編譯案例：  
+ 原生編譯的預存程序會在建立時編譯，而解譯的預存程序則是在第一次執行時編譯  (編譯的一部分，尤其是指剖析和 Algebrization，會在建立時發生。 不過，對於解譯的預存程序，查詢計劃的最佳化是在第一次執行時進行)。重新編譯邏輯也很類似。 如果伺服器重新啟動，原生編譯的預存程序就會在第一次執行程序時重新編譯。 如果計畫已不在計畫快取中，解譯的預存程序就會重新編譯。 下表摘要說明原生編譯的預存程序及解譯的預存程序之編譯和重新編譯案例：  
   
 ||原生編譯|對記憶體最佳化資料表進行解譯的|  
 |-|-----------------------|-----------------|  
@@ -249,7 +249,7 @@ END
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>擷取原生編譯預存程序的查詢執行計畫  
  原生編譯預存程序的查詢執行計畫，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [Estimated Execution Plan (估計的執行計畫)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如：  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -266,9 +266,9 @@ GO
 |運算子|範例查詢|注意|  
 |--------------|------------------|-----------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
-|INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
+|Insert|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|Delete|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|這個運算子同時用於內建函數和類型轉換。 並非所有函數和類型轉換都可在原生編譯預存程序內部受到支援。|  
 |Nested Loops Join|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|巢狀迴圈是原生編譯預存程序中唯一支援的聯結運算子。 即使做為解譯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行的相同查詢計劃包含雜湊或合併聯結，所有包含聯結的計畫還是都會使用 Nested Loops 運算子。|  
 |排序|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  

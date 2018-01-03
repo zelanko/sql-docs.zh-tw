@@ -3,7 +3,7 @@ title: "軸物件屬性、 方法和事件 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 304cca886502ff933b9802947a7cbe841b1b72b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dde0a21f6ac40a411d3b83ac250aa7058db0babd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="axis-object-properties-methods-and-events"></a>軸物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>/ 屬性的集合  
@@ -41,5 +41,5 @@ ms.lasthandoff: 11/17/2017
 ## <a name="events"></a>事件  
  無。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Axis 物件 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)
