@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2e38d349a45bece0fa9c637d18ee6a3c41a5f4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 975bc25d1f4b9e1b8830149f33d970a3b6930a7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="developing-applications"></a>開發應用程式
 本節包含有關開發使用 ODBC 介面和實作該類別的驅動程式的應用程式的資訊。  
@@ -60,5 +60,5 @@ ms.lasthandoff: 11/20/2017
   
 -   [程式設計考量](../../../odbc/reference/develop-app/programming-considerations.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 程式設計人員參考](../../../odbc/reference/odbc-programmer-s-reference.md)

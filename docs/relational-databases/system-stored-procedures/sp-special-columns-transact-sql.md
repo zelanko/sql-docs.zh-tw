@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fee0eefa43553f1e942abc2c7797d2dd487891d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 902c3fc7afb5ede1af0d49ef4429f8177b2101ad
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,14 +77,14 @@ sp_special_columns [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|資料列識別碼的實際範圍。 可以是 0、1 或 2。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一律傳回 0。 這個欄位一律會傳回值。<br /><br /> 0 = SQL_SCOPE_CURROW。 只有在定位於資料列時，才能夠確保資料列識別碼有效。 如果有另一項交易更新或刪除這個資料列，後來再利用資料列識別碼來重新選取時，便不會傳回資料列。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 確保在目前交易的持續時間裡，資料列識別碼有效。<br /><br /> 2 = SQL_SCOPE_SESSION。 確保在工作階段的持續時間裡，資料列識別碼有效 (跨越交易界限)。|  
 |COLUMN_NAME|**sysname**|每個資料行的資料行名稱*資料表*傳回。 這個欄位一律會傳回值。|  
 |DATA_TYPE|**smallint**|ODBC SQL 資料類型。|  
 |TYPE_NAME|**sysname**|資料來源相關的資料型別名稱。例如， **char**， **varchar**， **money**，或**文字**。|  
-|PRECISION|**Int**|資料來源之資料行的有效位數。 這個欄位一律會傳回值。|  
-|LENGTH|**Int**|長度，以位元組為單位，所需的資料來源，其二進位形式的資料類型，例如 10 **char (**10**)**、 4 的**整數**，和 2 **smallint**.|  
+|PRECISION|**整數**|資料來源之資料行的有效位數。 這個欄位一律會傳回值。|  
+|LENGTH|**整數**|長度，以位元組為單位，所需的資料來源，其二進位形式的資料類型，例如 10 **char (**10**)**、 4 的**整數**，和 2 **smallint**.|  
 |SCALE|**smallint**|資料來源之資料行的小數位數。 小數位數不適用的資料類型會傳回 NULL。|  
 |PSEUDO_COLUMN|**smallint**|指出資料行是否為虛擬資料行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律會傳回 1：<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
@@ -97,14 +97,14 @@ sp_special_columns [ @table_name = ] 'table_name'
 ## <a name="examples"></a>範例  
  下列範例會傳回用來唯一識別 `HumanResources.Department` 資料表中資料列之資料行的相關資訊。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_special_columns @table_name = 'Department'   
     ,@table_owner = 'HumanResources';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [目錄預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

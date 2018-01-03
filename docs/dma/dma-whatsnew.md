@@ -5,7 +5,7 @@ ms.date: 10/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05c94bd5803520aa5424cca837784f8f67382d16
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 07d72eb6c4d40c3e61f4292616f9eda99d6d4742
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>在資料移轉小幫手最新消息
 
@@ -84,9 +84,9 @@ DMA 的 v1.0 版本是初始版本中，並提供：
     - 已被取代的功能
 
 - 探索的資料庫可以受益於升級的目標 SQL Server 平台的新功能。 功能的建議事項，以描述任何發現與它們分成下列領域：
-    - 效能
-    - 安全性
-    - 儲存空間
+    - [效能]
+    - Security
+    - Storage
 
 -   若要執行評估的現代化使用者體驗。
 

@@ -3,10 +3,10 @@ title: "With Integration Services 載入資料"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
 caps.latest.revision: "69"
-ms.openlocfilehash: 631f93d14670e3d9c6f03517504e059087243ca1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-data-with-integration-services"></a>With Integration Services 載入資料
 提供使用 SQL Server Integration Services (SSIS) 封裝將資料載入 SQL Server Parallel Data Warehouse 的參考和部署資訊。  
@@ -89,7 +89,7 @@ Integration Services 的完整文件，請參閱[SQL Server Integration Services
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL、DT_I1、DT_I2、DT_I4、DT_I8、DT_NUMERIC、DT_UI1、DT_UI2、DT_UI4、DT_UI8|  
 |NVARCHAR|DT_WSTR、DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1、DT_I2、DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -221,7 +221,7 @@ id,city,lastUpdateDate,orderDate
   
 4.  選取**建立新的連接**。  
   
-5.  填寫對伺服器、 使用者、 密碼和目的地資料庫的資訊與您的應用裝置的特定資訊。 （範例如下所示）。 然後按一下 **確定**。  
+5.  填寫對伺服器、 使用者、 密碼和目的地資料庫的資訊與您的應用裝置的特定資訊。 （範例如下所示）。 然後按一下 [確定]。  
   
     InfiniBand 連接**伺服器名稱**： 輸入 < 應用裝置名稱 >-SQLCTL01，接著 17001。  
   
@@ -251,7 +251,7 @@ Integration Services 的電腦上執行封裝。
   
 2.  封裝執行時間，以及上，則會顯示進度，以及任何錯誤**進度**窗格。 使用在 SQL 用戶端以確認負載，或監視 SQL Server PDW 管理主控台透過負載。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [建立使用 SSIS PDW 目的地配接器的指令碼工作](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
 [設計和實作封裝 (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 48f7a518f02cd37d1f41a539fc70750c834a3a57
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bee1801eb581272762b2f80d25eeb64d0220a256
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 資料類型
 下表顯示 Microsoft Access 資料型別、 用來建立資料表、 資料型別和 ODBC SQL 資料類型。  
@@ -66,7 +66,7 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
   
  下表顯示 Microsoft Access 資料類型的限制。  
   
-|資料類型|Description|  
+|資料類型|描述|  
 |---------------|-----------------|  
 |二進位、 VARBINARY 和 VARCHAR|建立二進位、 VARBINARY 或 VARCHAR 資料行的零或未指定的長度實際上會傳回 510 位元組的資料行。|  
 |BYTE|即使 Microsoft 存取號碼欄位與欄位大小等於位元組不帶正負號，負數可以插入到欄位，使用 Microsoft Access 驅動程式時。|  

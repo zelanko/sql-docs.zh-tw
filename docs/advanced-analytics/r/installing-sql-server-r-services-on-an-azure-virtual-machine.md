@@ -2,9 +2,11 @@
 title: "在 Azure 虛擬機器上安裝 SQL Server 的機器學習功能 |Microsoft 文件"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0c4b8ef73f4afbc54d2fc1841e281afd0342cedf
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: af558a4792eed6d38eb03fc80d230c5ada8d7fb5
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>安裝 SQL Server 機器學習在 Azure 虛擬機器上的功能
  
@@ -98,7 +100,7 @@ SQL Server VM 的供應項目的清單，請參閱這篇文章：[概觀的 SQL 
 ### <a name="enable-odbc-callbacks-for-remote-clients"></a>針對遠端用戶端啟用 ODBC 回呼
 
 如果您預期呼叫伺服器的用戶端必須發出 ODBC 查詢做為其機器學習解決方案的一部分，您必須確定 [啟動列] 可讓伺服器代表遠端用戶端的 ODBC 呼叫。 若要這樣做，您必須允許 Launchpad 所使用的 SQL 背景工作帳戶登入執行個體。
-如需詳細資訊，請參閱[安裝 SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。
+如需詳細資訊，請參閱 [安裝 SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。
 
 ### <a name="network"></a>新增網路通訊協定
 

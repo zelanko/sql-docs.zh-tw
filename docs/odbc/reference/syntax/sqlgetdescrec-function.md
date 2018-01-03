@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4f05a308efcb496394abab517c733d342cd3f79
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 569a3708c13a4182e651c902ce7e1f1f9c7711dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec 函數
 **一致性**  
@@ -60,7 +60,7 @@ SQLRETURN SQLGetDescRec(
  *RecNumber*  
  [輸入]指出從中應用程式搜尋資訊的描述項記錄。 描述項記錄編號 1，以記錄編號 0 的書籤記錄。 *RecNumber*引數必須是小於或等於 SQL_DESC_COUNT 的值。 如果*RecNumber*小於或等於 SQL_DESC_COUNT 但資料列不包含資料的資料行或參數，呼叫**SQLGetDescRec**會傳回欄位的預設值。 (如需詳細資訊，請參閱 「 初始設定的描述元的欄位 」 中[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
   
- *名稱*  
+ *[名稱]*  
  [輸出]這是要傳回 SQL_DESC_NAME 欄位的描述項記錄的緩衝區指標。  
   
  如果*名稱*是 NULL， *StringLengthPtr*仍會傳回的總字元數 （不含字元資料 null 結束字元） 可用來傳回所指向之緩衝區中*名稱*。  
@@ -99,7 +99,7 @@ SQLRETURN SQLGetDescRec(
 ## <a name="diagnostics"></a>診斷  
  當**SQLGetDescRec**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType* SQL_ 的HANDLE_DESC 和*處理*的*DescriptorHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLGetDescRec** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|Description|  
+|SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|緩衝區\**名稱*仍不夠大，無法傳回整個描述項欄位。 因此，此欄位被截斷。 中會傳回未截斷的描述項欄位的長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -150,6 +150,6 @@ SQLRETURN SQLGetDescRec(
 |取得描述項欄位|[SQLGetDescField 函式](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
 |設定多個描述項欄位|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

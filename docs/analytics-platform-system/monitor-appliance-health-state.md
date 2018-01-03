@@ -3,10 +3,10 @@ title: "監視應用裝置健全狀況狀態 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
 caps.latest.revision: "12"
-ms.openlocfilehash: dad3355061bafcbbfa3a34b21d2043b0411129ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d83c3d35c4cf65ebf714b44bc9db7db36b11f818
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-appliance-health-state"></a>監視應用裝置健全狀況狀態
 本主題說明如何使用管理主控台，或透過直接查詢 SQL Server PDW 動態管理檢視監視 SQL Server PDW 應用裝置的狀態。  
@@ -96,7 +96,7 @@ ORDER BY
 > [!CAUTION]  
 > 請務必調查此問題，當元件未被決議 5 分鐘或更久。可能表示有問題軟體的活動訊號警示。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [應用裝置監視 &#40;Analytics Platform System &#41;](appliance-monitoring.md)  
   

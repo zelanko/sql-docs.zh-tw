@@ -2,10 +2,10 @@
 title: "SQL Server 機器學習服務的架構概觀 |Microsoft 文件"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6904c963c6178db530248f6189906e71df25308a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 62bcc1ce7b8dbdbee96b50631644a00afbfd4e78
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的架構概觀 
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/08/2017
 
    此外，Microsoft 提供一組專屬的程式庫提供整合到 SQL Server，包括資料轉譯、 壓縮和每個支援的語言適用對象的最佳化。
 
-+ **安全性**
++ **Security**
 
    更好的安全性表示支援整合式的 Windows 驗證和密碼為基礎的 SQL 登入，做為認證，也一樣安全處理仰賴 SQL Server 進行資料保護和使用 SQL Server 受信任的啟動列 來管理外部指令碼執行與安全用於指令碼中的資料。
 

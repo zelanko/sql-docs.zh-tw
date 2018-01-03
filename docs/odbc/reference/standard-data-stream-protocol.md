@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad56f0908f8726822ab7dce7ac1df8bfa03a54ec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4d03b7b16266f7414a6f2eba8c454fa956bda11e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-data-stream-protocol"></a>標準資料流通訊協定
 標準資料流通訊協定是一種方式存取異質 Dbms 中的資料。 事實上，標準資料流通訊協定已經存在： ANSI/ISO 遠端資料庫的存取 (RDA) 標準 ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615)) 和 IBM 分散式關聯式資料庫架構 (DRDA) ([http://www.netstoreusa.com/cbbooks/007/0070351384.shtml](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml))。 雖然這兩個系統顯示承諾，兩者都不是廣泛實作今天。

@@ -22,18 +22,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55bf1ae9625c5b27c7078bbba61704eef195b0ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>資料層應用程式資料表 sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含有關管理資料層應用程式 (DAC) 採取之動作的相關資訊。 這份資料表儲存在**dbo**的結構描述**msdb**資料庫。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|動作的識別碼|  
 |**sequence_id**|**int**|識別動作中的步驟。|  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |**action_type**|**tinyint**|動作類型的識別碼：<br /><br /> **0** = 部署<br /><br /> **1** = 建立<br /><br /> **2** = 重新命名<br /><br /> **3** = 卸離<br /><br /> **4** = 刪除|  
 |**action_type_name**|**varchar （19)**|動作類型的名稱：<br /><br /> **部署**<br /><br /> **建立**<br /><br /> **重新命名**<br /><br /> **卸離**<br /><br /> **刪除**|  
 |**dac_object_type**|**tinyint**|受到動作影響之物件類型的識別碼：<br /><br /> **0** = dacpac<br /><br /> **1** = 登入<br /><br /> **2** = 資料庫|  
-|**dac_object_type_name**|**varchar(8)**|受到動作影響之物件類型的名稱：<br /><br /> **dacpac** = DAC 執行個體<br /><br /> **登入**<br /><br /> **database**|  
+|**dac_object_type_name**|**varchar(8)**|受到動作影響之物件類型的名稱：<br /><br /> **dacpac** = DAC 執行個體<br /><br /> **登入**<br /><br /> **資料庫**|  
 |**action_status**|**tinyint**|識別動作目前狀態的代碼：<br /><br /> **0** = 暫止<br /><br /> **1** = 成功<br /><br /> **2** = 失敗|  
 |**action_status_name**|**varchar(11)**|動作的目前狀態：<br /><br /> **暫止**<br /><br /> **成功**<br /><br /> **失敗**|  
 |**必要**|**bit**|在回復 DAC 作業時，由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用。|  
@@ -62,13 +62,13 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|-|  
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|建立|dacpac|  
-|12|1|建立|login|  
+|12|@shouldalert|建立|login|  
 |12|2|建立|[資料庫]|  
 |12|3|重新命名|[資料庫]|  
   
  DAC 作業，例如刪除，並移除資料列從**sysdac_history_internal**。 您可以使用下列查詢手動刪除 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上不再部署的之 DAC 的資料列：  
   
-```tsql  
+```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
 WHERE instance_id NOT IN  
    (SELECT instance_id  
@@ -83,7 +83,7 @@ WHERE instance_id NOT IN
 ## <a name="permissions"></a>Permissions  
  需要系統管理員 (sysadmin) 固定伺服器角色中的成員資格。 此檢視的唯讀存取可供所有使用者有權連接到 master 資料庫。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  

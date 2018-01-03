@@ -3,7 +3,7 @@ title: "連接到 Azure SQL DB (SybaseToSQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d63fac7037bfe3f3646d9fa1c36200aa682b2fe3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1267aecb68c344b6de0fad2c7c129a0b6ab2205c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>連接到 Azure SQL DB (SybaseToSQL)
 使用 [連線到 Azure SQL DB] 對話方塊中，連接到您想要移轉的 Azure SQL DB 資料庫。  
@@ -36,14 +36,14 @@ ms.lasthandoff: 12/05/2017
   
 選取或輸入伺服器名稱連接到 Azure SQL DB。  
   
-**資料庫**  
+**[資料庫備份]**  
   
 選取、 輸入或**瀏覽**資料庫名稱。  
   
 > [!IMPORTANT]  
 > SSMA for Sybase 不支援連接至 master 資料庫中 Azure SQL DB。  
   
-**使用者名稱**  
+**User name**  
   
 輸入 SSMA 將用來連接到 Azure SQL DB 資料庫的使用者名稱  
   

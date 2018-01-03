@@ -3,10 +3,10 @@ title: "取得和設定的 APS PDW 備份伺服器"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 caps.latest.revision: "20"
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 3540c2e43082dbdad4f267745683f33ae9b0b036
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acquire-and-configure-a-backup-server"></a>取得和設定備份伺服器
 本主題描述如何將非應用裝置的 Windows 系統設定為與 Analytics Platform System (AP) 的備份和還原功能搭配使用的備份伺服器和 SQL Server Parallel Data Warehouse (PDW)。  
@@ -154,6 +154,6 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
 - 需要登入連接。 
 - 在載入伺服器上，設定下列群組原則選項中安全性 \ 原則 \ 安全性選項： Microsoft 網路用戶端： 數位簽章通訊 （自動）： 已啟用。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [備份與還原](backup-and-restore-overview.md)  
   

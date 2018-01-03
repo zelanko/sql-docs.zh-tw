@@ -3,10 +3,10 @@ title: "在 目錄服務還原模式 (AP) 中設定 AD 節點的管理員登入�
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 97a9c715-2763-417d-b45c-bb0180759e47
 caps.latest.revision: "20"
-ms.openlocfilehash: 1496e3e18bde0fbe1daad452081191bbe0ffb23e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e0379093db9364f45793adc20635bfa4ad53748
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm"></a>在 目錄服務還原模式 (DSRM) 中設定登入 AD 節點的系統管理員密碼
 目錄服務還原模式 (DSRM) 為修復或復原 Active Directory 網域服務 (AD DS) 的開機模式。 它用來登入應用裝置 AD 節點失敗 AD DS 之後，或需要還原的 AD DS。 Dsrm 密碼已經初始化應用裝置設定硬體供應商站台期間，並且應該變更應用裝置系統管理員。 Analytics Platform System 有兩個 AD DS （網域控制站）。 ***appliance_domain*-AD01**和 ***appliance_domain*-ad02 移**。 每個應用裝置 AD 節點，變更 使用下列步驟將 DSRM 密碼。  
@@ -45,6 +45,6 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 > 如果 Active Directory 網域服務或虛擬機器、 損毀的特定 AD 虛擬機器執行**ReplaceVM**受影響的 ad 虛擬機器是建議的更正動作。 如需協助的連絡 CSS。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [密碼重設 &#40;Analytics Platform System &#41;](password-reset.md)  
   

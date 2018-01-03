@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39532ba3a94d99ef4df7479d851348b6b179328a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 6dda329540bd228920e88a12c69a4a6f2b8a8327
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驅動程式中的連接恢復功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -61,9 +61,9 @@ ms.lasthandoff: 11/18/2017
   
  如果應用程式透過 SQL_DRIVER_COMPLETE_REQUIRED 建立連接，且後續嘗試透過中斷的連接執行陳述式，ODBC 驅動程式將不會再次顯示對話方塊。 此外，在復原進行期間，  
   
--   在復原期間，呼叫**sqlgetconnectattr （sql_copt_ss_connection_dead)**，必須傳回**SQL_CD_TRUE**。  
+-   在復原期間，呼叫**sqlgetconnectattr （sql_copt_ss_connection_dead)**，必須傳回**SQL_CD_FALSE**。  
   
--   如果復原失敗，任何呼叫**sqlgetconnectattr （sql_copt_ss_connection_dead)**，必須傳回**SQL_CD_FALSE**。  
+-   如果復原失敗，任何呼叫**sqlgetconnectattr （sql_copt_ss_connection_dead)**，必須傳回**SQL_CD_TRUE**。  
   
  以下是在伺服器上執行命令的任何函數皆可能傳回的狀態碼：  
   
@@ -178,7 +178,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

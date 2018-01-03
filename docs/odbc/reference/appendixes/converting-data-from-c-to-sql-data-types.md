@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d3f3edee7f90920ad1d3ff68ccf3057a248b3b6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bb1d1c07f1453886fd91159eabad97dc90b9b191
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>將資料從 C 轉換成 SQL 資料類型
 當應用程式呼叫**SQLExecute**或**SQLExecDirect**，驅動程式會針對與任何參數繫結，擷取資料**SQLBindParameter**從儲存體中的位置應用程式。 當應用程式呼叫**SQLSetPos**，驅動程式擷取更新的資料，或從繫結的資料行加入作業**SQLBindCol**。 在應用程式資料在執行中參數，如傳送參數資料與**SQLPutData**。 如果有必要，驅動程式會將資料轉換所指定之資料類型從*ValueType*引數中的**SQLBindParameter**所指定的資料型別*ParameterType*引數中的**SQLBindParameter**，然後將資料傳送至資料來源。  

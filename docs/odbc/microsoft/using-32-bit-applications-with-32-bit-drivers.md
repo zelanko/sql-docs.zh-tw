@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b04226eeab2adde4a36f93fb5630f3097741a6d6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70b27a10dc14583a39870fc434b7b69fb674ab5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>32 位元應用程式使用 32 位元驅動程式
 您可以使用 32 位元驅動程式來執行 32 位元應用程式。 32 位元應用程式和 32 位元驅動程式會使用 Win32® 應用程式開發介面。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="components"></a>Components  
  ODBC 元件包括執行 32 位元驅動程式以 32 位元應用程式的下列檔案。 這些元件是在 \Redist 目錄中。  
   
-|檔案名稱|Description|  
+|[檔案名稱]|描述|  
 |---------------|-----------------|  
 |Odbc32.dll|32 位元驅動程式管理員|  
 |Odbccp32.dll|32 位元安裝程式 DLL|  

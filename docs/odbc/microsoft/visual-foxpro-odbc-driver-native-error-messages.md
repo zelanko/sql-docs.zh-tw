@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 570ec56d87af82414b710008972149d504fa61c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9bc0b106b88eee6335514723aa083aef44bd5b66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC 驅動程式原生的錯誤訊息
 下表列出原生 Visual FoxPro ODBC 驅動程式的錯誤訊息。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
   
 |||  
 |-|-|  
-|1|無法使用功能。|  
+|@shouldalert|無法使用功能。|  
 |2|輸入/輸出作業失敗。|  
 |3|找不到可用的控制代碼。|  
 |5|使用未配置的控制代碼。|  

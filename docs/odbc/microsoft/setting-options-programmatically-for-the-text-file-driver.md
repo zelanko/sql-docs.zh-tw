@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b8127a7249f9f878dcd3d15b9afa874def8c64a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d1a7f971a0ac5d07c451b9a786bdcc563108e3f7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>設定文字檔案驅動程式以程式設計方式的選項
-|選項|Description|方法|  
+|選項|描述|方法|  
 |------------|-----------------|------------|  
 |資料來源名稱|識別資料來源，例如，薪資或人員的名稱。|若要以動態方式設定這個選項，使用**DSN**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|  
 |定義格式|顯示**定義文字格式** 對話方塊，並讓您指定資料來源目錄中的個別資料表的結構描述。|無法以動態方式設定這個選項，藉由呼叫[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|  
-|Description|選擇性的描述資料來源; 中的資料例如，"雇用日期、 薪資記錄以及目前檢視的所有員工。 」|若要以動態方式設定這個選項，使用**描述**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|  
+|描述|選擇性的描述資料來源; 中的資料例如，"雇用日期、 薪資記錄以及目前檢視的所有員工。 」|若要以動態方式設定這個選項，使用**描述**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|  
 |目錄|選取的目標的目錄。|若要以動態方式設定這個選項，使用**DEFAULTDIR**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|  
 |擴充功能清單|列出的資料來源上的文字檔案的副檔名。 使用文字驅動程式時，沒有副檔名的名稱與執行 CREATE TABLE 陳述式時，會建立不含副檔名的檔案。 不提供任何擴充功能時，其他驅動程式會建立檔案與預設延伸模組。 若要建立副檔名為.txt 的檔案，就必須名稱中包含擴充功能。 若要顯示不含任何擴充功能檔案**定義文字格式**對話方塊中，"*。 」 必須加入至擴充功能清單。|若要以動態方式設定這個選項，使用**延伸**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|  
 |唯讀|指定資料庫為唯讀。|若要以動態方式設定這個選項，使用**READONLY**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|  

@@ -1,7 +1,7 @@
 ---
 title: "執行 SSMA 主控台 (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d749a876fb128f55e653eca6fe8dda613a09dfa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 29f9c2bbce707aa08ce5cff918965e65f66d8370
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>執行 SSMA 主控台 (AccessToSQL)
 Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以執行及控制 SSMA 活動。 這可確保各節詳細說明相同。  
@@ -167,7 +167,7 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <load-access-database>  
@@ -201,7 +201,7 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
   
   metabase="<source/target>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <force-load>  
@@ -314,7 +314,7 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <generate-assessment-report  
@@ -386,7 +386,7 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <convert-schema  
@@ -446,7 +446,7 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
   
 </migrate-data>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <migrate-data  
@@ -476,7 +476,7 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
   
 </link-tables>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <link-tables>  
@@ -502,7 +502,7 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
   
 </unlink-tables>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <unlink-tables>  
@@ -581,7 +581,7 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <synchronize-target  
@@ -590,7 +590,7 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
   
   object-type="category"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <synchronize-target>  
@@ -646,7 +646,7 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <refresh-from-database  
@@ -655,7 +655,7 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
   
   object-type="category"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <refresh-from-database>  
@@ -705,7 +705,7 @@ Microsoft 提供一組強大的指令碼檔案的命令和命令列選項，以�
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <save-as-script  

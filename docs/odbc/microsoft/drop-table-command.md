@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 271b4305b15be7d4af1b7a8d45a9ec5d42a1adab
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c6b38eeeba42f1a24520c176fb2f49caac1712e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drop-table-command"></a>DROP TABLE 命令
 從指定的資料來源的資料庫中移除資料表，並從磁碟中刪除。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 DROP TABLE TableName | FileName | ?  
 ```  
   
-## <a name="settings"></a>設定  
+## <a name="settings"></a>[設定]  
  *TableName*  
  指定從資料來源所指定的資料庫移除，並從磁碟刪除的資料表。  
   

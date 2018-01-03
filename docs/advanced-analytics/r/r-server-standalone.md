@@ -2,10 +2,12 @@
 title: "R Server (獨立式) | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 06/22/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+vms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -14,11 +16,11 @@ caps.latest.revision: "22"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 1812dc6b60e5f5ee4547810a591b37643be17096
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aa740dc305bf3a34afac42371dbd1ba554b11924
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-server-standalone"></a>R Server (Standalone)
 
@@ -98,7 +100,7 @@ SQL Server 機器學習的企業使用者可以使用可下載的 Microsoft R Se
 
 範例、 教學課程中，與 Microsoft R Server 的詳細資訊，請參閱[Microsoft R 產品](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started)。
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
 
  [SQL Server R 服務](../../advanced-analytics/r/sql-server-r-services.md)
 

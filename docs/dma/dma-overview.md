@@ -5,7 +5,7 @@ ms.date: 10/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc543e392818c2fa8ceea1c55e7a065df603b02d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea780da11c39984fa8828119eee621a66768f1fe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-data-migration-assistant"></a>資料移轉小幫手的概觀
 
@@ -47,11 +47,11 @@ ms.lasthandoff: 11/20/2017
 
 - 探索目標 SQL Server 平台的資料庫可以受益於在升級後的新功能。 這些功能的建議形式被描述，並分成下列類別：
 
-  - 效能
+  - [效能]
 
-  - 安全性
+  - Security
 
-  - 儲存空間
+  - Storage
 
 - 將內部部署 SQL Server 執行個體移轉至的現代的 SQL Server 執行個體，裝載在內部部署或在 Azure 虛擬機器 (VM) 可從您的內部部署網路存取。 可以使用 VPN 或其他技術來存取 Azure VM。 移轉工作流程可協助您移轉下列元件：
 

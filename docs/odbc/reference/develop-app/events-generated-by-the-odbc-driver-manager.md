@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a608887622850c95c4bfae4a459082838f55c31
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 98490f41e8e345a6fd3ad8c70e8f7714c2686693
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>ODBC 驅動程式管理員所產生的事件
 > [!IMPORTANT]  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
   
  啟動 Visual Studio Analyzer 按鈕登錄 ODBC 驅動程式管理員所產生的事件。 此工具本身提供的系統定義的事件和建立自訂事件的能力。 如需有關事件的詳細資訊，請參閱*Visual Studio 分析器參考指南*Visual Studio 套件的文件中。  
   
-|Visual Studio Analyzer 事件|Description|  
+|Visual Studio Analyzer 事件|描述|  
 |----------------------------------|-----------------|  
 |**呼叫**|在每個 ODBC 應用程式開發介面項目上產生。|  
 |**ReturnException**|產生每個 ODBC API 傳回 SQL_ERROR 傳回碼時。|  

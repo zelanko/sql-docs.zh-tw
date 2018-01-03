@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab4f9d293b0cbe2f4536c80662271664a8fd896b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 390188eb430e51bf0ce27bf2f32f9f82c195d4da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="is-odbc-the-answer"></a>答案是 ODBC？
 在深入之前的互通性問題，請考慮下列問題： 應用程式應該使用 ODBC 完全嗎？ 這似乎很奇怪 ODBC，指南中詢問問題，但很，事實上，合法。 ODBC 的設計無法完全取代原生資料庫應用程式開發介面，也就設計來提供在所有情況下的資料庫存取權。 它設計來提供資料庫的通用介面，其目的是要釋放應用程式設計人員必須了解和維護多個資料庫的連結。  

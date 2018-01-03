@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bce96e014e56a783f4f367120f1ba6f911d91ed5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9aab042c14953c170d86dda5fcd3432a471a12b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-function-summary"></a>ODBC 函數摘要
 下表列出 ODBC 函數，依類型的工作，並包含指定的一致性和每個函式用途的簡短描述。 如需符合指定的詳細資訊，請參閱[ODBC 和標準 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)。 如需語法和語意，每個函式的詳細資訊，請參閱[ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)。  

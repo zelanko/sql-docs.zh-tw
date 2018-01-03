@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f951b69af4ecc18dc1dcdc23d0cbd1ce115caf0b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db147faaae4ad0f2713e21f9e55228cbb2b057e7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freeing-descriptors"></a>釋放描述元
 明確配置描述元可以是明確地釋放是藉由呼叫**SQLFreeHandle**與*HandleType* SQL_HANDLE_DESC，或隱含的當連接控制代碼已釋放。 明確配置描述項會釋出，隱含地配置給它們的描述元釋放自動套用的描述元將還原的所有陳述式控制代碼。  

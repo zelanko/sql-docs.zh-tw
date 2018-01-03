@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 91f84144d571982819e063f4c1d61e9bada238dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 79cbe8677ba4401fb779dc9765d639b1d86a0f5f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-functions"></a>系統函數
 下表列出 ODBC 純量函式集合中包含的系統函數。 藉由呼叫**SQLGetInfo**與*資訊類型*的 SQL_SYSTEM_FUNCTIONS，應用程式可以判斷驅動程式支援的系統函數。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
   
  傳回的值會表示為 ODBC 資料類型。  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |**資料庫 （)** (ODBC 1.0)|傳回對應至連接控制代碼的資料庫名稱。 (資料庫的名稱，也可以透過呼叫**SQLGetConnectOption**使用 SQL_CURRENT_QUALIFIER 連接選項。)|  
 |**IFNULL (** *exp*，*值***)** (ODBC 1.0)|如果*exp*為 null，*值*傳回。 如果*exp*不是 null， *exp*傳回。 可能資料類型或類型*值*必須是相容的資料型別*exp*。|  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a21a5e5b390e0798ed4dd25fba164a710298af00
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 函數
 **一致性**  
@@ -85,7 +85,7 @@ SQLRETURN SQLFetchScroll(
   
  針對所有這些 Sqlstate 可傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR （除了 01xxx Sqlstate)，如果上一個或多個，但不是全部資料列的多重資料列的作業，就會發生錯誤，而且如果發生錯誤時，會傳回 SQL_ERROR，會傳回 SQL_SUCCESS_WITH_INFO單一資料列作業。  
   
-|SQLSTATE|錯誤|Description|  
+|SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|字串或資料行所傳回的二進位資料會導致非空白的字元或二進位資料為非 NULL 的截斷。 如果是字串值，它就是向右截斷。|  
@@ -164,7 +164,7 @@ SQLRETURN SQLFetchScroll(
   
 |條件|新的資料列集的第一個資料列|  
 |---------------|-----------------------------|  
-|*開始之前*|1|  
+|*開始之前*|@shouldalert|  
 |*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*結束後*|  
 |*結束後*|*結束後*|  
@@ -289,9 +289,9 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |插入資料列 21 歲到 22 之間的資料列|PRIOR|0|11 到 20|  
 |插入資料列 20 和 21 之間的資料列|PRIOR|0|12 到 20，插入的資料列|  
 |刪除資料列 21|RELATIVE|0|22 到 31<sup>[2]</sup>|  
-|刪除資料列 21|RELATIVE|1|22 到 31|  
+|刪除資料列 21|RELATIVE|@shouldalert|22 到 31|  
 |插入資料列 21 歲到 22 之間的資料列|RELATIVE|0|21，插入資料列，22 到 29|  
-|插入資料列 21 歲到 22 之間的資料列|RELATIVE|1|22 到 31|  
+|插入資料列 21 歲到 22 之間的資料列|RELATIVE|@shouldalert|22 到 31|  
 |刪除資料列 21|ABSOLUTE|21|22 到 31<sup>[2]</sup>|  
 |刪除資料列 22|ABSOLUTE|21|21，23 到 31|  
 |插入資料列 21 歲到 22 之間的資料列|ABSOLUTE|22|插入的資料列，22 到 29|  
@@ -333,7 +333,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll 和 ODBC 2.x 驅動程式  
  當應用程式呼叫**SQLFetchScroll** ODBC 2.x 驅動程式，驅動程式管理員會對應至這個呼叫**SQLExtendedFetch**。 將傳遞的引數的下列值**SQLExtendedFetch**。  
   
-|SQLExtendedFetch 引數|值|  
+|SQLExtendedFetch 引數|ReplTest1|  
 |-------------------------------|-----------|  
 |StatementHandle|在 StatementHandle **SQLFetchScroll**。|  
 |Sqlfetchscroll|中的 Sqlfetchscroll **SQLFetchScroll**。|  
@@ -365,6 +365,6 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |定位資料指標，重新整理此資料列集中，或更新或刪除在結果集中的資料|[SQLSetPos 函式](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |設定陳述式屬性|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

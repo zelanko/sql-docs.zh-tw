@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 45a3003ac39e806dbd012b79b974160f3530fc32
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0314dfcc66e783a48a7474b0b0656a93b1bf3822
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>資料指標的特性以及資料指標類型
 應用程式可以指定資料指標，而不是指定資料指標類型 （順向、 靜態、 索引鍵集驅動或動態） 的特性。 若要這樣做，應用程式 （藉由設定 SQL_ATTR_CURSOR_SCROLLABLE 陳述式屬性） 的資料指標的可捲動性和敏感度 （藉由設定 SQL_ATTR_CURSOR_SENSITIVITY 陳述式屬性） 之前先選取開啟資料指標的陳述式上控制代碼。 驅動程式再選擇最有效率的方式，提供特性的資料指標類型要求之應用程式。  

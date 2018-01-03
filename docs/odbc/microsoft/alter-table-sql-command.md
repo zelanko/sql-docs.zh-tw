@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 79fbb4e4f6c143d693e1b41cc1660938bc61cde1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE 的 SQL 命令
 以程式設計方式修改資料表的結構。  
@@ -196,6 +196,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  如果您修改的資料表是在資料庫中，ALTER TABLE-SQL 需要獨佔使用的資料庫。 若要開啟用於專用資料庫，包含獨佔開啟資料庫中。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立資料表的 SQL 命令](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX 命令](../../odbc/microsoft/index-command.md)

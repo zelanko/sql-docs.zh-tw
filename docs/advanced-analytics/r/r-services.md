@@ -1,9 +1,11 @@
 ---
 title: "Microsoft 的機器學習服務 |Microsoft 文件"
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ead2781727f81c21c2b8d38f9faf6b363666e56e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7618f4235a1d681800cc6b0d933d921f145947dc
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="microsoft-machine-learning-services"></a>Microsoft 機器學習服務
 
@@ -116,7 +118,7 @@ Azure Marketplace 中包含數個支援資料科學的虛擬機器。
 
 + 若要取得 SQL Server 機器學習的 Azure 映像，我們建議的虛擬機器供應項目包含任何**SQL Server 2017**。 當您選取的映像時，請遵循有關層和服務層級，以確保 VM 可支援機器學習工作負載的其他建議。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [機器學習服務使用者入門](getting-started-with-sql-server-r-services.md)
 

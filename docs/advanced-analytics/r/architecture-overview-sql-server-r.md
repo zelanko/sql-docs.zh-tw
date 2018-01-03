@@ -2,9 +2,11 @@
 title: "架構概觀 (SQL Server R 服務) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 037393dfd83c2576ed0783bfa582e96f2b74da9d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 445c28ab59dd3f66f46a0ad43aff40da5696ee0a
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>SQL Server 中 R 的架構概觀
 
@@ -46,7 +48,7 @@ SQL Server 2017 中繼續 SQL Server 2016 所導入的擴充性架構。 SQL Ser
 
 如需詳細說明的元件，例如支援 R，[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]和 RLauncher，請參閱[新元件](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)。
 
-## <a name="security"></a>安全性
+## <a name="security"></a>Security
 
 當您執行使用機器學習服務或 SQL Server R 服務的 R 程式碼時，在 SQL Server 處理序，以提供安全性和更高的管理性之外執行所有的 R 指令碼。 這種隔離的處理序會保存 true，不論是否隨預存程序中，執行 R 指令碼或從遠端電腦連線到 SQL Server 電腦作業並啟動工作，當成計算內容會使用伺服器。
 
@@ -54,7 +56,7 @@ SQL Server 會攔截所有的工作要求、 工作和使用 Windows 工作物�
 
 藉由強制執行 SQL Server 資料表、 資料庫和執行個體層級的安全性相容性界限內保留資料。 資料庫管理員可以控制誰執行 R 工作的能力，以及誰可以安裝或共用的 R 封裝的能力。 系統管理員也可以監視使用 R 指令碼，遠端或本機使用者和監視和管理所使用的資源。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [支援 R 整合的元件](new-components-in-sql-server-to-support-r.md)
 

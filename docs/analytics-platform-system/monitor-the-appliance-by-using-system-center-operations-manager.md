@@ -3,10 +3,10 @@ title: "監視與 System Center Operations Manager (AP) 的應用裝置"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
 caps.latest.revision: "14"
-ms.openlocfilehash: 115d32ab8f633752dacfaf245017803bcdbfb8d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47a89b19a93d99bb3e63925b012bb53d169fdf0d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>使用 System Center Operations Manager 監視的應用裝置
 這會說明如何使用 System Center Operations Manager 來監視 SQL Server PDW 和 HDInsight。  
   
 ## <a name="before-you-begin"></a>開始之前  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
   
 1.  System Center Operations Manager 2007 R2、 2012年或 2012 SP1 必須安裝且正在執行。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 ![節點](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [了解管理主控台警示 &#40;Analytics Platform System &#41;](understanding-admin-console-alerts.md)  
   

@@ -3,10 +3,10 @@ title: "電源 AP 應用裝置開啟或關閉 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
 caps.latest.revision: "45"
-ms.openlocfilehash: 3264c3f97f765e9a62a38987638bdf2a8b13e82b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e96898197098556d256c46b517ea42650c4c3ac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="power-the-aps-appliance-on-or-off"></a>開啟或關閉電源 AP 應用裝置
 本主題描述如何開啟電源，或您正在執行的平行處理資料倉儲，選擇性地執行 HDInsight 區域的分析平台 Systemappliance 關閉電源。 使用本主題當移動 Analytics Platform System 應用裝置時，或電源應用裝置上重大停電後。  
@@ -137,6 +137,6 @@ ms.lasthandoff: 11/17/2017
 ### <a name="to-verify-the-appliance-health"></a>若要驗證的應用裝置健全狀況  
 應用裝置啟動後，開啟**管理主控台**並檢查警示會指出失敗狀況的健全狀況 頁面。 如需詳細資訊，請參閱[使用系統管理員主控台 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [應用裝置管理工作 &#40;Analytics Platform System &#41;](appliance-management-tasks.md)  
   

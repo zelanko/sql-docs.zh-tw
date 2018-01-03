@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2cb4ddb3b51763772b00b7d17691e60109d1d6aa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 749492ebd893234dea574c0fd87e20b45ddd8628
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-database-access-architectures"></a>標準資料庫存取架構
 查看上一節中所述的資料庫存取元件，其實其中有兩個 — 程式設計介面與資料串流處理通訊協定 — 適合用來標準化。 其他兩個元件 — IPC 機制和網路通訊協定 — 不只位於層級太低，但多半取決於網路與作業系統兩者都。 沒有第三個方法也 — 閘道 — 標準化針對提供的可能性。  

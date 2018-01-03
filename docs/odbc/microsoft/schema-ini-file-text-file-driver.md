@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7db96c719d22b3f6dd47a02eac2ef7724c0b6040
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0b71b742ff9c0833bd36deb256dda5169f2a51c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 檔 （文字檔案驅動程式）
 使用文字驅動程式時，文字檔案的格式取決於使用結構描述資訊檔案。 是一律名為 Schema.ini 的結構描述資訊的檔案，並永遠保持在相同的目錄做為文字資料來源中。 結構描述資訊檔案提供 IISAM 有關的一般格式的檔案、 資料行名稱和資料型別資訊，以及數個其他資料特性的資訊。 Schema.ini 檔所需存取固定長度的資料。 當文字資料表包含的日期時間、 貨幣或十進位資料或每次您要更充分掌控資料表中資料的處理時，您應該使用 Schema.ini 檔案。  
@@ -102,10 +102,10 @@ n=ColumnNametype [#]
 ## <a name="remarks"></a>備註  
  下表說明每一部分**Col**  *n* 項目。  
   
-|參數|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*ColumnName*|文字資料行的名稱。 如果資料行名稱包含內嵌的空格，您必須將它括在雙引號中。|  
-|*type*|資料類型如下所示：<br /><br /> **Microsoft Jet 資料類型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> 長整數<br /><br /> 貨幣<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> 備忘錄<br /><br /> **ODBC 資料類型**Char （如同文字）<br /><br /> Float （與 Double 相同）<br /><br /> 整數 （如同 Short）<br /><br /> LongChar （如同備忘）<br /><br /> 日期*日期格式*|  
+|*type*|資料類型如下所示：<br /><br /> **Microsoft Jet 資料類型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> 長整數<br /><br /> CURRENCY<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> 文字<br /><br /> 備忘錄<br /><br /> **ODBC 資料類型**Char （如同文字）<br /><br /> Float （與 Double 相同）<br /><br /> 整數 （如同 Short）<br /><br /> LongChar （如同備忘）<br /><br /> 日期*日期格式*|  
 |**寬度**|常值字串值`Width`。 表示下列的數字指定的資料行寬度 （可選擇性地用於字元分隔的檔案; 固定長度的檔案需要）。|  
 |*#*|指定資料行寬度的整數值 (若**寬度**指定)。|  
   
@@ -119,7 +119,7 @@ CharacterSet=ANSI
 ## <a name="specifying-data-type-formats-and-conversions"></a>指定資料類型的格式和轉換  
  Schema.ini 檔會包含數個選項可讓您指定如何轉換或顯示資料。 下表列出每個選項。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |**DateTimeFormat**|可以將格式字串，表示日期和時間。 如果在匯入/匯出的所有日期/時間欄位會都處理相同的格式，您應該指定這個項目。 上午以外的所有 Microsoft Jet 格式 到下午 支援。 如果沒有任何格式字串，則會使用 Windows 控制台中的簡短日期圖片和時間選項。|  
 |**DecimalSymbol**|可以設定用來分隔整數從一個數字的小數部分的任何單一字元。|  

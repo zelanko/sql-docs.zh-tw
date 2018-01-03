@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,20 +21,20 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5a33c92d5762702f7e309d70ef48f076ecc0b2b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6394b29ff1f76fd0f7edd24a3c239de367c3d58b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-specification-subkeys"></a>資料來源規格子機碼
 ODBC 資料來源的子機碼中所列每個資料來源都有自己的子機碼。 這個子機碼有同名的 ODBC 資料來源的子機碼下的對應值。 這個子機碼下的值必須列出驅動程式 DLL，而且可能會列出資料來源的描述。 如果驅動程式支援的轉譯器，這些值可能會列出預設轉譯程式預設轉譯 DLL 及預設轉譯選項的名稱。 值可能也會列出其他驅動程式連接到資料來源所需的資訊。 例如，驅動程式可能需要伺服器名稱、 資料庫名稱或結構描述名稱。  
   
  值的格式是下表所示。 需要的驅動程式值。  
   
-|名稱|資料類型|data|  
+|[屬性]|資料類型|data|  
 |----------|---------------|----------|  
-|Description|REG_SZ|*描述*|  
+|描述|REG_SZ|*描述*|  
 |驅動程式|REG_SZ|*驅動程式 DLL 路徑*|  
 |TranslationDLL|REG_SZ|*轉譯程式 DLL 路徑*|  
 |TranslationName|REG_SZ|*轉譯程式名稱*|  

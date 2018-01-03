@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63d461ff997a9a438965e039a727999876b3d7a3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1d4790ab20c01be27868696b989ed8228acec6c6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 > **注意：**只有在 jobstep 完成之後，更新資料。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|資料列的唯一識別碼。|  
 |**job_id**|**uniqueidentifier**|作業識別碼。|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**step_name**|**sysname**|步驟的名稱。|  
 |**sql_message_id**|**int**|當作業失敗時，任何傳回的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息的識別碼。|  
 |**sql_severity**|**int**|任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤的嚴重性。|  
-|**訊息**|**nvarchar(4000)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤 (如果有的話) 的文字。|  
+|**message**|**nvarchar(4000)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤 (如果有的話) 的文字。|  
 |**run_status**|**int**|作業執行的狀態：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 重試<br /><br /> **3** = 取消|  
 |**run_date**|**int**|作業或步驟開始執行的日期。 如果是「進行中」記錄，這就是開始寫入記錄的日期/時間。|  
 |**run_time**|**int**|作業或步驟開始的時間。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   ## <a name="example"></a>範例
  下列[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢會將轉換**run_time**和**run_duration**成更多的使用者易記格式的資料行。  執行中的指令碼[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  
- ```tsql
+ ```sql
  SET NOCOUNT ON;
  
  SELECT sj.name,

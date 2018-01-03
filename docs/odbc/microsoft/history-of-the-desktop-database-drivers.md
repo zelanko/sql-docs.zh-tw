@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: beb79b003e6e36b195d781b071dde814c5265adc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6dfa1dc1b533c9e40175e9a3d29dc872344bd664
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>桌面資料庫驅動程式的歷程記錄
 下表顯示桌面資料庫驅動程式版本歷程記錄。  
   
-|Version|發行日期|Description|  
+|Version|發行日期|描述|  
 |-------------|------------------|-----------------|  
 |1.0|1993 年 8 月|使用所產生的 PageAhead 軟體 SIMBA 查詢處理器。 SIMBA 收到呼叫 ODBC 和 SQL 陳述式、 執行 Microsoft Jet 可安裝 ISAM 呼叫處理它們，然後呼叫 Microsoft Jet ISAM 分派圖層以載入並呼叫適當的可安裝 ISAM 驅動程式。|  
 |2.0|1994 年 12 月|搭配 ODBC 2.0，大幅擴充 ODBC 功能。 2.0 版的重大變更是 Microsoft Jet 資料庫引擎取代 SIMBA 查詢處理器。 使用 Microsoft Jet 資料庫引擎，桌面資料庫驅動程式更緊密地整合 Microsoft Jet 可安裝 ISAM 驅動程式與 Microsoft 存取技術。 已大幅增強功能：<br /><br /> -原生支援可捲動資料指標。<br />-原生支援外部聯結、 更新和異質聯結和交易。<br />-32 位元版本的 Microsoft Windows NT 的驅動程式。|  

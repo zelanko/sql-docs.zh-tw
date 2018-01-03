@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b042185cb49c00e61d090934a9c8ed8d2258059f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 713b9448ecb70b57f0aace7f05aa9b977511323b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-data-types-in-odbc"></a>在 ODBC C 資料類型
 ODBC 定義應用程式變數和其相對應的類型識別項所使用的 C 資料類型。 會使用這些繫結至結果集資料行和陳述式的參數緩衝區。 例如，假設應用程式想要擷取成字元格式的結果集資料行的資料。 它會宣告一個變數以 SQLCHAR * 資料類型，並將此變數繫結至類型識別碼為 SQL_C_CHAR 的結果集資料行。 C 資料類型和類型識別碼的完整清單，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
@@ -56,5 +56,5 @@ ODBC 定義應用程式變數和其相對應的類型識別項所使用的 C 資
   
  如需 ODBC 3.8 的詳細資訊，請參閱[What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)

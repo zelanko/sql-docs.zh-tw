@@ -1,10 +1,10 @@
 ---
 title: "什麼 &#39; s 機器學習服務的新功能 |Microsoft 文件"
 ms.date: 11/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41ff01d46e2ca0aa996d8f582733b24b7560e29b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>新功能 SQL Server 中的機器學習服務
 
@@ -84,7 +84,7 @@ SQL Server 開發人員可以存取的更詳盡的 Python 程式庫的開放原�
 
     **Mrsdeploy**封裝[!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)]和[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]支援做為 web 服務的 Python 模型和指令碼部署。 如需其運作方式的範例，請參閱[發行和取用的 Python 程式碼](python/publish-consume-python-code.md)。
 
-+ 效能
++ [效能]
 
     Microsoft 已推入的效能分數的界限。 使用中資料庫計分，我們會處理每百萬個資料列使用 R 模型的第二個。 在本版中的新功能**即時計分**和**原生計分**支援在單一資料列和批次計分的更佳的效能。
 

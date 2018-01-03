@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e94325210db4232ae3a5b715aa26a059d7895eae
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33cc5f63c34618f51196e173e58adbac58377f29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="why-was-odbc-created"></a>為什麼建立 ODBC？
 在過去，公司會使用單一的 DBMS。 透過該系統的前端或以獨佔方式使用該系統撰寫的應用程式，已完成所有的資料庫存取權。 不過，使用電腦成長及更多的電腦硬體和軟體變成可用時，公司啟動，以取得不同的 Dbms。 原因是許多： 人購買為何便宜，是最快，其功能已知道，是最新市場，最適合處理單一應用程式上。 因為其他原因而進行重組及合併的關係，其中先前單一 DBMS 部門現在有數個。  

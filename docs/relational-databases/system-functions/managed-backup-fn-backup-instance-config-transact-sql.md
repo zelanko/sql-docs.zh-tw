@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5731faf0d0625a90b1e8b69672bfb4053804b99b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84fc9ff496b0c25f50771e34e60617732307c685
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 managed_backup.fn_backup_db_config ()  
 ```  
   
@@ -53,7 +53,7 @@ managed_backup.fn_backup_db_config ()
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |is_smart_backup_enabled|INT|啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]時顯示 1，停用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]時顯示 0。|  
 |credential_name|SYSNAME|預設 SQL 認證，用來驗證儲存體。|  
@@ -63,7 +63,7 @@ managed_backup.fn_backup_db_config ()
 |encryptor_type|NVARCHAR （32)|使用的加密程式類型：憑證或非對稱金鑰。 如果未指定加密程式則設為 NULL。|  
 |encryptor_name|SYSNAME|憑證或非對稱金鑰的名稱。 如果未指定名稱則設為 NULL|  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要的成員資格**db_backupoperator**與資料庫角色**ALTER ANY CREDENTIAL**權限。 使用者不應被拒絕**VIEW ANY DEFINITION**權限。  

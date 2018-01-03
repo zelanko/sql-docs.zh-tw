@@ -3,10 +3,10 @@ title: "設定外部的 Windows 系統，以取得遠端資料表複本 InfiniBa
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f866890b-cad5-49ac-bbeb-848bfb26c2d5
 caps.latest.revision: "11"
-ms.openlocfilehash: 95cbd11e4e0a3e8455f76287221d970737dca228
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: efebff74a8c17952b39efb43006051603c624a03
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband"></a>設定要接收遠端資料表的副本使用 InfiniBand 外部 Windows 系統
 描述如何購買並設定 SQL Server PDW 中之遠端資料表複製功能搭配使用的 InfiniBand 網路連接非應用裝置的 Windows 系統。 Windows 系統將會裝載接收遠端資料表複製從 SQL Server PDW 資料庫的 SQL Server 資料庫。 它是從應用裝置分別購買，並且連線至應用裝置上 InfiniBand 網路。  

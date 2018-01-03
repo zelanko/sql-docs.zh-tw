@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fc2b4027039cf110caaf96bc2a197e2b10f1f62
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>取代函式對應的應用程式的回溯相容性
 ODBC 3*.x*應用程式使用 ODBC 3 透過*.x*驅動程式管理員會針對 ODBC 2。*x*只要使用了沒有的新功能的驅動程式。 同時複製功能和行為變更，不過，會影響的方式，ODBC 3。*x*應用程式適用於 ODBC 2。*x*驅動程式。 當使用的 ODBC 2。*x*驅動程式，驅動程式管理員會將對應下列 ODBC 3。*x*函式，也有取代一或多個 ODBC 2。*x*函式，到對應的 ODBC 2。*x*函式。  
@@ -422,7 +422,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLColAttribute**與*ColumnNumber*引數設定為 0，則驅動程式管理員會傳回*FieldIdentifier*值下表所列。  
   
-|*FieldIdentifier*|值|  
+|*FieldIdentifier*|ReplTest1|  
 |-----------------------|-----------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|  
@@ -454,7 +454,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLDescribeCol**與*ColumnNumber*引數設定為 0，驅動程式管理員會傳回下表所列的值。  
   
-|緩衝區|值|  
+|緩衝區|ReplTest1|  
 |------------|-----------|  
 |ColumnName|"" (空字串)|  
 |* NameLengthPtr|0|  

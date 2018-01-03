@@ -2,9 +2,11 @@
 title: "如何使用 sqlrutils 來建立預存程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd86e9655770c55f99514cd5a0a9b9910d5f78e1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 475665c87f672868eaa6efeb2b5b6e927ed945af
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>建立預存程序使用的 sqlrutils
 
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/01/2017
 
 資料框架內的物件與函式的其他所有輸入參數，皆必須是下列 R 資料類型：
 - POSIXct
-- numeric
+- NUMERIC
 - character
 - integer
 - 邏輯
@@ -87,7 +89,7 @@ R 程式碼已被清除，而且可以當做單一函式呼叫之後，您將使
 
 準備好所有輸入和輸出參數時，呼叫以`StoredProcedure`建構函式。
 
-**使用方式**
+**Usage**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 
@@ -234,7 +236,7 @@ myetl1function <- function() {
 > 
 > 雖然您不需要明確地在程式碼中開啟 ODBC 連接，但使用 **sqlrutils**時仍需要 ODBC 連接。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 sqlrutils 產生預存程序](../../advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 

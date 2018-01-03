@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3d35ee438d57be1fac0959645d7c04743c4b873
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bf9073f8dc4ec4a3216ee676a0f942c8e2ff982f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-odbc-application-steps"></a>基本的 ODBC 應用程式的步驟
 本節描述 ODBC 應用程式的一般流程。 也不太可能，任何應用程式就會將所有這些函式呼叫這個順序完全相同。 不過，大部分的應用程式會使用一些不同的步驟執行。 基本應用程式步驟會在下圖顯示。  

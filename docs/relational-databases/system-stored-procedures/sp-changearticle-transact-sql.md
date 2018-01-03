@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26e758e6f4884309a17d5abfaa82b64d767d4df5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  下表描述發行項的屬性及這些屬性的值。  
   
-|屬性|值|Description|  
+|屬性|值|描述|  
 |--------------|------------|-----------------|  
 |**creation_script**||用來建立目標資料表之發行項結構描述指令碼的路徑和名稱。 預設值是 NULL。|  
 |**del_cmd**||要執行的 DELETE 陳述式；否則，便從記錄檔中建構它。|  
@@ -139,7 +139,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||用於產生同步處理輸出檔之資料表或檢視的名稱。 預設值是 NULL。 不支援 Oracle 發行者使用這個值。|  
 |**資料表空間**||識別 Oracle 資料庫發行的發行項之記錄資料表所用的資料表空間。 如需詳細資訊，請參閱[管理 Oracle 資料表空間](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
 |**臨界值**||用來控制散發代理程式指派新識別範圍之時機的百分比值。 不支援點對點複寫使用這個項目。|  
-|**型別**||不支援 Oracle 發行者使用這個值。|  
+|**type**||不支援 Oracle 發行者使用這個值。|  
 ||**logbased**|記錄式發行項。|  
 ||**logbased manualboth**|記錄式且含有手動篩選準則和手動檢視的發行項。 此選項需要*sync_object*和*篩選*也設定屬性。 不支援 Oracle 發行者使用這個值。|  
 ||**logbased manualfilter**|記錄式且含有手動篩選準則的發行項。 此選項需要*sync_object*和*篩選*也設定屬性。 不支援 Oracle 發行者使用這個值。|  
@@ -218,7 +218,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  在現有的發行集，您可以使用**sp_changearticle**若要變更發行項，而不需要卸除並重新建立整個發行集。  
   
 > [!NOTE]  
->  值變更時*schema_option*，系統不會執行位元更新。 這表示當您設定*schema_option*使用**sp_changearticle**現有位元設定可能已關閉。 若要保留現有的設定，您應該執行[& (位元 AND)](../../t-sql/language-elements/bitwise-and-transact-sql.md)您要設定的值與目前的值之間*schema_option*，這可藉由執行[sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。  
+>  值變更時*schema_option*，系統不會執行位元更新。 這表示當您設定*schema_option*使用**sp_changearticle**現有位元設定可能已關閉。 若要保留現有的設定，您應該執行[|(位元 OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)您要設定的值與目前的值之間*schema_option*，這可藉由執行[sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。  
   
 ## <a name="valid-schema-options"></a>有效結構描述選項  
  下表描述的允許值*schema_option* （顯示在頂端） 的複寫類型和發行項類型 （顯示在第一個資料行之下） 為基礎。  
@@ -249,7 +249,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changearticle**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [檢視和修改發行項屬性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

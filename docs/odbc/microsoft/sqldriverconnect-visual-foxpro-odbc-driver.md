@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4233d9785ae420a2634db0e97d226bc1c2abbc7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95587af8044ec6485729233ebff378ceac064c40
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect （Visual FoxPro ODBC 驅動程式）
 > [!NOTE]  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
 |-------------------------------------------------|---------------------|  
 |BackgroundFetch|"Yes"或者"No"|  
 |自動分頁|「 機器 」 或其他定序順序。 如需支援的定序順序的清單，請參閱[設定 COLLATE](../../odbc/microsoft/set-collate-command.md)。|  
-|Description||  
+|描述||  
 |排除|"Yes"或者"No"|  
 |SourceDB|完整的路徑到目錄，包含零或多個[釋放資料表](../../odbc/microsoft/visual-foxpro-terminology.md)，或是的絕對路徑和檔案名稱[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)。|  
 |SourceType|「 雙位元組字元"或者"DBF"|  

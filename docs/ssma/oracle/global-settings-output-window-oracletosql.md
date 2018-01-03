@@ -1,7 +1,7 @@
 ---
 title: "全域設定 （[輸出] 視窗） (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: 49ff7e15505a51b6f7e3ba2b382b35894e64e577
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a72a4df25b21c8fb3a7f2286ee2cb4e412cadeca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-output-window--oracletosql"></a>全域設定 （[輸出] 視窗） (OracleToSQL)
 使用**通用設定**對話方塊來指定 SSMA 的設定。  

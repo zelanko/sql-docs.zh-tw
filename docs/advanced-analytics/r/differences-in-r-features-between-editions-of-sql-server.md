@@ -2,9 +2,11 @@
 title: "機器學習功能的 SQL Server 版本之間的差異 |Microsoft 文件"
 ms.custom: 
 ms.date: 11/16/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e599ab78d2b6a6ede13b1da1e6edf5167405fc2c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 57b4279882cf2c1363dc40616175552260aff0c9
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="differences-in-machine-learning-features-between-editions-of-sql-server"></a>機器學習功能的 SQL Server 版本之間的差異
  
@@ -108,7 +110,7 @@ Express Edition 具有和 Standard Edition 相同的限制。
 
 Web edition 不支援執行 R 或 Python 指令碼。 不過，您可以使用[預測](../../t-sql/queries/predict-transact-sql.md)函式來執行[原生計分](../sql-native-scoring.md)定型不同的 SQL Server 或 R Server 執行個體上，則儲存在所需的二進位格式的模型上。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 如需詳細資訊，請參閱：
 

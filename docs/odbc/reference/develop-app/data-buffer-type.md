@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73acfc1747cdda9d3082eaed420e56943f698fea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6b37e2294a22eadffad1302452d74b72a94891f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-buffer-type"></a>資料緩衝區類型
 應用程式所指定之緩衝區的 C 資料類型。 使用單一的變數，這發生在應用程式會將變數配置。 與一般記憶體 — 也就是記憶體所指向的類型 void 的指標，這發生在應用程式會轉換成特定類型的記憶體。 驅動程式會探索此類型有兩種：  

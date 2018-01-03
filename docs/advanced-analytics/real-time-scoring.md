@@ -2,10 +2,10 @@
 title: "即時計分 |Microsoft 文件"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 214fd0c3fad495db4642650de867c8d3a9c3b741
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9136aee11d5104fd0723521a3466361f06ce26d6
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="realtime-scoring"></a>即時計分
 
@@ -119,6 +119,6 @@ SQL Server 上，您必須啟用即時事先計分功能。 這是因為此功�
 
 + `sp_rxPredict`當做模型傳遞 NULL 值時，傳回不正確的訊息: 「 System.Data.SqlTypes.SqlNullValueException:Data 中 Null 」。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [如何執行即時計分](r/how-to-do-realtime-scoring.md)

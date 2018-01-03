@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4778182a6fd0138c1695c6f23915e9f5eff0837d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 91a6449e07ff83fd6bb7478bfc52cb077a76c955
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 函式
 **一致性**  
@@ -79,5 +79,5 @@ SQLRETURN SQLCompleteAsync(
 ## <a name="comments"></a>註解  
  在輪詢非同步處理模式中， *AsyncRetCodePtr*可能 SQL_STILL_EXECUTING 時**SQLCompleteAsync**都會傳回 SQL_SUCCESS。 應用程式應該保留輪詢直到*AsyncRetCodePtr*不 SQL_STILL_EXECUTING。 在通知基礎的非同步處理模式中， *AsyncRetCodePtr*絕對不會 SQL_STILL_EXECUTING。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [非同步執行 (輪詢方法)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

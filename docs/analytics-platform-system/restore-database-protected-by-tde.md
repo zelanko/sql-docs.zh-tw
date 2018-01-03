@@ -3,10 +3,10 @@ title: "還原平行資料倉儲中的 TDE 所保護的資料庫"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
 caps.latest.revision: "4"
-ms.openlocfilehash: 31f81447bd4fdaf5a2528f5828cc3d70618240c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5df3843a3e329901f8f77b65e5f6d4ff69cf6dbf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restore-a-database-protected-by-tde"></a>還原 TDE 所保護的資料庫
 使用下列步驟將使用透明資料加密來加密的資料庫還原。  
@@ -63,7 +63,7 @@ RESTORE DATABASE AdventureWorksPDW2012
     FROM DISK = '\\SECURE_SERVER\Backups\AdventureWorksPDW2012';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [備份資料庫](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md) 
 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  

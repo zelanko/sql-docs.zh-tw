@@ -1,9 +1,11 @@
 ---
 title: "修改 SQL Server 機器學習的使用者帳戶集區 |Microsoft 文件"
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b122d94e54f70f13a1cb3baeed2740686b0b3195
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0cd54371d35595dfbef6f54fcd66dab8d2dd812f
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>修改 SQL Server 機器學習的使用者帳戶集區
 
@@ -68,7 +70,7 @@ SQL Server 所控管可以由 Python 或 R 指令碼中使用的資源。 建議
 - [R Services 的 SQL Server 組態](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 -  [R 服務的效能案例研究](../../advanced-analytics/r/performance-case-study-r-services.md)
 
-## <a name="security"></a>安全性
+## <a name="security"></a>Security
 
 每個使用者群組都與特定執行個體上的 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服務相關聯，且不支援在其他執行個體上執行的 R 作業。
 

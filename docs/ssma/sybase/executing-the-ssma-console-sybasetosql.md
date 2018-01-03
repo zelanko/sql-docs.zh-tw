@@ -3,7 +3,7 @@ title: "執行 SSMA 主控台 (SybaseToSQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 09/27/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 072b8f49052e664861c67097d2eed9d1cffca05f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5a76b457d7178483d18a5a7a26d176d7e606b6fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>執行 SSMA 主控台 (SybaseToSQL)
 Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 這可確保各節詳細說明相同。  
@@ -240,7 +240,7 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <generate-assessment-report  
@@ -305,7 +305,7 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <convert-schema  
@@ -361,7 +361,7 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
   
 </migrate-data>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <migrate-data  
@@ -440,7 +440,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <synchronize-target  
@@ -449,7 +449,7 @@ fail-script>" (optional)
   
   object-type="<object-category>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <synchronize-target>  
@@ -501,7 +501,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <refresh-from-database  
@@ -510,7 +510,7 @@ fail-script>" (optional)
   
   object-type="<object-category>" />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <refresh-from-database>  
@@ -555,7 +555,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <save-as-script  
@@ -629,7 +629,7 @@ fail-script>" (optional)
   
 </convert-sql-statement>  
 ```  
-或  
+中的多個  
   
 ```  
 <convert-sql-statement  
@@ -654,7 +654,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或  
+中的多個  
   
 ```  
 <convert-sql-statement  
@@ -670,7 +670,7 @@ fail-script>" (optional)
 />  
 ```  
   
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
 如需命令列選項的資訊，請參閱[SSMA 主控台 (AccessToSQL) 中的命令列選項](../access/command-line-options-in-ssma-console-accesstosql.md)。  
   
 如需範例主控台指令碼檔案的資訊，請參閱[使用範例主控台指令碼檔案 &#40;SybaseToSQL &#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  

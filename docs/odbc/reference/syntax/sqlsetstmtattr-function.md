@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6fb9cd848463d0315d42b49f42e690f1bd7e47b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 函數
 **一致性**  
@@ -96,7 +96,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="diagnostics"></a>診斷  
  當**SQLSetStmtAttr**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可能會取得藉由呼叫**SQLGetDiagRec**與*HandleType*的 SQL_HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLSetStmtAttr** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|Description|  
+|SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01S02 的警告|選項值已變更|驅動程式不支援指定的值*ValuePtr*，或是在指定的值*ValuePtr*不實作的工作狀況，造成無效，因此驅動程式取代相似的值。 (**SQLGetStmtAttr**可以呼叫以判斷暫時替代的值。)取代值無效， *StatementHandle*直到資料指標已關閉，此時陳述式屬性會還原為先前的值。 陳述式屬性可以變更為：<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -161,7 +161,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>陳述式屬性  
  下列表格中會顯示目前定義的屬性和這些功能的 ODBC 版本預期更多屬性將會定義驅動程式，以善用不同的資料來源。 ODBC; 保留範圍的屬性驅動程式開發人員必須保留自己從開啟 群組的特定驅動程式使用的值。 如需詳細資訊，請參閱[驅動程式特定資料類型，描述元類型、 資訊類型、 診斷的型別，以及屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
-|Attribute|*ValuePtr*內容|  
+|attribute|*ValuePtr*內容|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|APD 中的後續呼叫的控制代碼**SQLExecute**和**SQLExecDirect**陳述式控制代碼上。 這個屬性的初始值會是一開始會配置陳述式時，隱含地配置描述項。 如果這個屬性的值設為 SQL_NULL_DESC 或原先配置描述元的控制代碼，先前的陳述式控制代碼關聯的明確配置的 APD 控制代碼分開，而且陳述式控制代碼會還原成隱含地配置 APD 控制代碼。<br /><br /> 無法將設定這個屬性，隱含地配置給另一個陳述式的描述項控制代碼或隱含地設定相同的陳述式; 的另一個描述元控制代碼隱含地配置描述項控制代碼無法與多個陳述式或描述項控制代碼相關聯。|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|針對後續的提取陳述式控制代碼上 ARD 控制代碼。 這個屬性的初始值會是一開始會配置陳述式時，隱含地配置描述項。 如果這個屬性的值設為 SQL_NULL_DESC 或原先配置描述元的控制代碼，先前的陳述式控制代碼關聯的明確配置的 ARD 控制代碼分開，而且陳述式控制代碼會還原成隱含地配置 ARD 控制代碼。<br /><br /> 無法將設定這個屬性，隱含地配置給另一個陳述式的描述項控制代碼或隱含地設定相同的陳述式; 的另一個描述元控制代碼隱含地配置描述項控制代碼無法與多個陳述式或描述項控制代碼相關聯。|  
@@ -214,6 +214,6 @@ SQLRETURN SQLSetStmtAttr(
 |設定連接屬性|[SQLSetConnectAttr 函式](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
 |設定的單一欄位的描述元|[SQLSetDescField 函式](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

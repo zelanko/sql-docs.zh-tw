@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978418b3341bf82e0d7560052e68fecbbeb3c59b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d175970f31ac75e3d94fe23bfc89304ac316e3ab
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>資料長度，緩衝區長度和截斷
 *資料長度*資料的位元組長度，會儲存在應用程式的資料緩衝區，不是它會儲存在資料來源。 此差異很重要的因為資料通常會儲存在資料來源中比資料緩衝區中的不同類型。 因此對於傳送至資料來源的資料，這是之前轉換成資料來源的類型資料的位元組長度。 從資料來源擷取資料，這可以是資料的位元組長度的資料緩衝區的型別以及之前完成任何截斷的轉換後。  

@@ -1,7 +1,7 @@
 ---
 title: "使用範例主控台指令碼檔案 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13046bbc813a7c508593fc54903850ec8cbb09af
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18787dab013e29427743b0712a9d56b28fbddd3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用範例主控台指令碼檔案 (DB2ToSQL)
 幾個範例檔案與產品一起提供給使用者參考和使用方式。 本章節描述的方式，輕鬆地自訂這些指令碼，以符合使用者需求。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  **ConversionAndDataMigrationSample.xml:**此範例可讓使用者從資料移轉至轉換執行端對端移轉。 強制屬性值，它們將會需要變更清單如下：  
   
-    |命令名稱|Description|Attribute|  
+    |命令名稱|描述|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|目標結構描述的來源資料庫的結構描述對應。|`source-schema:`指定轉換所需的來源資料庫。<br /><br />`sql-server-schema`： 指定要移轉到目標資料庫|  
     |`convert-schema`|執行從來源到目標結構描述的結構描述轉換。<br /><br />如果使用者以評估多個物件具有 / 資料庫他可以指定多個`metabase-object`節點中所示`convert-schema`命令的範例 4 的範例主控台指令碼檔案。|`object-name`： 指定來源資料庫/將物件轉換所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更`object-name`|  

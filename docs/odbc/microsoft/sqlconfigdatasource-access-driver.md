@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ffa0ff5fe4f788a3ec72ee003db166514f132db
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 27658fe72c79409a32435971bfac8d10ce92cded
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource （存取驅動程式）
 > [!NOTE]  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
   
  **SQLConfigDataSource**函式，用於新增、 修改或刪除資料來源以動態方式使用下列關鍵字。  
   
-|關鍵字|Description|  
+|關鍵字|描述|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|欄位排序順序。<br /><br /> 這會設定為相同的選項**定序順序**安裝程式 對話方塊中。|  
 |COMPACT_DB|資料庫檔案上執行資料壓縮。 具有下列格式： COMPACT_DB = < path_name >< optionaL_sort_order >\<選擇性加密關鍵字 >。<br /><br /> 當使用 COMPACT_DB 關鍵字使用 DSN 關鍵字在相同陳述式，此驅動程式會忽略 DSN 關鍵字。 因此，壓縮的資料庫，並指定資料來源名稱是兩步驟程序。|  

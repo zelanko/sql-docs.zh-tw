@@ -3,10 +3,10 @@ title: "連接至應用裝置節點 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
 caps.latest.revision: "19"
-ms.openlocfilehash: 00db55a8c4835407d9b5aeb2ce7dac30f94eb888
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d7a6f0def6b7cedb5bf7a7306fd10a3f167335e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-appliance-nodes"></a>連接至應用裝置節點
 本主題說明各種不同的方式可連接到 Analytics Platform System 應用裝置中的每個節點。  

@@ -3,7 +3,7 @@ title: "CreateRecordset 方法 (RDS) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a1bec5dc5b8c0e159755c9689aac0c9bfc40217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7046143a53241622c7bcf03610c416715024fcc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 建立空的中斷連接[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -51,9 +51,9 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  A **Variant**的定義中的每個資料行的屬性陣列**資料錄集**建立。 每個資料行定義包含四個必要的屬性，以及一個選擇性屬性的陣列。  
   
-|Attribute|說明|  
+|attribute|描述|  
 |---------------|-----------------|  
-|名稱|資料行標頭的名稱。|  
+|[屬性]|資料行標頭的名稱。|  
 |類型|資料類型的整數。|  
 |大小|以字元為單位，不論資料類型寬度的整數。|  
 |Null 屬性|布林值。|  
@@ -109,7 +109,7 @@ object.CreateRecordset(ColumnInfos)
 |-|-|  
 |[DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CreateRecordset 方法範例 (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
  [CreateRecordset 方法範例 (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
  [CreateObject 方法 (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac759747a088f98f1426afedf8623169d91b113f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4964565ce7de30b30fa3dc4c7705c5656ebcb88b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-support"></a>交易支援
 交易程度是支援的驅動程式定義。 ODBC 被設計來管理多個更新，其資料不需要在單一使用者或桌面資料庫上實作。 此外，某些支援交易的資料庫進行，只讓資料操作語言 (DML) 陳述式的 SQL。沒有限制或特殊交易語意有關使用資料定義語言 (DDL) 使用中交易時。 也就是可能對資料表的多個同時更新，但對變更的數目與定義的資料表在交易期間的交易支援。  

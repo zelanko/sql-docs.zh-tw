@@ -1,7 +1,7 @@
 ---
 title: "連接到 Oracle (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 9f2db42d3770626ef983b4d45473ad5827c604f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 04f87810ef02030a95c06870012972f307c41f33
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-oracle-oracletosql"></a>連接到 Oracle (OracleToSQL)
 使用**Connect to Oracle**對話方塊連接到您想要移轉的 Oracle 資料庫。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
   
 這是標準模式選項。  
   
-**使用者名稱**  
+**User name**  
 輸入 SSMA 將用來連接到 Oracle 資料庫的使用者名稱。  
   
 **密碼**  

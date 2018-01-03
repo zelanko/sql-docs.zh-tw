@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 83c2d0752cc8b786a9de84d1a5005a8bc0c5b5f5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>登錄項目 （Visual FoxPro ODBC 驅動程式）
 當您安裝 Visual FoxPro ODBC 驅動程式時，安裝程式會更新您的系統登錄中，登錄機碼 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini，若要加入新的金鑰，呼叫 Microsoft Visual FoxPro 驅動程式中。 下該機碼，會使用下表中描述的值。  
   
-|值名稱|值類型|值|  
+|值名稱|值類型|ReplTest1|  
 |----------------|----------------|-----------|  
 |APILevel|REG_SZ|"1"|  
 |ConnectFunctions|REG_SZ|「 YYN"|  
@@ -44,16 +44,16 @@ ms.lasthandoff: 11/20/2017
   
  安裝程式也會加入 「 Visual FoxPro 檔案 」，表示預設 Visual FoxPro 驅動程式時，您的系統 HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini 索引鍵的索引鍵。 此機碼，安裝程式會將下表中描述的值。  
   
-|值名稱|值類型|值|  
+|值名稱|值類型|ReplTest1|  
 |----------------|----------------|-----------|  
 |驅動程式|REG_SZ|Vfpodbc.dll 檔案系統路徑|  
   
  Visual FoxPro ODBC 資料來源加入您的 ODBC 組態，每當新的金鑰就會加入該資料來源名稱。 資料來源的值對應於您在設定的值**ODBC Visual FoxPro 安裝**對話方塊，如同下表所列。  
   
-|值名稱 （關鍵字）|值類型|值|  
+|值名稱 （關鍵字）|值類型|ReplTest1|  
 |----------------------------|----------------|-----------|  
 |自動分頁|REG_SQ|任何支援的定序順序|  
-|Description|REG_SZ|使用者資料來源的描述|  
+|描述|REG_SZ|使用者資料來源的描述|  
 |驅動程式||Vfpodbc.dll 檔案系統路徑|  
 |排除||[是] 或 [否]|  
 |BackgroundFetch||[是] 或 [否]|  

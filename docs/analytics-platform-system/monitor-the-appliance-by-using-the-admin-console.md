@@ -3,10 +3,10 @@ title: "使用管理主控台 (Analytics Platform System) 監視的應用裝置"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
 caps.latest.revision: "26"
-ms.openlocfilehash: c9a2d9e7191a1f362dfc998254f69a2a71e32aac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>使用管理主控台來監視應用裝置
 系統管理員主控台是 SQL Server PDW web 應用程式，可呈現的應用裝置狀態、 運行狀況和效能資訊。 使用者連線到系統管理員主控台，透過 Internet Explorer。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 資源  
 顯示 PDW 資源鎖定及其目前狀態的清單。  
   
-儲存空間  
+Storage  
 摘要說明的 PDW 儲存體使用量。  
   
 效能監視  
@@ -85,7 +85,7 @@ HDFS
   
 顯示的硬體和軟體的警示。  
   
-儲存空間  
+Storage  
 摘要說明 HDInsight 儲存使用量。  
   
 效能監視  
@@ -118,6 +118,6 @@ HDFS
 |監視負載、 備份和還原的其他資訊。|按一下**載入**或**備份/還原**。|  
 |效能資訊|按一下**效能監視器**。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [應用裝置監視 &#40;Analytics Platform System &#41;](appliance-monitoring.md)  
   

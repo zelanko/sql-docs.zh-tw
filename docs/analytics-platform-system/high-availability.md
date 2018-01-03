@@ -3,10 +3,10 @@ title: "分析平台系統的高可用性"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 5ab245e9-0316-4d25-a626-4745ce856925
 caps.latest.revision: "9"
-ms.openlocfilehash: 78b55161af9bfe8da16d7276bddc4e2f2cff9ee5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11733b45ba25f625ea2d3d601939973e9137b15d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analytics-platform-system-high-availability"></a>分析平台系統的高可用性
 描述如何 Analytics Platform System (APS) 的高可用性架構。  
@@ -27,12 +27,12 @@ ms.lasthandoff: 11/17/2017
 ## <a name="high-availability-architecture"></a>高可用性架構  
 ![應用裝置架構](media/appliance-architecture.png "應用裝置架構")  
   
-## <a name="network"></a>網路  
+## <a name="network"></a>Network  
 APS 應用裝置網路可用性有兩個 InfiniBand 網路。 如果其中一個 InfiniBand 網路效能降低，另一個控制器則仍可使用。 此外，Active Directory 已複寫至正確的 InfiniBand 網路解析內送要求的網域控制站。  
   
 如需詳細資訊，請參閱[設定 InfiniBand 網路介面卡](configure-infiniband-network-adapters.md)。  
   
-## <a name="storage"></a>儲存空間  
+## <a name="storage"></a>Storage  
 若要保護資料安全，AP 使用 RAID 1 鏡像即可維護所有使用者資料的兩個副本。 當磁碟失敗時，硬體系統會重建備援的磁碟上的資料，並設定是磁碟失敗警示。  
   
 將可用的資料保持在線上，AP 會使用 Windows 儲存空間 」 與 「 叢集共用磁碟區來管理直接連結存放裝置的使用者資料磁碟。 沒有一個儲存集區，每個組織成叢集共用磁碟區可透過掛接點的運算節點主機資料延展單位。  

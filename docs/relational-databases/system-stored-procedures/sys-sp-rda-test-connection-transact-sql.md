@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 897eb5ff888873c7e9befcdb850b13dd2dd9be03
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e7376d3b6fa4bebac0e0b176bd4144d6bec54b0c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -73,12 +73,12 @@ EXECUTE sys.sp_rda_test_connection
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|link_state|int|下列的值，對應至值的其中一個**link_state_desc**。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state|ssNoversion|下列的值，對應至值的其中一個**link_state_desc**。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
 |link_state_desc|varchar （32)|下列的值，對應至前述其中一個值**link_state**。<br /><br /> -狀況良好<br />     SQL Server 與遠端 Azure 伺服器是狀況良好。<br />-ERROR_AZURE_FIREWALL<br />     Azure 防火牆阻止 SQL Server 與遠端 Azure 伺服器之間的連結。<br />-ERROR_NO_CONNECTION<br />     SQL Server 無法建立遠端 Azure 伺服器的連接。<br />-ERROR_AUTH_FAILURE<br />     發生驗證錯誤會使得 SQL Server 與遠端 Azure 伺服器之間的連結。<br />-錯誤<br />     驗證問題、 連線問題或防火牆問題不是錯誤導致 SQL Server 與遠端 Azure 伺服器之間的連結。|  
-|error_number|int|發生的錯誤數目。 如果沒有發生錯誤，此欄位為 NULL。|  
-|error_message|nvarchar （1024)|錯誤訊息。 如果沒有發生錯誤，此欄位為 NULL。|  
+|error_number|ssNoversion|發生的錯誤數目。 如果沒有發生錯誤，此欄位為 NULL。|  
+|error_message|nvarchar(1024)|錯誤訊息。 如果沒有發生錯誤，此欄位為 NULL。|  
   
 ## <a name="permissions"></a>Permissions  
  需要 db_owner 權限。  
@@ -87,7 +87,7 @@ EXECUTE sys.sp_rda_test_connection
   
 ### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>請檢查 SQL Server 遠端 Azure 伺服器的連線  
   
-```tsql  
+```sql  
 EXECUTE sys.sp_rda_test_connection @database_name = N'<Stretch-enabled database>'  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
 ### <a name="check-the-azure-firewall"></a>請檢查 Azure 防火牆  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -113,11 +113,11 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<防火牆相關的錯誤號碼 >*|*\<防火牆相關的錯誤訊息 >*|  
+|@shouldalert|ERROR_AZURE_FIREWALL|*\<防火牆相關的錯誤號碼 >*|*\<防火牆相關的錯誤訊息 >*|  
   
 ### <a name="check-authentication-credentials"></a>請檢查驗證認證  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -133,7 +133,7 @@ GO
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>檢查遠端 Azure 伺服器的狀態  
   
-```tsql  
+```sql  
 USE <SQL Server database>  
 GO  
 EXECUTE sys.sp_rda_test_connection   

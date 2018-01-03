@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63ebaeb737f3e1d1b6abbf2a8b4800161a82e9ef
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b2680a591628811fb9617077700d05981ece2a2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_type=** ] *frequency_type*  
  指出作業執行時間的值。 *frequency_type*是**int**，預設值是**0**，而且可以是下列值之一：  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**4**|每日|  
@@ -86,7 +86,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_interval=** ] *frequency_interval*  
  執行作業的天數。 *frequency_interval*是**int**，預設值是 0，而定的值*frequency_type*下表所示：  
   
-|值|效果|  
+|ReplTest1|效果|  
 |-----------|------------|  
 |**1** （一次）|*frequency_interval*未使用。|  
 |**4** （每天）|每個*frequency_interval*天。|  
@@ -99,7 +99,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_subday_type=** ] *frequency_subday_type*  
  指定的單位*frequency_subday_interval*。 *frequency_subday_type*是**int**，沒有預設值，它可以是下列值之一：  
   
-|值|描述 (單位)|  
+|ReplTest1|描述 (單位)|  
 |-----------|--------------------------|  
 |**0x1**|在指定的時間|  
 |**0x4**|Minutes|  
@@ -113,7 +113,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval*是**int**，沒有預設值，它可以是下列值之一：  
   
-|值|描述 (單位)|  
+|ReplTest1|描述 (單位)|  
 |-----------|--------------------------|  
 |**1**|第一個|  
 |**2**|第二個|  
@@ -168,7 +168,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  
  ## <a name="example"></a>範例
  下列範例會指定作業排程`SaturdayReports`會同時執行每個星期六的上午 2:00。
-```tsql  
+```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name
         @name = N'Weekly_Sat_2AM',  -- Schedule name
@@ -178,7 +178,7 @@ EXEC msdb.dbo.sp_add_jobschedule
         @active_start_time = 20000 -- 2:00 AM
 ```
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立並附加排程至作業](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
  [排程的作業](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [建立排程](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ecd939c775b18efd2f08d4d34b7ee393c6146ccb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5b18d5969cc2586fec45320af4a754a12276663d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel 資料類型
 下表顯示如何將 Microsoft Excel 驅動程式資料類型對應至 ODBC SQL 資料類型。 Microsoft Excel 驅動程式會將這些資料類型指派給資料行中的資料為基礎的 Microsoft Excel 資料表中資料行。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
  下表顯示 Microsoft Excel 資料類型的限制。  
   
-|資料類型|Description|  
+|資料類型|描述|  
 |---------------|-----------------|  
 |加密的資料|Microsoft Excel 驅動程式無法讀取加密的資料。|  
 |錯誤字串|Microsoft Excel 驅動程式不能傳回 Microsoft Excel 錯誤值的字元字串 (# n/A ！，#VALUE ！，#REF ！、 #DIV/0 ！，#NUM ！，#NAME？，和 #NULL ！)，但改為傳回 NULL。|  

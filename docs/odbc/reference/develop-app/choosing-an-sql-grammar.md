@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b7d30a5a79391025b1be0312ca2020de47c2db5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6eedc2466842d922e1b10445500f05ad904d1a0b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-an-sql-grammar"></a>選擇 SQL 文法
 當建構 SQL 陳述式的第一個決策是要使用的文法。 除了可從各種標準內文，例如 Open Group、 ANSI 和 ISO 文法幾乎 DBMS 廠商定義自己的文法，其中每個稍有不同於標準。  

@@ -3,10 +3,10 @@ title: "判斷輪詢頻率 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 062c0e3d-f7d0-44f1-aeab-a9bd17dc6fdd
 caps.latest.revision: "7"
-ms.openlocfilehash: fb32abc38a90cd7450dc310a9f73eb7a5d72b5fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1dce371320f42df646e861b1323b352966ae9916
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determine-polling-frequency"></a>判斷輪詢頻率
 本主題說明如何判斷 SQL Server PDW 應用裝置警示的輪詢頻率。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 更頻繁地輪詢可接受的但太過頻繁的輪詢可以干擾[sys.dm_pdw_nodes_exec_requests](http://msdn.microsoft.com/en-us/library/ms177648(v=sql11).aspx) DMV。  這可讓使用者診斷查詢效能問題很難那里查詢快速復原超出檢視。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [應用裝置監視 &#40;Analytics Platform System &#41;](appliance-monitoring.md)  
   

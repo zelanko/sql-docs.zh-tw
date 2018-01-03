@@ -2,9 +2,11 @@
 title: "自動的安裝的 Python 機器學習服務 （資料庫） |Microsoft 文件"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: r-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77d9a8fcaca2aa8161d6763cda74239754da41d5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a159a3198037e21664bb9b07647a01b1d5317d22
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>自動的安裝的 Python 機器學習服務 （資料庫）
 
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/01/2017
 > [!NOTE]
 > 別忘了要包含授權合約，一個用於 Python，另一個適用於 SQL Server 的命令列引數。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 開始安裝程序之前，請注意下列需求：
 

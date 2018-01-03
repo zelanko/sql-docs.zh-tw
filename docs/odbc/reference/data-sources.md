@@ -1,11 +1,11 @@
 ---
-title: "資料來源 |Microsoft 文件"
+title: "資料來源 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -19,11 +19,11 @@ caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: f7d67e1e67a872c33865a95619ccb1c54ef7f8f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84c415fd10a757cebfc365759d7fb038f9630ec4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-sources"></a>資料來源
 A*資料來源*是資料的來源。 它可以是檔案時，DBMS 或甚至即時資料摘要上特定資料庫。 資料可能會位於與程式，相同的電腦或網路上的某個地方的另一部電腦上。 例如，資料來源可能是 OS/2® 作業系統，透過 Novell® Netware; 上執行 Oracle DBMS透過閘道; 存取 IBM DB2 DBMS伺服器目錄中; Xbase 檔案的集合或本機的 Microsoft® Access 資料庫檔案。  
