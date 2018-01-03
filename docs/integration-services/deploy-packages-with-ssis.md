@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 26a983c967941ef068600cd6b7efc115aba14515
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5cdab7fc8814d7a688329b2255e181adfd0c9492
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署封裝
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供數個工具，可讓您輕鬆地將套件部署到另一部電腦。 部署工具也可以用來管理任何相依性，例如封裝所需的組態和檔案。 在這個教學課程中，您會學到如何使用這些工具，將封裝及其相依性安裝到目標電腦上。    
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 這個教學課程的主要對象是已經熟悉基本檔案系統作業，但對於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]可用的新功能較為陌生的使用者。 為了進一步了解在這個教學課程中所要用到的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 基本概念，若能先完成下列 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程，將會很有幫助： [SSIS 如何建立 ETL 封裝](../integration-services/ssis-how-to-create-an-etl-package.md)。    
     
 **來源電腦。** 要用來建立部署配套的電腦 **必須安裝下列元件：**
-- SQL Server  
+- [SQL Server]  
 - 範例資料、完成的套件、組態和讀我檔案。 如果您下載 [Adventure Works 2014 範例資料庫](https://msftdbprodsamples.codeplex.com/releases/view/125550)，則會同時安裝這些檔案。     
 > **注意！** 請確定您具有在 AdventureWorks 中建立和卸除資料表或您使用的其他資料的權限。         
     
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
     
 **目的地電腦。** 要在其中部署套件的電腦 **必須安裝下列元件：**    
     
-- SQL Server
+- [SQL Server]
 - 範例資料、完成的套件、組態和讀我檔案。 如果您下載 [Adventure Works 2014 範例資料庫](https://msftdbprodsamples.codeplex.com/releases/view/125550)，則會同時安裝這些檔案。 
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    

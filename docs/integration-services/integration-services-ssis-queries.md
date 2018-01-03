@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81dd719383f3a05356d15677ce61bad5e8962807
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86ca875378afdd32cf509767eb3c02dc3ff0154d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查詢
   「執行 SQL」工作、OLE DB 來源、OLE DB 目的地和「查閱」轉換可使用 SQL 查詢。 在「執行 SQL」工作中，SQL 陳述式可建立、更新和刪除資料庫物件和資料；執行預存程序；以及執行 SELECT 陳述式。 在 OLE DB 來源和「查閱」轉換中的 SQL 陳述式通常都是 SELECT 陳述式或 EXEC 陳述式。 後者最常執行傳回結果集的預存程序。  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/20/2017
  **工具列**  
  使用工具列來管理資料集、選取要顯示的窗格，以及控制查詢功能。  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**顯示/隱藏圖表窗格**|顯示或隱藏 **[圖表]** 窗格。|  
 |**顯示/隱藏方格窗格**|顯示或隱藏 **[方格]** 窗格。|  
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/20/2017
  **查詢定義**  
  查詢定義會提供可在其中定義和測試查詢的工具列和窗格。  
   
-|窗格|說明|  
+|窗格|描述|  
 |----------|-----------------|  
 |**圖表** 窗格|在圖表中顯示查詢。 此圖表顯示查詢所包括的資料表及其聯結方式。 選取或清除資料表之資料行旁邊的核取方塊，以便在查詢輸出中加入或移除。<br /><br /> 將資料表加入查詢時，查詢產生器會依據資料表中的索引鍵來建立以資料表為基礎的資料表之間的聯結。 若要加入聯結，請將欄位從一個資料表拖曳至另一個資料表的欄位。 若要管理聯結，請以滑鼠右鍵按一下聯結，然後選取功能表選項。<br /><br /> 以滑鼠右鍵按一下 [圖表] 窗格，即可加入或移除資料表、選取所有資料表以及顯示或隱藏窗格。|  
 |**方格** 窗格|在方格中顯示查詢。 您可以使用此方格，將資料行加入至查詢、從查詢移除資料行，以及變更每個資料行的設定。|  

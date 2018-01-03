@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0ae7abf60c9d2cf540a0daa73bd0bb6ceebb3729
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb605b3caeee875464e91ac811e6b760b0e353d2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +48,11 @@ ms.lasthandoff: 11/17/2017
   
      [建議](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要執行預存程序，使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
 -   比對系統程序名稱時，會使用呼叫資料庫定序。 因此，您務必在程序呼叫中使用大小寫完全相符的系統程序名稱。 例如，如果此程式碼是在有區分大小寫定序的資料庫內容中執行，就會失敗：  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
      系統程序會以 **sp_**前置詞開頭。 由於這些程序會以邏輯的方式出現在所有使用者和系統定義的資料庫中，因此可以從任何資料庫中執行，而不必完整限定程序名稱。 不過，我們建議您使用結構描述將所有系統程序名稱限定為 **sys** 結構描述名稱，以避免名稱衝突。 下列範例示範呼叫系統程序的建議方法。  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
      下列範例示範執行使用者定義程序的建議方法。 您會發現程序接受一個輸入參數。 如需指定輸入和輸出參數的相關資訊，請參閱 [指定參數](../../relational-databases/stored-procedures/specify-parameters.md)。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
      -或-  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Security"></a> 安全性  
  如需詳細資訊，請參閱 [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) 和 [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  如需詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)中的預存程序。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -158,7 +158,7 @@ ms.lasthandoff: 11/17/2017
      **傳遞 Null 值**  
      傳遞 NULL 作為參數的值。  
   
-     **值**  
+     **ReplTest1**  
      呼叫程序時輸入參數的值。  
   
 5.  若要執行預存程序，請按一下 **[確定]**。  
@@ -171,9 +171,9 @@ ms.lasthandoff: 11/17/2017
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例示範如何執行需要一個參數的預存程序。 此範例會執行 `uspGetEmployeeManagers` 預存程序，並指定值  `6` 做為 `@EmployeeID` 參數。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何執行需要一個參數的預存程序。 此範例會執行 `uspGetEmployeeManagers` 預存程序，並指定值  `6` 做為 `@EmployeeID` 參數。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -186,9 +186,9 @@ GO
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 設定自動執行程序。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 設定自動執行程序。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -202,16 +202,16 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 設定停止自動執行程序。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 設定停止自動執行程序。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
     , @OptionValue = 'off';  
 ```  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
   
 ## <a name="see-also"></a>另請參閱  
  [指定參數](../../relational-databases/stored-procedures/specify-parameters.md)   

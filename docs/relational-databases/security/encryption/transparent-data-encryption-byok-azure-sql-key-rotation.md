@@ -7,23 +7,27 @@ documentationcenter:
 author: becczhang
 manager: jhubbard
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: quick start create, mvc
+ms.custom: 
+ms.component: security
 ms.workload: Inactive
-ms.tgt_pltfrm: portal
+ms.tgt_pltfrm: 
 ms.devlang: na
-ms.topic: hero-article
+ms.topic: article
 ms.date: 08/07/2017
 ms.author: ryzhang26
-ms.openlocfilehash: b682c9059d9a6365beebeff549d4c2840c04d477
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 85a1d74907dc3e6b887a172247850b9bc4452b31
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>使用 PowerShell 輪替透明資料加密 (TDE) 保護裝置 
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 本＜如何＞指南說明使用 Azure Key Vault 之 TDE 保護裝置的 Azure SQL 伺服器金鑰輪替。 輪替 Azure SQL 伺服器的 TDE 保護裝置，表示切換到保護伺服器資料庫的新非對稱金鑰。 金鑰輪替是一項線上作業，應該只需要幾秒鐘即可完成，因為這只是解密和重新加密資料庫的資料加密金鑰，不是整個資料庫。
 
@@ -37,11 +41,11 @@ ms.lasthandoff: 11/18/2017
 > 變換之後**請勿刪除**舊版金鑰。  金鑰變換後，有些資料仍使用舊版金鑰加密，例如較舊的資料庫備份。 
 >
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 本＜如何＞指南假設 Azure SQL Database 或資料倉儲的 TDE 保護裝置已經使用 Azure Key Vault 的金鑰。 請參閱[有 BYOK 支援的透明資料加密](transparent-data-encryption-byok-azure-sql.md)。
 - 您必須安裝並執行 Azure PowerShell 3.7.0 版或更新的版本。 
-- [建議但非必要] 先在硬體安全性模組 (HSM) 或本機金鑰存放區中建立 TDE 保護裝置的金鑰內容，再將金鑰內容匯入 Azure Key Vault。 若要深入了解，請遵循[使用硬體安全性模組 (HSM) 與 Key Vault 的指示](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-get-started)。
+- [建議但非必要] 先在硬體安全性模組 (HSM) 或本機金鑰存放區中建立 TDE 保護裝置的金鑰內容，再將金鑰內容匯入 Azure Key Vault。 若要深入了解，請遵循[使用硬體安全性模組 (HSM) 與 Key Vault 的指示](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)。
 
 ## <a name="option-1-auto-rotation"></a>選項 1：自動輪替
 
@@ -107,7 +111,7 @@ ms.lasthandoff: 11/18/2017
    -ResourceGroup <SQLDatabaseResourceGroupName> 
    ``` 
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 - 發生安全性風險時，了解如何移除可能遭盜用的 TDE 保護裝置：[移除可能遭盜用的金鑰](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)。 
 

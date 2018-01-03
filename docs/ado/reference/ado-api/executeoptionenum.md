@@ -3,7 +3,7 @@ title: "執行方式 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8357988f5082498114c435f899e898552fca1707
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dbb75cabcdaee3aebe300fce219b500f85dd6b86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executeoptionenum"></a>執行方式
 指定提供者如何執行命令。  
   
-|常數|值|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|表示命令應該以非同步方式執行。<br /><br /> 此值不能與結合[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值**adCmdTableDirect**。|  
 |**adAsyncFetch**|0x20|指示的其餘資料列中指定的初始的數量之後[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)應該以非同步方式擷取屬性。|  

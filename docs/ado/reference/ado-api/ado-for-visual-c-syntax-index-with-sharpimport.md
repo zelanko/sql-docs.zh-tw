@@ -3,7 +3,7 @@ title: "ADO 的 Visual c + + 語法索引 #import |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71bce9e2ce923dc9fed85493e1f986b5bb685abb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cd7db17ff6a333bb3583493ed633f6c01d35a24a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>Visual c + + 語法索引 #import ADO
 此索引是根據 Microsoft Visual c + + ADO 語言參考的交互參照和**#import**指示詞。  
@@ -62,5 +62,5 @@ ms.lasthandoff: 11/17/2017
   
 -   [資料錄集的事件](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [適用於 COM 的 ADO for Visual C++ 語法索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

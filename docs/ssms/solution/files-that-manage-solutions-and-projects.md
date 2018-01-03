@@ -3,7 +3,7 @@ title: "管理方案和專案的檔案 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 246a04e3e09565b936df2a057f1d37344e8637a9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3eff63b8a66d99b06a63e3fc3e6d365300e67541
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>管理方案和專案的檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題說明 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 專用的檔案類型。 依預設，所有方案及其專案都建立在 \My Documents\SQL Server Management Studio Projects 中。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="management-studio-solution-files"></a>Management Studio 方案檔  
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 所用的檔案類型與 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 不同。 這代表您無法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 Visual Studio 中開啟 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 方案檔可讓方案總管顯示一個用以管理檔案的圖形介面。  
    
-|延伸模組|檔案類型|說明|建立者|  
+|延伸模組|檔案類型|描述|建立者|  
 |-------------|-------------|---------------|--------------|  
 |.ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 方案物件|提供參考 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 專案、專案項目和方案之磁碟位置的環境|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]|  
   

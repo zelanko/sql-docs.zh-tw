@@ -3,7 +3,7 @@ title: "選項 (SQL Server 物件總管 - 指令碼頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b49bce06a339326d1458827f2712130c725453d3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cd88ab1a30053aed5bbf012b95dfde6dbf888d68
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>選項 (SQL Server 物件總管 - 指令碼頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此頁面設定指定碼選項，以在物件總管之物件操作功能表的下列命令中使用：  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 -   此頁面也可設定 [產生 SQL Server 指令碼精靈] 的編寫指令碼選項預設值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 即使選項設定相同，編輯 與 修改 命令所產生的結果，可能會與 編寫 <object>命令所產生的結果不同。 [編輯] 與 [修改] 命令的設計讓您可以在查詢編輯器工作階段期間，修改目前資料庫中的物件。 [編寫 <object> 指令碼為] 命令的設計則在讓您產生指令碼，供日後建立物件之用。  
   
 ## <a name="options"></a>選項。  

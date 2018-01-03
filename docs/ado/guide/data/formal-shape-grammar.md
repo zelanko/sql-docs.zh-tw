@@ -3,7 +3,7 @@ title: "型式圖形文法 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48fb9c051deb490a2652bda4d8cd39be335c3270
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 09f578dc3467c10be247e34c4ebb89807543052f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="formal-shape-grammar"></a>型式圖形文法
 這是建立任何圖形命令的正式文法：  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |\<字串 >|unicode 字元 [unicode 字元...]|  
 |\<運算式 >|Visual Basic 中為應用程式的運算元都是相同的資料列中的其他非計算資料行的運算式的。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [存取資料列中的階層式資料錄集](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [資料成形概觀](../../../ado/guide/data/data-shaping-overview.md)   
  [提供者所需的資料成形](../../../ado/guide/data/required-providers-for-data-shaping.md)   

@@ -3,9 +3,9 @@ title: "使用規則運算式搜尋文字 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d9837053135c6c0783d69d9544c84efd35cc5efe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4522ce26253a547b7cf55202f99a4e391f8fdaf3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>使用規則運算式搜尋文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 特定的規則運算式集可用在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [尋找和取代] 對話方塊的 [尋找目標] 欄位。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 |運算式|語法|描述|  
 |----------------|------------|-----------------|  
-|任何字元|。|符合任何單一字元，分行符號除外。|  
+|任何字元|執行個體時提供 SQL Server 登入。|符合任何單一字元，分行符號除外。|  
 |零個或多個|*|符合零或多個前導運算式出現項目，會產生所有可能的相符項目。|  
 |一個或多個|+|符合至少一個前導運算式出現項目。|  
 |行首|^|將相符字串固定在行首。|  

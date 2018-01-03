@@ -3,7 +3,7 @@ title: "DataControl 錯誤碼 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54dcd3721781ccb2889d88c2545d8bb3630cb7bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0886839245fa7a4dc0e2baee0dfaf010ff876e70
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 物件錯誤代碼
 下表列出[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件錯誤代碼。 正數低的兩個位元組十進位轉譯，就會顯示完整的錯誤程式碼和十六進位值負的十進位轉譯。
 
-|RDSDataControl 錯誤碼|Number|Description|
+|RDSDataControl 錯誤碼|Number|描述|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800A1011|暫止非同步作業時，無法執行作業。|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800A1009|不正確的內嵌 tablegram。|
@@ -52,5 +52,5 @@ ms.lasthandoff: 11/17/2017
 |**IDS_UpdatesFailed**|4098-2146824190 0x800A1002|無法更新資料庫。|
 |**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|DataControl **URL**屬性需要系統檔案 Urlmon.dll，找不到。|
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)

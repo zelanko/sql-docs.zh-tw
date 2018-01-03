@@ -3,7 +3,7 @@ title: "建立 WMI 事件警示 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,13 +18,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5d95c99f5252dc6c87329ca4d9d003eba748b11c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: da5a68bfb9a0a984c7d43b1f2c3c1de01b83c7af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="create-a-wmi-event-alert"></a>Create a WMI Event Alert
+# <a name="create-a-wmi-event-alert"></a>建立 WMI 事件警示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 [!INCLUDE[tsql](../../includes/tsql_md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中建立在伺服器事件的 WMI 提供者所監視的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件發生時，所引發的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 警示。  
   
 如需使用 WMI 提供者監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件的詳細資訊，請參閱 [伺服器事件類別和屬性的 WMI 提供者](http://msdn.microsoft.com/en-us/80767fe0-32ac-406a-81a0-8212cd6ce7e4)。 如需接收 WMI 事件警示通知所需權限的詳細資訊，請參閱 [選取 SQL Server Agent 服務的帳戶](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)。 如需 WQL 的詳細資訊，請參閱 [搭配伺服器事件的 WMI 提供者使用 WQL](http://msdn.microsoft.com/en-us/58b67426-1e66-4445-8e2c-03182e94c4be)。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **若要使用下列項目建立 WMI 事件警示：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  在 **[查詢]** 方塊中，指定會識別警示所回應之事件的 WQL 陳述式。  
   
-9. 按一下 **[確定]**。  
+9. 按一下 [確定] 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- creates a WMI event alert that retrieves all event properties for any ALTER_TABLE event that occurs on table AdventureWorks2012.Sales.SalesOrderDetail  

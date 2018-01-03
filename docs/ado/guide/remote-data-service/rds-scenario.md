@@ -3,7 +3,7 @@ title: "RDS 案例 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ec44d4f339b515bd02f153fde2d3e53874fcd05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10c9ee41428ab7a43beae2269060618f7d6e296b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-scenario"></a>RDS 案例
 > [!IMPORTANT]
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [通訊錄導覽按鈕](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [通訊錄應用程式的系統需求](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [RDS 的基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)   

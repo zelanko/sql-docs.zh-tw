@@ -3,7 +3,7 @@ title: "權限或安全性實體頁面 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/07/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: security
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bcdb1f8d446c5cadf94718f2ae7f59c9c0624caf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6dc65e94e95e978d47e9cb454337a52d0a6cc622
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="permissions-or-securables-page"></a>權限或安全性實體頁面
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [權限] 頁面或 [安全性實體] 頁面，以檢視或設定安全性實體的權限。 您可以從許多位置開啟此頁面。 此頁面的內容會隨著開啟頁面的方式以及頁面中包含的內容而稍有不同。 當頁面開啟時，頁面的上層方格可能會填入資料或是空白。 若要在上方格中加入項目，請按一下 **[搜尋]**。 在上方格中選取項目，然後在 **[明確]** 索引標籤上設定適當的權限。若要檢視彙總的權限，請使用 **[有效]** 索引標籤。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
  **名稱**  
  加入此方格的每一個主體或安全性實體名稱。  
   
- **類型**  
+ **型別**  
  描述每個項目的類型。  
   
 ## <a name="explicit-tab"></a>明確索引標籤  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="effective-tab"></a>有效索引標籤  
  主體所擁有而且與安全性實體有關的權限可能來自於針對幾個不同主體所設定的權限。 例如，可個別為登入授與權限，而登入也可以是某個群組的成員。 **[有效]** 索引標籤會顯示結合明確權限以及從群組或角色成員資格取得之權限的結果。 授與的權限會經過彙總。 拒絕權限會覆寫所有授與權限。  
   
- **[權限]**  
+ **Permissions**  
  權限的名稱。  
   
  **資料行**  

@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.component: search
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,13 +25,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7225aea0968aac310bc531c5c5b12f994c46c752
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0d70cc0b053c776f56041fbf961de711c4ad5c26
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   建立全文檢索索引時，您必須針對索引資料行指定資料行層級語言。 此資料行的全文檢索查詢將會使用指定之語言的 [斷詞工具與詞幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 。 在建立全文檢索索引並選擇資料行語言時，必須考慮一些事項。 這些考量與文字如何 Token 化，然後如何由全文檢索引擎編製索引有關。  
   
 > [!NOTE]  
@@ -50,7 +55,7 @@ ms.lasthandoff: 12/01/2017
   
      經測試顯示，新的斷詞工具在高度壓力的查詢環境中仍然保持健全狀態。  
   
--   安全性  
+-   Security  
   
      新的斷詞工具預設會在 SQL Server 中啟用，這點受惠於語言元件的安全性改善。 我們強烈建議您應該簽署外部元件 (例如，斷詞工具和篩選)，以便改善 SQL Server 的整體安全性和健全性。 您可以設定全文檢索來確認這些元件是否已簽署，方法如下所示：  
   

@@ -3,9 +3,9 @@ title: "執行 Transact-SQL 偵錯工具 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e081ce40af97789870b1ed63ff705db8113fb809
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 016079a4e88a669a8ea4be31652095cfc81b0184
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-the-transact-sql-debugger"></a>執行 Transact-SQL 偵錯工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在您開啟 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗之後，就可以啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具。 然後，您可以在偵錯模式中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，直到停止偵錯工具為止。 您可以設定選項來自訂偵錯工具的執行方式。  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
 |**Continue**|無法使用|**Continue**|ALT+F5|執行到下一個中斷點。 在處於偵錯模式的 [查詢編輯器] 視窗中放置焦點之前，**[繼續]** 是處於非使用中狀態。|  
 |**[偵錯]**|無法使用|**[偵錯]**|ALT+F5|讓 [查詢編輯器] 視窗進入偵錯模式，並且執行到第一個中斷點。 如果您在處於偵錯模式的 [查詢編輯器] 視窗中放置焦點， **[開始偵錯]** 就會由 **[繼續]**所取代。|  
 |**全部中斷**|無法使用|**全部中斷**|CTRL+ALT+BREAK|[!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不會使用這項功能。|  
-|**[停止偵錯]**|無法使用|**[停止偵錯]**|SHIFT+F5|讓 [查詢編輯器] 視窗離開偵錯模式，並且返回一般模式。|  
+|**停止偵錯**|無法使用|**[停止偵錯]**|SHIFT+F5|讓 [查詢編輯器] 視窗離開偵錯模式，並且返回一般模式。|  
 |**功能表上的**|無法使用|無法使用|無法使用|停止偵錯模式，但在 [查詢編輯器] 視窗中執行其餘陳述式。|  
 |**逐步執行**|無法使用|**逐步執行**|F11|執行下一個陳述式，而且如果下一個陳述式會執行預存程序、觸發程序或函數，就會在偵錯模式中開啟新的 [查詢編輯器] 視窗。|  
 |**不進入函數**|無法使用|**不進入函數**|F10|與 **[逐步執行]**相同，但是不會偵錯任何函數、預存程序或觸發程序。|  

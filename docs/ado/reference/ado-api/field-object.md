@@ -3,7 +3,7 @@ title: "欄位物件 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f0838ea34dbc5117c5c52ed7848e60b9bcf9ef6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 638ba9740e02ef403256b76a8fd800993b237fb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="field-object"></a>Field 物件
 代表具有通用的資料類型的資料行。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [欄位的物件屬性、 方法和事件](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -3,7 +3,7 @@ title: "其他語言中的錯誤處理 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/14/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5417b64044339867a3e34083d3e62e5416691939
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 328c8e8deb76066a27e42791c6b258bf9abd0946
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-errors-in-other-languages"></a>其他語言中處理錯誤
 為止，這一節已討論過從 Microsoft® Visual Basic® 觀點來看的錯誤。 本章節的其餘部分會提供您 Visual Basic 以外的語言中的錯誤處理的概觀。  

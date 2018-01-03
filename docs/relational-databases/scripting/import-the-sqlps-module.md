@@ -3,9 +3,9 @@ title: "匯入 SQLPS 模組 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 360350a7b8e051bcab2e24df508ea97b742c52a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae5fb5957e23a6ad4488a33587d227219855d6b8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-the-sqlps-module"></a>匯入 SQLPS 模組
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 從 PowerShell 管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的建議方式是將 **sqlps** 模組匯入 Windows PowerShell 環境中。 此模組會載入及註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 嵌入式管理單元和管理能力組件。  從 Windows PowerShell 3.0 開始，模組會在命令中使用模組中的任何 Cmdlet 或函數時自動匯入。 這項功能適用於包含在 PSModulePath 環境變數值的目錄中的任何模組。  如需詳細資訊，請參閱 [匯入 PowerShell 模組](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
@@ -75,7 +75,7 @@ Get-Module -ListAvailable -Name Sqlps;
 ## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [SQL Server PowerShell 提供者](../../relational-databases/scripting/sql-server-powershell-provider.md)   
- [使用 Database Engine Cmdlet](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
+ [使用資料庫引擎 Cmdlet](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
  [安裝 PowerShell 模組](https://msdn.microsoft.com/library/dd878350(v=vs.85).aspx)  
  [Import-Module](https://technet.microsoft.com/library/hh849725.aspx)
   

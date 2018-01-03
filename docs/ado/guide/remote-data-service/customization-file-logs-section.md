@@ -3,7 +3,7 @@ title: "自訂檔案記錄區段 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: be0416bacdc32c272b5c88139b06e5e133e6a43a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 80f9b0a4d00326d7e9a81554d96b07bbf0817c43
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customization-file-logs-section"></a>自訂檔案記錄檔 > 一節
 **記錄**區段包含指定名稱的作業期間會將錯誤記錄檔的記錄檔項目**DataFactory**。  
@@ -44,14 +44,14 @@ FileName
   
 ## <a name="remarks"></a>備註  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
 |**錯誤**|常值字串，表示這是記錄檔項目。|  
 |*FileName*|完整路徑和檔案名稱。 典型的檔案名稱是**c:\msdfmap.log**。|  
   
  記錄檔會包含使用者名稱、 HRESULT、 日期和時間的每個錯誤。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自訂檔案 SQL > 一節](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [自訂檔案 UserList > 一節](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

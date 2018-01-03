@@ -5,7 +5,7 @@ ms.date: 07/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4184ce50cbacda16e113122753b56a4e4ee682cf
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 3921b3ed3862218b1f2fd645641915fb4ed64ee5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/04/2017
   
  **下載**  
   
--   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。  
+-   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[評估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。  
   
 -   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/04/2017
   
  效能增強功能可讓您建立更大的模型、更有效率地載入資料，以及獲得更佳的整體效能。 這包括改進了 Microsoft Excel 增益集的效能，可降低資料載入時間，並可讓增益集能處理較大型的實體。  
   
- 如需 Microsoft Excel 增益集的詳細資訊，請參閱 [適用於 Microsoft Excel 的 Master Data Services 增益集](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)。  
+ 如需 Microsoft Excel 增益集的詳細資訊，請參閱 [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)。  
   
  下列改良功能包括在內。  
   

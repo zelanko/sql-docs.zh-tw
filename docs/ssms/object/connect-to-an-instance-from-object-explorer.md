@@ -3,7 +3,7 @@ title: "連線至 SQL Server 或 Azure SQL Database | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9f1f7bc813e3b22007c9a7ef58ce373e57fbe0c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 023641a1c7f298af6a946e3d9746bc8fe29145a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>連線至 SQL Server 或 Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 若要使用伺服器或資料庫，您必須先連線至伺服器。 您可以同時連線至多部伺服器。
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/05/2017
 
    ![已連線](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>Next Steps
 
 [設計、建立及更新資料表](../visual-db-tools/design-tables-visual-database-tools.md)
 

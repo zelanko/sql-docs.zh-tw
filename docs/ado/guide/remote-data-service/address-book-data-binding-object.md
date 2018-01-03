@@ -3,7 +3,7 @@ title: "解決活頁簿的資料繫結物件 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20adad3287a409a0d9dc05ea58397da32226f00b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22552b3b4f9574f04b5fec8a382ee792b1267ebf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="address-book-data-binding-object"></a>通訊錄資料繫結物件
 通訊錄應用程式會使用[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)繫結至資料的 SQL Server 資料庫 （在這個情況下，DHTML 資料表） 的視覺物件在應用程式的用戶端 HTML 網頁中的物件。 事件驅動的 VBScript 程式邏輯會使用[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)至：  
@@ -56,7 +56,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="generic-object-tag-parameters"></a>泛用物件標記參數  
  下表描述與物件標籤相關聯的參數。  
   
-|參數|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |***CLASSID***|唯一的、 128 位元數字，識別系統的內嵌物件的型別。 這個識別碼是在本機電腦的系統登錄中維護。 (如類別 Id **.RDSDataControl**物件，請參閱[.RDSDataControl 物件](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)|  
 |***ID***|定義用來識別程式碼中的內嵌物件的整個文件的識別項。|  
@@ -64,13 +64,13 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDSDataControl 標記參數  
  下表描述的特定參數**.RDSDataControl**物件。 (如需完整的清單**.RDSDataControl**物件參數，以及何時實作它們，請參閱[.RDSDataControl 物件](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)  
   
-|參數|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |[伺服器](../../../ado/reference/rds-api/server-property-rds.md)|如果您使用 HTTP，值是前面加上的伺服器電腦的名稱`http://`。|  
 |[連接](../../../ado/reference/rds-api/connect-property-rds.md)|會提供必要的連接資訊給**.RDSDataControl**連接到 SQL Server。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|設定或傳回用來擷取查詢字串[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [通訊錄命令按鈕](../../../ado/guide/remote-data-service/address-book-command-buttons.md)
 
 

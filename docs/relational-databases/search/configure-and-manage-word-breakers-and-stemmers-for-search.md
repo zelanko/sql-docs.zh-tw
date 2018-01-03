@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba873b9ae0f29caa7acc85e5d5daed8dcbfd22a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2df4759c6f2715706be48799e4190e309ffe3904
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>設定及管理搜尋的斷詞工具與字幹分析器
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 斷詞工具及詞幹分析器，會在所有全文檢索索引資料上執行語文分析。 語言分析會執行下列兩項作業：
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 
 若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索搜尋所支援的語言清單，請使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 這份清單中出現的語言，表示該語言有註冊斷詞工具。 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -63,7 +63,7 @@ SELECT * FROM sys.fulltext_languages
 
 若要查看已註冊的斷詞工具元件清單，請使用下列陳述式。
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -88,7 +88,7 @@ GO
   
 若要檢視特定資料行的斷詞工具語言，請執行下列陳述式。
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 
@@ -99,9 +99,9 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>MSSQLSERVER_30053 錯誤的相關資訊
   
-|屬性|Value|
+|屬性|ReplTest1|
 |-|-|
-|產品名稱|SQL Server|  
+|產品名稱|[SQL Server]|  
 |事件識別碼|30053|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  

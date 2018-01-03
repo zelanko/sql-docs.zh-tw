@@ -3,7 +3,7 @@ title: "ADO MD 集合 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: be5d496d2e3a01497066aefef59a9e0801b6e35e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9f01e6b9e7314df29c083ea0c105206959ab2eef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-collections"></a>ADO MD 集合
 |||  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 |[成員](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|包含**成員**物件層級或沿座標軸的位置。|  
 |[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|包含**位置**軸，定義某個點的物件。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO MD 應用程式開發介面參考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD 程式碼範例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD 列舉常數](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   

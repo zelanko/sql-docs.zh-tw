@@ -3,7 +3,7 @@ title: "ADO 物件和集合 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a6796b6511c81dc2a4f9100f656478bef3711b1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b2bd4d1caf6ad0f2b180804407aede35155208e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-objects-and-collections"></a>ADO 物件和集合
 ADO 是由下列九個物件和四個集合所組成。  
   
-|物件或集合|Description|  
+|物件或集合|描述|  
 |--------------------------|-----------------|  
 |**連接**物件|代表資料來源的唯一工作階段。 在用戶端/伺服器資料庫系統，可能相當於實際的網路連線到伺服器。 根據提供者、 某些集合、 方法或屬性所支援的功能**連接**物件可能無法使用。|  
 |**Command** 物件|用來定義特定的命令，例如 SQL 查詢，要針對資料來源執行。|  
@@ -43,5 +43,5 @@ ADO 是由下列九個物件和四個集合所組成。
 |**參數**集合|包含所有**參數**物件**命令**物件。|  
 |**錯誤**集合|包含所有**錯誤**為了回應單一提供者相關的失敗所建立的物件。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)

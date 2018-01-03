@@ -3,7 +3,7 @@ title: "RDS 的基本概念 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62b77eec9c166f2a26930e9ffec0e7edbfd11a5d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cdb5eb052c5bd5314977f7974d48dfb294ea5bde
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-fundamentals"></a>RDS 的基本概念
 > [!IMPORTANT]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [RDS 物件模型摘要](../../../ado/guide/remote-data-service/rds-object-model-summary.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [遠端資料存取的解決方案](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
  [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   

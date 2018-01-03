@@ -3,9 +3,9 @@ title: "尋找和取代 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31dc1f37e5f8bd3cdb5f11c244966037bd8eeca4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85901d1a79d1f6bffb1787a555c9ebb553f4cfe5
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-and-replace"></a>尋找和取代
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [尋找和取代] 對話方塊尋找檔案內的文字，並選擇性地取代。 **[尋找和取代]** 對話方塊的版本不同，選項也會有些微差異，視對話方塊以何種方式開啟而定。 在 **[編輯]** 功能表上，指向 **[尋找和取代]**，然後按一下 **[快速尋找]** 以開啟有尋找選項，但沒有取代選項的對話方塊。 在 **[編輯]** 功能表上，指向 **[尋找和取代]**，然後按一下 **[快速取代]** 以開啟同時具有尋找和取代選項的對話方塊。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
  **略過檔案**  
  當 [查詢] 所指定的值包含多個檔案時，即可使用。 如果不要搜尋或修改目前的檔案，請按一下此按鈕。 搜尋會繼續在 **[查詢]**清單中的下一個檔案進行。  
   
-## <a name="look-in"></a>[查詢]  
+## <a name="look-in"></a>查詢  
  **Look in**  
  選取位置以尋找 [尋找目標] 中指定的文字。 選項包括 **[目前的文件]**，這會搜尋開啟對話方塊時的焦點文件視窗；以及 **[所有開啟的文件]**，就會搜尋目前在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中開啟的所有文件視窗。  
   

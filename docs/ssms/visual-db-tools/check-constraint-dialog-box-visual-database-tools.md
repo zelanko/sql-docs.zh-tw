@@ -3,7 +3,7 @@ title: "檢查條件約束對話方塊 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 18d082efc3361d4ddc71983aedcb897c9cb5c2d8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b74db72d1d5993a0f6932701a307f5eba9431934
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>檢查條件約束對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 當您在資料表設計工具的資料表定義方格上按一下滑鼠右鍵，然後按 [檢查條件約束] 時，這個對話方塊便會出現。 此對話方塊包含一組附加至資料庫資料表的非唯一條件約束的屬性。 套用至唯一條件約束的屬性會出現在 [索引/索引鍵] 對話方塊中。  
@@ -34,10 +34,10 @@ ms.lasthandoff: 12/05/2017
 **選取的檢查條件約束**  
 列出可用的檢查條件約束。 若要檢視條件約束的屬性，請在清單中選取該條件約束。  
   
-**加入**  
+**[加入]**  
 為選取的資料庫資料表建立新的條件約束，並提供該條件約束的預設名稱和其他值。 在輸入條件約束的運算式之後，條件約束才會有效。  
   
-**Delete**  
+**刪除**  
 從資料表中刪除選取的條件約束。 若要刪除加入的檢查條件約束，請使用此按鈕移除該條件約束。  
   
 **一般類別目錄**  

@@ -3,7 +3,7 @@ title: "PersistFormatEnum |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,20 +20,20 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2695db14fdbdf05aba5b0a1b14b063ff6672a928
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee380cb3912ba93efb5f75555e9c2d08c38864cb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 指定用來儲存格式[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
-|常數|值|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|表示 Microsoft 進階資料 TableGram (ADTG) 格式。|  
-|**adPersistADO**|1|表示將會使用 ADO 自己可延伸標記語言 (XML) 格式。 這個值是 adPersistXML 相同，而且是為了回溯相容性。|  
-|**adPersistXML**|1|表示可延伸標記語言 (XML) 格式。|  
+|**adPersistADO**|@shouldalert|表示將會使用 ADO 自己可延伸標記語言 (XML) 格式。 這個值是 adPersistXML 相同，而且是為了回溯相容性。|  
+|**adPersistXML**|@shouldalert|表示可延伸標記語言 (XML) 格式。|  
 |**adPersistProviderSpecific**|2|表示提供者將保存**資料錄集**使用自己的格式。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  

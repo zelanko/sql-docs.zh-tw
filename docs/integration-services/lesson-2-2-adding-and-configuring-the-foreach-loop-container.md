@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4c5183131893849feca62582a63a0d2c25963631
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0d876424f15b5b27972f7dd78721daad8e7f67a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>課程 2-2 - 新增和設定 Foreach 迴圈容器
 在這項工作中，您將加入功能，於一般檔案的資料夾中形成迴圈，並對每個一般檔案套用在第 1 課使用的相同資料流程轉換。 您的作法是在控制流程中加入和設定 Foreach 迴圈容器。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  以滑鼠右鍵按一下剛新增的 [Foreach 迴圈容器]，並選取 [編輯]。  
   
-4.  在 [Foreach 迴圈編輯器] 對話方塊的 [一般] 頁面上，對 [名稱] 輸入 **Foreach File in Folder**。 按一下 **[確定]**。  
+4.  在 [Foreach 迴圈編輯器] 對話方塊的 [一般] 頁面上，對 [名稱] 輸入 **Foreach File in Folder**。 按一下 [確定] 。  
   
 5.  以滑鼠右鍵按一下 [Foreach 迴圈] 容器，按一下 [屬性]，然後在 [屬性] 視窗中，確認 **LocaleID** 屬性是設為 [英文 (美國)]。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/20/2017
     > [!IMPORTANT]  
     > 變數名稱會區分大小寫。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 5.  再按一下 [確定] 來結束 [Foreach 迴圈編輯器] 對話方塊。  
   

@@ -3,7 +3,7 @@ title: "逐步解說：加入與變更資料庫圖表 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d202d485b27b19a0d7b3461e0f427d996567b4f4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7835747f81513f26fb7e69a357094cdc1d8dcfe0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：加入與變更資料庫圖表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 這個逐步解說將說明如何建立與修改資料庫圖表，以及透過資料庫圖表元件對資料庫進行變更。 您將看到如何將資料表加入至圖表、建立資料表之間的關聯性、建立資料行上的條件約束和索引，以及變更您查看每個資料表的資訊層級。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
 為了完成這個逐步解說，您需要：  
   
 -   存取含有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 範例資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)]  
@@ -197,11 +197,11 @@ ms.lasthandoff: 12/05/2017
   
     此時會出現 [儲存] 對話方塊。 如果選取了 [受影響資料表的警告]，便會列出有關新的或變更的資料表的資訊。  
   
-2.  按一下 **[確定]**。  
+2.  按一下 [確定] 。  
   
 3.  如果發生任何錯誤，[儲存後告知] 對話方塊會顯示錯誤及其原因。 修正錯誤並再一次儲存圖表。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 這是含有兩個現有的及兩個新的資料表的基本圖表，但是已經具體而微地說明其圖表化現有資料庫或透過視覺化方式建立新結構描述的潛力。 建議您進一步研究的部分包括：  
   
 -   建立含有相關資料表群組的新圖表  

@@ -3,7 +3,7 @@ title: "程序重新整理方法範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 888f0a69ddcd49efad660dc86e60bc53a3862d85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b8844e9a9dc12477e1cedcc5f257fcd26545c960
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="procedures-refresh-method-example-vb"></a>程序重新整理方法範例 (VB)
 下列程式碼會示範如何重新整理[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)集合[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)。 這必要之前[程序](../../../ado/reference/adox-api/procedure-object-adox.md)物件從**目錄**可以存取。  
@@ -58,7 +58,7 @@ End Sub
 ' EndProceduresRefreshVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [程序集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

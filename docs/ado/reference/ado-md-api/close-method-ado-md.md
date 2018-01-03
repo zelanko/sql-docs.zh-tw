@@ -3,7 +3,7 @@ title: "Close 方法 (ADO MD) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 187d525cf0795457c87c540d68b62c03661e56b8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 73cfa5ac30f9b7ac4e5e7d616b5e4f9eba4a2bef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="close-method-ado-md"></a>Close 方法 (ADO MD)
 關閉開啟的資料格集。  
@@ -46,7 +46,7 @@ Cellset.Close
 ## <a name="applies-to"></a>適用於  
  [Cellset 物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [軸物件 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [資料格物件 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [成員物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)   

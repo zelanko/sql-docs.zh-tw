@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -32,13 +32,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7a5cf2737ac465c5d216a0d9a27a3c3e6e5836e0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 318e2d1481f9398780dafe56b3db3f24545242a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="dtutil-utility"></a>dtutil 公用程式
+# <a name="dtutil-utility"></a>Encrypt
   **dtutil** 命令提示字元公用程式可用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 這個公用程式可以複製、移動、刪除封裝，或確認封裝是否存在。 下列三個位置所儲存的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝都可以執行這些動作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區和檔案系統。 如果公用程式存取存放在 **msdb**中的封裝，則命令提示字元可能會需要使用者名稱和密碼。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，則命令提示字元需要使用者名稱和密碼。 如果遺漏使用者名稱， **dtutil** 會嘗試使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 封裝的儲存類型是由 **/SQL**、 **/FILE**和 **/DTS** 等選項來識別。  
   
  **dtutil** 命令提示字元公用程式不支援使用命令檔或重新導向。  
@@ -89,7 +89,7 @@ dtutil /option [value] [/option [value]]...
   
 #### <a name="parameters"></a>參數  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |/?|顯示命令提示字元選項。|  
 |/C[opy] *location;destinationPathandPackageName*|對 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝指定複製動作。 若要使用此參數，您必須先使用 **/FI**、 **/SQ**或 **/DT** 選項來指定封裝的位置。 接下來，指定目的地位置目的地封裝名稱。 *destinationPathandPackageName* 引數指定複製 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝所在的位置。 如果目的地 *location* 是 **SQL**，則也必須在命令中指定 *DestUser*、 *DestPassword* 和 *DestServer* 引數。<br /><br /> 當 **Copy** 動作發現目的地有現有的封裝時， **dtutil** 會提示使用者確認是否要刪除封裝。 **Y** 回覆會覆寫封裝， **N** 回覆會結束程式。 當命令包含 *Quiet* 引數時，不會出現提示，並且會覆寫任何現有的封裝。|  
@@ -122,15 +122,15 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>dtutil 結束碼  
  **dtutil** 可設定結束碼，以便在偵測到語法錯誤、使用不正確的引數或指定無效的選項組合時，向您發出警告。 否則，公用程式就會報告「已成功地完成作業」。下表將列出封裝作業結束時， **dtutil** 公用程式所能設定的值。  
   
-|Value|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |0|已順利執行公用程式。|  
-|1|公用程式失敗。|  
+|@shouldalert|公用程式失敗。|  
 |4|公用程式找不到所要求的封裝。|  
 |5|公用程式無法載入所要求的封裝。|  
 |6|公用程式無法解析命令列，因為它包含語法或語意錯誤。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  您無法搭配 **dtutil**使用命令檔或重新導向。  
   
  命令列的選項順序不重要。  

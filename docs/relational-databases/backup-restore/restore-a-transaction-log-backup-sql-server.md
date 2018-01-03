@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 076c1c9a78441473fccd0435980ecfc4e735803c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e2c0047ec80addecb0825a7c8b85409ef62a0e5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>還原交易記錄備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ ms.lasthandoff: 11/17/2017
   
      [必要條件](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要還原交易記錄備份，使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -67,8 +67,8 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
- RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此，因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
+####  <a name="Permissions"></a> 權限  
+ RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -104,12 +104,12 @@ ms.lasthandoff: 11/17/2017
   
      下表列出方格的各資料行標頭，並描述各標頭的值。  
   
-    |標頭|值|  
+    |標頭|ReplTest1|  
     |------------|-----------|  
     |**Restore**|選取的核取方塊表示要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
     |**元件**|備份元件：[資料庫]、[檔案]或 \<空白> (針對交易記錄)。|  
-    |**資料庫**|執行備份所涉及的資料庫名稱。|  
+    |**[資料庫備份]**|執行備份所涉及的資料庫名稱。|  
     |**開始日期**|備份作業開始的日期和時間，以用戶端的區域設定表示。|  
     |**完成日期**|備份作業完成的日期和時間，以用戶端的區域設定表示。|  
     |**[第一個 LSN]**|備份組內第一筆交易的記錄序號。 針對檔案備份為空白。|  
@@ -136,12 +136,12 @@ ms.lasthandoff: 11/17/2017
   
          下表列出方格的各資料行標頭，並描述各標頭的值。  
   
-        |標頭|Value|  
+        |標頭|ReplTest1|  
         |------------|-----------|  
         |\<空白>|顯示選取標示的核取方塊。|  
         |**交易標示**|在認可交易時，由使用者所指定之標示交易的名稱。|  
-        |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
-        |**描述**|在認可交易時，由使用者所指定之標示交易的描述 (如果有的話)。|  
+        |**Date**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
+        |**說明**|在認可交易時，由使用者所指定之標示交易的描述 (如果有的話)。|  
         |**LSN**|標示之交易的記錄序號。|  
         |**[資料庫備份]**|認可標示的交易之資料庫的名稱。|  
         |**使用者名稱**|認可標示的交易之資料庫使用者的名稱。|  
@@ -168,7 +168,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **限制對還原資料庫的存取 (WITH RESTRICTED_USER)**  
   
-         僅有 **資料庫擁有者 (db_owner)**、 **資料庫建立者 (dbcreator)**或 **系統管理員 (sysadmin)**的成員可以使用還原資料庫。  
+         僅有 **db_owner**、 **dbcreator**或 **系統管理員**的成員可以使用還原資料庫。  
   
          選取此選項相當於使用 **RESTORE** 陳述式中的 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTRICTED_USER** 選項。  
   
@@ -245,14 +245,14 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  根據預設， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫使用簡單復原模式。 此範例需要修改資料庫以使用完整復原模式，如下所示：  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### <a name="a-applying-a-single-transaction-log-backup"></a>A. 套用單一交易記錄備份  
  下列範例一開始會使用名為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 備份裝置上的完整資料庫備份來還原 `AdventureWorks2012_1`資料庫。 此範例接著套用名為 `AdventureWorks2012_log`備份裝置上的第一個交易記錄備份。 最後，此範例復原了資料庫。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -270,7 +270,7 @@ GO
 #### <a name="b-applying-multiple-transaction-log-backups"></a>B. 套用多個交易記錄備份  
  下列範例一開始會使用名為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 備份裝置上的完整資料庫備份來還原 `AdventureWorks2012_1`資料庫。 此範例接著逐一套用名為 `AdventureWorks2012_log`備份裝置上的前三個交易記錄備份。 最後，此範例復原了資料庫。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  

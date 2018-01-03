@@ -3,7 +3,7 @@ title: "執行活頁簿 SQL 指令碼 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ab669066b0440807a4a2475817e0dbda047cb79
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 776f747ef66ac359b08665ae2b77cacc1f8a6fb9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-the-address-book-sql-script"></a>執行活頁簿 SQL 指令碼
 > [!IMPORTANT]
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  它會執行之後，請關閉**查詢**， **Query Analyzer**，和**Enterprise Manager** windows。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [執行通訊錄範例應用程式](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
 
 

@@ -3,7 +3,7 @@ title: "將儲存到 XML DOM 物件 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4dbb2e7b73deba13ca20facee3301ea7344b95fc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c16e724cd4a6e66d377da20a1b5b575941235b66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="saving-to-the-xml-dom-object"></a>儲存到 XML DOM 物件
 下列 Visual Basic 程式碼所示，您可以在 MSXML DOM 物件，執行個體的 XML 格式儲存資料錄集：  
@@ -40,5 +40,5 @@ rsXML.Save xDOM, adPersistADO   'Save Recordset directly into a DOM tree.
 ...  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

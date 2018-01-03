@@ -3,7 +3,7 @@ title: "Microsoft OLE DB 的遠端服務提供者 （ADO 服務提供者） |Mic
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fea86b408c80a0165ddfae0899df4fa072839163
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cbc0d0060a58d1e73fe2df94c598a1fa054abd15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 的遠端服務提供者概觀
 Microsoft OLE DB 遠端服務提供者可讓用戶端電腦上的本機使用者叫用遠端電腦上的資料提供者。 如果您在遠端電腦上的本機使用者一樣，請指定遠端電腦的資料提供者參數。 然後指定遠端服務提供者用來存取遠端電腦的參數。 然後，您可以如同是本機使用者存取遠端電腦。
@@ -43,14 +43,14 @@ Microsoft OLE DB 遠端服務提供者可讓用戶端電腦上的本機使用者
 ## <a name="additional-keywords"></a>其他關鍵字
  叫用此服務提供者時，下列的其他關鍵字都有關。
 
-|關鍵字|Description|
+|關鍵字|描述|
 |-------------|-----------------|
 |**資料來源**|指定遠端資料來源的名稱。 它會進行處理傳遞給 OLE DB 遠端服務提供者。<br /><br /> 此關鍵字相當於[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件的[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性。|
 
 ## <a name="dynamic-properties"></a>動態屬性
  叫用此服務提供者時，已加入下列的動態屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。
 
-|動態屬性名稱|Description|
+|動態屬性名稱|描述|
 |---------------------------|-----------------|
 |**DFMode**|指出 DataFactory 模式。 字串，指定所需的版本[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)伺服器上的物件。 設定此屬性之前開啟連接要求的特定版本**DataFactory**。 如果無法使用要求的版本，將會嘗試使用前一個版本。 如果沒有先前的版本，則會發生錯誤。 如果**DFMode**小於可用的版本中，會發生錯誤。 這個屬性是唯讀之後進行連線。<br /><br /> 可以是下列有效的字串值的其中一個：<br /><br /> -「 25"，版本 2.5 （預設值）<br />-"21"— 2.1 版<br />-"20"-2.0 版<br />-"15"-1.5 版|
 |**命令屬性**|表示將會加入至 MS 遠端提供者傳送到伺服器的命令 （資料列集） 屬性的字串值。 這個字串的預設值為 vt_empty。|
@@ -96,5 +96,5 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
  [OLE DB 的遠端服務提供者的概觀](http://msdn.microsoft.com/en-us/4083b72f-68c4-4252-b366-abb70db5ca2b)

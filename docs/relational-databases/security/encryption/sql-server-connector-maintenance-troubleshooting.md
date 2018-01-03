@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 483b31cf84a5933bac88744612c5c95fa7ceae56
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c0cce6f70771e67f55f987fe6c307d4713e3f928
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 連接器維護和疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
      匯入新的非對稱金鑰。  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE ASYMMETRIC KEY [MASTER_KEY2]   
     FROM PROVIDER [EKM]   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
      建立要和新的非對稱金鑰相關聯的新登入 (如 TDE 指示所示)。  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE LOGIN TDE_Login2   
     FROM ASYMMETRIC KEY [MASTER_KEY2]  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
      建立要對應到登入的新認證。  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
        SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
@@ -86,14 +86,14 @@ ms.lasthandoff: 11/21/2017
   
      選擇您想要對其資料庫加密金鑰進行重新加密的資料庫。  
   
-    ```tsql  
+    ```sql  
     USE [database]  
     GO  
     ```  
   
      重新加密資料庫加密金鑰。  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE ENCRYPTION KEY   
     ENCRYPTION BY SERVER ASYMMETRIC KEY [MASTER_KEY2];  
     GO  
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  執行下列陳述式來改變 EKM 提供者，以開始使用最新版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。 請確定檔案路徑指向您下載最新版本的位置。 (如果新版本和原始版本安裝在相同的位置，可略過此步驟。) 
   
-    ```tsql  
+    ```sql  
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE =   
     'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
@@ -210,7 +210,7 @@ ms.lasthandoff: 11/21/2017
 錯誤碼  |符號  |描述    
 ---------|---------|---------  
 0 | scp_err_Success | 此作業已成功。    
-1 | scp_err_Failure | 作業失敗。    
+@shouldalert | scp_err_Failure | 作業失敗。    
 2 | scp_err_InsufficientBuffer | 此錯誤會指示引擎為緩衝區配置更多記憶體。    
 3 | scp_err_NotSupported | 不支援此作業。 例如，EKM 提供者不支援指定的金鑰類型或演算法。    
 4 | scp_err_NotFound | EKM 提供者找不到指定的金鑰或演算法。    

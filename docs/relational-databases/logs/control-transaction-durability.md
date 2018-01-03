@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 469b8008c1697f691c56f6d8893f1d637534c989
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c55b9f3bc4df4048c2edb058e7c70579fb80bdba
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="control-transaction-durability"></a>控制交易持久性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_DbControl"></a> 資料庫層級控制    
  身為 DBA 的您，可以控制使用者是否能使用下列陳述式，在資料庫上使用延遲的交易持久性。 您必須使用 ALTER DATABASE 來設定延遲的持久性設定。    
     
-```tsql    
+```sql    
 ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
@@ -114,7 +114,7 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
 ###  <a name="CompiledProcControl"></a> ATOMIC 區塊等級控制 – 原生編譯的預存程序    
  下列程式碼會進入不可部分完成的區塊內部。    
     
-```tsql    
+```sql    
 DELAYED_DURABILITY = { OFF | ON }    
 ```    
     
@@ -126,7 +126,7 @@ DELAYED_DURABILITY = { OFF | ON }
     
  **範例程式碼：**    
     
-```tsql    
+```sql    
 CREATE PROCEDURE <procedureName> …    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
@@ -149,7 +149,7 @@ END
 ###  <a name="bkmk_T-SQLControl"></a> COMMIT 層級控制 –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  COMMIT 語法已擴充，因此您可以強制延遲的交易持久性。 如果資料庫層級的 DELAYED_DURABILITY 是 DISABLED 或 FORCED (請參閱上述說明)，就會忽略這個 COMMIT 選項。    
     
-```tsql    
+```sql    
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]    
     
 ```    
@@ -212,6 +212,6 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  針對延遲的持久性， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的意外關機與預期的關機/重新啟動之間並無差異。 就像重大事件一樣，您應該針對資料遺失進行規劃。 在規劃好的關機/重新啟動中，部分尚未寫入磁碟的交易可能會先儲存到磁碟，但您不應該規劃相關事項。 對於類似關機/重新啟動的規劃 (不論是規劃或未規劃的) 都會像重大事件一樣遺失資料。    
     
 ## <a name="see-also"></a>另請參閱    
- [與記憶體最佳化資料表的交易](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
+ [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   

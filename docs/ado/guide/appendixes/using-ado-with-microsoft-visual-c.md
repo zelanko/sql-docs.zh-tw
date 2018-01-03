@@ -3,7 +3,7 @@ title: "使用 ADO 搭配 Microsoft Visual c + + |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92c62b26c3eb349390f56a6d485af543947eeccc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c2a1caf78d709255f3e329a45d8d60b69ce55199
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>使用 ADO 搭配 Microsoft Visual c + +
 如需使用 ADO 搭配 Visual c + +，請參閱下列各節：  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Visual C++ Extensions 範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Visual c + + 語法索引 com ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
  [Visual c + + 語法索引 #import ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   

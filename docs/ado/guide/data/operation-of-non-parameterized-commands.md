@@ -3,7 +3,7 @@ title: "非參數化命令的作業 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a94991dc8f1716186f5fdbcd44ded85926fd4a7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1c2e82698c31d920643ba68fabd8b0bd4f0d2321
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operation-of-non-parameterized-commands"></a>非參數化命令的作業
 對於非參數化命令，會執行所有的提供者命令和**資料錄集**命令執行期間所建立。 如果命令以同步方式，執行所有**資料錄集**會完全擴展。 如果選取非同步擴展模式，則填入的狀態**資料錄集**母體擴展模式和大小而定**資料錄集**。  
@@ -47,7 +47,7 @@ SHAPE {SELECT * FROM Customers}
   
  如需有關瀏覽階層式資訊**資料錄集**，請參閱[存取階層式資料錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
  [型式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

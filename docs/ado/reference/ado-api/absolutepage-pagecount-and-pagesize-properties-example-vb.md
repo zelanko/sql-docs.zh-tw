@@ -3,7 +3,7 @@ title: "AbsolutePage、 PageCount 和 PageSize 屬性範例 (VB) |Microsoft 文�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32f03c2e8df04d341f734ac738dfb17d03620f55
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c29340c1e2a8c01a60f06ed63703758c661a945d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage、 PageCount 和 PageSize 屬性範例 (VB)
 ```  
@@ -105,7 +105,7 @@ End Sub
 'EndAbsolutePageVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [AbsolutePage 屬性 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount 屬性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize 屬性 (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

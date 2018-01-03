@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4eb7a17b6a4c71cae84ada9b6cf9a88b326c093
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e16aa094a76f359d65b024fc428f4a2c623700b1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>第 4-5 課 - 測試課程 4 的教學課程封裝
 在執行階段，損毀的檔案 Currency_BAD.txt 將無法在 [貨幣索引鍵查閱] 轉換中產生相符者。 因為 [貨幣索引鍵查閱] 的錯誤輸出現在已設定為將失敗的資料列重新導向至新的失敗資料列目的地，所以該元件不會失敗，且封裝會順利執行。 所有失敗的錯誤資料列會寫入至 ErrorOutput.txt。  
@@ -37,11 +37,11 @@ ms.lasthandoff: 11/20/2017
   
 **控制流程**  
   
-![封裝中的控制流程](../integration-services/media/task4lesson2control.gif "封裝中的控制流程")  
+![套件中的控制流程](../integration-services/media/task4lesson2control.gif "套件中的控制流程")  
   
 **資料流程**  
   
-![封裝中的資料流程](../integration-services/media/task5lesson5data.gif "封裝中的資料流程")  
+![套件中的資料流程](../integration-services/media/task5lesson5data.gif "套件中的資料流程")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>若要執行第 4 課的教學課程封裝  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 -   在記事本或任何其他文字編輯器中開啟 ErrorOutput.txt 檔。 預設資料行順序為：AverageRate、CurrencyID、CurrencyDate、EndOfDateRate、ErrorCode、ErrorColumn、ErrorDescription。  
   
-    請注意，檔案中的所有資料列都包含不相符的 CurrencyID 值 BAD、ErrorCode 值 -1071607778、ErrorColumn 值 0 和 ErrorDescription 值「查閱期間產生的資料列不符」。 ErrorColumn 的值是設為 0，因為該錯誤不是特定資料行的錯誤。 它是失敗的查閱作業。 。  
+    請注意，檔案中的所有資料列都包含不相符的 CurrencyID 值 BAD、ErrorCode 值 -1071607778、ErrorColumn 值 0 和 ErrorDescription 值「查閱期間產生的資料列不符」。 ErrorColumn 的值是設為 0，因為該錯誤不是特定資料行的錯誤。 它是失敗的查閱作業。 執行個體時提供 SQL Server 登入。  
   
   
   

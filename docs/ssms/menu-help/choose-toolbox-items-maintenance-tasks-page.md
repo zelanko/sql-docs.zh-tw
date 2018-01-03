@@ -3,7 +3,7 @@ title: "選擇工具箱項目 (維護工作頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3cb904c376444eeaf7ad7cfe217d3d202d4d3e59
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0ead6bf455f4fd80da564f55a5a6dd183a773116
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>選擇工具箱項目 (維護工作頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [自訂工具箱] 對話方塊的這個索引標籤，會顯示所有已在您電腦上註冊的維護工作元件清單，而且可讓您變更工具箱中所顯示的項目。 您可以從 [工具] 功能表開啟 [自訂工具箱] 對話方塊。 若要排序元件的清單，請選取任何資料行標題。  
@@ -48,6 +48,6 @@ ms.lasthandoff: 12/05/2017
 **語言**  
 元件的語言。  
   
-**版本**  
+**版本(Version)**  
 元件的版本。  
   

@@ -31,11 +31,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aa5d1392d5dd90cd5b783ae8e96a47b0fdf4d5be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 463494b3e3810a31d487b44c58aac58eccbf3674
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 建立和維護全文檢索索引包括使用稱為「母體擴展」(也稱為「搜耙」) 的處理序來擴展索引。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>範例 - 建立全文檢索索引但不執行完整母體擴展  
  下列範例會針對 `Production.Document` 範例資料庫的 `AdventureWorks` 資料表建立全文檢索索引。 這個範例會使用 `WITH CHANGE_TRACKING OFF, NO POPULATION` 來延遲初始完整母體擴展。  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -77,7 +77,7 @@ GO
 ### <a name="example---run-a-full-population-on-a-table"></a>範例 - 執行資料表的完整母體擴展  
  下列範例會針對 `Production.Document` 範例資料庫的 `AdventureWorks` 資料表執行完整母體擴展。  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -110,7 +110,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **範例 - 將全文檢索索引更改成使用自動變更追蹤**  
     下列範例會將 `HumanResources.JobCandidate` 範例資料庫之 `AdventureWorks` 資料表的全文檢索索引變更成使用變更追蹤搭配自動母體擴展。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -130,7 +130,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **範例 - 使用手動變更追蹤來建立全文檢索索引**  
     下列範例會針對 `HumanResources.JobCandidate` 範例資料庫的 `AdventureWorks` 資料表建立使用變更追蹤搭配手動母體擴展的全文檢索索引。  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -144,7 +144,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **範例 - 執行手動母體擴展**  
     下列範例會針對 `HumanResources.JobCandidate` 範例資料庫之 `AdventureWorks` 資料表的變更追蹤全文檢索索引執行手動母體擴展。  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  

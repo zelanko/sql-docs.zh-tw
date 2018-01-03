@@ -5,7 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ae6560cbdb884fa8009ab33c248f1de426c9c89
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 30c30eac6d8651886a37f9895c39ab9cfc782903
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions-master-data-services"></a>交易 (Master Data Services)
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
  也可以呼叫下列預存程序來清除交易記錄檔。  
   
-|預存程序|說明|  
+|預存程序|描述|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|會清除交易記錄|  
 |mdm.udpValidationsCleanup|會清除驗證記錄|  
@@ -80,7 +80,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ```  
   
 ## <a name="system-settings"></a>系統設定  
- 當記錄暫存時， [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有一項設定會影響是否記錄交易。 您可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中或直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 [系統設定] 資料表中調整這項設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
+ 當記錄暫存時， [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有一項設定會影響是否記錄交易。 您可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 [系統設定] 資料表中調整這項設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
  在此版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中匯入資料時，可以指定是否要在起始預存程序時記錄交易。 如需詳細資訊，請參閱[暫存預存程序 &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md)。  
   

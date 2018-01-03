@@ -3,7 +3,7 @@ title: "提供者錯誤，|Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 327869785bddfbd0d43bfff051a9b7ef6b97c8fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bdb4d1847a2a55c57235a88979b19f7370169b9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="provider-errors"></a>提供者錯誤
 發生提供者錯誤時，會傳回-2147467259 的執行階段錯誤。 當您收到這個錯誤時，請檢查**錯誤**作用中的集合**連接**物件，會包含一個或多個描述所發生的錯誤。  
@@ -70,7 +70,7 @@ End Function
 ## <a name="the-error-object"></a>Error 物件  
  藉由檢查**錯誤**物件，您可以決定發生的錯誤，而且更重要的是，哪些應用程式或哪些物件造成錯誤。 **錯誤**物件具有下列屬性：  
   
-|屬性名稱|Description|  
+|屬性名稱|描述|  
 |-------------------|-----------------|  
 |**說明**|發生錯誤的文字描述。|  
 |**HelpContext，說明檔**|指的說明主題，並說明檔案，含有發生之錯誤的描述。|  

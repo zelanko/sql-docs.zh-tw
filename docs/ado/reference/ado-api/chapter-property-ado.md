@@ -3,7 +3,7 @@ title: "章屬性 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 026fc2e66f9dca3243791f3cd2c1e984f13087d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 081249999308ec607ae100ea1236a2a1ead2e35d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chapter-property-ado"></a>章屬性 (ADO)
 取得或設定 OLE DB**章**物件上從 / [ADORecordsetConstruction 介面](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)物件。 當您使用**put_Chapter**設定**章**物件、 資料列的子集會轉換成 ADO[資料錄集物件](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 這會設定目前的章節**資料列集**物件。 這是可讀寫的屬性。  

@@ -3,7 +3,7 @@ title: "AppendChunk 方法 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea0599f91817fcefcb35871e41fbd4f727e5d2a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 733dbd43501211c631fad51f993b8d663da0d844
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
 將資料附加至大型文字或二進位資料[欄位](../../../ado/reference/ado-api/field-object.md)，或[參數](../../../ado/reference/ado-api/parameter-object.md)物件。  
@@ -69,7 +69,7 @@ object.AppendChunk Data
 |-|-|  
 |[Field 物件](../../../ado/reference/ado-api/field-object.md)|[Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [AppendChunk 和 GetChunk 方法範例 (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk 和 GetChunk 方法範例 （VC + +）](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [屬性的內容 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   

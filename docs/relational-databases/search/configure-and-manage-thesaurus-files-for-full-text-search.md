@@ -1,7 +1,7 @@
 ---
 title: "設定及管理全文檢索搜尋的同義字檔案 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -21,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 072df52e6a96bae1393f212a3160f549ed2880e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 210fd9bd79fa84ac5a1a2fcaaca2144a393ab585
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索查詢可以透過使用全文檢索搜尋「同義字」，搜尋使用者指定之詞彙的同義字。 每個同義字會針對特定語言定義一組同義字。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。
 
 系統會針對所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查詢以及指定 `FORMSOF THESAURUS` 子句的任何 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查詢進行同義字比對。
@@ -162,7 +162,7 @@ ms.lasthandoff: 11/17/2017
 </replacement>  
 ```  
   
-和  
+及  
   
 ```xml  
 <replacement>  
@@ -176,10 +176,10 @@ ms.lasthandoff: 11/17/2017
   
 您可在單一 `<diacritics_sensitive>` 元素中指定同義字的變音符號設定。 這個元素包含可控制區分腔調字的整數值，如下所示：  
   
-|變音符號設定|值|XML|  
+|變音符號設定|ReplTest1|XML|  
 |------------------------|-----------|---------|  
 |不區分腔調字|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
-|區分腔調字|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
+|區分腔調字|@shouldalert|`<diacritics_sensitive>1</diacritics_sensitive>`|  
   
 > [!NOTE]  
 >  此設定只能在檔案中套用一次，而且它會套用至檔案中的所有搜尋模式。 不能針對個別模式指定此設定。  
@@ -204,7 +204,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  使用 [sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) ，將同義字檔案的內容載入 tempdb，並指定對應至同義字檔案語言的地區設定識別碼 (LCID)。 例如，英文同義字檔案 tsenu.xml 的對應 LCID 就是 1033。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
     GO

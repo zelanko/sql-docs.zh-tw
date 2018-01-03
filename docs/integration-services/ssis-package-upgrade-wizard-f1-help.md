@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01c6f66c5b72a320284034cf5e789d37cc265551
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 59869c0fdcb73fc30ee9bc763e8665f05f71df90
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 封裝升級精靈 F1 說明
   使用 [SSIS 套件升級精靈] 將舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所建立的套件升級為目前 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本的套件格式。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
  **封裝來源**  
  選取包含要升級之封裝的儲存位置。 這個選項的值列於下表中。  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**[File System]**|指示要升級的封裝位於本機電腦的資料夾中。<br /><br /> 若要讓精靈在升級這些封裝之前先備份原始封裝，原始封裝必須儲存在檔案系統中。 如需詳細資訊，請參閱「如何」主題。|  
 |**SSIS 封裝存放區**|指示要升級的封裝位於封裝存放區中。 此封裝存放區是由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務所管理的檔案系統資料夾集合所組成。 如需詳細資訊，請參閱 [AllMembers &#40;MDX&#41;](../integration-services/service/package-management-ssis-service.md)。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/20/2017
  **使用 SQL Server 驗證**  
  選取此選項可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接到伺服器。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
   
- **使用者名稱**  
+ **User name**  
  輸入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證將用來連接伺服器的使用者名稱。  
   
  **密碼**  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
  **封裝來源**  
  指定要儲存升級封裝的位置。 這個選項的值列於下表中。  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**[File System]**|指示升級封裝要儲存到本機電腦的資料夾中。|  
 |**SSIS 封裝存放區**|指示升級封裝要儲存到 Integration Services 封裝存放區。 此封裝存放區是由 Integration Services 服務所管理的檔案系統資料夾集合所組成。 如需詳細資訊，請參閱[封裝管理 &#40;SSIS 服務&#41;](../integration-services/service/package-management-ssis-service.md)。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
@@ -134,7 +134,7 @@ ms.lasthandoff: 11/20/2017
  **使用 SQL Server 驗證**  
  選取此選項可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接到伺服器。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
   
- **使用者名稱**  
+ **User name**  
  輸入使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證來連接伺服器時所要使用的使用者名稱。  
   
  **密碼**  

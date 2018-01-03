@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
   變數會儲存 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其容器、工作和事件處理常式在執行階段可使用的值。 「指令碼」工作和「指令碼」元件中的指令碼也可以使用變數。 將工作和容器排序成工作流程的優先順序條件約束，可在其條件約束定義含有運算式時使用變數。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="system-and-user-defined-variables"></a>系統及使用者定義變數  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援兩種類型的變數：使用者自訂變數和系統變數。 使用者自訂變數由封裝開發人員定義，而系統變數則由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]定義。 您可以根據封裝需要建立許多使用者自訂變數，但無法建立其他系統變數。  
   
- 所有的變數 (系統變數和使用者自訂變數) 都可在「執行 SQL」工作用來將變數對應至 SQL 陳述式之參數的參數繫結中使用。 如需詳細資訊，請參閱 [執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的參數和傳回碼](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
+ 所有的變數 (系統變數和使用者自訂變數) 都可在「執行 SQL」工作用來將變數對應至 SQL 陳述式之參數的參數繫結中使用。 如需詳細資訊，請參閱[執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md)和[執行 SQL 工作中的參數和傳回碼](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
   
 > [!NOTE]  
 >  使用者自訂變數和系統變數的名稱會區分大小寫。  
@@ -194,13 +194,13 @@ ms.lasthandoff: 11/20/2017
  **名稱**  
  鍵入變數名稱。  
   
- **命名空間**  
+ **Namespace**  
  指定變數的命名空間。 依預設，使用者定義變數是在 **User** 命名空間中。  
   
  **值類型**  
  選取資料類型。  
   
- **值**  
+ **ReplTest1**  
  鍵入值。 此值必須與 [值類型] 選項中所指定的資料類型相容。  
   
  **唯讀**  
@@ -212,7 +212,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  在 [方案總管] 中，以滑鼠右鍵按一下封裝將其開啟。  
   
-3.  在 [SSIS] 功能表上，按一下 [變數]。 您可以將 View.Variables 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [變數] 視窗。  
+3.  在 **[SSIS]** 功能表上，按一下 **變數**。 您可以將 View.Variables 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [變數] 視窗。  
   
 4.  選取要刪除的變數，然後按一下 [刪除變數]。  
   
@@ -228,7 +228,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  在 [方案總管] 中，以滑鼠右鍵按一下封裝將其開啟。  
   
-3.  在 [SSIS] 功能表上，按一下 [變數]。 您可以將 View.Variables 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [變數] 視窗。  
+3.  在 **[SSIS]** 功能表上，按一下 **變數**。 您可以將 View.Variables 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [變數] 視窗。  
   
 4.  選取變數，然後按一下 [移動變數]。  
   
@@ -278,7 +278,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  在 [方案總管] 中，以滑鼠右鍵按一下封裝將其開啟。  
   
-3.  在 [SSIS] 功能表上，按一下 [變數]。  
+3.  在 **[SSIS]** 功能表上，按一下 **變數**。  
   
      您可以將 View.Variables 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [變數] 視窗。  
   

@@ -3,7 +3,7 @@ title: "在 元件服務中執行商務物件 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df0d9faf78e4e63053e96f5513d38a31af0ca827
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 162f91a88f9e1b7fcd96ec5fa637a608b87b0921
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-business-objects-in-component-services"></a>在 元件服務中執行商務物件
 > [!IMPORTANT]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]
 >  當中介層商務物件會實作為 元件服務 」 元件使用**GetObjectContext**， **SetComplete**，和**SetAbort**，企業物件可以使用元件服務 （或 MTS，如果您使用 Windows NT） 以維護其狀態在多個用戶端呼叫的內容物件。 這個案例是 DCOM，通常會實作之間受信任的用戶端和伺服器在內部使用。 在此情況下， [.RDSDataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)物件和[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)交易內容物件來取代用戶端上的方法和**CreateInstance** 所提供的方法**ITransactionContext**介面，並藉由元件服務。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

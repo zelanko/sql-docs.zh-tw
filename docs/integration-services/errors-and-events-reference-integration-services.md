@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1924900d1e4237f49424808a71f40f61d769b2d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4076635be876b3ad472f6a7ac63500de9349eb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)
   文件集中的這一節包含一些與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]相關之錯誤和事件的資訊， 包含錯誤訊息的原因和解決方案資訊。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="error-messages"></a>錯誤訊息  
   
-|錯誤的符號名稱|說明|  
+|錯誤的符號名稱|描述|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|指出封裝無法執行，因為某個「快取轉換」轉換正嘗試將資料寫入記憶體中的快取。 不過，快取連線管理員已經將快取檔案載入記憶體中的快取。|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|指出封裝無法執行，因為指定的連接已失敗。|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="events-sqlispackage"></a>事件 (SQLISPackage)  
  如需詳細資訊，請參閱 [Integration Services 封裝所記錄的事件](../integration-services/performance/events-logged-by-an-integration-services-package.md)。  
   
-|事件|說明|  
+|事件|描述|  
 |-----------|-----------------|  
 |SQLISPackage_12288|指出封裝已經啟動。|  
 |SQLISPackage_12289|指出封裝已順利地完成執行。|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="events-sqlisservice"></a>事件 (SQLISService)  
  如需詳細資訊，請參閱 [Integration Services 服務所記錄的事件](../integration-services/service/events-logged-by-the-integration-services-service.md)。  
   
-|事件|說明|  
+|事件|描述|  
 |-----------|-----------------|  
 |SQLISService_256|指出服務即將啟動。|  
 |SQLISService_257|指出服務已經啟動。|  

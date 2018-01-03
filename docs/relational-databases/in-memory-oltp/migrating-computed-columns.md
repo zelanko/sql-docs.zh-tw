@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e5af311f2c8957a3d24dfbcaeecf421f04b6467b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcb3ba499f02c5e82bff0027cfa9085e525b681a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="migrating-computed-columns"></a>移轉計算資料行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="non-persisted-computed-columns"></a>非保存計算資料行  
  若要模擬非保存計算資料行的影響，請在記憶體最佳化的資料表上建立檢視表。 在定義檢視的 SELECT 陳述式中，將計算資料行定義加入檢視。 除了在原生編譯預存程序中，使用源自這個計算資料行的值所進行的查詢必須從檢視讀取。 在原生編譯預存程序中，您應該依據計算資料行的定義更新任何 SELECT、UPDATE 或 DELETE 陳述式。  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  
@@ -58,7 +58,7 @@ CREATE VIEW dbo.v_order_details AS
 ## <a name="persisted-computed-columns"></a>保存計算資料行  
  若要模擬保存計算資料行的影響，請建立預存程序以插入資料表，再建立另一個預存程序以更新資料表。 在插入或更新資料表時，請叫用這些預存程序以執行這些工作。 在預存程序中，可根據輸入計算位於計算欄位中的值，這與計算資料行在原始以磁碟為基礎之資料表的定義十分類似。 然後，插入或更新預存程序內所需的資料表。  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  

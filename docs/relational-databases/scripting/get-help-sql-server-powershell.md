@@ -3,9 +3,9 @@ title: "取得 SQL Server PowerShell 說明 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,13 +21,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 815fab8fa577dad6ee4ef34388c65a1ed3c4b63d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22c902b09c96bd67fc64e6dc2c7ee33ba7558b17
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="get-help-sql-server-powershell"></a>取得 SQL Server PowerShell 說明
+# <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 有關使用適用於 Windows PowerShell 和 Cmdlet 之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供者的資訊來源有幾個。 其中包括 Windows PowerShell 環境中可用的說明。  
   
 ## <a name="before-you-begin"></a>開始之前  
@@ -129,6 +129,6 @@ $MyVar | Get-Member -Type Properties
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell 提供者](../../relational-databases/scripting/sql-server-powershell-provider.md)   
- [使用 Database Engine Cmdlet](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
+ [使用資料庫引擎 Cmdlet](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
   
   

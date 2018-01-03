@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3bd7ded25119de1acc18ded3d2add5de52441399
+ms.sourcegitcommit: d70b1c121c8536f92c90bf90f2e2b126acbc86de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="ado-net-destination"></a>ADO NET 目的地
   ADO NET 目的地會將資料載入使用資料庫資料表或檢視的各種 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]相容資料庫中。 您可以選擇將這些資料載入現有的資料表或檢視中，也可以建立新的資料表並將資料載入新的資料表內。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  ADO NET 目的地具有一個規則輸入和一個錯誤輸出。  
   
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -104,10 +104,10 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  如果 SQL Server 或 Sybase 來源資料表包含識別欄位，您就必須使用執行 SQL 工作，在 ADO NET 目的地前後啟用及停用 IDENTITY_INSERT 陳述式。 (識別欄位屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可將來源資料表中的明確值插入至目的地資料表中的識別欄位。)  
 >   
->   若要成功執行 SET IDENTITY_INSERT 陳述式並載入資料，您必須執行下列動作。 
->       1. 執行 SQL 工作和 ADO NET 目的地要使用相同的 ADO NET 連線管理員。 
->       2. 在連線管理員上，將 **RetainSameConnection** 屬性和 **MultipleActiveResultSets** 屬性設定為 True。 
->       3. 在 ADO.NET 目的地上，將 **UseBulkInsertWhenPossible** 屬性設為 False。 
+>   若要成功執行 SET IDENTITY_INSERT 陳述式並載入資料，您必須執行下列動作。  
+>       1.執行 SQL 工作和 ADO NET 目的地要使用相同的 ADO NET 連線管理員。  
+>       2.在連線管理員上，將 **RetainSameConnection** 屬性和 **MultipleActiveResultSets** 屬性設定為 True。  
+>       3.在 ADO.NET 目的地上，將 **UseBulkInsertWhenPossible** 屬性設為 False。   
 >
 >  如需詳細資訊，請參閱 [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
   

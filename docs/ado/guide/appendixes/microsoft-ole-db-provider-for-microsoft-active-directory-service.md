@@ -3,7 +3,7 @@ title: "Microsoft OLE DB Provider for Microsoft Active Directory 服務 |Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c90c411842da3033b0be46330a2d9f2cb421c90b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a31421c2947f376b152826c87d2d01d1e0863da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory 服務
 Active Directory 服務介面 (ADSI) 提供者可讓 ADO 連接到透過 ADSI 異質目錄服務。 這可讓 ADO 應用程式對唯讀存取 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目錄服務，除了任何 LDAP 相容目錄服務和 Novell 目錄服務。 ADSI 本身為基礎的提供者模型，使新的提供者提供存取至另一個目錄時，ADO 應用程式將能夠順暢地存取它。 ADSI 提供者是無限制執行緒，啟用 Unicode。  
@@ -49,7 +49,7 @@ ADSDSOObject
   
  下列關鍵字所組成的字串。  
   
-|關鍵字|Description|  
+|關鍵字|描述|  
 |-------------|-----------------|  
 |**提供者**|指定 Active Directory 服務的 OLE DB 提供者。|  
 |**使用者識別碼**|指定使用者名稱。 如果省略此關鍵字，則會使用目前登入。|  
@@ -65,7 +65,7 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |*Root*|指出**ADsPath**要開始搜尋 （也就是說，搜尋的根） 的物件。|  
 |*篩選*|表示搜尋篩選器以 RFC 1960 格式。|  
@@ -128,7 +128,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|否|  
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|是|  
 |[關閉](../../../ado/reference/ado-api/close-method-ado.md)|是|  
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|  
+|[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|  
 |[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|是|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
@@ -145,7 +145,7 @@ objectClass='user' AND objectCategory='Person'"
   
  如需 ADSI 與提供者的細節的詳細資訊，請參閱 Active Directory 服務介面文件或瀏覽 ADSI 網頁。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CommandType 屬性 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [ConnectionString 屬性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

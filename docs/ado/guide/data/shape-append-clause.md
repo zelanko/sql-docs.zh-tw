@@ -3,7 +3,7 @@ title: "圖形 APPEND 子句 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab01c719611309117308c818930b1553741495e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a6f5a67559ea2137110dc72d77a56bacc8da39a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-append-clause"></a>圖形 APPEND 子句
 圖形命令 APPEND 子句將附加的資料行或資料行，以**資料錄集**。 通常，這些資料行是章節資料行，參考子系**資料錄集**。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  這個子句的部分如下所示：  
   
  *父命令*  
@@ -126,7 +126,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [中介 Shape COMPUTE 子句](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
  [型式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

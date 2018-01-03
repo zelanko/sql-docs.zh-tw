@@ -3,7 +3,7 @@ title: "EndOfRecordset 事件 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b8c610cc6346e8ec4ec466926d2dc80f45cc77b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c9bedfab5204ec93f5f3de8e0f574640e2b04429
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset 事件 (ADO)
 **EndOfRecordset**嘗試將移到超過結尾的資料列時，會呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -57,6 +57,6 @@ EndOfRecordset fMoreData, adStatus, pRecordset
   
  嘗試移動超過的結尾時，這個事件處理常式的呼叫**資料錄集**物件，可能是因為呼叫**MoveNext**。 不過，在此事件，無法從資料庫擷取更多記錄，然後將它們附加至結尾**資料錄集**。 在此情況下，設定*fMoreData*為 VARIANT_TRUE，並從的傳回**EndOfRecordset**。 然後呼叫**MoveNext**以存取新擷取的記錄。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)

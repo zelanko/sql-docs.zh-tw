@@ -3,7 +3,7 @@ title: "建立的連接字串 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 05cafd9f2025ea2f0d3691696b758c9c8c498cf3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d7d9d2c913324578d80d9dc52fb8a8aedf9ec78d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-connection-string"></a>建立連接字串
 連接字串包含以分號分隔的引數/值組 （也就是 「 參數 」） 清單。 例如：  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
  ADO 會辨識下列五個引數中的連接字串。  
   
-|引數|Description|  
+|引數|描述|  
 |--------------|-----------------|  
 |*提供者*|指定要用於連接的提供者的名稱。|  
 |*檔案名稱*|指定的提供者特定的檔案 （例如，保存的資料來源物件） 包含預設的連接資訊的名稱。|  

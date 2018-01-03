@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85f1312bddda28f6ce4b664c8e906e83acae8312
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe67d6afd28bef9b73700206cd618db1a3374580
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-index-master-data-services"></a>自訂索引 (Master Data Services)
   自訂索引會在實體中於單一屬性 (單一索引) 或一份屬性清單 (複合索引) 上建立非叢集索引。 索引一般會改善查詢程序的效能。 如需 SQL Server 索引的詳細資訊，請參閱 [索引](../relational-databases/indexes/indexes.md)。  

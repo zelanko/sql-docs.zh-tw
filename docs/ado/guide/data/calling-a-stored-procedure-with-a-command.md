@@ -3,7 +3,7 @@ title: "呼叫預存程序使用的命令 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 25d639d9d8f7c8e454957f1b309a449951550b26
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e6c22f098efcb2352e450c07aece8f88c8f32b4d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>呼叫預存程序使用的命令
 您可以使用命令來呼叫預存程序。 本主題結尾的程式碼範例是指在稱為 CustOrdersOrders，如下所示定義 Northwind 範例資料庫中的預存程序。  
@@ -138,5 +138,5 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [知識庫文章 117500](http://go.microsoft.com/fwlink/?LinkId=117500)

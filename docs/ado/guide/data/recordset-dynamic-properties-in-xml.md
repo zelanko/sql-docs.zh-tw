@@ -3,7 +3,7 @@ title: "在 XML 中的資料錄集的動態屬性 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 925981765184f05deadfda8ca8b27a929a6387ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b05609621af12607d11448028fc48a940f531ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>在 XML 中的資料錄集的動態內容
 下列的資料錄集提供者特定屬性 （從用戶端資料指標引擎） 目前會保存為 XML 格式：  
@@ -53,5 +53,5 @@ ms.lasthandoff: 11/17/2017
   
  這些屬性會儲存在結構描述 」 一節，以保存資料錄集的項目定義的屬性。 這些屬性定義在資料列集結構描述命名空間，而且必須有前置詞"rs:"。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -3,7 +3,7 @@ title: "記錄和提供者提供的欄位 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16596d3ffa943f382e6c3a9ec2aa9c2e2e14432f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69cb7375808e3c11dd8d92bab48a3588693e30e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="records-and-provider-supplied-fields"></a>記錄和提供者提供的欄位
 當[記錄](../../../ado/reference/ado-api/record-object-ado.md)開啟物件，其來源可以是目前已開啟的資料列[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，絕對 URL 或相對 URL 開啟搭配[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="resource-recordset-columns"></a>資源資料錄集資料行  
  A*資源資料錄集*下列資料行所組成。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|唯讀。 表示資源的 URL。|  
 |RESOURCE_PARENTNAME|AdVarWChar|唯讀。 表示父記錄的絕對 URL。|  
@@ -82,6 +82,6 @@ ms.lasthandoff: 11/17/2017
 |RESOURCE_DISPLAYNAME|AdVarWChar|唯讀。 表示資源的顯示名稱。|  
 |RESOURCE_ISROOT|AdBoolean|唯讀。 如果資源是集合或結構化文件的根，則為 true。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [記錄物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

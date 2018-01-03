@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f7d6a35f51ae80dea9ddc8ff87de5d38b499b82
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e77ed2ada2f9bfafd93625b3aaf9ef6624f6653
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="model-deployment-options-master-data-services"></a>模型部署選項 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您要部署模型封裝檔案時，必須決定要部署新的或複製的模型，還是更新之前複製的模型。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
  下表有助於您在使用系統管理模型部署精靈或 MDSModelDeploy 工具部署模型時，決定選擇。  
   
-|選項|說明|注意|  
+|選項|描述|注意|  
 |------------|-----------------|-----------|  
 |新增|建立具有唯一名稱的新模型。 將會建立所有模型物件的新識別碼。|如果建立具有新識別碼的新模型，稍後您無法使用模型部署工具將更新套用至此模型。 在 Web 應用程式中使用精靈來部署模型封裝時，只在已經有相同名稱或識別碼的模型時，您才可以選擇建立新的模型。|  
 |複製|建立新的模型，它是封裝中模型的完整複製。 只在此模型不存在於目標環境中 (依名稱或識別碼) 時才有效。 如果要在多個環境中有相同的模型，而且經過一段時間後要更新複製的模式，請使用 [複製]。|這是在 Web 應用程式中精靈的預設行為。 如果已經有相同名稱或識別碼的模型，系統會提示您改為建立新的模型。|  

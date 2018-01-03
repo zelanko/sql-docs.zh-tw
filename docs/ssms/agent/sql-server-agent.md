@@ -3,7 +3,7 @@ title: SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1e818b754e994c3b6b585712092e5a473ed6e11b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f475fcb1a86f61f684edb65adf637e9234d0a494
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 每個作業步驟都是在特定的安全性內容中執行。 對於使用 [!INCLUDE[tsql](../../includes/tsql_md.md)]的作業步驟，請使用 EXECUTE AS 陳述式來設定作業步驟的安全性內容。 對其他作業步驟類型，可以使用 Proxy 帳戶來設定作業步驟的安全性內容。  
   
-### <a name="schedules"></a>排程  
+### <a name="schedules"></a>[排程]  
 您可以使用 *「排程」* (Schedule) 來指定作業的執行時間。 相同的排程上可執行多個作業，而且多個排程可以套用到相同的作業。 排程可以為作業執行時間定義下列條件：  
   
 -   每當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 啟動時。  
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/05/2017
   
 如需詳細資訊，請參閱 [警示](../../ssms/agent/alerts.md)。  
   
-### <a name="operators"></a>運算子  
+### <a name="operators"></a>操作員  
 *「操作員」* (Operator) 會定義負責維護一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]執行個體之人員的連絡資訊。 某些企業將操作員責任指派給一個人。 在具有多個伺服器的企業中，很多人可以共同擔任操作員的任務。 操作員不包含安全性資訊，而且不會定義安全性主體。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 可以透過下列一或多種方式，通知操作員發生警示：  
@@ -131,7 +131,7 @@ ms.lasthandoff: 12/05/2017
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 定義了下表所列的子系統：  
   
-|子系統名稱|說明|  
+|子系統名稱|描述|  
 |--------------|-----------|  
 |Microsoft ActiveX Script|執行 ActiveX Scripting 作業步驟。<br /><br />**警告** [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 之後的版本會將 ActiveX Scripting 子系統從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
 |作業系統 (**CmdExec**)|執行可執行的程式。|  
@@ -171,7 +171,7 @@ ms.lasthandoff: 12/05/2017
   
 若要開始使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent，請使用下列工作：  
   
-|說明|主題|  
+|描述|主題|  
 |-----------|-----|  
 |描述如何設定 SQL Server Agent。|[設定 SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)|  
 |描述如何啟動、停止和暫停 SQL Server Agent 服務。|[啟動、停止或暫停 SQL Server Agent 服務](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  

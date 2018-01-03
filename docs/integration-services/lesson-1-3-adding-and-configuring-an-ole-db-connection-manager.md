@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 42e22e1fc4d46c96160b5c507e6e51f3d6f820f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7f432097d86740e5da191a7d741ca430a1cf4a5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>課程 1-3 - 加入和設定 OLE DB 連線管理員
 在加入一般檔案連接管理員來連接到資料來源之後，下一項工作是加入 OLE DB 連接管理員來連接到目的地。 OLE DB 連接管理員可讓封裝從任何 OLE DB 相容資料來源擷取資料或載入資料至該處。 使用 OLE DB 連接管理員，您可以指定連接的伺服器、驗證方法和預設資料庫。  
@@ -45,13 +45,13 @@ ms.lasthandoff: 11/20/2017
   
 6.  按一下 **[測試連接]** 以確認您指定的連接設定有效。  
   
-7.  按一下 **[確定]**。  
+7.  按一下 [確定] 。  
   
-8.  按一下 **[確定]**。  
+8.  按一下 [確定] 。  
   
 9. 在 **[設定 OLE DB 連接管理員]** 對話方塊的 **[資料連接]** 窗格中，確認已選取 **localhost.AdventureWorksDW2012** 。  
   
-10. 按一下 **[確定]**。  
+10. 按一下 [確定] 。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [步驟 4：將資料流程工作加入至封裝中](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  

@@ -3,7 +3,7 @@ title: "圖案的一般命令 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f58f3450a097d2c84de5909a8f2f6817e1274947
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cca594326e550fd68b8cd507f019c8f19a392933
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-commands-in-general"></a>在一般的圖形命令
 資料成形定義的資料行的形狀**資料錄集**，資料行中的方式所表示的實體之間的關聯性**資料錄集**已填入資料。  
   
  形狀**資料錄集**可以包含下列類型的資料行。  
   
-|資料行類型|Description|  
+|資料行類型|描述|  
 |-----------------|-----------------|  
 |data|從欄位**資料錄集**資料提供者傳回的查詢命令，資料表，或先前形狀**資料錄集**。|  
 |本文章節|另一個的參考**資料錄集**，稱為*章*。 章節資料行讓您定義*父子式*關聯性其中*父*是**資料錄集**包含章節資料行和*子*是**資料錄集**本章所表示。|  

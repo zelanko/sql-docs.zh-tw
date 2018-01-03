@@ -3,7 +3,7 @@ title: "進階儲存選項 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c75d958c7cca998117b03821857157cf2eb9355
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 394f15a46fe16b06585c262ea5dbf542746e614b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-save-options"></a>進階儲存選項
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此對話方塊即可選取語言編碼配置，以及指定要在每行行尾插入的字元。 若要存取 [進階儲存選項] 對話方塊，請在 [檔案] 功能表上，按一下 [另存 <query name>.sql 為] 開啟 [另存新檔] 對話方塊，按一下 [儲存] 按鈕上的向下箭號，然後再按一下 [使用編碼方式儲存]。  

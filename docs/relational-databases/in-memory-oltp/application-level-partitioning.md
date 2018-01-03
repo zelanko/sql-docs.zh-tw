@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10623fc1a5c493dc0fd5f03f730bf712f6c3b893
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0f27dbf8d8a6deb04fc9f45af51d0a90f694e4ef
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="application-level-partitioning"></a>應用程式層級資料分割
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 此應用程式會處理訂單。 未在最近的訂單上進行多項處理。 舊訂單上未進行多項處理。 最近的訂單位於記憶體最佳化的資料表中。 舊訂單位於磁碟資料表中。 *hotDate* 之後的所有訂單都位於記憶體最佳化資料表中。 *hotDate* 之前的所有訂單都位於磁碟資料表中。 假設有一個具有許多並行交易的極端 OLTP 工作負載。 即使有數項並行交易嘗試變更 *hotDate*，仍必須強制執行此商務規則 (記憶體最佳化資料表中最近的訂單)。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="code-listing"></a>程式碼清單  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
 IF NOT EXISTS(SELECT name FROM sys.databases WHERE name = 'hkTest')  

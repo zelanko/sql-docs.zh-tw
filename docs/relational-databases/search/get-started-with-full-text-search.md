@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65e7b1e15e55604eb6f92d0aed96d3be7dc54ad1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50274b346c5a404c9d2c8f82dbd8d75664fa6bbe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 預設會啟用 SQL Server 資料庫的全文檢索功能。 不過，您必須先建立全文檢索目錄，並在您想要搜尋的資料表或索引檢視表上建立全文檢索索引，才能執行全文檢索查詢。
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  為了建立名為 `AdvWksDocFTCat`的全文檢索目錄，此範例會使用 [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) 陳述式：  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE FULLTEXT CATALOG AdvWksDocFTCat;  
@@ -59,13 +59,13 @@ ms.lasthandoff: 11/17/2017
  
 2.  針對 Document 資料表建立全文檢索索引之前，請確定此資料表具有唯一、單一資料行且不可為 Null 的索引。 下列 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 陳述式會針對 Document 資料表的 DocumentID 資料行建立唯一索引 `ui_ukDoc`：  
   
-    ```tsql 
+    ```sql 
     CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
     ```  
 
 3.  在您擁有唯一索引鍵之後，就可以使用下列 `Document` CREATE FULLTEXT INDEX [陳述式，針對](../../t-sql/statements/create-fulltext-index-transact-sql.md) 資料表建立全文檢索索引。  
   
-    ```tsql  
+    ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
     (  
         Document                         --Full-text index column name   
@@ -108,14 +108,14 @@ ms.lasthandoff: 11/17/2017
   
  例如，下列 [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會透過從系統停用字詞表複製，建立名為 myStoplist 的新全文檢索停用字詞表：  
   
-```tsql  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
  下列 [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會更改名為 myStoplist 的停用字詞表，並加入 'en' 一詞 (先針對西班牙文，然後再針對法文)：  
   
-```tsql  
+```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'French';  
 GO  
@@ -129,5 +129,5 @@ GO
   
 如需詳細資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。 
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 設定 SQL Server 全文檢索搜尋之後，即準備好執行全文檢索查詢。 如需詳細資訊，請參閱[使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)。

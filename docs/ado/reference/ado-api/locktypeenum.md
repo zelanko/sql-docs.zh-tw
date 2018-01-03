@@ -3,7 +3,7 @@ title: "LockTypeEnum |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,21 +20,21 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 528d26feb0037a3717ff7b1a9b05606e3ecf37c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 48c9909bf228a6bad0ad7e6d44415a1499fd5ea5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 指定在編輯期間鎖定記錄類型。  
   
-|常數|值|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**Adlockpessimistic**|4|表示開放式批次更新。 所需的批次更新模式。|  
 |**Adlockreadonly**|3|表示開放式鎖定、 記錄。 提供者會使用開放式鎖定，鎖定資料錄，只有當您呼叫[更新](../../../ado/reference/ado-api/update-method.md)方法。|  
 |**Locktype**|2|指出封閉式鎖定、 記錄。 提供者沒有什麼是為了確保成功編輯記錄，通常藉由編輯之後，立即鎖定記錄在資料來源。|  
-|**Recordset**|1|表示唯讀的記錄。 您無法變更資料。|  
+|**Recordset**|@shouldalert|表示唯讀的記錄。 您無法變更資料。|  
 |**adLockUnspecified**|-1|未指定鎖定的類型。 複製程式碼，是使用相同的鎖定類型與原始建立複製。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  

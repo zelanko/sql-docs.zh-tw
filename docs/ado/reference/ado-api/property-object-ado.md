@@ -3,7 +3,7 @@ title: "屬性物件 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b0ffca466a4803e6dbf8817d4f7ad5c819cb0d46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c43ea682cb6ca8e0dc7767cd0372fa258cea27db
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-object-ado"></a>屬性物件 (ADO)
 代表動態 ADO 物件提供者所定義的特性。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [屬性的物件屬性、 方法和事件](../../../ado/reference/ado-api/property-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   

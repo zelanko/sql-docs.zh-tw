@@ -3,7 +3,7 @@ title: "取消方法範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8e3d8a6bfc3afa5981d69fc8c91dc1a0b70cda3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7d275baef72033521f0ad85a4337aac3dd624ad
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancel-method-example-vb"></a>取消方法範例 (VB)
 這個範例會使用[取消](../../../ado/reference/ado-api/cancel-method-ado.md)方法來取消命令執行[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件連線是否忙碌中。  
@@ -106,6 +106,6 @@ End Sub
 'EndCancelVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Cancel 方法 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

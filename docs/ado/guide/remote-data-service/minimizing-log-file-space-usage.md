@@ -3,7 +3,7 @@ title: "記錄檔空間使用量降到最低 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddb41dbe5a2d76bb26d1830d1b659dbd99ca1c21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1363381e5cf3e4f3f48498883cb6806759a5c44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="minimizing-log-file-space-usage"></a>記錄檔空間使用量降到最低
 記錄檔可能會迅速填滿 （因此暫停伺服器） 如果有大量的活動上的 SQL Server 資料庫。 您可以將記錄檔設定為**在檢查點截斷**大幅擴充資料庫的記錄檔的存留期。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
  如需有關**在檢查點截斷**功能，請參閱 Microsoft SQL Server 文件。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

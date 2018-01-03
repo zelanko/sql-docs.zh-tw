@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4c2bb5ecc63c0168989e6ae23c0d85d5a22dea3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb251e8c5305d6ee4acc8cfaff61ee1f9d01864f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>設定 Microsoft Azure 的 SQL Server 受管理備份進階選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 下列教學課程描述如何設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的進階選項。 這些程序只有在您需要它們所提供的功能時才有必要。 否則，您可以啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並依據預設行為。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  **建立備份憑證或非對稱金鑰︰** 加密可以搭配憑證或非對稱金鑰使用。 下例會建立用來加密的備份憑證。  
   
-    ```tsql  
+    ```sql  
     USE Master;  
     GO  
        CREATE CERTIFICATE MyTestDBBackupEncryptCert  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/17/2017
   
     ```  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
  設定進階選項和自訂排程之後，您必須啟用目標資料庫或 SQL Server 執行個體上的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 如需詳細資訊，請參閱 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
   
 ## <a name="see-also"></a>另請參閱  

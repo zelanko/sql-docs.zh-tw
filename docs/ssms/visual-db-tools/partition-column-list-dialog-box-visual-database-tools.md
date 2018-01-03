@@ -3,7 +3,7 @@ title: "資料分割資料行清單對話方塊 (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bf4032ba86ee8cdb2b2ee32d787f8aa505f34a60
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 79eb525e471b463368cb928cae0dfcf3cf1bc797
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>資料分割資料行清單對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果資料表有相關資料分割配置，您可以使用此對話方塊選擇資料分割函式要套用到哪個或哪些資料行。 為了讓資料函數運作，您所切換的資料行資料類型必須與在資料分割函數中定義的資料行資料類型相同。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/05/2017
 資料類型  
 顯示資料分割配置所定義的資料行資料類型。  
   
-資料行  
+「資料行」  
 提供您選擇要套用資料分割函數之資料行的下拉式清單。  
   
 ## <a name="see-also"></a>另請參閱  

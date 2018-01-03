@@ -3,7 +3,7 @@ title: "ParameterDirectionEnum |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df9cadb2a5ccf23602df0b9cae6d67c881f647ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 51083883a293bb44c76cadf3971e920e8c3ed05c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 指定是否[參數](../../../ado/reference/ado-api/parameter-object.md)代表輸入的參數、 輸出參數、 既是輸入和輸出參數或從預存程序傳回的值。  
   
-|常數|值|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|預設值。 指出此參數代表的輸入的參數。|  
+|**adParamInput**|@shouldalert|預設值。 指出此參數代表的輸入的參數。|  
 |**adParamInputOutput**|3|指出此參數代表輸入和輸出的參數。|  
 |**adParamOutput**|2|指出此參數代表輸出參數。|  
 |**adParamReturnValue**|4|指出此參數代表傳回的值。|  

@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d2f173b7e4c88182846f2613e24933ae4a470edb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 60eeccf774507cd6f4a949b7f0b5baf07b0bd960
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="recompile-a-stored-procedure"></a>重新編譯預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 重新編譯 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的預存程序。 執行這項操作的方法有三種：程序定義中或呼叫程序時的 **WITH RECOMPILE** 選項、個別陳述式上的 **RECOMPILE** 查詢提示，或是藉由使用 **sp_recompile** 系統預存程序。 本主題描述在建立程序定義及執行現有程序時使用 WITH RECOMPILE 選項。 另外還會描述使用 sp_recompile 系統預存程序重新編譯現有的程序。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
      [建議](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **使用下列方法重新編譯預存程序：**  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  **WITH RECOMPILE** 選項  
  如果在建立程序定義時使用此選項，則需要資料庫的 CREATE PROCEDURE 權限以及建立程序所在結構描述的 ALTER 權限。  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例會建立程序定義。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會建立程序定義。  
   
 ```  
 USE AdventureWorks2012;  
@@ -107,11 +107,11 @@ AS
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例所建立的簡單程序會從檢視表傳回所有員工 (所提供的姓氏和名字)、工作職稱及部門名稱。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例所建立的簡單程序會從檢視表傳回所有員工 (所提供的姓氏和名字)、工作職稱及部門名稱。  
   
      接著將第二個程式碼範例複製並貼到查詢視窗中，然後按一下 **[執行]**。 這樣就會執行程序，並重新編譯程序的查詢計劃。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -125,11 +125,11 @@ GO
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例所建立的簡單程序會從檢視表傳回所有員工 (所提供的姓氏和名字)、工作職稱及部門名稱。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例所建立的簡單程序會從檢視表傳回所有員工 (所提供的姓氏和名字)、工作職稱及部門名稱。  
   
      接著將下列範例複製並貼到查詢視窗中，並按一下 **[執行]**。 這樣並不會執行程序，但會標示要重新編譯的程序，以便在下一次執行程序時更新其查詢計畫。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  

@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4c18d191f0e97a2fbef5343d7b0fb7900bd2d80a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 基本上，每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有兩個作業系統檔案：資料檔案與記錄檔。 資料檔包含諸如資料表、索引、預存程序以及檢視等資料和物件。 記錄檔包含復原資料庫中所有交易必要的資訊。 資料檔可以組成檔案群組，以方便配置及管理。  
@@ -110,7 +110,7 @@ SQL Server 檔案可以從原本指定的大小自動成長。 當您定義檔�
 ### <a name="file-and-filegroup-example"></a>檔案與檔案群組範例
  下例會在 SQL Server 的執行個體上建立資料庫。 資料庫會有主要資料檔、使用者自訂的檔案群組以及記錄檔。 主要資料檔位於主要的檔案群組中，而使用者自訂的檔案群組則擁有兩個次要資料檔。 ALTER DATABASE 陳述式可讓使用者自訂的檔案群組成為預設的檔案群組。 接著系統將建立一個資料表來指定使用者自訂的檔案群組。 (本例會使用一般路徑 `c:\Program Files\Microsoft SQL Server\MSSQL.1` 以避免指定 SQL Server 版本。)
 
-```t-sql
+```sql
 USE master;
 GO
 -- Create the database with the default data

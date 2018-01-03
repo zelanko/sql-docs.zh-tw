@@ -3,9 +3,9 @@ title: SQL Server PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 08/04/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 20bdab1b97f3806cea8b8cb3b526a3d4a057f6fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 19eb632fc1b975671f968b9e2db806129eacae27
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 Windows PowerShell，它是功能強大的指令碼處理介面，可讓系統管理員和開發人員將伺服器管理和應用程式部署自動化。 Windows PowerShell 語言可支援比 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼更複雜的邏輯，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員能夠建立功能強大的管理指令碼。 Windows PowerShell 指令碼也可用來管理其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 伺服器產品。 如此可為管理員提供跨伺服器的通用指令碼語言。  

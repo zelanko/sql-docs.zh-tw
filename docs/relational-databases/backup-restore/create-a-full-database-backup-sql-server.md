@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7cf23385a5eb76d9d528213998de853856333614
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 42964f190b4eacba2e1861c7af0f86d48dcbd4b0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>建立完整資料庫備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始， **PASSWORD** 和 **MEDIAPASSWORD** 選項無法再用於建立備份。 您仍然可以還原以密碼建立的備份。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
   
  備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶 **必須** 具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)並不會檢查檔案存取權限。 當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  展開 [資料庫]，並選取使用者資料庫或展開 [系統資料庫]，然後選取系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 [工作]，然後按一下 [備份]。 會出現 **[備份資料庫]** 對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，指向 **[工作]**，然後按一下 **[備份]**。 會出現 **[備份資料庫]** 對話方塊。  
 
   #### <a name="general-page"></a>**一般頁面**
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 12/05/2017
   
     -   **[完成後驗證備份]**。  
   
-    -   **寫入媒體之前執行總和檢查碼**。  如需總和檢查碼的資訊，請參閱[在備份和還原期間可能的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
+    -   **寫入媒體之前執行總和檢查碼**。  如需總和檢查碼的相關資訊，請參閱[在備份和還原期間可能的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
     
     -   [發生錯誤時繼續]。 
 
@@ -140,7 +140,7 @@ ms.lasthandoff: 12/05/2017
   
 20. 指定備份組逾期的時間，和不需明確略過逾期資料的驗證即可覆寫的時間：  
   
-    -   若要讓備份組在特定的天數後過期，請按一下 [之後] (預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
+    -   若要讓備份組在特定的天數後過期，請按一下 [之後]\(預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
   
          預設值會在 [伺服器屬性] 對話方塊 ([資料庫設定] 頁面) 的 [預設備份媒體保留 (以天為單位)] 選項中設定。 若要存取，請以滑鼠右鍵按一下物件總管中的伺服器名稱並選取 [屬性]，然後選取 [資料庫設定] 頁面。  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 12/05/2017
 
 2.  展開 [資料庫]，以滑鼠右鍵按一下 `Sales`，指向 [工作]，然後按一下 [備份...]。
 
-3.  按一下 **[確定]**。
+3.  按一下 [確定] 。
 
 #### <a name="b--full-back-up-to-disk-to-non-default-location"></a>**B.完整備份至非預設位置的磁碟**
 在此範例中， `Sales` 資料庫將會備份至 `E:\MSSQL\BAK`的磁碟。  先前已備份 `Sales`。
@@ -180,9 +180,9 @@ ms.lasthandoff: 12/05/2017
 
 6.  在 [檔案名稱] 文字方塊中，輸入 `E:\MSSQL\BAK\Sales_20160801.bak`。
 
-7.  按一下 **[確定]**。
+7.  按一下 [確定] 。
 
-8.  按一下 **[確定]**。
+8.  按一下 [確定] 。
 
 #### <a name="c--create-an-encrypted-backup"></a>**C.建立加密的備份**
 在此範例中， `Sales` 資料庫將會使用加密備份至預設備份位置。  已建立  [**資料庫主要金鑰**](../../relational-databases/security/encryption/create-a-database-master-key.md) 。  已建立稱為  [**的**](../../t-sql/statements/create-certificate-transact-sql.md) 憑證 `MyCertificate`。 [建立加密備份](../../relational-databases/backup-restore/create-an-encrypted-backup.md)中提供建立**資料庫主要金鑰**和**憑證**的T-SQL 範例。  
@@ -198,7 +198,7 @@ ms.lasthandoff: 12/05/2017
 
 6.  從 [憑證或非對稱金鑰] 下拉式清單中，選取 `MyCertificate`。
 
-7.  按一下 **[確定]**。
+7.  按一下 [確定] 。
 
 #### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.備份到 Azure Blob 儲存體服務**
 #### <a name="common-steps"></a>**通用步驟**  
@@ -218,24 +218,24 @@ ms.lasthandoff: 12/05/2017
 
     6.  在 [備份檔案:] 文字方塊中，輸入 `Sales_stripe1of2_20160601.bak`。
 
-    7.  按一下 **[確定]**。
+    7.  按一下 [確定] 。
 
     8.  重複步驟 **4** 和 **5**。
 
     9.  在 [備份檔案:] 文字方塊中，輸入 `Sales_stripe2of2_20160601.bak`。
 
-    10.  按一下 **[確定]**。
+    10.  按一下 [確定] 。
 
-    11.   按一下 **[確定]**。
+    11.   按一下 [確定] 。
 
     **D2.共用存取簽章存在，但 SQL Server 認證不存在**
   5.    在 [Azure 儲存體容器:] 文字方塊中，輸入 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`
   
   6.    在 [共用存取原則:] 文字方塊中，輸入共用存取簽章。
   
-  7.    按一下 **[確定]**。
+  7.    按一下 [確定] 。
   
-  8.    按一下 **[確定]**。
+  8.    按一下 [確定] 。
 
     **D3.共用存取簽章不存在**
   5.    按一下 [新增容器] 按鈕，[連接至 Microsoft 訂用帳戶] 對話方塊隨即開啟。  
@@ -244,7 +244,7 @@ ms.lasthandoff: 12/05/2017
   
   7.    在 [選取備份目的地] 對話方塊中，按一下 [確定]。
   
-  8.    按一下 **[確定]**。
+  8.    按一下 [確定] 。
 
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -268,7 +268,7 @@ ms.lasthandoff: 12/05/2017
     |選項|[描述]|  
     |------------|-----------------|  
     |*database*|為要備份的資料庫。|  
-    |*backup_device* [ **或 PowerShell，在**...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 如需詳細資訊，請參閱[備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|  
+    |*backup_device* [ **或 PowerShell，在**...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
     |WITH *with_options* [ **,**...*o* ]|或者，也可以指定一個或多個其他選項 *o*。 如需有關選項基本概念的詳細資訊，請參閱步驟 2。|  
   
 2.  選擇性地指定一或多個 WITH 選項。 這裡描述的是一些基本的 WITH 選項。 如需所有 WITH 選項的資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。  
@@ -304,7 +304,7 @@ ms.lasthandoff: 12/05/2017
 #### <a name="a-back-up-to-a-disk-device"></a>**A.備份到磁碟裝置**  
  下列範例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 建立新的媒體集，以將整個 `FORMAT` 資料庫備份至磁碟。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -318,7 +318,7 @@ GO
 #### <a name="b-back-up-to-a-tape-device"></a>**B.備份到磁帶裝置**  
  下列範例會將完整的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫備份到磁帶上，並將備份附加到先前的備份中。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -331,7 +331,7 @@ GO
 #### <a name="c-back-up-to-a-logical-tape-device"></a>**C.備份到邏輯磁帶裝置**  
  下列範例會為磁帶機建立邏輯備份裝置。 這個範例會將完整的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫備份至該裝置。  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  

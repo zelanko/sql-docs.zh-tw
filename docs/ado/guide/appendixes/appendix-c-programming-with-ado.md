@@ -3,7 +3,7 @@ title: "附錄 c: 使用 ADO 程式設計 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1f7abcbece2ae08beab7cbe99f6bdb21ded96d41
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0799cdcc0c1b833b004de6f556c142534007fc14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>附錄 c： 使用 ADO 在開發環境中進行程式設計
 ADO 是可以搭配許多程式語言，包括 Microsoft Visual Basic、 VBScript、 JScript 和 Visual c + + COM automation 介面的元件。 ADO 的版本會隨每個這些工具和其他應用程式，例如 Microsoft Office 和 Microsoft SQL Server。
@@ -37,5 +37,5 @@ ADO 是可以搭配許多程式語言，包括 Microsoft Visual Basic、 VBScrip
 
 -   [搭配使用 ADO 與 Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
  [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md)[附錄 d: ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)[設定 RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md) [ADO 歷程記錄](../../../ado/guide/ado-history.md)

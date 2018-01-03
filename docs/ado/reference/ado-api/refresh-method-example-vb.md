@@ -3,7 +3,7 @@ title: "重新整理方法範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b087750a23197e3e6b2b752a9180e7977c96132e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c835ba00cfdfb71a596ac6790bbb455128f4588d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-method-example-vb"></a>重新整理方法範例 (VB)
 這個範例示範如何使用[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法，以重新整理[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)預存程序的集合[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
@@ -124,7 +124,7 @@ End Sub
 'EndRefreshVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [參數集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

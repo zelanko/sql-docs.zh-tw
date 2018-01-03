@@ -3,7 +3,7 @@ title: "最大化查詢編輯器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2abd1efbec2221c9f909a79b21df27b6869e828e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e1bd610191d11f3c61db638179fc565bab7e0ea9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-3---maximizing-query-editor"></a>課程 2-3 - 最大化查詢編輯器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 程式設計人員常常會問：「我要怎麼樣才能有更多空間來撰寫程式碼？」 答案是有兩種方式，都很簡單：將 [查詢編輯器] 視窗最大化以及隱藏未使用的工具視窗。  

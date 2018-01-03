@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,21 +20,21 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252c78c0d21d6a7bc20a969713f265735f4f9dfc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2dd2fb33456c14e995a5fb323d4e5bbe56f5c10d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>建立及發行商務規則 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立商務規則，確保主要資料的正確性。 建立規則之後，您必須發行它，才能將它套用至資料。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>若要建立及發行商務規則  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  在 [商務規則] 頁面上，從 [模型] 下拉式清單選取模型。  
   
-4.  從 [實體] 下拉式清單中，選取實體。  
+4.  從 [實體]  下拉式清單選取實體。  
   
 5.  從 [成員類型]  下拉式清單中，選取要套用商務規則的成員類型。  
   
@@ -59,9 +59,9 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  只針對包含驗證動作的規則才傳送通知。  
   
-10. 在 [If] 區塊下，按一下 [新增]。 面板隨即出現。  
+10. 在 [If] 區塊下，按一下 [新增]。 面板隨即顯示。  
   
-11. 從 [屬性] 下拉式清單中選取屬性。  
+11. 從 [屬性]  下拉式清單中，選取屬性。  
   
 12. 從 [運算子] 下拉式清單中選取條件。  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
   
 15. 選擇性地將多個條件加入至規則。 如需詳細資訊，請參閱[將多個條件加入至商務規則 &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)。  
   
-16. 在 [Then] 區塊下，按一下 [新增]。 面板隨即出現。  
+16. 在 [Then] 區塊下，按一下 [新增]。 面板隨即顯示。  
   
 17. 從 [屬性] 下拉式清單中選取屬性。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
   
 21. 或者，若要新增 **Else** 動作，請完成下列步驟。  
   
-    1.  在 [Else] 區塊下，按一下 [新增]。 面板隨即出現。  
+    1.  在 [Else] 區塊下，按一下 [新增]。 面板隨即顯示。  
   
     2.  從 [屬性] 下拉式清單中選取屬性。  
   
@@ -98,23 +98,23 @@ ms.lasthandoff: 11/20/2017
   
 22. 按一下 **[儲存]**。 新的資料列就會加入商務規則方格中。  
   
-23. 按一下 [全部發行]。  
+23. 按一下 [全部發行] 。  
   
 24. 在確認對話方塊中按一下 **[確定]**。 [商務規則狀態] 資料行中的值是 [使用中]。  
   
 ## <a name="grid-columns"></a>方格資料行  
  對於每個建立的商務規則，會將含有六個資料行的資料列加入方格中。 以下是資料行。  
   
-|名稱|說明|  
+|[屬性]|描述|  
 |----------|-----------------|  
-|狀態|當您按一下 [儲存]，下列影像隨即顯示，指出正在更新商務規則。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果建立或編輯商務規則時發生錯誤，則會顯示下列影像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|名稱|商務規則名稱。|  
-|說明|商務規則描述。|  
+|[狀態]|當您按一下 [儲存]，下列影像隨即顯示，指出正在更新商務規則。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果建立或編輯商務規則時發生錯誤，則會顯示下列影像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
+|[屬性]|商務規則名稱。|  
+|描述|商務規則描述。|  
 |商務規則狀態|下列商務規則狀態之一：未定義規則、使用中、排除、暫止變更、暫止排除及暫止刪除。|  
 |已排除|指定商務規則是否已排除。|  
 |通知|指定選取傳送電子郵件通知的使用者或群組。|  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
   
 -   遵循下列其中一個程序，將商務規則套用至資料：  
   

@@ -3,7 +3,7 @@ title: "ADO 事件具現化： ADO 和 WFC |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ffe0911f2845e7ff7e41cf41fcc4f267f7c0ad66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8c6afcc5c41535031961f0d96cf756cd4015c9b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 事件具現化： ADO 和 WFC
 ADO 的 Windows Foundation 類別 (ADO/WFC) ADO 事件模型為基礎，提供簡化的應用程式開發介面。 一般情況下，ADO/WFC 攔截 ADO 事件、 將事件參數合併成單一事件類別，然後再呼叫事件處理常式。  
@@ -66,7 +66,7 @@ ADO 的 Windows Foundation 類別 (ADO/WFC) ADO 事件模型為基礎，提供�
   
 7.  當您準備完成處理，從 ADO/WFC 事件處理常式的清單中移除您的處理常式。 使用此方法的名稱，例如**removeOn***EventName*(*處理常式*)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO-WFC 語法索引](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [事件參數](../../../ado/guide/data/event-parameters.md)   

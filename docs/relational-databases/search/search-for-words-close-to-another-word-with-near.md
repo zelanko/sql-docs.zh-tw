@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 362ce1e89941b1abb4578f1931d91d424ec68ae8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c3e51c4507973ef0e4394aef1049fe0edadf94f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜尋靠近另一個單字的字詞
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 您可以在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述詞或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 函式中使用「鄰近字詞」**NEAR**，以便搜尋彼此接近的單字或片語。 
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example-1"></a>範例 1
  例如，您可以搜尋與 'Smith' 距離兩個詞彙以內的 'John'，如下所示：  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example-2"></a>範例 2
  下列範例會在 `Production.Document` 範例資料庫的 `AdventureWorks` 資料表中搜尋包含與 "bracket" 一字位於相同文件中之 "reflector" 一字的所有文件摘要。  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -161,4 +161,4 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
 ## <a name="see-also"></a>另請參閱  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)   
+ [使用全文檢索搜尋查詢](../../relational-databases/search/query-with-full-text-search.md)   

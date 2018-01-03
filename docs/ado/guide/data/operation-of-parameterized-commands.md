@@ -3,7 +3,7 @@ title: "參數化命令的作業 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5bce98fd15ac82cf9492b4f4454dba36146dd46f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 658d0dc9baa22006b327d826effb5687ccbc1822
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operation-of-parameterized-commands"></a>參數化命令的作業
 如果您正在使用大量子**資料錄集**，特別是相較於父代的大小**資料錄集**，但是需要存取只有少數子章節，可能會發現使用更有效率參數化的命令。  
@@ -94,7 +94,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 > [!NOTE]
 >  當使用 WHERE 子句，參數可以不使用 SQL 資料類型為 text、 ntext 和 image 或會導致錯誤，包含以下的描述： `Invalid operator for data type`。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
  [型式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

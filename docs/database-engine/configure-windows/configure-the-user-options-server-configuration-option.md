@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 84f3081d1f5737c9b324c0ffe51b94a1c5a7183c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f356dbeceebad3a4b8f0be21921c96f97f5df818
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>設定 user options 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.lasthandoff: 11/20/2017
   
      [建議](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要使用下列項目設定 user options 組態選項：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 11/20/2017
   
 -   下表列出及描述 **user options**的組態值。 不是所有組態值都彼此相容。 例如，不能同時設定 ANSI_NULL_DFLT_ON 與 ANSI_NULL_DFLT_OFF。  
   
-    |值|組態|說明|  
+    |ReplTest1|組態|描述|  
     |-----------|-------------------|-----------------|  
-    |1|DISABLE_DEF_CNST_CHK|控制暫時的或延遲的條件約束檢查。|  
+    |@shouldalert|DISABLE_DEF_CNST_CHK|控制暫時的或延遲的條件約束檢查。|  
     |2|IMPLICIT_TRANSACTIONS|如果是 dblib 網路程式庫連接，則控制執行陳述式時是否隱含地啟動交易。 IMPLICIT_TRANSACTIONS 設定在 ODBC 或 OLEDB 連接上無效。|  
     |4|CURSOR_CLOSE_ON_COMMIT|控制執行認可作業後資料指標的行為。|  
     |8|ANSI_WARNINGS|控制彙總警告中的截斷與 NULL。|  
@@ -78,14 +78,14 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>若要設定 user options 組態選項  
   
-1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後選取 **[屬性]**。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[連接]** 節點。  
   
@@ -101,9 +101,9 @@ ms.lasthandoff: 11/20/2017
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 設定 `user options` ，以變更 ANSI_WARNINGS 伺服器選項的設定值。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 設定 `user options` ，以變更 ANSI_WARNINGS 伺服器選項的設定值。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'user options', 8 ;  

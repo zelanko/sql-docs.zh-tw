@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3f0d5a22242be81f68c218cb5f89f36d4853641f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 83c4872e3e021afc6cb85133d0e02f22f181d612
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用變更追蹤 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
  下列範例將說明如何取得初始同步處理版本和初始資料集。  
   
-```tsql  
+```sql  
     -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
     SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>使用變更追蹤函數來取得變更  
  若要取得資料表的變更資料列和這些變更的相關資訊，請使用 CHANGETABLE(CHANGES…)。 例如，下列查詢會取得 `SalesLT.Product` 資料表的變更。  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
@@ -94,7 +94,7 @@ FROM
   
  一般而言，用戶端會想要取得資料列的最新資料，而非只有該資料列的主索引鍵。 因此，應用程式會讓 CHANGETABLE(CHANGES …) 的結果與使用者資料表中的資料聯結。 例如，下列查詢會與 `SalesLT.Product` 資料表聯結，以便取得 `Name` 和 `ListPrice` 資料行的值。 請注意 `OUTER JOIN`的用法。 這是確保系統會針對已經從使用者資料表中刪除的這些資料列傳回變更資訊的必要條件。  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, P.Name, P.ListPrice,  
     CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
@@ -109,13 +109,13 @@ ON
   
  若要取得可在下一次變更列舉中使用的版本，請使用 CHANGE_TRACKING_CURRENT_VERSION()，如下列範例所示。  
   
-```tsql  
+```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
   
  當應用程式取得變更時，它必須同時使用 CHANGETABLE(CHANGES…) 和 CHANGE_TRACKING_CURRENT_VERSION()，如下列範例所示。  
   
-```tsql  
+```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -142,7 +142,7 @@ ON
   
  下列範例將說明如何針對每份資料表驗證 `last_synchronization_version` 的值是否有效。  
   
-```tsql  
+```sql  
 -- Check individual table.  
 IF (@last_synchronization_version < CHANGE_TRACKING_MIN_VALID_VERSION(  
                                    OBJECT_ID('SalesLT.Product')))  
@@ -154,7 +154,7 @@ END
   
  如下列範例所示，您可以針對資料庫中的所有資料表，驗證 `last_synchronization_version` 的值是否有效。  
   
-```tsql  
+```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
   SELECT COUNT(*) FROM sys.change_tracking_tables  
@@ -174,7 +174,7 @@ END
   
  在下列範例中，如果 `CT_ThumbnailPhoto` 資料行並未變更，該資料行將成為 `NULL` 。 此資料行也可能是 `NULL` ，因為它已變更為 `NULL` 。應用程式可以使用 `CT_ThumbNailPhoto_Changed` 資料行來判斷此資料行是否變更。  
   
-```tsql  
+```sql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
     OBJECT_ID('SalesLT.Product'),'ThumbNailPhoto', 'ColumnId')  
   
@@ -252,7 +252,7 @@ ON
   
  下列範例將說明如何針對資料庫啟用快照集隔離。  
   
-```tsql  
+```sql  
 -- The database must be configured to enable snapshot isolation.  
 ALTER DATABASE AdventureWorksLT  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
@@ -260,7 +260,7 @@ ALTER DATABASE AdventureWorksLT
   
  快照集交易的使用方式如下所示：  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 BEGIN TRAN  
   -- Verify that version of the previous synchronization is valid.  
@@ -321,7 +321,7 @@ COMMIT TRAN
   
  下列範例將示範如何使用 CHANGETABLE(VERSION …) 函數，以最有效率的方式 (不需要個別查詢) 檢查是否有衝突。 在此範例中， `CHANGETABLE(VERSION …)` 會針對 `SYS_CHANGE_VERSION` 所指定的資料列，判斷 `@product id`。 `CHANGETABLE(CHANGES …)` 可以取得相同的資訊，但是這樣做比較沒有效率。 如果資料列的 `SYS_CHANGE_VERSION` 值大於 `@last_sync_version`的值，就表示發生衝突。 如果發生衝突，系統將不會更新此資料列。 `ISNULL()` 檢查是必要的，因為資料列可能沒有任何變更資訊可用。 如果自從啟用變更追蹤或清除變更資訊以來，此資料列尚未更新，就不會有任何變更資訊存在。  
   
-```tsql  
+```sql  
 -- Assumption: @last_sync_version has been validated.  
   
 UPDATE  
@@ -341,7 +341,7 @@ WHERE
   
  下列程式碼可以檢查更新的資料列計數，而且可以識別衝突的更多相關資訊。  
   
-```tsql  
+```sql  
 -- If the change cannot be made, find out more information.  
 IF (@@ROWCOUNT = 0)  
 BEGIN  
@@ -367,7 +367,7 @@ END
   
  內容資訊通常是用來識別變更的來源。 如果能夠識別變更的來源，再度同步處理時，資料存放區就可以使用該項資訊來避免取得變更。  
   
-```tsql  
+```sql  
   -- Try to update the row and check for a conflict.  
   WITH CHANGE_TRACKING_CONTEXT (@source_id)  
   UPDATE  
@@ -390,7 +390,7 @@ END
 > [!IMPORTANT]  
 >  我們建議您使用快照集隔離並在快照集交易內部進行變更。  
   
-```tsql  
+```sql  
 -- Prerequisite is to ensure ALLOW_SNAPSHOT_ISOLATION is ON for the database.  
   
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  

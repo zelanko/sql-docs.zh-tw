@@ -24,13 +24,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c4d90a0e4498ecdb28727eeca14c2f6bbe147e6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="query-with-full-text-search"></a>使用全文檢索搜尋進行查詢
+# <a name="query-with-full-text-search"></a>Query with Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 使用全文檢索述詞 **CONTAINS** 和 **FREETEXT** 以及具有 **SELECT** 陳述式的資料列集值函式 **CONTAINSTABLE** 和 **FREETEXTTABLE**，以撰寫全文檢索查詢。 本主題提供每個述詞和函式的範例，並協助您選擇最適合的述詞和函式。
 
 -   使用 **CONTAINS** 和 **CONTAINSTABLE**，以比對單字和片語。
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example---contains"></a>範例 - CONTAINS  
  下列範例會尋找所有價格是 `$80.99` ，且含有 `"Mountain"`這個單字的產品。  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -55,7 +55,7 @@ GO
 ### <a name="example---freetext"></a>範例 - FREETEXT 
  下列範例會搜尋包含 vital、safety 和 components 相關單字的所有文件。  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -68,7 +68,7 @@ GO
 ### <a name="example---containstable"></a>範例 - CONTAINSTABLE  
  下列範例會傳回 **Description** 資料行在 "light" 或 "lightweight" 字附近包含 "aluminum" 這個字之所有產品的描述識別碼和描述。 只會傳回排名值大於或等於 2 的資料列。  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -90,7 +90,7 @@ GO
 ### <a name="example--freetexttable"></a>範例- FREETEXTTABLE  
  下列範例將擴充 FREETEXTTABLE 查詢，以便先傳回最高等級的資料列，並將每個資料列的等級加至選取清單。 若要指定查詢，您必須知道 **ProductDescriptionID** 是 **ProductDescription** 資料表的唯一索引鍵資料行。  
   
-```tsql 
+```sql 
 USE AdventureWorks2012  
 GO  
   
@@ -106,7 +106,7 @@ GO
   
 下面是相同查詢的擴充，它只傳回等級值大於或等於 10 的資料列：  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -150,7 +150,7 @@ GO
 
 下表描述您可搜尋的單字和片語類型。
   
-|查詢詞彙形式|Description|支援者|  
+|查詢詞彙形式|描述|支援者|  
 |----------------------|-----------------|------------------|  
 |一或多個特定的單字或片語<br/>(「簡單詞彙」)|例如，"croissant" 是一個單字，而 "café au lait" 則是一個片語。 這類字詞與片語稱為簡單詞彙。<br /><br /> 在全文檢索搜尋中，「單字」 (或 Token) 是一種字串，其邊界是由適當的斷詞工具所識別，後面緊接著指定之語言的語言規則。 有效的「片語」是由多個單字所組成 (不論單字之間是否有標點符號)。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [搜尋特定字詞或片語 (簡單詞彙)](#Simple_Term)。|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 會尋找完全相符的片語。<br /><br /> [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 會將片語分解成個別的字詞。|  
 |以指定之文字開頭的單字或片語<br/>(「前置詞彙」)|對於單一前置詞彙而言，任何以指定之詞彙為開頭的單字都會成為結果集的一部分。 例如，詞彙 "auto*" 與 "automatic"、"automobile" 等字相符。<br /><br /> 對於片語而言，片語中的每個單字都會被視為前置詞彙。 例如，"auto tran\*" 詞彙符合 "automatic transmission" 及 "automobile transducer"，但不符合 "automatic motor transmission"。<br /><br /> 「前置詞彙」是指附加至單字前面以便產生衍生字或字形變化的字串。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [執行前置詞搜尋 (前置詞彙)](#Prefix_Term)。|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
@@ -164,7 +164,7 @@ GO
 ###  <a name="Simple_Term"></a> 搜尋特定單字或片語 (簡單詞彙)  
  您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 來搜尋資料表中的特定片語。 例如，如果您要搜尋 **資料庫中的** ProductReview [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表，以尋找具有 "learning curve" 片語之產品的所有註解，可依照下列方式使用 CONTAINS 述詞：  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -179,7 +179,7 @@ GO
 ###  <a name="Prefix_Term"></a> 搜尋具有前置詞的單字 (前置詞彙)  
  您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 來搜尋具有指定之前置詞的字詞或片語。 傳回資料行內包含以指定之前置詞開頭之文字的所有項目。 例如，若要搜尋包含 `top`- 前置詞的所有資料列，如同在 `top``ple`、 `top``ping`和 `top`中。 查詢內容如下所示：  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -198,7 +198,7 @@ GO
   
 下列範例會在 `Comments` 資料庫中 `ProductReview` 資料表的 `AdventureWorks` 資料行內，搜尋任何形式的 "foot" ("foot"、"feet" 等)。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -215,7 +215,7 @@ GO
   
 下列範例顯示一項查詢，此查詢會搜尋所有客戶的地址，並使用加權值，找出以 "Bay" 字串開頭且連接 "Street" 或 "View" 的所有文字。 資料列中包含越多指定的字詞，結果就會為該資料列指定越高的等級。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -243,7 +243,7 @@ CONTAINS 述詞與 CONTAINSTABLE 函數會使用相同的搜尋條件。 這兩�
 ### <a name="example"></a>範例  
  下列範例使用 CONTAINS 述詞來搜尋描述識別碼不等於 5，而且描述同時包含 "Aluminum" 與 "spindle" 這兩個單字的描述。 搜尋條件會使用 AND 布林運算子。 這個範例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的 ProductDescription 資料表。
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   

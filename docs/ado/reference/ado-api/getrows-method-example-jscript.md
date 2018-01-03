@@ -3,7 +3,7 @@ title: "GetRows 方法範例 (JScript) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a81c58c0a9f131993b5b41c130ddd599d42c0d91
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f017bbeb1d3812e6f984c77acaba09477819591
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 方法範例 (JScript)
 這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法來擷取所有資料列的*Custiomers*資料表中[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，並使用產生的資料填入陣列。 **GetRows**方法會傳回所需的資料列數少於兩個案例中： 如果任一個[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已達到，或如果**GetRows**嘗試擷取記錄其他使用者刪除。 此函數會傳回**False**第二種情況發生時，才。 剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**GetRowsJS.asp**。  
@@ -162,6 +162,6 @@ BODY {
 <!-- EndGetRowsJS -->  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

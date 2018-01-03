@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e93230571a231e1746eeff928d894c02fffd57ad
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e25ba8ad35a44088cee720ad626bb1524f3db1c0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>搭配使用 SQL Server 連接器與 SQL 加密功能
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)] 使用 Azure Key Vault 所保護的非對稱金鑰進行的一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密活動，包括下列三個部分。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
     -   使用第 I 部分中的 `SECRET` 用戶端密碼 **，完成** 引數的第二個部分。在此範例中，第 1 部分中的 **用戶端密碼** 是 `Replace-With-AAD-Client-Secret`。 `SECRET` 引數的最終字串將是一連串較長的字母和數字， *不含連字號*。  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
      建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入，並在其中新增步驟 1 中的認證。 這個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 範例會使用稍早匯入的相同金鑰。  
   
-    ```tsql  
+    ```sql  
     USE master;  
     -- Create a SQL Server login associated with the asymmetric key   
     -- for the Database engine to use when it loads a database   
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/21/2017
   
      DEK 將加密您在資料庫執行個體中的資料和記錄檔，接著再透過 Azure 金鑰保存庫非對稱金鑰進行加密。 DEK 可以使用任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的演算法或金鑰長度來建立。  
   
-    ```tsql  
+    ```sql  
     USE ContosoDatabase;  
     GO  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  **開啟 TDE**  
   
-    ```tsql  
+    ```sql  
     -- Alter the database to enable transparent data encryption.  
     ALTER DATABASE ContosoDatabase   
     SET ENCRYPTION ON;  
@@ -127,7 +127,7 @@ ms.lasthandoff: 11/21/2017
   
      或者，您可以執行下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼。 加密狀態 3 表示加密的資料庫。  
   
-    ```tsql  
+    ```sql  
     USE MASTER  
     SELECT * FROM sys.asymmetric_keys  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 11/21/2017
   
     -   使用第 I 部分中的 `SECRET` 用戶端密碼 **，完成** 引數的第二個部分。在此範例中，第 I 部分中的 **用戶端密碼** 是 `Replace-With-AAD-Client-Secret`。 `SECRET` 引數的最終字串將是一連串較長的字母和數字， *不含連字號*。   
   
-        ```tsql  
+        ```sql  
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
@@ -181,7 +181,7 @@ ms.lasthandoff: 11/21/2017
   
      這個範例使用儲存在金鑰保存庫中的 `CONTOSO_KEY_BACKUP` 非對稱金鑰，該金鑰可以提早針對 master 資料庫進行匯入或建立 (如第 IV 部分步驟 5 中所述)。  
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     -- Create a SQL Server login associated with the asymmetric key   
@@ -203,7 +203,7 @@ ms.lasthandoff: 11/21/2017
      
      在下列範例中，請注意，若資料庫已使用 TDE 加密，且非對稱金鑰 `CONTOSO_KEY_BACKUP` 不同於 TDE 的非對稱金鑰，則備份將透過 TDE 非對稱金鑰和 `CONTOSO_KEY_BACKUP` 這兩者加密。 目標 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體需要這兩個金鑰來解密備份。
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     BACKUP DATABASE [DATABASE_TO_BACKUP]  
@@ -226,7 +226,7 @@ ms.lasthandoff: 11/21/2017
     
      範例還原程式碼：  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE [DATABASE_TO_BACKUP]  
     FROM DISK = N'[PATH TO BACKUP FILE]'   
         WITH FILE = 1, NOUNLOAD, REPLACE;  
@@ -243,7 +243,7 @@ ms.lasthandoff: 11/21/2017
   
  這個範例使用儲存在金鑰保存庫中的 `CONTOSO_KEY_COLUMNS` 非對稱金鑰，該金鑰可以提早進行匯入或建立 (如 [使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)第 3 節步驟 3 中所述)。 若要在 `ContosoDatabase` 資料庫中使用這個非對稱金鑰，您必須再執行一次 `CREATE ASYMMETRIC KEY` 陳述式，以提供參考這個金鑰的 `ContosoDatabase` 資料庫。  
   
-```tsql  
+```sql  
 USE [ContosoDatabase];  
 GO  
   

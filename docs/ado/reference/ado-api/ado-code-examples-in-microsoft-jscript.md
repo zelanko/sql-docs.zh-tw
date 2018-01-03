@@ -3,7 +3,7 @@ title: "ADO 程式碼範例在 Microsoft JScript |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3387c3cff07fd6399e0bde0539be851521eea130
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a72daedd1b07d55b6308e77765b38f800b62971
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>在 Microsoft JScript ADO 程式碼範例
 若要了解如何使用 ADO 方法、 屬性和事件在 JScript 中撰寫時，使用下列程式碼範例。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [篩選器和 RecordCount 屬性範例](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [在 Visual Basic 中的 ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO 程式碼範例的 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Visual c + + 中的 ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   

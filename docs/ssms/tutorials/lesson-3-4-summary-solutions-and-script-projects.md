@@ -3,7 +3,7 @@ title: "摘要：解決方案和指令碼專案 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a05d971d65639cc5644b19235cad05510257e54
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7fe194806dc60a604bcae54a3d170bf691a1b09a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-4---summary---solutions-and-script-projects"></a>課程 3-4 - 摘要 - 解決方案和指令碼專案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 廣泛的開發人員功能，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供開發人員在企業層級管理程式碼時所需要的功能。 您可以建立自訂範本來支援重複的工作，在集中式與協調環境中儲存和管理複雜指令碼專案。  

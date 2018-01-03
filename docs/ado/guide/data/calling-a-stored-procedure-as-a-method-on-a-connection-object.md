@@ -3,7 +3,7 @@ title: "為連線物件上的方法呼叫預存程序 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09d72e54d02fc6d13b34532ef5b847fcdca44d79
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5b78293bdc1871040d205b64555082e2499b8dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>為連線物件上的方法呼叫預存程序
 您可以呼叫預存程序，就好像在開啟相關聯的原生方法**連接**物件。 這是類似於呼叫上的具名的命令**連接**物件。  
@@ -84,5 +84,5 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

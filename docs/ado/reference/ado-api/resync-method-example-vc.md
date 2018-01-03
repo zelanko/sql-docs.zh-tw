@@ -3,7 +3,7 @@ title: "重新同步處理方法的範例 （VC + +） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e19cbea099c6e029c38c6196860a7083ebdf2c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 388abd62c91a2562e940d77963ff31cdd576701a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resync-method-example-vc"></a>重新同步處理方法的範例 （VC + +）
 這個範例示範如何使用[重新同步處理](../../../ado/reference/ado-api/resync-method.md)靜態資料錄集中的資料重新整理方法。  
@@ -146,5 +146,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Resync 方法](../../../ado/reference/ado-api/resync-method.md)

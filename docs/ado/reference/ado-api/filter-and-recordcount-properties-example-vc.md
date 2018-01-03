@@ -3,7 +3,7 @@ title: "篩選器和 RecordCount 屬性範例 （VC + +） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2308e32d81d9a3044bfe0583373fd54fdd93852
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d5f1761690d5d1a2a77273b620613fbcaa3ebedd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>篩選器和 RecordCount 屬性範例 （VC + +）
 這個範例會使用[篩選](../../../ado/reference/ado-api/filter-property.md)屬性來開啟新[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)根據指定的條件套用到現有**資料錄集**。 它會使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)屬性，以兩個顯示的記錄數目**資料錄集**。 若要執行此程序需要 FilterField 函式。  
@@ -307,7 +307,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [篩選屬性](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount 屬性 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

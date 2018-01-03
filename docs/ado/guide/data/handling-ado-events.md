@@ -3,7 +3,7 @@ title: "處理 ADO 事件 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 43d07faf4f544ef22c2afcf9013528fd65225be6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b892f2b2aff3ff68bd470855a81c26f5a444f43b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-ado-events"></a>處理 ADO 事件
 ADO 事件模型支援發出特定同步和非同步 ADO 作業*事件*，或在作業開始之前或之後完成的通知。 事件是實際的事件處理常式常式，在您的應用程式中定義的呼叫。  
@@ -51,7 +51,7 @@ ADO 事件模型支援發出特定同步和非同步 ADO 作業*事件*，或在
   
 -   [ADO 事件具現化 (依語言)](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   

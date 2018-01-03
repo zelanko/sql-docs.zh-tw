@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1435effb52d063e6b51d07343a0c042e4919b2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>判斷有效的 Database Engine 權限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 固定伺服器角色和固定資料庫角色具有預先設定且無法變更的權限。 若要判斷誰是固定伺服器角色成員，請執行下列查詢。    
 >  [!NOTE] 
 >  不適用於無法使用伺服器層級權限的 SQL Database 或 SQL Data Warehouse。 SQL Server 2012 已新增 `sys.server_principals` 的 `is_fixed_role` 資料行。 舊版 SQL Server 則不需要。  
-```tsql
+```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
  FROM sys.server_role_members AS SRM
@@ -73,7 +73,7 @@ SELECT SP1.name AS ServerRoleName,
 >  * 這個查詢會檢查 master 資料庫中的資料表，但可以在內部部署產品的任何資料庫中執行。 
 
 若要判斷誰是固定資料庫角色成員，請在每個資料庫中執行下列查詢。
-```tsql
+```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
  FROM sys.database_role_members AS DRM
@@ -113,7 +113,7 @@ Windows 使用者使用根據 Windows 群組的登入進行連線時，某些活
 下列查詢會傳回一份已在伺服器層級授與或拒絕的權限清單。 這個查詢應該在 master 資料庫中執行。   
 >  [!NOTE] 
 >  在 SQL Database 或 SQL Data Warehouse 上，無法授與或查詢伺服器層級權限。   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -127,7 +127,7 @@ SELECT pr.type_desc, pr.name,
 ### <a name="database-permissions"></a>資料庫權限
 
 下列查詢會傳回一份已在資料庫層級授與或拒絕的權限清單。 這個查詢應該在每個資料庫中執行。   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -139,7 +139,7 @@ ORDER BY pr.name, type_desc;
 ```
 
 可將權限資料表加入其他系統檢視的每個權限類別，而這些系統檢視提供該安全性實體類別的相關資訊。 例如，下列查詢會提供受到權限影響之資料庫物件的名稱。    
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, pe.state_desc, 
  pe.permission_name, s.name + '.' + oj.name AS Object, major_id
  FROM sys.database_principals AS pr
@@ -152,7 +152,7 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
 使用 `HAS_PERMS_BY_NAME` 函式來判斷特定使用者 (在此情況下是 `TestUser`) 是否具有權限。 例如：   
-```tsql
+```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
 REVERT;

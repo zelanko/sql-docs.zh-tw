@@ -3,7 +3,7 @@ title: "撰寫方法 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd956d5ff536105dc889e89d8f2d80f22db0e9c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aad21aef150d1ea9a176122eb3a0ddfb7dec9708
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="write-method"></a>Write 方法
 將二進位資料寫入[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
@@ -55,5 +55,5 @@ Stream.Write Buffer
 ## <a name="applies-to"></a>適用於  
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [WriteText 方法](../../../ado/reference/ado-api/writetext-method.md)

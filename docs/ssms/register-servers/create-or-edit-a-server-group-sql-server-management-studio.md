@@ -3,7 +3,7 @@ title: "建立或編輯伺服器群組 (SQL Server Management Studio) | Microsof
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7e91da011789c674e8169a3ef3eb68630ac2b111
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b2bb7c1950d3a8dd84b6c5445bc48bf1ab104887
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>建立或編輯伺服器群組 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何透過建立伺服器群組，然後將伺服器放入伺服器群組中的方式，組織 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中 [已註冊的伺服器] 內的伺服器。 您隨時都可在「已註冊的伺服器」中建立伺服器群組，您也可以在註冊伺服器時建立伺服器群組。  

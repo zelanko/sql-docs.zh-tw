@@ -5,7 +5,7 @@ ms.date: 09/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 76cced5552daf87bffa6ac234f54c3ee780349a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e7b7e796c6badea38ea4423561d26e7f53eb95d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 中的 Integration Services 新功能
 本主題說明 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中已新增或更新的功能。
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="new-in-ssis-in-sql-server-2017-rc1"></a>SQL Server 2017 RC1 的 SSIS 新功能
 
-### <a name="new-and-changed-features-in-scale-out-for-ssis"></a>SSIS 相應放大中的新增和變更功能
+### <a name="new-and-changed-features-in-scale-out-for-ssis"></a>SSIS 相應放大的新功能和變更的功能
 
 -   相應放大主機現在支援高可用性。 您可以針對裝載相應放大主機服務的伺服器，啟用 AlwaysOn for SSISDB 並設定 Windows Server 容錯移轉叢集。 將這項變更套用至相應放大主機，即可避免單一失敗點，以及提供整個相應放大部署的高可用性。
 -   相應放大背景工作中執行記錄的容錯移轉處理已獲得改善。 如果相應放大背景工作意外停止，則會將執行記錄保存到本機磁碟。 稍後，背景工作重新啟動時，會重新載入保存記錄，並繼續將它們儲存至 SSISDB。

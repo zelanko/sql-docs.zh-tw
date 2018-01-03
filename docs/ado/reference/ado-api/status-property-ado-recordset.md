@@ -3,7 +3,7 @@ title: "Status 屬性 （ADO 資料錄集） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0005de0669a2dd68622c2e81c9f7b3be2f912da1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 26539c8162d53566c31bde8e8f131f0760aed704
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-property-ado-recordset"></a>Status 屬性 （ADO 資料錄集）
 表示相對於批次更新為目前的記錄或其他的大量作業的狀態。  
@@ -40,6 +40,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [狀態屬性範例 （資料錄集） (VB)](../../../ado/reference/ado-api/status-property-example-recordset-vb.md)   
  [Status 屬性範例 (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

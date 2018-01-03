@@ -3,7 +3,7 @@ title: "步驟 3： 伺服器取得資料錄集 （RDS 教學課程） |Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47d4ebd2d43675014bd87812ef47b285fcca1041
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 03b8e94de98615dd411a5b454217803e1aae3381
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步驟 3： 伺服器取得資料錄集 （RDS 教學課程）
 伺服器程式用來查詢所需的資料列的資料來源的連接字串和命令文字。 ADO 通常用來擷取這**資料錄集**，不過其他 Microsoft 資料存取介面，例如 OLE DB，無法使用。  
@@ -42,6 +42,6 @@ Dim rs as New ADODB.Recordset
 End Function  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [步驟 4： 伺服器傳回的資料錄集 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
  [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

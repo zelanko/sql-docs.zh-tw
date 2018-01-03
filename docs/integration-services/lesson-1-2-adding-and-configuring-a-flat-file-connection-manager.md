@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 498e6557348e164085bae3b3ea646caa318a49c7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8e55988e5e55671b5ff97b80916e3c368d51dd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>課程 1-2 - 新增和設定一般檔案連線管理員
 在這項工作中，您將一般檔案連接管理員加入您剛才建立的封裝中。 一般檔案連接管理員可讓封裝從一般檔案擷取資料。 使用一般檔案連接管理員，您可以指定當封裝從一般檔案擷取資料時，要套用的檔案名稱和位置、地區設定和字碼頁及檔案格式 (包括資料行分隔符號)。 此外，您可以手動指定個別資料行的資料類型，或使用 [建議資料行類型] 對話方塊，將所擷取資料的資料行自動對應至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料類型。  
@@ -92,10 +92,10 @@ ms.lasthandoff: 11/20/2017
   
     |一般檔案資料行|建議類型|目的地資料行|目的地類型|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|日期|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
     對 [CurrencyID] 資料行建議的資料類型與目的地資料表中的欄位資料類型不相容。 因為 `DimCurrency.CurrencyAlternateKey` 的資料類型是 nchar (3)，所以 [CurrencyID] 必須從 [DT_STR] 字串變更為 [DT_WSTR] 字串。 另外，`DimDate.FullDateAlternateKey` 欄位定義為日期資料類型，因此 [CurrencyDate] 需要從日期 [DT_Date] 變更為資料庫日期 [DT_DBDATE]。  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  在屬性窗格中，將資料行 [CurrencyDate] 的資料類型從日期 [DT_DATE] 變更為資料庫日期 [DT_DBDATE]。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [步驟 3：加入和設定 OLE DB 連接管理員](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  

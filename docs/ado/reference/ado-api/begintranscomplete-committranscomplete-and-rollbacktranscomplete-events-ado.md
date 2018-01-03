@@ -3,7 +3,7 @@ title: "BeginTrans，CommitTrans，RollbackTrans 事件 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -29,11 +29,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 782e17249205d2619fc5aa4c0699166fc21f7c78
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1ba84d4b168bb90ddc9994fb20080b628cd26c5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、 CommitTransComplete 和 RollbackTransComplete 事件 (ADO)
 這些事件將在上呼叫相關聯的作業之後[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件完成執行。  
@@ -73,7 +73,7 @@ RollbackTransComplete pError, adStatus, pConnection
   
  如果[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)屬性設定為**adXactCommitRetaining**或**adXactAbortRetaining**，新的交易開始之後認可或回復交易。 使用**BeginTransComplete**略過所有事件，但第一個交易的開始事件。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [BeginTrans、 CommitTrans 和 RollbackTrans 方法範例 (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   

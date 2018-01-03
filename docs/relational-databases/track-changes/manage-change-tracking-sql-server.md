@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0353aea7e84d69dca9dc469d4945a7cdf6eb7c34
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f06b2599172d8cbdaee05a4c42d852a37290dadb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理變更追蹤 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  此外，當針對使用者資料表啟用變更追蹤時， [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 目錄檢視也會列出所建立的內部資料表。  
   
-### <a name="security"></a>安全性  
+### <a name="security"></a>Security  
  若要使用 [變更追蹤函數](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)來存取變更追蹤資訊，主體必須具有以下權限：  
   
 -   在所查詢的資料表上，變更追蹤資料表上至少具有主索引鍵資料行的 SELECT 權限。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="understanding-change-tracking-overhead"></a>了解變更追蹤負擔  
  在針對資料表啟用變更追蹤時，某些管理作業會受到影響。 下表將列出這些作業以及您應該考量的影響。  
   
-|運算|啟用變更追蹤時|  
+|作業|啟用變更追蹤時|  
 |---------------|-------------------------------------|  
 |DROP TABLE|針對卸除的資料表移除了所有變更追蹤資訊。|  
 |ALTER TABLE DROP CONSTRAINT|嘗試卸除 PRIMARY KEY 條件約束但卻失敗。 在可以卸除 PRIMARY KEY 條件約束之前，必須先停用變更追蹤。|  
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
  如果是其他內部資料表，您可以使用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 預存程序來判斷用於變更追蹤資料表的空間。 您可以使用 [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 目錄檢視來取得內部資料表的名稱，如下列範例所示。  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

@@ -3,7 +3,7 @@ title: "自訂檔案 UserList 區段 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 882b50778567fd82367bcbac376363e9e93eaaed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d9e2ea77de53256e075db07b8f809298e74628d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customization-file-userlist-section"></a>自訂檔案 UserList > 一節
 **Userlist**區段屬於**連接**區段中具有相同的區段*識別碼*參數。  
@@ -40,12 +40,12 @@ ms.lasthandoff: 11/17/2017
  *使用者名稱***=**   
  ***accessRights***  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
 |*使用者名稱*|*使用者名*採用此連接的人員。 有效的使用者名稱使用 IIS 建立**Service Manager**對話方塊。|  
 |***accessRights***|其中一個的下列存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** — 使用者可以讀取的資料來源。<br />-   **ReadWrite** — 使用者可讀取或寫入至資料來源。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自訂檔案記錄檔 > 一節](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自訂檔案 SQL > 一節](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

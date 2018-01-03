@@ -3,7 +3,7 @@ title: "自訂 (工具列頁面) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b1be117c2fafffd2272f5af08c987c61e5d64b8e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a0fb95a5c9589b46e2f144362d7b667411965545
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-toolbars-page"></a>自訂 (工具列頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [工具列] 索引標籤可以讓您建立、重新命名、移除和重設工具列。 您可以在 [工具] 功能表上按一下 [自訂]，然後按一下 [工具列] 來存取此索引標籤。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 **Rename**  
 顯示 [重新命名工具列] 對話方塊，讓您僅能變更自訂工具列的名稱。  
   
-**Delete**  
+**刪除**  
 刪除 [工具列] 清單中所選取的自訂工具列。  
   
 **重設**  

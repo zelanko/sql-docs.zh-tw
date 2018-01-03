@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 01b85a4c7cf91d2d6b2f2616ff6b19221a188afd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b3236a5888d906328f525333ae9e20b42e6d8de
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  使用 **ALTER DATABASE** 陳述式可啟用查詢存放區。 例如：  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
  下列查詢會傳回查詢存放區中查詢與計劃的相關資訊。  
   
-```tsql  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -200,7 +200,7 @@ JOIN sys.query_store_query_text AS Txt
   
  查詢 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) 可判斷查詢存放區目前是否在作用中，以及其目前是否正在收集執行階段統計資料。  
   
-```tsql  
+```sql  
 SELECT actual_state, actual_state_desc, readonly_reason,   
     current_storage_size_mb, max_storage_size_mb  
 FROM sys.database_query_store_options;  
@@ -213,7 +213,7 @@ FROM sys.database_query_store_options;
   
  若要找出查詢存放區狀態的詳細資訊，請於使用者資料庫中執行下列作業。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
@@ -221,7 +221,7 @@ SELECT * FROM sys.database_query_store_options;
   
  您可以覆寫彙總查詢執行階段統計資料的間隔 (預設為 60 分鐘)。  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
@@ -235,14 +235,14 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  若要檢查目前的查詢存放區的大小和限制，請在使用者資料庫中執行下列陳述式。  
   
-```tsql  
+```sql  
 SELECT current_storage_size_mb, max_storage_size_mb   
 FROM sys.database_query_store_options;  
 ```  
   
  如果查詢存放區的儲存體已滿，請使用下列陳述式來擴充該儲存體。  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
@@ -251,7 +251,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
   
  使用單一 ALTER DATABASE 陳述式即可一次設定多個查詢存放區選項。  
   
-```tsql  
+```sql  
 ALTER DATABASE <database name>   
 SET QUERY_STORE (  
     OPERATION_MODE = READ_WRITE,  
@@ -270,7 +270,7 @@ SET QUERY_STORE (
   
  查詢存放區內部資料表於建立資料庫時建立在 PRIMARY 檔案群組中，且該組態之後無法變更。 如果您快要用完了空間，可能會想要使用下列陳述式，來清除舊的查詢存放區資料。  
   
-```tsql  
+```sql  
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;  
 ```  
   
@@ -278,7 +278,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  **刪除臨機操作查詢** 如此做會刪除只執行一次且超過 24 小時的查詢。  
   
-```tsql  
+```sql  
 DECLARE @id int  
 DECLARE adhoc_queries_cursor CURSOR   
 FOR   
@@ -321,7 +321,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  資料庫執行了**後 *n* 項查詢嗎？**  
   
-```tsql  
+```sql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
     qt.query_text_id, p.plan_id, rs.last_execution_time  
 FROM sys.query_store_query_text AS qt   
@@ -336,7 +336,7 @@ ORDER BY rs.last_execution_time DESC;
   
  **每項查詢的執行次數？**  
   
-```tsql  
+```sql  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
     SUM(rs.count_executions) AS total_execution_count  
 FROM sys.query_store_query_text AS qt   
@@ -352,7 +352,7 @@ ORDER BY total_execution_count DESC;
   
  **前一個小時內，平均執行時間最長的查詢數目？**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
     qt.query_text_id, p.plan_id, GETUTCDATE() AS CurrentUTCTime,   
     rs.last_execution_time   
@@ -369,7 +369,7 @@ ORDER BY rs.avg_duration DESC;
   
  **過去 24 小時內，有相對應的平均資料列計數與執行計數，且平均實體 IO 讀取最大的查詢數目？**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
     q.query_id, qt.query_text_id, p.plan_id, rs.runtime_stats_id,   
     rsi.start_time, rsi.end_time, rs.avg_rowcount, rs.count_executions  
@@ -388,7 +388,7 @@ ORDER BY rs.avg_physical_io_reads DESC;
   
  **具有多項計畫的查詢？** 這些查詢特別有趣的原因是，它們都是因為計劃選擇變更而導致低下的對象。 下列查詢能找出這些查詢以及所有計劃：  
   
-```tsql  
+```sql  
 WITH Query_MultPlans  
 AS  
 (  
@@ -417,7 +417,7 @@ ORDER BY query_id, plan_id;
   
  **最近效能低下的查詢 (與時間中的不同點相較)？** 下列查詢範例會傳回所有過去 48 小時內，因為計劃選擇變更而導致執行時間為兩倍的查詢。 查詢會並列比較所有執行階段。  
   
-```tsql  
+```sql  
 SELECT   
     qt.query_sql_text,   
     q.query_id,   
@@ -457,7 +457,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  **等候最久的查詢？**
 此查詢會傳回等候最久的前 10 項查詢。 
  
- ```tsql 
+ ```sql 
   SELECT TOP 10
     qt.query_text_id,
     q.query_id,
@@ -473,7 +473,7 @@ ORDER BY sum_total_wait_ms DESC
  
  **最近效能低下的查詢 (比較最近的執行與記錄的執行)？** 下一個查詢會依據執行時段，比較查詢的執行。 在此特別的範例中，查詢會比較最近期間內 (1 小時) 與歷程記錄期間 (前一天) 的執行，並找出因 `additional_duration_workload`所引發的項目。 此度量會計算最近的平均執行與記錄的平均執行之間的差，乘以最近執行的數目。 它實際上代表與記錄相較，最近的執行引發了多少額外的時間：  
   
-```tsql  
+```sql  
 --- "Recent" workload - last 1 hour  
 DECLARE @recent_start_time datetimeoffset;  
 DECLARE @recent_end_time datetimeoffset;  
@@ -562,7 +562,7 @@ OPTION (MERGE JOIN);
   
  **為查詢強制執行計劃 (套用強制原則)。** 若要為特定的查詢強制執行一項計劃，則每次查詢執行時，就會強制以該計劃執行。  
   
-```tsql  
+```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
@@ -570,7 +570,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  **為查詢移除強制執行計劃。** 若要再次依賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具來計算最佳的查詢計劃，請使用 **sp_query_store_unforce_plan** 以取消為該查詢所選取的強制計劃。  
   
-```tsql  
+```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   

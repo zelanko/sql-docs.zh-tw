@@ -3,7 +3,7 @@ title: "在作業步驟中使用 Token | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 73cc2ac32724e2ed910c3ef44355990513020efe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e45f9df8f2356e7dea91fd47d10afd4fea958205
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-tokens-in-job-steps"></a>在作業步驟中使用 Token
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="sql-server-agent-tokens"></a>SQL Server Agent Token  
   
-|Token|說明|  
+|Token|描述|  
 |---------|---------------|  
 |**(A-DBN)**|資料庫名稱。 若作業是由警示執行，則資料庫名稱值會自動取代作業步驟中的此 Token。|  
 |**(A-SVR)**|伺服器名稱。 若作業是由警示執行，則伺服器名稱值會自動取代作業步驟中的此 Token。|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server Agent 逸出巨集  
   
-|逸出巨集|說明|  
+|逸出巨集|描述|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(***&lt;Token 名稱&gt;***))**|在 Token 取代字串中逸出單引號 (')。 使用兩個單引號來取代一個單引號。|  
 |**$(ESCAPE_DQUOTE(***&lt;Token 名稱&gt;***))**|在 Token 取代字串中逸出雙引號 (")。 使用兩個雙引號來取代一個雙引號。|  

@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4c51d7d251a7e445b85558dabd4bd5d4af80b4d8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 842e5bd0bcae76eaffa174c0fdacaf420ae88c5e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 建立專案和基本套件
 
@@ -63,10 +63,10 @@ ms.lasthandoff: 12/01/2017
   
 |資料行名稱|資料類型|查閱資料表|查閱資料行|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|float|無|無|  
+|AverageRate|FLOAT|無|無|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|float|無|無|  
+|EndOfDayRate|FLOAT|無|無|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>對應來源資料以便與目的地相容  
 來源和目的地資料格式的分析指出 **CurrencyKey** 和 **DateKey** 值可能需要查閱。 要執行這些查閱的轉換將使用 **DimCurrency** 和 **DimDate** 維度資料表的替代索引鍵來取得 **CurrencyKey** 和 **DateKey** 值。  
@@ -74,9 +74,9 @@ ms.lasthandoff: 12/01/2017
 |一般檔案資料行|資料表名稱|資料行名稱|資料類型|  
 |--------------------|--------------|---------------|-------------|  
 |0|AdventureWorksDW2012|AverageRate|float|  
-|1|DimCurrency|CurrencyAlternateKey|nchar(3)|  
-|2|DimDate|FullDateAlternateKey|date|  
-|3|AdventureWorksDW2012|EndOfDayRate|float|  
+|@shouldalert|DimCurrency|CurrencyAlternateKey|nchar(3)|  
+|2|DimDate|FullDateAlternateKey|日期|  
+|3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>課程工作  
 這一課包含下列工作：  

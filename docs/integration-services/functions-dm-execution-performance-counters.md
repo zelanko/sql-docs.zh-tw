@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e143b66f9a10627695387bc5215c3b92565e230f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ece7ad69dc6ed7421b3e2793330e9ecb995575fd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>函式 - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  如果沒有指定的執行識別碼，則會傳回多個執行的效能統計資料。 如果您是 **ssis_admin** 資料庫角色的成員，則會傳回所有執行中之執行的效能統計資料。  如果您不是 **ssis_admin** 資料庫角色的成員，則會傳回您具有讀取權限之執行中執行的效能統計資料。 *execution_id* 是 **BigInt**。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  下表列出 dm_execution_performance_counter 函數傳回的計數器名稱值。  
   
-|計數器名稱|Description|  
+|計數器名稱|描述|  
 |------------------|-----------------|  
 |BLOB bytes read|資料流程引擎從所有來源讀取之二進位大型物件 (BLOB) 資料的位元組數目。|  
 |BLOB bytes written|資料流程引擎寫入至所有目的地的 BLOB 資料位元組數目。|  
@@ -62,7 +62,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>傳回  
  dm_execution_performance_counters 函數會針對執行中的執行，傳回含有下列資料行的資料表。 傳回的資訊適用於執行中包含的所有封裝。 如果沒有執行中的執行，就會傳回空的資料表。  
   
-|資料行名稱|資料行類型|Description|備註|  
+|資料行名稱|資料行類型|描述|Remarks|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** 是無效的值。|包含封裝之執行的唯一識別碼。||  
 |counter_name|**nvarchar(128)**|計數器的名稱。|請參閱值的**備註**一節。|  
@@ -90,7 +90,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **sysadmin** 伺服器角色的成員資格  
+-   **系統管理員**伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單描述會導致函數失敗的情況。  

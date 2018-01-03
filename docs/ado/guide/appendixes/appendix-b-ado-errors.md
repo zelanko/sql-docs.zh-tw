@@ -3,7 +3,7 @@ title: "附錄 b: ADO 錯誤 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab5cab79bcf5bb1441e066e27e0edf9552cb10ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 274a780a079c743adbab2dfcb80f14c960303614
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-b-ado-error-codes"></a>附錄 b: ADO 錯誤代碼
 請參閱下列主題以取得有關特定錯誤訊息的詳細資訊：
@@ -35,5 +35,5 @@ ms.lasthandoff: 11/17/2017
 
 -   [Internet Information Services 錯誤碼](../../../ado/guide/appendixes/internet-information-services-error-codes.md)
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
  [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md) [ADO 集合](../../../ado/reference/ado-api/ado-collections.md) [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md) [ADO 列舉常數](../../../ado/reference/ado-api/ado-enumerated-constants.md) [ADO 事件](../../../ado/reference/ado-api/ado-events.md)[ADO 方法](../../../ado/reference/ado-api/ado-methods.md) [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md) [ADO 物件與介面](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) [ADO 屬性](../../../ado/reference/ado-api/ado-properties.md)

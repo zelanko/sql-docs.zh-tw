@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0cc9ed462b52c79f792852a1b6b1d380cae3e182
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 321ac7ca18880205192923cc567c172342668eec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-stored-procedure"></a>建立預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,17 +34,17 @@ ms.lasthandoff: 11/17/2017
   此主題描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 陳述式來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。  
   
 ##  <a name="Top"></a>   
--   **開始之前：**  [Permissions](#Permissions)  
+-   **Before you begin:**  [Permissions](#Permissions)  
   
 -   **若要建立程序，請使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  需要在資料庫中的 CREATE PROCEDURE 權限，以及在建立程序時所在的結構描述上的 ALTER 權限。  
   
 ##  <a name="Procedures"></a> 如何建立預存程序  
  您可以使用下列其中一項：  
   
--   [SQL Server Management Studio](#SSMSProcedure)  
+-   [Transact-SQL](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  在 **[指定範本參數的值]** 對話方塊中，為顯示的參數輸入下列值。  
   
-    |參數|值|  
+    |參數|ReplTest1|  
     |---------------|-----------|  
     |作者|*您的名字*|  
     |建立日期|*今天的日期*|  
@@ -74,11 +74,11 @@ ms.lasthandoff: 11/17/2017
     |@Datatype_For_Param2|**nvarchar**(50)|  
     |Default_Value_For_Param2|NULL|  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
 7.  在 **[查詢編輯器]**中，以下列陳述式取代 SELECT 陳述式：  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  在 **[檔案]** 功能表中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例會使用不同的程序名稱建立與上述相同的預存程序。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會使用不同的程序名稱建立與上述相同的預存程序。  
   
     ```  
     USE AdventureWorks2012;  

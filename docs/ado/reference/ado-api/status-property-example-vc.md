@@ -3,7 +3,7 @@ title: "狀態屬性範例 （VC + +） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4d94baa3a1de7a84ce6997577b6f1c820d2698fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 609c86e5e7b0a9fa801ca2685a80ff97833b8e2f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-property-example-vc"></a>狀態屬性範例 （VC + +）
 這個範例會使用[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性來顯示哪一筆記錄中修改過批次作業之前發生的批次更新。  
@@ -190,5 +190,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Status 屬性 (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

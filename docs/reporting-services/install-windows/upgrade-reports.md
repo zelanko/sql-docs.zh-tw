@@ -28,13 +28,13 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4e254e5338ef80143d5444ea0c4b4365b957c514
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4b31637578959e543e890de37c9f42e174e5b72c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="upgrade-reports"></a>升級報表
+# <a name="upgrade-reports"></a>Upgrade Reports
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
  當您直接將報表定義檔案上傳到報表伺服器或 SharePoint 網站時，報表並不會升級。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中升級報表定義是升級 .rdl 檔的唯一方式。  
   
- 在本機或報表伺服器上升級報表之後，您可能會發現其他錯誤、警告和訊息。 這是內部報表物件模型的變更和處理元件的結果，造成偵測到報表中的根本問題時出現訊息。 如需詳細資訊，請參閱[ [Reporting Services 回溯相容性]](../../reporting-services/reporting-services-backward-compatibility.md "回溯相容性 | Reporting Services")。  
+ 在本機或報表伺服器上升級報表之後，您可能會發現其他錯誤、警告和訊息。 這是內部報表物件模型的變更和處理元件的結果，造成偵測到報表中的根本問題時出現訊息。 如需詳細資訊，請參閱 [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md)。  
   
  如需 [!INCLUDE 之新功能的詳細資訊，請參閱[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md)。  
 
@@ -146,7 +146,7 @@ ms.lasthandoff: 12/05/2017
   
  對於您上傳 (而非發行) 到報表伺服器的報表，報表處理器會決定是否可以在第一次使用時升級報表。 無法升級的報表會在回溯相容性模式下處理，而且會如同在舊版 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中繼續顯示。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [SQL Server 2016 中 SQL Server Reporting Services 的重大變更](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   

@@ -3,7 +3,7 @@ title: "資料行和資料表附加方法中，屬性範例 (VB) |Microsoft 文�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 452afe514483f548325fcf29ece750ff0de42d3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 637f3aa8ebe0fe809b298b3c6d99ddfbd013ef6f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>資料行和資料表附加名稱屬性範例 (VB) 方法
 下列程式碼會示範如何建立新的資料表。  
@@ -71,7 +71,7 @@ End Sub
 ' EndCreateTableVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Append 方法 （ADOX 資料行）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 方法 （ADOX 資料表）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   

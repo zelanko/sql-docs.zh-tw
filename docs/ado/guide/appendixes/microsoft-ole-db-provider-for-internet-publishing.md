@@ -3,7 +3,7 @@ title: "Microsoft OLE DB Provider for Internet 發行 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bac02557dcc9cf816edfcad5b6cc5d927e42f21a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81b34a20948dc53bb16bdd2c9442895af711adb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet 發行概觀
 Microsoft OLE DB Provider for Internet Publishing 可讓 ADO 存取資源，由 Microsoft FrontPage 或 Microsoft Internet Information Server。 資源包括 web 來源檔案，例如 HTML 檔案、 或 Windows 2000 web 資料夾。
@@ -54,7 +54,7 @@ MSDAIPP.DSO
 
  字串，包含這些關鍵字：
 
-|關鍵字|Description|
+|關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定網際網路發行的 OLE DB 提供者。|
 |**資料來源**-或- **URL**|指定的檔案或目錄已發佈的 Web 資料夾中的 URL。|
@@ -69,5 +69,5 @@ MSDAIPP.DSO
 > [!NOTE]
 >  如果 MSDAIPP。做為值的提供者，不論是透過明確指定 DSO*提供者*連接字串關鍵字或**提供者**屬性，您無法使用 」 URL ="連接字串中。 如果您這樣做，就會發生錯誤。 本主題中所示相反地，只要指定 URL[使用 ADO 與 OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)。
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
  [發佈案例的網際網路](../../../ado/guide/data/internet-publishing-scenario.md)[網際網路發行的 OLE DB 提供者](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)

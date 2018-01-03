@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -22,11 +22,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69ab566f5ad04cb52219c08bb6e9842da7415b87
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db33e0c10049f1239449bafc6fdb0faa918abe0a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以在模型內建立多個版本的主要資料。 系統會在您驗證資料時鎖定版本，並在驗證資料之後認可版本。 認可的版本會形成可稽核的變更記錄。 您建立的每個版本都包含該模型的所有成員、屬性值、階層成員、階層關聯性和集合。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  當您建立模型，並使用公司的主要資料填入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫時，便會自動建立初始版本。 根據權限，使用者可以視需要來變更這個版本。  
   
-2.  當您想要認可某個模型的版本時，請鎖定該版本，讓模型管理員才可以更新資料。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。 如果設定通知，每次版本狀態變更時，都會傳送電子郵件通知給模型管理員。 如需詳細資訊，請參閱[設定電子郵件通知 &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)。  
+2.  當您想要認可某個模型的版本時，請鎖定該版本，讓模型管理員才可以更新資料。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。 如果設定通知，每次版本狀態變更時，都會傳送電子郵件通知給模型管理員。 如需詳細資訊，請參閱[設定電子郵件通知 &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)。  
   
 3.  將商務規則套用至鎖定版本的資料，並檢閱任何驗證問題。 必要時，您可以填入遺失的資訊，或還原造成問題的交易。 您也可以解除鎖定版本，以供使用者進行變更。  
   

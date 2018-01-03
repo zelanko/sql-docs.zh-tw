@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0673cda38da74437a8a5370ae664da91afef1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2d704561458719b9d1d73467370d2e5e1d8bd13
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>將包含記憶體最佳化資料表的資料庫繫結至資源集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_CreateDatabase"></a> 建立資料庫  
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會建立名為 IMOLTP_DB 的資料庫，其中將包含一個或多個記憶體最佳化資料表。 執行此命令之前，路徑 \<磁碟機和路徑> 必須存在。  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP_DB  
 GO  
 ALTER DATABASE IMOLTP_DB ADD FILEGROUP IMOLTP_DB_fg CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -96,7 +96,7 @@ GO
   
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼會建立名為 Pool_IMOLTP 的資源集區，而且一半的記憶體可供它使用。  建立集區之後，資源管理員會重新設定為包含 Pool_IMOLTP。  
   
-```tsql  
+```sql  
 -- set MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value  
 CREATE RESOURCE POOL Pool_IMOLTP   
   WITH   
@@ -113,7 +113,7 @@ GO
   
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會定義 IMOLTP_DB 資料庫與 Pool_IMOLTP 資源集區的繫結。 在您讓資料庫重新上線之前，此繫結不會生效。  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -123,7 +123,7 @@ GO
 ##  <a name="bkmk_ConfirmBinding"></a> 確認繫結  
  確認繫結，並記下 IMOLTP_DB 的資源集區識別碼。 它不應該是 NULL。  
   
-```tsql  
+```sql  
 SELECT d.database_id, d.name, d.resource_pool_id  
 FROM sys.databases d  
 GO  
@@ -132,7 +132,7 @@ GO
 ##  <a name="bkmk_MakeBindingEffective"></a> 使繫結生效  
  將資料庫繫結至資源集區之後，您必須讓資料庫離線再恢復上線，以使繫結生效。 如果您的資料庫先前已繫結至不同的集區，這樣做便會從先前的資源集區移除已配置的記憶體，而且記憶體最佳化資料表和索引的記憶體配置現在將由最近剛與資料庫繫結的新資源集區提供。  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -156,7 +156,7 @@ GO
   
  **範例程式碼**  
   
-```tsql  
+```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
 WITH  
      ( MIN_MEMORY_PERCENT = 70,  
@@ -185,7 +185,7 @@ GO
   
  資料庫繫結至具名的資源集區後，請使用下列查詢查看跨不同資源集區的記憶體配置。  
   
-```tsql  
+```sql  
 SELECT pool_id  
      , Name  
      , min_memory_percent  
@@ -216,7 +216,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 ## <a name="see-also"></a>另請參閱  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
- [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
+ [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
  [Resource Governor 資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [變更資源集區設定](../../relational-databases/resource-governor/change-resource-pool-settings.md)   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3d5227792c9f1a658135e1efa5c00bbcfe078cfe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee6f5c066b43c91d1317ca833599ac2f178b03fc
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>啟用 SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用資料庫和執行個體層級的預設設定來啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 它也會說明啟用電子郵件通知以及監視備份活動的方式。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
  本教學課程使用 Azure PowerShell。 開始本教學課程之前，請 [下載並安裝 Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)。  
   
 > [!IMPORTANT]  
->  如果您也想要啟用進階選項或使用自訂排程，則在啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前，需先進行這些設定。 如需詳細資訊，請參閱 [設定 Microsoft Azure 的 SQL Server 受管理備份進階選項](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
+>  如果您也想要啟用進階選項或使用自訂排程，則在啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前，需先進行這些設定。 如需詳細資訊，請參閱 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
   
 ## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並使用預設值進行設定  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  **建立適用於 SAS URL 的 SQL 認證︰** 使用 SAS 權杖來建立適用於 Blob 容器 URL 的 SQL 認證。 在 SQL Server Management Studio 中，使用下列 TRANSACT-SQL 查詢，根據下列範例來建立適用於 Blob 容器 URL 的認證：  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
     WITH IDENTITY = 'Shared Access Signature',  
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  若要在執行個體層級啟用受管理的備份，請針對 `NULL` 參數指定 `database_name` 。  
   
-    ```tsql  
+    ```sql  
     Use msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   

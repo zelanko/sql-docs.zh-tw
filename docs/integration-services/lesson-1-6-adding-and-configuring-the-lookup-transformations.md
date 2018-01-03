@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f27d9b0172671e11a9bea26db398c6229e458320
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aa364a063138708cfa48bea87abe7f0833d07575
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>課程 1-6 - 新增和設定查詢轉換
 在設定一般檔案來源從來源檔擷取資料之後，下一項工作是要定義所需要的查閱轉換來取得 **CurrencyKey** 和 **DateKey**的值。 查閱轉換是藉由聯結指定輸入資料行中的資料與參考資料集內的資料行來執行查閱。 參考資料集可以是現有的資料表或檢視、新資料表，或 SQL 陳述式的結果。 在此教學課程中，查閱轉換使用 OLE DB 連接管理員來連接到資料庫，該資料庫包含的資料就是參考資料集的來源。  

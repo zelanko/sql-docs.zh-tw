@@ -3,7 +3,7 @@ title: "在 XML 中的階層式資料錄集 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb5fb67b0572ea7edea1259ac1314706cc883cd8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9916333a203309d81228c86c019277c9d5515313
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>在 XML 中的階層式資料錄集
 ADO 允許為 XML 持續性的階層式資料錄集物件。 使用階層式資料錄集物件，在父資料錄集欄位的值會是另一個資料錄集。 這類欄位會表示為 XML 資料流，而不是屬性中的子項目。  
@@ -129,5 +129,5 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 -   如果子記錄中有一個以上的父記錄的參考，然後在重新開啟資料錄集時，子資料錄集可能包含重複的記錄。 不過，這些重複項目才會顯示如果使用者直接使用基礎的子資料列集。 如果章用於巡覽資料錄集 （亦即透過 ADO 來瀏覽的唯一方式） 的子系，請重複的項目不會顯示。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

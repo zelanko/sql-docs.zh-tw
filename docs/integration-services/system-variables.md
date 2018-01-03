@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 32f85c2442c459932edba13d88f83879280b13fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ba8e16a181534aa8881197fd178ebf39661f4d24
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-variables"></a>系統變數
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組儲存執行封裝及其物件之資訊的系統變數。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
@@ -37,70 +37,70 @@ ms.lasthandoff: 11/20/2017
 ## <a name="system-variables-for-packages"></a>封裝的系統變數  
  下表描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為封裝提供的系統變數。  
   
-|系統變數|資料類型|說明|  
+|系統變數|資料類型|描述|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|[Windows 事件] 物件的控制代碼，可以讓工作發出信號以指出該工作應該停止執行。|  
 |**ContainerStartTime**|DateTime|容器的開始時間。|  
 |**CreationDate**|DateTime|建立封裝的日期。|  
-|**CreatorComputerName**|字串|建立封裝的電腦。|  
-|**CreatorName**|字串|建立封裝之人員的姓名。|  
-|**ExecutionInstanceGUID**|字串|執行封裝之執行個體的唯一識別碼。|  
-|**FailedConfigurations**|字串|失敗的封裝組態名稱。|  
+|**CreatorComputerName**|String|建立封裝的電腦。|  
+|**CreatorName**|String|建立封裝之人員的姓名。|  
+|**ExecutionInstanceGUID**|String|執行封裝之執行個體的唯一識別碼。|  
+|**FailedConfigurations**|String|失敗的封裝組態名稱。|  
 |**IgnoreConfigurationsOnLoad**|布林|指出載入封裝時是否忽略封裝組態。|  
 |**InteractiveMode**|布林|指示封裝是否以互動模式執行。 如果封裝在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中執行，則此屬性設為 [True]。 如果封裝是使用 **DTExec** 命令提示字元公用程式來執行，則此屬性設為 [False]。|  
 |**LocaleId**|Int32|封裝使用的地區設定。|  
-|**MachineName**|字串|執行封裝之電腦的名稱。|  
+|**MachineName**|String|執行封裝之電腦的名稱。|  
 |**OfflineMode**|布林|指出封裝是否處於離線模式。 離線模式不會取得與資料來源的連接。|  
-|**PackageID**|字串|封裝的唯一識別碼。|  
-|**PackageName**|字串|封裝名稱。|  
+|**PackageID**|String|封裝的唯一識別碼。|  
+|**PackageName**|String|封裝名稱。|  
 |**StartTime**|DateTime|封裝開始執行的時間。|  
 |**ServerExecutionID**|Int64|在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上執行之封裝的執行識別碼。<br /><br /> 預設值為零。 只有在 ISServerExec 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上執行封裝時，才會變更此值。 有子封裝時，此值會從父封裝傳遞至子封裝。|  
-|**UserName**|字串|啟動封裝之使用者的帳戶。 使用者名稱必須以網域名稱來限定。|  
+|**UserName**|String|啟動封裝之使用者的帳戶。 使用者名稱必須以網域名稱來限定。|  
 |**VersionBuild**|Int32|封裝版本。|  
-|**VersionComment**|字串|有關封裝版本的註解。|  
-|**VersionGUID**|字串|版本的唯一識別碼。|  
+|**VersionComment**|String|有關封裝版本的註解。|  
+|**VersionGUID**|String|版本的唯一識別碼。|  
 |**VersionMajor**|Int32|封裝的主要版本。|  
 |**VersionMinor**|Int32|封裝的次要版本。|  
   
 ## <a name="system-variables-for-containers"></a>容器的系統變數  
  下表描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為 For 迴圈、Foreach 迴圈及時序容器提供的系統變數。  
   
-|系統變數|資料類型|說明|容器|  
+|系統變數|資料類型|描述|容器|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|容器使用的地區設定。|For 迴圈容器<br /><br /> Foreach 迴圈容器<br /><br /> 時序容器|  
   
 ## <a name="system-variables-for-tasks"></a>工作的系統變數  
  下表描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為工作提供的系統變數。  
   
-|系統變數|資料類型|說明|  
+|系統變數|資料類型|描述|  
 |---------------------|---------------|-----------------|  
-|**CreationName**|字串|工作的名稱。|  
+|**CreationName**|String|工作的名稱。|  
 |**LocaleId**|Int32|工作使用的地區設定。|  
-|**TaskID**|字串|工作執行個體的唯一識別碼。|  
-|**TaskName**|字串|工作執行個體的名稱。|  
+|**TaskID**|String|工作執行個體的唯一識別碼。|  
+|**TaskName**|String|工作執行個體的名稱。|  
 |**TaskTransactionOption**|Int32|工作使用的交易選項。|  
   
 ## <a name="system-variables-for-event-handlers"></a>事件處理常式的系統變數  
  下表描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為事件處理常式提供的系統變數。 並非所有變數都可用於所有事件處理常式。  
   
-|系統變數|資料類型|說明|事件處理常式|  
+|系統變數|資料類型|描述|事件處理常式|  
 |---------------------|---------------|-----------------|-------------------|  
 |**取消**|布林|指示當發生錯誤、警告或查詢取消時，事件處理常式是否停止執行。|OnError 事件處理常式<br /><br /> OnWarning 事件處理常式<br /><br /> OnQueryCancel 事件處理常式|  
 |**ErrorCode**|Int32|錯誤識別碼。|OnError 事件處理常式<br /><br /> OnInformation 事件處理常式<br /><br /> OnWarning 事件處理常式|  
-|**ErrorDescription**|字串|錯誤的描述。|OnError 事件處理常式<br /><br /> OnInformation 事件處理常式<br /><br /> OnWarning 事件處理常式|  
+|**ErrorDescription**|String|錯誤的描述。|OnError 事件處理常式<br /><br /> OnInformation 事件處理常式<br /><br /> OnWarning 事件處理常式|  
 |**ExecutionStatus**|布林|目前執行狀態。|OnExecStatusChanged 事件處理常式|  
 |**ExecutionValue**|DBNull|執行值。|OnTaskFailed 事件處理常式|  
 |**LocaleId**|Int32|事件處理常式使用的地區設定。|所有事件處理常式|  
 |**PercentComplete**|Int32|已完成工作的百分比。|OnProgress 事件處理常式|  
 |**ProgressCountHigh**|Int32|64 位元值的較高部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |**ProgressCountLow**|Int32|64 位元值的較低部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
-|**ProgressDescription**|字串|進度的描述。|OnProgress 事件處理常式|  
+|**ProgressDescription**|String|進度的描述。|OnProgress 事件處理常式|  
 |**Propagate**|布林|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意：驗證封裝期間，會忽略 **Propagate** 變數的值。 如果您在子封裝中，將 **Propagate** 設為 [False]，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
-|**SourceDescription**|字串|事件處理常式中引發事件之可執行檔的描述。|所有事件處理常式|  
-|**SourceID**|字串|事件處理常式中引發事件之可執行檔的唯一識別碼。|所有事件處理常式|  
-|**SourceName**|字串|事件處理常式中引發事件之可執行檔的名稱。|所有事件處理常式|  
-|**VariableDescription**|字串|變數描述。|OnVariableValueChanged 事件處理常式|  
-|**VariableID**|字串|變數的唯一識別碼。|OnVariableValueChanged 事件處理常式|  
+|**SourceDescription**|String|事件處理常式中引發事件之可執行檔的描述。|所有事件處理常式|  
+|**SourceID**|String|事件處理常式中引發事件之可執行檔的唯一識別碼。|所有事件處理常式|  
+|**SourceName**|String|事件處理常式中引發事件之可執行檔的名稱。|所有事件處理常式|  
+|**VariableDescription**|String|變數描述。|OnVariableValueChanged 事件處理常式|  
+|**VariableID**|String|變數的唯一識別碼。|OnVariableValueChanged 事件處理常式|  
   
 ## <a name="system-variables-in-parameter-bindings"></a>參數繫結中的系統變數  
  執行封裝時，將系統變數的值儲存在資料表中通常很有幫助。 例如，動態建立資料表並在資料表資料行中寫入建立資料表之封裝執行個體 GUID 的封裝。  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8b969229037b01c4897ad504ad8db2cfa17182cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f3b9bd353109d4e9d96597ad7ac944423b4d9b54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
   下表列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤、警告和參考用訊息 (依據每一個類別內的遞增號碼順序)，連同這些訊息的數字代碼和符號名稱。 每一個錯誤都會以欄位形式定義於 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別內。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="msgError"></a> 錯誤訊息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 **DTS_E_**當作開頭。  
   
-|十六進位碼|十進位碼|符號名稱|說明|  
+|十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|正在目的地端覆寫預存程序 "%1"。|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|%3 不支援在資料行 "%2" 找到的 "%1" 資料類型。 此資料行將轉換成 DT_NTEXT。|  
@@ -169,7 +169,7 @@ ms.lasthandoff: 11/20/2017
 |0xC0014029|-1073659863|DTS_E_INVALIDCERTHASHFORMAT|雜湊值不是一維的位元組陣列 (錯誤: %1)。 這個問題發生在 CPackage::LoadUserCertificateByHash 中。|  
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|無法存取陣列中的資料 (錯誤: %1)。 每當呼叫 GetDataFromSafeArray 時，就會發生這個錯誤。|  
 |0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|SSIS Managed 協助程式物件在建立時失敗，錯誤為 0x%1!8.8X! "%2"。 每當 CoCreateInstance CLSID_DTSManagedHelper 失敗時，就會發生這個問題。|  
-|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|SSIS 執行階段無法將 OLE DB 連接編列到分散式交易中，錯誤為 0x%1!8.8X! "%2"。|  
+|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|SSIS 執行階段無法將 OLE DB 連接編列到分散式交易中，錯誤為 0x%1!8.8X! "%2".|  
 |0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|封裝簽章失敗，錯誤為 0x%1!8.8X! "%2"。 當 ManagedHelper.SignDocument 方法失敗時，就會發生這個問題。|  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|無法在封裝 XML 中檢查 XML 簽章封套 (Envelope)，錯誤為 0x%1!8.8X! "%2"。 這個問題發生在 CPackage::LoadFromXML 中。|  
 |0xC001402F|-1073659857|DTS_E_GETXMLSOURCEFAILED|無法從 XML DOM 物件取得 XML 來源，錯誤為 0x%1!8.8X! "%2"。 當 IXMLDOMDocument::get_xml 失敗時，就會發生這個問題。|  
@@ -195,7 +195,7 @@ ms.lasthandoff: 11/20/2017
 |0xC0014044|-1073659836|DTS_E_FOLDERRENAMEFAILED|在 SQL Server 上，將資料夾 " %1\\\\%2" 重新命名為 "%1\\\\%3" 時發生錯誤。|  
 |0xC0014045|-1073659835|DTS_E_RENAMEFOLDERONSQLSERVER_OLEDB|RenameFolderOnSQLServer 方法發現 OLE DB 錯誤碼 0x%1!8.8X! (%2)。 發出的 SQL 陳述式失敗。|  
 |0xC0014046|-1073659834|DTS_E_FOLDERDELETEFAILED|刪除 SQL Server 資料夾 "%1" 時發生錯誤。|  
-|0xC0014047|-1073659833|DTS_E_REMOVEFOLDERFROMSQLSERVER_OLEDB|RemoveFolderOnSQLServer 方法發現 OLE DB 錯誤碼 0x%1!8.8X! (%2)。 發出的 SQL 陳述式失敗。|  
+|0xC0014047|-1073659833|DTS_E_REMOVEFOLDERFROMSQLSERVER_OLEDB|RemoveFolderOnSQLServer 方法發現 OLE DB 錯誤碼 0x%1!8.8X! (%2). 發出的 SQL 陳述式失敗。|  
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|指定的封裝路徑未包含封裝名稱。 當路徑未至少包含一個反斜線或一個斜線時，就會發生這個問題。|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|找不到資料夾 "%1"。|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|嘗試在 SQL 上尋找資料夾時發現 OLE DB 錯誤，錯誤碼為 0x%1!8.8X! (%2)。|  
@@ -1069,7 +1069,7 @@ ms.lasthandoff: 11/20/2017
 |0xC00470B8|-1073450824|DTS_E_EXPREVALILLEGALESCAPEINSTRINGLITERAL|字串常值 "%1" 包含不合法的逸出序列 "\\%2!c!"。 在運算式評估工具中，字串常值不支援逸出序列。 如果字串中需要反斜線，請使用雙反斜線 "\\\\"。|  
 |0xC00470B9|-1073450823|DTS_E_NOOUTPUTCOLUMNS|"%1" 未包含輸出資料行。 非同步輸出必須包含輸出資料行。|  
 |0xC00470BA|-1073450822|DTS_E_LOBDATATYPENOTSUPPORTED|"%1" 具有 Long 物件資料類型 DT_TEXT、DT_NTEXT 或 DT_IMAGE，但不受支援。|  
-|0xC00470BB|-1073450821|DTS_E_OUTPUTWITHMULTIPLEERRORS|輸出識別碼 %1!d! 有多個錯誤輸出組態。 第一個為 %2!d! 和 %3!d!，接著為 %4!d! 和 %5!d!。|  
+|0xC00470BB|-1073450821|DTS_E_OUTPUTWITHMULTIPLEERRORS|輸出識別碼 %1!d!  有多個錯誤輸出組態。 第一個為 %2!d! 和 %3!d!，接著為 %4!d! 和 %5!d!。|  
 |0xC00470BC|-1073450820|DTS_E_FAILEDDURINGOLEDBDATATYPECONVERSIONCHECK|在 "%1" 的資料類型轉換驗證期間，OLE DB 提供者失敗。|  
 |0xC00470BD|-1073450819|DTS_E_BUFFERISEOR|這個緩衝區表示資料列集結尾，無法變更資料列計數。  在具有資料列集結尾旗標的緩衝區上，嘗試呼叫 AddRow 或 RemoveRow。|  
 |0xC00470BE|-1073450818|DTS_E_EXPREVALUNSUPPORTEDTYPE|運算式不支援資料類型 "%1"。 指定的類型不受支援或無效。|  
@@ -2026,7 +2026,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="msgWarning"></a> 警告訊息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 警告訊息的符號名稱以 **DTS_W_**當作開頭。  
   
-|十六進位碼|十進位碼|符號名稱|說明|  
+|十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|評估期還剩 %1!lu! 天。 過期之後，就無法執行封裝。|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|引發警告。 在這個解釋警告特性的警告之前，應該還有其他特定的警告。|  
@@ -2172,7 +2172,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="msgInfo"></a> 參考用訊息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 參考用訊息的符號名稱以 **DTS_I_**當作開頭。  
   
-|十六進位碼|十進位碼|符號名稱|說明|  
+|十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|正在啟動這個容器的分散式交易。|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|正在認可這個容器啟動的分散式交易。|  
@@ -2242,7 +2242,7 @@ ms.lasthandoff: 11/20/2017
 |0x4004300B|1074016267|DTS_I_ROWS_WRITTEN|"%1" 寫入 %2!ld! 個資料列 資料列。|  
 |0x4004300C|1074016268|DTS_I_EXECUTIONPHASE_EXECUTE|正在開始執行階段。|  
 |0x4004800C|1074036748|DTS_I_CANTRELIEVEPRESSURE|緩衝區管理員偵測到系統虛擬記憶體偏低，但無法空出任何緩衝區。 已考量 %1!d! 個緩衝區，但 %2!d! 個已鎖定 。 可能是因為未安裝足夠記憶體，造成管線可用的記憶體不足、其他處理序正在使用記憶體或鎖定太多緩衝區。|  
-|0x4004800D|1074036749|DTS_I_CANTALLOCATEMEMORYPRESSURE|緩衝區管理員執行 %3!d! 位元組的記憶體配置呼叫失敗， 無法空出任何緩衝區來緩和記憶體不足的壓力。 已考量 %1!d! 個緩衝區，但 %2!d! 個已鎖定 。 可能是因為未安裝足夠記憶體，造成管線可用的記憶體不足、其他處理序正在使用記憶體或鎖定太多緩衝區。|  
+|0x4004800D|1074036749|DTS_I_CANTALLOCATEMEMORYPRESSURE|緩衝區管理員執行 %3!d! 位元組的記憶體配置呼叫失敗， 無法空出任何緩衝區來緩和記憶體不足的壓力。 已考量  %1!d! 個緩衝區，但 %2!d! 個已鎖定 。 可能是因為未安裝足夠記憶體，造成管線可用的記憶體不足、其他處理序正在使用記憶體或鎖定太多緩衝區。|  
 |0x4004800E|1074036750|DTS_I_ALLOCATEDDURINGMEMORYPRESSURE|緩衝區管理員已配置 %1!d! 位元組， 但是仍偵測到記憶體不足的壓力，而且反覆嘗試交換緩衝區都告失敗。|  
 |0x400490F4|1074041076|DTS_I_TXLOOKUP_CACHE_PROGRESS|%1 已快取 %2!d! 個資料列 資料列。|  
 |0x400490F5|1074041077|DTS_I_TXLOOKUP_CACHE_FINAL|%1 已快取共 %2!d! 個 資料列。|  
@@ -2271,9 +2271,9 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="msgGeneral"></a> 一般和事件訊息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 **DTS_MSG_**當作開頭。  
   
-|十六進位碼|十進位碼|符號名稱|說明|  
+|十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
-|0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|不正確的函數。|  
+|0x1|@shouldalert|DTS_MSG_CATEGORY_SERVICE_CONTROL|不正確的函數。|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|系統找不到指定的檔案。|  
 |0x100|256|DTS_MSG_SERVER_STARTING|正在啟動 Microsoft SSIS 服務。<br /><br /> 伺服器版本 %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Microsoft SSIS 服務已啟動。<br /><br /> 伺服器版本 %1|  
@@ -2310,7 +2310,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="msgSuccess"></a> 成功訊息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 成功訊息的符號名稱以 **DTS_S_**當作開頭。  
   
-|十六進位碼|十進位碼|符號名稱|說明|  
+|十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|值為 NULL。|  
 |0x40005|262149|DTS_S_TRUNCATED|已截斷字串值。 緩衝區收到對資料行而言太長的字串，緩衝區已截斷字串。|  
@@ -2319,7 +2319,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="msgPipeline"></a> 資料流程元件錯誤訊息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱是以 **DTSBC_E_**當作開頭，其中 "BC" 指的是大多數 Microsoft 資料流程元件衍生來源的原生基底類別。  
   
-|十六進位碼|十進位碼|符號名稱|說明|  
+|十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|輸出和錯誤輸出的總數 %1!lu! 不正確。 必須正好是 %2!lu!。|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|無法使用索引 %1!lu! 擷取輸出。|  

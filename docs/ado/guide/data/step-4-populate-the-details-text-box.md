@@ -3,7 +3,7 @@ title: "步驟 4： 填入 [詳細資料] 文字方塊中 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2611012fe27e268f40f85647411dd8ad66a6651b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8545cc4af5e646d216ea17f0d1cceae1ea021abf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-4-populate-the-details-text-box"></a>步驟 4： 填入 [詳細資料] 文字方塊中
 若要填入 [詳細資料] 文字方塊中，建立新的副程式，名為**recFields**並插入下列程式碼：  
@@ -52,6 +52,6 @@ End Sub
   
  此程式碼會填入`lstDetails`與欄位和簡單記錄傳遞給值`recFields`。 如果資源是文字檔案，從資源記錄開啟的文字資料流。 程式碼會判斷是否為 ASCII 字元集，和複製到資料流內容`txtDetails`。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [網際網路發佈案例](../../../ado/guide/data/internet-publishing-scenario.md)   
  [步驟 3：填入 [欄位] 清單方塊](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

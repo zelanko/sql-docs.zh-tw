@@ -3,9 +3,9 @@ title: "呼叫堆疊視窗 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 403dbe97619340a3075792b999b54500ab79d4fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 364d5ba93cf5ee8d558cafb09e84a12d833722eb
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL 偵錯工具 - 呼叫堆疊視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [呼叫堆疊] 視窗會顯示呼叫堆疊上的模組以及傳遞給模組之任何參數的資料類型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組包括預存程序、函數及觸發程序 若要顯示呼叫堆疊，您必須在偵錯模式中。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
  [區域變數]、[監看式] 和 [快速監看式] 視窗中的所有運算式都會根據目前的堆疊框架來評估。 [查詢編輯器] 視窗會顯示目前框架的程式碼。 根據預設，目前的堆疊框架就是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具暫停執行所在的框架。 當您將目前的堆疊框架變更為另一個框架時，將會在新框架的內容中重新評估 [區域變數]、[監看式] 和 [快速監看式] 視窗中的運算式，而且新框架的原始程式碼會顯示在 [查詢編輯器] 視窗中。  
   
-## <a name="columns"></a>資料行  
+## <a name="columns"></a>[資料行]  
  **名稱**  
  顯示有關呼叫堆疊上之模組的資訊。  
   

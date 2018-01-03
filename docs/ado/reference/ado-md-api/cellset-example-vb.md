@@ -3,7 +3,7 @@ title: "資料格集範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 35bcc8eb6068c1e0579d3245e5acc85601ebec49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb72abdd44deeabda8a9513744ba7d962fa7bffc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cellset-example-vb"></a>資料格集範例 (VB)
 這個 Visual Basic 專案，示範如何使用 ADO MD 來存取 cube 資料的基本概念。 它會顯示成員標題的資料行和資料列標頭，然後顯示格式化的資料格集內的特定資料格的值。  

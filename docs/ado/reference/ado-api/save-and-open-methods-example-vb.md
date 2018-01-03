@@ -3,7 +3,7 @@ title: "儲存並開啟方法的範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a9026b51e9f658e79e9332f60daab92e37bf8e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 26fa69e0c02dfffb208725f61c826068337a8b98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-and-open-methods-example-vb"></a>儲存並開啟方法的範例 (VB)
 這三個範例示範如何[儲存](../../../ado/reference/ado-api/save-method.md)和[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法可以一起使用。  
@@ -101,7 +101,7 @@ Attribute VB_Name = "Save"
 Attribute VB_Name = "Save"  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Open 方法 （ADO 資料錄集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [深入了解資料錄集持續性](../../../ado/guide/data/more-about-recordset-persistence.md)   

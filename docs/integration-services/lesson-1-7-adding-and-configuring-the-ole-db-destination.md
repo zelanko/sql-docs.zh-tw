@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d1e14ed63694a7b5dc320f062de85c73c843883
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9d3bbb70503d86358362e78809f9f51408309b9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>課程 1-7 - 新增和設定 OLE DB 目的地
 現在，封裝可以從一般檔案來源中擷取資料，再將資料轉換成與目的地相容的格式。 下一項工作是要把已轉換的資料實際載入到目的地。 若要載入資料，您必須將 OLE DB 目的地加入資料流程中。 OLE DB 目的地可使用資料庫資料表、檢視或 SQL 命令，將資料載入到各種 OLE DB 相容資料庫中。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  在 [資料表或檢視的名稱] 方塊中，輸入或選取 **[dbo].[FactCurrencyRate]**。  
   
-8.  按一下 [新增] 按鈕，建立新的資料表。  在指令碼中變更資料表的名稱，使其成為 **NewFactCurrencyRate**。  按一下 **[確定]**。  
+8.  按一下 [新增] 按鈕，建立新的資料表。  在指令碼中變更資料表的名稱，使其成為 **NewFactCurrencyRate**。  按一下 [確定] 。  
   
 9. 按一下 [確定] 後，此對話方塊將會關閉，而且 [資料表或檢視表的名稱] 將會自動變更為 [NewFactCurrencyRate]。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 11. 確認 [AverageRate]、[CurrencyKey]、[EndOfDayRate] 和 [DateKey] 輸入資料行都正確對應到目的地資料行。 如果對應到同名資料行，則表示對應是正確的。  
   
-12. 按一下 **[確定]**。  
+12. 按一下 [確定] 。  
   
 13. 以滑鼠右鍵按一下 [範例 OLE DB 目的地] 目的地，然後按一下 [屬性]。  
   

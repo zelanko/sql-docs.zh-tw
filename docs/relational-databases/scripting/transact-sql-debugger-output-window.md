@@ -3,9 +3,9 @@ title: "輸出視窗 | Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 234b8119ae9d1ed11d67a537cd4eab1a56bd7854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7fec105932cc901f932d57843639edaf7991f941
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL 偵錯工具 - 輸出視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 此視窗會顯示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中各種功能的狀態訊息。 輸出會從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具、外部工具功能或是偵錯工具 [命令視窗] 內執行的命令傳遞給 [輸出] 視窗內的特殊窗格。 通常從外部工具 (如 .bat 或 .com 檔案) 顯示在 [命令提示字元] 視窗內的輸出也可以使用。  

@@ -3,7 +3,7 @@ title: "交易處理 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a2afb43e83ebc2ed765c04fa15f070597009457
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55f563b145cf77dc64879801c4603bd51234b0f4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-processing"></a>交易處理
 A*交易*分隔的開頭和結尾的一系列在連線之間執行資料存取作業。 資料來源時，交易式功能而定**連接**物件也可讓您建立及管理交易。 例如，使用 Microsoft OLE DB Provider for SQL Server 存取 Microsoft SQL Server 上的資料庫，您就可以建立多個巢狀的交易，您所執行的命令。  

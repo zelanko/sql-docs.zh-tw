@@ -3,7 +3,7 @@ title: "資料指標位置的重要性 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 541b0195abbe4a37c3a2090add0b0cf5dbbeb568
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e5b39610496e4ff897365dd16d0a48e7057c18ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-significance-of-cursor-location"></a>資料指標位置的精確度倍數
 每個資料指標使用的暫存資源，來保留資料。 這些資源可以是記憶體、 磁碟分頁檔中，暫存磁碟檔案或甚至暫時儲存在資料庫中。 資料指標稱為*用戶端*時這些資源位於用戶端電腦上的資料指標。 資料指標稱為*伺服器端*時這些資源位於伺服器上的資料指標。  

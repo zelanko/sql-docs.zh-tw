@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 506bd9415733f02d54875ecb936e750a877e0e32
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f2a0fe1d27bd0ed1b70b3d31aacfca43cb291c1f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functional-area-permissions-master-data-services"></a>功能區域權限 (Master Data Services)
   您可以將權限指派給 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面 (UI) 的每個功能區域。 下列是功能區域：  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
  當您將權限指派給功能區域時，您會讓使用者或群組看到 UI 的區域。  
   
- 在總管功能區域中，指派給模型物件和階層成員的其他權限會決定使用者可以存取的資料。 在所有其他功能區域中，使用者必須是模型管理員，才能檢視及操作模型。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+ 在總管功能區域中，指派給模型物件和階層成員的其他權限會決定使用者可以存取的資料。 在所有其他功能區域中，使用者必須是模型管理員，才能檢視及操作模型。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 > [!IMPORTANT]  
 >  具有進階使用者權限的使用者實際上具有所有模型的系統管理員權限，而且具有所有其他功能權限。  

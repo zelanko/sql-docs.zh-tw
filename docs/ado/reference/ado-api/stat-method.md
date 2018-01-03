@@ -3,7 +3,7 @@ title: "Stat 方法 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c33383de27f2685849034cec79c6b4589dfb0a79
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31938be266101339d70b820260466263a737f88a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stat-method"></a>Stat 方法
 擷取有關的資訊[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
@@ -46,10 +46,10 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  指定此方法不會傳回某些成員在 STATSTG 結構中，因此節省記憶體配置作業。 值取自 STATFLAG 列舉型別。 STATFLAG 列舉有兩個值  
   
-|常數|值|  
+|常數|ReplTest1|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
-|STATFLAG_NONAME|1|  
+|STATFLAG_NONAME|@shouldalert|  
   
 ## <a name="remarks"></a>備註  
  ADO 資料流物件所實作的 Stat 方法的版本會填入 STATSTG 結構的下列欄位：  

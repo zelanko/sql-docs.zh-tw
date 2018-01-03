@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cd98311fb9b047d7c518524a6f33210bf7e9ea2b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variables-window"></a>變數視窗
   使用 [變數] 視窗，即可建立和修改使用者定義的變數，並檢視系統變數。  
@@ -66,10 +66,10 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  若您將運算式指派給變數，則無法變更資料類型。  
   
- **Value**  
+ **ReplTest1**  
  檢視變數值。 您可以更新使用者定義變數的值。 此值可以是常值或運算式，而且此值可以是多行字串。 若要將運算式指派給變數，請按一下 [變數] 視窗中 [運算式] 資料行旁邊的省略符號按鈕。  
   
- **命名空間**  
+ **Namespace**  
  檢視命名空間名稱。 使用者定義變數最初是在 [使用者] 命名空間中建立的，但是您可以在 [命名空間] 欄位中變更此命名空間名稱。 若要顯示此資料行，請按一下 [方格選項]。  
   
  **引發變更事件**  
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/20/2017
  **運算式**  
  檢視指派給變數的運算式。 若要指派運算式，請按一下省略符號按鈕。  
   
- 若您將運算式指派給變數，變數旁邊會顯示特殊圖示標記。 此特殊圖示標記也會顯示在已經設定運算式的連線管理員及工作旁邊。  
+ 若您將運算式指派給變數，變數旁邊會顯示特殊圖示標記。 此特殊圖示標記也會顯示在已經設定運算式的連接管理員及工作旁邊。  
 
 ## <a name="variable-grid-options-dialog-box"></a>[變數方格選項] 對話方塊
  使用 **[變數方格選項]** 對話方塊選擇將顯示在 **[變數]** 視窗中的資料行，並選取要套用到此變數清單的篩選。 如需所對應之變數屬性的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)。  
@@ -104,9 +104,9 @@ ms.lasthandoff: 11/20/2017
   
 -   **Data type**  
   
--   **Value**  
+-   **ReplTest1**  
   
--   **命名空間**  
+-   **Namespace**  
   
 -   **變數值變更時引發事件**  
   

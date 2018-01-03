@@ -3,7 +3,7 @@ title: "提示屬性動態 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 820e3aae44e3a1fcd8ebabaee21d5bdac651cab2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c9ca7365c2f9f97bc4219715bcbb8d1e25ea5f79
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prompt-property-dynamic-ado"></a>提示屬性動態 (ADO)
 指定的 OLE DB 提供者是否應提示使用者輸入的初始化資訊。  

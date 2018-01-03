@@ -3,9 +3,9 @@ title: "Database Engine 查詢編輯器 (SQL Server Management Studio) | Microso
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 554065f8cd2eee3667eaf93ced5e6fe1c99f9517
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6093f85a7efb9b10b03d24d5cb2e2efccb3e73f3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Database Engine 查詢編輯器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器，建立及執行包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的指令碼。 此編輯器也支援執行包含 **sqlcmd** 命令的指令碼。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sql-editor-toolbar"></a>SQL 編輯器工具列  
  當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器開啟時，SQL 編輯器工具列會顯示下列按鈕。  
   
- **Connect**  
+ **[連接]**  
  隨即開啟 [連接到伺服器] 對話方塊。 使用此對話方塊可建立與伺服器的連接。  
   
  **中斷連接**  

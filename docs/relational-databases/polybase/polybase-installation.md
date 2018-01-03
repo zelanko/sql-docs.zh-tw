@@ -18,18 +18,18 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05ac029c0e4ef807a5d6586882f7655753d1bfbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 982594dc9a0f3ec83dcecef9738b2d4cda1fad83
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="polybase-installation"></a>安裝 PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   若要安裝 SQL Server 試用版，請移至 [SQL Server 評估版](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)。 
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   64 位元 SQL Server 評估版  
   
@@ -87,13 +87,13 @@ PolyBase 一旦安裝為獨立項目或安裝於向外延展群組中，就無�
 |--------------------------|--------------------------|-----------------|  
 |SQL Server 安裝程式控制|**必要項**<br /><br /> /FEATURES=PolyBase|選取 PolyBase 功能。|  
 |SQL Server PolyBase 引擎|**選擇性**<br /><br /> /PBENGSVCACCOUNT|指定引擎服務的帳戶。 預設值是 **NT Authority\NETWORK SERVICE**。|  
-|SQL Server PolyBase 引擎|**選擇性**<br /><br /> /PBENGSVCPASSWORD|指定引擎服務帳戶的密碼。|  
-|SQL Server PolyBase 引擎|**選擇性**<br /><br /> /PBENGSVCSTARTUPTYPE|指定 PolyBase 引擎服務的啟動模式︰Automatic (自動，預設值)、Disabled (停用) 以及 Manual (手動)。|  
+|SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCPASSWORD|指定引擎服務帳戶的密碼。|  
+|SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCSTARTUPTYPE|指定 PolyBase 引擎服務的啟動模式︰Automatic (自動，預設值)、Disabled (停用) 以及 Manual (手動)。|  
 |SQL Server PolyBase 資料移動服務|**選擇性**<br /><br /> /PBDMSSVCACCOUNT|指定資料移動服務的帳戶。 預設值是 **NT Authority\NETWORK SERVICE**。|  
-|SQL Server PolyBase 資料移動服務|**選擇性**<br /><br /> /PBDMSSVCPASSWORD|指定資料移動帳戶的密碼。|  
-|SQL Server PolyBase 資料移動服務|**選擇性**<br /><br /> /PBDMSSVCSTARTUPTYPE|指定資料移動服務的啟動模式︰Automatic (自動，預設值)、Disabled (停用) 以及 Manual (手動)。|  
+|SQL Server PolyBase Data Movement Service|**選擇性**<br /><br /> /PBDMSSVCPASSWORD|指定資料移動帳戶的密碼。|  
+|SQL Server PolyBase Data Movement Service|**選擇性**<br /><br /> /PBDMSSVCSTARTUPTYPE|指定資料移動服務的啟動模式︰Automatic (自動，預設值)、Disabled (停用) 以及 Manual (手動)。|  
 |PolyBase|**選擇性**<br /><br /> /PBSCALEOUT|指定 SQL Server 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 <br />支援的值： **True**、 **False**|  
-|PolyBase|**選擇性**<br /><br /> /PBPORTRANGE|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例：<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|**選擇性**<br /><br /> /PBPORTRANGE|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例<br /><br /> `/PBPORTRANGE=16450-16460`|  
   
  **範例**  
   
@@ -116,7 +116,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ### <a name="how-to-confirm-installation"></a>如何確認安裝  
  執行下列命令。 如果已安裝 PolyBase 會傳回 1，否則會傳回 0。  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
@@ -144,7 +144,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ### <a name="polybase-service-accounts"></a>PolyBase 服務帳戶
 若要變更 PolyBase 引擎和 PolyBase 資料移動服務的服務帳戶，請解除安裝並重新安裝 PolyBase 功能。
    
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
  請參閱 [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)。  
   
   

@@ -3,7 +3,7 @@ title: "使用 Visual c + + 擴充功能 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da6cd44f389b059a897ec464e1848cd9660b6c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 擴充功能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 介面
@@ -115,7 +115,7 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>結束繫結項目
  **END_ADO_BINDING**（)
 
-|參數|Description|
+|參數|描述|
 |---------------|-----------------|
 |*類別*|類別定義的繫結項目和 C/c + + 變數。|
 |*Ordinal*|序號，從一個、 算起的**資料錄集**欄位對應至您的 C/c + + 變數。|
@@ -133,10 +133,10 @@ Update(CADORecordBinding *binding)
 
  設定資料時,*狀態*可能會設定為**adFldNull**表示**資料錄集**梇糔飶為 null。
 
-|常數|值|Description|
+|常數|ReplTest1|描述|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|傳回非 null 的欄位值。|
-|**adFldBadAccessor**|1|繫結無效。|
+|**adFldBadAccessor**|@shouldalert|繫結無效。|
 |**adFldCantConvertValue**|2|由於符號不符或資料溢位以外的原因而無法轉換值。|
 |**adFldNull**|3|當取得某個欄位時，表示傳回了 null 值。<br /><br /> 當設定的欄位，表示欄位應設**NULL**欄位無法編碼時**NULL**本身 （例如，字元陣列或整數）。|
 |**adFldTruncated**|4|已截斷可變長度的資料或數字。|
@@ -150,5 +150,5 @@ Update(CADORecordBinding *binding)
 |**adFldBadStatus**|12|在更新時，無效的狀態參數。|
 |**adFldDefault**|13|更新時，使用預設值。|
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
  [Visual c + + 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual c + + 擴充功能的標頭](../../../ado/guide/appendixes/visual-c-extensions-header.md)

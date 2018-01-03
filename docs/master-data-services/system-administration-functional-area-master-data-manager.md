@@ -5,7 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,16 +17,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e88ddee14ae9f46b79ca771a8879c0ac2c43d5df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a926b66adc2649f05aaab5f452b07faad3c4b062
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系統管理功能區域 (主資料管理員)
   在 [系統管理] 功能區域中，管理員可以建立模型及其所有物件， 也可以建立商務規則，並建立及部署模型封裝。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
-## <a name="model"></a>模型  
+## <a name="model"></a>[模型]  
  [模型 &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
  [建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
  [部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
- [使用精靈部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
+ [使用精靈部署模型部署套件](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
  [使用精靈建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)  
   
