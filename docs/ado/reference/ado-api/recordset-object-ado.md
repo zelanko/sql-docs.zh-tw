@@ -3,7 +3,7 @@ title: "資料錄集物件 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 02d767f733ed8cb3767d49cf092ff67d1e37ef54
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dec2c20c2450f4db1d0671f365714647c47c7db6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-object-ado"></a>資料錄集物件 (ADO)
 代表完整記錄的基底資料表或執行的命令的結果。 在任何時候，**資料錄集**物件是指單一資料錄和目前的記錄集內。  
@@ -80,7 +80,7 @@ Debug.Print objRs(0)              '  the Value of Item(0).
   
 -   [資料錄集物件屬性、 方法和事件](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

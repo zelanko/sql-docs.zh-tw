@@ -3,7 +3,7 @@ title: "開啟檔案對話方塊 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11a990c6668b4b70998cd3e118c01d5d7bcb7722
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 894dcee809aac7b3d32b30f1ee5fdc988eb8b009
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-file-dialog-box"></a>開啟檔案對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [開啟檔案] 對話方塊來開啟磁碟中的現有檔案。 您也可以使用這個對話方塊，以不同的語言編碼選項來開啟已開啟的檔案。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
 **搜尋 Web**  
 此按鈕無法使用。  
   
-**Delete**  
+**刪除**  
 從存放區中刪除選取的檔案或資料夾。  
   
 **新增資料夾**  
@@ -98,7 +98,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="tools"></a>工具  
 選取要套用至內容窗格中所選取之項目的工具。  
   
-**Delete**  
+**刪除**  
 從儲存體中刪除選取的檔案或資料夾。  
   
 **連線網路磁碟機**  

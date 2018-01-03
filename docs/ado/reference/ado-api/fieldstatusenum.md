@@ -3,7 +3,7 @@ title: "FieldStatusEnum |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a47097ccce07c5eeb5ee859b74919e36c01f6750
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12e543a4baa7bbcc46ea39e906d57d001ea5f078
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定[狀態](../../../ado/reference/ado-api/status-property-ado-field.md)的[欄位物件](../../../ado/reference/ado-api/field-object.md)。  
   
  **AdFieldPending\*** 值表示作業導致的狀態設定，可能會與其他狀態的值結合。  
   
-|常數|值|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|指出指定的欄位已經存在。|  
 |**adFieldBadStatus**|12|表示無效的狀態值，OLE DB 提供者從 ADO 傳送。 可能的原因包括 OLE DB 1.0 或 1.1 版的提供者或使用不正確的組合[值](../../../ado/reference/ado-api/value-property-ado.md)和[狀態](../../../ado/reference/ado-api/status-property-ado-field.md)。|  

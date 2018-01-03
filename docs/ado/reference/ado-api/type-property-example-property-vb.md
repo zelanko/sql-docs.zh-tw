@@ -3,7 +3,7 @@ title: "輸入屬性的範例 （屬性） (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ed5cb366292f87e294576ec880947888631e7a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca949b82660a87d3688bfc18e54fcb61a78b2b14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-example-property-vb"></a>型別屬性範例 （屬性） (VB)
 這個範例會示範[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性。 它是一種模型的公用程式清單的名稱和類型的集合，例如[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)，[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)等等。  
@@ -151,6 +151,6 @@ End Sub
 'EndTypePropertyVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [屬性物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Type 屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

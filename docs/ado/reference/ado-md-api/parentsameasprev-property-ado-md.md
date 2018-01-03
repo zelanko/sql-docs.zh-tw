@@ -3,7 +3,7 @@ title: "ParentSameAsPrev 屬性 (ADO MD) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c1c8cd042b673c256906035c3a1fcd4ee863a71
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4e33af885d000705596e6c457357b98dbc98255
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev 屬性 (ADO MD)
 指出是否此位置的父代[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)等同於前一個成員的父系。  
@@ -40,5 +40,5 @@ ms.lasthandoff: 11/17/2017
 ## <a name="applies-to"></a>適用於  
  [Member 物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [DrilledDown 屬性 (ADO MD)](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)

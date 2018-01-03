@@ -3,7 +3,7 @@ title: "DateCreated 和 DateModified 屬性範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b235322465b5f0c2dd36db70ff1c5b5549341c91
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d551e069112ffcce1b705fae418a3a45b89924c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated 和 DateModified 屬性範例 (VB)
 這個範例會示範[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)和[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)屬性，透過新增[資料行](../../../ado/reference/adox-api/column-object-adox.md)至現有[資料表](../../../ado/reference/adox-api/table-object-adox.md)和建立新**資料表**。 若要執行這個範例需要 DateOutput 程序。  
@@ -99,7 +99,7 @@ End Sub
 ' EndDateCreatedVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [DateCreated 屬性 (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified 屬性 (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
  [程序物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   

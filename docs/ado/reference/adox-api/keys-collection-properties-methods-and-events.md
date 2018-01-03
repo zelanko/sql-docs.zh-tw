@@ -3,7 +3,7 @@ title: "索引鍵的集合屬性、 方法和事件 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 36e92d3a459dc564c0d7793959b473ae47b33148
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43d97a93cf7121538e8ef98886c38e4d4cf42023
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keys-collection-properties-methods-and-events"></a>索引鍵集合的屬性、 方法和事件
 ## <a name="properties"></a>屬性  
@@ -40,5 +40,5 @@ ms.lasthandoff: 11/17/2017
 ## <a name="events"></a>事件  
  無。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Keys 集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

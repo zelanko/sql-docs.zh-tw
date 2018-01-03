@@ -3,7 +3,7 @@ title: "記錄物件 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0efb504844ac58e7889cdb768821efe95f52e0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1246dfe943ae415f7777e5924c14580fe05afbe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-object-ado"></a>記錄物件 (ADO)
 代表從一個資料列[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或資料提供者或傳回為半結構化的資料提供者，例如檔案或目錄的物件。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Record 物件屬性、方法和事件](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [記錄和資料流](../../../ado/guide/data/records-and-streams.md)   

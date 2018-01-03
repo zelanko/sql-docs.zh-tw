@@ -3,7 +3,7 @@ title: "在查詢和檢視表設計工具中巡覽 (Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 134e017c94bbf364d74c3914149a09be3deaa9a3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9cbebb7269afbf1ae1caa16032c7d4c4406ba148
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>在查詢和檢視表設計工具中巡覽 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在查詢和檢視表設計工具中，您可以使用鍵盤或滑鼠來工作。 各種特定的方法請參考以下各表。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 |在資料表或表格化物件的資料行之間移動|方向鍵|要移至的資料行|  
 |選擇選取的資料行以供輸出|空白鍵或加號鍵|資料行名稱旁邊的核取方塊|  
 |從查詢輸出中移除選取的資料行|空白鍵或減號鍵|資料行名稱旁邊的核取方塊|  
-|從查詢中移除選取的資料表、表格化物件或聯結線|DELETE|按一下滑鼠右鍵，再選擇 [移除]。|  
+|從查詢中移除選取的資料表、表格化物件或聯結線|Delete|按一下滑鼠右鍵，再選擇 [移除]。|  
   
 > [!NOTE]  
 > 如果選取多個項目，按下此按鍵會影響所有選取的項目。 按住 CTRL 鍵，同時在要選取的各項目上按一下滑鼠，即可選取多個項目。  
@@ -72,8 +72,8 @@ ms.lasthandoff: 12/05/2017
 |貼上剪貼簿中的文字 (編輯模式)|CTRL+V||  
 |編輯資料格時切換插入模式或覆寫模式|INS||  
 |切換輸出資料行中的核取方槐|空白鍵|核取方塊|  
-|清除資料格的選取內容|DELETE||  
-|清除選取方格資料行的所有值|DELETE||  
+|清除資料格的選取內容|Delete||  
+|清除選取方格資料行的所有值|Delete||  
 |在現有資料列間插入資料列|選取方格資料列後按 INS||  
 |新增 [或...] 資料行|選取任一個 [或...] 資料行後按 INS||  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 12/05/2017
 |選取至資料格裡的最後一個字元|SHIFT+END||  
 |切換編輯模式或資料格選擇模式|F2||  
 |編輯資料格時切換插入模式或覆寫模式|INS||  
-|從資料表中刪除一個資料列|DELETE||  
+|從資料表中刪除一個資料列|Delete||  
 |恢復目前資料格中的變更|在有變更內容的資料格中按 ESC||  
 |恢復目前資料列中的變更|在尚未變更的任一個資料格中按 ESC||  
 |在資料格中輸入 Null|CTRL+0||  

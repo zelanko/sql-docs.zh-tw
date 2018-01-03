@@ -3,7 +3,7 @@ title: "WillExecute 事件 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5988a43be066f61019223eb6a501d1bc73e8bc23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66a04a7bf45771c9c6f16b32bfd9c8bac54db4ad
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 事件 (ADO)
 **WillExecute**事件被呼叫之前暫止命令的連接上執行。  
@@ -48,7 +48,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) ，其中包含的鎖定類型**資料錄集**，將會開啟。 使用這個參數，您可以變更鎖定期間的任何型別為**RecordsetOpen**作業。 *LockType*將忽略任何其他作業。  
   
- *選項。*  
+ *選項*  
  A**長**值，指出選項，可用來執行命令或開啟**資料錄集**。  
   
  *adStatus*  
@@ -73,7 +73,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
   
  如果新的來源字串的方言與不同的原始設定[方言屬性](../../../ado/reference/ado-api/dialect-property.md)屬性 (其對應到**CommandStream**)，您必須指定正確的方言設定**方言**屬性所參考的命令物件*pCommand*。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

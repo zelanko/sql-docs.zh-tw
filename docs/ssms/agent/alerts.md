@@ -3,7 +3,7 @@ title: "警示 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bcf6d6ecebacd8ea3f3b2a18d5ffe89cb5d2b6ba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a8210d7acf8121f616f89f3f87b0cb2d2ba34b36
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alerts"></a>警示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 事件會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 產生，並輸入 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 應用程式記錄檔中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會讀取應用程式記錄檔，然後比較寫入其中的事件與您所定義的警示。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 找到相符項目時，即會發出警示，這是對事件的自動回應。 除了監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 還可以監視效能條件與 Windows Management Instrumentation (WMI) 事件。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會在特定嚴重性的任何錯誤發生時發出警示。 例如，您可以指定嚴重性層級 15 來回應 Transact-SQL 陳述式中的語法錯誤。  
   
--   **資料庫**  
+-   **[資料庫備份]**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 只有在特定資料庫中發生事件時，才會發出警示。 您可以在錯誤號碼或嚴重性層級以外搭配套用此選項。 例如，若某個執行個體中含有一個實際執行用的資料庫和一個報告用的資料庫，您就可以定義一個只會針對實際資料庫回應語法錯誤的警示。  
   

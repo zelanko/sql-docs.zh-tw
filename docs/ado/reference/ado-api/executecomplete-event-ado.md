@@ -3,7 +3,7 @@ title: "ExecuteComplete 事件 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 327eee8b19a0d1b9ad4d67c45c90ccd2c632622a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a6e5ca2b5590952ac01bf70b1c2e457336a79a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 事件 (ADO)
 **ExecuteComplete**命令已完成執行之後，會呼叫事件。  
@@ -62,6 +62,6 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
 ## <a name="remarks"></a>備註  
  **ExecuteComplete**事件可能會發生因為**連線。**[執行](../../../ado/reference/ado-api/execute-method-ado-connection.md)，**命令。**[執行](../../../ado/reference/ado-api/execute-method-ado-command.md)，**資料錄集。**[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)，**資料錄集。**[Requery](../../../ado/reference/ado-api/requery-method.md)，或**資料錄集。**[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)

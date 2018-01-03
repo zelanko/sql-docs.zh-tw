@@ -3,7 +3,7 @@ title: "OriginalValue 和 UnderlyingValue 屬性範例 （VC + +） |Microsoft �
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bc78a70ee7c3d6443126a190ce9bd80fe03105e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a391163a03eb0ad14c2fd01d5f9555fed7ce7098
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 屬性範例 （VC + +）
 這個範例會示範[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)和[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)期間顯示訊息，如果某筆記錄的基礎資料的屬性變更[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)批次更新。  
@@ -224,7 +224,7 @@ void PrintComError(_com_error &e) {
 **目前的值： self_help**   
 **原始值： 心理**   
 **第一個值： 社會**    
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [OriginalValue 屬性 (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue 屬性](../../../ado/reference/ado-api/underlyingvalue-property.md)

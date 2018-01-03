@@ -3,7 +3,7 @@ title: "Execute 方法 （ADO 連接） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b6f8e6c980d8263a5a7076603f447ecc8aa33e00
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 071e752063020ace305371f814f1b78224dbb9a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute-method-ado-connection"></a>Execute 方法 （ADO 連接）
 執行指定的查詢、 SQL 陳述式、 預存程序或提供者特有的文字。  
@@ -49,7 +49,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  *RecordsAffected*  
  選擇性。 A**長**變數提供者傳回的作業影響的記錄數目。  
   
- *選項。*  
+ *選項*  
  選擇性。 A**長**值，指出提供者應該如何評估 CommandText 引數。 可以是下列其中一個或多個的位元遮罩[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)或[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)值。  
   
  **請注意**使用**的執行方式**值**adExecuteNoRecords**來改善效能，藉由減少內部處理以及您移植從 Visual Basic 的應用程式6.0。  

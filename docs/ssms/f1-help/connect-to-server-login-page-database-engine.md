@@ -3,7 +3,7 @@ title: "連接到伺服器 (登入頁面) 資料庫引擎 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-f1
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29528a0e9409ea44ec1d7b60a611db3c9d8712c3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 242e92dcdd769930814e4aaf8672ee41fe0f9d58
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>連接到伺服器 (登入頁面) Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此索引標籤來檢視或指定連線到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 時的選項。 在大多數的情況下，您可以在 [伺服器名稱] 方塊中輸入資料庫伺服器的電腦名稱，然後按一下 [連接] 來進行連接。 如果您要連線至具名執行個體，請使用電腦名稱，後面依序加上反斜線及執行個體名稱。 例如， `mycomputer\myinstance`。 如果要連接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，請使用電腦名稱並於後面加上 **\sqlexpress**。  
@@ -68,7 +68,7 @@ Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中�
   > **Active Directory - 整合式**  
 Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中的身分識別連接至 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 。 如果您使用來自同盟網域的 Azure Active Directory 認證登入 Windows，請使用此方法連線至 [!INCLUDE[ssSDS](../../includes/sssds_md.md)]。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL 資料庫](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
   
-**使用者名稱**  
+**User name**  
 要用來連接的 Windows 使用者名稱。 這個選項只有在您選取了使用  **Active Directory 密碼驗證**時，使用此對話方塊來檢視或指定選項。 當您選取 [Windows 驗證] 或 [Active Directory - 整合式] 驗證時，其為唯讀狀態。  
   
 **登入**  
@@ -80,7 +80,7 @@ Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中�
 **記住密碼**  
 按一下即可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 儲存您輸入的密碼。 只有在您選取使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證連接時，才能顯示此選項。  
   
-**連接**  
+**[連接]**  
 按一下以連線至伺服器。  
   
 **選項。**  

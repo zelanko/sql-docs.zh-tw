@@ -3,7 +3,7 @@ title: "PropertyAttributesEnum |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 853e63dcd520ab45a26f98091a3e48a816350d0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 96bbf0a358129254d4cb2997e4659b9f6da8904d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 指定的屬性[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。  
   
-|常數|值|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|指出提供者不支援屬性。|  
-|**adPropRequired**|1|表示使用者在初始化資料來源之前，必須指定此屬性的值。|  
+|**adPropRequired**|@shouldalert|表示使用者在初始化資料來源之前，必須指定此屬性的值。|  
 |**adPropOptional**|2|表示使用者不需要初始化資料來源之前，請指定此屬性的值。|  
 |**adPropRead**|512|表示使用者可以讀取屬性。|  
 |**adPropWrite**|1024|表示使用者可以設定屬性。|  

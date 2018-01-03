@@ -3,10 +3,10 @@ title: "PDW 憑證佈建 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,16 +16,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
 caps.latest.revision: "22"
-ms.openlocfilehash: f0134ec239b938ee7ace6fc6dc05e130fb844b2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9abee9638492368fe407f98a81beea2a48148971
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-certificate-provisioning"></a>PDW 憑證佈建
 **PDW 憑證佈建**頁面 Analytics Platform System**Configuration Manager**匯入或移除 PDW 區域所使用的憑證。 使用，來加密連接的憑證可協助安全的通訊透過 SQL Server 用戶端，可以使用 SQL Server PDW 驅動程式的工具的控制節點到[管理主控台](monitor-the-appliance-by-using-the-admin-console.md)，和 Integration Services 就會載入。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
 安裝之前的憑證，請執行下列作業：  
   
 1.  取得安全的憑證。 如果您需要有關如何取得安全的憑證的詳細資訊，請連絡 Microsoft 支援服務。  
@@ -77,7 +77,7 @@ SQL Server PDW 會繼續目前的連接加密，但不是會針對新的連接�
   
 ![DWConfig 應用裝置 PDW 憑證](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md)  
 <!-- MISSING LINKS [HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  -->  
   

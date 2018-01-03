@@ -3,7 +3,7 @@ title: "ADO MD 屬性 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48c27fa950a31a0121bb5253fe9b94ba5893bae3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c59077cbb3604cca9ef352c348a49e6301ace6df
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-properties"></a>ADO MD 屬性
 |||  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 |[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|表示格式化的顯示的資料格的值。|  
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|表示成員之間階層的根層級數目。|  
 |[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|表示層級的成員名稱。|  
-|[名稱](../../../ado/reference/ado-md-api/name-property-ado-md.md)|表示物件的名稱。|  
+|[[名稱]](../../../ado/reference/ado-md-api/name-property-ado-md.md)|表示物件的名稱。|  
 |[序數 （儲存格）](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|可唯一識別資料格內資料格集的位置。|  
 |[序數 （位置）](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|可唯一識別沿座標軸的位置。|  
 |[父系](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|指出在階層中的目前成員的父系的成員。|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|表示目前物件的模稜兩可的名稱。|  
 |[值](../../../ado/reference/ado-md-api/value-property-ado-md.md)|指出目前的儲存格的值。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO MD 應用程式開發介面參考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD 程式碼範例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD 集合](../../../ado/reference/ado-md-api/ado-md-collections.md)   

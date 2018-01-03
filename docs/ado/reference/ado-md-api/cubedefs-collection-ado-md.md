@@ -3,7 +3,7 @@ title: "CubeDefs 集合 (ADO MD) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc3e8cb29642b4d6c620374852d8059729fa2c33
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 57d5204651e3c2e0d39c534842d3024eec527ecd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cubedefs-collection-ado-md"></a>CubeDefs 集合 (ADO MD)
 包含[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)表示多維度的類別目錄 cube 物件。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/cubedefs-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [目錄 (VB) 範例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [目錄物件 (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
  [CubeDef 物件 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)

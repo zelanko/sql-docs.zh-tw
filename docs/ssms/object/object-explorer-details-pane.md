@@ -3,7 +3,7 @@ title: "物件總管詳細資料窗格 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 523ea1b976fc5769cd400e9bbe32f380956421df
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6bf7fdbd0c791ae6302774116769b91fcd4a6ee3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-explorer-details-pane"></a>物件總管詳細資料窗格
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [物件總管詳細資料] 是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的元件，它會提供伺服器中所有物件的表格式檢視，並且呈現可管理這些物件的使用者介面。 物件總管的功能會隨著伺服器的類型而稍有不同，不過，它通常會包括資料庫的開發功能，以及所有伺服器類型的管理功能。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 |**向上**|移至父物件或資料夾。|  
 |**同步處理**|將 [物件總管] 的焦點設定成在 [物件總管詳細資料] 中選取的物件。|  
 |**篩選**|如果可用，顯示可設定的物件子集。|  
-|**重新整理**|重新整理 [物件總管詳細資料] 的顯示。|  
+|**[重新整理]**|重新整理 [物件總管詳細資料] 的顯示。|  
 |**搜尋**|提供區域來輸入特定資料庫物件的搜尋詞彙。|  
   
 ### <a name="column-header-selections"></a>資料行標頭選取範圍  

@@ -3,7 +3,7 @@ title: "ADOX 列舉常數 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ec43e5030e6bb335e7089af38be9ba6b5effb55
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d531e41fdba4e012ed1d33dcf3efa180065e7697
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列舉常數
 若要協助偵錯，ADOX 列舉常數會列出每個常數的值。 不過，這個值是單純諮詢，，而且可能會從一個版本 ADOX 變更到另一個。 您的程式碼應該僅相依於名稱，而不是實際值、 列舉常數。  
   
  會定義下列的列舉的常數。  
   
-|列舉型別|Description|  
+|列舉型別|描述|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|指定當執行動作的類型**SetPermissions**呼叫。|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|指定具有 null 值的記錄都編製索引。|  
@@ -42,6 +42,6 @@ ms.lasthandoff: 11/17/2017
 |[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|指定的規則時遵循**金鑰**被刪除。|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|指定索引的資料行的排序順序。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADOX API 參考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [資料定義語言和安全性的 ADO 延伸模組 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

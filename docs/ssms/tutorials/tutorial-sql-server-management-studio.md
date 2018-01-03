@@ -3,7 +3,7 @@ title: "教學課程：SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ae304d08d1f747a656266f159e0833a2028c46e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e6ca96ba58cb6f32cdceb4a310ba5b94ce290ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tutorial-sql-server-management-studio"></a>教學課程：SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ SQL Server Management Studio (SSMS) 教學課程將為您介紹用來管理 [!IN
 [第 1 課：SQL Server Management Studio 中的基本導覽](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
 在這一課，您將學習如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的元件、如何重新設定環境配置，以及如何還原預設配置。  
   
-[第 2 課：撰寫 Transact-SQL](lesson-2-writing-transact-sql.md)  
+[課程 2 - 撰寫 Transact-SQL](lesson-2-writing-transact-sql.md)  
 在這個課程中，您將學習如何開啟查詢編輯器、如何管理程式碼，以及如何使用查詢編輯器的其他功能。  
   
 [第 3 課：使用範本、方案和指令碼專案](lesson-3-working-with-templates-solutions-and-script-projects.md)  

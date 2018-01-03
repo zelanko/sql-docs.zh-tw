@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, glossary
@@ -17,11 +17,11 @@ caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: dd35c15674cff4dc01edddd18f8416d86280d38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-glossary"></a>ADO 詞彙
 本主題定義適用於 ADO 的詞彙。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
  商務規則  
  驗證的編輯、 登入驗證、 資料庫查閱、 原則和構成企業的方式進行商務交易的演算式轉換組合。 也稱為*商務邏輯*。  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
  計算的運算式  
  運算式不是常數，但其值取決於其他值。 要評估導出的運算式必須取得並計算從其他來源，通常是在其他欄位或資料列的值。  
   
@@ -292,7 +292,7 @@ ms.lasthandoff: 11/17/2017
  作業完成之前可能會啟動下一個作業的程式碼所起始。 另請參閱非同步作業。  
   
 ## <a name="t-z"></a>T-Z  
- 樹狀  
+ trEE  
  結構，代表項目 （節點） 之間的階層式關聯性。 沒有最上層 （根） 樹狀結構的一個節點。 下方根目錄中，可以有多個子系。 每個子系又可能是其他子系，因此類似樹分支的父代。 包含文件及其他資料夾的資料夾是樹狀結構的典型範例。 另請參閱階層、 節點、 根、 子系、 父系。  
   
  網頁伺服器  

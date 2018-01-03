@@ -3,7 +3,7 @@ title: "ADOX 物件 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e27df1ef9208016e0772aadf98514e8fa87df4d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac969f567ce38b48d2c82218b09845e8247fea8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-objects"></a>ADOX 物件
 ## <a name="adox-object-summary"></a>ADOX 物件摘要  
   
-|物件|Description|  
+|Object|描述|  
 |------------|-----------------|  
 |[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)|包含描述的資料來源的結構描述目錄的集合。|  
 |[資料行](../../../ado/reference/adox-api/column-object-adox.md)|從資料表、 索引或索引鍵代表的資料行。|  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 |[Index](../../../ado/reference/adox-api/index-object-adox.md)|代表資料庫資料表中的索引。|  
 |[索引鍵](../../../ado/reference/adox-api/key-object-adox.md)|代表資料庫資料表中的主要、 外部索引鍵，或唯一索引鍵欄位。|  
 |[程序](../../../ado/reference/adox-api/procedure-object-adox.md)|代表預存程序。|  
-|[Table](../../../ado/reference/adox-api/table-object-adox.md)|表示資料庫資料表，包括資料行、 索引和索引鍵。|  
+|[[資料表]](../../../ado/reference/adox-api/table-object-adox.md)|表示資料庫資料表，包括資料行、 索引和索引鍵。|  
 |[使用者](../../../ado/reference/adox-api/user-object-adox.md)|代表有受保護的資料庫內的存取權限的使用者帳戶。|  
 |[[檢視]](../../../ado/reference/adox-api/view-object-adox.md)|代表已篩選的一組記錄或一份虛擬資料表。|  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  每個物件可以包含在其對應的集合。 例如，**資料表**物件可以包含在[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)集合。 如需詳細資訊，請參閱[ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)或特定集合的主題。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADOX API 參考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)   
  [ADOX 物件模型](../../../ado/reference/adox-api/adox-object-model.md)   

@@ -3,7 +3,7 @@ title: "計數屬性範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 665541a111e8117a9a96b0788ac837a50ed79eaf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e205d426a751de5923fbf92f42aac82a3346572
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="count-property-example-vb"></a>計數屬性範例 (VB)
 這個範例會示範[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性中的兩個集合與***員工***資料庫。 此屬性會取得中的每個集合的物件數目，並設定列舉這些集合的迴圈的上限。 列舉不使用這些集合的另一種方式**計數**屬性就是使用`For Each...Next`陳述式。  
@@ -100,5 +100,5 @@ End Sub
 'EndCountVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Count 屬性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

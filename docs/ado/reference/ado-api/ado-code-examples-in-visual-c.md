@@ -3,7 +3,7 @@ title: "Visual c + + 中的 ADO 程式碼範例 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a9dc2f4f129ae14efbc2b2ca23f0af7cc619107c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a5c91eb0083ed21ef43fdc93302b58b2332c06b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual c + + 中的 ADO 程式碼範例
 若要了解如何使用 ADO 方法、 屬性和事件時寫入 Microsoft Visual c + + 中使用下列程式碼範例。  
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [ADO 事件模型範例](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [在 Visual Basic 中的 ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO 程式碼範例的 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [附錄 D：ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

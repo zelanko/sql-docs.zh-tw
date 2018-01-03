@@ -3,7 +3,7 @@ title: "Open 方法 （ADO 連接） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9133d8e959d1831fc1ff64ed1d8ecace96c3f882
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41850de804523a50dbf0d489e678b93c9f29b6ae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-connection"></a>Open 方法 （ADO 連接）
 開啟資料來源的連接。  
@@ -49,7 +49,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *密碼*  
  選擇性。 A**字串**值，包含要建立連線時所使用的密碼。  
   
- *選項。*  
+ *選項*  
  選擇性。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)值，決定是否此方法應傳回之後 （同步） 或之前 （非同步） 建立連線。  
   
 ## <a name="remarks"></a>備註  
@@ -70,7 +70,7 @@ connection.Open ConnectionString, UserID, Password, Options
 ## <a name="applies-to"></a>適用於  
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [開啟與關閉方法範例 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [開啟與關閉方法範例 (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [開啟與關閉方法範例 （VC + +）](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

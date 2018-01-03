@@ -3,7 +3,7 @@ title: "WriteText 方法 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 489e91a0ca9dcaa6c2ca59bba3117c2c409c9799
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2c744551b835ce814f8a6baf9781e04e67b6139d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writetext-method"></a>WriteText 方法
 將指定的文字字串至[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
@@ -42,7 +42,7 @@ Stream.WriteText Data, Options
  *資料*  
  A**字串**包含以字元為單位來寫入的文字值。  
   
- *選項。*  
+ *選項*  
  選擇性。 A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md)值，指定是否必須在指定的字串結尾處寫入行分隔符號字元。  
   
 ## <a name="remarks"></a>備註  
@@ -58,5 +58,5 @@ Stream.WriteText Data, Options
 ## <a name="applies-to"></a>適用於  
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Write 方法](../../../ado/reference/ado-api/write-method.md)

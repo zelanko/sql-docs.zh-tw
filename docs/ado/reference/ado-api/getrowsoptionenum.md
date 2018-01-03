@@ -3,7 +3,7 @@ title: "GetRowsOptionEnum |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ea3b56dd2ffb7d6fef090b341309d15e71c8ca1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a999bd9167e2538ba1be2b573971467e05949f92
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 指定要從擷取記錄數[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
-|常數|值|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adGetRowsRest**|-1|擷取的記錄中的其餘部分**資料錄集**、 從目前的位置或所指定的書籤*啟動*參數[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法。|  
   

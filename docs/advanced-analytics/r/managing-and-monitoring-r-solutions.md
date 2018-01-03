@@ -2,9 +2,11 @@
 title: "管理和監視的機器學習解決方案 |Microsoft 文件"
 ms.custom: SQL2016_New_Updated
 ms.date: 07/26/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b153db4a35b5ef44e1c385cb902000ef94abc078
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 42da1c7becbb7003ab66b7ce58cbdbb307326aaa
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>管理和監視的機器學習解決方案
 
@@ -26,7 +28,7 @@ ms.lasthandoff: 12/01/2017
 
 **適用於：** SQL Server 2016 R Services、 SQL Server 2017 機器學習服務
 
-## <a name="security"></a>安全性
+## <a name="security"></a>Security
 
 資料庫管理員必須提供資料存取，不只是資料科學家但各種報表開發人員、 商務分析師和商務資料取用者。 R （以及現在 Python） 至 SQL Server 的整合支援資料科學角色的資料庫系統管理員提供許多優點。
 

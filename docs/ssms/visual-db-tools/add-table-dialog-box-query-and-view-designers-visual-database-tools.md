@@ -3,7 +3,7 @@ title: "加入資料表對話方塊 (查詢和檢視表設計工具) (Visual DB 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f3bfef97dd978ac0ee021742b4691ee62ed3b81
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2119f74e6aa6b2ff8c5234b43f8c79c098d26db5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>加入資料表對話方塊 (查詢和檢視表設計工具) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 這個對話方塊可讓您將資料表、檢視、使用者自訂函式或同義字新增到查詢或檢視中。  
@@ -45,10 +45,10 @@ ms.lasthandoff: 12/05/2017
 **同義字**  
 列出可新增至 [圖表] 窗格的同義資料表。 若要新增同義資料表，請選取同義資料表，再按 [新增]。 若要一次新增數個同義資料表，請選取同義資料表，再按一下 [新增]。  
   
-**重新整理**  
+**[重新整理]**  
 更新清單以包含自上次擷取清單以來對資料庫所做的任何變更。  
   
-**加入**  
+**[加入]**  
 加入選取的一或多個項目。  
   
 ## <a name="see-also"></a>另請參閱  

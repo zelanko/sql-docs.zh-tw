@@ -3,7 +3,7 @@ title: "EOS 和 LineSeparator 屬性 SkipLine 方法範例 (VB) |Microsoft 文�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2672b5d41683313c36d95adac68f33367396864
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dd0c9f048aee7463e54f9de7e55a246f3e72ee62
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS 和 LineSeparator 屬性 SkipLine 方法範例 (VB)
 此範例示範如何操作一次的文字資料流一行。 變更從預設歸位字元/換行的行分隔符號的影響 (**adCRLF**) 至只要換行字元 (**adLF**) 或歸位字元 (**adCR**) 會顯示。  
@@ -117,7 +117,7 @@ End Sub
 'EndSkipLineVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [EOS 屬性](../../../ado/reference/ado-api/eos-property.md)   
  [LineSeparator 屬性 (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine 方法](../../../ado/reference/ado-api/skipline-method.md)
