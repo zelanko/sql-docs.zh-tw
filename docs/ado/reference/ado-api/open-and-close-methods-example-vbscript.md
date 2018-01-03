@@ -3,7 +3,7 @@ title: "開啟和關閉方法範例 (VBScript) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4ef738d914bf98d0faa5e9633cb39a2f6ef0408b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d0af74b3ce760e82e6cf452839343acff8ee2b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>開啟與關閉方法範例 (VBScript)
 這個範例會使用[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)和[關閉](../../../ado/reference/ado-api/close-method-ado.md)上兩個方法[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[連接](../../../ado/reference/ado-api/connection-object-ado.md)已開啟的物件。  
@@ -166,7 +166,7 @@ BODY {
 <!-- EndOpenVBS -->  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Close 方法 (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open 方法 （ADO 連接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   

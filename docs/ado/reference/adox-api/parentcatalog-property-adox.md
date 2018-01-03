@@ -3,7 +3,7 @@ title: "ParentCatalog 屬性 (ADOX) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -46,11 +46,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27181ddda63e190f1aa6e451c4fd5eeca1a25c12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d0cdd505a30252b603477499c44176957d1dc45
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 屬性 (ADOX)
 指定的父目錄的資料表、 使用者或資料行的物件，來提供存取提供者特有的屬性。  
@@ -70,5 +70,5 @@ ms.lasthandoff: 11/17/2017
 |[Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
 |[User 物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ParentCatalog 屬性範例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

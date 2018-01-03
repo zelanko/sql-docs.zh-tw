@@ -3,7 +3,7 @@ title: "ADO 方法 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b93fe94c608cce5ca4338e1d0a7ccfbcc834a322
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f3e79fcbef3c9a07ac43de13865632fef2ca6ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-methods"></a>ADO 方法
 |||  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 |[put_OLEDBCommand 方法](../../../ado/reference/ado-api/put-oledbcommand-method.md)|這個方法會執行任何作業-它會一律傳回 S_OK。|  
 |[讀取](../../../ado/reference/ado-api/read-method.md)|讀取指定的數目的位元組**資料流**物件。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|從文字中讀取指定的字元數**資料流**物件。|  
-|[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)|更新的物件集合，以反映，從可用的物件和特定給提供者。|  
+|[[重新整理]](../../../ado/reference/ado-api/refresh-method-ado.md)|更新的物件集合，以反映，從可用的物件和特定給提供者。|  
 |[重新查詢](../../../ado/reference/ado-api/requery-method.md)|更新中的資料**資料錄集**重新執行查詢所依據之物件的物件。|  
 |[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|在目前的資料重新整理**資料錄集**物件，或**欄位**集合**記錄**物件，從基礎資料庫。|  
 |[儲存](../../../ado/reference/ado-api/save-method.md)|將儲存**資料錄集**檔案中或**資料流**物件。|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
 |[寫入](../../../ado/reference/ado-api/write-method.md)|將二進位資料寫入**資料流**物件。|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|將指定的文字字串至**資料流**物件。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

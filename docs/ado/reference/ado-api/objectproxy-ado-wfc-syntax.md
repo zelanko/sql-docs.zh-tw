@@ -3,7 +3,7 @@ title: "ObjectProxy (ADO-WFC 語法) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 610993a66b7401406960991f582073193f9e5747
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 88fe2039e43e0d58f3cc1c96cf97250d328e53ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO-WFC 語法)
 **ObjectProxy**物件代表伺服器，而且由**createObject**方法[DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)物件。 ObjectProxy 類別有一個方法，**呼叫**，這可以叫用伺服器上的方法，並傳回所產生的這個引動過程的物件。  
@@ -43,7 +43,7 @@ public Object ObjectProxy.( String method, Object[] args)
 ```  
   
 #### <a name="returns"></a>傳回值  
- 物件  
+ Object  
  叫用方法所產生的物件。  
   
 #### <a name="parameters"></a>參數  

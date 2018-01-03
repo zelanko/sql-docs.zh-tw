@@ -3,7 +3,7 @@ title: "Find 方法 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f2a2af33a7355084f85e80fda3ff92e5415adcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜尋[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)符合指定之準則的資料列。 （選擇性） 您可以指定搜尋開始的資料列及從起始的資料列位移的方向。 如果符合條件時，所找到的記錄; 上設定目前資料列位置否則，會結束 （或開始） 的設定位置**資料錄集**。  
@@ -71,7 +71,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [尋找方法範例 (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Index 屬性](../../../ado/reference/ado-api/index-property.md)   
  [最佳化屬性動態 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

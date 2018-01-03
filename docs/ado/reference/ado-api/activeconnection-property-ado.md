@@ -3,7 +3,7 @@ title: "ActiveConnection 屬性 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9722834bb3a5edb7abdb1ecf7b0235a069d60f09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77c5f58c5fed82651e5fc7f0228ef36e5fbea880
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 屬性 (ADO)
 表示要[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件指定[命令](../../../ado/reference/ado-api/command-object-ado.md)，[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，或[記錄](../../../ado/reference/ado-api/record-object-ado.md)目前所屬的物件。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  使用**ActiveConnection**屬性來判斷**連接**哪些物件指定**命令**物件將會執行或指定**資料錄集**隨即開啟。  
   
-## <a name="command"></a>Command  
+## <a name="command"></a>命令  
  如**命令**物件**ActiveConnection**屬性是讀取/寫入。  
   
  如果您嘗試呼叫[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法**命令**之前將此屬性設定為 開啟物件**連接**有效的連接字串或物件，就會發生錯誤。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|  
 |[Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向屬性範例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向屬性範例 （VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向屬性範例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   

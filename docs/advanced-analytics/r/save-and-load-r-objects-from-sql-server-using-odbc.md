@@ -2,9 +2,11 @@
 title: "儲存和載入 R 物件從 SQL Server 使用 ODBC |Microsoft 文件"
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8bc94b0b93bfc19f521fc7748f484f72fd90d0d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5726f9138259e36e7af4325229b3fda24c7058d6
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>儲存並載入從 SQL Server 使用 ODBC 的 R 物件
 

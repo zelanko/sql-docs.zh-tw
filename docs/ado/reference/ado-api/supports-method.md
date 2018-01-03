@@ -3,7 +3,7 @@ title: "支援方法 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13186c130b85de50bc6cff9487d8fec11359d008
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 27c415490b1193a5dcbc8ef20e5975149a8519f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supports-method"></a>支援方法
 決定指定[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件支援特定類型的功能。  
@@ -54,7 +54,7 @@ boolean = recordset.Supports(CursorOptions )
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [支援的方法範例 (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
  [支援的方法範例 （VC + +）](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [CursorType 屬性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

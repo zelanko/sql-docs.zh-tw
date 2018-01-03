@@ -3,7 +3,7 @@ title: "資料格物件 (ADO MD) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e35b30a2474f43ee1d46e23ae4a4323cca47f16b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f48b3cf06a7c11e29e87e462b037053906ff10d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cell-object-ado-md"></a>資料格物件 (ADO MD)
 表示資料格集中所包含的軸座標交集處的資料。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  **屬性**集合包含提供者提供的屬性。 下表列出可供使用的屬性。 實際的屬性清單可能與不同的提供者實作而定。 請參閱您的提供者，如需更完整清單可用內容的文件。  
   
-|名稱|Description|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |BackColor|用來顯示資料格的背景色彩。|  
 |FontFlags|詳述影響字型的位元遮罩。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [軸範例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [資料格集物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [位置集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   

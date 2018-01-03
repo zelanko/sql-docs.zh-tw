@@ -3,7 +3,7 @@ title: "WillConnect 事件 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7113fadf60c58478173287f331822798df9aeb63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45e9a6fb4dcc55b836195065c279627e50c74511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
 **WillConnect**連線開始前，呼叫事件。  
@@ -50,7 +50,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *密碼*  
  A**字串**，其中包含暫止連線的密碼。  
   
- *選項。*  
+ *選項*  
  A**長**值，指出提供者應該如何評估*ConnectionString*。 唯一的選擇是**adAsyncOpen**。  
   
  *adStatus*  
@@ -68,6 +68,6 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
   
  當取消這個事件時， **ConnectComplete**用來呼叫其*adStatus*參數設定為**adStatusErrorsOccurred**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)

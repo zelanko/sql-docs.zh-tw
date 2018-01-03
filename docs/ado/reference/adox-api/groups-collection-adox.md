@@ -3,7 +3,7 @@ title: "群組集合 (ADOX) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2edcde5ebd3bcc21f105a6b1f6a6d2fce495350a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f41898c749bdbca30f02fd30b4720d93f54fbf9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="groups-collection-adox"></a>群組集合 (ADOX)
 包含所有儲存[群組](../../../ado/reference/adox-api/group-object-adox.md)目錄或使用者的物件。  
@@ -56,6 +56,6 @@ ms.lasthandoff: 11/17/2017
   
 -   [Groups 集合屬性、方法和事件](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Group 物件 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

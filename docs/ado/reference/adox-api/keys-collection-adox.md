@@ -3,7 +3,7 @@ title: "索引鍵集合 (ADOX) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d58a565fde1f4f1628d55293c401250529269a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b832a459e5eac0a6e208517457eccba8b10e74c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keys-collection-adox"></a>索引鍵集合 (ADOX)
 包含所有[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件[資料表](../../../ado/reference/adox-api/table-object-adox.md)。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Indexes 集合屬性、方法和事件](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [索引鍵附加方法、 金鑰類型、 RelatedColumn、 RelatedTable 和 UpdateRule 屬性範例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [索引鍵集合的屬性、 方法和事件](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
  [Key 物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

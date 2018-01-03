@@ -3,7 +3,7 @@ title: "WillChangeField 和 FieldChangeComplete 事件 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d532aa3857e2a61bb5ec23fa9258f6d7aa1186f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c30a41b18016515f97ba044eb0d36724a59a351
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField 和 FieldChangeComplete 事件 (ADO)
 **WillChangeField**事件被呼叫之前暫止的作業變更的一或多個值[欄位](../../../ado/reference/ado-api/field-object.md)中的物件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **FieldChangeComplete**事件之後的一或多個值，就會呼叫**欄位**物件已變更。  
@@ -70,6 +70,6 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
 ## <a name="remarks"></a>備註  
  A **WillChangeField**或**FieldChangeComplete**設定時，可能會發生事件[值](../../../ado/reference/ado-api/value-property-ado.md)屬性，並呼叫[更新](../../../ado/reference/ado-api/update-method.md)方法使用欄位和值的陣列參數。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)

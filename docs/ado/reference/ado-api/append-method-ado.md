@@ -3,7 +3,7 @@ title: "Append 方法 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 87c05e88325d3e00061ee57af80be65d9a7508ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0c0c887da52e8c91caeab582c2b1973b491e81d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 將物件附加至集合。 如果集合是[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)，新[欄位](../../../ado/reference/ado-api/field-object.md)可以先建立物件，會附加至集合。  
@@ -47,7 +47,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *物件*  
  物件變數，表示要附加的物件。  
   
- *名稱*  
+ *[名稱]*  
  A**字串**包含新的名稱值**欄位**物件，而且不可以是相同的名稱中的任何其他物件*欄位*。  
   
  *型別*  
@@ -94,7 +94,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 - [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
 - [Parameters 集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [附加和 CreateParameter 方法範例 (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [附加和 CreateParameter 方法範例 （VC + +）](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   

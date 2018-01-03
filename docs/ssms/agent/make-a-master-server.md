@@ -3,7 +3,7 @@ title: "設為主要伺服器 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec76937f749586eadafb5f3fe01a309d59a146c8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 96f9c83cd9266aa225263f5d35c74025a6ee44ec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 [!INCLUDE[tsql](../../includes/tsql_md.md)]，設為主要伺服器 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **若要設為主要伺服器，使用：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/05/2017
   
 如果使用 Proxy 帳戶的作業步驟在從主要伺服器下載 Proxy 帳戶至目標伺服器時失敗，您可以在 **msdb** 資料庫的 **sysdownloadlist** 資料表中，檢查 **error_message** 資料行，以了解下列錯誤訊息：  
   
--   「此作業步驟需要 Proxy 帳戶，但目標伺服器已停用 Proxy 比對。」  
+-   「作業步驟需要 Proxy 帳戶，不過目標伺服器上已停用 Proxy 比對。」  
   
     若要解決這個錯誤，請將 **AllowDownloadedJobsToMatchProxyName** 登錄子機碼設為 1。  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/05/2017
     **加入連接**  
     將伺服器加入目標伺服器清單中，但不註冊伺服器。  
   
-    **連接**  
+    **[連接]**  
     變更選取之伺服器的連接屬性。  
   
 5.  從 **[主要伺服器登入認證]** 頁面指定在必要時，是否要為目標伺服器建立新的登入，並指派存取主要伺服器的權限給該登入。  
@@ -129,7 +129,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 這個範例會將目前的伺服器列入 AdventureWorks1 主要伺服器中。 目前伺服器的位置是「第 21 棟，309 室，機架 5」。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會將目前的伺服器列入 AdventureWorks1 主要伺服器中。 目前伺服器的位置是「第 21 棟，309 室，機架 5」。  
   
 ```  
 USE msdb ;  

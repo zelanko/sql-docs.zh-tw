@@ -3,7 +3,7 @@ title: "WillChangeRecord 和 RecordChangeComplete 事件 (ADO) |Microsoft 文件
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a421ba630b9cb9eeafaa2087144b765a64f78b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 522d2385cc2670ed940768f7584d3c9eb7942748
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
 **WillChangeRecord**之前一或多個記錄 （列），會呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)變更。 **RecordChangeComplete**一次後，會呼叫事件或變更多個記錄。  
@@ -73,6 +73,6 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
  您必須設定**adStatus**參數**adStatusUnwantedEvent**每個可能的**adReason**完全停止，其中包含的任何事件的事件通知的值**adReason**參數。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)

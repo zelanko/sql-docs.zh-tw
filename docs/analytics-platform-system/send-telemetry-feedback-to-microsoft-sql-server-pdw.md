@@ -3,10 +3,10 @@ title: "將遙測意見反應傳送給 Microsoft (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
 caps.latest.revision: "18"
-ms.openlocfilehash: f2c928c8f61a98af3eb1e5f05881683dbcaedf1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f78a9e7c1e66085dd84ba71e8e7b5f517131e18a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="send-telemetry-feedback-to-microsoft"></a>將遙測意見反應傳送給 Microsoft
 Analytics Platform System 具有選擇性的遙測功能，系統管理員主控台資料傳送給 Microsoft。 我們建議您啟用這個選項來協助我們改善產品。  
@@ -116,7 +116,7 @@ Analytics Platform System 具有選擇性的遙測功能，系統管理員主控
   
 在執行沒有壞處`Disable-RemoteMonitoring`命令多次。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [使用系統管理員主控台 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 [使用系統檢視 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-system-views.md)  
 [使用 System Center Operations Manager &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

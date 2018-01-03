@@ -2,9 +2,11 @@
 title: "監視 R Services | Microsoft Docs"
 ms.custom: 
 ms.date: 11/29/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3401a1b72b0ec409c8f3398b996de7e9d39c0763
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 212084dc9a8d4bea618f4f172d8db3f2ee25ea4a
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="monitoring-r-services"></a>監視 R Services
   本節提供使用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 時的這些常見監視工作相關資訊：  
@@ -47,7 +49,7 @@ ms.lasthandoff: 12/01/2017
 
 [使用 Management Studio 中的自訂報表監視 R Services](../../advanced-analytics/r-services/monitor-r-services-using-custom-reports-in-management-studio.md)
   
-## <a name="see-also"></a>另請參閱  
- [R Services 的資源管理](../../advanced-analytics/r-services/resource-governance-for-r-services.md)  
+## <a name="see-also"></a>請參閱  
+ [的資源管理](../../advanced-analytics/r-services/resource-governance-for-r-services.md)  
   
   

@@ -3,7 +3,7 @@ title: "使用查詢和檢視表設計工具操作國際資料 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0b88c7cbc8f2976c79017ebca218eb79cbfcc588
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 562e347f9f51230c41358545e93cc970743a3f74
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>使用查詢和檢視表設計工具操作國際資料 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用[查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)處理任何語言的資料，並在任何版本的 Windows 作業系統中執行。 下列方針即簡要說明您將注意到的不同處，並提供管理國際應用程式資料的資訊。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/05/2017
   
 當您在 [準則] 窗格中使用特定地區設定格式輸入資料時，[查詢和檢視設計師] 會在 [SQL] 窗格中自動將該資料轉譯為 ANSI 格式。 例如，如果您的 [地區設定] 為 Standard German，您可以使用 "31.12.96" 的格式在 [準則] 窗格中輸入資料。 然而，資料將以 ANSI 日期時間的格式出現在 [SQL] 窗格中，如 `{ ts '1996-12-31 00:00:00' }.` 。如果直接在 [SQL] 窗格中輸入資料，則必須以 ANSI 格式輸入。  
   
-## <a name="sort-order"></a>排序次序  
+## <a name="sort-order"></a>[排序順序]  
 資料庫將決定您查詢中資料的排序次序。 您在 Windows [區域設定] 對話方塊中設定的選項並不會影響查詢的排序次序。 但在特定查詢中，您可以要求使用特定順序傳回資料列。  
   
 ## <a name="using-double-byte-characters"></a>使用雙位元組字元  

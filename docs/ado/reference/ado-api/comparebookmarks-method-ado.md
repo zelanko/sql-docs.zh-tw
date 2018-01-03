@@ -3,7 +3,7 @@ title: "CompareBookmarks 方法 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d29f880d5bc5896efe603153bbfaf8e58b658e4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e4c3ebb53e34b8e17ae7bc3740bc33d1bfce4fe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 方法 (ADO)
 比較兩個書籤，並傳回它們的相對值指示。  
@@ -63,7 +63,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CompareBookmarks 方法範例 (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
  [CompareBookmarks 方法範例 （VC + +）](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
  [Bookmark 屬性 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)

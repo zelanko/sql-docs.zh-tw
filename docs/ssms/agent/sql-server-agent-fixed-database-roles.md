@@ -3,7 +3,7 @@ title: "SQL Server Agent 固定資料庫角色 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cc6c25e52402bcf7e4d1a3a9899e9b3ce6449b73
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a2440d64fd86feb82f49980b63fff9b3226a3f4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server Agent 固定資料庫角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/05/2017
   
 下表摘要出 **SQLAgentUserRole** 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 物件所擁有的權限。  
   
-|動作|運算子|本機作業<br /><br />(僅擁有的作業)|作業排程<br /><br />(僅擁有的排程)|Proxy|  
+|動作|操作員|本機作業<br /><br />(僅擁有的作業)|作業排程<br /><br />(僅擁有的排程)|Proxy|  
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
 |建立/修改/刪除|否|是<br /><br />無法變更作業擁有權。|是|否|  
 |檢視清單 (列舉)|是<br /><br />可以取得可用操作員的清單，以便在 **sp_notify_operator** 和 Management Studio 的 [作業屬性] 對話方塊中使用。|是|是|是<br /><br />只在 Management Studio 的 [作業步驟屬性] 對話方塊中可用的 Proxy 清單。|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/05/2017
   
 下表摘要出 **SQLAgentReaderRole** 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 物件所擁有的權限。  
   
-|動作|運算子|本機作業|多伺服器作業|作業排程|Proxy|  
+|動作|操作員|本機作業|多伺服器作業|作業排程|Proxy|  
 |----------|-------------|--------------|--------------------|-----------------|-----------|  
 |建立/修改/刪除|否|是 (僅擁有的作業)<br /><br />無法變更作業擁有權。|否|是 (僅擁有的排程)|否|  
 |檢視清單 (列舉)|是<br /><br />可以取得可用操作員的清單，以便在 **sp_notify_operator** 和 Management Studio 的 [作業屬性] 對話方塊中使用。|是|是|是|是<br /><br />只在 Management Studio 的 [作業步驟屬性] 對話方塊中可用的 Proxy 清單。|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 12/05/2017
   
 下表摘要出 **SQLAgentOperatorRole** 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 物件所擁有的權限。  
   
-|動作|警示|運算子|本機作業|多伺服器作業|作業排程|Proxy|  
+|動作|警示|操作員|本機作業|多伺服器作業|作業排程|Proxy|  
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |建立/修改/刪除|否|否|是 (僅擁有的作業)<br /><br />無法變更作業擁有權。|否|是 (僅擁有的排程)|否|  
 |檢視清單 (列舉)|是|是<br /><br />可以取得可用操作員的清單，以便在 **sp_notify_operator** 和 Management Studio 的 [作業屬性] 對話方塊中使用。|是|是|是|是|  

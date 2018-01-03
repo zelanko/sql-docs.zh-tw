@@ -3,7 +3,7 @@ title: "註冊已連接的伺服器 (SQL Server Management Studio) | Microsoft D
 ms.custom: 
 ms.date: 07/28/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 66d6bf38a5500017012c3eabb466b11d2d28ad49
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5140781326b2ada6fcc7e99dcf3cb566e70cba4b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>註冊連接的伺服器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS)，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中註冊已連線的伺服器。 透過註冊伺服器，您可以儲存經常存取之伺服器的連接資訊。 您可以在連接之前或連接時從 [物件總管] 註冊伺服器。  您可以從功能表瀏覽至 [檢視]\\[已註冊的伺服器]，在 SSMS 中檢視已註冊的伺服器。
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **若要使用下列項目註冊伺服器：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -57,7 +57,7 @@ Windows 驗證模式允許使用者透過 [!INCLUDE[msCoName](../../includes/msc
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 如需詳細資訊，請參閱 [選擇驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
 
-     -    **使用者名稱**  
+     -    **User name**  
 顯示您所連接的目前使用者名稱。 只有在您已選取使用 Windows 驗證進行連接時，才能使用此唯讀選項。 若要變更 **[使用者名稱]**，請以不同使用者登入電腦。 
 
      -    **登入**  

@@ -3,7 +3,7 @@ title: "檢查條件約束運算式對話方塊 (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2c1d1ecee5caafc8b4b4c0557fcbe15daf1552cf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5d0ac97223818ba2dd3b00dfe4400b416576e699
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>檢查條件約束運算式對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 當附加檢查條件約束至資料表或資料行時，必須包含 SQL 運算式。 在提供的方塊中輸入檢查條件約束運算式。  
@@ -59,14 +59,14 @@ NOT (payment_method = 'credit card') OR
   
 SQL 語法是由下列參數組成：  
   
-|參數|說明|  
+|參數|描述|  
 |-------------|---------------|  
 |常數|常值，例如數值或字元資料。 字元資料必須使用單引號 (') 括起來。|  
 |column_name|指定資料行。|  
 |函數|內建函數。|  
 |! 運算子之後|算術、位元、比較或字串運算子。|  
 |與|使用於布林運算式中，用於連接兩個運算式。 當兩個運算式都是 true 時傳回結果。<br /><br />當 AND 和 OR 同時在陳述式中使用時，會先處理 AND。 您可以使用括號來變更執行的順序。|  
-|OR|使用於布林運算式中，用於連接兩個條件。 當任一條件為 true 時，傳回結果。<br /><br />當 AND 和 OR 同時在陳述式中使用時，OR 是在 AND 之後進行檢驗。 您可以使用括號來變更執行的順序。|  
+|或|使用於布林運算式中，用於連接兩個條件。 當任一條件為 true 時，傳回結果。<br /><br />當 AND 和 OR 同時在陳述式中使用時，OR 是在 AND 之後進行檢驗。 您可以使用括號來變更執行的順序。|  
 |NOT|否定任何布林運算式 (可以包括關鍵字，例如 LIKE、NULL、BETWEEN、IN 和 EXISTS)。<br /><br />當在陳述式中使用一個以上的邏輯運算子時，會首先處理 NOT。 您可以使用括號來變更執行的順序。|  
   
 ## <a name="see-also"></a>另請參閱  

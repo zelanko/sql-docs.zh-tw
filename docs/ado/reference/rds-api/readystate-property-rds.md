@@ -1,11 +1,13 @@
 ---
 title: "ReadyState 屬性 (RDS) |Microsoft 文件"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d5533fd471b6aee697825d2251c84adbcdfccfa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 52d32f6b2ba1e3a85b0d374a4d11b4e0bf3c742c
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="readystate-property-rds"></a>ReadyState 屬性 (RDS)
 表示進度[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件，它會擷取資料到其[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回下列值之一。  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|仍在執行目前的查詢，並已經提取的任何資料列。 **DataControl**物件的**資料錄集**不是可供使用。|  
 |**adcReadyStateInteractive**|一組初始的擷取目前查詢的資料列存入**DataControl**物件的**資料錄集**而且可供使用。 剩餘的資料列仍會被擷取。|  
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ReadyState 屬性範例 (VBScript)](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)   
  [Cancel 方法 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [ExecuteOptions 屬性 (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)

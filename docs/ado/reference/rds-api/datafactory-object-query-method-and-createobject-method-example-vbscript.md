@@ -3,7 +3,7 @@ title: "建立 RDSServer.DataFactory 物件使用 CreateObject (VBScript) |Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1b1754cadf20a041ad3efc085409c7a91fc48d6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b1c7da908cb10ffd4f91a4bc060ff60460001144
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory 物件、 查詢方法和 CreateObject 方法範例 (VBScript)
 > [!IMPORTANT]
@@ -141,7 +141,7 @@ to bring back a Recordset. </H4>
 <!-- EndDataFactoryVBS -->  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CreateObject 方法 (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [資料空間物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   

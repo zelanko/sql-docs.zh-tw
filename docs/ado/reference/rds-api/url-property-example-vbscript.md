@@ -1,11 +1,13 @@
 ---
 title: "URL 屬性範例 (VBScript) |Microsoft 文件"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: VB
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 21c5980ea22241a739c253119310761e88d0b364
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3b2da9c3c5b12212a9e6ca2937c967bc8b1ad34f
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="url-property-example-vbscript"></a>URL 屬性範例 (VBScript)
 > [!IMPORTANT]
@@ -139,7 +141,7 @@ End Sub
 <!-- EndURLServerVBS -->  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [URL 屬性 (RDS)](../../../ado/reference/rds-api/url-property-rds.md)
 
 

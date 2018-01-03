@@ -3,7 +3,7 @@ title: "了解的自訂檔案 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52cd707a4c9c82cb3740f79f36a5b0578d2379f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f630817b87a464d3f02e5fdad6c88c161a081b23
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔
 方括號所組成的自訂檔案中的每個區段標頭 (**[]**) 包含型別和參數。 四個區段類型以常值字串**連接**， **sql**， **userlist**，或**記錄**。 常值字串、 預設值，指定使用者的識別項，或不提供參數。  
@@ -46,7 +46,7 @@ identifier
   
  區段標頭有下列的部分。  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
 |**連接**|修改連接字串常值字串。|  
 |**sql**|修改命令字串常值字串。|  
@@ -71,7 +71,7 @@ identifier
   
 -   **記錄**區段用每當**DataFactory**在作業。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自訂檔案記錄檔 > 一節](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自訂檔案 SQL > 一節](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

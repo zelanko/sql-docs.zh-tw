@@ -3,7 +3,7 @@ title: "資料空間 (ADO-WFC 語法) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 49037463f954e0d254111fb133d0c6d92c6b6999
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2fcb4480b7dcbc31849e213b01dd442df3d4c1d7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>資料空間 (ADO-WFC 語法)
 **CreateObject**方法**DataSpace**類別會指定這兩個商務物件來處理用戶端應用程式要求 (*progid*) 和通訊協定與伺服器 (*連接*)。 **createObject**傳回[ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)代表伺服器的物件。  
@@ -50,5 +50,5 @@ public static int getInternetTimeout()
 public static void setInternetTimeout(int plInetTimeout)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [DataSpace 物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)

@@ -2,11 +2,11 @@
 title: "機器學習伺服器獨立或 R Server 獨立安裝 |Microsoft 文件"
 ms.custom: 
 ms.date: 11/16/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 8a11d71e1568b3da175de0d2eecf182a9b415400
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d69755716ae84ed280f8af9c62a85dc861f66d75
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>安裝機器學習伺服器 （獨立） 或 R 伺服器 （獨立）
 
@@ -152,8 +152,8 @@ SQL Server 安裝程式包含安裝的機器學習 SQL Server 外部執行的伺
 |R Server (Standalone) |Windows 的獨立安裝程式|`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |Machine Learning 伺服器 (獨立式) |  SQL Server 2017 安裝精靈 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
 |Machine Learning 伺服器 (獨立式) |  Windows 的獨立安裝程式 |`C:\Program Files\Microsoft\R Server\R_SERVER`|
-|R 服務 (資料庫內) |SQL Server 2016 安裝程式精靈|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Machine Learning 服務 (資料庫內) |SQL Server 2017 安裝精靈|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`或`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|R Services (資料庫內) |SQL Server 2016 安裝程式精靈|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
+|Machine Learning 服務 (資料庫內) |SQL Server 2017 安裝精靈|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES` 或 `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 
 ### <a name="development-tools"></a>開發工具
 

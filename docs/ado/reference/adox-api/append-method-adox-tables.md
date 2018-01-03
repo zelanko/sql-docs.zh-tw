@@ -3,7 +3,7 @@ title: "Append 方法 （ADOX 資料表） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c5ab4e01e7478f1501dc550c8d45a86f5e8a600
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcf41f4e1ad50dc7e698b3f1a7d6eeb241a41dbc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-tables"></a>Append 方法 （ADOX 資料表）
 將新[資料表](../../../ado/reference/adox-api/table-object-adox.md)物件[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)集合。  
@@ -39,7 +39,7 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>參數  
- *Table*  
+ *[資料表]*  
  A **Variant**值，包含參考**資料表**来附加或建立並附加至資料表的名稱。  
   
 ## <a name="remarks"></a>備註  
@@ -48,7 +48,7 @@ Tables.Append Table
 ## <a name="applies-to"></a>適用於  
  [Tables 集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料行和資料表附加名稱屬性範例 (VB) 方法](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [ParentCatalog 屬性範例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Append 方法 （ADOX 資料行）](../../../ado/reference/adox-api/append-method-adox-columns.md)   

@@ -3,7 +3,7 @@ title: "Append 方法 (ADOX Views) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a30ccf01370b89572697917c4fbbbbf3df11a0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: acb0a9ffbf26ccb0f181e19c54ac906ae7d4754f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-views"></a>Append 方法 （ADOX 檢視）
 建立新[檢視](../../../ado/reference/adox-api/view-object-adox.md)物件，並將它附加[檢視](../../../ado/reference/adox-api/views-collection-adox.md)集合。  
@@ -39,7 +39,7 @@ Views.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>參數  
- *名稱*  
+ *[名稱]*  
  A**字串**值，指定要建立之檢視的名稱。  
   
  *Command*  
@@ -56,7 +56,7 @@ Views.Append Name, Command
 ## <a name="applies-to"></a>適用於  
  [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [檢視附加方法範例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Append 方法 （ADOX 資料行）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 方法 （ADOX 群組）](../../../ado/reference/adox-api/append-method-adox-groups.md)   

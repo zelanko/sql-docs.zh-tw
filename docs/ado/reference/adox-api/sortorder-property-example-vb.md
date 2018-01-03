@@ -3,7 +3,7 @@ title: "SortOrder 屬性範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f11956a6030b825c37f6600b2f8b40c47dc0ce20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77ac31157edfe36af85b112fffeaca6bb6cca86b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 屬性範例 (VB)
 這個範例會示範[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)，已附加至[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)集合[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼中的國家/地區資料行附加遞增索引**員工**然後資料表顯示的記錄。 然後程式碼中的國家/地區資料行附加遞減索引**員工**資料表，並會顯示記錄一次。 遞增和遞減索引之間的差異會顯示。  
@@ -140,7 +140,7 @@ End Sub
 ' EndSortOrderVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [資料行集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [索引物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   

@@ -3,7 +3,7 @@ title: "Open 方法 （ADO 資料錄） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc5b12e87123af4abc3b92535b87668b7c983f4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 627000fbf4b3b153895d64ba0bd7560654d63719
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-record"></a>Open 方法 （ADO 資料錄）
 開啟現有的[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件，或建立新的項目所代表**記錄**，例如檔案或目錄。  
@@ -51,7 +51,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *CreateOptions*  
  選擇性。 A [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md)值，指定是否應該開啟現有的檔案或目錄，或應建立新的檔案或目錄。 預設值是**adFailIfNotExists**。 如果設為預設值、 存取模式取自[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性。 這個參數已忽略時*來源*參數不包含 URL。  
   
- *選項。*  
+ *選項*  
  選擇性。 A [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md)值，指定開啟選項**記錄**。 預設值是**adOpenRecordUnspecified**。 這些值可以合併。  
   
  *UserName*  
@@ -81,7 +81,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ## <a name="applies-to"></a>適用於  
  [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Open 方法 （ADO 連接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open 方法 （ADO 資料錄集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open 方法 （ADO 資料流）](../../../ado/reference/ado-api/open-method-ado-stream.md)   

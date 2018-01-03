@@ -3,7 +3,7 @@ title: "NumericScale 和有效位數屬性範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a684c747e369281833e8346169ca187ddc387fa0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 37957a75306abb18de656aa6418f3bc08b8c4ab6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 程式碼範例： NumericScale 和有效位數屬性範例 (VB)
 這個範例會示範[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)和[精確度](../../../ado/reference/adox-api/precision-property-adox.md)屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)物件。 此程式碼會顯示其值**Order Details**資料表*Northwind*資料庫。  
@@ -80,7 +80,7 @@ End Sub
 ' EndNumericScalePrecVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [NumericScale 屬性 (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
  [Precision 屬性 (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)

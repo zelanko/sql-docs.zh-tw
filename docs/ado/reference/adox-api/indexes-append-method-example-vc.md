@@ -3,7 +3,7 @@ title: "索引附加方法範例 （VC + +） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 99a4d86338153c53b3585ec8b5ea845a8a68ab5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df286bd65e57ace0d56b89e209471cc56acb49ad
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indexes-append-method-example-vc"></a>索引附加方法範例 （VC + +）
 下列程式碼會示範如何建立新的索引。 索引是在資料表中的兩個資料行。  

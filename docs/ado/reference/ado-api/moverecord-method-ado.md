@@ -3,7 +3,7 @@ title: "MoveRecord 方法 (ADO) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6fdada4b43bb8a32d841cd07541b2355d68eb2f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d15de5adfe707e1fd32a3ce005d865d6bee16da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 方法 (ADO)
 移動所代表的實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)到另一個位置。  
@@ -51,7 +51,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *密碼*  
  選擇性。 A**字串**其中包含的密碼，如有需要驗證*UserName*。  
   
- *選項。*  
+ *選項*  
  選擇性。 A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)值，其預設值是**adMoveUnspecified**。 指定此方法的行為。  
   
  *非同步*  
@@ -78,7 +78,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ## <a name="applies-to"></a>適用於  
  [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Move 方法 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

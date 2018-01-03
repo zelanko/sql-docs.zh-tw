@@ -3,7 +3,7 @@ title: "連接到伺服器 (連接屬性頁面) 資料庫引擎 | Microsoft Docs
 ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-f1
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a77352d39a6842399dbcae8b1db0c380b41b505b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c0230b21293b7866aaf3367d856fe773151c770c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 連線到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 執行個體或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 執行個體時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/05/2017
 **全部重設**  
 將所有手動輸入的連接屬性值取代成預設值。  
   
-**連接**  
+**[連接]**  
 使用列出的值嘗試進行連接。  
   
 **選項。**  

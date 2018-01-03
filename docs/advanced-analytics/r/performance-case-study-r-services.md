@@ -2,9 +2,11 @@
 title: "R 服務-結果和資源的效能 |Microsoft 文件"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0b490c8f0d3795dae52fc575c1e231d39ff6e874
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0ee44976c109818292f7fa1587d6828e9f209fc1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R 服務的效能： 結果和資源
 
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/01/2017
 3. 各種修改已套用至資料表，以測試 SQL Server 功能，例如 page 壓縮，資料列壓縮，等單欄式資料存放區索引副本。
 4. 效能測量每個最佳化已套用之前和之後。
 
-| 資料表名稱| Description|
+| 資料表名稱| 描述|
 |------|------|
 | *airline* | 使用 `rxDataStep` 從原始 xdf 檔案轉換的資料|                          |
 | *airlineWithIntCol*   | 轉換成整數而不是字串的 *DayOfWeek*。 會一併新增 *rowNum* 資料行。|
@@ -95,7 +97,7 @@ metric time pct
 
 第一項測試會比較使用壓縮和單欄式資料表，以減少資料大小。
 
-| 資料表名稱            | 資料列     | 已保留   | 資料       | index_size | 未使用  | 節省 % (已保留) |
+| 資料表名稱            | 資料列     | 已保留   | data       | index_size | 未使用  | 節省 % (已保留) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -112,11 +114,11 @@ metric time pct
 
 | 資料表名稱            | 測試名稱       | numTasks | 平均時間 |
 |-----------------------|-----------------|----------|--------------|
-| *airlineWithIndex*    | NoCompression   | 1        | 5.6775       |
+| *airlineWithIndex*    | NoCompression   | @shouldalert        | 5.6775       |
 |                       | NoCompression-平行| 4        | 5.1775       |
-| *airlineWithPageComp* | PageCompression | 1        | 6.7875       |
+| *airlineWithPageComp* | PageCompression | @shouldalert        | 6.7875       |
 |                       | PageCompression-平行 | 4        | 5.3225       |
-| *airlineWithRowComp*  | RowCompression  | 1        | 6.1325       |
+| *airlineWithRowComp*  | RowCompression  | @shouldalert        | 6.1325       |
 |                       | RowCompression-平行  | 4        | 5.2375       |
 
 **結論**
@@ -135,14 +137,14 @@ metric time pct
 
 | 測試名稱 | 執行 \# | 經過時間 | 平均時間 |
 |-----------|--------|--------------|--------------|
-| IntCol    | 1      | 3.57 秒 |              |
+| IntCol    | @shouldalert      | 3.57 秒 |              |
 |           | 2      | 3.45 秒 |              |
 |           | 3      | 3.45 秒 |              |
 |           | 4      | 3.55 秒 |              |
 |           | 5      | 3.55 秒 |              |
 |           | 6      | 3.45 秒 |              |
 |           |        |              | 3.475        |
-|           | 1      | 3.45 秒 |              |
+|           | @shouldalert      | 3.45 秒 |              |
 |           | 2      | 3.53 秒 |              |
 |           | 3      | 3.63 秒 |              |
 |           | 4      | 3.49 秒 |              |
@@ -154,14 +156,14 @@ metric time pct
 
 | 測試名稱 | 執行 \# | 經過時間 | 平均時間 |
 |-----------|--------|--------------|--------------|
-| IntCol    | 1      | 3.89 秒 |              |
+| IntCol    | @shouldalert      | 3.89 秒 |              |
 |           | 2      | 4.15 秒 |              |
 |           | 3      | 3.77 秒 |              |
 |           | 4      | 5 秒    |              |
 |           | 5      | 3.92 秒 |              |
 |           | 6      | 3.8 秒  |              |
 |           |        |              | 3.91         |
-|           | 1      | 3.82 秒 |              |
+|           | @shouldalert      | 3.82 秒 |              |
 |           | 2      | 3.84 秒 |              |
 |           | 3      | 3.86 秒 |              |
 |           | 4      | 4.07 秒 |              |
@@ -238,9 +240,9 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 | 測試名稱     | Cube 參數 | numTasks | 平均時間 | 單一資料列的預測 (ArrDelay_Pred) |
 |---------------|----------------|----------|--------------|---------------------------------|
-| CubeArgEffect | `cube = F`     | 1        | 91.0725      | 9.959204                        |
+| CubeArgEffect | `cube = F`     | @shouldalert        | 91.0725      | 9.959204                        |
 |               |                | 4        | 44.09        | 9.959204                        |
-|               | `cube = T`     | 1        | 21.1125      | 9.959204                        |
+|               | `cube = T`     | @shouldalert        | 21.1125      | 9.959204                        |
 |               |                | 4        | 8.08         | 9.959204                        |
 
 **結論**
@@ -253,7 +255,7 @@ Cube 參數引數使用清楚可以改善效能。
 
 | 測試名稱       | maxDepth | 平均時間 |
 |-----------------|----------|--------------|
-| TreeDepthEffect | 1        | 10.1975      |
+| TreeDepthEffect | @shouldalert        | 10.1975      |
 |                 | 2        | 13.2575      |
 |                 | 4        | 19.27        |
 |                 | 8        | 45.5775      |
@@ -288,7 +290,7 @@ RevoScaleR 和 MicrosoftML 封裝用來定型中複雜的 R 解決方案，牽�
 
 - 記憶體中資料表
 - ssNoVersion
-- 資源管理員
+- [資源管理員]
 
 若要評估軟體 NUMA 的 R 指令碼執行的效果，資料科學團隊會測試在 Azure 虛擬機器與實體的 20 個核心方案。 四個軟體 NUMA 節點的每個節點包含五個核心的自動建立這些實體的核心上。
 

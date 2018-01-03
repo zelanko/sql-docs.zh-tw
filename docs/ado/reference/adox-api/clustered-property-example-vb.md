@@ -3,7 +3,7 @@ title: "叢集屬性範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d5259a57c0f53d0505e1bd577d834c43db343bd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: caa7d09e294292e1b70e1579f650c4e45095cdc3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 的屬性範例 (VB)
 這個範例會示範[Clustered](../../../ado/reference/adox-api/clustered-property-adox.md)屬性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 請注意，Microsoft Jet 資料庫不支援叢集的索引，因此這個範例會傳回**False**如**Clustered**屬性中的所有索引**Northwind**資料庫。  
@@ -76,7 +76,7 @@ End Sub
 ' EndClusteredVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Clustered 的屬性 (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [索引物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   

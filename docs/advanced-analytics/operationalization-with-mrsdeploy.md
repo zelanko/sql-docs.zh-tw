@@ -2,10 +2,10 @@
 title: "部署及使用分析使用 mrsdeploy |Microsoft 文件"
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82ad5ef341edd218c950adf83641825d465c24a4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 925769b0bb8e0466f4dd690664463b042c5e6b50
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>部署和使用使用 mrsdeploy 分析
 

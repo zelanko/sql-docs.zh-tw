@@ -3,7 +3,7 @@ title: "外部工具對話方塊 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d60bec587daeae84382166194d75db22b0a38a61
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd3875e3c4dfe69fa2428ca8c348648ebd97e2a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="external-tools-dialog-box"></a>外部工具對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 請利用 [外部工具] 對話方塊，將 SQLCMD 或 [記事本] 之類的外部工具新增至 [工具] 功能表。 新增外部工具可讓您在 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 環境中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 此外，某些工具的輸出可以顯示在 [輸出] 視窗中。 [外部工具] 對話方塊可以透過 [工具] 功能表使用。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 **[加入]**  
 清除文字方塊，讓您指定新的工具。  
   
-**Delete**  
+**刪除**  
 從 [功能表內容] 清單及 [工具] 功能表中移除工具或命令。  
   
 **Title**  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="example"></a>範例  
 在 [外部工具] 對話方塊中輸入下列值，將會建立標示為 DAC 的功能表項目；在選取該功能表項目時，會開啟命令提示字元，並使用專用管理員連接執行 **sqlcmd** 公用程式。  
   
-|方塊|Value|  
+|方塊|ReplTest1|  
 |-------|---------|  
 |**Title**|DAC|  
 |**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath_md.md)]Tools\Binn\SQLCMD.exe|  

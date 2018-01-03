@@ -3,7 +3,7 @@ title: "維度物件 (ADO MD) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b8b166484928abbeba70934d5b597c7e27d41f1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aeab1d9f91ac80c78bd5c3f546d26ff1c868f3cd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dimension-object-ado-md"></a>維度物件 (ADO MD)
 代表其中一個多維度 cube，其中包含一或多個成員階層的維度。  
@@ -42,12 +42,12 @@ ms.lasthandoff: 11/17/2017
   
  **屬性**集合包含提供者提供的屬性。 下表列出可供使用的屬性。 實際的屬性清單可能與不同的提供者實作而定。 請參閱您的提供者，如需更完整清單可用內容的文件。  
   
-|名稱|Description|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |CatalogName|此 cube 所屬的目錄的名稱。|  
 |CubeName|Cube 的名稱。|  
 |DefaultHierarchy|預設階層的唯一名稱。|  
-|Description|Cube 有意義的描述。|  
+|描述|Cube 有意義的描述。|  
 |DimensionCaption|標籤或標題與維度相關聯。|  
 |DimensionCardinality|在維度中的成員數目。|  
 |DimensionGUID|維度的 GUID。|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CubeDef 範例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [CubeDef 物件 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [維度集合 (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   

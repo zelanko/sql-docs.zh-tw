@@ -3,7 +3,7 @@ title: "DataTypeEnum |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a50a4efc0c84e3d18fad287ba31a0ebaf0705dd0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70e44dc6ea6eb3622b43f241827ad5cae7a7df44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 指定的資料型別[欄位](../../../ado/reference/ado-api/field-object.md)，[參數](../../../ado/reference/ado-api/parameter-object.md)，或[屬性](../../../ado/reference/ado-api/property-object-ado.md)。 下表描述資料行中的括號會顯示對應的 OLE DB 類型指標。  
   
-|常數|值|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|旗標值一律會結合其他的資料類型常數，表示其他資料類型的陣列。 不適用於 ADOX。|  
 |**adBigInt**|20|指出八位元組帶正負號的整數 (DBTYPE_I8)。|  

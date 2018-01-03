@@ -3,7 +3,7 @@ title: "索引 - 索引鍵對話方塊 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a246ec54d0b0cd439bbdbd8f81acb6ad3be7d9c4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1fa2fa79f818c344f9228dffe500fbe96236954b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>索引 - 索引鍵對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此對話方塊可建立或修改索引、主索引鍵和唯一鍵。 若要存取此對話方塊，請開啟具有索引或索引鍵之資料表的資料表定義，在資料表定義方格上按一下滑鼠右鍵，再按一下 [索引/索引鍵]。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
 **選取的主/唯一索引鍵或索引**  
 列出現有的主索引鍵或唯一鍵和索引。 選取一項，以便在右邊方格中顯示其屬性。 如果清單是空的，表示此資料表沒有任何定義的項目。  
   
-**加入**  
+**[加入]**  
 建立新的主索引鍵、唯一鍵或索引。  
   
 **刪除**  

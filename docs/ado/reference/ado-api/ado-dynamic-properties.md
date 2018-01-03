@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55158776c72f16a8988edb0e8a552f64672935e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98b2e7a1c4cbd7063379249b9d7fb0ac3264a56f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-dynamic-properties"></a>ADO 動態屬性
 動態屬性可以加入至[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合[連接](../../../ado/reference/ado-api/connection-object-ado.md)，[命令](../../../ado/reference/ado-api/command-object-ado.md)，或[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 這些屬性的來源是具備資料提供者，例如[OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)，或服務提供者，例如[Microsoft OLE DB 的資料指標服務](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)。 請參閱適當的資料提供者或服務提供者文件，如需有關特定的動態屬性。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |[唯一資料表、 唯一的結構描述、 唯一的目錄](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**唯一資料表**指定基底資料表的更新、 插入和刪除允許的名稱。<br /><br /> **唯一的結構描述**指定結構描述或資料表的擁有者的名稱。<br /><br /> **唯一的目錄**指定的目錄或資料庫包含之資料表的名稱。|  
 |[更新的重新同步處理](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|指定是否**UpdateBatch**方法後面的隱含**重新同步處理**方法作業，而且如果是，該作業的範圍。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 列舉常數](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

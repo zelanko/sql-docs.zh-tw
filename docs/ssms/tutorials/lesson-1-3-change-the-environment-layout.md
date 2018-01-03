@@ -3,7 +3,7 @@ title: "變更環境配置 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec585601316887d3968dc70795a09053e54d1868
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aeb1e5f0f66a98425ab7600636510e82cfdc16c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>課程 1-3 - 變更環境配置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的各個元件會競相爭取使用畫面空間。 若要有更多空間，您可以關閉、隱藏或移動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 元件。 這一頁的各個練習會將元件移到不同的位置。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  以滑鼠右鍵按一下 [物件總管] 的標題列，請注意下列功能表選項：  
   
-    -   Float  
+    -   float  
   
     -   停駐  
   

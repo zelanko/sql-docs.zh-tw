@@ -3,7 +3,7 @@ title: "建立專案 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a95d8c7ecf359e6fc10939759d05d816d91efc5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13ef5a52fff423b9c4a4035b2751017a30e86da9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-project"></a>建立專案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以在現有解決方案內，建立一或多個專案。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 12/05/2017
     **加入至原始檔控制**  
     如果選取此核取方塊，當您按一下 [確定] 時，原始檔控制應用程式就會開啟。 填妥原始檔控制應用程式所需的資訊之後，才能繼續。 您必須有安裝原始檔控制用戶端應用程式，才能使用此選項。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 您可以設定指令碼專案的名稱，但資料夾名稱由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 建立，無法變更。 您可以使用 [新增專案] 對話方塊，為一組常用資料夾設定磁碟和路徑規格。 在方案總管中，以滑鼠右鍵按一下方案，然後按一下 [新增]。 指令碼專案資料夾的預設位置是 C:\Documents and Settings\\<使用者名>\My Documents\SQL Server Management Studio\Projects\\。  
   

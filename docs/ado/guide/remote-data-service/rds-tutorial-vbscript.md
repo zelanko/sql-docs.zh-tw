@@ -3,7 +3,7 @@ title: "RDS 教學課程 (VBScript) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/14/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a571546fe81ce0b49efa41ad5b09a7b71b1bad3d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 049a7b67ee42135a71d76cc000e624a527e1a673
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS 教學課程 (VBScript)
 這是 RDS 教學課程中，以撰寫的 Microsoft Visual Basic Scripting Edition。 如需本教學課程的用途的說明，請參閱[RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)。  
@@ -142,5 +142,5 @@ End Sub
   
  **這是教學課程結束時。**  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   

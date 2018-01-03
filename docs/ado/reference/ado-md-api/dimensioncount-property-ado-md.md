@@ -3,7 +3,7 @@ title: "DimensionCount 屬性 (ADO MD) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8407c771dec2ed7b499d3804755048a8121d852f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: de6c5dd67f210ebbc312b6c9b03198e18887dfe2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dimensioncount-property-ado-md"></a>DimensionCount 屬性 (ADO MD)
 表示維度的數目上[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)。  
@@ -37,6 +37,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="applies-to"></a>適用於  
  [Axis 物件 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [軸範例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Dimension 物件 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

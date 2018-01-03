@@ -3,7 +3,7 @@ title: "資料表集合屬性、 方法和事件 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ca4a0b39036b97c3eb12e836ee3655ef9288a81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 144612a116b76c742de4fb871ff93374c59ab668
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tables-collection-properties-methods-and-events"></a>資料表集合屬性、 方法和事件
 ## <a name="properties"></a>屬性  
@@ -40,5 +40,5 @@ ms.lasthandoff: 11/17/2017
 ## <a name="events"></a>事件  
  無。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Tables 集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
