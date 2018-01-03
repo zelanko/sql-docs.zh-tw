@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 984ba3de2b9071032bb34a12efff80396f01d095
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7381b239b87d4979545504e01f552a9be21fd694
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="role-of-the-driver"></a>驅動程式的角色
 驅動程式會檢查所有錯誤和警告不會檢查驅動程式管理員，並排序它所產生的狀態記錄。 資料庫連接 (ODBC 2。*x*驅動程式不會排序狀態記錄。)這在資料截斷、 資料轉換、 語法和某些狀態轉換包含錯誤和警告。 錯誤和警告部分核取驅動程式管理員，可能也會檢查驅動程式。 例如，雖然驅動程式管理員會檢查是否值*作業*中**SQLSetPos**是合法的驅動程式必須檢查它是否支援。  

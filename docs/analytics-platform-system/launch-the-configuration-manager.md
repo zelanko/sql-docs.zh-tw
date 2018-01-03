@@ -3,10 +3,10 @@ title: "啟動 Configuration Manager (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
 caps.latest.revision: "22"
-ms.openlocfilehash: 98ae90d198b4a1b68e1b72305721611a8efa30ff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ead82cd226a585d261eac2779cacb72cd5edbb6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="launch-the-configuration-manager"></a>啟動 Configuration Manager
 本主題提供指示來啟動**Configuration Manager** Analytics Platform System 應用裝置。  
   
 ## <a name="before-you-begin"></a>開始之前  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
 Analytics Platform System**Configuration Manager**只能應用裝置的網域系統管理員身分執行。 若要執行這項工具，您需要應用裝置的網域系統管理員密碼。 若要建立 AP 的其他系統管理員，請參閱[建立 AP 網域系統管理員 &#40;APS &#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>啟動組態管理員工具  
@@ -53,6 +53,6 @@ Analytics Platform System**Configuration Manager**只能應用裝置的網域系
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [使用系統管理員主控台 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

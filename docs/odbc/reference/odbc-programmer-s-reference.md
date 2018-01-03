@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3fc868b66f6322d9769176671c8df2913d58150e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 程式設計人員 &#39; s 參考
 *ODBC 程式設計人員參考*包含下列各節。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  會使用下列的印刷慣例。  
   
-|格式|用於|  
+|[格式]|用於|  
 |------------|--------------|  
 |選取 * 從|大寫字母表示 SQL 陳述式、 巨集名稱和作業系統命令層級使用的詞彙。|  
 |`RETCODE SQLFetch(hdbc)`|等寬字型用於命令列範例和程式碼。|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 |**SQLEndTran**|粗體類型表示語法必須完全如下所示，包括函式名稱輸入。|  
 |&#124;|分隔號會分隔語法列中的兩個互斥的選項。|  
 |...|省略符號表示引數可以重複多次。|  
-|執行個體時提供 SQL Server 登入。 。 執行個體時提供 SQL Server 登入。|三個點的資料行指出接續前一個程式碼的行。|  
+|執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。|三個點的資料行指出接續前一個程式碼的行。|  
   
 ## <a name="about-the-code-examples"></a>關於程式碼範例  
  本指南中的程式碼範例是僅供說明用途設計的。 已寫入主要是為了示範 ODBC 原則，因為效率有時已設定擱置在一旁為了清楚起見。 此外，程式碼的整個區段有時已省略為了清楚起見。 這些包括非 ODBC 函數 （名稱 [SQL] 不會啟動這些函式） 和大部分的錯誤處理的定義。  

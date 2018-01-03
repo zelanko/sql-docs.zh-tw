@@ -3,10 +3,10 @@ title: "T-SQL 陳述式 Analytics Platform System Parallel Data Warehouse |Micro
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -19,11 +19,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 89f06f26e76f8685a09e7872437c8bec7ac530c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 54613765219912b7ad0db5d4dfd36478f6e5e3b3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="t-sql-topics"></a>T-SQL 主題
 TRANSACT-SQL (T-SQL) 陳述式的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
@@ -118,7 +118,7 @@ TRANSACT-SQL (T-SQL) 陳述式的分析平台 System (APS) SQL Server 平行資�
 * [卸除使用者](../t-sql/statements/drop-user-transact-sql.md)
 * [OPEN MASTER KEY](../t-sql/statements/open-master-key-transact-sql.md)
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 如需詳細參考資訊，請參閱[T-SQL 語言項目](tsql-language-elements.md)和[T-SQL 系統檢視表](tsql-system-views.md)。
 
 <!--Image references-->

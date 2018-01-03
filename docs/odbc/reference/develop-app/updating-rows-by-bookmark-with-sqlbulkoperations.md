@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c626472dd121d39ae01ac90824a7977587401944
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3c3525f78ece4e5831cc4e84e0d8041ceacc6a05
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新資料列的書籤
 當更新的資料列的書籤， **SQLBulkOperations**可更新之資料表的一個或多個資料列的資料來源。 資料列識別的繫結的書籤資料行中的書籤。 資料列會更新每個繫結資料行 （除非資料行的長度/指標緩衝區中的值是 SQL_COLUMN_IGNORE） 使用應用程式緩衝區中的資料。 未繫結的資料行不會更新。  

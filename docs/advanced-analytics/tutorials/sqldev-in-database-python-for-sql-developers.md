@@ -2,12 +2,14 @@
 title: "資料庫內 Python 分析的 SQL 開發人員 |Microsoft 文件"
 ms.custom: 
 ms.date: 10/13/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2017
 dev_langs:
 - Python
@@ -17,11 +19,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 1f6a1279268668062c83a151b6e7235b5c873325
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c6e59f8e3e1b59b9225a95dbe787698dd5bf4f9e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>在資料庫 Python 分析的 SQL 開發人員
 
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="requirements"></a>需求
 
-### <a name="prerequisites"></a>必要條件
+### <a name="prerequisites"></a>Prerequisites
 
 + 機器學習服務與啟用的 Python 安裝 SQL Server 2017 的執行個體。 如需詳細資訊，請參閱[設定 SQL Server 機器學習服務使用 Python](../python/setup-python-machine-learning-services.md)。
 + 您用於本逐步解說的登入必須具有權限，可以建立資料庫和其他物件、上傳資料、選取資料，以及執行預存程序。

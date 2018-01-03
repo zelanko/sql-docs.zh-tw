@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46eb86009bf940857788425afd4781ca79ab3686
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|資料庫名稱。|  
 |**db_size**|**nvarchar(13)**|資料庫的總大小。|  
@@ -63,13 +63,13 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
  如果*名稱*指定，則會顯示指定之資料庫的檔案配置的其他結果集。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|邏輯檔案名稱。|  
 |**fileid**|**smallint**|檔案識別碼。|  
 |**檔名**|**nchar(260)**|作業系統檔案名稱 (實體檔案名稱)。|  
-|**檔案群組**|**nvarchar （128)**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
-|**大小**|**nvarchar(18)**|檔案大小 (以 MB 為單位)。|  
+|**檔案群組**|**nvarchar(128)**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
+|**size**|**nvarchar(18)**|檔案大小 (以 MB 為單位)。|  
 |**maxsize**|**nvarchar(18)**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
 |**成長**|**nvarchar(18)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。|  
 |**使用方式**|**varchar(9)**|檔案的使用方式。 對於資料檔中，這個值是**'僅限資料'**和記錄檔的值是**僅限記錄'**。|  
@@ -87,14 +87,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ### <a name="a-returning-information-about-a-single-database"></a>A. 傳回單一資料庫的相關資訊  
  下列範例會顯示 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的相關資訊。  
   
-```tsql  
+```sql  
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
 ### <a name="b-returning-information-about-all-databases"></a>B. 傳回所有資料庫的相關資訊  
  下列範例會顯示執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器之所有資料庫的相關資訊。  
   
-```tsql  
+```sql  
 EXEC sp_helpdb;  
 GO  
 ```  

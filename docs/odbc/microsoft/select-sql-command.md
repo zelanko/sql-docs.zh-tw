@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f9b8b9b4b5b69d257dccafc2567ebb59eab5bba2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select---sql-command"></a>選取的 SQL 命令
 從一或多個資料表中擷取資料。  
@@ -285,7 +285,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>驅動程式註解  
  當您的應用程式會將 ODBC SQL 陳述式選取傳送至資料來源時，Visual FoxPro ODBC 驅動程式會將命令轉換 Visual FoxPro 選取命令，而不需轉譯除非命令包含 ODBC 逸出序列。 ODBC 逸出序列內的項目會轉換成 Visual FoxPro 語法。 如需有關使用 ODBC 逸出序列，請參閱[時間和日期函數](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)和*Microsoft ODBC 程式設計人員參考*，請參閱[ODBC 中的逸出序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立資料表-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [插入-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   

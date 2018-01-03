@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e2127d5b33c5ea4bf2a0c96c5e020322aec39db
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b2a9fd1565d0980e5af77d3cded499ce1f0091e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="auto-commit-mode"></a>自動認可模式
 *在自動認可模式下，*每個資料庫作業若未執行時未認可的交易。 此模式是適用於單一 SQL 陳述式所組成的許多實際的交易。 它不需要分隔或指定這些交易完成。 在資料庫中沒有交易支援，自動認可模式是唯一支援的模式。 在這類資料庫中，陳述式時，會認可它們執行而沒有任何方法，將其復原;它們因此一律會在自動認可模式。  

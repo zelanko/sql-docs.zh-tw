@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e693a799c737baf8a11064c5bd50c2618cd1e29a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0eb3e03c3fd2cad60b8f4a0e6c65aaaebbda03bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rowset-size"></a>資料列集大小
 若要使用哪一個資料列集大小取決於應用程式。 螢幕型應用程式通常會遵循兩種策略的其中一個。 第一個方法是將資料列集大小設定為顯示在畫面上的資料列數目如果使用者調整螢幕，應用程式據以變更資料列集大小。 第二個是資料列集大小設定為較大數目，例如 100，這會減少呼叫到資料來源數目。 應用程式會集中的資料列時可能在本機捲動，然後只在它捲動外部資料列集時，才會擷取新資料列。  

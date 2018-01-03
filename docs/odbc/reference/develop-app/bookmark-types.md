@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14ab851bb7878ec94f8044a4f7ef340754eff46c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8ae130125c99e6ff87fd3b2d6fa8563c75f7e6ba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bookmark-types"></a>書籤的型別
 在 ODBC 3 的所有書籤*.x*可變長度的書籤。 這可讓主索引鍵或唯一索引相關聯的資料表來作為書籤。 書籤也可以是 32 位元值，所使用的 ODBC 2。*x*。 若要指定書籤使用與資料指標，而 ODBC 3*.x*應用程式設定 SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARK 陳述式屬性。 會自動使用可變長度的書籤。  

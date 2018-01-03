@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ca3a769ca983cae0cb7a2bc629c366b184b067e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 620965b524b6d76d1f1d0a3d7adaf84c05c4540c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-batches"></a>執行批次
 應用程式執行的陳述式批次之前，它應該先檢查是否支援這些功能。 若要這樣做，應用程式會呼叫**SQLGetInfo** SQL_BATCH_SUPPORT、 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 選項。 第一個選項就會傳回資料列計數 – 產生以及支援產生集 – 陳述式中明確的批次和程序，後者的兩個選項中設定的可用性相關的資料列計數和結果傳回的資訊時的結果是否化執行。  

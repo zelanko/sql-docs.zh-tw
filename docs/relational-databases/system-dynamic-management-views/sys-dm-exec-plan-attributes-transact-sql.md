@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3346d20f183810891615615c493d1d39c3339658
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |屬性|**varchar （128)**|與這份計畫相關聯的屬性名稱。 這一個正下方的資料表會列出可能的屬性、 其資料類型，以及它們的描述。|  
 |value|**sql_variant**|與這份計畫相關聯的屬性值。|  
@@ -57,7 +57,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 從上述資料表中，**屬性**可以是下列值：
 
-|Attribute|資料類型|Description|  
+|attribute|資料類型|描述|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|指出編譯計畫所用的選項值。|  
 |objectid|**int**|用來查閱快取中物件的主要索引鍵之一。 這是的物件識別碼儲存在[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)資料庫物件 （程序、 檢視、 觸發程序等等）。 若計畫屬於「特定」或「準備」類型，這是批次文字的內部雜湊。|  
@@ -96,9 +96,9 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-set-options"></a>評估 Set 選項  
  若要翻譯中傳回的值**set_options**編譯計畫所用的選項，減去的值從**set_options**最大的可能值開始，直到您的值到達 0。 每個減掉的值即為查詢計劃中使用的選項。 例如，如果中的值**set_options**為 251，編譯計畫所使用的選項為 ANSI_NULL_DFLT_ON (128)、 QUOTED_IDENTIFIER (64)、 ANSI_NULLS(32)、 ANSI_WARNINGS (16)、 CONCAT_NULL_YIELDS_NULL (8)、 Parallel plan （2）和 ANSI_PADDING (1)。  
   
-|選項|值|  
+|選項|ReplTest1|  
 |------------|-----------|  
-|ANSI_PADDING|1|  
+|ANSI_PADDING|@shouldalert|  
 |Parallel Plan|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
@@ -124,10 +124,10 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-cursor-options"></a>評估資料指標選項  
  若要翻譯中傳回的值**required_cursor_options**和**acceptable_cursor_options**減去編譯計畫所用的選項，從資料行值，從開始值最大可能的值，直到您到達 0。 每個減掉的值即為查詢計劃中使用的資料指標選項。  
   
-|選項|值|  
+|選項|ReplTest1|  
 |------------|-----------|  
 |無|0|  
-|INSENSITIVE|1|  
+|INSENSITIVE|@shouldalert|  
 |SCROLL|2|  
 |READ ONLY|4|  
 |FOR UPDATE|8|  
@@ -148,7 +148,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. 傳回特定計畫的屬性  
  下列範例會傳回指定計畫的所有計畫屬性。 首先會查詢 `sys.dm_exec_cached_plans` 動態管理檢視，取得指定計畫的計畫控制代碼。 在第二個查詢中，再用第一個查詢的計畫控制代碼值取代 `<plan_handle>`。  
   
-```tsql  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -160,7 +160,7 @@ GO
 ### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>B. 傳回編譯計畫的 SET 選項以及快取計畫的 SQL 控制代碼  
  下列範例會傳回值，代表編譯每個計畫所用的選項。 此外，也會傳回所有快取計畫的 SQL 控制代碼。  
   
-```tsql  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   
@@ -171,7 +171,7 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   

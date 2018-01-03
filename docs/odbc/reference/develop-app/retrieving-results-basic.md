@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54a310e3e2f13431c0963f513fb9d5c4ec4e226b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a0762d7f70becf8c6bdbd86bee524bc964676f59
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-results-basic"></a>擷取結果 （基本）
 A*結果集*是一組符合特定準則的資料來源上的資料列。 它是概念性的資料表，從查詢結果，且應用程式可使用以表格形式。 **選取**陳述式、 目錄函數和一些程序建立結果集。 在下列範例中，第一個 SQL 陳述式會建立包含所有資料列和 「 訂單 」 資料表中的所有資料行的結果集和第二個 SQL 陳述式會建立包含訂單、 銷售人員，以及狀態資料行 Orders 資料表中資料列的結果集中的狀態為開啟：  

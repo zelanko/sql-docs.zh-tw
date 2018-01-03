@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 02/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod_service: drivers
+ms.component: php
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abf75fb674ea8da86c84c3605dadef61db8b3913
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4dcf9e36eb3928bc606053bdfda441520155864a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="php-driver-for-sql-server-support-for-localdb"></a>PHP Driver for SQL Server Support for LocalDB (PHP Driver for SQL Server 對 LocalDB 的支援)
 
@@ -81,6 +83,6 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
 
 您可以下載從 LocalDB [SQL Server 2012 功能套件頁面](http://go.microsoft.com/fwlink/?LinkID=236805)，或從[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]Express edition。 如果您將使用 sqlcmd.exe 來修改 LocalDB 執行個體中的資料，您必須從 sqlcmd [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]，您可以從命令列公用程式下載中取得[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]功能套件頁面。
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
 
 [連接到伺服器](../../connect/php/connecting-to-the-server.md)

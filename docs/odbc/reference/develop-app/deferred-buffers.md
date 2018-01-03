@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3af1222c7404a5b05246026edbbc37149780de8c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6cbe554b72bf971e6b589b936cd6901ef5fa59a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deferred-buffers"></a>延後的緩衝區
 A*延後的緩衝區*是在稍後使用其值的其中一個*之後*函式呼叫中指定。 例如， **SQLBindParameter**來建立關聯，或*繫結，*資料緩衝區中的 SQL 陳述式搭配參數。 應用程式指定的參數數目，並傳遞位址、 位元組長度和類型的緩衝區。 驅動程式會將此資訊儲存，但不會檢查緩衝區的內容。 稍後，當應用程式執行陳述式時，驅動程式擷取的資訊並使用它來擷取參數資料，並將它傳送至資料來源。 因此，會延後的輸入緩衝區中的資料。 因為延後的緩衝區是一個函式中指定，而且在另一個使用，所以應用程式的程式設計錯誤時，驅動程式仍需要它存在; 釋放延後的緩衝區如需詳細資訊，請參閱[Allocating 和釋放緩衝區](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)稍後這一節。  

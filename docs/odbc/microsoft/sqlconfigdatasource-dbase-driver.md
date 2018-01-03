@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17b90ca3ab230aadaa764b58f3399172686502af
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8354ed96f68d1471a2deb275506d4d45d4c8f3cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (dBASE 驅動程式)
 > [!NOTE]  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
   
  **SQLConfigDataSource**函式，用於新增、 修改或刪除資料來源以動態方式使用下列關鍵字。  
   
-|關鍵字|Description|  
+|關鍵字|描述|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|欄位排序順序。<br /><br /> 序列可以是： ASCII （預設值） 或國際標準。<br /><br /> 這會設定為相同的選項**定序順序**安裝程式 對話方塊中。|  
 |DEFAULTDIR|要在目錄的路徑規格。|  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 861fa1dead42c4bf667b80417c29259f3c3b4aaf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8a4b3c0cca843e576fd200b6803db8f1bac5adcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-functions"></a>數值函數
 下表描述 ODBC 純量函式集合中包含的數值函式。 藉由呼叫**SQLGetInfo**與*資訊類型*的 SQL_NUMERIC_FUNCTIONS，應用程式可以判斷驅動程式支援哪些數值的函式。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
  在 ODBC 3.0 以配合 SQL 92 已加入 CURRENT_DATE、 CURRENT_TIME 和 CURRENT_TIMESTAMP 純量函數。  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |**ABS (** *則 numeric_exp 就* **)** (ODBC 1.0)|傳回數值的絕對值*則 numeric_exp 就*。|  
 |**ACOS (** *float_exp* **)** (ODBC 1.0)|傳回的反餘弦*float_exp*為一角度，以弧度表示。|  

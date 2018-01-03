@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e8bd2822a1892c967a23e3cdf62753f43952c1c7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4602d02a25740ce296a059a0f3f1fd82a9a3db47
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-and-freeing-buffers"></a>配置及釋放緩衝區
 所有緩衝區配置及釋放應用程式。 如果緩衝區未延後，它必須只存在於呼叫的函式的持續時間。 例如， **SQLGetInfo**傳回中所指向之緩衝區的特定選項相關聯的值*InfoValuePtr*引數。 可以呼叫之後立即釋放此緩衝區**SQLGetInfo**，如下列程式碼範例所示：  

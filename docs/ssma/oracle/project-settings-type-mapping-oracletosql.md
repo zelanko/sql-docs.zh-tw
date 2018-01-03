@@ -1,7 +1,7 @@
 ---
 title: "專案設定 （型別對應） (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 60a996ce7e67c418e511e88306224818286541c2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4be0d12ce3067f46c934cfa7e053ddd1779ac9f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>專案設定 （型別對應） (OracleToSQL)
 類型對應 頁面**專案設定**對話方塊包含自訂 SSMA 如何轉換到 Oracle 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
 請參閱 Oracle 型別對應的預設值 SSMA 的下一個區段中的資料表。  
   
-**加入**  
+**[加入]**  
 按一下以新增的資料類型對應清單。  
   
 **編輯**  
@@ -68,7 +68,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|int|  
+|binary_integer|ssNoversion|  
 |blob|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
@@ -76,13 +76,13 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |Clob|varchar(max)|  
-|date|datetime2 [0]|  
+|日期|datetime2 [0]|  
 |dec|dec [38] [0]|  
-|decimal|float [53]|  
+|Decimal|float [53]|  
 |雙精度|float [53]|  
-|float|float [53]|  
-|int|int|  
-|integer|int|  
+|FLOAT|float [53]|  
+|ssNoversion|ssNoversion|  
+|integer|ssNoversion|  
 |long|varchar(max)|  
 |長資料列|varbinary(max)|  
 |長資料列 [\*..8000]<sup>*</sup>|varbinary [*]|  
@@ -92,22 +92,22 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |國家字元集|nvarchar(max)|  
 |不同的國家字元集<sup>**</sup>|nvarchar(max)|  
 |不同的國家字元集<sup>*</sup>|nvarchar(max)|  
-|nchar|nvarchar(max)|  
+|NCHAR|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
 |number|float [53]|  
-|numeric|float [53]|  
+|NUMERIC|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |未經處理的|varbinary(max)|  
-|real|float [53]|  
-|Rowid|uniqueidentifier|  
-|Signtype|smallint|  
-|smallint|smallint|  
+|REAL|float [53]|  
+|Rowid|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |string|varchar(max)|  
-|timestamp|datetime2|  
+|TIMESTAMP|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |時區的時間戳記|datetimeoffset|  
-|Urowid|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
 |Xmltype|xml|  
@@ -132,19 +132,19 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |可變長度字元 [*..\*]|varchar [*]|  
 |字元 [*..\*]|char [*]|  
 |Clob|varchar(max)|  
-|date|datetime2 [0]|  
+|日期|datetime2 [0]|  
 |dec|dec [38] [0]|  
 |dec [*..\*]|dec [*] [0]|  
 |dec [*..\*][\*..\*]|dec[*][\*]|  
-|decimal|decimal [38] [0]|  
+|Decimal|decimal [38] [0]|  
 |小數 [*..\*]|decimal [*] [0]|  
 |小數 [*..\*][\*..\*]|decimal [*] [\*]|  
 |雙精度|float [53]|  
-|float|float [53]|  
+|FLOAT|float [53]|  
 |float [*..53]|float [*]|  
 |float [54..*]|float [53]|  
-|int|int|  
-|integer|int|  
+|ssNoversion|ssNoversion|  
+|integer|ssNoversion|  
 |long|varchar(max)|  
 |長資料列|varbinary(max)|  
 |長資料列 [*..8000]|varbinary [*]|  
@@ -152,34 +152,34 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |long varchar|varchar(max)|  
 |長度 [*..8000]|varchar [*]|  
 |長度 [8001..*]|varchar(max)|  
-|國家 （地區) 的 char|nchar|  
+|國家 （地區) 的 char|NCHAR|  
 |不同國家 （地區) 的 char [*..\*]|nvarchar [*]|  
 |國家 （地區) 的 char [*..\*]|nchar [*]|  
-|國家字元集|nchar|  
+|國家字元集|NCHAR|  
 |不同的國家字元集 [*..\*]|nvarchar [*]|  
 |國家字元集 [*..\*]|nchar [*]|  
-|nchar|nchar|  
+|NCHAR|NCHAR|  
 |nchar [*]|nchar [*]|  
 |Nclob|nvarchar(max)|  
 |number|float [53]|  
 |數字 [*..\*]|數字 [*]|  
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |數字 [*..\*]|數字 [*]|  
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |nvarchar2 [*..\*]|nvarchar [*]|  
 |原始 [*..\*]|varbinary [*]|  
-|real|float [53]|  
-|Rowid|uniqueidentifier|  
-|smallint|smallint|  
-|timestamp|datetime2|  
+|REAL|float [53]|  
+|Rowid|UNIQUEIDENTIFIER|  
+|SMALLINT|SMALLINT|  
+|TIMESTAMP|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |使用本地時區的時間戳記 [*..\*]|datetimeoffset [*]|  
 |時區的時間戳記|datetimeoffset|  
 |時區的時間戳記 [*..\*]|datetimeoffset [*]|  
 |時間戳記 [*..\*]|datetime2 [*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*..\*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*..\*]|UNIQUEIDENTIFIER|  
 |varchar [*..\*]|varchar [*]|  
 |varchar2 [*..\*]|varchar [*]|  
 |Xmltype|xml|  
@@ -192,7 +192,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|int|  
+|binary_interger|ssNoversion|  
 |Blob|varbinary(max)|  
 |布林|bit|  
 |Char|char|  
@@ -206,35 +206,35 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |字元 [*..8000]|char [*]|  
 |字元 [8001..*]|varchar(max)|  
 |Clob|varchar(max)|  
-|date|datetime2 [0]|  
+|日期|datetime2 [0]|  
 |dec|dec [38] [0]|  
 |dec [*..\*]|dec [*] [0]|  
 |dec [*..\*][\*..\*]|dec[*][\*]|  
-|decimal|decimal [38] [0]|  
+|Decimal|decimal [38] [0]|  
 |小數 [*..\*]|decimal [*] [0]|  
 |小數 [*..\*][\*..\*]|decimal [*] [\*]|  
 |雙精度|float [53]|  
-|Float|float [53]|  
+|float|float [53]|  
 |float [*..53]|float [*]|  
 |float [54..*]|float [53]|  
-|int|int|  
-|Integer|int|  
+|int|ssNoversion|  
+|Integer|ssNoversion|  
 |整數 [*..\*]|數字 [*] [0]|  
 |長整數|varchar(max)|  
 |長資料列|varbinary(max)|  
 |長資料列 [*..8000]|varbinary [*]|  
 |長資料列 [8001..*]|varbinary(max)|  
-|國家 （地區) 的 char|nchar|  
+|國家 （地區) 的 char|NCHAR|  
 |不同國家 （地區) 的 char [*..4000]|nvarchar [*]|  
 |不同國家 （地區) 的 char [4001..*]|nvarchar(max)|  
 |國家 （地區) 的 char [*..4000]|nchar [*]|  
 |國家 （地區) 的 char [4001..*]|nvarchar(max)|  
-|國家字元集|nchar|  
+|國家字元集|NCHAR|  
 |國家字元集 [*..4000]|nvarchar [*]|  
 |國家字元集 [4001..*]|nvarchar(max)|  
 |不同的國家字元集 [*..4000]|nvarchar [*]|  
 |不同的國家字元集 [4001..*]|nvarchar(max)|  
-|Nchar|nchar|  
+|Nchar|NCHAR|  
 |nchar [*..4000]|nchar [*]|  
 |nchar [4001..*]|nvarchar(max)|  
 |nchar 變動 [*..4000]|nvarchar [*]|  
@@ -248,23 +248,23 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |nvarchar2 [*..4000]|nvarchar [*]|  
 |nvarchar2 [4001..*]|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |原始 [*..8000]|varbinary [*]|  
 |原始 [8001..*]|varbinary(max)|  
 |Real|float [53]|  
-|Rowid|uniqueidentifier|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|Rowid|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |字串 [*..8000]|varchar [*]|  
 |字串 [8001..*]|varchar(max)|  
-|timestamp|datetime2|  
+|TIMESTAMP|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |時區的時間戳記|datetimeoffset|  
 |使用本地時區的時間戳記 [*..\*]|datetimeoffset [*]|  
 |時區的時間戳記 [*..\*]|datetimeoffset [*]|  
 |時間戳記 [*..\*]|datetime2 [*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*..\*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*..\*]|UNIQUEIDENTIFIER|  
 |varchar [*..8000]|varchar [*]|  
 |varchar [8001..*]|varchar(max)|  
 |varchar2 [*..8000]|varchar [*]|  

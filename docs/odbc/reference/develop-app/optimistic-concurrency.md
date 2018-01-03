@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 422f16155f79b61a7cc46516d8a4e7deb2fe19f9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ff92590df7cbc65f3fb349327827c652fe1dd567
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimistic-concurrency"></a>開放式並行存取
 *開放式並行存取*是它的名稱衍生自在開放式假設，很少會發生交易之間發生衝突，衝突稱為時發生另一個交易中更新或刪除資料列之間的時間會在讀取的資料它是由目前的交易和時間來更新或刪除。 它是相反的*封閉式並行存取，*鎖定，或在其應用程式開發人員認為這類衝突很常見。  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 28edc12e72becb1734de27fb89a86b5ca838e9dd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e552a73289da6d78223b6416b7be7fe125e23e7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo （Visual FoxPro ODBC 驅動程式）
 > [!NOTE]  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_BIGINT|不支援。 沒有 64 位元 Visual FoxPro 型別。|  
 |SQL_BIT|邏輯|  
 |SQL_CHAR|字元|  
-|SQL_DATE|日期|  
+|SQL_DATE|date|  
 |SQL_DECIMAL|數值|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  

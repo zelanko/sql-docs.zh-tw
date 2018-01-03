@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 69a47d8d74c3966ed201d89381f191fd55642345
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7241124d7297dd661c3aef08701af0cc15d77d1e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transferring-data-in-its-binary-form"></a>將二進位格式的資料傳輸
 應用程式可以安全地在兩個資料來源使用相同的 DBMS 和硬體平台之間傳輸資料 （在指定的 DBMS 所使用的內部形式）。 給定的資料片段，SQL 資料類型必須是相同的來源和目標資料來源。 C 資料類型是 SQL_C_BINARY。  

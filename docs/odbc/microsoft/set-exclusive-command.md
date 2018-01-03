@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5aa039c9af4b3dfbabce2647408be7f612c80f3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5a7795e2f77d72dfe8e92c125aa1270db6c0442a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-exclusive-command"></a>SET 獨佔命令
 指定是否開啟檔案資料表，以取得獨佔或共用網路上使用。  
@@ -44,5 +44,5 @@ SET EXCLUSIVE ON | OFF
 ## <a name="remarks"></a>備註  
  變更設定專用的設定不會變更狀態的先前開啟的資料表。 例如，如果資料表已開啟以設定獨佔設為 ON，設定獨佔稍後變更為 OFF，資料表會保留其獨佔使用狀態。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC Visual FoxPro 設定對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

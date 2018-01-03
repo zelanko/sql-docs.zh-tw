@@ -3,10 +3,10 @@ title: "應用裝置設定 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 064e7485-7026-4acf-8084-f5d30757d177
 caps.latest.revision: "43"
-ms.openlocfilehash: ebb797e3fdb24bad79857f83c163dbf92a439883
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05670f1727691b1abc0fd98dd5970c7697725b8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-configuration"></a>應用裝置組態
 檢查清單提供您自己的環境設定 Analytics Platform System 所需的工作。 您可以使用此應用裝置之前，會需要這些組態工作。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="BeforeTasks"></a>開始之前  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
   
 1.  應用裝置必須安裝在資料中心和電源已開啟。  
   
@@ -55,7 +55,7 @@ SQL Server PDW**Configuration Manager** (PDWCM) 是 SQL Server PDW 系統管理�
   
 使用**Configuration Manager**執行下列設定工作。  
   
-|組態工作|Description|  
+|組態工作|描述|  
 |----------------------|---------------|  
 |熟悉實體元件名稱|[PDW 和應用裝置網狀架構的實體元件 &#40;Analytics Platform System &#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |啟動 SQL Server PDW 組態管理員|[啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md)|  
@@ -72,7 +72,7 @@ SQL Server PDW**Configuration Manager** (PDWCM) 是 SQL Server PDW 系統管理�
 ## <a name="AddTasks"></a>執行其他設定工作  
 在執行之後**Configuration Manager**工作，執行下列其他設定工作的清單。 其中有些工作是選擇性的。  
   
-|組態工作|Description|  
+|組態工作|描述|  
 |----------------------|---------------|  
 |協力廠商防毒軟體可以安裝並設定 SQL Server PDW 應用裝置的對外公開的節點上。<br /><br />(選擇性)|如需詳細資訊，請參閱[防毒軟體 &#40;Analytics Platform System &#41;](antivirus-software.md).|  
 |可以變更的 DSRM 密碼。<br /><br />(選擇性)|如需詳細資訊，請參閱[設定登入目錄服務還原模式 &#40; DSRM &#41; &#40; AD 節點的系統管理員密碼Analytics Platform System &#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  
@@ -82,7 +82,7 @@ SQL Server PDW**Configuration Manager** (PDWCM) 是 SQL Server PDW 系統管理�
 |備份及載入伺服器上設定 InfiniBand 網路介面卡<br /><br />(選擇性)|若要設定備份並載入伺服器連接到 SQL Server PDW 使用 InfiniBand 網路，您需要設定以允許 DNS 來解析 InfiniBand 連接到目前作用中的 InfiniBand 網路應用裝置的網路介面卡。|  
 |設定將遙測資料傳送給 Microsoft<br /><br />(選擇性)|若要設定將遙測資料傳送到 Microsoft Analytics Platform System，您需要的控制節點上執行 PowerShell 指令碼。 如需特定指示，請參閱[傳送遙測意見反應給 Microsoft &#40;SQL Server PDW &#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md).|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [防毒軟體 &#40;Analytics Platform System &#41;](antivirus-software.md)  
 [設定 InfiniBand 網路介面卡 &#40;SQL Server PDW &#41;](configure-infiniband-network-adapters.md)  
   

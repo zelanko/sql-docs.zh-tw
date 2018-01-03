@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e31cf41163f512b5450e5452f8e0adff5c0a604
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cf31107e21cee13d51046e43acc5c557cf20b9ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-tag-command"></a>刪除標記命令
 從複合的索引 (.cdx) 檔案中移除標記。  
@@ -49,5 +49,5 @@ DELETE TAG ALL [OF CDXFileName]
   
  Visual FoxPro 會尋找第一個結構複合的索引檔中的標記 （如果有開啟）。 如果標記未結構化的複合索引檔中，Visual FoxPro 接著會尋找其他開啟的複合索引檔案中的標記。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [INDEX 命令](../../odbc/microsoft/index-command.md)

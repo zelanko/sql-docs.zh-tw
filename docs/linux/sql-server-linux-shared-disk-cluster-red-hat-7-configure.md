@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: d5a621f6bcd1605b7f48ada14607b3e55ef6d6de
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ffc0ea6cae32b5801b069748b2c124ef1bd87343
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/01/2017
 
 下列各節逐步解說的步驟來設定容錯移轉叢集解決方案。 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 若要完成以下的端對端案例中，您需要兩部電腦部署兩個節點叢集並設定 NFS 伺服器的另一部伺服器。 下列步驟概述這些伺服器設定的方式。
 
@@ -134,13 +134,13 @@ NFS 伺服器上執行下列作業：
 1. 啟用和啟動`rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
 1. 啟用和啟動`nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
 1.  編輯`/etc/exports`匯出您要共用的目錄。 您必須針對您想要每個共用 1 行。 例如： 
@@ -396,6 +396,6 @@ NFS 伺服器上執行下列作業：
 
 * [叢集從頭](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)從 Pacemaker 指南
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [Red Hat Enterprise Linux 共用的磁碟叢集上操作 SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

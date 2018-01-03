@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1dcdaf02010c150e40295226e1258e385cdf75f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4a182979a037ec21f7d86d907bb0f0c2a020191a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC 資料指標程式庫的錯誤碼
 > [!IMPORTANT]  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  資料指標程式庫不會排序狀態記錄。驅動程式管理員和 ODBC 3。*x*驅動程式必須負責排序狀態記錄。  
   
-|SQLSTATE|Description|可從傳回|  
+|SQLSTATE|描述|可從傳回|  
 |--------------|-----------------|--------------------------|  
 |01000|資料指標不是可更新。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
 |01000|不使用資料指標程式庫。 載入失敗。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  

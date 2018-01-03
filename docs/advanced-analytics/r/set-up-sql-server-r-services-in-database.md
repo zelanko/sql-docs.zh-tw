@@ -2,11 +2,11 @@
 title: "設定 SQL Server 機器學習服務 （資料庫） |Microsoft 文件"
 ms.custom: 
 ms.date: 11/15/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 3a32560422e8fc5f1a2e4284702d2cb28562f01f
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 2b0bace5079478e725df9d253c31e583193660cb
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>設定 SQL Server 機器學習服務 （資料庫）
 
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/16/2017
 6. 在**安裝準備就緒**頁面上，確認下列項目都包含在內，然後選取**安裝**。
 
    + Database Engine 服務
-   + R 服務 (資料庫內)
+   + R Services (資料庫內)
 
 7. 安裝完成時，重新啟動電腦。
 
@@ -231,7 +231,7 @@ ms.lasthandoff: 11/16/2017
 
     | hello |
     |----|
-    | 1|
+    | @shouldalert|
 
 
 8. 如果發生任何錯誤，繼續描述其他選擇性變更，您可能需要進行後安裝已完成，或請參閱疑難排解指南 》 的章節：
@@ -330,7 +330,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 * Windows 驗證： 您可能需要在指定的執行個體名稱和其他連接資訊的資料科學用戶端上設定 ODBC 資料來源。 如需詳細資訊，請參閱[ODBC 資料來源管理員](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator)。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 SQL Server 中的指令碼執行功能，適用於在您確認之後，您可以執行 R 和 Python 命令從 SQL Server Management Studio、 Visual Studio 程式碼或任何其他用戶端，可以將 T-SQL 陳述式傳送到伺服器。 在進行之前，您可以進行一些變更系統設定中，以支援大量使用機器學習服務，或將新的 R 封裝。
 

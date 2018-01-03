@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6c4b4932d4a39ed36809547cd4a7ab029b4ac052
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 67f350bf1070e7b35b6538f4d3fb56a866b728c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>從 Microsoft Excel 中存取 Visual FoxPro 資料來源
 如果您有安裝 Microsoft 查詢時，您可以在連接到 Visual FoxPro 資料的 Microsoft Excel 中建立資料來源。  

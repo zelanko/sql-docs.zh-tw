@@ -1,11 +1,13 @@
 ---
 title: "SQL 屬性範例 (VBScript) |Microsoft 文件"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: VB
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c1465ceac4340ef34a6c1bce341ffd0f40db8ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b4cd0420fa5fb0d24f414ec1a66afbc588c81f72
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="sql-property-example-vbscript"></a>SQL 屬性範例 (VBScript)
 > [!IMPORTANT]
@@ -175,7 +177,7 @@ End Sub
 <!-- EndSQLRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [SQL 屬性](../../../ado/reference/rds-api/sql-property.md)
 

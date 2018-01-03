@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 64af89226e917b05c28f0c85500281fa84bc676c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 49f765c78f6c0b861c56d1299fc90786b6c22b78
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="time-date-and-interval-functions"></a>時間、日期和間隔函數
 下表列出 ODBC 純量函式集合中包含的日期和時間函式。 應用程式就可以判斷驅動程式支援的日期和時間函式呼叫**SQLGetInfo**與*資訊類型*SQL_TIMEDATE_FUNCTIONS。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
  CURRENT_DATE、 CURRENT_TIME 和 CURRENT_TIMESTAMP timedate 純量函式已加入在 ODBC 3.0 以配合 SQL 92。  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |**CURRENT_DATE （)** (ODBC 3.0)|傳回目前的日期。|  
 |**CURRENT_TIME [(** *時間精確度* **)]** (ODBC 3.0)|傳回目前的當地時間。 *時間精確度*引數會決定傳回值的秒數有效位數。|  

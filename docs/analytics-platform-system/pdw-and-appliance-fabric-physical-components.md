@@ -3,10 +3,10 @@ title: "PDW 和應用裝置光纖實體元件 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
 caps.latest.revision: "17"
-ms.openlocfilehash: 93e4b1521b213c9d29f3cae9bcc900cad6c6a674
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-and-appliance-fabric-physical-components"></a>PDW 和應用裝置網狀架構的實體元件
 名稱及描述 PDW 和應用裝置網狀架構實體元件。 PDW 區域包含所有這些元件。  
@@ -85,7 +85,7 @@ PDW 叢集名為 WFOHST01。 它會管理的所有實體主機和虛擬機器屬
 *appliance_domain*-透過 DAS01 *appliance_domain*-DAS03  
 這是連接到計算節點的直接連結存放裝置。 HP 都有一個 DAS 每兩個計算節點。 Dell 和配量有一個 DAS 每三個計算節點。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
 [應用裝置組態 &#40;Analytics Platform System &#41;](appliance-configuration.md)  
 [應用裝置管理工作 &#40;Analytics Platform System &#41;](appliance-management-tasks.md)  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac29132cf37fe6e4b13774826dd2467243e152fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b75544506500b5a1743c135d0bf6f4e5dedbde44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-limitations"></a>資料型別限制
 Microsoft ODBC 桌面資料庫驅動程式以強制資料類型的下列限制：  
   
-|資料類型|Description|  
+|資料類型|描述|  
 |---------------|-----------------|  
 |所有資料類型|類型轉換失敗，可能會造成影響的資料行設為 NULL。|  
 |BINARY|建立零長度的 BINARY 資料行時，實際上會傳回 255 個位元組的二進位資料行。|  

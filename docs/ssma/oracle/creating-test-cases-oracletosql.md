@@ -1,7 +1,7 @@
 ---
 title: "建立測試案例 (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: cd27397f5f925989412ad7a7f510778e18fb9207
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fed434b32dd482dfb5700c3b547b7e6016ca9669
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-test-cases-oracletosql"></a>建立測試案例 (OracleToSQL)
 若要建立測試中使用測試案例精靈。 此精靈可讓您藉由選擇測試及驗證過的物件和測試參數建立測試案例。  

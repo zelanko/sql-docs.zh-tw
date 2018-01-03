@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 537267b15a65dca3035ba79e6bbecb9f7bc4a51c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>結果集  
 **sp_server_diagnostics**會傳回下列資訊  
   
-|資料行|資料類型|Description|  
+|「資料行」|資料類型|描述|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|表示資料列建立的時間戳記。 單一資料列集的每個資料列都有相同的時間戳記。|  
 |**component_type**|**sysname**|指出資料列是否包含資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體層級元件或 Alwayson 可用性群組：<br /><br /> 執行個體<br /><br /> Alwayson: AvailabilityGroup|  
 |**元件 _ 名稱**|**sysname**|指出元件的名稱或可用性群組的名稱：<br /><br /> 系統<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *\<可用性群組的名稱 >*|  
-|**狀態**|**int**|指出元件的健全狀態：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state**|**int**|指出元件的健全狀態：<br /><br /> 0<br /><br /> @shouldalert<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|描述狀態資料行。 對應至狀態資料行值的描述如下：<br /><br /> 0： 未知<br /><br /> 1： 初始狀態<br /><br /> 2： 警告<br /><br /> 3： 錯誤|  
-|**資料**|**varchar (max)**|指定元件的相關資料。|  
+|**data**|**varchar (max)**|指定元件的相關資料。|  
   
  以下是五種元件的說明：  
   
@@ -107,7 +107,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 ## <a name="examples"></a>範例  
 最佳作法是使用擴充的工作階段來擷取健全狀況資訊，並將它儲存到位於 SQL Server 之外的檔案。 因此，如果發生失敗，您仍然可以存取它。 下列範例會將事件工作階段的輸出儲存至檔案：  
-```tsql  
+```sql  
 CREATE EVENT SESSION [diag]  
 ON SERVER  
            ADD EVENT [sp_server_diagnostics_component_result] (set collect_data=1)  
@@ -119,7 +119,7 @@ GO
 ```  
   
 以下的範例查詢會讀取擴充工作階段記錄檔：  
-```tsql  
+```sql  
 SELECT  
     xml_data.value('(/event/@name)[1]','varchar(max)') AS Name  
   , xml_data.value('(/event/@package)[1]', 'varchar(max)') AS Package  
@@ -142,7 +142,7 @@ ORDER BY time;
 ```  
   
 下列範例會以非重複模式將 sp_server_diagnostics 的輸出擷取至資料表：  
-```tsql  
+```sql  
 CREATE TABLE SpServerDiagnosticsResult  
 (  
       create_time DateTime,  
@@ -156,16 +156,16 @@ INSERT INTO SpServerDiagnosticsResult
 EXEC sp_server_diagnostics; 
 ```  
 
-以下的範例查詢會顯示輸出來源資料表的摘要如下：  
-```tsql  
+以下的範例查詢會從資料表讀取摘要輸出：  
+```sql  
 SELECT create_time,
        component_name,
        state_desc 
 FROM SpServerDiagnosticsResult;  
 ``` 
 
-以下的範例查詢會從資料表中的每個元件讀取某些詳細的輸出：  
-```tsql  
+以下的範例查詢會從資料表中的每個元件讀取某些詳細輸出：  
+```sql  
 -- system
 select data.value('(/system/@systemCpuUtilization)[1]','bigint') as 'System_CPU',
    data.value('(/system/@sqlCpuUtilization)[1]','bigint') as 'SQL_CPU',
@@ -245,7 +245,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [容錯移轉叢集執行個體的容錯移轉原則](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6c8c6d75686741d1835f46a5ad7a64ab04c6925f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4e4ee29a84fc739cb0f66e1e81f668c8c9598832
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-table---sql-command"></a>建立資料表的 SQL 命令
 建立具有指定的欄位的資料表。  
@@ -170,7 +170,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  比方說，如果您想要建立暫存資料表，您應該建立資料表之前需要使用交易陳述式。 如果您需要的交易的 SQL 陳述式批次中包含 CREATE TABLE 陳述式，則驅動程式會傳回錯誤訊息。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER TABLE 的 SQL 命令](../../odbc/microsoft/alter-table-sql-command.md)   
  [支援的資料類型 （Visual FoxPro ODBC 驅動程式）](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
  [插入的 SQL 命令](../../odbc/microsoft/insert-sql-command.md)   

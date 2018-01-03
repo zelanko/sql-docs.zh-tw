@@ -1,7 +1,7 @@
 ---
 title: "專案設定 （轉換） (MySQLToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c40fe3bcc95b062b188c041477011358d60fba2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9062c61ad2a799a20370c8b406843e0e4a209869
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>專案設定 （轉換） (MySQLToSQL)
 [轉換] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何將 MySQL 語法轉換為 SQL Server 或 SQL Azure 的語法的設定。  

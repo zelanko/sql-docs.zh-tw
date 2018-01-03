@@ -1,7 +1,7 @@
 ---
 title: "連接到 Azure SQL DB (MySQLToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dadd18eb9f5f2af55b2d68ad69f69fb3c54709fc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f3f0572426b6c90aa7b56c1f81e077f05f01caae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>連接到 Azure SQL DB (MySQLToSQL)
 使用 [連線到 SQL Azure] 對話方塊中，連接到您想要移轉 SQL Azure 資料庫。  
@@ -36,14 +36,14 @@ ms.lasthandoff: 12/05/2017
   
 選取或輸入伺服器名稱來連接到 SQL Azure。  
   
-**資料庫**  
+**[資料庫備份]**  
   
 選取、 輸入或**瀏覽**資料庫名稱。  
   
 > [!IMPORTANT]  
 > SSMA for MySQL 不支援 SQL Azure 中的 master 資料庫的連接。  
   
-**使用者名稱**  
+**User name**  
   
 輸入 SSMA 將用來連接到 SQL Azure 資料庫的使用者名稱  
   

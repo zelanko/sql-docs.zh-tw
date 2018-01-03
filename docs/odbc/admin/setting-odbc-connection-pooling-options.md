@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d44325018516574641ccb938a8d7acbefb121cd4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 939ac623b62b4b079e81a5c3f12df804e0b6171c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>設定 ODBC 連接共用選項
 連接共用可讓應用程式不需要重新建立每次使用的連接集區使用的連接。 您可以使用**連接共用** 索引標籤**ODBC 資料來源管理員**啟用和停用效能監視 對話方塊。 按兩下要設定連接逾時期限的驅動程式名稱。  

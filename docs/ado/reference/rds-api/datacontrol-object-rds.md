@@ -3,7 +3,7 @@ title: "DataControl 物件 (RDS) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cf3ffe486c22f7e0fce7bec243e182c459aedc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4921e2895aeeede12f161b31a5dac83e0276822a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 物件 (RDS)
 將繫結的資料查詢[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)至一或多個控制項 （例如，文字方塊中，方格控制項或下拉式方塊） 顯示**資料錄集**網頁上的資料。  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [DataControl 物件 (RDS) 屬性、方法和事件](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [DataControl 物件範例 (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
 
 

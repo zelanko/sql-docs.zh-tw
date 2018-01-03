@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b806f4c887af3f1ba80ee3321820e97dd336fad
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7c841b4404132e4fe385c9c3aa6fd12bdd2eb8a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbms-based-drivers"></a>DBMS 架構驅動程式
 DBMS 架構驅動程式會搭配如 Oracle 或 SQL Server 提供驅動程式使用的獨立資料庫引擎的資料來源。 這些驅動程式透過獨立的引擎; 存取實體的資料也就是它們提交 SQL 陳述式，並從引擎中擷取結果。  

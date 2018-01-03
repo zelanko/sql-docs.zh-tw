@@ -2,20 +2,22 @@
 title: "簡介 revoscalepy |Microsoft 文件"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: ad525f173ad6082f587324b41af768816077e371
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3863cb3ec0c50de9d5189927b01cba3f7f4277df
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="introducing-revoscalepy"></a>介紹 revoscalepy
 
@@ -79,7 +81,7 @@ SQL Server，並將 Python 某些情況下使用不同的資料類型。 如需 
 
 下列機器學習演算法和彙總從 RevoScaleR 函數會包含在 SQL Server 2017，開頭 CTP 2.0 中。
 
-| 函數| Description|注意|
+| 函數| 描述|注意|
 | ------ | ------ |------ |
 |`rx_btrees` | 符合隨機梯度促進式的決策樹|`rx_btrees_ex`在 CTP 2.0|
 |`rx_dforest` | 符合分類和迴歸的決策樹系|`rx_dforest_ex`在 CTP 2.0|
@@ -91,7 +93,7 @@ SQL Server，並將 Python 某些情況下使用不同的資料類型。 如需 
 
 新的機器學習演算法也會提供的 Python 版本[MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
-| 函數| Description|
+| 函數| 描述|
 | ------ | ------ |
 |`rx_fast_forest` |建立決策樹系模型|
 |`rx_fast_linear` | 線性迴歸與隨機雙重座標 （堆疊）|

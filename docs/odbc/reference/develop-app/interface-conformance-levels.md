@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2af6dc705ad13c12a28203f6dd114afa10f3a31
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0abde908ca3205cc10a35c310b508c5142fcb82c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interface-conformance-levels"></a>介面的一致性層級
 調節的目的是通知哪些可用功能，從驅動程式的應用程式。 函式為基礎的撫平配置未充分達成這個目標。 在 ODBC 3。*x*，驅動程式就會歸類在根據他們擁有的功能。 支援的功能，可以包括支援函式。它也可以包含支援所傳回的資訊類型描述元欄位、 陳述式屬性、"Y"值**SQLGetInfo**，依此類推。  

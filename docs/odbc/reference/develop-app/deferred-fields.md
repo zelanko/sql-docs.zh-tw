@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46f0e525814b648b5f2b1236e1b093321974eb39
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2042efcdacf45a8638bb5197da04f903a6ffdd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deferred-fields"></a>延後的欄位
 值*延遲欄位*時設定，但是驅動程式會將儲存延後的效果之變數的位址不會使用。 應用程式參數描述元，驅動程式會使用變數的內容時呼叫的**SQLExecDirect**或**SQLExecute**。 應用程式的資料列描述項，為驅動程式會使用變數的內容，在擷取的時間。  

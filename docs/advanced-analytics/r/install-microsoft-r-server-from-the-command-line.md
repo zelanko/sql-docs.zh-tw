@@ -2,11 +2,11 @@
 title: "從命令列安裝 Machine Learning 伺服器 （獨立） 或 Microsoft R Server （獨立） |Microsoft 文件"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 400f743bfbb065a5e271b5ff335d0896bb2ac3ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c10594fdecd48782a80b5d609bb21c6a937f8863
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>從命令列安裝 Machine Learning 伺服器 （獨立） 或 Microsoft R Server （獨立）
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/09/2017
 
 針對 **無訊息** 安裝，提供相同引數，並新增 **/q** 參數。 會提供任何提示，並不不需要任何互動。 不過，如果省略任何必要的引數時，安裝程式會失敗。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 您應該了解如何執行 SQL Server 的命令列安裝，並熟悉其指令碼的引數。
 

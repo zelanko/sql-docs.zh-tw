@@ -3,7 +3,7 @@ title: "ParentCatalog 屬性範例 (VB) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cfdd8406b9865bdd2ed50f698438eb591be9c42c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c03b8683cfe9a71a38e38f28fe1959bd7bb88a38
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog 屬性範例 (VB)
 下列程式碼示範如何使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)屬性來存取提供者特定屬性，再附加至類別目錄的資料表。 屬性是**AutoIncrement**，它會自動累加欄位建立 Microsoft Jet 資料庫中。  
@@ -87,7 +87,7 @@ End Sub
 ' EndCreateAutoIncrColumnVB  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [Append 方法 （ADOX 資料行）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 方法 （ADOX 資料表）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

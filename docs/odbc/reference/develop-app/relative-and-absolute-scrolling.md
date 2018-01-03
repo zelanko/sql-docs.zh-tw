@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32782c2fe59aaf36fa8741870a798163d923a3a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c7ade62e1c7760b7542b1e4dd82668c11f2947c8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relative-and-absolute-scrolling"></a>相對與絕對捲動
 大部分的捲動選項**SQLFetchScroll**放置游標的目前位置的相對或絕對位置。 **SQLFetchScroll**支援提取下一個、 第一個和最後一個資料列集，做為也為相對提取 (提取資料列集 *n* 從目前的資料列集的開頭的資料列) 和絕對提取 (提取資料列集資料列開始 *n* )。 如果 *n* 是負數的絕對提取中，會計算資料列從結果集的結尾。 因此，絕對提取資料列 – 1 表示提取從結果集中的最後一個資料列開始的資料列集。  

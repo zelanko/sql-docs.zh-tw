@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48167151eab4627fd51e5ec575cca4250bd63617
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1b9a95fac384f0df435bd28df9d21f3fa357e6d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-buffer-length"></a>資料緩衝區長度
 應用程式傳遞引數，名為的驅動程式的資料緩衝區的位元組長度*Columnsize*或類似的名稱。 例如，在下列呼叫**SQLBindCol**，應用程式指定的長度*ValuePtr*緩衝區 (**sizeof (***ValuePtr***)**):  

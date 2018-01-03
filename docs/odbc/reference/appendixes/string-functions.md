@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0bbc611df9bcddaf0930a864ca2541f003a6ddb4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 049e1acec8ad27e9fd65d838c17f48c78519ad46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-functions"></a>字串函數
 下表列出字串操作函數。 應用程式就可以判斷驅動程式支援的字串函式呼叫**SQLGetInfo**與*資訊類型*SQL_STRING_FUNCTIONS。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
  在 ODBC 3.0 以配合 SQL 92 已加入 BIT_LENGTH、 CHAR_LENGTH、 CHARACTER_LENGTH、 OCTET_LENGTH，與位置字串純量函數。  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |**ASCII (** *string_exp* **)** (ODBC 1.0)|傳回的最左邊字元的 ASCII 字碼值*string_exp*為整數。|  
 |**BIT_LENGTH (** *string_exp* **)** (ODBC 3.0)|傳回字串運算式的長度 (以位元為單位)。<br /><br /> 並不只適用於字串資料類型，因此將不會隱含地轉換*string_exp*字串而會傳回任何給定的資料類型 （內部） 大小。|  

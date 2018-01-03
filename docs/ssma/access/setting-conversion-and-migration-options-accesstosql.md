@@ -1,7 +1,7 @@
 ---
 title: "設定轉換和移轉選項 (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -27,11 +27,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a6bf268665688aab98b56e0314302f8b35571e15
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 40be8e3f52464e7c6ae6f024d8c29f3d0acd04b9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>設定轉換和移轉選項 (AccessToSQL)
 每個 SSMA 專案，您可以設定專案層級的選項。 這些選項會指定物件的轉換方式、 如何移轉資料和來源資料類型如何對應至目標資料類型。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 移轉資料或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，請確認您的組態選項都適用於專案。  
@@ -85,7 +85,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
 3.  按一下**確定**儲存設定。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 移轉的下一個步驟取決於您專案的需求：  
   
 -   若要自訂的來源和目標資料類型對應，請參閱[對應來源和目標資料類型](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  

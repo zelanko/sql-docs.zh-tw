@@ -3,10 +3,10 @@ title: "監視 (Analytics Platform System) 的應用裝置"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 253864fb-9178-41d2-a0ae-5dd9fd0a4fda
 caps.latest.revision: "25"
-ms.openlocfilehash: dbbae960d5e4d88b6cb725c9e22fc36a428b9264
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d85f311df05a0aa43e074226d639493e1513153
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-monitoring"></a>應用裝置監視
 此應用裝置監視指南描述的工具和監視 SQL Server PDW 應用裝置的工作。  
@@ -69,7 +69,7 @@ SQL Server PDW 有大量與 Systems Center Operations Manager 的整合。 SQL S
    
 ## <a name="Tasks"></a>相關監視工作  
   
-|監視工作|Description|  
+|監視工作|描述|  
 |-------------------|---------------|  
 |使用系統管理員主控台監視應用裝置。|[使用系統管理員主控台 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
 |使用系統檢視表，以監視應用裝置。|[使用系統檢視 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-system-views.md)|  
@@ -86,7 +86,7 @@ SQL Server PDW 有大量與 Systems Center Operations Manager 的整合。 SQL S
 <!-- MISSING LINKS |Monitor backups and restores.|[Monitor Backups and Restores &#40;SQL Server PDW&#41;](../sqlpdw/monitor-backups-and-restores-sql-server-pdw.md)|  -->  
 <!-- MISSING LINKS |Monitor the active queries.|[Monitoring Active Queries &#40;SQL Server PDW&#41;](../sqlpdw/monitoring-active-queries-sql-server-pdw.md)|  -->  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [應用裝置管理工作 &#40;Analytics Platform System &#41;](appliance-management-tasks.md)  
   

@@ -3,21 +3,21 @@ title: "Analytics Platform System-向外延展資料倉儲中最新消息"
 author: happynicolle
 ms.author: nicw;barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
 description: "請參閱什麼是 Microsoft® Analytics Platform System 的新功能，向外延展內部部署裝載 MPP SQL Server 平行資料倉儲應用裝置。"
 ms.date: 11/28/2016
 ms.topic: article
-ms.openlocfilehash: 3dc1a338ced5aa90ada112b97c4a6f13777da409
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eeeb41045527e72856edfb8bdb40becc462bde07
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>分析平台系統 2016，向外延展 MPP 資料倉儲中最新消息
 請參閱什麼是新的 Microsoft® 分析平台 System (APS) 2016年，向外延展的最新的應用裝置更新內部部署裝載 MPP SQL Server 平行資料倉儲應用裝置。 

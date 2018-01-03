@@ -3,10 +3,10 @@ title: "設定 Windows Server Update Services (WSUS) (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
 caps.latest.revision: "41"
-ms.openlocfilehash: d2b37819663009df090c76d516d629199691472c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 234c1ee3b13f3440e3f8a0377f3423ccf937acbc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>設定 Windows Server Update Services (WSUS)
 這些指示會引導您完成使用 Windows Server Update Services (WSUS) 設定精靈設定 WSUS Analytics Platform System 的步驟。 您需要將 WSUS 設定之前您可以將軟體更新套用至應用裝置。 VMM 虛擬機器應用裝置上已安裝 WSUS。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
   
     #### <a name="to-update-by-using-microsoft-update"></a>若要使用 Microsoft Update 來更新  
   
-    1.  如果您選擇使用 Microsoft Update 同步處理，您不需要進行任何變更**選擇上游伺服器**頁面。 按一下 **[下一步]**。  
+    1.  如果您選擇使用 Microsoft Update 同步處理，您不需要進行任何變更**選擇上游伺服器**頁面。 按 [下一步] 。  
   
         ![WSUS 上游伺服器同步處理](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   

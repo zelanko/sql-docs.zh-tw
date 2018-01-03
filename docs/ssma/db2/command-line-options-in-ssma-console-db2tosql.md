@@ -1,7 +1,7 @@
 ---
 title: "SSMA 主控台 (DB2ToSQL) 中的命令列選項 |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32324f7244d79a408a854bc45970da5074cd6606
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d5eff60694cdcfdb4d2d147ae0531fbbc2ecfb32
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 主控台 (DB2ToSQL) 中的命令列選項
 Microsoft 為您提供執行及控制 SSMA 活動組強固命令列選項。 這可確保各節詳細說明相同。  

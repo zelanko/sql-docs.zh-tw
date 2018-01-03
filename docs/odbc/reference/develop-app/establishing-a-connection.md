@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2d061c689ae35a93eceab083f554ed6534ca810
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5b782f94bb67580308c844a653389800fb0ff7af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="establishing-a-connection"></a>建立連線
 配置環境和連接控制代碼，並設定任何連接屬性，應用程式之後可以連接至資料來源或驅動程式。 有三個不同的函數，應用程式可用來執行這項操作： **SQLConnect** （核心介面的一致性層級） **SQLDriverConnect** （核心），和**SQLBrowseConnect**(層級 1)。 每三個被為了在不同的案例中使用。 連接之前，先在應用程式可以判斷與支援的這些函式**ConnectFunctions**所傳回的關鍵字**SQLDrivers**。  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cec632458d406fa0dedeea10a1285b1b521cb197
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70351e468a6038a26b7b647d6bc7c64d3263f3d6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-sqlsetpos"></a>呼叫 SQLSetPos
 在 ODBC 2。*x*，資料列狀態陣列的指標是以引數**SQLExtendedFetch**。 呼叫更新版本已更新資料列狀態陣列**SQLSetPos**。 有些驅動程式有依賴這個陣列不會變更之間的事實**SQLExtendedFetch**和**SQLSetPos**。 在 ODBC 3。*x*狀態陣列的指標是描述項欄位，因此應用程式可以輕鬆地將它變更為指向不同的陣列。 這可以是 ODBC 3 時的問題。*x*應用程式使用 ODBC 2。*x*驅動程式，但呼叫**SQLSetStmtAttr**陣列狀態指標設定，然後會呼叫**SQLFetchScroll**來提取資料。 驅動程式管理員將它對應為一連串的呼叫**SQLExtendedFetch**。 下列程式碼，就通常會引發錯誤時，驅動程式管理員會將對應第二個**SQLSetStmtAttr**使用 ODBC 2 時呼叫*.x*驅動程式：  

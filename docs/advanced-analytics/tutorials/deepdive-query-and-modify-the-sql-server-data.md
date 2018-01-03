@@ -1,38 +1,46 @@
 ---
-title: "查詢及修改 SQL Server 資料 |Microsoft 文件"
+title: "查詢及修改 SQL Server 資料 （SQL 與 R 深入探討） |Microsoft 文件"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 8c7007a9-9a8f-4dcd-8068-40060d4f6444
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 66543db80e1d4c6255f6ac64077bfdc10b28dc5d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 38273ac15673344ff00714d38ec87386ca5dae64
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="query-and-modify-the-sql-server-data"></a>查詢及修改 SQL Server 資料
+# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>查詢及修改 SQL Server 資料 （SQL 與 R 深入探討）
+
+本文是資料科學深入探討教學課程中，有關如何使用一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
 
 既然您已將資料載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，便可以在 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]使用您建立的資料來源作為 R 函數的引數，以取得變數的基本資訊，並產生摘要和長條圖。
 
-在此步驟中，您將重新使用進行一些快速分析，並提升資料的資料來源。
+在此步驟中，您可以重複使用進行一些快速分析，並提升資料的資料來源。
 
 ## <a name="query-the-data"></a>查詢資料
 
 首先，取得一份資料行和其資料類型的清單。
 
-1.  使用函數**rxGetVarInfo**並指定您想要分析的資料來源。
+1.  使用函數[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)並指定您想要分析的資料來源。
+
+    根據您的 RevoScaleR 版本，您也可以使用[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)。 
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -63,7 +71,9 @@ ms.lasthandoff: 12/01/2017
 
 所有的變數會儲存為整數，但某些變數代表類別的資料 – 在 R 中稱為「因素變數」。例如，資料行 *state* 包含數字，用來作為 50 個州再加上華盛頓哥倫比亞特區的識別碼。  為了讓您更輕鬆地了解資料，您將數字取代為各州縮寫的清單。
 
-在此步驟中，您將提供包含縮寫的字串向量，然後將這些類別的值對應至原始的整數識別碼。 此變數就緒之後，您將在 *colInfo* 引數使用它，指定要將此資料行視為因素來處理。 之後，每次分析或匯入此資料時，將使用縮寫，並將資料行視為因素來處理。
+在此步驟中，建立包含縮寫的字串向量，然後將這些類別的值對應至原始的整數識別碼。 然後使用中的新變數*colInfo*引數，以指定此資料行，做為因數處理。 每當您分析資料，或將它移，使用縮寫，而且資料行處理做為因數。
+
+將資料行對應至縮寫，然後才使用它作為因數，實際上也能改善效能。 如需詳細資訊，請參閱[R 和資料最佳化](..\r\r-and-data-optimization-r-services.md)。
 
 1. 一開始先建立 R 變數 *stateAbb*，以及定義要新增給它的字串向量，如下所示︰
   
@@ -100,7 +110,7 @@ ms.lasthandoff: 12/01/2017
     )
     ```
   
-3. 若要建立使用更新資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源，請如之前一樣呼叫 *RxSqlServerData* 函數，但新增 *colInfo* 引數。
+3. 若要建立使用更新資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源，請如之前一樣呼叫 **RxSqlServerData** 函數，但新增 *colInfo* 引數。
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -110,9 +120,8 @@ ms.lasthandoff: 12/01/2017
   
     - 針對 *table* 參數，傳入變數 *sqlFraudTable*，其中包含您稍早建立的資料來源。
     - 針對 *colInfo* 參數，傳入 *ccColInfo* 變數，其中包含資料行資料類型和因素層級。
-    - 將資料行對應至縮寫，然後才使用它作為因數，實際上也能改善效能。 如需詳細資訊，請參閱 [R 和資料最佳化](https://msdn.microsoft.com/library/mt723575.aspx)
-  
-4.  您現在可以使用函式 rxGetVarInfo，若要檢視新的資料來源中的變數。
+
+4.  您現在可以使用 **rxGetVarInfo** 函數檢視新資料來源中的變數。
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -140,13 +149,10 @@ ms.lasthandoff: 12/01/2017
 
 現在您指定的三個變數 (_gender_、 _state_和 _cardholder_) 被視為因素。
 
-## <a name="next-step"></a>下一個步驟
+## <a name="next-step"></a>下一步
 
-[定義和使用的計算內容](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
+[定義及使用計算內容](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
 
 ## <a name="previous-step"></a>上一個步驟
 
 [使用 RxSqlServerData 建立 SQL Server 資料物件](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-
-

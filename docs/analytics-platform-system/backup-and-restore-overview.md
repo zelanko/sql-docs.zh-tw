@@ -3,10 +3,10 @@ title: "備份與還原"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
 caps.latest.revision: "50"
-ms.openlocfilehash: 646db87f946475ebdf427b3f4ef3ec00da0dc5f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backup-and-restore"></a>備份與還原
 說明資料如何備份和還原運作的 SQL Server Parallel Data Warehouse (PDW)。 備份和還原作業可用於災害復原。 備份與還原也可用來將資料庫從一個工具複製到另一部應用裝置。  
@@ -85,7 +85,7 @@ PDW 備份與還原應用裝置資料庫使用 SQL Server 備份技術。 若要
   
     -   備份只能還原至 PDW 應用裝置具有等於或大於的運算節點數目。  
   
-    -   您無法變更之備份的名稱，然後再執行還原。 備份目錄的名稱必須符合之備份的原始名稱的名稱。 備份的原始名稱位於 backup.xml 中的檔案備份的目錄。 若要將資料庫還原至不同的名稱，您可以在 restore 命令中指定新名稱。 例如： `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`。  
+    -   您無法變更之備份的名稱，然後再執行還原。 備份目錄的名稱必須符合之備份的原始名稱的名稱。 備份的原始名稱位於 backup.xml 中的檔案備份的目錄。 若要將資料庫還原至不同的名稱，您可以在 restore 命令中指定新名稱。 例如： `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`＞。  
   
 ## <a name="RestoreModes"></a>資料庫還原模式  
 還原完整的資料庫重新建立 PDW 資料庫所使用的資料庫備份中的資料。 藉由先還原完整備份，然後選擇性地還原差異備份被執行資料庫還原。 資料庫還原包括資料庫使用者與資料庫角色。  
@@ -131,7 +131,7 @@ PDW 備份與還原應用裝置資料庫使用 SQL Server 備份技術。 若要
   
 ## <a name="related-tasks"></a>相關工作  
   
-|備份和還原工作|Description|  
+|備份和還原工作|描述|  
 |---------------------------|---------------|  
 |準備的伺服器做為備份伺服器。|[取得和設定備份伺服器](acquire-and-configure-backup-server.md)|  
 |備份資料庫。|[備份資料庫](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  

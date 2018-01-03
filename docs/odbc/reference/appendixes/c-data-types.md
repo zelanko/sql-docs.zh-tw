@@ -5,7 +5,7 @@ ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2933ac739ff3772d3d0ad223f4c2a3041256777
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 31de2fc95be1a7ead0b61b2dde493caf8d484fe4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-data-types"></a>C 資料類型
 ODBC C 資料類型表示用來將資料儲存在應用程式的 C 緩衝區的資料類型。  
@@ -45,7 +45,7 @@ ODBC C 資料類型表示用來將資料儲存在應用程式的 C 緩衝區的�
 |SQL_C_USHORT [j]|SQLUSMALLINT|不帶正負號的 short int|  
 |SQL_C_SLONG [j]|SQLINTEGER|long int|  
 |SQL_C_ULONG [j]|SQLUINTEGER|不帶正負號的 long int|  
-|SQL_C_FLOAT|SQLREAL|float|  
+|SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|不帶正負號的 char|  
 |SQL_C_STINYINT [j]|SQLSCHAR|帶正負號的 char|  
@@ -161,5 +161,5 @@ struct tagSQLGUID {
   
 -   [64 位元整數結構](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 中的 C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)

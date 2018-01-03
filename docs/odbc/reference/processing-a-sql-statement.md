@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 147d3a17b4041caf3a83ec819d65dc43af32312f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aaf3c1fddb673e0cd62d334e9b87eeb2d9016ec6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-a-sql-statement"></a>處理 SQL 陳述式
 之前討論的技術以程式設計方式使用 SQL 時，就必須討論 SQL 陳述式的處理方式。 所需的步驟通用於所有三種技術，雖然每個技術執行它們在不同的時間。 下圖顯示的步驟涉及在處理 SQL 陳述式，在這個章節的其餘部分將會討論。  

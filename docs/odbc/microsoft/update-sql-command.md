@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 054ce76fcc4637d60bc220a559792330b0a5e665
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6fb2e4d3e3010eaba53b36de383c3365d82db289
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="update---sql-command"></a>更新-SQL 命令
 新值來更新資料表中的記錄。  
@@ -61,6 +61,6 @@ SET Column_Name1 = eExpression1
 ## <a name="driver-remarks"></a>驅動程式註解  
  當您的應用程式會將 ODBC SQL 陳述式更新傳送至資料來源時，Visual FoxPro ODBC 驅動程式會將命令轉換成 Visual FoxProUPDATE 命令，而不需轉譯中。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [刪除 SQL 命令](../../odbc/microsoft/delete-sql-command.md)   
  [INSERT - SQL 命令](../../odbc/microsoft/insert-sql-command.md)

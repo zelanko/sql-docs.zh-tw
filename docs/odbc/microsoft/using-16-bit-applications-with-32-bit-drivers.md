@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cdfeea078774f5261bdeca25123a4743b1c874b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95ff3ce88daf4a508145c28ea194a97b9cbbbabe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>16 位元應用程式使用 32 位元驅動程式
 > [!IMPORTANT]  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="components"></a>Components  
  ODBC SDK 元件的 MDAC 2.8 SP1 包含下列 32 位元驅動程式中執行 16 位元應用程式檔案。 這些元件是在 \Redist 目錄中。  
   
-|檔案名稱|Description|  
+|[檔案名稱]|描述|  
 |---------------|-----------------|  
 |Odbc16gt.dll|16 位元 ODBC 泛型 thunk DLL|  
 |Odbc32gt.dll|32 位元 ODBC 泛型 thunk DLL|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
   
  此外，下列的 16 位元 ODBC 2.10 驅動程式管理員，以及檔案不是 ODBC 3.51 的一部分，其所需的而且應該與 16 位元應用程式安裝。  
   
-|檔案名稱|Description|  
+|[檔案名稱]|描述|  
 |---------------|-----------------|  
 |Odbc.dll|16 位元驅動程式管理員|  
 |Odbcinst.dll|16 位元安裝程式 DLL|  

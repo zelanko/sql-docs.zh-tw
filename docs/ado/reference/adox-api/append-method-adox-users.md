@@ -3,7 +3,7 @@ title: "Append 方法 （ADOX 使用者） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1720503f6ff8de32b247fa4878bccb69c88d5c71
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69f839a24ee99d0db10435a3562926786f2d4620
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-users"></a>Append 方法 （ADOX 使用者）
 將新[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件[使用者](../../../ado/reference/adox-api/users-collection-adox.md)集合。  
@@ -56,7 +56,7 @@ Users.Append User[,Password]
 ## <a name="applies-to"></a>適用於  
  [Users 集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [群組和使用者附加、 ChangePassword 方法範例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
  [Append 方法 （ADOX 資料行）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 方法 （ADOX 群組）](../../../ado/reference/adox-api/append-method-adox-groups.md)   

@@ -1,11 +1,13 @@
 ---
 title: "伺服器屬性 (RDS) |Microsoft 文件"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -17,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e1475b73658e9cbf5b1b1ebc393d2cf60bb6e5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a9225e5184faf0087458a9e3ca3828fa75f259d6
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="server-property-rds"></a>伺服器屬性 (RDS)
 指出 Internet Information Services (IIS) 名稱與通訊的通訊協定。  
@@ -123,7 +125,7 @@ DataControl.Server=""
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [伺服器屬性的範例 (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [屬性 (RDS) 連接](../../../ado/reference/rds-api/connect-property-rds.md)   
  [SQL 屬性](../../../ado/reference/rds-api/sql-property.md)   

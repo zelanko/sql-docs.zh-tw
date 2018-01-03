@@ -3,10 +3,10 @@ title: "取得和設定來載入伺服器 (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: a434b174-a818-4f73-b218-264619bab664
 caps.latest.revision: "19"
-ms.openlocfilehash: 05747889f905e1f827a87cc0ad53ace62a911922
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4a91dc3216945b3f473e1b5b131333ad8d210d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acquire-and-configure-a-loading-server"></a>取得和設定來載入伺服器
 本主題描述如何取得及載入伺服器設定為在非應用裝置的 Windows 系統提交資料載入到 SQL Server Parallel Data Warehouse (PDW)。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  [負載概觀](load-overview.md)  
   
-## <a name="performance"></a>效能  
+## <a name="performance"></a>[效能]  
 載入 Windows Server 2012 和更新版本的效能最佳，開啟立即檔案初始化，因此資料會覆寫時，系統不會覆寫現有的資料加上零。 如果這是安全性風險，因為之前的資料仍存在於磁碟上，請務必關閉立即檔案初始化。  
   
 ## <a name="Security"></a>安全性注意事項  
@@ -116,6 +116,6 @@ ms.lasthandoff: 11/17/2017
   
 -   關閉 Windows Server 2012 和更新版本的立即檔案初始化。 這是權衡考量效能和安全性，如 「 效能 」 區段中所述。 您需要決定哪一種最佳根據您的安全性需求。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [備份和還原的概觀](backup-and-restore-overview.md)  
   

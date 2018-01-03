@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec3f9821b729c593fac8cb280f8596eaf0dbed1d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 151963c23abce0f737671dd73dec1d971998228e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-interoperable-application"></a>撰寫可互通的應用程式
 每當應用程式使用多個驅動程式針對相同的程式碼，該程式碼必須在這些驅動程式之間的互通。 在大部分情況下，這是容易的工作。 例如，擷取使用順向資料指標的資料列的程式碼也適用於所有的驅動程式。 在某些情況下，這可能會比較困難。 例如，建構 SQL 陳述式中使用的識別項的程式碼需要考慮識別碼案例中，用引號括住，和一段、 兩部分和三部分命名慣例。  

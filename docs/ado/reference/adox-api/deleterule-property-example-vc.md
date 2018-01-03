@@ -3,7 +3,7 @@ title: "DeleteRule 屬性範例 （VC + +） |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4445d5c7eb8097b1a3871b389527d3e11f53de9b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 39e22b86ce68f3fdb4a608097d4da3683cef120b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule 屬性範例 （VC + +）
 這個範例會示範[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)屬性[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件。 程式碼會將附加新[資料表](../../../ado/reference/adox-api/table-object-adox.md)然後定義新的主要金鑰，設定**DeleteRule**至**adRICascade**。  
@@ -111,6 +111,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [DeleteRule 屬性 (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [Key 物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

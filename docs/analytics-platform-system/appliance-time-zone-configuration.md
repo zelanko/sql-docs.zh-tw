@@ -3,10 +3,10 @@ title: "應用裝置的時區組態 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cea9eeb9-fe05-4e65-b229-539de02ab20a
 caps.latest.revision: "18"
-ms.openlocfilehash: 05cf2811dad14a6a7d53752893f363b061b86843
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0dc20594fa45375fe07b4ec374da9c752d3cc8b0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-time-zone-configuration"></a>設定應用裝置時區
 **時區**頁面可讓您設定 SQL Server PDW 應用裝置上的所有節點的時區。  
@@ -39,6 +39,6 @@ ms.lasthandoff: 11/17/2017
   
 ![DWConfig 應用裝置時間](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md)  
   

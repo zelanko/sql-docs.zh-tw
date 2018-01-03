@@ -1,11 +1,13 @@
 ---
 title: "重新整理方法 (RDS) |Microsoft 文件"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -20,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd8ba42c4e1822e5ef1fafd6ec4f3b53c2a9a363
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5730f11f027cf6fb4492f8133f88ce80ac35aee3
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="refresh-method-rds"></a>重新整理方法 (RDS)
 重新查詢中指定的資料來源[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性和更新的查詢結果。  
@@ -51,7 +53,7 @@ DataControl.Refresh
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [重新整理方法範例 (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [重新整理方法範例 (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
  [地址通訊錄命令按鈕](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e6e18576f4898b6902d15ab20cc5ebfcb336835
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 943c1240a9a9ad80c5787597f01917c517966005
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions-odbc"></a>ODBC 異動
 A*交易*是工作的單位以單一、 不可部分完成的作業完成; 也就是說，作業成功，或整個失敗。 例如，請考慮將從銀行帳戶的金錢傳送到另一個。 這牽涉到兩個步驟： 從第一個帳戶提款金額和存款中第二個。 很重要，這兩個步驟就會成功。不是可接受的一個步驟，才會成功，而另一個則失敗。 支援交易的資料庫就能確保這項目。  

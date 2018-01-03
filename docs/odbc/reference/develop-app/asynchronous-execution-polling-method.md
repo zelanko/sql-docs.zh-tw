@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67943839b7e7425d22ab32251fd1993faf9552eb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 357ee77565e711e886184d803540b5745edb1f25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同步執行 （輪詢方法）
 ODBC 3.8 和 Windows 7 SDK 之前, 才被允許陳述式的函式的非同步作業。 如需詳細資訊，請參閱**非同步執行陳述式作業**稍後在本主題中。  
@@ -216,7 +216,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  下列範例示範如何使用**SQLSetConnectAttr**啟用連線相關的函式的非同步執行。  
   
 ### <a name="code"></a>程式碼  
@@ -270,7 +270,7 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  這個範例示範非同步認可作業。 回復作業也可以透過這種方式。  
   
 ### <a name="code"></a>程式碼  
@@ -299,5 +299,5 @@ BOOL AsyncCommit ()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [執行陳述式 ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)

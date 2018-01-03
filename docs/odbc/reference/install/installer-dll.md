@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab2692225b2067718e9180b5ce65f8e5ee999181
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 88ed1ece55476753d70ec9897453b3ea96df63aa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installer-dll"></a>安裝程式 DLL
 > [!NOTE]  
@@ -32,6 +32,6 @@ ms.lasthandoff: 11/20/2017
   
  安裝程式 DLL 包含安裝和移除 ODBC 元件、 維護這些元件的登錄資訊以及維護登錄資料來源的資訊函式。 它由 Microsoft 所撰寫，並可轉散發。 安裝程式 DLL 中的函式的完整說明，請參閱[Installer DLL 應用程式開發介面參考](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 元件的登錄項目](../../../odbc/reference/install/registry-entries-for-odbc-components.md)   
  [資料來源的登錄項目](../../../odbc/reference/install/registry-entries-for-data-sources.md)

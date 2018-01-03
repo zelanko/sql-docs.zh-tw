@@ -3,10 +3,10 @@ title: "tempdb 資料庫 (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -17,11 +17,11 @@ ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
 caps.latest.revision: "22"
 ms.workload: not set
-ms.openlocfilehash: 94cd8614f5098a1f065dbfe19f0ec024c42f9179
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 **tempdb**會儲存使用者資料庫的本機暫存資料表的 SQL Server PDW 系統資料庫。 暫存資料表，通常可用來改善查詢效能。 比方說，您可以使用的暫存資料表，使模組化指令碼，並重複使用計算的資料。  
@@ -91,7 +91,7 @@ SQL Server PDW 會從資料表卸除**tempdb**時：
   
 ## <a name="RelatedTasks"></a>相關的工作  
   
-|工作|Description|  
+|工作|描述|  
 |---------|---------------|  
 |中建立資料表**tempdb**。|您可以建立使用者的暫存資料表以 CREATE TABLE 和 CREATE TABLE AS SELECT 陳述式。 如需詳細資訊，請參閱[CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)和[CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)。|  
 |檢視中的現有資料表的清單**tempdb**。|`SELECT * FROM tempdb.sys.tables;`|  

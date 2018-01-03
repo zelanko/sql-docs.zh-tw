@@ -3,7 +3,7 @@ title: "群組物件 (ADOX) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a45b7388be1fa7c0a04d1142f6d11ef6fd796333
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 906e5c6c208e4cc6aadf1d6e1d3a4f5529c3eb00
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="group-object-adox"></a>群組物件 (ADOX)
 代表有受保護的資料庫內的存取權限的群組帳戶。  
@@ -46,6 +46,6 @@ ms.lasthandoff: 11/17/2017
   
 -   [Group 物件屬性、方法和事件](../../../ado/reference/adox-api/group-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [群組集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users 集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

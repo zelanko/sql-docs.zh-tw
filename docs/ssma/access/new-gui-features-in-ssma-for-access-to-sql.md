@@ -1,7 +1,7 @@
 ---
 title: "SSMA for Access to SQL 中的新 GUI 功能 |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 90d38ef5e88cb2776d4b036f0cd40461d0cc4397
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 392ffae9874950d288a315798685294ccac71a28
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>SSMA for Access to SQL 中的新 GUI 功能
 本章節描述 SSMA 使用者介面的新功能  

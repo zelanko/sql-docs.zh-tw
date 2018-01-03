@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f213203e7601c79f8f5336756462d6ad344aaa8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fc0aebc832ff451ab302636c7621b008bec4da1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>步驟 3： 建立和執行 SQL 陳述式
 第三個步驟是建置和執行 SQL 陳述式，如下圖所示。 用來執行此步驟的方法很可能會不同極大的差異。 應用程式可能會提示使用者輸入 SQL 陳述式，並建立根據使用者輸入 SQL 陳述式，或使用硬式編碼的 SQL 陳述式。 如需詳細資訊，請參閱[建構 SQL 陳述式](../../../odbc/reference/develop-app/constructing-sql-statements.md)。  

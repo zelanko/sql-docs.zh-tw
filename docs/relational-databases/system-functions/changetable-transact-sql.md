@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5cd1687ea44749eea8a777d80026d375fbd841a2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ CHANGETABLE (
  版本*資料表*，{< 鍵值 >}  
  針對指定的資料列傳回最新的變更追蹤資訊。 主索引鍵值必須識別資料列。 <主索引鍵值> 會識別主索引鍵資料行和指定值。 您可以用任何順序指定主索引鍵資料行名稱。  
   
- *Table*  
+ *[資料表]*  
  可取得其變更追蹤資訊的使用者定義資料表。 您必須在資料表上啟用變更追蹤。 可以使用一部分、兩部分、三部分或四部分資料表名稱。 資料表名稱可以是資料表的同義字。  
   
  *column_name*  
@@ -99,7 +99,7 @@ CHANGETABLE (
 ### <a name="changetable-changes"></a>CHANGETABLE CHANGES  
  指定 CHANGES 時，會傳回具有下列資料行的零個或多個資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|與資料列最後變更相關聯的版本值|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|與最後插入作業相關聯的版本值。|  
@@ -111,7 +111,7 @@ CHANGETABLE (
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  指定 VERSION 時，會傳回具有下列資料行的一個資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|與資料列相關聯的目前變更版本值。<br /><br /> 如果尚未針對比變更追蹤保留週期長的任何週期進行變更，或者資料列在啟用變更追蹤以來尚未經過變更，則值為 NULL。|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|您可以使用 WITH 子句當做 INSERT、UPDATE 或 DELETE 陳述式一部分選擇性指定的變更內容資訊。|  
@@ -158,7 +158,7 @@ CHANGETABLE (
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. 針對資料的首次同步處理傳回資料列  
  下列範例會顯示如何針對資料表資料的首次同步處理取得資料。 該查詢會傳回所有資料列資料及其相關聯的版本。 然後您可以將該資料插入或加入將包含已同步處理之資料的系統。  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -170,7 +170,7 @@ CROSS APPLY CHANGETABLE
 ### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>B. 列出自特定版本以來進行的所有變更  
  下列範例會列出自指定之版本 (`@last_sync_version)` 以來，在資料表中所進行的全部變更。 [Emp ID] 和 SSN 是複合主索引鍵中的資料行。  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -182,7 +182,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>C. 取得同步處理的所有變更資料  
  下列範例會顯示您如何取得已經變更的所有資料。 此查詢會加入包含使用者資料表的變更追蹤資訊，以便傳回使用者資料表資訊。 使用 `LEFT OUTER JOIN` 以便針對刪除的資料列傳回資料列。  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -197,7 +197,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### <a name="d-detecting-conflicts-by-using-changetableversion"></a>D. 使用 CHANGETABLE(VERSION...) 偵測衝突  
  下列範例會顯示如何僅在資料列上次同步處理後尚未變更的情況下更新資料列。 特定資料列的版本號碼可利用 `CHANGETABLE` 取得。 如果資料列已經經過更新，則不會進行變更，而且查詢會傳回有關資料列最近更新的資訊。  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  

@@ -1,28 +1,33 @@
 ---
-title: "使用 R 的資料轉換 |Microsoft 文件"
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: "轉換資料使用 R （SQL 與 R 深入探討） |Microsoft 文件"
+ms.date: 12/24/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 0327e788-94cc-4a47-933b-7c5c027b9208
 caps.latest.revision: "19"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ebc10cd4169f48956ab6b9a770b46c1c11cad6f3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b55b2a0ae152cc0fb00d21a7c1221bc3dcdcbcc7
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="transform-data-using-r"></a>使用 R 的資料轉換
+# <a name="transform-data-using-r-sql-and-r-deep-dive"></a>使用 R （SQL 與 R 深入探討） 轉換的資料
+
+本文是資料科學深入探討教學課程中，有關如何使用一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
 
 **RevoScaleR** 套件提供適用於在各種分析階段轉換資料的多個函數：
 
@@ -32,32 +37,32 @@ ms.lasthandoff: 12/01/2017
 
 - **rxSummary**、 **rxCube**、 **rxLinMod**和 **rxLogit** 函數雖然不是專為資料移動所設計，但全部都支援資料轉換。
 
-在本節中，您將了解如何使用這些函數。 讓我們開始與 rxDataStep。
+在本節中，您會學習如何使用這些函式。 讓我們開始[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)。
 
 ## <a name="use-rxdatastep-to-transform-variables"></a>使用 rxDataStep 轉換變數
 
-RxDataStep 函式一次，從一個資料來源中讀取和寫入到另一個處理資料的一個區塊。 您可以指定要轉換的資料行、要載入的轉換等等。
+**rxDataStep** 函數會一次處理一個資料區塊，從一個資料來源讀取並寫入另一個資料來源。 您可以指定要轉換的資料行、要載入的轉換等等。
 
-為了讓此範例更有趣，您將使用另一個 R 套件中的函數來轉換資料。  **boot** 套件是其中一個「建議」的套件；也就是說， **boot** 會隨附於每個 R 版本，但未在啟動時自動載入。 因此，您搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]執行個體上，應該已提供此套件。
+若要讓此範例的有趣，讓我們使用來自另一個的 R 封裝函數來轉換資料。  **boot** 套件是其中一個「建議」的套件；也就是說， **boot** 會隨附於每個 R 版本，但未在啟動時自動載入。 因此，您搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]執行個體上，應該已提供此套件。
 
-從 **boot** 套件，您將使用 `inv.logit`函數，它會計算 logit 的反函數。 換句話說， `inv.logit` 函數會將 logit 轉換回 [0,1] 刻度的機率。
+從**開機**封裝，請使用此函式`inv.logit`，它會計算 logit 的反向。 換句話說， `inv.logit` 函數會將 logit 轉換回 [0,1] 刻度的機率。
 
 > [!TIP] 
 > 若要取得在這個標尺的預測另一種方式是以設定*類型*參數**回應**rxPredict 原始呼叫中。
 
-1. 一開始先建立一個資料來源以保存資料表 *ccScoreOutput*的資料。
+1. 開始建立資料來源，以便保存資料的目的地資料表中，為`ccScoreOutput`。
   
     ```R
     sqlOutScoreDS <- RxSqlServerData( table =  "ccScoreOutput",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-2. 再加入另一個資料來源以保存資料表 ccScoreOutput2 的資料。
+2. 加入另一個資料來源，以保存資料的資料表`ccScoreOutput2`。
   
     ```R
     sqlOutScoreDS2 <- RxSqlServerData( table =  "ccScoreOutput2",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-    在新的資料表中，您會從先前的 *ccScoreOutput* 資料表取得所有變數，再加上新建立的變數。
+    在新的資料表中，儲存從先前的所有變數`ccScoreOutput`資料表，再加上新建立的變數。
   
 3. 將計算內容設定為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
   
@@ -65,13 +70,13 @@ RxDataStep 函式一次，從一個資料來源中讀取和寫入到另一個處
     rxSetComputeContext(sqlCompute)
     ```
   
-4. 使用函式 rxSqlServerTableExists 來檢查是否輸出資料表*ccScoreOutput2*已經存在;，而且如果是，使用函式 rxSqlServerDropTable 以便刪除的資料表。
+4. 使用函數**rxSqlServerTableExists**來檢查是否輸出資料表`ccScoreOutput2`已經存在，而且如果是，使用此函式**rxSqlServerDropTable**以便刪除的資料表。
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput2"))     rxSqlServerDropTable("ccScoreOutput2")
     ```
   
-5. 呼叫 rxDataStep 函式，並在清單中指定所需的轉換。
+5. 呼叫 **rxDataStep** 函數，然後從清單中指定所需的轉換。
   
     ```R
     rxDataStep(inData = sqlOutScoreDS,
@@ -81,9 +86,9 @@ RxDataStep 函式一次，從一個資料來源中讀取和寫入到另一個處
         overwrite = TRUE)
     ```
 
-    當您定義要套用至每個資料行的轉換時，您也可以指定執行轉換所需的任何其他 R 套件。  如需您可以執行的轉換類型的詳細資訊，請參閱  [Transforming 和內嵌資料](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-transform)
+    當您定義要套用至每個資料行的轉換時，您也可以指定執行轉換所需的任何其他 R 套件。  如需您可以執行的轉換類型的詳細資訊，請參閱[如何轉換和子集資料使用 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform)。
   
-6. 呼叫 rxGetVarInfo 變數的摘要檢視中新的資料集。
+6. 呼叫 **rxGetVarInfo** 檢視新資料集裡的變數摘要。
   
     ```R
     rxGetVarInfo(sqlOutScoreDS2)
@@ -111,12 +116,12 @@ RxDataStep 函式一次，從一個資料來源中讀取和寫入到另一個處
 
 會保留原始的 logit 分數，但新增了新的資料行 *ccFraudProb*，在其中 logit 分數以介於 0 和 1 之間的值代表。
 
-請注意，因素變數已寫入資料表 *ccScoreOutput2* 作為字元資料。  若要使用這些變數作為後續分析的因素，請使用參數 *colInfo* 來指定層級。
+請注意，資料表已寫入因數變數`ccScoreOutput2`為字元資料。 若要使用這些變數作為後續分析的因素，請使用參數 *colInfo* 來指定層級。
 
-## <a name="next-step"></a>下一個步驟
+## <a name="next-step"></a>下一步
 
-[將資料載入至使用 rxImport 記憶體](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
+[使用 rxImport 將資料載入記憶體](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
 
 ## <a name="previous-step"></a>上一個步驟
 
-[建立和執行 R 指令碼](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
+[建立及執行 R 指令碼](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)

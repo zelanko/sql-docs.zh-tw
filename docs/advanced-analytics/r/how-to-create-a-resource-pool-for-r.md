@@ -2,11 +2,11 @@
 title: "建立機器學習的資源集區 |Microsoft 文件"
 ms.custom: 
 ms.date: 11/13/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f56dcd77490f258afd3086a94577c443adc879c5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f5699ed583f0fd40657f3be5f132b879681a7942
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>建立機器學習的資源集區
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 
     **範例結果**
 
-    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|預設|0|100|0|100|100|0|0|
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 
     **範例結果**
 
-    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|預設|100|20|0|2|
  
@@ -168,9 +168,9 @@ ms.lasthandoff: 11/17/2017
 
     **範例結果**
 
-    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    |1|內部|中|25|0|0|0|0|1|2|
+    |@shouldalert|內部|中|25|0|0|0|0|@shouldalert|2|
     |2|預設|中|25|0|0|0|0|2|2|
     |256|ds_wg|中|25|0|0|0|0|2|256|
   
@@ -182,10 +182,10 @@ ms.lasthandoff: 11/17/2017
 
     **範例結果**
     
-    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|預設|100|20|0|2|
-    |256|ds_ep|100|40|0|1|
+    |256|ds_ep|100|40|0|@shouldalert|
   
      如需詳細資訊，請參閱 [Resource Governor 目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)。
   

@@ -2,9 +2,11 @@
 title: "SQL Server 中的元件來支援 R |Microsoft 文件"
 ms.custom: 
 ms.date: 04/05/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7159ee64e1119ef4147a70f3309dc1e05691bef4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 2aa7a79610433c11270d146473f233747fda3d39
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="components-in-sql-server-to-support-r"></a>SQL Server 中支援 R 的元件
 
@@ -127,7 +129,7 @@ BxlServer 將 SQL Satellite 用於下列工作：
 8. SQL Satellite 管理與 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的通訊，並清理相關的工作物件。
 9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 將結果傳遞回用戶端。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [架構概觀](architecture-overview-sql-server-r.md)
 

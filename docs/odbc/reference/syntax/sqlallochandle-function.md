@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e355208a1ddcae70eaea4fd01e7d3193e3b2db47
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b8bf173bf0055dc06cf475aa72e137d9ca426222
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 函數
 **一致性**  
@@ -87,7 +87,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="diagnostics"></a>診斷  
  當**SQLAllocHandle**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**適當*HandleType*和*處理*值設定為*InputHandle*。 可針對傳回 SQL_SUCCESS_WITH_INFO （但不是 SQL_ERROR） *OutputHandle*引數。 下表列出通常所傳回的 SQLSTATE 值**SQLAllocHandle** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|Description|  
+|SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08003|未開啟連線。|(DM) *HandleType*引數是 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC，但所指定的連接*InputHandle*引數不是開啟。 在連線程序必須成功完成 （和連線必須開啟） 來配置陳述式或描述元驅動程式的處理。|  
@@ -190,6 +190,6 @@ SQLRETURN SQLAllocHandle(
 |設定環境屬性|[SQLSetEnvAttr 函式](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |設定陳述式屬性|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

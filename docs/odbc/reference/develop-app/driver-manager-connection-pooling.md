@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a2b77875c442720d452b8520e5c8fe03b122e2b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-manager-connection-pooling"></a>驅動程式管理員連接共用
 連接共用可讓應用程式不需要重新建立每次使用的連接集區使用的連接。 一旦已經建立連接，並放在集區中，應用程式可以重複使用該連接，而不執行完整的連線程序。  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="driver-aware-connection-pooling"></a>可感知驅動程式的連接共用  
  Windows 8 中從開始，ODBC 驅動程式可以使用連線集區中更有效率。 如需詳細資訊，請參閱[感知驅動程式的連接共用](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [連接到資料來源或驅動程式](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Microsoft Data Access Components 中的共用](http://go.microsoft.com/fwlink/?LinkId=120776)

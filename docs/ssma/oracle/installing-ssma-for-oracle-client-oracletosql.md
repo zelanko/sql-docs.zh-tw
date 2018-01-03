@@ -1,7 +1,7 @@
 ---
 title: "SSMA 安裝 Oracle 用戶端 (OracleToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: f9fcb6b5b332b603c44d5bf62114e6137b5c99ec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 90e1f2b745ef0a093fb7a5b2ebf662aa969154f1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>安裝的 SSMA for Oracle 用戶端 (OracleToSQL)
 SSMA 用戶端包含的程式檔案，執行下列工作：  
@@ -39,7 +39,7 @@ SSMA 用戶端包含的程式檔案，執行下列工作：
   
 本主題提供的安裝必要條件和安裝 SSMA 的指示。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
 SSMA 設計成使用 Oracle 9 或更新版本以及所有版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 SSMA 安裝之前，請確定電腦符合下列需求：  

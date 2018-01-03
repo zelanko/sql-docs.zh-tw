@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 40499191233e8b3eb32f6a255c0dfe6e47864681
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1e321e1771076a4a71370f0494fb7331eb3ffc6f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft 提供的 ODBC 驅動程式
 *驅動程式*實作 ODBC API 函式的程式庫。 每個驅動程式是針對特定資料庫管理系統 (DBMS)。 在大部分情況下，驅動程式會公開基礎 dbms; 功能不需要它們實作不支援的 DBMS 功能。 驅動程式執行特定工作，並可分為兩類： 以檔案為基礎和以 DBMS 為基礎。 如需有關驅動程式和驅動程式架構的詳細資訊，請參閱[驅動程式](../../odbc/reference/drivers.md)。  

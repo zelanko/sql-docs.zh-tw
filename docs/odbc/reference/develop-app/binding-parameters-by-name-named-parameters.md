@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54298b1c08235452f5717888754569d55442a47a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9548f671ce082d41423c1f85eb543c55b6194a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>繫結參數 （具名參數） 的名稱
 特定 Dbms 允許應用程式名稱而不是在程序呼叫中的位置來指定預存程序的參數。 這種參數稱為*具名參數*。 ODBC 支援具名參數的使用。 在 ODBC 中，具名的參數僅用於預存程序的呼叫，並不能用於其他 SQL 陳述式。  

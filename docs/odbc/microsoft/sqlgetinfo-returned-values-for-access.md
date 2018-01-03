@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61fe4d56d73a3d2d7822308af2fb0eb377647ced
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c56a813ec873293fec2dc846da851fc9d36f2dae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo 存取傳回值
 下表列出 C 語言 #defines *fInfoType*引數和傳回對應值**SQLGetInfo**。 這項資訊可以擷取傳遞列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需有關所傳回的值**SQLGetInfo**，請參閱*ODBC 程式設計人員參考*。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_DATA_SOURCE_NAME|Odbc.ini，從資料來源名稱或""如果在 Odbc.ini 使用 DRIVER 關鍵字|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
-|SQL_DATABASE_NAME|檔案名稱|  
+|SQL_DATABASE_NAME|[檔案名稱]|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|「 存取 」|  
 |SQL_DBMS_VER|多個值|  

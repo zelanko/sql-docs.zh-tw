@@ -1,11 +1,13 @@
 ---
 title: "SubmitChanges 方法 (RDS) |Microsoft 文件"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d7015e1a668697a12c373904c0bd71e22108449
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fc04a3ac77d6363c86f684b474fb5fa9a06c3c5e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
 提交暫止的變更在本機快取和可更新的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)中指定的資料來源[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性或[URL](../../../ado/reference/rds-api/url-property-rds.md)屬性。  
@@ -42,7 +44,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *DataFactory*  
  物件變數，表示[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件。  
   
- *連接*  
+ *[連接]*  
  A**字串**值，表示與所建立的連接**.RDSDataControl**物件的[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性。  
   
  *資料錄集*  
@@ -65,7 +67,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
 |-|-|  
 |[DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SubmitChanges 方法範例 (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [地址通訊錄命令按鈕](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [CancelUpdate 方法 (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   

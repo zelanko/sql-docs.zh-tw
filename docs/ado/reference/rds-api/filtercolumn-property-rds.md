@@ -3,7 +3,7 @@ title: "FilterColumn 屬性 (RDS) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0220331e62c0e541433c29a65fc34b45d0907d5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c255767f4dc479d7f5c056725f672016dd3d084f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn 屬性 (RDS)
 表示要評估的篩選準則的資料行。  
@@ -51,7 +51,7 @@ DataControl.FilterColumn = String
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [FilterColumn、 FilterCriterion、 FilterValue、 SortColumn，和 SortDirection 屬性及重設方法範例 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [FilterCriterion 屬性 (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
  [FilterValue 屬性 (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   

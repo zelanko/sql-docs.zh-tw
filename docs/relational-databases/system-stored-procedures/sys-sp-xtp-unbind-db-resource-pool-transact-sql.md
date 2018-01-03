@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f83721eacaed868a60b5035bd9342aaafabc04d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8adf2de1a4a28675164e08e825a027e9889dea1f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 sys.sp_xtp_unbind_db_resource_pool 'database_name'  
 ```  
   
@@ -64,7 +64,7 @@ Database 'Hekaton_DB' does not have a binding to a resource pool.
 ## <a name="example"></a>範例  
  下列程式碼會解除繫結 Hekaton_DB 資料庫與它所繫結的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資源集區。  如果 Hekaton_DB 目前並未繫結至 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資源集區，就會提供一則訊息。 資料庫必須重新啟動，才能讓解除繫結生效。  
   
-```tsql  
+```sql  
 sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'  
 ```  
   

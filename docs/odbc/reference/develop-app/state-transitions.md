@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0483bc53e02fa645c48200323ed4573105d37dd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6795a0e730f1b927b7921863714a2a9db55551e4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="state-transitions"></a>狀態轉換
 ODBC 定義離散*狀態*每個環境中，每個連接，和每個陳述式。 例如，環境有三種可能狀態： 未配置的 （在其任何環境配置），已配置 （所在環境配置，但沒有連線配置），並連接 （所在的環境和一個或多個連接都是已配置）。 連接具有七個可能的狀態。陳述式有 13 的可能狀態。  

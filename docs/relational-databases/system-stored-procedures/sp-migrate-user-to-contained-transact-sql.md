@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3920b0bc483dffb115211a0fe8837bd1bdb0d11e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 366d2347118fa55a8541e7f84a268b173ae5b2e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   **sp_migrate_user_to_contained**不能用在系統資料庫。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  當移轉使用者時，小心不要停用或刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有系統管理員登入。 如果刪除所有登入，請參閱[連接到 SQL Server 時系統管理員遭到鎖定](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。  
   
  如果**BUILTIN\Administrators**登入存在，系統管理員可以藉由啟動其應用程式使用連線**系統管理員身分執行**選項。  
@@ -85,7 +85,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ### <a name="a-migrating-a-single-user"></a>A. 移轉單一使用者  
  下列範例會將名為 `Barry` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入移轉為具有密碼之自主資料庫使用者。 此範例會保留使用者名稱，而且將登入保留為已啟用。  
   
-```tsql  
+```sql  
 sp_migrate_user_to_contained   
 @username = N'Barry',  
 @rename = N'keep_name',  
@@ -96,7 +96,7 @@ sp_migrate_user_to_contained
 ### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>B. 將所有具有登入的資料庫使用者移轉為沒有登入的自主資料庫使用者  
  下列範例會將以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入為基礎的所有使用者移轉至具有密碼之自主資料庫使用者。 此範例會排除未啟用的登入。 您必須在自主資料庫中執行此範例。  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

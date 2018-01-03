@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7c760c40bfdde79f13285270be5038d67096c09
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2bc56113933e993b5748564a1c64ef1798ed8ef1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-size"></a>資料行大小
 數值資料類型的資料行 （或參數） 的大小被定義為資料行或參數的資料類型或資料的精確度所使用的最大位數。 字元類型，這是以字元為單位的資料; 長度二進位資料類型資料行大小被定義為資料的長度以位元組為單位。 針對時間、 時間戳記和所有間隔資料型別，這是中的這項資料的字元表示法的字元數。 下表顯示每個簡潔的 SQL 資料類型所定義的資料行大小。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 |-------------------------|-----------------|  
 |所有的字元類型 [a]、 [b]。|定義或最大資料行的大小，以字元為單位的資料行或參數 （和 SQL_DESC_LENGTH 描述項欄位中包含）。 例如，單一位元組字元資料行定義為 char （10） 的資料行大小為 10。|  
 |SQL_DECIMAL SQL_NUMERIC|定義數字的數目。 例如，定義為 NUMERIC(10,3) 的資料行的有效位數為 10。|  
-|SQL_BIT [c]|1|  
+|SQL_BIT [c]|@shouldalert|  
 |SQL_TINYINT [c]|3|  
 |SQL_SMALLINT [c]|5|  
 |SQL_INTEGER [c]|10|  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 |所有二進位型別 [a]、 [b]。|定義或最大長度以位元組為單位的資料行或參數。 例如，定義為 binary （10） 的資料行的長度為 10。|  
 |SQL_TYPE_DATE [c]|10 (中的字元數*yyyy-mm-dd*格式)。|  
 |SQL_TYPE_TIME [c]|8 (中的字元數*時分秒*格式)，或 9 + *s* (中的字元數*hh: mm:*[.fff …] 格式，其中*的*的秒數有效位數)。|  
-|SQL_TYPE_TIMESTAMP|16 (中的字元數*yyyy-mm-dd hh: mm*格式)<br /><br /> 19 (中的字元數*yyyy-mm-dd* *hh: mm:*格式)<br /><br /> 或<br /><br /> 20 + *s* (中的字元數*yyyy-mm-dd hh: mm:*[.fff …] 格式，其中*s*的秒數有效位數)。|  
+|SQL_TYPE_TIMESTAMP|16 (中的字元數*yyyy-mm-dd hh: mm*格式)<br /><br /> 19 (中的字元數*yyyy-mm-dd* *hh: mm:*格式)<br /><br /> 中的多個<br /><br /> 20 + *s* (中的字元數*yyyy-mm-dd hh: mm:*[.fff …] 格式，其中*s*的秒數有效位數)。|  
 |SQL_INTERVAL_SECOND|其中*p*是間隔開頭有效位數和*s*的秒數有效位數， *p* (如果*s*= 0) 或*p* + *s*+ 1 (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|其中*p*是間隔開頭有效位數和*s*是秒數有效位數 9 +*p* (如果*s*= 0)，或 10 +*p*+ *s* (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|其中*p*是間隔開頭有效位數和*s*是秒數有效位數 6 +*p* (如果*s*= 0) 或 7 +*p* + *s* (如果*s*> 0)。 [d]|  

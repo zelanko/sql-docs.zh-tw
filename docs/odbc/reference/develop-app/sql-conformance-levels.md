@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e99ef46b43da0976e6401d8b169cddca8a1c5b23
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d397eef2bec5e803cca97f05d009708273a05473
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-conformance-levels"></a>SQL 一致性層級
 SQL 92 文法的驅動程式支援的層級由呼叫所傳回的值所表示**SQLGetInfo** SQL_SQL_CONFORMANCE 資訊類型。 這表示驅動程式是否符合以 sql-92 定義的項目、 FIPS 過渡、 中級者、 或全文層級。  

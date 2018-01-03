@@ -3,7 +3,7 @@ title: "SSMA 安裝 SAP ASE (SybaseToSQL) |Microsoft 文件"
 ms.custom: 
 ms.date: 11/29/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb778d7db788a74af4423f7431ab3d5ae2cb37f0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 508af2c209711c6063ee58243a29066323b641f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>安裝的 SSMA for SAP ASE (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) 的 SAP Adaptive Server Enterprise (ASE) 包含您用來執行移轉以 SAP ASE 從用戶端應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。 它也包含支援資料移轉和 ASE 系統函式的使用在您移轉之資料庫中的延伸模組組件。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="contents"></a>目錄  
   
-|發行項|Description|  
+|發行項|描述|  
 |---------|---------------|  
 |[針對 SAP ASE 用戶端 &#40; 安裝 SSMASybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|提供資訊和安裝的 SSMA for SAP ASE 用戶端的指示。|  
 |[在 SQL Server &#40; 安裝 SSMA 元件SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|提供相關資訊與執行個體上安裝的延伸模組組件的指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  

@@ -3,10 +3,10 @@ title: "載入"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: c7292108-4a48-409e-b0f4-e4ba84dce26f
 caps.latest.revision: "22"
-ms.openlocfilehash: bef6cf70573aaac642665b9f1e847f4b251e39e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be5ea7c2b939b58c7dfd826965f1568431cb1bff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-sql-server-pdw"></a>載入 (SQL Server PDW)
 您可以載入或插入資料至 SQL Server Parallel Data Warehouse (PDW) 使用 Integration Services [bcp 公用程式](../tools/bcp-utility.md)， **dwloader**命令列載入器或 SQL INSERT 陳述式。  
@@ -48,7 +48,7 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 ## <a name="related-tasks"></a>相關工作  
   
-|工作|Description|  
+|工作|描述|  
 |--------|---------------|  
 |建立暫存資料庫。|[建立暫存資料庫](staging-database.md)|  
 |載入 with Integration Services。|[使用 Integration Services 載入](load-with-ssis.md)|  

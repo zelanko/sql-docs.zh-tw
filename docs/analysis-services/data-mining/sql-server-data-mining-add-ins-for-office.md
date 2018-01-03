@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 資料採礦增益集，適用於 Office |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/18/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -19,14 +19,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: be2255a512f04cd23b8f9d6717d6ec63ab2b2f16
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 420437152716f78a03c78e3d9a67216029751f5e
+ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>適用於 Office 的 SQL Server 資料採礦增益集
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]適用於 Office 的資料採礦增益集是一組輕量型的預測分析工具，可讓您使用在 Excel 中的資料建立用於預測、 建議或探索分析模型。  
+
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 適用於 Office 的資料採礦增益集是一組輕量型的預測分析工具，可讓您使用 Excel 中的資料建立用於預測、建議或探索的分析模型。  
+  
+> [!IMPORTANT]
+> 資料採礦增益集適用於 Office 不支援 Office 2016 或更新版本。
   
  此增益集中的精靈和資料管理工具會針對以下這些常見的資料採礦工作提供逐步指示：  
   
@@ -60,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
      進階使用者還可使用 **[追蹤]** 功能查看傳送至伺服器的 XMLA 和 DMX 陳述式。  
   
-## <a name="getting-started"></a>快速入門  
+## <a name="getting-started"></a>使用者入門  
  如需詳細資訊，請參閱 [適用於 Office 的資料採礦增益集包含的內容](http://go.microsoft.com/fwlink/p/?LinkId=616849)  
   
 ## <a name="support-and-requirements"></a>支援與需求  

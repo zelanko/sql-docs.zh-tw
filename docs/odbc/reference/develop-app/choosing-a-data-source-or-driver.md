@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 449aeb2cf24cc03df6b76c84079c88badc7b1ff9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 496b9a40dfa1beb27144eead8d8ab9b03056b000
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-a-data-source-or-driver"></a>選擇資料來源或驅動程式
 資料來源或應用程式所使用的驅動程式是有時候硬式編碼應用程式中。 比方說，自訂撰寫的應用程式所要傳送 MIS 部門會包含這些資料來源的名稱，到另一個資料來源資料，應用程式只會無法搭配任何其他資料來源。 另一個範例是垂直應用程式，例如其中一個用於訂單項目。 這類應用程式一律使用相同的資料來源，具有預先定義的結構描述的應用程式知道。  

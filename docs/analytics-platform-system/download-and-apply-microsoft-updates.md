@@ -3,10 +3,10 @@ title: "下載並套用 Microsoft 更新 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
 caps.latest.revision: "51"
-ms.openlocfilehash: 806b7fd790244963d878038a3c3c291c387ebb1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-and-apply-microsoft-updates"></a>下載並套用 Microsoft 更新
 本主題討論如何從 Microsoft Update 類別目錄至 Windows Server Update Services (WSUS) 下載更新，並將這些更新套用至 Analytics Platform System 應用裝置伺服器。 Microsoft Update 將適用於 Windows 和 SQL Server 安裝所有適用的更新。 VMM 虛擬機器應用裝置上安裝 WSUS。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 >   
 > 設備正在使用時不套用 Microsoft 更新。 套用更新，可能會導致重新啟動的應用裝置節點。 未使用的應用裝置時，應該在維護期間套用更新。  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
 執行這些步驟之前，您需要：  
   
 -   設定您的應用裝置上的 WSUS 中的指示[設定 Windows Server Update Services &#40;WSUS &#41;&#40;Analytics Platform System &#41;](configure-windows-server-update-services-wsus.md).  
@@ -167,7 +167,7 @@ C:\pdwinst\media\setup.exe /action="MicrosoftUpdate" /DomainAdminPassword="<pass
 C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAdminPassword="<password>"  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [解除安裝 Microsoft 更新 &#40;Analytics Platform System &#41;](uninstall-microsoft-updates.md)  
 [適用於分析的平台系統 Hotfix &#40;Analytics Platform System &#41;](apply-analytics-platform-system-hotfixes.md)  
 [分析平台系統 Hotfix &#40; 解除安裝Analytics Platform System &#41;](uninstall-analytics-platform-system-hotfixes.md)  

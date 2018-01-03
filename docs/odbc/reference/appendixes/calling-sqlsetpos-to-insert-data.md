@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4d7693d4072ec27264112b6cca0d79f413aa3b21
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b5705fe7c5004a2c1e5845b3639c51681b046e2c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>呼叫 SQLSetPos 插入資料
 當 ODBC 2。*x*應用程式使用 ODBC 3*.x*驅動程式呼叫**SQLSetPos**與*作業*SQL_ADD，驅動程式管理員的引數未對應至這個呼叫**SQLBulkOperations**。 如果 ODBC 3*.x*驅動程式應該使用的應用程式，會呼叫**SQLSetPos** SQL_ADD，與驅動程式應該支援這項操作。  

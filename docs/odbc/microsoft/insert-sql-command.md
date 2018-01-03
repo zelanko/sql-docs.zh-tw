@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4256908ef2b62fb75ff28f381d036caf2a72cdcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c78b10cece63014d10d131446d9f43b154e91d7a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="insert---sql-command"></a>插入的 SQL 命令
 將記錄附加至資料表，其中包含指定的欄位值的結尾。  
@@ -57,6 +57,6 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
 ## <a name="driver-remarks"></a>驅動程式註解  
  當您的應用程式傳送 ODBC SQL 陳述式插入至資料來源時，Visual FoxPro ODBC 驅動程式會將命令轉換成 Visual FoxProINSERT 命令，而不需轉譯中。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立資料表的 SQL 命令](../../odbc/microsoft/create-table-sql-command.md)   
  [SELECT - SQL 命令](../../odbc/microsoft/select-sql-command.md)

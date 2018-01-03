@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 969a07554cc63be1ef95016405c30ff94a48b409
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 463da92c55e4d00285d5348eabb7d8480e3cc073
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-odbc-38"></a>什麼 &#39; s ODBC 3.8 的新功能
 Windows 8 包含 ODBC 3.8 的更新的版本。 Windows 8 中的 ODBC 3.8 包括下列功能：  
@@ -48,5 +48,5 @@ Windows 8 包含 ODBC 3.8 的更新的版本。 Windows 8 中的 ODBC 3.8 包括
   
  如需詳細資訊，請參閱[相容性比較表](../../odbc/reference/develop-app/compatibility-matrix.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 程式設計人員參考](../../odbc/reference/odbc-programmer-s-reference.md)

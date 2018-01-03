@@ -24,18 +24,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0b7991dfbe4aee731d436d725aba2081adf87e84
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6270ef7364bfd4d1c599a9feb564e36fc6f217a2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   記錄目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的活動和狀態。  這份資料表儲存在**msdb**資料庫。
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|儲存在工作階段識別碼**syssessions**資料表中**msdb**資料庫。|  
 |**job_id**|**uniqueidentifier**|作業的識別碼。|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 
 ## <a name="example"></a>範例
 這個範例會傳回所有的 SQL Server Agent 作業的執行階段狀態。  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中執行下列 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
-```tsql
+```sql
 SELECT sj.Name, 
     CASE
         WHEN sja.start_execution_date IS NULL THEN 'Not running'
@@ -65,7 +65,7 @@ WHERE session_id = (
     SELECT MAX(session_id) FROM msdb.dbo.sysjobactivity); 
 ```
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [dbo.sysjobhistory &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

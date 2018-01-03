@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53dc476875b70c221a0fd78d0da4995f75a078b6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3b72462175e33a47325cc563f35a56afd833f20d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-tools"></a>診斷工具
 兩個功能可以協助診斷問題，ODBC 應用程式中。 兩者都可以使用 ODBC 管理員從與實作由驅動程式管理員。 *追蹤*能記錄到記錄檔之函式呼叫的序列。 Visual Studio 分析器可讓分析的元件互動的相關資訊，在分散式環境中。  

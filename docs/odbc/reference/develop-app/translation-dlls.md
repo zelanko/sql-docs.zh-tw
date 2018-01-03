@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ba263755a392b0a4567733670b72db8ecf426e3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 284bc373cca1721ea66195115a320f5a4e53e797
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="translation-dlls"></a>轉譯 Dll
 通常，應用程式和資料來源會將資料儲存數個不同的字元集。 ODBC 提供讓驅動程式，將資料從一個字元設為另一個轉譯的一般機制。 其中包含實作的轉譯函式之 DLL 的**SQLDriverToDataSource**和**SQLDataSourceToDriver**，呼叫要轉譯資料的資料來源之間傳輸驅動程式和驅動程式。 這個 DLL 可以撰寫應用程式開發人員，驅動程式開發人員，或第三方。  

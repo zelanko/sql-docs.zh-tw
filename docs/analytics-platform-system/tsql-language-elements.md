@@ -3,10 +3,10 @@ title: "T-SQL 語言項目-Analytics Platform System Parallel Data Warehouse |Mi
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: a3b4da032f0f82aeedfaaa3a579f6a53b1aeb89c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32643cbe6ab7019cbac912eb26fe3e78423bdeb9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="language-elements"></a>語言元素
 TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
@@ -41,7 +41,7 @@ TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行�
 * [運算式](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [識別屬性因應措施](../t-sql/statements/create-table-transact-sql-identity-property.md)
-* [列印](../t-sql/language-elements/print-transact-sql.md)
+* [PRINT](../t-sql/language-elements/print-transact-sql.md)
 * [USE](../t-sql/language-elements/use-transact-sql.md)
 
 ## <a name="batches-control-of-flow-and-variables"></a>批次、 流程控制和變數
@@ -285,7 +285,7 @@ TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行�
 * [將交易隔離層級](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
 * [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 如需詳細參考資訊，請參閱[T-SQL 陳述式](tsql-statements.md)和[T-SQL 系統檢視表](tsql-system-views.md)。
 
 <!--Image references-->

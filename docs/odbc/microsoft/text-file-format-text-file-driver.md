@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0451bf3965e35353d3465cd5bd873954638f2fd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b7d111fee1ae82fc3dbb1fff3eec2dd9dff53465
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-file-format-text-file-driver"></a>文字檔案格式 （文字檔案驅動程式）
 ODBC 文字驅動程式支援分隔和固定寬度文字檔。 文字檔案是由選擇性標頭行，零或多個文字行所組成。  
@@ -43,7 +43,7 @@ ODBC 文字驅動程式支援分隔和固定寬度文字檔。 文字檔案是�
   
  下列文法中，撰寫的程式設計人員定義 ODBC 文字驅動程式可以讀取的文字檔案的格式：  
   
-|格式|表示法|  
+|[格式]|表示法|  
 |------------|--------------------|  
 |非斜體|必須依照顯示輸入的字元|  
 |*斜體*|在文法中其他地方定義的引數|  

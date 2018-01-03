@@ -1,11 +1,13 @@
 ---
 title: "伺服器屬性的範例 (VBScript) |Microsoft 文件"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: VB
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6cd2560fba33469f10fd339cf25637922d6dad3c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2901f6dbbfc7ccaa9b8b57c69f99aebcf964cb74
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="server-property-example-vbscript"></a>伺服器屬性的範例 (VBScript)
 > [!IMPORTANT]
@@ -177,7 +179,7 @@ End Sub
 <!-- EndServerRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Server 屬性 (RDS)](../../../ado/reference/rds-api/server-property-rds.md)
 

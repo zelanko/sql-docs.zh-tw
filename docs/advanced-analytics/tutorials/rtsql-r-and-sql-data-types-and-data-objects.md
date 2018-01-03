@@ -2,12 +2,14 @@
 title: "R 與 SQL 資料類型和資料物件 (SQL 快速入門中的 R) |Microsoft 文件"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
@@ -17,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 04a227a72d18f1cf2338bae384afe74c4529225d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 41219f87c47b970f8b8063db64f81032ab826ee0
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R 與 SQL 資料類型和資料物件 (SQL 快速入門中的 R)
 
@@ -197,10 +199,10 @@ EXECUTE sp_execute_external_script
     
 |*Col2*|*Col3*|
 |----|----|
-|1|1|
+|@shouldalert|@shouldalert|
 |10|2|
 |100|3|
-|1|4|
+|@shouldalert|4|
 |10|5|
 |100|6|
 

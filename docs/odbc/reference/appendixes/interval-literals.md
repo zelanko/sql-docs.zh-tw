@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b291abb4869256575b5d915e509107a1c46e2267
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0ee22a6f808dd1b97d0d865229c78cbf26808fba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interval-literals"></a>間隔常值
 ODBC 需要所有的驅動程式支援所有 C 間隔資料型別 SQL_CHAR 或 SQL_VARCHAR 資料類型的轉換。 如果基礎資料來源不支援間隔資料類型，不過，驅動程式必須知道為了支援這些轉換的正確格式 SQL_CHAR 欄位中的值。 同樣地，ODBC 需要應該有任何的 ODBC C 類型可轉換成 SQL_CHAR 或 SQL_VARCHAR，讓驅動程式必須知道何種格式字元的欄位中儲存的間隔。 本章節描述間隔常值，用以驗證 SQL_CHAR 欄位，或從 C 間隔資料類型轉換期間需要的驅動程式寫入器的語法。  

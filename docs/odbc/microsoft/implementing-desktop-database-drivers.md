@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 93d3fa89e2e918082f327848a55c6dbd60376984
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3994ed86f488748f3edd569ad80979d9871f588f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-desktop-database-drivers"></a>實作桌面資料庫驅動程式
 ODBC 資料來源管理員線上說明中可以找到指示和有關如何實作和設定 Microsoft ODBC 桌面資料庫驅動程式的技術提示。 可以存取此檔案，從驅動程式安裝常式期間[Microsoft ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)。  

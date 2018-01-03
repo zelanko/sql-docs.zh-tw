@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3ab63b576841aef6dec553ecc0c07ccec010319
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 508b89f5ff60b5cf64a03d167bf1ad4476edb734
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 函數
 **一致性**  
@@ -60,7 +60,7 @@ SQLRETURN SQLGetTypeInfo(
 ## <a name="diagnostics"></a>診斷  
  當**SQLGetTypeInfo**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType*的 SQL_HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLGetTypeInfo** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|Description|  
+|SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01S02 的警告|選項值已變更|指定的陳述式屬性不實作工作狀況，造成無效的因此暫時取代相似的值。 (呼叫**SQLGetStmtAttr**判斷暫時替代的值。)取代值無效， *StatementHandle*直到關閉資料指標。 您可以變更陳述式屬性是： SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_KEYSET_SIZE、 SQL_ATTR_MAX_LENGTH、 SQL_ATTR_MAX_ROWS sql_attr_query_timeout 時和 SQL_ATTR_SIMULATE_CURSOR。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -113,9 +113,9 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo**可能不會傳回所有資料型別。 例如，驅動程式可能不會傳回使用者定義資料類型。 應用程式可以使用任何有效的資料類型，不論是否由傳回**SQLGetTypeInfo**。 所傳回的資料型別**SQLGetTypeInfo**所支援的資料來源。 它們被供資料定義語言 (DDL) 陳述式中。 驅動程式可以使用資料類型以外的傳回類型的結果集資料傳回**SQLGetTypeInfo**。 在建立時的結果集目錄函數，驅動程式可能使用不支援的資料類型資料來源。  
   
-|資料行名稱|資料行<br /><br /> number|資料類型|註解|  
+|資料行名稱|「資料行」<br /><br /> number|資料類型|註解|  
 |-----------------|-----------------------|---------------|--------------|  
-|TYPE_NAME (ODBC 2.0)|1|Varchar 不是 NULL|資料來源而定的資料類型名稱。比方說，「 char （)"、"Varchar （)"、"MONEY"、"LONG VARBINARY"或者 「 CHAR （） FOR BIT DATA 中的 」。 應用程式必須使用此名稱在**CREATE TABLE**和**ALTER TABLE**陳述式。|  
+|TYPE_NAME (ODBC 2.0)|@shouldalert|Varchar 不是 NULL|資料來源而定的資料類型名稱。比方說，「 char （)"、"Varchar （)"、"MONEY"、"LONG VARBINARY"或者 「 CHAR （） FOR BIT DATA 中的 」。 應用程式必須使用此名稱在**CREATE TABLE**和**ALTER TABLE**陳述式。|  
 |DATA_TYPE (ODBC 2.0)|2|Smallint 非 NULL|SQL 資料類型。 這可以是 ODBC SQL 資料類型或驅動程式專屬 SQL 資料類型。 日期時間或間隔資料型別，這個資料行會傳回精確的資料類型 （例如 SQL_TYPE_TIME 或 SQL_INTERVAL_YEAR_TO_MONTH）。 如需有效的 ODBC SQL 資料類型的清單，請參閱[SQL 資料型別](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d： 資料型別中。 如需驅動程式特有的 SQL 資料類型資訊，請參閱驅動程式的文件。|  
 |COLUMN_SIZE (ODBC 2.0)|3|Integer|伺服器支援此資料類型最大資料行大小。 針對數值資料，這是最大有效位數。 字串資料，這是以字元為單位的長度。 Datetime 資料類型，這是以字元為單位 （假設最大值可以容納分數秒元件的有效位數） 的字串表示的長度。 會傳回 NULL 的資料類型資料行大小不適用。 間隔資料類型，這是字元的常值的時間間隔的表示法中的字元數目 (所定義的間隔開頭有效位數; 請參閱[間隔資料類型長度](../../../odbc/reference/appendixes/interval-data-type-length.md)附錄 d： 資料型別中)。<br /><br /> 如需有關資料行大小的詳細資訊，請參閱[資料行大小、 十進位數字、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d： 資料型別中。|  
 |LITERAL_PREFIX (ODBC 2.0)|4|Varchar|使用常值; 前置詞字元例如，單引號 （'） 的字元資料類型或 0x 用於二進位資料類型。會傳回 NULL 的資料類型的常值前置詞不適用。|  
@@ -148,6 +148,6 @@ SQLRETURN SQLGetTypeInfo(
 |擷取單一資料列或資料區塊的順向的方向|[SQLFetch 函式](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |傳回的驅動程式或資料來源的相關資訊|[SQLGetInfo 函式](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

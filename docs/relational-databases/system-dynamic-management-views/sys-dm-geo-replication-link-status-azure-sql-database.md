@@ -25,18 +25,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0399e0ef7587a7a7cb8a7ef32419518f1b95d53e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   包含每個複寫連結進行異地複寫合作關係中的主要和次要資料庫之間的資料列。 這包括主要和次要資料庫。 如果在給定主要資料庫有一個以上的連續複寫連結，此資料表會包含一個資料列，每個關聯性。 在所有資料庫，包括邏輯 master 中建立檢視。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|複寫連結的唯一識別碼。|  
 |partner_server|**sysname**|包含連結的資料庫的邏輯伺服器的名稱。|  
@@ -48,8 +48,8 @@ ms.lasthandoff: 11/17/2017
 |角色 (role)|**tinyint**|地理複寫角色，其中一個：<br /><br /> 0 = 主要。 Database_id 指地理複寫合作關係中的主要資料庫。<br /><br /> 1 = 次要資料庫。  Database_id 指地理複寫合作關係中的主要資料庫。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|次要類型，其中一個：<br /><br /> 0 = 不直接允許連接次要資料庫與資料庫不是可讀取權限。<br /><br /> 2 = 所有次要 repl; 中的資料庫允許連接 ication 進行唯讀存取。|  
-|secondary_allow_connections_desc|**nvarchar(256)**|否<br /><br /> 全部|  
-|last_commit|**datetimeoffset**|對資料庫認可的最後一個交易的時間。 如果擷取次要資料庫上的主要複寫連結已關閉時，它會指出哪個時間點的次要資料庫趕上之後之前。|
+|secondary_allow_connections_desc|**nvarchar(256)**|否<br /><br /> All|  
+|last_commit|**datetimeoffset**|對資料庫認可的最後一個交易的時間。 如果擷取主要資料庫上，它會指出在主要資料庫上的上次認可時間。 如果擷取次要資料庫上，它會指出在次要資料庫上的上次認可時間。 如果擷取次要資料庫上的主要複寫連結已關閉時，它會指出哪個時間點的次要資料庫趕上之後之前。|
   
 > [!NOTE]  
 >  如果終止複寫關聯性中移除次要資料庫 （區段 4.2）、 該資料庫中的資料列**sys.dm_geo_replication_link_status**檢視就會消失。  
@@ -69,7 +69,7 @@ SELECT
 FROM sys.dm_geo_replication_link_status;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER DATABASE &#40;Azure SQL Database &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys.geo_replication_links &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [sys.dm_operation_status &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  

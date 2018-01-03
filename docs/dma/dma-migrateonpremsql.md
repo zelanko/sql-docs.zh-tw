@@ -5,7 +5,7 @@ ms.date: 09/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a5e5d809845d6ecd7378a370c800231fb10c2a8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 666236842318cfba0cee38f71ac694eef86cdbf5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrate-on-premises-sql-server-using-data-migration-assistant"></a>移轉內部部署 SQL Server 使用的資料移轉小幫手
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 
 1. 建議您選取加密的連接**加密連接**中**連接屬性**> 一節。
 
-1. 按一下 **[下一步]**。
+1. 按 [下一步] 。
 
    ![指定來源和目標 頁面](../dma/media/SourceTarget.png)
 
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
 
    ![若要將資料庫備份複製到不同位置的選項](../dma/media/CopyDatabaseDifferentLocation.png)
 
-1. 按一下 **[下一步]**。
+1. 按 [下一步] 。
 
 資料移轉小幫手會執行驗證在備份的資料夾、 資料和記錄檔的位置。 如果任何驗證失敗，請修正選項並按一下**下一步**。
 

@@ -3,7 +3,7 @@ title: "FetchOptions 屬性 (RDS) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb723da9cfd35101167b3d8618fefd4d55cc8f9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77ed1de5f9506512e3f7812b2355b1c52d5fa8f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 屬性 (RDS)
 表示非同步擷取的類型。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="setting-and-return-values"></a>設定和傳回值  
  設定或傳回下列值之一。  
   
-|常數|Description|  
+|常數|描述|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|所有記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)控制項傳回至應用程式之前提取。 完整**資料錄集**之前執行任何動作，它允許應用程式擷取。|  
 |**adcFetchBackground**|控制項可以傳回至應用程式儘速擷取第一個批次的記錄。 後續的讀取**資料錄集**，嘗試存取未擷取第一個批次中的記錄將會延遲，直到實際擷取大的記錄，此時控制項會傳回給應用程式。|  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ExecuteOptions 和 FetchOptions 屬性範例 (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Cancel 方法 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

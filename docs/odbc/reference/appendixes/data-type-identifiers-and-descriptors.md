@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0040a426bd11048a993e98015a536c76e1b4381c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1f54638aa02c885ee0e6fe8d14310d319dafb11c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>資料類型識別碼和描述元
 資料類型會列於[SQL 資料型別](../../../odbc/reference/appendixes/sql-data-types.md)和[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)稍早在本附錄中的區段都是 「 精簡 」 資料類型： 每個識別項是指單一資料類型。 沒有識別碼與資料類型之間的一對一對應。 描述元，不過，執行不會在所有情況下使用單一值來識別資料類型。 在某些情況下，他們會使用"verbose"的資料類型和類型的次要代碼。 除了 datetime 和間隔資料類型的所有資料型別的詳細資訊的類型識別項與相同的精簡型別識別碼，SQL_DESC_DATETIME_INTERVAL_CODE 中的值等於 0。 日期時間和間隔資料類型，不過，詳細資訊的類型 （如果是 SQL_DATETIME 或 SQL_INTERVAL） 會儲存在 SQL_DESC_TYPE、 精簡型別會儲存在 SQL_DESC_CONCISE_TYPE，，和子代碼，每一種精簡的類型會儲存在 SQL_DESC_DATETIME_INTERVAL_CODE。 設定一個欄位，會影響其他人。 如需有關這些欄位的詳細資訊，請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函式描述。  

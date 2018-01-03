@@ -3,23 +3,23 @@ title: "dwloader 平行處理資料倉儲的命令列載入器"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
-description: "* * dwloader * * 是 Parallel Data Warehouse (PDW) 的命令列工具，可將資料表資料列中大量載入現有的資料表。"
+description: "**dwloader** Parallel Data Warehouse (PDW) 的命令列工具，可將資料表資料列中大量載入現有的資料表。"
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: "90"
-ms.openlocfilehash: 0335005e2e0590efe28a0cbf7dff6aaacfea331f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader 命令列載入器
 **dwloader** Parallel Data Warehouse (PDW) 的命令列工具，可將資料表資料列中大量載入現有的資料表。 當載入的資料列，您可以將所有資料列加入到資料表結尾 (*附加模式*或*fastappend 模式*)、 附加新資料列，並更新現有的資料列 (*upsert 模式*)，或刪除所有現有之前載入的資料列，然後再將所有資料列插入空的資料表 (*重新載入模式*)。  
@@ -226,7 +226,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-t** *field_delimiter*  
 每個欄位 （資料行） 中的資料列分隔符號。 欄位分隔符號是一或多個這些 ASCII 逸出字元或 ASCII 十六進位值...  
   
-|名稱|逸出字元|十六進位字元|  
+|[屬性]|逸出字元|十六進位字元|  
 |--------|--------------------|-----------------|  
 |索引標籤|\t|0x09|  
 |歸位字元 (CR)|\r|0x0d|  
@@ -402,7 +402,7 @@ dym
 fastappend  
 載入器插入資料列直接管理，而不需要使用暫存資料表時，目的地資料表中的現有資料列的結尾。 fastappend 需要多重交易 (– m) 選項。 使用 fastappend 時無法指定暫存資料庫。 沒有任何與 fastappend，這表示您自己的載入處理序必須處理從失敗或已中止載入復原的復原。  
   
-upsert **-K***merge_column* [，...*n* ]    
+upsert **-K***merge_column* [，...*n* ]  
 載入器會使用 SQL Server Merge 陳述式來更新現有的資料列，並插入新資料列。  
   
 -K 選項指定要合併的基礎資料行的資料行。 這些資料行形成應該代表唯一的資料列的合併索引鍵。 如果合併索引鍵存在於目的地資料表時，會更新資料列。 如果合併索引鍵不存在於目的地資料表，則會附加資料列。  

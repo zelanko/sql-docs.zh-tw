@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7cfa7bcaf6c193a7abde71020d563a095ace3f3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: da3d5662b8eb85f994142aea0e4dff237fd9852b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-arrays-of-parameters"></a>使用參數陣列
 若要使用的應用程式會呼叫的參數陣列**SQLSetStmtAttr**與*屬性*則 sql_attr_paramset_size 會以指定的參數集數目的引數。 它會呼叫**SQLSetStmtAttr**與*屬性*SQL_ATTR_PARAMS_PROCESSED_PTR 以指定的位址變數中的驅動程式可以傳回的處理，參數的集合數目的引數包括錯誤設定。 它會呼叫**SQLSetStmtAttr**與*屬性*SQL_ATTR_PARAM_STATUS_PTR 指向用來傳回每個資料列的參數值的狀態資訊的陣列的引數。 驅動程式會將這些位址儲存在它所維護的陳述式的結構。  

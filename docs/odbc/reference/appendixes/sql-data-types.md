@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b5ebc2779d005a31f9b93a1cf6ca8fb6e35b346
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-data-types"></a>SQL 資料類型
 每個 DBMS 定義自己的 SQL 型別。 每個 ODBC 驅動程式會顯示只有這些 SQL 資料型別相關聯的 DBMS 所定義。 ODBC 定義的 SQL 類型識別項類型的資訊關於如何將驅動程式對應 DBMS SQL 和驅動程式將 DBMS SQL 類型對應至它自己的驅動程式專屬 SQL 類型識別項的方式透過呼叫傳回**SQLGetTypeInfo**。 驅動程式也會傳回 SQL 資料類型描述的資料行及透過呼叫參數的資料型別時**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，和**SQLSpecialColumns**。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_NUMERIC|數值 (*p*，*s*)|帶正負號，完全、 數字的值，有效位數*p*和小數位數*s* (1 < = *p* < = 15。*s* <= *p*)。 [4]|  
 |SQL_SMALLINT|SMALLINT|確切的數值有效位數 5、 小數點位數為 0 (帶正負號: – 32768 < =  *n*  < = 32767、 不帶正負號： 0 < =  *n*  < = 65535) [3]。|  
 _INTEGER|INTEGER|確切的數值有效位數 10 和小數點位數為 0 (帶正負號: – 2 [31] < =  *n*  < = 2 [31] – 1，而不帶正負號： 0 < =  *n*  < = 2 [32] – 1) [3]。|  
-|SQL_REAL|REAL|帶正負號，以二進位精確度 24 的近似、 數字值 （零或至 10[38]) 的絕對值 10 [–38]。|  
+|SQL_REAL|real|帶正負號，以二進位精確度 24 的近似、 數字值 （零或至 10[38]) 的絕對值 10 [–38]。|  
 |SQL_FLOAT|FLOAT (*p*)|帶正負號，大約、 數字值具有二進位精確度至少*p*。 （最大有效位數是驅動程式定義）。[5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|帶正負號，以二進位精確度 53 的近似、 數字值 （零或至 10[308]) 的絕對值 10 [–308]。|  
 |SQL_BIT|BIT|單一位元的二進位資料。[8]|  

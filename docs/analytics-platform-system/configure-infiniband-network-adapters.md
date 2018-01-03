@@ -3,10 +3,10 @@ title: "設定分析平台 System (APS) 的 InfiniBand 網路介面卡"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
 caps.latest.revision: "15"
-ms.openlocfilehash: 007e595f52ab891438c862afa6d94d68644b091f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>設定 Analytics Platform System InfiniBand 網路介面卡
 描述如何 InfiniBand 網路介面卡的伺服器上設定非應用裝置用戶端連接到控制項節點上 SQL Server Parallel Data Warehouse (PDW)。 使用下列指示的基本連線和高可用性，以便載入、 備份、 和其他處理程序會自動連線到作用中的 InfiniBand 網路。  
@@ -58,7 +58,7 @@ APS 高可用性，具有兩個 InfiniBand 網路，一個使用中，一個被�
   
 您必須已設定網路介面卡的權限的用戶端伺服器上的 Windows 帳戶。  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
 這些指示假設已 racked 並接上應用裝置 InfiniBand 網路用戶端伺服器。 軌道及纜線連接指示，請參閱[取得和設定載入伺服器](acquire-and-configure-loading-server.md)。  
   
 ### <a name="general-remarks"></a>一般備註  
@@ -186,6 +186,6 @@ APS 高可用性，具有兩個 InfiniBand 網路，一個使用中，一個被�
   
     -   MyPDW SQLCTL01  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [取得和設定來載入伺服器](acquire-and-configure-loading-server.md)  
   

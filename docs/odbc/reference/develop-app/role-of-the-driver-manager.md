@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a6e0b002c34e8bf35f4f2c9b42dd7b47293ac9b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7718a3d514c6862807cc4b47ecca8729c4c3a162
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="role-of-the-driver-manager"></a>驅動程式管理員的角色
 驅動程式管理員會決定最終的順序，以傳回它產生的狀態記錄。 特別是，它會判斷哪一筆記錄具有最高的等級，且會傳回第一次。 驅動程式會負責排序它所產生的狀態記錄。 狀態記錄所公佈的驅動程式管理員和驅動程式，驅動程式管理員會負責排序它們。 如需詳細資訊，請參閱[狀態記錄順序](../../../odbc/reference/develop-app/sequence-of-status-records.md)。  
