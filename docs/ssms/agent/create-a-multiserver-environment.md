@@ -3,7 +3,7 @@ title: "建立多伺服器環境 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/30/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 364a16b8cc7f25fba918fc51c06652781ba7c17e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 65663572c887bc63d0178c8e48cb24beacfec86a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-multiserver-environment"></a>建立多伺服器環境
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 多伺服器管理會要求您設定一部主要伺服器 (MSX) 以及一或多部目標伺服器 (TSX)。 將在所有目標伺服器上處理的作業會先在主要伺服器上定義，然後再下載至目標伺服器。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="related-tasks"></a>相關工作  
 下列主題說明建立多伺服器環境的常見工作。  
   
-|說明|主題|  
+|描述|主題|  
 |---------------|---------|  
 |描述如何建立主要伺服器。|[設為主要伺服器](../../ssms/agent/make-a-master-server.md)|  
 |描述如何建立目標伺服器。|[設為目標伺服器](../../ssms/agent/make-a-target-server.md)|  

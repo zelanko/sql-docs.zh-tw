@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5de0a22e84a354096a5e595b39f8ba60154bdd87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc6d693e70c23fa23f6a48780df9cc98ebab14ed
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-pages-sql-server"></a>還原頁面 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ ms.lasthandoff: 11/17/2017
   
      [建議](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要使用下列項目還原頁面：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -106,10 +106,10 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，RESTORE 權限預設為 **系統管理員 (sysadmin)** 和 **資料庫建立者 (dbcreator)** 固定伺服器角色的成員以及資料庫的擁有者 (**dbo**) (對 FROM DATABASE_SNAPSHOT 選項而言，資料庫一律存在)。  
   
- RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此，因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
+ RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開始， 就會支援頁面還原。  
@@ -118,14 +118,14 @@ ms.lasthandoff: 11/17/2017
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]連接到適當的  執行個體，然後在 [物件總管] 中，按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  展開 [資料庫]。 視資料庫而定，選取使用者資料庫，或者展開 [系統資料庫] ，再選取系統資料庫。  
+2.  展開 **[資料庫]**。 視資料庫而定，選取使用者資料庫，或者展開 [系統資料庫] ，再選取系統資料庫。  
   
 3.  以滑鼠右鍵按一下資料庫，指向 [工作] ，再指向 [還原] ，然後按一下 [頁面] ，這樣會開啟 [還原頁面]  對話方塊。  
   
      **Restore**  
      此區段與 [還原資料庫 (一般頁面)](../../relational-databases/backup-restore/restore-database-general-page.md) 上的 **[還原至]**執行相同功能。  
   
-     **資料庫**  
+     **[資料庫備份]**  
      指定要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選取現有的資料庫。  清單包含伺服器上的所有資料庫，但不含系統資料庫 **master**和 tempdb。  
   
     > [!WARNING]  
@@ -143,7 +143,7 @@ ms.lasthandoff: 11/17/2017
     |**元件**|備份元件：**資料庫**、**檔案**或 **\<空白>** (針對交易記錄)。|  
     |**型別**|執行的備份類型： **[完整]**、 **[差異]**或 **[交易記錄]**。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行備份作業的  執行個體名稱。|  
-    |**資料庫**|備份作業中所含的資料庫名稱。|  
+    |**[資料庫備份]**|備份作業中所含的資料庫名稱。|  
     |**位置**|備份組在磁碟區中的位置。|  
     |**第一個 LSN**|在備份組中第一個交易的記錄序號 (LSN)。 針對檔案備份為空白。|  
     |**最後一個 LSN**|在備份組中最後一個交易的記錄序號 (LSN)。 針對檔案備份為空白。|  
@@ -208,10 +208,10 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  這個順序與檔案還原順序類似。 事實上，分頁還原和檔案還原都可以做為相同順序的一部分來執行。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會以 `B` 還原檔案 `NORECOVERY`的四個損毀頁面。 接著，兩個記錄備份會套用 `NORECOVERY`，後面接著以 `RECOVERY`還原的結尾記錄備份。 這個範例會執行線上還原。 在範例中，檔案 `B` 的檔案識別碼是 `1`，而損毀頁面的頁面識別碼是 `57`、 `202`、 `916`和 `1016`。  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  

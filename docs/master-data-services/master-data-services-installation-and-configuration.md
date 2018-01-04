@@ -5,7 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1d909039eb43c65358515cd4c3891b20a9a2b7e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4e94eae55ba86f5aa2cd548790f583c281de8f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
   本文說明如何在 Windows Server 2012 R2 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 、設定 MDS 資料庫與網站，以及部署範例模型和資料。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 可讓您的組織管理受信任的資料版本。   
@@ -130,14 +130,14 @@ ms.lasthandoff: 11/20/2017
   
 2.  按一下 [建立資料庫]，然後按一下 [建立資料庫精靈] 中的 [下一步]。  
   
-3.  在 [資料庫伺服器] 頁面上，選取 [驗證類型]，然後按一下 [測試連接] 確認您可以使用所選驗證類型的認證連接到資料庫。 按一下 **[下一步]**。
+3.  在 [資料庫伺服器] 頁面上，選取 [驗證類型]，然後按一下 [測試連接] 確認您可以使用所選驗證類型的認證連接到資料庫。 按 [下一步] 。
   
     > [!NOTE]  
     >  若您選取 [目前使用者 - 整合式安全性] 做為驗證類型，[使用者名稱] 方塊會是唯讀的，並顯示登入電腦的 Windows 使用者帳戶名稱。 如果您要在 Azure 虛擬機器 (VM) 上執行 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，則 [使用者名稱] 方塊會顯示 VM 名稱以及 VM 上本機系統管理員帳戶的使用者名稱。 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  在 [資料庫名稱] 欄位中輸入名稱。 (選擇性) 若要選取 Windows 定序，請清除 [SQL Server 預設定序] 核取方塊，然後按一下一或多個可用選項 (例如 [區分大小寫])。 按一下 **[下一步]**。
+4.  在 [資料庫名稱] 欄位中輸入名稱。 (選擇性) 若要選取 Windows 定序，請清除 [SQL Server 預設定序] 核取方塊，然後按一下一或多個可用選項 (例如 [區分大小寫])。 按 [下一步] 。
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -285,7 +285,7 @@ ms.lasthandoff: 11/20/2017
  如需如何在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中使用模型和實體來建立資料結構的概觀，請參閱 [Master Data Services 概觀 &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)。  
   
 ## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
- 您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
+ 您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見提交至 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
   
 ## <a name="see-also"></a>另請參閱  
  [Master Data Services 資料庫](../master-data-services/master-data-services-database.md)   

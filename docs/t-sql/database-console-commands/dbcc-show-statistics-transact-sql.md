@@ -1,7 +1,7 @@
 ---
 title: "DBCC SHOW_STATISTICS (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -38,11 +38,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 777deb8a6e479b388d0dc980b58f7b757eed1b73
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c6b82cb2c44d049f44378cd86955373004bb0cb5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,10 +98,10 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>結果集  
 下表描述指定 STAT_HEADER 時，結果集所傳回的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
-|名稱|統計資料物件的名稱。|  
-|已更新|上次更新統計資料的日期和時間。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md)函式會擷取這項資訊的替代方式。|  
+|[屬性]|統計資料物件的名稱。|  
+|已更新|上次更新統計資料的日期和時間。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md)函式會擷取這項資訊的替代方式。 如需詳細資訊，請參閱[備註](#Remarks)此頁面中的區段。|  
 |資料列|上一次更新統計資料時位於資料表或索引檢視表中的資料列總數。 如果篩選了統計資料或是統計資料對應至篩選過的索引，此資料列數可能會少於資料表中的資料列數。 如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。|  
 |取樣的資料列|針對統計資料計算進行取樣的資料列總數。 如果取樣的資料列數 < 資料列數，顯示的長條圖和密度結果將會是根據取樣資料列數的預估值。|  
 |步驟|長條圖中的步驟數。 每一個步驟都會跨越某個範圍的資料行值，後面緊接著上限資料行值。 長條圖步驟會在統計資料中的第一個索引鍵資料行上定義。 步驟數的最大值為 200。|  
@@ -114,15 +114,15 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 下表描述指定 DENSITY_VECTOR 時，結果集所傳回的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |所有密度|密度是 1 / 相異值。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)。|  
 |平均長度|平均長度 (以位元組為單位)，用來儲存資料行前置詞的資料行值清單。 例如，如果清單 (3, 5, 6) 中的每一個值都需要 4 位元組，長度就是 12 位元組。|  
-|資料行|在前置詞中顯示 All density 和 Average length 的資料行名稱。|  
+|[資料行]|在前置詞中顯示 All density 和 Average length 的資料行名稱。|  
   
 下表描述指定 HISTOGRAM 選項時，結果集所傳回的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |---|---|
 |RANGE_HI_KEY|長條圖步驟的上限資料行值。 此資料行值也稱為索引鍵值。|  
 |RANGE_ROWS|資料行值在長條圖步驟內的預估資料列數，不包括上限。|  
@@ -130,9 +130,11 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |DISTINCT_RANGE_ROWS|在長條圖步驟內具有相異資料行值的預估資料列數，不包括上限。|  
 |AVG_RANGE_ROWS|在長條圖步驟內具有重複資料行值的平均資料列數，上限不包括在內 (RANGE_ROWS / DISTINCT_RANGE_ROWS for DISTINCT_RANGE_ROWS > 0)。| 
   
-## <a name="remarks"></a>備註  
+## <a name="Remarks"></a> 備註 
+
+統計資料更新將日期儲存在[統計資料的 blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)搭配[長條圖](#histogram)和[密度向量](#density)、 中繼資料中找不到。 讀取任何資料時產生統計資料，就不會建立統計資料的 blob，日期無法使用，而*更新*資料行是 NULL。 這是篩選的統計資料述詞未傳回任何資料列，或新的空白資料表的情況。
   
-## <a name="histogram"></a>長條圖  
+## <a name="histogram"></a> 長條圖  
 長條圖會測量資料集中每一個相異值的發生頻率。 查詢最佳化工具會計算有關統計資料物件之第一個索引鍵資料行中資料行值的長條圖，以統計方式取樣資料列或執行資料表或檢視表中所有資料列的完整掃描來選取資料行值。 如果長條圖是從一組取樣的資料列所建立，資料列數和相異值數的儲存總計會是預估值，而且不需要為整數。
   
 若要建立長條圖，查詢最佳化工具會排序資料行值、計算符合每一個相異資料行值的值數目，然後將資料行值彙總成最多 200 個連續長條圖步驟。 每一個步驟都包含某個範圍的資料行值，後面緊接著上限資料行值。 此範圍包括界限值之間的所有可能資料行值，但是不包括界限值本身。 最低的已排序資料行值就是第一個長條圖步驟的上限值。
@@ -148,8 +150,8 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 查詢最佳化工具會根據長條圖步驟的統計重要性來定義長條圖步驟。 它會使用最大值差異演算法，讓長條圖中的步驟數減至最少，同時讓界限值之間的差異最大化。 步驟數的最大值為 200。 長條圖步驟的數目可以少於相異值數目，即使包含了少於 200 個界限點的資料行也是如此。 例如，包含 100 個相異值的資料行可以擁有少於 100 個界限點的長條圖。
   
-## <a name="density-vector"></a>密度向量  
-查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 密度向量針對統計資料物件中資料行的每個前置詞各包含一個密度。 例如，如果統計資料物件包含索引鍵資料行`CustomerId`，`ItemId`和`Price`，在每一個下列資料行前置詞來計算密度。
+## <a name="density"></a> 密度向量  
+查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 密度向量針對統計資料物件中資料行的每個前置詞各包含一個密度。 例如，如果統計資料物件具有 `CustomerId`、`ItemId` 和 `Price` 等索引鍵資料行，就會根據下列每一個資料行前置詞來計算密度。
   
 |資料行前置詞|計算密度的依據|  
 |---|---|
@@ -185,7 +187,7 @@ DBCC SHOW_STATISTICS 會顯示在控制項節點層級的 Shell 資料庫中儲�
 ### <a name="a-returning-all-statistics-information"></a>A. 傳回所有的統計資料資訊  
 下列範例會顯示所有的統計資料資訊，包括`AK_Address_rowguid`索引`Person.Address`資料表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫。
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
 GO  
 ```  
@@ -193,7 +195,7 @@ GO
 ### <a name="b-specifying-the-histogram-option"></a>B. 指定 HISTOGRAM 選項  
 這會限制針對 Customer_LastName 顯示長條圖資料的統計資料資訊。
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
@@ -202,7 +204,7 @@ GO
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. 顯示一個統計資料物件的內容  
  下列範例會顯示 DimCustomer 資料表上 Customer_LastName 統計資料的內容。  
   
-```t-sql
+```sql
 -- Uses AdventureWorks  
 --First, create a statistics object  
 CREATE STATISTICS Customer_LastName   
@@ -216,7 +218,7 @@ GO
   
 ![DBCC SHOW_STATISTICS 結果](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "DBCC SHOW_STATISTICS 結果")
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
 [統計資料](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  

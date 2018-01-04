@@ -3,7 +3,7 @@ title: "摘要查詢結果 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e53feeedbed3359c525507de49e1e41caec621d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 23be6f5ada4c862e4f55d71d3023a8e0c56fdb7a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>摘要查詢結果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 當您建立彙總查詢時，可以套用某些邏輯原則。 例如，您無法顯示摘要查詢中的個別資料列內容。 查詢和檢視設計工具可協助您依據 [圖表窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 與 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 的運作模式來符合這些原則。  
@@ -46,6 +46,6 @@ ms.lasthandoff: 12/05/2017
 提供使用運算式，而不是使用預先定義子句執行摘要或彙總的步驟。  
   
 ## <a name="related-sections"></a>相關章節  
-[設計查詢和檢視使用說明主題 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 提供主題連結，內容包含如何使用查詢和檢視設計師。  
   

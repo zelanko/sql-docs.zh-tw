@@ -3,7 +3,7 @@ title: "以遞增或遞減順序排序 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,17 +20,17 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 03a5868a7e70052899d938443935b0443c2bd915
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d9dc0f7b18b198a7c31a658c5f4de90dc12ebb8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>以遞增或遞減順序排序 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用 **ASC** 或 **DESC** 關鍵字搭配 **ORDER BY** 子句，以遞增或遞減的方式，排序結果集中一或多個資料行內的查詢結果。  
   
 > [!NOTE]  
-> 排序次序一部份取決於資料行的定序序列。 您可以在 [定序](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md)對話方塊中變更定序序列。  
+> 排序次序一部份取決於資料行的定序序列。 您可以在 [定序對話方塊](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md)中變更定序序列。  
   
 以下程序假設您已經在查詢和檢視設計工具中使用 ORDER BY 子句排序一個或多個資料行開啟查詢。  
   
