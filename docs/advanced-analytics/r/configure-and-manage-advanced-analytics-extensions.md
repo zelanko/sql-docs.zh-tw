@@ -2,11 +2,11 @@
 title: "進階組態選項的機器學習服務 |Microsoft 文件"
 ms.custom: SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 369c630e249d7775e67508fc9b00e94447182012
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 24f2082572cdb314257826570471548f87b1b60e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>機器學習服務的進階的組態選項
 
@@ -104,6 +104,6 @@ ms.lasthandoff: 11/09/2017
 
 所有設定都會採用機碼值組的格式，分別位於獨立的行。 例如，若要變更的追蹤層級，您將加入行`Default: TRACE_LEVEL=4`。
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>請參閱
 
 [安全性考量](security-considerations-for-the-r-runtime-in-sql-server.md)

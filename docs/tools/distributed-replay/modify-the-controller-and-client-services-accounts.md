@@ -3,7 +3,7 @@ title: "修改控制器及用戶端服務帳戶 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c955e0a3d78b758d1fe571c88da1defcf45e692
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa1ebb116e83725355975dddc31108a9365d190b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>修改控制器服務帳戶與用戶端服務帳戶
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本主題中，您將學習如何修改 Distributed Replay controller 和 client 服務帳戶，然後重新套用存取控制清單 (Acl)。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  在已安裝 Distributed Replay 服務的電腦上，從命令提示字元，輸入 **dcomcnfg**。  
   
-2.  按兩下**服務**、 向下捲動並以滑鼠右鍵按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay\<服務名稱 >**，然後按一下**啟動**或**停止**。  
+2.  按兩下**服務**、 向下捲動並以滑鼠右鍵按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay\<服務名稱 >**，然後按一下 **啟動**或**停止**。  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>若要修改 Distributed Replay Controller 服務  
   
