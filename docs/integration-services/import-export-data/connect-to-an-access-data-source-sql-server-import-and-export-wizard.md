@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
 
 1.  在 [選擇資料來源] 或 [選擇目的地] 頁面上，按一下 [進階] 按鈕以開啟 [資料連結屬性] 對話方塊。  
 2.  在 [資料連結屬性] 對話方塊中，選取 [全部] 索引標籤。  
-3.  在屬性和值的清單中，選取 [Jet OLEDB:Database Password] (Jet OLEDB:Database 密碼)。   
+3.  在屬性和值的清單中，選取 [Jet OLEDB:Database 密碼] 。   
     
     ![指定 Access 密碼、畫面 1](../../integration-services/import-export-data/media/specify-access-password-screen-1.jpg) 
 4.  按一下 [編輯值] 開啟 [編輯屬性值] 對話方塊。  
