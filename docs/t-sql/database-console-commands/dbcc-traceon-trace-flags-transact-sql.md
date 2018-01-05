@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 05d205ca74a1da06e0783a69102b332603ec75a0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d5c466e35f8e37d7f2559e6766886b5ef80e390e
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-追蹤旗標 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,6 +82,7 @@ ms.lasthandoff: 01/02/2018
 |**2371**|將固定的自動更新統計資料閾值變更為動態的自動更新統計資料的臨界值。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2754171)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]下方和 [資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)130，此行為由引擎所控制，追蹤旗標 2371年沒有作用。<br /><br />**範圍**： 全域只|
 |**2389**|啟用自動產生遞增索引鍵 （長條圖修正） 快速統計的資料。 如果設定追蹤旗標 2389年，前端統計資料資料行標示為遞增，將會在查詢編譯時間調整用來預估基數的長條圖。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**注意：** CE 120 版或更新將不會套用這個追蹤旗標。 請改用追蹤旗標 4139。<br /><br />**範圍**： 全域或工作階段或查詢|
 |**2390**|啟用自動產生的快速統計資料，以遞增或未知的機碼 （長條圖修正）。 如果設定追蹤旗標 2390年，前端統計資料資料行標示為遞增或不明，將會在查詢編譯時間調整用來預估基數的長條圖。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**注意：** CE 120 版或更新將不會套用這個追蹤旗標。 請改用追蹤旗標 4139。<br /><br />**範圍**： 全域或工作階段或查詢|
+|**2422**|可讓[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中止要求時已經超過設定資源管理員 request_max_cpu_time_sec 所設定的最大時間。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/help/4038419)。<br /><br />**注意：**這個追蹤旗標適用於[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3 和更高版本的組建。<br /><br />**範圍**： 通用|
 |**2430**|可讓其他鎖定類別清除。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2754301)。<br /><br />**範圍**： 全域只| 
 |**2453**|可讓資料表變數，以足夠的資料列的數目變更時觸發重新編譯。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2952444)。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**範圍**： 全域或工作階段或查詢|
 |**2528**|利用 DBCC CHECKDB、DBCC CHECKFILEGROUP 和 DBCC CHECKTABLE 來停用物件的平行檢查。 依預設，查詢處理器會自動判斷平行處理原則的程度。 最大平行處理原則程度的設定方式與平行查詢相同。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。<br /><br />**注意：**平行 DBCC 會檢查通常都是啟用 （預設值）。 查詢處理器會重新評估，並且會自動調整的每個資料表或資料表 DBCC checkdb 檢查批次的平行處理原則。<br /><br />一般使用案例時，系統管理員可讓您知道該伺服器負載會增加 DBCC CHECKDB 完成，再以手動方式減少或增加並行處理與其他使用者的工作負載若要停用平行處理原則，因此選擇。 不過，停用平行檢查在 DBCC CHECKDB 可能會造成它需要更長的時間才能完成。<br /><br />**注意：**如果使用 TABLOCK 選項來執行 DBCC CHECKDB，平行處理原則已停用資料表可能已鎖定的時間較長的時間。<br /><br />**注意：**開頭[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2，MAXDOP 選項可用來覆寫 max degree of parallelism 組態選項的 sp_configure 陳述式。<br /><br />**範圍**： 全域或工作階段|

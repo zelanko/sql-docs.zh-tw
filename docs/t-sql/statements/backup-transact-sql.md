@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef97afb50c2a8d4dcf18ea342b8ac98dc6014863
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b3cdba9ffe5b8020a0e3d7c64c766cc54d89c71
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var }  
+     { 'physical_device_name' | @physical_device_name_var | NUL }  
  }   
   
 <MIRROR TO clause>::=  
@@ -196,7 +196,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  這是指要包含在備份中的檔案群組邏輯名稱，或是其值等於該檔案群組邏輯名稱的變數。 在簡單復原模式之下，只允許唯讀檔案群組使用檔案群組備份。  
   
 > [!NOTE]  
->  當資料庫備份因資料庫大小和效能需求而不可行時，請考慮使用檔案備份。  
+>  當資料庫備份因資料庫大小和效能需求而不可行時，請考慮使用檔案備份。 NUL 裝置可用來測試備份的效能，但不是應該用於實際執行環境。
   
  *n*  
  這是一個預留位置，表示可以在逗號分隔清單中指定多個檔案和檔案群組。 數目沒有限制。 
@@ -227,8 +227,11 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  { *logical_device_name* | **@***logical_device_name_var* }  
  這是用來備份資料庫之備份裝置的邏輯名稱。 邏輯名稱必須遵照識別碼的規則。 如果提供的變數 (@*logical_device_name_var*)，可用的備份裝置名稱指定為字串常數 (@*logical_device_name_var*  **=** 邏輯備份裝置名稱) 或指定為以外的任何字元字串資料類型的變數**ntext**或**文字**資料型別。  
   
- {磁碟 |磁帶 |URL}  **=**  { **'***physical_device_name***'**  |   **@** *physical_device_name_var* }  
- 指定磁碟檔案或磁帶裝置，或是 Windows Azure Blob 儲存體服務。 URL 格式用來建立備份至 Windows Azure 儲存體服務。 如需詳細資訊和範例，請參閱[SQL Server 備份及還原與 Microsoft Azure Blob 儲存體服務](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 如需教學課程，請參閱[教學課程： SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。  
+ {磁碟 |磁帶 |URL}  **=**  { **'***physical_device_name***'**  |   **@** *physical_device_name_var* |NUL}  
+ 指定磁碟檔案或磁帶裝置，或是 Windows Azure Blob 儲存體服務。 URL 格式用來建立備份至 Windows Azure 儲存體服務。 如需詳細資訊和範例，請參閱[SQL Server 備份及還原與 Microsoft Azure Blob 儲存體服務](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 如需教學課程，請參閱[教學課程： SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。 
+
+[!NOTE] 
+ NUL 磁碟裝置將會捨棄傳送給它的所有資訊，應該只用於測試。 這不是用於實際執行環境。
   
 > [!IMPORTANT]  
 >  與[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 CU2，直到[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，當備份至 URL 時，您可以只在對單一裝置備份。 若要備份至 URL 時，請備份到多個裝置，您必須使用[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]而且您必須使用共用存取簽章 (SAS) 權杖。 建立共用存取簽章的範例，請參閱[SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)和[簡化 SQL 認證的建立與使用 Powershell 的 Azure 儲存體上的共用存取簽章 (SAS) 權杖](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。  
@@ -236,6 +239,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 **適用於 URL**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
  在 BACKUP 陳述式內指定磁碟裝置之前，該裝置不需要存在。 如果實體裝置存在，且 BACKUP 陳述式並未指定 INIT 選項，就會將備份附加至裝置中。  
+ 
+ 不過，備份會仍在標記的所有頁面備份 NUL 裝置將會捨棄傳送到此檔案中的所有輸入。
   
  如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。  
   
@@ -346,7 +351,7 @@ DESCRIPTION **=** { **'***text***'** | **@***text_variable* }
 {EXPIREDATE **='***日期***'**|RETAINDAYS  **=**  *天*}  
 指定何時可以覆寫這個備份的備份組。 如果同時使用這兩個選項，RETAINDAYS 會優先於 EXPIREDATE。  
   
-如果指定兩個選項，則有到期日由**mediaretention**組態設定。 如需詳細資訊，請參閱 [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
+如果指定兩個選項，則有到期日由**mediaretention**組態設定。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
 > [!IMPORTANT]  
 >  這些選項只會防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 覆寫檔案。 您可以利用其他方法來清除磁帶，並利用作業系統來刪除磁碟檔案。 如需有關期限驗證的詳細資訊，請參閱這個主題中的 SKIP 和 FORMAT。  
@@ -649,7 +654,7 @@ GO
 |鏡像|媒體家族 1|媒體家族 2|媒體家族 3|  
 |------------|--------------------|--------------------|--------------------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
-|1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
+|@shouldalert|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
  媒體家族必須永遠備份到特定鏡像中的相同裝置。 因此，您每次使用現有媒體集時，都必須依照建立該媒體集時所指定的相同順序來列出每一個鏡像的裝置。  
   
@@ -714,7 +719,7 @@ GO
   
 當執行還原時，如果備份組尚未記錄在**msdb**資料庫、 資料表可能會修改備份記錄。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  開頭為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、**密碼**和**MEDIAPASSWORD**選項已遭到停用建立備份。 仍然可以還原以密碼建立的備份。  
   
 ### <a name="permissions"></a>Permissions  
@@ -872,7 +877,7 @@ WITH STATS = 5;
 ```
 
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)   

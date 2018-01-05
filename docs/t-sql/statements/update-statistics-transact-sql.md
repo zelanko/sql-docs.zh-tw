@@ -1,7 +1,7 @@
 ---
 title: "UPDATE STATISTICS (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 11/20/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b619b3cf7ea50fb87e18fd96e8a85a2a231d21f5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7c69949773ff1dae533c98d087780a2f4b436b62
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,8 @@ UPDATE STATISTICS table_or_indexed_view_name
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ] 
     ] ;  
   
 <update_stats_stream_option> ::=  
@@ -156,28 +157,42 @@ PERSIST_SAMPLE_PERCENT = {ON |OFF}
  如果不支援依據每個分割區區的統計資料，則會產生錯誤。 針對下列統計資料類型，不支援累加統計資料：  
   
 -   建立統計資料時，所使用的索引未與基底資料表進行分割區對齊。  
-  
 -   在 AlwaysOn 可讀取次要資料庫上建立的統計資料。  
-  
 -   在唯讀資料庫上建立的統計資料。  
-  
 -   在篩選的索引上建立的統計資料。  
-  
 -   在檢視上建立的統計資料。  
-  
 -   在內部資料表上建立的統計資料。  
-  
 -   使用空間索引或 XML 索引建立的統計資料。  
   
 **適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+
+MAXDOP = *max_degree_of_parallelism*  
+**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3)。  
+  
+ 覆寫**的最大平行處理原則程度**組態選項的統計資料作業的持續時間。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
+  
+ *max_degree_of_parallelism*可以是：  
+  
+ @shouldalert  
+ 隱藏平行計畫的產生。  
+  
+ \>1  
+ 限制指定的數目或更少根據目前的系統工作負載的統計資料平行作業中使用的處理器的數目上限。  
+  
+ 0 (預設值)  
+ 根據目前的系統工作負載，使用實際數目或比實際數目更少的處理器。  
   
  \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
-  
+
 ## <a name="remarks"></a>備註  
   
 ## <a name="when-to-use-update-statistics"></a>使用 UPDATE STATISTICS 的時機  
  如需使用 UPDATE STATISTICS 的時機的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
-  
+
+## <a name="limitations-and-restrictions"></a>限制事項  
+* 外部資料表不支援更新統計資料。 若要更新統計資料的外部資料表，卸除並重新建立統計資料。  
+* MAXDOP 選項不在與 STATS_STREAM、 資料列計數和 PAGECOUNT 選項相容。
+
 ## <a name="updating-all-statistics-with-spupdatestats"></a>使用 sp_updatestats 來更新所有統計資料  
  如需如何針對資料庫中所有使用者定義和內部資料表更新統計資料的詳細資訊，請參閱預存程序 [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。 例如，下列命令會呼叫 sp_updatestats 來更新資料庫的所有統計資料。  
   

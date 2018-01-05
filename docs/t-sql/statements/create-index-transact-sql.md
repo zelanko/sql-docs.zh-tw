@@ -59,11 +59,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 16335773aba9cc005911434d5090223e7e6f8209
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 48d755dcd5257a3208c087db44df1e9fd262ddcc
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -168,12 +168,12 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 <range> ::=   
 <partition_number_expression> TO <partition_number_expression>  
   
-Backward Compatible Relational Index  
-Important   The backward compatible relational index syntax structure 
-will be removed in a future version of SQL Server. Avoid using this 
-syntax structure in new development work, and plan to modify 
-applications that currently use the feature. Use the syntax structure 
-specified in <relational_index_option> instead.  
+Backward Compatible Relational Index
+
+> [!IMPORTANT]
+> The backward compatible relational index syntax structure will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+> Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature. 
+> Use the syntax structure specified in <relational_index_option> instead.  
   
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )   
@@ -514,7 +514,7 @@ MAXDOP = *max_degree_of_parallelism*
  如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]  
-> 並非每個版本都可使用平行索引作業[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 並非每個版本都可使用平行索引作業[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[版本和支援 SQL Server 2016 的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和[版本與支援功能的 SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  DATA_COMPRESSION  
  針對指定的索引、分割區編號或分割區範圍指定資料壓縮選項。 選項如下：  

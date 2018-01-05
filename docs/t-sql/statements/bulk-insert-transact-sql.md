@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5900878e440a0ae821655adea764eaebad8fddf2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: HT
+ms.openlocfilehash: ec29eaa73339980516f4a3de4b67fa195953d80a
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -335,7 +335,7 @@ GO
  如需有關這個主題以及使用 BULK INSERT 其他安全性考量的詳細資訊，請參閱[使用 BULK INSERT 或 OPENROWSET &#40; 匯入大量資料BULK_ &#41;&#40;SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="permissions"></a>Permissions  
- 需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 另外，如果以下一個或多個狀況成立，則需要 ALTER TABLE 權限：  
+ 需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 在 Azure SQL Database、 插入和資料庫 ADMINISTER BULK OPERATIONS 權限都必須的。 另外，如果以下一個或多個狀況成立，則需要 ALTER TABLE 權限：  
   
 -   有條件約束存在而且未指定 CHECK_CONSTRAINTS 選項。  
   

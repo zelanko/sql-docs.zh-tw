@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48926573b515a1f40fa0db983d846b4e801abfd4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -307,7 +307,8 @@ REORGANIZE 會線上執行。
 -   資料列群組中的 10%或更多的資料列已以邏輯方式刪除，SQL Server 將嘗試結合一或多個資料列群組中的這個資料列群組。    例如，具有 500,000 個資料列壓縮的資料列群組 1 和 1,048,576 個資料列的最大值與壓縮資料列群組 21。  資料列群組 21 有 60%的已刪除的資料列，讓保持 409,830 資料列。 SQL Server 就會結合這些兩個資料列壓縮新的資料列群組沒有 909,830 資料列群組。  
   
 重新組織與 (COMPRESS_ALL_ROW_GROUPS = {ON |**OFF** })  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（從 2016年開始） 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，COMPRESS_ALL_ROW_GROUPS 提供方法來開啟或已關閉差異資料列群組強制資料行存放區。 使用此選項時，不需要重建清空差異資料列群組的資料行存放區索引。  此特性加其他移除和合併磁碟重組功能可讓它不再需要重建索引，在大部分情況下。    
+ 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，COMPRESS_ALL_ROW_GROUPS 提供方法來開啟或已關閉差異資料列群組強制資料行存放區。 使用此選項時，不需要重建清空差異資料列群組的資料行存放區索引。  此特性加其他移除和合併磁碟重組功能可讓它不再需要重建索引，在大部分情況下。    
+
 -   ON 會將所有資料列群組強制至資料行存放區，不論大小和狀態 （關閉或開啟）。  
   
 -   關閉會強制至資料行存放區的所有 CLOSED 資料列群組。  
@@ -393,17 +394,11 @@ PAD_INDEX = { ON | OFF }
  如果不支援每個分割區區的統計資料，則會忽略該選項，並產生警告。 針對下列統計資料類型，不支援累加統計資料：  
   
 -   建立統計資料時，所使用的索引未與基底資料表進行分割區對齊。  
-  
 -   在 AlwaysOn 可讀取次要資料庫上建立的統計資料。  
-  
 -   在唯讀資料庫上建立的統計資料。  
-  
 -   在篩選的索引上建立的統計資料。  
-  
 -   在檢視上建立的統計資料。  
-  
 -   在內部資料表上建立的統計資料。  
-  
 -   使用空間索引或 XML 索引建立的統計資料。  
  
 **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
@@ -414,7 +409,7 @@ PAD_INDEX = { ON | OFF }
  如果是 XML 索引或空間索引，則只支援 ONLINE = OFF，而如果將 ONLINE 設定為 ON，將會引發錯誤。  
   
 > [!NOTE]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[版本和支援的功能[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[版本和支援的功能[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和[版本與支援功能的 SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  ON  
  索引作業持續期間不會保留長期資料表鎖定。 在索引作業的主要階段期間，來源資料表上只保留意圖共用 (IS) 鎖定。 這使得基礎資料表和索引的查詢或更新能夠繼續運作。 在作業開始時，共用 (S) 鎖定會在來源物件上保留一段很短的時間。 在作業結束時，如果建立非叢集索引，S (共用) 鎖定會在來源上保留一段很短的時間；在線上建立或卸除叢集索引時，以及重建叢集或非叢集索引時，將會取得 SCH-M (結構描述修改) 鎖定。 建立本機暫存資料表的索引時，ONLINE 不可設為 ON。  

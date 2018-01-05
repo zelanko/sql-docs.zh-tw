@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_query_stats (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 08/21/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 89f3fe5797170f85aeb1eff6eae506a5458999f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cda9fe3ab2bc54f878e45834bca907976cb7793c
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]
 > 若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_exec_query_stats**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary(64)**  |這是指查詢所屬批次或預存程序的 Token。<br /><br /> **sql_handle**搭配**statement_start_offset**和**statement_end_offset**，可用來擷取查詢的 SQL 文字，藉由呼叫**sys.dm_exec_sql_text**動態管理函數。|  
 |**statement_start_offset**|**int**|表示資料列於其批次或保存物件的文字中所描述之查詢的起始位置 (由 0 開始並以位元組為單位)。|  
@@ -107,10 +107,18 @@ ms.lasthandoff: 11/17/2017
 |**last_used_threads**|**bigint**|這個計畫執行上一次時的使用平行執行緒數目。 它一律是 0 的查詢記憶體最佳化的資料表。<br /><br /> **適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**min_used_threads**|**bigint**|這個計劃用過一次執行期間使用的平行執行緒最小數目。 它一律是 0 的查詢記憶體最佳化的資料表。<br /><br /> **適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**max_used_threads**|**bigint**|這個計劃用過一次執行期間使用的平行執行緒的數目上限。 它一律是 0 的查詢記憶體最佳化的資料表。<br /><br /> **適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**pdw_node_id**|**int**|此發行版本上的節點識別碼。<br /><br /> **適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**total_columnstore_segment_reads**|**bigint**|查詢所讀取的資料行存放區區段總計的總和。 不可為 null。<br /><br /> **適用於**： 開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**last_columnstore_segment_reads**|**bigint**|上次執行查詢所讀取的資料行存放區區段數目。 不可為 null。<br /><br /> **適用於**： 開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**min_columnstore_segment_reads**|**bigint**|在每次執行期間曾經讀取查詢的資料行存放區區段最小數目。 不可為 null。<br /><br /> **適用於**： 開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**max_columnstore_segment_reads**|**bigint**|在每次執行期間曾經讀取查詢的資料行存放區區段數目上限。 不可為 null。<br /><br /> **適用於**： 開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**total_columnstore_segment_skips**|**bigint**|資料行存放區區段已略過查詢總計的總和。 不可為 null。<br /><br /> **適用於**： 開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**last_columnstore_segment_skips**|**bigint**|已略過最後一個執行查詢的資料行存放區區段數目。 不可為 null。<br /><br /> **適用於**： 開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**min_columnstore_segment_skips**|**bigint**|查詢每次執行期間曾經略過的資料行存放區區段的最小數目。 不可為 null。<br /><br /> **適用於**： 開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**max_columnstore_segment_skips**|**bigint**|查詢每次執行期間曾經略過的資料行存放區區段數目上限。 不可為 null。<br /><br /> **適用於**： 開頭為[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|
   
 > [!NOTE]
-> <sup>1</sup>原生編譯的預存程序啟用統計資料收集時，會收集的工作者時間以毫秒為單位。 若查詢的執行時間少於一毫秒，其值將會是 0。  
+> <sup>1</sup>原生編譯的預存程序啟用統計資料收集時，會收集的工作者時間以毫秒為單位。 如果查詢的執行少於一毫秒，值將會是 0。  
   
 ## <a name="permissions"></a>Permissions  
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
@@ -124,7 +132,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-finding-the-top-n-queries"></a>A. 尋找 TOP N 查詢  
  下列範例會傳回平均 CPU 時間之前五項查詢的相關資訊。 這個範例會根據查詢雜湊彙總查詢，以便依據累計資源耗用量分組邏輯對等查詢。  
   
-``` t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
@@ -141,13 +149,12 @@ FROM
      CROSS APPLY sys.dm_exec_sql_text(QS.sql_handle) as ST) as query_stats  
 GROUP BY query_stats.query_hash  
 ORDER BY 2 DESC;  
-  
 ```  
   
 ### <a name="b-returning-row-count-aggregates-for-a-query"></a>B. 傳回查詢的資料列計數彙總  
  下列範例會傳回查詢的資料列計數彙總資訊 (資料列總數、最小資料列數目、最大資料列數目及上次傳回的資料列數目)。  
   
-``` t-sql  
+```sql  
 SELECT qs.execution_count,  
     SUBSTRING(qt.text,qs.statement_start_offset/2 +1,   
                  (CASE WHEN qs.statement_end_offset = -1   

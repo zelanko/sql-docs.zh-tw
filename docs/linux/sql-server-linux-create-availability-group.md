@@ -14,17 +14,19 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 6ad13c3432daee4fd38b6d46704adc0c00913f7a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5b01fd8add48b2529c9d4150f153d6aea0b5f6c
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>建立及設定可用性群組的 SQL Server on Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本教學課程涵蓋如何建立及設定可用性群組 (AG) 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]on Linux。 不同於[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]和稍早在 Windows 中，您可以啟用 Ag 具有或不需要先建立基礎 Pacemaker 叢集。 整合與叢集，必要時，才完成更新版本。
+
+本教學課程包括下列工作：
  
 > [!div class="checklist"]
 > * 啟用可用性群組。
@@ -593,11 +595,9 @@ Pacemaker 高可用性叢集基礎[!INCLUDE[ssnoversion-md](../includes/ssnovers
     sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
     ```
 
->[注意]RHEL 7.4 上，您可能會使用-主要的警告。 若要避免這個問題，使用下列語法：
-    ```bash
-    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true
-    ```
-
+    >[!NOTE]
+    >RHEL 7.4 上，您可能會使用-主要的警告。 若要避免這個問題，請使用`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+   
     **SUSE Linux Enterprise Server (SLES)**
     
     ```bash
@@ -618,7 +618,7 @@ Pacemaker 高可用性叢集基礎[!INCLUDE[ssnoversion-md](../includes/ssnovers
     commit
     ```
     
-    where *NameForAGResource* is the unique name given to this cluster resource for the AG, and *AGName* is the name of the AG that was created.
+    其中*NameForAGResource*是 ag，指定到這個叢集資源的唯一名稱和*AGName* AG 所建立的名稱。
  
 2.  建立 ag 接聽程式功能相關聯的 IP 位址資源。
 
@@ -647,8 +647,7 @@ Pacemaker 高可用性叢集基礎[!INCLUDE[ssnoversion-md](../includes/ssnovers
     ```bash
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
     ```
-   
-    
+
     **SLES**
     
     ```bash
@@ -690,5 +689,5 @@ Pacemaker 高可用性叢集基礎[!INCLUDE[ssnoversion-md](../includes/ssnovers
 大部分 AG 系統管理工作，包括升級和容錯移轉，請參閱：
 
 > [!div class="nextstepaction"]
-> [SQL Server on Linux 會操作 HA 可用性群組](sql-server-linux-availability-group-failover-ha.md)。
+> [SQL Server on Linux 會操作 HA 可用性群組](sql-server-linux-availability-group-failover-ha.md)
 

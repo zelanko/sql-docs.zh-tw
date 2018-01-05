@@ -33,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9e14fa00535414673f5526c6aedb3ec349235a29
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 壓縮指定之資料庫中的資料和記錄檔大小。
   
@@ -65,14 +65,14 @@ DBCC SHRINKDATABASE
  這是壓縮資料庫之後，資料庫檔案所要保留的可用空間百分比。  
   
  NOTRUNCATE  
- 將配置的頁面從檔案結尾移到檔案前端的未配置頁面，壓縮資料檔案中的資料。 *target_percent*是選擇性的。  
+ 將配置的頁面從檔案結尾移到檔案前端的未配置頁面，壓縮資料檔案中的資料。 *target_percent*是選擇性的。 Azure SQL 資料倉儲不支援此選項。 
   
  檔案結尾的可用空間並不會還給作業系統，檔案的實際大小也不會改變。 因此，當指定了 NOTRUNCATE 時，資料庫不會呈現壓縮狀態。  
   
  NOTRUNCATE 只適用於資料檔案。 記錄檔不受影響。  
   
  TRUNCATEONLY  
- 將檔案結尾的所有可用空間釋放給作業系統，但是不會在檔案內移動任何頁面。 資料檔案只會壓縮為最後配置的範圍。 *target_percent*如果指定了 truncateonly，便會被忽略。  
+ 將檔案結尾的所有可用空間釋放給作業系統，但是不會在檔案內移動任何頁面。 資料檔案只會壓縮為最後配置的範圍。 *target_percent*如果指定了 truncateonly，便會被忽略。 Azure SQL 資料倉儲不支援此選項。
   
  TRUNCATEONLY 會影響記錄檔。 若要只能截斷資料檔案，請使用 DBCC SHRINKFILE。  
   
@@ -82,7 +82,7 @@ DBCC SHRINKDATABASE
 ## <a name="result-sets"></a>結果集  
 下表描述結果集中的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的資料庫識別碼。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的識別碼。|  
@@ -108,6 +108,9 @@ DBCC SHRINKDATABASE
 壓縮的資料庫不必是單一使用者模式；在資料庫壓縮之後，其他使用者也可以在這個資料庫中工作。 其中包括系統資料庫。
   
 資料庫在備份時不能進行壓縮。 相反地，當資料庫上正在進行壓縮作業時，也不能對其進行備份。
+
+>[!NOTE]
+> 目前，Azure SQL 資料倉儲不支援 DBCC SHRINKDATABASE 與啟用 TDE。
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>DBCC SHRINKDATABASE 的運作方式  
 DBCC SHRINKDATABASE 會以個別檔案為基礎來壓縮資料檔案，但會依照所有記錄檔都是在單一連續記錄集區的方式來壓縮記錄檔。 檔案必定從結尾處進行壓縮。

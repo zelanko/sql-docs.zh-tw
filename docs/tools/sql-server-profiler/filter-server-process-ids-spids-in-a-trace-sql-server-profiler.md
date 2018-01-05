@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 747817e69c175e90f119906f8263920bc1851c2e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b113e50edcd72ff72717cae44166817478c959b9
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>篩選追蹤中的伺服器處理序識別碼 (SPID) (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題描述如何使用篩選追蹤中的伺服器處理序識別碼 (Spid) [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
@@ -34,18 +34,18 @@ ms.lasthandoff: 12/21/2017
   
 1.  在 **[檔案]** 功能表上按一下 **[新增追蹤]**，然後連接到 SQL Server 的執行個體。  
   
-     會出現 [追蹤屬性] **[追蹤屬性]**對話方塊。  
+     會出現 [追蹤屬性]  對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 在 [工具] 功能表，按一下 [選項]，並清除 [進行連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
+    >  如果**進行連接後立即啟動追蹤**選取時，**追蹤屬性**對話方塊無法顯示，並開始追蹤。 若要關閉此設定，而在**工具**功能表上，按一下 **選項**，並清除**進行連接後立即啟動追蹤**核取方塊。  
   
 2.  在 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   
-3.  在 [使用範本] 名稱清單中，選取追蹤範本。  
+3.  在**使用範本**名稱清單中，選取追蹤範本。  
   
 4.  選擇性，指定要儲存追蹤結果的目的地檔案或資料表。  
   
-5.  在 [事件選取範圍] 索引標籤上，按一下 [SPID] 資料行標題，以啟動 [編輯篩選] 對話方塊。 您也可以用滑鼠右鍵按一下資料行標題，然後選擇 [編輯資料行篩選]。 如果 [SPID] 資料行未出現，請核取 [顯示所有資料行] 方塊。  
+5.  在**事件選取範圍**索引標籤上，按一下 [ **SPID**資料行標題，以啟動**編輯篩選**] 對話方塊。 您也可以用滑鼠右鍵按一下資料行標題，然後選擇 [編輯資料行篩選]。 如果 [SPID] 資料行未出現，請核取 [顯示所有資料行] 方塊。  
   
 6.  在 [編輯篩選] 對話方塊中，展開適當的比較運算子，然後輸入 SPID 作為比較的值。  
   

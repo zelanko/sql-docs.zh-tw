@@ -1,7 +1,7 @@
 ---
 title: "建立工作負載群組 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/16/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbe9d11d3b018df43eed813f8f987695f41ae189
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 CREATE WORKLOAD GROUP group_name  
 [ WITH  
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -65,13 +64,11 @@ CREATE WORKLOAD GROUP group_name
  指定要求在工作負載群組中的相對重要性。 下列任一個為其重要性，其中 MEDIUM 為預設值：  
   
 -   LOW  
-  
--   MEDIUM  
-  
+-   MEDIUM (預設值)    
 -   HIGH  
   
 > [!NOTE]  
->  每個重要性設定在內部都會儲存為計算所使用的數字。  
+> 每個重要性設定在內部都會儲存為計算所使用的數字。  
   
  IMPORTANCE 的資源集區範圍為本機；相同資源集區內部不同重要性的工作負載群組會彼此影響，但不會影響另一個資源集區中的工作負載群組。  
   
@@ -79,7 +76,7 @@ CREATE WORKLOAD GROUP group_name
  指定單一要求可由集區中獲取的記憶體最大數量。 這個百分比相對於 MAX_MEMORY_PERCENT 所指定的資源集區大小。  
   
 > [!NOTE]  
->  指定的數量僅參考查詢執行授與記憶體。  
+> 指定的數量僅參考查詢執行授與記憶體。  
   
  *值*必須是 0 或正整數。 允許的範圍*值*是從 0 到 100。 預設設定*值*為 25。  
   
@@ -102,7 +99,10 @@ CREATE WORKLOAD GROUP group_name
  指定要求可以使用的最大 CPU 時間量 (以秒為單位)。 *值*必須是 0 或正整數。 預設設定*值*為 0，表示無限制。  
   
 > [!NOTE]  
->  資源管理員不會在超過最大時間時阻止要求繼續執行。 不過，系統將會產生某個事件。 如需詳細資訊，請參閱[CPU Threshold Exceeded Event Class<](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。  
+> 根據預設，資源管理員不會防止要求繼續如果超過最大時間。 不過，系統將會產生某個事件。 如需詳細資訊，請參閱[CPU Threshold Exceeded Event Class<](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。  
+
+> [!IMPORTANT]
+> 從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3，並使用[追蹤旗標 2422年](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，超過最大時間時，資源管理員將中止要求。 
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*值*  
  指定查詢能夠等待記憶體授權 (工作緩衝區記憶體) 變成可用的最大時間 (以秒為單位)。  
@@ -164,7 +164,7 @@ CREATE WORKLOAD GROUP newReports
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

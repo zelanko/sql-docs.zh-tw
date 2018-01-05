@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: 439f906eaec98fe6b67c15842441f598ee6d8da5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e0a7c5078526b46a8cfa518eeb1d0b5708343115
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>適用於 SQL Server 運作 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -184,7 +184,7 @@ sudo crm_mon
     sudo pcs    cluster node add <nodeName3> 
     ```
 
-    下列範例廣告節點名為**vm3**到叢集。
+    下列範例會將名為的節點**vm3**到叢集。
 
     ```bash
     sudo pcs    cluster auth  
@@ -214,7 +214,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 疑難排解叢集它有助於了解三個精靈搭配以管理叢集資源。 
 
-| 精靈 | Description 
+| 精靈 | 描述 
 | ----- | -----
 | Corosync | 提供仲裁成員資格和叢集節點之間的傳訊。
 | Pacemaker | 位於 Corosync 之上，並提供資源的狀態機器。 
@@ -277,7 +277,7 @@ pacemaker: active/enabled
 
 * [叢集從頭](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)從 Pacemaker 指南
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 
