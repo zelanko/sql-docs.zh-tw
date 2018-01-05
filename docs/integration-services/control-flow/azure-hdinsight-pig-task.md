@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
      
 若要新增 **Azure HDInsight Pig 工作**，請將其拖放至 SSIS 設計師，並按兩下或在其上按一下滑鼠右鍵，然後按一下 [編輯]，即可看到以下 [Azure HDInsight Pig Task Editor (Azure HDInsight Pig 工作編輯器)] 對話方塊。  
   
-**Azure HDInsight Pig 工作[是** Azure SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。
+**Azure HDInsight Pig 工作** 是 [Azure SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。
   
  下列清單描述對話方塊中的欄位。  
   
