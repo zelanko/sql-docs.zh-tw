@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: ce2427d4defca8640d93ea25919fe805ac7c6133
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 1d2731e55c9add5cfa06d70297793f4f7d5fef48
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -335,7 +335,6 @@ NFS 伺服器上執行下列作業：
 2. 設定 SQL Server、 檔案系統和虛擬 IP 資源的叢集資源，並將設定推送到叢集。 您將需要下列資訊：
 
    - **SQL Server Resource Name>**： 叢集的 SQL Server 資源的名稱。 
-   - **逾時值**： 逾時值是叢集等候的時間量時資源上線。 SQL Server，這是您預期要讓 SQL Server 的時間`master`資料庫上線。  
    - **浮動 IP 資源名稱**： 虛擬 IP 位址資源的名稱。
    - **IP 位址**： 用戶端將用來連接到 SQL Server 的叢集執行個體的 IP 位址。 
    - **檔案系統資源名稱**： 檔案系統資源的名稱。
@@ -347,7 +346,7 @@ NFS 伺服器上執行下列作業：
 
    ```bash
    sudo pcs cluster cib cfg 
-   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci op defaults timeout=<timeout_in_seconds>
+   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci
    sudo pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
    sudo pcs -f cfg resource create <fileShareResourceName> Filesystem device=<networkPath> directory=<localPath>         fstype=<fileShareType>
    sudo pcs -f cfg constraint colocation add <virtualIPResourceName> <sqlResourceName>
@@ -359,7 +358,7 @@ NFS 伺服器上執行下列作業：
 
    ```bash
    sudo pcs cluster cib cfg
-   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci op defaults timeout=60s
+   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci
    sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    sudo pcs -f cfg resource create fs Filesystem device="10.8.8.0:/mnt/nfs" directory="/var/opt/mssql/data" fstype="nfs"
    sudo pcs -f cfg constraint colocation add virtualip mssqlha
