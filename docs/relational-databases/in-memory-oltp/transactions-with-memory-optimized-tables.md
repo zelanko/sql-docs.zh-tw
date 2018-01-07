@@ -1,7 +1,7 @@
 ---
 title: "記憶體最佳化資料表的交易 | Microsoft 文件"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.reviewer: 
@@ -17,21 +17,21 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 808602a0671f64daaf313af49ef4974d6e754061
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d3cbfc5f72207d546649621190ac7ad61e6d9be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
+# <a name="transactions-with-memory-optimized-tables"></a>記憶體最佳化資料表的交易
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 本文說明記憶體最佳化資料表和原生編譯預存程序特定的所有交易層面。  
   
-SQL Server 中的交易隔離等級會分別套用到記憶體最佳化資料表與硬碟資料表，而基礎機制並不相同。 了解這些差異，有助於程式設計人員設計高輸送量系統。 所有案例的共同目標都是要達成交易完整性。  
+SQL Server 中的交易隔離等級會分別套用到記憶體最佳化資料表與磁碟資料表，而底層機制並不相同。 了解這些差異，有助於程式設計人員設計高輸送量系統。 所有案例的共同目標都是要達成交易完整性。  
 
-如需記憶體最佳化資料表上的交易特定錯誤狀況，請跳至 [衝突偵測和重試邏輯](#confdetretry34ni)一節。
+如需記憶體最佳化資料表上的交易特定錯誤狀況，請跳至[衝突偵測和重試邏輯](#confdetretry34ni)一節。
   
 如需一般資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
@@ -42,7 +42,7 @@ SQL Server 中的交易隔離等級會分別套用到記憶體最佳化資料表
   
 因為要達成交易完整性的方法分為封閉式與開放式，所以在功能上所有差異。 記憶體最佳化資料表會使用開放式方法：  
   
-- 封閉式方法使用鎖定，在潛在衝突發生前加以封鎖。 會在執行陳述式時採用鎖定，並在認可交易時放開解除鎖定。  
+- 封閉式方法使用鎖定，在潛在衝突發生前加以封鎖。 會在執行陳述式時採用鎖定，並在認可交易時解除鎖定。  
   
 - 衝突一發生，開放式方法會立即偵測到，並於認可時執行驗證檢查。  
   - 記憶體最佳化資料表不得發生錯誤 1205，也就是死結。  
@@ -55,15 +55,15 @@ SQL Server 中的交易隔離等級會分別套用到記憶體最佳化資料表
   
 SQL Server 有下列交易初始模式：  
   
-- **自動認可** ：簡單查詢或 DML 陳述式一開始會隱含開啟交易，而陳述式的結尾會隱含認可交易。 **自動認可**是預設值。  
+- **自動認可**：簡單查詢或 DML 陳述式一開始會隱含開啟交易，而陳述式的結尾會隱含認可交易。 **自動認可**是預設值。  
   - 在自動認可模式中，您通常不需要使用 FROM 子句撰寫記憶體最佳化資料表交易隔離等級的資料表提示程式碼。  
   
-- **明確** - 您的 Transact-SQL 包含程式碼 BEGIN TRANSACTION，以及最終的 COMMIT TRANSACTION。 相同交易中可以包含二或多個陳述式。  
+- **明確**：您的 Transact-SQL 包含程式碼 BEGIN TRANSACTION，以及最終的 COMMIT TRANSACTION。 相同交易中可以包含兩或多個陳述式。  
   - 在明確模式中，您必須使用資料庫選項 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT，或在 FROM 子句針對記憶體最佳化資料表編寫有關交易隔離等級的資料表提示程式碼。  
   
-- **隱含** - 強制使用 SET IMPLICIT_TRANSACTION ON 時。 IMPLICIT_BEGIN_TRANSACTION 可能會是更適合的名稱，因為此選項的作用就只是在 0 = @@trancount 時，在每個 UPDATE 陳述式之前隱含執行明確 BEGIN TRANSACTION 的對等項目。 因此，您的 T-SQL 程式碼會決定最終要不要發出明確 COMMIT TRANSACTION。   
+- **隱含**：強制使用 SET IMPLICIT_TRANSACTION ON 時。 IMPLICIT_BEGIN_TRANSACTION 可能會是更適合的名稱，因為此選項的作用就只是在 0 = @@trancount 時，在每個 UPDATE 陳述式之前隱含執行明確 BEGIN TRANSACTION 的對等項目。 因此，您的 T-SQL 程式碼會決定最終要不要發出明確 COMMIT TRANSACTION。   
   
-- **ATOMIC 區塊** - ATOMIC 區塊中的所有陳述式一律執行為單一交易的一部分。 成功時將 ATOMIC 區塊的所有動作視為一個整體認可，或失敗後復原所有動作。 每個原生編譯的預存程序都需要 ATOMIC 區塊。  
+- **ATOMIC 區塊**：ATOMIC 區塊中的所有陳述式一律執行為單一交易的一部分。 成功時將 ATOMIC 區塊的所有動作視為一個整體認可，或失敗後復原所有動作。 每個原生編譯的預存程序都需要 ATOMIC 區塊。  
   
 <a name="codeexamexpmode25ni"/>  
   
@@ -170,7 +170,7 @@ ALTER DATABASE CURRENT
 | **41305**| 可重複的讀取驗證失敗。 這筆交易完成認可前，從記憶體最佳化資料表讀取的資料列已為另一筆認可的交易更新。 | 使用 REPEATABLE READ 或 SERIALIZABLE 隔離時，如果並行交易的動作又造成 FOREIGN KEY 條件約束違規，就會發生此錯誤。 <br/><br/>這種外部索引鍵條件約束的並行違規很少見，通常是應用程式邏輯或資料項目的問題。 不過，如果和 FOREIGN KEY 條件約束有關的資料行沒有索引，也會發生此錯誤。 因此，指引是一律在記憶體最佳化資料表中，建立外部索引鍵資料行的索引的上。 <br/><br/> 如需外部索引鍵違規所致驗證失敗的詳細考量，請參閱 SQL Server 客戶諮詢小組的 [部落格文章](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 。 |  
 | **41325** | 可序列化的驗證失敗。 目前交易稍早掃描的範圍中插入了新的資料列。 我們將這種資料列稱為虛設項目列。 | 使用 SERIALIZABLE 隔離時，如果並行交易的動作又造成 PRIMARY KEY、UNIQUE 或 FOREIGN KEY 條件約束違規，就會發生此錯誤。 <br/><br/> 這種並行條件約束違規很少見，通常是應用程式邏輯或資料項目的問題。 不過，與可重複讀取驗證失敗相似，如果相關資料行的 FOREIGN KEY 條件約束不含任何索引，也會發生此錯誤。 |  
 | **41301** | 相依性失敗︰相依性建立在稍後無法認可的另一個交易上。 | 這筆交易 (Tx1) 藉由讀取 Tx2 寫入的資料相依於另一筆交易 (Tx2)，而後者 (Tx2) 當時處於其驗證或認可處理階段。 接下來 Tx2 認可失敗。 Tx2 認可失敗最常見的原因是可重複讀取 (41305) 和可序列化 (41325) 驗證失敗，較不常見的原因則是記錄 IO 失敗。 |
-| **41839** | 交易超過認可相依性的數目上限。 | 給定的交易 (Tx1) 能夠相依的交易數目有限制。 這些交易是連出的相依性。 此外，能夠相依於指定交易 (Tx1) 的交易數目也有限制。 這些交易是連入的相依性。 兩者的限制皆為 8。 <br/><br/> 發生此錯誤的最常見情況，是大量的讀取交易存取由單一寫入交易寫入的資料。 如果讀取交易全都執行相同資料的大型掃描，以及如果寫入交易長時間處理驗證或認可，例如寫入交易在可序列化隔離下執行大型掃描 (延長驗證階段) 或交易記錄檔位於慢速記錄 IO 裝置 (延長認可處理的時間)，觸發這個狀況的可能性就會增加。 如果讀取交易正在執行大型掃描，且應該只存取少數資料列，可能會遺漏索引。 同樣地，如果寫入交易使用可序列化隔離且正在執行大型掃描，原本只想存取少數資料列，這也是沒有指示索引所致。 <br/><br/> 使用追蹤旗標 **9926**可以提高認可相依性的數目限制。 只有在確認未曾遺漏任何索引後，仍然發生這個錯誤狀況時，才使用此追蹤旗標，因為在前列案例中，它可能會遮罩這些問題。 另一個警告是，每筆交易都有大量連入及連出相依性且個別交易都有多層相依性的複雜相依性圖表，可能會造成系統沒有效率。  |
+| **41839** | 交易超過認可相依性的數目上限。 |**適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 較新版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 對於認可相依性的數目沒有限制。<br/><br/> 給定的交易 (Tx1) 能夠相依的交易數目有限制。 這些交易是連出的相依性。 此外，能夠相依於指定交易 (Tx1) 的交易數目也有限制。 這些交易是連入的相依性。 兩者的限制皆為 8。 <br/><br/> 發生此錯誤的最常見情況，是大量的讀取交易存取由單一寫入交易寫入的資料。 如果讀取交易全都執行相同資料的大型掃描，以及如果寫入交易長時間處理驗證或認可，例如寫入交易在可序列化隔離下執行大型掃描 (延長驗證階段) 或交易記錄檔位於慢速記錄 IO 裝置 (延長認可處理的時間)，觸發這個狀況的可能性就會增加。 如果讀取交易正在執行大型掃描，且應該只存取少數資料列，可能會遺漏索引。 同樣地，如果寫入交易使用可序列化隔離且正在執行大型掃描，原本只想存取少數資料列，這也是沒有指示索引所致。 <br/><br/> 使用追蹤旗標 **9926** 可以提高認可相依性的數目限制。 只有在確認未曾遺漏任何索引後，仍然發生這個錯誤狀況時，才使用此追蹤旗標，因為在前列案例中，它可能會遮罩這些問題。 另一個警告是，每筆交易都有大量連入及連出相依性且個別交易都有多層相依性的複雜相依性圖表，可能會造成系統沒有效率。  |
  
   
 ### <a name="retry-logic"></a>重試邏輯 
