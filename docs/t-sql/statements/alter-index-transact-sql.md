@@ -307,7 +307,7 @@ REORGANIZE 會線上執行。
 -   資料列群組中的 10%或更多的資料列已以邏輯方式刪除，SQL Server 將嘗試結合一或多個資料列群組中的這個資料列群組。    例如，具有 500,000 個資料列壓縮的資料列群組 1 和 1,048,576 個資料列的最大值與壓縮資料列群組 21。  資料列群組 21 有 60%的已刪除的資料列，讓保持 409,830 資料列。 SQL Server 就會結合這些兩個資料列壓縮新的資料列群組沒有 909,830 資料列群組。  
   
 重新組織與 (COMPRESS_ALL_ROW_GROUPS = {ON |**OFF** })  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，COMPRESS_ALL_ROW_GROUPS 提供方法來開啟或已關閉差異資料列群組強制資料行存放區。 使用此選項時，不需要重建清空差異資料列群組的資料行存放區索引。  此特性加其他移除和合併磁碟重組功能可讓它不再需要重建索引，在大部分情況下。    
+ 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，COMPRESS_ALL_ROW_GROUPS 提供方法來開啟或已關閉差異資料列群組強制資料行存放區。 使用此選項時，不需要重建清空差異資料列群組的資料行存放區索引。  此特性加其他移除和合併磁碟重組功能可讓它不再需要重建索引，在大部分情況下。    
 
 -   ON 會將所有資料列群組強制至資料行存放區，不論大小和狀態 （關閉或開啟）。  
   
