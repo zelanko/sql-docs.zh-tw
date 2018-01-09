@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55c63a3a3d54bd92f494e11029e6ee450f0ee46c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bfb369e21e5d57768d79e07cfe066d89033909ca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>課程 3-2-修改 [客戶] 維度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]有許多不同的方式，您可以增加的可用性和 cube 中維度的功能。 在這個主題的工作中，您會修改 Customer 維度。  
@@ -176,7 +176,7 @@ ms.lasthandoff: 12/08/2017
 9. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="defining-composite-keycolumns"></a>定義複合 KeyColumns  
-[KeyColumns] 屬性 (property) 包含代表屬性 (attribute) 之索引鍵的一或多個資料行。 在這一課，您會建立 [縣 (市)] 和 [省份] 屬性的複合索引鍵。 當您需要唯一識別某個屬性時，複合索引鍵便很有用。 例如，當您在本教學課程稍後定義屬性關聯性時，[縣 (市)] 屬性就必須唯一識別 [省份] 屬性。 不過，不同省份可能會有許多相同名稱的縣 (市) 存在。 因此，您將建立由 [縣 (市)] 屬性之 [StateProvinceName] 和 [City] 資料行所組成的複合索引鍵。 如需詳細資訊，請參閱[修改屬性 (Attribute) 的 KeyColumn 屬性 (Property)](../analysis-services/multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
+[KeyColumns] 屬性 (property) 包含代表屬性 (attribute) 之索引鍵的一或多個資料行。 在這一課，您會建立 [縣 (市)] 和 [省份] 屬性的複合索引鍵。 當您需要唯一識別某個屬性時，複合索引鍵便很有用。 例如，當您在本教學課程稍後定義屬性關聯性時，[縣 (市)] 屬性就必須唯一識別 [省份] 屬性。 不過，不同省份可能會有許多相同名稱的縣 (市) 存在。 因此，您將建立由 [縣 (市)] 屬性之 [StateProvinceName] 和 [City] 資料行所組成的複合索引鍵。 如需詳細資訊，請參閱 [修改屬性 (Attribute) 的 KeyColumn 屬性 (Property)](../analysis-services/multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>針對 [縣 (市)] 屬性定義複合 KeyColumns  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 12/08/2017
   
     [City] 和 [StateProvinceName] 資料行現在會顯示在 [索引鍵資料行] 清單中。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
 6.  若要設定 [縣 (市)] 屬性 (attribute) 的 [NameColumn] 屬性 (property)，請按一下 [屬性] \(property) 視窗中的 [NameColumn] 欄位，然後按一下瀏覽 (**...**) 按鈕。  
   
@@ -210,7 +210,7 @@ ms.lasthandoff: 12/08/2017
   
     [EnglishCountryRegionName] 和 [StateProvinceName] 資料行現在會顯示在 [索引鍵資料行] 清單中。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
 6.  若要設定 [省份] 屬性 (attribute) 的 [NameColumn] 屬性 (property)，請按一下 [屬性] \(property) 視窗中的 [NameColumn] 欄位，然後按一下瀏覽 (**...**) 按鈕。  
   
@@ -241,7 +241,7 @@ ms.lasthandoff: 12/08/2017
   
 8.  在 [關聯性類型] 清單中，將關聯性類型設定為 [固定]。  
   
-9. 按一下 **[確定]**。  
+9. 按一下 [確定] 。  
   
 10. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -271,7 +271,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [修改 [產品] 維度](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [維度屬性 (Attribute) 屬性 (Property) 參考](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
 [從維度中移除屬性](../analysis-services/multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)  
 [重新命名屬性](../analysis-services/multidimensional-models/attribute-properties-rename-an-attribute.md)  

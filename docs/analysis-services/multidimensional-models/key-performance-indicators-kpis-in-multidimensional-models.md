@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 166c09d9d8b2c767767ffda7914f8d465af43829
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多維度模型中的關鍵效能指標 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在商務用語中，關鍵效能指標 (KPI) 是量測商務成就的可量化度量。  
@@ -56,8 +53,8 @@ ms.lasthandoff: 12/08/2017
 |詞彙|定義|  
 |----------|----------------|  
 |目標|會傳回 KPI 目標值的 MDX 數值運算式或計算。|  
-|Value|會傳回實際 KPI 值的 MDX 數值運算式。|  
-|狀態|代表特定時間點之 KPI 狀態的 MDX 運算式。<br /><br /> 狀態 MDX 運算式應傳回介於 -1 和 1 之間的正規化值。 等於或小於 -1 的值將解譯為「不良」或「低」。 零值 (0) 會解釋為「可接受」或「中」。 等於或大於 1 的值將解譯為「很好」或「高」。<br /><br /> 可以選擇性地傳回無限數量的中繼值，而且如果用戶端應用程式支援的話，也可用來顯示任意數量的其他狀態。|  
+|ReplTest1|會傳回實際 KPI 值的 MDX 數值運算式。|  
+|[狀態]|代表特定時間點之 KPI 狀態的 MDX 運算式。<br /><br /> 狀態 MDX 運算式應傳回介於 -1 和 1 之間的正規化值。 等於或小於 -1 的值將解譯為「不良」或「低」。 零值 (0) 會解釋為「可接受」或「中」。 等於或大於 1 的值將解譯為「很好」或「高」。<br /><br /> 可以選擇性地傳回無限數量的中繼值，而且如果用戶端應用程式支援的話，也可用來顯示任意數量的其他狀態。|  
 |趨勢|評估一段時間後之 KPI 值的 MDX 運算式。 趨勢可以是在特定商務內容中任何有意義且以時間為基礎的準則。<br /><br /> 趨勢 MDX 運算式可讓商務使用者判斷經過一段時間之後，KPI 是提升還是降低。|  
 |狀態指標|快速表示 KPI 狀態的視覺元素。 元素的顯示取決於用來評估狀態的 MDX 運算式值。|  
 |趨勢指標|快速表示 KPI 趨勢的視覺元素。 元素的顯示取決於用來評估趨勢的 MDX 運算式值。|  

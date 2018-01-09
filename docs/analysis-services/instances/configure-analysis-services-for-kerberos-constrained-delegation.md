@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 992175bef13c947a11ed738a135df14d226fa05b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>設定 Analysis Services 進行 Kerberos 限制委派
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在設定 Analysis Services 進行 Kerberos 驗證，即最有可能想要達到其中一個或兩項結果： 讓 Analysis Services 模擬使用者識別資料; 查詢或由 Analysis Services 將使用者識別委派給下層服務。 每一種情況的組態需求略有不同。 這兩種情況都需要驗證以確保組態設定正確。  
@@ -50,9 +47,9 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_impersonate"></a> 允許 Analysis Services 模擬使用者識別  
  若要允許上層服務 (如 Reporting Services、IIS 或 SharePoint) 模擬 Analysis Services 的使用者身分識別，您必須為這些服務設定 Kerberos 限制委派。 在此情況下，Analysis Services 會使用委派服務提供的身分識別來模擬目前的使用者，根據該使用者身分識別的角色成員資格傳回結果。  
   
-|工作|說明|  
+|工作|描述|  
 |----------|-----------------|  
-|步驟 1：確認帳戶適合於委派|確認用以執行服務的帳戶在 Active Directory 中具有正確的屬性。 服務帳戶在 Active Directory 中不得標示為機密帳戶，或是明確地從委派狀況排除。 如需詳細資訊，請參閱 [了解使用者帳戶](http://go.microsoft.com/fwlink/?LinkId=235818)。<br /><br /> 注意：一般而言，所有的帳戶及伺服器必須屬於相同的 Active Directory 網域或相同樹系中的受信任網域。 不過，由於 Windows Server 2012 支援跨網域界限委派，若網域功能層級是 Windows Server 2012，您就可以設定跨網域界限的 Kerberos 限制委派。 另一種替代方式則是設定 Analysis Services 進行 HTTP 存取並對用戶端連接使用 IIS 驗證方法。 如需詳細資訊，請參閱[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。|  
+|步驟 1：確認帳戶適合於委派|確認用以執行服務的帳戶在 Active Directory 中具有正確的屬性。 服務帳戶在 Active Directory 中不得標示為機密帳戶，或是明確地從委派狀況排除。 如需詳細資訊，請參閱 [了解使用者帳戶](http://go.microsoft.com/fwlink/?LinkId=235818)。<br /><br /> 注意：一般而言，所有的帳戶及伺服器必須屬於相同的 Active Directory 網域或相同樹系中的受信任網域。 不過，由於 Windows Server 2012 支援跨網域界限委派，若網域功能層級是 Windows Server 2012，您就可以設定跨網域界限的 Kerberos 限制委派。 另一種替代方式則是設定 Analysis Services 進行 HTTP 存取並對用戶端連接使用 IIS 驗證方法。 如需詳細資訊，請參閱 [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)(Microsoft BI 驗證及識別委派)。|  
 |步驟 2：註冊 SPN|設定限制委派之前，您必須為 Analysis Services 執行個體註冊服務主要名稱 (SPN)。 在您為中介層服務設定 Kerberos 限制委派時，將需要 Analysis Services SPN。 如需相關指示，請參閱＜ [SPN registration for an Analysis Services instance](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md) ＞。<br /><br /> 服務主要名稱 (SPN) 係指定某項服務在設定為 Kerberos 驗證之網域中的唯一識別。 使用整合式安全性的用戶端連接通常會在 SSPI 驗證期間要求 SPN。 如果用戶端出示的 SPN 與 Active Directory 中的 SPN 註冊相符，此要求便會轉送至 Active Directory 網域控制站 (DC)，並由 KDC 授與票證。|  
 |步驟 3：設定限制委派|驗證要使用的帳戶以及註冊該等帳戶的 SPN 之後，下一個步驟是設定上層服務如 IIS、Reporting Services 或 SharePoint Web 服務進行限制委派，將 Analysis Services SPN 指定為允許委派的特定服務。<br /><br /> 在 SharePoint 中執行的服務 (例如 Excel Services 或 SharePoint 模式的 Reporting Services) 通常裝載了取用 Analysis Services 多維度或表格式資料的活頁簿和報表。 為這些服務設定限制委派既是常見的組態工作，也是支援從 Excel Services 進行資料重新整理的必備要件。 下列連結提供有關 SharePoint 服務以及可能向 Analysis Services 資料提出下游資料連接要求之其他服務的指示：<br /><br /> [Excel Services 的身分識別委派 (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299826) 或 [How to configure Excel Services in SharePoint Server 2010 for Kerberos authentication](http://support.microsoft.com/kb/2466519)<br /><br /> [PerformancePoint Services 的身分識別委派 (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [SQL Server Reporting Services 的身分識別委派 (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> 如需 IIS 7.0 方面的資訊，請參閱 [Configure Windows Authentication (IIS 7.0)](http://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) (設定 Windows 驗證 (IIS 7.0)) 或 [How to configure SQL Server 2008 Analysis Services and SQL Server 2005 Analysis Services to use Kerberos authentication](http://support.microsoft.com/kb/917409)(如何設定 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 使用 Kerberos 驗證)。|  
 |步驟 4：測試連接|進行測試時，請以不同的身分識別從遠端電腦連接，並且使用與商務使用者所用相同的應用程式查詢 Analysis Services。 您可以使用 SQL Server Profiler 監視連接。 您應該會看到提出要求的使用者識別。 如需詳細資訊，請參閱本節中的 [測試模擬或委派的身分識別](#bkmk_test) 。|  

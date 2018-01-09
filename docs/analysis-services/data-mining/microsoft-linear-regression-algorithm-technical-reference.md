@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6e68aa664039d9fa7531c6563025c108687c2868
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ad96596830cc3bb091a7f57639c0a7d0d84dd9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線性迴歸演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]線性迴歸演算法是 Microsoft 決策樹演算法適用於連續屬性的模型配對的特殊版本。 本主題說明演算法的實作、描述如何自訂演算法的行為，以及提供查詢模型其他資訊的連結。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  下表列出針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法提供的參數。  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*MAXIMUM_INPUT_ATTRIBUTES*|定義演算法在叫用特徵選取之前，可以處理的輸入屬性數目。 將此值設定為 0 可關閉特徵選取。<br /><br /> 預設值是 255。|  
 |*MAXIMUM_OUTPUT_ATTRIBUTES*|定義演算法在叫用特徵選取之前，可以處理的輸出屬性數目。 將此值設定為 0 可關閉特徵選取。<br /><br /> 預設值是 255。|  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="modeling-flags"></a>模型旗標  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)。  
   
-|模型旗標|說明|  
+|模型旗標|描述|  
 |-------------------|-----------------|  
 |NOT NULL|表示資料行不能包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
 |REGRESSOR|表示資料行包含分析時應視為潛在獨立變數的連續數值。 適用於採礦模型資料行。<br /><br /> 注意：為資料行加上旗標做為迴歸輸入變數無法確保將該資料行當做最終模型中的迴歸輸入變數使用。|  
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|資料行|內容類型|  
+|「資料行」|內容類型|  
 |------------|-------------------|  
 |輸入屬性|Continuous、Cyclical、Key、Table 和 Ordered|  
 |可預測屬性|Continuous、Cyclical 和 Ordered|  

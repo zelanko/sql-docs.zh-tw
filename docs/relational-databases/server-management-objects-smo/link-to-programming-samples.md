@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,18 +21,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9384c479cfe4fc47786598ac23b5785297dcfe6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c51e983b398a6273680e503ca42a839ad3fd8350
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="available-programming-samples"></a>可用程式設計範例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]下表列出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件 (SMO) 程式設計範例用於[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO 目錄。 這些範例都可以在[!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  
   
  如需如何安裝範例的詳細資訊，請參閱[AdventureWorks for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330)。  
   
-|Title|Description|  
+|Title|描述|  
 |-----------|-----------------|  
 |BackRest|示範如何備份和還原資料庫。|  
 |ChangeTableOwner|示範如何將擁有權並非 DBO 的所有資料表變更為 DBO。|  

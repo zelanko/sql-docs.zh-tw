@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -34,11 +32,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6effd75e67a69db182ddaf37388d377b644a17da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70b2acdd5370be93f4fca9a5270a5b9951305248
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -89,7 +87,7 @@ INSERT INTO [MINING MODEL] <model>
 ||不處理採礦結構。|處理採礦模型與採礦結構。|  
 ||採礦結構包含其他的採礦模型。|處理失敗。 您必須重新處理結構與相關聯的採礦模型。|  
 |INSERT INTO MINING STRUCTURE*\<結構 >*|處理或不處理採礦結構。|處理採礦結構與相關聯的採礦模型。|  
-|INSERT INTO MINING MODEL*\<模型 >* （包含來源查詢）<br /><br /> 或<br /><br /> INSERT INTO MINING STRUCTURE*\<結構 >* （包含來源查詢）|結構或模型早已包含內容。|處理失敗。 您必須先使用執行此作業中，清除物件[DELETE &#40; DMX &#41;](../dmx/delete-dmx.md)。|  
+|INSERT INTO MINING MODEL*\<模型 >* （包含來源查詢）<br /><br /> 中的多個<br /><br /> INSERT INTO MINING STRUCTURE*\<結構 >* （包含來源查詢）|結構或模型早已包含內容。|處理失敗。 您必須先使用執行此作業中，清除物件[DELETE &#40; DMX &#41;](../dmx/delete-dmx.md)。|  
   
 ## <a name="mapped-model-columns"></a>對應的模型資料行  
  使用\<對應模型資料行 > 項目，您可以在採礦模型中對應資料來源的資料行的資料行。 \<對應模型資料行 > 項目具有下列格式：  
@@ -144,9 +142,9 @@ SHAPE {
 AS [Models]  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦延伸模組 &#40; DMX &#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

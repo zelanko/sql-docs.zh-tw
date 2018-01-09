@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c2a8e5c05177ae4a69c69a0776af333d96575c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ec92c6f38bec112705e29cda021ab6e5a7b49d0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  標準 ODBC 連接屬性 SQL_ATTR_CONNECTION_DEAD 會傳回最新的連接狀態。 這可能不是目前的連接狀態。  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|已經遺失與伺服器的連接。|  
 |SQL_CD_FALSE|連接已開啟，而且可用來處理陳述式。|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
  如需詳細資訊，請參閱[存取擴充事件記錄檔中的診斷資訊](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SQL_ERROR|連接失敗。|  
 |SQL_SUCCESS|此連接已成功。 輸出緩衝區中將可以找到用戶端連接識別碼。|  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 屬性會傳回 SQLPERF 結構的指標，其中包含目前的驅動程式效能統計資料。 **SQLGetConnectAttr**如果未啟用效能記錄，將會傳回 NULL。 此驅動程式不會動態更新 SQLPERF 結構中的統計資料。 呼叫**SQLGetConnectAttr**每當效能統計資料需要重新整理。  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |NULL|未啟用效能記錄。|  
 |任何其他值|SQLPERF 結構的指標。|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 屬性會擷取使用者-資料指標。 使用者資料會儲存在用戶端擁有的記憶體中，而且針對每個連接記錄下來。 如果尚未設定使用者-資料指標，便會傳回 SQL_UD_NOTSET (一種 NULL 指標)。  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|不會設定任何使用者-資料指標。|  
 |任何其他值|使用者資料的指標。|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
  如需有關 Spn 的詳細資訊，請參閱[服務主要名稱 &#40;Spn &#41;用戶端連接 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [SQLGetConnectAttr 函數](http://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   

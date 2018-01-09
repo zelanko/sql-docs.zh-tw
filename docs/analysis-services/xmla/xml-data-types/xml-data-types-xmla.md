@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,18 +23,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a65065437ced53d1554ddd11035e7aa687872e9f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 57e14656a089736a8b7ce9566362c9d7c8888a5d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-data-types-xmla"></a>XML 資料類型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]除了標準基本和衍生所定義之類型的 XML 1.0 版建議事項，XML for Analysis (XMLA) 1.1 規格會定義其他資料類型，以支援多維度和表格式資料的表示法。  
   
  XMLA 會使用下表所列的資料類型。  
   
-|資料類型|Description|  
+|資料類型|描述|  
 |----------------|-----------------|  
 |布林|標準的 XML**布林**資料型別。|  
 |Decimal|標準的 XML**十進位**資料型別。|  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 |[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|所傳回的多維度資料*結果*參數[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。|  
 |[結果集](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|自我描述 XML 結果集所傳回**Execute**方法。|  
 |[資料列集](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|傳回資料列從資料來源，內嵌 XML 結構描述，結構化[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。|  
-|字串|XML**字串**資料型別。|  
+|String|XML**字串**資料型別。|  
 |UnsignedInt|XML **unsignedInt**結構描述型別。|  
   
  如需標準 XML 資料類型的完整描述，請參閱全球資訊網協會 (WC3) 的候選建議。  

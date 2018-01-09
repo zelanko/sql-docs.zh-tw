@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql11.asvs.ssmsimbi.RestoreFromPP.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2cc8322e9a7208189ec7a8630e79a47baecaeb92
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7beb148b2090fcdcb7a150d3b5eb789beaf7bb08
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-from-power-pivot"></a>從 PowerPivot 還原
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]您可以使用從還原[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]功能 （以表格式模式執行），Analysis Services 執行個體上建立新的表格式模型資料庫的 SQL Server Management Studio 中，或還原到現有的資料庫從[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿 (.xlsx)。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 81503c4c01cb09adb2c9500cf668eec07caa8aae
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 501f3a53b5c9ccaee8229ed99f0a37dc50b05e88
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>MDX 資料定義陳述式 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[ALTER CUBE 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-alter-cube.md)|改變指定 Cube 的結構。|  
 |[建立 ACTION 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-create-action.md)|建立與 Cube、維度、階層或從屬物件關聯的動作。|  

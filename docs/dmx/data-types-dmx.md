@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8a66c05b21a723aaa50de515cb9e686fb85e603c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: adddda081272fedbc602c5065e1592527f9e3d8d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-types-dmx"></a>資料類型 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 11/20/2017
   
  資料類型會視演算法而定。 每個演算法決定支援哪些資料類型，以及如何使用這些資料類型。 Microsoft 演算法支援下列資料類型：  
   
--   Text  
+-   文字  
   
 -   長整數  
   
@@ -45,11 +43,11 @@ ms.lasthandoff: 11/20/2017
   
 -   Double  
   
--   日期  
+-   date  
   
  資料的詳細資訊類型，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援，請參閱[資料類型 &#40; 資料採礦 &#41;](../analysis-services/data-mining/data-types-data-mining.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   

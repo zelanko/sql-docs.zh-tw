@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,16 +24,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5fe01fab65692826d2476b06d88a45f60cff1a19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7e32199079e4ceb4ec503298eb9e0fe420e6a00e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="smo-programming-languages"></a>SMO 程式語言：
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本章節描述如何以程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件 (SMO) 中[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual C#.NET。
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[開始使用 Visual C# 35 中;.NET](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|提供有關如何開始使用 Visual C#.net 撰寫 SMO 程式的資訊|  
   

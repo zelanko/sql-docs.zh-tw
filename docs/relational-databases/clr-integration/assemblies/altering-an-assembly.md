@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f279c3f1e1315ea44cdb75918b471c8fdd22ee01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: efe9022b31b47e346d79ee1a65f93865d6c939b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="altering-an-assembly"></a>變更組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]中已註冊的組件[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以從較新版本，使用 ALTER ASSEMBLY 陳述式更新。 若要更新組件，請使用 ALTER ASSEMBLY 陳述式搭配下列語法：  
@@ -57,7 +57,7 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
   
  `ADD FILE FROM 'C:\Projects\Point\Point.cs' AS PointSource`  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [管理 CLR 整合組件](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [建立組件](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [卸除組件](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   

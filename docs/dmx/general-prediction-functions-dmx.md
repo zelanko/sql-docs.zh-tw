@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bb62e03f1f151bde68dd2fbc10d64ac32ef9c993
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e767d0243a8600c0f20cffebebfa92baffc2fc4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="general-prediction-functions-dmx"></a>一般預測函數 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -80,14 +78,14 @@ ms.lasthandoff: 11/20/2017
 |查詢類型|支援的函數|備註|  
 |----------------|-------------------------|-------------|  
 |[SELECT DISTINCT FROM\<模型 >](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40; DMX &#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40; DMX &#41;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax &#40; DMX &#41;](../dmx/rangemax-dmx.md)|這些函數可用來針對包含數值資料類型的任何資料行提供最大值、最小值及平均值，不論資料行是連續的或已離散化。|  
-|[SELECT FROM\<模型 >。內容](../dmx/select-from-model-content-dmx.md)<br /><br /> 或<br /><br /> [SELECT FROM\<模型 >。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40; DMX &#41;](../dmx/isdescendant-dmx.md)|此函數會擷取模型中指定節點的子節點，舉例來說，可用來反覆運算採礦模型內容中的節點。 採礦模型內容中的節點排列相依於模型類型。 每個採礦模型類型結構的相關資訊，請參閱[採礦模型內容 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).<br /><br /> 如果已將採礦模型內容儲存為維度，則您也可以使用可用來查詢屬性階層的其他「多維度運算式」(MDX) 函數。|  
+|[SELECT FROM\<模型 >。內容](../dmx/select-from-model-content-dmx.md)<br /><br /> 中的多個<br /><br /> [SELECT FROM\<模型 >。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40; DMX &#41;](../dmx/isdescendant-dmx.md)|此函數會擷取模型中指定節點的子節點，舉例來說，可用來反覆運算採礦模型內容中的節點。 採礦模型內容中的節點排列相依於模型類型。 每個採礦模型類型結構的相關資訊，請參閱[採礦模型內容 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).<br /><br /> 如果已將採礦模型內容儲存為維度，則您也可以使用可用來查詢屬性階層的其他「多維度運算式」(MDX) 函數。|  
 |[SELECT FROM\<模型 >。案例](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40; DMX &#41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag 類別](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40; DMX &#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40; DMX &#41;](../dmx/istestcase-dmx.md)|Lag 函數只支援時間序列模型。<br /><br /> IsTestCase 函數支援使用鑑效組的選項，來建立測試資料集建立的結構為基礎的模型中。 如果模型並非以具有鑑效組測試集的結構為基礎，則所有案例都會被視為培訓案例。|  
 |[SELECT FROM\<模型 >。SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40; DMX &#41;](../dmx/isinnode-dmx.md)|在此內容中，IsInNode 函數會傳回屬於理想化的範例案例集的案例。|  
 |SELECT FROM\<模型 >。PMML|不適用。 請改用 XML 查詢函數。|PMML 表示法僅可用於下列模型類型：<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] 群集|  
 |[SELECT FROM\<模型 > PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|您用來建立模型之演算法的特定預測函數。|如需每個模型類型的預測函數的清單，請參閱[資料採礦查詢](../analysis-services/data-mining/data-mining-queries.md)。|  
 |[SELECT FROM\<模型 >](../dmx/select-from-model-dmx.md)|您用來建立模型之演算法的特定預測函數。|如需每個模型類型的預測函數的清單，請參閱[資料採礦查詢](../analysis-services/data-mining/data-mining-queries.md)。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [資料採礦延伸模組 &#40; DMX &#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   

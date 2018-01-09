@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 68e7aa514a63f6bce6ddcff33c1b7a6a2616beed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d30e4644eed3d695db28a246aa9d05cba6e2cecc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>設定檔案上傳的大小上限 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿經常包含大量資料所產生的檔案會超出 SharePoint 上傳允許的最大檔案大小。 當您嘗試上傳的檔案超出上限時，您將會得到以下 SharePoint 錯誤：  
@@ -53,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
      您可以指定的最大值是 2 GB (或是管理中心內指定的 2047 MB)。  
   
-7.  按一下 **[確定]**。  
+7.  按一下 [確定] 。  
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>設定 SharePoint Web 應用程式的檔案大小上限  
   
@@ -72,6 +69,6 @@ ms.lasthandoff: 12/08/2017
   
 6.  將此屬性設定為與 Excel Services 中 [最大活頁簿大小] 相同或更大的數字。  
   
-7.  按一下 **[確定]**。  
+7.  按一下 [確定] 。  
   
   

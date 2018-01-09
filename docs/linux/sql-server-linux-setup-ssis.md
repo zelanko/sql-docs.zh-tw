@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 3033651c005ce39bd0e2565dd51ed2d2b1089e62
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上安裝 SQL Server Integration Services (SSIS)
 
@@ -120,7 +120,30 @@ sudo yum update mssql-server-is
 sudo yum remove mssql-server-is
 ```
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="unattended-installation"></a>自動安裝
+若要執行自動的安裝，當您執行`ssis-conf setup`，執行下列動作：
+1.  指定`-n`（沒有提示） 選項。
+2.  設定環境變數來提供必要的值。
+
+下列範例會執行下列動作：
+-   安裝 SSIS。
+-   藉由提供的值指定 Developer edition`SSIS_PID`環境變數。
+-   藉由提供的值會接受使用者授權合約`ACCEPT_EULA`環境變數。
+-   藉由指定執行自動的安裝`-n`（沒有提示） 選項。
+
+```
+sudo SSIS_PID= Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
+```
+
+### <a name="environment-variables-for-unattended-installation"></a>自動安裝的環境變數
+
+| 環境變數 | 描述 |
+|---|---|
+| **ACCEPT_EULA** | 接受 SQL Server 授權合約，當設定為任何值 (例如， `Y`)。|
+| **SSIS_PID** | 設定 SQL Server 版本或產品金鑰。 以下是可能的值：<br/>Evaluation<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>產品金鑰<br/><br/>如果您指定的產品金鑰，必須在表單中的產品金鑰`#####-#####-#####-#####-#####`，其中`#`是字母或數字。  |
+| | |
+
+## <a name="next-steps"></a>後續步驟
 
 若要在 Linux 上執行 SSIS 封裝，請參閱[擷取、 轉換及載入資料的 SQL Server on Linux 與 SSIS](sql-server-linux-migrate-ssis.md)。
 

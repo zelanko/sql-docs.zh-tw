@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: large CLR user-defined types [OLE DB]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e016e0f7d6250f25f1c92d3f2527f68dc91c69e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fd1b3396b763d6ca8eb8c3f3f6f2559f3ef4c44e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 使用者定義型別 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
  下表顯示參數和資料列集內的資料類型對應：  
   
-|SQL Server 資料類型|OLE DB 資料類型|記憶體配置|值|  
+|SQL Server 資料類型|OLE DB 資料類型|記憶體配置|ReplTest1|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE [] （位元組陣列\)|132 (oledb.h)|  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
  下列資料行也會針對 UDT 而定義：  
   
-|資料行識別碼|類型|Description|  
+|資料行識別碼|類型|描述|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之目錄的名稱。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之結構描述的名稱。|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/17/2017
   
  下列其他資料行也會針對 UDT 而定義：  
   
-|資料行識別碼|類型|Description|  
+|資料行識別碼|類型|描述|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之目錄的名稱。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之結構描述的名稱。|  
@@ -132,13 +132,13 @@ ms.lasthandoff: 11/17/2017
 |DBTYPE_STR|支援 (2)、(5)|不適用|支援 (3)、 (5)|不適用|  
 |DBTYPE_IUNKNOWN|支援 (6)|不適用|支援 (6)|不適用|  
 |DBTYPE_VARIANT (VT_UI1 &#124;VT_ARRAY)|支援 (5)|不適用|支援 (3)、 (5)|不適用|  
-|DBTYPE_VARIANT (VT_BSTR)|支援 (2)、(5)|不適用|不適用|N/A|  
+|DBTYPE_VARIANT (VT_BSTR)|支援 (2)、(5)|不適用|不適用|不適用|  
   
 ### <a name="key-to-symbols"></a>符號的索引鍵  
   
 |符號|意義|  
 |------------|-------------|  
-|1|如果您的伺服器類型與指定了 DBTYPE_UDT 以外**icommandwithparameters:: Setparameterinfo**而且存取子類型為 DBTYPE_UDT，陳述式時發生錯誤。  此錯誤將是 DB_E_ERRORSOCCURRED，而參數狀態將是 DBSTATUS_E_BADACCESSOR。<br /><br /> 針對不是 UDT 的伺服器參數指定 UDT 類型的參數是一項錯誤。|  
+|@shouldalert|如果您的伺服器類型與指定了 DBTYPE_UDT 以外**icommandwithparameters:: Setparameterinfo**而且存取子類型為 DBTYPE_UDT，陳述式時發生錯誤。  此錯誤將是 DB_E_ERRORSOCCURRED，而參數狀態將是 DBSTATUS_E_BADACCESSOR。<br /><br /> 針對不是 UDT 的伺服器參數指定 UDT 類型的參數是一項錯誤。|  
 |2|資料會從十六進位字串轉換成二進位資料。|  
 |3|資料會從二進位資料轉換成十六進位字串。|  
 |4|使用時，可能會發生驗證**CreateAccessor**或**GetNextRows**。 錯誤是 DB_E_ERRORSOCCURRED。 繫結狀態設定為 DBBINDSTATUS_UNSUPPORTEDCONVERSION。|  
@@ -177,7 +177,7 @@ ms.lasthandoff: 11/17/2017
   
  當**DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) 設定為"80"，大型 UDT 類型如同它們在下層用戶端會對用戶端。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [大型 CLR 使用者定義型別](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

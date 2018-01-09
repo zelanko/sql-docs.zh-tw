@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,16 +22,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 744cf73bdbdf1389ce7f9a67d10f2a90232606b6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 38da7056ebdb294516ea8f88125ddb13c118d297
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discover-server-state-event-category"></a>探索伺服器狀態事件類別目錄
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]探索伺服器狀態事件類別目錄具有下表中所述的事件類別。  
   
-|Event Class|事件識別碼|說明|  
+|Event Class|事件識別碼|描述|  
 |-----------------|--------------|-----------------|  
 |伺服器狀態探索的開始|33|收集自從啟動追蹤之後的所有伺服器狀態 XMLA 探索開始事件。|  
 |伺服器狀態探索資料|34|收集自從啟動追蹤之後的所有伺服器狀態 XMLA 探索資料事件。 這些事件會擷取探索要求的回應內容。|  

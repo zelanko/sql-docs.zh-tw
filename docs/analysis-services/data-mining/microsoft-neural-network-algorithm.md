@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,13 +30,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dc7c43077650ddee110eb48ad455e7cb1ab5ce8e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8af39f31c569beb4df25d8da1dd933c902d3b4f6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Microsoft 類神經網路演算法
+# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]類神經網路演算法是機器學習受歡迎且研究可調適性的類神經網路架構的實作。  此演算法的運作方式是，針對可預測屬性的每種可能狀態測試輸入屬性的每種可能狀態，並根據定型資料計算每種組合的機率。 您可以使用這些機率來進行分類或迴歸工作，依據一些輸入屬性預測結果。 類神經網路也可以用於關聯分析。  
   
  當您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立採礦模型時，您可以包含多個輸出，演算法將會建立多個網路。 單一採礦模型中所包含的網路數目，取決輸入資料行中的狀態 (或屬性值) 數目，以及採礦模型所使用的可預測資料行數目及這些資料行中的狀態數目。  

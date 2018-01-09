@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10cd57d39845f67fe8e447a1c95a5e412709409d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f616fb67d0e22bba33d22d0d59eb2ed19a4d88e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="properties-assl"></a>屬性 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]這個參考章節包含每個項目，可做為 Analysis Services 指令碼語言 (ASSL) 結構描述中物件屬性的語法和使用方式資訊。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="in-this-section"></a>本節內容  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |[Access 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/access-element-assl.md)|表示層級的存取權提供給[CellPermission](../../../analysis-services/scripting/objects/cellpermission-element-assl.md)項目。|  
 |[Account 元素 &#40; ImpersonationInfo &#41;&#40;ASSL &#41;](../../../analysis-services/scripting/properties/account-element-impersonationinfo-assl.md)|包含的使用者帳戶名稱[ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md)資料型別。|  

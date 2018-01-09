@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 485a37af0cb6d9d5f7d34986f99db151e59c4628
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d5dd392ca57706e595b6df5f44b512cf11dacdff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 整合架構效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題討論某些設計選擇，可增強的效能[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與整合[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework common language runtime (CLR)。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="scalable-memory-usage"></a>可擴充的記憶體使用量  
  為了讓 Managed 記憶體回收在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中妥善執行與調整，請避免使用大型的單一配置。 其大小大於 88 KB 的配置將會放在大型物件堆積上，這會讓記憶體回收的執行與調整比許多較小的配置差很多。 例如，如果您需要配置大型的多維度陣列，最好配置不規則 (散佈) 陣列。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [CLR 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

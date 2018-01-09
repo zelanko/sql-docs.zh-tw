@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 542b50ce2d0e9f3bee53fd6fa5290a152dd03edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-a-standard-action"></a>加入標準動作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用 Cube 設計師中的 [動作] 檢視的動作加入資料庫中。 該檢視可透過 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取。 在建立動作之後，您必須先重新處理相關的 Cube，使用者才能使用動作。 如需相關資訊，請參閱 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
@@ -47,7 +44,7 @@ ms.lasthandoff: 12/08/2017
         |維度成員|選取單一維度。 此動作會與維度的所有成員相關聯。|  
         |階層|選取單一階層。 此動作只會與階層物件相關聯。 僅在屬性階層的 **AttributeHierarchyEnabled** 和 **AttributeHierarchyVisible** 屬性設為 **True**時，這些屬性階層才會出現在清單中。|  
         |階層成員|選取單一階層。 此動作會與所選階層的所有成員相關聯。 僅在屬性階層的 **AttributeHierarchyEnabled** 和 **AttributeHierarchyVisible** 屬性設為 **True**時，這些屬性階層才會出現在清單中。|  
-        |Level|選取單一層級。 此動作只會與層級物件相關聯。|  
+        |層級|選取單一層級。 此動作只會與層級物件相關聯。|  
         |層級成員|選取單一層級。 此動作會與所選層級的所有成員相關聯。|  
   
     -   在 **[目標物件]**中，按一下文字方塊右邊的箭號，然後在開啟的樹狀檢視中，按一下您要附加動作的物件，再按一下 **[確定]**   
@@ -56,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
     -   從 [類型] 下拉式清單中，選取您要建立的動作類型。 下表列出可用的動作類型。  
   
-        |[類型]|說明|  
+        |[類型]|描述|  
         |----------|-----------------|  
         |資料集|擷取資料集。|  
         |專屬|使用不同於此資料表列出的介面來執行作業。|  
@@ -70,7 +67,7 @@ ms.lasthandoff: 12/08/2017
   
     -   從 [引動過程] 下拉式清單中，指定如何叫用動作。 下表描述叫用動作的可用選項。  
   
-        |選項|說明|  
+        |選項|描述|  
         |------------|-----------------|  
         |互動式|此動作會在使用者互動時觸發。|  
         |批次|此動作會以批次作業執行。|  

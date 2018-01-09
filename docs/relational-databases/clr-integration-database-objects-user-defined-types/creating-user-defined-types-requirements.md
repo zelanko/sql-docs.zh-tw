@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52083d3b3d82f46f3248450b6242d5c66a213138
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04ee34b1a2474e97111d42be84954dc4c0987dd1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-user-defined-types---requirements"></a>建立使用者定義類型的需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]建立使用者定義型別 (UDT)，在安裝時，您必須做數個重要的設計決策[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 對於大部分的 UDT 而言，雖然將 UDT 當做類別來建立也是一種選擇，但是建議將 UDT 當做結構來建立。 UDT 定義必須符合建立 UDT 的規格，才能讓它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊。  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="userdefined-serialization"></a>UserDefined 序列化  
  **UserDefined**格式設定**Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**屬性可讓開發人員完全控制二進位格式。 當指定**格式**屬性做為內容**UserDefined**，您必須執行下列程式碼中：  
   
--   指定選擇性**IsByteOrdered**屬性內容。 預設值是 **false**秒。  
+-   指定選擇性**IsByteOrdered**屬性內容。 預設值為 **false**。  
   
 -   指定**MaxByteSize**屬性**Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**。  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
   
  在 FOR XML 查詢中不會序列化 UDT。 若要執行顯示 Udt 的 XML 序列化的 FOR XML 查詢，將明確轉換成每個 UDT 資料行**xml** SELECT 陳述式中的資料類型。 您可以同時也可以明確轉換的資料行**varbinary**， **varchar**，或**nvarchar**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

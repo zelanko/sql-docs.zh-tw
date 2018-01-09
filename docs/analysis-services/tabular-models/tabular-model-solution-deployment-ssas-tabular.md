@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa6eac77d29470dce66970189173acf6d1842b1f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b00a88530d8917d45358cbd69a21b9b2555e1f82
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>表格式模型方案部署 (SSAS 表格式)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]之後撰寫表格式模型專案，您必須讓使用者瀏覽模型，使用報表用戶端應用程式部署。 此主題描述在您的環境中部署表格式模型方案時可使用的各種屬性和方法。  
@@ -57,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="deployment-options-properties"></a>部署選項屬性  
  [部署選項] 屬性包括：  
   
-|屬性|預設值|說明|  
+|屬性|預設值|描述|  
 |--------------|---------------------|-----------------|  
 |**處理選項**|**預設值**|此屬性會指定部署物件變更時所需的處理類型。 此屬性具有以下選項：<br /><br /> **預設值** ：此設定會指定 Analysis Services 決定所需的處理類型。 將會處理未處理的物件，並且根據需要重新計算屬性關聯性、屬性階層、使用者階層和導出資料行。 此設定通常會造成比使用 [完整] 處理選項更快的部署時間。<br /><br /> **不處理** ：此設定會指定僅部署中繼資料。 部署後，您可能必須在已部署的模型上執行處理作業，以更新及重新計算資料。<br /><br /> **完整** ：此設定會指定部署中繼資料，並執行完整處理作業。 如此可確保已部署模型的中繼資料和資料為最新。|  
 |**交易式部署**|**False**|此屬性會指定部署是否為交易式。 依預設，在處理這些已部署的物件時，所有物件或已變更之物件的部署並不是交易式。 即使處理失敗，部署仍可以成功，並持續存在。 您可以變更這項預設值，在單一交易中併入部署和處理。|  
@@ -66,24 +63,24 @@ ms.lasthandoff: 12/08/2017
 ### <a name="deployment-server-properties"></a>部署伺服器屬性  
  [部署伺服器] 屬性包括：  
   
-|屬性|預設值|說明|  
+|屬性|預設值|描述|  
 |--------------|---------------------|-----------------|  
 |**Server**<br /><br /> 在建立專案時設定。|**localhost**|在建立專案時設定的此屬性，會依部署模型的目標名稱來指定 Analysis Services 執行個體。 依預設，模型將會部署到本機電腦上的預設 Analysis Services 執行個體。 不過，您可以變更這項設定，以便在本機電腦上或是您有權建立 Analysis Services 物件之任何遠端電腦上的任何執行個體上指定具名執行個體。|  
-|**版本**|與工作空間伺服器所在之執行個體的版本相同。|此屬性會指定將模型部署到哪一個版本的 Analysis Services 伺服器。 這些伺服器版本會定義可以納入專案中的多種功能。 根據預設，此版本將屬於本機 Analysis Services 伺服器。 如果您指定不同的 Analysis Services 伺服器 (例如，實際 Analysis Services 伺服器)，請務必指定該 Analysis Services 伺服器的版本。|  
-|**資料庫**|**\<專案名稱 >**|此屬性會指定一旦部署之後，模型物件會立刻具現化所在的 Analysis Services 資料庫名稱。 此名稱也將在報表用戶端資料連接或 .bism 資料連接檔案中指定。<br /><br /> 您可以在製作模型時，隨時變更此名稱。 如果您在部署模型之後變更名稱，您在部署後所進行的變更將不會影響您先前部署的模型。 例如，如果您開啟名稱為 **TestDB** 的方案，並使用預設的模型資料庫物件名稱 Model 部署您的方案，然後修改方案並將模型資料庫重新命名為 **Sales**，在其上部署方案的 Analysis Services 執行個體將會顯示不同的資料庫，一個名稱為 Model，另一個名稱為 Sales。|  
+|**版本(Edition)**|與工作空間伺服器所在之執行個體的版本相同。|此屬性會指定將模型部署到哪一個版本的 Analysis Services 伺服器。 這些伺服器版本會定義可以納入專案中的多種功能。 根據預設，此版本將屬於本機 Analysis Services 伺服器。 如果您指定不同的 Analysis Services 伺服器 (例如，實際 Analysis Services 伺服器)，請務必指定該 Analysis Services 伺服器的版本。|  
+|**[資料庫備份]**|**\<專案名稱 >**|此屬性會指定一旦部署之後，模型物件會立刻具現化所在的 Analysis Services 資料庫名稱。 此名稱也將在報表用戶端資料連接或 .bism 資料連接檔案中指定。<br /><br /> 您可以在製作模型時，隨時變更此名稱。 如果您在部署模型之後變更名稱，您在部署後所進行的變更將不會影響您先前部署的模型。 例如，如果您開啟名稱為 **TestDB** 的方案，並使用預設的模型資料庫物件名稱 Model 部署您的方案，然後修改方案並將模型資料庫重新命名為 **Sales**，在其上部署方案的 Analysis Services 執行個體將會顯示不同的資料庫，一個名稱為 Model，另一個名稱為 Sales。|  
 |**Cube 名稱**|**型號**|此屬性會以用戶端工具 (例如 Excel) 和 AMO (分析管理物件) 中顯示的名稱來指定 Cube 名稱。|  
   
 ### <a name="directquery-options-properties"></a>DirectQuery 選項屬性  
  [部署選項] 屬性包括：  
   
-|屬性|預設值|說明|  
+|屬性|預設值|描述|  
 |--------------|---------------------|-----------------|  
 |**模擬設定**|**預設值**|此屬性會指定在 DirectQuery 模式下執行的模型連接到資料來源時所使用的模擬設定。 查詢記憶體中快取時，不會使用模擬認證。 此屬性設定具有以下選項：<br /><br /> **預設值** ：此設定會指定 Analysis Services 在使用 [資料表匯入精靈] 建立資料來源連接時，使用 [模擬資訊] 頁面上指定的選項。<br /><br /> **ImpersonateCurrentUser** ：此設定會指定在連接到所有資料來源時，使用目前登入之使用者的使用者帳戶。|  
   
 ##  <a name="bkmk_meth"></a> 部署方法  
  有數種方法可用於部署表格式模型專案。 可用於其他 Analysis Services 專案 (例如多維度) 的大多數部署方法也可用於部署表格式模型專案。  
   
-|方法|說明|連結|  
+|方法|描述|連結|  
 |------------|-----------------|----------|  
 |**SQL Server 資料工具中的部署命令**|部署命令提供從 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 撰寫環境部署表格式模型專案的一種簡單又直覺的方法。<br /><br /> **\*\* 注意 \*\*** 此方法不應用來部署到實際執行伺服器。 使用此方法可以覆寫現有模型中的某些屬性。|[從 SQL Server Data Tools 部署 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|  
 |**分析管理物件 (AMO) 自動化**|AMO 提供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]完整命令集的程式設計介面，包括可用於方案部署的命令。 AMO 自動化是方案部署的方法之一，雖然彈性最高，但是也需要撰寫程式。  使用 AMO 自動化的主要優點在於，您可以搭配 AMO 應用程式使用 SQL Server Agent，根據預設排程執行部署。|[使用分析管理物件 &#40;AMO&#41; 來開發](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
@@ -100,11 +97,11 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_rt"></a> 相關工作  
   
-|工作|說明|  
+|工作|描述|  
 |----------|-----------------|  
 |[從 SQL Server Data Tools 部署 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|描述如何透過使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的 [部署] 命令設定部署屬性及部署表格式模型專案。|  
-|[Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|本節的主題描述如何使用 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 來部署表格式和多維度模型方案。|  
-|[使用部署公用程式的部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|描述如何使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署公用程式來部署表格式和多維度模型方案。|  
+|[使用部署精靈來部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|本節的主題描述如何使用 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 來部署表格式和多維度模型方案。|  
+|[使用部署公用程式部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|描述如何使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署公用程式來部署表格式和多維度模型方案。|  
 |[使用 XMLA 部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|描述如何使用 XMLA 來部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式和多維度方案。|  
 |[同步處理 Analysis Services 資料庫](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|描述如何使用 [同步處理資料庫精靈]，同步處理任何兩個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式或多維度資料庫之間的中繼資料和資料。|  
   

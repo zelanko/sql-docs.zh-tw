@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,21 +29,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3cc6f6f1bf2acacc481eb9141bb3dd055cc56113
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e8b7d2277c53293d0ff0a34b1fa6e04c309e37dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-properties---group-attribute-members"></a>屬性內容-群組屬性成員
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]成員群組是由系統產生的連續維度成員集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以透過稱為分隔的處理序，將屬性的成員分組成許多成員群組。 階層中的層級包含成員群組或成員，但不會同時包含兩者。 商務使用者瀏覽含有成員群組的層級時，他們會看到成員群組的名稱和資料格值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生以支援成員群組的成員稱為群組成員，看起來就像一般成員。  
   
  屬性 (Attribute) 上的 **DiscretizationMethod** 屬性 (Property)，控制如何將成員群組。  
   
-|**DiscretizationMethod** 設定|說明|  
+|**DiscretizationMethod** 設定|描述|  
 |--------------------------------------|-----------------|  
 |**無**|顯示成員。|  
-|**Automatic**|請選取最適合代表資料的方法： **EqualAreas** 方法或 **Clusters** 方法。|  
+|**自動**|請選取最適合代表資料的方法： **EqualAreas** 方法或 **Clusters** 方法。|  
 |**EqualAreas**|嘗試將屬性中的成員分成包含相同成員數目的群組。|  
 |**Clusters**|取樣培訓資料、初始化為一些隨機點，然後執行最大期望 (EM) 群集演算法的數次反覆運算，嘗試將屬性中的成員分成群組。<br /><br /> 這個方法適用於任何分佈曲線，所以十分有用，但是需要較多的處理時間。|  
   
@@ -79,7 +76,7 @@ ms.lasthandoff: 12/08/2017
   
  `<Bucket name>` 參數是一個字串運算式，其中可以納入一組變數，在其成員群組名稱中代表成員或成員群組資訊：  
   
-|變數|說明|  
+|變數|描述|  
 |--------------|-----------------|  
 |%{First bucket member}|要包含在目前成員群組中之第一個成員的成員名稱。|  
 |%{Last bucket member}|要包含在目前成員群組中之最後一個成員的成員名稱。|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -32,11 +32,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: c9e43eacb0fe9b5c5af98cfe54b557af93af7d1c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d6a0eecf1084cc17b1a2a08b7ef1c43c81d2e346
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 函數參考 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,13 +47,13 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="array-functions"></a>陣列函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[SetToArray &#40;MDX &#41;](../mdx/settoarray-mdx.md)|將一個 (含) 以上集合轉換成陣列，以便用在使用者自訂的函數中。|  
   
 ## <a name="hierarchy-functions"></a>階層函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[階層 &#40;MDX &#41;](../mdx/hierarchy-mdx.md)|傳回含有特定成員或層級的階層式架構。|  
 |[維度 &#40;MDX &#41;](../mdx/dimension-mdx.md)|傳回含有指定成員、層級或階層式架構的維度。|  
@@ -61,14 +61,14 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="level-functions"></a>層級函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[層級 &#40;MDX &#41;](../mdx/level-mdx.md)|傳回成員的層級。|  
 |[層級 &#40;MDX &#41;](../mdx/levels-mdx.md)|傳回層級，而其在維度或階層中的位置是由數值運算式指定，或者其名稱是由字串運算式指定。|  
   
 ## <a name="logical-functions"></a>邏輯函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[IsAncestor &#40;MDX &#41;](../mdx/isancestor-mdx.md)|傳回指定的成員是否為另一個指定成員的上階。|  
 |[IsEmpty &#40;MDX &#41;](../mdx/isempty-mdx.md)|傳回評估的運算式是否為空白資料格值。|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="member-functions"></a>成員函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[上階 &#40;MDX &#41;](../mdx/ancestor-mdx.md)|傳回某個成員在特定層級或特定距離的上階。|  
 |[ClosingPeriod &#40;MDX &#41;](../mdx/closingperiod-mdx.md)|傳回某個成員在特定層級的子系之最後一個同層級 (Sibling)。|  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="numeric-functions"></a>數值函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[彙總 &#40;MDX &#41;](../mdx/aggregate-mdx.md)|傳回純量值，此值是藉由彙總量值或指定集合的 Tuple 上選擇性指定的數值運算式而計算出。|  
 |[Avg &#40;MDX &#41;](../mdx/avg-mdx.md)|評估指定的集合，傳回量值的平均值或選擇性數值運算式的平均值。|  
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="set-functions"></a>集合函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[AddCalculatedMembers &#40;MDX &#41;](../mdx/addcalculatedmembers-mdx.md)|傳回藉由在指定集合中新增導出成員的方式所產生的集合。|  
 |[AllMembers &#40;MDX &#41;](../mdx/allmembers-mdx.md)|傳回一個集合，包含指定維度、階層或層級的所有成員，包括導出成員在內。|  
@@ -205,7 +205,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="string-functions"></a>字串函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|在 Cube 指定的計算行程運算後傳回數值 MDX 運算式的值。|  
 |[CoalesceEmpty &#40;MDX &#41;](../mdx/coalesceempty-mdx.md)|將空白資料格值與數字或字串聯合，並傳回聯合的值。|  
@@ -222,14 +222,14 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="subcube-functions"></a>Subcube 函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[這 &#40;MDX &#41;](../mdx/this-mdx.md)|傳回目前的 Subcube。|  
 |[分葉 &#40;MDX &#41;](../mdx/leaves-mdx.md)|傳回指定維度、成員或 Tuple 的分葉成員集合。|  
   
 ## <a name="tuple-functions"></a>Tuple 函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[目前 &#40;MDX &#41;](../mdx/current-mdx.md)|反覆運算時從一個集合傳回目前的 Tuple。|  
 |[項目 &#40;Tuple &#41;&#40;MDX &#41;](../mdx/item-tuple-mdx.md)|從集合傳回一個 Tuple。|  
@@ -238,7 +238,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="other-functions"></a>其他函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[錯誤 &#40;MDX &#41;](../mdx/error-mdx.md)|引發錯誤，選擇性提供指定的錯誤訊息。|  
   

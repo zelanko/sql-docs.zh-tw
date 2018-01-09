@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90ec951bb5666f28167e0ce704e63ba3bb0972d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 05f62f6beb2e248fc2e0c3ae405f8893c33c10e9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-the-database-schemas"></a>了解資料庫結構描述
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]結構描述產生精靈會產生為基礎的維度和量值群組中的主旨區域資料庫反正規化關聯式結構描述[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 此精靈會針對每一個維度產生關聯式資料表 (稱為維度資料表)，以便儲存維度資料，也會針對每一個量值群組產生關聯式資料表 (稱為事實資料表)，以便儲存事實資料。 精靈產生這些關聯式資料表時，會忽略連結維度、連結量值群組和伺服器時間維度。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="dimension-tables"></a>維度資料表  
  針對每個維度，結構描述產生精靈會產生要包含在主題領域資料庫裡的維度資料表。 維度資料表的結構，取決於設計資料表所依據之維度時的選擇。  
   
- 資料行  
+ [資料行]  
  針對作為維度資料表基礎之維度中每個屬性 (Attribute) 的相關聯繫結 (例如每個屬性 (Attribute) 之 **KeyColumns**、 **NameColumn**、 **ValueColumn**、 **CustomRollupColumn**、 **CustomRollupPropertiesColumn**和 **UnaryOperatorColumn** 屬性 (Property) 的繫結)，精靈會產生一個資料行。  
   
  關聯性  
@@ -72,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="fact-tables"></a>事實資料表  
  針對 Cube 中的每個量值群組，結構描述產生精靈會產生要包含在主題領域資料庫裡的一個事實資料表。 事實資料表的結構，取決於設計資料表所依據之量值群組時的選擇，以及在量值群組與任何內含維度之間建立的關聯性。  
   
- 資料行  
+ [資料行]  
  精靈會為每個量值產生一個資料行，不過使用 **Count** 彙總函式的量值除外。 這些量值在事實資料表中不需要有對應的資料行。  
   
  精靈也會在量值群組上，針對每個一般維度關聯性的每個資料粒度屬性資料行，產生一個資料行；也會針對與此資料表做為基礎的量值群組，有事實維度關聯性的維度之每個屬性的相關聯繫結，產生一或多個資料行 (如果適用的話)。  
@@ -101,7 +98,7 @@ ms.lasthandoff: 12/08/2017
 |NameColumn|50|  
 |CustomRollupColumn|3000|  
 |CustomRollupPropertiesColumn|500|  
-|UnaryOperatorColumn|1|  
+|UnaryOperatorColumn|@shouldalert|  
   
 ## <a name="see-also"></a>請參閱  
  [了解累加式產生](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   

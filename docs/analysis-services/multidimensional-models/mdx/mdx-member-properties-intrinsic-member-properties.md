@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: intrinsic member properties [MDX]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cf5daff8843fab7cdf1aed4acd0fec0dec84e5ea
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 823c8c1c387d2fb234fcf042cd416ce6e1ebb550
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成員屬性內建成員屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]公開內建屬性，您可以在自訂應用程式中，會傳回額外的資料或中繼資料使用，或協助模型調查或建構的查詢中包含的維度成員上。 如果您使用 SQL Server 用戶端工具，您可以在 SQL Server Management Studio (SSMS) 中檢視內建屬性。  
@@ -67,12 +64,12 @@ ms.lasthandoff: 12/08/2017
 ## <a name="context-sensitive-member-properties"></a>區分內容的成員屬性  
  所有維度成員及層級成員支援區分內容的內建成員屬性清單。 下表列出這些區分內容的屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**ID**|內部維護用的成員識別碼。|  
 |**Key**|原始資料類型的成員索引鍵值。 MEMBER_KEY 是為回溯相容性而提供。  對於非複合索引鍵，MEMBER_KEY 的值與 KEY0 相同，對於複合索引鍵，MEMBER_KEY 屬性為 Null。|  
 |**KEYx**|成員的索引鍵，其中 x 是索引鍵以零為基底的序數。 KEY0 可用於複合和非複合索引鍵，但主要是用於複合索引鍵。<br /><br /> 關於複合索引鍵，KEY0、KEY1、KEY2 等等，共同形成複合索引鍵。 您可以在查詢中單獨使用每一項，藉以傳回複合索引鍵的該部分。 例如，指定 KEY0 可傳回複合索引鍵的第一個部分，指定 KEY1 傳回複合索引鍵的下一部分，依此類推。<br /><br /> 如果索引鍵為非複合鍵，則 KEY0 相當於 **Key**。<br /><br /> 請注意， **KEYx** 可用於內容中，也可以在沒有內容的情況下使用。 因此，兩個清單上都有它。<br /><br /> 如需如何使用此成員屬性的範例，請參閱 [簡單的 MDX 小知識：Key0、Key1、Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
-|**Name**|成員的名稱。|  
+|**名稱**|成員的名稱。|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>區分內容屬性的 PROPERTIES 語法  
  您可以在特定維度或層級的內容中使用這些成員屬性，而且要將值提供給指定維度或階層的每個成員。  
@@ -97,7 +94,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  MEMBERS 結構描述資料列集中的資料行支援下表列出的內建成員屬性。 如需 **MEMBERS** 結構描述資料列集的詳細資訊，請參閱 [MDSCHEMA_MEMBERS 資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**CATALOG_NAME**|此一成員所屬 Cube 的名稱。|  
 |**CHILDREN_CARDINALITY**|成員擁有的子系數目。 這可為一個估計值，因此您不應該依賴此值做為確實計數。 提供者應會傳回最佳的可能估計值。|  

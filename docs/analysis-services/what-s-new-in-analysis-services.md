@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b65634862df0d49c8f20383a873aafe386c2e32c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services 的新功能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services 包含許多新的增強功能提供更佳的效能、 更容易撰寫的方案、 自動化的資料庫管理，增強的關聯性具有雙向交叉篩選，平行資料分割處理和執行更多。 此版本中的大多數增強功能的核心是針對表格式模型資料庫新增的相容性層級 1200。     
@@ -130,7 +130,7 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
 
 在資料庫層級，CREATE、ALTER 和 DELETE 命令會在熟悉的 XMLA 視窗中輸出 TMSL 指令碼。  其他命令 (例如 Process) 也可以在此版本中建立指令碼。 未來版本中可能新增許多其他動作的指令碼支援。    
 
-**可編寫指令碼的命令** | **描述**
+**可編寫指令碼的命令** | **說明**
 --------------- | ----------------
 建立|新增資料庫、連線或分割區。 ASSL 對等項目為 CREATE。
 createOrReplace|藉由覆寫先前的版本來更新現有的物件定義 (資料庫、連線或分割區)。 ASSL 對等項目為 ALTER，其 AllowOverwrite 設定為 true 且 ObjectDefinition 設定為 ExpandFull。
@@ -154,7 +154,7 @@ refresh|處理物件。 ASSL 對等項目為 PROCESS。
 - 多餘聯結刪除 - 對儲存引擎的單一查詢會傳回維度資料行和量值。
 - IF/SWITCH 的嚴格評估 - 條件為 false 的分支將不再產生儲存引擎查詢。 之前會積極地評估分支，但之後捨棄結果。     
     
-## <a name="developer"></a>開發人員    
+## <a name="developer"></a>Developer    
  ### <a name="microsoftanalysisservicestabular-namespace-for-tabular-1200-programmability-in-amo"></a>AMO 中表格式 1200 可程式性的 Microsoft.AnalysisServices.Tabular 命名空間
  Analysis Services 管理物件 (AMO) 會進行更新以納入新的表格式命名空間 (可供管理 SQL Server 2016 Analysis Services 的表格式模式執行個體)，以及提供資料定義語言 (可供以程式設計方式建立或修改表格式 1200 模型)。 請瀏覽 [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx) 以在 API 上讀取。    
  ### <a name="analysis-services-management-objects-amo-updates"></a>Analysis Services 管理物件 (AMO) 更新
@@ -206,7 +206,7 @@ Visual Studio 2015 中的 [程式碼檢視] 現在會針對表格式 1200 模型
     
 如需詳細資訊，請參閱 [DirectQuery 模式 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。    
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [Analysis Services 團隊部落格](http://blogs.msdn.microsoft.com/analysisservices/)    
 [SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)    
      

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c7f262045697398e2de2dabf01d59f9422191b55
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="relationships-ssas-tabular"></a>關聯性 (SSAS 表格式)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格式模型中，關聯性是兩個資料表之間的連線。 關聯性會建立兩個資料表中的資料相互關聯的方式。 例如，Customers 資料表和 Orders 資料表可以產生關聯，以便顯示彼此有關聯性的客戶名稱。  
@@ -39,34 +37,34 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="what"></a> 優點  
  關聯性是在兩個資料表之間，以每個資料表中的一個或多個資料行為基礎的連接。 若要了解為什麼關聯性是有用的，請假設您在追蹤自己商務中的客戶訂單資料。 您可以在具有類似下列結構的單一資料表中追蹤所有資料：  
   
-|CustomerID|名稱|EMail|DiscountRate|OrderID|OrderDate|產品|Quantity|  
+|CustomerID|[屬性]|EMail|DiscountRate|OrderID|OrderDate|產品|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
-|1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
-|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+|@shouldalert|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
+|@shouldalert|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
  這種方法可能有效，但牽涉到儲存太多重複的資料，例如每筆訂單的客戶電子郵件地址。 儲存雖然廉價，但是如果電子郵件地址變更，您就需要確定更新該客戶的每個資料列。 此問題的一種解決方案，就是將資料分為多個資料表，並且定義這些資料表之間的關聯性。 這是中使用的方法*關聯式資料庫*像 SQL Server。 例如，您匯入模型的資料庫可能會使用三個相關的資料表來表示訂單資料：  
   
 ### <a name="customers"></a>客戶  
   
-|[CustomerID]|名稱|EMail|  
+|[CustomerID]|[屬性]|EMail|  
 |--------------------|----------|-----------|  
-|1|Ashton|chris.ashton@contoso.com|  
+|@shouldalert|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
   
 ### <a name="customerdiscounts"></a>CustomerDiscounts  
   
 |[CustomerID]|DiscountRate|  
 |--------------------|------------------|  
-|1|.05|  
+|@shouldalert|.05|  
 |2|.10|  
   
 ### <a name="orders"></a>Orders  
   
 |[CustomerID]|OrderID|OrderDate|產品|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
-|1|256|2010-01-07|Compact Digital|11|  
-|1|255|2010-01-03|SLR Camera|15|  
+|@shouldalert|256|2010-01-07|Compact Digital|11|  
+|@shouldalert|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
  如果從相同資料庫匯入這些資料表，[資料表匯入精靈] 即可根據 [方括號] 中的資料行來偵測資料表之間的關聯性，而且可以在模型設計師中重現這些關聯性。 如需詳細資訊，請參閱本主題中的 [關聯性的自動偵測和推斷](#detection) 。 如果您從多個來源匯入資料表，您可以手動建立關聯性中所述[建立資料表之間的關聯兩個](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)。  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/08/2017
   
  下表顯示三個資料表之間的關聯性：  
   
-|關聯性|型別|「查閱資料行」|「資料行」|  
+|關聯性|類型|「查閱資料行」|「資料行」|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|一對一|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|一對多|Customers.CustomerID|Orders.CustomerID|  
@@ -179,7 +177,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[建立兩個資料表之間的關聯性](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|描述如何手動建立兩個資料表之間的關聯性。|  
 |[刪除關聯性](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|描述如何刪除關聯性和刪除關聯性的後果。|  

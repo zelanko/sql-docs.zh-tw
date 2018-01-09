@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 26bae76004b344b15f8f2be3605eb8c600c31039
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 91d370b9e71d843aa9a8ef8848b7cd63b38f0880
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>資料表與資料行 (SSAS 表格式)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]您已將資料表和資料加入模型使用資料表匯入精靈 」 之後，您可以開始使用資料表加入新的資料行、 建立資料表之間的關聯性、 定義可擴充資料的計算和篩選和排序中的資料為了更方便檢視資料表。  
@@ -66,7 +63,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_related_tasks"></a> 相關工作  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
 |[將資料行加入至資料表 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|描述如何將來源資料行加入至資料表定義。|  
 |[刪除資料行 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|描述如何使用模型設計師或 [資料表屬性] 對話方塊，刪除模型資料表資料行。|  

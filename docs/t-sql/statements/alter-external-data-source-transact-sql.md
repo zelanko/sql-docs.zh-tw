@@ -1,7 +1,7 @@
 ---
 title: "改變外部資料來源 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 11/13/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,16 +24,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 028a300c8dc6b295a0f10b3cb137809c81c4af95
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9257f2747d29933ce04f8e7faa2112c3f4231eaf
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="alter-external-data-source-transact-sql"></a>改變外部資料來源 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  修改用來建立外部資料表的外部資料來源。 外部資料來源可以是 Hadoop 或 Azure blob 儲存體 (WASB)。  
+  修改用來建立外部資料表的外部資料來源。 外部資料來源可以是 Hadoop 或 Azure blob 儲存體 (WASB)。
   
 ## <a name="syntax"></a>語法  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: '*'
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 030faf30d7038379697b095edfa2a6bddfb22fbd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e192e0eacd926cde2c6548392b1523cfc3d0af12
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>交叉聯結的 MDX 運算子參考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ Set_Expression * Set_Expression
  包含兩個指定參數的交叉乘積的集合。  
   
 ## <a name="remarks"></a>備註  
- **\* (Crossjoin)**運算子在功能上等於[Crossjoin](../mdx/crossjoin-mdx.md)函式。  
+  **\* (Crossjoin)**運算子在功能上等於[Crossjoin](../mdx/crossjoin-mdx.md)函式。  
   
 ## <a name="examples"></a>範例  
  以下範例示範此運算子的用法。  

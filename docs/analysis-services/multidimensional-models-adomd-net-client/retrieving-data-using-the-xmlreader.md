@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dbcce4f4a75d2aa8aefedfff4c3b8b8de81d1fe6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 70b268a896a7acbbf515ac49a722eccb17afdfd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>使用 XmlReader 擷取資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**XmlReader**類別，一部分**System.Xml** Microsoft.NET Framework 類別庫的命名空間是類似於<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>類別， **XmlReader**類別也提供快速、 非快取、 順向的資料存取。 如果不需要取得資料使用的記憶體中的分析檢視<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>物件**XmlReader**物件也非常適合用以擷取 XML 資料，特別是針對大量資料。 因為**XmlReader**串流資料， **XmlReader**不必擷取和之前公開給呼叫端的資料快取的所有資料，因為可以則<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>物件用來轉換XML for Analysis 回應的分析物件模型表示法。  

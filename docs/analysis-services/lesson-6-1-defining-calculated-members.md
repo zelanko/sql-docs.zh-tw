@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2968ac67b1e7ca3652dd4ae2cbb7cfd3293e51ca
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8bd25c8fc175d58df10d1a85c0dfc8c434fb84cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>課程 6-1-定義導出成員
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]導出的成員是維度的成員，或所定義的量值群組為基礎的 cube 資料、 算術運算子、 數字和函數。 例如，您可以建立一個導出成員，計算 Cube 中兩個實體量值的總和。 導出成員定義是儲存在 Cube 中，但其值是在查詢時計算。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/08/2017
     您可以將中繼資料元素，從 [計算工具] 窗格拖曳到 [運算式] 方塊中，再加上運算子和其他元素，來建立多維度運算式 (MDX) 運算式。 或者，您也可以在 [運算式] 方塊中，直接輸入 MDX 運算式。  
   
     > [!NOTE]  
-    > 如果您無法在 [計算工具] 窗格中檢視任何中繼資料，請在工具列上按一下 [重新連接]。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體。  
+    > 如果您無法在 [計算工具] 窗格中檢視任何中繼資料，請在工具列上按一下 [重新連接]。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的執行個體。  
   
 5.  從 [計算工具] 窗格的 [中繼資料] 索引標籤，將 [網際網路銷售 - 銷售量] 拖曳到 [計算運算式] 窗格中的 [運算式] 方塊。  
   
@@ -253,7 +253,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="browsing-the-new-calculated-members"></a>瀏覽新的導出成員  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services 教學課程)]。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
 2.  順利完成部署之後，切換到 [瀏覽器] 索引標籤，然後按一下 [重新連接]。  
   
@@ -296,7 +296,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [定義命名集](../analysis-services/lesson-6-2-defining-named-sets.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [計算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [多維度模型中的計算](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
 [建立導出成員](../analysis-services/multidimensional-models/create-calculated-members.md)  

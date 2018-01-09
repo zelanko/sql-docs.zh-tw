@@ -1,13 +1,13 @@
 ---
 title: "如何使用 RevoScaleR 函數來尋找或安裝 R 封裝的 SQL Server 上 |Microsoft 文件"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -16,11 +16,11 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 6d85c95a1aa0cba21c52142fa1a7599b208415ca
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1cc59cad6bfb95ee0981604d336087809f9cb932
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函數來尋找或 SQL Server 上的安裝 R 封裝
 
@@ -38,7 +38,7 @@ Microsoft R Server 版本 9.0.1 導入了新的 RevoScaleR 函數支援使用已
 
 + 如果您未指定使用者名稱和密碼建立計算內容時，會使用執行 R 程式碼之使用者的身分識別。
 
-+ 使用這些函數，從遠端 R 用戶端時，您必須建立計算內容物件首先，使用 RxInSQLServer 函式。 之後，您使用的每個封裝管理功能，通過計算內容做為引數。
++ 使用這些函數，從遠端 R 用戶端時，您必須建立計算內容物件首先，使用[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)函式。 之後，您使用的每個封裝管理功能，通過計算內容做為引數。
 
 + 可執行的封裝管理功能使用`sp_execute_external_script`。 當您這樣做時，請使用預存程序的呼叫端的安全性內容執行函式。
 
@@ -46,22 +46,23 @@ Microsoft R Server 版本 9.0.1 導入了新的 RevoScaleR 函數支援使用已
 
 RevoScaleR，提供下列封裝管理功能的安裝與移除指定的計算內容中的封裝：
 
-+ [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages)： 尋找指定的計算內容中安裝套件的相關資訊。
++ [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages)： 尋找指定的計算內容中安裝套件的相關資訊。
 
-+ [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages)： 安裝封裝到計算內容中，從指定的儲存機制，或藉由讀取本機儲存壓縮封裝。
++ [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages)： 安裝封裝到計算內容中，從指定的儲存機制，或藉由讀取本機儲存壓縮封裝。
 
-+ [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages)： 移除計算內容從安裝套件。
++ [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages)： 移除計算內容從安裝套件。
 
-+ [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage)： 取得指定的計算內容中的一個或多個封裝的路徑。
++ [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage)： 取得指定的計算內容中的一個或多個封裝的路徑。
 
-+ [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages)： 在指定的計算內容中複製封裝程式庫檔案系統與資料庫之間。
++ [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages)： 在指定的計算內容中複製封裝程式庫檔案系統與資料庫之間。
 
-+ [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths)： 在 SQL Server 內執行時取得封裝程式庫的樹狀目錄的搜尋路徑。
++ [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)： 在 SQL Server 內執行時取得封裝程式庫的樹狀目錄的搜尋路徑。
 
-根據預設，在 SQL Server 2017 包含這些封裝。 如需這些函數的資訊，請參閱 RevoScaleR 函式參考頁面: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
+根據預設，在 SQL Server 2017 包含這些封裝。 如需這些函數的資訊，請參閱 RevoScaleR 函式參考頁面: (https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 
 > [!NOTE]
 > 封裝管理的 R 函數會從 Microsoft R Server 9.0.1。 如果您在 RevoScaleR 中找不到函式，您可能需要升級至最新版本。 
+
 ## <a name="examples"></a>範例
 
 本章節包含如何使用 SQL Server 執行個體或資料庫中的封裝管理功能的範例。 

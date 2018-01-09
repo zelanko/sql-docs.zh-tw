@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10fc0c4c74dddf6faaa2cfe0b2bff4e24695ec2d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 536e56027445e2634ac2b72537c3af9540d76fff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="model-properties-ssas-tabular"></a>Model Properties (SSAS Tabular)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題描述表格式模型屬性。 每個表格式模型專案皆含有模型屬性，可影響您在 SQL Server 開發工具中撰寫之模型的建立方式、備份方式，以及工作空間資料庫的儲存方式。 此處所述的模型屬性，並不適用於已部署的模型。  
@@ -41,7 +38,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_model_properties"></a> 模型屬性  
  **進階**  
   
-|屬性|預設設定|說明|  
+|屬性|預設設定|描述|  
 |--------------|---------------------|-----------------|  
 |**建置動作**|編譯|此屬性會指定檔案與建立及部署程序的關聯。 此屬性設定具有以下選項：<br /><br /> **編譯** ：發生一般建置動作。 模型物件的定義會寫入至 .asdatabase 檔。<br /><br /> **無** ：.asdatabase 檔的輸出會是空的。|  
 |**複製到輸出目錄**|不要複製|此屬性指定將來源檔案複製到輸出目錄。 此屬性設定具有以下選項：<br /><br /> **不要複製** ：不會在輸出目錄中建立任何副本。<br /><br /> **永遠複製** ：一律在輸出目錄中建立副本。<br /><br /> **有更新時才複製** ：僅當 model.bim 檔變更時，才在輸出目錄中建立副本。|  
@@ -54,7 +51,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  當您建立新的模型專案時，[工作空間伺服器]、[工作空間保留] 及 [資料備份] 屬性會套用預設值。 您可以在 [資料模型化] 頁面之 [工具\選項] 對話方塊的 [Analysis Server] 設定中，變更新模型的預設值。 您也可以在 [屬性] 視窗中，為每個模型設定上述屬性及其他屬性。 如需詳細資訊，請參閱 [設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
-|屬性|預設設定|說明|  
+|屬性|預設設定|描述|  
 |--------------|---------------------|-----------------|  
 |**定序**|安裝 Visual Studio 之電腦的預設定序。|模型的定序指示項。|  
 |**相容性層級**|預設或建立專案時選取的其他項目。|適用於 SQL Server 2012 Analysis Services SP1 或更新版本。 指定此模型可用的功能和設定。 如需詳細資訊，請參閱 [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。|  

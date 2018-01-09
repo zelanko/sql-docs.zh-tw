@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 94ff2b30d64c0d3039910c57adf8327781e38c75
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 38f0983ae4f840ac0addf4e30439ff57a679e30e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---properties"></a>XML 項目-內容
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]XML for Analysis (XMLA) 通訊協定會使用 XML 項目，表示屬性資訊以及 XMLA 標頭、 方法、 物件、 命令和資料類型的值。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="topic-list"></a>主題清單  
  下列主題將描述 [!INCLUDE[ssAS](../../../includes/ssas-md.md)] 所實作的 XMLA 元素。  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |[AllowOverwrite 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)||  
 |[ApplyCompression 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md)||  

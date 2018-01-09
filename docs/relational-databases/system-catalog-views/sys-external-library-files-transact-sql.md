@@ -8,7 +8,7 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,22 +21,22 @@ helpviewer_keywords: sys.external_library_files catalog view
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: a3196218bbb886544a77c2fd1184c806591b16e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a03a50bdeda18d027fbad56e2cd4b86a261052b7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 列出外部程式庫所組成的每個檔案的資料列。
 
-|資料行名稱 |資料類型 |Description|
+|資料行名稱 |資料類型 |描述|
 |------|------|-----|
-|external_library_id | int |外部程式庫物件的識別碼。 |
+|external_library_id | ssNoversion |外部程式庫物件的識別碼。 |
 |content |varbinary(max) |外部程式庫檔案成品的內容。 |
-|平台 |tinyint |安裝 SQL Server 的主機平台的識別碼。 |
+|平台 |TINYINT |安裝 SQL Server 的主機平台的識別碼。 |
 |platform_desc | nvarchar(60) |主機平台的名稱。 有效值為 'WINDOWS'、 'LINUX'。 |
 
 ### <a name="see-also"></a>另請參閱  

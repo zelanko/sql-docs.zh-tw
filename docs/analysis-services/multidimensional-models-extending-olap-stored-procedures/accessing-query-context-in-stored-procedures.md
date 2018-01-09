@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,19 +23,19 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a9ab0de9eae86293f25781cc5b85f175037f1ffc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5b7a0c3e57a5249a26bf13a2cf9709e58df85da8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>在預存程序中存取查詢內容
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]預存程序的執行內容是可以在預存程序的程式碼中使用**內容**ADOMD.NET 伺服器物件模型的物件。 這是唯讀的內容，而且不能由預存程序加以修改。 下列屬性可以在此物件上使用。  
   
-|屬性|型別|Description|  
+|屬性|類型|描述|  
 |--------------|----------|-----------------|  
 |**CurrentCube**|Cube|目前查詢內容的 Cube。|  
-|**CurrentDatabaseName**|字串|目前資料庫的識別碼。|  
+|**CurrentDatabaseName**|String|目前資料庫的識別碼。|  
 |**CurrentConnection**|連接|對目前內容中之連線物件的參考。|  
 |**傳遞**|Integer|目前內容的行程數目。|  
   

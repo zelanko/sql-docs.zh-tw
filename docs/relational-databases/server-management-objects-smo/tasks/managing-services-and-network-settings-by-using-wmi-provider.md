@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d5f236d7726d2c45de16d8ac2a79dd2c4a4e4525
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a8626731b1fde43a1713ba4afbc6a98988e2c2d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供者管理服務和網路設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WMI 提供者是已發行的介面，以供[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Management Console (MMC) 來管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務和網路通訊協定。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>物件都代表 WMI 提供者。  
@@ -215,7 +215,7 @@ $svc.ServiceState
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [組態管理的 WMI 提供者概念](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

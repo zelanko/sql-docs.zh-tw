@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: aa928dc5-d00d-4f8a-80b9-7e6973d2196c
@@ -17,11 +17,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a8a94cb71ab8625a2a546e62f5dc828b605aeaa2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 76ffc0da4e8d56b4bb37b0be5278e458ac6fb043
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dax-properties"></a>DAX 屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Msmdsrv.ini 的 DAX 區段包含用來控制中的特定查詢行為設定[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，例如 DAX 查詢結果集中傳回的資料列數目的上限。 
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/08/2017
 
 ## <a name="property-descriptions"></a>屬性描述
 
-設定 |Value |說明
+設定 |ReplTest1 |描述
 --------|-------|-----------
 MaxIntermediateRowsetSize | 1000000 | DAX 查詢中所傳回的最大資料列數目。 手動將此項目加入 msmdsrv.ini 檔案，如果預設值太低，請增加此值。 
 PredicateCheckSpoolCardinalityThreshold| 5000 | 此為進階屬性，除非在 Microsoft 支援人員的指導之下，否則不應隨意變更。

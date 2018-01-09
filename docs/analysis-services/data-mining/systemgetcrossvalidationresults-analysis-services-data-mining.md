@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5818339f5bcc44770cdf728d93deb1b41b9bf618
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料分割成交叉區段，指定數目的採礦結構的每個資料分割中，為模型定型，，然後傳回每個資料分割的精確度度量。  
@@ -134,7 +134,7 @@ SystemGetCrossValidationResults(
   
  下表描述此資料列集中的資料行。  
   
-|資料行名稱|說明|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |ModelName|已測試的模型名稱。|  
 |AttributeName|可預測的資料行名稱。|  
@@ -142,8 +142,8 @@ SystemGetCrossValidationResults(
 |PartitionIndex|以 1 為基準的索引，可識別套用結果的資料分割。|  
 |PartitionSize|指示每一個資料分割內包含了多少案例數的整數。|  
 |測試|已執行之測試的類別目錄。 如需類別目錄以及包含在每一個類別目錄中之測試的描述，請參閱 [交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
-|[量值]|測試所傳回之量值的名稱。 每一個模型的量值都取決於可預測值的類型。 如需每個量值的定義，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。<br /><br /> 如需每一個可預測類型所傳回的量值清單，請參閱[交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
-|Value|指定之測試量值的值。|  
+|[量值]|測試所傳回之量值的名稱。 每一個模型的量值都取決於可預測值的類型。 如需每個量值的定義，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。<br /><br /> 如需每一個可預測類型所傳回的量值清單，請參閱 [交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
+|ReplTest1|指定之測試量值的值。|  
   
 ## <a name="remarks"></a>備註  
  若要傳回整個資料集的精確度度量，請使用 [SystemGetAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)。  
@@ -172,22 +172,22 @@ NULL
   
  範例結果：  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|[量值]|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|量值|ReplTest1|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|Target Mail DT|Bike Buyer|1|1|500|分類|真肯定|144|  
-|Target Mail DT|Bike Buyer|1|1|500|分類|誤判|105|  
-|Target Mail DT|Bike Buyer|1|1|500|分類|真否定|186|  
-|Target Mail DT|Bike Buyer|1|1|500|分類|誤否定|65|  
-|Target Mail DT|Bike Buyer|1|1|500|可能性|對數分數|-0.619042807138345|  
-|Target Mail DT|Bike Buyer|1|1|500|可能性|增益|0.0740963734002671|  
-|Target Mail DT|Bike Buyer|1|1|500|可能性|均方根誤差|0.346946279977653|  
-|Target Mail DT|Bike Buyer|1|2|500|分類|真肯定|162|  
-|Target Mail DT|Bike Buyer|1|2|500|分類|誤判|86|  
-|Target Mail DT|Bike Buyer|1|2|500|分類|真否定|165|  
-|Target Mail DT|Bike Buyer|1|2|500|分類|誤否定|87|  
-|Target Mail DT|Bike Buyer|1|2|500|可能性|對數分數|-0.654117781086519|  
-|Target Mail DT|Bike Buyer|1|2|500|可能性|增益|0.038997399132084|  
-|Target Mail DT|Bike Buyer|1|2|500|可能性|均方根誤差|0.342721344892651|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分類|真肯定|144|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分類|誤判|105|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分類|真否定|186|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分類|誤否定|65|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|可能性|對數分數|-0.619042807138345|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|可能性|增益|0.0740963734002671|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|可能性|均方根誤差|0.346946279977653|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|分類|真肯定|162|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|分類|誤判|86|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|分類|真否定|165|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|分類|誤否定|87|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|可能性|對數分數|-0.654117781086519|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|可能性|增益|0.038997399132084|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|可能性|均方根誤差|0.342721344892651|  
   
 ## <a name="requirements"></a>需求  
  從 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 開始，交叉驗證只能在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中使用。  

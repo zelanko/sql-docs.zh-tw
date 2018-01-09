@@ -5,13 +5,10 @@ ms.date: 07/24/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ae2e26606a2f84abea1caed7032a80d2e2de7e45
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 73cbfa40573fcf08774a576aaa7f09bb1ea21195
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="workspace-database-ssas-tabular"></a>工作空間資料庫 (SSAS 表格式)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]當您建立新的表格式模型專案中建立表格式模型工作空間資料庫，用於撰寫模型期間[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。
@@ -85,19 +82,19 @@ ms.lasthandoff: 12/08/2017
  工作區資料庫屬性包含在模型屬性中。 若要檢視模型屬性，請在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的方案總管中，按一下 [Model.bim] 檔案。 模型屬性可以使用 [屬性] 視窗進行設定。 工作區資料庫的特定屬性包括：  
   
 > [!NOTE]  
->  當您建立新的模型專案時，會對**整合工作區模式**、**工作區伺服器**、**工作區保留**及**資料備份**套用預設值。 您可以在 [資料模型化] 頁面之 [工具\選項] 對話方塊的 [Analysis Server] 設定中，變更新模型專案的預設設定。 您也可以在 [屬性] 視窗中，為每個模型專案設定上述屬性及其他屬性。 變更預設設定不會套用至已建立的模型專案。 如需詳細資訊，請參閱[設定預設的資料模型和部署屬性&#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
+>  當您建立新的模型專案時，會對**整合工作區模式**、**工作區伺服器**、**工作區保留**及**資料備份**套用預設值。 您可以在 [資料模型化] 頁面之 [工具\選項] 對話方塊的 [Analysis Server] 設定中，變更新模型專案的預設設定。 您也可以在 [屬性] 視窗中，為每個模型專案設定上述屬性及其他屬性。 變更預設設定不會套用至已建立的模型專案。 如需詳細資訊，請參閱 [設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
-|屬性|預設值|說明|  
+|屬性|預設值|描述|  
 |--------------|---------------------|-----------------|  
 |**整合工作區模式**|True、False|若在建立專案時，為工作區資料庫選取整合式工作區模式，此屬性會是 True。 若在建立專案時選取了 **工作區伺服器** ，此屬性會是 False。 | 
-|**工作區資料庫**|名稱|工作區資料庫的名稱。 當 [整合工作區模式] 為 [True] 時，無法編輯此屬性。|  
+|**工作區資料庫**|[屬性]|工作區資料庫的名稱。 當 [整合工作區模式] 為 [True] 時，無法編輯此屬性。|  
 |**工作空間保留**|從記憶體中卸載|指定在關閉模型專案之後，如何保留工作區資料庫。 工作區資料庫包含模型中繼資料及匯入的資料。 在某些情況下，工作區資料庫可能會非常大，因此耗用大量的記憶體。 依預設，當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中關閉模型專案時，會從記憶體中卸載工作區資料庫。 變更此設定時，最好考慮您的可用記憶體資源，以及您打算處理模型專案的頻率。 此屬性設定具有以下選項：<br /><br /> **保留在記憶體中** - 指定在關閉模型專案後，將工作區資料庫保留在記憶體中。 此選項將耗用較多的記憶體，但是在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中開啟模型專案時，將耗用較少的資源，而且工作區資料庫將會更快載入。<br /><br /> **從記憶體中卸載** - 指定在關閉模型專案後，將工作區資料庫保留在磁碟上，但不再保留在記憶體中。 這個選項會耗用較少記憶體，不過，當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中開啟模型專案時，必須重新附加工作區資料庫；此外，還會耗用額外的資源且模型專案載入會比較慢 (與工作區資料庫保留在記憶體中相比)。 當記憶體中的資源有限，或者當處理遠端工作區資料庫時，請使用此選項。<br /><br /> **刪除工作區** ：指定在關閉模型專案後，從記憶體中刪除工作區資料庫，而且不將工作區資料庫保留在磁碟上。 此選項將耗用較少的記憶體和儲存空間，但是在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中開啟模型專案時，將耗用額外的資源，而且模型專案的載入速度比將工作區資料庫保留在記憶體或磁碟中更慢。 只有在偶爾處理模型專案時，才使用此選項。<br /><br /> 您可以在 [資料模型化] 頁面之 [工具\選項] 對話方塊的 [Analysis Server] 設定中，變更此屬性的預設設定。 當 [整合工作區模式] 為 [True] 時，無法編輯此屬性。|  
 |**工作空間伺服器**|localhost|此屬性指定在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中撰寫模型專案時，用來裝載工作區資料庫的預設伺服器。 在本機電腦上執行的所有可用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體都包含在清單方塊中。<br /><br /> 若要指定其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器 (以表格式模式執行)，請輸入伺服器名稱。 登入的使用者必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器上的管理員。<br /><br /> 請注意，建議您指定本機 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器作為工作區伺服器。 若是遠端伺服器上的工作區資料庫，則不支援從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 匯入，也無法在本機備份資料，而且使用者介面在查詢期間可能會遇到延遲。<br /><br /> 您可以在 [資料模型化] 頁面之 [工具\選項] 對話方塊的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 設定中，變更此屬性的預設設定。 當 [整合工作區模式] 為 [True] 時，無法編輯此屬性。|  
   
 ##  <a name="bkmk_use_ssms"></a> 使用 SSMS 管理工作區資料庫  
  您可以使用 SQL Server Management Studio (SSMS) 連接線到裝載工作區資料庫伺服器的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 通常，無須對工作區資料庫進行管理；例外的情況是卸離或刪除工作區資料庫，這必須從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行。 在模型設計師中開啟專案時，請勿使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 管理工作區資料庫。 這麼做會導致資料遺失。
    
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [模型屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68f4ffdbf0408a936d7a2c9b49f18eb8adb32520
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a0c53bff9e68fb0b95ce2876fd9521c0eb40c206
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>資料列集屬性和行為
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 
   這些是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者資料列集屬性。  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
 |DBPROP_ABORTPRESERVE|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：中止操作後的資料列集行為取決於此屬性。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會使中止操作之後無效資料列集。 資料列集物件的功能都會幾乎遺失。 它只支援**IUnknown**作業和未處理的資料列與存取子控制代碼的版本。<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者維護有效的資料列集。|  
 |DBPROP_ACCESSORDER|R/W：讀取/寫入<br /><br /> 預設值：DBPROPVAL_AO_RANDOM<br /><br /> 描述：存取順序 必須在資料列集上存取資料行的順序。<br /><br /> DBPROPVAL_AO_RANDOM：資料行可以依任何順序進行存取。<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS：當做儲存物件繫結的資料行僅能以資料行序數決定的循序順序進行存取。<br /><br /> DBPROPVAL_AO_SEQUENTIAL：所有資料行都必須以資料行序數決定的循序順序進行存取。|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會定義提供者特有的屬性集 DBPROPSET_SQLSERVERROWSET，如本表所示。  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
 |SSPROP_COLUMN_ID|資料行：ColumnID<br /><br /> R/W：唯讀<br /><br /> 類型： VT_U12 &#124;VT_ARRAY<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述：在目前的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中，代表 COMPUTE 子句結果資料行之序數位置 (以 1 為基底) 的整數值陣列。 這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者等同於等同於 ODBC SQL_CA_SS_COLUMN_ID 屬性。|  
 |SSPROP_DEFERPREPARE|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BOOL<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： VARIANT_TRUE： 在備妥的執行中，命令準備會延遲，直到**icommand:: Execute**稱為或執行中繼屬性作業。 如果此屬性設定為<br /><br /> VARIANT_FALSE： 陳述式時，會準備**icommandprepare:: Prepare**執行。|  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
 |SSPROP_QP_NOTIFICATION_OPTIONS|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BSTR<br /><br /> 預設值：空字串<br /><br /> 描述：查詢通知選項。 這些是使用 `name=value`，在字串中指定的。 使用者負責建立此服務以及從佇列讀取通知。 查詢通知選項字串的語法為：<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 例如：<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_UI4<br /><br /> 預設值：432000 秒 (5 天)<br /><br /> 最小值：1 秒<br /><br /> 最大值：2^31-1 秒<br /><br /> 描述：查詢通知要維持使用中的秒數。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [資料列集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

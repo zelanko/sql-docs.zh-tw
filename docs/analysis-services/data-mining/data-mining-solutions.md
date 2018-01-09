@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4b806912f80b6e95a455456a992979953113a330
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 595282e28a55171ed5a528d28f37500a21f71c0d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-solutions"></a>資料採礦方案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料採礦方案是[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]包含一或多個資料採礦專案的方案。  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
 |工作|主題|  
 |-----------|------------|  
-|測試您建立的模型、驗證定型資料的品質，然後建立代表資料採礦模型精確度的圖表。|[測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|測試您建立的模型、驗證定型資料的品質，然後建立代表資料採礦模型精確度的圖表。|[測試及驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |將資料填入結構和相關模型中來定型模型。 使用新的資料來更新和擴充模型。|[處理資料採礦物件](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
 |將篩選套用到定型資料、選擇不同的演算法或是設定進階演算法參數來自訂採礦模型。|[自訂採礦模型和結構](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
 |將篩選套用到定型模式時所使用的資料來自訂採礦模型。|[將採礦模型加入結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
