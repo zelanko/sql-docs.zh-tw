@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 06427f8e-89bb-4710-a0c1-dc5e42b7e95e
@@ -17,16 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8bc82f2140f3103c4a9ded02e12f8b499d8f52be
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ad434202093984f6064fe4bf80ba79e1b57c3cf8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lock-events-category"></a>Lock 事件類別目錄
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]鎖定事件類別目錄具有下表中所述的事件類別。  
   
-|Event Class|事件識別碼|說明|  
+|Event Class|事件識別碼|描述|  
 |-----------------|--------------|-----------------|  
 |死結|50|收集自從啟動追蹤之後的所有中繼資料鎖定死結事件。|  
 |鎖定逾時|51|收集自從啟動追蹤之後的所有中繼資料鎖定逾時事件。|  

@@ -1,26 +1,26 @@
 ---
 title: "什麼 &#39; s 機器學習服務的新功能 |Microsoft 文件"
-ms.date: 11/16/2017
+ms.date: 01/08/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
 caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>新功能 SQL Server 中的機器學習服務
 
@@ -34,9 +34,11 @@ ms.lasthandoff: 12/20/2017
 
 SQL Server 中的機器學習伺服器提供用於建置及部署 Python 或 R 中的機器學習解決方案的完整支援。 以下是此版本的重點：
 
-### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>新功能 SQL Server 2017 累計更新 1
+### <a name="whats-new-in-cumulative-update-3-for-sql-server-2017"></a>新功能 SQL Server 2017 累積更新 3
 
-您現在可以升級到機器學習伺服器 9.2.1.24 的 Python 和 R 元件。 此版本主打許多增強功能**revoscalepy**和**RevoScaleR**，包括效能改進。
+這個版本包含 Python 和 R 元件的更新。 
+
++ 已新增的支援 Python 模型中進行序列化 revoscalepy，使用 rx_serialize_model 函式
 
 ### <a name="in-database-python-integration"></a>資料庫 Python 整合
 

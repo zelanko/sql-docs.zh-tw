@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8fb40241f031cca90bd2be5069d0c61a0c100dd1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 04edc4aeea3123ad58775fddf3a821f65decd90b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>補充課程-設定 Power View 報表的報表屬性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/08/2017
   
 完成本課程的估計時間： **30 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
 這個補充課程是表格式模型教學課程的一部分，必須依序完成。 在執行本補充課程中的工作之前，您應已完成之前所有課程。  
 為了完成這個特殊補充課程，您也必須具備以下條件：  
   
@@ -155,19 +155,19 @@ ms.lasthandoff: 12/08/2017
   
     **客戶**  
   
-    |資料行|屬性|Value|  
+    |「資料行」|屬性|ReplTest1|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Birth Date|資料格式|簡短日期|  
   
-    **日期**  
+    **Date**  
   
     > [!NOTE]  
     > 因為在第 7 課：＜標記為日期資料表＞中 [Date] 資料表已使用 [標記為日期資料表] 設定選取為模型日期資料表，而且 [Date] 資料表中的 [Date] 資料行會當做唯一識別碼的資料行使用，所以 [Date] 資料行的 [資料列識別碼] 屬性將會自動設定為 True 而且無法變更。 當您在 DAX 公式中使用時間智慧函數時，您必須指定日期資料表。 在此模型中，您已使用時間智慧函數建立許多量值，以計算各個不同期間的銷售資料 (例如上一季和當季) 並用於 KPI 中。 如需指定日期資料表的詳細資訊，請參閱《SQL Server 線上叢書》中的[指定標記為日期資料表以搭配時間智慧使用 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
   
-    |資料行|屬性|Value|  
+    |「資料行」|屬性|ReplTest1|  
     |----------|------------|---------|  
-    |日期|資料格式|簡短日期|  
+    |date|資料格式|簡短日期|  
     |Day Number of Week|Hidden|True|  
     |Day Name|依資料行排序|Day Number of Week|  
     |Day of Week|Hidden|True|  
@@ -182,14 +182,14 @@ ms.lasthandoff: 12/08/2017
   
     **地理位置**  
   
-    |資料行|屬性|Value|  
+    |「資料行」|屬性|ReplTest1|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
     **產品**  
   
-    |資料行|屬性|Value|  
+    |「資料行」|屬性|ReplTest1|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|預設標籤|True|  
@@ -199,7 +199,7 @@ ms.lasthandoff: 12/08/2017
   
     **Internet Sales**  
   
-    |資料行|屬性|Value|  
+    |「資料行」|屬性|ReplTest1|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  
@@ -220,7 +220,7 @@ ms.lasthandoff: 12/08/2017
   
     [部署] 對話方塊隨即出現，並且顯示中繼資料以及模型中每個資料表的部署狀態。  
   
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
 您現在可以使用 Power View 將模型中的資料視覺化。 請確定 SharePoint 網站上的 Analysis Services 和 Reporting Services 帳戶具有模型部署所在之 Analysis Services 執行個體的讀取權限。  
   
 若要建立 Reporting Services 報表資料來源以指向您的模型，請參閱 [資料表模型連接類型 (SSRS)](http://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx)。  

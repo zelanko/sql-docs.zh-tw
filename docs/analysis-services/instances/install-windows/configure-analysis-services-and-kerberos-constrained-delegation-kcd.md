@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae2cafe597e5540a58cc89e28cee87516942d021
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6de32b7f057093f31143ad56e71c492be325cf4d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>設定 Analysis Services 及 Kerberos 限制委派 (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Kerberos 限制的委派 (KCD) 是您可以使用 Windows 驗證來委派從用戶端認證設定的驗證通訊協定服務在整個環境的服務。 KCD 需要其他基礎結構 (例如網域控制站)，以及您環境的其他組態。 某些在 SharePoint 2016 使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料的案例會需要 KCD。 在 SharePoint 2016 中，Excel Services 已從 SharePoint 伺服器陣列外移到不同的新伺服器： **Office Online Server**。 因為 Office Online Server 是獨立的，所以對於在典型雙躍點案例中委派用戶端認證的方法，其需求漸增。  
@@ -108,7 +108,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  為執行個體組態設定具名執行個體 "POWERPIVOT"。  
   
-3.  在 [Analysis Services 組態] 頁面上，設定 **PowerPivot** 模式的 Analysis Services 伺服器，並將 Office Online Server 的 **電腦名稱** 加入 Analysis Services 伺服器管理員清單中。 如需詳細資訊，請參閱 [以 PowerPivot 模式安裝 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
+3.  在 [Analysis Services 組態] 頁面上，設定 **PowerPivot** 模式的 Analysis Services 伺服器，並將 Office Online Server 的 **電腦名稱** 加入 Analysis Services 伺服器管理員清單中。 如需詳細資訊，請參閱[以 PowerPivot 模式安裝 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
 4.  請注意，根據預設，搜尋中不包括 “Computer” 物件類型。 按一下![按一下要新增電腦帳戶物件](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "按一下要新增電腦帳戶物件")新增 Computers 物件。  
   
@@ -186,7 +186,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  請對 Analysis Services PowerPivot 執行個體的 Office Online Server 帳戶**設定限制委派** 。 這必須是執行 Office Online Server 的電腦帳戶。 我們想確定下列項目在 Office Online Service 帳戶已完成設定。  
   
-     **注意** ︰若您在 [Active Directory 使用者和電腦] 中看不到帳戶的 [委派] 索引標籤，是因為該帳戶上沒有 SPN。  您可以新增假的 SPN (例如 `my/spn`) 使其出現。  
+     **注意︰**若您在 [Active Directory 使用者和電腦] 中看不到帳戶的 [委派] 索引標籤，是因為該帳戶上沒有 SPN。  您可以新增假的 SPN (例如 `my/spn`) 使其出現。  
   
      **信任這個使用者，但只委派指定的服務** ，並 **使用任何驗證通訊協定**。  
   

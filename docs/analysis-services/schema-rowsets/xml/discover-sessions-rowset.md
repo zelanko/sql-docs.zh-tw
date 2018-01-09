@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f8fef815cbb4a648bacb6ab90a40bfc41d57d3e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: daa1e2d464283fa3e2cb37733bb2a705454e50dc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoversessions-rowset"></a>DISCOVER_SESSIONS 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在伺服器上，提供有關目前開啟的工作階段的資源使用量與活動資訊。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_SESSIONS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|Description|  
+|資料行名稱|類型指標|長度|描述|  
 |-----------------|--------------------|------------|-----------------|  
 |**SESSION_COMMAND_COUNT**|**DBTYPE_I4**||工作階段開始之後開始執行的命令數目。|  
 |**SESSION_CONNECTION_ID**|**DBTYPE_I4**||工作階段的連接識別碼。|  

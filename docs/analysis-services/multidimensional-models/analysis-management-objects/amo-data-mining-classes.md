@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7f7e5ed96e4d25d33d8d69124f9f94ccccdcef1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: de2b66f2dea7dfa29301ddd14f831d7318c6f4f9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="amo-data-mining-classes"></a>AMO 資料採礦類別
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]資料採礦類別可協助您建立、 修改、 刪除和處理資料採礦物件。 處理資料採礦物件包括建立資料採礦結構、建立資料採礦模型和處理模型。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
  <xref:Microsoft.AnalysisServices.MiningStructure> 可以使用自己的處理方法進行處理，或者也可以在父物件使用其處理方法自行處理時，一併加以處理。  
   
-### <a name="columns"></a>資料行  
+### <a name="columns"></a>[資料行]  
  資料行會保存模型的資料，而且視用法而定，可屬於不同的類型：Key、Input、Predictable 或是 InputPredictable。 可預測的資料行是建立採礦模型的目標。  
   
  單一值資料行在 AMO 中稱為 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。 多個值資料行則稱為 <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>。  

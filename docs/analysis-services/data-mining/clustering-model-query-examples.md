@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,18 +21,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clustering-model-query-examples"></a>叢集模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您建立針對資料採礦模型的查詢時，您可以擷取有關模型的中繼資料，或建立內容查詢，以提供有關分析期間所發現之模式的詳細資料。 或者，您可以建立預測查詢，這會使用模型中的模式對新資料進行預測。 每種查詢都會提供不同的資訊。 例如，內容查詢可能會提供有關所找到群集的詳細資料，預測查詢則會告訴您最可能包含新資料點的群集。  
   
  本節說明如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法為基礎的模型建立查詢。  
   
- **Content Queries**  
+ **內容查詢**  
   
  [使用 DMX 取得模型中繼資料](#bkmk_Query1)  
   
@@ -85,7 +83,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|群集模型|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|全部|  
+|NODE_DESCRIPTION|All|  
   
  如需這些資料行在叢集模型中代表意義的定義，請參閱[叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)。  
   
@@ -171,17 +169,17 @@ WHERE NODE_TYPE = 5
 |NODE_NAME|T.ATTRIBUTE_VALUE|T.PROBABILITY|  
 |----------------|------------------------|-------------------|  
 |001|2|0.829207754|  
-|001|1|0.109354156|  
+|001|@shouldalert|0.109354156|  
 |001|3|0.034481552|  
 |001|4|0.013503302|  
 |001|0|0.013453236|  
-|001|遺漏|0|  
+|001|Missing|0|  
 |002|0|0.576980023|  
-|002|1|0.406623939|  
+|002|@shouldalert|0.406623939|  
 |002|2|0.016380082|  
 |002|3|1.60E-05|  
 |002|4|0|  
-|002|遺漏|0|  
+|002|Missing|0|  
   
  [回頁首](#bkmk_top2)  
   
@@ -229,7 +227,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 |Region|North America|100|  
 |English Occupation|Skilled Manual|94.9003803898654|  
 |Region|Europe|-72.5041051379789|  
-|English Occupation|Manual|-69.6503163202722|  
+|English Occupation|手動|-69.6503163202722|  
   
  這與您從第一個下拉式清單選取叢集 9 和從第二個下拉式清單選取叢集 7 時，在 [叢集辨識] 檢視器的圖表中所展示的資訊相同。 若要將群集 9 與其補充相較，可以使用第二個參數中的空字串，如下列範例所示：  
   
@@ -283,13 +281,13 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|運算式|  
 |----------------|----------------|  
-|1|0.592924735740338|  
+|@shouldalert|0.592924735740338|  
   
  當使用方式設定為 **PredictOnly** 並重新處理模型時的結果範例：  
   
 |Bike Buyer|運算式|  
 |----------------|----------------|  
-|1|0.55843544003102|  
+|@shouldalert|0.55843544003102|  
   
  在此範例中，模型中的差異並不大。 不過，有時候偵測值的實際散發和模型所預測的情況之間的差異可能很重要。 [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) 函數在此案例中很有用，因為它會告訴您在模型已知時的案例可能性。  
   
@@ -364,7 +362,7 @@ NATURAL PREDICTION JOIN
 |叢集 7|0.979081275926724|0.0209187240732763|  
 |叢集 1|0.999169044818624|0.000830955181376364|  
 |叢集 9|0.999831227795894|0.000168772204105754|  
-|叢集 8|1|0|  
+|叢集 8|@shouldalert|0|  
   
  根據預設值，結果是依機率排序。 結果會告訴您，即使 Cluster 2 的機率相當低，Cluster 2 仍是新資料點的最適合項目。  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe9721a2653f962865b6d5b180bff99d4043b306
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 42bbe583c494830308c021c1adc385ec48491007
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>DISCOVER_PARTITION_DIMENSION_STAT 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]傳回與資料分割相關之維度的統計資料  
@@ -34,12 +32,12 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_PARTITION_DIMENSION_STAT**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|限制|Description|  
+|資料行名稱|類型指標|限制|描述|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**資料庫名稱**|**DBTYPE_WSTR**|Required|資料庫的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Required|Cube 或表格式模型的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
-|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Required|量值群組的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
-|**PARTITION_NAME**|**DBTYPE_WSTR**|Required|資料分割的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
+|**資料庫名稱**|**DBTYPE_WSTR**|必要項|資料庫的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|必要項|Cube 或表格式模型的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|必要項|量值群組的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|必要項|資料分割的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||維度的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||維度中屬性的名稱。|  
 |**ATTRIBUTE_INDEXED**|**DBTYPE_BOOL**||如果為 true，就表示屬性已建立索引，否則為 false。|  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|值|  
+|引數|ReplTest1|  
 |--------------|-----------|  
 |GUID|a07ccd8e-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionDimensionStat|  

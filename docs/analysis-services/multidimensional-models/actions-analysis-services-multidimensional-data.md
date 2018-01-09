@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23021f365a349e226194326ed2d4d43acb2e7af8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd000979f6a7db2ea3da1b449312193edaa2c6ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>動作 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]動作可以屬於不同類型，而且必須據此建立。 動作可以是：  
@@ -65,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="types-of-actions"></a>動作的類型  
  下表列出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中所含的動作類型：  
   
-|動作類型|說明|  
+|動作類型|描述|  
 |-----------------|-----------------|  
 |CommandLine|在命令提示字元執行命令。|  
 |資料集|將資料集傳回用戶端應用程式。|  
@@ -74,7 +71,7 @@ ms.lasthandoff: 12/08/2017
 |專屬|使用不同於此資料表列出的介面來執行作業。|  
 |報表|將一個以 URL 為基礎的參數化要求，提交給報表伺服器，然後將報表傳回用戶端應用程式。|  
 |資料列集|將資料列集傳回用戶端應用程式。|  
-|Statement|執行 OLE DB 命令。|  
+|引數|執行 OLE DB 命令。|  
 |URL|在網際網路瀏覽器中顯示動態網頁。|  
   
 ## <a name="resolving-and-executing-actions"></a>解析及執行動作  

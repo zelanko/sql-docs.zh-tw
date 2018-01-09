@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AggregationFunction Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4f892f21552fb3f72913971d7be9ed8f2b00a8ee
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c9cc86c77bc1f0b33a394cb7151bc29e2fd36ed4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregationfunction-element-assl"></a>AggregationFunction 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含要使用的帳戶類型的彙總函式。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|*Sum*|  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下列其中一個字串：  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |*Sum*|使用彙總的量值**總和**函式。|  
 |*計數*|使用彙總的量值**計數**函式。|  

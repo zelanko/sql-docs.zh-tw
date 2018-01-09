@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2927962261f35ea8b5f032853660e3e6bc1d0ad2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 213bc7a17344f42cd10258962f91711a5ee3acba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>建立資料來源 (SSAS 多維度)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多維度模型中，資料來源物件代表您所處理 （或匯入） 的資料來源的連接資料。 多維度模型至少必須包含一個資料來源物件，不過您可以加入更多資料來源物件，以便結合數個資料倉儲的資料。 使用本主題中的說明為您的模型建立資料來源物件。 如需設定這個物件之屬性的詳細資訊，請參閱[設定資料來源屬性 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)。  
@@ -114,7 +111,7 @@ ms.lasthandoff: 12/08/2017
   
          新的連接即會出現在「資料來源精靈」之 [選取如何定義連接] 頁面的 [資料連接] 窗格中。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
 7.  在 [模擬資訊] 中，指定 Analysis Services 連接外部資料來源時使用的 Windows 認證或使用者識別。 如果您針對連接使用資料庫驗證，則會忽略這些設定。  
   
@@ -126,7 +123,7 @@ ms.lasthandoff: 12/08/2017
   
      您指定的帳戶必須擁有資料來源的讀取權限。  
   
-8.  按一下 **[下一步]**。  在 [正在完成精靈] 中，輸入資料來源名稱或使用預設名稱。 預設名稱是連接中所指定資料庫的名稱。 [預覽] 窗格會顯示這個新資料來源的連接字串。  
+8.  按 [下一步] 。  在 [正在完成精靈] 中，輸入資料來源名稱或使用預設名稱。 預設名稱是連接中所指定資料庫的名稱。 [預覽] 窗格會顯示這個新資料來源的連接字串。  
   
 9. 按一下 **[完成]**。  方案總管中的 [資料來源] 資料夾會顯示新的資料來源。  
   

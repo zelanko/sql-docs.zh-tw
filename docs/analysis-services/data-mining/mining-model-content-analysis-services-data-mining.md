@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]採礦模型設計和處理採礦模型使用基礎採礦結構中的資料之後，已完成，並包含*採礦模型內容*。 您可以使用此內容來進行預測或分析資料。  
@@ -84,8 +82,8 @@ ms.lasthandoff: 12/08/2017
   
 |NODE_TYPE 識別碼|節點標籤|節點內容|  
 |-------------------|----------------|-------------------|  
-|1|模型|中繼資料和根內容節點。 適用於所有模型類型。|  
-|2|樹狀|分類樹狀結構的根節點。 適用於決策樹模型。|  
+|@shouldalert|[模型]|中繼資料和根內容節點。 適用於所有模型類型。|  
+|2|trEE|分類樹狀結構的根節點。 適用於決策樹模型。|  
 |3|Interior|樹狀結構內的內部分割節點。 適用於決策樹模型。|  
 |4|Distribution|樹狀結構的終端節點。 適用於決策樹模型。|  
 |5|叢集|演算法所偵測到的群集。 適用於叢集模型和時序叢集模型。|  
@@ -221,12 +219,12 @@ ms.lasthandoff: 12/08/2017
   
 |VALUE_TYPE 識別碼|值標籤|值類型名稱|  
 |--------------------|-----------------|---------------------|  
-|1|Missing|表示案例資料不包含這個屬性的值。 在計算 **Missing** 狀態時，會與具有值的屬性分開。|  
+|@shouldalert|Missing|表示案例資料不包含這個屬性的值。 在計算 **Missing** 狀態時，會與具有值的屬性分開。|  
 |2|Existing|表示案例資料包含這個屬性的值。|  
 |3|Continuous|表示屬性值是一個連續數值，因此可以由平均值連同變異數和標準差來表示。|  
 |4|Discrete|表示一個視為離散的值 (數值或文字)。<br /><br /> **注意** ：Discrete 值也可以是 missing 值；但是在計算時會以不同方式處理這兩個值。 如需相關資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。|  
 |5|Discretized|表示此屬性包含已經離散化的數值。 此值將會是一個描述離散化值區的格式化字串。|  
-|6|Existing|表示此屬性具有連續數值，而且資料中已經提供值 (遺漏或推斷的值)。|  
+|6|現有的|表示此屬性具有連續數值，而且資料中已經提供值 (遺漏或推斷的值)。|  
 |7|Coefficient|表示代表著係數的數值。<br /><br /> 係數是計算相依變數的值時所套用的值。 例如，如果您的模型建立一個迴歸公式來根據年齡預測收入，則讓年齡與收入產生關聯的公式中會使用係數。|  
 |8|Score gain|表示代表著屬性之得分的數值。|  
 |9|Statistics|表示代表著迴歸輸入變數之統計資料的數值。|  
@@ -260,7 +258,7 @@ ms.lasthandoff: 12/08/2017
   
 |節點/屬性的等級和值|臨界機率|節點機率|  
 |----------------------------------------|--------------------------|----------------------|  
-|模型根<br /><br /> 所有目標客戶|1|1|  
+|模型根<br /><br /> 所有目標客戶|@shouldalert|@shouldalert|  
 |依性別分割的目標客戶|.5|.5|  
 |依性別分割，然後再依收入分成三等級的目標客戶。|.33|.5 * .33 = .165|  
   
@@ -281,14 +279,14 @@ ms.lasthandoff: 12/08/2017
 |演算法或模型類型|model content|查詢採礦模型|  
 |-----------------------------|-------------------|----------------------------|  
 |關聯規則模型|[關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[關聯模型查詢範例](../../analysis-services/data-mining/association-model-query-examples.md)|  
-|叢集模型|[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[叢集模型查詢範例](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
+|叢集模型|[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[群集模型查詢範例](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
 |決策樹模型|[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[決策樹模型查詢範例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |線性迴歸模型|[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |羅吉斯迴歸模型|[羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |貝氏機率分類模型|[貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes Model Query Examples](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |類神經網路模型|[類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |時序群集|[時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|時間序列模型|[時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|時間序列模型|[時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> 檢視採礦模型內容的工具  
  當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中瀏覽或探索模型時，可以在 **[Microsoft 一般內容樹狀檢視器]**中檢視資訊，此工具在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都有提供。  

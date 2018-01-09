@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae881c8d318f36ef45ce7a2342b9474de7e12cf8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2dc1525abfdef6b54311f1a2eb470b8350a04cc8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovertracedefinitionproviderinfo-rowset"></a>DISCOVER_TRACE_DEFINITION_PROVIDERINFO 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]傳回追蹤提供者，例如其名稱和描述的基本資訊。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_TRACE_DEFINITION_PROVIDERINFO**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|限制|Description|  
+|資料行名稱|類型指標|限制|描述|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**資料**|**DBTYPE_WSTR**|是|包含編碼的 XML 字串，其中描述追蹤提供者，包括提供者名稱、版本、組建編號和描述。|  
   
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|值|  
+|引數|ReplTest1|  
 |--------------|-----------|  
 |GUID|A07CCD1B-8148-11D0-87BB-00C04FC33942|  
 |ADOMDNAME|TraceDefinitionProviderInfo|  

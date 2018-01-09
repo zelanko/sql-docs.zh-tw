@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9b46a11c3edc4ca3e9c735d324f961165bd022cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題描述使用的模型專用的採礦模型內容[!INCLUDE[msCoName](../../includes/msconame-md.md)]決策樹演算法。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。 請務必記住，Microsoft 決策樹演算法是一種混合式演算法，可以建立功能非常不同的模型：決策樹可以代表關聯、規則，甚至線性迴歸。 樹狀結構基本上相同，但是您解譯資訊的方式將取決於建立模型的目的。  
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/08/2017
  NODE_TYPE  
  在決策樹模型中，會建立下列類型的節點：  
   
-|節點類型|說明|  
+|節點類型|描述|  
 |---------------|-----------------|  
 |1 (模型)|模型的根節點。|  
 |2 (樹狀結構)|在模型中分類樹狀結構的父節點。 標示為 **「All」**。|  
@@ -263,7 +261,7 @@ ms.lasthandoff: 12/08/2017
   
  在 <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> 列舉的類型中，下列類型用於分類樹狀結構。  
   
-|值類型|說明|  
+|值類型|描述|  
 |----------------|-----------------|  
 |1 (遺漏)|指出與遺漏值相關的計數、機率或其他統計資料。|  
 |4 (離散)|指出與離散或離散化值相關的計數、機率或其他統計資料。|  

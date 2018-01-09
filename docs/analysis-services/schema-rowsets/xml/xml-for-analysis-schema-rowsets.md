@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f5cb613a916f2cff4ec8aca3bb67fc9c14d1b10
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis 結構描述資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者包含結構描述資料列集會傳回有關伺服器狀態、 活動和物件的中繼資料。 如果您要開發連接到有可變結構和特性之 Analysis Services 模型的用戶端應用程式，需要擷取中繼資料。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="in-this-section"></a>本節內容  
   
-|資料列集<sup>1</sup>|Description|  
+|資料列集<sup>1</sup>|描述|  
 |------------------------|-----------------|  
 |[DISCOVER_CALC_DEPENDENCY 資料列集](../../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)|傳回關於資料表、資料行、量值和導出資料行公式間相依性的資訊。<br /><br /> 適用於 Analysis Services 執行個體上部署的表格式模型和[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]在 SharePoint 環境中執行的 Excel 活頁簿中的模型。|  
 |[DISCOVER_CONNECTIONS 資料列集](../../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|提供有關伺服器上目前已開啟的連接之資源使用量與活動資訊。|  

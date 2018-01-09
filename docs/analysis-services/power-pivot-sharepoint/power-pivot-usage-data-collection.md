@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f443e4ecb0d6bb16eaf582c89b98af9eb35a25a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-usage-data-collection"></a>PowerPivot 使用量資料收集
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用量資料收集是伺服陣列層級的 SharePoint 功能。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 會使用並擴充此系統來支援 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板中的報表，以便顯示 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料與服務的使用方式。 根據您安裝 SharePoint 的方式而定，可能會關閉伺服陣列的使用量資料收集。 伺服器陣列管理員必須啟用使用量記錄，以建立會顯示在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板中的使用量資料。  
@@ -41,9 +38,9 @@ ms.lasthandoff: 12/08/2017
   
  ![元件和處理序的使用量資料收集。](../../analysis-services/power-pivot-sharepoint/media/gmni-usagedata.gif "元件和處理序的使用量資料收集。")  
   
-|階段|說明|  
+|階段|描述|  
 |-----------|-----------------|  
-|1|使用量資料收集是由 SharePoint 部署中之 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 元件和 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 資料提供者所產生的事件來觸發。 可以開啟或關閉的可設定事件，包括由應用程式伺服器上的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務所監視的連接要求、載入和卸載要求，以及查詢回應計時事件。 僅由伺服器管理且無法關閉的其他事件。 這些包括資料重新整理與伺服器健全狀況事件。<br /><br /> 一開始，使用量資料是使用 SharePoint 系統的資料收集功能來收集並儲存在本機記錄檔中。 這些檔案及其位置屬於 SharePoint 中標準使用量資料收集系統的一部分。 檔案的位置在伺服器陣列中的每部伺服器上都是相同的。 若要檢視或變更記錄目錄的位置，請移至 SharePoint 管理中心的 **[監視]** ，然後按一下 **[設定 Usage and Health Data Collection]**。|  
+|@shouldalert|使用量資料收集是由 SharePoint 部署中之 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 元件和 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 資料提供者所產生的事件來觸發。 可以開啟或關閉的可設定事件，包括由應用程式伺服器上的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務所監視的連接要求、載入和卸載要求，以及查詢回應計時事件。 僅由伺服器管理且無法關閉的其他事件。 這些包括資料重新整理與伺服器健全狀況事件。<br /><br /> 一開始，使用量資料是使用 SharePoint 系統的資料收集功能來收集並儲存在本機記錄檔中。 這些檔案及其位置屬於 SharePoint 中標準使用量資料收集系統的一部分。 檔案的位置在伺服器陣列中的每部伺服器上都是相同的。 若要檢視或變更記錄目錄的位置，請移至 SharePoint 管理中心的 **[監視]** ，然後按一下 **[設定 Usage and Health Data Collection]**。|  
 |2|Microsoft SharePoint Foundation 使用量資料匯入計時器工作會依照排程的間隔 (預設是每小時)，將使用量資料從記錄檔移到 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務應用程式資料庫。 如果在伺服器陣列中有多個 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務應用程式，則每一個都會有其專屬資料庫。 事件包含識別產生事件之 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務應用程式的內部資訊。 應用程式識別碼可確保使用量資料繫結至建立該資料的應用程式。|  
 |3|資料會複製到可供 [管理中心] 內 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板使用的內部報告資料庫。|  
 |4|資料來源是您可以存取以便在 Excel 中建立自訂報表的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 活頁簿。 來源活頁簿只有一個執行個體。 當地語系化報表都是以同一份來源活頁簿為基礎。|  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="sources"></a> 使用量資料的來源  
  當已啟用使用量資料收集時，就會為下列伺服器事件產生資料。  
   
-|事件|說明|可設定|  
+|事件|描述|可設定|  
 |-----------|-----------------|------------------|  
 |連接|伺服器連接是以在 Excel 活頁簿中查詢 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料的使用者身分來建立。 連接事件會識別開啟 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 活頁簿連接的使用者。 在報表中，這項資訊是用來識別最常見的使用者，由相同的使用者存取的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料來源，以及一段時間內連接的趨勢。|您可以啟用和停用 [設定使用量資料收集的對象 &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。|  
 |查詢回應時間|根據完成查詢的時間來分類查詢的回應統計資料。 查詢回應的統計資料會顯示伺服器回應查詢要求所需時間的模式。|您可以啟用和停用 [設定使用量資料收集的對象 &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。|  
@@ -64,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="servicesjobs"></a> 服務與計時器工作  
  下表描述在使用量資料收集系統中的服務和資料收集存放區。 如需如何覆寫計時器工作排程以強制在伺服器健全狀況與使用量資料的資料重新整理的指示[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]管理儀表板報告，請參閱[輸入連結描述](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)。 您可以在 SharePoint 管理中心內查看計時器工作。 移至 **[監視]**，然後按一下 **[檢查工作狀態]**。 按一下 **[檢閱工作定義]**。  
   
-|元件|預設排程|說明|  
+|元件|預設排程|描述|  
 |---------------|----------------------|-----------------|  
 |SharePoint 計時器服務 (SPTimerV4)||這項 Windows 服務會在伺服陣列中每一部成員電腦上的本機執行，並處理在伺服陣列層級所定義的所有計時器工作。|  
 |Microsoft SharePoint Foundation 使用量資料匯入|在 SharePoint 2010 中，每隔 30 分鐘。 在 SharePoint 2013 中，每隔 5 分鐘。|此計時器工作是在伺服陣列層級以全域方式設定。 它會將使用量資料從本機使用量記錄檔，移到中央的使用量資料收集資料庫。 您可以用手動方式來執行此計時器工作，以強制資料匯入作業。|  

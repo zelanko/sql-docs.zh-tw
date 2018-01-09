@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.miningmodels.f1
@@ -29,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 44204be410e5d4e716f30f5f0775f8c62d152a55
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d94d769d1eb7434a918950e2c56c87f7241d77d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>授與資料採礦結構和模型的權限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]根據預設，只有 Analysis Services 伺服器管理員有權限來檢視資料庫中的資料採礦結構或採礦模型。 請依照下列指示，授與權限給非管理員的使用者。  
@@ -50,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  在 [採礦結構] 窗格中，為每個資料採礦結構選取 [讀取] 或 [讀取/寫入]。  
   
-6.  在 [成員資格] 窗格中，輸入使用這個角色連接到 Analysis Services 的 Windows 使用者和群組帳戶。  
+6.  在 [成員資格] 窗格中，輸入使用這個角色連線到 Analysis Services 的 Windows 使用者和群組帳戶。  
   
 7.  按一下 [確定]，完成角色的建立。  
   

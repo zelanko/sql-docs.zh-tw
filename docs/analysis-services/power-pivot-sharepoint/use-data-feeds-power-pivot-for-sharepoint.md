@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ecbf6babc1bfa86cb8c7cdd5d18789be02cf8229
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>使用資料摘要 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料摘要是一或多個資料流是從線上資料來源產生並串流至目的地文件或應用程式。 如果您使用的是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
@@ -95,7 +92,7 @@ ms.lasthandoff: 12/08/2017
   
          Web 服務 URL 可以包含篩選或選取資料子集的參數。 提供摘要的應用程式或服務必須支援您在 URL 中指定的參數。  
   
-6.  輸入 [資料表名稱]，每個摘要各使用一個資料表。 此為必要值。 資料表名稱是由取用資料摘要的用戶端應用程式所使用。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中，資料表名稱用來命名 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中，將包含已匯入之資料的資料表。  
+6.  輸入 [資料表名稱]，每個摘要各使用一個資料表。 這是必要的值。 資料表名稱是由取用資料摘要的用戶端應用程式所使用。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中，資料表名稱用來命名 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中，將包含已匯入之資料的資料表。  
   
 ## <a name="see-also"></a>請參閱  
  [在管理中心為網站集合啟用 Power Pivot 功能整合](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2415205d4898e4c16d9a6b5d004f3ff75082ead9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 87d59c2d4041cbb7267054d2a691e0e39745827a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Analysis Services 指令碼語言 XML 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]雖然 Analysis Services 指令碼語言 (ASSL) 結構描述僅包含 XML 元素，從開發人員的觀點來看，這些元素會對應到下列概念：  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[物件 &#40;ASSL &#41;](../../analysis-services/scripting/objects/objects-assl.md)|包含在 ASSL 結構描述中當做物件之每個元素的語法和使用方式資訊。|  
 |[集合 &#40;ASSL &#41;](../../analysis-services/scripting/collections/collections-assl.md)|包含在 ASSL 結構描述中當做集合之每個元素的語法和使用方式資訊。|  

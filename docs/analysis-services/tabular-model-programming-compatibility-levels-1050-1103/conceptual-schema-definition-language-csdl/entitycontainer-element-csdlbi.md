@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21ad4c6d328c8c299a2ae34c4ac5aab27feec794
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]EntityContainer 元素是複雜類型，根據 CSDL 類型 EntityContainer，會定義單一資料模型中實體的集合。 在商業智慧應用程式中，EntityContainer 所代表的資料模型可能包含多個以關聯性連結資料行的資料表，以及計算、量值和 KPI。 它在概念上與資料庫或資料來源類似。  
@@ -36,9 +34,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表描述定義 EntityContainer 的元素和屬性。  
   
-|名稱|是否必要|說明|  
+|[屬性]|是否必要|描述|  
 |----------|-----------------|-----------------|  
-|名稱|是|資料模型的名稱。|  
+|[屬性]|是|資料模型的名稱。|  
 |Caption|否|資料庫或資料模型的描述。|  
 |Culture|是|包含要求 LCID 的字串。|  
 |CompareOptions|是|模型的語言特有排序和字串比較選項。|  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="compareoptions-element"></a>CompareOptions 元素  
  CompareOptions 屬性 (Attribute) 會定義套用至資料模型的定序屬性 (Property)。 CompareOptions 所定義的屬性衍生自模型設計階段在 Analysis Services 資料庫中設定之排序次序、區分假名和區分大小寫的設定。 下表描述了當做 CompareOptions 屬性一部分加入的值。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |IgnoreCase|布林值，指出字串比較是否應忽略大小寫。|  
 |IgnoreNonSpace|布林值，指出字串比較是否應忽略不佔空間的合併字元，例如變音符號。|  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
   
  簡單類型 DirectQueryMode 會定義模型可直接從關聯式資料來源接收資料時，預設使用的查詢類型。 此屬性只適用於以 DirectQuery 模式執行的表格式模型。 下表列出 DirectQuery 模式列舉的可能值。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |InMemory|指出對照模型的查詢將使用快取中的資料。|  
 |InMemoryWithDirectQuery|指出對照模型的查詢預設將使用來自關聯式資料來源的資料。|  

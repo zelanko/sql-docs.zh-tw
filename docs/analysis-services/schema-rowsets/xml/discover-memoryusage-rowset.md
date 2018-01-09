@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d1f0c2dd179e54760eeff4254c19265105e08f3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]傳回伺服器所配置之各種物件的 DISCOVER_MEMORYUSAGE 統計資料。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_MEMORYUSAGE**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|限制|Description|  
+|資料行名稱|類型指標|限制|描述|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**MemoryID**|**DBTYPE_UI8**||識別記憶體的編號。|  
 |**MemoryName**|**DBTYPE_WSTR**||擁有記憶體之物件的名稱。|  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
 |**ElementCount**|**DBTYPE_UI4**||對於容器物件而言，這是該物件所包含的物件數目。|  
 |**壓縮**|**DBTYPE_BOOL**|是|布林值，這個值會指出記憶體是否可壓縮 (可能會由於記憶體不足的壓力而收回)。 如果為 true，就表示記憶體可壓縮。如果為 false，就表示記憶體不可壓縮。|  
 |**ObjectParentPath**|**DBTYPE_WSTR**||識別此物件之完整路徑的字串。|  
-|**ObjectID**|**DBTYPE_WSTR**||識別物件的字串。 此物件的完整路徑由字串: (ObjectParentPath + '。 ' + ObjectId)。|  
+|**Exchange Spill**|**DBTYPE_WSTR**||識別物件的字串。 此物件的完整路徑由字串: (ObjectParentPath + '。 ' + ObjectId)。|  
   
  這個結構描述資料列集並未排序。  
   
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/08/2017
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|值|  
+|引數|ReplTest1|  
 |--------------|-----------|  
 |GUID|A07CCD21-8148-11D0-87BB-00C04FC33942|  
 |ADOMDNAME|MemoryUsage|  

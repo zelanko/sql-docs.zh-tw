@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e05ba70d4d1593e444cd8735196ddb04e4ef7ae7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ea027aba8d0d49c752bd31569f84d0f0cec022bd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="objects-assl"></a>物件 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]這個參考章節包含每個項目，可做為 Analysis Services 指令碼語言 (ASSL) 結構描述中物件的語法和使用方式資訊。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="in-this-section"></a>本節內容  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |[Account 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/account-element-assl.md)|包含內部帳戶類型的詳細[資料庫](../../../analysis-services/scripting/objects/database-element-assl.md)項目。|  
 |[Action 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|包含中可用動作的相關資訊[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)項目或[觀點來看](../../../analysis-services/scripting/objects/perspective-element-assl.md)項目。|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 99e4faa1-2f87-43c6-b7ec-a97d4112c5ac
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df1c2c4108ad29164ab096fde95bc760a0c7ccb0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 00ec7bd0c6ffe655e77cb8543216053697733fad
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="get-powerpivotserviceapplication-cmdlet"></a>Get-PowerPivotServiceApplication 指令程式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]傳回一個或多個[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/08/2017
 Get-PowerPivotServiceApplication [[-Identity] <SPGeminiServiceApplicationPipeBind>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  Get-PowerPivotServiceApplication 指令程式會傳回 Identity 參數所指定的服務應用程式。 如果未指定任何參數，Cmdlet 會傳回伺服器陣列中的所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 每個應用程式都由其顯示名稱、應用程式類型和 GUID 所識別。 若要檢視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式的其他屬性，請將 format-list 選項加入 Cmdlet。  
   
 ## <a name="parameters"></a>參數  

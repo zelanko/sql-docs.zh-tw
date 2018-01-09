@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -34,11 +32,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9627648fa47b750f4b9b98b45b5878cea0806961
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 慣例
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services 指令碼語言 (ASSL) 代表物件的階層以一組項目類型，其中每個定義可以包含子項目。  
@@ -129,13 +127,13 @@ ms.lasthandoff: 12/08/2017
 ## <a name="data-types"></a>資料型別  
  Analysis Services 使用下列標準 XML 結構描述定義語言 (XSD) 資料類型：  
   
- **Int**  
+ **整數**  
  -231 到 231 – 1 範圍的整數值。  
   
  **長整數**  
  -263 到 263 – 1 範圍的整數值。  
   
- **字串**  
+ **String**  
  符合下列全域規則的字串值：  
   
 -   移除控制字元。  
@@ -158,7 +156,7 @@ ms.lasthandoff: 12/08/2017
 |XML 資料類型|預設值|  
 |-------------------|-------------------|  
 |**布林**|False|  
-|**字串**|"" (空字串)|  
+|**String**|"" (空字串)|  
 |**整數**或**長**|0 (零)|  
 |**時間戳記**|12:00:00 AM，1/1/0001 (對應至.NET Frameworks **System.DateTime** 0 刻度)|  
   

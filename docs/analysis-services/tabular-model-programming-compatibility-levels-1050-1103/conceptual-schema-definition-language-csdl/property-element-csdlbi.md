@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff62bf4280fb1e01c6df47e2f748038ec92378fd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fee5461b3b779227839c3f722c9c75626ed44fe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="property-element-csdlbi"></a>Property 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在 CSDLBI Property 元素是複雜類型，提供的 CSDL Property 元素，以支援商業智慧資料模型的新增項目。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 CSDLBI Property 元素的元素和屬性。  
   
-|名稱|是否必要|Description|  
+|[屬性]|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |目錄|否|包含要求 LCID 的字串。|  
 |DefaultAggregationFunction|是|字串，指定對屬性執行計算且未指定其他函數時，應使用的彙總函式。<br /><br /> 如果未指定，則會使用模型的預設彙總，通常是 SUM。|  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="groupingbehavior"></a>GroupingBehavior  
  下表列出 GroupingBehavior 簡單類型的值。  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |GroupOnValue|依 xthe 屬性的值分組。|  
 |GroupOnEntityKey|依實體索引鍵分組。|  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="stability"></a>Stability  
  下表列出的值**穩定性**簡單類型。  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |Stable|屬性在重新整理作業之間會維持不變。|  
 |RowNumber|屬性包含資料列號碼。|  

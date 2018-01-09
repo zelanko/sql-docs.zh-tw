@@ -5,13 +5,10 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5dcf73586ff73b24e121d517e8bc56c71c2156c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 84cdb30142c75b4bc35d956daff130df3bf62305
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>支援表格式模型中的資料類型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本文描述可以使用表格式模型中的資料類型，並討論時計算或 Data Analysis Expressions (DAX) 公式中使用資料的資料類型隱含轉換。  
@@ -43,9 +40,9 @@ ms.lasthandoff: 12/08/2017
 |整數|64 位元 (八位元組) 整數值*<br /><br /> 注意：<br />         DAX 公式不支援小到無法容納描述列示之最小值的資料類型。|沒有小數位數的數字。 整數可以是正數或負數，但必須是 -9,223,372,036,854,775,808 (-2^63) 到 9,223,372,036,854,775,807 (2^63-1) 之間的整數。|  
 |十進位數字|64 位元 (八位元組) 實數*<br /><br /> 注意：<br />         DAX 公式不支援小到無法容納描述列示之最小值的資料類型。|實數是可以有小數位數的數字。 實數涵蓋極廣的值範圍：<br /><br /> 負值是從 -1.79E + 308 到 -2.23E - 308<br /><br /> 零 (0)<br /><br /> 正值是從 2.23E -308 到 1.79E + 308<br /><br /> 不過，有效位數的數目限制為 17 個小數位數。|  
 |布林|布林|True 或 False 值。|  
-|Text|字串|Unicode 字元資料字串。 可以是字串、 數字或以文字格式表示的日期。|  
-|日期|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
-|貨幣|貨幣|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
+|文字|String|Unicode 字元資料字串。 可以是字串、 數字或以文字格式表示的日期。|  
+|date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
+|CURRENCY|CURRENCY|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
 |不適用|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
   
  \*如果您嘗試匯入有大數值的資料，匯入可能會失敗，發生下列錯誤：  
@@ -56,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
 ||  
 |-|  
-|Value|  
+|ReplTest1|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1.7976931348623158e+308|  
@@ -96,10 +93,10 @@ ms.lasthandoff: 12/08/2017
   
 ||||||  
 |-|-|-|-|-|  
-|運算子 (+)|INTEGER|貨幣|REAL|日期/時間|  
-|INTEGER|INTEGER|貨幣|REAL|日期/時間|  
-|貨幣|貨幣|貨幣|REAL|日期/時間|  
-|REAL|REAL|REAL|REAL|日期/時間|  
+|運算子 (+)|INTEGER|貨幣|real|日期/時間|  
+|INTEGER|INTEGER|貨幣|real|日期/時間|  
+|CURRENCY|CURRENCY|CURRENCY|real|日期/時間|  
+|real|real|real|real|日期/時間|  
 |日期/時間|日期/時間|日期/時間|日期/時間|日期/時間|  
   
  例如，如果在加法運算中使用實數搭配貨幣資料，兩個值都會轉換為 REAL，因此傳回的結果為 REAL。  
@@ -109,10 +106,10 @@ ms.lasthandoff: 12/08/2017
   
 ||||||  
 |-|-|-|-|-|  
-|運算子 (-)|INTEGER|貨幣|REAL|日期/時間|  
-|INTEGER|INTEGER|貨幣|REAL|REAL|  
-|貨幣|貨幣|貨幣|REAL|REAL|  
-|REAL|REAL|REAL|REAL|REAL|  
+|運算子 (-)|INTEGER|貨幣|real|日期/時間|  
+|INTEGER|INTEGER|貨幣|real|real|  
+|CURRENCY|CURRENCY|CURRENCY|real|real|  
+|real|real|real|real|real|  
 |日期/時間|日期/時間|日期/時間|日期/時間|日期/時間|  
   
  例如，如果在減法運算中使用日期搭配其他任何資料類型，兩個值都會轉換為日期，因此傳回值也是日期。  
@@ -124,10 +121,10 @@ ms.lasthandoff: 12/08/2017
   
 ||||||  
 |-|-|-|-|-|  
-|運算子 (*)|INTEGER|貨幣|REAL|日期/時間|  
-|INTEGER|INTEGER|貨幣|REAL|INTEGER|  
-|貨幣|貨幣|REAL|貨幣|貨幣|  
-|REAL|REAL|貨幣|REAL|REAL|  
+|運算子 (*)|INTEGER|貨幣|real|日期/時間|  
+|INTEGER|INTEGER|貨幣|real|INTEGER|  
+|CURRENCY|CURRENCY|real|CURRENCY|CURRENCY|  
+|real|real|CURRENCY|real|real|  
   
  例如，如果在乘法運算中結合整數與實數，兩個值都會轉換為實數，因此傳回值也是 REAL。  
   
@@ -136,11 +133,11 @@ ms.lasthandoff: 12/08/2017
   
 ||||||  
 |-|-|-|-|-|  
-|運算子 (/)<br /><br /> (資料列/資料行)|INTEGER|貨幣|REAL|日期/時間|  
-|INTEGER|REAL|貨幣|REAL|REAL|  
-|貨幣|貨幣|REAL|貨幣|REAL|  
-|REAL|REAL|REAL|REAL|REAL|  
-|日期/時間|REAL|REAL|REAL|REAL|  
+|運算子 (/)<br /><br /> (資料列/資料行)|INTEGER|貨幣|real|日期/時間|  
+|INTEGER|real|CURRENCY|real|real|  
+|CURRENCY|CURRENCY|real|CURRENCY|real|  
+|real|real|real|real|real|  
+|日期/時間|real|real|real|real|  
   
  例如，如果在除法運算中結合整數與貨幣值，兩個值都會轉換為實數，因此結果也是實數。  
   
@@ -152,10 +149,10 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|運算式|DAX|Excel|  
-|BLANK + BLANK|空白|0 (零)|  
+|運算式|DAX|[匯出]|  
+|BLANK + BLANK|BLANK|0 (零)|  
 |BLANK +5|5|5|  
-|BLANK * 5|空白|0 (零)|  
+|BLANK * 5|BLANK|0 (零)|  
 |5/BLANK|無限|錯誤|  
 |0/BLANK|NaN|錯誤|  
 |BLANK/BLANK|空白|錯誤|  
@@ -163,8 +160,8 @@ ms.lasthandoff: 12/08/2017
 |FALSE AND BLANK|FALSE|FALSE|  
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
-|BLANK OR BLANK|空白|錯誤|  
-|BLANK AND BLANK|空白|錯誤|  
+|BLANK OR BLANK|BLANK|錯誤|  
+|BLANK AND BLANK|BLANK|錯誤|  
   
  如需特定函數或運算子如何處理空白的詳細資訊，請參閱 [DAX 函數參考](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)一節中，每個 DAX 函數的個別主題。  
   

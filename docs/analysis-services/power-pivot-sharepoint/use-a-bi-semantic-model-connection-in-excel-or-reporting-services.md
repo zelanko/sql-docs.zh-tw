@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 85e68ac15941f538fc1d68331cc9d005f424540c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8fc3d2ae19c9b8237593d1b4e1b559f22c5da1ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>在 Excel 或 Reporting Services 使用 BI 語意模型連接
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題說明如何使用透過其他主題中的指示所建立的 BI 語意模型連接。 如果您尚未建立 BI 語意模型，請參閱 [建立與 Power Pivot 活頁簿的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) 和 [建立與表格式模型資料庫的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  按一下 **[從 Analysis Services]** ，然後使用 [資料連線精靈] 匯入資料。  
   
-3.  輸入 BI 語意模型連接檔案的 SharePoint URL (例如， `http://mysharepoint/shared documents/myData.bism`)。 接受認證選項 **[使用 Windows 驗證]**上的預設記錄檔。 按一下 **[下一步]**。  
+3.  輸入 BI 語意模型連接檔案的 SharePoint URL (例如， `http://mysharepoint/shared documents/myData.bism`)。 接受認證選項 **[使用 Windows 驗證]**上的預設記錄檔。 按 [下一步] 。  
   
 4.  在下一個頁面上，再按 **[下一步]** 。 雖然系統會提示您選取資料庫，但是您只能使用在 BI 語意模型連接中指定的資料庫。  
   

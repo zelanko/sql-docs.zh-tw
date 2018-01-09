@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
@@ -20,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 91e058351ec0314dced6586c98cde4ca9f781be7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>在管理中心建立 Power Pivot 網站的信任位置
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Excel Services 可讓您指定的位置是有效的儲存機制，您可以在 SharePoint 伺服器上開啟活頁簿。 這些位置稱為「信任位置」，而且您可以針對每個建立的信任位置使用不同的組態設定。 對於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署，您可以考慮針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的網站建立信任位置，讓您可以套用最適合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取的設定，同時針對其餘的伺服器陣列保留預設值。  
   
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  您必須是伺服陣列管理員或服務管理員，才能將 URL 指定為信任位置。  
   
  您必須知道包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫或儲存活頁簿之其他文件庫的 SharePoint 網站 URL 位址。 若要取得位址，請開啟包含文件庫的網站，以滑鼠右鍵按一下 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫**，並選取 [內容]，然後複製包含伺服器名稱和網站路徑之位址 (URL) 的第一個部分。  
@@ -67,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
 10. 此外，請在 [外部資料] 的 [重新整理時警告] 中，清除 [啟用重新整理警告] 的核取方塊。 清除此核取方塊可讓 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫略過例行的警告訊息，並改為顯示活頁簿的預覽影像。  
   
-11. 按一下 **[確定]**。  
+11. 按一下 [確定] 。  
   
 ## <a name="see-also"></a>請參閱  
  [Power Pivot 圖庫](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   

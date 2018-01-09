@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c0dfb628e7c70edf6e5daf197e3f0d48d4cc9b20
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7f28d100ef59df6fe73b8dd93d1fbfebdb87bbb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="baseproperty-element-csdlbi"></a>BaseProperty 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]BaseProperty 元素是做為其他元素的基底複雜型別。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 BaseProperty 元素的元素和屬性。  
   
-|名稱|是否必要|說明|  
+|[屬性]|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |Alignment|否|成員 (資料行、量值、導覽屬性、階層或層級) 的名稱，藉由實作 Member 類型所定義。|  
 |FormatString|否|成員的顯示名稱。|  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="alignment-element"></a>Alignment 元素  
  此簡單類型會定義用於區分成員的命名格式。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |無|使用屬性名稱。|  
 |內容|使用內送關聯性名稱。|  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="sortdirection-element"></a>SortDirection 元素  
  此簡單類型會定義用於區分成員的命名格式。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |無|使用屬性名稱。|  
 |內容|使用內送關聯性名稱。|  

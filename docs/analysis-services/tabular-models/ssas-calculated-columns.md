@@ -5,13 +5,10 @@ ms.date: 10/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fcd2e415214ca310f2f53a71f04e58306bec4a63
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92e082ac88881cb6eaa252975ea865013c753d95
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calculated-columns"></a>導出資料行
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]導出資料行，在表格式模型中，可讓您將新資料加入至模型。 您可以建立定義資料行之資料列層級值的 DAX 公式，而不是將值貼上或匯入至資料行中。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  
@@ -77,7 +74,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[建立導出資料行](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|此主題中的工作描述如何將新導出資料行加入至資料表。|  
   

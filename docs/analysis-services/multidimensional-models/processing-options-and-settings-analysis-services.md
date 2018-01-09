@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e05c1a60cc016b9f72d486a5b0f03037b0faa9ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>處理選項和設定 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您處理中的物件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您可以選取處理選項來控制每個物件發生的處理類型。 每一個物件可用的處理類型各不相同，且會依據因上次處理之後物件所發生的變更來決定。 如果您讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自動選取處理方法，它將使用的方法是能夠使物件在最短時間內回到完整處理狀態。  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="processing-options"></a>處理選項  
  下表描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中可用的處理方法，並識別支援每一個方法的物件。  
   
-|模式|適用於|說明|  
+|[模式]|適用於|描述|  
 |----------|----------------|-----------------|  
 |**處理預設**|Cube、資料庫、維度、量值群組、採礦模型、採礦結構和分割區。|偵測資料庫物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的物件傳遞為完整處理的狀態。 如果您變更資料繫結，[處理預設] 將針對受影響的物件執行 [完整處理]。|  
 |**完整處理**|Cube、資料庫、維度、量值群組、採礦模型、採礦結構和分割區。|處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件有結構變更時，例如加入、刪除或重新命名了屬性階層，就需要這種處理。|  
@@ -63,7 +60,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="processing-settings"></a>處理設定  
  下表描述建立處理作業時可用的處理設定。  
   
-|處理選項|說明|選項值|  
+|處理選項|描述|選項值|  
 |-----------------------|-----------------|------------------|  
 |**Parallel**|用於批次處理。 此設定會造成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 將處理工作分出，以便在單一交易內平行執行。 如果失敗，結果就是回復所有變更。 您可以明確設定平行工作的最大數目，或讓伺服器決定最佳散發方式。 [平行] 選項在加速處理方面很有用。||  
 |**循序 (交易模式)**|控制處理作業的執行行為。 有兩個選項可以使用。<br /><br /> 當您使用 [一筆交易] 處理時，所有變更會在處理作業成功之後才獲得認可。 也就是說，所有受到特定處理作業影響的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件都會保持為可供查詢使用，直到認可處理為止。 這會使物件暫時無法使用。 使用 [個別交易] 會讓受到處理作業中某個處理序影響的所有物件在該處理序一成功後，就無法供查詢使用。|**一筆交易**。 處理作業會以交易的形式來執行。 如果處理作業內的所有處理序都執行成功，處理作業所作的所有變更便會得到認可。 如果有一個處理序失敗，處理作業所作的所有變更就會回復。 [一筆交易] 是預設值。<br /><br /> **個別交易**。 處理作業中的每個處理序都是以獨立作業的形式執行。 如果其中一個處理序失敗，只會回復該處理序，處理作業會繼續進行。 每個作業都會在作業結束時認可所有處理序變更。|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a4ecab616136579c5a97b92a39ba2e2a2f5c7f9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2a8a5e6517b0bbd44d17f07d5185722914ecfc51
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>安裝或解除安裝 PowerPivot for SharePoint 增益集 (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)]是應用程式伺服器元件及後端服務所提供的集合[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中存取資料[!INCLUDE[SPS2016](../../../includes/sps2016-md.md)]伺服陣列。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 增益集 (**spPowerpivot16.msi**) 是用來安裝應用程式伺服器元件的安裝程式套件。  
@@ -182,7 +182,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
   
 4.  選取 [[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 組態]。  
   
- 如需組態工具的詳細資訊，請參閱 [Power Pivot 組態工具](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
+ 如需組態工具的詳細資訊，請參閱 [PowerPivot 組態工具](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   
 ##  <a name="bkmk_remove_addin"></a> 解除安裝或修復增益集  
   

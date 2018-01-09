@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: RefreshPolicy Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe18ffe7b7453c0591591acb8f92d37cd545724f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2f2d8598e588f65799df46a3b5e60c2f027f8861
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="refreshpolicy-element-assl"></a>RefreshPolicy 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]決定多久維度或量值群組之動態部分 (依指定[持續性](../../../analysis-services/scripting/properties/persistence-element-assl.md)項目) 會檢查是否有變更。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|請參閱下表。|  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |*ByQuery*|每個查詢都檢查來源資料是否已經變更。|  
 |*ByInterval*|來源資料，才會檢查是否有變更在所指定的間隔[RefreshInterval](../../../analysis-services/scripting/properties/refreshinterval-element-assl.md)。|  

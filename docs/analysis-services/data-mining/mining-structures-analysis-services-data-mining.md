@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c228c4db6aff3eca771e3c4e5aacbbfc3e2aa2d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6b7467be225e2468be21603f3e40de04050dc6b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>採礦結構 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]採礦結構定義從中建立採礦模型的資料： 它會指定來源資料檢視、 數目和類型的資料行，以及選用的資料分割成定型集和測試設定。 單一採礦結構可支援共用相同網域的多個採礦模型。 下列圖表說明資料採礦結構與資料來源及其所構成資料採礦模型間的關聯性。  
@@ -122,9 +120,9 @@ ms.lasthandoff: 12/08/2017
   
 |工作|連結|  
 |-----------|-----------|  
-|使用關聯式採礦結構|[建立新的關聯式採礦結構](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [將巢狀資料表加入至採礦結構](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
+|使用關聯式採礦結構|[建立新的關聯式採礦結構](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [將巢狀資料表新增至採礦結構](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
 |使用以 OLAP Cube 為基礎的採礦結構|[建立新的 OLAP 採礦結構](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
-|使用採礦結構中的資料行|[將資料行加入至採礦結構](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [從採礦結構中移除資料行](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
+|使用採礦結構中的資料行|[將資料行新增至採礦結構](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [從採礦結構中移除資料行](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |變更或查詢採礦結構屬性和資料|[變更採礦結構的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
 |使用基礎資料來源及更新來源資料|[編輯用於採礦結構的資料來源檢視](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [處理採礦結構](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   

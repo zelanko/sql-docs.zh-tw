@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Alter Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5af81d88ccb64fe8d16456111c4d238e46acfe7b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d6d234801cb298f15982bfc4ac1d75a493dd6aa8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-element-xmla"></a>Alter 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含所使用的 Analysis Services 指令碼語言 (ASSL) 元素[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法來修改物件的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>屬性  
   
-|Attribute|Description|  
+|attribute|描述|  
 |---------------|-----------------|  
 |AllowCreate|(選擇性**布林**屬性) 指出物件是否定義在**Alter**應建立命令，如果它們尚不存在。<br /><br /> 如果設定為 true 中, 定義的物件**ObjectDefinition**上所建立的項目[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體如果已經存在。 換句話說， **Alter**命令會被視為**建立**命令如果物件不存在的執行個體上。<br /><br /> 如果這個屬性被省略或設定為**false**，如果物件不存在，就會發生錯誤。|  
 |ObjectExpansion|(選擇性**列舉**屬性) 定義的所要執行的更改範圍**Execute**方法。<br /><br /> 如果設定為*ObjectProperties*、 **ObjectDefinition**項目應該包含要改變的主要物件的完整定義包括從屬次要物件。 要更改之物件的從屬主要物件會維持不變。<br /><br /> 附註： 當使用*ObjectProperties*設定[ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)資料型別，[資料](../../../analysis-services/scripting/objects/data-element-assl.md)相關聯的項目[ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md)不需要指定資料類型。 如果未指定， **ClrAssembly**會使用現有的檔案。<br /><br /> 如果設定為*ExpandFull*、 **ObjectDefinition**項目應該包含不只是要變更、 物件的定義，但是也就是物件的下階的所有主要物件的定義若要改變。<br /><br /> 注意： *ExpandFull*設定無法搭配[伺服器](../../../analysis-services/scripting/objects/server-element-assl.md)項目。|  

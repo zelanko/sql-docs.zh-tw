@@ -5,13 +5,10 @@ ms.date: 08/31/2015
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3443f25a3a929f9bad6cbe394a4fe60b38785b65
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>建立及自訂 Power Pivot 圖庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]圖庫是一種特殊類型的 SharePoint 文件庫，提供豐富的預覽與文件管理功能已發行 Excel 活頁簿和 Reporting Services 報表，其中包含[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料。  
@@ -141,7 +138,7 @@ ms.lasthandoff: 12/08/2017
   
  下表描述呈現每個預覽頁面之縮圖草圖的不同版面配置：  
   
-|[檢視]|說明|  
+|檢視|描述|  
 |----------|-----------------|  
 |圖庫檢視 (預設值)|圖庫是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫的預設檢視。 預覽會顯示在左邊。 預覽旁邊會顯示每個工作表的小型縮圖，由左至右循序排列。|  
 |所有文件|這是文件庫的標準版面配置。 您可以選擇此檢視來管理個別的文件，或以清單格式來檢視文件庫內容。<br /><br /> 使用此檢視來編輯屬性、刪除或移動個別的文件。<br /><br /> 如果您啟用版本控制，必須使用此檢視來檢查文件庫內外的文件。|  

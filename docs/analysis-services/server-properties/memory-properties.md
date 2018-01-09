@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -30,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bcf950fc7219996bfc60f56797f52a5ed6d49fc8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8aa2f5f5c3e39680a9b0fe41e1b92443db4c8509
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="memory-properties"></a>記憶體屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]向上 preallocates 數量較少的記憶體中的開始，以便可以立即處理要求。 隨著查詢和處理工作負載的增加，會配置額外的記憶體。 
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/08/2017
 
 下表簡述更常用的記憶體設定 (參考一節中會有更詳細的資訊)。 這些是 Analysis Services 與相同伺服器上的其他應用程式競用記憶體時應該設定的設定︰
 
-設定 | 說明
+設定 | 描述
 --------|------------
 LowMemoryLimit | 針對多維度執行個體，伺服器第一次開始釋出配置給不常使用物件之記憶體的較低臨界值。
 VertiPaqMemoryLimit | 針對表格式執行個體，伺服器第一次開始釋出配置給不常使用物件之記憶體的較低臨界值。
@@ -81,7 +81,7 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
   
   
 
-設定  |說明  
+設定  |描述  
 ---------|---------
 **0**     |  停用分頁。 如果記憶體不足，處理會失敗，且會出現記憶體不足的錯誤。 如果您停用分頁，就必須授與 Windows 權限給服務帳戶。 如需指示，請參閱[設定服務帳戶 &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)。 
 **1**     |  (預設值) 此屬性允許使用作業系統分頁檔 (pagefile.sys)，在磁碟中分頁。   
@@ -103,7 +103,7 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
  **MemoryHeapType**  
   此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。 以下為 SQL Server 2016 SP1 和更新版 Analysis Services 中的有效值：
   
-  設定 | 說明
+  設定 | 描述
 --------|------------
 **-1** | (預設值) Automatic。 引擎將決定要使用哪一個。
 **1** | Analysis Services 堆積。
@@ -115,7 +115,7 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
  **HeapTypeForObjects**  
   此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。 下列是有效值：
   
-   設定 | 說明
+   設定 | 描述
 --------|------------
 **0** | Windows LFH 堆積。
 **1** | Analysis Services 位置配置器。

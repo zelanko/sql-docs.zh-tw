@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>報表設計的 CSDLBI 屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本章節描述表格式模型化以及影響的 CSDL 延伸模組中的屬性[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]查詢設計。  
@@ -32,21 +30,21 @@ ms.lasthandoff: 12/08/2017
 ## <a name="model-attributes"></a>模型屬性  
  這些屬性在 csdl 的子元素上定義[EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)項目。  
   
-|屬性名稱|資料類型|Description|  
+|屬性名稱|資料類型|描述|  
 |--------------------|---------------|-----------------|  
-|Culture|Text|表示用於貨幣格式的文化特性。 如果省略，則使用 EN-US。|  
+|Culture|文字|表示用於貨幣格式的文化特性。 如果省略，則使用 EN-US。|  
 |IsRightToLeft|布林|表示文字欄位值預設是否應該由右至左讀取|  
   
 ## <a name="entity-attributes"></a>實體屬性  
  這些屬性是在 CSDL EntitySet 或 EntityType 元素的子元素上定義的。  
   
-|屬性名稱|資料類型|Description|  
+|屬性名稱|資料類型|描述|  
 |--------------------|---------------|-----------------|  
-|**ReferenceName**|Text|用於在 DAX 查詢中參考此實體的識別碼。 如果省略，則使用名稱。|  
-|**Caption**|Text|實體的顯示名稱。|  
-|**文件集**|Text|協助商務使用者了解資料意義的描述性文字。|  
+|**ReferenceName**|文字|用於在 DAX 查詢中參考此實體的識別碼。 如果省略，則使用名稱。|  
+|**Caption**|文字|實體的顯示名稱。|  
+|**文件集**|文字|協助商務使用者了解資料意義的描述性文字。|  
 |**Hidden**|布林|表示是否應顯示實體。 預設值為 **false**。|  
-|**CollectionCaption**|Text|用於參考實體的一組執行個體的複數名稱。 如果省略，則使用 Caption 屬性。|  
+|**CollectionCaption**|文字|用於參考實體的一組執行個體的複數名稱。 如果省略，則使用 Caption 屬性。|  
 |**DisplayKey**|MemberRef[]|用於對商務使用者識別實體執行個體的已排序的欄位清單。 參考可以包含執行個體屬性和導覽屬性。 在參考導覽屬性時**DisplayKey**目標的實體隨即出現。 如果**DisplayKey**省略值，則使用 Key 欄位。|  
 |**DefaultImage**|MemberRef|欄位的參考，這個欄位包含用於向商務使用者以視覺方式識別實體執行個體的影像。 如果省略，則使用實體中的第一個影像欄位 (如果有)。|  
 |**DefaultDetails**|MemberRef[]|代表預設欄位的已排序的清單設定的實體執行個體的相關商務使用者顯示的詳細資訊。如果省略，第一次五 （5） 實體中使用欄位時，不包括已由參考這些**金鑰**， **DisplayKey**，或**DefaultImage**。|  
@@ -57,17 +55,17 @@ ms.lasthandoff: 12/08/2017
 ## <a name="field-attributes"></a>欄位屬性  
  這些屬性在 CSDL property 的子元素上定義或[NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx)項目。  
   
-|屬性名稱|資料類型|Description|  
+|屬性名稱|資料類型|描述|  
 |--------------------|---------------|-----------------|  
-|**ReferenceName**|Text|用於在 DAX 查詢中參考此實體的識別碼。 如果省略，則使用欄位名稱。|  
-|**Caption**|Text|實體的顯示名稱。 如果省略，欄位的**ReferenceName**用。|  
-|**文件集**|Text|協助商務使用者了解欄位意義的描述性文字。|  
+|**ReferenceName**|文字|用於在 DAX 查詢中參考此實體的識別碼。 如果省略，則使用欄位名稱。|  
+|**Caption**|文字|實體的顯示名稱。 如果省略，欄位的**ReferenceName**用。|  
+|**文件集**|文字|協助商務使用者了解欄位意義的描述性文字。|  
 |**Hidden**|布林|表示是否應顯示欄位。 預設值是**false**，這表示欄位會顯示。|  
-|**DisplayFolder**|Text|在其中顯示此欄位的資料夾的名稱 (完整路徑)。 如果省略，則在模型根中顯示欄位。|  
+|**DisplayFolder**|文字|在其中顯示此欄位的資料夾的名稱 (完整路徑)。 如果省略，則在模型根中顯示欄位。|  
 |**ContextualNameRule**|Enum|值，表示是否應該根據使用內容來修改屬性名稱及其修改方式。 可能的值為：**無**，**角色**，**合併**。|  
 |**對齊**|Enum|值，表示在表格式簡報中對齊欄位值的方式。 可能的值為**預設**， **Center**，**左**，**右邊**。 如果省略，預設會根據欄位的資料類型來決定對齊方式。|  
-|**FormatString**|Text|.NET 格式字串，表示欄位值的預設格式。 如果省略，則採用下列格式：<br /><br /> 日期時間欄位： 地區的簡短日期或"d"<br /><br /> -浮點數的欄位和整數欄位，預設值彙總函式： 區域數字或"n"<br /><br /> 為沒有預設值整數彙總函式： 區域的十進位數字或"d"<br /><br /> 如果是所有其他類型的欄位，則不套用任何格式字串。|  
-|**單位**|Text|套用至欄位值以表示單位的符號。 如果省略，則假設單位為未知。|  
+|**FormatString**|文字|.NET 格式字串，表示欄位值的預設格式。 如果省略，則採用下列格式：<br /><br /> 日期時間欄位： 地區的簡短日期或"d"<br /><br /> -浮點數的欄位和整數欄位，預設值彙總函式： 區域數字或"n"<br /><br /> 為沒有預設值整數彙總函式： 區域的十進位數字或"d"<br /><br /> 如果是所有其他類型的欄位，則不套用任何格式字串。|  
+|**單位**|文字|套用至欄位值以表示單位的符號。 如果省略，則假設單位為未知。|  
 |**寬度**|Integer|應該保留以供表格式簡報中顯示欄位值的慣用寬度 (以字元為單位)。 如果省略，預設寬度就是根據欄位的資料類型。|  
 |**SortDirection**|Enum|值，表示一般的欄位值排序方式。 可能的值為**預設**，**遞增**，**遞減**。 如果省略，預設值會根據欄位的資料類型來指派排序方向。|  
 |**IsRightToLeft**|布林|表示欄位是否包含應該由右至左讀取的文字。 如果省略，則採用模型設定。|  

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0d275e7cbe68ddd7dca965d50d05d1777711b48e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 17b70799d09fd1f9a62100c85fde71046250d12e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理儀表板和使用量資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]管理儀表板是預先定義報表的集合和 web 組件在 SharePoint 管理中心內，協助您管理 SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 部署。 管理儀表板會提供伺服器健全狀況、活頁簿活動和資料重新整理的相關資訊。 儀表板會使用 SharePoint 使用量資料收集的資料。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="items"></a> 儀表板中各區段的概觀  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板包含 Web 組件和向下鑽研至特定資訊類別的內嵌報表。 下列清單描述的是儀表板的每個部分：  
   
-|儀表板|說明|  
+|儀表板|描述|  
 |---------------|-----------------|  
 |基礎結構 - 伺服器健全狀況|顯示隨時間經過的 CPU 使用量、記憶體消耗量和查詢回應時間趨勢，以便評估系統資源是已接近最大容量，或利用率極低。|  
 |動作|包含管理中心內其他頁面的連結，包括目前的服務應用程式、服務應用程式的清單以及使用量記錄。|  

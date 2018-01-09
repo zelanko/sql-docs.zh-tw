@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -31,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d4b3c24a3bfe2b9babcc13d9e9263a4457676bb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d72d5bdfcfc7c3d461dc3bc986c7ff6106e3da51
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-objects-xmla"></a>處理物件 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 處理是在步驟或一系列的步驟將資料轉換成供商務分析資訊。 處理會因物件類型而異，但是處理永遠都是將資料轉換為資訊的一部分。  
@@ -121,7 +119,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="examples"></a>範例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  下列範例會完整處理 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 範例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
   
 ### <a name="code"></a>程式碼  
@@ -136,7 +134,7 @@ ms.lasthandoff: 12/08/2017
 </Process>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  下列範例以累加方式處理**Internet_Sales_2004**資料分割中**Internet Sales**量值群組**Adventure Works DW** 中的cube[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]範例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 **程序**命令會將彙總加入訂單日期晚於 2006 年 12 月 31 日到分割區使用中的 out (out-of-line） 查詢繫結**繫結**屬性**程序**命令，以擷取事實資料表資料列，從而產生要加入資料分割的彙總。  
   
 ### <a name="code"></a>程式碼  

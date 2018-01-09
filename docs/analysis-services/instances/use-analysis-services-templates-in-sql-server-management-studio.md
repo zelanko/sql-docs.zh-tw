@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa787d2f040ac8065e4df8c68da3b6c730ff9640
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ad2bc8a5d6d440f9f8c06f17d2857e5343adfce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用 Analysis Services 範本
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]提供一組範本，可協助您快速建立 XMLA 指令碼、 DMX 或 MDX 查詢、 建立 Kpi 中的 cube 或表格式模型、 指令碼備份及還原作業，並執行許多其他工作。 範本位於 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的範本總管。  
@@ -103,7 +100,7 @@ ms.lasthandoff: 12/08/2017
   
 #### <a name="create-a-backup-command-script-from-a-template"></a>從範本建立備份命令指令碼  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟包含所要查詢之資料庫的執行個體。 以滑鼠右鍵按一下資料庫圖示，選取 [新增查詢]，然後選取 [XMLA]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟包含所要查詢之資料庫的執行個體。 以滑鼠右鍵按一下資料庫圖示，選取 [新增查詢]，然後選取 [XMLA]。  
   
     > [!WARNING]  
     >  您不能透過變更限制清單或在連接對話方塊中指定資料庫，設定 XMLA 查詢的內容。 您必須從要查詢的資料庫開啟 XMLA 查詢視窗。  
@@ -174,7 +171,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Analysis Services 範本參考  
  下列範本可用於 Analysis Services 資料庫和資料庫物件，包括採礦結構與採礦模型、Cube，以及表格式模型：  
   
-|類別目錄|項目範本|說明|  
+|類別目錄|項目範本|描述|  
 |--------------|-------------------|-----------------|  
 |DMX\模型內容|內容查詢|示範如何使用 DMX SELECT FROM *\<模型 >*。內容的陳述式來擷取指定之採礦模型的採礦模型結構描述資料列集的內容。|  
 ||連續資料行值|示範如何使用 DMX SELECT DISTINCT FROM *\<模型 >*陳述式及 DMX **RangeMin**和**RangeMax**函式來擷取一組從指定的採礦模型中的連續資料行在指定範圍中的值。|  
@@ -217,14 +214,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\管理|備份|展示如何使用 XMLA **Backup** 命令，將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫備份至檔案。|  
 ||取消|展示如何使用 XMLA **Cancel** 命令，以取消在目前工作階段 (適用於管理員或伺服器管理員以外的使用者)、資料庫 (適用於管理員) 或執行個體 (適用於伺服器管理員) 上所有正在執行的作業。|  
 ||建立遠端資料分割資料庫|展示如何使用 XMLA **Create** 命令和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 資料庫元素，來建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫和資料來源以儲存遠端資料分割。|  
-||Delete|展示如何使用 XMLA **Delete** 命令，來刪除現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。|  
+||DELETE|展示如何使用 XMLA **Delete** 命令，來刪除現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。|  
 ||處理維度|展示如何使用 XMLA **Batch** 命令並結合 **Parallel** 元素和 **Process** 命令，使用平行批次作業來更新維度的屬性。|  
 ||處理資料分割|展示如何使用 XMLA **Batch** 命令並結合 **Parallel** 元素和 **Process** 命令，使用平行批次作業來更新維度的屬性。|  
 ||Restore|展示如何使用 XMLA **Restore** 命令，從現有的備份檔案還原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。|  
 ||同步處理|示範如何使用 XMLA **Synchronize** 命令，利用 SynchronizeSecurity 標記的 SkipMembership 選項將另一個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫與目前的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫同步。|  
 |XMLA\結構描述資料列集|探索結構描述資料列集|展示如何使用 XMLA **Discover** 方法，來擷取 DISCOVER_SCHEMA_ROWSETS 結構描述資料列集的內容。|  
 |XMLA\伺服器狀態|連接|展示如何使用 XMLA **Discover** 方法，來擷取 DISCOVER_CONNECTIONS 結構描述資料列集的內容。|  
-||作業|展示如何使用 XMLA **Discover** 方法，來擷取 DISCOVER_JOBS 結構描述資料列集的內容。|  
+||中稱為|展示如何使用 XMLA **Discover** 方法，來擷取 DISCOVER_JOBS 結構描述資料列集的內容。|  
 ||位置|展示如何使用 XMLA **Discover** 方法，並指定位置備份檔案的路徑，來擷取 DISCOVER_LOCATIONS 結構描述資料列集的內容。|  
 ||鎖定|展示如何使用 XMLA **Discover** 方法，來擷取 DISCOVER_LOCKS 結構描述資料列集的內容。|  
 ||記憶體授權|展示如何使用 XMLA **Discover** 方法，來擷取 DISCOVER_MEMORYGRANT 結構描述資料列集的內容。|  

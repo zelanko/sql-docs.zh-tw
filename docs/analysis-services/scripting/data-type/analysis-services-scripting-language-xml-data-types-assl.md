@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Analysis Services Scripting Language XML Data Types
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4c4f046379f48724876223ea5248f4aff58bb637
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9baa60a57d8ef59bb7bb24afc82c0a3e5435a56d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Analysis Services 指令碼語言 XML 資料類型 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]這個參考章節包含每個項目，可做為 Analysis Services 指令碼語言 (ASSL) 結構描述中的類型的語法和使用方式資訊。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
  在部分情況中，某個類型會衍生自另一個類型。 例如， **CubeBinding**類型衍生自父代**繫結**型別。  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |[Action 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/action-data-type-assl.md)|定義表示中的動作的抽象基本資料類型[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)項目或[觀點來看](../../../analysis-services/scripting/objects/perspective-element-assl.md)項目。|  
 |[AggregationAttribute 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/aggregationattribute-data-type-assl.md)|定義代表之間的關聯的基本資料類型[彙總](../../../analysis-services/scripting/objects/aggregation-element-assl.md)元素和屬性。|  

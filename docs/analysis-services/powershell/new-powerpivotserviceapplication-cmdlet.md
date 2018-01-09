@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ca76f83816a3936f07e58e2f70990aeed221c262
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59b91b7bfc168b0722d5b8d37f74e521557c4416
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>New-PowerPivotServiceApplication 指令程式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]建立新[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/08/2017
 New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseServerName] <string> [-DatabaseName] <string> [-AddToDefaultProxyGroup <switch>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  New-PowerPivotServiceApplication Cmdlet 會在伺服器陣列中建立新的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 您必須至少定義一個服務應用程式，而且它必須是預設 Proxy 服務群組的成員。 或者，如果您需要更改屬性或組態設定，則可以建立其他服務應用程式。 必須將自訂服務連接群組的成員資格指派給其他服務應用程式。 只有一個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式可以是預設 Proxy 群組的成員。  
   
  新的服務應用程式是使用預設組態建立的。 若要自訂組態屬性，請使用 Set-PowerPivotServiceApplication 指令程式。  
@@ -61,7 +61,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |||  
 |-|-|  
 |必要項？|true|  
-|位置？|1|  
+|位置？|@shouldalert|  
 |預設值||  
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  

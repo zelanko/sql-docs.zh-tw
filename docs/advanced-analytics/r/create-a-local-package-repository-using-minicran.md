@@ -1,13 +1,13 @@
 ---
 title: "建立本機封裝儲存機制使用 miniCRAN |Microsoft 文件"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27f2a1ce-316f-4347-b206-8a1b9eebe90b
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f78470d347c96186f0960530a7482d22e4bc4e49
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 066e09747684ede5837d93736f32792736b8985d
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-local-package-repository-using-minicran"></a>建立使用 miniCRAN 本機封裝儲存機制
 
@@ -34,7 +34,12 @@ ms.lasthandoff: 12/20/2017
 
 -   [手動下載並複製封裝一個](#bkmk_manual)
 
-本文章說明如何建立使用這兩種方法中，R 封裝儲存機制，並建議使用的**miniCRAN**封裝。
+    您可以下載封裝 DESCRIPTION 檔案中找到相依封裝的清單。 
+    
+    不過，封裝會列入**匯入**可能有第二個層級相依性。 基於這個理由，我們建議使用**miniCRAN**方法。
+
+> [!TIP]
+> 您知道您可讓 miniCRAN 準備封裝以便在 Azure Machine Learning 中使用嗎？ 如需詳細資訊，請參閱這篇部落格： [miniCRAN 使用在 Azure ML，由 Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
 ## <a name="prepare-packages-using-minicran"></a>準備使用 miniCRAN 封裝
 
@@ -51,6 +56,9 @@ ms.lasthandoff: 12/20/2017
 -   **版本管理改善**： 在多使用者環境中，有合理的原因，若要避免不受限制的伺服器上的多個封裝版本的安裝。
 
 建立儲存機制之後, 您可以藉由新增新的封裝，或升級現有的封裝的版本修改它。
+
+> [!NOTE]
+> MiniCRAN 封裝本身會相依於 18 其他 CRAN 封裝，在這些是 RCurl 封裝 curl 對內封裝具有系統相依性。 同樣地，封裝 XML 有 libxml2 對內相依關係。 我們建議，因此，您建立本機儲存機制一開始包含完整的網際網路存取的電腦上，讓您可以輕鬆地滿足所有這些相依性。 建立之後，您可以移動至不同的位置的儲存機制。
 
 ### <a name="step-1-install-the-minicran-package"></a>步驟 1： 安裝 miniCRAN 套件
 
@@ -71,9 +79,11 @@ ms.lasthandoff: 12/20/2017
     CRAN_mirror \<- c(CRAN = "https://mran.microsoft.com/snapshot/2017-08-01")
     ```
 
-2.  表示用來儲存收集的封裝的本機資料夾。 您不需要命名資料夾 miniCRAN;可能是更具描述性的名稱，例如"GeneticsPackages"或"ClientRPackages1.0.2"。
+2.  輸入用來儲存收集的封裝的本機資料夾的名稱。 
 
-    只是確定預先建立的資料夾。 如果會引發錯誤`local_repo`資料夾不存在，當您稍後執行的 R 程式碼。
+    請務必事先建立資料夾。 如果會引發錯誤`local_repo`資料夾不存在，當您稍後執行的 R 程式碼。
+
+    資料夾應該具有描述性的名稱。 例如，請避免使用"miniCRAN 」，並改為輸入的項目 」 GeneticsPackages"或"TeamRPackages1.0.2"等。
 
     ```R
     local_repo <- "~/miniCRAN"
@@ -85,14 +95,14 @@ ms.lasthandoff: 12/20/2017
 
 1.  MiniCRAN 安裝之後，建立指定您想要下載的其他封裝的清單。
 
-    無法將相依性加入至這個初始的清單。**igraph** miniCRAN 所使用的封裝會為您產生相依性的清單。 如需如何使用此圖表的詳細資訊，請參閱[來識別封裝的相依性使用 miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)。
+    無法將相依性加入至這個初始的清單。**igraph** miniCRAN 所使用的封裝會為您產生相依性的清單。 如需如何使用產生的相依性圖形的詳細資訊，請參閱[來識別封裝的相依性使用 miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)。
 
     下列的 R 指令碼會示範如何取得目標的封裝、"zoo"和"預測 」。
 
     ```R
     pkgs_needed <- c("zoo", "forecast")
     ```
-2. （選擇性） 繪製相依性圖形，很有幫助，並且看起來很酷。
+2. 它不需要您繪製相依性圖表，但很有幫助。
     
     ```R
     plot(makeDepGraph(pkgs_needed))
@@ -124,15 +134,15 @@ ms.lasthandoff: 12/20/2017
 
 根據 SQL Server 版本，有兩個選項，將 SQL Server 執行個體相關聯的 R 程式庫中加入新的封裝：
 
--   安裝至執行個體文件庫使用 miniCRAN 儲存機制和 R 工具。
+- 安裝至執行個體文件庫使用 miniCRAN 儲存機制和 R 工具。
 
--   將封裝上傳至 SQL 資料庫並在每個資料庫為基礎，使用建立外部程式庫陳述式上安裝封裝。 請參閱[SQL Server 上安裝其他的 R 封裝](install-additional-r-packages-on-sql-server.md)。
+- 將封裝上傳至 SQL Server 資料庫，並使用建立外部程式庫陳述式。 此選項需要 SQL Server 2017。 請參閱[SQL Server 上安裝其他的 R 封裝](install-additional-r-packages-on-sql-server.md)。
 
 下列程序描述如何安裝封裝使用的 R 工具。
 
-1.  複製包含 miniCRAN 儲存機制，其完整，您將在其中安裝封裝的伺服器中的資料夾。
+1. 複製包含 miniCRAN 儲存機制，以您要安裝封裝的伺服器，將整個資料夾。
 
-2.  開啟 R 命令提示字元使用執行個體相關聯的 R 工具。
+2. 開啟 R 命令提示字元使用執行個體相關聯的 R 工具。
 
     - 預設資料夾是針對 SQL Server 2017， `C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library`。
 
@@ -142,16 +152,16 @@ ms.lasthandoff: 12/20/2017
 
     -  如果您已將 SQL Server 安裝到不同的磁碟機，或在安裝路徑中進行了任何其他變更，並務必一併進行這些變更。
 
-3.  取得路徑的執行個體中的程式庫 （情況下您的使用者目錄中），並將它加入至程式庫路徑的清單。
+3.  取得執行個體文件庫的路徑，並將它加入至程式庫路徑的清單。
 
     ```R
     .libPaths()[1]  
     lib \<- .libPaths()[1]
     ```
 
-    這應該會傳回執行個體路徑，"c: / Program 檔案/Microsoft SQL Server/MSSQL14。MSSQLSERVER/R_SERVICES/媒體櫃 」
+    在 SQL Server，此命令應該會傳回執行個體相關聯，例如程式庫的路徑:"c: / Program 檔案/Microsoft SQL Server/MSSQL14。MSSQLSERVER/R_SERVICES/媒體櫃 」
 
-2.  指定您用來複製 mininCRAN 儲存機制中的伺服器上的位置`server_repo`。
+4.  指定您用來複製 mininCRAN 儲存機制中的伺服器上的位置`server_repo`。
 
     在此範例中，我們假設您複製到您在伺服器上的使用者資料夾的儲存機制。
 
@@ -159,29 +169,26 @@ ms.lasthandoff: 12/20/2017
     R server_repo <- "C:\\Users\\MyUserName\\miniCRAN"
     ```
 
-3.  因為您正在伺服器上新的 R 工作區中，您也必須提供要安裝套件的清單。
+5.  因為您正在伺服器上新的 R 工作區中，您也必須提供要安裝套件的清單。
 
     ```R
     tspackages <- c("zoo", "forecast")
     ```
 
-4.  安裝封裝，使用本機複本 miniCRAN 儲存機制的路徑。
+6.  安裝封裝，並提供本機複本 miniCRAN 儲存機制的路徑。
 
     ```R
     install.packages(tspackages, repos = file.path("file://", normalizePath(server_repo, winslash = "/")), lib = lib, type = "win.binary", dependencies = TRUE)
     ```
 
-5.  現在，檢視已安裝的封裝。
+7.  從執行個體文件庫中，您可以檢視已安裝的封裝，使用類似下列的命令：
 
     ```R
     installed.packages()
     ```
 
 > [!NOTE] 
-> 
-> 在 SQL Server 2017，其他資料庫角色和 T-SQL 陳述式提供可協助伺服器系統管理員透過封裝管理權限。 資料庫管理員可以擁有使用 R 或 T-SQL，如果您想要安裝的套件的工作。 不過，DBA 也可以使用角色，讓使用者能夠安裝其自己的封裝。 如需詳細資訊，請參閱[for SQL Server 的 R 封裝管理](r-package-management-for-sql-server-r-services.md)。
-> 
-> 在 SQL Server 2016 中，伺服器管理員必須從安裝套件 miniCRAN 儲存機制至執行個體所使用的預設程式庫。 若要這樣做，請使用中所述的 R 工具[前面一節](#bkmk_Rtools)。
+> SQL Server 中的伺服器系統管理員必須從安裝套件 miniCRAN 儲存機制至執行個體所使用的預設程式庫。 
 
 ## <a name="manually-download-single-packages"></a>手動下載單一封裝
 
@@ -189,11 +196,11 @@ ms.lasthandoff: 12/20/2017
 
 下載封裝之後, 您可以安裝的 R 封裝從 zip 的檔案的位置。
 
-1.  下載封裝 zip 檔案，並將它們儲存在本機資料夾
+1. 下載封裝 zip 檔案，並將它們儲存在本機資料夾
 
-2.  複製到該資料夾[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]電腦。
+2. 複製到該資料夾[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]電腦。
 
-3.  將封裝安裝到 SQL Server 執行個體文件庫。
+3. 將封裝安裝到 SQL Server 執行個體文件庫。
 
 > [!NOTE]
 > 當您使用 R 工具來安裝封裝時，它們會安裝執行個體的整體。 

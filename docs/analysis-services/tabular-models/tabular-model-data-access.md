@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 23f654a293447e562baf7a8785871417b2bfd975
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-data-access"></a>表格式模型資料存取
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在 Analysis Services 表格式模型資料庫可以存取受到大部分相同的用戶端、 介面及您使用多維度模型中擷取資料或中繼資料的語言。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -37,7 +34,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="power-bi"></a>Power BI
 您可以從 [Power BI](https://powerbi.microsoft.com/)連接到內部部署 Analysis Services 表格式模型資料庫。 Power BI 是一套商業分析工具，可分析資料以及共用見解。 
 
-### <a name="excel"></a>Excel  
+### <a name="excel"></a>[匯出]  
  您可以使用 Excel 中的資料視覺效果與分析功能，從 Excel 連接至表格式模型資料庫，以處理您的資料。 若要存取資料，您要定義 Analysis Services 資料連接、指定在表格式伺服器模式下執行的伺服器，然後選擇您要使用的資料庫。 如需詳細資訊，請參閱＜ [連接到 SQL Server Analysis Services 或是從中匯入資料](http://go.microsoft.com/fwlink/?linkID=215150)＞。  
   
  Excel 也是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中瀏覽表格式模型的建議應用程式。 這個工具包含 [在 Excel 中進行分析] 選項，此選項可啟動新的 Excel 執行個體、建立 Excel 活頁簿，並開啟活頁簿與模型工作空間資料庫之間的資料連接。 在 Excel 中瀏覽表格式模型資料時，請注意 Excel 會使用 Excel 樞紐分析表用戶端，針對模型發出查詢。 因此，Excel 活頁簿中的作業會導致 MDX 查詢傳送給工作空間資料庫，而不是 DAX 查詢。 如果您要使用 SQL Profiler 或其他監視工具來監視查詢，您預期可以在 Profiler 追蹤內看到 MDX 而非 DAX。 如需 [在 Excel 中進行分析] 功能的詳細資訊，請參閱[在 Excel 中進行分析 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  

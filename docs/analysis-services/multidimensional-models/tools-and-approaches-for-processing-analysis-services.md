@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad1cff7114e6891af5cdf54cfc29b658213c6bb4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 910a1fc1ddcd7eee478c5a16ed1243801e482203
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>處理的工具和方式 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]處理是 Analysis Services 查詢關聯式資料來源和擴展 Analysis Services 物件使用該資料的作業。  
@@ -83,7 +80,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  或者，按一下 **[變更設定]** 來修改處理順序、相對於特定類型錯誤的處理行為，以及其他設定。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
      [處理進度] 對話方塊會提供每個命令的進行中狀態。 如果狀態訊息遭到截斷，您可以按一下 **[檢視詳細資料]** 來讀取完整訊息。  
   
@@ -131,11 +128,11 @@ ms.lasthandoff: 12/08/2017
   
 1.  從這個版本的 SQL Server 開始，您可以使用 Analysis Services PowerShell 指令程式處理物件。 下列指令程式可以以互動方式或指令碼執行：  
   
-    -   [Invoke-ProcessCube 指令程式](../../analysis-services/powershell/invoke-processcube-cmdlet.md)  
+    -   [Invoke-ProcessCube cmdlet](../../analysis-services/powershell/invoke-processcube-cmdlet.md)  
   
     -   [Invoke-ProcessDimension cmdlet](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)  
   
-    -   [Invoke-ProcessPartition 指令程式](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)  
+    -   [Invoke-ProcessPartition cmdlet](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)  
   
     -   [Invoke-ASCmd Cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md)，可用來執行包含處理命令的 XMLA、MDX 或 DMX 指令碼。  
   

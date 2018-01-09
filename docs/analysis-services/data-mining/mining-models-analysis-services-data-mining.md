@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 36c55916f0f1b403ddf248c975151b638a7ccb86
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9fe63b761a9834e53832c1525d8d77ea00a9a508
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>採礦模型 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*採礦模型*建立套用至資料，但它的演算法多個演算法或中繼資料容器： 它是一組資料、 統計資料，以及可以套用至新資料來產生預測並推斷的模式有關關聯性。  
@@ -145,8 +143,8 @@ ms.lasthandoff: 12/08/2017
   
 |工作|連結|  
 |----------|----------|  
-|加入及刪除採礦模型|[將採礦模型加入至現有的採礦結構](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [從採礦結構刪除採礦模型](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
-|使用採礦模型資料行|[從採礦模型排除資料行](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [建立模型資料行的別名](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [變更採礦模型中的資料行離散化](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [在模型中指定當做迴歸輸入變數使用的資料行](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|加入及刪除採礦模型|[將採礦模型新增至現有的採礦結構](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [從採礦結構刪除採礦模型](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
+|使用採礦模型資料行|[從採礦模型排除資料行](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [建立模型資料行的別名](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [變更採礦模型中的資料行分隔](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [在模型中指定當做迴歸輸入變數使用的資料行](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |改變模型屬性|[變更採礦模型的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [將篩選套用至採礦模型](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [從採礦模型中刪除篩選](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [針對採礦模型啟用鑽研](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [檢視或變更演算法參數](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
 |複製、 移動或管理模型|[建立採礦模型的複本](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [複製採礦模型的檢視](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
 |以資料擴展模型，或更新模型中的資料|[處理採礦模型](../../analysis-services/data-mining/process-a-mining-model.md)|  

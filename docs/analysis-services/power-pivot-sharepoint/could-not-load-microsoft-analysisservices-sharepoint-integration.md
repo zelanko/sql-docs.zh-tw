@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c48acc5178a8e17f47e14205cab10f14bf1a2d1d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0854f5c3cdf740c68b8f83dcb3d847cefc256edd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="could-not-load-microsoftanalysisservicessharepointintegration"></a>無法載入 Microsoft.AnalysisServices.SharePoint.Integration
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在 SharePoint 2010 環境中具有[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for SharePoint 時，會發生此錯誤的應用程式層級方案[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]並未正確部署。  
@@ -49,9 +49,9 @@ ms.lasthandoff: 12/08/2017
   
 4.  選擇發生這個錯誤的 Web 應用程式。 如果有一個以上的 Web 應用程式，請針對所有應用程式重新部署此方案。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
 ## <a name="see-also"></a>請參閱  
- [將 Power Pivot 方案部署到 SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)  
+ [將 Power Pivot 解決方案部署到 SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

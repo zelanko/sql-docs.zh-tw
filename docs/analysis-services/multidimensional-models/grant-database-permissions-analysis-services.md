@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d313637275d28a83b8a0f79e23bfc46bd972ae2a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b05b035f530318759f0b2eb4b20bd9bd5edd4d01
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-database-permissions-analysis-services"></a>授與資料庫權限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]處理 Analysis Services 資料庫管理與在關聯式資料庫背景時，如果您需要了解第一件事是，根據資料存取的資料庫不是 Analysis Services 中的主要安全性實體物件。  
@@ -76,7 +73,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  選取 Cube 的 [完整控制權 (管理員)] 核取方塊。 請注意，系統會自動選取 [處理資料庫] 和 [讀取定義]。 這兩個權限一律會包含在包括 [完整控制權] 的角色中。  
   
-4.  在 [成員資格] 窗格中，輸入使用這個角色連接到 Analysis Services 的 Windows 使用者和群組帳戶。  
+4.  在 [成員資格] 窗格中，輸入使用這個角色連線到 Analysis Services 的 Windows 使用者和群組帳戶。  
   
 5.  按一下 [確定]，完成角色的建立。  
   

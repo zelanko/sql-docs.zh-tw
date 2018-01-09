@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 50841f276b204ed30de97636c5d3c5cccd7204e0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0cb0930e6fd3faf0b44c5b8ac46359ec959b85c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>設定 Windows 防火牆以允許 Analysis Services 存取
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]第一個的必要步驟，進行[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]或[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]在網路上可用的是，以判斷您是否要解除封鎖通訊埠在防火牆中的。 大部分安裝都要求您至少建立一個傳入防火牆規則來允許連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
@@ -163,7 +160,7 @@ ms.lasthandoff: 12/08/2017
   
 7.  在 [名稱] 中輸入此規則的描述性名稱 (例如 **SQL Server Browser Service (tcp-in) 2382**)，然後按一下 [完成]。  
   
-8.  若要確認有無啟用遠端連接，開啟 SQL Server Management Studio 或 Excel 不同的電腦上並連接到 Analysis Services 藉由指定伺服器的網路名稱和執行個體名稱採用下列格式：\<伺服器名稱 >\\< instancename\>。 例如，在名稱為 **AW-SRV01** 且具有 **Finance**具名執行個體的伺服器上，伺服器名稱為 **AW-SRV01\Finance**。  
+8.  若要確認有無啟用遠端連接，開啟 SQL Server Management Studio 或 Excel 不同的電腦上並連接到 Analysis Services 藉由指定伺服器的網路名稱和執行個體名稱採用下列格式：\<伺服器名稱 >\\< instancename\>。 例如，在名稱為 **AW-SRV01** 且具有 **Finance** 具名執行個體的伺服器上，伺服器名稱為 **AW-SRV01\Finance**。  
   
  **選項 2：針對具名執行個體使用固定通訊埠**  
   

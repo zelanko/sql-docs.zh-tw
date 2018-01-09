@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3a7d8d9405d27956eecef276ef9a5b80b1806667
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>屬性內容-設定屬性類型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，屬性類型有助於從商務功能上的將屬性分類。 屬性類型有很多，而且大部份可供用戶端應用程式用來顯示或支援屬性。 不過，有些屬性類型對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]也有特定意義。 例如，有些屬性類型會針對時間維度，識別代表各種日曆之時間週期的屬性。  
@@ -51,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
 ###  <a name="general_attribute_types"></a> General Attribute Types  
   
-|屬性類型值|說明|  
+|屬性類型值|描述|  
 |--------------------------|-----------------|  
 |**位址**|代表地址。|  
 |**AddressBuilding**|代表地址的建築物識別碼。|  
@@ -155,7 +152,7 @@ ms.lasthandoff: 12/08/2017
 |**ShortCaption**|代表簡短標題。|  
 |**StateOrProvince**|代表省份。|  
 |**公用程式**|代表公用程式。|  
-|**版本**|代表版本。|  
+|**版本(Version)**|代表版本。|  
 |**WebHtml**|代表 HTML 內容。|  
 |**WebMailAlias**|代表電子郵件別名。|  
 |**WebUrl**|代表 URL 位址。|  
@@ -163,7 +160,7 @@ ms.lasthandoff: 12/08/2017
   
 ###  <a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
   
-|屬性類型值|說明|  
+|屬性類型值|描述|  
 |--------------------------|-----------------|  
 |**帳戶**|代表帳戶的父系。 此屬性類型通常會套用至帳戶維度的父系屬性。|  
 |**AccountName**|代表帳戶的名稱。 此屬性類型通常會套用至帳戶維度的索引鍵屬性。|  
@@ -172,7 +169,7 @@ ms.lasthandoff: 12/08/2017
   
 ###  <a name="currency_dimension_attribute_types"></a> 貨幣維度屬性類型  
   
-|屬性類型值|說明|  
+|屬性類型值|描述|  
 |--------------------------|-----------------|  
 |**CurrencyDestination**|代表貨幣兌換的目標貨幣。 此屬性類型通常會套用至報表維度的索引鍵屬性，以用於貨幣轉換。 如需貨幣轉換的詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md)。|  
 |**CurrencyIsoCode**|代表貨幣的國際標準組織 (ISO) 代碼。 如需貨幣轉換的詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md)。|  
@@ -181,7 +178,7 @@ ms.lasthandoff: 12/08/2017
   
 ###  <a name="slowly_changing_dimension_attribute_types"></a> 緩時變維度屬性類型  
   
-|屬性類型值|說明|  
+|屬性類型值|描述|  
 |--------------------------|-----------------|  
 |**ScdEndDate**|代表緩時變維度中的成員之有效結束日期。|  
 |**ScdOriginalID**|代表緩時變維度中的成員之原始識別碼。|  
@@ -190,9 +187,9 @@ ms.lasthandoff: 12/08/2017
   
 ###  <a name="time_dimension_attribute_types"></a> 時間維度屬性類型  
   
-|屬性類型值|說明|  
+|屬性類型值|描述|  
 |--------------------------|-----------------|  
-|**日期**|代表日期。 此屬性類型通常會套用至時間維度或伺服器時間維度的索引鍵屬性。|  
+|**Date**|代表日期。 此屬性類型通常會套用至時間維度或伺服器時間維度的索引鍵屬性。|  
 |**DayOfHalfYear**|代表半年中的日序數。|  
 |**DayOfMonth**|代表月中的日序數。|  
 |**DayOfQuarter**|代表季中的日序數。|  

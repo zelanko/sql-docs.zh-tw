@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bfe9352a73c2548bfa092eb88d04605b6721b4ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7fb30b200d930a9827aee4b630d80df6e622842e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供有關維度，包括名稱、 維度名稱、 其屬性，以及針對每個屬性成員的計數所包含的資料庫資訊。 在表格式模型中，這會對應至資料表中的資料行，以及每個資料行中值的數目。  
@@ -34,10 +32,10 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_DIMENSION_STAT**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|限制|Description|  
+|資料行名稱|類型指標|限制|描述|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**資料庫名稱**|**DBTYPE_WSTR**|Required|包含維度的資料庫名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
-|**DIMENSION_NAME**|**DBTYPE_WSTR**|Required|維度的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
+|**資料庫名稱**|**DBTYPE_WSTR**|必要項|包含維度的資料庫名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
+|**DIMENSION_NAME**|**DBTYPE_WSTR**|必要項|維度的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||維度中屬性的名稱。|  
 |**ATTRIBUTE_COUNT**|**DBTYPE_I8**||具名屬性中值的計數。 在表格式模型中，此值一定與資料表中的資料列數目相同。|  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|值|  
+|引數|ReplTest1|  
 |--------------|-----------|  
 |GUID|a07ccd90-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionDimensionStat|  

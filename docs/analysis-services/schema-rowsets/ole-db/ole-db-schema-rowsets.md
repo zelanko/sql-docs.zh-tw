@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10a60e9e3696076a4e3672e7bcb5037f362f161b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59d17cb1345f7ba32a2cbaac27f5ec002aadfa40
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB 結構描述資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]下列的 OLE DB 結構描述資料列集都受到[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XML for Analysis (XMLA) 提供者。 使用**DISCOVER_ENUMERATORS**含有資料列集[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法來檢查特定資料來源提供者是否支援資料列集。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/08/2017
   
  下表描述此結構描述資料列集。  
   
-|資料列集|Description|  
+|資料列集|描述|  
 |------------|-----------------|  
 |**DBSCHEMA_ASSERTIONS**|識別在目錄中所定義且由指定使用者所擁有的判斷提示。|  
 |[DBSCHEMA_CATALOGS 資料列集](../../../analysis-services/schema-rowsets/ole-db/dbschema-catalogs-rowset.md) <sup>1</sup>|識別與可從資料庫管理系統 (DBMS) 存取之目錄相關聯的實體屬性。 某些系統 (例如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access) 可能只有一個目錄。 對於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，這個資料列集會列舉定義在系統資料庫中的所有目錄 (資料庫)。|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,16 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5114896e9303ee67a8f37d919644837432935231
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 71c30e6d930f6dbe7dfcc09d9c8647acff5eb7aa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="command-events-event-category"></a>命令事件的事件類別目錄
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]命令事件的事件類別目錄具有下表中所述的事件類別。  
   
-|Event Class|事件識別碼|說明|  
+|Event Class|事件識別碼|描述|  
 |-----------------|--------------|-----------------|  
 |命令開始|15|收集自從啟動追蹤之後的所有命令開始事件。|  
 |命令結束|16|收集自從啟動追蹤之後的所有命令結束事件。|  

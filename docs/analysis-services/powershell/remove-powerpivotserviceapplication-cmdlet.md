@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7cf2627ebb14d37ea684adc76cd0d8a5d003d73c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7078a7733c7764b77667628071c66c8313aae85a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="remove-powerpivotserviceapplication-cmdlet"></a>Remove-PowerPivotServiceApplication 指令程式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]刪除[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/08/2017
 Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBind>] [-DeleteAll <switch>] [-RemoveData <switch>] [-Confirm <switch>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  Remove-PowerPivotServiceApplication Cmdlet 會從伺服器陣列中刪除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 使用 DeleteAll 一次刪除所有服務應用程式，或使用 Identity 參數移除單一執行個體。 若要取得執行個體資訊，請執行 Get-PowerPivotServiceApplication 以傳回伺服器陣列中的所有執行個體。  
   
  使用 RemoveData 參數可以選擇性地移除服務應用程式資料庫和快取檔案。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 一旦移除服務應用程式之後，活頁簿會保留在內容庫中，但不再運作。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -45,11 +45,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1ef279f10209b9281f3f7497d730e07247d5d9ab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 286999ab145671370f458f0ffb8f5f2db85d0461
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="general-properties"></a>一般屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援下表中列出的伺服器屬性。 本主題記載 msmdsrv.ini 檔案中，不包含在特定章節中的伺服器屬性，例如 Security、Network 或 ThreadPool。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
@@ -101,10 +101,10 @@ ms.lasthandoff: 12/08/2017
   
  這個屬性的有效值包括：  
   
-|Value|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |0|這是預設值。 它指定多維度模式，用於服務使用 MOLAP、HOLAP 和 ROLAP 儲存以及資料採礦模型的多維度資料庫。|  
-|1|指定要與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署一起安裝的 Analysis Services 執行個體。 請不要變更 Analysis Services 執行個體的部署模式屬性，因為它是屬於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝的一部分。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 如果您變更模式，資料將不再於伺服器上執行。|  
+|@shouldalert|指定要與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署一起安裝的 Analysis Services 執行個體。 請不要變更 Analysis Services 執行個體的部署模式屬性，因為它是屬於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝的一部分。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 如果您變更模式，資料將不再於伺服器上執行。|  
 |2|指定用於裝載使用記憶體中儲存或 DirectQuery 儲存之表格式模型資料庫的表格式模式。|  
   
  每個模式彼此之間是獨佔的。 設定為表格式模式的伺服器無法執行包含 Cube 和維度的 Analysis Services 資料庫。 如果基礎電腦硬體可以支援它，您就可以在相同的電腦上安裝多個 Analysis Services 執行個體，並將每個執行個體設定為使用不同的部署模式。 請記住，Analysis Services 是非常耗用資源的應用程式。 建議在相同的系統上，僅針對高階伺服器部署多個執行個體。  
@@ -163,7 +163,7 @@ ms.lasthandoff: 12/08/2017
  **通訊埠**  
  整數屬性，定義伺服器接聽用戶端連接的通訊埠編號。 如果沒有設定，伺服器會動態地找到第一個未使用的通訊埠。  
   
- 此屬性的預設值為零 (0)，因而會預設為通訊埠 2383。 如需通訊埠組態的詳細資訊，請參閱＜ [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)＞。  
+ 此屬性的預設值為零 (0)，因而會預設為通訊埠 2383。 如需通訊埠組態的詳細資訊，請參閱＜ [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)＞。  
   
  **ServerTimeout**  
  整數，定義查詢的逾時 (以秒為單位)。 預設值為 3600 秒 (或 60 分鐘)。 零 (0) 指定任何查詢都不會逾時。  

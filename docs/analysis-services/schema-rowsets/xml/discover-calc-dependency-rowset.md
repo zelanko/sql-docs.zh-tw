@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9eca892f8ddf9e85e05d33b81023a3602c861734
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 39e8c2f6aa89e83de104862a22d8b8fefcab5fd0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]報告計算之間的相依性和這些計算中所參考的物件。 您可以在用戶端應用程式中使用此資訊，針對複雜公式的問題進行報告，或在相關物件遭到刪除或修改時發出警告。 您還可以使用資料列集來擷取量值或導出資料行中使用的 DAX 運算式。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_CALC_DEPENDENCY** 資料列集包含下列資料行。 資料表也會指定資料類型、指示資料行是否可以限制傳回的資料列，並提供每一個資料行的描述。  
   
-|資料行名稱|類型指標|限制|Description|  
+|資料行名稱|類型指標|限制|描述|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**資料庫名稱**|**DBTYPE_WSTR**|是|指定包含要求其相依性分析之物件的資料庫名稱。 如果省略，就會使用目前的資料庫。<br /><br /> **DISCOVER_DEPENDENCY_CALC** 資料列集可以使用此資料行加以限制。|  
 |**OBJECT_TYPE**|**DBTYPE_WSTR**|是|表示要求其相依性分析之物件的類型。 物件必須是下列其中一種類型：<br /><br /> **ACTIVE_RELATIONSHIP**：作用中的關聯性<br /><br /> **CALC_COLUMN**：導出資料行<br /><br /> **HIERARCHY**：階層<br /><br /> **MEASURE**：量值<br /><br /> **RELATIONSHIP**：關聯性<br /><br /> **KPI**：KPI (關鍵效能指標)<br /><br /> <br /><br /> 請注意， **DISCOVER_DEPENDENCY_CALC**資料列集可能會限制使用此資料行。|  
@@ -126,7 +124,7 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|值|  
+|引數|ReplTest1|  
 |--------------|-----------|  
 |GUID|a07ccd46-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|DependencyGraph|  

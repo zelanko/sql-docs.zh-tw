@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>建立及管理遠端分割區 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當資料分割的量值群組，您可以設定次要資料庫在遠端[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]作為分割區儲存的執行個體。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 12/08/2017
   
  專用次要資料庫會針對唯一的 master 資料庫儲存遠端資料分割，但是 master 資料庫可以使用多個次要資料庫，只要所有次要資料庫都在相同的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]遠端執行個體上即可。 資料庫中專屬於遠端分割區的維度會建立為連結維度。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  建立遠端分割區之前，必須先符合下列條件：  
   
 -   您必須具有次要 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和專用資料庫以儲存資料分割。 次要資料庫的用途只有一個，那就是為 master 資料庫提供遠端分割區儲存。  
@@ -119,7 +116,7 @@ ms.lasthandoff: 12/08/2017
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>設定遠端分割區 (在 SSDT 中)  
   
-1.  在主要伺服器上：開啟 Cube 設計師中的 Cube，然後按一下 [資料分割] 索引標籤。展開量值群組。 如果為多個資料分割設定量值群組，請按一下 [新增資料分割]；否則在 [來源] 資料行中按一下瀏覽 (. 。 ) 按鈕，以編輯現有的分割區。  
+1.  在主要伺服器上：開啟 Cube 設計師中的 Cube，然後按一下 [資料分割] 索引標籤。展開量值群組。 如果為多個資料分割設定量值群組，請按一下 [新增資料分割]；否則在 [來源] 資料行中按一下瀏覽 (. 執行個體時提供 SQL Server 登入。 ) 按鈕，以編輯現有的分割區。  
   
 2.  在 [資料分割精靈] 的 [指定來源資訊] 中，選取原始資料來源檢視和事實資料表。  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2755e08e3e509723e3c1b511c27f852be157ad3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8010e9c0412b50c8d65a67c87c176bff02d1a887
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="defaultdetails-element-csdlbi"></a>DefaultDetails 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]DefaultDetails 元素代表屬性參考會共同定義 「 預設欄位集 」 資料表中的資料行的清單。 每個屬性只能參考一個量值或資料行。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 DefaultDetails 元素的元素和屬性。  
   
-|名稱|是否必要|說明|  
+|[屬性]|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |DefaultDetailsPosition|否|指出在集合中存在與位置的正整數。|  
   

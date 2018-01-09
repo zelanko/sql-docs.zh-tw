@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81357b2e0baec6545a6fec8aedf5d2c635d0c9da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>PowerPivot 驗證及授權
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的 SharePoint 2010 伺服陣列中執行的部署會使用 SharePoint 伺服器所提供的驗證子系統和授權模型。 由於所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相關的內容都儲存在 SharePoint 內容資料庫中，而且 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]相關的所有作業都在伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共用服務上執行，因此 SharePoint 安全性基礎結構會延伸到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 內容和作業。 使用者若要求包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的活頁簿，就會使用以其 Windows 使用者識別為基礎的 SharePoint 使用者識別進行驗證。 活頁簿上的檢視權限會決定授與或拒絕要求。  
@@ -109,7 +106,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  與安全性最相關的設定會套用至信任的位置。 如果您要保留預設值或在不同的網站使用不同的值，您可以針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的網站建立其他信任的位置，然後只針對該網站進行下列設定。 如需詳細資訊，請參閱 [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
-|區域|設定|說明|  
+|區域|設定|描述|  
 |----------|-------------|-----------------|  
 |Web 應用程式|Windows 驗證提供者|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 會將它從 Excel Services 取得的宣告 Token 轉換為 Windows 使用者識別。 將 Excel Services 當做資源使用的所有 Web 應用程式都必須設定為使用 Windows 驗證提供者。|  
 |信任的位置|位置類型|此值必須設為 **[Microsoft SharePoint Foundation]**。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器會擷取 .xlsx 檔案的複本，並將其載入伺服陣列中的 Analysis Services 伺服器。 伺服器只能從內容庫擷取 .xlsx 檔。|  

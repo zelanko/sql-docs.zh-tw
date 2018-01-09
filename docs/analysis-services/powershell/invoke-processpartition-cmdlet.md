@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 516fab44-734e-425b-9bd0-b4aee1fd338f
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dc03c77ffd4fc5ad02d234fa5c1bdc456234779b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f36ab9dbb5054c4014e03718a99fc28033e4d9ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processpartition-cmdlet"></a>Invoke-ProcessPartition 指令程式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]處理資料分割使用特定的處理類型變數。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/08/2017
   
  `Invoke-ProcessPartition –DatabasePartition <Microsoft.AnalysisServices.Partition> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  Invoke-ProcessParition 指令程式會針對給定的 Cube 和量值群組，處理 Analysis Services 資料庫的特定資料分割。 ProcessType 值會決定作業的範圍。 在處理資料分割時，您必須指定處理類型。 如需詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
 ## <a name="parameters"></a>參數  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |必要項？|true|  
-|位置？|1|  
+|位置？|@shouldalert|  
 |預設值||  
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  

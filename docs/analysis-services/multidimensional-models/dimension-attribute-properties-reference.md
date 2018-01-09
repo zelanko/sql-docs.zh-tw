@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +20,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f9acd136bdeb7c286ec4d110b3f5b4b70018685f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="dimension-attribute-properties-reference"></a>維度屬性 (Attribute) 屬性 (Property) 參考
+# <a name="dimension-attribute-properties-reference"></a>維度屬性 (attribute) 屬性 (property) 參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，有許多屬性，以決定維度和維度屬性函式。 下表列出與描述每一項屬性 (Attribute) 的屬性 (Property)。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**AttributeHierarchyDisplayFolder**|識別向使用者顯示相關聯屬性階層的資料夾。|  
 |**AttributeHierarchyEnabled**|決定是否由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生屬性的屬性階層。 如果屬性階層未啟用，則不能在使用者自訂階層中使用該屬性，也不能在多維度運算式 (MDX) 陳述式中參考此屬性階層。|  

@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 678912f45f94b99ce9abf96e864b60dd794f7b1c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多維度模型資料存取 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]使用本主題中的資訊以了解如何存取[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用以程式設計方式、 指令碼或連接到內建支援的用戶端應用程式的多維度資料[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]您網路上的伺服器。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
  下列 Microsoft 應用程式支援多維度資料的原生連接。  
   
-### <a name="excel"></a>Excel  
+### <a name="excel"></a>[匯出]  
  Analysis Services 多維度資料通常是使用 Excel 活頁簿中的樞紐分析表和樞紐分析圖控制項呈現。 樞紐分析表適用於多維度資料，因為模型中的階層、彙總與導覽建構函式與樞紐分析表的資料摘要功能是絕配。 Analysis Services OLE DB 資料提供者包含在 Excel 安裝中，可以讓資料連接的設定更為容易。 如需詳細資訊，請參閱＜ [連接到 SQL Server Analysis Services 或是從中匯入資料](http://go.microsoft.com/fwlink/?linkID=215150)＞。  
   
 ### <a name="reporting-services-reports"></a>Reporting Services 報表  
@@ -95,7 +92,7 @@ ms.lasthandoff: 12/08/2017
   
  下表提供連接 Analysis Services 與自訂應用程式所使用之用戶端程式庫的其他詳細資料和連結。  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |Analysis Services 管理物件 (AMO)|AMO 是在程式碼中管理 Analysis Services 執行個體與多維度資料庫的主要物件模型。 例如，SQL Server Management Studio 使用 AMO 支援伺服器與資料庫管理。 如需詳細資訊，請參閱[使用分析管理物件 &#40;AMO&#41; 來開發](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)。|  
 |ADOMD.NET|ADOMD.NET 是在自訂應用程式中建立與存取多維度資料的主要物件模型。 您可以使用通用的 Microsoft .NET Framework 資料存取介面，在 Managed 用戶端應用程式中使用 ADOMD.NET 來擷取 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資訊。 如需詳細資訊，請參閱 [使用 ADOMD.NET 來開發](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md) 和 [ADOMD.NET 用戶端程式設計](../../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)。|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 05be704e-4ee4-4101-b5ce-96fdda18c639
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e34cc306126acc431048fd93b7eab99049bc2414
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9f8282029d3f20075ed35b29e1af913a882075da
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>連接到現有的 Analysis Services 表格式伺服器和資料庫
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在 SQL Server 2016 中，Analysis Services 管理物件 (AMO) 會包含可用來設定伺服器連接的數個命名空間。 本文說明如何建立伺服器連接的 Microsoft.AnalysisServices.Tabular 命名空間使用模型以及資料庫建立在 1200年或更高的相容性層級。 
@@ -112,7 +110,7 @@ namespace TOMSamples
 
 在 Windows 2012 及更新版本，委派可以被流動的跨網域。 在 Analysis Services 中，委派只適用於 DirectQuery 模型;否則連接會直接或模擬。 
 
-## <a name="next-steps"></a>後續的步驟 
+## <a name="next-steps"></a>後續步驟 
 
 建立連接後，邏輯的下一個步驟是已經在伺服器上，其中一個清單中現有的資料庫，或可能是建立新的空白資料庫。 以下連結包括程式碼範例會示範這兩項基本工作： 
 

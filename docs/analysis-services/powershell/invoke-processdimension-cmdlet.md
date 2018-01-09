@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9506938e-7f9f-4595-ad6d-98c8b0ce8395
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: afe8c26b63babadc5a153dac60b15ec2c98e2033
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8a24a4b19f20e28346456e3c0c53f39eaeb200b9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processdimension-cmdlet"></a>Invoke-ProcessDimension 指令程式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]處理維度，使用特定的處理類型變數。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/08/2017
   
  `Invoke-ProcessDimension –DatabaseDimension <Microsoft.AnalysisServices.Dimension> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  Invoke-ProcessDimension 指令程式或處理指定的維度。 您必須指定處理類型。 如需處理維度類型的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
 ## <a name="parameters"></a>參數  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |必要項？|true|  
-|位置？|1|  
+|位置？|@shouldalert|  
 |預設值||  
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  

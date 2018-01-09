@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 183fbed8a59f4f6288b321b47d30895e4a7c7394
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]傳回採礦結構和所有相關的模型，不包括群集模型的交叉驗證精確度標準。  
@@ -107,23 +107,23 @@ SystemGetAccuracyResults(<mining structure>,
   
  下表列出 **GetValidationResults**傳回的資料行。  
   
-|資料行名稱|說明|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
-|模型|已測試的模型名稱。 [全部] 表示結果是所有模型的彙總。|  
+|[模型]|已測試的模型名稱。 [全部] 表示結果是所有模型的彙總。|  
 |AttributeName|可預測的資料行名稱。|  
 |AttributeState|可預測資料行內的目標值。<br /><br /> 如果這個資料行包含值，只會針對指定的狀態收集度量。<br /><br /> 如果未指定這個值，或是指定了 null，將會針對每一項預測最有可能的狀態來計算度量。|  
 |PartitionIndex|代表套用結果的磁碟分割。<br /><br /> 對於此程序而言，一定是 0。|  
 |PartitionCases|整數，表示在案例集，根據資料列數目*\<資料集 >*參數。|  
 |測試|已執行的測試類型。|  
 |[量值]|測試所傳回之量值的名稱。 每一個模型的量值取決於模型類型及可預測值的類型。<br /><br /> 如需每一個可預測類型所傳回的量值清單，請參閱[交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。<br /><br /> 如需每個量值的定義，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。|  
-|Value|指定之量值的值。|  
+|ReplTest1|指定之量值的值。|  
   
 ## <a name="remarks"></a>備註  
  下表提供您可以在用於交叉驗證的採礦結構內指定資料的值範例。 如果您想要將測試案例用於交叉驗證，採礦結構必須已經包含測試資料集。 如需在建立採礦結構時如何定義測試資料集的相關資訊，請參閱 [定型和測試資料集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
   
-|整數值|說明|  
+|整數值|描述|  
 |-------------------|-----------------|  
-|1|只會使用定型案例。|  
+|@shouldalert|只會使用定型案例。|  
 |2|只會使用測試案例。|  
 |3|定型案例和測試案例都會使用。|  
 |4|組合無效。|  
@@ -151,15 +151,15 @@ CALL SystemGetAccuracyResults (
   
  範例結果：  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|[量值]|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|量值|ReplTest1|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|v Target Mail DT|Bike Buyer|1|0|1638|分類|真肯定|605|  
-|v Target Mail DT|Bike Buyer|1|0|1638|分類|誤判|177|  
-|v Target Mail DT|Bike Buyer|1|0|1638|分類|真否定|501|  
-|v Target Mail DT|Bike Buyer|1|0|1638|分類|誤否定|355|  
-|v Target Mail DT|Bike Buyer|1|0|1638|可能性|對數分數|-0.598454638753028|  
-|v Target Mail DT|Bike Buyer|1|0|1638|可能性|增益|0.0936717116894395|  
-|v Target Mail DT|Bike Buyer|1|0|1638|可能性|均方根誤差|0.361630800104946|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|分類|真肯定|605|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|分類|誤判|177|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|分類|真否定|501|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|分類|誤否定|355|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|可能性|對數分數|-0.598454638753028|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|可能性|增益|0.0936717116894395|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|可能性|均方根誤差|0.361630800104946|  
   
 ## <a name="requirements"></a>需求  
  從 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 開始，交叉驗證只能在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中使用。  

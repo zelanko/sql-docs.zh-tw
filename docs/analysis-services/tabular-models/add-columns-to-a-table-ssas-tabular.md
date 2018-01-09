@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 71f93fa48d1bc1c8f6649262a8964f0d4ff8546f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8f4dc0dc32d94ec793bab4e9912db739c942bb06
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>將資料行加入至資料表 (SSAS 表格式)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主題描述如何將資料行加入至現有的資料表。  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 2.  在 **[編輯資料表屬性]** 對話方塊的 [資料表預覽] 視窗中，選取您要加入的來源資料行，再按一下 [確定]。 目前包含在資料表定義中的資料行已經過檢查。  
   
 ## <a name="add-a-calculated-column"></a>加入導出資料行  
- 在導出資料行中，您可以使用 DAX 公式定義每個資料列的值。 例如，您可以使用簡單的公式 (=1)，將值 1 加入至每個資料列，以建立導出資料行。 導出資料行也可以使用更複雜的公式，根據模型中的其他資料計算值。 其他主題將涵蓋有關導出資料行的詳細資訊。 如需詳細資訊，請參閱[導出資料行 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)。  
+ 在導出資料行中，您可以使用 DAX 公式定義每個資料列的值。 例如，您可以使用簡單的公式 (=1)，將值 1 加入至每個資料列，以建立導出資料行。 導出資料行也可以使用更複雜的公式，根據模型中的其他資料計算值。 其他主題將涵蓋有關導出資料行的詳細資訊。 如需詳細資訊，請參閱 [導出資料行 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)中撰寫的表格式模型專案。  
   
 #### <a name="to-create-a-calculated-column"></a>若要建立導出資料行  
   

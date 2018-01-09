@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b1ae1a57e05d8953c4bd5f93b9e247419ee986c0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: acdeb1132fab9ecd8ea141362a2d1a961ba7192a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>課程 4-4-隱藏及停用屬性階層
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]根據預設，在維度中，每個屬性建立屬性階層，而且每個階層都可用來測量事實資料。 這個階層是由「全部」層級和詳細資料層級 (含階層的所有成員) 所組成。 如同您已學到的，您可以將屬性組織成使用者自訂階層，在 Cube 中提供導覽路徑。 在某些情況下，您可以停用或隱藏某些屬性及其階層。 例如，某些屬性如保險號碼或身分證號碼、薪水、出生日期和登入資訊等，使用者不能利用這些屬性來建立 Cube 資訊的維度。 相反地，這項資訊通常只是做為特定屬性成員的詳細資料來檢視。 您可以隱藏這些屬性階層，讓屬性只顯示成特定屬性的成員屬性。 您也可以讓其他屬性的成員 (例如客戶名稱或郵遞區號) 只透過使用者階層而非透過獨立屬性階層來檢視。 這麼做的原因是為了顯示屬性階層中的全部相異成員。 最後，為了增進處理效能，您應該將使用者不再用來瀏覽的屬性階層停用。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/08/2017
   
     -   **SSN**  
   
-4.  在 [屬性] 視窗中，針對已選取的屬性，將 **AttributeHierarchyEnabled** 屬性的值設為 **False** 。  
+4.  在 [屬性] 視窗中，針對已選取的屬性，將 **AttributeHierarchyEnabled** 屬性的值設為 **False**。  
   
     請注意，在 [屬性] 窗格中，每個屬性的圖示已變更為指示該屬性未啟用。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/08/2017
   
     ![AttributeHierarchyEnabled 屬性設為 False](../analysis-services/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled 屬性設為 False")  
   
-5.  在 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]。  
+5.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
 6.  順利完成處理之後，切換到 [瀏覽器] 索引標籤、按一下 [重新連接]，然後試著瀏覽已修改的屬性階層。  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 12/08/2017
   
     請注意，隱藏的屬性仍然成為使用者階層中的一個層級。  
   
-6.  在 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]。  
+6.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
 7.  順利完成部署之後，針對 [客戶] 維度切換到 [瀏覽器] 索引標籤，然後按一下 [重新連接]。  
   

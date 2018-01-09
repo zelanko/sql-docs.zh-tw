@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 986ade2663f23d0e987269a9474963d3f7137e71
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6984e77d1969db95ac8b8659ba841085ce7ef7c8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions-in-multidimensional-models"></a>多維度模型中的分割區
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、*分割*提供載入量值群組的事實資料的實體儲存。 系統會自動為每個量值群組建立一個分割區，但通常會建立其他分割區以進一步分割資料，因此處理效能更佳且查詢效能更快。  
@@ -53,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="related-topics"></a>相關主題  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
 |[建立及管理本機分割區 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)|包含如何使用篩選或不含重複資料的不同事實資料表，來分割資料的詳細資訊。|  
 |[設定分割區儲存 &#40;Analysis Services - 多維度&#41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)|描述如何設定分割區的儲存。|  

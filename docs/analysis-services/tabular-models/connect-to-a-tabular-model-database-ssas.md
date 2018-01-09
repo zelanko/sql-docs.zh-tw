@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
@@ -20,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4848d36fffe5d7b6e70b5be937874bbfe6537cb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e2911c3a191a0cd41832fc37a3f07bff4735ee54
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>連接到表格式模型資料庫 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]您建立表格式模型，並將它部署到 Analysis Services 表格式模式伺服器之後，您需要設定提供給用戶端應用程式的權限。 此主題說明如何設定權限和如何從用戶端應用程式連接到資料庫。  
   
 > [!NOTE]  
->  根據預設，在設定防火牆之前，無法使用 Analysis Services 的遠端連接。 如果您要為用戶端連接設定具名或預設的執行個體，請確認您已經開放適當的連接埠。 如需詳細資訊，請參閱 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+>  根據預設，在設定防火牆之前，無法使用 Analysis Services 的遠端連接。 如果您要為用戶端連接設定具名或預設的執行個體，請確認您已經開放適當的連接埠。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
  本主題包含下列幾節：  
   
@@ -94,7 +91,7 @@ ms.lasthandoff: 12/08/2017
   
      您必須針對獨立的表格式部署設定伺服器執行個體，而且伺服器執行個體必須有允許存取的輸入規則。 如需詳細資訊，請參閱[判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)和[設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-4.  對於登入認證，如果您有資料庫的讀取權限，請選擇 [使用 Windows 驗證]。 否則，請選擇 [使用下列的使用者名稱和密碼]，然後輸入具有資料庫權限之 Windows 帳戶的使用者名稱和密碼。 按一下 **[下一步]**。  
+4.  對於登入認證，如果您有資料庫的讀取權限，請選擇 [使用 Windows 驗證]。 否則，請選擇 [使用下列的使用者名稱和密碼]，然後輸入具有資料庫權限之 Windows 帳戶的使用者名稱和密碼。 按 [下一步] 。  
   
 5.  選取資料庫。 有效的選項將會針對資料庫顯示一個 [模型] Cube。 按一下 [下一步]，然後按一下 [完成]。  
   

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 397c5e27b3dcf096fa3707d94d3e5e8d049e8f36
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 決策樹演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]決策樹演算法是一種混合式演算法，其中併入建立樹狀目錄中的不同方法，並支援多種分析工作，包括迴歸、 分類以及關聯。 Microsoft 決策樹演算法支援製作離散和連續屬性的模型。  
@@ -157,9 +155,9 @@ ms.lasthandoff: 12/08/2017
  *SCORE_METHOD*  
  決定用來計算分岔準則的方法。 下列是可以使用的選項：  
   
-|ID|名稱|  
+|ID|[屬性]|  
 |--------|----------|  
-|1|熵|  
+|@shouldalert|熵|  
 |3|使用 K2 優先的貝氏|  
 |4|使用統一優先的貝氏狄氏等價 (Bayesian Dirichlet Equivalent，BDE)<br /><br /> (預設值)|  
   
@@ -170,9 +168,9 @@ ms.lasthandoff: 12/08/2017
  *SPLIT_METHOD*  
  決定用來分岔節點的方法。 下列是可以使用的選項：  
   
-|ID|名稱|  
+|ID|[屬性]|  
 |--------|----------|  
-|1|**Binary:** 表示不管屬性的實際數目為何，樹狀結構都會分岔為兩個分支。|  
+|@shouldalert|**Binary:** 表示不管屬性的實際數目為何，樹狀結構都會分岔為兩個分支。|  
 |2|**Complete:** 表示樹狀結構可以建立與屬性值一樣多的分岔。|  
 |3|**Both:** 指定 Analysis Services 可以決定應該使用二進位還是完整分岔來產生最佳的結果。|  
   
@@ -181,7 +179,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="modeling-flags"></a>模型旗標  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)。  
   
-|模型旗標|說明|  
+|模型旗標|描述|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|表示資料行將被視為擁有兩個可能狀態： **Missing** 和 **Existing**。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
 |NOT NULL|表示資料行不能包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
@@ -201,7 +199,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|資料行|內容類型|  
+|「資料行」|內容類型|  
 |------------|-------------------|  
 |輸入屬性|Continuous、Cyclical、Discrete、Discretized、Key、Ordered、Table|  
 |可預測屬性|Continuous、Cyclical、Discrete、Discretized、Ordered、Table|  

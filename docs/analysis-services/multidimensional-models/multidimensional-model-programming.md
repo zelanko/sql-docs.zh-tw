@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25171096f715c5fc9aee4f9c4346a70508fa8f7d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 77aa1ba7d28147c6aa2ba4ea1e7c9deb02544f91
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-programming"></a>多維度模型程式設計
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供了許多 Api 可用來進行程式設計的 Analysis Services 執行個體和多維度資料庫，就會提供。 本節描述可供想要使用 Analysis Services 多維度方案建立自訂應用程式的開發人員使用的方法。 您可以使用此資訊來選擇最符合特定專案需求的程式設計介面。 Analysis Services 開發專案可以使用在 Windows 平台或支援 HTTP 存取之其他平台上執行的 Managed 或非 Managed 程式碼做為基礎。  

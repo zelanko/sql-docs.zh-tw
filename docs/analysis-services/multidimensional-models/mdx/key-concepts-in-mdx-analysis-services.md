@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 的關鍵概念 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]您可以使用多維度運算式 (MDX) 查詢多維度資料，或是建立 cube 內的 MDX 運算式之前，它有助於了解多維度概念和詞彙。  
@@ -144,7 +141,7 @@ ms.lasthandoff: 12/08/2017
   
  **資料庫維度和 Cube 維度**。 您可以在模型中定義獨立維度，然後獨立維度便會包含在相同模型中任意數量的 Cube 中。 當您將維度加入 Cube 時，維度又稱為 Cube 維度。 而單獨在專案中作為物件總管中的獨立項目時，則稱為資料庫維度。 為何要如此區分？ 因為這樣您才可以分別對它們設定屬性 (Property)。 您會在產品文件中看到同時使用這兩個詞彙，所以了解它們的含意有其價值。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
  現在您已經認識了重要的概念和術語，您可以繼續閱讀這些其他主題，以進一步了解 Analysis Services 中的基本概念：  
   
 -   [基本 MDX 查詢 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  

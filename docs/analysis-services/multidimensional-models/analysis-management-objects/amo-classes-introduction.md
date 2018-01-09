@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bcaa0f01f487eeb028ec93792f29a9a8598ca6a6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0a07edb14a747c43abaca0451ca69a35921f3cda
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="amo-classes---introduction"></a>AMO 類別-簡介
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]分析管理物件 (AMO) 是一個設計來管理的執行個體的類別庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]從用戶端應用程式。 AMO 類別是您將用以管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件 (例如資料庫、維度、Cube、採礦結構與模型、角色與權限、例外狀況等等) 的類別。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/08/2017
   
  AMO 類別庫可視為用以完成特定工作之物件的邏輯相關群組。 AMO 類別可用下列方式來分類。 本章節包含下列主題：  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[AMO 基礎類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)|描述與任何其他組的類別搭配使用時所需的類別。|  
 |[AMO OLAP 類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|描述可讓您管理在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的 OLAP 物件之類別。|  

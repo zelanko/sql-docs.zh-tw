@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8051a7d8-d815-45e1-a764-a5992b07b4fd
@@ -17,16 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4622b17f5237a1efbfe84568435493483dd9933c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 35e87b8be69035997a6ba466d45f426d6e236a9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="file-load-and-save-event-category"></a>檔案載入及儲存事件目錄
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]檔案載入及儲存事件類別目錄具有下表中所述的事件類別。  
   
-|Event Class|事件識別碼|說明|  
+|Event Class|事件識別碼|描述|  
 |-----------------|--------------|-----------------|  
 |檔案載入開始|90|檔案載入開始|  
 |檔案載入結束|91|檔案載入結束|  

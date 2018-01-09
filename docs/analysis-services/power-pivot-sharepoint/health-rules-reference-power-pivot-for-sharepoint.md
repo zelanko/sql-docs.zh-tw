@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e1e98142c2234fc680daa8311cf35cbd8057bed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 660698f6b7c09e040e1845f38ddbb48513a1726f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>健全狀況規則參考 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本參考主題會描述所加入的 SharePoint 健全狀況規則[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]for SharePoint 安裝。 這些規則是用來報告伺服器健全狀況、可用性或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務應用程式組態或是其相關 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的問題。  
@@ -41,7 +38,7 @@ ms.lasthandoff: 12/08/2017
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
 ```  
   
-|規則|可設定|自動修復|版本|說明|  
+|規則|可設定|自動修復|Version|描述|  
 |----------|------------------|-----------------|-------------|-----------------|  
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]：這部電腦上未安裝 Analysis Services OLE DB 提供者。|否|否|SharePoint 2010|Analysis Services OLE DB 提供者未安裝在伺服器上或是版本錯誤。 當您的 SharePoint 伺服器陣列中，包含位在沒有 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 之應用程式伺服器上的 Excel Services 執行個體時，就會出現這個規則。 此規則會警告您 Excel Services 用來連接至 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料的 Analysis Services OLE DB 提供者並未安裝。 若要解決此問題，請在沒有 Analysis Services OLE DB 提供者的每一部 Excel Services 伺服器上安裝 OLE DB 提供者。 您可以從 Microsoft 下載中心下載及安裝 Analysis Services OLE DB 提供者。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。|  
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]：當您在這部電腦上安裝 SQL Server 2008 R2 版的 MSOLAP 提供者之後，Microsoft.AnalysisServices.ChannelTransport.dll 的登錄設定無效。|否|是|SharePoint 2010|這是伺服器組態問題。 最有可能是因為 ChannelTransport.dll 並未在全域組件中登錄。 請針對這個規則執行自動修復，在每部有安裝 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 的伺服器上登錄此 .dll 檔。 此外，您也可以手動執行 regasm.exe 來登錄此檔案。 如果並未以本機管理員身分執行 SharePoint 計時器服務，則可能需要手動登錄。 無法更新登錄設定會造成 Excel Services 與 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 系統服務之間的伺服器通訊緩慢，而且可能會造成某些安全性組態發生連接失敗。|  

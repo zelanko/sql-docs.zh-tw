@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Warning Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d4962988a5c21183ac6e4f841c43a422eb48528e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 195e45dbde159409196a56657d14cbc168e99fdf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="warning-element-xmla"></a>Warning 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含的執行個體所傳回之警告的相關資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -69,12 +67,12 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>屬性  
   
-|Attribute|說明|  
+|attribute|描述|  
 |---------------|-----------------|  
 |ErrorCode|必要的 **UnsignedInt** 屬性。 包含警告的數值傳回碼。|  
 |Severity|選擇性 **String** 屬性。 包含警告的嚴重性。|  
-|說明|選擇性 **String** 屬性。 包含警告的描述性文字。|  
-|Source|選擇性 **String** 屬性。 包含產生警告之元件的名稱。|  
+|描述|選擇性 **String** 屬性。 包含警告的描述性文字。|  
+|來源|選擇性 **String** 屬性。 包含產生警告之元件的名稱。|  
 |HelpFile|選擇性 **String** 屬性。 包含描述警告之說明檔或主題的路徑或 URL。|  
   
 ## <a name="remarks"></a>備註  

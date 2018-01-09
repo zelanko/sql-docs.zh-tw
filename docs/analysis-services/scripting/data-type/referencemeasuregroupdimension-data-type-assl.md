@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ReferenceMeasureGroupDimension Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69b36af420a3cfbc8866e741d9b0a35739501c4f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c9f43f7f7662ccde1a1fa4c4f8229c785bf9c484
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>ReferenceMeasureGroupDimension 資料類型 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義代表透過中繼維度與事實資料表間接相關的維度的衍生的資料類型。 (例如，Sales 量值群組可以參考透過 Customer 維度相關的 Geography 維度)。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>資料類型特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[MeasureGroupDimension](../../../analysis-services/scripting/data-type/measuregroupdimension-data-type-assl.md)|  
 |衍生資料類型|無|  
