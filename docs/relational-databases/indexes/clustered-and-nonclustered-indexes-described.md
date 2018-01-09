@@ -1,7 +1,7 @@
 ---
 title: "叢集與非叢集索引說明 | Microsoft 文件"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -20,17 +20,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 55498dc339c081da3e9c5fbeca1c464a93b2395e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7267f4ab8ca17f2f4eefff78e34b55f5bd43b57
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>叢集與非叢集索引說明
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  > 如需舊版 SQL Server 的相關內容，請參閱[叢集與非叢集索引說明](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx)。
-
 
   索引是一種與資料表或檢視有關的磁碟內存結構，它會加快從該資料表或檢視中擷取資料列的速度。 索引中包含從資料表或檢視中一或多個資料行建出的索引鍵。 這些索引鍵儲存在結構中 (B 型樹狀目錄)，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以快速有效地找到與索引鍵值相關的一或多個資料列。  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="indexes-and-constraints"></a>索引與條件約束  
  在資料表的資料行上定義 PRIMARY KEY 與 UNIQUE 條件約束時，會自動建立索引。 例如，當您建立資料表和識別特定資料行做為主索引鍵時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動為該資料行建立 PRIMARY KEY 條件約束與索引。 如需相關資訊，請參閱 [建立主索引鍵](../../relational-databases/tables/create-primary-keys.md) 及 [建立唯一的條件約束](../../relational-databases/tables/create-unique-constraints.md)。  
   
-## <a name="how-indexes-are-used-by-the-query-optimizer"></a>查詢最佳化工具如何使用索引  
+## <a name="how-indexes-are-used-by-the-query-optimizer"></a>查詢最佳化工具用索引  
  設計精良的索引可以降低磁碟 I/O 作業並耗用較少的系統資源，因此可改善查詢效能。 索引對於包含 SELECT、UPDATE、DELETE 或 MERGE 陳述式的各種查詢非常有用。 請考慮在 `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` 資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 查詢。 當執行此查詢時，查詢最佳化工具會評估每個擷取資料的可用方法，並選取最有效的方法。 該方法可以是資料表掃描，或是掃描一或多個索引 (如果存在的話)。  
   
  當執行資料表掃描時，查詢最佳化工具可以讀取資料表中的所有資料列，並擷取符合查詢條件的資料列。 資料表掃描將產生許多磁碟 I/O 作業，而且可能需要大量資源。 不過例如，如果查詢的結果集有很高的百分比是源自於資料表的資料列，則資料表掃描可能是最有效率的方法。  
@@ -68,9 +67,12 @@ ms.lasthandoff: 11/17/2017
   
  查詢最佳化工具在執行查詢時通常會選取最有效率的方法。 不過，如果沒有可用的索引，則查詢最佳化工具就必須使用資料表掃描。 您的工作是設計和建立最符合您環境的索引，因此查詢最佳化工具將會從要選取的索引中選取最有效率的索引。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) 協助您分析資料庫環境並選取適當的索引。  
   
-## <a name="related-tasks"></a>相關工作  
+> [!IMPORTANT] 
+> 如需索引設計指導方針和本質的詳細資訊，請參閱 [SQL Server 索引設計指南](../../relational-databases/sql-server-index-design-guide.md)。
+
+## <a name="related-content"></a>相關內容  
+ [SQL Server 索引設計指南](../../relational-databases/sql-server-index-design-guide.md)     
  [建立叢集索引](../../relational-databases/indexes/create-clustered-indexes.md)  
-  
  [建立非叢集索引](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   

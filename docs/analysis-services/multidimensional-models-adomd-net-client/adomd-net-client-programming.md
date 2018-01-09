@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f6ed705a9cd5f4084dcf6e09b619431479a23826
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fe72cfaeebf4d524b8ebe6d647296b36a8359126
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 用戶端程式設計
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET 用戶端元件位**Microsoft.AnalysisServices.AdomdClient**命名空間 （在 microsoft.analysisservices.adomdclient.dll 中)。 這些用戶端元件提供用戶端的功能與中介層應用程式輕鬆地查詢資料和中繼資料的分析資料存放區中，從這類[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="using-the-adomdnet-client-objects"></a>了解 ADOMD.NET 用戶端物件  
  在查詢分析資料來源時，需要執行一組一般工作。 下表說明使用 ADOMD.NET 用戶端物件執行這類查詢的一般工作。  
   
-|工作|Description|  
+|工作|描述|  
 |----------|-----------------|  
 |[在 ADOMD.NET 中建立連接](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)|在 ADOMD.NET 中，您使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 物件建立與分析資料來源之間的連接，例如 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。 您可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 物件來執行命令、擷取資料以及從分析資料來源擷取中繼資料。|  
 |[從分析資料來源擷取中繼資料](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)|在建立連接之後，您可以使用各種廣泛的物件擷取有關基礎資料來源的資訊。 這個功能可讓應用程式適應它們已連接的資料來源。|  

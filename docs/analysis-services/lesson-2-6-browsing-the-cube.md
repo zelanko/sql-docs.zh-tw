@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0dbee75cc8ac8550df25d47265796d4526442787
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9a97816c16eda294e89d1c9f9b21aa854c398846
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-6---browsing-the-cube"></a>課程 2-6-瀏覽 Cube
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Cube 資料部署 cube 之後，就可以在**瀏覽器**中 Cube 設計師和維度資料 索引標籤是可以在**瀏覽器** 索引標籤，維度設計師 中的。 瀏覽 Cube 和維度資料是累加地檢查工作的一種方式。 您可以在物件經處理之後，驗證對屬性、關聯性和其他物件所做的細微變更是否達到期望的效果。 由於 [瀏覽器] 索引標籤用於檢視 Cube 和維度資料，因此該索引標籤會根據您要瀏覽的物件，提供不同的功能。  
@@ -48,7 +48,7 @@ Excel 通常會提供一個比較好的瀏覽經驗，因為您可以透過互�
 ## <a name="next-lesson"></a>下一課  
 [第 3 課：修改量值、屬性和階層](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [MDX 查詢編輯器 &#40;Analysis Services - 多維度資料&#41;](http://msdn.microsoft.com/library/777f2c23-1c1c-4b72-9d19-48a4866551f8)  
   
   

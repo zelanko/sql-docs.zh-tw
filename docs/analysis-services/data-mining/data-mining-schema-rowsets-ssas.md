@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23f8b63c593e1269624905caf8809ac5afefd1d5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a7b91dca4cc8b5ca8968a864f75a7c91668a980d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>資料採礦結構描述資料列集 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，許多現有 OLE DB 資料採礦結構描述資料列集公開為一組系統資料表，而且您可以使用資料採礦延伸模組 (DMX) 陳述式查詢。 透過針對資料採礦結構描述資料列集建立查詢，您可以識別可用的服務、取得模型和結構之狀態的更新，以及找出模型內容或參數的相關詳細資料。 如需資料採礦結構描述資料列集的描述，請參閱＜ [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)＞。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="list-of-data-mining-schema-rowsets"></a>資料採礦結構描述資料列集的清單  
  下表列出可能適用於查詢和監視的資料採礦結構描述資料列集。  
   
-|資料列集名稱|說明|  
+|資料列集名稱|描述|  
 |-----------------|-----------------|  
 |DMSCHEMA_MINING_MODELS|列出目前環境中的所有採礦模型。<br /><br /> 其中包含的資訊如建立的日期、建立模型所使用的參數，以及定型集的大小。|  
 |DMSCHEMA_MINING_COLUMNS|列出目前環境之採礦模型中使用的所有資料行。<br /><br /> 其中的資訊包括採礦結構來源資料行的對應、資料類型、精確度，以及可搭配資料行使用的預測函數。|  

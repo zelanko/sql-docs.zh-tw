@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,18 +21,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ec1460930df27e1111d17b6c5692f82186348153
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 69611501f104519777b263d621fbfc1d74f884c3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET 伺服器程式設計
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET 的 ADOMD.NET 伺服器元件位於**Microsoft.AnalysisServices.AdomdServer**命名空間 （在 msmgdsrv.dll 中)。 您可以使用這些伺服器元件來建立自訂多維度運算式 (MDX) 函數和預存程序的執行個體上執行的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 伺服器物件提供查詢 Cube 與採礦模型的功能，以及在指定內容中評估運算式的功能。 建立自訂函數與預存程序的優點包括快速的執行、集中的部署以及改善的可維護性。  
   
  下表中的主題將協助您開發 ADOMD.NET 伺服器應用程式。  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[ADOMD.NET 伺服器功能](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md)|描述 ADOMD.NET 伺服器物件的使用。|  
 |[ADOMD.NET 伺服器物件架構](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md)|描述 ADOMD.NET 伺服器物件的物件架構。|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 33ed6d599dae351fd80575d8cd1a858425fce57c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>New-RestoreLocation 指令程式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]指定用來還原資料庫的資訊。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/08/2017
   
  一般參數 (例如 -Verbose、-Debug)、錯誤和警告參數、-Whatif 和 -Confirm 都記載於 Windows PowerShell 參考中。 如需詳細資訊，請參閱 [about_CommonParameters](http://technet.microsoft.com/library/dd315352.aspx)。  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  New-RestoreLocation 指令程式包含用來還原資料庫的資訊，包括伺服器和資料庫的連接字串、資料來源屬性，以及與所還原之資料庫相關聯的檔案和資料夾。  
   
 ## <a name="parameters"></a>參數  

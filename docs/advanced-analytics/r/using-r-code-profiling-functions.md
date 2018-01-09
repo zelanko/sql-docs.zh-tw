@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 88d8e1c0948a51ab8ed6aaeb5a74e771bba95032
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: dc8dfabd3c88bb93012a8d4cd10aaf35573c2782
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-r-code-profiling-functions"></a>使用 R 程式碼剖析函式
 除了使用 SQL Server 資源和工具來監視 R 指令碼執行之外，您還可以使用由其他 R 套件提供的效能工具，來取得內部函式呼叫的相關詳細資訊。 本主題提供一些基本資源的清單，以協助您開始。 如需專家指導，建議您閱讀由 Hadley Wickham 所著的《進階 R》一書中的[效能 (英文)](http://adv-r.had.co.nz/Performance.html) 章節。

@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: mining models [Analysis Services], processing
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ef9aab1e5608be6c9b06401e05ebfa6df9cee8c7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3152bfff58d0e5163c3ef3635ebee59a9258bd07
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="process-a-mining-model"></a>處理採礦模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在 [採礦模型] 索引標籤中的資料採礦設計師的[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，您可以處理與採礦結構相關聯的特定採礦模型或處理與結構相關聯的所有模型。  
@@ -72,6 +70,6 @@ ms.lasthandoff: 12/08/2017
  已處理採礦結構和所有相關聯的採礦模型。  
   
 ## <a name="see-also"></a>請參閱  
- [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和操作說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

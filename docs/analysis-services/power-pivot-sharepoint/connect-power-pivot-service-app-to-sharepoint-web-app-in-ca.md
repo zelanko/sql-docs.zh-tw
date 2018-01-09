@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7eacb900494941994ff38fd01f8b58e8939c1ebf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Power Pivot 服務應用程式連線到 CA 中的 SharePoint Web 應用程式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式可以使用任何數目的伺服陣列中的 SharePoint Web 應用程式。 若要讓 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式可用，請將它加入至服務關聯清單。  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  選取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式旁邊的核取方塊 (由類型名稱 **Power Pivot 服務應用程式 Proxy** 所指出)。 如果您有一個以上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式，請只選擇一個。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 ##  <a name="custom"></a> 將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式加入至自訂服務關聯清單  
  預設群組可由自訂清單取代。 自訂清單是特別為單一 SharePoint Web 應用程式所建立。 它會覆寫預設的群組，並僅用伺服陣列或服務管理員指定的服務關聯來取代。 如果您建立了多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式，必須使用自訂清單來指定要使用哪一個。 自訂清單無法由其他 Web 應用程式重複使用。 它只適用於建立它的 Web 應用程式。  
@@ -64,7 +61,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  選取您想要使用的每個服務應用程式連接旁邊的核取方塊。 如果您具有多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式 (由設為 [Power Pivot 服務應用程式 Proxy] 的類型指出)，請務必只選擇一個。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
 ## <a name="see-also"></a>請參閱  
  [在管理中心建立和設定 Power Pivot 服務應用程式](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   

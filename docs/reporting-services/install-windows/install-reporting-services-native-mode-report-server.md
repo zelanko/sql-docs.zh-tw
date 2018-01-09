@@ -1,7 +1,7 @@
 ---
-title: "安裝 Reporting Services 原生模式報表伺服器 | Microsoft Docs"
+title: "安裝 Reporting Services 2016 原生模式報表伺服器 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.service: 
@@ -19,15 +19,15 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: "68"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 9feeb8c3f7e9d2c1d365e8d6ad7f327e20d80b4f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e80a99e9e38d7bbf52dd11aae9bb567f38f943f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="install-reporting-services-native-mode-report-server"></a>安裝 Reporting Services 原生模式報表伺服器
+# <a name="install-reporting-services-2016-native-mode-report-server"></a>安裝 Reporting Services 2016 原生模式報表伺服器
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/05/2017
   
 |部分|描述|  
 |----------|-----------------|  
-|前置詞|預設前置詞是 HTTP。 如果您之前安裝了安全通訊端層 (SSL) 憑證，安裝程式將會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|  
+|Prefix|預設前置詞是 HTTP。 如果您之前安裝了安全通訊端層 (SSL) 憑證，安裝程式將會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|  
 |主機名稱|預設主機名稱是強式萬用字元 (+)， 它會指定報表伺服器接受解析為電腦任何主機名稱之指定連接埠上的任何 HTTP 要求，包括 `http://<computername>/reportserver`、`http://localhost/reportserver` 或 `http://<IPAddress>/reportserver`。|  
 |通訊埠|預設連接埠是 80。 請注意，如果您使用通訊埠 80 以外的任何通訊埠，當您在瀏覽器視窗中開啟 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 應用程式時，就必須明確將此通訊埠加入 URL 中。|  
 |虛擬目錄|根據預設，系統會使用 ReportServer_\<執行個體名稱> (針對報表伺服器 Web 服務) 和 Reports_\<執行個體名稱> (針對[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]) 的格式來建立虛擬目錄。 如果是報表伺服器 Web 服務，預設虛擬目錄會是 **reportserver**。 如果是 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，則預設虛擬目錄為 **reports**。|  
@@ -170,7 +170,7 @@ ms.lasthandoff: 12/05/2017
   
  [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
- [疑難排解 Reporting Services 安裝](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
+ [針對 Reporting Services 安裝進行疑難排解](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
   
 ##  <a name="bkmk_additional_configuration"></a> 其他設定  
   

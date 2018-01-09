@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bf118b3eb709ffffd67d5e984b0303bdfa21d149
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 444890daf7e8410b6fbb51b9ee793200888d4ad6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理連接與工作階段 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Statefulness*是在伺服器保留之身分識別與內容的用戶端方法呼叫之間的條件。 *Statelessness*是在伺服器不會記住之身分識別與內容的用戶端方法呼叫完成之後的條件。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
  World Wide Web Consortium (W3C) 簡易物件存取通訊協定 (SOAP) 規格建議使用 SOAP 標頭，在 SOAP 訊息上面建立新的通訊協定。 下表列出 XMLA 為起始、維護和關閉工作階段，所定義的 SOAP 標頭元素與屬性。  
   
-|SOAP 標頭|Description|  
+|SOAP 標頭|描述|  
 |-----------------|-----------------|  
 |BeginSession|此標頭要求提供者建立新的工作階段。 提供者應該建構新的工作階段，並在 SOAP 回應中，將工作階段識別碼與 Session 標頭一起傳回。|  
 |SessionId|值區域包含的工作階段識別碼，必須用於工作階段其餘部分的每個方法呼叫。 在 SOAP 回應中的提供者會傳送這個標記，而用戶端也必須將這個屬性與每個 Session 標頭元素一起傳送。|  

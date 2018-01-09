@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d18bf49c81bbd296160d21e90e59d6cce68a163d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>設定 PowerPivot 健全狀況規則
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +49,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [設定用於評估應用程式穩定性的健全狀況規則 (PowerPivot 服務應用程式)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  您必須是服務應用程式管理員，才能變更 Analysis Services 執行個體與 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務應用程式的組態屬性。  
   
 ##  <a name="bkmk_view"></a> 檢視 PowerPivot 健全狀況規則  
@@ -101,7 +98,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      此組態設定會對應到 [檢閱問題與方案] 頁面上的以下規則定義：[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 連接數目太多表示要部署更多的伺服器才能處理目前的負載]。  
   
      磁碟空間不足 (預設為 5%)  
-     每次要求資料庫時，都會使用磁碟空間來快取 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料。 當磁碟空間不足時，這個規則會讓您知道這個狀況。 根據預設，當備份資料夾所在之磁碟機上的磁碟空間低於 5% 時，便會觸發此健全狀況規則。 如需磁碟使用量的詳細資訊，請參閱[設定磁碟空間使用量 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
+     每次要求資料庫時，都會使用磁碟空間來快取 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料。 當磁碟空間不足時，這個規則會讓您知道這個狀況。 根據預設，當備份資料夾所在之磁碟機上的磁碟空間低於 5% 時，便會觸發此健全狀況規則。 如需磁碟使用量的詳細資訊，請參閱 [設定磁碟空間使用量 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
   
      此組態設定會對應到 [檢閱問題與方案] 頁面上的以下規則定義：[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]資料快取所在之磁碟機上的磁碟空間不足]。  
   

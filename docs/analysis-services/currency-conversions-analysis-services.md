@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8565a3599dfd9ef96f1cb4156f4bbbdc8ac60927
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c2d9626ff12593f6192ab6b3a6bec1bb6ab4a7b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>貨幣轉換 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)]多維度只  
@@ -90,7 +90,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="defining-currency-conversions"></a>定義貨幣轉換  
  您可以使用商業智慧精靈來定義 Cube 的貨幣轉換功能，或使用 MDX 指令碼來手動定義貨幣轉換。  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
  您必須先定義至少一個貨幣維度、至少一個時間維度以及至少一個比率量值群組，才能使用商業智慧精靈來定義 Cube 中的貨幣轉換。 從這些物件中，商業智慧精靈可以擷取資料和中繼資料，這些資料用來建構報表貨幣維度與提供貨幣轉換功能所需的 MDX 指令碼。  
   
 ### <a name="decisions"></a>決策  

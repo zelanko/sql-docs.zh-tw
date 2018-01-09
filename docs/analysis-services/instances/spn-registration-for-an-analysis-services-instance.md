@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="spn-registration-for-an-analysis-services-instance"></a>為 Analysis Services 執行個體註冊 SPN
+# <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用 Kerberos 相互驗證用戶端和服務識別時，服務主要名稱 (SPN) 唯一識別在 Active Directory 網域中的服務執行個體。 SPN 與服務執行個體的執行登入帳戶有關。  
   
  對透過 Kerberos 驗證連接至 Analysis Services 的用戶端應用程式而言，Analysis Services 用戶端程式庫會使用連接字串中的主機名稱和所有 Analysis Services 之指定版本中固有的已知變數 (例如服務類別) 來建構 SPN。  
@@ -76,7 +73,7 @@ ms.lasthandoff: 12/08/2017
   
  下表說明 Analysis Services SPN 的每一個部分。  
   
-|元素|說明|  
+|元素|描述|  
 |-------------|-----------------|  
 |服務類別|MSOLAPSvc.3 會將服務識別為 Analysis Services 執行個體， 其中 .3 是 Analysis Services 傳輸時所使用 XMLA-over-TCP/IP 通訊協定版本的參考， 與產品版本無關。 因此，除非通訊協定本身有異動，否則 MSOLAPSvc.3 都會是 SQL Server 2005、2008、2008 R2、2012 以及未來所有 Analysis Services 版本的正確服務類別。|  
 |主機名稱|識別執行服務的電腦。 可以是完整網域名稱或 NetBIOS 名稱 您應該針對這兩者註冊 SPN。<br /><br /> 當您針對伺服器的 NetBIOS 名稱註冊 SPN 時，請務必使用 `SetupSPN –S` 來檢查是否有重複註冊。 樹系中可能會有重複的 NetBIOS 名稱，而重複的 SPN 註冊將會導致連接失敗。<br /><br /> 如果是 Analysis Services 負載平衡叢集，主機名稱必須是指派給叢集的虛擬名稱。<br /><br /> 請絕對不要使用 IP 位址來建立 SPN， 因為 Kerberos 會使用 DNS 網域解析功能， 如果指定 IP 位址則會略過這項功能。|  

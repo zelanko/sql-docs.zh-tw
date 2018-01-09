@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 924f2a618b029d3724a2435fa1a27287d454247e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 09f1785d313f0598121ad06e42b26ca4f4367730
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>設計 AMO OLAP 進階物件的程式
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主題會說明分析管理物件 (AMO) 程式設計詳細資料的 OLAP 進階物件。 本主題包含下列幾節：  
@@ -235,15 +233,15 @@ static public void CreateActions(Cube cube)
   
 |影像使用量|影像名稱|狀態的數目|  
 |-----------------|----------------|----------------------|  
-|狀態|圖形|3|  
-|狀態|號誌燈|3|  
-|狀態|道路標誌|3|  
-|狀態|量測計|3|  
-|狀態|反向量測計|5|  
-|狀態|溫度計|3|  
-|狀態|圓柱|3|  
-|狀態|笑臉|3|  
-|狀態|變異箭頭|3|  
+|[狀態]|圖形|3|  
+|[狀態]|號誌燈|3|  
+|[狀態]|道路標誌|3|  
+|[狀態]|量測計|3|  
+|[狀態]|反向量測計|5|  
+|[狀態]|溫度計|3|  
+|[狀態]|圓柱|3|  
+|[狀態]|笑臉|3|  
+|[狀態]|變異箭頭|3|  
 |趨勢|標準箭頭|3|  
 |趨勢|狀態箭頭|3|  
 |趨勢|反向狀態箭頭|5|  
@@ -425,7 +423,7 @@ static public void CreatePerspectives(Cube cube)
   
 2.  加入快取規格。  
   
-|規格|Description|  
+|規格|描述|  
 |-------------------|-----------------|  
 |AggregationStorage|彙總的儲存類型。<br /><br /> 只適用於資料分割。 在維度上它必須是**規則。**|  
 |SilenceInterval|在 MOLAP 影像處理開始之前，快取存在的最少時間量。|  

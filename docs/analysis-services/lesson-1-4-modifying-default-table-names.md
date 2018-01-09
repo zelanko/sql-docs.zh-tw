@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 37923455444f171842e84349a2ce6fc71cd7fd57
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 726cab6d57171e33d30ea61d397e54f7926cf00b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-4---modifying-default-table-names"></a>課程 1-4-修改預設資料表名稱
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]您可以變更的值**FriendlyName**屬性，使其更容易注意到和使用資料來源檢視中的物件。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-lesson"></a>下一課  
 [第 2 課：定義和部署 Cube](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [多維度模型中的資料來源檢視](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [變更資料來源檢視的屬性 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   

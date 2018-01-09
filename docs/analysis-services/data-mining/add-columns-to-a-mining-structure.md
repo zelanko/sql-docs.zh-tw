@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 095d9ad73f983f38c1d702c18f7391be045e63e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5dfeade08192456bae474b633af9bd401dfa0fde
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-columns-to-a-mining-structure"></a>將資料行加入至採礦結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用資料採礦設計師中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]即可將資料行加入至採礦結構資料採礦精靈中定義它。 您可以加入已存在於用來定義採礦結構之資料來源檢視中的任何資料行。  
@@ -53,6 +51,6 @@ ms.lasthandoff: 12/08/2017
 >  如果您要加入的資料行已存在，其副本會併入結構中，並在名稱後面附加「1」。 您可藉由在採礦結構資料行的 **[名稱]** 屬性中輸入新名稱，將複製資料行的名稱變更為更具描述性的名稱。  
   
 ## <a name="see-also"></a>請參閱  
- [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [採礦結構工作和操作說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

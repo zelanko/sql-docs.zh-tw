@@ -1,12 +1,13 @@
 ---
 title: "執行 SQL Server Integration Services (SSIS) Scale Out 中的套件 | Microsoft Docs"
+ms.description: This article describes how to run SSIS packages in Scale Out
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
@@ -14,67 +15,73 @@ ms.topic: article
 caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.openlocfilehash: 88537ff52ada042d642b8915342e374ecca3246e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 091d67122b07e8787ccfce914236a4ff9f793b27
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>執行 Integration Services (SSIS) Scale Out 中的套件
-在封裝部署到 Integration Services 伺服器之後，您可以在相應放大中執行它們。
+將套件部署至 Integration Services 伺服器之後，即可使用下列其中一種方法在 Scale Out 中予以執行：
 
-## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>執行具有 [在相應放大中執行套件] 對話方塊的套件 
+-   [在相應放大中執行套件對話方塊](#scale_out_dialog)
 
-1. 開啟 [在相應放大中執行套件] 對話方塊
+-   [預存程序](#stored_proc)
+
+-   [SQL Server Agent 作業](#sql_agent)
+
+## <a name="scale_out_dialog"></a> 使用 [在相應放大中執行套件] 對話方塊執行套件
+
+1. 開啟 [在相應放大中執行套件] 對話方塊。
 
     在 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 中連接到 Integration Services 伺服器。 在 [物件總管] 中，展開樹狀目錄以顯示 [Integration Services 目錄] 下的節點。 以滑鼠右鍵按一下 [SSISDB]  節點或您要執行的專案或封裝，再按一下 [在相應放大中執行] 。
 
-2. 選取封裝並設定選項
+2. 選取套件，並設定選項。
 
-    在 [選取套件]  頁面上，選取多個要執行的封裝，並設定環境、參數、連接管理員以及每個封裝的進階選項。 按一下封裝設定這些選項。
+    在 [選取套件] 頁面上，選取要執行的一或多個套件。 設定每個套件的環境、參數、連線管理員和進階選項。 按一下封裝設定這些選項。
     
-    在 [進階]  索引標籤上，設定稱為 [重試計數] 的相應放大選項。 它會設定封裝執行失敗時重試的次數。
+    在 [進階] 索引標籤上，設定稱為 [重試計數] 的 Scale Out 選項來指定套件執行失敗時的重試次數。
 
-    > [!Note]
-    > 只有在執行 Scale Out Worker 服務的帳戶是本機電腦管理員時，[在發生錯誤時傾印] 選項才會生效。
+    > [!NOTE]
+    > 只有在執行 Scale Out Worker 服務的帳戶是本機電腦的系統管理員時，[在發生錯誤時傾印] 選項才會作用。
 
-3. 選取電腦
+3. 選取背景工作電腦。
 
-    在 [選取電腦]  頁面上，選取相應放大背景工作電腦來執行封裝。 依預設，任何電腦皆可執行套件。 
+    在 [選取電腦] 頁面上，選取 Scale Out Worker 電腦來執行套件。 根據預設，任何電腦皆可執行套件。 
 
-   > [!Note] 
-   > [選取電腦]  頁面會顯示使用相應放大背景工作服務的使用者帳戶認證執行的封裝。 預設的帳戶是 NT Service\SSISScaleOutWorker140。 您可能會想要變更為自己的實驗室帳戶。
+   > [!NOTE] 
+   > 套件是使用 Scale Out Worker 服務的使用者帳戶認證所執行。 檢閱 [選取電腦] 頁面上的這些認證。 帳戶預設為 `NT Service\SSISScaleOutWorker140`。
 
-   >[!WARNING]
-   >相同背景工作上不同使用者所觸發的套件執行，都是使用相同的帳戶來執行。 它們之間沒有安全性界限。 
+   > [!WARNING]
+   > 相同背景工作上不同使用者所觸發的套件執行，都是使用相同的認證來執行。 它們之間沒有安全性界限。 
 
-4. 執行套件並檢視報表 
+4. 執行套件，並檢視報表。
 
     按一下 [確定]  開始執行封裝。 若要檢視封裝的執行報表，請以滑鼠右鍵按一下 [物件總管] 中的封裝，再依序按一下 [報表] 及 [所有執行] ，找到執行。
     
-## <a name="run-packages-with-stored-procedures"></a>以預存程序執行套件
+## <a name="stored_proc"></a> 以預存程序執行套件
 
-1. 建立執行
+1.  建立執行。
 
-    呼叫每個封裝的 [catalog].[create_execution]。 將參數 **@runinscaleout** 設為 True。 如果不是所有的相應放大背景工作電腦都可以執行套件，請將參數 **@useanyworker** 設為 False。   
+    針對每個套件，呼叫 `[catalog].[create_execution]`。 將 **@runinscaleout** 參數設定為 `True`。 如果不是所有 Scale Out Worker 電腦都可以執行套件，請將 **@useanyworker** 參數設定為 `False`。   
 
-2. 設定執行參數
+2. 設定執行參數。
 
-    呼叫每個執行的 [catalog].[set_execution_parameter_value]。
+    針對每次執行，呼叫 `[catalog].[set_execution_parameter_value]`。
 
-3. 設定相應放大背景工作
+3. 設定 Scale Out Worker。
 
-    呼叫 [catalog].[add_execution_worker]。 如果所有的電腦都可以執行套件，即不必呼叫此預存程序。 
+    呼叫 `[catalog].[add_execution_worker]`。 如果所有電腦都可以執行套件，就不需要呼叫此預存程序。 
 
-4. 啟動執行
+4. 開始執行。
 
-    呼叫 [catalog].[start_execution]。 設定參數 **@retry_count** 以設定封裝執行失敗時重試的次數。
+    呼叫 `[catalog].[start_execution]`。 設定 **@retry_count** 參數，以設定套件執行失敗時的重試次數。
     
-#### <a name="example"></a>範例
-下例會使用一個相應放大背景工作在相應放大中執行兩個套件：package1.dtsx 和 package2.dtsx。  
+### <a name="example"></a>範例
+下列範例會使用一個 Scale Out Worker 在 Scale Out 中執行兩個套件：`package1.dtsx` 和 `package2.dtsx`。  
 
 ```sql
 Declare @execution_id bigint
@@ -97,7 +104,7 @@ GO
 ```
 
 ### <a name="permissions"></a>Permissions
-在相應放大中執行套件需要下列權限之一︰
+若要在 Scale Out 中執行套件，您需要具有下列其中一種權限︰
 
 -   **ssis_admin** 資料庫角色中的成員資格  
 
@@ -106,14 +113,20 @@ GO
 -   **sysadmin** 伺服器角色中的成員資格  
 
 ## <a name="set-default-execution-mode"></a>設定預設執行模式
-若要將預設執行模式設定為 [相應放大]，請以滑鼠右鍵按一下 SSMS 物件總管中的 [SSISDB] 節點，然後選取 [屬性]。
-在 [目錄屬性] 對話方塊中，將 [全伺服器的預設執行模式] 設定為 [相應放大]。
+若要將套件的預設執行模式設定為 [相應放大]，請執行下列動作：
 
-在此設定後面，不需要針對 [catalog].[create_execution] 指定 **@runinscaleout** 參數。 執行會自動以相應放大執行。 
+1.  在 SSMS 的物件總管中，以滑鼠右鍵按一下 [SSISDB] 節點，然後選取 [屬性]。
+
+2.  在 [目錄屬性] 對話方塊中，將 [全伺服器的預設執行模式] 設定為 [相應放大]。
+
+設定這個預設執行模式之後，在呼叫 `[catalog].[create_execution]` 預存程序時，就不再需要指定 **@runinscaleout** 參數。 套件會自動以相應放大模式執行。 
 
 ![執行模式](media\exe-mode.PNG)
 
-若要將預設執行模式切換回非相應放大模式，只需要將 [全伺服器的預設執行模式] 設定為 [伺服器]。
+若要重新切換預設執行模式，讓套件不再預設以相應放大模式執行，請將 [全伺服器的預設執行模式] 設定為 [伺服器]。
 
-## <a name="run-package-in-sql-agent-job"></a>在 SQL Agent 作業中執行套件
-在 SQL Agent 作業中，您可以選擇將 SSIS 套件執行為作業的一個步驟。 若要在 Scale Out 中執行套件，您可以利用上述預設執行模式。 將預設執行模式設定為 [相應放大] 之後，將會以 [相應放大] 執行 SQL Agent 作業中的套件。
+## <a name="sql_agent"></a> 在 SQL Server Agent 作業中執行套件
+在 SQL Server Agent 作業中，您可以將 SSIS 套件執行為作業的一個步驟。 若要以相應放大執行套件，請將預設執行模式設定為 [相應放大]。將預設執行模式設定為 [相應放大] 之後，即會以相應放大模式執行 SQL Server Agent 作業中的套件。
+
+## <a name="next-steps"></a>後續步驟
+-   [為相應放大進行疑難排解](troubleshooting-scale-out.md)

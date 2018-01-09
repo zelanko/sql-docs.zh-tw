@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0046d4b982d57491553353c88d309b309964e142
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="performance-counters-ssas"></a>效能計數器 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用效能監視器，您可以使用效能計數器監視 Microsoft SQL Server Analysis Services (SSAS) 執行個體的效能。  
@@ -39,7 +36,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="counters-by-groups"></a>依群組分組的計數器  
   
-|群組|說明|  
+|群組|描述|  
 |-----------|-----------------|  
 |[Cache](#bkmk_Cache)|與 Analysis Services 彙總快取相關的統計資料。|  
 |[連接](#bkmk_Connection)|與 Microsoft Analysis Services 連接相關的統計資料。|  
@@ -58,7 +55,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_Cache"></a> Cache  
  與 Microsoft Analysis Services 彙總快取相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Current KB|目前由彙總快取所使用的記憶體，以 KB 為單位。|  
 |KB added/sec|記憶體加入快取的速率，KB/秒。|  
@@ -80,7 +77,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_Connection"></a> 連接  
  與 Microsoft Analysis Services 連接相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Current connections|目前已建立的用戶端連接數目。|  
 |Requests/sec|連接要求的速率。  這些是到達的要求。|  
@@ -94,7 +91,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_DataMiningModelProcessing"></a> Data Mining Model Processing  
  與 Microsoft Analysis Services 資料採礦模型處理相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Cases/sec|處理案例的速率。|  
 |Current models processing|目前正在處理的模型數目。|  
@@ -102,7 +99,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_DataMiningPrediction"></a> Data Mining Prediction  
  與 Microsoft Analysis Services 資料採礦預測相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Concurrent DM queries|目前正在處理的資料採礦查詢數目。|  
 |Predictions/sec|在資料採礦查詢中產生的預測數目。|  
@@ -115,7 +112,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_Locks"></a> 鎖定  
  與 Microsoft Analysis Services 內部伺服器鎖定相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Current latch waits|目前等候閂鎖的執行緒數目。  這些是無法立即被授與，而處於等候狀態的閂鎖要求。|  
 |Latch waits/sec|無法立即被授與及必須等候授與的閂鎖要求速率。|  
@@ -131,7 +128,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_MDX"></a> MDX  
  與 Microsoft Analysis Services MDX 計算相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Number of calculation covers|由 MDX 執行計畫所建立的評估節點總數，包括使用中和快取的。|  
 |Current number of evaluation nodes|由使用中和快取的 MDX 執行計畫所建立的目前 (大約) 評估節點數目。|  
@@ -164,14 +161,14 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_Memory"></a> 記憶體  
  與 Microsoft Analysis Services 內部伺服器記憶體相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Page Pool 64 Alloc KB|從系統借用的記憶體大小，以 KB 為單位。  此記憶體會提供給伺服器的其他部分使用。|  
 |Page Pool 64 Lookaside KB|目前在 64KB 對應清單中的記憶體，以 KB 為單位  (備妥供使用的記憶體頁面)。|  
 |Page Pool 8 Alloc KB|從 64KB 分頁集區借用的記憶體大小，以 KB 為單位。  此記憶體會提供給伺服器的其他部分使用。|  
 |Page Pool 8 Lookaside KB|目前在 8KB 對應清單中的記憶體，以 KB 為單位  (備妥供使用的記憶體頁面)。|  
 |Page Pool 1 Alloc KB|從 64KB 分頁集區借用的記憶體大小，以 KB 為單位。  此記憶體會提供給伺服器的其他部分使用。|  
-|Page Pool 1 Lookaside KB|目前在 8KB 對應清單中的記憶體，以 KB 為單位  (備妥供使用的記憶體頁面)。|  
+|Page Pool 1 Lookaside KB|目前在 8KB 對應清單中的記憶體，以 KB 為單位。  (備妥供使用的記憶體頁面)。|  
 |Cleaner Current Price|記憶體目前的價格 ($/位元組/時間)，並正規化為 1000。|  
 |Cleaner Balance/sec|平衡+壓縮作業的速率。|  
 |Cleaner Memory shrunk KB/sec|壓縮的速率，以 KB/秒為單位。|  
@@ -241,7 +238,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_ProactiveCaching"></a> 主動式快取  
  與 Microsoft Analysis Services 主動式快取相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Notifications/sec|來自關聯式資料庫的通知速率。|  
 |Processing Cancellations/sec|通知所引起的處理取消速率。|  
@@ -251,7 +248,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_ProcAggregations"></a> Processing Aggregations  
  與 Microsoft Analysis Services 處理 MOLAP 資料檔之彙總相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Current partitions|目前正在處理的資料分割數目。|  
 |Total partitions|已處理的資料分割總計 (成功或失敗)。|  
@@ -265,7 +262,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_ProcIndexes"></a> Processing Indexes  
  與 Microsoft Analysis Services 處理 MOLAP 資料檔之索引相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Current partitions|目前正在處理的資料分割數目。|  
 |Total partitions|已處理的資料分割總計 (成功或失敗)。|  
@@ -275,7 +272,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_Processing"></a> Processing  
  與 Microsoft Analysis Services 處理資料相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Rows read/sec|從所有關聯式資料庫讀取資料列的速率。|  
 |Total rows read|從所有關聯式資料庫讀取的資料列計數。|  
@@ -287,7 +284,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_StorageEngineQuery"></a> Storage Engine Query  
  與 Microsoft Analysis Services 儲存引擎查詢相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Current measure group queries|目前正在進行的量值群組查詢數目。|  
 |Measure group queries/sec|量值群組查詢的速率|  
@@ -330,7 +327,7 @@ ms.lasthandoff: 12/08/2017
 ###  <a name="bkmk_Threads"></a> Threads  
  與 Microsoft Analysis Services 執行緒相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Short parsing idle threads|簡短剖析執行緒集區中的閒置執行緒數目。|  
 |Short parsing busy threads|簡短剖析執行緒集區中的忙碌執行緒數目。|  

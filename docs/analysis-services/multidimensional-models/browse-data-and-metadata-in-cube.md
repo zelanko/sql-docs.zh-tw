@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a4f1dcea3c74fdf61af401a854aba9c2166f5610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0159070eb0405e49f9813828aa82b1483008b61f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>瀏覽 Cube 中的資料和中繼資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用**瀏覽器** 索引標籤，Cube 設計工具來瀏覽 cube 資料。 您可以使用此檢視檢查 Cube 的結構，並檢查資料庫物件的資料、計算、格式及安全性。 您可以像是使用者在報表工具或其他用戶端應用程式檢視 Cube 一樣，快速檢查 Cube。 當您瀏覽 Cube 資料時，您可以檢視不同的維度、向下鑽研至成員，以及配量維度。  
@@ -70,7 +67,7 @@ ms.lasthandoff: 12/08/2017
   
  指定階層之後，請指定運算子和篩選運算式。 下表描述運算子和篩選運算式。  
   
-|運算子|篩選運算式|說明|  
+|運算子|篩選運算式|描述|  
 |--------------|-----------------------|-----------------|  
 |等於|一個或多個成員|值必須等於指定的成員<br /><br /> (為父子式階層以外的屬性階層提供多個成員選取，並為其他階層提供單一成員選取)。|  
 |Not Equal|一個或多個成員|值不得等於指定的成員<br /><br /> (為父子式階層以外的屬性階層提供多個成員選取，並為其他階層提供單一成員選取)。|  

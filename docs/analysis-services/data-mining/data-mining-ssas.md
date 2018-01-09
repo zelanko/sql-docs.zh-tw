@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data mining [Analysis Services], about data mining
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ac8390ebf0ffd45388d4fcea1dfbf846146b3b0d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ccc1faad28913133cc0870899f20b443fc28eb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-ssas"></a>資料採礦 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000年發行版本以來已經過的預測分析中的前置字元藉由提供中的資料採礦[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦的結合，針對包含資料清理和準備、預測分析機器學習和報表提供整合平台。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦包括多個標準演算法，包括 EM 和 k-means 叢集模型，類神經網路、羅吉斯迴歸與線性迴歸、決策樹和貝氏機率分類分類器。 所有模型已都整合視覺效果以協助您開發、改善及評估模型。  將資料採礦整合至商業智慧方案，可協助您對複雜問題做出明智的決策。  
@@ -60,11 +58,11 @@ ms.lasthandoff: 12/08/2017
   
 -   [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+-   [採礦結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
 -   [採礦模型 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
--   [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+-   [測試及驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
 -   [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)  
   

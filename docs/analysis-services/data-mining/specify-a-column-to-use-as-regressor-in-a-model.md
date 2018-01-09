@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d21033d8d839a11f4c511d7913f94b809a64881f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3f97137b00c611c1be5671f52d8e23cefb8c7c55
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>在模型中指定當做迴歸輸入變數使用的資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]線性迴歸模型代表可預測屬性的值做為結合的方式，為密切儘可能納入資料輸入的公式的結果來預估迴歸線。 這種演算法只接受數值當做輸入，而且會自動偵測提供最佳解的輸入。  

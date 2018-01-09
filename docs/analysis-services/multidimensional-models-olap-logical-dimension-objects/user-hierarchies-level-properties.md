@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,21 +21,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 72ba77005dbe1470bcf1104ef27bf751104d45ba
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: db94622cfc84d97cb6f8e7578421f4933a63af94
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-hierarchies---level-properties"></a>使用者階層的層級屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]下表列出並描述中的使用者定義階層的層級的屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
-|說明|包含層級的描述。|  
+|描述|包含層級的描述。|  
 |HideMemberIf|指出是否應向用戶端應用程式隱藏層級中的成員，以及何時隱藏。 此屬性可以有下列的值：<br /><br /> 永不<br /> 永不隱藏成員。 這是預設值。<br /><br /> OnlyChildWithNoName<br /> 當成員是其父系的唯一子系，且成員的名稱為空白時，就會隱藏成員。<br /><br /> OnlyChildWithParentName<br /> 當成員是其父系的唯一子系，且成員與其父系有相同的名稱時，就會隱藏成員。<br /><br /> NoName<br /> 當成員的名稱為空白時，就會隱藏成員。<br /><br /> ParentName<br /> 當成員與其父系有相同的名稱時，就會隱藏成員。|  
 |ID|包含層級的唯一識別碼 (ID)。|  
-|名稱|包含層級的易記名稱。 依預設，層級與來源屬性有相同的名稱。|  
+|[屬性]|包含層級的易記名稱。 依預設，層級與來源屬性有相同的名稱。|  
 |SourceAttribute|包含作為層級基礎之來源屬性的名稱。|  
   
 ## <a name="see-also"></a>請參閱  

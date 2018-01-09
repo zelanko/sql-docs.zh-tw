@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 591da6613982e9c7539b26257c6f78265343220e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 82d6368aa699b537c2fee81c3d054e6c3546797b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="choose-and-map-model-testing-data"></a>選擇和對應模型測試資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]若要建立精確度圖表中的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您必須選擇將用來測試模型，並將資料對應至模型的資料。  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的資料採礦設計師中，按兩下包含您想要建立圖表之模型的採礦結構。  
   
-2.  選取 [採礦精確度圖表] 索引標籤。  
+2.  選取 **[採礦精確度圖表]** 索引標籤。  
   
 3.  在 [採礦精確度圖表] 檢視的 [輸入選擇] 索引標籤中，選取下列其中一個選項：  
   

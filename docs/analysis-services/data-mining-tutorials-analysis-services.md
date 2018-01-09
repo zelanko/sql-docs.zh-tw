@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f7375fc22170ffa3f0f11455af619d62f42df50c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 33717f3b72c46ba55e2e774fde62eba0646fa9c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>資料採礦教學課程 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
 [DMX 教學課程 (SQL Server 2014)](https://msdn.microsoft.com/library/bb895168(v=sql.120).aspx) - 資料採礦延伸模組 (DMX) 查詢語言的語法類似 SQL，但可以用來建立、查詢及管理儲存在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的預測模型。 這些教學課程示範如何使用 DMX 語言，建立新的採礦結構和採礦模型，以及如何建立 DMX 預測查詢以供在應用程式中使用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [資料採礦方案](../analysis-services/data-mining/data-mining-solutions.md)  
 [Microsoft SQL Server 資料採礦資源](http://go.microsoft.com/fwlink/?LinkId=97965)  
 [使用 DMX 建立並查詢資料採礦模型：教學課程 &#40;Analysis Services - 資料採礦&#41;](http://msdn.microsoft.com/library/145b81a7-c0c3-4ca3-bb32-0b482423b9a0)  

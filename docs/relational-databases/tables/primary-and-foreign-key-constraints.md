@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: eb8267d4e8549f377da83d48e0c6b27ac71379f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b8ae3d55f72f6dc54eaa9a3e9a49b96e57ebcab5
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主要與外部索引鍵條件約束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  當您為資料表指定主索引鍵條件約束時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動為主索引鍵資料行建立唯一的索引，以強制資料的唯一性。 當主索引鍵用於查詢時，此索引也可讓您快速地存取資料。 若主索引鍵條件約束定義於多個資料行，則某個資料行內的值可能會重複，但主索引鍵條件約束定義中所有資料行的每個值組合都必須是唯一的。  
   
- 如下圖所示， **Purchasing.ProductVendor** 資料表中的 **ProductID** 和 **VendorID** 資料行形成此資料表的複合主索引鍵條件約束。 這樣可確保 **ProductVendor** 資料表中的每個資料列都有唯一的 **ProductID** 和 **VendorID**組合。 如此可防止插入重複的資料列。  
+ 如下圖所示， **Purchasing.ProductVendor** 資料表中的 **ProductID** 和 **VendorID** 資料行形成此資料表的複合主索引鍵條件約束。 這樣可確保 **ProductVendor** 資料表中的每個資料列都有唯一的 **ProductID** 與 **VendorID** 組合。 如此可防止插入重複的資料列。  
   
  ![複合 PRIMARY KEY 條件約束](../../relational-databases/tables/media/fund04.gif "複合 PRIMARY KEY 條件約束")  
   

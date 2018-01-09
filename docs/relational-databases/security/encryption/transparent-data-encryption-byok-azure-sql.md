@@ -6,26 +6,29 @@ services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
-editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.custom: 
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 11/15/2017
 ms.author: aliceku
-ms.openlocfilehash: 5a0b56974d85f63e3382f26b1388e7d30dfbd6f8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5aaa55cc04e4844889266dc434ac92a0ed22ed00
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰支援
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰 (PREVIEW) 支援
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-自行管理金鑰 (BYOK) 支援[透明資料加密 (TDE)](transparent-data-encryption.md)，可讓您充分掌控 TDE 加密金鑰，並限制存取的人員與時間。 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) 是 Azure 的雲端式外部金鑰管理系統，亦為首款整合 TDE 與 BYOK 支援的金鑰管理服務。 使用 BYOK，資料庫加密金鑰即受到儲存在 Key Vault 的非對稱金鑰保護。 非對稱金鑰是在伺服器層級設定，該伺服器底的所有資料庫都繼承它。 
+自行管理金鑰 (BYOK) 支援[透明資料加密 (TDE)](transparent-data-encryption.md)，可讓您充分掌控 TDE 加密金鑰，並限制存取的人員與時間。 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) 是 Azure 的雲端式外部金鑰管理系統，亦為首款整合 TDE 與 BYOK 支援的金鑰管理服務。 使用 BYOK，資料庫加密金鑰即受到儲存在 Key Vault 的非對稱金鑰保護。 非對稱金鑰是在伺服器層級設定，因此歸屬於該伺服器底下的所有資料庫都會繼承此金鑰。 這項功能目前為預覽版本，除非宣告正式運作，否則不建議將它用於生產工作負載。
 
 現在，BYOK 支援可讓使用者控制金鑰管理工作，包括金鑰輪替、Key Vault 權限、刪除金鑰，以及啟用所有加密金鑰的稽核/報告。 Key Vault 提供集中式的金鑰管理、利用嚴密監控的硬體安全性模組 (HSM)，並保障金鑰和資料的管理分責，以協助滿足法規的合規要求。 
 
@@ -57,6 +60,7 @@ ms.lasthandoff: 11/21/2017
 照料應用程式資源的加密金鑰管理是很重要的責任。 透過 Key Vault 使用有 BYOK 的 TDE，以下是可預見的金鑰管理工作：
 - **金鑰輪替**：TDE 保護裝置應根據內部原則或合規性需求輪替。 金鑰輪替可以透過 TDE 保護裝置的金鑰保存庫完成。  
 - **金鑰保存庫權限**：Key Vault 內的權限會跨金鑰保存庫和伺服器層級佈建。 使用金鑰保存庫的存取原則可以隨時撤銷伺服器的金鑰保存庫權限。
+- **金鑰保存庫備援**：因為金鑰資料永遠不會離開 Azure 金鑰保存庫，而且伺服器無法存取金鑰保存庫以外的任何快取複本，所以您必須設定 Azure 金鑰保存庫異地複寫，才能在某個 Azure 金鑰保存庫區域發生中斷時維護金鑰資料的存取。  異地複寫的資料庫若依賴單一 Azure 金鑰保存庫，則無法再存取其金鑰資料。
 - **刪除金鑰**：為了保障額外安全或滿足合規需求，您可以從 Key Vault 及 SQL Server 卸除金鑰。
 - **所有加密金鑰的稽核/報告**：Key Vault 提供的記錄檔很容易插入到其他安全性資訊和事件管理 (SIEM) 工具中。 Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) 即為整合服務的一個範例。
 
@@ -91,12 +95,11 @@ ms.lasthandoff: 11/21/2017
 
 ### <a name="high-availability-and-disaster-recovery"></a>高可用性和災害復原
   
-針對使用 Key Vault 的伺服器，您可以使用下列兩種方式來設定異地複寫： 
+必須設定異地複寫，金鑰保存庫才能維護 Azure 金鑰保存庫中金鑰資料的高可用性：
 
-- **不同的金鑰保存庫**：每部伺服器都可以存取不同的金鑰保存庫 (最好每個都在自己的 Azure 區域內)。 這是建議的組態，因為每部伺服器都有自己的一份 TDE 保護裝置供加密的異地複寫資料庫使用。 如果其中一部伺服器的 Azure 區域離線，其他伺服器可以繼續存取異地複寫資料庫。   
+- **備援金鑰保存庫**：每個異地複寫的伺服器都可以存取個別金鑰保存庫，在理想情況下，是共置於相同的 Azure 區域中。 這是建議的設定，因為每部伺服器都有自己的一份 TDE 保護裝置供加密的異地複寫資料庫使用。 如果其中一部伺服器的 Azure 區域離線，其他伺服器可以繼續存取異地複寫資料庫。  這需要小心地設定，確保某個金鑰保存庫無法使用時，伺服器可以存取其他金鑰保存庫中 TDE 保護裝置的備份。     
 
-- **共用的金鑰保存庫**：所有伺服器共用相同的金鑰保存庫。 此設定很容易設定，但如果金鑰保存庫所在地的 Azure 區域為離線狀態，則所有伺服器都無法讀取加密的異地複寫資料庫或自己的加密資料庫。 
- 
+
 若要開始，請使用 [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) Cmdlet 將每部伺服器的 Key Vault 金鑰新增至異地複寫連結中的其他伺服器。  
 (Key Vault 的 KeyId 範例：*https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h*)
 
@@ -150,7 +153,7 @@ ms.lasthandoff: 11/21/2017
 
 建議做法是讓每部伺服器都可以存取其他伺服器所用的 Key Vault 金鑰內容複本，並將複本儲存在不同的金鑰保存庫中 (最好每個都和伺服器位於相同的 Azure 區域)。 使用這項設定，每部伺服器就有自己的一份 TDE 保護裝置供加密的異地複寫資料庫使用。 如果其中一部伺服器的 Azure 區域離線，其他伺服器可以繼續存取複寫的資料庫。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 - 開始使用攜帶您自己的金鑰支援 TDE：[使用 PowerShell 從 Key Vault 開啟使用自己金鑰的 TDE](transparent-data-encryption-byok-azure-sql-configure.md)。
 - 了解如何輪替伺服器的 TDE 保護裝置，以符合安全性原則：[使用 PowerShell 輪替透明資料加密保護裝置](transparent-data-encryption-byok-azure-sql-key-rotation.md)。

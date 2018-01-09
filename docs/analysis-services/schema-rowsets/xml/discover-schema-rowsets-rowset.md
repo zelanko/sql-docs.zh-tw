@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DISCOVER_SCHEMA_ROWSETS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4e5a3923ff0137e81064224fb6a2dfd9ca98f435
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 73fe1580fb43a090a7df04a43432e5b213e86369
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverschemarowsets-rowset"></a>DISCOVER_SCHEMA_ROWSETS 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]傳回名稱、 限制、 描述和所有列舉值和所支援的任何其他的提供者特定列舉值的其他資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XML for Analysis (XMLA) 提供者。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>資料列集資料行  
  DISCOVER_SCHEMA_ROWSETS 資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|Description|  
+|資料行名稱|類型指標|長度|描述|  
 |-----------------|--------------------|------------|-----------------|  
 |**SchemaName**|**DBTYPE_WSTR**||結構描述或要求的名稱。 此要求會傳回中的值*RequestTypes*列舉型別。|  
 |**SchemaGuid**|**DBTYPE_GUID**||結構描述的 GUID。|  

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 92207d751d305fba91bb3e5a2762918cf2451272
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f78bd8b53f358b63393b374594ce76d31791c606
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-semiadditive-behavior"></a>定義局部加總行為
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]局部加總量值，會一致地彙總跨所有維度，是在許多商務狀況中很常見。 每個以不同時間之結餘快照集為基礎的 Cube 都會出現這個問題。 您可以在處理安全性、帳戶結餘、預算、人力資源、保險政策和理賠、以及其他許多商務領域的應用程式中發現這些快照集。  
@@ -75,7 +72,7 @@ ms.lasthandoff: 12/08/2017
   
  針對每個量值，您可以從下表描述之局部加總功能的類型進行選取。  
   
-|局部加總函數|說明|  
+|局部加總函數|描述|  
 |---------------------------|-----------------|  
 |子系的平均|成員的彙總是其子系的平均。|  
 |ByAccount|系統會讀取帳戶類型所指定的局部加總行為。|  

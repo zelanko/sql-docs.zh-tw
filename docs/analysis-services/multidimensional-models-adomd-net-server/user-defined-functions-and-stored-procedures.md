@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 276cd08888f734a25c771109a1543e71d09fbb19
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: aeb811bd8091fca94ba31aec1710e8851537c836
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>使用者定義函數和預存程序
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]透過 ADOMD.NET 伺服器物件，您可以建立使用者定義函數 (UDF) 或是預存程序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，與中繼資料和來自伺服器的資料互動。 這些同處理序 (In-Process) 方法是透過「多維度運算式」(Multidimensional Expressions，MDX) 或「資料採礦延伸模組」(Data Mining Extensions，DMX) 陳述式來呼叫，以提供附加功能，並不會有與網路通訊關聯的延遲。  

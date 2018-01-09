@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -41,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 473861d8ff30f272cdeaa08a0157c6ad1f9a5646
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Cube 內容-多維度模型程式設計
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cube 有許多您可以設定來影響整個 cube 的行為的屬性。 這些屬性都摘要在下表中：  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
  如需如何設定 cube 屬性的詳細資訊，請參閱[Cube 設計工具 &#40;Analysis Services-多維度資料 &#41;](http://msdn.microsoft.com/library/a6692467-da88-4312-8b03-d812f2ae5a96).  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**AggregationPrefix**|指定用於彙總名稱的一般前置詞。|  
 |**定序**|指定用底線隔開的地區設定識別碼 (LCID) 和比較旗標 (例如，Latin1_General_C1_AS)。|  

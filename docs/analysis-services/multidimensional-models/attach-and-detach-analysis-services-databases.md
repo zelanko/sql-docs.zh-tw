@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f882dfe4979beeb7fa162c7bc649fd01440291d1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4abef02a67a334486b123a2ed29b8119e7a29f8b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>附加和卸離 Analysis Services 資料庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]通常很多情況下時[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫管理員 (dba) 想要讓資料庫保持離線一段時間中，在相同的伺服器執行個體，或另一部上，然後讓該資料庫恢復連線。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。 不論是哪一種情況， **Attach** 和 **Detach** 命令都可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 輕鬆地將資料庫保持離線並恢復連線狀態。  

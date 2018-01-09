@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
@@ -20,16 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 190fc7bd8fa6a88d5a55068f32a4c55d2d1fd455
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="remote-processing-analysis-services"></a>遠端處理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以執行排程或自動處理對遠端[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體，其處理要求來自一部電腦，但在相同網路上的另一部電腦上執行。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   您的每部電腦上若各自執行不同版本的 SQL Server，則用戶端程式庫的版本與處理此模型之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的版本必須相符。
   

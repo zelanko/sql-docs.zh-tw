@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f2926b71ccc00d178c9a60aa5c8fc9856e6c8a81
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>設定 IIS 8.0 上 Analysis services 的 HTTP 存取
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本文說明如何設定 HTTP 端點來存取 Analysis Services 執行個體。 您可以設定 MSMDPUMP.dll (這是在 Internet Information Services (IIS) 中執行的一個 ISAPI 擴充程式，可以在用戶端應用程式與 Analysis Services 伺服器之間來回提取資料) 來啟用 HTTP 存取。 此方法會在您的 BI 方案需要下列功能時，提供連接至 Analysis Services 的替代方式。  
@@ -114,7 +111,7 @@ ms.lasthandoff: 12/08/2017
 4.  遵循精靈的指示完成安裝。  
   
 > [!NOTE]  
->  請記得解除封鎖 Windows 防火牆中的連接埠，以允許用戶端與 Analysis Services 遠端伺服器的連接。 如需詳細資訊，請參閱 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+>  請記得解除封鎖 Windows 防火牆中的連接埠，以允許用戶端與 Analysis Services 遠端伺服器的連接。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
 ##  <a name="bkmk_copy"></a> 步驟 1：將 MSMDPUMP 檔案複製到 Web 伺服器上的資料夾中  
  您建立的每個 HTTP 端點都必須有一組自己的 MSMDPUMP 檔案。 在此步驟中，您要將 MSMDPUMP 可執行檔、組態檔以及資源資料夾從 Analysis Services 程式資料夾，複製到您將在執行 IIS 所在電腦的檔案系統上建立的新虛擬目錄資料夾。  
@@ -166,7 +163,7 @@ ms.lasthandoff: 12/08/2017
   
      ![設定轉換應用程式](../../analysis-services/instances/media/ssas-httpaccess-convertedapp.png "轉換應用程式的設定")  
   
-4.  按一下 **[確定]**。 重新整理網站，並注意「OLAP」資料夾現在是在「預設的網站」底下的應用程式。 現在即已建立 MSMDPUMP 檔案的虛擬路徑。  
+4.  按一下 [確定] 。 重新整理網站，並注意「OLAP」資料夾現在是在「預設的網站」底下的應用程式。 現在即已建立 MSMDPUMP 檔案的虛擬路徑。  
   
      ![應用程式的轉換後的 OLAP 資料夾](../../analysis-services/instances/media/ssas-httpaccess-convertfolderafter.png "至應用程式轉換後的 OLAP 資料夾")  
   
@@ -288,7 +285,7 @@ ms.lasthandoff: 12/08/2017
   
  **使用 SQL Server Management Studio 測試連接**  
   
-1.  在 Management Studio 的 [連接到伺服器] 對話方塊中，選取 [Analysis Services] 做為伺服器類型。 在 [伺服器名稱] 中，輸入 msmdpump 延伸模組的 HTTP 位址：`http://my-web-srv01/OLAP/msmdpump.dll`。  
+1.  在 Management Studio 的 [連接到伺服器] 對話方塊中，選取 [Analysis Services] 做為伺服器類型。 在 [伺服器名稱] 中，輸入 msmdpump 延伸模組的 HTTP 位址： `http://my-web-srv01/OLAP/msmdpump.dll`。  
   
      [物件總管] 會顯示 HTTP 連接：  
   
@@ -318,7 +315,7 @@ ms.lasthandoff: 12/08/2017
   
  最後一個步驟是確實使用更嚴格的測試進行後續追蹤，方法是，使用在連接來源之網路環境中執行的用戶端電腦。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [論壇文章 (使用 msmdpump 和基本驗證的 HTTP 存取)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
  [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [物件和作業的存取權授權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 125908516823730701e0502398d4c8346d093edb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 25f648f53ca3af33b846711076eb91b3548174a6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>課程 2-1-定義維度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在下列工作中，您會使用 「 維度精靈 」 來建立 「 日期 」 維度。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  在 [主資料表] 清單中，選取 [日期]。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
 7.  在 [選取維度屬性] 頁面上，選取下列屬性旁的核取方塊：  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/08/2017
   
     -   **Calendar Semester**  
   
-8.  將 [完整日期替代索引鍵] 屬性之 [屬性類型] 資料行的設定，從 [一般] 變更為 [日期]。 若要這樣做，請在 [屬性類型] 資料行中按一下 [一般]。 然後，按一下箭號，以便展開選項。 接著，按一下 [日期] > [日曆] > [日期]。 按一下 **[確定]**。 重複這些步驟，即可變更屬性的屬性類型，如下所示：  
+8.  將 [完整日期替代索引鍵] 屬性之 [屬性類型] 資料行的設定，從 [一般] 變更為 [日期]。 若要這樣做，請在 [屬性類型] 資料行中按一下 [一般]。 然後，按一下箭號，以便展開選項。 接著，按一下 [日期] > [日曆] > [日期]。 按一下 [確定] 。 重複這些步驟，即可變更屬性的屬性類型，如下所示：  
   
     -   [英文月份名稱] 變更為 [月]  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/08/2017
   
     -   [日曆半年度] 變更為 [半年]  
   
-9. 按一下 **[下一步]**。  
+9. 按 [下一步] 。  
   
 10. 在 [正在完成精靈] 頁面上，您可以在 [預覽] 窗格中看見 [日期] 維度及其屬性。  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [定義 Cube](../analysis-services/lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [多維度模型中的維度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [使用現有的資料表建立維度](../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
 [使用維度精靈建立維度](../analysis-services/multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  

@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cceb9ce47e059750e1d4cb8dc3fe3b1d45444f82
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 72fb8e7c0f964fe140082d9aed5748b98440fac3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>啟動或停止 Power Pivot for SharePoint Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]系統服務和[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]執行個體上一起運作，相同的本機應用程式伺服器，以支援 SharePoint 伺服陣列中協調的要求和資料處理。  
@@ -62,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="effects"></a> 停止 PowerPivot 伺服器的影響  
  下表描述在 SharePoint 伺服器上停止 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務及 Analysis Services 服務的影響。  
   
-|影響的項目|說明|  
+|影響的項目|描述|  
 |---------------|-----------------|  
 |現有的查詢|在 Analysis Services 伺服器上進行中的查詢將會立即停止。 使用者將會收到找不到資料或找不到資料來源連接的錯誤。|  
 |目前正在處理的現有資料重新整理工作|在目前的 Analysis Services 伺服器上進行中的作業將會立即停止。 資料重新整理將會失敗，而且會將錯誤記錄至資料重新整理記錄。<br /><br /> 在您使用 [SharePoint 管理中心] 中的 [檢查工作狀態] 頁面停止服務之前，您可以檢視目前工作的狀態。<br /><br /> 雖然要知道哪些作業目前正在處理是可能的，但是並沒有任何方法可檢視佇列本身是否有其他作業即將開始。|  

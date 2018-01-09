@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 50ac79584b61002a71c792fe485bce6f5115a0ef
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f4de10c612f0338cecbfbd2e106bee41c6115905
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 其他類別和方法
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本節包含一般類別不是 OLAP 或資料採礦特有以及屬於管理或管理中的物件時很有幫助[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 這些類別涵蓋如預存程序、追蹤、例外狀況以及備份與還原等功能。  
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/08/2017
   
  AMO 在找到不同的問題時將會擲回例外狀況。 下表列出 AMO 所處理的例外狀況種類。 例外狀況是從 <xref:Microsoft.AnalysisServices.AmoException> 類別衍生。  
   
-|Exception|起源|Description|  
+|例外狀況|起源|描述|  
 |---------------|------------|-----------------|  
 |<xref:Microsoft.AnalysisServices.AmoException>|基底類別|當必要的父物件遺失時，或是當集合中找不到要求的項目時，應用程式會收到這個例外狀況。|  
 |<xref:Microsoft.AnalysisServices.OutOfSyncException>|衍生自 AMOException|當 AMO 與引擎不同步，而且引擎傳回 AMO 不認識的物件參考時，應用程式會收到這個例外狀況。|  

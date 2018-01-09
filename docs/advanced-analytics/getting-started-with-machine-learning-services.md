@@ -8,20 +8,20 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 600f105a3e3fb5fb590ce081633258db3d3d35d5
-ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
+ms.openlocfilehash: c0d1b3a2a69a08495b5860b3aef2587dd61d9327
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="getting-started-with-machine-learning-in-sql-server"></a>開始使用 SQL Server 中的機器學習服務
+# <a name="getting-started-with-machine-learning-in-sql-server"></a>開始使用 SQL Server 中的機器學習
 
 Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 可擴充組：
 

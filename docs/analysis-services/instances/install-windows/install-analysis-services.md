@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c988142d87edfe702fa9a0346331c7a1b3b71c95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 992a09878aece468b52a26241c362cb71ae43ec9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>安裝 SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services 是裝載表格式模型、 多維度 cube 和資料採礦模型，您可以從報表、 試算表和儀表板存取的分析資料庫伺服器。  
@@ -72,14 +72,14 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** 區分大小寫。  所有值都必須以大寫形式表示。 下表描述 **ASSERVERMODE**的有效值。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |TABULAR|這是預設值。 如果您未設定**ASSERVERMODE**，在表格式模式中安裝的伺服器。|
 |MULTIDIMENSIONAL|此為選擇性的值。|  
 |POWERPIVOT|此為選擇性的值。 實際上，如果您設定 **ROLE** 參數，即會自動將伺服器模式設定為 1，讓 **ASSERVERMODE** 成為 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 安裝的選用參數。 如需詳細資訊，請參閱 [Install Power Pivot from the Command Prompt](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)。|  
   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [判斷 Analysis Services 執行個體的伺服器模式](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [表格式模型化 (SSAS 表格式)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   

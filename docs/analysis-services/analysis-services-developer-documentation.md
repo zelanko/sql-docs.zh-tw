@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a941a9f08482f78c762cbc25fc3f3eb28d7a8cf4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 12b3c89ac68cd633c50ea96ded258a91cc066ae8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services Developer 文件
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]在 Analysis Services 中，幾乎每個物件和工作負載可程式化，而且通常沒有可從中選擇的多個方法。  選項包括撰寫 managed 程式碼、 指令碼，或使用 XMLA 和 MSOLAP 開放標準，如果方案需求致使使用.NET framework。

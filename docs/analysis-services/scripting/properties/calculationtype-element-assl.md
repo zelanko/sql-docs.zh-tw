@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: CalculationType Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 58d74d8842c6ba0b30328c22e82bafd9f69bc84a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0c5aab004dba06237d695a6534504736c1e01970
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calculationtype-element-assl"></a>CalculationType 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述中相關聯定義的計算類型[CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)項目。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|無|  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|值|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |*成員*|此計算屬性會套用至導出成員定義。|  
 |*設定*|此計算屬性會套用至命名集定義。|  

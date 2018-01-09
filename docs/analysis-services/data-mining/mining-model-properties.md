@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88e8d798f3e3a37fafab3f06ca6354310508e2b5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-properties"></a>採礦模型屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]採礦模型都有下列幾種屬性：  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="properties-of-models"></a>模型的屬性  
  下表描述採礦模型特有的屬性。 此外，也有一些屬性可以在採礦的個別資料行中設定。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**演算法**|設定採礦模型的演算法類型。|  
 |**AlgorithmParameters**|設定每一種演算法類型可用的演算法參數的值。|  
@@ -58,13 +56,13 @@ ms.lasthandoff: 12/08/2017
 ## <a name="properties-of-model-columns"></a>模型資料行的屬性  
  針對採礦模型中的每一個資料行，您可以設定下列資料採礦特有的屬性。 針對採礦結構中的每一個採礦模型，您可以將這些屬性設定為不同的值。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**說明**|描述採礦資料行的目的。|  
 |**名稱**|設定採礦模型資料行的名稱。 您可以輸入新名稱，為採礦模型資料行提供別名。|  
 |**ModelingFlags**|設定資料行的任何演算法特定旗標。|  
 |**SourceColumnID**|代表模型資料行所依據之採礦結構資料行的名稱。<br /><br /> 此屬性是唯讀的。|  
-|**使用方式**|設定採礦模型如何使用資料行。|  
+|**Usage**|設定採礦模型如何使用資料行。|  
   
 ## <a name="see-also"></a>請參閱  
  [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)   

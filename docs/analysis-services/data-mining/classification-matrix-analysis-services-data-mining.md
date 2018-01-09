@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1bcd19b3f4c4a1c5ee3320fa7be493672eb91dae
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7897c756eb0aa9aa53ed56356052974e53afd601
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分類矩陣 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*分類矩陣*依模型中的所有案例分類，判斷預測的值是否符合實際的值。 每個類別目錄中的所有案例都會計算在內，而且總數會顯示在矩陣中。 分類矩陣是統計模型評估的標準工具，有時稱為「混淆矩陣」。  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |預測的|0 (實際值)|1 (實際值)|2 (實際值)|  
 |---------------|------------------|------------------|------------------|  
 |0|111|3|5|  
-|1|2|123|17|  
+|@shouldalert|2|123|17|  
 |2|19|0|20|  
   
  雖然加入多個資料行會讓報表看起來更為複雜，但是當您想要評估做出錯誤預測的累計成本時，其他詳細資料可能會非常實用。 若要建立對角線上的總和或是比較不同資料列組合的結果，您可以按一下 [分類矩陣] 索引標籤上提供的 [複製] 按鈕，並將報表貼到 Excel。 或者，您可以使用類似適用於 Excel 的資料採礦用戶端的用戶端 (它支援 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本)，直接在 Excel 中建立包含計數和百分比的分類報表。 如需詳細資訊，請參閱 [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733)(SQL Server 資料採礦)。  
@@ -92,6 +90,6 @@ ms.lasthandoff: 12/08/2017
 |描述建立增益圖及其他精確度圖表的步驟。|[測試及驗證工作與操作方法 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>請參閱  
- [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

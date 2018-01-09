@@ -6,7 +6,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
@@ -15,13 +15,13 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7618f4235a1d681800cc6b0d933d921f145947dc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 46912d3c96c55f07d54cc319f3d397e93e2d4da2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="microsoft-machine-learning-services"></a>Microsoft 機器學習服務
+# <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning 服務
 
 Microsoft 機器學習服務的目標是提供可延伸性並可擴充的平台整合與使用機器學習服務的應用程式的機器學習工作和工具。 平台必須滿足需求的所有使用者參與的資料開發和分析程序中，資料科學家從架構設計人員和資料庫管理員。
 

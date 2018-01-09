@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 726344198c74d36a0d31368980f305c1426f1607
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e6b39e6f8e91217dbc2de28575571e3043c7358
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensions---introduction"></a>維度-簡介
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]所有的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]維度都是根據資料表或檢視中的資料來源檢視中的資料行的屬性群組。 維度的存在與 Cube 無關，也可以用於多個 Cube 中、在單一 Cube 中使用多次，也可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之間連結。 存在與 Cube 無關的維度稱為資料庫維度，而 Cube 中的資料庫維度執行個體則稱為 Cube 維度。  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="processing-a-dimension"></a>處理維度  
  建立維度之後，您必須先處理維度，才能檢視屬性的成員與維度中的階層。 變更維度的結構或更新其基礎資料表中的資訊之後，必須再次處理此維度，然後才可以檢視這些變更。 在結構性變更之後處理維度時，也必須處理包含此維度的任何 Cube，否則將無法檢視此 Cube。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  維度的所有從屬物件，包括階層、層級和成員，都是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的角色來保護。 維度安全性可套用至資料庫中使用該維度的所有 Cube，或只套用至特定 Cube。 如需有關維度安全性的詳細資訊，請參閱[授與權限維度 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md).  
   
 ## <a name="see-also"></a>請參閱  

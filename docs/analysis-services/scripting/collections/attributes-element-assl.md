@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Attributes Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 048602c3e0244bd0da729e6bd893f5f3b9421a7b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a28239e1c74f4eaf982dd7500ae90fe49ce21d71
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attributes-element-assl"></a>Attributes 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含屬性相關聯的維度的集合。  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  

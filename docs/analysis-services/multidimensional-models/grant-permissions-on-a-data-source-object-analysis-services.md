@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.datasources.f1
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5a08c7f67120126f836552af70bf97e0b6cda366
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f7cd02446a61b7ff1c8d9fdaa2803c30ee81a6e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>授與資料來源物件的權限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]一般而言，大部分使用者都[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]不需要存取基礎資料來源[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。 使用者通常只會查詢 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的資料。 不過，在資料採礦的內容中，例如要執行以採礦模型為基礎的預測時，使用者就必須聯結採礦模型的所獲得 (Learned) 資料與使用者提供的資料。 若要連接到包含使用者所提供資料的資料來源，使用者要使用包含 [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) 和 [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md) 子句的資料採礦延伸模組 (DMX) 查詢。  

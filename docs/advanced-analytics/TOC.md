@@ -108,6 +108,8 @@
 
 ### [在 SQL Server 上安裝新的 R 套件](r/install-additional-r-packages-on-sql-server.md)
 
+### [在 SQL Server 上安裝新的 Python 套件](python/install-additional-python-packages-on-sql-server.md)
+
 ### [啟用 SQL Server 執行個體的 R 套件管理](r/r-package-how-to-enable-or-disable.md)
 
 ### [決定要安裝在 SQL Server 上的套件](r/determine-which-packages-are-installed-on-sql-server.md)
@@ -137,7 +139,7 @@
 ### [在 R 中使用 OLAP Cube 的資料](r/using-data-from-olap-cubes-in-r.md)
 ### [使用 sqlrutils 建立預存程序](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-## 效能
+## [效能]
 
 ### [R 效能微調 - 概觀](r/sql-server-r-services-performance-tuning.md)
 ### [R 效能微調 - SQL Server 組態](r/sql-server-configuration-r-services.md)

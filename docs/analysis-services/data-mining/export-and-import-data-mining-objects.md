@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d62dc8db6debd9b930c81abb4130a45543010e41
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c801c0b8a4c3b688dc0224dfe31764ee390e3a6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="export-and-import-data-mining-objects"></a>匯出及匯入資料採礦物件
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]除了中所提供的功能[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]針對備份、 還原和移轉方案，SQL Server 資料採礦提供了可快速傳送資料採礦結構和模型，使用資料採礦的不同伺服器之間延伸模組 (DMX)。  

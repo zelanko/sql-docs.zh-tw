@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: properties [Analysis Services], databases
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bc30fcf0cf1aad8b9c27585913f0a5a8a4598374
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6585737ac1f796b7e9e6e8834d6ca5b5c1c11612
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>設定多維度資料庫屬性 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]有許多[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫中，您可以設定的屬性[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]資料庫設計工具。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="database-properties"></a>資料庫屬性  
  除了上面提到的內容之外，您還可以在 [屬性] 視窗中設定許多資料庫屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |彙總前置詞|可用於資料庫中所有資料分割之彙總名稱的一般前置詞。 如需詳細資訊，請參閱 [AggregationPrefix 元素 &#40;ASSL&#41;](../../analysis-services/scripting/properties/aggregationprefix-element-assl.md)。|  
 |定序|當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體時，資料庫將會繼承自定序伺服器屬性，除非這裡有提供不同的值。|  

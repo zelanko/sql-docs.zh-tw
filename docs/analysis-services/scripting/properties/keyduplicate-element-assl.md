@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: KeyDuplicate Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ae40ac43c34daef29a1c69218e057e47ccbced6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 97c4d349cecfc9fb1dd51c1c018110068b5be7dc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="keyduplicate-element-assl"></a>KeyDuplicate 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]決定如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]處理在處理期間遇到重複的索引鍵錯誤。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|*IgnoreError*|  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|值|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |*IgnoreError*|處理時應該忽略錯誤並繼續。|  
 |*ReportAndContinue*|處理時應該報告錯誤並繼續。|  

@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 網站上的報表檢視器網頁組件 | Microsoft Docs"
+title: "SharePoint 網站上的報表檢視器網頁組件 - SSRS | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: reporting-services
@@ -15,15 +15,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3fe9fb37ed9b35f0fb108c1757ea79acbd575703
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d3479fd05c49b2aed36008f81ffb42bb95a6e68
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 網站上的報表檢視器網頁組件
+# <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>SharePoint 網站上的報表檢視器網頁組件 - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -56,6 +56,6 @@ Microsoft 下載中心提供報表檢視器網頁組件。
 * 網頁組件僅限用於「傳統的」SharePoint 頁面。
 * 報表檢視器網頁組件只支援內嵌分頁 (RDL) 報表。 如果想要內嵌 Power BI 報表或行動報表，您可以使用 *rs:Embed=true* URL 參數。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 若要開始使用更新的報表檢視器網頁組件，請參閱[在 SharePoint 網站上部署報表檢視器網頁組件](deploy-report-viewer-web-part.md)。

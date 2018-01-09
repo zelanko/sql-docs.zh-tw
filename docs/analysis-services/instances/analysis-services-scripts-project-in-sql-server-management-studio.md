@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e849993eeda199ad134f21b80872828993803d14
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 67bae95052250fe51bd09a1c6cf09756d23da57c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio 中的 Analysis Services 指令碼專案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您可以建立一個 Analysis Server 指令碼專案中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]分組在一起的開發、 管理相關的指令碼和原始檔控制使用。 如果 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中目前未載入方案，則建立新的 Analysis Server 指令碼專案會自動建立新方案。 否則，可以將新的 Analysis Server 指令碼專案加入到現有的方案，或是在新的方案中建立。  
@@ -55,7 +52,7 @@ ms.lasthandoff: 12/08/2017
   
  Analysis Server 指令碼專案的專案資料夾，可以包含下表列出的檔案類型。  
   
-|檔案類型|說明|  
+|檔案類型|描述|  
 |---------------|-----------------|  
 |Analysis Server 指令碼專案定義檔案 (.ssmsasproj)|包含在方案總管中所顯示之資料夾的中繼資料，也包含資訊指出哪些資料夾應該顯示專案中所包含的檔案。<br /><br /> 專案定義檔案也包含專案中之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接的中繼資料，以及在連接和專案中所包含的指令碼檔案之間產生關聯的中繼資料。|  
 |DMX 指令碼檔案 (.dmx)|包含專案中的 DMX 指令碼。|  

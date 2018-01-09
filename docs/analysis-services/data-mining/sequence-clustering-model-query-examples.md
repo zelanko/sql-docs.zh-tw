@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,13 +21,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 892d5b6a02edaca9ef4c5613fe45c0719faa3483
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5e7b6cf1a00c650e49282e611eae18bed14b9179
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
+# <a name="sequence-clustering-model-query-examples"></a>時序叢集模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您建立針對資料採礦模型的查詢時，您可以建立內容查詢，來提供模型中儲存之資訊的詳細資料，或您可以建立預測查詢，根據新資料做出預測模型中使用的模式您提供。 對於時序群集模型，內容查詢通常會提供找到之群集的其他詳細資料，或提供這些群集中的轉換。 您也可以使用查詢來擷取有關模型的中繼資料。  
   
  時序群集模型的預測查詢通常會根據轉換的時序、包含在模型中的非時序屬性，或者時序與非時序屬性的組合，做出建議。  
@@ -97,7 +95,7 @@ AND [PARENT_UNIQUE_NAME] = 0
   
 |NODE_UNIQUE_NAME|產品 1|時序支援|時序機率|  
 |------------------------|---------------|----------------------|--------------------------|  
-|1081327|遺漏|0|#######|  
+|1081327|Missing|0|#######|  
 |1081327|All-Purpose Bike Stand|17|0.00111|  
 |1081327|Bike Wash|64|0.00418|  
 |1081327|(資料列 4-36 省略)|||  
@@ -240,7 +238,7 @@ AS t
   
 |Expression.$Sequence|Expression.Line Number|Expression.Model|  
 |--------------------------|----------------------------|----------------------|  
-|1||Cycling Cap|  
+|@shouldalert||Cycling Cap|  
 |2||Cycling Cap|  
 |3||Sport-100|  
 |4||Long-Sleeve Logo Jersey|  

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a05d33191df12f115cea94a10eb1b2bd3a9a3498
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  本主題僅限討論 SQL Server本身的升級。 其未涵蓋包含 Windows Server 容錯移轉叢集 (WSFC) 叢集的作業系統升級。 Windows Server 2012 R2 之前的作業系統，不支援裝載容錯移轉叢集的 Windows 作業系統升級。 升級於 Windows Server 2012 R2 上執行的叢集結點時，請參閱 [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)(叢集作業系統輪流升級)  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  在開始之前，請檢閱以下重要資訊：  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)︰確認您可從您的 Windows 作業系統版本與 SQL Server 版本升級至 SQL Server 2016。 例如，您無法直接從 SQL Server 2005 執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
@@ -41,7 +41,10 @@ ms.lasthandoff: 11/20/2017
 -   [計劃和測試資料庫引擎升級計劃](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)︰檢閱版本資訊與已知的升級問題、升級前檢查清單，並開發和測試升級計畫。  
   
 -   [安裝 SQL Server 2016 的硬體與軟體需求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
-  
+
+> [!NOTE]  
+>  不支援在相同的 AG 中混用 SQL Server 的版本。 若要使用可用性群組移轉至新的版本，則唯一支援的方法是 SQL Server 2016 Enterprise Edition 或更新版本中的分散式可用性群組。
+
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>AlwaysOn 可用性群組的輪流升級最佳做法  
  當您執行伺服器升級或更新時，應該要觀察以下最佳作法，好讓停機時間及可用性群組的資料遺失情況降至最低：  
   

@@ -5,12 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a3f1f0dc49296c7b2b4182de5eb69abbb720f1b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 486ba5cb40f30921374a4f66040f2a080e4a1152
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>資料採礦方案與物件的管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]提供可用來管理現有採礦結構和採礦模型的用戶端工具。 本節說明可以利用每種環境執行的管理作業。  

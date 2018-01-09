@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 35689c5e3230539dbef7beb055791173bd196fcc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e2edd01c764bdd43fe74125f128942b195168992
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>建立 Profiler 追蹤以重新執行 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]若要重新執行查詢、 探索和命令，會由使用者提交到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]必須收集所需的事件。 若要起始收集這些事件，必須在 [追蹤屬性] 對話方塊的 [事件選取範圍] 索引標籤中選取適當的事件類別。 例如，若選取 Query Begin 事件類別，則會收集包含查詢的事件並用於重新執行。 另外，在分散式環境中，追蹤檔案包含足夠的資訊來支援以原始交易順序重新執行伺服器交易。  

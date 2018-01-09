@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ceac22e878f93a5c7b8c9a1545d60f513684805
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 354c8c0baca1372c0bc6cb17e2acbfc74c45b9b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>此活頁簿包含一或多個重新整理外部資料的查詢
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]包含的 Excel 活頁簿[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料，Excel Services 會顯示這個警告，當它偵測到連接資訊，並提示您啟用或停用此活頁簿的查詢。  
@@ -55,8 +55,8 @@ ms.lasthandoff: 12/08/2017
   
 5.  在 [外部資料] 中，清除 [Warn on data refresh (資料重新整理時警告)] 的核取方塊。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
- 或者，您可以針對包含 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 活頁簿的網站建立新的信任位置，然後只針對該網站修改組態設定。 如需詳細資訊，請參閱 [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 或者，您可以針對包含 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 活頁簿的網站建立新的信任位置，然後只針對該網站修改組態設定。 如需詳細資訊，請參閱[在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
   

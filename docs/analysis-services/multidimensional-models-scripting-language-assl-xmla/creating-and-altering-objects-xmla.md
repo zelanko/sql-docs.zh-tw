@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 06d6b8e0460ffa303c6e365820c61f9d200dcc95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6906c6dbab99923983cbfa4e75c35c6f3c0f5073
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-and-altering-objects-xmla"></a>建立和改變物件 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]主要物件可以是獨立建立、 改變和刪除。 主要物件包括下列物件：  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
 -   資料分割  
   
--   檢視方塊  
+-   「檢視方塊」  
   
 -   採礦模型  
   
@@ -103,7 +101,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="examples"></a>範例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  下列範例會建立關聯式資料來源參考[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]範例[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  
   
 ### <a name="code"></a>程式碼  
@@ -128,7 +126,7 @@ ms.lasthandoff: 12/08/2017
 </Create>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  下列範例修改前面範例中所建立的關聯式資料來源，以便將資料來源的查詢逾時設定成 30 秒。  
   
 ### <a name="code"></a>程式碼  

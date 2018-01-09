@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a50727ec3560bf2d5f0cef41c13be050026366df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e9500bdeffd9c7e9e9480f30a87e1678074cc57
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 是 [SQL Server Express](https://m
 ## <a name="install-localdb"></a>安裝 LocalDB  
  透過安裝精靈或使用 SqlLocalDB.msi 程式來安裝 **LocalDB** 。 **LocalDB** 是安裝 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 時的選項。 
  
-在安裝期間，您可以在 [功能選擇/共用功能] 頁面上選取 [LocalDB]。 每個主要 **版本只能有** LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 二進位檔案的一個安裝。 多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序可以啟動，而且全部都會使用相同的二進位檔案。 以 LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 方式啟動的 **LocalDB** 執行個體與 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
+在安裝期間，您可以在 [功能選擇/共用功能] 頁面上選取 [LocalDB]。 每個主要 **版本只能有** LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 二進位檔案的一個安裝。 多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序可以啟動，而且全部都會使用相同的二進位檔案。 以 **LocalDB** 形式啟動的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體，其限制與 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 相同。  
 
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 的執行個體是使用 **SqlLocalDB.exe** 公用程式來管理。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 應該用來取代已被取代的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 使用者執行個體功能。 
   
@@ -109,10 +109,10 @@ REM Gather information about the instance of LocalDB
   
 |||  
 |-|-|  
-|名稱|"LocalDBApp1"|  
+|[屬性]|"LocalDBApp1"|  
 |Version|\<目前版本>|  
 |共用名稱|""|  
-|擁有者|"\<您的 Windows 使用者>"|  
+|[擁有者]|"\<您的 Windows 使用者>"|  
 |自動建立|否|  
 |State|執行中|  
 |上次啟動時間|\<日期和時間>|  

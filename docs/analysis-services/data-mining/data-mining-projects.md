@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba4efe6772c6fcc668d6ce808a6c928a3af63101
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-projects"></a>資料採礦專案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料採礦專案屬於[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]方案。 在設計過程中，您在此專案中建立的物件可當做工作空間資料庫的一部分來測試及查詢。 當您希望使用者能夠查詢或瀏覽專案中的物件時，您必須將此專案部署到以多維度模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
@@ -108,7 +106,7 @@ ms.lasthandoff: 12/08/2017
   
  資料來源只會識別伺服器或提供者及一般類型的資料。 如果您需要變更資料格式和彙總，請使用資料來源檢視物件。  
   
- 若要控制處理資料來源中之資料的方式，您可以加入衍生的資料行或計算、修改彙總，或是重新命名資料來源檢視中的資料行 (您也可以處理下游資料，方法是修改採礦結構資料行，或是在採礦模型資料行層級使用模型旗標和篩選)。  
+ 若要控制處理資料來源中之資料的方式，您可以加入衍生的資料行或計算、修改彙總，或是重新命名資料來源檢視中的資料行  (您也可以處理下游資料，方法是修改採礦結構資料行，或是在採礦模型資料行層級使用模型旗標和篩選)。  
   
  如果需要清理資料，或者資料倉儲中的資料必須加以修改才能建立其他變數、變更資料類型或建立替代彙總，您可能需要建立其他專案類型來支援資料採礦。 如需這些相關專案的詳細資訊，請參閱 [資料採礦方案的相關專案](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)。  
   

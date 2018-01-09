@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: "測試 Analysis Services"
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 615b26c5dfc1ea45dfcef2494483ced1235e7cd0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>語言和定序 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援的語言和定序所提供[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 作業系統。 **Language** 和 **Collation** 屬性會在安裝期間於執行個體層級進行初始設定，但之後可在物件階層的不同層級進行變更。  
@@ -124,7 +124,7 @@ ms.lasthandoff: 12/08/2017
 |排序順序 (後置詞)|排序順序描述|  
 |---------------------------|----------------------------|  
 |二進位 (_BIN) 或 BIN2 (_BIN2)|SQL Server 中有兩種二進位定序：較舊的 BIN 定序和較新的 BIN2 定序。 在 BIN2 定序中，所有字元都是根據其字碼指標排序。 在 BIN 定序中，只有第一個字元是根據字碼指標排序，剩餘字元則是根據其位元組值排序。 (因為 Intel 平台是 Little Endian 架構，所以 Unicode 字碼字元一律以位元組交換的方式儲存)。<br /><br /> 如果是 Unicode 資料類型的二進位定序，在資料排序時不會考量地區設定。 例如，Latin_1_General_BIN 和 Japanese_BIN 用於 Unicode 資料時會產生相同的排序結果。<br /><br /> 二進位排序順序為區分大小寫和區分腔調字。 二進位也是最快的排序順序。|  
-|區分大小寫 (_CS)|區分大寫和小寫字母。 如果選取此選項，小寫字母會排序在大寫字母的前面。 指定 _CI，就可以明確地設定不區分大小寫。 特定定序的大小寫設定不會套用至物件識別碼，例如維度、Cube 和其他物件的識別碼。 如需詳細資訊，請參閱＜ [全球化秘訣和最佳作法 &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) ＞。|  
+|區分大小寫 (_CS)|區分大寫和小寫字母。 如果選取此選項，小寫字母會排序在大寫字母的前面。 指定 _CI，就可以明確地設定不區分大小寫。 特定定序的大小寫設定不會套用至物件識別碼，例如維度、Cube 和其他物件的識別碼。 如需詳細資訊，請參閱 [全球化秘訣和最佳做法 &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) (全球化秘訣和最佳做法 (Analysis Services))。|  
 |區分腔調字 (_AS)|區分有腔調和無腔調的字元。 例如，'a' 不等於 'ấ'。 如果未選取此選項，在排序用途上， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將有腔調和無腔調字母視為相同。 指定 _AI，就可以明確地設定不區分腔調字。|  
 |區分假名 (_KS)|區分兩種類型的日文假名字元：平假名與片假名。 如果未選取此選項，在排序用途上， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 視平假名和片假名相同。 不區分假名的排序沒有排序順序後置詞。|  
 |區分全半形 (_WS)|區分單一位元組字元和以雙位元組字元表示的相同字元。 如果未選取此選項，在排序用途上， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 視相同字元的單一位元組和雙位元組表示法相同。 不區分全半形的排序沒有排序順序後置詞。|  

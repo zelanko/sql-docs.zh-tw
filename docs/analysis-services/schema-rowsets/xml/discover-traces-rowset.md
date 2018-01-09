@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcdd8443c60299987c6b9ee239a5ffefb3f61f09
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c79aa16cc7dc0d232c3acaa4407588932befc124
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovertraces-rowset"></a>DISCOVER_TRACES 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供有關在伺服器目前使用中的追蹤資訊。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_TRACES**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|Description|  
+|資料行名稱|類型指標|描述|  
 |-----------------|--------------------|-----------------|  
 |**TraceID**|**DBTYPE_WSTR**|追蹤識別碼。|  
 |**TraceName**|**DBTYPE_WSTR**|追蹤名稱。|  
@@ -61,10 +59,10 @@ ms.lasthandoff: 12/08/2017
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|值|  
+|引數|ReplTest1|  
 |--------------|-----------|  
 |GUID|a07ccd1a-8148-11d0-87bb-00c04fc33942|  
-|字串|DISCOVER_TRACES|  
+|String|DISCOVER_TRACES|  
   
 ## <a name="see-also"></a>請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

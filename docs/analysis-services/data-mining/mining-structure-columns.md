@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47ad74a70236b156db230ed229d2022cd6e057b0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f87ea88579145b0220be7a047d230d2f3d8d9a1e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-structure-columns"></a>採礦結構資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您建立採礦結構中，選擇 外部資料的資料行，然後指定要用於模型化資料的方式，您可以定義採礦結構中的資料行。 因此，採礦結構資料行不只是資料來源中的資料複本：這些資料行會定義採礦模型如何使用來源中的資料。 您可以指派可判斷如何將資料離散化的屬性以及可描述如何分佈資料值的屬性。  

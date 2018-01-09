@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cc03641e5c0757aba32964077e7ec72307abe3d0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c409654fe8ae5ae504dcf4cad42c552ccb11ca22
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>課程 8-1-定義和使用鑽研動作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]事實維度測量事實資料，但不會正確篩選可能會導致查詢效能緩慢的查詢傳回的資料。 為了避免這種情況，您可以定義鑽研動作，以便限制傳回的資料列總數。 這樣做將會大幅改善查詢效能。  
@@ -152,7 +152,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-lesson"></a>下一課  
 [第 9 課：定義檢視方塊和翻譯](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [動作 &#40;Analysis Services - 多維度資料&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [多維度模型中的動作](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
 [維度關聯性](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

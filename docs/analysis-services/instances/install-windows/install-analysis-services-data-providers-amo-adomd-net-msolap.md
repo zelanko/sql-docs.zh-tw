@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a7aedabc-6af9-4698-a7a4-98f894001476
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7cd7f4a950335557e3fb65d3d504f79af0801de0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dc274b1b621e0464d01172b38898656017ab6353
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-analysis-services-data-providers-amo-adomdnet-msolap"></a>安裝 Analysis Services 資料提供者 (AMO、ADOMD.NET、MSOLAP)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]是 Analysis Services 資料提供者包含 ADOMD.Net、 AMO 和 MSOLAP 的版本更新。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|提供者|檔名|版本|  
+|提供者|檔名|Version|  
 |Analysis Services 管理物件 (AMO)|Microsoft.AnalysisServices.dll|13.0.0.0|  
 |Analysis Services 核心|Microsoft.AnalysisServices.Core.dll|13.0.0.0|  
 |Analysis Services (ADOMD.NET)|Microsoft.AnalysisServices.AdomdClient.dll|13.0.0.0|  

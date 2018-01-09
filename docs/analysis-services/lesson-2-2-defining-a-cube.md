@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 17fde2d95fb202712610a31769b1a50623bac7c7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a09461909c86014aeb459cdc602ee9e96985d88a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>課程 2-2-定義 Cube
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]「 Cube 精靈 」 可協助您定義的量值群組和 cube 維度。 在下列工作中，您將使用「Cube 精靈」來建立 Cube。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
     此精靈會檢查這些資料表並建議使用 [InternetSales] 當作量值群組資料表。 量值群組資料表 (也稱為事實資料表) 包含您感興趣的量值，例如銷售的單位數。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
 7.  在 [選取量值] 頁面上，檢閱 [網際網路銷售] 量值群組中的所選取量值，再清除下列量值的核取方塊：  
   
@@ -55,13 +55,13 @@ ms.lasthandoff: 12/08/2017
   
     根據預設，此精靈會選取事實資料表中所有未連結到維度的數值資料行當做量值。 不過，這 4 個資料行不是實際量值。 前 3 個是連結事實資料表與維度資料表的索引鍵值，它們不使用於這個 Cube 的初始版本。  
   
-8.  按一下 **[下一步]**。  
+8.  按 [下一步] 。  
   
 9. 在 [選取現有維度] 頁面上，確定已選取您先前建立的 [Date] 維度，然後按一下 [下一步]。  
   
 10. 在 [選取新維度] 頁面上，選取要建立的新維度。 若要執行這項操作，請確認已選取 [Customer]、[Geography] 和 [Product] 核取方塊，然後清除 [InternetSales] 核取方塊。  
   
-11. 按一下 **[下一步]**。  
+11. 按 [下一步] 。  
   
 12. 在 [正在完成精靈] 頁面上，將 Cube 名稱變更為 [Analysis Services 教學課程]。 在 [預覽] 窗格中，您可以看見 [InternetSales] 量值群組及其量值。 此外，您也可以看見 [Date]、[Customer] 和 [Product] 維度。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [將屬性加入至維度](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [多維度模型中的 Cube](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
 [多維度模型中的維度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   

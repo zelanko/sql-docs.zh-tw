@@ -1,7 +1,7 @@
 ---
 title: "啟用資料庫引擎的加密連接 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/11/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0408459ba5ef287cb583962a536d1780fa9f6769
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1123fe0698e9b5e38ba77f5ca1aa634904281e3b
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>啟用資料庫引擎的加密連接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  完成 **[憑證匯出精靈]**，並將憑證檔儲存在方便取得的位置。  
   
-##  <a name="ConfigureServerConnections"></a> 若要設定伺服器接受加密的連接  
+##  <a name="ConfigureServerConnections"></a> 設定伺服器強制加密連線  
   
 1.  在 [SQL Server 組態管理員] 中，展開 [SQL Server 網路組態]，並以滑鼠右鍵按一下 [\<伺服器執行個體> 的通訊協定]，然後選取 [屬性]。  
   
@@ -90,11 +90,18 @@ ms.lasthandoff: 11/20/2017
   
 4.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
 
+
+> [!NOTE]
+> 若要確保用戶端與伺服器之間的安全連線，請設定用戶端要求加密連線。 [本文稍後](#client-request-encrypt-connect-23h)會說明其他詳細資料。
+
+
+
 ### <a name="wildcard-certificates"></a>萬用字元憑證  
 開頭為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的原生用戶端，支援萬用字元憑證。 其他用戶端可能不支援萬用字元憑證。 如需詳細資訊，請參閱用戶端文件。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 不能選取萬用字元憑證。 若要使用萬用字元憑證，您必須編輯 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 登錄機碼，在 [憑證] 值輸入不含空格的憑證指紋。  
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
-  
+
+<a name="client-request-encrypt-connect-23h"/>
 ##  <a name="ConfigureClientConnections"></a> 若要設定用戶端要求加密的連接  
   
 1.  將原始憑證或匯出的憑證檔複製到用戶端電腦。  

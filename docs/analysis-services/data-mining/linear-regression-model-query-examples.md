@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b0f34af9c1c466f09040c7915f53b993cb04ac1b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 150ef98bd2c949f7b4eb47170ec7855173608fbc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="linear-regression-model-query-examples"></a>線性迴歸模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您建立針對資料採礦模型的查詢時，您可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或您可以建立預測查詢，為新的資料進行預測模型中使用的模式。 例如，內容查詢可能會提供有關迴歸公式的其他詳細資料，而預測查詢則會告訴您新資料點是否符合模型。 您也可以使用查詢來擷取有關模型的中繼資料。  
@@ -91,9 +89,9 @@ FROM LR_PredictIncome.CONTENT
   
  預期的結果：  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|遺漏|0|0.000457142857142857|0|1|  
+|Yearly Income|Missing|0|0.000457142857142857|0|@shouldalert|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |Age|471.687717702463|0|0|126.969442359327|7|  
 |Age|234.680904692439|0|0|0|8|  

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9f547511bc918c4b55693207aaf1181da7378c43
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c5053ade39f966f2fbd18b94076d363848027bfe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="view-or-change-algorithm-parameters"></a>檢視或變更演算法參數
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以變更您用來建立自訂模型的結果的資料採礦模型的演算法提供的參數。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
      如果您沒有在 **[值]** 資料行中輸入值， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用預設參數值。 **[範圍]** 資料行描述您可以輸入的可能值。  
   
-3.  按一下 **[確定]**。  
+3.  按一下 [確定] 。  
   
      演算法參數就會以新值設定。 要等到您重新處理採礦模型之後，參數變更才會反映在該採礦模型中。  
   
@@ -73,6 +71,6 @@ ms.lasthandoff: 12/08/2017
     ```  
   
 ## <a name="see-also"></a>請參閱  
- [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和操作說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

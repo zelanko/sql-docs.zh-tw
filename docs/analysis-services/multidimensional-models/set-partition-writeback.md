@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d2e7e571a9fd2b807375046653953098d722556d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-partition-writeback"></a>設定分割區回寫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果您啟用寫入的量值群組，使用者可以變更 cube 資料，在瀏覽，稱為回寫資料表，不在 cube 資料或來源資料的個別資料表中儲存的變更時。 瀏覽可寫入分割區的使用者，會看到所有變更在分割區的回寫資料表中產生的結果。  
@@ -62,7 +59,7 @@ ms.lasthandoff: 12/08/2017
  您可以將分割區之回寫資料表中的資料轉換為分割區。 此程序會讓回寫資料表變成新分割區的事實資料表。  
   
 > [!CAUTION]  
->  不正確地使用分割區會造成不正確的 Cube 資料。 如需詳細資訊，請參閱[建立及管理本機資料分割 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)。  
+>  不正確地使用分割區會造成不正確的 Cube 資料。 如需詳細資訊，請參閱 [建立及管理本機分割區 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)。  
   
  將回寫資料表轉換為分割區也會造成禁止寫入分割區。 分割區之資料格的所有未限制讀取/寫入原則和讀取/寫入權限會停用，且使用者將無法變更已顯示的 Cube 資料。 (已停用未限制讀取/寫入原則或已停用讀取/寫入權限的使用者仍然可以瀏覽 Cube)。讀取和意外讀取權限不受影響。  
   

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8aa30485bdddd9dffc053268bb205dc950157a7e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 85bef4a254d86857d682dae062c7fc546891581d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>註冊伺服器群組中的 Analysis Services 執行個體
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果您有大量 Analysis Services 伺服器執行個體，您可以在 Management Studio 可讓伺服器管理更容易建立伺服器群組。 伺服器群組的目的是在管理工作空間內提供一組相關伺服器之間的接近性。 例如，假設您負責管理十個不同的 Analysis Services 執行個體。 依伺服器模式、開機時間準則，或依部門或地區的伺服器群組方式，可讓檢視及連接到共用相同特性的執行個體更輕鬆。 您還可以加入有助於記住伺服器用法的描述性資訊。  

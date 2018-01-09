@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 40f6c134370c390cb88e9eb52434da6473ca3b57
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1acf124467d3a6c5cdeb35a1d617e0dbc9d34d63
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discretization-methods-data-mining"></a>分隔方法 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]用來建立資料採礦模型中的某些演算法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]需要特定內容類型才能正確運作。 例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法無法使用連續資料行做為輸入，也無法預測連續值。 另外，有些資料行可能包含太多值，使得演算法不容易識別資料中的模式來建立模型。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
  下表描述您可用於分隔 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中之資料的方法。  
   
-|分隔方法|說明|  
+|分隔方法|描述|  
 |---------------------------|-----------------|  
 |**AUTOMATIC**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會決定要使用的分隔方法。|  
 |**CLUSTERS**|演算法會將資料分成群組，流程是先取樣定型資料、初始化為一些隨機點，然後使用 Expectation Maximization (EM) 群集方法來執行 Microsoft 群集演算法的數次反覆運算。 **CLUSTERS** 方法很有用，因為它在任何分佈曲線上都可以運作。 不過，它比其他分隔方法需要更多的處理時間。<br /><br /> 這個方法只能用於數值資料行。|  

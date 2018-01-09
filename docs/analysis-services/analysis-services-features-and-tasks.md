@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 72bf28a40f2314ec696eae6ce8b758010a0ad78e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dafe91acc4a753b9b6335d1b8b5bbd56c30586f7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services 功能及工作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Analysis Services 基本文件集被依照模型類型和伺服器模式，您可以專注於剛工具、 工作和您所安裝之模式中可用的功能。 您可以在執行個體管理中找到跨越多個模式的伺服器管理工作。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
  [Power Pivot for SharePoint &#40;SSAS&#41;](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Analysis Services](../analysis-services/analysis-services.md)   
  [Analysis Services 的新功能](../analysis-services/what-s-new-in-analysis-services.md)  
   

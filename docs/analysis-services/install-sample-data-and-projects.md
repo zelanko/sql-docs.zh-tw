@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e0372941de7d139b7e91f8e03a3ce6b903d05a9f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e73736896056f0d9b6a925292260243381046d34
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-sample-data-and-projects"></a>安裝 Sample Data and Projects 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]若要安裝的所有資料和專案檔案使用 Analysis Services 教學課程中使用的指示與本主題提供的連結。  
@@ -133,7 +133,7 @@ Analysis Services 多維度模型使用您從關聯式資料庫管理系統匯�
   
     -   第 10 課完成  
   
-4.  移除這些檔案的唯讀權限。 以滑鼠右鍵按一下上層資料夾 "Analysis Services Tutorial SQL Server 2012"，選取 [屬性]，並清除 [唯讀] 的核取方塊。 按一下 **[確定]**。 將變更套用到此資料夾、子資料夾和檔案。  
+4.  移除這些檔案的唯讀權限。 以滑鼠右鍵按一下上層資料夾 "Analysis Services Tutorial SQL Server 2012"，選取 [屬性]，並清除 [唯讀] 的核取方塊。 按一下 [確定] 。 將變更套用到此資料夾、子資料夾和檔案。  
   
 5.  啟動 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   

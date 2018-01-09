@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 57d2db22484a8c6a8b8301e11cbd4799aae6bd91
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ebaeba0db0daaf494533cafe03f89effff2fe792
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 課：建立新的表格式模型專案
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/08/2017
   
 完成本課程的估計時間： **10 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
 本主題是表格式模型撰寫教學課程的第一課。 若要完成這一課，您必須使用 SQL Server 執行個體上安裝 AdventureWorksDW 範例資料庫。 若要進一步了解，請參閱[表格式模型化 &#40;Adventure Works 教學課程 &#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>建立新的表格式模型專案  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
     根據預設，[方案名稱] 將與專案名稱相同，不過您可以輸入不同的方案名稱。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 5.  在**表格式模型設計師**對話方塊中，選取**整合式工作區**。  
   

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0da3079620f64d2c2b1def8225f359b6cb0d4454
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fbe96dfa6e17bda952dc2858c274df6dee231f02
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>關聯模型的採礦模型內容 (Analysis Services - 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題描述使用的模型專用的採礦模型內容[!INCLUDE[msCoName](../../includes/msconame-md.md)]關聯規則演算法。 如需與適用於所有模型類型採礦模型內容相關的一般及統計詞彙說明，請參閱 [採礦模型內容 &amp;#40;Analysis Services - 資料採礦&amp;#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題描述使用的模型專用的採礦模型內容[!INCLUDE[msCoName](../../includes/msconame-md.md)]關聯規則演算法。 如需與適用於所有模型類型採礦模型內容相關的一般及統計詞彙說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
   
 ## <a name="understanding-the-structure-of-an-association-model"></a>了解關聯模型的結構  
  關聯模型有簡單的結構。 每個模型都擁有代表模型及其中繼資料的單一父節點，而每個父節點則擁有項目集和規則的一般清單。 項目集和規則並非組織成樹狀結構，而是先以項目集排列，再以規則排列，如下列圖表所示。  
@@ -68,10 +66,10 @@ ms.lasthandoff: 12/08/2017
  NODE_TYPE  
  關聯模型僅輸出下列節點類型：  
   
-|節點類型識別碼|型別|  
+|節點類型識別碼|類型|  
 |------------------|----------|  
 |1 (模型)|根目錄或父節點。|  
-|7 (項目集)|項目集或屬性值組的集合。 範例:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 或<br /><br /> `Gender = Male`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。|  
+|7 (項目集)|項目集或屬性值組的集合。 範例:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 中的多個<br /><br /> `Gender = Male`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。|  
 |8 (規則)|定義項目之間關聯方式的規則。<br /><br /> 範例<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。|  
   
  NODE_CAPTION  
@@ -103,7 +101,7 @@ ms.lasthandoff: 12/08/2017
   
  **父節點** 包含下列模型相關資訊的逗號分隔清單：  
   
-|項目|說明|  
+|項目|描述|  
 |----------|-----------------|  
 |ITEMSET_COUNT|模型中所有項目集的計數。|  
 |RULE_COUNT|模型中所有規則的計數。|  

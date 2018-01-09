@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,18 +20,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2255369fe9a3e8c74088a13efba5eaab19f7bb53
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a716193df7a74d9845cc8f70434bb525883f5936
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logistic-regression-model-query-examples"></a>羅吉斯迴歸模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您建立針對資料採礦模型的查詢時，您可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或您可以建立預測查詢來使用新資料做出預測，模型中使用的模式。  
   
  本節說明如何針對以 Microsoft 羅吉斯迴歸演算法為基礎的模型建立查詢。  
   
- **Content Queries**  
+ **內容查詢**  
   
  [使用資料採礦結構描述資料列集擷取模型參數](#bkmk_Query1)  
   
@@ -99,12 +97,12 @@ FROM [TM_Logistic Regression].CONTENT
   
 |t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Age|遺漏|0|0|0|1|  
-|Age|45.43491192|17484|1|126.9544114|3|  
-|Bike Buyer|遺漏|0|0|0|1|  
+|Age|Missing|0|0|0|@shouldalert|  
+|Age|45.43491192|17484|@shouldalert|126.9544114|3|  
+|Bike Buyer|Missing|0|0|0|@shouldalert|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|1|8615|0.492736216|0|4|  
-|Commute Distance|遺漏|0|0|0|1|  
+|Bike Buyer|@shouldalert|8615|0.492736216|0|4|  
+|Commute Distance|Missing|0|0|0|@shouldalert|  
 |Commute Distance|5-10 英哩|3033|0.173472889|0|4|  
   
  實際查詢會傳回更多資料列，但是，這個範例說明關於輸入所提供之資訊的類型。 若為離散輸入，每個可能值都會列在資料表中。 若為連續值輸入 (例如 Age)，就無法列出完整清單，因此輸入會離散化為平均值。 如需如何使用臨界統計資料節點中資訊的詳細資訊，請參閱 [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  

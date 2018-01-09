@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 68f500896e8dffa6982c2f15ac3e431bebc4df87
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9d10942e6942e4c307bc6c8fed9c7cb391d5f368
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>課程 6-2-定義命名集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]命名的集是傳回一組維度成員的多維度運算式 (MDX) 運算式。 您可以定義命名集，將它們儲存為 Cube 定義的一部分；也可以在用戶端應用程式建立命名集。 您可以結合 Cube 資料、算術運算子、數字和函數，來建立命名集。 使用者可以在用戶端應用程式中將命名集用於 MDX 查詢，也可以用於定義 Subcube 中的集合。 Subcube 是指交叉聯結集的集合，它會將 Cube 空間限制為針對後續陳述式定義的子空間。 定義限制的 Cube 空間是 MDX 指令碼的基本概念。  
@@ -141,7 +141,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-lesson"></a>下一課  
 [第 7 課：定義關鍵效能指標 &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [[新增命名集]](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [建立命名集](../analysis-services/multidimensional-models/create-named-sets.md)  
   

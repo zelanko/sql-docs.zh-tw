@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: de2922988f9a53f6ec4eae3d563d0e29ad565ac0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 19d9c5cae52ed4eee5ee553905475bcbf62c38c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>課程 2-5-部署 Analysis Services 專案
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]若要檢視中物件的 cube 和維度資料[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教學課程 cube 中的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教學課程專案中，您必須將專案部署到指定的執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，然後處理 cube 及其維度。 「部署」 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案會在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體中建立已定義的物件。 「處理」 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體中的物件會將資料從基礎資料來源複製到 Cube 物件中。 如需詳細資訊，請參閱[部署 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) 和[設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/08/2017
     > [!NOTE]  
     > 如果您想要將專案部署到的具名執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]本機電腦上或遠端伺服器上的執行個體，變更**伺服器**適當的執行個體的屬性名稱，例如\< *ServerName**>\\<**InstanceName**>*。  
   
-3.  按一下 **[確定]**。  
+3.  按一下 [確定] 。  
   
 4.  在方案總管中，以滑鼠右鍵按一下 [Analysis Services Tutorial] 專案，然後按一下 [部署]。 您可能需要稍等一下。  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [瀏覽 Cube](../analysis-services/lesson-2-6-browsing-the-cube.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [部署 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
 [設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   

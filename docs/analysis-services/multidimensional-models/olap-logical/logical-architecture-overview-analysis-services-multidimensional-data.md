@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services 會決定不同類型的 Analysis Services 模型所使用的記憶體架構和執行階段環境的伺服器部署模式運作。 伺服器模式是在安裝期間決定。 **多維度和資料採礦模式**支援傳統 OLAP 和資料採礦。 **表格式模式**支援表格式模型。 **SharePoint 整合的模式**做為已安裝的 Analysis Services 的執行個體是指[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint，使用載入和查詢 Excel 或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]活頁簿內的資料模型。  
@@ -119,12 +117,12 @@ ms.lasthandoff: 12/08/2017
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|Packages|最後一個|  
-|3516987|1|6|1|15|年 1 月-10-99|  
-|3554790|1|6|1|40|年 1 月 19-99 之間|  
-|3572673|1|6|1|34|Jan-27-99|  
-|3600974|1|6|1|45|Feb-02-99|  
-|3645541|1|6|1|20|Feb-09-99|  
-|3674906|1|6|1|36|Feb-17-99|  
+|3516987|@shouldalert|6|@shouldalert|15|年 1 月-10-99|  
+|3554790|@shouldalert|6|@shouldalert|40|年 1 月 19-99 之間|  
+|3572673|@shouldalert|6|@shouldalert|34|Jan-27-99|  
+|3600974|@shouldalert|6|@shouldalert|45|Feb-02-99|  
+|3645541|@shouldalert|6|@shouldalert|20|Feb-09-99|  
+|3674906|@shouldalert|6|@shouldalert|36|Feb-17-99|  
   
  上表中，每個資料列都有相同的值**RouteKey**， **SourceKey**，和**TimeKey**資料行，表示這些資料列，會造成相同的 cube 資料格。  
   

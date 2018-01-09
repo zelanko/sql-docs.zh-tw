@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4109707f30b6569c9d67bf6259e61958ff1a6251
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 86c5f345dc963667ea5b05177e84517609f7e5a7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI 精靈-將維度智慧加入維度中
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]將維度智慧增強功能加入至 cube 或維度，以指定維度的標準商務類型。 此增強功能同時也會指定維度屬性的對應類型。 用戶端應用程式在分析資料時可以使用這些類型規格。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 12/08/2017
  在精靈的第一個 [設定維度智慧選項] 頁面上，指定要套用維度智慧的維度。 加入到此選取維度的維度智慧增強功能，會產生維度的變更。 包含選取之維度的所有 Cube，都會繼承這些變更。  
   
 > [!NOTE]  
->  如果選取 [帳戶] 作為維度，您將會指定維度的帳戶智慧。 如需詳細資訊，請參閱[將帳戶智慧加入至維度中](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md)。  
+>  如果選取 [帳戶] 作為維度，您將會指定維度的帳戶智慧。 如需詳細資訊，請參閱 [將帳戶智慧加入至維度中](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md)。  
   
 ## <a name="specifying-dimension-attributes"></a>指定維度屬性  
  在 [定義維度智慧] 頁面的 [維度類型] 清單中，您的選取項目會設定維度的 **Type** 屬性。 **Type** 屬性設定會將維度內容的相關資訊提供給伺服器和用戶端應用程式。 部份設定只為用戶端應用程式提供指導；這些設定是選擇性的。 其他設定 (例如帳戶或時間) 決定特定的行為，並可能對實作特殊商業智慧增強功能是必要的。 例如，SQL Server Management Studio 使用維度類型來識別貨幣維度，以及設定適當的貨幣轉換規則。 [維度類型] 的預設值為 [一般]，不會對維度內容做任何假設。  

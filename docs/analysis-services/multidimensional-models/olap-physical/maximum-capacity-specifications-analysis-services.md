@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f0ababa5bb354b91df756bd5998967fb9b6ddf3a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量規格 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]下表指定大小和數目上限中定義之各種物件[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]不同的伺服器部署模式下的元件。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_OLAP"></a>多維度和資料採礦 (DeploymentMode = 0)  
  MOLAP 儲存模式，會同時儲存資料和中繼資料，對於檔案大小另有實體限制。 字串存放檔案的預設大小上限為 4 GB。 如果您需要更大的字串存放檔案，可以指定不同的字串儲存體架構。 如需詳細資訊，請參閱[設定的維度和分割區的字串儲存體](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)。  
   
-|物件|大小/數目上限|  
+|Object|大小/數目上限|  
 |------------|----------------------------|  
 |執行個體中的資料庫|2^31-1 = 2,147,483,647|  
 |資料庫中的維度|2^31-1 = 2,147,483,647|  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
   
-|物件|大小/數目上限|  
+|Object|大小/數目上限|  
 |------------|----------------------------|  
 |執行個體中的資料庫|2^31-1 = 2,147,483,647|  
 |資料庫中的資料表|2^31-1 = 2,147,483,647|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_vertipaq"></a>表格式 (DeploymentMode = 2)  
 以下是理論上的限制。 在較低的數字，將會降低效能。   
 
-|物件|大小/數目上限|  
+|Object|大小/數目上限|  
 |------------|----------------------------|  
 |執行個體中的資料庫|16,000|  
 |結合的資料表和資料庫中的資料行的數目|16,000|  

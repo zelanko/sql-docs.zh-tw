@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1fa363dc4d38a68a7cf4c9a62a501fb48c3aa0fc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fdc973309fe87792aa135813c23e4e68d7650043
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="designing-aggregations-xmla"></a>設計彙總 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]彙總設計與相關聯的特定量值群組，並確定資料分割在儲存彙總時，會使用相同的結構資料分割。 資料分割使用相同的儲存體結構可讓您輕鬆地定義合併資料分割可以稍後使用[MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 如需彙總設計的詳細資訊，請參閱[彙總和彙總設計](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
@@ -110,12 +108,12 @@ ms.lasthandoff: 12/08/2017
 ## <a name="returning-design-statistics"></a>傳回設計統計資料  
  當**DesignAggregations**命令會將控制權還給用戶端應用程式，此命令會傳回包含單一資料列代表命令的設計統計資料的資料列集。 資料列集包含下表中列出的資料行。  
   
-|資料行|資料類型|Description|  
+|「資料行」|資料類型|描述|  
 |------------|---------------|-----------------|  
 |步驟|Integer|在將控制權還給用戶端應用程式之前，命令所使用的步驟數目。|  
 |Time|長整數|在將控制權還給用戶端應用程式之前，命令所花費的毫秒數目。|  
 |Optimization|Double|在將控制權還給用戶端應用程式之前，命令所達成的效能改善估計百分比。|  
-|儲存空間|長整數|在將控制權還給用戶端應用程式之前，命令所使用的位元組估計數目。|  
+|Storage|長整數|在將控制權還給用戶端應用程式之前，命令所使用的位元組估計數目。|  
 |Aggregations|長整數|在將控制權還給用戶端應用程式之前，命令所定義的彙總數目。|  
 |LastStep|布林|指出在資料列集中的資料是否代表設計程序中的最後一個步驟。 如果**具體化**命令的屬性已設為 true，此資料行的值設定為 true。|  
   

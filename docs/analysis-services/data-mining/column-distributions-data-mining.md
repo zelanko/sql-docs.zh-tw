@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 19954e49cd65f9a4307da2ecda03fefa1d2b14bd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 98ba6df252c33f55aa5081ed6714c316c0ad1c4b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="column-distributions-data-mining"></a>資料行散發 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您可以定義在採礦結構中，以影響您建立採礦模型時演算法如何處理這些資料行中的資料的資料行散發。 針對某些演算法，若已知資料行包含值的通用散發，則在處理模型前先定義任何連續資料行的散發很有用。 如果您未定義散發，則產生之採礦模型所做出的預測，可能不如定義了散發的預測那般精確，因為演算法能用來解譯資料的資訊比較少。  
@@ -57,8 +55,8 @@ ms.lasthandoff: 12/08/2017
 ## <a name="see-also"></a>請參閱  
  [內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
  [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [離散化方法 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/discretization-methods-data-mining.md)   
- [分佈 &#40; DMX &#41;](../../dmx/distributions-dmx.md)   
+ [離散化方法 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/discretization-methods-data-mining.md)   
+ [分佈 & #40; DMX & #41;](../../dmx/distributions-dmx.md)   
  [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   

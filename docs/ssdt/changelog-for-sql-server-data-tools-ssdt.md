@@ -1,9 +1,9 @@
 ---
 title: "SQL Server Data Tools (SSDT) 的變更記錄 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/19/2017
+ms.date: 12/22/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
@@ -17,16 +17,102 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 06b6fbdbf9d53273abe660ca6d16ba2afb51fa26
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 98c27d595b2cb849bdca3ccd72bd51cc8378a8b7
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 這是 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) 的變更記錄檔。  
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
+
+## <a name="ssdt-for-visual-studio-2017-1551"></a>適用於 Visual Studio 2017 (15.5.1) 的 SSDT
+組建編號︰14.0.16148.0
+  
+### <a name="whats-new"></a>新功能
+
+Visual Studio 2017 (15.5.1) 是與 15.5.0 版相同的版本，但安裝程式的下列 Bug 修正除外：
+
+1.  修正安裝程式在 SQL Server Integration Services 後續安裝上停止回應的問題。
+2.  修正安裝程式因下列錯誤訊息而失敗的問題：「不支援所要求的中繼檔作業 (0x800707D3)」。
+
+除了這兩個 Bug 修正之外，15.5.0 的下列詳細資料仍然會套用至 15.5.1
+
+## <a name="ssdt-for-visual-studio-2017-1550"></a>適用於 Visual Studio 2017 (15.5.0) 的 SSDT
+組建編號︰14.0.16146.0
+  
+### <a name="whats-new"></a>新功能
+
+適用於 Visual Studio 2017 (15.5.0) 的 SSDT 會從預覽移至正式運作 (GA)。
+
+**安裝程式**
+1. 安裝程式 UI 已經當地語系化。
+1. 將圖示取代為較高品質的版本。
+
+**Integration Services (IS)**
+1. 在 ADF 中部署至 Azure SSIS IR 時，已在 [部署精靈] 中新增套件驗證步驟，這可探索要在 Azure SSIS IR 中執行之 SSIS 套件中的潛在相容性問題。 如需詳細資訊，請參閱[驗證部署到 Azure 的 SSIS 套件](..\integration-services\lift-shift\ssis-azure-validate-packages.md)。
+1. 已將 SSIS 延伸模組當地語系化。
+
+### <a name="bug-fixes"></a>錯誤修正
+
+**Integration Services (IS)**
+1. 已修正 OLEDB 和 ADO.NET 連線管理員版面配置損毀的問題。
+2. 已修正嘗試編輯維度處理工作時引發找不到組件錯誤的問題。
+
+### <a name="known-issues"></a>已知問題
+
+ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+
+
+
+## <a name="ssdt-174-for-visual-studio-2015"></a>適用於 Visual Studio 2015 的 SSDT 17.4
+組建編號︰14.0.61712.050
+
+### <a name="whats-new"></a>新功能
+
+**Analysis Services (AS) 專案**
+- 已在表格式專案中新增三個新的選項 (在 [選項] > [Analysis Services 表格式] > [資料匯入] 下方)：
+  - 啟用舊版資料來源 - 可讓使用者在較新的相容性模式中建立較舊的「1200 相容性模式」資料來源。
+  - 自動類型偵測 - 啟用時，現代資料來源的查詢編輯器將在載入非結構化查詢時嘗試偵測其資料類型。 如果偵測成功，可能會將新的步驟新增至查詢。
+  - 執行背景分析 - 啟用時，如果載入查詢以分析查詢的輸出結構描述，則現代資料來源的查詢編輯器將對資料來源執行查詢。
+
+**Integration Services (IS)**
+- 在 ADF 中部署至 Azure SSIS IR 時，已在 [部署精靈] 中新增套件驗證步驟，這可探索要在 Azure SSIS IR 中執行之 SSIS 套件中的潛在相容性問題。 如需詳細資訊，請參閱[驗證部署到 Azure 的 SSIS 套件](..\integration-services\lift-shift\ssis-azure-validate-packages.md)。
+
+
+### <a name="bug-fixes"></a>錯誤修正
+
+**Analysis Services (AS) 專案：**
+- 已修正將模型變更存回 TFS 時可能導致未處理例外狀況的問題。
+- 已修正將具有複雜 M 運算式的資料表新增至 1400 模型時造成例外狀況的問題。
+- 已修正在模型圖表檢視中搜尋中繼資料時可能造成 Visual Studio 損毀的問題。
+- 已修正將變更儲存至資料分割 M 查詢時可能導致從資料表定義中移除計算結果欄的 1400 模型問題。
+- 已修正在 [取得資料]\[資料表編輯器 UI] 的 1400 模型上使用重新命名查詢時可能在驗證與目前資料模型的相容性時凍結的問題。
+- 已修正將 1400 模型部署至 Azure Analysis Service 時造成遺漏 Newtonsoft 組件參考的問題。
+- 已修正導致在某些情況下透過 PQ 將資料匯入至 1400 模型時發生錯誤的問題。
+- 已修正在設定 Windows 調整時出現的 PowerQuery 使用者介面對話方塊調整問題。
+- 已修正重新命名角色問題。
+- 已修正可能導致在某些情況下未將變更適當地儲存\同步處理的專案設定問題。
+- 已修正 PowerQuery 編輯器中已自動新增「變更類型」步驟的問題。
+- 已修正在切換至\自整合式工作區模式後開啟 BIM 檔案時導致錯誤的問題。
+- 表格式模型中的資料來源現在可看見 MaxConnections 屬性。
+- 增加 PowerQuery 編輯器視窗的初始大小。
+- PowerQuery 編輯器中 "Source" 這類 M 查詢關鍵字現在會顯示為當地語系化。
+- 使用 1400 模型和結構化資料來源而不需要輸入每個所編輯資料表的相同認證時的快取認證。
+
+**RS 專案：**
+- 已修正防止在多報表專案中部署單一報表的問題
+- 已修正可能導致部署問題的共用資料來源問題
+- 已修正復原管理員在程式碼檢視、設計檢視與查詢編輯器視窗之間切換時可能損毀的問題
+- 已修正可能導致參數窗格在執行階段錯誤之後消失的問題
+- 已修正可能會讓報表專案遺失原始檔控制對應的問題
+
+**Integration Services：**
+- 已修正可能在 Analysis Services 處理工作上切換連線時發生的問題
+- 已修正未適當地當地語系化一些工作/元件的問題。
+- 已修正套用可新增 \__$command\_id 資料行之 CDC 的 SQL 修正程式之後的CDC 元件中斷問題。
 
 
 ## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>適用於 Visual Studio 2017 (15.4.0 預覽) 的 SSDT
@@ -271,7 +357,7 @@ ms.lasthandoff: 12/05/2017
         - 啟用舊版重新導向 (預設值為 false - 設為 true 時，交互式 Web 應用程式引擎會遵循可能不安全的 HTTP 重新導向。  例如，從 HTTPS 至 HTTP URI 的重新導向)  
         - 以 Null 傳回錯誤值 (預設值為 false - 設為 true 時，資料格層級的錯誤會以 null 傳回。 設為 false 時，所引發的例外狀況是資料格包含錯誤)  
     - 使用 PowerQuery 的額外資料來源 (檔案資料來源)
-        - Excel 
+        - [匯出] 
         - 文字/CSV 
         - XML 
         - Json 

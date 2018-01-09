@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 87c14f37d8688b0f93b59e7e2dd7e31f57d0afc1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8b6d074b6aee9d6fe70258f22e95b48cb690419c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>第 9 課：定義檢視方塊和翻譯
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在這一課，您要學習定義檢視方塊和翻譯。 您可以定義檢視方塊，來減少 Cube 明顯的複雜性，以及定義翻譯，讓使用者自己選擇語言來檢視 Cube 中繼資料。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-lesson"></a>下一課  
 [第 10 課：定義管理角色](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [Analysis Services 教學課程案例](../analysis-services/analysis-services-tutorial-scenario.md)  
 [多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [檢視方塊](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  

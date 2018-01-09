@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c2a32026cfa52b21ed994d8b218d5b80f5b0c03f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dda2fe632e3a4cae0f36d766d4778f5ff910d649
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>在資料來源中產生非時間資料表來建立維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您可以使用 「 維度精靈 」，在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不使用現有的資料來源建立維度。 方法是，選取精靈之 [選取建立方法] 頁面的 [在資料來源中產生非時間資料表] 選項。 若要在基礎資料來源中建立新的維度資料表，您必須擁有在基礎資料來源中建立物件的權限。 在沒有預先定義之資料來源檢視的情況下定義維度時，可以從頭開始定義維度或使用維度範本。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 12/08/2017
   
 -   客戶  
   
--   日期  
+-   date  
   
 -   部門  
   
@@ -98,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
  當您選取 [這是變更維度] 核取方塊時，[維度精靈] 會定義下表中指出的屬性：  
   
-|Attribute|型別|  
+|attribute|類型|  
 |---------------|----------|  
 |SCD OriginalID|SCDOriginalID|  
 |SCD 結束日期|SCDEndDate|  

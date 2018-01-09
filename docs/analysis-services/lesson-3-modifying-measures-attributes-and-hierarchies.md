@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a65107e5281bfa85e92a1c1ca27f9213fdd69ded
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e5c678f53cbf6ffe66d8713e7c847137330eb7e1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>第 3 課：修改量值、屬性和階層
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]定義初始 cube 之後, 您就可以開始改善的實用性與 cube 的易懂性項目。 方法是，在各種層級加入支援導覽和彙總的階層、將格式套用至特定量值，以及定義計算和關聯性。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/08/2017
 [瀏覽已部署的 Cube](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
 在這項工作中，您會使用 Cube 設計師的瀏覽器來瀏覽 Cube 資料。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [Analysis Services 教學課程案例](../analysis-services/analysis-services-tutorial-scenario.md)  
 [多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   

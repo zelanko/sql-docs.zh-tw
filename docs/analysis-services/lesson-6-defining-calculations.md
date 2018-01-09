@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6ad53ac85c3ea996714684d4cc0fb114f5317697
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1e7d887c9c25ee62cf9fe37ca16c9538c3c646db
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 課：定義計算
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在這一課，您要學習定義計算，也就是多維度運算式 (MDX) 運算式或指令碼。 計算可讓您定義導出成員、命名集，以及執行其他指令碼命令，以便擴充 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 的功能。 例如，您可以執行指令碼命令，先定義 Subcube，然後再將計算指派給 Subcube 中的資料格。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-lesson"></a>下一課  
 [第 7 課：定義關鍵效能指標 &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [Analysis Services 教學課程案例](../analysis-services/analysis-services-tutorial-scenario.md)  
 [多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [建立命名集](../analysis-services/multidimensional-models/create-named-sets.md)  

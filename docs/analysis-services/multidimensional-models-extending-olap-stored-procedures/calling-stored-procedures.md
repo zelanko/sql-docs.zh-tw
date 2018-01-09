@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 48c35e5583369335f5d9ab6215faa4fd86d66f6a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0ea0a687bd6e5482211a4f953c0f7565c483a586
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calling-stored-procedures"></a>呼叫預存程序
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在伺服器上，或從用戶端應用程式，可以呼叫預存程序。 在這兩種情況下，預存程序永遠會在伺服器上執行，不論是伺服器或資料庫的內容。 執行預存程序並不需要特殊的權限。 組件將預存程序加入到伺服器或資料庫內容後，任何使用者都可以執行預存程序，只要使用者的角色允許該預存程序執行的動作。  

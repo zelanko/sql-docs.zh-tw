@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016 Preview
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7deb7ccd395a6dda75ac443f17f4e2b516b99c11
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a401073a7bcf0d7e8559c65ab6b05d25bd2a681e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-programming"></a>資料採礦程式設計
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]如果您發現的內建的工具和檢視器中的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]不符合您的需求，您可以擴充的電源[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]透過編碼自己的延伸模組。 在這種方法中，您有兩種選擇：  
@@ -67,14 +64,14 @@ ms.lasthandoff: 12/08/2017
  [使用 ADOMD.NET 來開發](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
  介紹 ADOMD.NET 用戶端和伺服器程式設計物件。  
   
- [使用分析管理物件 &#40; 開發AMO &#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [使用分析管理物件 & #40; 開發AMO & #41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  介紹 AMO 程式設計程式庫。  
   
- [開發使用 Analysis Services 指令碼語言 &#40;ASSL &#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [開發使用 Analysis Services 指令碼語言 & #40;ASSL & #41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  介紹 XML for Analysis (XMLA) 和它的延伸模組。  
   
 ## <a name="see-also"></a>請參閱  
  [Analysis Services 開發人員文件](../analysis-services/analysis-services-developer-documentation.md)   
- [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)  
+ [資料採礦延伸模組 & #40; DMX & #41;參考](../dmx/data-mining-extensions-dmx-reference.md)  
   
   

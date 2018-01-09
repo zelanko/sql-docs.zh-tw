@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b065a7c059cf4c3e7ba79c0c03ef7b96d4928bf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 60d9d0bc1d8f78e4baa7c2d36291c76e00c88015
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-model-viewers"></a>資料採礦模型檢視器
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]中的資料採礦模型定型之後[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您可以瀏覽該模型來尋找值得參考的趨勢。 因為採礦模型的結果很複雜，而且其原始格式不易了解，所以用視覺化方式調查資料通常是了解演算法在資料內探索的規則和關聯性的最簡單方式。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
   
  雖然自訂檢視器的設計目的是要了瀏覽及了解模型，但是當您已經了解此模型而且想要從特定節點擷取統計資料或規則時，一般檢視器會更為實用。 例如，當您想要檢視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在分析期間擷取之有關模式與統計資料的詳細資訊 (例如節點的機率或迴歸公式) 時，您會使用一般檢視器。  
   
- 您也可以使用 DMX 撰寫 *「內容查詢」* (Content Query)，以取得在此檢視器中呈現的所有資訊。 如需詳細資訊，請參閱[內容查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)。  
+ 您也可以使用 DMX 撰寫 *「內容查詢」* (Content Query)，以取得在此檢視器中呈現的所有資訊。 如需詳細資訊，請參閱 [內容查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  下列主題會更詳細描述每一個檢視器以及如何解譯其中的資訊。  

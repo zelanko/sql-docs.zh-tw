@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3042b80feb8f40c7f371e7b42fd7e63e86618f48
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 78e67d346c451c258e806e6f888aef096e7d4256
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-services-and-data-sources"></a>資料採礦服務與資料來源
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料採礦需要的 SQL Server Analysis Services 執行個體的連接。 資料採礦不需要 Cube 中的資料，而且建議您使用關聯式來源；但是資料採礦會使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎所提供的元件。  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="xmla-listener"></a>XMLA 接聽程式  
  XMLA 接聽程式元件會處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及其用戶端之間的所有 XMLA 通訊。 msmdsrv.ini 檔中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [通訊埠] 組態設定可用來指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體所接聽的通訊埠。 這個檔案中 0 的值表示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會接聽預設通訊埠。 除非另有指定，否則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用下列預設 TCP 通訊埠：  
   
-|通訊埠|說明|  
+|通訊埠|描述|  
 |----------|-----------------|  
 |2383|預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。|  
 |2382|其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的重新導向程式。|  

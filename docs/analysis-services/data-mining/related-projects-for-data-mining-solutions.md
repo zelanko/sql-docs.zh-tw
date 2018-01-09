@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d197240962d834b3da6c6e1dbdd1fb224a995192
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>資料採礦方案的相關專案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]所需的資料採礦方案的最小值是資料採礦專案，它會定義資料來源、 資料來源檢視、 採礦結構和採礦模型。 但是，當使用資料採礦模型進行每日決策時，資料採礦一定要與預測性分析方案的其他部分整合，該方案可包含這些程序和元件：  

@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffbdb114-e7a5-4145-bb8f-2eb97720ea96
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 212084dc9a8d4bea618f4f172d8db3f2ee25ea4a
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: c45a6525ef9fa63141ddc4c594d84e4f9e118ee3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="monitoring-r-services"></a>監視 R Services
   本節提供使用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 時的這些常見監視工作相關資訊：  

@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23c043a3c35dd63927596c5bba0d9b8cf8d76bf4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>MDX 資料格屬性 FORMATTED_VALUE 屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]FORMATTED_VALUE 屬性是建置在儲存格的 VALUE、 FORMAT_STRING 和 LANGUAGE 屬性互動。 本主題將說明這些屬性如何互動，以便建立 FORMATTED_VALUE 屬性。  
@@ -87,9 +84,9 @@ ms.lasthandoff: 12/08/2017
   
 |成員|FORMATTED_VALUE|說明|  
 |------------|----------------------|-----------------|  
-|A|$5,040.00|FORMAT_STRING 設定為 `Currency` 而且 LANGUAGE 為 `1033`(從系統地區設定值繼承而來)。|  
+|只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，|$5,040.00|FORMAT_STRING 設定為 `Currency` 而且 LANGUAGE 為 `1033`(從系統地區設定值繼承而來)。|  
 |B|5.040,00|FORMAT_STRING 設定為 `Currency` (繼承自 A) 而且 LANGUAGE 明確設定為 `1034` (西班牙)，因此是歐元符號、不同的小數分隔符號和不同的千位分隔符號。|  
-|C|$5.040,00|FORMAT_STRING 設定為 `$#,##0.00` (從 A 覆寫貨幣)，而且 LANGUAGE 明確設定為 `1034` (西班牙)。 因為 FORMAT_STRING 屬性明確將貨幣符號設定為 $，所以會使用 $ 符號表示 FORMATTED_VALUE。 但是，因為 `.` (點) 和 `,` (逗號) 分別為小數分隔符號和千位分隔符號的預留位置，所以語言規格會影響它們產生針對小數分隔符號和千位分隔符號所當地語系化的輸出。|  
+|c|$5.040,00|FORMAT_STRING 設定為 `$#,##0.00` (從 A 覆寫貨幣)，而且 LANGUAGE 明確設定為 `1034` (西班牙)。 因為 FORMAT_STRING 屬性明確將貨幣符號設定為 $，所以會使用 $ 符號表示 FORMATTED_VALUE。 但是，因為 `.` (點) 和 `,` (逗號) 分別為小數分隔符號和千位分隔符號的預留位置，所以語言規格會影響它們產生針對小數分隔符號和千位分隔符號所當地語系化的輸出。|  
 |D|5.04E+03|FORMAT_STRING 設定為 `Scientific` 而且 LANGUAGE 設定為 `1033`(從系統地區設定值繼承而來)，因此 `.` (點) 是小數分隔符號。|  
 |E|5,04E+03|FORMAT_STRING 設定為 `Scientific` 而且 LANGUAGE 明確設定為 `1034,` ，因此 `,` (逗號) 是小數分隔符號。|  
 |F|50.40%|FORMAT_STRING 設定為 `Percent` 而且 LANGUAGE 設定為 `1033`(從系統地區設定值繼承而來)，因此 `.` (點) 是小數分隔符號。<br /><br /> 請注意，VALUE 已經從 5040 變更為 0.5040|  
@@ -139,7 +136,7 @@ ms.lasthandoff: 12/08/2017
 |------------|----------------------|-----------------|  
 |A|3/12/1959 6:30:00 AM|FORMAT_STRING 由 CDate() 運算式隱含地設定為 `General Date` ，而且 LANGUAGE 是 `1033` (英文)，這是從系統地區設定值繼承而來。|  
 |B|Thursday, March 12, 1959|FORMAT_STRING 明確設定為 `Long Date` 而且 LANGUAGE 為 `1033` (英文)，這是從系統地區設定值繼承而來。|  
-|C|12/03/1959 6:30:00|FORMAT_STRING 明確設定為 `General Date` 且 LANGUAGE 明確設定為 `1034` (西班牙文)。<br /><br /> 請注意，當與美國格式樣式相比較時，就會切換月和日。|  
+|c|12/03/1959 6:30:00|FORMAT_STRING 明確設定為 `General Date` 且 LANGUAGE 明確設定為 `1034` (西班牙文)。<br /><br /> 請注意，當與美國格式樣式相比較時，就會切換月和日。|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING 明確設定為 `Long Date` 且 LANGUAGE 明確設定為 `1034` (西班牙文)。<br /><br /> 請注意，月和星期幾是以西班牙文描述。|  
 |E|1959/03/12 6:30:00|FORMAT_STRING 明確設定為 `General Date` 且 LANGUAGE 明確設定為 `1041` (日文)。<br /><br /> 請注意，日期現在的格式為：Year/Month/Day Hour:Minutes:Seconds|  
 |F|1959年3月12日|FORMAT_STRING 明確設定為 `Long Date` 且 LANGUAGE 明確設定為 `1041` (日文)。|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Analysis Services Scripting Language Reference
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbc3abc3e29109a5d41dd60d799e7418c26efa43
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 00661a3edba892563837af0c20f5015aa9d259dc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-scripting-language-assl-for-xmla"></a>Analysis Services 指令碼語言 (ASSL xmla)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]應用程式與通訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用 XML 命令和物件的描述。 「Analysis Services 指令碼語言」(ASSL) 代表這個 XML 方言的物件定義語言部分。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[Analysis Services 指令碼語言 XML 元素階層 &#40;ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)|ASSL 中元素之階層的詳細圖表。|  
 |[Analysis Services 指令碼語言 XML 資料類型階層 &#40;ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)|ASSL 中資料類型之繼承階層的詳細圖表。|  

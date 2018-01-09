@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,11 +31,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 905a45d6852a7e5e1ed469e65f6082f0282de985
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 03ac65aa1ad896022d12735e4e8f64c132b03734
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-concepts"></a>資料採礦概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料採礦是探索可付諸行動之資訊從大型資料集的程序。 資料採礦使用數學分析衍生存在於資料中的模式和趨勢。 傳統資料瀏覽一般無法探索這些模式，因為這些關聯性太複雜或因為沒有太多資料。  
@@ -159,7 +157,7 @@ ms.lasthandoff: 12/08/2017
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可協助您將資料分割為訓練資料集與測試資料集，讓您可以針對相同的資料，正確評估所有模型的效能。 您會使用訓練資料集來建立模型，並建立預測查詢，使用測試資料集來測試模型的精確度。 此資料分割，才可以建立採礦模型時自動。 如需詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
- 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用資料採礦設計師的檢視器，來瀏覽演算法所探索的趨勢和模式。 如需詳細資訊，請參閱 [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)。 您也可以使用設計師中的工具 (例如增益圖和分類矩陣)，來測試模型建立預測的效能。 若要確認模型是否專屬於您的資料，或者模型是否可用於針對一般母體進行推斷，您可以使用稱為*「交叉驗證」*(Cross-Validation) 的統計技巧，自動建立資料的子集，並對照每個子集測試模型。 如需詳細資訊，請參閱[測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
+ 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用資料採礦設計師的檢視器，來瀏覽演算法所探索的趨勢和模式。 如需詳細資訊，請參閱 [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)。 您也可以使用設計師中的工具 (例如增益圖和分類矩陣)，來測試模型建立預測的效能。 若要確認模型是否專屬於您的資料，或者模型是否可用於針對一般母體進行推斷，您可以使用稱為*「交叉驗證」*(Cross-Validation) 的統計技巧，自動建立資料的子集，並對照每個子集測試模型。 如需詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
  如果您在 [建立模型](#BuildingModels) 步驟中所建立的模型沒有一個有好的執行效能，您可能必須要回到程序的上一個步驟，並重新定義問題或重新調查原始資料集內的資料。  
   

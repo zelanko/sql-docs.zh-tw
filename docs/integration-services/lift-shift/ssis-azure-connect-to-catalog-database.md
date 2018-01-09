@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10be16cbc85cccce51fafbcd733045c653b7be0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9b3a63d93d9d1e27147783f6c745addcd31fac8
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>連線至 Azure 上的 SSISDB 目錄資料庫
 
@@ -26,7 +26,10 @@ ms.lasthandoff: 11/20/2017
 - 資料庫名稱
 - 登入資訊 
 
-## <a name="prerequisites"></a>必要條件
+> [!IMPORTANT]
+> 目前，需要在 Azure Data Factory 第 2 版中建立 Azure-SSIS Integration Runtime，才能在 Azure SQL Database 上建立 SSISDB 目錄資料庫。 它是在 Azure 上執行 SSIS 套件的 Azure-SSIS IR。 如需詳細資訊和 PowerShell 指令碼範例，請參閱[將 SQL Server Integration Services 套件部署至 Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)。 
+
+## <a name="prerequisites"></a>Prerequisites
 開始之前，請確定您有 17.2 版或更新版本的 SQL Server Management Studio。 若要下載最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>從 Azure 入口網站取得連線資訊
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 
 2. **連線至伺服器**。 在 [連線至伺服器] 對話方塊中，輸入下列資訊：
 
-   | 設定       | 建議值 | Description | 
+   | 設定       | 建議值 | 描述 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | Database Engine | 這是必要的值。 |
    | **伺服器名稱** | 完整伺服器名稱 | 名稱的格式應如下所示：**mysqldbserver.database.windows.net**。 |
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/20/2017
 
 5. 在 [物件總管] 中，展開 [Integration Services 目錄]，然後展開 [SSISDB] 以檢視 SSIS 目錄資料庫中的物件。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 - 部署套件。 如需詳細資訊，請參閱[使用 SQL Server Management Studio (SSMS) 部署 SSIS 專案](../ssis-quickstart-deploy-ssms.md)。
 - 執行套件。 如需詳細資訊，請參閱[使用 SQL Server Management Studio (SSMS) 執行 SSIS 套件](../ssis-quickstart-run-ssms.md)。
 - 排程套件。 如需詳細資訊，請參閱[排程 Azure 上的 SSIS 套件執行](ssis-azure-schedule-packages.md)

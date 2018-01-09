@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -33,11 +31,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dab66f2e60e602f163f3c0986719655b6f89f3a5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>資料分割 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料分割是量值群組資料之一部分的容器。 無法從 MDX 查詢看到資料分割；所有的查詢都會反映量值群組的完整內容，不論針對此量值群組定義了多少個資料分割。 資料分割的資料內容是由資料分割的查詢繫結及分割運算式所定義。  

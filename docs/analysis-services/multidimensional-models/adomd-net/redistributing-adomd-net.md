@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8c87db9dd22e53f8335dcbbb4994cd0835dfafcb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6587a23e479522453feb01bf7190cebc9fb505df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="redistributing-adomdnet"></a>轉散發 ADOMD.NET
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]當您撰寫使用 ADOMD.NET 的應用程式時，您必須連同一起轉散發適當版本的 ADOMD.NET 應用程式。 若要轉散發 ADOMD.NET，請將 ADOMD.NET 安裝程式包含在應用程式的安裝程式內。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/08/2017
   
  將 ADOMD.NET 安裝程式包含在內之後，讓應用程式的安裝程式啟動 ADOMD.NET 安裝程式並安裝 ADOMD.NET。 此外，視您的環境而定，您可能需要確保相關組件已受 SQL Server 所信任。  
   
- 如需詳細資訊：＜＞  
+ 如需詳細資訊：  
   
  [Microsoft SQL Server 功能套件](http://go.microsoft.com/fwlink/?LinkId=389949)  
   

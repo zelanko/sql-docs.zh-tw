@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcc42dbd4d53a3d5a967933bebf22b1f73ac91e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Mining Model Content for Logistic Regression Models
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題描述使用 Microsoft 羅吉斯迴歸演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="model-content-for-a-logistic-regression-model"></a>羅吉斯迴歸模型的模型內容  
  本節僅針對採礦模型內容中與羅吉斯迴歸具有特定相關的資料行，提供詳細資料和範例。 此模型內容與類神經網路模型的內容幾乎相同，但是為了方便，適用於類神經網路模型的描述在此資料表中可能會重複。  
   
- 如需結構描述資料列集 (例如 MODEL_CATALOG 和 MODEL_NAME) 中一般用途資料行的詳細資訊 (此處沒有說明)，或採礦模型術語的說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+ 如需結構描述資料列集 (例如 MODEL_CATALOG 和 MODEL_NAME) 中一般用途資料行的詳細資訊 (此處沒有說明)，或採礦模型術語的說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  模型儲存位置所在資料庫的名稱。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |臨界統計資料|空白|  
 |輸入層|空白|  
 |輸入節點|輸入屬性名稱|  
-|hidden layer|空白|  
+|隱藏層|空白|  
 |輸出層|空白|  
 |輸出節點|輸出屬性名稱|  
   
@@ -80,9 +78,9 @@ ms.lasthandoff: 12/08/2017
  NODE_TYPE  
  羅吉斯迴歸模型會輸出下列節點類型：  
   
-|節點類型識別碼|說明|  
+|節點類型識別碼|描述|  
 |------------------|-----------------|  
-|1|模型。|  
+|@shouldalert|模型。|  
 |17|子網路的組合管理節點。|  
 |18|輸入層的組合管理節點。|  
 |19|隱藏層的組合管理節點。 隱藏層是空的。|  
@@ -103,7 +101,7 @@ ms.lasthandoff: 12/08/2017
 |臨界統計資料|一律是 0。|  
 |輸入層|指出模型使用之輸入屬性和值配對的數目。|  
 |輸入節點|一律是 0。|  
-|隱藏層|在羅吉斯迴歸模型中，永遠為 0。|  
+|hidden layer|在羅吉斯迴歸模型中，永遠為 0。|  
 |輸出層|指出輸出值的數目。|  
 |輸出節點|一律是 0。|  
   
@@ -121,7 +119,7 @@ ms.lasthandoff: 12/08/2017
 |臨界統計資料|空白|  
 |輸入層|空白|  
 |輸入節點|輸入屬性名稱|  
-|hidden layer|空白|  
+|隱藏層|空白|  
 |輸出層|空白|  
 |輸出節點|如果輸出屬性是連續的，則包含輸出屬性的名稱。<br /><br /> 如果輸出屬性是離散或離散化的，則包含輸出屬性的名稱和值。|  
   
@@ -134,7 +132,7 @@ ms.lasthandoff: 12/08/2017
 |臨界統計資料|空白|  
 |輸入層|空白|  
 |輸入節點|包含與 NODE_DESCRIPTION 資料行資訊相同的 XML 片段。|  
-|隱藏層|空白|  
+|hidden layer|空白|  
 |輸出層|空白|  
 |輸出節點|包含與 NODE_DESCRIPTION 資料行資訊相同的 XML 片段。|  
   

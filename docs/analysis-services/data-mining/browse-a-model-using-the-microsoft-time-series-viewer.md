@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 649539e20bab921b7bfef3903cf53f9920fdbbde
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6eaa320911fbba0f46472750bde9293b36430b46
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>使用 Microsoft 時間序列檢視器瀏覽模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列檢視器中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]顯示採礦模型所建置的[!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法是一種迴歸演算法，在預測狀況下用來建立資料採礦模型，以預測連續的資料行，例如產品銷售。 這些時間序列模型可依照不同的演算法而包含資訊：  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [圖表](#BKMK_Charts)  
   
- **注意** ：模型內容以及採礦圖例中所顯示的資訊，會依模型所使用的演算法而異。 不過，不論使用了哪些演算法，[模型] 和 [圖表] 索引標籤都相同。  
+ **注意**：模型內容以及採礦圖例中所顯示的資訊，會依模型所使用的演算法而異。 不過，不論使用了哪些演算法，[模型] 和 [圖表] 索引標籤都相同。  
   
 ###  <a name="BKMK_Tree"></a> 模型  
  在建立時間序列模型時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將完成的模型顯示為樹狀結構。 如果資料包含多個案例序列， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會針對每個序列建立個別的樹狀結構。 例如，假設您要針對太平洋、北美及歐洲地區預測銷售量， 每一個地區的預測都是案例數列。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會針對每個數列建立個別的樹狀結構。 若要檢視特定的序列，請從 [樹狀結構] 清單選取序列。  

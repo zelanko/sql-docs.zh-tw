@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 810c6e8bd489bac42a3f4d90d4dbe9990f5ca038
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0a280ee70cd6c2545abc6a50da15d1eb938090e5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="executing-commands-against-an-analytical-data-source"></a>針對分析資料來源執行命令
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]建立分析資料來源的連接後，您可以使用<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>執行命令，並從該資料來源傳回結果的物件。 這些命令可以透過使用多維度運算式 (MDX)、資料採礦延伸模組 (DMX) 甚或是有限的 SQL 語法，來擷取資料。 此外，您可以使用 Analysis Services 指令碼語言 (ASSL) 命令修改基礎資料庫。  

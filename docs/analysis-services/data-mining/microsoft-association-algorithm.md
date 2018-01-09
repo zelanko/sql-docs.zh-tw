@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -39,13 +37,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d68a5b94df379a3ab19d4df5d4621c986762473
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2deac725bc544b305f9207e2538981bfdea3df46
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="microsoft-association-algorithm"></a>Microsoft 關聯分析演算法
+# <a name="microsoft-association-algorithm"></a>Microsoft Association Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]關聯分析演算法是對於建議引擎所使用的演算法。 建議引擎會依據客戶已購買或感興趣的項目向客戶建議項目。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法對於購物籃分析也很有用。   
   
  關聯模型是建立在包含個別案例和案例所含項目之識別碼的資料集上。 案例中的項目群組稱為 *「項目集」*(itemset)。 關聯模型是由一系列項目集和規則所組成，這些規則描述那些項目在案例內如何分組。 演算法識別的規則可依據客戶購物車已有的項目，來預測客戶未來可能購買的項目。 下列圖表顯示項目集內的一系列規則。  
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
  如需如何針對資料採礦模型建立查詢的一般資訊，請參閱 [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)。  
   
-## <a name="performance"></a>效能  
+## <a name="performance"></a>[效能]  
  建立項目集和計算關聯性的過程可能很耗費時間。 雖然 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法會使用最佳化技巧來節省空間及加速處理，但您應該要知道在下列情況會發生效能問題：  
   
 -   資料集很大且具有許多個別的項目。  

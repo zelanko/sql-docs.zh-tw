@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,18 +21,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f38e76e522a4b062e27379533c22b540311f4c34
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: be3c1ddd743204b18823ef4d77c054504328fc3c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="decision-trees-model-query-examples"></a>決策樹模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您建立針對資料採礦模型的查詢時，您可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或您可以建立預測查詢，為新的資料進行預測模型中使用的模式。 例如，決策樹模型的內容查詢可能會提供有關每一樹狀結構層上之案例數的統計資料，或是區分案例的規則。 或者，預測查詢會將此模型對應到新的資料，以便產生建議、分類等等。 您也可以使用查詢來擷取有關模型的中繼資料。  
   
  本節說明如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法為基礎的模型來建立查詢。  
   
- **Content Queries**  
+ **內容查詢**  
   
  [從資料採礦結構描述資料列集擷取模型參數](#bkmk_Query1)  
   
@@ -87,7 +85,7 @@ WHERE NODE_TYPE = 2
   
 |MODEL_NAME|NODE_NAME|NODE_CAPTION|NODE_SUPPORT|CHILDREN_CARDINALITY|  
 |-----------------|----------------|-------------------|-------------------|---------------------------|  
-|TM_DecisionTree|000000001|全部|12939|5|  
+|TM_DecisionTree|000000001|All|12939|5|  
   
  這些結果代表什麼意思？ 在決策樹模型中，特定節點的基數會告訴您該節點擁有多少下層子節點。 這個節點的基數是 5，表示此模型已將潛在自行車買主的目標母體分成 5 個子群組。  
   
@@ -108,12 +106,12 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
   
 |NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|SUPPORT|  
 |----------------|-------------------|-----------------------|------------------------|-------------|  
-|00000000100|Number Cars Owned = 0|Bike Buyer|遺漏|0|  
+|00000000100|Number Cars Owned = 0|Bike Buyer|Missing|0|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|0|1067|  
-|00000000100|Number Cars Owned = 0|Bike Buyer|1|1875|  
-|00000000101|Number Cars Owned = 3|Bike Buyer|遺漏|0|  
+|00000000100|Number Cars Owned = 0|Bike Buyer|@shouldalert|1875|  
+|00000000101|Number Cars Owned = 3|Bike Buyer|Missing|0|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
-|00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
+|00000000101|Number Cars Owned = 3|Bike Buyer|@shouldalert|473|  
   
  從這些結果中，您可以得知在購買自行車的客戶 ([Bike Buyer] = 1) 中，有 1067 位客戶擁有 0 輛汽車，而有 473 位客戶擁有 3 輛汽車。  
   
@@ -193,7 +191,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
-|1|2540|0.634849242045644|0.013562168281562|0|0|  
+|@shouldalert|2540|0.634849242045644|0.013562168281562|0|0|  
 |0|1460|0.364984174579377|0.00661336932550915|0|0|  
 ||0|0.000166583374979177|0.000166583374979177|0|0|  
   
@@ -214,7 +212,7 @@ NATURAL PREDICTION JOIN
   
  預期的結果：  
   
-|模型|  
+|[模型]|  
 |-----------|  
 |Mountain-200|  
 |Mountain Tire Tube|  
@@ -233,7 +231,7 @@ NATURAL PREDICTION JOIN
   
  預期的結果：  
   
-|模型|  
+|[模型]|  
 |-----------|  
 |Long-Sleeve Logo Jersey|  
 |Mountain-400-W|  
@@ -254,7 +252,7 @@ WHERE NODE_TYPE = 25
   
 |T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|遺漏|0|0.000457142857142857|0|1|  
+|Yearly Income|Missing|0|0.000457142857142857|0|@shouldalert|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 ||57220.8876687257|0|0|1041216662.54387|11|  
   

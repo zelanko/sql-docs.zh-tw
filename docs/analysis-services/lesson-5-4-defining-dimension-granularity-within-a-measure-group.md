@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bef441eba4e4aa9353a496282680449bc39fa629
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1cf1f2d08108f5516ad0249d1f8e3c4314b6adf8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>課程 5-4-量值群組內定義維度資料粒度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]針對不同目的，使用者會想要在不同的資料粒度或具體性維度事實資料。 例如可能記錄每一天轉售商的銷售資料或網際網路銷售，但銷售配額資訊可能只有當月或當季才有。 在這些案例中，使用者希望時間維度對每一個不同的事實資料表有不同的資料粒度或詳細層級。 雖然您能夠以這種不同的資料粒度將新資料庫維度定義為時間維度，但有更容易的方法，就是使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
@@ -145,7 +145,7 @@ ms.lasthandoff: 12/08/2017
   
 9. 確認已選取 [具體化] 核取方塊。  
   
-10. 按一下 **[確定]**。  
+10. 按一下 [確定] 。  
   
 11. 在 [銷售領域] 維度和 [銷售配額 1] 量值群組的交集處，按一下資料格，然後按一下瀏覽按鈕 (**…**)。 此時會開啟 [定義關聯性] 對話方塊。  
   
@@ -159,7 +159,7 @@ ms.lasthandoff: 12/08/2017
   
 16. 確認已選取 [具體化] 核取方塊。  
   
-17. 按一下 **[確定]**。  
+17. 按一下 [確定] 。  
   
 18. 刪除 [日期] Cube 維度。  
   
@@ -194,7 +194,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  在 [建立屬性關聯性] 對話方塊中，[來源屬性] 是 [日曆季]。 將 [相關屬性] 設定為 [會計季度]。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
     請注意，此時會出現警告訊息，說明 [日期] 維度包含一或多個重複屬性關聯性。在使用非索引鍵屬性當作資料粒度屬性時，這些關聯性可能會讓您無法彙總資料。  
   
@@ -229,7 +229,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-lesson"></a>下一課  
 [第 6 課：定義計算](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [維度關聯性](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [定義一般關聯性及一般關聯性屬性](../analysis-services/multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)  
 [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  

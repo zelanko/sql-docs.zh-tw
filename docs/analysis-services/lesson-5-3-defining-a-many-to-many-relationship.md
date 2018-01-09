@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c36bae9436786544f9d11ebcea289faac9de5687
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a5edd0a3c672b5186a97423e0cf2d1ad22b8509d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>課程 5-3-定義多對多關聯性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]當您定義維度時，通常每個事實聯結到一個並只有一個維度成員，而單一維度成員可以是與許多其他事實產生關聯。 例如，每個客戶可以有許多張訂單，但是每張訂單只會屬於單一客戶。 在關聯式資料庫詞彙中，這稱為「一對多關聯性」。 不過，有時候單一事實可聯結到多個維度成員。 在關聯式資料庫詞彙中，這稱為「多對多關聯性」。 例如，客戶進行採購有許多原因，而採購原因可能與多個採購相關聯。 聯結資料表是用來定義與每項採購相關的銷售原因。 從這樣的關聯性建構的 [銷售原因] 維度會有多個成員與單一銷售交易有關。 當維度與事實資料表無直接相關時，多對多維度會將維度模型可擴展到典型星形結構描述之外，來支援複雜分析。  
@@ -112,7 +112,7 @@ ms.lasthandoff: 12/08/2017
   
 7.  在 [名稱資料行] 清單中，選取 [SalesReasonName]。  
   
-8.  按一下 **[下一步]**。  
+8.  按 [下一步] 。  
   
 9. 在 [選取維度屬性] 頁面上，系統會自動選取 [銷售原因索引鍵] 屬性，因為它是索引鍵屬性。 選取 [銷售原因類型] 屬性旁的核取方塊，並將其名稱變更為 [銷售原因類型]，然後按一下 [下一步]。  
   
@@ -152,13 +152,13 @@ ms.lasthandoff: 12/08/2017
   
     ![定義關聯性對話方塊](../analysis-services/media/l5-many-to-many-3.gif "定義關聯性對話方塊")  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
     請注意代表 [銷售原因] 維度和 [網際網路銷售] 量值群組之間關聯性的多對多圖示。  
   
 ## <a name="browsing-the-cube-and-the-many-to-many-dimension"></a>瀏覽 Cube 與多對多維度  
   
-1.  在 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]。  
+1.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
 2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [瀏覽器] 索引標籤，然後按一下 [重新連接]。  
   
@@ -179,7 +179,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [在量值群組內定義維度資料粒度](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [維度關聯性](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [定義多對多關聯性及多對多關聯性屬性](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  

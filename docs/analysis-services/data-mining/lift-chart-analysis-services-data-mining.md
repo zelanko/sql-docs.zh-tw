@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 79178d1319e296d1dead562440d57c25d379dbd4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>增益圖 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*增益圖*以圖形方式表示採礦模型與隨機猜測，提供相較的改進和量值的變更*提起*分數。 藉由比較不同模型的增益分數，您可以判斷哪一個模型是最佳選擇。 您也可以判斷模型的預測在哪個點變得較沒有用。 例如，藉由檢閱增益圖，您了解到促銷活動可能只對 30% 的客戶有效，並使用該圖來限制行銷活動的範圍。  
@@ -130,6 +128,6 @@ ms.lasthandoff: 12/08/2017
  [回到頁首](#bkmk_Top)  
   
 ## <a name="see-also"></a>請參閱  
- [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

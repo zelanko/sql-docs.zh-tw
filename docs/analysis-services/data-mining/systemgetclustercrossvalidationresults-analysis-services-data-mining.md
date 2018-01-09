@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54b91c7abf3f9abe366d45d2579818aee1c121a5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fdd5623be105cba70aa9404aba2c4d87cd0574cc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料分割成交叉區段，指定數目的採礦結構的每個資料分割中，為模型定型，，然後傳回每個資料分割的精確度度量。  
@@ -93,7 +93,7 @@ SystemGetClusterCrossValidationResults(
   
  下表描述傳回的資料行。  
   
-|資料行名稱|說明|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |ModelName|已測試的模型名稱。|  
 |AttributeName|可預測的資料行名稱。 若為叢集模型，一律為 **null**。|  
@@ -101,8 +101,8 @@ SystemGetClusterCrossValidationResults(
 |PartitionIndex|以 1 為基準的索引，可識別套用結果的資料分割。|  
 |PartitionSize|指示每一個資料分割內包含了多少案例數的整數。|  
 |測試|已執行的測試類型。|  
-|[量值]|測試所傳回之量值的名稱。 每一個模型的量值都取決於可預測值的類型。 如需每個量值的定義，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。<br /><br /> 如需每一個可預測類型所傳回的量值清單，請參閱[交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
-|Value|指定之測試量值的值。|  
+|[量值]|測試所傳回之量值的名稱。 每一個模型的量值都取決於可預測值的類型。 如需每個量值的定義，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。<br /><br /> 如需每一個可預測類型所傳回的量值清單，請參閱 [交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
+|ReplTest1|指定之測試量值的值。|  
   
 ## <a name="remarks"></a>備註  
  若要傳回整個資料集的精確度度量，請使用 [SystemGetClusterAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)。  
@@ -129,12 +129,12 @@ CALL SystemGetClusterCrossValidationResults(
   
  範例結果：  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|[量值]|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|量值|ReplTest1|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|叢集 1|||1|3025|群集|案例概似值|0.930524511864121|  
+|叢集 1|||@shouldalert|3025|群集|案例概似值|0.930524511864121|  
 |叢集 1|||2|3025|群集|案例概似值|0.919184178430778|  
 |叢集 1|||3|3024|群集|案例概似值|0.929651120490248|  
-|群集 2|||1|1289|群集|案例概似值|0.922789726933607|  
+|群集 2|||@shouldalert|1289|群集|案例概似值|0.922789726933607|  
 |群集 2|||2|1288|群集|案例概似值|0.934865535691068|  
 |群集 2|||3|1288|群集|案例概似值|0.924724595688798|  
   

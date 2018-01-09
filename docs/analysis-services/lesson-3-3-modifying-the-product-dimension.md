@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6ff0c5e509a40c84850e281d2ab9f41246c4880
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4352e05555c713c5b979e4ac8e3fc279d6099fe1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>課程 3-3-修改 [產品] 維度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本主題中的工作，您可以使用具名的計算來提供更具描述性的名稱，針對產品線、 [產品] 維度中定義的階層及指定階層的 （全部） 成員名稱。 此外，您也會將屬性分組放入顯示資料夾中。  
@@ -169,7 +169,7 @@ ms.lasthandoff: 12/08/2017
   
     然後，在 [關聯性類型] 清單中，保持關聯性類型設定為 [彈性] 的狀態，因為成員之間的關聯性可能會隨著時間而變更。 例如，產品型號最後可能會移至不同的產品線。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 5.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [修改 Date 維度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [建立使用者定義階層](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [設定屬性階層的 &#40;全部&#41; 層級](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  

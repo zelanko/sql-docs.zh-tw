@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f836f060a52db56267cd943c1dea018c9b0732a3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-queries"></a>資料採礦查詢
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料採礦查詢可以用於許多用途。 您可以：  
@@ -117,9 +115,9 @@ ms.lasthandoff: 12/08/2017
     |||  
     |-|-|  
     |[關聯模型查詢範例](../../analysis-services/data-mining/association-model-query-examples.md)|[Microsoft 貝氏機率分類演算法](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)|  
-    |[叢集模型查詢範例](../../analysis-services/data-mining/clustering-model-query-examples.md)|[Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
-    |[決策樹模型查詢範例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|[Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-    |[線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+    |[叢集模型查詢範例](../../analysis-services/data-mining/clustering-model-query-examples.md)|[類神經網路模型查詢範例](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
+    |[決策樹模型查詢範例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|[時序群集模型查詢範例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
+    |[線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
     |[羅吉斯迴歸模型查詢範例](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)||  
   
      您也可以呼叫 VBA 函數，或是建立您自己的函數。 如需詳細資訊，請參閱[函數 &#40;DMX&#41](../../dmx/functions-dmx.md)。  
@@ -166,7 +164,7 @@ ms.lasthandoff: 12/08/2017
 |工作|連結|  
 |-----------|-----------|  
 |檢視有關資料採礦查詢的教學課程和逐步解說|[第 6 課：建立及處理預測 &#40;基本資料採礦教學課程&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [時間序列預測 DMX 教學課程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
-|使用 SQL Server Management Studio 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[在 SQL Server Management Studio 中建立 DMX 查詢](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [使用預測查詢產生器來建立預測查詢](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [將預測函數套用至模型](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [手動編輯預測查詢](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
+|使用 SQL Server Management Studio 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[在 SQL Server Management Studio 中建立 DMX 查詢](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [使用預測查詢產生器來建立預測查詢](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [將預測函式套用至模型](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [手動編輯預測查詢](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |使用預測查詢中所用的外部資料|[為預測查詢選擇和對應輸入資料](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [為預測查詢選擇和對應輸入資料](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |使用查詢的結果|[檢視及儲存預測查詢的結果](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
 |使用 Management Studio 中提供的 DMX 和 XMLA 查詢範本|[根據範本建立單一預測查詢](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [使用 XMLA 建立資料採礦查詢](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [在 SQL Server Management Studio 中使用 Analysis Services 範本](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  

@@ -1,13 +1,13 @@
 ---
 title: "與 SQL Server 一起安裝的 R 封裝 |Microsoft 文件"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -15,27 +15,23 @@ ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 070e1776f0a9760742e933064be569818fe200b2
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 2783d4ce6ca9cd25b41c1e658f5e3bf2a4f05f24
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="r-packages-installed-with-sql-server"></a>與 SQL Server 一起安裝的 R 封裝
 
-本文描述與 SQL Server 一起安裝的 R 封裝，並提供有關如何管理及檢視現有的封裝資訊。
-
-本文也會提供連結至如何新增封裝與 SQL Server 使用的資訊。
+本文說明如果您安裝並啟用機器學習功能與 SQL Server 一起安裝的 R 封裝。 本文也說明如何管理和檢視現有的封裝，或新增封裝到 SQL Server 執行個體。
 
 **適用於：** SQL Server 2017 機器學習服務 （資料庫）、 SQL Server 2016 R 服務 （資料庫）
 
 ## <a name="what-is-the-instance-library-and-where-is-it"></a>什麼是執行個體文件庫，以及在哪裡可以找到？
 
-任何 SQL Server 中執行的 R 解決方案可以使用安裝在執行個體相關聯的預設 R 程式庫中的封裝。
-
-當您安裝 R 功能在 SQL Server 中時，R 封裝程式庫位於執行個體資料夾底下。
+任何 SQL Server 中執行的 R 解決方案可以使用安裝在執行個體相關聯的預設 R 程式庫中的封裝。 當您安裝 R 功能在 SQL Server 中時，R 封裝程式庫位於執行個體資料夾底下。
 
 + 預設執行個體*MSSQLSERVER* 
 
@@ -51,25 +47,44 @@ ms.lasthandoff: 12/20/2017
 
 您可以執行下列陳述式來確認目前的 R 執行個體的預設程式庫。
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script  @language = N'R'
 , @script = N'OutputDataSet <- data.frame(.libPaths());'
 WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
+
+您可以使用新的 Alternatiely，物[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)函式中，如果執行預存程序\_執行\_外部\_直接在目標電腦上的指令碼。 此函式不能傳回遠端連接程式庫的路徑。
+
+```sql
+EXEC sp_execute_external_script
+  @language =N'R',
+  @script=N'
+  sql_r_path <- rxSqlLibPaths("local")
+  print(sql_r_path)
+```
+
+> [!NOTE]
+> 如果您使用繫結來升級執行個體中的 R 元件，可以變更執行個體文件庫的路徑。 請務必確認 SQL Server 正在使用哪一個程式庫。
+
 ## <a name="r-packages-installed-with-sql-server"></a>與 SQL Server 一起安裝的 R 封裝
 
-當您安裝的 R 語言在 SQL Server 中，依預設 R**基底**已安裝的套件。 基底套件包含這類封裝所提供的核心功能`stats`和`utils`。
+根據預設 R**基底**已安裝的套件。 基底套件包含這類封裝所提供的核心功能`stats`和`utils`。
 
-在 SQL Server 2016 和 SQL Server 2017 R 的安裝也包含**RevoScaleR**封裝，相關的增強的封裝和提供者，可支援遠端計算內容資料流中，平行執行 rx 函式，並許多其他功能。
+安裝 SQL Server 2016 中 SQL Server 2017 R 永遠包含**RevoScaleR**封裝，相關的增強的封裝和提供者，可支援遠端計算內容資料流中，平行執行 rx 函式，並許多其他功能。 若要升級的 RevoScaleR 封裝，請使用繫結來升級機器學習服務元件，或修補或升級至較新版的 SQL Server 執行個體。
 
-+ 如需增強的 R 功能的概觀，請參閱[需機器學習伺服器](https://docs.microsoft.com/r-server/what-is-microsoft-r-server)
++ 如需增強的 R 功能的概觀，請參閱[需機器學習伺服器](https://docs.microsoft.com/machine-learning-server/what-is-microsoft-r-server)
 
-+ 若要下載到用戶端電腦上的 RevoScaleR 程式庫，安裝[Microsoft R 用戶端](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)
++ 若要下載到用戶端電腦上的 RevoScaleR 程式庫，安裝[Microsoft R 用戶端](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
 
 ## <a name="permissions-required-for-installing-r-packages"></a>安裝 R 封裝所需的權限
 
-在 SQL Server 2016 中，系統管理員必須安裝新的 R 封裝的執行個體層級為基礎。 在 SQL Server 2017，已加入新的資料庫功能，讓資料庫管理員能夠封裝管理委派給選取的使用者。
+在 SQL Server 2016 中，系統管理員必須安裝新的 R 封裝的執行個體層級為基礎。 
+
+SQL Server 2017 導入套件安裝和管理新的功能：
+
++ 您可以使用 R 命令從遠端用戶端安裝套件使用私用或共用的範圍。 這項功能需要[Microsoft R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install)或[Server 機器學習](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，以及執行個體上的 dbo 權限。
++ 新資料庫已加入功能以支援套件管理資料庫管理員而不需要使用 T-SQL。 在未來，這些功能會提供 Dba 的能力委派的權限的使用者進行封裝管理大部分 facet。
 
 本節描述安裝及管理每個版本的封裝時所需的權限。
 
@@ -81,9 +96,9 @@ GO
 
 + SQL Server 2017 Machine Learning 服務
 
-    此版本包含封裝管理功能，可讓資料庫管理員委派套件的安裝權限給選取的使用者。 如果已啟用這項功能，要求您的資料庫管理員將您加入的其中一個新的封裝角色。 如需詳細資訊，請參閱[for SQL Server 的 R 封裝管理](r-package-management-for-sql-server-r-services.md)。
-
     如果您是在 SQL Server 執行個體上的系統管理員，您可以安裝在新的封裝。 只是一定要使用的執行個體相關聯的預設文件庫。 從預存程序呼叫時，無法執行封裝安裝到其他位置。 使用 SQL Server 計算內容也需要執行個體文件庫中的封裝可供執行任何 R 程式碼。
+
+    此版本也包含一些新功能，目的是要支援更容易進行封裝管理 Dba 的下一個版本。 現在，我們建議您繼續安裝執行個體層級為基礎的 R 封裝。
 
 + R Server (Standalone)
 

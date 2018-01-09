@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 107e251257157fc029447c6ba08e907335bcf73f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: aee364c04f3f9531948a834d555e34f34d838a6b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>將 Power Pivot 移轉至 SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/08/2017
   
 ### <a name="migration-overview"></a>移轉概觀  
   
-|1|2|3|4|  
+|@shouldalert|2|3|4|  
 |-------|-------|-------|-------|  
 |準備 SharePoint 2013 伺服器陣列|備份、複製和還原資料庫。|掛接內容資料庫|移轉 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 排程|  
 ||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|-SharePoint 管理中心<br /><br /> -Windows PowerShell|-SharePoint 應用程式頁面<br /><br /> -Windows PowerShell|  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  以 SharePoint 模式安裝 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器執行個體。 如需詳細資訊，請參閱 [以 PowerPivot 模式安裝 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
-4.  在 SharePoint 伺服器陣列中的每部伺服器上執行 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 安裝套件 **spPowerPivot.msi** 。 如需詳細資訊，請參閱[安裝或解除安裝 PowerPivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
+4.  在 SharePoint 伺服器陣列中的每部伺服器上執行 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 安裝套件 **spPowerPivot.msi** 。 如需詳細資訊，請參閱 [安裝或解除安裝 Power Pivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
 5.  在 SharePoint 2013 管理中心內，將 Excel Services 服務應用程式設定為使用在先前步驟中建立的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 模式伺服器。 如需詳細資訊，請參閱 [以 Power Pivot 模式安裝 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)的＜設定基本 Analysis Services SharePoint 整合＞一節。  
   

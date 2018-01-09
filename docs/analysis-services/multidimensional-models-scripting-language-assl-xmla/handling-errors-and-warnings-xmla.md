@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04170950534e6cb0020edb371ea265478fe73b97
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 510e6bbbc7155c60241b9aee4ed8b33f130652ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>處理錯誤和警告 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當 XML for Analysis (XMLA) 時，就需要錯誤處理[探索](../../analysis-services/xmla/xml-elements-methods-discover.md)或[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫不會執行、 成功執行但產生錯誤或警告，或是成功執行但傳回的結果包含錯誤。  
@@ -59,13 +57,13 @@ ms.lasthandoff: 12/08/2017
 ### <a name="fault-code-information"></a>錯誤碼資訊  
  下表將顯示包含在 SOAP 回應之詳細資料區段中的 XMLA 錯誤碼資訊。 資料行是在 SOAP 錯誤的詳細資料區段中某個錯誤的屬性。  
   
-|資料行名稱|類型|Description|允許 null<sup>1</sup>|  
+|資料行名稱|類型|描述|允許 null<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
 |**ErrorCode**|**UnsignedInt**|傳回指出方法成功或失敗的代碼。 十六進位值必須可轉換成**UnsignedInt**值。|否|  
 |**WarningCode**|**UnsignedInt**|傳回指出警告狀況的代碼。 十六進位值必須可轉換成**UnsignedInt**值。|是|  
-|**說明**|**字串**|產生錯誤的元件所傳回的警告文字與描述。|是|  
-|**Source**|**字串**|產生錯誤或警告之元件的名稱。|是|  
-|**說明檔**|**字串**|描述錯誤或警告之說明檔或主題的路徑或 URL。|是|  
+|**說明**|**String**|產生錯誤的元件所傳回的警告文字與描述。|是|  
+|**Source**|**String**|產生錯誤或警告之元件的名稱。|是|  
+|**說明檔**|**String**|描述錯誤或警告之說明檔或主題的路徑或 URL。|是|  
   
  <sup>1</sup>資料需要和是否必須傳回，或是否是選擇性的資料，以及如果不適用資料行允許 null 的字串表示。  
   

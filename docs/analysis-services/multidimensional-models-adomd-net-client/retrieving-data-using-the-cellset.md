@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3252672f1188bd72ab51c6ad3aa44ddb2b281b90
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e1552ce0646c48465aac824f40d9f42f8aa4215d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-data-using-the-cellset"></a>使用 CellSet 擷取資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當擷取分析資料，<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>物件可提供最大的互動性和彈性。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件是階層式資料和中繼資料的記憶體中快取，其中保留了資料的原始維度性。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件也可能以連接或中斷連接的狀態來周遊。 因為這個中斷連接的能力，<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件可用來以任何順序檢視資料和中繼資料，並為資料擷取提供最完整的物件模型。 這個中斷連接的功能也會造成 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件有最大的負擔，並成為擴展最慢的 ADOMD.NET 資料擷取物件模型。  

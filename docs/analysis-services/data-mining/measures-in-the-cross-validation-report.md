@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52d3932d577ed93c3c1ab4122323a04a1c27771e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8a98814c3b71a8a39b1f77bdeaf1de7eb4758e54
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measures-in-the-cross-validation-report"></a>交叉驗證報表中的量值
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]交叉驗證期間[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]採礦結構中的資料分成多個交叉區段，然後反覆地測試結構及任何相關聯的採礦模型。 根據這項分析，結果會輸出有關結構及每個模型的一組標準精確度量值。  
@@ -63,6 +61,6 @@ ms.lasthandoff: 12/08/2017
 ||**標準差**：<br />                      在模型的所有資料分割中，與特定量值平均數的差異平均值。<br /><br /> 針對交叉驗證，此分數的值愈高意味著摺疊數之間會有顯著的變化。|  
   
 ## <a name="see-also"></a>請參閱  
- [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

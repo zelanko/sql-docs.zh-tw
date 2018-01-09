@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7e5210ee745f9ce57c7c621832804d9a90de6b5a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 33d0192fa992a8f9e6ebb8bfeb7e9155e9b2fc32
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>課程 4-5-根據次要屬性排序屬性成員
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在第 3 課，您將學會如何排序屬性成員名稱或索引鍵值為基礎。 您也學會如何使用複合成員索引鍵來影響屬性成員和排序次序。 如需詳細資訊，請參閱 [修改 Date 維度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)。 不過，如果屬性的名稱或索引鍵都無法提供想要的排序次序，您可以使用次要屬性來達成所需的排序次序。 藉由定義屬性之間的關聯性，您可以使用次要屬性排序第一個屬性的成員。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
 11. 在 [屬性] 窗格中選取 [月份]，然後將 [屬性] 視窗中的 [OrderBy] 屬性值變更為 [AttributeKey]，將 [OrderByAttribute] 屬性值變更為 [Month Number Of Year (年中的月份)]。  
   
-12. 在 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]。  
+12. 在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
 13. 順利完成部署之後，請切換到 [日期] 維度的 [瀏覽器] 索引標籤，並按一下 [重新連接]，然後瀏覽 [日曆日期] 和 [會計日期] 使用者階層，以確認月份現在是按照時間順序排序。  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 12/08/2017
   
 11. 在 [屬性] 窗格中選取 [通勤距離]，並將 [屬性] 視窗中的 [OrderBy] 屬性值變更為 [AttributeKey]，然後將 [OrderByAttribute] 屬性值變更為 [通勤距離排序]。  
   
-12. 在 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]。  
+12. 在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
 13. 順利完成部署之後，切換到 [客戶] 維度之 [維度設計師] 的 [瀏覽器] 索引標籤，並按一下 [重新連接]，然後瀏覽 [通勤距離] 屬性階層。  
   

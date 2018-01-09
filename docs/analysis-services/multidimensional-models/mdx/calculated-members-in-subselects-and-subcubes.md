@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb3f752fa2a07a2c5e0964cbe91e4fb791bdc3da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95a989d092a5b69662fc9f7f542792d9c2895b47
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>子選擇和 Subcube 中的導出成員
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]導出的成員是維度成員，其值計算的運算式在執行階段，並可在子選擇和 subcube 中的以更精確地定義查詢的 cubespace。  
@@ -36,9 +33,9 @@ ms.lasthandoff: 12/08/2017
   
 |||  
 |-|-|  
-|Value|描述|  
+|ReplTest1|描述|  
 |0|子選擇或 Subcube 中不允許使用導出成員。<br /><br /> 評估子選擇或 Subcube 時，如果參考導出成員就會引發錯誤。|  
-|1|子選擇或 Subcube 中允許使用導出成員，但是在傳回的子空間中未導入上階成員。|  
+|@shouldalert|子選擇或 Subcube 中允許使用導出成員，但是在傳回的子空間中未導入上階成員。|  
 |2|子選擇或 Subcube 中允許使用導出成員，而且在傳回的子空間中導入上階成員。 此外，在選取導出成員時允許使用混合資料粒度。|  
   
  如果在 SubQueries 屬性中使用值 1 或 2，即可允許導出成員用來篩選子選擇的傳回子空間。  

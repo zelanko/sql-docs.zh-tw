@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffca0c4aa4879d5732831113308c26a9032a7dff
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 187eea9af56b4da074f374923c29d7ebcea0aca2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 群集演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本節說明實作[!INCLUDE[msCoName](../../includes/msconame-md.md)]群集演算法，包括可用來控制群集模型的行為的參數。 本章節也提供在建立及處理叢集模型時如何改善效能的指南。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
--   [叢集模型查詢範例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
+-   [群集模型查詢範例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Microsoft 群集演算法的實作  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法提供兩種方法來建立群集並將資料點指派給群集。 第一種方法是 *K-means* 演算法，這是一種硬式群集方法。 這代表資料點只能屬於一個群集，而且會針對該群集中每個資料點的成員資格而計算單一機率。 第二種方法是 *Expectation Maximization* (EM) 方法，這是一種軟式群集方法。 這代表資料點一定屬於多個群集，而且會針對資料點和群集的每個組合而計算機率。  
@@ -104,7 +102,7 @@ ms.lasthandoff: 12/08/2017
   
 |ID|方法|  
 |--------|------------|  
-|1|可擴充的 EM|  
+|@shouldalert|可擴充的 EM|  
 |2|不可擴充的 EM (Non-scalable EM)|  
 |3|可擴充的 K-means|  
 |4|不可擴充的 K-means|  
@@ -167,7 +165,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="modeling-flags"></a>模型旗標  
  演算法支援下列模型旗標。 您可以在建立採礦結構或採礦模型時定義模型旗標。 模型旗標會指定在分析期間如何處理每個資料行中的值。  
   
-|模型旗標|說明|  
+|模型旗標|描述|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|資料行將被視為擁有兩個可能狀態：「遺漏」和「現有」。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
 |NOT NULL|資料行不得包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
@@ -178,7 +176,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|資料行|內容類型|  
+|「資料行」|內容類型|  
 |------------|-------------------|  
 |輸入屬性|Continuous、Cyclical、Discrete、Discretized、Key、Table 和 Ordered|  
 |可預測屬性|Continuous、Cyclical、Discrete、Discretized、Table 和 Ordered|  

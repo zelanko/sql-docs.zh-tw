@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 897e459ef746d90fd8756af0e19c51c076543498
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0a33445fedf93a6dce4f2bf9b4f6a90465b6c60
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>設定 Power Pivot 及部署方案 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主題描述如何部署和設定中介層增強功能[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中的功能[!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]包括[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]圖庫、 排程資料重新整理、 管理儀表板和資料提供者。 請執行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具** 以完成下列作業：  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_run_configuration_tool"></a> 執行 Power Pivot for SharePoint 2013 組態  
  **注意** ： [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝精靈會為 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]安裝兩個不同的組態工具。 它們各支援不同的 SharePoint 版本。  
   
-|名稱|描述|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具|SharePoint 2010 含 SharePoint 2010 Service Pack 1 (SP1)|  
@@ -142,7 +142,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  確認已選取 **[啟用健康情況資料收集]** 。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
  如需針對資料重新整理進行疑難排解的詳細資訊，請參閱 [Troubleshooting Power Pivot Data Refresh](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (針對 Power Pivot 資料重新整理進行疑難排解) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   

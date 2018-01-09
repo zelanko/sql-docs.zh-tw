@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9b8da7c6608b10c5816fafda8129efbf9e393e9b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8368189052f70da2e93b7d87a13787bf1793b006
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題描述使用 Microsoft 類神經網路演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/08/2017
 |臨界統計資料|空白|  
 |輸入層|空白|  
 |輸入節點|輸入屬性名稱|  
-|hidden layer|空白|  
+|隱藏層|空白|  
 |隱藏節點|空白|  
 |輸出層|空白|  
 |輸出節點|輸出屬性名稱|  
@@ -96,9 +94,9 @@ ms.lasthandoff: 12/08/2017
  NODE_TYPE  
  類神經網路模型會輸出下列節點類型：  
   
-|節點類型識別碼|說明|  
+|節點類型識別碼|描述|  
 |------------------|-----------------|  
-|1|模型。|  
+|@shouldalert|模型。|  
 |17|子網路的組合管理節點。|  
 |18|輸入層的組合管理節點。|  
 |19|隱藏層的組合管理節點。|  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/08/2017
 |臨界統計資料|空白|  
 |輸入層|空白|  
 |輸入節點|輸入屬性名稱|  
-|hidden layer|空白|  
+|隱藏層|空白|  
 |隱藏節點|指出隱藏節點清單中，隱藏節點順序的整數。|  
 |輸出層|空白|  
 |輸出節點|如果輸出屬性是連續的，則包含輸出屬性的名稱。<br /><br /> 如果輸出屬性是離散或離散化的，則包含輸出屬性的名稱和值。|  
@@ -245,7 +243,7 @@ ms.lasthandoff: 12/08/2017
  **連續屬性** ：NODE_DISTRIBUTION 資料表的最後兩個資料列包含屬性的平均值、整個節點的係數，以及係數的變異數。  
   
 ## <a name="see-also"></a>請參閱  
- [Microsoft 類神經網路演算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft 類神經網路演算法技術參考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [類神經網路模型查詢範例](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   

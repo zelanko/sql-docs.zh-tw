@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a3dc1f15f445d24522911a8d21b32e8d8ac6ca3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 51c9b6140396cfc5080e3aee21cd8e708c05eb69
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 物件和物件特性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]物件中 Analysis Services 指令碼語言 (ASSL) 遵循特定的指導方針中的物件群組、 繼承、 命名、 擴充，以及處理。  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
 -   資料分割  
   
--   檢視方塊  
+-   「檢視方塊」  
   
 -   採礦模型  
   
@@ -95,7 +93,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="object-expansion"></a>物件展開  
  **ObjectExpansion**限制可用來控制由伺服器傳回的 ASSL XML 展開程度。 這個限制具有下表中所列的選項。  
   
-|列舉值|允許\<Alter >|Description|  
+|列舉值|允許\<Alter >|描述|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|否|只會為要求的物件以及為所有包含的主要物件，遞迴地傳回名稱、識別碼和時間戳記。|  
 |*ObjectProperties*|是|展開要求的物件與所含的次要物件，但是不會傳回所含的主要物件。|  

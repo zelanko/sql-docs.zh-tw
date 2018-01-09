@@ -2,28 +2,30 @@
 title: "Azure SQL Database 和資料倉儲的 TDE | Microsoft Docs"
 description: "SQL Database 和資料倉儲的透明資料加密概觀。 本文涵蓋 TDE 的優點與組態選項，包括「受服務管理的 TDE」和「自行管理金鑰 (BYOK)」。"
 keywords: 
-services: sql-database
-documentationcenter: 
 author: becczhang
 manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
+ms.component: security
+ms.custom: 
 ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: d486dd7b9d3019cfb3f3cf88482cdb578e9f9066
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a3fee8259aab2901eaf7950d4255d78d1860eeda
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>SQL Database 和資料倉儲的透明資料加密
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 透明資料加密 (Transparent Data Encryption, TDE) 可即時執行資料庫、相關聯備份及交易記錄檔的即時加密與解密，完全無須變更應用程式，就能協助保護 Azure SQL Database 和資料倉儲免受惡意活動所造成的威脅。
 
@@ -82,11 +84,11 @@ TDE 的主要金鑰是設在伺服器層級，也稱為「TDE 保護裝置」。
 
 若要透過 PowerShell 設定 TDE，您必須以 Azure 擁有者、參與者或 SQL 安全性管理員的身分連線。 
 
-| 指令程式 | Description |
+| 指令程式 | 描述 |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |啟用或停用資料庫的 TDE。|
-| [Get-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |取得資料庫的 TDE 狀態。 |
-| [Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |檢查資料庫的加密進度。 |
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |取得資料庫的 TDE 狀態。 |
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption-Activity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |檢查資料庫的加密進度。 |
 | [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) |將 Key Vault 金鑰新增至 SQL Server。 |
 | [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) |取得 SQL Server 的 Key Vault 金鑰。 |
 | [Set-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/set-azurermsqlservertransparentdataencryptionprotector) |設定 SQL Server 的 TDE 保護裝置。 |
@@ -98,11 +100,11 @@ TDE 的主要金鑰是設在伺服器層級，也稱為「TDE 保護裝置」。
 
 使用 master 資料庫中 **dbmanager** 角色的系統管理員或成員身分來登入，以連接到資料庫。
 
-| Command | Description |
+| 命令 | 描述 |
 | --- | --- |
 | [ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-azure-sql-database) | 使用 SET ENCRYPTION ON/OFF 來加密或解密資料庫。 |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |傳回關於資料庫加密狀態及其相關聯之資料庫加密金鑰的資訊。 |
-| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |傳回每個資料庫倉儲節點的加密狀態，及其相關聯資料庫的加密金鑰相關資訊。 | 
+| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |傳回每個資料庫倉儲節點的加密狀態，及其相關聯資料庫的加密金鑰相關資訊。 | 
 |  | |
 
 您無法使用 Transact-SQL，將 TDE 保護裝置切換至 Azure Key Vault 金鑰；請使用 PowerShell 或 Azure 入口網站。
@@ -111,7 +113,7 @@ TDE 的主要金鑰是設在伺服器層級，也稱為「TDE 保護裝置」。
  
 若要透過 REST API 設定 TDE，您必須以 Azure 擁有者、參與者或 SQL 安全性管理員的身分連線。 
 
-| Command | Description |
+| 命令 | 描述 |
 | --- | --- |
 |[建立或更新伺服器](/rest/api/sql/servers/createorupdate)|將 AAD 身分識別新增至 SQL Server (用來授與 Key Vault 的存取權)。|
 |[建立或更新伺服器金鑰](/rest/api/sql/serverkeys/createorupdate)|將 Key Vault 金鑰新增至 SQL Server。|
@@ -125,7 +127,7 @@ TDE 的主要金鑰是設在伺服器層級，也稱為「TDE 保護裝置」。
 |[取得透明資料加密組態](/rest/api/sql/transparentdataencryptions/get)|取得資料庫的 TDE 組態。|
 |[列出透明資料加密組態結果](/rest/api/sql/transparentdataencryptionactivities/ListByConfiguration)|取得資料庫的加密結果。|
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 - 如需 TDE 的一般描述，請參閱[透明資料加密 (TDE)](transparent-data-encryption.md)。
 

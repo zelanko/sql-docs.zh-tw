@@ -5,13 +5,10 @@ ms.date: 06/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e6b67ada589c925b8737ed13ba6c07f93a75f12c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0b69db6baee27296bf9544801b627c884d68795b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 版本支援的 Analysis Services 功能
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 
 ## <a name="analysis-services-servers"></a>Analysis Services （伺服器）
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |可擴充共用資料庫|是||||||是|  
 |備份/還原與附加/卸離資料庫|是|是|||||是|  
@@ -43,11 +40,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="tabular-models"></a>表格式模型 
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |階層|是|是|||||是|  
 |KPI|是|是|||||是|  
-|檢視方塊|是||||||是|  
+|「檢視方塊」|是||||||是|  
 |翻譯|是|是|||||是|  
 |DAX 計算、DAX 查詢、MDX 查詢|是|是|||||是|  
 |資料列層級安全性|是|是|||||是|  
@@ -57,12 +54,12 @@ ms.lasthandoff: 12/08/2017
 
 ## <a name="multidimensional-models"></a>多維度模型 
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |局部加總量值|是|否 <sup>1</sup>|||||是|  
 |階層|是|是|||||是|  
 |KPI|是|是|||||是|  
-|檢視方塊|是||||||是|  
+|「檢視方塊」|是||||||是|  
 |動作|是|是|||||是|  
 |帳戶智慧|是|是|||||是|  
 |時間智慧|是|是|||||是|  
@@ -95,7 +92,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="power-pivot-for-sharepoint"></a>PowerPivot for SharePoint  
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |以共用服務架構為基礎的 SharePoint 伺服器陣列整合|是||||||是|  
 |使用方式報表|是||||||是|  
@@ -106,7 +103,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-mining"></a>資料採礦  
   
-|功能名稱|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
+|功能名稱|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |標準演算法|是|是|||||是|  
 |資料採礦工具 (精靈、編輯器、查詢產生器)|是|是|||||是|  

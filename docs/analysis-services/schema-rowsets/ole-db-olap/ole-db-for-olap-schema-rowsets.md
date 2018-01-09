@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ef17308efb95b03a96a37089d3870e97d1bd7dad
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 75bdb07bd24f44fd42cf257a1e365c101329060f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>OLE DB for OLAP 結構描述資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者支援下列 OLE DB for OLAP 結構描述資料列集。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="in-this-section"></a>本節內容  
   
-|結構描述資料列<sup>1</sup>|Description|  
+|結構描述資料列<sup>1</sup>|描述|  
 |-------------------------------|-----------------|  
 |[DISCOVER_INSTANCES 資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/discover-instances-rowset.md)|描述伺服器上的執行個體。|  
 |[DISCOVER_KEYWORDS 資料列集 &#40; OLE DB for OLAP &#41;](../../../analysis-services/schema-rowsets/ole-db-olap/discover-keywords-rowset-ole-db-for-olap.md)|列舉提供者所保留字詞的清單。|  

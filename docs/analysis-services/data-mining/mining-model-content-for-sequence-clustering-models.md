@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 336dd3cc52fc72576c60c20c0e324f177b488837
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5fefc08fae0dbb06692a914e72ce29f684db2161
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>群集模型的時序採礦模型內容
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題描述使用 Microsoft 時序群集演算法的模型專用的採礦模型內容。 如需與適用於所有模型類型採礦模型內容相關的一般及統計詞彙說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
  NODE_TYPE  
  時序群集模型會輸出下列節點類型：  
   
-|節點類型識別碼|說明|  
+|節點類型識別碼|描述|  
 |------------------|-----------------|  
 |1 (模型)|模型的根節點|  
 |5 (群集)|包含群集中的節點計數、屬性的清單，以及描述群集中之值的統計資料。|  
@@ -184,9 +182,9 @@ ORDER BY Count(*) DESC
   
  從這些結果中，您會發現訂單號碼 'SO72656'、'SO58845' 及 'SO70714' 包含最大的時序，其中每個時序都有 8 個項目。 您可以利用訂單識別碼檢視特定訂單的詳細資料，以查看所購買的項目以及在哪個訂單中。  
   
-|OrderNumber|LineNumber|模型|  
+|OrderNumber|LineNumber|[模型]|  
 |-----------------|----------------|-----------|  
-|SO58845|1|Mountain-500|  
+|SO58845|@shouldalert|Mountain-500|  
 |SO58845|2|LL Mountain Tire|  
 |SO58845|3|Mountain Tire Tube|  
 |SO58845|4|Fender Set - Mountain|  
@@ -240,7 +238,7 @@ ORDER BY Count(*) DESC
   
 |產品|支援 (NODE_DISTRIBUTION 資料表)|機率 (NODE_DISTRIBUTION 資料表)|機率 (從圖形)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
-|遺漏|48.447887|0.138028169|(未顯示)|  
+|Missing|48.447887|0.138028169|(未顯示)|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
 |Fender Set - Mountain|80.087324|0.228169014|0.23|  
 |Half-Finger Gloves|0.9887324|0.002816901|0.00|  

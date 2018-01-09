@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 605c4ae52c6e6f51ff03eb5ff161603b9fb082e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1d080c99d9d3fc1a1fcdfb8e6a4e183850462f94
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-8-defining-actions"></a>第 8 課：定義動作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在這一課，您將學會定義中的動作程式[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案。 動作只是一個儲存在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的多維度運算式 (MDX) 陳述式，可以併入用戶端應用程式中，由使用者啟動。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 |專屬|使用不同於此資料表列出的介面來執行作業。|  
 |報表|將一個以 URL 為基礎的參數化要求，提交給報表伺服器，然後將報表傳回用戶端應用程式。|  
 |資料列集|將資料列集傳回用戶端應用程式。|  
-|Statement|執行 OLE DB 命令。|  
+|引數|執行 OLE DB 命令。|  
 |URL|在網際網路瀏覽器中顯示動態網頁。|  
   
 動作可讓使用者啟動應用程式，或者在所選項目的內容當中執行其他步驟。 如需詳細資訊，請參閱 [動作 &#40;Analysis Services - 多維度資料&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)和 [多維度模型中的動作](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-lesson"></a>下一課  
 [第 9 課：定義檢視方塊和翻譯](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [Analysis Services 教學課程案例](../analysis-services/analysis-services-tutorial-scenario.md)  
 [多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [動作 &#40;Analysis Services - 多維度資料&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  

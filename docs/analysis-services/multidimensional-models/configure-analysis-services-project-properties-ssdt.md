@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d36e47029fb6fac4a7ba0bbfc846d1c7efac8aa9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1715c22cf3976a3ad888081436bb322b38451308
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>設定 Analysis Services 專案屬性 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案定義的特定預設屬性會影響建置與部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="property-description"></a>屬性描述  
  下表描述的是每一個專案屬性、列出其預設值，以及提供變更屬性值的詳細資訊。  
   
-|屬性|預設值|說明|  
+|屬性|預設值|描述|  
 |--------------|---------------------|-----------------|  
 |建立 / 部署伺服器版本|用來開發專案的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|指定最終會將專案部署到哪一個版本的伺服器。 當與專案的多位開發人員合作時，開發人員需要了解伺服器版本，才能知道哪些功能會併入到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中。|  
 |建立 / 部署伺服器版本|用來開發專案的版本|指定最終會將專案部署到哪一個版本的伺服器。|  
@@ -44,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 |建立 / 移除密碼|True|指定在建立程序期間寫入輸出目錄的連接字串中，是否要移除已知的密碼。 移除密碼是為了增加安全性； 如果移除密碼，當處理已部署的專案時，將需要提供密碼，好讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 能夠存取來源資料。|  
 |偵錯 / 起始物件|\<目前作用中物件 >|決定當您開始偵錯時所要起始的物件。|  
 |部署 / 部署模式|只部署變更|依預設，只會部署對專案物件所做的變更 (前提是未直接在專案外面對物件進行其他變更)。 您也可以選擇在每一次部署期間部署所有專案物件。 為了獲得最佳效能，請使用 [只部署變更]。|  
-|部署 / 處理選項|預設值|依預設， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在部署物件變更時決定所需的處理類型， 這通常會產生最快的部署時間； 但是，您也可以選擇在每一次部署時進行完整的處理或是不執行任何處理。|  
+|部署 / 處理選項|預設|依預設， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在部署物件變更時決定所需的處理類型， 這通常會產生最快的部署時間； 但是，您也可以選擇在每一次部署時進行完整的處理或是不執行任何處理。|  
 |部署 / 交易式部署|False|依預設，在處理已部署的物件時，已變更之物件或所有物件的部署並不是交易式部署。 即使處理失敗，部署仍可以成功，並持續存在。 您可以變更這項預設值，在單一交易中併入部署和處理。|  
 |部署 / 目標伺服器|localhost|依預設， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案內的資料庫物件將會部署到使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之本機電腦上的預設 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 執行個體。 變更這項預設值，以便在本機電腦上或是您有權建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件之任何遠端電腦上的任何執行個體上指定具名執行個體。|  
 |部署 / 資料庫|\<專案名稱 >|依預設，一旦部署之後， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案物件會立刻具現化所在的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫名稱就是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案定義時的名稱。 請變更這個屬性，以變更伺服器屬性所指定之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的資料庫名稱。|  

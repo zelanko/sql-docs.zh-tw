@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42ee21307542c7e204ac7b4616714c2285cce032
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>採礦結構和結構資料行的屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以設定或變更了採礦結構與屬性及其相關聯的資料行和巢狀的資料表使用**採礦結構**資料採礦設計師索引標籤。 在此索引標籤中設定的屬性會傳播至與結構相關聯的每一個採礦模型。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 ### <a name="properties-of-the-mining-structure"></a>採礦結構的屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**CacheMode**|指定在培訓完成之後，應該快取或捨棄培訓中所使用的案例。 **注意：**  這個屬性必須設定為 **KeepTrainingCases** 才能啟用鑽研和鑑效組。|  
 |**定序**|指定資料行的預設定序。 如果沒有指定定序，就會使用伺服器的定序。|  
@@ -56,12 +54,12 @@ ms.lasthandoff: 12/08/2017
 |**HoldoutSeed**|指定要初始化鑑效組測試集之資料分割的種子，以便確保測試資料集可重新建立。 **注意：**  若要設定此屬性， <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 必須設為 **KeepTrainingCases**。|  
 |**ID**|顯示採礦結構的唯一識別碼。<br /><br /> 在建立採礦結構時您指派給結構的名稱會當做識別碼使用。 如果您之後針對 **Name** 屬性輸入新的值，藉以變更此名稱，則新的名稱只會當作別名使用，而不會變更識別碼。|  
 |**語言**|針對採礦結構中的標題指定語言。|  
-|**Name**|指定採礦結構的名稱或別名。<br /><br /> 如果您變更 Name 屬性的值，新的名稱只會當做標題或別名使用。採礦結構的識別碼不會變更。|  
+|**名稱**|指定採礦結構的名稱或別名。<br /><br /> 如果您變更 Name 屬性的值，新的名稱只會當做標題或別名使用。採礦結構的識別碼不會變更。|  
 |**Source**|顯示資料來源的名稱和資料來源的類型。|  
   
 ### <a name="properties-of-the-mining-structure-columns"></a>採礦結構資料行的屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|識別分類資料行描述的資料行。|  
 |**內容**|資料行的內容類型。|  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/08/2017
 |**IsKey**|指出資料行是否為索引鍵資料行。|  
 |**KeyColumns**|包含資料行的定義，資料行為屬性的索引鍵或部份索引鍵。|  
 |**ModelingFlags**|設定演算法提供的其他參數。|  
-|**Name**|資料行的名稱。|  
+|**名稱**|資料行的名稱。|  
 |**NameColumn**|識別提供父元素名稱的資料行。|  
 |**Source**|顯示資料行的來源。<br /><br /> 若為關聯式資料來源，此值一律為 **[(無)]**。<br /><br /> 若為以 OLAP Cube 為基礎的結構，此值就是定義當做巢狀資料表來源使用之配量的 MDX 陳述式。|  
 |**SourceMeasureGroup**|顯示量值群組的來源。<br /><br /> 若為關聯式資料來源，此值一律為 **[(無)]**。<br /><br /> 若為以 OLAP Cube 為基礎的結構，此值就是定義當做巢狀資料表來源使用之配量的 MDX 陳述式。|  

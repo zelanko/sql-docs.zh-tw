@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 18028674d3c6873734b9c7b67b4e03dde99ed2e3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b85aca1abd948d42710633d65e7b79ad30d0629a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="training-and-testing-data-sets"></a>定型和測試資料集
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]將資料分成定型集和測試集是很重要的一部分評估資料採礦模型。 一般來說，當您將資料集分成定型集和測試集時，大多數的資料會用於定型，小部分的資料會用於測試。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會隨機取樣資料，以確保測試集和定型集類似。 您可以透過針對定型和測試使用相同的資料，盡可能減少資料不一致的影響並有效了解模型的特性。  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>修改結構屬性以建立測試資料集  
  如果您建立並處理採礦結構，然後決定要保留測試資料集，您可以修改採礦結構的屬性。 若要變更資料分割的方式，請編輯下列屬性：  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|指定測試集中要包含的最大案例數目。|  
 |**HoldoutMaxPercent**|將測試集中要包含的案例數目指定為完整資料集的百分比。 如果沒有任何資料集，您應該指定 0。|  

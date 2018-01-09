@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 523dcd99da61b11e42848ea77037baf59a3ea00b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eb0da34dd83cd9e7b10a21a4a89047902e656ab3
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>開始使用這個匯入和匯出精靈的簡單範例
 逐步執行將資料從 Excel 試算表匯入至 SQL Server 資料庫的這個常見案例，以了解 [SQL Server 匯入和匯出精靈] 中的預期作業。 即使您要使用不同的來源和不同的目的地，本主題還是會示範您執行精靈時所需知道的大部分內容。
@@ -155,9 +155,9 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="learn-more"></a>深入了解  
 深入了解精靈運作方式。
--   **深入了解精靈。** 如果您要尋找精靈概觀，請參閱 [使用 SQL Server 匯入及匯出精靈匯入和匯出資料](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
+-   **深入了解此精靈。** 如果您要尋找精靈概觀，請參閱 [使用 SQL Server 匯入及匯出精靈匯入和匯出資料](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
 
--   **了解精靈中的步驟。** 如果您要尋找精靈中各步驟的資訊，請從這裡的清單中選取您想要的頁面 - [SQL Server 匯入和匯出精靈中的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 精靈的每個頁面也都會有個別文件頁面。
+-   **了解此精靈的步驟。** 如果您要尋找精靈中各步驟的資訊，請從這裡的清單中選取您想要的頁面 - [SQL Server 匯入和匯出精靈中的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 精靈的每個頁面也都會有個別文件頁面。
 
 -   **了解如何連線至資料來源和目的地。** 如果您要尋找如何連線至資料的資訊，請從這裡的清單中選取您想要的頁面 - [使用 SQL Server 匯入和匯出精靈連線至資料來源](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)。 數個常用資料來源都各有個別文件頁面。
 

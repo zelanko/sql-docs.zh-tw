@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f8d2c400fc82852333b64d9bd89b2e7c74190061
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 473813a85d925bc98f914293ae075a7254597b6d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>從分析資料來源擷取資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]一旦您建立連線，並建立查詢，您可以擷取任何資料。 在 ADOMD.NET 中，您可以擷取使用三個不同物件的資料 (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>， <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>，和<xref:System.Xml.XmlReader>) 透過呼叫其中一個**Execute**方法<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>物件。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
  為了協助您選取最符合應用程式需求的資料擷取物件，下表會強調每個物件在互動性與負擔之間的差異。  
   
-|物件|互動性|負擔|保留維度性|使用方式資訊|  
+|Object|互動性|負擔|保留維度性|使用方式資訊|  
 |------------|-------------------|--------------|----------------------------|-----------------------|  
 |<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>|最高|中度高，也就導致資料擷取的速度變成最慢|是|[使用 CellSet 擷取資料](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)|  
 |<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataAdapter>|中度|中度|否|[填入資料集從配接器](http://go.microsoft.com/fwlink/?LinkId=70016)|  

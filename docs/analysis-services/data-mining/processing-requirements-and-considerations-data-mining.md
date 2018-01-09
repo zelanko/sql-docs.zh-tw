@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a1fbf79bba09ab6210a8fd4aba51ae2cc6bd99e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f55e2d47bcc8228111b35f86ec620a6623b68cad
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>處理需求和考量 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主題描述處理資料採礦物件時，請記住一些技術考量。 如需什麼是處理以及如何將處理套用至資料採礦的一般說明，請參閱 [處理資料採礦物件](../../analysis-services/data-mining/processing-data-mining-objects.md)。  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/08/2017
   
  如需詳細資訊，請參閱 [處理採礦結構](../../analysis-services/data-mining/process-a-mining-structure.md)。  
   
- 如果您希望節省硬碟空間，請注意 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在本機保留採礦結構快取。 亦即，它會將所有培訓資料寫出至本機硬碟。 如果不要快取資料，您可以設定採礦結構的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性，將預設值變更為 **ClearAfterProcessing**。 這會在處理模型之後終結快取，但是，它也會在採礦結構上停用鑽研。 如需詳細資訊，請參閱[鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+ 如果您希望節省硬碟空間，請注意 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在本機保留採礦結構快取。 亦即，它會將所有培訓資料寫出至本機硬碟。 如果不要快取資料，您可以設定採礦結構的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性，將預設值變更為 **ClearAfterProcessing**。 這會在處理模型之後終結快取，但是，它也會在採礦結構上停用鑽研。 如需詳細資訊，請參閱 [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
  同時，如果您清除快取，將無法使用鑑效組測試集；如果已經定義一個鑑效組測試集，將會遺失該測試集資料分割的定義。 如需鑑效組測試集的詳細資訊，請參閱 [定型和測試資料集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
   

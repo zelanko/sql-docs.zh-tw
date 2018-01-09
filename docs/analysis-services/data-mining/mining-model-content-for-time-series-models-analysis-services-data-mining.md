@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>時間序列模型的採礦模型內容 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]所有的採礦模型會使用相同的結構來儲存其內容。 這個結構是根據資料採礦內容結構描述資料列集所定義。 不過，在該標準結構內，包含資訊的節點會以不同的方式排列，以便代表各種樹狀結構。 本主題描述如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法為基礎的採礦模型組織節點，以及每個節點的意義。  
@@ -129,7 +127,7 @@ ms.lasthandoff: 12/08/2017
   
  **ARTXP**  
   
-|節點類型識別碼|說明|  
+|節點類型識別碼|描述|  
 |------------------|-----------------|  
 |1 (模型)|時間序列|  
 |3 (內部)|代表 ARTXP 時間序列樹中的內部分支。|  
@@ -138,7 +136,7 @@ ms.lasthandoff: 12/08/2017
   
  **ARIMA**  
   
-|節點類型識別碼|說明|  
+|節點類型識別碼|描述|  
 |------------------|-----------------|  
 |27 (ARIMA 根)|ARIMA 樹狀結構的最上層節點。|  
 |28 (ARIMA 週期結構)|描述單一週期結構之 ARIMA 樹狀結構的元件。|  
@@ -212,7 +210,7 @@ ms.lasthandoff: 12/08/2017
  **ARIMA**：支援目前週期結構的案例計數。 支援的值會在目前週期結構的所有節點中重複。  
   
  MSOLAP_MODEL_COLUMN  
- 在節點中表示之資料序列的可預測屬性 (與 ATTRIBUTE_NAME 的值相同)。  
+ 在節點中表示之資料序列的可預測屬性  (與 ATTRIBUTE_NAME 的值相同)。  
   
  MSOLAP_NODE_SCORE  
  指出樹狀結構或分割之資訊值特性的數值。  
@@ -415,7 +413,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION** ：在巢狀資料表中顯示方程式的詞彙，而且您可以查詢此資料表以便取得特定詞彙。 節點分佈資料表會與 XML 規則遵循相同的階層式結構。 也就是說，ARIMA 序列 (NODE_TYPE = 27) 的根節點包含完整方程式的攔截值和週期性，而且此方程式可能包括多個週期性，而子節點僅包含特定週期結構或該週期結構之子節點特有的資訊。  
   
-|節點類型|Attribute|值類型|  
+|節點類型|attribute|值類型|  
 |---------------|---------------|----------------|  
 |27 (ARIMA 根)|Intercept<br /><br /> Periodicity|11|  
 |28 (ARIMA 週期結構)|Periodicity<br /><br /> 自動迴歸順序<br /><br /> Difference order<br /><br /> Moving average order|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  

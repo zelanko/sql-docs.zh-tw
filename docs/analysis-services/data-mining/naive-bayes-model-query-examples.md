@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5efdf95cb4a87acd7c2b1e626dd20d3105aa1f6b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fa67a1dce190a145588f90b740213f6400612dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="naive-bayes-model-query-examples"></a>貝式機率分類模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您建立針對資料採礦模型的查詢時，您可以建立內容查詢，來提供有關分析期間所發現之模式的詳細資料，或您可以建立預測查詢，為新的資料進行預測模型中使用的模式。 您也可以針對資料採礦結構描述資料列集使用查詢，藉以擷取有關模型的中繼資料。 本節說明如何針對以 Microsoft 貝氏機率分類演算法為基礎的模型來建立這些查詢。  
@@ -96,10 +94,10 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|TM_NaiveBayes|Bike Buyer|遺漏|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|@shouldalert|  
 |TM_NaiveBayes|Bike Buyer|0|8869|0.507263784|4|  
-|TM_NaiveBayes|Bike Buyer|1|8615|0.492736216|4|  
-|TM_NaiveBayes|Gender|遺漏|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|@shouldalert|8615|0.492736216|4|  
+|TM_NaiveBayes|Gender|Missing|0|0|@shouldalert|  
 |TM_NaiveBayes|Gender|F|8656|0.495081217|4|  
 |TM_NaiveBayes|Gender|M|8828|0.504918783|4|  
   
@@ -123,7 +121,7 @@ WHERE ATTRIBUTE_NAME = 'Region'
   
 |NODE_TYPE|NODE_CAPTION|NODE_PROBABILITY|NODE_SUPPORT|MSOLAP_NODE_SCORE|NODE_TYPE|  
 |----------------|-------------------|-----------------------|-------------------|-------------------------|----------------|  
-|10|Bike Buyer -> Region|1|17484|84.51555875|10|  
+|10|Bike Buyer -> Region|@shouldalert|17484|84.51555875|10|  
 |11|Bike Buyer -> Region = Missing|0|0|0|11|  
 |11|Bike Buyer -> Region = North America|0.508236102|8886|0|11|  
 |11|Bike Buyer -> Region = Pacific|0.193891558|3390|0|11|  
@@ -215,7 +213,7 @@ NATURAL PREDICTION JOIN
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
 |0|10161.5714|0.581192599|0.010530981|0|0|  
-|1|7321.428768|0.418750215|0.008945684|0|0|  
+|@shouldalert|7321.428768|0.418750215|0.008945684|0|0|  
 ||0.999828444|5.72E-05|5.72E-05|0|0|  
   
  資料表中的最後一個資料列會顯示支援與機率針對遺漏值所做的調整。 變異數和標準差永遠為 0，因為貝氏機率分類模型無法製作連續值的模型。  
@@ -238,7 +236,7 @@ AS t
   
  部分結果：  
   
-|模型|  
+|[模型]|  
 |-----------|  
 |Women's Mountain Shorts|  
 |Water Bottle|  

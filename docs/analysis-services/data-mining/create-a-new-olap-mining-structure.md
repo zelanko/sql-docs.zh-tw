@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ede498333c2fa7c1967d62e2d403d09a6d50acde
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a60a88bbf9816e4af0260cde3063f5bd6d5240e6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-new-olap-mining-structure"></a>建立新的 OLAP 採礦結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以使用中的資料採礦精靈[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建立採礦結構使用多維度模型中的資料。 以 OLAP Cube 為基礎的採礦模型可以使用事實資料表、維度和量值群組中的資料行和值做為分析屬性。  
@@ -50,13 +48,13 @@ ms.lasthandoff: 12/08/2017
   
      例如，如果您嘗試識別客戶群組，可以選擇 [Customer] 維度；如果您嘗試分析跨多筆交易的購買行為，可以選擇 [Internet Sales Order Details] 維度。 不限制您只能使用此維度中的資料，但該維度應該包含要在分析中使用的重要屬性。  
   
-     按一下 **[下一步]**。  
+     按 [下一步] 。  
   
 6.  在 **[選取案例索引鍵]** 頁面的 **[屬性]**之下，選取將成為採礦結構之索引鍵的屬性，然後按 **[下一步]**。  
   
      通常，做為採礦結構之索引鍵的屬性也是維度的索引鍵，並且會預先選取。  
   
-7.  在 **[選取案例層級資料行]** 頁面的 **[相關的屬性和量值]**之下，選取其值要加入至採礦結構中做為案例資料的屬性和量值。 按一下 **[下一步]**。  
+7.  在 **[選取案例層級資料行]** 頁面的 **[相關的屬性和量值]**之下，選取其值要加入至採礦結構中做為案例資料的屬性和量值。 按 [下一步] 。  
   
 8.  在 **[指定採礦模型資料行使用方式]** 頁面的 **[採礦模型結構]**之下，先設定可預測資料行，然後選擇要做為輸入的資料行。  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
      請注意，已指定為索引鍵的資料行不能用於輸入或預測。  
   
-     按一下 **[下一步]**。  
+     按 [下一步] 。  
   
 9. 在 **[指定採礦模型資料行使用方式]** 頁面上，您也可以使用 **[加入巢狀資料表]** 和 **[移除巢狀資料表]**，對採礦結構新增及移除巢狀資料表。  
   
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/08/2017
     > [!NOTE]  
     >  OLAP 採礦模型不支援使用 [偵測] 功能，來自動偵測資料行包含連續資料或不連續資料。  
   
-     按一下 **[下一步]**。  
+     按 [下一步] 。  
   
 11. 在 **[配量來源 Cube]** 頁面上，您可以篩選用來建立採礦結構的資料。  
   
@@ -115,9 +113,9 @@ ms.lasthandoff: 12/08/2017
   
     -   **參數**：忽略此核取方塊。 此對話方塊支援多個 Cube 篩選案例，而此選項與建立採礦結構無關。  
   
-     按一下 **[下一步]**。  
+     按 [下一步] 。  
   
-12. 在 **[將資料分割成定型集和測試集]** 頁面上，指定要保留供測試的採礦結構資料百分比，或指定測試案例的最大數目。 按一下 **[下一步]**。  
+12. 在 **[將資料分割成定型集和測試集]** 頁面上，指定要保留供測試的採礦結構資料百分比，或指定測試案例的最大數目。 按 [下一步] 。  
   
      如果您指定了這兩個值，就會結合這些限制，以便使用最低的值。  
   
@@ -138,6 +136,6 @@ ms.lasthandoff: 12/08/2017
      **使用採礦模型維度建立 Cube**：選取此核取方塊，並提供新 Cube 的名稱。 當您使用此選項時，所建立的新 Cube 同時會包含建立結構所使用的現有維度，以及包含模型結果的新資料採礦維度。  
   
 ## <a name="see-also"></a>請參閱  
- [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [採礦結構工作和操作說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

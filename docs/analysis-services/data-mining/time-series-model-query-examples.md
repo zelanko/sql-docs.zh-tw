@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e72bec5f3ff9a0dbc14912fb2bba656744a678d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4467fa9fcf4b695b77d533e358019b020545861c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="time-series-model-query-examples"></a>時間序列模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您建立針對資料採礦模型的查詢時，您可以建立內容查詢，來提供有關分析期間所發現之模式的詳細資料，或您可以建立預測查詢，為新的資料進行預測模型中使用的模式。 例如，時間序列模型的內容查詢可能會提供有關所偵測到之週期性結構的其他詳細資料，而預測查詢則為您提供下 5-10 個時間配量的預測。 您也可以使用查詢來擷取有關模型的中繼資料。  
@@ -106,10 +104,10 @@ WHERE NODE_NAME = 'TA00000007'
   
  範例結果：  
   
-|簡短的方程式|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|簡短的方程式|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|@shouldalert|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
  如需如何解譯這項資訊的詳細資訊，請參閱 [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  

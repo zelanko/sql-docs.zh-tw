@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1586c23850daa679aa6804d946ceb0d0a98ad51
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: a64db58ce05675a3a2ac30e0bcea0d3924731a08
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>使用 R 的資料探索和預測模型
 

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ea62c1e36451be1c18362073bd917e2376e1e51
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5fb17843b2c01de1a99bff2d37b22eaa07783c8a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-solution-deployment"></a>多維度模型方案部署
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您已完成的開發之後[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，您可以將資料庫部署到 Analysis Services 伺服器。 Analysis Services 提供六種可能的部署方法，可用來將資料庫移至測試伺服器或實際伺服器。 此處以優點的順序列出這些方法：AMO 自動化、XMLA、部署精靈、部署公用程式、同步處理精靈、備份與還原。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_meth"></a> 部署方法  
   
-|方法|說明|連結|  
+|方法|描述|連結|  
 |------------|-----------------|----------|  
 |**分析管理物件 (AMO) 自動化**|AMO 提供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]完整命令集的程式設計介面，包括可用於方案部署的命令。 AMO 自動化是方案部署的方法之一，雖然彈性最高，但是也需要撰寫程式。  使用 AMO 自動化的主要優點在於，您可以搭配 AMO 應用程式使用 SQL Server Agent，根據預設排程執行部署。|[使用分析管理物件 &#40;AMO&#41; 來開發](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，即可針對現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中繼資料產生 XMLA 指令碼，然後在另一部伺服器上執行該指令碼來重新建立初始資料庫。 透過定義部署處理，然後在 XMLA 指令碼中編纂和儲存部署處理，可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中輕易地形成 XMLA 指令碼。 一旦儲存的檔案中具有 XMLA 指令碼後，您就可以輕易地根據排程來執行指令碼，或在直接連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的應用程式中內嵌指令碼。<br /><br /> 您也可以使用 SQL Server Agent，在預設的基礎上執行 XMLA 指令碼，但是使用 XMLA 指令碼的彈性不如 AMO。 AMO 會裝載完整的管理命令範圍，提供較廣泛的功能。|[使用 XMLA 部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  
@@ -70,8 +67,8 @@ ms.lasthandoff: 12/08/2017
   
  [使用 XMLA 部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)  
   
- [Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [使用部署精靈來部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
- [使用部署公用程式的部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)  
+ [使用部署公用程式部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)  
   
   

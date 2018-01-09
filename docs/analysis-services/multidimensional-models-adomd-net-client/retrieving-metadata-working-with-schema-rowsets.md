@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4045c7b677129bcc7b72b8ed46fa84aed95e49f5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dcb2905c471751275b6dae19737541b798e2b68b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>擷取中繼資料-使用 結構描述資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您需要比 ADOMD.NET 物件模型中可用的中繼資料時，ADOMD.NET 提供的功能來擷取完整範圍的 XML for Analysis (XMLA)、 OLE DB、 OLE DB for OLAP 和 OLE DB for Data Mining 結構描述資料列：  

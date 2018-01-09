@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c5badc4ffe9ddfc52a767f93771436913369ab1f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 913b2cbb8fbf93be08b1854051024492e691bdea
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-stored-procedures"></a>建立預存程序
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]所有的預存程序必須與 common language runtime (CLR) 或元件物件模型 (COM) 類別相關聯，才能加以使用。 此類別必須安裝在伺服器上 — 通常是在表單的[!INCLUDE[msCoName](../../includes/msconame-md.md)]ActiveX® 動態連結程式庫 (DLL) — 並註冊組件在伺服器上或在為[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。  
