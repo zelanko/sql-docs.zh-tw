@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,13 +20,13 @@ ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 caps.latest.revision: "36"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5c79a0e5645cb3cd462e24f3981adcf7d95b112
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc8f2253699c71300ba234dfc24f7ee9c3193540
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>常用的篩選 (報表產生器及 SSRS)
   若要建立篩選，您必須指定一個或多個篩選方程式。 篩選方程式包含運算式、資料類型、運算子和值。 本主題提供常用的篩選範例。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="filter-examples"></a>篩選範例  
  下表說明使用不同資料類型和不同運算子的篩選方程式範例。 比較的範圍是由定義篩選的報表項目所決定。 例如，如果是資料集上所定義的篩選， **TOP % 10** 就是資料集中前百分之 10 的值；如果是群組上所定義的篩選， **TOP % 10** 就是群組中前百分之 10 的值。  
   
-|簡單運算式|資料類型|運算子|Value|說明|  
+|簡單運算式|資料類型|運算子|ReplTest1|描述|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Integer**|**>**|`7`|包含大於 7 的資料值。|  
 |`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|包含前 10 大資料值。|  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="examples-with-report-parameters"></a>報表參數的範例  
  下表提供篩選運算式的範例，其中包含了單一值或多重值的參數參考。  
   
-|參數類型|(篩選) 運算式|運算子|Value|資料類型|  
+|參數類型|(篩選) 運算式|運算子|ReplTest1|資料類型|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
 |單一值|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
 |多重值|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  

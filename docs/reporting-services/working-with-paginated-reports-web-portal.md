@@ -8,20 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 68a7523b0c044a90c9c71d53ffbb00c6e680b5a1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0f8ff65614eac486e11fc907c42737eb330c8b83
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>使用分頁報表 (Web 入口網站)
 
@@ -134,7 +134,7 @@ Reporting Services 訂閱是在特定時間，或是為了回應某個事件時�
 ## <a name="dependent-items"></a>相依項目  
 使用 [相依項目] 頁面即可檢視參考此報表的項目清單。 每個項目類型的圖示都會表示其用途。 您接著可以選取每個項目上的**省略符號 (...)**，進一步管理這些項目。  
   
-## <a name="caching"></a>快取  
+## <a name="caching"></a>Caching  
 您有幾個選項可以快取分頁報表的資料。 先從簡單的選取步驟開始。  
   
 1.  [永遠以最新的資料執行此報表] 會在每次執行報表時針對資料來源進行查詢。 這會讓依需求報表包含最新的資料。 每次開啟包含新查詢結果的報表時，都會建立報表的新執行個體。 使用此方法時，如果十位使用者同時開啟報表，則會傳送十個查詢至資料來源進行處理。  
@@ -196,7 +196,7 @@ Reporting Services 訂閱是在特定時間，或是為了回應某個事件時�
   
 選取即可變更定義目前項目安全性的方式。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
 [使用共用資料集](../reporting-services/work-with-shared-datasets-web-portal.md)

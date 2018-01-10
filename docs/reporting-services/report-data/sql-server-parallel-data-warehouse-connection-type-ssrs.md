@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa1b2d225847952e39d5f28ee095dedb551cdc6f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d73b3b84f1a2c2fb8a9427cde1deba7a8745c90e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 連接類型 (SSRS)
 
@@ -79,7 +77,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  以文字為基礎的查詢設計工具支援 [文字](#QueryText) 模式，在此模式下，您可以輸入從資料來源選取資料的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 命令。  
   
--   [文字](#QueryText)  
+-   [Text](#QueryText)  
   
  您可以使用 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 搭配 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 以及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 搭配 SQL Server。 這兩種 SQL 語言方言非常類似。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源連接類型撰寫的查詢，通常可用於 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 資料來源連接類型。  
   
@@ -164,7 +162,7 @@ WHERE EmployeeID = (@EmpID)
  《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [報表參數](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [篩選、分組和排序資料](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

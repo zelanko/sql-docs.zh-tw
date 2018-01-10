@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,20 +22,20 @@ helpviewer_keywords:
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 caps.latest.revision: "54"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 27cbba801cfa54e30dc69534f6835b3c2d381dfc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b68330e1d9297462462888e1138e57649d03efa7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="graphical-query-designer-user-interface"></a>圖形化查詢設計工具使用者介面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同時提供了圖形化查詢設計工具以及以文字為基礎的查詢設計工具來建立查詢，以便從關聯式資料庫中擷取資料作為報表設計師中的報表資料集。 使用圖形化查詢設計工具，可透過互動方式建立查詢及檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 資料來源類型的結果。 使用以文字為基礎的查詢設計工具，可指定多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、複雜查詢或命令語法以及以運算式為基礎的查詢。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。 如需使用特定資料來源類型的詳細資訊，請參閱 [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)。  
   
- 。  
+ 執行個體時提供 SQL Server 登入。  
   
 ## <a name="graphical-query-designer"></a>圖形化查詢設計工具  
  此圖形化查詢設計工具支援三種查詢命令：**Text**、**StoredProcedure** 或 **TableDirect**。 在您為資料集建立查詢之前，您必須先在 [ [資料集屬性](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) ] 對話方塊的 [查詢] 頁面上選取命令類型選項。  
@@ -76,10 +74,10 @@ ms.lasthandoff: 12/05/2017
 #### <a name="toolbar-for-the-graphical-query-designer"></a>圖形化查詢設計工具工具列  
  圖形化查詢設計工具工具列會提供按鈕，協助您使用圖形化介面設計 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。  
   
-|按鈕|說明|  
+|按鈕|描述|  
 |------------|-----------------|  
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。|  
-|**匯入**|從檔案或報表匯入現有的查詢。 只支援 .sql 和 .rdl 檔案類型。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。|  
+|**匯入**|從檔案或報表匯入現有的查詢。 只支援 .sql 和 .rdl 檔案類型。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
 |![顯示/隱藏圖表窗格切換按鈕](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "顯示/隱藏圖表窗格切換按鈕")|顯示或隱藏 [圖表] 窗格。|  
 |![顯示或隱藏方格窗格切換](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "顯示或隱藏方格窗格切換")|顯示或隱藏 [方格] 窗格。|  
 |![顯示或隱藏 SQL 窗格切換](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "顯示或隱藏 SQL 窗格切換")|顯示或隱藏 [SQL] 窗格。|  
@@ -121,10 +119,10 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-the-command-type-tabledirect"></a>TableDirect 命令類型的工具列按鈕  
  圖形化查詢設計工具工具列會提供資料來源中的資料表下拉式清單。 下表列出每一個按鈕以及該按鈕的功能。  
   
-|按鈕|說明|  
+|按鈕|描述|  
 |------------|-----------------|  
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。|  
-|**匯入**|從檔案或報表匯入現有的查詢。 只支援 .sql 和 .rdl 檔案類型。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。|  
+|**匯入**|從檔案或報表匯入現有的查詢。 只支援 .sql 和 .rdl 檔案類型。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
 |![一般查詢設計工具按鈕的圖示](../../reporting-services/report-data/media/icongenericquerydesigner.gif "一般查詢設計工具按鈕的圖示")|在一般查詢設計工具與圖形化查詢設計工具之間切換，並保留查詢文字或預存程序檢視。|  
 |![執行查詢](../../reporting-services/report-data/media/rsqdicon-run.gif "執行查詢")|從選取的資料表中選取所有的資料行。|  
   
@@ -139,7 +137,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-command-type-storedprocedure"></a>StoredProcedure 命令類型的工具列按鈕  
  圖形化查詢設計工具工具列會提供資料來源中的預存程序下拉式清單。 下表列出每一個按鈕以及該按鈕的功能。  
   
-|按鈕|說明|  
+|按鈕|描述|  
 |------------|-----------------|  
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。|  
 |**匯入**|從檔案或報表匯入現有的查詢。 只支援 .sql 和 .rdl 檔案類型。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。|  
@@ -159,6 +157,6 @@ EXEC uspGetEmployeeManagers '1';
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Oracle 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)   
  [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [設計查詢和檢視使用說明主題 (Visual Database Tools)](http://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  
+ [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  
   
   

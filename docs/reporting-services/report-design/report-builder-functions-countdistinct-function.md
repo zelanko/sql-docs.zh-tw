@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7e8fd8fd42f2c9ee41562062b846c95f4b192b71
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 302974548c3f57cf9e700c1a995929463d34604d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>報表產生器函式 - CountDistinct 函式
   傳回運算式指定的所有非 Null 相異值的計數 (在給定範圍的內容中評估)。  
@@ -51,7 +49,7 @@ CountDistinct(expression, scope, recursive)
 ## <a name="return-type"></a>傳回類型  
  傳回 **Integer**。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  *scope* 的值必須是字串常數，而且不得為運算式。 如果是未指定其他彙總的外部彙總， *scope* 必須參考目前的範圍或是包含的範圍。 如果是彙總的彙總，巢狀彙總可以指定子範圍。  
   
  *Expression* 可以包含巢狀彙總函式的呼叫，其中包含下列例外和條件：  

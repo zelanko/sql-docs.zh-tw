@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6a42bdc5a9d8a0f19958d6537de027d815b3ca8d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9c725ae731867a57e36bc80a8a1cbac3d11953c6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
 
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="DocumentProperties"></a> 文件屬性  
  Word 轉譯器會將下列中繼資料寫入到 DOCX 檔。  
   
-|報表元素屬性|說明|  
+|報表元素屬性|描述|  
 |-------------------------------|-----------------|  
 |Report Title (report title)|Title|  
 |Report.Author|作者|  
@@ -197,7 +195,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="DeviceInfo"></a> 裝置資訊設定  
  您可以變更此轉譯器的某些預設值，例如，省略超連結和鑽研連結或是在進行轉譯時，展開忽略原始的項目狀態而切換的所有項目，方法是，變更裝置資訊設定。 如需詳細資訊，請參閱 [Word Device Information Settings](../../reporting-services/word-device-information-settings.md)。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [Reporting Services 中的分頁](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
 [轉譯行為](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   

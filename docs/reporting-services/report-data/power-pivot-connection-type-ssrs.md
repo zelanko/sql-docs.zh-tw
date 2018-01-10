@@ -8,29 +8,27 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 488bdc3d56427922095ba1ed35e73cb82c88c41b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c9377c8a436f057a1b257af70c0c8d23ee52a8ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot 連接類型 (SSRS)
   您可以使用 SQL Server Analysis Services 資料處理延伸模組，從已在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中發行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中擷取資料。  
   
  您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  您必須在 SharePoint 網站的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中發行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源。  
   
  若要支援報表產生器與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的連接，您的工作站電腦上必須擁有 SQL Server 2008 R2 ADOMD.NET。 此用戶端程式庫是隨 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 一併安裝，但是如果您使用的電腦沒有此應用程式，則必須從 [SQL Server 2008 R2 功能套件](http://go.microsoft.com/fwlink/?LinkId=192565)下載並安裝 ADOMD.NET。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="parameters"></a>參數  
  在 [篩選] 窗格中，選取篩選的 [參數] 選項，以便使用對應至篩選選取範圍的可用值來自動建立報表參數。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果您從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿開啟報表產生器，該報表就不會重新建立樞紐分析表、樞紐分析圖、交叉分析篩選器，以及來自 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的其他配置和分析功能。 而是，空白報表會包括指向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中資料的預先設定資料來源。 根據您想要在報表中重新建立的交叉分析篩選器、篩選和資料表或圖表數目，設計以 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿為基礎的報表可能會相當費時耗力。 較佳的方法是分開想像報表資料的呈現方式與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 設計方式。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中的資料會進行高度壓縮，而針對報表從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中擷取的資料則不會進行壓縮。 您可以使用查詢設計工具來指定篩選和參數，以便將資料限制為報表所需的項目。  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c628663612344187a25757fd42a1aeb8bb86dde
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b75a964c2f4e62d477c9e195c77e81a14109bd61
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 (報表產生器及 SSRS)
   當您將地圖或地圖圖層加入至報表時、自訂報表中現有的地圖或地圖圖層時、預覽報表中的地圖時，或發行包含地圖的報表時，在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中可能會發生與地圖相關的問題。 您可以使用本主題來協助疑難排解這些問題。  
@@ -152,7 +150,7 @@ ms.lasthandoff: 12/05/2017
     >  您可以在 [地圖] 窗格中切換每個圖層的可見性。 當您要設計每個圖層時，關閉其他所有圖層，就可以判斷問題出在個別圖層還是出在圖層間的透明度問題。  
   
 ## <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>我在地圖圖層上設定了一個篩選，但是沒有作用。  
- 若要篩選圖層的資料，必須指定篩選運算式中的資料類型。 請確認您已經指定正確的基礎資料類型，讓篩選方程式可以正確評估指定的條件。 如需詳細資訊，請參閱[篩選方程式範例 &#40;報表產生器及&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
+ 若要篩選圖層的資料，必須指定篩選運算式中的資料類型。 請確認您已經指定正確的基礎資料類型，讓篩選方程式可以正確評估指定的條件。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
 ##  <a name="Legend"></a> 圖例、色階與規則問題  
  使用本節協助解決與規則、圖例和色階選項相關的問題。  

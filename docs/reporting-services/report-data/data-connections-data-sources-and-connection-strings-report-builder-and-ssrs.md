@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e1f5b27d158714d5e379617e935a2b152a343278
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 697a387240a9e2e0edafeac45b68264187c2a3f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>資料連接、資料來源及連接字串 (報表產生器和 SSRS)
 
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/05/2017
   
  下表摘要列出內嵌與共用資料來源之間的差異。  
   
-|說明|內嵌<br /><br /> 資料來源|共用<br /><br /> 資料來源|  
+|描述|內嵌<br /><br /> 資料來源|共用<br /><br /> 資料來源|  
 |-----------------|------------------------------|----------------------------|  
 |資料連接會內嵌在報表定義中。|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
 |報表伺服器上資料連接的指標會內嵌在報表定義中。||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
@@ -114,7 +112,7 @@ ms.lasthandoff: 12/05/2017
 |**Data source**|**範例**|**說明**|  
 |---------------------|-----------------|---------------------|  
 |本機伺服器上的 SQL Server 資料庫|`data source="(local)";initial catalog=AdventureWorks`|將資料來源類型設為 **Microsoft SQL Server**。 如需詳細資訊，請參閱 [SQL Server 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)。|  
-|SQL Server 執行個體<br /><br /> 資料庫|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|將資料來源類型設為 **Microsoft SQL Server**。|  
+|SQL Server 執行個體<br /><br /> [資料庫]|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|將資料來源類型設為 **Microsoft SQL Server**。|  
 |SQL Server Express 資料庫|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|將資料來源類型設為 **Microsoft SQL Server**。|  
 |Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|將資料來源類型設定為 **Microsoft Azure SQL Database**。 如需詳細資訊，請參閱 [SQL Azure 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)。|  
 |SQL Server 平行資料倉儲|`HOST=<IP address>;database= AdventureWorks; port=<port>`|將資料來源類型設為 **Microsoft SQL Server Parallel Data Warehouse**。 如需詳細資訊，請參閱 [SQL Server 平行資料倉儲連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)。|  
@@ -163,7 +161,7 @@ ms.lasthandoff: 12/05/2017
   
 -   發行報表之前，請以運算式取代靜態連接字串。 等到設計好報表之後，再以運算式取代靜態連接字串。 一旦使用運算式，就不能在報表設計師中執行查詢。 此外，[報表資料] 窗格中的欄位清單與 [參數] 清單也不會自動更新。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [建立、修改及刪除共用資料來源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
 [建立和修改內嵌資料來源](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   

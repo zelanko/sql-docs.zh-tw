@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5d09ae6530bc9180b23a4ec81eeaeaabf1c41110
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d5c9c11ddf274af9bf8f1851509dae5bff8e27a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 資料庫的擴充欄位屬性 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充欄位屬性是除了欄位屬性 **Value** 和 **IsMissing** 之外，資料來源可用而且資料處理延伸模組支援的屬性。 在 [報表資料] 窗格中，報表資料集的欄位集合中不會顯示擴充屬性。 若要在報表中包含擴充欄位屬性值，您必須撰寫運算式，使用內建 **Fields** 集合來以名稱指定擴充欄位屬性值。  
@@ -52,20 +50,20 @@ ms.lasthandoff: 12/05/2017
   
 |**屬性**|**型別**|**描述或預期的值**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**物件**|指定欄位的資料值。|  
+|**ReplTest1**|**物件**|指定欄位的資料值。|  
 |**IsMissing**|**布林**|指出在產生的資料集裡是否有找到欄位。|  
-|**UniqueName**|**字串**|傳回層級的完整名稱。 例如，某一位員工的 **UniqueName** 值可能是 *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]*。|  
-|**BackgroundColor**|**字串**|傳回資料庫中為欄位定義的背景色彩。|  
-|**Color**|**字串**|傳回資料庫中為項目定義的前景色彩。|  
-|**FontFamily**|**字串**|傳回資料庫中為項目定義之字型的名稱。|  
-|**FontSize**|**字串**|傳回資料庫中為項目定義之字型的點數大小。|  
-|**FontWeight**|**字串**|傳回資料庫中為項目定義之字型的粗細。|  
-|**FontStyle**|**字串**|傳回資料庫中為項目定義之字型的樣式。|  
-|**TextDecoration**|**字串**|傳回資料庫中為項目定義的特殊文字格式。|  
-|**FormattedValue**|**字串**|傳回量值或關鍵數值的格式化值。 例如， **[銷售量配額]** 的 **FormattedValue** 屬性會傳回貨幣格式，如 $1,124,400.00。|  
+|**UniqueName**|**String**|傳回層級的完整名稱。 例如，某一位員工的 **UniqueName** 值可能是 *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]*。|  
+|**BackgroundColor**|**String**|傳回資料庫中為欄位定義的背景色彩。|  
+|**Color**|**String**|傳回資料庫中為項目定義的前景色彩。|  
+|**FontFamily**|**String**|傳回資料庫中為項目定義之字型的名稱。|  
+|**FontSize**|**String**|傳回資料庫中為項目定義之字型的點數大小。|  
+|**FontWeight**|**String**|傳回資料庫中為項目定義之字型的粗細。|  
+|**FontStyle**|**String**|傳回資料庫中為項目定義之字型的樣式。|  
+|**TextDecoration**|**String**|傳回資料庫中為項目定義的特殊文字格式。|  
+|**FormattedValue**|**String**|傳回量值或關鍵數值的格式化值。 例如， **[銷售量配額]** 的 **FormattedValue** 屬性會傳回貨幣格式，如 $1,124,400.00。|  
 |**索引鍵**|**物件**|傳回層級的索引鍵。|  
 |**LevelNumber**|**Integer**|如果是父子式階層，則會傳回層級或維度編號。|  
-|**ParentUniqueName**|**字串**|如果是父子式階層，會傳回父層級的完整名稱。|  
+|**ParentUniqueName**|**String**|如果是父子式階層，會傳回父層級的完整名稱。|  
   
 > [!NOTE]  
 >  當報表為其資料集執行及擷取資料時，只有在資料來源 (例如 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube) 提供這些值的情況下，這些擴充欄位屬性的值才會存在。 這樣，您就可以利用以下章節所述的語法，從任何運算式參考那些欄位屬性值。 不過，由於這些欄位是此資料提供者的特定欄位，因此，您對這些值所作的變更不會隨同報表定義一併儲存。  
@@ -105,7 +103,7 @@ FROM [Adventure Works]
 |DateCaption|DateUniqueName|DateDayName|DateValueinOriginalDatatype|DateParentUniqueName|DateMemberKeyinOriginalDatatype|  
 |-----------------|--------------------|-----------------|---------------------------------|--------------------------|-------------------------------------|  
 |All Periods|[Date].[Date].[All Periods]|(Null)|(Null)|(Null)|0|  
-|1-Jul-01|[Date].[Date].&[1]|星期日|7/1/2001|[Date].[Date].[All Periods]|1|  
+|1-Jul-01|[Date].[Date].&[1]|星期日|7/1/2001|[Date].[Date].[All Periods]|@shouldalert|  
 |2-Jul-01|[Date].[Date].&[2]|星期一|7/2/2001|[Date].[Date].[All Periods]|2|  
 |3-Jul-01|[Date].[Date].&[3]|星期二|7/3/2001|[Date].[Date].[All Periods]|3|  
   
@@ -136,7 +134,7 @@ CELL PROPERTIES
   
  這些屬性雖然是 MDX 選取陳述式的一部分，但是卻不會出現在結果集資料行中， 然而，報表還是可以透過使用擴充屬性功能來使用這些資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 MDX 查詢結果窗格中，按兩下資料格即可查看資料格屬性值 (如果 Cube 中已設定的話)。 如果按兩下包含 1,379 的第一個 [Order Count] 資料格，就會出現內含下列資料格屬性的快顯視窗：  
   
-|屬性|Value|  
+|屬性|ReplTest1|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |Value|2481|  

@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -21,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b40959b38860bc9e31bf093d7498c4391be19fce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8cef7629fe382a5011e71e371c999e0aef84c35e
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>使用 OPENJSON 將 JSON 資料轉換成資料列和資料行 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,8 +61,8 @@ FROM OPENJSON(@json);
   
 |索引鍵|value|型別|  
 |---------|-----------|----------|  
-|name|John|1|  
-|surname|Doe|1|  
+|NAME|John|@shouldalert|  
+|surname|Doe|@shouldalert|  
 |age|45|2|  
 |skills|["SQL","C#","MVC"]|4|
 
@@ -121,9 +120,9 @@ WITH (
   
 **結果**  
   
-|Number|日期|客戶|Quantity|  
+|Number|date|客戶|Quantity|  
 |------------|----------|--------------|--------------|  
-|SO43659|2011-05-31T00:00:00|AW29825|1|  
+|SO43659|2011-05-31T00:00:00|AW29825|@shouldalert|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  
   
 此函數會傳回並格式化為 JSON 陣列的元素。  

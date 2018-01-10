@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b483e9fd47ccbb18dc43afadc5b517b790cce61f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f5fd405e91f9ca16caf9345a4a3e8f7852a3ad37
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>將 SQL Server Reporting Services 報表檢視器網頁組件部署至 SharePoint 頁面
 
@@ -151,7 +149,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 * 中文 (簡體 - zh-HANS 與 zh-CHS)
 * 中文 (繁體 - zh-HANS 與 zh-CHT)
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 部署並啟動報表檢視器網頁組件後，您可以將網頁組件新增至 SharePoint 網頁。 如需詳細資訊，請參閱[將報表檢視器網頁組件新增到 SharePoint 頁面](add-report-viewer-web-part-to-page.md)。
 

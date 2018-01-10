@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 33dcd6590ec74ecc06de8b2e545f865e1e259f26
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 661ca09d032e09e8f9599b7b8093f95fcc975731
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>建立、部署和偵錯自訂物件
   撰寫 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之自訂物件的程式碼之後，必須建置和部署組件，並將其整合到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具，這樣才能在套件中使用，並對其進行測試和偵錯。  
@@ -94,7 +94,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
 |自訂物件|部署資料夾|  
 |-------------------|-----------------------|  
 |工作|工作|  
-|[ODBC 目的地編輯器]|連接|  
+|[ODBC 來源編輯器]|連接|  
 |記錄提供者|LogProviders|  
 |資料流程元件|PipelineComponents|  
   

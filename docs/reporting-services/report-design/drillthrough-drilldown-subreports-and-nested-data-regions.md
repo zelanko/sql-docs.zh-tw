@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d4e87d6484f1a04e61907939bd2fa69d93dff426
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 79bb5cfbe014006c6400ec54d56b69ce435910fb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>鑽研、向下鑽研、子報表和巢狀資料區
   您可以利用各種不同的方式來組織資料，以顯示總結資料與詳細資料之間的關聯性。  您可以將所有資料放入報表但設為隱藏，直到使用者按一下來顯示詳細資料；這是 *「向下鑽研」* (Drilldown) 動作。 您可以在資料區域 (例如資料表或圖表) 中顯示資料，再將這個資料區域放到另一個資料區域 (例如資料表或矩陣) 內，成為 *「巢狀」* (Nested) 結構。 您可以在 *「子報表」* (Subreport) 中顯示資料，此報表完全包含在主報表內。 或者，您可以將詳細資料放到 *「鑽研」* (Drillthrough) 報表，這是當使用者按一下連結時另外顯示的報表。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="SummaryCharacteristics"></a> 特性摘要  
  下表簡要地敘述這些不同特性。 稍後會在此主題另一節說明細節。 比較內容不含向下鑽研，因為您可以將它的顯示和隱藏動作套用到任何報表項目。  
   
-|特徵|「子報表」|「鑽研」|「巢狀」|  
+|特徵|子報表|「鑽研」|「巢狀」|  
 |-----------|---------------|------------------|------------|  
 |使用主報表的資料集|相同或相異|相同或相異|相同|  
 |擷取資料|與主報表同時擷取資料|一次擷取一份鑽研報表的資料|與主報表同時擷取所有資料|  

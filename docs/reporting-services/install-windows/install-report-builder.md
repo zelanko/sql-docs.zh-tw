@@ -8,22 +8,22 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 7a38071816dbd945ce1b18336feedc28c5d91e73
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 395ec440e3cae0ac4013edc9c35af36e32a73d0c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-report-builder"></a>安裝報表產生器
+# <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 是一種獨立式應用程式，由您或系統管理員安裝在電腦上。 您可以透過 Microsoft 下載中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 報表伺服器，或整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 SharePoint 網站進行安裝。  
   
  系統管理員通常會安裝及設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、授與從入口網站下載 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 的權限，以及管理儲存到報表伺服器之報表、報表組件和共用資料集的資料夾和權限。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理的詳細資訊，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  接受授權合約條款，然後按一下 [下一步] 。  
   
-4.  在 **[預設的目標伺服器]** 頁面上，選擇性地提供目標報表伺服器的 URL (如果它與預設值不同的話)。 按一下 **[下一步]**。  
+4.  在 **[預設的目標伺服器]** 頁面上，選擇性地提供目標報表伺服器的 URL (如果它與預設值不同的話)。 按 [下一步] 。  
   
     > [!NOTE]  
     >  如果您計畫在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 連接至報表伺服器時使用它，此時提供伺服器的 URL 比較方便。 您也可以透過 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 的 [選項] 對話方塊執行此作業。  

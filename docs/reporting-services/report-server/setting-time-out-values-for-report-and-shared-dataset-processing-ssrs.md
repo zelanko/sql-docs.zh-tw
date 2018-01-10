@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - report execution time-outs [Reporting Services]
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 caps.latest.revision: "39"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bd6f5c741234f8e3071cbdcc8d96ee189aee6590
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1f75b14c9f60c7f1a51b0d07db21cb62fdf0a2d5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>設定報表和共用資料集處理的逾時值 (SSRS)
   您可以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指定逾時值，以便設定系統資源的使用限制。 報表伺服器支援兩種逾時值：  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
  大部分的逾時錯誤會在查詢處理時發生。 如果您遇到逾時錯誤，請試著增加查詢逾時值。 請務必調整報表執行逾時值，使其大於查詢逾時。這個時間週期應該要足以完成查詢與報表處理。  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>設定報表中內嵌資料集的查詢逾時  
- 當您定義內嵌資料集時，可在報表撰寫期間指定查詢逾時值。 逾時值會與報表一起儲存在報表定義的 **Timeout** 元素中。 依預設，此值設定為 30 秒。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。  
+ 當您定義內嵌資料集時，可在報表撰寫期間指定查詢逾時值。 逾時值會與報表一起儲存在報表定義的 **Timeout** 元素中。 依預設，此值設定為 30 秒。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
  擁有權限修改已發行報表之屬性的使用者，可以編輯報表定義檔案，重設此值。  
   

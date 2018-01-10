@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3b5c2254a10b9effafd6ac0640ddc5233a3efd8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a935d3281eae92baacc6741d7e276b3046f2ba
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---multilookup-function"></a>報表產生器函式 - Multilookup 函式
   從包含名稱/值組的資料集傳回第一組符合指定之名稱集合的值。  
@@ -54,7 +52,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>傳回  
  傳回 **VariantArray**或在沒有相符項目時傳回 **Nothing** 。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  使用 **Multilookup** 可從具有一對一關聯性的每一組名稱/值組的資料集內擷取一組值。 **MultiLookup** 等於針對一組名稱或索引鍵呼叫 **Lookup** 。 例如，如果是根據主索引鍵識別碼的多值參數，您可以在資料表中的文字方塊內使用運算式中的 **Multilookup** ，從未繫結至參數或資料表的資料集擷取關聯的值。  
   
  **Multilookup** 會執行下列動作：  
@@ -98,9 +96,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  CategoryNames 資料集包含類別目錄識別碼和類別目錄名稱，如下表所示。  
   
-|ID|名稱|  
+|ID|[屬性]|  
 |--------|----------|  
-|1|Accessories|  
+|@shouldalert|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
 |4|Components|  
@@ -120,7 +118,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 |ColorID|Color|  
 |-------------|-----------|  
-|1|紅色|  
+|@shouldalert|紅色|  
 |2|藍色|  
 |3|綠色|  
   

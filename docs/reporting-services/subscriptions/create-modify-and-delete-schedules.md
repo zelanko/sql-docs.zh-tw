@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,17 +25,17 @@ helpviewer_keywords:
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 32fe1afefa899880710a818c56eef4079fe90622
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6d89557d71739545d4f119363273951a20953429
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="create-modify-and-delete-schedules"></a>建立、修改和刪除共用排程
+# <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   使用本主題可讓您了解如何建立、修改和刪除 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 共用排程。  若要管理原生模式的共用排程，請使用 Web 入口網站中的 [排程] 頁面或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的 [共用排程] 資料夾。 如果是 SharePoint 模式，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。  
   
  您可以使用下列其中一種方法來判斷是否主動使用共用排程︰  
@@ -135,7 +133,7 @@ ms.lasthandoff: 12/05/2017
 6.  選擇頻率。 依據您所選擇的頻率而定，出現在頁面上的排程選項可能會改變以支援該頻率 (例如，如果您選擇 [月]，各月份的名稱將會出現在頁面上)。  
 7.  定義排程。 單一排程無法支援所有的排程組合。  
 8.  設定開始和結束日期。  
-9. 按一下 **[確定]**。  
+9. 按一下 [確定] 。  
   
 ### <a name="delete-shared-schedules-sharepoint-mode"></a>刪除共用排程 (SharePoint 模式)  
  無論是共用或報表特定排程，所有排程都必須手動刪除。 如果您刪除使用中的共用排程，該排程的所有參考都會取代成非特定的自訂排程 (亦即沒有日期或時間資訊的自訂排程)。  

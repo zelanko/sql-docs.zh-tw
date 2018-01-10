@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 01/23/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -20,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8562b8dd2ab6ef2bea5edc5e5a3f751589bd9237
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a416b2889f56d5760352cd266d58163269ab90fe
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路徑運算式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
  下表顯示路徑運算式的一些範例。  
   
-|路徑運算式|值|  
+|路徑運算式|ReplTest1|  
 |---------------------|-----------|  
 |$.people[0].name|John|  
 |$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  

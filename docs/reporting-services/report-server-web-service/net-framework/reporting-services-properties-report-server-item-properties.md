@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c874a823a27a10f0b915aa7bf6bf221b7dc6ac0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c254ee33efb4ddd644690747c407cce237fb9112
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 屬性 - 報表伺服器項目屬性
   項目屬性是報表伺服器資料庫中項目特有的屬性。 這類型的項目包括報表、連結報表、資料夾、資源、模型以及資料來源。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="item-properties"></a>項目屬性  
  下列屬性適用報表伺服器資料庫中的所有項目。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**CreatedBy**|原先將項目加入報表伺服器資料庫的使用者名稱。|  
 |**CreationDate**|項目加入報表伺服器資料庫的日期與名稱。|  
@@ -57,14 +55,14 @@ ms.lasthandoff: 12/05/2017
 ## <a name="folder-properties"></a>資料夾屬性  
  除了先前所列的項目屬性之外，下列屬性會套用至報表伺服器資料庫中的資料夾。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**已保留**|針對報表伺服器所保留的資料夾，由 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法傳回的值。 保留的資料夾包含 [使用者]、[我的報表] 和 /。 無法修改或移除保留的資料夾。|  
   
 ## <a name="report-properties"></a>報表屬性  
  除了先前所列的項目屬性之外，下列屬性會套用至報表伺服器資料庫中的報表。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**語言**|報表中使用的語言。 這個值是網際網路工程任務推動小組 (IETF) RFC1766 規格中定義的語言代碼。 第一部分是由基本語言的兩個字元所指定。 第二個部分是由連字號分隔，並指定語言的變化或是方言。 如果在與報表定義中的 **Body** 元素相關聯的 **Style** 元素中未指定值，預設值是報表伺服器的語言。|  
 |**ReportProcessingTimeout**|個別報表的逾時 (以秒為單位)。 如果已設定此值，當指定時間已經過時，報表伺服器會嘗試停止處理報表。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，報表就不會在處理期間逾時。 如果此值為 **null**，系統屬性 **ReportProcessingTimeout** 的值會用於報表處理逾時。預設值是 **null**。 如需詳細資訊，請參閱[報表伺服器系統屬性](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)。|  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="resource-properties"></a>資料屬性  
  除了先前所列的項目屬性之外，下列屬性會套用至報表伺服器資料庫中的資源。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**MimeType**|報表伺服器資料庫中資源的 MIME 類型。|  
   

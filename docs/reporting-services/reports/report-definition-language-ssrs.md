@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 735811c38ce6073e9dee4dd5b35cf18645a74a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a0acf3ce891459589445e28b73ef762e3a82da8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-definition-language-ssrs"></a>報表定義語言 (SSRS)
   報表定義語言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表定義的 XML 表示法。 報表定義包含報表的資料擷取和配置資訊。 RDL 是由符合針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所建立之 XML 文法的 XML 元素所組成。 您可以加入自訂函數，藉由存取報表定義檔案中的程式碼組件來控制報表項目值、樣式和格式。  
@@ -67,11 +65,11 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_RDL_Types"></a> RDL 類型  
  下表列出用於 RDL 元素及屬性的類型。  
   
-|Type|說明|  
+|Type|描述|  
 |----------|-----------------|  
 |**二進位**|具有 Base-64 編碼二進位值的屬性。|  
 |**Boolean**|具有 **true** 或 **false** 物件值的屬性。 除非另有指定，否則省略的選擇性布林物件值為 **False**。|  
-|**日期**|具有 ISO8601 日期格式所指定之完整指定日期或日期時間值的屬性：YYYY-MM-DD[THH:MM[:SS[.S]]]。|  
+|**Date**|具有 ISO8601 日期格式所指定之完整指定日期或日期時間值的屬性：YYYY-MM-DD[THH:MM[:SS[.S]]]。|  
 |**Enum**|具有字串文字值的屬性，此文字值必須是指定值清單中的一個值。|  
 |**Float**|具有浮點值的屬性。 使用句點 (.) 當做選擇性小數分隔符號。|  
 |**Integer**|具有整數 (int32) 值的屬性。|  
@@ -88,10 +86,10 @@ ms.lasthandoff: 12/05/2017
   
 |**CLR 類型**|**對應的資料類型**|  
 |-----------------------|---------------------------------|  
-|Boolean|Boolean|  
+|布林|Boolean|  
 |DateTime、DateTimeOffset|DateTime|  
 |Int16、Int32、UInt16、Byte、SByte|Integer|  
-|Single、Double|Float|  
+|Single、Double|float|  
 |String、Char、GUID、Timespan|String|  
   
 ## <a name="see-also"></a>另請參閱  

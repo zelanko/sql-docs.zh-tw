@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33f3b559c924f6a5cb9751ad938a01f495172701
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6edb97aaf3da5499568c4893c02cfd208d556696
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---rownumber-function"></a>報表產生器函式 - RowNumber 函式
   傳回指定範圍中資料列數的執行計數。  
@@ -42,7 +40,7 @@ RowNumber(scope)
  *範圍 (scope)*  
  (**字串**) 資料集、資料區或群組的名稱，或為 Null (在**中為** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])，指定要在其中評估資料列數的內容。 **Nothing** 指定最外層的內容，這通常為報表資料集。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **RowNumber** 會傳回指定範圍內資料列計數的執行值，如同 [RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md) 傳回彙總函式的執行值一樣。 當您指定範圍時，可以指定何時要將資料列計數重設為 1。  
   
  *scope* 不可為運算式。 *scope* 必須是包含範圍。 就一般範圍而言，從最外層到最內層的內含項目依序為報表資料集、資料區域、資料列群組或資料行群組。  

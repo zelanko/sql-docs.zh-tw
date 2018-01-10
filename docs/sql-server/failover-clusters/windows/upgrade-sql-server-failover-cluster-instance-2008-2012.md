@@ -1,7 +1,10 @@
 ---
 title: "升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體 | Microsoft Docs"
 ms.date: 11/10/2017
-ms.prod: sql-server-2017
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: database engine
+ms.component: failover-clustuers
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91fe880168482d29e796c2bbe23c278c60bfa6c1
-ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
+ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體
 
@@ -127,7 +130,7 @@ ms.lasthandoff: 12/19/2017
 
 如果您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安裝程式未使用任何獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 執行個體 (只有包含在至少一個可用性群組中的 SQL FCI)，則可以使用與「無可用性群組、無獨立執行個體」案例類似的方法將此項目移轉至新叢集。 將系統資料表複製至目標 FCI 共用磁碟之前，您必須卸除原始環境中的所有可用性群組。 所有資料庫都移轉至目標電腦之後，您將會重新建立具有相同結構描述和接聽程式名稱的可用性群組。 如此一來，Windows Server 容錯移轉叢集資源的格式會正確，並在目標叢集上進行管理。 **移轉之前，必須在目標環境之每部電腦的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager 中啟用 AlwaysOn。**
 
-###  <a name="to-perform-the-upgrade"></a>執行升級
+### <a name="to-perform-the-upgrade"></a>執行升級
 
 1.  停止流向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 的流量。
 

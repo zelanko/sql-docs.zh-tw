@@ -8,18 +8,18 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: 
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: casualoak
 ms.author: deliant
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 7cce0a4f9827a847b6fc01017b5de76c796120e9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ebf8e75c505d75206de798bc2682cefc3623075e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>SQL Server Reporting Services 的變更記錄檔
 

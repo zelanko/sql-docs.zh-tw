@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a9074f9125c1e1e67717cd1f5bb70710dbb6dff6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2fe50a939544eb7f3d58bbd38ad98e9ffcc82733
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>將 Reporting Services 內容類型新增至 SharePoint 文件庫
 
@@ -101,7 +99,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  在 **[內容類型]** 區段中，選取 **[是]** 允許內容類型的管理。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
 ##  <a name="bkmk_add_single"></a> 加入 Reporting Services 內容類型 (SharePoint 2013)  
   
@@ -144,7 +142,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  在 **[內容類型]** 區段中，選取 **[是]** 允許內容類型的管理。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
 ##  <a name="bkmk_add_single_2010"></a> 若要加入報表伺服器內容類型 (SharePoint 2010)  
   

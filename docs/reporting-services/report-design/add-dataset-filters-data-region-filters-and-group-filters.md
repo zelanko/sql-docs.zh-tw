@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ead354a4f95b061f44728b76bbbccd6ef84606a0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3b3d4f355e52f27689dad4f157ca65edad99fa99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>新增資料集篩選、資料區篩選和群組篩選
   在報表中，篩選屬於資料集、資料區域或資料區域群組的一部分，您可以篩選來限制報表中所要使用的資料。 如果您無法變更資料集查詢，那麼篩選便是協助您控制報表資料的好辦法，例如，如果您正在使用共用的資料集。  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/05/2017
 |**介於**|測試運算式是否位於 (包含) 兩個值之間。|  
 |**In**|測試運算式是否包含在一組值之中。|  
   
-### <a name="value"></a>值  
+### <a name="value"></a>ReplTest1  
  Value 運算式會指定篩選方程式的最終部分。 報表處理器會將評估的運算式轉換成您所指定的資料類型，然後評估整個篩選方程式，以便判斷在 [運算式] 中指定的資料是否通過篩選。  
   
  若要轉換成不是標準 CLR 資料類型的資料類型，您必須修改運算式，以便明確轉換成資料類型。 在 [運算式] 對話方塊中，您可以使用列於 [一般函數] 之 [轉換] 底下的轉換函數。 例如，若為代表在 `ListPrice` 資料來源上儲存成 **money** 資料類型之資料的欄位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，資料處理延伸模組就會將欄位值傳回成 <xref:System.Decimal> 資料類型。 若要將篩選設定成僅使用報表貨幣中大於 **$50000.00** 的值，請使用運算式 `=CDec(50000.00)`，將此值轉換成十進位。  

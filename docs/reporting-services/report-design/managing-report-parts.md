@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff3a13d79ec0f7d3e4d4b9452b817bc804d04574
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="managing-report-parts"></a>管理報表組件
   報表組件可以由多個使用者在分頁報表中重複使用，也可以在多個報表中重複使用。 使用者可以搜尋伺服器上的報表組件，並將其加入至報表中。  使用者也可以收到伺服器上報表組件更新的通知，然後重新發行新版本的報表組件。 這些報表撰寫動作可能會受報表服務安全性權限影響及控制。  本主題會檢閱報表組件位於伺服器上之後的屬性和行為。  
@@ -57,10 +55,10 @@ ms.lasthandoff: 12/05/2017
   
  (*) 表示是此版本的新功能。  
   
-|屬性|說明|報表組件<br /><br /> 組件庫搜尋準則|  
+|屬性|描述|報表組件<br /><br /> 組件庫搜尋準則|  
 |--------------|-----------------|---------------------------------------------|  
-|名稱|這是使用者可以在報表組件庫中搜尋的其中一個準則。|是|  
-|說明|您可能會想要使用某種方式來組織報表組件名稱，讓使用者更容易在組件庫中找到組件。 例如，您可以搜尋以「銷售>>」開頭的描述，以尋找與銷售相關資料和簡報有關的所有報表組件。|是|  
+|[屬性]|這是使用者可以在報表組件庫中搜尋的其中一個準則。|是|  
+|描述|您可能會想要使用某種方式來組織報表組件名稱，讓使用者更容易在組件庫中找到組件。 例如，您可以搜尋以「銷售>>」開頭的描述，以尋找與銷售相關資料和簡報有關的所有報表組件。|是|  
 |CreatedBy|將報表組件加入報表伺服器資料庫的使用者識別碼。 確切的格式視驗證方法而定。 例如，某些驗證方法會導致在 [CreatedBy] 和 [ModifiedBy] 欄位中顯示完整的網域\使用者名稱。|是|  
 |CreationDate|原先建立報表組件的日期。<br /><br /> 這是使用者可以在報表組件庫中搜尋的其中一個準則。|是|  
 |ModifiedBy|ModifiedBy 是上次修改報表組件之使用者的識別碼。|是|  

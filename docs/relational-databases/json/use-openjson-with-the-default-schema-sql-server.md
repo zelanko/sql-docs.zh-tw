@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -18,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0795006b2ec1b6dbc0f222f9513bf9d6ce9a17ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3da875380580bcf7151db13c0b14280a9790d5dc
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>搭配使用 OPENJSON 與預設結構描述 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 11/17/2017
  以下是搭配使用 **OPENJSON** 與預設結構描述的一些範例。 如需詳細資訊和其他範例，請參閱 [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)。  
   
 ## <a name="example---return-each-property-of-an-object"></a>範例 - 傳回物件的每個屬性  
- **查詢**  
+ **[資料集屬性]**  
   
 ```sql  
 SELECT *
@@ -41,14 +40,14 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
  **結果**  
   
-|索引鍵|值|  
+|索引鍵|ReplTest1|  
 |---------|-----------|  
-|name|John|  
+|NAME|John|  
 |surname|Doe|  
 |age|45|  
   
 ## <a name="example---return-each-element-of-an-array"></a>範例 - 傳回陣列的每個元素  
- **查詢**  
+ **[資料集屬性]**  
   
 ```sql  
 SELECT [key],value
@@ -57,10 +56,10 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
   
  **結果**  
   
-|索引鍵|值|  
+|索引鍵|ReplTest1|  
 |---------|-----------|  
 |0|en-GB|  
-|1|en-UK|  
+|@shouldalert|en-UK|  
 |2|de-AT|  
 |3|es-AR|  
 |4|sr-Cyrl|  
@@ -90,9 +89,9 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **結果**  
   
-|索引鍵|值|型別|  
+|索引鍵|ReplTest1|類型|  
 |---------|-----------|----------|  
-|型別|1|0|  
+|型別|@shouldalert|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
 |標記|[ "Sport", "Water polo" ]|4|  
   

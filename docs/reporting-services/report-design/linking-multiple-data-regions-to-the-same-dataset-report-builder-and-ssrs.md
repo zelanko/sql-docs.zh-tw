@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bcc449ddab2831edf051d974053b5844f89caa53
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a5ed4cde95a8bb5307b0274ca78c779fe1b65c0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>將多個資料區連結至相同的資料集 (報表產生器及 SSRS)
 
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
  包含多個資料列和資料行群組的矩陣可以同時搭配類別目錄和數列群組使用區域圖、橫條圖或直條圖，以最佳的方式顯示。 將相同的群組運算式用於矩陣上的資料行群組和圖表上的類別目錄群組，並將相同的群組運算式用於矩陣上的資料列群組和圖表上的數列群組。 您必須記住，群組執行個體的數目會影響圖表的可讀性。 因此，您可以根據範圍值定義群組，藉以減少報表中群組執行個體的數目。 如需詳細資訊，請參閱 [群組運算式範例](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
   
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [圖表](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [資料表、矩陣和清單](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

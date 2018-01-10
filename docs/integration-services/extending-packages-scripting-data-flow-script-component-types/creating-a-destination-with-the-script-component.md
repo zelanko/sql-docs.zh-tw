@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 743519a2f80f4cc2a490bcb5b513431d73d13478
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d9037d604503ba2a0d5443e94f11638035369ce3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>以指令碼元件建立目的地
   您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用目的地元件，以便將從上游來源和轉換收到的資料儲存至資料來源。 通常，目的地元件會透過現有的連接管理員連接到資料來源。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
  若要選取指令碼目的地將使用的指令碼語言，請在 [指令碼轉換編輯器] 對話方塊的 [指令碼] 頁面上，設定 **ScriptLanguage** 屬性。  
   
 > [!NOTE]  
->  若要為指令碼元件設定預設指令碼語言，請使用 [選項] 對話方塊的 [一般] 頁面上的 [指令碼語言] 選項。 如需相關資訊，請參閱 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)。  
+>  若要為指令碼元件設定預設的指令碼語言，請使用 [選項] 對話方塊中 [一般] 頁面上的 [指令碼語言] 選項。 如需相關資訊，請參閱 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)。  
   
  資料流程目的地元件有一個輸入，但是沒有任何輸出。 設定元件的輸入是您必須在中繼資料設計模式下完成的其中一個步驟，方法是在撰寫自訂指令碼之前先使用 [指令碼轉換編輯器]。  
   
@@ -74,14 +74,14 @@ ms.lasthandoff: 11/20/2017
 ### <a name="adding-variables"></a>加入變數  
  如果您想要在指令碼中使用現有的變數，可以在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，將它們新增至 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位中。  
   
- 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位旁邊的省略符號 (**…**) 按鈕，然後在 [選取變數] 對話方塊中選取變數，來選取多個變數。  
+ 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取變數，來選取多個變數。  
   
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
  如需 [指令碼轉換編輯器] 的 [指令碼] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
   
 ## <a name="scripting-a-destination-component-in-code-design-mode"></a>在程式碼設計模式中編寫目的地元件的指令碼  
- 在您設定好元件的中繼資料之後，便可撰寫自訂指令碼。 在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，按一下 [編輯指令碼]，開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以新增自訂指令碼。 所使用的指令碼語言取決於您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 還是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作為 [指令碼] 頁面上 [ScriptLanguage] 屬性的指令碼語言。  
+ 在您設定好元件的中繼資料之後，便可撰寫自訂指令碼。 在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，按一下 [編輯指令碼]，開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以新增自訂指令碼。 所使用的指令碼語言取決於您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 還是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作為 [指令碼] 頁面上 **ScriptLanguage** 屬性的指令碼語言。  
   
  如需使用指令碼元件所建立之各種元件都適用的重要資訊，請參閱[編碼和偵錯指令碼元件](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
@@ -127,13 +127,13 @@ ms.lasthandoff: 11/20/2017
   
 4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (不需要任何轉換，就可以直接將來源連接到目的地)。這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，這個資料表至少包含 **AddressID** 和 **City** 資料行。  
   
-5.  開啟 [指令碼轉換編輯器]。 在 [輸入資料行] 頁面上，選取 **AddressID** 和 **City** 輸入資料行。  
+5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 **AddressID** 和 **City** 輸入資料行。  
   
 6.  在 [輸入及輸出] 頁面上，以更具描述性的名稱重新命名輸入，例如 **MyAddressInput**。  
   
 7.  在 [連線管理員] 頁面上，使用名稱 (例如 **MyADONETConnectionManager**) 來新增或建立 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員。  
   
-8.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，然後輸入以下指令碼。 然後關閉指令碼開發環境。  
+8.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，並輸入以下指令碼。 然後關閉指令碼開發環境。  
   
 9. 關閉 [指令碼轉換編輯器] 並執行該範例。  
   
@@ -244,13 +244,13 @@ public class ScriptMain:
   
 3.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (不需要任何轉換，就可以直接將來源連接到目的地)。這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，而且應該至少包含 **AddressID** 和 **City** 資料行。  
   
-4.  開啟 [指令碼轉換編輯器]。 在 [輸入資料行] 頁面上，選取 **AddressID** 和 **City** 資料行。  
+4.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 **AddressID** 和 **City** 資料行。  
   
 5.  在 [輸入及輸出] 頁面上，以更具描述性的名稱重新命名輸入，例如 **MyAddressInput**。  
   
 6.  在 [連線管理員] 頁面上，使用描述性的名稱 (例如 **MyFlatFileDestConnectionManager**) 來新增或建立一般檔案連線管理員。  
   
-7.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，然後輸入以下指令碼。 然後關閉指令碼開發環境。  
+7.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，並輸入以下指令碼。 然後關閉指令碼開發環境。  
   
 8.  關閉 [指令碼轉換編輯器] 並執行該範例。  
   

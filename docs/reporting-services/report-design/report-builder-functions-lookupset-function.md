@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 04ec945b59d77ad8b885d5c8403f833ab4c73ab2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 54455fd8ab820d9f32525308220c5dd427470d07
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---lookupset-function"></a>報表產生器函式 - LookupSet 函式
   從包含名稱/值組的資料集傳回符合指定之名稱的值組。  
@@ -54,7 +52,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>傳回  
  傳回 **VariantArray**或在沒有相符項目時傳回 **Nothing** 。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  使用 **LookupSet** 可從具有一對多關係之名稱/值組的指定資料集中擷取一組值。 例如，如果是資料表中的客戶識別碼，您可以使用 **LookupSet** 從未繫結至資料區的資料集中，擷取該客戶的所有相關電話號碼。  
   
  **LookupSet** 會執行下列動作：  

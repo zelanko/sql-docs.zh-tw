@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,15 +26,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1487873422f2c5e0725583d952de3304d0056355
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89a1061c26477bf68820ed88e9729fb60080a0cb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 傳遞延伸模組設定
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括電子郵件傳遞延伸模組以及檔案共用傳遞延伸模組。 電子郵件傳遞提供一個透過電子郵件傳送報表給個別使用者或群組的方法。 檔案共用傳遞可讓您將轉譯的報表自動傳送給網路上的共用。 您可以使用其中一個支援的傳遞延伸模組搭配標準訂閱或資料驅動訂閱來傳送。 每當您呼叫 <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>、<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>、<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> 和 <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> 方法時，會傳遞特屬傳遞延伸模組類型的傳遞設定。 若要以程式設計的方式擷取傳遞設定清單，請使用 <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> 方法。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="e-mail-delivery-settings"></a>電子郵件傳遞設定  
  下表針對使用報表伺服器電子郵件的訂閱列出電子郵件傳遞設定。  
   
-|設定|值|  
+|設定|ReplTest1|  
 |-------------|-----------|  
 |**收件人**|出現在電子郵件訊息 [收件人] 的電子郵件地址。 分號會分隔多個電子郵件地址。 必要。|  
 |**副本**|出現在電子郵件訊息 [副本] 的電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="file-share-delivery-settings"></a>檔案共用傳遞設定  
  下表列出訂閱的檔案共用傳遞設定。  
   
-|設定|值|  
+|設定|ReplTest1|  
 |-------------|-----------|  
 |**FILENAME**|儲存到磁碟的檔案名稱。|  
 |**FILEEXTN**|指出轉譯報表是否包括副檔名。 值為 **true** 或 **false**。|  

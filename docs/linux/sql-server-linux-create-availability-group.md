@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: c5b01fd8add48b2529c9d4150f153d6aea0b5f6c
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 53256f0cf5e18d8fb250cb5c67ae092771585de1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>建立及設定可用性群組的 SQL Server on Linux
 
@@ -327,11 +327,11 @@ sudo systemctl restart mssql-server
 
 2.  在 簡介 對話方塊中，按一下 **下一步**。
 
-3.  在 [指定可用性群組選項] 對話方塊中，輸入可用性群組的名稱，然後選取叢集類型外部或無下拉式清單中。 將部署 Pacemaker 時，應該使用外部。 「 無 」 的特殊案例，例如讀取向外延展。選取資料庫層級的健全狀況偵測的選項是選擇性的。 如需有關這個選項的詳細資訊，請參閱[可用性群組資料庫層級的健全狀況偵測容錯移轉選項](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 按 [下一步] 。
+3.  在 [指定可用性群組選項] 對話方塊中，輸入可用性群組的名稱，然後選取叢集類型外部或無下拉式清單中。 將部署 Pacemaker 時，應該使用外部。 「 無 」 的特殊案例，例如讀取向外延展。選取資料庫層級的健全狀況偵測的選項是選擇性的。 如需有關這個選項的詳細資訊，請參閱[可用性群組資料庫層級的健全狀況偵測容錯移轉選項](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 按一下 **[下一步]**。
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  在 [選取資料庫] 對話方塊中，選取要參與 AG 的資料庫。 每個資料庫必須具備完整備份，才能將它新增到 AG。 按 [下一步] 。
+4.  在 [選取資料庫] 對話方塊中，選取要參與 AG 的資料庫。 每個資料庫必須具備完整備份，才能將它新增到 AG。 按一下 **[下一步]**。
 
 5.  在 指定複本 對話方塊中，按一下 **將複本加入**。
 
@@ -357,17 +357,17 @@ sudo systemctl restart mssql-server
 
 11. 如果可讀取的情況下建立接聽程式時，SSMS 17.3 或更新版本可讓唯讀路由精靈中的建立。 它也可以加入稍後透過 SSMS 或 TRANSACT-SQL。 若要新增唯讀路由現在：
 
-    A.  選取唯讀路由索引標籤。
+    a.  選取唯讀路由索引標籤。
 
-    B.  輸入 Url，唯讀複本。 這些 Url 如下的端點，不過它們會使用執行個體，而不是端點的連接埠。
+    b.  輸入 Url，唯讀複本。 這些 Url 如下的端點，不過它們會使用執行個體，而不是端點的連接埠。
 
     c.  選取每個 URL，然後從底部，選取 可讀取的複本。 多重選取，請按住 shift 鍵或按一下拖曳。
 
-12. 按 [下一步] 。
+12. 按一下 **[下一步]**。
 
-13. 選擇如何將初始化次要複本。 預設值是使用[自動植入](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，這需要參與 AG 的所有伺服器上的相同路徑。 您也可以讓精靈進行備份、 複製和還原 （第二個選項;）將它加入，如果您有手動備份、 複製，並在複本上的資料庫的還原 （第三個選項;）或更新版本加入資料庫 （最後一個選項）。 使用憑證，如果您是以手動方式進行備份，並將其複製，因為備份檔案的權限必須在其他複本上設定。 按 [下一步] 。
+13. 選擇如何將初始化次要複本。 預設值是使用[自動植入](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，這需要參與 AG 的所有伺服器上的相同路徑。 您也可以讓精靈進行備份、 複製和還原 （第二個選項;）將它加入，如果您有手動備份、 複製，並在複本上的資料庫的還原 （第三個選項;）或更新版本加入資料庫 （最後一個選項）。 使用憑證，如果您是以手動方式進行備份，並將其複製，因為備份檔案的權限必須在其他複本上設定。 按一下 **[下一步]**。
 
-14. 在 [驗證] 對話方塊中，如果所有項目不會傳回成功的顯示，調查。 某些警告是在可接受並不嚴重，例如，如果您未建立接聽程式。 按 [下一步] 。
+14. 在 [驗證] 對話方塊中，如果所有項目不會傳回成功的顯示，調查。 某些警告是在可接受並不嚴重，例如，如果您未建立接聽程式。 按一下 **[下一步]**。
 
 15. 在 摘要 對話方塊中，按一下 **完成**。 建立 AG 的程序將立即開始。
 
@@ -415,7 +415,7 @@ sudo systemctl restart mssql-server
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -479,7 +479,7 @@ sudo systemctl restart mssql-server
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -551,7 +551,7 @@ Pacemaker 高可用性叢集基礎[!INCLUDE[ssnoversion-md](../includes/ssnovers
     
     GO
     
-    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABLITY GROUP::<AGThatWasCreated> TO PMLogin;
+    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::<AGThatWasCreated> TO PMLogin;
     
     GO
     ```
@@ -676,7 +676,7 @@ Pacemaker 高可用性叢集基礎[!INCLUDE[ssnoversion-md](../includes/ssnovers
     
     其中*NameForIPResource* IP 資源的名稱*NameForAGResource*名稱 AG 資源，如和 SLES， *NameForConstraint*的名稱條件約束。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 在本教學課程中，您學到如何建立及設定可用性群組的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]on Linux。 您已了解如何以：
 > [!div class="checklist"]

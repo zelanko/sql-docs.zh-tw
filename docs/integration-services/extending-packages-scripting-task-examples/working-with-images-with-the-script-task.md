@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c86c8f11ec6351882ccb4b152b4254bad70210f9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 87b01494565e58186b1f461f61c71a8180f53ec0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-images-with-the-script-task"></a>以指令碼工作處理影像
   產品或是使用者的資料庫除了文字與數值資料之外經常包括影像。 Microsoft .NET Framework 中的 **System.Drawing** 命名空間提供操作影像的類別。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  建立名為 `CurrentImageFile` 的字串變數，並將其值設定為現有影像檔的路徑與檔案名稱。  
   
-2.  在**指令碼工作編輯器**的 [指令碼] 頁面上，將 `CurrentImageFile` 變數新增至 **ReadOnlyVariables** 屬性。  
+2.  在 [指令碼工作編輯器] 的 [指令碼] 頁面上，將 `CurrentImageFile` 變數加入 **ReadOnlyVariables** 屬性。  
   
 3.  在指令碼專案中，設定 **System.Drawing** 命名空間的參考。  
   

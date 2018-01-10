@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 80dda6c12477a044a8a12c9b50d8fccb18aebb23
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4fcaa7101ebdd8042d0148b4a216335a74af837b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>報表產生器函式 - 彙總函式參考
   若要在報表中加入彙總值，您可以在運算式中使用內建彙總函式。 數值欄位的預設彙總函式是 SUM。 您可以編輯運算式，並使用不同的內建彙總函式或指定不同的範圍。 範圍會識別用於計算的資料集。  
@@ -183,7 +181,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="TestingforScope"></a> 測試範圍  
  下列的內建函數會測試報表項目目前的內容，查看是否為特定範圍的成員。  
   
-|函數|說明|  
+|函數|描述|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|指出目前項目的執行個體是否在指定的範圍內。|  
   
@@ -192,7 +190,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingRecursiveLevel"></a> 擷取遞迴層級  
  下列的內建函數會在系統處理遞迴階層時，擷取目前的層級。 在文字方塊中以 **Padding** 屬性使用此函數的結果，即可控制遞迴群組視覺階層的縮排層級。 如需詳細資訊，請參閱[建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
-|函數|說明|  
+|函數|描述|  
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|傳回遞迴階層中之目前所在的層級。|  
   

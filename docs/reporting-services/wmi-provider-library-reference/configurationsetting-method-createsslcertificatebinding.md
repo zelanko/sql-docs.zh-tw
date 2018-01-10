@@ -8,23 +8,21 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: CreateSSLCertificateBinding
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d0e390843b182e958ec761f1f6e95ea71d3ab08
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d36757501aafc1ce6948308e9be3091aeb2c176b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 方法 - CreateSSLCertificateBinding
   建立 SSL 憑證繫結。  
@@ -69,7 +67,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="return-value"></a>傳回值  
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。錯誤碼則表示呼叫不成功。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個方法會加入應用程式之 rsreportserver.config 的繫結。 如果繫結尚未存在 HTTP.SYS 中，就會在該處建立繫結。  
   
  建立繫結之前，此方法呼叫會檢查指定之應用程式的 URL 保留項目，以便判斷 SSL 憑證繫結是否有效。  

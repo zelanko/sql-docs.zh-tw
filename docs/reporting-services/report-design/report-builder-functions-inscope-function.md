@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 333d687c7d08be6187a493cd04b7e39dd2c61865
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c7035ef5f0f7c40504363dbfac696d96fcc3d13
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---inscope-function"></a>報表產生器函式 - InScope 函式
   指出某個項目目前的執行個體是否在指定的範圍內。  
@@ -44,7 +42,7 @@ InScope(scope)
 ## <a name="return-type"></a>傳回類型  
  傳回 **布林值**。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **InScope** 函數會測試報表項目目前執行個體的範圍，查看是否符合 *scope*參數所指定之範圍的成員資格。  
   
  *Scope* 不能是運算式。  

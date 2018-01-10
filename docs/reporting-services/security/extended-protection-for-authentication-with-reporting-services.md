@@ -8,21 +8,19 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: efcee36bb392786b5af57492e919da902f423679
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6f554b9ec04d894fbcd3da37e1bd326b39508571
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>含有 Reporting Services 的驗證擴充保護
 
@@ -52,7 +50,7 @@ SSRS 支援並強制執行已在作業系統中啟用的擴充保護。 如果�
 >   
 >  資料存取技術的文件應具有支援擴充保護的資訊。  
   
-### <a name="upgrade"></a>升級  
+### <a name="upgrade"></a>UPGRADE  
   
 -   將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器升級至 SQL Server 2016 時，會將具有預設值的組態設定新增至 **rsreportserver.config** 檔案。 如果這些設定已經存在，SQL Server 2016 安裝會將它們保留在 **rsreportserver.config** 檔案中。  
   
@@ -119,7 +117,7 @@ SSRS 支援並強制執行已在作業系統中啟用的擴充保護。 如果�
 ###  <a name="ConfigurationSettings"></a> Reporting Services 擴充保護的組態設定  
  下表提供顯示在 **rsreportserver.config** 中之擴充保護的組態設定相關資訊。  
   
-|設定|說明|  
+|設定|描述|  
 |-------------|-----------------|  
 |**RSWindowsExtendedProtectionLevel**|指定擴充保護的強制執行程度。 有效值為：<br /><br /> **Off**︰預設值。 不會指定通道繫結或服務繫結驗證。<br /><br /> **Allow** 支援擴充保護但其非必要。  指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。 強制執行保護的方式取決於 **RsWindowsExtendedProtectionScenario**設定<br /><br /> - 對於在不支援擴充保護之作業系統上執行的應用程式，不允許執行驗證。<br /><br /> **Require** 指定下列項目︰<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。<br /><br /> - 對於在不支援擴充保護之作業系統上執行的應用程式， **不** 允許執行驗證。|  
 |**RsWindowsExtendedProtectionScenario**|指定什麼擴充保護的形式要經過驗證：通道繫結、服務繫結，或兩者。 有效值為：<br /><br /> **Proxy**︰預設值。 指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當通道繫結權杖存在時)。<br /><br /> - 服務繫結會強制執行。<br /><br /> **Any** 指定下列項目︰<br /><br /> - Windows NTLM、Kerberos 和交涉驗證，而不需要通道繫結。<br /><br /> - 服務繫結會強制執行。<br /><br /> **Direct** 指定下列項目︰<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當 CBT 存在、目前服務的 SSL 連線存在，而且 SSL 連線的 CBT 與 NTLM、Kerberos 或交涉權杖的 CBT 相符時)。<br /><br /> - 服務繫結不會強制執行。<br /><br /> <br /><br /> 注意︰如果 **RsWindowsExtendedProtectionLevel** 設為 **OFF** ，則會忽略 **RsWindowsExtendedProtectionScenario**設定。|  
@@ -151,7 +149,7 @@ SSRS 支援並強制執行已在作業系統中啟用的擴充保護。 如果�
 ### <a name="hosts-collection-sources"></a>主機集合來源。  
  下表列出主機集合的潛在來源。  
   
-|來源類型|說明|  
+|來源類型|描述|  
 |--------------------|-----------------|  
 |ComputerNameDnsDomain|指派給本機電腦之 DNS 網域的名稱。 如果本機電腦是叢集中的一個節點，則會使用叢集虛擬伺服器的 DNS 網域名稱。|  
 |ComputerNameDnsFullyQualified|唯一識別本機電腦的完整 DNS 名稱。 此名稱結合 DNS 主機名稱與 DNS 網域名稱，其格式為 *HostName*.*DomainName*。 如果本機電腦是叢集中的一個節點，則會使用叢集虛擬伺服器的完整 DNS 名稱。|  
@@ -170,7 +168,7 @@ SSRS 支援並強制執行已在作業系統中啟用的擴充保護。 如果�
   
  如需詳細資訊，請參閱[為報表伺服器註冊服務主要名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) 和[關於 URL 保留項目和註冊 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。  
   
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [使用擴充保護連接至 Database Engine](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [驗證擴充保護概觀](http://go.microsoft.com/fwlink/?LinkID=177943)   

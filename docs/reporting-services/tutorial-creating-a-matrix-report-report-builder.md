@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5148e4416998d69822fb7aea96304c92b8c2a1e1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d20db364a19a96b40ac1087485978604c24012dd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教學課程：建立矩陣報表 (報表產生器)
 本教學課程會引導您建立 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，其中具有巢狀資料列和資料行群組的範例銷售資料矩陣。 
@@ -56,11 +56,11 @@ ms.lasthandoff: 12/05/2017
   
 4.  在 **[選擇資料集]** 頁面上，按一下 **[建立資料集]**。  
   
-5.  按一下 **[下一步]**。  
+5.  按 [下一步] 。  
   
 6.  在 [選擇與資料來源的連線] 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需建立內嵌資料來源的資訊，請參閱[教學課程︰建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-7.  按一下 **[下一步]**。  
+7.  按 [下一步] 。  
   
 8.  在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]**。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 12/05/2017
   
 10. (選擇性) 按一下 [執行] 圖示 (!) 執行查詢並查看資料。
 
-11. 按一下 **[下一步]**。  
+11. 按 [下一步] 。  
   
 ## <a name="Groups"></a>2.從新增資料表或矩陣精靈組織資料、選擇配置  
 使用精靈提供起始設計來顯示資料。 精靈中的預覽窗格可協助您在完成矩陣設計之前，先視覺化群組資料的結果。  
@@ -130,7 +130,7 @@ ms.lasthandoff: 12/05/2017
     
     ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
-7.  按一下 **[下一步]**。  
+7.  按 [下一步] 。  
   
 8.  在 [選擇配置] 頁面的 [選項] 下方，確定已選取 [顯示小計和總計]。  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 12/05/2017
   
 10. 確定已選取 [展開/摺疊群組] 選項。  
   
-11. 按一下 **[下一步]**。  
+11. 按 [下一步] 。  
   
 13. 按一下 **[完成]**。  
   
@@ -361,7 +361,7 @@ ms.lasthandoff: 12/05/2017
   
 領域名稱的寫法為由上而下的垂直方向。 Territory 資料列群組的高度會依領域名稱的長度而變化。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 以上總結如何建立矩陣報表的教學課程。 如需矩陣的詳細資訊，請參閱： 
 -    [資料表、矩陣和清單](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [建立矩陣](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)

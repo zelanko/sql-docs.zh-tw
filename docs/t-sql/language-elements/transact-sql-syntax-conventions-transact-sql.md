@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 12291b23c9204aaf030c3a8f093fe05bf4712721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 語法慣例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/18/2017
 |&#124; (分隔號)|加上括號或大括號來分隔語法項目。 您只可以選擇其中一個項目。|  
 |`[ ]` (方括弧)|選擇性的語法項目。 不要鍵入方括號。|  
 |{ } (大括號)|必要的語法項目。 不要鍵入大括號。|  
-|[**,**...*n*]|指出先前項目可以重複 *n* 次。 以逗號分開各次出現項目。|  
-|[...*n*]|指出先前項目可以重複 *n* 次。 以空白分開各次出現項目。|  
+|[**,**...*n*]|指出先前項目可以重複 *n* 的次數。 以逗號分開各次出現項目。|  
+|[...*n*]|指出先前項目可以重複 *n* 的次數。 以空白分開各次出現項目。|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結束字元。雖然這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的大部分陳述式都不需要使用分號，但是未來的版本可能會需要使用分號。|  
 |\<標籤 >:: =|語法區塊的名稱。 這個慣例可用來分組與標示冗長語法的區段，或分組與標示可用於陳述式中之多個位置的語法單位。 在您可以使用語法區塊的每個位置 > 形箭號括住的標籤表示：\<標籤 >。<br /><br /> 一組是集合運算式，例如\<群組集合 >; 清單位於集合的集合，例如\<複合元素清單 >。|  
   
@@ -118,11 +118,11 @@ ms.lasthandoff: 11/18/2017
  許多程式碼範例以字母的 Unicode 字元字串常數的前置詞**N**。不含**N**前置詞，字串會轉換成資料庫的預設字碼頁。 這個預設字碼頁可能無法辨識特定字元。  
   
 ## <a name="applies-to-references"></a>「適用於」參考  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]參考包括與相關的主題[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，和[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]。 在每個主題頂端附近，會有一個區段適用於這項主題主旨的產品。 對於未列出的產品，表示該主題不適用於該產品。 例如，可用性群組於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **建立可用性群組**主題指出它適用於**SQL Server (SQL Server 2012 到目前的版本)**因為不適用於[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，或[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]參考包含發行項與相關[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，和[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]。 最上方的每一個發行項是指出哪些產品支援的文件主體的區段。 如果省略產品，然後此發行項所描述的功能不適用於該產品。 例如，可用性群組於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE AVAILABILITY GROUP**文件會指出它適用於**SQL Server (SQL Server 2012 到目前的版本)**因為不適用於[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，或[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- 在某些情況下，某產品或許適用於一般主題主旨，但所有的引數卻都無法使用。 例如自主資料庫使用者於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE USER**陳述式可用於任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產品，但是**WITH PASSWORD**語法無法用於較舊版本。 在此情況下，額外**適用於**區段插入適當的引數中的說明主題的主體。  
+ 在某些情況下，發行項的一般主體可以用於產品，但所有的引數不支援。 例如自主資料庫使用者於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE USER**陳述式可用於任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產品，但是**WITH PASSWORD**語法無法用於較舊版本。 在此情況下，額外**適用於**區段插入適當的引數的描述發行項的主體中。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Transact-SQL 參考 &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
   
   

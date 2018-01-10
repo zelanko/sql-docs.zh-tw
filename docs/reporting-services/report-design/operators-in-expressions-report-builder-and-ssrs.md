@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0507f28c6850aeab6a691ec594bdbf7e02423c81
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f90af50c60fdb4a67bfcd2a423a1a21f66427a2d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>運算式中的運算子 (報表產生器及 SSRS)
   運算子是一個符號，代表套用至運算式中一個或多個詞彙的動作。 在運算式中支援下列的運算子類別：算術、比較、串連、邏輯或位元，以及位元移位。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="arithmetic"></a>算術  
  算術運算子會針對運算式中的兩個數值詞彙執行數學運算。  
   
-|運算子|說明|  
+|運算子|描述|  
 |--------------|-----------------|  
 |^|將一數值對另一數值做乘冪運算。|  
 |*|兩個數目相乘。|  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="comparison"></a>比較  
  比較運算子用來測試兩個運算式是否相同。  
   
-|運算子|說明|  
+|運算子|描述|  
 |--------------|-----------------|  
 |<|小於。|  
 |\<=|小於或等於。|  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="string-concatenation"></a>字串串連  
  字串串連會在運算式中將第二個字串附加至第一個字串。 如果要進行其他字串作業，請使用內建的函數。  
   
-|運算子|說明|  
+|運算子|描述|  
 |--------------|-----------------|  
 |&|串連兩個字串|  
 |+|串連兩個字串|  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="logical-and-bitwise"></a>邏輯和位元  
  邏輯和位元運算子會在運算式的兩個整數詞彙之間，執行邏輯操作。  
   
-|運算子|說明|  
+|運算子|描述|  
 |--------------|-----------------|  
 |And|對兩個布林運算式執行邏輯結合，或對兩個數值運算式 (Numeric Expression) 執行位元結合。|  
 |Not|對布林運算式執行邏輯否定，或對數值運算式執行位元否定。|  
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="bit-shift"></a>位元位移  
  位元運算子會在運算式的兩個整數詞彙之間，執行位元操作。  
   
-|運算子|說明|  
+|運算子|描述|  
 |--------------|-----------------|  
 |<\<|執行位元模式的算術左移位。|  
 |>>|執行位元模式的算術右移位。|  

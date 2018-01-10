@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4752ac55673b7c208a2d051da928fee1404693f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0dd47857407e353a3b6208554625f29126615da7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>格式化文字方塊中的文字 (報表產生器及 SSRS)
   您可以在文件方塊中，單獨地對文字任何一部分進行格式化，並且在同一個文字方塊中，混合使用預留文字與靜態文字。 混合格式與加入預留位置文字的功能可以讓您針對報表中的文字建立合併列印或範本。 您可以使用預留位置來個別定義和格式化任何運算式。  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/05/2017
   
          **HTML**  將選取的文字顯示為 HTML。 如果預留位置的運算式值包含有效的 HTML 標記，這些標記將會轉譯為 HTML。 如需詳細資訊，請參閱[將 HTML 匯入至報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
 6.  針對您想要格式化的其餘文字，重複步驟 2 至 5。  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
   
      如需其他格式選項，以滑鼠右鍵按一下預留位置文字，然後按一下 [預留位置屬性]。  
   
-6.  按一下 **[確定]**。 在 [報表設計] 檢視中，文字方塊中應該包含 "**My Field**: [*FieldName*]"，其中 *FieldName* 是您欄位的名稱。  
+6.  按一下 [確定] 。 在 [報表設計] 檢視中，文字方塊中應該包含 "**My Field**: [*FieldName*]"，其中 *FieldName* 是您欄位的名稱。  
   
 7.  按一下 **[執行]**。  
   

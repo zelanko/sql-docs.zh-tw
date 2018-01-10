@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: "5"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e74c53736485e3ee7745937e9e9dbd1de1b75e2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d102444b30ad5ddadcd6dcfe8fe25b072f230a63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>報表伺服器上的項目 URL 範例 - SharePoint 模式
   若要將報表和相關項目發行至 SharePoint 文件庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 撰寫工具 (例如報表設計師) 來發行內容，也可以使用 SharePoint 網站動作來上傳內容。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
  您可以使用以下的 Web 階層元素來存取報表伺服器的內容並保護其安全性。 其他諸如清單與頁面等物件則不會用來存取報表伺服器的內容，因此不會在下表中說明。  
   
-|物件|說明|  
+|Object|描述|  
 |------------|-----------------|  
 |SharePoint Web 應用程式|SharePoint Web 應用程式可以當做獨立的伺服器安裝，或安裝在包含虛擬伺服器集合的伺服器陣列下。 Web 應用程式具有一個 URL (例如 `http:*//servername*`)，並可包含多個網站。|  
 |網站|網站可能是 Web 應用程式的上層網站或子網站。|  

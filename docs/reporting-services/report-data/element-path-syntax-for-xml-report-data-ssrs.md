@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71d13409c7905b64f4b91b365b07f9b53b58264d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 643ad56c8c758c4711d731a6c5121206e8ce0998
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的元素路徑語法 (SSRS)
   在「報表設計師」中，可藉由定義區分大小寫的元素路徑來指定要用於 XML 資料來源中之報表的資料。 元素路徑會指出在 XML 資料來源中周遊 XML 階層式節點及其屬性的方法。 若要使用預設的元素路徑，請將資料集查詢或 XML **ElementPath** (屬於 XML **Query** ) 保留空白。 由 XML 資料來源擷取資料時，具有文字值的元素節點以及元素節點屬性會變成結果集內的資料行。 執行查詢時，節點及屬性的值會變成資料列資料。 這些資料行會以資料集欄位集合的方式顯示在 [報表資料] 窗格中。 此主題描述元素路徑語法。  
@@ -74,7 +72,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  下表摘要說明元素路徑的詞彙。 表格中的範例會參考範例 XML 文件 Customers.xml (包含在本主題的「範例」一節中)。  
   
 > [!NOTE]  
@@ -89,7 +87,7 @@ XMLLocalName :: =
 |**FieldList**|定義用來擷取資料的元素與屬性組合。<br /><br /> 如果沒有指定，所有屬性和子元素都會做為欄位使用。 如果指定了空的欄位清單 (**{}**)，就不會使用這個節點中的任何欄位。<br /><br /> **FieldList** 可能不會同時包含 **Value** 及 **Element** 或 **ElementNode**。|  
 |**欄位**|指定擷取做為資料集欄位的資料。|  
 |**Attribute**|**ElementNode**中名稱與值的配對。 例如，在 \<Customer ID="1"> 元素節點中，**ID** 為一屬性，而 **@ID(Integer)** 會在對應的資料欄位 **ID** 中以整數資料類型傳回 "1"。|  
-|**值**|元素的值。 **Value** 只能用於元素路徑中的最後一個 **ElementNode** 上。 例如，因為 \<Return> 是分葉節點，如果將其加入元素路徑的結尾，**Return {@}** 的值會是 **Chair**。|  
+|**ReplTest1**|元素的值。 **Value** 只能用於元素路徑中的最後一個 **ElementNode** 上。 例如，因為 \<Return> 是分葉節點，如果將其加入元素路徑的結尾，**Return {@}** 的值會是 **Chair**。|  
 |**Element**|具名子元素的值。 例如，Customers {}/Customer {}/LastName 只會擷取 LastName 元素的值。|  
 |**型別**|此元素建立之欄位所使用的選擇性資料類型。|  
 |**NamespacePrefix**|**NamespacePrefix** 是在 XML 查詢元素中定義。 如果 XML 查詢元素不存在，則會省略 XML **ElementPath** 中的命名空間。 如果有 XML 查詢元素，XML **ElementPath** 則會有選擇性的 **IgnoreNamespaces**屬性。 如果 IgnoreNamespaces 為 **true**，則會忽略 XML **ElementPath** 以及 XML 文件中的命名空間。 如需詳細資訊，請參閱 [XML 報表資料的 XML 查詢語法 &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)。|  
@@ -104,8 +102,8 @@ XMLLocalName :: =
   
 |單|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-|Table|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
+|Chair|6|@shouldalert|Bobby|Moore|11|http://www.adventure-works.com|  
+|Table|@shouldalert|2|Bobby|Moore|11|http://www.adventure-works.com|  
 |Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
 |EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
   
@@ -130,7 +128,7 @@ XMLLocalName :: =
 |單|Qty|  
 |-----------|---------|  
 |Chair|6|  
-|Table|1|  
+|Table|@shouldalert|  
 |Sofa|2|  
 |EndTables|2|  
   
@@ -138,7 +136,7 @@ XMLLocalName :: =
   
 |Order.ID|FirstName|LastName|ID|  
 |--------------|---------------|--------------|--------|  
-|1|Bobby|Moore|11|  
+|@shouldalert|Bobby|Moore|11|  
 |2|Bobby|Moore|11|  
 |8|Crystal|Hu|20|  
 |15|Wyatt|Diaz|33|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - migrating Reporting Services
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 caps.latest.revision: "54"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dabd177ad6949ea9ff461324e1072d8f364496e8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b05058e8d0254939f0c2018a484a12f458213f0b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
 
@@ -250,7 +248,7 @@ ms.lasthandoff: 12/05/2017
 
 如果您在先前安裝中修改了 RSReportServer.config 檔案或 RSWebApplication.config 檔案，就應該在新的 RSReportServer.config 檔案中進行相同的修改。 下列清單將摘要列出一些您可能會修改先前組態檔的原因，並且提供有關如何在 SQL Server 2016 中設定相同設定的其他資訊連結。  
   
-|自訂|資訊|  
+|自訂|[資訊]|  
 |-------------------|-----------------|  
 |含有自訂設定的報表伺服器電子郵件傳遞|[電子郵件設定 - Reporting Services 原生模式](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
 |裝置資訊設定|[在 RSReportServer.Config 中自訂轉譯延伸模組參數](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
@@ -285,7 +283,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  如果您不再需這部電腦上的 IIS，請移除它。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [移轉 Reporting Services 安裝](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)   
 [報表伺服器資料庫](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   

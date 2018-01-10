@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: "28"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 8d8013c5673a63c80f037ffab76064193db21a36
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 604952211abf63d6dacb111c8170d678acd2d80a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 轉譯延伸模組會將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表轉譯成 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 格式 (.xlsx)。 使用 Excel 轉譯延伸模組，Excel 中的資料行寬度就可以更精確地反映報表中的資料行寬度。  
@@ -214,11 +212,11 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="DocumentProperties"></a> 文件屬性  
  Excel 轉譯器會將下列中繼資料寫入到 Excel 檔。  
   
-|報表元素屬性|說明|  
+|報表元素屬性|描述|  
 |-------------------------------|-----------------|  
 |建立日期|執行報表的日期和時間，當做 ISO 日期/時間值。|  
 |作者|Report.Author|  
-|說明|Report.Description|  
+|描述|Report.Description|  
 |LastSaved|執行報表的日期和時間，當做 ISO 日期/時間值。|  
   
 ##  <a name="PageHeadersFooters"></a> 頁首和頁尾  

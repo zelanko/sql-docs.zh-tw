@@ -8,22 +8,20 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4752f935092bb2334d745eed0800de16ca251e76
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e3f627f3e96223028046a79d1bc50721fd599736
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rswindowsextendedprotectionscenario-property"></a>RSWindowsExtendedProtectionScenario 屬性
   傳回字串值，表示報表伺服器設定為允許的擴充保護案例。  
@@ -38,7 +36,7 @@ Public Dim RSWindowsExtendedProtectionScenario As String
 public string RSWindowsExtendedProtectionScenario;  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  傳回字串值，表示報表伺服器設定為允許的擴充保護案例。 如果 WMI 提供者連接的報表伺服器不支援擴充保護，則會傳回 "" (空字串)。  
   
  下列清單顯示有效值：  

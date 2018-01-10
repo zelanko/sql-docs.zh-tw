@@ -1,7 +1,7 @@
 ---
 title: "追蹤旗標 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 12/19/2017
+ms.date: 01/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d5c466e35f8e37d7f2559e6766886b5ef80e390e
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 4dcffcd589d6ff9bd2b32aa618611dc78e98edea
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-追蹤旗標 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/05/2018
 > 在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，不一定支援追蹤旗標行為。 
 
   
-|追蹤旗標|描述|  
+|追蹤旗標|Description|  
 |---|---|
 |**139**| 正確的 DBCC 範圍中的轉換語意檢查命令要強制[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)， [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)和[DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md)分析時，改進的精確度和轉換邏輯所導入的相容性等級 130 的特定資料類型上有較低的相容性層級的資料庫。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/help/4010261)。<br /><br />**注意：**這個追蹤旗標適用於[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]RTM CU3， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 和更新版本的組建。<br /><br />**警告：**追蹤旗標 139 並非用於生產環境中，在持續啟用，應該用於只是為了在執行資料庫驗證會檢查所述[Microsoft 支援文章](http://support.microsoft.com/help/4010261). 它應該立即停用完成驗證檢查。<br /><br />**範圍**： 全域只|
 |**174**|增加[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]計畫快取 bucket 計數從 40,009 160,001 至 64 位元系統上。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/3026083)。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**範圍**： 全域只|
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/05/2018
 |**1204**|傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/832524)。<br /><br />**範圍：**全域只|  
 |**1211**|停用以記憶體壓力或鎖定個數為基礎的鎖定擴大。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 不會將資料列或頁面鎖定擴大到資料表鎖定。<br /><br />使用這個追蹤旗標可能產生大量鎖定。 這可能會降低 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的效能，或因記憶體不足而造成 1204 錯誤 (無法配置鎖定資源)。<br /><br />如果同時設定了追蹤旗標 1211 和 1224，將會優先採用 1211。 但是，由於追蹤旗標 1211 會在每一個情況下防止鎖定擴大 (即使是在記憶體壓力下)，所以建議您最好使用 1224。 如此可避免在使用許多鎖定時，發生「鎖定不足」錯誤。<br /><br />**範圍**： 全域或工作階段|  
 |**1222**|以不符合任何 XSD 結構描述的 XML 格式來傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。<br /><br />**範圍**： 全域只|  
-|**1224**|停用以鎖定個數為基礎的鎖定擴大。 不過，記憶體壓力仍然可以啟動鎖定擴大。 如果鎖定物件使用的記憶體數量超出下列其中一個條件，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會將資料列或頁面鎖定擴大至資料表 (或資料分割) 鎖定：<br /><br />-使用的記憶體 40% [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 這是時才適用**鎖定**sp_configure 參數設為 0。<br />的使用所設定的鎖定記憶體 40%**鎖定**sp_configure 的參數。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。<br /><br />如果同時設定了追蹤旗標 1211 和 1224，將會優先採用 1211。 但是，由於追蹤旗標 1211 會在每一個情況下防止鎖定擴大 (即使是在記憶體壓力下)，所以建議您最好使用 1224。 如此可避免在使用許多鎖定時，發生「鎖定不足」錯誤。<br /><br />**注意：**也可以使用的 LOCK_ESCALATION 選項控制鎖定擴大到 HoBT 層級的資料粒度或資料表層級[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)陳述式。<br /><br />**範圍：**全域或工作階段|
+|**1224**|停用以鎖定個數為基礎的鎖定擴大。 不過，記憶體壓力仍然可以啟動鎖定擴大。 如果鎖定物件使用的記憶體數量超出下列其中一個條件，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會將資料列或頁面鎖定擴大至資料表 (或資料分割) 鎖定：<br /><br />-使用的記憶體 40% [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 這是時才適用**鎖定**sp_configure 參數設為 0。<br />的使用所設定的鎖定記憶體 40%**鎖定**sp_configure 的參數。 如需詳細資訊，請參閱 [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。<br /><br />如果同時設定了追蹤旗標 1211 和 1224，將會優先採用 1211。 但是，由於追蹤旗標 1211 會在每一個情況下防止鎖定擴大 (即使是在記憶體壓力下)，所以建議您最好使用 1224。 如此可避免在使用許多鎖定時，發生「鎖定不足」錯誤。<br /><br />**注意：**也可以使用的 LOCK_ESCALATION 選項控制鎖定擴大到 HoBT 層級的資料粒度或資料表層級[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)陳述式。<br /><br />**範圍：**全域或工作階段|
 |**1236**|可讓資料庫鎖定資料分割。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2926217)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP3 和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]這種行為由引擎和追蹤旗標 1236 SP1 有任何作用。<br /><br />**範圍**： 全域只|
 |**1237**|允許 ALTER PARTITION FUNCTION 陳述式來接受目前的使用者定義的工作階段的死結優先權，而不是預設情況下可能的死結的犧牲者。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/help/4025261)。<br /><br />**注意：**開頭[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]和資料庫[相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)140 這是預設行為，所以追蹤旗標 1237年沒有任何作用。<br /><br />**範圍**： 全域或工作階段或查詢|
 |**1260**|停用排程器監視器傾印。<br /><br />**範圍**： 全域只|   
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/05/2018
 |**2549**|執行 DBCC CHECKDB 命令，假設每個資料庫檔案唯一的磁碟機上。 DBCC CHECKDB 命令會建立內部清單來跨所有資料庫檔案每個唯一的磁碟機讀取的頁數。 此邏輯會判斷唯一根據每個檔案的實體檔案名稱的磁碟機代號的磁碟機。<br /><br />**注意：**不使用這個追蹤旗標，除非您知道每個檔案為基礎的唯一實體磁碟。<br /><br />**注意：**雖然這個追蹤旗標會改善效能的 DBCC CHECKDB 命令的目標使用 PHYSICAL_ONLY 選項，但是某些使用者可能不會看到任何效能改進。 這個追蹤旗標可改善磁碟 I/O 資源使用量，而基礎磁碟資源的效能可能會限制 DBCC CHECKDB 命令的整體效能。 如需詳細資訊，請參閱[Microsoft 支援文章](http://support.microsoft.com/kb/2634571)。<br /><br />**範圍**： 全域只| 
 |**2562**|執行 DBCC CHECKDB 命令，在單一"batch"，無論在資料庫中的索引數目。 根據預設，DBCC CHECKDB 命令會嘗試藉由限制的索引或 「 事實 」 使用 「 批次 」 概念所產生的數字，tempdb 資源減到最低。 這個追蹤旗標會強制成一個批次的所有處理。<br /><br />使用此追蹤旗標的其中一個影響是 tempdb 的空間需求可能會增加。 Tempdb 可能成長至最多可達 5%以上的 DBCC CHECKDB 命令正在處理的使用者資料庫。<br /><br />**注意：**雖然這個追蹤旗標會改善效能的 DBCC CHECKDB 命令的目標使用 PHYSICAL_ONLY 選項，但是某些使用者可能不會看到任何效能改進。 這個追蹤旗標可改善磁碟 I/O 資源使用量，而基礎磁碟資源的效能可能會限制 DBCC CHECKDB 命令的整體效能。 如需詳細資訊，請參閱[Microsoft 支援文章](http://support.microsoft.com/kb/2634571)。<br /><br />**範圍**： 全域只|
 |**2566**|除非指定 DATA_PURITY 選項，請執行 DBCC CHECKDB 命令沒有資料純度檢查。<br /><br />**注意：**資料行值的完整性檢查依預設會啟用並不需要 DATA_PURITY 選項。 對於從舊版的 SQL Server 升級資料庫，資料行值檢查不會啟用預設 DBCC CHECKDB WITH data_purity，否則已執行之前發生錯誤的資料庫至少一次。 此後，依預設 DBCC CHECKDB 會檢查資料行值的完整性。 如需詳細資訊，請參閱[Microsoft 支援文章](http://support.microsoft.com/kb/945770)。<br /><br />**範圍**： 全域只|
-|**3023**|啟用成 BACKUP 命令的預設值的總和檢查碼選項。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2656988)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]此行為藉由設定控制**備份總和檢查碼預設**組態選項。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。<br /><br />**範圍**： 全域和工作階段|
+|**3023**|啟用成 BACKUP 命令的預設值的總和檢查碼選項。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2656988)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]此行為藉由設定控制**備份總和檢查碼預設**組態選項。 如需詳細資訊，請參閱 [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。<br /><br />**範圍**： 全域和工作階段|
 |**3042**|略過預設備份壓縮預先配置演算法，讓備份檔案只會視需要成長以達到其最終大小。 如果您只要配置壓縮備份所需的實際大小，藉以節省空間，這個追蹤旗標就很有用。 使用此追蹤旗標可能會導致效能稍微降低 (可能會增加備份作業的持續時間)。 如需有關預先配置演算法的詳細資訊，請參閱[備份壓縮 &#40;SQL Server &#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br />**範圍**： 全域只|
 |**3051**|可讓 SQL Server 備份至 URL 的特定錯誤記錄檔記錄。 如需詳細資訊，請參閱[SQL Server 備份至 URL 的最佳作法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。<br /><br />**範圍**： 全域只|  
 |**3205**|依預設，如果磁帶機支援硬體壓縮，DUMP 或 BACKUP 陳述式就會使用它。 當使用這個追蹤旗標時，您可以停用磁帶機的硬體壓縮。 當您要與其他不支援壓縮的站台或磁帶機交換磁帶時，這非常有用。<br /><br />**範圍**： 全域或工作階段|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 01/05/2018
 |**4137**|會導致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產生相互關聯，底下的查詢最佳化工具基數估計模型的最小的選擇性評估 AND 篩選條件的述詞時使用的計劃[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及較早版本。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2658214)。<br /><br />從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，才能完成這項作業在查詢層級中，加入 USE 提示 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'[查詢提示](../../t-sql/queries/hints-transact-sql-query.md)而不是使用舊版 CE 時使用這個追蹤旗標。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**注意：** CE 120 版或更新將不會套用這個追蹤旗標。 請改用追蹤旗標 9471。<br /><br />**範圍**： 全域或工作階段或查詢| 
 |**4138**|會導致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產生的計劃使用不會將目標調整資料列包含 TOP，OPTION (FAST N) 的查詢，或存在關鍵字。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2667211)。<br /><br />從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，才能完成這項作業在查詢層級中，加入 USE 提示 'DISABLE_OPTIMIZER_ROWGOAL'[查詢提示](../../t-sql/queries/hints-transact-sql-query.md)而不是使用這個追蹤旗標。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**範圍**： 全域或工作階段或查詢| 
 |**4139**|啟用自動產生索引鍵資料行狀態不論快速統計資料 （長條圖修正）。 如果設定追蹤旗標 4139，不論前置的統計資料資料行狀態 （遞增、 遞減排序，或固定），用來預估基數長條圖將會調整在查詢編譯時間。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2952101)。<br /><br />從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，才能完成這項作業在查詢層級中，加入 USE 提示 'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'[查詢提示](../../t-sql/queries/hints-transact-sql-query.md)而不是使用這個追蹤旗標。<br /><br />**注意：**請確定您仔細地測試此選項，然後再部署到生產環境。<br /><br />**注意：** CE 70 版則不適用這個追蹤旗標。 請改用 2389年和 2390年的追蹤旗標。<br /><br />**範圍**： 全域或工作階段或查詢|
-|**4199**|啟用查詢最佳化工具 (QO) 變更發行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]累計更新和 Service Pack。<br /><br />QO 變更與之前的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]下的最新資料庫的預設會啟用[相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)在指定的產品版本中，但不追蹤旗標 4199 啟用。<br /><br />使用特定的資料庫相容性層級和追蹤旗標 4199 時下, 表摘要說明的行為。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/974006)。<br /><br /><table border="1" frame="void" width="550"><tr valign="middle" align="center"><td>**資料庫相容性層級**</td><td>**TF 4199**</td><td>**從先前的資料庫相容性層級變更 QO**</td><td>**目前版本的 QO 變更 post RTM**</td></tr><tr valign="middle" align="center"><td rowspan="2">**100 到 120**</td><td>關閉</td><td>已停用</td><td>已停用</td></tr><tr valign="middle" align="center"><td>開啟</td><td>已啟用</td><td>已啟用</td></tr><tr valign="middle" align="center"><td rowspan="2">**130**</td><td>關閉</td><td>已啟用</td><td>已停用</td></tr><tr valign="middle" align="center"><td>開啟</td><td>已啟用</td><td>已啟用</td></tr><tr valign="middle" align="center"><td rowspan="2">**140**</td><td>關閉</td><td>已啟用</td><td>已停用</td></tr><tr valign="middle" align="center"><td>開啟</td><td>已啟用</td><td>已啟用</td></tr></table><br /><br />若要達成此目的資料庫層級，請參閱中的 QUERY_OPTIMIZER_HOTFIXES 選項[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).<br /><br />從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，才能完成這項作業在查詢層級中，加入 USE 提示 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'[查詢提示](../../t-sql/queries/hints-transact-sql-query.md)而不是使用這個追蹤旗標。<br /><br />**範圍**： 全域或工作階段或查詢|
+|**4199**|<a name="4199"></a>啟用查詢最佳化工具 (QO) 變更發行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]累計更新和 Service Pack。<br /><br />QO 變更與之前的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]下的最新資料庫的預設會啟用[相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)在指定的產品版本中，但不追蹤旗標 4199 啟用。<br /><br />使用特定的資料庫相容性層級和追蹤旗標 4199 時下, 表摘要說明的行為。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/974006)。<br /><br /><table border="1" frame="void" width="550"><tr valign="middle" align="center"><td>**資料庫相容性層級**</td><td>**TF 4199**</td><td>**從先前的資料庫相容性層級變更 QO**</td><td>**目前版本的 QO 變更 post RTM**</td></tr><tr valign="middle" align="center"><td rowspan="2">**100 到 120**</td><td>關閉</td><td>已停用</td><td>已停用</td></tr><tr valign="middle" align="center"><td>開啟</td><td>已啟用</td><td>已啟用</td></tr><tr valign="middle" align="center"><td rowspan="2">**130**</td><td>關閉</td><td>已啟用</td><td>已停用</td></tr><tr valign="middle" align="center"><td>開啟</td><td>已啟用</td><td>已啟用</td></tr><tr valign="middle" align="center"><td rowspan="2">**140**</td><td>關閉</td><td>已啟用</td><td>已停用</td></tr><tr valign="middle" align="center"><td>開啟</td><td>已啟用</td><td>已啟用</td></tr></table><br /><br />若要達成此目的資料庫層級，請參閱中的 QUERY_OPTIMIZER_HOTFIXES 選項[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).<br /><br />從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，才能完成這項作業在查詢層級中，加入 USE 提示 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'[查詢提示](../../t-sql/queries/hints-transact-sql-query.md)而不是使用這個追蹤旗標。<br /><br />**範圍**： 全域或工作階段或查詢|
 |**4610**|增加儲存快取項目 8 倍的雜湊表的大小。 當搭配追蹤旗標 4618 會增加 8,192 TokenAndPermUserStore 快取存放區中的項目數。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/959823)。<br /><br />**範圍：**全域只|
 |**4616**|讓應用程式角色可以看見伺服器層級的中繼資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，應用程式角色不能存取本身資料庫之外的中繼資料，因為應用程式角色與伺服器層級主體沒有關聯。 這是和舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不同的一項行為變更。 設定這個全域旗標可停用新限制，使應用程式角色可以存取伺服器層級的中繼資料。<br /><br />**範圍**： 全域只|
 |**4618**|限制到 1024，存放區 TokenAndPermUserStore 快取中的項目數目。 當搭配追蹤旗標 4610 會增加 8,192 TokenAndPermUserStore 快取存放區中的項目數。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/959823)。<br /><br />**範圍：**全域只|
@@ -146,7 +146,8 @@ ms.lasthandoff: 01/05/2018
 |**9939**|啟用平行計劃和平行掃描記憶體最佳化資料表和參考記憶體最佳化資料表或資料表變數的 DML 作業中的資料表變數，只要它們不是中的 DML 作業的目標[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/4013877)。<br /><br />**注意：**如果同時也可以明確啟用追蹤旗標 4199 追蹤旗標 9939 就不需要。<br /><br />**範圍**： 全域或工作階段或查詢|   
 |**10204**|停用合併/重新壓縮期間資料行存放區索引重組。 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，當重新組織資料行存放區索引時，會自動合併成較大壓縮資料列，以及為壓縮具有大量的任何資料列群組已刪除資料列的任何小型的壓縮資料列的新功能。<br /><br />**注意：**追蹤旗標 10204 不適用於記憶體最佳化資料表建立資料行存放區索引。<br /><br />**範圍**： 全域或工作階段|   
 |**10316**|上可建立其他索引[內部記憶體最佳化暫存時態表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)，預設值，旁邊。 如果您有特定的查詢模式，其中包含未涵蓋的預設索引的資料行，您可以考慮加入額外的。<br /><br />**注意：**系統版本設定時態表的記憶體最佳化資料表的設計可提供高交易處理能力。 請留意建立額外的索引可能會對 DML 作業更新或刪除目前資料表中的資料列的額外負荷。 與其他索引您的目標應該以尋找時態查詢的效能和額外 DML 負擔之間的正確平衡。<br /><br />**範圍**： 全域或工作階段|
-|**11023**|停用使用上次的保存的取樣率，取樣率指定的位置不明確的一部份的所有後續的統計資料更新[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)陳述式。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/4039284)。<br /><br />**範圍**： 通用| 
+|**11023**|停用使用上次的保存的取樣率，取樣率指定的位置不明確的一部份的所有後續的統計資料更新[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)陳述式。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/4039284)。<br /><br />**範圍**： 通用|    
+|**11024**|可讓觸發自動更新統計資料時的任何資料分割修改計數超過本機[閾值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/4041811)。<br /><br />**範圍**： 通用| 
   
 ## <a name="remarks"></a>備註  
  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，有三種類型的追蹤旗標： 查詢、 工作階段和全域。 查詢追蹤旗標都可用於特定的查詢內容。 工作階段追蹤旗標用於某個連接，而且只會在該連接顯示出來。 全域追蹤旗標是設在伺服器層級，只要是該伺服器上的連接，都看得到它們。 某些旗標只能啟用為全域旗標，某些則可以啟用為全域或工作階段範圍。  
@@ -157,7 +158,7 @@ ms.lasthandoff: 01/05/2018
   
 請利用下列方法之一，將追蹤旗標設為開啟或關閉：
 -   使用 DBCC TRACEON 和 DBCC TRACEOFF 命令。  
-     例如，若要全域啟用追蹤旗標 2528年，使用 DBCC TRACEON 搭配-1 引數： `DBCC TRACEON (2528, -1)`。 啟用 DBCC TRACEON 全域追蹤旗標的效果會在伺服器重新啟動遺失。 若要關閉全域追蹤旗標，請利用 -1 引數使用 DBCC TRACEOFF。  
+     例如，若要全域啟用追蹤旗標 2528年，使用[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)利用-1 的引數： `DBCC TRACEON (2528, -1)`。 啟用 DBCC TRACEON 全域追蹤旗標的效果會在伺服器重新啟動遺失。 若要關閉全域追蹤旗標，請使用[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)利用-1 的引數。  
 -   使用**-T**啟動選項，指定上設定追蹤旗標，在啟動期間。  
      **-T**啟動選項會全域啟用追蹤旗標。 您不能利用啟動選項啟用工作階段層級的追蹤旗標。 這可確保在伺服器重新啟動之後的追蹤旗標會保持使用中。 如需啟動選項的詳細資訊，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)。
 -   在查詢層級，使用 QUERYTRACEON[查詢提示](http://support.microsoft.com/kb/2801413)。
@@ -177,7 +178,7 @@ DBCC TRACEON (3205,-1);
 SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137)
 ``` 
  
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)  
 [DBCC OUTPUTBUFFER &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md)  
@@ -188,6 +189,6 @@ SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUER
 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
 [SET NOCOUNT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-nocount-transact-sql.md)  
 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
-[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
+[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
 [查詢提示 (TRANSACT-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
 

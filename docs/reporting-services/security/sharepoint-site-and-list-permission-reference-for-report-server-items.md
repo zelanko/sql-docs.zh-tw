@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3eff319ce6f754b7e602b26bf1b5032d11a7b0f3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b2f7a54c6f2cb7f404635971edd3650b2d9e92ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>報表伺服器項目的 SharePoint 網站和清單權限參考
   本文中提供 SharePoint 權限的參考，可用來針對以 SharePoint 整合式模式執行的報表伺服器，授與報表伺服器作業的存取權。 如果您要建立自訂的權限等級，本主題可幫助您選擇適用的權限。  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="list-permissions"></a>清單權限  
  您在包含報表伺服器項目的文件庫上設定的權限，會決定使用者存取這些項目的方式。  
   
-|權限|說明|F|C|V|報表伺服器作業|  
+|權限|描述|F|c|V|報表伺服器作業|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |管理清單|建立和刪除清單、新增或移除清單中的資料行，以及新增或移除清單的公用檢視。|X|||在從編輯工具發行作業期間，於 SharePoint 程式庫中建立資料夾。 此權限同時為管理報表記錄所需。|  
 |加入項目|將項目新增至清單、將文件新增至文件庫，以及新增網頁討論區註解。|X|X||將報表、報表模型、共用資料來源，以及資源 (外部影像檔) 加入 SharePoint 程式庫。 建立共用資料來源。 從共用資料來源產生報表模型。 啟動報表產生器，並建立新報表或將模型載入報表產生器。|  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="site-permissions"></a>網站權限  
  網站權限決定並非與特定文件庫中所儲存項目直接相關之報表伺服器作業的存取。 例如，建立和管理共用排程 (可由多個文件庫中的項目使用)，以及設定報表檢視器網頁組件 (可在整個網站上使用)。  
   
-|權限|說明|F|C|V|報表伺服器作業|  
+|權限|描述|F|c|V|報表伺服器作業|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |管理權限|建立和變更網站上的權限等級，並且將權限指派給使用者和群組。|X|||您可以變更所有報表伺服器項目和作業的權限。 還可以設定模型項目的安全性。|  
 |管理網站|執行所有網站管理工作，以及管理內容。|X|||建立、變更和刪除共用排程。|  

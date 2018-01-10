@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 397039d98c68bc6828473099091a70b8777f350d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 776a8ac7555128b47175b77739033918f4ed0b5e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-a-source-with-the-script-component"></a>以指令碼元件建立來源
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用來源元件，以從資料來源載入資料，進而將其傳遞至下游轉換與目的地。 通常您會透過現有的連接管理員來連接到資料來源。  
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  將新指令碼元件加入資料流程設計師介面，並將它設定為來源。  
   
-3.  開啟 [指令碼轉換編輯器]。 在 [輸入及輸出] 頁面上，以更具描述性的名稱重新命名預設輸出，例如 **MyAddressOutput**，以及新增和設定兩個輸出資料行：**AddressID** 和 **City**。  
+3.  開啟**指令碼轉換編輯器**。 在 [輸入及輸出] 頁面上，以更具描述性的名稱重新命名預設輸出，例如 **MyAddressOutput**，以及新增和設定兩個輸出資料行：**AddressID** 和 **City**。  
   
     > [!NOTE]  
     >  務必將 **City** 輸出資料行的資料類型變更為 DT_WSTR。  
@@ -267,7 +267,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  將新指令碼元件加入資料流程設計師介面，並將它設定為來源。  
   
-4.  開啟 [指令碼轉換編輯器]。 在 [輸入及輸出] 頁面上，以更具描述性的名稱重新命名預設輸出，例如 **MyAddressOutput**。 新增和設定兩個輸出資料行：**AddressID** 和 **City**。  
+4.  開啟**指令碼轉換編輯器**。 在 [輸入及輸出] 頁面上，以更具描述性的名稱重新命名預設輸出，例如 **MyAddressOutput**。 新增和設定兩個輸出資料行：**AddressID** 和 **City**。  
   
 5.  在 [連線管理員] 頁面上，使用更具描述性的名稱 (例如 **MyFlatFileSrcConnectionManager**) 以新增或建立一般檔案連線管理員。  
   

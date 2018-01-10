@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 6d137b42fd99f18c0742d4535762c9cfd36d4b1a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4698782486ccae04b7f2b343beda95edad676568
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-the-rsexecrole"></a>建立 RSExecRole
 
@@ -77,13 +75,13 @@ ms.lasthandoff: 12/05/2017
   
 11. 按一下 **[搜尋]**。 **[加入物件]** 對話方塊隨即出現。 預設會選取 **[特定物件]** 選項。  
   
-12. 按一下 **[確定]**。 **[選取物件]** 對話方塊隨即出現。  
+12. 按一下 [確定] 。 **[選取物件]** 對話方塊隨即出現。  
   
 13. 按一下 **[物件類型]**。  
   
 14. 按一下 **[擴充預存程序]**。  
   
-15. 按一下 **[確定]**。  
+15. 按一下 [確定] 。  
   
 16. 按一下 **[瀏覽]**。  
   
@@ -126,13 +124,13 @@ ms.lasthandoff: 12/05/2017
   
 9. 按一下 **[加入]**。 **[加入物件]** 對話方塊隨即出現。 預設會選取 **[指定物件]** 選項。  
   
-10. 按一下 **[確定]**。  
+10. 按一下 [確定] 。  
   
 11. 按一下 **[物件類型]**。  
   
 12. 按一下 **[預存程序]**。  
   
-13. 按一下 **[確定]**。  
+13. 按一下 [確定] 。  
   
 14. 按一下 **[瀏覽]**。  
   
@@ -168,13 +166,13 @@ ms.lasthandoff: 12/05/2017
   
 20. 在 [安全性實體] 索引標籤上，再次按一下 **[加入]** 。 **[加入物件]** 對話方塊隨即出現。 預設會選取 **[指定物件]** 選項。  
   
-21. 按一下 **[確定]**。  
+21. 按一下 [確定] 。  
   
 22. 按一下 **[物件類型]**。  
   
 23. 按一下 **[資料表]**。  
   
-24. 按一下 **[確定]**。  
+24. 按一下 [確定] 。  
   
 25. 按一下 **[瀏覽]**。  
   
@@ -216,7 +214,7 @@ ms.lasthandoff: 12/05/2017
   
 6.  按一下 **[測試連接]**。  
   
-7.  按一下 **[下一步]**。  
+7.  按 [下一步] 。  
   
 8.  在 [資料庫] 上，選取報表伺服器資料庫。  
   
@@ -234,7 +232,7 @@ ms.lasthandoff: 12/05/2017
   
 15. 按一下此連結，開啟報表管理員。 您應該可從報表伺服器資料庫中看到報表伺服器項目。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

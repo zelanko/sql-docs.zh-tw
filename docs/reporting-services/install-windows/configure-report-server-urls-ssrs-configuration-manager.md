@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 87c3c32e3068d9b3d1303697b846664d2e5cadb0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4128ec3ec665dc5dff90b6d82b7aa7838d4e5d99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>設定報表伺服器 URL (SSRS 組態管理員)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，URL 是用來存取報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]。 在您可以使用其中一個應用程式以前，您至少必須為此 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]設定一個 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會針對在大多數部署方案下運作良好的這兩個應用程式 URL 提供預設值，其中包括與其他 Web 服務和應用程式並存的部署。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/05/2017
   
  讓這些 URL 可用的設定會出現在下表中， 這個表格會顯示可透過包含主機名稱的 URL 來啟用報表伺服器連接的預設值：  
   
-|部分|值|說明|  
+|部分|ReplTest1|說明|  
 |----------|-----------|-----------------|  
 |IP 位址|全部指派|網路上的網域名稱服務會將 URL 上的主機名稱解析為電腦的 IP 位址。 只要您定義的 URL 中有指定此 IP 位址，傳送給特定主機的要求都將到達所要的目標。|  
 |通訊埠|80|通訊埠 80 是電腦上 TCP/IP 連接的預設通訊埠。 由於報表伺服器會接聽通訊埠 80，所以您可以省略 URL 中的通訊埠編號。 如果您指定另一個通訊埠，就必須在 URL 中指定它。|  

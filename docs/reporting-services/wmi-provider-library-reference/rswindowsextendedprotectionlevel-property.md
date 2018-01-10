@@ -8,22 +8,20 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0aa7840e40b5ed892b3b9837d89d1c6942c25f45
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2df0986f8bdf40a87a53d23ea97532142486f1e0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rswindowsextendedprotectionlevel-property"></a>RSWindowsExtendedProtectionLevel 屬性
   傳回字串值，表示報表伺服器設定為支援的保護等級。 此屬性是唯讀的。  
@@ -38,7 +36,7 @@ Public Dim RSWindowsExtendedProtectionLevel As String
 public string RSWindowsExtendedProtectionLevel;  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  傳回字串值，表示報表伺服器設定為支援的保護等級。 如果 WMI 提供者連接的報表伺服器不支援擴充保護，則會傳回 "" (空字串)。 下列清單顯示有效值：  
   
  `“Off” | “Allow” | “Require”`  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7dfb7020fe79961b4b52a5a6b36919e7abdbb7b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89baca75b96115ac70e6f520cd2248f03497cbda
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -48,13 +46,13 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_general"></a> 一般 ULS 記錄建議  
  下表將針對監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 環境，列出建議的事件類別目錄和層級。 記錄事件時，每個項目都會包含記錄事件的時間、處理序名稱，以及執行緒識別碼。  
   
-|類別目錄|Level|說明|  
+|類別目錄|層級|描述|  
 |--------------|-----------|-----------------|  
-|資料庫|[詳細資訊]|記錄涉及資料庫存取權的事件。|  
-|一般|[詳細資訊]|記錄涉及下列項目之存取權的事件：<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 網頁<br /><br /> 報表檢視器 HTTP 處理常式<br /><br /> 報表存取 (.rdl 檔)<br /><br /> 資料來源 (.rsds 檔)<br /><br /> SharePoint 網站的 URL (.smdl 檔)|  
+|[資料庫]|「詳細資訊」|記錄涉及資料庫存取權的事件。|  
+|一般|「詳細資訊」|記錄涉及下列項目之存取權的事件：<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 網頁<br /><br /> 報表檢視器 HTTP 處理常式<br /><br /> 報表存取 (.rdl 檔)<br /><br /> 資料來源 (.rsds 檔)<br /><br /> SharePoint 網站的 URL (.smdl 檔)|  
 |Office Server 一般|Exception|記錄登入失敗。|  
-|拓撲|[詳細資訊]|記錄目前的使用者資訊。|  
-|Web 組件|[詳細資訊]|記錄涉及報表檢視器 Web 組件之存取權的事件。|  
+|拓撲|Verbose|記錄目前的使用者資訊。|  
+|Web 組件|「詳細資訊」|記錄涉及報表檢視器 Web 組件之存取權的事件。|  
   
 ##  <a name="bkmk_turnon"></a> 開啟和關閉 Reporting Services 類別目錄中的 Reporting Services 事件  
   

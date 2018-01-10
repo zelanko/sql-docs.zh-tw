@@ -8,18 +8,18 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 8339048088fd686b2b9065cad760179229901d9f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 24384ab29267e9b2b8a19bf2e44afdabf2ef21c2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>設定報表伺服器資料庫連接 (SSRS 組態管理員)
 
@@ -123,7 +123,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>設定多個報表伺服器使用同一個報表伺服器資料庫  
  您可以設定多個報表伺服器，使用同一個報表伺服器資料庫。 這個部署組態稱為向外延展部署。 如果您想要在伺服器叢集中執行多部報表伺服器，此組態為必要條件。 但是，如果您想要分割服務應用程式，或是測試新報表伺服器執行個體的安裝和設定，將它與現有的報表伺服器安裝做比較，也可以使用這個組態。 如需詳細資訊，請參閱[設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [建立報表伺服器資料庫](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
 [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   

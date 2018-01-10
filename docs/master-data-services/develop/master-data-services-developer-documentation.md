@@ -8,7 +8,7 @@ ms.service:
 ms.component: develop
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf661093a0c0851bb0c8663251bf56f273038013
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76dd2b0dd77061e029dc5b7092a21d484ac7f7ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 開發人員文件
   尋找有關如何撰寫程式碼以自訂您和您的使用者與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 互動之方式的資訊。 了解如何：  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="web-server-namespaces"></a>Web 伺服器命名空間  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 會將一組組件安裝在 Web 伺服器電腦上。 這些組件包含可用於進階案例的命名空間，這些案例會自訂 Web 伺服器電腦的行為。 下表描述這些命名空間。  
   
-|命名空間|Description|  
+|命名空間|描述|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|包含的類別可用來從模型建立部署封裝以及將封裝部署到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。|  
 |<xref:Microsoft.MasterDataServices.Services>|包含的類別可接收和處理透過 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式對 Web 伺服器電腦所做的 Web 服務作業。|  

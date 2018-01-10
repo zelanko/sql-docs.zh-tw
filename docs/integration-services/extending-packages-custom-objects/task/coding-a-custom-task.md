@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9c15c407c7fae442d7d96b6679d177e864aa632
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fea3020fe77c6f5ac3f69f489a4ab1f0c4af8ccb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coding-a-custom-task"></a>撰寫自訂工作的程式碼
   建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基底類別的類別，並將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 屬性 (attribute) 套用到類別之後，必須覆寫基底類別的屬性 (properties) 與方法的實作，才可提供自訂功能。  
@@ -170,13 +170,13 @@ End Class
   
  下表列出 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法中提供給工作的參數。  
   
-|參數|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|包含可供工作使用的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件集合。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|包含工作可用的變數。 工作會透過 VariableDispenser 來使用變數，不會直接使用變數。 變數分配程式會鎖定和解除鎖定變數，並防止死結或是覆寫。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|包含工作向執行階段引擎引發事件所呼叫的方法。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|包含工作將項目寫入事件記錄檔所使用的方法和屬性。|  
-|物件|包含容器所屬的交易物件 (如果有的話)。 這個值會當做參數傳遞至 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 物件的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 方法。|  
+|Object|包含容器所屬的交易物件 (如果有的話)。 這個值會當做參數傳遞至 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 物件的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 方法。|  
   
 ### <a name="providing-execution-feedback"></a>提供執行回饋  
  工作會在 **try/catch** 區塊中包裝其程式碼，以防止對執行階段引擎引發例外狀況。 這可確保封裝完成執行並且不會意外停止。 不過，執行階段引擎有提供其他機制，以處理可能在工作執行期間發生的錯誤狀況。 這些機制包括公佈錯誤與警告訊息、從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 結構傳回值、公佈訊息、傳回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 值，以及透過 <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A> 屬性揭露工作執行結果的資訊。  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4abee11e2e258561f3b5db40af11b057b8061588
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 64ca7e19f9f9246bf5b5fd130244fe8b29715d19
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---union-function"></a>報表產生器函式 - Union 函式
   傳回運算式所指定之所有非 Null 數值的聯集 (在給定範圍中評估)。  
@@ -51,7 +49,7 @@ Union(expression, scope, recursive)
 ## <a name="return"></a>傳回  
  根據運算式類型傳回空間物件 ( **SqlGeometry** 或 **SqlGeography**)。 如需 **SqlGeometry** 和 **SqlGeography** 空間資料類型的詳細資訊，請參閱 [空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  運算式中指定的資料集必須具有相同的資料類型。  
   
  *scope* 的值必須是字串常數，而且不得為運算式。 如果是未指定其他彙總的外部彙總， *scope* 必須參考目前的範圍或是包含的範圍。 不支援資料集範圍。 如果是彙總的彙總，巢狀彙總可以指定子範圍。  

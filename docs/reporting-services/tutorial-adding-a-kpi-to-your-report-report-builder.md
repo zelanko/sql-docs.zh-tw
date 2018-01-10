@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e3e6194d510371b5a7aed8cad4f2efe5d188687
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c0e21bcd1d4695aaf7a55891c7b6d3c9231cdd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 加入至報表 (報表產生器)
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教學課程中，您會將關鍵效能指標 (KPI) 新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表。  
@@ -58,11 +58,11 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 4.  在 **[選擇資料集]** 頁面上，按一下 **[建立資料集]**。  
   
-5.  按一下 **[下一步]**。  
+5.  按 [下一步] 。  
   
 6.  在 [選擇與資料來源的連線] 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需詳細資訊，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-7.  按一下 **[下一步]**。  
+7.  按 [下一步] 。  
   
 8.  在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]**。  
   
@@ -106,7 +106,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 10. 在查詢設計工具的工具列上，按一下 [執行](**!**)。
 
-11. 按一下 **[下一步]**。  
+11. 按 [下一步] 。  
   
 ## <a name="CompleteWizard"></a>2.在精靈中組織資料並選擇配置  
 [資料表或矩陣精靈] 提供用於顯示資料的起始設計。 精靈中的預覽窗格可協助您在完成資料表或矩陣設計之前，先視覺化群組資料的結果。  
@@ -129,7 +129,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
     步驟 4 和 5 會依日期組織欄位的值，然後再依該日期的所有銷售進行組織。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
     當您執行報表時，資料表會顯示每個日期、每個日期的所有訂單，以及每個訂單的所有產品、數量和銷售總額。  
   
@@ -141,7 +141,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
     在本教學課程中，您建立的報表不會使用向下鑽研功能，此功能可讓使用者展開父群組階層，以顯示子群組資料列和詳細資料列。  
   
-10. 按一下 **[下一步]**。  
+10. 按 [下一步] 。  
   
 11. 按一下 **[完成]**。  
   
@@ -238,7 +238,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 10. 在 [線性指標屬性] 對話方塊 > [指標選項] 索引標籤 > [指標類型] 中，確定已選取 [橫條]。 
  
-11. 按一下 **[確定]**。  
+11. 按一下 [確定] 。  
   
 12. 以滑鼠右鍵按一下量測計中的標尺，然後按一下 [標尺屬性]。  
   
@@ -249,7 +249,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 
 14. 在 [標籤] 索引標籤上，核取 [隱藏標尺標籤]。
 
-15. 按一下 **[確定]**。
+15. 按一下 [確定] 。
   
 14. 將資料表內部的量測計拖曳至「線性 KPI」資料行中的第二個空白儲存格；具體位置為顯示 `Subcategory` 欄位小計銷售額的資料列，以及您已新增背景色彩公式的欄位旁邊。  
   
@@ -291,7 +291,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
     在此報表中，您也可以變更子類別小計資料格中放置之指標的範圍，以同步處理 [SalesDate] 欄位。  
   
-11. 按一下 **[確定]**。
+11. 按一下 [確定] 。
 
 11. 按一下 **[執行]** 預覽報表。  
 
@@ -344,7 +344,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 2.  按一下 **[儲存]**。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 您已成功完成「將 KPI 加入至報表」教學課程。 如需詳細資訊，請參閱：
 *  [量測計](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [指標](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

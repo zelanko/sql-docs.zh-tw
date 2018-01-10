@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef5d6f5c0abbe09505de7608ec18d309a112d0c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7dedffd365d48a18f896815660585c5b602a5688
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的資料點 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中，資料點是圖表上最小的個別實體。 在非形狀圖上，資料點的表示取決於其圖表類型。 例如，線條數列由一個或多個已連接的資料點所組成。 在形狀圖上，資料點會以加入到整個圖表的個別配量或區段表示。 例如，在圓形圖上，每一塊都是一個資料點。 如需詳細資訊，請參閱 [圖表類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
@@ -66,23 +64,23 @@ ms.lasthandoff: 12/05/2017
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>為資料點標籤、工具提示和圖例文字加入關鍵字  
  您可以使用區分大小寫的圖表專用關鍵字來表示存在於圖表中的項目。 這些關鍵字僅適用於工具提示、自訂圖例文字與資料點標籤屬性。 在許多情況下，圖表關鍵字擁有相等的簡單運算式，但是關鍵字輸入時更快、更容易。 下列是圖表關鍵字的清單。  
   
-|圖表關鍵字|說明|適用於圖表類型|相等簡單運算式的範例|  
+|圖表關鍵字|描述|適用於圖表類型|相等簡單運算式的範例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|資料點的 Y 值。|全部|`=Fields!MyDataField.Value`|  
+|#VALY|資料點的 Y 值。|All|`=Fields!MyDataField.Value`|  
 |#VALY2|資料點的 Y 值 #2。|範圍圖、泡泡圖|無|  
 |#VALY3|資料點的 Y 值 #3。|股票圖、K 線圖|無|  
 |#VALY4|資料點的 Y 值 #4。|股票圖、K 線圖|無|  
-|#SERIESNAME|數列名稱。|全部|無|  
-|#LABEL|資料點標籤。|全部|無|  
+|#SERIESNAME|數列名稱。|All|無|  
+|#LABEL|資料點標籤。|All|無|  
 |#AXISLABEL|軸資料點標籤。|形狀圖|`=Fields!MyDataField.Value`|  
-|#INDEX|資料點索引。|全部|無|  
-|#PERCENT|資料點 Y 值的百分比。|全部|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|數列中所有 Y 值的總計。|全部|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|對應到圖例項目文字的文字。|全部|無|  
-|#AVG|數列中所有 Y 值的平均值。|全部|`=Avg(Fields!MyDataField.Value)`|  
+|#INDEX|資料點索引。|All|無|  
+|#PERCENT|資料點 Y 值的百分比。|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|數列中所有 Y 值的總計。|All|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|對應到圖例項目文字的文字。|All|無|  
+|#AVG|數列中所有 Y 值的平均值。|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|數列中所有 Y 值的最小值。|全部|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|數列中所有 Y 值的最大值。|全部|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|數列中所有 Y 值的第一個。|全部|`=First(Fields!MyDataField.Value)`|  
+|#MAX|數列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|數列中所有 Y 值的第一個。|All|`=First(Fields!MyDataField.Value)`|  
   
  若要格式化關鍵字，請以括號括住 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 例如，若要將工具提示中資料點的值指定為包含兩位小數的數字，請以大括弧包含格式字串 "N2"，例如 "#VALY{N2}" 表示數列的 **ToolTip** 屬性。 如需有關 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](http://go.microsoft.com/fwlink/?LinkId=112024) ＞。 如需在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中將數字格式化的詳細資訊，請參閱[將數字和日期格式化 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
