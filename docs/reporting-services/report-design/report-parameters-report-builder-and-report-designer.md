@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,13 +22,13 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 caps.latest.revision: "41"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2daf7d7d92e9e0fe3163a06a08d85f5710a8606f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d6f3f09da04a449f074b02375f5b95a396d359e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
   本主題說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表參數的一般用法、您可以設定的屬性，以及其他資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 報表參數可以使用於您在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 和報表設計師中建立的分頁報表中，也可以使用於您在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]中建立的行動報表。 深入了解 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  
@@ -147,9 +145,9 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_Report_Parameters"></a> 報表參數屬性  
  您可以使用 [報表屬性] 對話方塊來變更報表參數屬性。 下表摘要說明您可以針對每個參數設定的屬性：  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
-|名稱|輸入區分大小寫的參數名稱。 此名稱必須以字母開頭，可以包含字母、數字和底線 (_)。 名稱不能有空格。 若為自動產生的參數，此名稱會符合資料集查詢中的參數。 根據預設，手動建立的參數與 ReportParameter1 類似。|  
+|[屬性]|輸入區分大小寫的參數名稱。 此名稱必須以字母開頭，可以包含字母、數字和底線 (_)。 名稱不能有空格。 若為自動產生的參數，此名稱會符合資料集查詢中的參數。 根據預設，手動建立的參數與 ReportParameter1 類似。|  
 |提示|在報表檢視器工具列上顯示於參數旁邊的文字。|  
 |資料類型|報表參數的資料類型必須是下列其中一種：<br /><br /> **布林**。 使用者會從選項按鈕中選取 True 或 False。<br /><br /> **日期時間**： 使用者會從日曆控制項中選取日期。<br /><br /> **整數**： 使用者會在文字方塊中輸入值。<br /><br /> **浮點數**： 使用者會在文字方塊中輸入值。<br /><br /> **文字**： 使用者會在文字方塊中輸入值。<br /><br /> 請注意，針對某個參數定義了可用的值之後，使用者就可以從下拉式清單中選擇值，即使資料類型是 **DateTime**也一樣。<br /><br /> 如需有關報表資料類型的詳細資訊，請參閱＜ [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)＞。|  
 |允許空白值|如果參數值可為空字串或空白，則選取此選項。<br /><br /> 如果您為參數指定有效值，而且希望空白值是其中一個有效值，則必須將它納入做為您指定的其中一個有效值。 選取此選項並不會自動將空白納入做為可用的值。|  

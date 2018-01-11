@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 403303e6820196353b8365975d83ed8368d8e372
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 00bc203ff747d93febf4ac625fcc261b497bc3ff
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱是在特定時間，或是為了回應某個事件時，以您指定的檔案格式所傳遞之報表組態。 例如，在每個星期三將 MonthlySales.rdl 報表以 Microsoft Word 文件儲存至檔案共用。 訂閱可用於排程及自動化報表的傳遞，並可搭配一組特定的報表參數值。  
@@ -88,7 +86,7 @@ ms.lasthandoff: 12/05/2017
   
  下表說明常見的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱案例。  
   
-|狀況|說明|  
+|狀況|描述|  
 |--------------|-----------------|  
 |電子郵件報表|給個別使用者和群組的電子郵件報表。 建立訂閱並指定群組別名或電子郵件別名，以接收您要散發的報表。 你可以讓 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在執行階段決定訂閱資料。 如果您要將相同的報表傳送至成員清單不斷變更的群組，可以使用查詢在執行階段衍生訂閱清單。|  
 |離線檢視報表|使用者可為訂閱輸出選取下列其中一種格式：<br /><br /> -   包含報表資料的 XML 檔<br />-   CSV (逗號分隔)<br />-   PDF<br />-   MHTML (網頁封存)<br />-   Microsoft Excel<br />-   TIFF 檔案<br />-   Microsoft Word<br /><br /> 您要封存的報表可以直接傳送至每晚排程備份的共用資料夾。 在瀏覽器中需要花較長時間載入的大型報表可以採用能夠在桌面應用程式中檢視的格式傳送至共用資料夾。|  
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_subscription_requirements"></a> 訂閱需求  
  在建立對報表的訂閱之前，必須符合下列必要條件：  
   
-|需求|說明|  
+|需求|描述|  
 |-----------------|-----------------|  
 |Permissions|您必須擁有報表存取權。 在訂閱報表之前，必須擁有檢視報表的權限。<br /><br /> 對於原生模式報表伺服器，下列角色指派會影響訂閱︰<br /><br /> -   「管理個別訂閱」工作可以讓使用者建立、修改及刪除特定報表的訂閱。 在預先定義的角色中，這項工作屬於瀏覽器和報表產生器角色的一部分。 包含這個工作的角色指派，允許使用者只管理自己所建立的訂閱。<br />-   「管理所有訂閱」工作可以讓使用者存取和修改所有的訂閱。 要建立資料驅動訂閱需要這個工作。 在預先定義的角色中，只有內容管理員角色包含這項工作。|  
 |預存認證|若要建立訂閱，報表必須使用預存認證或不使用認證，才能在執行階段擷取資料。 您無法訂閱設定為使用目前使用者之模擬或委派認證來連接至外部資料來源的報表。 預存認證可以是 Windows 帳戶或資料庫使用者帳戶。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必須擁有檢視報表和建立個別訂閱的權限。 報表伺服器必須啟用**[排程的事件和報表傳遞]** 。 如需詳細資訊，請參閱 [old_建立及管理原生模式報表伺服器的訂閱](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)。|  
@@ -120,12 +118,12 @@ ms.lasthandoff: 12/05/2017
   
  使用者建立訂閱時，可以選擇其中一個可用的傳遞延伸模組，以決定如何傳遞報表。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含下列傳遞延伸模組。  
   
-|傳遞延伸模組|說明|  
+|傳遞延伸模組|描述|  
 |------------------------|-----------------|  
 |Windows 檔案共用|將報表當做靜態應用程式檔案傳遞至可在網路上存取的共用資料夾。|  
 |電子郵件|將通知或報表當做電子郵件附件或 URL 連結傳遞。|  
 |SharePoint 文件庫|將報表當做靜態應用程式檔案傳遞至可從 SharePoint 網站存取的 SharePoint 文件庫。 此網站必須與以 SharePoint 整合模式執行的報表伺服器整合。|  
-|Null|Null 傳遞提供者是非常特殊的傳遞延伸模組，可用來將準備好檢視的參數化報表預先載入快取中。這個方法不適用於個別訂閱中的使用者。 資料驅動訂閱中的管理員會使用 Null 傳遞來預先載入快取，以便改善報表伺服器的效能。|  
+|[Null]|Null 傳遞提供者是非常特殊的傳遞延伸模組，可用來將準備好檢視的參數化報表預先載入快取中。這個方法不適用於個別訂閱中的使用者。 資料驅動訂閱中的管理員會使用 Null 傳遞來預先載入快取，以便改善報表伺服器的效能。|  
   
 > [!NOTE]  
 >  報表傳遞是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 架構的可延伸部分。 協力廠商可以建立自訂傳遞延伸模組，將報表傳送到其他位置或裝置。 如需有關自訂傳遞延伸模組的詳細資訊，請參閱＜ [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)＞。  

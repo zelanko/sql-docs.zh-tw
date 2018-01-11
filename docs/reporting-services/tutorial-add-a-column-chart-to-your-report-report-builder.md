@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f3fccc743eba7809d368771c5e5d942ea954f25
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d7c5c99922e82652ecbd4d7ad2f526f7f4c3d89c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教學課程：將直條圖加入至報表 (報表產生器)
 在本教學課程中，您將建立包含直條圖的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，而直條圖是依據類別目錄群組，將數列顯示為一組垂直線。 
@@ -94,20 +94,20 @@ ms.lasthandoff: 12/05/2017
   
 8.  (選擇性) 按一下 [執行] 按鈕 (**!**) 來查看您圖表所依據的資料。  
   
-9. 按一下 **[下一步]**。  
+9. 按 [下一步] 。  
   
 ## <a name="ChartType"></a>2.選擇圖表類型  
 您可以從數個預先定義的圖表類型中進行選擇，然後在完成精靈之後修改圖表。  
   
 ### <a name="to-add-a-column-chart"></a>加入直條圖  
   
-1.  在 [選擇圖表類型] 頁面上，直條圖是預設圖表類型。 按一下 **[下一步]**。  
+1.  在 [選擇圖表類型] 頁面上，直條圖是預設圖表類型。 按 [下一步] 。  
   
 2.  在 [排列圖表欄位] 頁面上，將 [SalesDate] 欄位拖曳至 [類別目錄]。 類別目錄會顯示在水平軸上。  
   
 3.  將 [Sales] 欄位拖曳至 [值]。 [值] 方塊會顯示 [Sum(Sales)]，因為系統會針對每個日期彙總銷售總計值的總和。 值會顯示在垂直軸上。  
   
-4.  按一下 **[下一步]**。  
+4.  按 [下一步] 。  
  
 6.  按一下 **[完成]**。  
   
@@ -306,7 +306,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  按一下 **[儲存]**。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 您已成功完成「將直條圖加入至報表」教學課程。 若要深入了解圖表，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 和[走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
