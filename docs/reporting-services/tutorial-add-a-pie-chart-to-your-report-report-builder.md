@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 330e6807dc0e3ff1715b030bdb4ddeaed7e8a94f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 68b4e3536833e23be59db3195f5903bfccbc5539
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教學課程：將圓形圖加入至報表 (報表產生器)
 在本教學課程中，您會在 Reporting Services 分頁報表中建立圓形圖。 您將新增百分比，並將小配量合併為單一配量。
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  (選擇性) 按一下 [執行] 按鈕 (**!**) 來查看您報表所依據的資料。  
   
-9. 按一下 **[下一步]**。  
+9. 按 [下一步] 。  
   
 ## <a name="ChartType"></a>2.選擇圖表類型  
 您可以選擇各種不同預先定義的圖表類型。  
@@ -220,7 +220,7 @@ ms.lasthandoff: 12/05/2017
   
 您的報表就會儲存在報表伺服器上。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 您已成功完成「將圓形圖加入至報表」教學課程。 若要深入了解圖表，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 和[走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  

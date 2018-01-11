@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 caps.latest.revision: "26"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9f2208649450d4b9ce385da7b4653522756a575b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 48e36e0ad8fd7e46a9ffd40b476e651b7fe5876c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 方法 - GenerateDatabaseRightsScript
   產生可用來將報表伺服器資料庫和其他資料庫 (執行報表伺服器所需) 之權限授與使用者的 SQL 指令碼。 呼叫者預期要連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫伺服器並執行此指令碼。  
@@ -68,7 +66,7 @@ out Int32 HRESULT);
 ## <a name="return-value"></a>傳回值  
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。 非零值則表示已發生錯誤。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果 *DatabaseName* 是空的，即忽略 *IsRemote* ，而且報表伺服器組態檔值會用於資料庫名稱。  
   
  如果 *IsWindowsUser* 設為 **true**，則 *UserName* 的格式應該為 \<網域>\\<使用者名稱\>。  
@@ -81,10 +79,10 @@ out Int32 HRESULT);
   
 |已轉譯的帳戶 / SID|一般名稱|遠端名稱|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|本機系統|\<網域>\\<電腦名稱\>$|  
-|.\LocalSystem|本機系統|\<網域>\\<電腦名稱\>$|  
-|ComputerName\LocalSystem|本機系統|\<網域>\\<電腦名稱\>$|  
-|LocalSystem|本機系統|\<網域>\\<電腦名稱\>$|  
+|(S-1-5-18)|[本機系統]|\<網域>\\<電腦名稱\>$|  
+|.\LocalSystem|[本機系統]|\<網域>\\<電腦名稱\>$|  
+|ComputerName\LocalSystem|[本機系統]|\<網域>\\<電腦名稱\>$|  
+|LocalSystem|[本機系統]|\<網域>\\<電腦名稱\>$|  
 |(S-1-5-20)|網路服務|\<網域>\\<電腦名稱\>$|  
 |NT AUTHORITY\NetworkService|網路服務|\<網域>\\<電腦名稱\>$|  
 |(S-1-5-19)|本機服務|錯誤 – 請參閱下面。|  

@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4b993a3e2c45709e1095bfeb54919f5261bf6a12
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8c6a475c37a953394fa51023dccdd9d80e5cb32
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
 
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/05/2017
 **SnapshotCompression**  
 定義快照集的壓縮方式。 預設值是 **SQL**秒。 有效值如下：
 
-|值|Description|
+|值|描述|
 |---------|---------|
 |**SQL**|快照集在儲存於報表伺服器資料庫時會進行壓縮。 這是目前的行為。|
 |**無**|系統不會壓縮快照集。|
@@ -93,7 +91,7 @@ ms.lasthandoff: 12/05/2017
 **EnableIntegratedSecurity**  
 決定 Windows 整合式安全性是否支援報表資料來源連接。 預設值為 **True**。 有效值如下：
 
-|值|Description|
+|值|描述|
 |---------|---------|
 |**True**|已啟用 Windows 整合式安全性。|
 |**False**|未啟用 Windows 整合式安全性。 設定為使用 Windows 整合式安全性的報表資料來源不會執行。|
@@ -106,7 +104,7 @@ ms.lasthandoff: 12/05/2017
 關閉此選項可減少惡意使用者利用 LoadReportDefinition 要求讓報表伺服器超過負載，藉以啟動阻斷服務攻擊的威脅。  
 
 **EnableRemoteErrors**  
-包含外部錯誤資訊 (例如，有關報表資料來源的錯誤資訊) 以及針對從遠端電腦要求報表之使用者傳回的錯誤訊息。 有效值為 **true** 和 **false**。 預設值是 **false**秒。 如需詳細資訊，請參閱[啟用遠端錯誤 &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)。  
+包含外部錯誤資訊 (例如，有關報表資料來源的錯誤資訊) 以及針對從遠端電腦要求報表之使用者傳回的錯誤訊息。 有效值為 **true** 和 **false**。 預設值為 **false**。 如需詳細資訊，請參閱[啟用遠端錯誤 &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)。  
 
 **EnableReportDesignClientDownload**  
 指定是否可從報表伺服器下載報表產生器安裝套件。 如果您清除此設定，報表產生器的 URL 將會失效。 如需詳細資訊，請參閱 [設定報表產生器的存取](../../reporting-services/report-server/configure-report-builder-access.md)。  
@@ -130,7 +128,7 @@ PowerBI ReportServer 應該啟用從 PowerBI 視覺效果匯出資料。 值為 
 指出當使用者使用報表伺服器來測試資料來源連接時，是否要將詳細的錯誤訊息傳送至用戶端電腦。 預設值為 **true**。 如果此選項設定為 **false**，就只會傳送一般錯誤訊息。
 
 **AccessControlAllowCredentials**  
-指出 'credentials' 旗標設為 true 時是否可以公開用戶端要求的回應。 預設值是 **false**秒。
+指出 'credentials' 旗標設為 true 時是否可以公開用戶端要求的回應。 預設值為 **false**。
 
 **AccessControlAllowHeaders** 伺服器在用戶端提出要求時允許的標題清單 (以逗號分隔)。 這個屬性可以是空字串，而指定 * 將允許所有標題。
 

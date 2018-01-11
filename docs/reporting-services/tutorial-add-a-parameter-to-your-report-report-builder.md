@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c8de922f602a743fb0c2cdf6a247355f3794ef01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d8b0e4051da1cbcfc2ae641c2eb99102a13ac45
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 (報表產生器)
 在本教學課程中，您可以將參數新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，讓報表讀者可以篩選報表資料中的一或多個值。 
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/05/2017
   
 7.  在 [選擇與資料來源的連接] 頁面上，選取清單中的資料來源，或瀏覽至報表伺服器來選取資料來源。 選取類型為 [SQL Server] 的任何資料來源。  
       
-8.  按一下 **[下一步]**。  
+8.  按 [下一步] 。  
 
     您可能需要輸入您的認證。    
      
@@ -95,7 +95,7 @@ ms.lasthandoff: 12/05/2017
   
     此查詢並不包含查詢參數。 您稍後將在本教學課程中加入參數。   
   
-12. 按一下 **[下一步]**。  
+12. 按 [下一步] 。  
   
 ## <a name="CompleteWizard"></a>2.在精靈中組織資料並選擇配置  
 此精靈提供用於顯示資料的起始設計。 精靈中的預覽窗格可協助您在完成資料表或矩陣設計之前，先視覺化群組資料的結果。  
@@ -110,13 +110,13 @@ ms.lasthandoff: 12/05/2017
   
     現在，您已經按照子類別目錄的分組，以資料列組織銷售量的值，即一個商店一個資料行。  
   
-4.  按一下 **[下一步]**。  
+4.  按 [下一步] 。  
   
 5.  在 [選擇配置] 頁面的 [選項] 下方，確定已選取 [顯示小計和總計]。  
   
     當您執行報表時，最後一個資料行將會顯示所有商店之每個子類別的總數量，而最後一個資料列則會顯示每家商店之所有子類別的總數量。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
 8.  按一下 **[完成]**。  
   
@@ -505,7 +505,7 @@ ms.lasthandoff: 12/05/2017
   
 報表就會儲存至報表伺服器。 您所連接的報表伺服器會顯示在視窗底部的狀態列中。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 以上總結如何將參數加入至報表的逐步解說。 若要深入了解參數，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 ## <a name="see-also"></a>另請參閱  

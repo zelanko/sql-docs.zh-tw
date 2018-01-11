@@ -8,24 +8,22 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords: sql13.rpt.rptdesigner.projectpropertypages.general.f1
 helpviewer_keywords: Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: "35"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e38dcb5203dc4d09a24f53ec380f5af724b1bde
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e6b37d9f8cd174be9cd70339217e6dba4c7cffc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
 
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/05/2017
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
 ## <a name="options"></a>選項。  
- **組態**  
+ **Configuration**  
  選取要編輯的組態。 一開始會有下列的組態可用： **Debug**、 **DebugLocal**和 **Release**。 使用中組態會先出現，例如 **Active(Debug)**。  
   
  若要同時查看多個組態的屬性，請選取 **[所有組態]** 或 **[多重組態]**。  
@@ -88,7 +86,7 @@ ms.lasthandoff: 12/05/2017
 + `http:\\<servername\<site>` 
 + `http:\\<servername>\<site>\<subsite>`。  
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [發行報表](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [將報表發行到 SharePoint 文件庫](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   

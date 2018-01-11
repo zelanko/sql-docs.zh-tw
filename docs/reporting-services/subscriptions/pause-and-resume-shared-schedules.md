@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +21,17 @@ helpviewer_keywords:
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c0f8e6b85da6ec41e1c3d24f223194b17c56ea53
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aff3fe5efdee7db2dfb0ac17f8d797badec97da9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="pause-and-resume-shared-schedules"></a>暫停及繼續共用排程
+# <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
   您可以暫停並繼續使用中的共用排程。 暫停共用排程提供暫時凍結用於觸發報表處理與訂閱排程的方法。 只有共用排程可以暫停並繼續。 您無法暫停報表特定排程。  
   
  您不能暫停和繼續已在進行中的報表處理。 您只能暫停和繼續 SQL Server Agent 服務之排程佇列中的排程。 進行中的作業是在排程引擎的範圍之外。 如需詳細資訊，請參閱 [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)  

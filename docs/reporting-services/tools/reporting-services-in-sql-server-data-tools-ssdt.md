@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Business Intelligence Development Studio, Reporting Services in
@@ -18,13 +16,13 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: "76"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 836de752579bad530a6c0dacc766c7d3ed639873
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0192525485f994534c7996f5cbd5b9a53a56d15c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
 
@@ -288,7 +286,7 @@ ms.lasthandoff: 12/05/2017
   
 -   控制 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的視窗和模式：  
   
-    |說明|按鍵組合|  
+    |描述|按鍵組合|  
     |-----------------|---------------------|  
     |建立選取的專案|CTRL+SHIFT+B|  
     |顯示 [屬性] 視窗|F4|  
@@ -298,7 +296,7 @@ ms.lasthandoff: 12/05/2017
   
 -   控制報表設計介面上的項目：  
   
-    |說明|按鍵組合|  
+    |描述|按鍵組合|  
     |-----------------|---------------------|  
     |將焦點從某個報表項目移到下一個報表項目|TAB|  
     |移動選取的報表項目|方向鍵|  
@@ -312,7 +310,7 @@ ms.lasthandoff: 12/05/2017
     |在文字方塊中，選取從目前游標位置到運算式結尾的文字|CTRL+SHIFT+END|  
     |開啟選定報表項目的快速鍵功能表|較新鍵盤上的 SHIFT+F10+屬性鍵|
   
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [下載 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
 [方案總管](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   

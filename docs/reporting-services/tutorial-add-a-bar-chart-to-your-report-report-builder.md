@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6039892e8cdd711102c2c3f647b0a201723b0eef
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8d12b916eaa9ae355730e71a5564fb3d13b5740
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教學課程：將橫條圖加入至報表 (報表產生器)
 在本教學課程中，您會使用 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 中的精靈，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表中建立圓形圖。 接著新增篩選，並加強圖表。 
@@ -94,7 +94,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  (選擇性) 按一下 [執行] 按鈕 (**!**) 來查看您圖表所依據的資料。  
   
-9. 按一下 **[下一步]**。  
+9. 按 [下一步] 。  
   
 ## <a name="ChartType"></a>2.建立橫條圖  
  
@@ -110,7 +110,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  將 [SalesYear2014] 拖曳至 [SalesYear2015] 下的 [值] 窗格。 SalesYear2014 代表每位銷售人員 2014 年的銷售量。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
 7.  按一下 **[完成]**。  
   
@@ -302,7 +302,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  按一下 **[儲存]**。   
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 您已順利完成「將橫條圖加入至報表」教學課程。 若要深入了解圖表，請參閱 [圖表](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 和 [橫條圖](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  

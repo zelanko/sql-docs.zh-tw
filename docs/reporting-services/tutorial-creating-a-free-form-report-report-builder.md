@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33d2dfa08fcc9b3cbf41a80642e9d67bab8d2b3f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 76a43f57cfd8c5712928dc8ee408cb517f7dceaf
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 (報表產生器)
 在本教學課程中，您會建立分頁報表，作為電子報。 每個頁面會顯示靜態文字、摘要的視覺效果，以及詳細的範例銷售資料。
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  按一下 [認證] ，並輸入連接到 SQL Server Database Engine 執行個體所需的認證。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
 ### <a name="to-create-a-new-dataset"></a>建立新資料集  
   
@@ -304,13 +304,13 @@ ms.lasthandoff: 12/05/2017
   
 5.  針對 SalesDate、Quantity 和 Sales 重複步驟 3。 將 SalesDate 放到 Product 底下、Quantity 放到 SalesDate 底下、Sales 放到 Quantity 底下。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
 7.  在 [選擇配置]  頁面上，檢視資料表的配置。  
   
     資料表很簡單︰五個資料行，且沒有資料列或資料行群組。 由於沒有群組，與群組相關的配置選項無法使用。 稍後在本教學課程中，您將要手動更新資料表使其包括總計。  
   
-8.  按一下 **[下一步]**。  
+8.  按 [下一步] 。  
   
 9. 按一下 **[完成]**。  
   
@@ -506,7 +506,7 @@ ms.lasthandoff: 12/05/2017
   
 
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 以上總結如何建立自由格式報表的教學課程。  
   
 如需清單的詳細資訊，請參閱： 

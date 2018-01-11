@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - performance [Reporting Services]
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: af59aeaede83bad3d2b2d0acbbc7b6fd272c65cb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: acc06da22cc03530e3a7ddc05f8825eaadfd8f6a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>效能計數器 MSRS 2011 SharePoint 模式效能物件
   本主題描述屬於 **SharePoint 模式部署一部分之** MSRS 2011 Web 服務 SharePoint 模式 **和** MSRS 2011 Windows 服務 SharePoint 模式 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 效能物件的效能計數器。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
   
  下表將列出 **MSRS 2011 Web 服務 SharePoint 模式** 效能物件所包含的計數器。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |**Active Sessions**|使用中的工作階段數目。 此計數器提供從報表執行產生之所有瀏覽器工作階段的累積計數，不管這些工作階段是否仍然使用中。<br /><br /> 隨著工作階段記錄移除，此計數器會遞減。 根據預設，工作階段會在沒有活動的十分鐘後移除。|  
 |**Cache Hits/Sec**|快取報表每秒的要求數目。 這些要求是針對重新轉譯的報表，而不是針對直接從快取處理的報表 (請參閱本主題稍後的 **Total Cache Hits** )。|  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/05/2017
 |**Total Cache Hits (Semantic Models)**|服務啟動之後，來自快取之模型要求的總數。 每當 ASP.NET 停止報表伺服器 Web 服務時，此計數器就會重設。|  
 |**Total Cache Misses**|服務啟動之後，無法從快取傳回報表的總次數。 每當 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。 您可以使用此計數器來判斷磁碟空間與記憶體是否足夠。|  
 |**Total Cache Misses (Semantic Models)**|服務啟動之後，無法從快取傳回模型的總次數。 每當 ASP.NET 停止報表伺服器 Web 服務時，此計數器就會重設。 您可以使用此計數器來判斷磁碟空間與記憶體是否足夠。|  
-|**Total Memory Cache Hits**|服務啟動之後，從記憶體中快取傳回之快取報表的總數。 每當 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。 *「記憶體內部快取」* (In-Memory Cache) 是快取的一部分，它將報表儲存在 CPU 記憶體中。 使用記憶體中快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以取得快取內容。|  
+|**Total Memory Cache Hits**|服務啟動之後，從記憶體中快取傳回之快取報表的總數。 每當 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。 *「記憶體內部快取」* (In-Memory Cache) 是快取的一部分，它將報表儲存在 CPU 記憶體中。 使用記憶體內部快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以取得快取內容。|  
 |**Total Memory Cache Misses**|啟動服務之後，針對記憶體中快取的遺漏總數。 每當 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。|  
 |**Total Processing Failures**|報表伺服器 Web 服務要求處理中的錯誤數。|  
 |**Total Rejected Threads**|拒絕非同步處理之執行緒，以及後續在同一執行緒中當成同步處理之執行緒的總數。 每一個資料來源在一個執行緒上處理。 如果執行緒的數量超出容量，就會拒絕執行緒的非同步處理，然後以序列方式處理。|  
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/05/2017
   
  下表將列出 **MSRS 2011 Windows 服務 SharePoint 模式** 效能物件所包含的計數器。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |**Active Sessions**|儲存在報表伺服器資料庫中之使用中工作階段的數目。 此計數器提供從報表訂閱產生之所有可使用瀏覽器工作階段的累積計數，不管這些工作階段是否仍然使用中。|  
 |**警示：事件佇列長度**||  

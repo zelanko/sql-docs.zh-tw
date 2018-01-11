@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ba7880d9cc6f316b7ce06b73dda896becd892797
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 52547af895d362214e6a33c69c29fe2cd2c3cb8a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 在此 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將使用入口網站來選取傳遞給收件者的報表。 您將定義的資料驅動訂閱將散發 **建立基本資料表報表 &#40;SSRS 教學課程&#41;** 教學課程中建立的 [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)報表。  在下面的步驟中，您將修改報表用來取得資料的資料來源連接資訊。 只有使用 **預存認證** 來存取報表資料來源的報表可以透過資料驅動訂閱散發。 自動報表處理需要預存認證。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/05/2017
 10. 按一下 **[儲存]**。
 11. 按一下 [取消]  
   
-11. 檢視報表以確認報表是以您指定的認證來執行。 報表。  
+11. 檢視報表以確認報表是以您指定的認證來執行。 執行個體時提供 SQL Server 登入。  
   
 ## <a name="bkmk_modify_dataset"></a>若要修改 AdventureWorksDataset  
  在下列步驟中，您將修改資料集，以使用參數來根據訂單號碼篩選資料集。
@@ -102,7 +102,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  選取 [允許 Null 值]。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
 7.  按一下 [預覽] 索引標籤來執行報表。 請注意，參數輸入方塊會出現在報表頂端。 您可以：  
   
@@ -118,13 +118,13 @@ ms.lasthandoff: 12/05/2017
   
 2.  在工具列上，按一下 **[建置]** ，然後按一下 **[部署教學課程]**。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 + 您已順利設定報表來利用預存認證取得資料，此資料可透過參數進行篩選。 
 + 在下一課，您將使用入口網站的 [資料驅動訂閱] 頁面來設定訂閱。 請參閱 [第 3 課：定義資料驅動訂閱](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [管理報表資料來源](../reporting-services/report-data/manage-report-data-sources.md)  
-[指定報表資料來源的認證及連接資訊](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+[指定報表資料來源的認證及連線資訊](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
 [建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
