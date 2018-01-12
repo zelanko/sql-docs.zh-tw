@@ -1,7 +1,7 @@
 # [概觀](json-data-sql-server.md)  
 # [在 SQL Server 中儲存 JSON 文件](store-json-documents-in-sql-tables.md)
-# [將 JSON 文件匯入 SQL Server](import-json-documents-into-sql-server.md)  
 # [索引 JSON 資料](index-json-data.md)  
+# [將 JSON 文件匯入 SQL Server](import-json-documents-into-sql-server.md)  
 # [使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)](format-query-results-as-json-with-for-json-sql-server.md)  
 ## [以 PATH 模式格式化巢狀的 JSON 輸出](format-nested-json-output-with-path-mode-sql-server.md)  
 ## [使用 AUTO 模式自動格式化 JSON 輸出](format-json-output-automatically-with-auto-mode-sql-server.md)  
