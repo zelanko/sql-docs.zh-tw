@@ -34,14 +34,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5501732e0551a1142ea5bf1a8bc48122aaff6a25
+ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT 的 INTO 子句 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT INTO 會在預設的檔案群組中建立新的資料表，然後將查詢的結果資料列插入其中。 若要檢視完整的 SELECT 語法，請參閱[SELECT &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 01/02/2018
  當選取清單包括計算資料行時，新資料表變數中對應的資料行並不是計算資料行。 新資料行中的值是執行 SELECT...INTO 時所計算的值。  
   
 ## <a name="logging-behavior"></a>記錄行為  
- SELECT...INTO 的記錄數量主要取決於資料庫目前使用的復原模式。 在簡單復原模式或大量記錄復原模式下，大量作業會進行最低限度記錄。 使用最低限度記錄，使用 選取... 陳述式可以比建立資料表，然後填入資料表的 INSERT 陳述式更有效率。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ SELECT...INTO 的記錄數量主要取決於資料庫目前使用的復原模式。 在簡單復原模式或大量記錄復原模式下，大量作業會進行最低限度記錄。 使用最低限度記錄，使用 選取... 陳述式可以比建立資料表，然後填入資料表的 INSERT 陳述式更有效率。 如需詳細資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要目的地資料庫中的 CREATE TABLE 權限。  
@@ -230,7 +230,7 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 建立新的資料表做為另一個資料表的複本並將其載入指定的檔案群組
-下列範例是做為另一個資料表的複本建立新的資料表，並將它載入到指定的檔案群組不同於使用者的預設檔案群組。
+下列範例會示範做為另一個資料表的複本建立新的資料表，並將它載入到指定的檔案群組不同於使用者的預設檔案群組。
 
  **適用於：**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
@@ -247,7 +247,7 @@ GO
 SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
 ```
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [精選的範例 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

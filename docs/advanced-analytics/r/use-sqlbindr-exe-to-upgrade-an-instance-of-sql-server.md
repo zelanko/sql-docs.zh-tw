@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 424e7d86a00901c22220d19e86b1bbced698d850
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 54e685e285f2040ec13b84aa7e0e4b020457560b
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>升級 SQL Server 執行個體中的機器學習元件
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 
 升級的機器學習服務元件的程序指**繫結**，因為它會變更為使用新的現代化軟體生命週期原則的 SQL Server 機器學習元件支援模型。 
 
-一般情況下，切換到新的授權模式可確保資料科學家可以一律使用最新版本的 R 或 Python。 如需現代的生命週期原則的術語的詳細資訊，請參閱[Microsoft R Server 的支援時間表](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)。
+一般情況下，切換到新的服務模型可確保資料科學家可以一律使用最新版本的 R 或 Python。 如需現代的生命週期原則的術語的詳細資訊，請參閱[Microsoft R Server 的支援時間表](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)。
 
 > [!NOTE]
 > 升級不會變更的 SQL Server 資料庫的支援模型並不會變更的 SQL Server 版本。
@@ -189,7 +189,7 @@ ms.lasthandoff: 01/08/2018
 
 ### <a name="parameters"></a>參數
 
-|[屬性]|描述|
+|名稱|Description|
 |------|------|
 |*list*| 顯示目前電腦上所有 SQL 資料庫執行個體識別碼的清單|
 |*bind*| 將指定的 SQL 資料庫執行個體升級到最新版 R Server，並確保執行個體自動取得 R Server 的未來升級|
