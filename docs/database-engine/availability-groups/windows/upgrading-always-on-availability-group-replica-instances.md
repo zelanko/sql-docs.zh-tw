@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
-ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
+ms.openlocfilehash: 76d8f9fd55eb9129f31dba4dcbea9799e09148da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/16/2017
 -   [安裝 SQL Server 2016 的硬體與軟體需求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
 
 > [!NOTE]  
->  不支援在相同的 AG 中混用 SQL Server 的版本。 若要使用可用性群組移轉至新的版本，則唯一支援的方法是 SQL Server 2016 Enterprise Edition 或更新版本中的分散式可用性群組。
+>  在就地升級複本的輪流升級之外，不支援在相同 AG 中混用 SQL Server 版本。 這表示較高版本的 SQL Server 無法作為新複本新增至現有的 AG。 例如，SQL Server 2017 複本無法新增至現有的 SQL Server 2016 AG。 若要使用可用性群組移轉至新版本的 SQL Server，唯一支援的方法是 SQL Server 2016 Enterprise Edition 或更新版本中的分散式可用性群組。
 
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>AlwaysOn 可用性群組的輪流升級最佳做法  
  當您執行伺服器升級或更新時，應該要觀察以下最佳作法，好讓停機時間及可用性群組的資料遺失情況降至最低：  

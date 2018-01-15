@@ -18,16 +18,16 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: aliceku
-ms.openlocfilehash: 0acfd9faa668d1e86cb82496bdd97dc6a0ec2bc8
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 186db9581a3404fe04e4a748d6df06c5899bf810
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell：使用您自己的 Azure Key Vault 金鑰來啟用透明資料加密
+# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell：使用您自己的 Azure Key Vault 金鑰來啟用透明資料加密 (預覽)
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-本使用說明指南逐步解說如何在 SQL Database 或資料倉儲上，使用 Azure Key Vault 的金鑰進行透明資料加密 (TDE) 。 若要深入了解支援自行管理金鑰 (BYOK) 的 TDE，請瀏覽 [TDE 讓您在 Azure SQL 中自行管理金鑰](transparent-data-encryption-byok-azure-sql.md)。 
+本使用說明指南逐步解說如何在 SQL Database 或資料倉儲上，使用 Azure Key Vault 的金鑰進行透明資料加密 (TDE) (預覽)。 若要深入了解支援攜帶您自己的金鑰 (BYOK) 的 TDE (預覽)，請瀏覽 [TDE 讓您在 Azure SQL 中攜帶您自己的金鑰](transparent-data-encryption-byok-azure-sql.md)。 
 
 ## <a name="prerequisites"></a>Prerequisites
 

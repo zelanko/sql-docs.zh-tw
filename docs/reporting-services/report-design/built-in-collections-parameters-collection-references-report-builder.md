@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4b5fa050cbb69944039c143f3140086851a68ab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 469b28cd43b2e5fd03063e0031b487a7959345e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>內建集合 - 參數集合參考 (報表產生器)
   報表參數是您可以從運算式參考的其中一個內建集合。 您可以在運算式中包含參數，以根據使用者所做的選擇來自訂報表資料及外觀。 可以針對提供 (*Fx*) 或 \<**運算式**> 選項的任何報表項目屬性或文字方塊屬性使用運算式。 您也可以用其他方法來使用運算式控制報表的內容及外觀。 如需詳細資訊，請參閱[運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="Single"></a> 在運算式中使用單一值參數  
  下表顯示當您在運算式中加入任何資料類型之單一值參數的參考時，所要使用的語法範例。  
   
-|範例|Description|  
+|範例|描述|  
 |-------------|-----------------|  
 |`=Parameters!` \<參數名稱> `.IsMultiValue`|傳回 **False**。<br /><br /> 檢查參數是否為多重值。 如果為 **True**，表示參數為多值，且為物件的集合。 如果為 **False**，表示參數為單一值，且為單一物件。|  
 |`=Parameters!` \<參數名稱> `.Count`|傳回整數值 1。 如果是單一值參數，此計數一定會是 1。|  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="Multi"></a> 在運算式中使用多重值參數  
  下表顯示當您在運算式中加入任何資料類型之多重值參數的參考時，所要使用的語法範例。  
   
-|範例|Description|  
+|範例|描述|  
 |-------------|-----------------|  
 |`=Parameters!` \<多值參數名稱> `.IsMultiValue`|傳回 **True** 或 **False**。<br /><br /> 檢查參數是否為多重值。 如果為 **True**，表示參數為多值，且為物件的集合。 如果為 **False**，表示參數為單一值，且為單一物件。|  
 |`=Parameters!` \<多值參數名稱> `.Count`|傳回整數值。<br /><br /> 參考值的數目。 如果是單一值參數，此計數一定會是 1。 如果是多重值參數，此計數是 0 或以上。|  

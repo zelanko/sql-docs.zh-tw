@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6e7fe6186be8bbf546f44d881528181a5e4b4979
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d485487e2256a8bfab98a30f179d749bfb583529
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
  >[!NOTE]
  >如需 Linux 上可用性群組的資訊，請參閱 [Linux 上 SQL Server 的 AlwaysOn 可用性群組](../../../linux/sql-server-linux-availability-group-overview.md)。 
 
- 在 HA 組態中，對於您建立的每個可用性群組，系統都會建立一個叢集角色。 WSFC 叢集會監視此角色，以評估主要複本的健全狀況。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的仲裁會以 WSFC 叢集中的所有節點為基礎，而不論給定叢集節點是否裝載任何可用性複本。 相較於資料庫鏡像，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 沒有見證角色。  
+ 在 HA 組態中，對於您建立的每個可用性群組，系統都會建立一個叢集角色。 WSFC 叢集會監視此角色，以評估主要複本的健全狀況。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的仲裁會以 WSFC 叢集中的所有節點為基礎，而不論給定叢集節點是否裝載任何可用性複本。 相較於資料庫鏡像， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]沒有見證角色。  
   
 > [!NOTE]  
 >  如需 WSFC 叢集的 SQL Server AlwaysOn 元件關聯性相關資訊，請參閱 [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
  ![具有五個複本的可用性群組](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "具有五個複本的可用性群組")  
   
 ##  <a name="AvDbs"></a> Availability Databases  
- 若要將資料庫加入可用性群組，該資料庫必須是存在於裝載主要複本之伺服器執行個體的線上讀寫資料庫。 當您加入資料庫時，該資料庫會加入可用性群組做為主要資料庫，同時仍然可以供用戶端使用。 在新主要資料庫的備份還原到裝載次要複本的伺服器執行個體 (使用 RESTORE WITH NORECOVERY) 之前，不會存在任何對應的次要資料庫。 新的次要資料庫在加入可用性群組之前，處於 RESTORING 狀態。 如需詳細資訊，請參閱[於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
+ 若要將資料庫加入可用性群組，該資料庫必須是存在於裝載主要複本之伺服器執行個體的線上讀寫資料庫。 當您加入資料庫時，該資料庫會加入可用性群組做為主要資料庫，同時仍然可以供用戶端使用。 在新主要資料庫的備份還原到裝載次要複本的伺服器執行個體 (使用 RESTORE WITH NORECOVERY) 之前，不會存在任何對應的次要資料庫。 新的次要資料庫在加入可用性群組之前，處於 RESTORING 狀態。 如需詳細資訊，請參閱 [於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
  加入時，會將次要資料庫置於 ONLINE 狀態，並起始對應主要資料庫的資料同步處理。 *「資料同步處理」* (Data Synchronization) 是將主要資料庫的變更重現在次要資料庫上的程序。 資料同步處理涉及主要資料庫將交易記錄檔記錄傳送到次要資料庫。  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="ClientConnections"></a> 用戶端連接  
  您可以建立可用性群組接聽程式，以便將用戶端連接提供給給定可用性群組的主要複本。 *「可用性群組接聽程式」* (Availability Group Listener) 會將連接至給定可用性群組的一組資源提供給適當可用性複本的直接用戶端連接。  
   
- 可用性群組接聽程式與當做虛擬網路名稱 (VNN)、一個或多個虛擬 IP 位址 (VIP)，以及 TCP 通訊埠編號的唯一 DNS 名稱相關聯。 如需詳細資訊，請參閱 [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)中心概念。  
+ 可用性群組接聽程式與當做虛擬網路名稱 (VNN)、一個或多個虛擬 IP 位址 (VIP)，以及 TCP 通訊埠編號的唯一 DNS 名稱相關聯。 如需詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
 > [!TIP]  
 >  如果可用性群組只有兩個可用性複本，而且未設定為允許以唯讀方式存取次要複本，則用戶端可以使用 [資料庫鏡像連接字串](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)連接到主要複本。 在您將資料庫從資料庫鏡像移轉到 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]之後，這個方法可能暫時很實用。 在您加入其他次要複本之前，您需要為可用性群組建立可用性群組接聽程式，並更新您的應用程式使用此接聽程式的網路名稱。  
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **對次要複本執行備份作業**  
   
-     次要複本可以備份記錄以及完整資料庫、檔案或檔案群組的 [只複製](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 備份。 您可以設定可用性群組來指定應該執行備份之處的喜好設定。 請務必了解，喜好設定並不是由 SQL Server 強制施行，所以它對於隨選備份沒有任何影響。 這個喜好設定的解譯取決於您在給定可用性群組之每個資料庫的備份作業中所編寫的邏輯 (如果有的話)。 對於各個可用性複本，您可以指定此複本與同一個可用性群組中之其他複本的備份優先權。 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)中心概念。  
+     次要複本可以備份記錄以及完整資料庫、檔案或檔案群組的 [只複製](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 備份。 您可以設定可用性群組來指定應該執行備份之處的喜好設定。 請務必了解，喜好設定並不是由 SQL Server 強制施行，所以它對於隨選備份沒有任何影響。 這個喜好設定的解譯取決於您在給定可用性群組之每個資料庫的備份作業中所編寫的邏輯 (如果有的話)。 對於各個可用性複本，您可以指定此複本與同一個可用性群組中之其他複本的備份優先權。 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 -   **對一個或多個次要複本進行唯讀存取 (可讀取的次要複本)**  
   
@@ -193,6 +193,6 @@ ms.lasthandoff: 11/20/2017
  [建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
- [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
    

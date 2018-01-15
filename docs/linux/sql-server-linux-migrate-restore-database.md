@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: 6d54a849630bece0fba6456a516cbd68aecf2eb5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7658d69ae0b59e079e40348962d11fe202a85235
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>從 Windows 的 SQL Server 資料庫移轉至 Linux 使用備份與還原
 
@@ -34,7 +34,7 @@ SQL Server 的備份和還原功能會從 SQL Server 在 Windows 上的資料庫
 > * 使用 TRANSACT-SQL Linux 上的備份檔案還原
 > * 執行查詢，以驗證移轉
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>필수 구성 요소
 
 若要完成本教學課程中，需要下列必要條件：
 
@@ -195,6 +195,7 @@ SQL Server 的備份和還原功能會從 SQL Server 在 Windows 上的資料庫
 > * 若要準備還原備份的檔案重新放置
 > * 使用**sqlcmd**執行 Transact SQL 命令
 > * 使用還原資料庫備份**RESTORE DATABASE**命令 
+> * 執行查詢，以驗證移轉
 
 接下來，瀏覽其他移轉案例適用於 SQL Server on Linux。 
 

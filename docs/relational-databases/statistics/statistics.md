@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44f813225666c0d4259c061488d776318a27ba72
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c4fc025cd2026ee0310f67c80a3a05fbd3da45c7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="statistics"></a>Statistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查詢最佳化工具會使用統計資料來建立可改善查詢效能的查詢計劃。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計劃的必要統計資料。不過，在少數情況下，您必須建立其他統計資料或修改查詢設計，以便獲得最佳結果。 本主題將討論有效使用查詢最佳化統計資料的概念和指導方針。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/02/2018
   
 -   虛線代表用來預估範圍內相異值總數的取樣值 (*distinct_range_rows*) 以及範圍內的值總數 (*range_rows*)。 查詢最佳化工具會使用 *range_rows* 和 *distinct_range_rows* 來計算 *average_range_rows*，而且不會儲存取樣值。   
   
-#### <a name="density"></a> 密度向量  
+#### <a name="density"></a>密度向量  
 **密度**是給定資料行或組合資料行中的重複項目數量資訊，其計算方式為 1/(相異值數目)。 查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 密度向量針對統計資料物件中資料行的每個前置詞各包含一個密度。 
 
 > [!NOTE]
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/02/2018
 ### <a name="statistics-options"></a>統計資料選項  
  您可以設定三個選項來影響何時及如何建立和更新統計資料。 這些選項只會在資料庫層級設定。  
   
-#### <a name="autocreatestatistics-option"></a>AUTO_CREATE_STATISTICS 選項  
+#### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS 選項  
  開啟自動建立統計資料選項 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 時，查詢最佳化工具就會視需要針對查詢述詞中的個別資料行來建立統計資料，以便改善查詢計劃的基數估計值。 這些單一資料行統計資料是針對在現有統計資料物件中尚未具有[長條圖](#histogram)的資料行建立的。 AUTO_CREATE_STATISTICS 選項不會判斷系統是否針對索引建立了統計資料。 這個選項也不會產生篩選的統計資料。 它會嚴格套用至完整資料表的單一資料行統計資料。  
   
  當查詢最佳化工具因使用 AUTO_CREATE_STATISTICS 選項而產生統計資料時，統計資料名稱就會以 `_WA` 作為開頭。 您可以使用下列查詢來判斷查詢最佳化工具是否已經針對查詢述詞資料行建立統計資料。  

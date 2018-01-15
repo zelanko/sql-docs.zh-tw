@@ -1,7 +1,7 @@
 ---
 title: "資料庫檔案與檔案群組 | Microsoft 文件"
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 01/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 基本上，每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有兩個作業系統檔案：資料檔案與記錄檔。 資料檔包含諸如資料表、索引、預存程序以及檢視等資料和物件。 記錄檔包含復原資料庫中所有交易必要的資訊。 資料檔可以組成檔案群組，以方便配置及管理。  
@@ -62,27 +62,36 @@ ms.lasthandoff: 01/02/2018
  依預設，資料和交易記錄會放置在相同的磁碟和路徑中。 這是透過處理單一磁碟系統來完成。 然而，這對於實際執行環境可能不是最合適的。 我們建議您將資料和記錄檔放在不同的磁碟上。  
 
 ### <a name="logical-and-physical-file-names"></a>邏輯與實體檔案名稱
-SQL Server 檔案有兩個名稱︰ 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案有兩個檔案名稱類型： 
 
-**logical_file_name：**  logical_file_name 是用來在所有 Transact-SQL 陳述式中指稱實體檔案的名稱。 邏輯檔案名稱必須遵守 SQL Server 識別碼的規則，而且在資料庫的邏輯檔案名稱之中不得重複。
+**logical_file_name：**  logical_file_name 是用來在所有 Transact-SQL 陳述式中指稱實體檔案的名稱。 邏輯檔案名稱必須遵守 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼的規則，而且在資料庫的邏輯檔案名稱之間必須是唯一的。 這是由 `ALTER DATABASE` 中的 `NAME` 引數所設定。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
-**os_file_name：** os_file_name 是包含目錄路徑的實體檔案名稱。 它必須遵循作業系統檔案名稱的規則。
+**os_file_name：** os_file_name 是包含目錄路徑的實體檔案名稱。 它必須遵循作業系統檔案名稱的規則。 這是由 `ALTER DATABASE` 中的 `FILENAME` 引數所設定。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
-SQL Server 資料及記錄檔可以放在 FAT 或 NTFS 檔案系統。 因為 NTFS 安全性層面，我們建議使用 NTFS 檔案系統。 但是讀寫資料檔案群組及記錄檔不能放在 NTFS 壓縮檔案系統。 只有唯讀資料庫及唯讀次要檔案群組，才能放在 NTFS 壓縮檔案系統。
+> [!IMPORTANT]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料及記錄檔可以放在 FAT 或 NTFS 檔案系統， 在 Windows 系統上，因為 NTFS 安全性層面，我們建議使用 NTFS 檔案系統。 
 
-若有多個 SQL Server 執行個體執行於同一台電腦上，每個執行個體都會收到不同的預設目錄來包含建立於執行個體中的資料庫檔案。 如需詳細資訊，請參閱 [SQL Server 預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。
+> [!WARNING]
+> 但是讀寫資料檔案群組及記錄檔不能放在 NTFS 壓縮檔案系統。 只有唯讀資料庫及唯讀次要檔案群組，才能放在 NTFS 壓縮檔案系統。
+> 為節省空間，強烈建議使用[資料壓縮](../../relational-databases/data-compression/data-compression.md)，而不要使用檔案系統壓縮。
+
+若有多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體執行於同一部電腦上，每個執行個體都會收到不同的預設目錄來包含建立於執行個體中的資料庫檔案。 如需詳細資訊，請參閱 [SQL Server 預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。
 
 ### <a name="data-file-pages"></a>資料檔分頁
-SQL Server 資料檔案中的分頁是循序編號，從零 (0) 開始，表示檔案中的第一頁。 資料庫中的每一個檔案都具有唯一的檔案識別碼。 若要唯一地識別資料庫中的分頁，則同時需要檔案識別碼及頁碼。 下例顯示了擁有 4-MB 主要資料檔與 1-MB 次要資料檔之資料庫中的頁數。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔中的分頁是循序編號，從零 (0) 開始，表示檔案中的第一頁。 資料庫中的每一個檔案都具有唯一的檔案識別碼。 若要唯一地識別資料庫中的分頁，則同時需要檔案識別碼及頁碼。 下例顯示了擁有 4-MB 主要資料檔與 1-MB 次要資料檔之資料庫中的頁數。
 
 ![data_file_pages](../../relational-databases/databases/media/data-file-pages.gif)
 
-每個檔案的第一個分頁，是包含了檔案屬性相關資訊的檔案標頭分頁。 檔案開頭的幾個其他分頁中也包含系統資訊，如配置對應。 同時儲存於主要資料檔與第一個記錄檔的系統分頁中，有一個是資料庫開機分頁，其中包含了資料庫屬性的相關資訊。 如需分頁及分頁類型的詳細資訊，請參閱＜了解頁面與範圍＞。
+每個檔案的第一個分頁，是包含了檔案屬性相關資訊的檔案標頭分頁。 檔案開頭的幾個其他分頁中也包含系統資訊，如配置對應。 同時儲存於主要資料檔與第一個記錄檔的系統分頁中，有一個是資料庫開機分頁，其中包含了資料庫屬性的相關資訊。 如需頁面及頁面類型的詳細資訊，請參閱[頁面與範圍架構指南](../..//relational-databases/pages-and-extents-architecture-guide.md)。
 
 ### <a name="file-size"></a>檔案大小
-SQL Server 檔案可以從原本指定的大小自動成長。 當您定義檔案時，可指定特定的成長遞增。 每次檔案填滿時，它就會根據成長遞增值來增加其大小。 若檔案群組中有多個檔案，則必須等到所有檔案都填滿之後，才會開始自動成長。 接著成長會以循環配置的方式來進行。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案可以從它們原本指定的大小自動成長。 當您定義檔案時，可指定特定的成長遞增。 每次檔案填滿時，它就會根據成長遞增值來增加其大小。 若檔案群組中有多個檔案，則必須等到所有檔案都填滿之後，才會開始自動成長。 接著成長會使用[比例填滿](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill)，以循環配置的方式來進行。
 
-也可為每個檔案指定最大的大小。 若並未指定最大的大小，檔案將持續成長，直到它用完磁碟中所有可用的空間為止。 將 SQL Server 用作應用程式的內嵌資料庫，而使用者在其中不太容易聯繫到系統管理員時，這項功能特別實用。 使用者可以讓檔案依需要自動成長，以減輕監視資料庫中可用空間以及手動配置額外空間的管理負擔。 
+也可為每個檔案指定最大的大小。 若並未指定最大的大小，檔案將持續成長，直到它用完磁碟中所有可用的空間為止。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是用做應用程式中內嵌的資料庫，而且使用者不是那麼容易聯繫到系統管理員時，此項功能會特別有用。 使用者可以讓檔案依需要自動成長，以減輕監視資料庫中可用空間以及手動配置額外空間的管理負擔。  
+
+如果已針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟用[立即檔案初始化 (IFI)](../../relational-databases/databases/database-instant-file-initialization.md)，配置資料檔案的新空間時額外負荷會最少。
+
+如需交易記錄檔管理的詳細資訊，請參閱[管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)。   
 
 ## <a name="database-snapshot-files"></a>資料庫快照集檔案
 資料庫快照集用來儲存其「寫入時複製」資料的檔案格式，視快照集是由使用者建立或是內部使用而定：
@@ -174,21 +183,22 @@ GO
 - 檔案只能作為一個檔案群組的成員。
 - 交易記錄檔不能為任何檔案群組的一部分。
 
-## <a name="recommendations"></a>建議
+## <a name="Recommendations"></a> 建議
 以下是關於使用檔案和檔案群組時的一般建議： 
 - 大多數的資料庫只需要一個資料檔和一個交易記錄檔即可順利運作。
-- 若使用多個檔案，可替額外的檔案建立第二個檔案群組，並讓該檔案群組成為預設的檔案群組。 如此一來，主要檔案將只包含系統資料表和物件。
+- 若使用多個資料檔案，可替額外的檔案建立第二個檔案群組，並讓該檔案群組成為預設的檔案群組。 如此一來，主要檔案將只包含系統資料表和物件。
 - 若要使效能達到最大，請盡量在不同的可用磁碟上建立檔案或檔案群組。 並把極佔空間的物件放在不同的檔案群組中。
 - 使用檔案群組，將物件放置在特定的實體磁碟上。
 - 將同一個聯結查詢用到的不同資料表，放在不同的檔案群組內。 這樣可改進效能，因為可用平行磁碟 I/O 搜尋聯結資料。
 - 把存取量大的資料表和屬於這些資料表的非叢集索引，放在不同的檔案群組中。 這樣可改進效能，因為檔案如果位於不同實體磁碟上，可進行平行 I/O。
 - 請勿將交易記錄檔放在有其他檔案和檔案群組的同一個實體磁碟上。
 
+如需交易記錄檔管理建議的詳細資訊，請參閱[管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)。   
+
 ## <a name="related-content"></a>相關內容  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
- [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)    
+ [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)      
  [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
-  
- [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) 
+ [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)    
+ [分頁與範圍架構指南](../../relational-databases/pages-and-extents-architecture-guide.md)    
+ [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)     

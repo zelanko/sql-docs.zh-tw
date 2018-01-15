@@ -18,11 +18,11 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: a3fee8259aab2901eaf7950d4255d78d1860eeda
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 39e1807178f536a1bac2148deae406b1e3bb44b5
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>SQL Database 和資料倉儲的透明資料加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -45,9 +45,9 @@ Microsoft 也會順暢地移動和管理金鑰，以滿足地理複寫和還原�
 > 根據預設，所有新建立的 SQL 資料庫會以受服務管理的 TDE 來加密。 現有的資料庫和 2017 年 5 月以前透過還原、地理複寫和資料庫複本建立的資料庫，則預設為不加密。
 >
 
-## <a name="bring-your-own-key"></a>自行管理金鑰
+## <a name="bring-your-own-key-preview"></a>攜帶您自己的金鑰 (預覽)
 
-自行管理金鑰 (BYOK) 支援可讓使用者充分掌控自身的 TDE 加密金鑰，並控制存取的人員與時間。 Azure Key Vault (AKV) 是 Azure 的雲端式外部金鑰管理系統，也是 TDE 針對 BYOK 支援所整合的第一項金鑰管理服務。 使用 BYOK 時，AKV 中儲存的非對稱金鑰會保護資料庫加密金鑰。 非對稱金鑰永遠不會離開 Key Vault；一旦伺服器擁有 Key Vault 的權限，伺服器就會透過 Key Vault 服務，將基本金鑰的作業要求傳送給它。 非對稱金鑰是在伺服器層級設定，因此歸屬於該伺服器底下的所有資料庫都會繼承此金鑰。 現在，BYOK 支援可讓使用者控制金鑰管理工作，包括金鑰輪替、Key Vault 權限、刪除金鑰，以及啟用所有加密金鑰的稽核/報告。 Key Vault 提供集中式的金鑰管理、利用嚴密監控的硬體安全性模組 (HSM)，並促進金鑰和資料的分開管理作業，以協助符合法規合規性。 若要深入了解 Key Vault，請前往 [Key Vault 文件頁面](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)。
+攜帶您自己的金鑰 (BYOK) (預覽) 支援可讓使用者充分掌控自身的 TDE 加密金鑰，並控制存取的人員與時間。 Azure Key Vault (AKV) 是 Azure 的雲端式外部金鑰管理系統，也是 TDE 針對 BYOK 支援所整合的第一項金鑰管理服務。 使用 BYOK 時，AKV 中儲存的非對稱金鑰會保護資料庫加密金鑰。 非對稱金鑰永遠不會離開 Key Vault；一旦伺服器擁有 Key Vault 的權限，伺服器就會透過 Key Vault 服務，將基本金鑰的作業要求傳送給它。 非對稱金鑰是在伺服器層級設定，因此歸屬於該伺服器底下的所有資料庫都會繼承此金鑰。 現在，BYOK 支援可讓使用者控制金鑰管理工作，包括金鑰輪替、Key Vault 權限、刪除金鑰，以及啟用所有加密金鑰的稽核/報告。 Key Vault 提供集中式的金鑰管理、利用嚴密監控的硬體安全性模組 (HSM)，並促進金鑰和資料的分開管理作業，以協助符合法規合規性。 若要深入了解 Key Vault，請前往 [Key Vault 文件頁面](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)。
 
 若要深入了解 Azure SQL Database 和資料倉儲的 TDE 與 BYOK 支援，請參閱[支援自行管理金鑰的透明資料加密](transparent-data-encryption-byok-azure-sql.md)。
 

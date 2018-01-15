@@ -16,18 +16,20 @@ helpviewer_keywords:
 - objects [SMO]
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc43e77e099c216dbe13f2df5facbdb60a83c63b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 556403a013ee348e836c059ef9b246b4d5606a87
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>建立、 改變和移除資料庫物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]建立 SMO 物件的階段如下所示：  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  建立 SMO 物件的階段如下：  
   
 1.  建立物件的執行個體。  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
  **卸除**陳述式用來移除物件和其所有共同相依子物件所需一開始建立物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SMO 物件模型](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
   
   

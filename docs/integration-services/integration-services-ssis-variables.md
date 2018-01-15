@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ae63f120997ba5018b131f8a946b0f9ae9e384d0
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
   變數會儲存 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其容器、工作和事件處理常式在執行階段可使用的值。 「指令碼」工作和「指令碼」元件中的指令碼也可以使用變數。 將工作和容器排序成工作流程的優先順序條件約束，可在其條件約束定義含有運算式時使用變數。  
@@ -133,7 +133,17 @@ ms.lasthandoff: 12/21/2017
  當系統將 **IncludeInDebugDump** 選項重設為 **false**時，這可能會覆寫使用者所選取的值。  
   
 **Value**    
- 使用者自訂變數值可以是常值或是運算式。 變數包含設定變數值和該值之資料類型的選項。 兩個屬性必須相容：例如，同時使用字串值和整數資料類型是無效的。  
+使用者自訂變數值可以是常值或是運算式。 變數的值不可為 null。 變數的預設值如下：
+
+| 資料類型 | 預設值 |
+|---|---|
+| 布林 | False |
+| 數字和二進位資料類型 | 0 (零) |
+| 字元和字串資料類型 | (空字串) |
+| Object | System.Object |
+| | |
+
+變數具有設定變數值和該值之資料類型的選項。 兩個屬性必須相容：例如，同時使用字串值和整數資料類型是無效的。  
   
  如果變數設定為做為運算式評估，則必須提供運算式。 在執行階段會評估運算式，且會將變數值設定為評估結果。 例如，如果變數使用運算式 `DATEPART("month", GETDATE())` ，則變數的值將為目前日期所在之月份數。 運算式必須是使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 運算式文法語法的有效運算式。 當運算式搭配變數使用時，運算式可以使用運算式文法提供的常值、運算子和函數，但是運算式無法參考封裝中資料流程的資料行。 運算式的最大長度為 4000 個字元。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
   

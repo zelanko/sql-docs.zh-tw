@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 42eb0885558003d4810e873d95876bd8ac6da14b
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-source"></a>ODBC 來源
   ODBC 來源會使用資料庫資料表、檢視或 SQL 陳述式，從 ODBC 支援的資料庫中擷取資料。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
  根據錯誤行為設定，ODBC 來源支援在錯誤輸出中傳回擷取程序期間發生的錯誤 (資料轉換、截斷)。 如需詳細資訊，請參閱 [ODBC 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)。  
   
 ## <a name="data-type-support"></a>資料類型支援  
- 如需有關 ODBC 來源支援之資料類型的資訊，請參閱＜Connector for Open Database Connectivity (ODBC) by Attunity＞。  
+ 如需有關 ODBC 來源支援之資料類型的資訊，請參閱＜Connector for Open Database Connectivity (ODBC)＞。  
   
 ## <a name="extract-options"></a>擷取選項  
  ODBC 來源以 [批次] 或 [逐列] 模式操作。 所用的模式是由 **FetchMethod** 屬性所決定。 下列清單描述這些模式。  
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="data-access-mode"></a>資料存取模式  
  選取從來源中選取資料的方法。 下表將顯示這些選項：  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |資料表名稱|從 ODBC 資料來源中的資料表或檢視表擷取資料。 當您選取此選項時，請從清單中選取下列項目的值：|  
 ||**資料表或檢視表的名稱**：從清單中選取可用的資料表或檢視表，或是輸入可識別資料表的規則運算式。|  
@@ -144,7 +144,7 @@ ms.lasthandoff: 11/20/2017
   
  選取 **[全選]** 核取方塊，即可選取所有資料行。  
   
-#### <a name="external-column"></a>[外部資料行]  
+#### <a name="external-column"></a>外部資料行  
  外部 (來源) 資料行的檢視，這些資料行會依照您在設定取用 ODBC 來源資料之元件時所看見的順序列出。  
   
 #### <a name="output-column"></a>輸出資料行  
@@ -158,7 +158,7 @@ ms.lasthandoff: 11/20/2017
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
--   在 [資料流程] 索引標籤中，按兩下 ODBC 來源。  
+-   在 [資料流程] 索引標籤上，按兩下 ODBC 來源。  
   
 -   在 **[ODBC 來源編輯器]**中，按一下 **[錯誤輸出]**。  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="inputoutput"></a>輸入/輸出  
  檢視資料來源的名稱。  
   
-#### <a name="column"></a>資料行  
+#### <a name="column"></a>「資料行」  
  未使用。  
   
 #### <a name="error"></a>錯誤  
@@ -176,7 +176,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="truncation"></a>截斷  
  選取 ODBC 來源應該如何處理流程中的截斷：忽略失敗、重新導向資料列，或使元件失效。  
   
-#### <a name="description"></a>說明  
+#### <a name="description"></a>描述  
  未使用。  
   
 #### <a name="set-this-value-to-selected-cells"></a>將這個值設定到選取的資料格  

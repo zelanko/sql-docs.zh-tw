@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5f9c6d6327b2f658ce2e71ecf7107d3c8636bcbf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +62,20 @@ catalog.create_execution [@folder_name = folder_name
  [@runinscaleout =] *runinscaleout*  
  指出是否以相應放大執行。使用 1 值，即可使用相應放大執行套件。使用 0 值，即可不使用相應放大執行套件。這個參數是選擇性的。 如果未指定，會在 [SSISDB].[catalog].[catalog_properties] 中將其值設定為 DEFAULT_EXECUTION_MODE。 *runinscaleout* 是 **bit**。 
  
- [@useanyworker =] *useanyworker*  
-  指出是否允許任何 Scale Out Worker 進行執行。 使用 1 值，即可執行含任何 Scale Out Worker 的套件。 使用 0 值，即可指出不允許所有 Scale Out Worker 執行套件。 這個參數是選擇性的。 如果未指定，會將其值設定為 1。 *useanyworker* 是 **bit**。 
+[@useanyworker =] *useanyworker*  
+指出是否允許任何 Scale Out Worker 進行執行。
+
+-   使用 1 值，即可執行含任何 Scale Out Worker 的套件。 當您將 `@useanyworker` 設為 true，尚未達到最大工作計數 (如背景工作設定檔中指定) 的任何背景工作，都可執行套件。
+
+-   使用 0 值，即可指出不允許所有 Scale Out Worker 執行套件。 當您將 `@useanyworker` 設為 false，您必須使用 Scale Out Manager，或藉由呼叫預存程序 `[catalog].[add_execution_worker]`，指定允許執行套件的背景工作。
+
+這個參數是選擇性的。 如果未指定，會將其值設定為 1。 *useanyworker* 是 **bit**。 
   
  [@execution_id =] *execution_id*  
  傳回執行執行個體的唯一識別碼。 *execution_id* 是 **bigint**。  
 
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  執行是用以指定在封裝執行的單一執行個體期間，該封裝所使用的變數值。  
   
  如果使用 *reference_id* 參數指定環境參考，則預存程序會將來自對應環境變數的常值或參考值填入專案和套件參數。 如果指定了環境參考，封裝執行期間就會使用預設參數值。 若要精確地判斷哪些值用於執行的特定執行個體，請使用來自此預存程序的 *execution_id* 輸出參數值，並查詢 [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) 檢視。  
@@ -106,7 +112,7 @@ GO
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **sysadmin** 伺服器角色的成員資格  
+-   **系統管理員**伺服器角色的成員資格  
 
  如果 @runinscaleout 是 1，則預存程序需要下列其中一個權限：
  
@@ -114,7 +120,7 @@ GO
 
 -   **ssis_cluster_executor** 資料庫角色的成員資格
 
--   **sysadmin** 伺服器角色的成員資格
+-   **系統管理員**伺服器角色的成員資格
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單描述的是可能引發錯誤或警告的某些狀況：  

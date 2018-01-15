@@ -1,7 +1,7 @@
 ---
 title: "下載 SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: 
-ms.date: 12/22/2017
+ms.date: 01/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f10a9e0bf6f6c0b03bcb2e2577221e6797170f15
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: 554993ec4b6b687a2335c3ea6192c40ead327820
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下載 SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,22 +102,20 @@ ms.lasthandoff: 12/22/2017
 
 SSDT 的 ISO 映像提供了另一種方式，可讓您用來安裝 SSDT 或設定系統管理安裝點。 ISO 是一個獨立的檔案，內含 SSDT 需要的所有元件，而且隨時啟動下載管理員皆可下載，非常適合網路頻寬有限或不穩的情況使用。 下載後，ISO 可掛載為磁碟機或燒錄至 DVD。
 
-> [!IMPORTANT]
-> 下列 ISO 連結會安裝適用於 VS 2015 17.3 的 SSDT
->
-> 17.4 的 ISO 連結即將推出。
+> [!NOTE]
+> 現在可使用 VS 2015 17.4 ISO 映像的 SSDT。
 
-[中文 (中華人民共和國)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x804) |
-[中文 (台灣)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x404) |
-[英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x409) |
-[法文]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x40c)  
-[德文]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x407) |
-[義大利文]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x410) |
-[日文]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x411) |
-[韓文]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x412) |
-[葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x416) |
-[俄文]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x419) |
-[西班牙文]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x40a)
+[中文 (中華人民共和國)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
+[中文 (台灣)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
+[英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x409) |
+[法文]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40c)  
+[德文]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x407) |
+[義大利文]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x410) |
+[日文]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x411) |
+[韓文]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x412) |
+[葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x416) |
+[俄文]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x419) |
+[西班牙文]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40a)
 
 
 ## <a name="download-visual-studio"></a>下載 Visual Studio

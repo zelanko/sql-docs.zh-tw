@@ -17,22 +17,24 @@ helpviewer_keywords:
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c51e983b398a6273680e503ca42a839ad3fd8350
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 06920ebc2a8ea8613a9b24f9e9cbd84eed52e468
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="available-programming-samples"></a>可用程式設計範例
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]下表列出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件 (SMO) 程式設計範例用於[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO 目錄。 這些範例都可以在[!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  下表列出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件 (SMO) 程式設計範例用於[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO 目錄。 這些範例都可以在[!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  
   
  如需如何安裝範例的詳細資訊，請參閱[AdventureWorks for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330)。  
   
-|Title|描述|  
+|Title|Description|  
 |-----------|-----------------|  
 |BackRest|示範如何備份和還原資料庫。|  
 |ChangeTableOwner|示範如何將擁有權並非 DBO 的所有資料表變更為 DBO。|  

@@ -18,18 +18,20 @@ helpviewer_keywords:
 - SMO [SQL Server], data types
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16d7cc6bac67972516efb5bc916eefacd91eafc4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 575e2b0553bd37ca095c1864cc775547ace36a76
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="working-with-data-types"></a>使用資料類型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]資料有許多類型和大小，例如已定義的長度、 特定的精確度的數字或另一個物件，它自己的規則集的使用者定義資料類型的字串。 <xref:Microsoft.SqlServer.Management.Smo.DataType>物件會分類的資料類型，以正確地處理[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 <xref:Microsoft.SqlServer.Management.Smo.DataType> 物件與可接受資料的物件有關聯。 下列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理物件 (SMO) 物件接受必須由定義的資料<xref:Microsoft.SqlServer.Management.Smo.DataType>物件屬性：  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  資料有許多類型和大小，例如已定義長度的字串、具有特定精確度的數字，或是使用者定義資料類型 (有自己的規則集合的另一個物件)。 <xref:Microsoft.SqlServer.Management.Smo.DataType>物件會分類的資料類型，以正確地處理[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 <xref:Microsoft.SqlServer.Management.Smo.DataType> 物件與可接受資料的物件有關聯。 下列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理物件 (SMO) 物件接受必須由定義的資料<xref:Microsoft.SqlServer.Management.Smo.DataType>物件屬性：  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Column>  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
   
 ## <a name="constructing-a-datatype-object-with-the-specification-in-the-constructor-in-visual-basic"></a>在 Visual Basic 中使用建構函式內的規格來建構 DataType 物件  
- 這個程式碼範例示範如何使用建構函式，建立會根據不同的資料類型的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。  
+ 此程式碼範例示範如何使用此建構函式來建立以不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型為根據的資料類型執行個體。  
   
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>、<xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> 和 XML 類型全都需要一個名稱值，才能識別此物件。  
@@ -81,7 +83,7 @@ dt = New DataType(SqlDataType.Decimal, 10, 2)
 ``` 
   
 ## <a name="constructing-a-datatype-object-with-the-specification-in-the-constructor-in-visual-c"></a>在 Visual C# 中使用建構函式內的規格來建構 DataType 物件  
- 這個程式碼範例示範如何使用建構函式，建立會根據不同的資料類型的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。  
+ 此程式碼範例示範如何使用此建構函式來建立以不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型為根據的資料類型執行個體。  
   
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>、<xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> 和 XML 類型全都需要一個名稱值，才能識別此物件。  
@@ -96,7 +98,7 @@ dt = new DataType(SqlDataType.Decimal, 10, 2);
 ```  
   
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-basic"></a>在 Visual Basic 中使用預設建構函式來建構 DataType 物件  
- 這個程式碼範例示範如何建立會根據不同的資料類型的執行個體使用的預設建構函式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。 然後會使用這些屬性來指定資料類型。  
+ 此程式碼範例示範如何使用預設建構函式來建立以不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型為根據的資料類型執行個體。 然後會使用這些屬性來指定資料類型。  
   
  **請注意** <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>， <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>，和 XML 類型全都需要一個名稱值來識別物件。  
   
@@ -111,7 +113,7 @@ dt.MaximumLength = 100
 ```
   
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-c"></a>在 Visual C# 中使用預設建構函式來建構 DataType 物件  
- 這個程式碼範例示範如何建立會根據不同的資料類型的執行個體使用的預設建構函式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。 然後會使用這些屬性來指定資料類型。  
+ 此程式碼範例示範如何使用預設建構函式來建立以不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型為根據的資料類型執行個體。 然後會使用這些屬性來指定資料類型。  
   
  **請注意** <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>， <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>，和 XML 類型全都需要一個名稱值來識別物件。  
   

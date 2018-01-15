@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7123c7dde876fb5ec8cceb3088816df9a92360d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd1193331cc9658a4703a39201219896c0e921d0
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 各版本支援的 Integration Services 功能
  本主題提供不同 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]版本所支援之 SQL Server Integration Services (SSIS) 功能的詳細資訊。  
@@ -63,7 +63,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |內建的資料來源連接器|是|是|||| 
 |內建工作和轉換|是|是||||  
-|Attunity 的 ODBC 來源和目的地|是|是|||| 
+|ODBC 來源和目的地 |是|是|||| 
 |Azure 資料來源連接器和工作|是|是||||  
 |Hadoop/HDFS 連接器和工作|是|是||||  
 |基本資料分析工具|是|是|||| 

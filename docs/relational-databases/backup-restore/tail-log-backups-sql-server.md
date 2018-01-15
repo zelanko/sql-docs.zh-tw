@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3396d9d6ec351550509300f760db8e5fc58836d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a1254e44ac2fcc110a81d9ac7f566a348812f80
+ms.sourcegitcommit: 1eac335235847c3578e376e0854413710d345dee
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="tail-log-backups-sql-server"></a>結尾記錄備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題僅與使用完整或大量記錄復原模式備份和還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 |BACKUP LOG 選項|註解|  
 |-----------------------|--------------|  
-|NORECOVERY|每當您打算在資料庫上繼續還原作業時，請使用 NORECOVERY。 NORECOVERY 會讓資料庫進入還原狀態。 這樣可以保證資料庫不會在結尾記錄備份之後變更。 除非也指定了 NO_TRUNCATE 選項或 COPY_ONLY 選項，否則將會截斷記錄。<br /><br /> **\*\* 重要 \*\*** 除非資料庫受損，否則建議您避免使用 NO_TRUNCATE。|  
+|NORECOVERY|每當您打算在資料庫上繼續還原作業時，請使用 NORECOVERY。 NORECOVERY 會讓資料庫進入還原狀態。 這樣可以保證資料庫不會在結尾記錄備份之後變更。 除非也指定了 NO_TRUNCATE 選項或 COPY_ONLY 選項，否則將會截斷記錄。<br /><br /> **重要：**除非資料庫受損，否則建議您避免使用 NO_TRUNCATE。|  
 |CONTINUE_AFTER_ERROR|只有在您要備份受損資料庫的結尾時，才使用 CONTINUE_AFTER_ERROR。<br /><br /> 當您在受損資料庫上使用結尾記錄備份時，一般可在記錄備份中擷取到的某些中繼資料可能無法使用。 如需詳細資訊，請參閱本主題中的 [具有不完整備份中繼資料的結尾記錄備份](#IncompleteMetadata)。|  
   
 ##  <a name="IncompleteMetadata"></a> 具有不完整備份中繼資料的結尾記錄備份  
@@ -63,13 +63,9 @@ ms.lasthandoff: 11/17/2017
  如果結尾記錄備份的中繼資料不完整， [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) 資料表將會遺失有關檔案群組在結尾記錄備份期間的大部分資訊。 大部分 **backupfilegroup** 資料表資料行為 NULL，只有下列資料行具有意義：  
   
 -   **backup_set_id**  
-  
 -   **filegroup_id**  
-  
 -   **型別**  
-  
 -   **type_desc**  
-  
 -   **is_readonly**  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
@@ -83,6 +79,6 @@ ms.lasthandoff: 11/17/2017
  [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [只複製備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
-  
+ [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
   
