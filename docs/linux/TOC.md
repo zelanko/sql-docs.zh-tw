@@ -26,6 +26,7 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 ## [7_部署 Pacemaker 叢集](sql-server-linux-deploy-pacemaker-cluster.md)
 ## [8_建立及設定可用性群組](sql-server-linux-create-availability-group.md)
+## [9_在 Kubernetes 中設定以達到高可用性](tutorial-sql-server-containers-kubernetes.md)
 
 # 概念
 ## Install
@@ -85,11 +86,11 @@
 #### [僅供讀取級別的建立作業]()
 ##### [設定 AG](sql-server-linux-availability-group-configure-rs.md)
 
-## [安全性](sql-server-linux-security-overview.md)
+## [Security](sql-server-linux-security-overview.md)
 ### [開始使用安全性功能](sql-server-linux-security-get-started.md)
 ### [為連線加密](sql-server-linux-encrypted-connections.md)
 
-## 效能
+## [效能]
 ### [最佳做法](sql-server-linux-performance-best-practices.md)
 ### [開始使用效能功能](sql-server-linux-performance-get-started.md)
 
