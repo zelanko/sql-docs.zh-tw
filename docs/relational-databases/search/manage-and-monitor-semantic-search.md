@@ -20,14 +20,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d318e818800a2f1cf8591ba6f35f31d55b0cd564
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f6613fd3036a141f018082f988aa4c3365d0325b
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="manage-and-monitor-semantic-search"></a>管理及監視語意搜尋
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 描述語意索引的程序，以及與管理及監視索引相關的工作。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 描述語意索引的程序，以及與管理及監視索引相關的工作。  
   
 ##  <a name="HowToMonitorStatus"></a>檢查語意索引的狀態  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>語意索引的第一個階段是否已完成？

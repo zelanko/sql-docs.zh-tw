@@ -1,5 +1,5 @@
 ---
-title: "bcp_control |Microsoft 文件"
+title: bcp_control | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0af6c90954aff66d17d7fafb3115138e7d71708f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77f8e1c2faa9900f8b41f356e3dd7411f12ff6c0
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -116,7 +116,7 @@ RETCODE bcp_control (
  這是在大量複製作業失敗之前所允許的錯誤數目。 預設值為 10。小於 1 的值，這個選項重設為其預設值。 大量複製會限制 65,535 個錯誤的上限。 如果嘗試將這個選項設為大於 65,535 的值，則該選項會設定為 65,535。  
   
  BCPODBC  
- 若為 TRUE，表示**datetime**和**smalldatetime** ODBC 時間戳記逸出序列前置詞和後置詞，會使用字元格式儲存的值。 BCPODBC 選項只適用於 BCP_OUT。  
+ 若為 TRUE，表示**datetime**和**smalldatetime** ODBC 時間戳記逸出序列前置詞和後置詞，會使用字元格式儲存的值。 當 BCPODBC 選項只適用於 DB_OUT。  
   
  若為 FALSE， **datetime**代表 1997 年 1 月 1 日的值會轉換成字元字串： 1997年-01-01 00:00:00.000。 當設定為 TRUE，相同**datetime**值會表示為: {ts ' 1997年-01-01 00:00:00.000'}。  
   
@@ -206,7 +206,7 @@ printf_s("%ld rows processed by bulk copy.", nRowsProcessed);
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

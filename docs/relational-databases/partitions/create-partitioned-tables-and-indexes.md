@@ -3,7 +3,7 @@ title: "建立資料分割資料表及索引 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: partitions
 ms.reviewer: 
@@ -35,14 +35,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6f3f7e6d9f23ccebb49ac1f2c4bbc70acdff12d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 416bba81433e35e34c053aafc5412cca3875b4ae
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>建立分割區資料表及索引
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立資料分割資料表或索引。 分割區資料表及索引中的資料會被水平分割成單元，可散佈在資料庫中的多個檔案群組中。 分割作業可讓大型資料表和索引更容易管理及擴充。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立資料分割資料表或索引。 分割區資料表及索引中的資料會被水平分割成單元，可散佈在資料庫中的多個檔案群組中。 分割作業可讓大型資料表和索引更容易管理及擴充。  
   
  分割區資料表或索引的建立過程通常分為四個部分：  
   
@@ -60,11 +60,11 @@ ms.lasthandoff: 11/17/2017
   
      [限制事項](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **使用下列方法建立分割區資料表或索引：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  建立分割區資料表，需要資料庫中的 CREATE TABLE 權限及建立資料表的結構描述之 ALTER 權限。 建立分割區索引，需要建立索引的資料表或檢視的 ALTER 權限。 建立分割區資料表或索引，還需要下列任何一個附加權限：  
   
 -   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **系統管理員 (sysadmin)** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  繼續加入資料列，直到為分割區資料表建立所有的檔案群組。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
 6.  在 **[選取頁面]**底下，選取 **[檔案]**。  
   
@@ -223,7 +223,7 @@ ms.lasthandoff: 11/17/2017
   
     6.  在 **[摘要]**底下的 **[描述]**，確認所有作業排程設定是否都正確。  
   
-    7.  按一下 **[確定]**。  
+    7.  按一下 [確定] 。  
   
      完成這個頁面之後，請按 **[下一步]**。  
   
@@ -272,7 +272,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 範例會建立新的檔案群組、分割區函數和分割區配置。 新資料表是以指定為儲存位置的分割區配置建立的。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 範例會建立新的檔案群組、分割區函數和分割區配置。 新資料表是以指定為儲存位置的分割區配置建立的。  
   
     ```  
     USE AdventureWorks2012;  
