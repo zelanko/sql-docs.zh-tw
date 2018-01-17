@@ -25,7 +25,7 @@ ms.lasthandoff: 12/04/2017
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-在這個快速入門教學課程中，您必須使用 Docker 提取並執行 SQL Server 2017 容器映像[mssql-伺服器-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)。 然後以連接**sqlcmd**來建立您的第一個資料庫和執行查詢。
+在這個快速入門教學課程中，您必須使用 Docker 提取並執行 SQL Server 2017 容器映像[mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)。 然後以連接**sqlcmd**來建立您的第一個資料庫和執行查詢。
 
 此映像包含根據 Ubuntu 16.04 Linux 上執行的 SQL Server。 它可以用 Docker 引擎 1.8 + Docker 或 Linux 上的 Mac/windows。
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/04/2017
    docker pull microsoft/mssql-server-linux:2017-latest
    ```
 
-   前一個命令中提取最新的 SQL Server 2017 容器映像。 如果您想要提取的特定映像，您加上冒號和標記名稱 (例如， `microsoft/mssql-server-linux:2017-GA`)。 若要查看所有可用的映像，請參閱[mssql-伺服器-linux Docker 中樞頁面](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
+   前一個命令中提取最新的 SQL Server 2017 容器映像。 如果您想要提取的特定映像，您加上冒號和標記名稱 (例如， `microsoft/mssql-server-linux:2017-GA`)。 若要查看所有可用的映像，請參閱[mssql-server-linux Docker 中樞頁面](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
 
 1. 若要執行 Docker 容器映像，您可以使用下列命令從 bash 殼層 (Linux/macOS) 或提高權限的 PowerShell 命令提示字元。
 
@@ -76,9 +76,9 @@ ms.lasthandoff: 12/04/2017
    |-----|-----|
    | **-e ' ACCEPT_EULA = Y'** |  設定**ACCEPT_EULA**變數設為任何值，以確認您接受[使用者授權合約](http://go.microsoft.com/fwlink/?LinkId=746388)。 需要設定 SQL Server 映像。 |
    | **-e ' MSSQL_SA_PASSWORD =\<YourStrong ！Passw0rd\>'** | 指定您自己的強式密碼至少為 8 個字元，並符合[SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 需要設定 SQL Server 映像。 |
-   | **-p 1401:1433** | 將主機環境上的 TCP 通訊埠對應 （第一個值） 與容器中的 TCP 連接埠 （第二個值）。 在此範例中，SQL Server 接聽 TCP 1433 容器中，這連接埠，公開 1401，主機上。 |
-   | **-名稱 sql1** | 指定容器，而不是一個隨機產生的自訂名稱。 如果您執行多個容器，您無法重複使用這個相同的名稱。 |
-   | **microsoft/mssql 伺服器-linux:2017-最新版** | SQL Server 2017 Linux 容器映像。 |
+   | **-p 1401:1433** | 將主機環境上的 TCP 通訊埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。在此範例中，SQL Server 會在容器中接聽 TCP 1433 連接埠，同時向主機上 1401 連接埠公開。 |
+   | **-名稱 sql1** | 指定容器名稱，而不隨機產生名稱。執行多個容器時無法重複使用此相同名稱。 |
+   | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux 容器映像。 |
 
 1. 若要檢視您的 Docker 容器，請使用`docker ps`命令。
 
@@ -94,7 +94,7 @@ ms.lasthandoff: 12/04/2017
 
    ![Docker ps 命令輸出](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-1. 如果**狀態**資料行會顯示狀態為**向上**、 然後 SQL Server 正在執行中容器和接聽的通訊埠中指定**連接埠**資料行。 如果**狀態**資料行的 SQL Server 容器節目**Exited**，請參閱[疑難排解 > 一節的設定指南](sql-server-linux-configure-docker.md#troubleshooting)。
+1. 如果**STATUS** 資料行顯示狀態為 **Up**，表示 SQL Server 正在容器中執行，且正接聽著 **PORTS** 資料行中所指定的通訊埠。如果 SQL Server 容器的 **STATUS** 資料行顯示為**Exited**，請參閱[設定指南的疑難排解一節](sql-server-linux-configure-docker.md#troubleshooting)。
 
 `-h` （主機名稱） 參數也很有用，但它不會用於本教學課程中為了簡單起見。 這個自訂的值變更容器的內部名稱。 這是傳回的名稱，您會看到下列 TRANSACT-SQL 查詢：
 
@@ -218,13 +218,13 @@ SELECT @@SERVERNAME,
 
 ## <a id="connectexternal"></a>從連線容器外
 
-您也可以連接到 SQL Server 執行個體在 Docker 電腦上從任何外部 Linux、 Windows 或 macOS 工具，可支援 SQL 連線。
+您也可以從任何可支援 SQL 連線的外部 Linux、 Windows 或 macOS 工具連線到您 Docker 電腦上的 SQL Server 執行個體。
 
-下列步驟會使用**sqlcmd**您容器連接到容器中執行的 SQL Server 之外。 這些步驟假設您已經安裝您的容器之外的 SQL Server 命令列工具。 使用其他工具 時，適用相同的主體，而每項工具的唯一連接的程序。
+下列步驟會在您的容器之外使用**sqlcmd**來與容器中所執行的 SQL Server 連線。這些步驟假設您已在容器外安裝了 SQL Server 命令列工具。 使用其他工具時同樣也適用於相同的主體，只是各工具的連線都屬於唯一的程序。
 
 1. 尋找主控您的容器之電腦的 IP 位址。 在 Linux 上使用**ifconfig**或**ip 位址**。在 Windows 中，使用**ipconfig**。
 
-1. 執行指定的 IP 位址和連接埠對應到您的容器中的通訊埠 1433年的 sqlcmd。 在此範例中，這是在主機上的連接埠 1401年。
+1. 執行 sqlcmd 來指定 IP 位址和容器中 1433 通訊埠所對應的連接埠。在此範例中，即是指主機上的 1401 連接埠。
 
    ```bash
    sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourNewStrong!Passw0rd>'
@@ -238,7 +238,7 @@ SELECT @@SERVERNAME,
 
 其他常見的工具，以連接到 SQL Server 包括：
 
-- [Visual Studio 程式碼](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) Windows 上](sql-server-linux-develop-use-ssms.md)
 
 ## <a name="remove-your-container"></a>移除您的容器
@@ -256,7 +256,7 @@ docker rm sql1
 ```
 
 > [!WARNING]
-> 停止並移除容器，永久刪除容器中的任何 SQL Server 資料。 如果您要保留您的資料，[建立，並將容器之外的備份檔案複製](tutorial-restore-backup-in-sql-server-container.md)或使用[容器資料持續性技術](sql-server-linux-configure-docker.md#persist)。
+> 如果您要保留您的資料，請[建立備份檔案並複製至容器之外](tutorial-restore-backup-in-sql-server-container.md)，或使用[容器資料持續性技術](sql-server-linux-configure-docker.md#persist)。
 
 ## <a name="next-steps"></a>後續的步驟
 
