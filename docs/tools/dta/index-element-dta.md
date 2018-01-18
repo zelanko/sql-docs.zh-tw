@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18505a8ac88e1524f290d4559537ffe1f6751566
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ca17a222eb07926c89283ce1cc2f47f9412af59d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="index-element-dta"></a>Index 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]包含您想要建立或卸除的使用者指定組態索引的相關資訊。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|索引屬性|資料類型|描述|  
+|索引屬性|資料類型|Description|  
 |---------------------|---------------|-----------------|  
 |**叢集**|**boolean**|選擇性。 指定叢集索引。 設為 "true" 或 "false"，例如：<br /><br /> `<Index Clustered="true">`<br /><br /> 依預設，這個屬性設為 "false"。|  
 |**唯一**|**boolean**|選擇性。 指定唯一索引。 設為 "true" 或 "false"，例如：<br /><br /> `<Index Unique="true">`<br /><br /> 依預設，這個屬性設為 "false"。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
@@ -69,13 +69,13 @@ ms.lasthandoff: 12/21/2017
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[Create 元素 &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。|  
-|**子元素**|[索引的 Name 元素 &#40;DTA&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [索引的 Column 元素 &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> **PartitionColumn** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> [索引的 Filegroup 元素 &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> **PercentUsage** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。|  
+|**父元素**|[建立元素 &#40; Dta& &#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。|  
+|**子元素**|[Index &#40; Dta& &#41; 的 name 元素](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Index &#40; Dta& &#41; 的 column 元素](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> **PartitionColumn** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> [索引的 Filegroup 元素 &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> **PercentUsage** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。|  
   
 ## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
-## <a name="see-also"></a>請參閱  
- [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>另請參閱  
+ [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

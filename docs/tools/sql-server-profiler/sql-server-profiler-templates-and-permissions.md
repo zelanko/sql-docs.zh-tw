@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Profiler, about SQL Server Profiler
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8fcf7a6edeeedc09f6b83a2db354256f116633b0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe9d9cbe084c3e721f41ab6f0546c6cf52b9fe1a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 範本和權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]示範如何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在內部解析查詢。 這可讓系統管理員確切地查看哪些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或「多維度運算式」已提交給伺服器，以及伺服器如何存取資料庫或 Cube，以傳回結果集。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 |[使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|包含使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]對資料行設定篩選，用來篩選追蹤輸出的相關資訊。|  
 |[重新執行追蹤](../../tools/sql-server-profiler/replay-traces.md)|包含說明重新執行追蹤的意義，以及重新執行追蹤的必要條件等之相關資訊。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [啟動 SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - replaying traces
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 337569e89216611f972b0ac2305b42cc5c519826
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b21ed5c4b270a64c6eee3cc2d41cb4f1ba0518df
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>重新執行 Transact-SQL 指令碼 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]當測試效能問題的可能方案時，使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]重新執行[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼，並比較變更前後的效能。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [重新執行追蹤](../../tools/sql-server-profiler/replay-traces.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

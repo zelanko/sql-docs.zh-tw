@@ -1,7 +1,7 @@
 ---
-title: "表格式模型化 （Adventure Works 教學課程） |Microsoft 文件"
+title: "表格式模型 （1200年相容性層級） |Microsoft 文件"
 ms.custom: 
-ms.date: 04/19/2017
+ms.date: 01/17/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -23,13 +23,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f8c49a838abe5cc6948c59f3d0d67984122136a0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="tabular-modeling-adventure-works-tutorial"></a>表格式模型化 (Adventure Works 教學課程)
+# <a name="tabular-modeling-1200-compatibility-level"></a>表格式模型化 （1200年相容性層級）
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 本教學課程提供有關如何建立在 Analysis Services 表格式模型的課程[1200年相容性層級](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)使用[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)，並將您的模型部署到 Analysis Services伺服器內部部署或在 Azure 中。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   
 本教學課程並未提供下列相關課程或資訊：使用 SQL Server Management Studio 管理部署的表格式模型資料庫，或使用報表用戶端應用程式連接到部署的模型以瀏覽模型資料。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
 若要完成本教學課程，您將需要下列必要條件：  
   
 -   最新版的 [！包含[s](../ssdt/download-sql-server-data-tools-ssdt.md)。

@@ -15,13 +15,13 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: f80ae6bfb7b6c9b2aea60e3e929b1cc7202dacb2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 23eedac40aff1fcab50c2e05406d3c87b988e392
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>SQL Server on Linux 會操作 HA 可用性群組
+# <a name="operate-always-on-availability-groups-on-linux"></a>一律在 Linux 上的可用性群組操作
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
@@ -195,14 +195,14 @@ ms.lasthandoff: 12/01/2017
    >[!NOTE]
    >如果可用性群組只有非同步複本-若要避免遺失任何資料會將一個複本變更為同步，並等待同步處理。 接著升級此複本。
    
-   b.1。 在裝載次要複本升級的目標節點上停止資源
+   b.1. 在裝載次要複本升級的目標節點上停止資源
    
    然後再執行 [升級] 命令，停止資源，因此叢集將不進行監視並不必要地容錯。 下列範例會將會在節點上的位置限制式上停止資源。 更新`ag_cluster-master`的資源名稱和`nodeName1`與裝載複本升級的目標節點。
 
    ```bash
    pcs constraint location ag_cluster-master avoids nodeName1
    ```
-   b.2。 升級次要複本上的 SQL Server
+   b.2. 升級次要複本上的 SQL Server
 
    下列範例會升級`mssql-server`和`mssql-server-ha`封裝。
 
@@ -210,7 +210,7 @@ ms.lasthandoff: 12/01/2017
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
-   b.3。 移除位置條件約束
+   b.3. 移除位置條件約束
 
    然後再執行 [升級] 命令，停止資源，因此叢集將不進行監視並不必要地容錯。 下列範例會將會在節點上的位置限制式上停止資源。 更新`ag_cluster-master`的資源名稱和`nodeName1`與裝載複本升級的目標節點。
 

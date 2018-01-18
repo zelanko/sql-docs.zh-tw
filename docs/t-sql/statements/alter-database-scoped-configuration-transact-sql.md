@@ -28,30 +28,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cc17063b8f74e296562a460677121c5ef1c85016
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 9638d94c2bd6f461650b15f96c7a75c95eaeb861
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  這個陳述式可讓數個資料庫設定的設定**個別資料庫**層級。 這個陳述式位於[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]和 SQL Server 開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 這些設定包括：  
+  這個陳述式可讓數個資料庫設定的設定**個別資料庫**層級。 這個陳述式位於[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 這些設定包括：  
   
 - 清除程序快取。  
-  
 - 將 MAXDOP 參數設定為任意值 (1，2，...)，根據功能最適合用於該特定資料庫的主要資料庫，並設定不同的值 (例如 0) 的所有次要資料庫使用 （例如，針對報告查詢）。  
-  
 - 將與資料庫無關的查詢最佳化工具基數估計模型設定為相容性層級。  
-  
 - 在資料庫層級啟用或停用參數探測。
-  
 - 在資料庫層級啟用或停用查詢最佳化。
-
 - 啟用或停用識別快取，在資料庫層級。
-
-- 啟用或停用第一次編譯批次時，儲存在快取已編譯的計畫虛設常式。 
+- 啟用或停用第一次編譯批次時，儲存在快取已編譯的計畫虛設常式。    
   
  ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [TRANSACT-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +78,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 指定次要資料庫 （所有次要資料庫必須有相同的值） 的設定。  
   
 MAXDOP  **=**  {\<值 > |主要}  
-**\<值 >**  
+**\<value>**  
   
 指定的預設的 MAXDOP 設定，應該用於陳述式。 0 是預設值，並指出將會改為使用伺服器組態。 （除非它已設為 0），會覆寫在資料庫範圍 MAXDOP**的最大平行處理原則程度**sp_configure 設定伺服器層級。 查詢提示仍然可以覆寫資料庫範圍 MAXDOP 以微調需要不同設定的特定查詢。 所有這些設定都受到工作負載群組設定 MAXDOP。   
 
@@ -151,7 +145,7 @@ OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON |**OFF** }
 
 啟用或停用第一次編譯批次時，儲存在快取已編譯的計畫虛設常式。 預設值為 OFF。 一旦 OPTIMIZE_FOR_AD_HOC_WORKLOADS 已啟用的資料庫，將已編譯的計畫虛設常式的資料庫範圍的組態會儲存在快取時批次會編譯第一次。 計劃虛設常式有相較於完整的已編譯計畫的大小較小的記憶體耗用量。  如果批次編譯或執行一次，將移除已編譯的計畫虛設常式，並取代完整的已編譯計畫。
 
-##  <a name="Permissions"></a> 權限  
+##  <a name="Permissions"></a> Permissions  
  需要改變任何資料庫範圍組態   
 在資料庫中。 控制資料庫上的權限的使用者可以授與此權限。  
   
@@ -163,6 +157,8 @@ OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON |**OFF** }
  3 部分名稱查詢，查詢目前的資料庫連接的設定是接受的而不會編譯目前的資料庫內容中的 SQL 模組 （例如程序、 函數和觸發程序），因此會使用的選項所在的資料庫。  
   
  ALTER_DATABASE_SCOPED_CONFIGURATION 事件會新增為可用來引發 DDL 觸發程序的 DDL 事件。 這是 ALTER_DATABASE_EVENTS 觸發程序群組的子系。  
+ 
+ 資料庫範圍的組態設定會繼續使用與資料庫。 這表示，當指定的資料庫還原或附加，現有的組態設定就會持續。
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
 **MAXDOP**  
@@ -183,7 +179,7 @@ OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON |**OFF** }
   
  若要啟用查詢最佳化工具 hotfix 的舊版查詢最佳化工具使用 QUERYTRACEON 提示時，將 OR 條件的查詢提示之間的資料庫範圍組態設定，這表示如果是已啟用，選項會套用。  
   
-**具有 GeoDR**  
+**GeoDR**  
   
  可讀取的次要資料庫，例如 Alwayson 可用性群組和 GeoReplication，使用第二個值，藉由檢查資料庫狀態。 即使在容錯移轉不會發生重新編譯，而且技術上新的主要複本已使用次要設定的查詢，這個概念是當工作負載是不同結果，因此快取的查詢時，主要與次要資料庫之間的設定只不同而新的查詢中挑選適合於這些新的設定，請使用最佳的設定。  
   

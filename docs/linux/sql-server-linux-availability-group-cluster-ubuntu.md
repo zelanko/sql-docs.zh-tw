@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 501fd7eac7f7905a03a2861a462d4c1179beb15c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. 建立叢集。 
 
    >[!WARNING]
-   >由於出現已知問題，叢集的廠商調查，啟動叢集 ('電腦叢集 start') 會因錯誤的下方。 這是因為 /etc/corosync/corosync.conf 中設定的記錄檔的錯誤。 若要解決這個問題，請變更的記錄檔： /var/log/corosync/corosync.log。 或者，您可以建立 /var/log/cluster/corosync.log 檔案。
+   >由於出現已知問題，叢集的廠商調查，啟動叢集 ('電腦叢集 start') 會因錯誤的下方。 這是因為這建立叢集安裝命令時執行，此為錯誤 /etc/corosync/corosync.conf 中設定的記錄檔。 若要解決這個問題，請變更的記錄檔： /var/log/corosync/corosync.log。 或者，您可以建立 /var/log/cluster/corosync.log 檔案。
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
