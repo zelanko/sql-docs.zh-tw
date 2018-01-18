@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d207e1c930edc41b9270c7e1d34deacef9e08fa7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b6da81b09c6645fb16896e35d2a655833a1a860d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-options-sql-server-profiler"></a>重新執行選項 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]重新執行擷取的追蹤與之前[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，指定在重新執行選項**重新執行組態** 對話方塊。 若要啟動此對話方塊，請開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的重新執行追蹤檔案或資料表，然後在 [重新執行] 功能表上按一下 [啟動]。 如需有關重做追蹤時所需之權限的詳細資訊，請參閱＜ [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)＞。  
@@ -83,9 +83,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="about-the-health-monitor"></a>關於健全狀況監視器  
  健全狀況監視器是一個應用程式執行緒，可監視有關重新執行追蹤的模擬處理序，並結束重新執行作業中被封鎖的處理序。 您可以在 [重新執行組態] 對話方塊的 [進階重新執行選項] 索引標籤中，指定健全狀況監視器要等候幾秒，再結束被封鎖的處理序 ([健全狀況監視器等候間隔])。 如果您將此間隔設為 0，則健全狀況監視器就永遠都不會結束重新執行追蹤中的模擬封鎖處理序。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [重新執行追蹤](../../tools/sql-server-profiler/replay-traces.md)   
  [重新執行需求](../../tools/sql-server-profiler/replay-requirements.md)   
- [重新執行追蹤的考量 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
+ [重新執行追蹤 &#40; 的考量SQL Server Profiler &#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a652a6e44909984906fcbcbe2b962cc7de374fbb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4eeed88249de7d3d04bee44262d72e113a8e04ec
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]根元素，Database Engine Tuning Advisor xml 輸入或輸出檔**DTAXML**包含描述微調輸入和微調輸出的 Database Engine Tuning Advisor 所產生的所有項目。  
@@ -41,14 +41,14 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|attribute|描述|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**xmlns:xsi**|必要。 識別 XML 結構描述執行個體命名空間。 這個命名空間的屬性用來參考驗證 Database Engine Tuning Advisor XML 檔時所用的結構描述。<br /><br /> 必要值： [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |**xmlns**|必要。 識別 Database Engine Tuning Advisor 命名空間。<br /><br /> 如果您利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 XML 編輯器來編輯 Database Engine Tuning Advisor，[F1 說明和動態說明] 便會利用這個值，在《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中，尋找可能的參考主題。<br /><br /> 必要值：<br /><br /> [Database Engine Tuning Advisor XML 結構描述](http://go.microsoft.com/fwlink/?LinkId=43100) 命名空間|  
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
@@ -67,8 +67,8 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>範例  
  如需一般 **DTAXML** 元素的範例，請參閱 [XML 輸入檔範例 &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md)。  
   
-## <a name="see-also"></a>請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
+## <a name="see-also"></a>另請參閱  
+ [XML 輸入的檔參考 &#40; Database Engine Tuning advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
  [啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - aliases [SQL Server], shared memory
 ms.assetid: 5fff42e8-377f-4b40-b0c8-b02393f8a1af
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64005912a185443249487d710eeb6d8a7630ed1f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a1fa347661bb252d658c7c08c5d5a3b033cec3c1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="creating-a-valid-connection-string-using-shared-memory-protocol"></a>使用共用記憶體通訊協定建立有效的連接字串
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通往[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從用戶端在同一部電腦上執行使用共用的記憶體通訊協定。 共用記憶體並沒有可設定的內容。 連接時永遠會先嘗試使用共用記憶體，而且您無法將它從 **[用戶端通訊協定內容]** 清單上之 **[啟用的通訊協定]** 清單的最高位置移除。 您可以停用「共用記憶體」通訊協定，這在針對其他通訊協定中的其中一個通訊協定進行疑難排解時非常有幫助。  
@@ -60,8 +60,8 @@ WHERE session_id = @@SPID;
 > [!NOTE]  
 >  在 [伺服器] 方塊中指定 IP 位址會建立 TCP/IP 連接。  
   
-## <a name="see-also"></a>請參閱  
- [Creating a Valid Connection String Using TCP IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+## <a name="see-also"></a>另請參閱  
+ [建立有效的連接字串使用 TCP IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [建立有效的連接字串使用具名的管道](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
  [選擇網路通訊協定](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   

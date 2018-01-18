@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb73030cc1a2788a30deea03da2892351e614d2c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e4f82ff987d465b6dc765d06b83652e398069274
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 元素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]找到的問題只報告**ssbdiagnose**公用程式。 **ssbdiagnose** XML 輸出檔案中每個報告的問題都有一個 Issue 元素。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|attribute|描述|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**type**|識別 Issue 元素所報告的問題類別：<br /><br /> **「診斷」** ：報告在您分析 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 設定時發現的設定問題。<br /><br /> **「問題」** ：報告讓 **ssbdiagnose** 無法完成其分析的問題。 請更正問題並重新執行 **ssbdiagnose**。<br /><br /> **「事件」** ：報告在您執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -RUNTIME **檢查時發現的** 事件。 只有在您指定 **-SHOWEVENTS** 時才會報告事件。|  
 |**代碼**|識別訊息的錯誤號碼。|  
@@ -56,17 +56,17 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**string**，沒有長度限制。|  
-|**ReplTest1**|傳回錯誤訊息的文字。|  
+|**值**|傳回錯誤訊息的文字。|  
 |**出現次數**|每個報告的錯誤出現一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[DiagnosticInformation 元素 &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
+|**父元素**|[DiagnosticInformation 元素 &#40; ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
 |**子元素**|無|  
   
 ## <a name="example"></a>範例  
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/21/2017
 <Issue type="Diagnosis" code="1102" server="TestComputer" database="TargetDB" object="TargetDB">The master key was not found</diagnostic>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [ssbdiagnose 公用程式 &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+## <a name="see-also"></a>另請參閱  
+ [ssbdiagnose 公用程式 &#40;Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   

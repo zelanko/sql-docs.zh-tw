@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15243df46fad807a3078c9dfcd2c9043670ab05f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 91141f2ae083baf9792e4de9248de488b4146d07
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 屬性 (啟動參數索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此對話方塊來新增或移除的啟動參數， [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 啟動參數可能會對 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 效能產生很大的影響。 加入或變更啟動參數之前，請先參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
  若要移除參數，請選取參數，然後按一下 [移除]。  
   
 ## <a name="parameter-format"></a>參數格式  
- 請勿在參數之間輸入分隔符號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會自動加入分隔符號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會強制執行下列參數需求。  
+ 請勿在參數之間輸入分隔符號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會自動加入分隔符號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員會強制執行下列參數需求。  
   
 -   修剪任何啟動參數中的開頭和尾端空白。  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 |參數|簡短描述|  
 |---------------|-----------------------|  
-|-M|在單一使用者模式中啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
+|-m|在單一使用者模式中啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
 |-T1204|傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。|  
 |-T1224|停用以鎖定個數為基礎的鎖定擴大。|  
 |-T3608|防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自動啟動並復原任何資料庫，但 master 資料庫除外。|  

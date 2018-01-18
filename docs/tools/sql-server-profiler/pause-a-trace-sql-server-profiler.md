@@ -18,15 +18,15 @@ helpviewer_keywords:
 - stopping traces
 ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 776e2f8ed06f3a935cd425fa351e5ed26521ddd4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cbf301c5d846a42e1aed2571b60c0b88f638631b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>暫停追蹤 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]暫停追蹤可避免進一步事件資料被擷取，直到追蹤重新啟動。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  在 **[檔案]** 功能表上，按一下 **[暫停追蹤]**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

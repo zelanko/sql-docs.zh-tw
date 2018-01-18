@@ -16,15 +16,15 @@ helpviewer_keywords:
 - size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a6cd922723593b06779d36f62ee02326218c42e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5f3825b505604bb3d80bc640983a00bf9c80ae87
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>設定追蹤檔案的檔案大小上限 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以使用下列程序來設定追蹤檔案的最大檔案大小。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
      會出現 [追蹤屬性] **[追蹤屬性]**對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 於 [工具] 功能表，按一下 [選項]，並清除 [連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
+    >  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 在 [工具] 功能表上，按一下 [選項]，並清除 [進行連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
   
 2.  在 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  選取 [儲存至檔案]，然後指定要儲存追蹤資訊的檔案。  
   
-5.  在 [設定最大檔案大小] 核取方塊中，指定追蹤的檔案大小上限。 當檔案的大小到達此上限時，此檔案中便不再記錄追蹤事件。 如果選取 [啟用檔案換用] (預設會選取)，將發生下列情況：  
+5.  在 [設定最大檔案大小] 核取方塊中，指定追蹤的檔案大小上限。 當檔案的大小到達此上限時，此檔案中便不再記錄追蹤事件。 如果選取 [啟用檔案換用]\ (預設會選取)，將發生下列情況：  
   
      檔案換用選項會使得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在達到最大檔案大小時，關閉目前的檔案並建立新的檔案。 新檔與前一個檔案同名，但是名稱後會加上一個整數，以指出其順序；例如，如果原始追蹤檔案名為 filename_1.trc，則下一個追蹤檔案名為 filename_2.trc，依此類推。 如果指派給新換用檔案的名稱已為現有檔案所用，除非現有檔案是唯讀，否則會覆寫現有的檔案。 將追蹤資料儲存至檔案時，會預設啟用檔案復原選項。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     >  FAT32 檔案系統的檔案限制為略小於 4 GB。 當追蹤檔案到達該大小時，追蹤即失敗，並產生「磁碟空間不足」錯誤。 若要建立更大的檔案，請使用 NTFS 檔案系統。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

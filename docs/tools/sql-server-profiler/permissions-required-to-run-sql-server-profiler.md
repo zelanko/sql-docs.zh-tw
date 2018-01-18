@@ -19,15 +19,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Profiler
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7892bf572016f697a80878376cfeba4aea3b447c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0746ac193588e1d2a19bb65097ade1c56cf24fc5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>執行 SQL Server Profiler 所需的權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]根據預設，執行[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]需要與用來建立追蹤的 TRANSACT-SQL 預存程序相同的使用者權限。 若要執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，使用者必須被授與 ALTER TRACE 權限。 如需詳細資訊，請參閱 [GRANT 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用 EXECUTE AS 命令來模擬 User2。  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 嘗試驗證 User2，根據驗證結果，會發生下列其中一種情形：  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]嘗試驗證 User2，並根據結果中，發生下列其中一項：  
   
     1.  如果無法驗證 User2， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會傳回錯誤，並以 User1 的身分繼續重新執行追蹤。  
   
@@ -70,11 +70,11 @@ ms.lasthandoff: 12/21/2017
   
  ![SQL Server Profiler 重新執行追蹤權限](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "SQL Server Profiler 重新執行追蹤權限")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler 預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [重新執行追蹤](../../tools/sql-server-profiler/replay-traces.md)   
- [建立追蹤 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [重新執行追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [建立追蹤 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [重新執行追蹤資料表 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [重新執行追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
   
   

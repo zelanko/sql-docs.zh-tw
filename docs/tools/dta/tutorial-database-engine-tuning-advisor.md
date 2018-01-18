@@ -17,15 +17,15 @@ helpviewer_keywords:
 - tutorials [Database Engine Tuning Advisor]
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a21a71c1ae0239e4725f09b404fe7df8d62da697
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0c6068064e47e571f143070bfd853c6df4e913d4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>教學課程：Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]歡迎使用 Database Engine Tuning Advisor 教學課程。 Database Engine Tuning Advisor 會檢查在您指定的資料庫中如何處理查詢，之後，它會建議您如何修改資料庫結構 (如索引、索引檢視和資料分割) 來改進查詢處理效能。  
@@ -35,13 +35,13 @@ Database Engine Tuning Advisor 提供兩個使用者介面：圖形化使用者�
 ## <a name="what-you-will-learn"></a>學習內容  
 這個教學課程將告訴您如何導覽 Database Engine Tuning Advisor GUI，以及如何利用這個 GUI 和 **dta** 公用程式來執行某些基本工作。 它包含下列課程：  
   
-[第 1 課：Database Engine Tuning Advisor 中的基本導覽](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[Database Engine Tuning Advisor 中的第 1 課： 基本導覽](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
 在這個課程中，您將熟悉新的 Database Engine Tuning Advisor GUI，以及學習如何設定顯示選項和配置。  
   
-[第 2 課：使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[第 2 課： 使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
 在這個課程中，您將學會如何使用 Database Engine Tuning Advisor GUI 來執行基本微調工作。  
   
-[課程 3：使用 dta 命令提示字元公用程式](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[第 3 課： 使用 dta 命令提示字元公用程式](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
 在這個課程中，您將學習如何啟動 **DTA** 命令提示字元公用程式，以及如何執行簡單的微調命令。  
   
 ## <a name="requirements"></a>需求  
@@ -57,7 +57,7 @@ Database Engine Tuning Advisor 提供兩個使用者介面：圖形化使用者�
 -   ＜[dta Utility](../../tools/dta/dta-utility.md) ＞提供有關命令提示字元公用程式的參考資料，以及可用來控制公用程式作業的選擇性 XML 檔案。  
   
 ## <a name="next-lesson"></a>下一課  
-[課程 1：Database Engine Tuning Advisor 中的基本導覽](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[Database Engine Tuning Advisor 中的第 1 課： 基本導覽](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
   
   
   

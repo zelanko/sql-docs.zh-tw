@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: DropOnlyMode element
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27b7db70bf4ee3a7e775c25dba130f1546b1bb82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6c30ec1f3a06e0bb2142dd889852ddb071b68d96
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定 Database Engine Tuning Advisor 應該只考慮卸除現有的索引、 索引檢視表或資料分割，在微調工作階段。 當指定這個微調選項時，不考慮任何新的實體設計結構。  
@@ -45,9 +45,9 @@ ms.lasthandoff: 12/21/2017
   
  **出現次數**︰選擇性。 每個 **TuningOptions** 元素只能使用這個元素一次。 如果在 **TuningOptions** 元素中指定了下列元素，就不能使用這個元素：  
   
--   [FeatureSet 元素 &#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
+-   [FeatureSet 元素 &#40; Dta& &#41;](../../tools/dta/featureset-element-dta.md)  
   
--   [Partitioning 元素 &#40;DTA&#41;](../../tools/dta/partitioning-element-dta.md)  
+-   [資料分割元素 &#40; Dta& &#41;](../../tools/dta/partitioning-element-dta.md)  
   
 -   [KeepExisting 元素 &#40;DTA&#41;](../../tools/dta/keepexisting-element-dta.md) 設為 **ALL**  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 </TuningOptions>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>另請參閱  
+ [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

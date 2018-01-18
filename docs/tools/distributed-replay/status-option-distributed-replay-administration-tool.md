@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3db4f399c7d11d3876a8de94d99c34cc605bba2f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e0697309c3056fd3b720c2b102b6cdcc3cd5eaae
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>狀態選項 (Distributed Replay 管理工具)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， **DReplay.exe**，是一種命令列工具，可用來與 distributed 的 replay controller 通訊。 此主題描述 **status** 命令列選項與對應的語法。  
@@ -60,8 +60,8 @@ dreplay status –m localhost -f 60
   
  如需詳細資訊，請參閱 [Distributed Replay 安全性](../../tools/distributed-replay/distributed-replay-security.md)。  
   
-## <a name="see-also"></a>請參閱  
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+## <a name="see-also"></a>另請參閱  
+ [SQL Server Distributed 的 Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Transact-SQL 偵錯工具](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   

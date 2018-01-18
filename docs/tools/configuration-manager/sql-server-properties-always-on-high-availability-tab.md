@@ -15,13 +15,13 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c6991b8919cf756001cd3f61df396dee8591579
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 87645b4a48c157c65876ecfad89a4fef4dcd62c2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 屬性 (AlwaysOn 高可用性索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**Alwayson 高可用性** 索引標籤**SQL Server 屬性**對話方塊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員來啟用或停用 Alwayson 可用性群組中的功能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 啟用 AlwaysOn 可用性群組是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體將可用性群組作為高可用性和災害復原方案的必要條件。  

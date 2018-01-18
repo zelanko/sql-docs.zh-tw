@@ -1,7 +1,7 @@
 ---
 title: "sys.database_scoped_configurations (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 06/29/2016
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -23,13 +23,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 70b0f5c2ecb1f15828d5ac1c219033c337bb3a8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e9df8c18b3ca7556b10e3e2d453c41735a07e52
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (TRANSACT-SQL)
+# <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   包含每個組態的一個資料列。 
@@ -37,17 +37,19 @@ ms.lasthandoff: 11/17/2017
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|組態選項的識別碼。|  
-|**name**|**nvarchar （60)**|組態選項的名稱。 如需可能的設定資訊，請參閱[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
-|**值**|**sqlvariant**|此為主要複本的組態選項所設定的值。|  
+|**name**|**nvarchar(60)**|組態選項的名稱。 如需可能的設定資訊，請參閱[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
+|**value**|**sqlvariant**|此為主要複本的組態選項所設定的值。|  
 |**value_for_secondary**|**sqlvariant**|設定次要複本的此組態選項的值。|  
   
 ##  <a name="Permissions"></a> Permissions  
- 需要 **public** 角色的成員資格。  
+ 需要 **public** 角色中的成員資格。  
   
 ## <a name="remarks"></a>備註  
  當傳回做為值的 NULL **value_for_secondary**，這表示次要資料庫會設定為主要。  
+ 
+ 資料庫範圍的組態設定會繼續使用與資料庫。 這表示，當指定的資料庫還原或附加，現有的組態設定就會持續。
   
-## <a name="see-also"></a>請參閱＜  
- [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
   
   

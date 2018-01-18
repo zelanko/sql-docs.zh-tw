@@ -21,15 +21,15 @@ helpviewer_keywords:
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5eb402990dd9859a957c64d8d6bf47f7d2b3213
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlmaint**公用程式會執行一組指定的一或多個資料庫的維護作業。 利用 **sqlmaint** 來執行 DBCC 檢查、備份資料庫及其交易記錄、更新統計資料，以及重建索引。 所有資料庫維護活動都會產生一份可傳給指定文字檔、HTML 檔或電子郵件帳戶的報表。 **sqlmaint** 會執行舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。 若要從命令提示字元執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 維護計畫，請使用 [dtexec 公用程式](../integration-services/packages/dtexec-utility.md)。  
@@ -86,7 +86,7 @@ number[minutes | hours | days | weeks | months]
  指定傳回 **sqlmaint** 的語法圖。 這個參數必須單獨使用。  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 *server_name***\\***instance_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定*server_name***\\***instance_name*連接到具名執行個體[!INCLUDE[ssDE](../includes/ssde-md.md)]該伺服器上。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
   
  **-U** *login_ID*  
  指定連接伺服器時所用的登入識別碼。 如果未提供， **sqlmaint** 會嘗試使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證。 如果 *login_ID* 包含特殊字元，則必須以雙引號 (") 括住；否則可省略雙引號。  
@@ -275,7 +275,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)  
   

@@ -26,15 +26,15 @@ helpviewer_keywords:
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: "49"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 13a41dd247105dcce2580027c014aa266df5ed9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bbd6a75a0ff9e3be746c46882ee93e201d7955ef
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="osql-utility"></a>osql 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Osql**公用程式可讓您輸入[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式、 系統程序和指令碼檔案。 這個公用程式利用 ODBC 來與伺服器通訊。  
@@ -100,7 +100,7 @@ C:\>osql
  使用信任連接，不要求密碼。  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 指定 *server_name***\\***instance_name* ，即可連接至該伺服器上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體。 若未指定伺服器，則 **osql** 會連接到本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 從網路中的遠端電腦執行 **osql** 時，需要使用此選項。  
+ 指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 指定*server_name***\\***instance_name*連接到具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]該伺服器上。 若未指定伺服器，則 **osql** 會連接到本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 從網路中的遠端電腦執行 **osql** 時，需要使用此選項。  
   
  **-H** *wksta_name*  
  這是一個工作站名稱。 工作站名稱儲存在 **sysprocesses.hostname** 中， **sp_who**會顯示它。 如果未指定這個選項，就會假設目前的電腦名稱。  
@@ -175,7 +175,7 @@ osql -E -q "select name, object_id from %table%"
  列印效能統計資料。  
   
  **-b**  
- 指定在發生錯誤時， **osql** 會結束作業並傳回 DOS ERRORLEVEL 值。 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 錯誤訊息的嚴重性層級大於或等於 11 時，傳回 DOS ERRORLEVEL 變數的值是 1；否則，傳回的值是 0。 [!INCLUDE[msCoName](../includes/msconame-md.md)] MS-DOS 批次檔可以測試 DOS ERRORLEVEL 的值，而且能夠適當處理錯誤。  
+ 指定在發生錯誤時， **osql** 會結束作業並傳回 DOS ERRORLEVEL 值。 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 錯誤訊息的嚴重性層級大於或等於 11 時，傳回 DOS ERRORLEVEL 變數的值是 1；否則，傳回的值是 0。 [!INCLUDE[msCoName](../includes/msconame-md.md)]MS-DOS 批次檔可以測試 DOS ERRORLEVEL 的值，並適當處理錯誤。  
   
  **-u**  
  指定無論 *input_file* 的格式為何， *output_file*均以 Unicode 格式儲存。  
@@ -200,7 +200,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>備註  
  **osql** 公用程式會在已設定此處所列之區分大小寫選項的情況下，直接從作業系統中啟動。 啟動 **osql**後，其會接受 SQL 陳述式並以互動方式傳送至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 結果會格式化，顯示在畫面中 (**stdout**)。 使用 QUIT 或 EXIT 來結束 **osql**。  
   
- 若您在啟動 **osql**時未指定使用者名稱，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會檢查及使用類似 **osqluser=(***user***)** 或 **osqlserver=(***server***)**等環境變數。 如果未設定任何環境變數，就會使用工作站使用者名稱。 如果您沒有指定伺服器，就會使用工作站的名稱。  
+ 在啟動時，如果您未指定使用者名稱**osql**，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]檢查環境變數及使用，例如**osqluser = (***使用者***)**或**osqlserver = (***伺服器***)**。 如果未設定任何環境變數，就會使用工作站使用者名稱。 如果您沒有指定伺服器，就會使用工作站的名稱。  
   
  若 **-U** 或 **-P** 選項皆未使用，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會嘗試使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證模式執行連接。 這項驗證是以執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **使用者的**Windows 帳戶為基礎。  
   
@@ -212,7 +212,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL 命令  
  除了 [!INCLUDE[tsql](../includes/tsql-md.md)] osql **內的**陳述式，您也可以使用這些命令。  
   
-|命令|描述|  
+|Command|描述|  
 |-------------|-----------------|  
 |GO|執行在上一個 GO 之後輸入的所有陳述式。|  
 |RESET|清除您已輸入的任何陳述式。|  
@@ -259,7 +259,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  可能的話，請使用 **-E**選項 (信任連接)。  
   
- 當以互動方式使用 **osql** 時，您可以利用 **:r***file_name*，將作業系統檔案讀到命令緩衝區中。 這會將 *file_name* 中的 SQL 指令碼當作單一批次直接傳給伺服器。  
+ 當使用**osql**以互動方式，您可以將作業系統檔案讀取到命令緩衝區與 **: r * * * file_name*。 這會將 *file_name* 中的 SQL 指令碼當作單一批次直接傳給伺服器。  
   
 > [!NOTE]  
 >  當使用 **osql**時，如果批次分隔字元 GO 出現在 SQL 指令碼檔案中， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將其視為語法錯誤。  
@@ -340,10 +340,10 @@ GO
   
  這個陳述式會產生 `10.3496`的結果，這表示在儲存值時，所有小數點保留不動。  
   
-## <a name="see-also"></a>請參閱  
- [註解 &#40;MDX&#41;](../mdx/comment-mdx.md)   
+## <a name="see-also"></a>另請參閱  
+ [註解 &#40;MDX &#41;](../mdx/comment-mdx.md)   
  [-&#40;註解 &#41;&#40;MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
- [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST 和 CONVERT &#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40;TRANSACT-SQL &#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

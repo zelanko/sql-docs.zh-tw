@@ -2,7 +2,7 @@
 title: "下載並安裝 Microsoft SQL 作業 Studio （預覽） |Microsoft 文件"
 description: "下載和安裝 Microsoft SQL 作業 Studio （預覽） for Windows、 macOS 或 Linux"
 ms.custom: tools|sos
-ms.date: 12/19/2017
+ms.date: 01/17/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a34a03b447e26f072b6c8064cd115333600fef4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0621d5af62b5f5b8b694d47cf16d766215a0c819
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>下載並安裝 SQL 作業 Studio （預覽）
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]在 Windows、 macOS 和 Linux 上執行。
 
-下載並安裝最新版本中，*年 12 月公用預覽*:
+下載並安裝最新版本中，*年 1 月公用預覽*:
 
 |平台|下載|發行日期|
 |:---|:---|:---|
-|Windows|[安裝程式](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=865304)|2017 年 12 月 19 日 |
-|MacOS|[.zip](https://go.microsoft.com/fwlink/?linkid=865306)|2017 年 12 月 19 日 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=865308)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=865309)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=865307)|2017 年 12 月 19 日|
+|視窗|[安裝程式](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|2018 年 1 月 17 日 |
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|2018 年 1 月 17 日 |
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|2018 年 1 月 17 日|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
@@ -40,27 +40,27 @@ ms.lasthandoff: 12/21/2017
 
 **安裝程式**
 
-1. 下載並執行[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 安裝程式](https://go.microsoft.com/fwlink/?linkid=865305)。
+1. 下載並執行[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 安裝程式](https://go.microsoft.com/fwlink/?linkid=866480)。
 1. 啟動[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]應用程式。
 
 
 **.zip 檔案**
 
-1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=865304)。
+1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=866479)。
 2. 瀏覽至下載的檔案，並將它解壓縮。
 3. 執行 `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>取得 macOS SQL 作業 Studio （預覽）
 
-1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]如 macOS](https://go.microsoft.com/fwlink/?linkid=865306)。
+1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]如 macOS](https://go.microsoft.com/fwlink/?linkid=866481)。
 2. 若要展開的 zip 內容，請按兩下它。
 3. 讓[!INCLUDE[name-sos](../includes/name-sos-short.md)]用於*啟動控制板*，拖曳*sqlops.app*至*應用程式*資料夾。
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>取得 SQL 作業 Studio （預覽） for Linux
 
-1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Linux](https://go.microsoft.com/fwlink/?linkid=865307)。
+1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Linux](https://go.microsoft.com/fwlink/?linkid=866482)。
 1. 擷取檔案和啟動[!INCLUDE[name-sos](../includes/name-sos-short.md)]，開啟新的終端機視窗，然後輸入下列命令：
 
    ```bash
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/21/2017
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]在 Windows、 macOS 和 Linux 上執行，並支援下列平台：
 
-### <a name="windows"></a>Windows
+### <a name="windows"></a>視窗
 - Windows 10 (64 位元)
 - Windows 8.1 (64 位元)
 - Windows 8 (64 位元)
@@ -109,9 +109,9 @@ ms.lasthandoff: 12/21/2017
 - Windows Server 2012 (64 位元)
 - Windows Server 2008 R2 (64 位元)
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 - macOS 10.13 高利也
-- macOS 10.12 利也
+- macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
 - Red Hat Enterprise Linux 7.4
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/21/2017
 
 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 
 請參閱下列快速入門，若要開始使用其中一項：
 - [連接及查詢 SQL Server](quickstart-sql-server.md)

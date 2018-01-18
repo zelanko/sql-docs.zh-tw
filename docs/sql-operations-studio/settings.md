@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2edea069c05e7ac0316042250f336f1a8c455af0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>使用者和工作區設定
 
@@ -47,12 +47,22 @@ ms.lasthandoff: 12/21/2017
 
 根據您的平台的使用者設定檔的位置為：
 
-* **Windows**`%APPDATA%\sqlops\User\settings.json`
-* **Mac**`$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux**`$HOME/.config/sqlops/User/settings.json`
+* **Windows** `%APPDATA%\sqlops\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
+* **Linux** `$HOME/.config/sqlops/User/settings.json`
 
 工作區設定檔案位於`.[!INCLUDE[name-sos](../includes/name-sos-short.md)]`專案資料夾中的。
 
+## <a name="hot-exit"></a>熱結束
+
+SQL 作業 Studio 將檔案記住未儲存的變更，當您結束預設。 這是在 Visual Studio 程式碼中的熱結束功能相同。
+
+根據預設，熱結束已關閉。 啟用作用結束藉由編輯`files.hotExit`設定。 如需詳細資訊，請參閱[（在 Visual Studio 程式碼文件中） 的熱結束](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
+
+
+## <a name="tab-color"></a>索引標籤色彩
+
+若要簡化用來識別您正在使用哪些連線，在編輯器中開啟的索引標籤可以有其設定以符合連接所屬的伺服器群組的色彩的色彩。 根據預設，索引標籤色彩預設為關閉的。 藉由編輯啟用索引標籤色彩`sql.tabColorMode`設定。
 
 ## <a name="additional-resources"></a>其他資源
 

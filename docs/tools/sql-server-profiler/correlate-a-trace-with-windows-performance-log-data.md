@@ -19,18 +19,18 @@ helpviewer_keywords:
 - SQL Server Profiler, correlating trace with log data
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe3b9fbc7a0b1b7eed6b478fff11ef4abb2cde83
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9fc0474e0f3c823b2ca3fa16979e16ff5123f321
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>使追蹤與 Windows 效能記錄資料相互關聯
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以開啟 Microsoft Windows 效能記錄檔中，選擇您想要與追蹤相互關聯的計數器，顯示選取的效能計數器，在追蹤旁[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]圖形化使用者介面。 選取追蹤視窗中的事件後， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的 [系統監視器] 資料窗格中的紅色直條，表示與選取的追蹤事件相互關聯的效能記錄資料。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以開啟 Microsoft Windows 效能記錄檔中，選擇您想要與追蹤相互關聯的計數器，顯示選取的效能計數器，在追蹤旁[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]圖形化使用者介面。 選取追蹤視窗中的事件後，[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的 [系統監視器] 資料窗格中的紅色直條，表示與選取的追蹤事件相互關聯的效能記錄資料。  
   
  若要使追蹤與效能計數器相互關聯，請開啟包含 **StartTime** 與 **EndTime** 資料行的追蹤檔案或資料表，然後在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [檔案] 功能表上，按一下 [匯入效能資料]。 接著可以開啟效能記錄，然後選取要與追蹤相互關聯的「系統監視器」物件與計數器。  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  在 [開啟] 對話方塊中，選取含有效能記錄的檔案。 擷取效能記錄資料的期間必須與擷取追蹤資料的期間相同。  
   
-4.  在 [效能計數器限制] 對話方塊中，針對要顯示在追蹤旁的系統監視器物件與計數器，選取其對應的核取方塊。 按一下 **[確定].**  
+4.  在 [效能計數器限制] 對話方塊中，針對要顯示在追蹤旁的系統監視器物件與計數器，選取其對應的核取方塊。 按一下 **[確定]**。  
   
 5.  選取追蹤事件視窗中的事件，或使用方向鍵來瀏覽追蹤事件視窗中相鄰的幾個資料列。 [系統監視器資料] 視窗中的紅色直條，代表已與所選追蹤事件產生相互關聯的效能記錄資料。  
   

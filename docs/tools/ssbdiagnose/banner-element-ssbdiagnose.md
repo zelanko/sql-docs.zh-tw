@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4da84a33034bc664ddefd264d9346034ac69ba49
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 67483820a6f6b9e0033808df7233d1908002fa69
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 元素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]識別產生的公用程式**ssbdiagnose**輸出 XML 檔案。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|attribute|描述|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**title**|識別產生 **ssbdiagnose** XML 輸出檔的公用程式。|  
 |**product**|識別產生 **ssbdiagnose** XML 輸出檔的產品。|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[DiagnosticInformation 元素 &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
+|**父元素**|[DiagnosticInformation 元素 &#40; ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
 |**子元素**|無。|  
   
 ## <a name="example"></a>範例  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/21/2017
 <Banner title="Service Broker Diagnostics Utility" product="Microsoft SQL Server" version="10.0.1073.0" />  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [ssbdiagnose 公用程式 &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+## <a name="see-also"></a>另請參閱  
+ [ssbdiagnose 公用程式 &#40;Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
 caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ed0ccaed0106d331812d56f3aa5c29e0d70c4d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ff041f428b3b5558e0378f54785da88115c9f7c0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>SQL 全文檢索篩選背景程式啟動器 (服務索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]從開始[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，就會使用 SQL 全文檢索篩選背景程式啟動器 （FDHOST 啟動器） 服務[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文檢索。 如果您使用全文檢索搜尋，這個服務就必須執行。 如需篩選背景程式主機處理序的相關資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜全文檢索搜尋架構＞。  

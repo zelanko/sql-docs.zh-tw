@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 538062f3-4629-4675-8568-5dcf2fff098b
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 794f0f7440b01fcf4b1bfd1b5d0efc877d576cac
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5f13da489e59444396913904cb786fd344dcaf34
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>用戶端通訊協定 (SQL Server 組態管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要設定所使用的通訊協定的順序[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端，此電腦上，以滑鼠右鍵按一下**儲存的.reg**中主控台窗格中，然後按一下**屬性**，或以滑鼠右鍵按一下的通訊協定，在詳細資料窗格中，然後按一下**順序**。  

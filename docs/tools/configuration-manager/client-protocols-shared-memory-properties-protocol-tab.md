@@ -16,15 +16,15 @@ helpviewer_keywords:
 - client protocols [SQL Server]
 ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53582937116f3acfb819ab460dc166ce1f50360a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 547cdea92354132d8ed2bf9804625763ae6d8ab0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>用戶端通訊協定 - 共用記憶體屬性 (通訊協定索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 使用**通訊協定**索引標籤上**共用記憶體屬性**對話方塊來檢視或修改共用記憶體。 如需有關連接字串的詳細資訊，請參閱＜ [Creating a Valid Connection String Using Shared Memory Protocol](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)＞。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/21/2017
  **已啟用**  
  可能的值為 [是] 和 [否]。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [選擇網路通訊協定](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

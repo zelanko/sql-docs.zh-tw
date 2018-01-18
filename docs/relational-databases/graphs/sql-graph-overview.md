@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: "1"
 author: shkale-msft
-ms.author: shkale
+ms.author: shkale;barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ab17b98a23afa3d209716145d7de39a6955cdf6d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a0828b1e50472ecec5f256c9ddfe13e8f0db8b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>處理使用 SQL Server 和 Azure SQL Database 的圖形
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

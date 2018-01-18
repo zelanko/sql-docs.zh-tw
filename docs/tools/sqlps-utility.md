@@ -16,15 +16,15 @@ helpviewer_keywords:
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1869cd0a65ab63d5d579eb8c11b2329a8fbbebe8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd4e67397b52b3e7248ce061312517841eef38e5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlps-utility"></a>sqlps 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Sqlps**公用程式會啟動 Windows PowerShell 工作階段[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]PowerShell 提供者和 cmdlet 載入和註冊。 您可以輸入 PowerShell 命令或指令碼，以便使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 元件來處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體及其物件。  
@@ -75,7 +75,7 @@ sqlps
  指定要執行的 PowerShell 命令區塊，此區塊必須以大括號 {} 括住。 只有當*Script_block* 或其他 **Script_block** 公用程式工作階段呼叫了 **Script_block** 公用程式時，才可指定 **Script_block** 。 *argument_array* 是 PowerShell 變數的陣列，其中包含 *script_block*中 PowerShell 命令的引數。  
   
  *string* [ *command_parameters* ]  
- 指定包含要執行之 PowerShell 命令的字串。 使用 **"&{***command***}"** 的格式。 引號表示字串，而叫用運算子 (&) 會讓 **sqlps** 公用程式執行此命令。  
+ 指定包含要執行之 PowerShell 命令的字串。 使用格式**"& {***命令***}"**。 引號表示字串，而叫用運算子 (&) 會讓 **sqlps** 公用程式執行此命令。  
   
  [ **-?** | **-Help** ]  
  顯示 **sqlps** 公用程式選項的語法摘要。  
@@ -124,7 +124,7 @@ sqlps -Command "&{.\MyFolder.MyScript.ps1}"
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟用或停用伺服器網路通訊協定](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)  
   

@@ -19,7 +19,7 @@
 ## [Analysis Services 範例](analysis-services-samples.md)
 
 # 教學課程
-## [表格式模型化 (Adventure Works 教學課程)](tabular-modeling-adventure-works-tutorial.md)  
+## [表格式模型 (1200 相容性層級)](tabular-modeling-adventure-works-tutorial.md)  
 ### [課程 1：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)  
 ### [課程 2：新增資料](lesson-2-add-data.md)  
 ### [課程 3：標記為日期資料表](lesson-3-mark-as-date-table.md)  
@@ -36,7 +36,7 @@
 ### [補充課程 - 使用資料列篩選實作動態安全性](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [補充課程 - 設定 Power View 報表的報表屬性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [多維度模型化 (Adventure Works 教學課程)](multidimensional-modeling-adventure-works-tutorial.md)  
+## [多維度模型化](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [教學課程案例](analysis-services-tutorial-scenario.md)  
 ### [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](install-sample-data-and-projects.md)  
 ### [課程 1：在 Analysis Services 專案內定義資料來源檢視](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  
@@ -93,7 +93,7 @@
 ## [管理伺服器](../analysis-services/instances/analysis-services-instance-management.md)
 ## [追蹤事件](../analysis-services/trace-events/analysis-services-trace-events.md)
 
-# 開發人員
+# Developer
 ## 表格式模型
 ### [相容性層級 1200 及以上的表格式模型程式設計](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
 #### [表格式模型指令碼語言 (TMSL)](tabular-model-scripting-language-tmsl-reference.md)

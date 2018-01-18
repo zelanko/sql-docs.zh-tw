@@ -20,15 +20,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e678a5fd9886cbe8c529e3732ae08fb1480c22b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ac087c079ca461875d148a9c9bedcab77fe7852b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 篩選追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以在資料行上定義篩選[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]追蹤事件，讓資訊只擷取您感興趣的事件。 追蹤篩選可降低追蹤對系統效能的影響，因為擷取的追蹤事件減少了。 透過篩選，也能讓追蹤輸出較容易讀取，因為需進行搜尋的事件數目也比較少。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  [篩選追蹤中的事件 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [篩選追蹤](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da0825fe578e3c908fd4b0728b98fb9e6b8c1326
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e0584999dc8e98243c00f4bbd174d1bfa8b14ba2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定的最大空間 （mb） 供 Database Engine Tuning Advisor 的微調建議 （索引和資料分割集）。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**unsignedInt**，沒有長度限制。|  
 |**預設值**|無。|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**父元素**|[TuningOptions 元素 &#40; Dta& &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**子元素**|無|  
   
 ## <a name="remarks"></a>備註  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>範例  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>說明  
  下列程式碼範例顯示如何將 1500 MB 的限制設為微調建議所能取用的最大磁碟空間：  
   
 ## <a name="code"></a>程式碼  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/21/2017
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>另請參閱  
+ [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

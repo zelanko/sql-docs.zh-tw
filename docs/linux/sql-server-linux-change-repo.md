@@ -1,5 +1,5 @@
 ---
-title: "註冊 SQL Server on Linux 的公開上市存放庫 |Microsoft 文件"
+title: "一般可用性的儲存機制註冊 SQL Server on Linux |Microsoft 文件"
 description: "將儲存機制從預覽 SQL Server 2017 儲存機制變更為在 Linux 上的通用版本上市 (GA) 儲存機制 （GA 有時也稱為 RTM）。"
 author: annashres
 ms.author: anshrest
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c2c674c90b327cfe4baf2d109fab09d045f890
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f74c74bddf8337bf4555ce4ecdf0b6e2c869e44f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>變更 GA 儲存機制預覽儲存機制從儲存機制
 

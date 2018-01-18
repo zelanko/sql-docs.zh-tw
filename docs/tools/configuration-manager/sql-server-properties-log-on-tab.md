@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 623948bfc41640e1aebe0b492872fbc095c056f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb658dd1907f8f78259c82b89f8aaeef3616906d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 屬性 (登入索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**登入** 索引標籤**SQL Server 屬性**對話方塊來指定所使用的帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務變更密碼的帳戶，並以啟動和停止該服務。 帳戶密碼的變更會立即生效。  

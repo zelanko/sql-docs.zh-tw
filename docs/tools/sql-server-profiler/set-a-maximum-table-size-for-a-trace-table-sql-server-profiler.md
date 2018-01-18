@@ -16,15 +16,15 @@ helpviewer_keywords:
 - maximum table size for traces
 ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b1f56bc8b48a3a245c55e35ac312142c021c8b8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4fa072970b86dc4e2b16fe285e4ca2ee2a405981
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>設定追蹤資料表的資料表大小上限 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題描述如何設定追蹤資料表大小上限，使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
      會出現 [追蹤屬性] **[追蹤屬性]**對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 於 [工具] 功能表，按一下 [選項]，並清除 [連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
+    >  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 在 [工具] 功能表上，按一下 [選項]，並清除 [進行連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
   
 2.  在 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   
@@ -57,8 +57,8 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     >  當資料表的資料列數超過您所指定的最大值時，就不會再記錄追蹤事件。 不過，仍會繼續追蹤。  
   
-## <a name="see-also"></a>請參閱  
- [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   
+## <a name="see-also"></a>另請參閱  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

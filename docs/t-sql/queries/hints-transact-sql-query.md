@@ -255,7 +255,7 @@ ms.lasthandoff: 01/17/2018
  如果不可能執行這類計畫，查詢最佳化工具會傳回錯誤，而不是將錯誤偵測延遲到查詢執行時。 資料列可能包含可變長度的資料行；[!INCLUDE[ssDE](../../includes/ssde-md.md)] 允許資料列定義成超出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理能力的最大潛在大小。 一般而言，雖然有最大潛在大小，但應用程式仍會儲存實際大小在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理能力限制之內的資料列。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 發現太長的資料列，便會傳回執行錯誤。  
  
 <a name="use_hint"></a>使用提示 ( **'***hint_name***'** )  
- **適用於**： 適用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ **適用於**： 適用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
  
  提供一個或多個額外的提示，提示名稱所指定的查詢處理器**在單引號中**。 
 

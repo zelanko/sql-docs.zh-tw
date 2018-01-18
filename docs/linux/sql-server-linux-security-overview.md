@@ -1,9 +1,9 @@
 ---
 title: "SQL Server on Linux 的安全性限制 |Microsoft 文件"
 description: "本主題描述 SQL Server Linux 的限制。"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.workload: Inactive
-ms.openlocfilehash: 989c34ff57fcc6ef0aa561c58043d1073772b63c
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: a120ed0cf8de077c3d1de6d695554b2585a7d9da
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>SQL Server on Linux 的安全性限制
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/14/2017
 
 如需 SQL Server 中可用的安全性功能的詳細資訊，請參閱[SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 如需常見的安全性工作，請參閱[開始使用 Linux 上的 SQL Server 安全性功能](sql-server-linux-security-get-started.md)。   
 指令碼來變更 TCP 連接埠號碼，SQL Server 目錄中，並設定 traceflag 或定序，請參閱[設定 SQL Server on Linux 與 mssql conf](sql-server-linux-configure-mssql-conf.md)。

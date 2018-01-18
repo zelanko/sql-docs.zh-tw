@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: client configuration [SQL Server], SQL Server Native Client
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cf17f207796d7752f28776c05f1168fb683f0a4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f168a96e5ac6a52084f9c3db49a8e1df209ec7f3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此章節包含 F1 說明主題**SQL Server Native Client 組態**對話中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是用戶端電腦用來連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的網路程式庫，從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開始。  
@@ -53,8 +53,8 @@ ms.lasthandoff: 12/21/2017
   
     -   [使用共用記憶體通訊協定建立有效的連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   
-    -   [Creating a Valid Connection String Using TCP IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
+    -   [建立有效的連接字串使用 TCP IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
-    -   [使用具名管道建立有效的連接字串](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+    -   [建立有效的連接字串使用具名的管道](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4064f8eb4d2dfd37d0ae201977739fff9df67f1a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9fbe93dba70125f12d20ee6ae2227d477b08ef19
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analysis-services-powershell-reference"></a>Analysis Services PowerShell 參考
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]PowerShell 指令程式會包含在[SqlServer 模組](https://www.powershellgallery.com/packages/SqlServer/21.0.17099)。 
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
  如果您要使用 PowerShell 執行未在下列清單中表示的工作 (例如建立或同步處理資料庫)，可以為該動作撰寫 TMSL 或 XMLA 指令碼，然後使用 **Invoke-ASCmd** Cmdlet 執行它。  
   
-|指令程式|描述|對等 AMO 方法|  
+|指令程式|Description|對等 AMO 方法|  
 |------------|-----------------|----------------------------|  
 |[Add-RoleMember 指令程式](../../analysis-services/powershell/add-rolemember-cmdlet.md)|將成員加入至資料庫角色。|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
 |[Backup-ASDatabase 指令程式](../../analysis-services/powershell/backup-asdatabase-cmdlet.md)|備份 Analysis Services 資料庫。|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  
