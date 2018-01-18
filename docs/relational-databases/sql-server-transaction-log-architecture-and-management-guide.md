@@ -18,17 +18,20 @@ helpviewer_keywords:
 - transaction log guidance
 - vlfs
 - virtual log files
+- virtual log size
+- vlf size
+- transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d98d7d65ebfa88ca9bdaa620c136f78dfe6c339c
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 交易記錄架構與管理指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,9 +80,10 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]
 > 虛擬記錄檔 (VLF) 建立遵循此方法：
 > - 若下一個成長小於目前記錄實體大小的 1/8，請建立 1 個能夠涵蓋成長大小的 VLF (從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 開始)
-> - 若成長小於 64MB，請建立 4 個能夠涵蓋成長大小的 VLF (例如：成長若為 1 MB，請建立四個 256KB 的 VLF)
-> - 若成長介於 64MB 到 1GB 之間，請建立 8 個能夠涵蓋成長大小的 VLF (例如：成長若為 512MB，請建立八個 64MB 的 VLF)
-> - 若成長大於 1GB，請建立 16 個能夠涵蓋成長大小的 VLF (例如：成長若為 8 GB，請建立十六個 512MB 的 VLF)
+> - 如果下一個成長大於目前記錄檔大小的 1/8，則使用 2014 版之前的方法：
+>    -  若成長小於 64MB，請建立 4 個能夠涵蓋成長大小的 VLF (例如：成長若為 1 MB，請建立四個 256KB 的 VLF)
+>    -  若成長介於 64MB 到 1GB 之間，請建立 8 個能夠涵蓋成長大小的 VLF (例如：成長若為 512MB，請建立八個 64MB 的 VLF)
+>    -  若成長大於 1GB，請建立 16 個能夠涵蓋成長大小的 VLF (例如：成長若為 8 GB，請建立十六個 512MB 的 VLF)
 
 如果記錄檔因為許多少量增加而變得很龐大，將會產生許多虛擬記錄檔。 **這樣會減慢資料庫啟動的速度，也會降低記錄備份和還原作業的執行速度。** 建議您使用接近最後所需大小的 *size* 值來指派記錄檔，並使用相對較大的 *growth_increment* 值。 若要判斷目前交易記錄大小的最佳 VLF 分佈，請參閱下方的提示。
  - *size* 值，如 `ALTER DATABASE` 的 `SIZE` 引數所設定，是記錄檔的初始大小。

@@ -1,6 +1,6 @@
 ---
 title: "使用 Windows 驗證連線至資料來源和檔案共用 | Microsoft Docs"
-ms.date: 11/27/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -13,16 +13,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b84fdd15fa4a6393b2350aaf75985653b6273f31
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a8dc3c1f39ca65e9616372fee7995dfa41cd89a1
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>使用 Windows 驗證連線至內部部署資料來源和 Azure 檔案共用
 本文描述如何在 Azure SQL Database 上設定 SSIS 目錄以執行套件，這些套件會使用 Windows 驗證來連線至內部部署資料來源和 Azure 檔案共用。 無論是在內部部署和 Azure 虛擬機器上及 Azure 檔案中，您都可以使用 Windows 驗證來連線至與 Azure SSIS Integration Runtime 相同虛擬網路中的資料來源。
 
-遵循本文步驟所提供的網域認證適用於 SQL Database 執行個體上的所有套件執行，直到您變更或移除這些認證為止。
+> [!WARNING]
+> 如果您未如本文所述執行 `catalog`.`set_execution_credential` 為 Windows 驗證提供有效的網域認證，則相依於 Windows 驗證的套件就無法連線到資料來源，而且會在執行階段失敗。
+
+遵循本文步驟將所提供的網域認證套用於 SQL Database 執行個體上的所有套件執行 (互動或排程)，直到您變更或移除這些認證為止。
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>提供 Windows 驗證的網域認證
 若要提供網域認證，讓套件使用 Windows 驗證以連線至內部部署資料來源，請執行下列動作：

@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 835b2c27dfaf8e4003cd009e3c20146af32d2bca
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 559847d392fa744b32fc2aa0cdb70eeb9b2c4ebd
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="index-json-data"></a>索引 JSON 資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-在 SQL Server 2016 中，JSON 並非內建的資料類型，而且 SQL Server 2016 並沒有自訂 JSON 索引。 不過，您可使用標準索引最佳化所有 JSON 文件的查詢。 
+在 SQL Server 和 SQL Database 中，JSON 並非內建的資料類型，而且 SQL Server 並沒有自訂 JSON 索引。 不過，您可使用標準索引最佳化所有 JSON 文件的查詢。 
 
 資料庫索引可改善篩選和排序作業的效能。 若不使用索引，則 SQL Server 在您每次查詢資料時必須執行完整的資料表掃描。  
   
@@ -69,7 +69,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
   
 請務必使用您計劃在查詢中所用的相同運算式，建立計算資料行 - 在此範例中，運算式為 `JSON_VALUE(Info, '$.Customer.Name')`。  
   
-您無須重寫查詢。 若您使用具有 `JSON_VALUE` 函數的運算式，則 SQL Server 會發現有一個具有相同運算式的同等計算資料行，並盡可能套用索引。
+您無須重寫查詢。 若您使用具有 `JSON_VALUE` 函式的運算式 (如之前的範例查詢所示)，則 SQL Server 會發現有一個具有相同運算式的同等計算資料行，並盡可能套用索引。
 
 ### <a name="execution-plan-for-this-example"></a>此範例中的執行計畫
 以下是此範例中的查詢執行計畫。  
@@ -79,7 +79,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 SQL Server 會使用索引搜尋非叢集索引，並尋找滿足指定條件的資料列，而不會使用完整資料表掃描。 接著，其會在 `SalesOrderHeader` 資料表中使用索引鍵查詢，以擷取查詢中參考的其他資料行 -  在此範例中為 `SalesOrderNumber` 和 `OrderDate`。  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>利用內含資料行進一步最佳化索引
-若您在索引中新增必要資料行，則可避免資料表執行此額外查詢作業。 您可新增這些資料行作為標準內含資料行 (如下列範例所示)，以擴充上方顯示的 `CREATE INDEX` 範例。  
+若您在索引中新增必要資料行，則可避免資料表執行此額外查詢作業。 您可新增這些資料行作為標準內含資料行 (如下列範例所示)，以擴充之前的 `CREATE INDEX` 範例。  
   
 ```sql  
 CREATE INDEX idx_soh_json_CustomerName
@@ -87,12 +87,12 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-在此情況下，SQL Server 不必讀取來自 `SalesOrderHeader` 資料表的其他資料，這是因為在非叢集 JSON 索引中已包含所有需要的資訊。 這是在查詢中合併 JSON 與資料行資料，以及針對工作負載建立最佳化索引的理想方法。  
+在此情況下，SQL Server 不必讀取來自 `SalesOrderHeader` 資料表的其他資料，這是因為在非叢集 JSON 索引中已包含所有需要的資訊。 此索引類型是在查詢中合併 JSON 與資料行資料，以及針對工作負載建立最佳化索引的理想方法。  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>JSON 索引是感知定序的索引  
 JSON 資料之索引的重要功能是索引能夠感知定序。 您在建立計算資料行時所使用的 `JSON_VALUE` 函數的結果為文字值，其繼承來自輸入運算式的定序。 因此，在索引中的值會使用來源資料行中定義的定序規則加以排序。  
   
-為了示範這點，下列範例會建立具有主索引鍵與 JSON 內容的簡單集合物件資料表。  
+為了示範索引能夠感知定序，下列範例會建立具有主索引鍵與 JSON 內容的簡單集合資料表。  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -146,7 +146,7 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  雖然查詢具有 `ORDER BY` 子句，但執行計畫不會使用 Sort 運算子。 JSON 索引已根據塞爾維亞文 (斯拉夫) 規則執行排序。 因此，SQL Server 可在已排序的結果中，使用非叢集索引。  
   
- 不過，若我們變更 `ORDER BY` 運算式的定序 (例如在 `JSON_VALUE` 函數後方加上 `COLLATE French_100_CI_AS_SC`)，則會得到不同的查詢執行計畫。  
+ 不過，若您變更 `ORDER BY` 運算式的定序 (例如在 `JSON_VALUE` 函式後方新增 `COLLATE French_100_CI_AS_SC`)，則會得到不同的查詢執行計畫。  
   
  ![執行計畫](../../relational-databases/json/media/jsonindexblog3.png "執行計畫")  
   
