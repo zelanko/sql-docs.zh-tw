@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bfcb6ae66bc431304e70e2db52801c9788f5f92d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 00debf90f1b79a0e38cb883f31479ae5731f40d3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ STRING_SPLIT ( string , separator )
  *string*  
  是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)的任何字元類型 (也就是**nvarchar**， **varchar**， **nchar**或**char**)。  
   
- *分隔符號*  
+ *separator*  
  是單一字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)的任何字元類型 (例如**nvarchar(1)**， **varchar(1)**， **nchar(1)**或**char （1)**)，可當做分隔符號的串連字串。  
   
 ## <a name="return-types"></a>傳回類型  
@@ -92,7 +92,7 @@ WHERE RTRIM(value) <> '';
 ### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. 以分割的逗號分隔的資料行中的值字串  
  Product 資料表有逗號個別清單的標記顯示在下列範例中的資料行：  
   
-|productId|名稱|Tags|  
+|ProductId|名稱|Tags|  
 |---------------|----------|----------|  
 |1|完整手指手套|clothing touring，自行車的道路|  
 |2|LL 耳機|自行車|  
@@ -108,7 +108,7 @@ FROM Product
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|productId|名稱|value|  
+|ProductId|名稱|value|  
 |---------------|----------|-----------|  
 |1|完整手指手套|clothing|  
 |1|完整手指手套|路段圖|  
@@ -170,8 +170,13 @@ FROM Product
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [權限 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [子字串 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
   
   

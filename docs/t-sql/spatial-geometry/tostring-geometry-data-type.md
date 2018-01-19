@@ -16,15 +16,15 @@ dev_langs: TSQL
 helpviewer_keywords: ToString (geometry Data Type)
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06bf05558bfefdf679d479429f5e71afcfcb7c6b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a29b682720ef760d0dc2e3d8dfa56c5684a553cb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tostring-geometry-data-type"></a>ToString (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [STAsText &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

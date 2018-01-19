@@ -18,15 +18,15 @@ helpviewer_keywords:
 - math operations [Transact-SQL]
 ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d6446d1e4850ca8f50a666c5c8a0fea58c57b1b6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 15ab9c387221a0afba7535514681d6d89af60ab3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="arithmetic-operators-transact-sql"></a>算術運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,16 +38,16 @@ ms.lasthandoff: 11/17/2017
 |[+ (加)](../../t-sql/language-elements/add-transact-sql.md)|加|  
 |[- (減)](../../t-sql/language-elements/subtract-transact-sql.md)|減|  
 |[* (乘)](../../t-sql/language-elements/multiply-transact-sql.md)|乘|  
-|[/ （除法）](../../t-sql/language-elements/divide-transact-sql.md)|除|  
+|[/ (Divide)](../../t-sql/language-elements/divide-transact-sql.md)|除|  
 |[%（模數）](../../t-sql/language-elements/modulo-transact-sql.md)|傳回除法的整數餘數。 例如，12 % 5 = 2，因為 12 除以 5 的餘數是 2。|  
   
  加號 （+） 和減號 （-） 運算子也可用來執行算術運算上**datetime**和**smalldatetime**值。  
   
  如需有效位數和小數位數的算術運算結果的詳細資訊，請參閱[有效位數、 小數位數及長度 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [運算式 &#40;。TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

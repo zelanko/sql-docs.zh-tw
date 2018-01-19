@@ -22,15 +22,15 @@ helpviewer_keywords:
 - '&= (bitwise AND equals)'
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2abeab8180dcc59db7abc07a379355941a414e2d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 75ba21340a0d874dbd6cba0931134a51a7c44614
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="amp-bitwise-and-assignment-transact-sql"></a>&amp;= （位元 AND 指派） (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ expression &= expression
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[& &#40;位元 AND &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - += (concatenate operator)
 ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6c1716e014de1c99e4b3560d55674f0d82797c03
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70f37ef6816f5288c1d50240bf813a20ff33fae7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+ = （字串串連指派） (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,7 +127,7 @@ GO
  (1 row(s) affected)
   ```   
    
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [+ = &#40;新增指派 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
  [+ &#40;字串串連 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  

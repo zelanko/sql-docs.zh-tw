@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: HasZ geography
 ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
 caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7725a6a28d6c1ea22da12519819933f898c44684
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 09ae1ee4660fde7845bb49c5c443cd459a2d0414
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hasz-geography-data-type"></a>HasZ (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ SELECT @p.HasZ
 --Returns: 1 (true)  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Geography 執行個體上的擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Z &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   

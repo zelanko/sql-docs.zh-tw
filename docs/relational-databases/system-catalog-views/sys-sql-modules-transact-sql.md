@@ -1,7 +1,7 @@
 ---
-title: "sys.sql_modules (TRANSACT-SQL) |Microsoft 文件"
+title: sys.sql_modules (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 496ed3e4d3aad1cea7a0b9c153f4e85da1a46489
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a2ed39676fc1bd477cce716b5c9d86c721df40fe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,14 +40,14 @@ ms.lasthandoff: 11/21/2017
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|包含物件的物件識別碼。 在資料庫中，這是唯一的。|  
-|**定義**|**nvarchar(max)**|定義這個模組的 SQL 文字。<br /><br /> NULL = 已加密。|  
+|**definition**|**nvarchar(max)**|定義這個模組的 SQL 文字。 這個值也可以取得使用[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)內建函式。<br /><br /> NULL = 已加密。|  
 |**uses_ansi_nulls**|**bit**|模組是以 SET ANSI_NULLS ON 加以建立。<br /><br /> 如果是規則和預設值，則永遠 = 0。|  
 |**uses_quoted_identifier**|**bit**|模組是以 SET QUOTED_IDENTIFIER ON 加以建立。|  
 |**is_schema_bound**|**bit**|模組是以 SCHEMABINDING 選項加以建立。<br /><br /> 如果是原生編譯預存程序，一定包含 1 值。|  
 |**uses_database_collation**|**bit**|1 = 結構描述繫結模組定義為了正確評估，必須依據資料庫的預設定序而定；否則為 0。 這種相依性可以防止資料庫的預設定序變更。|  
 |**is_recompiled**|**bit**|程序是以 WITH RECOMPILE 選項加以建立。|  
 |**null_on_null_input**|**bit**|模組宣告的目的不是為了因應任何 NULL 輸入而產生 NULL 輸出。|  
-|**sys.sql_modules**|**Int**|EXECUTE AS 資料庫主體的識別碼。<br /><br /> 在預設或 EXECUTE AS CALLER 的情況下為 NULL。<br /><br /> 指定主體 if 識別碼 EXECUTE AS SELF 或 EXECUTE AS\<主體 >。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**整數**|EXECUTE AS 資料庫主體的識別碼。<br /><br /> 在預設或 EXECUTE AS CALLER 的情況下為 NULL。<br /><br /> 指定主體 if 識別碼 EXECUTE AS SELF 或 EXECUTE AS\<主體 >。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**uses_native_compilation**|**bit**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。<br /><br /> 0 = 不是原生編譯<br /><br /> 1 = 是原生編譯<br /><br /> 預設值是 0。|  
   
 ## <a name="remarks"></a>備註  
@@ -69,7 +69,7 @@ ORDER BY o.type;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [物件目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - unit of work [SQL Server]
 ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: afd593c02535ec51932bb2c036e34c3406d8a87d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0b4e792166c7162fb60ee0b524a384b423d86afd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transactions-transact-sql"></a>交易 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
  在上一項交易完成時，隱含地啟動新的交易，但每項交易都用 COMMIT 或 ROLLBACK 陳述式來明確地完成。  
   
  批次範圍的交易  
- 僅適用於 Multiple Active Result Sets (MARS)，在 MARS 工作階段下啟動的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 外顯或隱含交易會變成批次範圍的交易。 當批次完成時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動回復未認可或回復之批次範圍的交易。  
+ 僅適用於 Multiple Active Result Sets (MARS)，在 MARS 工作階段下啟動的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 外顯或隱含交易會變成批次範圍的交易。 當批次完成時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會自動回復未認可或回復之批次範圍的交易。  
 
 > [!NOTE] 
 > 資料倉儲產品相關的特殊考量，請參閱[交易 （SQL 資料倉儲）](transactions-sql-data-warehouse.md)。   
@@ -64,8 +64,8 @@ ms.lasthandoff: 11/17/2017
 |[COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
 |[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
   
-## <a name="see-also"></a>請參閱＜  
- [SET IMPLICIT_TRANSACTIONS &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   

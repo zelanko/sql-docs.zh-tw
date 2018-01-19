@@ -40,11 +40,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd3db7627c4190a51db01082138677bc2b6d40d9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,10 +84,10 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 *data_type*  
 這是目標資料類型。 這包括**xml**， **bigint**，和**sql_variant**。 無法使用別名資料類型。
   
-*length*  
+*長度*  
 這是指定目標資料類型之長度的選擇性整數。 預設值是 30。
   
-*樣式*  
+*style*  
 是整數運算式，指定要如何轉譯 CONVERT 函數*運算式*。 如果 style 是 NULL，就會傳回 NULL。 範圍由*data_type*。 
   
 ## <a name="return-types"></a>傳回型別
@@ -101,7 +101,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
 |不含世紀 (yy) (<sup>1</sup>)|含世紀 (yyyy)|Standard|輸入/輸出 (<sup>3</sup>)|  
 |---|---|--|---|
-|-|**0**或**100** (<sup>1，</sup><sup>2</sup>)|datetime 和 smalldatetime 的預設值|mon dd yyyy hh:miAM (或 PM)|  
+|-|**0** or **100** (<sup>1,</sup><sup>2</sup>)|datetime 和 smalldatetime 的預設值|mon dd yyyy hh:miAM (或 PM)|  
 |**1**|**101**|美式英文|1 = mm/dd/yy<br /> 101 = mm/dd/yyyy|  
 |**2**|**102**|ANSI|2 = yy.mm.dd<br /> 102 = yyyy.mm.dd|  
 |**3**|**103**|英式英文/法文|3 = dd/mm/yy<br /> 103 = dd/mm/yyyy|  
@@ -116,8 +116,8 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**12**|**112**|ISO|12 = yymmdd<br /> 112 = yyyymmdd|  
 |-|**13**或**113** (<sup>1，</sup><sup>2</sup>)|歐洲預設值 + 毫秒|dd mon yyyy hh:mi:ss:mmm(24h)|  
 |**14**|**114**|-|hh:mi:ss:mmm(24h)|  
-|-|**20**或**120** (<sup>2</sup>)|ODBC 標準|yyyy-mm-dd hh:mi:ss(24h)|  
-|-|**21**或**121** (<sup>2</sup>)|time、date、datetime2 和 datetimeoffset 的 ODBC 標準 (使用毫秒) 預設值|yyyy-mm-dd hh:mi:ss.mmm(24h)|  
+|-|**20** or **120** (<sup>2</sup>)|ODBC 標準|yyyy-mm-dd hh:mi:ss(24h)|  
+|-|**21** or **121** (<sup>2</sup>)|time、date、datetime2 和 datetimeoffset 的 ODBC 標準 (使用毫秒) 預設值|yyyy-mm-dd hh:mi:ss.mmm(24h)|  
 |-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (無空格)<br /> 注意： 的值為毫秒 (mmm) 為 0 時，毫秒值不是顯示。 例如，'2012-11-07T18:26:20.000' 值會顯示為 '2012-11-07T18:26:20'。|  
 |-|**127**(<sup>6, 7</sup>)|具有時區 Z 的 ISO8601。|yyyy-mm-ddThh:mi:ss.mmmZ (無空格)<br /> 注意： 的值為毫秒 (mmm) 為 0 時，毫秒值不是顯示。 例如，'2012-11-07T18:26:20.000' 值會顯示為 '2012-11-07T18:26:20'。|  
 |-|**130** (<sup>1,</sup><sup>2</sup>)|回曆 (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /> 在此樣式中，mon 代表完整月份名稱的多 Token 回曆 unicode 表示法。 此值不會無法正確呈現在預設 SSMS 美國安裝。|  
@@ -138,7 +138,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
 <sup>6</sup>轉換字元資料時，才支援**datetime**或**smalldatetime**。 當字元資料，只代表日期或只時間元件會轉型為**datetime**或**smalldatetime**資料類型，未指定的時間元件設定為 00:00:00.000，而且未指定日期元件會設定為 1900年-01-01。
   
-<sup>7</sup>選擇性的時區指標 Z 用來更輕鬆地將對應 XML **datetime**具有時區資訊的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**沒有時區的值. Z 是時區 UTC - 0 的指標。 其他的時區是以 + 或 - 方向位移的 HH:MM 來代表。 例如： `2006-12-12T23:45:12-08:00`。
+<sup>7</sup>選擇性的時區指標 Z 用來更輕鬆地將對應 XML **datetime**具有時區資訊的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**沒有時區的值. Z 是時區 UTC - 0 的指標。 其他的時區是以 + 或 - 方向位移的 HH:MM 來代表。 例如：`2006-12-12T23:45:12-08:00`。
   
 當您轉換成字元資料由**smalldatetime**，包括秒或毫秒的樣式顯示在這些位置為零。 當您轉換時，您可以截斷不想要的日期部分**datetime**或**smalldatetime**藉由使用適當**char**或**varchar**資料類型長度。
   
@@ -147,7 +147,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## <a name="float-and-real-styles"></a>float 和 real 樣式
 當*運算式*是**float**或**真實**，*樣式*可以是下表中所顯示的值之一。 其他值則當做 0 處理。
   
-|值|輸出|  
+|Value|輸出|  
 |---|---|
 |**0** (預設)|最多 6 位數。 在適當時機，供科學記號標記法使用。|  
 |**1**|一律 8 位數。 一律用在科學記號標記法中。|  
@@ -158,7 +158,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## <a name="money-and-smallmoney-styles"></a>money 和 smallmoney 樣式
 當*運算式*是**money**或**smallmoney**，*樣式*可以是下表中所顯示的值之一。 其他值則當做 0 處理。
   
-|值|輸出|  
+|Value|輸出|  
 |---|---|
 |**0** (預設)|小數點左側並不會每隔三位數加一個逗號，小數點右側有兩個位數；如 4235.98。|  
 |**1**|小數點左側每隔三位數加一個逗號，小數點右側有兩位數；如 3,510.92。|  
@@ -166,9 +166,9 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**126**|轉換成 char(n) 或 varchar(n) 時，相當於樣式 2|  
   
 ## <a name="xml-styles"></a>xml 樣式
-當*運算式*是**xml***，樣式*可以是下表中所顯示的值之一。 其他值則當做 0 處理。
+當*運算式*是 **xml * * *、 樣式*可以是下表中所顯示的值之一。 其他值則當做 0 處理。
   
-|值|輸出|  
+|Value|輸出|  
 |---|---|
 |**0** (預設)|使用預設剖析行為，捨棄無意義的空格，不允許內部 DTD 子集。<br /> **注意：**當您轉換成**xml**資料型別，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不顯著泛空白字元的處理方式與 XML 1.0 中。 如需詳細資訊，請參閱[建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)。|  
 |**1**|保留無意義的空格。 這個樣式設定設定的預設**xml: space**處理相同的行為如同**xml: space ="preserve"**已指定。|  
@@ -178,7 +178,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## <a name="binary-styles"></a>二進位樣式
 當*運算式*是**binary （n)**， **varbinary**， **char （n)**，或**varchar （n)**， *樣式*可以是下表中所顯示的值之一。 此表中沒有列出的樣式值會傳回錯誤。
   
-|值|輸出|  
+|Value|輸出|  
 |---|---|
 |**0** (預設)|將 ASCII 字元轉譯成二進位位元組或將二位進位元組轉譯成 ASCII 字元。 每個字元或位元組都會以 1:1 的方式轉換。<br /> 如果*data_type*是二進位類型，0x 會加入至結果的左邊的字元。|  
 |**1**, **2**|如果*data_type*是二進位類型時，運算式必須是字元運算式。 *運算式*必須由偶數個十六進位數字 (0、 1、 2、 3、 4、 5、 6、 7、 8、 9、 A、 B、 C、 D、 E、 F，a、 b、 c、 d，e，f)。 如果*樣式*是設為 1 個字元，必須是 0 x 前兩個字元運算式中。 如果此運算式含有奇數個字元，或者其中任何字元無效，就會引發錯誤。<br /> 如果已轉換之運算式的長度大於的長度*data_type*右邊已截斷結果。<br /> 固定長度*data_types*會大於已轉換的結果將會有結果的右邊加入零。<br /> 如果 data_type 是字元類型，此運算式就必須是二進位運算式。 每個二進位字元都會轉換成兩個十六進位字元。 如果已轉換之運算式的長度大於*data_type*長度，會向右截斷。<br /> 如果*data_type*是固定大小的字元類型，轉換之結果的長度小於其長度*data_type*; 加入空格，以維護系統甚至右邊的已轉換的運算式十六進位數字的數目。<br /> 0x 將加入的轉換結果的左邊的字元*樣式*1。|  
@@ -711,8 +711,10 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[資料類型轉換 &#40; Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-[系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
-[撰寫國際通用的 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)
+ [資料類型轉換 &#40; Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [格式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/format-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+ [系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [撰寫國際通用的 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)
   

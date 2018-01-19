@@ -25,15 +25,15 @@ helpviewer_keywords:
 - <> (not equal to operator)
 ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a23167c52a462d15b90af0f25eda1b0cf4d1729f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 25c8b75d832fc4ed142bf6988e990ec8645302cc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="not-equal-to-transact-sql---traditional"></a>不等於 (Transact SQL)-傳統
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +81,7 @@ ProductCategoryID Name
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [比較運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  

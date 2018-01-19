@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: ConvexHullAggregate method (geometry)
 ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47a294aa8272691a0726aa0b2f11d848df873f1b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a83c4316f8257154bf2915d2d7868a990381f1c9
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ConvexHullAggregate ( geometry_operand )
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回型別：**幾何**  
   
-## <a name="exception"></a>Exception  
+## <a name="exception"></a>例外狀況  
  輸入的值無效時，會擲回 `FormatException`。 請參閱[STIsValid &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
 ## <a name="remarks"></a>備註  
@@ -72,7 +72,7 @@ ConvexHullAggregate ( geometry_operand )
  FROM @Geom;
  ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [擴充的靜態幾何方法](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

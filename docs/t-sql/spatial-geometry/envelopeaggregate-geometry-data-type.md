@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: EnvelopeAggregate method (geometry)
 ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f74d8e9c170ea31090709bba33cdb79618758970
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 081e43f9e822cfc0704de8b01a838fd6811f0371
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SELECT geometry::EnvelopeAggregate(shape).ToString()
 FROM @Geom;
  ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [擴充的靜態幾何方法](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - logical operators [SQL Server], Transact-SQL
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e65c03b034c211d80b79db045985284245c6ccbb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 66aa9c665de5becebac476d0d5b73e041e75eb56
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="logical-operators-transact-sql"></a>邏輯運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ ms.lasthandoff: 11/17/2017
 |[IN](../../t-sql/language-elements/in-transact-sql.md)|如果運算元等於運算式清單中的某個運算式，便是 TRUE。|  
 |[LIKE](../../t-sql/language-elements/like-transact-sql.md)|如果運算元符合某個模式，便是 TRUE。|  
 |[NOT](../../t-sql/language-elements/not-transact-sql.md)|反轉任何其他布林運算子的值。|  
-|[或](../../t-sql/language-elements/or-transact-sql.md)|如果任一個布林運算式是 TRUE，便是 TRUE。|  
-|[某些](../../t-sql/language-elements/some-any-transact-sql.md)|如果一組比較部分為 TRUE，便是 TRUE。|  
+|[OR](../../t-sql/language-elements/or-transact-sql.md)|如果任一個布林運算式是 TRUE，便是 TRUE。|  
+|[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|如果一組比較部分為 TRUE，便是 TRUE。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [運算子優先順序 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

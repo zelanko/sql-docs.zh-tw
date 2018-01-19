@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f90213e9e70d07f3f9d2bb661a64ef10f96c5068
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3a45ab2e81daf6183d37ef67089cc6d1a1e6ac3a
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
   
  FORMATMESSAGE 會用使用者目前的語言來查閱訊息。 如果沒有當地語系化版本的訊息，就會使用 U.S. English 版本。  
   
- 如果是當地語系化的訊息，提供的參數值必須對應於 U.S. English 版本中的參數預留位置。。 也就是說，當地語系化版本中的參數 1 必須對應於 U.S. English 版本中的參數 1，參數 2 必須對應於參數 2，依此類推。  
+ 如果是當地語系化的訊息，提供的參數值必須對應於 U.S. English 版本中的參數預留位置。 也就是說，當地語系化版本中的參數 1 必須對應於 U.S. English 版本中的參數 1，參數 2 必須對應於參數 2，依此類推。  
   
 ## <a name="examples"></a>範例  
   
@@ -111,10 +111,19 @@ SELECT FORMATMESSAGE('Hello %20s!', 'TEST');
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [THROW &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
- [sp_addmessage &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [RAISERROR &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [THROW &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
+ [CONCAT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [QUOTENAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
   
   

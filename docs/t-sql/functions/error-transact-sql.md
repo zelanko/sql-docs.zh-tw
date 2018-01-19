@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5481957e399f072e400a042825c2966f06d2e782
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ce2b79b12af1ae4894cd33867bccc27b2354185
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40; 錯誤 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 使用 @@ERROR 有條件地結束程序  
- 下列範例會使用`IF...ELSE`陳述式，以測試`@@ERROR`之後`INSERT`預存程序中的陳述式。 `@@ERROR` 變數的值決定了傳給呼叫端程式來指出程序成功或失敗的傳回碼。  
+ 下列範例會使用`IF...ELSE`陳述式，以測試`@@ERROR`之後`DELETE`預存程序中的陳述式。 `@@ERROR` 變數的值決定了傳給呼叫端程式來指出程序成功或失敗的傳回碼。  
   
 ```  
 USE AdventureWorks2012;  
@@ -170,7 +170,7 @@ GO
 ```  
 
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   

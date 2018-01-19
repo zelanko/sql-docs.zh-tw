@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_sessions (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/21/2017
 ms.prod: sql-non-specified
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 48af63d80b801b677d9f0f6225f84ba63c09f344
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e0cd35b044d4a5016442ddae4384aea094cc655
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ ms.lasthandoff: 01/02/2018
 |program_name|**nvarchar(128)**|起始工作階段的用戶端程式名稱。 內部工作階段的值為 NULL。 可為 Null。|  
 |host_process_id|**int**|起始工作階段之用戶端程式的處理序識別碼。 內部工作階段的值為 NULL。 可為 Null。|  
 |client_version|**int**|用戶端連接伺服器所用介面的 TDS 通訊協定版本。 內部工作階段的值為 NULL。 可為 Null。|  
-|client_interface_name|**nvarchar （32)**|用戶端與伺服器通訊所使用的程式庫/驅動程式的名稱。 內部工作階段的值為 NULL。 可為 Null。|  
+|client_interface_name|**nvarchar(32)**|用戶端與伺服器通訊所使用的程式庫/驅動程式的名稱。 內部工作階段的值為 NULL。 可為 Null。|  
 |security_id|**varbinary(85)**|與登入相關聯之 Microsoft Windows 安全性識別碼。 不可為 Null。|  
 |login_name|**nvarchar(128)**|目前用來執行工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 如需建立工作階段的原始登入名稱，請參閱 original_login_name。 可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入名稱或 Windows 已驗證的網域使用者名稱。 不可為 Null。|  
 |nt_domain|**nvarchar(128)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用戶端的 Windows 網域 (如果工作階段使用 Windows 驗證或信任連接)。 內部工作階段和非網域使用者的這個值為 NULL。 可為 Null。|  
 |nt_user_name|**nvarchar(128)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用戶端的 Windows 使用者名稱 (如果工作階段使用 Windows 驗證或信任連接)。 內部工作階段和非網域使用者的這個值為 NULL。 可為 Null。|  
-|status|**nvarchar （30)**|工作階段的狀態。 可能的值如下：<br /><br /> **執行**-目前執行中的一個或多個要求<br /><br /> **睡眠**-目前不執行任何要求<br /><br /> **休眠**– 工作階段因連接共用已重設與目前處於登入前狀態。<br /><br /> **Preconnect** -工作階段處於資源管理員分類。<br /><br /> 不可為 Null。|  
+|status|**nvarchar(30)**|工作階段的狀態。 可能的值如下：<br /><br /> **執行**-目前執行中的一個或多個要求<br /><br /> **睡眠**-目前不執行任何要求<br /><br /> **休眠**– 工作階段因連接共用已重設與目前處於登入前狀態。<br /><br /> **Preconnect** -工作階段處於資源管理員分類。<br /><br /> 不可為 Null。|  
 |context_info|**varbinary(128)**|工作階段的 CONTEXT_INFO 值。 使用者所設定的內容資訊使用[SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md)陳述式。 可為 Null。|  
 |cpu_time|**int**|工作階段所使用的 CPU 時間，以毫秒為單位。 不可為 Null。|  
 |memory_usage|**int**|此工作階段所用記憶體的 8 KB 頁數。 不可為 Null。|  
@@ -109,6 +109,10 @@ ms.lasthandoff: 01/02/2018
 -   unsuccessful_logons  
   
  如果沒有啟用這個選項，這些資料行會傳回 null 值。 如需如何設定此伺服器組態選項的詳細資訊，請參閱[通用條件符合已啟用伺服器組態選項](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)。  
+ 
+ 
+ Azure SQL Database 的系統管理連線會看到每個已驗證的工作階段的一個資料列，而非系統管理員連線只會看到他們的資料庫使用者工作階段的相關資訊。 
+ 
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
@@ -181,7 +185,7 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   

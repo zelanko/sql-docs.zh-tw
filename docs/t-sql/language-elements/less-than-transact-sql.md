@@ -24,15 +24,15 @@ helpviewer_keywords:
 - < (less than operator)
 ms.assetid: 54f50bdd-bb62-4593-9af9-4c49edecab75
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b21f58bf3ebb448262c04ee67fcc8670b249cda9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0731fe421fb8c369130dfc56125bf912e6b61058
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lt-less-than-transact-sql"></a>&lt;（小於）(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ FALSE
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [IIF &#40;TRANSACT-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  

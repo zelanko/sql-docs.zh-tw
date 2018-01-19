@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STIsEmpty (geometry Data Type)
 ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b31c13414f1af2cbe337021a9f400734f1d2b6b3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e02fd0245fd271e757c1a1723a3c6fffaf253880
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ SET @g = geometry::STGeomFromText('POLYGON EMPTY', 0);
 SELECT @g.STIsEmpty();  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db5876abd95b4eb9b21d91deeeb6bc0f1a242303
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 10edb8b1b1e3008321bc03e2e65419dca8956f86
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,10 +52,10 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  *character_expression*  
  是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)字元資料。 *character_expression*可以是常數、 變數或資料行的字元或二進位資料。  
   
- *啟動*  
+ *start*  
  這是一個開始刪除和插入之位置的整數值。 如果*啟動*是負值或零，則傳回 null 字串。 如果*啟動*超過第一個*character_expression*，會傳回空字串。 *啟動*可以屬於型別**bigint**。  
   
- *length*  
+ *長度*  
  這是一個整數，指定要刪除的字元數。 如果*長度*是負數，會傳回 null 字串。 如果*長度*超過第一個*character_expression*，就會刪除到最後一個到最後一個字元*character_expression*。  如果*長度*為零，插入字串中的第一個字元之前，就會發生。 *長度*可以屬於型別**bigint**。
 
  *replaceWith_expression*  
@@ -89,6 +89,15 @@ aijklmnef
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
+ [CONCAT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  

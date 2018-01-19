@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STIntersection method
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5fa4496e09192a7c17928dc6a2af6f5ef06f51b5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 90030f0f7482f2b8b888ad095301401c4d83dc38
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.6
 SELECT @g.STIntersection('FULLGLOBE').ToString();  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [地理例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

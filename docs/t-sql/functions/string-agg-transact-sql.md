@@ -1,5 +1,5 @@
 ---
-title: "STRING_AGG (TRANSACT-SQL) |Microsoft 文件"
+title: STRING_AGG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -21,13 +21,13 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f2bcc8b02b0228dc403fffc4ef1c6b82557872a4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="stringagg-transact-sql"></a>STRING_AGG (TRANSACT-SQL)
+# <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 串連字串運算式的值，並將它們之間的分隔符號值。 不會在字串結尾處加入分隔符號。
@@ -45,19 +45,19 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 ## <a name="arguments"></a>引數 
 
-*分隔符號*  
+*separator*  
 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)的`NVARCHAR`或`VARCHAR`用做為分隔符號的類型的串連字串。 它可以是常值或變數。 
 
 *expression*  
 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)任何型別。 運算式會轉換成`NVARCHAR`或`VARCHAR`串連在型別。 非字串類型轉換成`NVARCHAR`型別。
 
 
-< order_clause >   
+<order_clause>   
 選擇性地指定順序串連結果使用`WITHIN GROUP`子句：
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
-< order_by_expression_list >   
+<order_by_expression_list>   
  
   非常數的清單[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，可用來排序結果。 只有一個`order_by_expression`允許每個查詢。 預設排序順序為遞增。   
   
@@ -70,14 +70,14 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR (1...4000) |NVARCHAR （4000) |
-|VARCHAR (1...8000) |VARCHAR(8000) |
-|int、 bigint、 smallint、 tinyint、 numeric、 float、 real、 位元、 decimal、 smallmoney、 money、 datetime、 datetime2， |NVARCHAR （4000) |
+|NVARCHAR(1…4000) |NVARCHAR(4000) |
+|VARCHAR(1…8000) |VARCHAR(8000) |
+|int、 bigint、 smallint、 tinyint、 numeric、 float、 real、 位元、 decimal、 smallmoney、 money、 datetime、 datetime2， |NVARCHAR(4000) |
 
 
 ## <a name="remarks"></a>備註  
  
-`STRING_AGG`彙總會從資料列的所有運算式，並將它們串連成單一字串。 運算式的值會隱含地轉換成字串類型，並再串連。 隱含轉換成字串會遵循現有的資料類型轉換規則。 如需資料類型轉換的詳細資訊，請參閱[CAST 和 CONVERT (TRANSACT-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 
+`STRING_AGG`是彙總函式會採用資料列的所有運算式，並將它們串連成單一字串。 運算式的值會隱含地轉換成字串類型，並再串連。 隱含轉換成字串會遵循現有的資料類型轉換規則。 如需資料類型轉換的詳細資訊，請參閱[CAST 和 CONVERT (TRANSACT-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 
 
 如果輸入的運算式是型別`VARCHAR`，分隔符號不可為型別`NVARCHAR`。 
 
@@ -117,7 +117,7 @@ FROM Person.Person;
 
 |Csv | 
 |--- |
-|John、 n/A、 Mike、 Peter、 n/A、 n/A，Alice、 Bob |  
+|John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
 
 ### <a name="c-generate-comma-separated-values"></a>C. 產生以逗號分隔值 
@@ -151,7 +151,7 @@ GROUP BY a.articleId, title;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|發行項識別碼 |title |標記 |
+|articleId |title |標記 |
 |--- |--- |--- |
 |172 |輪詢指出關閉選取的結果 |政治、 投票、 縣 （市) council | 
 |176 |若要減少壅塞預期新高速公路 |NULL |
@@ -193,7 +193,16 @@ GROUP BY town;
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
 
 
-## <a name="see-also"></a>請參閱  
-
-[字串函數 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [CONCAT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [彙總函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

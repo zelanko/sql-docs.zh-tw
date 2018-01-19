@@ -23,15 +23,15 @@ helpviewer_keywords:
 - -= (subtraction assignment)
 ms.assetid: 2a2056b5-1dfa-4ea8-8cfc-6331a2f94da9
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 81731fdfdebf160fd2ab9de2848f58d47865979e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f81acd843073d132de339fd183d76c64dd8b6b63
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="--subtraction-assignment-transact-sql"></a>-= （減法指派） (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ expression -= expression
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[-&#40;減法 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/subtract-transact-sql.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  

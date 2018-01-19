@@ -1,5 +1,5 @@
 ---
-title: "RECONFIGURE (TRANSACT-SQL) |Microsoft 文件"
+title: RECONFIGURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/20/2016
 ms.prod: sql-non-specified
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - RECONFIGURE, WITH OVERRIDE statement
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 363a7f12b0be75dd73a2a72402c82be4ba403ed6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80e8f951e053441b15716c8fc1f8c79abbe026b9
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ RECONFIGURE WITH OVERRIDE;
 GO    
 ```    
     
-## <a name="see-also"></a>請參閱＜    
+## <a name="see-also"></a>另請參閱    
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)     
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)    
     
