@@ -75,7 +75,7 @@
 
 # [目錄和伺服器](catalog/integration-services-ssis-server-and-catalog.md)
 # [服務 (舊版)](../integration-services/service/integration-services-service-ssis-service.md)
-# [安全性](../integration-services/security/security-overview-integration-services.md)
+# [Security](../integration-services/security/security-overview-integration-services.md)
 # [[效能]](../integration-services/performance/monitor-running-packages-and-other-operations.md)
 # [疑難排解](../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md)
 # [系統檢視表](../integration-services/system-views/views-integration-services-catalog.md)
@@ -181,5 +181,5 @@
 ### [MSDN 上的 SSIS 論壇](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Stack Overflow 上的 SSIS 標記](http://stackoverflow.com/questions/tagged/ssis)  
 ## 提供意見
-### [Microsoft Connect (英文)](https://connect.microsoft.com/SQLServer/Feedback)  
+### [SQL Server 意見反應論壇](https://feedback.azure.com/forums/908035-sql-server)  
 ## [在您的電腦上取得文件](../sql-server/sql-server-help-installation.md)

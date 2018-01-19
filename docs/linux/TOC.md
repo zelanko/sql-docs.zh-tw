@@ -112,5 +112,5 @@
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ## [MSDN 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-## [Microsoft Connect (英文)](https://connect.microsoft.com/SQLServer/Feedback)
+## [提交意見反應](https://feedback.azure.com/forums/908035-sql-server)
 ## [Reddit](https://www.reddit.com/r/SQLServer)
