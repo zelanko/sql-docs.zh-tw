@@ -21,15 +21,15 @@ helpviewer_keywords:
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 02bf4a96756b8bf3a63a75dec97fe6f58abc8a6d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 17d233bf75593d8b27a458120dbcb2035bc7d2ec
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>引數  
- *資料表* **。** *資料行*  
+ *資料表* **。** *column*  
  這是要讀取的資料表和資料行名稱。 資料表和資料行名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。 您必須指定資料表和資料行名稱；不過，資料庫名稱和擁有者名稱的指定是選擇性的。  
   
  *text_ptr*  
  這是一個有效的文字指標。 *text_ptr*必須**binary （16)**。  
   
- *位移*  
+ *offset*  
  是位元組數 (時**文字**或**映像**資料類型可用) 或字元 (當**ntext**使用的資料類型) 略過之後，才能開始讀取**文字**，**映像**，或**ntext**資料。  
   
- *大小*  
+ *size*  
  是位元組數 (時**文字**或**映像**資料類型可用) 或字元 (當**ntext**使用的資料類型) 的可讀取的資料。 如果*大小*為 0，讀取 4 KB 位元組的資料。  
   
  HOLDLOCK  
@@ -92,7 +92,7 @@ READTEXT pub_info.pr_info @ptrval 1 25;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [@@TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/functions/textsize-transact-sql.md)   
  [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  

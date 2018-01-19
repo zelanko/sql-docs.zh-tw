@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STPointFromWKB (geometry Data Type)
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 788295d1343c8e45f2f240ebaedfbb774457040a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 27693993d8ad61d6cf408d5d2c63db02c14d6417
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ SET @g = geometry::STPointFromWKB(0x010100000000000000000059400000000000005940, 
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [OGC 靜態幾何方法](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

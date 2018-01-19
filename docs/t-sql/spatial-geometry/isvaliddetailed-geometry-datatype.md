@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: IsValidDetailed geometry
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55ede35d26ce9f7de1655e076f1aeaad40642218
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ddffd6c929bdf5ce13a05ceee6ce27fc1b06b3c5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/02/2018
 ## <a name="remarks"></a>備註  
  下表包含可能的傳回值：  
   
-|傳回值|描述|  
+|傳回值|Description|  
 |------------------|-----------------|  
 |24400|有效|  
 |24401|無效，原因未知。|  
@@ -74,7 +74,7 @@ SELECT @p.IsValidDetailed()
 --Returns: 24404: Not valid because polygon ring (1) intersects itself or some other ring.  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

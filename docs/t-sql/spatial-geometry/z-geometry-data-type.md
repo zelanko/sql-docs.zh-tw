@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: Z (geometry Data Type)
 ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f39b62651d74fb97964a3e848ca857d33c9c3e94
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 60ca49605233bcdc374341c7d481cc12b03328c5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="z-geometry-data-type"></a>Z (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [M &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
  [AsTextZM &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  

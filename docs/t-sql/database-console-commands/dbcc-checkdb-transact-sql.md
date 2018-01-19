@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 15c991ba9e987d5dc7ed39b2b8edb8bf6b428956
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 49cf7311995d2760306e6050e6bae6efc1db41d8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ DATA_PURITY
  這個選項報告的驗證錯誤無法使用 DBCC 修復選項更正。 有關手動更正這些錯誤的詳細資訊，請參閱知識庫文件 923247: [SQL Server 2005 和更新版本中的疑難排解 DBCC 錯誤 2570年](http://support.microsoft.com/kb/923247)。  
     
  MAXDOP  
- **適用於**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
     
  覆寫**的最大平行處理原則程度**組態選項的**sp_configure**陳述式。 MAXDOP 可以超過使用 sp_configure 所設定的值。 如果 MAXDOP 超過使用資源管理員所設定的值[!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)]使用資源管理員 MAXDOP 值中所述[ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)。 當您使用 MAXDOP 查詢提示時，適用所有搭配 max degree of parallelism 組態選項使用的語意規則。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
  

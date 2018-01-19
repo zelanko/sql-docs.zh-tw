@@ -18,14 +18,14 @@ helpviewer_keywords:
 - hints [SQL Server], locking
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
-ms.openlocfilehash: 7f13bd2886aaf2363cde83461f246bf034c89de5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 220cbbb856bc96aa4e44ea5a3d665fc9ce09da77
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transaction-isolation-levels"></a>交易隔離等級
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
  下表提供在各種隔離等級下存取中繼資料的摘要。  
   
-|隔離等級|支援|接受|  
+|隔離等級|Supported|接受|  
 |---------------------|---------------|-------------|  
 |READ UNCOMMITTED|否|不保證|  
 |READ COMMITTED|是|是|  

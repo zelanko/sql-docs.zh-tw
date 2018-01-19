@@ -36,15 +36,15 @@ helpviewer_keywords:
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 caps.latest.revision: "117"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 317b65134ca49dc3305fe03871a88b5c1ad3fadc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6c2f2f2f6bca2048ead7dc9565b5338bc2505c8e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -207,23 +207,23 @@ WHERE CONTAINS(Description, @SearchWord);
  *word*  
  這是不含空格或標點符號的字元字串。  
   
- *片語*  
+ *phrase*  
  這是一個或多個單字，各個字之間有空格。  
   
 > [!NOTE]  
 >  部分語言 (如亞洲某些地區所撰寫的語言) 可能會有不用空格來分隔的一個或多個單字所組成的片語。  
   
-\<contains >  
+\<simple_term>  
 指定符合完整的單字或片語。 "blue berry"、blueberry 和 "Microsoft SQL Server" 都是有效的簡單詞彙範例。 片語應該用雙引號 ("") 括住。 單字在片語必須出現在相同的順序中所指定 *\<contains_search_condition >*濆婞剢謅資料庫資料行。 在單字或片語中搜尋字元並不區分大小寫。 非搜尋字 (或[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (例如，，或) 中全文檢索索引資料行不會儲存在全文檢索索引。 如果在單一字的搜尋中使用非搜尋字，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回一則錯誤訊息，指出查詢只包含非搜尋字。 在每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 \Mssql\Binn\FTERef 目錄中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都併入了一份標準非搜尋字清單。  
   
  系統會忽略標點符號。 因此，`CONTAINS(testing, "computer failure")` 將比對含有此值的資料列："Where is my computer? Failure to find it would be expensive"。 如需有關斷詞工具行為的詳細資訊，請參閱[設定和管理的斷詞工具與字幹分析器搜尋](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
- \<contains >  
+ \<prefix_term>  
  指定符合開頭是指定之文字的單字或片語。 以雙引號括住前置詞彙 ("") 和加上星號 (\*) 結尾的引號前，以便以簡單詞彙為開頭的所有文字之前都指定星號時要比對。 這個子句的指定方式應該如下：`CONTAINS (column, '"text*"')`。 星號符合 (屬於單字或片語中一個或多個根單字) 零個、一個或多個字元。 如果並未用雙引號來分隔文字和星號，述詞便是 `CONTAINS (column, 'text*')`，此時全文檢索搜尋會將星號視為字元，因此，它會搜尋完全相符的 `text*`。 全文檢索引擎不會尋找開頭是星號 (\*) 因為斷詞工具通常會忽略這類字元的字元。  
   
  當 *\<contains >*是片語而言，片語中所包含的每個單字都會被視為個別的前置詞。 因此，指定前置詞彙 "local wine*" 的查詢可能會符合開頭是 "local winery"、"locally wined and dined" 等文字的任何資料列。  
   
- \<contains >  
+ \<generation_term>  
  指定符合「其中所包括的簡單詞彙含有要搜尋的原始單字之各種變化形」的單字。  
   
  INFLECTIONAL  
@@ -234,7 +234,7 @@ WHERE CONTAINS(Description, @SearchWord);
  THESAURUS  
  指定使用對應於資料行全文檢索語言或查詢指定之語言的同義字。 最長的模式或模式從 *\<contains >*比對這些同義字並會產生其他詞彙來擴充或取代原始模式。 如果所有或部分找不到相符項目 *\<contains >*，不相符的部分會被視為*contains*。 如需有關全文檢索搜尋同義字的詳細資訊，請參閱[設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
   
- \<generic_proximity_term >  
+ \<generic_proximity_term>  
  指定必須符合要搜尋之文件中的單字或片語。  
   
 > [!IMPORTANT]  
@@ -249,7 +249,7 @@ WHERE CONTAINS(Description, @SearchWord);
   
  如需有關泛型相近詞彙的詳細資訊，請參閱[搜尋靠近另一個單字使用 NEAR 字](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)。  
   
- \<c >  
+ \<custom_proximity_term>  
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
   
  指定單字或片語比對，並選擇性地指定搜尋詞彙之間所允許的最大距離。 您也可以指定搜尋詞彙必須位於您指定的正確順序 (\<match_order >)。  
@@ -264,7 +264,7 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  選擇性參數如下所示：  
   
- \<maximum_distance >  
+ \<maximum_distance>  
  指定字串開始及結尾處的搜尋詞彙之間所允許的最大距離，才能讓該字串成為合格的相符項目。  
   
  *integer*  
@@ -291,12 +291,12 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **MAX**  
  不論詞彙之間距離，傳回包含指定之詞彙的任何資料列。 這是預設值。  
   
- \<match_order >  
+ \<match_order>  
  指定詞彙是否必須依指定順序出現，才會由搜尋查詢傳回。 若要指定\<match_order >，您也必須指定\<maximum_distance >。  
   
  \<match_order > 採用下列值之一：  
   
- **為 TRUE**  
+ **TRUE**  
  強制詞彙內的指定順序。 例如，`NEAR(A,B)` 只符合 `A … B`。  
   
  **FALSE**  
@@ -312,13 +312,13 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
   
  如需有關如何使用自訂相近詞彙的詳細資訊，請參閱[搜尋靠近另一個單字使用 NEAR 字](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)。  
   
- \<contains >  
+ \<weighted_term>  
  指定相符的資料列 (查詢所傳回) 會符合一份單字和片語清單，每個單字和片語各有其加權值。  
   
  ISABOUT  
  指定 *\<contains >*關鍵字。  
   
- 加權 (*weight_value*)  
+ WEIGHT(*weight_value*)  
  指定加權值，它是 0.0 至 1.0 的數字。 在每個元件 *\<contains >*可能包括*weight_value*。 *weight_value*是變更查詢的各個部分如何影響指派給符合查詢的每個資料列的等級值的方式。 權數不會影響 CONTAINS 查詢中，但加權影響陣序規範中的結果[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)查詢。  
   
 > [!NOTE]  
@@ -539,7 +539,7 @@ WHERE CONTAINS(PROPERTY(Document,'Title'), 'Maintenance OR Repair');
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋使用者入門](../../relational-databases/search/get-started-with-full-text-search.md)   
  [建立及管理全文檢索目錄](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
  [建立全文檢索目錄 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
@@ -552,7 +552,7 @@ GO
  [使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)   
  [建立全文檢索搜尋查詢 &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [其中 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

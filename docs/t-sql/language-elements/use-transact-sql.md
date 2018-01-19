@@ -1,5 +1,5 @@
 ---
-title: "使用 (TRANSACT-SQL) |Microsoft 文件"
+title: USE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/28/2016
 ms.prod: sql-non-specified
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - modifying database context
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 835266562ca4a3f81e92c02ff4abbf7948a36f82
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 67d9cdc11488ff2536e984bcf7d216a507a4112b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -68,7 +68,7 @@ USE AdventureWorks2012;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

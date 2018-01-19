@@ -26,15 +26,15 @@ helpviewer_keywords:
 - bitwise exclusive OR (^)
 ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4923d20bdeb7e625157a47c0f70e685895c41550
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 897e37f19765ac43c881f2646e0bf0cc91d3205a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (位元互斥 OR) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,9 +64,9 @@ expression ^ expression
  **tinyint**如果輸入的值為**tinyint**。  
   
 ## <a name="remarks"></a>備註  
- **^** 位元運算子會執行位元邏輯互斥 OR 兩個運算式，運算式各有一個對應的位元的兩個運算式之間。 如果輸入運算式的其中一個位元 (針對目前所解析的位元) 的值是 1 (兩個位元值不能同時是 1)，結果中的兩個位元都會設為 1。 如果兩個位元同時是 0 或同時是 1，便會清除結果中的位元而成為 0 值。  
+  **^** 位元運算子會執行位元邏輯互斥 OR 兩個運算式，運算式各有一個對應的位元的兩個運算式之間。 如果輸入運算式的其中一個位元 (針對目前所解析的位元) 的值是 1 (兩個位元值不能同時是 1)，結果中的兩個位元都會設為 1。 如果兩個位元同時是 0 或同時是 1，便會清除結果中的位元而成為 0 值。  
   
- 如果左邊和右邊的運算式具有相同的整數資料類型 (例如，左*運算式*是**smallint**和右邊*運算式*是**int**)，較小的資料類型的引數會轉換成較大的資料類型。 在此情況下， **smallint***運算式*轉換成**int**。  
+ 如果左邊和右邊的運算式具有相同的整數資料類型 (例如，左*運算式*是**smallint**和右邊*運算式*是**int**)，較小的資料類型的引數會轉換成較大的資料類型。 在此情況下，**smallint * * * 運算式*轉換成**int**。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立資料表，使用**int**資料類型來儲存原始值，而且兩個值插入單一資料列。  
@@ -111,7 +111,7 @@ GO
   
 
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [位元運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   

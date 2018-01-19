@@ -28,15 +28,15 @@ helpviewer_keywords:
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f7cb61a12af903aa444462a7a67c9c71231b96fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 語法慣例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/09/2018
 |UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字。|  
 |*斜體*|使用者提供的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法參數。|  
 |**粗體字**|必須完全依照顯示來輸入的資料庫名稱、資料表名稱、資料行名稱、索引名稱、預存程序、公用程式、資料類型名稱和文字。|  
-|**底線**|指出省略陳述式中包含附加底線之值的子句時，所套用的預設值。|  
+|**underline**|指出省略陳述式中包含附加底線之值的子句時，所套用的預設值。|  
 |&#124; (分隔號)|加上括號或大括號來分隔語法項目。 您只可以選擇其中一個項目。|  
 |`[ ]` (方括弧)|選擇性的語法項目。 不要鍵入方括號。|  
 |{ } (大括號)|必要的語法項目。 不要鍵入大括號。|  
@@ -60,15 +60,15 @@ ms.lasthandoff: 01/09/2018
 ## <a name="multipart-names"></a>多部分名稱  
  除非另有指定，否則，所有指向資料庫物件名稱的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參考都可以是四部分的名稱，格式如下：  
   
- *server_name* **。**[*database_name*]**。**[*schema_name*]**。***object_name*  
+ *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
- | *database_name***。**[*schema_name*]**。***object_name*  
+ | *database_name***.**[*schema_name*]**.***object_name*  
   
- | *schema_name***。***object_name*  
+ | *schema_name***.***object_name*  
   
- *|object_name*  
+ *| object_name*  
   
- *伺服器名稱*  
+ *server_name*  
  指定連結伺服器名稱或遠端伺服器名稱。  
   
  *database_name*  
@@ -89,13 +89,13 @@ ms.lasthandoff: 01/09/2018
   
 |物件參考格式|Description|  
 |-----------------------------|-----------------|  
-|*伺服器* **。** *資料庫* **。** *結構描述* **。** *物件*|四部分名稱。|  
-|*伺服器* **。** *資料庫* **...** *物件*|省略結構描述名稱。|  
-|*伺服器* **...** *結構描述* **。** *物件*|省略資料庫名稱。|  
-|*伺服器* **...** *物件*|省略資料庫和結構描述名稱。|  
-|*資料庫* **。** *結構描述* **。** *物件*|省略伺服器名稱。|  
+|*server* **.** *資料庫* **。** *schema* **.** *物件*|四部分名稱。|  
+|*server* **.** *資料庫* **...** *物件*|省略結構描述名稱。|  
+|*server* **..** *schema* **.** *物件*|省略資料庫名稱。|  
+|*server* **...** *object*|省略資料庫和結構描述名稱。|  
+|*資料庫* **。** *schema* **.** *物件*|省略伺服器名稱。|  
 |*資料庫* **...** *物件*|省略伺服器和結構描述名稱。|  
-|*結構描述* **。** *物件*|省略伺服器和資料庫名稱。|  
+|*schema* **.** *物件*|省略伺服器和資料庫名稱。|  
 |*物件*|省略伺服器、資料庫和結構描述名稱。|  
   
 ## <a name="code-example-conventions"></a>程式碼範例慣例  

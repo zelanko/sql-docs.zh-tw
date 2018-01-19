@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fea21e57554a1ff68e83ba8cc85ea004d250ca2c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 07c9278bc7c277a0991f0f55cad18f496c514cde
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,12 +43,12 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引數  
- *距離*  
+ *distance*  
  是**float**運算式指定從距離**geography**執行個體的周圍計算緩衝。  
   
  緩衝區的最大距離不能超過 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 的地球圓周) 或完整的地球。  
   
- *容錯*  
+ *tolerance*  
  是**float**運算式，指定緩衝距離的容錯。  
   
  *容錯*值指的是傳回之線性近似值之理想緩衝距離的最大變異。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  最小限制為 0.1% 的距離，而且小於該值的和任何容錯將會四捨五入至最小限制。  
   
- *相對*  
+ *relative*  
  是**元**指定是否*容錯*值是相對或絕對。 如果 'TRUE' 或 1，容錯為相對值，而且會計算的產品為*容錯*參數與角度\*橢圓體半徑的橢圓體。 如果 'FALSE' 或 0，容錯為絕對值，*容錯*值是傳回之線性近似值之理想緩衝距離的最大絕對變異。  
   
 ## <a name="return-types"></a>傳回類型  
@@ -87,7 +87,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [STBuffer &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
  [地理例項上擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

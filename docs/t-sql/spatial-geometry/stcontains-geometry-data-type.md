@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STContains (geometry Data Type)
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b9a69e9ddb617649bd9c8ef6e4e906344ecebce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 448662ed65d1b8eaf9e542be5ca4f6fc97e1e994
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stcontains-geometry-data-type"></a>STContains (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STContains(@h);  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

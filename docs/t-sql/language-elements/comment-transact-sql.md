@@ -23,15 +23,15 @@ helpviewer_keywords:
 - comments [SQL Server]
 ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a5615aa149b6f7a36b962550fa6094d3badae0a2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 132d4dc19112858df5fbab33961b5ad99c70dd1c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="---comment-transact-sql"></a>-- (註解) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,7 +78,7 @@ ORDER BY PostalCode ASC; -- We do not have to specify ASC because
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+## <a name="see-also"></a>另請參閱  
+ [流程控制語言 (TRANSACT-SQL)](~/t-sql/language-elements/control-of-flow.md)  
   
   

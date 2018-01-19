@@ -28,15 +28,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acc0566abe5865284a39680136f0535e8b801d90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8aa26314b450d859760f69b61887827b73b456fc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ SELECT [ ALL | DISTINCT ]
  DISTINCT  
  指定結果集中只能有不重複的資料列 (唯一資料列)。 針對 DISTINCT 關鍵字的用途，Null 值會被視為相等。  
   
- TOP (*運算式*) [百分比] [WITH TIES]  
+ TOP (*expression* ) [ PERCENT ] [ WITH TIES ]  
  指出只有指定的第一組資料列或資料列百分比會從查詢結果集傳回。 *expression* 可以是一個數字，也可以是資料列的百分比。  
   
  回溯相容性，使用 TOP*運算式*沒有括號在 SELECT 陳述式支援，但我們不建議您這麼做。 如需詳細資訊，請參閱[TOP &#40;TRANSACT-SQL &#41;](../../t-sql/queries/top-transact-sql.md).  
@@ -161,7 +161,7 @@ FROM Cities;
   
  如果 SELECT INTO 或 CREATE VIEW 陳述式所建立的資料行未指定資料行名稱，便會發生錯誤。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [精選的範例 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

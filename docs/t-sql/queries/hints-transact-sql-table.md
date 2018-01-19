@@ -38,15 +38,15 @@ helpviewer_keywords:
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 caps.latest.revision: "174"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ca76e248bc8f3fe0c3b0edff73254e05a6f4f26
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hints-transact-sql---table"></a>提示 (TRANSACT-SQL)-資料表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>引數  
- 與**(** \<table_hint > **)** [[**，** ]...*n* ]  
+ WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
  但有某些例外，僅當利用 WITH 關鍵字指定提示時，FROM 子句才會支援資料表提示。 資料表提示也必須用括號來指定。  
   
 > [!IMPORTANT]  
@@ -153,7 +153,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  指定當查詢最佳化工具處理查詢時，不展開任何索引檢視表來存取基礎資料表。 查詢最佳化工具在處理檢視表時，會將它視為具有叢集索引的資料表。 NOEXPAND 只適用於索引檢視表。 如需詳細資訊，請參閱＜備註＞。  
   
- 索引**(***index_value* [**，**...*n* ] ) |索引 = ( *index_value***)**  
+ INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  Index （） 語法指定的名稱或處理陳述式時，查詢最佳化工具所使用的一個或多個索引的識別碼。 替代的 INDEX = 語法會指定單一索引值。 每份資料表只能指定一個索引提示。  
   
  如果有叢集索引存在，INDEX(0) 會強制執行叢集索引掃描，INDEX(1) 會強制執行叢集索引掃描或搜尋。 如果沒有叢集索引，INDEX(0) 會強制執行資料表掃描，INDEX(1) 會解譯為一則錯誤。  
@@ -184,7 +184,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  如需在 INSERT ...選取 * FROM OPENROWSET 陳述式，請參閱[保留 Null 或使用預設值大量匯入期間 &#40;SQL Server &#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [ **(***index_value***(***index_column_name* [ **，**...*n* ] **))** ]  
+ FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
  指定查詢最佳化工具只使用索引搜尋作業做為資料表或檢視表資料的存取路徑。 從 SQL Server 2008 R2 SP1 開始，您也可以指定索引參數。 如此一來，查詢最佳化工具只會考慮至少使用指定索引資料行之指定索引的索引搜尋作業。  
   
  *index_value*  
@@ -195,7 +195,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  您可以使用下列方式指定 FORCESEEK 提示。  
   
-|語法|範例|描述|  
+|語法|範例|Description|  
 |------------|-------------|-----------------|  
 |沒有索引或 INDEX 提示|`FROM dbo.MyTable WITH (FORCESEEK)`|查詢最佳化工具只會考慮透過任何相關索引的索引搜尋作業存取資料表或檢視表。|  
 |結合 INDEX 提示|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|查詢最佳化工具只會考慮利用指定索引的索引搜尋作業存取資料表或檢視表。|  
@@ -499,7 +499,7 @@ WHERE h.TotalDue > 100
 AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
  [查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  

@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c554f15df3eae68ea3b5cda1ba5bb316f5dcc17
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b1608f86abf8605b707f8b72e7baac3b9b794e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -78,23 +77,23 @@ DBCC CHECKCATALOG 會在系統中繼資料表之間，執行各種一致性檢�
 如果無法建立快照集，DBCC CHECKCATALOG 會獲取獨佔資料庫鎖定來取得必要的一致性。 如果偵測到任何不一致的情況，它們無法修復，您必須從備份中還原資料庫。
   
 > [!NOTE]  
->  執行 DBCC CHECKCATALOG 針對**tempdb**不會執行任何檢查。 這是因為基於效能考量，資料庫快照集並不適用於**tempdb**。 這表示無法取得必要的交易一致性。 回收伺服器來解析任何**tempdb**中繼資料的問題。  
+> 執行 DBCC CHECKCATALOG 針對**tempdb**不會執行任何檢查。 這是因為基於效能考量，資料庫快照集並不適用於**tempdb**。 這表示無法取得必要的交易一致性。 回收伺服器來解析任何**tempdb**中繼資料的問題。  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG 不會檢查 FILESTREAM 資料。 FILESTREAM 會將二進位大型物件 (BLOB) 儲存在檔案系統上。  
+> DBCC CHECKCATALOG 不會檢查 FILESTREAM 資料。 FILESTREAM 會將二進位大型物件 (BLOB) 儲存在檔案系統上。  
   
 一部分也執行 DBCC CHECKCATALOG [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。
   
 ## <a name="result-sets"></a>結果集  
 如果未指定任何資料庫，DBCC CHECKCATALOG 會傳回：
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 如果將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 指定為資料庫名稱，則 DBCC CHECKCATALOG 會傳回：
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
@@ -113,7 +112,7 @@ DBCC CHECKCATALOG (AdventureWorks2012);
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [系統資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
   

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0cb4b3936aa78f22958c28351d2dad523a6d9932
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 51924cf8a6715e8966911b33c4c1cf691326322c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---for-clause-transact-sql"></a>選取-FOR 子句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ JSON
  TYPE  
  指定查詢會傳回結果為**xml**型別。 如需詳細資訊，請參閱 [FOR XML 查詢中的 TYPE 指示詞](../../relational-databases/xml/type-directive-in-for-xml-queries.md)。  
   
- 根 [ **('***RootName***')** ]  
+ ROOT [ **('***RootName***')** ]  
  指定將單一最上層元素加入產生的 XML 中。 您可以選擇性地指定要產生的根元素名稱。 如果未指定選擇性的根名稱，預設值\<根目錄 > 加入項目。  
   
  如需詳細資訊，請參閱[FOR XML &#40;SQL Server &#41;](../../relational-databases/xml/for-xml-sql-server.md).  
@@ -253,15 +253,15 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  在 JSON 輸出中包含 null 值，藉由指定**INCLUDE_NULL_VALUES**選項與**FOR JSON**子句。 如果您未指定此選項，輸出不會在查詢結果中包含 null 值的 JSON 屬性。 如需詳細資訊和範例，請參閱[使用 INCLUDE_NULL_VALUES 選項 &#40; JSON 輸出中包含 Null 值SQL Server &#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  
   
- 根 [ **('***RootName***')** ]  
+ ROOT [ **('***RootName***')** ]  
  指定將單一最上層元素新增至 JSON 輸出**根**選項與**FOR JSON**子句。 如果您未指定 **ROOT** 選項，則 JSON 輸出不會有根項目。 如需詳細資訊和範例，請參閱[新增根節點與根選項 &#40; JSON 輸出SQL Server &#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
  WITHOUT_ARRAY_WRAPPER  
- 移除來指定預設括住的 JSON 輸出的方括弧**WITHOUT_ARRAY_WRAPPER**選項與**FOR JSON**子句。 如果您未指定此選項，JSON 輸出會以方括弧括住。 使用**WITHOUT_ARRAY_WRAPPER**選項，以產生單一 JSON 物件做為輸出。  如需詳細資訊，請參閱 [使用 WITHOUT_ARRAY_WRAPPER 選項從 JSON 輸出移除方括弧 &#40;SQL Server&#41;](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md)。  
+ 移除來指定預設括住的 JSON 輸出的方括弧**WITHOUT_ARRAY_WRAPPER**選項與**FOR JSON**子句。 如果您未指定此選項，JSON 輸出以方括號括住。 使用**WITHOUT_ARRAY_WRAPPER**選項，以產生單一 JSON 物件做為輸出。  如需詳細資訊，請參閱 [使用 WITHOUT_ARRAY_WRAPPER 選項從 JSON 輸出移除方括弧 &#40;SQL Server&#41;](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md)。  
   
  如需詳細資訊，請參閱[使用 FOR JSON 將查詢結果格式化為 JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

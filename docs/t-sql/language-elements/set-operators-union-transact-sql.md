@@ -21,15 +21,15 @@ helpviewer_keywords:
 - UNION operator [SQL Server]
 ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 04f90ae1f5976e29a8281cab3638b63f0525f454
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 329048d4a4f520612ce62bcf6764fa438bcbbe15
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-operators---union-transact-sql"></a>設定運算子為等位 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -354,7 +354,7 @@ FROM DimCustomer
 );  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [精選的範例 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
   

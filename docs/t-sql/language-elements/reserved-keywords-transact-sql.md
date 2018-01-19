@@ -19,15 +19,15 @@ helpviewer_keywords:
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 caps.latest.revision: "53"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 000b5c3177db29b173ee836df9c194c2af322d39
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f2a3e554a7a3b46242c44c38137609322e6d89f4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留關鍵字 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/18/2017
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|使用者|  
+|DOUBLE|OPTION|USER|  
 |DROP|OR|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
@@ -115,85 +115,85 @@ ms.lasthandoff: 11/18/2017
   
 ||||  
 |-|-|-|  
-|**絕對**|**EXEC**|**重疊**|  
+|**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
 |**動作**|**EXECUTE**|**填補**|  
-|**與 ADA**|**EXISTS**|**部分**|  
-|**新增**|**EXTERNAL**|**依照 PASCAL 命名法**|  
-|**ALL**|**擷取**|**位置**|  
-|**配置**|**FALSE**|**有效位數**|  
+|**ADA**|**EXISTS**|**部分**|  
+|**ADD**|**EXTERNAL**|**依照 PASCAL 命名法**|  
+|**ALL**|**EXTRACT**|**位置**|  
+|**ALLOCATE**|**FALSE**|**有效位數**|  
 |**ALTER**|**FETCH**|**準備**|  
-|**AND**|**第一個**|**保留**|  
-|**ANY**|**浮點數**|**PRIMARY**|  
-|**是**|**針對**|**之前**|  
+|**和**|**FIRST**|**PRESERVE**|  
+|**ANY**|**FLOAT**|**PRIMARY**|  
+|**ARE**|**針對**|**之前**|  
 |**AS**|**外部索引**|**權限**|  
 |**ASC**|**FORTRAN**|**PROCEDURE**|  
-|**判斷提示**|**找到**|**公用**|  
-|**在**|**FROM**|**讀取**|  
+|**判斷提示**|**找到**|**PUBLIC**|  
+|**AT**|**FROM**|**READ**|  
 |**AUTHORIZATION**|**FULL**|**實數**|  
-|**AVG**|**取得**|**參考**|  
-|**BEGIN**|**全域**|**相對**|  
-|**BETWEEN**|**GO**|**限制**|  
-|**位元**|**GOTO**|**REVOKE**|  
+|**AVG**|**GET**|**REFERENCES**|  
+|**BEGIN**|**GLOBAL**|**相對**|  
+|**BETWEEN**|**GO**|**RESTRICT**|  
+|**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**兩者**|**群組**|**復原**|  
-|**由**|**具有**|**資料列**|  
-|**重疊顯示**|**小時**|**SCHEMA**|  
-|**重疊顯示**|**身分識別**|**捲軸**|  
-|**CASE**|**即時運算**|**第二個**|  
-|**轉型**|**IN**|**區段**|  
-|**類別目錄**|**包含**|**SELECT**|  
-|**CHAR**|**INDEX**|**工作階段**|  
+|**BOTH**|**GROUP**|**ROLLBACK**|  
+|**BY**|**HAVING**|**ROWS**|  
+|**CASCADE**|**小時**|**SCHEMA**|  
+|**CASCADED**|**IDENTITY**|**SCROLL**|  
+|**CASE**|**IMMEDIATE**|**SECOND**|  
+|**CAST**|**IN**|**區段**|  
+|**CATALOG**|**INCLUDE**|**SELECT**|  
+|**CHAR**|**INDEX**|**SESSION**|  
 |**CHAR_LENGTH**|**指標**|**SESSION_USER**|  
-|**字元**|**一開始**|**設定**|  
-|**CHARACTER_LENGTH**|**內部**|**大小**|  
-|**核取**|**輸入**|**SMALLINT**|  
-|**CLOSE**|**不區分大小寫**|**某些**|  
+|**字元**|**一開始**|**SET**|  
+|**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
+|**CHECK**|**輸入**|**SMALLINT**|  
+|**CLOSE**|**不區分大小寫**|**SOME**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
 |**自動分頁**|**INT**|**SQL**|  
-|**定序**|**整數**|**SQLCA**|  
-|**資料行**|**INTERSECT**|**SQLCODE**|  
-|**認可**|**間隔**|**SQLERROR**|  
-|**連接**|**到**|**SQLSTATE**|  
-|**連線**|**IS**|**SQLWARNING**|  
+|**定序**|**INTEGER**|**SQLCA**|  
+|**COLUMN**|**INTERSECT**|**SQLCODE**|  
+|**COMMIT**|**INTERVAL**|**SQLERROR**|  
+|**CONNECT**|**到**|**SQLSTATE**|  
+|**連線**|**是**|**SQLWARNING**|  
 |**條件約束**|**隔離**|**SUBSTRING**|  
-|**條件約束**|**聯結**|**SUM**|  
-|**CONTINUE**|**索引鍵**|**SYSTEM_USER**|  
-|**轉換**|**LANGUAGE**|**TABLE**|  
-|**對應**|**最後一個**|**暫存**|  
+|**條件約束**|**JOIN**|**SUM**|  
+|**CONTINUE**|**KEY**|**SYSTEM_USER**|  
+|**CONVERT**|**LANGUAGE**|**TABLE**|  
+|**CORRESPONDING**|**LAST**|**TEMPORARY**|  
 |**COUNT**|**開頭**|**然後**|  
-|**建立**|**LEFT**|**時間**|  
-|**跨**|**層級**|**時間戳記**|  
+|**CREATE**|**LEFT**|**時間**|  
+|**CROSS**|**LEVEL**|**TIMESTAMP**|  
 |**目前的**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**本機**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**LOWER**|**若要**|  
+|**CURRENT_TIME**|**LOWER**|**收件人**|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**後端**|  
 |**CURRENT_USER**|**MAX**|**交易**|  
-|**資料指標**|**MIN**|**TRANSLATE**|  
-|**日期**|**分鐘**|**轉譯**|  
+|**CURSOR**|**MIN**|**TRANSLATE**|  
+|**DATE**|**MINUTE**|**轉譯**|  
 |**DAY**|**模組**|**TRIM**|  
-|**DEALLOCATE**|**MONTH**|**為 TRUE**|  
-|**DEC**|**名稱**|**等位**|  
-|**小數點**|**國家 （地區)**|**唯一**|  
-|**宣告**|**自然**|**未知**|  
+|**DEALLOCATE**|**MONTH**|**TRUE**|  
+|**DEC**|**NAMES**|**等位**|  
+|**DECIMAL**|**國家 （地區)**|**唯一**|  
+|**DECLARE**|**自然**|**UNKNOWN**|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
-|**可以延後**|**下一步**|**UPPER**|  
-|**延遲**|**否**|**使用方式**|  
+|**DEFERRABLE**|**NEXT**|**UPPER**|  
+|**DEFERRED**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
-|**DESC**|**NOT**|**使用**|  
-|**描述**|**NULL**|**VALUE**|  
-|**描述元**|**NULLIF**|**值**|  
-|**診斷**|**數值**|**VARCHAR**|  
-|**中斷連線**|**OCTET_LENGTH**|**不同的**|  
-|**相異**|**的**|**VIEW**|  
-|**網域**|**ON**|**當**|  
-|**DOUBLE**|**只有**|**每當**|  
-|**卸除**|**OPEN**|**WHERE**|  
-|**其他**|**選項**|**與**|  
-|**END**|**OR**|**工作**|  
-|**結束 EXEC**|**順序**|**寫入**|  
-|**逸出**|**外部**|**YEAR**|  
-|**除了**|**輸出**|**區域**|  
-|**例外狀況**|||  
+|**DESC**|**不**|**使用**|  
+|**DESCRIBE**|**NULL**|**VALUE**|  
+|**描述元**|**NULLIF**|**VALUES**|  
+|**DIAGNOSTICS**|**數值**|**VARCHAR**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**不同的**|  
+|**DISTINCT**|**OF**|**VIEW**|  
+|**DOMAIN**|**ON**|**WHEN**|  
+|**DOUBLE**|**ONLY**|**WHENEVER**|  
+|**DROP**|**OPEN**|**WHERE**|  
+|**ELSE**|**選項**|**WITH**|  
+|**END**|**OR**|**WORK**|  
+|**END-EXEC**|**ORDER**|**WRITE**|  
+|**ESCAPE**|**外部**|**YEAR**|  
+|**EXCEPT**|**OUTPUT**|**ZONE**|  
+|**EXCEPTION**|||  
   
 ## <a name="future-keywords"></a>未來關鍵字  
  下列關鍵字可能保留給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實作新功能的未來版本。 請考慮避免使用這些字做為識別碼。  
@@ -244,7 +244,7 @@ ms.lasthandoff: 11/18/2017
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|timestamp|  
+|CUME_DIST|NEW|TIMESTAMP|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|否|TIMEZONE_MINUTE|  
 |CURRENT_PATH|無|TRAILING|  
@@ -258,7 +258,7 @@ ms.lasthandoff: 11/18/2017
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALUE|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|參數|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -292,7 +292,7 @@ ms.lasthandoff: 11/18/2017
 |GROUPING|REGR_SXY|YEAR|  
 |HOLD|REGR_SYY|ZONE|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SET QUOTED_IDENTIFIER &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   

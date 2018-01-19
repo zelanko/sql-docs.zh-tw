@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: Aggregate Geometry Methods [SQL Server]
 ms.assetid: 4e19f582-ef8f-40f7-8ad1-4f08591cdd1a
 caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 24ea075c1e75f3bd488c83fcc0d21f50732cc149
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2bd22d4fd5ec8be93555fc91087ac55b537fa12b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="static-aggregate-geometry-methods"></a>靜態彙總幾何方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [UnionAggregate &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/unionaggregate-geometry-data-type.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [擴充的靜態幾何方法](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)   
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   

@@ -32,15 +32,15 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 caps.latest.revision: "94"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1c56150f81604473f87ae9c220ac916be30ce3c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a709097e12b435cbf32f88e13c067135aa3e77ad
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -138,13 +138,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 這是一個明確的資料行參考。 正在修改之資料表的任何參考必須由地加以限定 INSERTED 或 DELETED 前置詞，視需要，例如： INSERTED**。***column_name*。  
+ 這是一個明確的資料行參考。 正在修改之資料表的任何參考必須由地加以限定 INSERTED 或 DELETED 前置詞，視需要，例如： INSERTED **。 * * * column_name*。  
   
  $action  
  僅適用於 MERGE 陳述式。 指定類型的資料行**nvarchar （10)**傳回每個資料列的三個值的其中一個 MERGE 陳述式中 OUTPUT 子句中: 'INSERT'、 'UPDATE' DELETE'，依據該資料列時所執行的動作。  
   
 ## <a name="remarks"></a>備註  
- 輸出\<dml_select_list > 子句和輸出\<dml_select_list > INTO {  **@**  *table_variable*  |  *output_table* } 子句可以定義在單一 INSERT、 UPDATE、 DELETE 或 MERGE 陳述式。  
+ 輸出\<dml_select_list > 子句和輸出\<dml_select_list > INTO {**@ * * * table_variable* | *output_table* } 子句可以定義在單一 INSERT、 UPDATE、 DELETE 或 MERGE 陳述式。  
   
 > [!NOTE]  
 >  除非另有指定，否則，指向 OUTPUT 子句的參考會同時參考 OUTPUT 子句和 OUTPUT INTO 子句。  
@@ -668,7 +668,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

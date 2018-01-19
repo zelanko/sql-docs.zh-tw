@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: OGC Static Geometry Methods [SQL Server]
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a614b1b22a485f224e66e9421f33b9bcb5a1bab9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a3d6aef1b0c0390c71bcd06fb5c6ce3fd61b56aa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ogc-static-geometry-methods"></a>OGC 靜態幾何方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [STGeomCollFromWKB &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [擴充的靜態幾何方法](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

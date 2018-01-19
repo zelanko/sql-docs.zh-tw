@@ -1,5 +1,5 @@
 ---
-title: "- （減號）(TRANSACT-SQL) |Microsoft 文件"
+title: '- (Subtraction) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - subtracting numbers
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 519f3455fd264cbbed7b826a8c90b03039250589
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 28c59396887c146679c027e13607e5976740b873
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="--subtraction-transact-sql"></a>-（減） (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,11 +106,11 @@ SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference
 FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [-= &#40;減法指派 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
  [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
  [算術運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
- [-&#40;負數 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/unary-operators-negative.md)   
+ [- &#40;Negative&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/unary-operators-negative.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

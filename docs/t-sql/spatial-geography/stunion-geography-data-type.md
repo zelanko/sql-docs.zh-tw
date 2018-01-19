@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STUnion method
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: de8c86b99b040c23347ccc8618d8a8bef999d747
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 686096ef4e69427574edf71ce12db7c1c2862384
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stunion-geography-data-type"></a>STUnion (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ SELECT @g.STUnion(@h).ToString();
  SELECT @g.STUnion(@h).ToString();
  ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [地理例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

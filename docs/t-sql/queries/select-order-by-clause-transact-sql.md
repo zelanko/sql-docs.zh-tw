@@ -40,15 +40,15 @@ helpviewer_keywords:
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 caps.latest.revision: "68"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e718c2d35b1627abee53c3214294372fb23d61a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 322bca602925cd959ca5de076fcbbdeacd7ba63a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>選取-ORDER BY 子句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,10 +106,10 @@ ORDER BY order_by_expression
  COLLATE *sys.databases*  
  指定應該根據中指定的定序執行 ORDER BY 作業*sys.databases*，而不是根據資料表或檢視表中定義之資料行的定序。 *sys.databases*可以是 Windows 定序名稱或 SQL 定序名稱。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 會只適用於類型的資料行**char**， **varchar**， **nchar**，和**nvarchar**。  
   
- **ASC** |DESC  
+ **ASC** | DESC  
  指定指定之資料行的值應該以遞增或遞減順序排序。 ASC 從最低值到最高值進行排序。 DESC 從最高值到最低值進行排序。 ASC 是預設排序次序。 Null 值會當做最低的可能值來處理。  
   
- 位移 { *integer_constant* | *offset_row_count_expression* } {資料列 |資料列}  
+ OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  指定要略過的資料列數目，然後才開始從查詢運算式傳回資料列。 值可以是大於或等於零的整數常數或運算式。  
   
 **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
@@ -120,7 +120,7 @@ ORDER BY order_by_expression
   
  在查詢執行計畫，位移資料列計數值會顯示在**位移**TOP 查詢運算子的屬性。  
   
- 擷取 {第一個 |下一步} { *integer_constant* | *fetch_row_count_expression* } {資料列 |只有資料列}  
+ FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  指定要在已處理 OFFSET 子句之後傳回的資料列數目。 值可以是大於或等於一的整數常數或運算式。  
   
 **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -546,7 +546,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName, FirstName;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   

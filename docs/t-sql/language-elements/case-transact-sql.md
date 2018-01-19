@@ -1,5 +1,5 @@
 ---
-title: "案例 (TRANSACT-SQL) |Microsoft 文件"
+title: CASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 283484ce00b3f0c19dea00b47826926a2b86df43
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: df29d72722d665e9595105a01a3a89841ec2b4ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,13 +79,13 @@ END
  *input_expression*  
  這是使用簡單的 CASE 格式時，所評估的運算式。 *input_expression*是任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 當*when_expression*  
+ WHEN *when_expression*  
  簡單運算式*input_expression*使用簡單的 CASE 格式時進行比較。 *when_expression*是任何有效運算式。 資料類型的*input_expression* ，而且每個*when_expression*必須相同，或必須是隱含的轉換。  
   
- 然後*result_expression*  
+ THEN *result_expression*  
  所傳回的運算式時*input_expression*等於*when_expression*評估為 TRUE，或*Boolean_expression*評估為 TRUE。 *結果運算式*是任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 其他*else_result_expression*  
+ ELSE *else_result_expression*  
  這是沒有比較運算的評估結果是 TRUE 時，所傳回的運算式。 如果省略這個引數，且沒有比較運算得出 TRUE，CASE 就會傳回 NULL。 *else_result_expression*是任何有效運算式。 資料類型的*else_result_expression*和任何*result_expression*必須相同，或必須是隱含的轉換。  
   
  當*Boolean_expression*  
@@ -354,12 +354,12 @@ WHERE SalariedFlag = 0;
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [聯合 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [IIF &#40;TRANSACT-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
- [選擇 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
 

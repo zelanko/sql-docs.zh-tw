@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STBuffer (geography Data Type)
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4f0cf2e9d8f4514f9017da8f75a8fa15d5dcb324
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b6d744ac8a275d48c1acb65ab7ea7c870692a1a1
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引數  
- *距離*  
+ *distance*  
  類型的值**float** (**double** .NET Framework 中) 指定的距離**geography**執行個體的周圍計算緩衝。  
   
  緩衝區的最大距離不能超過 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 的地球圓周) 或完整的地球。  
@@ -77,7 +77,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STBuffer(1).ToString();  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [BufferWithTolerance &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
  [地理例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

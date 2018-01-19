@@ -17,15 +17,15 @@ f1_keywords:
 helpviewer_keywords: AT TIME ZONE function
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2265efe9fab240d25d03e3e1ef16009d294166af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b9fc240d76c2939e0ed96d87fdbfee35ec8208ce
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="at-time-zone-transact-sql"></a>時區 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ inputdate AT TIME ZONE timezone
  *inputdate*  
  運算式是可解析成**smalldatetime**， **datetime**， **datetime2**，或**datetimeoffset**值。  
   
- *時區*  
+ *timezone*  
  目的地時區的名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]依賴 Windows 登錄中儲存的時區。 在電腦上安裝所有的時區會儲存在下列的登錄 hive: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time 區域**。 一份已安裝的時區也會公開透過[sys.time_zone_info &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md)檢視。  
   
 ## <a name="return-types"></a>傳回類型  
@@ -170,7 +170,7 @@ FROM  Person.Person_Temporal
 FOR SYSTEM_TIME AS OF @ASOF;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [日期和時間類型](../../t-sql/data-types/date-and-time-types.md)   
  [日期和時間資料類型和函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   

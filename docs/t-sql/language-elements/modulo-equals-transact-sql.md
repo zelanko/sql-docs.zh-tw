@@ -23,15 +23,15 @@ helpviewer_keywords:
 - augmented operators, %=
 ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06b2992236f5d1705c10249ca07793e5fe01dff6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2ef05813539b4de8d4e6e12f4d83453167e76abd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-modulus-assignment-transact-sql"></a>%= （模數指派） (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ expression %= expression
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[%&#40;模數 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/modulo-transact-sql.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  

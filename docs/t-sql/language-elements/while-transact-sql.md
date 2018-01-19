@@ -23,15 +23,15 @@ helpviewer_keywords:
 - WHILE keyword
 ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c0a18057fc8c11e1e1657d013f904ffb34dfbd54
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6d889ec32183c0f9a19b1e2ee48bf8f6bf61d7d8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ WHILE Boolean_expression
  *Boolean_expression*  
  是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)傳回**TRUE**或**FALSE**。 如果布林運算式包含 SELECT 陳述式，則這個 SELECT 陳述式必須括在括號中。  
   
- {*q* | *statement_block*}  
+ {*sql_statement* | *statement_block*}  
  這是利用陳述式區塊來定義的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或陳述式分組。 若要定義陳述式區塊，請使用流程控制關鍵字 BEGIN 和 END。  
   
  BREAK  
@@ -133,7 +133,7 @@ END
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [流程控制語言 &#40;TRANSACT-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

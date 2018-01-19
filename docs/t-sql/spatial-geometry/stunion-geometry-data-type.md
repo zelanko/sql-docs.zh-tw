@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STUnion (geometry Data Type)
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bccc4a355b95d023fde64a3ab4b6358a2ade24aa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a065df330b6390d7ceb1a248edcfe2a57aff1377
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ SELECT @g.STUnion(@h).ToString();
   
  因為叫用 `STUnion()` 的執行個體包含圓弧線段，所以 `STUnion()` 會傳回包含圓弧線段的結果。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

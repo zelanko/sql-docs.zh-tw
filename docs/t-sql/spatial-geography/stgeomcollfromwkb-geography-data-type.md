@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STMGeomCollFromWKB method
 ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4551839c69157e7ba1d5d24232661c9901f54aa6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 410920f494dbb332bdd3aaa4632a98f8d71a9c2b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ SET @g = geography::STGeomCollFromWKB(0x0107000000020000000101000000759318045696
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [OGC 靜態地理方法](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

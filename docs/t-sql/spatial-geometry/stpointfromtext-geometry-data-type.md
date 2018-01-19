@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STPointFromText (geometry Data Type)
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a63ebffa22079c146593229e3525e5173c0531ec
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ebac32818b8770bc2edbb521092736af56aadbd3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
   
 ## <a name="arguments"></a>引數  
  *point_tagged_text*  
- 是的 WKT 表示法**geometryPoint**您想要傳回的執行個體。 *point_tagged_text*是**nvarchar （max)**運算式。  
+ 是的 WKT 表示法**geometryPoint**您想要傳回的執行個體。 *point_tagged_text* is an **nvarchar(max)** expression.  
   
  *SRID*  
  是**int**運算式，表示的空間參考識別碼 (SRID) 的**geometryPoint**您想要傳回的執行個體。  
@@ -66,7 +66,7 @@ SET @g = geometry::STPointFromText('POINT (100 100)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [OGC 靜態幾何方法](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

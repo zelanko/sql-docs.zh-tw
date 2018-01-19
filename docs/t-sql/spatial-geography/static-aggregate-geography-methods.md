@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: Aggregate Geography Methods [SQL Server]
 ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
 caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 235a979fbd58dad1dd051adc415670af96501ac0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: abfa433302352c73d096e05875616bbba9d548f2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="static-aggregate-geography-methods"></a>靜態彙總地理方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [UnionAggregate &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/unionaggregate-geography-data-type.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Geography 執行個體上的擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [擴充的靜態地理方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)   
  [Geography 執行個體上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   

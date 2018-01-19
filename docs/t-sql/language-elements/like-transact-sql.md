@@ -32,15 +32,15 @@ helpviewer_keywords:
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 993ba7467ada3a69fed043e2d6322efa7538b190
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,10 +67,10 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)字元資料類型。  
   
- *模式*  
+ *pattern*  
  要搜尋的字元的特定字串*match_expression*，而且可以包含下列有效的萬用字元。 *模式*最多可有 8,000 個位元組。  
   
-|萬用字元|描述|範例|  
+|萬用字元|Description|範例|  
 |------------------------|-----------------|-------------|  
 |%|任何含有零或多個字元的字串。|WHERE title LIKE '%computer%' 可找出書名中含有 'computer' 這個字的所有書名。|  
 |_ (底線)|任何單一字元。|WHERE au_fname LIKE '_ean' 可找出所有以 ean 結尾的四個字母的名字 (如 Dean、Sean 等)。|  
@@ -333,7 +333,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. 使用 NOT LIKE 搭配 % 萬用字元  
- 下列範例會尋找所有電話號碼中的`DimEmployee`資料表，不會啟動`612`。  執行個體時提供 SQL Server 登入。  
+ 下列範例會尋找所有電話號碼中的`DimEmployee`資料表，不會啟動`612`。  。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -356,9 +356,9 @@ WHERE phone LIKE '6_2%'
 ORDER by LastName;   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [其中 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
  

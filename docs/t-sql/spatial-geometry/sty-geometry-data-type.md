@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STY (geometry Data Type)
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d51408e7851ecc50b117c53fa3fc27758d1d8f0b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1177c430db2dea25e9fbb26efed52fa0781bff3e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sty-geometry-data-type"></a>STY (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ SET @g = geometry::STGeomFromText('POINT(3 8)', 0);
 SELECT @g.STY;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [STX &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STSrid &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 caps.latest.revision: "76"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 182e3443a9baf73fdbda096c11b4320feb53edda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 70bfea2777f5f96769d4296c8fbb7f2acbd20e4f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="declare-localvariable-transact-sql"></a>宣告@local_variable(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DECLARE
   
  如需有關系統資料類型的詳細資訊，請參閱[資料類型 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/data-types-transact-sql.md). 如需有關 CLR 使用者定義型別或別名資料類型的詳細資訊，請參閱[CREATE TYPE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
- =*值*  
+ =*value*  
  以內嵌方式指派值給變數。 此值可以是常數或運算式，但是它必須符合變數宣告類型，或是必須可隱含轉換成該類型。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 @*cursor_variable_name*  
@@ -138,10 +138,10 @@ CURSOR
  IDENTITY  
  指出新資料行是識別欄位。 當新資料列加入資料表時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供資料行的唯一累加值。 識別欄位通常用來結合 PRIMARY KEY 條件約束一起使用，當做資料表的唯一資料列識別碼。 IDENTITY 屬性可以指派給**tinyint**， **smallint**， **int**， **decimal(p,0)**，或**numeric(p,0)**資料行。 每份資料表都只能建立一個識別欄位。 繫結的預設值和 DEFAULT 條件約束無法搭配識別欄位使用。 您必須同時指定種子和遞增，或同時不指定這兩者。 如果同時不指定這兩者，預設值便是 (1,1)。  
   
- *種子*  
+ *seed*  
  這是載入資料表的第一個資料列所用的值。  
   
- *遞增*  
+ *increment*  
  這是加入先前載入的資料列之識別值的累加值。  
   
  ROWGUIDCOL  
@@ -317,7 +317,7 @@ FROM DimEmployee
 WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

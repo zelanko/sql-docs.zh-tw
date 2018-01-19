@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6a932ffe43e978bdc9e06f96cac300d45a035b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d929476cd48275249c5ac78a75ed22d6822fb21a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,17 +41,17 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引數  
- *距離*  
+ *distance*  
  是**float**運算式指定從距離**幾何**執行個體的周圍計算緩衝。  
   
- *容錯*  
+ *tolerance*  
  是**float**運算式，指定緩衝距離的容錯。  
   
  *容錯*指的是傳回之線性近似值之理想緩衝距離的最大變異。  
   
  例如，點的理想緩衝距離是圓形，但是這必須由多邊形來模擬。 當容錯越小時，多邊形就會有越多的點，這樣會增加結果的複雜度，但是會減少錯誤。  
   
- *相對*  
+ *relative*  
  是**元**指定是否*容錯*值是相對或絕對。 如果 'TRUE' 或 1，然後容錯為相對值，而且會計算的產品為*容錯*參數及週框方塊之直徑的執行個體。 如果 'FALSE' 或 0，容錯為絕對值，*容錯*值是傳回之線性近似值之理想緩衝距離的最大絕對變異。  
   
 ## <a name="return-types"></a>傳回類型  
@@ -95,7 +95,7 @@ SET @g = geometry::STGeomFromText('POINT(3 3)', 0);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [STBuffer &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

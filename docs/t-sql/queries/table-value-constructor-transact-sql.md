@@ -19,15 +19,15 @@ helpviewer_keywords:
 - table value constructor [SQL Server]
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: af168279367215e96be2989a5b5e8f8326baab76
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0a889b6f652288540d76ffc9f4d3c93e4f786969
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="table-value-constructor-transact-sql"></a>資料表值建構函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -186,9 +186,9 @@ GROUP BY Change;
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [合併式 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/merge-transact-sql.md)   
+ [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
   

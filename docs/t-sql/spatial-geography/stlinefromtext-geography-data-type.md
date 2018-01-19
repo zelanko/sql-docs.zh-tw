@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STLineFromText method
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 38cc0a1be16dd1ca609dcd828b1fbe5985631450
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ac662836b51111314f59671600cc2ad446ca220d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ SET @g = geography::STLineFromText('LINESTRING(-122.360 47.656, -122.343 47.656 
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [OGC 靜態地理方法](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: STCurveToLine method (geometry)
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8da8776b690752e17b1cc25bb428190f2252d01d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 59e40c95212420ed5f2dd46c46cf11eca623fd29
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/17/2017
  SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
  ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [STLength &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STNumPoints &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)   

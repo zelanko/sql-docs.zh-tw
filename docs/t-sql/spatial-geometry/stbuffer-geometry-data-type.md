@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STBuffer (geometry Data Type)
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cb93bd550570b94b1a924a20d6243e808209adec
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c7d46b002eec2a8437234c89cf03dd1c29b3fc27
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引數  
- *距離*  
+ *distance*  
  類型的值**float** (**double** .NET Framework 中) 指定從 geometry 執行個體的周圍計算緩衝的距離。  
   
 ## <a name="return-types"></a>傳回類型  
@@ -166,7 +166,7 @@ ms.lasthandoff: 11/17/2017
   
  前兩個**選取**陳述式會傳回`MultiPolygon`執行個體，因為參數*距離*小於或等於 1/2 的距離兩個點 (1 1) 和 (1 4)。 第三個**選取**陳述式會傳回`Polygon`執行個體，因為緩衝的執行個體的兩個點 (1 1) 和 (1 4) 重疊。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [BufferWithTolerance &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

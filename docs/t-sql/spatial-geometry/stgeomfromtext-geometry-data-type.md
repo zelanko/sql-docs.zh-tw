@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STGeomFromText (geometry Data Type)
 ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 247c21acb3042e32f058dab74961bdd7ba157ec3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 169c0c8dcd201398595f7b754015003c70e90c65
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ SET @g = geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [OGC 靜態幾何方法](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

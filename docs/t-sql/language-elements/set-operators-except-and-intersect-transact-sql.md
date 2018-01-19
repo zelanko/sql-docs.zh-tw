@@ -24,15 +24,15 @@ helpviewer_keywords:
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e3580ace2c5b4295c0fecbfd7239a988137f8949
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 706aeaab949399ab6d235a368fa354c32cc54d98
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>除了設定 Operators-和 INTERSECT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引數  
- \<*query_specification*> |( \< *query_expression*>)  
+ \<*query_specification*> | ( \<*query_expression*> )  
  這是一個查詢規格或查詢運算式，它會傳回要與另一個查詢規格或查詢運算式資料比較的資料。 EXCEPT 或 INTERSECT 作業中的資料行定義不必相同，但必須能夠透過隱含的轉換來比較。 當資料類型，用來執行比較，並傳回結果取決於基礎類型的規則[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
  當類型相同，但有效位數、小數位數或長度不同時，結果取決於相同的運算式組合規則。 如需詳細資訊，請參閱[有效位數、小數位數和長度 &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  

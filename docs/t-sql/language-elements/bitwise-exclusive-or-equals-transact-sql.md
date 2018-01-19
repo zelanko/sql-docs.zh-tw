@@ -22,15 +22,15 @@ helpviewer_keywords:
 - augmented operators, ^=
 ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ea63dff67d76e51b04e5ed6f994820a3797b91d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f6e2385c6a47174cd2b8e8b0ad7e519228b3159e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^ = (位元互斥 OR 指派) (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ expression ^= expression
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[^ &#40;位元互斥 OR &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [複合運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [運算式 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
