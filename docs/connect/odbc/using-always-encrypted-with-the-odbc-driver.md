@@ -17,11 +17,11 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 307c9e4774037560884c7e2da43c1fed1c405a14
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用一律加密 with the ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -371,7 +371,7 @@ Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方�
 
 |認證類型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|Username/password| `KeyVaultPassword`|使用者主體名稱|密碼|
+|使用者名稱/密碼| `KeyVaultPassword`|使用者主體名稱|密碼|
 |用戶端識別碼/密碼| `KeyVaultClientSecret`|用戶端識別碼|密碼|
 
 #### <a name="example-connection-strings"></a>範例連接字串
@@ -384,7 +384,7 @@ Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方�
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Username/Password**
+**使用者名稱/密碼**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -526,7 +526,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 當 ODBC 驅動程式將會允許使用[非同步作業](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md)透過永遠加密，效能造成影響的作業時沒有啟用 永遠加密。 若要呼叫`sys.sp_describe_parameter_encryption`為決定加密中繼資料會封鎖陳述式，並會導致驅動程式等候伺服器傳回中繼資料，再傳回`SQL_STILL_EXECUTING`。
 
 ### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>在使用 SQLGetData 組件中擷取資料
-SQL server ODBC 驅動程式 17 加密之前使用 SQLGetData 組件中無法擷取字元和二進位資料行。 可以進行只有一個呼叫 SQLGetData，以包含整個資料行的資料長度足夠的緩衝區。 在 SQL Server 的 ODBC 驅動程式 17 加密**varbinary （max)**無法使用 SQLGetData 和 SQL_C_BINARY C 類型的組件中擷取資料行。
+SQL server ODBC 驅動程式 17 加密之前使用 SQLGetData 組件中無法擷取字元和二進位資料行。 可以進行只有一個呼叫 SQLGetData，以包含整個資料行的資料長度足夠的緩衝區。
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>將資料傳送 SQLPutData 使用組件中
 插入或比較資料無法傳送 SQLPutData 使用組件中。 可以進行 SQLPutData 只有一個呼叫，以包含整個資料緩衝區。 Long 資料插入加密的資料行中，使用下一節中所述，與輸入的資料檔大量複製 API。
