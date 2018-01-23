@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>比較表格式和多維度解決方案
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services 提供多種方法，以建立商業智慧語意模型： 表格式、 多維度和 Power Pivot for SharePoint。
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  SQL Server Analysis Services 提供多種方法，以建立商業智慧語意模型： 表格式、 多維度和 Power Pivot for SharePoint。
   
  利用多種方法可讓您視不同的商務和使用者需求，量身訂做模型化體驗。 多維度是建基於開放標準的成熟技術，且受到許多 BI 軟體廠商的愛戴，但很難駕馭。 表格式提供許多開發人員認為更具直覺性的關聯式模型化方法。 Power Pivot 甚至更加簡易，除了在 Excel 中提供視覺化的資料模型外，還透過 SharePoint 提供伺服器支援。  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |不完全階層|是|[是]<sup>1</sup>|  
 |父子式階層|是|是 (透過 DAX)|
 |資料分割|是|是| 
-|「檢視方塊」|是|是|
+|檢視方塊|是|是|
 |資料列層級安全性|是|是| 
 |物件層級安全性|是|[是]<sup>1</sup>|
 |局部加總量值|是|是| 
@@ -174,7 +176,7 @@ ms.lasthandoff: 01/08/2018
  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 執行個體管理](../analysis-services/instances/analysis-services-instance-management.md)   
  [Analysis Services 的新功能](../analysis-services/what-s-new-in-analysis-services.md)     
 

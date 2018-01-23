@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b50bb9f02ef1f5d0c36d05f269b229e803c8100b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f9250e25f4e874c40ec9e400850707f30c8e1930
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>課程 9-1-定義和瀏覽檢視方塊
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]檢視方塊可以簡化 cube 的檢視，提供特定用途。 根據預設，使用者可以看到 Cube 中他們擁有權限的所有元素。 當使用者檢視整個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 時，他們所檢視的就是該 Cube 的預設檢視方塊。 整個 Cube 的檢視可能非常複雜，讓使用者難以瀏覽，尤其有的使用者只需要與一小部分的 Cube 互動，即可滿足他們的商業智慧和報告需求。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+檢視方塊可以針對特定的用途，簡化 Cube 的檢視。 根據預設，使用者可以看到 Cube 中他們擁有權限的所有元素。 當使用者檢視整個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 時，他們所檢視的就是該 Cube 的預設檢視方塊。 整個 Cube 的檢視可能非常複雜，讓使用者難以瀏覽，尤其有的使用者只需要與一小部分的 Cube 互動，即可滿足他們的商業智慧和報告需求。  
   
 若要簡化 Cube 明顯的複雜性，您可以建立稱為 *「檢視方塊」*(Perspective) 的可檢視 Cube 子集，它只會讓使用者看到 Cube 中部分的量值群組、量值、維度、屬性、階層、關鍵效能指標 (KPI)、動作以及導出成員。 這對於使用針對舊版 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所撰寫的用戶端應用程式特別有用。 例如，雖然這些用戶端沒有顯示資料夾或檢視方塊的概念，但是對於舊版的用戶端而言，檢視方塊就像是 Cube 一樣。 如需詳細資訊，請參閱 [檢視方塊](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)和 [多維度模型中的檢視方塊](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)。  
   
@@ -169,7 +171,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>透過每一個檢視方塊來瀏覽  
   
-1.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
+1.  在 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]。  
   
 2.  順利完成部署之後，請切換至 [瀏覽器] 索引標籤，然後按一下 [重新連接] 按鈕。  
   
@@ -200,7 +202,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [定義和瀏覽翻譯](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [Perspectives](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  
 [多維度模型中的檢視方塊](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   

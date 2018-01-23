@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d8f91c18a5150bd769c53ac24ad49346a4c6af60
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0fe40b4deeb6fa929be969a0d84a61bcad85f9a1
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 課：在 Analysis Services 專案內定義資料來源檢視
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]設計商業智慧應用程式中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]開頭建立[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 在這個專案內，您要定義方案的所有元素，請從資料來源檢視開始。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中設計商業智慧應用程式，先從在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中建立 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]專案開始。 在這個專案內，您要定義方案的所有元素，請從資料來源檢視開始。  
   
 這一課包含下列工作：  
   
@@ -44,12 +46,12 @@ ms.lasthandoff: 01/08/2018
 將您的結果與在這一課中建立的範例專案檔案相比較。 如需下載此教學課程隨附之範例專案的詳細資訊，請參閱 CodePlex 之產品範例頁面上的 [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) (適用於 SQL Server 2012 的 SSAS 多維度模型專案)。  
   
 ## <a name="next-lesson"></a>下一課  
-[第 2 課：定義和部署 Cube](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
+[第 2 課︰ 定義和部署 Cube](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [建立 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
 [支援的資料來源 &#40;SSAS 多維度&#41;](https://msdn.microsoft.com/library/ms175608(v=sql.110).aspx)  
 [多維度模型中的資料來源檢視](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [Analysis Services 教學課程案例](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多維度模型化 &#40;Adventure Works 教學課程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   

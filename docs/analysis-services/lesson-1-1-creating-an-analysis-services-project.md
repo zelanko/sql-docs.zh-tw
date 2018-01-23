@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9cdbd57f570c79b3efaabf5d07fb09ea4cc20c8b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d2dbc32284d43c15c5e07206137f5a8253ed7040
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>課程 1-1-建立 Analysis Services 專案
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在下列工作中，您會使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]來建立新的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案名為**Analysis Services 教學課程**根據[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案範本。 *「專案」* (Project) 是相關物件的集合。 專案存在於方案內，方案包括一或多個專案。 如需詳細資訊，請參閱 [建立 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在下列工作中，您將根據 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案範本，使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 來建立名為 **[Analysis Services 教學課程]**的新 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案。 *「專案」* (Project) 是相關物件的集合。 專案存在於方案內，方案包括一或多個專案。 如需詳細資訊，請參閱[建立 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>若要建立新的 Analysis Services 專案  
   
@@ -43,9 +45,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [定義資料來源](../analysis-services/lesson-1-2-defining-a-data-source.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [使用 SQL Server 資料工具 &#40;SSDT&#41; 建立多維度模型](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
-[建立 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+[建立 Analysis Services 專案 &#40;SSDT &#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   
   

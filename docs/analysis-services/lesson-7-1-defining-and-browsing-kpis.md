@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88b23c96ad23f4761ca05dafa685cdba026a484a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 304f42d1e177e25a0aa44c071af27c4723647802
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>課程 7-1-定義和瀏覽 Kpi
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]若要定義關鍵效能指標 (Kpi)，您先定義 KPI 名稱以及 KPI 是相關聯的量值群組。 KPI 可以和所有的量值群組或單一量值群組相關聯。 接著就定義 KPI 的下列元素：  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+若要定義關鍵效能指標 (KPI)，您必須先定義 KPI 名稱以及與該 KPI 相關聯的量值群組。 KPI 可以和所有的量值群組或單一量值群組相關聯。 接著就定義 KPI 的下列元素：  
   
 -   值運算式  
   
@@ -275,5 +277,5 @@ ms.lasthandoff: 01/08/2018
     北美地區轉售商 Q3 CY 2007 自行車銷售的毛利率隨即出現。  
   
 ## <a name="next-lesson"></a>下一課  
-[第 8 課：定義動作](../analysis-services/lesson-8-defining-actions.md)  
+[第 8 課： 定義動作](../analysis-services/lesson-8-defining-actions.md)  
   

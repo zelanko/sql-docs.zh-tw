@@ -20,14 +20,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 12b3c89ac68cd633c50ea96ded258a91cc066ae8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 69f16ef4141ca467063a84bf2305ccbe6d8f8996
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services Developer 文件
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]在 Analysis Services 中，幾乎每個物件和工作負載可程式化，而且通常沒有可從中選擇的多個方法。  選項包括撰寫 managed 程式碼、 指令碼，或使用 XMLA 和 MSOLAP 開放標準，如果方案需求致使使用.NET framework。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+在 Analysis Services 中，幾乎每個物件和工作負載可程式化，而且通常沒有可從中選擇的多個方法。  選項包括撰寫 managed 程式碼、 指令碼，或使用 XMLA 和 MSOLAP 開放標準，如果方案需求致使使用.NET framework。
 
 ## <a name="what-you-can-accomplish-in-code"></a>您可以在程式碼中完成的作業
 一般程式設計案例包括伺服器和資料庫部署、 管理、 模型和資料庫建立和資料存取，從您的自訂應用程式和取用 Analysis Services 資料的報表。 通用於所有這些情況下是一個固定的架構與物件定義階層架構，非常清楚跨越資料定義、 處理和查詢工作負載的作業。
@@ -79,6 +81,6 @@ Analysis Services 提供許多方式可以自訂的解決方案，透過程式�
 
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md)用於系統管理功能，加上一般用途的 cmdlet 文件**Invoke-ascmd**指令程式可接受任何指令碼或做為輸入的查詢。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [技術參考 &#40;Ssas&#41;](../analysis-services/powershell/technical-reference-ssas.md) 
 [查詢及運算式語言參考 &#40;Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bfb369e21e5d57768d79e07cfe066d89033909ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4fe3a7adab5e0c4f87abaf09b04efa64f27e124f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>課程 3-2-修改 [客戶] 維度
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]有許多不同的方式，您可以增加的可用性和 cube 中維度的功能。 在這個主題的工作中，您會修改 Customer 維度。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+您有許多不同方式可以增加 Cube 中維度的可用性和功能性。 在這個主題的工作中，您會修改 Customer 維度。  
   
 ## <a name="renaming-attributes"></a>重新命名屬性  
 您可以使用 [維度設計師] 的 [維度結構] 索引標籤來變更屬性名稱。  
@@ -190,7 +192,7 @@ ms.lasthandoff: 01/08/2018
   
     [City] 和 [StateProvinceName] 資料行現在會顯示在 [索引鍵資料行] 清單中。  
   
-5.  按一下 [確定] 。  
+5.  按一下 **[確定]**。  
   
 6.  若要設定 [縣 (市)] 屬性 (attribute) 的 [NameColumn] 屬性 (property)，請按一下 [屬性] \(property) 視窗中的 [NameColumn] 欄位，然後按一下瀏覽 (**...**) 按鈕。  
   
@@ -210,7 +212,7 @@ ms.lasthandoff: 01/08/2018
   
     [EnglishCountryRegionName] 和 [StateProvinceName] 資料行現在會顯示在 [索引鍵資料行] 清單中。  
   
-5.  按一下 [確定] 。  
+5.  按一下 **[確定]**。  
   
 6.  若要設定 [省份] 屬性 (attribute) 的 [NameColumn] 屬性 (property)，請按一下 [屬性] \(property) 視窗中的 [NameColumn] 欄位，然後按一下瀏覽 (**...**) 按鈕。  
   
@@ -241,7 +243,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  在 [關聯性類型] 清單中，將關聯性類型設定為 [固定]。  
   
-9. 按一下 [確定] 。  
+9. 按一下 **[確定]**。  
   
 10. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -271,7 +273,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [修改 [產品] 維度](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [維度屬性 (Attribute) 屬性 (Property) 參考](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
 [從維度中移除屬性](../analysis-services/multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)  
 [重新命名屬性](../analysis-services/multidimensional-models/attribute-properties-rename-an-attribute.md)  

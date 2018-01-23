@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d4d2a87b4e387d48c6f9537ee402a10a253bf202
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d48a36254eb24dd59a9f915d6129b090ae2e7ebc
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-3---adding-attributes-to-dimensions"></a>課程 2-3-加入至維度的屬性
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]既然您已經定義維度，您可以將它們填入代表維度中的每個資料元素的屬性。 屬性通常是以資料來源檢視中的欄位為基礎。 將屬性加入至維度時，您可以將欄位從任何資料表加入至資料來源檢視中。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+既然您已經定義維度，就可以使用代表維度中每個資料元素的屬性擴展它們。 屬性通常是以資料來源檢視中的欄位為基礎。 將屬性加入至維度時，您可以將欄位從任何資料表加入至資料來源檢視中。  
   
 在此工作中，您將使用維度設計師，將屬性加入至 [客戶] 和 [產品] 維度。 根據 [客戶] 和 [地理位置] 資料表中的欄位，[客戶] 維度將包含屬性。  
   
@@ -132,8 +134,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [檢閱 Cube 和維度屬性](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>請參閱  
-[維度屬性內容參考](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+## <a name="see-also"></a>另請參閱  
+[維度屬性 （Property） 參考](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
   

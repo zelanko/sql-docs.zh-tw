@@ -24,14 +24,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6417a0f9f52f4b1fe6974928f534e8fafa04bca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fc97336300fef2dd621f1f151ff39a04cc3fbfe6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services 中的翻譯支援
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料模型，您可以內嵌標題或描述，以提供特定文化特性的字串，根據 LCID 的多個翻譯。 若為多維度模型，您可以為資料庫名稱、Cube 物件和資料庫維度物件加入翻譯。 若為表格式模型，您可以翻譯資料表和資料行的標題和描述。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料模型中，您可以內嵌標題或描述的多個翻譯，根據 LCID 提供文化特性的字串。 若為多維度模型，您可以為資料庫名稱、Cube 物件和資料庫維度物件加入翻譯。 若為表格式模型，您可以翻譯資料表和資料行的標題和描述。  
   
  定義翻譯會在模型內建立中繼資料和翻譯的標題，但若要在用戶端應用程式中轉譯當地語系化的字串，您必須在物件上設定 **Language** 屬性，或在連接字串上傳遞 **Culture** 或 **Locale Identifier** 參數 (例如，藉由設定 `LocaleIdentifier=1036` 以傳回法文字串)。  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [多維度模型中的翻譯 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 的全球化案例](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [語言和定序 &#40;Analysis Services &#41;](../analysis-services/languages-and-collations-analysis-services.md)   
  [設定或變更資料行定序](../relational-databases/collations/set-or-change-the-column-collation.md)   

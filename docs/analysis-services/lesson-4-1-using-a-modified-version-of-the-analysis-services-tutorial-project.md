@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe5945d4d6dce5b6afff025289793127cb8c9988
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>課程 4-1-使用 Analysis Services 教學課程專案的修改的版本
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本教學課程的其餘課程為基礎的增強型版本[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]您在前面三課所完成的教學課程專案。 更多的資料表和具名計算已新增至 **Adventure Works DW 2012** 資料來源檢視、更多的維度已新增至專案，而且這些新維度已新增至 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。 此外，已加入第二個量值群組，它包含第二個事實資料表的量值。 這個增強型專案可讓您繼續學習如何在商業智慧應用程式中加入功能，而不必重複已學過的技巧。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+本教學課程的其餘課程是依據您在前面三課所完成之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案的增強型版本。 更多的資料表和具名計算已新增至 **Adventure Works DW 2012** 資料來源檢視、更多的維度已新增至專案，而且這些新維度已新增至 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。 此外，已加入第二個量值群組，它包含第二個事實資料表的量值。 這個增強型專案可讓您繼續學習如何在商業智慧應用程式中加入功能，而不必重複已學過的技巧。  
   
 在您繼續這個教學課程之前，必須先下載、解壓縮、載入和處理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案的增強型版本。  使用本課程中的指示，以確保您已經執行所有步驟。  
   
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="understanding-the-enhancements-to-the-project"></a>了解專案的增強功能  
 這個專案的增強型版本與您在前面 3 課所完成的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案的版本不同。 下列章節將描述其差異。 在繼續本教學課程的其餘課程之前，請檢閱這項資訊。  
   
-### <a name="data-source-view"></a>[資料來源檢視]  
+### <a name="data-source-view"></a>資料來源檢視  
 增強型專案中的資料來源檢視多包含一個事實資料表及四個維度資料表，它們來自 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。  
   
 請注意，資料來源檢視中的十個資料表使得 <All Tables> 圖表變得很擁擠， 以致於不容易了解資料表之間的關聯性及尋找特定資料表。 為了解決這個問題，資料表分成兩個邏輯圖表：[網際網路銷售] 圖表和 [轉售商銷售] 圖表。 這些圖表各以單一事實資料表為中心。 建立邏輯圖表可讓您檢視及使用資料來源檢視中的資料表的特定子集，而不是檢視單一圖表中的所有資料表及其關聯性。  
@@ -68,11 +70,11 @@ ms.lasthandoff: 01/08/2018
 #### <a name="internet-sales-diagram"></a>Internet Sales 圖表  
 [網際網路銷售] 圖表包含透過網際網路直接向客戶銷售 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 產品之相關資料表。 圖表中的資料表為 4 個維度資料表和 1 個事實資料表，這些是您在第 1 課新增至 **Adventure Works DW 2012** 資料來源檢視中的資料表。 這些資料表如下：  
   
--   **地理位置**  
+-   **Geography**  
   
 -   **客戶**  
   
--   **Date**  
+-   **日期**  
   
 -   **產品**  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **Geography**  
   
--   **Date**  
+-   **日期**  
   
 -   **產品**  
   
@@ -123,6 +125,6 @@ Geography 維度是依據 **Adventure Works DW 2012** 資料來源檢視中的 *
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [定義父子式階層中父屬性 (Attribute) 的屬性 (Property)](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [部署 Analysis Services 專案](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   

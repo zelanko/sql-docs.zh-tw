@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 0a11280eca74da75737d30fe795c856988d422ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 00b88b320118df9649b546b35259ec1c8acdc7cf
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="what-is-analysis-services"></a>什麼是 Analysis Services？
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services 是用於決策支援和商業分析，Reporting Services 報表、 報表和用戶端應用程式，例如 Excel、 Power BI 提供的分析資料和其他資料視覺效果工具的分析資料引擎。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Analysis Services 是用於決策支援和商業分析，Reporting Services 報表、 報表和用戶端應用程式，例如 Excel、 Power BI 提供的分析資料和其他資料視覺效果工具的分析資料引擎。  
   
  一般工作流程包含撰寫多維度或表格式資料模型，將模型部署為在內部部署 SQL Server Analysis Services 或 Azure Analysis Services 伺服器執行個體的資料庫、 設定週期性的資料處理和指派由使用者允許存取資料的權限。 準備就緒時，語意資料模型可以存取的用戶端應用程式支援 Analysis Services 做為資料來源。  
  

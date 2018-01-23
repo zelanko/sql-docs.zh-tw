@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bcf00aa80484209477179ef34e4a795000f4cdc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7fca2e2c4920130ba3387d7881c63fdefa6ed4eb
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>課程 4-7-定義未知的成員和 Null 處理屬性
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]當[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]處理維度時，從基礎資料行中之資料表或檢視中的資料來源檢視中的所有相異值擴展維度中的屬性。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在處理期間發現 Null 值，它預設會將這個 Null 轉換成零 (若為數值資料行) 或空字串 (若為字串資料行)。 您可以在基礎關聯式資料倉儲的擷取、轉換和載入過程中，修改這些預設值或轉換 Null 值 (如果有的話)。 此外，您也可以設定下列三個屬性，藉以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 將 Null 值轉換成指定的值：維度的 [UnknownMember] 和 [UnknownMemberName] 屬性 (property)，以及維度索引鍵屬性 (attribute) 的 [NullProcessing] 屬性 (property)。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+當 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 處理維度時，資料來源檢視中之資料表或檢視內基礎資料行的所有相異值會在維度中擴展屬性。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在處理期間發現 Null 值，它預設會將這個 Null 轉換成零 (若為數值資料行) 或空字串 (若為字串資料行)。 您可以在基礎關聯式資料倉儲的擷取、轉換和載入過程中，修改這些預設值或轉換 Null 值 (如果有的話)。 此外，您也可以設定下列三個屬性，藉以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 將 Null 值轉換成指定的值：維度的 [UnknownMember] 和 [UnknownMemberName] 屬性 (property)，以及維度索引鍵屬性 (attribute) 的 [NullProcessing] 屬性 (property)。  
   
 「維度精靈」和「Cube 精靈」將會根據維度的索引鍵屬性是否可為 Null，或者雪花維度的根屬性是否以可為 Null 的資料行為基礎，自動為您啟用這些屬性。 在這些情況下，索引鍵屬性 (attribute) 的 [NullProcessing] 屬性 (property) 將會設定為 [UnknownMember]，而 [UnknownMember] 屬性 (property) 則會設定為 [可見]。  
   
@@ -82,7 +84,7 @@ ms.lasthandoff: 01/08/2018
   
     此時會將 [DimProductCategory (dbo)] 資料表加入 [包含的物件] 清單。  
   
-4.  按一下 [確定] 。  
+4.  按一下 **[確定]**。  
   
 5.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [格式] 功能表中，指向 [自動配置]，然後按一下 [圖表]。  
   
@@ -185,7 +187,7 @@ ms.lasthandoff: 01/08/2018
     ![顯示組件元件的產品名稱層級](../analysis-services/media/l4-assemblycomponents-1.gif "顯示組件元件的產品名稱層級")  
   
 ## <a name="next-lesson"></a>下一課  
-[第 5 課：在維度和量值群組之間定義關聯性](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[第 5 課： 定義維度與量值群組之間的關聯性](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

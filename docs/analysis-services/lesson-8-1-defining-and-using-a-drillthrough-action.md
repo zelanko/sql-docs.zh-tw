@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c409654fe8ae5ae504dcf4cad42c552ccb11ca22
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d15da8a4d463cbe2e8b0b05abf163400dc354749
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>課程 8-1-定義和使用鑽研動作
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]事實維度測量事實資料，但不會正確篩選可能會導致查詢效能緩慢的查詢傳回的資料。 為了避免這種情況，您可以定義鑽研動作，以便限制傳回的資料列總數。 這樣做將會大幅改善查詢效能。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+依據事實維度測量事實資料的維度，但卻未正確篩選查詢傳回的資料，可能會降低查詢效能。 為了避免這種情況，您可以定義鑽研動作，以便限制傳回的資料列總數。 這樣做將會大幅改善查詢效能。  
   
 在這個主題的工作中，您要定義鑽研動作，透過網際網路將銷售訂購的詳細資訊傳回給客戶。  
   
@@ -115,7 +117,7 @@ ms.lasthandoff: 01/08/2018
   
 7.  將 [到期日索引鍵] 屬性 (attribute) 的 [名稱] 屬性 (property) 變更為**到期日**。然後，使用處理 [訂單日期索引鍵] 屬性 (attribute) 的相同方法，將這個屬性的 [名稱資料行] 屬性 (property) 變更為 **Date.SimpleDate (WChar)**。  
   
-8.  將 [出貨日期索引鍵] 屬性 (attribute) 的 [名稱] (property) 屬性變更為**出貨日期**，然後將這個屬性 (attribute) 的 [名稱資料行] 屬性 (property) 變更為 **Date.SimpleDate (WChar)**。  
+8.  將 [出貨日期索引鍵] 屬性 (attribute) 的 [名稱] \(property) 屬性變更為**出貨日期**，然後將這個屬性 (attribute) 的 [名稱資料行] 屬性 (property) 變更為 **Date.SimpleDate (WChar)**。  
   
 9. 針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [動作] 索引標籤。  
   
@@ -150,9 +152,9 @@ ms.lasthandoff: 01/08/2018
     ![到 Adam Powell 送貨的訂單](../analysis-services/media/l8-action8.gif "到 Adam Powell 送貨的訂單")  
   
 ## <a name="next-lesson"></a>下一課  
-[第 9 課：定義檢視方塊和翻譯](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[第 9 課： Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [動作 &#40;Analysis Services - 多維度資料&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [多維度模型中的動作](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
 [維度關聯性](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

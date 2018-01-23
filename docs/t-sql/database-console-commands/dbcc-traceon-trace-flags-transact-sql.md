@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4dcffcd589d6ff9bd2b32aa618611dc78e98edea
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c58386532c06b5143f7462357d161d2683b1cbbb
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-追蹤旗標 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/09/2018
 |**834**|使用 Microsoft Windows 大型分頁配置之緩衝集區。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/3210239)。<br /><br />**注意：**如果您使用的資料行存放區索引功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，我們不建議開啟追蹤旗標 834。<br /><br />**範圍**： 全域只|
 |**845**|啟用鎖定頁面的標準 Sku 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時的服務帳戶、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有鎖定頁面中啟用記憶體特殊權限。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/970070)和文件頁面上的[伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]預設會啟用此行為的標準 Sku 和追蹤旗標 845 不可用。<br /><br />**範圍**： 全域只|
 |**902**|安裝累計更新或 Service Pack 時，會略過執行資料庫升級指令碼。 如果您在指令碼升級模式時發生錯誤，建議的進一步指引，請連絡 Microsoft SQL 客戶服務及支援 (CSS)。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/2163980)。<br /><br />**警告：**這個追蹤旗標用來在指令碼升級模式下，疑難排解失敗的更新並不支援在生產環境中連續執行。 資料庫升級指令碼順利執行完整安裝累計更新和 Service Pack 的需求。 不這樣可能會導致未預期的問題與您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。<br /><br />**範圍**： 全域只|
-|**1117**|檔案群組中的檔案已到達的自動成長臨界值時的檔案群組中的所有檔案會都成長。<br /><br />**注意：**開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]這種行為由 ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 選項和追蹤旗標 1117年沒有任何作用。 如需詳細資訊，請參閱[ALTER DATABASE 檔案及檔案群組選項 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).<br /><br />**範圍：**全域只|
+|**1117**|檔案群組中的檔案已到達的自動成長臨界值時的檔案群組中的所有檔案會都成長。<br /><br />**注意：**開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]這種行為由 ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 選項和追蹤旗標 1117年沒有任何作用。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。<br /><br />**範圍：**全域只|
 |**1118**|移除伺服器上大部分的單一頁面配置，以減少 SGAM 頁面的競爭情況。 建立新的物件時，根據預設前, 八個分頁被配置不同的範圍 （混合範圍）。 之後若需要更多頁面時，將會從相同的範圍 (統一範圍) 加以配置。 SGAM 頁面可用以追蹤這些混合範圍，因此若出現多個混合頁面配置，它會很快地成為瓶頸。 這個追蹤旗標會在建立新物件時，從相同的範圍配置所有八個頁面，進而將掃描 SGAM 頁面的需求降到最低。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/328551)。<br /><br />**注意：**開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]這種行為由 ALTER DATABASE 的 SET MIXED_PAGE_ALLOCATION 選項和追蹤旗標 1118年沒有任何作用。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。<br /><br />**範圍：**全域只|  
 |**1204**|傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/832524)。<br /><br />**範圍：**全域只|  
 |**1211**|停用以記憶體壓力或鎖定個數為基礎的鎖定擴大。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 不會將資料列或頁面鎖定擴大到資料表鎖定。<br /><br />使用這個追蹤旗標可能產生大量鎖定。 這可能會降低 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的效能，或因記憶體不足而造成 1204 錯誤 (無法配置鎖定資源)。<br /><br />如果同時設定了追蹤旗標 1211 和 1224，將會優先採用 1211。 但是，由於追蹤旗標 1211 會在每一個情況下防止鎖定擴大 (即使是在記憶體壓力下)，所以建議您最好使用 1224。 如此可避免在使用許多鎖定時，發生「鎖定不足」錯誤。<br /><br />**範圍**： 全域或工作階段|  
@@ -146,8 +146,8 @@ ms.lasthandoff: 01/09/2018
 |**9939**|啟用平行計劃和平行掃描記憶體最佳化資料表和參考記憶體最佳化資料表或資料表變數的 DML 作業中的資料表變數，只要它們不是中的 DML 作業的目標[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/4013877)。<br /><br />**注意：**如果同時也可以明確啟用追蹤旗標 4199 追蹤旗標 9939 就不需要。<br /><br />**範圍**： 全域或工作階段或查詢|   
 |**10204**|停用合併/重新壓縮期間資料行存放區索引重組。 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，當重新組織資料行存放區索引時，會自動合併成較大壓縮資料列，以及為壓縮具有大量的任何資料列群組已刪除資料列的任何小型的壓縮資料列的新功能。<br /><br />**注意：**追蹤旗標 10204 不適用於記憶體最佳化資料表建立資料行存放區索引。<br /><br />**範圍**： 全域或工作階段|   
 |**10316**|上可建立其他索引[內部記憶體最佳化暫存時態表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)，預設值，旁邊。 如果您有特定的查詢模式，其中包含未涵蓋的預設索引的資料行，您可以考慮加入額外的。<br /><br />**注意：**系統版本設定時態表的記憶體最佳化資料表的設計可提供高交易處理能力。 請留意建立額外的索引可能會對 DML 作業更新或刪除目前資料表中的資料列的額外負荷。 與其他索引您的目標應該以尋找時態查詢的效能和額外 DML 負擔之間的正確平衡。<br /><br />**範圍**： 全域或工作階段|
-|**11023**|停用使用上次的保存的取樣率，取樣率指定的位置不明確的一部份的所有後續的統計資料更新[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)陳述式。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/4039284)。<br /><br />**範圍**： 通用|    
-|**11024**|可讓觸發自動更新統計資料時的任何資料分割修改計數超過本機[閾值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/4041811)。<br /><br />**範圍**： 通用| 
+|**11023**|停用使用上次的保存的取樣率，取樣率指定的位置不明確的一部份的所有後續的統計資料更新[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)陳述式。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/4039284)。<br /><br />**範圍**： 全域或工作階段|    
+|**11024**|可讓觸發自動更新統計資料時的任何資料分割修改計數超過本機[閾值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/4041811)。<br /><br />**範圍**： 全域或工作階段| 
   
 ## <a name="remarks"></a>備註  
  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，有三種類型的追蹤旗標： 查詢、 工作階段和全域。 查詢追蹤旗標都可用於特定的查詢內容。 工作階段追蹤旗標用於某個連接，而且只會在該連接顯示出來。 全域追蹤旗標是設在伺服器層級，只要是該伺服器上的連接，都看得到它們。 某些旗標只能啟用為全域旗標，某些則可以啟用為全域或工作階段範圍。  

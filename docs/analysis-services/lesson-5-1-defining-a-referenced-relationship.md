@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fe4681b3f4125242e51b41ac594bd556d06f058e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f388389edcd3546f94bc120862e8933b3f790c7c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>課程 5-1-定義參考的關聯性
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]為止教學課程中，您定義每個 cube 維度為基礎的資料表，透過主索引鍵，外部索引鍵關聯性直接連結到事實資料表的量值群組。 在本主題的工作中，您會透過 [轉售商] 維度 (稱為「參考維度」)，將 [地理位置] 維度連結到事實資料表。 這樣可讓使用者按地理位置建立轉售商銷售的維度。 如需詳細資訊，請參閱 [定義參考的關聯性及參考的關聯性屬性](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+本教學課程最特別要注意的事就是，您定義的每一個 Cube 維度所依據的資料表，是透過主索引鍵對外部索引鍵的關聯性，直接連結到量值群組的事實資料表。 在本主題的工作中，您會透過 [轉售商] 維度 (稱為「參考維度」)，將 [地理位置] 維度連結到事實資料表。 這樣可讓使用者按地理位置建立轉售商銷售的維度。 如需詳細資訊，請參閱 [定義參考的關聯性及參考的關聯性屬性](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
   
 ## <a name="dimensioning-reseller-sales-by-geography"></a>按地理位置建立轉售商銷售的維度  
   
@@ -105,7 +107,7 @@ ms.lasthandoff: 01/08/2018
   
     請注意，已選取 [具體化] 核取方塊。 這項設定是 MOLAP 維度的預設值。 具體化維度屬性連結，會在處理期間使事實資料表與每個資料列的參考維度之間的連結值具體化，或是儲存在維度的 MOLAP 結構中。 這對處理效能及儲存體需求上會有一點影響，但會提升 (偶爾也會大幅提升) 查詢效能。  
   
-8.  按一下 [確定] 。  
+8.  按一下 **[確定]**。  
   
     請注意，[地理位置] Cube 維度現在是連結到 [轉售商銷售] 量值群組。 這個圖示指出其關聯性是參考維度關聯性。  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [定義事實關聯性](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [中，使用 [維度設計師] 的](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
 [定義參考的關聯性及參考的關聯性屬性](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   

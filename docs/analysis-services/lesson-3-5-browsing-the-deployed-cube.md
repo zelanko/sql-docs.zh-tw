@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd66b2c32da2194dbfbfd370db8592cd9494cb34
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8ddbefdcbc54c076c801e5f4d83e107e48ac5ba9
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-5---browsing-the-deployed-cube"></a>課程 3-5-瀏覽已部署的 Cube
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在下列工作中，您瀏覽[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教學課程 cube。 我們的分析會跨多個維度比較量值，因此您將使用 Excel 樞紐分析表瀏覽資料。 使用樞紐分析表可讓您將客戶、日期和產品資訊放在不同的軸上，讓您可以看到跨特定時間週期、客戶人口統計資料和產品線檢視時，[網際網路銷售] 如何變更。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在下列工作中，您將瀏覽 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。 我們的分析會跨多個維度比較量值，因此您將使用 Excel 樞紐分析表瀏覽資料。 使用樞紐分析表可讓您將客戶、日期和產品資訊放在不同的軸上，讓您可以看到跨特定時間週期、客戶人口統計資料和產品線檢視時，[網際網路銷售] 如何變更。  
   
 ### <a name="to-browse-the-deployed-cube"></a>瀏覽已部署的 Cube  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 01/08/2018
     ![依區域和產品線的網際網路銷售額](../analysis-services/media/l3-cube-browser-finish.gif "依地區和產品線的網際網路銷售額")  
   
 ## <a name="next-lesson"></a>下一課  
-[第 4 課：定義進階屬性和維度屬性](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+[第 4 課： 定義進階的屬性和維度屬性](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   
   

@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b92074c5a43c81673cb3464780ae878d78c14276
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6dbb05ab73e9994d4f3c14a9bdfd919ec48c6f29
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services 中使用的工具和應用程式
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]尋找工具和應用程式所需的建立 Analysis Services 模型和管理部署資料庫。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  尋找工具和應用程式所需的建立 Analysis Services 模型和管理部署資料庫。  
   
 ## <a name="analysis-services-model-designers"></a>Analysis Services 模型設計師  
  使用專案範本中 SQL Server Data Tools (SSDT)，Visual Studio shell 中撰寫模型。 專案範本提供模型設計人員建立組成 Analysis Services 方案的資料模型物件。 SSDT 是更新每個月的免費 web 下載。
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="community-and-third-party-tools"></a>社群與協力廠商工具  
  如需社群程式碼範例，請造訪 [Analysis Services codeplex 頁面](http://sqlsrvanalysissrvcs.codeplex.com/) 。 當您在尋找支援 Analysis Services 之協力廠商工具的建議時，[論壇](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) 是相當實用的資源。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [多維度資料庫的相容性層級](../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [相容性層級的表格式模型](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   

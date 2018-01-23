@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dec2c20c2450f4db1d0671f365714647c47c7db6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd263b08584b0ba13f6486e72bcf6c9f083ca896
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="recordset-object-ado"></a>資料錄集物件 (ADO)
 代表完整記錄的基底資料表或執行的命令的結果。 在任何時候，**資料錄集**物件是指單一資料錄和目前的記錄集內。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
  您可以使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， **MoveLast**， **MoveNext**，和**MovePrevious**方法;[移動](../../../ado/reference/ado-api/move-method-ado.md)方法。和[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)， [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)，和[篩選](../../../ado/reference/ado-api/filter-property.md)來重新調整位置目前的記錄，假設提供者支援的相關內容這項功能。 順向**資料錄集**物件僅支援[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法。 當您使用**移動**造訪每一筆記錄的方法 (或列舉**資料錄集**)，您可以使用**BOF**和**EOF**屬性決定是否您已經移到範圍之外的開頭或結尾**資料錄集**。  
   
- 使用的任何功能之前**資料錄集**物件，您必須呼叫**支援**来驗證的功能也支援或提供的物件上的方法。 您必須不能使用的功能時**支援**方法會傳回 false。 例如，您可以使用**MovePrevious**方法才`Recordset.Supports(adMovePrevious)`傳回**True**。 否則，您會收到錯誤，因為**資料錄集**物件可能已關閉，且功能呈現執行個體上無法使用。 如果您有興趣的一項功能不受支援，**支援**會傳回 false 同時。 在此情況下，您應該避免呼叫對應的屬性或方法上**Recrodset**物件。  
+ 使用的任何功能之前**資料錄集**物件，您必須呼叫**支援**来驗證的功能也支援或提供的物件上的方法。 您必須不能使用的功能時**支援**方法會傳回 false。 例如，您可以使用**MovePrevious**方法才`Recordset.Supports(adMovePrevious)`傳回**True**。 否則，您會收到錯誤，因為**資料錄集**物件可能已關閉，且功能呈現執行個體上無法使用。 如果您有興趣的一項功能不受支援，**支援**會傳回 false 同時。 在此情況下，您應該避免呼叫對應的屬性或方法上**資料錄集**物件。  
   
  **資料錄集**物件可以支援兩種類型的更新： 立即和批次。 在立即更新所有資料變更會立即都寫入基礎資料來源一旦呼叫[更新](../../../ado/reference/ado-api/update-method.md)方法。 您也可以傳遞值的陣列做為參數與[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)和**更新**方法，並同時更新數個記錄中的欄位。  
   
@@ -80,7 +80,7 @@ Debug.Print objRs(0)              '  the Value of Item(0).
   
 -   [資料錄集物件屬性、 方法和事件](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

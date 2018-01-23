@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9d10942e6942e4c307bc6c8fed9c7cb391d5f368
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e81b2dda4ddf65105da50dede9b3a82a5436dcec
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>課程 6-2-定義命名集
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]命名的集是傳回一組維度成員的多維度運算式 (MDX) 運算式。 您可以定義命名集，將它們儲存為 Cube 定義的一部分；也可以在用戶端應用程式建立命名集。 您可以結合 Cube 資料、算術運算子、數字和函數，來建立命名集。 使用者可以在用戶端應用程式中將命名集用於 MDX 查詢，也可以用於定義 Subcube 中的集合。 Subcube 是指交叉聯結集的集合，它會將 Cube 空間限制為針對後續陳述式定義的子空間。 定義限制的 Cube 空間是 MDX 指令碼的基本概念。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+命名集是指傳回一組維度成員的多維度運算式 (MDX) 運算式。 您可以定義命名集，將它們儲存為 Cube 定義的一部分；也可以在用戶端應用程式建立命名集。 您可以結合 Cube 資料、算術運算子、數字和函數，來建立命名集。 使用者可以在用戶端應用程式中將命名集用於 MDX 查詢，也可以用於定義 Subcube 中的集合。 Subcube 是指交叉聯結集的集合，它會將 Cube 空間限制為針對後續陳述式定義的子空間。 定義限制的 Cube 空間是 MDX 指令碼的基本概念。  
   
 命名集可以簡化 MDX 查詢，為複雜常用的集合運算式，提供有用的別名。 例如，您可以定義一個稱為 [大型轉售商] 的命名集，其含有 [轉售商] 維度中，擁有最多員工的成員集合。 一般使用者可以在查詢使用 [大型轉售商] 命名集，也可以使用命名集在 Subcube 中定義一個集合。 命名集定義是儲存在 Cube 中，但其值卻只存在於記憶體。 若要建立命名集，請在 Cube 設計師的 **[計算]** 索引標籤上，使用 **[新增命名集]** 命令。 如需詳細資訊，請參閱 [計算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)、 [建立命名集](../analysis-services/multidimensional-models/create-named-sets.md)。  
   
@@ -139,9 +141,9 @@ ms.lasthandoff: 01/08/2018
     ![設定篩選 窗格包含兩個名為](../analysis-services/media/l6-named-set-05.gif "篩選 窗格包含兩個名為設定")  
   
 ## <a name="next-lesson"></a>下一課  
-[第 7 課：定義關鍵效能指標 &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[第 7 課： 定義關鍵效能指標 &#40;Kpi &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [[新增命名集]](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [建立命名集](../analysis-services/multidimensional-models/create-named-sets.md)  
   

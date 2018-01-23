@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1cf1f2d08108f5516ad0249d1f8e3c4314b6adf8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d3140b2022e312094df84693acb69b2ea04917a7
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>課程 5-4-量值群組內定義維度資料粒度
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]針對不同目的，使用者會想要在不同的資料粒度或具體性維度事實資料。 例如可能記錄每一天轉售商的銷售資料或網際網路銷售，但銷售配額資訊可能只有當月或當季才有。 在這些案例中，使用者希望時間維度對每一個不同的事實資料表有不同的資料粒度或詳細層級。 雖然您能夠以這種不同的資料粒度將新資料庫維度定義為時間維度，但有更容易的方法，就是使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+使用者希望維度事實資料基於不同的用途有不同的資料粒度或具體性。 例如可能記錄每一天轉售商的銷售資料或網際網路銷售，但銷售配額資訊可能只有當月或當季才有。 在這些案例中，使用者希望時間維度對每一個不同的事實資料表有不同的資料粒度或詳細層級。 雖然您能夠以這種不同的資料粒度將新資料庫維度定義為時間維度，但有更容易的方法，就是使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
 根據預設，在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，當維度使用於量值群組內，該維度內的資料粒度是以維度的索引鍵屬性為基礎。 例如，當 [時間] 維度是包括在量值群組內，且 [時間] 維度的預設資料粒度是每天，則量值群組內的該維度的預設資料粒度就是每天。 這適合許多情況，例如本教學課程中的 [網際網路銷售] 和 [轉售商銷售] 量值群組。 不過，當這種維度包含在其他類型的量值群組中，例如在銷售配額或預算量值群組中，則每月或每季資料粒度會更加適合。  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
 12. 從 [銷售配額] 量值群組中刪除 [日曆季] 量值。  
   
-    [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到作為 [日曆季] 量值基礎的資料行是包含量值的資料行。 不過，這個資料行和 CalendarYear 資料行都包含您稍後在這個主題中用於連結 [銷售配額] 量值群組與 [日期] 維度的值。  
+    [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到做為 [日曆季] 量值基礎的資料行是包含量值的資料行。 不過，這個資料行和 CalendarYear 資料行都包含您稍後在這個主題中用於連結 [銷售配額] 量值群組與 [日期] 維度的值。  
   
 13. 在 [量值] 窗格中，以滑鼠右鍵按一下 [銷售配額] 量值群組，然後按一下 [新增量值]。  
   
@@ -125,7 +127,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  針對 [員工] 維度開啟 [維度設計師]，以滑鼠右鍵按一下 [資料來源檢視] 窗格中的 [SalesTerritoryKey]，然後按一下 [從資料行新增屬性]。  
   
-2.  在 [屬性] (attribute) 窗格中，選取 [SalesTerritoryKey]，然後在 [屬性] (property) 視窗中，將 [AttributeHierarchyVisible] 屬性 (property) 設定為 [False]、將 [AttributeHierarchyOptimizedState] 屬性 (property) 設定為 [NotOptimized]，並且將 [AttributeHierarchyOrdered] 屬性 (property) 設定為 [False]。  
+2.  在 [屬性]\(attribute) 窗格中，選取 [SalesTerritoryKey]，然後在 [屬性]\(property) 視窗中，將 [AttributeHierarchyVisible] 屬性 (property) 設定為 [False]、將 [AttributeHierarchyOptimizedState] 屬性 (property) 設定為 [NotOptimized]，並且將 [AttributeHierarchyOrdered] 屬性 (property) 設定為 [False]。  
   
     這是要將 [銷售領域] 維度連結至 [銷售配額] 和 [銷售配額 1] 量值群組成為參考維度時必要的屬性。  
   
@@ -145,7 +147,7 @@ ms.lasthandoff: 01/08/2018
   
 9. 確認已選取 [具體化] 核取方塊。  
   
-10. 按一下 [確定] 。  
+10. 按一下 **[確定]**。  
   
 11. 在 [銷售領域] 維度和 [銷售配額 1] 量值群組的交集處，按一下資料格，然後按一下瀏覽按鈕 (**…**)。 此時會開啟 [定義關聯性] 對話方塊。  
   
@@ -159,7 +161,7 @@ ms.lasthandoff: 01/08/2018
   
 16. 確認已選取 [具體化] 核取方塊。  
   
-17. 按一下 [確定] 。  
+17. 按一下 **[確定]**。  
   
 18. 刪除 [日期] Cube 維度。  
   
@@ -194,7 +196,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  在 [建立屬性關聯性] 對話方塊中，[來源屬性] 是 [日曆季]。 將 [相關屬性] 設定為 [會計季度]。  
   
-4.  按一下 [確定] 。  
+4.  按一下 **[確定]**。  
   
     請注意，此時會出現警告訊息，說明 [日期] 維度包含一或多個重複屬性關聯性。在使用非索引鍵屬性當作資料粒度屬性時，這些關聯性可能會讓您無法彙總資料。  
   
@@ -227,9 +229,9 @@ ms.lasthandoff: 01/08/2018
     ![銷售配額量值群組已正確建立維度](../analysis-services/media/l5-granularity-7.gif "已正確建立維度的銷售配額量值群組")  
   
 ## <a name="next-lesson"></a>下一課  
-[第 6 課：定義計算](../analysis-services/lesson-6-defining-calculations.md)  
+[第 6 課： 定義計算](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [維度關聯性](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [定義一般關聯性及一般關聯性屬性](../analysis-services/multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)  
 [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  

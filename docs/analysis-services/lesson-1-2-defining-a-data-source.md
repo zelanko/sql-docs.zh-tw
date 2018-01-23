@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3c1504d26e2c7cbdbdacf943e17d7514ba20b786
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 81bdb79296ca864999d31c487cabf490ba0e0659
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>課程 1-2-定義資料來源
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在建立之後[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案中，您通常會開始使用專案定義專案要使用的一或多個資料來源。 當您定義資料來源時，要定義用來連接到資料來源的連接字串資訊。 如需詳細資訊，請參閱 [建立資料來源 &#40;SSAS 多維度&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+建立 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案之後，您通常會定義專案要使用的一或多個資料來源來開始使用專案。 當您定義資料來源時，要定義用來連接到資料來源的連接字串資訊。 如需詳細資訊，請參閱 [建立資料來源 &#40;SSAS 多維度&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)。  
   
 在下列工作中，您會將 AdventureWorksDWSQLServer2012 範例資料庫定義為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案的資料來源。 基於這個教學課程的目的，這個資料庫是位於本機電腦上，而來源資料庫常常受主控於一部或多部遠端電腦上。  
   
@@ -61,6 +63,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [定義資料來源檢視](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [建立資料來源 &#40;SSAS 多維度&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   

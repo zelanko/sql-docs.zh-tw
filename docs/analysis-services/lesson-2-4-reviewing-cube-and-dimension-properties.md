@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 850aa434cc5eb5b5f1379be68d29cd77994a2f75
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d0913972ef2ca0b1c40c0e23d3d189a6149809cf
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-4---reviewing-cube-and-dimension-properties"></a>課程 2-4-檢閱 Cube 和維度屬性
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]定義 cube 之後，您可以使用 Cube 設計師來檢閱結果。 在下列工作中，您將檢閱 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案中 Cube 的結構。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+定義 Cube 之後，您可以使用 Cube 設計師來檢閱這些結果。 在下列工作中，您將檢閱 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案中 Cube 的結構。  
   
 ### <a name="to-review-cube-and-dimension-properties-in-cube-designer"></a>若要在 Cube 設計師中檢閱 Cube 和維度屬性  
   
@@ -66,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [部署 Analysis Services 專案](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [在維度設計師中瀏覽維度資料](../analysis-services/multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   

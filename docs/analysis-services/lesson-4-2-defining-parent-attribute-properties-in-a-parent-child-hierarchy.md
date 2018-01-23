@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9f8206a854379bd95a41d271d3c5f9dc45bd200c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a7430bd3692788b8977d4c1849a599ada77dfc59
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>父子式階層中的課程 4-2-定義父屬性
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]父子式階層是維度為基礎的兩個資料表資料行中的階層。 這些資料行會一起定義維度成員之間的階層式關聯性。 第一個名稱為「成員索引鍵資料行」的資料行會識別每個維度成員。 另一個名稱為「父資料行」資料行則會識別每個維度成員的父系。 父屬性的 **NamingTemplate** 屬性決定父子式階層中每個層級的名稱，而 **MembersWithData** 屬性則決定是否應該顯示父成員的資料。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+父子式階層是指維度中以兩個資料表資料行為基礎的階層。 這些資料行會一起定義維度成員之間的階層式關聯性。 第一個名稱為「成員索引鍵資料行」的資料行會識別每個維度成員。 另一個名稱為「父資料行」資料行則會識別每個維度成員的父系。 父屬性的 **NamingTemplate** 屬性決定父子式階層中每個層級的名稱，而 **MembersWithData** 屬性則決定是否應該顯示父成員的資料。  
   
 如需詳細資訊，請參閱 [父子式維度](../analysis-services/multidimensional-models/parent-child-dimension.md), [父子式階層中的屬性](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)。  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/08/2018
   
     ![層級命名範本對話方塊](../analysis-services/media/l4-namingtemplate.gif "層級命名範本對話方塊")  
   
-5.  按一下 [確定] 。  
+5.  按一下 **[確定]**。  
   
 6.  在 **Employees** 屬性的屬性視窗中，選取 **MembersWithData** 屬性儲存格的 **NonLeafDataHidden** 來變更 **Employees** 屬性的這個值。  
   
@@ -113,7 +115,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [自動分組屬性成員](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [父子式維度](../analysis-services/multidimensional-models/parent-child-dimension.md)  
 [父子式階層中的屬性](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c3000dfc2ecd94fb70061eead07ef92cfd643f73
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b3637cc09617b51663ac2bc65dea13c764981c2
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>第 5 課：在維度和量值群組之間定義關聯性
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本教學課程中先前的課程，您學會加入至 cube 的資料庫維度可以用做為基礎，為一或多個 cube 維度。 在這一課，您將學習如何在 Cube 維度和量值群組之間定義不同類型的關聯性，以及指定這些關聯性的屬性。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在這個教學課程的前面課程中，您已了解加入至 Cube 的資料庫維度可做為一或多個 Cube 維度的基礎。 在這一課，您將學習如何在 Cube 維度和量值群組之間定義不同類型的關聯性，以及指定這些關聯性的屬性。  
   
 如需詳細資訊，請參閱 [維度關聯性](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 這一課包含下列工作：  
   
-[定義參考關聯性](../analysis-services/lesson-5-1-defining-a-referenced-relationship.md)  
+[定義參考的關聯性](../analysis-services/lesson-5-1-defining-a-referenced-relationship.md)  
 在這項工作中，您學會如何間接透過一個利用主索引鍵 - 外部索引鍵關聯性直接連結的維度，將維度連結到事實資料表。  
   
 [定義事實關聯性](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
@@ -43,15 +45,15 @@ ms.lasthandoff: 01/08/2018
 [定義多對多關聯性](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
 在這項工作中，您學會如何透過維度資料表與事實資料表之間的多對多關聯性定義，使事實與多個維度成員相關聯。  
   
-[在量值群組內定義維度資料粒度](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[定義量值群組內的維度資料粒度](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
 在這項工作中，您學會如何為特定量值群組修改維度的資料粒度。  
   
 ## <a name="next-lesson"></a>下一課  
-[第 6 課：定義計算](../analysis-services/lesson-6-defining-calculations.md)  
+[第 6 課： 定義計算](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [Analysis Services 教學課程案例](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多維度模型化 &#40;Adventure Works 教學課程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [維度關聯性](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

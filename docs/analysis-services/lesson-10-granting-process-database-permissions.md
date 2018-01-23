@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71f92a11e25c8e766871fd682e77220bb9d36b57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f7a6e9524efcebab174073290983a20f7f242d81
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-10---granting-process-database-permissions"></a>課程 10-授與處理資料庫權限
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在您安裝的執行個體之後[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的所有成員[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]伺服器管理員角色，該執行個體中的具有整個伺服器範圍權限來執行任何工作的執行個體內[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 依預設，其他使用者都無權管理或檢視 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體中的任何物件。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+當您安裝 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體之後，該執行個體中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器管理員角色的所有成員都會具有伺服器範圍權限，可在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體內執行任何工作。 依預設，其他使用者都無權管理或檢視 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體中的任何物件。  
   
 伺服器管理員角色的成員可在整個伺服器範圍，讓他們成為角色的成員，以授與使用者管理存取權。 伺服器管理員角色的成員也可以在資料庫層級授與使用者有限或完整的管理權或存取權，藉此授與使用者比較有限的存取權。 有限的管理員權限包括在資料庫、Cube 或維度層級的處理或讀取定義權限。  
   
@@ -55,15 +57,15 @@ ms.lasthandoff: 01/08/2018
   
     請注意，這個角色的成員有權處理這個資料庫中的所有維度物件，而且依預設，也有權讀取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程資料庫中的每一個維度物件。  
   
-8.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
+8.  在 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]。  
   
     現在您已經順利定義和部署處理資料庫物件安全性角色了。 當您把 Cube 部署到實際環境之後，部署 Cube 的管理員就可以根據需要，把使用者加入這個角色中，將處理責任委託給特定的使用者。  
   
 > [!NOTE]  
 > 您可以下載並安裝範例，取得完成第 10 課的專案。 如需詳細資訊，請參閱 [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](../analysis-services/install-sample-data-and-projects.md)。  
   
-## <a name="see-also"></a>請參閱  
-[角色與權限 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+## <a name="see-also"></a>另請參閱  
+[角色和權限 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
   

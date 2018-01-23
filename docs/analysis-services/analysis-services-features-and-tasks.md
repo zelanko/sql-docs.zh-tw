@@ -17,19 +17,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dafe91acc4a753b9b6335d1b8b5bbd56c30586f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: db03f796d3271a7141f3cd754dd04d0e312bdc33
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services 功能及工作
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Analysis Services 基本文件集被依照模型類型和伺服器模式，您可以專注於剛工具、 工作和您所安裝之模式中可用的功能。 您可以在執行個體管理中找到跨越多個模式的伺服器管理工作。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  Analysis Services 基本文件是依照模型類型和伺服器模式組織，因此您可以將焦點只放在已安裝之模式所提供的工具、工作和功能。 您可以在執行個體管理中找到跨越多個模式的伺服器管理工作。  
   
 ## <a name="in-this-section"></a>本節內容  
- [比較表格式和多維度方案 &#40;SSAS&#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ [比較表格式和多維度方案 &#40;Ssas&#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- [Analysis Services 中使用的工具和應用程式](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
+ [工具和 Analysis Services 中使用的應用程式](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
  [Analysis Services 執行個體管理](../analysis-services/instances/analysis-services-instance-management.md)  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
  [Power Pivot for SharePoint &#40;SSAS&#41;](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services](../analysis-services/analysis-services.md)   
  [Analysis Services 的新功能](../analysis-services/what-s-new-in-analysis-services.md)  
   

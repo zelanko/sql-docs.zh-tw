@@ -18,10 +18,10 @@ manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
 ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用一律加密 with the ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -371,7 +371,7 @@ Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方�
 
 |認證類型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|使用者名稱/密碼| `KeyVaultPassword`|使用者主體名稱|密碼|
+|Username/password| `KeyVaultPassword`|使用者主體名稱|密碼|
 |用戶端識別碼/密碼| `KeyVaultClientSecret`|用戶端識別碼|密碼|
 
 #### <a name="example-connection-strings"></a>範例連接字串
@@ -384,7 +384,7 @@ Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方�
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**使用者名稱/密碼**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>

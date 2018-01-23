@@ -26,14 +26,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 615b26c5dfc1ea45dfcef2494483ced1235e7cd0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 75a28b8a2e0d40ae453fce13058bb3cb53c0ea3e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>語言和定序 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援的語言和定序所提供[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 作業系統。 **Language** 和 **Collation** 屬性會在安裝期間於執行個體層級進行初始設定，但之後可在物件階層的不同層級進行變更。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 作業系統所提供的語言和定序。 **Language** 和 **Collation** 屬性會在安裝期間於執行個體層級進行初始設定，但之後可在物件階層的不同層級進行變更。  
   
  在多維度模型中 (僅限多維度模型)，您可以在資料庫或 Cube 上設定這些屬性，您也可以在為 Cube 中物件所建立的翻譯上設定這些屬性。 在表格式模型中，語言和定序會繼承自主機作業系統。  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 01/08/2018
 ###  <a name="bkmk_lcid"></a> 語言屬性的值是地區設定識別碼 (LCID)  
  有效值包括出現在下拉式清單中的任何 LCID。 在 Management Studio 和 SQL Server Data Tools 中，LCID 會以對等字串來表示。 不論工具為何，只要公開 **Language** 屬性的位置都會顯示相同的語言。 具有相同的語言清單可確保您可以在整個模型中一致地實作及測試翻譯。  
   
- 雖然 Analysis Services 會依名稱列出語言，但是針對屬性儲存的實際值會是 LCID。 以程式設計方式或透過 msmdsrv.ini 檔案設定語言屬性時，請使用 [地區設定識別碼 (LCID)](http://en.wikipedia.org/wiki/Locale) 作為值。 LCID 是由語言識別碼、排序識別碼和保留的位元 (用於識別特定語言) 所組成的 32 位元值。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用 LCID 為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和物件指定選定語言。  
+ 雖然 Analysis Services 會依名稱列出語言，但是針對屬性儲存的實際值會是 LCID。 以程式設計方式或透過 msmdsrv.ini 檔案設定語言屬性時，請使用 [地區設定識別碼 (LCID)](http://en.wikipedia.org/wiki/Locale) 作為值。 LCID 是由語言識別碼、排序識別碼和保留的位元 (用於識別特定語言) 所組成的 32 位元值。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]使用指定所選的語言的 Lcid[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體和物件。  
   
  您可以使用十六進位或十進位格式設定 LCID。 [語言]  屬性的一些有效值範例包括：  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_collations"></a> Analysis Services 中的定序支援  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 只會使用 Windows (版本 _90 和 _100) 和二進位定序。 而不會使用舊版 SQL Server 定序。 在 Cube 中，會完全使用單一定序，但不包括屬性層級的翻譯。 如需定義屬性翻譯的詳細資訊，請參閱 [Analysis Services 中的翻譯支援](../analysis-services/translation-support-in-analysis-services.md)。  
   
- 定序可控制複合字集中所有字串的區分大小寫，但不包括物件識別碼。 請注意，如果您在物件識別碼中使用大寫和小寫字元，物件識別碼的區分大小寫不是取決於定序，而是取決於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 以英文字撰寫物件識別碼時，不論定序為何，物件識別碼一律不會區分大小寫。 斯拉夫文和其他複合語言則相反 (一律區分大小寫)。 如需詳細資訊，請參閱＜ [全球化秘訣和最佳作法 &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) ＞。  
+ 定序可控制複合字集中所有字串的區分大小寫，但不包括物件識別碼。 請注意，如果您在物件識別碼中使用大寫和小寫字元，物件識別碼的區分大小寫不是取決於定序，而是取決於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 以英文字撰寫物件識別碼時，不論定序為何，物件識別碼一律不會區分大小寫。 斯拉夫文和其他複合語言則相反 (一律區分大小寫)。 如需詳細資訊，請參閱＜ [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) ＞。  
   
  Analysis Services 的定序與 SQL Server 關聯式資料庫引擎的定序相容 (假設您為每項服務選取的排序選項保持同位)。 例如，如果關聯式資料庫區分腔調字，您應該以相同方式來設定 Cube。 當定序設定有所分歧時，可能會發生問題。 如需範例和解決方法，請參閱 [Unicode 字串中的空格根據定序而有不同的處理結果](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)。 若要深入了解定序和資料庫引擎，請參閱 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
@@ -124,7 +126,7 @@ ms.lasthandoff: 01/08/2018
 |排序順序 (後置詞)|排序順序描述|  
 |---------------------------|----------------------------|  
 |二進位 (_BIN) 或 BIN2 (_BIN2)|SQL Server 中有兩種二進位定序：較舊的 BIN 定序和較新的 BIN2 定序。 在 BIN2 定序中，所有字元都是根據其字碼指標排序。 在 BIN 定序中，只有第一個字元是根據字碼指標排序，剩餘字元則是根據其位元組值排序。 (因為 Intel 平台是 Little Endian 架構，所以 Unicode 字碼字元一律以位元組交換的方式儲存)。<br /><br /> 如果是 Unicode 資料類型的二進位定序，在資料排序時不會考量地區設定。 例如，Latin_1_General_BIN 和 Japanese_BIN 用於 Unicode 資料時會產生相同的排序結果。<br /><br /> 二進位排序順序為區分大小寫和區分腔調字。 二進位也是最快的排序順序。|  
-|區分大小寫 (_CS)|區分大寫和小寫字母。 如果選取此選項，小寫字母會排序在大寫字母的前面。 指定 _CI，就可以明確地設定不區分大小寫。 特定定序的大小寫設定不會套用至物件識別碼，例如維度、Cube 和其他物件的識別碼。 如需詳細資訊，請參閱 [全球化秘訣和最佳做法 &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) (全球化秘訣和最佳做法 (Analysis Services))。|  
+|區分大小寫 (_CS)|區分大寫和小寫字母。 如果選取此選項，小寫字母會排序在大寫字母的前面。 指定 _CI，就可以明確地設定不區分大小寫。 特定定序的大小寫設定不會套用至物件識別碼，例如維度、Cube 和其他物件的識別碼。 如需詳細資訊，請參閱＜ [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) ＞。|  
 |區分腔調字 (_AS)|區分有腔調和無腔調的字元。 例如，'a' 不等於 'ấ'。 如果未選取此選項，在排序用途上， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將有腔調和無腔調字母視為相同。 指定 _AI，就可以明確地設定不區分腔調字。|  
 |區分假名 (_KS)|區分兩種類型的日文假名字元：平假名與片假名。 如果未選取此選項，在排序用途上， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 視平假名和片假名相同。 不區分假名的排序沒有排序順序後置詞。|  
 |區分全半形 (_WS)|區分單一位元組字元和以雙位元組字元表示的相同字元。 如果未選取此選項，在排序用途上， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 視相同字元的單一位元組和雙位元組表示法相同。 不區分全半形的排序沒有排序順序後置詞。|  
@@ -181,9 +183,9 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_gb18030"></a> Analysis Services 中的 GB18030 支援  
  GB18030 是一種獨立標準，可供中華人民共和國進行中文字元的編碼。 在 GB18030 中，字元的長度可以是 1、2 或 4 個位元組。 在 Analysis Services 中，處理外部來源的資料時沒有任何資料轉換。 資料會以 Unicode 的簡單格式儲存。 在查詢時，當查詢結果中傳回文字資料時，系統會根據用戶端作業系統設定，透過 Analysis Services 用戶端程式庫 (也就是 MSOLAP.dll OLE DB 提供者) 來執行 GB18030 轉換。 資料庫引擎也支援 GB18030。 如需詳細資訊，請參閱＜ [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)＞。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 的全球化案例](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [全球化秘訣和最佳作法 &#40;Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
+ [全球化秘訣和最佳作法和 &#40;。Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)  
   
   
