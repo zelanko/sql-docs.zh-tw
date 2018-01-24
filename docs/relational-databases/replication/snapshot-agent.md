@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.monitor.snapshotagent.f1
 helpviewer_keywords: Snapshot Agent dialog box
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0e2a93a43691f361692bda75f1545c1e3317650
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 133f4775bedcb3ab193a53865424426fbabddfbc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="snapshot-agent"></a>快照集代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [快照集代理程式] 對話方塊會顯示快照集代理程式的詳細資訊，包括狀態、記錄、資訊訊息以及任何錯誤訊息。  
@@ -70,6 +70,6 @@ ms.lasthandoff: 11/17/2017
  [啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [檢視與發行集建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [監視複寫](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [複寫代理程式概觀](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: MSSQL_ENG014164 error
 ms.assetid: cd81b601-2ec3-4358-ad58-c2655496e6a1
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9646a739a509827f1d76af2e2864cb5bbafc5f0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b6957d18e6eec234e5af650e4f4bbdec56edf3b8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="mssqleng014164"></a>MSSQL_ENG014164
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,12 +31,12 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|產品名稱|SQL Server|  
+|產品名稱|[SQL Server]|  
 |事件識別碼|14164|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |符號名稱||  
-|訊息文字|已設定臨界值 [%s:%s] (針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
+|訊息文字|已設定針對發行集[%s]的臨界值[%s:%s] 請確定合併代理程式正在執行，而且符合預期需求。|  
   
 ## <a name="explanation"></a>說明  
  複寫可讓您啟用多個條件的警告。 這包括在同步處理合併發行者與訂閱者之間的變更時，無法處理足夠數量的資料列的情況。 您可以為 LAN 連接和撥號連接指定不同的時間。  

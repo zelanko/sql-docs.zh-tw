@@ -24,13 +24,13 @@ ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ac0861f7c9d1a5f30efbfeb7466ed320f346191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 506bb355413caeac330509853278f667bf73ee49
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>使用結果窗格中的資料 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在您執行查詢或檢視後，結果會顯示在 [結果] 窗格中。 接著您就可以使用這些結果。 例如，您可以加入與刪除資料列，輸入或變更資料，並且輕易地巡覽大筆的結果集。  

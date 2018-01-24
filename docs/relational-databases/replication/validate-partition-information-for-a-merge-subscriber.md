@@ -17,15 +17,15 @@ helpviewer_keywords:
 - validating partition information
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 263370412d485827bae3f62f1e433b8d8587fb4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cc42df9e9610c6deda9d2301b1a54d1a40d49888
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>驗證合併訂閱者的資料分割資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在為合併式發行集定義參數化資料列篩選器時，可以使用參考「訂閱者」資訊的函式，例如「訂閱者」的登入名稱。 依預設，複寫將在每次同步處理和在「訂閱者」端套用快照集之前，根據該功能驗證「訂閱者」資訊。 驗證處理可確保為每個「訂閱者」正確分割資料。 驗證行為由 **validate_subscriber_info** 發行集屬性控制，該發行集屬性可使用 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 或在 [發行集屬性] 對話方塊的 [訂閱選項] 頁面中變更。 如需有關變更發行集屬性的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  

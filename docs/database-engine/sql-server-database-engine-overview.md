@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Database Engine
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9ba0adc7fc64308d38de992e1f205413ecaaa9a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7b6780b45cf137f87bb7751e6f13eec8eea66271
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-database-engine"></a>SQL Server Database Engine
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 是用來儲存、處理和保護資料安全的核心服務。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供控制的存取和快速交易處理，可滿足您企業內部最嚴苛的資料取用應用程式需求。  

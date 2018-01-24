@@ -19,13 +19,13 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3643ec9676ef251bb022b16e50529b1bdfeae45c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0b89518482de615615229457a7195311ece7ab6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="logins-and-jobs-for-availability-group-databases"></a>可用性群組資料庫的登入和作業
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您應該在每個 AlwaysOn 可用性群組的主要資料庫及其對應的次要資料庫上，例行維護一組相同的使用者登入和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業。 登入和作業必須在裝載可用性群組之可用性複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上重新產生。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
      裝載可用性群組之可用性複本的伺服器執行個體可能會以不同的磁帶機代號或之類的方式予以個別設定。 每個可用性複本的作業都必須允許這類差異。  
   
-     請注意，備份作業可以使用 [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 函數根據可用性群組備份喜好設定，識別本機複本是否為備份慣用的複本。 使用 [維護計畫精靈](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 建立的備份作業原本使用此函數。 至於其他備份作業，我們建議您使用此函數做為備份作業中的條件，如此備份作業就只會在慣用複本上執行。 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)中心概念。  
+     請注意，備份作業可以使用 [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 函數根據可用性群組備份喜好設定，識別本機複本是否為備份慣用的複本。 使用 [維護計畫精靈](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 建立的備份作業原本使用此函數。 至於其他備份作業，我們建議您使用此函數做為備份作業中的條件，如此備份作業就只會在慣用複本上執行。 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 -   **登入**  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
      如果有任何應用程式使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證或本機 Windows 登入，請參閱本主題稍後的 [Logins Of Applications That Use SQL Server Authentication or a Local Windows Login](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md#SSauthentication) (使用 SQL Server 驗證或本機 Windows 登入之應用程式的登入)。  
   
     > [!NOTE]  
-    >  在伺服器執行個體上未定義或定義不正確之 SQL Server 登入的資料庫使用者無法登入此執行個體。 這類使用者就是伺服器執行個體上的資料庫 *「被遺棄使用者」* (Orphaned User)。 如果某位使用者在給定的伺服器執行個體上被遺棄，您可以隨時設定使用者登入。 如需詳細資訊，請參閱 [孤立的使用者疑難排解 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。  
+    >  在伺服器執行個體上未定義或定義不正確之 SQL Server 登入的資料庫使用者無法登入此執行個體。 這類使用者就是伺服器執行個體上的資料庫 *「被遺棄使用者」* (Orphaned User)。 如果某位使用者在給定的伺服器執行個體上被遺棄，您可以隨時設定使用者登入。 如需詳細資訊，請參閱[孤立的使用者疑難排解 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。  
   
 -   **其他中繼資料**  
   

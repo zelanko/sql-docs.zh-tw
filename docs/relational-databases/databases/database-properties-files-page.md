@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a9c11a4593e3712083513d5edc9374edd392022
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d68409591b5243ecf56b8c5707c61a5a7c33493
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-files-page"></a>資料庫屬性 (檔案頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此頁面來建立新的資料庫，或者檢視或修改選取之資料庫的屬性。 此主題適用於現有資料庫的 [資料庫屬性 (檔案頁面)]，以及 [新增資料庫 (一般頁面)]。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
  這個欄位對於 FILESTREAM 檔案無效，包括記憶體最佳化檔案群組中的檔案。  
   
- **加入**  
+ **[加入]**  
  將新檔案加入資料庫中。  
   
  **移除**  

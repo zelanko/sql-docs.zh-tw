@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc8f91a4da3bfa31f6eab0bcb492e16c9bccba0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba3f308aaa3e5eea99a7cae23630c8462414a1fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>設定拓撲 (點對點複寫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [設定拓撲] 頁面來執行一些常見的設定工作，例如新增新的節點、刪除節點，以及在現有節點之間新增新連線。 您在此精靈之 **[發行集]** 頁面上選取的節點會顯示在設計介面上。 若要指定組態選項，請以滑鼠右鍵按一下節點、連接或設計介面。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  「設定點對點拓撲精靈」會在關閉精靈時要求拓撲資訊。 如果您在所有節點回應資訊要求之前關閉並重新開啟此精靈，精靈可能會顯示部分網路。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **[設定拓撲]** 頁面包含當您以滑鼠右鍵按一下元素時可用的介面元素和選項。 下表描述的是每個介面元素。  
   
 |介面元素|描述|  
@@ -88,6 +88,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>另請參閱  
  [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [管理點對點拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [點對點異動複寫](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [@loopback_detection](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

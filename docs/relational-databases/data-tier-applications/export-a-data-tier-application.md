@@ -27,15 +27,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3342065c2af974fffc5e4a6d33c338362deb4a55
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d4318ad30d660b9e04aa53100061fd6ed6036bc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 匯出已部署的資料層應用程式 (DAC) 或資料庫，會建立匯出檔，而此檔案包含資料庫中物件的定義以及資料表中所含的所有資料。 接著，匯出檔可以匯入 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的另一個執行個體或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 您可以合併匯出/匯入作業，以在執行個體之間移轉 DAC、建立封存或針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署的資料庫建立內部部署複本。  
@@ -55,8 +55,8 @@ ms.lasthandoff: 11/17/2017
   
  如果 DAC 或包含的使用者中不支援資料庫的物件，則無法匯出資料庫。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)＞。  
   
-###  <a name="Permissions"></a> Permissions  
- 您至少需具備 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限，才能匯出 DAC。 匯出 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是匯出 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 系統管理員 (sysadmin) 固定伺服器角色的成員，或內建 SQL Server 系統管理員帳戶 **sa** 也可以匯出 DAC。  
+###  <a name="Permissions"></a> 權限  
+ 您至少需具備 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限，才能匯出 DAC。 匯出 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是匯出 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 系統管理員固定伺服器角色的成員或內建 SQL Server 系統管理員帳戶 **sa** 也可以匯出 DAC。  
   
 ##  <a name="UsingDeployDACWizard"></a> 使用匯出資料層應用程式精靈  
  **若要使用精靈匯出 DAC**  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Introduction"></a> 簡介頁面  
  此頁面描述匯出資料層應用程式精靈的步驟。  
   
- **選項**  
+ **選項。**  
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
   

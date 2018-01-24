@@ -22,15 +22,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c9b6f552ef52af748dcce74977bfc74806c9546
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10bc53216b65298837a5086adf89550ad97606a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 除了考慮[增強一般複寫效能](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)中所述的一般效能提示之外，還要考慮合併式複寫特定的以下幾個其他方面。  
@@ -69,17 +69,17 @@ ms.lasthandoff: 11/17/2017
   
 -   使用有參數化篩選的預先計算的資料分割 (預設為使用這項功能)。 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
-     預先計算的資料分割會對篩選行為造成許多限制。 如果您的應用程式無法遵守這些限制，請將 **keep_partition_changes** 選項設定為 **True**，以改善效能。 如需詳細資訊，請參閱 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+     預先計算的資料分割會對篩選行為造成許多限制。 如果您的應用程式無法遵守這些限制，請將 **keep_partition_changes** 選項設定為 **True**，以改善效能。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 -   如果資料已篩選，但是未在使用者之間共用，則使用非重疊資料分割。  
   
-     複寫可以最佳化未在資料分割或訂閱間共用之資料的效能。 如需詳細資訊，請參閱 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+     複寫可以最佳化未在資料分割或訂閱間共用之資料的效能。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 -   不要建立複雜的聯結篩選階層。  
   
      在合併處理期間聯結篩選五個 (含) 以上資料表可能對效能有很大影響。 建議要產生包含五個 (含) 以上資料表的聯結篩選時，考慮使用其他解決方案：  
   
-    -   不要篩選主要為下列類型的資料表：查閱資料表、小型資料表以及內容不會變更的資料表。 讓這些資料表整體成為發行集的一部分。 建議僅在必須分割給「訂閱者」的資料表之間使用聯結篩選。 如需詳細資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
+    -   不要篩選主要為下列類型的資料表：查閱資料表、小型資料表以及內容不會變更的資料表。 讓這些資料表整體成為發行集的一部分。 建議僅在必須分割給「訂閱者」的資料表之間使用聯結篩選。 如需相關資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
     -   如果聯結中有大量資料表，請考慮去除資料庫正規化的設計或使用對應資料表。 例如，如果業務員僅需其客戶的資料，但需要六個聯結以將客戶與業務員關聯，請考慮在客戶資料表中新增一個資料行以識別該業務員。 業務員資料有所重複，但複寫資料分割的效能益處可能要超過去除資料表正規化的成本。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
 -   如果邏輯允許，則將 **join_unique_key** 選項設定為 **1** 。  
   
-     將此參數設定為 **1** 指出聯結篩選中子資料表與父資料表之間是一對一或一對多關聯性。 僅在對子資料表中的聯結資料行有保證唯一性的條件約束時，將此參數設定為 **1** 。 如果該參數沒有正確設定為 **1** ，則可能發生資料非聚合。 如需詳細資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
+     將此參數設定為 **1** 指出聯結篩選中子資料表與父資料表之間是一對一或一對多關聯性。 僅在對子資料表中的聯結資料行有保證唯一性的條件約束時，將此參數設定為 **1** 。 如果該參數沒有正確設定為 **1** ，則可能發生資料非聚合。 如需相關資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
 -   使用預先計算的資料分割時，應避免執行有大量變更的批次。  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [複寫代理程式可執行檔概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   考慮增加 **-MakeGenerationInterval** 參數的值，特別是在同步處理從訂閱者上傳的數目大於下載到訂閱者的數目時。  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 11/17/2017
   
 -   預先產生快照集及/或允許訂閱者在第一次同步處理時，要求快照集的產生與套用。  
   
-     使用上述一或兩個選項為使用參數化篩選的發行集提供快照集。 如果不指定任何選項，訂閱會使用一系列 SELECT 與 INSERT 陳述式進行初始化，而非使用 **bcp** 公用程式；此處理要慢很多。 如需相關資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
+     使用上述一或兩個選項為使用參數化篩選的發行集提供快照集。 如果不指定任何選項，訂閱會使用一系列 SELECT 與 INSERT 陳述式進行初始化，而非使用 **bcp** 公用程式；此處理要慢很多。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>維護與監視考量  
   

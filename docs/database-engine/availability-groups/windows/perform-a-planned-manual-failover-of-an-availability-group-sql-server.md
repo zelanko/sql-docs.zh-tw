@@ -19,13 +19,13 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e5bb5c28e35464ef46641d33600a53c2d4cb79cc
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: f4df88a913bd97cfdc632fe8e1fb365c5d8e81c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組之規劃的手動容錯移轉 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題說明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在不遺失資料的情況下對 AlwaysOn 可用性群組執行手動容錯移轉 (*規劃的手動容錯移轉*)。 可用性群組會在可用性複本層級容錯移轉。 規劃的手動容錯移轉和任何一個 AlwaysOn 可用性群組容錯移轉一樣，會將次要複本轉為主要角色。 同時，容錯移轉也會將先前的主要複本轉成次要角色。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/28/2017
   
 ###  <a name="Security"></a> 安全性 
   
-####  <a name="Permissions"></a> Permissions 
+####  <a name="Permissions"></a> 權限 
  可用性群組需要 ALTER AVAILABILITY GROUP 權限。 同時也需要 CONTROL AVAILABILITY GROUP、ALTER ANY AVAILABILITY GROUP 或 CONTROL SERVER 權限。 
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 

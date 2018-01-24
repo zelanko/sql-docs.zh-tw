@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 caps.latest.revision: "86"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 267091bc845fdcbfa1c2eafd49bca20c673f966b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f1dece952a9aba10ef1dff5fe92d7747ae11f711
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-mirroring-page"></a>資料庫屬性 (鏡像頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 請從主體資料庫存取此頁面，並且用它來設定和修改資料庫的資料庫鏡像屬性。 您也可以用來它啟動「設定資料庫鏡像安全性精靈」，以便檢視鏡像工作階段的狀態，以及暫停或移除資料庫鏡像工作階段。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **設定安全性**  
  按一下這個按鈕即可啟動 [設定資料庫鏡像安全性精靈]。  
   
@@ -78,7 +78,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   鏡像資料庫必須存在。  
   
-     必須使用 WITH NORECOVERY 還原主體資料庫最近的完整備份 (有時也需要記錄檔備份) 的方式，在鏡像伺服器上建立鏡像資料庫，才能啟動鏡像。 如需詳細資訊，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+     必須使用 WITH NORECOVERY 還原主體資料庫最近的完整備份 (有時也需要記錄檔備份) 的方式，在鏡像伺服器上建立鏡像資料庫，才能啟動鏡像。 如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
 -   已經指定主體和鏡像伺服器執行個體的 TCP 位址 (在 [伺服器網路位址] 區段中)。  
   
@@ -96,7 +96,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 > **重要！！** 在強制服務之後，當原始主體伺服器重新連接時，會暫停鏡像。 在這種情況下繼續執行鏡像，很可能會造成原始主體伺服器上的資料遺失。 如需如何管理潛在資料遺失的相關資訊，請參閱 [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
  **移除鏡像**  
- 在主體伺服器執行個體上，按一下即可停止工作階段並從資料庫中移除鏡像組態。 此時會出現要求確認的提示；如果您按一下 [是]，就會停止工作階段並移除鏡像。 如需移除資料庫鏡像之影響的相關資訊，請參閱[移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
+ 在主體伺服器執行個體上，按一下即可停止工作階段並從資料庫中移除鏡像組態。 此時會出現要求確認的提示；如果您按一下 [是]，就會停止工作階段並移除鏡像。 如需移除資料庫鏡像之影響的相關資訊，請參閱 [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
   
 > **注意：** 如果這是伺服器執行個體上的唯一鏡像資料庫，便會移除監視作業。  
   
@@ -140,10 +140,10 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  如需詳細資訊，請參閱[鏡像狀態 &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。  
   
- **重新整理**  
+ **[重新整理]**  
  按一下以更新 [狀態] 方塊。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如不熟悉資料庫鏡像，請參閱 [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>將見證加入至現有的工作階段  

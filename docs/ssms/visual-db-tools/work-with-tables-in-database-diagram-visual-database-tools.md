@@ -20,13 +20,13 @@ ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3fcb4d2737fcc69d352ea0ef77541b7031afe2a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 369cb096dae1804087d4a7bbcd50c10f975f59d6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>使用資料庫圖表中的資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以在資料表設計工具或資料庫圖表設計工具中修改和建立資料庫資料表。  

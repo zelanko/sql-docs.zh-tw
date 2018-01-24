@@ -19,13 +19,13 @@ ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 caps.latest.revision: "10"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d728a5e275b2c037392dd2a8134f1180e6e0fed9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bc4f4f3aad2621c75793829d587c1c8f0d139bb0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="encrypted-databases-with-always-on-availability-groups-sql-server"></a>加密的資料庫與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -22,13 +22,13 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: "4"
 author: JasonWHowell
 ms.author: jasonh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe422c7445debc085f9d610550f365ccc4f1b8f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性群組資料庫層級健全狀況偵測容錯移轉選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 從 SQL Server 2016 開始，設定 Always On 可用性群組時，可以使用資料庫層級健全狀況偵測 (DB_FAILOVER) 選項。 資料庫層級健全狀況偵測注意到資料庫不再處於線上狀態、發生錯誤，以及觸發可用性群組的自動容錯移轉。 
@@ -102,9 +102,9 @@ select name, db_failover from sys.availability_groups
 
 範例 dmv 輸出：
 
-name  |  db_failover  
+NAME  |  db_failover  
 ---------|---------
-| Contoso-ag |  1  |
+| Contoso-ag |  @shouldalert  |
 
 ### <a name="errorlog"></a>ErrorLog 
 可用性群組已因資料庫層級健全狀況偵測檢查而容錯移轉時，SQL Server 錯誤記錄檔 (或來自 sp_readerrorlog 的文字) 會顯示錯誤訊息 41653。 
@@ -157,7 +157,7 @@ GO
 
 欄位的說明：
 
-|資料行資料    | Description
+|資料行資料    | 描述
 |---------|---------
 |availability_group_id  |可用性群組的識別碼。
 |availability_group_name    |可用性群組的名稱。
@@ -172,7 +172,7 @@ GO
 
 在此範例輸出中，fault_type 會因資料庫名稱 AutoHa-Sample2 而顯示可用性群組 Contoso-ag、名為 SQLSERVER-1 之複本上發生的嚴重事件，錯誤類型為「2- 關機」。
 
-|欄位  | 值
+|欄位  | ReplTest1
 |---------|---------
 |availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
 |availability_group_name |  Contoso-ag
@@ -180,7 +180,7 @@ GO
 |availability_replica_name |    SQLSERVER-1
 |database_name |    AutoHa-Sample2
 |database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
+|failover_ready_replicas |  @shouldalert
 |fault_type |   2
 |is_critical    | True
 

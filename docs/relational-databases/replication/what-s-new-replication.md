@@ -16,15 +16,15 @@ helpviewer_keywords:
 - what's new [SQL Server replication]
 ms.assetid: 130a760a-4162-4d7d-b266-453eb5759d7a
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad87c9f51a0a8d82b596cb28f599a572fbce088d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c33f2ea82e7f280624a90e4a45873932a70c963b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="what39s-new-replication"></a>新功能 (複寫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 並未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫中引入重大的新功能。  

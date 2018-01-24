@@ -16,13 +16,13 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49b34cb2867b26be38f9d6c9086f5ea038d8cbdc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 43306a76937572c93f01642e5943d24a141690b6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>可用性群組屬性：新增可用性群組 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題適用於 [新增可用性群組] 對話方塊和 [可用性群組屬性] 對話方塊的 [一般] 索引標籤。  [新增可用性群組] 對話方塊可讓您建立新的可用性群組，而不需要使用 [[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]]。 [可用性群組屬性] 對話方塊可讓您檢視和改變現有可用性群組的組態。  
@@ -38,10 +38,10 @@ ms.lasthandoff: 11/20/2017
  可用性群組的名稱。 這是使用者指定的名稱，它在 Windows Server 容錯移轉叢集 (WSFC) 內必須是唯一的。  
   
 ## <a name="availability-databases"></a>可用性資料庫  
- **資料庫名稱**  
+ **Database Name**  
  已經加入至可用性群組的資料庫名稱。  
   
- **加入**  
+ **[加入]**  
  按一下可將資料庫加入至可用性群組。  
   
  **移除**  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/20/2017
  **端點 URL**  
  端點的 URL。 如需這些 URL 格式的資訊，請參閱[在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)。  
   
- **加入**  
+ **[加入]**  
  按一下可將次要複本加入至可用性群組。  
   
  **移除**  

@@ -16,13 +16,13 @@ ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 242e92dcdd769930814e4aaf8672ee41fe0f9d58
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6f3824ace141704fb08b29ddbf08890d5299f494
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>連接到伺服器 (登入頁面) Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此索引標籤來檢視或指定連線到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 時的選項。 在大多數的情況下，您可以在 [伺服器名稱] 方塊中輸入資料庫伺服器的電腦名稱，然後按一下 [連接] 來進行連接。 如果您要連線至具名執行個體，請使用電腦名稱，後面依序加上反斜線及執行個體名稱。 例如， `mycomputer\myinstance`。 如果要連接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，請使用電腦名稱並於後面加上 **\sqlexpress**。  

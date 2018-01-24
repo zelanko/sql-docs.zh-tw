@@ -21,13 +21,13 @@ ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d504cd71dc0cfaab100f32ab82ba19ca8b34aeed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 75f700428ebe213ad7faaef691bf1460e263c268
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>暫停與繼續資料庫鏡像 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 資料庫擁有者隨時都可以先暫停資料庫鏡像工作階段，稍後再繼續。 暫停會保留工作階段狀態，同時暫停鏡像。 發生瓶頸時，暫停可能會對改進主體伺服器的效能有所幫助。  

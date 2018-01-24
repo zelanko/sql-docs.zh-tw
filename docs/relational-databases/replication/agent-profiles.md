@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.profiles.perfprofiles.f1
 helpviewer_keywords: Agent Profiles dialog box
 ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de8af2a057c11042d631fdc3488edf15b399cad3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 492171457e02895fd9cb883e9197ac2c2821608a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="agent-profiles"></a>代理程式設定檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [代理程式設定檔] 對話方塊，即可管理代理程式設定檔。 代理程式設定檔提供便於管理每一個代理程式執行階段參數的方式。 每一個代理程式都有預設的設定檔，有些代理程式還有其他預先定義的設定檔。 例如，合併代理程式有專為低頻寬連接設計的「慢速連結」設定檔。 預先定義的設定檔對大部份應用程式而言已經足夠，但您也可以建立使用者自訂設定檔，來自訂代理程式的行為。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **選取頁面**  
  在左窗格中選取代理程式，右窗格就會顯示代理程式的設定檔。  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
  **新增**  
  按一下即可建立新的設定檔。  
   
- **Delete**  
+ **刪除**  
  選取使用者自訂設定檔，然後按一下 **[刪除]** 即可刪除該設定檔。 預先定義的設定檔無法刪除。  
   
  **[變更現有的代理程式]**  

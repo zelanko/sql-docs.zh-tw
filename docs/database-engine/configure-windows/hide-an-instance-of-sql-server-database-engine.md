@@ -16,15 +16,15 @@ helpviewer_keywords:
 - hiding instances of Database Engine
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 343740304ad02460baea28da74e65b4298d8c0ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c82fb16bf871164502317768070d18b339120bd0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隱藏 SQL Server Database Engine 的執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 SQL Server 設定管理員，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中隱藏 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務來列舉電腦上安裝的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 這可讓用戶端應用程式瀏覽伺服器，並可幫助用戶端區別同一部電腦上的多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 您可以使用下列程序防止 SQL Server Browser 服務向嘗試利用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [瀏覽] **按鈕尋找執行個體的用戶端電腦公開** 執行個體。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  在 **[旗標]** 索引標籤的 **[HideInstance]** 方塊中，選取 **[是]**，然後按一下 **[確定]** 關閉對話方塊。 此變更在新連接時會立即生效。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果隱藏具名執行個體，將必須於連接字串中提供連接埠號碼，才可連接到隱藏的執行個體 (即使瀏覽器服務正在執行中亦然)。 建議您使用靜態連接埠，而不要使用具名隱藏執行個體的動態連接埠。  
   如需詳細資訊，請參閱[設定伺服器接聽特定 TCP 通訊埠 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   

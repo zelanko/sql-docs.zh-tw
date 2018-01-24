@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dedicated administrator connections [SQL Server]
 ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e70740c2a1d9f3d315f6480cbcea05cc1084f1dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 07c3d9d0d5fe44d38c5e163cb3e925519c994f4d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>遠端管理員連接伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.lasthandoff: 11/20/2017
   
  下表列出 remote admin connections 選項的可能值。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |0|表示只允許使用 DAC 的本機連接。|  
-|1|表示允許使用 DAC 的遠端連接。|  
+|@shouldalert|表示允許使用 DAC 的遠端連接。|  
   
 ## <a name="example"></a>範例  
  下列範例會從遠端電腦啟用 DAC。  

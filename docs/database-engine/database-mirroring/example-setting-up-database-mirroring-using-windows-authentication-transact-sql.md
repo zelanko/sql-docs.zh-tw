@@ -20,16 +20,16 @@ ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 916d40e39c099692ddae99f68bcb52236f9590c3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d9a62068f535e0622152fe263fd93d00524465fa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>範例：使用 Windows 驗證設定資料庫鏡像 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 此範例顯示使用 Windows 驗證建立具有見證的資料庫鏡像工作階段的所有必要階段。 此主題中的範例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 請注意，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟的另一種方法是，您可以使用 [設定資料庫鏡像安全性精靈] 來設定資料庫鏡像。 如需詳細資訊，請參閱[使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 此範例顯示使用 Windows 驗證建立具有見證的資料庫鏡像工作階段的所有必要階段。 此主題中的範例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 請注意，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟的另一種方法是，您可以使用 [設定資料庫鏡像安全性精靈] 來設定資料庫鏡像。 如需詳細資訊，請參閱本主題稍後的 [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
 ## <a name="prerequisite"></a>必要條件  
  此範例使用 **AdventureWorks** 範例資料庫，依預設採用簡單復原模式。 若要以此資料庫來使用資料庫鏡像，您必須改用完整復原模式。 若要在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中這樣做，請使用 ALTER DATABASE 陳述式，如下所示：  

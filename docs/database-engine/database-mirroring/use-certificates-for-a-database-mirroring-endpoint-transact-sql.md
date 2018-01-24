@@ -20,13 +20,13 @@ ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
 caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 307937a630874f585ca3fca9a94a15ffce369a64
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e834a18fd0bc91be36a6e6c9b9bcd3a0901aa2e8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-certificates-for-a-database-mirroring-endpoint-transact-sql"></a>使用資料庫鏡像端點憑證 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 若要啟用某伺服器執行個體上資料庫鏡像的憑證驗證，系統管理員必須設定每一個伺服器執行個體，才能同時在傳出和傳入的連線使用憑證。 您必須先設定傳出連接。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
   
  您必須為每一個夥伴或見證 (如果有的話) 完成上述步驟。  
   
- 如需詳細資訊，請參閱[允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
+ 如需詳細資訊，請參閱 [允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
   
 ## <a name="configuring-inbound-connections"></a>設定傳入連接  
  接著，在每一個您要設定資料庫鏡像的夥伴上依照下列步驟進行。 在 **master** 資料庫中：  
@@ -64,9 +64,9 @@ ms.lasthandoff: 11/20/2017
   
  如果有見證，您也必須為它設定傳入連接。 這需要在兩個夥伴上設定見證的登入、使用者和憑證，反之亦然。  
   
- 如需詳細資訊，請參閱[允許資料庫鏡像端點使用輸入連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)。  
+ 如需詳細資訊，請參閱 [允許資料庫鏡像端點使用輸入連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  除非您可保證網路的安全無虞，否則建議您對資料庫鏡像連接使用加密。 如需詳細資訊，請參閱 [資料庫鏡像端點 &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。  
   
  將憑證複製到另一個系統時，請使用安全複製方法。 務必將您所有的憑證小心保管。  

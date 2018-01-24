@@ -18,15 +18,15 @@ f1_keywords:
 helpviewer_keywords: Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 977d851af5e4b044527a196417ea32504a44a65f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b71a3f5cf438b4ac5f3cce071329a81cff88d25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>壓縮資料庫工作 (維護計畫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [壓縮資料庫工作] 對話方塊來建立嘗試縮減選取之資料庫大小的工作。 使用下列選項以決定將資料庫縮小之後，要在資料庫中保留的未使用空間數量 (百分比愈大，資料庫可縮小的程度愈小)。 這個值是根據資料庫中實際資料的百分比而取得。 例如：一個 100 MB 的資料庫，包含 60 MB 的資料及 40 MB 的可用空間，設定可用空間的百分比為 50 時，則結果為 60 MB 的資料及 30 MB 的可用空間 (因為 60 MB 的百分之 50 為 30 MB)。 只有資料庫中超出的空間會被刪除。 有效的數值範圍為 0 到 100。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
  此工作會執行 DBCC SHRINKDATABASE 陳述式。  
   
 ## <a name="options"></a>選項  
- **連接**  
+ **[連接]**  
  選取執行此工作時要使用的伺服器連接。  
   
  **新增**  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
  **選取或輸入伺服器名稱**  
  選取執行此工作時要連接的伺服器。  
   
- **重新整理**  
+ **[重新整理]**  
  重新整理可用的伺服器清單。  
   
  **輸入要登入到伺服器的資訊**  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
  **使用特定的使用者名稱和密碼**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 無法使用此選項。  
   
- **使用者名稱**  
+ **User name**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  
   
  **密碼**  

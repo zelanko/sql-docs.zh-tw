@@ -18,13 +18,13 @@ ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
 caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d99c47617fb43ccfe9e788af1d5c5204463ffb8e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f059747c1cfc9700207ccc74759bd159f2c63760
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>變更伺服器的註冊 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中變更伺服器的註冊。 您隨時可以變更已註冊伺服器的連接資訊。  

@@ -22,30 +22,30 @@ helpviewer_keywords:
 - clr strict security option
 ms.assetid: 
 caps.latest.revision: "0"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4902f0cbbdef0f7c684d154aad3bc896d138228b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 01eebbd834d8c1877743f65220af48dd23739f94
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="clr-strict-security"></a>CLR 嚴格安全性   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 `SAFE`、`EXTERNAL ACCESS`、`UNSAFE` 權限的解譯。   
 
-|值 |描述 | 
+|ReplTest1 |描述 | 
 |----- |----- | 
 |0 |Disabled - 針對回溯相容性所提供。 不建議使用 `Disabled` 值。 | 
-|1 |Enabled - 讓 [!INCLUDE[ssde-md](../../includes/ssde-md.md)] 忽略組件的 `PERMISSION_SET` 資訊，而且一律會將它們解釋為 `UNSAFE`。  `Enabled` 是 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 的預設值。 | 
+|@shouldalert |Enabled - 讓 [!INCLUDE[ssde-md](../../includes/ssde-md.md)] 忽略組件的 `PERMISSION_SET` 資訊，而且一律會將它們解釋為 `UNSAFE`。  `Enabled` 是 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 的預設值。 | 
 
 >  [!WARNING]
 >  CLR 使用 .NET Framework 中的程式碼存取安全性 (CAS)，而這不再支援為安全性界限。 使用 `PERMISSION_SET = SAFE` 所建立的 CLR 組件可以存取外部系統資源、呼叫 Unmanaged 程式碼，以及取得系統管理員權限。 從 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 開始，引進稱為 `clr strict security` 的 `sp_configure` 選項，來增強 CLR 組件的安全性。 `clr strict security` 會依預設啟用，且將 `SAFE` 與 `EXTERNAL_ACCESS` 組件視作已標記為 `UNSAFE` 一樣。 可以基於回溯相容性停用 `clr strict security` 選項，但不建議這麼做。 Microsoft 建議透過具有已獲授與 master 資料庫中 `UNSAFE ASSEMBLY` 權限之對應登入的憑證或非對稱金鑰簽署所有組件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員也可以將組件新增至資料庫引擎應該信任的組件清單。 如需詳細資訊，請參閱 [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)。
 
-## <a name="remarks"></a>備註   
+## <a name="remarks"></a>Remarks   
 
 啟用時，會在執行階段忽略 `CREATE ASSEMBLY` 和 `ALTER ASSEMBLY` 陳述式中的 `PERMISSION_SET` 選項，但在中繼資料中會保留 `PERMISSION_SET` 選項。 忽略此選項可將中斷現有程式碼陳述式最小化。
 

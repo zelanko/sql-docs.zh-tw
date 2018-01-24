@@ -16,13 +16,13 @@ ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
 caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9e3f4d7f7fae2b4bf0f03d5dc138a318de8af1b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bab37c90a9bf6e00227d3b5c117a9d486a186930
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-2---configure-a-server-to-run-the-off-by-default-policy"></a>第 1-2 課：將伺服器設定為執行 Off By Default 原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 現在，您有一個名為 Off By Default 的原則。 在這項工作中，您將檢查伺服器是否符合這個原則的需求。  

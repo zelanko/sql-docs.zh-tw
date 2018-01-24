@@ -25,13 +25,13 @@ ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ac4ebc852260c2f682b06f9fec24a56820e4410
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 979bc40803391e773624d9d7f2b9e43e3bad5ee6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>輸入搜尋值的規則 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題會討論輸入下列搜尋條件的常值類型時必須使用的規格：  

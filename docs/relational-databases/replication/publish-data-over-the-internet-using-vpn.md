@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Internet [SQL Server replication], VPNs
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60900fc1134fbe6da352ff05a30edf4607da9319
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a851ec36920e6300a25ebf815e8f1c6998263d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>使用 VPN 透過網際網路發行資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 虛擬私人網路 (Virtual Private Networking，VPN) 技術可以讓使用者在家裏、分公司辦公室、遠端用戶端以及其他公司透過網際網路連線到公司網路進行工作，同時保有安全的通訊。 使用者可以使用「Windows 驗證」(Windows Authentication)，就好像他們是在區域網路 (Area Network，LAN) 一樣。 所有類型的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫都可以透過 VPN 複寫資料，但如果您使用合併式複寫，請考慮使用 Web 同步處理，因為 Web 同步處理會省去使用 VPN 的需求。 如需詳細資訊，請參閱 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)。  

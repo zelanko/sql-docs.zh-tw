@@ -16,20 +16,20 @@ ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 caps.latest.revision: "4"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f602e43f585e83158a9a824677b3c73f88e0b87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d86b986025348a829734d57625a0567041cd12d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server, Memory Broker Clerks 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SQLServer:Memory Broker Clerks** 效能物件提供與記憶 Broker Clerk 相關之統計資料的計數器。
 
 下表說明 SQL Server **Memory Broker Clerks** 效能物件。
 
-|**SQL Server Memory Broker Clerks 計數器**|說明|  
+|**SQL Server Memory Broker Clerks 計數器**|描述|  
 |-------------|-----------------|  
 |**Internal benefit**|項目計數壓力的記憶體內部值 (單位: 毫秒/每頁/每毫秒)，乘以 100 億並截斷為整數。|
 |**Memory broker clerk size**|Clerk 的大小 (以頁為單位)。|

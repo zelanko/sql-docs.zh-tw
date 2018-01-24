@@ -16,13 +16,13 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52fc22dc74afa25194dcf6c0883a2ae3aec26a27
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 61014dfd6113a16e37b4be9a1a06e6901abba37f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="domain-independent-availability-groups"></a>網域獨立的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ GO
 14. 設定基礎憑證和端點安全性之後，請使用慣用方法來建立可用性群組。 建議您手動備份、複製和還原用來初始化次要的備份，或使用[自動植入](automatically-initialize-always-on-availability-group.md)。 使用精靈來初始化次要複本，涉及使用伺服器訊息區塊 (SMB) 檔案，這在使用未加入網域的 Workgroup 叢集時可能未運作。
 15. 如果建立接聽程式，請確定已在 DNS 中註冊其名稱和其 IP 位址。
 
-### <a name="next-steps"></a>後續的步驟 
+### <a name="next-steps"></a>後續步驟 
 
 - [使用可用性群組精靈 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 

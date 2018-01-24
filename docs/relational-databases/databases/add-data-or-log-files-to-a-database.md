@@ -21,15 +21,15 @@ helpviewer_keywords:
 - data additions [SQL Server]
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 53e54d646d13d4f7ebff91a370c856da5c74706b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: feca52c4aeb1bde1d19f9afcb19145ce85895cd3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>將資料或記錄檔加入資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中將資料檔案或記錄檔新增至資料庫。  
@@ -40,11 +40,11 @@ ms.lasthandoff: 11/17/2017
   
      [限制事項](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **使用下列方法，將資料或記錄檔加入資料庫：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  依預設，資料和交易記錄是放在相同的磁碟及路徑中以配合單一磁碟系統，但在實際執行環境中可能不是最理想的。 如需相關資訊，請參閱 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。  
   
-12. 按一下 **[確定]**。  
+12. 按一下 [確定] 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例會將含有兩個檔案的檔案群組加入資料庫中。 此範例會在  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫中建立 `Test1FG1` 檔案群組，且會將兩個 5 MB 的檔案加入檔案群組中。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會將含有兩個檔案的檔案群組加入資料庫中。 此範例會在  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫中建立 `Test1FG1` 檔案群組，且會將兩個 5 MB 的檔案加入檔案群組中。  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   

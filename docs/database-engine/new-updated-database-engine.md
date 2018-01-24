@@ -4,7 +4,7 @@ description: "顯示最近變更過的文件更新內容，資料庫引擎的程
 services: na
 documentationcenter: 
 author: MightyPen
-manager: jhubbard
+manager: craigg
 editor: barbkess
 ms.service: na
 ms.topic: updart-autogen
@@ -15,11 +15,11 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: a0b847d4f0e848105be50a06f93abbbbc6f67dc9
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: cbf472ba2b8d2d7abad095992895b56940a82d92
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>新的與最近的更新：資料庫引擎文件
 
@@ -85,7 +85,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 ### <a name="1-nbsp-optimize-for-ad-hoc-workloads-server-configuration-optionconfigure-windowsoptimize-for-ad-hoc-workloads-server-configuration-optionmd"></a>1. &nbsp;[針對特定工作負載最佳化伺服器設定選項](configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)
 
-*更新日期︰2017-11-20* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*更新日期：2017-11-20* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
 <!-- Source markdown line 38.  ms.author= "rickbyh".  -->
 
@@ -135,7 +135,7 @@ GROUP BY objtype, cacheobjtype;
 
 - [新文章 + 更新文章 (3+14)：**SQL 的進階分析**文件](../advanced-analytics/new-updated-advanced-analytics.md)
 - [新文章 + 更新文章 (1+0)：**Analysis Services for SQL** 文件](../analysis-services/new-updated-analysis-services.md)
-- [新文章 + 更新文章 (87 + 0)：**SQL 的分析平台系統**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新文章 + 更新文章 (87+0)：**SQL 的分析平台系統**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新文章 + 更新文章 (5+4)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
 - [新文章 + 更新文章 (0+1)：**SQL 的資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
 - [新文章 + 更新文章 (2+2)：**SQL 的 Integration Services** 文件](../integration-services/new-updated-integration-services.md)
@@ -143,7 +143,7 @@ GROUP BY objtype, cacheobjtype;
 - [新文章 + 更新文章 (2+4)：**SQL 的關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
 - [新文章 + 更新文章 (4+2)：**SQL 的 Reporting Services** 文件](../reporting-services/new-updated-reporting-services.md)
 - [新文章 + 更新文章 (0+1)：**SQL 範例**文件](../sample/new-updated-sample.md)
-- [新文章 + 更新文章 (21 + 0)：**SQL Operations Studio** 文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章 + 更新文章 (21+0)：**SQL Operations Studio** 文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
 - [新文章 + 更新文章 (5+1)：**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
 - [新文章 + 更新文章 (0+1)：**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
 - [新文章 + 更新文章 (1+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
@@ -152,7 +152,7 @@ GROUP BY objtype, cacheobjtype;
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
-- [新文章 + 更新文章 (0 + 0)：**SQL 資料移轉小幫手 (DMA)**文件](../dma/new-updated-dma.md)
+- [新文章 + 更新文章 (0+0)：**SQL 資料移轉小幫手 (DMA)** 文件](../dma/new-updated-dma.md)
 - [新文章 + 更新文章 (0+0)：**ActiveX Data Objects (ADO) for SQL** 文件](../ado/new-updated-ado.md)
 - [新文章 + 更新文章 (0+0)：**Data Quality Services for SQL** 文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 資料採礦延伸模組 (DMX)** 文件](../dmx/new-updated-dmx.md)

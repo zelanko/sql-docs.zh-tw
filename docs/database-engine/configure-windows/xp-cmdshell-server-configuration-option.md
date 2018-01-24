@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: xp_cmdshell
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 55348987cbcff101d9bed6c4021541abc75d2866
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 26f411ba59dba9213e5432cd1ef36f346caed509
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="xpcmdshell-server-configuration-option"></a>xp_cmdshell 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

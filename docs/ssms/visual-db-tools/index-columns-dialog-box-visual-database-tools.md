@@ -16,13 +16,13 @@ ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b86f3f9ad2d892e1b140742681365fe3e7e0ece
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 58eb707b051fc163202af81aa847ce68a8df64fc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>索引資料行對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用這個對話方塊，即可選取索引的資料行，並設定其排序順序。 索引可以使用一個或多個資料行，而且每個資料行都可以用遞增或遞減順序排序。 若要存取這個對話方塊，請在 [索引/索引鍵] 對話方塊中，按一下 [一般] 區段中的 [資料行] 省略符號按鈕。  

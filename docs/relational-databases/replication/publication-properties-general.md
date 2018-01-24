@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.general.f1
 ms.assetid: 7912362f-c4d6-4f60-bd39-dee1f656ed18
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bbcc75b2e04f5bfa9e96fa0f0b39099eaa9872a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dcf399256c9dd1a691211e7d6188ec869abafd21
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-general"></a>發行集屬性，一般
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [發行集屬性] 對話方塊的 [一般] 頁面，包含發行集的基本資訊，例如名稱、描述和訂閱到期原則。  
@@ -31,10 +31,10 @@ ms.lasthandoff: 11/17/2017
  **名稱**  
  發行集的名稱 (唯讀)。  
   
- **資料庫**  
+ **[資料庫備份]**  
  發行集資料庫的名稱 (唯讀)。  
   
- **描述**  
+ **說明**  
  發行集的描述。  
   
  **型別**  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [檢視和修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+ [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

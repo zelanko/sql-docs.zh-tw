@@ -17,15 +17,15 @@ helpviewer_keywords:
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0f012597cacaf7058b8463183c5c20c1fa042a37
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6733a6d7440071e655004df7dc7926b33503ed1b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="model-database"></a>Model 資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **model** 資料庫可作為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上建立之所有資料庫的範本。 因為每次 **啟動時，都會建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，所以 **model** 資料庫一定要存在於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統中。 **model** 資料庫的完整內容 (包括資料庫選項) 都會複製到新的資料庫。 在啟動期間， **model** 的某些設定也會用於建立新的 **tempdb** ，所以 **model** 資料庫必須一直存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統上。  

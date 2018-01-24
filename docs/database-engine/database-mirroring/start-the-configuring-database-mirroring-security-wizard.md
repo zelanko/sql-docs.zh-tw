@@ -18,13 +18,13 @@ ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 452b2bc9e11d0f2d1dd06767efe68d48bfdcef8d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c958466070df5f51e69e8aa0d665b65177794dff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>啟動設定資料庫鏡像安全性精靈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [設定資料庫鏡像安全性精靈] 可用來對涉及鏡像的所有或部分伺服器執行個體，設定初始安全性設定。 這個精靈會與 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面一起運作。  

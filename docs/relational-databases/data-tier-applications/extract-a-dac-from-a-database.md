@@ -24,15 +24,15 @@ helpviewer_keywords:
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a3fe80df8624968a5bf71f3fd7976bc838a0abf4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 510eb23505fde879a82d3ded7282cabd410cacaf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>從資料庫中擷取 DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [擷取資料層應用程式精靈] 或 Windows PowerShell 指令碼，從現有的 SQL Server 資料庫中擷取資料層應用程式 (DAC) 套件。 此擷取程序會建立 DAC 封裝檔案，其中包含資料庫物件及其相關執行個體層級元素的定義。 例如，DAC 封裝檔案會包含資料庫資料表、預存程序、檢視表、使用者以及對應至資料庫使用者的登入。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="LimitationsRestrictions"></a> 限制事項  
  DAC 只能從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫中進行擷取。 如果 DAC 或包含的使用者中不支援資料庫中的物件，則無法擷取 DAC。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)＞。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  擷取 DAC 至少需要 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限。 擷取 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是擷取 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 sysadmin 固定伺服器角色的成員或是內建 SQL Server 系統管理員帳戶 **sa** 也可以擷取 DAC。  
   
 ##  <a name="UsingDACExtractWizard"></a> 使用擷取資料層應用程式精靈  

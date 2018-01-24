@@ -18,15 +18,15 @@ helpviewer_keywords:
 - wizards [SQL Server replication]
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 256985a9c23bca91449dc5880e184d80a0e73d45
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bbab3835829d35734992f11e20292b29d90b8f9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>教學課程：在連續連接的伺服器之間複寫資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 對於在連續連線的伺服器之間移動資料的問題，複寫是一個很好的解決方案。 您可以使用複寫的精靈，輕鬆設定及管理複寫拓撲。 本教學課程告訴您，如何為連續連接的伺服器設定複寫拓撲。  

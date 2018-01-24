@@ -21,15 +21,15 @@ helpviewer_keywords:
 - file size [SQL Server]
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 833d84c44f7c2ef9cae31cf1908cd5732518b469
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0e765bcdaa052e2cf72c679ab0a6c913e137f79
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="shrink-a-file"></a>壓縮檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中壓縮資料檔案或記錄檔。  
@@ -44,11 +44,11 @@ ms.lasthandoff: 11/17/2017
   
      [建議](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **使用下列方法壓縮資料或記錄檔：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  指向 **[工作]**，指向 **[壓縮]**，然後按一下 **[檔案]**。  
   
-     **資料庫**  
+     **[資料庫備份]**  
      顯示選取之資料庫的名稱。  
   
      **檔案類型**  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
      選取此選項，使檔案群組中指定檔案內的所有資料都移到其他檔案內。 然後即可刪除空白檔案。 這個選項的作用與使用 EMPTYFILE 選項執行 DBCC SHRINKFILE 的作用相同。  
   
-9. 按一下 **[確定]**。  
+9. 按一下 [確定] 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 下列範例會使用 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) ，將 `DataFile1` 資料庫中名為 `UserDB` 之資料檔大小壓縮成 7 MB。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 下列範例會使用 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) ，將 `DataFile1` 資料庫中名為 `UserDB` 之資料檔大小壓縮成 7 MB。  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   

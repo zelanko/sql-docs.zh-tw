@@ -23,13 +23,13 @@ ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1f516bb0add6bd1f415260f061b1de77bf2b22a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9d367f1a130f9bcdffa1ab28af8bac99fec00deb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>建立及附加排程至作業
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業是表示定義在沒有使用者互動的情況下讓作業開始執行的條件。 您可以透過建立作業的新排程，或將現有的排程附加至作業，將作業排程為自動執行。  

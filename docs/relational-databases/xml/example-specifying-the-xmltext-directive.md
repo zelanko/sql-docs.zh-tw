@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ed147121ef70cf969d5d961665e21a948df7195
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ca56c87a2bf4e1744d5ef3527c559595bc988dd8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>範例：指定 XMLTEXT 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 此範例說明如何在使用 EXPLICIT 模式的 `SELECT` 陳述式中，使用 **XMLTEXT** 指示詞將溢位資料行中的資料定址。  
