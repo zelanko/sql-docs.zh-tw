@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbb1759fcdf89686498698c4bd77ce529da4ed1d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f7d494c40e02e96d53f827e9553c743d72660d0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>進階編輯 (條件) 對話方塊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [進階編輯] 對話方塊可針對原則式管理條件建立複雜運算式。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 |**DateAdd()**|DateTime DateAdd (String *datepart*, Numeric *number*, DateTime *date*)|傳回根據將間隔加入指定日期的新 **datetime** 值。|*datepart* - 這是指定日期中哪一個部分要傳回新值的參數。 部分支援的類型如下：year(yy, yyyy)、month(mm, m) 和 dayofyear(dy, y)。 如需詳細資訊，請參閱 [DATEADD &#40;Transact-SQL&#41;](../../t-sql/functions/dateadd-transact-sql.md)。<br /><br /> *number* - 這是用來遞增 *datepart* 的值。<br /><br /> *date* - 這是傳回 **datetime** 值或是日期格式之字元字串的運算式。|為根據將間隔加入指定日期的新 **datetime** 值。|**範例** `DateAdd('day', 21, DateTime('2007-08-06 14:21:50'))` 會傳回 `'2007-08-27 14:21:50'` 。<br /><br /> 以下為這個函數所支援的 *dateparts* 和縮寫：<br /><br /> **year**：yy、yyyy<br /><br /> **month**：mm、m<br /><br /> **dayofyear**：dy、y<br /><br /> **day**：dd、d<br /><br /> **week**：wk、ww<br /><br /> **weekday**：dw、w<br /><br /> **hour**：hh<br /><br /> **minute**：mi、n<br /><br /> **second**：ss、s<br /><br /> **millisecond**：ms|  
 |**DatePart()**|Numeric DatePart (String *datepart*, DateTime *date*)|傳回代表指定日期之指定 *datepart* 的整數。|*datepart* - 這是指定要傳回之日期部分的參數。 支援的某些類型如下：year(yy, yyyy)、month(mm, m) 和 dayofyear(dy, y)。 如需詳細資訊，請參閱 [DATEPART &#40;Transact-SQL&#41;](../../t-sql/functions/datepart-transact-sql.md)。<br /><br /> *date* - 這是傳回 **datetime** 值或是日期格式之字元字串的運算式。|傳回代表指定日期之指定 *datepart* 的整數資料類型類別目錄的值。|`DatePart('month', DateTime('2007-08-06 14:21:50.620'))` 會傳回 `8` 。|  
 |**DateTime()**|DateTime DateTime (String *dateString*)|從字串建立日期時間值。|*dateString* - 這是字串形式的日期時間值。|傳回從輸入字串建立的日期時間值。|`DateTime('3/12/2006')`|  
-|**Divide()**|Numeric Divide (Numeric *expression_dividend*, Numeric *expression_divisor*)|兩個數字相除。|*expression_dividend* - 這是要除的數值運算式。 被除數可以是數值資料類型類別目錄中任何一個資料類型的任何有效運算式，但是 **datetime** 資料類型除外。<br /><br /> *expression_divisor* - 這是要除以被除數的數值運算式。 除數可以是數值資料類型類別目錄中任何一個資料類型的任何有效運算式，但是 **datetime** 資料類型除外。|傳回具有較高優先順序之引數的資料類型。|**範例** `Divide(Property1, 2)`<br /><br /> 注意：這將是雙精確度浮點數運算。 若要執行整數比較，您必須將結果與 `Round()`結合在一起。 例如： `Round(Divide(10, 3), 0) = 3`。|  
+|**Divide()**|Numeric Divide (Numeric *expression_dividend*, Numeric *expression_divisor*)|兩個數字相除。|*expression_dividend* - 這是要除的數值運算式。 被除數可以是數值資料類型類別目錄中任何一個資料類型的任何有效運算式，但是 **datetime** 資料類型除外。<br /><br /> *expression_divisor* - 這是要除以被除數的數值運算式。 除數可以是數值資料類型類別目錄中任何一個資料類型的任何有效運算式，但是 **datetime** 資料類型除外。|傳回具有較高優先順序之引數的資料類型。|**範例** `Divide(Property1, 2)`<br /><br /> 注意：這將是雙精確度浮點數運算。 若要執行整數比較，您必須將結果與 `Round()`結合在一起。 例如： `Round(Divide(10, 3), 0) = 3`＞。|  
 |**Enum()**|Numeric Enum (String *enumTypeName*, String *enumValueName*)|從字串建立列舉值。|*enumTypeName* - 這是列舉類型的名稱。<br /><br /> *enumValueName* - 這是列舉的值。|以數值形式傳回列舉值。|`Enum('CompatibilityLevel','Version100')`|  
 |**Escape()**|String Escape (String *replaceString*, String *stringToEscape*, String *escapeString*)|使用指定的逸出字串來逸出輸入字串的子字串。|*replaceString* -- 為輸入字串。<br /><br /> *stringToEscape* -- 為 *replaceString*的子字串。 這是您想要將逸出字串加到其前面的字串。<br /><br /> *escapeString* -- 這是您想要加到每一個 *stringToEscape*執行個體前面的逸出字串。|傳回修改的 *replaceString* ，其中的每一個 *stringToEscape* 執行個體都是在 *escapeString*後面。|`Escape("Hello", "l", "[")` 會傳回 "`He[l[lo`"。|  
 |**ExecuteSQL()**|Variant ExecuteSQL (String *returnType*, String *sqlQuery*)|針對目標伺服器執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。<br /><br /> 如需 ExecuteSql() 的詳細資訊，請參閱 [ExecuteSql() 函數](http://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx)。|*returnType* - 指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所傳回的傳回資料類型。 *returnType* 的有效常值如下： **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> *sqlQuery* - 這是包含要執行之查詢的字串。||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> 對目標 SQL Server 執行個體執行純量值的 Transact-SQL 查詢。 `SELECT` 陳述式中，只能指定一個資料行，會忽略第一個以外的其他資料行。 產生的查詢應該只傳回一個資料列，會忽略第一個以外的其他資料列。 如果查詢傳回空集合，依據 `ExecuteSQL` 建立的條件運算式會評估為 false。 `ExecuteSql` 支援 **視需要** 和 **按排程時間** 評估模式。<br /><br /> -`@@ObjectName`:<br />                      對應到 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的名稱欄位。 將會以目前物件的名稱來取代此變數。<br /><br /> -`@@SchemaName`：對應到 [sys。schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)。 將會以目前物件的結構描述名稱來取代此變數 (如果適用的話)。<br /><br /> 注意：若要在 ExecuteSQL 陳述式中加入單引號，請以第二個單引號來逸出該單引號。 例如，若要包含名為 O'Brian 之使用者的參考，請輸入 O''Brian。|  

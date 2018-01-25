@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deployment security [SQL Server replication]
 ms.assetid: 9c8c284a-e497-48b7-b2e2-c96a0e940e67
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0740e86a27b4da29a54b90b45d4264ecf7ba88a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91887cd8440fbe7427d4bdba3c50fda151e80ee3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-deployment-replication"></a>安全的部署 (複寫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本節提供的資訊可協助您提供更安全性的複寫。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
  [保護快照集資料夾](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
  描述存取快照集資料夾所需的權限，定義資料夾位置的最佳做法，及透過 FTP 之快照集傳遞的考量。  
   
- [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
+ [保護透過網際網路的複寫](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
  包含虛擬私人網路及 Web 同步處理的相關資訊。  
   
  [SQL Server Compact 複寫的安全性考量](../../../relational-databases/replication/security/security-considerations-for-sql-server-compact-replication.md)  

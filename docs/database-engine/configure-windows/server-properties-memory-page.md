@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b9ae03362f1dfb89aaebc09aabfed60c327a9d3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 57a2f7e2b4f0a75cf212d79284b85c00eda92d81
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---memory-page"></a>伺服器屬性 - 記憶體頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此頁面來檢視或修改伺服器記憶體選項。 **[最小伺服器記憶體]** 設定為 0 且 **[最大伺服器記憶體]** 設為 2147483647 MB 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就可在任何特定時間利用最佳的記憶體數量，但受作業系統和其他應用程式目前所使用的記憶體數量所限制。 隨著電腦與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的負載有所變更，記憶體的配置也會變更。 您可以進一步將這個動態記憶體配置限制為下列所指定的最小值和最大值。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **最小伺服器記憶體 (以 MB 為單位)**  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 至少應使用最小配置記憶體數量來啟動，且不會釋放低於此值的記憶體。 根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的大小和活動來設定此值。 請一律將這個選項設定為合理的值，以確保作業系統不會向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求太多記憶體，而影響 Windows 效能。  
   

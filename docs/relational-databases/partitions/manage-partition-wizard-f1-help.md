@@ -25,15 +25,15 @@ f1_keywords:
 helpviewer_keywords: wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25be7d99d07300731a9395b096f316faef973eef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: edef05d3a9cd1ae3a363a4cdead10130ee42459f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-partition-wizard-f1-help"></a>管理資料分割精靈 F1 說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [管理資料分割精靈]，即可透過資料分割切換或滑動視窗案例的實作，管理和修改現有的資料分割資料表。 這個精靈可以讓資料分割的管理更方便，並且簡化將資料移轉入和移轉出資料表的一般作業。  
@@ -169,7 +169,7 @@ ms.lasthandoff: 11/17/2017
  **Run immediately**  
  當您按 [下一步] 或 [完成] 時，讓精靈完成對資料分割所做的修改。  
   
-### <a name="schedule"></a>排程  
+### <a name="schedule"></a>[排程]  
  選取此選項即可在排程的日期和時間修改資料表資料分割。  
   
  **變更排程**  
@@ -180,7 +180,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="NewJob"></a> 新增作業排程頁面  
  使用 [新增作業排程] 頁面，即可檢視和變更排程的屬性。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  選取您想要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的排程類型。  
   
  **名稱**  
@@ -252,7 +252,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="one-time-schedule-types-options"></a>僅執行一次的排程類型選項  
  如果您將作業排程為僅執行一次，就必須選取未來的日期和時間。  
   
- **日期**  
+ **Date**  
  選取作業要執行的日期。  
   
  **Time**  
@@ -272,7 +272,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Progress"></a> 進度頁面  
  使用 [進度] 頁面，即可監視有關 [管理資料分割精靈] 動作的狀態資訊。 根據您在精靈中選取的選項，[進度] 頁面可能會包含一或多個動作。 頂端的方塊會顯示精靈的整體狀態以及精靈已接收的狀態、錯誤和警告訊息數。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **詳細資料**  
  提供從精靈所採取的動作傳回的動作、狀態和任何訊息。  
   

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.backupdevice.contents.f1
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4182c9dd27cc5adb8e1b4608bd47fa5d765e35bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 530a6791c6c6b8353161f4dec1f8556b434ba761
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-device-media-contents-page"></a>備份裝置 (媒體內容頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [備份裝置] 對話方塊來檢視備份資訊。 這個資訊描述裝置、媒體、媒體集，以及備份組。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [檢視邏輯備份裝置的屬性和內容 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  檢視有關個別媒體、媒體集和備份組的資訊。  
   
  **媒體**  
@@ -66,9 +66,9 @@ ms.lasthandoff: 11/17/2017
 |**型別**|已備份的物件：資料庫、檔案或 \<空白> (適用於交易記錄)。|  
 |**元件**|執行的備份類型：完整、差異或交易記錄。|  
 |**Server**|執行備份作業之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。|  
-|**資料庫**|已備份資料庫的名稱。|  
+|**[資料庫備份]**|已備份資料庫的名稱。|  
 |**位置**|備份組在磁碟區中的位置。|  
-|**日期**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
+|**Date**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
 |**大小**|備份組的大小 (以位元組為單位)。|  
 |**使用者名稱**|執行備份作業的使用者名稱。|  
 |**到期**|備份組過期的日期和時間。|  

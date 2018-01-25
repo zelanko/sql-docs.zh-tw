@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.monitor.f1
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9f1b2e15ff1c7ba3ff48fb37763e8742e4056eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 39a41cec811cacb613ef61a8cf0b5c753f84fd86
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-monitor-settings"></a>記錄傳送監視器設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此頁面來設定和修改記錄傳送監視伺服器的屬性。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
  **作業名稱**  
  指出超過備份或還原臨界值時，記錄傳送用來引發警示的 SQL Server Agent 警示作業的名稱。 第一次建立此作業時，您可以在方塊中輸入新的名稱。  
   
- **排程**  
+ **[排程]**  
  指出 SQL Server Agent 警示作業的目前排程。  
   
  **編輯**  

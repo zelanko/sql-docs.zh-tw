@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd94ea47cdc9d65e2461bd9b2c1f12deacb67d38
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8aab51f8530cfe6ea27315314db996e94734e884
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>針對 Web 同步處理設定 IIS 7
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     5.  確認 **[從這個位置]** 顯示本機電腦的名稱 (而非網域)。 如果此欄位沒有顯示本機電腦名稱，請按一下 **[位置]**。 在 **[位置]** 對話方塊中，選取本機電腦，然後按一下 **[確定]**。  
   
-    6.  在 [選取使用者]  對話方塊和 [IIS_IUSRS Properties]\ (IIS_IUSRS 屬性)  對話方塊中，按一下 [確定]。  
+    6.  在 [選取使用者]  對話方塊和 [IIS_IUSRS Properties] (IIS_IUSRS 屬性)  對話方塊中，按一下 [確定]。  
   
 3.  將包含 replisapi.dll 之資料夾的最小權限授與帳戶：  
   

@@ -22,13 +22,13 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 caps.latest.revision: "49"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27a259a48aee0f852e6088bb17e6765ea37c057c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7269f0e591ec1846af196a6b7c996b8eeb852351
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>監視可用性群組 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 為了透過 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 監視可用性群組和複本，以及相關聯的資料庫，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]提供一組目錄和動態管理檢視與伺服器屬性。 您可以透過 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 陳述式使用這些檢視來監視可用性群組及其複本和資料庫。 針對給定可用性群組所傳回的資訊取決於連接到的是裝載主要複本或次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 目錄檢視需要伺服器執行個體的 VIEW ANY DEFINITION 權限。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 動態管理檢視需要伺服器的 VIEW SERVER STATE 權限。  
   
 ##  <a name="AoAgFeatureOnSI"></a> 監視伺服器執行個體上的 AlwaysOn 可用性群組功能  
@@ -286,7 +286,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [SQL Server、可用性複本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)  
   
--   [SQL Server、資料庫複本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
+-   [SQL Server 的 Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
 -   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   

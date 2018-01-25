@@ -18,13 +18,13 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbbfe6e6d06a71e54b93e90cf42c121fdaab7927
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b92e1a679cfa738620e8e46195b2df14e8ee03ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>AlwaysOn 操作問題原則 - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,18 +71,18 @@ ms.lasthandoff: 11/20/2017
 |-----------------|-----------|--------------------|-----------|  
 |WSFC 叢集狀態|[WSFC cluster service is offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|嚴重|SQL Server 的執行個體|  
 |可用性群組線上狀態|[Availability group is offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|嚴重|可用性群組|  
-|可用性群組自動容錯移轉整備|[可用性群組尚未準備進行自動容錯移轉](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md)。|嚴重|可用性群組|  
+|可用性群組自動容錯移轉整備|[Availability group is not ready for automatic failover](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md)。|嚴重|可用性群組|  
 |可用性複本資料同步處理狀態|[Some availability replicas are not synchronizing data](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md)。|警告|可用性群組|  
-|同步複本的資料同步處理狀態|[某些同步複本並未同步處理](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md)。|警告|可用性群組|  
-|可用性複本角色狀態|[某些可用性複本沒有健康情況良好的角色](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md)。|警告|可用性群組|  
-|可用性複本連接狀態|[某些可用性複本已中斷連線](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md)。|警告|可用性群組|  
-|可用性複本的角色狀態|[可用性複本沒有健康情況良好的角色](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md)。|嚴重|可用性複本|  
+|同步複本的資料同步處理狀態|[Some synchronous replicas are not synchronized](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md)。|警告|可用性群組|  
+|可用性複本角色狀態|[Some availability replicas do not have a healthy role](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md)。|警告|可用性群組|  
+|可用性複本連接狀態|[Some availability replicas are disconnected](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md)。|警告|可用性群組|  
+|可用性複本的角色狀態|[Availability replica does not have a healthy role](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md)。|嚴重|可用性複本|  
 |可用性複本連接狀態|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)。|嚴重|可用性複本|  
 |可用性複本聯結狀態|[可用性複本未聯結](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md)。|警告|可用性複本|  
-|可用性複本資料同步處理狀態|[某些可用性資料庫的資料同步狀態健康情況不佳](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)。|警告|可用性複本|  
+|可用性複本資料同步處理狀態|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)。|警告|可用性複本|  
 |可用性資料庫暫停狀態|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md)。|警告|可用性資料庫|  
-|可用性資料庫聯結狀態|[次要資料庫未聯結](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)。|警告|可用性資料庫|  
-|可用性資料庫資料同步處理狀態|[可用性資料庫的資料同步狀態健康情況不佳](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性資料庫|  
+|可用性資料庫聯結狀態|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)。|警告|可用性資料庫|  
+|可用性資料庫資料同步處理狀態|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性資料庫|  
   
 > [!IMPORTANT]  
 >  **\*** 對於 AlwaysOn 原則而言，類別目錄名稱會當作識別碼使用。 變更 AlwaysOn 類別目錄的名稱會破壞其健全狀況評估功能。 因此，請勿修改 AlwaysOn 類別目錄的名稱。  
@@ -129,7 +129,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [AlwaysOn 健全狀況模型第 2 部 -- 擴充健全狀況模型](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx)  
   
--   [Microsoft SQL Server AlwaysOn 高可用性和災害復原解決方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

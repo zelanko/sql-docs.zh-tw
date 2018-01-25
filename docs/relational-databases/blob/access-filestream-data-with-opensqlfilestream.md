@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7952076c536818d8a272a6eed35566c3e413ed21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9433d94683396ab9fbeb057c4af1b681a628cd4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>使用 OpenSqlFilestream 存取 FILESTREAM 資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] OpenSqlFilestream API 會為儲存在檔案系統中的 FILESTREAM 二進位大型物件 (BLOB)，取得與 Win32 相容的檔案控制代碼。 此控制代碼可傳遞給下列任何 Win32 API： [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)。 如果您將此控制代碼傳遞給其他任何 Win32 API，將會傳回錯誤 ERROR_ACCESS_DENIED。 在認可或回復交易之前，必須將此控制代碼傳遞給 Win32 的 [CloseHandle API](http://go.microsoft.com/fwlink/?LinkId=86428) 來關閉此控制代碼。 如果無法關閉此控制代碼，將會導致伺服器端資源洩露。  
@@ -57,10 +57,10 @@ HANDLE OpenSqlFilestream (
  *DesiredAccess*  
  [in] 設定用來存取 FILESTREAM BLOB 資料的模式。 此值會傳遞給 [DeviceIoControl 函式](http://go.microsoft.com/fwlink/?LinkId=105527)。  
   
-|名稱|值|意義|  
+|[屬性]|ReplTest1|意義|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|資料可以從檔案讀取。|  
-|SQL_FILESTREAM_WRITE|1|資料可以寫入檔案。|  
+|SQL_FILESTREAM_WRITE|@shouldalert|資料可以寫入檔案。|  
 |SQL_FILESTREAM_READWRITE|2|資料可以寫入檔案和從檔案讀取。|  
   
 > [!NOTE]  
@@ -69,7 +69,7 @@ HANDLE OpenSqlFilestream (
  *OpenOptions*  
  [in] 檔案屬性和旗標。 這個參數也可以包含下列旗標的任意組合。  
   
-|旗標|值|意義|  
+|旗標|ReplTest1|意義|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_OPEN_NONE|0x00000000:|開啟或建立這個檔案時，不搭配任何特殊選項。|  
 |SQL_FILESTREAM_OPEN_FLAG_ASYNC|0x00000001L|開啟或建立這個檔案是為了非同步 I/O。|  
@@ -99,7 +99,7 @@ HANDLE OpenSqlFilestream (
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，才能使用此 API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端工具一起安裝。 如需詳細資訊，請參閱 [安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   
 ## <a name="see-also"></a>另請參閱  

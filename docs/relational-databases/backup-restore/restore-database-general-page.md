@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: "89"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31fc3012f234601db7d24b80b4499b78138e709c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db20fb80e64e3ffecee629dd5fc9310755ff58b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-general-page"></a>還原資料庫 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,23 @@ ms.lasthandoff: 11/17/2017
   
  從加密備份還原，需要憑證的 **VIEW DEFINITION** 權限或在備份期間用於加密的非對稱金鑰。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
-### <a name="source"></a>Source  
+### <a name="source"></a>來源  
  [還原來源] 面板的選項會識別資料庫備份組的位置以及您想要還原的備份組。  
   
 |詞彙|定義|  
 |----------|----------------|  
-|**資料庫**|從下拉式清單中選取要還原的資料庫。 此清單僅包含已根據 **msdb** 備份記錄而備份的資料庫。|  
+|**[資料庫備份]**|從下拉式清單中選取要還原的資料庫。 此清單僅包含已根據 **msdb** 備份記錄而備份的資料庫。|  
 |**裝置**|選取內含您要還原之一個或多個備份的邏輯或實體備份裝置 (磁帶、URL 或檔案)。 如果在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上建立資料庫備份，就需要這個選項。<br /><br /> 若要選取一個或多個邏輯或實體備份裝置，請按一下瀏覽按鈕以開啟 **[選取備份裝置]** 對話方塊。 您可以在這個對話方塊中選取屬於單一媒體集的裝置，最多可選取 64 個裝置。 磁帶裝置必須實際連接到執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的電腦。 備份檔案可位於本機磁碟裝置或抽取式磁碟裝置上。 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。 您也可以選取 **[URL]** 做為裝置類型，以將備份檔案儲存在 Windows Azure 儲存體中。<br /><br /> 當您結束 [選取備份裝置] 對話方塊時，選取的裝置將會以唯讀值的形式顯示在 [裝置] 清單中。|  
-|**資料庫**|從下拉式清單中選取應該從中還原備份的資料庫名稱。<br /><br /> 注意：這份清單只能在選取 [裝置]  時使用。 只有在所選取裝置上有備份的資料庫才可供使用。|  
+|**[資料庫備份]**|從下拉式清單中選取應該從中還原備份的資料庫名稱。<br /><br /> 注意：這份清單只能在選取 [裝置]  時使用。 只有在所選取裝置上有備份的資料庫才可供使用。|  
   
 ### <a name="destination"></a>目的地  
  **[還原至]** 面板的選項會識別資料庫和還原點。  
   
 |詞彙|定義|  
 |----------|----------------|  
-|**資料庫**|輸入清單中要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選擇現有的資料庫。 清單包含伺服器上的所有資料庫，排除系統資料庫 **master** 和 **tempdb**。<br /><br /> 注意：若要還原受密碼保護的備份，必須使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式。|  
+|**[資料庫備份]**|輸入清單中要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選擇現有的資料庫。 清單包含伺服器上的所有資料庫，排除系統資料庫 **master** 和 **tempdb**。<br /><br /> 注意：若要還原受密碼保護的備份，必須使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式。|  
 |**[還原至]**|**[還原至]** 方塊預設為 [到上次建立的備份]。 您也可以按一下 **[時間表]** 顯示 **[備份時間表]** 對話方塊，這個對話方塊會以時間表的形式顯示資料庫備份記錄。 請按一下 **[時間表]** 指定您想要還原資料庫的特定目標 **datetime** 。 然後，資料庫將還原至這個指定之時間點的狀態。 請參閱 [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md)。|  
   
 ### <a name="restore-plan"></a>還原計畫  

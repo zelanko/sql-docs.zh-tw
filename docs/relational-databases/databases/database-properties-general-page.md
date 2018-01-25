@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.swb.databaseproperties.segments.f1
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ccea14579d4d4e181e102241831a9217c21fe7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b5239b20134c58cf828b9c35a3bd3802e4b15bf9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-general-page"></a>資料庫屬性 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此頁面來檢視或修改選取之資料庫的屬性。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
  **狀態**  
  顯示資料庫狀態。 如需詳細資訊，請參閱 [Database States](../../relational-databases/databases/database-states.md)。  
   
- **擁有者**  
+ **[擁有者]**  
  顯示資料庫擁有者的名稱。 可以在 **[檔案]** 頁面上變更擁有者。  
   
  **建立日期**  

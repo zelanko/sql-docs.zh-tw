@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.monitor.beta2.f1
 helpviewer_keywords: Replication Monitor, help
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0224e490d519d5d62828d43e4aac07bca7693f80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4875b39c775e1e62b81c325386833a3be7860b46
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-monitor"></a>複寫監視器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 文件集的這個章節包含複寫監視器的資訊。 監視器中所顯示的頁面和對話方塊，會視複寫的類型和監視的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本不同而有所不同。  

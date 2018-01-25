@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ad07f395d10ea29c6773873d49f32c50f8394da
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: eea4dee1776a5ac1f14fd2918bd47052f1fc8632
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-querying-xmltype-columns"></a>範例：查詢 XMLType 資料行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 下列查詢包含 **xml** 類型的資料行。 此查詢會從 `Instructions` xml **類型之** 資料行的第一個位置，擷取產品型號識別碼、名稱和製造步驟。  

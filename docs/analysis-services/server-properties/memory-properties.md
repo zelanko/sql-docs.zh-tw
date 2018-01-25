@@ -1,7 +1,7 @@
 ---
 title: "記憶體屬性 |Microsoft 文件"
 ms.custom: 
-ms.date: 11/17/2016
+ms.date: 01/23/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -30,18 +30,20 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8aa2f5f5c3e39680a9b0fe41e1b92443db4c8509
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 15e0fc6fa123fd4d9ca71f35804d2f06d0342b5a
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="memory-properties"></a>記憶體屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]向上 preallocates 數量較少的記憶體中的開始，以便可以立即處理要求。 隨著查詢和處理工作負載的增加，會配置額外的記憶體。 
   
   指定組態設定，即可控制釋放記憶體的臨界值。 例如， **HardMemoryLimit** 設定可指定自行強加的記憶體不足狀況 (依預設，未啟用此臨界值)；其中，變得需要更多資源時，就會立即拒絕新的要求。
+
+若要深入了解最大記憶體過低的每個 Analysis Services 執行個體的版本，請參閱[版本和支援的 SQL Server 功能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)。
   
- **適用於** ：多維度與表格式伺服器模式 (除非另有指示)。  
+ 除非另有說明否則下列設定會套用這兩種多維度與表格式伺服器模式。  
  
 ## <a name="default-memory-configuration"></a>預設記憶體組態
 
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 
 下表簡述更常用的記憶體設定 (參考一節中會有更詳細的資訊)。 這些是 Analysis Services 與相同伺服器上的其他應用程式競用記憶體時應該設定的設定︰
 
-設定 | 描述
+設定 | Description
 --------|------------
 LowMemoryLimit | 針對多維度執行個體，伺服器第一次開始釋出配置給不常使用物件之記憶體的較低臨界值。
 VertiPaqMemoryLimit | 針對表格式執行個體，伺服器第一次開始釋出配置給不常使用物件之記憶體的較低臨界值。
@@ -81,7 +83,7 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
   
   
 
-設定  |描述  
+設定  |Description  
 ---------|---------
 **0**     |  停用分頁。 如果記憶體不足，處理會失敗，且會出現記憶體不足的錯誤。 如果您停用分頁，就必須授與 Windows 權限給服務帳戶。 如需指示，請參閱[設定服務帳戶 &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)。 
 **1**     |  (預設值) 此屬性允許使用作業系統分頁檔 (pagefile.sys)，在磁碟中分頁。   
@@ -103,7 +105,7 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
  **MemoryHeapType**  
   此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。 以下為 SQL Server 2016 SP1 和更新版 Analysis Services 中的有效值：
   
-  設定 | 描述
+  設定 | Description
 --------|------------
 **-1** | (預設值) Automatic。 引擎將決定要使用哪一個。
 **1** | Analysis Services 堆積。
@@ -115,7 +117,7 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
  **HeapTypeForObjects**  
   此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。 下列是有效值：
   
-   設定 | 描述
+   設定 | Description
 --------|------------
 **0** | Windows LFH 堆積。
 **1** | Analysis Services 位置配置器。
@@ -143,8 +145,6 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
  **WaitCountIfHighMemory**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
-  [SQL Server 2008 R2 Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539)
-  

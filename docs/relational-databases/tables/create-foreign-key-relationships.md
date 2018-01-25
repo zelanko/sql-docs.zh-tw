@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 103210e4164a9d4faf014a044a22ee13a28fcee9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4f90816f11420f3bef3885c66199144666e903bb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/17/2017
     
 2.  在標準列上，按一下 **[新增查詢]**。    
     
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例會建立資料表並在 `TempID` 資料行上定義外部索引鍵條件約束，而此資料行會參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用來確定對 `Sales.SalesReason` 資料表所做的變更會自動傳播至 `Sales.TempSalesReason` 資料表。    
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會建立資料表並在 `TempID` 資料行上定義外部索引鍵條件約束，而此資料行會參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用來確定對 `Sales.SalesReason` 資料表所做的變更會自動傳播至 `Sales.TempSalesReason` 資料表。    
     
     ```    
     USE AdventureWorks2012;    
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/17/2017
     
 2.  在標準列上，按一下 **[新增查詢]**。    
     
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例會在 `TempID` 資料行上建立外部索引鍵，並參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。    
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會在 `TempID` 資料行上建立外部索引鍵，並參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。    
     
     ```    
     USE AdventureWorks2012;    

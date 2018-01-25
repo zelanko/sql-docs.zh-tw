@@ -18,13 +18,13 @@ ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d756b3dac37c11172a186dc4683ba15c958a482b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2011789bbecd15c199049e1a50335b77885c9efb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="browse-for-objects-object-explorer"></a>瀏覽物件 (物件總管)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 顯示所選取類型的物件清單。 透過選取對應的核取方塊，從這份清單中選取一或多個物件。 [瀏覽物件] 方塊只會顯示適用於該動作的項目，並只顯示您有權限檢視的項目。  

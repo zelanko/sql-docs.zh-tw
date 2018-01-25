@@ -15,12 +15,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ef0de3c547ac843807bf9e8e906ea19fa1e3a5b5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: fd45301f5ce4497a672ffd4a684f972b08ac8013
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>計劃和測試資料庫引擎升級計畫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 若要成功執行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 升級，不論使用何種方法，都需要適當規劃。  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **測試升級計劃︰** 使用 Microsoft SQL Server Distributed Replay 公用程式，來以您的實際工作負載測試效能。 此公用程式可使用多部電腦重新執行追蹤資料，並模擬關鍵任務的工作負載。 在 SQL Server 升級前後於測試伺服器上進行重新執行作業，可讓您衡量效能差異，並找出應用程式在升級後可能會發生的不相容情況。 如需詳細資訊，請參閱 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md) 和[管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)。  
   
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
  [升級 Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
   
   

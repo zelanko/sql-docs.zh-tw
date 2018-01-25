@@ -21,14 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e424279e5136d8334d37de754f5e3b5a087296b8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 62c23859b14e9c9fc3e4663a0ec813c8dca25ff1
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>在 Management Studio 中建立 Analysis Services 指令碼
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]包含指令碼產生功能、 範本和編輯器可讓您編寫指令碼 Analysis Services 物件和工作。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包含指令碼產生功能、範本和編輯器，您可以使用它們來編寫 Analysis Services 物件和工作的指令碼。  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>在 Management Studio 中編寫 Analysis Services 工作的指令碼  
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中編寫工作指令碼，是在工作導向的對話方塊中按一下其中一個指令碼選項來完成。 用來執行備份或還原資料庫、處理物件或設計彙總等工作的所有對話方塊，在對話方塊頂端都包含指令碼選項。 選取其中一個選項，會根據對話方塊中的資訊和設定來產生 XMLA 指令碼。  
@@ -70,7 +72,7 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  一般而言，如果您要建立檔案的多個不同版本，請選取 [檔案]。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XMLA 查詢編輯器 &#40;Analysis Services-多維度資料 &#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

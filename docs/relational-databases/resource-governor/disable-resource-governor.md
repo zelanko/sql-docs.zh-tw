@@ -14,20 +14,20 @@ ms.topic: article
 helpviewer_keywords: Resource Governor, disabling
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69ff08716168f02736aa5a4ce8eb340fba637bc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 892d80202fd32afa4aeb9fb0a0b9f96ad2c4e17d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="disable-resource-governor"></a>停用資源管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 停用 Resource Governor。  
   
--   **開始之前：**  [限制事項](#LimitationsRestrictions)、 [權限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   使用[物件總管](#RGOffObjEx)、[資源管理員屬性](#RGOffProp)、[Transact-SQL](#RGOffTSQL) **停用資源管理員**  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  執行 **ALTER RESOURCE GOVERNOR DISABLE** 陳述式。  
   
-### <a name="example-transact-sql"></a>範例 (Transact-SQL)  
+### <a name="example-transact-sql"></a>範例 &#40;Transact-SQL&#41;  
  下列範例會啟用資源管理員。  
   
 ```  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
+ [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

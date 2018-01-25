@@ -19,15 +19,15 @@ helpviewer_keywords:
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a59b93a9877eb6e58c34fc1aeb54795aaee52d3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 779cd2f34ae30c2e21d632e3359861452c4f652a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定欄位長度 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 欄位長度會指出以字元格式表現資料所需的最大字元數。 如果資料是以原生格式儲存，則欄位長度為已知；例如， **int** 資料類型會佔用 4 個位元組。 如果指出前置長度為 0， **bcp** 命令就會提示您輸入欄位長度 (預設的欄位長度)，以及欄位長度對包含 **char** 資料之資料檔案的資料儲存有何影響。  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |**nvarchar**|該資料行定義長度的兩倍|  
 |**Text**|0|  
 |**ntext**|0|  
-|**bit**|1|  
+|**bit**|@shouldalert|  
 |**binary**|該資料行定義長度的兩倍 + 1|  
 |**varbinary**|該資料行定義長度的兩倍 + 1|  
 |**image**|0|  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/17/2017
   
 |資料類型|預設長度 (字元)|  
 |---------------|-----------------------------------|  
-|**bit**|1|  
+|**bit**|@shouldalert|  
 |**binary**|該資料行的定義長度|  
 |**varbinary**|該資料行的定義長度|  
 |**image**|0|  
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
 |**int**|4|  
 |**bigint**|8|  
 |**smallint**|2|  
-|**tinyint**|1|  
+|**tinyint**|@shouldalert|  
 |**money**|8|  
 |**smallmoney**|4|  
 |**decimal**|*|  

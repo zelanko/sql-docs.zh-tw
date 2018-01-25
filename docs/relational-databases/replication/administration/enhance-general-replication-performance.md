@@ -24,15 +24,15 @@ helpviewer_keywords:
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b1f9c651b9b0ffc41af0beec6ace0a570f02d09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72c807961694b90e0a987385c5a0fad4a38bd184
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 透過使用本主題中所述的指導方針，您可以提升應用程式及網路上所有複寫類型的一般效能。  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
      變更可透過發行資料子集到每個「訂閱者」或透過使用可直接變更給定資料列到給定節點的應用程式來進行分割：  
   
-    -   合併式複寫支援使用具有單一發行集的參數化篩選來發行資料子集。 如需詳細資訊，請參閱 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+    -   合併式複寫支援使用具有單一發行集的參數化篩選來發行資料子集。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
     -   異動複寫支援使用具有多個發行集的靜態篩選來發行資料子集。 如需詳細資訊，請參閱[篩選發行的資料](../../../relational-databases/replication/publish/filter-published-data.md)。  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 11/17/2017
   
 -   考慮手動初始化訂閱。  
   
-     在某些情況下，例如涉及大型初始資料集，最好是使用快照集之外的方法初始化訂閱。 如需詳細資訊，請參閱[不使用快照集初始化交易式訂閱](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)。  
+     在某些情況下，例如涉及大型初始資料集，最好是使用快照集之外的方法初始化訂閱。 如需詳細資訊，請參閱 [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
 ## <a name="agent-parameters"></a>代理程式參數  
   

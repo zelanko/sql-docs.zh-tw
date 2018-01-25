@@ -18,15 +18,15 @@ helpviewer_keywords:
 - statistics [SQL Server], live query statistics
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e81e49b14a91f809c4c3452369069ff4d856a99f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bff144ba100fe72dcc036299138e656362977b96
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="live-query-statistics"></a>即時查詢統計資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可供檢視作用中查詢的即時執行計畫。 這個即時查詢計畫會隨著控制項在查詢計畫運算子之間流動，提供查詢執行程序的即時深入資訊。 即時查詢計畫會顯示整體的查詢進度，以及運算子層級的執行階段執行統計資料，如產生的資料列數目、耗用時間、運算子進度等等。因為這份資料是即時提供，不需要等待查詢完成，所以這些執行統計資料在偵錯查詢效能問題方面非常有用。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 開始即提供這項功能，但它也可以搭配 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用。  
@@ -54,14 +54,14 @@ ms.lasthandoff: 11/17/2017
   
  ![在 [活動監視器] 的 [即時查詢統計資料] 按鈕](../../relational-databases/performance/media/livequerystatsactmon.png "在 [活動監視器] 的 [即時查詢統計資料] 按鈕")  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  必須先啟用統計資料設定檔基礎結構，即時查詢統計資料才可以擷取查詢進度資訊。 指定 **中的 [Include Live Query Statistics (包括即時查詢統計資料)]**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ，可啟用目前查詢工作階段的統計資料基礎結構。 
  
 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]之前，還有兩種其他方式可啟用統計資料基礎結構，用以檢視其他工作階段 (如活動監視器) 的即時查詢統計資料：  
   
 -   在目標工作階段中執行 `SET STATISTICS XML ON;` 或 `SET STATISTICS PROFILE ON;` 。  
   
- 或  
+ 中的多個  
   
 -   啟用 **query_post_execution_showplan** 擴充事件。 這是在所有工作階段啟用即時查詢統計資料的全伺服器設定。 若要啟用擴充事件，請參閱 [使用擴充事件監視系統活動](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。  
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 
 -   使用全域追蹤旗標 7412。  
   
- 或  
+ 中的多個  
   
 -   啟用 **query_thread_profile** 擴充事件。 這是在所有工作階段啟用即時查詢統計資料的全伺服器設定。 若要啟用擴充事件，請參閱 [使用擴充事件監視系統活動](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
  [效能監視及微調工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)   
  [開啟活動監視器 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)   
  [活動監視器](../../relational-databases/performance-monitor/activity-monitor.md)   
- [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)   
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)   
  [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

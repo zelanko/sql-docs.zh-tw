@@ -15,24 +15,24 @@ f1_keywords: sql13.rep.configdistwizard.pubproperties.subscribers.f1
 helpviewer_keywords: Publisher Properties dialog box
 ms.assetid: 552d2bd6-13f9-4876-b8f1-89adb242ef70
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd2f8ef154f1fb1f2bb0c81e84965d6c86c13e3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a52e2e1ffba9c76fb6c1ffa6253b295ee508a6c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-properties---publisher-subscribers"></a>發行者屬性 - 發行者，訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [發行者屬性] 對話方塊的 [訂閱者] 頁面，是用於執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之發行者。 此頁面可讓您啟用訂閱者，以接收來自此發行者的發行集資料。 啟用訂閱者以接收來自此發行者的資料，並不會在此發行者上建立發行集的訂閱。 若要建立訂閱，您必須使用新增訂閱精靈。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **[發行者屬性]**  
  **[訂閱者]** 屬性方格，會顯示已啟用來接收此發行者之發行集資料的訂閱者。 按一下訂閱者旁的屬性按鈕 (**...**)，即可檢視和設定其他屬性。  
   
- **加入**  
+ **[加入]**  
  按一下 **[加入]** 即可加入訂閱者，然後按一下 **[加入 SQL Server 訂閱者]** 或 **[加入非 SQL Server 訂閱者]**。  
   
 ## <a name="see-also"></a>另請參閱  

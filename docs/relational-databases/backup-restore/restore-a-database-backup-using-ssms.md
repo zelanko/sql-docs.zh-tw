@@ -22,15 +22,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: "79"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d0c0f0112eee81379e2c1548dd9938e27088dea8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d51837413865aedb9b4610b045355556634ea6df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
     
 3.  在 **[一般]** 頁面上，使用 **[來源]** 區段指定要還原之備份組的來源和位置。 選取下列其中一個選項：    
     
-    -   **資料庫**    
+    -   **[資料庫備份]**    
     
          從下拉式清單中選取要還原的資料庫。 此清單僅包含已根據 **msdb** 備份記錄而備份的資料庫。    
     
@@ -82,8 +82,8 @@ ms.lasthandoff: 11/17/2017
 
             |媒體類型|對話方塊|描述|    
             |----------------|----------------|-----------------|    
-            |**檔案**|**尋找備份檔案**|在這個對話方塊中，您可以從樹狀目錄中選取本機檔案，或是使用完整的通用命名慣例 (UNC) 名稱指定遠端檔案。 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|    
-            |**[裝置]**|**選取備份裝置**|在這個對話方塊中，您可以從伺服器執行個體上所定義的邏輯備份裝置清單中選取裝置。|    
+            |**檔案**|**尋找備份檔案**|在這個對話方塊中，您可以從樹狀目錄中選取本機檔案，或是使用完整的通用命名慣例 (UNC) 名稱指定遠端檔案。 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|    
+            |**裝置**|**選取備份裝置**|在這個對話方塊中，您可以從伺服器執行個體上所定義的邏輯備份裝置清單中選取裝置。|    
             |**Tape**|**選取備份磁帶**|在這個對話方塊中，您可以從實際連接到執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之電腦的磁帶機清單中選取磁帶。|    
             |**URL**|**選取備份檔案位置**|在此對話方塊中，您可以選取現有的 SQL Server 認證/Azure 儲存體容器、使用共用存取簽章新增 Azure 儲存體容器，或為現有的儲存體容器產生共用存取簽章和 SQL Server 認證。  另請參閱 [連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)|  
          
@@ -241,13 +241,13 @@ ms.lasthandoff: 11/17/2017
     10. 展開 [容器] 並巡覽至 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
     
     11. 按住 Ctrl，然後選取檔案 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。
-    12. 按一下 **[確定]**。
+    12. 按一下 [確定] 。
     13. 按一下 [確定] 回到 [一般] 頁面。
     14. 在 [選取頁面] 窗格中，按一下 [選項]。
     15. 在 [還原選項] 區段下，核取 [覆寫現有的資料庫 (WITH REPLACE)]。
     16. 在 [結尾記錄備份] 區段下，取消核取 [還原前先進行結尾記錄備份]。
     17. 在 [伺服器連接] 區段下，核取 [關閉目的地資料庫的現有連接]。
-    18. 按一下 **[確定]**。
+    18. 按一下 [確定] 。
 
     #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2. 共用存取簽章不存在**
     在此範例中， `Sales` 資料庫目前不在伺服器上。
@@ -258,7 +258,7 @@ ms.lasthandoff: 11/17/2017
     10. 展開 [容器] 並巡覽至 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
     11. 選取備份檔案，然後按一下 [確定]。
     12. 按一下 [確定] 回到 [一般] 頁面。
-    13. 按一下 **[確定]**。
+    13. 按一下 [確定] 。
 
 #### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F. 將本機備份還原至 Microsoft Azure 儲存體 (URL)**
 `Sales` 資料庫將從 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 中的備份還原至 Microsoft Azure 儲存體容器 `E:\MSSQL\BAK`。  已建立 Azure 容器的 SQL Server 認證。  目的地容器的 SQL Server 認證必須已經存在，因為您無法透過 **還原** 工作建立此認證。  `Sales` 資料庫目前不在伺服器上。
@@ -274,7 +274,7 @@ ms.lasthandoff: 11/17/2017
 9.  在 [選取頁面] 窗格中，按一下 [檔案]。
 10. 核取 [將所有檔案重新放置到資料夾] 方塊。
 11. 在 [資料檔案資料夾:] 和 [記錄檔資料夾:] 的文字方塊中，輸入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
-12. 按一下 **[確定]**。
+12. 按一下 [確定] 。
 
 
 ## <a name="see-also"></a>另請參閱    

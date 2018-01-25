@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: "65"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9db1fe5e47e062e2fa1a4563d54059b0ecfdc0af
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6fdf75cd720e6463a41475212beb07ee4a79819
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---advanced-page"></a>伺服器屬性 - 進階頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此頁面來檢視或修改善階伺服器設定。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [檢視或變更伺服器屬性 &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## <a name="containment"></a>內含項目  
+## <a name="containment"></a>Containment  
  啟用自主資料庫  
  指出這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是否允許自主資料庫。 當為 **True**時，可以建立、還原或附加自主資料庫。 當為 **False**時，自主資料庫無法建立、還原或附加至這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 變更自主屬性會影響資料庫的安全性。 啟用自主資料庫可讓資料庫擁有者授與這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的存取權。 停用自主資料庫會阻止使用者連接。 若要了解內含項目屬性的影響，請參閱 [自主資料庫](../../relational-databases/databases/contained-databases.md) 和 [自主資料庫的安全性最佳做法](../../relational-databases/databases/security-best-practices-with-contained-databases.md)。  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/20/2017
   
  例如，2049 的預設設定指出用 '3/14/49' 格式輸入的日期會被解譯為 2049 年 3 月 14 日，而用 '3/14/50' 格式輸入的日期會被解譯為 1950 年 3 月 14 日。 如需詳細資訊，請參閱 [設定 two digit year cutoff 伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。  
   
-## <a name="network"></a>網路  
+## <a name="network"></a>Network  
  **網路封包大小**  
  設定跨越整個網路所用的封包大小 (以位元組為單位)。 預設的封包大小為 4096 個位元組。 如果應用程式進行大量複製作業，或是傳送或接收大量的 **text** 或 **image** 資料，則使用大於預設值的封包有助於改善效能，因為這樣會有較少的網路讀取與寫入。 如果應用程式傳送與接收的資訊量很少，您可以將封包大小設成 512 位元組，這對大部分的資料傳輸而言已經足夠。 如需詳細資訊，請參閱 [設定 network packet size 伺服器組態選項](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md)。  
   

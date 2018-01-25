@@ -30,15 +30,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caa7d7966fee784794884d7e840f0802c4a7774d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a687248919676d1193682a983f8ba71b1827cc3c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="programmatically-monitor-replication"></a>以程式設計方式監視複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 複寫監視器是一個允許您監視複寫拓撲的圖形化工具。 您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 複寫預存程序或 Replication Management Objects (RMO)，以程式設計的方式存取相同的監視資料。 這些物件可用來設計下列工作：  
@@ -271,7 +271,7 @@ ms.lasthandoff: 11/17/2017
   
     -   *metricID* - <xref:System.Int32> 值，代表來自下列資料表的監視臨界值標準：  
   
-        |值|說明|  
+        |ReplTest1|描述|  
         |-----------|-----------------|  
         |@shouldalert|**expiration** - 監視交易式發行集的訂閱是否即將到期。|  
         |2|**latency** - 監視交易式發行集的訂閱效能。|  

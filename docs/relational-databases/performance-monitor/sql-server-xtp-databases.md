@@ -16,15 +16,15 @@ ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 226256c110ae18881ec980d95e6979bb1b5b9ece
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa4b8d6262311f68e0833366c4f0f2c5b6d71c53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="sql-server-xtp-databases"></a>SQL Server XTP Databases
+# <a name="sql-server-xtp-databases"></a>SQL Server XTP 資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **SQL Server XTP Databases** 效能物件提供記憶體內部 OLTP 資料庫特定的計數器。
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 
 下表描述 **SQL Server XTP Databases** 計數器。
 
-|計數器|說明| 
+|計數器|描述| 
 |-------------|-----------------|  
 |**Avg Transaction Segment Large Data Size**|交易區段大型資料內容的平均大小。 這是層級非常低的計數器，非供客戶使用。|
 |**Avg Transaction Segment Size**|交易區段內容的平均大小。 如果這個值會變成零，則會從後端配置器配置更多頁面。 這是層級非常低的計數器，非供客戶使用。|

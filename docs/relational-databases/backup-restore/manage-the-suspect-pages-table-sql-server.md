@@ -21,15 +21,15 @@ helpviewer_keywords:
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1b58f7ba5799384276fb39c8490d933ed4f63469
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e8860ca10da3f28750d62f2fb1a926069cec496c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 資料表 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 管理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 **suspect_pages** 資料表。 **suspect_pages** 資料表用於維護可疑頁面的相關資訊，有助於決定是否有必要進行還原。 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 資料表位於 [msdb 資料庫](../../relational-databases/databases/msdb-database.md)中。  
@@ -56,11 +56,11 @@ ms.lasthandoff: 11/17/2017
   
      [建議](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要使用下列項目管理 suspect_pages 資料表：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
     |錯誤描述|**event_type** 值|  
     |-----------------------|---------------------------|  
-    |作業系統 CRC 錯誤所導致的 823 錯誤，或是總和檢查碼錯誤或頁面損毀以外之原因 (例如，頁面識別碼不正確) 所導致的 824 錯誤|1|  
+    |作業系統 CRC 錯誤所導致的 823 錯誤，或是總和檢查碼錯誤或頁面損毀以外之原因 (例如，頁面識別碼不正確) 所導致的 824 錯誤|@shouldalert|  
     |錯誤的總和檢查碼|2|  
     |損毀頁面|3|  
     |已還原 (在將頁面標示為錯誤頁面之後，還原該頁面)|4|  
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  任何可以存取 **msdb** 的人員，均能讀取 **suspect_pages** 資料表中的資料。 針對 suspect_pages 資料表擁有 UPDATE 權限的任何人都可以更新其記錄。 **msdb** 上 **db_owner** 固定資料庫角色的成員或 **系統管理員** 固定伺服器角色的成員皆可插入、更新及刪除記錄。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

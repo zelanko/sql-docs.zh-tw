@@ -15,13 +15,13 @@ ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5991794babadb59ed8d9218b6a348c933add1a65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b771f013b84cd5252c66ee20a804d2a3bb764acf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-and-configure-object-explorer"></a>開啟和設定物件總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中使用 [檢視] 功能表來開啟物件總管。 使用 [工具] 功能表上的 [選項] 來設定物件總管選項。  

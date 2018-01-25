@@ -22,13 +22,13 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b605fdc999d3b0bb8937428e7b158322d182d839
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dd664120017d7e498fd2930281380c718e98aaa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/20/2017
 ||FCI 內的節點|可用性群組內的複本|  
 |-|-------------------------|-------------------------------------------|  
 |**使用 WSFC 叢集**|是|是|  
-|**保護等級**|執行個體|資料庫|  
+|**保護等級**|執行個體|[資料庫]|  
 |**儲存類型**|共用|非共用<br /><br /> 可用性群組中的複本不會共用儲存體，而 FCI 裝載的複本則會使用該 FCI 所需的共用儲存方案。 只有 FCI 內的節點共用儲存方案，可用性群組的複本之間不共用儲存方案。|  
 |**儲存方案**|直接附加、SAN、掛接點、SMB|取決於節點類型|  
 |**可讀取次要**|否*|是|  
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/20/2017
   
      [以有限安全性設定 SQL Server 的 Windows 容錯移轉叢集 (可用性群組或 FCI)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
   
-     [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程師部落格](http://blogs.msdn.com/b/psssql/)  
   

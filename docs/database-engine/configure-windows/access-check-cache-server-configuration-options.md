@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: access check cache option
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 484e995a5b9c99fdc2a6a13cc2f5278cc0d968cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6c8f3c68dd6322b084181f1ab566f9a06f64c5b1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="access-check-cache-server-configuration-options"></a>存取檢查快取伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

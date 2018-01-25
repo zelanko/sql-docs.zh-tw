@@ -14,29 +14,29 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d64722c817bda6fd5f940371506b3737a80323c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16e7f118afae0ca2f33ca8852ee4ac71e156fe52
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secondary-database-settings"></a>次要資料庫設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用此對話方塊，來設定和修改記錄傳送設定中次要資料庫的屬性。  
   
  如需記錄傳送概念的說明，請參閱 [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **次要伺服器執行個體**  
  顯示目前在記錄傳送組態中設定為次要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。  
   
  **次要資料庫**  
  顯示記錄傳送組態中，次要資料庫的名稱。 將新的次要資料庫加入記錄傳送組態時，您可以從清單中選擇資料庫，或在方塊中輸入新資料庫的名稱。 如果您輸入新資料庫的名稱，就必須選取 **[初始化]** 索引標籤上的選項，將主要資料庫的完整資料庫備份還原至次要資料庫中。 進行還原作業時，會建立新的資料庫。  
   
- **Connect**  
+ **[連接]**  
  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，在記錄傳送組態中做為次要伺服器使用。 用來連接的帳戶必須是次要伺服器執行個體上的系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
  **初始化索引標籤**  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
  **作業名稱**  
  顯示用以將交易記錄備份檔案，從主要伺服器複製至次要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業名稱。 第一次建立此作業時，您可以在方塊中輸入新的名稱。  
   
- **排程**  
+ **[排程]**  
  顯示用來從主要伺服器複製交易記錄備份至次要伺服器的 SQL Server Agent 複製作業的目前排程。 按一下 **[排程...]**，即可修改此排程。  
   
  **[排程...]**  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
  **作業名稱**  
  顯示用來還原交易記錄備份至次要資料庫的 SQL Server Agent 作業的名稱。 第一次建立此作業時，您可以在方塊中輸入新的名稱。  
   
- **排程**  
+ **[排程]**  
  顯示用來還原交易記錄備份至次要資料庫的 SQL Server Agent 作業的目前排程。 按一下 **[排程...]**，即可修改此選項。  
   
  **[排程...]**  

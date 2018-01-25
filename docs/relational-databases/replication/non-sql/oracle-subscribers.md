@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf0e6a1e37e76dcb968d92a39c62e12d3e1c1938
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eeef79d24cf2409dd44544a9668cfd926adedfb0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會透過由 Oracle 提供的 Oracle OLE DB 提供者支援 Oracle 的發送訂閱。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」上安裝並設定 Oracle 用戶端網路軟體及 Oracle OLE DB 提供者，以便「散發者」可與「Oracle 訂閱者」建立連接。 Oracle 用戶端網路軟體應為最新的可用版本。 Oracle 建議使用者安裝最新版本的用戶端軟體。 因此用戶端軟體的版本通常比資料庫軟體的版本還要新。 安裝該軟體最直接的方法是使用 Oracle Client 磁碟上的 Oracle Universal Installer。 在 Oracle Universal Installer 中，您將提供下列資訊：  
   
-    |資訊|描述|  
+    |[資訊]|描述|  
     |-----------------|-----------------|  
     |Oracle Home|這是到 Oracle 軟體之安裝目錄的路徑。 接受預設路徑 (C:\oracle\ora90 或類似路徑) 或輸入其他路徑。 如需有關 Oracle Home 的詳細資訊，請參閱本主題後面的「Oracle Home 的注意事項」。|  
     |Oracle Home 名稱|Oracle Home 路徑的別名。|  
@@ -129,11 +129,11 @@ ms.lasthandoff: 11/17/2017
 |**nvarchar(1-1000)**|VARCHAR2(1-2000)|  
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
-|**real**|REAL|  
+|**real**|real|  
 |**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
-|**sql_variant**|N/A|  
+|**sql_variant**|不適用|  
 |**sysname**|VARCHAR2(128)|  
 |**text**|CLOB|  
 |**time(0-7)**|VARCHAR(16)|  

@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.profiles.perfprofileprops.f1
 helpviewer_keywords: Agent Profile Properties dialog box
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56b92cbb9d6303a5b8fc22b46ad995dbe453665f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3511ae543ca1b4a46d4bb3d9d43932c6c73d3b98
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;代理程式設定檔名稱&gt; 屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [代理程式設定檔屬性] 對話方塊，即可檢視設定檔中每一個代理程式參數所指定的值，以及修改使用者定義設定檔的值。  
@@ -32,13 +32,13 @@ ms.lasthandoff: 11/17/2017
  **名稱**  
  設定檔的名稱。  
   
- **描述**  
+ **說明**  
  設定檔的描述。  
   
  **參數**  
  設定檔中包括的代理程式參數。 設定檔不一定要指定每一個參數的值。 若要檢視給定代理程式的所有有效參數，請清除 **[只顯示這個設定檔中使用的參數]** 核取方塊。 如需每一個參數的描述，請參閱：  
   
--   [複寫快照集代理程式](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [複寫記錄讀取器代理程式](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   

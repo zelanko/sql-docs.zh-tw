@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a5ff7baa53924206192db30e8ae9f50cef02cff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>針對 SQL Server Database Engine 的連接進行疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
 
 2.  取得電腦的 IP 位址。
     1. 在 [開始] 功能表上，按一下 [執行]。 在 [執行] 視窗中輸入 **cmd**，然後按一下 [確定]。
-    2.  在命令提示字元視窗中輸入 **ipconfig**，然後按 ENTER。 記下 **IPv4** 位址和 **IPv6** 位址。 (SQL Server 可以使用較舊的 IP 第 4 版通訊協定或較新的 IP 第 6 版通訊協定連線。 您的網路允許其中的一個，或兩個都允許。 大部分的人是從疑難排解 **IPv4** 位址開始。 它比較短也比較好輸入)。
+    2.  在命令提示字元視窗中輸入 **ipconfig** ，然後按 ENTER。 記下 **IPv4** 位址和 **IPv6** 位址。 (SQL Server 可以使用較舊的 IP 第 4 版通訊協定或較新的 IP 第 6 版通訊協定連線。 您的網路允許其中的一個，或兩個都允許。 大部分的人是從疑難排解 **IPv4** 位址開始。 它比較短也比較好輸入)。
 
 
 3.  取得 SQL Server 使用的 TCP 連接埠號碼。 在大部分的情況下，您是使用 TCP 通訊協定從另一部電腦連接到 Database Engine。
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/20/2017
 2.   在 [開始] 頁面中輸入 **SQL Server Management Studio**，或在舊版的 Windows [開始] 功能表上，依序指向 [所有程式] 和 [Microsoft SQL Server]，然後按一下 [SQL Server Management Studio]。
 3.  在 [連接到伺服器] 對話方塊的 [伺服器] 類型方塊中，選取 [Database Engine]。 選取 [驗證] 方塊中的 [Windows 驗證]。 在 [伺服器名稱] 方塊中輸入下列其中之一︰
 
-|連接到：|類型：|範例：|
+|連接到：|類型：|範例|
 |-----------------|---------------|-----------------|
 |預設執行個體|電腦名稱|ACCNT27|
 |具名執行個體|電腦名稱\執行個體名稱|ACCNT27\PAYROLL|
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 
 4.   如果可以使用共用記憶體連接，請使用 TCP 測試連接。 名稱前面可以指定 **tcp:** 以強制 TCP 連線。 例如：
 
-|連接到：|類型：|範例：|
+|連接到：|類型：|範例|
 |-----------------|---------------|-----------------|
 |預設執行個體|tcp: 電腦名稱|tcp:ACCNT27|
 |具名執行個體|tcp: 電腦名稱\執行個體名稱|tcp:ACCNT27\PAYROLL|

@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
 caps.latest.revision: "43"
-ms.openlocfilehash: 391b088af58f7c231d9d95e6940332f8f78dd1d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65a10ada824b291e37e61a421882cf012c7b8ddc
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>設定外部資料的 PolyBase 連線組態
 說明如何在 SQL Server PDW 連接到外部 Hadoop 或 Microsoft Azure 儲存體 blob 資料來源中設定 PolyBase。 使用 PolyBase 來執行用來整合多個來源資料，包括 Hadoop、 Azure blob 儲存體，以及 SQL Server PDW 查詢。  
@@ -132,8 +132,36 @@ ms.lasthandoff: 12/21/2017
 10. 連接到 WASB 也需要應用裝置上設定 DNS 轉送。 若要設定 DNS 轉送，請參閱[使用 DNS 轉寄站來解析非應用裝置的 DNS 名稱 &#40;Analytics Platform System &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 授權的使用者現在可以建立外部資料來源、 外部檔案格式和外部資料表。 他們可以使用這些來整合多個來源資料包括 Hadoop，Microsoft Azure blob 儲存體和 SQL Server PDW。  
+
+## <a name="kerberos-configuration"></a>Kerberos 設定  
+請注意，向 Kerberos 受保護叢集驗證 PolyBase 時，我們需要將 hadoop.rpc.protection 設定設為 authentication。 這會導致 Hadoop 節點之間的資料通訊未加密。 
+
+ 連接到由 Kerberos 保護的 Hadoop 叢集 [使用 MIT KDC]：
+   
   
-## <a name="see-also"></a>請參閱  
+1.  尋找 Hadoop 組態目錄中的控制節點上的安裝路徑：  
+  
+    ```  
+    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
+    ```  
+  
+2.  尋找資料表中所列之組態機碼的 Hadoop 端組態值。 (在 Hadoop 電腦上，尋找 Hadoop 組態目錄中的檔案)。  
+  
+3.  將組態值複製到 SQL Server 電腦上對應檔案中的 Value 屬性。  
+  
+    |**#**|**組態檔**|**組態機碼**|**動作**|  
+    |------------|----------------|---------------------|----------|   
+    |1|core-site.xml|polybase.kerberos.kdchost|指定 KDC 主機名稱。 例如：kerberos.your-realm.com。|  
+    |2|core-site.xml|polybase.kerberos.realm|指定 Kerberos 領域。 例如：YOUR-REALM.COM|  
+    |3|core-site.xml|hadoop.security.authentication|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如：KERBEROS<br></br>**安全性注意事項︰** KERBEROS 必須為大寫。 如果為小寫，KERBEROS 可能不會開啟。|   
+    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如： hdfs/_HOST@YOUR-REALM.COM|  
+    |5|mapred-site.xml|mapreduce.jobhistory.principal|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如： mapred/_HOST@YOUR-REALM.COM|  
+    |6|mapred-site.xml|mapreduce.jobhistory.address|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如：10.193.26.174:10020|  
+    |7|yarn-site.xml yarn。|yarn.resourcemanager.principal|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如： yarn/_HOST@YOUR-REALM.COM|  
+  
+4.  建立資料庫範圍的認證物件，以指定每個 Hadoop 使用者的驗證資訊。 請參閱 [PolyBase T-SQL objects](../relational-databases/polybase/polybase-t-sql-objects.md)(PolyBase T-SQL 物件)。  
+ 
+## <a name="see-also"></a>另請參閱  
 [應用裝置組態 &#40;Analytics Platform System &#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

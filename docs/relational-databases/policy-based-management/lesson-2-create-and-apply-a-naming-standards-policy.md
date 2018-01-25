@@ -16,13 +16,13 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3137ff6c86a40986f8788c391fa45b213ee06bca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1f997d0457ea5472328cd9b109d5f3f3224b462c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>第 2 課：建立和套用命名標準原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 某些原則式管理原則類型可以建立觸發程序，以便強制執行原則的未來符合。 在這一課，您會建立針對資料表強制執行命名標準的原則。 然後，您會透過嘗試建立違反此原則的資料表，測試此原則。  

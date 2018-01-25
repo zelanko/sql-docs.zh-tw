@@ -15,13 +15,13 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: "23"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42d859148c12bcc83c3f6961b69385a390431f20
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41c64af6ffe805d6b0b92ffde0c7057a7cd2abca
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統設定版本之時態表中的歷程記錄資料保留
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
      ![在 [選取資料表] 頁面上選取歷程記錄資料表](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "在 [選取資料表] 頁面上選取歷程記錄資料表")  
   
-3.  在 [設定 Azure] 視窗中，提供您的登入認證。 登入 Microsoft Azure 或註冊帳戶。 選取要使用的訂閱，並選取 Azure 區域。 接下來，建立新伺服器或選取現有伺服器。 按一下 **[下一步]**。  
+3.  在 [設定 Azure] 視窗中，提供您的登入認證。 登入 Microsoft Azure 或註冊帳戶。 選取要使用的訂閱，並選取 Azure 區域。 接下來，建立新伺服器或選取現有伺服器。 按 [下一步] 。  
   
      ![建立新的 Azure 伺服器 - Stretch Database 精靈](../../relational-databases/tables/media/stretch-wizard-4.png "建立新的 Azure 伺服器 - Stretch Database 精靈")  
   

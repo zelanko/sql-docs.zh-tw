@@ -18,12 +18,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 571f4f13be8ddcfaf2bd1b4d649df0ef09ba6bfc
-ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+manager: craigg
+ms.openlocfilehash: 5a23b32644a51bf4e46cab280c7d382d2cb1c786
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題涵蓋在 Server Core 安裝上設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的詳細資料。  
@@ -211,7 +211,7 @@ $Tcp
 ##  <a name="BKMK_CMD"></a> 命令提示字元公用程式  
  您可以使用下列命令提示字元公用程式，好讓您在 Server Core 電腦上編寫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業的指令碼。 下表列出 Server Core 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附的命令提示字元公用程式清單：  
   
-|**公用程式**|**描述**|**安裝位置**|  
+|**公用程式**|**說明**|**安裝位置**|  
 |-----------------|---------------------|----------------------|  
 |[bcp 公用程式](../../tools/bcp-utility.md)|在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和使用者指定之格式的資料檔案之間，用來複製資料。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[dtexec 公用程式](../../integration-services/packages/dtexec-utility.md)|用以設定及執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  

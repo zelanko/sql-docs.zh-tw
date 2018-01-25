@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 下表描述 SQL Server **已被取代的功能** 效能物件。
 
-|**SQL Server 已被取代的功能計數器**|Description|  
+|**SQL Server 已被取代的功能計數器**|描述|  
 |-------------|-----------------|  
 |**使用方式**|自上次啟動 SQL Server 後的功能使用方式。|
   
  下表描述 SQL Server Deprecated Features 計數器執行個體。  
   
-|SQL Server 已被取代的功能計數器執行個體|Description|  
+|SQL Server 已被取代的功能計數器執行個體|描述|  
 |------------------------------------------------------|-----------------|  
 |做為暫存資料表和預存程序名稱的 '#' 和 '##'。|遇到一個不包含 # 以外之任何字元的識別碼。 請至少使用一個其他字元。 每次編譯時發生一次。|  
 |'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代為 `SELECT column_list FROM` <函數名稱>`()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)` 取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
@@ -273,7 +273,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Text in row 資料表選項|遇到 'text in row' 資料表選項的參考。 請改用 sp_tableoption 'large value types out of row'。 每次查詢時發生一次。|  
 |TEXTPTR|遇到 TEXTPTR 函數的參考。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext**和 **image** 資料類型語法。 每次查詢時發生一次。|  
 |TEXTVALID|遇到 TEXTVALID 函數的參考。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext**和 **image** 資料類型語法。 每次查詢時發生一次。|  
-|TIMESTAMP|DDL 陳述式中遇到之已被取代的 **timestamp** 資料類型的總次數。 請改用 **rowversion** 資料類型。|  
+|timestamp|DDL 陳述式中遇到之已被取代的 **timestamp** 資料類型的總次數。 請改用 **rowversion** 資料類型。|  
 |UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 陳述式。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext**和 **image** 資料類型語法。 每次查詢時發生一次。|  
 |USER_ID|遇到 USER_ID 函數的參考。 請改用 DATABASE_PRINCIPAL_ID 函數。 每次編譯時發生一次。|  
 |針對連結的伺服器使用 OLEDB||  
