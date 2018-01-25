@@ -21,13 +21,13 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72c335cab197a6adcb85f0b0e7c05cc9f8c3e7dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9cdd73f56e17dbe97a2075d33a0ceefc032fc345
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目的地來大量載入資料
   若要加入及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，封裝至少必須包含一個「資料流程」工作及一個資料來源。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  按兩下目的地。  
   
-6.  在 [連線管理員] 頁面上的 [SQL Server 目的地編輯器] 中，選取現有的 OLE DB 連線管理員，或按一下 [新增] 以新建連線管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+6.  在 [連線管理員] 頁面上的 [SQL Server 目的地編輯器] 中，選取現有的 OLE DB 連線管理員，或按一下 [新增] 以新建連線管理員。 如需詳細資訊，請參閱 [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
 7.  若要指定載入資料的資料表或檢視，請執行下列其中之一：  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  排序次序是由資料行列出的順序決定的。  
   
-10. 按一下 **[確定]**。  
+10. 按一下 [確定] 。  
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

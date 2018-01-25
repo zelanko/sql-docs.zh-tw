@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: Commit method
 ms.assetid: 19de9128-b91a-4626-847f-af721edaa24e
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89293da09685856c802ff5a28d07c57aa2b15ab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7eadec0e9e6bffaf52675174289b62f0eeef1e7
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ HRESULT Commit(
   
  取用者可以藉由呼叫批次處理插入的資料列**認可**方法*fDone*引數設定為 FALSE。 當*fDone*是設為 TRUE，資料列集就會變成無效。 無效的大量複製的資料列集僅支援**ISupportErrorInfo**介面和**irowsetfastload:: Release**方法。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [IRowsetFastLoad &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
   
   

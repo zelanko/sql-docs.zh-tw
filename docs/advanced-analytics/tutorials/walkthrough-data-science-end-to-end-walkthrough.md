@@ -16,12 +16,12 @@ ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 5ff7287937e2bddd57d4b155c254bcd29bfc0d68
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 2fc213534da32bf529acdb85fd5b0288bf686068
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R 和 SQL Server 的端對端資料科學逐步解說
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 + 所有 SQL 與 R 指令碼都會包含項目。
 + 您可能需要修改指令碼，在您的環境中執行中的字串。 您可以使用任何程式碼編輯器，例如[Visual Studio Code](https://code.visualstudio.com/Download)。
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>필수 구성 요소
 
 + 您必須存取的 SQL Server 2016 中，執行個體或 SQL Server 2017 評估版。
 + SQL Server 電腦上必須至少有一個執行個體已安裝 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。

@@ -14,13 +14,13 @@ ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2
 caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d28ac8e74230eb3420b7f045bceac9189ce245fa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac7b8138a4bfb137169236a68845e9f762711993
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>管理和監視的機器學習解決方案
 

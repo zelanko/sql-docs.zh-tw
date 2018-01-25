@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1f51b2466d823c720c487684cab1efa748de95e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: af34e779db0662bd0fe35cef8cf8a8178ec134d9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,7 +101,7 @@ HRESULT BCPColFmt(
   
  **CbUserData**值表示資料的位元組計數。 如果字元資料以 Unicode 寬字元，則正值表示**cbUserData**參數值表示乘以大小，以位元組為單位，每個字元的字元數。  
   
- *pbUserDataTerm*[size_is] [in]  
+ *pbUserDataTerm*[size_is][in]  
  用於此欄位的結束字元順序。 此參數主要用於字元資料類型，因為其他所有類型都屬固定長度；如果是二進位資料，則需要一個長度指標，才能正確記錄出現的位元組數目。  
   
  為避免結束已擷取的資料，或要指出使用者檔案中的資料未結束，將此參數設定為 NULL。  
@@ -113,7 +113,7 @@ HRESULT BCPColFmt(
  *cbUserDataTerm*[in]  
  要用於此資料行的結束字元順序長度 (以位元組為單位)。 如果資料中沒有或不需要結束字元，將此值設定為 0。  
   
- *並將 idxServerCol*[in]  
+ *idxServerCol*[in]  
  此資料行在資料庫資料表中的序數位置。 第一個資料行編號為 1。 資料行的序數位置由報告**icolumnsinfo:: Getcolumninfo**或類似的方法。 如果此值為 0，大量複製會在資料檔案中忽略此欄位。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -132,7 +132,7 @@ HRESULT BCPColFmt(
  E_OUTOFMEMORY  
  記憶體不足的錯誤。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [IBCPSession &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [執行大量複製作業](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   

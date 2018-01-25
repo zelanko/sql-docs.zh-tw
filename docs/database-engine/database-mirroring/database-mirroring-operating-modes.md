@@ -182,7 +182,7 @@ ms.lasthandoff: 01/18/2018
 >  若要讓見證中斷連接維持一段較長的時間，我們建議您從工作階段中移除見證，直到它可用為止。  
   
 ##  <a name="TsqlSettingsAndOpModes"></a> Transact-SQL 設定和資料庫鏡像作業模式  
- 本節描述與 ALTER DATABASE 設定和鏡像資料庫與見證狀態相關的資料庫鏡像工作階段 (如果有的話)。 本節適用於主要或專以 [!INCLUDE[tsql](../../includes/tsql-md.md)](而非 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 管理資料庫鏡像的使用者。  
+ 本節描述與 ALTER DATABASE 設定和鏡像資料庫與見證狀態相關的資料庫鏡像工作階段 (如果有的話)。 本節適用於主要或專以 [!INCLUDE[tsql](../../includes/tsql-md.md)] (而非 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 管理資料庫鏡像的使用者。  
   
 > [!TIP]  
 >  做為使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的替代方法，您可以使用 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面，在物件總管中控制工作階段的作業模式。 如需詳細資訊，請參閱本主題稍後的 [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  

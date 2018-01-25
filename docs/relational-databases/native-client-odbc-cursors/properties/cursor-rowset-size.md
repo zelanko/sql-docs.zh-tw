@@ -17,15 +17,15 @@ helpviewer_keywords:
 - rowsets [ODBC]
 ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 028dfc5275a5c8a0aa9f7527cd500545dbe6ff81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b8077cfa7d334edd7e34d9d406ede061f9efbe9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="cursor-rowset-size"></a>資料指標資料列集大小
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式提供使用資料列集來擷取整個結果集，快速地最佳化。 若要使用此最佳化，將資料指標屬性設定為其預設值 (順向、 唯讀、 資料列集大小 = 1) 次**SQLExecDirect**或**SQLExecute**呼叫。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會設定預設結果集。 若要在不捲動的情況下將結果傳送到用戶端時，這種做法比伺服器資料指標有效率。 在執行陳述式之後，請增加資料列集大小，並使用資料行取向或資料列取向的繫結。 這可讓[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用預設結果集，以有效率地將結果資料列傳送到用戶端，而[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]持續從用戶端上的網路緩衝區提取資料列的 Native Client ODBC 驅動程式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料指標屬性](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
   

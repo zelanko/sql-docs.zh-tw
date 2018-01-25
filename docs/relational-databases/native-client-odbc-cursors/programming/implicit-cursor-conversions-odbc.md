@@ -17,15 +17,15 @@ helpviewer_keywords:
 - cursors [ODBC], implicit cursor conversions
 ms.assetid: fe29a58d-8448-4512-9ffd-b414784ba338
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 451110a16f022cd71f848066685082662d57d1a4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f1f2e8c6ced47894e6e8737641eda36aa33e7d22
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>隱含資料指標轉換 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client] Cursor type changed"
   
  應用程式可以判斷哪些類型的資料指標正在使用藉由呼叫**SQLGetStmtOption**設定為 SQL_CURSOR_TYPE。 資料指標類型轉換只適用於一個陳述式。 下一步 **SQLExecDirect**或**SQLExecute**都是使用原始陳述式資料指標設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料指標程式設計詳細資料 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

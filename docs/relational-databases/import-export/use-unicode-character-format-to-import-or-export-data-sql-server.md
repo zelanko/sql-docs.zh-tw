@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5fd105a2da0e4822ee3da0b2f8929f70d0185cb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca0bca9210691a4c53cc2c39cb0110159994192b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字元格式匯入或匯出資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用含有擴充/DBCS 字元的資料檔案在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間大量傳送資料時，建議使用 Unicode 字元格式。 Unicode 字元資料格式可允許從伺服器匯出資料時所使用的字碼頁，與執行作業之用戶端所使用的字碼頁不同。 在此情況下，使用 Unicode 字元格式具有下列優點：  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 
 * [bcp 公用程式](../../tools/bcp-utility.md)預設會使用定位字元分隔字元資料欄位，並使用新行字元終止記錄。  如需如何指定其他結束字元的相關資訊，請參閱[指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。
 
-* 儲存在 Unicode 字元格式資料檔的 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 資料，其操作方式和在字元格式資料檔中相同，不同之處在於資料是儲存為 [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)，而非 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 資料。 如需詳細資訊，請參閱 [定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
+* 儲存在 Unicode 字元格式資料檔的 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 資料，其操作方式和在字元格式資料檔中相同，不同之處在於資料是儲存為 [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) ，而非 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 資料。 如需詳細資訊，請參閱 [定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
 
 ## 使用 Unicode 字元格式、bcp 與格式檔案的特殊注意事項<a name="special_considerations"></a>
 Unicode 字元格式資料檔遵循 Unicode 檔案的慣例。  檔案的前兩個位元組是十六進位數字 0xFFFE。  這些位元組會用為位元組順序標記 (BOM)，指定將高位位元組儲存到檔案中時的先後順序。  [bcp 公用程式](../../tools/bcp-utility.md) 可能會錯誤解譯 BOM，進而導致匯入程序失敗；因此，您可能會收到類似如下的錯誤訊息︰
@@ -82,15 +82,15 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 * 重新匯出資料，並變更資料欄位順序，讓第一個資料欄位為字元。  接著使用格式檔案，將資料欄位重新對應到資料表中的實際順序。  如需範例，請參閱 [使用格式檔案將資料表資料行對應至資料檔案的欄位 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)。
   
 ## Unicode 字元格式的命令選項<a name="command_options"></a>  
-您可以將 Unicode 字元格式資料匯入資料表，方法是使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。對於 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式，您可以在陳述式中指定資料格式。  對於 [INSERT...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式。您必須在格式檔案中指定資料格式。  
+您可以將 Unicode 字元格式資料匯入資料表，方法是使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。對於 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式，您可以在陳述式中指定資料格式。  對於 [INSERT...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式，您必須在格式檔案中指定資料格式。  
   
 下列命令列選項支援 Unicode 字元格式：  
   
-|Command|選項|描述|  
+|命令|選項|描述|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|使用 Unicode 字元格式。|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|大量匯入資料時，使用 Unicode 字元格式。|  
-|OPENROWSET|N/A|必須使用格式檔案|
+|OPENROWSET|不適用|必須使用格式檔案|
   
 > [!NOTE]
 >  或者，您可以在格式檔案中按照每個欄位指定格式。 如需詳細資訊，請參閱 [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)＞。

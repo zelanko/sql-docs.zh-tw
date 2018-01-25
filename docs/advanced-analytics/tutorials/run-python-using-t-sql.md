@@ -15,12 +15,12 @@ dev_langs: Python
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 6b481e5e65616f70f1b66c9be2517a2da747b1dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 2812e9529a9cdb4dc5fd8019a28ccc060ba68d1a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="run-python-using-t-sql"></a>執行 Python 使用 T-SQL
 
@@ -131,14 +131,14 @@ GO
 |DayOfWeek （之前）| Amount|DayOfWeek （之後） |
 |-----|-----|-----|
 |星期日|10|7|
-|星期一|11.1|@shouldalert|
+|星期一|11.1|1|
 |星期二|12.2|2|
 |星期三|13.3|3|
 |星期四|14.4|4|
 |星期五|15.5|5|
 |星期六|16.6|6|
 |星期五|17.7|5|
-|星期一|18.8|@shouldalert|
+|星期一|18.8|1|
 |星期日|19.9|7|
 
 狀態訊息 」 或 「 錯誤傳回至 Python 主控台會以訊息中傳回**查詢**視窗。 以下是摘錄，您可能會看到的輸出：

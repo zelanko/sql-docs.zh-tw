@@ -18,13 +18,13 @@ ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81aa8d84f9ec5546401fc1ae9344ce2cdcee5af1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 79e9dee7e2e1bdd2dd36e5e826a3a8d8455904fb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>儲存對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 當您在資料表設計工具中儲存工作，且該工作影響其他資料表時，便會出現此對話方塊。 此對話方塊可讓您確認將要儲存的資料表。  

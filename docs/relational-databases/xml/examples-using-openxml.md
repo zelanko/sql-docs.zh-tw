@@ -29,15 +29,15 @@ helpviewer_keywords:
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9e77b2c648517d2d48d3537dd5f180b77bc0e979
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ce5f1474f03cad13c45eefe88202d15e706eb7bc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="examples-using-openxml"></a>範例：使用 OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 本主題中的範例示範如何使用 OPENXML 來建立 XML 文件的資料列集檢視。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。 範例中將說明 OPENXML 的各個方面，但是不指定 OPENXML 的中繼屬性。 如需如何指定 OPENXML 的中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 -   *rowpattern* (/ROOT/Customer) 識別要處理的 <`Customer`> 節點。  
   
--   *flags* 參數值設為 **1**，表示屬性中心的對應。 因此，XML 屬性對應至 *SchemaDeclaration*中定義之資料列集的資料行。  
+-   *flags* 參數值設為 **1** ，表示屬性中心的對應。 因此，XML 屬性對應至 *SchemaDeclaration*中定義之資料列集的資料行。  
   
 -   在 WITH 子句內的 *SchemaDeclaration*中，指定的 *ColName* 值與對應的 XML 屬性名稱相符。 因此不會在 *SchemaDeclaration* 中指定 *ColPattern*參數。  
   

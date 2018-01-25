@@ -14,13 +14,13 @@ ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
 caps.latest.revision: "34"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 856d3edb24dfad2177b4c48d30124c41c22172a8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8a6e15767282d347fc92b7decf2963d85827cf6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>開始使用 SQL Server 機器學習
 

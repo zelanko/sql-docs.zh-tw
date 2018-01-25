@@ -35,13 +35,13 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55415758711cb93b7c0da560a5935df679e36096
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 075cce0d10d02d5566f4a370b28466a4f79ab9c0
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="using-xml-data-types"></a>使用 XML 資料類型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,11 +93,11 @@ ms.lasthandoff: 01/08/2018
 |DBTYPE_XML|通過<sup>6,7</sup>|錯誤<sup>1</sup>|確定<sup>11，6</sup>|錯誤<sup>8</sup>|  
 |DBTYPE_BYTES|通過<sup>6,7</sup>|N/A<sup>2</sup>|確定<sup>11，6</sup>|N/A <sup>2</sup>|  
 |DBTYPE_WSTR|通過<sup>6，10</sup>|N/A <sup>2</sup>|確定<sup>4、 6、 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_BSTR|通過<sup>6，10</sup>|N/A <sup>2</sup>|確定<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|通過<sup>6，10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|確定<sup>6、 9、 10</sup>|N/A <sup>2</sup>|確定<sup>5、 6、 12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|位元組資料流透過**ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|位元組資料流透過**ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124;VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|不適用|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|通過<sup>6，10</sup>|N/A <sup>2</sup>|確定<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|해당 사항 없음|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|通過<sup>6，10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup>如果的伺服器類型與指定 DBTYPE_XML 以外**icommandwithparameters:: Setparameterinfo**和存取子類型為 DBTYPE_XML，陳述式執行時，就會發生錯誤 （DB_E_ERRORSOCCURRED，參數狀態為 DBSTATUS_E_BADACCESSOR）; 否則將資料傳送到伺服器，但是伺服器會傳回錯誤，指出從 XML 到參數的資料類型的隱含轉換。  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS 和 PROCEDURE_PARAMETERS 結構描述資料列集  
  COLUMNS 和 PROCEDURE_PARAMETERS 結構描述資料列集的加入項目包含下列資料行。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|定義 XML 結構描述集合所在目錄的名稱。 對於非 XML 資料行或不具類型的 XML 資料行，此為 NULL。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|定義 XML 結構描述集合所在結構描述的名稱。 對於非 XML 資料行或不具類型的 XML 資料行，此為 NULL。|  
@@ -156,7 +156,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA 結構描述資料列集  
  用戶端推出新的結構描述資料列集 SS_XMLSCHEMA 來擷取 XML 結構描述資訊。 SS_XMLSCHEMA 資料列集包含下列資料行。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 集合所屬的目錄。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 集合所屬的結構描述。|  
@@ -176,7 +176,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 屬性集  
  為了支援**xml**透過 OLE DB 資料型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 會實作新的 DBPROPSET_SQLSERVERPARAMETER 屬性集，其中包含下列值。  
   
-|[屬性]|類型|描述|  
+|名稱|型別|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|定義 XML 結構描述集合所在目錄 (資料庫) 的名稱。 SQL 三部分名稱識別碼的一部分。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|結構描述集合內，XML 結構描述的名稱。 SQL 三部分名稱識別碼的一部分。|  
@@ -185,7 +185,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 屬性集  
  若要支援中的資料表建立**ITableDefinition**介面， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會將三個新的資料行加入到 DBPROPSET_SQLSERVERCOLUMN 屬性集。  
   
-|[屬性]|類型|描述|  
+|名稱|型別|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|如果是具類型的 XML 資料行，這個屬性是指定儲存 XML 結構描述所在之目錄名稱的字串。 如果是其他資料行類型，這個屬性會傳回空字串。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|如果是具類型的 XML 資料行，這個屬性是指定定義此資料行之 XML 結構描述名稱的字串。|  
@@ -205,7 +205,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 介面  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 會將加入下列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-專屬的資料行所傳回的資料列集**icolumnrowset:: Getcolumnsrowset**方法。 這些資料行包含 XML 結構描述集合的三部分名稱。 對於非 XML 資料行或不具類型的 XML 資料行，所有三個資料行都會使用 NULL 的預設值。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 結構描述集合所屬的目錄，<br /><br /> 否則為 NULL。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 結構描述集合所屬的結構描述， 否則為 NULL。|  
@@ -276,7 +276,7 @@ ms.lasthandoff: 01/08/2018
   
  XML 標準需要以 UTF-16 編碼的 XML 來開始位元組順序標示 (BOM)，UTF-16 字元程式碼 0xFEFF。 使用 SQL_C_BINARY 繫結時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端不需要或加入 BOM 做為繫結所默許的編碼方式。 其用意在於提供處理其他 XML 處理器和儲存系統的單純性。 在此情況下，BOM 應該以 UTF-16 編碼的 XML 呈現，而且應用程式不需要在意實際編碼，因為多數 XML 處理器 (包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) 都會檢查值的前幾個位元組來推算編碼。 從接收的 XML 資料[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端使用 SQL_C_BINARY 繫結永遠以 utf-16 BOM 或內嵌編碼宣告無編碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

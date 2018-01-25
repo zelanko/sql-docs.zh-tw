@@ -17,15 +17,15 @@ helpviewer_keywords:
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eb42524c0b75942739eef545b01caab76d21c3f4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9d8bace5c696e49a9bfe92664a80030d867ae237
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>搭配 FOR XML 使用 EXPLICIT 模式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 如[使用 FOR XML 建構 XML](../../relational-databases/xml/for-xml-sql-server.md) 主題中所述，RAW 和 AUTO 模式對從查詢結果產生之 XML 形式的控制不大。 但是，EXPLICIT 模式在由查詢結果產生想要的 XML 方面，可提供的彈性最大。  

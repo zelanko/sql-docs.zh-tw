@@ -14,13 +14,13 @@ ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
 caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 19ecd44707cd6a94b9a521184b0c588806a63869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 35194b08e43c98985e0ae0d03f1e470fe8370383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>從命令列安裝 Machine Learning 伺服器 （獨立） 或 Microsoft R Server （獨立）
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/08/2018
 
 針對 **無訊息** 安裝，提供相同引數，並新增 **/q** 參數。 會提供任何提示，並不不需要任何互動。 不過，如果省略任何必要的引數時，安裝程式會失敗。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>필수 구성 요소
 
 您應該了解如何執行 SQL Server 的命令列安裝，並熟悉其指令碼的引數。
 
@@ -95,8 +95,8 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /
 
 根據預設，所有 SQL server 安裝程式記錄檔和摘要和相關的功能會建立下列資料夾中：
 
-+ SQL Server 2017:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
-+ SQL Server 2016:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
++ SQL Server 2017: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016:  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
 每個您所安裝的功能會建立個別的子資料夾。
 

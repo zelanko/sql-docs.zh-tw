@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9573d2b899c240a9077f7a27324a5fc5480058e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bdf2ddf2d14c7364b6fdc9fe5c3c7d62036e1145
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="process-odbc-errors-odbc"></a>處理 ODBC 錯誤 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>說明  
  此範例會顯示呼叫標準 ODBC 資訊之 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 的簡單錯誤處理常式。 然後它會測試是否有有效連接，如果有，就會為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用診斷欄位呼叫 **SQLGetDiagField**。 IA64 不支援此範例。  
   
  此範例是針對 ODBC 3.0 版或更新版本所開發。  
@@ -243,7 +243,7 @@ DROP PROCEDURE BadOne
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [ODBC 的使用說明主題](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+## <a name="see-also"></a>另請參閱  
+ [ODBC 使用說明主題](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

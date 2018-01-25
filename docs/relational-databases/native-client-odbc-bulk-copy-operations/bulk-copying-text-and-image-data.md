@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fd2eaafe7911cddd81cb7417d4e63ed641fdb1a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 67b2cf5a000fc96468536bffcb07a9955be5592e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-copying-text-and-image-data"></a>大量複製 Text 與 Image 資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
  **bcp_moretext**沒有識別資料行的參數。 如果有多個**文字**， **ntext**，或**映像**列中的資料行**bcp_moretext**上運作**文字**， **ntext**，或**映像**開頭具有最低的序號，並繼續到具有最高的序數號碼資料行的資料行的資料行。 **bcp_moretext**傳送的資料長度總和等於指定的最新的長度時，從一個資料行移至下一個**bcp_collen**或**bcp_bind**目前的資料行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行大量複製作業 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

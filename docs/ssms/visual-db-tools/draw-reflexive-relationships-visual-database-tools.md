@@ -19,13 +19,13 @@ ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a69c7bc560b19d21e2b50bf8462e72c94e6c0531
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d4a9e68575020594a0290beb2fd2117ba2ec5b15
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>繪製自反關聯性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可建立自反關聯性 (Reflexive Relationship)，將資料表中的一或多個資料行與相同資料表中的其他資料行連結。 例如，假設 `employee` 資料表包含 `emp_id` 資料行和 `mgr_id` 資料行。 由於每位經理同時兼具員工的身分，您可繪製一條從資料表至其本身的關聯線，將這兩個資料行相關聯。 此關聯性可確保每個加入資料表的經理識別碼，都與現有員工識別碼相符。  

@@ -21,13 +21,13 @@ ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea5c9451b1db6e369525edd93a9d735f6538263e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 71a0f7fbd4edf00b9f2eb8f84807f0fb2baa6318
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="types-of-queries-visual-database-tools"></a>查詢類型 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查詢和檢視表設計工具針對某些查詢類型 (選取、插入結果、插入值、更新、刪除和製成資料表) 提供內建功能，同時亦支援 UNION、全文檢索搜尋和 CASE 運算式查詢。  

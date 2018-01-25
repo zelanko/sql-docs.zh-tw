@@ -15,13 +15,13 @@ ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8a8dfe4734780c82c7bf6ffb898559c065f82adc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3c180282735da59d8d3dfa039e70d0eea5ebd7e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>資料科學案例和方案範本
 
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/08/2018
   
     此資料夾也包含 PowerShell 指令碼，可加以執行來叫用所有指令碼，並建立端對端環境。 請務必編輯此指令碼，以符合您的環境。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 + [SQL Server 機器學習教學課程](machine-learning-services-tutorials.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "SQLSetStmtAttr |Microsoft 文件"
+title: SQLSetStmtAttr | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9a4ed6f218b77febc84719fb001ca072c9b80bc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7cbc51d2212db08a4b3cce5d07673e96f263445d
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="sqlsoptsscursoroptions"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  SQL_SOPT_SS_CURSOR 屬性會指定驅動程式是否會在資料指標上使用驅動程式專屬的效能選項。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)設定這些選項時，不允許。 預設值為 SQL_CO_OFF。 *ValuePtr*值屬於類型是 SQLLEN。  
   
-|*ValuePtr*值|描述|  
+|*ValuePtr*值|Description|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|預設值。 停用快速順向、 唯讀資料指標與自動擷取，同時也啟用**SQLGetData**順向、 唯讀資料指標。 當 SQL_SOPT_SS_CURSOR_OPTIONS 設定為 SQL_CO_OFF 時，資料指標類型將不會變更。 也就是說，快速順向資料指標仍是快速順向資料指標。 若要變更的資料指標類型，應用程式必須立即設定不同的資料指標類型使用**SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE。|  
 |SQL_CO_FFO|啟用快速順向、 唯讀資料指標，會停用**SQLGetData**順向、 唯讀資料指標。|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  SQL_SOPT_SS_DEFER_PREPARE 屬性會決定是否是立即準備陳述式，或延後到**SQLExecute**， [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)或[SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)執行。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 和先前版本中，會忽略此屬性 (沒有延遲準備)。 *ValuePtr*值屬於類型是 SQLLEN。  
   
-|*ValuePtr*值|描述|  
+|*ValuePtr*值|Description|  
 |----------------------|-----------------|  
 |SQL_DP_ON|預設值。 在呼叫[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)，陳述式準備會延遲，直到**SQLExecute**稱為或中繼屬性作業 (**SQLDescribeCol**或**SQLDescribeParam**) 執行。|  
 |SQL_DP_OFF|在準備陳述式儘速**SQLPrepare**執行。|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
  *ValuePtr*值屬於類型是 SQLLEN。  
   
-|*ValuePtr*值|描述|  
+|*ValuePtr*值|Description|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|預設值。 此驅動程式不會使用用戶端地區設定，將日期、時間和貨幣資料轉換成字元字串資料。|  
 |SQL_RE_ON|將日期、時間和貨幣資料轉換成字元字串資料時，此驅動程式會使用用戶端地區設定。|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="sqlsoptsstextptrlogging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  SQL_SOPT_SS_TEXTPTR_LOGGING 屬性切換包含的資料行上的作業記錄**文字**或**映像**資料。 *ValuePtr*值屬於類型是 SQLLEN。  
   
-|*ValuePtr*值|描述|  
+|*ValuePtr*值|Description|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|停用上執行的作業記錄**文字**和**映像**資料。|  
 |SQL_TL_ON|預設值。 啟用記錄上執行的作業**文字**和**映像**資料。|  
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  SQL_SOPT_SS_HIDDEN_COLUMNS 屬性會在結果集中公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 陳述式內隱藏的資料行。 此驅動程式預設不會公開這些資料行。 *ValuePtr*值屬於類型是 SQLLEN。  
   
-|*ValuePtr*值|描述|  
+|*ValuePtr*值|Description|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|預設值。 FOR BROWSE 資料行會從結果集隱藏起來。|  
 |SQL_HC_ON|公開 FOR BROWSE 資料行。|  
@@ -136,7 +136,7 @@ ms.lasthandoff: 01/08/2018
   
  SQL_SOPT_SS_NAME_SCOPE 的類型是 SQLULEN。  
   
-|*ValuePtr*值|描述|  
+|*ValuePtr*值|Description|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|預設值。<br /><br /> 使用資料表值參數時，指出應該傳回實際資料表的中繼資料。<br /><br /> SQLColumns 使用疏鬆資料行功能時，會傳回不是成員的疏鬆資料行**column_set**。|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|表示應用程式需要資料表類型 (而非實際資料表) 的中繼資料 (目錄函數應該傳回資料表類型的中繼資料)。 應用程式接著會傳遞做為資料表值參數的 TYPE_NAME *TableName*參數。|  
@@ -152,7 +152,7 @@ ms.lasthandoff: 01/08/2018
   
  如果目錄函數則 SQLTables、 SQLColumns、 或 SQLPrimaryKeys SQL_SOPT_SS_NAME_SCOPE 以外的值時呼叫會傳回 SQL_SS_NAME_SCOPE_TABLE、 SQL_ERROR。 此時會產生包含 SQLSTATE HY010 與「函數順序錯誤 (SQL_SOPT_SS_NAME_SCOPE 未設定為 SQL_SS_NAME_SCOPE_TABLE)」訊息的診斷記錄。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQLGetStmtAttr 函數](http://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

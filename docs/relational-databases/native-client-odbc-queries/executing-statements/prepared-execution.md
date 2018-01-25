@@ -20,15 +20,15 @@ helpviewer_keywords:
 - statements [ODBC], prepared execution
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af15198f0c876933a9ab2ff5583b903e279e665b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cedfb3926904af0a9d7393a1ff896c3c2f08a61f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="prepared-execution"></a>備妥的執行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
  某些早期的 ODBC 應用程式使用**SQLPrepare**隨時[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)所使用。 **SQLBindParameter**不需要使用**SQLPrepare**，它可以搭配**SQLExecDirect**。 例如，使用**SQLExecDirect**與**SQLBindParameter**擷取傳回碼或輸出參數，系統只會執行一次預存程序。 請勿使用**SQLPrepare**與**SQLBindParameter**除非相同的陳述式執行多次。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行陳述式 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

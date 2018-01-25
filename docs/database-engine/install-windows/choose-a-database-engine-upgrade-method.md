@@ -15,12 +15,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c568ec23e5f64e65afb794a7e0c60a0eeb693622
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: fef7f02b15fee27e3e18a5eac23e0ee6ab97959c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 當您為了讓停機時間及風險減到最少，而打算從舊版 SQL Server 升級[!INCLUDE[ssDE](../../includes/ssde-md.md)]時，有多種方法可以考慮。 您可以就地執行升級、遷移到新的安裝或執行輪流升級。 下圖將協助您在這些方法中做出選擇。 下方也將討論圖表中的各個方法。 為協助您了解圖表中的決策點，另請檢閱 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/20/2017
   
 -   SQL Server Reporting Services 向外延展環境：如需在此環境中執行輪流升級的詳細步驟，請參閱 [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
   
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
  [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [完成資料庫引擎升級](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   

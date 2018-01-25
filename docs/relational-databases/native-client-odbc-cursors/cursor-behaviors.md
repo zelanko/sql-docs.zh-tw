@@ -23,15 +23,15 @@ helpviewer_keywords:
 - ODBC cursors, cursor behaviors
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0870e8ae32d958437eb55cd01664ce05188bfc7d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d53686929a5e6973006c812f309ddf43ea892cbf
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="cursor-behaviors"></a>資料指標行為
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sensitivity"></a>敏感度  
  當 SQL_ATTR_CURSOR_SENSITIVITY 設定為 SQL_SENSITIVE 時，資料指標會將目前使用者所進行或其他使用者所認可的資料修改反映出來。 當 SQL_ATTR_CURSOR_SENSITIVITY 設定為 SQL_INSENSITIVE 時，資料指標不會反映資料修改。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用資料指標 (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) [資料指標屬性](properties/cursor-properties.md) 
   
   

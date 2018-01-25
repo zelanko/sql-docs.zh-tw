@@ -20,13 +20,13 @@ ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c790e099f0fc9558b452879866c8dbbaa25d7f2d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c9fa0a1e4dd4528d34b6fd6c7b89cd74397c6287
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>在專案中建立查詢與連接的關聯性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果建立不含連線的查詢，或在專案之間移動查詢，這項查詢都不會與目前專案中的連線建立關聯。  

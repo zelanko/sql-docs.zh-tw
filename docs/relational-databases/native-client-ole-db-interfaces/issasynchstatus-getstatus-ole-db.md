@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde94f855b9c5712a576ec246c02670e3e18365f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1a6d91a0224b53a09dd35e1b8adf0f48c77d578
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ HRESULT GetStatus(
   
  DBASYNCHPHASE_CANCELED：物件的非同步處理已中止。 **Issasynchstatus:: Getstatus**傳回 DB_E_CANCELED。 如果非同步作業的呼叫結果**icommand:: Execute**更新、 刪除或插入資料列，命令*pulProgress*等於所有參數集，資料列的總數受影響之前取消命令。  
   
- *ppwszStatusText*[在/out]  
+ *ppwszStatusText*[in/out]  
  記憶體的指標，這個記憶體包含有關作業的其他資訊。 提供者可以使用此值來區別作業的不同元素，例如，正在存取的不同資源。 這個字串會根據資料來源物件的 DBPROP_INIT_LCID 屬性而當地語系化。  
   
  如果*ppwszStatusText*為非 null 輸入上，提供者會傳回與所識別的特定元素相關聯狀態*ppwszStatusText*。 如果*ppwszStatusText*並不表示的項目*eOperation*，提供者會傳回 S_OK，且*pulProgress*和*pulProgressMax*設為相同的值。 如果提供者不會區分文字識別碼為基礎的項目，它會設定*ppwszStatusText* NULL，並傳回整個; 作業的相關資訊否則如果*ppwszStatusText*為非 null 輸入上，提供者會保留*ppwszStatusText*不變。  
@@ -127,7 +127,7 @@ HRESULT GetStatus(
   
  呼叫**issasynchstatus:: Getstatus**初始化的資料來源物件或擴展的資料列集，或傳遞的值*eOperation*以外 DBASYNCHOP_OPEN，傳回 S_OK，且*pulProgress*和*pulProgressMax*設為相同的值。 如果**issasynchstatus:: Getstatus**所建立的命令更新、 刪除或插入資料列，而執行的物件上呼叫兩者*pulProgress*和*pulProgressMax*指出受到該命令的資料列總數。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [執行非同步作業](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   

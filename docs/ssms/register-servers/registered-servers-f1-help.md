@@ -19,13 +19,13 @@ ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4902f1e3a7d22fb7ff6b8df884daaa605ddc380b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9aab10b621b2981534645a036bb87cf94f83160
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="registered-servers-f1-help"></a>已註冊的伺服器 F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [已註冊的伺服器] 元件的 F1 說明。 它描述各種選項。

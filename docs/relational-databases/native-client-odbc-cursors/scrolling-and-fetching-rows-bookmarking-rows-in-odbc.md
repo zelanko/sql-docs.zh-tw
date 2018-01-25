@@ -19,15 +19,15 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ecae2c00d4e8b1ca66382aeabf2b29171db7031c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ec609e0542f52c86acf1d7a62947ebaefa27c043
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="scrolling-and-fetching-rows---bookmarking-rows-in-odbc"></a>捲動和提取資料列集建立書籤在 ODBC 中的資料列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
  也可以與使用書籤**SQLBulkOperations**函式可開始在書籤的資料列集上執行作業。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [捲動與擷取資料列](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows.md)  
   
   

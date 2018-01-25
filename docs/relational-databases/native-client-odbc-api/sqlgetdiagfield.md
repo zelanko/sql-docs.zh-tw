@@ -1,5 +1,5 @@
 ---
-title: "SQLGetDiagField |Microsoft 文件"
+title: SQLGetDiagField | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f030fff57fba783584d3b46ba5ad56d45771bf2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9d43d9cc49e275bb63970f94a7fe9bbea80b7d4f
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/08/2018
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式可以指定下列額外的診斷欄位進行**SQLGetDiagField**。 這些欄位支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的豐富錯誤報告功能，並且可用於在連接的 ODBC 連接控制代碼和 ODBC 陳述式控制代碼上產生的所有診斷記錄。 欄位會定義在 sqlncli.h 中。  
   
-|診斷記錄欄位|描述|  
+|診斷記錄欄位|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|報告產生錯誤的預存程序的行號。 SQL_DIAG_SS_LINE 的值只有在 SQL_DIAG_SS_PROCNAME 傳回值時才有意義。 值會以不帶正負號的 16 位元整數傳回。|  
 |SQL_DIAG_SS_MSGSTATE|錯誤訊息的狀態。 錯誤訊息狀態的相關資訊，請參閱[RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)。 值會以帶正負號的 32 位元整數傳回。|  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會支援下列其他的動態函數程式碼，以識別最後所嘗試的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式。 動態函數程式碼會以診斷記錄集的標頭 (記錄 0) 傳回，因此會在每次執行時使用 (不論成功與否)。  
   
-|動態函數程式碼|來源|  
+|動態函數程式碼|Source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE 陳述式|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT 陳述式|  
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/08/2018
   
  如需有關資料表值參數的詳細資訊，請參閱[資料表值參數 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQLGetDiagField 函數](http://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

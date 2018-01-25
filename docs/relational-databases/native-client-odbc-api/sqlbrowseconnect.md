@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLBrowseConnect function
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ee1ff2472f603b6caca690d5ed83c73968ae5cc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8af521c2bd56d8d66386be324477b7f094052d73
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,14 +33,14 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="level-1"></a>層級 1  
   
-|關鍵字|傳回清單？|選擇性？|描述|  
+|關鍵字|傳回清單？|選擇性？|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|不適用|否|所傳回的資料來源名稱**SQLDataSources**。 如果使用 DRIVER 關鍵字，就無法使用 DSN 關鍵字。|  
-|DRIVER|不適用|否|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式名稱是 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 關鍵字，就無法使用 DRIVER 關鍵字。|  
+|DSN|해당 사항 없음|否|所傳回的資料來源名稱**SQLDataSources**。 如果使用 DRIVER 關鍵字，就無法使用 DSN 關鍵字。|  
+|DRIVER|해당 사항 없음|否|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式名稱是 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 關鍵字，就無法使用 DRIVER 關鍵字。|  
   
 ## <a name="level-2"></a>層級 2  
   
-|關鍵字|傳回清單？|選擇性？|描述|  
+|關鍵字|傳回清單？|選擇性？|Description|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|是|否|事件來源所在之網路上的伺服器名稱。 可以輸入 "(local)" 這個詞彙做為伺服器，在這種情況下可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機複本，即使這是非網路的版本。|  
 |UID|否|是|使用者登入識別碼。|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="level-3"></a>層級 3  
   
-|關鍵字|傳回清單？|選擇性？|描述|  
+|關鍵字|傳回清單？|選擇性？|Description|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的名稱。|  
 |LANGUAGE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的國家語言。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/08/2018
   
  下列屬性，而這藉由呼叫設定[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)，判斷所傳回的結果集**SQLBrowseConnect**。  
   
-|attribute|描述|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|如果設定為 SQL_MORE_INFO_YES，則**SQLBrowseConnect**傳回伺服器屬性的擴充的字串。<br /><br /> 下列是所傳回之擴充字串的範例**SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> 在這個字串中，分號是用來區隔伺服器相關資訊的不同部分， 逗號則是用來區隔不同的伺服器執行個體。|  
 |SQL_COPT_SS_BROWSE_SERVER|如果指定伺服器名稱，則**SQLBrowseConnect**會傳回指定之伺服器的資訊。 如果 SQL_COPT_SS_BROWSE_SERVER 設定為 NULL， **SQLBrowseConnect**傳回網域中的所有伺服器的資訊。<br /><br /> <br /><br /> 請注意，因為網路問題、 **SQLBrowseConnect**可能未收到所有伺服器及時的回應。 因此，每個要求所傳回的伺服器清單可能各不相同。|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |---------------------|  
 |已記載 SQL_COPT_SS_BROWSE_CACHE_DATA。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQLBrowseConnect 函數](http://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

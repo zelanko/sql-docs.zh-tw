@@ -20,13 +20,13 @@ ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c09ff995e7bbe65fa117812652e6665afe7ff8b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 78cb45e57a023020838c78737d1d167c7a9fc804
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業步驟記錄。  

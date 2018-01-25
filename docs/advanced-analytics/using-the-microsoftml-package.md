@@ -16,13 +16,13 @@ ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
 caps.latest.revision: "132"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 06b07f6a708ac150e70aefd03f96a8ceaf978d7c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7bbf9d5101ea0e613d0a8843f9c3a3cd91b250b1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>搭配 SQL Server 使用 MicrosoftML 封裝
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/08/2018
 
 在 SQL Server 2017 CTP 2.0 中，已加入之 Python 語言的支援。 **Microsoftml** Python 包含函式相當於 MicrosoftML 封裝中的 r 封裝 
 
-+ **MicrosoftML**
++ **MicrosoftML for R**
 
     簡介與封裝的參考： [MicrosoftML： 機器學習 R 演算法](https://docs.microsoft.com/en-us/r-server/r-reference/microsoftml/microsoftml-package)
 

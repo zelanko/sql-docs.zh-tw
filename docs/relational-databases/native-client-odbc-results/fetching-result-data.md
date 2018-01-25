@@ -25,15 +25,15 @@ helpviewer_keywords:
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9e005a7076dd8491806370c739b0156644a484b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1514a1309ea6a88e2d9c449ed9dbf15f99388227
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fetching-result-data"></a>提取結果資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
  此最佳化可以套用至應用程式，讓沒有**文字**， **ntext**，或**映像**使用者上下捲動資料指標時，會顯示資料。 使用者選取的資料列之後，應用程式可以呼叫**SQLGetData**擷取**文字**， **ntext**，或**映像**資料。 這樣就不用傳送**文字**， **ntext**，或**映像**任何資料列的資料不會選取 使用者和也不用傳送非常大量的資料。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [處理結果 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

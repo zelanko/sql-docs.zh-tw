@@ -18,12 +18,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: "65"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: feadacaccd6f2ba025de359de6f581a7e3685550
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 07ad726c7ba7c4c51bc98881aafbb2dd15228f78
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安裝精靈升級 SQL Server (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 提供將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件就地升級至最新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的單一功能樹狀目錄。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 > * [升級 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [升級 Power Pivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
 您必須以系統管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取和執行權限並且為本機系統管理員的網域帳戶。  
   
 > [!WARNING]  
@@ -133,7 +133,7 @@ ms.lasthandoff: 11/20/2017
   
 20. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
  在升級為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後，請完成下列工作：  
   
 -   **註冊伺服器** ：升級會移除先前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的登錄設定。 在升級之後，您必須重新註冊伺服器。  

@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 69bb2bbbc35bf13c4facc70508bb569714c66488
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 4ed9af3072a53195d965607079ecdce09bb15841
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-1-download-the-sample-data"></a>步驟 1： 下載範例資料
 
@@ -77,7 +77,7 @@ Github 上共用資料，此教學課程中的指令碼。 在此步驟中，您
 
 [資料庫內 Python 分析 SQL 開發人員](sqldev-in-database-python-for-sql-developers.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用 Python 的機器學習服務](../python/sql-server-python-services.md)
 

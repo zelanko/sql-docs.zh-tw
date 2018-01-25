@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: table-valued parameters (ODBC), sending data to a stored procedure one row at a time
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb1d06be20296ad3513bf2e0c3e926f44e1f2b3f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 102763d09848c21902ffd2226a98d70039072ea4
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用資料執行中 (ODBC) 以資料表值參數的方式傳送資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -191,7 +191,7 @@ from @Items
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
  這個範例示範您可以使用資料列資料流，SQLPutData，搭配 ODBC TVP，類似於您如何使用 BCP.exe 將資料載入資料庫呼叫每一個資料列。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
@@ -379,7 +379,7 @@ EXIT:
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
  這個範例示範您可以使用資料列資料流，每個呼叫，以 SQLPutData，搭配 ODBC TVP，類似於您如何使用 BCP.exe 將資料載入資料庫的多個資料列。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
@@ -585,7 +585,7 @@ EXIT:
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 資料表值參數程式設計範例](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

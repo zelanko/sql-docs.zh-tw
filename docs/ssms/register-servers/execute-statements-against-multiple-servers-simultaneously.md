@@ -19,13 +19,13 @@ ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
 caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1fa1d9f8250dd3ded83ad41010e4533d6590b898
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6375f036b4e0ee60daee042b8a2c81eefd994bf1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>同時對多部伺服器執行陳述式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，透過建立本機伺服器群組或中央管理伺服器及一或多個伺服器群組，以及位於這些群組內部的一或多個已註冊的伺服器，然後查詢完整的群組的方式，同時查詢多部伺服器。 

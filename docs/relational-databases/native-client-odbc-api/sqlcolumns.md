@@ -1,5 +1,5 @@
 ---
-title: "SQLColumns |Microsoft 文件"
+title: SQLColumns | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f539f5202717a5eb58929a9be9ea7945687cbb4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 661c678e8d98d1b4d3f88c29d6d0b786b4e686d4
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  下表列出結果集傳回的資料行：  
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|傳回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR 如**varchar （max)**資料型別。|  
 |TYPE_NAME|傳回"varchar"、"varbinary"或"nvarchar" **varchar （max)**， **varbinary （max)**，和**nvarchar （max)**資料型別。|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>疏鬆資料行的 SQLColumns 支援  
  兩個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定資料行已加入到結果集的 SQLColumns:  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|如果資料行為疏鬆資料行，這是 SQL_TRUE，否則為 SQL_FALSE。|  
 |SS_IS_COLUMN_SET|**Smallint**|如果資料行是**column_set**資料行，這是 SQL_TRUE，否則 SQL_FALSE。|  
@@ -95,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
  如需有關 ODBC 中的疏鬆資料行的詳細資訊，請參閱[疏鬆資料行支援 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQLColumns 函數](http://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

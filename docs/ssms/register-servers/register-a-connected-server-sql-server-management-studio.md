@@ -19,13 +19,13 @@ ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
 caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5140781326b2ada6fcc7e99dcf3cb566e70cba4b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bc9958f075399f0ce6141201e7b861aad9d2d5e3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>註冊連接的伺服器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS)，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中註冊已連線的伺服器。 透過註冊伺服器，您可以儲存經常存取之伺服器的連接資訊。 您可以在連接之前或連接時從 [物件總管] 註冊伺服器。  您可以從功能表瀏覽至 [檢視]\\[已註冊的伺服器]，在 SSMS 中檢視已註冊的伺服器。
