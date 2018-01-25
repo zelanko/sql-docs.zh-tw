@@ -15,12 +15,12 @@ ms.assetid:
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 1cc59cad6bfb95ee0981604d336087809f9cb932
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+manager: cgronlund
+ms.openlocfilehash: e10435c2a0cdc5ed181aeab9bdd0bbfefa9a7f25
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函數來尋找或 SQL Server 上的安裝 R 封裝
 
@@ -81,7 +81,7 @@ RevoScaleR，提供下列封裝管理功能的安裝與移除指定的計算內�
 
 如果您有安裝封裝的權限，執行封裝的其中一個管理功能從您的 R 用戶端，並指定要加入或移除封裝的位置計算內容。  計算內容可以是您的本機電腦，或 SQL Server 執行個體上的資料庫。 您的認證會決定是否可以在伺服器上完成作業。
 
-**與 TRANSACT-SQL**
+**From Transact-SQL**
 
 若要從預存程序中執行封裝管理功能，將它們包裝在呼叫`sp_execute_external_script`。
 

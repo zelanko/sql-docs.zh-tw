@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1940375cc3d822d994c673d965e1fb7e23385596
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fd805562b60d37b9988b9afeb84d81e2cb2f5125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQL Server Native Client 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -117,7 +117,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 應用程式可以使用三個函數的其中一個進行連接：  
   
-|函數|描述|  
+|函數|Description|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|**SQLBrowseConnect** 傳回的伺服器清單不包括 VNN。 您只會看到伺服器清單，無從得知伺服器是否為獨立伺服器或是 Windows Server 容錯移轉叢集 (WSFC) 中，包含兩個或多個已啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體的主要或次要伺服器。 如果您連接到伺服器而且發生失敗狀況，可能是因為您已經連接到伺服器，而且 **ApplicationIntent** 設定與伺服器組態不相容。<br /><br /> 因為 **SQLBrowseConnect** 無法辨識 Windows Server 容錯移轉叢集 (WSFC) 中，包含兩個或多個已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的伺服器，所以 **SQLBrowseConnect** 會忽略 **MultiSubnetFailover** 連接字串關鍵字。|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** 可透過資料來源名稱 (DSN) 或連接屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover** 。|  
@@ -151,14 +151,14 @@ ms.lasthandoff: 01/08/2018
  **IDBProperties::GetProperties**  
  **IDBProperties::GetProperties** 會擷取目前在資料來源上設定的屬性值。  您可以透過 DBPROP_INIT_PROVIDERSTRING 屬性和 SSPROP_INIT_APPLICATIONINTENT 屬性擷取 **Application Intent** 值。  
   
- **Idbproperties:: Setproperties**  
+ **IDBProperties::SetProperties**  
  若要設定 **ApplicationIntent** 屬性值，請呼叫 **IDBProperties::SetProperties**，其傳入值為 "**ReadWrite**" 或 "**ReadOnly**" 的 **SSPROP_INIT_APPLICATIONINTENT** 屬性，或是值包含 "**ApplicationIntent=ReadOnly**" 或 "**ApplicationIntent=ReadWrite**" 的 **DBPROP_INIT_PROVIDERSTRING** 屬性。  
   
  您可以在 [資料連結屬性] 對話方塊中，[全部] 索引標籤的 [應用程式的意圖屬性] 欄位內指定應用程式意圖。  
   
  當建立隱含連接時，隱含連接將會使用父連接的應用程式意圖設定。 同樣地，從相同資料來源建立的多個工作階段將會繼承資料來源的應用程式意圖設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [搭配 SQL Server Native Client 使用連接字串關鍵字](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   

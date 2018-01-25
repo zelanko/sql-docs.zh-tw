@@ -25,13 +25,13 @@ ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
 caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67c61e787c773d14c3ab543df1457531d59d8227
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 19f4701bc26e115c7f6b78d01feef876665763df
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xmlschemanamespace"></a>xml_schema_namespace
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  *XML_schema_collection_name*  
  這是要重新建構的 XML 結構描述集合名稱。 *XML_schema_collection_name*是**sysname**。  
   
- *命名空間*  
+ *Namespace*  
  這是您要重新建構之 XML 結構描述的命名空間 URI。 它限制為 1,000 個字元。 如果不提供命名空間 URI，會重新建構整個 XML 結構描述集合。 *命名空間*是**nvarchar （4000)**。  
   
 ## <a name="return-types"></a>傳回類型  
@@ -77,7 +77,7 @@ SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [檢視儲存的 XML 結構描述集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [XML 結構描述集合 &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   

@@ -20,15 +20,15 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ CREATE WORKLOAD GROUP group_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *群組名稱*  
+ *group_name*  
  這是工作負載群組的使用者定義名稱。 *group_name*是英數字元可以是最多 128 個字元，必須是唯一的執行個體內[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，且必須符合的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
   
  重要性 = {低 |**媒體**|高}  
@@ -72,7 +72,7 @@ CREATE WORKLOAD GROUP group_name
   
  IMPORTANCE 的資源集區範圍為本機；相同資源集區內部不同重要性的工作負載群組會彼此影響，但不會影響另一個資源集區中的工作負載群組。  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*值*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  指定單一要求可由集區中獲取的記憶體最大數量。 這個百分比相對於 MAX_MEMORY_PERCENT 所指定的資源集區大小。  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ CREATE WORKLOAD GROUP group_name
 >   
 >  請注意，如果伺服器沒有足夠的實體記憶體，這兩種情況都會受限於逾時錯誤 8645。  
   
- REQUEST_MAX_CPU_TIME_SEC =*值*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  指定要求可以使用的最大 CPU 時間量 (以秒為單位)。 *值*必須是 0 或正整數。 預設設定*值*為 0，表示無限制。  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ CREATE WORKLOAD GROUP group_name
   
  *值*必須是 0 或正整數。 預設設定*值*，0，會使用內部計算根據查詢成本來決定最大時間。  
   
- MAX_DOP =*值*  
+ MAX_DOP =*value*  
  為平行要求指定平行處理原則的最大程度 (DOP)。 *值*必須是 0 或正整數。 允許的範圍*值*是從 0 到 64。 預設設定*值*，0，則會使用全域設定。 MAX_DOP 會以下列方式處理：  
   
 -   當做查詢提示的 MAX_DOP 會維持有效，直到它超過工作負載群組 MAX_DOP 為止。 如果 MAXDOP 查詢提示值超過使用資源管理員所設定的值，Database Engine 就會使用資源管理員 MAXDOP 值。  
@@ -125,7 +125,7 @@ CREATE WORKLOAD GROUP group_name
   
 -   DOP 經過設定後，在授與記憶體不足的壓力下，僅能將其降低。 在授與記憶體佇列中等候時，看不到工作負載群組的重新組態。  
   
- GROUP_MAX_REQUESTS =*值*  
+ GROUP_MAX_REQUESTS =*value*  
  指定在工作負載群組中可允許執行的最大同時要求數。 *值*必須是 0 或正整數。 預設設定*值*，0，允許無限制的要求。 達到最大並行要求時，該群組中的使用者可以登入，但是會處於等候狀態，直到並行要求低於指定的值為止。  
   
  使用 { *pool_name* | **「 預設 」** }  
@@ -164,7 +164,7 @@ CREATE WORKLOAD GROUP newReports
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

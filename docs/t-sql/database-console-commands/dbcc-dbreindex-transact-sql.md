@@ -1,5 +1,5 @@
 ---
-title: "DBCC DBREINDEX (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC DBREINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DBCC DBREINDEX statement
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ec9cbe9b5b8d7757c63b5dcca3b9011245ec0fd3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 991c16eea9a651270ca299e72cafbc822465a9b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]重建指定的資料庫中資料表的一個或多個索引。
@@ -62,7 +62,7 @@ DBCC DBREINDEX
  *index_name*  
  這是要重建的索引名稱。 索引名稱必須符合識別碼的規則。 如果*index_name*指定，則*table_name*必須指定。 如果*index_name*未指定或為""，就會重建所有索引的資料表。  
   
- *填滿因數*  
+ *fillfactor*  
  這是建立或重建索引時，每個索引頁面上用來儲存資料的空間百分比。 *填滿因數*建立索引，變成新的預設值的索引和其他因重建叢集的索引而重建的非叢集索引時，會取代填滿因數。  
  當*填滿因數*為 0，DBCC DBREINDEX 會使用最後指定給索引的填滿因數值。 這個值會儲存在**sys.indexes**目錄檢視。   
  如果*填滿因數*指定，則*table_name*和*index_name*必須指定。 如果*填滿因數*未指定，會使用預設填滿因數 100。 如需詳細資訊，請參閱 [指定索引的填滿因素](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
@@ -116,7 +116,7 @@ DBCC DBREINDEX ('HumanResources.Employee', ' ', 70);
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

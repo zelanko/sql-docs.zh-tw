@@ -28,15 +28,15 @@ helpviewer_keywords:
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c71b5fd2c6fb873889eafdb4bceafeba7699208d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,13 +84,13 @@ WHERE database_id = DB_ID()
   
  當省略 BROKER_INSTANCE 子句時，這項路由會符合任何 Broker 執行個體。 當交談並未指定 Broker 執行個體時，符合任何 Broker 執行個體的路由，其相符優先權會高於含明確 Borker 執行個體的路由。 如果交談指定了 Broker 執行個體，含 Borker 執行個體的路由之優先權會高於符合任何 Broker 執行個體的路由。  
   
- 存留期 **=**  *route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將路由保留在路由表中的時間量 (以秒為單位)。 在存留期間結束時，路由會到期，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在選擇新交談的路由時，不會再考慮這個路由。 如果省略這個子句，則*route_lifetime*是 NULL，而且路由永遠不會到期。  
   
- 位址**='***next_hop_address***'**  
+ ADDRESS **='***next_hop_address***'**  
  指定這個路由的網路位址。 *Next_hop_address*指定 TCP/IP 位址，格式如下：  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   
  指定*port_number*必須符合的通訊埠編號[!INCLUDE[ssSB](../../includes/sssb-md.md)]的執行個體的端點[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在指定電腦。 這可以在選取的資料庫中執行下列查詢來取得：  
   
@@ -111,7 +111,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  指定具有在一個鏡像的資料庫的鏡像資料庫的網路位址*next_hop_address*。 *Next_hop_mirror_address*指定 TCP/IP 位址，格式如下：  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  指定*port_number*必須符合的通訊埠編號[!INCLUDE[ssSB](../../includes/sssb-md.md)]的執行個體的端點[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在指定電腦。 這可以在選取的資料庫中執行下列查詢來取得：  
   
@@ -226,7 +226,7 @@ CREATE ROUTE TransportRoute
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER ROUTE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-route-transact-sql.md)   
  [DROP ROUTE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

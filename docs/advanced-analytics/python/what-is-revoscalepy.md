@@ -12,12 +12,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aa07f181ef8a17b79bd978ffd58174bf28d870f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: dd64f680a288f144e14104aedc99d4c6eda85934
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="introducing-revoscalepy"></a>介紹 revoscalepy
 
@@ -81,19 +81,19 @@ SQL Server，並將 Python 某些情況下使用不同的資料類型。 如需 
 
 下列機器學習演算法和彙總從 RevoScaleR 函數會包含在 SQL Server 2017，開頭 CTP 2.0 中。
 
-| 函數| 描述|注意|
+| 函數| Description|注意|
 | ------ | ------ |------ |
-|`rx_btrees` | 符合隨機梯度促進式的決策樹|`rx_btrees_ex`在 CTP 2.0|
-|`rx_dforest` | 符合分類和迴歸的決策樹系|`rx_dforest_ex`在 CTP 2.0|
-|`rx_dtree` | 調整的分類和迴歸樹狀結構 |`rx_dtree_ex`在 CTP 2.0|
-|`rx_lin_mod` | 建立線性模型|`rx_lin_mod_ex`在 CTP 2.0|
-|`rx_logit` | 建立羅吉斯迴歸模型|`rx_logit_ex`在 CTP 2.0|
-|`rx_predict` | 產生從定型模型的預測|`rx_predict_ex`在 CTP 2.0|
+|`rx_btrees` | 符合隨機梯度促進式的決策樹|`rx_btrees_ex` in CTP 2.0|
+|`rx_dforest` | 符合分類和迴歸的決策樹系|`rx_dforest_ex` in CTP 2.0|
+|`rx_dtree` | 調整的分類和迴歸樹狀結構 |`rx_dtree_ex` in CTP 2.0|
+|`rx_lin_mod` | 建立線性模型|`rx_lin_mod_ex` in CTP 2.0|
+|`rx_logit` | 建立羅吉斯迴歸模型|`rx_logit_ex` in CTP 2.0|
+|`rx_predict` | 產生從定型模型的預測|`rx_predict_ex` in CTP 2.0|
 |`rx_summary` | 產生模型的摘要||
 
 新的機器學習演算法也會提供的 Python 版本[MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
-| 函數| 描述|
+| 函數| Description|
 | ------ | ------ |
 |`rx_fast_forest` |建立決策樹系模型|
 |`rx_fast_linear` | 線性迴歸與隨機雙重座標 （堆疊）|
@@ -169,6 +169,6 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 
 如果您使用 Python Tools for Visual Studio 時，您可以使用 IntelliSense，取得語法和引數的說明。 如需詳細資訊，請參閱[Python 支援 Visual Studio 中](http://docs.microsoft.com/visualstudio/python/installation)，並下載符合您的 Visual Studio 版本的擴充功能。 您可以使用 Visual Studio 2015 和 2017，具有 Python 或更早版本。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Python 教學課程](../tutorials/sql-server-python-tutorials.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bd0b2effecf483376270594e63de91ff168dcc6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 541c38e37a581c929da8ca3185b39fbaef065b92
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client 中的疏鬆資料行支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
  不過，如果**queryout**使用的匯出，而且您參考疏鬆資料行成員的疏鬆資料行依名稱設定，您不能執行直接匯入結構類似的資料表。 這是因為 BCP 會使用與一致的中繼資料**選取\***匯入作業，且無法符合**column_set**成員資料行與此中繼資料。 若要匯入**column_set**成員資料行必須定義的檢視參考所需的資料表上的個別**column_set**資料行，而且您必須執行匯入作業使用的檢視。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

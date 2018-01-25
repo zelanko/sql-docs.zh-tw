@@ -23,13 +23,13 @@ ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
 caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>建立外部資料來源 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -138,7 +138,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
  類型 = [HADOOP |對包含 SHARD_MAP_MANAGER |RDBMS |BLOB_STORAGE]  
  指定資料來源類型。 外部資料來源時，Hadoop，使用 HADOOP 或 Azure 儲存體 blob 的 Hadoop。 Azure SQL Database 上建立分區化的彈性資料庫查詢外部資料來源時，請使用對包含 SHARD_MAP_MANAGER。 使用外部資料來源的 RDBMS 對 Azure SQL database 的彈性資料庫查詢的跨資料庫查詢。  執行大量作業使用時，使用 BLOB_STORAGE [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)或[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)與[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
   
-位置 = \<location_path > **HADOOP**    
+LOCATION = \<location_path> **HADOOP**    
 HADOOP，針對指定的 Hadoop 叢集的 Uniform Resource Indicator (URI)。  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI: 電腦名稱或 IP 位址，Hadoop 叢集 Namenode。  
@@ -156,7 +156,7 @@ Azure 資料湖存放區位置會指定用於連接到您的 Azure Data Lake Sto
 
 
 
-**對包含 SHARD_MAP_MANAGER**   
+**SHARD_MAP_MANAGER**   
  對包含 SHARD_MAP_MANAGER，指定裝載分區對應管理員，Azure SQL Database 或 Azure 的虛擬機器上的 SQL Server 資料庫中的邏輯伺服器名稱。
  
  ```
@@ -211,7 +211,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 
 |Hadoop 連接|預設資源管理員的連接埠|
 |-------------------|-----------------------------|
-|@shouldalert|50300|
+|1|50300|
 |2|50300|
 |3|8021|
 |4|8032|
@@ -479,13 +479,13 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 ```   
 若要查看在使用這個範例，請參閱[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [改變外部資料來源 (TRANSACT-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
 [建立外部 TABLE AS SELECT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
 [建立 TABLE AS SELECT &#40;Azure SQL 資料倉儲 &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
-[sys.external_data_sources (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
+[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
 

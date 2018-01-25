@@ -14,12 +14,12 @@ ms.topic: language-reference
 dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 51db5c7cbaa2932cfcb819538d743fe1368f6442
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>建立資料庫 （Azure SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -52,7 +52,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 *database_name*  
 新資料庫的名稱。 此名稱必須是唯一的 SQL 伺服器上，其可裝載兩者[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]資料庫和[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]資料庫，且必須符合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別碼規則。 如需詳細資訊，請參閱[識別碼](http://go.microsoft.com/fwlink/p/?LinkId=180386)。  
   
-*sys.databases*  
+*collation_name*  
 指定資料庫的預設定序。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 如果未指定，資料庫就會指派預設定序為 SQL_Latin1_General_CP1_CI_AS。  
   
 如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱[COLLATE (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms184391.aspx)。  
@@ -116,7 +116,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 (MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000');  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [ALTER DATABASE &#40;Azure SQL 資料倉儲 &#40;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) 
 [建立資料表 &#40;Azure SQL 資料倉儲 &#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)  
 [卸除資料庫 &#40;TRANSACT-SQL &#40;](../../t-sql/statements/drop-database-transact-sql.md) 

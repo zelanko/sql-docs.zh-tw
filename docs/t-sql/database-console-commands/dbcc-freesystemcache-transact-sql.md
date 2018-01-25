@@ -26,15 +26,15 @@ helpviewer_keywords:
 - cleaning unused cache entries
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad27fe58eb94b69f98603bc94694b6f0d09f8fc4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d5c6924da3ef9ac85683c857c786337b9d9b978b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ DBCC FREESYSTEMCACHE
 ```  
   
 ## <a name="arguments"></a>引數  
- ('ALL' [，*pool_name* ])  
+ ( 'ALL' [,*pool_name* ] )  
  ALL 會指定所有支援的快取。  
  *pool_name*指定資源管理員集區快取。 只有與此集區有關的項目才會被釋放。  
   
@@ -89,7 +89,7 @@ DBCC FREESYSTEMCACHE ('ALL', default);
 DBCC FREESYSTEMCACHE ('ALL') WITH MARK_IN_USE_FOR_REMOVAL;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
 [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)  

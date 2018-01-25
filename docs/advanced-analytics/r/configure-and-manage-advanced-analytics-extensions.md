@@ -14,13 +14,13 @@ ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
 caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 27ecbb2ca677523d6bcb97af8ee9c0c961ae718f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f8a886e48067c80f112e86c9d7ba07da79502691
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>機器學習服務的進階的組態選項
 
@@ -104,6 +104,6 @@ ms.lasthandoff: 01/08/2018
 
 所有設定都會採用機碼值組的格式，分別位於獨立的行。 例如，若要變更的追蹤層級，您將加入行`Default: TRACE_LEVEL=4`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [安全性考量](security-considerations-for-the-r-runtime-in-sql-server.md)

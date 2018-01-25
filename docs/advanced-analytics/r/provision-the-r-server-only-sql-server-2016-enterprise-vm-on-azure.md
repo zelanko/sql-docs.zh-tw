@@ -14,12 +14,12 @@ ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
 caps.latest.revision: "12"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 6777a47d9f2078b662990c2597f84cc41222de63
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: a5277d975380f135003bb7f8a11eec8641374f07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>佈建虛擬機器上 Azure 機器學習
 
@@ -135,7 +135,7 @@ RevoScaleR、 MicrosoftML 或 revoscalepy 發行新的升級，您可以升級�
 
 目前，下列虛擬機器可供 SQL server 的機器學習：
 
-|[屬性]| 註解|
+|名稱| 註解|
 |----|----|----|
 | **SQL Server 2016**| ***  |
 |SQL Server 2016 SP1 Enterprise on Windows|整合式的進階分析的 R 服務。|
@@ -144,8 +144,8 @@ RevoScaleR、 MicrosoftML 或 revoscalepy 發行新的升級，您可以升級�
 | Data Science 虛擬機器 Windows 2012|包含常用的工具，用於資料科學，包括 Microsoft R Server Developer Edition、 SQL Server 2016 Developer edition、 Anaconda Python 發佈、 Julia Pro developer edition 和 Jupyter 筆記本如。| 
 | Data Science 虛擬機器 Windows 2016|包含 SQL Server 2016 Developer Edition 支援資料庫內部 R 分析。|
 |**SQL Server 2017**| ***   |
-|SQL Server 2017 企業的 Windows Server 2016| 機器學習服務，具有 Python 和 R 語言支援。|
-|BYOL SQL Server 2017 企業的 Windows Server 2016|機器學習服務，具有 Python 和 R 語言支援。|
+|SQL Server 2017 Enterprise Windows Server 2016| 機器學習服務，具有 Python 和 R 語言支援。|
+|BYOL SQL Server 2017 Enterprise Windows Server 2016|機器學習服務，具有 Python 和 R 語言支援。|
 | 在 Windows 伺服器上可用的 SQL Server 授權： SQL Server 2017 Developer|機器學習服務，具有 Python 和 R 語言支援。|
 | **其他**| *** |
 | 機器學習伺服器只有 SQL Server 2017 Enterprise|類似於 SQL Server 2016 Enterprise 映像，但包含 Server 機器學習的獨立版本，並有核心 ScaleR 和實施功能適用於 Windows 的環境最佳化。|

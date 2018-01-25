@@ -33,15 +33,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 caps.latest.revision: "135"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a8ce3df8a9b6e7ead8e775b6bd0b2d31720b38a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ FOR DATABASE_MIRRORING (
 ```  
   
 ## <a name="arguments"></a>引數  
- *端點名稱*  
+ *endPointName*  
  這是您要建立之端點的指派名稱。 更新或刪除端點時可使用該名稱。  
   
  授權*登入*  
@@ -132,7 +132,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  端點已停用。 在這種狀態下，伺服器會接聽通訊埠要求，但會將錯誤傳回用戶端。  
   
- **已停止**  
+ **STOPPED**  
  端點已停止。 在這種狀態下，伺服器不接聽端點埠或不回應任何嘗試使用該端點的要求。  
   
  若要變更狀態，請使用[ALTER ENDPOINT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
@@ -149,10 +149,10 @@ FOR DATABASE_MIRRORING (
   
  下列引數只適用於 TCP 通訊協定選項。  
   
- LISTENER_PORT  **=**  *listenerPort*  
+ LISTENER_PORT **=***listenerPort*  
  指定 Service Broker TCP/IP 通訊協定用來接聽連接時所用的通訊埠編號。 依慣例會使用 4022，但介於 1024 和 32767 之間的任何數字都有效。  
   
- LISTENER_IP  **=** 所有 |**(***4 部分 ip* **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
  指定端點將接聽的 IP 位址。 預設值是 ALL。 這表示接聽程式會接受與任何有效 IP 位址的連接。  
   
  如果您使用 IP 位址來設定資料庫鏡像，而不是使用完整網域名稱 (`ALTER DATABASE SET PARTNER = partner_IP_address` 或 `ALTER DATABASE SET WITNESS = witness_IP_address`)，則當您建立鏡像端點時，您必須指定 `LISTENER_IP =IP_address` 而非 `LISTENER_IP=ALL`。  
@@ -171,17 +171,17 @@ FOR DATABASE_MIRRORING (
 > [!IMPORTANT]  
 >  伺服器執行個體中的所有鏡像連接全都使用單一資料庫鏡像端點。 建立其他資料庫鏡像端點的任何嘗試都會失敗。  
   
- **\<authentication_options >:: =**  
+ **\<authentication_options> ::=**  
   
  **WINDOWS** [{NTLM |KERBEROS |**交涉**}]  
  指定端點要利用 Windows 驗證通訊協定連接來驗證端點。 這是預設值。  
   
  如果您指定授權方法 (NTLM 或 KERBEROS)，一律以該方法做為驗證通訊協定。 預設值 NEGOTIATE 會導致端點利用 Windows 交涉通訊協定來選擇 NTLM 或 Kerberos。  
   
- 憑證*certificate_name*  
+ CERTIFICATE *certificate_name*  
  指定端點來驗證使用所指定的憑證連線*certificate_name*建立身分識別授權。 遠端點必須有一個特定憑證，該憑證含有符合指定憑證之私密金鑰的公開金鑰。  
   
- WINDOWS [{NTLM |KERBEROS |**交涉**}]憑證*certificate_name*  
+ WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  指定端點必須嘗試利用 Windows 驗證連接，而且，如果該嘗試失敗，則嘗試使用指定的憑證。  
   
  憑證*certificate_name* WINDOWS [{NTLM |KERBEROS |**交涉**}]  
@@ -234,7 +234,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  捨棄適用於其他位置的服務之訊息。 這是預設值。  
   
- MESSAGE_FORWARD_SIZE  **=**  *forward_size*  
+ MESSAGE_FORWARD_SIZE **=***forward_size*  
  指定當儲存即將要轉送的訊息時，配置給端點使用的最大儲存體數量 (以 MB 為單位)。  
   
  **DATABASE_MIRRORING 選項**  
@@ -273,7 +273,7 @@ FOR DATABASE_MIRRORING (
 -   已被授與端點之 CONNECT 權限的使用者或群組  
   
 ## <a name="permissions"></a>Permissions  
- 需要 CREATE ENDPOINT 權限或 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限和 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
+ 需要 CREATE ENDPOINT 權限或 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -294,7 +294,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [選擇加密演算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [卸除端點 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -19,13 +19,13 @@ ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f22c3535c66663979009d1e760ecf8c2164bc765
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 79f10b22ba88d6dd860c608c9468e20a27615650
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>使用 xml 資料類型方法的指導方針
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ FROM   T
   
  此查詢會傳回每個 XML 執行個體中第一個 `<last-name>` 元素的值。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)  
   
   

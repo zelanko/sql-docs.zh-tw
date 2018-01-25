@@ -32,15 +32,15 @@ helpviewer_keywords:
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4ca1959c247aedd2e49c38a870621d440a089f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a2ece31010207b6044504f099c11443a2fec0fa2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  **@***dialog_handle*  
  這是一個變數，用來儲存 BEGIN DIALOG CONVERSATION 陳述式傳回的新對話之系統產生對話控制代碼。 變數必須屬於型別**uniqueidentifier**。  
   
- 從服務*initiator_service_name*  
+ FROM SERVICE *initiator_service_name*  
  指定起始對話的服務。 指定的名稱必須是目前資料庫中服務的名稱。 指定給起始端服務的佇列會接收目標服務傳回的訊息及 Service Broker 為了這項交談所建立的訊息。  
   
- 服務**'***target_service_name***'**  
+ TO SERVICE **'***target_service_name***'**  
  指定起始對話時所指向的目標服務。 *Target_service_name*的型別**nvarchar （256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]使用位元組的比較，以比對*target_service_name*字串。 換言之，這項比較會區分大小寫，且不會考慮目前的定序。  
   
  *service_broker_guid*  
@@ -96,13 +96,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  指定這項交談遵照的合約。 合約必須在目前的資料庫中。 如果目標服務不接受指定合約的新交談，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 當省略這個子句時，交談遵照的合約名為**預設**。  
   
- RELATED_CONVERSATION  **=**  *related_conversation_handle*  
+ RELATED_CONVERSATION **=***related_conversation_handle*  
  指定新對話要加入其中的現有交談群組。 [新增] 對話方塊時出現這個子句時，屬於相同的交談群組，為所指定的對話*related_conversation_handle*。 *Related_conversation_handle*型別的隱含轉換成類型必須是**uniqueidentifier**。 如果陳述式會失敗*related_conversation_handle*不參考現有的對話。  
   
- RELATED_CONVERSATION_GROUP  **=**  *related_conversation_group_id*  
+ RELATED_CONVERSATION_GROUP **=***related_conversation_group_id*  
  指定新對話要加入其中的現有交談群組。 當出現這個子句時，新的對話將會加入至所指定的交談群組*related_conversation_group_id*。 *Related_conversation_group_id*型別的隱含轉換成類型必須是**uniqueidentifier**。 如果*related_conversation_group_id*並未參考現有的交談群組，service broker 建立新的交談群組具有指定*related_conversation_group_id*和新對話與該交談群組。  
   
- 存留期 **=**  *dialog_lifetime*  
+ LIFETIME **=***dialog_lifetime*  
  指定對話維持開啟狀態的最大時間量。 為了使對話順利完成，兩個端點必須在存留期間過期之前明確地結束對話。 *Dialog_lifetime*值必須表示以秒為單位。 存留期是型別**int**。沒有指定 LIFETIME 子句時，對話存留時間時的最大值**int**資料型別。  
   
  ENCRYPTION  
@@ -215,10 +215,10 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    WITH ENCRYPTION = OFF ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [BEGIN CONVERSATION TIMER &#40;TRANSACT-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [移動交談 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
- [sys.conversation_endpoints &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

@@ -20,13 +20,13 @@ ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d73cd5f12601cfc3abab5cb6dee736fd805ad8a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7a8ffbc542c9a9490f497ff590f6bcf995979ed4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE XML 結構描述集合權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -58,10 +58,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定可以撤銷的 XML 結構描述集合權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- 在 XML 結構描述集合:: [ *schema_name***。** ] *XML_schema_collection_name*  
+ 在 XML 結構描述集合:: [ *schema_name * * *。**] *XML_schema_collection_name*  
  指定要撤銷其權限的 XML 結構描述集合。 需要範圍限定詞 (::)。 如果*schema_name*未指定，會使用預設的結構描述。 如果*schema_name*指定，則是必要的結構描述範圍限定詞 （.）。  
   
  GRANT OPTION  
@@ -133,10 +133,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  GO
  ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [授與 XML 結構描述集合權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
  [拒絕 XML 結構描述集合權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
- [sys.xml_schema_collections &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
  [建立 XML 結構描述集合 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

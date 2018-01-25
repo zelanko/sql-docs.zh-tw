@@ -24,15 +24,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 caps.latest.revision: "94"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4e7587bfb20c110dd28e6b59bba0fde1e937cb6e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,12 +67,12 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  授權*owner_name*  
  指定身為組件擁有者的使用者或角色的名稱。 *owner_name*必須是其中目前的使用者是成員，或目前使用者必須具有 IMPERSONATE 權限的角色名稱*owner_name*。 若未指定，擁有權便歸目前使用者。  
   
- \<client_assembly_specifier >  
+ \<client_assembly_specifier>  
 指定正在上傳之組件所在的本機路徑或網路位置，以及對應於該組件的資訊清單檔案名稱。  \<client_assembly_specifier > 可以表示為固定的字串或運算式評估為固定字串，與變數。 CREATE ASSEMBLY 不支援載入多模組組件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會在同一個位置尋找這個組件的任何相依組件，同時以同一位擁有者做為根層級組件來上傳它們。 如果找不到這些相依組件，而且它們也尚未載入目前資料庫，CREATE ASSEMBLY 便會失敗。 如果相依組件已經載入到目前資料庫中，則那些組件的擁有者，必須與剛建立組件的擁有者一樣。
   
  \<client_assembly_specifier > 不能指定登入的使用者正被模擬。  
   
- \<assembly_bits >  
+ \<assembly_bits>  
  這是構成組件及其相依組件的二進位值清單。 清單中的第一個值，被視為根層級組件。 對應於相依組件的值，可以採用任何順序提供。 任何不對應於根組件相依性的值，則略過不管。  
   
 > [!NOTE]  
@@ -192,14 +192,14 @@ CREATE ASSEMBLY HelloWorld
 WITH PERMISSION_SET = SAFE;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER ASSEMBLY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [卸除組件 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
- [建立彙總 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
+ [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [使用案例和範例的 Common Language Runtime &#40;CLR &#41;整合](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
   

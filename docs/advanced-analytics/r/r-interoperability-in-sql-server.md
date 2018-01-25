@@ -14,13 +14,13 @@ ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
 caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: bb129cfab6872e060100b416f1a269512c3289f5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e393db396c7d41f7eca7851fa10544d697eac5c8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>SQL Server 中的 R 互通性
 
@@ -71,7 +71,7 @@ Microsoft R 的最重要新增項目包括 **RevoScaleR** 和 **RevoPemaR** 封�
 
 我們也建議您嘗試[MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)，新的封裝，從 Microsoft R，支援遠端執行 R 程式碼和可延展分散處理，使用提升的機器學習演算法由 Microsoft Research 開發。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [架構概觀](../../advanced-analytics/r/architecture-overview-sql-server-r.md)
 

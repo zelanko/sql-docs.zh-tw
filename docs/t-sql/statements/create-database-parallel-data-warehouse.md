@@ -15,13 +15,13 @@ ms.assetid: 40cacde4-ac72-45f7-9564-d76e2b4a741a
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 622dd3433ad5cb900dbbcb23777add948ea5474b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4e9ff76a4d260604a93f59baa3b61f5c37b4952f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-parallel-data-warehouse"></a>建立資料庫 (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -55,21 +55,21 @@ WITH (
   
  自動成長為各種規模的 ON 或 OFF，所有大小的。 例如，不可能設為自動成長 ON *log_size*，但未設定為*replicated_size*。  
   
- *replicated_size* [GB]  
+ *replicated_size* [ GB ]  
  正數。 設定複寫的資料表和對應的資料配置的總空間的大小 （以整數或十進位 gb 為單位）*每個計算節點上*。 最小值和最大值為*replicated_size*需求，請參閱中的 「 最小和最大值 」 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
   
  如果自動成長是 ON，將允許複寫的資料表成長超過這個限制。  
   
  如果自動成長是 OFF，將會的插入到現有的複寫資料的資料表，或更新現有使用者嘗試建立新的複寫的資料表時，如果複寫資料表的方式，將會增加的大小超過傳回錯誤*replicated_size*.  
   
- *distributed_size* [GB]  
+ *distributed_size* [ GB ]  
  正數。 大小，以整數或十進位 （gb），配置給分散式的資料表 （和對應的資料） 的總空間*跨設備*。 最小值和最大值為*distributed_size*需求，請參閱中的 「 最小和最大值 」 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
   
  如果自動成長是 ON，將允許分散式的資料表成長超過這個限制。  
   
  如果使用者嘗試建立新的分散式的資料表，將資料插入現有的分散式資料表，或更新現有的分散式的資料表將會增加的大小超過的方式，如果自動成長是 OFF 時，會傳回錯誤*distributed_size*.  
   
- *log_size* [GB]  
+ *log_size* [ GB ]  
  正數。 交易記錄檔的大小 （以整數或十進位 gb 為單位）*跨設備*。  
   
  最小值和最大值為*log_size*需求，請參閱中的 「 最小和最大值 」 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
@@ -147,7 +147,7 @@ CREATE DATABASE mytest
    LOG_SIZE = 10 GB);  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;平行資料倉儲 &#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   

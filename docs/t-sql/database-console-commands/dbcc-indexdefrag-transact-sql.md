@@ -1,5 +1,5 @@
 ---
-title: "DBCC INDEXDEFRAG (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2444d6510e680d2ca3ab9938df92b839a7d04ac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e601ebb9a795445e4b49e0f60e134923edba104
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ DBCC INDEXDEFRAG
  *index_name* | *index_id*  
  要重組之索引的名稱或識別碼。 若未指定，陳述式會重組指定之資料表或檢視表的所有索引。 索引名稱必須符合識別碼的規則。  
   
-  | 0  
+ *partition_number* | 0  
  這是要重組之索引的資料分割編號。 若未指定，或指定 0，陳述式會重組指定索引中的所有資料分割。  
   
  WITH NO_INFOMSGS  
@@ -232,7 +232,7 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

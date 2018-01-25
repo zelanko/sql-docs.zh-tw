@@ -21,13 +21,13 @@ ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1acb605c95246bde4f9803d92aa0cce38163a80d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 620eed7dda3887d04cf0d88a01ee5b991025638b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="delete-xml-dml"></a>delete (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ delete Expression
 ```  
   
 ## <a name="arguments"></a>引數  
- *運算式*  
+ *[運算式]*  
  是一種 XQuery 運算式，可識別要刪除的節點。 會刪除運算式所選取的所有節點，以及選取節點內所包含的所有節點或值。 中所述[insert (XML DML)](../../t-sql/xml/insert-xml-dml.md)，這必須是文件中的現有節點的參考。 它不能是建構節點。 運算式不可以是根 (/) 節點。 如果運算式傳回空白時序，就不會發生刪除，也不會傳回錯誤。  
   
 ## <a name="examples"></a>範例  
@@ -190,7 +190,7 @@ drop table T
 go  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)   

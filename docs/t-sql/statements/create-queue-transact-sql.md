@@ -27,15 +27,15 @@ helpviewer_keywords:
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 168ba93fdfbf999cb325d985c3c29601cc21b4ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ CREATE QUEUE <object>
  *database_name* （物件）  
  這是在其中建立新佇列之資料庫的名稱。 *database_name*必須指定現有資料庫的名稱。 當*database_name*未提供，目前資料庫中建立佇列。  
   
- *schema_name* （物件）  
+ *schema_name* (object)  
  這是新佇列所屬的結構描述名稱。 結構描述預設為執行陳述式之使用者的預設結構描述。 如果 CREATE QUEUE 陳述式的 sysadmin 固定的伺服器角色的成員或成員的 db_dbowner 或 db_ddladmin 固定資料庫角色中所指定的資料庫*database_name*， *schema_name*可以指定目前連接的登入相關聯的一個以外的結構描述。 否則， *schema_name*必須是執行陳述式之使用者的預設結構描述。  
   
  *queue_name*  
@@ -102,16 +102,16 @@ CREATE QUEUE <object>
  STATUS (Activation)  
  指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 是否會啟動預存程序。 當 STATUS = ON 時，如果目前執行的程序數目低於 MAX_QUEUE_READERS，且訊息到達佇列的速度比預存程序接收訊息快，佇列便會啟動 PROCEDURE_NAME 所指定的預存程序。 當 STATUS = OFF 時，佇列不會啟動預存程序。 如果未指定這個子句，預設值便是 ON。  
   
- PROCEDURE_NAME =\<程序 >  
+ PROCEDURE_NAME = \<procedure>  
  指定為了處理這個佇列中的訊息而啟動之預存程序的名稱。 這個值必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。  
   
- *database_name*（程序）  
+ *database_name*(procedure)  
  這是包含預存程序的資料庫名稱。  
   
- *schema_name*（程序）  
+ *schema_name*(procedure)  
  這是包含預存程序的結構描述名稱。  
   
- *程序名稱*  
+ *procedure_name*  
  這是預存程序的名稱。  
   
  MAX_QUEUE_READERS =*max_readers*  
@@ -134,7 +134,7 @@ CREATE QUEUE <object>
   
  有害訊息處理設定為 OFF 的佇列將不會在五個連續的交易復原後停用。 這可讓應用程式定義自訂有害訊息處理系統。  
   
- ON*檔案群組 |*[**預設**]  
+ ON *filegroup |* [**DEFAULT**]  
  指定這個佇列建立所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案群組。 您可以使用*檔案群組*參數來識別檔案群組，或使用預設識別項使用 service broker 資料庫的預設檔案群組。 在這個子句的內容中，DEFAULT 不是關鍵字，必須用識別碼來分隔。 當沒有指定任何檔案群組時，佇列會使用資料庫的預設檔案群組。  
   
 ## <a name="remarks"></a>備註  
@@ -229,7 +229,7 @@ CREATE QUEUE ExpenseQueue
     ON [DEFAULT] ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER QUEUE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [卸除佇列 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   

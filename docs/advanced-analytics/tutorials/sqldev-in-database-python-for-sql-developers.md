@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 970298c59b7b48c5579125ef163785801db676ee
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 6d7e49a6074e342f51595e9b1cdb10227761f670
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>在資料庫 Python 分析的 SQL 開發人員
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 
 ## <a name="requirements"></a>需求
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>필수 구성 요소
 
 + 機器學習服務與啟用的 Python 安裝 SQL Server 2017 的執行個體。 如需詳細資訊，請參閱[設定 SQL Server 機器學習服務使用 Python](../python/setup-python-machine-learning-services.md)。
 + 您用於本逐步解說的登入必須具有權限，可以建立資料庫和其他物件、上傳資料、選取資料，以及執行預存程序。
@@ -121,6 +121,6 @@ PowerShell 的一些知識會很有幫助。
 |訓練和儲存模型，使用 T-SQL|0:15|
 |實施模型|0:40|
 
-## <a name="get-started"></a>快速入門
+## <a name="get-started"></a>開始使用
 
   [步驟 1︰下載範例資料](sqldev-py1-download-the-sample-data.md)

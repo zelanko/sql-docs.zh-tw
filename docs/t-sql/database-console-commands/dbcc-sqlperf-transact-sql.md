@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DBCC SQLPERF statement
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1a4efef1269d85483b098e98a03b913306088f68
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cd615cd56860138d2e9afa7e2d7090ed27ba8e3a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ LOGSPACE
 > [!IMPORTANT]
 > 如需有關交易記錄檔開頭的空間使用方式資訊[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，是指[註解](#Remarks)本主題中的區段。
   
-**「 sys.dm_os_latch_stats"**，清除  
+**"sys.dm_os_latch_stats"**, CLEAR  
 重設閂鎖統計資料。 如需詳細資訊，請參閱[sys.dm_os_latch_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). 此選項在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中無法使用。  
   
-**「 sys.dm_os_wait_stats"**，清除  
+**"sys.dm_os_wait_stats"**, CLEAR  
 重設等候統計資料。 如需詳細資訊，請參閱 [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 此選項在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中無法使用。  
   
 WITH NO_INFOMSGS  
@@ -76,7 +76,7 @@ WITH NO_INFOMSGS
   
 |資料行名稱|定義|  
 |---|---|
-|**Database Name**|顯示記錄統計資料的資料庫名稱。|  
+|**資料庫名稱**|顯示記錄統計資料的資料庫名稱。|  
 |**記錄檔大小 (MB)**|目前配置給記錄的大小。 這個值一定會比原先配置給記錄空間的量小，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會保留少量內部標頭資訊所用的磁碟空間。|  
 |**使用的記錄檔空間 （%）**|目前中用來儲存交易記錄資訊的記錄檔的百分比。|  
 |**狀態**|記錄檔的狀態。 一律是 0。|  
@@ -120,12 +120,12 @@ AdventureWorks 19.554688    17.748701          0
 DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
-[sys.dm_os_latch_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
-[sys.dm_os_wait_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+[sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
+[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
 [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
-[sys.dm_db_log_info &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
-[sys.dm_db_log_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
 

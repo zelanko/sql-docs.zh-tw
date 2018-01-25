@@ -22,15 +22,15 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fc317c36ae0cc14891be3a4f3a9c17c7a41fc3e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0383e0b5446537b77e02ce4b8e4d3e54c850bdd1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT Service Broker 權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,22 +57,22 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定可以授與的 Service Broker 安全性實體權限。  如下所列。  
   
- 合約**::***contract_name*  
+ 合約 **:: * * * contract_name*  
  指定正在授與權限的合約。 範圍限定詞"::"是必要。  
   
- 訊息類型**::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  指定正在授與權限的訊息類型。 需要範圍限定詞 "::"。  
   
- 遠端服務繫結**::***remote_binding_name*  
+ 遠端服務繫結 **:: * * * remote_binding_name*  
  指定正在授與權限的遠端服務繫結。 需要範圍限定詞 "::"。  
   
- 路由**::***route_name*  
+ ROUTE **::***route_name*  
  指定正在授與權限的路由。 需要範圍限定詞 "::"。  
   
- 服務**::***service_name*  
+ SERVICE **::***service_name*  
  指定正在授與權限的服務。 需要範圍限定詞 "::"。  
   
  *database_principal*  
@@ -191,7 +191,7 @@ GRANT permission  [ ,...n ] ON
   
  被授與者的 CONTROL SERVER 權限，例如的成員**sysadmin**固定的伺服器角色可授與任何權限的任何伺服器安全性實體。 被授與者的 CONTROL 權限的資料庫，例如的成員**db_owner**固定的資料庫角色可授與任何權限的任何安全性實體，在資料庫中。 結構描述之 CONTROL 權限的被授與者，可以授與結構描述中任何物件的任何權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   

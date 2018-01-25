@@ -23,15 +23,15 @@ helpviewer_keywords:
 - REVOKE statement, Service Broker
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 077fe296f48de1658a56d0c3e7403904652603bc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 897da4d05bcd9a2cfbb88ce5383ba7a71867edcc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE Service Broker 權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,22 +64,22 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!IMPORTANT]  
 >  如果主體有不含 GRANT 選項的指定權限，則會撤銷權限本身。  
   
- *權限*  
+ *permission*  
  指定可以在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 上撤銷的安全性實體權限。 如需這些權限的清單，請參閱本主題稍後的「備註」一節。  
   
- 合約**::***contract_name*  
+ 合約 **:: * * * contract_name*  
  指定正在撤銷權限的合約。 範圍限定詞**::**需要。  
   
- 訊息類型**::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  指定正在撤銷權限的訊息類型。 範圍限定詞**::**需要。  
   
- 遠端服務繫結**::***remote_binding_name*  
+ 遠端服務繫結 **:: * * * remote_binding_name*  
  指定正在撤銷權限的遠端服務繫結。 範圍限定詞**::**需要。  
   
- 路由**::***route_name*  
+ ROUTE **::***route_name*  
  指定要撤銷其權限的路由。 範圍限定詞**::**需要。  
   
- 服務**::***message_type_name*  
+ SERVICE **::***message_type_name*  
  指定要撤銷其權限的服務。 範圍限定詞**::**需要。  
   
  *database_principal*  
@@ -184,7 +184,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="permissions"></a>Permissions  
  需要 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約、訊息類型、遠端服務繫結、路由或服務的 CONTROL 權限  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [授與 Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
  [DENY Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

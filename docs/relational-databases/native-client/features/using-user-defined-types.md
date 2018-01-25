@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65948c7c3cf387d4bbd1245b8ee00a777a8fa940
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8092282c18758860ee76f9e61108aa6db1551bc8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-user-defined-types"></a>使用使用者定義型別
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,16 +51,16 @@ ms.lasthandoff: 01/08/2018
 ### <a name="data-bindings-and-coercions"></a>資料繫結和強制型轉  
  下表描述當搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 使用列出的資料類型時，所發生的繫結和強制型轉。 UDT 資料行透過公開[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]DBTYPE_UDT Native Client OLE DB 提供者。 您可以透過適當的結構描述資料列集來取得中繼資料，好讓您可以將自己定義的類型當做物件來管理。  
   
-|資料類型|到伺服器<br /><br /> **UDT**|到伺服器<br /><br /> **非 UDT**|從伺服器<br /><br /> **UDT**|從伺服器<br /><br /> **非 UDT**|  
+|資料類型|到伺服器<br /><br /> **UDT**|到伺服器<br /><br /> **non-UDT**|從伺服器<br /><br /> **UDT**|從伺服器<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_UDT|支援<sup>6</sup>|錯誤<sup>1</sup>|支援<sup>6</sup>|錯誤<sup>5</sup>|  
+|DBTYPE_UDT|支援<sup>6</sup>|錯誤<sup>1</sup>|支援<sup>6</sup>|Error<sup>5</sup>|  
 |DBTYPE_BYTES|支援<sup>6</sup>|N/A<sup>2</sup>|支援<sup>6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_WSTR|支援<sup>3、 6</sup>|N/A<sup>2</sup>|支援<sup>4、 6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_BSTR|支援<sup>3、 6</sup>|N/A<sup>2</sup>|支援<sup>4</sup>|N/A<sup>2</sup>|  
 |DBTYPE_STR|支援<sup>3、 6</sup>|N/A<sup>2</sup>|支援<sup>4、 6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|不支援|N/A<sup>2</sup>|不支援|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124;VT_ARRAY)|支援<sup>6</sup>|N/A<sup>2</sup>|支援<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|支援<sup>3、 6</sup>|N/A<sup>2</sup>|不適用|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援<sup>6</sup>|N/A<sup>2</sup>|支援<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|支援<sup>3、 6</sup>|N/A<sup>2</sup>|해당 사항 없음|N/A<sup>2</sup>|  
   
  <sup>1</sup>如果的伺服器類型與指定了 DBTYPE_UDT 以外**icommandwithparameters:: Setparameterinfo**而且存取子類型為 DBTYPE_UDT，陳述式執行時，就會發生錯誤 (DB_E_ERRORSOCCURRED;參數狀態為 DBSTATUS_E_BADACCESSOR）。 否則資料會傳給伺服器，但是伺服器會傳回一則錯誤，指示從 UDT 到參數的資料類型之間沒有隱含轉換。  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-procedureparameters-schema-rowset"></a>PROCEDURE_PARAMETERS 結構描述資料列集  
  下列是已經針對 PROCEDURE_PARAMETERS 結構描述資料列集所做的加入。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|三部分名稱的識別碼。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|三部分名稱的識別碼。|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-sqlassemblies-schema-rowset"></a>SQL_ASSEMBLIES 結構描述資料列集  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開新的提供者特定的結構描述資料列，以描述已註冊的 Udt。 ASSEMBLY 伺服器可指定為 DBTYPE_WSTR，但是不在資料列集內。 如果未指定的話，此資料列集將預設為目前的伺服器。 下表定義了 SQL_ASSEMBLIES 結構描述資料列集。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|包含該類型之組件的目錄名稱。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|包含該類型之組件的結構描述名稱或擁有者名稱。 雖然組件是由資料庫指定範圍，而不是由結構描述指定範圍，組件依然有擁有者 (這裡有反映這一點)。|  
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-sqlassemblies-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES 結構描述資料列集  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會公開新提供者特有的結構描述資料列集，描述指定之伺服器的組件相依性。 ASSEMBLY_SERVER 可由呼叫端指定為 DBTYPE_WSTR，但是不在資料列集內。 如果未指定的話，此資料列集將預設為目前的伺服器。 下表定義了 SQL_ASSEMBLY_DEPENDENCIES 結構描述資料列集。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|包含該類型之組件的目錄名稱。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|包含該類型之組件的結構描述名稱或擁有者名稱。 雖然組件是由資料庫指定範圍，而不是由結構描述指定範圍，組件依然有擁有者 (這裡有反映這一點)。|  
@@ -123,7 +123,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-sqlusertypes-schema-rowset"></a>SQL_USER_TYPES 結構描述資料列集  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會公開新結構描述資料列集 SQL_USER_TYPES，以描述何時加入指定之伺服器的已註冊的 Udt。 UDT_SERVER 必須由呼叫端指定為 DBTYPE_WSTR，但是不在資料列集內。 下表定義了 SQL_USER_TYPES 結構描述資料列集。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|如果是 UDT 資料行，這個屬性就是指定 UDT 定義所在之目錄名稱的字串。|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|如果是 UDT 資料行，這個屬性就是指定 UDT 定義所在之結構描述名稱的字串。|  
@@ -133,7 +133,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-columns-schema-rowset"></a>COLUMNS 結構描述資料列集  
  COLUMNS 結構描述資料列集的加入項目包含下列資料行。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|如果是 UDT 資料行，這個屬性就是指定 UDT 定義所在之目錄名稱的字串。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|如果是 UDT 資料行，這個屬性就是指定 UDT 定義所在之結構描述名稱的字串。|  
@@ -146,7 +146,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 屬性集  
  為了透過 OLE DB 支援 Udt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會實作新的 DBPROPSET_SQLSERVERPARAMETER 屬性集包含下列值。  
   
-|[屬性]|類型|描述|  
+|名稱|型別|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|三部分名稱的識別碼。<br /><br /> 如果是 UDT 參數，這個屬性就是指定使用者定義型別定義所在之目錄名稱的字串。|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|三部分名稱的識別碼。<br /><br /> 如果是 UDT 參數，這個屬性就是指定使用者定義型別定義所在之結構描述名稱的字串。|  
@@ -157,7 +157,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 屬性集  
  若要支援中的資料表建立**ITableDefinition**介面，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端會將下列三個新資料行加入到 DBPROPSET_SQLSERVERCOLUMN 屬性集。  
   
-|[屬性]|描述|類型|描述|  
+|名稱|Description|型別|Description|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|如果是 DBTYPE_UDT 類型的資料行，這個屬性就是指定 UDT 定義所在之目錄名稱的字串。|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|如果是 DBTYPE_UDT 類型的資料行，這個屬性就是指定 UDT 定義所在之結構描述名稱的字串。|  
@@ -188,7 +188,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 介面  
  除了**ISSCommandWithParameters**介面，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端也會將新值加入至從呼叫傳回的資料列集**icolumnsrowset:: Getcolumnrowset**方法包括下列項目。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|型別|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 目錄名稱識別碼。|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 結構描述名稱識別碼。|  
@@ -213,7 +213,7 @@ ms.lasthandoff: 01/08/2018
   
  當從 C 轉換成 SQL 資料類型時，SQL_C_WCHAR、SQL_C_BINARY 和 SQL_C_CHAR 全都可以轉換成 SQL_SS_UDT。 但是請注意，當從 SQL_C_WCHAR 和 SQL_C_CHAR SQL 資料類型轉換時，二進位資料會轉換成十六進位字串。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

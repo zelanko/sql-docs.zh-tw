@@ -15,13 +15,13 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b1c445662f29241d8a2a1a547ef498f7491590b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a44f5f46a60959b38b3e8121847e0c80c1ba82b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>建立遠端 TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -81,13 +81,13 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  *user_name*  
  有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入名稱。 字元數上限為 128。  
   
- *密碼*  
+ *password*  
  登入密碼。 字元數上限為 128。  
   
  *batch_size*  
  每個批次的資料列的數目上限。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]將批次中的資料列傳送到目的地伺服器。 *Batch_size*這是一個正整數 > = 0。 預設值為 0。  
   
- 與*common_table_expression*  
+ WITH *common_table_expression*  
  指定稱為通用資料表運算式 (CTE) 的暫存具名結果集。 如需詳細資訊，請參閱[common_table_expression &#40; 與TRANSACT-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  選取\<select_criteria > 指定的資料將會填入新的遠端資料表的查詢述詞。 在 SELECT 陳述式上的資訊，請參閱[SELECT &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
@@ -129,7 +129,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
 ## <a name="metadata"></a>中繼資料  
  使用[sys.dm_pdw_dms_workers &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)檢視進度，將選取的資料複製到遠端的 SMP 伺服器。 資料列型別 PARALLEL_COPY_READER 包含這項資訊。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  使用 CREATE REMOTE TABLE[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證來連接到遠端[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體; 它不會使用 Windows 驗證。  
   
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]外部對向網路必須啟用防火牆的連線，發生例外狀況的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連接埠、 系統管理的連接埠和管理連接埠。  

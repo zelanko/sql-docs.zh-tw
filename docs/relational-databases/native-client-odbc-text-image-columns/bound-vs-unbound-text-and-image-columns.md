@@ -23,15 +23,15 @@ helpviewer_keywords:
 - image columns [ODBC]
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e511e9861b851f08080752f1d85b75c8887db5df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: faaf7ed4d573f3d8ba5ca08594211e682a18e482
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>繫結 vs。結合的文字和影像資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
  可以撰寫許多應用程式，讓沒有**文字**， **ntext**，或**映像**使用者只需向上和向下捲動資料指標中時，會顯示資料。 當使用者選取的資料列，以取得更多詳細資料時，應用程式可以接著呼叫**SQLGetData**擷取**文字**， **ntext**，或**映像**資料。 這將會阻止傳送**文字**， **ntext**，或**映像**資料的任何資料列的使用者未選取，並因此也會阻止傳送非常大量的資料。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理 Text 和 Image 資料行](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)   
  [資料指標行為](../../relational-databases/native-client-odbc-cursors/cursor-behaviors.md)  
   

@@ -14,13 +14,13 @@ ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
 caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5c2e2459a3cf95090b0ca408eceae505086b6118
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5efdde73d0b2f880d62927b9b96b3eee7fadfe5f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>SQL Server 中支援 R 的元件
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 
 Launchpad 服務只會啟動由 Microsoft 發行之信任的啟動器，或是經 Microsoft 認證符合效能和資源管理要求的啟動器。 這個名稱代表語言特有 launchers 相當直接：
 
-  + R-rlauncher.dll 初始化
+  + R -  RLauncher.dll
   + Python-PythonLauncher.dll
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務在其自有的使用者帳戶下執行。 特定語言執行階段的每個附屬處理序會繼承 Launchpad 的使用者帳戶。 如需設定及啟動列的安全性內容的詳細資訊，請參閱[安全性概觀](../../advanced-analytics/r/security-overview-sql-server-r.md)。
@@ -129,7 +129,7 @@ BxlServer 將 SQL Satellite 用於下列工作：
 8. SQL Satellite 管理與 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的通訊，並清理相關的工作物件。
 9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 將結果傳遞回用戶端。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [架構概觀](architecture-overview-sql-server-r.md)
 

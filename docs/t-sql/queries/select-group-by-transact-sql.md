@@ -35,13 +35,13 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 caps.latest.revision: "80"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 49b572a8ce91287faa4c162efa8de8e7f0113235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---group-by--transact-sql"></a>選取的群組 BY Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ GROUP BY {
   
 ## <a name="arguments"></a>引數 
  
-### <a name="column-expression"></a>*資料行運算式*  
+### <a name="column-expression"></a>*column-expression*  
 指定資料行或非彙總計算的資料行上。 此資料行可以屬於資料表、 衍生的資料表或檢視。 資料行必須出現在 FROM 子句的 SELECT 陳述式，但不需要出現在選取清單中。 
 
 如需有效運算式，請參閱[運算式](~/t-sql/language-elements/expressions-transact-sql.md)。    
@@ -347,16 +347,16 @@ GROUP BY 子句支援 GROUP BY 的所有功能具有以下語法例外 sql-2006 
 |功能|SQL Server Integration Services|SQL Server 相容性層級 100 或更高層級|相容性層級 90 的 SQL Server 2008 或更新版本。|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 彙總|不支援 WITH CUBE 或 WITH ROLLUP。|支援 WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE 或 ROLLUP。|與相容性層級 100 相同。|  
-|GROUP BY 子句中具有 CUBE 或 ROLLUP 名稱的使用者定義函數|使用者定義函數**dbo.cube (***arg1***，***.....argn***)**或**dbo.rollup (***arg1***，**...*argN***)**允許在 GROUP BY 子句。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|使用者定義函數**dbo.cube (***arg1***，**.....argn**)**或**dbo.rollup (**arg1**，***.....argn***)**不允許在 GROUP BY 子句。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 會傳回下列錯誤訊息: 「 不正確的語法，接近關鍵字 'cube' &#124;'彙總套件 '。 」<br /><br /> 若要避免這個問題，請使用 `dbo.cube` 取代 `[dbo].[cube]`，或使用 `dbo.rollup` 取代 `[dbo].[rollup]`。<br /><br /> 下列範例被可行的：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|使用者定義函數**dbo.cube (***arg1***，***.....argn*) 或**dbo.rollup (** *arg1***，***.....argn***)**允許在 GROUP BY 子句<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|不支援|支援|支援|  
-|CUBE|不支援|支援|不支援|  
-|ROLLUP|不支援|支援|不支援|  
-|總計，例如 GROUP BY ()|不支援|支援|支援|  
-|GROUPING_ID 函數|不支援|支援|支援|  
-|GROUPING 函數|支援|支援|支援|  
-|WITH CUBE|支援|支援|支援|  
-|WITH ROLLUP|支援|支援|支援|  
-|移除 WITH CUBE 或 WITH ROLLUP 的重複群組|支援|支援|支援| 
+|GROUP BY 子句中具有 CUBE 或 ROLLUP 名稱的使用者定義函數|使用者定義函數**dbo.cube (***arg1***，***.....argn***)**或**dbo.rollup (***arg1***，**...*argN * * *)** 允許在 GROUP BY 子句。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|使用者定義函數**dbo.cube (***arg1***，**.....argn**)**或**dbo.rollup (**arg1**，***.....argn***)**不允許在 GROUP BY 子句。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 會傳回下列錯誤訊息: 「 不正確的語法，接近關鍵字 'cube' &#124;'彙總套件 '。 」<br /><br /> 若要避免這個問題，請使用 `dbo.cube` 取代 `[dbo].[cube]`，或使用 `dbo.rollup` 取代 `[dbo].[rollup]`。<br /><br /> 下列範例被可行的：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|使用者定義函式 **dbo.cube (***arg1***，* * *.....argn*) 或**dbo.rollup (***arg1***，***.....argn***)**允許在 GROUP BY 子句<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUPING SETS|不支援|Supported|Supported|  
+|CUBE|不支援|Supported|不支援|  
+|ROLLUP|不支援|Supported|不支援|  
+|總計，例如 GROUP BY ()|不支援|Supported|Supported|  
+|GROUPING_ID 函數|不支援|Supported|Supported|  
+|GROUPING 函數|Supported|Supported|Supported|  
+|WITH CUBE|Supported|Supported|Supported|  
+|WITH ROLLUP|Supported|Supported|Supported|  
+|移除 WITH CUBE 或 WITH ROLLUP 的重複群組|Supported|Supported|Supported| 
  
   
 ## <a name="examples"></a>範例  
@@ -467,7 +467,7 @@ HAVING OrderDateKey > 20040000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [GROUPING_ID &#40;TRANSACT-SQL &#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
  [群組 &#40;TRANSACT-SQL &#41;](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   

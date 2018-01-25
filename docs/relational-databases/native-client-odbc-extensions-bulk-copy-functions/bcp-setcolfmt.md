@@ -1,5 +1,5 @@
 ---
-title: "bcp_setcolfmt |Microsoft 文件"
+title: bcp_setcolfmt | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c01a4e7098524e14c8198894a4f282b602cb1166
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 553681c7e0e56978f5df44b23041e52a66f129a9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,13 +53,13 @@ RETCODE bcp_setcolfmt (
  *hdbc*  
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
- *欄位*  
+ *field*  
  這是要設定屬性的序數資料行編號。  
   
  *屬性*  
  這是其中一個屬性常數。 屬性常數會在這個資料表中定義。  
   
-|屬性|值|Description|  
+|屬性|Value|Description|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|這是使用者檔案中，此資料行的資料類型。 如果與資料庫資料表中，對應資料行的資料類型不同，大量複製就會轉換資料 (如果可能的話)。<br /><br /> BCP_FMT_TYPE 參數是透過 sqlncli.h 中的 SQL Server 資料類型 Token，而非透過 ODBC C 資料類型列舉值列舉。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLCHARACTER 來指定字元字串 ODBC type SQL_C_CHAR。<br /><br /> 若要指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的預設資料表示法，將此參數設定為 0。<br /><br /> 從 SQL Server 大量複製到檔案中，當 BCP_FMT_TYPE 為 SQLDECIMAL 或 sqlnumeric 時，如果來源資料行不是**十進位**或**數值**，會使用預設有效位數和小數位數。 否則，如果來源資料行是**十進位**或**數值**，使用的有效位數和小數位數的來源資料行。|  
 |BCP_FMT_INDICATOR_LEN|INT|這是指標 (前置詞) 的位元組長度。<br /><br /> 這是資料行資料內，長度/null 指標的長度 (以位元組為單位)。 有效的指標長度值為 0 (不使用指標時)、1、2 或 4。<br /><br /> 若要指定預設大量複製指標使用率，將此參數設定為 SQL_VARLEN_DATA。<br /><br /> 這些指標會出現在任何資料正前方的記憶體中，以及所套用之資料正前方的資料檔案中。<br /><br /> 如果使用多種指定資料檔案資料行長度的方式 (例如指標和最大資料行長度，或指標和結束字元順序)，大量複製會選擇導致複製最少量資料的方式。<br /><br /> 大量複製在不透過使用者操作來調整資料格式時所產生的資料檔案，會在資料行資料長度可以改變，或資料行可以當做值接受 NULL 時包含指標。|  
@@ -115,7 +115,7 @@ RETCODE bcp_setcolfmt (
   
  如需詳細資訊，請參閱[日期和時間增強功能 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

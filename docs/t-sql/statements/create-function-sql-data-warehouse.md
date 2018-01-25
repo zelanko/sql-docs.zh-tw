@@ -16,13 +16,13 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 caps.latest.revision: "14"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69f4f470cf049deb3ce3b38a2bcb75f37265b31b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4957b8d665f9aa887a5ad4ab18a2e8441ea4cc2d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-function-sql-data-warehouse"></a>建立函式 （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -91,7 +91,7 @@ RETURNS return_data_type
  *parameter_data_type*  
  是參數資料類型。 如[!INCLUDE[tsql](../../includes/tsql-md.md)]函式、 支援的所有純量資料類型[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]允許。 時間戳記 (rowversion) 資料類型不支援的型別。  
   
- [=*預設*]  
+ [ =*default* ]  
  這是參數的預設值。 如果*預設*值定義、 可執行函式，但未指定該參數的值。  
   
  如果函數的參數有預設值，則必須在呼叫函數來擷取該預設值時指定關鍵字 DEFAULT。 這個行為與使用預存程序中具有預設值的參數不一樣，因為在預存程序中，省略參數也意味著使用預設值。  
@@ -107,7 +107,7 @@ RETURNS return_data_type
  *scalar_expression*  
  指定純量函數傳回的純量值。  
   
- **\<function_option >:: =** 
+ **\<function_option>::=** 
   
  指定此函數將會有下列其中一個或多個選項。  
   
@@ -195,7 +195,7 @@ GO
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/25ff3798-eb54-4516-9973-d8f707a13f6c)   
  [卸除函數 (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   

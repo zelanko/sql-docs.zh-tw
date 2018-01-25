@@ -25,15 +25,15 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c63c3d62d0104642953545da75b0f7fa1b988eb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,22 +59,22 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>引數  
- *權限*  
+ *permission*  
  指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 安全性實體可以拒絕的權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- 合約**::***contract_name*  
+ 合約 **:: * * * contract_name*  
  指定正在拒絕權限的合約。 範圍限定詞**::**需要。  
   
- 訊息類型**::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  指定正在拒絕權限的訊息類型。 範圍限定詞**::**需要。  
   
- 遠端服務繫結**::***remote_binding_name*  
+ 遠端服務繫結 **:: * * * remote_binding_name*  
  指定正在拒絕權限的遠端服務繫結。 範圍限定詞**::**需要。  
   
- 路由**::***route_name*  
+ ROUTE **::***route_name*  
  指定正在拒絕權限的路由。 範圍限定詞**::**需要。  
   
- 服務**::***message_type_name*  
+ SERVICE **::***message_type_name*  
  指定正在拒絕權限的服務。 範圍限定詞**::**需要。  
   
  *database_principal*  
@@ -162,7 +162,7 @@ CASCADE
 ## <a name="permissions"></a>Permissions  
  需要 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約、訊息類型、遠端服務繫結、路由或服務的 CONTROL 權限。 如果使用 AS 子句，指定的主體必須擁有要拒絕其權限的類型。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [REVOKE Service Broker 權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   

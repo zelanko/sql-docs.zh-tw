@@ -12,13 +12,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 88f096b636dba544948410f00566c8aa3eaa0a91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 10760026ef04284f6d0838af8ba81b0c7613645b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="resource-governance-for-python"></a>資源管理針對 Python
 
@@ -82,7 +82,7 @@ ms.lasthandoff: 01/08/2018
 
 萬一失控的指令碼，您可以停用所有的指令碼執行。 只要反向執行此程序，並將屬性設定`external scripts enabled`為 FALSE 或 0，執行個體上的。 這會立即停用任何外部指令碼執行。 您應該保留此選項的安全性問題，或在其中系統管理員需要立即以緩解資源問題的情況。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
 

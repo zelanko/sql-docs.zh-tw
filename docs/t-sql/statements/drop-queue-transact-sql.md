@@ -23,15 +23,15 @@ helpviewer_keywords:
 - removing queues
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c1fafebb5960563a3165e8ac00afd1dbdbfdf49
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3be4f36943d6e25bb520a28593d009e7a8373c48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DROP QUEUE <object>
  *database_name*  
  要卸除之佇列所在的資料庫名稱。 若未*database_name*提供，則預設為目前的資料庫。  
   
- *schema_name （物件）*  
+ *schema_name (object)*  
  擁有要卸除之佇列的結構描述名稱。 若未*schema_name*提供，則預設為目前使用者的預設結構描述。  
   
  *queue_name*  
@@ -78,7 +78,7 @@ DROP QUEUE ExpenseQueue ;
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [ALTER QUEUE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

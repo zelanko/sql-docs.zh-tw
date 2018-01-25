@@ -19,15 +19,15 @@ helpviewer_keywords:
 - errors [ODBC], cause information
 ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1fa0f6a84463aa331c2650ed106e322c6a15fdf9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e078b1e51d1259ff03af84a0b556318b8b36318a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC 錯誤碼)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [SQLSTATE 對應](http://go.microsoft.com/fwlink/?LinkId=89355)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [處理錯誤與訊息](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

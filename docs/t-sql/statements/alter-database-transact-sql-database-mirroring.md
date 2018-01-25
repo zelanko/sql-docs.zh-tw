@@ -19,22 +19,22 @@ helpviewer_keywords:
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b08f208ce80eb1e8c79d2e47a06fdd9f1de8a986
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 54396925abb0e8eb2d6006ffdd4048551792d6db
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (TRANSACT-SQL) 資料庫鏡像 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]改為。  
   
  控制資料庫的資料庫鏡像。 資料庫鏡像選項所指定的值會套用至資料庫的這兩個複本，而且會當做一個整體套用在資料庫鏡像工作階段上。 只有一個\<database_mirroring_option > 允許每個 ALTER DATABASE 陳述式。  
   
@@ -79,7 +79,7 @@ SET { <partner_option> | <witness_option> }
  *database_name*  
  這是要修改之資料庫的名稱。  
   
- 夥伴\<都 >  
+ PARTNER \<partner_option>  
  控制定義資料庫鏡像工作階段的容錯移轉夥伴及其行為的資料庫屬性。 部分 SET PARTNER 選項可以在任何一個夥伴上設定，但其他選項只適用於主體伺服器或鏡像伺服器。 如需詳細資訊，請參閱下面的個別 PARTNER 選項。 SET PARTNER 子句會影響資料庫的這兩個複本，不論哪個夥伴指定它，都是如此。  
   
  若要執行 SET PARTNER 陳述式，兩個夥伴的端點狀態 (STATE) 必須都設為 STARTED。 另外，也請注意，每個夥伴伺服器執行個體之資料庫鏡像端點的 ROLE 都必須設成 PARTNER 或 ALL。 如需如何指定端點資訊，請參閱[建立鏡像端點的 Windows 驗證的資料庫 &#40;TRANSACT-SQL &#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). 若要了解伺服器執行個體之資料庫鏡像端點的角色和狀態，請在這個執行個體上，使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
@@ -88,7 +88,7 @@ SET { <partner_option> | <witness_option> }
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
 ```  
   
- **\<都 >:: =**  
+ **\<partner_option> ::=**  
   
 > [!NOTE]  
 >  只有一個\<都 > 每個 SET PARTNER 子句。  
@@ -96,11 +96,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *partner_server* **'**  
  指定要在新資料庫鏡像工作階段中，做為容錯移轉夥伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之伺服器網路位址。 每個工作階段都需要兩個夥伴：一個啟動做為主體伺服器，一個啟動做為鏡像伺服器。 我們建議您將這些夥伴放在不同電腦中。  
   
- 在每個夥伴上，每個工作階段都指定一次這個選項。 起始資料庫鏡像工作階段需要兩個 ALTER DATABASE*資料庫*SET PARTNER **='***partner_server***'**陳述式. 它們的順序很重要。 首先，連接到鏡像伺服器，並指定做為主體伺服器執行個體*partner_server* (SET PARTNER **='***主體伺服器***'**). 第二，連接到主體伺服器，並指定鏡像伺服器執行個體，做為*partner_server* (SET PARTNER **='***鏡像伺服器***'**);這樣會啟動資料庫鏡像工作階段，這兩個夥伴之間。 如需詳細資訊，請參閱本主題稍後的 [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
+ 在每個夥伴上，每個工作階段都指定一次這個選項。 起始資料庫鏡像工作階段需要兩個 ALTER DATABASE*資料庫*SET PARTNER **='***partner_server***'**陳述式。 它們的順序很重要。 首先，連接到鏡像伺服器，並指定做為主體伺服器執行個體*partner_server* (SET PARTNER **='***主體伺服器***'**)。 第二，連接到主體伺服器，並指定鏡像伺服器執行個體，做為*partner_server* (SET PARTNER **='***鏡像伺服器***'**); 這會啟動資料庫鏡像工作階段，這兩個夥伴之間。 如需詳細資訊，請參閱本主題稍後的 [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
   
  值*partner_server*是伺服器網路位址。 這個值的語法如下：  
   
- TCP**://***\<系統位址>***:***\<通訊埠>*  
+ TCP**://***\<system-address>***:***\<port>*  
   
  其中  
   
@@ -108,7 +108,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
 -   *\<連接埠 >*與夥伴伺服器執行個體的鏡像端點相關聯的通訊埠編號。  
   
- 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+ 如需詳細資訊，請參閱[指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
  下列範例說明 SET PARTNER **='***partner_server***'**子句：  
   
@@ -178,7 +178,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  如需詳細資訊，請參閱 [資料庫鏡像期間可能發生的失敗](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)。  
   
- 見證\<witness_option >  
+ WITNESS \<witness_option>  
  控制定義資料庫鏡像見證的資料庫屬性。 SET WITNESS 子句會影響資料庫的這兩個複本，但您只能在主體伺服器上指定 SET WITNESS。 服務資料庫，不論其安全性設定; 如果工作階段設定見證，則需要仲裁如需詳細資訊，請參閱[仲裁： 見證如何影響資料庫可用性 &#40; 資料庫鏡像 &#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  我們建議您將見證和容錯移轉夥伴放在不同的電腦中。 有關見證的詳細資訊，請參閱[資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)。  
@@ -250,9 +250,9 @@ GO
   
      現在，`mirroring_role_desc` 的目前值是 `Mirror`。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
- [sys.database_mirroring_witnesses &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
+ [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
   
   

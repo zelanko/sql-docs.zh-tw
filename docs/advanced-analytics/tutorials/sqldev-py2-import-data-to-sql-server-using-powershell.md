@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: d39e391e494e37c63731431579e82900ef3dbeeb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 80b40209f7287a7710a9dcd8022a3dd203aa8305
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>步驟 2： 將資料匯入 SQL Server 使用 PowerShell
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
     - 名稱或位址[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]已安裝使用 Python 的機器學習服務執行個體。
     - 執行個體上之帳戶的使用者名稱和密碼。 您使用的帳戶必須具有建立資料庫、 建立資料表和預存程序，並大量載入資料至資料表的能力。 
     - 如果您未提供使用者名稱和密碼，您的 Windows 身分識別用來登入 SQL Server，而且您會提升輸入密碼。
-    - 您剛才下載之範例資料檔案的路徑和檔案名稱。 例如，使用 IPv4 位址的 `C:\temp\pysql\nyctaxi1pct.csv`
+    - 您剛才下載之範例資料檔案的路徑和檔案名稱。 例如， `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > 若要成功地載入資料時，程式庫 xmlrw.dll 必須 bcp.exe 相同資料夾中。

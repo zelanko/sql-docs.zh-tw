@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0103b63c883e1d3f9a263cf5fdb4e4ef4ca9521f
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>引數  
- *group_name* |「**預設**"  
+ *group_name* | "**default**"  
  這是現有使用者定義之工作負載群組的名稱，或是資源管理員預設工作負載群組的名稱。  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  IMPORTANCE 的資源集區範圍為本機；相同資源集區內部不同重要性的工作負載群組會彼此影響，但不會影響另一個資源集區中的工作負載群組。  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*值*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  指定單一要求可由集區中獲取的記憶體最大數量。 這個百分比相對於 MAX_MEMORY_PERCENT 所指定的資源集區大小。  
   
 > [!NOTE]  
@@ -98,7 +98,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  請注意，如果伺服器沒有足夠的實體記憶體，這兩種情況都會受限於逾時錯誤 8645。  
   
- REQUEST_MAX_CPU_TIME_SEC =*值*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  指定要求可以使用的最大 CPU 時間量 (以秒為單位)。 *值*必須是 0 或正整數。 預設設定*值*為 0，表示無限制。  
   
 > [!NOTE]  
@@ -115,7 +115,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *值*必須是正整數。 預設設定*值*，0，會使用內部計算根據查詢成本來決定最大時間。  
   
- MAX_DOP =*值*  
+ MAX_DOP =*value*  
  為平行要求指定平行處理原則的最大程度 (DOP)。 *值*必須是 0 或正整數，1 到 255。 當*值*是 0，則伺服器會選擇平行處理原則的最大程度。 這是預設值且為建議的設定。  
   
 > [!NOTE]  
@@ -136,7 +136,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  DOP 經過設定後，在授與記憶體不足的壓力下，僅能將其降低。 在授與記憶體佇列中等候時，看不到工作負載群組的重新組態。  
   
- GROUP_MAX_REQUESTS =*值*  
+ GROUP_MAX_REQUESTS =*value*  
  指定在工作負載群組中可允許執行的最大同時要求數。 *值*必須是 0 或正整數。 預設設定*值*，0，允許無限制的要求。 達到最大並行要求時，該群組中的使用者可以登入，但是會處於等候狀態，直到並行要求低於指定的值為止。  
   
  使用 { *pool_name* |「**預設**"}  
@@ -191,8 +191,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>另請參閱  
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

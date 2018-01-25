@@ -15,13 +15,13 @@ ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
 caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 522f8c8404e80943e093ebeb0a56698fa790b6c9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7db44d9c9f02618e4d95a9d3eb9dfc581438dea5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -57,13 +57,13 @@ ALTER DATABASE database_name
  自動成長 = {ON |OFF}  
  更新的自動成長選項。 自動成長是 ON，當[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]自動視適應儲存需求成長會增加複寫的資料表、 分散式的資料表，以及交易記錄檔已配置的空間。 自動成長是 OFF，當[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]傳回錯誤，如果複寫的資料表，散發資料表，或交易記錄超過大小上限設定。  
   
- REPLICATED_SIZE =*大小*[GB]  
+ REPLICATED_SIZE = *size* [GB]  
  指定新的上限 （gb） 每個要改變的資料庫中儲存所有的複寫資料表的計算節點。 如果您計劃應用裝置儲存空間，您必須 REPLICATED_SIZE 乘以應用裝置中的運算節點數目。  
   
- DISTRIBUTED_SIZE =*大小*[GB]  
+ DISTRIBUTED_SIZE = *size* [GB]  
  指定新的上限 （gb） 每個資料庫的更動在資料庫中儲存的所有分散式資料表。 大小會分佈在所有的應用裝置中的計算節點。  
   
- LOG_SIZE =*大小*[GB]  
+ LOG_SIZE = *size* [GB]  
  指定新的上限 （gb） 每個資料庫的更動在資料庫中儲存的所有交易記錄檔。 大小會分佈在所有的應用裝置中的計算節點。  
   
  加密 {ON |OFF}  
@@ -167,7 +167,7 @@ ALTER DATABASE CustomerSales
     SET ( LOG_SIZE = 10 GB );  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [建立資料庫 &#40;平行資料倉儲 &#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   

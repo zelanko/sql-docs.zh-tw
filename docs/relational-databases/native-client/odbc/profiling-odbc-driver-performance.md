@@ -22,15 +22,15 @@ helpviewer_keywords:
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ab8ca0cedf17f38b55750f06e401232ff495b0f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 92048dd38dc58683f3726fc23dcc106731eda739
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="profiling-odbc-driver-performance"></a>分析 ODBC 驅動程式效能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   連接  
   
--   Network  
+-   網路  
   
 -   Time  
   
@@ -83,7 +83,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>應用程式設定檔統計資料  
   
-|SQLPERF 欄位|描述|  
+|SQLPERF 欄位|Description|  
 |-------------------|-----------------|  
 |TimerResolution|伺服器時間的最小解析 (以毫秒為單位)。 這通常會報告為 0 (零)，而且只有在報告的數字很大時，才考慮使用。 如果伺服器時間的最小解析大於某些以計時器為基礎之統計資料的可能間隔，這些統計資料可能會擴大。|  
 |SQLidu|SQL_PERF_START 之後的 INSERT、DELETE 或 UPDATE 陳述式數目。|  
@@ -121,12 +121,12 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>時間統計資料  
   
-|SQLPERF 欄位|描述|  
+|SQLPERF 欄位|Description|  
 |-------------------|-----------------|  
 |msExecutionTime|驅動程式在 SQL_PERF_START 之後，花在處理上的累計時間，包括花在等待伺服器回覆的時間。|  
 |msNetworkServerTime|驅動程式花在等待伺服器回覆的累計時間。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [分析 ODBC 驅動程式效能的如何主題 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   

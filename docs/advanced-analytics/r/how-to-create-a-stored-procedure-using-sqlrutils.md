@@ -15,13 +15,13 @@ ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
 caps.latest.revision: "10"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3e1223ded4b8ef7107a0a565b751b31d12ff6f3e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c86b39e8c6c9aad23c9059482f1e33ec7ba3621b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>建立預存程序使用的 sqlrutils
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 
 資料框架內的物件與函式的其他所有輸入參數，皆必須是下列 R 資料類型：
 - POSIXct
-- NUMERIC
+- numeric
 - character
 - integer
 - 邏輯
@@ -89,7 +89,7 @@ R 程式碼已被清除，而且可以當做單一函式呼叫之後，您將使
 
 準備好所有輸入和輸出參數時，呼叫以`StoredProcedure`建構函式。
 
-**Usage**
+**使用方式**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 
@@ -236,7 +236,7 @@ myetl1function <- function() {
 > 
 > 雖然您不需要明確地在程式碼中開啟 ODBC 連接，但使用 **sqlrutils**時仍需要 ODBC 連接。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用 sqlrutils 產生預存程序](../../advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 

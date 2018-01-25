@@ -24,15 +24,15 @@ helpviewer_keywords:
 - WITH NO DEPENDENTS option
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e466c9be38de4706493f3d181ca1648c9027a19
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9c6156ff11476e91f13285c1db7d4cc545d5e8e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引數  
- *如果存在*  
+ *IF EXISTS*  
  **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
  只有當它已經存在有條件地卸除組件。  
@@ -80,7 +80,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 DROP ASSEMBLY Helloworld ;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [建立組件 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [ALTER ASSEMBLY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

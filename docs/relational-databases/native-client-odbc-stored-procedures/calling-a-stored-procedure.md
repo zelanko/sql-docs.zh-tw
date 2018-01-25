@@ -21,15 +21,15 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 06859de8da70eb1357802fdca1e758e1872a7f10
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 31c151ab9942e09149b6e244d4ec6eba0b9f22b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="calling-a-stored-procedure"></a>呼叫預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  用來呼叫程序的 ODBC CALL 逸出序列為：  
   
- {[**？ =**]**呼叫***procedure_name*[([*參數*] [**，**[*參數*]]...)]}  
+ {[**?=**]**call***procedure_name*[([*parameter*][**,**[*parameter*]]...)]}  
   
  其中*procedure_name*指定程序的名稱和*參數*指定程序參數。 只有使用 ODBC CALL 逸出序列的陳述式才會支援具名參數。  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
  輸入和輸入/輸出參數可以從程序呼叫省略。 如果呼叫包含括號但沒有任何參數的程序，驅動程式會引導資料來源使用第一個參數的預設值。 例如：  
   
- {**呼叫** *procedure_name***（)**}  
+ {**call** *procedure_name***( )**}  
   
  如果程序沒有任何參數，該程序可能會失敗。 如果呼叫沒有括號的程序，驅動程式不會傳送任何參數值。 例如：  
   
- {**呼叫** *procedure_name*}  
+ {**call** *procedure_name*}  
   
  在程序呼叫中可以針對輸入和輸入/輸出參數指定常值。 例如，程序 InsertOrder 有五個輸入參數。 以下對 InsertOrder 的呼叫會省略第一個參數、提供第二個參數的常值，然後將參數標記用於第三、第四和第五個參數 (參數會循序編號，從 1 這個值開始)。  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 01/08/2018
 { CALL [MyDB].[MyOwner].[My.Table] }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行預存程序](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

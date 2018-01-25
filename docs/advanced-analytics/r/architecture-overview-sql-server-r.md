@@ -14,13 +14,13 @@ ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
 caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7630d06085eaff3c5e255bacc4103dc1d9962189
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8017e0a54bef6885a6622d46ee9d2cf92af247ba
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>SQL Server 中 R 的架構概觀
 
@@ -56,7 +56,7 @@ SQL Server 會攔截所有的工作要求、 工作和使用 Windows 工作物�
 
 藉由強制執行 SQL Server 資料表、 資料庫和執行個體層級的安全性相容性界限內保留資料。 資料庫管理員可以控制誰執行 R 工作的能力，以及誰可以安裝或共用的 R 封裝的能力。 系統管理員也可以監視使用 R 指令碼，遠端或本機使用者和監視和管理所使用的資源。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [支援 R 整合的元件](new-components-in-sql-server-to-support-r.md)
 

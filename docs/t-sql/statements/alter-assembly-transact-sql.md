@@ -25,15 +25,15 @@ helpviewer_keywords:
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1a0a6da27bc534e22da2995fa592d6b430d418
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8b8918d653d6d9ff5f26588ad1626bfc62e3679d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ALTER ASSEMBLY assembly_name
  *assembly_name*  
  這是您要修改的組件名稱。 *assembly_name*必須已存在於資料庫。  
   
- 從\<client_assembly_specifier > |\<assembly_bits >  
+ FROM \<client_assembly_specifier> | \<assembly_bits>  
  將組件更新為保留其實作的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模組最新備份。 只有在沒有與指定組件相關的檔案時，才能使用這個選項。  
   
  \<client_assembly_specifier > 指定的網路或正在重新整理組件所在的本機位置。 網路位置包含電腦名稱、共用名稱，以及該共用內的路徑。 *manifest_file_name*指定包含組件資訊清單檔案的名稱。  
@@ -115,7 +115,7 @@ ALTER ASSEMBLY assembly_name
   
  如需詳細資訊，請參閱[實作的組件](../../relational-databases/clr-integration/assemblies-implementing.md)。  
   
- [卸除檔案 { *file_name*[ **，***...n*] |所有}]  
+ [卸除檔案 { *file_name*[**，* * *...n*] |所有}]  
  從資料庫移除與該組件相關聯的檔案名稱，或是所有與該組件相關聯的檔案。 如果使用底下的 ADD FILE，則會先執行 DROP FILE。 此舉可讓您取代同名的檔案。  
   
 > [!NOTE]  
@@ -221,7 +221,7 @@ ADD FILE FROM 'C:\MyClassProject\Class1.cs';
 ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [建立組件 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [卸除組件 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

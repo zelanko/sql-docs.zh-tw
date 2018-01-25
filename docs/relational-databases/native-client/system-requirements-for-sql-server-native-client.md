@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d6b8b562bb4dbcdb53326bf1a97163368b282fa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a996923fd4f5c181e2f72869b482b42a58eae094
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系統需求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,18 +75,18 @@ ms.lasthandoff: 01/08/2018
   
 |資料類型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components、MDAC 和<br /><br /> DataTypeCompatibility=80 的 SQL Server Native Client OLE DB 應用程式|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8 Kb)|udt|Udt|Varbinary|  
+|CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|image|  
-|varchar(max)|varchar|varchar|文字|  
-|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
+|varchar(max)|varchar|varchar|Text|  
+|nvarchar(max)|nvarchar|nvarchar|Ntext|  
 |xml|xml|xml|Ntext|  
 |CLR UDT (> 8Kb)|udt|varbinary|image|  
-|日期|日期|varchar|Varchar|  
+|date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   

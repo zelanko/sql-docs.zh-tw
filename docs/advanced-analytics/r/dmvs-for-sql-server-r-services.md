@@ -14,13 +14,13 @@ ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b4ed9c93c6cf4d35bcfe5c5f093f026b2a51e1ee
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: afb49793e4744afa3d18efa16bd780f28f76edf9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務 Dmv
 
@@ -138,6 +138,6 @@ Launchpad 服務下執行的個別指令碼會使用管理[Windows 作業物件]
 
 若要判斷處理序是否是在作業中執行，請使用 `IsProcessInJob` 函數。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [管理及監視機器學習服務方案](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)

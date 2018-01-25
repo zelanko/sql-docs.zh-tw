@@ -14,13 +14,13 @@ ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 707362a116d93af5f1deeb737d655af803baa8b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 93c3dcf6dc4a64d116b8a660aaafa1d7a9092531
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>使用 R 與 SQL Server 組態
 
@@ -99,7 +99,7 @@ IO 效能通常可以提升使用壓縮或單欄式資料存放區。 一般而�
 
 + [資料行存放區索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
-### <a name="memory-optimized-tables"></a>記憶體最佳化的資料表
+### <a name="memory-optimized-tables"></a>記憶體最佳化資料表
 
 Screen 鍵則記憶體已不再現代電腦的問題。 繼續改善硬體規格，它是相對較容易到達良好值的 RAM。 不過，在相同的時間，則會被比以往，更快速地產生資料，而且必須與低度延遲處理資料。
 

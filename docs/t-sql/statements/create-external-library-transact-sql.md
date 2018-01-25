@@ -20,12 +20,12 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: f52205803e3ab44e7c72808255dbe93fd61de336
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-library-transact-sql"></a>建立外部程式庫 (TRANSACT-SQL)  
 
@@ -192,6 +192,6 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 ## <a name="see-also"></a>另請參閱
 
 [ALTER 外部程式庫 (TRANSACT-SQL)](alter-external-library-transact-sql.md)  
-[卸除的外部程式庫 (TRANSACT-SQL)](drop-external-library-transact-sql.md)  
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

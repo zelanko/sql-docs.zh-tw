@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: driver performance data [ODBC]
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5391255c4e3141a2c1436d36277fb046918e48a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2c4f977e3e70579d0555715bc174a5600e42a9a9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>分析 ODBC 驅動程式效能資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  按一下記錄效能的資料來源。  
   
-4.  按一下**設定**。  
+4.  按一下  **設定**。  
   
 5.  在 Microsoft SQL Server 設定 DSN 精靈，瀏覽至包含頁面**記錄 ODBC 驅動程式統計資料記錄檔**。  
   
@@ -245,7 +245,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [分析 ODBC 驅動程式效能的如何主題 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
  [分析 ODBC 驅動程式效能](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   

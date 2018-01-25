@@ -26,15 +26,15 @@ helpviewer_keywords:
 - displaying trace flag status
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c0241e43f4d9516eefb73e65889df8944ccd018
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4f373d7cf31a4dbc53318245b8ba2800ab9e90b8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 ```  
   
 ## <a name="arguments"></a>引數  
-*trace #*  
+*trace#*  
 這是會顯示狀態的追蹤旗標編號。 如果*trace #*，而且未指定-1，會顯示所有已啟用工作階段的追蹤旗標。
   
 *n*  
@@ -68,10 +68,10 @@ WITH NO_INFOMSGS
   
 |資料行名稱|Description|  
 |---|---|
-|**指定了 TraceFlag**|追蹤旗標的名稱|  
+|**TraceFlag**|追蹤旗標的名稱|  
 |**狀態**|指出追蹤旗標是設為 ON 還是 OFF (無論是全域或工作階段)。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
 |**全域**|指出追蹤旗標是否為全域設定<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**工作階段**|指出追蹤旗標是否針對工作階段而設定<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**Session**|指出追蹤旗標是否針對工作階段而設定<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS 會傳回一個資料行代表追蹤旗標編號，以及一個資料行代表狀態。 其目的是指出追蹤旗標是 ON (1) 還是 OFF (0)。 資料行標題追蹤旗標號碼**全域追蹤旗標**或**工作階段追蹤旗標**，取決於您所檢查的全域或工作階段追蹤旗標的狀態。
   
@@ -79,7 +79,7 @@ DBCC TRACESTATUS 會傳回一個資料行代表追蹤旗標編號，以及一個
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有兩種類型的追蹤旗標：工作階段和全域。 工作階段追蹤旗標用於某個連接，而且只會在該連接顯示出來。 全域追蹤旗標是設在伺服器層級，只要是該伺服器上的連接，都看得到它們。
   
 ## <a name="permissions"></a>Permissions  
-需要 **public** 角色的成員資格。
+需要 **public** 角色中的成員資格。
   
 ## <a name="examples"></a>範例  
 下列範例會顯示目前全域啟用之所有追蹤旗標的狀態。
@@ -110,7 +110,7 @@ DBCC TRACESTATUS();
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  

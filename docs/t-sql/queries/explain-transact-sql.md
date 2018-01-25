@@ -15,13 +15,13 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 515c21cbf7874c0268eeedad0b67e0ce7cf3726d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="explain-transact-sql"></a>說明 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ EXPLAIN SQL_statement
 ```  
   
 ## <a name="arguments"></a>引數  
- *Q*  
+ *SQL_statement*  
  [!INCLUDE[DWsql](../../includes/dwsql-md.md)]所在的陳述式**解釋**會執行。 *Q*可以是任何一種命令：**選取**，**插入**，**更新**，**刪除**， **CREATE TABLE AS SELECT**，**建立遠端資料表**。  
   
 ## <a name="permissions"></a>Permissions  
@@ -68,11 +68,11 @@ EXPLAIN SQL_statement
   
 |XML 標記|摘要、 屬性和內容|  
 |-------------|--------------------------------------|  
-|\<dsql_query >|最上層的層級/文件項目。|
-|\<sql >|回應*q*。|  
-|\<params >|在此階段不使用這個標記。|  
-|\<dsql_operations >|摘要說明包含查詢的步驟，並包含查詢的成本資訊。 也包含所有`<dsql_operation>`區塊。 此標記包含整個查詢的計數資訊：<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost*是查詢執行，以毫秒的預估的時間總計。<br /><br /> *total_number_operations*是作業的查詢總數。 將平行處理，並在多個節點上執行的作業都會計算為單一作業。|  
-|\<dsql_operation >|描述內的查詢計畫的單一作業。 \<Dsql_operation > 標記包含做為屬性的作業類型：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type*是中找到之值的其中一個[查詢資料 (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c)。<br /><br /> 中的內容`\<dsql_operation>`區塊是取決於作業類型。<br /><br /> 請參閱下表。|  
+|\<dsql_query>|最上層的層級/文件項目。|
+|\<sql>|回應*q*。|  
+|\<params>|在此階段不使用這個標記。|  
+|\<dsql_operations>|摘要說明包含查詢的步驟，並包含查詢的成本資訊。 也包含所有`<dsql_operation>`區塊。 此標記包含整個查詢的計數資訊：<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost*是查詢執行，以毫秒的預估的時間總計。<br /><br /> *total_number_operations*是作業的查詢總數。 將平行處理，並在多個節點上執行的作業都會計算為單一作業。|  
+|\<dsql_operation>|描述內的查詢計畫的單一作業。 \<Dsql_operation > 標記包含做為屬性的作業類型：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type*是中找到之值的其中一個[查詢資料 (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c)。<br /><br /> 中的內容`\<dsql_operation>`區塊是取決於作業類型。<br /><br /> 請參閱下表。|  
   
 |作業類型|內容|範例|  
 |--------------------|-------------|-------------|  

@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 357dab163aca094928f5c417c605dcb699c922b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4edf3d8f20cc3705a6303d55f471dfa74c250f74
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +71,13 @@ ALTER RESOURCE POOL { pool_name | "default" }
 > [!NOTE]  
 >  預先定義的工作負載群組和資源集區都會使用小寫名稱，例如 "default"。 如果是使用區分大小寫之定序的伺服器，則應該將此列入考量。 具有不區分大小寫之定序 (如 SQL_Latin1_General_CP1_CI_AS) 的伺服器會將 "default" 和 "Default" 視為相同。  
   
- MIN_CPU_PERCENT =*值*  
+ MIN_CPU_PERCENT =*value*  
  當 CPU 出現競爭時，為在資源集區中的所有要求，指定保證平均 CPU 頻寬。 *值*是預設值為 0 的整數。 允許的範圍*值*是從 0 到 100。  
   
- MAX_CPU_PERCENT =*值*  
+ MAX_CPU_PERCENT =*value*  
  當出現 CPU 競爭時，指定所有要求在資源集區中將會接收的最大平均 CPU 頻寬。 *值*是預設值為 100 的整數。 允許的範圍*值*是從 1 到 100 之間。  
   
- CAP_CPU_PERCENT =*值*  
+ CAP_CPU_PERCENT =*value*  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  資源集區中指定的目標最大 CPU 容量的要求。 *值*是預設值為 100 的整數。 允許的範圍*值*是從 1 到 100 之間。  
@@ -102,18 +102,18 @@ INNER JOIN sys.dm_os_schedulers AS sc
       AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*值*  
+ MIN_MEMORY_PERCENT =*value*  
  指定為此資源集區所保留的最小記憶體數量 (不與其他資源集區共享)。 *值*是預設值為 0 的整數。 允許的範圍*值*是從 0 到 100。  
   
- MAX_MEMORY_PERCENT =*值*  
+ MAX_MEMORY_PERCENT =*value*  
  指定在此資源集區中，可供要求所用的伺服器記憶體總量。 *值*是預設值為 100 的整數。 允許的範圍*值*是從 1 到 100 之間。  
   
- MIN_IOPS_PER_VOLUME =*值*  
+ MIN_IOPS_PER_VOLUME =*value*  
  **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定要為資源集區保留之每個磁碟區的每秒 I/O 作業數 (IOPS) 最小值。 允許的範圍*值*是從 0 到 2 ^31-1 (2147483647)。 指定 0 表示集區沒有最小臨界值。  
   
- MAX_IOPS_PER_VOLUME =*值*  
+ MAX_IOPS_PER_VOLUME =*value*  
  **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定要允許資源集區使用之每個磁碟區的每秒 I/O 作業數 (IOPS) 最大值。 允許的範圍*值*是從 0 到 2 ^31-1 (2147483647)。 指定 0 可為集區設定無限的臨界值。 預設值是 0。  
@@ -174,7 +174,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   

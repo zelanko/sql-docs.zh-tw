@@ -16,13 +16,13 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 68cdce96ae6c8e6f98b3c6d922101c6f830ff208
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 429c2dc727d844c35943fa599e6fbcb911df04ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>建立 TABLE AS SELECT （Azure SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -80,7 +80,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 <a name="arguments-bk"></a>
   
 ## <a name="arguments"></a>引數  
-如需詳細資訊，請參閱[引數 > 一節](https://msdn.microsoft.com/library/mt203953/#Arguments)在 CREATE TABLE 中。  
+如需詳細資訊，請參閱 [引數 區段](https://msdn.microsoft.com/library/mt203953/#Arguments) 中建立資料表。  
 
 <a name="column-options-bk"></a>
 
@@ -94,7 +94,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 
 ### <a name="table-distribution-options"></a>資料表分佈選項
 
-`DISTRIBUTION` = `HASH`( *distribution_column_name* ) |ROUND_ROBIN |複寫      
+`DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
 CTAS 陳述式需要散發選項，而且沒有預設值。 這是不同於建立資料表具有預設值。 
 
 如需詳細資訊，以及了解如何選擇最佳散發資料行，請參閱[資料表分佈選項](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions)> 一節中建立的資料表。 
@@ -111,10 +111,10 @@ CTAS 陳述式會建立非資料分割的資料表根據預設，即使已分割
 ### <a name="select-options"></a>選取的選項
 Select 陳述式是 CTAS 與建立資料表之間的基本差異。  
 
- `WITH`*common_table_expression*  
+ `WITH` *common_table_expression*  
  指定稱為通用資料表運算式 (CTE) 的暫存具名結果集。 如需詳細資訊，請參閱[common_table_expression &#40; 與TRANSACT-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- `SELECT`*select_criteria*  
+ `SELECT` *select_criteria*  
  新的 SELECT 陳述式的結果資料表中填入。 *select_criteria*是判斷哪些資料来複製到新資料表的 SELECT 陳述式的主體。 SELECT 陳述式的相關資訊，請參閱[SELECT &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
   
 <a name="permissions-bk"></a>  
@@ -827,7 +827,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 
 您可以因此看到類型一致性和維護上 CTAS 的 null 屬性屬性是很好的工程最佳作法。 它有助於維護您的計算的完整性，並且也可確保資料分割切換，就可能。
  
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   

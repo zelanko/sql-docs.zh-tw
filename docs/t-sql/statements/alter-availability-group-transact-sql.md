@@ -26,13 +26,13 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 caps.latest.revision: "152"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d9f18ee709fde7c9f239b08f553eaf43fad6e9d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ ALTER AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *群組名稱*  
+ *group_name*  
  指定新的可用性群組名稱。 *group_name*必須是有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別碼，而且必須是唯一的 WSFC 叢集中的所有可用性群組。  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {主要 |SECONDARY_ONLY |次要 |無}  
@@ -190,16 +190,16 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  若要檢視現有的可用性群組的自動備份喜好設定，請選取**automated_backup_preference**或**automated_backup_preference_desc**資料行[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)目錄檢視。 此外， [sys.fn_hadr_backup_is_preferred_replica &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)可用來判斷慣用的備份複本。  此函數永遠都會針對至少其中一個複本傳回 1，即使當 `AUTOMATED_BACKUP_PREFERENCE = NONE` 時亦然。  
   
- FAILURE_CONDITION_LEVEL  **=**  {1 | 2 |**3** | 4 | 5}  
+ FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
  指定哪一個失敗狀況將會觸發這個可用性群組的自動容錯移轉。 FAILURE_CONDITION_LEVEL 群組層級設定，但卻設定成同步認可可用性模式的可用性複本上才相關 (AVAILIBILITY_MODE  **=**  SYNCHRONOUS_COMMIT)。 此外，失敗狀況可以觸發自動容錯移轉只有當主要和次要複本設定成自動容錯移轉模式 (FAILOVER_MODE  **=** 自動)，而且次要複本是目前與主要複本同步處理。  
   
  只有主要複本上才支援。  
   
  失敗狀況層級 (1–5) 的範圍從最低限制 (層級 1) 到最高限制 (層級 5)。 給定的狀況層級包含所有較少限制的層級。 因此，最嚴格的狀況層級 5 包含四個較少限制的狀況層級 (1-4)，層級 4 則包含層級 1-3，依此類推。 下表描述與每個層級對應的失敗狀況。  
   
-|層級|失敗狀況|  
+|Level|失敗狀況|  
 |-----------|-----------------------|  
-|@shouldalert|指定在發生以下任何情況時應該起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務關閉。<br /><br /> 由於未從伺服器執行個體收到 ACK，所以用於連接到 WSFC 叢集的可用性群組租用已到期。 如需詳細資訊，請參閱 [How It Works: SQL Server Always On Lease Timeout](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)(運作方式：SQL Server AlwaysOn 租用逾時)。|  
+|1|指定在發生以下任何情況時應該起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務關閉。<br /><br /> 由於未從伺服器執行個體收到 ACK，所以用於連接到 WSFC 叢集的可用性群組租用已到期。 如需詳細資訊，請參閱 [How It Works: SQL Server Always On Lease Timeout](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)(運作方式：SQL Server AlwaysOn 租用逾時)。|  
 |2|指定在發生以下任何情況時應該起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體未連接到叢集，而且已超出使用者指定之可用性群組的 HEALTH_CHECK_TIMEOUT 臨界值。<br /><br /> 可用性複本處於失敗狀態。|  
 |3|指定應該在嚴重 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部錯誤發生時起始自動容錯移轉，例如執行緒同步鎖定遭到遺棄、嚴重的寫入存取違規或是傾印過多。<br /><br /> 這是預設行為。|  
 |4|指定應該在發生中度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部錯誤時起始自動容錯移轉，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部資源集區中持續的記憶體不足狀況。|  
@@ -249,7 +249,7 @@ ALTER AVAILABILITY GROUP group_name
   
  您必須將每個新的次要複本聯結至可用性群組。 如需詳細資訊，請參閱本節稍後的 JOIN 選項描述。  
   
- \<臨界點 >  
+ \<server_instance>  
  指定的執行個體的位址[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也就是針對複本主機。 此位址格式取決於執行個體為預設執行個體還是具名執行個體，以及它是獨立的執行個體還是容錯移轉叢集執行個體 (FCI)。 其語法如下：  
   
  { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
@@ -263,7 +263,7 @@ ALTER AVAILABILITY GROUP group_name
  這是用來存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集的網路名稱。 如果伺服器執行個體當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉夥伴來參與，則使用它。 執行 SELECT [@@SERVERNAME ](../../t-sql/functions/servername-transact-sql.md)在 FCI 上伺服器執行個體傳回它的完整 '*FCI_network_name*[\\*instance_name*]' 字串 (即完整複本名稱）。  
   
  *instance_name*  
- 是的執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所裝載*系統名稱*或*FCI_network_name*且具有啟用 Always On。 如果是預設伺服器執行個體， *instance_name* 為選擇性。 執行個體名稱不區分大小寫。 在獨立伺服器執行個體，這個值名稱等同於所執行 SELECT 傳回的值[@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)。  
+ 是的執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所裝載*系統名稱*或*FCI_network_name*且具有啟用 Always On。 如果是預設伺服器執行個體，*instance_name* 為選擇性。 執行個體名稱不區分大小寫。 在獨立伺服器執行個體，這個值名稱等同於所執行 SELECT 傳回的值[@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)。  
   
  \  
  只有當指定時，才使用分隔符號*instance_name*，以便將它從*系統名稱*或*FCI_network_name*。  
@@ -273,9 +273,9 @@ ALTER AVAILABILITY GROUP group_name
  ENDPOINT_URL ='TCP: / /*系統位址*:*連接埠*'  
  指定的 URL 路徑[資料庫鏡像端點](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)的執行個體上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將要裝載您要加入或修改之可用性複本。  
   
- ENDPOINT_URL 在 ADD REPLICA ON 子句中是必要的，而在 MODIFY REPLICA ON 子句中則是選擇性。  如需詳細資訊，請參閱 [在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)設定伺服器執行個體時常見的問題。  
+ ENDPOINT_URL 在 ADD REPLICA ON 子句中是必要的，而在 MODIFY REPLICA ON 子句中則是選擇性。  如需詳細資訊，請參閱[在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)。  
   
- **'**TCP**://***系統位址***:***連接埠***'**  
+ **'**TCP**://***system-address***:***port***'**  
  指定 URL 以指定端點 URL 或唯讀的路由 URL。 URL 參數如下所示：  
   
  *system-address*  
@@ -330,7 +330,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  指定手動植入 （預設值）。 此方法需要您在主要複本上建立資料庫的備份，並手動將次要複本上的該備份還原。  
   
- BACKUP_PRIORITY**=***n*  
+ BACKUP_PRIORITY **=***n*  
  指定在這個複本上執行備份的優先權 (相對於相同可用性群組中的其他複本)。 這個值是 0 到 100 範圍之間的整數。 這些值具有以下意義：  
   
 -   1..100 表示可以選擇可用性複本來執行備份。 1 表示最低優先權，100 表示最高優先權。 如果 BACKUP_PRIORITY = 1，則只有當目前沒有更高優先權的可用性複本可用時，才會選擇此可用性複本來執行備份。  
@@ -391,7 +391,7 @@ ALTER AVAILABILITY GROUP group_name
   
  READ_ONLY_ROUTING_LIST 值如下：  
   
- \<臨界點 >  
+ \<server_instance>  
  針對以次要角色執行時，可讀取之次要複本的可用性複本，指定其主機之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的位址。  
   
  使用逗號分隔清單指定可能裝載可讀取之次要複本的所有伺服器執行個體。 唯讀的路由將遵循清單中指定伺服器執行個體的順序。 如果您將複本的主機伺服器執行個體包含在複本的唯讀路由清單中，將此伺服器執行個體放在清單結尾通常是很好的作法，讓讀取意圖的連接通往次要複本 (如果有一個可用的次要複本的話)。  
@@ -401,7 +401,7 @@ ALTER AVAILABILITY GROUP group_name
  無  
  指定當此可用性複本是主要複本時，將不支援唯讀路由。 這是預設行為。 搭配 MODIFY REPLICA ON 使用時，此值會停用現有的清單 (如果有的話)。  
   
- SESSION_TIMEOUT  **=** *秒*  
+ SESSION_TIMEOUT **= * * * 秒*  
  指定工作階段逾時期限 (以秒為單位)。 如果您沒有指定這個選項，依預設，這個期間是 10 秒。 最小值是 5 秒。  
   
 > [!IMPORTANT]  
@@ -427,7 +427,7 @@ ALTER AVAILABILITY GROUP group_name
   
  只有在尚未聯結至可用性群組的次要複本上支援。  
   
- 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
+ 如需詳細資訊，請參閱[將次要複本聯結至可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
  FAILOVER  
  起始可用性群組的手動容錯移轉，而不會讓連接的次要複本遺失資料。 您輸入容錯移轉目標容錯移轉命令所在的複本稱為。  容錯移轉目標將會接管主要角色，並復原每個資料庫的副本，然後讓這兩個資料庫連線，做為新的主要資料庫。 之前的主要複本會同時轉換到次要角色，且其資料庫會變成次要資料庫，並立即遭到暫停。 您可能可以透過一連串的失敗，來回切換這些角色。  
@@ -452,7 +452,7 @@ ALTER AVAILABILITY GROUP group_name
   
  如需限制的資訊，必要條件和建議的強制容錯移轉以及強制容錯移轉的影響，對先前主要資料庫在可用性群組中，請參閱[執行強制手動容錯移轉的可用性群組 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **'***dns_name***' (** \<add_listener_option > **)**  
+ ADD LISTENER **‘***dns_name***’(** \<add_listener_option> **)**  
  為這個可用性群組定義新的可用性群組接聽程式。 只有主要複本上才支援。  
   
 > [!IMPORTANT]  
@@ -463,7 +463,7 @@ ALTER AVAILABILITY GROUP group_name
 >  -   要求網路管理員將接聽程式的 IP 位址保留為專用。  
 > -   將接聽程式的 DNS 主機名稱提供給應用程式開發人員，以便在要求與這個可用性群組進行用戶端連接時，用於連接字串中。  
   
- *dns 名稱*  
+ *dns_name*  
  指定可用性群組接聽程式的 DNS 主機名稱。 接聽程式的 DNS 名稱在網域和 NetBIOS 中都必須是唯一的。  
   
  *dns_name*是字串值。 此名稱只能包含英數字元、虛線 (-) 和連字號 (_) (順序不拘)。 DNS 主機名稱不區分大小寫。 長度上限是 63 個字元。  
@@ -476,15 +476,15 @@ ALTER AVAILABILITY GROUP group_name
  在加入可用性群組  
  加入*分散式的可用性群組*。 當您建立分散式的可用性群組時，可用性群組建立所在的叢集上為主要可用性群組。 聯結分散式的可用性群組之可用性群組是次要可用性群組。  
   
- \<ag_name >  
+ \<ag_name>  
  指定名稱的可用性群組會組成一個分散式的可用性群組的一半。  
   
- 接聽程式**='**TCP**://***系統位址***:***連接埠***'**  
+ LISTENER **='**TCP**://***system-address***:***port***'**  
  指定可用性群組相關聯的接聽程式的 URL 路徑。  
   
  接聽程式子句是必要的。  
   
- **'**TCP**://***系統位址***:***連接埠***'**  
+ **'**TCP**://***system-address***:***port***'**  
  指定的 URL 相關聯的可用性群組接聽程式。 URL 參數如下所示：  
   
  *system-address*  
@@ -533,10 +533,10 @@ ALTER AVAILABILITY GROUP group_name
  拒絕建立任何資料庫  
  移除可用性群組能夠建立代表主要複本的資料庫。  
   
- \<add_listener_option >  
+ \<add_listener_option>  
  ADD LISTENER 可接受下列其中一個選項：  
   
- 使用 DHCP [ON { **('***four_part_ipv4_address***'、'***four_part_ipv4_mask***')** }]  
+ WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
  指定可用性群組接聽程式將會使用動態主機設定通訊協定 (DHCP)。  或者，使用 ON 子句以識別將建立此接聽程式的網路。 DHCP 受限於單一子網路，這個子網路用於可用性群組中主控可用性複本的每個伺服器執行個體。  
   
 > [!IMPORTANT]  
@@ -546,7 +546,7 @@ ALTER AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- IP **(** { **('***four_part_ipv4_address***'、'***four_part_ipv4_mask* **')** | **('***ipv6_address***')** } [ **，** ... *n*  ] **)** [ **，**連接埠 **=**  *listener_port*]  
+ WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
  指定可用性群組接聽程式將使用一個或多個靜態 IP 位址，而不使用 DHCP。 若要建立跨多個子網路的可用性群組，接聽程式組態中每個子網路都需要一個靜態 IP 位址。 對於給定的子網路，靜態 IP 位址可以是 IPv4 位址或 IPv6 位址。 請與網路系統管理員連絡以取得將主控新可用性群組的可用性複本之每個子網路的靜態 IP 位址。  
   
  例如：  
@@ -562,23 +562,23 @@ ALTER AVAILABILITY GROUP group_name
  *ipv6_address*  
  指定可用性群組接聽程式的 IPv6 位址。 例如， `2001::4898:23:1002:20f:1fff:feff:b3a3`。  
   
- 連接埠 **=**  *listener_port*  
+ PORT **=** *listener_port*  
  指定的連接埠號碼 —*listener_port*，WITH IP 子句所指定的可用性群組接聽程式所使用。 PORT 為選擇性。  
   
  支援預設通訊埠編號 1433。 但是，如果您有安全考量，我們建議您使用不同的通訊埠編號。  
   
  例如： `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **'***dns_name***' (** \<modify_listener_option > **)**  
+ MODIFY LISTENER **‘***dns_name***’(** \<modify_listener_option> **)**  
  修改這個可用性群組的現有可用性群組接聽程式。 只有主要複本上才支援。  
   
- \<modify_listener_option >  
+ \<modify_listener_option>  
  MODIFY LISTENER 可接受下列其中一個選項：  
   
- 新增 IP { **('***four_part_ipv4_address***'、'***four_part_ipv4_mask***')**  |  **('**dns_name*ipv6_address***')** }  
+ 新增 IP { **('***four_part_ipv4_address***'、'***four_part_ipv4_mask***')** | **('**dns_name*ipv6_address***')**}  
  將指定的 IP 位址加入至可用性群組接聽程式所指定*dns_name*。  
   
- 連接埠 **=**  *listener_port*  
+ PORT **=** *listener_port*  
  請參閱本節稍早有關這個引數的描述。  
   
  重新啟動接聽程式**'***dns_name***'**  
@@ -622,12 +622,12 @@ ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [建立可用性群組 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [卸除可用性群組 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
- [sys.availability_replicas &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
- [sys.availability_groups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [疑難排解 Always On 可用性群組組態 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  

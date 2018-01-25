@@ -24,13 +24,13 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 caps.latest.revision: "30"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab36ee612c3e559bf13db948c128ea6428063ae
-ms.sourcegitcommit: 3cc7ffde800b451923c523fd549e8f4b4994f052
+ms.openlocfilehash: 97381b5381491b98c81a6863b3cfcdc6a340c79e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-transact-sql"></a>建立外部資料表 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -159,12 +159,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |real|Single|float|FloatWritable||  
 |money|Decimal|double|DoubleWritable||  
 |smallmoney|Decimal|double|DoubleWritable||  
-|nchar|字串<br /><br /> Char]|string|text||  
+|NCHAR|字串<br /><br /> Char]|string|text||  
 |nvarchar|字串<br /><br /> Char]|string|Text||  
 |char|字串<br /><br /> Char]|string|Text||  
 |varchar|字串<br /><br /> Char]|string|Text||  
-|binary|Byte[]|binary|BytesWritable|適用於 Hive 0.8 和更新版本。|  
-|varbinary|Byte[]|binary|BytesWritable|適用於 Hive 0.8 和更新版本。|  
+|BINARY|Byte[]|BINARY|BytesWritable|適用於 Hive 0.8 和更新版本。|  
+|varbinary|Byte[]|BINARY|BytesWritable|適用於 Hive 0.8 和更新版本。|  
 |date|DateTime|timestamp|TimestampWritable||  
 |smalldatetime|DateTime|timestamp|TimestampWritable||  
 |datetime2|DateTime|timestamp|TimestampWritable||  
@@ -172,7 +172,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |time|TimeSpan|timestamp|TimestampWritable||  
 |decimal|Decimal|decimal|BigDecimalWritable|適用於 Hive0.11 和更新版本。|  
   
- 位置 = '*folder_or_filepath*'  
+ LOCATION =  '*folder_or_filepath*'  
  指定 Hadoop 或 Azure blob 儲存體中的資料夾或檔案路徑和檔案名稱的實際資料。 位置開始在根資料夾中。根資料夾是在外部資料來源中指定的資料位置。  
   
  如果您指定的資料夾位置，從外部資料表選取的 PolyBase 查詢會擷取檔案資料夾和其所有子資料夾。 就像 Hadoop，PolyBase 不會傳回隱藏的資料夾。 它也不會傳回的檔案的檔案名稱開頭為底線 (_) 或句號 （.）。  
@@ -192,7 +192,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  拒絕選項  
  您可以指定拒絕參數，以決定如何處理 PolyBase*中途*擷取外部資料來源會加以記錄。 資料錄會被視為 '中途' 是否其實際的資料類型或資料行數目不相符的外部資料表的資料行定義。  
   
- 當您不要指定或變更拒絕的值時，PolyBase 會使用預設值。 拒絕參數資訊儲存為其他的中繼資料，當您使用 CREATE EXTERNAL TABLE 陳述式建立外部資料表。   當未來的 SELECT 陳述式或選取 INTO SELECT 陳述式會從外部資料表選取資料時，PolyBase 將使用拒絕選項，來判斷實際的查詢失敗之前可以被拒絕的資料列的百分比的數字。 執行個體時提供 SQL Server 登入。 查詢會傳回 （部分） 的結果，直到超過拒絕臨界值;就會失敗並出現適當的錯誤訊息。  
+ 當您不要指定或變更拒絕的值時，PolyBase 會使用預設值。 拒絕參數資訊儲存為其他的中繼資料，當您使用 CREATE EXTERNAL TABLE 陳述式建立外部資料表。   當未來的 SELECT 陳述式或選取 INTO SELECT 陳述式會從外部資料表選取資料時，PolyBase 將使用拒絕選項，來判斷實際的查詢失敗之前可以被拒絕的資料列的百分比的數字。 。 查詢會傳回 （部分） 的結果，直到超過拒絕臨界值;就會失敗並出現適當的錯誤訊息。  
   
  REJECT_TYPE =**值**| 百分比  
  將釐清是否 REJECT_VALUE 選項指定為常值或百分比。  
@@ -317,7 +317,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ## <a name="locking"></a>鎖定  
  共用 SCHEMARESOLUTION 物件上的鎖定。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  外部資料表的資料檔案會儲存在 Hadoop 或 Azure blob 儲存體。 這些資料檔案建立和管理您自己的處理程序。 您必須負責管理外部資料的安全性。  
   
 ## <a name="examples"></a>範例  
@@ -559,7 +559,7 @@ FROM ClickStream
 ;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [常見的中繼資料的查詢範例 (SQL Server PDW)](http://msdn.microsoft.com/en-us/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   

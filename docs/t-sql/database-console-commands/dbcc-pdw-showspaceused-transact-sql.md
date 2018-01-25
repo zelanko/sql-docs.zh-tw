@@ -1,5 +1,5 @@
 ---
-title: "DBCC PDW_SHOWSPACEUSED (TRANSACT-SQL) |Microsoft 文件"
+title: DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: 
@@ -16,15 +16,15 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ce89806ad869f18333d535402c1d112ae5873de
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8c564a6debb9c110cb41f8fc90a7cc1c0c5a01f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (TRANSACT-SQL)
+# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 顯示的資料列、 保留的磁碟空間和用於特定的資料表，或所有資料表中的磁碟空間數目[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫。
@@ -95,7 +95,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 DBCC PDW_SHOWSPACEUSED;  
 ```  
  ## <a name="see-also"></a>另請參閱
-[DBCC PDW_SHOWEXECUTIONPLAN &#40;TRANSACT-SQL &#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
 [DBCC PDW_SHOWPARTITIONSTATS &#40;TRANSACT-SQL &#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
 
   

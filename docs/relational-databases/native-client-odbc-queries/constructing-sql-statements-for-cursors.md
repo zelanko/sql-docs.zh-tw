@@ -20,15 +20,15 @@ helpviewer_keywords:
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e15452378461c3799d82b3a204bda9c3893dcd5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 88b1652b77827fc00fed7d396ccaf72a06a6a585
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>建構資料指標的 SQL 陳述式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.lasthandoff: 01/08/2018
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會使用伺服器資料指標來實作 ODBC 規格中定義的資料指標功能。 ODBC 應用程式使用中控制資料指標行為[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定不同的陳述式屬性。 下面是這些屬性及其預設值。  
   
-|attribute|預設|  
+|Attribute|預設值|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
 |SQL_ATTR_CURSOR_SCROLLABLE|SQL_NONSCROLLABLE|  
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_ATTR_ROW_ARRAY_SIZE|@shouldalert|  
+|SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
  在執行 SQL 陳述式時，這些選項設定為其預設值時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式不使用伺服器資料指標來實作結果集; 不過，它會使用預設結果集。 如果任何這些選項在執行 SQL 陳述式時，變更其預設值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式會嘗試使用伺服器資料指標來實作結果集。  
   
@@ -108,7 +108,7 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
   
  收到這些錯誤的 ODBC 應用程式必須將所有資料指標陳述式屬性重設為其預設值，然後再嘗試執行此陳述式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行查詢 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

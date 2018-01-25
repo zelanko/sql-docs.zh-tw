@@ -21,15 +21,15 @@ helpviewer_keywords:
 - native data access [SQL Server Native Client]
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
 caps.latest.revision: "66"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a60ee91484043192ee6998266b04f9b73b9f5424
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 80e90fe4e92edb1cc3cd7dd60e8f948b00cf4377
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 程式設計
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/08/2018
  [SQL Server Native Client 功能](../../relational-databases/native-client/features/sql-server-native-client-features.md)  
  描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 所支援的功能。  
   
- [使用 SQL Server Native Client 建置應用程式](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [使用 SQL Server Native Client 建立應用程式](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
  提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 開發的概觀，包括與 Windows DAC 的差異、所使用的元件，以及如何搭配 ADO 使用。  
   
  本章節也會討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 安裝和部署，包括如何轉散發 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 程式庫。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/08/2018
  [SQL Server Native Client 錯誤](http://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
  包含與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 相關聯的執行階段錯誤主題。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [從 SQL Server 2005 Native Client 將應用程式更新](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
  [ODBC 使用說明主題](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 的使用說明主題](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  

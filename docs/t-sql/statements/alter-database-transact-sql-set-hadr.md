@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE SET HADR (TRANSACT-SQL) |Microsoft 文件"
+title: ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a06e868a26e0da160e70e7f2923496e73f136ff7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a601a5f93f7a922228232c8ef4a91b5775eded91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (TRANSACT-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ ALTER DATABASE database_name
  SET HADR  
  在指定的資料庫上執行所指定的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 命令。  
   
- {可用性群組 **=**  *group_name* |OFF}  
+ {可用性群組 **= * * * group_name* |OFF}  
  從指定的可用性群組中加入或移除可用性資料庫，方法如下：  
   
- *群組名稱*  
+ *group_name*  
  將次要複本 (由執行此命令的伺服器執行個體所主控) 上指定的資料庫，聯結到 group_name 所指定的可用性群組中。  
   
  此作業的必要條件如下：  
@@ -81,7 +81,7 @@ ALTER DATABASE database_name
     > [!NOTE]  
     >  若要將資料庫加入至可用性群組中，連接到裝載主要複本的伺服器執行個體，並使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name*將資料庫加入*database_name*陳述式。  
   
- 如需詳細資訊，請參閱 [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
+ 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
  OFF  
  從可用性群組中移除指定的次要資料庫。  
@@ -131,7 +131,7 @@ ALTER DATABASE database_name
 ## <a name="restrictions"></a>限制  
  在交易與批次之外執行 ALTER DATABASE。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要資料庫的 ALTER 權限。 將資料庫聯結至可用性群組需要的成員資格**db_owner**固定的資料庫角色。  
@@ -146,10 +146,10 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 > [!NOTE]  
 >  若要查看內容中使用的這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，請參閱 [建立可用性群組和 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [建立可用性群組 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [AlwaysOn 可用性群組 &#40; 的概觀SQL Server &#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [疑難排解 AlwaysOn 可用性群組組態 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   

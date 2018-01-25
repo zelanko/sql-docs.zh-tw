@@ -25,15 +25,15 @@ helpviewer_keywords:
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23ac916dccb2f8d4c6511f9e672aa07834001cad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0d36f0e25c0f5959053e028cdfc95babf69c4e48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ DBCC INPUTBUFFER 會傳回含有下列資料行的資料列集。
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar （30)**|事件類型。 這可能是**RPC 事件**或**語言事件**。 輸出會是**無事件**時偵測到任何的最後一個事件。|  
+|**EventType**|**nvarchar(30)**|事件類型。 這可能是**RPC 事件**或**語言事件**。 輸出會是**無事件**時偵測到任何的最後一個事件。|  
 |**參數**|**smallint**|0 = 文字<br /><br /> 1-  *n*  = 參數|  
 |**EventInfo**|**nvarchar(4000)**|如**EventType**是 RPC， **EventInfo**只包含程序名稱。 如**EventType**的語言，就會顯示事件的前 4000 個字元。|  
   
@@ -123,9 +123,9 @@ COMMIT TRAN;
 DBCC INPUTBUFFER (52);  
 ```  
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-[sys.dm_exec_input_buffer &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
+[sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   

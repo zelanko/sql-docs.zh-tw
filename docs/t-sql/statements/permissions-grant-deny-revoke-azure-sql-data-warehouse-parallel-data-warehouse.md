@@ -16,13 +16,13 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a21ee8a4a525e2b8c522de140a3f482915cdb361
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限： GRANT、 DENY、 REVOKE （Azure SQL 資料倉儲，Parallel Data Warehouse）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -86,9 +86,9 @@ REVOKE
   
  ON [ \<class_type >::]*安全* **ON**子句描述安全性實體的參數，來授與、 拒絕或撤銷的權限。  
   
- \<class_type > 安全性實體的類別類型。 這可以是**登入**，**資料庫**，**物件**，**結構描述**，**角色**，或**使用者**. 權限也可授與**伺服器***class_type*，但**伺服器**未指定這些權限。 **資料庫**未指定的權限時包含這個字**資料庫**(例如**ALTER ANY DATABASE**)。 若未*class_type*指定並不限於伺服器或資料庫類別的權限類型，此類別會被假設為**物件**。  
+ \<class_type > 安全性實體的類別類型。 這可以是**登入**，**資料庫**，**物件**，**結構描述**，**角色**，或**使用者**. 權限也可授與 **SERVER * * * class_type*，但**伺服器**未指定這些權限。 **資料庫**未指定的權限時包含這個字**資料庫**(例如**ALTER ANY DATABASE**)。 若未*class_type*指定並不限於伺服器或資料庫類別的權限類型，此類別會被假設為**物件**。  
   
- *安全性實體*  
+ *securable*  
  拒絕或撤銷的權限登入、 資料庫、 資料表、 檢視、 結構描述、 程序、 角色或要授與，使用者的名稱。 物件名稱可以使用三部分命名規則中所述來指定[TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  若要*主體*[ **，**...*n* ]  
@@ -230,7 +230,7 @@ REVOKE
   
 -   DELETE  
   
--   EXECUTE  
+-   執行 CREATE 陳述式之前，請先執行  
   
 -   INSERT  
   

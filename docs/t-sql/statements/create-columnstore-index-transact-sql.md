@@ -32,13 +32,13 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 caps.latest.revision: "76"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -123,7 +123,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX
   
 如果資料表有叢集資料行存放區索引，您可以指定相同的名稱為現有的索引，或您可以使用 DROP EXISTING 選項來指定新名稱。  
   
-ON [*database_name*。 [*schema_name* ]。 | *schema_name* 。 ] *table_name*  
+ON [*database_name*。 [*schema_name* ] . | *schema_name* 。 ] *table_name*  
    指定要儲存為叢集資料行存放區索引之資料表的單部分、兩部分或三部分名稱。 如果資料表是堆積或叢集的索引的資料表會從資料列存放區轉換為資料行存放區。 如果資料表已經是資料行存放區，此陳述式會重建叢集資料行存放區索引。  
   
 取代所有提及的  
@@ -171,7 +171,7 @@ ON
    *filegroup_name*  
    指定用以儲存叢集資料行存放區索引的檔案群組。 如果未指定位置，且資料表未分割，則索引會使用與基礎資料表或檢視相同的檔案群組。 此檔案群組必須已存在。  
 
-   **「**預設**"**  
+   **"**default**"**  
    若要在預設檔案群組上建立索引，使用 「 預設 」 或 [default]。  
   
    如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 QUOTED_IDENTIFIER 的預設值是 ON。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
@@ -182,11 +182,11 @@ ON
 *index_name*  
    指定索引的名稱。 *index_name*必須是唯一在資料表中，但並沒有資料庫內是唯一的。 索引名稱必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)。  
   
- **(** *資料行*[ **，**...*n* ] **)**  
+ **(** *column*  [ **,**...*n* ] **)**  
     指定要存放的資料行。 非叢集資料行存放區索引僅限於 1024 個資料行。  
    每個資料行必須是資料行存放區索引支援的資料類型。 請參閱[限制事項](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)如需支援的資料類型的清單。  
 
-ON [*database_name*。 [*schema_name* ]。 | *schema_name* 。 ] *table_name*  
+ON [*database_name*。 [*schema_name* ] . | *schema_name* 。 ] *table_name*  
    指定一段、 兩個或三部分名稱，包含索引的資料表。  
 
 WITH DROP_EXISTING = [關閉] |ON  
@@ -213,7 +213,7 @@ ONLINE = [ON |關閉]
 
    關閉指定的索引不是可供使用時正在建立新的複本。 因為這是一個非叢集索引，基底資料表維持可用的狀態，只有非叢集資料行存放區索引不會用來滿足查詢，直到新的索引已完成。 
 
-COMPRESSION_DELAY = **0** | \<延遲 > [分鐘]  
+COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    適用於：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
   
    指定時間長度的資料列應該放在差異資料列群組壓縮資料列群組的移轉之前的下限。 例如，客戶可以說，是否資料列是不變 120 分鐘，讓它符合資格壓縮成單欄式儲存體格式。 磁碟基礎的資料表上的資料行存放區索引，我們不會追蹤的時間，資料列插入或更新，當我們改用差異 rowgroup 關閉時間做為 proxy 的資料列。 預設持續時間是從 0 分鐘。 資料列移轉至單欄式儲存體中，當 1 百萬個資料列已經累積的差異資料列群組，而且它已標示為已關閉。  
@@ -255,12 +255,12 @@ ON
 *filegroup_name*  
    指定索引建立所在的檔案群組名稱。 如果*filegroup_name*未指定和資料表未分割，則索引會與基礎資料表使用相同的檔案群組。 此檔案群組必須已存在。  
  
-**「**預設**"**  
+**"**default**"**  
 在預設的檔案群組上建立指定的索引。  
   
 在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 ON **"**預設**"**或 ON **[**預設**]**。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="Permissions"></a> Permissions  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="GenRemarks"></a>一般備註  
@@ -275,7 +275,7 @@ ON
 - INSERT、UPDATE、DELETE 或 MERGE 作業修改已篩選之索引中的資料。  
 - 篩選的索引用於查詢最佳化工具產生查詢計劃。  
   
-    |Set 選項|必要值|預設伺服器值|預設<br /><br /> OLE DB 與 ODBC 值|預設<br /><br /> DB-Library 值|  
+    |SET 選項|必要值|預設伺服器值|預設值<br /><br /> OLE DB 與 ODBC 值|預設值<br /><br /> DB-Library 值|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -300,29 +300,29 @@ ON
 ##  <a name="LimitRest"></a> 限制事項  
 
 **資料行存放區索引中的每個資料行必須是下列的一般商務資料類型的其中一個：** 
--   datetimeoffset [(  *n*  )]  
+-   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [(  *n*  )]  
--   DATETIME  
+-   datetime  
 -   smalldatetime  
--   日期  
--   時間 [(  *n*  )]  
+-   date  
+-   time [ ( *n* ) ]  
 -   float [(  *n*  )]  
 -   實際 [(  *n*  )]  
 -   小數 [(*精確度*[ *，標尺*] **)** ]
 -   數字 [(*精確度*[ *，標尺*] **)** ]    
 -   money  
--   SMALLMONEY  
--   BIGINT  
--   ssNoversion  
+-   smallmoney  
+-   bigint  
+-   int  
 -   smallint  
--   TINYINT  
+-   tinyint  
 -   bit  
--   nvarchar [(  *n*  )] 
+-   nvarchar [ ( *n* ) ] 
 -   nvarchar （max) (適用於[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和 Azure SQL Database premium 定價層，僅限叢集資料行存放區索引中)   
--   nchar [(  *n*  )]  
--   varchar [(  *n*  )]  
+-   nchar [ ( *n* ) ]  
+-   varchar [ ( *n* ) ]  
 -   varchar （max) (適用於[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和 Azure SQL Database premium 定價層，僅限叢集資料行存放區索引中)
--   char [(  *n*  )]  
+-   char [ ( *n* ) ]  
 -   varbinary [(  *n*  )] 
 -   varbinary (max) (適用於[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和 Azure SQL Database premium 定價層，僅限叢集資料行存放區索引中)
 -   二進位 [(  *n*  )]  

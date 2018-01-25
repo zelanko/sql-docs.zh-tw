@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed7e27232f57c829efcff478805567e812334bdf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 91ec3d738f8a718a2af7415a6f204be3c204201a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是用於存取資料的低階 COM API。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建議將 Native Client OLE DB 提供者用於開發工具、公用程式或需要高效能的低階元件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是原生、高效能的提供者，會直接存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格式資料流 (TDS) 通訊協定。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [預存程序](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
--   [BLOB 與 OLE 物件](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
+-   [Blob 與 OLE 物件](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
 -   [資料表和索引](../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [FILESTREAM 支援 &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [Transactions](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+-   [交易](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 -   [錯誤](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [OLE DB 的使用說明主題](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

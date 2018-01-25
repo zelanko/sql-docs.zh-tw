@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3f6005104620c3a55d34c39b114517dab6750d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9efa0570e0ffe698fccb7decb6eafbf5877842db
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -125,7 +125,7 @@ bcp_bind(hdbc, szName, 0,
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]導入 SQLXML 和 SQLUDT 資料類型 token 中的支援***eDataType***參數。  
   
- *並將 idxServerCol*  
+ *idxServerCol*  
  這是資料庫資料表中要將資料複製到其中之資料行的序數位置。 資料表中的第一個資料行是資料行 1。 資料行的序數位置由報告[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)。  
   
 ## <a name="returns"></a>傳回值  
@@ -134,7 +134,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>備註  
  使用**bcp_bind**的快速、 有效率的方法，將程式變數中的資料複製到資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- 呼叫[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)之前呼叫這個或其他任何大量複製函數。 呼叫**bcp_init**設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大量複製的目標資料表。 當呼叫**bcp_init**搭配**bcp_bind**和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)、 **bcp_init** *szDataFile*參數，指出資料檔設為 NULL。**bcp_init***eDirection*參數設定為 DB_IN。  
+ 呼叫[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)之前呼叫這個或其他任何大量複製函數。 呼叫**bcp_init**設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大量複製的目標資料表。 當呼叫**bcp_init**搭配**bcp_bind**和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)、 **bcp_init** *szDataFile*參數，指出資料檔設為 NULL。**bcp_init * * * eDirection*參數設定為 DB_IN。  
   
  個別**bcp_bind**呼叫每個資料行中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您要複製的資料表。 必要之後**bcp_bind**呼叫已做了，然後呼叫**bcp_sendrow**傳送的資料列從程式變數到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支援重新繫結資料行。  
   
@@ -254,7 +254,7 @@ if ((nRowsProcessed = bcp_done(hdbc)) == -1)
 printf_s("%ld rows copied.\n", nRowsProcessed);  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

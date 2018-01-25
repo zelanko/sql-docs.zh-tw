@@ -14,13 +14,13 @@ ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9455eef75df9e802d797b67da0454d36e11def2d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 265f66c0dfba28e1f3c35fa560098b3a2d13cb0c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-資料最佳化的效能
 
@@ -168,7 +168,7 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + 函式的參考[rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
 
-### <a name="use-microsoftml"></a>使用 MicrosoftML
+### <a name="use-microsoftml"></a>Use MicrosoftML
 
 我們也建議您查看到新**MicrosoftML**封裝，提供可調整的機器學習演算法，可以使用的計算內容和提供的 RevoScaleR 轉換。
 
