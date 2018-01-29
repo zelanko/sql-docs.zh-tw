@@ -8,13 +8,15 @@ ms.service:
 ms.component: tsql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs: t-sql
+dev_langs:
+- t-sql
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -46,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -244,13 +246,13 @@ PARTITION
 > [!WARNING]
 >  您可以對包含超過 1,000 個分割區的資料表，建立及重建不以資料表為準的索引，但不予支援。 此做法可能會導致在作業期間效能降低或耗用過多記憶體。 建議當分割區數超過 1,000 時，一律使用以資料表為準的索引。  
   
- *r*  
+ *partition_number*  
    
 **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  要重建或重新組織之分割區索引的分割區數。 是可以參考變數的常數運算式。 其中包括使用者定義類型變數或函數及使用者定義函數，但無法參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 必須存在，或陳述式會失敗。  
   
- 與**(**\<single_partition_rebuild_index_option 時 >**)**  
+ WITH **(**\<single_partition_rebuild_index_option>**)**  
    
 **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
@@ -307,13 +309,16 @@ REORGANIZE 會線上執行。
 -   資料列群組中的 10%或更多的資料列已以邏輯方式刪除，SQL Server 將嘗試結合一或多個資料列群組中的這個資料列群組。    例如，具有 500,000 個資料列壓縮的資料列群組 1 和 1,048,576 個資料列的最大值與壓縮資料列群組 21。  資料列群組 21 有 60%的已刪除的資料列，讓保持 409,830 資料列。 SQL Server 就會結合這些兩個資料列壓縮新的資料列群組沒有 909,830 資料列群組。  
   
 重新組織與 (COMPRESS_ALL_ROW_GROUPS = {ON |**OFF** })  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，COMPRESS_ALL_ROW_GROUPS 提供方法來開啟或已關閉差異資料列群組強制資料行存放區。 使用此選項時，不需要重建清空差異資料列群組的資料行存放區索引。  此特性加其他移除和合併磁碟重組功能可讓它不再需要重建索引，在大部分情況下。    
+
+ **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+COMPRESS_ALL_ROW_GROUPS 可用來開啟或已關閉差異資料列群組強制資料行存放區。 使用此選項時，不需要重建清空差異資料列群組的資料行存放區索引。  此特性加其他移除和合併磁碟重組功能可讓它不再需要重建索引，在大部分情況下。    
 
 -   ON 會將所有資料列群組強制至資料行存放區，不論大小和狀態 （關閉或開啟）。  
   
 -   關閉會強制至資料行存放區的所有 CLOSED 資料列群組。  
   
-設定**(** \<set_index 選項 > [ **，**...*n*] **)**  
+SET **(** \<set_index option> [ **,**... *n*] **)**  
  在不重建或重新組織索引的情況下，指定索引選項。 停用的索引不能指定 SET。  
   
 PAD_INDEX = { ON | OFF }  
@@ -343,7 +348,7 @@ PAD_INDEX = { ON | OFF }
 > [!IMPORTANT]
 >  利用 FILLFACTOR 值來建立或變更叢集索引時，會影響資料所佔用的儲存空間量，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在建立叢集索引時，會轉散發資料。  
   
- SORT_IN_TEMPDB = {ON |**OFF** }  
+ SORT_IN_TEMPDB = { ON | **OFF** }  
  
 **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
@@ -483,7 +488,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |OFF}
   
  *max_degree_of_parallelism*可以是：  
   
- @shouldalert  
+ 1  
  隱藏平行計畫的產生。  
   
  \>1  
@@ -497,7 +502,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |OFF}
 > [!NOTE]
 > 並非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本都無法使用平行索引作業。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[版本和支援的功能[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- COMPRESSION_DELAY  **=**  { **0** |*持續時間 [分鐘]* }  
+ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }  
  這項功能是可用的開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
  針對以磁碟為基礎的資料表，延遲指定分鐘的時間必須保持在關閉狀態的差異資料列群組的最小數目差異資料列群組之前中 SQL Server 可以壓縮到壓縮的資料列群組。 因為磁碟基礎的資料表不會追蹤插入和更新時間在個別的資料列，SQL Server 適用於延遲差異資料列群組處於已關閉狀態。  
@@ -533,7 +538,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |OFF}
   
  如需有關壓縮的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
- 在資料分割上**(** {\<編號運算式 > |\<範圍 >}[**，**… n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
     
 **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 
   
@@ -578,13 +583,13 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  線上索引重建必須等候這個資料表的封鎖作業。 **WAIT_AT_LOW_PRIORITY**表示線上索引重建作業將會等候低優先權鎖定，讓其他作業，線上索引建立作業等候時繼續進行。 省略**WAIT AT LOW PRIORITY**選項相當於`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 如需詳細資訊，請參閱[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)。 
   
- MAX_DURATION =*時間*[**分鐘**]  
+ MAX_DURATION = *time* [**MINUTES**]  
   
 **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  執行 DDL 命令時，線上索引重建鎖定將會以低優先權等候的等候時間 (以分鐘為單位指定的整數值)。 如果操作已遭到封鎖**MAX_DURATION**時間的其中一個**ABORT_AFTER_WAIT**會在執行動作。 **MAX_DURATION**時間永遠是以分鐘和 word**分鐘**可以省略。  
  
- ABORT_AFTER_WAIT = [**NONE** | **自助** | **封鎖**}]  
+ ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
    
 **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
@@ -880,9 +885,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. 所有開啟和關閉差異資料列群組壓縮至資料行存放區  
- 不適用：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+ **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- 從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，您可以執行重新組織與 (COMPRESS_ALL_ROW_GROUPS = ON) 每個開啟和已關閉差異資料列群組壓縮到壓縮的資料列群組資料行存放區。 這會清空差異存放區，並強制取得壓縮成資料行存放區的所有資料列。 這是很有用特別之後執行許多插入作業，因為這些作業在一個或多個差異存放區中儲存資料列。  
+ 重新組織與命令 (COMPRESS_ALL_ROW_GROUPS = ON) compreses 個各開啟和關閉差異資料列群組到壓縮的資料列群組資料行存放區。 這會清空差異存放區，並強制取得壓縮成資料行存放區的所有資料列。 這是很有用特別之後執行許多插入作業，因為這些作業在一個或多個差異存放區中儲存資料列。  
   
  REORGANIZE 會結合資料列群組填滿的資料列的最大數目的資料列群組\<= 1,024,576。 因此，壓縮所有開啟和關閉資料列群組時您不會得到很多，其中只有少數資料列壓縮的資料列群組。 您想要盡可能減少壓縮的大小並改善查詢效能為完整的資料列群組。  
   
@@ -1163,16 +1168,16 @@ GO
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [建立空間索引 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [建立 XML 索引 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
- [DROP INDEX &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-index-transact-sql.md)   
+ [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [停用索引和條件約束](../../relational-databases/indexes/disable-indexes-and-constraints.md)   
  [XML 索引 &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)   
  [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)   
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
+ [sys.dm_db_index_physical_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
