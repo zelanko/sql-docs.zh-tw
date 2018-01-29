@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -90,7 +90,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  在 [選取使用者或電腦] 頁面上，輸入用來執行 SQL Server 執行個體以提供資料給 Analysis Services 表格式模型資料庫的帳戶。 按一下 **[確定]** 接受該服務帳戶。  
   
-     如果您無法選取所需帳戶，請確認 SQL Server 正在執行且其帳戶已註冊 SPN。 如需有關資料庫引擎 SPN 的詳細資訊，請參閱＜ [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)＞。  
+     如果您無法選取所需帳戶，請確認 SQL Server 正在執行且其帳戶已註冊 SPN。 如需有關資料庫引擎 SPN 的詳細資訊，請參閱＜ [}註冊 Kerberos 連接的服務主體名稱](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)＞。  
   
      ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   
