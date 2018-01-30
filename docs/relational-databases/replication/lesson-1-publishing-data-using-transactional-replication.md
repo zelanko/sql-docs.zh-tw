@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6d053d9a0e80785e375fdb1f796ddf01894d993
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49a9b7290e5f3253995f7bef0efd1390f74de5bf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>第 1 課：使用異動複寫發行資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立交易式發行集，以發行 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中 **Product** 資料表的篩選子集。 此外，您也會將散發代理程式所使用的 SQL Server 登入加入至發行集存取清單 (PAL)。 開始進行此教學課程之前，必須先完成上一個教學課程 [準備伺服器進行複寫](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)。  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  在 [發行集類型] 頁面上，選取 [交易式發行集]，然後按一下 [下一步]。  
   
-5.  在 [發行項] 頁面上，展開 [Tables] 節點，選取 [Product] 核取方塊，然後展開 [Product]，再清除 [ListPrice] 和 [StandardCost] 核取方塊。 按一下 **[下一步]**。  
+5.  在 [發行項] 頁面上，展開 [Tables] 節點，選取 [Product] 核取方塊，然後展開 [Product]，再清除 [ListPrice] 和 [StandardCost] 核取方塊。 按 [下一步] 。  
   
 6.  在 [篩選資料表的資料列] 頁面上，按一下 [新增]。  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 10. 在 [代理程式安全性] 頁面上，清除 [使用快照集代理程式的安全性設定] 核取方塊。  
   
-11. 按一下快照集代理程式的 [安全性設定]，在 [處理帳戶] 方塊中輸入 \<*電腦名稱>***\repl_snapshot**，提供此帳戶的密碼，然後按一下 [確定]。  
+11. 按一下快照集代理程式的 [安全性設定]，在 [處理帳戶] 方塊中輸入 \<電腦名稱>**\repl_snapshot**，提供此帳戶的密碼，然後按一下 [確定]。  
   
 12. 重複執行先前的步驟，將 repl_logreader 設定為記錄讀取器代理程式的處理帳戶，然後按一下 [完成]。  
   
@@ -82,9 +85,9 @@ ms.lasthandoff: 11/17/2017
   
 3.  選取 [發行集存取清單] 頁面，然後按一下 [新增]。  
   
-4.  在 [新增發行集存取] 對話方塊中，選取 [<電腦名稱>\repl_distribution]，然後按一下 [確定]。 按一下 **[確定]**。  
+4.  在 新增發行集存取 對話方塊中，選取 <電腦名稱>**\repl_distribution**，然後按一下 確定。 按一下 [確定] 。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 您已順利建立交易式發行集。 下一步，您將訂閱此發行集。 請參閱 [第 2 課：建立交易式發行集的訂閱](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  
   
 ## <a name="see-also"></a>另請參閱  

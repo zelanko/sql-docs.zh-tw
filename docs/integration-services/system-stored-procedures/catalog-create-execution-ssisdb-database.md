@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 5c557108a98a0063cb0dad14e0d40f10deb03698
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +66,9 @@ catalog.create_execution [@folder_name = folder_name
 [@useanyworker =] *useanyworker*  
 指出是否允許任何 Scale Out Worker 進行執行。
 
--   使用 1 值，即可執行含任何 Scale Out Worker 的套件。 當您將 `@useanyworker` 設為 true，尚未達到最大工作計數 (如背景工作設定檔中指定) 的任何背景工作，都可執行套件。
+-   使用 1 值，即可執行含任何 Scale Out Worker 的套件。 當您將 `@useanyworker` 設為 true，尚未達到最大工作計數 (如背景工作設定檔中指定) 的任何背景工作，都可執行套件。 如需背景工作設定檔的資訊，請參閱 [Integration Services (SSIS) Scale Out 背景工作](../scale-out/integration-services-ssis-scale-out-worker.md)。
 
--   使用 0 值，即可指出不允許所有 Scale Out Worker 執行套件。 當您將 `@useanyworker` 設為 false，您必須使用 Scale Out Manager，或藉由呼叫預存程序 `[catalog].[add_execution_worker]`，指定允許執行套件的背景工作。
+-   使用 0 值，即可指出不允許所有 Scale Out Worker 執行套件。 當您將 `@useanyworker` 設為 false，您必須使用 Scale Out Manager，或藉由呼叫預存程序 `[catalog].[add_execution_worker]`，指定允許執行套件的背景工作。 如果您指定的背景工作已執行另一個套件，背景工作在完成執行目前的套件之後會要求執行另一個套件。
 
 這個參數是選擇性的。 如果未指定，會將其值設定為 1。 *useanyworker* 是 **bit**。 
   

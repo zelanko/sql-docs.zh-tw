@@ -8,20 +8,21 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2a122ab3ac28879a1fbcf3790953ba229a285df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升級活頁簿和排程的資料重新整理 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主題說明在先前建立的活頁簿的使用者經驗[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]環境以及如何升級[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]活頁簿，讓您可以利用此版本中引進的新功能。 若要深入了解新功能，請參閱 [What’s New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917)(PowerPivot 的新功能)。  
@@ -29,17 +30,6 @@ ms.lasthandoff: 01/08/2018
 > [!WARNING]  
 >  您不能針對在伺服器上自動升級的活頁簿回復升級。 一旦升級活頁簿之後，它就會保持升級的狀態。 若要使用之前的版本，可以將之前的活頁簿重新發行至 SharePoint、還原之前的版本或回收活頁簿。 如需有關在 SharePoint 中還原或回收文件的詳細資訊，請參閱＜ [規劃如何使用資源回收筒及版本設定功能保護內容](http://go.microsoft.com/fwlink/?LinkId=238669)＞。  
   
- 本主題包含下列幾節：  
-  
--   [升級活頁簿的概觀](#bkmk_overview)  
-  
--   [從 2008 R2 活頁簿升級為 SQL Server 2012 Service Pack 1 (SP1) 活頁簿](#bkmk_to_2012sp1_from_2008r2)  
-  
--   [從使用 2012 PowerPivot for Excel 增益集所建立的版本升級為 Office 2013 活頁簿](#bkmk_to_2012sp1_from_2012)  
-  
--   [從使用 2008 R2 PowerPivot for Excel 2010 增益集所建立的版本升級為 SQL Server 2012 活頁簿](#bkmk_to_2012_from_2008R2)  
-  
--   [執行較新伺服器上的多個活頁簿版本](#bkmk_runold)  
   
 ##  <a name="bkmk_overview"></a> 升級活頁簿的概觀  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿是包含內嵌 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料的 Excel 活頁簿。 升級活頁簿有兩個好處：  
@@ -175,7 +165,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  向下捲動至 MSOLAP。 確認 MSOLAP.5 列在系統上所安裝的 OLAP 提供者中。 確認 MSOLAP | CurVer 設定為 MSOLAP.5  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將 Power Pivot 移轉至 SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [升級 Power Pivot for SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Analysis Services 的新功能](../../../analysis-services/what-s-new-in-analysis-services.md)   

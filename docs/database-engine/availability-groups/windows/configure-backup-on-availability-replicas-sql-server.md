@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90bf3971e9a4c796ece178f53b7eecab4a2a59a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 51e23d647bd96cdb540223af2ef18cd6ba996c2c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>設定可用性複本的備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell，針對 AlwaysOn 可用性群組設定次要複本的備份。  
@@ -41,11 +42,11 @@ ms.lasthandoff: 11/20/2017
   
      [必要條件](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要使用下列項目來設定次要複本的備份：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
   
 |工作|Permissions|  
 |----------|-----------------|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  依序展開 [AlwaysOn 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
   
 3.  按一下您想要設定其備份喜好設定的可用性群組，然後選取 **[屬性]** 命令。  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [使用將複本加入至可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用 [將複本加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
@@ -133,11 +134,11 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要設定次要複本的備份**  
   
-1.  設定預設值 (**cd**) 為裝載主要複本的伺服器執行個體。  
+1.  將預設值 (**cd**) 設定為裝載主要複本的伺服器執行個體。  
   
 2.  (選擇性) 設定您要加入或修改之每個可用性複本的備份優先權。 裝載主要複本的伺服器執行個體會使用這個優先權來決定哪個複本應該服務可用性群組中資料庫的自動備份要求 (系統會選擇優先權最高的複本)。 這個優先權可以是 0 和 100 (含) 之間的任何數字。 如果優先權為 0，就表示系統不應該將複本視為服務備份要求的候選。  預設值為 50。  
   
-     將可用性複本加入可用性群組中時，請使用 **New-SqlAvailabilityReplica** Cmdlet。 修改現有的可用性複本時，請使用 **Set-SqlAvailabilityReplica** Cmdlet。 在任何一種情況中，請指定 **BackupPriority***n* 參數，其中 *n* 是介於 0 到 100 之間的值。  
+     將可用性複本加入可用性群組時，請使用 **New-SqlAvailabilityReplica** Cmdlet。 修改現有的可用性複本時，請使用 **Set-SqlAvailabilityReplica** Cmdlet。 在任何一種情況中，請指定 **BackupPriority***n* 參數，其中 *n* 是介於 0 到 100 之間的值。  
   
      例如，下列命令會將可用性複本 `MyReplica` 的備份優先權設定為 **60**。  
   
@@ -208,7 +209,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 ##  <a name="ForInfoAboutBuPref"></a> 若要取得有關備份喜好設定的資訊  
  下列檢視表可用於取得次要備份的相關資訊。  
   
-|檢視|資訊|相關資料行|  
+|檢視|[資訊]|相關資料行|  
 |----------|-----------------|----------------------|  
 |[sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)|目前的複本是否為慣用的備份複本？|不適用。|  
 |[sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)|自動備份喜好設定|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
@@ -219,7 +220,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

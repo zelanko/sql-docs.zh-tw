@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 499e2929691553884a7c52d3d46918455c8d39a8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7066ed9aafe287f5ed4a2bb5ed2981d27bd0e35f
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>安裝或解除安裝 PowerPivot for SharePoint 增益集 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)]是應用程式伺服器元件及後端服務所提供的集合[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中存取資料[!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]伺服陣列。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 增益集 (**spPowerpivot.msi**) 是用來安裝應用程式伺服器元件的安裝程式封裝。  
@@ -33,24 +33,6 @@ ms.lasthandoff: 01/08/2018
  **注意** ：本主題將描述如何安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 方案檔以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具。 安裝之後，請參閱下列主題以取得組態工具和其他功能的相關資訊：[設定 Power Pivot 及部署方案 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)。  
   
  如需如何下載 **spPowerPivot.msi**, see [Microsoft® SQL Server® 2014 Power Pivot® for Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854)的相關資訊  
-  
- **本主題內容：**  
-  
--   [背景](#bkmk_background)  
-  
--   [在何處安裝 spPowerPivot.msi？](#bkmk_where_to_install)  
-  
--   [需求和必要條件](#bkmk_prereq)  
-  
--   [安裝 PowerPivot for SharePoint](#bkmk_install)  
-  
--   [使用 PowerPivot for SharePoint 2013 組態工具部署 SharePoint 方案檔](#bkmk_deploy_solution)  
-  
--   [解除安裝或修復增益集](#bkmk_remove_addin)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
 ##  <a name="bkmk_background"></a> 背景  
   
@@ -110,7 +92,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  在 **[特徵選取]** 頁面上，已預設選取所有功能。  
   
-5.  按 [下一步] 。  
+5.  按一下 **[下一步]**。  
   
 6.  按一下 **[安裝]** 完成安裝。  
   
@@ -150,7 +132,7 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
 Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
 ```  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |Analysis_Server_SP_addin|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態|  
 |SQL_OLAPDM|MSOLAP|  

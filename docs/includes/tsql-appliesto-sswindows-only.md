@@ -1,1 +1,1 @@
-<Token>**本主題適用於：** ![是](media/yes.png)SQL Server (僅限 Windows)![否](media/no.png)Azure SQL Database![否](media/no.png)Azure SQL 資料倉儲![否](media/no.png)平行處理資料倉儲 </Token>
+<Token>**本主題適用於：** ![是](media/yes.png)Windows 上的 SQL Server![否](media/no.png)Azure SQL Database![否](media/no.png)Azure SQL 資料倉儲![否](media/no.png)平行處理資料倉儲 </Token>

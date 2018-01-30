@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bc7ae557efd1d26b25f07fd645a1d9d6c32e7a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff868be847d703d4ce4b8b291a725abc255a5788
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="the-memory-optimized-filegroup"></a>記憶體最佳化檔案群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 若要建立經記憶體最佳化的資料表，您必須先建立記憶體最佳化檔案群組。 記憶體最佳化檔案群組會保存一個或多個容器。 每個容器都包含資料檔案及/或差異檔案。  
@@ -32,13 +33,13 @@ ms.lasthandoff: 11/17/2017
   
 -   每個資料庫只能建立一個記憶體最佳化檔案群組。 您必須明確地將檔案群組標示為包含 memory_optimized_data。 您可以在建立資料庫時建立檔案群組，或是稍後新增檔案群組：  
   
-    ```  
+    ```sql  
     ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA  
     ```  
   
--   您必須將一個或多個容器加入至 MEMORY_OPTIMIZED_DATA 檔案群組。 例如：  
+-   您必須將一或多個容器新增至 `MEMORY_OPTIMIZED_DATA` 檔案群組。 例如：  
   
-    ```  
+    ```sql  
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  
     ```  
   
@@ -48,20 +49,20 @@ ms.lasthandoff: 11/17/2017
   
 -   具有記憶體最佳化檔案群組的資料移動會在 AlwaysOn 可用性群組組態中最佳化。 不同於傳送到次要複本的檔案資料流檔案，記憶體最佳化檔案群組中的檢查點檔案 (資料和差異處) 不會傳送至次要複本。 資料和差異檔案會使用次要複本上的交易記錄來建構。  
   
- 以下是記憶體最佳化檔案群組的限制。  
+以下是適用於記憶體最佳化檔案群組的限制：  
   
 -   一旦您建立記憶體最佳化檔案群組之後，就可以卸除資料庫來移除它。 在實際執行環境中，您不太可能需要移除記憶體最佳化檔案群組。  
   
 -   您無法卸除非空白的容器或是將資料和差異檔案組移至記憶體最佳化檔案群組中的另一個容器。  
   
--   您無法為容器指定 MAXSIZE。  
+-   您無法為容器指定 `MAXSIZE`。  
   
 ## <a name="configuring-a-memory-optimized-filegroup"></a>設定記憶體最佳化檔案群組  
  您應該考慮在記憶體最佳化檔案群組中建立多個容器，並將它們分散到不同的磁碟機，以便有更多的頻寬可讓資料流入記憶體中。  
   
- 當設定儲存空間時，您提供的可用磁碟空間必須是持久性記憶體最佳化資料表大小的四倍。 您也必須確定您的 IO 子系統支援您的工作負載所需的 IOPS。 如果在給定的 IOPS 上填入資料和差異檔案組，您需要 IOPS 的 3 倍來處理儲存和合併作業。 您可以將一個或多個容器加入至記憶體最佳化檔案群組，以增加儲存容量和 IOPS。  
+ 當設定儲存空間時，您提供的可用磁碟空間必須是持久性記憶體最佳化資料表大小的四倍。 您也必須確定您的 I/O 子系統支援您的工作負載所需的 IOPS。 如果在給定的 IOPS 上填入資料和差異檔案組，您需要 IOPS 的 3 倍來處理儲存和合併作業。 您可以將一個或多個容器加入至記憶體最佳化檔案群組，以增加儲存容量和 IOPS。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理記憶體最佳化物件的儲存體](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
+ [資料庫檔案與檔案群組](../../relational-databases/databases/database-files-and-filegroups.md) 
   

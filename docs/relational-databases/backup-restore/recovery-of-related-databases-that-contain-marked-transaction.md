@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a705efcec62c826d391d302f73d2656ee694cbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 35cef9e6a0576780aa802d891f9ea43cc21bc15a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>復原包含標記之異動的相關資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題僅與包含標示的交易，且使用完整模式或大量記錄復原模式的資料庫有關。  
@@ -65,13 +66,13 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  如需如何將標示插入跨越多個資料庫之交易的相關資訊，請參閱 [使用標示的異動以一致的方式復原相關資料庫 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>復原標示的 Transact-SQL 語法  
- 針對標示的交易使用 [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式時，您可以使用下列其中一個子句，以在標示上或標示當前停止：  
+ 針對標示的交易使用[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)陳述式時，您可以使用下列其中一個子句，以在標示上或標示當前停止：  
   
--   使用 WITH STOPATMARK = **'***<mark_name>***'** 子句，以指定標示的交易為復原點。  
+-   使用 WITH STOPATMARK = **'<標示名稱>'** 子句，以指定標示的交易為復原點。  
   
      STOPATMARK 可向前復原標示，並將已標示的交易納入向前復原。  
   
--   使用 WITH STOPBEFOREMARK = **'***<mark_name>***'** 子句，以指定標示之前的記錄為復原點。  
+-   使用 WITH STOPBEFOREMARK = **'<標示名稱>'** 子句，以指定標示之前的記錄檔記錄為復原點。  
   
      STOPBEFOREMARK 可向前復原標示，並從向前復原中排除已標示的交易。  
   

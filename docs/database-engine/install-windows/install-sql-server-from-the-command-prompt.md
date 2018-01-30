@@ -1,14 +1,15 @@
 ---
 title: "從命令提示字元安裝 SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 01/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -86,15 +87,15 @@ helpviewer_keywords:
 - nodes [Faillover Clustering], command prompt
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-caps.latest.revision: "255"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: dcb4878399af227359b995d43fbc83b96b168194
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+manager: craigg
+ms.openlocfilehash: 1c275c5f9df33587f18eb791e92012d7aefa13c1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在執行 SQL Server 安裝程式之前，請檢閱[規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)。  
@@ -273,7 +274,7 @@ ms.lasthandoff: 01/16/2018
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的啟動帳戶。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**|指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
-|R Services (資料庫內)|MRCACHEDIRECTORY|使用此參數指定 Microsoft R Open 和 Microsoft R 伺服器元件的快取目錄，如 [本節](https://msdn.microsoft.com/library/mt695942.aspx)中所述。 此設定通常用於在電腦上從命令列安裝 SQL Server R 服務，而沒有網際網路存取時。|  
+|R Services (資料庫內)|MRCACHEDIRECTORY|使用此參數指定 Microsoft R Open 或 Machine Learning 伺服器元件的快取目錄，如[本文](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)中所述。 此設定通常用於在電腦上從命令列安裝 SQL Server 機器學習服務，而沒有網際網路存取時。|  
   
 ###### <a name="sample-syntax"></a>範例語法：  
  與 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、複寫和全文檢索搜尋元件一起安裝新的獨立執行個體，並為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]啟用立即檔案初始化。 
@@ -542,7 +543,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/SQMREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](http://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的功能使用狀況報告。<br /><br />支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HIDECONSOLE<br /><br /> **選擇性**|指定要隱藏或關閉主控台視窗。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERDISKS<br /><br /> **選擇性**|指定要包含在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集資源群組中的共用磁碟清單。<br /><br /> 預設值：第一個磁碟機會當作所有資料庫的預設磁碟機使用。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必要**|指定編碼的 IP 位址。 編碼都以分號分隔 (;) 並遵循以下格式：\<IP 類型>;\<位址>;\<網路名稱>;\<子網路遮罩>。 支援的 IP 類型包括 DHCP、IPv4 和 IPv6。<br />您可以指定多個容錯移轉叢集 IP 位址，每個位址之間隔一個空格。 請參閱下列範例：<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必要**|指定編碼的 IP 位址。 編碼都以分號分隔 (;) 並遵循以下格式：\<IP 類型>;\<位址>;\<網路名稱>;\<子網路遮罩>。 支援的 IP 類型包括 DHCP、IPv4 和 IPv6。<br />您可以指定多個容錯移轉叢集 IP 位址，每個位址之間隔一個空格。 請參閱下列範例：<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必要**|針對新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集指定網路名稱。 這個名稱是用來在網路上識別新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集執行個體。|  
 |SQL Server Agent|/AGTSVCACCOUNT<br /><br /> **必要**|指定 SQL Server Agent 服務的帳戶。|  
 |SQL Server Agent|/AGTSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQL Server Agent 服務帳戶的密碼。|  
@@ -680,7 +681,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/SQMREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](http://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能使用狀況報告。<br /><br />支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HIDECONSOLE<br /><br /> **選擇性**|指定要隱藏或關閉主控台視窗。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERDISKS<br /><br /> **選擇性**|指定要包含在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集資源群組中的共用磁碟清單。<br /><br /> 預設值：<br /><br /> 第一個磁碟機會當做所有資料庫的預設磁碟機使用。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必要**|指定編碼的 IP 位址。 編碼都以分號分隔 (;) 並遵循以下格式：\<IP 類型>;\<位址>;\<網路名稱>;\<子網路遮罩>。 支援的 IP 類型包括 DHCP、IPv4 和 IPv6。<br />您可以指定多個容錯移轉叢集 IP 位址，每個位址之間隔一個空格。 請參閱下列範例：<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必要**|指定編碼的 IP 位址。 編碼都以分號分隔 (;) 並遵循以下格式：\<IP 類型>;\<位址>;\<網路名稱>;\<子網路遮罩>。 支援的 IP 類型包括 DHCP、IPv4 和 IPv6。<br />您可以指定多個容錯移轉叢集 IP 位址，每個位址之間隔一個空格。 請參閱下列範例：<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必要**|針對新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集指定網路名稱。 這個名稱是用來在網路上識別新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集執行個體。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIRMIPDEPENDENCYCHANGE|表示同意將 IP 位址資源相依性設定為 OR，以使用多重子網路容錯移轉叢集。 如需詳細資訊，請參閱[建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)。 支援的值：<br /><br /> 0 = False (預設值)<br /><br /> 1 = True|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 備份檔案的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
@@ -777,7 +778,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/Q<br /><br /> **選擇性**|指定安裝程式會在不含任何使用者介面的無訊息模式中執行。 這是自動安裝所使用的參數。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/QS<br /><br /> **選擇性**|指定安裝程式會執行並透過 UI 顯示進度，但是不接受任何輸入或顯示任何錯誤訊息。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HIDECONSOLE<br /><br /> **選擇性**|指定要隱藏或關閉主控台視窗。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必要**|指定編碼的 IP 位址。 編碼都以分號分隔 (;) 並遵循以下格式：\<IP 類型>;\<位址>;\<網路名稱>;\<子網路遮罩>。 支援的 IP 類型包括 DHCP、IPv4 和 IPv6。<br />您可以指定多個容錯移轉叢集 IP 位址，每個位址之間隔一個空格。 請參閱下列範例：<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1<br /><br /> <br /><br /> 如需詳細資訊，請參閱[在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必要**|指定編碼的 IP 位址。 編碼都以分號分隔 (;) 並遵循以下格式：\<IP 類型>;\<位址>;\<網路名稱>;\<子網路遮罩>。 支援的 IP 類型包括 DHCP、IPv4 和 IPv6。<br />您可以指定多個容錯移轉叢集 IP 位址，每個位址之間隔一個空格。 請參閱下列範例：<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`<br /><br /> <br /><br /> 如需詳細資訊，請參閱[在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIRMIPDEPENDENCYCHANGE<br /><br /> **必要**|表示同意將 IP 位址資源相依性設定為 OR，以使用多重子網路容錯移轉叢集。 如需詳細資訊，請參閱[在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。 支援的值：<br /><br /> 0 = False (預設值)<br /><br /> 1 = True|  
 |SQL Server Agent|/AGTSVCACCOUNT<br /><br /> **必要**|指定 SQL Server Agent 服務的帳戶。|  
 |SQL Server Agent|/AGTSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQL Server Agent 服務帳戶的密碼。|  

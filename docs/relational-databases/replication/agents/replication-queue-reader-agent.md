@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Queue Reader Agent, parameter reference
 - Queue Reader Agent, executables
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16e9a3a11396c67d2afa1fa8368812a700c48590
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ce0b2cc9add2bd3b7ee329c019a094998bc910f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-queue-reader-agent"></a>複寫佇列讀取器代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]「複寫佇列讀取器代理程式」是一個可執行檔，它會讀取儲存在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 佇列或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Message 佇列中的訊息，然後將這些訊息套用至發行者。 佇列讀取器代理程式可搭配允許佇列更新的快照式和交易式發行集使用。  
@@ -128,7 +129,7 @@ qrdrsvc [-?]
  **-ResolverState** [ **1**| **2**| **3**]  
  指定解決佇列更新衝突的方式。 值為 **1** 表示發行者在衝突中獲勝，而且目前的衝突佇列交易將在發行者和原始更新訂閱者上回復。後續佇列交易的處理將繼續進行。 值為 **2** 表示訂閱者在衝突中獲勝，而且佇列交易將覆寫發行者的值。 值為 **3** 表示任何衝突將導致訂閱者重新初始化。發行者在衝突中獲勝、後續佇列交易的處理將結束，而且訂閱將重新初始化。 交易式發行集的預設設定為 **1** ，而快照式發行集的預設設定為 **3** 。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  若要啟動佇列讀取器代理程式，請從命令提示字元執行 **qrdrsvc.exe** 。 如需詳細資訊，請參閱＜ [複寫代理程式可執行檔](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  

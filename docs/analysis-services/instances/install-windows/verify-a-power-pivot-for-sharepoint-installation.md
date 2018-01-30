@@ -12,23 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6e2dad4e17ebee4497c4e62f15c5706affb62182
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6d745e0de3f7d18571d904a31cf34a8e30217555
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>驗證 PowerPivot for SharePoint 安裝
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 您在 SharePoint 伺服器陣列中安裝的執行個體透過 SharePoint 管理中心進行管理。 您至少可以檢查管理中心和 SharePoint 網站上的頁面，以驗證 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器元件和功能可用。 但為了完整驗證安裝，您必須擁有可以發行至 SharePoint 並從文件庫存取的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿。 如需進行測試，您可發行已經包含 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料的範例活頁簿，並用其確認 SharePoint 整合已正確設定。  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
+
   
 ##  <a name="verifyinstall"></a> 確認管理中心整合  
  若要驗證 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 可與管理中心整合，請執行下列動作：  

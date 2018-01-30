@@ -8,23 +8,24 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: "58"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ebcff5d0d885fe580af9ac0b14d81e7b4ad2746
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 如果線上資料庫中的資料已經損毀，在某些情況下，將資料庫還原成發生損毀之前的資料庫快照集可能是從備份還原資料庫的正確替代方式。 例如，還原資料庫可用於反轉最近發生的嚴重使用者錯誤，例如誤將資料表卸除。 不過，在快照集之後進行的所有變更都將遺失。  
@@ -35,9 +36,9 @@ ms.lasthandoff: 11/17/2017
   
      [必要條件](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
--   **使用下列項目，將資料庫還原成資料庫快照集**  [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
  在還原資料庫之前，請仔細考慮以下限制：  
   
--   還原不適用於媒體復原。 . 資料庫快照集是不完整的資料庫檔案複本，因此如果資料庫或資料庫快照集已損毀，很可能無法從快照集還原。 此外，即使可以還原，但是在損毀的情況下還原也不太可能會更正問題。 因此，建立定期備份和測試還原計畫是保護資料庫的基本措施。 如需詳細資訊，請參閱 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+-   還原不適用於媒體復原。 執行個體時提供 SQL Server 登入。 資料庫快照集是不完整的資料庫檔案複本，因此如果資料庫或資料庫快照集已損毀，很可能無法從快照集還原。 此外，即使可以還原，但是在損毀的情況下還原也不太可能會更正問題。 因此，建立定期備份和測試還原計畫是保護資料庫的基本措施。 如需詳細資訊，請參閱 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
     > [!NOTE]  
     >  如果您必須能夠將來源資料庫還原到您建立資料庫快照集當時的時間點，請使用完整復原模式並實作可讓您執行此作業的備份原則。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  任何擁有來源資料庫之 RESTORE DATABASE 權限的使用者都可以將它還原成建立資料庫快照集時的狀態。  
   
 ##  <a name="TsqlProcedure"></a> 如何將資料庫還原成資料庫快照集 (使用 Transact-SQL)  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/17/2017
   
      還原作業需要來源資料庫上的 RESTORE DATABASE 權限。 若要還原資料庫，請使用下列 Transact-SQL 陳述式：  
   
-     RESTORE DATABASE *資database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
   
      其中 *database_name* 是來源資料庫，而 *database_snapshot_name* 是要用來還原資料庫的快照集名稱。 請注意，在此陳述式中，您必須指定快照名稱，而非備份裝置。  
   

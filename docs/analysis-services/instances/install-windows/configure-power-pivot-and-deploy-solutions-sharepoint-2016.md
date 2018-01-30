@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cfa636d3fcf08410ecaf2062aa7cd68d1e4aeaec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>設定 PowerPivot 及部署方案 (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主題描述如何部署和設定中介層增強功能[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中的功能[!INCLUDE[SPS2016](../../../includes/sps2016-md.md)]包括[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]圖庫、 排程資料重新整理、 管理儀表板和資料提供者。 請執行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 組態** 工具以完成下列作業：  
@@ -33,18 +33,6 @@ ms.lasthandoff: 01/08/2018
 -   如需後端服務以及在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式下安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器的資訊，請參閱 [以 PowerPivot 模式安裝 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
  如需有關安裝[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2016 組態工具，請參閱[安裝或解除安裝 Powerpivot for SharePoint 增益集 (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)。  
-  
- 本主題包含下列幾節：  
-  
- [執行 PowerPivot for SharePoint 2016 組態](#bkmk_run_configuration_tool)  
-  
- [驗證 PowerPivot 組態](#bkmk_verify_powerpivot)  
-  
- [疑難排解問題](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> 執行 PowerPivot for SharePoint 2016 組態  
  **注意：** 若要完成下列步驟，您必須是伺服器陣列管理員。 如果您看到類似下列的錯誤訊息：  

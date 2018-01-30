@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], disabling
 - Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d3d6adde41f8500a4932c557e2eb801765d75d7e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c795cc98d8dffa44d7f9759b8f66e896f75123c4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>啟用和停用 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
      [必要條件](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **如何：**  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="Security"></a> 安全性  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體啟用 AlwaysOn 可用性群組之後，伺服器執行個體就會有 WSFC 叢集的完整控制。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要本機電腦的 **Administrator** 群組成員資格和 WSFC 叢集的完整控制。 透過使用 PowerShell 啟用 AlwaysOn 時，請使用 [以系統管理員身分執行] 選項開啟命令提示字元視窗。  
   
  需要 Active Directory 建立物件和管理物件權限。  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  指向 [開始]  功能表上的 [所有程式] ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] 和 [組態工具] ，再按一下 [SQL Server 組態管理員] 。  
   
-3.  在 SQL Server 組態管理員 中，按一下 SQL Server 服務，以滑鼠右鍵按一下 SQL Server (\<*instance name*>)，其中 **\<**instance name**>** 是要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 屬性。  
+3.  在 SQL Server 設定管理員 中，按一下 SQL Server 服務，以滑鼠右鍵按一下 SQL Server (\<執行個體名稱>)，其中 **\<執行個體名稱>** 是要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 屬性。  
   
 4.  選取 [AlwaysOn 高可用性] 索引標籤。  
   
@@ -203,7 +204,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
   
-3.  在 [SQL Server 組態管理員] 中，按一下 [SQL Server 服務]，以滑鼠右鍵按一下 [SQL Server (\<*instance name*>)]，其中 **\<***instance name***>** 是要停用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
+3.  在 [SQL Server 設定管理員] 中，按一下 [SQL Server 服務]，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]，其中 **\<執行個體名稱>** 是要停用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
   
 4.  在 [AlwaysOn 高可用性] 索引標籤上，取消選取 [啟用 AlwaysOn 可用性群組] 核取方塊，然後按一下 [確定]。  
   

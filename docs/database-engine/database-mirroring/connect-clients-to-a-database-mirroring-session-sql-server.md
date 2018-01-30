@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: "95"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ab834afd90bb347641ba8b5584c45e3e073962d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ef24aef79874e7ade0c0ed0dc78f88faa366299c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>將用戶端連接至資料庫鏡像工作階段 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 若要連線至資料庫鏡像工作階段，用戶端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 針對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫設定之後，這兩個資料存取提供者就會完全支援資料庫鏡像。 如需使用鏡像資料庫之程式設計考量的詳細資訊，請參閱＜ [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)＞。 此外，目前的主體伺服器執行個體必須可以使用，而且必須在此伺服器執行個體上建立用戶端的登入。 如需詳細資訊，請參閱[孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 資料庫鏡像工作階段的用戶端連接不會涉及見證伺服器執行個體 (如果此執行個體存在的話)。  
@@ -92,11 +93,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 屬性  
  連接字串必須包含 **Server** 屬性，以便提供初始夥伴名稱 (應該可識別目前的主體伺服器執行個體)。  
   
- 識別伺服器執行個體最簡單的方式就是指定名稱：*<伺服器名稱>*[**\\**<SQL Server 執行個體名稱>]。 例如：  
+ 識別伺服器執行個體最簡單的方式就是指定名稱：<伺服器名稱>[**\\**<SQL Server 執行個體名稱>]**。 例如：  
   
  `Server=Partner_A;`  
   
- 或  
+ 中的多個  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -136,7 +137,7 @@ Server=123.34.45.56,4724;
 |ODBC 驅動程式|**Failover_Partner**|  
 |ActiveX Data Objects (ADO)|**Failover Partner**|  
   
- 識別伺服器執行個體最簡單的方式就是指定其系統名稱：<伺服器名稱>[**\\**<SQL Server 執行個體名稱>]。  
+ 識別伺服器執行個體最簡單的方式就是指定其系統名稱：<伺服器名稱>[**\\***<SQL Server 執行個體名稱>]*。  
   
  此外，您可以在 **Failover Partner** 屬性中提供 IP 位址和通訊埠編號。 如果第一次連接至資料庫時，初始連接嘗試失敗，連接至容錯移轉夥伴的嘗試將不再仰賴 DNS 和 SQL Server Browser。 建立連接後，就會以容錯移轉夥伴名稱覆寫容錯移轉夥伴名稱，因此當容錯移轉發生時，重新導向的連接就會需要 DNS 和 SQL Server Browser。  
   
@@ -181,7 +182,7 @@ Server=123.34.45.56,4724;
   
 |捨入|*RetryTime* 計算|每次嘗試的重試時間|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(**0.08 **\*** 15**)**|1.2 秒|  
+|@shouldalert|0 **+(**0.08 **\*** 15**)**|1.2 秒|  
 |2|1.2 **+(**0.08 **\*** 15**)**|2.4 秒|  
 |3|2.4 **+(**0.08 **\*** 15**)**|3.6 秒|  
 |4|3.6 **+(**0.08 **\*** 15**)**|4.8 秒|  

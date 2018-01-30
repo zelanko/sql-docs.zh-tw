@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6383f0bdcbd230c5bd4868084ae2fd06f4003269
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 65b1141e3d47a947f9b1c90b25c6ba875373c266
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>備份檔案和檔案群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 PowerShell，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中備份檔案與檔案群組。 當完整的資料庫備份因資料庫大小和效能需求而變得不可行時，您可以建立檔案備份來代替。 *「檔案備份」* (File Backup) 包含一或多個檔案 (或檔案群組) 中的所有資料。 如需詳細資訊，請參閱 [完整檔案備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 和 [差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
@@ -201,9 +202,9 @@ GO
   
 1.  使用 **Backup-SqlDatabase** Cmdlet，並指定 **-BackupAction** 參數值的 **Files** 。 另外再指定下列其中一個參數：  
   
-    -   若要備份特定檔案，請指定 **-DatabaseFile***String* 參數，其中 *String* 是要備份的一個或多個資料庫檔案。  
+    -   若要備份特定檔案，請指定 **-DatabaseFile***String* 參數，其中 *String* 是要備份的一或多個資料庫檔案。  
   
-    -   若要備份指定檔案群組中的所有檔案，請指定 **-DatabaseFileGroup***String* 參數，其中 *String* 是要備份的一個或多個資料庫檔案群組。  
+    -   若要備份指定檔案群組中的所有檔案，請指定 **-DatabaseFileGroup***String* 參數，其中 *String* 是要備份的一或多個資料庫檔案群組。  
   
      以下範例會為 `MyDB` 資料庫內的次要檔案群組 'FileGroup1' 和 'FileGroup2' 建立其中每個檔案的完整檔案備份。 備份是建立在伺服器執行個體 `Computer\Instance`的預設備份位置。  
   

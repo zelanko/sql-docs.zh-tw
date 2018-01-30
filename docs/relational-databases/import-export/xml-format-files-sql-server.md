@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 463309bd69a31ab54458095ef98f591b7474eee2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8c3ee049fdaaee08c9e1e3cf698a52ac8950afef
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供 XML 結構描述，以定義撰寫「XML 格式檔案」用於將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的語法。 XML 格式檔案必須遵守以 XML 結構描述定義語言 (XSDL) 定義的這個結構描述。 只有在同時安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 時，才能支援 XML 格式檔案。  
@@ -203,9 +204,9 @@ ms.lasthandoff: 11/17/2017
   
  每個 \<欄位> 項目都與其他項目無關。 以下透過屬性來說明欄位：  
   
-|FIELD 屬性|說明|選擇性 /<br /><br /> Required|  
+|FIELD 屬性|說明|選擇性 /<br /><br /> 必要項|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|指定資料檔中欄位的邏輯名稱。 欄位識別碼是用來參考該欄位的索引鍵。<br /><br /> \<欄位識別碼**="***fieldID***"**/> 對應到 \<資料行來源**="***fieldID***"**/>|必要項|  
+|ID **="***fieldID***"**|指定資料檔中欄位的邏輯名稱。 欄位識別碼是用來參考該欄位的索引鍵。<br /><br /> \<FIELD ID**="***fieldID***"**/> maps to \<COLUMN SOURCE**="***fieldID***"**/>|必要項|  
 |xsi:type **="***fieldType***"**|這是識別元素執行個體之類型的 XML 建構 (如同屬性般使用)。 *fieldType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。|必要 (視資料類型而定)|  
 |LENGTH **="***n***"**|此屬性定義固定長度資料類型的執行個體之長度。<br /><br /> *n* 的值必須為正整數。|除非 xsi:type 值有要求，否則是選擇性的|  
 |PREFIX_LENGTH **="***p***"**|此屬性定義二進位資料代表的前置長度。 PREFIX_LENGTH 值 *p*必須是下列其中一個：1、2、4 或 8。|除非 xsi:type 值有要求，否則是選擇性的|  
@@ -256,10 +257,10 @@ ms.lasthandoff: 11/17/2017
   
  欄位會使用下列屬性對應到目標資料表的資料行：  
   
-|COLUMN 屬性|說明|選擇性 /<br /><br /> Required|  
+|COLUMN 屬性|描述|選擇性 /<br /><br /> 必要項|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="***fieldID***"**|指定對應到資料行的欄位識別碼。<br /><br /> \<資料行來源**="***fieldID***"**/> 對應到 \<欄位識別碼**="***fieldID***"**/>|Required|  
-|NAME = "*columnName*"|指定資料列集中由格式檔案代表的資料行名稱。 此資料行名稱會用來識別結果集中的資料行，而且它不需要對應到用於目標資料表中的資料行名稱。|Required|  
+|SOURCE **="***fieldID***"**|指定對應到資料行的欄位識別碼。<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> maps to \<FIELD ID**="***fieldID***"**/>|必要項|  
+|NAME = "*columnName*"|指定資料列集中由格式檔案代表的資料行名稱。 此資料行名稱會用來識別結果集中的資料行，而且它不需要對應到用於目標資料表中的資料行名稱。|必要項|  
 |xsi**:**type **="***ColumnType***"**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意：*ColumnType* 的可能值與關聯的屬性，如 [&lt;資料行&gt; 項目的 xsi:type 值](#XsiTypeValuesOfCOLUMN)一節的 \<資料行> 項目資料表所示。|選擇性|  
 |LENGTH **="***n***"**|定義固定長度資料類型的長度。 只有當 xsi:type 是字串資料類型時，才會使用 LENGTH。<br /><br /> *n* 的值必須為正整數。|選用 (只在 xsi:type 是字串資料類型時才可使用)|  
 |PRECISION **="***n***"**|指定數字中的位數。 例如，數字 123.45 的精確度是 5。<br /><br /> 其值必須為正整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
@@ -552,7 +553,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [使用格式檔案略過資料欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [使用格式檔案將資料表資料行對應至資料檔欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -564,7 +565,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [使用格式檔案略過資料欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [使用格式檔案將資料表資料行對應至資料檔欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> 相關內容  
  無。  

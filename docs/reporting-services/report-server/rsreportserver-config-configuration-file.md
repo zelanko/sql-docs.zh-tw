@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 312db6c9454c0fca1f50d63d2d5135f2fb20f6db
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 87efa1c9f3fd309ac6b9da150545ac7e08630cd5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 檔案會儲存報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  
@@ -72,9 +72,9 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**Dsn**|將連接字串指定給主控報表伺服器資料庫的資料庫伺服器。 當您建立報表伺服器資料庫時，這個值會加密並加入至組態檔。 如果是 SharePoint，資料庫連接資訊會取自 SharePoint 組態資料庫。|N、S|  
 |**ConnectionType**|指定報表伺服器用於連接到報表伺服器資料庫的認證類型。 有效值為 **Default** 和 **Impersonate**。 如果將報表伺服器設定為使用**登入或服務帳戶連接到報表伺服器資料庫，則會指定** Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果報表伺服器是使用 Windows 帳戶連接到報表伺服器資料庫，則會指定**Impersonate** 。|N|  
 |**LogonUser, LogonDomain, LogonCred**|儲存報表伺服器用於連接至報表伺服器資料庫所使用之網域帳戶的網域、使用者名稱和密碼。 當報表伺服器連接設定使用網域帳戶時，會建立 **LogonUser**、 **LogonDomain**和 **LogonCred** 的值。 如需報表伺服器資料庫連接的詳細資訊，請參閱[設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|N|  
-|**InstanceID**|報表伺服器執行個體的識別碼。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 此值會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。 根據預設，這個值為 **MSRS12**\<執行個體名稱>。 請勿修改此設定。 以下為完整值的範例： `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的範例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
+|**InstanceID**|報表伺服器執行個體的識別碼。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 此值會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。 根據預設，這個值為 **MSRS12***\<執行個體名稱>*。 請勿修改此設定。 以下為完整值的範例： `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的範例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
 |**InstallationID**|安裝程式建立之報表伺服器安裝的識別碼。 此值會設定為 GUID。 請勿修改此設定。|N|  
-|**SecureConnectionLevel**|指定 Web 服務呼叫必須使用安全通訊端層 (SSL) 的程度。 這項設定同時用於報表伺服器 Web 服務和入口網站。 當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中設定使用 HTTP 或 HTTPS 的 URL 時，就會設定這個值。 有效值範圍是從 0 到 3，其中 0 表示最不安全。 如需詳細資訊，請參閱 [使用安全的 Web 服務方法](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) 和 [在原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N、S|  
+|**SecureConnectionLevel**|指定 Web 服務呼叫必須使用安全通訊端層 (SSL) 的程度。 這項設定同時用於報表伺服器 Web 服務和入口網站。 當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中設定使用 HTTP 或 HTTPS 的 URL 時，就會設定這個值。 在 SQL Server 2008 R2 中，SecureConnectionLevel 會變成 on/off 開關。 對於 SQL Server 2008 R2 之前的版本，有效值範圍是從 0 到 3，其中 0 是最不安全的值。 如需詳細資訊，請參閱 [ConfigurationSetting 方法 - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)、[使用安全的 Web 服務方法](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)和[在原生模式報表伺服器上設定 SSL 連線](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N、S|
 |**DisableSecureFormsAuthenticationCookie**|預設值為 False。<br /><br /> 指定是否停用強制將表單和自訂驗證所使用的 Cookie 標記為安全。 從 SQL Server 2012 開始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會自動將搭配自訂驗證延伸模組所使用的表單驗證 Cookie (在傳送給用戶端時) 標示為安全 Cookie。 藉由變更這個屬性，報表伺服器管理員和自訂安全性延伸模組作者可以還原成之前的行為，該行為可讓自訂安全性延伸模組作者判斷是否將 Cookie 標示為安全 Cookie。 建議針對表單驗證使用安全 Cookie，以防止網路探查和重新執行攻擊。|N|  
 |**CleanupCycleMinutes**|指定一個時限 (分鐘)，超過此時限後，舊有的工作階段和過期的快照集，便會從報表伺服器資料庫中移除。 有效值範圍是從 0 到最大整數。 預設值是 10。 將值設定為 0，則會停用資料庫清除處理序。|N、S|  
 |**MaxActiveReqForOneUser**|指定一個使用者同時可以處理的報表最大數目。 一旦達到限制，系統就會拒絕進一步的報表處理要求。 有效值為 1 到最大整數。 預設值是 20。<br /><br /> 請注意，大部分要求的處理速度很快，因此單一使用者不太可能同時擁有 20 個以上的開啟連接。 如果使用者同時開啟超過 15 個密集處理的報表，您可能需要增加此值。<br /><br /> 以 SharePoint 整合模式執行的報表伺服器會忽略這項設定。|N、S|  

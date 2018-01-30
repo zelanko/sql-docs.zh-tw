@@ -9,7 +9,8 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -18,18 +19,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26aed92ee48c2dfd13605a9b830d1b33b4fd7f66
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 0ee36f96183a8b2e2a099402b500523345585460
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>將 JSON 文件儲存在 SQL Server 或 SQL Database
 SQL Server 和 Azure SQL Database 有原生 JSON 函式，可讓您使用標準 SQL 語言剖析 JSON 文件。 現在您可以在 SQL Server 或 SQL Database 中儲存 JSON 文件和查詢 JSON 資料，如同在 NoSQL 資料庫中一樣。 本文描述將 JSON 文件儲存在 SQL Server 或 SQL Database 中的選項。
 
 ## <a name="classic-tables"></a>傳統的資料表
 
-將 JSON 文件儲存在 SQL Server 或 SQL Database 的最簡單方式是建立簡單的雙資料行資料表，其中包含文件的識別碼和文件的內容。 例如：
+將 JSON 文件儲存在 SQL Server 或 SQL Database 的最簡單方式是建立雙資料行資料表，其中包含文件的識別碼和文件的內容。 例如：
 
 ```sql
 create table WebSite.Logs (
@@ -46,7 +47,7 @@ Nvarchar(max) 資料類型可讓您儲存大小高達 2 GB 的 JSON 文件。 �
 
 ```sql
 ALTER TABLE WebSite.Logs
-    ADD CONSTRAINT \[Log record should be formatted as JSON\]
+    ADD CONSTRAINT [Log record should be formatted as JSON]
                    CHECK (ISJSON(log)=1)
 ```
 
@@ -55,7 +56,7 @@ ALTER TABLE WebSite.Logs
 當您將 JSON 文件儲存到資料表中時，您可以使用標準的 Transact-SQL 語言來查詢文件。 例如：
 
 ```sql
-SELECT TOP 100 JSON\_VALUE(log, ‘$.severity’), AVG( CAST( JSON\_VALUE(log,’$.duration’) as float))
+SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$.duration’) as float))
  FROM WebSite.Logs
  WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
  GROUP BY JSON_VALUE(log, ‘$.severity’)
@@ -63,9 +64,9 @@ SELECT TOP 100 JSON\_VALUE(log, ‘$.severity’), AVG( CAST( JSON\_VALUE(log,�
  ORDER BY CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
 ```
 
-有一項強大的優點，就是您可以使用「任何」T-SQL 函式和查詢子句來查詢 JSON 文件。 SQL Server 和 SQL Database 不會導入查詢中您可用來分析 JSON 文件的任何條件約束。 您只可以使用 `JSON_VALUE` 函式從 JSON 文件擷取值，並像任何其他值將其用於查詢。
+有一項強大的優點，就是您可以使用「任何」T-SQL 函式和查詢子句來查詢 JSON 文件。 SQL Server 和 SQL Database 不會導入查詢中您可用來分析 JSON 文件的任何條件約束。 您可以使用 `JSON_VALUE` 函式從 JSON 文件擷取值，並像任何其他值將其用於查詢。
 
-這是 SQL Server 和 SQL Database 與傳統 NoSQL 資料庫之間的主要差異 – 在 Transact-SQL 中，您可能有處理 JSON 資料所需的任何函式。
+可使用豐富的 T-SQL 查詢語法的這項功能是 SQL Server 和 SQL Database 與傳統 NoSQL 資料庫之間的主要差異 – 在 Transact-SQL 中，您可能有處理 JSON 資料所需的任何函式。
 
 ## <a name="indexes"></a>索引
 
@@ -91,7 +92,7 @@ FROM Website.Logs
 WHERE JSON_VALUE(log, '$.severity') = 'P4'
 ```
 
-此索引的一項重要特性是感知定序。 如果原始的 NVARCHAR 資料行有 COLLATION 屬性 (例如，區分大小寫或日文)，則索引會根據語言規則或與 NVARCHAR 資料行建立關聯的區分大小寫規則而組織。 如果您正在為需要使用自訂語言規則來處理 JSON 文件的全球市場開發應用程式，這可能是一項重要功能。
+此索引的一項重要特性是感知定序。 如果原始的 NVARCHAR 資料行有 COLLATION 屬性 (例如，區分大小寫或日文)，則索引會根據語言規則或與 NVARCHAR 資料行建立關聯的區分大小寫規則而組織。 如果您正在為需要使用自訂語言規則來處理 JSON 文件的全球市場開發應用程式，這個感知定序可能是一項重要功能。
 
 ## <a name="large-tables--columnstore-format"></a>大型資料表和資料行存放區格式
 
@@ -108,7 +109,7 @@ create table WebSite.Logs (
 );
 ```
 
-CLUSTERED COLUMNSTORE 索引能提供高資料壓縮 (最多 25 倍)，大幅減少您的儲存空間需求、降低儲存體的成本，以及提升您的工作負載 I/O 效能。 此外，CLUSTERED COLUMNSTORE 索引針對您 JSON 文件上的資料表掃描和分析而最佳化，因此這可能是記錄分析的最佳選項。
+CLUSTERED COLUMNSTORE 索引能提供高資料壓縮 (最多 25 倍)，大幅減少您的儲存空間需求、降低儲存體的成本，以及提升您的工作負載 I/O 效能。 此外，CLUSTERED COLUMNSTORE 索引針對您 JSON 文件上的資料表掃描和分析而最佳化，因此這種類型的索引可能是記錄分析的最佳選項。
 
 上述範例中使用序列物件將值指派給 `_id` 資料行。 序列和身分識別都是識別碼資料行的有效選項。
 
@@ -159,11 +160,11 @@ AS BEGIN
 END
 ```
 
-此原生編譯的程序會採用查詢，並建立執行查詢的 .DLL 程式碼。 這是能更快速查詢和更新資料的方法。
+此原生編譯的程序會採用查詢，並建立執行查詢的 .DLL 程式碼。 原生編譯的程序是能更快速查詢和更新資料的方法。
 
 ## <a name="conclusion"></a>結論
 
-SQL Server 和 SQL Database 中的原生 JSON 函式，讓您能像在 NoSQL 資料庫中一樣地處理 JSON 文件。 每個資料庫不論是關聯式還是 NoSQL，都有一些 JSON 資料處理方面的優缺點。 將 JSON 文件儲存在 SQL Server 或 SQL Database 的主要優點是 SQL 語言的完整支援。 您可以使用豐富的 Transact-SQL 語言來處理資料，以及設定各種不同的儲存體選項 (從高壓縮和快速分析用的資料行存放區索引，到無鎖定處理用的記憶體最佳化資料表)。 同時，您會得到成熟的安全性和國際化功能的優點，並且可以直接重複用於 NoSQL 案例中。 這些是考慮將 JSON 文件儲存在 SQL Server 或 SQL Database 中的絕佳原因。
+SQL Server 和 SQL Database 中的原生 JSON 函式，讓您能像在 NoSQL 資料庫中一樣地處理 JSON 文件。 每個資料庫不論是關聯式還是 NoSQL，都有一些 JSON 資料處理方面的優缺點。 將 JSON 文件儲存在 SQL Server 或 SQL Database 的主要優點是 SQL 語言的完整支援。 您可以使用豐富的 Transact-SQL 語言來處理資料，以及設定各種不同的儲存體選項 (從高壓縮和快速分析用的資料行存放區索引，到無鎖定處理用的記憶體最佳化資料表)。 同時，您會受益於成熟的安全性和國際化功能，並且可以輕鬆地重複用於 NoSQL 案例中。 本文中所描述的理由是考慮將 JSON 文件儲存在 SQL Server 或 SQL Database 中的絕佳原因。
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解 SQL Server 中的內建 JSON 支援  
 如需更多特定的解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。

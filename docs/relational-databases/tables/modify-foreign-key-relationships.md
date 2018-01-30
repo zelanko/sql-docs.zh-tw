@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server], modifying
 - modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51ee95780b228a723be7c5f86b4a64c171bf5df2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b667598024f6df19d7543cf9e59f4c646706c776
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外部索引鍵關聯性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,11 +41,11 @@ ms.lasthandoff: 11/17/2017
   
      [限制事項](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **使用下列方法修改外部索引鍵：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/17/2017
      **選取的關聯性**  
      列出現有的關聯性。 選取關聯性，在右邊方格中顯示其屬性。 如果清單是空的，表示此資料表沒有定義關聯性。  
   
-     **加入**  
+     **[加入]**  
      建立新的關聯性。 [ **資料表及資料行規格** ] 必須在關聯性生效之前設定。  
   
      **Delete**  
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/17/2017
      **名稱**  
      顯示關聯性的名稱。 在建立新的關聯性時，會根據 [ **資料表設計工具**] 作用中視窗的資料表，給予預設的名稱。 您可以隨時變更名稱。  
   
-     **描述**  
+     **說明**  
      描述關聯性。 若要撰寫更詳細的描述，請按一下 [描述]，然後按一下屬性欄位右邊的省略符號 **(...)**。 如此便可提供較大的區域以寫入文字。  
   
      **資料表設計工具類別目錄**  
@@ -147,7 +148,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **設為預設值** ：如果資料表的所有外部索引鍵資料行都具有為其所定義的預設值，就可以將值設為資料行所定義的預設值。  
   
-4.  在 [檔案]  功能表上，按一下 [儲存] *table name*。  
+4.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改外部索引鍵**  

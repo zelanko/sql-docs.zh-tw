@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53cbcf0647eeacd5efb7d8f5445b3fc56e5d9770
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 478e1cb5daa89873a1417846a40f69a8f7f7af27
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>設定可用性複本上的唯讀存取 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 預設允許與主要複本之間的讀寫和讀取意圖的存取，但是不允許連線 AlwaysOn 可用性群組的次要複本。 本主題說明如何藉由使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell，針對 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性群組的可用性複本設定連接存取。  
@@ -38,11 +39,11 @@ ms.lasthandoff: 11/20/2017
   
      [必要條件和限制](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要使用下列項目設定可用性複本的存取：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -62,11 +63,11 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
   
 |工作|Permissions|  
 |----------|-----------------|  
-|若要在建立可用性群組時設定複本|需要 **sysadmin** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
+|若要在建立可用性群組時設定複本|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |若要修改可用性複本|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
-2.  依序展開 [AlwaysOn 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
   
 3.  按一下要變更複本的可用性群組。  
   
@@ -159,11 +160,11 @@ GO
 > [!NOTE]  
 >  如需程式碼範例，請參閱本節稍後的 [範例 (PowerShell)](#PSExample)。  
   
-1.  將目錄 (**cd**) 變更為裝載主要複本的伺服器執行個體。  
+1.  變更目錄 (**cd**) 為裝載主要複本的伺服器執行個體。  
   
 2.  將可用性複本加入可用性群組中時，請使用 **New-SqlAvailabilityReplica** Cmdlet。 修改現有的可用性複本時，請使用 **Set-SqlAvailabilityReplica** Cmdlet。 相關參數如下所示：  
   
-    -   若要設定次要角色的連接存取，請指定 **ConnectionModeInSecondaryRole***secondary_role_keyword* 參數，其中 *secondary_role_keyword* 等於下列值之一︰  
+    -   若要設定次要角色的連線存取，請指定 **ConnectionModeInSecondaryRole***secondary_role_keyword* 參數，其中 *secondary_role_keyword* 等於下列值之一：  
   
          **AllowNoConnections**  
          不允許直接連接次要複本的資料庫，這些資料庫也不可用於讀取存取。 這是預設值。  
@@ -174,7 +175,7 @@ GO
          **AllowAllConnections**  
          次要複本的資料庫允許所有連接進行唯讀存取。  
   
-    -   若要設定主要角色的連接存取，請指定 **ConnectionModeInPrimaryRole***primary_role_keyword*參數，其中 *primary_role_keyword* 等於下列值之一︰  
+    -   若要設定主要角色的連線存取，請指定 **ConnectionModeInPrimaryRole***primary_role_keyword* 參數，其中 *primary_role_keyword* 等於下列值之一：  
   
          **AllowReadWriteConnections**  
          不允許 Application Intent 連接屬性設為 ReadOnly 的連接。 當 Application Intent 屬性設為 ReadWrite 或是未設定 Application Intent 連接屬性時，便會允許連接。 如需有關 Application Intent 連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  

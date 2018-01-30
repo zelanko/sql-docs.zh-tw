@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 8306f3c4fb55d441eef744ff1ef9a84256b9eb76
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 基本上，每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有兩個作業系統檔案：資料檔案與記錄檔。 資料檔包含諸如資料表、索引、預存程序以及檢視等資料和物件。 記錄檔包含復原資料庫中所有交易必要的資訊。 資料檔可以組成檔案群組，以方便配置及管理。  
@@ -102,19 +103,29 @@ ms.lasthandoff: 01/09/2018
 ## <a name="filegroups"></a>檔案群組  
  每個資料庫有一個主要的檔案群組。 此檔案群組可能包含主要資料檔和未放入其他檔案群組的次要檔案。 可建立使用者自訂檔案群組來將資料檔群組在一起，以利管理、資料配置和放置之用。  
   
- 例如，您以可將三個檔案 (Data1.ndf、Data2.ndf 以及 Data3.ndf) 分別建立於三台磁碟機內，並將它們指派至檔案群組 **fgroup1**。 接著您可根據檔案群組 **fgroup1**來建立資料表。 資料表的資料查詢可分散至三個磁碟，藉此改善效能。 另一個改善效能的作法是將單一檔案建立在 RAID (獨立磁碟的重複陣列，通稱磁碟陣列) 的條狀磁碟組上。 然而，檔案和檔案群組都可讓您輕鬆地將新的檔案加至新的磁碟內。  
+ 例如，您以可將三個檔案 (`Data1.ndf`、`Data2.ndf` 以及 `Data3.ndf`) 分別建立於三部磁碟機內，並將它們指派至檔案群組 `fgroup1`。 接著您可根據檔案群組 `fgroup1` 來建立資料表。 資料表的資料查詢可分散至三個磁碟，藉此改善效能。 另一個改善效能的作法是將單一檔案建立在 RAID (獨立磁碟的重複陣列，通稱磁碟陣列) 的條狀磁碟組上。 然而，檔案和檔案群組都可讓您輕鬆地將新的檔案加至新的磁碟內。  
   
  所有儲存在檔案群組中的資料檔列於下表。  
   
 |檔案群組|描述|  
 |---------------|-----------------|  
 |Primary|包含主要檔案的檔案群組。 所有的系統資料表都配置於主要檔案群組內。|  
+|記憶體最佳化資料|記憶體最佳化檔案群組是根據檔案資料流檔案群組|  
+|檔案資料流||    
 |使用者自訂|使用者在初次建立資料庫或之後修改資料庫時，特別建立的檔案群組。|  
   
-### <a name="default-filegroup"></a>預設的檔案群組  
+### <a name="default-primary-filegroup"></a>預設 (主要) 檔案群組  
  若在資料庫中建立物件時未指明屬於哪個檔案群組，就會將物件指定至預設的檔案群組。 在任何時候，都只有一個檔案群組指定為預設檔案群組。 在預設檔案群組中的檔案必須夠大，才能容納未配置到其他檔案群組的新物件。  
   
  除非使用 ALTER DATABASE 陳述式加以變更，否則 PRIMARY 檔案群組就是預設的檔案群組。 系統物件和資料表仍配置於 PRIMARY 檔案群組內，而非新的預設檔案群組之中。  
+ 
+### <a name="memory-optimized-data-filegroup"></a>記憶體最佳化資料檔案群組
+
+如需記憶體最佳化檔案群組的詳細資訊，請參閱[記憶體最佳化檔案群組](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)。
+
+### <a name="filestream-filegroup"></a>檔案資料流檔案群組
+
+如需檔案資料流檔案群組的詳細資訊，請參閱 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md#filestream-storage) 和[建立啟用 FILESTREAM 的資料庫](../../relational-databases/blob/create-a-filestream-enabled-database.md)。
 
 ### <a name="file-and-filegroup-example"></a>檔案與檔案群組範例
  下例會在 SQL Server 的執行個體上建立資料庫。 資料庫會有主要資料檔、使用者自訂的檔案群組以及記錄檔。 主要資料檔位於主要的檔案群組中，而使用者自訂的檔案群組則擁有兩個次要資料檔。 ALTER DATABASE 陳述式可讓使用者自訂的檔案群組成為預設的檔案群組。 接著系統將建立一個資料表來指定使用者自訂的檔案群組。 (本例會使用一般路徑 `c:\Program Files\Microsoft SQL Server\MSSQL.1` 以避免指定 SQL Server 版本。)
@@ -123,7 +134,7 @@ ms.lasthandoff: 01/09/2018
 USE master;
 GO
 -- Create the database with the default data
--- filegroup and a log file. Specify the
+-- filegroup, filstream filegroup and a log file. Specify the
 -- growth increment and the max size for the
 -- primary data file.
 CREATE DATABASE MyDB
@@ -146,7 +157,10 @@ FILEGROUP MyDB_FG1
        'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\data\MyDB_FG1_2.ndf',
     SIZE = 1MB,
     MAXSIZE=10MB,
-    FILEGROWTH=1MB)
+    FILEGROWTH=1MB),
+FILEGROUP FileStreamGroup1 CONTAINS FILESTREAM
+  ( NAME = 'MyDB_FG_FS',
+    FILENAME = 'c:\Data\filestream1')
 LOG ON
   ( NAME='MyDB_log',
     FILENAME =
@@ -166,9 +180,17 @@ CREATE TABLE MyTable
     colb char(8) )
 ON MyDB_FG1;
 GO
+
+-- Create a table in the filestream filegroup
+CREATE TABLE MyFSTable
+(
+    cola int PRIMARY KEY,
+  colb VARBINARY(MAX) FILESTREAM NULL
+)
+GO
 ```
 
-下圖摘要說明上述範例的結果。
+下圖摘要說明上述範例的結果 (但不包含檔案資料流資料)。
 
 ![filegroup_example](../../relational-databases/databases/media/filegroup-example.gif)
 

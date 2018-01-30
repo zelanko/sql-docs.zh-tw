@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b01d8536a45614b8bd17ba93e8a3695229824691
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 969aca3b97e12f5a179c9f2fb4c748d93d89c760
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>第 2 課：準備快照集資料夾
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在這一課，您將學習設定用於建立及儲存發行集快照集的快照集資料夾。  
@@ -42,9 +45,9 @@ ms.lasthandoff: 11/17/2017
   
 6.  在 **[安全性]** 索引標籤上，按一下 **[編輯]**。  
   
-7.  在 [權限] 對話方塊中，按一下 [新增]。 在 [選取使用者、電腦、服務帳戶或群組] 文字方塊中，輸入第 1 課所建立的快照集代理程式帳戶名稱，如 \<*電腦名稱>***\repl_snapshot**，其中 \<*電腦名稱>* 是「發行者」的名稱。 按一下 [檢查名稱]，然後按一下 [確定]。  
+7.  在 [權限] 對話方塊中，按一下 [新增]。 在 [選取使用者、電腦、服務帳戶或群組] 文字方塊中，鍵入第 1 課所建立的快照集代理程式帳戶名稱，如 \<電腦名稱>****\repl_snapshot**，其中 \<電腦名稱>** 是「發行者」的名稱。 按一下 [檢查名稱]，然後按一下 [確定]。  
   
-8.  重複上一個步驟，為散發代理程式 \<*電腦名稱>***\repl_distribution** 以及合併代理程式 \<*電腦名稱>***\repl_merge** 新增權限。  
+8.  重複上一個步驟，為散發代理程式 \<電腦名稱>****\repl_distribution** 以及合併代理程式 \<電腦名稱>****\repl_merge** 新增權限。  
   
 9. 確認允許下列權限；  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 10. 按一下 [確定] 關閉 [repldata 屬性] 對話方塊，並建立 repldata 共用。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
 您已順利設定快照集資料夾的共用。 下一步，您將設定散發。 請參閱 [第 3 課：設定散發](../../relational-databases/replication/lesson-3-configuring-distribution.md)。  
   
 ## <a name="see-also"></a>另請參閱  

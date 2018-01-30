@@ -12,25 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b69db6baee27296bf9544801b627c884d68795b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 14c64237e32d433592f44fcbd0d56bd661cc4940
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 版本支援的 Analysis Services 功能
+# <a name="analysis-services-features-supported-by-sql-server-editions"></a>SQL Server 版本所支援的 analysis Services 功能
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 本主題提供 SQL Server 2016 Analysis Services 不同版本所支援功能的詳細資料。 如需 Evaluation 和 Developer edition 所支援的功能，請參閱 Enterprise edition。
 
 ## <a name="analysis-services-servers"></a>Analysis Services （伺服器）
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |可擴充共用資料庫|是||||||是|  
 |備份/還原與附加/卸離資料庫|是|是|||||是|  
@@ -40,11 +40,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="tabular-models"></a>表格式模型 
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |階層|是|是|||||是|  
 |KPI|是|是|||||是|  
-|「檢視方塊」|是||||||是|  
+|檢視方塊|是||||||是|  
 |翻譯|是|是|||||是|  
 |DAX 計算、DAX 查詢、MDX 查詢|是|是|||||是|  
 |資料列層級安全性|是|是|||||是|  
@@ -54,12 +54,12 @@ ms.lasthandoff: 01/08/2018
 
 ## <a name="multidimensional-models"></a>多維度模型 
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |局部加總量值|是|否 <sup>1</sup>|||||是|  
 |階層|是|是|||||是|  
 |KPI|是|是|||||是|  
-|「檢視方塊」|是||||||是|  
+|檢視方塊|是||||||是|  
 |動作|是|是|||||是|  
 |帳戶智慧|是|是|||||是|  
 |時間智慧|是|是|||||是|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="power-pivot-for-sharepoint"></a>PowerPivot for SharePoint  
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |以共用服務架構為基礎的 SharePoint 伺服器陣列整合|是||||||是|  
 |使用方式報表|是||||||是|  
@@ -103,7 +103,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-mining"></a>資料採礦  
   
-|功能名稱|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
+|功能名稱|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |標準演算法|是|是|||||是|  
 |資料採礦工具 (精靈、編輯器、查詢產生器)|是|是|||||是|  
@@ -122,6 +122,6 @@ ms.lasthandoff: 01/08/2018
   
  ## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 的產品規格](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [SQL Server 2016 安裝](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [SQL Server 安裝](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 69637be0ea958bf908210df298b210959e3afc17
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 交易記錄架構與管理指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,14 +86,16 @@ ms.lasthandoff: 01/12/2018
 >    -  若成長介於 64MB 到 1GB 之間，請建立 8 個能夠涵蓋成長大小的 VLF (例如：成長若為 512MB，請建立八個 64MB 的 VLF)
 >    -  若成長大於 1GB，請建立 16 個能夠涵蓋成長大小的 VLF (例如：成長若為 8 GB，請建立十六個 512MB 的 VLF)
 
-如果記錄檔因為許多少量增加而變得很龐大，將會產生許多虛擬記錄檔。 **這樣會減慢資料庫啟動的速度，也會降低記錄備份和還原作業的執行速度。** 建議您使用接近最後所需大小的 *size* 值來指派記錄檔，並使用相對較大的 *growth_increment* 值。 若要判斷目前交易記錄大小的最佳 VLF 分佈，請參閱下方的提示。
+如果記錄檔以許多少量增加而變得很龐大，將會產生許多虛擬記錄檔。 **這樣會減慢資料庫啟動的速度，也會降低記錄備份和還原作業的執行速度。** 相反地，如果記錄檔設定為以少量次數或一次增加而變得很龐大，則會產生一些非常大的虛擬記錄檔。 如需正確估計交易記錄檔的**所需大小**和**自動成長**設定的詳細資訊，請參閱[管理交易記錄檔的大小](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)的＜建議＞一節。
+
+建議您使用達到最佳 VLF　分佈所需的增量，以接近最後所需大小的 *size* 值來指派記錄檔，並且也使用相對較大的 *growth_increment* 值。 若要判斷目前交易記錄大小的最佳 VLF 分佈，請參閱下方的提示。 
  - *size* 值，如 `ALTER DATABASE` 的 `SIZE` 引數所設定，是記錄檔的初始大小。
- - *growth_increment* 值，如 `ALTER DATABASE` 的 `FILEGROWTH` 引數所設定，是每次需要新空間時新增到檔案的空間量。 
+ - *growth_increment* 值 (也稱為自動成長值)，如 `ALTER DATABASE` 的 `FILEGROWTH` 引數所設定，是每次需要新空間時新增到檔案的空間量。 
  
 如需 `ALTER DATABASE` 的 `FILEGROWTH` 和 `SIZE` 引數的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41; 檔案及檔案群組選項](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
 > [!TIP]
-> 若要判斷指定執行個體中所有資料庫的目前交易記錄大小的最佳 VLF 分佈，請參閱此[指令碼](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
+> 若要判斷指定執行個體中所有資料庫的目前交易記錄大小的最佳 VLF 分佈，以及達到所需大小的必要成長增量，請參閱此[指令碼](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
   
  交易記錄是循環使用的檔案。 例如，假設資料庫的一個實體記錄檔分成四個 VLF。 資料庫建立時，邏輯記錄檔從實體記錄檔的最前面開始。 新的記錄會加在邏輯記錄檔的最後，並朝向實體記錄檔的結尾處擴充。 記錄截斷會釋出記錄出現在最小復原記錄序號 (MinLSN) 前面的所有虛擬記錄。 *MinLSN* 是成功回復全資料庫所需之最舊記錄檔記錄的記錄序號。 範例資料庫中的交易記錄看起來如下圖所示。  
   

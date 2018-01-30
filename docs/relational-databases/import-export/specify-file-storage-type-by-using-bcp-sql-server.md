@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2fe1deffa8a1521a24035d2fc69ef6566f93294
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5c79f8e898fd3ec5a70e98c7e34daef5180fb0a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>使用 bcp 指定檔案儲存類型 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]「檔案儲存類型」描述資料如何儲存在資料檔案中。 資料可以依其資料庫資料表類型 (原生格式)、依其字元表示 (字元格式)，或者依支援隱含轉換的任何資料類型匯出至資料檔；例如，將 **smallint** 複製為 **int**。使用者自訂資料類型會依其基底類型匯出。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/17/2017
     |**numeric**|**n**|  
     |**float**|**f[loat]**|  
     |**real**|**r**|  
-    |**Int**|**i[nt]**|  
+    |**整數**|**i[nt]**|  
     |**bigint**|**B[igint]**|  
     |**smallint**|**s[mallint]**|  
     |**tinyint**|**t[inyint]**|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/17/2017
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
 |**text***\*|SQLCHAR|  
-|**的未來版本將會移除***\*|SQLNCHAR|  
+|**ntext***\*|SQLNCHAR|  
 |**binary**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
 |**image***\*|SQLBINARY|  

@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.setwarningthreshold.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f731b903bf0c8006fb9a36177f8951ac214537b3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-warning-thresholds"></a>設定警告臨界值
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用這個對話方塊可針對 [資料庫鏡像監視器] 對話方塊內瀏覽樹狀目錄中選取的資料庫，啟用並設定一或多個警告閾值。  
@@ -33,9 +35,9 @@ ms.lasthandoff: 11/20/2017
   
 -   [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  *伺服器執行個體及其連接狀態*  
- 以 *SYSTEM***\\***INSTANCE_NAME*格式顯示的夥伴伺服器執行個體名稱。 如果是預設伺服器執行個體，則只會顯示系統名稱。  
+ 以 *SYSTEM***\\***INSTANCE_NAME* 格式顯示的夥伴伺服器執行個體名稱。 如果是預設伺服器執行個體，則只會顯示系統名稱。  
   
  這個欄位也會指出監視器目前是否已連接到這個伺服器執行個體。 可能的連接狀態如下：  
   
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  如果伺服器執行個體處於未連接狀態，則其資料行會顯示空的資料格和灰色背景。 當連接開啟時，方格便會自動顯示執行個體的內容。  
   
- 此方格包含下列資料行：  
+ 方格包含下列資料行：  
   
  **警告**  
  列出支援的警告：  
@@ -88,7 +90,7 @@ ms.lasthandoff: 11/20/2017
  **確定**  
  按一下 [確定] 關閉這個對話方塊，並且將目前指定的警告臨界值顯示在 [警告] 索引標籤頁面上的 [臨界值] 方格中。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  臨界值一次只能適用於一個夥伴，但是，建議您針對兩個夥伴上的特定事件都設定臨界值，以確保如果資料庫發生容錯移轉時，警告都能持續顯示。 適合於每個夥伴的臨界值需視該夥伴系統的效能功能而定。  
   
  在更新狀態資料表時，只有當效能值達到或超過臨界值時，才會將事件寫入該效能的事件記錄檔中。 如果尖峰值只在兩次狀態更新之間短暫達到臨界值，則會遺漏該尖峰值。  

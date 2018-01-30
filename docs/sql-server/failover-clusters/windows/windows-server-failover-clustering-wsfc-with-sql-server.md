@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5fdd2a6aed90983a38c4a34cd48588d157c036df
-ms.sourcegitcommit: 719bcc010dd1ca6f2acfcdf6f9bd9f73451ca8ca
+ms.openlocfilehash: 520b6480f584fcd26563c675548b0a60fd204e1f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>SQL Server 的 Windows Server 容錯移轉叢集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]「Windows Server 容錯移轉叢集 (WSFC)」是一組獨立伺服器，會一起運作以提高應用程式和服務的可用性。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 利用 WSFC 服務和功能，以支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。  
@@ -42,7 +43,8 @@ ms.lasthandoff: 12/20/2017
  叢集資源  
  實體或邏輯實體，可為節點所擁有、恢復上線及離線、在節點之間移動，並以叢集物件方式進行管理。 叢集資源在任何時間點只能由單一節點所擁有。  
   
- 以單一叢集物件方式管理的角色 A 叢集資源集合，來提供特定功能。 針對 SQL Server，角色將是 AlwaysOn 可用性群組 (AG) 或 AlwaysOn 容錯移轉叢集執行個體 (FCI)。 角色包含 AG 或 FCI 需要的所有叢集資源。 容錯移轉和容錯移轉一律在角色的內容中運作。 針對 FCI，角色將包含 IP 位址資源、網路名稱資源和 SQL Server 資源。 AG 角色將包含 AG 資源；而且，如果設定接聽程式，則包含 networm 名稱和 IP 資源。 
+ 角色  
+ 以單一叢集物件方式管理的叢集資源集合，用來提供特定功能。 針對 SQL Server，角色將是 AlwaysOn 可用性群組 (AG) 或 AlwaysOn 容錯移轉叢集執行個體 (FCI)。 角色包含 AG 或 FCI 需要的所有叢集資源。 容錯移轉和容錯移轉一律在角色的內容中運作。 針對 FCI，角色將包含 IP 位址資源、網路名稱資源和 SQL Server 資源。 AG 角色將包含 AG 資源；而且，如果設定接聽程式，則包含 networm 名稱和 IP 資源。 
 
  網路名稱資源  
  以叢集資源方式管理的邏輯伺服器名稱。 網路名稱資源必須與 IP 位址資源搭配使用。 這些項目可能需要 Active Directory Domain Services 和 (或) DNS 中的物件。 
