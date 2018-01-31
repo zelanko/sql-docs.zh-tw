@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efd64e5612f10b3521849ff2da6103d2975f4830
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9aa8e325ae43e1de7c5e29045caf465102966f52
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutablestatistics"></a>catalog.executable_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,16 +31,16 @@ ms.lasthandoff: 11/20/2017
   
  可執行檔是您加入至封裝之控制流程的工作或容器。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|Statistics_id|bigint|資料的唯一識別碼。|  
-|Execution_id|bigint|執行之執行個體的唯一識別碼。<br /><br /> catalog.executions 檢視提供有關執行的詳細資訊。 如需詳細資訊，請參閱 [catalog.executions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)。|  
-|Executable_id|bigint|封裝元件的唯一識別碼。<br /><br /> catalog.executables 檢視提供有關可執行檔的詳細資訊。 如需詳細資訊，請參閱 [catalog.executables](../../integration-services/system-views/catalog-executables.md)。|  
+|Statistics_id|BIGINT|資料的唯一識別碼。|  
+|Execution_id|BIGINT|執行之執行個體的唯一識別碼。<br /><br /> catalog.executions 檢視提供有關執行的詳細資訊。 如需詳細資訊，請參閱 [catalog.executions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)。|  
+|Executable_id|BIGINT|封裝元件的唯一識別碼。<br /><br /> catalog.executables 檢視提供有關可執行檔的詳細資訊。 如需詳細資訊，請參閱 [catalog.executables](../../integration-services/system-views/catalog-executables.md)。|  
 |Execution_path|nvarchar(max)|元件封裝 (包括元件的每個反覆運算) 的完整執行路徑。|  
 |Start_time|datetimeoffset(7)|可執行檔進入執行前階段的時間。|  
 |End_time|datetimeoffset(7)|可執行檔進入執行後階段的時間。|  
-|Execution_duration|int|可執行檔花在執行的時間長度。 值會以毫秒來表示。|  
-|Execution_result|smallint|以下是可能的值：<br /><br /> 0 (成功)<br /><br /> 1 (失敗)<br /><br /> 2 (完成)<br /><br /> 3 (已取消)|  
+|Execution_duration|ssNoversion|可執行檔花在執行的時間長度。 值會以毫秒來表示。|  
+|Execution_result|SMALLINT|以下是可能的值：<br /><br /> 0 (成功)<br /><br /> 1 (失敗)<br /><br /> 2 (完成)<br /><br /> 3 (已取消)|  
 |Execution_value|sql_variant|執行所傳回的值。 這是使用者定義值。|  
   
 ## <a name="permissions"></a>Permissions  

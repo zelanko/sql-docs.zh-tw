@@ -8,27 +8,28 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c222d113bc0ec603bee5c63f3e4badff58dc1d42
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f4ff86dd705285c574ebdca32b4be7a59db6fe4f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutionparametervalues-ssisdb-database"></a>catalog.execution_parameter_values (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示執行執行個體期間由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝所使用的實際參數值。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |execution_parameter_id|**bigint**|執行參數的唯一識別碼 (ID)。|  
 |execution_id|**bigint**|執行執行個體的唯一識別碼 (ID)。|  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |value_set|**bit**|當值為 `1` 時，表示參數值已指派。 當值為 `0` 時，表示參數值未指派。|  
 |runtime_override|**bit**|當值為 `1` 時，表示在開始執行之前，參數值已從原始值變更。 當值為 `0` 時，表示參數值為設定的原始參數值。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個檢視會顯示目錄中每個執行參數的資料列。 執行參數值是在單一執行執行個體期間指派給專案參數或封裝參數的值。  
   
 ## <a name="permissions"></a>Permissions  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **sysadmin** 伺服器角色的成員資格  
+-   **系統管理員**伺服器角色的成員資格  
   
 > [!NOTE]  
 >  當您擁有在伺服器上執行操作的權限時，也會具有檢視作業資訊的權限。 強制使用資料列層級安全性，只會顯示您具有檢視權限的資料列。  

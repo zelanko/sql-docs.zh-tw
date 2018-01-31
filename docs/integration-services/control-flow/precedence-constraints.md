@@ -8,10 +8,12 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.precedenceconstraint.f1
+f1_keywords:
+- sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84b5d39132c85d7aa34dbb1e4bfb53d400d3cfa0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="precedence-constraints"></a>優先順序條件約束
   優先順序條件約束可在控制流程中，連結封裝中的可執行檔、容器和工作，並指定判斷可執行檔是否執行的條件。 可執行檔可以是「For 迴圈」容器、「Foreach 迴圈」容器、「時序」容器、工作或事件處理常式。 事件處理常式也可使用優先順序條件約束，以將其可執行檔連結至控制流程。  
@@ -117,7 +119,7 @@ ms.lasthandoff: 11/20/2017
  **評估作業**  
  指定優先順序條件約束所使用的評估作業。 這些作業有： **[條件約束]**、 **[運算式]**、 **[運算式與條件約束]**，以及 **[運算式或條件約束]**。  
   
- **值**  
+ **ReplTest1**  
  指定下列條件約束值：[成功]、[失敗] 或 [完成]。  
   
 > [!NOTE]  
@@ -153,13 +155,13 @@ ms.lasthandoff: 11/20/2017
   
     |讀取/寫入屬性|組態動作|  
     |--------------------------|--------------------------|  
-    |說明|提供描述。|  
+    |描述|提供描述。|  
     |EvalOp|選取評估作業。 如果選取 [Expression]、[ExpressionAndConstant] 或 [ExpressionOrConstant] 作業，您就可以指定運算式。|  
     |運算式|如果評估作業包含運算式，請提供一個運算式。 運算式必須評估為布林。 如需運算式語言的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)。|  
     |LogicalAnd|設定 [LogicalAnd]，指定當多個可執行檔優先於並連結到受條件約束的可執行檔時，優先順序條件約束是否要配合其他優先順序條件約束進行評估|  
-    |名稱|更新優先順序條件約束的名稱。|  
+    |[屬性]|更新優先順序條件約束的名稱。|  
     |ShowAnnotation|指定要使用之註解的類型。 選擇 [Never] 以停用註解，選擇 [AsNeeded] 以視需要啟用註解，選擇 [ConstraintName] 以使用 Name 屬性的值來自動註解，選擇 [ConstraintDescription] 以使用 Description 屬性的值來自動註解，以及選擇 [ConstraintOptions] 以使用 Value 和 Expression 屬性的值來自動註解。|  
-    |Value|如果 EvalOP 屬性中指定的評估作業包含條件約束，請選取具有條件約束之可執行檔的執行結果。|  
+    |ReplTest1|如果 EvalOP 屬性中指定的評估作業包含條件約束，請選取具有條件約束之可執行檔的執行結果。|  
   
 5.  關閉 [屬性] 視窗。  
   
@@ -178,9 +180,9 @@ ms.lasthandoff: 11/20/2017
 5.  若要儲存更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
 
 ## <a name="add-expressions-to-precedence-constraints"></a>將運算式加入優先順序條件約束
- 優先順序條件約束可以使用運算式來定義兩個可執行檔之間的條件約束：優先順序可執行檔和受條件約束的可執行檔。 可執行檔可以是工作或容器。 運算式可以單獨使用，或與優先順序可執行檔的執行結果組合使用。 可執行檔的執行結果為成功或失敗。 設定優先順序條件約束的執行結果時，可以將執行結果設為 [成功]、[失敗] 或 [完成]。 **成功**：表示優先順序可執行檔必須執行成功；**失敗**：表示優先順序可執行檔必須執行失敗；**完成**：指示不論優先順序工作成功與否，受條件約束的可執行檔都應該執行。 如需詳細資訊，請參閱 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+ 優先順序條件約束可以使用運算式來定義兩個可執行檔之間的條件約束：優先順序可執行檔和受條件約束的可執行檔。 可執行檔可以是工作或容器。 運算式可以單獨使用，或與優先順序可執行檔的執行結果組合使用。 可執行檔的執行結果為成功或失敗。 設定優先順序條件約束的執行結果時，可以將執行結果設為 [成功]、[失敗] 或 [完成]。 **成功**：表示優先順序可執行檔必須執行成功；**失敗**：表示優先順序可執行檔必須執行失敗；**完成**：指示不論優先順序工作成功與否，受條件約束的可執行檔都應該執行。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
   
- 運算式必須評估為 **True** 或 **False**，且必須是有效的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式。 運算式可以使用常值、系統及自訂變數，以及 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 運算式文法提供的函數與運算子。 例如，運算式 `@Count == SQRT(144) + 10` 使用變數 **Count**、SQRT 函數及等於 (==) 和加 (+) 運算子。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)。  
+ 運算式必須評估為 **True** 或 **False**，且必須是有效的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式。 運算式可以使用常值、系統及自訂變數，以及 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 運算式文法提供的函數與運算子。 例如，運算式 `@Count == SQRT(144) + 10` 使用變數 **Count**、SQRT 函數及等於 (==) 和加 (+) 運算子。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)為止。  
   
  在下圖中，工作 A 及工作 B 由使用執行結果及運算式的優先順序條件約束連結。 條件約束值設為 [成功] 且運算式為 `@X >== @Z`。 工作 B (受條件約束的工作) 只在工作 A 順利完成且變數 **X** 的值大於或等於變數 **Z**的值時執行。  
   
@@ -256,7 +258,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  在下拉式清單中，選擇 [在新形狀使用「失敗」條件約束] 或 [在新形狀使用「完成」條件約束]。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
 ## <a name="create-a-default-precedence-constraint"></a>建立預設優先順序條件約束  
   

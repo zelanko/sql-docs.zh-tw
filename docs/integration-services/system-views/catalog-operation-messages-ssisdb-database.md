@@ -8,30 +8,31 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 666d7014adb8feaa77e72f5856838051d992c8df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a095bff8fd8feec5a278ed8dc7de648babaa7c2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中之作業期間所記錄的訊息。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|訊息的唯一識別碼 (ID)。|  
 |operation_id|**bigint**|作業的唯一識別碼。|  
@@ -41,17 +42,17 @@ ms.lasthandoff: 11/20/2017
 |message|**nvarchar(max)**|訊息的文字。|  
 |extended_info_id|**bigint**|在 [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) 檢視中所找到，且與作業訊息相關之其他資訊的識別碼。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個檢視會顯示在目錄作業期間所記錄之每個訊息的資料列。 訊息可由伺服器、封裝執行處理或執行引擎所產生。  
   
  這個檢視會顯示下列訊息類型：  
   
-|**message_type** 值|Description|  
+|**message_type** 值|描述|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|錯誤|  
 |110|警告|  
-|70|資訊|  
+|70|[資訊]|  
 |10|驗證前|  
 |20|驗證後|  
 |30|執行前|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/20/2017
   
  這個檢視會顯示下列訊息來源類型。  
   
-|**message_source_type**|Description|  
+|**message_source_type**|描述|  
 |-------------------------------|-----------------|  
 |10|項目 API，例如 T-SQL 和 CLR 預存程序|  
 |20|用來執行封裝的外部處理序 (ISServerExec.exe)|  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **sysadmin** 伺服器角色的成員資格  
+-   **系統管理員**伺服器角色的成員資格  
   
 > [!NOTE]  
 >  當您擁有在伺服器上執行操作的權限時，也會具有檢視作業資訊的權限。 強制使用資料列層級安全性，只會顯示您具有檢視權限的資料列。  

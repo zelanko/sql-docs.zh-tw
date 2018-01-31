@@ -8,23 +8,24 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a23adf907e01dd8c95c5c44a5a57db0aeb807625
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2254c139d1e93755cd9b3c503ad0bc42f08cb4e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
   您可以使用下列其中一項或多項工具，監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行封裝、專案驗證及其他作業。 某些工具 (例如資料點選) 僅適用於部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的專案。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
 |||  
 |-|-|  
-|初始化 Integration Services|1|  
+|初始化 Integration Services|@shouldalert|  
 |作業清除 (SQL 代理程式作業)|2|  
 |專案版本清理 (SQL 代理程式作業)|3|  
 |部署專案|101|  
@@ -136,7 +137,7 @@ ms.lasthandoff: 11/20/2017
   
  此報表會顯示下列資訊區段。  
   
-|章節|說明|  
+|章節|描述|  
 |-------------|-----------------|  
 |**執行資訊**|顯示在過去 24 小時內，處於不同狀態 (失敗、執行中、成功、其他) 的執行數目。|  
 |**封裝資訊**|顯示在過去 24 小時內已經執行之封裝的總數。|  
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/20/2017
   
  此報表會顯示下列資訊區段。  
   
-|章節|說明|  
+|章節|描述|  
 |-------------|-----------------|  
 |篩選|顯示目前套用至報表的篩選，例如 [開始時間範圍]。|  
 |執行資訊|顯示每個封裝執行的開始時間、結束時間和期間。您可以檢視封裝執行使用的參數值清單，例如使用 [執行封裝] 工作傳遞至子封裝的值。 若要檢視參數清單，請按一下 [概觀]。|  
@@ -164,7 +165,7 @@ ms.lasthandoff: 11/20/2017
   
  此報表會顯示下列資訊區段。  
   
-|章節|說明|  
+|章節|描述|  
 |-------------|-----------------|  
 |篩選|顯示目前套用至報表的篩選，例如具有指定字串和 [上次失敗時間] 範圍的連接。<br /><br /> 設定 [上次失敗時間] 範圍，就可以只顯示某個日期範圍內發生的連接失敗。 範圍可以跨多天、數個月或數年。|  
 |詳細資料|顯示連接字串、發生連接失敗的執行數目，以及上一次連接失敗的日期。|  

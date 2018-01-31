@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6de3f50f2a0630e2488b33c6fe98c1fe20c1b0d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1ba138c4315bf31efc281aff9a42b0e8a513b756
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
   如果屬性運算式包含來自列舉值成員清單的值，運算式必須使用列舉值成員的數值來取代成員的易記名稱。 例如，如果運算式設定了 **LoggingMode** 屬性，您就必須使用數值 2 來取代易記名稱 Disabled。  
@@ -56,8 +57,8 @@ ms.lasthandoff: 11/20/2017
   
 |DTSPackageType 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
-|預設值|0|  
-|DTSWizard|1|  
+|預設|0|  
+|DTSWizard|@shouldalert|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
 |DTSDesigner100|5|  
@@ -68,15 +69,15 @@ ms.lasthandoff: 11/20/2017
 |DTSCheckpointUsage 中的易記名稱|數值|  
 |-----------------------------------------|-------------------|  
 |永不|0|  
-|IfExists|1|  
+|IfExists|@shouldalert|  
 |永遠|2|  
   
  **PackagePriorityClass** 屬性：使用來自 **DTSPriorityClass** 列舉的值進行設定。  
   
 |DTSPriorityClass 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
-|預設值|0|  
-|AboveNormal|1|  
+|預設|0|  
+|AboveNormal|@shouldalert|  
 |一般|2|  
 |BelowNormal|3|  
 |Idle|4|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/20/2017
 |DTSProtectionLevel 中的易記名稱|數值|  
 |-----------------------------------------|-------------------|  
 |DontSaveSensitive|0|  
-|EncryptSensitiveWithUserKey|1|  
+|EncryptSensitiveWithUserKey|@shouldalert|  
 |EncryptSensitiveWithPassword|2|  
 |EncryptAllWithPassword|3|  
 |EncryptAllWithUserKey|4|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
 |DTSPrecedenceEvalOp 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
-|運算式|1|  
+|運算式|@shouldalert|  
 |條件約束|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
@@ -107,7 +108,7 @@ ms.lasthandoff: 11/20/2017
 |易記名稱|數值|  
 |-------------------|-------------------|  
 |成功|0|  
-|失敗|1|  
+|失敗|@shouldalert|  
 |Completion|2|  
 |已取消|3|  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 11/20/2017
 |ADOEnumerationType 中的易記名稱|數值|  
 |-----------------------------------------|-------------------|  
 |EnumerateTables|0|  
-|EnumerateAllRows|1|  
+|EnumerateAllRows|@shouldalert|  
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Foreach NodeList 列舉值  
@@ -129,7 +130,7 @@ ms.lasthandoff: 11/20/2017
 |SourceType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
 |FileConnection|0|  
-|變數|1|  
+|變數|@shouldalert|  
 |DirectInput|2|  
   
  **EnumerationType** 屬性：使用來自 **EnumerationType** 列舉的值進行設定。  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
 |EnumerationType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |Navigator|0|  
-|節點|1|  
+|節點|@shouldalert|  
 |NodeText|2|  
 |ElementCollection|3|  
   
@@ -146,7 +147,7 @@ ms.lasthandoff: 11/20/2017
 |InnerElementType 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
 |Navigator|0|  
-|節點|1|  
+|節點|@shouldalert|  
 |NodeText|2|  
   
 ##  <a name="Tasks"></a> 工作  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
 |DDLSourceType 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
 |DirectInput|0|  
-|FileConnection|1|  
+|FileConnection|@shouldalert|  
 |變數|2|  
   
 ### <a name="bulk-insert-task"></a>大量插入工作  
@@ -167,7 +168,7 @@ ms.lasthandoff: 11/20/2017
 |DTSBulkInsert_DataFileType 中的易記名稱|數值|  
 |--------------------------------------------------|-------------------|  
 |DTSBulkInsert_DataFileType_Char|0|  
-|DTSBulkInsert_DataFileType_Native|1|  
+|DTSBulkInsert_DataFileType_Native|@shouldalert|  
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
@@ -176,7 +177,7 @@ ms.lasthandoff: 11/20/2017
   
 |ResultSetType 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
-|ResultSetType_None|1|  
+|ResultSetType_None|@shouldalert|  
 |ResultSetType_SingleRow|2|  
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
@@ -185,7 +186,7 @@ ms.lasthandoff: 11/20/2017
   
 |SqlStatementSourceType 中的易記名稱|數值|  
 |---------------------------------------------|-------------------|  
-|DirectInput|1|  
+|DirectInput|@shouldalert|  
 |FileConnection|2|  
 |變數|3|  
   
@@ -195,7 +196,7 @@ ms.lasthandoff: 11/20/2017
 |DTSFileSystemOperation 中的易記名稱|數值|  
 |---------------------------------------------|-------------------|  
 |CopyFile|0|  
-|MoveFile|1|  
+|MoveFile|@shouldalert|  
 |DeleteFile|2|  
 |RenameFile|3|  
 |SetAttributes|4|  
@@ -210,7 +211,7 @@ ms.lasthandoff: 11/20/2017
 |DTSFileSystemAttributes 中的易記名稱|數值|  
 |----------------------------------------------|-------------------|  
 |一般|0|  
-|Archive|1|  
+|Archive|@shouldalert|  
 |Hidden|2|  
 |ReadOnly|4|  
 |系統|8|  
@@ -221,7 +222,7 @@ ms.lasthandoff: 11/20/2017
 |DTSFTPOp 中的易記名稱|數值|  
 |-------------------------------|-------------------|  
 |Send|0|  
-|Receive|1|  
+|Receive|@shouldalert|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -229,13 +230,13 @@ ms.lasthandoff: 11/20/2017
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### <a name="message-queue-task"></a>訊息佇列工作  
+### <a name="message-queue-task"></a>Message Queue Task  
  **MessageType** 屬性：使用來自 **MQMessageType** 列舉的值進行設定。  
   
 |MQMessageType 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
 |DTSMQMessageType_String|0|  
-|DTSMQMessageType_DataFile|1|  
+|DTSMQMessageType_DataFile|@shouldalert|  
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
@@ -244,7 +245,7 @@ ms.lasthandoff: 11/20/2017
 |MQStringMessageCompare 中的易記名稱|數值|  
 |---------------------------------------------|-------------------|  
 |DTSMQStringMessageCompare_None|0|  
-|DTSMQStringMessageCompare_Exact|1|  
+|DTSMQStringMessageCompare_Exact|@shouldalert|  
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
@@ -253,7 +254,7 @@ ms.lasthandoff: 11/20/2017
 |MQType 中的易記名稱|數值|  
 |-----------------------------|-------------------|  
 |DTSMQType_Sender|0|  
-|DTSMQType_Receiver|1|  
+|DTSMQType_Receiver|@shouldalert|  
   
 ### <a name="send-mail-task"></a>傳送郵件工作  
  **MessageSourceType** 屬性：使用來自 **SendMailMessageSourceType** 列舉的值進行設定。  
@@ -261,14 +262,14 @@ ms.lasthandoff: 11/20/2017
 |SendMailMessageSourceType 中的易記名稱|數值|  
 |------------------------------------------------|-------------------|  
 |DirectInput|0|  
-|FileConnection|1|  
+|FileConnection|@shouldalert|  
 |變數|2|  
   
  **Priority** 屬性：使用來自 **MailPriority** 列舉的值進行設定。  
   
 |MailPriority 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
-|高|1|  
+|高|@shouldalert|  
 |一般|3|  
 |低|5|  
   
@@ -277,15 +278,15 @@ ms.lasthandoff: 11/20/2017
   
 |TransferAction 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
-|複製|0|  
-|移動|1|  
+|[複製]|0|  
+|[移動]|@shouldalert|  
   
  **Method** 屬性：使用來自 **TransferMethod** 列舉的值設定。  
   
 |TransferMethod 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |DatabaseOffline|0|  
-|DatabaseOnline|1|  
+|DatabaseOnline|@shouldalert|  
   
 ### <a name="transfer-error-messages-task"></a>傳送錯誤訊息工作  
  **IfObjectExists** 屬性：使用來自 **IfObjectExists** 列舉的值設定。  
@@ -293,7 +294,7 @@ ms.lasthandoff: 11/20/2017
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
 |Skip|2|  
   
 ### <a name="transfer-jobs-task"></a>傳送作業工作  
@@ -302,7 +303,7 @@ ms.lasthandoff: 11/20/2017
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
 |Skip|2|  
   
 ### <a name="transfer-logins-task"></a>傳送登入工作  
@@ -311,7 +312,7 @@ ms.lasthandoff: 11/20/2017
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
 |Skip|2|  
   
  **LoginsToTransfer** 屬性：使用來自 **LoginsToTransfer** 列舉的值進行設定。  
@@ -319,7 +320,7 @@ ms.lasthandoff: 11/20/2017
 |LoginsToTransfer 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
 |AllLogins|0|  
-|SelectedLogins|1|  
+|SelectedLogins|@shouldalert|  
 |AllLoginsFromSelectedDatabases|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>傳送主要預存程序工作  
@@ -328,7 +329,7 @@ ms.lasthandoff: 11/20/2017
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
 |Skip|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作  
@@ -337,7 +338,7 @@ ms.lasthandoff: 11/20/2017
 |ExistingData 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
 |取代|0|  
-|附加|1|  
+|附加|@shouldalert|  
   
 ### <a name="web-service-task"></a>Web 服務工作  
  **OutputType** 屬性：使用來自 **DTSOutputType** 列舉的值進行設定。  
@@ -345,7 +346,7 @@ ms.lasthandoff: 11/20/2017
 |DTSOutputType 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
 |檔案|0|  
-|變數|1|  
+|變數|@shouldalert|  
   
 ### <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作  
  **OverwriteDestination** 屬性：使用來自 **OverwriteDestination** 列舉的值設定。  
@@ -353,7 +354,7 @@ ms.lasthandoff: 11/20/2017
 |OverwriteDestination 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  
 |OverwriteDestination|0|  
-|AppendToDestination|1|  
+|AppendToDestination|@shouldalert|  
 |KeepOriginal|2|  
   
  **OutputType** 屬性：使用來自 **OutputType** 列舉的值進行設定。  
@@ -361,7 +362,7 @@ ms.lasthandoff: 11/20/2017
 |OutputType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
 |DataTable|0|  
-|PropertyValue|1|  
+|PropertyValue|@shouldalert|  
 |PropertyNameAndValue|2|  
   
  **DestinationType** 屬性：使用來自 **DestinationType** 列舉的值進行設定。  
@@ -369,14 +370,14 @@ ms.lasthandoff: 11/20/2017
 |DestinationType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
-|變數|1|  
+|變數|@shouldalert|  
   
  **WqlQuerySourceType** 屬性：使用來自 **QuerySourceType** 列舉的值進行設定。  
   
 |QuerySourceType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
-|DirectInput|1|  
+|DirectInput|@shouldalert|  
 |變數|2|  
   
  WMI 事件監看員 **ActionAtEvent** 屬性：使用來自 **ActionAtEvent** 列舉的值進行設定。  
@@ -384,21 +385,21 @@ ms.lasthandoff: 11/20/2017
 |ActionAtEvent 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
-|LogTheEvent|1|  
+|LogTheEvent|@shouldalert|  
   
  **ActionAtTimeout** 屬性：使用來自 **ActionAtTimeout** 列舉的值進行設定。  
   
 |ActionAtTimeout 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
-|LogTimeout|1|  
+|LogTimeout|@shouldalert|  
   
  **AfterEvent** 屬性：使用來自 **AfterEvent** 列舉的值進行設定。  
   
 |AfterEvent 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
 |ReturnWithSuccess|0|  
-|ReturnWithFailure|1|  
+|ReturnWithFailure|@shouldalert|  
 |WatchfortheEventAgain|2|  
   
  **AfterTimeout** 屬性：使用來自 **AfterTimeout** 列舉的值進行設定。  
@@ -406,7 +407,7 @@ ms.lasthandoff: 11/20/2017
 |AfterTimeout 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
 |ReturnWithSuccess|0|  
-|ReturnWithFailure|1|  
+|ReturnWithFailure|@shouldalert|  
 |WatchfortheEventAgain|2|  
   
  **WqlQuerySourceType** 屬性：使用來自 **QuerySourceType** 列舉的值進行設定。  
@@ -414,7 +415,7 @@ ms.lasthandoff: 11/20/2017
 |QuerySourceType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
-|DirectInput|1|  
+|DirectInput|@shouldalert|  
 |變數|2|  
   
 ### <a name="xml-task"></a>XML 工作  
@@ -423,7 +424,7 @@ ms.lasthandoff: 11/20/2017
 |DTSXMLOperation 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |Validate|0|  
-|XSLT|1|  
+|XSLT|@shouldalert|  
 |XPATH|2|  
 |合併式|3|  
 |Diff|4|  
@@ -434,7 +435,7 @@ ms.lasthandoff: 11/20/2017
 |DTSXMLSourceType 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
 |FileConnection|0|  
-|變數|1|  
+|變數|@shouldalert|  
 |DirectInput|2|  
   
  **DestinationType** 和 **DiffGramDestinationType** 屬性：使用來自 **DTSXMLSaveResultTo** 列舉的值進行設定。  
@@ -442,21 +443,21 @@ ms.lasthandoff: 11/20/2017
 |DTSXMLSaveResultTo 中的易記名稱|數值|  
 |-----------------------------------------|-------------------|  
 |FileConnection|0|  
-|變數|1|  
+|變數|@shouldalert|  
   
  **ValidationType** 屬性：使用來自 **DTSXMLValidationType** 列舉的值進行設定。  
   
 |DTSXMLValidationType 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
-|XSD|1|  
+|XSD|@shouldalert|  
   
  **XPathOperation** 屬性：使用來自 **DTSXMLXPathOperation** 列舉的值進行設定。  
   
 |DTSXMLXPathOperation 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  
 |Evaluation|0|  
-|值|1|  
+|值|@shouldalert|  
 |NodeList|2|  
   
  **DiffOptions** 屬性：使用來自 **DTSXMLDiffOptions** 列舉的值進行設定。 此列舉值中的選項不會互斥。 若要使用多個選項，請提供要套用之選項的逗號分隔清單。  
@@ -464,7 +465,7 @@ ms.lasthandoff: 11/20/2017
 |DTSXMLDiffOptions 中的易記名稱|數值|  
 |----------------------------------------|-------------------|  
 |無|0|  
-|IgnoreChildOrder|1|  
+|IgnoreChildOrder|@shouldalert|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
 |IgnoreWhitespace|8|  
@@ -478,7 +479,7 @@ ms.lasthandoff: 11/20/2017
 |DTSXMLDiffAlgorithm 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
 |Auto|0|  
-|快速|1|  
+|快速|@shouldalert|  
 |精確|2|  
   
 ##  <a name="MaintenancePlanTasks"></a> 維護計畫工作  
@@ -494,7 +495,7 @@ ms.lasthandoff: 11/20/2017
 |DatabaseSelection 中的易記名稱|數值|  
 |----------------------------------------|-------------------|  
 |無|0|  
-|全部|1|  
+|All|@shouldalert|  
 |系統|2|  
 |使用者|3|  
 |Specific|4|  
@@ -504,7 +505,7 @@ ms.lasthandoff: 11/20/2017
 |TableSelection 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |無|0|  
-|全部|1|  
+|All|@shouldalert|  
 |Specific|2|  
   
  **ObjectTypeSelection** 屬性：使用來自 **ObjectType** 列舉的值進行設定。  
@@ -512,7 +513,7 @@ ms.lasthandoff: 11/20/2017
 |ObjectType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
 |Table|0|  
-|檢視|1|  
+|檢視|@shouldalert|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>備份資料庫工作  
@@ -521,21 +522,21 @@ ms.lasthandoff: 11/20/2017
 |DestinationType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
-|Manual|1|  
+|手動|@shouldalert|  
   
  **ExistingBackupsAction** 屬性：使用來自 **ActionForExistingBackups** 列舉的值設定。  
   
 |ActionForExistingBackups 中的易記名稱|數值|  
 |-----------------------------------------------|-------------------|  
 |附加|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
   
  **BackupAction** 屬性：使用來自 **BackupTaskType** 列舉的值進行設定。 此屬性可搭配 **BackupIsIncremental** 屬性使用，以定義工作執行的備份類型。  
   
 |BackupTaskType 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
-|資料庫|0|  
-|檔案|1|  
+|[資料庫]|0|  
+|檔案|@shouldalert|  
 |Log|2|  
   
  **BackupDevice** 屬性：使用來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) **DeviceType** 列舉的值進行設定。  
@@ -543,7 +544,7 @@ ms.lasthandoff: 11/20/2017
 |DeviceType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
 |LogicalDevice|0|  
-|Tape|1|  
+|磁帶|@shouldalert|  
 |檔案|2|  
 |Pipe|3|  
 |VirtualDevice|4|  
@@ -554,14 +555,14 @@ ms.lasthandoff: 11/20/2017
 |FileType 中的易記名稱|數值|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
-|FileReport|1|  
+|FileReport|@shouldalert|  
   
  **OlderThanTimeUnitType** 屬性：使用來自 **TimeUnitType** 列舉的值進行設定。  
   
 |TimeUnitType 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
 |Day|0|  
-|週|1|  
+|週|@shouldalert|  
 |Month|2|  
 |Year|3|  
   
@@ -570,9 +571,9 @@ ms.lasthandoff: 11/20/2017
   
 |StatisticsTarget 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
-|資料行|1|  
+|「資料行」|@shouldalert|  
 |索引|2|  
-|全部|3|  
+|All|3|  
   
 ##  <a name="CommonProperties"></a> 通用屬性  
  封裝、工作以及「Foreach 迴圈」、「For 迴圈」和「時序」等容器可以使用下列列舉來設定指定的屬性。  
@@ -583,7 +584,7 @@ ms.lasthandoff: 11/20/2017
 |------------------------------------------|-------------------|  
 |無|-1|  
 |成功|0|  
-|失敗|1|  
+|失敗|@shouldalert|  
 |Completion|2|  
   
  **IsolationLevel** 屬性：由 .NET Framework **IsolationLevel** 列舉設定。 如需詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313)中的＜.NET Framework 類別庫＞。  
@@ -593,7 +594,7 @@ ms.lasthandoff: 11/20/2017
 |DTSLoggingMode 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|已啟用|1|  
+|已啟用|@shouldalert|  
 |已停用|2|  
   
  **TransactionOption** 屬性：使用來自 **DTSTransactionOption** 列舉的值進行設定。  
@@ -601,11 +602,11 @@ ms.lasthandoff: 11/20/2017
 |DTSTransactionOption 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|支援|1|  
+|支援|@shouldalert|  
 |必要項|2|  
   
 ## <a name="related-tasks"></a>相關工作  
- [加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)  
+ [新增或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)   

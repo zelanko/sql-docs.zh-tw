@@ -8,22 +8,25 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.threads
-helpviewer_keywords: Threads Window [Transact-SQL]
+f1_keywords:
+- vs.debug.threads
+helpviewer_keywords:
+- Threads Window [Transact-SQL]
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 032e8eb400eba98ad3be775159cf66c6f0f35a1e
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 50d5602a6bf16946b95e7baae0ffcc4181e38eca
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Transact-SQL 偵錯工具 - 執行緒視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [執行緒] 視窗會顯示有關所偵錯之[!INCLUDE[ssDE](../../includes/ssde-md.md)]查詢編輯器工作階段使用的[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行緒資訊。 您必須在偵錯模式中，才能顯示執行緒資訊。  

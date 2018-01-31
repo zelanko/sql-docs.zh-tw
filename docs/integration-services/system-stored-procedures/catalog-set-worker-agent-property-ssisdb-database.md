@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1438d3a2cf200450791c085f501c49329d61154d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 89e5893e418de7bdd7041b5ec8e8193479205659
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ Scale Out Worker 的背景工作代理程式識別碼。 *WorkerAgentId* 是 **u
 [@PropertyValue =] *PropertyValue*  
 屬性的值。 *PropertyValue* 是 **nvarchar(max)**。
 
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 有效屬性名稱是 **DisplayName**、**Description**、**Tags**。
 
 ## <a name="return-code-value"></a>傳回碼值  
@@ -58,7 +59,7 @@ Scale Out Worker 的背景工作代理程式識別碼。 *WorkerAgentId* 是 **u
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **sysadmin** 伺服器角色的成員資格
+-   **系統管理員**伺服器角色的成員資格
 
 ## <a name="errors-and-warnings"></a>錯誤和警告
   下列清單將描述可能會引發錯誤或警告的某些條件：  

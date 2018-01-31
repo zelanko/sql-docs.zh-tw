@@ -8,20 +8,21 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 52fb4e913a48b65544aaca84408f847af74412be
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 15c927bf78faa7705a27dafce3517de7f05e50d4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>叢集中的 Integration Services (SSIS)
   不建議您以叢集方式設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，因為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不是叢集服務或叢集感知的服務，也不支援從一個叢集節點容錯移轉到另一個叢集節點。 因此，在叢集環境中，應該以獨立服務的形式在叢集中的每一個節點上安裝及啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
@@ -104,15 +105,15 @@ ms.lasthandoff: 11/20/2017
   
 4.  在 [檔案] 功能表上，指向 [開新檔案]，然後按一下 [資源]。  
   
-5.  在 [資源精靈] 的 [新資源] 頁面上輸入名稱，然後選取 [一般服務] 作為 [服務類型]。 請不要變更 [群組] 的值。 按一下 **[下一步]**。  
+5.  在 [資源精靈] 的 [新資源] 頁面上輸入名稱，然後選取 [一般服務] 作為 [服務類型]。 請不要變更 [群組] 的值。 按 [下一步] 。  
   
-6.  在 [可能的擁有者] 頁面中，加入或移除作為資源之可能擁有者的叢集節點。 按一下 **[下一步]**。  
+6.  在 [可能的擁有者] 頁面中，加入或移除作為資源之可能擁有者的叢集節點。 按 [下一步] 。  
   
 7.  若要在 [相依性] 頁面上加入相依性，請選取 [可用的資源] 之下的資源，然後按一下 [加入]。 在容錯移轉時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和儲存 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的共用磁碟會在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 連線之前重新連線。 選取相依性之後，請按一下 [下一步]。  
   
      如需詳細資訊，請參閱[加入 SQL Server 資源的相依性](../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)。  
   
-8.  在 [一般服務參數] 頁面上，輸入 **MsDtsServer** 作為服務的名稱。 按一下 **[下一步]**。  
+8.  在 [一般服務參數] 頁面上，輸入 **MsDtsServer** 作為服務的名稱。 按 [下一步] 。  
   
 9. 在 [機碼複寫] 頁面上，按一下 [加入] 以加入用來識別 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務組態檔位置的登錄機碼。 此檔案必須位在與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務相同的資源群組中的共用磁碟上。  
   

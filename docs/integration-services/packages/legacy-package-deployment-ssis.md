@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,16 +34,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 486fa573b955848828bff349f364543e6a1e23f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f0a4d37996a1add0c028f9481b1dc232190a19a3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="legacy-package-deployment-ssis"></a>舊版封裝部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的工具和精靈可以簡化將封裝從開發電腦部署到實際伺服器或部署到其他電腦的流程。  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="package-configuration-types"></a>封裝組態類型  
  下表描述封裝組態類型。  
   
-|型別|說明|  
+|類型|描述|  
 |----------|-----------------|  
 |XML 組態檔|XML 檔案包含組態。 XML 檔案可以包含多重組態。|  
 |環境變數|環境變數包含組態。|  
@@ -153,7 +154,7 @@ ms.lasthandoff: 11/20/2017
   
  如果您選取 [登錄項目] 組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式為 \<登錄機碼>。 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式識別該機碼。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 **SSISPackages\MyPackage**。  
   
-#### <a name="sql-server"></a>SQL Server  
+#### <a name="sql-server"></a>[SQL Server]  
  如果選取 [SQL Server] 組態類型，則需要指定要儲存組態之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的連接。 您可以將組態儲存至現有的資料表，或者在指定的資料庫中建立新的資料表。  
   
  下列 SQL 陳述式顯示 [封裝組態精靈] 提供的預設 CREATE TABLE 陳述式。  
@@ -217,11 +218,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  在精靈完成後，新組態會加入 [封裝組態組合管理] 對話方塊中的組態清單。  
   
-> **注意：**[套件組態精靈] 的最後一頁，也就是 [正在完成精靈] 頁面，會列出組態中的目標屬性。 如果您想要在執行封裝時使用 **dtexec** 命令提示公用程式來更新屬性，可以執行封裝組態精靈來產生代表屬性路徑的字串，然後再將這些字串複製並貼到命令提示字元視窗中，以便搭配 **dtexec** 的設定選項使用。  
+> **注意：**[套件組態精靈] 的最後一頁，也就是 [正在完成精靈] 頁面，會列出組態中的目標屬性。 如果您想要在執行封裝時使用 **dtexec** 命令提示公用程式來更新屬性，可以執行封裝組態精靈來產生代表屬性路徑的字串，然後再將這些字串複製並貼到命令提示字元視窗中，以便搭配 **dtexec**的設定選項使用。  
   
  下表描述 [封裝組態組合管理] 對話方塊中組態清單中的資料行。  
   
-|資料行|說明|  
+|「資料行」|描述|  
 |------------|-----------------|  
 |**組態名稱**|組態的名稱。|  
 |**組態類型**|組態類型。|  
@@ -245,7 +246,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 7.  在 [選取組態類型] 頁面上，指定組態類型，然後設定與組態類型相關聯的屬性。 如需詳細資訊，請參閱 [封裝組態精靈 UI 參考](../../integration-services/packages/package-configuration-wizard-ui-reference.md)。  
   
-8.  在 [選取要匯出的屬性] 頁面上，選取要併入組態之封裝物件的屬性。 如果組態類型僅支援一個屬性，此精靈頁面的標題將為 [選取目標屬性]。 如需詳細資訊，請參閱[封裝組態精靈 UI 參考](../../integration-services/packages/package-configuration-wizard-ui-reference.md)。  
+8.  在 [選取要匯出的屬性] 頁面上，選取要併入組態之封裝物件的屬性。 如果組態類型僅支援一個屬性，此精靈頁面的標題將為 [選取目標屬性]。 如需詳細資訊，請參閱 [封裝組態精靈 UI 參考](../../integration-services/packages/package-configuration-wizard-ui-reference.md)。  
   
     > **注意：**只有 [XML 組態檔] 和 [SQL Server] 組態類型支援在組態中併入多個屬性。  
   
@@ -285,7 +286,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **目標屬性**  
  檢視組態所修改之屬性的名稱。 如果組態類型支援多個組態，則此資料行是空白。  
   
- **加入**  
+ **[加入]**  
  使用封裝組態精靈來加入組態。  
   
  **編輯**  
@@ -323,13 +324,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **組態類型**  
  使用下列選項，即可選取儲存組態的來源類型：  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**XML 組態檔**|將組態儲存為 XML 檔案。 選取這個值就會顯示 **[組態類型]**區段中的動態選項。|  
 |**環境變數**|將組態儲存在其中一個環境變數中。 選取這個值就會顯示 **[組態類型]**區段中的動態選項。|  
 |**登錄項目**|將組態儲存在登錄中。 選取這個值就會顯示 **[組態類型]**區段中的動態選項。|  
 |**父封裝變數**|以變數將組態儲存在包含工作的封裝中。  選取這個值就會顯示 **[組態類型]**區段中的動態選項。|  
-|**SQL Server**|將組態儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料表中。 選取這個值就會顯示 **[組態類型]**區段中的動態選項。|  
+|**[SQL Server]**|將組態儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料表中。 選取這個值就會顯示 **[組態類型]**區段中的動態選項。|  
   
  **下一個**  
  檢視精靈順序的下一頁。  
@@ -340,7 +341,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**組態檔名稱**|鍵入精靈產生之組態檔的路徑。|  
 |**瀏覽**|使用 **[選取組態檔位置]** 對話方塊，即可指定精靈產生之組態檔的路徑。 如果檔案不存在，精靈就會建立檔案。|  
@@ -348,7 +349,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -360,14 +361,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**登錄項目**|輸入包含組態資訊的登錄機碼。 格式為 \<登錄機碼>。<br /><br /> 登錄機碼必須已經存在於 HKEY_CURRENT_USER 中且具有名為 Value 的值。 該值可以是 DWORD 或字串。<br /><br /> 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式來識別該機碼。|  
   
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -375,14 +376,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**父變數**|在包含組態資訊的父封裝中指定變數。|  
   
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -390,16 +391,16 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
-|**連接**|請從清單中選取連接，或按一下 **[新增]** 即可建立新的連接。|  
+|**[連接]**|請從清單中選取連接，或按一下 **[新增]** 即可建立新的連接。|  
 |**組態資料表**|選取現有的資料表，或按一下 **[新增]** ，即可撰寫建立新資料表的 SQL 陳述式。|  
 |**組態篩選**|選取現有的組態名稱或鍵入新的名稱。<br /><br /> 許多 SQL Server 組態可儲存在相同的資料表中，且每個組態都可包括多個組態項目。<br /><br /> 這個使用者自訂值是儲存在資料表中，以識別特定組態所屬的組態項目。|  
   
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -484,7 +485,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  下表列出部署公用程式屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |AllowConfigurationChange|指定部署期間是否可以更新組態的值。|  
 |[CreateDeploymentUtility]|指定建立專案時是否建立封裝部署公用程式的值。 此屬性必須為 **True** ，才能建立部署公用程式。|  
@@ -508,7 +509,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 6.  選擇性地修改 **DeploymentOutputPath** 屬性，以更新部署公用程式的位置。  
   
-7.  按一下 **[確定]**。  
+7.  按一下 [確定] 。  
   
 8.  在方案總管中，以滑鼠右鍵按一下專案，然後按一下 [建立]。  
   
@@ -582,7 +583,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **下一個**  
  移至精靈的下一頁。  
   
- **完成**  
+ **[完成]**  
  跳到 [完成封裝安裝精靈] 頁面。 如果您依序返回精靈的頁面以修訂您的選擇，並且指定了所有必要的選項，則請使用這個選項。  
   
 ### <a name="configure-packages-page"></a>設定封裝頁面  
@@ -600,13 +601,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **型別**  
  檢視屬性的資料類型。  
   
- **Value**  
+ **ReplTest1**  
  指定組態的值。  
   
  **下一個**  
  移至精靈的下一頁。  
   
- **完成**  
+ **[完成]**  
  跳到 [完成封裝安裝精靈] 頁面。 如果您依序返回精靈的頁面以修訂您的選擇，並且指定了所有必要的選項，則請使用這個選項。  
   
 ### <a name="confirm-installation-page"></a>確認安裝頁面  
@@ -618,7 +619,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **狀態**  
  顯示封裝安裝的進度。  
   
- **完成**  
+ **[完成]**  
  移至 [完成封裝安裝精靈] 頁面。 如果您有回到先前的精靈頁面來修改選擇，並且指定了所有必要的選項，請使用此選項。  
   
 ### <a name="deploy-ssis-packages-page"></a>部署 SSIS 封裝頁面  
@@ -637,7 +638,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **下一個**  
  移至精靈的下一頁。  
   
- **完成**  
+ **[完成]**  
  跳到 [完成封裝安裝精靈] 頁面。 如果您依序返回精靈的頁面以修訂您的選擇，並且指定了所有必要的選項，則請使用這個選項。  
   
 ### <a name="packages-validation-page"></a>封裝驗證頁面  
@@ -659,7 +660,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **下一個**  
  移至精靈的下一頁。  
   
- **完成**  
+ **[完成]**  
  跳到 [完成封裝安裝精靈] 頁面。 如果您有依序返回精靈的其他頁面以修訂選擇，並且已指定了所有必要的選項，則請使用此選項。  
   
 ### <a name="specify-target-sql-server-page"></a>指定目標 SQL Server 頁面  
@@ -669,13 +670,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **伺服器名稱**  
  指定部署封裝目的地之伺服器的名稱。  
   
- **使用 Windows 驗證**  
+ **[使用 Windows 驗證]**  
  指定是否使用 Windows 驗證來登入伺服器。 建議使用 Windows 驗證，以獲得較佳的安全性。  
   
  **使用 SQL Server 驗證**  
  指定封裝是否應使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來登入伺服器。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
   
- **使用者名稱**  
+ **User name**  
  指定使用者名稱。  
   
  **密碼**  
@@ -695,7 +696,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **下一個**  
  移至精靈的下一頁。  
   
- **完成**  
+ **[完成]**  
  跳到 [完成封裝安裝精靈] 頁面。 如果您依序返回精靈的頁面以修訂您的選擇，並且指定了所有必要的選項，則請使用這個選項。  
   
 ### <a name="finish-the-package-installation-page"></a>完成封裝安裝頁面  

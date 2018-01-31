@@ -8,7 +8,8 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的功能與工具，可讓您在完成及部署封裝之後，用以疑難排解封裝的執行問題。  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/20/2017
   
     1.  **建立可記錄封裝每次執行作業的父資料表**。 在這個父資料表中，封裝的各次執行作業只能分別記錄在單一資料列，並使用 ExecutionID 連結到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 記錄資料表中的子記錄。 您可以在每個封裝的開頭使用執行 SQL 工作，以建立這個新的資料列，並記錄開始時間； 接著再於封裝結尾使用另一個執行 SQL 工作，以結束時間、期間與狀態更新資料列。  
   
-    2.  **將稽核資訊加入資料流程**。 您可以使用「稽核」轉換將建立或修改每一個資料列的封裝執行資訊，加入資料流程中的資料列。 「稽核」轉換可提供九項資訊，包括 PackageName 和 ExecutionInstanceGUID。 如需詳細資訊，請參閱 [稽核轉換](../../integration-services/data-flow/transformations/audit-transformation.md)。 為了進行稽核，如果您有想要加入每個資料列的自訂資訊，便可以使用「衍生的資料行」轉換將這項資訊加入資料流程中的資料列。 如需詳細資訊，請參閱 [衍生的資料行轉換](../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
+    2.  **將稽核資訊加入資料流程**。 您可以使用「稽核」轉換將建立或修改每一個資料列的封裝執行資訊，加入資料流程中的資料列。 「稽核」轉換可提供九項資訊，包括 PackageName 和 ExecutionInstanceGUID。 如需詳細資訊，請參閱 [稽核轉換](../../integration-services/data-flow/transformations/audit-transformation.md)。 為了進行稽核，如果您有想要加入每個資料列的自訂資訊，便可以使用「衍生的資料行」轉換將這項資訊加入資料流程中的資料列。 如需詳細資訊，請參閱[衍生的資料行轉換](../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
   
     3.  **考慮擷取資料列計數資料**。 請考慮另外建立資料表以存放資料列計數資訊，在此資料表中，是以封裝的 ExecutionID 識別封裝執行的每個執行個體。 使用「資料列計數」轉換，在資料流程的關鍵點將資料列計數儲存到一系列變數中。 資料流程結束後，請使用執行 SQL 工作將這一系列的值插入資料表中的資料列，以供稍後進行分析及製作報表。  
   

@@ -8,31 +8,32 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 488a95178554c7caee4d44a55b03c972065bdfb0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05b3941ccc90394999a8af6b9f8d10aaf25f0921
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 **SSISDB** 目錄中出現的所有專案顯示詳細資料。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|專案的唯一識別碼 (ID)。|  
 |folder_id|**bigint**|專案所在資料夾的唯一識別碼。|  
-|name|**sysname**|專案的名稱。|  
+|NAME|**sysname**|專案的名稱。|  
 |description|**nvarchar(1024)**|專案的選擇性描述。|  
 |project_format_version|**int**|用來開發專案的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
 |deployed_by_sid|**varbinary(85)**|安裝專案之使用者的安全性識別碼 (SID)。|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 |validation_status|**char(1)**|驗證狀態。|  
 |last_validation_time|**datetimeoffset(7)**|上一次驗證的時間。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個檢視會顯示目錄中每個專案的資料列。  
   
 ## <a name="permissions"></a>Permissions  
