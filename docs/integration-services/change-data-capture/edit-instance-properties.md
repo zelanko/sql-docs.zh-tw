@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ddaa0513e6b095ec5dcbb5b9b52358bbedface8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ba04041ff88617c249184201805023c215f8d649
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="edit-instance-properties"></a>編輯執行個體屬性
   使用屬性編輯器，在您建立初始組態之後變更 CDC 執行個體。 您可以在屬性編輯器中執行以下動作。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
      您也可以用滑鼠右鍵按一下左窗格中的服務，然後選取 [屬性]。  
   
-### <a name="or"></a>OR  
+### <a name="or"></a>或  
   
 1.  從 CDC 設計工具主控台的左窗格，選取您要使用的服務。  
   

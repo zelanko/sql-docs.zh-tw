@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: addTabs
+f1_keywords:
+- addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7181d4abc4a8a395ad0b34c3d015f4c2ee4810cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 056098406b1d7e49612ef5c75f2afd3d7dd1cfdc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>將資料表加入至 CDC 執行個體
   使用 [資料表選取範圍] 對話方塊，將 Oracle 來源中的其他資料表加入至 CDC 執行個體。 選取的資料表會加入至屬性編輯器中 **[資料表]** 索引標籤的清單。  

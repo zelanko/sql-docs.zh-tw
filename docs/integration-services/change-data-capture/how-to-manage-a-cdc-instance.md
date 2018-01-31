@@ -8,22 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 582c5f02f3d3e019e9b77a80d43355a4f9f83504
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a243e7aaa5140a915c6eb13c04d0e00169c5c3c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="how-to-manage-a-cdc-instance"></a>如何管理 CDC 執行個體
+# <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   此程序描述如何使用 CDC 設計工具主控台，於執行階段管理 CDC 執行個體操作。  
   
 ### <a name="to-manage-cdc-instance-operations"></a>若要管理 CDC 執行個體操作  
