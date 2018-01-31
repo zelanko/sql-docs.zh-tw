@@ -12,7 +12,7 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: "100"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
@@ -362,7 +362,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  從 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。 在執行 Excel Services 的應用程式伺服器上安裝提供者。 如需詳細資訊，請參閱＜ [Microsoft SQL Server 2012 SP1 功能套件](http://www.microsoft.com/download/details.aspx?id=35580)＞中的＜Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1＞一節。  
   
-2.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱＜ [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx)＞。  
+2.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱＜ [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](http://technet.microsoft.com/library/hh758436.aspx)＞。  
   
 **詳細資訊：**  
   
@@ -377,7 +377,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  從 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。 在執行 Excel Services 的應用程式伺服器上安裝提供者。 如需詳細資訊，請參閱＜ [Microsoft SQL Server 2012 SP1 功能套件](http://www.microsoft.com/download/details.aspx?id=35580)＞中的＜Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1＞一節。  
   
-2.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱＜ [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx)＞。  
+2.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱＜ [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](http://technet.microsoft.com/library/hh758436.aspx)＞。  
   
 **詳細資訊：**  
   
