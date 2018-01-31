@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 91efcc7d11226a240f2f3b46ab1b14f57da3bbab
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e31c28e72bfcb23cc6f571ef38f85345c28e060e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="--conditional-ssis-expression"></a>? : (條件) (SSIS 運算式)
   依據布林運算式的評估傳回兩個運算式的其中一個。 如果布林運算式的評估結果為 TRUE，則會評估第一個運算式，且結果為運算式的結果。 如果布林運算式的評估結果為 FALSE，則會評估第二個運算式，且其結果為運算式的結果。  
@@ -50,7 +51,7 @@ boolean_expression?expression1:expression2
 ## <a name="result-types"></a>結果類型  
  *expression1* 或 *expression2*的資料類型。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果 *boolean_expression* 評估為 NULL，則運算式結果為 NULL。 如果選取的運算式 ( *expression1* 或 *expression2* ) 為 NULL，則結果為 NULL。 如果選取的運算式不為 NULL，但未選取的運算式為 NULL，則結果為所選運算式的值。  
   
  如果 *expression1* 和 *expression2* 的資料類型相同，則結果即為該資料類型。 下列其他規則適用於結果類型：  

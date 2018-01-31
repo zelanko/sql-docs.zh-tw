@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5a677e5a997f1b6d4bb440a60afdfbd65f25d3e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db4e68bbba91309b7ab46889d88e79a5c230a5b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="--subtract-ssis-expression"></a>- (減) (SSIS 運算式)
   將第一個數值運算式減第二個數值運算式。  
@@ -39,15 +40,15 @@ numeric_expression1 – numeric_expression2
   
 ## <a name="arguments"></a>引數  
  *numeric_expression1、numeric_expression2*  
- 任何有效的數值資料類型運算式。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
+ 任何有效的數值資料類型運算式。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="result-types"></a>結果類型  
  由兩個引數的資料類型決定。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  用括號括住一元減號運算式，以確保運算式以正確的順序接受評估。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果任一個運算元為 Null，則結果為 Null。  
   
 ## <a name="expression-examples"></a>運算式範例  

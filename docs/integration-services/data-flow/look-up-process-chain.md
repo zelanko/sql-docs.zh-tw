@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caffa747cb67469c96675e10d7c3904ac8e77aa0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 29791eaade29aa28089dfb579206c2dbddbed1ad
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="look-up-process-chain"></a>查閱 ProcessChain
   使用 **[查閱 ProcessChain]** 對話方塊可以查閱 SAP Netweaver BW 系統中定義的處理序鏈結。 出現可用的處理序鏈結清單時，請選取您要的鏈結，然後來源就會將必要的值填入相關聯的選項。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
  **Process chain**  
  輸入您想要查閱的處理序鏈結名稱，或輸入包含星號萬用字元 (*) 的部分名稱。 或者，單獨使用星號萬用字元來包含所有處理序鏈結。  
   
- **[查閱]**  
+ **查閱**  
  查閱 SAP Netweaver BW 系統中定義的相符處理序鏈結。  
   
 ## <a name="lookup-results"></a>查閱結果  

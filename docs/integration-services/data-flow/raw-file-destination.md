@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,18 +23,18 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07c73cd80417c61f8231932376173adb304cf1af
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1a9ce999e727a77b303b9978f59dc980b7d2ca21
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="raw-file-destination"></a>原始檔案目的地
+# <a name="raw-file-destination"></a>Raw File Destination
   「原始檔案」目的地會將原始資料寫入檔案。 由於資料的格式對於目的地而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。 這表示，「原始檔案」目的地可比其他目的地更快地寫入資料，例如「一般檔案」和 OLE DB 目的地。  
   
  除了將原始資料寫入檔案之外，您也可以使用原始檔案目的地產生僅包含資料行 (僅中繼資料的檔案) 的空白原始檔案，而不必執行封裝。 您可以使用原始檔案來源擷取之前由目的地撰寫的原始資料。 您也可以將原始檔案來源指向僅中繼資料的檔案。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
  下表描述 WriteOption 屬性的可用選項。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |附加|將資料附加至現有檔案。 附加資料的中繼資料必須符合檔案格式。|  
 |永遠建立|永遠建立新檔案。|  
@@ -126,11 +127,11 @@ ms.lasthandoff: 11/20/2017
  如果您使用 [TruncateAppend] 選項，而不是 [Append] 選項，它就會截斷在任何先前反覆運算中新增的資料列，然後附加新的資料列。 使用 [TruncateAppend] 選項也會要求資料符合檔案格式。  
   
 ## <a name="configuration-of-the-raw-file-destination"></a>原始檔案目的地的組態  
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [原始檔案自訂屬性](../../integration-services/data-flow/raw-file-custom-properties.md)  
   

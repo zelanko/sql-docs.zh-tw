@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,18 +18,19 @@ f1_keywords:
 - sql13.dts.designer.transferdatabasetask.database.f1
 - sql13.dts.designer.transferdatabasetask.sourcedbfiles.f1
 - sql13.dts.designer.transferdatabasetask.destdbfiles.f1
-helpviewer_keywords: Transfer Database task [Integration Services]
+helpviewer_keywords:
+- Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026736a98fc4be0786cda2c993585d0d4165866b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 83ba4c606ccf7779f01219fcf69e90d2b3b6dea9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-database-task"></a>傳送資料庫工作
   「傳送資料庫」工作會在兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 與其他只能透過複製 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件來傳送它們的工作不同，「傳送資料庫」工作可以複製或移動資料庫。 這項工作也可用來在同一部伺服器內複製資料庫。  
@@ -74,9 +76,9 @@ ms.lasthandoff: 11/20/2017
   
  當您複製資料庫時，資料庫不能小於目的地伺服器上的 **model** 資料庫大小。 您可以增加要複製的資料庫大小，或減少 **model**的大小。  
   
- 在執行階段，「傳送資料庫」工作會使用一或兩個 SMO 連接管理員，連接到來源和目的地伺服器。 當您在同一伺服器上建立資料庫的副本時，只需要一個 SMO 連接管理員。 SMO 連接管理員會在「傳送資料庫」工作以外另行設定，然後在「傳送資料庫」工作中參考。 當工作存取伺服器時，SMO 連接管理員會指定要使用的伺服器和驗證模式。 如需相關資訊，請參閱 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)。  
+ 在執行階段，「傳送資料庫」工作會使用一或兩個 SMO 連接管理員，連接到來源和目的地伺服器。 當您在同一伺服器上建立資料庫的副本時，只需要一個 SMO 連接管理員。 SMO 連接管理員會在「傳送資料庫」工作以外另行設定，然後在「傳送資料庫」工作中參考。 當工作存取伺服器時，SMO 連接管理員會指定要使用的伺服器和驗證模式。 如需詳細資訊，請參閱 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)。  
   
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
@@ -136,7 +138,7 @@ ms.lasthandoff: 11/20/2017
   
  此屬性具有下表所列的選項：  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|覆寫目的地伺服器資料庫。|  
 |**False**|請勿覆寫目的地伺服器資料庫。|  
@@ -165,7 +167,7 @@ ms.lasthandoff: 11/20/2017
   
  此屬性具有下表所列的選項：  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|重新附加來源資料庫。|  
 |**False**|請勿重新附加來源資料庫。|  

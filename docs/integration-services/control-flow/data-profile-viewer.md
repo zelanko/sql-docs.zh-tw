@@ -8,24 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.dataprofileviewer.f1
+f1_keywords:
+- sql13.dts.dataprofileviewer.f1
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f364b536b40a68565eb1dac1c8709dc28931043e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 807c980f9c561b6c4da18597b011a98e8d9992de
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profile-viewer"></a>資料設定檔檢視器
   檢視和分析資料設定檔是資料分析程序中的下一個步驟。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行「資料分析」工作並計算資料設定檔後，檢視這些設定檔。 如需如何設定和執行「資料分析」工作的詳細資訊，請參閱 [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。  
@@ -80,7 +82,7 @@ ms.lasthandoff: 11/20/2017
  **開啟**  
  按一下即可瀏覽包含資料分析工作之輸出的已儲存檔案。  
   
- **設定檔**窗格  
+ **設定檔** 窗格  
  展開 [設定檔] 窗格中的樹狀結構，即可查看輸出中所包含的設定檔。 選取設定檔，即可檢視該設定檔的結果。  
   
  **訊息** 窗格  
@@ -171,7 +173,7 @@ ms.lasthandoff: 11/20/2017
  顯示資料表或檢視表中的資料列數目。  
   
 ##### <a name="detailed-value-distribution-pane"></a>詳細值散發窗格  
- **Value**  
+ **ReplTest1**  
  顯示在已分析資料行中找到的相異值。  
   
  **Count**  

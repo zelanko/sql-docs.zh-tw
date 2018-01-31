@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29f3820518e10bf0b4066d7cf3e8e11d9e50ce3c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5b8b9f8e703b402b55bef24b30977b086b75d1f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 運算式)
   傳回所要求資料類型的 Null 值。  
@@ -38,12 +39,12 @@ NULL(typespec)
   
 ## <a name="arguments"></a>引數  
  *typespec*  
- 是有效的資料類型。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
+ 是有效的資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="result-types"></a>結果類型  
  任何含有 Null 值的有效資料類型。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果引數為 Null，則 NULL 會傳回 Null 結果。  
   
  某些資料類型需要使用參數才能要求 Null 值。 下表列出這些資料類型及其參數。  

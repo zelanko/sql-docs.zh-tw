@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
 - sql13.dts.designer.ftptask.general.f1
 - sql13.dts.designer.ftptask.filetransfer.f1
-helpviewer_keywords: FTP task [Integration Services]
+helpviewer_keywords:
+- FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe5fd069ec931c3eee57b2ef46da35437dd81875
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3613462b45121d9d9042724a3dbf693060cc0c10
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ftp-task"></a>FTP 工作
   FTP 工作會下載和上傳資料檔以及管理伺服器上的目錄。 例如，封裝可從遠端伺服器或網際網路位置下載資料檔，此工作可視為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程的一部分。 您可將 FTP 工作用於下列用途：  
@@ -55,7 +57,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="predefined-ftp-operations"></a>預先定義的 FTP 作業  
  FTP 工作包括一組預先定義的作業。 下表描述這些作業。  
   
-|運算|說明|  
+|作業|描述|  
 |---------------|-----------------|  
 |傳送檔案|從本機電腦將檔案傳送到 FTP 伺服器。|  
 |接收檔案|從 FTP 伺服器將檔案儲存到本機電腦。|  
@@ -69,13 +71,13 @@ ms.lasthandoff: 11/20/2017
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 工作上可用的自訂記錄項目  
  下表列出 FTP 工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|說明|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|指出工作已經起始與 FTP 伺服器的連接。|  
 |**FTPOperation**|報告工作執行之 FTP 作業的開始及其類型。|  
   
 ## <a name="related-tasks"></a>相關工作  
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定這些屬性的詳細資訊，請參閱 [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 11/20/2017
  **IsRemotePathVariable**  
  指出遠端路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[RemoteVariable]**。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[RemotePath]**。|  
@@ -123,7 +125,7 @@ ms.lasthandoff: 11/20/2017
  **IsLocalPathVariable**  
  指出本機路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[LocalVariable]**。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[LocalPath]**。|  
@@ -131,7 +133,7 @@ ms.lasthandoff: 11/20/2017
  **運算**  
  選取要執行的 FTP 作業。 這個屬性具有下表中所列的選項。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**傳送檔案**|傳送檔案。 選取此值會顯示動態選項 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
 |**接收檔案**|接收檔案。 選取此值會顯示動態選項 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  

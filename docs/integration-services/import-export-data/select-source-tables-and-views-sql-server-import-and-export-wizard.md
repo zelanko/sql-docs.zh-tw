@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.selectsourcetablesandviews.f1
+f1_keywords:
+- sql13.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
-caps.latest.revision: "96"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 407e1b75ca60bb8a36040883c472dce8e059188e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 600e734c11a597cdcbae0279e1604bd96ccfb06f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
   指定要複製整個資料表或提供查詢之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [選取來源資料表和檢視表] 。 在此頁面上，您可以選取想要複製的現有資料表和檢視。 接著，將來源資料表對應到新的或現有目的資料表。 您也可以選擇檢閱個別資料行的對應，以及預覽範例資料。
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/20/2017
  ![[匯入和匯出精靈] 的 [選取資料表] 頁面](../../integration-services/import-export-data/media/select-tables2.png "[匯入和匯出精靈] 的 [選取資料表] 頁面")  
 
 ## <a name="select-source-and-destination-tables"></a>選取來源和目的地資料表 
-**來源**  
+**Source**  
 使用這些核取方塊，從可用的資料表和檢視清單中選取要複製到目的地的項目。 根據預設，資料來源中的資料會在未經變更的狀態下複製。 如果您建立新的目的地資料表，則也會複製新資料表的結構描述 (即，資料行和其屬性的清單)，而不需要來自資料來源的變更。
 
 如果您已提供查詢，則清單只會包含一個名稱為 `[Query]` 的項目。 
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]
 > 如果此時在精靈中暫停，使用外部工具 (例如  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 在目的地資料庫中手動建立新資料表，則不能立刻在可用目的地資料表清單中看到新的資料表。 若要重新整理目的地資料表清單，請退回 [選擇目的地]  頁面，並重新選取目的地資料庫來重新整理可用的資料表和檢視清單，然後再次前進到 [選取來源資料表和檢視]  。  
 
-## <a name="optionally-review-column-mappings-and-preview-data"></a>選擇性檢閱資料行對應以及預覽資料
+## <a name="optionally-review-column-mappings-and-preview-data"></a>您可以選擇檢查資料行對應及預覽資料
 **編輯對應**   
 選擇性地按一下 [編輯對應]，顯示所選取資料表的 [資料行對應] 對話方塊。 使用 [資料行對應]  對話方塊即可執行下列動作：
 -   檢閱個別資料行在來源與目的地之間的對應。

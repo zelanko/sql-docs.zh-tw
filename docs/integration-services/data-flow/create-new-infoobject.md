@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 142607d2ea3486749c0233c2d35692c682fd50e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 50f319341ba89890f67b77f698ff3411c9ab820e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-new-infoobject"></a>建立新的 InfoObject
   使用 **[建立新的 InfoObject]** 對話方塊可以在 SAP Netweaver BW 系統中建立新的 InfoObject。  
@@ -135,7 +136,7 @@ ms.lasthandoff: 11/20/2017
  **InfoObject 類型**  
  檢視 InfoObject 的類型。 下表列出類型的可能值。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |CHA|特性|  
 |KYF|關鍵數據|  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="attributes-options"></a>屬性選項  
  使用下列選項可以針對您所建立的 InfoObject 加入和移除屬性：  
   
- **加入**  
+ **[加入]**  
  加入現有的 InfoObject 做為屬性。  
   
  若要加入現有的 InfoObject，請按一下 [加入]，然後使用 **[查閱 InfoObject]** 對話方塊來尋找 InfoObject。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md)＞。  

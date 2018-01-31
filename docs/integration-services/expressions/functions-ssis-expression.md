@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 57635218bc2e657b5d6f08076a572fa5caf2a2b3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 836ecde7ff2cb458b2f93aeb239d0ab83c51cb6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functions-ssis-expression"></a>函數 (SSIS 運算式)
   運算式語言包含一組可在運算式中使用的函數。 運算式可使用單一函數，但通常運算式會結合函數與運算子，並使用多個函數。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
  運算式語言提供下列數學函數。  
   
-|函數|說明|  
+|函數|描述|  
 |--------------|-----------------|  
 |[ABS &#40;SSIS 運算式&#41;](../../integration-services/expressions/abs-ssis-expression.md)|傳回數值運算式的絕對正數值。|  
 |[EXP &#40;SSIS 運算式&#41;](../../integration-services/expressions/exp-ssis-expression.md)|傳回做為指定運算式中 e 之基底的指數。|  
@@ -53,14 +54,14 @@ ms.lasthandoff: 11/20/2017
 |[LN &#40;SSIS 運算式&#41;](../../integration-services/expressions/ln-ssis-expression.md)|傳回數值運算式的自然對數。|  
 |[LOG &#40;SSIS 運算式&#41;](../../integration-services/expressions/log-ssis-expression.md)|傳回數值運算式以 10 為底的對數。|  
 |[POWER &#40;SSIS 運算式&#41;](../../integration-services/expressions/power-ssis-expression.md)|傳回數值運算式的乘冪結果。|  
-|[ROUND &#40;SSIS 運算式&#41;](../../integration-services/expressions/round-ssis-expression.md)|傳回已經進位到指定長度或有效位數的數值運算式。 。|  
+|[ROUND &#40;SSIS 運算式&#41;](../../integration-services/expressions/round-ssis-expression.md)|傳回已經進位到指定長度或有效位數的數值運算式。 執行個體時提供 SQL Server 登入。|  
 |[SIGN &#40;SSIS 運算式&#41;](../../integration-services/expressions/sign-ssis-expression.md)|傳回數值運算式的正 (+)、負 (-) 或零 (0) 符號。|  
 |[SQUARE &#40;SSIS 運算式&#41;](../../integration-services/expressions/square-ssis-expression.md)|傳回數值運算式的平方。|  
 |[SQRT &#40;SSIS 運算式&#41;](../../integration-services/expressions/sqrt-ssis-expression.md)|傳回數值運算式的平方根。|  
   
  運算式評估工具提供下列字串函數。  
   
-|函數|說明|  
+|函數|描述|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;SSIS 運算式&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|傳回字元運算式最左邊字元的 Unicode 字碼值。|  
 |[FINDSTRING &#40;SSIS 運算式&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|傳回運算式中，所指定字元字串出現位置的以 1 為基底的索引。|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
  運算式評估工具提供下列日期和時間函數。  
   
-|函數|說明|  
+|函數|描述|  
 |--------------|-----------------|  
 |[DATEADD &#40;SSIS 運算式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|藉由將日期或時間間隔加入至指定的日期，傳回新的 DT_DBTIMESTAMP 值。|  
 |[DATEDIFF &#40;SSIS 運算式&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|傳回跨越兩個指定日期的日期和時間界線數目。|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/20/2017
   
  運算式評估工具提供下列 Null 函數。  
   
-|函數|說明|  
+|函數|描述|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS 運算式&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|依據運算式是否為 Null 來傳回布林結果。|  
 |[NULL &#40;SSIS 運算式&#41;](../../integration-services/expressions/null-ssis-expression.md)|傳回所要求資料類型的 Null 值。|  

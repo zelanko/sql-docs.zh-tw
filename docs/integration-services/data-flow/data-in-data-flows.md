@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,22 +20,22 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15689319652b1527bae7a7c27da9d89979c492d7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 75b3313a841152e31ca6ff52e7c523fbc1d4b249
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-in-data-flows"></a>資料流程中的資料
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供一組資料流程中使用的資料類型。  
   
 ## <a name="data-type-conversion"></a>資料類型轉換  
- 加入資料流程中的來源可以將來源資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 後續轉換可以將資料轉換為不同的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，而根據載入資料之資料存放區的類型，目的地可以將最終 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型轉換為目的地資料存放區所要求的資料類型。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
+ 加入資料流程中的來源可以將來源資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 後續轉換可以將資料轉換為不同的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，而根據載入資料之資料存放區的類型，目的地可以將最終 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型轉換為目的地資料存放區所要求的資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  如果要將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，資料流程元件會剖析資料。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供快速剖析與標準剖析兩種資料剖析類型。 大部分的資料流程元件僅可以使用標準剖析；但是，「一般檔案」來源和「資料轉換」既可以使用快速剖析，也可以使用標準剖析。 如需詳細資訊，請參閱 [剖析資料](../../integration-services/data-flow/parsing-data.md)。  
   

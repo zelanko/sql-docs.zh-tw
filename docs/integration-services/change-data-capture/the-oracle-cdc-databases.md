@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdce8273a2a1ed7cfa725f1933ab99de40cfe3f6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 資料庫
   Oracle CDC 執行個體與目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關聯。 此資料庫稱為 Oracle CDC 資料庫 (或 CDC 資料庫)。  
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
  下表描述 **cdc.xdbcdc_config** 資料表資料行。  
   
-|項目|說明|  
+|項目|描述|  
 |----------|-----------------|  
 |version|這會追蹤 CDC 執行個體組態的版本。 每當更新資料表以及加入新的擷取執行個體或是移除現有的擷取執行個體時，都會更新此項目。|  
 |connect_string|Oracle 連接字串。 基本範例如下：<br /><br /> `<server>:<port>/<instance>` (例如 `erp.contoso.com:1521/orcl`)。<br /><br /> 連接字串還可以指定 Oracle Net 連接描述項，例如， `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`。<br /><br /> 如果使用目錄伺服器或 tnsnames，則連接字串可以是連接的名稱。<br /><br /> 如需 Oracle 連接字串的詳細資訊，請參閱 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) ，以取得 Oracle CDC 服務所使用之 Oracle Instant Client 的 Oracle 資料庫連接字串詳細資訊。|  
@@ -113,27 +114,27 @@ ms.lasthandoff: 11/20/2017
   
  下表描述可用的選項。  
   
-|名稱|預設值|Min|Max|靜態|說明|  
+|[屬性]|預設|Min|Max|靜態|描述|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |追蹤|False|-|-|False|可用的值為：<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> 關閉|  
-|cdc_update_state_interval|10|1|120|False|配置給交易的記憶體區塊大小，以 KB 為單位 (一筆交易可以配置一個以上的區塊)。 請參閱 [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) 資料表中的 memory_limit 資料行。|  
-|target_max_batched_transactions|100|1|1000|True|可以在 SQL Server CT 資料表更新中當做一筆交易來處理的最大 Oracle 交易數目。|  
-|target_idle_lsn_update_interval|10|0|1|False|當擷取的資料表沒有活動時，用來更新 **lsn_time_mapping** 資料表的間隔 (以秒數為單位)。|  
-|trace_retention_period|24|1|24*31|False|時間數量 (將訊息保留在追蹤資料表中的時數)。|  
+|cdc_update_state_interval|10|@shouldalert|120|False|配置給交易的記憶體區塊大小，以 KB 為單位 (一筆交易可以配置一個以上的區塊)。 請參閱 [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) 資料表中的 memory_limit 資料行。|  
+|target_max_batched_transactions|100|@shouldalert|1000|True|可以在 SQL Server CT 資料表更新中當做一筆交易來處理的最大 Oracle 交易數目。|  
+|target_idle_lsn_update_interval|10|0|@shouldalert|False|當擷取的資料表沒有活動時，用來更新 **lsn_time_mapping** 資料表的間隔 (以秒數為單位)。|  
+|trace_retention_period|24|@shouldalert|24*31|False|時間數量 (將訊息保留在追蹤資料表中的時數)。|  
 |sql_reconnect_interval|2|2|3600|False|重新連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前所等候的時間數量 (以秒數為單位)。 除了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端的連接逾時之外，也會使用這個間隔。|  
 |sql_reconnect_limit|-1|-1|-1|False|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新連接的最大數目。 預設值 -1 表示此程序會嘗試重新連接，直到停止。|  
 |cdc_restart_limit|6|-1|3600|False|在大多數情況下，CDC 服務會重新啟動異常情況下自動結束的 CDC 執行個體。 此屬性會定義每個小時有多少失敗次數，此服務才會停止並重新啟動執行個體。 -1 的值表示執行個體永遠都應該重新啟動。<br /><br /> 在組態資料表的任何更新之後，此服務會返回來重新啟動執行個體。|  
 |cdc_memory_report|0|0|1000|False|如果參數的值已變更，CDC 執行個體會將它的記憶體報表列印在追蹤資料表上。|  
-|target_command_timeout|600|1|3600|False|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時發生命令逾時。|  
+|target_command_timeout|600|@shouldalert|3600|False|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時發生命令逾時。|  
 |source_character_set|-|-|-|True|可以設定為要使用的特定 Oracle 編碼方式，而不是 Oracle 資料庫字碼頁。 當字元資料使用的實際編碼方式與 Oracle 資料庫字碼頁所表示的編碼方式不同時，這樣的處理方式可能會很實用。|  
-|source_error_retry_interval|30|1|3600|False|在發生數個錯誤而重試之前使用，例如連接錯誤，或是系統資料表之間暫時缺少同步處理。|  
-|source_prefetch_size|100|1|10000|True|預先提取批次的大小。|  
-|source_max_tables_in_query|100|1|10000|True|在切換模式來讀取 Oracle 記錄而不篩選資料表之前，WHERE 子句中的最大資料表數目。|  
-|source_read_retry_interval|2|1|3600|False|嘗試再次於 EOF 上讀取 Oracle 交易記錄之前，來源等候的時間數量。|  
-|source_reconnect_interval|30|1|3600|False|嘗試重新連接到來源資料庫之前等候的時間 (以秒數為單位)。|  
+|source_error_retry_interval|30|@shouldalert|3600|False|在發生數個錯誤而重試之前使用，例如連接錯誤，或是系統資料表之間暫時缺少同步處理。|  
+|source_prefetch_size|100|@shouldalert|10000|True|預先提取批次的大小。|  
+|source_max_tables_in_query|100|@shouldalert|10000|True|在切換模式來讀取 Oracle 記錄而不篩選資料表之前，WHERE 子句中的最大資料表數目。|  
+|source_read_retry_interval|2|@shouldalert|3600|False|嘗試再次於 EOF 上讀取 Oracle 交易記錄之前，來源等候的時間數量。|  
+|source_reconnect_interval|30|@shouldalert|3600|False|嘗試重新連接到來源資料庫之前等候的時間 (以秒數為單位)。|  
 |source_reconnect_limit|-1|-1||False|來源資料庫重新連接的最大數目。 預設值 -1 表示此程序會嘗試重新連接，直到停止。|  
-|source_command_timeout|30|1|3600|False|使用 Oracle 時發生連接逾時。|  
-|source_connection_timeout|30|1|3600|False|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時發生連接逾時。|  
+|source_command_timeout|30|@shouldalert|3600|False|使用 Oracle 時發生連接逾時。|  
+|source_connection_timeout|30|@shouldalert|3600|False|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時發生連接逾時。|  
 |trace_data_errors|True|-|-|False|布林值。 **True** 表示記錄資料轉換和截斷錯誤。|  
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|布林值。 **True** 表示在偵測到重大結構描述變更時停止。<br /><br /> **False** 表示卸除鏡像資料表和擷取執行個體。|  
 |source_oracle_home||-|-|False|可設定為特定的 Oracle Home 路徑，或是 CDC 執行個體將用來連接到 Oracle 的 Oracle Home 名稱。|  
@@ -143,14 +144,14 @@ ms.lasthandoff: 11/20/2017
   
  下表描述 **cdc.xdbcdc_state** 資料表資料行。  
   
-|項目|說明|  
+|項目|描述|  
 |----------|-----------------|  
 |status|目前 Oracle CDC 執行個體的目前狀態碼。 此狀態會描述 CDC 的目前狀態。|  
 |sub_status|提供有關目前狀態之其他資訊的第二層狀態。|  
 |active|下列其中一個值的布林值：<br /><br /> **0**：Oracle CDC 執行個體處理序不在使用中。<br /><br /> **1**：Oracle CDC 執行個體處理序為使用中。|  
 |error|下列其中一個值的布林值：<br /><br /> **0**：Oracle CDC 執行個體處理序不在錯誤狀態中。<br /><br /> **1**：Oracle CDC 執行個體在錯誤狀態中。|  
 |status_message|提供錯誤或狀態描述的字串。|  
-|timestamp|包含上次更新擷取狀態之時間 (UTC) 的時間戳記。|  
+|TIMESTAMP|包含上次更新擷取狀態之時間 (UTC) 的時間戳記。|  
 |active_capture_node|目前正在執行 Oracle CDC 服務和 Oracle CDC 執行個體 (它正在處理 Oracle 交易記錄) 的主機名稱 (此主機可以是叢集上的節點)。|  
 |last_transaction_timestamp|包含上次交易寫入變更資料表之時間 (UTC) 的時間戳記。|  
 |last_change_timestamp|包含從來源 Oracle 交易記錄讀取最近變更記錄之時間 (UTC) 的時間戳記。 此時間戳記有助於識別 CDC 程序的目前延遲。|  
@@ -168,28 +169,28 @@ ms.lasthandoff: 11/20/2017
   
  下表描述 cdc.xdbcdc_trace 資料表資料行。  
   
-|項目|說明|  
+|項目|描述|  
 |----------|-----------------|  
-|timestamp|寫入追蹤記錄的精確 UTC 時間戳記。|  
+|TIMESTAMP|寫入追蹤記錄的精確 UTC 時間戳記。|  
 |型別|包含下列其中一個值。<br /><br /> error<br /><br /> INFO<br /><br /> 追蹤|  
 |node|寫入記錄的節點名稱。|  
 |status|狀態資料表使用的狀態碼。|  
 |sub_status|狀態資料表使用的子狀態碼。|  
 |status_message|狀態資料表使用的狀態訊息。|  
-|資料|當錯誤或追蹤記錄包含裝載時的其他資料 (例如，損毀的記錄檔記錄)。|  
+|data|當錯誤或追蹤記錄包含裝載時的其他資料 (例如，損毀的記錄檔記錄)。|  
   
 ###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  此資料表會儲存大型交易或長時間執行之交易的變更記錄，直到擷取交易認可或回復事件為止。 Oracle CDC 服務會依據交易認可時間，然後依據每一筆交易的時間順序來排序擷取的記錄檔記錄。 相同交易的記錄檔記錄會儲存在記憶體中，直到交易結束然後寫入目標變更資料表或遭到捨棄為止 (如果進行回復作業的話)。 因為可用記憶體數量有限，所以大型交易會寫入 **cdc.xdbcdc_staged_transactions** 資料表中，直到交易完成為止。 當交易長時間執行時，也會寫入暫存資料表。 因此在重新啟動 Oracle CDC 執行個體時，不需要從 Oracle 交易記錄重新讀取舊的變更。  
   
  下表描述 **cdc.xdbcdc_staged_transactions** 資料表資料行。  
   
-|項目|說明|  
+|項目|描述|  
 |----------|-----------------|  
 |transaction_id|正在暫存之交易的唯一交易識別碼。|  
 |seq_num|目前交易的 **xcbcdc_staged_transactions** 資料列數目 (從 0 開始)。|  
 |data_start_cn|此資料列中資料之第一項變更的變更編號 (CN)。|  
 |data_end_cn|此資料列中資料之最後一項變更的變更編號 (CN)。|  
-|資料|BLOB 形式之交易的暫存變更。|  
+|data|BLOB 形式之交易的暫存變更。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Attunity Oracle 異動資料擷取設計工具](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  

@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling Task Editor
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65a3a26b41981e6dc4c67219a52b76f822e78610
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 180c0ca64cf4619a8ada7a90d45fa0498e2ea87a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [值包含設定檔要求] 設定選項。 值包含設定檔會計算兩個資料行或資料行集合之間值的重疊。 因此，它也可以判斷資料行或資料行集合是否適合當做選取之資料表之間的外部索引鍵。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您使用了值包含設定檔來分析 Sales 資料表的 ProductID 資料行。 此設定檔發現該資料行包含在 Products 資料表之 ProductID 資料行中找不到的值。  
@@ -87,7 +89,7 @@ ms.lasthandoff: 11/20/2017
  **結構描述**  
  指定選取之資料表所屬的結構描述。 此選項是唯讀的。  
   
- **TableOrView**  
+ **[TableOrView]**  
  顯示選取之資料表的名稱。 此選項是唯讀的。  
   
 #### <a name="inclusioncolumns-options"></a>InclusionColumns 選項  
@@ -102,12 +104,12 @@ ms.lasthandoff: 11/20/2017
  顯示所選取資料行的名稱。 如果您已選取 **(\*)** 來分析所有資料行，這個選項就是空白的。 此選項是唯讀的。  
   
  **StringCompareOptions**  
- 選取比較字串值的選項。 這個屬性具有下表中所列的選項。 此選項的預設值為 [預設值]。  
+ 選取比較字串值的選項。 這個屬性具有下表中所列的選項。 這個選項的預設值為 **預設值**頁面上。  
   
 > [!NOTE]  
 >  當您針對 **ColumnName** 使用 **(\*)** 萬用字元時，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值] 設定。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**預設值**|根據來源資料表中的資料行定序來排序和比較資料。|  
 |**BinarySort**|根據針對每個字元所定義的位元模式來排序和比較資料。 二進位排序順序為區分大小寫和區分腔調字。 二進位也是最快的排序順序。|  
@@ -115,7 +117,7 @@ ms.lasthandoff: 11/20/2017
   
  如果您選取 [DictionarySort]，也可以選取下表中所列的任何選項組合。 根據預設，系統不會選取這些額外的選項。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比較是否區分大寫與小寫字母。 如果設定此選項，則字串比較會忽略大小寫。 例如，「ABC」與「abc」視為一樣。|  
 |**IgnoreNonSpace**|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"å" 等於 "a"。|  
@@ -130,7 +132,7 @@ ms.lasthandoff: 11/20/2017
  **InclusionThresholdSetting**  
  選取臨界值設定，以便精簡設定檔的輸出。 這個屬性的預設值為 [已指定]。 如需詳細資訊，請參閱本主題前面的「了解臨界值設定」一節。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**無**|沒有指定臨界值。 不論索引鍵強度為何，系統都會報告此值。|  
 |**已指定**|使用 **InclusionStrengthThreshold**中指定的臨界值。 只有當包含強度大於臨界值時，系統才會報告此值。|  
@@ -144,7 +146,7 @@ ms.lasthandoff: 11/20/2017
  **SupersetColumnsKeyThresholdSetting**  
  指定超集臨界值。 這個屬性的預設值為 [已指定]。 如需詳細資訊，請參閱本主題前面的「了解臨界值設定」一節。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**無**|沒有指定臨界值。 不論超集資料行的索引鍵強度為何，系統都會報告包含強度。|  
 |**已指定**|使用 **SupersetColumnsKeyThreshold**頁面上。 只有當超集資料行的索引鍵強度大於臨界值時，系統才會報告包含強度。|  

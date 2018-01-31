@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: manIns
+f1_keywords:
+- manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db85e4aee5ede4a62a660c6adc5d87fde6b89bd7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b61e0362a4b29f1721a08469f8df529861e10174
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 執行個體
   您可以使用 CDC 設計工具主控台來檢視有關您所建立之執行個體的資訊，並管理執行個體的操作。  
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
  在確認對話方塊中按一下 **[確定]** ，確認您想要重設 CDC 執行個體，並刪除寫入變更資料表的變更。  
   
- **Delete**  
+ **刪除**  
  按一下 [刪除]，永久刪除 CDC 執行個體。 只有當 CDC 執行個體停止時才可以使用這個選項。  
   
  在確認對話方塊中按一下 **[確定]** ，確認您想要刪除 CDC 執行個體。  

@@ -8,7 +8,8 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 035483d63bdd8e28a5d0089f5a7dc783917aeacf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odata-source"></a>OData 來源
 使用 SSIS 封裝中的 OData 來源元件，從開放式資料通訊協定 (OData) 服務取用資料。 此元件支援 OData v3 和 v4 通訊協定。  
@@ -70,7 +71,7 @@ OData 來源包含下列資料來源的支援：
  **使用集合或資源路徑**  
  從來源中指定選取資料的方法。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |Collection|使用集合名稱從 OData 來源擷取資料。|  
 |資源路徑|使用資源路徑從 OData 來源擷取資料。|  

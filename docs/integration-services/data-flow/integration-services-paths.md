@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 388a88d1f9a7ad6b18b2f04a702d2198c644e4fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-paths"></a>Integration Services 路徑
   將一個資料流程元件的輸出與另一元件的輸入連接，路徑可連接資料流程中的兩個元件。 路徑具有一個來源和一個目的地。 例如，如果路徑連接 OLE DB 來源和「排序」轉換，則 OLE DB 來源是路徑的來源，而「排序」轉換是路徑的目的地。 來源是路徑開始處的元件，而目的地是路徑結束處的元件。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  在 [資料流程路徑編輯器] 中按一下 [一般]。 然後，您可以編輯路徑的預設名稱並提供路徑的描述。 您還可以修改 PathAnnotation 屬性。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
 6.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 
@@ -139,10 +140,10 @@ ms.lasthandoff: 11/20/2017
  **資料檢視器類型**  
  列出資料檢視器的類型。  
   
- **加入**  
+ **[加入]**  
  按一下即可使用 [設定資料檢視器] 對話方塊加入資料檢視器。  
   
- **Delete**  
+ **刪除**  
  按一下即可刪除選取的資料檢視器。  
   
  **設定**  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
   
  下表將描述資料流程中路徑的可設定屬性。 資料流程引擎也會將值指派給這裡未列出的其他唯讀屬性。  
   
-|屬性名稱|資料類型|說明|  
+|屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|整數 (列舉)|指出設計師介面上是否應該與路徑一起顯示註解的值。 可能的值為 **AsNeeded**、 **SourceName**、 **PathName**和 **Never**。 預設值為 **AsNeeded**。|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|與路徑相關聯的輸入。|  

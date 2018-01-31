@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fb97dd247146cd2535e4eee72c448fdd94c10de
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d011a5b39f6aded3bc305c922b5d2788026559e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>連線至 MySQL 資料來源 (SQL Server 匯入和匯出精靈)
 本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至 **MySQL** 資料來源。 您可以使用數個資料提供者來連線至 MySQL。
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |必要資訊|.Net Framework Data Provider for MySQL 屬性|
 |---|---|
 |伺服器名稱|**Server**|
-|資料庫名稱|**資料庫**|
+|資料庫名稱|**[資料庫備份]**|
 |驗證 (登入) 資訊|[使用者識別碼] 和 [密碼]|
 
 您不需要在清單的 [ConnectionString] 欄位中輸入連接字串。 當您為 MySQL 伺服器名稱 ([伺服器]) 和登入資訊輸入個別的值之後，精靈即會從個別的屬性和屬性值來組合連接字串。 
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 ![使用 .NET 提供者連線至 MySQL，2 / 2](../../integration-services/import-export-data/media/connect-to-mysql-with-the-net-provider-2-of-2.png)
 
 ## <a name="connect-to-mysql-with-the-mysql-odbc-driver"></a>使用 MySQL ODBC 驅動程式連線至 MySQL
-ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源] 或 [選擇目的地] 頁面上，將 [.NET Framework Data Provider for ODBC] 選取為資料來源。 此提供者用作為 ODBC 驅動程式的包裝函式。
+ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源] 或 [選擇目的地] 頁面上，將 [.NET Framework Data Provider for ODBC] 選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
 
 以下是您選取 .NET Framework Data Provider for ODBC 之後立即看到的一般畫面。
 
@@ -73,7 +74,7 @@ ODBC 驅動程式的名稱。
 **Server**  
 MySQL 伺服器的名稱。 
 
-**資料庫**  
+**[資料庫備份]**  
 MySQL 伺服器的名稱。
 
 **UID** 和 **PWD**   

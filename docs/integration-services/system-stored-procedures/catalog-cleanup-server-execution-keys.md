@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1540c3396879dc12a5af6e321ec009700d7c658
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35ad9901e974ffa4283aed56b03e2cb75a66f178
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## <a name="permissions"></a>Permissions  
  這個預存程序需要下列其中一個權限：  
   
--   專案的 READ 與 EXECUTE 權限，以及 (如果適用的話) 參考環境的 READ 權限。  
+-   專案的 READ 與 EXECUTE 權限，以及參考環境的 READ 權限 (如果適用的話)。  
   
 -   **ssis_admin** 資料庫角色中的成員資格。  
   
@@ -68,10 +69,10 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
 -   SSISDB 資料庫未處於單一使用者模式。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  SQL Server 2012 Service Pack 2 已將 SERVER_OPERATION_ENCRYPTION_LEVEL 屬性新增至 **internal.catalog_properties** 資料表。 此屬性有兩個可能的值：  
   
--   **PER_EXECUTION (1)** - 會針對每次執行建立用於保護機密執行參數和執行記錄的憑證和對稱金鍵。 這是預設值。 您可能會在生產環境中遇到效能問題 (死結，失敗的維護作業等)，因為每次執行都會產生憑證/金鑰。 不過，此設定所提供的安全性層級高於其他值 (2)。  
+-   **PER_EXECUTION (1)** - 會針對每次執行建立憑證和對稱金鑰，以用於保護機密的執行參數和執行記錄。 這是預設值。 您可能會在生產環境中遇到效能問題 (死結，失敗的維護作業等)，因為每次執行都會產生憑證/金鑰。 不過，此設定所提供的安全性層級高於其他值 (2)。  
   
 -   **PER_PROJECT (2)** - 會針對每個專案建立用於保護機密參數的憑證和對稱金鍵。 這可讓您擁有的效能優於 PER_EXECUTION 層級，因為金鍵和憑證只會針對專案產生一次，而不是每次執行都產生一次。  
   
@@ -79,15 +80,15 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
 1.  確定 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 資料表中的 OPERATION_CLEANUP_ENABLED 屬性值設定為 TRUE。  
   
-2.  將 Integration Services 資料庫 (SSISDB) 設定為單一使用者模式。 在 SQL Server Management Studio 中，啟動 SSISDB 的 [資料庫屬性] 對話方塊，並切換至 [選項] 索引標籤，並將 [限制存取] 屬性設定為單一使用者模式 (SINGLE_USER)。 執行 cleanup_server_log 預存程序之後，請將屬性值設回原始值。  
+2.  將 Integration Services 資料庫 (SSISDB) 設為單一使用者模式。 在 SQL Server Management Studio 中，啟動 SSISDB 的 [資料庫屬性] 對話方塊，再切換至 [選項] 索引標籤，然後將 [限制存取] 屬性設為單一使用者模式 (SINGLE_USER)。 執行 cleanup_server_log 預存程序之後，請將屬性值設回原始值。  
   
-3.  執行預存程序 [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md)。  
+3.  執行 [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) 預存程序。  
   
-4.  現在，請繼續並變更 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 資料表中的 SERVER_OPERATION_ENCRYPTION_LEVEL 屬性值。  
+4.  現在，請繼續變更 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 資料表中的 SERVER_OPERATION_ENCRYPTION_LEVEL 屬性值。  
   
-5.  執行預存程序 [catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md) 以清除 SSISDB 資料庫中的憑證金鑰。 捨棄 SSISDB 資料庫中的憑證和金鑰可能需要很長的時間，因此它應該在離峰期間定期執行。  
+5.  執行 [catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md) 預存程序，以清除 SSISDB 資料庫中的憑證金鑰。 捨棄 SSISDB 資料庫中的憑證和金鑰可能需要很長的時間，因此您應該在離峰期間定期執行這項作業。  
   
-     您可以指定範圍或層級 (執行與專案) 以及要刪除的金鑰數目。 刪除的預設批次大小是 1000。 如果您將層級設定為 2，則只有在刪除相關的專案時，才會刪除金鑰和憑證。  
+     您可以指定範圍或層級 (執行/專案) 以及要刪除的金鑰數目。 刪除的預設批次大小是 1000。 如果您將層級設定為 2，則只有在刪除相關的專案時，才會刪除金鑰和憑證。  
   
  如需詳細資訊，請參閱下列知識庫文章。 [修正：當您在 SQL Server 2012 中使用 SSISDB 作為部署存放區時的效能問題](http://support.microsoft.com/kb/2972285)  
   

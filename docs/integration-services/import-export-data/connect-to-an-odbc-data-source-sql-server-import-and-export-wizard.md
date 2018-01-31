@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab3783ac708dcf3d8f683af6958ec43087303136
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a7692c229728e97bc830020d6ec2cdc35843af4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>連線至 ODBC 資料來源 (SQL Server 匯入和匯出精靈)
 本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至 **ODBC** 資料來源。
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/20/2017
 ![之後使用 ODBC 連線至 SQL](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 
 > [!NOTE]
-> 不論您設定的是來源還是目的地，此ODBC 驅動程式的連線選項都會相同。 也就是說，您在精靈的 [選擇資料來源] 和 [選擇目的地] 頁面上會看到一樣的選項。
+> 不論您設定的是來源還是目的地，此ODBC 驅動程式的連線選項都會相同。 也就是，您在精靈的 [選擇資料來源] 和 [選擇目的地] 頁面上看到的選項會相同。
 
 ## <a name="get-the-connection-string-online"></a>線上取得連接字串
 若要線上尋找 ODBC 驅動程式的連接字串，請參閱 [The Connection Strings Reference](https://www.connectionstrings.com/)(連接字串參考)。 這個協力廠商網站包含範例連接字串、資料提供者的詳細資訊以及其所需的連接資訊。

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cf0f550930ac73199276dc403763f49ce45b5e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 31e8aba7f3ac9913189278c6c6ccc482ec3e3020
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +56,11 @@ catalog.cleanup_server_log
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  在下列情況下，此預存程序會引發錯誤：  
   
--   SSISDB 資料庫中有一個或多個作用中的作業。  
+-   SSISDB 資料庫中有一或多個作用中的作業。  
   
 -   SSISDB 資料庫未處於單一使用者模式。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  SQL Server 2012 Service Pack 2 已將 SERVER_OPERATION_ENCRYPTION_LEVEL 屬性新增至 **internal.catalog_properties** 資料表。 此屬性有兩個可能的值：  
   
 -   **PER_EXECUTION (1)** - 會針對每次執行建立憑證和對稱金鑰，以用於保護機密的執行參數和執行記錄。 您可能會在生產環境中遇到效能問題 (鎖死、維護作業失敗等等)，因為每次執行時都會產生憑證/金鑰。 不過，此設定所提供的安全性層級高於另一個值 (2)。  

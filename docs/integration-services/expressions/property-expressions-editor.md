@@ -8,22 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.propertyexpressionseditor.f1
-helpviewer_keywords: Property Expressions Editor dialog box
+f1_keywords:
+- sql13.dts.designer.propertyexpressionseditor.f1
+helpviewer_keywords:
+- Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47edc5634e3471028914114662cb0cf06265c84f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35043f343fe16ac5c848d0c7dd2f9b21b95b18a5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="property-expressions-editor"></a>屬性運算式編輯器
   使用 **[屬性運算式編輯器]** 對話方塊，即可建立、編輯或刪除用來更新屬性值的屬性運算式。  
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/20/2017
  **運算式 (…)**  
  按一下省略符號，即可開啟 **[運算式產生器]** 對話方塊。 如需詳細資訊，請參閱 [Expression Builder](../../integration-services/expressions/expression-builder.md)。  
   
- **Delete**  
+ **刪除**  
  選取屬性，然後按一下 [刪除]。  
   
 ## <a name="see-also"></a>另請參閱  

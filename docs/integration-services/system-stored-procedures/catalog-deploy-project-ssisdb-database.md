@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b056ec4e0d4f762190154988fe3fa225e447c315
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 55fafb278e55a6044cd92f4c1dede3b574bd4c0a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **sysadmin** 伺服器角色的成員資格  
+-   **系統管理員**伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會造成預存程序引發錯誤的某些條件：  
@@ -78,7 +79,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   使用者未具備足夠的權限  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在專案部署或更新期間，預存程序並不會檢查專案中的個別封裝的保護等級。  
   
   

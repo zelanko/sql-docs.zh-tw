@@ -8,25 +8,27 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.ftpconnectionmanager.f1
+f1_keywords:
+- sql13.dts.designer.ftpconnectionmanager.f1
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ff7c6e45082cff952c8d5e9df711884019000e2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 25fa55ddb7dc23df266460732e78712551230b26
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ftp-connection-manager"></a>FTP 連接管理員
   FTP 連接管理員可讓封裝連接到「檔案傳輸通訊協定 (FTP)」伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 FTP 工作使用此連線管理員。  
@@ -58,17 +60,17 @@ ms.lasthandoff: 11/20/2017
  FTP 連接管理員可使用主動模式或使用被動模式來傳送和接收檔案。 在主動模式中，伺服器會起始資料連接，而在被動模式中，用戶端會起始資料連接。  
   
 ## <a name="configuration-of-the-ftp-connection-manager"></a>設定 FTP 連接管理員  
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的資訊，請參閱 [FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)。  
   
- 如需以程式設計方式設定連線管理員的相關資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+ 如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
-## <a name="ftp-connection-manager-editor"></a>FTP 連線管理員編輯器
+## <a name="ftp-connection-manager-editor"></a>FTP 連接管理員編輯器
   使用 [FTP 連線管理員編輯器] 對話方塊來指定連接到 FTP 伺服器的屬性。  
   
 > [!IMPORTANT]  
->  FTP 連線管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
+>  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
   
  若要深入了解 FTP 連線管理員，請參閱 [FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)。  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 11/20/2017
  **伺服器通訊埠**  
  指定 FTP 伺服器上用來連接的通訊埠編號。 這個屬性的預設值為 **21**。  
   
- **使用者名稱**  
+ **User name**  
  提供存取 FTP 伺服器的使用者名稱。 這個屬性的預設值為 **匿名**。  
   
  **密碼**  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-caps.latest.revision: "130"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c54f2e961abc3ec9bbbc3b19214e78d58208104
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 48cd6b4f32630b48b0e2ccd92400020d6bfa6e91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>啟動 SQL Server 匯入和匯出精靈
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/01/2017
 使用本主題中所述的其中一種方式來啟動 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]，以從中匯入資料，並將資料匯出至任何支援的資料來源。
 
 > [!IMPORTANT]
-> 本主題僅描述如何 **啟動** 精靈。 如果您要尋找其他項目，請參閱[相關工作和內容](#related)。
+> 本主題僅描述如何 **啟動** 精靈。 如需其他資訊，請參閱[相關的工作及內容](#related)。
 
 您可以啟動精靈：
 -   從 [[開始] 功能表](#startStart)。
@@ -117,19 +118,19 @@ ms.lasthandoff: 12/01/2017
  ## <a name="whats-next"></a>下一步  
  當您啟動精靈時，第一頁是 [歡迎使用 SQL Server 匯入和匯出精靈] 。 您不需要在此頁面上採取任何動作。 如需詳細資訊，請參閱 [歡迎使用 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)。  
   
-## <a name="related"></a> 相關工作和內容  
+## <a name="related"></a> 相關的工作及內容  
  以下是一些其他基本工作。
--   **請參閱精靈運作方式的快速範例。**
+-   **請參閱精靈運作方式的簡單範例**。
 
-    -   **如果您想要查看螢幕擷取畫面。** 在單一頁面查看此簡單端對端範例 - [透過匯入和匯出精靈的簡單範例開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
+    -   **若要檢視螢幕擷取畫面。** 您可以參考單一頁面上顯示的簡單端對端範例，[從 [匯入及匯出精靈] 的簡單範例開始著手](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
 
-    -   **如果您想要觀看影片。** 觀看這個四分鐘的 YouTube 影片，以清楚且簡單地示範精靈並說明如何將資料匯出至 Excel - [使用 SQL Server 匯入和匯出精靈匯出至 Excel](https://go.microsoft.com/fwlink/?linkid=829049)。
+    -   **若要觀看影片。** YouTube 上備有此精靈的示範影片，片長四分鐘。影片中將專門針對如何[使用 SQL Server 的 [匯入及匯出精靈]，將資料匯出至 Excel ](https://go.microsoft.com/fwlink/?linkid=829049)清楚地說明。
 
--   **深入了解精靈運作方式。**
+-   **深入了解此精靈的運作方式。**
 
-    -   **深入了解精靈。** 如果您要尋找精靈概觀，請參閱 [使用 SQL Server 匯入及匯出精靈匯入和匯出資料](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
+    -   **深入了解此精靈。** 如果您要尋找精靈概觀，請參閱 [使用 SQL Server 匯入及匯出精靈匯入和匯出資料](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
 
-    -   **了解精靈中的步驟。** 如果您要尋找精靈中各步驟的資訊，請參閱 [SQL Server 匯入和匯出精靈中的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 精靈的每個頁面也都會有個別文件頁面。
+    -   **了解此精靈的步驟。** 如需此精靈之各項步驟的資訊，請參閱 [SQL Server 匯入及匯出精靈的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 文件中另有專頁會列出此精靈的每一個頁面。
 
     -   **了解如何連線至資料來源和目的地。** 如果您要尋找如何連線至資料的資訊，請從這裡的清單中選取您想要的頁面 - [使用 SQL Server 匯入和匯出精靈連線至資料來源](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)。 數個常用資料來源都各有個別文件頁面。
 

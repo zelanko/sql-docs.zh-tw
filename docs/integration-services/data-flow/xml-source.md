@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cc10de2bb6f4d9cebf341242321e692ec9a4614e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: abc73a10f3538df038d9b4488199666288a3ca57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-source"></a>XML 來源
   XML 來源會讀取 XML 資料檔案，並將資料填入來源輸出中的資料行。  
@@ -63,13 +64,13 @@ ms.lasthandoff: 11/20/2017
   
  如果 XML 資料檔案包含 XSD 中沒有的元素，則會略過這些元素且不會產生其輸出。 換言之，如果 XML 資料檔案遺漏了 XSD 中出現的元素，則輸出會包含擁有 Null 值的資料行。  
   
- 從 XML 資料檔案擷取資料時，該資料會轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 但是，XML 來源無法將 XML 資料轉換成 DT_TIME2 或 DT_DBTIMESTAMP2 資料類型，因為此來源不支援這些資料類型。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
+ 從 XML 資料檔案擷取資料時，該資料會轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 但是，XML 來源無法將 XML 資料轉換成 DT_TIME2 或 DT_DBTIMESTAMP2 資料類型，因為此來源不支援這些資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  XSD 或內嵌結構描述可能會指定元素的資料類型；如果未指定，則 [XML 來源編輯器]  對話方塊會指派 Unicode 字串資料類型 (DT_WSTR) 給包含該元素的輸出中的資料行，並將資料行長度設定為 255 個字元。  
   
  如果結構描述指定元素的最大長度，輸出資料行的長度會設為此值。 如果最大長度大於元素轉換成的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型支援的長度，則資料會截斷成該資料類型的最大長度。 例如，如果字串長度為 5000，因為 DT_WSTR 資料類型的最大長度是 4000 個字元，則字串會截斷成 4000 個字元；同樣地，位元組資料會截斷成 DT_BYTES 資料類型的最大長度 8000 個字元。 如果結構描述指定無最大長度，則具有其中一種資料類型的預設資料行長度會設為 255。 XML 來源中的資料截斷會使用與其他資料流程元件中的截斷相同的方式來處理。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。  
   
- 您可以修改資料類型和資料行長度。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
+ 您可以修改資料類型和資料行長度。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="configuration-of-the-xml-source"></a>設定 XML 來源  
  XML 來源支援三種不同的資料存取模式。 您可以指定 XML 資料檔案的檔案位置、包含檔案位置的變數，或包含 XML 資料的變數。  
@@ -80,11 +81,11 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括用來設定 XML 來源的 [XML 來源編輯器] 對話方塊。 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中即提供此對話方塊。  
   
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [XML 來源自訂屬性](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -99,10 +100,10 @@ ms.lasthandoff: 11/20/2017
  **資料存取模式**  
  從來源中指定選取資料的方法。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |XML 檔案位置|從 XML 檔案擷取資料。|  
-|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊：**[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊**︰ [在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |來自變數的 XML 資料|從變數中擷取 XML 資料。|  
   
  **使用內嵌結構描述**  

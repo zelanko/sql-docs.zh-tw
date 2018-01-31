@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9fa0b3192455d022288100f2997309598dae774b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8ab77d362f9758e21a1bce78c31bc066d39f51c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>連線至一般檔案資料來源 (SQL Server 匯入和匯出精靈)
 本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至**一般檔案** (文字檔) 資料來源。 針對一般檔案，精靈的這兩個頁面會呈現不同的選項集，因此，本主題會分別描述一般檔案來源和一般檔案目的地。
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/20/2017
  **格式**  
  選取檔案是要使用分隔符號、固定寬度還是不齊右格式。  
   
-|值|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |使用分隔符號|資料行是以分隔符號分隔。 您可以在 [資料行] 頁面上指定分隔符號。|  
 |固定寬度|資料行具有固定寬度。|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/20/2017
  **標頭資料列分隔符號**  
  從標頭資料列的分隔符號清單中選取，或輸入分隔符號文字。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|標頭資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|標頭資料列是以歸位字元分隔。|  
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/20/2017
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料列是以歸位字元分隔。|  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/20/2017
  **資料行分隔符號**  
  從可用的資料行分隔符號清單中選取，或輸入分隔符號文字。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料行是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料行是以歸位字元分隔。|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **預覽資料列**  
  檢視一般檔案中的範例資料，使用選取的選項將資料分為資料行和資料列。  
  
- **重新整理**  
+ **[重新整理]**  
  按一下 [重新整理]，即可檢視變更要略過之分隔符號的影響。 僅在您已變更其他連接選項之後，才會看見此按鈕。  
   
  **重設資料行**  
@@ -181,7 +182,7 @@ ms.lasthandoff: 11/20/2017
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料列是以歸位字元分隔。|  
@@ -207,7 +208,7 @@ ms.lasthandoff: 11/20/2017
  **設定每一個資料行的屬性**  
  請在左窗格中選取一個資料行以便在右窗格中檢視它的屬性。 請參閱下表以了解資料行屬性的描述。 列出的部分屬性只能針對特定一般檔案格式以及特定資料類型的資料行進行設定。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**名稱**|提供描述性資料行名稱。 如果您未輸入名稱，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會自動以 Column 0、Column 1 等等的格式建立名稱。|
 |**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}**： 資料行是以歸位字元和換行字元的組合分隔。<br /><br /> **{CR}**： 資料行是以歸位字元分隔。<br /><br /> **{LF}**： 資料行是以換行字元分隔。<br /><br /> **分號 {;}**： 資料行是以分號分隔。<br /><br /> **冒號 {:}**： 資料行是以冒號分隔。<br /><br /> **逗號 {,}**： 資料行是以逗號分隔。<br /><br /> **定位字元 {t}**： 資料行是以定位字元分隔。<br /><br /> **分隔號 {&#124;}**： 資料行是以分隔號分隔。|
@@ -215,20 +216,20 @@ ms.lasthandoff: 11/20/2017
 |**InputColumnWidth**|指定儲存為位元組計數的值；針對 Unicode 檔案，此值是字元計數。 分隔資料行將忽略這個值。<br /><br /> **注意** ︰在物件模型中，這個屬性的名稱為 ColumnWidth。|
 |**DataPrecision**|指定數值資料的有效位數。 有效位數是指位數的數目。|
 |**DataScale**|指定數值資料的小數位數。 小數位數是指小數位數的數目。|
-|**DataType**|從可用的資料類型清單中選取。<br/>如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。|
+|**DataType**|從可用的資料類型清單中選取。<br/>如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|
 |**OutputColumnWidth**|指定儲存為位元組計數的值；針對 Unicode 檔案，此值將對應至字元計數。 在資料流程工作中，這個值將用來替一般檔案來源設定輸出資料行寬度。 在物件模型中，這個屬性的名稱為 MaximumWidth。|  
 |**TextQualified**|指出文字資料是否會由文字限定詞字元 (例如引號字元) 括住。<br /><br /> True：一般檔案中的文字資料是限定的。 False：一般檔案中的文字資料是非限定的。|  
   
 **新增**  
  按一下 [新增] 來加入新的資料行。 依預設，[新增] 按鈕會在清單結尾加入新的資料行。 此按鈕還有下列選項，可以在下拉式清單中使用。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**加入資料行**|在清單結尾加入新資料行。|  
 |**插在前面**|在選取的資料行之前插入新資料行。|  
 |**插在後面**|在選取的資料行之後插入新資料行。|  
   
- **Delete**  
+ **刪除**  
  選取資料行，然後按一下 [刪除] 將其移除。  
   
  **建議類型**  
@@ -260,7 +261,7 @@ ms.lasthandoff: 11/20/2017
  **預覽資料列**  
  檢視一般檔案中的範例資料，根據您選取的選項將資料分為資料行和資料列。
  
- **重新整理**  
+ **[重新整理]**  
  按一下 [重新整理]，即可檢視變更要略過之資料列數的影響。 僅在您已變更其他連接選項之後，才會看見此按鈕。  
  
 如需 [預覽] 頁面的詳細資訊，請參閱下列 Integration Services 參考頁面 - [一般檔案連接管理員編輯器 &#40;預覽頁面&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)。
@@ -290,7 +291,7 @@ ms.lasthandoff: 11/20/2017
  **格式**  
  選取檔案是要使用分隔符號、固定寬度還是不齊右格式。  
   
-|值|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |使用分隔符號|資料行是以分隔符號分隔。 您可以在 [資料行] 頁面上指定分隔符號。|  
 |固定寬度|資料行具有固定寬度。|  

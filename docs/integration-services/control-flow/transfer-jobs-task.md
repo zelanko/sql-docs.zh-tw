@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferjobstask.f1
 - sql13.dts.designer.transferjobstask.general.f1
 - sql13.dts.designer.transferjobstask.jobs.f1
-helpviewer_keywords: Transfer Jobs task [Integration Services]
+helpviewer_keywords:
+- Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 985e707cf0865a012076a1161a3eff9a7e73b032
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8b14cdb7e26c103104e0e98725f00905f75630af
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-jobs-task"></a>傳送作業工作
   「傳送作業」工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間，傳送一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 作業。  
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
 -   略過重複的作業。  
   
- 在執行階段，「傳送作業」工作會使用一或兩個 SMO 連接管理員，連接到來源和目的地伺服器。 SMO 連接管理員會在「傳送作業」工作以外另行設定，然後在「傳送作業」工作中參考。 存取伺服器時，SMO 連接管理員會指定要使用的伺服器和驗證模式。 如需相關資訊，請參閱 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)。  
+ 在執行階段，「傳送作業」工作會使用一或兩個 SMO 連接管理員，連接到來源和目的地伺服器。 SMO 連接管理員會在「傳送作業」工作以外另行設定，然後在「傳送作業」工作中參考。 存取伺服器時，SMO 連接管理員會指定要使用的伺服器和驗證模式。 如需詳細資訊，請參閱 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)。  
   
 ## <a name="transferring-jobs-between-instances-of-sql-server"></a>在 SQL Server 的執行個體之間傳送作業  
  「傳送作業」工作支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源和目的地。 將哪一個用作來源或目的地是沒有限制的。  
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/20/2017
  若要傳送作業，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的來源和目的地執行個體上，使用者都必須是系統管理員 (sysadmin) 固定伺服器角色的成員，或者是 msdb 資料庫上固定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 固定資料庫角色的其中一個成員。  
   
 ## <a name="configuration-of-the-transfer-jobs-task"></a>設定傳送作業工作  
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需有關可在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列主題：  
   
@@ -114,7 +116,7 @@ ms.lasthandoff: 11/20/2017
   
  此屬性具有下表所列的選項：  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|複製所有作業。|  
 |**False**|只複製指定的作業。|  
@@ -132,7 +134,7 @@ ms.lasthandoff: 11/20/2017
   
  此屬性具有下表所列的選項：  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**FailTask**|如果具有相同名稱的作業己經存在於目的地伺服器上，工作就會失敗。|  
 |**Overwrite**|工作會覆寫目的地伺服器上具有相同名稱的作業。|  
@@ -143,7 +145,7 @@ ms.lasthandoff: 11/20/2017
   
  此屬性具有下表所列的選項：  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|啟用目的地伺服器上的作業。|  
 |**False**|停用目的地伺服器上的作業。|  

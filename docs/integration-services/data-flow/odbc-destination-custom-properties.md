@@ -8,25 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dacb3a2eea675e85b23fc2b05443d14a95983c6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dfeeaa38de94dfe2f1d716cda8eee0e5e5faf6f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="odbc-destination-custom-properties"></a>ODBC 目的地自訂屬性
+# <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
   下表描述 ODBC 目的地的自訂屬性。 所有屬性都可從 SSIS 屬性運算式設定。  
   
-|屬性名稱|資料類型|說明|  
+|屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |連接|ODBC 連接|用來存取目的地資料庫的 ODBC 連接。|  
 |BatchSize|Integer|大量載入的批次大小。 這是當做批次載入的資料列數目。 這只適用於支援資料列取向的參數繫結時。 如果不支援資料列取向的參數繫結，則批次大小為 1。|  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 |DefaultCodePage|Integer|要用於字串資料行的字碼頁。<br /><br /> **注意**：雖然您無法在 **[ODBC 目的地編輯器]**中使用這個屬性，但是可以使用 **[進階編輯器]**來設定這個屬性。|  
 |InsertMethod|整數 (列舉)|用於插入資料的方法。 可能值為逐列 (0) 和批次 (1)。 預設值為批次 (1)。<br /><br /> 如需有關這些選項的詳細資訊，請參閱＜ [ODBC Destination](../../integration-services/data-flow/odbc-destination.md)＞中的＜載入選項＞。|  
 |StatementTimeout|Integer|在傳回至應用程式並出現錯誤之前等候 SQL 陳述式執行的秒數。 預設值為 120。|  
-|TableName|字串|要插入資料的目的地資料表名稱。|  
+|TableName|String|要插入資料的目的地資料表名稱。|  
 |TransactionSize|Integer|單一交易中的插入數目。 預設值為 0，表示 ODBC 目的地以自動認可模式運作。<br /><br /> 因為 ODBC 連接管理員不支援分散式交易，所以可將此屬性設為 0 以外的值。 不過，如果連接管理員的 **RetainSameConnection** 屬性設為 **true** ，此屬性必須設為 0。<br /><br /> **注意**：雖然您無法在 **[ODBC 目的地編輯器]**中使用這個屬性，但是可以使用 **[進階編輯器]**來設定這個屬性。|  
 |LobChunkSize|Integer|LOB 資料行的區塊大小配置。|  
   

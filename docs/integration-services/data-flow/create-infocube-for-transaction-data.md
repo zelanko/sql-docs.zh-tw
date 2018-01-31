@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b08a3aceff35ab0d2473e5b0629c866220066fa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a311e2f046d1ce00847dcc9b78f045dde0f9867
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infocube-for-transaction-data"></a>建立交易資料的 InfoCube
   使用 [建立交易資料的 InfoCube] 對話方塊可以在 SAP Netweaver BW 系統中建立交易資料的新 InfoCube。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/20/2017
  **型別**  
  顯示與資料流程資料行相關聯的 InfoObject 類型。 下表列出類型的可能值。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |CHA|特性|  
 |UNI|單位|  

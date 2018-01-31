@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72ed17f506e2da78c972c54e19e98c8deacc287c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8ffadcd36d1df013d8e5a9a9aeb3f85d4056c27
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
   「資料採礦查詢」工作會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]內建的資料採礦模型執行預測查詢。 預測查詢會使用採礦模型建立新資料的預測。 例如，預測查詢可預測夏季各月間可能出售的帆船數目，或產生可能購買帆船的預期客戶清單。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="configuration-of-the-data-mining-query-task"></a>設定資料採礦查詢工作  
  「資料採礦查詢」工作需要兩個連接。 第一個連接是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接管理員，會連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，或含有採礦結構和採礦模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 第二個連接是 OLE DB 連接管理員，會連接到含有工作所寫入資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 如需相關資訊，請參閱 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) 及 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
 > [!NOTE]  
 >  「資料採礦查詢編輯器」沒有「運算式」頁面， 而是另外使用 **[屬性]** 視窗存取用來建立和管理「資料採礦查詢」工作屬性之屬性運算式的工具。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/20/2017
  輸入資料採礦查詢工作的描述。  
   
 ### <a name="mining-model-tab-options"></a>採礦模型索引標籤選項  
- **連接**  
+ **[連接]**  
  在清單中選取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員，或按一下 [新增] 以建立新的連線管理員。  
   
  **相關主題：**[Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) (Analysis Services 連線管理員)  
@@ -135,7 +136,7 @@ ms.lasthandoff: 11/20/2017
  **變數名稱**  
  在清單中選取變數，以將其對應至參數。  
   
- **加入**  
+ **[加入]**  
  將參數加入清單中。  
   
  **移除**  
@@ -153,7 +154,7 @@ ms.lasthandoff: 11/20/2017
  **結果類型**  
  指出傳回單一資料列或完整結果集。  
   
- **加入**  
+ **[加入]**  
  將結果集加入清單中。  
   
  **移除**  
@@ -174,7 +175,7 @@ ms.lasthandoff: 11/20/2017
  輸入資料採礦查詢工作的描述。  
   
 ### <a name="output-tab-options"></a>輸出索引標籤選項  
- **連接**  
+ **[連接]**  
  在清單中選取連線管理員，或按一下 [新增] 來建立新的連線管理員。  
   
  **新增**  

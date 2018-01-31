@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 79a1f98f64096d11faf25a75e681518546bbd21e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0e22f388277d9ad96e4c38497789d20f3e98cfad
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>連線至 SQL Server 資料來源 (SQL Server 匯入和匯出精靈)
 本主題示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面中連線至 **Microsoft SQL Server** 資料來源。 您可以使用數個資料提供者來連線至 SQL Server。
@@ -91,7 +92,7 @@ ODBC 驅動程式的名稱。 針對不同版本的驅動程式，名稱會不�
 **Server**  
 SQL Server 的名稱。
 
-**資料庫**  
+**[資料庫備份]**  
 資料庫的名稱。  
 
 **Trusted_Connection**；或 **Uid** 和 **Pwd**  

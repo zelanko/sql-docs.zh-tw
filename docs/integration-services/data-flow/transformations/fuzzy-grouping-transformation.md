@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 817cb1690c8b166a0e1760c3e3bb298dfd130278
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 03ffaa3d6dda388fc660feafc68a57fd8ce6346c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
   「模糊群組」轉換會透過識別可能重複的資料列並選取用於標準化資料的標準資料列，執行資料清除工作。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
  「模糊群組」轉換需要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體，以建立轉換演算法執行其工作所需的暫存 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。 連接必須解析為具有在資料庫中建立資料表之權限的使用者。  
   
- 若要設定轉換，您必須選取要在識別重複項目時使用的輸入資料行，還必須為每個資料行選取相符類型 (模糊或完全)。 完全相符保證只會將該資料行中具有相同值的那些資料列分組。 完全比對可套用到任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型的資料行，但 DT_TEXT、DT_NTEXT 和 DT_IMAGE 除外。 模糊相符會將有近似相同值的資料列分組。 資料之近似比對的方法以使用者指定的相似度分數為基礎。 只有具有 DT_WSTR 和 DT_STR 資料類型的資料行可用於模糊比對。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)＞。  
+ 若要設定轉換，您必須選取要在識別重複項目時使用的輸入資料行，還必須為每個資料行選取相符類型 (模糊或完全)。 完全相符保證只會將該資料行中具有相同值的那些資料列分組。 完全比對可套用到任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型的資料行，但 DT_TEXT、DT_NTEXT 和 DT_IMAGE 除外。 模糊相符會將有近似相同值的資料列分組。 資料之近似比對的方法以使用者指定的相似度分數為基礎。 只有具有 DT_WSTR 和 DT_STR 資料類型的資料行可用於模糊比對。 如需詳細資訊，請參閱 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  轉換輸出包括所有輸入資料行、一或多個具有標準化資料的資料行，以及包含相似度分數的資料行。 分數是介於 0 到 1 之間的十進位值。 標準資料列的分數是 1。 模糊群組中其他資料列的分數指出資料列與標準資料列的相符程度。 分數愈接近於 1，資料列與標準資料列的相符程度就愈高。 如果模糊群組包括的資料列是與標準資料列完全重複的資料列，則這些資料列的分數也是 1。 轉換不會移除重複的資料列，而是建立一個將標準資料列與相似資料列產生關聯的索引鍵，將這些重複的資料列分組。  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/20/2017
  如果此轉換所使用的資料表和索引在本機電腦上，則轉換的效能會有所改進。  
   
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>模糊群組轉換的組態  
- 您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/20/2017
  使用清單方塊來選取現有的 OLE DB 連接管理員，或使用 [新增] 按鈕來建立新的連接。  
   
  **新增**  
- 使用 [設定 OLE DB 連線管理員] 對話方塊來建立新的連線。  
+ 使用 [設定 OLE DB 連接管理員] 對話方塊來建立新的連接。  
   
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊群組轉換編輯器 (資料行索引標籤)
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[資料行]** 索引標籤，即可指定用於將具有重複值之資料列分組的資料行。  
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/20/2017
  **數字**  
  指定比較資料行資料時，開頭和尾端數字的顯著性。 例如，假設開頭數字屬於顯著，則 "123 Main Street" 和 "456 Main Street" 將不會被分到相同的群組中。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**兩者皆非**|開頭和尾端數字皆屬於不顯著。|  
 |**開頭**|僅開頭數字屬於顯著。|  

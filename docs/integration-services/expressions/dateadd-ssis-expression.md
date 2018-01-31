@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - dates [Integration Services]
 - DATEADD function
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 088f5ed8a276b0f063ffa9611bca3ddeae624786
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2656e09ca688510316f468c5b387f8e999f6e87b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 運算式)
   在日期的指定之日期部分加上代表日期或時間間隔的數字之後，傳回新的 DT_DBTIMESTAMP 值。 number 參數必須評估為整數，date 參數必須評估為有效的日期。  
@@ -38,7 +39,7 @@ DATEADD(datepart, number, date)
 ```  
   
 ## <a name="arguments"></a>引數  
- *日期部份*  
+ *datepart*  
  是指定要加入數字之日期部份的參數。  
   
  *number*  
@@ -50,7 +51,7 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>結果類型  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  下表列出運算式評估工具所辨識的日期部份與縮寫。 日期部份的名稱不區分大小寫。  
   
 |日期部份|縮寫|  
@@ -71,7 +72,7 @@ DATEADD(datepart, number, date)
   
  *datepart* 引數必須加上引號。  
   
- 日期常值必須明確轉換為日期資料類型之一。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
+ 日期常值必須明確轉換為日期資料類型之一。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  如果引數為 Null，則 DATEADD 會傳回 Null 結果。  
   

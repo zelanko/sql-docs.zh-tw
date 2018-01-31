@@ -8,23 +8,24 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.destinationassistant.f1
 - sql13.DTS.DESIGNER.DESTINATIONASSIST.F1
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21ce9dc332f5a31fa95ea57e5cbe63a2757f198a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 62e4fb6f0d7f368ec96f647ee7befa8826a7812c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="destination-assistant"></a>Destination Assistant
   目的地小幫手元件有助於建立目的地元件和連線管理員。 該元件位於 SSIS 工具箱的 **[我的最愛]** 區段中。  
@@ -50,9 +51,9 @@ ms.lasthandoff: 11/20/2017
 ## <a name="add-new-destination-dialog-box"></a>新增新目的地對話方塊
 下表列出可以在 [新增新目的地] 對話方塊中使用的選項。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |類型|選取您要連接的目的地類型。|  
 |連接管理員|選取現有的連線管理員，或按一下 [\<新增>] 以建立新的連線管理員。|  
 |僅顯示已安裝|指定是否只要檢視已安裝的目的地。|  
-|確定|按一下以儲存您的變更，並開啟任何後續的對話方塊設定其他選項。|  
+|[確定]|按一下以儲存您的變更，並開啟任何後續的對話方塊設定其他選項。|  

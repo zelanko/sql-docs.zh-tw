@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e4ed1c7f0497f8be036b258f35d7a003db00d1f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2e4f97d129840e2c045fe942996a5918163c137
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-transformations"></a>Integration Services 轉換
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 轉換是封裝之資料流程中的元件，用以彙總、合併、散發和修改資料。 轉換還可以執行查閱作業，並產生範例資料集。 此章節描述 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包含的轉換，並解釋其運作方式。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="business-intelligence-transformations"></a>商業智慧轉換  
  下列轉換會執行商業智慧作業 (例如，清除資料、採礦文字及執行資料採礦預測查詢)。  
   
-|轉換|說明|  
+|轉換|描述|  
 |--------------------|-----------------|  
 |[緩時變維度轉換](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|設定緩時變維度之更新的轉換。|  
 |[模糊群組轉換](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|用於標準化資料行資料中值的轉換。|  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="row-transformations"></a>資料列轉換  
  下列轉換會更新資料行的值，並建立新的資料行。 轉換會套用至轉換輸入中的每個資料列。  
   
-|轉換|說明|  
+|轉換|描述|  
 |--------------------|-----------------|  
 |[字元對應轉換](../../../integration-services/data-flow/transformations/character-map-transformation.md)|將字串函數套用至字元資料的轉換。|  
 |[複製資料行轉換](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|將輸入資料行的副本加入轉換輸出的轉換。|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="rowset-transformations"></a>資料列集轉換  
  下列轉換會建立新的資料列集。 資料列集可以包括彙總和排序的值、範例資料列集，或樞紐和取消樞紐的資料列集。  
   
-|轉換|說明|  
+|轉換|描述|  
 |--------------------|-----------------|  
 |[彙總轉換](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|執行彙總 (例如 AVERAGE、SUM 及 COUNT) 的轉換。|  
 |[排序轉換](../../../integration-services/data-flow/transformations/sort-transformation.md)|排序資料的轉換。|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="split-and-join-transformations"></a>分割和聯結轉換  
  下列轉換會將資料列散發至不同的輸出、建立轉換輸入的副本、將多個輸入聯結到一個輸出中，並執行查閱作業。  
   
-|轉換|說明|  
+|轉換|描述|  
 |--------------------|-----------------|  
 |[條件式分割轉換](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|將資料列傳送至不同輸出的轉換。|  
 |[多點傳送轉換](../../../integration-services/data-flow/transformations/multicast-transformation.md)|將資料集散發至多個輸出的轉換。|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="auditing-transformations"></a>稽核轉換  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括下列轉換，用以稽核資訊與計數資料列。  
   
-|轉換|說明|  
+|轉換|描述|  
 |--------------------|-----------------|  
 |[稽核轉換](../../../integration-services/data-flow/transformations/audit-transformation.md)|使環境之相關資訊可用於封裝中資料流程的轉換。|  
 |[資料列計數轉換](../../../integration-services/data-flow/transformations/row-count-transformation.md)|資料列通過資料流程時計算其數目，並將最後計數儲存到變數中的轉換。|  

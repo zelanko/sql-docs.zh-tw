@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5f6c0a872ae043e8550dc541d3c0e0f706e388a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9efb5b8d8a972cfc60ccb078363bcba055eea01
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="http-connection-manager"></a>HTTP 連接管理員
   HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的「Web 服務」工作便使用此連接管理員。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 -   使用 Proxy 伺服器。 Proxy 伺服器也可設定為使用認證，以及設定為略過 Proxy 伺服器並改用本機位址。  
   
 ## <a name="configuration-of-the-http-connection-manager"></a>設定 HTTP 連接管理員  
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **使用認證**  
  指定 HTTP 連接管理員是否使用使用者的安全性認證進行驗證。  
   
- **使用者名稱**  
+ **User name**  
  如果 HTTP 連接管理員使用認證，您必須指定使用者名稱、密碼，以及網域。  
   
  **密碼**  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/20/2017
  **使用認證**  
  針對 Proxy 伺服器，指定 HTTP 連接管理員是否要使用安全性認證。  
   
- **使用者名稱**  
+ **User name**  
  如果 HTTP 連接管理員使用認證，您必須指定使用者名稱、密碼，以及網域。  
   
  **密碼**  
@@ -128,7 +129,7 @@ ms.lasthandoff: 11/20/2017
  **Proxy 略過清單**  
  輸入您想要略過之 Proxy 伺服器的位址清單。  
   
- **加入**  
+ **[加入]**  
  輸入您想要針對它略過 Proxy 伺服器的位址。  
   
  **移除**  

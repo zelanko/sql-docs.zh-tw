@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa1ed88a75603d7a943dfb05089c0a79092507ef
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a3e8e346a8b71c3bd11fad1847dc33fa4b47145
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="audit-transformation"></a>稽核轉換
   稽核轉換可讓封裝中的資料流程包含有關封裝執行的環境資料。 例如，可以將封裝、電腦與操作員的名稱加入資料流程。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括提供此資訊的系統變數。  
@@ -35,10 +36,10 @@ ms.lasthandoff: 11/20/2017
 ## <a name="system-variables"></a>系統變數  
  下表描述「稽核」轉換可使用的系統變數。  
   
-|系統變數|索引|說明|  
+|系統變數|索引|描述|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|識別封裝執行執行個體的 GUID。|  
-|**PackageID**|1|封裝的唯一識別碼。|  
+|**PackageID**|@shouldalert|封裝的唯一識別碼。|  
 |**PackageName**|2|封裝名稱。|  
 |**VersionID**|3|封裝的版本。|  
 |**ExecutionStartTime**|4|封裝開始執行的時間。|  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
  此轉換有一個輸入和一個輸出。 它不支援錯誤輸出。  
   
- 您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/20/2017
  **稽核類型**  
  選取可用的系統變數以提供稽核資訊。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**執行執行個體 GUID**|插入唯一識別封裝之執行執行個體的 GUID。|  
 |**封裝識別碼**|插入唯一識別封裝的 GUID。|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/20/2017
 |**版本識別碼**|插入唯一識別封裝版本的 GUID。|  
 |**執行開始時間**|插入封裝開始執行的時間。|  
 |**電腦名稱**|插入啟動封裝的電腦名稱。|  
-|**使用者名稱**|插入啟動封裝之使用者的登入名稱。|  
+|**User name**|插入啟動封裝之使用者的登入名稱。|  
 |**工作名稱**|插入與稽核轉換相關聯之資料流程工作的名稱。|  
 |**工作識別碼**|插入唯一識別與稽核轉換相關聯之資料流程工作的 GUID。|  
   

@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sapbwdestination.connection.f1
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c63ac10d6cb4726817d8481be70533df8e2014c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8b97acdf1b5621100c9fcfce5d5072126ff794d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目的地編輯器 (連接管理員頁面)
   使用 **[SAP BW 目的地編輯器]** 的 **[連接管理員]** 頁面可以選取 SAP BW 目的地將使用的 SAP BW 連接管理員。 在這個頁面上，您也可以選取將資料載入 SAP Netweaver BW 系統中所用的參數。  
@@ -66,7 +68,7 @@ ms.lasthandoff: 11/20/2017
  **型別**  
  輸入可識別 InfoSource 類型的單一字元。 下表列出可接受的單一字元值。  
   
-|Value|說明|  
+|Value|描述|  
 |-----------|-----------------|  
 |**D**|交易資料|  
 |**M**|主要資料|  
@@ -76,7 +78,7 @@ ms.lasthandoff: 11/20/2017
  **邏輯系統**  
  輸入與 InfoPackage 相關聯之邏輯系統的名稱。  
   
- **[查閱]**  
+ **查閱**  
  使用 [查閱 InfoPackage] 對話方塊來查閱 InfoPackage。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)＞。  
   
 ### <a name="rfc-destination-options"></a>RFC 目的地選項  
@@ -91,14 +93,14 @@ ms.lasthandoff: 11/20/2017
  **程式識別碼**  
  輸入與 RFC 目的地相關聯的程式識別碼。  
   
- **[查閱]**  
+ **查閱**  
  使用 [查閱 RFC 目的地] 對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
   
 ### <a name="create-sap-bw-objects-options"></a>建立 SAP BW 物件選項  
  **選取 物件類型**  
  選取您想要建立的 SAP Netweaver BW 物件類型。 您可以選取下列其中一種類型：  
   
--   InfoObject  
+-   [InfoObject]  
   
 -   InfoCube  
   

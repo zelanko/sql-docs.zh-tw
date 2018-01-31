@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - SIGN function
 - negative values
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94a272387818ebc855178c4a21efffe34b1dcac8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea4e7e994644975e36d42eb4720184a39e9d44e7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sign-ssis-expression"></a>SIGN (SSIS 運算式)
   傳回數值運算式的正 (+1)、負 (-1) 或零 (0) 符號。  
@@ -39,12 +40,12 @@ SIGN(numeric_expression)
   
 ## <a name="arguments"></a>引數  
  *numeric_expression*  
- 是帶正負號的有效數值運算式。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
+ 是帶正負號的有效數值運算式。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="result-types"></a>結果類型  
  DT_I4  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果引數為 Null，則 SIGN 會傳回 Null 結果。  
   
 ## <a name="expression-examples"></a>運算式範例  
