@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a0cbdbed1f1563c888a383c8901288ace8ddad67
-ms.sourcegitcommit: 553bcfbee67a510c2c0b055ce1d7673504941d11
-ms.translationtype: HT
+ms.openlocfilehash: 5a262bb73d5989ebf3ad961ee7c2e84e75415f26
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>機器學習服務中的已知的問題
 
@@ -28,16 +28,16 @@ ms.lasthandoff: 02/01/2018
 
 這裡的資訊適用於所有的下列程式碼，除非：
 
-* SQL Server 2016
+SQL Server 2016
 
-  - R Services (資料庫內)
-  - Microsoft R Server (獨立式)
+- R Services (資料庫內)
+- Microsoft R Server (獨立式)
 
-* SQL Server 2017
+SQL Server 2017
 
-  - 機器學習服務 （資料庫）
-  - 機器學習服務 for Python （資料庫）
-  - Machine Learning 伺服器 (獨立式)
+- 機器學習服務 （資料庫）
+- 機器學習服務 for Python （資料庫）
+- Machine Learning 伺服器 (獨立式)
 
 ## <a name="setup-and-configuration-issues"></a>安裝和設定問題
 
@@ -47,11 +47,11 @@ ms.lasthandoff: 02/01/2018
 
 如果您嘗試在網域控制站上安裝 SQL Server 2016 R Services 或 SQL Server 2017 機器學習服務，則安裝程式會失敗，發生下列錯誤：
 
->*「 錯誤發生之功能的安裝程序期間 」。*
+> *此功能的安裝程序期間發生錯誤*
 > 
->*「 找不到群組識別...」*
+> *找不到與身分識別的群組*
 > 
->*「 元件錯誤程式碼： 0x80131509"*
+> *元件的錯誤程式碼： 0x80131509*
 
 因為網域控制站上的服務無法建立 20 個的本機帳戶執行機器學習所需，就會發生故障。 一般情況下，我們不建議在網域控制站上安裝 SQL Server。 如需詳細資訊，請參閱[支援公告 2032911](https://support.microsoft.com/en-us/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont)。
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/01/2018
 
 如果您安裝最新版的 Microsoft R 用戶端，並使用它來執行 SQL Server 上的 R 遠端計算內容中，您可能會收到類似下列錯誤：
 
->*您正在 Microsoft R 用戶端版本 9.x.x 您與 Microsoft R Server 版本 8.x.x 不相容的電腦。請下載並安裝相容版本。*
+> *您正在 Microsoft R 用戶端版本 9.x.x 您與 Microsoft R Server 版本 8.x.x 不相容的電腦。請下載並安裝相容版本。*
 
 SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 R 程式庫。 限制已移除版本的 R 伺服器 9.0.1 較新版本。 不過，如果您遇到這個錯誤，請確認版本的 R 程式庫會使用您的用戶端和伺服器，而且必要時，更新為符合伺服器版本的用戶端。
 
@@ -83,12 +83,12 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 
 當您在 SQL Server 2016 的計算內容中執行 R 程式碼時，您可能會看到類似下列錯誤：
 
-*您電腦上執行的是 9.0.0 版的 Microsoft R Client，與 Microsoft R Server 8.0.3 版不相容。請下載並安裝相容版本。*
+> *您電腦上執行的是 9.0.0 版的 Microsoft R Client，與 Microsoft R Server 8.0.3 版不相容。請下載並安裝相容版本。*
 
 如果下列兩個陳述式為 true，會顯示這個訊息
 
 + 用戶端電腦上安裝 R Server （獨立） 使用的安裝精靈[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]。
-+ 您可以使用來安裝 Microsoft R Server[分隔 Windows installer](https://docs.microsoft.com/r-server/install/r-server-install-windows)。
++ 您可以使用來安裝 Microsoft R Server[分隔 Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
 
 若要確保伺服器和用戶端都使用相同的版本，您可能需要使用_繫結_、 支援的 Microsoft R Server 9.0 和更新版本中，若要升級 SQL Server 2016 執行個體中的 R 元件。 若要判斷是否支援升級為可用，如 R 服務版本，請參閱[使用 SqlBindR.exe R 服務的執行個體升級](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
@@ -110,13 +110,13 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 
 如果您安裝 SQL Server R Services 分別從資料庫引擎，而且組建版本不同，您可能會看到系統事件記錄檔中的下列錯誤：
 
->_SQL Server Launchpad 服務無法啟動，因為發生下列錯誤： 服務未啟動或控制要求能夠及時回應。_
+> *SQL Server Launchpad 服務無法啟動，因為發生下列錯誤： 服務未啟動或控制要求能夠及時回應。*
 
 比方說，此錯誤可能會因為您安裝 database engine 所使用的發行版本、 套用修補程式來升級資料庫引擎，和使用的版本，以新增 R 服務功能。
 
 若要避免這個問題，使用公用程式在檔案管理員例如比較 Launchpad.exe 的版本與版本的 SQL 二進位檔，例如 sqldk.dll。 所有元件都應有相同的版本號碼。 如果升級某個元件，所有其他已安裝的元件請務必套用相同的升級。
 
-[啟動列] 中尋找`Binn`執行個體的資料夾。 例如，在預設安裝的 SQL Server 2016 中，路徑可能是"C:\Program Files\Microsoft SQL Server\MSSQL.13.InstanceNameMSSQL\Binn"。 
+[啟動列] 中尋找`Binn`執行個體的資料夾。 例如，在預設安裝的 SQL Server 2016 中，路徑可能是`C:\Program Files\Microsoft SQL Server\MSSQL.13.InstanceNameMSSQL\Binn`。 
 
 ### <a name="remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>Azure 虛擬機器執行的 SQL Server 執行個體中防火牆封鎖遠端計算內容
 
@@ -130,7 +130,7 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 
 若要修正此問題，建議您升級至較新的服務版本。
 
-如果無法升級，您可以使用 SQL 登入來執行可能需要內嵌 ODBC 呼叫的遠端 R 作業。
+如果升級不可行，因應措施是，使用 SQL 登入來執行遠端的 R 作業可能需要內嵌的 ODBC 呼叫。
 
 **適用於：** SQL Server 2016 R Services Express Edition
 
@@ -140,13 +140,13 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 
 比方說，即使您使用 SQL Server 的 Enterprise Edition，R 以單一執行緒模式執行時使用外部工具執行 R 程式碼。 若要在 SQL Server 中取得的效能優點，啟動 SQL Server 連線，並使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)呼叫外部指令碼執行階段。
 
-+ 一般情況下，避免呼叫機器學習所使用的 SQL Server 上，從外部工具的程式庫。 如果您需要偵錯 R 或 Python 程式碼，則通常更容易，若要這樣做的 SQL Server 外部。 若要取得 SQL Server 中的相同程式庫，您可以安裝 Microsoft R 用戶端或[Server 機器學習](r/create-a-standalone-r-server.md)。
+一般情況下，避免呼叫機器學習所使用的 SQL Server 上，從外部工具的程式庫。 如果您需要偵錯 R 或 Python 程式碼，則通常更容易，若要這樣做的 SQL Server 外部。 若要取得 SQL Server 中的相同程式庫，您可以安裝 Microsoft R 用戶端或[Server 機器學習](r/create-a-standalone-r-server.md)。
 
 ### <a name="sql-server-data-tools-does-not-support-permissions-required-by-external-scripts"></a>SQL Server Data Tools 中不支援外部指令碼所需的權限
 
 當您使用 Visual Studio 或 SQL Server Data Tools 來發行資料庫專案中，如果任何主體擁有外部指令碼執行的特定權限時，您可能會發生的錯誤，如下所示：
 
-"TSQL 模型： 反向工程資料庫時偵測到的錯誤。 權限無法辨識並不會匯入。 」
+> *TSQL 模型： 反向工程資料庫時偵測到的錯誤。權限無法辨識，因此不會匯入。*
 
 目前的 DACPAC 模型不支援 R 服務或機器學習服務，例如授與任何的外部指令碼或 EXECUTE ANY EXTERNAL SCRIPT 所使用的權限。 未來版本會修正此問題。
 
@@ -170,10 +170,7 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 
 如果 SQL Server 執行個體已安裝到非預設位置，例如外部`Program Files`資料夾中，當您嘗試執行安裝套件的指令碼時，會引發 ACCESS_DENIED 警告。 例如：
 
-```text
-In normalizePath(path.expand(path), winslash, mustWork) :
-  path[2]="E:/SQL17.data/MSSQL14.SQL17/MSSQL/ExternalLibraries/R/8/1": Access is denied
-```
+> *In normalizePath(path.expand(path), winslash, mustWork) : path[2]="~ExternalLibraries/R/8/1": Access is denied*
 
 R 函式會嘗試讀取此路徑，而如果會失敗，原因是內建使用者群組**SQLRUserGroup**，並沒有讀取權限。 就會引發此警告不會封鎖執行目前的 R 指令碼，但警告可能會重複發生，每當使用者執行任何其他的 R 指令碼。
 
@@ -183,13 +180,15 @@ R 函式會嘗試讀取此路徑，而如果會失敗，原因是內建使用者
 
 ### <a name="serialization-error-between-old-and-new-versions-of-revoscaler"></a>舊的和新版本之間的 RevoScaleR 序列化錯誤
 
-如果您將使用遠端 SQL Server 執行個體的序列化的格式的模型，您可能會收到錯誤:"memDecompress 時發生錯誤 (資料中，輸入 = 解壓縮) 發生內部錯誤-3 memDecompress(2)。 」
+當您將使用遠端 SQL Server 執行個體的序列化的格式的模型時，您可能會收到錯誤： 
+
+> *MemDecompress 時發生錯誤 (資料、 類型 = 解壓縮) 發生內部錯誤-3 memDecompress(2)。*
 
 如果您儲存使用的序列化函式中，新版本的模型，會引發這個錯誤[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)，但您還原序列化模型的 SQL Server 執行個體有較舊版本的 RevoScaleR Api，從 SQLServer 2017 CU2 或更早版本。
 
-因應措施，您可以升級使用較新版的 RevoScaleR 的 SQL Server 執行個體。 您也可以在您安裝 SQL Server 執行個體的用戶端上安裝相同版本的 RevoScaleR。 
+因應措施，您可以升級至 CU3 或更新版本的 SQL Server 2017 執行個體。
 
-如果 API 版本是一樣的或如果您要移動與較舊的序列化函式，可使用 API 的較新版本的伺服器上儲存的模型，則不會出現錯誤。
+如果 API 版本是一樣的或如果您要移動較舊的序列化函式來使用較新版的序列化 API 的伺服器與儲存的模型，則不會出現錯誤。
 
 換句話說，使用相同版本的 RevoScaleR 序列化和還原序列化作業。
 
@@ -215,7 +214,7 @@ SQL Server 2016 Service Pack 1 已修正這個問題。 我們建議您升級至
 
 例如，如果資料行 CRSDepTimeStr 還不是整數，則下列陳述式會產生錯誤︰
 
-```r
+```R
 data <- RxSqlServerData(
   sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM AirlineDemoSmall", 
   connectionString = connectionString, 
@@ -277,9 +276,9 @@ data <- RxSqlServerData(
 
 當您使用 rxDataStep 函式將結果寫入至資料表時，使用*varsToKeep*和*varsToDrop*是很方便的方式來指定要包含或排除作業的資料行。 不過，這些引數不支援的 SQL Server 資料來源。
 
-### <a name="limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>中的 SQL 資料類型的有限的支援`sp_execute_external_script`
+### <a name="limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>預存程序中的 SQL 資料類型的支援受到限制\_執行\_外部\_指令碼
 
-並非 SQL 支援的所有資料類型都能用在 R。因應措施是考慮將不支援的資料類型先轉換成支援的資料類型，再將資料傳遞至 sp_execute_external_script。
+並非所有支援的 SQL 資料類型可以使用因應措施，請考慮轉換不支援的資料類型，對支援的資料類型，再將資料傳遞至預存程序\_執行\_外部\_指令碼。
 
 如需詳細資訊，請參閱[R 程式庫和資料型別](r/r-libraries-and-data-types.md)。
 
@@ -305,11 +304,13 @@ data <- RxSqlServerData(
 
 如需有關隱含資料類型轉換的詳細資訊，請參閱[R 程式庫和資料型別](r/r-libraries-and-data-types.md)。
 
-### <a name="variable-scoping-error-when-you-use-the-transformfunc-parameter-the-sample-data-set-for-the-analysis-has-no-variables"></a>變數約制錯誤，當您使用 transformFunc 參數：*分析取樣資料集沒有任何變數*
+### <a name="variable-scoping-error-when-you-use-the-transformfunc-parameter"></a>變數約制錯誤，當您使用 transformFunc 參數時發生
 
 當您建立模型時，將資料轉換，您可以傳遞*transformFunc*等函數中的引數`rxLinmod`或`rxLogit`。 不過，巢狀的函數呼叫可能會導致發生約制錯誤，SQL Server 計算內容中，即使本機計算內容中呼叫運作正常。
 
-例如，假設您已定義兩個函式，`f`和`g`，在您的本機全域環境中和`g`呼叫`f`。 在涉及 `g`的分散式或遠端呼叫中，即使您已將 `g` 和 `f` 都傳遞給遠端呼叫，對 `f` 的呼叫也可能會因為找不到 `g` 而失敗。
+> *用於分析的範例資料集沒有任何變數*
+
+例如，假設您已定義兩個函式，`f`和`g`，在您的本機全域環境中和`g`呼叫`f`。 在分散式或遠端呼叫涉及`g`，呼叫`g`可能會因這個錯誤，因為`f`找不到，即使您傳遞兩`f`和`g`給遠端呼叫。
 
 若遇到此問題，您可以在 `f` 定義內嵌 `g`的定義以解決此問題， `g` 前的任何位置則會正常呼叫 `f`。
 
@@ -378,6 +379,16 @@ R --max-ppsize=500000
 + 使用 Windows 公用程式[Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx)建立永久連結的來源，將模型檔案對應到較短的路徑。 
 + 更新為最新版本更新服務。
 
+### <a name="error-when-saving-serialized-model-to-sql-server"></a>儲存時發生錯誤序列化到 SQL Server 的模型
+
+當您將模型傳遞至遠端 SQL Server 執行個體，並再試一次讀取二進位模型使用`rx_unserialize`函式在[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)，您可能會收到錯誤： 
+
+> *NameError： 未定義名稱 'rx_unserialize_model'*
+
+如果您儲存使用的序列化函式中，新版本的模型，但是您還原序列化之模型的 SQL Server 執行個體無法辨識序列化應用程式開發介面，會引發這個錯誤。
+
+若要解決此問題，SQL Server 2017 執行個體升級為 CU3 或更新版本。
+
 ### <a name="failure-to-initialize-a-varbinary-variable-causes-an-error-in-bxlserver"></a>無法初始化 varbinary 變數 BxlServer 會導致錯誤
 
 如果您執行 Python 程式碼中使用 SQL Server `sp_execute_external_script`，而且程式碼具有輸出類型 varbinary （max）、 varchar （max） 或類似類型的變數，變數必須初始化，或您的指令碼中設定。 否則，資料 exchange 元件 BxlServer，會引發錯誤並停止運作。
@@ -408,10 +419,10 @@ go
 
 從 SQL Server 2017 CU2，即使已成功執行 Python 程式碼，否則可能會出現下列訊息：
 
-```text
-STDERR message(s) from external script:  ~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger
-SyntaxWarning: telemetry_state is used prior to global declaration
-```
+> *來自外部指令碼的 STDERR 訊息：*
+> **~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
+> *SyntaxWarning: telemetry_state使用全域宣告之前*
+
 
 SQL Server 2017 累計更新 3 (CU3) 中已修正此問題。 
 
