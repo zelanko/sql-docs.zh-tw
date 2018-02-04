@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - smart_admin.fn_backup_db_config_TSQL
 - fn_backup_db_config
 - fn_backup_db_config_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - smart_admin.fn_backup_db_config
 - fn_backup_db_config
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a5c1d76f634a7d6304a17b5017d46c14022116d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d18a24bdf8021fd27df0ec51e4937e80ae9c0516
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (TRANSACT-SQL)
+# <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   將 0、1 或更多資料列和[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態設定一起傳回。 針對指定的資料庫傳回 1 個資料列，或是傳回執行個體上以[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定之所有資料庫的資訊。  
@@ -53,7 +55,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |db_name|SYSNAME|資料庫名稱。|  
 |db_guid|UNIQUEIDENTIFIER|唯一識別資料庫的識別碼。|  
@@ -62,7 +64,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |credential_name|SYSNAME|用來驗證儲存體帳戶之 SQL 認證的名稱。 NULL 值表示未設定 SQL 認證。|  
 |retention_days|INT|目前的保留期限 (以天為單位)。 NULL 值表示從未設定此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
 |is_smart_backup_enabled|INT|指出目前是否已啟用此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 值 1 表示目前已啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，值 0 表示已停用此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
-|storage_url|NVARCHAR （1024)|儲存體帳戶的 URL。|  
+|storage_url|NVARCHAR(1024)|儲存體帳戶的 URL。|  
 |Encryption_algorithm|NCHAR(20)|傳回加密備份時所使用的目前加密演算法。|  
 |Encryptor_type|NCHAR(15)|傳回加密程式設定：憑證或非對稱金鑰。|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|憑證或非對稱金鑰的名稱。|  

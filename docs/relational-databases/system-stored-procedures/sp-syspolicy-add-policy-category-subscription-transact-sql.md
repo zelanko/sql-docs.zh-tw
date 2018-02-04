@@ -1,5 +1,5 @@
 ---
-title: "sp_syspolicy_add_policy_category_subscription (TRANSACT-SQL) |Microsoft 文件"
+title: sp_syspolicy_add_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_add_policy_category_subscription
 - sp_syspolicy_add_policy_category_subscription_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_add_policy_category_subscription
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_add_policy_category_subscription
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec357296ce840bad84b6a0f1985858684f610a2b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bf76a1f42289d52919605c85733304ba58024ca1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +49,18 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@target_type=** ] **'***target_type***'**  
+ [ **@target_type=** ] **'***target_type***'**  
  這是類別目錄訂閱的目標類型。 *target_type*是**sysname**是必要的且必須設定為 'DATABASE'。  
   
- [  **@target_object=** ] **'***target_object***'**  
+ [ **@target_object=** ] **'***target_object***'**  
  會將訂閱類別目錄資料庫的名稱。 *target_object*是**sysname**，而且需要。  
   
- [  **@policy_category=** ] **'***policy_category***'**  
+ [ **@policy_category=** ] **'***policy_category***'**  
  是要訂閱的原則類別目錄的名稱。 *policy_category*是**sysname**，而且需要。  
   
  若要取得的值*policy_category*，查詢 msdb.dbo.syspolicy_policy_categories 系統檢視表。  
   
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
+ [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  這是類別目錄訂閱的識別碼。 *policy_category_subscription_id*是**int**，而且會當做 OUTPUT 傳回。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -82,9 +85,9 @@ EXEC msdb.dbo.sp_syspolicy_add_policy_category_subscription @target_type = N'DAT
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以原則為基礎的管理預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
- [sp_syspolicy_unsubscribe_from_policy_category &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
+ [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   
   

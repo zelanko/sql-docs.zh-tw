@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_log_stats (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_db_log_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - sys.dm_db_log_stats
 - sys.dm_db_log_stats_TSQL
 - dm_db_log_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_log_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_log_stats dynamic management function
 ms.assetid: 
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa7b169b3ff6887616346a8324854ab10aceab07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 281e3c2c74361698ddf67a4e9a607c559bd74ccb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (TRANSACT-SQL)   
+# <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 傳回資料庫的交易記錄檔的摘要層級的屬性和資訊。 使用此資訊來監視和診斷的交易記錄檔的健全狀況。   
@@ -53,10 +56,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="tables-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |資料庫識別碼 |  
-|recovery_model |**nvarchar （60)**   |   資料庫的復原模式。 可能的值包括： <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
+|recovery_model |**nvarchar(60)**   |   資料庫的復原模式。 可能的值包括： <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn    |**nvarchar(24)**   |   目前的開始時間[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)交易記錄檔中。|  
 |log_end_lsn    |**nvarchar(24)**   |   [記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)的交易記錄檔中的最後一筆記錄。|  
 |current_vlf_sequence_number    |**bigint** |   目前[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)執行的時間點序號。|  
@@ -65,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |total_log_size_mb  |**float**  |   交易記錄總大小 （mb）。 |  
 |active_vlf_count   |**bigint** |   作用中的總數[虛擬記錄檔 (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)交易記錄檔中。|  
 |active_log_size_mb |**float**  |   使用中交易記錄總大小 （mb）。|  
-|log_truncation_holdup_reason   |**nvarchar （60)**   |   記錄截斷扣留的原因。 值是與相同`log_reuse_wait_desc`資料行`sys.databases`。  (如需詳細說明這些值，請參閱[交易記錄](../../relational-databases/logs/the-transaction-log-sql-server.md))。 <br />可能的值包括： <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />複寫<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />其他暫時性 |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   記錄截斷扣留的原因。 值是與相同`log_reuse_wait_desc`資料行`sys.databases`。  (如需詳細說明這些值，請參閱[交易記錄](../../relational-databases/logs/the-transaction-log-sql-server.md))。 <br />可能的值包括： <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />複寫<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />其他暫時性 |  
 |log_backup_time    |**datetime**   |   上次交易記錄備份的時間。|   
 |log_backup_lsn |**nvarchar(24)**   |   上次備份交易記錄[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|   
 |log_since_last_log_backup_mb   |**float**  |   自上次備份交易記錄檔記錄檔大小 （mb）[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
@@ -100,7 +103,7 @@ FROM sys.databases AS s
 CROSS APPLY sys.dm_db_log_stats(s.database_id); 
 ```
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [動態管理檢視與函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [資料庫相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   

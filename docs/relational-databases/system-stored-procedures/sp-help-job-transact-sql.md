@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_job_TSQL
 - sp_help_job
-dev_langs: TSQL
-helpviewer_keywords: sp_help_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae0dc39a2fe09d6dd4441f378d225a0f4e6ddf67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9d91594f032409dbe2597dd859a549c17b795e04
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,45 +59,45 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 NULL。  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  作業的名稱。 *job_name*是**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
   
- [  **@job_aspect =**] **'***job_aspect***'**  
+ [ **@job_aspect =**] **'***job_aspect***'**  
  要顯示的作業屬性。 *job_aspect*是**varchar(9)**，預設值是 NULL，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**ALL**|作業各方面的資訊|  
-|**工作**|作業資訊|  
-|**排程**|排程資訊|  
-|**步驟**|作業步驟資訊|  
+|**JOB**|作業資訊|  
+|**SCHEDULES**|排程資訊|  
+|**STEPS**|作業步驟資訊|  
 |**目標**|目標資訊|  
   
- [  **@job_type =**] **'***job_type***'**  
+ [ **@job_type =**] **'***job_type***'**  
  這是要併入報表中的作業類型。 *job_type*是**varchar(12)**，預設值是 NULL。 *job_type*可以**本機**或**MULTI-SERVER**。  
   
- [  **@owner_login_name =**] **'***login_name***'**  
+ [ **@owner_login_name =**] **'***login_name***'**  
  作業擁有者的登入名稱。 *login_name*是**sysname**，預設值是 NULL。  
   
- [  **@subsystem =**] **'***子系統***'**  
+ [ **@subsystem =**] **'***subsystem***'**  
  子系統的名稱。 *子系統*是**nvarchar （40)**，預設值是 NULL。  
   
- [  **@category_name =**] **'***類別***'**  
+ [ **@category_name =**] **'***category***'**  
  類別目錄的名稱。 *類別*是**sysname**，預設值是 NULL。  
   
- [  **@enabled =**]*啟用*  
+ [ **@enabled =**] *enabled*  
  這是一個數字，指出所顯示的資訊是關於已啟用或停用之作業。 *啟用*是**tinyint**，預設值是 NULL。 **1**表示已啟用的工作和**0**表示已停用的作業。  
   
- [  **@execution_status =**]*狀態*  
+ [ **@execution_status =**] *status*  
  作業的執行狀態。 *狀態*是**int**，預設值是 NULL，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**0**|只傳回未閒置或暫停的作業。|  
 |**1**|執行中。|  
@@ -104,16 +107,16 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|已暫停。|  
 |**7**|正在執行完成動作。|  
   
- [  **@date_comparator =**] **'***date_comparison***'**  
+ [ **@date_comparator =**] **'***date_comparison***'**  
  要在比較中使用的比較運算子*date_created*和*date_modified*。 *date_comparison*是**char （1)**，它可以 = \<，或 >。  
   
- [  **@date_created =**] *date_created*  
+ [ **@date_created =**] *date_created*  
  作業的建立日期。 *date_created*是**datetime**，預設值是 NULL。  
   
- [  **@date_last_modified =**] *date_modified*  
+ [ **@date_last_modified =**] *date_modified*  
  上次修改作業的日期。 *date_modified*是**datetime**，預設值是 NULL。  
   
- [  **@description =**] **'***description_pattern***'**  
+ [ **@description =**] **'***description_pattern***'**  
  這是作業的描述。 *description_pattern*是**nvarchar （512)**，預設值是 NULL。 *description_pattern*可以包含 SQL Server 用於萬用字元模式比對。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -125,14 +128,14 @@ sp_help_job { [ @job_id = ] job_id
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作業的唯一識別碼。|  
-|**originating_server**|**nvarchar （30)**|作業的來源伺服器名稱。|  
+|**originating_server**|**nvarchar(30)**|作業的來源伺服器名稱。|  
 |**name**|**sysname**|作業名稱。|  
-|**已啟用**|**tinyint**|指出是否啟用作業，以便執行。|  
+|**enabled**|**tinyint**|指出是否啟用作業，以便執行。|  
 |**描述**|**nvarchar(512)**|作業的描述。|  
 |**start_step_id**|**int**|應該作為執行起點的作業步驟識別碼。|  
-|**類別目錄**|**sysname**|作業類別目錄。|  
+|**category**|**sysname**|作業類別目錄。|  
 |**擁有者**|**sysname**|作業擁有者。|  
-|**notify_level_eventlog**|**int**|**位元遮罩**指出在哪些情況之下通知事件應該在 Microsoft Windows 應用程式記錄檔記錄。 它可以是下列值之一：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗<br /><br /> **3** = 每當作業完成 （不論作業結果）|  
+|**notify_level_eventlog**|**int**|**位元遮罩**指出在哪些情況之下通知事件應該在 Microsoft Windows 應用程式記錄檔記錄。 它可以是下列值之一：<br /><br /> **0** = Never<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗<br /><br /> **3** = 每當作業完成 （不論作業結果）|  
 |**notify_level_email**|**int**|**位元遮罩**指出在哪些情況之下的通知電子郵件應該傳送作業完成時。 可能的值為一樣**notify_level_eventlog**。|  
 |**notify_level_netsend**|**int**|**位元遮罩**指出在哪些情況之下網路訊息應該傳送作業完成時。 可能的值為一樣**notify_level_eventlog**。|  
 |**notify_level_page**|**int**|**位元遮罩**指出在哪些情況之下一個頁面應該在作業完成時。 可能的值為一樣**notify_level_eventlog**。|  
@@ -155,7 +158,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_step**|**int**|作業所擁有的作業步驟數目。|  
 |**has_schedule**|**int**|作業所擁有的作業排程數目。|  
 |**has_target**|**int**|作業所擁有的目標伺服器數目。|  
-|**型別**|**int**|作業類型。<br /><br /> 1 = 本機作業。<br /><br /> **2** = 多伺服器作業。<br /><br /> **0** = 作業已沒有目標伺服器。|  
+|**type**|**int**|作業類型。<br /><br /> 1 = 本機作業。<br /><br /> **2** = 多伺服器作業。<br /><br /> **0** = 作業已沒有目標伺服器。|  
   
  如果*job_id*或*job_name*指定，則**sp_help_job**傳回這些作業步驟、 工作排程和作業目標伺服器的其他結果集。  
   
@@ -165,9 +168,9 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|步驟的唯一 (針對這項作業) 識別碼。|  
 |**step_name**|**sysname**|步驟的名稱。|  
-|**子系統**|**nvarchar （40)**|在其中執行步驟命令的子系統。|  
-|命令|**nvarchar(3200)**|要執行的命令。|  
-|**旗標**|**nvarchar(4000)**|**位元遮罩**來控制步驟行為的值。|  
+|**subsystem**|**nvarchar(40)**|在其中執行步驟命令的子系統。|  
+|**command**|**nvarchar(3200)**|要執行的命令。|  
+|**flags**|**nvarchar(4000)**|**位元遮罩**來控制步驟行為的值。|  
 |**cmdexec_success_code**|**int**|如**CmdExec**步驟中，這是成功命令的處理序結束碼。|  
 |**on_success_action**|**nvarchar(4000)**|作業成功時要執行什麼動作。<br /><br /> **1** = 成功而結束。<br /><br /> **2** = 失敗而結束。<br /><br /> **3** = 移至下一個步驟。<br /><br /> **4** = 移至步驟。|  
 |**on_success_step_id**|**int**|如果**on_success_action**是**4**，這表示要執行的下一個步驟。|  
@@ -193,13 +196,13 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|排程的識別碼 (跨越所有作業而為唯一)。|  
 |**schedule_name**|**sysname**|排程的名稱 (只對這項作業而為唯一)。|  
-|**已啟用**|**int**|排程是否為作用中 (**1**) 與否 (**0**)。|  
-|**freq_type**|**int**|指出作業執行時間的值：<br /><br /> **1** = 一次<br /><br /> **4** = 每天<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相對於**freq_interval**<br /><br /> **64** = 時執行**SQLServerAgent**服務啟動。|  
+|**enabled**|**int**|排程是否為作用中 (**1**) 與否 (**0**)。|  
+|**freq_type**|**int**|指出作業執行時間的值：<br /><br /> **1** = Once<br /><br /> **4** = 每天<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相對於**freq_interval**<br /><br /> **64** = 時執行**SQLServerAgent**服務啟動。|  
 |**freq_interval**|**int**|執行作業的天數。 值取決於值**freq_type**。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_type**|**Int**|單位**freq_subday_interval**。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_type**|**整數**|單位**freq_subday_interval**。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_interval**|**int**|數目**freq_subday_type**期間每次執行作業之間發生。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_relative_interval**|**int**|排程作業的次數**freq_interval**中每個月。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_type**|**int**|排程執行作業的間隔月數。|  
+|**freq_recurrence_factor**|**int**|排程執行作業的間隔月數。|  
 |**active_start_date**|**int**|開始執行作業的日期。|  
 |**active_end_date**|**int**|停止執行作業的日期。|  
 |**active_start_time**|**int**|在開始執行作業的時間**active_start_date。**|  
@@ -216,14 +219,14 @@ sp_help_job { [ @job_id = ] job_id
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|目標伺服器識別碼。|  
-|**伺服器名稱**|**nvarchar （30)**|目標伺服器的電腦名稱。|  
+|**server_name**|**nvarchar(30)**|目標伺服器的電腦名稱。|  
 |**enlist_date**|**datetime**|將目標伺服器編列到主要伺服器的日期。|  
 |**last_poll_date**|**datetime**|目標伺服器前次輪詢主要伺服器的日期。|  
 |**last_run_date**|**int**|在這部目標伺服器中上次開始執行作業的日期。|  
 |**last_run_time**|**int**|在這部目標伺服器中上次開始執行作業的時間。|  
 |**last_run_duration**|**int**|前次在這部目標伺服器執行作業的持續時間。|  
 |**last_run_outcome**|**tinyint**|前次在這部伺服器執行作業的結果：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = 取消<br /><br /> **5** = 未知|  
-|**last_outcome_message**|**nvarchar （1024)**|前次在這部目標伺服器執行作業的結果訊息。|  
+|**last_outcome_message**|**nvarchar(1024)**|前次在這部目標伺服器執行作業的結果訊息。|  
   
 ## <a name="permissions"></a>Permissions  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
@@ -279,10 +282,10 @@ EXEC dbo.sp_help_job
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

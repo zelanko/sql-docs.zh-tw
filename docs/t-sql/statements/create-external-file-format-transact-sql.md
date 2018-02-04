@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
 - CREATE_EXTERNAL_FILE_FORMAT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - External
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab389a5c811f915ff497057a5daf12374f1cedb7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8fd2fa33a8a9107c86cfda7e0a628ab282efa534
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>建立外部檔案格式 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -106,22 +108,22 @@ WITH (
  *file_format_name*  
  指定外部檔案格式的名稱。
   
- FORMAT_TYPE 指定外部資料的格式。
+ FORMAT_TYPE = [PARQUET |ORC |RCFILE |PARQUET] 指定外部資料的格式。
   
- PARQUET 指定 Parquet 格式。
+   -   PARQUET 指定 Parquet 格式。
   
- ORC  
- 指定最佳化的資料列單欄式 (ORC) 格式。 此選項需要 Hive 0.11 或外部的 Hadoop 叢集上更高版本。 在 Hadoop，ORC 檔案格式會提供更好的壓縮和效能比 RCFILE 檔案格式。
-  
- RCFILE (搭配 SERDE_METHOD = *SERDE_method*) 指定的單欄式記錄的檔案格式 (RcFile)。 此選項需要您指定的 hive 控制檔的序列化和還原序列化程式 (SerDe) 方法。 如果您使用 Hadoop Hive/HiveQL 查詢 RC 檔，這項需求都相同。 請注意，SerDe method 會區分大小寫。
-  
- 使用 PolyBase 支援兩種 SerDe 方法指定 RCFile 範例。
-  
--   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
-  
--   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
-  
- DELIMITEDTEXT 指定資料行分隔符號與文字格式也稱為欄位結束字元。
+   -   ORC  
+   指定最佳化的資料列單欄式 (ORC) 格式。 此選項需要 Hive 0.11 或外部的 Hadoop 叢集上更高版本。 在 Hadoop，ORC 檔案格式會提供更好的壓縮和效能比 RCFILE 檔案格式。
+
+   -   RCFILE (搭配 SERDE_METHOD = *SERDE_method*) 指定的單欄式記錄的檔案格式 (RcFile)。 此選項需要您指定的 hive 控制檔的序列化和還原序列化程式 (SerDe) 方法。 如果您使用 Hadoop Hive/HiveQL 查詢 RC 檔，這項需求都相同。 請注意，SerDe method 會區分大小寫。
+
+   使用 PolyBase 支援兩種 SerDe 方法指定 RCFile 範例。
+
+    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+
+    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+
+   -   DELIMITEDTEXT 指定資料行分隔符號與文字格式也稱為欄位結束字元。
   
  FIELD_TERMINATOR = *field_terminator*僅適用於分隔的文字檔。 欄位結束字元文字分隔檔案中指定一個或多個標記的每個欄位 （資料行） 結尾的字元。 預設值是管道字元 ꞌ | ꞌ。 如需保證支援，我們建議使用一或多個 ascii 字元。
   
@@ -152,7 +154,7 @@ WITH (
   
 -   STRING_DELIMITER = '0x7E0x7E'-兩個波狀符號 (例如，~ ~)
   
- 日期\_格式 = *fieldinfo*指定分隔的文字檔案中可能會出現的所有日期和時間資料的自訂格式。 如果原始程式檔會使用預設的日期時間格式，不需要這個選項。 只有一個自訂的日期時間格式允許每個檔案。 您無法指定每個檔案的多個自訂日期時間格式。 不過，您可以使用多個日期時間格式，如果每個外部資料表定義中其各自的資料類型的預設格式。
+日期\_格式 = *fieldinfo*指定分隔的文字檔案中可能會出現的所有日期和時間資料的自訂格式。 如果原始程式檔會使用預設的日期時間格式，不需要這個選項。 只有一個自訂的日期時間格式允許每個檔案。 您無法指定每個檔案的多個自訂日期時間格式。 不過，您可以使用多個日期時間格式，如果每個外部資料表定義中其各自的資料類型的預設格式。
 
 PolyBase 只會使用自訂日期格式匯入資料。 它不使用自訂格式以將資料寫入至外部檔案。
 

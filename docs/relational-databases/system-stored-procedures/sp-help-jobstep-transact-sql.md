@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobstep_TSQL
 - sp_help_jobstep
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobstep
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 316436c8c2607ef6c759efaa444d7f78e2de6834
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bb316ee70ad1cf1f98898fd08edbb7cfb9622f56
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +49,22 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@job_id =**] **'***job_id***'**  
+ [ **@job_id =**] **'***job_id***'**  
  要傳回作業資訊的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 NULL。  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  作業的名稱。 *job_name*是**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
   
- [  **@step_id =**] *step_id*  
+ [ **@step_id =**] *step_id*  
  這是作業中的步驟識別碼。 如果沒有包含這個識別碼，便會包含作業中的所有步驟。 *step_id*是**int**，預設值是 NULL。  
   
- [  **@step_name =**] **'***step_name***'**  
+ [ **@step_name =**] **'***step_name***'**  
  這是作業中的步驟名稱。 *step_name*是**sysname**，預設值是 NULL。  
   
- [  **@suffix =**]*尾碼*  
+ [ **@suffix =**] *suffix*  
  旗標，指出是否要將文字描述附加至**旗標**輸出中的資料行。 *後置詞*是**元**，預設值是**0**。 如果*尾碼*是**1**，就會附加描述。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -73,9 +76,9 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|步驟的唯一識別碼。|  
 |**step_name**|**sysname**|作業中的步驟名稱。|  
-|**子系統**|**nvarchar （40)**|在其中執行步驟命令的子系統。|  
-|命令|**nvarchar(max)**|在步驟中執行的命令。|  
-|**旗標**|**int**|這是一個位元遮罩，用來控制步驟行為的值。|  
+|**subsystem**|**nvarchar(40)**|在其中執行步驟命令的子系統。|  
+|**command**|**nvarchar(max)**|在步驟中執行的命令。|  
+|**flags**|**int**|這是一個位元遮罩，用來控制步驟行為的值。|  
 |**cmdexec_success_code**|**int**|如**CmdExec**步驟中，這是成功命令的處理序結束碼。|  
 |**on_success_action**|**tinyint**|步驟成功時所採取的動作：<br /><br /> **1** = 結束作業報告成功。<br /><br /> **2** = 結束作業報告失敗。<br /><br /> **3** = 移至下一個步驟。<br /><br /> **4** = 移至步驟。|  
 |**on_success_step_id**|**int**|如果**on_success_action**是 4，這表示要執行的下一個步驟。|  
@@ -88,7 +91,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_interval**|**int**|任何重試的間隔 (以分鐘為單位)。|  
 |**os_run_priority**|**int**|已保留。|  
 |**output_file_name**|**nvarchar(200)**|應該寫入命令輸出的檔案 ([!INCLUDE[tsql](../../includes/tsql-md.md)]， **CmdExec**，和**PowerShell**只有步驟)。|  
-|**last_run_outcome**|**int**|上次執行步驟的結果：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 重試<br /><br /> **3** = 取消<br /><br /> **5** = 未知|  
+|**last_run_outcome**|**int**|上次執行步驟的結果：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = Retry<br /><br /> **3** = 取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|步驟上次執行的持續時間 (以秒為單位)。|  
 |**last_run_retries**|**int**|上次執行步驟時的命令重試次數。|  
 |**last_run_date**|**int**|上次開始執行步驟的日期。|  
@@ -138,11 +141,11 @@ EXEC dbo.sp_help_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sp_add_jobstep &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_jobstep &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

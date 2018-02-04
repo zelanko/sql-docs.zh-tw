@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_xe_packages (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_xe_packages (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_xe_packages_TSQL
 - dm_xe_packages
 - sys.dm_xe_packages
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d44f313bcb4f199d43305cd9752dda71db5da980
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d33b1703f517fbedb746d1a0185e960764603ff5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +40,15 @@ ms.lasthandoff: 11/17/2017
   列出已向擴充的事件引擎註冊的所有封裝。  
   
  
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar （60)**|封裝的名稱。 描述會從封裝本身公開。 不可為 Null。|  
+|name|**nvarchar(60)**|封裝的名稱。 描述會從封裝本身公開。 不可為 Null。|  
 |guid|**uniqueidentifier**|識別此封裝的 GUID。 不可為 Null。|  
 |description|**nvarchar(256)**|封裝的描述。 descriptionis 由封裝作者所設定，並不是可為 null。|  
 |capabilities|**int**|描述這個封裝之功能的點陣圖。 可為 Null。|  
 |capabilities_desc|**nvarchar(256)**|此封裝所有可能之功能的清單。 可為 Null。|  
 |module_guid|**uniqueidentifier**|公開此封裝之模組的 GUID。 不可為 Null。|  
-|module_address|**varbinary （8)**|載入包含封裝之模組的基底位址。 單一模組可能會公開數個封裝。 不可為 Null。|  
+|module_address|**varbinary(8)**|載入包含封裝之模組的基底位址。 單一模組可能會公開數個封裝。 不可為 Null。|  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  

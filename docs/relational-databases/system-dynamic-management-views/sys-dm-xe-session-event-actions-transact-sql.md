@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_xe_session_event_actions (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_xe_session_event_actions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_xe_session_event_actions_TSQL
 - dm_xe_session_event_actions
 - sys.dm_xe_session_event_actions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - extended events [SQL Server], views
 - sys.dm_xe_session_event_actions dynamic management view
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 840e7ead2035b45d37ca87ec8acc9a5b1c2461eb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d5e342265fe96a892983af51e6efc119a5bac914
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxesessioneventactions-transact-sql"></a>sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +41,10 @@ ms.lasthandoff: 11/27/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary （8)**|事件工作階段的記憶體位址。 不可為 Null。|  
-|action_name|**nvarchar （60)**|動作的名稱。 不可為 Null。|  
+|event_session_address|**varbinary(8)**|事件工作階段的記憶體位址。 不可為 Null。|  
+|action_name|**nvarchar(60)**|動作的名稱。 不可為 Null。|  
 |action_package_guid|**uniqueidentifier**|包含此動作之封裝的 GUID。 不可為 Null。|  
-|event_name|**nvarchar （60)**|此動作繫結之事件的名稱。 不可為 Null。|  
+|event_name|**nvarchar(60)**|此動作繫結之事件的名稱。 不可為 Null。|  
 |event_package_guid|**uniqueidentifier**|包含此事件之封裝的 GUID。 不可為 Null。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -62,7 +64,7 @@ ms.lasthandoff: 11/27/2017
 |---------------------|  
 |已將「關聯性基數」資料表更新成正確的動態管理檢視名稱和資料行名稱。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_notify_operator_TSQL
 - sp_notify_operator
-dev_langs: TSQL
-helpviewer_keywords: sp_notify_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_notify_operator
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ff7b50b5eef5d5ff753039bf4dd7ab501160eda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7683e0150c41810c14981e0c6b6364c59ae19ae3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,27 +54,27 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@profile_name=** ] **'***profilename***'**  
+ [ **@profile_name=** ] **'***profilename***'**  
  用來傳送訊息的 Database Mail 設定檔名稱。 *profilename*是**nvarchar （128)**。 如果*profilename*未指定，會使用預設 Database Mail 設定檔。  
   
- [  **@id=** ]*識別碼*  
+ [ **@id=** ] *id*  
  這是訊息所要送往的操作員識別碼。 *識別碼*是**int**，預設值是 NULL。 其中一個*識別碼*或*名稱*必須指定。  
   
- [  **@name=** ] **'***名稱***'**  
+ [ **@name=** ] **'***name***'**  
  這是訊息所要送往的操作員名稱。 *名稱*是**nvarchar （128)**，預設值是 NULL。 其中一個*識別碼*或*名稱*必須指定。  
   
 > **注意：**電子郵件地址必須定義運算子，才能接收訊息。  
   
- [  **@subject=** ] **'***主旨***'**  
+ [ **@subject=** ] **'***subject***'**  
  電子郵件訊息的主旨。 *主旨*是**nvarchar （256)**沒有預設值。  
   
- [  **@body=** ] **'***訊息***'**  
+ [ **@body=** ] **'***message***'**  
  電子郵件的本文。 *訊息*是**nvarchar （max)**沒有預設值。  
   
- [  **@file_attachments=** ] **'***附件***'**  
+ [ **@file_attachments=** ] **'***attachment***'**  
  這是要附加至電子郵件訊息的檔案名稱。 *附件*是**nvarchar （512)**，沒有預設值。  
   
- [  **@mail_database=** ] **'***mail_host_database***'**  
+ [ **@mail_database=** ] **'***mail_host_database***'**  
  指定郵件主機資料庫的名稱。 *mail_host_database*是**nvarchar （128)**。 如果沒有*mail_host_database*指定，則**msdb**預設會使用資料庫。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -110,8 +113,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_operator &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_help_operator &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_delete_operator &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
   
   

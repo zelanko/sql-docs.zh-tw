@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
 - sp_syscollector_update_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90f034f59bc7430e059fb276ec0111a4af2f807c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9863651eca95bcd4eafd263b205ddeef5ba4e438
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,19 +62,19 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@collection_set_id =** ] *collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  這是收集組的唯一本機識別碼。 *collection_set_id*是**int**而且必須具有值，如果*名稱*是 NULL。  
   
- [  **@name =** ] '*名稱*'  
+ [ **@name =** ] '*name*'  
  這是收集組的名稱。 *名稱*是**sysname**而且必須具有值，如果*collection_set_id*是 NULL。  
   
- [  **@new_name =** ] '*new_name*'  
+ [ **@new_name =** ] '*new_name*'  
  這是收集組的新名稱。 *new_name*是**sysname**，而且如果使用，不能是空字串。 *new_name*必須是唯一的。 如需目前的收集組名稱清單，請查詢 syscollector_collection_sets 系統檢視表。  
   
- [  **@target =** ] '*目標*'  
+ [ **@target =** ] '*target*'  
  保留供日後使用。  
   
- [  **@collection_mode =** ] *collection_mode*  
+ [ **@collection_mode =** ] *collection_mode*  
  這是要使用的資料收集類型。 *collection_mode*是**smallint** ，而且可以有下列值之一：  
   
  0 - 快取模式。 資料收集和上傳會依照不同的排程。 指定連續收集的快取模式。  
@@ -81,26 +83,26 @@ sp_syscollector_update_collection_set
   
  如果從非快取模式變更為快取模式 (0)，您也必須指定*schedule_uid*或*schedule_name*。  
   
- [  **@days_until_expiration=** ] *days_until_expiration*  
+ [ **@days_until_expiration=** ] *days_until_expiration*  
  這是已收集的資料儲存在管理資料倉儲中的天數。 *days_until_expiration*是**smallint**。 *days_until_expiration*必須是 0 或正整數。  
   
- [  **@proxy_id =** ] *proxy_id*  
+ [ **@proxy_id =** ] *proxy_id*  
  這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶的唯一識別碼。 *proxy_id*是**int**。  
   
- [  **@proxy_name =** ] '*proxy_name*'  
+ [ **@proxy_name =** ] '*proxy_name*'  
  這是 Proxy 的名稱。 *proxy_name*是**sysname**而且可為 null。  
   
- [  **@schedule_uid**  =] '*schedule_uid*'  
+ [ **@schedule_uid** = ] '*schedule_uid*'  
  這是指向排程的 GUID。 *schedule_uid*是**uniqueidentifier**。  
   
  若要取得*schedule_uid*，查詢 sysschedules 系統資料表。  
   
  當*collection_mode*設為 0， *schedule_uid*或*schedule_name*必須指定。 當*collection_mode*設為 1， *schedule_uid*或*schedule_name*如果指定，會被忽略。  
   
- [  **@schedule_name =** ] '*schedule_name*'  
+ [ **@schedule_name =** ] '*schedule_name*'  
  這是排程的名稱。 *schedule_name*是**sysname**而且可為 null。 如果指定， *schedule_uid*必須是 NULL。 若要取得*schedule_name*，查詢 sysschedules 系統資料表。  
   
- [  **@logging_level =** ] *logging_level*  
+ [ **@logging_level =** ] *logging_level*  
  這是記錄層級。 *logging_level*是**smallint**具有下列值之一：  
   
  0 - 記錄執行資訊和追蹤的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 事件：  
@@ -117,13 +119,13 @@ sp_syscollector_update_collection_set
   
 -   持續執行的收集進度  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的警告事件  
+-   警告事件 [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  2 - 層級 1 記錄和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的詳細事件資訊。  
   
  預設值為*logging_level*為 1。  
   
- [  **@description =** ] '*描述*'  
+ [ **@description =** ] '*description*'  
  這是收集組的描述。 *描述*是**nvarchar （4000)**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -195,10 +197,10 @@ EXEC dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
  [dbo.sysjobschedules &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

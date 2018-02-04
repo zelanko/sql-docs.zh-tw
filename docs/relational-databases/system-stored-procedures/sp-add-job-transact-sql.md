@@ -1,5 +1,5 @@
 ---
-title: "sp_add_job (TRANSACT-SQL) |Microsoft 文件"
+title: sp_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_job_TSQL
 - sp_add_job
-dev_langs: TSQL
-helpviewer_keywords: sp_add_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 330ad1186afa47b55ed6365be76fe96d1878e980
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,62 +61,62 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  作業的名稱。 名稱必須是唯一的而且不能包含百分比 (**%**) 字元。 *job_name*是**nvarchar （128)**，沒有預設值。  
   
- [  **@enabled =** ]*啟用*  
+ [ **@enabled =** ] *enabled*  
  指出所加入作業的狀態。 *啟用*是**tinyint**，預設值是 1 （已啟用）。 如果**0**，作業未啟用，而且不會依據其排程執行; 不過，它可以手動執行。  
   
- [  **@description =** ] **'***描述***'**  
+ [ **@description =** ] **'***description***'**  
  這是作業的描述。 *描述*是**nvarchar （512)**，預設值是 NULL。 如果*描述*已省略，則會使用 「 沒有描述 」。  
   
- [  **@start_step_id =** ] *step_id*  
+ [ **@start_step_id =** ] *step_id*  
  作業所要執行之第一個步驟的識別碼。 *step_id*是**int**，預設值是 1。  
   
- [  **@category_name =** ] **'***類別***'**  
+ [ **@category_name =** ] **'***category***'**  
  作業的類別目錄。 *類別*是**sysname**，預設值是 NULL。  
   
- [  **@category_id =** ] *category_id*  
+ [ **@category_id =** ] *category_id*  
  用來指定作業類別目錄的不限特定語言機制。 *category_id*是**int**，預設值是 NULL。  
   
- [  **@owner_login_name =** ] **'***登入***'**  
+ [ **@owner_login_name =** ] **'***login***'**  
  擁有作業的登入名稱。 *登入*是**sysname**，預設值是 NULL，它解譯為目前的登入名稱。 只有成員**sysadmin**固定的伺服器角色可以設定或變更的值 **@owner_login_name** 。 如果使用者不是成員的**sysadmin**角色設定，或變更的值 **@owner_login_name** ，此預存程序的執行會失敗，且會傳回錯誤。  
   
- [  **@notify_level_eventlog =** ] *eventlog_level*  
+ [ **@notify_level_eventlog =** ] *eventlog_level*  
  這個值表示針對這項作業，何時將項目放在 Microsoft Windows 應用程式記錄中。 *eventlog_level*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**0**|永不|  
 |**1**|成功時|  
 |**2** (預設值)|失敗時|  
 |**3**|永遠|  
   
- [  **@notify_level_email =** ] *email_level*  
+ [ **@notify_level_email =** ] *email_level*  
  這個值表示在這項作業完成時，何時傳送電子郵件。 *email_level*是**int**，預設值是**0**，表示永不。 *email_level*使用相同的值*eventlog_level*。  
   
- [  **@notify_level_netsend =** ] *netsend_level*  
+ [ **@notify_level_netsend =** ] *netsend_level*  
  這個值表示在這項作業完成時，何時傳送網路訊息。 *netsend_level*是**int**，預設值是**0**，表示永不。 *netsend_level*使用相同的值*eventlog_level*。  
   
- [  **@notify_level_page =** ] *page_level*  
+ [ **@notify_level_page =** ] *page_level*  
  這個值表示在這項作業完成時，何時傳送頁面。 *page_level*是**int**，預設值是**0**，表示永不。 *page_level*使用相同的值*eventlog_level*。  
   
- [  **@notify_email_operator_name =** ] **'***email_name***'**  
+ [ **@notify_email_operator_name =** ] **'***email_name***'**  
  當傳送電子郵件的人員的電子郵件名稱*email_level*為止。 *email_name*是**sysname**，預設值是 NULL。  
   
- [  **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
+ [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
  這項作業完成時，網路訊息所要傳送的操作員名稱。 *netsend_name*是**sysname**，預設值是 NULL。  
   
- [  **@notify_page_operator_name =** ] **'***page_name***'**  
+ [ **@notify_page_operator_name =** ] **'***page_name***'**  
  這項作業完成時，所要呼叫的人員名稱。 *page_name*是**sysname**，預設值是 NULL。  
   
- [  **@delete_level =** ] *delete_level*  
+ [ **@delete_level =** ] *delete_level*  
  這是指出何時要刪除作業的值。 *delete_value*是**int**，預設值是 0，表示永不刪除。 *delete_level*使用相同的值*eventlog_level*。  
   
 > [!NOTE]  
 >  當*delete_level*是**3**工作執行一次，不論任何排程工作所定義的。 此外，如果作業刪除作業本身，也會同時刪除作業的所有記錄。  
   
- [  **@job_id =** ] *job_id***輸出**  
+ [ **@job_id =** ] *job_id***OUTPUT**  
  作業建立成功時，指派給作業的作業識別碼。 *job_id*是 output 變數的型別**uniqueidentifier**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -184,17 +187,17 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_add_jobstep &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_add_jobserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_apply_job_to_targets &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_delete_jobserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_remove_job_from_targets &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
- [sp_help_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobstep &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

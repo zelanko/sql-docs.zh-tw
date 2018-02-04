@@ -1,5 +1,5 @@
 ---
-title: "sp_rxPredict |Microsoft 文件"
+title: sp_rxPredict | Microsoft Docs
 ms.custom: 
 ms.date: 07/14/2017
 ms.prod: sql-non-specified
@@ -14,17 +14,19 @@ ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
 - sp_rxPredict_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_rxPredict procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_rxPredict procedure
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2bf07247f63962e5692325e2e7518a78445f0a8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f4e397cf366cc0f12b738a369556e91de3e83878
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +51,7 @@ sp_rxPredict  ( @model, @input )
 
 預先定型的模型中支援的格式。 
 
-**輸入**
+**input**
 
 有效的 SQL 查詢
 

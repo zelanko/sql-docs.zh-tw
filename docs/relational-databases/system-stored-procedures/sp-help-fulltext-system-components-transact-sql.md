@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_components_TSQL
 - sp_help_fulltext_components
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_system_components
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54f529fcb0130479ef30af742fe58fd05b4bc4d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8bb8278204aa3b710875d3bab91a41abfe43a553
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,10 +51,10 @@ sp_help_fulltext_system_components
  'all'  
  傳回所有全文檢索元件的資訊。  
   
- [  **@component_type=** ] *component_type*  
+ [ **@component_type=** ] *component_type*  
  指定元件的類型。 *component_type*可以是下列其中之一：  
   
--   **斷詞工具**  
+-   **wordbreaker**  
   
 -   **filter**  
   
@@ -61,7 +64,7 @@ sp_help_fulltext_system_components
   
  如果指定完整路徑，則*param*也必須指定具有完整的路徑元件 DLL，或在傳回錯誤訊息。  
   
- [  **@param=** ] *param*  
+ [ **@param=** ] *param*  
  這是下列其中一項 (依元件類型而定)：地區設定識別碼 (LCID)、具有 "." 前置詞的副檔名、識別通訊協定處理常式的完整元件名稱，或元件 DLL 的完整路徑。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -76,8 +79,8 @@ sp_help_fulltext_system_components
 |**componentname**|**sysname**|元件的名稱。|  
 |**clsid**|**uniqueidentifier**|元件的類別識別碼。|  
 |**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> NULL = 呼叫端不是成員的**serveradmin**固定的伺服器角色。|  
-|**version**|**nvarchar （30)**|元件的版本。|  
-|**製造商**|**sysname**|元件的製造商名稱。|  
+|**version**|**nvarchar(30)**|元件的版本。|  
+|**manufacturer**|**sysname**|元件的製造商名稱。|  
   
  才一個，會傳回下列結果集或一個以上全文檢索目錄存在，它使用*component_type*。  
   
@@ -140,7 +143,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [檢視或變更已註冊的篩選與斷詞工具](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)   

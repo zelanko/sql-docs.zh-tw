@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_columns
 - sp_help_fulltext_columns_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_columns
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_columns
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cf36ec0c077a41ec3686b2fe33e6bda7adbab7e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 74905280aa6602c4ff2826d564b76ca8769e2dfc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   傳回指定給全文檢索索引的資料行。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)目錄檢視。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)目錄檢視。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,10 +50,10 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@table_name=**] **'***table_name***'**  
+ [ **@table_name=**] **'***table_name***'**  
  這是所要求之全文檢索索引資訊的一或兩部分資料表名稱。 *table_name*是**nvarchar （517)**，預設值是 NULL。 如果*table_name*省略，每個全文檢索索引的資料表擷取全文檢索索引資料行資訊。  
   
- [  **@column_name=**] **'***column_name***'**  
+ [ **@column_name=**] **'***column_name***'**  
  這是所要求之全文檢索索引中繼資料的資料行名稱。 *column_name*是**sysname**，預設值是 NULL。 如果*column_name*省略或為 NULL，就會傳回每個全文檢索索引資料行的全文檢索資料行資訊*table_name*。 如果*table_name*也省略或為 NULL，就會傳回每個全文檢索索引資料行在資料庫中的所有資料表的全文檢索索引資料行資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -82,10 +85,10 @@ EXEC sp_help_fulltext_columns 'Production.Document';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [COLUMNPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [sp_fulltext_column &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
- [sp_help_fulltext_columns_cursor &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [sp_fulltext_column &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
+ [sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

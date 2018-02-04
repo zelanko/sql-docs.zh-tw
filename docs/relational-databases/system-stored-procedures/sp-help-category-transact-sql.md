@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efec4c1ef04ef95e74ef13479b5f51cfe2d84bdb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: debc3b8cef2aeb0a9f4893ff5e9287a2a5fdd016
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,28 +49,28 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@class=**] **'***類別***'**  
+ [ **@class=**] **'***class***'**  
  這是要求之資訊的相關類別。 *類別*是**varchar(8)**，預設值是**作業**。 *類別*可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**工作**|提供作業類別目錄的相關資訊。|  
+|**JOB**|提供作業類別目錄的相關資訊。|  
 |**警示**|提供警示類別目錄的相關資訊。|  
 |**運算子**|提供操作員類別目錄的相關資訊。|  
   
- [  **@type=** ] **'***類型***'**  
+ [ **@type=** ] **'***type***'**  
  這是要求之資訊所屬的類別目錄類型。 *型別*是**varchar(12)**，預設值是 NULL，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**本機**|本機作業類別目錄。|  
 |**多重-伺服器**|多伺服器作業類別目錄。|  
 |**NONE**|類別以外的類別**作業**。|  
   
- [  **@name=** ] **'***名稱***'**  
+ [ **@name=** ] **'***name***'**  
  這是要求之資訊所屬的類別目錄名稱。 *名稱*是**sysname**，預設值是 NULL。  
   
- [  **@suffix=** ]*尾碼*  
+ [ **@suffix=** ] *suffix*  
  指定是否**category_type**結果集資料行是識別碼或名稱。 *後置詞*是**元**，預設值是**0**。 **1**顯示**category_type**做為名稱，和**0**顯示為識別碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -79,7 +82,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|類別目錄識別碼|  
-|**category_type**|**tinyint**|類別目錄類型：<br /><br /> **1** = 本機<br /><br /> **2** = 多伺服器<br /><br /> **3** = 無|  
+|**category_type**|**tinyint**|類別目錄類型：<br /><br /> **1** = Local<br /><br /> **2** = 多伺服器<br /><br /> **3** = None|  
 |**name**|**sysname**|類別目錄名稱|  
   
  當 **@suffix** 是**1**， **sp_help_category**傳回下列結果集：  
@@ -133,10 +136,10 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_add_category &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

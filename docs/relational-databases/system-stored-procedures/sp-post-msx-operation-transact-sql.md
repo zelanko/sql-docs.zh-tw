@@ -1,5 +1,5 @@
 ---
-title: "sp_post_msx_operation (TRANSACT-SQL) |Microsoft 文件"
+title: sp_post_msx_operation (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_post_msx_operation
 - sp_post_msx_operation_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_post_msx_operation
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_post_msx_operation
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f24eec6894314859df8d8d8343e0095448d2517c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b54a5b8dbf5539adb2d87ef6a095f4f78f767aff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,28 +52,28 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@operation =**] **'***作業***'**  
+ [ **@operation =**] **'***operation***'**  
  所公佈之動作的動作類型。 *作業*是**varchar(64)**，沒有預設值。 有效的動作會隨著*object_type*。  
   
-|物件類型|作業|  
+|物件類型|運算|  
 |-----------------|---------------|  
-|**工作**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
-|**伺服器**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**排程**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
+|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
+|**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
+|**SCHEDULE**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
- [  **@object_type =**] **'***物件***'**  
+ [ **@object_type =**] **'***object***'**  
  公佈的動作所針對的物件類型。 有效的類型為**作業**，**伺服器**，和**排程**。 *物件*是**varchar(64)**，預設值是**作業**。  
   
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  套用動作之作業的作業識別碼。 *job_id*是**uniqueidentifier**，沒有預設值。 **0x00**表示所有作業。 如果*物件*是**伺服器**，然後*job_id*並非必要。  
   
- [  **@specific_target_server =**] **'***target_server***'**  
+ [ **@specific_target_server =**] **'***target_server***'**  
  指定動作所適用的目標伺服器名稱。 如果*job_id*指定，但*target_server*未指定，張貼作業的所有作業伺服器的作業。 *target_server*是**nvarchar （30)**，預設值是 NULL。  
   
- [  **@value =**]*值*  
+ [ **@value =**] *value*  
  輪詢間隔 (以秒為單位)。 *value* 是 **int**，預設值是 NULL。 指定此參數只有當*作業*是**SET-POLL**。  
   
- [  **@schedule_uid=** ] *schedule_uid*  
+ [ **@schedule_uid=** ] *schedule_uid*  
  套用動作之排程的唯一識別碼。 *schedule_uid*是**uniqueidentifier**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -91,16 +94,16 @@ sp_post_msx_operation
 ## <a name="permissions"></a>Permissions  
  若要執行這個預存程序，使用者必須授與**sysadmin**固定的伺服器角色。  
   
-## <a name="see-also"></a>請參閱  
- [sp_add_jobserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_delete_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_delete_jobserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_delete_targetserver 來 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
- [sp_resync_targetserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
- [sp_start_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [sp_stop_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [sp_update_operator &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_delete_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
+ [sp_resync_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
+ [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
+ [sp_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

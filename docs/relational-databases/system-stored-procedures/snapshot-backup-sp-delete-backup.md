@@ -8,21 +8,23 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1dc3339403f7f39fef0e8fee4e3dbb05ea0a94b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 46bffa49e3d1586fe0639758b8d38c340f8933ea
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="snapshot-backup---spdeletebackup"></a>快照集備份-sp_delete_backup
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +43,17 @@ sys.sp_delete_backup
 ```  
   
 ## <a name="arguments"></a>引數  
- *[ @backup_url =] backup_meta_file_url*  
+ *[ @backup_url = ] backup_meta_file_url*  
  這會刪除所有快照集包含指定的備份組包括備份檔案本身要刪除、 備份的 URL。  
   
- *[ @db_name =] 資料庫名稱*  
+ *[ @db_name = ] database_name*  
  包含要刪除的快照集之資料庫的名稱。 當提供資料庫名稱時，系統會確認提供的備份 URL 是指定之資料庫的備份 URL，並使用[sp_delete_backup_file_snapshot &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)刪除每個快照集。 如果沒有資料庫提供名稱，此資料庫的檢查不會執行。  
   
 ## <a name="permissions"></a>Permissions  
  需要 ALTER ANY DATABASE 權限或 ALTER 權限指定的資料庫。  
   
-## <a name="see-also"></a>請參閱  
- [sys.fn_db_backup_file_snapshots &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
  [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)  
   
   

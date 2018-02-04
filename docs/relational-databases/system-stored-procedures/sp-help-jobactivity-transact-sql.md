@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobactivity_TSQL
 - sp_help_jobactivity
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobactivity
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cb0d3d344b97f0ce14e3bd156b5915a1721c8f4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a4b1b81a94f272ffed56c26f4ede9080f80527c7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 NULL。  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  作業的名稱。 *job_name*是**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
   
- [  **@session_id**  =] *session_id*  
+ [ **@session_id** = ] *session_id*  
  這是要報告其相關資訊的工作階段識別碼。 *session_id*是**int**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -76,7 +79,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**stop_execution_date**|**datetime**|作業停止執行的時間。|  
 |**next_scheduled_run_date**|**datetime**|排程下次執行作業的時間。|  
 |**job_history_id**|**int**|作業記錄資料表中之作業記錄的識別碼。|  
-|**訊息**|**nvarchar （1024)**|上次執行作業期間所產生的訊息。|  
+|**message**|**nvarchar(1024)**|上次執行作業期間所產生的訊息。|  
 |**run_status**|**int**|上次執行作業所傳回的狀態：<br /><br /> **0** = 失敗的錯誤<br /><br /> **1** = 成功<br /><br /> **3** = 取消<br /><br /> **5** = 未知的狀態|  
 |**operator_id_emailed**|**int**|作業完成時，收到電子郵件通知的操作員識別碼。|  
 |**operator_id_netsent**|**int**|通知的操作員識別碼**網路傳送**在作業完成。|  
@@ -85,7 +88,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>備註  
  這個程序提供作業目前狀態的快照集。 傳回的結果代表處理要求時的資訊。  
   
- 每當代理程式服務啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 都會建立一個工作階段識別碼。 工作階段識別碼儲存在資料表**msdb.dbo.syssessions**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式會建立每次啟動代理程式服務的工作階段識別碼。 工作階段識別碼儲存在資料表**msdb.dbo.syssessions**。  
   
  若未*session_id*提供，列出最新的工作階段的相關資訊。  
   
@@ -115,7 +118,7 @@ EXEC dbo.sp_help_jobactivity ;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

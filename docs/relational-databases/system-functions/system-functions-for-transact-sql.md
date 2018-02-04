@@ -8,27 +8,30 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: system stored functions [SQL Server]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- system stored functions [SQL Server]
 ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6f331e8d72c7e5b363ae8324cdc8e97598392aa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dd4411dea47af18907caf8058e47c75339ad17f9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="system-functions-for-transact-sql"></a>系統函數的 Transact SQL
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供下列系統函數的群組。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列系統函數的群組。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Always On 可用性群組功能](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  

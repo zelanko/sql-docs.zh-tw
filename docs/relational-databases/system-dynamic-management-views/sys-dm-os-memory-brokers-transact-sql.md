@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_os_memory_brokers (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_os_memory_brokers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_memory_brokers_TSQL
 - sys.dm_os_memory_brokers_TSQL
 - dm_os_memory_brokers
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_brokers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_brokers dynamic management view
 ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2b1a1d13e4a15df92d79bf74d1358352a93266a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d9387fa198a5131016fb683cf97ae490c2b7d5a3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,21 +48,21 @@ ms.lasthandoff: 11/17/2017
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|如果與資源管理員集區相關聯，則是資源集區的識別碼。|  
-|**memory_broker_type**|**nvarchar （60)**|記憶體 Broker 的類型。 目前有三種記憶體 broker [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 列出以下與它們的描述。<br /><br /> **MEMORYBROKER_FOR_CACHE** ： 以供配置的記憶體快取物件。<br /><br /> **MEMORYBROKER_FOR_STEAL** ： 從緩衝集區奪取的記憶體。 在目前的擁有者釋放這種記憶體前，其他元件無法重複使用它。<br /><br /> **MEMORYBROKER_FOR_RESERVE** ： 保留供未來使用的目前正在執行要求的記憶體。|  
+|**memory_broker_type**|**nvarchar(60)**|記憶體 Broker 的類型。 目前有三種記憶體 broker [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 列出以下與它們的描述。<br /><br /> **MEMORYBROKER_FOR_CACHE** ： 以供配置的記憶體快取物件。<br /><br /> **MEMORYBROKER_FOR_STEAL** ： 從緩衝集區奪取的記憶體。 在目前的擁有者釋放這種記憶體前，其他元件無法重複使用它。<br /><br /> **MEMORYBROKER_FOR_RESERVE** ： 保留供未來使用的目前正在執行要求的記憶體。|  
 |**allocations_kb**|**bigint**|已經配置給此類型 Broker 的記憶體數量 (以 KB 為單位)。|  
 |**allocations_kb_per_sec**|**bigint**|每秒的記憶體配置率 (以 KB 為單位)。 對於記憶體取消配置，這個值可以是負值。|  
 |**predicted_allocations_kb**|**bigint**|預測 Broker 所配置的記憶體數量。 這是以記憶體使用量模式為基礎。|  
 |**target_allocations_kb**|**bigint**|根據目前的設定與記憶體使用率模式所建議的配置記憶體數量 (以 KB 為單位)。 此 Broker 應該成長或壓縮到這個數量。|  
 |**future_allocations_kb**|**bigint**|將會在下幾秒鐘內完成的預計配置數量 (以 KB 為單位)。|  
 |**overall_limit_kb**|**bigint**|Broker 可以配置的最大記憶體數量 (以 KB 為單位)。|  
-|**last_notification**|**nvarchar （60)**|根據目前的設定與使用量模式所建議的記憶體使用量。 下列是有效值：<br /><br /> grow<br /><br /> shrink<br /><br /> stable|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**last_notification**|**nvarchar(60)**|根據目前的設定與使用量模式所建議的記憶體使用量。 下列是有效值：<br /><br /> grow<br /><br /> shrink<br /><br /> stable|  
+|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
   
 ## <a name="permissions"></a>Permissions  
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  s  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 
   [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   

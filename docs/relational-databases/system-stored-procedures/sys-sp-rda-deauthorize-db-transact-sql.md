@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_rda_deauthorize_db (TRANSACT-SQL) |Microsoft 文件"
+title: sys.sp_rda_deauthorize_db (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_deauthorize_db
 - sys.sp_rda_deauthorize_db_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_deauthorize_db stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_deauthorize_db stored procedure
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6524ced433a0b4b58de1fd857ce32f02cfb64923
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d6ad14f46d0fece2e33fcf9bae5c8c124828bcf2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syssprdadeauthorizedb-transact-sql"></a>sys.sp_rda_deauthorize_db (TRANSACT-SQL)
+# <a name="syssprdadeauthorizedb-transact-sql"></a>sys.sp_rda_deauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   移除本機已啟用 Stretch 的資料庫與遠端 Azure 資料庫之間已驗證的連接。 執行**sp_rda_deauthorize_db**當遠端資料庫處於無法連線到或不一致的狀態，而且您想要變更資料庫中的所有已啟用 Stretch 之資料表的查詢行為。  
@@ -54,9 +57,9 @@ sp_rda_deauthorize_db
   
 -   執行[sys.sp_rda_set_query_mode &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)與 LOCAL_ONLY 引數，讓查詢針對僅限本機資料繼續執行。  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.sp_rda_set_query_mode &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)   
- [sys.sp_rda_reauthorize_db &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.sp_rda_set_query_mode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)   
+ [sys.sp_rda_reauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

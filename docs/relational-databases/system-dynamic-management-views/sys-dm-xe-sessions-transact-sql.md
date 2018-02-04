@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_xe_sessions (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_xe_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_xe_sessions
 - sys.dm_xe_sessions_TSQL
 - sys.dm_xe_sessions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_sessions dynamic management view
 - extended events [SQL Server], views
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d16dbc718232a6c3953e391d255986340d4f011
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6c871158b5085d14eda8974530e392b5ed24baf5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
     
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|address|**varbinary （8)**|工作階段的記憶體位址。 在本機系統位址是唯一的。 不可為 Null。|  
+|address|**varbinary(8)**|工作階段的記憶體位址。 在本機系統位址是唯一的。 不可為 Null。|  
 |name|**nvarchar(256)**|工作階段的名稱。 在本機系統是唯一的名稱。 不可為 Null。|  
 |pending_buffers|**int**|正在暫止處理的完整緩衝區數目。 不可為 Null。|  
 |total_regular_buffers|**int**|與工作階段有關的一般緩衝區總數。 不可為 Null。<br /><br /> 注意： 一般緩衝區使用大部分的時間。 這些緩衝區有足夠的大小可以容納許多事件。 每個工作階段通常有三或多個緩衝區。 伺服器會根據透過 MEMORY_PARTITION_MODE 選項設定的記憶體資料分割，自動決定一般緩衝區的數目。 一般緩衝區的大小等於除以緩衝區數目之 MAX_MEMORY 選項的值 (預設為 4 MB)。 如需有關 MEMORY_PARTITION_MODE 和 MAX_MEMORY 選項的詳細資訊，請參閱[CREATE EVENT SESSION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 |已移除 buffer_size 和 total_buffers 資料行。|  
 |加入 total_regular_buffers、 regular_buffer_size、 total_large_buffers、 large_buffer_size 以及 total_buffer_size 資料行。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

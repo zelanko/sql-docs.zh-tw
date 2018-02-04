@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_xtp_control_proc_exec_stats (TRANSACT-SQL) |Microsoft 文件"
+title: sys.sp_xtp_control_proc_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_xtp_control_proc_exec_stats
 - sys.sp_xtp_control_proc_exec_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_xtp_control_proc_exec_stats
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_xtp_control_proc_exec_stats
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 721c120c200bb3142b36e06beb6e45cab1ca0805
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8244febff8de5e87eb37ece4af7b32b98c23f131
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspxtpcontrolprocexecstats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +45,12 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
 ```  
   
 ## <a name="arguments"></a>引數  
- @new_collection_value=*值*  
+ @new_collection_value = *value*  
  決定程序層級統計資料收集為開啟 (1) 或關閉 (0)。  
   
  @new_collection_value設定為零[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或資料庫啟動。  
   
- @old_collection_value=*值*  
+ @old_collection_value = *value*  
  傳回目前狀態。  
   
 ## <a name="return-code"></a>傳回碼  
@@ -66,7 +69,7 @@ exec sp_xtp_control_proc_exec_stats @old_collection_value=@c output
 select @c as 'collection status'  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

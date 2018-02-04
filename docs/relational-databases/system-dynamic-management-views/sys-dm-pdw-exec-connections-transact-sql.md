@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_pdw_exec_connections (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_pdw_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2020dc2ccf50b9e6ed11c609f908e346c469c8d7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 201c0fe2d8396d5669f2a05ef43343522827c465
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (TRANSACT-SQL)
+# <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   傳回有關與這個 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 執行個體建立之連接及每一個連接之詳細資料的資訊。  
@@ -33,8 +35,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |session_id|**int**|識別這項連接的相關工作階段。 使用`SESSION_ID()`傳回`session_id`目前連接。|  
 |connect_time|**datetime**|建立連接的時間戳記。 不可為 Null。|  
-|encrypt_option|**nvarchar （40)**|表示 TRUE （連接已加密） 或 FALSE （連線不 enctypred）。|  
-|auth_scheme|**nvarchar （40)**|指定搭配這個連接使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 驗證配置。 不可為 Null。|  
+|encrypt_option|**nvarchar(40)**|表示 TRUE （連接已加密） 或 FALSE （連線不 enctypred）。|  
+|auth_scheme|**nvarchar(40)**|指定搭配這個連接使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 驗證配置。 不可為 Null。|  
 |client_id|**varchar(48)**|連接到這部伺服器的用戶端的 IP 位址。 可為 Null。|  
 |sql_spid|**int**|連接的伺服器處理序識別碼。 使用`@@SPID`傳回`sql_spid`目前連接。使用最 pki，`session_id`改為。|  
   
@@ -62,7 +64,7 @@ JOIN sys.dm_pdw_exec_sessions AS s
 WHERE c.session_id = SESSION_ID();  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

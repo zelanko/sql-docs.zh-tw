@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_active_catalogs
 - dm_fts_active_catalogs_TSQL
 - sys.dm_fts_active_catalogs
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_active_catalogs dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_active_catalogs dynamic management view
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3712a9cb104058d46cc0f2b9b21d1ad0f5bf062c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c6031073091f63185f58cd256900719c25d8a7ae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,8 +46,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|包含使用中全文檢索目錄的資料庫識別碼。|  
 |**catalog_id**|**int**|使用中全文檢索目錄的識別碼。|  
-|**memory_address**|**varbinary （8)**|配置給與這個全文檢索目錄有關之母體擴展活動的記憶體緩衝區位址。|  
-|**name**|**nvarchar （128)**|使用中全文檢索目錄的名稱。|  
+|**memory_address**|**varbinary(8)**|配置給與這個全文檢索目錄有關之母體擴展活動的記憶體緩衝區位址。|  
+|**name**|**nvarchar(128)**|使用中全文檢索目錄的名稱。|  
 |**is_paused**|**bit**|指出使用中全文檢索目錄的母體擴展是否已經暫停。|  
 |**status**|**int**|全文檢索目錄的目前狀態。 它有下列幾種：<br /><br /> 0 = 正在初始化<br /><br /> 1 = 已就緒<br /><br /> 2 = 已暫停<br /><br /> 3 = 暫時錯誤<br /><br /> 4 = 需要重新掛載<br /><br /> 5 = 已關閉<br /><br /> 6 = 默認備份<br /><br /> 7 = 已備份整個目錄<br /><br /> 8 = 目錄已損毀|  
 |**status_description**|**nvarchar(120)**|使用中全文檢索目錄目前狀態的描述。|  
@@ -93,7 +96,7 @@ AND catalog.database_id = (SELECT dbid FROM sys.sysdatabases WHERE name = DB_NAM
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  
  [全文檢索搜尋及語意搜尋動態管理檢視與函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   

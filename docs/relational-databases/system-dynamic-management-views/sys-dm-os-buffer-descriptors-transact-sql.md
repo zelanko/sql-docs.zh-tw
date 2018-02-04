@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_buffer_descriptors_TSQL
 - sys.dm_os_buffer_descriptors
 - dm_os_buffer_descriptors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_buffer_descriptors dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 225d94ec7bf9b8a74289f52462f64d6d444e1d44
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6e35b3cd5c0b10bce5ed66f8c68babcebc96ae95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,14 +49,14 @@ ms.lasthandoff: 11/17/2017
 |page_id|**int**|檔案內的頁面識別碼。 可為 Null。|  
 |page_level|**int**|頁面的索引層級。 可為 Null。|  
 |allocation_unit_id|**bigint**|頁面的配置單位識別碼。 這個值可以用來聯結 sys.allocation_units。 可為 Null。|  
-|page_type|**nvarchar （60)**|頁面的類型，例如：資料頁或索引頁。 可為 Null。|  
+|page_type|**nvarchar(60)**|頁面的類型，例如：資料頁或索引頁。 可為 Null。|  
 |row_count|**int**|頁面上的資料列數。 可為 Null。|  
 |free_space_in_bytes|**int**|頁面上的可用空間量 (以位元組為單位)。 可為 Null。|  
 |is_modified|**bit**|1 = 頁面從磁碟讀取之後，已經修改過了。 可為 Null。|  
 |numa_node|**int**|緩衝區的非統一記憶體存取節點。 可為 Null。|  
 |read_microsec|**bigint**|將頁面讀取至緩衝區所需的實際時間 (單位毫秒)。 這個數字會在重複使用緩衝區時重設。 可為 Null。|  
 |is_in_bpool_extension|**bit**|1 = 頁面是在緩衝集區延伸模組。 可為 Null。|  
-|pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
   
 ## <a name="permissions"></a>Permissions  
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
@@ -65,8 +68,8 @@ ms.lasthandoff: 11/17/2017
 |來源|若要|於|關聯性|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|多對一|  
-|sys.dm_os_buffer_descriptors|\<時更新 userdb >。 sys.allocation_units|allocation_unit_id|多對一|  
-|sys.dm_os_buffer_descriptors|\<時更新 userdb >。 sys.database_files|file_id|多對一|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|多對一|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|多對一|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|多對一|  
   
 ## <a name="examples"></a>範例  
@@ -114,12 +117,12 @@ GROUP BY name, index_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.allocation_units &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Resource 資料庫](../../relational-databases/databases/resource-database.md)   
- [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

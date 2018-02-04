@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_os_volume_stats (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/02/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_volume_stats
 - sys.dm_os_volume_stats
 - sys.dm_os_volume_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_volume_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43d9ead206eb4f5a83d0006c3b23626346b04fe5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 647c47f57e8f6eb7f756ec5a6263ae5d5059b674
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +57,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ||||  
 |-|-|-|  
-|**資料行**|**資料類型**|**說明**|  
+|**[資料行]**|**資料類型**|**說明**|  
 |**database_id**|**int**|資料庫的識別碼。 不可為 null。|  
 |**file_id**|**int**|檔案識別碼。 不可為 null。|  
 |**volume_mount_point**|**nvarchar(512)**|磁碟區根目錄所在的掛接點。 可以傳回空字串。|  
@@ -69,7 +72,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**is_read_only**|**bit**|表示磁碟區目前是否標示成唯讀。 不可為 null。|  
 |**is_compressed**|**bit**|表示這個磁碟區目前是否已經壓縮。 不可為 null。|  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  需要 VIEW SERVER STATE 權限。  
@@ -94,8 +97,8 @@ FROM sys.database_files AS f
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.master_files &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

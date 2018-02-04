@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_traninfo
 - sys.dm_repl_traninfo_TSQL
 - dm_repl_traninfo_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_traninfo dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8667321964f457ae05c6b7768be4b22220b50da
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 45fd6246b7a98f16c86a6f7e2c7052c70b2af039
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,28 +42,28 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|如果交易是在資料庫中，則使用點對點異動複寫進行發行。 若為 True，該值為 1；否則為 0。|  
 |**db_ver**|**int**|資料庫版本。|  
-|**comp_range_address**|**varbinary （8)**|定義必須略過的部分回復範圍。|  
-|**textinfo_address**|**varbinary （8)**|快取文字資訊結構的記憶體中位址。|  
-|**fsinfo_address**|**varbinary （8)**|快取檔案資料流資訊結構的記憶體中位址。|  
-|**begin_lsn**|**nvarchar （64)**|交易之開始記錄的記錄序號 (LSN)。|  
-|**commit_lsn**|**nvarchar （64)**|交易之認可記錄的 LSN。|  
+|**comp_range_address**|**varbinary(8)**|定義必須略過的部分回復範圍。|  
+|**textinfo_address**|**varbinary(8)**|快取文字資訊結構的記憶體中位址。|  
+|**fsinfo_address**|**varbinary(8)**|快取檔案資料流資訊結構的記憶體中位址。|  
+|**begin_lsn**|**nvarchar(64)**|交易之開始記錄的記錄序號 (LSN)。|  
+|**commit_lsn**|**nvarchar(64)**|交易之認可記錄的 LSN。|  
 |**dbid**|**smallint**|資料庫識別碼。|  
-|**資料列**|**int**|交易內的複寫命令識別碼。|  
-|**xdesid**|**nvarchar （64)**|交易識別碼。|  
-|**artcache_table_address**|**varbinary （8)**|上次用於這項交易之快取發行項資料表結構的記憶體中位址。|  
+|**rows**|**int**|交易內的複寫命令識別碼。|  
+|**xdesid**|**nvarchar(64)**|交易識別碼。|  
+|**artcache_table_address**|**varbinary(8)**|上次用於這項交易之快取發行項資料表結構的記憶體中位址。|  
 |**伺服器**|**nvarchar(514)**|伺服器名稱。|  
 |**server_len_in_bytes**|**smallint**|伺服器名稱的字元長度 (以位元組為單位)。|  
-|**database**|**nvarchar(514)**|資料庫名稱。|  
+|**資料庫**|**nvarchar(514)**|資料庫名稱。|  
 |**db_len_in_bytes**|**smallint**|資料庫名稱的字元長度 (以位元組為單位)。|  
-|**建立者**|**nvarchar(514)**|引發交易的伺服器名稱。|  
+|**originator**|**nvarchar(514)**|引發交易的伺服器名稱。|  
 |**originator_len_in_bytes**|**smallint**|引發交易之伺服器的字元長度 (以位元組為單位)。|  
 |**orig_db**|**nvarchar(514)**|引發交易的資料庫名稱。|  
 |**orig_db_len_in_bytes**|**smallint**|引發交易之資料庫的字元長度 (以位元組為單位)。|  
 |**cmds_in_tran**|**int**|目前交易的複寫命令數目，用來決定何時要認可邏輯交易。|  
 |**is_boundedupdate_singleton**|**tinyint**|指定唯一資料行更新是否只影響單一資料列。|  
-|**begin_update_lsn**|**nvarchar （64)**|用於唯一資料行更新的 LSN。|  
-|**delete_lsn**|**nvarchar （64)**|刪除作為更新的一部分的 LSN。|  
-|**last_end_lsn**|**nvarchar （64)**|邏輯交易的最後一個 LSN。|  
+|**begin_update_lsn**|**nvarchar(64)**|用於唯一資料行更新的 LSN。|  
+|**delete_lsn**|**nvarchar(64)**|刪除作為更新的一部分的 LSN。|  
+|**last_end_lsn**|**nvarchar(64)**|邏輯交易的最後一個 LSN。|  
 |**fcomplete**|**tinyint**|指定命令是否為部分更新。|  
 |**fcompensated**|**tinyint**|指定交易是否涉及部分回復。|  
 |**fprocessingtext**|**tinyint**|指定交易是否包含二進位大型資料類型資料行。|  
@@ -78,7 +81,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>備註  
  只對目前載入發行項快取中的複寫資料庫物件或針對異動資料擷取啟用的資料表傳回這項資訊。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [複寫相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [異動資料擷取相關的動態管理檢視 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  

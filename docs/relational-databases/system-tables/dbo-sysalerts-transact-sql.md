@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,35 +17,37 @@ f1_keywords:
 - sysalerts_TSQL
 - dbo.sysalerts_TSQL
 - sysalerts
-dev_langs: TSQL
-helpviewer_keywords: sysalerts system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysalerts system table
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a28a1152ec3dd85c8bee11c4ef9b73ed3928db27
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7565ee20e5fdec3a94c413b8204629ce6ee2f48d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對每個警示各包含一個資料列。 警示是事件的回應所傳送的訊息。 警示可以將訊息轉送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境之外，它可能是電子郵件訊息，也可能是呼叫器訊息。 另外，警示也可以產生工作。  這份資料表儲存在**msdb**資料庫。
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|警示識別碼。|  
 |**name**|**sysname**|警示名稱。|  
-|**event_source**|**nvarchar （100)**|事件來源：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**event_source**|**nvarchar(100)**|事件來源：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**event_category_id**|**int**|保留供日後使用。|  
 |**event_id**|**int**|保留供日後使用。|  
 |**message_id**|**int**|使用者定義訊息識別碼或參考**sysmessages**觸發這個警示的訊息。|  
-|**嚴重性**|**int**|觸發這個警示的嚴重性。|  
-|**已啟用**|**tinyint**|警示的狀態：<br /><br /> **0** = 已停用。<br /><br /> **1** = 啟用。|  
+|**severity**|**int**|觸發這個警示的嚴重性。|  
+|**enabled**|**tinyint**|警示的狀態：<br /><br /> **0** = 已停用。<br /><br /> **1** = 啟用。|  
 |**delay_between_responses**|**int**|這個警示各次通知之間的等待期間 (以秒為單位)。|  
 |**last_occurrence_date**|**int**|警示的前一次出現 (日期)。|  
 |**last_occurrence_time**|**int**|警示的前一次出現 (日期時間)。|  
@@ -53,13 +56,13 @@ ms.lasthandoff: 11/17/2017
 |**notification_message**|**nvarchar(512)**|隨著警示而傳送的其他資訊。|  
 |**include_event_description**|**tinyint**|位元遮罩，代表事件描述，會傳送電子郵件、 呼叫器或 Net send。 請參閱下列圖表的值。|  
 |**database_name**|**nvarchar(512)**|這個警示必須出現在其中以便觸發這個警示的資料庫。|  
-|**event_description_keyword**|**nvarchar （100)**|錯誤必須符合才能觸發警示的模式。|  
+|**event_description_keyword**|**nvarchar(100)**|錯誤必須符合才能觸發警示的模式。|  
 |**occurrence_count**|**int**|這個警示的出現次數。|  
 |**count_reset_date**|**int**|天數 （日期） 計數將重設為**0**。|  
 |**count_reset_time**|**int**|日期時間計數將重設為**0**。|  
 |**job_id**|**uniqueidentifier**|發生這個警示時所執行的作業識別碼。|  
 |**has_notification**|**int**|發生警示時收到電子郵件通知的操作員數目。|  
-|**旗標**|**int**|已保留。|  
+|**flags**|**int**|已保留。|  
 |**performance_condition**|**nvarchar(512)**|已保留。|  
 |**category_id**|**int**|已保留。|  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 
 下表顯示之 include_event_description 位元遮罩值。 會傳回 dbo.sysalerts 十進位值。 
 
-|decimal | binary | 意義 |
+|decimal | BINARY | 意義 |
 |------|------|------|
 |0 |0000 |沒有任何訊息 |
 |1 |0001 |電子郵件 |

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
 - semanticsimilaritytable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: semanticsimilaritytable function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2944708e70d9cc71cddcad33ff060df8a223530d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8ba25daf71db106e5ecd8877e83edda6e43a5286
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,12 +76,12 @@ SEMANTICSIMILARITYTABLE
   
  如果結果來自多個資料行，將會以每個資料行為單位傳回相符文件。  
   
-|Column_name|類型|描述|  
+|Column_name|型別|Description|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|用於尋找類似文件之來源文件的資料行識別碼。<br /><br /> 如需如何從 column_id 擷取資料行名稱 (反之亦然) 的詳細資料，請參閱 COL_NAME 及 COLUMNPROPERTY 函數。|  
 |**matched_column_id**|**int**|從中找到類似文件之資料行的識別碼。<br /><br /> 如需如何從 column_id 擷取資料行名稱 (反之亦然) 的詳細資料，請參閱 COL_NAME 及 COLUMNPROPERTY 函數。|  
 |**matched_document_key**|**\***<br /><br /> 此索引鍵與來源資料表中的唯一索引鍵類型相同。|文件或資料行的全文檢索和語意擷取唯一索引鍵值，在查詢中發現此文件或資料行與指定的文件類似。|  
-|**分數**|**實數**|此文件與所有其他類似文件之間關聯性的相似度相對值。<br /><br /> 值是 [0.0, 1.0] 範圍內的小數值，分數愈高代表愈符合的相似度，1.0 是滿分。|  
+|**score**|**實數**|此文件與所有其他類似文件之間關聯性的相似度相對值。<br /><br /> 值是 [0.0, 1.0] 範圍內的小數值，分數愈高代表愈符合的相似度，1.0 是滿分。|  
   
 ## <a name="general-remarks"></a>一般備註  
  如需詳細資訊，請參閱[尋找相似及相關文件使用語意搜尋](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  

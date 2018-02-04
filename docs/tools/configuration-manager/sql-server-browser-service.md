@@ -8,7 +8,8 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 98a5f763d57c6cfb3a6c11d308fbe71e53ded7f4
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5018082d7a9ee06c1015925e3efad92eecc5133b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser 服務
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 程式會以 Windows 服務的方式執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 會接聽 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的內送要求，並提供有關電腦上所安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 完成下列動作：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 程式會以 Windows 服務的方式執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 會接聽 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的內送要求，並提供有關電腦上所安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 完成下列動作：  
   
 -   瀏覽可用伺服器的清單  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
   
  對於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 與 [!INCLUDE[ssAS](../../includes/ssas-md.md)]的每個執行個體， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務 (sqlbrowser) 會提供執行個體名稱與版本號碼。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]瀏覽器會隨[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以設定瀏覽器，在安裝期間或利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務會在下列情況中自動啟動：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務會在下列情況中自動啟動：  
   
 -   升級安裝時。  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/17/2018
 -   您為每個執行個體選取的通訊埠可能正由該伺服器上的其他服務或應用程式使用中，導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體無法使用。  
   
 ## <a name="clustering"></a>群集  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]瀏覽器不是叢集的資源，並不支援容錯移轉至另一個叢集節點。 因此，以群集的情況而言，應該要為群集的每一個節點安裝及開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser。 在群集上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 IP_ANY。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 不是群集資源，不支援一個叢集節點容錯移轉到另一個叢集節點。 因此，以群集的情況而言，應該要為群集的每一個節點安裝及開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser。 在群集上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 IP_ANY。  
   
 > [!NOTE]  
 >  接聽 IP_ANY 時，若您啟用的是接聽特定 IP，則使用者必須在每一個 IP 上設定相同的 TCP 通訊埠，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會傳回它發現的第一個 IP/通訊埠組合。  
@@ -98,16 +100,16 @@ ms.lasthandoff: 01/17/2018
   
  移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最後一個執行個體之後，就會解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以進行疑難排解，使用在命令提示字元啟動瀏覽器**-c**切換：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用 **-c** 參數，可從命令提示字元啟動瀏覽器來進行疑難排解：  
   
 ```  
 <drive>\<path>\sqlbrowser.exe -c  
 ```  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="account-privileges"></a>帳戶權限  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 UDP 通訊埠，並接受使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) 的未驗證要求。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]瀏覽器應該執行的低特殊權限的使用者，以降低遭受惡意攻擊的安全性內容中。 可利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更登入帳戶。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 所需的最低使用者權限如下：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器會接聽 UDP 通訊埠，並接受使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) 的未驗證要求。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]瀏覽器應該執行的低特殊權限的使用者，以降低遭受惡意攻擊的安全性內容中。 可利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更登入帳戶。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 所需的最低使用者權限如下：  
   
 -   拒絕從網路存取這部電腦  
   

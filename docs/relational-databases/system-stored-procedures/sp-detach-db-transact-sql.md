@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
 - sp_detach_db_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: "86"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c50a0b30d69e88047ea614052cebc0105ed7c4a7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +52,15 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@dbname =** ] **'***database_name***'**  
+ [ **@dbname =** ] **'***database_name***'**  
  這是要卸離的資料庫名稱。 *database_name*是**sysname**值，預設值是 NULL。  
   
- [  **@skipchecks =** ] **'***skipchecks***'**  
+ [ **@skipchecks =** ] **'***skipchecks***'**  
  指定要跳過或執行 UPDATE STATISTIC。 *skipchecks*是**nvarchar （10)**值，預設值是 NULL。 若要略過 UPDATE STATISTICS，指定**true**。 若要明確執行 UPDATE STATISTICS，請指定**false**。  
   
  根據預設，系統會執行 UPDATE STATISTICS 來更新資料表和索引之資料的相關資訊。 對於要移至唯讀媒體的資料庫而言，執行 UPDATE STATISTICS 很有用。  
   
- [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
+ [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  指定在資料庫卸離作業期間，將不卸除與要卸離之資料庫相關聯的全文檢索索引檔案。 *KeepFulltextIndexFile*是**nvarchar （10)**值預設值是**true**。 如果*KeepFulltextIndexFile*是**false**、 與資料庫相關聯的全文檢索索引的所有檔案和全文檢索索引的中繼資料會卸除，除非資料庫為唯讀。 如果是 NULL 或**true**，全文檢索相關中繼資料會保留。  
   
 > [!IMPORTANT]  
@@ -140,7 +142,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
     , @keepfulltextindexfile='true';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   

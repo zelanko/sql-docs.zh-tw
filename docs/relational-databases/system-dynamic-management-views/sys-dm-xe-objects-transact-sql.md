@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_xe_objects (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_xe_objects (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_xe_objects
 - sys.dm_xe_objects_TSQL
 - dm_xe_objects_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ac492b7189a3f6508874c5fbd32d50827463ff6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e9f1146f74618195b28fd19f2464bc45a2498c61
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +49,15 @@ ms.lasthandoff: 11/17/2017
   
 -   類型。 類型會封裝位元組集合的長度和特性，以便能夠解譯資料。  
 
- |資料行名稱|資料類型|描述|  
+ |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar （60)**|物件的名稱。 名稱是唯一在封裝中的特定物件類型。 不可為 Null。|  
-|object_type|**nvarchar （60)**|物件的型別。 object_type 是下列其中一項：<br /><br /> event<br /><br /> action<br /><br /> 目標<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 型別<br /><br /> 不可為 Null。|  
+|name|**nvarchar(60)**|物件的名稱。 名稱是唯一在封裝中的特定物件類型。 不可為 Null。|  
+|object_type|**nvarchar(60)**|物件的型別。 object_type 是下列其中一項：<br /><br /> event<br /><br /> action<br /><br /> 目標<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 型別<br /><br /> 不可為 Null。|  
 |package_guid|**uniqueidentifier**|公開此動作之封裝的 GUID。 這與 sys.dm_xe_packages.package_id 之間是多對一的關聯性。 不可為 Null。|  
 |description|**nvarchar(256)**|動作的描述。 描述是由封裝作者所設定。 不可為 Null。|  
 |capabilities|**int**|描述此物件之功能的點陣圖。 可為 Null。|  
 |capabilities_desc|**nvarchar(256)**|列出此物件的所有功能。 可為 Null。<br /><br /> **套用到所有物件類型的功能**<br /><br /> —<br />                                **私用**。 唯一供內部使用的物件，而且無法透過 CREATE/ALTER EVENT SESSION DDL 加以存取。 除了在內部使用的少量物件以外，稽核事件和目標也屬於這個類別目錄。<br /><br /> ===============<br /><br /> **事件功能**<br /><br /> —<br />                                **No_block**。 事件位於任何原因都無法封鎖的關鍵程式碼路徑中。 具有此功能的事件可能無法加入指定 NO_EVENT_LOSS 的任何事件工作階段。<br /><br /> ===============<br /><br /> **套用到所有物件類型的功能**<br /><br /> —<br />                                **Process_whole_buffers**。 目標一次會耗用事件緩衝區，而不是逐一事件。<br /><br /> —<br />                        **單一**。 只有一個目標執行個體可以存在處理序中。 雖然多個事件工作階段可以參考相同的單一目標，但是其實只有一個執行個體，而且該執行個體只會看到每一個唯一事件一次。 如果要將目標加入至全部收集相同事件的多個工作階段，這就會非常重要。<br /><br /> —<br />                                **Synchronous**： 將控制權送回呼叫的程式碼行之前，會在產生事件的執行緒上執行目標。|  
-|type_name|**nvarchar （60)**|pred_source 和 pred_compare 物件的名稱。 可為 Null。|  
+|type_name|**nvarchar(60)**|pred_source 和 pred_compare 物件的名稱。 可為 Null。|  
 |type_package_guid|**uniqueidentifier**|公開此物件操作所在之類型的封裝 GUID。 可為 Null。|  
 |type_size|**int**|資料類型的大小 (以位元組為單位)。 只適用於有效的物件類型。 可為 Null。|  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|多對一|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

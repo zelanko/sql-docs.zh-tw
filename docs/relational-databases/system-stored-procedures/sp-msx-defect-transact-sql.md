@@ -1,5 +1,5 @@
 ---
-title: "sp_msx_defect (TRANSACT-SQL) |Microsoft 文件"
+title: sp_msx_defect (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_defect
 - sp_msx_defect_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_msx_defect
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_msx_defect
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e31da5d7bae3302b7fcdcee7fb2062e1a1dc7081
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cf63da8bfb0ac882e3d3949a91b848ba689985a6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@forced_defection =**] *forced_defection*  
+ [ **@forced_defection =**] *forced_defection*  
  指定是否要強制脫離如果已因不可挽回地損毀而永久失去主要 SQLServerAgent **msdb**資料庫或完全不需要**msdb**資料庫備份。 *forced_defection*是**元**，預設值是**0**，這表示，不應強制脫離。 值為**1**會強制脫離。  
   
  藉由執行強制脫離之後**sp_msx_defect**，隸屬**sysadmin**固定的伺服器角色，在主要 SQLServerAgent 必須執行下列命令來完成脫離：  
@@ -67,8 +70,8 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
 ## <a name="permissions"></a>Permissions  
  若要執行這個預存程序，使用者必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
   
-## <a name="see-also"></a>請參閱  
- [sp_msx_enlist &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_msx_enlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

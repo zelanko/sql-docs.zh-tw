@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
 - sp_filestream_force_garbage_collection_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba1b60621e23160ce9e951e17cf4777b016fe90f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>Filestream 和 FileTable-s
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +55,20 @@ sp_filestream_force_garbage_collection
 > [!NOTE]  
 >  *dbname*是**sysname**。 如果未指定，則假設目前的資料庫。  
   
- **@filename** = *邏輯檔案名稱*  
+ **@filename** = *logical_file_name*  
  指定要執行記憶體回收行程之 FILESTREAM 容器的邏輯名稱。 **@filename**是選擇性的。 如果未不指定任何邏輯檔名，則記憶體回收行程會清除指定之資料庫中的所有 FILESTREAM 容器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
   
 |||  
 |-|-|  
-|值|描述|  
+|Value|설명|  
 |0|作業成功|  
 |1|作業失敗|  
   
 ## <a name="result-sets"></a>結果集  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*file_name*|指出 FILESTREAM 容器名稱|  
 |*num_collected_items*|指出在這個容器中已進行記憶體回收 (已刪除) 的 FILESTREAM 項目 (檔案/目錄) 的數目。|  
@@ -110,7 +112,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
     @filename = N'FSContainer';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 2008 中的 FILESTREAM 儲存體](http://go.microsoft.com/fwlink/?LinkId=209156)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "sp_syspolicy_rename_condition (TRANSACT-SQL) |Microsoft 文件"
+title: sp_syspolicy_rename_condition (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_rename_condition
 - sp_syspolicy_rename_condition_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_rename_condition
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_rename_condition
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8fe50a92fa2a149f7540aa1baba1b59ec3055dc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 01c2068335e439d5c669447d766a3a5c2a07349c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +47,13 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@name=** ] **'***名稱***'**  
+ [ **@name=** ] **'***name***'**  
  這是您要重新命名的條件名稱。 *名稱*是**sysname**，而且必須指定如果*condition_id*是 NULL。  
   
- [  **@condition_id=** ] *condition_id*  
+ [ **@condition_id=** ] *condition_id*  
  是您想要重新命名之條件的識別碼。 *condition_id*是**int**，而且必須指定如果*名稱*是 NULL。  
   
- [  **@new_name=** ] **'***new_name***'**  
+ [ **@new_name=** ] **'***new_name***'**  
  是新條件的名稱。 *new_name*是**sysname**，而且需要。 不得為 NULL 或空字串。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -77,7 +80,7 @@ EXEC msdb.dbo.sp_syspolicy_rename_condition @name = N'Change Tracking Enabled'
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以原則為基礎的管理預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

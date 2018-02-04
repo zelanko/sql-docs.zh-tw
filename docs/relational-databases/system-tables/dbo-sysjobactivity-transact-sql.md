@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - dbo.sysjobactivity
 - sysjobactivity
 - sysjobactivity_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysjobactivity system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6270ef7364bfd4d1c599a9feb564e36fc6f217a2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d0edab9e591470a0100bde529f53cee44a016dab
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   記錄目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的活動和狀態。  這份資料表儲存在**msdb**資料庫。
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|儲存在工作階段識別碼**syssessions**資料表中**msdb**資料庫。|  
 |**job_id**|**uniqueidentifier**|作業的識別碼。|  
@@ -65,7 +68,7 @@ WHERE session_id = (
     SELECT MAX(session_id) FROM msdb.dbo.sysjobactivity); 
 ```
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [dbo.sysjobhistory &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

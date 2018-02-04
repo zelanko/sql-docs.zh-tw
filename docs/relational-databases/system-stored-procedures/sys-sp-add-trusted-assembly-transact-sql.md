@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - sp_add_trusted_assembly
 - sys.sp_add_trusted_assembly_TSQL
 - sys.sp_add_trusted_assembly
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_add_trusted_assembly
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_add_trusted_assembly
 ms.assetid: 
 caps.latest.revision: 
 author: tmullaney
 ms.author: thmullan;rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91cedb6c140b9f969d1d33e4878788fa8b9dba92
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7b44f4253a295d91c7011c0aa51d943848188784
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysspaddtrustedassembly-transact-sql"></a>sys.sp_add_trusted_assembly (TRANSACT-SQL)  
+# <a name="sysspaddtrustedassembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 將組件加入至伺服器的受信任組件清單。
@@ -51,7 +54,7 @@ sp_add_trusted_assembly
 
 ## <a name="arguments"></a>引數
 
-[ @hash =] '*值*'  
+[ @hash = ] '*value*'  
 要新增到伺服器的受信任組件清單的組件 SHA2_512 雜湊值。 受信任的組件時可能會載入[CLR 嚴格的安全性](../../database-engine/configure-windows/clr-strict-security.md)啟用時，即使組件是不帶正負號或資料庫不標示為值得信任。
 
 [ @description =] '*描述*'  
@@ -70,7 +73,7 @@ EXEC sp_add_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7
 N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarchitecture=msil';
 ```  
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
   [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
   [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  

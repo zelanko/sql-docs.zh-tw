@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
 - sp_trace_setfilter_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_setfilter
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 659544a47bc142ed430ac6406e2bfde0f60f6845
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +53,19 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  這是設定篩選的追蹤識別碼。 *trace_id*是**int**，沒有預設值。 使用者會利用這*trace_id*值來識別、 修改和控制追蹤。  
   
- [  **@columnid=** ] *column_id*  
+ [ **@columnid=** ] *column_id*  
  這是套用篩選的資料行識別碼。 *column_id*是**int**，沒有預設值。 如果*column_id*是 NULL，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]清除所有篩選器指定的追蹤。  
   
- [  **@logical_operator**  =] *logical_operator*  
+ [ **@logical_operator** = ] *logical_operator*  
  指定是否 AND (**0**) 或 OR (**1**) 運算子會套用。 *logical_operator*是**int**，沒有預設值。  
   
- [  **@comparison_operator=** ] *comparison_operator*  
+ [ **@comparison_operator=** ] *comparison_operator*  
  指定要進行的比較類型。 *comparison_operator*是**int**，沒有預設值。 這份資料表包含比較運算子及其代表值。  
   
-|值|比較運算子|  
+|Value|比較運算子|  
 |-----------|-------------------------|  
 |**0**|= (等於)|  
 |**1**|<> (不等於)|  
@@ -73,7 +76,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|不相似|  
   
- [  **@value=** ]*值*  
+ [ **@value=** ] *value*  
  指定要篩選的值。 資料型別*值*必須符合要篩選的資料行的資料類型。 例如，如果物件識別碼資料行上設定篩選**int**資料型別，*值*必須**int**。如果*值*是**nvarchar**或**varbinary**，它可以有最大長度為 8000。  
   
  當比較運算子是 LIKE 或 NOT LIKE 時，邏輯運算子可以併入 "%" 或 LIKE 運算所適用的其他篩選。  
@@ -119,7 +122,7 @@ sp_trace_setfilter  1, 10, 0, 6, N'MS%';
 sp_trace_setfilter  1, 11, 0, 0, N'joe';  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  

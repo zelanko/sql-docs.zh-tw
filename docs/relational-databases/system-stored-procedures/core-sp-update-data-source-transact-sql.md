@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
 - sp_update_data_source_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_update_data_source
 - management data warehouse, data collector stored procedures
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 959c9cc843480a3f1d5d4b5ca414b67ac27807d4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 913701521f913542356ea11bc916e6af3a971fe8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +53,10 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @collection_set_uid =] '*collection_set_uid*'  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
  收集組的 GUID。 *collection_set_uid*是**uniqueidentifier**，沒有預設值。 若要取得 GUID，請查詢 msdb 資料庫中的 dbo.syscollector_collection_sets 檢視表。  
   
- [ @machine_name =] '*machine_name*'  
+ [ @machine_name = ] '*machine_name*'  
  收集組所在的伺服器名稱。 *machine_name*是**sysname** ，沒有預設值。  
   
  [ @named_instance =] '*named_instance*'  
@@ -63,10 +65,10 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 > [!NOTE]  
 >  *named_instance*必須是完整的執行個體名稱，其中包含電腦名稱與執行個體名稱，表單*computername*\\*instancename*。  
   
- [ @days_until_expiration =] *days_until_expiration*  
+ [ @days_until_expiration = ] *days_until_expiration*  
  快照集資料保留期限中剩餘的天數。 *days_until_expiration*是**smallint**。  
   
- [ @source_id =] *source_id*  
+ [ @source_id = ] *source_id*  
  更新來源的唯一識別碼。 *source_id*是**int**而且會當做 OUTPUT 傳回。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -97,7 +99,7 @@ EXEC core.sp_update_data_source
 @source_id = @source_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [管理資料倉儲](../../relational-databases/data-collection/management-data-warehouse.md)  

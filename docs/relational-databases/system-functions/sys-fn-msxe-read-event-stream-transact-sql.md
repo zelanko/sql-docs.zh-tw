@@ -1,5 +1,5 @@
 ---
-title: "sys.fn_MSxe_read_event_stream (TRANSACT-SQL) |Microsoft 文件"
+title: sys.fn_MSxe_read_event_stream (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.fn_MSxe_read_event_stream_TSQL
 - sys.fn_MSxe_read_event_stream
 - fn_MSxe_read_event_stream
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fn_MSxe_read_event_stream
 - fn_MSxe_read_event_stream
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a4bc667c539c6184e0b2c7867ebcd9957e97924
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 874378f4737e908bde380df4e426c4fea89badbd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnmsxereadeventstream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +66,7 @@ sys.fn_MSxe_read_event_stream ( session_name)
 |型別|**整數 (4)**|事件類型。 不可為 Null。|  
 |data|**映像 (16)**|事件影像資料。 可為 Null。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [擴充的事件動態管理檢視](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [擴充的事件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  

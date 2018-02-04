@@ -1,5 +1,5 @@
 ---
-title: "sys.fn_builtin_permissions (TRANSACT-SQL) |Microsoft 文件"
+title: sys.fn_builtin_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - sys.fn_builtin_permissions_TSQL
 - fn_builtin_permissions_TSQL
 - sys.fn_builtin_permissions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - compact permissions types
 - viewing permission hierarchy
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - displaying permission hierarchy
 - sys.fn_builtin_permissions function
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a52966aaa6bd8cc58c58eeb7fbf16bc6ab31afa
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 659efe9cd24a9040101f48e0e42f65355fe6d077
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,19 +73,19 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  相當於 DEFAULT。  
   
- **'**< securable_class >**'**  
- 當呼叫它時，安全性實體類別的名稱時，sys.fn_builtin_permissions 會傳回所有套用至該類別的權限。 < securable_class > 是必須以引號的字串常值。 **nvarchar （60)**  
+ **'**<securable_class>**'**  
+ 當呼叫它時，安全性實體類別的名稱時，sys.fn_builtin_permissions 會傳回所有套用至該類別的權限。 < securable_class > 是必須以引號的字串常值。 **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|定序|描述|  
+|資料行名稱|資料類型|定序|Description|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar （60)**|伺服器的定序|安全性實體類別的描述。|  
-|permission_name|**nvarchar （60)**|伺服器的定序|權限名稱。|  
+|class_desc|**nvarchar(60)**|伺服器的定序|安全性實體類別的描述。|  
+|permission_name|**nvarchar(60)**|伺服器的定序|權限名稱。|  
 |型別|**varchar(4)**|伺服器的定序|壓縮權限類型碼。 請參閱下表。|  
-|covering_permission_name|**nvarchar （60)**|伺服器的定序|如果不是 NULL，則為意味著這個類別其他權限之這個類別權限的名稱。|  
-|parent_class_desc|**nvarchar （60)**|伺服器的定序|如果不是 NULL，則為含有目前類別的父類別名稱。|  
-|parent_covering_permission_name|**nvarchar （60)**|伺服器的定序|如果不是 NULL，則為意味著該類別所有其他權限之父類別權限的名稱。|  
+|covering_permission_name|**nvarchar(60)**|伺服器的定序|如果不是 NULL，則為意味著這個類別其他權限之這個類別權限的名稱。|  
+|parent_class_desc|**nvarchar(60)**|伺服器的定序|如果不是 NULL，則為含有目前類別的父類別名稱。|  
+|parent_covering_permission_name|**nvarchar(60)**|伺服器的定序|如果不是 NULL，則為意味著該類別所有其他權限之父類別權限的名稱。|  
   
 ### <a name="permission-types"></a>權限類型  
   
@@ -117,7 +119,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER<br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|SERVER ROLE|  
 |AL|ALTER|SERVICE|  
 |AL|ALTER|SYMMETRIC KEY|  
-|AL|ALTER|使用者|  
+|AL|ALTER|USER|  
 |AL|ALTER|XML SCHEMA COLLECTION|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|  
 |ALAG|ALTER ANY AVAILABILITY GROUP<br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|SERVER|  
@@ -184,7 +186,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
 |CL|CONTROL|TYPE|  
-|CL|CONTROL|使用者|  
+|CL|CONTROL|USER|  
 |CL|CONTROL|XML SCHEMA COLLECTION|  
 |CO|CONNECT|DATABASE|  
 |CO|CONNECT|ENDPOINT|  
@@ -224,9 +226,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **適用於**： [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|DATABASE|  
-|DL|Delete|DATABASE|  
-|DL|Delete|OBJECT|  
-|DL|Delete|SCHEMA|  
+|DL|DELETE|DATABASE|  
+|DL|DELETE|OBJECT|  
+|DL|DELETE|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|DATABASE|  
 |EX|執行 CREATE 陳述式之前，請先執行|DATABASE|  
 |EX|執行 CREATE 陳述式之前，請先執行|OBJECT|  
@@ -235,10 +237,10 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |EX|執行 CREATE 陳述式之前，請先執行|XML SCHEMA COLLECTION|  
 |IAL|IMPERSONATE ANY LOGIN<br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|SERVER|  
 |IM|IMPERSONATE|登入|  
-|IM|IMPERSONATE|使用者|  
-|IN|Insert|DATABASE|  
-|IN|Insert|OBJECT|  
-|IN|Insert|SCHEMA|  
+|IM|IMPERSONATE|USER|  
+|IN|INSERT|DATABASE|  
+|IN|INSERT|OBJECT|  
+|IN|INSERT|SCHEMA|  
 |KIDC|KILL DATABASE CONNECTION<br />**適用於**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|DATABASE|  
 |RC|RECEIVE|OBJECT|  
 |RF|REFERENCES|ASSEMBLY|  
@@ -313,7 +315,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
 |VW|VIEW DEFINITION|TYPE|  
-|VW|VIEW DEFINITION|使用者|  
+|VW|VIEW DEFINITION|USER|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
 |VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|DATABASE|  
@@ -366,13 +368,13 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
     WHERE permission_name = 'SELECT';  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [建立結構描述 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [卸除結構描述 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys.fn_my_permissions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

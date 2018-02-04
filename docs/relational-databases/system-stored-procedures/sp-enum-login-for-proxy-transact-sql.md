@@ -1,5 +1,5 @@
 ---
-title: "sp_enum_login_for_proxy (TRANSACT-SQL) |Microsoft 文件"
+title: sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_login_for_proxy_TSQL
 - sp_enum_login_for_proxy
-dev_langs: TSQL
-helpviewer_keywords: sp_enum_login_for_proxy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3c19ebb2104500b3d394a10cabb8589bc4ded0b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8235a8c0fa9febcad446f9a6c48eecf6c470d592
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +49,13 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@name** =] '*名稱*'  
+ [ **@name**= ] '*name*'  
  名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主體、 登入、 伺服器角色或**msdb**要列出 proxy 的資料庫角色。 名稱是**nvarchar （256)**，預設值是 NULL。  
   
- [  **@proxy_id** =]*識別碼*  
+ [ **@proxy_id**= ] *id*  
  要列出資訊的 Proxy 之 Proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*識別碼*或*proxy_name*可指定。  
   
- [  **@proxy_name** =] **'***proxy_name***'**  
+ [ **@proxy_name**= ] **'***proxy_name***'**  
  要列出資訊的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*識別碼*或*proxy_name*可指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -65,7 +68,7 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|Proxy 識別碼。|  
 |**proxy_name**|**sysname**|Proxy 的名稱。|  
 |**name**|**sysname**|關聯的安全性主體名稱。|  
-|**旗標**|**int**|安全性主體的類型。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入<br /><br /> **1** = 固定的系統角色<br /><br /> **2** = 資料庫角色中的**msdb**|  
+|**flags**|**int**|安全性主體的類型。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入<br /><br /> **1** = 固定的系統角色<br /><br /> **2** = 資料庫角色中的**msdb**|  
   
 ## <a name="remarks"></a>備註  
  當未不提供任何參數時， **sp_enum_login_for_proxy**列出每個 proxy 執行個體中的所有登入資訊。  
@@ -104,9 +107,9 @@ EXEC dbo.sp_enum_login_for_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sp_help_proxy &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
- [sp_grant_login_to_proxy &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
+ [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

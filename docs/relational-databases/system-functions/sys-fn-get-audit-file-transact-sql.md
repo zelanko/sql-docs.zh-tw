@@ -26,13 +26,13 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ac4372d753bdc9fde231d2ec08daa957771dc46
-ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.openlocfilehash: efaffab66cba6d95d76d7c5371e43db1aca9f744
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
  指定包含為 initial_file_name 指定之檔案的已知位置。 當使用這個引數時，此函數會開始讀取緩衝區內緊接在指定的位移之後的第一筆記錄。  
   
 > [!NOTE]  
->  *Audit_record_offset*引數必須包含有效的項目，或必須包含預設 |NULL 值。 型別是**bitint**。  
+>  *Audit_record_offset*引數必須包含有效的項目，或必須包含預設 |NULL 值。 型別是**bigint**。  
   
 ## <a name="tables-returned"></a>傳回的資料表  
  下表描述這個函數可傳回的稽核檔案內容。  

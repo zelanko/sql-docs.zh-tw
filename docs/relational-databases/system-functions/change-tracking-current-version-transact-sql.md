@@ -1,5 +1,5 @@
 ---
-title: "CHANGE_TRACKING_CURRENT_VERSION (TRANSACT-SQL) |Microsoft 文件"
+title: CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/08/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHANGE_TRACKING_CURRENT_VERSION_TSQL
 - CHANGE_TRACKING_CURRENT_VERSION
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - change tracking [SQL Server], CHANGE_TRACKING_CURRENT_VERSION
 - CHANGE_TRACKING_CURRENT_VERSION
 ms.assetid: 3027c4f7-6b4d-4089-a369-5926e8a8da1c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a560013a52a801b6b2ddf29050218f2370307717
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 01bc9a8d3c73a7ea61127fce16b00b51c6a19bab
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +60,7 @@ DECLARE @next_baseline bigint;
 SET @next_baseline = CHANGE_TRACKING_CURRENT_VERSION();  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [變更追蹤函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   

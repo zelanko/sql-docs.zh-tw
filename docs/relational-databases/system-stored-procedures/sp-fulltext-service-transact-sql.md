@@ -1,5 +1,5 @@
 ---
-title: "sp_fulltext_service (TRANSACT-SQL) |Microsoft 文件"
+title: sp_fulltext_service (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_service
 - sp_fulltext_service_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], properties
 - sp_fulltext_service
 - Full-Text Search Upgrade Option
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac28028d1e888724417d1a313e229beb479e8ea2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c51847237598fcd1e493fec3194463359198d929
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +49,10 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@action=**] **'***動作***'**  
+ [ **@action=**] **'***action***'**  
  這是要變更或重設的屬性。 *動作*是**nvarchar （100)，**沒有預設值。 取得一份*c*動作屬性，可以設定的值及其說明，請參閱底下的表格*值*引數。 這個引數會傳回下列屬性：資料類型、目前執行中的值、最小值或最大值，以及已被取代的狀態 (如果適用的話)。  
   
- [  **@value=**]*值*  
+ [ **@value=**] *value*  
  這是指定的屬性值。 *值*是**sql_variant**，預設值是 NULL。 如果@value為 null， **sp_fulltext_service**傳回目前的設定。 這份資料表會列出動作屬性及其描述，以及可設定的值之清單。  
   
 > [!NOTE]  
@@ -61,7 +63,7 @@ sp_fulltext_service [ [@action=] 'action'
 |**clean_up**|**int**|支援這個項目的目的，只是為了與舊版相容。 這個值一定是 0。|  
 |**connect_timeout**|**int**|支援這個項目的目的，只是為了與舊版相容。 這個值一定是 0。|  
 |**data_timeout**|**int**|支援這個項目的目的，只是為了與舊版相容。 這個值一定是 0。|  
-|**load_os_resources 設定**|**int**|指出是否註冊了作業系統斷詞工具、字幹分析器和篩選，以及是否搭配這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體來使用它們。 它是下列項目之一：<br /><br /> 0 = 只用這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體專用的篩選和斷詞工具。<br /><br /> 1 = 載入作業系統篩選和斷詞工具。<br /><br /> 根據預設，系統會停用這個屬性來防止因更新作業系統而意外變更行為。 啟用作業系統資源會提供已向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引服務註冊，但並未安裝特定執行個體專用資源之語言和文件類型資源的存取權。 如果您啟用作業系統資源的載入，請確定作業系統資源是受信任的已簽署二進位檔。否則，它們無法在載入時**verify_signature** （請參閱下文） 設為 1。|  
+|**load_os_resources**|**int**|指出是否註冊了作業系統斷詞工具、字幹分析器和篩選，以及是否搭配這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體來使用它們。 它是下列項目之一：<br /><br /> 0 = 只用這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體專用的篩選和斷詞工具。<br /><br /> 1 = 載入作業系統篩選和斷詞工具。<br /><br /> 根據預設，系統會停用這個屬性來防止因更新作業系統而意外變更行為。 啟用作業系統資源會提供已向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引服務註冊，但並未安裝特定執行個體專用資源之語言和文件類型資源的存取權。 如果您啟用作業系統資源的載入，請確定作業系統資源是受信任的已簽署二進位檔。否則，它們無法在載入時**verify_signature** （請參閱下文） 設為 1。|  
 |**master_merge_dop**|**int**|指定主要合併程序所要使用的執行緒數目。 此值不應超過可用 CPU 或 CPU 核心的數量。<br /><br /> 如果未指定這個引數，服務會使用 4 或是可用 CPU 或 CPU 核心數量 (取兩者中較小的那一個)。|  
 |**pause_indexing**|**int**|指定全文檢索索引是應該暫停 (如果它目前正在執行) 還是繼續 (如果它目前已暫停)。<br /><br /> 0 = 繼續伺服器執行個體的全文檢索索引活動。<br /><br /> 1 = 暫停伺服器執行個體的全文檢索索引活動。|  
 |**resource_usage**|**int**|在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本中沒有作用，所以會予以忽略。|  
@@ -96,7 +98,7 @@ EXEC sp_fulltext_service @action='upgrade_option', @value=1;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)   
  [FULLTEXTSERVICEPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
