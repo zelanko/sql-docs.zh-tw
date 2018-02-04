@@ -3,7 +3,7 @@ title: "SQL Server on Linux 的效能最佳做法 |Microsoft 文件"
 description: "本主題提供在 Linux 上執行 SQL Server 2017 的效能最佳做法和方針。"
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: 565ede5c15f6e4e34a7a5cbbdcd6fa7d145c8ff5
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>效能最佳作法和 Linux 上的 SQL Server 2017 的設定指導方針
 
@@ -64,19 +64,19 @@ ms.lasthandoff: 12/07/2017
 
 下表提供 CPU 設定的建議：
 
-| 設定 | 值 | 詳細資訊 |
+| 設定 | Value | 詳細資訊 |
 |---|---|---|
 | CPU 頻率管理員 | 效能 | 請參閱**cpupower**命令 |
 | ENERGY_PERF_BIAS | 效能 | 請參閱**x86_energy_perf_policy**命令 |
 | min_perf_pct | 100 | 在 intel p 狀態上看到您的文件 |
-| C 狀態 | 只有 C1 | 如何確保只有 C 狀態設為 C1 上看到您的 Linux 或系統文件 |
+| C-States | 只有 C1 | 如何確保只有 C 狀態設為 C1 上看到您的 Linux 或系統文件 |
 
 下表提供磁碟設定的建議：
 
-| 設定 | 值 | 詳細資訊 |
+| 設定 | Value | 詳細資訊 |
 |---|---|---|
 | 磁碟 readahead | 4096 | 請參閱**blockdev**命令 |
-| sysctl 設定 | kernel.sched_min_granularity_ns 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 請參閱**sysctl**命令 |
+| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 請參閱**sysctl**命令 |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>平衡的多節點 NUMA 系統的核心設定自動 numa
 

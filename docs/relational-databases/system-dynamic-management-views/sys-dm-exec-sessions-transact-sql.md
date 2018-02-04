@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_sessions
 - dm_exec_sessions
 - sys.dm_exec_sessions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_sessions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5e0cd35b044d4a5016442ddae4384aea094cc655
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: aa248e9733c17b734eb60095f65b462e42e8b0c7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +52,7 @@ ms.lasthandoff: 01/18/2018
 |client_version|**int**|用戶端連接伺服器所用介面的 TDS 通訊協定版本。 內部工作階段的值為 NULL。 可為 Null。|  
 |client_interface_name|**nvarchar(32)**|用戶端與伺服器通訊所使用的程式庫/驅動程式的名稱。 內部工作階段的值為 NULL。 可為 Null。|  
 |security_id|**varbinary(85)**|與登入相關聯之 Microsoft Windows 安全性識別碼。 不可為 Null。|  
-|login_name|**nvarchar(128)**|目前用來執行工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 如需建立工作階段的原始登入名稱，請參閱 original_login_name。 可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入名稱或 Windows 已驗證的網域使用者名稱。 不可為 Null。|  
+|login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前執行所在工作階段的登入名稱。 如需建立工作階段的原始登入名稱，請參閱 original_login_name。 可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入名稱或 Windows 已驗證的網域使用者名稱。 不可為 Null。|  
 |nt_domain|**nvarchar(128)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用戶端的 Windows 網域 (如果工作階段使用 Windows 驗證或信任連接)。 內部工作階段和非網域使用者的這個值為 NULL。 可為 Null。|  
 |nt_user_name|**nvarchar(128)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用戶端的 Windows 使用者名稱 (如果工作階段使用 Windows 驗證或信任連接)。 內部工作階段和非網域使用者的這個值為 NULL。 可為 Null。|  
 |status|**nvarchar(30)**|工作階段的狀態。 可能的值如下：<br /><br /> **執行**-目前執行中的一個或多個要求<br /><br /> **睡眠**-目前不執行任何要求<br /><br /> **休眠**– 工作階段因連接共用已重設與目前處於登入前狀態。<br /><br /> **Preconnect** -工作階段處於資源管理員分類。<br /><br /> 不可為 Null。|  
@@ -82,8 +85,8 @@ ms.lasthandoff: 01/18/2018
 |deadlock_priority|**int**|工作階段的 DEADLOCK_PRIORITY 設定。 不可為 Null。|  
 |row_count|**bigint**|到目前為止，工作階段傳回的資料列數。 不可為 Null。|  
 |prev_error|**int**|在工作階段傳回的最後一個錯誤的識別碼。 不可為 Null。|  
-|original_security_id|**varbinary(85)**|與 original_login_name 相關聯的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 安全性識別碼。 不可為 Null。|  
-|original_login_name|**nvarchar(128)**|用戶端建立此工作階段所用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 這可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入名稱、Windows 驗證網域使用者名稱或自主資料庫使用者。 請注意，在初始連接之後，工作階段可能已經歷過多次隱含或明確內容切換。 例如，如果[EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)用。 不可為 Null。|  
+|original_security_id|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 與 original_login_name 相關聯的 Windows 安全性識別碼。 不可為 Null。|  
+|original_login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端用來建立此工作階段的登入名稱。 這可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入名稱、Windows 驗證網域使用者名稱或自主資料庫使用者。 請注意，在初始連接之後，工作階段可能已經歷過多次隱含或明確內容切換。 例如，如果[EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)用。 不可為 Null。|  
 |last_successful_logon|**datetime**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 目前工作階段開始之前，original_login_name 上一次登入成功的時間。|  
 |last_unsuccessful_logon|**datetime**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 目前工作階段開始之前，original_login_name 上一次登入不成功的時間。|  
 |unsuccessful_logons|**bigint**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 在 last_successful_logon 與 login_time 之間，original_login_name 嘗試登入不成功的次數。|  
@@ -91,7 +94,7 @@ ms.lasthandoff: 01/18/2018
 |database_id|**smallint**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 每個工作階段之目前資料庫的識別碼。|  
 |authenticating_database_id|**int**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 驗證主體之資料庫的識別碼。 如果是登入，此值會是 0。 如果是自主資料庫使用者，此值會是自主資料庫的資料庫識別碼。|  
 |open_transaction_count|**int**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 每個工作階段的開啟交易數目。|  
-|pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
   
 ## <a name="permissions"></a>Permissions  
 每個人都可以查看他們自己的工作階段資訊。  

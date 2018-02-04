@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_event_log
 - sysmail_event_log_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_event_log database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aadbf36412f02f9a785d078d6fa949fcbeabc5f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9dca8c14d7ea9fefbe566d7f0770b395df48bf25
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**G _ i d**|**int**|記錄中項目的識別碼。|  
+|**Log_id**|**int**|記錄中項目的識別碼。|  
 |**event_type**|**varchar(11)**|插入記錄中通知的類型。 可能的值有錯誤、警告、參考訊息、成功訊息和其他內部訊息。|  
 |**log_date**|**datetime**|產生記錄項目的日期和時間。|  
 |**描述**|**nvarchar(max)**|記錄的訊息文字。|  
@@ -53,8 +56,8 @@ ms.lasthandoff: 11/17/2017
 ## <a name="permissions"></a>Permissions  
  您必須是成員**sysadmin**固定的伺服器角色或**DatabaseMailUserRole**來存取此檢視的資料庫角色。 成員**DatabaseMailUserRole**人員不屬於**sysadmin**角色，只能看到他們所提交的電子郵件的事件。  
   
-## <a name="see-also"></a>請參閱＜  
- [sysmail_faileditems &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [Database Mail 外部程式](../../relational-databases/database-mail/database-mail-external-program.md)  
   
   

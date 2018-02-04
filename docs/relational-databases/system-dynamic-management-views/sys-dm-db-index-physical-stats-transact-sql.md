@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_index_physical_stats (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_index_physical_stats_TSQL
 - sys.dm_db_index_physical_stats
 - dm_db_index_physical_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-caps.latest.revision: "95"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f04fd96c367fc01225b57db6d04831748a618ed2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bdad59aebb96a2afd2f11172c6068d54213c095
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,19 +68,19 @@ sys.dm_db_index_physical_stats (
   
  內建函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 在不指定資料庫名稱的情況下使用 DB_ID 時，目前資料庫的相容性層級必須是 90 或 90 以上。  
   
- *object_id* |NULL |0 |預設值  
+ *object_id* | NULL | 0 | DEFAULT  
  這是索引所在之資料表或檢視表的物件識別碼。 *@object_id* 是 **int**。  
   
  有效的輸入為資料表和檢視表的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。 從[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，有效的輸入也會包含 service broker 佇列名稱或佇列內部的資料表名稱。 預設參數會套用時 （也就是所有物件，所有的索引，依此類推），結果集中包含的所有佇列的片段資訊。  
   
  指定 NULL 來傳回指定之資料庫中的所有資料表和檢視表的資訊。 如果您指定 NULL *object_id*，您也必須指定為 NULL *index_id*和。  
   
- *index_id* | 0 |NULL |-1 |預設值  
+ *index_id* | 0 | NULL | -1 | DEFAULT  
  這是索引的識別碼。 *index_id*是**int**。有效輸入如下的索引 0 的識別碼，如果*object_id*是堆積，NULL，-1 或預設值。 預設值為-1。 NULL、-1，且預設值是在此內容中的對等值。  
   
  請指定 NULL 來傳回基底資料表或檢視表的所有索引資訊。 如果您指定 NULL *index_id*，您也必須指定為 NULL 。  
   
-  |NULL |0 |預設值  
+ *partition_number* | NULL | 0 | DEFAULT  
  這是物件的分割區編號。 是**int**。有效輸入如下： *partion_number*的索引或堆積，NULL、 0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
   
  請指定 NULL 來傳回主控物件之所有分割區的相關資訊。  
@@ -96,9 +98,9 @@ sys.dm_db_index_physical_stats (
 |object_id|**int**|索引所在之資料表或檢視表的物件識別碼。|  
 |index_id|**int**|索引的索引識別碼。<br /><br /> 0 = 堆積。|  
 |partition_number|**int**|在主控物件內，以 1 為基底的分割區編號；資料表、檢視表或索引。<br /><br /> 1 = 非分割區的索引或堆積。|  
-|index_type_desc|**nvarchar （60)**|索引類型的描述：<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> 資料行存放區對應的索引 （內部）<br /><br /> 資料行存放區 DELETEBUFFER 索引 （內部）<br /><br /> 資料行存放區 DELETEBITMAP 索引 （內部）|  
+|index_type_desc|**nvarchar(60)**|索引類型的描述：<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> 資料行存放區對應的索引 （內部）<br /><br /> 資料行存放區 DELETEBUFFER 索引 （內部）<br /><br /> 資料行存放區 DELETEBITMAP 索引 （內部）|  
 |hobt_id|**bigint**|堆積或 B 型樹狀目錄的索引或資料分割的識別碼。<br /><br /> 除了傳回的 hobt_id 的使用者定義的索引，這也會傳回內部的資料行存放區索引的 hobt_id。|  
-|alloc_unit_type_desc|**nvarchar （60)**|配置單位類型的描述：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> 如果是 LOB_DATA 配置單位包含儲存在類型的資料行的資料**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，和**xml**。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 配置單位包含儲存在類型的資料行的資料**varchar （n)**， **nvarchar （n)**， **varbinary**，和**sql_variant**已被發送非資料列。|  
+|alloc_unit_type_desc|**nvarchar(60)**|配置單位類型的描述：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> 如果是 LOB_DATA 配置單位包含儲存在類型的資料行的資料**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，和**xml**。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 配置單位包含儲存在類型的資料行的資料**varchar （n)**， **nvarchar （n)**， **varbinary**，和**sql_variant**已被發送非資料列。|  
 |index_depth|**tinyint**|索引層級的數目。<br /><br /> 1 = 堆積，或 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位。|  
 |index_level|**tinyint**|索引的目前層級。<br /><br /> 如果是索引分葉層級、堆積和 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為 0。<br /><br /> 如果是非分葉索引層級，則大於 0。 *index_level*是最高根層級的索引。<br /><br /> 索引的非分葉層級只會處理時*模式*= DETAILED。|  
 |avg_fragmentation_in_percent|**float**|IN_ROW_DATA 配置單位中，索引的邏輯片段或是堆積的範圍片段。<br /><br /> 其值以百分比表示，而且會考量多個檔案。 如需邏輯和範圍片段的定義，請參閱＜備註＞一節。<br /><br /> 如果是 LOB_DATA 和 ROW_OVERFLOW_DATA 配置單位，則為 0。<br /><br /> NULL 堆積，則*模式*= SAMPLED。|  
@@ -114,9 +116,9 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|記錄大小平均值 (以位元組為單位)。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中 B 型樹狀目錄目前層級的平均記錄大小。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的平均記錄大小。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的平均記錄大小。<br /><br /> NULL*模式*= LIMITED。|  
 |forwarded_record_count|**bigint**|在堆積中，有指向另一個資料位置之轉送指標的記錄數目 (此狀態發生於更新期間，原始位置的空間不足以儲存新資料列時)。<br /><br /> 如果是 IN_ROW_DATA 配置單位以外的任何堆積配置單位，則為 NULL。<br /><br /> NULL 堆積，則*模式*= LIMITED。|  
 |compressed_page_count|**bigint**|壓縮的頁面數。<br /><br /> 如果是堆積，新配置的頁面不會使用 PAGE 壓縮方式。 堆積會在兩個特殊情況下使用 PAGE 壓縮方式：大量匯入資料或是重建堆積時。 造成頁面配置的一般 DML 作業將不會使用 PAGE 壓縮方式。 當 compressed_page_count 值成長到大於您要的臨界值時，重建堆積。<br /><br /> 如果是具有叢集索引的資料表，compressed_page_count 值會指示 PAGE 壓縮的效能。|  
-|hobt_id|bigint|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 只有資料行存放區索引，這是內部的資料行存放區資料分割的資料會追蹤的資料列集的識別碼。 資料列集是儲存為堆積，則資料或二進位樹狀目錄。 它們有相同的索引識別碼，做為父資料行存放區索引。 如需詳細資訊，請參閱[sys.internal_partitions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> 如果為 NULL|  
-|column_store_delete_buffer_state|tinyint|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 清空<br /><br /> 3 = 排清<br /><br /> 4 = 淘汰<br /><br /> 5 = 已備妥|  
-|column_store_delete_buff_state_desc||**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> NOT_APPLICABLE – 父索引不是資料行存放區索引。<br /><br /> OPEN – deleters 並用掃描器。<br /><br /> 水管 – 清空 deleters 但掃描器仍然使用它。<br /><br /> 排清 – 緩衝區已關閉，並刪除點陣圖正在寫入緩衝區中的資料列。<br /><br /> 淘汰 – 已關閉的刪除緩衝區中的資料列寫入為刪除的點陣圖，但因為掃描器仍在使用它緩衝區沒有被截斷。 新的掃描程式不需要使用淘汰的緩衝區，因為開啟的緩衝區已足夠。<br /><br /> 已準備好 – 此刪除緩衝區可供使用。|  
+|hobt_id|bigint|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 只有資料行存放區索引，這是內部的資料行存放區資料分割的資料會追蹤的資料列集的識別碼。 資料列集是儲存為堆積，則資料或二進位樹狀目錄。 它們有相同的索引識別碼，做為父資料行存放區索引。 如需詳細資訊，請參閱[sys.internal_partitions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> 如果為 NULL|  
+|column_store_delete_buffer_state|tinyint|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 清空<br /><br /> 3 = 排清<br /><br /> 4 = 淘汰<br /><br /> 5 = 已備妥|  
+|column_store_delete_buff_state_desc||**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> NOT_APPLICABLE – 父索引不是資料行存放區索引。<br /><br /> OPEN – deleters 並用掃描器。<br /><br /> 水管 – 清空 deleters 但掃描器仍然使用它。<br /><br /> 排清 – 緩衝區已關閉，並刪除點陣圖正在寫入緩衝區中的資料列。<br /><br /> 淘汰 – 已關閉的刪除緩衝區中的資料列寫入為刪除的點陣圖，但因為掃描器仍在使用它緩衝區沒有被截斷。 新的掃描程式不需要使用淘汰的緩衝區，因為開啟的緩衝區已足夠。<br /><br /> 已準備好 – 此刪除緩衝區可供使用。|  
   
 ## <a name="remarks"></a>備註  
  sys.dm_db_index_physical_stats 動態管理函數會取代 DBCC SHOWCONTIG 陳述式。  
@@ -427,13 +429,13 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [索引相關的動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_db_index_operational_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [系統檢視 &#40;TRANSACT-SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

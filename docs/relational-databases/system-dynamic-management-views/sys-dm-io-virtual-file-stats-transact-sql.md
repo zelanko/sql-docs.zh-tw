@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_io_virtual_file_stats_TSQL
 - sys.dm_io_virtual_file_stats
 - dm_io_virtual_file_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_io_virtual_file_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6890eda5969d783a6d40b27493b07e8831146aa8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ab0b534ceea8712c9c197ea52f2da66065d3167
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -66,7 +69,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
  內建函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。  
   
-*file_id* |NULL
+*file_id* | NULL
 
 **適用於：** （從 2008年起） 的 SQL Server、 Azure SQL Database
  
@@ -76,12 +79,12 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|資料庫名稱。</br></br>SQL 資料倉儲，這是儲存在 pdw_node_id 所識別的節點上的資料庫名稱。 每個節點都有一個具有 13 個檔案的 tempdb 資料庫。 每個節點也有分佈，每一個資料庫，而每個散發資料庫有 5 的檔案。 例如，如果每個節點包含 4 分佈，結果會顯示 pdw_node_id 每 20 個散發資料庫檔案。 
 |**database_id**|**smallint**|資料庫的識別碼。|  
 |**file_id**|**smallint**|檔案的識別碼。|  
-|**sys.dm_io_virtual_file_stats**|**bigint**|自電腦啟動之後的毫秒數。 這個資料行可用來比較這個函數的不同輸出。</br></br>資料類型是**int**如[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|自電腦啟動之後的毫秒數。 這個資料行可用來比較這個函數的不同輸出。</br></br>資料類型是**int**如[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|對檔案發出的讀取數。|  
 |**num_of_bytes_read**|**bigint**|這個檔案讀取的總位元組數。|  
 |**io_stall_read_ms**|**bigint**|使用者等候在檔案發出讀取的總時間 (以毫秒為單位)。|  
@@ -89,11 +92,11 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**num_of_bytes_written**|**bigint**|寫入檔案的總位元組數。|  
 |**io_stall_write_ms**|**bigint**|使用者等候檔案完成寫入的總時間 (以毫秒為單位)。|  
 |**io_stall**|**bigint**|使用者等候檔案完成 I/O 的總時間 (以毫秒為單位)。|  
-|**sys.dm_io_virtual_file_stats**|**bigint**|該檔案在磁碟上所用的位元組數。 如果是疏鬆檔案，這個數字就是資料庫快照集在磁碟上所用的實際位元組數。|  
+|**size_on_disk_bytes**|**bigint**|該檔案在磁碟上所用的位元組數。 如果是疏鬆檔案，這個數字就是資料庫快照集在磁碟上所用的實際位元組數。|  
 |**file_handle**|**varbinary**|這個檔案的 Windows 檔案控制代碼。|  
 |**io_stall_queued_read_ms**|**bigint**|**不適用：**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br /> IO 資源管理針對讀取導入的總 IO 延遲。 不可為 Null。 如需詳細資訊，請參閱[sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**不適用：**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br />  IO 資源管理針對寫入導入的總 IO 延遲。 不可為 Null。|
-|**pdw_node_id**|**int**|**適用於：**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>發佈節點的識別碼。
+|**pdw_node_id**|**int**|**適用於：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>發佈節點的識別碼。
  
   
 ## <a name="permissions"></a>Permissions  
@@ -122,7 +125,7 @@ WHERE database_name = ‘tempdb’ AND file_id = 2;
 
 ```
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [我 O 相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

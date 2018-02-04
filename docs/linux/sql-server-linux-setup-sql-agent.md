@@ -3,7 +3,7 @@ title: "Linux 上安裝 SQL Server Agent |Microsoft 文件"
 description: "本主題描述如何在 Linux 上安裝 SQL Server 代理程式。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
-ms.openlocfilehash: 7ba7f55064542f2650584a87888214052b8d74f4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 873c2da961db577889a3fca4139e325083d609e9
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux 上安裝 SQL Server 代理程式
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 下列步驟安裝 SQL Server Agent (**mssql server agent**) 在 Linux 上。 [SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)執行 SQL Server 的排程的工作。 在這一版的 SQL Server 代理程式所支援之功能的資訊，請參閱[Release Notes](sql-server-linux-release-notes.md)。
 
@@ -79,7 +79,7 @@ sudo systemctl restart mssql-server
 
 使用下列步驟來安裝**mssql server agent** SUSE Linux Enterprise Server 上。 
 
-安裝**mssql 伺服器代理程式** 
+Install **mssql-server-agent** 
 
 ```bash
 sudo zypper install mssql-server-agent

@@ -3,7 +3,7 @@ title: "設定 SQL Server 可用性群組的 SLES 叢集 |Microsoft 文件"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: 7bb98b8da1af1b97b9c06b58e5b8264a653547d3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c33c1cea948e64c69e52475e8c63ecce0c52bd6d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本指南提供指示來建立適用於 SQL Server 上 SUSE Linux Enterprise Server (SLES) 12 SP2 的三個節點叢集。 高可用性，Linux 上的可用性群組需要三個節點-請參閱[的可用性群組組態的高可用性與資料保護](sql-server-linux-availability-group-ha.md)。 叢集的圖層根據 SUSE[高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability)之上[Pacemaker](http://clusterlabs.org/)。 
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/01/2017
 
 5. [新增可用性群組為叢集中資源](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)。 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>필수 구성 요소
 
 若要完成以下的端對端案例中，您需要將三個節點叢集部署的三部機器。 下列步驟概述如何設定這些伺服器。
 

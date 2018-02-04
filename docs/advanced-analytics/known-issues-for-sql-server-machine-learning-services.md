@@ -1,6 +1,6 @@
 ---
 title: "機器學習服務中的已知問題 |Microsoft 文件"
-ms.date: 01/19/2018
+ms.date: 01/31/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 197bfc48d000246b59b983fbf890e998cc2b5beb
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
-ms.translationtype: MT
+ms.openlocfilehash: a0cbdbed1f1563c888a383c8901288ace8ddad67
+ms.sourcegitcommit: 553bcfbee67a510c2c0b055ce1d7673504941d11
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>機器學習服務中的已知的問題
 
@@ -165,6 +165,41 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 本節包含專屬於 SQL Server 上執行 R 的已知的問題，以及相關的 R 程式庫和工具 Microsoft，包括 RevoScaleR 所發行的一些問題。
 
 如需其他可能會影響 R 解決方案的已知問題，請參閱[Server 機器學習](https://docs.microsoft.com/machine-learning-server/resources-known-issues)站台。
+
+### <a name="access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>在非預設位置的 SQL Server 上執行 R 指令碼時存取被拒警告
+
+如果 SQL Server 執行個體已安裝到非預設位置，例如外部`Program Files`資料夾中，當您嘗試執行安裝套件的指令碼時，會引發 ACCESS_DENIED 警告。 例如：
+
+```text
+In normalizePath(path.expand(path), winslash, mustWork) :
+  path[2]="E:/SQL17.data/MSSQL14.SQL17/MSSQL/ExternalLibraries/R/8/1": Access is denied
+```
+
+R 函式會嘗試讀取此路徑，而如果會失敗，原因是內建使用者群組**SQLRUserGroup**，並沒有讀取權限。 就會引發此警告不會封鎖執行目前的 R 指令碼，但警告可能會重複發生，每當使用者執行任何其他的 R 指令碼。
+
+如果您已安裝 SQL Server 的預設位置，這不會發生錯誤，因為所有的 Windows 使用者擁有讀取權限`Program Files`資料夾。
+
+在服務即將發行版本中，將會解決這個問題。 因應措施，提供群組， **SQLRUserGroup**，具有讀取存取權的所有父資料夾`ExternalLibraries`。
+
+### <a name="serialization-error-between-old-and-new-versions-of-revoscaler"></a>舊的和新版本之間的 RevoScaleR 序列化錯誤
+
+如果您將使用遠端 SQL Server 執行個體的序列化的格式的模型，您可能會收到錯誤:"memDecompress 時發生錯誤 (資料中，輸入 = 解壓縮) 發生內部錯誤-3 memDecompress(2)。 」
+
+如果您儲存使用的序列化函式中，新版本的模型，會引發這個錯誤[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)，但您還原序列化模型的 SQL Server 執行個體有較舊版本的 RevoScaleR Api，從 SQLServer 2017 CU2 或更早版本。
+
+因應措施，您可以升級使用較新版的 RevoScaleR 的 SQL Server 執行個體。 您也可以在您安裝 SQL Server 執行個體的用戶端上安裝相同版本的 RevoScaleR。 
+
+如果 API 版本是一樣的或如果您要移動與較舊的序列化函式，可使用 API 的較新版本的伺服器上儲存的模型，則不會出現錯誤。
+
+換句話說，使用相同版本的 RevoScaleR 序列化和還原序列化作業。
+
+### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>即時計分無法正確處理 learningRate 參數，在樹狀結構和樹系模型
+
+如果您使用決策樹或決策樹方法建立模型，並指定學習速率，使用時，您可能會看到不一致的結果`sp_rxpredict`或 SQL`PREDICT`函式，相較於使用`rxPredict`。
+
+可能的原因是 API 中的發生錯誤的序列化處理序模型，且僅限於`learningRate`參數： 例如，在[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)，或
+
+在服務即將發行版本中，將會修正此問題。
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>R 作業處理器相似性的限制
 

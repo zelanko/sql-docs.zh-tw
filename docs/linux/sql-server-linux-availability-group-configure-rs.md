@@ -3,7 +3,7 @@ title: "SQL Server 可用性群組設定為向外延展讀取 on Linux |Microsof
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/24/2018
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 1b7705c33b252dc7cb032976b15c7c0efe28de8d
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: e2ce8a7cd87e188fce0f1b0f62bde148324373a5
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>SQL Server 可用性群組設定為向外延展讀取 on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 您可以在 Linux 上設定 SQL Server Alwayson 上可用性群組 (AG) 的向外延展讀取工作負載。 有兩種類型的 Ag 的架構。 高可用性架構會使用叢集管理員來提供改良的業務續航力。 此架構也可以包含向外延展讀取的複本。 若要建立高可用性架構，請參閱[設定 SQL Server Alwayson 可用性群組在 Linux 上的高可用性](sql-server-linux-availability-group-configure-ha.md)。 其他架構支援僅為向外延展讀取工作負載。 本文說明如何建立不含向外延展讀取工作負載的叢集管理員 AG。 此架構提供的向外延展讀取只。 它並不提供高可用性。
 

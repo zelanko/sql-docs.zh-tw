@@ -3,7 +3,7 @@ title: "設定容錯移轉叢集執行個體存放區 NFS-SQL Server on Linux |M
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 1b944d36e968234d5ea77a861c595e440cbbb15b
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 25bcc2fb0ddb60198208d88ce9c19be139d6ec2f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-NFS-SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文說明如何在 Linux 上設定容錯移轉叢集執行個體 (FCI) 的 NFS 存放裝置。 
 
@@ -232,7 +232,7 @@ NFS 或網路檔案系統中，為共用磁碟 Linux 世界，但不是一的 Wi
 
    * 若要測試，請在該資料夾中建立的資料庫。 如下所示的範例會使用 sqlcmd 建立資料庫，切換至該內容，確認檔案存在於作業系統層級，然後再刪除暫存位置。 您可以使用 SSMS。
 
-    ![15 createtestdatabase][4]
+    ![15-createtestdatabase][4]
  
    * 取消掛接共用 
 

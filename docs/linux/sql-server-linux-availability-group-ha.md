@@ -12,20 +12,20 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7131eec581f973738d1cacb45dd355e2b7168aeb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組組態的高可用性與資料保護
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 這篇文章會提供支援的部署組態，SQL Server Always On 可用性群組中的 Linux 伺服器上。 可用性群組支援高可用性和資料保護。 自動偵測、 自動容錯移轉和透明容錯移轉後的重新連線提供高可用性。 同步處理的複本提供資料保護。 
 
@@ -150,7 +150,7 @@ SQL Server 2017 導入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資�
 
 例如，可用性群組包含三個同步複本的一個主要複本和兩個同步次要複本。
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`為 1。(3 / 2-> 1)。
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 1; (3 / 2 -> 1).
 
 - 所需的複本，以回應預先升級動作數目為 2;(3-1 = 2)。 
 

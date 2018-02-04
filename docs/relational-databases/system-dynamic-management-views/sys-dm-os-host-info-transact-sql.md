@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_os_host_info (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_os_host_info (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/10/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - sys.dm_os_host_info_TSQL
 - dm_os_host_info
 - dm_os_host_info_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_host_info dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63238f4148fd57f05aa0c07bb1fad92a41368c06
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 35c0163abffc8103164cc31d0d730db1a0aebb95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (TRANSACT-SQL)
+# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 傳回一個資料列會顯示作業系統版本資訊。  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/18/2017
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |一種作業系統： Windows 或 Linux |
 |**host_distribution** |**nvarchar(256)** |作業系統的描述。 |
-|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統版本 (版本號碼)。 如需值和描述的清單，請參閱[作業系統版本 (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx)。 <br> 適用於 Linux，會傳回空字串。 |  
+|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統版本 （版本號碼）。 如需值和描述的清單，請參閱[作業系統版本 (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx)。 <br> 適用於 Linux，會傳回空字串。 |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 作業系統的 Service Pack 層級。 <br> 適用於 Linux，會傳回空字串。 |  
 |**host_sku**|**int**|Windows 庫存單位 (SKU) 識別碼。 如需 SKU Id 和描述的清單，請參閱[GetProductInfo 函數](http://msdn.microsoft.com/library/ms724358.aspx)。 可為 Null。 <br> 適用於 Linux，則傳回 NULL。 |  
 |**os_language_version**|**int**|作業系統的 Windows 地區設定識別碼 (LCID)。 如需 LCID 值和描述的清單，請參閱[microsoft 指派的地區設定識別碼](http://go.microsoft.com/fwlink/?LinkId=208080)。 不可為 null。|  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="remarks"></a>備註  
 此檢視是類似[sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)，加入資料行來區分 Windows 和 Linux。
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
 `SELECT`權限`sys.dm_os_host_info`會授與`public`預設角色。 已被撤銷，需要`VIEW SERVER STATE`伺服器的權限。   
@@ -69,7 +72,7 @@ FROM sys.dm_os_host_info;
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
+ |視窗   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
 
 以下是在 Linux 上設定的範例結果：
  
@@ -78,8 +81,8 @@ FROM sys.dm_os_host_info;
  |Linux |Ubuntu |16.04  |   |NULL   |1033 |  
 
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_os_windows_info (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
+ [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  
 

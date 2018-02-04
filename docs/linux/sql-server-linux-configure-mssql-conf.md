@@ -3,7 +3,7 @@ title: "在 Linux 上的 SQL Server 設定 |Microsoft 文件"
 description: "本主題描述如何在 Linux 上設定 SQL Server 2017 設定使用 mssql conf 工具。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 9aca5fe7905f06269bd07b7946c3bb6ef4e37492
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fe0a3bc095e1dcd76f9fdc98e1621974dca6693e
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>設定 SQL Server on Linux mssql conf 工具
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 **mssql conf**是隨 SQL Server 2017 Red Hat Enterprise Linux、 SUSE Linux Enterprise Server 和 Ubuntu 的組態指令碼。 您可以使用此公用程式來設定下列參數：
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/01/2017
 | [記憶體限制](#memorylimit) | 設定 SQL Server 的記憶體限制。 |
 | [TCP 連接埠](#tcpport) | 變更 SQL Server 接聽的連接的連接埠。 |
 | [TLS](#tls) | 設定傳輸層級安全性。 |
-| [Traceflag](#traceflags) | 設定服務所要使用的 traceflag。 |
+| [Traceflags](#traceflags) | 設定服務所要使用的 traceflag。 |
 
 > [!TIP]
 > 其中某些設定也可以使用環境變數設定。 如需詳細資訊，請參閱[與環境變數設定 SQL Server 設定](sql-server-linux-configure-environment-variables.md)。
@@ -219,12 +219,12 @@ ms.lasthandoff: 12/01/2017
 
     下表列出可能**coredump.coredumptype**值。
 
-    | 類型 | Description |
+    | 型別 | Description |
     |-----|-----|
-    | **迷你** | 迷你是最小的傾印檔案類型。 它使用 Linux 系統資訊來決定執行緒和處理序中的模組。 傾印包含只有主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或全域變數。 |
+    | **mini** | 迷你是最小的傾印檔案類型。 它使用 Linux 系統資訊來決定執行緒和處理序中的模組。 傾印包含只有主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或全域變數。 |
     | **miniplus** | MiniPlus 迷你，類似，但它包含額外的記憶體。 其了解 SQLPAL 和主機環境中，傾印中加入下列的記憶體區域的內部資訊：</br></br> -各種全域變數</br> -所有以上 64 TB 的記憶體</br> -All 名為區域中找到**/proc/$ pid/對應**</br> 間接記憶體與執行緒堆疊</br> 執行緒的資訊</br> 關聯 Teb 的和 Peb 的</br> 模組資訊</br> VMM 和 VAD 樹狀結構 |
-    | **篩選** | 減法為基礎的篩選會使用設計程序中的所有記憶體其中都包含除非明確地排除。 設計了解 SQLPAL 和主機環境中，從傾印中排除特定區域的內部資訊。
-    | **完整** | 完整的完整程序傾印包含所有區域位於**/proc/$ pid/對應**。 這不由控制**coredump.captureminiandfull**設定。 |
+    | **filtered** | 減法為基礎的篩選會使用設計程序中的所有記憶體其中都包含除非明確地排除。 設計了解 SQLPAL 和主機環境中，從傾印中排除特定區域的內部資訊。
+    | **full** | 完整的完整程序傾印包含所有區域位於**/proc/$ pid/對應**。 這不由控制**coredump.captureminiandfull**設定。 |
 
 ## <a id="dbmail"></a>設定 SQL Server 的預設資料庫郵件設定檔，在 Linux 上
 
@@ -401,7 +401,7 @@ sudo cat /var/opt/mssql/mssql.conf
 
 請注意，此檔案中未顯示任何設定都使用其預設值。 下節將提供範例**mssql.conf**檔案。
 
-## <a name="mssqlconf-format"></a>mssql.conf 格式
+## <a name="mssqlconf-format"></a>mssql.conf format
 
 下列**/var/opt/mssql/mssql.conf**每個設定檔提供的範例。 您可以使用此格式，以手動方式進行變更以**mssql.conf**檔案所需。 如果您不要手動變更的檔案，必須套用變更之前，先重新啟動 SQL Server。 若要使用**mssql.conf**檔案使用 Docker 時，您必須擁有 Docker[保存您的資料](sql-server-linux-configure-docker.md)。 第一次加入完整**mssql.conf**檔至主應用程式目錄，然後再執行容器。 沒有在這個範例[客戶的意見反應](sql-server-linux-customer-feedback.md)。
 

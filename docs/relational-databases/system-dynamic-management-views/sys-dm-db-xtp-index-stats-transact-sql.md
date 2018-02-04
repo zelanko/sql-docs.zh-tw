@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_index_stats
 - sys.dm_db_xtp_index_stats_TSQL
 - dm_db_xtp_index_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_index_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_index_stats dynamic management view
 ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8803e51eab52a10e67e90dc6ddb06cfc7d737434
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 957445215c8c5d61778639804476effaf8ace766
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40; 記憶體內部最佳化 &#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)和[使用記憶體最佳化資料表的索引指導方針](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)。  
 
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|這個索引所屬物件的識別碼。|  
 |xtp_object_id|**bigint**|對應至物件的目前版本的內部識別碼。<br /><br /> 注意： 適用於[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
@@ -57,12 +60,12 @@ ms.lasthandoff: 11/17/2017
 |phantom_expired_rows_encountered|**bigint**|僅供內部使用。|  
 |phantom_expired_removed_rows_encountered|**bigint**|僅供內部使用。|  
 |phantom_expired_rows_removed|**bigint**|僅供內部使用。|  
-|object_address|**varbinary （8)**|僅供內部使用。|  
+|object_address|**varbinary(8)**|僅供內部使用。|  
   
 ## <a name="permissions"></a>Permissions  
  需要目前資料庫的 VIEW DATABASE STATE 權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [記憶體最佳化的資料表動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

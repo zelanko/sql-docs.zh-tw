@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.fulltext_catalogs
 - fulltext_catalogs
 - fulltext_catalogs_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.fulltext_catalogs catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fulltext_catalogs catalog view
 ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bebdf8510393ea10076a405f585c3414d0afcca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4c3f1c279176dea69b27a2c1416af3d15338924
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextcatalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |fulltext_catalog_id|**int**|全文檢索目錄的識別碼。 這在各個資料庫中的全文檢索目錄都是唯一的。|  
 |name|**sysname**|目錄名稱。 在資料庫中，這是唯一的。|  
-|路徑|**nvarchar （260)**|檔案系統中全文檢索目錄的目錄名稱。|  
+|路徑|**nvarchar(260)**|檔案系統中全文檢索目錄的目錄名稱。|  
 |is_default|**bit**|預設全文檢索目錄。<br /><br /> True = 是預設值。<br /><br /> False = 不是預設值。|  
 |is_accent_sensitivity_on|**bit**|目錄的區分腔調字設定。<br /><br /> True = 區分腔調字。<br /><br /> False = 不區分腔調字。|  
 |data_space_id|**int**|建立這個目錄的檔案群組。|  
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [建立全文檢索目錄 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   

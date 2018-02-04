@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_server_services (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_server_services (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/07/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_server_services
 - sys.dm_server_services_TSQL
 - dm_server_services_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_server_services dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 08a4cd914783a094cf9d9ae681d3a3695af34e4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 205d755e46b472cfca44170819ba177e523e4f3f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前執行個體中 SQL Server、全文檢索與 SQL Server Agent 服務的詳細資訊。 使用此動態管理檢視可報告有關這些服務的狀態資訊。  
   
  
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|名稱[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，全文檢索或 SQL Server Agent 服務。 不可為 null。|  
 |startup_type|**int**|指出服務的啟動模式。 以下是可能的值和其相對應的描述。<br /><br /> 0： 其他<br />1： 其他<br />2： 自動<br />3： 手動<br />4： 已停用<br /><br /> 可為 Null。|  
@@ -56,6 +59,6 @@ ms.lasthandoff: 01/08/2018
 ### <a name="permissions"></a>Permissions  
  需要伺服器的 `VIEW SERVER STATE` 權限。  
   
-## <a name="see-also"></a>請參閱  
- [sys.dm_server_registry &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sys.dm_server_registry &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_memory_buffers_TSQL
 - dm_fts_memory_buffers
 - sys.dm_fts_memory_buffers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_memory_buffers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_memory_buffers dynamic management view
 ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3708d5c98e8869e0a1d1a68fe2bc2df3376bcadf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 190d564ec27cf7921fbfbd9d6e85fc594b77c2d6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |資料行|資料類型|Description|  
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|配置的記憶體集區識別碼。<br /><br /> 0 = 小緩衝區<br /><br /> 1 = 大緩衝區|  
-|**memory_address**|**varbinary （8)**|配置記憶體集區的識別碼。|  
+|**memory_address**|**varbinary(8)**|配置記憶體集區的識別碼。|  
 |**name**|**nvarchar(4000)**|共用記憶體緩衝區的名稱，這項配置就是針對該緩衝區而建立。|  
 |**is_free**|**bit**|記憶體緩衝區的目前狀態。<br /><br /> 0 = 可用<br /><br /> 1 = 忙碌|  
 |**row_count**|**int**|這個緩衝區目前正在處理的資料列數。|  
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 |----------|--------|------------------|  
 |dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|多對一|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [全文檢索搜尋及語意搜尋動態管理檢視與函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   

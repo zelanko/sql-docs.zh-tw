@@ -3,7 +3,7 @@ title: "針對高可用性設定 SQL Server 容器中 Kubernetes |Microsoft 文�
 description: "本教學課程會示範如何部署與 Kubernetes Azure 容器服務上的 SQL Server 高可用性解決方案。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 1220c85a539cdaed855d6dfd44ea4afffdd927b2
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.openlocfilehash: 4ada1034b64f710f4eeae995b771ef8be5bf4fe2
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>SQL Server 容器 Kubernetes 中設定高可用性
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 了解如何使用來設定 SQL Server 執行個體上 Kubernetes 中 Azure 容器服務 (AKS)，持續性儲存體提供高可用性 (HA)。 方案提供恢復功能。 如果 SQL Server 執行個體失敗，Kubernetes 會自動重新建立它在新的 pod。 AKS 提供 Kubernetes 節點發生故障的恢復功能。 
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/24/2018
 
 ## <a name="ha-solution-that-uses-kubernetes-running-in-azure-container-service"></a>高可用性解決方案，會使用 Kubernetes Azure 容器服務中執行
 
-Kubernetes 1.6 和更新版本可支援[儲存類別](http://kubernetes.io/docs/concepts/storage/storage-classes/)，[永續性磁碟區宣告](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，而[Azure 磁碟的磁碟區的驅動程式](http://github.com/Azure/azurefile-dockervolumedriver)。 您可以建立及管理原生中 Kubernetes 的 SQL Server 執行個體。 這篇文章中的範例示範如何建立[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)達到高可用性組態類似於共用的磁碟容錯移轉叢集執行個體。 此設定會 Kubernetes 扮演叢集 orchestrator 的角色。 當容器中的 SQL Server 執行個體失敗時，orchestrator bootstraps 附加至相同的永續性儲存體容器的另一個執行個體。
+Kubernetes 1.6 和更新版本可支援[儲存類別](http://kubernetes.io/docs/concepts/storage/storage-classes/)，[永續性磁碟區宣告](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，而[Azure 磁碟的磁碟區類型](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 您可以建立及管理原生中 Kubernetes 的 SQL Server 執行個體。 這篇文章中的範例示範如何建立[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)達到高可用性組態類似於共用的磁碟容錯移轉叢集執行個體。 此設定會 Kubernetes 扮演叢集 orchestrator 的角色。 當容器中的 SQL Server 執行個體失敗時，orchestrator bootstraps 附加至相同的永續性儲存體容器的另一個執行個體。
 
 ![Kubernetes SQL Server 叢集的圖表](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
@@ -251,6 +251,8 @@ El comando siguiente crea SA 帳戶的密碼：
    若要檢視 pod 的狀態，請輸入`kubectl get pod`。
 
    ![Get pod 命令的螢幕擷取畫面](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
+
+   在上述映像，pod 的狀態已`Running`。 這個狀態表示容器準備。 這可能需要幾分鐘的時間。
 
    >[!NOTE]
    >在建立部署之後，可能需要幾分鐘的時間才看到 pod。 延遲是因為叢集會提取[mssql-伺服器-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)從 Docker hub 的映像。 映像時，第一次提取之後，後續部署可能會比較快，如果是部署到已經有影像快取於其中的節點。 

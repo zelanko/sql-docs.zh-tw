@@ -7,30 +7,33 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: sql-database
 ms.service: sql-database
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: Azure SQL Database
+applies_to:
+- Azure SQL Database
 f1_keywords:
 - dbo.slo_service_objectives
 - dbo.slo_service_objectives_TSQL
 - slo_service_objectives
 - slo_service_objectives_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dbo.slo_service_objectives
 - slo_service_objectives
 ms.assetid: d5dd7ed9-440a-4432-ad45-644e4e72318f
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f91dccf478821047e4c3a25ea19d35d1a2774fd
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 3a5d3a911aa1ffa5088f2a817c2434c98eb7cbe3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosloserviceobjectives-azure-sql-database"></a>dbo.slo_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,10 +47,10 @@ ms.lasthandoff: 12/21/2017
 |-|  
 |**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11。|  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |objective_id|**uniqueidentifier**|服務等級目標的識別碼。|  
-|NAME|**sysname**|服務等級目標的名稱。|  
+|name|**sysname**|服務等級目標的名稱。|  
 |description|**nvarchar**|服務等級目標的描述。|  
 |create_date|**datetimeoffset(7)**|服務等級目標在伺服器上的建立日期。|  
 |is_system|**bit**|1 = 系統服務等級目標|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="permissions"></a>Permissions  
  這個檢視可用於所有的使用者角色有權連接到虛擬**主要**資料庫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理高階資料庫](http://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

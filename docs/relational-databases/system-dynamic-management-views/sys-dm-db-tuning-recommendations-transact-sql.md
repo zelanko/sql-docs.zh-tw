@@ -9,7 +9,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,23 +18,24 @@ f1_keywords:
 - dm_db_tuning_recommendations
 - sys.dm_db_tuning_recommendations_TSQL
 - dm_db_tuning_recommendations_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database tuning recommendations feature [SQL Server], sys.dm_db_tuning_recommendations dynamic management view
 - sys.dm_db_tuning_recommendations dynamic management view
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: jovanpop-msft
 ms.author: jovanpop
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cfe2f56cdf602b7d34efc305b6d8b15429d94fb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 43acc4c2bfbcb9458f93f2ad89414e3781a7836d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_微調\_建議 (TRANSACT-SQL)
+# <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   傳回有關微調建議的詳細的資訊。  
@@ -43,23 +45,23 @@ ms.lasthandoff: 11/17/2017
 | **資料行名稱** | **資料類型** | **說明** |
 | --- | --- | --- |
 | **name** | **nvarchar(4000)** | 建議的唯一名稱。 |
-| **型別** | **nvarchar(4000)** | 產生的建議，例如自動微調選項的名稱`FORCE_LAST_GOOD_PLAN` |
-| **原因** | **nvarchar(4000)** | 為什麼提供這項建議的原因。 |
-| **有效\_因為** | **datetime2** | 第一次產生這項建議。 |
-| **最後一個\_重新整理** | **datetime2** | 最後一次產生這項建議。 |
+| **type** | **nvarchar(4000)** | 產生的建議，例如自動微調選項的名稱`FORCE_LAST_GOOD_PLAN` |
+| **reason** | **nvarchar(4000)** | 為什麼提供這項建議的原因。 |
+| **valid\_since** | **datetime2** | 第一次產生這項建議。 |
+| **last\_refresh** | **datetime2** | 最後一次產生這項建議。 |
 | **狀態** | **nvarchar(4000)** | JSON 文件描述建議事項的狀態。 可用的欄位如下：<br />-   `currentValue`-建議的目前狀態。<br />-   `reason`– 說明建議處於目前狀態的常數。|
-| **是\_可執行檔\_動作** | **bit** | 1 = 建議可以針對透過資料庫來執行[!INCLUDE[tsql_md](../../includes/tsql_md.md)]指令碼。<br />0 = 無法針對資料庫執行的建議事項 (例如： 資訊只有或已還原的建議) |
-| **是\_revertable\_動作** | **bit** | 1 = 建議可以自動監控和 Database engine 所還原。<br />0 = 建議無法自動監控和還原。 大部分&quot;可執行檔&quot;動作將會是&quot;revertable&quot;。 |
-| **執行\_動作\_啟動\_時間** | **datetime2** | 套用建議的日期。 |
-| **執行\_動作\_持續時間** | **time** | 執行動作的持續時間。 |
-| **執行\_動作\_起始\_由** | **nvarchar(4000)** | `User`= 使用者手動強制建議事項中的計劃。 <br /> `System`= 系統會自動套用建議事項。 |
-| **執行\_動作\_起始\_時間** | **datetime2** | 已套用建議的日期。 |
-| **還原\_動作\_啟動\_時間** | **datetime2** | 建議已還原的日期。 |
-| **還原\_動作\_持續時間** | **time** | 還原動作的持續時間。 |
-| **還原\_動作\_起始\_由** | **nvarchar(4000)** | `User`= 使用者手動非強迫性的建議計劃。 <br /> `System`= 系統會自動還原建議。 |
-| **還原\_動作\_起始\_時間** | **datetime2** | 建議已還原的日期。 |
-| **分數** | **int** | 估計值/影響此建議在 0 到 100 之間的小數位數 （越大越好） |
-| **詳細資料** | **nvarchar(max)** | 包含建議的更多詳細的 JSON 文件。 可用的欄位如下：<br /><br />`planForceDetails`<br />-    `queryId`-查詢\_迴歸查詢的識別碼。<br />-    `regressedPlanId`-plan_id 迴歸的計劃。<br />-   `regressedPlanExecutionCount`的偵測到執行與迴歸的計劃之前，迴歸查詢的次數。<br />-    `regressedPlanAbortedCount`-迴歸的計畫執行期間偵測到的錯誤數目。<br />-    `regressedPlanCpuTimeAverage`的在偵測到迴歸之前由迴歸查詢平均 CPU 時間。<br />-    `regressedPlanCpuTimeStddev`的偵測到的迴歸之前迴歸的查詢所耗用的 CPU 時間標準差。<br />-    `recommendedPlanId`-plan_id 應該強制的計畫。<br />-   `recommendedPlanExecutionCount`-執行具有在偵測到迴歸之前應該強制的計劃的查詢數目。<br />-    `recommendedPlanAbortedCount`-應該強制的計畫執行期間偵測到的錯誤數目。<br />-    `recommendedPlanCpuTimeAverage`-平均 （計算之前偵測到迴歸） 應該強制計畫來執行查詢所耗用的 CPU 時間。<br />-    `recommendedPlanCpuTimeStddev`偵測到的迴歸之前迴歸的查詢所耗用的 CPU 時間的標準差。<br /><br />`implementationDetails`<br />-  `method`的應該用來更正迴歸方法。 值一律是`TSql`。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)]應強制執行建議的計畫執行的指令碼。 |
+| **is\_executable\_action** | **bit** | 1 = 建議可以針對透過資料庫來執行[!INCLUDE[tsql_md](../../includes/tsql_md.md)]指令碼。<br />0 = 無法針對資料庫執行的建議事項 (例如： 資訊只有或已還原的建議) |
+| **is\_revertable\_action** | **bit** | 1 = 建議可以自動監控和 Database engine 所還原。<br />0 = 建議無法自動監控和還原。 大部分&quot;可執行檔&quot;動作將會是&quot;revertable&quot;。 |
+| **execute\_action\_start\_time** | **datetime2** | 套用建議的日期。 |
+| **execute\_action\_duration** | **time** | 執行動作的持續時間。 |
+| **execute\_action\_initiated\_by** | **nvarchar(4000)** | `User`= 使用者手動強制建議事項中的計劃。 <br /> `System`= 系統會自動套用建議事項。 |
+| **execute\_action\_initiated\_time** | **datetime2** | 已套用建議的日期。 |
+| **revert\_action\_start\_time** | **datetime2** | 建議已還原的日期。 |
+| **revert\_action\_duration** | **time** | 還原動作的持續時間。 |
+| **revert\_action\_initiated\_by** | **nvarchar(4000)** | `User`= 使用者手動非強迫性的建議計劃。 <br /> `System`= 系統會自動還原建議。 |
+| **revert\_action\_initiated\_time** | **datetime2** | 建議已還原的日期。 |
+| **score** | **int** | 估計值/影響此建議在 0 到 100 之間的小數位數 （越大越好） |
+| **details** | **nvarchar(max)** | 包含建議的更多詳細的 JSON 文件。 可用的欄位如下：<br /><br />`planForceDetails`<br />-    `queryId`-查詢\_迴歸查詢的識別碼。<br />-    `regressedPlanId`-plan_id 迴歸的計劃。<br />-   `regressedPlanExecutionCount`的偵測到執行與迴歸的計劃之前，迴歸查詢的次數。<br />-    `regressedPlanAbortedCount`-迴歸的計畫執行期間偵測到的錯誤數目。<br />-    `regressedPlanCpuTimeAverage`的在偵測到迴歸之前由迴歸查詢平均 CPU 時間。<br />-    `regressedPlanCpuTimeStddev`的偵測到的迴歸之前迴歸的查詢所耗用的 CPU 時間標準差。<br />-    `recommendedPlanId`-plan_id 應該強制的計畫。<br />-   `recommendedPlanExecutionCount`-執行具有在偵測到迴歸之前應該強制的計劃的查詢數目。<br />-    `recommendedPlanAbortedCount`-應該強制的計畫執行期間偵測到的錯誤數目。<br />-    `recommendedPlanCpuTimeAverage`-平均 （計算之前偵測到迴歸） 應該強制計畫來執行查詢所耗用的 CPU 時間。<br />-    `recommendedPlanCpuTimeStddev`偵測到的迴歸之前迴歸的查詢所耗用的 CPU 時間的標準差。<br /><br />`implementationDetails`<br />-  `method`的應該用來更正迴歸方法。 值一律是`TSql`。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)]應強制執行建議的計畫執行的指令碼。 |
   
 ## <a name="remarks"></a>備註  
  所傳回的資訊`sys.dm_db_tuning_recommendations`資料庫引擎會識別可能發生的查詢效能低下，並不會保存時，會更新。 建議會保留只[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新啟動。 如果想要保留在伺服器回收之後，資料庫管理員應該定期製作微調建議的備份副本。 
@@ -83,7 +85,7 @@ ms.lasthandoff: 11/17/2017
 | `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN`選項會停用使用者驗證程序期間。 啟用`FORCE_LAST_GOOD_PLAN`選項使用[設定 AUTOMATIC_TUNING ALTER DATABASE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)陳述式或強制的計劃使用中的指令碼，以手動方式`[details]`資料行。 |
 | `UnsupportedStatementType` | 無法查詢上強制計劃。 不支援查詢的範例包括資料指標和`INSERT BULK`陳述式。 |
 | `LastGoodPlanForced` | 已成功套用建議事項。 |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)]識別潛在的效能變差，但是`FORCE_LAST_GOOD_PLAN`選項未啟用 – 請參閱[設定 AUTOMATIC_TUNING ALTER DATABASE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). 手動套用建議，或啟用`FORCE_LAST_GOOD_PLAN`選項。 |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 識別潛在的效能變差，但是`FORCE_LAST_GOOD_PLAN`選項未啟用 – 請參閱[設定 AUTOMATIC_TUNING ALTER DATABASE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). 手動套用建議，或啟用`FORCE_LAST_GOOD_PLAN`選項。 |
 | `VerificationAborted`| 驗證程序會因重新啟動或中止查詢存放區清除。 |
 | `VerificationForcedQueryRecompile`| 查詢會重新編譯，因為沒有顯著的效能改進。 |
 | `PlanForcedByUser`| 使用者以手動方式強制執行計劃使用[sp_query_store_force_plan &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)程序。 |
@@ -112,9 +114,9 @@ WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要`Server admin`或`Azure Active Directory admin`帳戶。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)   
- [sys.database_automatic_tuning_options &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
- [sys.database_query_store_options &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
+ [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON 支援](../../relational-databases/json/index.md)
  

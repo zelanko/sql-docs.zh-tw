@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f28c9cf92402fcecfc15eb0d527becbc9c3ddd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c0799d00819bade1e0f87fceb916aa649aef150a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,12 +35,12 @@ ms.lasthandoff: 11/17/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary （8)**|事件工作階段的記憶體位址。 具有多對一關係 sys.dm_xe_database_sessions.address。 不可為 Null。|  
-|column_name|**nvarchar （60)**|組態值的名稱。 不可為 Null。|  
+|event_session_address|**varbinary(8)**|事件工作階段的記憶體位址。 具有多對一關係 sys.dm_xe_database_sessions.address。 不可為 Null。|  
+|column_name|**nvarchar(60)**|組態值的名稱。 不可為 Null。|  
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。 不可為 Null。|  
 |column_value|**nvarchar(2048)**|資料行的設定值。 可為 Null。|  
-|object_type|**nvarchar （60)**|物件的型別。  不是 nullable.object_type 是下列之一：<br /><br /> event<br /><br /> 目標|  
-|object_name|**nvarchar （60)**|這個資料行所屬之物件的名稱。 不可為 Null。|  
+|object_type|**nvarchar(60)**|物件的型別。  不是 nullable.object_type 是下列之一：<br /><br /> event<br /><br /> target|  
+|object_name|**nvarchar(60)**|這個資料行所屬之物件的名稱。 不可為 Null。|  
 |object_package_guid|**uniqueidentifier**|包含物件之封裝的 GUID。 不可為 Null。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |dm_xe_database_session_object_columns.object_name<br /><br /> dm_xe_database_session_object_columns.object_package_guid|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|多對一|  
 |dm_xe_database_session_object_columns.column_name<br /><br /> dm_xe_database_session_object_columns.column_id|sys.dm_xe_object_columns.name<br /><br /> sys.dm_xe_object_columns.column_id|多對一|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  
   
   

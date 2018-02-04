@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_external_script_execution_stats |Microsoft 文件"
+title: sys.dm_external_script_execution_stats | Microsoft Docs
 ms.custom: 
 ms.date: 09/16/2016
 ms.prod: sql-non-specified
@@ -16,19 +16,21 @@ f1_keywords:
 - sys.dm_external_script_execution_stats_TSQL
 - dm_external_script_execution_stats
 - dm_external_script_execution_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_external_script_execution_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_external_script_execution_stats dynamic management view
 ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a80c26130d5671dd387122930e599a2c33a5db60
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8306c682ddf8e376e13629cc6fe13472e08f59b0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  只有安裝並啟用支援外部指令碼執行的功能，才能使用此 DMV。 如需如何針對 R 指令碼執行這項操作的資訊，請參閱[設定 SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |language|**nvarchar**|註冊的外部指令碼語言名稱。 每個外部指令碼必須在指令碼要求中指定語言，才能啟動相關聯的啟動程式。 |  
 |counter_name|**nvarchar**|註冊的外部指令碼函數名稱。 不可為 Null。|  
@@ -90,7 +92,7 @@ WHERE language = 'R';
 ```  
 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [執行相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md) 
 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  

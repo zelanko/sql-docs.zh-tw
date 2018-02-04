@@ -3,7 +3,7 @@ title: "DB 郵件和電子郵件警示，在 Linux 上的 SQL 代理程式與 |M
 description: "本主題描述如何使用 SQL Server on Linux 的 DB 郵件和電子郵件警示"
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: tbd
 ms.workload: Inactive
-ms.openlocfilehash: 5ee028c91cfc9a3a5b32a7f75526c9a10b01db86
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 96a9f93ed1a8fb2fea9ef3e524b78266291ce69d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB 郵件和電子郵件警示，在 Linux 上的 SQL 代理程式
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 下列步驟說明如何設定 DB 電子郵件，並使用它搭配 SQL Server Agent (**mssql server agent**) 在 Linux 上。 
 
 > [!NOTE]
 > 若要使用 SQL Server on Linux DB 郵件，您需要使用 SQL Server 2017 RC1 或更新版本。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>필수 구성 요소
 
 - SQL Server 2017 RC1 和更新版本
 - SQL Server Agent v14.0.800.90 2 和更新版本 （如果您打算使用的電子郵件警示）

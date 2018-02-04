@@ -3,7 +3,7 @@ title: "Linux 上安裝 SQL Server 全文檢索搜尋 |Microsoft 文件"
 description: "本主題描述如何在 Linux 上安裝 SQL Server 全文檢索搜尋。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 68704db01975a26b028d2ebc5b7f0d166793d6bc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8b1f14ca454582ee85506cd68b07a38f17ada1b4
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux 上安裝 SQL Server 全文檢索搜尋
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 下列步驟安裝[SQL Server 全文檢索搜尋](https://msdn.microsoft.com/library/ms142571.aspx)(**mssql-伺服器-fts**) 在 Linux 上。 全文檢索搜尋可讓您針對 SQL Server 資料表中的字元資料執行全文檢索查詢。 如需此版本的已知問題，請參閱[Release Notes](sql-server-linux-release-notes.md)。
 
@@ -154,7 +154,7 @@ sudo zypper update mssql-server-fts
 
 您可以看到一份已安裝篩選器藉由呼叫**sp_help_fulltext_system_components 'filter'**。 針對 SQL Server 2017，會安裝下列的篩選器：
 
-| 元件名稱 | 類別識別碼 | Version |
+| 元件名稱 | 類別識別碼 | 版本 |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -212,7 +212,7 @@ sudo zypper update mssql-server-fts
 |.kci | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.lgn | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.log | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|指定.lst | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.lst | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.m3u | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.mak | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.mk | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

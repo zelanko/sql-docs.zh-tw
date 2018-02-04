@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_cryptographic_provider_sessions (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_cryptographic_provider_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_cryptographic_provider_sessions_TSQL
 - sys.dm_cryptographic_provider_sessions_TSQL
 - dm_cryptographic_provider_sessions
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_cryptographic_provider_sessions dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_cryptographic_provider_sessions dynamic management function
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f2f90b8dcca93b007b0dd7aa490fa468f010c98
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8b60590005ab185f4f03256a0e3845d9a4a61bee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmcryptographicprovidersessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +59,13 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|密碼編譯提供者的識別碼。|  
 |**session_handle**|**varbytes(8)**|密碼編譯工作階段控制代碼。|  
-|**身分識別**|**nvarchar （128)**|利用密碼編譯提供者驗證所使用的識別。|  
-|**spid**|**短**|連接的工作階段識別碼 SPID。 如需詳細資訊，請參閱[@@SPID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/spid-transact-sql.md).|  
+|**identity**|**nvarchar(128)**|利用密碼編譯提供者驗證所使用的識別。|  
+|**spid**|**short**|連接的工作階段識別碼 SPID。 如需詳細資訊，請參閱[@@SPID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/spid-transact-sql.md).|  
   
 ## <a name="remarks"></a>備註  
  **Sys.dm_cryptographic_provider_sessions**檢視表會公開目前的連接。 若要檢視所有密碼編譯連接，您必須擁有**控制項**server 權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   

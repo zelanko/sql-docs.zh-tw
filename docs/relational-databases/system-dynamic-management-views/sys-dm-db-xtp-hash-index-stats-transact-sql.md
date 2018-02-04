@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_xtp_hash_index_stats_TSQL
 - dm_db_xtp_hash_index_stats
 - dm_db_xtp_hash_index_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_hash_index_stats (dynamic management view)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_hash_index_stats (dynamic management view)
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83e0b404fddcabaa9a70acda6718a3c53d7ba7de
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 00716b0d86e0f59c4b7a904ef682f92d41566742
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -48,7 +51,7 @@ ms.lasthandoff: 01/02/2018
   
 如需詳細資訊，請參閱[記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|父資料表的物件識別碼。|  
 |xtp_object_id|**bigint**|記憶體最佳化資料表的識別碼。|  
@@ -127,7 +130,7 @@ ms.lasthandoff: 01/02/2018
   ) WITH (MEMORY_OPTIMIZED=ON)
 ```
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [記憶體最佳化的資料表動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

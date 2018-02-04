@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_waiting_tasks_TSQL
 - dm_os_waiting_tasks_TSQL
 - sys.dm_os_waiting_tasks
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_waiting_tasks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_waiting_tasks dynamic management view
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 52f867ccc301a710656739bf49ec1a11a50fcee1
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5b3a3122f9f0908e063685941f58bb03281659e0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,32 +41,32 @@ ms.lasthandoff: 01/02/2018
 > [!NOTE]  
 >  若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_waiting_tasks**。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**waiting_task_address**|**varbinary （8)**|等候工作的位址。|  
+|**waiting_task_address**|**varbinary(8)**|等候工作的位址。|  
 |**session_id**|**smallint**|與這項工作相關聯的工作階段識別碼。|  
 |**exec_context_id**|**int**|與這項工作相關聯的執行內容識別碼。|  
 |**wait_duration_ms**|**bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 此時間**signal_wait_time**。|  
-|**wait_type**|**nvarchar （60)**|等候類型的名稱。|  
-|**sys.dm_os_waiting_tasks**|**varbinary （8)**|工作在等候的資源位址。|  
-|**blocking_task_address**|**varbinary （8)**|目前保留這項資源的工作。|  
-|**出現在 sys.dm_exec_requests**|**smallint**|封鎖要求之工作階段的識別碼。 如果這個資料行是 NULL，表示要求沒有被封鎖，或者封鎖工作階段的工作階段資訊無法使用 (或無法識別)。<br /><br /> -2 = 封鎖資源是由被遺棄的分散式交易所擁有。<br /><br /> -3 = 封鎖資源是由延遲的復原交易所擁有。<br /><br /> -4 = 由於內部閂鎖狀態轉換，而無法判斷封鎖閂鎖擁有者的工作階段識別碼。|  
+|**wait_type**|**nvarchar(60)**|等候類型的名稱。|  
+|**resource_address**|**varbinary(8)**|工作在等候的資源位址。|  
+|**blocking_task_address**|**varbinary(8)**|目前保留這項資源的工作。|  
+|**blocking_session_id**|**smallint**|封鎖要求之工作階段的識別碼。 如果這個資料行是 NULL，表示要求沒有被封鎖，或者封鎖工作階段的工作階段資訊無法使用 (或無法識別)。<br /><br /> -2 = 封鎖資源是由被遺棄的分散式交易所擁有。<br /><br /> -3 = 封鎖資源是由延遲的復原交易所擁有。<br /><br /> -4 = 由於內部閂鎖狀態轉換，而無法判斷封鎖閂鎖擁有者的工作階段識別碼。|  
 |**blocking_exec_context_id**|**int**|封鎖工作的執行內容識別碼。|  
 |**resource_description**|**nvarchar(3072)**|正在耗用的資源描述。 如需詳細資訊，請參閱以下清單。|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
   
 ## <a name="resourcedescription-column"></a>resource_description 資料行  
  Resource_description 資料行有下列可能的值。  
   
  **執行緒集區資源擁有者：**  
   
--   執行緒集區識別碼 = 排程器\<十六進位位址 >  
+-   threadpool id=scheduler\<hex-address>  
   
  **平行查詢資源擁有者：**  
   
--   exchangeEvent id = {通訊埠 |管道}\<十六進位位址 > WaitType =\<exchange 等候類型 > nodeId =\<exchange 節點識別碼 >  
+-   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
   
- **Exchange 等候類型：**  
+ **Exchange-wait-type:**  
   
 -   e_waitNone  
   
@@ -81,7 +84,7 @@ ms.lasthandoff: 01/02/2018
   
  **鎖定資源擁有者：**  
   
--   \<型別特定描述 > id = 鎖定\<鎖定 hex 位址 > 模式 =\<模式 > associatedObjectId =\<相關聯 obj 識別碼 >  
+-   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
   
      **\<型別特定描述 > 可以是：**  
   
@@ -113,11 +116,11 @@ ms.lasthandoff: 01/02/2018
   
  **外部資源擁有者：**  
   
--   外部 ExternalResource =\<等候類型 >  
+-   External ExternalResource=\<wait-type>  
   
  **一般資源擁有者：**  
   
--   工作區中 TransactionInfo TransactionMutex =\<工作區識別碼 >  
+-   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
   
 -   Mutex  
   
@@ -131,9 +134,9 @@ ms.lasthandoff: 01/02/2018
   
  **閂鎖資源擁有者：**  
   
--   \<資料庫識別碼 >:\<檔案識別碼 >:\<分頁中檔案 >  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
--   \<GUID >  
+-   \<GUID>  
   
 -   \<閂鎖類別 > (\<閂鎖位址 >)  
   
@@ -148,7 +151,7 @@ SELECT * FROM sys.dm_os_waiting_tasks
 WHERE blocking_session_id IS NOT NULL; 
 ``` 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
   [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

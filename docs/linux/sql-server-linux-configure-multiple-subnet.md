@@ -3,7 +3,7 @@ title: "在 Linux 上設定多重子網路 Alwayson 可用性群組和容錯移�
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/1/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2af1b8a50d446fee46418302a598de7a37f79bda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>設定多重子網路 Alwayson 可用性群組和容錯移轉叢集執行個體
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 當一律在可用性群組 (AG) 或容錯移轉叢集執行個體 (FCI) 跨越一個以上的站台的每個站台通常都有它自己的網路。 這通常表示每個站台有它自己的 IP 位址。 例如，網站 A 的位址 192.168.1 的開頭。*x*和站台 B 位址開頭 192.168.2。*x*，其中*x*是伺服器的唯一的 IP 位址的一部分。 沒有某種路由在網路層的位置，這些伺服器將無法與對方進行通訊。 有兩種方式處理這種狀況： 設定網路等兩個不同的子網路，又稱為 VLAN，或設定子網路間路由。
 

@@ -3,7 +3,7 @@ title: "Linux 上安裝 SQL Server 2017 |Microsoft 文件"
 description: "安裝、 更新及解除安裝 SQL Server on Linux。 本主題涵蓋連線、 離線，且無人看管的案例。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 114bbd717ad7d0d244b7290bd612547c9226f941
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 的安裝指南
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本主題說明如何安裝、 更新及解除安裝 SQL Server 2017 on Linux。 SQL Server 2017 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 和 Ubuntu 支援。 它也可做為 Docker 映像，可以在 Linux 或 Docker for Windows/mac 上的 Docker 引擎執行
 
@@ -52,7 +52,7 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 |||
 |-----|-----|
 | **記憶體** | 2 GB |
-| **[File System]** | **XFS**或**EXT4** (其他檔案系統，例如**BTRFS**，不支援) |
+| **檔案系統** | **XFS**或**EXT4** (其他檔案系統，例如**BTRFS**，不支援) |
 | **磁碟空間** | 6 GB |
 | **處理器速度** | 2 GHz |
 | **處理器核心** | 2 核心 |
@@ -188,7 +188,7 @@ sudo rm -rf /var/opt/mssql/
 
 1. 設定新的儲存機制。
 
-   | 平台 | Repository | 命令 |
+   | 平台 | Repository | Command |
    |-----|-----|-----|
    | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
@@ -261,7 +261,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 安裝之後，您也可以安裝其他選用的 SQL Server 封裝。
 

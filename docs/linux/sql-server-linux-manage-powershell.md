@@ -1,9 +1,9 @@
 ---
 title: "管理 SQL Server on Linux 的 PowerShell |Microsoft 文件"
 description: "本主題提供與 SQL Server on Linux 的 Windows 上使用 PowerShell 的總覽。"
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: 91a86656cdcf54ec4d7951316d82936ed9e738fc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0952e8ff950e6b440e963f3867ce74477334e74f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>在 Windows 上使用 PowerShell 來管理 SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本主題將介紹[SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx)及如何使用 SQL Server 2017 on Linux 會逐步引導您透過提供幾個範例。 PowerShell 支援的 SQL Server 是在 Windows 中，目前可用，因此您可以使用它時可以連線到遠端的 SQL Server 執行個體，在 Linux 上的 Windows 電腦。
 

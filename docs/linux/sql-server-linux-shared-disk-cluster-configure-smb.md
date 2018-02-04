@@ -3,7 +3,7 @@ title: "設定容錯移轉叢集執行個體存放區 SMB-SQL Server on Linux |M
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8043cd57758749399500b206410694c1735b30e8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 53c1bf7265cc15b9dd9401958317d4f14ea400d1
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-SMB-SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文說明如何在 Linux 上設定容錯移轉叢集執行個體 (FCI) 的 SMB 存放裝置。 
  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/01/2017
 - SMB 共用必須提供高可用性。
 - 安全性必須設定 SMB 共用上的正確。 以下是共用的範例 /etc/samba/smb.conf，SQLData1 所在名稱。
 
-![05 smbsource][1]
+![05-smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 

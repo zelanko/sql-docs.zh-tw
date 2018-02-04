@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +17,29 @@ f1_keywords:
 - sys.dm_db_resource_stats_TSQL
 - dm_db_resource_stats
 - dm_db_resource_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1fa8f540e8f16d901eb41138bc7ee153339cb5a
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   傳回的 CPU、 I/O 和記憶體耗用量[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]資料庫。 每 15 秒有一個資料列存在，即使資料庫中沒有任何活動亦然。 歷程記錄資料會保留一個小時。  
   
-|[資料行]|資料類型|描述|  
+|資料行|資料類型|Description|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC 時間會指出目前報告間隔的結束。|  
 |avg_cpu_percent|**decimal (5,2)**|平均運算使用率，以服務層限制的百分比計算。|  
@@ -103,7 +105,7 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [sys.resource_stats &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [服務層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [服務層的功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  

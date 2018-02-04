@@ -3,7 +3,7 @@ title: "SQL Server on Linux 常見問題集 |Microsoft 文件"
 description: "本文章會提供在 Linux 上執行 SQL Server 相關常見問題的解答。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: eb12be6910b669b3fbc60c8846f102f2e77fc955
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: 2da90e6cdf49531980e9014075d7b094b61271fd
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux 常見問題集 (FAQ)
 
@@ -128,6 +128,6 @@ ms.lasthandoff: 12/22/2017
 
    我們不支援變更從預設安裝的 SQL Server 目錄和檔案的擁有權。 Mssql 帳戶和群組特別適用於 SQL Server，沒有互動式登入的存取。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 如需有關如何在 Linux 上執行 SQL Server 的詳細資訊，請參閱[概觀的 SQL Server on Linux](sql-server-linux-overview.md)。

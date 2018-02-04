@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_plan_attributes (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_plan_attributes_TSQL
 - dm_exec_plan_attributes
 - sys.dm_exec_plan_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_plan_attributes dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c9a90a964bd8c1fce911e62ac9081b47d349e0a5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +52,15 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|屬性|**varchar （128)**|與這份計畫相關聯的屬性名稱。 這一個正下方的資料表會列出可能的屬性、 其資料類型，以及它們的描述。|  
+|屬性|**varchar(128)**|與這份計畫相關聯的屬性名稱。 這一個正下方的資料表會列出可能的屬性、 其資料類型，以及它們的描述。|  
 |value|**sql_variant**|與這份計畫相關聯的屬性值。|  
 |is_cache_key|**bit**|指出屬性是否作為計畫快取查閱金鑰的一部分使用。|  
 
 從上述資料表中，**屬性**可以是下列值：
 
-|attribute|資料類型|描述|  
+|Attribute|資料類型|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|指出編譯計畫所用的選項值。|  
 |objectid|**int**|用來查閱快取中物件的主要索引鍵之一。 這是的物件識別碼儲存在[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)資料庫物件 （程序、 檢視、 觸發程序等等）。 若計畫屬於「特定」或「準備」類型，這是批次文字的內部雜湊。|  
@@ -96,9 +99,9 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-set-options"></a>評估 Set 選項  
  若要翻譯中傳回的值**set_options**編譯計畫所用的選項，減去的值從**set_options**最大的可能值開始，直到您的值到達 0。 每個減掉的值即為查詢計劃中使用的選項。 例如，如果中的值**set_options**為 251，編譯計畫所使用的選項為 ANSI_NULL_DFLT_ON (128)、 QUOTED_IDENTIFIER (64)、 ANSI_NULLS(32)、 ANSI_WARNINGS (16)、 CONCAT_NULL_YIELDS_NULL (8)、 Parallel plan （2）和 ANSI_PADDING (1)。  
   
-|選項|ReplTest1|  
+|選項|Value|  
 |------------|-----------|  
-|ANSI_PADDING|@shouldalert|  
+|ANSI_PADDING|1|  
 |Parallel Plan|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
@@ -116,7 +119,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> 表示當編譯計畫時，PARAMETERIZATION 資料庫選項設為 FORCED。|131072|  
-|ROWCOUNT|**適用於：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**適用於：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>資料指標  
  非使用中的資料指標會快取在編譯的計畫中，讓用來儲存資料指標的記憶體可供資料指標的並行使用者重複使用。 例如，假設有個批次宣告並使用資料指標，但沒有取消配置。 如果有兩個使用者執行相同的批次，會有兩個使用中的資料指標。 一旦資料指標取消配置 (可能在不同的批次中)，用來儲存資料指標的記憶體就會快取，而不會釋出。 非使用中資料指標的清單會保留在編譯的計畫中。 等到下次使用者執行批次時，會重複使用快取的資料指標記憶體，並適當地初始化為使用中資料指標。  
@@ -124,10 +127,10 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-cursor-options"></a>評估資料指標選項  
  若要翻譯中傳回的值**required_cursor_options**和**acceptable_cursor_options**減去編譯計畫所用的選項，從資料行值，從開始值最大可能的值，直到您到達 0。 每個減掉的值即為查詢計劃中使用的資料指標選項。  
   
-|選項|ReplTest1|  
+|選項|Value|  
 |------------|-----------|  
 |無|0|  
-|INSENSITIVE|@shouldalert|  
+|INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
 |FOR UPDATE|8|  
@@ -171,12 +174,12 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

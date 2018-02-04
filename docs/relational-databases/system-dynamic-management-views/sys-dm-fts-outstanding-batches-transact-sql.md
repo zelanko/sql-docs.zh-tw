@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_fts_outstanding_batches_TSQL
 - sys.dm_fts_outstanding_batches_TSQL
 - sys.dm_fts_outstanding_batches
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - sys.dm_fts_outstanding_batches dynamic management view
 ms.assetid: c4d697ed-c906-4c28-b137-036a25e13c84
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab9d21dfa1c3aefb34f59dde7d4af5141e483682
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 06490fd099957c3636f05dcfe4e8f0ba9deab8d3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsoutstandingbatches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,9 +45,9 @@ ms.lasthandoff: 11/17/2017
 |catalog_id|**int**|全文檢索目錄的識別碼|  
 |table_id|**int**|包含全文檢索索引之資料表識別碼的識別碼。|  
 |batch_id|**int**|批次識別碼|  
-|memory_address|**varbinary （8)**|批次物件記憶體位址|  
-|crawl_memory_address|**varbinary （8)**|搜耙物件記憶體位址 (父物件)|  
-|memregion_memory_address|**varbinary （8)**|篩選背景程式主機 (fdhost.exe) 之輸出共用記憶體的記憶體區域記憶體位址|  
+|memory_address|**varbinary(8)**|批次物件記憶體位址|  
+|crawl_memory_address|**varbinary(8)**|搜耙物件記憶體位址 (父物件)|  
+|memregion_memory_address|**varbinary(8)**|篩選背景程式主機 (fdhost.exe) 之輸出共用記憶體的記憶體區域記憶體位址|  
 |hr_batch|**int**|此批次最近一次的錯誤碼|  
 |is_retry_batch|**bit**|指示這是否為重試批次：<br /><br /> 0 = 否<br /><br /> 1 = 是|  
 |retry_hints|**int**|批次所需的重試類型：<br /><br /> 0 = 無重試<br /><br /> 1 = 多執行緒重試<br /><br /> 2 = 單一執行緒重試<br /><br /> 3 = 單一和多執行緒重試<br /><br /> 5 = 多執行緒最後重試<br /><br /> 6 = 單一執行緒最後重試<br /><br /> 7 = 單一和多執行緒最後重試|  
@@ -65,7 +67,7 @@ SELECT database_id, table_id, COUNT(*) AS batch_count FROM sys.dm_fts_outstandin
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋及語意搜尋動態管理檢視與函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)  
   

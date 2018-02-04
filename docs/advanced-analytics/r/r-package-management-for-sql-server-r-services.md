@@ -10,24 +10,25 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 576178e53a28f877ac91d99f14ce9ba6a44e506d
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: cebafeabd73260f166244e963754a2bd740bfe0f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="r-package-management-for-sql-server"></a>SQL Server 的 R 封裝管理
 
 本文說明 R 封裝和 SQL Server 2016 中 SQL Server 2017 的管理的功能。
 
-+ 管理 R 封裝 （和 Python 封裝） 的建議的方法
++ 管理 R 封裝的建議的方法 
 + SQL Server 2016 和 2017年之間的封裝管理中的變更
 
 **適用於：** SQL Server 2016 R Services、 SQL Server 2017 機器學習服務
@@ -195,6 +196,6 @@ DBA 可以將使用者新增至每個資料庫為基礎的角色。
 
 
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [SQL Server 機器學習的封裝管理](r-package-management-for-sql-server-r-services.md)

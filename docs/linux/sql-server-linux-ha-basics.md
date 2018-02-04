@@ -3,7 +3,7 @@ title: "SQL Server 可用性的基本概念 Linux 部署 |Microsoft 文件"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: b137d8badf44bf1c7d181b490bcf6d06e2bd087f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 部署的 SQL Server 可用性基本概念
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 從開始[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]適用於 Linux 和 Windows。 例如 windows[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]部署，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]資料庫和執行個體必須要在 Linux 高可用性。 本文章涵蓋計劃和部署高可用性的技術層面 linux[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]資料庫和執行個體，以及從 windows 安裝的差異。 因為[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 專業人員以及 Linux 可能新增的可能新[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]專業人員，文件有時候介紹可能是有些熟悉而且給其他人不熟悉的概念。
 
@@ -88,20 +88,20 @@ Samba，也就是伺服器訊息區 (SMB) 的 Linux 變體，也可用來建立�
 ### <a name="configure-the-firewall"></a>設定防火牆
 類似於 Windows，Linux 散發套件已內建的防火牆。 如果貴公司使用外部防火牆的伺服器，停用在 Linux 防火牆可能是可接受。 不過，無論啟用防火牆的連接埠必須開啟。 下表說明常見的連接埠進行高可用性[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]在 Linux 上的部署。
 
-| 通訊埠編號 | 類型     | 描述                                                                                                                 |
+| 通訊埠編號 | 型別     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS`rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba （如果使用） – 端點對應程式                                                                                          |
 | 137         | UDP      | Samba （如果使用） – NetBIOS 名稱服務                                                                                      |
 | 138         | UDP      | Samba （如果使用） – NetBIOS 資料包                                                                                          |
 | 139         | TCP      | Samba （如果使用） – NetBIOS 工作階段                                                                                           |
 | 445         | TCP      | Samba （如果使用） – SMB over TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]– 預設連接埠。如有需要，可以變更與`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 預設連接埠。如有需要，可以變更與`mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP、UDP | NFS （如果使用）                                                                                                               |
 | 2224        | TCP      | Pacemaker – 使用`pcsd`                                                                                                |
 | 3121        | TCP      | Pacemaker – 需要有 Pacemaker 遠端節點                                                                    |
 | 3260        | TCP      | iSCSI 啟動器 （如果使用） – 可以更改中`/etc/iscsi/iscsid.config`(RHEL)，但應該符合的 iSCSI 目標的連接埠 |
-| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-AG 端點; 使用預設通訊埠建立端點時，可以變更                                |
+| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -AG 端點; 使用預設通訊埠建立端點時，可以變更                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
 | 5404        | UDP      | Pacemaker – 如果使用多點傳送的 UDP，Corosync 所需                                                                     |
 | 5405        | UDP      | Pacemaker – Corosync 所需                                                                                            |
@@ -249,5 +249,5 @@ WSFC 中，例如 Pacemaker 想使用多餘的網路功能，這表示不同的�
 #### <a name="other-linux-distributions"></a>其他 Linux 散發套件
 在 Linux 上 Pacemaker 叢集的所有節點都必須位於相同的通訊群組。 比方說，這表示 RHEL 節點不能有 SLES 節點 Pacemaker 叢集的一部分。 上面所述的主要原因： 發佈可能會有不同的版本和功能，讓項目可能無法正常運作。 混合分佈具有相同的劇本做為混合 WSFCs 和 Linux： 使用 [無] 或分散式 Ag。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 [Pacemaker 叢集部署的 SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)

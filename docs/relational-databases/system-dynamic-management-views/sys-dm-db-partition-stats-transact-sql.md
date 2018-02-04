@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_partition_stats (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_partition_stats_TSQL
 - sys.dm_db_partition_stats_TSQL
 - sys.dm_db_partition_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_partition_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b58fb8b2933e99f2eb77dc03ed7fdfbb132375a6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd061684962fe1d779b3f35f472b35ca52f45e95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,10 +43,10 @@ ms.lasthandoff: 11/17/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**sys.partitions**|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這是相同的值**sys.partitions**中**sys.partitions**目錄檢視|  
+|**partition_id**|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這是相同的值**sys.partitions**中**sys.partitions**目錄檢視|  
 |**object_id**|**int**|資料分割所屬資料表或索引檢視的物件識別碼。|  
 |**index_id**|**int**|資料分割所屬之堆積或索引的識別碼。<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引。<br /><br /> > 1 = 非叢集索引|  
-|**r**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。|  
+|**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。|  
 |**in_row_data_page_count**|**bigint**|這個資料分割中用來儲存同資料列資料的頁數。 如果資料分割屬於堆積，這個值是堆積中的資料頁數。 如果資料分割屬於索引，這個值是分葉層級中的頁數。 (計數不包含 B 型樹狀目錄中的非分葉頁數。)以上兩種情況均不包含 IAM (索引配置對應) 頁數。 xVelocity 記憶體最佳化的資料行存放區索引之 Always 0。|  
 |**in_row_used_page_count**|**bigint**|這個資料分割中用來儲存和管理同資料列資料的總頁數。 這個計數包括非分葉 B 型樹狀目錄頁數、 IAM 頁數，以及包含在所有頁面**in_row_data_page_count**資料行。 永遠是 0，表示資料行存放區索引。|  
 |**in_row_reserved_page_count**|**bigint**|這個資料分割中為儲存和管理同資料列資料所保留的總頁數，不管這些頁面是否正在使用中。 永遠是 0，表示資料行存放區索引。|  
@@ -51,11 +54,11 @@ ms.lasthandoff: 11/17/2017
 |**lob_reserved_page_count**|**bigint**|總頁數保留儲存和管理資料列外**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，和**xml**磁碟分割，不論這些頁面是否正在使用中或不內的資料行。 IAM 頁數包括在內。<br /><br /> 保留在資料分割中儲存和管理資料行存放區索引的 LOB 總數。|  
 |**row_overflow_used_page_count**|**bigint**|用來儲存和管理資料列溢位中的頁數**varchar**， **nvarchar**， **varbinary**，和**sql_variant**資料行資料分割。 IAM 頁數包括在內。<br /><br /> 永遠是 0，表示資料行存放區索引。|  
 |**row_overflow_reserved_page_count**|**bigint**|總頁數保留儲存和管理資料列溢位**varchar**， **nvarchar**， **varbinary**，和**sql_variant**資料分割，不論這些頁面是否正在使用中或不內的資料行。 IAM 頁數包括在內。<br /><br /> 永遠是 0，表示資料行存放區索引。|  
-|**sys.dm_db_partition_stats**|**bigint**|資料分割的總使用頁數。 計算方式為**in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**。|  
+|**used_page_count**|**bigint**|資料分割的總使用頁數。 計算方式為**in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**。|  
 |**reserved_page_count**|**bigint**|資料分割的總保留頁數。 計算方式為**in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**。|  
 |**row_count**|**bigint**|此資料分割中大約的資料列數目。|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
-|**distribution_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與發佈相關聯的唯一數值識別碼。|  
+|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**distribution_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與發佈相關聯的唯一數值識別碼。|  
   
 ## <a name="remarks"></a>備註  
  **sys.dm_db_partition_stats**顯示用來儲存和管理同資料列資料、 LOB 資料和資料列溢位資料之資料庫中的所有資料分割的空間的相關資訊。 每個資料分割顯示一個資料列。  
@@ -107,7 +110,7 @@ WHERE object_id=OBJECT_ID('HumanResources.Employee')    AND (index_id=0 or index
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

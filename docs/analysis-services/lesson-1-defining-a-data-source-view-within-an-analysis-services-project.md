@@ -1,7 +1,7 @@
 ---
 title: "第 1 課： 定義資料來源檢視內的 Analysis Services 專案 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/02/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0fe40b4deeb6fa929be969a0d84a61bcad85f9a1
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 0bd1ef5ce2bd0c10e025e74e39ffde313b0dfc1f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 課：在 Analysis Services 專案內定義資料來源檢視
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,15 +36,14 @@ ms.lasthandoff: 01/22/2018
 在這項工作中，您依據 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度模型範本建立 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案。  
   
 [定義資料來源](../analysis-services/lesson-1-2-defining-a-data-source.md)  
-在這項工作中，您指定 **AdventureWorksDW2012** 資料庫作為您將在後續課程中定義之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 維度和 Cube 的資料來源。  
+在這個工作中，您可以指定**AdventureWorksDW**做為資料來源的資料庫[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]維度和 cube，您將在後續課程中定義。  
   
 [定義資料來源檢視](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
-在這項工作中，您從 **AdventureWorksDW2012** 資料庫選取的資料表中定義中繼資料的單一統一檢視。  
+在這項工作，您定義的中繼資料從選取的資料表中的單一統一的檢視**AdventureWorksDW**資料庫。  
   
 [修改預設資料表名稱](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
 在這項工作中，您修改資料來源檢視中的資料表名稱，因此您將定義的後續 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件名稱會讓使用者更方便使用。  
   
-將您的結果與在這一課中建立的範例專案檔案相比較。 如需下載此教學課程隨附之範例專案的詳細資訊，請參閱 CodePlex 之產品範例頁面上的 [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) (適用於 SQL Server 2012 的 SSAS 多維度模型專案)。  
   
 ## <a name="next-lesson"></a>下一課  
 [第 2 課︰ 定義和部署 Cube](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  

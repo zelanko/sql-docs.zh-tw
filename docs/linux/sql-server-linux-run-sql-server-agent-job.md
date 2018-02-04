@@ -3,7 +3,7 @@ title: "建立和執行 SQL Server on Linux 作業 |Microsoft 文件"
 description: "本教學課程會示範如何在 Linux 上執行 SQL Server Agent 作業。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: fe2705d9d1bfefd9953ff03da123621dd4ef95f3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 526375f9f9f96c9ea0402dcb84f20a2c214fd13f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>建立和執行在 Linux 上的 SQL Server Agent 作業
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資料庫中。 本教學課程提供如何在 Linux 上建立 SQL Server Agent 作業的範例使用 TRANSACT-SQL 和 SQL Server Management Studio (SSMS)。
 
@@ -35,7 +35,7 @@ SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資�
 
 如需與 SQL Server Agent，在 Linux 上的已知問題，請參閱[版本資訊](sql-server-linux-release-notes.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>필수 구성 요소
 
 若要完成本教學課程中，需要下列必要條件：
 

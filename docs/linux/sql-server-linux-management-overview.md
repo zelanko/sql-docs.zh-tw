@@ -3,7 +3,7 @@ title: "管理 SQL Server on Linux |Microsoft 文件"
 description: "本主題提供連結的一般管理工作和工具適用於 SQL Server 在 Linux 上執行。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,19 +15,19 @@ ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 0f775666ae0ba3e5bc9140e52ec2f532d6b92e0c
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: f6710b3e7bd40a2589333cebbf94c8b07f9aaa5d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>選擇正確的工具來管理 SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 有幾種方式來管理 Linux 上的 SQL Server 2017。 下節提供不同的管理工具和技術的更多資源指標的快速概觀。
 
-## <a name="mssql-conf"></a>mssql conf 
+## <a name="mssql-conf"></a>mssql-conf 
 **Mssql conf**工具設定 SQL Server on Linux。 如需詳細資訊，請參閱[設定 SQL Server on Linux 與 mssql conf](sql-server-linux-configure-mssql-conf.md)。
 
 ## <a name="transact-sql"></a>Transact-SQL
@@ -50,6 +50,6 @@ Microsoft 已針對 SQL Server 發行新的跨平台指令碼工具[mssql cli](h
 
 PowerShell 提供豐富的命令列環境，來管理 SQL Server on Linux。 如需詳細資訊，請參閱[使用 PowerShell 來管理 SQL Server on Linux](sql-server-linux-manage-powershell.md)。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 如需有關 SQL Server on Linux，請參閱[SQL Server on Linux](sql-server-linux-overview.md)。

@@ -3,7 +3,7 @@ title: "Alwayson 可用性群組的 SQL Server on Linux |Microsoft 文件"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 3c708d4e06f32515b96b22099990007d58db20f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d7f9dec114fd17025081c4a139537b11dd4fde45
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性群組
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文說明 Alwayson 可用性群組 (Ag) 的特性下以 Linux 為基礎[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]安裝。 其中也涵蓋 Linux 和 Windows Server 容錯移轉叢集 (WSFC) 之間的差異-基礎 Ag。 請參閱[Windows 為基礎的文件](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)的基本概念的 Ag，為他們在 Windows 和 Linux 除了 WSFC 上的運作方式相同。
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 
 叢集類型會儲存在[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]動態管理檢視 (DMV) `sys.availability_groups`，資料行中`cluster_type`和`cluster_type_desc`。
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>需要\_同步\_次要\_至\_認可
+## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
 
 新手[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]是設定，可由呼叫 Ag `required_synchronized_secondaries_to_commit`。 這會告訴 AG 必須與主要 lockstep 的次要複本的數目。 這可讓之類的自動容錯移轉 （只有在與叢集類型為外部 Pacemaker 整合），並控制的主要可用性之類的行為，如果正確的次要複本的數目是線上或離線。 若要了解有關其運作方式的詳細資訊，請參閱[的可用性群組組態的高可用性與資料保護](sql-server-linux-availability-group-ha.md)。 `required_synchronized_secondaries_to_commit`值是預設設定和維護的 Pacemaker /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 您可以手動覆寫此值。
 
@@ -160,7 +160,7 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->
  
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 [設定可用性群組的 SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
 
 [設定向外延展讀取可用性群組的 SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)

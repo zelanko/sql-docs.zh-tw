@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_uncontained_entities_TSQL
 - sys.dm_db_uncontained_entities_TSQL
 - dm_db_uncontained_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_uncontained_entities dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91f36a8a8070e5f5752acf82bec5305fa4adc021
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 21a11895ad0d618f9466572edc213aa0d217d8ef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 01/02/2018
 |**資料行名稱**|**型別**|**說明**|  
 |*class*|**int**|1 = 物件或資料行 (包含模組、XPs、檢視、同義字及資料表)。<br /><br /> 4 = 資料庫主體<br /><br /> 5 = 組件<br /><br /> 6 = 類型<br /><br /> 7 = 索引 (全文檢索索引)<br /><br /> 12 = 資料庫 DDL 觸發程序<br /><br /> 19 = 路由<br /><br /> 30 = 稽核規格|  
 |*class_desc*|**nvarchar(120)**|實體類別的描述。 下列其中一種以符合類別：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*則 major_id 就*|**int**|實體的識別碼。<br /><br /> 如果*類別*= 1，則 object_id<br /><br /> 如果*類別*= 4，則 sys.database_principals.principal_id。<br /><br /> 如果*類別*= 5，則 sys.assemblies.assembly_id。<br /><br /> 如果*類別*= 6，則 sys.types.user_type_id。<br /><br /> 如果*類別*= 7，則 sys.indexes.index_id。<br /><br /> 如果*類別*= 12，則 sys.triggers.object_id。<br /><br /> 如果*類別*= 19，則為 sys.routes.route_id。<br /><br /> 如果*類別*= 30，則 sys。 database_audit_specifications.databse_specification_id。|  
+|*major_id*|**int**|實體的識別碼。<br /><br /> 如果*類別*= 1，則 object_id<br /><br /> 如果*類別*= 4，則 sys.database_principals.principal_id。<br /><br /> 如果*類別*= 5，則 sys.assemblies.assembly_id。<br /><br /> 如果*類別*= 6，則 sys.types.user_type_id。<br /><br /> 如果*類別*= 7，則 sys.indexes.index_id。<br /><br /> 如果*類別*= 12，則 sys.triggers.object_id。<br /><br /> 如果*類別*= 19，則為 sys.routes.route_id。<br /><br /> 如果*類別*= 30，則 sys。 database_audit_specifications.databse_specification_id.|  
 |*statement_line_number*|**int**|如果類別為模組，將會傳回非內含使用所在的行號。  否則，此值為 Null。|  
 |*statement_ offset_begin*|**int**|如果類別為模組，會指出非內含使用的起始位置 (以位元組為單位，從 0 開始)。 否則傳回值為 Null。|  
 |*statement_ offset_end*|**int**|如果類別為模組，會指出非內含使用的結束位置 (以位元組為單位，從 0 開始)。 值 -1 代表模組的結尾。 否則傳回值為 Null。|  
@@ -90,7 +93,7 @@ LEFT JOIN sys.objects AS SO
     ON UE.major_id = SO.object_id;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自主資料庫](../../relational-databases/databases/contained-databases.md)  
   
   

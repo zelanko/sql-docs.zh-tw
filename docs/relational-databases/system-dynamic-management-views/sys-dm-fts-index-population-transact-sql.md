@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_index_population
 - sys.dm_fts_index_population_TSQL
 - dm_fts_index_population_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_index_population dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_index_population dynamic management view
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 719da7d41ba34adcf7a3aa7ccc53a14217e657ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f118b1be30119e7328ee20477a0c18808fbdc3e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |**database_id**|**int**|包含要擴展之全文檢索索引的資料庫識別碼。|  
 |**catalog_id**|**int**|包含這個全文檢索索引之全文檢索目錄的識別碼。|  
 |**table_id**|**int**|要擴展全文檢索索引的資料表識別碼。|  
-|**memory_address**|**varbinary （8)**|用來表示使用中母體擴展之內部資料結構的記憶體位址。|  
+|**memory_address**|**varbinary(8)**|用來表示使用中母體擴展之內部資料結構的記憶體位址。|  
 |**population_type**|**int**|母體擴展的類型。 它有下列幾種：<br /><br /> 1 = 完整母體擴展。<br /><br /> 2 = 累加、以時間戳記為基礎的母體擴展<br /><br /> 3 = 追蹤變更的手動更新。<br /><br /> 4 = 追蹤變更的背景更新。|  
 |**population_type_description**|**nvarchar(120)**|母體擴展類型的描述。|  
 |**is_clustered_index_scan**|**bit**|指出母體擴展是否涉及叢集索引上的掃描。|  
@@ -75,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|一對一|  
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|多對一|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [全文檢索搜尋及語意搜尋動態管理檢視與函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   

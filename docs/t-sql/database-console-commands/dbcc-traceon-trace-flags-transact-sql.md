@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - trace flags [SQL Server], about trace flags
 - trace flags [SQL Server]
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 - debugging [SQL Server], trace flags
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
-caps.latest.revision: "171"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6011c66716e96347b295325ab020739e41c04370
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 396216c00fc4c474164d98e47d0185f479e61b48
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-追蹤旗標 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -143,6 +145,7 @@ ms.lasthandoff: 01/25/2018
 |**9567**|啟用壓縮資料流的 Alwayson 可用性群組自動植入期間。 壓縮可以大幅縮短傳輸時間，自動植入期間，會增加處理器上的負載。 如需詳細資訊，請參閱[自動初始化 Alwayson 可用性群組](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)和[微調可用性群組的壓縮](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**範圍**： 全域或工作階段|
 |**9591**|停用記錄區塊壓縮，在 Alwayson 可用性群組中。 記錄檔區塊壓縮是預設的行為使用中的同步和非同步複本[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，壓縮只能搭配非同步複本。 <br /><br />**範圍**： 全域或工作階段|
 |**9592**|啟用記錄同步的可用性群組的資料流壓縮。 這項功能已停用預設會在同步的可用性群組，因為壓縮會增加延遲。 如需詳細資訊，請參閱 [微調可用性群組的壓縮](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**範圍**： 全域或工作階段| 
+|**9929**|減少 1 MB 的記憶體中的檢查點檔案。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/3147012)。<br /><br />**範圍**： 全域只|  
 |**9939**|啟用平行計劃和平行掃描記憶體最佳化資料表和參考記憶體最佳化資料表或資料表變數的 DML 作業中的資料表變數，只要它們不是中的 DML 作業的目標[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 如需詳細資訊，請參閱此[Microsoft 支援文章](http://support.microsoft.com/kb/4013877)。<br /><br />**注意：**如果同時也可以明確啟用追蹤旗標 4199 追蹤旗標 9939 就不需要。<br /><br />**範圍**： 全域或工作階段或查詢|   
 |**10204**|停用合併/重新壓縮期間資料行存放區索引重組。 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，當重新組織資料行存放區索引時，會自動合併成較大壓縮資料列，以及為壓縮具有大量的任何資料列群組已刪除資料列的任何小型的壓縮資料列的新功能。<br /><br />**注意：**追蹤旗標 10204 不適用於記憶體最佳化資料表建立資料行存放區索引。<br /><br />**範圍**： 全域或工作階段|   
 |**10316**|上可建立其他索引[內部記憶體最佳化暫存時態表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)，預設值，旁邊。 如果您有特定的查詢模式，其中包含未涵蓋的預設索引的資料行，您可以考慮加入額外的。<br /><br />**注意：**系統版本設定時態表的記憶體最佳化資料表的設計可提供高交易處理能力。 請留意建立額外的索引可能會對 DML 作業更新或刪除目前資料表中的資料列的額外負荷。 與其他索引您的目標應該以尋找時態查詢的效能和額外 DML 負擔之間的正確平衡。<br /><br />**範圍**： 全域或工作階段|

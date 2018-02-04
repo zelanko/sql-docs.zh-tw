@@ -3,7 +3,7 @@ title: "Red Hat Enterprise Linux 共用的叢集運作的 SQL Server |Microsoft 
 description: "藉由設定 Red Hat Enterprise Linux 共用的磁碟叢集的 SQL Server 實作高可用性。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: e0a7c5078526b46a8cfa518eeb1d0b5708343115
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d3abecd450bbb734304c8c04909c38ae216595ad
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>適用於 SQL Server 運作 Red Hat Enterprise Linux 共用的磁碟叢集
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文件說明如何在 Red Hat Enterprise Linux 共用的磁碟容錯移轉叢集上，執行下列工作適用於 SQL Server。
 
@@ -214,7 +214,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 疑難排解叢集它有助於了解三個精靈搭配以管理叢集資源。 
 
-| 精靈 | 描述 
+| 精靈 | Description 
 | ----- | -----
 | Corosync | 提供仲裁成員資格和叢集節點之間的傳訊。
 | Pacemaker | 位於 Corosync 之上，並提供資源的狀態機器。 
@@ -265,7 +265,7 @@ pacemaker: active/enabled
 
     下列連接埠必須開啟 Pacemaker 能夠進行通訊的所有節點上。
     
-    - * * TCP: 2224年 3121、 21064
+    - **TCP: 2224, 3121, 21064
 
 - **Pacemaker 或 Corosync 服務執行**
 
@@ -277,7 +277,7 @@ pacemaker: active/enabled
 
 * [叢集從頭](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)從 Pacemaker 指南
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 

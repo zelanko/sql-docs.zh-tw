@@ -3,7 +3,7 @@ title: "SQL Server 2017 docker 設定選項 |Microsoft 文件"
 description: "瀏覽不同的方式使用，並與其互動在 Docker 中的 SQL Server 2017 容器映像。 這包括複製檔案及疑難排解的保存資料。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 416a05397580e6b9c609307f8b25c8014099f999
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 30ac0b58a439af47504c94669af581f5e81fd17c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>設定 SQL Server 2017 容器映像 docker
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本主題說明如何設定及使用[mssql-伺服器-linux 容器映像](https://hub.docker.com/r/microsoft/mssql-server-linux/)使用 Docker。 此映像包含根據 Ubuntu 16.04 Linux 上執行的 SQL Server。 它可以用 Docker 引擎 1.8 + Docker 或 Linux 上的 Mac/windows。
 
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/23/2017
 您可以連接到 SQL Server 執行個體在 Docker 電腦上從任何外部 Linux、 Windows 或 macOS 工具，可支援 SQL 連線。 某些常見的工具包括：
 
 - [sqlcmd](sql-server-linux-setup-tools.md)
-- [Visual Studio 程式碼](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) Windows 上](sql-server-linux-develop-use-ssms.md)
 
 下列範例會使用**sqlcmd**連接到 SQL Server 在 Docker 容器中執行。 連接字串中的 IP 位址是主機電腦正在執行容器的 IP 位址。
@@ -429,7 +429,7 @@ cat errorlog
 > [!TIP]
 > 如果掛接主機目錄**/var/opt/mssql**當您建立您的容器，您可以改為查看**記錄**主機上的對應路徑的子目錄。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 開始使用 docker 的 SQL Server 2017 容器映像進行[快速入門](quickstart-install-connect-docker.md)。
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_persisted_sku_features
 - dm_db_persisted_sku_features_TSQL
 - dm_db_persisted_sku_features
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - editions [SQL Server], feature restrictions
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dc796f006abde19b0441cb9dba27d29f27c1b7e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c0af6dc4a6c8031be8a33a44d2c00265d5c58ed0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/02/2018
   
 **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |feature_name|**sysname**|資料庫中已啟用，但是所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上不支援之功能的外部名稱。 此功能必須先移除，資料庫才可以移轉到所有可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
 |feature_id|**int**|與此功能相關聯的功能識別碼。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。|  
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/02/2018
   
 -   **資料分割。** 指出資料庫包含分割區資料表、分割區索引、分割區配置或分割區函數。 若要讓資料庫移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本，而不是 Enterprise 或 Developer，修改位於單一分割區上的資料表是不夠的， 您必須移除分割區資料表。 如果此資料表包含資料，請使用 SWITCH PARTITION 將每一個分割區轉換成非分割區資料表， 然後刪除分割區資料表、分割區配置和分割區函數。  
   
--   **TransparentDataEncryption。** 指出資料庫的加密方式為透明資料加密。 若要移除透明資料加密，請使用 ALTER DATABASE 陳述式。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
+-   **TransparentDataEncryption.** 指出資料庫的加密方式為透明資料加密。 若要移除透明資料加密，請使用 ALTER DATABASE 陳述式。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
 
 > [!NOTE]
 > 從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Service Pack 1，這些功能都可跨多個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，並不限於 Enterprise 或 Developer 版本只。
@@ -80,7 +82,7 @@ SELECT feature_name FROM sys.dm_db_persisted_sku_features;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [SQL Server 2016 的版本與支援功能](../../sql-server/editions-and-components-of-sql-server-2016.md)   

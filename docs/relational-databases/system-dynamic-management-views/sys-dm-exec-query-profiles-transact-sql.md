@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_query_profiles (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_profiles_TSQL
 - dm_exec_query_profiles
 - sys.dm_exec_query_profiles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_profiles dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13b3c49133a4e1c26ab879fb0e51e9832de62e97
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c9a7656b78478c321e277ae16577f9bce178aeca
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |physical_operator_name|**nvarchar(256)**|實體運算子名稱。|  
 |node_id|**int**|識別查詢樹狀結構中的運算子節點。|  
 |thread_id|**int**|區分屬於相同查詢運算子節點的執行緒 (針對平行查詢)。|  
-|task_address|**varbinary （8)**|識別此執行緒使用的 SQLOS 工作。 參考 dm_os_tasks.task_address。|  
+|task_address|**varbinary(8)**|識別此執行緒使用的 SQLOS 工作。 參考 dm_os_tasks.task_address。|  
 |row_count|**bigint**|目前為止運算子傳回的資料列數目。|  
 |rewind_count|**bigint**|目前為止的倒轉數目。|  
 |rebind_count|**bigint**|目前為止的重新繫結數目。|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |first_row_time|**bigint**|開啟第一個資料列的時間戳記 (以毫秒為單位)。|  
 |last_row_time|**bigint**|開啟最後一個資料列的時間戳記 (以毫秒為單位)。|  
 |close_time|**bigint**|關閉的時間戳記 (以毫秒為單位)。|  
-|分成|**bigint**|目標節點作業到目前為止所耗費的總時間 (以毫秒為單位)。|  
+|elapsed_time_ms|**bigint**|目標節點作業到目前為止所耗費的總時間 (以毫秒為單位)。|  
 |cpu_time_ms|**bigint**|目標節點作業到目前為止所耗費的總 CPU 時間 (以毫秒為單位)。|  
 |database_id|**smallint**|包含在上面執行讀取和寫入之物件的資料庫識別碼。|  
 |object_id|**int**|正在上面執行讀取和寫入之物件的識別碼。 參考 sys.objects.object_id。|  
@@ -129,7 +132,7 @@ GROUP BY node_id,physical_operator_name
 ORDER BY node_id;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   

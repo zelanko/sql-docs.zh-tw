@@ -1,5 +1,5 @@
 ---
-title: "sys.conversation_endpoints (TRANSACT-SQL) |Microsoft 文件"
+title: sys.transmission_queue (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.transmission_queue_TSQL
 - sys.transmission_queue
 - transmission_queue_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.transmission_queue catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.transmission_queue catalog view
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c824744fab0b34685678471b045b360ee89c08b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8bfb955b7d44733d93379b999aca8b6267b28976
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="systransmissionqueue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**conversation_handle**|**uniqueidentifier**|這則訊息所屬之交談的識別碼。 不是 NULLABLE。|  
 |**to_service_name**|**nvarchar(256)**|這則訊息所送往之服務的名稱。 NULLABLE。|  
-|**to_broker_instance**|**nvarchar （128)**|主控這則訊息所送往之服務的 Broker 識別碼。 NULLABLE。|  
+|**to_broker_instance**|**nvarchar(128)**|主控這則訊息所送往之服務的 Broker 識別碼。 NULLABLE。|  
 |**from_service_name**|**nvarchar(256)**|這則訊息的來源服務名稱。 NULLABLE。|  
 |**service_contract_name**|**nvarchar(256)**|這則訊息之交談所遵照的合約名稱。 NULLABLE。|  
 |**enqueue_time**|**datetime**|訊息進入佇列的時間。 無論執行個體的當地時區為何，這個值一律使用 UTC。 不是 NULLABLE。|  
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |**is_end_of_dialog**|**bit**|這則訊息是否代表交談訊息結束。 不是 NULLABLE。<br /><br /> 0 = 不代表交談訊息結束。<br /><br /> 1 = 代表交談訊息結束。<br /><br /> 不是 NULLABLE。|  
 |**message_body**|**varbinary(max)**|這則訊息的主體。 NULLABLE。|  
 |**transmission_status**|**nvarchar(4000)**|這則訊息進入佇列的理由。 它通常是錯誤訊息，說明傳送訊息為何失敗。 如果是空白，表示尚未傳送訊息。 NULLABLE。|  
-|**優先順序**|**tinyint**|指派給這個訊息的優先權等級。 不是 NULLABLE。|  
+|**priority**|**tinyint**|指派給這個訊息的優先權等級。 不是 NULLABLE。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

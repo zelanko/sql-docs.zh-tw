@@ -3,7 +3,7 @@ title: "部署 SQL Server on Linux Pacemaker 叢集 |Microsoft 文件"
 description: "本教學課程會示範如何將 Pacemaker 叢集部署的 SQL Server on Linux。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 4a014c0b7eedb96375f027674d9eb2374f38c85e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Pacemaker 叢集部署的 SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本教學課程中記載部署 Linux Pacemaker 叢集所需的工作[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Always On 可用性群組 (AG) 或容錯移轉叢集執行個體 (FCI)。 不同於緊密繫結的 Windows Server /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]堆疊、 Pacemaker 建立叢集，以及在 Linux 上的可用性群組 (AG) 組態即可之前或之後安裝[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 正在設定叢集後，即會完成的整合和資源 Pacemaker 部分 AG 或 FCI 的部署組態。
 > [!IMPORTANT]
@@ -226,7 +226,7 @@ sudo zypper install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 在本教學課程中，您學會如何 Pacemaker 叢集部署的 SQL Server on Linux。 您已了解如何以：
 > [!div class="checklist"]

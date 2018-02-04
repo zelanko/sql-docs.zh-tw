@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,18 +17,19 @@ f1_keywords:
 - sys.dm_db_rda_schema_update_status_TSQL
 - dm_db_rda_schema_update_status
 - dm_db_rda_schema_update_status_TSQL
-helpviewer_keywords: sys.dm_db_rda_schema_update_status dynamic management view
+helpviewer_keywords:
+- sys.dm_db_rda_schema_update_status dynamic management view
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5a26235ac699b3a14c01759fbcb46eee92bf948
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f3889c9985bad47e192937f7ee8c2608be225ed1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database-sys.dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |**error_severity**|**int**|如果遠端資料封存結構描述更新失敗，發生; 之錯誤的嚴重性否則為 null。|  
 |**error_state**|**int**|如果遠端資料封存結構描述更新失敗，發生; 之錯誤的狀態否則為 null。 Error_state 表示的條件或發生錯誤的位置。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

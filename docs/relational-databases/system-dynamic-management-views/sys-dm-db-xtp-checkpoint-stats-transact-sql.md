@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_checkpoint_stats_TSQL
 - sys.dm_db_xtp_checkpoint_stats
 - sys.dm_db_xtp_checkpoint_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_checkpoint_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a9dff499f4e0fd7182ee7d018532a386233f42c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a3bce2f4337894c86e251e53c9fc0546f2e69253
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -101,15 +104,15 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |new_log_wait_time_in_ms|**bigint**|花在等候新記錄的累計時間。|  
 |log_generated_since_last_checkpoint_in_bytes|**bigint**|自從上次記憶體中 OLTP 檢查點之後產生的記錄檔數量。|  
 |ms_since_last_checkpoint|**bigint**|自從上次記憶體中 OLTP 檢查點之後的時間量 (以毫秒為單位)。|  
-|checkpoint_lsn|**數值 (38)**|與最後完成的記憶體中 OLTP 檢查點相關聯的復原記錄序號 (LSN)。|  
-|current_lsn|**數值 (38)**|目前正在處理的記錄檔記錄 LSN。|  
-|end_of_log_lsn|**數值 (38)**|記錄檔結束的 LSN。|  
-|task_address|**varbinary （8)**|SOS_Task 的位址。 聯結 sys.dm_os_tasks 以尋找其他資訊。|  
+|checkpoint_lsn|**numeric (38)**|與最後完成的記憶體中 OLTP 檢查點相關聯的復原記錄序號 (LSN)。|  
+|current_lsn|**numeric (38)**|目前正在處理的記錄檔記錄 LSN。|  
+|end_of_log_lsn|**numeric (38)**|記錄檔結束的 LSN。|  
+|task_address|**varbinary(8)**|SOS_Task 的位址。 聯結 sys.dm_os_tasks 以尋找其他資訊。|  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 `VIEW DATABASE STATE` 權限。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [記憶體最佳化的資料表動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

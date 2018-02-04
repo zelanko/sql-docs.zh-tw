@@ -3,7 +3,7 @@ title: "設定 SQL Server 的 Red Hat Enterprise Linux 共用的叢集 |Microsof
 description: "藉由設定 Red Hat Enterprise Linux 共用的磁碟叢集的 SQL Server 實作高可用性。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 1d2731e55c9add5cfa06d70297793f4f7d5fef48
-ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
+ms.openlocfilehash: 519728819aa79534a1c8cc3a079164d276924a44
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本指南提供 Red Hat Enterprise Linux 上的 SQL Server 中建立兩個節點共用的磁碟叢集的指示。 叢集的圖層以基礎上 Red Hat Enterprise Linux (RHEL) [HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)之上[Pacemaker](http://clusterlabs.org/)。 在上一個節點或其他作用中的 SQL Server 執行個體。
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/06/2018
 
 下列各節逐步解說的步驟來設定容錯移轉叢集解決方案。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>필수 구성 요소
 
 若要完成以下的端對端案例中，您需要兩部電腦部署兩個節點叢集並設定 NFS 伺服器的另一部伺服器。 下列步驟概述這些伺服器設定的方式。
 
@@ -395,6 +395,6 @@ NFS 伺服器上執行下列作業：
 
 * [叢集從頭](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)從 Pacemaker 指南
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [Red Hat Enterprise Linux 共用的磁碟叢集上操作 SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

@@ -3,7 +3,7 @@ title: "設定 SQL Server SLES 共用的磁碟叢集 |Microsoft 文件"
 description: "藉由設定適用於 SQL Server 的 SUSE Linux Enterprise Server (SLES) 共用的磁碟叢集實作高可用性。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,21 +15,21 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 71671e0103916d6a539b730ce4bac141d29c417e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>設定 SQL Server SLES 共用的磁碟叢集
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本指南提供指示來建立適用於 SQL Server 上 SUSE Linux Enterprise Server (SLES) 的兩個節點共用的磁碟叢集。 叢集的圖層根據 SUSE[高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability)之上[Pacemaker](http://clusterlabs.org/)。 
 
 如需叢集設定、 資源代理程式的選項、 管理、 最佳做法和建議的詳細資訊，請參閱[SUSE Linux Enterprise 高可用性延伸 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>필수 구성 요소
 
 若要完成以下的端對端案例中，您需要部署兩個節點叢集與另一部伺服器來設定 NFS 共用的兩部電腦。 下列步驟概述這些伺服器設定的方式。
 

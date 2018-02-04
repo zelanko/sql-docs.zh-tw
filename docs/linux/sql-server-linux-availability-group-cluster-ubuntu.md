@@ -3,8 +3,8 @@ title: "設定 SQL Server 可用性群組的 Ubuntu 叢集 |Microsoft 文件"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.date: 03/17/2017
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,26 +15,26 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文件說明如何在 Ubuntu 上建立三個節點叢集並加入先前建立的可用性群組為叢集中的資源。 高可用性，Linux 上的可用性群組需要三個節點-請參閱[的可用性群組組態的高可用性與資料保護](sql-server-linux-availability-group-ha.md)。
 
 > [!NOTE] 
-> 此時，不是與使用 Windows 上的 WSFC 為結合與 Pacemaker Linux 上的 SQL Server 的整合。 從 SQL、 內沒有存在叢集的認知，所有的協調流程外中，服務由 Pacemaker 控制做為獨立執行個體。 此外，虛擬網路名稱是屬於 WSFC、 沒有對等的 Pacemaker 中相同。 Alwayson 動態管理檢視的叢集資訊的查詢會傳回空的資料列。 您仍然可以建立來做為透明的重新連線到容錯移轉之後，接聽程式，但您必須手動在 DNS 伺服器註冊接聽程式名稱與 IP 用來建立虛擬 IP 資源 （如下所述）。
+> 此時，不是與使用 Windows 上的 WSFC 為結合與 Pacemaker Linux 上的 SQL Server 的整合。 從 SQL、 內沒有存在叢集的認知、 所有協調流程中，超出和服務由 Pacemaker 控制做為獨立執行個體。 此外，虛擬網路名稱是屬於 WSFC、 沒有對等的 Pacemaker 中相同。 Alwayson 動態管理檢視的叢集資訊的查詢會傳回空的資料列。 您仍然可以建立來做為透明的重新連線到容錯移轉之後，接聽程式，但您必須手動在 DNS 伺服器註冊接聽程式名稱與 IP 用來建立虛擬 IP 資源 （如下所述）。
 
 下列各節逐步解說的步驟來設定容錯移轉叢集解決方案。 
 
 ## <a name="roadmap"></a>藍圖
 
-在高可用性的 Linux 伺服器上建立可用性群組的步驟會與不同的 Windows Server 容錯移轉叢集的步驟。 下列清單描述的高層級步驟： 
+在高可用性的 Linux 伺服器上建立可用性群組的步驟會與不同的 Windows Server 容錯移轉叢集的步驟。 下列清單描述的概要步驟： 
 
 1. [設定 SQL Server 叢集節點上](sql-server-linux-setup.md)。
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. 建立叢集。 
 
    >[!WARNING]
-   >由於出現已知問題，叢集的廠商調查，啟動叢集 ('電腦叢集 start') 會因錯誤的下方。 這是因為這建立叢集安裝命令時執行，此為錯誤 /etc/corosync/corosync.conf 中設定的記錄檔。 若要解決這個問題，請變更的記錄檔： /var/log/corosync/corosync.log。 或者，您可以建立 /var/log/cluster/corosync.log 檔案。
+   >由於出現已知問題，叢集的廠商調查，啟動叢集 ('電腦叢集 start') 會因錯誤的下方。 這是因為這建立叢集安裝命令時執行，此為錯誤 /etc/corosync/corosync.conf 中設定的記錄檔。 若要解決此問題，請將變更的記錄檔： /var/log/corosync/corosync.log。 或者，您可以建立 /var/log/cluster/corosync.log 檔案。
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -139,7 +139,7 @@ sudo systemctl enable pacemaker
 
 Pacemaker 叢集廠商需要啟用 STONITH 和圍欄裝置設定為支援的叢集安裝。 當叢集資源管理員無法判斷狀態的節點或節點上的資源時，隔離會用於叢集讓已知狀態重新。 資源層級範圍主要是確保所設定的資源設定是中斷發生的任何資料損毀。 您可以使用資源層級的範圍，比方說，DRBD （分散式複寫區塊裝置） 來標示為過期時的節點上的磁碟使用的通訊連結中斷。 節點層級圍欄可確保節點不會執行任何資源。 這是藉由重設節點和它的 Pacemaker 實作稱為 STONITH （它代表"羊標頭中的另一個節點 」）。 Pacemaker 支援很棒的各種圍欄裝置，例如不斷電供應系統或管理介面卡的伺服器。 如需詳細資訊，請參閱[從頭 Pacemaker 叢集](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)和[圍欄和 Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
-柵欄組態節點層級高度取決於您的環境，因為我們將會停用它 （它可以設定在稍後） 本教學課程。 在主要節點上執行下列指令碼： 
+因為節點層級範圍組態高度取決於您的環境，我們停用它 （它可以設定在稍後） 在此教學課程。 在主要節點上執行下列指令碼： 
 
 ```bash
 sudo pcs property set stonith-enabled=false
@@ -160,7 +160,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 
 >[!WARNING]
->自動容錯移轉之後，當`start-failure-is-fatal = true`資源管理員會嘗試啟動資源。 第一次嘗試失敗時您必須手動執行`pcs resource cleanup <resourceName>`清理資源失敗計數和重設組態。
+>自動容錯移轉之後，當`start-failure-is-fatal = true`資源管理員會嘗試啟動資源。 第一次嘗試失敗時您必須手動執行`pcs resource cleanup <resourceName>`清除資源失敗計數和重設的設定。
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>使用 Pacemaker 安裝 SQL Server 資源的代理程式進行整合
 

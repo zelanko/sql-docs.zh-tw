@@ -3,7 +3,7 @@ title: "Linux 上安裝 SQL Server 命令列工具 |Microsoft 文件"
 description: "本主題描述如何在 Linux 上安裝 SQL Server 工具。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: fa96adb2d8a3cf5430ca09b636007887b7863df1
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 16a2366541809237609c88f8458a3930a5569c3a
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd 和 bcp 的 SQL Server 命令列工具 Linux 上安裝
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 下列步驟安裝命令列工具、 Microsoft ODBC 驅動程式，以及它們的相依性。 **Mssql 工具**封裝包含：
 
@@ -196,7 +196,7 @@ brew install --no-sandbox mssql-tools
 #ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
-## <a id="docker"></a>Docker
+## <a id="docker"></a> Docker
 
 從 SQL Server 2017 CTP 2.0 開始，SQL Server 命令列工具隨附的 Docker 映像。 如果您附加至影像的互動式命令提示字元中，您可以在本機執行工具。
 
@@ -206,7 +206,7 @@ brew install --no-sandbox mssql-tools
 
 下表提供最新工具封裝的位置：
 
-| 工具套件 | Version | 下載 |
+| 工具套件 | 版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 工具套件 | 14.0.5.0-1 | [mssql 工具 RPM 套件](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | SLES RPM 工具套件 | 14.0.5.0-1 | [mssql 工具 RPM 套件](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -215,7 +215,7 @@ brew install --no-sandbox mssql-tools
 
 這些封裝相依於**msodbcsql**，而且必須先安裝。 **Msodbcsql**套件也具有相依性  **unixODBC 對內**(RPM) 或**unixodbc dev** (Debian)。 位置**msodbcsql**下表列出封裝：
 
-| msodbcsql 封裝 | Version | 下載 |
+| msodbcsql 封裝 | 版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM msodbcsql 封裝 | 13.1.6.0-1 | [msodbcsql RPM 套件](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | SLES RPM msodbcsql 封裝 | 13.1.6.0-1 | [msodbcsql RPM 套件](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
@@ -259,7 +259,7 @@ brew install --no-sandbox mssql-tools
     dpkg -I mssql-tools_14.0.5.0-1_amd64.deb | grep "Depends:"
     ```
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 如需如何使用的範例**sqlcmd**若要連接到 SQL Server，並建立資料庫，請參閱下列快速入門：
 

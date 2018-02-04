@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_tran_version_store (TRANSACT-SQL) |Microsoft 文件"
+title: sys.dm_tran_version_store (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_version_store
 - dm_tran_version_store
 - dm_tran_version_store_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_version_store dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_version_store dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea010f2430dc839e05074e49c5854d796fd49071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: be8779d40624e9f88ee74ea85a1126c1b4b76ebf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,9 +60,9 @@ sys.dm_tran_version_store
 |**status**|**tinyint**|指出版本控制記錄是否已分割成兩個記錄。 如果值設為 0，表示記錄是儲存在一個頁面。 如果值設為 1，表示記錄分割成儲存在兩個不同頁面的兩個記錄。|  
 |**min_length_in_bytes**|**smallint**|記錄的最小長度 (以位元組為單位)。|  
 |**record_length_first_part_in_bytes**|**smallint**|版本控制記錄第一部份的長度 (以位元組為單位)。|  
-|**record_image_first_part**|**varbinary （8000)**|版本記錄第一部份的二進位檔映像。|  
+|**record_image_first_part**|**varbinary(8000)**|版本記錄第一部份的二進位檔映像。|  
 |**record_length_second_part_in_bytes**|**smallint**|版本記錄第二部份的長度 (以位元組為單位)。|  
-|**record_image_second_part**|**varbinary （8000)**|版本記錄第二部份的二進位檔映像。|  
+|**record_image_second_part**|**varbinary(8000)**|版本記錄第二部份的二進位檔映像。|  
   
 ## <a name="permissions"></a>Permissions  
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
@@ -135,7 +138,7 @@ record_length_second_part_in_bytes record_image_second_part
   
  輸出中顯示 XSN-57 已從一個資料表建立三個資料列版本，而 XSN-58 則從另一個資料表建立一個資料列版本。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

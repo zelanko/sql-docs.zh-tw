@@ -3,7 +3,7 @@ title: "建立及設定可用性群組的 SQL Server on Linux |Microsoft 文件"
 description: "本教學課程會示範如何建立及設定可用性群組的 SQL Server on Linux。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 53256f0cf5e18d8fb250cb5c67ae092771585de1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>建立及設定可用性群組的 SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本教學課程涵蓋如何建立及設定可用性群組 (AG) 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]on Linux。 不同於[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]和稍早在 Windows 中，您可以啟用 Ag 具有或不需要先建立基礎 Pacemaker 叢集。 整合與叢集，必要時，才完成更新版本。
 
