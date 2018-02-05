@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,18 +17,19 @@ f1_keywords:
 - sql13.dts.designer.webservicestask.general.f1
 - sql13.dts.designer.webservicestask.input.f1
 - sql13.dts.designer.webservicestask.output.f1
-helpviewer_keywords: Web Service task [Integration Services]
+helpviewer_keywords:
+- Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9bdfbf05eafc612d7a6c5531e5c5c1b00fd576a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4cadb534bd6ddfca7df61e316c6d6cabc669a9c1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="web-service-task"></a>Web 服務工作
   「Web 服務」工作執行一個 Web 服務方法。 您可將「Web 服務」工作用於下列用途：  
@@ -61,14 +63,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Web 服務工作上可用的自訂記錄訊息  
  下表列出您可以為 Web 服務工作啟用的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|Description|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**WSTaskBegin**|工作已經開始存取 Web 服務。|  
 |**WSTaskEnd**|工作已經完成 Web 服務方法。|  
 |**WSTaskInfo**|關於工作的描述性資訊。|  
   
 ## <a name="configuration-of-the-web-service-task"></a>設定 Web 服務工作  
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
@@ -155,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **變數**  
  選取該核取方塊，即可使用變數來提供輸入。  
   
- **Value**  
+ **ReplTest1**  
  如果選取了 [變數] 核取方塊，請從清單中選取要用於提供輸入的變數，否則請直接輸入要用於輸入的值。  
   
 ## <a name="web-service-task-editor-output-page"></a>Web 服務工作編輯器 (輸出頁面)
@@ -165,7 +167,7 @@ ms.lasthandoff: 11/20/2017
  **OutputType**  
  選取儲存結果時使用的儲存類型。 這個屬性具有下表中所列的選項。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**檔案連接**|在檔案中儲存結果。 選取此值會顯示動態選項 [檔案]。|  
 |**變數**|在變數中儲存結果。 選取此值會顯示動態選項 [變數]。|  
@@ -182,7 +184,7 @@ ms.lasthandoff: 11/20/2017
  **變數**  
  在清單中選取變數，或按一下 [\<新增變數...>]，以建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>相關內容  
  technet.microsoft.com 上的影片： [How to: Call a Web Service by Using the Web Service Task](http://go.microsoft.com/fwlink/?LinkId=259642)(如何：使用 Web 服務工作呼叫 Web 服務) (SQL Server 影片)。  

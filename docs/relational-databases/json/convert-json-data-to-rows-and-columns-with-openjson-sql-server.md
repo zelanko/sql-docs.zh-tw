@@ -1,5 +1,5 @@
 ---
-title: "使用 OPENJSON 將 JSON 資料轉換成資料列和資料行 (SQL Server) | Microsoft 文件"
+title: "使用 OPENJSON 剖析及轉換 JSON 資料 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -7,7 +7,8 @@ ms.prod_service: database-engine, sql-database
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,24 +16,24 @@ helpviewer_keywords:
 - JSON, importing
 - importing JSON
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8cef7629fe382a5011e71e371c999e0aef84c35e
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 7b3a7da165234ed59fdadef6b2e3972525d81821
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>使用 OPENJSON 將 JSON 資料轉換成資料列和資料行 (SQL Server)
+# <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>使用 OPENJSON 剖析及轉換 JSON 資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 **OPENJSON** 資料列集函數可將 JSON 文字轉換成一組資料列和資料行。 一旦您使用 **OPENJSON** 將 JSON 集合轉換成資料列集，即可在所傳回的資料上執行任何 SQL 查詢，或將其插入至 SQL Server 資料表。 
   
 **OPENJSON** 函數會接受單一 JSON 物件或 JSON 物件的集合，並將其轉換成一或多個資料列。 根據預設，**OPENJSON** 函式會傳回下列資料：
--   從 JSON 物件，此函式會傳回可在第一個層級找到的所有索引鍵值組。
+-   從 JSON 物件，此函式會傳回可在第一層找到的所有索引鍵/值組。
 -   從 JSON 陣列，此函式會傳回所有陣列元素及其索引。  
 
 您可以新增選擇性 **WITH** 子句，以提供明確定義輸出結構的結構描述。  

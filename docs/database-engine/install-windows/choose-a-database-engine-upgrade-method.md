@@ -8,19 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fef7f02b15fee27e3e18a5eac23e0ee6ab97959c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 164c24f5cfd3c4120c75776764221560392ebd4d
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 當您為了讓停機時間及風險減到最少，而打算從舊版 SQL Server 升級[!INCLUDE[ssDE](../../includes/ssde-md.md)]時，有多種方法可以考慮。 您可以就地執行升級、遷移到新的安裝或執行輪流升級。 下圖將協助您在這些方法中做出選擇。 下方也將討論圖表中的各個方法。 為協助您了解圖表中的決策點，另請檢閱 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/18/2018
 >  您也可以考慮在升級計畫中升級 Azure SQL Database，或將您的 SQL Server 環境虛擬化。 這些主題超出本主題的範圍，如有需要請參閱以下連結：
 >   - [Azure 虛擬機器上的 SQL Server 概觀](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/) 
->   - [在 Azure(https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/ 選取 SQL Server 選項)。  
+>   - [在 Azure 中選取 SQL Server 選項](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)。  
   
 ##  <a name="UpgradeInPlace"></a> 就地升級  
  透過此方法，SQL Server 安裝程式會以新的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 位元取代現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位元，然後升級每個系統及使用者資料庫，藉此升級現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。  就地升級方法最簡易，其需要停機一段時間，需要後援時也會花費較長時間，而且未受所有案例支援。 如需支援與未支援的就地升級案例詳細資訊，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。  

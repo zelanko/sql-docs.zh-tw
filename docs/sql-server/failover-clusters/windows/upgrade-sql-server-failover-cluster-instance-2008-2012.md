@@ -1,11 +1,12 @@
 ---
 title: "升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體 | Microsoft Docs"
-ms.date: 11/10/2017
+ms.date: 1/25/2018
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: database engine
 ms.component: failover-clustuers
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 3337f1c438f303775d923ec12b14891c13b36c03
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體
 
@@ -29,7 +30,6 @@ ms.lasthandoff: 01/09/2018
 ## <a name="prerequisites"></a>Prerequisites
 
 -   執行任何移轉策略之前，必須準備具有 Windows Server 2016/2012 R2 的平行 Windows Server 容錯移轉叢集。 所有包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 容錯移轉叢集執行個體 (FCI) 的節點都必須加入至已安裝平行 FCI 的 Windows 叢集。 在移轉之前，任何獨立電腦都**不得**加入至 Windows Server 容錯移轉叢集。 在移轉之前，應該同步處理新環境上的使用者資料庫。
-
 -   所有目的地執行個體都必須使用相同的執行個體名稱和識別碼來執行與其在原始環境之平行執行個體的相同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 版本，並安裝相同的功能。 在目的地電腦上，安裝路徑和目錄結構應該相同。 這不包含 FCI 虛擬網路名稱，這在移轉之前必須不同。 在目的地執行個體上，應該啟用原始執行個體所啟用的任何功能 (AlwaysOn、FILESTREAM 等等)。
 
 -   在移轉之前，平行叢集應該未安裝 [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]。
@@ -41,7 +41,6 @@ ms.lasthandoff: 01/09/2018
 -   原始 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 叢集環境中所使用的任何網路檔案共用和網路對應磁碟機都仍然必須存在，而且目標叢集仍然可以使用與原始執行個體相同的權限進行存取。
 
 -   原始 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 執行個體所接聽的任何 TCP/IP 連接埠都必須為未用，並允許目標電腦上的輸入流量。
-
 -   所有 SQL 相關服務應該都是由相同的 Windows 使用者安裝及執行。
 
 -   必須使用與原始執行個體相同的地區設定來安裝目的地執行個體。
@@ -57,8 +56,8 @@ ms.lasthandoff: 01/09/2018
 | **叢集使用獨立執行個體** | [案例 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [案例 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [案例 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [案例 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* 排除可用性群組接聽程式名稱
 
-## <a name="scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1"></a>案例 1：要移轉的叢集使用嚴格可用性群組 (Windows Server 2008 R2 SP1+)
-如果您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安裝程式使用嚴格可用性群組 (AG)，則可以在具有 Windows Server 2016/2012 R2 的不同 Windows 叢集上建立平行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安裝程式，來移轉至新叢集。 在此之後，您可以建立目標叢集為目前生產叢集之次要叢集的分散式 AG。 這需要使用者升級為 [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 或更新版本。
+## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>案例 1：有 SQL Server 可用性群組、沒有容錯移轉叢集執行個體 (FCI) 的 Windows 叢集
+如果您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安裝程式使用可用性群組 (AG) 且沒有容錯移轉叢集執行個體，則可以在具有 Windows Server 2016/2012 R2 的不同 Windows 叢集上建立平行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 部署，來移轉至新叢集。 在此之後，您可以建立目標叢集為目前生產叢集之次要叢集的分散式 AG。 這需要使用者升級為 [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 或更新版本。
 
 ###  <a name="to-perform-the-upgrade"></a>執行升級
 
@@ -69,7 +68,7 @@ ms.lasthandoff: 01/09/2018
 3.  形成目標叢集是次要可用性群組的分散式可用性群組。
 
     >[!NOTE]
-    >建立分散式 AG 查詢的 LISTENER\_URL 參數，其行為與 FCI 作為主要執行個體的 AG 略為不同。 如果這是主要或次要 AG 的案例，請使用主要 SQL FCI 的 VNN 作為接聽程式 URL 來取代接聽程式的網路名稱，但在任一情況下仍然使用資料庫鏡像端點的連接埠。
+    >建立分散式 AG T-SQL 的 LISTENER\_URL 參數，其行為對於以 SQL FCI 作為主要執行個體的 AG 會有所不同。 如果主要或次要 AG 遇到這種情況，請使用主要 SQL FCI 的 VNN 作為接聽程式 URL 來取代接聽程式的網路名稱，以及資料庫鏡像端點的連接埠。
 
 4.  將次要可用性群組加入至分散式 AG 中。
 
@@ -80,7 +79,7 @@ ms.lasthandoff: 01/09/2018
 
 6.  截斷所有流向主要 AG 的流量，並允許次要 AG 同步。
 
-7.  將這兩個可用性群組的認可原則變更為 SYNCHRONOUS\_COMMIT，並在狀態為 SYNCHRONIZED 之後容錯移轉至目標叢集。
+7.  將這兩個可用性群組的認可原則變更為 SYNCHRONOUS_COMMIT，並在狀態為 SYNCHRONIZED 之後容錯移轉至目標叢集。
 
 8.  刪除分散式 AG。
 
@@ -93,9 +92,9 @@ ms.lasthandoff: 01/09/2018
 
 11. 繼續流向接聽程式的流量。
 
-## <a name="scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag"></a>案例 2：要移轉的叢集只有 SQL FCI 而沒有 AG
+## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>案例 2：有 SQL Server 容錯移轉叢集執行個體 (FCI) 的 Windows 叢集
 
-如果您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安裝程式未使用獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 執行個體 (只有 SQL FCI)，則可以在具有 Windows Server 2016/2012 R2 的不同 Windows 叢集上建立平行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安裝程式，來移轉至新叢集。 您將「竊取」舊 SQL FCI 的 VNN 並在新叢集上取得它們，以移轉至目標叢集。 這將會根據 DNS 傳播時間來建立額外停機時間。
+如果您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 環境僅有 SQL FCI 執行個體，則可以在具有 Windows Server 2016/2012 R2 的不同 Windows 叢集上建立平行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 環境，來移轉至新叢集。 您將「竊取」舊 SQL FCI 的 VNN 並在新叢集上取得它們，以移轉至目標叢集。 這將會根據 DNS 傳播時間來建立額外停機時間。
 
 ###  <a name="to-perform-the-upgrade"></a>執行升級
 
@@ -126,7 +125,7 @@ ms.lasthandoff: 01/09/2018
 
 12. 電腦在重新啟動後重新上線時，請在容錯移轉叢集管理員中啟動每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] FCI 角色。
 
-## <a name="scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups"></a>案例 3：叢集只有 SQL FCI 並使用可用性群組
+## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>案例 3：有 SQL FCI 和 SQL Server 可用性群組的 Windows 叢集
 
 如果您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安裝程式未使用任何獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 執行個體 (只有包含在至少一個可用性群組中的 SQL FCI)，則可以使用與「無可用性群組、無獨立執行個體」案例類似的方法將此項目移轉至新叢集。 將系統資料表複製至目標 FCI 共用磁碟之前，您必須卸除原始環境中的所有可用性群組。 所有資料庫都移轉至目標電腦之後，您將會重新建立具有相同結構描述和接聽程式名稱的可用性群組。 如此一來，Windows Server 容錯移轉叢集資源的格式會正確，並在目標叢集上進行管理。 **移轉之前，必須在目標環境之每部電腦的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager 中啟用 AlwaysOn。**
 
@@ -164,7 +163,7 @@ ms.lasthandoff: 01/09/2018
 
 16. 在具有原始可用性群組接聽程式之接聽程式名稱的新 AG 中，建立接聽程式。
 
-## <a name="scenario-4-cluster-has-some-non-fci-and-no-availability-groups"></a>案例 4：叢集有一些非 FCI 但沒有可用性群組
+## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>案例 4：有獨立 SQL Server 執行個體、沒有可用性群組的 Windows 叢集
 
 移轉具有獨立執行個體的叢集，與移轉只有 FCI 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 叢集的程序類似，但您需要變更原始獨立電腦的電腦名稱，並「竊取」目標電腦上的舊電腦名稱，而不需要變更 FCI 網路名稱叢集資源的 VNN。 這會導致相對於無獨立案例的額外停機時間，因為除非您取得舊電腦的網路名稱，否則無法將目標獨立電腦加入至 WSFC。
 
@@ -200,9 +199,9 @@ ms.lasthandoff: 01/09/2018
 
 15. 電腦在重新啟動後重新上線時，請在容錯移轉叢集管理員中啟動每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] FCI 角色。
 
-## <a name="scenario-5-cluster-has-some-non-fci-and-uses-availability-groups"></a>案例 5：叢集有一些非 FCI 並使用可用性群組
+## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>案例 5：有獨立 SQL Server 執行個體和可用性群組的 Windows 叢集
 
-移轉使用具有獨立複本之可用性群組的叢集，與使用可用性群組移轉具有嚴格 FCI 之叢集的程序類似。 您仍然必須刪除原始可用性群組，並在目標叢集上重新予以建構；不過，會因移轉獨立執行個體的額外成本而造成額外的停機時間。 **移轉之前，必須在目標環境的每個 FCI 上啟用 AlwaysOn。**
+移轉使用具有獨立複本之可用性群組的叢集，與使用可用性群組移轉具有 FCI 之叢集的程序類似。 您仍然必須刪除原始可用性群組，並在目標叢集上重新予以建構；不過，會因移轉獨立執行個體的額外成本而造成額外的停機時間。 **移轉之前，必須在目標環境的每個 FCI 上啟用 AlwaysOn。**
 
 ###  <a name="to-perform-the-upgrade"></a>執行升級
 

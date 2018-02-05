@@ -8,25 +8,26 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8a620eefb1d9c679083cdafb67dfba27f5414826
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6233878fdf7d0eadcfd837fd3640bdb041cdcf24
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-將裝載 AlwaysOn 可用性群組 (AG) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體升級為新的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 或累積更新，或安裝至新的 Windows Service Pack 或累積更新時，您可透過執行輪流升級來將主要複本的停機時間減少至僅單一手動容錯移轉 (回復為原始主要複本時則為兩次手動容錯移轉)。 在升級過程中無法使用次要複本執行容錯移轉或唯讀作業，且在升級完成後，次要複本可能需要花費一些時間趕上主要複本節點，根據主要複本節點的活動量而定 (因此網路流量會偏高)。  
+將裝載 AlwaysOn 可用性群組 (AG) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體升級為新的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 或累積更新，或安裝至新的 Windows Service Pack 或累積更新時，您可透過執行輪流升級來將主要複本的停機時間減少至僅單一手動容錯移轉 (回復為原始主要複本時則為兩次手動容錯移轉)。 在升級過程中無法使用次要複本執行容錯移轉或唯讀作業，且在升級完成後，次要複本可能需要花費一些時間趕上主要複本節點，根據主要複本節點的活動量而定 (因此網路流量會偏高)。 另請注意，在初始容錯移轉到執行較新版 SQL Server 的次要複本之後，該可用性群組中的資料庫會執行整個升級程序，以將其升級為最新版本。 在這段期間內，這些資料庫都不會有可讀取的複本。 初始容錯移轉之後的停機時間長短，取決於可用性群組中的資料庫數量。 如果您打算容錯回復為原始的主要複本，此步驟在您進行容錯回復時不會重覆。
   
 >[!NOTE]  
 >本文僅限討論 SQL Server本身的升級。 其未涵蓋包含 Windows Server 容錯移轉叢集 (WSFC) 的作業系統升級。 Windows Server 2012 R2 之前的作業系統，不支援裝載容錯移轉叢集的 Windows 作業系統升級。 升級於 Windows Server 2012 R2 上執行的叢集結點時，請參閱 [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)(叢集作業系統輪流升級)  
