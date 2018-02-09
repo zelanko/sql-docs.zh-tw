@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Dimension::Hierarchies
 - Hierarchies
-helpviewer_keywords: Hierarchies collection [ADO MD]
+helpviewer_keywords:
+- Hierarchies collection [ADO MD]
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d783387671cd389f30d48591d0f6ac17e094af8a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: baba9403af996c936c65f102ae769376ccf69311
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hierarchies-collection-ado-md"></a>Hierarchies 集合 (ADO MD)
 包含一組[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)，從維度中的物件。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/hierarchies-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [目錄 (VB) 範例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [維度物件 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [Hierarchy 物件 (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)

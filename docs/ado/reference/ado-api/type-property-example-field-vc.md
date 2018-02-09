@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Type property [field] [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85d88e81cb53eefe6534c8621b7df5002c9bb1ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d50cc9fb72a1ac9ba30bc2903fc553d7574736c2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-property-example-field-vc"></a>型別屬性範例 （欄位） （VC + +）
 這個範例會示範[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性所顯示的值之常數的對應名稱**類型**屬性的所有[欄位](../../../ado/reference/ado-api/field-object.md)中的物件***員工***資料表。 FieldType 函式，才能執行這個程序。  
@@ -168,12 +171,12 @@ void PrintComError(_com_error &e) {
  **類型： adVarChar**  
  **名稱： job_id**  
  **類型： adSmallInt**  
- **名稱： job_lvl**  
+ **Name: job_lvl**  
  **類型： adUnsignedTinyInt**  
  **名稱： pub_id**  
  **類型： adChar**  
  **名稱： hire_date**  
  **類型： adDBTimeStamp**   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
  [Type 屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

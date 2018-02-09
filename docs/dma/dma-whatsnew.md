@@ -1,33 +1,40 @@
 ---
 title: "在資料移轉小幫手 (SQL Server) 的新 |Microsoft 文件"
 ms.custom: 
-ms.date: 10/03/2017
+ms.date: 02/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, new features
+helpviewer_keywords:
+- Data Migration Assistant, new features
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07d72eb6c4d40c3e61f4292616f9eda99d6d4742
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b72ea21423b96a1dbd19eb5fb8f0a3b99c59e0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>在資料移轉小幫手最新消息
 
 本主題列出新增的項目在每個版本中的資料移轉小幫手 (DMA)。
+
+## <a name="dma-v34"></a>DMA v3.4
+DMA 的 v3.4 版本包含下列功能：
+- 支援的 SQL Server 2017，做為移轉到 Azure SQL Database 的來源。
+- 穩定性、 效能及評估規則正確性的增強功能。
 
 ## <a name="dma-v33"></a>DMA v3.3
 DMA v3.3 發行可讓移轉至新版的 SQL Server 2017，在 Windows 和 Linux 上的內部部署 SQL Server 執行個體。 雖然 Windows 和 Linux 的整體移轉工作流程中都相同，適用於 Linux 移至 SQL Server 2017 會需要幾個額外的考量。
@@ -84,9 +91,9 @@ DMA 的 v1.0 版本是初始版本中，並提供：
     - 已被取代的功能
 
 - 探索的資料庫可以受益於升級的目標 SQL Server 平台的新功能。 功能的建議事項，以描述任何發現與它們分成下列領域：
-    - [效能]
+    - 效能
     - Security
-    - Storage
+    - 儲存空間
 
 -   若要執行評估的現代化使用者體驗。
 

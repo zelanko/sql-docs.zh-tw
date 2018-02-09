@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Level
-helpviewer_keywords: Level object [ADO MD]
+f1_keywords:
+- Level
+helpviewer_keywords:
+- Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6bd8424c137f459fafeced07a46f0c2735a9264
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f690e2efc97b4da9ea588e5028055fb758b93a48
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="level-object-ado-md"></a>層級物件 (ADO MD)
 包含一組成員，每一個都有相同的陣序，在階層中。  
@@ -46,11 +49,11 @@ ms.lasthandoff: 12/21/2017
   
  **屬性**集合包含提供者提供的屬性。 下表列出可供使用的屬性。 實際的屬性清單可能與不同的提供者實作而定。 請參閱您的提供者，如需更完整清單可用內容的文件。  
   
-|[屬性]|描述|  
+|名稱|Description|  
 |----------|-----------------|  
 |CatalogName|此 cube 所屬的目錄的名稱。|  
 |CubeName|Cube 的名稱。|  
-|描述|層級有意義的描述。|  
+|Description|層級有意義的描述。|  
 |DimensionUniqueName|模稜兩可的名稱[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)。|  
 |HierarchyUniqueName|階層的模稜兩可的名稱。|  
 |LevelCaption|標籤或層級相關聯的標題。|  
@@ -59,14 +62,14 @@ ms.lasthandoff: 12/21/2017
 |LevelName|層級的名稱。|  
 |LevelNumber|之間的層級和階層的根的距離。|  
 |LevelType|層級的類型。|  
-|了 LevelUniqueName|層級的模稜兩可的名稱。|  
+|LevelUniqueName|層級的模稜兩可的名稱。|  
 |SchemaName|此 cube 所屬的結構描述名稱。|  
   
  本章節包含下列主題。  
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/level-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CubeDef 範例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Hierarchy 物件 (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [層級集合 (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   

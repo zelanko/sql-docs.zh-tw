@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - logs section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80f9b0a4d00326d7e9a81554d96b07bbf0817c43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 10f6e47bcf8cede8c59a406fef4951a11cbd56bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-logs-section"></a>自訂檔案記錄檔 > 一節
 **記錄**區段包含指定名稱的作業期間會將錯誤記錄檔的記錄檔項目**DataFactory**。  
@@ -44,14 +45,14 @@ FileName
   
 ## <a name="remarks"></a>備註  
   
-|部分|描述|  
+|部分|Description|  
 |----------|-----------------|  
-|**錯誤**|常值字串，表示這是記錄檔項目。|  
+|**err**|常值字串，表示這是記錄檔項目。|  
 |*FileName*|完整路徑和檔案名稱。 典型的檔案名稱是**c:\msdfmap.log**。|  
   
  記錄檔會包含使用者名稱、 HRESULT、 日期和時間的每個錯誤。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自訂檔案 SQL > 一節](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [自訂檔案 UserList > 一節](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

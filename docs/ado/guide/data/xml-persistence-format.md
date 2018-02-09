@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: XML persistence [ADO], persistence format
+helpviewer_keywords:
+- XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56fbae28f2c1d5192f2ac1e1c4f8939d7e4b027
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 832f79408a348ef0e0aa40075214357d147f2644
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xml-persistence-format"></a>XML 持續性格式
 ADO 使用 utf-8 編碼方式，它會保存 XML 資料流。  
@@ -75,5 +77,5 @@ xmlns:z="#RowsetSchema">
   
  資料區段有三個資料列，其中包含貨運公司的資訊。 空的資料列集的資料區段可能是空的但\<rs： 資料 > 標記必須存在。 沒有資料，您可以為撰寫標記縮寫\<rs： 資料 / >。 加上"rs"任何標記表示它是在 urn： 結構描述所定義的命名空間中的 microsoft-com:rowset。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

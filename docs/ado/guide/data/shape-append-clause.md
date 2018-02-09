@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6f5a67559ea2137110dc72d77a56bacc8da39a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8f4c9bf19fd1df07bb4271a8db94311548a4e092
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-append-clause"></a>圖形 APPEND 子句
 圖形命令 APPEND 子句將附加的資料行或資料行，以**資料錄集**。 通常，這些資料行是章節資料行，參考子系**資料錄集**。  
@@ -36,10 +37,10 @@ ms.lasthandoff: 12/21/2017
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  這個子句的部分如下所示：  
   
- *父命令*  
+ *parent-command*  
  零或下列其中一個 (您可以省略*父命令*完全):  
   
 -   提供者命令括在大括弧 （"{}"） 會傳回**資料錄集**物件。 命令發行至基礎資料提供者，並且它的語法取決於該提供者的需求。 這通常會是 SQL 語言，雖然 ADO 不需要任何特殊的查詢語言。  
@@ -48,10 +49,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   資料表關鍵字，後面接著資料提供者中的資料表名稱。  
   
- *父別名*  
+ *parent-alias*  
  指的是父代的選擇性別名**資料錄集**。  
   
- *資料行清單*  
+ *column-list*  
  一或多個項目：  
   
 -   彙總的資料行。  
@@ -71,7 +72,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>備註  
- *子資料錄集*  
+ *child-recordset*  
  -   提供者命令括在大括弧 （"{}"） 會傳回**資料錄集**物件。 命令發行至基礎資料提供者，並且它的語法取決於該提供者的需求。 這通常會是 SQL 語言，雖然 ADO 不需要任何特殊的查詢語言。  
   
 -   另一個圖形命令內嵌在括號中。  
@@ -80,19 +81,19 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   資料表關鍵字，後面接著資料提供者中的資料表名稱。  
   
- *子別名*  
+ *child-alias*  
  別名，它是指子**資料錄集**。  
   
- *父資料行*  
+ *parent-column*  
  中的資料行**資料錄集**傳回*父命令。*  
   
- *子資料行*  
+ *child-column*  
  中的資料行**資料錄集**傳回*子命令*。  
   
- *參數數目*  
+ *param-number*  
  請參閱[作業的參數化命令](../../../ado/guide/data/operation-of-parameterized-commands.md)。  
   
- *章別名*  
+ *chapter-alias*  
  參考附加至父代的章節資料行別名。  
   
 > [!NOTE]
@@ -126,7 +127,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [中介 Shape COMPUTE 子句](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
  [型式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

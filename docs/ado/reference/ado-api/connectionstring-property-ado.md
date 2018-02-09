@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection15::ConnectionString
-helpviewer_keywords: ConnectionString property [ADO]
+f1_keywords:
+- Connection15::ConnectionString
+helpviewer_keywords:
+- ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41f887dbd21f120706e32059128227669f517ea4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 屬性 (ADO)
 表示用來連接到資料來源的資訊。  
@@ -37,13 +40,13 @@ ms.lasthandoff: 12/21/2017
   
  ADO 支援五個引數的**ConnectionString**屬性; 直接到而不進行任何處理由 ADO 提供者的其他引數傳遞。 引數 ADO 支援如下所示。  
   
-|引數|描述|  
+|引數|Description|  
 |--------------|-----------------|  
-|*提供者 =*|指定要用於連接的提供者的名稱。|  
+|*Provider=*|指定要用於連接的提供者的名稱。|  
 |*檔案名稱 =*|指定的提供者特定的檔案 （例如，保存的資料來源物件） 包含預設的連接資訊的名稱。|  
 |*遠端提供者 =*|指定開啟用戶端連接時使用的提供者的名稱。 （僅限遠端資料服務。）|  
-|*遠端伺服器 =*|指定要開啟的用戶端連接時使用的伺服器的路徑名稱。 （僅限遠端資料服務。）|  
-|*URL =*|指定的連接字串，以做為識別的資源，例如檔案或目錄的絕對 URL。|  
+|*Remote Server=*|指定要開啟的用戶端連接時使用的伺服器的路徑名稱。 （僅限遠端資料服務。）|  
+|*URL=*|指定的連接字串，以做為識別的資源，例如檔案或目錄的絕對 URL。|  
   
  設定之後**ConnectionString**屬性，並開啟[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，提供者可能會改變屬性的內容，例如藉由對應至 ADO 定義引數名稱及其對等項目特定的提供者。  
   
@@ -68,7 +71,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="applies-to"></a>適用於  
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ConnectionString、 ConnectionTimeout 和 State 屬性範例 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString、 ConnectionTimeout 和 State 屬性範例 （VC + +）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

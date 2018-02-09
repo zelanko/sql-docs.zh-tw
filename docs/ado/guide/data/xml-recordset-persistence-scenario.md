@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: XML persistence [ADO], persistence scenario
+helpviewer_keywords:
+- XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9a809d6e2e50ee20747466ab4b2895a5aedf721
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cf4899425669d8c65b6b3661fb75e8bf37091ce9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xml-recordset-persistence-scenario"></a>持續性案例中 XML 資料錄集
 在此案例中，您將建立資料錄集物件的內容直接將 ASP 回應物件的 Active Server Pages (ASP) 應用程式。  
@@ -117,6 +119,6 @@ ms.lasthandoff: 12/21/2017
   
  關閉 default.htm 檔案，並將它儲存到儲存 XMLResponse.asp 的相同資料夾。 使用 Internet Explorer 4.0 或更新版本中，開啟 URL http://*sqlserver*/XMLPersist/default.htm，並觀察結果。 資料會顯示在 繫結的 DHTML 資料表。 現在開啟 URL http:// *sqlserver* /XMLPersist/XMLResponse.asp，並觀察結果。 則會顯示 XML。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Save 方法](../../../ado/reference/ado-api/save-method.md)   
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,21 +13,22 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Parameter collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 370528b6a58ab987f95ae551ab5473f3b8e549e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05f3e2f6f6b3985c1c68604e6e9829c1b1f3eef1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameter-ado---wfc-syntax"></a>參數 (ADO-WFC 語法)
-## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="constructor"></a>建構函式  
   
@@ -74,7 +76,7 @@ public AdoProperties getProperties()
   
  ADO/WFC 實作**值**屬性**getValue**方法，這個方法會傳回 VARIANT 的物件; 而**setValue**採用做為引數的 VARIANT 的方法。 Variant 則高效率的某些語言，例如 Microsoft Visual Basic 中。  
   
- 除了**值**屬性 ADO/WFC 提供*存取子*用於取得及設定的內容中的 Java 資料類型方法**參數**物件。 大部分的這些方法會有的名稱格式**取得***DataType*或**設定***DataType*。  
+ 除了**值**屬性 ADO/WFC 提供*存取子*用於取得及設定的內容中的 Java 資料類型方法**參數**物件。 大部分的這些方法會有的名稱格式 **取得 * * * DataType*或 **設定 * * * DataType*。  
   
  還有一個值得注意的例外狀況： 沒有任何**getNull**屬性; 相反地，沒有**isNull**傳回布林值，指出欄位是否為 null 的屬性。  
   
@@ -99,5 +101,5 @@ public boolean isNull()
 public void setNull()  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)

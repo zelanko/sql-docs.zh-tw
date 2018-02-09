@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,23 +16,23 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cca594326e550fd68b8cd507f019c8f19a392933
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fb85b1f835f494e7f86e69d25ed225ce4c605e55
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-commands-in-general"></a>在一般的圖形命令
 資料成形定義的資料行的形狀**資料錄集**，資料行中的方式所表示的實體之間的關聯性**資料錄集**已填入資料。  
   
  形狀**資料錄集**可以包含下列類型的資料行。  
   
-|資料行類型|描述|  
+|資料行類型|Description|  
 |-----------------|-----------------|  
 |data|從欄位**資料錄集**資料提供者傳回的查詢命令，資料表，或先前形狀**資料錄集**。|  
 |本文章節|另一個的參考**資料錄集**，稱為*章*。 章節資料行讓您定義*父子式*關聯性其中*父*是**資料錄集**包含章節資料行和*子*是**資料錄集**本章所表示。|  

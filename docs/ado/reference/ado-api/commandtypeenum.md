@@ -1,10 +1,11 @@
 ---
-title: "CommandTypeEnum |Microsoft 文件"
+title: CommandTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,29 +13,31 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: CommandTypeEnum
-helpviewer_keywords: CommandTypeEnum enumeration [ADO]
+f1_keywords:
+- CommandTypeEnum
+helpviewer_keywords:
+- CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb7c01971633727f1e7e5769060b256eab13914b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 11150cb69914cf5438d46cc15238b38465ddfa30
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 指定應如何解譯為命令引數。  
   
  請務必驗證使用者提供*CommandString*值，以免讓應用程式使用者有機會將用於 ADO 來執行有潛在危險的命令。  
   
-|常數|ReplTest1|描述|  
+|常數|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|未指定命令的型別引數。|  
-|**adCmdText**|@shouldalert|評估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)做為文字定義命令或預存程序的呼叫。|  
+|**adCmdText**|1|評估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)做為文字定義命令或預存程序的呼叫。|  
 |**adCmdTable**|2|評估**CommandText**做為其資料行大小會傳回由內部產生的 SQL 查詢的資料表名稱。|  
 |**adCmdStoredProc**|4|評估**CommandText**做為預存程序名稱。|  
 |**adCmdUnknown**|8|預設值。 表示命令中的型別**CommandText**並不知道屬性。<br /><br /> ADO 在不知道的命令類型，也必須用於解譯多嘗試幾次**CommandText**。<br /><br /> -   **CommandText**解譯為文字的命令或預存程序呼叫的定義。 這是相同的行為**adCmdText**。<br />-   **CommandText**是預存程序的名稱。 這是相同的行為**adCmdStoredProc**。<br />-   **CommandText**解譯為資料表的名稱。 由內部產生的 SQL 查詢會傳回所有資料行。 這是相同的行為**adCmdTable**。|  
@@ -42,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 |**adCmdTableDirect**|512|評估**CommandText**做為所有傳回的資料行的資料表名稱。 搭配**Recordset.Open**或**Requery**只。 若要使用[搜尋](../../../ado/reference/ado-api/seek-method.md)方法，**資料錄集**必須以開啟**adCmdTableDirect**。<br /><br /> 此值不能與結合[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)值**adAsyncExecute**。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |常數|  
 |--------------|  

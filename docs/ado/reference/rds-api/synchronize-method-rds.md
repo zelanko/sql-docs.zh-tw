@@ -1,6 +1,7 @@
 ---
 title: "同步處理方法 (RDS) |Microsoft 文件"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Synchronize method [ADO]
+helpviewer_keywords:
+- Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c933cbb0a39486ea1ed04b645057bdc31011b05b
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d223df00d0b32c3f608bcd61207de23da77e15cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="synchronize-method-rds"></a>同步處理方法 (RDS)
 使用 ADO 2.5 和更新版本中使用的連接字串所指定的資料庫，同步處理指定的資料錄集。  
@@ -38,7 +40,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
 ```  
   
 #### <a name="parameters"></a>參數  
- *連接字串*  
+ *ConnectionString*  
  字串，用來連接到 OLE DB 提供者會傳送要求的位置。 如果使用處理常式，此處理常式可能編輯或取代連接字串。  
   
  *HandlerString*  

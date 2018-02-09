@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.sysperfinfo_TSQL
 - sys.sysperfinfo
 - sysperfinfo
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.sysperfinfo compatibility view
 - sysperfinfo system table
 ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45b45736c76ec0da7f1dce103df9fea4ee22507a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 92d1cb29e339017f13c5b784f2b1459cf1a19432
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysperfinfo-transact-sql"></a>sys.sysperfinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +46,11 @@ ms.lasthandoff: 11/27/2017
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar(128)**|效能物件名稱，例如**SQLServer:LockManager**或**SQLServer:BufferManager**。|  
 |**counter_name**|**nchar(128)**|在物件中，效能計數器的名稱這類**網頁要求**或**要求的鎖定數**。|  
-|**執行個體名稱**|**nchar(128)**|計數器的具名執行個體。 例如，都會維護若干計數器每種類型的鎖定，例如**資料表**，**頁面**，**金鑰**，依此類推。 相似計數器的執行個體名稱各不相同。|  
+|**instance_name**|**nchar(128)**|計數器的具名執行個體。 例如，都會維護若干計數器每種類型的鎖定，例如**資料表**，**頁面**，**金鑰**，依此類推。 相似計數器的執行個體名稱各不相同。|  
 |**cntr_value**|**bigint**|實際的計數器值。 這通常都是一個層級計數器或單純增加的計數器，用來計算執行個體事件的出現次數。|  
 |**cntr_type**|**int**|Windows 效能架構所定義的計數器類型。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將系統資料表對應至系統檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

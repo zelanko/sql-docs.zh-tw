@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a25fbf3437b05497093ec9a8b83c69342faba077
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 829afb6aecaa50b521a86201351f6c071d934b5f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>存取資料列中的階層式資料錄集 （範例）
 下列範例說明中的步驟需要存取的資料列階層式[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -73,5 +74,5 @@ Sub datashape()
 End Sub
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [資料成形概觀](../../../ado/guide/data/data-shaping-overview.md)[欄位物件](../../../ado/reference/ado-api/field-object.md)[欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [正式圖形文法](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft 資料成形服務OLE DB （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [資料成形所需提供者](../../../ado/guide/data/required-providers-for-data-shaping.md)[圖形 APPEND 子句](../../../ado/guide/data/shape-append-clause.md) [圖案的一般命令](../../../ado/guide/data/shape-commands-in-general.md)[圖形 COMPUTE 子句](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic 應用程式函式](../../../ado/guide/data/visual-basic-for-applications-functions.md)

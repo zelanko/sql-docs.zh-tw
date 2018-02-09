@@ -1,6 +1,7 @@
 ---
 title: "RDS 程式碼在 Visual Basic 中的範例 |Microsoft 文件"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,21 +11,22 @@ ms.prod_service: drivers
 ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - Visual Basic RDS examples [ADO]
 - RDS samples [ADO], Visual Basic
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f608e3e4c222081d095626c919b0be2ed86839b
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: f1b84d856fd85f6c52ee5a4ebe49bfb8d9893f42
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>RDS 在 Visual Basic 中的程式碼範例
 > [!IMPORTANT]

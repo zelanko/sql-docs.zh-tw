@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADOX, fundamentals
+helpviewer_keywords:
+- ADOX, fundamentals
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed0321e6703a80ef433e5e07e2d0da6f6d4d2905
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 69b460a0d18501f89f8d9f7ab4b83b5251bf38e9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-fundamentals"></a>ADOX 基本概念
 Microsoft® ActiveX® 資料物件的擴充功能資料定義語言和安全性 (ADOX) 是程式設計模型與 ADO 物件的擴充功能。 ADOX 包含物件的結構描述建立和修改，以及安全性。 因為它是以結構描述管理物件為基礎的方法，您可以撰寫程式碼會針對各種資料來源，不論其原生的語法差異。  
@@ -47,7 +49,7 @@ Microsoft® ActiveX® 資料物件的擴充功能資料定義語言和安全性 
   
 -   [ADOX 範例](../../../ado/reference/adox-api/adox-code-examples.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADOX API 參考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX 程式碼範例](../../../ado/reference/adox-api/adox-code-examples.md)   
  [ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)   

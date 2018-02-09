@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - samples [ADO]
 - ADO, samples
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a96f520962dc06cb61815a6c9932cd04fcd35695
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ebaa64517591b9ea89700557f02c9e17dfa3c72e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>在 Windows SDK 中的附錄 d: ADO 範例
 Windows SDK 包含數個示範如何使用 ADO 和 RDS 的程式碼的範例應用程式。 這些範例為了協助您了解如何使用 ADO 和 RDS，但不是部署在實際執行伺服器上。
@@ -38,5 +39,5 @@ Windows SDK 包含數個示範如何使用 ADO 和 RDS 的程式碼的範例應�
 
  ADO 文件也包含多種語言，也就是包含為這個線上說明中的主題中的程式碼範例。 如需有關這些範例的詳細資訊，請參閱[ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md) [ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples.md) [ADO 在 Visual Basic 中的程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [ADO 程式碼範例的 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [ADO Visual c + + 的程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)[附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)[設定 RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [附錄 c:使用 ADO 程式設計](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ADO 歷程記錄](../../../ado/guide/ado-history.md)

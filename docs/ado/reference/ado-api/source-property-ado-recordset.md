@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,18 +21,19 @@ f1_keywords:
 - Recordset15::GetSource
 - Recordset15::PutRefSource
 - Recordset15::put_Source
-helpviewer_keywords: Source property [ADO Recordset]
+helpviewer_keywords:
+- Source property [ADO Recordset]
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f472e37945d56a3c981bacb6a6251350460ecc4f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 543299eb14a06ebdbb7e9b09fe89f28e9cbeee6e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-recordset"></a>來源屬性 （ADO 資料錄集）
 指出資料來源[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [來源屬性範例 (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [來源屬性 （ADO 錯誤）](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source 屬性 (ADO 記錄)](../../../ado/reference/ado-api/source-property-ado-record.md)

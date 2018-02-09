@@ -17,19 +17,20 @@ helpviewer_keywords:
 - programming model restrictions [CLR integration]
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23972fb78bafaca778b37fc7226d3db4f53083e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3d282b317a5ea31fe8170a847f5b425bcd1af4fd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 整合程式設計模型限制
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]當您建立 managed 預存程序或其他 managed 的資料庫物件時，有執行的某些程式碼檢查[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，需要考量。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行 managed 程式碼組件上的檢查，它在資料庫中，第一次註冊時使用**CREATE ASSEMBLY**陳述式，也會在執行階段。 也會在執行階段檢查 Managed 程式碼，因為在組件中，可能會有執行階段絕對無法到達的程式碼路徑。  特別是這樣提供了註冊協力廠商組件的彈性，如此一來，當組件中的不安全程式碼設計為在用戶端環境中執行，但是絕對不會在主控的 CLR 內執行時，就不會封鎖該組件。 Managed 程式碼必須符合的需求取決於是否將組件註冊為**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**，**安全**最嚴格，並如下所示。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+當您建立 managed 預存程序或其他 managed 的資料庫物件時，有執行的某些程式碼檢查[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，需要考量。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行 managed 程式碼組件上的檢查，它在資料庫中，第一次註冊時使用**CREATE ASSEMBLY**陳述式，也會在執行階段。 也會在執行階段檢查 Managed 程式碼，因為在組件中，可能會有執行階段絕對無法到達的程式碼路徑。  特別是這樣提供了註冊協力廠商組件的彈性，如此一來，當組件中的不安全程式碼設計為在用戶端環境中執行，但是絕對不會在主控的 CLR 內執行時，就不會封鎖該組件。 Managed 程式碼必須符合的需求取決於是否將組件註冊為**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**，**安全**最嚴格，並如下所示。  
   
  除了對 Managed 程式碼組件所加諸的限制以外，也有授與的程式碼安全性權限。 Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取安全性 (CAS) 的安全性模型。 在此模型中，將會根據程式碼的識別來授與權限給組件。 **安全**， **EXTERNAL_ACCESS**，和**UNSAFE**組件具有不同的 CAS 權限。 如需詳細資訊，請參閱[CLR 整合程式碼存取安全性](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)。  
   
@@ -43,9 +44,9 @@ ms.lasthandoff: 01/08/2018
   
 -   此組件是其中一個支援的組件。 如需詳細資訊，請參閱[支援.NET Framework 程式庫](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
--   您使用**建立組件從***\<位置 >，*都可使用所有參考的組件和其相依性和*\<位置 >*.  
+-   您正在使用 **CREATE ASSEMBLY FROM * * *\<位置 >，*都可使用所有參考的組件和其相依性和*\<位置 >*。  
   
--   您使用**建立組件從***\<位元組...>，*和所有參考指定空間透過不同的位元組。  
+-   您正在使用 **CREATE ASSEMBLY FROM * * *\<位元組...>，*和所有參考指定空間透過不同的位元組。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  所有**EXTERNAL_ACCESS**組件必須符合下列準則：  
@@ -122,7 +123,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="safe"></a>SAFE  
  所有**EXTERNAL_ACCESS**條件都會檢查。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [支援的.NET Framework 程式庫](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
  [CLR 整合程式碼存取安全性](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [主機保護屬性和 CLR 整合程式設計](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   

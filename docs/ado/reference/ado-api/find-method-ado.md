@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
 - Recordset15::Find
-helpviewer_keywords: Find method [ADO]
+helpviewer_keywords:
+- Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f2a2af33a7355084f85e80fda3ff92e5415adcb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜尋[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)符合指定之準則的資料列。 （選擇性） 您可以指定搜尋開始的資料列及從起始的資料列位移的方向。 如果符合條件時，所找到的記錄; 上設定目前資料列位置否則，會結束 （或開始） 的設定位置**資料錄集**。  
@@ -43,10 +45,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A**字串**值，包含在搜尋中指定要使用的資料行名稱、 比較運算子和值的陳述式。  
   
  *SkipRows*  
- 選擇性*。* A**長**值，其預設值為零，會指定從目前資料列的資料列位移或*啟動*來開始搜尋的書籤。 根據預設，搜尋會啟動目前的資料列。  
+ Optional*.* A**長**值，其預設值為零，會指定從目前資料列的資料列位移或*啟動*來開始搜尋的書籤。 根據預設，搜尋會啟動目前的資料列。  
   
  *SearchDirection*  
- 選擇性*。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，指定是否應該開始搜尋在目前的資料列或下一個可用的資料列中搜尋方向。 失敗的搜尋會停止在結尾**資料錄集**如果值為**adSearchForward**。 失敗的搜尋會停止在開頭**資料錄集**如果值為**adSearchBackward**。  
+ Optional*.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，指定是否應該開始搜尋在目前的資料列或下一個可用的資料列中搜尋方向。 失敗的搜尋會停止在結尾**資料錄集**如果值為**adSearchForward**。 失敗的搜尋會停止在開頭**資料錄集**如果值為**adSearchBackward**。  
   
  *啟動*  
  選擇性。 A **Variant**做為搜尋的起始位置的書籤。  
@@ -71,7 +73,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [尋找方法範例 (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Index 屬性](../../../ado/reference/ado-api/index-property.md)   
  [最佳化屬性動態 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

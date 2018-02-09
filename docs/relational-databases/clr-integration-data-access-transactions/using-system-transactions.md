@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e365b0ffd041b8457fff3035fbbe4e19f5bcee6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-systemtransactions"></a>使用 System.Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**System.Transactions**命名空間提供與 ADO.NET 完全整合的交易架構和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]common language runtime (CLR) 整合。 **System.Transactions.TransactionScope**類別可讓程式碼區塊交易式的隱含地編列到分散式交易中的連接。 您必須呼叫**完成**方法的程式碼區塊的結尾標記由**TransactionScope**。 **處置**程式執行離開程式碼區塊，讓交易如果中止時，會叫用方法**完成**不會呼叫方法。 如果已擲回造成程式碼離開範圍的例外狀況，則會將交易視為停止。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**System.Transactions**命名空間提供與 ADO.NET 完全整合的交易架構和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]common language runtime (CLR) 整合。 **System.Transactions.TransactionScope**類別可讓程式碼區塊交易式的隱含地編列到分散式交易中的連接。 您必須呼叫**完成**方法的程式碼區塊的結尾標記由**TransactionScope**。 **處置**程式執行離開程式碼區塊，讓交易如果中止時，會叫用方法**完成**不會呼叫方法。 如果已擲回造成程式碼離開範圍的例外狀況，則會將交易視為停止。  
   
  我們建議您採用**使用**區塊，以確保**處置**上呼叫方法**TransactionScope**物件時**使用**結束區塊。 無法認可或復原暫止的交易可能嚴重降低效能，因為預設逾時值**TransactionScope**是一分鐘。 如果您未使用**使用**陳述式中，您必須執行中的所有工作**再試一次**封鎖，並明確呼叫**處置**方法中的**最後**區塊。  
   
@@ -111,7 +112,7 @@ using (TransactionScope transScope = new TransactionScope())
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CLR 整合和交易](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

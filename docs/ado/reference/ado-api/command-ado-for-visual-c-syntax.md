@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
-helpviewer_keywords: Command collection [ADO], ADO for Visual C++ syntax
+dev_langs:
+- C++
+helpviewer_keywords:
+- Command collection [ADO], ADO for Visual C++ syntax
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb7373ba12780b83c730be9b0ef8f69e1123579e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d245db8cd2f2ff026d3954619a1b9ee1b4e303cc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>命令 (如需 Visual c + + 語法的 ADO)
 ## <a name="methods"></a>方法  
@@ -55,5 +58,5 @@ get_State(LONG *plObjState)
 get_Parameters(ADOParameters **ppvObject)  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

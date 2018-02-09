@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 擴充功能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 介面
@@ -91,7 +93,7 @@ Update(CADORecordBinding *binding)
  如需詳細資訊，請參閱[附錄 a： 資料型別](http://msdn.microsoft.com/en-us/e3a0533a-2196-4eb0-a31e-92fe9556ada6)，OLE DB 程式設計人員參考。
 
 ### <a name="begin-binding-entries"></a>開始繫結項目
- **BEGIN_ADO_BINDING**(*類別*)
+ **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>固定長度的資料
  **ADO_FIXED_LENGTH_ENTRY**(*序數、 資料型別、 緩衝區、 狀態 」 修改*)
@@ -113,14 +115,14 @@ Update(CADORecordBinding *binding)
  **ADO_VARIABLE_LENGTH_ENTRY4**(*序數、 資料型別、 緩衝區大小，修改*)
 
 ### <a name="end-binding-entries"></a>結束繫結項目
- **END_ADO_BINDING**（)
+ **END_ADO_BINDING**()
 
-|參數|描述|
+|매개 변수|Description|
 |---------------|-----------------|
 |*類別*|類別定義的繫結項目和 C/c + + 變數。|
 |*Ordinal*|序號，從一個、 算起的**資料錄集**欄位對應至您的 C/c + + 變數。|
-|*資料類型*|C/c + + 變數的對等的 ADO 資料類型 (請參閱[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)取得一份有效的資料類型)。 值**資料錄集**欄位會被轉換成這個資料類型，如有必要。|
-|*緩衝區*|C/c + + 變數的名稱位置**資料錄集**欄位將會儲存。|
+|*DataType*|C/c + + 變數的對等的 ADO 資料類型 (請參閱[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)取得一份有效的資料類型)。 值**資料錄集**欄位會被轉換成這個資料類型，如有必要。|
+|*Buffer*|C/c + + 變數的名稱位置**資料錄集**欄位將會儲存。|
 |*大小*|以位元組為單位的大小上限*緩衝區*。 如果*緩衝區*將包含可變長度字串，讓有終止零的空間。|
 |*狀態*|會指出變數的名稱是否的內容*緩衝區*有效，以及是否要的欄位轉換*DataType*成功。<br /><br /> 最重要的兩個值，這個變數會**adFldOK**，這表示轉換是否成功; 和**adFldNull**，這表示欄位的值會是變數類型 VT_NULL 並不只是空的。<br /><br /> 可能值*狀態*會列在下一個資料表中，「 狀態值 」。|
 |*修改*|布林值旗標。如果為 TRUE，表示允許 ADO 來更新對應**資料錄集**欄位中包含的值取代*緩衝區*。<br /><br /> 設定布林值*修改*為了讓 ADO 更新繫結的欄位，則為 TRUE 和 FALSE，如果您想要檢查該欄位，但無法變更它的參數。|
@@ -133,10 +135,10 @@ Update(CADORecordBinding *binding)
 
  設定資料時,*狀態*可能會設定為**adFldNull**表示**資料錄集**梇糔飶為 null。
 
-|常數|ReplTest1|描述|
+|常數|Value|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|傳回非 null 的欄位值。|
-|**adFldBadAccessor**|@shouldalert|繫結無效。|
+|**adFldBadAccessor**|1|繫結無效。|
 |**adFldCantConvertValue**|2|由於符號不符或資料溢位以外的原因而無法轉換值。|
 |**adFldNull**|3|當取得某個欄位時，表示傳回了 null 值。<br /><br /> 當設定的欄位，表示欄位應設**NULL**欄位無法編碼時**NULL**本身 （例如，字元陣列或整數）。|
 |**adFldTruncated**|4|已截斷可變長度的資料或數字。|
@@ -150,5 +152,5 @@ Update(CADORecordBinding *binding)
 |**adFldBadStatus**|12|在更新時，無效的狀態參數。|
 |**adFldDefault**|13|更新時，使用預設值。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [Visual c + + 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual c + + 擴充功能的標頭](../../../ado/guide/appendixes/visual-c-extensions-header.md)

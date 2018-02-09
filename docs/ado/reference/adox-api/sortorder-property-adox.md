@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - _Column::put_SortOrder
 - _Column::get_SortOrder
 - _Column::GetSortOrder
-helpviewer_keywords: SortOrder property [ADOX]
+helpviewer_keywords:
+- SortOrder property [ADOX]
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ccacbbf0e89d237afbffd47661876597eade8b8a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5505596de79392b6974afa8f1282008707da3309
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sortorder-property-adox"></a>SortOrder 屬性 (ADOX)
 指出資料行 （僅限索引欄） 的排序順序。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="applies-to"></a>適用於  
  [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SortOrder 屬性範例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [資料行集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

@@ -1,6 +1,7 @@
 ---
 title: "ADO-WFC 語法索引 |Microsoft 文件"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -15,15 +16,15 @@ helpviewer_keywords:
 - syntax indexes [ADO], ADO/WFC
 - ADO/WFC syntax index [ADO]
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 73b44900658d4923ef56afaa352e88fc36c2e16b
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: craigg
+ms.openlocfilehash: e5be742d4d356ed03e7138590e611675f1f72616
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO-WFC 語法索引
 ADO 語言參考會使用 Microsoft Visual Basic 程式語言來說明 ADO 方法和屬性的語法。 此索引是 ADO 語言參考主題，ADO 的 Windows Foundation Classes (ADO/WFC) 為基礎的交互參考。 語法差異，則會發生時使用函式簽章在這個索引中，而不是語法中的清單語言參考主題。  
@@ -48,10 +49,10 @@ ADO 語言參考會使用 Microsoft Visual Basic 程式語言來說明 ADO 方�
   
 ## <a name="remote-data-service"></a>遠端資料服務  
   
--   [資料空間](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
+-   [DataSpace](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
   
 -   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [處理 ADO 事件](../../../ado/guide/data/handling-ado-events.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

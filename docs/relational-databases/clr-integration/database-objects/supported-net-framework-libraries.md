@@ -15,19 +15,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], .NET Framework libraries
 - .NET Framework [CLR Integration]
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41ff7f36b26ddc1adc96bcbc9569c5a697741dd5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e9b970822a872a03fa3f2ba3044d2e8432ac595e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="supported-net-framework-libraries"></a>支援的 .NET Framework 程式庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Common language runtime (CLR) 將裝載於[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您可以撰寫預存程序、 觸發程序、 使用者定義函數、 使用者定義型別和 managed 程式碼中的 使用者定義彙總。 藉由 .NET Framework 類別庫所提供的功能，您可以存取預先建立的類別，這些類別可提供字串操作、進階數學運算、檔案存取、加密等多項功能。 您可以透過任何 Managed 預存程序、使用者定義型別、觸發程序、使用者定義函數或使用者定義彙總來存取這些類別。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中裝載的 Common Language Runtime (CLR)，您能夠以 Managed 程式碼撰寫預存程序、觸發程序、使用者定義函數、使用者定義型別及使用者定義彙總。 藉由 .NET Framework 類別庫所提供的功能，您可以存取預先建立的類別，這些類別可提供字串操作、進階數學運算、檔案存取、加密等多項功能。 您可以透過任何 Managed 預存程序、使用者定義型別、觸發程序、使用者定義函數或使用者定義彙總來存取這些類別。  
   
 > [!NOTE]  
 >  如果在全域組件快取 (GAC) 中服務或升級不受支援的組件，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 應用程式可能會停止運作。 這是因為 GAC 中的服務或升級程式庫不會升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內的這些組件。 如果某個組件同時存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫和 GAC 中，這個組件的兩個副本就必須完全相符。 如果它們不相符，當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 整合使用該組件時，將會發生錯誤。 如果服務或升級 GAC 中的任何組件也會登錄在資料庫中，包括不支援的.NET Framework 組件，請務必也服務或升級的內部的組件複製您[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫與**ALTER ASSEMBLY**陳述式。 如需詳細資訊，請參閱[知識庫文件 949080](http://support.microsoft.com/kb/949080)。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/08/2018
   
  例如， **System.DirectoryServices**不支援命名空間。 您必須註冊 System.DirectoryServices.dll 組件，與**UNSAFE**之前您可以從您的程式碼呼叫它的權限。 **UNSAFE**必要權限，是因為中的類別**System.DirectoryServices**命名空間不符合的需求**安全**或**EXTERNAL_ACCESS**。 如需詳細資訊，請參閱[CLR 整合程式設計模型限制](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)和[CLR 整合程式碼存取安全性](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立組件](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [CLR 整合程式碼存取安全性](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [CLR 整合程式設計模型限制](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  

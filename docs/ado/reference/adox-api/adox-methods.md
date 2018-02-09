@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad8a7eb710e129b6ba9110694c8cebfddeab85d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 73fcca57a0cb497694bf843f1569a51868282a89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-methods"></a>ADOX 方法
 |||  
@@ -37,14 +38,14 @@ ms.lasthandoff: 12/21/2017
 |[附加 （資料表）](../../../ado/reference/adox-api/append-method-adox-tables.md)|將新**資料表**物件**資料表**集合。|  
 |[附加 （使用者）](../../../ado/reference/adox-api/append-method-adox-users.md)|將新**使用者**物件**使用者**集合。|  
 |[附加 （檢視）](../../../ado/reference/adox-api/append-method-adox-views.md)|將新**檢視**物件**檢視**集合。|  
-|[變更密碼](../../../ado/reference/adox-api/changepassword-method-adox.md)|變更使用者帳戶的密碼。|  
+|[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|變更使用者帳戶的密碼。|  
 |[建立](../../../ado/reference/adox-api/create-method-adox.md)|建立新的目錄。|  
-|[刪除](../../../ado/reference/adox-api/delete-method-adox-collections.md)|從集合中移除物件。|  
+|[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)|從集合中移除物件。|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|傳回物件的擁有者的目錄中。|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|傳回的物件上的群組或使用者的權限。|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|指定物件的擁有者的目錄中。|  
 |[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|指定的物件上的群組或使用者的權限。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADOX API 參考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [資料定義語言和安全性的 ADO 延伸模組 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -11,17 +11,18 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, glossary
+helpviewer_keywords:
+- ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary"></a>ADO 詞彙
 本主題定義適用於 ADO 的詞彙。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 12/21/2017
  商務規則  
  驗證的編輯、 登入驗證、 資料庫查閱、 原則和構成企業的方式進行商務交易的演算式轉換組合。 也稱為*商務邏輯*。  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  計算的運算式  
  運算式不是常數，但其值取決於其他值。 要評估導出的運算式必須取得並計算從其他來源，通常是在其他欄位或資料列的值。  
   
@@ -186,7 +187,7 @@ ms.lasthandoff: 12/21/2017
  階層 (hierarchy)  
  一般情況下，階層是使用最上層等級的結構層級和從屬層級。 在 ADO 中，階層式**資料錄集**用來表示第一筆記錄之間的父子式關聯性。 在 ADO 中，而且**記錄**和**資料流**物件可以用來存取功能的階層樹狀結構，例如資料夾和文件。 ADO MD 也包含**階層**表示 OLAP cube 中維度的層級之間的關聯性物件。 另請參閱階層式資料錄集父子式關聯性、 章、 樹狀結構。  
   
-## <a name="i-l"></a>我-L  
+## <a name="i-l"></a>I-L  
  ISAPI （網際網路伺服器應用程式開發介面）  
  一組為網際網路的伺服器，例如執行 Microsoft® 網際網路資訊服務 (IIS) Windows NT® Server/Windows 2000 Server 的函式。  
   
@@ -250,7 +251,7 @@ ms.lasthandoff: 12/21/2017
  ProgID （程式設計識別項）  
  對應至 Windows 登錄的 COM 應用程式的唯一名稱。 ADO 連接的 ProgID 是"ADODB。連接 」。 另請參閱 CLSID、 com。  
   
- Proxy  
+ proxy  
  提供參數封送處理的特定介面的物件和用戶端來呼叫在不同的執行緒或另一個處理序在不同的執行環境中，執行這類的應用程式物件所需的通訊。 Proxy 會位於與用戶端，而且與對應的虛設常式位於與應用程式物件所呼叫之通訊。 另請參閱虛設常式。  
   
 ## <a name="r"></a>R  
@@ -267,7 +268,7 @@ ms.lasthandoff: 12/21/2017
  從資料來源，全部都具有相同的欄位結構描述資料列的一組。 資料列集可以代表資料表中的所有或部分欄位。 資料列集也可以表示虛擬資料表，由一個或兩個或多個資料表的聯結。 在 ADO 中，資料列集都由**資料錄集**物件。  
   
 ## <a name="s"></a>S  
- 範圍。  
+ 범위  
  參考的物件或變數或檢視表或資料表中的記錄範圍的範圍。 例如，本機變數可以參考只有在所定義的程序內。 公用變數是可從應用程式的任何位置存取。 物件，例如目前的資料庫，是在範圍內，如果它們是在定義的搜尋路徑。 記錄的範圍可以指定範圍子句中的許多命令。  
   
  服務提供者  
@@ -282,17 +283,17 @@ ms.lasthandoff: 12/21/2017
  預存程序  
  先行編譯程式碼，例如 SQL 陳述式和選擇性的流程控制陳述式的名稱下儲存和處理做為一個單位的集合。 預存程序會儲存在資料庫中。它們可以由應用程式的某個呼叫執行，且允許使用者宣告的變數、 條件式執行和其他功能強大的程式設計功能。  
   
- 虛設常式  
+ stub  
  提供參數封送處理的特定介面的物件，而且從不同的執行緒或另一個處理序在不同的執行環境中，執行這類的用戶端接收呼叫的應用程式物件所需的通訊。 虛設常式會位於與應用程式物件，而且會與對應的 proxy 位於與它所呼叫的用戶端進行通訊。 另請參閱 proxy。  
   
- 子節點  
+ sub-node  
  請參閱子系。  
   
  同步作業  
  作業完成之前可能會啟動下一個作業的程式碼所起始。 另請參閱非同步作業。  
   
 ## <a name="t-z"></a>T-Z  
- trEE  
+ 樹狀  
  結構，代表項目 （節點） 之間的階層式關聯性。 沒有最上層 （根） 樹狀結構的一個節點。 下方根目錄中，可以有多個子系。 每個子系又可能是其他子系，因此類似樹分支的父代。 包含文件及其他資料夾的資料夾是樹狀結構的典型範例。 另請參閱階層、 節點、 根、 子系、 父系。  
   
  網頁伺服器  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - Field object [ADO], fields collection
 - Fields collection [ADO]
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c5899f7f1d3d35d0b64cab9dc3c5169dfaba87e8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e983573d5bcbfdf9e39ba0933a86cdbf59ae6ef2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="the-fields-collection"></a>Fields 集合
 **欄位**集合是 ADO 的內建集合的其中一個。 集合是已排序的集合的項目可以當做一個單位加以參考。 如需 ADO 集合的詳細資訊，請參閱[ADO 物件模型](../../../ado/guide/data/ado-objects-and-collections.md)。  
@@ -119,5 +120,5 @@ objField = objRecordset.Fields(0)
   
  使用**欄位附加**方法各有不同**資料錄集**物件和**記錄**物件。 如需有關**記錄**物件，請參閱[記錄和資料流](../../../ado/guide/data/records-and-streams.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [產生階層式資料錄集](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)

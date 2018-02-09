@@ -11,23 +11,25 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: sql13.swb.assemblies.general.f1
+f1_keywords:
+- sql13.swb.assemblies.general.f1
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf08c95a2dad30afb8920f9519791ecf4a3fc51f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b2629fbf940ba55da8d69db388a5a6f07022c768
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---properties"></a>組件-屬性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此頁面來檢視或修改組件的內容。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+使用此頁面來檢視或修改組件的屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **組件名稱**  
  顯示組件名稱，此名稱永遠符合 CLR 組件的名稱。  
   
@@ -50,10 +52,10 @@ ms.lasthandoff: 01/08/2018
  **強式名稱**  
  顯示**True**經過數位簽署的組件，如果**False**如果它尚未經過數位簽署。  
   
- **版本(Version)**  
+ **版本**  
  顯示組件的版本號碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   
   

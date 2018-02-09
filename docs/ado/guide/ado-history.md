@@ -1,5 +1,5 @@
 ---
-title: "ADO 記錄 |Microsoft 文件"
+title: ADO History | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +11,19 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, what's new
+helpviewer_keywords:
+- ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8be523be459914814d7e92541dd5cca21da006eb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4e76e56b9d1840d4e6e1f42acd10b3b9226a61d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-features-for-each-release"></a>每個版本的 ADO 功能
 本主題列出每個版本的 ADO、 ADO MD 和 ADOX 所引進的新功能。
@@ -36,13 +37,13 @@ ms.lasthandoff: 12/21/2017
  *硬碟機存取不允許外部受信任的區域。*
 在跨網域指令碼包含信任的網站，會停用下列作業： **Stream.SaveToFile**， **Stream.LoadFromFile**， **Recordset.Save**，和**Recordset.Open**，用來搭配**adCmdFile**旗標或與 Microsoft OLE DB 持續性提供者 (MSPersist)。
 
- **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和* **Stream.LoadFromFile***在僅限實體檔案上作業。* 
+ **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和* **Stream.LoadFromFile***在僅限實體檔案上作業。        *
 這些方法現在會確認檔案控制代碼指向實際的檔案。
 
- **Recordset.ActiveCommand***會傳回錯誤時叫用從 HTML/ASP 網頁。* 
+ **Recordset.ActiveCommand***會傳回錯誤時叫用從 HTML/ASP 網頁。  *
 這可防止**命令**誤用物件。
 
- *數目***資料錄集***傳回巢狀***圖形***命令有上限。* 
+ *數目***資料錄集***傳回巢狀***圖形***命令有上限。        *
 巢狀的 shape 命令現在會傳回最多 512 個**資料錄集**。 這表示**圖形**命令不再任意深度巢狀。 相反地，層級的深度上限為 512，每個命令會產生單一 （子系） 如果**資料錄集**。 如果在任何層級，**圖形**命令會傳回多個**資料錄集**，最大的層級的深度會小於 512。
 
 ## <a name="ado-27"></a>ADO 2.7

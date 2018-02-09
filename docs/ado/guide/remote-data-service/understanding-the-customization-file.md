@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: customization file in RDS [ADO]
+helpviewer_keywords:
+- customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f630817b87a464d3f02e5fdad6c88c161a081b23
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔
 方括號所組成的自訂檔案中的每個區段標頭 (**[]**) 包含型別和參數。 四個區段類型以常值字串**連接**， **sql**， **userlist**，或**記錄**。 常值字串、 預設值，指定使用者的識別項，或不提供參數。  
@@ -46,20 +48,20 @@ identifier
   
  區段標頭有下列的部分。  
   
-|部分|描述|  
+|部分|Description|  
 |----------|-----------------|  
-|**連接**|修改連接字串常值字串。|  
+|**connect**|修改連接字串常值字串。|  
 |**sql**|修改命令字串常值字串。|  
 |**userlist**|常值字串，以修改特定使用者的存取權限。|  
-|**記錄檔**|常值字串，指定記錄作業的錯誤記錄檔。|  
-|**預設值**|如果指定或找到沒有識別項會使用常值字串。|  
-|*識別項*|比對字串中的字串**連接**或**命令**字串。<br /><br /> -使用此區段，如果區段標頭包含**連接**，且連接字串中找到的識別項字串。<br />-使用此區段，如果區段標頭包含**sql**和命令字串中找到的識別項字串。<br />-使用此區段，如果區段標頭包含**userlist**和識別項字串符合**連接**區段識別項。|  
+|**logs**|常值字串，指定記錄作業的錯誤記錄檔。|  
+|**default**|如果指定或找到沒有識別項會使用常值字串。|  
+|*identifier*|比對字串中的字串**連接**或**命令**字串。<br /><br /> -使用此區段，如果區段標頭包含**連接**，且連接字串中找到的識別項字串。<br />-使用此區段，如果區段標頭包含**sql**和命令字串中找到的識別項字串。<br />-使用此區段，如果區段標頭包含**userlist**和識別項字串符合**連接**區段識別項。|  
   
  **DataFactory**呼叫處理常式，並傳遞用戶端的參數。 此處理常式中搜尋符合適當的區段標頭中的識別項的用戶端參數中的整個字串。 如果找到相符項目，該區段的內容會套用至用戶端參數。  
   
  在下列情況下，請使用特定區段：  
   
--   A**連接**區段用如果用戶端的值部分連接字串關鍵字"**資料來源 =***值*"，符合**連接**區段識別碼*。*  
+-   A**連接**區段的用戶端的值部分連接字串關鍵字，如果使用"**資料來源 = * * * 值*"，符合**連接**區段識別項*.*  
   
 -   **Sql**區段用戶端命令字串包含符合的字串，如果**sql**區段識別項。  
   
@@ -71,7 +73,7 @@ identifier
   
 -   **記錄**區段用每當**DataFactory**在作業。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自訂檔案記錄檔 > 一節](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自訂檔案 SQL > 一節](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

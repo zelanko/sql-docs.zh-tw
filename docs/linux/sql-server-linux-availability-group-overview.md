@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: d7f9dec114fd17025081c4a139537b11dd4fde45
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: bfd36553e4ac30b6d551e60cde02d57a7eec8fbc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性群組
 
@@ -147,7 +147,7 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 
 有叢集類型的外部或正在 WSFC AG 不能跨平台及其複本。 這是 true AG 是否[!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]或[!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]。 這表示具有基礎叢集的傳統 AG 組態中，一個複本不可以是 WSFC 和其他與 Pacemaker Linux 上。
 
-叢集類型為 None AG 可以跨 OS 界限，因此相同的 AG 中可能有兩個 Linux 和 Windows 架構的複本及其複本。 範例如下所示，主要複本是 Windows 為基礎，在 Linux 散發套件的其中一個次要資料庫時。
+叢集類型為 NONE AG 可以跨 OS 界限，因此相同的 AG 中可能有兩個 Linux 和 Windows 架構的複本及其複本。 範例如下所示，主要複本是 Windows 為基礎，在 Linux 散發套件的其中一個次要資料庫時。
 
 ![混合式無](./media/sql-server-linux-availability-group-overview/image1.png)
 
@@ -170,4 +170,6 @@ If using automatic seeding with a distributed availability group that crosses OS
 [SLES 上加入可用性群組叢集資源](sql-server-linux-availability-group-cluster-sles.md)
 
 [在 Ubuntu 上加入可用性群組叢集資源](sql-server-linux-availability-group-cluster-ubuntu.md)
+
+[設定跨平台可用性群組](sql-server-linux-availability-group-cross-platform.md)
 

@@ -1,6 +1,7 @@
 ---
 title: "Synchronize21 方法 (RDS) |Microsoft 文件"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Synchronize21 method [ADO]
+helpviewer_keywords:
+- Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f48789fef088affdfa664ead4da2bd379aa51b7
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: c973d97465963ba865bb768569bf70f70366a1b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 方法 (RDS)
 使用與 ADO 2.1 搭配使用的連接字串所指定的資料庫，同步處理指定的資料錄集。  
@@ -38,7 +40,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
 ```  
   
 #### <a name="parameters"></a>參數  
- *連接字串*  
+ *ConnectionString*  
  字串，用來連接到 OLE DB 提供者會傳送要求的位置。 如果使用處理常式，此處理常式就可以編輯或取代連接字串。  
   
  *HandlerString*  

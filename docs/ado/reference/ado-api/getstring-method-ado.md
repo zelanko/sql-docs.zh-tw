@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset20::raw_GetString
 - Recordset20::GetString
-helpviewer_keywords: GetString method [ADO]
+helpviewer_keywords:
+- GetString method [ADO]
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6f92e1be67ce0eb26f300cde4b1ef53bfc5dc49c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 03449fb395e9c4448f7111728adb392facae9921
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getstring-method-ado"></a>GetString 方法 (ADO)
 傳回[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)做為字串。  
@@ -48,10 +50,10 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  *NumRows*  
  選擇性。 轉換中的資料列數目**資料錄集**。 如果*NumRows*未指定，或如果大於中的資料列總數**資料錄集**，然後所有資料列**資料錄集**會轉換。  
   
- *[Columndelimiter]*  
+ *ColumnDelimiter*  
  選擇性。 使用資料行，如果指定，否則為 TAB 字元之間的分隔符號。  
   
- *[Rowdelimiter]*  
+ *RowDelimiter*  
  選擇性。 使用資料列，如果指定，否則的歸位字元之間的分隔符號。  
   
  *NullExpr*  
@@ -65,5 +67,5 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [GetString 方法範例 (VB)](../../../ado/reference/ado-api/getstring-method-example-vb.md)

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 661c3797ef0881efd49921231c2899f5391e4e27
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: e8160ec17a856a3c14d1177085c95c329e5d2b3b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a id="cuinstall"></a>如何安裝累計更新
 
-如果您已設定的累計更新儲存機制，您會收到 SQL Server 封裝的最新累積更新時執行的新安裝。 累計更新儲存機制是所有 SQL Server on Linux 的封裝安裝發行項的預設值。 如需儲存機制設定的詳細資訊，請參閱[來源儲存機制](sql-server-linux-setup.md#repositories)。
+如果您已設定的累計更新儲存機制，您會收到 SQL Server 封裝的最新累積更新時執行的新安裝。 累計更新儲存機制是所有 SQL Server on Linux 的封裝安裝發行項的預設值。 如需儲存機制設定的詳細資訊，請參閱[儲存機制設定 SQL Server on Linux](sql-server-linux-change-repo.md)。
 
 如果您要更新現有的 SQL Server 封裝、 執行取得最新累計更新每個套件的適當更新命令。 每個套件的特定更新指示，請參閱下列的安裝指南：
 

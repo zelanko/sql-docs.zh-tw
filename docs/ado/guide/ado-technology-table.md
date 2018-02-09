@@ -11,18 +11,19 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, technologies
+helpviewer_keywords:
+- ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a03ed3b7537d81fac8045ceaad2c1c9a1afcaa0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d6ab214b72913118e12d1ce1a7db67e0e00dc118
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="products-and-technologies-table"></a>產品和技術的資料表
 下表列出 Microsoft 產品、 工具和 ADO 程式設計人員指南中所討論的技術。 它會提供連結，可能的情況下，本指南中的相關主題。
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 |ODBC|[搭配 ODBC 連線共用使用 RDS](../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)<br /><br /> [Microsoft OLE DB Provider for ODBC](../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |OLE DB|[OLE DB 提供者](../../ado/guide/data/ole-db-providers-ado.md)<br /><br /> [附錄 A：提供者](../../ado/guide/appendixes/appendix-a-providers.md)<br /><br /> [提供者錯誤](../../ado/guide/data/provider-errors.md)|
 |Oracle|[Microsoft OLE DB Provider for Oracle](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
-|[SQL Server]|[控制交易](../../ado/guide/data/controlling-transactions-ado.md)<br /><br /> [使用命令呼叫預存程序](../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)<br /><br /> [目前的記錄和資料錄集的大小](../../ado/guide/data/current-record-and-size-of-recordset.md)<br /><br /> [順向資料指標](../../ado/guide/data/forward-only-cursors.md)<br /><br /> [命令資料流](../../ado/guide/data/command-streams.md)<br /><br /> [將結果集擷取為資料流](../../ado/guide/data/retrieving-resultsets-into-streams.md)<br /><br /> [執行通訊錄 SQL 指令碼](../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)<br /><br /> [確認 TempDB 有足夠空間](../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)<br /><br /> [將記錄檔空間使用量降到最低](../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)<br /><br /> [Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
+|SQL Server|[控制交易](../../ado/guide/data/controlling-transactions-ado.md)<br /><br /> [使用命令呼叫預存程序](../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)<br /><br /> [目前的記錄和資料錄集的大小](../../ado/guide/data/current-record-and-size-of-recordset.md)<br /><br /> [順向資料指標](../../ado/guide/data/forward-only-cursors.md)<br /><br /> [命令資料流](../../ado/guide/data/command-streams.md)<br /><br /> [將結果集擷取為資料流](../../ado/guide/data/retrieving-resultsets-into-streams.md)<br /><br /> [執行通訊錄 SQL 指令碼](../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)<br /><br /> [確認 TempDB 有足夠空間](../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)<br /><br /> [將記錄檔空間使用量降到最低](../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)<br /><br /> [Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |交易的伺服器|[在元件服務中執行商務物件](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|
 |VBScript|[其他語言中處理錯誤](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [Visual Basic 應用程式函式](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [命令資料流](../../ado/guide/data/command-streams.md)<br /><br /> [遠端資料存取的解決方案](../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [RDS 案例](../../ado/guide/remote-data-service/rds-scenario.md)<br /><br /> [RDS 教學課程 (VBScript)](../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)<br /><br /> [VBScript ADO 程式設計](../../ado/guide/appendixes/vbscript-ado-programming.md)<br /><br /> [ADO 程式碼範例在 Microsoft Visual Basic Scripting Edition](../../ado/reference/ado-api/ado-code-examples-vbscript.md)|
 |Visual Basic|[錯誤](../../ado/guide/data/errors-ado.md)<br /><br /> [ADO 錯誤](../../ado/guide/data/ado-errors.md)<br /><br /> [ADO 事件具現化語言](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [Visual Basic 應用程式函式](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [RDS 教學課程](../../ado/guide/remote-data-service/rds-tutorial.md)<br /><br /> [搭配使用 ADO 與 Microsoft Visual Basic](../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)<br /><br /> [ADO 程式碼範例在 Microsoft Visual Basic](../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)|

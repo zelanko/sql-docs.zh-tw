@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: ConvertToString method [ADO]
+helpviewer_keywords:
+- ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d33aeb0fd8aeb93e931da0cec0ca62339df65cc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 95425c734f254bf534eacdad606025fca43c2158
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 方法 (RDS)
 將轉換[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)MIME 字串，代表資料錄集資料。  
@@ -42,7 +44,7 @@ DataFactory.ConvertToString(Recordset)
  *DataFactory*  
  物件變數，表示[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件。  
   
- *資料錄集*  
+ *Recordset*  
  物件變數，表示**資料錄集**物件。  
   
 ## <a name="remarks"></a>備註  
@@ -58,7 +60,7 @@ DataFactory.ConvertToString(Recordset)
 ## <a name="applies-to"></a>適用於  
  [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ConvertToString 方法範例 (VB)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
  [ConvertToString 方法範例 (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
 

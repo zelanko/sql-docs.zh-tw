@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO MD, object model
+helpviewer_keywords:
+- ADO MD, object model
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e17fdaabf4d36aa5a2ff0ac1dcc1d682fec5857
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bb267197bb4ca07bf8583d64676b5b0fe357bdfb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-object-model"></a>ADO MD 物件模型
 本主題描述如何表示和 ADO MD 中相關物件  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  [軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)，[儲存格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)，[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)， [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)，[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)，[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)，[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)，和[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)每個物件具有標準 ADO[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO MD 應用程式開發介面參考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD 程式碼範例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD 集合](../../../ado/reference/ado-md-api/ado-md-collections.md)   

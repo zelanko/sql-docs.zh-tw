@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: dd997e9d3f235d841cd5706b9c81b9335360540d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 860d3571aa1edf7c467125de1cc2920a968eb704
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 RHEL 叢集
 
@@ -160,10 +160,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 
 ## <a name="create-virtual-ip-resource"></a>建立虛擬 IP 資源
 
-若要建立虛擬 IP 位址資源，請在一個節點上執行下列命令。 使用 從網路可用的靜態 IP 位址。 取代 IP 位址之間`**<10.128.16.240>**`具有有效的 IP 位址。
+若要建立虛擬 IP 位址資源，請在一個節點上執行下列命令。 使用 從網路可用的靜態 IP 位址。 取代 IP 位址之間`<10.128.16.240>`具有有效的 IP 位址。
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 沒有 Pacemaker 中相等的虛擬伺服器名稱。 若要使用的連接字串指向字串伺服器名稱，而不是 IP 位址，請在 DNS 中登錄的虛擬 IP 資源的位址和所需的虛擬伺服器名稱。 DR 組態註冊所需的虛擬伺服器名稱和 IP 位址與主要和 DR 網站上的 DNS 伺服器。

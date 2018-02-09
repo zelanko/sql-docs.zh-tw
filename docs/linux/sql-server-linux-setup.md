@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 114bbd717ad7d0d244b7290bd612547c9226f941
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 924542a970ac63df74e7bb725b4f7a171f74e95a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 的安裝指南
 
@@ -73,6 +73,13 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 - [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
 - [執行 docker](quickstart-install-connect-docker.md)
 - [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+
+## <a id="repositories"></a>設定來源儲存機制
+
+當您安裝或升級 SQL Server 時，您會從您設定 Microsoft 儲存機制取得最新版的 SQL Server 2017。 快速入門使用**累計更新 (CU)**儲存機制。 但您可以改為設定**GDR**儲存機制。 如需有關儲存機制和設定方式的詳細資訊，請參閱[儲存機制設定 SQL Server on Linux](sql-server-linux-change-repo.md)。
+
+> [!IMPORTANT]
+> 如果您先前安裝 CTP 或 RC 版本的 SQL Server 2017，您必須移除預覽儲存機制，並註冊通用版本上市 (GA) 其中一個。 如需詳細資訊，請參閱[儲存機制設定 SQL Server on Linux](sql-server-linux-change-repo.md)。
 
 ## <a id="upgrade"></a>更新 SQL Server
 
@@ -130,77 +137,6 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 ```bash
 sudo rm -rf /var/opt/mssql/
 ```
-
-## <a id="repositories"></a>設定來源儲存機制
-
-當您安裝或升級 SQL Server 時，您收到最新版本的 SQL Server 設定的 Microsoft 儲存機制。
-
-### <a name="repository-options"></a>儲存機制選項
-
-有兩種類型的每個散發的儲存機制：
-
-- **累計更新 (CU)**: 累計更新 (CU) 儲存機制自該版本包含基底的 SQL Server 版本和 bug 修正或改進的封裝。 累計更新的發行版本，例如 SQL Server 2017 特有。 它們會以一般的步調發行。
-
-- **GDR**: GDR 儲存機制 含有該發行以來的基底的 SQL Server 版本和僅重大修正程式和安全性更新的封裝。 這些更新也會新增到下一個 CU 版本。
-
-每個 CU 和 GDR 版本包含完整的 SQL Server 封裝和所有先前的更新，該儲存機制。 從 GDR 發行更新至目前的版本支援適用於 SQL Server 變更設定的儲存機制。 您也可以[降級](#rollback)至您的主要版本內任何發佈 (例如： 2017年)。 更新不支援從 CU GDR 發行的版本。
-
-### <a name="check-your-configured-repository"></a>請檢查設定的儲存機制
-
-如果您想要確認哪些儲存機制已設定，請使用下列平台相關技術。
-
-| 平台 | 程序 |
-|-----|-----|
-| RHEL | 1.檢視中的檔案**/etc/yum.repos.d**目錄：`sudo ls /etc/yum.repos.d`<br/>2.尋找檔案，以設定 SQL Server 目錄，例如**mssql server.repo**。<br/>3.列印檔案的內容：`sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4.**名稱**屬性是設定的儲存機制。|
-| SLES | 1.執行下列命令：`sudo zypper info mssql-server`<br/>2.**儲存機制**屬性是設定的儲存機制。 |
-| Ubuntu | 1.執行下列命令：`sudo cat /etc/apt/sources.list`<br/>2.檢查 mssql 伺服器的套件 URL。 |
-
-儲存機制 URL 的結尾會確認儲存機制類型：
-
-- **mssql 伺服器**： 預覽儲存機制。
-- **mssql-伺服器-2017年**: CU 儲存機制。
-- **mssql 伺服器-2017 gdr**: GDR 儲存機制。
-
-### <a name="change-the-source-repository"></a>變更來源儲存機制
-
-若要設定 CU 或 GDR 儲存機制，請使用下列步驟：
-
-> [!NOTE]
-> [快速入門](#platforms)設定 CU 儲存機制。 如果您遵循這些教學課程，您不需要使用下列步驟以繼續使用目前的儲存機制。 下列步驟才需要變更設定的儲存機制。
-
-1. 如有必要，移除先前設定的儲存機制。
-
-   | 平台 | Repository | 儲存機制移除命令 |
-   |---|---|---|
-   | RHEL | **全部** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | **CTP** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-   | | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
-   | | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
-   | Ubuntu | **CTP** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
-   | | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
-   | | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
-
-1. 如**Ubuntu 只**，匯入公用儲存機制 GPG 索引鍵。
-
-   ```bash
-   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-   ```
-
-1. 設定新的儲存機制。
-
-   | 平台 | Repository | Command |
-   |-----|-----|-----|
-   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-   | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-   | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
-
-1. [安裝](#platforms)或[更新](#upgrade)SQL Server 和任何相關封裝從新的儲存機制。
-
-   > [!IMPORTANT]
-   > 此時，如果您選擇使用其中一個安裝教學課程中，例如[快速入門教學課程](#platforms)，請記住您剛才設定的目標儲存機制。 教學課程中不重複該步驟。 特別是如果您設定的 GDR 儲存機制，因為快速入門教學課程會使用目前的儲存機制。
 
 ## <a id="unattended"></a>自動的安裝
 

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f3e79fcbef3c9a07ac43de13865632fef2ca6ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e35be40ea3023338048bf729b9f4cea5b6048449
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-methods"></a>ADO 方法
 |||  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[附加](../../../ado/reference/ado-api/append-method-ado.md)|將物件附加至集合。 如果集合是**欄位**，新**欄位**在附加至集合之前，可能會建立物件。|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|將資料附加至大型文字或二進位資料**欄位**，或**參數**物件。|  
 |[BeginTrans、 CommitTrans 和 RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|管理交易中處理**連接**物件，如下所示：<br /><br /> **BeginTrans** — 開始新交易。<br /><br /> **CommitTrans** — 儲存任何變更，並結束目前的交易。 它也可能會啟動新交易。<br /><br /> **RollbackTrans** — 取消任何變更並結束目前的交易。 它也可能會啟動新交易。|  
-|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|取消執行暫止狀態，非同步方法呼叫。|  
+|[[取消]](../../../ado/reference/ado-api/cancel-method-ado.md)|取消執行暫止狀態，非同步方法呼叫。|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|取消暫止的批次更新。|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|取消目前的或新資料列所做的任何變更**資料錄集**物件，或**欄位**集合**記錄**物件，然後再呼叫**更新**方法。|  
 |[Clear](../../../ado/reference/ado-api/clear-method-ado.md)|移除所有**錯誤**物件從**錯誤**集合。|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 |[執行 （ADO 命令中）](../../../ado/reference/ado-api/execute-method-ado-command.md)|執行查詢、 SQL 陳述式或預存程序中指定**CommandText**屬性。|  
 |[執行 （ADO 連接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)|執行指定的查詢、 SQL 陳述式、 預存程序或提供者特有的文字。|  
 |[尋找](../../../ado/reference/ado-api/find-method-ado.md)|搜尋**資料錄集**符合指定之準則的資料列。|  
-|[排清](../../../ado/reference/ado-api/flush-method-ado.md)|強制內容**資料流**基礎物件與其 ADO 緩衝區中剩餘**資料流**相關聯。|  
+|[Flush](../../../ado/reference/ado-api/flush-method-ado.md)|強制內容**資料流**基礎物件與其 ADO 緩衝區中剩餘**資料流**相關聯。|  
 |[get_OLEDBCommand 方法](../../../ado/reference/ado-api/get-oledbcommand-method.md)|傳回基礎 OLEDB 命令，先傳播至 OLEDB 命令設定 ADO 命令上任何參數資訊。|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|傳回**資料錄集**其資料列代表的檔案和子目錄中所代表的目錄**記錄**。|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|傳回全部或部分，大型文字或二進位資料的內容**欄位**物件。|  
@@ -70,12 +71,12 @@ ms.lasthandoff: 12/21/2017
 |[put_OLEDBCommand 方法](../../../ado/reference/ado-api/put-oledbcommand-method.md)|這個方法會執行任何作業-它會一律傳回 S_OK。|  
 |[讀取](../../../ado/reference/ado-api/read-method.md)|讀取指定的數目的位元組**資料流**物件。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|從文字中讀取指定的字元數**資料流**物件。|  
-|[[重新整理]](../../../ado/reference/ado-api/refresh-method-ado.md)|更新的物件集合，以反映，從可用的物件和特定給提供者。|  
-|[重新查詢](../../../ado/reference/ado-api/requery-method.md)|更新中的資料**資料錄集**重新執行查詢所依據之物件的物件。|  
-|[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|在目前的資料重新整理**資料錄集**物件，或**欄位**集合**記錄**物件，從基礎資料庫。|  
+|[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)|更新的物件集合，以反映，從可用的物件和特定給提供者。|  
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|更新中的資料**資料錄集**重新執行查詢所依據之物件的物件。|  
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|在目前的資料重新整理**資料錄集**物件，或**欄位**集合**記錄**物件，從基礎資料庫。|  
 |[儲存](../../../ado/reference/ado-api/save-method.md)|將儲存**資料錄集**檔案中或**資料流**物件。|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|將儲存的二進位內容**資料流**至檔案。|  
-|[搜尋](../../../ado/reference/ado-api/seek-method.md)|搜尋的索引**資料錄集**來快速找出符合指定的值，並變更該資料列目前資料列位置的資料列。|  
+|[Seek](../../../ado/reference/ado-api/seek-method.md)|搜尋的索引**資料錄集**來快速找出符合指定的值，並變更該資料列目前資料列位置的資料列。|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|設定為資料流結尾的位置。|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|讀取文字資料流時，會略過一整行。|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|取得有關開啟的資料流的統計資訊。|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 12/21/2017
 |[寫入](../../../ado/reference/ado-api/write-method.md)|將二進位資料寫入**資料流**物件。|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|將指定的文字字串至**資料流**物件。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

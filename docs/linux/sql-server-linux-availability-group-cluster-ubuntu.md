@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d6a49bc2f3fb815cecda0e8a24a63993b5423103
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/01/2018
 本文件說明如何在 Ubuntu 上建立三個節點叢集並加入先前建立的可用性群組為叢集中的資源。 高可用性，Linux 上的可用性群組需要三個節點-請參閱[的可用性群組組態的高可用性與資料保護](sql-server-linux-availability-group-ha.md)。
 
 > [!NOTE] 
-> 此時，不是與使用 Windows 上的 WSFC 為結合與 Pacemaker Linux 上的 SQL Server 的整合。 從 SQL、 內沒有存在叢集的認知、 所有協調流程中，超出和服務由 Pacemaker 控制做為獨立執行個體。 此外，虛擬網路名稱是屬於 WSFC、 沒有對等的 Pacemaker 中相同。 Alwayson 動態管理檢視的叢集資訊的查詢會傳回空的資料列。 您仍然可以建立來做為透明的重新連線到容錯移轉之後，接聽程式，但您必須手動在 DNS 伺服器註冊接聽程式名稱與 IP 用來建立虛擬 IP 資源 （如下所述）。
+> 此時，不是與使用 Windows 上的 WSFC 為結合與 Pacemaker Linux 上的 SQL Server 的整合。 從 SQL、 內沒有存在叢集的認知、 所有協調流程中，超出和服務由 Pacemaker 控制做為獨立執行個體。 此外，虛擬網路名稱是屬於 WSFC、 沒有對等的 Pacemaker 中相同。 在 alwayson 動態管理檢視的查詢叢集資訊傳回空的資料列。 您仍然可以建立來做為透明的重新連線到容錯移轉之後，接聽程式，但您必須手動註冊接聽程式名稱在 DNS 伺服器 IP 用來建立虛擬 IP 資源 （如下所述）。
 
 下列各節逐步解說的步驟來設定容錯移轉叢集解決方案。 
 
@@ -95,18 +95,18 @@ sudo systemctl start pcsd
 sudo systemctl enable pacemaker
 ```
 >[!NOTE]
->啟用 pacemaker 命令會完成，發生錯誤 'pacemaker 預設開始包含沒有 runlevels，正在中止'。 這是無害的可以繼續叢集組態。 我們具備下列叢集廠商以修正此問題。
+>啟用 pacemaker 命令可能會完成，發生錯誤 'pacemaker 預設開始包含沒有 runlevels，正在中止'。 這是無害的可以繼續叢集組態。 
 
 ## <a name="create-the-cluster"></a>建立叢集
 
 1. 從所有節點中移除任何現有的叢集設定。 
 
-   執行 'sudo apt get 安裝電腦' 同時安裝 pacemaker、 corosync 和電腦，並開始執行所有 3 個服務。  啟動 corosync 產生範本 ' / etc/cluster/corosync.conf' 檔案。  若要具有此檔案會成功的下一個步驟應該不存在 – 所以因應措施是停止 pacemaker / corosync 和刪除 ' / etc/cluster/corosync.conf'，然後下一個步驟將會順利完成。 '電腦叢集 destroy' 進行相同的工作，以及您可以將它當做一個時間最初的叢集安裝步驟。
+   執行 'sudo apt get 安裝電腦' 同時安裝 pacemaker、 corosync 和電腦，並開始執行所有 3 個服務。  啟動 corosync 產生範本 ' / etc/cluster/corosync.conf' 檔案。  若要將這個檔案會成功的下一個步驟應該不存在 – 所以因應措施是停止 pacemaker / corosync 和刪除 ' / etc/cluster/corosync.conf'，然後後續步驟已順利完成時。 '電腦叢集 destroy' 進行相同的工作，以及您可以將它當做一個時間最初的叢集安裝步驟。
    
    下列命令會移除任何現有的叢集組態檔，並停止所有的叢集服務。 這會永久終結叢集。 預先生產環境中的第一個步驟中執行它。 請注意，'電腦叢集 destroy' 已停用 pacemaker 服務和可重新啟用的需求。 在所有節點上執行下列命令。
    
    >[!WARNING]
-   >此命令將會損毀的任何現有的叢集資源。
+   >此命令會破壞任何現有的叢集資源。
 
    ```bash
    sudo pcs cluster destroy 
@@ -116,18 +116,18 @@ sudo systemctl enable pacemaker
 1. 建立叢集。 
 
    >[!WARNING]
-   >由於出現已知問題，叢集的廠商調查，啟動叢集 ('電腦叢集 start') 會因錯誤的下方。 這是因為這建立叢集安裝命令時執行，此為錯誤 /etc/corosync/corosync.conf 中設定的記錄檔。 若要解決此問題，請將變更的記錄檔： /var/log/corosync/corosync.log。 或者，您可以建立 /var/log/cluster/corosync.log 檔案。
+   >由於出現已知問題，叢集的廠商調查，啟動叢集 ('電腦叢集 start') 失敗，錯誤的下方。 這是因為這建立叢集安裝命令時執行，此為錯誤 /etc/corosync/corosync.conf 中設定的記錄檔。 若要解決此問題，請將變更的記錄檔： /var/log/corosync/corosync.log。 或者，您可以建立 /var/log/cluster/corosync.log 檔案。
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-下列命令會建立三個節點叢集。 執行指令碼之前，請取代 `**< ... >**` 之間的值。 在主要節點上執行下列命令。 
+下列命令會建立三個節點叢集。 執行指令碼之前，請取代 `< ... >` 之間的值。 在主要節點上執行下列命令。 
 
    ```bash
-   sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
-   sudo pcs cluster setup --name **<clusterName>** **<node1>** **<node2…>** **<node3>**
+   sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
    sudo pcs cluster start --all
    ```
    
@@ -146,11 +146,11 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->停用 STONITH 只適用於測試目的。 如果您打算使用 Pacemaker 實際執行環境中，您應該規劃 STONITH 實作，根據您的環境，並保持啟用。 請注意，此時有任何雲端環境 （包括 Azure） 或 HYPER-V 沒有圍欄代理程式。 因此，叢集供應商不提供支援在這些環境中執行生產叢集。 我們正在將會在未來版本中提供此間隔的解決方案。
+>停用 STONITH 只適用於測試目的。 如果您打算使用 Pacemaker 實際執行環境中，您應該規劃 STONITH 實作，根據您的環境，並保持啟用。 請注意，此時有任何雲端環境 （包括 Azure） 或 HYPER-V 沒有圍欄代理程式。 因此，叢集供應商不提供支援在這些環境中執行生產叢集。 
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>開始失敗-是-嚴重叢集屬性設定為 false
 
-`start-failure-is-fatal`指出是否在節點上啟動資源失敗可防止進一步該節點上的啟動嘗試。 當設定為`false`，叢集會決定是否要嘗試再次根據資源的目前失敗計數和移轉臨界值的相同節點上啟動。 因此，發生容錯移轉之後，Pacemaker 會重試可用性群組資源上啟動，前者主要一旦可以使用 SQL 執行個體。 Pacemaker 會降級為次要複本，它會自動重新加入可用性群組。 
+`start-failure-is-fatal`指出是否在節點上啟動資源失敗可防止進一步該節點上的啟動嘗試。 當設定為`false`，叢集會決定是否要嘗試再次根據資源的目前失敗計數和移轉臨界值的相同節點上啟動。 因此，容錯移轉發生後，Pacemaker 重試啟動可用性群組上先前的主要資源可使用的 SQL 執行個體後。 Pacemaker 會降級至次要複本，並自動重新加入可用性群組。 
 
 若要更新的屬性值`false`執行下列程式碼：
 
@@ -187,17 +187,17 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## <a name="create-virtual-ip-resource"></a>建立虛擬 IP 資源
 
-若要建立虛擬 IP 位址資源，請在一個節點上執行下列命令。 使用 從網路可用的靜態 IP 位址。 執行指令碼之前，請將之間的值取代`**< ... >**`具有有效的 IP 位址。
+若要建立虛擬 IP 位址資源，請在一個節點上執行下列命令。 使用 從網路可用的靜態 IP 位址。 執行指令碼之前，請將之間的值取代`< ... >`具有有效的 IP 位址。
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 沒有 Pacemaker 中相等的虛擬伺服器名稱。 若要使用連接字串指向字串伺服器名稱並不會使用 IP 位址，請在 DNS 中登錄所需的虛擬伺服器名稱與資源的 IP 位址。 DR 組態註冊所需的虛擬伺服器名稱和 IP 位址與主要和 DR 網站上的 DNS 伺服器。
 
 ## <a name="add-colocation-constraint"></a>加入共置條件約束
 
-藉由比較分數是在 Pacemaker 叢集中，例如選擇應在何處資源執行，幾乎每個決策。 分數計算每個資源，並叢集資源管理員選擇特定資源的分數最高的節點。 （如果節點具有負數資源的分數，該節點上即無法執行資源）。我們可以管理具有條件約束叢集的決策。 分數是條件約束。 如果條件約束的分數低於無限大，則僅供建議。 分數為無限大表示它是必備。 我們想要確保主要可用性群組和虛擬 ip 資源都執行相同主機上，因此我們會定義分數為無限大的共置條件約束。 若要加入的共置條件約束，請在一個節點上執行下列命令。 
+藉由比較分數是在 Pacemaker 叢集中，例如選擇應在何處資源執行，幾乎每個決策。 分數計算每個資源，並叢集資源管理員選擇特定資源的分數最高的節點。 （如果節點具有負數資源的分數，該節點上即無法執行資源）。若要設定叢集的決策中使用條件約束。 分數是條件約束。 如果條件約束的分數低於無限大，則僅供建議。 分數無限大的表示是強制性。 若要確保主要複本和虛擬 ip 資源位於相同的主機，定義分數為無限大的共置條件約束。 若要加入的共置條件約束，請在一個節點上執行下列命令。 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master

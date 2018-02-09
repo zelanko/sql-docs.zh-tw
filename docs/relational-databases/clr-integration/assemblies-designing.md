@@ -15,19 +15,20 @@ helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9273db56dfc99f76325ee9938678d2dc24aad8e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---designing"></a>組件的設計
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題說明在設計組件時，您應該考慮下列因素：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+此主題描述以下在設計組件時應該考慮的因數：  
   
 -   封裝組件  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
  此外，指定 UNSAFE 可讓組件中的程式碼，執行 CLR 檢查器視為類型安全的作業。 這些作業可能會以未受控制的方式，存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序空間的記憶體緩衝區。 UNSAFE 組件也可能會破壞 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Common Language Runtime 的安全性系統。 UNSAFE 權限應只能由經驗豐富的開發人員或系統管理員，授與高度信任的組件。 只有成員**sysadmin**固定的伺服器角色可以建立 UNSAFE 組件。  
   
 ## <a name="restrictions-on-assemblies"></a>組件的限制  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對組件中的 Managed 程式碼有特定限制，以確保能以可靠且可擴充的方式執行程式碼。 這代表不會允許在 SAFE 及 EXTERNAL_ACCESS 組件中，執行會危害伺服器強固性的特定作業。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] managed 程式碼，以確保它們可以可靠和可擴充的方式執行的組件中放置一些限制。 這代表不會允許在 SAFE 及 EXTERNAL_ACCESS 組件中，執行會危害伺服器強固性的特定作業。  
   
 ### <a name="disallowed-custom-attributes"></a>不允許的自訂屬性  
  不能以下列自訂屬性註解組件：  
@@ -122,7 +123,7 @@ System.Data.OracleClient
 System.Configuration  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [組件 &#40; Database engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR 整合安全性](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   

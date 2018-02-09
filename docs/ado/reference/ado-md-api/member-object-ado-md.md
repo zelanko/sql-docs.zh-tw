@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Member
-helpviewer_keywords: Member object [ADO MD], members
+f1_keywords:
+- Member
+helpviewer_keywords:
+- Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6624e44343ef680c317338ea1fe32ead2aa0d9d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c7b34e45ff23a1a71c1a45b1190d923e94328154
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="member-object-ado-md"></a>成員物件 (ADO MD)
 代表在 cube 中，層級成員的層級、 成員或成員的資料格集沿座標軸的位置的子系。  
@@ -72,16 +75,16 @@ ms.lasthandoff: 12/21/2017
   
  **屬性**集合包含提供者提供的屬性。 下表列出可供使用的屬性。 實際的屬性清單可能與不同的提供者實作而定。 請參閱您的提供者，如需更完整清單可用內容的文件。  
   
-|[屬性]|描述|  
+|名稱|Description|  
 |----------|-----------------|  
 |CatalogName|此 cube 所屬的目錄的名稱。|  
 |ChildrenCardinality|成員擁有的子系數目。|  
 |CubeName|Cube 的名稱。|  
-|描述|成員有意義的描述。|  
+|Description|成員有意義的描述。|  
 |DimensionUniqueName|模稜兩可的名稱[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)。|  
 |HierarchyUniqueName|階層的模稜兩可的名稱。|  
 |LevelNumber|之間的層級和階層的根的距離。|  
-|了 LevelUniqueName|層級的模稜兩可的名稱。|  
+|LevelUniqueName|層級的模稜兩可的名稱。|  
 |MemberCaption|與該成員關聯的標籤或標題。|  
 |MemberGUID|成員的 GUID。|  
 |MemberName|成員的名稱。|  
@@ -97,7 +100,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/member-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [目錄 (VB) 範例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [成員集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

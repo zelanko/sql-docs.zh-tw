@@ -8,25 +8,28 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - relational data [XQuery]
 - XQuery, relational data
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 447ffa853f8a5b6a257cc7e2918feaddcbde8a0f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 420caf1620974293f279e72892f0da2cad6a140b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xqueries-handling-relational-data"></a>XQueries 處理關聯式資料
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +38,9 @@ ms.lasthandoff: 12/05/2017
   
  執行 XQuery 而產生的 XML，可以包含從其他 Transact-SQL 變數或資料列集資料行擷取的值。 若要將非 XML 關聯式資料繫結到產生的 XML，SQL Server 可提供以下虛擬函數做為 XQuery 延伸模組：  
   
--   **: column （)**函式  
+-   **sql:column()** function  
   
--   **: variable （)**函式  
+-   **sql:variable()** function  
   
  中指定 XQuery 時，您可以使用這些 XQuery 延伸模組**query （)**方法**xml**資料型別。 如此一來， **query （)**方法可以產生結合 xml 與非資料的 XML-**xml**資料型別。  
   
@@ -45,7 +48,7 @@ ms.lasthandoff: 12/05/2017
   
  如需詳細資訊，請參閱[: column （） 函數 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)和[: variable （） 函數 (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XML 建構 &#40;XQuery &#41;](../xquery/xml-construction-xquery.md)  

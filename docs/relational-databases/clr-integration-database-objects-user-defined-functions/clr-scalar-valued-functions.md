@@ -19,19 +19,20 @@ helpviewer_keywords:
 - SVF
 - scalar-valued functions
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
-caps.latest.revision: "81"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 31dcc25d371ee74d69af1f7a85ad34208d99fd79
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4715f0f4133c80276a11d5c10902a2cbc906b0d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 純量值函式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]純量值函式 (SVF) 傳回單一值，例如字串、 整數或位元值。您可以使用任何.NET Framework 程式語言的 managed 程式碼中建立純量值使用者定義函數。 這些函數可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他 Managed 程式碼存取。 針對 CLR 整合和 managed 程式碼之間選擇的優勢的相關資訊和[!INCLUDE[tsql](../../includes/tsql-md.md)]，請參閱[CLR 整合的概觀](../../relational-databases/clr-integration/clr-integration-overview.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+純量值函式 (SVF) 傳回單一值，如字串、整數或位元值。您可以使用任何 .NET Framework 程式語言，以 Managed 程式碼建立純量值的使用者定義函數。 這些函數可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他 Managed 程式碼存取。 針對 CLR 整合和 managed 程式碼之間選擇的優勢的相關資訊和[!INCLUDE[tsql](../../includes/tsql-md.md)]，請參閱[CLR 整合的概觀](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 純量值函式的需求  
  .NET Framework SVF 會在 .NET Framework 組件中實作為類別上的方法。 輸入的參數和從 SVF 傳回的型別可以是任何純量資料類型所支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，除了**varchar**， **char**， **rowversion**， **文字**， **ntext**，**映像**，**時間戳記**，**資料表**，或**資料指標**. SVF 必須確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型與實作方法的傳回資料類型相符。 如需類型轉換的詳細資訊，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
@@ -156,7 +157,7 @@ GO
   
  請注意，[!INCLUDE[tsql](../../includes/tsql-md.md)] 中公開的函數名稱不必符合目標 public static 方法的名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [CLR 整合自訂屬性的概觀](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
  [使用者定義函式](../../relational-databases/user-defined-functions/user-defined-functions.md)   

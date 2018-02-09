@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: e2ce8a7cd87e188fce0f1b0f62bde148324373a5
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9d8528d227f45e212141e97308718082d6c59cea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>SQL Server 可用性群組設定為向外延展讀取 on Linux
 
@@ -36,21 +36,21 @@ ms.lasthandoff: 02/01/2018
 
 建立 AG。 Set `CLUSTER_TYPE = NONE`. 此外，設定每個複本`FAILOVER_MODE = NONE`。 用戶端應用程式以執行分析或報告工作負載可以直接連接到次要資料庫。 您也可以建立唯讀路由清單。 向前復原主要複本的連接讀取連線要求至每個次要複本以循環配置資源方式的路由清單。
 
-下列的 TRANSACT-SQL 指令碼會建立名為 AG `ag1`。 指令碼會設定 AG 複本`SEEDING_MODE = AUTOMATIC`。 此設定會自動建立每個次要伺服器資料庫之後會新增到 AG, 的 SQL Server。 更新您的環境中的下列指令碼。 取代`**<node1>**`和`**<node2>**`裝載複本的 SQL Server 執行個體名稱的值。 取代`**<5022>**`值與您設定端點的通訊埠。 SQL Server 的主要複本上執行下列 TRANSACT-SQL 指令碼：
+下列的 TRANSACT-SQL 指令碼會建立名為 AG `ag1`。 指令碼會設定 AG 複本`SEEDING_MODE = AUTOMATIC`。 此設定會自動建立每個次要伺服器資料庫之後會新增到 AG, 的 SQL Server。 更新您的環境中的下列指令碼。 取代`<node1>`和`<node2>`裝載複本的 SQL Server 執行個體名稱的值。 取代`<5022>`值與您設定端點的通訊埠。 SQL Server 的主要複本上執行下列 TRANSACT-SQL 指令碼：
 
 ```SQL
 CREATE AVAILABILITY GROUP [ag1]
     WITH (CLUSTER_TYPE = NONE)
     FOR REPLICA ON
-        N'**<node1>**' WITH (
-            ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
+        N'<node1>' WITH (
+            ENDPOINT_URL = N'tcp://<node1>:<5022>',
             AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
             FAILOVER_MODE = MANUAL,
             SEEDING_MODE = AUTOMATIC,
                     SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
             ),
-        N'**<node2>**' WITH ( 
-            ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
+        N'<node2>' WITH ( 
+            ENDPOINT_URL = N'tcp://<node2>:<5022>', 
             AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
             FAILOVER_MODE = MANUAL,
             SEEDING_MODE = AUTOMATIC,

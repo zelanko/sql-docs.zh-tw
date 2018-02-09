@@ -29,19 +29,20 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bbd3cffc1f5db0b07f0868b2ac1b6b6f78989a5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b3aaf081b264cd74614af93fd58d130b19dfa4d5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 整合架構 CLR 主控環境
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與.NET Framework common language runtime (CLR) 整合可讓資料庫程式設計人員使用 Visual C#、 Visual Basic.NET 和 Visual c + + 等語言。 程式設計人員可以使用這些語言所撰寫的商務邏輯種類包括函數、預存程序、觸發程序、資料類型和彙總。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 .NET Framework Common Language Runtime (CLR) 整合可讓資料庫程式設計人員使用 Visual C#、Visual Basic .NET 和 Visual C++ 等語言。 程式設計人員可以使用這些語言所撰寫的商務邏輯種類包括函數、預存程序、觸發程序、資料類型和彙總。  
   
   CLR 具備記憶體回收的記憶體、先佔式執行緒、中繼資料服務 (類型反映)、程式碼可驗證性以及程式碼存取安全性。 CLR 會使用中繼資料來找出並載入類別、配置記憶體中的執行個體、解析方法引動過程、產生機器碼、強制使用安全性，和設定執行階段內容界限。  
   
@@ -66,14 +67,14 @@ ms.lasthandoff: 01/08/2018
  系統不允許使用者程式碼執行危害 Database Engine 程序完整性的作業，例如，彈出要求使用者回應或結束程序的訊息方塊。 使用者程式碼應該無法覆寫 Database Engine 記憶體緩衝區或內部資料結構。  
   
 ###### <a name="scalability"></a>延展性  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 針對排程和記憶體管理，擁有不同的內部模型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在執行緒主動產生定期執行的情況下，或它們要等待鎖定或 I/O 時，支援合作式、非先佔式執行緒模型。 CLR 支援先佔式執行緒模型。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部執行的使用者程式碼可以直接呼叫作業系統執行緒原始物件，則它不會完整整合到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作排程器，而且可能會降低系統的延展性。 CLR 不會區別虛擬記憶體和實體記憶體，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會直接管理實體記憶體，而且需要在可設定的限制內使用實體記憶體。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR，擁有不同的內部模型進行排程和記憶體管理。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在執行緒主動產生定期執行的情況下，或它們要等待鎖定或 I/O 時，支援合作式、非先佔式執行緒模型。 CLR 支援先佔式執行緒模型。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部執行的使用者程式碼可以直接呼叫作業系統執行緒原始物件，則它不會完整整合到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作排程器，而且可能會降低系統的延展性。 CLR 不會區別虛擬記憶體和實體記憶體，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會直接管理實體記憶體，而且需要在可設定的限制內使用實體記憶體。  
   
  用於執行緒、排序和記憶體管理的不同模型對於調整為支援數千個並行使用者工作階段的關聯式資料庫管理系統 (RDBMS) 會呈現整合性問題。 此架構應該確認針對執行緒、記憶體和同步處理原始物件直接呼叫應用程式開發介面 (API) 的使用者程式碼不會危害系統的延展性。  
   
 ###### <a name="security"></a>Security  
  存取資料表或資料行之類的資料庫物件時，在資料庫中執行的使用者程式碼必須遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證和授權規則。 此外，資料庫管理員應該能夠從資料庫中執行的使用者程式碼控制作業系統資源的存取權，例如檔案和網路存取權。 由於 Managed 程式語言 (不像 Transact-SQL 之類的非 Managed 語言) 提供 API 來存取這類資源，因此這變得相當重要。 系統必須為使用者程式碼提供一個安全的方式來存取 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序外部的電腦資源。 如需相關資訊，請參閱 [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)。  
   
-###### <a name="performance"></a>[效能]  
+###### <a name="performance"></a>效能  
  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中執行的 Managed 使用者程式碼應該擁有可與在伺服器外部執行之相同程式碼相比的計算效能。 從 Managed 使用者程式碼進行資料庫存取的速度不如原生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 快。 如需詳細資訊，請參閱[CLR 整合的效能](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)。  
   
 ## <a name="clr-services"></a>CLR Services  
@@ -125,7 +126,7 @@ ms.lasthandoff: 01/08/2018
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中主控時，此類執行緒中止的處理方式如下：CLR 會在執行緒中止發生所在的應用程式網域中偵測任何共用狀態。 CLR 會透過檢查同步處理物件是否存在來進行。 如果在應用程式網域中有共用狀態，則會卸載應用程式網域本身。 卸載應用程式網域時，會停止目前正在該應用程式網域中執行的資料庫交易。 因為共用狀態的存在可能會擴大此類嚴重例外狀況對於使用者工作階段的影響，而非觸發例外狀況的影響，因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 已經採取步驟來降低共用狀態的可能性。 如需詳細資訊，請參閱 .NET Framework 文件集。  
   
 ###### <a name="security-permission-sets"></a>安全性：權限集合  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓使用者針對資料庫中部署的程式碼指定可靠性和安全性需求。 當組件上傳到資料庫中時，組件的作者可以為該組件指定以下三個使用權限集合當中的一個：SAFE、EXTERNAL_ACCESS 和 UNSAFE。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓使用者指定程式碼部署到資料庫的可靠性和安全性需求。 當組件上傳到資料庫中時，組件的作者可以為該組件指定以下三個使用權限集合當中的一個：SAFE、EXTERNAL_ACCESS 和 UNSAFE。  
   
 |||||  
 |-|-|-|-|  
@@ -141,16 +142,16 @@ ms.lasthandoff: 01/08/2018
   
  EXTERNAL_ACCESS 提供了中級安全性選項，可讓程式碼存取在資料庫外部的資源，但是仍然保有 SAFE 的可靠性保證。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用主機層級的 CAS 原則層來設定主機原則，以根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄中所儲存的權限集合來授與三個權限集合當中的一個。 在資料庫內執行的 Managed 程式碼一定會取得這些程式碼存取權限集合當中的一個。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用主機層級的 CAS 原則層來設定主機原則授與的權限集合中儲存為基礎的權限的三組的其中一個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目錄。 在資料庫內執行的 Managed 程式碼一定會取得這些程式碼存取權限集合當中的一個。  
   
 ### <a name="programming-model-restrictions"></a>程式設計模型限制  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 Managed 程式碼的程式設計模型包含撰寫函數、程序和類型，而這些項目通常不需要使用跨多個引動過程之間所保有的狀態或是共用跨多個使用者工作階段的狀態。 再者，如之前所述，共用狀態的存在可能會造成嚴重的例外狀況，而這些例外狀況會影響應用程式的延展性和可靠性。  
   
  基於這些考量，我們不鼓勵使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所使用之類別的靜態變數和靜態資料成員。 對於 SAFE 和 EXTERNAL_ACCESS 組件而言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在 CREATE ASSEMBLY 時檢查組件的中繼資料；如果發現有使用靜態資料成員和變數，則會讓這類組件的建立作業失敗。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也不允許呼叫必須標註的.NET Framework Api **SharedState**，**同步**和**ExternalProcessMgmt**主機保護屬性。 這會讓 SAFE 和 EXTERNAL_ACCESS 組件無法呼叫可啟用共用狀態、執行同步處理，以及影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序完整性的任何 API。 如需詳細資訊，請參閱[CLR 整合程式設計模型限制](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也不允許呼叫必須標註的.NET Framework Api **SharedState**，**同步**和**ExternalProcessMgmt**主機保護屬性。 這會讓 SAFE 和 EXTERNAL_ACCESS 組件無法呼叫可啟用共用狀態、執行同步處理，以及影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序完整性的任何 API。 如需詳細資訊，請參閱[CLR 整合程式設計模型限制](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CLR 整合安全性](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [CLR 整合的效能](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   

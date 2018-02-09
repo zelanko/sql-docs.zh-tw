@@ -1,6 +1,22 @@
-每個可用性群組只有一個主要複本。 主要複本允許讀取和寫入。 若要變更是主要的複本，您可以容錯移轉。 在高可用性的可用性群組中，叢集管理員會自動化容錯移轉程序。 在讀取級別可用性群組中，容錯移轉程序為手動。 
+---
+title: "SQL Server 強制可用性群組容錯移轉"
+description: "強制容錯移轉可用性群組的無叢集類型"
+services: 
+author: MikeRayMSFT
+ms.service: 
+ms.topic: include
+ms.date: 02/05/2018
+ms.author: mikeray
+ms.custom: include file
+ms.openlocfilehash: 10a2af2cb5bc9e98605a3ee988439e3c3be60c1e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/09/2018
+---
+每個 AG 都有一個主要複本。 主要複本允許讀取和寫入。 若要變更是主要的複本，您可以容錯移轉。 高可用性的 AG，在叢集管理員 會自動容錯移轉程序。 中的叢集類型 NONE AG、 容錯移轉程序是手動。 
 
-有兩種方式來容錯移轉中的向外延展讀取可用性群組的主要複本：
+有兩種方式可以在 AG 的主要複本上失敗的叢集類型 NONE:
 
 - 會遺失資料的強制手動容錯移轉
 - 不會遺失資料的手動容錯移轉
@@ -25,7 +41,7 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        MODIFY REPLICA ON N'**<node2>*' 
+        MODIFY REPLICA ON N'<node2>' 
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
@@ -46,7 +62,7 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 
 3. 更新`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`設為 1。
 
-   下列指令碼設定`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`設為 1 到可用性群組上名為`ag1`。 執行下列指令碼之前，取代`ag1`與可用性群組的名稱：
+   下列指令碼設定`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`上名為 AG 1 `ag1`。 執行下列指令碼之前，取代`ag1`您 AG 名稱：
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -69,4 +85,4 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
    ```  
 
    > [!NOTE] 
-   > 若要刪除可用性群組，請使用[DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql)。 使用 CLUSTER_TYPE NONE 或外部建立可用性群組，必須在屬於可用性群組的所有複本上執行此命令。
+   > 若要刪除 AG，使用[DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql)。 建立與叢集 ag type NONE 或外部，命令必須在屬於 AG 一部分的所有複本上執行。

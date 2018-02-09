@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55f563b145cf77dc64879801c4603bd51234b0f4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c37bf04fd14bb2d5f276efd3321b044759cbe7ee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="transaction-processing"></a>交易處理
 A*交易*分隔的開頭和結尾的一系列在連線之間執行資料存取作業。 資料來源時，交易式功能而定**連接**物件也可讓您建立及管理交易。 例如，使用 Microsoft OLE DB Provider for SQL Server 存取 Microsoft SQL Server 上的資料庫，您就可以建立多個巢狀的交易，您所執行的命令。  

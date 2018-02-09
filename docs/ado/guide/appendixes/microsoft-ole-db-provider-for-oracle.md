@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eb8cf771b758dc81bb80e38bc709c611d8125921
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概觀
 > [!IMPORTANT]
@@ -53,7 +54,7 @@ MSDAORA
 
  字串，包含這些關鍵字：
 
-|關鍵字|描述|
+|關鍵字|Description|
 |-------------|-----------------|
 |**提供者**|指定 OLE DB Provider for Oracle。|
 |**資料來源**|指定伺服器的名稱。|
@@ -68,13 +69,13 @@ MSDAORA
 
  這些參數是以完整描述[OLE DB 程式設計人員參考](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)。 [ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)提供這些參數名稱和對應的 OLE DB 屬性之間的交互參考。
 
-|參數|描述|
+|매개 변수|Description|
 |---------------|-----------------|
 |**視窗控制代碼**|表示要用於提示您輸入其他資訊的視窗控制代碼。|
 |**地區設定識別碼**|表示唯一 32 位元數字 （例如，1033年），指定與使用者的語言喜好設定。 這些喜好設定指出如何格式化日期和時間，依字母順序排序項目，字串比較時，依此類推。|
 |**OLE DB 服務**|表示位元遮罩，指定啟用或停用 OLE DB 服務。|
-|**提示**|指出是否要建立連接時提示使用者。|
+|**Prompt**|指出是否要建立連接時提示使用者。|
 |**擴充的屬性**|字串，包含提供者特定、 擴充連接資訊。 這個屬性只用於無法透過屬性機制中所述的提供者特定連接資訊。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [ConnectionString 屬性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [提供者屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

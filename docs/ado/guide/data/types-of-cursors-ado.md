@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: cursors [ADO], types
+helpviewer_keywords:
+- cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab0d11fa3eb0ea935b05ce1d2486e5136594c1c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ec8ccca017236a8f6aa784d92e8304a98452f02
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="types-of-cursors-ado"></a>類型的資料指標 (ADO)
 一般而言，您的應用程式應該使用最簡單的資料指標，提供必要的資料存取。 每個其他資料指標特性超出基本知識 （順向、 唯讀、 靜態、 捲動、 無緩衝） 都有價格 — 在用戶端記憶體、 網路負載或效能。 在許多情況下，預設資料指標選項會產生更複雜的資料指標比實際需要您的應用程式。  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [動態資料指標](../../../ado/guide/data/dynamic-cursors.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [順向資料指標](../../../ado/guide/data/forward-only-cursors.md)   
  [靜態資料指標](../../../ado/guide/data/static-cursors.md)   
  [索引鍵集資料指標](../../../ado/guide/data/keyset-cursors.md)   

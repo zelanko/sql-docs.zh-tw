@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::AddNew
 - Recordset15::raw_AddNew
-helpviewer_keywords: AddNew method [ADO]
+helpviewer_keywords:
+- AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51978e39a34b02238d4c0b1658620c9ba8d538a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4d05354a7e164d5f739f7306fc4c418ed3d1de58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="addnew-method-ado"></a>AddNew 方法 (ADO)
 建立可更新的新記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -39,7 +41,7 @@ recordset.AddNew FieldList, Values
 ```  
   
 #### <a name="parameters"></a>參數  
- *資料錄集*  
+ *recordset*  
  A**資料錄集**物件。  
   
  *FieldList*  
@@ -90,7 +92,7 @@ rs.Update
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AddNew 方法範例 (VB)](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
  [AddNew 方法範例 (VBScript)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
  [AddNew 方法範例 （VC + +）](../../../ado/reference/ado-api/addnew-method-example-vc.md)   

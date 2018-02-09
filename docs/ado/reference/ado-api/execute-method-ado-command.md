@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Command15::Execute
 - Command15::raw_Execute
-helpviewer_keywords: Execute method [ADO]
+helpviewer_keywords:
+- Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa39093a0efe75959bfa0e6805ea90b65c6d39a9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7f16d3c01fb219bdbe7f52bbc39d3c410b5de918
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-ado-command"></a>Execute 方法 （ADO 命令中）
 執行查詢、 SQL 陳述式或預存程序中指定[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性[命令物件](../../../ado/reference/ado-api/command-object-ado.md)。  
@@ -48,7 +50,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *參數*  
  選擇性。 A **Variant**搭配輸入的字串或資料流中指定的參數值的陣列**CommandText**或**CommandStream**。 （輸出參數不會傳回正確的值，這個引數傳遞時）。  
   
- *選項*  
+ *選項。*  
  選擇性。 A**長**值，指出提供者應該如何評估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。 可以是所使用的位元遮罩值[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)及/或[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)值。 例如，您可以使用**adCmdText**和**adExecuteNoRecords**組合，如果您想要評估的值的 ADO **CommandText**屬性做為文字，並表示命令應該捨棄，並不會傳回執行命令文字時，可能會產生任何記錄。  
   
 > [!NOTE]
@@ -76,7 +78,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="applies-to"></a>適用於  
  [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行，請重新查詢，並清除方法範例 (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
  [執行，請重新查詢，並清除方法範例 (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
  [執行，請重新查詢，並清除方法範例 （VC + +）](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   

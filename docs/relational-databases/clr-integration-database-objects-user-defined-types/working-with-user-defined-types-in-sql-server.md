@@ -18,19 +18,20 @@ helpviewer_keywords:
 - UDTs [CLR integration], Transact-SQL
 - queries [CLR integration]
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
-caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1ad6e283f580aa36ef84d62ae274a57f6d84e6a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7a0fae94ce48d8e26bc7ef7a013219131e2e9b85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>使用 SQL Server 中的使用者定義型別
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以存取使用者定義型別 (UDT) 功能在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從[!INCLUDE[tsql](../../includes/tsql-md.md)]使用一般查詢語法的語言。 在資料庫物件定義中，UDT 可當做 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、函數及預存程序中的變數，以及函數及預存程序中的引數使用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+您可以存取使用者定義型別 (UDT) 功能在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從[!INCLUDE[tsql](../../includes/tsql-md.md)]使用一般查詢語法的語言。 在資料庫物件定義中，UDT 可當做 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、函數及預存程序中的變數，以及函數及預存程序中的引數使用。  
   
 ## <a name="in-this-section"></a>本節內容  
  [定義 UDT 資料表及資料行](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md)  
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/08/2018
  [操作 UDT 資料](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md)  
  描述如何透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 UDT 資料。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CLR 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

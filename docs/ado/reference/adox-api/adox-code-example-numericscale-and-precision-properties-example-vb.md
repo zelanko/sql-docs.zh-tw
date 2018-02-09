@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - Precision property [ADOX], Visual Basic example
 - NumericScale property [ADOX], Visual Basic example
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37957a75306abb18de656aa6418f3bc08b8c4ab6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 670ba4225a9c89955c0bb62290617bde199f31d7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 程式碼範例： NumericScale 和有效位數屬性範例 (VB)
 這個範例會示範[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)和[精確度](../../../ado/reference/adox-api/precision-property-adox.md)屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)物件。 此程式碼會顯示其值**Order Details**資料表*Northwind*資料庫。  
@@ -80,7 +82,7 @@ End Sub
 ' EndNumericScalePrecVB  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [NumericScale 屬性 (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
  [Precision 屬性 (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)

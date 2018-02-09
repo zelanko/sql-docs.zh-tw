@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - persistence provider [ADO]
 - OLE DB persistence provider [ADO]
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 846abf657a2cce58fec6dca65f80691f14cb52a4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 30df806429167550cdf39f064e349e46dd692502
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 持續性提供者概觀
 Microsoft OLE DB 持續性提供者可讓您儲存[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件到檔案，並稍後還原，**資料錄集**檔案中的物件。 結構描述資訊、 資料，並且保留暫止的變更。
@@ -42,7 +43,7 @@ Microsoft OLE DB 持續性提供者可讓您儲存[資料錄集](../../../ado/re
 ## <a name="errors"></a>錯誤
  可以在應用程式中偵測到此提供者所發出的下列錯誤。
 
-|常數|描述|
+|常數|Description|
 |--------------|-----------------|
 |E_BADSTREAM|開啟這個檔案沒有有效的格式 （也就是格式不 ADTG 或 XML）。|
 |E_CANTPERSISTROWSET|**資料錄集**儲存物件具有防止它所儲存的特性。|
@@ -56,5 +57,5 @@ Microsoft OLE DB 持續性提供者可讓您儲存[資料錄集](../../../ado/re
 
  當資料流用來開啟**資料錄集，**不應該指定以外的任何參數*來源*參數**開啟**方法。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [Microsoft OLE DB 持續性提供者 （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)

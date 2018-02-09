@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c00af6ce5dcdff509b04d25bc09a42a6e9e89fd7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d9e182d5b1e1b8755250cbf620ac102a7eacde0f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 連接和資料錄集的事件
 兩個 ADO 物件可以引發事件：[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件和[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 **ConnectionEvent**系列相關作業上**連接**物件，而**RecordsetEvent**系列相關作業上**資料錄集**物件。
@@ -35,14 +36,14 @@ ms.lasthandoff: 12/21/2017
 
  下表摘要說明的事件，以及其描述。
 
-|ConnectionEvent|描述|
+|ConnectionEvent|Description|
 |---------------------|-----------------|
 |[BeginTransComplete，CommitTransComplete，RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**交易管理**— 通知會在連接上目前的交易啟動後，認可或回復。|
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)， [ConnectComplete，中斷連線](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**連接管理**— 通知，將會啟動目前的連線，已啟動，或已結束。|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**命令執行管理**— 將啟動目前的命令在連接上執行，或已結束的通知。|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**告知性**— 有通知目前作業的其他資訊。|
 
-|RecordsetEvent|描述|
+|RecordsetEvent|Description|
 |--------------------|-----------------|
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)， [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**擷取狀態**— 或擷取作業已完成的資料擷取作業的進度通知。 這些事件，才可以使用如果**資料錄集**使用用戶端資料指標為開啟。|
 |[WillChangeField FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**欄位變更管理**— 目前欄位的值將會變更，或已變更的通知。|
@@ -50,5 +51,5 @@ ms.lasthandoff: 12/21/2017
 |[WillChangeRecord RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**資料列變更管理**— 這項目中目前資料列的通知**資料錄集**將會變更，或已變更。|
 |[WillChangeRecordset RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**資料錄集變更管理**— 也就是在目前的通知**資料錄集**將會變更，或已變更。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO 事件](../../../ado/reference/ado-api/ado-events.md)[事件參數](../../../ado/guide/data/event-parameters.md)[事件處理常式如何一起運作](../../../ado/guide/data/how-event-handlers-work-together.md)[的事件類型](../../../ado/guide/data/types-of-events.md)

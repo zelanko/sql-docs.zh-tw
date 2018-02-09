@@ -4,41 +4,43 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS programming model [ADO], details
+helpviewer_keywords:
+- RDS programming model [ADO], details
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e3edfd1b1ec33d4c014fae4a0fed8d61d5ef8ed
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5a2798c750ba20b03c9e423b5897575ce4d5d697
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-programming-model-in-detail"></a>在詳細資料的 RDS 程式設計模型
 RDS 的程式設計模型的重要元素如下：  
   
--   RDS資料空間  
+-   RDS.DataSpace  
   
 -   RDSServer.DataFactory  
   
--   RDSDataControl  
+-   RDS.DataControl  
   
 -   事件  
   
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
-## <a name="rdsdataspace"></a>RDS資料空間  
+## <a name="rdsdataspace"></a>RDS.DataSpace  
  用戶端應用程式必須指定伺服器和伺服器方案，來叫用。 傳回，您的應用程式接收伺服器程式的參考，並可以視為參考，就好像伺服器程式本身。  
   
  RDS 物件模型意這項功能與[.RDSDataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)物件。  
@@ -58,7 +60,7 @@ RDS 的程式設計模型的重要元素如下：
   
  伺服器程式有時也稱為*商務物件*。 您可以撰寫自己的自訂商務物件，可以執行複雜的資料存取、 有效性檢查等等。 即使在撰寫自訂的商務物件，您可以建立的執行個體**RDSServer.DataFactory**物件，並使用其中一些方法來完成您自己的工作。  
   
-## <a name="rdsdatacontrol"></a>RDSDataControl  
+## <a name="rdsdatacontrol"></a>RDS.DataControl  
  RDS 提供方法來結合的功能**.RDSDataSpace**和**RDSServer.DataFactory**，而且可讓視覺控制項能夠輕鬆使用**資料錄集**資料來源的查詢所傳回的物件。 RDS 嘗試最常見的情況下，執行最多可達能夠自動存取的伺服器上的資訊，並顯示視覺控制項中。  
   
  RDS 物件模型意這項功能與[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
@@ -75,7 +77,7 @@ RDS 的程式設計模型的重要元素如下：
 > [!NOTE]
 >  Microsoft Internet Explorer 提供兩個額外的事件至 RDS: **onDataSetChanged**，這表示**資料錄集**是功能，但仍然擷取資料列，以及**onDataSetComplete**，這表示**資料錄集**完成擷取資料列。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [RDS 與物件的程式設計模型](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: FetchOptions property [ADO]
+helpviewer_keywords:
+- FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77ed1de5f9506512e3f7812b2355b1c52d5fa8f3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f53c6be35a4b3035e81653ecd828c52ea0c959db
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 屬性 (RDS)
 表示非同步擷取的類型。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="setting-and-return-values"></a>設定和傳回值  
  設定或傳回下列值之一。  
   
-|常數|描述|  
+|常數|Description|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|所有記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)控制項傳回至應用程式之前提取。 完整**資料錄集**之前執行任何動作，它允許應用程式擷取。|  
 |**adcFetchBackground**|控制項可以傳回至應用程式儘速擷取第一個批次的記錄。 後續的讀取**資料錄集**，嘗試存取未擷取第一個批次中的記錄將會延遲，直到實際擷取大的記錄，此時控制項會傳回給應用程式。|  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ExecuteOptions 和 FetchOptions 屬性範例 (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Cancel 方法 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
 
