@@ -35,7 +35,7 @@
 ### [安裝 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 ### [安裝 SQL Server 全文檢索搜尋](sql-server-linux-setup-full-text-search.md)
 ### [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-### [註冊 GA 存放庫](sql-server-linux-change-repo.md)
+### [設定存放庫](sql-server-linux-change-repo.md)
 
 ## 設定
 ### [使用 mssql-conf 進行設定](sql-server-linux-configure-mssql-conf.md)
@@ -85,6 +85,7 @@
 ##### [操作](sql-server-linux-availability-group-failover-ha.md)
 #### [僅供讀取級別的建立作業]()
 ##### [設定 AG](sql-server-linux-availability-group-configure-rs.md)
+#### [設定跨平台 (Windows 與 Linux)](sql-server-linux-availability-group-cross-platform.md)
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [開始使用安全性功能](sql-server-linux-security-get-started.md)
