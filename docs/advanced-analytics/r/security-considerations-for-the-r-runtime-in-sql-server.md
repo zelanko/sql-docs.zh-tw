@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c7262b804c1712e7ea962feefd88f3b2f64146a9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4ed20a8267a8f89e1ab64c19ddafee28cb66c375
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="security-considerations-for-machine-learning-in-sql-server"></a>SQL Server 中的機器學習的安全性考量
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文列出的系統管理員或架構設計人員應該牢記使用機器學習服務時的安全性考量。
 

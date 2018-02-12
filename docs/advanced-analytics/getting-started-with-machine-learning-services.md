@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: c0d1b3a2a69a08495b5860b3aef2587dd61d9327
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e33a91587f393c6c510bdb16fe9c71dc2f422eac
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>開始使用 SQL Server 中的機器學習
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 可擴充組：
 
@@ -123,7 +124,7 @@ Microsoft 提供在內部部署和雲端的機器學習解決方案的整合、 
 
 + [方案範本](../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md)
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [開始使用 SQL Server 機器學習服務](../advanced-analytics/r/getting-started-with-sql-server-r-services.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "程式設計指導方針 |Microsoft 文件"
+title: "程式設計指導方針 (ODBC Driver for SQL Server) |Microsoft 文件"
 ms.custom: 
 ms.date: 01/11/2018
 ms.prod: sql-non-specified
@@ -8,18 +8,19 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 118099ee43fa1644c8026f968dc041ea148588f1
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.openlocfilehash: fd8952f28f389fa5f1b8f82072998676c5a4196e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 01/12/2018
 
 程式設計功能[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS 和 Linux 為基礎中的 ODBC[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]原生用戶端 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]原生用戶端以 Windows Data Access Components 中的 ODBC 為基礎 ([ODBC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkID=45250))。  
 
-ODBC 應用程式可以使用 Multiple Active Result Sets (MARS) 和其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]所包括的特定功能`/usr/local/include/msodbcsql.h`之後 unixODBC 標頭 (`sql.h`， `sqlext.h`， `sqltypes.h`，和`sqlucode.h`)。 然後使用相同的符號名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-您可以在 Windows ODBC 應用程式中的特定項目。
+ODBC 應用程式可以使用 Multiple Active Result Sets (MARS) 和其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]所包括的特定功能`/usr/local/include/msodbcsql.h`之後 unixODBC 標頭 (`sql.h`， `sqlext.h`， `sqltypes.h`，和`sqlucode.h`)。 然後使用相同的符號名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Windows ODBC 應用程式會使用您的特定項目。
 
 ## <a name="available-features"></a>可用的功能  
 下面各節從[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client ODBC 的文件 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) 時使用 macOS 和 Linux 上的 ODBC 驅動程式都是有效：  
@@ -54,7 +55,7 @@ ODBC 應用程式可以使用 Multiple Active Result Sets (MARS) 和其他[!INCL
 在這一版的 ODBC 驅動程式正常運作 macOS 和 Linux 上尚未驗證下列功能：
 
 -   容錯移轉叢集連線
--   [透明網路 IP 解析](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution)
+-   [透明網路 IP 解析](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution)（之前 ODBC 驅動程式 17）
 -   [進階的驅動程式的追蹤](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 不在 macOS 和 Linux 上的 ODBC 驅動程式的此版本中提供下列功能： 
@@ -94,27 +95,27 @@ ODBC 驅動程式 17，支援其中一種下列字元組/編碼 SQLCHAR 資料�
 |CP1256|阿拉伯文|
 |CP1257|波羅的語系|
 |CP1258|越南文|
-|ISO 8859-1 / CP1252|拉丁文 1|
-|ISO 8859-2 / CP1250|拉丁文 2|
-|ISO 8859-3|拉丁文 3|
-|ISO 8859-4|拉丁文 4|
-|ISO 8859-5|拉丁文/斯拉夫文|
-|ISO 8859-6|拉丁文/阿拉伯文|
-|ISO 8859-7|拉丁文/希臘文|
-|ISO 8859-8 / CP1255|Hebrew|
-|ISO 8859-9 / CP1254|土耳其文|
+|ISO-8859-1 / CP1252|拉丁文 1|
+|ISO-8859-2 / CP1250|拉丁文 2|
+|ISO-8859-3|拉丁文 3|
+|ISO-8859-4|拉丁文 4|
+|ISO-8859-5|拉丁文/斯拉夫文|
+|ISO-8859-6|拉丁文/阿拉伯文|
+|ISO-8859-7|拉丁文/希臘文|
+|ISO-8859-8 / CP1255|Hebrew|
+|ISO-8859-9 / CP1254|土耳其文|
 |ISO-8859-13|拉丁文 7|
-|ISO 8859-15|拉丁文 9|
+|ISO-8859-15|拉丁文 9|
 
-連接時，驅動程式會偵測處理程序中載入的目前地區設定。 如果它使用上述的編碼方式的其中一個，驅動程式將使用該編碼 SQLCHAR （窄字元） 的資料。否則，它會預設為 utf-8。 因為所有處理程序啟動"C"地區設定中的預設值 （並因此造成驅動程式新增至預設為 utf-8），如果應用程式需要使用上述的編碼方式的其中一個，則應該使用**setlocale**之前適當地設定的地區設定的函式連線;藉由明確地指定想要的地區設定，或使用空字串，例如`setlocale(LC_ALL, "")`使用地區設定的環境。
+連接時，驅動程式會偵測處理程序中載入的目前地區設定。 如果它使用上述的編碼方式的其中一個，驅動程式會使用該編碼 SQLCHAR （窄字元） 的資料。否則，它會預設為 utf-8。 因為所有處理程序啟動"C"地區設定中的預設值 （並因此造成驅動程式新增至預設為 utf-8），如果應用程式需要使用上述的編碼方式的其中一個，則應該使用**setlocale**之前適當地設定的地區設定的函式連線;藉由明確地指定想要的地區設定，或使用空字串，例如`setlocale(LC_ALL, "")`使用地區設定的環境。
 
-因此，一般 Linux 或 Mac 環境所在的編碼方式為 utf-8 中的 ODBC 驅動程式 17 從 13 或升級 13.1 使用者不會發現任何差異。 不過，使用非 utf-8 編碼方式透過上述清單中的應用程式`setlocale()`就必須使用該編碼資料，而不是 utf-8 的驅動程式。
+因此，一般 Linux 或 Mac 環境所在的編碼方式為 utf-8 中的 ODBC 驅動程式 17 從 13 或升級 13.1 使用者不會發現任何差異。 不過，應用程式，使用非 utf-8 編碼方式在上述清單中透過`setlocale()`需要使用該編碼資料，而不是 utf-8 的驅動程式。
 
 SQLWCHAR 資料必須是 UTF-16LE (Little Endian)。
 
 繫結時輸入的參數與 SQLBindParameter，如果窄字元 SQL 類型，例如指定 SQL_VARCHAR，驅動程式會將所提供的資料轉換為預設值 （通常為字碼頁 1252年） 編碼的用戶端從[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]編碼方式。 輸出參數的驅動程式會從要編碼的用戶端的資料相關聯的定序資訊中指定的編碼方式轉換。 不過，可能會遺失資料---無法顯示在目標編碼中的 來源編碼字元會將轉換成問號 ('？ ')。
 
-若要避免這種資料遺失，繫結輸入的參數時，指定 Unicode SQL 字元類型，例如 SQL_NVARCHAR。 在此情況下，驅動程式會將來自用戶端編碼為 utf-16，這可能表示所有 Unicode 字元轉換。 此外，目標資料行或在伺服器上的參數也必須可以是 Unicode 類型 (**nchar**， **nvarchar**， **ntext**) 或另一個定序/編碼為可以表示原始來源資料的所有的字元。 為避免資料遺失，使用 output 參數，指定 Unicode SQL 型別，並可以是 Unicode C 類型 (SQL_C_WCHAR)，造成驅動程式來傳回資料當做 utf-16;或半形的 C 類型，並確定編碼用戶端可以代表所有字元的來源資料 （這是永遠使用 utf-8 可能）。
+若要避免這種資料遺失，繫結輸入的參數時，指定 Unicode SQL 字元類型，例如 SQL_NVARCHAR。 在此情況下，驅動程式會從用戶端編碼為 utf-16，這可能表示所有 Unicode 字元轉換。 此外，目標資料行或在伺服器上的參數也必須可以是 Unicode 類型 (**nchar**， **nvarchar**， **ntext**) 或另一個定序/編碼為，其中可以表示原始來源資料的所有的字元。 為避免資料遺失，使用 output 參數，指定 Unicode SQL 型別，並可以是 Unicode C 類型 (SQL_C_WCHAR)，造成驅動程式來傳回資料當做 utf-16;或半形的 C 類型，並確定編碼用戶端可以代表所有字元的來源資料 （這是永遠使用 utf-8 可能）。
 
 如需有關定序和編碼方式的詳細資訊，請參閱[Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)。
 

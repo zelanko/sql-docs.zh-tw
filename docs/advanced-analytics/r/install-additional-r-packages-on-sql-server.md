@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2821983b39dcd4c301ea4b49713de0cdd3550a65
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 530745918dfd4808694b401be55e40bac00f3cce
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>SQL Server 上安裝其他的 R 封裝
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文說明如何安裝新的 R 封裝在已啟用機器學習的 SQL Server 執行個體。
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/09/2018
 + [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 + [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>필수 구성 요소
 
 + 判斷是否有任何封裝的 Windows 版本：[取得正確的封裝版本和格式](#packageVersion)
 
@@ -85,15 +86,15 @@ ms.lasthandoff: 01/09/2018
 
     **預設執行個體**
 
-    SQL Server 2017:`C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
-    SQL Server 2016:`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
     **具名執行個體**
 
-    SQL Server 2017:`C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
-    SQL Server 2016:`C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
     如果您已使用繫結，若要升級的機器學習服務元件，可能已變更路徑。 安裝新的封裝之前，務必檢查執行個體路徑。 
 
@@ -129,15 +130,15 @@ ms.lasthandoff: 01/09/2018
 
     **預設執行個體**
 
-    SQL Server 2017:`C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
-    SQL Server 2016:`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
     **具名執行個體**
 
-    SQL Server 2017:`C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
-    SQL Server 2016:`C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
 3. 以系統管理員身分開啟 R 命令提示字元。
 
@@ -245,7 +246,7 @@ SQL Server 2017 提供安裝和管理使用 T-SQL 的 R 封裝的新功能。 �
 
 例如，下列程序描述現在以取得正確的版本[FISHalyseR](http://bioconductor.org/packages/release/bioc/html/FISHalyseR.html)封裝，從 Bioconductor，假設電腦有網際網路存取權。
 
-1.  在 [Package Archives] (封裝封存)  清單中找到 **Windows 二進位** 版本。
+1.  在 [Package Archives] \(封裝封存)  清單中找到 **Windows 二進位** 版本。
 
 2.  以滑鼠右鍵按一下連結。ZIP 檔案，並選取**另存目標**。
 

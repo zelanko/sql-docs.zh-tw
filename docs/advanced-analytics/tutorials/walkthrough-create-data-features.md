@@ -20,13 +20,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 79cc7e334c3aab4fb7702e368a3188db98eaaced
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>建立資料的功能使用 R 和 SQL （逐步解說）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 資料工程是機器學習服務的重要部分。 資料往往需要轉換，才能使用的預測模型。 如果資料沒有您所需的特徵，您就能從現有的值加以建立。
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 在此步驟中，我們來比較兩個不同的方法，從資料建立一項功能：
 
 - 使用自訂 R 函式
-- 使用中的自訂 T-SQL 函式[!INCLUDE[tsql](../../includes/tsql-md.md)]
+- 使用中的自訂 T-SQL 函式 [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 目標是要建立新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]整組資料，包括原始資料行加上新的數字特徵， *direct_distance*。
 

@@ -14,18 +14,19 @@ dev_langs:
 - R
 - SQL
 ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 6aea91e6ed80a1697b1eb8004debef557496818c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 835e7d4901fc3d58edfedaea4474e9b523b71620
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>預測及繪圖從模型 (SQL 快速入門中的 R)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 若要執行_計分_使用新的資料，從資料表中，取得其中一個定型的模型，然後呼叫 新的上要預測的資料集。 計分是有時候用於資料科學，以表示預測、 機率或其他值根據新資料送入定型的模型產生的詞彙。
 

@@ -11,19 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffbdb114-e7a5-4145-bb8f-2eb97720ea96
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c5852461b21566ea90fa884f0e94e53d52fba210
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ffbeefeea8fd1c90a9ea09c0094cd81877a797ea
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="monitoring-r-services"></a>監視 R Services
-  本節提供使用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 時的這些常見監視工作相關資訊：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+本節提供使用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 時的這些常見監視工作相關資訊：  
   
 -   識別 R 使用的伺服器資源  
   

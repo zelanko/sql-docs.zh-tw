@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 265f66c0dfba28e1f3c35fa560098b3a2d13cb0c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-資料最佳化的效能
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是說明兩個案例研究為基礎的 R 服務的效能最佳化的數列中的第三個。 本文將討論效能最佳化或 Python 指令碼，在 SQL Server 中執行。 此外也說明您可以使用更新 R 程式碼，以提高效能並避免已知的問題的方法。
 

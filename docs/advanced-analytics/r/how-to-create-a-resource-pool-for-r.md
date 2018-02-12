@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dfb238cc1ba7c981dbeec22e76616e45d93f72dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>建立機器學習的資源集區
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主題描述如何建立專為管理 SQL Server 中的機器學習工作負載的資源集區。 它會假設您有已安裝並啟用機器學習功能，而且想要重新設定以支援多個更細緻的管理，例如 R 或 Python 的外部處理序所使用的資源執行個體。
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 4.  建立分類函數，以識別外部指令碼的要求。
 5.  確認新的外部資源集區會擷取 R 或 Python 的工作，從指定的用戶端或帳戶。
 
-**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和[!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和 [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ##  <a name="bkmk_ReviewStatus"></a> 檢閱現有資源集區的狀態
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 
     **範例結果**
 
-    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|預設|0|100|0|100|100|0|0|
 
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 
     **範例結果**
 
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|預設|100|20|0|2|
  
@@ -168,9 +169,9 @@ ms.lasthandoff: 01/08/2018
 
     **範例結果**
 
-    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    |@shouldalert|內部|中|25|0|0|0|0|@shouldalert|2|
+    |1|內部|中|25|0|0|0|0|1|2|
     |2|預設|中|25|0|0|0|0|2|2|
     |256|ds_wg|中|25|0|0|0|0|2|256|
   
@@ -182,10 +183,10 @@ ms.lasthandoff: 01/08/2018
 
     **範例結果**
     
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|預設|100|20|0|2|
-    |256|ds_ep|100|40|0|@shouldalert|
+    |256|ds_ep|100|40|0|1|
   
      如需詳細資訊，請參閱 [Resource Governor 目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)。
   

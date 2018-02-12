@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 281f3beb3678d74fb03b3dc68a4a9b58d44f261e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8720440872fb0b41a76d4ac644fd3b60d52a095e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>發佈和取用 Python web 服務
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 您可以部署至 web 服務的可運作的 Python 方案 Server Microsoft 機器學習中使用實施功能。 本主題說明已成功發行，然後再執行您的方案的步驟。
 

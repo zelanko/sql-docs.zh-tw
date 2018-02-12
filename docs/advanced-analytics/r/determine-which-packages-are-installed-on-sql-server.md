@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9a7f7e43-b568-406c-9434-5a2ec64ec5f5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e76a42ead115c8ee4fa89599b192d722ecfbb2ee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5db9405b6ef2e7c1423fa2affe6ad8bca58e5d68
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="determine-which-r-packages-are-installed-on-sql-server"></a>判斷 SQL Server 上已安裝的 R 封裝
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 當您安裝 SQL Server 中的機器學習服務與 R 語言選項時，R 封裝程式庫，將會建立專門用於執行個體。 在伺服器上的每個執行個體都有它自己的封裝程式庫。 封裝程式庫無法執行個體之間共用。
 

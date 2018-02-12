@@ -14,18 +14,19 @@ dev_langs:
 - R
 - SQL
 ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 1cc68eb62feb999dbce64b6ca29cfc3c40a56a4c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 593e102e75624ae2b36a56e528284bdcf47027e1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>使用輸入和輸出 (SQL 快速入門中的 R)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 當您想要在 SQL Server 中執行 R 程式碼時，您必須包裝 R 指令碼中的系統預存程序， [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 這個預存程序是用來在 SQL Server 內容中啟動 R 執行階段，這會將資料傳遞到 R，安全地管理 R 使用者工作階段，並將任何結果傳回用戶端。
 

@@ -14,13 +14,14 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 0f728b0e15372f9027dac84c3f58b09438444f95
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="native-scoring"></a>原生計分
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主題說明在 SQL Server 2017 功能，可提供幾近即時的機器學習模型上的 計分。
 

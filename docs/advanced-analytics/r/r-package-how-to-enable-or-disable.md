@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e384893-04da-43f9-b100-bfe99888f085
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3c3dab54416d680e0d021a2edf9fbe33d5a0d81f
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 35bcae1e29e9b640d2e04b9adc788e382b18b6e8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="enable-or-disable-r-package-management-for-sql-server"></a>啟用或停用 SQL Server 的 R 封裝管理
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文描述 SQL Server 2017，設計可讓資料庫管理員來控制使用 T-SQL，而不是。 執行個體上的套件安裝的新封裝管理功能
 
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/09/2018
 
 3. 每個資料庫必須已安裝封裝中重複命令。
 
-4.  若要確認已成功建立新的角色，在 SQL Server Management Studio 中，按一下資料庫，展開 [**安全性**，然後展開**資料庫角色**。
+4.  若要確認已成功建立新的角色，在 SQL Server Management Studio 中，按一下資料庫，展開 **安全性**，然後展開**資料庫角色**。
 
     您也可以執行的查詢上 sys.database_principals 如下所示：
 

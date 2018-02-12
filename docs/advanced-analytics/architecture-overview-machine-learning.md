@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 737087692cff4d5b76336b1a31b58e2f9390abfc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的架構概觀 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主題說明支援的 Python 和 R 指令碼的執行 SQL Server 中的擴充性架構的目標。
 
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/08/2018
 
    此外，Microsoft 提供一組專屬的程式庫提供整合到 SQL Server，包括資料轉譯、 壓縮和每個支援的語言適用對象的最佳化。
 
-+ **Security**
++ **安全性**
 
    更好的安全性表示支援整合式的 Windows 驗證和密碼為基礎的 SQL 登入，做為認證，也一樣安全處理仰賴 SQL Server 進行資料保護和使用 SQL Server 受信任的啟動列 來管理外部指令碼執行與安全用於指令碼中的資料。
 
@@ -108,6 +109,6 @@ ms.lasthandoff: 01/08/2018
 
   雲端為基礎的拖放介面設計機器學習服務工作流程，結合了可自動化及整合與透過 web 服務和 PowerShell 的應用程式
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [比較 Server 機器學習和 Microsoft R 產品](https://docs.microsoft.com/machine-learning-server/what-is-r-server-interoperability)

@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 408e2503-5c7d-4ec4-9d3d-bba5a8c7661d
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5c27e75bf6248ebb403235e339750cf935ee3a3d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 275bda79d9c8cb74d871a4d13612847dc58592e8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>安裝機器學習伺服器 （獨立） 或 R 伺服器 （獨立）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 安裝程式包含安裝的機器學習 SQL Server 外部執行的伺服器的選項。 這個選項可能會很有用，如果您要開發的高效能的機器學習解決方案可以使用遠端計算內容，或是，可以部署至多個平台，包括：
   
@@ -146,14 +147,14 @@ SQL Server 安裝程式包含安裝的機器學習 SQL Server 外部執行的伺
 
 下表列出每個安裝的路徑。
 
-|Version| 安裝方法 | 預設資料夾|
+|版本| 安裝方法 | 預設資料夾|
 |----|----|----|
 |R Server (Standalone) |SQL Server 2016 安裝程式精靈|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R Server (Standalone) |Windows 的獨立安裝程式|`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |Machine Learning 伺服器 (獨立式) |  SQL Server 2017 安裝精靈 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
 |Machine Learning 伺服器 (獨立式) |  Windows 的獨立安裝程式 |`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |R Services (資料庫內) |SQL Server 2016 安裝程式精靈|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Machine Learning 服務 (資料庫內) |SQL Server 2017 安裝精靈|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES` 或 `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|Machine Learning 服務 (資料庫內) |SQL Server 2017 安裝精靈|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`或`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 
 ### <a name="development-tools"></a>開發工具
 

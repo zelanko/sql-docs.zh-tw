@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d5e8d61735b5a40f178c76ccb6549150a2e9f0ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d2f43ab9235e6c16976789027f6308f95bf9d246
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的擴充的事件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 提供一組擴充事件，以在疑難排解與相關的作業中使用的[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]，以及 Python 或 R 工作傳送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
@@ -54,7 +55,7 @@ AND p.name = 'SQLSatellite';
 
 ##  <a name="bkmk_xeventtable"></a>擴充事件列表
 
-|事件|描述|注意|  
+|事件|Description|注意|  
 |-----------|-----------------|---------|  
 |connection_accept|接受新連線時會發生。 此事件是用來記錄所有的連線嘗試。||  
 |failed_launching|啟動失敗。|表示發生錯誤。|  

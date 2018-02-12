@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abc79124569635f3aafaaa309e25e2c827fa5d9b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>設定 Python 機器學習服務 （資料庫）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   本文說明如何安裝 Python 藉由執行所需的元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈中，並遵循互動式提示。
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 01/08/2018
 
 已完成安裝之後，重新設定為允許使用外部可執行檔的指令碼執行的執行個體。 您可能需要進行其他變更到伺服器，以支援機器學習工作負載。 組態變更通常需要重新啟動的執行個體或啟動控制板服務重新啟動。
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>필수 구성 요소
 
 + 需要 SQL Server 2017。 舊版的 SQL Server 上不支援 Python 整合。
 + 請務必安裝 database engine。 SQL Server 執行個體，才能執行 Python 指令碼中的資料庫。
@@ -273,7 +274,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
   
      [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
   
--   變更可以透過啟動的背景工作帳戶數目[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
+-   變更可以透過啟動的背景工作帳戶數目 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
   
      [修改 SQL Server R services 的使用者帳戶集區](../r/modify-the-user-account-pool-for-sql-server-r-services.md)
 

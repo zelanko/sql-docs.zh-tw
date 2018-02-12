@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0708a96a8ee4e22f3eec5587f87ac09c8408301a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f58cb0fbc6ca62bbd4fe02e0c29d71569140fde2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>避免安裝在使用者程式庫中的 R 封裝上的錯誤
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 有經驗的 R 使用者通常都會被封鎖或無法使用預設程式庫時，在使用者程式庫安裝 R 封裝。 不過，這個方法不支援在 SQL Server，而且使用者文件庫的安裝通常會結束 「 找不到封裝 」 錯誤。
 
@@ -52,7 +53,7 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 使用執行個體相關聯的套件程式庫。 如需詳細資訊，請參閱[與 SQL Server 一起安裝的 R 封裝](installing-and-managing-r-packages.md)
 
-**適用於 SQL Server 2017**
+**For SQL Server 2017**
 
 SQL Server 提供功能，可協助您管理多個封裝版本，並提供使用者的權限給個別的封裝，而不需要使用者具有檔案系統存取權。
 

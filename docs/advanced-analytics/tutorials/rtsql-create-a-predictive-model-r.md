@@ -14,18 +14,19 @@ dev_langs:
 - R
 - SQL
 ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: ca19904893d328c7eaadc95b7762904df3f5d9eb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1b40295452da5b7da34a31e6825630da9c6c4861
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>建立預測模型 (SQL 快速入門中的 R)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在此步驟中，您將了解如何使用 R 來訓練模型，然後將該模型儲存至 SQL Server 中的資料表。 此模型是一個簡單的迴歸模型，可根據速度預測汽車的停止距離。 您將使用`cars`資料集包含使用 R，因為它是小型且容易理解。
 

@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e393db396c7d41f7eca7851fa10544d697eac5c8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3dd916a0d91d5f237d7a60963c1b3fab1f90b5e9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>SQL Server 中的 R 互通性
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主題著重於 SQL Server 中的執行的機制，並說明 Microsoft R 和開放原始碼 r 的差異
 
@@ -32,11 +33,11 @@ ms.lasthandoff: 01/25/2018
 
 ### <a name="open-source-r-components"></a>開放原始碼 R 元件
 
-[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 包含一組完整散發的基底 R 封裝和工具。 如需基底散發隨附內容的詳細資訊，請參閱安裝期間安裝於下列預設位置的文件︰`C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 包含基底的 R 封裝和工具的完整散發。 如需基底散發隨附內容的詳細資訊，請參閱安裝期間安裝於下列預設位置的文件︰`C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
 在安裝 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 期間，您必須同意 GNU 公用授權的條款。 之後，您就可以執行標準的 R 封裝，而不需進一步修改，就如同在 R 的任何其他開放原始碼散發中一樣。
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 不會以任何方式修改 R 執行階段。 R 執行階段是在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 處理序外部執行，而且可在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 以外獨立執行。 不過，強烈建議您不要在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 使用 R 時執行這些工具，以避免資源爭用。
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 不會修改 R 執行階段以任何方式。 R 執行階段是在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 處理序外部執行，而且可在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 以外獨立執行。 不過，強烈建議您不要在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 使用 R 時執行這些工具，以避免資源爭用。
 
 與特定 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 執行個體相關聯的 R 基底封裝散發，可以在與該執行個體相關聯的資料夾中找到。 比方說，如果您安裝 R 服務的預設執行個體時，R 程式庫位於此資料夾預設：
 

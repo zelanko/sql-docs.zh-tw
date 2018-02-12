@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 500c942f3583990e7b5d2b6cdf30f30d6729891f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9287a85017df7b05b3b354a855811ea528a3ad79
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>如何執行即時計分或 SQL Server 中的原生計分
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主題提供如何執行即時計分和 SQL Server 2017 和 SQL Server 2016 中的原生計分功能的指示和範例程式碼。 同時即時計分和原生計分的目標是要提升以小型批次計分作業的效能。
 

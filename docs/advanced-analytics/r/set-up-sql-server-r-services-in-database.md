@@ -16,18 +16,19 @@ keywords:
 - "設定 R 服務"
 - "安裝 SQL 機器學習服務"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 04f2502853e21968f2edaac927247eb45730d000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>設定 SQL Server 機器學習服務 （資料庫）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主題描述如何安裝及設定下列機器學習支援 SQL Server 資料庫中的分析功能：
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
 
 + 使用 server 的機器學習**沒有**SQL Server
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式也會包含安裝的機器學習元件不需要資料庫引擎，而且不會執行 SQL Server 中的 「 獨立 」 版本的選項。  我們通常會建議您安裝在裝載 SQL Server 的電腦不同的電腦上的這個選項。
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式也會包含安裝的機器學習元件不需要資料庫引擎，而且不會執行 SQL Server 中的 「 獨立 」 版本的選項。  我們通常會建議您安裝在裝載 SQL Server 的電腦不同的電腦上的這個選項。
     
     [設定獨立機器學習伺服器](create-a-standalone-r-server.md)。
 
@@ -125,7 +126,7 @@ ms.lasthandoff: 01/08/2018
 > * 需要後續安裝步驟： 啟用 machine learning 中，然後重新啟動
 > * 選擇性的後續安裝步驟： 加入防火牆規則，將使用者加入、 變更或設定服務帳戶設定的遠端資料科學用戶端。
 
-**開始使用**
+**快速入門**
 
 1. 執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。
   
@@ -231,7 +232,7 @@ ms.lasthandoff: 01/08/2018
 
     | hello |
     |----|
-    | @shouldalert|
+    | 1|
 
 
 8. 如果發生任何錯誤，繼續描述其他選擇性變更，您可能需要進行後安裝已完成，或請參閱疑難排解指南 》 的章節：
@@ -330,7 +331,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 * Windows 驗證： 您可能需要在指定的執行個體名稱和其他連接資訊的資料科學用戶端上設定 ODBC 資料來源。 如需詳細資訊，請參閱[ODBC 資料來源管理員](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator)。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 SQL Server 中的指令碼執行功能，適用於在您確認之後，您可以執行 R 和 Python 命令從 SQL Server Management Studio、 Visual Studio 程式碼或任何其他用戶端，可以將 T-SQL 陳述式傳送到伺服器。 在進行之前，您可以進行一些變更系統設定中，以支援大量使用機器學習服務，或將新的 R 封裝。
 

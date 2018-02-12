@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: bc3d80c01bc16d6d89bbf3e97ddf88089e9379fd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 40c76cba27559c8fcc314ce4c9761ee42edacac0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning 服務
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft 機器學習服務的目標是提供可延伸性並可擴充的平台整合與使用機器學習服務的應用程式的機器學習工作和工具。 平台必須滿足需求的所有使用者參與的資料開發和分析程序中，資料科學家從架構設計人員和資料庫管理員。
 
@@ -39,7 +40,7 @@ Microsoft 機器學習服務的目標是提供可延伸性並可擴充的平台�
 
 在 SQL Server 2016 中，Microsoft 會啟動整合熱門的開放原始碼 R 語言與商務應用程式的兩個伺服器平台：
 
-+ **SQL Server R Services (資料庫內)**用來與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ **SQL Server R 服務 （資料庫）**，與整合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**，針對 Windows 和 Linux 伺服器上的企業層級 R 部署
 
 在 SQL Server 2017，名稱已變更以反映受歡迎的 Python 語言的支援。

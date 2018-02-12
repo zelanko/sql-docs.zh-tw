@@ -1,6 +1,7 @@
 ---
 title: "進階組態選項的機器學習服務 |Microsoft 文件"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 10/31/2017
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f8a886e48067c80f112e86c9d7ba07da79502691
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 042e36faee599de3ff31a6bbb8dee32f0a6999cf
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>機器學習服務的進階的組態選項
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文描述您可以在安裝之後，若要修改外部指令碼執行階段和其他 SQL Server 中的機器學習服務相關聯的服務組態進行的變更。
 

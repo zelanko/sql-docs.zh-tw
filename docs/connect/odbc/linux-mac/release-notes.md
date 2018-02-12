@@ -8,21 +8,36 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 895280e7c7c8924ec2ec5eea55049f87d9206c4f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5aecc3796565d4c32d91fe28304bdd04f5793980
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Microsoft ODBC Driver for SQL Server on Linux 及 macOS 的版本資訊
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>新功能[!INCLUDE[msCoName](../../../includes/msconame_md.md)]的 ODBC 驅動程式 17 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux 及 macOS
+
+SQL azure 受管理的執行個體 （擴充私人預覽中）。 請注意，有一些差異使用受管理的執行個體時：
+-   不支援 FILESTREAM 
+-   不支援，但所需 tracefiles 之類的本機檔案系統存取 
+-   從本機路徑不支援建立 UDT 
+-   不支援 Windows 整合式驗證 
+-   不支援的 DTC 
+-   帳戶 'sa' 不存在 （預設的帳戶稱為 'cloudSA'）
+-   TDS token 的錯誤 (0xAA) 傳回不正確的伺服器名稱
+-   不支援在 資料庫名稱的特殊字元 
+-   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] 不支援
+-   錯誤訊息都會顯示在英文中，不論語言為何設定 （如同 Azure） 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>新功能[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux 及 macOS  
 

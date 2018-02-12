@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5efdde73d0b2f880d62927b9b96b3eee7fadfe5f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>SQL Server 中支援 R 的元件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在 SQL Server 2016 和 2017年，database engine 包含選用元件的外部指令碼語言，包括 R，並將 Python 支援擴充性。 SQL Server 2016; 已加入的 R 語言支援SQL Server 2017 機器學習服務中已加入的 Python 支援。
 
@@ -111,7 +112,7 @@ BxlServer 將 SQL Satellite 用於下列工作：
 4. BxlServer 會與 R 執行階段合作，以管理與 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的資料交換，以及處理結果的儲存。
 5. SQL 附屬管理相關工作的通訊並處理具有[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。
 6. BxlServer 使用 SQL Satellite 來與 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 進行狀態和結果的通訊。
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 會取得結果，並關閉相關工作和處理序。
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 取得結果，並關閉相關的工作和程序。
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>從遠端用戶端執行的 R 指令碼
 
@@ -127,7 +128,7 @@ BxlServer 將 SQL Satellite 用於下列工作：
 6. RLauncher 呼叫安裝在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 電腦上 R 執行階段的執行個體。
 7. 結果會傳回 BxlServer。
 8. SQL Satellite 管理與 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的通訊，並清理相關的工作物件。
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 將結果傳遞回用戶端。
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 結果傳回給用戶端。
 
 ## <a name="next-steps"></a>後續的步驟
 

@@ -10,22 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 6d7e49a6074e342f51595e9b1cdb10227761f670
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>在資料庫 Python 分析的 SQL 開發人員
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本逐步解說的目標是提供 SQL 程式設計者建立的機器學習解決方案使用 SQL Server 中執行的 Python 的實際操作體驗。 在本逐步解說，您將學習如何將 Python 程式碼加入至預存程序，並執行預存程序來建置，並預測模型。
 
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 
 資料是來自已知 NYC 計程車資料集。 若要讓這個逐步解說中，快速且輕鬆，取樣資料。 您將建立二元分類模型來預測特定路線是否有可能取得提示，根據資料行，例如一天、 距離和收取位置的時間。
 
-所有工作，都才可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]熟悉環境中的預存程序[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+所有工作，都才可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]熟悉環境中的預存程序 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [步驟 1︰下載範例資料](sqldev-py1-download-the-sample-data.md)
 

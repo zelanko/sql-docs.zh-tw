@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 55d194bf888defeebba64eeb4bb87ac04363cefb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 685833317453c1ed5765385a73ff892a85989c2c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>建立多個模型使用 rxExecBy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 CTP 2.0 包含新的函式， **rxExecBy**，支援多個相關模型的平行處理。 而不是定型一個極大的模型根據類似的多個實體的資料，資料科學家可以非常快速地建立多個相關的模型，每個都使用單一實體的特定資料。
 

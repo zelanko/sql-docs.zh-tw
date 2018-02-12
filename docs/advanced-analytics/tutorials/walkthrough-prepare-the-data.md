@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 743d7159bd8937fe90be4016ad361d13b7a15c36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>準備要使用 PowerShell （逐步解說） 的資料
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 此時，您應該會安裝下列其中之一：
 
@@ -290,7 +293,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 PowerShell 指令碼會執行多個[!INCLUDE[tsql](../../includes/tsql-md.md)]SQL Server 執行個體上的指令碼。 下表列出[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼和它們的功用。
 
-|SQL 指令碼檔案名稱|描述|
+|SQL 指令碼檔案名稱|Description|
 |------------------------|----------------|
 |create-db-tb-upload-data.sql|建立資料庫和兩個資料表：<br /><br /> *nyctaxi_sample*：儲存定型資料的資料表，1% 的 NYC 計程車資料集樣本。 叢集資料行存放區索引會新增至資料表，以提高儲存和查詢效能。<br /><br /> *nyc_taxi_models*： 用來儲存已定型的模型，以二進位格式的資料表。|
 |PredictTipBatchMode.sql|建立預存程序，以呼叫所定型的模型來預測新觀測的標籤。 它會接受查詢作為其輸入參數。|

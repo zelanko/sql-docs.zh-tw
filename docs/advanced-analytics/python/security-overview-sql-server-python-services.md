@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 422b1e72c38493b2092a8682ade5077069af24f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c4fc8ef42cf38e908aca8dbbfeacbfd5fdf0ece4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="security-overview-for-python-in-sql-server"></a>Python SQL Server 中的安全性概觀
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主題描述用來連接的安全性架構[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]資料庫引擎和 Python 元件。 提供兩個常見案例的安全性程序的範例： 使用預存程序，並與 SQL Server 做為遠端計算內容中執行 Python 的 SQL Server 中執行 Python。
 
@@ -90,6 +91,6 @@ A[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]登入或 Windows �
 
 如果您是該電腦上的系統管理員，您可以檢視針對每個處理序所建立的目錄。 每個目錄是以其工作階段 GUID 來識別。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [架構概觀](../../advanced-analytics/python/architecture-overview-sql-server-python.md)

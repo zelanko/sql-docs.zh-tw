@@ -10,20 +10,22 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016 CTP3)
+applies_to:
+- SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 54e685e285f2040ec13b84aa7e0e4b020457560b
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>升級 SQL Server 執行個體中的機器學習元件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文說明的程序_繫結_，可用來升級機器學習 SQL Server 中所使用的元件。 更新頻率，根據機器學習伺服器版本的繫結程序鎖定伺服器，而不是使用 SQL Server 版本和更新排程。
 

@@ -16,18 +16,19 @@ dev_langs:
 - Python
 - R
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 64723e2882fd645be6627eb7781a10324117019a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2d15f47fd148cb7b1f0edf399e94502c3570eabd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的教學課程
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文提供教學課程、 示範和範例應用程式，以使用 SQL Server 2016 中 SQL Server 2017 機器學習功能的完整的清單。 從這裡開始，若要了解如何從 T-SQL 執行 R 或 Python、 要使用的遠端和本機計算內容，以及如何最佳化程式碼 R 和 Python SQL 的生產環境。
 

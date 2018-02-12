@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4bfecc8ed96b445c0d44c11449114d1d6c087942
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>使用 Python 的機器學習服務的架構概觀
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主題提供的 Python 與 SQL Server，包括支援外部指令碼執行的資料庫引擎和啟用 Python 與 SQL Server 的互通性的新元件中的安全性模型，元件的整合方式的概觀。 如需詳細資訊，請參閱連結的主題。
 
@@ -53,6 +54,6 @@ SQL Server 機器學習服務 （資料庫） 安裝的 Python Anaconda 發佈�
 
 如需詳細資訊，請參閱[資源管理針對 R](../../advanced-analytics/r/resource-governance-for-r-services.md)。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 [執行 Python 使用 T-SQL](../tutorials/run-python-using-t-sql.md)
