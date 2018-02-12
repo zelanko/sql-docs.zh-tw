@@ -8,23 +8,24 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 31bab8e6bf0207b740d89fbaec1b1b97ea7db585
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 29ba7f266a86e53f95668b8bf8ca4ce879bb62f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/18/2018
 1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性] 。  
   
     > [!NOTE]  
-    >  至少需要 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 16 版。  
+    > 至少需要 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 16 版。  
   
 2.  在 [資料庫屬性]  對話方塊中，選取 [查詢存放區]  頁面。  
   
@@ -49,18 +50,18 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 陳述式  
   
-1.  使用 **ALTER DATABASE** 陳述式可啟用查詢存放區。 例如：  
+使用 **ALTER DATABASE** 陳述式可啟用查詢存放區。 例如：  
   
-    ```sql  
-    ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
-    ```  
+```sql  
+ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
+```  
   
-     如需和查詢存放區相關之語法選項的詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
+如需和查詢存放區相關之語法選項的詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
 > [!NOTE]  
 >  您無法為 **master** 或 **tempdb** 資料庫啟用查詢存放區。  
  
-##  <a name="About"></a> 查詢存放區中的資訊  
+## <a name="About"></a> 查詢存放區中的資訊  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中任何特定查詢的執行計劃通常會在一段時間後，因為統計資料的變更、結構描述變更、建立/刪除索引等數種不同原因而有所演變。儲存快取的查詢計劃之程序快取，只會儲存最新的執行計劃。 計劃也會因為記憶體不足的壓力，而從計劃快取中收回。 因此，因為執行計劃變更所造成的查詢效能低下，可能相形重要，而且可能需要許多時間才可解決。  
   
  因為查詢存放區會為每項查詢保留多個執行計劃，其可強制套用原則以指示查詢處理器要為查詢使用特定的執行計劃。 這也稱為強制執行計劃。 查詢存放區中的強制執行計劃，透過類似於 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) 查詢提示的機制加以提供，但它不需要在使用者應用程式中進行任何變更。 強制執行計劃可以解決在非常短的期間內，因計劃變更所導致的查詢效能低下。  
@@ -70,32 +71,28 @@ ms.lasthandoff: 01/18/2018
  使用查詢存放區功能的常見情況包括：  
   
 -   強制執行先前的查詢計劃，快速找出並修正計劃效能低下。 修正因為執行計劃變更而最近出現的效能低下。  
-  
 -   判斷在指定的時段執行查詢的次數、協助 DBA 疑難排解資源的效能問題。  
-  
 -   識別過去 *n* 小時內的前 *n* 項查詢 (依據執行時間、記憶體耗用量等等)。  
-  
 -   稽核指定的查詢之查詢計劃記錄。  
-  
 -   分析特定資料庫的資源 (CPU、I/O 及記憶體) 使用模式。  
 -   識別前 n 項等候資源的查詢。 
 -   了解特定查詢或計劃的等候本質。
   
 查詢存放區包含三個存放區：
-- **計劃存放區**以保存執行計劃資訊。
-- **執行階段統計資料存放區**以保存執行統計資料資訊。
-- **等候統計資料存放區**以保存等候統計資料資訊。
+- **計劃存放區**以保存執行計劃資訊。     
+- **執行階段統計資料存放區**以保存執行統計資料資訊。    
+- **等候統計資料存放區**以保存等候統計資料資訊。     
  
- 計劃存放區中可為查詢儲存的不重複計劃數目，受限於 **max_plans_per_query** 組態選項。 為了增強效能，資訊會以非同步方式寫入存放區。 若要將空間使用量降至最低，在執行階段統計資料存放區中的執行階段執行統計資料，會以固定的時段彙總。 對查詢存放區目錄檢視進行查詢時，會顯示這些存放區中的資訊。  
+計劃存放區中可為查詢儲存的不重複計劃數目，受限於 **max_plans_per_query** 組態選項。 為了增強效能，資訊會以非同步方式寫入存放區。 若要將空間使用量降至最低，在執行階段統計資料存放區中的執行階段執行統計資料，會以固定的時段彙總。 對查詢存放區目錄檢視進行查詢時，會顯示這些存放區中的資訊。  
   
- 下列查詢會傳回查詢存放區中查詢與計劃的相關資訊。  
+下列查詢會傳回查詢存放區中查詢與計劃的相關資訊。  
   
 ```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
-JOIN sys.query_store_query AS Qry  
+INNER JOIN sys.query_store_query AS Qry  
     ON Pl.query_id = Qry.query_id  
-JOIN sys.query_store_query_text AS Txt  
+INNER JOIN sys.query_store_query_text AS Txt  
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
@@ -111,7 +108,7 @@ JOIN sys.query_store_query_text AS Txt
  若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃] 。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。  
 ##  <a name="Waiting"></a>尋找等候查詢
 
-自 SQL Server 2017 CTP 2.0 開始以及在 Azure SQL Database 上，一段時間後每個查詢的等待統計資料皆可提供查詢存放區客戶使用。 在查詢存放區中，等候類型會合併到**等候類別**。 完整對應請參閱 [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)。
+從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 開始，可在查詢存放區中使用每個查詢經過一段時間的等候統計資料。 在查詢存放區中，等候類型會合併到**等候類別**。 [sys.query_store_wait_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) 可將等候類別對應至等候類型。
 
 **等候類別**會將不同的等候類型合併到本質類似的貯體中。 不同的等候類別需要不同的後續操作分析來解決問題，但同類別的等候類型會導致非常類似的疑難排解體驗，而提供受影響的前幾項查詢可能就是順利完成大部分這類調查所缺少的片段。
 
@@ -129,38 +126,38 @@ JOIN sys.query_store_query_text AS Txt
 
 設定查詢存放區參數可使用下列選項。
 
- `OPERATION_MODE`  
- 可以是 **READ_WRITE** (預設) 或 READ_ONLY。  
+*OPERATION_MODE*  
+可以是 **READ_WRITE** (預設) 或 READ_ONLY。  
   
- `CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)`  
- 設定 STALE_QUERY_THRESHOLD_DAYS 引數，可指定在查詢存放區中保留資料的天數。 預設值是 30。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版的預設值為 **7** 天。
+*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)*  
+設定 `STALE_QUERY_THRESHOLD_DAYS` 引數可指定在查詢存放區中保留資料的天數。 預設值是 30。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版的預設值為 **7** 天。
   
- `DATA_FLUSH_INTERVAL_SECONDS`  
- 決定將寫入查詢存放區的資料保存到磁碟的頻率。 為了獲得最佳效能，查詢存放區所收集的資料會以非同步方式寫入磁碟。 此非同步傳輸發生的頻率，以 DATA_FLUSH_INTERVAL_SECONDS 設定。 預設值為 **900** (15 分鐘)。  
+*DATA_FLUSH_INTERVAL_SECONDS*  
+決定將寫入查詢存放區的資料保存到磁碟的頻率。 為了獲得最佳效能，查詢存放區所收集的資料會以非同步方式寫入磁碟。 此非同步傳輸發生的頻率是透過 `DATA_FLUSH_INTERVAL_SECONDS` 所設定。 預設值為 **900** (15 分鐘)。  
   
- `MAX_STORAGE_SIZE_MB`  
- 設定查詢存放區的大小上限。 若查詢存放區中的資料到達了 MAX_STORAGE_SIZE_MB 限制，查詢存放區會自動從讀寫狀態變更為唯讀，並會停止收集新的資料。  預設值為 100Mb。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium 版的預設值為 **1 GB**，而 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版的預設值為 **10 MB**。
+*MAX_STORAGE_SIZE_MB*  
+設定查詢存放區的大小上限。 若查詢存放區中的資料達到 `MAX_STORAGE_SIZE_MB` 限制，查詢存放區會自動從讀寫狀態變更為唯讀狀態，並停止收集新的資料。  預設值為 100 MB。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium 版的預設值為 **1 GB**，而 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版的預設值為 **10 MB**。
   
- `INTERVAL_LENGTH_MINUTES`  
- 決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要最佳化空間的使用量，在執行階段統計資料存放區中的執行階段執行統計資料，會以固定的時段彙總。 這個固定時段由 INTERVAL_LENGTH_MINUTES 所設定。 預設值是 **60**秒。 
+*INTERVAL_LENGTH_MINUTES*  
+決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要最佳化空間的使用量，在執行階段統計資料存放區中的執行階段執行統計資料，會以固定的時段彙總。 這個固定時段是透過 `INTERVAL_LENGTH_MINUTES` 所設定。 預設值是 **60**秒。 
   
- `SIZE_BASED_CLEANUP_MODE`  
- 控制當總資料量接近大小上限時，是否要自動啟用清除。 可以是 **AUTO** (預設) 或 OFF。  
+*SIZE_BASED_CLEANUP_MODE*  
+控制當總資料量接近大小上限時，是否要自動啟用清除。 可以是 **AUTO** (預設) 或 OFF。  
   
- `QUERY_CAPTURE_MODE`  
- 指定讓查詢存放區根據執行計數和資源耗用來擷取所有查詢或相關查詢，或是停止新增查詢而僅追蹤目前的查詢。 可以是 ALL (擷取所有的查詢)，AUTO (略過不頻繁及具有無意義編譯和執行期間的查詢) 或 NONE (停止擷取新的查詢)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 的預設值為 **ALL**，而 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 則為 AUTO。
+*QUERY_CAPTURE_MODE*  
+指定讓查詢存放區根據執行計數和資源耗用來擷取所有查詢或相關查詢，或是停止新增查詢而僅追蹤目前的查詢。 可以是 **ALL** (擷取所有的查詢)、AUTO (略過不頻繁及具有無意義編譯和執行期間的查詢) 和 NONE (停止擷取新的查詢)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 的預設值為 ALL，而 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的預設值則為 AUTO。
   
- `MAX_PLANS_PER_QUERY`  
- 表示維護每個查詢計劃的大數目的整數。 預設值為 **200**。  
+*MAX_PLANS_PER_QUERY*  
+表示維護每個查詢計劃的大數目的整數。 預設值為 **200**。  
  
- `WAIT_STATS_CAPTURE_MODE`  
- 控制查詢存放區是否擷取等候統計資料資訊。 可以是 OFF 或 **ON** (預設)。  
+*WAIT_STATS_CAPTURE_MODE*  
+控制查詢存放區是否擷取等候統計資料資訊。 可以是 OFF 或 **ON** (預設)。  
  
- 查詢 **sys.database_query_store_options** 檢視可判斷查詢存放區目前的選項。 如需值的詳細資訊，請參閱 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。  
+查詢 **sys.database_query_store_options** 檢視可判斷查詢存放區目前的選項。 如需值的詳細資訊，請參閱 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。  
   
- 如需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式設定選項的詳細資訊，請參閱 [選項管理](#OptionMgmt)。  
+如需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式設定選項的詳細資訊，請參閱 [選項管理](#OptionMgmt)。  
   
-##  <a name="Related"></a> 相關檢視、函數與程序  
+## <a name="Related"></a> 相關檢視、函數與程序  
  透過 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或使用下列檢視與程序，檢視及管理查詢存放區。  
 
 ### <a name="query-store-functions"></a>查詢存放區函式  
@@ -311,9 +308,8 @@ DEALLOCATE adhoc_queries_cursor;
   
  以上範例使用 **sp_query_store_remove_query** 擴充預存程序，以移除不必要的資料。 您也可以使用：  
   
--   **sp_query_store_reset_exec_stats** – 為給定的計劃清除執行階段統計資料。  
-  
--   **sp_query_store_remove_plan** – 以移除單一計畫。  
+-   **sp_query_store_reset_exec_stats** 為指定的計畫清除執行階段統計資料。  
+-   **sp_query_store_remove_plan** 以移除單一計畫。  
  
   
 ###  <a name="Peformance"></a> 效能稽核及疑難排解  
@@ -554,7 +550,6 @@ ORDER BY additional_duration_workload DESC
 OPTION (MERGE JOIN);  
 ```  
  
-  
 ###  <a name="Stability"></a> 維護查詢效能穩定性  
  若是執行多次的查詢，您可會注意到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用不同的計劃，而產生了不同的資源使用率與持續時間。 您可利用查詢存放區，輕鬆偵測查詢效能何時低下，以及判斷在意時段中的最佳計劃。 然後可以對未來的查詢強制執行該最佳計劃。  
   

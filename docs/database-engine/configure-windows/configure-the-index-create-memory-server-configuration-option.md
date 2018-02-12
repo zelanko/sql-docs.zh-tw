@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: index create memory option
+helpviewer_keywords:
+- index create memory option
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0c01f2f0d3c46482853b0e6912afd2ec761837b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4002ca9e8f3ed619f59308ad36d7a26e90eb0d70
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>設定 index create memory 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +61,9 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> 建議  
   
--   這個選項是進階選項，只有有經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術人員才可變更。  
+-   此選項是進階選項，只有具經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專業人員才可變更。  
   
--   [索引建立記憶體] 選項為自我設定，並且通常不需要調整便可使用。 然而，如果無法建立索引，請考慮增加這個選項的執行值。  
+-   **[索引建立記憶體]** 選項為自我設定，並且通常不需要調整便可使用。 然而，如果無法建立索引，請考慮增加這個選項的執行值。  
 
 -   對生產系統建立索引通常是難得執行的工作，多半排程為工作在離峰時間執行。 因此，一旦有機會在離峰時間或是在建立索引不頻繁時，加大 **[索引建立記憶體]** 可能有助於改善建立索引的效能。 但仍請儘量將 **[[每個查詢的最小記憶體]](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 設定選項維持在較小的值，讓索引建立作業即使無法取得要求的記憶體，還是能夠啟動。
   

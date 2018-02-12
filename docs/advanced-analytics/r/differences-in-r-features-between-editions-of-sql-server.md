@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b33a3e2-04d3-4bad-9335-9568ae09db0b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 839f9fbb2216a153ce1171f57e4021d9c0a43544
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f4fd73dd213b004916fb99dcb95146221116da8e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="differences-in-machine-learning-features-between-editions-of-sql-server"></a>機器學習功能的 SQL Server 版本之間的差異
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  使用 SQL Server 2016 和 SQL Server 2017 機器學習的支援。 本文列出支援功能的版本、 說明套用在特定的版本中的其他限制，並列出功能僅適用於特定版本。
 
@@ -110,7 +111,7 @@ Express Edition 具有和 Standard Edition 相同的限制。
 
 Web edition 不支援執行 R 或 Python 指令碼。 不過，您可以使用[預測](../../t-sql/queries/predict-transact-sql.md)函式來執行[原生計分](../sql-native-scoring.md)定型不同的 SQL Server 或 R Server 執行個體上，則儲存在所需的二進位格式的模型上。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 如需詳細資訊，請參閱：
 
