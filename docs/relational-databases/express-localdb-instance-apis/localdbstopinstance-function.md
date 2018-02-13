@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBStopInstance
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBStopInstance
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f68a8e8b221783835dfee83dbe2337746064a2dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bde22cf301e05030402df861a137ae0c5070d2c4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]停止執行指定的 SQL Server Express LocalDB 執行個體。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+停止執行指定的 SQL Server Express LocalDB 執行個體。  
   
  **標頭檔：** sqlncli.h  
   
@@ -45,7 +49,7 @@ HRESULT LocalDBStopInstance(
  *pInstanceName*  
  [輸入] 要停止的 LocalDB 執行個體名稱。  
   
- *將 dwFlags*  
+ *dwFlags*  
  [輸入] 指定執行個體停止方式的一個或一組旗標值。  
   
  可用的旗標：  
@@ -107,7 +111,7 @@ HRESULT LocalDBStopInstance(
 ## <a name="remarks"></a>備註  
  如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

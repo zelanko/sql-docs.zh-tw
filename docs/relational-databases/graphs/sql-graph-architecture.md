@@ -8,23 +8,24 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 架構  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/18/2018
 
 |資料行名稱    |Description  |
 |---   |---  |
-|`$edge_id`   |可唯一識別資料庫中的指定的邊緣。 它是產生的資料行，而且值是 object_id 邊緣資料表和內部產生的 bigint 值的組合。 不過，當`$edge_id`選取資料行時，會顯示計算的值的 JSON 字串形式。 `$edge_id`是虛擬資料行對應至具有十六進位字串中的內部名稱。 當您選取`$edge_id`從資料表中，資料行名稱會顯示為`$edge_id_\<hex_string>`。 在查詢中使用虛擬資料行名稱是建議的方法來查詢內部`$edge_id`資料行和使用十六進位字串的內部名稱應予以避免。 |
+|`$edge_id`   |可唯一識別資料庫中的指定的邊緣。 它是產生的資料行，而且值是 object_id 邊緣資料表和內部產生的 bigint 值的組合。 不過，當`$edge_id`選取資料行時，會顯示計算的值的 JSON 字串形式。 `$edge_id` 是虛擬資料行對應至具有十六進位字串中的內部名稱。 當您選取`$edge_id`從資料表中，資料行名稱會顯示為`$edge_id_\<hex_string>`。 在查詢中使用虛擬資料行名稱是建議的方法來查詢內部`$edge_id`資料行和使用十六進位字串的內部名稱應予以避免。 |
 |`$from_id`   |存放區`$node_id`的節點、 產生邊緣的位置。  |
 |`$to_id`   |存放區`$node_id`的節點，並在其中邊緣會終止。 |
 
@@ -99,7 +100,7 @@ ms.lasthandoff: 01/18/2018
 |8  |GRAPH_TO_ID_COMPUTED  |
 
 
-`sys.columns`也會儲存在節點或邊緣資料表中建立的隱含資料行的相關資訊。 下列資訊可從擷取的 sys.columns，不過，使用者就無法選取這些資料行從節點或邊緣資料表。 
+`sys.columns` 也會儲存在節點或邊緣資料表中建立的隱含資料行的相關資訊。 下列資訊可從擷取的 sys.columns，不過，使用者就無法選取這些資料行從節點或邊緣資料表。 
 
 隱含節點資料表中的資料行  
 |資料行名稱    |資料類型  |is_hidden  |註解  |
@@ -139,7 +140,7 @@ ms.lasthandoff: 01/18/2018
 ### <a name="data-definition-language-ddl-statements"></a>資料定義語言 (DDL) 陳述式
 |工作   |相關主題  |注意
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE `現在已延伸到支援建立 AS 節點或 AS 邊緣資料表。 請注意，邊緣資料表可能會或可能沒有任何使用者定義屬性。  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 現在已延伸到支援建立 AS 節點或 AS 邊緣資料表。 請注意，邊緣資料表可能會或可能沒有任何使用者定義屬性。  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|節點與邊緣資料表可以更改關聯式資料表，使用的相同方式`ALTER TABLE`。 使用者可以新增或修改使用者定義資料行、 索引或條件約束。 不過，改變內部的圖表資料行，例如`$node_id`或`$edge_id`，將會產生錯誤。  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |使用者可以在虛擬資料行和節點與邊緣資料表中的使用者定義資料行上建立索引。 支援所有的索引類型，包括叢集和非叢集資料行存放區索引。  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |節點與邊緣資料表可以卸除相同的方式，使用關聯式資料表`DROP TABLE`。 不過，在此版本中，有任何條件約束，以確保沒有邊緣指向已刪除的節點，並不支援重疊的邊緣、 刪除節點或節點資料表時刪除。 建議您，如果節點卸除資料表，使用者會中斷任何邊緣連接到該節點資料表中手動維護完整性圖形的節點。  |
@@ -148,10 +149,10 @@ ms.lasthandoff: 01/18/2018
 ### <a name="data-manipulation-language-dml-statements"></a>資料操作語言 (DML) 陳述式
 |工作   |相關主題  |注意
 |---  |---  |---  |
-|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|插入節點的資料表並無不同關聯式資料表中插入。 值`$node_id`自動產生資料行。 嘗試插入的值`$node_id`或`$edge_id`欄將會產生錯誤。 使用者必須提供值`$from_id`和`$to_id`時邊緣資料表中插入的資料行。 `$from_id`和`$to_id`是`$node_id`給定邊緣相連接節點的值。  |
+|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|插入節點的資料表並無不同關聯式資料表中插入。 值`$node_id`自動產生資料行。 嘗試插入的值`$node_id`或`$edge_id`欄將會產生錯誤。 使用者必須提供值`$from_id`和`$to_id`時邊緣資料表中插入的資料行。 `$from_id` 和`$to_id`是`$node_id`給定邊緣相連接節點的值。  |
 |DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|來自關聯式資料表刪除之後，可以刪除節點或邊緣資料表中的資料相同的方式。 不過，在此版本中，有任何條件約束，以確保沒有邊緣指向已刪除的節點，並不支援重疊的邊緣、 刪除節點的後刪除。 建議，每當刪除節點，所有連接到該節點邊緣也會一併刪除為了維持圖表的完整性。  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |可以使用 UPDATE 陳述式來更新使用者定義資料行中的值。 更新內部的圖表資料行`$node_id`， `$edge_id`，`$from_id`和`$to_id`不允許。  |
-|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE`在節點或邊緣資料表不支援陳述式。  |
+|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` 在節點或邊緣資料表不支援陳述式。  |
 
 
 ### <a name="query-statements"></a>查詢陳述式

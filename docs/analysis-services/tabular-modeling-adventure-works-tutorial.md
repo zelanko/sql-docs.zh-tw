@@ -1,7 +1,7 @@
 ---
 title: "表格式模型 （1200年相容性層級） |Microsoft 文件"
 ms.custom: 
-ms.date: 01/17/2018
+ms.date: 02/10/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,23 +11,24 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 keywords:
 - Analysis Services
 - "表格式模型"
 - "教學課程"
 - SSAS
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>表格式模型化 （1200年相容性層級）
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/18/2018
 如果您使用 SQL Server 2017 或 Azure Analysis Services，而且您想要在 1400年相容性層級建立模型，請使用[Azure Analysis Services-Adventure Works 教學課程](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master)。 此更新的版本使用新的現代化取得資料 功能，連接並匯入資料來源，並使用 M 語言來設定資料分割。
  
   
-## <a name="what-youll-learn"></a>學習內容   
+## <a name="what-you-learn"></a>您了解的內容   
   
 -   如何在 SSDT 中建立新的表格式模型專案。
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/18/2018
   
 -   如何建立及管理計算、量值和關鍵效能指標，幫助使用者分析模型資料。  
   
--   如何建立及管理檢視方塊和階層，透過提供業務和應用程式專屬視點的方式幫助使用者更輕鬆地瀏覽模型。  
+-   如何建立及管理檢視方塊和幫助使用者更輕鬆地瀏覽模型資料，藉由提供業務和應用程式特有視點的階層。  
   
 -   如何建立分割區，將資料表資料分成較小的邏輯部分，以便讓其他分割區單獨處理。  
   
@@ -60,22 +61,22 @@ ms.lasthandoff: 01/18/2018
   
 為了針對銷售和行銷團隊及資深管理階層的資料分析需要提供更佳的支援，您的工作是要建立表格式模型，讓使用者分析 AdventureWorksDW 範例資料庫中的網際網路銷售資料。  
   
-為了完成本教學課程及 Adventure Works Internet Sales 表格式模型，您必須完成一系列課程。 每個課程中都有一些工作，您必須依序完成每項工作才能完成課程。 在特定課程中可能有幾項工作，以達成類似的結果，但是完成每項工作的方式有些許不同。 這是為了顯示通常會有一個以上的方式來完成特定工作，並要求您使用您已在先前的工作中學到的技術。  
+為了完成本教學課程及 Adventure Works Internet Sales 表格式模型，您必須完成一系列課程。 在每一課是幾項工作。完成每項工作順序才能完成課程。 在特定課程中可能有幾項工作，以達成類似的結果，但是完成每項工作的方式有些許不同。 這是為了顯示通常會有一個以上的方式來完成特定工作，並要求您使用您已在先前的工作中學到的技術。  
   
-這些課程的目的是引導您完成撰寫在記憶體中模式中執行的許多功能包含在 SSDT 中使用的基本表格式模型。 因為每一課都是以上一課為基礎，所以您應該依序完成課程。 當您完成之後的所有課程時，您將撰寫並部署 Adventure Works Internet Sales 範例表格式模型，Analysis Services 伺服器上。  
+這些課程的目的是引導您完成撰寫在記憶體中模式中執行的許多功能包含在 SSDT 中使用的基本表格式模型。 因為每一課都是以上一課為基礎，所以您應該依序完成課程。 當您完成之後的所有課程時，您所撰寫並部署 Adventure Works Internet Sales 範例表格式模型，Analysis Services 伺服器上。  
   
 本教學課程並未提供下列相關課程或資訊：使用 SQL Server Management Studio 管理部署的表格式模型資料庫，或使用報表用戶端應用程式連接到部署的模型以瀏覽模型資料。  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
-若要完成本教學課程，您將需要下列必要條件：  
+若要完成本教學課程，您需要下列必要條件：  
   
--   最新版的 [！包含[s](../ssdt/download-sql-server-data-tools-ssdt.md)。
+-   最新版[SSDT](../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 -   SQL Server Management Studio 最新版本。 [取得最新版本](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。 
   
--   用戶端應用程式，例如[Power BI Desktop](https://powerbi.microsoft.com/desktop/)或[!INCLUDE[msCoName](../includes/msconame-md.md)]Excel。    
+-   用戶端應用程式，例如[Power BI Desktop](https://powerbi.microsoft.com/desktop/)或 Excel。    
   
--   Adventure Works DW 2014 範例資料庫與 SQL Server 執行個體。 這個範例資料庫包括完成本教學課程所需的資料。 [取得最新版本](http://go.microsoft.com/fwlink/?LinkID=335807)。  
+-   Adventure Works DW 範例資料庫與 SQL Server 執行個體。 這個範例資料庫包括完成本教學課程所需的資料。 [取得最新版本](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。  
   
 
 -   Azure Analysis Services 或 SQL Server 2016 或更新版本的 Analysis Services 執行個體部署至您的模型。 [申請免費的 Azure Analysis Services 試用版](https://azure.microsoft.com/services/analysis-services/)。
