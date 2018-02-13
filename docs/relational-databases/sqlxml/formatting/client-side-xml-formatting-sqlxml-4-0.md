@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - client-side XML formatting
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83a2e753c9cb94d84b25949c1892b48ff7023ece
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1024bf5d057d2a5a5480592817827c21b423b0f3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>用戶端 XML 格式 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]本主題會提供用戶端 XML 格式化的相關資訊。 用戶端格式指的是 XML 在中間層的格式。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+本主題提供有關用戶端 XML 格式的資訊。 用戶端格式指的是 XML 在中間層的格式。  
   
 > [!NOTE]  
 >  本主題提供在用戶端上使用 FOR XML 子句的其他資訊，並假設您已經熟悉 FOR XML 子句。 如需有關 FOR XML 的詳細資訊，請參閱[使用 FOR XML 建構 XML](../../../relational-databases/xml/for-xml-sql-server.md)。  
@@ -118,7 +120,7 @@ AS
   
 -   增強的 XML 範本支援  
   
--   SqlXmlCommand.ClientSideXml 屬性  
+-   SqlXmlCommand.ClientSideXml property  
   
      您可以將 SQLXML Managed 類別的這個屬性設定為 true，藉以指定用戶端功能。  
   
@@ -128,7 +130,7 @@ AS
 > [!NOTE]  
 >  如果您正在使用 SQLXMLOLEDB 提供者的 ADO 應用程式中執行 XML 範本，而且您同時指定兩者**用戶端端 xml**屬性在範本和提供者 ClientSideXML 屬性中指定的值範本會優先使用。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [架構的用戶端和伺服器端 XML 格式化 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server &#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
  [FOR XML 安全性考量 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   

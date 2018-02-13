@@ -9,25 +9,25 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.workload: Inactive
-ms.openlocfilehash: 2f9d7d8697aa82caf3822cefefe83a2525a72e24
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 0e5a08655bcfea396bcf599ef65e7a8e1f126575
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>連接程式庫和適用於 Microsoft SQL Server 的架構
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-請查看我們[快速入門教學課程](http://aka.ms/sqldev)快速開始使用程式設計語言如 C#、 Java、 Node.js、 PHP 以及 Python 和建置在 Linux 或 Windows Docker macOS 上使用 SQL Server 的應用程式。
+簽出[快速入門教學課程](http://aka.ms/sqldev)快速開始使用程式設計語言如 C#、 Java、 Node.js、 PHP 和 Python 和建置在 Linux 或 Windows Docker macOS 上使用 SQL Server 的應用程式。
 
-下表列出的連接程式庫或*驅動程式*用戶端應用程式可以使用從各種不同的語言連接到並使用 Microsoft SQL Server 在內部部署或雲端，在 Linux、 Windows 或 Docker 和 Azure SQL Database 和 Azure SQL 資料倉儲中。 
+下表列出的連接程式庫或*驅動程式*用戶端應用程式可以使用從各種不同的語言連接到並使用 Microsoft SQL Server 在內部部署執行，或在雲端中，在 Linux、 Windows 或 Docker 和也為 Azure SQL Database 和 Azure SQL 資料倉儲。 
 
 | 語言 | 平台 | 其他資源 | 下載 | 開始使用 |
 | :-- | :-- | :-- | :-- | :-- |
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/01/2018
 | Ruby | Windows, Linux, macOS | [適用於 SQL Server 的 Ruby 驅動程式](../connect/ruby/ruby-driver-for-sql-server.md) | [開始使用](https://www.microsoft.com/en-us/sql-server/developer-get-started/ruby/ubuntu)
 | C++ | Windows, Linux, macOS | [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) | [下載](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) |  
 
-下表列出物件關聯式對應 (ORM) 架構和 web 架構用戶端應用程式可以使用與 Microsoft SQL Server 在內部部署執行，或在雲端中，在 Linux、 Windows 或 Docker 和 Azure SQL Database 和 Azure SQL 資料倉儲的一些的範例。 
+下表列出的幾個物件關聯式對應 (ORM) 架構和 web 架構用戶端應用程式可以使用與 Microsoft SQL Server 在內部部署執行，或在雲端中，在 Linux、 Windows 或 Docker 和 Azure SQL database 範例及Azure SQL 資料倉儲。 
 
 | 語言 | 平台 | ORM(s) |
 | :-- | :-- | :-- |

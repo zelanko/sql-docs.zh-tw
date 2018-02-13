@@ -9,21 +9,23 @@ ms.service:
 ms.component: automatic-tuning
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: performance tuning [SQL Server]
+helpviewer_keywords:
+- performance tuning [SQL Server]
 ms.assetid: 
 caps.latest.revision: 
 author: jovanpop-msft
 ms.author: jovanpop
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5af71149c35f95d55aab382b3b9180c6356f1afb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 04d8ac47233e0556cd54ed9fb2b3d22080b4ee42
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -33,14 +35,14 @@ ms.lasthandoff: 11/17/2017
 的自動調整[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]潛在的效能問題偵測到，而且可讓您套用的矯正措施時通知您，或者讓[!INCLUDE[ssde_md](../../includes/ssde_md.md)]自動修正效能問題。
 的自動調整[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]可讓您識別並修正效能問題所造成**SQL 計畫選擇迴歸**。 的自動調整[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]會建立必要的索引，並卸除未使用的索引。
 
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]監視資料庫上執行，但會自動改善效能的工作負載的查詢。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]具有內建智慧機制，可自動調整並透過動態調整您的工作負載的資料庫改善查詢效能。 有可用的兩個自動調整功能：
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 監視資料庫上執行，但會自動改善效能的工作負載的查詢。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 具有內建智慧機制，可自動調整並透過動態調整您的工作負載的資料庫改善查詢效能。 有可用的兩個自動調整功能：
 
  -  **自動的計劃更正**(用於[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]和[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]) 有問題的查詢執行計畫識別並修正 SQL 規劃效能問題。
  -  **自動索引管理**(僅適用於[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)])，識別您的資料庫中，加入的索引和索引應該移除。
 
 ## <a name="why-automatic-tuning"></a>為什麼自動微調嗎？
 
-其中一個傳統資料庫管理的主要工作正在監視的工作負載，識別重要[!INCLUDE[tsql_md](../../includes/tsql_md.md)]查詢時，應該加入改善效能，並且很少使用的索引的索引。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]提供深入了解的查詢與您要監視的索引。 不過，不斷地監視 database 是永久且冗長的工作，尤其是在處理具有許多資料庫。 管理大量的資料庫可能會無法有效執行。 而不是監視，並手動調整您的資料庫，您可能會考慮委派給部分監視及調整動作[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用自動調整功能。
+其中一個傳統資料庫管理的主要工作正在監視的工作負載，識別重要[!INCLUDE[tsql_md](../../includes/tsql_md.md)]查詢時，應該加入改善效能，並且很少使用的索引的索引。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 提供深入了解的查詢與您要監視的索引。 不過，不斷地監視 database 是永久且冗長的工作，尤其是在處理具有許多資料庫。 管理大量的資料庫可能會無法有效執行。 而不是監視，並手動調整您的資料庫，您可能會考慮委派給部分監視及調整動作[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用自動調整功能。
 
 ### <a name="how-does-automatic-tuning-works"></a>自動微調的運作方式？
 
@@ -56,21 +58,21 @@ ms.lasthandoff: 11/17/2017
 
 ### <a name="what-is-sql-plan-choice-regression"></a>什麼是 SQL 計畫選擇迴歸？
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)]可能使用不同的 SQL 計畫來執行[!INCLUDE[tsql_md](../../includes/tsql_md.md)]查詢。 查詢計劃的統計資料、 索引和其他因素而定。 應該用來執行部分的最佳計劃[!INCLUDE[tsql_md](../../includes/tsql_md.md)]查詢可能會變更一段時間。 在某些情況下，新的計劃會優於上一個，而新的計劃可能會導致效能變差。
+[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] 可能使用不同的 SQL 計畫來執行[!INCLUDE[tsql_md](../../includes/tsql_md.md)]查詢。 查詢計劃的統計資料、 索引和其他因素而定。 應該用來執行部分的最佳計劃[!INCLUDE[tsql_md](../../includes/tsql_md.md)]查詢可能會變更一段時間。 在某些情況下，新的計劃會優於上一個，而新的計劃可能會導致效能變差。
 
  ![SQL 計畫選擇迴歸](media/plan-choice-regression.png "SQL 計畫選擇迴歸") 
 
 每當您會注意到計畫選擇迴歸，您應該會發現一些先前的很好的規劃和強制而不是目前另一種使用`sp_query_store_force_plan`程序。
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]在[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]提供有關迴歸計劃與建議的更正動作的資訊。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]提供有關迴歸計劃與建議的更正動作的資訊。
 此外，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]可讓您完全自動化此程序，並讓[!INCLUDE[ssde_md](../../includes/ssde_md.md)]修正任何找到的問題相關的計劃變更。
 
 ### <a name="automatic-plan-choice-correction"></a>自動的計劃選擇更正
 
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]可以自動切換至最後一個已知的良好計劃時偵測到計畫選擇迴歸。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 可以自動切換至最後一個已知的良好計劃時偵測到計畫選擇迴歸。
 
 ![SQL 計畫選擇更正](media/force-last-good-plan.png "SQL 計劃選擇更正") 
 
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]會自動偵測包含計劃，而不是錯誤的計劃應該使用任何潛在計畫選擇迴歸。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會自動偵測包含計劃，而不是錯誤的計劃應該使用任何潛在計畫選擇迴歸。
 當[!INCLUDE[ssde_md](../../includes/ssde_md.md)]套用上次已知良好的計劃，它會自動監視強制計畫的效能。 如果強制執行的計畫不是與迴歸的計畫更好的新的方案將會非強迫性和[!INCLUDE[ssde_md](../../includes/ssde_md.md)]會編譯新的計畫。 如果[!INCLUDE[ssde_md](../../includes/ssde_md.md)]會強制執行的計畫優於迴歸的其中一個，強制執行的計畫會保留之前 （例如，在下一步的統計資料或結構描述變更） 重新編譯比迴歸的計劃好的驗證。
 
 ### <a name="enabling-automatic-plan-choice-correction"></a>啟用自動計劃選擇更正
@@ -88,7 +90,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 沒有自動調整，使用者必須定期監視系統，並尋找迴歸的查詢。 如果任何計劃迴歸，使用者應該會發現一些先前的很好的規劃和強制而不是目前另一種使用`sp_query_store_force_plan`程序。 最佳作法就是強制執行的最後一個已知的良好計畫，因為較舊的計劃可能無效，因為統計資料或索引的變更。 強制執行最後一個已知的良好計劃的使用者應該監視使用強制執行的計畫來執行查詢的效能，並確認該強制的計劃可以正常運作。 根據監視與分析的結果，應該強制計劃，或使用者應該會發現其他方式來最佳化查詢。
 以手動方式強制執行的計畫應該不會強制，因為[!INCLUDE[ssde_md](../../includes/ssde_md.md)]應該要能夠套用最佳計劃。 使用者或 DBA 應該最後取消強制執行計劃使用`sp_query_store_unforce_plan`程序，並讓[!INCLUDE[ssde_md](../../includes/ssde_md.md)]尋找最佳的計劃。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供所有必要的檢視和監視效能及修正問題，查詢存放區中所需的程序。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供所有必要的檢視和監視效能及修正問題，查詢存放區中所需的程序。
 
 在[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，您可以找到使用查詢存放區系統檢視的計畫選擇迴歸。 在[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]偵測，並顯示可能的計畫選擇迴歸和建議的動作應該套用在[sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)檢視。 檢視會顯示問題的重要性，問題，以及詳細資料，例如識別查詢的迴歸的計劃 ID、 已做為基準進行比較，使用計畫的識別碼的相關資訊和[!INCLUDE[tsql_md](../../includes/tsql_md.md)]可以修正執行陳述式發生問題。
 
@@ -132,11 +134,11 @@ FROM sys.dm_db_tuning_recommendations
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | 指令碼 (script) | 查詢\_識別碼 | 目前的計劃\_識別碼 | 建議您計劃\_識別碼 | 估計\_取得 | 錯誤\_容易出錯
+| reason | score | 指令碼 (script) | query\_id | 目前的計劃\_識別碼 | 建議您計劃\_識別碼 | 估計\_取得 | 錯誤\_容易出錯
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 從 3 毫秒變更為 46 ms 的 CPU 時間 | 36 | EXEC sp\_查詢\_儲存\_強制\_計劃 12，17。 | 12 | 28 | 17 | 11.59 | 0
 
-`estimated_gain`代表的估計的秒數，如果會執行建議的計劃，而不是目前的計劃會儲存。 建議的計劃應該強制而非目前的計畫，如果提升的大於 10 秒。 如果有多個錯誤 （例如，逾時或已中止的執行） 比目前的計劃中建議計劃，資料行`error_prone`會設定為值`YES`。 錯誤容易出錯的計劃是另一個原因而不是目前為什麼應該強制建議的計劃。
+`estimated_gain` 代表的估計的秒數，如果會執行建議的計劃，而不是目前的計劃會儲存。 建議的計劃應該強制而非目前的計畫，如果提升的大於 10 秒。 如果有多個錯誤 （例如，逾時或已中止的執行） 比目前的計劃中建議計劃，資料行`error_prone`會設定為值`YES`。 錯誤容易出錯的計劃是另一個原因而不是目前為什麼應該強制建議的計劃。
 
 雖然[!INCLUDE[ssde_md](../../includes/ssde_md.md)]提供找出計畫選擇迴歸; 連續監視並修正效能問題所需的所有資訊可能都是一件耗時。 自動調整使此程序更為容易。
 
@@ -153,7 +155,7 @@ FROM sys.dm_db_tuning_recommendations
 
 尋找一組最佳的索引可改善效能的查詢，從資料表讀取資料，以及對更新的影響降到最低的可能需要連續且複雜的分析。
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]使用內建智慧和分析您查詢的進階的規則識別會是最適合您目前的工作負載的索引和索引可能會移除。 Azure SQL Database 可確保您已最佳化讀取的資料，與其他查詢的最小化影響查詢的索引所需的最小集合。
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 使用內建智慧和分析您查詢的進階的規則識別會是最適合您目前的工作負載的索引和索引可能會移除。 Azure SQL Database 可確保您已最佳化讀取的資料，與其他查詢的最小化影響查詢的索引所需的最小集合。
 
 ### <a name="automatic-index-management"></a>自動索引管理
 
@@ -171,14 +173,14 @@ FROM sys.dm_db_tuning_recommendations
 
 如果沒有自動索引管理功能，使用者必須手動查詢[sys.dm_db_missing_index_details &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)檢視來尋找的索引，可能會改善效能、 建立索引，使用在此檢視中提供的詳細資料及手動監視查詢的效能。 若要尋找應該卸除的索引，使用者應該監視尋找很少使用的索引的索引作業的使用量統計資料。
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]簡化此程序。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]分析您的工作負載，會識別與新的索引，可能會更快速執行的查詢並找出未使用或重複的索引。 尋找詳細資訊的索引，應該在變更識別[在 Azure 入口網站中尋找的索引建議](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal)。
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 簡化此程序。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 分析您的工作負載，會識別與新的索引，可能會更快速執行的查詢並找出未使用或重複的索引。 尋找詳細資訊的索引，應該在變更識別[在 Azure 入口網站中尋找的索引建議](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal)。
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys.database_automatic_tuning_options &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
- [sys.dm_db_missing_index_details &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sp_query_store_force_plan &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
- [sp_query_store_unforce_plan &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
- [sys.database_query_store_options &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
+ [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
+ [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
+ [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON 函式](../../relational-databases/json/index.md)

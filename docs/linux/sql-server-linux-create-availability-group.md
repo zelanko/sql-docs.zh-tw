@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>建立及設定可用性群組的 SQL Server on Linux
 
@@ -64,7 +64,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>重新啟動[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>重新啟動 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 啟用可用性群組，因為在 Windows 中，您必須重新啟動之後[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 可如下：
 
 ```bash
@@ -365,7 +365,7 @@ sudo systemctl restart mssql-server
 
 12. 按一下 **[下一步]**。
 
-13. 選擇如何將初始化次要複本。 預設值是使用[自動植入](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，這需要參與 AG 的所有伺服器上的相同路徑。 您也可以讓精靈進行備份、 複製和還原 （第二個選項;）將它加入，如果您有手動備份、 複製，並在複本上的資料庫的還原 （第三個選項;）或更新版本加入資料庫 （最後一個選項）。 使用憑證，如果您是以手動方式進行備份，並將其複製，因為備份檔案的權限必須在其他複本上設定。 按一下 **[下一步]**。
+13. 選擇如何將初始化次要複本。 預設值是使用[自動植入](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，這需要參與 AG 的所有伺服器上的相同路徑。 您也可以讓精靈進行備份、 複製和還原 （第二個選項;）將它加入，如果您有手動備份、 複製，並在複本上的資料庫的還原 （第三個選項;）或更新版本加入資料庫 （最後一個選項）。 如同憑證，如果您是以手動方式進行備份，並將其複製，必須設定其他複本上的備份檔案的權限。 按一下 **[下一步]**。
 
 14. 在 [驗證] 對話方塊中，如果所有項目不會傳回成功的顯示，調查。 某些警告是在可接受並不嚴重，例如，如果您未建立接聽程式。 按一下 **[下一步]**。
 
@@ -596,7 +596,7 @@ Pacemaker 高可用性叢集基礎[!INCLUDE[ssnoversion-md](../includes/ssnovers
     ```
 
     >[!NOTE]
-    >RHEL 7.4 上，您可能會使用-主要的警告。 若要避免這個問題，請使用`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+    >RHEL 7.4 上，您可能會使用-主要的警告。 若要避免這個問題，請使用 `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**
     

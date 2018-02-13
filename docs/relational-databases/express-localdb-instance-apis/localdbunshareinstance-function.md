@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBUnshareInstance
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBUnshareInstance
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ed8952a98a1bac966030dcbd06e6d750da3fb09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 955212bb6a4c87f51cd1eb238252ce732b0c1bd7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]停止共用指定的 SQL Server Express LocalDB 執行個體。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+停止共用指定的 SQL Server Express LocalDB 執行個體。  
   
  **標頭檔：** sqlncli.h  
   
@@ -44,7 +48,7 @@ HRESULT LocalDBUnShareInstance(
  *pInstanceSharedName*  
  [輸入] 要取消共用之 LocalDB 執行個體的共用名稱。  
   
- *將 dwFlags*  
+ *dwFlags*  
  [輸入] 保留供日後使用。 目前應設為 0。  
   
 ## <a name="returns"></a>傳回值  
@@ -72,7 +76,7 @@ HRESULT LocalDBUnShareInstance(
 ## <a name="remarks"></a>備註  
  如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

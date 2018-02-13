@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c1bf7265cc15b9dd9401958317d4f14ea400d1
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-SMB-SQL Server on Linux
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/01/2018
     mkdir <TempDir>
     ```
 
-    <TempDir>是資料夾的名稱。 下列範例會建立名為 /var/opt/mssql/tmp 的資料夾。
+    <TempDir> 是資料夾的名稱。 下列範例會建立名為 /var/opt/mssql/tmp 的資料夾。
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -172,7 +172,7 @@ ms.lasthandoff: 02/01/2018
     sudo systemctl status mssql-server
     ```
  
-   *    若要進一步測試，建立資料庫，以確定是正常的權限。 以下範例使用 Transact SQL。您可以使用 SSMS。
+   *    若要進一步測試，建立資料庫，以確定是正常的權限。 下列範例使用 Transact SQL。您可以使用 SSMS。
 
     ![10_testcreatedb][2] 
   
@@ -239,7 +239,7 @@ ms.lasthandoff: 02/01/2018
  
    * 輸入 exit，不再是超級使用者。
 
-   * 若要測試，請在該資料夾中建立的資料庫。 如下所示的範例會使用 sqlcmd 建立資料庫，切換至該內容，確認檔案存在於作業系統層級，然後再刪除暫存位置。 您可以使用 SSMS。
+   * 若要測試，請在該資料夾中建立的資料庫。 下列範例會使用 sqlcmd 建立資料庫，切換至該內容，確認檔案存在於作業系統層級，然後再刪除暫存位置。 您可以使用 SSMS。
  
    * 取消掛接共用 
 

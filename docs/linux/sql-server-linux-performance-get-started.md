@@ -1,6 +1,6 @@
 ---
 title: "開始使用 SQL Server on Linux 的效能功能 |Microsoft 文件"
-description: "本主題介紹 SQL Server 效能功能的 Linux 使用者是新的 SQL server。 許多這些範例用於所有平台，但這篇文章的內容是 Linux。"
+description: "本文章提供 Linux 使用者是 SQL Server 的新的 SQL Server 效能功能的簡介。 許多這些範例用於所有平台，但這篇文章的內容是 Linux。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d31f07a9ef05f056fe0887a3873f972b0683da5f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>SQL Server on Linux 的效能功能的逐步解說
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 如果您是 SQL Server 的新的 Linux 使用者時，下列工作會引導您完成一些效能功能。 這些不是唯一或特定 Linux，但是它有助於讓您了解區域，若要進一步調查。 在每個範例中，為該區域的深度文件提供的連結。
 
@@ -31,7 +33,7 @@ ms.lasthandoff: 02/01/2018
 ## <a name="create-a-columnstore-index"></a>建立資料行存放區索引
 資料行存放區索引是一種技術來儲存及查詢大型單欄式資料格式，稱為資料行存放區中的資料存放區。  
 
-1. 執行 T-SQL 下方加入 SalesOrderDetail 資料表資料行存放區索引：
+1. 加入 SalesOrderDetail 資料表的資料行存放區索引來執行下列 TRANSACT-SQL 命令：
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -40,7 +42,7 @@ ms.lasthandoff: 02/01/2018
    GO
    ```
 
-2. 執行下列查詢將用來掃描資料表的資料行存放區索引：
+2. 執行下列查詢使用資料行存放區索引掃描資料表：
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,

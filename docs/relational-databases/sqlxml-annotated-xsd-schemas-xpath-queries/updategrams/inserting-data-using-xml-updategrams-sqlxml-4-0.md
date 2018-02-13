@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -35,19 +36,20 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abf9937e9d13dccdb3eb381dda760bad13f9544d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1d06fef3fcdc237740b9590d5d8e75fc9730a34e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 插入資料 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]當記錄執行個體中出現時，updategram 代表插入作業**\<之後 >**區塊，但不是在對應**\<之前 >**區塊。 在此情況下，updategram 會插入在記錄**\<之後 >**區塊至資料庫。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+當記錄執行個體中出現時，updategram 代表插入作業**\<之後 >**區塊，但不是在對應**\<之前 >**區塊。 在此情況下，updategram 會插入在記錄**\<之後 >**區塊至資料庫。  
   
  下列是插入作業的 Updategram 格式：  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="before-block"></a>\<之前 > 區塊  
  **\<之前 >**區塊可以省略插入作業。 如果選擇性**對應結構描述**未指定屬性，  **\<ElementName >**指定在 updategram 並對應至資料庫資料表和子元素或屬性會對應到資料表中的資料行。  
   
-## <a name="after-block"></a>\<之後 > 區塊  
+## <a name="after-block"></a>\<after> Block  
  您可以指定一或多個記錄中的**\<之後 >**區塊。  
   
  如果**\<之後 >**區塊並不提供特定的資料行的值，updategram 會使用預設值 （如果已指定結構描述） 中的註解式結構描述所指定。 如果結構描述未指定資料行的預設值，updategram 未指定任何明確的值，這個資料行，而是指派[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到此資料行預設值 （如果有指定）。 如果沒有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設值，而資料行接受 NULL 值，則 Updategram 會將資料行值設定為 NULL。 如果資料行沒有預設值，也不接受 NULL 值，則命令會失敗，而 Updategram 傳回錯誤。 選擇性**updg: returnid**屬性用來傳回一筆記錄加入具有 IDENTITY 類型資料行的資料表時，由系統產生的識別值。  
@@ -731,7 +733,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Updategram 安全性考量 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

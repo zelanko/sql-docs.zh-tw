@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: d6a49bc2f3fb815cecda0e8a24a63993b5423103
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5f52c5f83ca91b196f0bf2f05e98fb73133b4c8a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/09/2018
 本文件說明如何在 Ubuntu 上建立三個節點叢集並加入先前建立的可用性群組為叢集中的資源。 高可用性，Linux 上的可用性群組需要三個節點-請參閱[的可用性群組組態的高可用性與資料保護](sql-server-linux-availability-group-ha.md)。
 
 > [!NOTE] 
-> 此時，不是與使用 Windows 上的 WSFC 為結合與 Pacemaker Linux 上的 SQL Server 的整合。 從 SQL、 內沒有存在叢集的認知、 所有協調流程中，超出和服務由 Pacemaker 控制做為獨立執行個體。 此外，虛擬網路名稱是屬於 WSFC、 沒有對等的 Pacemaker 中相同。 在 alwayson 動態管理檢視的查詢叢集資訊傳回空的資料列。 您仍然可以建立來做為透明的重新連線到容錯移轉之後，接聽程式，但您必須手動註冊接聽程式名稱在 DNS 伺服器 IP 用來建立虛擬 IP 資源 （如下所述）。
+> 此時，不是與使用 Windows 上的 WSFC 為結合與 Pacemaker Linux 上的 SQL Server 的整合。 從 SQL、 內沒有存在叢集的認知、 所有協調流程中，超出和服務由 Pacemaker 控制做為獨立執行個體。 此外，虛擬網路名稱是屬於 WSFC、 沒有對等的 Pacemaker 中相同。 在 alwayson 動態管理檢視的查詢叢集資訊傳回空的資料列。 您仍然可以建立來做為透明的重新連線到容錯移轉之後，接聽程式，但您必須手動註冊接聽程式名稱在 DNS 伺服器 IP 用來建立虛擬 IP 資源 （如下列各節所述）。
 
 下列各節逐步解說的步驟來設定容錯移轉叢集解決方案。 
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. 建立叢集。 
 
    >[!WARNING]
-   >由於出現已知問題，叢集的廠商調查，啟動叢集 ('電腦叢集 start') 失敗，錯誤的下方。 這是因為這建立叢集安裝命令時執行，此為錯誤 /etc/corosync/corosync.conf 中設定的記錄檔。 若要解決此問題，請將變更的記錄檔： /var/log/corosync/corosync.log。 或者，您可以建立 /var/log/cluster/corosync.log 檔案。
+   >由於已知的問題，叢集的廠商調查，啟動叢集 ('電腦叢集 start') 失敗，發生下列錯誤。 這是因為這建立叢集安裝命令時執行，此為錯誤 /etc/corosync/corosync.conf 中設定的記錄檔。 若要解決此問題，請將變更的記錄檔： /var/log/corosync/corosync.log。 或者，您可以建立 /var/log/cluster/corosync.log 檔案。
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -150,7 +150,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>開始失敗-是-嚴重叢集屬性設定為 false
 
-`start-failure-is-fatal`指出是否在節點上啟動資源失敗可防止進一步該節點上的啟動嘗試。 當設定為`false`，叢集會決定是否要嘗試再次根據資源的目前失敗計數和移轉臨界值的相同節點上啟動。 因此，容錯移轉發生後，Pacemaker 重試啟動可用性群組上先前的主要資源可使用的 SQL 執行個體後。 Pacemaker 會降級至次要複本，並自動重新加入可用性群組。 
+`start-failure-is-fatal` 指出是否在節點上啟動資源失敗可防止進一步該節點上的啟動嘗試。 當設定為`false`，叢集會決定是否要嘗試再次根據資源的目前失敗計數和移轉臨界值的相同節點上啟動。 因此，容錯移轉發生後，Pacemaker 重試啟動可用性群組上先前的主要資源可使用的 SQL 執行個體後。 Pacemaker 會降級至次要複本，並自動重新加入可用性群組。 
 
 若要更新的屬性值`false`執行下列程式碼：
 

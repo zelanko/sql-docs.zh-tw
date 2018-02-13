@@ -1,6 +1,6 @@
 ---
 title: "管理 SQL Server on Linux 的 PowerShell |Microsoft 文件"
-description: "本主題提供與 SQL Server on Linux 的 Windows 上使用 PowerShell 的總覽。"
+description: "本文章提供與 SQL Server on Linux 的 Windows 上使用 PowerShell 的總覽。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: 0952e8ff950e6b440e963f3867ce74477334e74f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: f7324a270323950444741cfe713ad0eb5f01aa10
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>在 Windows 上使用 PowerShell 來管理 SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本主題將介紹[SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx)及如何使用 SQL Server 2017 on Linux 會逐步引導您透過提供幾個範例。 PowerShell 支援的 SQL Server 是在 Windows 中，目前可用，因此您可以使用它時可以連線到遠端的 SQL Server 執行個體，在 Linux 上的 Windows 電腦。
+本文介紹[SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx)及如何使用 SQL Server 2017 on Linux 會逐步引導您透過提供幾個範例。 PowerShell 支援的 SQL Server 是在 Windows 中，目前可用，因此您可以使用它時可以連線到遠端的 SQL Server 執行個體，在 Linux 上的 Windows 電腦。
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>在 Windows 上安裝最新版的 SQL PowerShell
 
@@ -45,7 +45,7 @@ PowerShell
 
 SQL Server 提供名為 Windows PowerShell 模組**SqlServer**您可以使用匯入 SQL Server 元件 （SQL Server 提供者和 cmdlet） 的 PowerShell 環境或指令碼。
 
-複製並貼到匯入 PowerShell 命令提示字元下面的命令**SqlServer**到目前的 PowerShell 工作階段的模組：
+複製並貼上下列命令，在 PowerShell 提示字元中，若要匯入**SqlServer**到目前的 PowerShell 工作階段的模組：
 
 ```powershell
 Import-Module SqlServer
@@ -57,7 +57,7 @@ Import-Module SqlServer
 Get-Module -Name SqlServer
 ```
 
-PowerShell 應該會顯示類似下面資訊：
+PowerShell 應該會顯示類似下列的輸出資訊：
 
 ```
 ModuleType Version    Name          ExportedCommands
@@ -70,7 +70,7 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 連接到您在 Linux 上的 SQL Server 2017 執行個體，並顯示幾個伺服器屬性，讓我們在 Windows 上使用 PowerShell。
 
-複製並貼上以下命令，在 PowerShell 提示字元。 當您執行這些命令時，PowerShell 會：
+複製並貼入下列命令在 PowerShell 提示字元。 當您執行這些命令時，PowerShell 會：
 - 顯示*Windows PowerShell 認證要求*對話方塊，提示您輸入認證 (*SQL 使用者名稱*和*SQL 密碼*) 連接到您的 SQL Server 2017在 Linux 上的執行個體
 - 載入 SQL Server 管理物件 (SMO) 組件
 - 建立的執行個體[伺服器](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx)物件
@@ -97,7 +97,7 @@ $server.Information | Select-Object Edition, HostPlatform, HostDistribution | Fo
 # done
 ```
 
-PowerShell 應該會顯示類似下面顯示的內容資訊：
+PowerShell 應該會顯示類似下列的輸出資訊：
 
 ```
 Edition          : Developer Edition (64-bit)
@@ -111,7 +111,7 @@ HostDistribution : Ubuntu
 
 讓我們將使用上檢查錯誤記錄檔的 Windows PowerShell 連接您在 Linux 上的 SQL Server 2017 執行個體。 我們也會使用**Out-gridview** cmdlet 來顯示資訊從錯誤記錄中的方格檢視顯示。
 
-複製並貼上以下命令，在 PowerShell 提示字元。 它們可能需要幾分鐘才能完成。 這些命令執行下列作業：
+複製並貼入下列命令在 PowerShell 提示字元。 它們可能需要幾分鐘才能完成。 這些命令執行下列作業：
 - 顯示*Windows PowerShell 認證要求*對話方塊，提示您輸入認證 (*SQL 使用者名稱*和*SQL 密碼*) 連接到您的 SQL Server 2017在 Linux 上的執行個體
 - 使用**Get SqlErrorLog** cmdlet 來連接到在 Linux 上的 SQL Server 2017 執行個體，並擷取錯誤記錄檔自**昨天**
 - 將輸出輸送至**Out-gridview** cmdlet

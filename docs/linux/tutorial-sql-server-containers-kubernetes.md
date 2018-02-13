@@ -9,16 +9,16 @@ ms.topic: tutorial
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: mvc
+ms.custom: sql-linux,mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 4ada1034b64f710f4eeae995b771ef8be5bf4fe2
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a21856b3a864373f84ad304484ecdd88ac17f52a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>SQL Server 容器 Kubernetes 中設定高可用性
 
@@ -119,7 +119,7 @@ El comando siguiente crea SA 帳戶的密碼：
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
-   `<Path to pvc.yaml file>`是您用來儲存檔案的位置。
+   `<Path to pvc.yaml file>` 是您用來儲存檔案的位置。
 
    永續性磁碟區自動建立的 Azure 儲存體帳戶，及繫結至永續性磁碟區宣告。 
 
@@ -131,7 +131,7 @@ El comando siguiente crea SA 帳戶的密碼：
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
-   `<PersistentVolumeClaim>`是永續性磁碟區宣告的名稱。
+   `<PersistentVolumeClaim>` 是永續性磁碟區宣告的名稱。
 
    在前述步驟中，名為永續性磁碟區宣告`mssql-data`。 若要查看持續性磁碟區宣告的相關中繼資料，請執行下列命令：
 
@@ -153,7 +153,7 @@ El comando siguiente crea SA 帳戶的密碼：
    kubectl describe pv
    ```
 
-   `kubectl`傳回中繼資料持續性磁碟區的自動建立及繫結至永續性磁碟區宣告。 
+   `kubectl` 傳回中繼資料持續性磁碟區的自動建立及繫結至永續性磁碟區宣告。 
 
 ## <a name="create-the-deployment"></a>建立部署
 
@@ -161,7 +161,7 @@ El comando siguiente crea SA 帳戶的密碼：
 
 在此步驟中，建立資訊清單，以描述 SQL Server 基礎容器[mssql-伺服器-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 映像。 資訊清單參考`mssql-server`永續性磁碟區的宣告，而`mssql`已經套用到 Kubernetes 叢集的密碼。 資訊清單也會描述[服務](http://kubernetes.io/docs/concepts/services-networking/service/)。 此服務是負載平衡器。 負載平衡器可保證復原 SQL Server 執行個體之後，仍然存在的 IP 位址。 
 
-1. 建立要說明部署資訊清單 （YAML 檔案）。 下列範例說明的部署，包括容器，根據 SQL Server 的容器映像。
+1. 建立要說明部署資訊清單 （YAML 檔案）。 下列範例說明的部署，包括容器，根據 [SQL Server 的容器映像。
 
    ```yaml
    apiVersion: apps/v1beta1
@@ -242,7 +242,7 @@ El comando siguiente crea SA 帳戶的密碼：
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
-   `<Path to sqldeployment.yaml file>`是您用來儲存檔案的位置。
+   `<Path to sqldeployment.yaml file>` 是您用來儲存檔案的位置。
 
    ![部署命令的螢幕擷取畫面](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
 
@@ -267,7 +267,7 @@ El comando siguiente crea SA 帳戶的密碼：
 
    ![取得服務命令的螢幕擷取畫面](media/tutorial-sql-server-containers-kubernetes/06_get_service_cmd.png)
 
-   如需有關狀態 Kubernetes 叢集中的物件的詳細資訊，請執行：
+   如需有關狀態 Kubernetes 叢集中的物件，執行：
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>
@@ -293,8 +293,8 @@ El comando siguiente crea SA 帳戶的密碼：
 
    取代下列值：
       
-    - `<External IP Address>`IP 位址`mssql-deployment`服務 
-    - `MyC0m9l&xP@ssw0rd`您的密碼
+    - `<External IP Address>` IP 位址`mssql-deployment`服務 
+    - `MyC0m9l&xP@ssw0rd` 您的密碼
 
 ## <a name="verify-failure-and-recovery"></a>確認失敗與復原
 
@@ -313,7 +313,7 @@ El comando siguiente crea SA 帳戶的密碼：
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
-   `mssql-deployment-0`從 pod 名稱的前一個步驟傳回的值。 
+   `mssql-deployment-0` 從 pod 名稱的前一個步驟傳回的值。 
 
 Kubernetes 時，會自動重新建立復原的 SQL Server 執行個體，並連接到永續性儲存體 pod。 使用`kubectl get pods`確認部署新的 pod。 使用`kubectl get services`來確認新的容器的 IP 位址相同。 
 

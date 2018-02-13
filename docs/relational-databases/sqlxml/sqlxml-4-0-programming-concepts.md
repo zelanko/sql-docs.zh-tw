@@ -8,28 +8,30 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, about SQLXML
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3e47e3a55ebc0bf94dabbb2ca71c78f42ce3231
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 99780e4985f2406d5f0a394ae427ad6342106bb6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 程式設計概念
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]SQLXML 3.0 提供做為 Web 發行提供額外的用戶端 XML 功能和增強功能，現有的功能，例如註解式 XSD 結構描述，XML 大量載入、 Web 服務 (SOAP) 支援和 updategram。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SQLXML 3.0 會以 Web 發行的形式提供了額外的用戶端 XML 功能以及現有功能的增強功能，例如註解 XSD 結構描述、XML 大量載入、Web 服務 (SOAP) 支援和 Updategram。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入了 SQLXML 4.0，繼續提供與 SQLXML 3.0 相同的功能，以及配合 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所導入之新功能的其他更新。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入 SQLXML 4.0 中，繼續提供與 SQLXML 3.0 加上其他的更新，以配合新引進的功能提供相同的功能[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。  
   
  本節會提供 SQLXML 4.0 的相關資訊。  
   
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/17/2017
  [在 SQLXML 4.0 中使用 XPath 查詢](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  描述如何使用 XPath 語言的子集來查詢由註解 XSD 結構描述所建立的 XML 檢視，並且提供範例。  
   
- [使用 Updategram 修改 SQLXML 4.0 中的資料](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [使用 Updategram 來修改 SQLXML 4.0 中的資料](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  提供有關 Updategram 的相關資訊，Updategram 會針對 XSD (或 XDR) 註解結構描述所提供的 XML 檢視進行作業，以修改資料庫中的資料。  
   
  [執行大量載入 XML 資料 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
@@ -78,7 +80,7 @@ ms.lasthandoff: 11/17/2017
  [SQLXML 4.0 的指導方針和限制](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md)  
  列出在使用 SQLXML 4.0 時要注意的問題。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

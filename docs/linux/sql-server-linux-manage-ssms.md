@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: ae79f5e7a2f526b5ef1d153f333adab5c9a8c8a1
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 31bff0cb43048585fb03246b683ad71e673bb7f4
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>在 Windows 上使用 SQL Server Management Studio，來管理 SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本主題將介紹[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)和會逐步引導您透過幾個常見工作。 SSMS 是 Windows 應用程式，因此使用 SSMS 時可以連線到遠端的 SQL Server 執行個體，在 Linux 上的 Windows 電腦。
+本文介紹[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)和會逐步引導您透過幾個常見工作。 SSMS 是 Windows 應用程式，因此使用 SSMS 時可以連線到遠端的 SQL Server 執行個體，在 Linux 上的 Windows 電腦。
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)是一套的 Microsoft 提供免費的開發和管理的需求不需要支付費用的 SQL 工具的一部分。 SSMS 是一個整合式的環境，可存取、 設定、 管理、 管理和開發 SQL Server 的執行在內部部署或雲端，在 Linux、 Windows 或 macOS 和 Azure SQL Database 上的 Docker 和 Azure SQL 資料倉儲中的所有元件。 SSMS 利用許多豐富的指令碼編輯器，以提供開發人員和所有技能等級的系統管理員存取 SQL Server 合併了非常廣泛的圖形工具。
 

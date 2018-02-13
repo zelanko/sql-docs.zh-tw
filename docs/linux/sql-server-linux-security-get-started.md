@@ -1,6 +1,6 @@
 ---
 title: "開始使用 Linux 上的 SQL Server 安全性 |Microsoft 文件"
-description: "本主題說明典型的安全性動作。"
+description: "本文說明常見的安全性動作。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d927bf68b06050c8067d6f6d63d737f084219341
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 00c222c601cdf314f04db3cb9e3b818d9ea3a65f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux 的安全性功能的逐步解說
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 如果您是 SQL Server 的新的 Linux 使用者時，下列工作會引導您完成一些安全性工作。 這些不是唯一或特定 Linux，但是它有助於讓您了解區域，若要進一步調查。 在每個範例中，會針對該區域的深入說明文件提供的連結。
 
@@ -38,7 +40,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 ```
 
 >  [!NOTE]
->  一律使用增強式密碼來取代上述星號。
+>  一律在前一個命令中使用強式密碼取代星號。
 
 登入可以連接到 SQL Server，並具有 （具有有限的權限） 到 master 資料庫的存取。 若要連接至使用者資料庫，登入必須對應的識別身分，在資料庫層級，呼叫資料庫使用者。 使用者只適用於每個資料庫，而且必須授與存取權的每個資料庫中分別建立。 下列的範例中為 AdventureWorks2014 資料庫中，將您移至，然後再使用[CREATE USER](../t-sql/statements/create-user-transact-sql.md)陳述式來建立名為 Larry 與名為 Larry 登入相關聯的使用者。 登入和使用者關聯 （彼此對應），但它們是不同的物件。 登入是伺服器層級原則。 使用者是資料庫層級主體。
 
@@ -101,7 +103,7 @@ ALTER ROLE Sales ADD MEMBER Jerry;
 
 [資料列層級安全性](../relational-databases/security/row-level-security.md)可讓您根據使用者執行查詢的資料庫中的資料列限制存取。 這項功能可用於確保客戶只能存取自己的資料或工作者只能存取其部門相關的資料等案例。   
 
-下列逐步設定與兩位使用者不同步驟的資料列層級的存取權`Sales.SalesOrderHeader`資料表。 
+下列步驟逐步解說設定兩個具有不同的資料列層級存取權的使用者`Sales.SalesOrderHeader`資料表。 
 
 建立測試資料列層級安全性的兩個使用者帳戶：    
    
@@ -247,7 +249,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-若要移除 TDE，請執行`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+若要移除 TDE，請執行 `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 SQL server 加密和解密作業排定在背景執行緒上。 您可以使用本主題稍後出現之清單內的目錄檢視和動態管理檢視，以檢視這些作業的狀態。   
 

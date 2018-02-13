@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: bfd36553e4ac30b6d551e60cde02d57a7eec8fbc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9dd4b05cf69b8556c4c021e2ede576b1a805c5e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性群組
 
@@ -65,9 +65,9 @@ ms.lasthandoff: 02/09/2018
 -   1-一個次要複本必須位於與主要; 已同步處理狀態可能會自動容錯移轉。 同步次要複本可以使用之前，主要資料庫是無法使用。
 -   2 – 在三個或多個節點 AG 組態兩個次要複本必須與主要; 同步處理可能會自動容錯移轉。
 
-`required_synchronized_secondaries_to_commit`控制不只具有同步複本，但資料遺失容錯移轉行為。 值為 1 或 2，次要複本永遠需要。 同步處理，因此資料備援性 這表示不會遺失資料。
+`required_synchronized_secondaries_to_commit` 控制不只具有同步複本，但資料遺失容錯移轉行為。 值為 1 或 2，次要複本永遠需要。 同步處理，因此資料備援性 這表示不會遺失資料。
 
-若要變更的值`required_synchronized_secondaries_to_commit`，使用下列語法。
+若要變更的值`required_synchronized_secondaries_to_commit`，使用下列語法：
 
 >[!NOTE]
 >變更值，會導致重新啟動，資源表示短暫中斷。 若要避免此狀況的唯一方式是將設定不受叢集暫時資源。
@@ -132,7 +132,7 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 
 接聽程式是 AG 的選用功能。 如此應用程式和使用者不需要知道哪個伺服器主控資料，它提供所有連接 （讀取/寫入主要複本和/或唯讀次要複本） 的單一進入點。 在 WSFC 中，這可以是網路名稱資源和 IP 資源，然後登錄於 AD DS （如果需要） 的組合以及 DNS。 AG 資源本身的結合，它會提供該抽象概念。 如需有關接聽程式的詳細資訊，請參閱[接聽程式、 用戶端連接性及應用程式容錯移轉](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。
 
-在 Linux 接聽程式的設定不同，但其功能都相同。 沒有 Pacemaker，網路名稱資源的概念，也建立在 AD DS; 中的物件沒有剛 IP 位址資源可以在任一節點執行的 Pacemaker 中建立。 需要建立相關聯的 「 易記名稱 」 在 DNS 中的接聽程式 IP 資源的項目。 接聽程式 IP 資源只能是裝載該可用性群組的主要複本的伺服器上使用中。
+在 Linux 接聽程式的設定不同，但其功能都相同。 沒有 Pacemaker，網路名稱資源的概念，也建立在 AD DS; 中的物件沒有剛 IP 位址資源可以在任一節點執行的 Pacemaker 中建立。 您必須建立相關聯的 「 易記名稱 」 在 DNS 中的接聽程式 IP 資源的項目。 接聽程式 IP 資源只能是裝載該可用性群組的主要複本的伺服器上使用中。
 
 如果，Pacemaker 建立 IP 位址資源所關聯的接聽程式，會有短暫中斷如下的 IP 位址在一部伺服器上停止，並在另一個，開始其是否可以自動或手動容錯移轉。 這可透過單一的名稱和 IP 位址的組合的抽象概念，而它不會加上遮罩中斷。 應用程式必須能夠處理中斷連線，讓特定類型的偵測，並重新連接的功能。
 
@@ -147,11 +147,11 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 
 有叢集類型的外部或正在 WSFC AG 不能跨平台及其複本。 這是 true AG 是否[!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]或[!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]。 這表示具有基礎叢集的傳統 AG 組態中，一個複本不可以是 WSFC 和其他與 Pacemaker Linux 上。
 
-叢集類型為 NONE AG 可以跨 OS 界限，因此相同的 AG 中可能有兩個 Linux 和 Windows 架構的複本及其複本。 範例如下所示，主要複本是 Windows 為基礎，在 Linux 散發套件的其中一個次要資料庫時。
+叢集類型為 NONE AG 可以跨 OS 界限，因此相同的 AG 中可能有兩個 Linux 和 Windows 架構的複本及其複本。 以下是範例其中的主要複本時，Windows 為基礎，次要資料庫是 Linux 散發套件的其中一個。
 
 ![混合式無](./media/sql-server-linux-availability-group-overview/image1.png)
 
-分散式的 AG 也可以跨 OS 界限。 基礎 Ag 由繫結規則的設定方式，例如一個設定為外部正在 Linux 僅限，但無法使用 WSFC 來設定它聯結至 AG。 下列為範例。
+分散式的 AG 也可以跨 OS 界限。 基礎 Ag 由繫結規則的設定方式，例如一個設定為外部正在 Linux 僅限，但無法使用 WSFC 來設定它聯結至 AG。 請設想下列範例：
 
 ![混合式 Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 

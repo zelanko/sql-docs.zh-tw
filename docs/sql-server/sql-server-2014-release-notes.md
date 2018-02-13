@@ -18,13 +18,14 @@ ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)] 這份版本資訊文件說明安裝或疑難排解 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 之前應該閱讀的已知問題。  
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+這份版本資訊文件說明安裝或疑難排解 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]之前應該閱讀的已知問題。  
   
 ## <a name="top"></a>目錄  
 [1.0 安裝之前](#BeforeInstall)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c6ff13edf01370778da9361d5834e70ebfdb20a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01df178b47bb3aac688d12e54760cd530706fd94
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新資料 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]當您更新現有的資料時，您必須同時指定**\<之前 >**和**\<之後 >**區塊。 在指定的項目**\<之前 >**和**\<之後 >**區塊描述所需的變更。 Updategram 會使用的項目中指定的**\<之前 >**區塊，以識別資料庫中的現有記錄。 中的對應元素**\<之後 >**區塊表示記錄在執行更新作業之後的外觀。 這項資訊，updategram 會建立 SQL 陳述式符合**\<之後 >**區塊。 接著，Updategram 會使用此陳述式來更新資料庫。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+當您更新現有的資料時，您必須同時指定**\<之前 >**和**\<之後 >**區塊。 在指定的項目**\<之前 >**和**\<之後 >**區塊描述所需的變更。 Updategram 會使用的項目中指定的**\<之前 >**區塊，以識別資料庫中的現有記錄。 中的對應元素**\<之後 >**區塊表示記錄在執行更新作業之後的外觀。 這項資訊，updategram 會建立 SQL 陳述式符合**\<之後 >**區塊。 接著，Updategram 會使用此陳述式來更新資料庫。  
   
  下列是更新作業的 Updategram 格式：  
   
@@ -59,10 +61,10 @@ ms.lasthandoff: 11/17/2017
 </ROOT>  
 ```  
   
- **\<updg： 之前 >**  
+ **\<updg:before>**  
  中的項目**\<之前 >**區塊識別資料庫資料表中的現有記錄。  
   
- **\<updg： 之後 >**  
+ **\<updg:after>**  
  中的項目**\<之後 >**區塊描述中指定的記錄**\<之前 >**區塊應該套用更新之後更新。  
   
  **對應結構描述**屬性會識別 updategram 所使用的對應結構描述。 如果 updategram 指定對應結構描述，元素和屬性名稱中指定**\<之前 >**和**\<之後 >**區塊必須符合結構描述中的名稱。 對應的結構描述會將這些元素或屬性名稱對應到資料庫資料表和資料行名稱。  
@@ -560,7 +562,7 @@ ms.lasthandoff: 11/17/2017
   
  如需使用對應結構描述的 updategram 的範例，請參閱[Updategram &#40; 中指定註解式對應結構描述SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Updategram 安全性考量 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

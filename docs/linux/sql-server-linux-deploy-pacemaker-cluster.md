@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Pacemaker 叢集部署的 SQL Server on Linux
 
@@ -200,7 +200,7 @@ Pacemaker 本身會使用名為通訊群組上建立使用者*hacluster*。 RHEL
 12. 重複步驟 8-11 為所有其他伺服器新增至叢集。
 
 ## <a name="install-the-sql-server-ha-and-sql-server-agent-packages"></a>安裝 SQL Server 高可用性和 SQL Server Agent 的封裝
-使用下列命令來安裝 SQL Server 高可用性封裝和[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]代理程式，如果不已安裝。 在安裝之後安裝 HA 封裝[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]需要重新啟動[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]，才能使用。 這些指示假設，Microsoft 封裝的儲存機制已設定好，因為[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]應該在此時安裝。
+使用下列命令來安裝 SQL Server 高可用性套件和[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]代理程式，如果不已安裝。 在安裝之後安裝 HA 封裝[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]需要重新啟動[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]，才能使用。 這些指示假設，Microsoft 封裝的儲存機制已設定好，因為[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]應該在此時安裝。
 > [!NOTE]
 > - 如果您不會使用[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]記錄傳送或任何其他用途的代理程式，它並沒有安裝，因此封裝*mssql server agent*可以略過。
 > - 其他選擇性套件[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]on Linux，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]全文檢索搜尋 (*mssql-伺服器-fts*) 和[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Integration Services (*mssql 伺服器是*)，不是高可用性、 FCI 或 AG 的必要項。

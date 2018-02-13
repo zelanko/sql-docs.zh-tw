@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SetBoolValue Method (SqlServiceAdvancedProperty Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SetBoolValue Method (SqlServiceAdvancedProperty Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SetBoolValue method
+helpviewer_keywords:
+- SetBoolValue method
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59d85173e1a95e767f8357ccb944673c015d0e1f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0d9a5c5901928251ec236323e8a033cdfe1e04af
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>SetBoolValue 方法 (SqlServiceAdvancedProperty 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]設定屬性的布林值。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+設定屬性的布林值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +48,7 @@ object.SetBoolValue [= value]
   
 #### <a name="parameters"></a>參數  
   
-|參數|Description|  
+|매개 변수|描述|  
 |---------------|-----------------|  
 |*BoolValue*|指定進階屬性值的布林值。|  
   
@@ -53,7 +58,7 @@ object.SetBoolValue [= value]
 ## <a name="remarks"></a>備註  
  屬性值類型必須是布林，才能將屬性設定為布林值。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [啟動及停止服務](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: "Linux 上安裝 SQL Server 2017 |Microsoft 文件"
-description: "安裝、 更新及解除安裝 SQL Server on Linux。 本主題涵蓋連線、 離線，且無人看管的案例。"
+description: "安裝、 更新及解除安裝 SQL Server on Linux。 本文涵蓋線上、 離線，並無人看管的案例。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,28 +9,28 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 924542a970ac63df74e7bb725b4f7a171f74e95a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 的安裝指南
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本主題說明如何安裝、 更新及解除安裝 SQL Server 2017 on Linux。 SQL Server 2017 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 和 Ubuntu 支援。 它也可做為 Docker 映像，可以在 Linux 或 Docker for Windows/mac 上的 Docker 引擎執行
+本文說明如何安裝、 更新及解除安裝 SQL Server 2017 on Linux。 SQL Server 2017 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 和 Ubuntu 支援。 它也可做為 Docker 映像，可以在 Linux 或 Docker for Windows/mac 上的 Docker 引擎執行
 
 > [!TIP]
 > 若要快速地開始，跳至其中的快速入門[RHEL](quickstart-install-connect-red-hat.md)， [SLES](quickstart-install-connect-suse.md)， [Ubuntu](quickstart-install-connect-ubuntu.md)，或[Docker](quickstart-install-connect-docker.md)。
 
-## <a id="supportedplatforms"></a>支援的平台
+## <a id="supportedplatforms"></a> 支援的平台
 
 下列 Linux 平台上支援 SQL Server 2017:
 
@@ -45,7 +45,7 @@ Microsoft 僅支援部署及管理 SQL Server 容器使用 OpenShift 和 Kuberne
 
 SQL Server 2017 最新的支援原則，請參閱[Microsoft SQL Server 的技術支援人員原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
 
-## <a id="system"></a>系統需求
+## <a id="system"></a> 系統需求
 
 SQL Server 2017 具有適用於 Linux 的下列系統需求：
 
@@ -53,7 +53,7 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 |-----|-----|
 | **記憶體** | 2 GB |
 | **檔案系統** | **XFS**或**EXT4** (其他檔案系統，例如**BTRFS**，不支援) |
-| **磁碟空間** | 6 GB |
+| 磁碟空間 | 6 GB |
 | **處理器速度** | 2 GHz |
 | **處理器核心** | 2 核心 |
 | **處理器類型** | 只有 x64-相容 |
@@ -74,14 +74,14 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 - [執行 docker](quickstart-install-connect-docker.md)
 - [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-## <a id="repositories"></a>設定來源儲存機制
+## <a id="repositories"></a> 設定來源儲存機制
 
 當您安裝或升級 SQL Server 時，您會從您設定 Microsoft 儲存機制取得最新版的 SQL Server 2017。 快速入門使用**累計更新 (CU)**儲存機制。 但您可以改為設定**GDR**儲存機制。 如需有關儲存機制和設定方式的詳細資訊，請參閱[儲存機制設定 SQL Server on Linux](sql-server-linux-change-repo.md)。
 
 > [!IMPORTANT]
 > 如果您先前安裝 CTP 或 RC 版本的 SQL Server 2017，您必須移除預覽儲存機制，並註冊通用版本上市 (GA) 其中一個。 如需詳細資訊，請參閱[儲存機制設定 SQL Server on Linux](sql-server-linux-change-repo.md)。
 
-## <a id="upgrade"></a>更新 SQL Server
+## <a id="upgrade"></a> 更新 SQL Server
 
 若要更新**mssql 伺服器**封裝最新的版本，請使用其中一個基礎平台上的下列命令：
 
@@ -93,7 +93,7 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 
 這些命令會下載最新的封裝，並取代二進位檔位於`/opt/mssql/`。 使用者產生的資料庫和系統資料庫不會受到這項作業。
 
-## <a id="rollback"></a>復原 SQL Server
+## <a id="rollback"></a> 復原 SQL Server
 
 若要復原先前版本的 SQL Server 降級，使用下列步驟：
 
@@ -110,7 +110,7 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 > [!NOTE]
 > 只支援降級至相同的主要版本，例如 SQL Server 2017 內的版本。
 
-## <a id="versioncheck"></a>檢查已安裝的 SQL Server 版本
+## <a id="versioncheck"></a> 檢查已安裝的 SQL Server 版本
 
 若要確認您目前版本和版本的 SQL Server on Linux，請使用下列程序：
 
@@ -122,7 +122,7 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
    ```
 
-## <a id="uninstall"></a>解除安裝 SQL Server
+## <a id="uninstall"></a> 解除安裝 SQL Server
 
 若要移除**mssql 伺服器**Linux 上的套件，請使用其中一個基礎平台上的下列命令：
 
@@ -138,7 +138,7 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="unattended"></a>自動的安裝
+## <a id="unattended"></a> 自動的安裝
 
 您可以以下列方式來執行自動的安裝：
 
@@ -159,12 +159,12 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [SUSE 自動的安裝指令碼](sample-unattended-install-suse.md)
 - [Ubuntu 自動的安裝指令碼](sample-unattended-install-ubuntu.md)
 
-## <a id="offline"></a>離線安裝
+## <a id="offline"></a> 離線安裝
 
 如果您的 Linux 電腦不必存取線上儲存機制中使用[快速入門](#platforms)，您可以直接下載封裝檔案。 這些封裝位於 Microsoft 儲存機制 [https://packages.microsoft.com](https://packages.microsoft.com) 中。
 
 > [!TIP]
-> 如果您已成功安裝快速入門中的步驟，您不需要下載或以手動方式安裝下列套件。 本節只是為了在離線案例中。
+> 如果您已成功安裝快速入門中的步驟，您不需要下載或以手動方式安裝 SQL Server 封裝。 本節只是為了在離線案例中。
 
 1. **下載您的平台的資料庫引擎套件**。 封裝詳細資料區段中找到套件下載連結[版本資訊](sql-server-linux-release-notes.md)。
 

@@ -1,6 +1,6 @@
 ---
 title: "Linux 上安裝 SQL Server Agent |Microsoft 文件"
-description: "本主題描述如何在 Linux 上安裝 SQL Server 代理程式。"
+description: "本文說明如何在 Linux 上安裝 SQL Server 代理程式。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
-ms.openlocfilehash: 873c2da961db577889a3fca4139e325083d609e9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 7db50a59a4a6ce9ab7aa416e4ac8d597449541b7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux 上安裝 SQL Server 代理程式
 
@@ -53,7 +53,7 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果您需要離線安裝，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 請使用相同的離線安裝步驟 > 主題所述，[安裝 SQL Server](sql-server-linux-setup.md#offline)。
+如果您需要離線安裝，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用 文件中所述的相同離線安裝步驟[安裝 SQL Server](sql-server-linux-setup.md#offline)。
 
 ## <a name="ubuntu">在 Ubuntu 上安裝</a>
 
@@ -73,7 +73,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果您需要離線安裝，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 請使用相同的離線安裝步驟 > 主題所述，[安裝 SQL Server](sql-server-linux-setup.md#offline)。
+如果您需要離線安裝，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用 文件中所述的相同離線安裝步驟[安裝 SQL Server](sql-server-linux-setup.md#offline)。
 
 ## <a name="SLES">SLES 上安裝</a>
 
@@ -94,7 +94,7 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果您需要離線安裝，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 請使用相同的離線安裝步驟 > 主題所述，[安裝 SQL Server](sql-server-linux-setup.md#offline)。
+如果您需要離線安裝，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用 文件中所述的相同離線安裝步驟[安裝 SQL Server](sql-server-linux-setup.md#offline)。
 
 ## <a name="next-steps"></a>後續的步驟
 如需有關如何使用 SQL Server Agent 來建立、 排程及執行工作的詳細資訊，請參閱[在 Linux 上執行的 SQL Server Agent 作業](sql-server-linux-run-sql-server-agent-job.md)。

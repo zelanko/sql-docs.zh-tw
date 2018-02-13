@@ -1,6 +1,6 @@
 ---
 title: "加密 SQL Server on Linux 連接 |Microsoft 文件"
-description: "本主題說明在 Linux 上的加密連接到 SQL Server。"
+description: "本文說明加密連接到 SQL Server on Linux。"
 author: tmullaney
 ms.date: 01/30/2018
 ms.author: meetb
@@ -9,25 +9,25 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.workload: Inactive
-ms.openlocfilehash: c8d57e65d060ff6958f07fbb57ab97806d99402c
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 646a876fb7cedc4733e4d3a60ef86361ab151c4f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密連接到 SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Linux 上可以使用傳輸層安全性 (TLS) 來加密資料的用戶端應用程式和執行個體之間透過網路傳送[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在 Windows 和 Linux 上支援相同的 TLS 通訊協定： TLS 1.2、 1.1 和 1.0。 不過，設定 TLS 的步驟會在其上的作業系統特定的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]正在執行。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Linux 上可以使用傳輸層安全性 (TLS) 來加密資料的用戶端應用程式和執行個體之間透過網路傳送[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Windows 和 Linux 上支援相同的 TLS 通訊協定： TLS 1.2、 1.1 和 1.0。 不過，設定 TLS 的步驟會在其上的作業系統特定的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]正在執行。  
 
 ## <a name="requirements-for-certificates"></a>憑證需求 
 之前開始，您必須確定您的憑證符合這些需求：
@@ -70,9 +70,9 @@ TLS 用來加密從用戶端應用程式的連線[!INCLUDE[ssNoVersion](../inclu
         - **SUSE**： 將憑證複製到```/usr/share/pki/trust/anchors/```使用```update-ca-certificates```以便讓它成為系統 CA 憑證。
         - **Windows**:.pem 檔案，做為憑證以目前使用者]-> [匯入信任的根憑證授權單位]-> [憑證
         - **macOS**: 
-           - 複製到憑證```/usr/local/etc/openssl/certs```
-           - 執行下列命令，以取得雜湊值：```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - 將憑證重新命名為值。 例如：```mv mssql.pem dc2dd900.0```。 請確定 dc2dd900.0 處於```/usr/local/etc/openssl/certs```
+           - 複製到憑證 ```/usr/local/etc/openssl/certs```
+           - 執行下列命令，以取得雜湊值： ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - 將憑證重新命名為值。 例如：```mv mssql.pem dc2dd900.0```。 請確定 dc2dd900.0 處於 ```/usr/local/etc/openssl/certs```
     
 -   **範例連接字串** 
 

@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SetCurrentCertificate Method (SInstance Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SetCurrentCertificate Method (SInstance Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SetCurrentCertificate method
+helpviewer_keywords:
+- SetCurrentCertificate method
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a392000ab30313fb0833c1c51bf67d2e5ee64c4b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e77b1eb240fec715d40b5d1dbe0a2c1cf4084ebe
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="setcurrentcertificate-method-sinstance-class"></a>SetCurrentCertificate 方法 (SInstance 類別)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]設定目前的安全性憑證。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+設定目前的安全性憑證。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +48,7 @@ object.SetCurrentCertificate(SHA)
   
 #### <a name="parameters"></a>參數  
   
-|參數|Description|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*SHA*|指定目前安全性憑證的字串值。|  
   
@@ -52,7 +57,7 @@ object.SetCurrentCertificate(SHA)
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [設定伺服器網路通訊協定和網路程式庫](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

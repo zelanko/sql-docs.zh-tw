@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], IDENTITY-type columns
 - updategrams [SQLXML], GUID values
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a40eb7a4573ea11b597860f8ea4005fc5908bdb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7086831a6711ee0ad0bc0b0a1c1f59ef88b68775
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>使用 sql:identity 和 sql:guid 註解
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]您可以指定**sql: identity**和**sql: guid** XSD 結構描述中對應至資料庫資料行中的任何節點上的註解[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 而 updategram 格式支援**updg： 在識別**和**updg: guid**屬性，DiffGram 格式則否。 **Updg： 在識別**屬性更新 IDENTITY 類型資料行定義的行為。 **Updg: guid**屬性可讓您取得的 GUID 值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和在 updategram 中使用它。 如需詳細資訊和實用範例，請參閱[插入資料使用 XML Updategram &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+您可以指定**sql: identity**和**sql: guid** XSD 結構描述中對應至資料庫資料行中的任何節點上的註解[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 而 updategram 格式支援**updg： 在識別**和**updg: guid**屬性，DiffGram 格式則否。 **Updg： 在識別**屬性更新 IDENTITY 類型資料行定義的行為。 **Updg: guid**屬性可讓您取得的 GUID 值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和在 updategram 中使用它。 如需詳細資訊和實用範例，請參閱[插入資料使用 XML Updategram &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  **Sql: identity**和**sql: guid**註解會將此功能擴充到 DiffGrams。  
   

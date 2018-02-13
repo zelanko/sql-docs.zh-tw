@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: e0e0a2d10db1bddf93b098051e1db70a6a32e248
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 建立資料庫的 SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) 會針對 SQL Server on Linux 轉換成強大開發及資料庫生命週期管理 (DLM) 環境的 Visual Studio。 您可以開發、 建置、 測試及發行您的資料庫從原始檔控制專案，就像您開發應用程式程式碼。
+SQL Server Data Tools (SSDT) 會針對 SQL Server on Linux 轉換成強大開發及資料庫生命週期管理 (DLM) 環境的 Visual Studio。 您可以開發、 建置、 測試和發行您的資料庫從原始檔控制的專案，就像您開發應用程式程式碼。
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>安裝 Visual Studio 和 SQL Server Data Tools
 
@@ -103,7 +103,7 @@ SQL Server Data Tools (SSDT) 會針對 SQL Server on Linux 轉換成強大開發
 
 5. 簽入的發佈狀態**資料工具作業**視窗。
 
-6. 按一下**檢視 Reulst**或**檢視指令碼**以查看詳細資料的 databsae 發行您的 SQL Server on Linux 上的結果。
+6. 按一下**檢視 Reulst**或**檢視指令碼**以查看詳細資料的資料庫發行您的 SQL Server on Linux 上的結果。
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 

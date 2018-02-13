@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 519728819aa79534a1c8cc3a079164d276924a44
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -30,22 +30,22 @@ ms.lasthandoff: 02/01/2018
 > [!NOTE] 
 > Red Hat HA 附加元件和文件集的存取需要訂用帳戶。 
 
-如下圖所顯示存放裝置會呈現至兩個伺服器。 -Corosync 以及 Pacemaker-叢集元件協調通訊和資源管理。 其中一個伺服器具有作用中連接的儲存體資源，以及 SQL Server。 當 Pacemaker 偵測到失敗時叢集的元件管理將資源移動到另一個節點。  
+如下列圖表所示，存放裝置會呈現至兩個伺服器。 -Corosync 以及 Pacemaker-叢集元件協調通訊和資源管理。 其中一個伺服器具有作用中連接的儲存體資源，以及 SQL Server。 當 Pacemaker 偵測到失敗時叢集的元件管理將資源移動到另一個節點。  
 
 ![Red Hat Enterprise Linux 7 共用磁碟的 SQL 叢集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-如需叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+如需有關叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
 
 
 > [!NOTE] 
 > 此時，不是為結合以在 Windows 上的 WSFC Pacemaker 與 SQL Server 的整合。 從 SQL、 內沒有存在叢集的認知，所有的協調流程外中，服務由 Pacemaker 控制做為獨立執行個體。 也，例如叢集 dmv sys.dm_os_cluster_nodes 和 sys.dm_os_cluster_properties 將任何記錄。
-若要使用連接字串指向字串伺服器名稱並不會使用 IP，則必須註冊在他們的 DNS 伺服器 IP 用來建立所選的伺服器名稱與虛擬 IP 資源 （如下所述）。
+若要使用連接字串指向字串伺服器名稱並不會使用 IP，則必須在其 DNS 伺服器將 IP 登錄用來建立虛擬 IP 資源 （如下列各節所述） 所選的伺服器名稱。
 
 下列各節逐步解說的步驟來設定容錯移轉叢集解決方案。 
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-若要完成以下的端對端案例中，您需要兩部電腦部署兩個節點叢集並設定 NFS 伺服器的另一部伺服器。 下列步驟概述這些伺服器設定的方式。
+若要完成下列端對端案例中，您需要兩部電腦部署兩個節點叢集並設定 NFS 伺服器的另一部伺服器。 下列步驟概述這些伺服器設定的方式。
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>安裝和設定每個叢集節點上的作業系統
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/01/2018
 > [!NOTE] 
 > 伺服器主要金鑰是於安裝時期，產生 SQL Server 執行個體，並且在置於`/var/opt/mssql/secrets/machine-key`。 On Linux，一律以呼叫 mssql 本機帳戶執行 SQL Server。 因為它是本機帳戶，其識別身分不被共用在節點之間。 因此，您要複製的加密金鑰從主要節點，每個次要節點讓每個本機 mssql 帳戶可以存取它來解密 Server 主要金鑰。 
 
-1. 主要節點上，為 Pacemaker 建立 SQL server 登入並授與登入執行的權限`sp_server_diagnostics`。 若要確認哪一個節點執行 SQL Server，pacemaker 會使用此帳戶。 
+1. 主要節點上，為 Pacemaker 建立 SQL server 登入並授與登入執行的權限`sp_server_diagnostics`。 Pacemaker 來確認哪一個節點正在執行 SQL Server 使用此帳戶。 
 
    ```bash
    sudo systemctl start mssql-server
@@ -131,19 +131,19 @@ NFS 伺服器上執行下列作業：
    sudo yum -y install nfs-utils
    ```
 
-1. 啟用和啟動`rpcbind`
+1. 啟用和啟動 `rpcbind`
 
    ```bash
    sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. 啟用和啟動`nfs-server`
+1. 啟用和啟動 `nfs-server`
  
    ```bash
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  編輯`/etc/exports`匯出您要共用的目錄。 您必須針對您想要每個共用 1 行。 例如： 
+1.  編輯`/etc/exports`匯出您要共用的目錄。 您針對您想要每個共用需要 1 行。 例如： 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -233,7 +233,7 @@ NFS 伺服器上執行下列作業：
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->如果下方的建議，請使用檔案系統 (FS) 資源，，無須以保留 /etc/fstab 中的 [掛接] 命令。 Pacemaker 會負責啟動 FS 叢集資源時，掛接的資料夾。 範圍的協助，則會的 ensurethe FS 永遠都不裝載兩次。 
+>如果使用檔案系統 (FS) 資源的建議這裡，，就不需要保留 /etc/fstab 中的 [掛接] 命令。 Pacemaker 會負責啟動 FS 叢集資源時，掛接的資料夾。 範圍的協助，它可確保 FS 永遠都不裝載兩次。 
 
 1.  執行`mount -a`系統更新的掛接的路徑的命令。  
 
@@ -332,7 +332,7 @@ NFS 伺服器上執行下列作業：
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. 設定 SQL Server、 檔案系統和虛擬 IP 資源的叢集資源，並將設定推送到叢集。 您將需要下列資訊：
+2. 設定 SQL Server、 檔案系統和虛擬 IP 資源的叢集資源，並將設定推送到叢集。 您需要下列資訊：
 
    - **SQL Server Resource Name>**： 叢集的 SQL Server 資源的名稱。 
    - **浮動 IP 資源名稱**： 虛擬 IP 位址資源的名稱。
@@ -342,7 +342,7 @@ NFS 伺服器上執行下列作業：
    - **裝置**： 掛接在共用的本機路徑
    - **fstype**： 檔案共用型別 (也就是 nfs)
 
-   更新您的環境下的指令碼中的值。 若要設定並啟動叢集的服務的一個節點上執行。  
+   更新下列指令碼，為您的環境中的值。 若要設定並啟動叢集的服務的一個節點上執行。  
 
    ```bash
    sudo pcs cluster cib cfg 

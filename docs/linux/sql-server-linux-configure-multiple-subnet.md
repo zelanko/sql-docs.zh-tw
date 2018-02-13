@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 84195d2451664b2bee81ebbb1dc3b7d9d89060d5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>設定多重子網路 Alwayson 可用性群組和容錯移轉叢集執行個體
 
@@ -58,7 +58,7 @@ AG 或 FCI 的 IP 位址建立 VLAN 上執行。 在下列範例中，VLAN 有 1
 
     其中*filename*是您想要呼叫 CIB 的名稱。
 
-2.  編輯產生的檔案。 尋找`<resources>`> 一節。 您會看到所建立的 AG 或 FCI 的各種資源。 找出相關聯的 IP 位址。 新增`<instance attributes>`前一節的上方或下方，現有的第二個 IP 位址資訊`<operations>`。 它看起來像下列語法：
+2.  編輯產生的檔案。 尋找`<resources>`> 一節。 您會看到所建立的 AG 或 FCI 的各種資源。 找出相關聯的 IP 位址。 新增`<instance attributes>`前一節的上方或下方，現有的第二個 IP 位址資訊`<operations>`。 非常類似於下列語法：
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">

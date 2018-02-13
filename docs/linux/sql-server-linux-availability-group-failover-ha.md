@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: cf0a61c924a10066a41bcf4127e444b60f0f50bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 68e41573c107725ef7af12e8b990678f8991bb02
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>一律在 Linux 上的可用性群組操作
 
@@ -129,7 +129,7 @@ ms.lasthandoff: 02/01/2018
  [SLES 系統管理指南-資源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-### <a name="forceManual"></a>手動移動時則無法回應叢集工具 
+### <a name="forceManual"></a> 手動移動時則無法回應叢集工具 
 
 在極端情況下，如果使用者無法互動與叢集使用叢集管理工具 （也就是叢集沒有回應，叢集管理工具有故障的行為），使用者可能必須以手動方式-容錯移轉略過外部叢集管理員。 這不建議在正常的作業，並應內叢集無法在執行容錯移轉動作使用叢集管理工具的情況下使用。
 
@@ -158,7 +158,7 @@ ms.lasthandoff: 02/01/2018
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. 容錯移轉之可用性群組的 TRANSACT-SQL。 在下面取代範例`<**MyAg**>`與可用性群組的名稱。 連接到裝載目標次要複本的 SQL Server 執行個體，並執行下列命令：
+1. 容錯移轉之可用性群組的 TRANSACT-SQL。 在下列範例中，取代`<**MyAg**>`與可用性群組的名稱。 連接到裝載目標次要複本的 SQL Server 執行個體，並執行下列命令：
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
@@ -185,7 +185,7 @@ ms.lasthandoff: 02/01/2018
 
 在 Linux 中的 SQL Server 執行個體上的可用性群組複本時，可用性群組的叢集類型是`EXTERNAL`或`NONE`。 除了 Windows Server 容錯移轉叢集 (WSFC) 是由叢集管理員的可用性群組`EXTERNAL`。 與 Corosync pacemaker 是外部叢集管理員的範例。 沒有叢集管理員與可用性群組有叢集類型`NONE`此處所述的升級步驟特有的可用性群組的叢集類型`EXTERNAL`或`NONE`。
 
-1. 在開始之前，備份每個資料庫。
+1. 在開始之前，請將每個資料庫備份。
 2. 升級 SQL Server 執行個體主控次要複本。
 
     a. 先升級非同步次要複本。
@@ -244,7 +244,7 @@ ms.lasthandoff: 02/01/2018
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. 容錯移轉之後，SQL Server 升級舊的主要複本上重複相同步驟 b.1 b.3 上面所述的程序。
+1. 容錯移轉之後，SQL Server 升級舊的主要複本上重複相同步驟 b.1 b.3 中所述的程序。
 
    下列範例會升級`mssql-server`和`mssql-server-ha`封裝。
 
@@ -267,7 +267,7 @@ ms.lasthandoff: 02/01/2018
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. 外部的叢集與可用性群組的管理員-輸入叢集的地方是外部、 清除所造成的手動容錯移轉的位置限制式。 
+1. 對於可用性群組與外部叢集管理員-其中的叢集類型是外部、 清除所造成的手動容錯移轉的位置限制式。 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
