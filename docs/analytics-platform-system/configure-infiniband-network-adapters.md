@@ -14,17 +14,17 @@ description: "描述如何 InfiniBand 網路介面卡的伺服器上設定非應
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: "15"
+caps.latest.revision: 
 ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>設定 Analytics Platform System InfiniBand 網路介面卡
 描述如何 InfiniBand 網路介面卡的伺服器上設定非應用裝置用戶端連接到控制項節點上 SQL Server Parallel Data Warehouse (PDW)。 使用下列指示的基本連線和高可用性，以便載入、 備份、 和其他處理程序會自動連線到作用中的 InfiniBand 網路。  
   
-## <a name="Basics"></a>描述  
+## <a name="Basics"></a>Description  
 以下指示說明如何尋找，然後設定正確的 InfiniBand IP 位址與子網路遮罩 InfiniBand 連接伺服器上。 它們也會說明如何設定您的伺服器能夠使用 AP 應用裝置 DNS，讓您的連線會解析為作用中的 InfiniBand 網路。  
   
 APS 高可用性，具有兩個 InfiniBand 網路，一個使用中，一個被動。 每個 InfiniBand 網路具有不同的 IP 位址的控制節點。 如果作用中的 InfiniBand 網路效能降低，被動的 InfiniBand 網路就會變成作用中的網路。 當發生這種情況的指令碼或程序自動連線至作用中的 InfiniBand 網路而不需要變更指令碼參數。  
@@ -58,7 +58,7 @@ APS 高可用性，具有兩個 InfiniBand 網路，一個使用中，一個被�
   
 您必須已設定網路介面卡的權限的用戶端伺服器上的 Windows 帳戶。  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>필수 구성 요소  
 這些指示假設已 racked 並接上應用裝置 InfiniBand 網路用戶端伺服器。 軌道及纜線連接指示，請參閱[取得和設定載入伺服器](acquire-and-configure-loading-server.md)。  
   
 ### <a name="general-remarks"></a>一般備註  
@@ -77,9 +77,9 @@ APS 高可用性，具有兩個 InfiniBand 網路，一個使用中，一個被�
   
     ![[管理] 節點的 InfiniBand 連接](media/network-teamib.png "管理節點 InfiniBand 連接")  
   
-4.  從 [網際網路通訊協定第 4 版 (TCP/IPv4) 內容] 視窗中，記下的值**IP 位址**和**子網路遮罩**。  IP 位址的 ***appliance_domain*-AD01**節點是分析平台系統的 DNS 伺服器的 IP 位址。  
+4.  從 [網際網路通訊協定第 4 版 (TCP/IPv4) 內容] 視窗中，記下的值**IP 位址**和**子網路遮罩**。  IP 位址的 ***appliance_domain *-AD01**節點是分析平台系統的 DNS 伺服器的 IP 位址。  
   
-5.  上重複步驟 1-5 上述 TeamIB1 配接器 ***appliance_domain*-ad02 移**伺服器。  
+5.  上重複步驟 1-5 上述 TeamIB1 配接器的 ***appliance_domain *-ad02 移**伺服器。  
   
     ![PDW 管理節點 InfiniBand 1 屬性](media/network-ip1-properties.png "PDW 管理節點 InfiniBand 1 屬性")  
   
@@ -168,7 +168,7 @@ APS 高可用性，具有兩個 InfiniBand 網路，一個使用中，一個被�
   
 2.  按一下 進階... 按鈕，可選取色彩。  
   
-3.  在 進階 TCP/IP 設定 視窗中，如果 附加這些 DNS 尾碼 （依順序） 選項不灰色，核取方塊為 附加這些 DNS 尾碼 （依順序）： 選取應用裝置的網域尾碼，然後按一下 新增... 將應用裝置的網域尾碼`appliance_domain.local`  
+3.  在 進階 TCP/IP 設定 視窗中，如果 附加這些 DNS 尾碼 （依順序） 選項不灰色，核取方塊為 附加這些 DNS 尾碼 （依順序）： 選取應用裝置的網域尾碼，然後按一下 新增... 將應用裝置的網域尾碼 `appliance_domain.local`  
   
 4.  如果 附加這些 DNS 尾碼 （依順序）： 選項呈現灰色，您可以將 AP 網域加入此伺服器藉由修改登錄機碼 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient。  
   
@@ -182,10 +182,10 @@ APS 高可用性，具有兩個 InfiniBand 網路，一個使用中，一個被�
   
     名為的應用裝置的範例命名 MyAPS 與 MyPDW PDW 區域：  
   
-    -   MyPDW SQLCTL01.MyAPS.local  
+    -   MyPDW-SQLCTL01.MyAPS.local  
   
-    -   MyPDW SQLCTL01  
+    -   MyPDW-SQLCTL01  
   
-## <a name="see-also"></a>請參閱  
-[取得和設定來載入伺服器](acquire-and-configure-loading-server.md)  
+## <a name="see-also"></a>另請參閱  
+[取得和設定來載入伺服器 ](acquire-and-configure-loading-server.md)  
   

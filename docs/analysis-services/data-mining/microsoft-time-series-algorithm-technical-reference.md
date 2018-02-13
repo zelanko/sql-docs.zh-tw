@@ -29,19 +29,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 時間序列演算法技術參考
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法包括兩個不同的演算法來分析時間序列：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法包括兩種不同的演算法來分析時間序列：  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中所導入的 ARTXP 演算法是為了預測數列中的下一個可能值而最佳化。  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
 >  Microsoft 時間序列演算法可用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，但是某些進階功能 (包括自訂時間序列分析的參數) 只在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中受支援。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 版本支援的功能](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。  
   
 ### <a name="detection-of-seasonality"></a>季節性的偵測  
- ARIMA 和 ARTXP 演算法支援季節性或週期性的偵測。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用快速傅立葉變換，在定型之前偵測季節性。 不過，您可以設定演算法參數來影響季節性偵測以及時間序列分析的結果。  
+ ARIMA 和 ARTXP 演算法支援季節性或週期性的偵測。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用快速傅立葉變換，在定型之前偵測季節性。 不過，您可以設定演算法參數來影響季節性偵測以及時間序列分析的結果。  
   
 -   藉由變更 *AUTODETECT_SEASONALITY*的值，您就可以影響產生之可能時間區段的數目。  
   
@@ -135,7 +136,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  下表描述可用於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法的參數。  
   
-|參數|描述|  
+|參數|說明|  
 |---------------|-----------------|  
 |*AUTO_DETECT_PERIODICITY*|指定 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之間的數值，用於偵測週期性。 預設值為 0.6。<br /><br /> 如果將此值設定為越接近 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]，則只會偵測到週期性很強的資料。<br /><br /> 將這個值設定為越接近 1，就會探索更多接近週期性的模式，並自動產生週期性提示。<br /><br /> 注意：處理大量週期性提示時，可能會造成更長的模型定型時間及更精確的模型。|  
 |*COMPLEXITY_PENALTY*|控制決策樹的成長。 預設值是 0.1。<br /><br /> 減少此值可增加分割的機率。 增加此值可減少分割的機率。<br /><br /> 注意：只有在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中才可使用這個參數。|  
@@ -153,7 +154,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="modeling-flags"></a>模型旗標  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)。  
   
-|模型旗標|描述|  
+|模型旗標|說明|  
 |-------------------|-----------------|  
 |NOT NULL|表示資料行不能包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
 |MODEL_EXISTENCE_ONLY|表示資料行將被視為擁有兩個可能狀態：「遺漏」和「現有」。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
@@ -164,7 +165,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法支援特定輸入資料行內容類型、可預測資料行內容類型和模型旗標，這些都會在下表中列出。  
   
-|「資料行」|內容類型|  
+|資料行|內容類型|  
 |------------|-------------------|  
 |輸入屬性|Continuous、Key、Key Time 和 Table|  
 |可預測屬性|Continuous、Table|  
@@ -172,9 +173,9 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  系統支援 Cyclical 和 Ordered 內容類型，但是演算法將它們視為離散值，因此不會執行特殊處理。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [時間序列模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

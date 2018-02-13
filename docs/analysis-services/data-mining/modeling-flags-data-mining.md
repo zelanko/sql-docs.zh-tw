@@ -24,19 +24,20 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="modeling-flags-data-mining"></a>模型旗標 (資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以使用模型旗標在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供案例資料表中所定義之資料的相關資料採礦演算法的其他資訊。 演算法可以使用此一資訊建立更精確的資料採礦模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的模型旗標，為資料採礦演算法提供案例資料表中所定義資料的其他資訊。 演算法可以使用此一資訊建立更精確的資料採礦模型。  
   
  有些模型旗標會定義於採礦結構層級，有些則會定義於採礦模型資料行的層級。 例如， **NOT NULL** 模型旗標是用於採礦結構資料行。 您可以根據您用來建立模型的演算法，在採礦模型資料行上定義其他模型旗標。  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  「遺漏」是演算法所使用的特殊狀態，與資料行中的文字值「遺漏」不同。 如需詳細資訊，請參閱 [遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)預先定義的模型旗標外，協力廠商外掛程式也可能擁有其他的模型旗標。  
   
- **REGRESSOR**  
+ **迴歸輸入變數**  
  指出資料行是處理期間做為迴歸輸入變數使用的候選選項。 這個旗標是在採礦模型資料行上定義，並且只能套用至採用連續數值資料類型的資料行。 如需有關使用這個旗標的詳細資訊，請參閱本主題的 [使用 REGRESSOR 模型旗標](#bkmk_UseRegressors)一節。  
   
 ## <a name="viewing-and-changing-modeling-flags"></a>檢視和變更模型旗標  
@@ -110,13 +111,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |工作|主題|  
 |----------|-----------|  
-|使用資料採礦設計師來編輯模型旗標|[檢視或變更模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|為演算法指定提示，以建議可能的迴歸輸入變數|[在模型中指定當做迴歸輸入變數使用的資料行](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|請參閱特定演算法所支援的模型旗標 (在每一個演算法參考主題的＜模型旗標＞一節內)。|[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|使用資料採礦設計師來編輯模型旗標|[檢視或變更模型旗標 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|為演算法指定提示，以建議可能的迴歸輸入變數|[指定要做為模型中的迴歸輸入變數的資料行](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|請參閱特定演算法所支援的模型旗標 (在每一個演算法參考主題的＜模型旗標＞一節內)。|[資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |深入了解採礦結構資料行以及您可以在資料行上設定的屬性|[採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |深入了解採礦模型資料行以及可以在模型層級套用的模型旗標|[採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)|  
 |請參閱在 DMX 陳述式中搭配模型旗標使用的語法|[模型旗標 &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|了解遺漏的值以及如何處理這些值|[遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|了解遺漏的值以及如何處理這些值|[遺漏值 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |了解如何管理模型和結構以及設定使用屬性|[移動資料採礦物件](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   

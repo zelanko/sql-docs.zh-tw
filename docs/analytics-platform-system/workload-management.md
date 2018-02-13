@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: "11"
+caps.latest.revision: 
 ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="workload-management"></a>工作負載管理
 SQL Server PDW 的工作負載管理功能可讓使用者和系統管理員將指派到預先設定的記憶體和並行處理設定要求。 使用工作負載管理來改善效能的負載，一致或 mixed 時，允許要求而不會佔用任何要求永遠將適當的資源。  
@@ -63,9 +63,9 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>資源類別的描述  
 下表描述的資源類別和其系統資源配置。  
   
-|資源類別|要求的重要性|最大記憶體使用量 *|並行插槽 (上限 = 32)|描述|  
+|資源類別|要求的重要性|最大記憶體使用量 *|並行插槽 (上限 = 32)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|預設|中|400 MB|@shouldalert|根據預設，每個登入允許少量的記憶體和其要求的並行存取資源。<br /><br />登入加入至資源類別時，新的類別會優先使用。 卸除登入後從所有資源類別，登入會還原回預設資源配置。|  
+|預設|中|400 MB|1|根據預設，每個登入允許少量的記憶體和其要求的並行存取資源。<br /><br />登入加入至資源類別時，新的類別會優先使用。 卸除登入後從所有資源類別，登入會還原回預設資源配置。|  
 |MediumRC|中|1200 MB|3|要求可能需要的媒體資源類別的範例包括：<br /><br />較大的 CTAS 作業雜湊聯結。<br /><br />選取 需要更多的記憶體，以避免快取到磁碟的作業。<br /><br />資料載入叢集資料行存放區索引。<br /><br />建置、 重建和重新組織叢集資料行存放區索引的較小的資料表有 10-15 資料行。|  
 |largerc|高|2.8 GB|7|要求可能需要大量的資源類別的範例包括：<br /><br />超大型 CTAS 作業有很大的雜湊聯結或包含大型的彙總，例如大型的 ORDER BY 或 GROUP BY 子句。<br /><br />選取作業，例如雜湊聯結或彙總，例如 ORDER BY 或 GROUP BY 子句需要非常大量的記憶體的作業<br /><br />資料載入叢集資料行存放區索引。<br /><br />建置、 重建和重新組織叢集資料行存放區索引的較小的資料表有 10-15 資料行。|  
 |xlargerc|高|8.4 GB|22|超大型的資源類別是針對可能需要在執行階段的額外大型的資源耗用量的要求。|  
@@ -136,7 +136,7 @@ SQL 陳述式和資源類別所控管的作業：
   
 -   UPDATE  
   
--   Delete  
+-   DELETE  
   
 -   還原資料庫還原至應用裝置與多個運算節點時。  
   

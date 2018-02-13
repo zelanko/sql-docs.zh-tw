@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 316809a9fa0b00a04dd6cee85eceb3d9a0349801
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="cube-space"></a>Cube 空間
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cube 空間是具有 cube 的量值的 cube 屬性階層成員的乘積。 因此，Cube 空間是由 Cube 所有屬性階層成員和 Cube 量值的組合乘積所決定，定義了 Cube 的大小上限。 請務必注意，此空間包含屬性階層成員的所有可能組合，甚至還包含在真實世界中被視為不可能的組合，例如城市為巴黎而國家/地區為英國、西班牙、日本、印度或其他地方的組合。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+「Cube 空間」是 Cube 屬性階層中具有 Cube 量值之成員的乘積。 因此，Cube 空間是由 Cube 所有屬性階層成員和 Cube 量值的組合乘積所決定，定義了 Cube 的大小上限。 請務必注意，此空間包含屬性階層成員的所有可能組合，甚至還包含在真實世界中被視為不可能的組合，例如城市為巴黎而國家/地區為英國、西班牙、日本、印度或其他地方的組合。  
   
 ## <a name="autoexists-and-cube-space"></a>自動存在和 Cube 空間  
  「自動存在」的概念將此 Cube 空間限制於實際存在的資料格。 維度中屬性階層的成員可能不與相同維度中另一個屬性階層的成員同時存在。  
@@ -134,13 +135,13 @@ FROM [Adventure Works]
   
 ## <a name="calculation-context"></a>計算內容  
   
-## <a name="see-also"></a>請參閱  
- [MDX 的關鍵概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>另請參閱  
+ [MDX &#40; 中的重要概念Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Tuple](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [「 自動存在 」](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [使用成員、Tuple 和集合 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [使用成員、 Tuple 及集合 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [視覺化總計和非視覺化總計](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [MDX 語言參考 &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [多維度運算式 &#40;MDX&#41 參考](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [MDX 語言參考 &#40;MDX &#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [多維度運算式 &#40;MDX &#41;參考](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

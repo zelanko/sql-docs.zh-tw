@@ -14,12 +14,12 @@ description: "**dwloader** Parallel Data Warehouse (PDW) 的命令列工具，�
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: "90"
+caps.latest.revision: 
 ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader 命令列載入器
 **dwloader** Parallel Data Warehouse (PDW) 的命令列工具，可將資料表資料列中大量載入現有的資料表。 當載入的資料列，您可以將所有資料列加入到資料表結尾 (*附加模式*或*fastappend 模式*)、 附加新資料列，並更新現有的資料列 (*upsert 模式*)，或刪除所有現有之前載入的資料列，然後再將所有資料列插入空的資料表 (*重新載入模式*)。  
@@ -161,7 +161,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name。*[*結構描述*]。*table_name*  
+**-T** *target_database_name.*[*schema*].*table_name*  
 在目的地資料表的三部分名稱。  
   
 **-I***source_data_location*  
@@ -215,7 +215,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-fh** *number_header_rows*  
 若要忽略開頭的行 （列） 數目*source_data_file_name*。 預設值是 0。  
   
-< variable_length_column_options >  
+<variable_length_column_options>  
 選項*source_data_file_name*具有字元分隔可變長度資料行。 根據預設， *source_data_file_name*包含可變長度資料行中的 ASCII 字元。  
   
 對於 ASCII 檔案，會由左至右連續放置分隔符號來表示 Null。 管線分隔檔案中，例如 ("|")，null 值會以"| |"。 在以逗號分隔的檔案，以表示 NULL"、"。 此外， **-E** (-emptyStringAsNull) 必須指定選項。 如需詳細資訊，在-E，請參閱下文。  
@@ -226,7 +226,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-t** *field_delimiter*  
 每個欄位 （資料行） 中的資料列分隔符號。 欄位分隔符號是一或多個這些 ASCII 逸出字元或 ASCII 十六進位值...  
   
-|[屬性]|逸出字元|十六進位字元|  
+|名稱|逸出字元|十六進位字元|  
 |--------|--------------------|-----------------|  
 |索引標籤|\t|0x09|  
 |歸位字元 (CR)|\r|0x0d|  
@@ -240,7 +240,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 範例:  
   
--t"|"  
+-t "|"  
   
 -t ' '  
   
@@ -248,7 +248,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -t \t  
   
--t ' ~ | ~'  
+-t '~|~'  
   
 **-r** *row_delimiter*  
 來源資料檔的每一個資料列分隔符號。 資料列分隔符號是一或多個 ASCII 值。  
@@ -284,7 +284,7 @@ LF 的範例包括：
   
 -s 0x22  
   
-< fixed_width_column_options >  
+< fixed_width_column_options>  
 具有固定長度資料行的來源資料檔案的選項。 根據預設， *source_data_file_name*包含可變長度資料行中的 ASCII 字元。  
   
 UTF8 – e 時不支援固定的寬度資料行。  
@@ -300,9 +300,9 @@ UTF8 – e 時不支援固定的寬度資料行。
   
 固定寬度的組態檔的範例：  
   
-SalesCode = 3  
+SalesCode=3  
   
-SalesID = 10  
+SalesID=10  
   
 範例程式碼行中*source_data_file_name*:  
   
@@ -402,7 +402,7 @@ dym
 fastappend  
 載入器插入資料列直接管理，而不需要使用暫存資料表時，目的地資料表中的現有資料列的結尾。 fastappend 需要多重交易 (– m) 選項。 使用 fastappend 時無法指定暫存資料庫。 沒有任何與 fastappend，這表示您自己的載入處理序必須處理從失敗或已中止載入復原的復原。  
   
-upsert **-K***merge_column* [，...*n* ]  
+upsert **-K**  *merge_column* [ ,...*n* ]  
 載入器會使用 SQL Server Merge 陳述式來更新現有的資料列，並插入新資料列。  
   
 -K 選項指定要合併的基礎資料行的資料行。 這些資料行形成應該代表唯一的資料列的合併索引鍵。 如果合併索引鍵存在於目的地資料表時，會更新資料列。 如果合併索引鍵不存在於目的地資料表，則會附加資料列。  
@@ -427,7 +427,7 @@ upsert **-K***merge_column* [，...*n* ]
   
 如果負載類型是 FASTAPPEND， *batchsize*適用於將資料載入資料表，否則*batchsize*適用於將資料載入暫存資料表。  
   
-< reject_options >  
+<reject_options>  
 指定選項來判斷允許載入器載入失敗的數目。 如果載入失敗超過閾值時，載入器將會中止，並認可的任何資料列。  
   
 **-rt** {**值**| 百分比}  
@@ -560,9 +560,9 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 |堆積|否|是|否|最小|  
 |堆積|否|否|否|最小|  
 |cl|是|是|否|最小|  
-|cl|是|否|是|完整|  
+|cl|是|否|是|[完整]|  
 |cl|否|是|否|最小|  
-|cl|否|否|是|完整|  
+|cl|否|否|是|[完整]|  
   
 上述表格顯示**dwloader**使用 append 模式載入堆積或叢集的索引 (CI) 資料表時，不論多重交易式的旗標，並載入至空的資料表或非空白資料表。 鎖定和記錄的每個此類負載組合的行為會顯示在資料表中。 比方說，載入含有 append 模式 (2) 的階段到叢集索引，但不多交易式模式和空資料表將會在資料表上建立的獨佔鎖定的 PDW 且是最小的記錄。 這表示客戶將無法將空的資料表同時載入 （第 2 個） 的階段和查詢。 不過，載入時以相同的組態至非空白資料表，PDW 將不會發行資料表的獨佔鎖定，且並行存取。 不幸的是，完整記錄時，會讓處理程序變。  
   

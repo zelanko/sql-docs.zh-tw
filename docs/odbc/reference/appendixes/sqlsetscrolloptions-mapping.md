@@ -8,23 +8,24 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetScrollOptions
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 57d4bb7747803f1fe65276ddb86c574763627906
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions 對應
 當應用程式呼叫**SQLSetScrollOptions**透過 ODBC 3*.x*驅動程式和驅動程式不支援**SQLSetScrollOptions**，呼叫  

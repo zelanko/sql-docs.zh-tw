@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 986e4ed2b436fa94c676c59afd03f1e0a4a32fd3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>SQLGetInfo 傳回值的文字檔案
 下表列出 C 語言 #defines *fInfoType*引數和傳回對應值**SQLGetInfo**。 這項資訊可以擷取傳遞列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需有關所傳回的值**SQLGetInfo**，請參閱[ODBC 程式設計人員參考](../../odbc/reference/odbc-programmer-s-reference.md)。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 >  其中**SQLGetInfo** 32 位元的位元遮罩，垂直列 (&#124;) 會傳回代表位元 OR 運算。  
   
-|資訊類型|傳回值|  
+|InfoType|傳回值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|「 目錄 」|  
+|SQL_CATALOG_TERM|"Directory"|  
 |SQL_CATALOG_USAGE|多個值|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -91,7 +92,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|目前的資料庫目錄|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|「 文字 」|  
+|SQL_DBMS_NAME|"TEXT"|  
 |SQL_DBMS_VER|ISAM： 文字<br /><br /> 版本： 1.0<br /><br /> 版本號碼的格式： 01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
@@ -100,7 +101,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_DRIVER_HENV|處理由驅動程式管理員。|  
 |SQL_DRIVER_HLIB|處理由驅動程式管理員。|  
 |SQL_DRIVER_HSTMT|處理由驅動程式管理員。|  
-|SQL_DRIVER_NAME|「 OdbcJt32.dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|「 4.00。*nnnn*」 ( *nnnn* 指定建置日期)|  
 |SQL_DROP_ASSERTION|0|  
@@ -147,7 +148,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|多個值|  
-|SQL_ODBC_SAG_CLI_ 一致性|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|從 驅動程式管理員|  
 |SQL_OJ_CAPABILITIES|多個值|  
@@ -161,7 +162,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|多個值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|「 文字 」|  
+|SQL_SERVER_NAME|"TEXT"|  
 |SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|多個值|  
 |SQL_SUBQUERIES|多個值|  
